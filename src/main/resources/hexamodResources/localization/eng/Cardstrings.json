@@ -19,5 +19,18 @@
   "hexamod:AdvancingGuard": {
     "NAME": "Advancing Guard",
     "DESCRIPTION": "Gain !B! Block. NL hexamod:Advance."
+  },
+  "hexamod:BacktrackSmack": {
+    "NAME": "Backtrack Smack",
+    "DESCRIPTION": "Deal !D! damage. NL hexamod:Retract."
+  },
+  "hexamod:FastForward": {
+    "NAME": "Fast Forward",
+    "DESCRIPTION": "hexamod:Advance. NL Charge the current Ghostflame. NL hexamod:Advance."
+  },
+  "hexamod:Rewind": {
+    "NAME": "Rewind",
+    "DESCRIPTION": "hexamod:Retract. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] . NL Repeat this once."
   }
 }
