@@ -77,5 +77,13 @@
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
     "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it and Charge it again."
+  },
+  "hexamod:CrushingStance": {
+    "NAME": "Crushing Stance",
+    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a Crushing Ghostflame. NL Exhaust."
+  },
+  "hexamod:EmpoweringStance": {
+    "NAME": "Empowering Stance",
+    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame. NL Exhaust."
   }
 }
