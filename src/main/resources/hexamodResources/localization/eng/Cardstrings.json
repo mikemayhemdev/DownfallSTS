@@ -109,5 +109,21 @@
   "hexamod:SpectralAdrenaline": {
     "NAME": "Spectral Adrenaline",
     "DESCRIPTION": "hexamod:Extinguish all Charged Ghostflames. NL For each Ghostflame hexamod:Extinguished, gain [E] and draw 1 card. NL Exhaust."
+  },
+  "hexamod:StepThrough": {
+    "NAME": "Step Through",
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Advance. NL Otherwise, Charge the hexamod:Active Ghostflame."
+  },
+  "hexamod:Inspiring Flames": {
+    "NAME": "Inspiring Flames",
+    "DESCRIPTION": "Gain !B! Block. NL For each Charged Ghostflame, Upgrade a random card in your hand."
+  },
+  "hexamod:SpectersWail": {
+    "NAME": "Specter's Wail",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies."
+  },
+  "hexamod:Hexaguard": {
+    "NAME": "Hexaguard",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw 1 card."
   }
 }
