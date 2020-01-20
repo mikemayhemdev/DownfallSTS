@@ -49,5 +49,9 @@
   "hexamod:EmpoweredFlame": {
     "NAME": "Empowered Flame",
     "DESCRIPTION": "Gain !M! hexamod:Enhance."
+  },
+  "hexamod:Hexalevel": {
+    "NAME": "Hexa-Level",
+    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Enhance."
   }
 }
