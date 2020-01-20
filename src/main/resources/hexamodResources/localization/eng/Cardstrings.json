@@ -65,5 +65,9 @@
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Ghost of Spire Future",
     "DESCRIPTION": "Whenever you hexamod:Advance, gain !M! hexamod:Momentary Strength and draw 1 card."
+  },
+  "hexamod:GhostOfSpirePresent": {
+    "NAME": "Ghost of Spire Present",
+    "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
   }
 }
