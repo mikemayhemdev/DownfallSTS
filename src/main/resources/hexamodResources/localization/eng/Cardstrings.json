@@ -61,5 +61,9 @@
   "hexamod:GhostOfSpirePast": {
     "NAME": "Ghost of Spire Past",
     "DESCRIPTION": "Whenever you hexamod:Retract, gain 5 Block and !M! hexamod:Momentary Dexterity."
+  },
+  "hexamod:GhostOfSpireFuture": {
+    "NAME": "Ghost of Spire Future",
+    "DESCRIPTION": "Whenever you hexamod:Advance, gain !M! hexamod:Momentary Strength and draw 1 card."
   }
 }
