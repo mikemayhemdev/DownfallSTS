@@ -185,5 +185,10 @@
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
     "DESCRIPTION": "Gain !B! Block. Exhaust."
+  },
+  "hexamod:PowerFromBeyond": {
+    "NAME": "Power from Beyond",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw 2 cards next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] [E] and draw 2 cards next turn."
   }
 }
