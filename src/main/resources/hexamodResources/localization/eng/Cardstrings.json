@@ -133,5 +133,9 @@
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Grants !M! additional Block for each Ethereal card in your hand."
+  },
+  "hexamod:Haunt": {
+    "NAME": "Haunt",
+    "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal."
   }
 }
