@@ -25,6 +25,15 @@ public class GhostflameHelper {
         hexaGhostFlames.get(0).activate();
     }
 
+    public static AbstractGhostflame getPreviousGhostFlame() {
+        AbstractGhostflame x;
+        if (activeGhostFlame == hexaGhostFlames.get(0)) {
+            x = hexaGhostFlames.get(hexaGhostFlames.size() - 1);
+        } else
+            x = hexaGhostFlames.get((hexaGhostFlames.indexOf(activeGhostFlame) - 1));
+        return x;
+    }
+
     public static void advance() {
         AbstractGhostflame x = hexaGhostFlames.get((hexaGhostFlames.indexOf(activeGhostFlame) + 1) % hexaGhostFlames.size());
         if (x.charged) {
