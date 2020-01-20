@@ -47,5 +47,12 @@
       "seal"
     ],
     "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+  },
+  {
+    "PROPER_NAME": "Momentary",
+    "NAMES": [
+      "momentary"
+    ],
+    "DESCRIPTION": "A Momentary buff also adds a debuff which causes you to lose the buff at the end of your turn."
   }
 ]

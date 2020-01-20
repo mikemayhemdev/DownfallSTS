@@ -1,11 +1,17 @@
 package theHexaghost;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import theHexaghost.ghostflames.*;
+import theHexaghost.powers.PastPower;
 
 import java.util.ArrayList;
 
@@ -52,6 +58,13 @@ public class GhostflameHelper {
             x.extinguish();
         }
         x.activate();
+        if (AbstractDungeon.player.hasPower(PastPower.POWER_ID)) {
+            TwoAmountPower p = ((TwoAmountPower) AbstractDungeon.player.getPower(PastPower.POWER_ID));
+            p.flash();
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, p.amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, p.amount2), p.amount2));// 44
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseDexterityPower(AbstractDungeon.player, p.amount2), p.amount2));// 46
+        }
     }
 
     public static void update() {

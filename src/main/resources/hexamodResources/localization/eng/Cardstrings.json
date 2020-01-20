@@ -57,5 +57,9 @@
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Charge all uncharged Ghostflames in order."
+  },
+  "hexamod:GhostOfSpirePast": {
+    "NAME": "Ghost of Spire Past",
+    "DESCRIPTION": "Whenever you hexamod:Retract, gain 5 Block and !M! hexamod:Momentary Dexterity."
   }
 }
