@@ -40,7 +40,7 @@
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
-    "DESCRIPTION": "hexamod:Extinguish, then hexamod:Charge, the Ghostflame preceding the hexamod:Active one."
+    "DESCRIPTION": "hexamod:Extinguish, then Charge, the Ghostflame preceding the hexamod:Active one."
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
@@ -53,5 +53,9 @@
   "hexamod:Hexalevel": {
     "NAME": "Hexa-Level",
     "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Enhance."
+  },
+  "hexamod:UnlimitedPower": {
+    "NAME": "Unlimited Power",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Charge all uncharged Ghostflames in order."
   }
 }
