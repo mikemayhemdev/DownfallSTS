@@ -41,5 +41,9 @@
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
     "DESCRIPTION": "hexamod:Extinguish, then hexamod:Charge, the Ghostflame preceding the hexamod:Active one."
+  },
+  "hexamod:TimeWarp": {
+    "NAME": "Time Warp",
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL If the first Ghostflame is not hexamod:Active, hexamod:Retract and repeat this."
   }
 }
