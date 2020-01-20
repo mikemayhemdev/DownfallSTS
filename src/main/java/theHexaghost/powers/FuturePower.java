@@ -4,12 +4,16 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class FuturePower extends TwoAmountPower implements CloneablePowerInterface {
+public class FuturePower extends TwoAmountPower implements CloneablePowerInterface, OnAdvanceSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("FuturePower");
 
@@ -29,6 +33,14 @@ public class FuturePower extends TwoAmountPower implements CloneablePowerInterfa
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.updateDescription();
+    }
+
+    @Override
+    public void onAdvance() {
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, amount), amount));// 44
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, amount), amount));// 46
+        addToBot(new DrawCardAction(AbstractDungeon.player, amount2));
     }
 
     @Override

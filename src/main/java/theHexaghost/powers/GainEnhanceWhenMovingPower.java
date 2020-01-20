@@ -4,21 +4,21 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class GainStrengthThatGoesAwayPower extends AbstractPower implements CloneablePowerInterface {
+public class GainEnhanceWhenMovingPower extends AbstractPower implements CloneablePowerInterface, OnAdvanceOrRetractSubscriber {
 
-    public static final String POWER_ID = HexaMod.makeID("GainStrengthThatGoesAwayPower");
+    public static final String POWER_ID = HexaMod.makeID("GainEnhanceWhenMovingPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
 
-    public GainStrengthThatGoesAwayPower(final int amount) {
-        this.name = "Present";
+    public GainEnhanceWhenMovingPower(final int amount) {
+        this.name = "Thermal Planning";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -32,18 +32,24 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     }
 
     @Override
-    public void updateDescription() {
-        description = "At the start of your turn, gain #b" + amount + " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract.";
+    public void onAdvanceOrRetract() {
+        this.flash();
+        addToBot(new ApplyPowerAction(owner, owner, new EnhancePower(amount), amount));
+        addToBot(new ApplyPowerAction(owner, owner, new LoseEnhancePower(amount), amount));
     }
 
-    public void atStartOfTurnPostDraw() {
-        this.flash();// 28
-        this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, this.amount), this.amount));// 29
-        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthWhenYouAdvanceOrRetractPower(amount), amount));
+    public void atEndOfTurn(boolean isPlayer) {
+        this.flash();// 30
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));// 32
+    }
+
+    @Override
+    public void updateDescription() {
+        description = "This turn, when you #yAdvance or #yRetract, gain #b" + amount + " #yMomentary #yEnhance.";
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new GainStrengthThatGoesAwayPower(amount);
+        return new GainEnhanceWhenMovingPower(amount);
     }
 }

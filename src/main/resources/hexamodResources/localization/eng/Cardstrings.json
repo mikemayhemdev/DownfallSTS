@@ -69,5 +69,9 @@
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Ghost of Spire Present",
     "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
+  },
+  "hexamod:ThermalPlanning": {
+    "NAME": "Thermal Planning",
+    "DESCRIPTION": "Whenever you hexamod:Advance or hexamod:Retract this turn, gain !M! hexamod:Momentary hexamod:Enhance."
   }
 }

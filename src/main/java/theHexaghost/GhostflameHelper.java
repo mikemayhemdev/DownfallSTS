@@ -1,20 +1,15 @@
 package theHexaghost;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.ghostflames.*;
-import theHexaghost.powers.FuturePower;
-import theHexaghost.powers.LoseStrengthWhenYouAdvanceOrRetractPower;
-import theHexaghost.powers.PastPower;
+import theHexaghost.powers.OnAdvanceOrRetractSubscriber;
+import theHexaghost.powers.OnAdvanceSubscriber;
+import theHexaghost.powers.OnRetractSubscriber;
 
 import java.util.ArrayList;
 
@@ -49,17 +44,9 @@ public class GhostflameHelper {
             x.extinguish();
         }
         x.activate();
-        if (AbstractDungeon.player.hasPower(FuturePower.POWER_ID)) {
-            TwoAmountPower p = ((TwoAmountPower) AbstractDungeon.player.getPower(FuturePower.POWER_ID));
-            p.flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, p.amount), p.amount));// 44
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, p.amount), p.amount));// 46
-        }
-        if (AbstractDungeon.player.hasPower(LoseStrengthWhenYouAdvanceOrRetractPower.POWER_ID)) {
-            AbstractPower p = AbstractDungeon.player.getPower(LoseStrengthWhenYouAdvanceOrRetractPower.POWER_ID);
-            p.flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, p.amount));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, p));
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnAdvanceSubscriber) ((OnAdvanceSubscriber) p).onAdvance();
+            if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract();
         }
     }
 
@@ -73,18 +60,9 @@ public class GhostflameHelper {
             x.extinguish();
         }
         x.activate();
-        if (AbstractDungeon.player.hasPower(PastPower.POWER_ID)) {
-            TwoAmountPower p = ((TwoAmountPower) AbstractDungeon.player.getPower(PastPower.POWER_ID));
-            p.flash();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, p.amount2), p.amount2));// 44
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseDexterityPower(AbstractDungeon.player, p.amount2), p.amount2));// 46
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, p.amount2));
-        }
-        if (AbstractDungeon.player.hasPower(LoseStrengthWhenYouAdvanceOrRetractPower.POWER_ID)) {
-            AbstractPower p = AbstractDungeon.player.getPower(LoseStrengthWhenYouAdvanceOrRetractPower.POWER_ID);
-            p.flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, p.amount));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, p));
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnRetractSubscriber) ((OnRetractSubscriber) p).onRetract();
+            if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract();
         }
     }
 
