@@ -101,5 +101,9 @@
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Darkness",
     "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Gain !B! Block."
+  },
+  "hexamod:GhostlyFlex": {
+    "NAME": "Ghostly Flex",
+    "DESCRIPTION": "Gain 2 hexamod:Momentary Strength and 2 hexamod:Momentary Dexterity for each Charged Ghostflame."
   }
 }
