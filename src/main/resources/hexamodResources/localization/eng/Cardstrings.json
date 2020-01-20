@@ -154,5 +154,18 @@
   "hexamod:EtherealExpedition": {
     "NAME": "Ethereal Expedition",
     "DESCRIPTION": "Ethereal. NL Add a random Ethereal card into your hand. NL It costs 0 this turn. NL Exhaust."
+  },
+  "hexamod:PhantomCloak": {
+    "NAME": "Phantom Cloak",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity and lose 1 Strength."
+  },
+  "hexamod:ParanormalForm": {
+    "NAME": "Paranormal Form",
+    "DESCRIPTION": "Ethereal. NL Whenever you play an Ethereal card, deal !M! damage to a random enemy."
+  },
+  "hexamod:UnleashSpirits": {
+    "NAME": "Unleash Spirits",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile."
   }
 }
