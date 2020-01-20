@@ -125,5 +125,13 @@
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw 1 card."
+  },
+  "hexamod:GhostLash": {
+    "NAME": "Ghost Lash",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Deals !M! additional damage for each Ethereal card in your hand."
+  },
+  "hexamod:GhostShield": {
+    "NAME": "Ghost Shield",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Grants !M! additional Block for each Ethereal card in your hand."
   }
 }
