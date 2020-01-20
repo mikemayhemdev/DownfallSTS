@@ -67,7 +67,8 @@ public class MyOrb {
                         this.particleTimer = 0.06F;// 84
                     }
                 }
-            } else if (GhostflameHelper.activeGhostFlame == myDaddy) {
+            }
+            if (GhostflameHelper.activeGhostFlame == myDaddy) {
                 this.effect.update();// 88
                 this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
                 if (this.particleTimer < 0.0F) {// 90
