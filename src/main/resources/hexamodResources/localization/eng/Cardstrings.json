@@ -137,5 +137,14 @@
   "hexamod:Haunt": {
     "NAME": "Haunt",
     "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal."
+  },
+  "hexamod:RecurringNightmare": {
+    "NAME": "Recurring Nightmare",
+    "DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand."
+  },
+  "hexamod:GiftsFromTheDead": {
+    "NAME": "Gifts from the Dead",
+    "DESCRIPTION": "Ethereal. NL Whenever an Ethereal card is Exhausted, gain [E] next turn."
   }
 }
