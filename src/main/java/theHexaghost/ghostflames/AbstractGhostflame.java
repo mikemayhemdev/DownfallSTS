@@ -2,6 +2,7 @@ package theHexaghost.ghostflames;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import theHexaghost.GhostflameHelper;
@@ -55,6 +56,8 @@ public abstract class AbstractGhostflame {
     public void extinguish() {
         graphicalRender.charged = false;
         charged = false;
+        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
+        CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
     }
 
     public void activate() {

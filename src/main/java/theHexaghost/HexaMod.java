@@ -10,6 +10,7 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -199,25 +200,31 @@ public class HexaMod implements
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
-        if (!GhostflameHelper.activeGhostFlame.charged && renderFlames)
-            if (GhostflameHelper.activeGhostFlame instanceof SearingGhostflame && abstractCard.type == AbstractCard.CardType.ATTACK) {
-                ((SearingGhostflame) GhostflameHelper.activeGhostFlame).attacksPlayedThisTurn++;
-                if (((SearingGhostflame) GhostflameHelper.activeGhostFlame).attacksPlayedThisTurn == 2) {
-                    GhostflameHelper.activeGhostFlame.charge();
-                }
-            } else if (GhostflameHelper.activeGhostFlame instanceof CrushingGhostflame && abstractCard.type == AbstractCard.CardType.SKILL) {
-                ((CrushingGhostflame) GhostflameHelper.activeGhostFlame).skillsPlayedThisTurn++;
-                if (((CrushingGhostflame) GhostflameHelper.activeGhostFlame).skillsPlayedThisTurn == 2) {
-                    GhostflameHelper.activeGhostFlame.charge();
-                }
-            } else if (GhostflameHelper.activeGhostFlame instanceof BolsteringGhostflame && abstractCard.type == AbstractCard.CardType.POWER) {
-                GhostflameHelper.activeGhostFlame.charge();
-            } else if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
-                ((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn += abstractCard.energyOnUse;
-                if (((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn >= 3) {
-                    GhostflameHelper.activeGhostFlame.charge();
-                }
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (!GhostflameHelper.activeGhostFlame.charged && renderFlames)
+                    if (GhostflameHelper.activeGhostFlame instanceof SearingGhostflame && abstractCard.type == AbstractCard.CardType.ATTACK) {
+                        ((SearingGhostflame) GhostflameHelper.activeGhostFlame).attacksPlayedThisTurn++;
+                        if (((SearingGhostflame) GhostflameHelper.activeGhostFlame).attacksPlayedThisTurn == 2) {
+                            GhostflameHelper.activeGhostFlame.charge();
+                        }
+                    } else if (GhostflameHelper.activeGhostFlame instanceof CrushingGhostflame && abstractCard.type == AbstractCard.CardType.SKILL) {
+                        ((CrushingGhostflame) GhostflameHelper.activeGhostFlame).skillsPlayedThisTurn++;
+                        if (((CrushingGhostflame) GhostflameHelper.activeGhostFlame).skillsPlayedThisTurn == 2) {
+                            GhostflameHelper.activeGhostFlame.charge();
+                        }
+                    } else if (GhostflameHelper.activeGhostFlame instanceof BolsteringGhostflame && abstractCard.type == AbstractCard.CardType.POWER) {
+                        GhostflameHelper.activeGhostFlame.charge();
+                    } else if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
+                        ((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn += abstractCard.energyOnUse;
+                        if (((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn >= 3) {
+                            GhostflameHelper.activeGhostFlame.charge();
+                        }
+                    }
             }
+        });
     }
 
     @Override

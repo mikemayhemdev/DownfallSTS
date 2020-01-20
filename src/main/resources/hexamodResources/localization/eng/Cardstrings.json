@@ -105,5 +105,9 @@
   "hexamod:GhostlyFlex": {
     "NAME": "Ghostly Flex",
     "DESCRIPTION": "Gain 2 hexamod:Momentary Strength and 2 hexamod:Momentary Dexterity for each Charged Ghostflame."
+  },
+  "hexamod:SpectralAdrenaline": {
+    "NAME": "Spectral Adrenaline",
+    "DESCRIPTION": "hexamod:Extinguish all Charged Ghostflames. NL For each Ghostflame hexamod:Extinguished, gain [E] and draw 1 card. NL Exhaust."
   }
 }

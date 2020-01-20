@@ -9,14 +9,16 @@
   {
     "PROPER_NAME": "Advance",
     "NAMES": [
-      "advance"
+      "advance",
+      "advanced"
     ],
     "DESCRIPTION": "#yActivate the next Ghostflame. If it's Charged, #yExtinguish it."
   },
   {
     "PROPER_NAME": "Retract",
     "NAMES": [
-      "retract"
+      "retract",
+      "retracted"
     ],
     "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Charged, #yExtinguish it."
   },
@@ -30,14 +32,16 @@
   {
     "PROPER_NAME": "Burn",
     "NAMES": [
-      "burn"
+      "burn",
+      "burned"
     ],
     "DESCRIPTION": "Burned creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding down)."
   },
   {
     "PROPER_NAME": "Extinguish",
     "NAMES": [
-      "extinguish"
+      "extinguish",
+      "extinguished"
     ],
     "DESCRIPTION": "Remove the Charge from a Ghostflame, allowing it to be Charged again."
   },
