@@ -15,5 +15,9 @@
     "NAME": "Float",
     "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is uncharged, gain [E] . NL hexamod:Advance. NL  Draw 1 card.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw 1 card."
+  },
+  "hexamod:AdvancingGuard": {
+    "NAME": "Advancing Guard",
+    "DESCRIPTION": "Gain !B! Block. NL hexamod:Advance."
   }
 }
