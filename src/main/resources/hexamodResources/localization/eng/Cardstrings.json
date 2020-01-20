@@ -32,5 +32,10 @@
     "NAME": "Rewind",
     "DESCRIPTION": "hexamod:Retract. NL Gain [E] .",
     "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] . NL Repeat this once."
+  },
+  "hexamod:SkipABeat": {
+    "NAME": "Skip a Beat",
+    "DESCRIPTION": "Charge the current Ghostflame. NL Advance. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Charge the current Ghostflame. NL Advance."
   }
 }
