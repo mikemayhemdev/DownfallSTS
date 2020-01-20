@@ -93,5 +93,13 @@
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
     "DESCRIPTION": "Retain. NL Add a random Power card into your hand. NL It costs 0 until played. NL Exhaust."
+  },
+  "hexamod:SwordOfDarkness": {
+    "NAME": "Sword of Darkness",
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Deal !D! damage."
+  },
+  "hexamod:ShieldOfDarkness": {
+    "NAME": "Shield of Darkness",
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Gain !B! Block."
   }
 }
