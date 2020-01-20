@@ -89,5 +89,9 @@
   "hexamod:NecessarySacrifice": {
     "NAME": "Necessary Sacrifice",
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
+  },
+  "hexamod:TimeOfNeed": {
+    "NAME": "Time of Need",
+    "DESCRIPTION": "Retain. NL Add a random Power card into your hand. NL It costs 0 until played. NL Exhaust."
   }
 }
