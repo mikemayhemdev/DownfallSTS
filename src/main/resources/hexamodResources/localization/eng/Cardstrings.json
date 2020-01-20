@@ -167,5 +167,23 @@
     "NAME": "Unleash Spirits",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile."
+  },
+  "hexamod:NightmareStrike": {
+    "NAME": "Nightmare Strike",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, add a *Shadow *Strike into your hand.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, add a *Shadow *Strike+ into your hand."
+  },
+  "hexamod:NightmareGuise": {
+    "NAME": "Nightmare Guise",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, add a *Shadow *Guise into your hand.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, add a *Shadow *Guise+ into your hand."
+  },
+  "hexamod:ShadowStrike": {
+    "NAME": "Shadow Strike",
+    "DESCRIPTION": "Deal !D! damage. Exhaust."
+  },
+  "hexamod:ShadowGuise": {
+    "NAME": "Shadow Guise",
+    "DESCRIPTION": "Gain !B! Block. Exhaust."
   }
 }
