@@ -85,5 +85,9 @@
   "hexamod:EmpoweringStance": {
     "NAME": "Empowering Stance",
     "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame. NL Exhaust."
+  },
+  "hexamod:NecessarySacrifice": {
+    "NAME": "Necessary Sacrifice",
+    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
   }
 }
