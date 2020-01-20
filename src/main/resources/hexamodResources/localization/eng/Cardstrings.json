@@ -190,5 +190,9 @@
     "NAME": "Power from Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw 2 cards next turn.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] [E] and draw 2 cards next turn."
+  },
+  "hexamod:BurningTouch": {
+    "NAME": "Burning Touch",
+    "DESCRIPTION": "If the enemy has hexamod:Burn, apply !M! hexamod:Burn. NL Apply !M! hexamod:Burn."
   }
 }
