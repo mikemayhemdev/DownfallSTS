@@ -1,0 +1,9 @@
+{
+  "hexamod:SpiritBrand": {
+    "NAME": "Spirit Brand",
+    "FLAVOR": "A bound protector.",
+    "DESCRIPTIONS": [
+      "Whenever you Charge a Ghostflame, gain #b3 #yBlock."
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "hexamod:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "hexamod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "hexamod:Sear": {
+    "NAME": "Sear",
+    "DESCRIPTION": "Apply !M! hexamod:Burn."
+  },
+  "hexamod:Float": {
+    "NAME": "Float",
+    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is uncharged, gain [E] . NL hexamod:Advance. NL  Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw 1 card."
+  }
+}

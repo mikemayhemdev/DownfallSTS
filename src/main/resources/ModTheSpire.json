@@ -1,0 +1,12 @@
+{
+  "modid": "${project.artifactId}",
+  "name": "${project.name}",
+  "author_list": ["Vex'd"],
+  "description": "${project.description}",
+  "version": "${project.version}",
+  "sts_version": "${SlayTheSpire.version}",
+  "mts_version": "${ModTheSpire.version}",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": "https://api.github.com/repos/DarkVexon/TheBandit/releases/latest"
+}
+
