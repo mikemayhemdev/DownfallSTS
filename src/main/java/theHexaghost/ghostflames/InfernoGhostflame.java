@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.powers.EnhancePower;
 
 public class InfernoGhostflame extends AbstractGhostflame {
 
@@ -20,11 +21,15 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
+        int x = damage;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
         for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
             //tfw no gf
             if (gf.charged) {
-                atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                 atb(new ExtinguishAction(gf));
             }
         }
@@ -53,6 +58,10 @@ public class InfernoGhostflame extends AbstractGhostflame {
         } else {
             s = "Inactive. Spend [E] [E] [E] while Active to Charge.";
         }
-        return s + " NL When #yCharged, deal #b" + damage + " damage to a random enemy for each #yCharged #yGhostflame, then #yExtinguish them.";
+        int x = damage;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        return s + " NL When #yCharged, deal #b" + x + " damage to a random enemy for each #yCharged #yGhostflame, then #yExtinguish them.";
     }
 }

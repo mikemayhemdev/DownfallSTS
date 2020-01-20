@@ -57,12 +57,6 @@ public abstract class AbstractGhostflame {
         charged = false;
     }
 
-    public void enhance() {
-        if (damage > -1) damage++;
-        if (block > -1) block++;
-        if (magic > -1) magic++;
-    }
-
     public void activate() {
         GhostflameHelper.activeGhostFlame = this;
     }

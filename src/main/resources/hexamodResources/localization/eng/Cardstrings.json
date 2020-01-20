@@ -45,5 +45,9 @@
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL If the first Ghostflame is not hexamod:Active, hexamod:Retract and repeat this."
+  },
+  "hexamod:EmpoweredFlame": {
+    "NAME": "Empowered Flame",
+    "DESCRIPTION": "Gain !M! hexamod:Enhance."
   }
 }

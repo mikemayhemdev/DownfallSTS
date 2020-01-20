@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.powers.BurnPower;
+import theHexaghost.powers.EnhancePower;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
@@ -19,10 +20,14 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
+        int x = magic;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!m.isDead && !m.isDying) {
                 atb(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-                atb(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, magic), magic));
+                atb(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
             }
         }
     }
@@ -42,6 +47,10 @@ public class SearingGhostflame extends AbstractGhostflame {
         } else {
             s = "Inactive. Play #b2 #yAttacks while #yActive to #yCharge.";
         }
-        return s + " NL When #yCharged, apply #b" + magic + " #yBurn to ALL enemies.";
+        int x = magic;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        return s + " NL When #yCharged, apply #b" + x + " #yBurn to ALL enemies.";
     }
 }

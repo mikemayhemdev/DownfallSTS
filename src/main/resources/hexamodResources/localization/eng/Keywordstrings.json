@@ -25,7 +25,7 @@
     "NAMES": [
       "enhance"
     ],
-    "DESCRIPTION": "Increase the damage, #yBlock, or #yBurn of a Ghostflame by #b1."
+    "DESCRIPTION": "Enhance increases the effectiveness of Ghostflames."
   },
   {
     "PROPER_NAME": "Burn",

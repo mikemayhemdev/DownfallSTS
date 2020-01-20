@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.powers.EnhancePower;
 
 public class CrushingGhostflame extends AbstractGhostflame {
 
@@ -24,10 +25,14 @@ public class CrushingGhostflame extends AbstractGhostflame {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
+                    int x = damage;
+                    if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+                        x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+                    }
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     atb(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
-                    atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                    atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                 }
             });
         }
@@ -48,6 +53,10 @@ public class CrushingGhostflame extends AbstractGhostflame {
         } else {
             s = "Inactive. Play #b2 #ySkills while #yActive to #yCharge.";
         }
-        return s + " NL When Charged, deal #b" + damage + " damage to a random enemy twice.";
+        int x = damage;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        return s + " NL When Charged, deal #b" + x + " damage to a random enemy twice.";
     }
 }
