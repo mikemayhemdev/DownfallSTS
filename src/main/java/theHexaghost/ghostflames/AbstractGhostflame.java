@@ -28,10 +28,10 @@ public abstract class AbstractGhostflame {
         charged = true;
         onCharge();
         for (AbstractPower p : AbstractDungeon.player.powers) {
-            if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge();
+            if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge(this);
         }
         for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge();
+            if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
         }
     }
 
