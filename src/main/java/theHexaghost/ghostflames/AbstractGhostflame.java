@@ -1,14 +1,12 @@
 package theHexaghost.ghostflames;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.relics.SpiritBrand;
 import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.vfx.MyOrb;
 
@@ -24,14 +22,16 @@ public abstract class AbstractGhostflame {
     public Hitbox hitbox;
 
     public void charge() {
-        graphicalRender.charge();
-        charged = true;
-        onCharge();
-        for (AbstractPower p : AbstractDungeon.player.powers) {
-            if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge(this);
-        }
-        for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
+        if (!charged) {
+            graphicalRender.charge();
+            charged = true;
+            onCharge();
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge(this);
+            }
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
+            }
         }
     }
 
