@@ -238,5 +238,10 @@
   "hexamod:InvigoratingFlames": {
     "NAME": "Invigorating Flames",
     "DESCRIPTION": "Remove the enemy's hexamod:Burn and gain that much Block. NL If they have no hexamod:Burn, apply 5 hexamod:Burn instead."
+  },
+  "hexamod:TurnItUp": {
+    "NAME": "Turn It Up",
+    "DESCRIPTION": "Double the enemy's Burn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's Burn. NL Exhaust."
   }
 }
