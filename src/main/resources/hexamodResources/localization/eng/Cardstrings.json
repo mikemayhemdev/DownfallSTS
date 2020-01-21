@@ -268,5 +268,10 @@
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
     "DESCRIPTION": "Deal !D! damage twice. NL If the enemy has hexamod:Burn, deal !D! damage."
+  },
+  "hexamod:SpectralSpark": {
+    "NAME": "Spectral Spark",
+    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 1 this combat.",
+    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 2 this combat."
   }
 }
