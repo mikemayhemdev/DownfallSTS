@@ -1,6 +1,7 @@
 package theHexaghost;
 
 import basemod.BaseMod;
+import basemod.ReflectionHacks;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -17,7 +18,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -47,8 +50,8 @@ public class HexaMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         PreRoomRenderSubscriber {
-    public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder3.png";
-    public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulder4.png";
+    public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
+    public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
     private static final String ATTACK_S_ART = "hexamodResources/images/512/bg_attack_hexaghost.png";
     private static final String SKILL_S_ART = "hexamodResources/images/512/bg_skill_hexaghost.png";
@@ -110,8 +113,8 @@ public class HexaMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheHexaghost("the Hexaghost", TheHexaghost.Enums.THE_BANDIT),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheHexaghost.Enums.THE_BANDIT);
+        BaseMod.addCharacter(new TheHexaghost("the Hexaghost", TheHexaghost.Enums.THE_SPIRIT),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheHexaghost.Enums.THE_SPIRIT);
     }
 
     @Override
@@ -230,8 +233,16 @@ public class HexaMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         GhostflameHelper.init();
-        if (AbstractDungeon.player instanceof TheHexaghost)
+        if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;
+            if(AbstractDungeon.scene instanceof TheBottomScene){
+                ArrayList<InteractableTorchEffect> torches = (ArrayList<InteractableTorchEffect>) ReflectionHacks.getPrivate(AbstractDungeon.scene,TheBottomScene.class, "torches");
+                for(InteractableTorchEffect torch: torches){
+                    ReflectionHacks.setPrivate(torch, InteractableTorchEffect.class, "activated", false);
+                }
+            }
+        }
+
     }
 
     @Override

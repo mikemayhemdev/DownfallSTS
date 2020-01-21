@@ -44,7 +44,7 @@ public abstract class AbstractGhostflame {
         lx = x;
         ly = y;
         hitbox = new Hitbox(x, y, 64, 64);
-        graphicalRender = new MyOrb(hitbox.cX, hitbox.cY, this);
+        graphicalRender = new MyOrb(x, y, this, hitbox);
     }
 
     public void update() {

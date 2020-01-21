@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.ghostflames.*;
 import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 import theHexaghost.util.OnAdvanceSubscriber;
@@ -20,12 +21,12 @@ public class GhostflameHelper {
 
     public static void init() {
         hexaGhostFlames.clear();
-        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX - 95.0F, AbstractDungeon.player.drawY + 375.0F));
-        hexaGhostFlames.add(new CrushingGhostflame(AbstractDungeon.player.drawX + 85.0F, AbstractDungeon.player.drawY + 375.0F));
-        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX + 155.0F, AbstractDungeon.player.drawY + 245.0F));
-        hexaGhostFlames.add(new BolsteringGhostflame(AbstractDungeon.player.drawX + 85.0F, AbstractDungeon.player.drawY + 115.0F));
-        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX - 95.0F, AbstractDungeon.player.drawY + 115.0F));
-        hexaGhostFlames.add(new InfernoGhostflame(AbstractDungeon.player.drawX - 165.0F, AbstractDungeon.player.drawY + 245.0F));
+        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX - (95.0F * Settings.scale), AbstractDungeon.player.drawY + (375.0F * Settings.scale)));
+        hexaGhostFlames.add(new CrushingGhostflame(AbstractDungeon.player.drawX + (85.0F * Settings.scale), AbstractDungeon.player.drawY + (375.0F * Settings.scale)));
+        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX + (155.0F * Settings.scale), AbstractDungeon.player.drawY + (245.0F * Settings.scale)));
+        hexaGhostFlames.add(new BolsteringGhostflame(AbstractDungeon.player.drawX + (85.0F * Settings.scale), AbstractDungeon.player.drawY + (115.0F * Settings.scale)));
+        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX - (95.0F * Settings.scale), AbstractDungeon.player.drawY + (115.0F * Settings.scale)));
+        hexaGhostFlames.add(new InfernoGhostflame(AbstractDungeon.player.drawX - (165.0F * Settings.scale), AbstractDungeon.player.drawY + (245.0F * Settings.scale)));
         hexaGhostFlames.get(0).activate();
     }
 
@@ -74,7 +75,7 @@ public class GhostflameHelper {
     }
 
     public static void render(SpriteBatch sb) {
-        if (HexaMod.renderFlames) {
+        if (HexaMod.renderFlames && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             for (AbstractGhostflame gf : hexaGhostFlames) {
                 if (gf.hitbox.hovered) {
                     if ((float) InputHelper.mX < 1400.0F * Settings.scale) {

@@ -1,5 +1,6 @@
 package theHexaghost.ghostflames;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,16 +22,22 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        int x = magic;
-        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-        }
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!m.isDead && !m.isDying) {
-                atb(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-                atb(new BurnAction(m, x));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = magic;
+                if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+                    x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+                }
+                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if (!m.isDead && !m.isDying) {
+                        atb(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
+                        atb(new BurnAction(m, x));
+                    }
+                }
             }
-        }
+        });
     }
 
     @Override

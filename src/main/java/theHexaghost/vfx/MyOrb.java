@@ -4,8 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.GhostlyFireEffect;
@@ -19,6 +19,7 @@ public class MyOrb {
     private BobEffect effect = new BobEffect(2.0F);
     private float activateTimer;
     public AbstractGhostflame myDaddy;
+    public Hitbox mom;
     public boolean charged = false;
     public boolean hidden = false;
     public boolean playedSfx = false;
@@ -27,14 +28,15 @@ public class MyOrb {
     private float y;
     private float particleTimer = 0.0F;
 
-    public MyOrb(float x, float y, AbstractGhostflame pops) {
-        this.x = x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale;// 32
-        this.y = y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale;// 33
+    public MyOrb(float x, float y, AbstractGhostflame pops, Hitbox mommy) {
+        this.x = x;// 32
+        this.y = y;// 33
         this.activateTimer = 1 * 0.3F;// 34
         this.color = Color.CHARTREUSE.cpy();// 35
         this.color.a = 0.0F;// 36
         this.hidden = false;// 37
         myDaddy = pops;
+        mom = mommy;
     }// 38
 
     public void charge() {
@@ -44,6 +46,8 @@ public class MyOrb {
     }// 47
 
     public void update() {
+        x = mom.cX;
+        y = mom.cY;
         if (!this.hidden) {// 64
             if (this.charged) {// 65
                 this.activateTimer -= Gdx.graphics.getDeltaTime();// 66

@@ -1,8 +1,11 @@
 package theHexaghost.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -12,7 +15,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class BurnPower extends AbstractPower implements CloneablePowerInterface {
+public class BurnPower extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
 
     public static final String POWER_ID = HexaMod.makeID("BurnPower");
 
@@ -33,10 +36,20 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface 
         this.updateDescription();
     }
 
+    @Override
+    public int getHealthBarAmount() {
+        return amount;
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.PINK.cpy();
+    }
+
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 65 66
             this.flashWithoutSound();// 67
-            this.addToBot(new LoseHPAction(owner, owner, amount));
+            this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
             addToBot(new ReducePowerAction(owner, owner, this, this.amount / 2));
         }
     }// 70

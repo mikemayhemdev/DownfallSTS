@@ -26,6 +26,7 @@ public class HauntingEcho extends AbstractHexaCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 if (GhostflameHelper.activeGhostFlame.charged) {
                     addToTop(new ChargeCurrentFlameAction());
                     addToTop(new ExtinguishCurrentFlameAction());

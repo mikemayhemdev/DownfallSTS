@@ -33,25 +33,25 @@ import static theHexaghost.TheHexaghost.Enums.GHOST_GREEN;
 
 public class TheHexaghost extends CustomPlayer {
     private static final String[] orbTextures = {
-            getModID() + "Resources/images/char/mainChar/orb/layer1.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer2.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer3.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer4.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer5.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer6.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer1d.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer2d.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer3d.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer4d.png",
-            getModID() + "Resources/images/char/mainChar/orb/layer5d.png",};
+            "hexamodResources/images/char/mainChar/orb/layer1.png",
+            "hexamodResources/images/char/mainChar/orb/layer2.png",
+            "hexamodResources/images/char/mainChar/orb/layer3.png",
+            "hexamodResources/images/char/mainChar/orb/layer4.png",
+            "hexamodResources/images/char/mainChar/orb/layer5.png",
+            "hexamodResources/images/char/mainChar/orb/layer6.png",
+            "hexamodResources/images/char/mainChar/orb/layer1d.png",
+            "hexamodResources/images/char/mainChar/orb/layer2d.png",
+            "hexamodResources/images/char/mainChar/orb/layer3d.png",
+            "hexamodResources/images/char/mainChar/orb/layer4d.png",
+            "hexamodResources/images/char/mainChar/orb/layer5d.png",};
     private static final String ID = makeID("theHexaghost");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
     public TheHexaghost(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, getModID() + "Resources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                getModID() + "Resources/images/char/mainChar/static_character.scml"));
+        super(name, setClass, new CustomEnergyOrb(orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
+                "hexamodResources/images/char/mainChar/static_character.scml"));
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -200,7 +200,7 @@ public class TheHexaghost extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_BANDIT;
+        public static AbstractPlayer.PlayerClass THE_SPIRIT;
         @SpireEnum(name = "HEXA_GHOST_PURPLE")
         public static AbstractCard.CardColor GHOST_GREEN;
         @SpireEnum(name = "HEXA_GHOST_PURPLE")
