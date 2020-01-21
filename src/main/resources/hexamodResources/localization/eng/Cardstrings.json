@@ -194,5 +194,9 @@
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
     "DESCRIPTION": "If the enemy has hexamod:Burn, apply !M! hexamod:Burn. NL Apply !M! hexamod:Burn."
+  },
+  "hexamod:Incineration": {
+    "NAME": "Incineration",
+    "DESCRIPTION": "Deal !D! damage and apply !M! hexamod:Burn to a random enemy 4 times."
   }
 }
