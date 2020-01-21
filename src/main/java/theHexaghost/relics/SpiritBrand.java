@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
+import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.util.TextureLoader;
 
@@ -22,7 +23,7 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
     }
 
     @Override
-    public void onCharge() {
+    public void onCharge(AbstractGhostflame g) {
         flash();
         addToBot(new GainBlockAction(AbstractDungeon.player, 3));
     }

@@ -308,5 +308,10 @@
   "hexamod:RetreatToShadows": {
     "NAME": "Retreat To Shadows",
     "DESCRIPTION": "Ethereal. NL hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
+  },
+  "hexamod:ApocalypticArmor": {
+    "NAME": "Apocalyptic Armor",
+    "DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, gain 1 Intangible.",
+    "UPGRADE_DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, gain 1 Intangible."
   }
 }
