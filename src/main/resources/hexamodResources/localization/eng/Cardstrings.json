@@ -277,5 +277,9 @@
   "hexamod:GhostflameInferno": {
     "NAME": "Ghostflame Inferno",
     "DESCRIPTION": "hexamod:Extinguish all Charged Ghostflames. Deal !D! damage and apply !M! hexamod:Burn to ALL enemies for each Ghostflame hexamod:Extinguished."
+  },
+  "hexamod:ChargedBarrage": {
+    "NAME": "Charged Barrage",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn. NL Repeat for each Charged Ghostflame."
   }
 }
