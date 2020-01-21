@@ -226,5 +226,9 @@
   "hexamod:ThermalTransfer": {
     "NAME": "Thermal Transfer",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Burn, gain !B! Block."
+  },
+  "hexamod:HeatCrush": {
+    "NAME": "Heat Crush",
+    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by enemy's hexamod:Burn."
   }
 }
