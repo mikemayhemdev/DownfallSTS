@@ -290,5 +290,9 @@
     "NAME": "Apocalypse Now",
     "DESCRIPTION": "Ethereal. NL hexamod:Advance until the Inferno Ghostflame is hexamod:Active. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance until the Inferno Ghostflame is hexamod:Active."
+  },
+  "hexamod:DynamicBlow": {
+    "NAME": "Dynamic Blow",
+    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is Charged, apply !M! hexamod:Burn. Otherwise, deal !D! damage."
   }
 }
