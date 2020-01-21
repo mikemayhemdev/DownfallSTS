@@ -198,5 +198,9 @@
   "hexamod:Incineration": {
     "NAME": "Incineration",
     "DESCRIPTION": "Deal !D! damage and apply !M! hexamod:Burn to a random enemy 4 times."
+  },
+  "hexamod:Firestarter": {
+    "NAME": "Firestarter",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Burn."
   }
 }
