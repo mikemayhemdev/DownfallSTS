@@ -313,5 +313,29 @@
     "NAME": "Apocalyptic Armor",
     "DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, gain 1 Intangible.",
     "UPGRADE_DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, gain 1 Intangible."
+  },
+  "hexamod:FirstSeal": {
+    "NAME": "First Seal",
+    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, heal !M! HP."
+  },
+  "hexamod:SecondSeal": {
+    "NAME": "Second Seal",
+    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain !M! additional Gold."
+  },
+  "hexamod:ThirdSeal": {
+    "NAME": "Third Seal",
+    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional Common card reward."
+  },
+  "hexamod:FourthSeal": {
+    "NAME": "Fourth Seal",
+    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional Potion reward."
+  },
+  "hexamod:FifthSeal": {
+    "NAME": "Fifth Seal",
+    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional Seal card reward."
+  },
+  "hexamod:SixthSeal": {
+    "NAME": "Sixth Seal",
+    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
   }
 }
