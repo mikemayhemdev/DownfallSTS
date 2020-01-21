@@ -201,6 +201,10 @@
   },
   "hexamod:Firestarter": {
     "NAME": "Firestarter",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Burn."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn."
+  },
+  "hexamod:SearingWound": {
+    "NAME": "Searing Wound",
+    "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Burn."
   }
 }
