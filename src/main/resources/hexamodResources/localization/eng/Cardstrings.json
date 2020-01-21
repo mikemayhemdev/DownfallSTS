@@ -241,7 +241,11 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
-    "DESCRIPTION": "Double the enemy's Burn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's Burn. NL Exhaust."
+    "DESCRIPTION": "Double the enemy's hexamod:Burn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's hexamod:Burn. NL Exhaust."
+  },
+  "hexamod:HeatMetal": {
+    "NAME": "Heat Metal",
+    "DESCRIPTION": "Deal !D! damage. NL Enemy gains !M! hexamod:Burn at the start of each of its turns."
   }
 }
