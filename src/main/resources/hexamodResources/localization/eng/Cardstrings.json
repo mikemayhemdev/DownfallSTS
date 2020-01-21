@@ -281,5 +281,9 @@
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn. NL Repeat for each Charged Ghostflame."
+  },
+  "hexamod:RadiantFlame": {
+    "NAME": "Radiant Flame",
+    "DESCRIPTION": "Whenever you Charge a Ghostflame, apply !M! hexamod:Burn to a random enemy."
   }
 }

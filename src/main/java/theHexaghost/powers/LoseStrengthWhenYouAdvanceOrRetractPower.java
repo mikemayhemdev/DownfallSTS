@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
+import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 import theHexaghost.util.TextureLoader;
 
 public class LoseStrengthWhenYouAdvanceOrRetractPower extends AbstractPower implements CloneablePowerInterface, OnAdvanceOrRetractSubscriber {

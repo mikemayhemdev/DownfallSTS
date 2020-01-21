@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
+import theHexaghost.util.OnAdvanceSubscriber;
 import theHexaghost.util.TextureLoader;
 
 public class FuturePower extends TwoAmountPower implements CloneablePowerInterface, OnAdvanceSubscriber {

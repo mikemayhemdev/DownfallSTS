@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.ghostflames.*;
-import theHexaghost.powers.OnAdvanceOrRetractSubscriber;
-import theHexaghost.powers.OnAdvanceSubscriber;
-import theHexaghost.powers.OnRetractSubscriber;
+import theHexaghost.util.OnAdvanceOrRetractSubscriber;
+import theHexaghost.util.OnAdvanceSubscriber;
+import theHexaghost.util.OnRetractSubscriber;
 
 import java.util.ArrayList;
 

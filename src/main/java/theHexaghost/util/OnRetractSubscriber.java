@@ -1,4 +1,4 @@
-package theHexaghost.powers;
+package theHexaghost.util;
 
 public interface OnRetractSubscriber {
     default void onRetract() {

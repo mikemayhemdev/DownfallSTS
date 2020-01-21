@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import theHexaghost.HexaMod;
+import theHexaghost.util.OnRetractSubscriber;
 import theHexaghost.util.TextureLoader;
 
 public class PastPower extends TwoAmountPower implements CloneablePowerInterface, OnRetractSubscriber {

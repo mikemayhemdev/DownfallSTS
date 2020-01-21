@@ -5,8 +5,11 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.relics.SpiritBrand;
+import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.vfx.MyOrb;
 
 public abstract class AbstractGhostflame {
@@ -22,12 +25,14 @@ public abstract class AbstractGhostflame {
 
     public void charge() {
         graphicalRender.charge();
-        if (AbstractDungeon.player.hasRelic(SpiritBrand.ID)) {
-            AbstractDungeon.player.getRelic(SpiritBrand.ID).flash();
-            atb(new GainBlockAction(AbstractDungeon.player, 3));
-        }
         charged = true;
         onCharge();
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge();
+        }
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge();
+        }
     }
 
     public abstract void onCharge();

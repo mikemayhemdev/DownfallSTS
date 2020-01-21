@@ -3,23 +3,25 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.HexaMod;
-import theHexaghost.util.OnAdvanceOrRetractSubscriber;
+import theHexaghost.actions.BurnAction;
+import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.util.TextureLoader;
 
-public class GainEnhanceWhenMovingPower extends AbstractPower implements CloneablePowerInterface, OnAdvanceOrRetractSubscriber {
+public class RadiantPower extends AbstractPower implements CloneablePowerInterface, OnChargeSubscriber {
 
-    public static final String POWER_ID = HexaMod.makeID("GainEnhanceWhenMovingPower");
+    public static final String POWER_ID = HexaMod.makeID("RadiantPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
 
-    public GainEnhanceWhenMovingPower(final int amount) {
-        this.name = "Thermal Planning";
+    public RadiantPower(final int amount) {
+        this.name = "Radiant Flame";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -33,24 +35,22 @@ public class GainEnhanceWhenMovingPower extends AbstractPower implements Cloneab
     }
 
     @Override
-    public void onAdvanceOrRetract() {
-        this.flash();
-        addToBot(new ApplyPowerAction(owner, owner, new EnhancePower(amount), amount));
-        addToBot(new ApplyPowerAction(owner, owner, new LoseEnhancePower(amount), amount));
-    }
-
-    public void atEndOfTurn(boolean isPlayer) {
-        this.flash();// 30
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));// 32
+    public void onCharge() {
+        flash();
+        AbstractMonster m = AbstractDungeon.getRandomMonster();
+        if (!m.isDead && !m.isDying) {
+            addToBot(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
+            addToBot(new BurnAction(m, amount));
+        }
     }
 
     @Override
     public void updateDescription() {
-        description = "This turn, when you #yAdvance or #yRetract, gain #b" + amount + " #yMomentary #yEnhance.";
+        description = "Whenever a Ghostflame becomes Charged, apply #b" + amount + " #yBurn to a random enemy.";
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new GainEnhanceWhenMovingPower(amount);
+        return new RadiantPower(amount);
     }
 }
