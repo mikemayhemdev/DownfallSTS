@@ -260,5 +260,9 @@
   "hexamod:SuperheatedStrike": {
     "NAME": "Superheated Strike",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! hexamod:Burn. NL If this card is Exhausted, take !M! damage."
+  },
+  "hexamod:FlamesFromBeyond": {
+    "NAME": "Flames from Beyond",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, apply !M! hexamod:Burn to ALL enemies."
   }
 }
