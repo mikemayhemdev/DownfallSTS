@@ -252,5 +252,9 @@
     "NAME": "Rain of Embers",
     "DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn X+1 times."
+  },
+  "hexamod:VolcanoVisage": {
+    "NAME": "Volcano Visage",
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, apply !M! hexamod:Burn to ALL enemies."
   }
 }
