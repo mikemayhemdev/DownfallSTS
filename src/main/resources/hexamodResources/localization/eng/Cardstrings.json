@@ -256,5 +256,9 @@
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
     "DESCRIPTION": "Ethereal. NL At the start of your turn, apply !M! hexamod:Burn to ALL enemies."
+  },
+  "hexamod:SuperheatedStrike": {
+    "NAME": "Superheated Strike",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! hexamod:Burn. NL If this card is Exhausted, take !M! damage."
   }
 }
