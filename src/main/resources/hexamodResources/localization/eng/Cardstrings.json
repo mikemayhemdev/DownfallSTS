@@ -299,5 +299,10 @@
     "NAME": "Spirit of Fire",
     "DESCRIPTION": "Ethereal. NL Gain [E] for each Charged Ghostflame.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] for each Charged Ghostflame. NL Draw 1 card."
+  },
+  "hexamod:Again": {
+    "NAME": "Again!",
+    "DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of this turn instead of #yAdvancing.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of the next 2 turns instead of #yAdvancing."
   }
 }
