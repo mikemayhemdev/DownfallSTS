@@ -302,7 +302,11 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of this turn instead of #yAdvancing.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of the next 2 turns instead of #yAdvancing."
+    "DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of this turn instead of hexamod:Advancing.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of the next 2 turns instead of hexamod:Advancing."
+  },
+  "hexamod:RetreatToShadows": {
+    "NAME": "Retreat To Shadows",
+    "DESCRIPTION": "Ethereal. NL hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
   }
 }
