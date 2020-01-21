@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.actions.BurnAction;
 import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.EnhancePower;
 
@@ -27,7 +28,7 @@ public class SearingGhostflame extends AbstractGhostflame {
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!m.isDead && !m.isDying) {
                 atb(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-                atb(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                atb(new BurnAction(m, x));
             }
         }
     }

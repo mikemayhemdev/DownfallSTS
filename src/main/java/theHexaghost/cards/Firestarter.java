@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.actions.BurnAction;
 import theHexaghost.powers.BurnPower;
 
 public class Firestarter extends AbstractHexaCard {
@@ -25,7 +26,7 @@ public class Firestarter extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        applyToEnemy(m, new BurnPower(m, magicNumber));
+        atb(new BurnAction(m, magicNumber));
     }
 
     public void upgrade() {

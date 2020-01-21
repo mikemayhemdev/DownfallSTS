@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.actions.BurnAction;
 import theHexaghost.powers.BurnPower;
 
 public class Sear extends AbstractHexaCard {
@@ -18,7 +19,7 @@ public class Sear extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToEnemy(m, new BurnPower(m, 5));
+        atb(new BurnAction(m, magicNumber));
     }
 
     public void upgrade() {

@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.actions.BurnAction;
 import theHexaghost.powers.BurnPower;
 
 public class BurningTouch extends AbstractHexaCard {
@@ -24,11 +25,11 @@ public class BurningTouch extends AbstractHexaCard {
             @Override
             public void update() {
                 if (m.hasPower(BurnPower.POWER_ID)) {
-                    applyToEnemy(m, new BurnPower(m, magicNumber));
+                    addToTop(new BurnAction(m, magicNumber));
                 }
             }
         });
-        applyToEnemy(m, new BurnPower(m, magicNumber));
+        atb(new BurnAction(m, magicNumber));
     }
 
     public void upgrade() {

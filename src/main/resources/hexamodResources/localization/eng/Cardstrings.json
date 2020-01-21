@@ -206,5 +206,9 @@
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
     "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Burn."
+  },
+  "hexamod:ExtraCrispy": {
+    "NAME": "Extra Crispy",
+    "DESCRIPTION": "Whenever you apply hexamod:Burn, apply !M! more."
   }
 }
