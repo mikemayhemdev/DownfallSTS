@@ -222,5 +222,9 @@
   "hexamod:WildfireWeapon": {
     "NAME": "Wildfire Weapon",
     "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Burn."
+  },
+  "hexamod:ThermalTransfer": {
+    "NAME": "Thermal Transfer",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Burn, gain !B! Block."
   }
 }
