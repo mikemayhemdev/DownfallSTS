@@ -247,5 +247,10 @@
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",
     "DESCRIPTION": "Deal !D! damage. NL Enemy gains !M! hexamod:Burn at the start of each of its turns."
+  },
+  "hexamod:RainOfEmbers": {
+    "NAME": "Rain of Embers",
+    "DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn X+1 times."
   }
 }
