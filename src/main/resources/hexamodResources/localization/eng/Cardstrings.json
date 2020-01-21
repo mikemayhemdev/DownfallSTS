@@ -264,5 +264,9 @@
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, apply !M! hexamod:Burn to ALL enemies."
+  },
+  "hexamod:PhantomFireball": {
+    "NAME": "Phantom Fireball",
+    "DESCRIPTION": "Deal !D! damage twice. NL If the enemy has hexamod:Burn, deal !D! damage."
   }
 }
