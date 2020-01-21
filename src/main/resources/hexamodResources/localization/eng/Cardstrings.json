@@ -230,5 +230,9 @@
   "hexamod:HeatCrush": {
     "NAME": "Heat Crush",
     "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by enemy's hexamod:Burn."
+  },
+  "hexamod:ConsumeSoul": {
+    "NAME": "Consume Soul",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal on an enemy with hexamod:Burn, heal !M! HP."
   }
 }
