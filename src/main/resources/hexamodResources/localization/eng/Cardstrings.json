@@ -294,5 +294,10 @@
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
     "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is Charged, apply !M! hexamod:Burn. Otherwise, deal !D! damage."
+  },
+  "hexamod:SpiritOfFire": {
+    "NAME": "Spirit of Fire",
+    "DESCRIPTION": "Ethereal. NL Gain [E] for each Charged Ghostflame.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] for each Charged Ghostflame. NL Draw 1 card."
   }
 }
