@@ -2,13 +2,11 @@ package theHexaghost.ghostflames;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.BurnAction;
-import theHexaghost.powers.BurnPower;
 import theHexaghost.powers.EnhancePower;
 
 public class SearingGhostflame extends AbstractGhostflame {
@@ -48,18 +46,18 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public String getDescription() {
-        String s;
+        String s = "";
         if (charged) {
-            s = "#yCharged.";
+            s = "#yCharged. ";
         } else if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - attacksPlayedThisTurn);
             if (x == 1) {
-                s = "#yActive. Play #b" + x + " #yAttack this turn to Charge.";
+                s = s + "#yActive. Play #b" + x + " #yAttack this turn to Charge.";
             } else {
-                s = "#yActive. Play #b" + x + " #yAttacks this turn to Charge.";
+                s = s + "#yActive. Play #b" + x + " #yAttacks this turn to Charge.";
             }
         } else {
-            s = "Inactive. Play #b2 #yAttacks while #yActive to Charge.";
+            s = s + "Inactive. Play #b2 #yAttacks while #yActive to Charge.";
         }
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {

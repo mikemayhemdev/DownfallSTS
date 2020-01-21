@@ -49,26 +49,27 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public String getDescription() {
-        String s;
+        String s = "";
         if (charged) {
-            s = "#yCharged.";
-        } else if (GhostflameHelper.activeGhostFlame == this) {
+            s = "#yCharged. ";
+        }
+        if (GhostflameHelper.activeGhostFlame == this) {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = "#yActive. Spend [E] [E] [E] this turn to Charge.";
+                    s = s + "#yActive. Spend [E] [E] [E] this turn to Charge.";
                     break;
                 case 2:
-                    s = "#yActive. Spend [E] [E] this turn to Charge.";
+                    s = s + "#yActive. Spend [E] [E] this turn to Charge.";
                     break;
                 case 1:
-                    s = "#yActive. Spend [E] this turn to Charge.";
+                    s = s + "#yActive. Spend [E] this turn to Charge.";
                     break;
                 default:
-                    s = "Error. Please report to mod dev";
+                    s = s + "Error. Please report to mod dev";
             }
         } else {
-            s = "Inactive. Spend [E] [E] [E] while Active to Charge.";
+            s = s + "Inactive. Spend [E] [E] [E] while Active to Charge.";
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {

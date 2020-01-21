@@ -28,13 +28,14 @@ public class BolsteringGhostflame extends AbstractGhostflame {
 
     @Override
     public String getDescription() {
-        String s;
+        String s = "";
         if (charged) {
-            s = "#yCharged.";
-        } else if (GhostflameHelper.activeGhostFlame == this) {
-            s = "Active. Play a #yPower this turn to Charge.";
+            s = "#yCharged. ";
+        }
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + "Active. Play a #yPower this turn to Charge.";
         } else {
-            s = "Inactive. Play a #yPower while Active to Charge.";
+            s = s + "Inactive. Play a #yPower while Active to Charge.";
         }
         int x = block;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
