@@ -210,5 +210,17 @@
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
     "DESCRIPTION": "Whenever you apply hexamod:Burn, apply !M! more."
+  },
+  "hexamod:GhostflameBarrier": {
+    "NAME": "Ghostflame Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! hexamod:Burn to the attacker."
+  },
+  "hexamod:Toasty": {
+    "NAME": "Toasty!",
+    "DESCRIPTION": "Deal !D! damage. NL Apply hexamod:Burn equal to unblocked damage dealt."
+  },
+  "hexamod:WildfireWeapon": {
+    "NAME": "Wildfire Weapon",
+    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Burn."
   }
 }
