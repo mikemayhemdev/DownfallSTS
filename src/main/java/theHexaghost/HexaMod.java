@@ -221,8 +221,12 @@ public class HexaMod implements
                     } else if (GhostflameHelper.activeGhostFlame instanceof BolsteringGhostflame && abstractCard.type == AbstractCard.CardType.POWER) {
                         GhostflameHelper.activeGhostFlame.charge();
                     } else if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
-                        ((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn += abstractCard.energyOnUse;
+                        ((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn += abstractCard.costForTurn;
+                        System.out.println(((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn);
+                        System.out.println(abstractCard.energyOnUse);
                         if (((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn >= 3) {
+                            System.out.println(((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn);
+                            System.out.println("bruh");
                             GhostflameHelper.activeGhostFlame.charge();
                         }
                     }

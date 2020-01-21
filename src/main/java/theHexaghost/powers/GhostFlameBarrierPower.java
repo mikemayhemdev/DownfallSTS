@@ -21,7 +21,7 @@ public class GhostFlameBarrierPower extends AbstractPower implements CloneablePo
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
 
     public GhostFlameBarrierPower(final int amount) {
-        this.name = "GhostFlameBarrier";
+        this.name = "Ghostflame Barrier";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -44,7 +44,7 @@ public class GhostFlameBarrierPower extends AbstractPower implements CloneablePo
     }
 
     public void atStartOfTurn() {
-        this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, "Flame Barrier"));// 54
+        this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, this.ID));// 54
     }// 55
 
     @Override

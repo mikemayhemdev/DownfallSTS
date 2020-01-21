@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.BurnAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
-import theHexaghost.actions.SpecificNonChosenDiscardPileToHandAction;
+import theHexaghost.patches.NoDiscardField;
 
 public class SpectralSpark extends AbstractHexaCard {
 
@@ -37,9 +37,9 @@ public class SpectralSpark extends AbstractHexaCard {
                             c.baseMagicNumber++;
                             if (c.upgraded) c.baseMagicNumber++;
                             c.applyPowers();
+                            NoDiscardField.noDiscard.set(c, true);
                         }
                     });
-                    addToTop(new SpecificNonChosenDiscardPileToHandAction(c));
                     addToTop(new ExtinguishCurrentFlameAction());
                 }
             }

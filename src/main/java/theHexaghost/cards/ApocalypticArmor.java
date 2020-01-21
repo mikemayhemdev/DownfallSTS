@@ -19,7 +19,7 @@ public class ApocalypticArmor extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ApocalypticArmorPower(magicNumber));
+        applyToSelf(new ApocalypticArmorPower(magicNumber, 1));
     }
 
     public void upgrade() {

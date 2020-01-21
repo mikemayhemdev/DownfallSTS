@@ -48,8 +48,9 @@ public class SearingGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "#yCharged. ";
-        } else if (GhostflameHelper.activeGhostFlame == this) {
+            s = "Charged. ";
+        }
+        if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - attacksPlayedThisTurn);
             if (x == 1) {
                 s = s + "#yActive. Play #b" + x + " #yAttack this turn to Charge.";
@@ -63,6 +64,6 @@ public class SearingGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL When #yCharged, apply #b" + x + " #yBurn to ALL enemies.";
+        return s + " NL When Charged, apply #b" + x + " #yBurn to ALL enemies.";
     }
 }

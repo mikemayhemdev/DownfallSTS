@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -32,6 +33,13 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
 
         this.updateDescription();
     }
+
+    public void stackPower(int stackAmount) {
+        this.amount += stackAmount;// 39
+        if (this.amount == 0) {// 41
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));// 42
+        }
+    }// 52
 
     @Override
     public void updateDescription() {

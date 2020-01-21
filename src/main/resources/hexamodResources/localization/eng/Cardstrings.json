@@ -52,7 +52,8 @@
   },
   "hexamod:HexaLevel": {
     "NAME": "Hexa-Level",
-    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Enhance."
+    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Enhance.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! hexamod:Enhance."
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",

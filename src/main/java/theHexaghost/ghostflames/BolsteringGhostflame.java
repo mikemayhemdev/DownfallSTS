@@ -30,12 +30,12 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "#yCharged. ";
+            s = "Charged. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + "Active. Play a #yPower this turn to Charge.";
+            s = s + "#yActive. Play a #yPower this turn to Charge.";
         } else {
-            s = s + "Inactive. Play a #yPower while Active to Charge.";
+            s = s + "Inactive. Play a #yPower while #yActive to Charge.";
         }
         int x = block;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
