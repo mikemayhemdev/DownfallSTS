@@ -285,5 +285,10 @@
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
     "DESCRIPTION": "Whenever you Charge a Ghostflame, apply !M! hexamod:Burn to a random enemy."
+  },
+  "hexamod:ApocalypseNow": {
+    "NAME": "Apocalypse Now",
+    "DESCRIPTION": "Ethereal. NL hexamod:Advance until the Inferno Ghostflame is hexamod:Active. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance until the Inferno Ghostflame is hexamod:Active."
   }
 }
