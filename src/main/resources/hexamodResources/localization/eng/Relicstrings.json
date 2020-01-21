@@ -5,5 +5,12 @@
     "DESCRIPTIONS": [
       "Whenever you Charge a Ghostflame, gain #b3 #yBlock."
     ]
+  },
+  "hexamod:TheBrokenSeal": {
+    "NAME": "The Broken Seal",
+    "FLAVOR": "UNBOUND... UNBROKEN",
+    "DESCRIPTIONS": [
+      "Upon pickup, raise your Max HP by #b10. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Enhance."
+    ]
   }
 }
