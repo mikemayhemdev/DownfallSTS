@@ -10,7 +10,8 @@
     "PROPER_NAME": "Advance",
     "NAMES": [
       "advance",
-      "advanced"
+      "advanced",
+      "advancing"
     ],
     "DESCRIPTION": "#yActivate the next Ghostflame. If it's Charged, #yExtinguish it."
   },
@@ -18,7 +19,8 @@
     "PROPER_NAME": "Retract",
     "NAMES": [
       "retract",
-      "retracted"
+      "retracted",
+      "retracting"
     ],
     "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Charged, #yExtinguish it."
   },

@@ -8,7 +8,7 @@ public class SixthSeal extends AbstractSealCard {
     public final static String ID = makeID("SixthSeal");
 
     public SixthSeal() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {

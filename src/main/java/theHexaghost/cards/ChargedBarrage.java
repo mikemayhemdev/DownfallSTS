@@ -29,8 +29,10 @@ public class ChargedBarrage extends AbstractHexaCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         atb(new BurnAction(m, magicNumber));
         for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-            atb(new BurnAction(m, magicNumber));
+            if (gf.charged) {
+                dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+                atb(new BurnAction(m, magicNumber));
+            }
         }
     }
 

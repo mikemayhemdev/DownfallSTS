@@ -39,6 +39,12 @@ public class CrushingGhostflame extends AbstractGhostflame {
     }
 
     @Override
+    public void extinguish() {
+        super.extinguish();
+        skillsPlayedThisTurn = 0;
+    }
+
+    @Override
     public String getDescription() {
         String s;
         if (charged) {
@@ -46,12 +52,12 @@ public class CrushingGhostflame extends AbstractGhostflame {
         } else if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - skillsPlayedThisTurn);
             if (x == 1) {
-                s = "Active. Play #b" + x + " #ySkill this turn to Charge.";
+                s = "#yActive. Play #b" + x + " #ySkill this turn to Charge.";
             } else {
-                s = "Active. Play #b" + x + " #ySkills this turn to Charge.";
+                s = "#yActive. Play #b" + x + " #ySkills this turn to Charge.";
             }
         } else {
-            s = "Inactive. Play #b2 #ySkills while #yActive to #yCharge.";
+            s = "Inactive. Play #b2 #ySkills while #yActive to Charge.";
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {

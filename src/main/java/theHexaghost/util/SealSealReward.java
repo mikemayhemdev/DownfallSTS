@@ -50,9 +50,9 @@ public class SealSealReward extends RewardItem {
         int cardsToJankReplace = this.cards.size();
 
         this.cards.clear();
-        for(int i = 0; i < cardsToJankReplace; i++){
+        for (int i = 0; i < cardsToJankReplace; i++) {
             AbstractCard cardToAdd = getRandomSeal().makeCopy();
-            while(cardListDuplicate(cardToAdd)){
+            while (cardListDuplicate(cardToAdd)) {
                 cardToAdd = getRandomSeal().makeCopy();
             }
             this.cards.add(cardToAdd);
@@ -61,9 +61,9 @@ public class SealSealReward extends RewardItem {
         this.text = TEXT[2];
         Iterator var2 = this.cards.iterator();
 
-        while(true) {
-            while(var2.hasNext()) {
-                AbstractCard c = (AbstractCard)var2.next();
+        while (true) {
+            while (var2.hasNext()) {
+                AbstractCard c = (AbstractCard) var2.next();
                 if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
                     c.upgrade();
                 } else if (c.type == AbstractCard.CardType.SKILL && AbstractDungeon.player.hasRelic("Toxic Egg 2")) {
@@ -77,9 +77,9 @@ public class SealSealReward extends RewardItem {
         }
     }
 
-    public boolean cardListDuplicate(AbstractCard card){
-        for(AbstractCard alreadyHave: this.cards){
-            if(alreadyHave.cardID.equals(card.cardID)){
+    public boolean cardListDuplicate(AbstractCard card) {
+        for (AbstractCard alreadyHave : this.cards) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
                 return true;
             }
         }
@@ -101,8 +101,8 @@ public class SealSealReward extends RewardItem {
 
         Iterator i = this.effects.iterator();
 
-        while(i.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect)i.next();
+        while (i.hasNext()) {
+            AbstractGameEffect e = (AbstractGameEffect) i.next();
             e.update();
             if (e.isDone) {
                 i.remove();
@@ -110,10 +110,10 @@ public class SealSealReward extends RewardItem {
         }
 
         if (this.hb.hovered) {
-            switch(this.type) {
+            switch (this.type) {
                 case POTION:
                     if (!AbstractDungeon.topPanel.potionCombine) {
-                        TipHelper.renderGenericTip(360.0F * Settings.scale, (float)InputHelper.mY, this.potion.name, this.potion.description);
+                        TipHelper.renderGenericTip(360.0F * Settings.scale, (float) InputHelper.mY, this.potion.name, this.potion.description);
                     }
             }
         }
@@ -156,17 +156,17 @@ public class SealSealReward extends RewardItem {
         if (this.hb.clickStarted) {
             sb.draw(ImageMaster.REWARD_SCREEN_ITEM, (float) Settings.WIDTH / 2.0F - 232.0F, this.y - 49.0F, 232.0F, 49.0F, 464.0F, 98.0F, Settings.scale * 0.98F, Settings.scale * 0.98F, 0.0F, 0, 0, 464, 98, false, false);
         } else {
-            sb.draw(ImageMaster.REWARD_SCREEN_ITEM, (float)Settings.WIDTH / 2.0F - 232.0F, this.y - 49.0F, 232.0F, 49.0F, 464.0F, 98.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 464, 98, false, false);
+            sb.draw(ImageMaster.REWARD_SCREEN_ITEM, (float) Settings.WIDTH / 2.0F - 232.0F, this.y - 49.0F, 232.0F, 49.0F, 464.0F, 98.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 464, 98, false, false);
         }
 
         if (this.flashTimer != 0.0F) {
             sb.setColor(0.6F, 1.0F, 1.0F, this.flashTimer * 1.5F);
             sb.setBlendFunction(770, 1);
-            sb.draw(ImageMaster.REWARD_SCREEN_ITEM, (float)Settings.WIDTH / 2.0F - 232.0F, this.y - 49.0F, 232.0F, 49.0F, 464.0F, 98.0F, Settings.scale * 1.03F, Settings.scale * 1.15F, 0.0F, 0, 0, 464, 98, false, false);
+            sb.draw(ImageMaster.REWARD_SCREEN_ITEM, (float) Settings.WIDTH / 2.0F - 232.0F, this.y - 49.0F, 232.0F, 49.0F, 464.0F, 98.0F, Settings.scale * 1.03F, Settings.scale * 1.15F, 0.0F, 0, 0, 464, 98, false, false);
             sb.setBlendFunction(770, 771);
         }
 
-        Texture cardImg = ImageMaster.loadImage("REWARD_CARD_NORMAL");
+        Texture cardImg = ImageMaster.REWARD_CARD_NORMAL;
 
         sb.setColor(Color.WHITE);
         sb.draw(cardImg, REWARD_ITEM_X - 32.0F, this.y - 32.0F - 2.0F * Settings.scale, 32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 64, 64, false, false);
@@ -183,7 +183,7 @@ public class SealSealReward extends RewardItem {
             color = Settings.RED_TEXT_COLOR;
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, this.text, REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
+        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, "Choose a Seal to obtain.", REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
         if (!this.hb.hovered) {
 
             for (AbstractGameEffect e : effects) {

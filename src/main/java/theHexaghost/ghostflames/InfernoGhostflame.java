@@ -21,18 +21,30 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        int x = damage;
-        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-        }
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
-        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-            //tfw no gf
-            if (gf.charged) {
-                atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                atb(new ExtinguishAction(gf));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = damage;
+                if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+                    x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+                }
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                    //tfw no gf
+                    if (gf.charged) {
+                        atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                        atb(new ExtinguishAction(gf));
+                    }
+                }
             }
-        }
+        });
+    }
+
+    @Override
+    public void extinguish() {
+        super.extinguish();
+        energySpentThisTurn = 0;
     }
 
     @Override
@@ -44,13 +56,13 @@ public class InfernoGhostflame extends AbstractGhostflame {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = "Active. Spend [E] [E] [E] this turn to Charge.";
+                    s = "#yActive. Spend [E] [E] [E] this turn to Charge.";
                     break;
                 case 2:
-                    s = "Active. Spend [E] [E] this turn to Charge.";
+                    s = "#yActive. Spend [E] [E] this turn to Charge.";
                     break;
                 case 1:
-                    s = "Active. Spend [E] this turn to Charge.";
+                    s = "#yActive. Spend [E] this turn to Charge.";
                     break;
                 default:
                     s = "Error. Please report to mod dev";

@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -34,6 +35,7 @@ public class Haunt extends AbstractHexaCard {
                         c.isEthereal = true;
                         c.rawDescription = "Ethereal. NL " + c.rawDescription;
                         c.initializeDescription();
+                        c.superFlash(Color.PURPLE.cpy());
                     }
                 }
             }

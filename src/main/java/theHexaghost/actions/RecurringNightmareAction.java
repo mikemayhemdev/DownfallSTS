@@ -59,7 +59,6 @@ public class RecurringNightmareAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {// 103 112
                 this.p.hand.addToHand(c);// 104
                 c.unfadeOut();// 57
-                this.p.hand.addToHand(c);// 58
                 this.p.exhaustPile.removeCard(c);// 63
                 c.unhover();// 67
                 c.fadingOut = false;// 68
