@@ -5,9 +5,11 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
+import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.powers.AgainPower;
 
 @SpirePatch(
@@ -24,6 +26,9 @@ public class EndTurnAdvance {
                 AbstractDungeon.actionManager.addToBottom(new ExtinguishCurrentFlameAction());
             } else
                 AbstractDungeon.actionManager.addToBottom(new AdvanceAction());
+        }
+        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+            gf.reset();
         }
     }
 }

@@ -11,7 +11,7 @@ public class FifthSeal extends AbstractSealCard {
     public final static String ID = makeID("FifthSeal");
 
     public FifthSeal() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {

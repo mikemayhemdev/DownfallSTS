@@ -1,5 +1,6 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -52,7 +53,11 @@ public abstract class AbstractGhostflame {
         hitbox.update();
     }
 
+    public abstract Texture getHelperTexture();
+
     public abstract String getDescription();
+
+    public abstract String returnHoverHelperText();
 
     public void atb(AbstractGameAction e) {
         AbstractDungeon.actionManager.addToBottom(e);
@@ -63,6 +68,11 @@ public abstract class AbstractGhostflame {
         charged = false;
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
+        reset();
+    }
+
+    public void reset() {
+
     }
 
     public void activate() {

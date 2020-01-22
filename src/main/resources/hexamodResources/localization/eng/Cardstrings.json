@@ -14,7 +14,7 @@
   "hexamod:Float": {
     "NAME": "Float",
     "DESCRIPTION": "Ethereal. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Gain [E] if the hexamod:Active Ghostflame is Charged. NL Otherwise, draw 1 card."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] if the hexamod:Active Ghostflame is Charged. NL Otherwise, draw 1 card. NL hexamod:Advance."
   },
   "hexamod:AdvancingGuard": {
     "NAME": "Advancing Guard",
@@ -57,7 +57,7 @@
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Charge all uncharged Ghostflames in order."
+    "DESCRIPTION": "Charge all uncharged Ghostflames in order."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Ghost of Spire Past",
@@ -88,7 +88,7 @@
   },
   "hexamod:EmpoweringStance": {
     "NAME": "Empowering Stance",
-    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Necessary Sacrifice",

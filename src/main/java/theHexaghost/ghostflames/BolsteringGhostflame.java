@@ -1,13 +1,17 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
+import theHexaghost.util.TextureLoader;
 
 public class BolsteringGhostflame extends AbstractGhostflame {
     public BolsteringGhostflame(float x, float y) {
@@ -24,6 +28,20 @@ public class BolsteringGhostflame extends AbstractGhostflame {
         atb(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 0.5F));// 194
         atb(new GainBlockAction(AbstractDungeon.player, x));
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+    }
+
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("bolster.png"));
+
+    @Override
+    public Texture getHelperTexture() {
+        return bruh;
+    }
+
+    @Override
+    public String returnHoverHelperText() {
+        if (charged)
+            return "0";
+        return "1";
     }
 
     @Override

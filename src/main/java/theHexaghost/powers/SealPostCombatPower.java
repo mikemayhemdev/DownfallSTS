@@ -10,7 +10,7 @@ import theHexaghost.util.TextureLoader;
 
 public class SealPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = HexaMod.makeID("GoldPostCombatPower");
+    public static final String POWER_ID = HexaMod.makeID("SealPostCombatPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SealAfterCombat84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SealAfterCombat32.png");

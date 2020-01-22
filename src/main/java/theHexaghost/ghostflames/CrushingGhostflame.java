@@ -1,5 +1,6 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -8,7 +9,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
+import theHexaghost.util.TextureLoader;
 
 public class CrushingGhostflame extends AbstractGhostflame {
 
@@ -39,8 +42,19 @@ public class CrushingGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public void extinguish() {
-        super.extinguish();
+    public String returnHoverHelperText() {
+        return String.valueOf(2 - skillsPlayedThisTurn);
+    }
+
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
+
+    @Override
+    public Texture getHelperTexture() {
+        return bruh;
+    }
+
+    @Override
+    public void reset() {
         skillsPlayedThisTurn = 0;
     }
 

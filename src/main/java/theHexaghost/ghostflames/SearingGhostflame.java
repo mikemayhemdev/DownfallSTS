@@ -1,13 +1,16 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.BurnAction;
 import theHexaghost.powers.EnhancePower;
+import theHexaghost.util.TextureLoader;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
@@ -38,9 +41,20 @@ public class SearingGhostflame extends AbstractGhostflame {
         });
     }
 
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
+
     @Override
-    public void extinguish() {
-        super.extinguish();
+    public Texture getHelperTexture() {
+        return bruh;
+    }
+
+    @Override
+    public String returnHoverHelperText() {
+        return String.valueOf(2 - attacksPlayedThisTurn);
+    }
+
+    @Override
+    public void reset() {
         attacksPlayedThisTurn = 0;
     }
 

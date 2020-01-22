@@ -11,16 +11,12 @@ public class GhostLash extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 2;
-
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
 
     public GhostLash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
     }
 
@@ -45,7 +41,6 @@ public class GhostLash extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

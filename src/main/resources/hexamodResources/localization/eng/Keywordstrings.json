@@ -4,7 +4,7 @@
     "NAMES": [
       "active"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Charged. At the end of your turn, the next Ghostflame becomes #yActive automatically."
+    "DESCRIPTION": "The #yActive Ghostflame can be Charged. At the end of your turn, #yAdvance to the next Ghostflame."
   },
   {
     "PROPER_NAME": "Advance",

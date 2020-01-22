@@ -10,7 +10,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
 
     public GhostOfSpireFuture() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -18,7 +18,7 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new FuturePower(2));
+        applyToSelf(new FuturePower(magicNumber));
     }
 
     public void upgrade() {

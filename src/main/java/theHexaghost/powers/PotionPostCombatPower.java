@@ -10,7 +10,7 @@ import theHexaghost.util.TextureLoader;
 
 public class PotionPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = HexaMod.makeID("GoldPostCombatPower");
+    public static final String POWER_ID = HexaMod.makeID("PotionPostCombatPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/PotionAfterCombat84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/PotionAfterCombat32.png");

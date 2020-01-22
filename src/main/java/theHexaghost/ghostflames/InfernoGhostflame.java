@@ -1,5 +1,6 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
@@ -7,8 +8,10 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.EnhancePower;
+import theHexaghost.util.TextureLoader;
 
 public class InfernoGhostflame extends AbstractGhostflame {
 
@@ -42,8 +45,19 @@ public class InfernoGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public void extinguish() {
-        super.extinguish();
+    public String returnHoverHelperText() {
+        return String.valueOf(Math.max(0, 3 - energySpentThisTurn));
+    }
+
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("inferno.png"));
+
+    @Override
+    public Texture getHelperTexture() {
+        return bruh;
+    }
+
+    @Override
+    public void reset() {
         energySpentThisTurn = 0;
     }
 
