@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rewards.RewardItem;
+import theHexaghost.powers.PotionPostCombatPower;
+import theHexaghost.powers.SealPostCombatPower;
 
 public class FourthSeal extends AbstractSealCard {
     public final static String ID = makeID("FourthSeal");
@@ -14,6 +16,7 @@ public class FourthSeal extends AbstractSealCard {
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
+        applyToSelf(new PotionPostCombatPower(1));
         AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
     }
 }

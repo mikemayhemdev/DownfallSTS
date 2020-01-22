@@ -37,7 +37,7 @@
       "burn",
       "burned"
     ],
-    "DESCRIPTION": "Burned creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding down)."
+    "DESCRIPTION": "Burned creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding up)."
   },
   {
     "PROPER_NAME": "Extinguish",

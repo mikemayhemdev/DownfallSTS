@@ -16,8 +16,8 @@ public class BurnvenomPower extends AbstractPower implements CloneablePowerInter
 
     public static final String POWER_ID = HexaMod.makeID("BurnvenomPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burnvenom84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burnvenom32.png");
 
     public BurnvenomPower(final int amount) {
         this.name = "Wildfire Weapon";

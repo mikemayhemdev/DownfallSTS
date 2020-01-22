@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.ghostflames.BolsteringGhostflame;
 import theHexaghost.ghostflames.CrushingGhostflame;
 
 public class CrushingStance extends AbstractHexaCard {
@@ -28,7 +30,9 @@ public class CrushingStance extends AbstractHexaCard {
             @Override
             public void update() {
                 isDone = true;
-                GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), new CrushingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly));
+                AbstractGhostflame gf = new CrushingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
+                GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
+                gf.activate();
             }
         });
     }

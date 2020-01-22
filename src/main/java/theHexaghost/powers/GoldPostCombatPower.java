@@ -3,23 +3,21 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 import theHexaghost.util.TextureLoader;
 
-public class GainEnhanceWhenMovingPower extends AbstractPower implements CloneablePowerInterface, OnAdvanceOrRetractSubscriber {
+public class GoldPostCombatPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = HexaMod.makeID("GainEnhanceWhenMovingPower");
+    public static final String POWER_ID = HexaMod.makeID("GoldPostCombatPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
 
-    public GainEnhanceWhenMovingPower(final int amount) {
-        this.name = "Thermal Planning";
+    public GoldPostCombatPower(final int amount) {
+        this.name = "Post-Combat Gold";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -33,24 +31,12 @@ public class GainEnhanceWhenMovingPower extends AbstractPower implements Cloneab
     }
 
     @Override
-    public void onAdvanceOrRetract() {
-        this.flash();
-        addToBot(new ApplyPowerAction(owner, owner, new EnhancePower(amount), amount));
-        addToBot(new ApplyPowerAction(owner, owner, new LoseEnhancePower(amount), amount));
-    }
-
-    public void atEndOfTurn(boolean isPlayer) {
-        this.flash();// 30
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));// 32
-    }
-
-    @Override
     public void updateDescription() {
-        description = "This turn, when you #yAdvance or #yRetract, gain #b" + amount + " #yMomentary #yEnhance.";
+        description = "Gold reward from this combat is increased by #b" + amount + ".";
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new GainEnhanceWhenMovingPower(amount);
+        return new GoldPostCombatPower(amount);
     }
 }
