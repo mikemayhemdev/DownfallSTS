@@ -12,8 +12,8 @@ public class SealPostCombatPower extends AbstractPower implements CloneablePower
 
     public static final String POWER_ID = HexaMod.makeID("GoldPostCombatPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SealAfterCombat84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SealAfterCombat32.png");
 
     public SealPostCombatPower(final int amount) {
         this.name = "Post-Combat Seal";

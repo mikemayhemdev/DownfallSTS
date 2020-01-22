@@ -12,8 +12,8 @@ public class CommonPostCombatPower extends AbstractPower implements CloneablePow
 
     public static final String POWER_ID = HexaMod.makeID("GoldPostCombatPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/CommonPostCombat84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/CommonPostCombat32.png");
 
     public CommonPostCombatPower(final int amount) {
         this.name = "Post-Combat Common";

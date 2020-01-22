@@ -19,8 +19,8 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
 
     public static final String POWER_ID = HexaMod.makeID("BurnPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burn84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burn32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burning84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burning32.png");
 
     public BurnPower(final AbstractCreature owner, final int amount) {
         this.name = "Burn";

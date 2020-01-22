@@ -21,6 +21,7 @@ public class Haunt extends AbstractHexaCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,7 +34,8 @@ public class Haunt extends AbstractHexaCard {
                 for (AbstractCard c : p.hand.group) {
                     if (!c.isEthereal) {
                         c.isEthereal = true;
-                        c.rawDescription = "Ethereal. NL " + c.rawDescription;
+                        if (!c.rawDescription.contains("Ethereal"))
+                            c.rawDescription = "Ethereal. NL " + c.rawDescription;
                         c.initializeDescription();
                         c.superFlash(Color.PURPLE.cpy());
                     }

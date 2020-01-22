@@ -16,8 +16,8 @@ public class EtherealRefundPower extends AbstractPower implements CloneablePower
 
     public static final String POWER_ID = HexaMod.makeID("EtherealRefundPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/EtherealRefund84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/EtherealRefund32.png");
 
     public EtherealRefundPower(final int amount) {
         this.name = "Ethereal Refund";

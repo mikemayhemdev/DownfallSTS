@@ -1,9 +1,10 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.AdvanceUntilInfernoAction;
+import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 
 public class ApocalypseNow extends AbstractHexaCard {
@@ -19,8 +20,17 @@ public class ApocalypseNow extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!(GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame))
-            atb(new AdvanceUntilInfernoAction());
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                    if (gf instanceof InfernoGhostflame) {
+                        gf.activate();
+                    }
+                }
+            }
+        });
     }
 
     public void upgrade() {

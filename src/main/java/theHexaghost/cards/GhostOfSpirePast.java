@@ -11,7 +11,6 @@ public class GhostOfSpirePast extends AbstractHexaCard {
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
 
     public GhostOfSpirePast() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -19,13 +18,15 @@ public class GhostOfSpirePast extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PastPower(5, magicNumber));
+        applyToSelf(new PastPower(1));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            isInnate = true;
+            initializeDescription();
         }
     }
 }

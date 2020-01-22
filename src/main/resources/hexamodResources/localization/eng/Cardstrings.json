@@ -13,8 +13,8 @@
   },
   "hexamod:Float": {
     "NAME": "Float",
-    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is uncharged, gain [E] . NL hexamod:Advance. NL  Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw 1 card."
+    "DESCRIPTION": "Ethereal. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Gain [E] if the hexamod:Active Ghostflame is Charged. NL Otherwise, draw 1 card."
   },
   "hexamod:AdvancingGuard": {
     "NAME": "Advancing Guard",
@@ -35,8 +35,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "Charge the hexamod:Active Ghostflame. NL hexamod:Advance. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Charge the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. NL hexamod:Advance. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. NL hexamod:Advance."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
@@ -61,15 +61,18 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Ghost of Spire Past",
-    "DESCRIPTION": "Whenever you hexamod:Retract, gain 5 Block and !M! hexamod:Momentary Dexterity."
+    "DESCRIPTION": "The first time you hexamod:Retract each turn, gain [E] and draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you hexamod:Retract each turn, gain [E] and draw 1 card."
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Ghost of Spire Future",
-    "DESCRIPTION": "Whenever you hexamod:Advance, gain !M! hexamod:Momentary Strength and draw 1 card."
+    "DESCRIPTION": "Whenever you hexamod:Advance, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you hexamod:Advance, gain !M! Block."
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Ghost of Spire Present",
-    "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
+    "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
   },
   "hexamod:ThermalPlanning": {
     "NAME": "Thermal Planning",
@@ -129,15 +132,15 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Deals !M! additional damage for each Ethereal card in your hand."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If your hand contains another Ethereal card, deal !D! damage."
   },
   "hexamod:GhostShield": {
     "NAME": "Ghost Shield",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Grants !M! additional Block for each Ethereal card in your hand."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If your hand contains another Ethereal card, gain !B! Block."
   },
   "hexamod:Haunt": {
     "NAME": "Haunt",
-    "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal."
+    "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Recurring Nightmare",
@@ -166,8 +169,7 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Unleash Spirits",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile. NL Exhaust."
   },
   "hexamod:NightmareStrike": {
     "NAME": "Nightmare Strike",
@@ -281,7 +283,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn. NL Repeat for each Charged Ghostflame."
+    "DESCRIPTION": "Apply !M! hexamod:Burn. NL Repeat for each Charged Ghostflame."
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
@@ -289,8 +291,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
-    "DESCRIPTION": "Ethereal. NL hexamod:Advance until the Inferno Ghostflame is hexamod:Active. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance until the Inferno Ghostflame is hexamod:Active."
+    "DESCRIPTION": "Ethereal. NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL The Inferno Ghostflame becomes hexamod:Active."
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",

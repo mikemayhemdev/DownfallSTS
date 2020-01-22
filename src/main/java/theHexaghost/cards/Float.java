@@ -14,22 +14,25 @@ public class Float extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, BASIC
 
     public Float() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!upgraded && !GhostflameHelper.activeGhostFlame.charged) {
-            atb(new GainEnergyAction(1));
-        }
         atb(new AdvanceAction());
-        atb(new DrawCardAction(p, 1));
+        if (upgraded) {
+            if (GhostflameHelper.activeGhostFlame.charged) {
+                atb(new GainEnergyAction(1));
+            } else {
+                atb(new DrawCardAction(1));
+            }
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -18,8 +18,8 @@ public class ApocalypticArmorPower extends TwoAmountPower implements OnChargeSub
 
     public static final String POWER_ID = HexaMod.makeID("ApocalypticArmorPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Apoca84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Apoca32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApocalypseArmor84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApocalypseArmor32.png");
 
     public ApocalypticArmorPower(final int amount, final int amount2) {
         this.name = "Apocalyptic Armor";

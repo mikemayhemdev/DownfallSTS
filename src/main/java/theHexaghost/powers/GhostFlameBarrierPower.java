@@ -17,8 +17,8 @@ public class GhostFlameBarrierPower extends AbstractPower implements CloneablePo
 
     public static final String POWER_ID = HexaMod.makeID("GhostFlameBarrierPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GhostFlameBarrier84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GhostFlameBarrier32.png");
 
     public GhostFlameBarrierPower(final int amount) {
         this.name = "Ghostflame Barrier";

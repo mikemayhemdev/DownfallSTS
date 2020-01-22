@@ -17,8 +17,8 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
 
     public static final String POWER_ID = HexaMod.makeID("EnhancePower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public EnhancePower(final int amount) {
         this.name = "Enhance";

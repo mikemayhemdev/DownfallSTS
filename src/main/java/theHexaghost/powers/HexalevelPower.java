@@ -14,8 +14,8 @@ public class HexalevelPower extends AbstractPower implements CloneablePowerInter
 
     public static final String POWER_ID = HexaMod.makeID("HexalevelPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Hexalevel84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Hexalevel32.png");
 
     public HexalevelPower(final int amount) {
         this.name = "Hexalevel";

@@ -17,8 +17,8 @@ public class ParanormalFormPower extends AbstractPower implements CloneablePower
 
     public static final String POWER_ID = HexaMod.makeID("ParanormalFormPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ParanormalForm84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ParanormalForm32.png");
 
     public ParanormalFormPower(final int amount) {
         this.name = "Paranormal Form";

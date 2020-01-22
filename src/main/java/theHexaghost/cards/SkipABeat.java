@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.actions.ExtinguishCurrentFlameAction;
 
 public class SkipABeat extends AbstractHexaCard {
 
@@ -17,6 +18,7 @@ public class SkipABeat extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
         atb(new AdvanceAction());
     }

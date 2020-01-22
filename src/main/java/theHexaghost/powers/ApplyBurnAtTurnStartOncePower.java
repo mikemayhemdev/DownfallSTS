@@ -15,8 +15,8 @@ public class ApplyBurnAtTurnStartOncePower extends AbstractPower implements Clon
 
     public static final String POWER_ID = HexaMod.makeID("ApplyBurnAtTurnStartOncePower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ABAT84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ABAT32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApplyBurnAtStartOfTurn84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApplyBurnAtStartOfTurn32.png");
 
     public ApplyBurnAtTurnStartOncePower(final int amount) {
         this.name = "Burn At Start Of Turn";
