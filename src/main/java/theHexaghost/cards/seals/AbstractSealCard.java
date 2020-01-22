@@ -1,5 +1,7 @@
 package theHexaghost.cards.seals;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -7,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.cards.AbstractHexaCard;
 import theHexaghost.relics.TheBrokenSeal;
+import theHexaghost.vfx.BrokenSealText;
 
 import java.util.ArrayList;
 
@@ -34,12 +37,9 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
             }
         }
         if (sealList.size() == 6) {
-            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-                if (c instanceof AbstractSealCard) {
-                    AbstractDungeon.player.masterDeck.removeCard(c);
-                }
-            }
+            AbstractDungeon.player.masterDeck.group.removeIf(c -> c instanceof AbstractSealCard);
             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new TheBrokenSeal());
+            addToTop(new VFXAction(new BrokenSealText(Color.PURPLE.cpy(), TEXT[0], 5.5f)));
         }
         realUse(abstractPlayer, abstractMonster);
     }

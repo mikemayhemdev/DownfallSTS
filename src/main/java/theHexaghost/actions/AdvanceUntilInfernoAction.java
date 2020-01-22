@@ -14,6 +14,7 @@ public class AdvanceUntilInfernoAction extends AbstractGameAction {
         addToTop(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 if (!(GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame))
                     addToTop(new AdvanceUntilInfernoAction());
             }

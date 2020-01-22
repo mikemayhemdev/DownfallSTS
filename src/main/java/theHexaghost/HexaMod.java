@@ -68,6 +68,8 @@ public class HexaMod implements
 
     public static boolean renderFlames = false;
 
+    public static boolean unsealed = false;
+
     public static Color placeholderColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1);
 
     public HexaMod() {
