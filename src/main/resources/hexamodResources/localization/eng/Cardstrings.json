@@ -319,26 +319,26 @@
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",
-    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, heal !M! HP."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, heal !M! HP."
   },
   "hexamod:SecondSeal": {
     "NAME": "Second Seal",
-    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain !M! additional Gold."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain !M! additional Gold."
   },
   "hexamod:ThirdSeal": {
     "NAME": "Third Seal",
-    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional Common card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Common card reward."
   },
   "hexamod:FourthSeal": {
     "NAME": "Fourth Seal",
-    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional Potion reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Potion reward."
   },
   "hexamod:FifthSeal": {
     "NAME": "Fifth Seal",
-    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, gain an additional Seal card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Seal card reward."
   },
   "hexamod:SixthSeal": {
     "NAME": "Sixth Seal",
-    "DESCRIPTION": "hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
   }
 }

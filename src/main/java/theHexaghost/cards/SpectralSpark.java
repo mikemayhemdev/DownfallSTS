@@ -46,6 +46,10 @@ public class SpectralSpark extends AbstractHexaCard {
         });
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
+
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

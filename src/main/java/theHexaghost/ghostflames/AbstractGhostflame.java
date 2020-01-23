@@ -33,6 +33,7 @@ public abstract class AbstractGhostflame {
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
             }
+            reset();
         }
     }
 

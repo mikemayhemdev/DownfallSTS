@@ -32,12 +32,12 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
                     x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
                 }
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
+                AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     //tfw no gf
                     if (gf.charged) {
-                        atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                        atb(new ExtinguishAction(gf));
+                        addToTop(new ExtinguishAction(gf));
+                        addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                     }
                 }
             }
@@ -46,14 +46,41 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public String returnHoverHelperText() {
+        if (charged) return "0";
         return String.valueOf(Math.max(0, 3 - energySpentThisTurn));
     }
 
-    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("inferno.png"));
+    public static Texture bruh1 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno1.png"));
+    public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno2.png"));
+    public static Texture bruh3 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno3.png"));
+    public static Texture bruh4 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno4.png"));
+    public static Texture bruh5 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno5.png"));
+    public static Texture bruh6 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno6.png"));
 
     @Override
     public Texture getHelperTexture() {
-        return bruh;
+        int i = 0;
+        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+            if (gf.charged)
+                i++;
+        }
+        switch (i) {
+            case 0:
+                return bruh1;
+            case 1:
+                return bruh2;
+            case 2:
+                return bruh3;
+            case 3:
+                return bruh4;
+            case 4:
+                return bruh5;
+            case 5:
+                return bruh6;
+            case 6:
+                return bruh6;
+        }
+        return bruh1;
     }
 
     @Override

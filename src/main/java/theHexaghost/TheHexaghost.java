@@ -33,7 +33,6 @@ import theHexaghost.vfx.MyBody;
 import java.util.ArrayList;
 
 import static theHexaghost.GhostflameHelper.*;
-import static theHexaghost.GhostflameHelper.hexaGhostFlames;
 import static theHexaghost.HexaMod.*;
 import static theHexaghost.TheHexaghost.Enums.GHOST_GREEN;
 
@@ -109,7 +108,7 @@ public class TheHexaghost extends CustomPlayer {
                             y = AbstractDungeon.player.drawY + (260.0F * Settings.scale);
                             break;
                     }
-                    sb.draw(gf.getHelperTexture(), x, y);
+                    sb.draw(gf.getHelperTexture(), x - (10 * Settings.scale), y - (10 * Settings.scale));
                     sb.setColor(Color.WHITE.cpy());
                     FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, Color.WHITE, Settings.scale * 0.75F);// 150 153
                 }

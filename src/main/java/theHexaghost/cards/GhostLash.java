@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class GhostLash extends AbstractHexaCard {
@@ -26,16 +27,23 @@ public class GhostLash extends AbstractHexaCard {
             @Override
             public void update() {
                 isDone = true;
-                boolean bruh = false;
-                for (AbstractCard c : p.hand.group) {
-                    if (c.isEthereal)
-                        bruh = true;
-                }
-                if (bruh)
+                if (hasEthereal())
                     dmg(m, makeInfo(), AttackEffect.BLUNT_HEAVY);
             }
         });
     }
+
+    public boolean hasEthereal() {
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.isEthereal && c != this)
+                return true;
+        }
+        return false;
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = hasEthereal() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
 
     public void upgrade() {
         if (!upgraded) {

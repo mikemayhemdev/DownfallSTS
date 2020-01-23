@@ -1,6 +1,7 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
@@ -32,6 +33,10 @@ public class DynamicBlow extends AbstractHexaCard {
             dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         }
     }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
 
     public void upgrade() {
         if (!upgraded) {
