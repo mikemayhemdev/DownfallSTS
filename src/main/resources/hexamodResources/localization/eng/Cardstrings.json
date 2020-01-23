@@ -60,17 +60,17 @@
     "DESCRIPTION": "Charge all uncharged Ghostflames in order."
   },
   "hexamod:GhostOfSpirePast": {
-    "NAME": "Ghost of Past",
+    "NAME": "Devil's Dance",
     "DESCRIPTION": "The first time you hexamod:Retract each turn, gain [E] and draw 1 card.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you hexamod:Retract each turn, gain [E] and draw 1 card."
   },
   "hexamod:GhostOfSpireFuture": {
-    "NAME": "Ghost of Future",
+    "NAME": "Speedrunning",
     "DESCRIPTION": "Whenever you hexamod:Advance, gain !M! Block.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you hexamod:Advance, gain !M! Block."
   },
   "hexamod:GhostOfSpirePresent": {
-    "NAME": "Ghost of Present",
+    "NAME": "Here and Now",
     "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
   },
