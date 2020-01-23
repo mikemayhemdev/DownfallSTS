@@ -60,17 +60,17 @@
     "DESCRIPTION": "Charge all uncharged Ghostflames in order."
   },
   "hexamod:GhostOfSpirePast": {
-    "NAME": "Ghost of Spire Past",
+    "NAME": "Ghost of Past",
     "DESCRIPTION": "The first time you hexamod:Retract each turn, gain [E] and draw 1 card.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you hexamod:Retract each turn, gain [E] and draw 1 card."
   },
   "hexamod:GhostOfSpireFuture": {
-    "NAME": "Ghost of Spire Future",
+    "NAME": "Ghost of Future",
     "DESCRIPTION": "Whenever you hexamod:Advance, gain !M! Block.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you hexamod:Advance, gain !M! Block."
   },
   "hexamod:GhostOfSpirePresent": {
-    "NAME": "Ghost of Spire Present",
+    "NAME": "Ghost of Present",
     "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
   },
@@ -83,15 +83,15 @@
     "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it and Charge it again."
   },
   "hexamod:CrushingStance": {
-    "NAME": "Crushing Stance",
+    "NAME": "Crush",
     "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a Crushing Ghostflame. NL Exhaust."
   },
   "hexamod:EmpoweringStance": {
-    "NAME": "Empowering Stance",
+    "NAME": "Empower",
     "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame."
   },
   "hexamod:NecessarySacrifice": {
-    "NAME": "Necessary Sacrifice",
+    "NAME": "Worthy Sacrifice",
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
   },
   "hexamod:TimeOfNeed": {
@@ -99,11 +99,11 @@
     "DESCRIPTION": "Retain. NL Add a random Power card into your hand. NL It costs 0 until played. NL Exhaust."
   },
   "hexamod:SwordOfDarkness": {
-    "NAME": "Sword of Darkness",
+    "NAME": "Sword of Night",
     "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Deal !D! damage."
   },
   "hexamod:ShieldOfDarkness": {
-    "NAME": "Shield of Darkness",
+    "NAME": "Shield of Night",
     "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Gain !B! Block."
   },
   "hexamod:GhostlyFlex": {
@@ -143,12 +143,12 @@
     "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
   },
   "hexamod:RecurringNightmare": {
-    "NAME": "Recurring Nightmare",
+    "NAME": "Nightmare Vision",
     "DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand."
   },
   "hexamod:GiftsFromTheDead": {
-    "NAME": "Gifts from the Dead",
+    "NAME": "Ghostly Gifts",
     "DESCRIPTION": "Ethereal. NL Whenever an Ethereal card is Exhausted, gain [E] next turn."
   },
   "hexamod:Ghostwalk": {
@@ -156,7 +156,7 @@
     "DESCRIPTION": "Ethereal. NL hexamod:Retract. NL Whenever you play an Ethereal card this turn, gain [E] ."
   },
   "hexamod:EtherealExpedition": {
-    "NAME": "Ethereal Expedition",
+    "NAME": "Eerie Expedition",
     "DESCRIPTION": "Ethereal. NL Add a random Ethereal card into your hand. NL It costs 0 this turn. NL Exhaust."
   },
   "hexamod:PhantomCloak": {
@@ -215,7 +215,7 @@
     "DESCRIPTION": "Whenever you apply hexamod:Burn, apply !M! more."
   },
   "hexamod:GhostflameBarrier": {
-    "NAME": "Ghostflame Barrier",
+    "NAME": "Ghostflame Wall",
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! hexamod:Burn to the attacker."
   },
   "hexamod:Toasty": {
@@ -261,7 +261,7 @@
     "DESCRIPTION": "Ethereal. NL At the start of your turn, apply !M! hexamod:Burn to ALL enemies."
   },
   "hexamod:SuperheatedStrike": {
-    "NAME": "Superheated Strike",
+    "NAME": "Searing Strike",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! hexamod:Burn. NL If this card is Exhausted, take !M! damage."
   },
   "hexamod:FlamesFromBeyond": {
@@ -278,7 +278,7 @@
     "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 2 this combat."
   },
   "hexamod:GhostflameInferno": {
-    "NAME": "Ghostflame Inferno",
+    "NAME": "Instant Inferno",
     "DESCRIPTION": "hexamod:Extinguish all Charged Ghostflames. Deal !D! damage and apply !M! hexamod:Burn to ALL enemies for each Ghostflame hexamod:Extinguished."
   },
   "hexamod:ChargedBarrage": {
@@ -309,11 +309,11 @@
     "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of the next 2 turns instead of hexamod:Advancing."
   },
   "hexamod:RetreatToShadows": {
-    "NAME": "Retreat To Shadows",
+    "NAME": "Incorporeal",
     "DESCRIPTION": "Ethereal. NL hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
   },
   "hexamod:ApocalypticArmor": {
-    "NAME": "Apocalyptic Armor",
+    "NAME": "Apocalypse Armor",
     "DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, gain 1 Intangible.",
     "UPGRADE_DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, gain 1 Intangible."
   },
