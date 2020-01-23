@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.TheHexaghost;
 import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.vfx.MyOrb;
 
@@ -32,6 +33,12 @@ public abstract class AbstractGhostflame {
             }
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
+            }
+            if (AbstractDungeon.player instanceof TheHexaghost) {
+                int x = 0;
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
+                    if (gf.charged) x++;
+                ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
             }
             reset();
         }
@@ -70,6 +77,12 @@ public abstract class AbstractGhostflame {
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 297
         CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);// 298
         reset();
+        if (AbstractDungeon.player instanceof TheHexaghost) {
+            int x = 0;
+            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
+                if (gf.charged) x++;
+            ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
+        }
     }
 
     public void reset() {

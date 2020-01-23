@@ -41,7 +41,7 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
         return amount;
     }
 
-    public static Color myColor = new Color(0F, 1, 0F, 1);
+    public static Color myColor = new Color(0.529F, 0.922F, 0, 1);
 
     @Override
     public Color getColor() {

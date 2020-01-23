@@ -32,7 +32,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
                     x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
                 }
-                AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     //tfw no gf
                     if (gf.charged) {
@@ -40,6 +39,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
                         addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
                     }
                 }
+                AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
             }
         });
     }

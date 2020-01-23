@@ -119,13 +119,13 @@ public class TheHexaghost extends CustomPlayer {
     @Override
     public void preBattlePrep() {
         super.preBattlePrep();
-        myBody.targetRotationSpeed = 120.0F;// 274
+        myBody.targetRotationSpeed = 100.0F;// 274
     }
 
     @Override
     public void onVictory() {
         super.onVictory();
-        myBody.targetRotationSpeed = 0F;
+        myBody.targetRotationSpeed = 20.0F;
     }
 
     @Override
