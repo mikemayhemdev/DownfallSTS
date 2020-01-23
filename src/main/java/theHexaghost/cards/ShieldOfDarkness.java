@@ -1,6 +1,7 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
@@ -25,6 +26,10 @@ public class ShieldOfDarkness extends AbstractHexaCard {
         }
         blck();
     }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = !GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
 
     public void upgrade() {
         if (!upgraded) {

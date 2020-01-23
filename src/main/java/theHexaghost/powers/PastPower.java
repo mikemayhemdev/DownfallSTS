@@ -3,30 +3,26 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.OnRetractSubscriber;
 import theHexaghost.util.TextureLoader;
 
-public class PastPower extends TwoAmountPower implements CloneablePowerInterface, OnRetractSubscriber {
+public class PastPower extends AbstractPower implements CloneablePowerInterface, OnRetractSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("PastPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past32.png");
 
-    public PastPower(final int amount, final int amount2) {
+    public PastPower(final int amount) {
         this.name = "Past";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
-        this.amount2 = amount2;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
 
@@ -36,21 +32,40 @@ public class PastPower extends TwoAmountPower implements CloneablePowerInterface
         this.updateDescription();
     }
 
+    public boolean activated = false;
+
+    @Override
+    public void atStartOfTurnPostDraw() {
+        activated = false;
+    }
+
     @Override
     public void onRetract() {
-        this.flash();
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, this.amount2), this.amount2));// 44
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseDexterityPower(AbstractDungeon.player, this.amount2), this.amount2));// 46
+        if (!activated) {
+            this.flash();
+            addToBot(new GainEnergyAction(amount));
+            addToBot(new DrawCardAction(amount));
+            activated = true;
+        }
     }
 
     @Override
     public void updateDescription() {
-        description = "Whenever you #yRetract, gain #b" + amount + " #yBlock and #b" + amount2 + " #yMomentary #yDexterity.";
+        StringBuilder sb = new StringBuilder();
+        sb.append("The first time you #yRetract each turn, gain ");
+
+        for (int i = 0; i < this.amount; ++i) {
+            sb.append("[E] ");
+        }
+        if (amount == 1)
+            sb.append(" and draw #b" + amount + " card.");
+        else
+            sb.append(" and draw #b" + amount + " cards.");
+        this.description = sb.toString();
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new PastPower(amount, amount2);
+        return new PastPower(amount);
     }
 }

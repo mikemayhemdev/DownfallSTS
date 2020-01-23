@@ -13,10 +13,10 @@ public class UnleashSpirits extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, RARE
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 5;
 
     public UnleashSpirits() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
     }
@@ -43,9 +43,7 @@ public class UnleashSpirits extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeDamage(2);
         }
     }
 }

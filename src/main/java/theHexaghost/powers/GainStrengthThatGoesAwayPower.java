@@ -4,18 +4,20 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
+import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 import theHexaghost.util.TextureLoader;
 
-public class GainStrengthThatGoesAwayPower extends AbstractPower implements CloneablePowerInterface {
+public class GainStrengthThatGoesAwayPower extends AbstractPower implements CloneablePowerInterface, OnAdvanceOrRetractSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("GainStrengthThatGoesAwayPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present32.png");
 
     public GainStrengthThatGoesAwayPower(final int amount) {
         this.name = "Present";
@@ -31,6 +33,8 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
         this.updateDescription();
     }
 
+    public boolean activated = false;
+
     @Override
     public void updateDescription() {
         description = "At the start of your turn, gain #b" + amount + " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract.";
@@ -39,7 +43,16 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     public void atStartOfTurnPostDraw() {
         this.flash();// 28
         this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, this.amount), this.amount));// 29
-        addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthWhenYouAdvanceOrRetractPower(amount), amount));
+        activated = false;
+    }
+
+    @Override
+    public void onAdvanceOrRetract() {
+        if (!activated) {
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount));
+            activated = true;
+        }
     }
 
     @Override

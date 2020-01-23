@@ -26,6 +26,7 @@ public class PhantomFireball extends AbstractHexaCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 if (m.hasPower(BurnPower.POWER_ID)) {
                     dmg(m, makeInfo(), AttackEffect.FIRE);
                 }

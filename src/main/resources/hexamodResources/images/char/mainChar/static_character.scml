@@ -12,7 +12,7 @@
             </mainline>
             <timeline id="0" name="temp">
                 <key id="0" spin="0">
-                    <object folder="0" file="0" x="-250" y="500"/>
+                    <object folder="0" file="0" x="-250" y="510"/>
                 </key>
             </timeline>
         </animation>

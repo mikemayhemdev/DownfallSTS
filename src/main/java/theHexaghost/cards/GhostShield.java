@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,55 +12,42 @@ public class GhostShield extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 5;
     private static final int UPG_BLOCK = 2;
-
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
 
     public GhostShield() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
     }
-
-
-    public static int countCards() {
-        int count = 0;// 36
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c.isEthereal) {
-                count++;
-            }
-        }
-        return count;// 52
-    }
-
-    @Override
-    protected void applyPowersToBlock() {
-        int realBaseBlock = this.baseBlock;// 70
-        this.baseBlock += this.magicNumber * countCards();// 71
-        super.applyPowersToBlock();
-        this.baseBlock = realBaseBlock;// 75
-        this.isBlockModified = this.block != this.baseBlock;// 78
-    }
-
-    public void applyPowers() {
-        int realBaseBlock = this.baseBlock;// 85
-        this.baseBlock += this.magicNumber * countCards();// 86
-        super.applyPowers();// 88
-        this.baseBlock = realBaseBlock;// 90
-        this.isBlockModified = this.block != this.baseBlock;// 93
-    }// 94
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (hasEthereal())
+                    blck();
+            }
+        });
     }
+
+    public boolean hasEthereal() {
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.isEthereal && c != this)
+                return true;
+        }
+        return false;
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = hasEthereal() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
-            upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

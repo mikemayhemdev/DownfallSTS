@@ -15,8 +15,8 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
 
     public static final String POWER_ID = HexaMod.makeID("GiftsFromTheDeadPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GiftsFromTheDead84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GiftsFromTheDead32.png");
 
     public GiftsFromTheDeadPower(final int amount) {
         this.name = "Gifts from the Dead";

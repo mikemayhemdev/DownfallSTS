@@ -13,24 +13,19 @@ public class ChargedBarrage extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 2;
-    private static final int UPG_DAMAGE = 1;
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
     public ChargedBarrage() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         atb(new BurnAction(m, magicNumber));
         for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
             if (gf.charged) {
-                dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
                 atb(new BurnAction(m, magicNumber));
             }
         }
@@ -39,7 +34,6 @@ public class ChargedBarrage extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_MAGIC);
         }
     }

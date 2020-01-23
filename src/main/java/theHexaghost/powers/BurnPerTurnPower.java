@@ -14,8 +14,8 @@ public class BurnPerTurnPower extends AbstractPower implements CloneablePowerInt
 
     public static final String POWER_ID = HexaMod.makeID("BurnPerTurnPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/BurnPerTurn84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/BurnPerTurn32.png");
 
     public BurnPerTurnPower(final AbstractCreature owner, final int amount) {
         this.name = "Melting Metal";

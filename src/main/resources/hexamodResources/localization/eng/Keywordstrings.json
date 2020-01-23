@@ -4,7 +4,7 @@
     "NAMES": [
       "active"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Charged. At the end of your turn, the next Ghostflame becomes #yActive automatically."
+    "DESCRIPTION": "The #yActive Ghostflame can be Charged. At the end of your turn, #yAdvance to the next Ghostflame."
   },
   {
     "PROPER_NAME": "Advance",
@@ -37,7 +37,7 @@
       "burn",
       "burned"
     ],
-    "DESCRIPTION": "Burned creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding down)."
+    "DESCRIPTION": "Burned creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding up)."
   },
   {
     "PROPER_NAME": "Extinguish",

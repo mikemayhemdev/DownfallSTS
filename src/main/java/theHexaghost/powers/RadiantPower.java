@@ -18,8 +18,8 @@ public class RadiantPower extends AbstractPower implements CloneablePowerInterfa
 
     public static final String POWER_ID = HexaMod.makeID("RadiantPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Radiant84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Radiant32.png");
 
     public RadiantPower(final int amount) {
         this.name = "Radiant Flame";

@@ -1,13 +1,16 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.BurnAction;
 import theHexaghost.powers.EnhancePower;
+import theHexaghost.util.TextureLoader;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
@@ -28,19 +31,32 @@ public class SearingGhostflame extends AbstractGhostflame {
                 if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
                     x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
                 }
-                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                for (int j = AbstractDungeon.getCurrRoom().monsters.monsters.size() - 1; j >= 0; j--) {
+                    AbstractMonster m = AbstractDungeon.getCurrRoom().monsters.monsters.get(j);
                     if (!m.isDead && !m.isDying) {
-                        atb(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-                        atb(new BurnAction(m, x));
+                        addToTop(new BurnAction(m, x));
+                        addToTop(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
                     }
                 }
             }
         });
     }
 
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
+
     @Override
-    public void extinguish() {
-        super.extinguish();
+    public Texture getHelperTexture() {
+        return bruh;
+    }
+
+    @Override
+    public String returnHoverHelperText() {
+        if (charged) return "0";
+        return String.valueOf(2 - attacksPlayedThisTurn);
+    }
+
+    @Override
+    public void reset() {
         attacksPlayedThisTurn = 0;
     }
 

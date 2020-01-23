@@ -13,7 +13,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -37,6 +40,8 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
+
+import static theHexaghost.GhostflameHelper.*;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -68,6 +73,8 @@ public class HexaMod implements
 
     public static boolean renderFlames = false;
 
+    public static boolean unsealed = false;
+
     public static Color placeholderColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1);
 
     public HexaMod() {
@@ -85,6 +92,10 @@ public class HexaMod implements
 
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
+    }
+
+    public static String makeUIPath(String resourcePath) {
+        return getModID() + "Resources/images/ui/" + resourcePath;
     }
 
     public static String makeRelicPath(String resourcePath) {
@@ -207,46 +218,46 @@ public class HexaMod implements
             @Override
             public void update() {
                 isDone = true;
-                if (!GhostflameHelper.activeGhostFlame.charged && renderFlames)
-                    if (GhostflameHelper.activeGhostFlame instanceof SearingGhostflame && abstractCard.type == AbstractCard.CardType.ATTACK) {
-                        ((SearingGhostflame) GhostflameHelper.activeGhostFlame).attacksPlayedThisTurn++;
-                        if (((SearingGhostflame) GhostflameHelper.activeGhostFlame).attacksPlayedThisTurn == 2) {
-                            GhostflameHelper.activeGhostFlame.charge();
+                if (!activeGhostFlame.charged && renderFlames)
+                    if (activeGhostFlame instanceof SearingGhostflame && abstractCard.type == AbstractCard.CardType.ATTACK) {
+                        ((SearingGhostflame) activeGhostFlame).attacksPlayedThisTurn++;
+                        if (((SearingGhostflame) activeGhostFlame).attacksPlayedThisTurn == 2) {
+                            activeGhostFlame.charge();
                         }
-                    } else if (GhostflameHelper.activeGhostFlame instanceof CrushingGhostflame && abstractCard.type == AbstractCard.CardType.SKILL) {
-                        ((CrushingGhostflame) GhostflameHelper.activeGhostFlame).skillsPlayedThisTurn++;
-                        if (((CrushingGhostflame) GhostflameHelper.activeGhostFlame).skillsPlayedThisTurn == 2) {
-                            GhostflameHelper.activeGhostFlame.charge();
+                    } else if (activeGhostFlame instanceof CrushingGhostflame && abstractCard.type == AbstractCard.CardType.SKILL) {
+                        ((CrushingGhostflame) activeGhostFlame).skillsPlayedThisTurn++;
+                        if (((CrushingGhostflame) activeGhostFlame).skillsPlayedThisTurn == 2) {
+                            activeGhostFlame.charge();
                         }
-                    } else if (GhostflameHelper.activeGhostFlame instanceof BolsteringGhostflame && abstractCard.type == AbstractCard.CardType.POWER) {
-                        GhostflameHelper.activeGhostFlame.charge();
-                    } else if (GhostflameHelper.activeGhostFlame instanceof InfernoGhostflame) {
-                        ((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn += abstractCard.costForTurn;
-                        System.out.println(((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn);
-                        System.out.println(abstractCard.energyOnUse);
-                        if (((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn >= 3) {
-                            System.out.println(((InfernoGhostflame) GhostflameHelper.activeGhostFlame).energySpentThisTurn);
-                            System.out.println("bruh");
-                            GhostflameHelper.activeGhostFlame.charge();
+                    } else if (activeGhostFlame instanceof BolsteringGhostflame && abstractCard.type == AbstractCard.CardType.POWER) {
+                        activeGhostFlame.charge();
+                    } else if (activeGhostFlame instanceof InfernoGhostflame) {
+                        int x = abstractCard.costForTurn;
+                        if (abstractCard.freeToPlayOnce) x = 0;
+                        else if (abstractCard.cost == -1) x = abstractCard.energyOnUse;
+                        ((InfernoGhostflame) activeGhostFlame).energySpentThisTurn += x;
+                        if (((InfernoGhostflame) activeGhostFlame).energySpentThisTurn >= 3) {
+                            activeGhostFlame.charge();
                         }
                     }
             }
         });
     }
 
+
+
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         GhostflameHelper.init();
         if (AbstractDungeon.player instanceof TheHexaghost) {
             renderFlames = true;
-            if(AbstractDungeon.scene instanceof TheBottomScene){
-                ArrayList<InteractableTorchEffect> torches = (ArrayList<InteractableTorchEffect>) ReflectionHacks.getPrivate(AbstractDungeon.scene,TheBottomScene.class, "torches");
-                for(InteractableTorchEffect torch: torches){
+            if (AbstractDungeon.scene instanceof TheBottomScene) {
+                ArrayList<InteractableTorchEffect> torches = (ArrayList<InteractableTorchEffect>) ReflectionHacks.getPrivate(AbstractDungeon.scene, TheBottomScene.class, "torches");
+                for (InteractableTorchEffect torch : torches) {
                     ReflectionHacks.setPrivate(torch, InteractableTorchEffect.class, "activated", false);
                 }
             }
         }
-
     }
 
     @Override
@@ -256,9 +267,9 @@ public class HexaMod implements
         }
     }
 
-    public void receivePreRoomRender(SpriteBatch spriteBatch) {
+    public void receivePreRoomRender(SpriteBatch sb) {
         if (renderFlames) {
-            GhostflameHelper.render(spriteBatch);
+            GhostflameHelper.render(sb);
         }
     }
 }

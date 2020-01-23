@@ -13,8 +13,8 @@ public class AgainPower extends AbstractPower implements CloneablePowerInterface
 
     public static final String POWER_ID = HexaMod.makeID("AgainPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again32.png");
 
     public AgainPower(final int amount) {
         this.name = "Again!";

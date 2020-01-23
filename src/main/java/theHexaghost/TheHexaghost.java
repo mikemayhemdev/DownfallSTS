@@ -14,20 +14,25 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theHexaghost.cards.Defend;
 import theHexaghost.cards.Float;
 import theHexaghost.cards.Sear;
 import theHexaghost.cards.Strike;
+import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.relics.SpiritBrand;
 import theHexaghost.vfx.MyBody;
 
 import java.util.ArrayList;
 
+import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.HexaMod.*;
 import static theHexaghost.TheHexaghost.Enums.GHOST_GREEN;
 
@@ -56,7 +61,7 @@ public class TheHexaghost extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), 20.0F, -10.0F, 512.0F, 512.0F, new EnergyManager(3));
+                getLoadout(), 10.0F, 200.0F, 150.0F, 150.0F, new EnergyManager(3));
 
 
         dialogX = (drawX + 0.0F * Settings.scale);
@@ -69,20 +74,58 @@ public class TheHexaghost extends CustomPlayer {
 
     @Override
     public void render(SpriteBatch sb) {
-        myBody.render(sb);
+        if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom))
+            myBody.render(sb);
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                if (activeGhostFlame == gf || showAll) {
+                    sb.setColor(partialTransparent);
+                    float x = 0;
+                    float y = 0;
+                    switch (hexaGhostFlames.indexOf(gf)) {
+                        case 0:
+                            x = AbstractDungeon.player.drawX - (130.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (440.0F * Settings.scale);
+                            break;
+                        case 1:
+                            x = AbstractDungeon.player.drawX + (130.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (440.0F * Settings.scale);
+                            break;
+                        case 2:
+                            x = AbstractDungeon.player.drawX + (200.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (260.0F * Settings.scale);
+                            break;
+                        case 3:
+                            x = AbstractDungeon.player.drawX + (130.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (100.0F * Settings.scale);
+                            break;
+                        case 4:
+                            x = AbstractDungeon.player.drawX - (130.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (100.0F * Settings.scale);
+                            break;
+                        case 5:
+                            x = AbstractDungeon.player.drawX - (200.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (260.0F * Settings.scale);
+                            break;
+                    }
+                    sb.draw(gf.getHelperTexture(), x - (10 * Settings.scale), y - (10 * Settings.scale));
+                    sb.setColor(Color.WHITE.cpy());
+                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, Color.WHITE, Settings.scale * 0.75F);// 150 153
+                }
+            }
         super.render(sb);
     }
 
     @Override
     public void preBattlePrep() {
         super.preBattlePrep();
-        myBody.targetRotationSpeed = 120.0F;// 274
+        myBody.targetRotationSpeed = 100.0F;// 274
     }
 
     @Override
     public void onVictory() {
         super.onVictory();
-        myBody.targetRotationSpeed = 0F;
+        myBody.targetRotationSpeed = 20.0F;
     }
 
     @Override

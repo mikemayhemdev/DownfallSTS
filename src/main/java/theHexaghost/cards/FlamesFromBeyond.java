@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.actions.BurnAction;
+import theHexaghost.powers.ApplyBurnAtTurnStartOncePower;
 
 public class FlamesFromBeyond extends AbstractHexaCard {
 
@@ -31,9 +32,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     @Override
     public void triggerOnExhaust() {
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            atb(new BurnAction(m, magicNumber));
-        }
+        applyToSelf(new ApplyBurnAtTurnStartOncePower(magicNumber));
     }
 
     public void upgrade() {

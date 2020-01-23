@@ -12,8 +12,8 @@ public class CrispyPower extends AbstractPower implements CloneablePowerInterfac
 
     public static final String POWER_ID = HexaMod.makeID("CrispyPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Key_power32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ExtraCrispy84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ExtraCrispy32.png");
 
     public CrispyPower(final int amount) {
         this.name = "Extra Crispy";
