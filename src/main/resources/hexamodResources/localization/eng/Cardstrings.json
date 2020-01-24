@@ -293,7 +293,7 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
-    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is Charged, apply !M! hexamod:Burn. Otherwise, deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is Charged, apply !M! hexamod:Burn. If not, deal !D! damage."
   },
   "hexamod:SpiritOfFire": {
     "NAME": "Spirit of Fire",
