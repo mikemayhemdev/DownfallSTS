@@ -113,7 +113,7 @@
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Advance. NL Otherwise, Charge the hexamod:Active Ghostflame."
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Advance. If not, Charge the hexamod:Active Ghostflame."
   },
   "hexamod:InspiringFlames": {
     "NAME": "Inspiring Flames",
@@ -263,7 +263,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, apply !M! hexamod:Burn to ALL enemies."
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, apply !M! hexamod:Burn to ALL enemies at the start of your next turn."
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
