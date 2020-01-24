@@ -9,10 +9,10 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Apply !M! hexamod:Burn."
+    "DESCRIPTION": "Apply !M! hexamod:Burn." // add fireball if not already
   },
   "hexamod:Float": {
-    "NAME": "Float",
+    "NAME": "Float", //add a hop action? but LOONGER!!!
     "DESCRIPTION": "Ethereal. NL hexamod:Advance.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] if the hexamod:Active Ghostflame is Charged. NL Otherwise, draw 1 card. NL hexamod:Advance."
   },
@@ -25,7 +25,7 @@
     "DESCRIPTION": "Deal !D! damage. NL hexamod:Retract."
   },
   "hexamod:FastForward": {
-    "NAME": "Fast Forward",
+    "NAME": "Fast Forward", // consider 
     "DESCRIPTION": "hexamod:Advance. NL Charge the hexamod:Active Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
@@ -35,19 +35,19 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. NL hexamod:Advance. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one."
   },
   "hexamod:CatchUp": {
-    "NAME": "Catch Up",
+    "NAME": "Catch Up", // consider extinguish-> charge vfx to slow down
     "DESCRIPTION": "hexamod:Extinguish, then Charge, the Ghostflame preceding the hexamod:Active one."
   },
   "hexamod:TimeWarp": {
-    "NAME": "Time Warp",
+    "NAME": "Time Warp", // move to UNCOMMON
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL If the first Ghostflame is not hexamod:Active, hexamod:Retract and repeat this."
   },
   "hexamod:EmpoweredFlame": {
-    "NAME": "Empowered Flame",
+    "NAME": "Empowered Flame", //maybe add a flame barrier green vfx here?
     "DESCRIPTION": "Gain !M! hexamod:Enhance."
   },
   "hexamod:HexaLevel": {
@@ -56,7 +56,7 @@
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! hexamod:Enhance."
   },
   "hexamod:UnlimitedPower": {
-    "NAME": "Unlimited Power",
+    "NAME": "Unlimited Power", //check!
     "DESCRIPTION": "Charge all uncharged Ghostflames in order."
   },
   "hexamod:GhostOfSpirePast": {
@@ -75,11 +75,11 @@
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
   },
   "hexamod:HauntingEcho": {
-    "NAME": "Haunting Echo",
+    "NAME": "Haunting Echo", // scream or echo vfx
     "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it and Charge it again."
   },
   "hexamod:CrushingStance": {
-    "NAME": "Crush",
+    "NAME": "Crush", // add a big thing the crushes the enemy
     "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a Crushing Ghostflame. NL Exhaust."
   },
   "hexamod:EmpoweringStance": {
@@ -87,7 +87,7 @@
     "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame."
   },
   "hexamod:NecessarySacrifice": {
-    "NAME": "Worthy Sacrifice",
+    "NAME": "Worthy Sacrifice", // change to costs 1 less
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
     "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
   },
@@ -96,51 +96,51 @@
     "DESCRIPTION": "Retain. NL Add a random Power card into your hand. NL It costs 0 until played. NL Exhaust."
   },
   "hexamod:SwordOfDarkness": {
-    "NAME": "Sword of Night",
+    "NAME": "Sword of Night", // try a dark damage vfx for slicing?
     "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Deal !D! damage."
   },
   "hexamod:ShieldOfDarkness": {
-    "NAME": "Shield of Night",
+    "NAME": "Shield of Night", //try a dark candy shield?
     "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Gain !B! Block."
   },
   "hexamod:GhostlyFlex": {
-    "NAME": "Ghostly Flex",
+    "NAME": "Ghostly Flex", //change buffs to all at once
     "DESCRIPTION": "Gain 2 hexamod:Momentary Strength and 2 hexamod:Momentary Dexterity for each Charged Ghostflame."
   },
   "hexamod:SpectralAdrenaline": {
-    "NAME": "Spectral Adrenaline",
+    "NAME": "Spectral Adrenaline", //check visual looks
     "DESCRIPTION": "hexamod:Extinguish all Charged Ghostflames. NL For each Ghostflame hexamod:Extinguished, gain [E] and draw 1 card. NL Exhaust."
   },
   "hexamod:StepThrough": {
-    "NAME": "Step Through",
+    "NAME": "Step Through", // this will interact badly with new "after" change likely?
     "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Advance. If not, Charge the hexamod:Active Ghostflame."
   },
   "hexamod:InspiringFlames": {
-    "NAME": "Inspiring Flames",
+    "NAME": "Inspiring Flames", //consider alternate card glow patch
     "DESCRIPTION": "Gain !B! Block. NL For each Charged Ghostflame, Upgrade a random card in your hand."
   },
   "hexamod:SpectersWail": {
-    "NAME": "Specter's Wail",
+    "NAME": "Specter's Wail", //definitely add a screaming animation
     "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies."
   },
   "hexamod:Hexaguard": {
-    "NAME": "Hexaguard",
+    "NAME": "Hexaguard", 
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw 1 card."
   },
   "hexamod:GhostLash": {
-    "NAME": "Ghost Lash",
+    "NAME": "Ghost Lash", //maybe illuminate ethereal cards in your hand when ghost lash
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If your hand contains another Ethereal card, deal !D! damage."
   },
   "hexamod:GhostShield": {
-    "NAME": "Ghost Shield",
+    "NAME": "Ghost Shield", //or ghost shield activates
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If your hand contains another Ethereal card, gain !B! Block."
   },
   "hexamod:Haunt": {
-    "NAME": "Haunt",
+    "NAME": "Haunt", //kind of a weird card doe
     "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
   },
   "hexamod:RecurringNightmare": {
-    "NAME": "Nightmare Vision",
+    "NAME": "Nightmare Vision", 
     "DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand."
   },
@@ -165,25 +165,25 @@
     "DESCRIPTION": "Ethereal. NL Whenever you play an Ethereal card, deal !M! damage to a random enemy."
   },
   "hexamod:UnleashSpirits": {
-    "NAME": "Unleash Spirits",
+    "NAME": "Unleash Spirits", //add ghosts that fly into the enemy or something
     "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each Ethereal card in your exhaust pile. NL Exhaust."
   },
   "hexamod:NightmareStrike": {
-    "NAME": "Nightmare Strike",
+    "NAME": "Nightmare Strike", //copy over spooky images - maybe a purple glow when exhausted?
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, add a *Shadow *Strike into your hand.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, add a *Shadow *Strike+ into your hand."
   },
   "hexamod:NightmareGuise": {
-    "NAME": "Nightmare Guise",
+    "NAME": "Nightmare Guise", //copy over spooky images- maybe a purple glow when exhausted?
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, add a *Shadow *Guise into your hand.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, add a *Shadow *Guise+ into your hand."
   },
   "hexamod:ShadowStrike": {
-    "NAME": "Shadow Strike",
+    "NAME": "Shadow Strike", //copy over spooky images
     "DESCRIPTION": "Deal !D! damage. NL Exhaust."
   },
   "hexamod:ShadowGuise": {
-    "NAME": "Shadow Guise",
+    "NAME": "Shadow Guise", //copy over spooky images
     "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "hexamod:PowerFromBeyond": {
@@ -192,19 +192,19 @@
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] [E] and draw 2 cards next turn."
   },
   "hexamod:BurningTouch": {
-    "NAME": "Burning Touch",
+    "NAME": "Burning Touch", //kinda weak doe
     "DESCRIPTION": "If the enemy has hexamod:Burn, apply !M! hexamod:Burn. NL Apply !M! hexamod:Burn."
   },
   "hexamod:Incineration": {
-    "NAME": "Incineration",
+    "NAME": "Incineration", //add little flames?
     "DESCRIPTION": "Deal !D! damage and apply !M! hexamod:Burn to a random enemy 4 times."
   },
   "hexamod:Firestarter": {
-    "NAME": "Firestarter",
+    "NAME": "Firestarter", //maybe some sparks? from the curvies?
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn."
   },
   "hexamod:SearingWound": {
-    "NAME": "Searing Wound",
+    "NAME": "Searing Wound", //add BIG explosion of fire vfx
     "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Burn."
   },
   "hexamod:ExtraCrispy": {
@@ -212,11 +212,11 @@
     "DESCRIPTION": "Whenever you apply hexamod:Burn, apply !M! more."
   },
   "hexamod:GhostflameBarrier": {
-    "NAME": "Ghostflame Wall",
+    "NAME": "Ghostflame Wall", //definitely add green flame barrier vfx here
     "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! hexamod:Burn to the attacker."
   },
   "hexamod:Toasty": {
-    "NAME": "Toasty!",
+    "NAME": "Toasty!", //add 1/1000 chance to display "All Toasters Toast Toast" and deal 2,000,000 damage
     "DESCRIPTION": "Deal !D! damage. NL Apply hexamod:Burn equal to unblocked damage dealt."
   },
   "hexamod:WildfireWeapon": {
@@ -224,16 +224,12 @@
     "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Burn."
   },
   "hexamod:ThermalTransfer": {
-    "NAME": "Thermal Transfer",
+    "NAME": "Thermal Transfer", //add flames rushing to you?
     "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Burn, gain !B! Block."
   },
   "hexamod:HeatCrush": {
     "NAME": "Heat Crush",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by enemy's hexamod:Burn."
-  },
-  "hexamod:ConsumeSoul": {
-    "NAME": "Consume Soul",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal on an enemy with hexamod:Burn, heal !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by enemy's hexamod:Burn." // use Heart Crush vfx, retextured to red
   },
   "hexamod:InvigoratingFlames": {
     "NAME": "Invigorating Flames",
