@@ -8,10 +8,11 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.HexaMod;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.TextureLoader;
+
+import static theHexaghost.HexaMod.makeUIPath;
 
 public class InfernoGhostflame extends AbstractGhostflame {
 
@@ -24,24 +25,19 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = damage;
-                if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-                    x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-                }
-                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-                    //tfw no gf
-                    if (gf.charged) {
-                        addToTop(new ExtinguishAction(gf));
-                        addToTop(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                    }
-                }
-                AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
+        int x = damage;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
+            //i have no ghostflame. goodnight
+            AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
+            if (gf.charged) {
+                att(new ExtinguishAction(gf));
+                att(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
             }
-        });
+        }
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
     }
 
     @Override
@@ -50,37 +46,11 @@ public class InfernoGhostflame extends AbstractGhostflame {
         return String.valueOf(Math.max(0, 3 - energySpentThisTurn));
     }
 
-    public static Texture bruh1 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno1.png"));
-    public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno2.png"));
-    public static Texture bruh3 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno3.png"));
-    public static Texture bruh4 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno4.png"));
-    public static Texture bruh5 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno5.png"));
-    public static Texture bruh6 = TextureLoader.getTexture(HexaMod.makeUIPath("inferno6.png"));
+    public static Texture myTex = TextureLoader.getTexture(makeUIPath("inferno.png"));
 
     @Override
     public Texture getHelperTexture() {
-        int i = 0;
-        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-            if (gf.charged)
-                i++;
-        }
-        switch (i) {
-            case 0:
-                return bruh1;
-            case 1:
-                return bruh2;
-            case 2:
-                return bruh3;
-            case 3:
-                return bruh4;
-            case 4:
-                return bruh5;
-            case 5:
-                return bruh6;
-            case 6:
-                return bruh6;
-        }
-        return bruh1;
+        return myTex;
     }
 
     @Override

@@ -25,7 +25,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
     @Override
     public void onCharge() {
         for (int i = 0; i < 2; i++) {
-            atb(new AbstractGameAction() {
+            att(new AbstractGameAction() {
                 @Override
                 public void update() {
                     int x = damage;
@@ -47,7 +47,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
         return String.valueOf(2 - skillsPlayedThisTurn);
     }
 
-    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
 
     @Override
     public Texture getHelperTexture() {

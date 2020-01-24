@@ -33,7 +33,7 @@ public class GhostLash extends AbstractHexaCard {
         });
     }
 
-    public boolean hasEthereal() {
+    private boolean hasEthereal() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.isEthereal && c != this)
                 return true;

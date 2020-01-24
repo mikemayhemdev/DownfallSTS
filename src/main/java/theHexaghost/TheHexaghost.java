@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -31,6 +33,7 @@ import theHexaghost.relics.SpiritBrand;
 import theHexaghost.vfx.MyBody;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.HexaMod.*;
@@ -54,6 +57,47 @@ public class TheHexaghost extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
+    @Override
+    protected void updateEscapeAnimation() {
+        super.updateEscapeAnimation();
+        if (escapeTimer > 0.0F)
+            renderFlames = false;
+    }
+
+
+
+    @SpireOverride
+    public void renderPowerIcons(SpriteBatch sb, float x, float y) {
+        float offset = 10.0F ;
+        int powersIterated = 0;
+        float YOffset = 0;
+        Iterator var5;
+        AbstractPower p;
+        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
+            p = (AbstractPower) var5.next();
+            p.renderIcons(sb, x + (offset* Settings.scale), y + ((-48.0F + YOffset) * Settings.scale), Color.WHITE);
+            powersIterated++;
+            if (powersIterated == 9 || powersIterated == 18) {
+                YOffset += -42F;
+                offset = -38.0F;
+            }
+        }
+
+        offset = 0.0F;
+        powersIterated = 0;
+        YOffset = 0.0F;
+
+        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
+            p = (AbstractPower) var5.next();
+            p.renderAmount(sb, x + ((offset + 32.0F) * Settings.scale), y + ((-66.0F + YOffset) * Settings.scale), Color.WHITE);
+            powersIterated++;
+            if (powersIterated == 9 || powersIterated == 18) {
+                YOffset += -42F;
+                offset = -48.0F;
+            }
+        }
+    }
+
     public TheHexaghost(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
                 "hexamodResources/images/char/mainChar/static_character.scml"));
@@ -74,7 +118,7 @@ public class TheHexaghost extends CustomPlayer {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom))
+        if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom) && !isDead)
             myBody.render(sb);
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {

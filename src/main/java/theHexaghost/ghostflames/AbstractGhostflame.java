@@ -27,13 +27,13 @@ public abstract class AbstractGhostflame {
         if (!charged) {
             graphicalRender.charge();
             charged = true;
-            onCharge();
-            for (AbstractPower p : AbstractDungeon.player.powers) {
-                if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge(this);
-            }
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
             }
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge(this);
+            }
+            onCharge();
             if (AbstractDungeon.player instanceof TheHexaghost) {
                 int x = 0;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
@@ -69,6 +69,10 @@ public abstract class AbstractGhostflame {
 
     public void atb(AbstractGameAction e) {
         AbstractDungeon.actionManager.addToBottom(e);
+    }
+
+    public void att(AbstractGameAction e) {
+        AbstractDungeon.actionManager.addToTop(e);
     }
 
     public void extinguish() {

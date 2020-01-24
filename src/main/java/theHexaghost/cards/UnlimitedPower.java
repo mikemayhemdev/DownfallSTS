@@ -14,7 +14,7 @@ public class UnlimitedPower extends AbstractHexaCard {
 
 
     public UnlimitedPower() {
-        super(ID, 5, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL);
+        super(ID, 5, CardType.SKILL, CardRarity.RARE, CardTarget.ALL);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

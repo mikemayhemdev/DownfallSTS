@@ -22,7 +22,7 @@ public class ApocalypticArmorPower extends TwoAmountPower implements OnChargeSub
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApocalypseArmor32.png");
 
     public ApocalypticArmorPower(final int amount, final int amount2) {
-        this.name = "Apocalyptic Armor";
+        this.name = "Apocalypse Armor";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -44,7 +44,7 @@ public class ApocalypticArmorPower extends TwoAmountPower implements OnChargeSub
                 if (gf.charged) i++;
             }
             if (i >= amount) {
-                addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, amount2), amount2));
+                addToTop(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner, amount2), amount2));
             }
         }
     }

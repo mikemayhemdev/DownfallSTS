@@ -24,6 +24,7 @@ public class BurningTouch extends AbstractHexaCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 if (m.hasPower(BurnPower.POWER_ID)) {
                     addToTop(new BurnAction(m, magicNumber));
                 }

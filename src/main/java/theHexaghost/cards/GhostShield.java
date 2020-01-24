@@ -18,6 +18,7 @@ public class GhostShield extends AbstractHexaCard {
     public GhostShield() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,7 +33,7 @@ public class GhostShield extends AbstractHexaCard {
         });
     }
 
-    public boolean hasEthereal() {
+    private boolean hasEthereal() {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.isEthereal && c != this)
                 return true;

@@ -19,7 +19,7 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past32.png");
 
     public PastPower(final int amount) {
-        this.name = "Past";
+        this.name = "Devil's Dance";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;

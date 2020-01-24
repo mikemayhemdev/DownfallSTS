@@ -25,7 +25,7 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
     @Override
     public void onCharge(AbstractGhostflame g) {
         flash();
-        addToBot(new GainBlockAction(AbstractDungeon.player, 3));
+        addToTop(new GainBlockAction(AbstractDungeon.player, 3));
     }
 
     public String getUpdatedDescription() {

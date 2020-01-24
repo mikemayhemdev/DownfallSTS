@@ -23,7 +23,7 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Future32.png");
 
     public FuturePower(final int amount) {
-        this.name = "Future";
+        this.name = "Speedrun";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;

@@ -19,7 +19,7 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GiftsFromTheDead32.png");
 
     public GiftsFromTheDeadPower(final int amount) {
-        this.name = "Gifts from the Dead";
+        this.name = "Ghostly Gifts";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -47,7 +47,7 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
         for (int i = 0; i < this.amount; ++i) {
             sb.append("[E] ");
         }
-        sb.append(" .");
+        sb.append(" next turn.");
         this.description = sb.toString();
     }
 

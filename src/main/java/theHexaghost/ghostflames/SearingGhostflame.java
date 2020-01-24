@@ -1,7 +1,6 @@
 package theHexaghost.ghostflames;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,26 +22,20 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = magic;
-                if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-                    x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-                }
-                for (int j = AbstractDungeon.getCurrRoom().monsters.monsters.size() - 1; j >= 0; j--) {
-                    AbstractMonster m = AbstractDungeon.getCurrRoom().monsters.monsters.get(j);
-                    if (!m.isDead && !m.isDying) {
-                        addToTop(new BurnAction(m, x));
-                        addToTop(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-                    }
-                }
+        int x = magic;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        for (int j = AbstractDungeon.getCurrRoom().monsters.monsters.size() - 1; j >= 0; j--) {
+            AbstractMonster m = AbstractDungeon.getCurrRoom().monsters.monsters.get(j);
+            if (!m.isDead && !m.isDying && !m.halfDead) {
+                att(new BurnAction(m, x));
+                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
             }
-        });
+        }
     }
 
-    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
 
     @Override
     public Texture getHelperTexture() {

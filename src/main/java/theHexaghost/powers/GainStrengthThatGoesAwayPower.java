@@ -20,7 +20,7 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present32.png");
 
     public GainStrengthThatGoesAwayPower(final int amount) {
-        this.name = "Present";
+        this.name = "Here and Now";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;

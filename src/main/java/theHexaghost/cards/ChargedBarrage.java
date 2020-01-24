@@ -1,6 +1,5 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
@@ -18,7 +17,7 @@ public class ChargedBarrage extends AbstractHexaCard {
     private static final int UPG_MAGIC = 1;
 
     public ChargedBarrage() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
     }
 

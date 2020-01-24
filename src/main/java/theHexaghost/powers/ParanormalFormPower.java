@@ -35,8 +35,8 @@ public class ParanormalFormPower extends AbstractPower implements CloneablePower
     }
 
     @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
+    public void onAfterCardPlayed(AbstractCard card) {
+        super.onAfterCardPlayed(card);
         if (card.isEthereal) {
             flash();
             addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));

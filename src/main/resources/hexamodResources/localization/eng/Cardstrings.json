@@ -74,10 +74,6 @@
     "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
   },
-  "hexamod:ThermalPlanning": {
-    "NAME": "Thermal Planning",
-    "DESCRIPTION": "Whenever you hexamod:Advance or hexamod:Retract this turn, gain !M! hexamod:Momentary hexamod:Enhance."
-  },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
     "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it and Charge it again."
@@ -92,7 +88,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
-    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
+    "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
@@ -183,11 +180,11 @@
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
-    "DESCRIPTION": "Deal !D! damage. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
   },
   "hexamod:ShadowGuise": {
     "NAME": "Shadow Guise",
-    "DESCRIPTION": "Gain !B! Block. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
@@ -334,11 +331,11 @@
     "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Potion reward."
   },
   "hexamod:FifthSeal": {
-    "NAME": "Fifth Seal",
+    "NAME": "Sixth Seal",
     "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Seal card reward."
   },
   "hexamod:SixthSeal": {
-    "NAME": "Sixth Seal",
+    "NAME": "Fifth Seal",
     "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
   }
 }
