@@ -22,6 +22,7 @@ public class TurnItUp extends AbstractHexaCard {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 if (m.hasPower(BurnPower.POWER_ID)) {
                     AbstractPower p = m.getPower(BurnPower.POWER_ID);
                     int flame = p.amount * magicNumber;

@@ -14,7 +14,7 @@ public class TimeWarp extends AbstractHexaCard {
     private static final int UPG_DAMAGE = 3;
 
     public TimeWarp() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
     }
 

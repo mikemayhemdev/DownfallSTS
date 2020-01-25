@@ -64,40 +64,6 @@ public class TheHexaghost extends CustomPlayer {
             renderFlames = false;
     }
 
-
-
-    @SpireOverride
-    public void renderPowerIcons(SpriteBatch sb, float x, float y) {
-        float offset = 10.0F ;
-        int powersIterated = 0;
-        float YOffset = 0;
-        Iterator var5;
-        AbstractPower p;
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
-            p = (AbstractPower) var5.next();
-            p.renderIcons(sb, x + (offset* Settings.scale), y + ((-48.0F + YOffset) * Settings.scale), Color.WHITE);
-            powersIterated++;
-            if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F;
-                offset = -38.0F;
-            }
-        }
-
-        offset = 0.0F;
-        powersIterated = 0;
-        YOffset = 0.0F;
-
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
-            p = (AbstractPower) var5.next();
-            p.renderAmount(sb, x + ((offset + 32.0F) * Settings.scale), y + ((-66.0F + YOffset) * Settings.scale), Color.WHITE);
-            powersIterated++;
-            if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F;
-                offset = -48.0F;
-            }
-        }
-    }
-
     public TheHexaghost(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
                 "hexamodResources/images/char/mainChar/static_character.scml"));

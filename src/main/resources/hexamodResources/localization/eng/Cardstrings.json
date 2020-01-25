@@ -35,8 +35,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. NL hexamod:Advance. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
@@ -124,7 +124,7 @@
     "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies."
   },
   "hexamod:Hexaguard": {
-    "NAME": "Hexaguard",
+    "NAME": "Hexaguard", 
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw 1 card."
   },
   "hexamod:GhostLash": {
@@ -140,7 +140,7 @@
     "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
   },
   "hexamod:RecurringNightmare": {
-    "NAME": "Nightmare Vision",
+    "NAME": "Nightmare Vision", 
     "DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand."
   },
@@ -231,10 +231,6 @@
     "NAME": "Heat Crush",
     "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by enemy's hexamod:Burn."
   },
-  "hexamod:ConsumeSoul": {
-    "NAME": "Consume Soul",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal on an enemy with hexamod:Burn, heal !M! HP."
-  },
   "hexamod:InvigoratingFlames": {
     "NAME": "Invigorating Flames",
     "DESCRIPTION": "Remove the enemy's hexamod:Burn and gain that much Block. NL If they have no hexamod:Burn, apply 5 hexamod:Burn instead."
@@ -250,8 +246,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn X+1 times."
+    "DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn to a random enemy X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn to a random enemy X+1 times."
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",

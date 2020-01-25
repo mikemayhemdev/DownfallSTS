@@ -25,11 +25,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.ghostflames.BolsteringGhostflame;
-import theHexaghost.ghostflames.CrushingGhostflame;
-import theHexaghost.ghostflames.InfernoGhostflame;
-import theHexaghost.ghostflames.SearingGhostflame;
 import theHexaghost.relics.SpiritBrand;
 import theHexaghost.util.CardFilter;
 import theHexaghost.util.CardIgnore;
@@ -42,8 +37,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
-
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
 public class HexaMod implements
@@ -52,7 +45,7 @@ public class HexaMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        OnCardUseSubscriber,
+        //OnCardUseSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         PreRoomRenderSubscriber,
@@ -218,6 +211,8 @@ public class HexaMod implements
         AbstractDungeon.actionManager.addToBottom(q);
     }
 
+
+    /*
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
         if (!activeGhostFlame.charged && renderFlames)
@@ -243,6 +238,7 @@ public class HexaMod implements
                 }
             }
     }
+    */
 
 
     @Override

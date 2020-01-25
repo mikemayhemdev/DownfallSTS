@@ -1,8 +1,10 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
@@ -24,8 +26,10 @@ public class CrushingStance extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        addToBot(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
+        addToBot(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
         atb(new AbstractGameAction() {
             @Override
             public void update() {

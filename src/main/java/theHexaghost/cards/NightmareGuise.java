@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,6 +28,7 @@ public class NightmareGuise extends AbstractHexaCard {
 
     @Override
     public void triggerOnExhaust() {
+        superFlash(Color.PURPLE);
         AbstractCard q = new ShadowGuise();
         if (upgraded) q.upgrade();
         atb(new MakeTempCardInHandAction(q));
