@@ -26,7 +26,8 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "hexamod:Advance. NL Charge the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "Charge the hexamod:Active Ghostflame. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL Charge the hexamod:Active Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
     "NAME": "Rewind",
