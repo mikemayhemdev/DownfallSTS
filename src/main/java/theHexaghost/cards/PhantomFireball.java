@@ -11,7 +11,7 @@ public class PhantomFireball extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 2;
 
     public PhantomFireball() {
@@ -20,9 +20,9 @@ public class PhantomFireball extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 2; i++) {
-            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        }
+
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+
         atb(new AbstractGameAction() {
             @Override
             public void update() {

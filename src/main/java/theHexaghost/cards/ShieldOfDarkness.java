@@ -12,8 +12,8 @@ public class ShieldOfDarkness extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, SELF, COMMON
 
-    private static final int BLOCK = 10;
-    private static final int UPG_BLOCK = 5;
+    private static final int BLOCK = 9;
+    private static final int UPG_BLOCK = 3;
 
     public ShieldOfDarkness() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

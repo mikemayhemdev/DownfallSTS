@@ -263,7 +263,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
-    "DESCRIPTION": "Deal !D! damage twice. NL If the enemy has hexamod:Burn, deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Burn, deal !D! damage."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
@@ -272,7 +272,7 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-    "DESCRIPTION": "hexamod:Extinguish all Charged Ghostflames. Deal !D! damage and apply !M! hexamod:Burn to ALL enemies for each Ghostflame hexamod:Extinguished."
+    "DESCRIPTION": "For each Charged Ghostflame, hexamod:Extinguish it and deal !D! damage and apply !M! hexamod:Burn to ALL enemies."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
