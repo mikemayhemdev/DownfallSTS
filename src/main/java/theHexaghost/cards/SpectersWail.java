@@ -1,8 +1,13 @@
 package theHexaghost.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 public class SpectersWail extends AbstractHexaCard {
 
@@ -21,6 +26,9 @@ public class SpectersWail extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        for (int q = 0; q < 6; q++) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(MathUtils.random(1.0f), MathUtils.random(1.0f), MathUtils.random(1.0f), 1.0f), ShockWaveEffect.ShockWaveType.NORMAL)));
+        }
         allDmg(AbstractGameAction.AttackEffect.FIRE);
     }
 

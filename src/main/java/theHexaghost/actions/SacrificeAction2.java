@@ -45,12 +45,12 @@ public class SacrificeAction2 extends AbstractGameAction {
                         if (c.type == AbstractCard.CardType.ATTACK) {
                             AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();// 32
                             if (costify)
-                            q.freeToPlayOnce = true;// 33
+                                q.modifyCostForCombat(-1);
                             this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                         } else {
                             AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();// 32
                             if (costify)
-                                q.freeToPlayOnce = true;// 33
+                                q.modifyCostForCombat(-1);
                             this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                         }
                         this.isDone = true;// 64
@@ -71,12 +71,12 @@ public class SacrificeAction2 extends AbstractGameAction {
                 if (c.type == AbstractCard.CardType.ATTACK) {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();// 32
                     if (costify)
-                        q.freeToPlayOnce = true;// 33
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 } else {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();// 32
                     if (costify)
-                        q.freeToPlayOnce = true;// 33
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 }
                 this.returnCards();// 81
@@ -90,12 +90,12 @@ public class SacrificeAction2 extends AbstractGameAction {
                 if (c.type == AbstractCard.CardType.ATTACK) {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();// 32
                     if (costify)
-                        q.freeToPlayOnce = true;// 33
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 } else {
                     AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.ATTACK).makeCopy();// 32
                     if (costify)
-                        q.freeToPlayOnce = true;// 33
+                        q.modifyCostForCombat(-1);
                     this.addToBot(new MakeTempCardInHandAction(q, true));// 34
                 }
             }

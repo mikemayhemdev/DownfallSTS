@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.animations.AnimateHopAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,7 +20,7 @@ public class Float extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AdvanceAction());
+        atb(new AnimateHopAction(p));
         if (upgraded) {
             if (GhostflameHelper.activeGhostFlame.charged) {
                 atb(new GainEnergyAction(1));
@@ -27,6 +28,7 @@ public class Float extends AbstractHexaCard {
                 atb(new DrawCardAction(1));
             }
         }
+        atb(new AdvanceAction());
     }
 
     public void upgrade() {

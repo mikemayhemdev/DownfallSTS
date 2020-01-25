@@ -1,8 +1,12 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import theHexaghost.powers.GhostFlameBarrierPower;
+import theHexaghost.vfx.SpookyFlameBarrier;
 
 public class GhostflameBarrier extends AbstractHexaCard {
 
@@ -23,6 +27,11 @@ public class GhostflameBarrier extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (Settings.FAST_MODE) {// 38
+            this.addToBot(new VFXAction(p, new SpookyFlameBarrier(p.hb.cX, p.hb.cY), 0.1F));// 39
+        } else {
+            this.addToBot(new VFXAction(p, new SpookyFlameBarrier(p.hb.cX, p.hb.cY), 0.5F));// 41
+        }
         blck();
         applyToSelf(new GhostFlameBarrierPower(magicNumber));
     }

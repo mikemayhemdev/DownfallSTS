@@ -1,9 +1,11 @@
 package theHexaghost.actions;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EmbersAction extends AbstractXAction {
@@ -33,10 +35,16 @@ public class EmbersAction extends AbstractXAction {
 
     public void update() {
         for (int i = 0; i < amount; i++) {
-            addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
-            addToBot(new BurnAction(m, 4));
+            addToTop(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractMonster m = AbstractDungeon.getRandomMonster();
+                    addToTop(new BurnAction(m, 4));
+                    addToTop(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
+                }
+            });
         }
-
         this.isDone = true;
     }
 }
