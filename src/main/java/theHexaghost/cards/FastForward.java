@@ -12,7 +12,7 @@ public class FastForward extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, COMMON
 
     public FastForward() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         isEthereal = true;
     }
 
