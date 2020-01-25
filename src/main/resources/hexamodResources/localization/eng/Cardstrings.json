@@ -36,8 +36,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one."
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then Charge, the Ghostflame after the hexamod:Active one. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then Charge, the Ghostflame after the hexamod:Active one."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
@@ -90,7 +90,7 @@
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less."
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
@@ -235,7 +235,7 @@
   },
   "hexamod:InvigoratingFlames": {
     "NAME": "Invigorating Flames",
-    "DESCRIPTION": "Remove the enemy's hexamod:Burn and gain that much Block. NL If they have no hexamod:Burn, apply 5 hexamod:Burn instead."
+    "DESCRIPTION": "Gain !B! Block, increased by hexamod:Burn on ALL enemies."
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
@@ -274,7 +274,8 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-    "DESCRIPTION": "For each Charged Ghostflame, hexamod:Extinguish it and deal !D! damage and apply !M! hexamod:Burn to ALL enemies."
+    "DESCRIPTION": "Retain. NL Charge the Inferno Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Charge the hexamod:Active Ghostflame. NL Charge the Inferno Ghostflame. NL Exhaust."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
@@ -286,8 +287,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
-    "DESCRIPTION": "Ethereal. NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL The Inferno Ghostflame becomes hexamod:Active."
+    "DESCRIPTION": "Ethereal. NL Lose 6 HP. Gain [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Lose 6 HP. Gain [E] [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust."
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
@@ -300,8 +301,7 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of this turn instead of hexamod:Advancing.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of the next 2 turns instead of hexamod:Advancing."
+    "DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. Do not hexamod:Advance at the end of this turn."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",

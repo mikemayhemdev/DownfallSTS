@@ -6,8 +6,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.BurnAction;
+import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.ghostflames.InfernoGhostflame;
 
 public class GhostflameInferno extends AbstractHexaCard {
 
@@ -15,36 +18,32 @@ public class GhostflameInferno extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, RARE
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
-
-    private static final int MAGIC = 6;
-    private static final int UPG_MAGIC = 3;
-
     public GhostflameInferno() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
-        isMultiDamage = true;
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        selfRetain = true;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-            if (gf.charged) {
-                atb(new ExtinguishAction(gf));
-                allDmg(AbstractGameAction.AttackEffect.FIRE);
-                for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    atb(new BurnAction(q, magicNumber));
+        if (upgraded) atb(new ChargeCurrentFlameAction());
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                    if (gf instanceof InfernoGhostflame) {
+                        addToTop(new ChargeAction(gf));
+                    }
                 }
             }
-        }
+        });
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

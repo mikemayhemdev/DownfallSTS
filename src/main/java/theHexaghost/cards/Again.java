@@ -2,6 +2,8 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.actions.ExtinguishCurrentFlameAction;
 import theHexaghost.powers.AgainPower;
 
 public class Again extends AbstractHexaCard {
@@ -11,21 +13,20 @@ public class Again extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public Again() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        isEthereal = true;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new AgainPower(magicNumber));
+        atb(new ExtinguishCurrentFlameAction());
+        atb(new ChargeCurrentFlameAction());
+        applyToSelf(new AgainPower(1));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
         }
     }
 }

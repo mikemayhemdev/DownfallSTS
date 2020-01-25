@@ -4,8 +4,8 @@
   "author_list": ["Vex'd, MichaelMayhem, The Evil Pickle, Blank the Evil, Reina, Kiooeht, Half-GoblinHenkins, Keeb"],
   "description": "${project.description}",
   "version": "${project.version}",
-  "sts_version": "${stsVersion}",
-  "mts_version": "${mtsVersion}",
+  "sts_version": "${SlayTheSpire.version}",
+  "mts_version": "${ModTheSpire.version}",
   "dependencies": ["basemod", "stslib"],
   "update_json": "https://api.github.com/repos/mikemayhemdev/EvilWithin/releases/latest"
 }

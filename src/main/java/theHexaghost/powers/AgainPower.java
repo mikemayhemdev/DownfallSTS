@@ -33,9 +33,9 @@ public class AgainPower extends AbstractPower implements CloneablePowerInterface
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "#yExtinguish the #yActive Ghostflame instead of #yAdvancing at the end of the next turn.";
+            description = "Do not #yAdvance at the end of the next turn.";
         else
-            description = "#yExtinguish the #yActive Ghostflame instead of #yAdvancing at the end of the next #b" + amount + " turns.";
+            description = "Do not #yAdvance at the end of the next #b" + amount + " turns.";
     }
 
     @Override
