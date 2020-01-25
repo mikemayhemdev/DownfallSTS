@@ -17,7 +17,7 @@ public class Incineration extends AbstractHexaCard {
     private static final int DAMAGE = 1;
     private static final int UPG_DAMAGE = 1;
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
     public Incineration() {
@@ -27,14 +27,14 @@ public class Incineration extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     atb(new DamageAction(m, makeInfo(), AttackEffect.FIRE));
-                    atb(new BurnAction(m, magicNumber));
+                    atb(new BurnAction(m, 1));
                 }
             });
         }

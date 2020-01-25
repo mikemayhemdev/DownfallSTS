@@ -25,7 +25,6 @@ public class Haunt extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AdvanceAction());
         atb(new DrawCardAction(p, magicNumber));
         atb(new AbstractGameAction() {
             @Override

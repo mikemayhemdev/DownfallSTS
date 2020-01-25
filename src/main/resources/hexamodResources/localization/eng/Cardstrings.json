@@ -116,7 +116,7 @@
     "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Advance. If not, Charge the hexamod:Active Ghostflame."
   },
   "hexamod:InspiringFlames": {
-    "NAME": "Inspiring Flames",
+    "NAME": "Stoke the Fire",
     "DESCRIPTION": "Gain !B! Block. NL For each Charged Ghostflame, Upgrade a random card in your hand."
   },
   "hexamod:SpectersWail": {
@@ -136,8 +136,8 @@
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If your hand contains another Ethereal card, gain !B! Block."
   },
   "hexamod:Haunt": {
-    "NAME": "Haunt",
-    "DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
+    "NAME": "Haunted Hand",
+    "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision", 
@@ -188,8 +188,8 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw 2 cards next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] [E] and draw 2 cards next turn."
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! cards next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] [E] and draw !M! cards next turn."
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -209,7 +209,8 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "Whenever you apply hexamod:Burn, apply !M! more."
+    "DESCRIPTION": "Whenever you apply hexamod:Burn, apply !M! more.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you apply hexamod:Burn, apply !M! more."
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "Ghostflame Wall",
@@ -303,7 +304,7 @@
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",
-    "DESCRIPTION": "Ethereal. NL hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
+    "DESCRIPTION": "hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "Apocalypse Armor",

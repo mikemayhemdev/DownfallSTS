@@ -12,7 +12,7 @@ public class BurningTouch extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, ENEMY, COMMON
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 2;
 
     public BurningTouch() {

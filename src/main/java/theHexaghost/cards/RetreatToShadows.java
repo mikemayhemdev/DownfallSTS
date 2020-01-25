@@ -18,7 +18,6 @@ public class RetreatToShadows extends AbstractHexaCard {
     public RetreatToShadows() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        isEthereal = true;
         exhaust = true;
     }
 

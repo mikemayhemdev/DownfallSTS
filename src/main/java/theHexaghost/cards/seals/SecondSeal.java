@@ -12,7 +12,7 @@ public class SecondSeal extends AbstractSealCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 8;
 
     public SecondSeal() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);

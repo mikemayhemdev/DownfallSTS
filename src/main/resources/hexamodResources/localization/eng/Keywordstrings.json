@@ -29,7 +29,7 @@
     "NAMES": [
       "enhance"
     ],
-    "DESCRIPTION": "Enhance increases the effectiveness of Ghostflames."
+    "DESCRIPTION": "Enhance increases the amount of Damage, Burn, and Block applied by Ghostflames when Charged."
   },
   {
     "PROPER_NAME": "Burn",
