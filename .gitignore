@@ -2,3 +2,4 @@
 target
 *.psd
 pom.xml
+*.iml

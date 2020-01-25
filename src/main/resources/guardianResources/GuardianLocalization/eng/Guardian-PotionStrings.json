@@ -1,0 +1,9 @@
+{
+  "Guardian:AcceleratePotion": {
+    "NAME": "Temporal Potion",
+    "DESCRIPTIONS": [
+      "Accelerate all cards in Stasis."
+    ]
+  }
+
+}

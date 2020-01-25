@@ -1,0 +1,9 @@
+{
+  "Guardian:AcceleratePotion": {
+    "NAME": "시간 포션",
+    "DESCRIPTIONS": [
+      "정지장 안의 카드를 모두 촉진 시킵니다."
+    ]
+  }
+
+}

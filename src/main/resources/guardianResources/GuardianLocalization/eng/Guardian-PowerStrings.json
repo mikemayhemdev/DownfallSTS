@@ -1,0 +1,180 @@
+{
+	"Guardian:NextTurnGainStrengthPower": {
+		"NAME": "Charging Up",
+		"DESCRIPTIONS": [
+			"Gain ",
+			" Strength on your next turn."
+		]
+	},
+	"Guardian:StunnedPower": {
+	"NAME": "Stunned",
+	"DESCRIPTIONS": [
+		"Skip your next turn.",
+		"Skip your next ",
+		" turns."
+	]
+},
+	"Guardian:FloatingOrbsPower": {
+		"NAME": "Floating Orbs",
+		"DESCRIPTIONS": [
+			"At the start of your turn, add an Orb Slam to your hand.",
+			"At the start of your turn, add ",
+			" Orb Slams to your hand."
+		]
+	},
+	"Guardian:SearingPower": {
+	"NAME": "Burn",
+	"DESCRIPTIONS": [
+		"Taking ",
+		" damage each turn."
+	]
+},
+	"Guardian:OrbwalkPower": {
+		"NAME": "Orbwalk",
+		"DESCRIPTIONS": [
+			"Gain ",
+			" Strength at the start of each turn."
+		]
+	},
+	"Guardian:ClonePower": {
+		"NAME": "Reroute",
+		"DESCRIPTIONS": [
+			"Place the next non-Exhausting Attack or Skill you play this turn into Stasis.",
+			"Place the next ",
+			" non-Exhausting Attacks or Skills you play this turn into Stasis."
+		]
+	},
+	"Guardian:GemFinderPower": {
+		"NAME": "Gem Finder",
+		"DESCRIPTIONS": [
+			"At the end of combat, choose a Common Gem to add to your deck.",
+			"At the end of combat, choose ",
+			" Common Gems to add to your deck."
+		]
+	},
+	"Guardian:FuturePlansPower": {
+		"NAME": "Future Plans",
+		"DESCRIPTIONS": [
+			"At the end of your turn, you may place #b",
+			" card into Stasis.",
+			" cards into Stasis."
+		]
+	},
+	"Guardian:DefenseModePower": {
+		"NAME": "Defensive Mode",
+		"DESCRIPTIONS": [
+			"Defensive Mode will remain active for ",
+			" turns. Defensive Mode grants ",
+			" Thorns, reduces damage dealt by 25%, and grants 2 Block when you play a card."
+		]
+	},
+	"Guardian:ConstructModePower": {
+		"NAME": "Construction Mode",
+		"DESCRIPTIONS": [
+			"You cannot lose HP or play Attacks this turn.",
+			"You cannot lose HP or play Attacks for ",
+			" turns."
+		]
+	},
+	"Guardian:MultiBoostPower": {
+		"NAME": "MultiBoost",
+		"DESCRIPTIONS": [
+			"Attacks that deal damage multiple times do so an additional time.",
+			"Attacks that deal damage multiple times do so ",
+			" additional times."
+		]
+	},
+	"Guardian:TargetedPower": {
+		"NAME": "Targeted",
+		"DESCRIPTIONS": [
+			"Each time this enemy takes damage, gain ",
+			" Strength for this turn."
+		]
+	},
+	"Guardian:LoseThornsPower": {
+		"NAME": "Thorns Down",
+		"DESCRIPTIONS": [
+			"Lose ",
+			" Thorns at the start of your next turn."
+		]
+	},
+	"Guardian:BeamBuffPower": {
+		"NAME": "Primed",
+		"DESCRIPTIONS": [
+			"Beam cards deal ",
+			" more damage."
+		]
+	},
+	"Guardian:DefensiveModeBuffsPower": {
+		"NAME": "Defensive Mode+",
+		"DESCRIPTIONS": [
+			"In addition to its normal effects, Defensive Mode will apply: NL ",
+			" Thorns.",
+			" Dexterity.",
+			" Block at the end of each turn.",
+			"Exhaust the first Status or Curse drawn each turn",
+			"Exhaust the first ",
+			" Status or Curse cards drawn each turn ",
+			"Gain ",
+			" Momentary Strength for each turn Defensive Mode was active when it ends."
+		]
+	},
+	"Guardian:AutomayhemPower": {
+		"NAME": "Time Sifter",
+		"DESCRIPTIONS": [
+			"At the end of your turn, reduce the turn counter of the right-most card in Stasis with a counter of 2 or more by 1",
+			" times, at the end of your turn, reduce the turn counter of the right-most card in Stasis with a counter of 2 or more by 1"
+		]
+	},
+	"Guardian:ConstructPower": {
+		"NAME": "Ancient Construct",
+		"DESCRIPTIONS": [
+			"Gain ",
+			" Artifact and lose ",
+			" [E] at the start of your turn if you have no Artifact."
+		]
+	},
+	"Guardian:ModeShiftPower": {
+		"NAME": "Mode Shift",
+		"DESCRIPTIONS": [
+			"When you lose ",
+			" HP, gain 10 Block, then gain 3 Defensive Mode. NL The amount required to activate increases each time Mode Shift is activated.",
+			"Mode Shift already activated this turn."
+		]
+	},
+		"Guardian:ExhaustStatusesPower": {
+			"NAME": "Repulse",
+			"DESCRIPTIONS": [
+				"Exhaust the first Status or Curse card drawn each turn.",
+				"Exhaust the first ",
+				" Status or Curse cards drawn each turn."
+			]
+		},
+	"Guardian:RevengePower": {
+		"NAME": "Revenge",
+		"DESCRIPTIONS": [
+			"When Defensive Mode is removed, gain ",
+			" Strength for each turn it was active. NL Currently will grant ",
+			" Strength."
+		]
+	},
+	"Guardian:StasisEnginePower": {
+		"NAME": "Stasis Engine",
+		"DESCRIPTIONS": [
+			"Gain ",
+			" [E] and draw ",
+			" card ",
+			" cards ",
+			" whenever you play 3 0-cost cards in a single turn."
+		]
+	},
+	"Guardian:EnergizedGuardianPower": {
+		"NAME": "Energized",
+		"DESCRIPTIONS": [
+			"Gain #b",
+			" additional [E] next turn.",
+			" additional [E] next turn.",
+			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+		]
+	}
+}

@@ -1,0 +1,431 @@
+{
+  "Guardian:Strike_Guardian": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Guardian:StrikeTwo": {
+    "NAME": "双重打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。"
+  },
+  "Guardian:Defend_Guardian": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "Guardian:DefendTwo": {
+    "NAME": "双重防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 两次。"
+  },
+  "Guardian:Gem_Red": {
+    "NAME": "红宝石",
+    "DESCRIPTION": " 宝石 。 NL 获得 1 点 临时 力量 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 临时 力量 。"
+  },
+  "Guardian:Gem_Green": {
+    "NAME": "翡翠",
+    "DESCRIPTION": " 宝石 。 NL 获得 1 点 临时 敏捷 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 临时 敏捷 。"
+  },
+  "Guardian:Gem_White": {
+    "NAME": "石英",
+    "DESCRIPTION": " 宝石 。 NL 抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌。"
+  },
+  "Guardian:Gem_Orange": {
+    "NAME": "茶晶",
+    "DESCRIPTION": " 宝石 。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。"
+  },
+  "Guardian:Gem_Cyan": {
+    "NAME": "蓝晶",
+    "DESCRIPTION": " 宝石 。 NL 增加 1 张 护卫 到你的手牌。", 
+    "UPGRADE_DESCRIPTION": "增加 1 张 护卫 到你的手牌。"
+  },
+  "Guardian:ChargeUp": {
+    "NAME": "充能",
+    "DESCRIPTION": "将这张卡 凝滞 。 NL 滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL  挥发 。",
+    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+  },
+  "Guardian:DonusPower": {
+    "NAME": "先古攻击",
+    "DESCRIPTION": "获得 1 点 力量 。 NL 增加一张随机攻击牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 力量 和 1 层 人工制品 。 增加一张随机攻击牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL  消耗 。"
+  },
+  "Guardian:DecasProtection": {
+    "NAME": "先古防御",
+    "DESCRIPTION": "获得 1 敏捷 。 NL 增加一张随机能力牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 敏捷 和 1 层 人工制品 。增加一张随机能力牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL  消耗 。"
+  },
+  "Guardian:FierceBash": {
+    "NAME": "猛烈痛击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 滴答 - 增加其伤害 !M! 点。"
+  },
+  "Guardian:PolyBeam": {
+    "NAME": "极光射线",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 !M! 次。"
+  },
+  "Guardian:TwinSlam": {
+    "NAME": "双斩",
+    "DESCRIPTION": "造成 !D! 点伤害 !GuardianMulti! 次。"
+  },
+  "Guardian:GuardianWhirl": {
+    "NAME": "守护者旋风",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !GuardianMulti! 次。"
+  },
+  "Guardian:VentSteam": {
+    "NAME": "蒸汽喷射",
+    "DESCRIPTION": "给与 !M! 层 易伤 。",
+	"UPGRADE_DESCRIPTION": "给与 !M! 层 虚弱 和 易伤 。"
+  },
+  "Guardian:CurlUp": {
+    "NAME": "蜷身",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 防御模式 。"
+  },
+  "Guardian:TimeBomb": {
+    "NAME": "时间炸弹",
+    "DESCRIPTION": "将这张卡 凝滞 。 NL 当这张牌将结束凝滞时, 对所有敌人造成 !M! 点伤害。 NL 挥发 。",
+    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+  },
+  "Guardian:HyperBeam_Guardian": {
+    "NAME": "超能射线",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。NL  力量 在本牌中发挥 !M! 倍效果。  NL 跳过你的下个回合。"
+  },
+  "Guardian:BronzeArmor": {
+    "NAME": "铜制装甲",
+    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 消耗 。"
+  },
+  "Guardian:FloatingOrbs": {
+    "NAME": "浮动圆球",
+    "DESCRIPTION": "在你的回合开始时，增加一张 圆球撞击 到你的手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，增加一张 圆球撞击 到你的手牌。"
+  },
+  "Guardian:OrbSlam": {
+    "NAME": "圆球撞击",
+    "DESCRIPTION": "造成 !D! 点伤害 !GuardianMulti! 次。 NL 消耗 。"
+  },
+  "Guardian:Incinerate": {
+    "NAME": "焚烧",
+    "DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 灼烧 。"
+  },
+  "Guardian:Orbwalk": {
+    "NAME": "行者圆球",
+    "DESCRIPTION": "获得 !M! 力量。 NL 滴答 -获得 1 点力量。 NL  挥发 。",
+	"UPGRADE_DESCRIPTION": "获得 !M! 力量。 NL 滴答 -获得 1 点 力量 。"
+  },
+  "Guardian:WalkerClaw": {
+    "NAME": "行者爪击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 力量 在本牌中发挥 !M! 倍效果。"
+  },
+  "Guardian:SphericShield": {
+    "NAME": "球形护盾",
+    "DESCRIPTION": "在 !M! 回合内， 格挡 不再在你的回合开始时消失。 NL 获得 !B! 点格挡。 NL 获得 防御模式 。"
+  },
+  "Guardian:Harden": {
+    "NAME": "硬化",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。"
+  },
+
+  "Guardian:SentryBeam": {
+    "NAME": "哨卫射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  凝滞 一张 哨卫震荡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL  凝滞 一张已 升级 的 哨卫震荡 。 NL 消耗 。"
+  },
+  "Guardian:SentryWave": {
+    "NAME": "哨卫震荡",
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 抽 1 张牌。 NL 抽 1 张牌， 凝滞 一张 哨卫射线 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 抽 1 张牌， 凝滞 一张 哨卫射线 。 NL 消耗 。"
+  },
+  "Guardian:CompilePackage": {
+    "NAME": "完整组件",
+    "DESCRIPTION": "从3个组件牌中选择 1 张加入你的手牌。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "从3个已 升级 的组件牌中选择 1 张加入你的手牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一个组件。"
+    ]
+  },
+  "Guardian:PackageShapes": {
+    "NAME": "组件: 变形",
+    "DESCRIPTION": "增加一张 时间炸弹 ， 荆棘协议 和 反冲协议 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 时间炸弹 ， 荆棘协议 和 反冲协议 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:PackageDonuDeca": {
+    "NAME": "组件: 先古",
+    "DESCRIPTION": "增加1张 先古攻击 , 先古防御 和 先古建造 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加1张已 升级 的 先古攻击 ，先古防御 和 先古建造 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:PackageSphere": {
+    "NAME": "组件: 圆球",
+    "DESCRIPTION": "增加一张 球形护盾 ,  硬化 和 浮动圆球 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 球形护盾 ， 硬化 和 浮动圆球 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:PackageSentry": {
+    "NAME": "组件: 哨卫",
+    "DESCRIPTION": "增加一张 哨兵射线 和两张 哨兵震荡 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 哨兵射线 和两张 哨兵震荡 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:PackageWalker": {
+    "NAME": "组件: 行者",
+    "DESCRIPTION": "增加一张 圆球运转 , 行者爪击 和 焚烧 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 圆球运转 , 行者爪击 和 焚烧 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:PackageAutomaton": {
+    "NAME": "组件: 铜制",
+    "DESCRIPTION": "增加一张 超能射线 ， 铜制圆球 和 铜制装甲 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 超能射线 ， 铜制圆球 和 铜制装甲 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:PackageDefect": {
+    "NAME": "组件: 故障",
+    "DESCRIPTION": "增加一张 重连 ，预编程  和 时间电容器 到你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 重连 ，预编程  和 时间电容器 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:Planning": {
+    "NAME": "规划",
+    "DESCRIPTION": "将抽牌堆顶部的 !M! 张牌 凝滞 。",
+    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+  },
+  "Guardian:Recover": {
+    "NAME": "恢复",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆中的一张牌 凝滞 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆的 !M! 张牌 凝滞 。"
+  },
+  "Guardian:Emergency": {
+    "NAME": "应激",
+    "DESCRIPTION": " 加速 最右的 凝滞 到 0。 NL 消耗 。"
+  },
+  "Guardian:Clone": {
+    "NAME": "克隆",
+    "DESCRIPTION": "选择一张牌。 凝滞 这张牌的1张复制。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["~错误:~  #r凝滞 线程已满。"]
+  },
+  "Guardian:Preprogram": {
+    "NAME": "预编程",
+    "DESCRIPTION": "查看你的抽牌堆顶部的 !M! 张牌。可以选择其中 1 张 凝滞 。"
+  },
+  "Guardian:GemFinder": {
+    "NAME": "宝石发现",
+    "DESCRIPTION": "战斗结束后，选择一张普通 宝石 加入你的牌库。"
+  },
+  "Guardian:StasisField": {
+    "NAME": "凝滞屏障",
+    "DESCRIPTION": " 虚无 。 NL 获得 !B! 点 格挡 。 NL 将这张牌 凝滞 。"
+  },
+  "Guardian:StasisStrike": {
+    "NAME": "凝滞打击",
+    "DESCRIPTION": " 虚无 。 NL 造成 !D! 点伤害。 NL 将这张牌 凝滞 。"
+  },
+  "Guardian:FuturePlans": {
+    "NAME": "未来计划",
+    "DESCRIPTION": "你的回合结束时, 将手牌中的 !M! 张牌 凝滞 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合结束时, 将手牌中的 !M! 张牌 凝滞 。"
+  },
+  "Guardian:Suspension": {
+    "NAME": "挂起",
+    "DESCRIPTION": "选择手牌中的1张牌 凝滞 。",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌。 NL 选择手牌中的 1 张牌 凝滞 。"
+  },
+  "Guardian:FastForward": {
+    "NAME": "快进",
+    "DESCRIPTION": "将所有 凝滞 中的牌 加速 。",
+    "UPGRADE_DESCRIPTION": "将所有 凝滞 中的牌 加速 两次。"
+  },
+  "Guardian:TimeCapacitor": {
+    "NAME": "时间电容器",
+    "DESCRIPTION": "获得 !M! 个凝滞栏位。"
+  },
+  "Guardian:ConstructionForm": {
+    "NAME": "建造形态",
+    "DESCRIPTION": "在接下来 !M! 个回合， 你不会失去生命但不能打出攻击牌。"
+  },
+  "Guardian:WeakpointTargeting": {
+    "NAME": "标记弱点",
+    "DESCRIPTION": "无论何时受标记的敌人受到伤害， 获得 1 层 临时 力量。 NL 消耗。"
+  },
+  "Guardian:RollAttack": {
+    "NAME": "蜷身攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果你在 防御模式 ，再造成 !D! 点伤害。"
+  },
+  "Guardian:GemFire": {
+    "NAME": "宝石加农炮",
+    "DESCRIPTION": "消耗手牌中有 宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。"
+  },
+  "Guardian:ChargeCore": {
+    "NAME": "充能核心",
+    "DESCRIPTION": "造成 !D! 点伤害并将这张牌 凝滞 。 NL  滴答 -抽 1 张牌。 挥发 。"
+  },
+  "Guardian:Reroute": {
+    "NAME": "重连",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  凝滞 你打出的下一张不消耗的攻击牌或技能牌。"
+  },
+  "Guardian:PiercingHide": {
+  "NAME": "隐秘荆棘",
+  "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 临时 荆棘 。 NL 获得 防御模式 。"
+},
+  "Guardian:ShieldSpikes": {
+    "NAME": "荆棘装甲",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果你在 防御模式 ，则再获得 !M!  临时 荆棘 。"
+  },
+  "Guardian:PrismaticBeam": {
+    "NAME": "棱镜射线",
+    "DESCRIPTION": "造成 !D! 点伤害，每有一颗 宝石 重复一次。"
+  },
+  "Guardian:PrismaticBarrier": {
+    "NAME": "棱镜屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 ，这张牌每有一颗 宝石 重复一次。"
+  },
+  "Guardian:TemporalStrike": {
+    "NAME": "质朴打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 凝滞 ，再造成 !D! 点伤害。"
+  },
+  "Guardian:TemporalShield": {
+    "NAME": "质朴屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 凝滞 ，再获得 !B! 点格挡。"
+  },
+  "Guardian:ExploitGems": {
+    "NAME": "宝石开采",
+    "DESCRIPTION": "抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 抽 1 张牌。"
+  },
+  "Guardian:RefractedBeam": {
+    "NAME": "折射射线",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 能被多次 升级 。"
+  },
+  "Guardian:MultiBeam": {
+    "NAME": "多重射线",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL  滴答 -本场战斗所有 射线 牌增加 !M! 点伤害。",
+	"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 X+1 次。 NL 滴答 -本场战斗所有 射线 牌增加 !M! 点伤害。"
+  },
+  "Guardian:BaubleBeam": {
+    "NAME": "人偶射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 重复以下效果 !M! 次："
+  },
+  "Guardian:PrimingBeam": {
+    "NAME": "充能射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗所有 射线 牌增加 !M! 点伤害。"
+  },
+  "Guardian:EvasiveProtocol": {
+    "NAME": "回避协议",
+    "DESCRIPTION": "在 防御模式 时获得 2 点 敏捷 。 NL 获得 !M! 层防御防御模式。"
+  },
+  "Guardian:SpikerProtocol": {
+    "NAME": "荆棘协议",
+    "DESCRIPTION": "在 防御模式 时获得 3 层 荆棘 。 NL 获得 !M! 层防御模式。"
+  },
+  "Guardian:ArmoredProtocol": {
+    "NAME": "装甲协议",
+    "DESCRIPTION": "每回合在 防御模式 时获得 4 点 格挡 。 NL 获得 !M! 层防御模式。"
+  },
+  "Guardian:TimeSifter": {
+    "NAME": "时间沙漏",
+    "DESCRIPTION": "在你的回合结束时， 加速 最右侧的 凝滞 大于等于两点的牌 1 点。"
+  },
+  "Guardian:AncientConstruct": {
+    "NAME": "先古建造",
+    "DESCRIPTION": "在你的回合开始时， 如果你没有 人工制品 ，获得 !M! 层人工制品并失去 [E] 。"
+  },
+  "Guardian:CrystalBeam": {
+    "NAME": "水晶射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 所有的镶嵌有宝石的牌，每镶嵌一颗 宝石 增加 #b这张 牌 !M! 点伤害。"
+  },
+  "Guardian:Gem_Synthetic": {
+    "NAME": "玛瑙",
+    "DESCRIPTION": " 宝石 。 NL 获得 1 层 人工制品 。失去 1 点生命。",
+    "UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。失去 1 点生命。"
+  },
+  "Guardian:Gem_Yellow": {
+    "NAME": "琥珀",
+    "DESCRIPTION": " 宝石 。 NL  加速 最右侧的凝滞牌。",
+    "UPGRADE_DESCRIPTION": " 加速 最右侧的凝滞牌。"
+  },
+  "Guardian:Gem_Purple": {
+    "NAME": "紫晶",
+    "DESCRIPTION": " 宝石 。 NL 所有敌人本回合失去 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "所有敌人本回合失去 2 点 力量 。"
+  },
+  "Guardian:Gem_Crimson": {
+    "NAME": "石榴石",
+    "DESCRIPTION": "宝石。 NL 给予所有敌人 1 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 1 层 易伤 。"
+  },
+  "Guardian:Gem_Blue": {
+    "NAME": "蓝宝石",
+    "DESCRIPTION": " 宝石 。 NL 获得 防御模式 。",
+    "UPGRADE_DESCRIPTION": "获得 防御模式 。"
+  },
+  "Guardian:Gem_Fragmented": {
+    "NAME": "宝石碎片",
+    "DESCRIPTION": " 宝石 。 NL 增加 1 张 水晶小刀 到你的手牌中。",
+    "UPGRADE_DESCRIPTION": "增加 1 张 水晶小刀 到你的手牌中。"
+  },
+  "Guardian:CrystalShiv": {
+    "NAME": "水晶小刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
+  },
+  "Guardian:CrystalWard": {
+    "NAME": "护卫",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。"
+  },
+  "Guardian:Repulse": {
+    "NAME": "反冲协议",
+    "DESCRIPTION": "消耗每回合抽到的前 1 张状态或诅咒牌。",
+    "UPGRADE_DESCRIPTION": "消耗每回合抽到的前 2 张状态或诅咒牌。"
+  },
+  "Guardian:BronzeOrb": {
+    "NAME": "铜制圆球",
+    "DESCRIPTION": " 固有 。 NL 随机将抽牌堆的 1 张牌 凝滞 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
+  },
+  "Guardian:RevengeProtocol": {
+    "NAME": "复仇协议",
+    "DESCRIPTION": "当 防御模式 消失时, 获得防御模式持续回合数的 力量 。 NL 获得 !M! 层防御模式"
+  },
+  "Guardian:GatlingBeam": {
+    "NAME": "加特林射线",
+    "DESCRIPTION": "将这张牌 凝滞 。 NL  滴答 -对随机敌人造成 !D! 点伤害 !M! 次。 NL 每次 滴答次数加 1 。 NL 挥发 。",
+    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+  },
+  "Guardian:ShieldCharger": {
+    "NAME": "护盾充能",
+    "DESCRIPTION": "将这张牌 凝滞 。  NL  滴答 -获得 !B! 点 格挡 和 [E] 。 NL 挥发 。",
+    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+  },
+  "Guardian:StasisEngine": {
+    "NAME": "凝滞引擎",
+    "DESCRIPTION": "每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。",
+    "UPGRADE_DESCRIPTION": "固有 ， NL 每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。"
+  },
+  "Guardian:HammerDown": {
+    "NAME": "坠落重锤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 翻倍你的 力量 和 敏捷 。 NL 消耗 。"
+  },
+  "Guardian:OmegaCannon": {
+    "NAME": "终极加农炮",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你每有 1 点 力量，降低 1 点费用。"
+  },
+  "Guardian:ModeShift": {
+    "NAME": "模式切换",
+    "DESCRIPTION": "交换你的 力量 与 敏捷 。 NL 抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 交换你的 力量 与 敏捷 。 NL 抽 !M! 张牌。"
+  },
+  "Guardian:PackageConstruct": {
+    "NAME": "组件：建造",
+    "DESCRIPTION": "增加 1 张 坠落重锤 ，终极加农炮 和 模式切换 到你的手牌中。 他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加 1 张已 升级 的 实锤,，终极加农炮 和 模式切换 到你的手牌中。 他们的费用本场战斗降低 1  点。 NL Exhaust."
+  },
+  "Guardian:PackageMass": {
+    "NAME": "组件: 团块",
+    "DESCRIPTION": "增加一张 扭曲荆棘 ， 团状炸弹 和 合体撞击 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 扭曲荆棘 ， 团状炸弹 和 合体撞击 到你的手牌。他们的费用本场战斗降低 1  点。 NL 消耗 。"
+  },
+  "Guardian:MassOfThorns": {
+    "NAME": "团状荆棘",
+    "DESCRIPTION": "获得 !M! 层 临时 荆棘 。 NL 当你有 人工制品 时 消耗 。"
+  },
+  "Guardian:MassTimeBomb": {
+    "NAME": "团状炸弹",
+    "DESCRIPTION": "向每个空的凝滞栏位加入一张 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
+    "UPGRADE_DESCRIPTION": "向每个空的凝滞栏位加入一张已 升级 的 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
+    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+  },
+  "Guardian:MassSlam": {
+    "NAME": "合体撞击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。NL 力量大于等于 3 时， 消耗 。"
+  }
+}

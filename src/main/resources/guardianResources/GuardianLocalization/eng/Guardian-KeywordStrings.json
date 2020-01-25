@@ -1,0 +1,102 @@
+[
+     {
+      "NAMES": [
+        "socket",
+        "sockets",
+        "socketed"
+      ],
+      "PROPER_NAME": "Socket",
+      "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
+    },
+  {
+    "NAMES": [
+      "stasis"
+    ],
+    "PROPER_NAME": "Stasis",
+    "DESCRIPTION": "A card in Stasis gains a turn counter equal to its cost plus 1. NL Turn counter is reduced by 1 at the start of your turn. NL When the counter reaches 0, it is returned to your hand and becomes 0-cost until played."
+  },
+  {
+    "NAMES": [
+      "gem",
+      "gems"
+    ],
+    "PROPER_NAME": "Gem",
+    "DESCRIPTION": "Gems can be placed into Sockets in cards at a Rest Site. Cannot be upgraded."
+  },
+  {
+    "PROPER_NAME": "Defensive Mode",
+    "NAMES": [
+      "defensive mode",
+      "defensive_mode"
+    ],
+    "DESCRIPTION": "While in Defensive Mode, you have 3 Thorns, deal 25% less damage, and gain 2 Block when you play a card."
+  },
+  {
+  "NAMES": [
+    "ward",
+    "wards"
+  ],
+    "PROPER_NAME": "Ward",
+  "DESCRIPTION": "Wards are #b0 cost Block cards which Exhaust."
+},
+  {
+    "NAMES": [
+      "accelerate"
+    ],
+    "PROPER_NAME": "Accelerate",
+    "DESCRIPTION": "Reduce the turn counter of a card in Stasis by 1. If the card's turn counter is now 0, return it to your hand at 0-cost."
+  },
+  {
+    "NAMES": [
+      "sentry beam",
+      "sentry_beam"
+    ],
+    "PROPER_NAME": "Sentry Beam",
+    "DESCRIPTION": "0-cost Exhausting Attack that deals 5 damage (+2 Upgraded), and places a Sentry Wave into Stasis."
+  },
+  {
+    "NAMES": [
+      "sentry wave",
+      "sentry_wave"
+    ],
+    "PROPER_NAME": "Sentry Wave",
+    "DESCRIPTION": "0-cost Exhausting Skill that applies 1 Weak (to ALL if Upgraded), draws 1 card, and places a Sentry Beam into Stasis."
+  },
+  {
+    "NAMES": [
+      "package",
+      "packages"
+    ],
+    "PROPER_NAME": "Package",
+    "DESCRIPTION": "0-cost Exhausting Skill that generates three cards inspired by a chosen Construct of the Spire, and reduces their cost by 1 for this combat."
+  },
+  {
+    "NAMES": [
+      "orb slam",
+      "orb_slam"
+    ],
+    "PROPER_NAME": "Orb Slam",
+    "DESCRIPTION": "Orb Slams are #b0 cost Attack cards which deal damage twice, and Exhaust."
+  },
+  {
+    "NAMES": [
+      "momentary"
+    ],
+    "PROPER_NAME": "Momentary",
+    "DESCRIPTION": "A Momentary buff effect also adds a debuff effect which causes you to lose the buff's effect at the end of your turn."
+  },
+  {
+    "NAMES": [
+      "volatile"
+    ],
+    "PROPER_NAME": "Volatile",
+    "DESCRIPTION": "When this card leaves Stasis, Exhaust it instead of returning it to your hand."
+  },
+  {
+    "NAMES": [
+      "tick"
+    ],
+    "PROPER_NAME": "Tick",
+    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in Stasis."
+  }
+]
