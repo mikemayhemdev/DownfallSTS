@@ -17,8 +17,8 @@
         <steamFolder>D:\Steam\</steamFolder>
         <workshopFolder>${steamFolder}steamapps/workshop/content/646570/</workshopFolder>
         <stsPath>${steamFolder}steamapps\common\SlayTheSpire\</stsPath>
-        <stsVersion>01-21-2020</stsVersion>
-        <mtsVersion>3.15.0</mtsVersion>
+        <SlayTheSpire.version>2.0</SlayTheSpire.version>
+        <ModTheSpire.version>3.8.0</ModTheSpire.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -26,14 +26,14 @@
         <dependency>
             <groupId>com.megacrit.cardcrawl</groupId>
             <artifactId>SlayTheSpire</artifactId>
-            <version>${stsVersion}</version>
+            <version>${SlayTheSpire.version}</version>
             <scope>system</scope>
             <systemPath>${stsPath}desktop-1.0.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl</groupId>
             <artifactId>ModTheSpire</artifactId>
-            <version>${mtsVersion}</version>
+            <version>${ModTheSpire.version}</version>
             <scope>system</scope>
             <systemPath>${workshopFolder}1605060445/ModTheSpire.jar</systemPath>
         </dependency>
