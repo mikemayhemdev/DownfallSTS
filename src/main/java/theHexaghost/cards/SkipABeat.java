@@ -3,8 +3,8 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.actions.ExtinguishCurrentFlameAction;
+import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ExtinguishAction;
 
 public class SkipABeat extends AbstractHexaCard {
 
@@ -18,9 +18,9 @@ public class SkipABeat extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new ExtinguishCurrentFlameAction());
-        atb(new ChargeCurrentFlameAction());
         atb(new AdvanceAction());
+        atb(new ExtinguishAction(1));
+        atb(new ChargeAction(1));
     }
 
     public void upgrade() {
