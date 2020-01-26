@@ -6,7 +6,7 @@ import org.clapper.util.classutil.ClassInfo;
 
 public class CardFilter implements ClassFilter
 {
-    private static final String PACKAGE = "theHexaghost.cards";
+    private static final String PACKAGE = "sneckomod.cards";
 
     @Override
     public boolean accept(ClassInfo classInfo, ClassFinder classFinder)

@@ -1,4 +1,3 @@
-/*
 package sneckomod;
 
 import basemod.abstracts.CustomEnergyOrb;
@@ -10,16 +9,25 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.red.Inflame;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.relics.SneckoEye;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import sneckomod.cards.Defend;
+import sneckomod.cards.SnekBite;
+import sneckomod.cards.Strike;
+import sneckomod.cards.TailWhip;
+import sneckomod.cards.unknowns.UnknownCommonAttack;
+import sneckomod.cards.unknowns.UnknownCommonSkill;
+import sneckomod.relics.SneckoLibrary;
+import sneckomod.relics.SneckoSoul;
 
 import java.util.ArrayList;
 
@@ -47,7 +55,7 @@ public class TheSnecko extends CustomPlayer {
 
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, "sneckomodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                "sneckomodResources/images/char/mainChar/static_character.scml"));
+                "sneckomodResources/images/char/skeleton.atlas"));
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -69,13 +77,28 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Strike.ID);
+        }
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(TailWhip.ID);
+        retVal.add(SnekBite.ID);
+        retVal.add(UnknownCommonAttack.ID);
+        retVal.add(UnknownCommonAttack.ID);
+        retVal.add(UnknownCommonAttack.ID);
+        retVal.add(UnknownCommonSkill.ID);
+        retVal.add(UnknownCommonSkill.ID);
+        retVal.add(UnknownCommonSkill.ID);
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        retVal.add(SneckoSoul.ID);
+        retVal.add(SneckoLibrary.ID);
+        retVal.add(SneckoEye.ID);
         return retVal;
     }
 
@@ -118,7 +141,8 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Inflame();
+        ArrayList<AbstractCard> cardList = new ArrayList<>(CardLibrary.getAllCards());
+        return cardList.get(AbstractDungeon.cardRandomRng.random(cardList.size() - 1));
     }
 
     @Override
@@ -169,4 +193,3 @@ public class TheSnecko extends CustomPlayer {
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }
-*/

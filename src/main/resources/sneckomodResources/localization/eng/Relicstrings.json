@@ -1,0 +1,16 @@
+{
+  "sneckomod:SneckoSoul": {
+    "NAME": "Snecko Soul",
+    "FLAVOR": "0...3...2...2...1",
+    "DESCRIPTIONS": [
+      "Whenever you add a #ysneckomod:Unknown card into your deck, increase your Max HP by #b1."
+    ]
+  },
+  "sneckomod:SneckoLibrary": {
+    "NAME": "Snecko Library",
+    "FLAVOR": "Page 132: Roll threes on big attack turns.",
+    "DESCRIPTIONS": [
+      "Start the game with #b6 #ysneckomod:Unknown cards. Obtain an additional card reward every #b6 combats. One card reward in each combat is replaced with a #ysneckomod:Unknown card."
+    ]
+  }
+}

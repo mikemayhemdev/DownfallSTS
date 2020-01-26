@@ -1,5 +1,3 @@
-
-/*
 package sneckomod;
 
 import basemod.BaseMod;
@@ -9,6 +7,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -52,6 +51,12 @@ public class SneckoMod implements
     private static String modID;
 
     public static Color placeholderColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1);
+
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UNKNOWN;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags SNEKPROOF;
+
 
     public SneckoMod() {
         BaseMod.subscribe(this);
@@ -189,4 +194,3 @@ public class SneckoMod implements
     }
 
 }
-*/
