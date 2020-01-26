@@ -9,6 +9,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
@@ -34,7 +35,7 @@ public class SpookyFlameBarrier extends AbstractGameEffect {
         if (this.flashedBorder) {// 32
             CardCrawlGame.sound.play("ATTACK_FLAME_BARRIER", 0.05F);// 33
             this.flashedBorder = false;// 34
-            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(new Color(1.0F, 1.0F, 0.1F, 1.0F)));// 35
+            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(new Color(0.1F, 1.0F, 0.1F, 1.0F)));// 35
             AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(new Color(0.1F, 1.0F, 0.1F, 1.0F)));// 36
         }
 
