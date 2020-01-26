@@ -29,7 +29,7 @@ public class PowerFromBeyond extends AbstractHexaCard {
 
     @Override
     public void triggerOnExhaust() {
-        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, magicNumber));
+        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
         applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
     }
 
