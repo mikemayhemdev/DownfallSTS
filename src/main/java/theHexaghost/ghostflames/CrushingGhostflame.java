@@ -68,17 +68,17 @@ public class CrushingGhostflame extends AbstractGhostflame {
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - skillsPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. Ignites after #b" + x + " #ySkill is played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                s = s + "#yActive. #yIgnites after #b" + x + " #ySkill is played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
             } else {
-                s = s + "#yActive. Ignites after #b" + x + " #ySkills are played this turn.";
+                s = s + "#yActive. #yIgnites after #b" + x + " #ySkills are played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
             }
         } else {
-            s = s + "Inactive. Play #b2 #ySkills while #yActive to Charge.";
+            s = s + "Inactive. #yIgnites after #b2 #ySkills are played while #yActive.";
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL Ignition: When Ignited, deal #b" + x + " damage to a random enemy twice.";
+        return s + " NL #yIgnition: When #yIgnited, deal #b" + x + " damage to a random enemy twice.";
     }
 }

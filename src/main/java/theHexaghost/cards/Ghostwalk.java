@@ -2,9 +2,9 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.CardIgnore;
 import theHexaghost.actions.RetractAction;
 import theHexaghost.powers.EtherealRefundPower;
+import theHexaghost.util.CardIgnore;
 
 @CardIgnore
 public class Ghostwalk extends AbstractHexaCard {

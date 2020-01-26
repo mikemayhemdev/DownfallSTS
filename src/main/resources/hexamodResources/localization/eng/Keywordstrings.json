@@ -51,8 +51,7 @@
     "PROPER_NAME": "Ignite",
     "NAMES": [
       "ignite",
-      "ignited",
-      "unignited"
+      "ignited"
     ],
     "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
   },
