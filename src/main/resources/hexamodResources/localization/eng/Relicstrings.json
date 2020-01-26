@@ -3,14 +3,21 @@
     "NAME": "Spirit Brand",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "Whenever you Charge a Ghostflame, gain #b3 #yBlock."
+      "Whenever you #yhexamod:Ignite a Ghostflame, gain #b3 #yBlock."
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "The Broken Seal",
     "FLAVOR": "UNBOUND... UNBROKEN",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Enhance."
+      "Upon pickup, raise your Max HP by #b10. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Intensity."
+    ]
+  },
+  "hexamod:UnbrokenSoul": {
+    "NAME": "Unbroken Soul",
+    "FLAVOR": "Not yet...",
+    "DESCRIPTIONS": [
+      "The first #b3 times you #yhexamod:Ignite a Ghostflame each turn, gain #b3 #yBlock and [E] ."
     ]
   }
 }
