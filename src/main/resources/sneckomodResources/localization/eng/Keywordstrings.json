@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Snekproof",
+    "NAMES": [
+      "snekproof"
+    ],
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion."
+  },
+  {
+    "PROPER_NAME": "Unknown",
+    "NAMES": [
+      "unknown"
+    ],
+    "DESCRIPTION": "Unknown cards transform into other random cards from ANY class with the same type and rarity at the start of combat. If an Unknown card is #yUpgraded, the resulting card will also be #yUpgraded."
+  }
+]

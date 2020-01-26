@@ -45,7 +45,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL If the first Ghostflame is not hexamod:Active, hexamod:Retract and repeat this."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you hexamod:Advance or hexamod:Retract, return this from the discard pile to your hand."
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "Empowered Flame",
@@ -189,7 +189,7 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! cards next turn.",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! card next turn.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! cards next turn."
   },
   "hexamod:BurningTouch": {
@@ -309,8 +309,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "Doomsday",
-    "DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, take an extra turn.",
-    "UPGRADE_DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, take an extra turn."
+    "DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, end your turn and take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, end your turn and take an extra turn."
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",

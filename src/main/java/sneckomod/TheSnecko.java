@@ -1,25 +1,33 @@
-/*
 package sneckomod;
 
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.red.Inflame;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.relics.SneckoEye;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import sneckomod.cards.Defend;
+import sneckomod.cards.SnekBite;
+import sneckomod.cards.Strike;
+import sneckomod.cards.TailWhip;
+import sneckomod.cards.unknowns.UnknownCommonAttack;
+import sneckomod.cards.unknowns.UnknownCommonSkill;
+import sneckomod.relics.SneckoLibrary;
+import sneckomod.relics.SneckoSoul;
 
 import java.util.ArrayList;
 
@@ -29,34 +37,47 @@ import static sneckomod.TheSnecko.Enums.SNECKO_CYAN;
 
 public class TheSnecko extends CustomPlayer {
     private static final String[] orbTextures = {
-            "sneckomodResources/images/char/mainChar/orb/layer1.png",
-            "sneckomodResources/images/char/mainChar/orb/layer2.png",
-            "sneckomodResources/images/char/mainChar/orb/layer3.png",
-            "sneckomodResources/images/char/mainChar/orb/layer4.png",
-            "sneckomodResources/images/char/mainChar/orb/layer5.png",
-            "sneckomodResources/images/char/mainChar/orb/layer6.png",
-            "sneckomodResources/images/char/mainChar/orb/layer1d.png",
-            "sneckomodResources/images/char/mainChar/orb/layer2d.png",
-            "sneckomodResources/images/char/mainChar/orb/layer3d.png",
-            "sneckomodResources/images/char/mainChar/orb/layer4d.png",
-            "sneckomodResources/images/char/mainChar/orb/layer5d.png",};
+            "sneckomodResources/images/char/orb/layer1.png",
+            "sneckomodResources/images/char/orb/layer2.png",
+            "sneckomodResources/images/char/orb/layer3.png",
+            "sneckomodResources/images/char/orb/layer4.png",
+            "sneckomodResources/images/char/orb/layer5.png",
+            "sneckomodResources/images/char/orb/layer6.png",
+            "sneckomodResources/images/char/orb/layer1d.png",
+            "sneckomodResources/images/char/orb/layer2d.png",
+            "sneckomodResources/images/char/orb/layer3d.png",
+            "sneckomodResources/images/char/orb/layer4d.png",
+            "sneckomodResources/images/char/orb/layer5d.png",};
     private static final String ID = makeID("theSnecko");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
     public TheSnecko(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, "sneckomodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                "sneckomodResources/images/char/mainChar/static_character.scml"));
+        super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String) null, (String) null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
                 getLoadout(), 10.0F, 200.0F, 150.0F, 150.0F, new EnergyManager(3));
-
-
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
+        this.reloadAnimation();
+    }
+
+    public void reloadAnimation() {
+        loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        this.stateData.setMix("Hit", "Idle", 0.1F);
+        e.setTimeScale(0.8F);
+    }
+
+    public float renderscale = 1.2F;
+
+    public void setRenderscale(float renderscale) {
+        this.renderscale = renderscale;
+        reloadAnimation();
     }
 
     @Override
@@ -69,13 +90,28 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Strike.ID);
+        }
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(TailWhip.ID);
+        retVal.add(SnekBite.ID);
+        retVal.add(UnknownCommonAttack.ID);
+        retVal.add(UnknownCommonAttack.ID);
+        retVal.add(UnknownCommonAttack.ID);
+        retVal.add(UnknownCommonSkill.ID);
+        retVal.add(UnknownCommonSkill.ID);
+        retVal.add(UnknownCommonSkill.ID);
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        retVal.add(SneckoSoul.ID);
+        retVal.add(SneckoLibrary.ID);
+        retVal.add(SneckoEye.ID);
         return retVal;
     }
 
@@ -88,7 +124,7 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "UNLOCK_PING";
+        return "MONSTER_SNECKO_GLARE";
     }
 
     @Override
@@ -118,7 +154,8 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Inflame();
+        ArrayList<AbstractCard> cardList = new ArrayList<>(CardLibrary.getAllCards());
+        return cardList.get(AbstractDungeon.cardRandomRng.random(cardList.size() - 1));
     }
 
     @Override
@@ -169,4 +206,3 @@ public class TheSnecko extends CustomPlayer {
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }
-*/

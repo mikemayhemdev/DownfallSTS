@@ -1,0 +1,50 @@
+{
+  "sneckomod:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "sneckomod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "sneckomod:SnekBite": {
+    "NAME": "Snek Bite",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !D! damage. NL Draw 1 card."
+  },
+  "sneckomod:TailWhip": {
+    "NAME": "Tail Whip",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+  },
+  "sneckomod:UnknownCommonAttack": {
+    "NAME": "Unknown Common Attack",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:UnknownCommonSkill": {
+    "NAME": "Unknown Common Skill",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:UnknownUncommonAttack": {
+    "NAME": "Unknown Uncommon Attack",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:UnknownUncommonSkill": {
+    "NAME": "Unknown Uncommon Skill",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:UnknownUncommonPower": {
+    "NAME": "Unknown Uncommon Power",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "Unknown Rare Attack",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "Unknown Rare Skill",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:UnknownRarePower": {
+    "NAME": "Unknown Rare Power",
+    "DESCRIPTION": "sneckomod:Unknown."
+  }
+}

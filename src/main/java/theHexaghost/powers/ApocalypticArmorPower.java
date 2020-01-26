@@ -29,7 +29,7 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApocalypseArmor32.png");
 
     public ApocalypticArmorPower(final int amount) {
-        this.name = "Apocalypse Armor";
+        this.name = "Doomsday";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -61,8 +61,8 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
     @Override
     public void updateDescription() {
         if (amount >= GhostflameHelper.hexaGhostFlames.size())
-            description = "The next time you Charge the Inferno Ghostflame and all #b" + amount + " Ghostflames are Charged, take an additional turn.";
+            description = "The next time you Charge the Inferno Ghostflame and all #b" + amount + " Ghostflames are Charged, end your turn and take an additional turn.";
         else
-            description = "Whenver you Charge the Inferno Ghostflame and at least #b" + amount + " Ghostflames are Charged, take an additional turn.";
+            description = "Whenver you Charge the Inferno Ghostflame and at least #b" + amount + " Ghostflames are Charged, end your turn and take an additional turn.";
     }
 }

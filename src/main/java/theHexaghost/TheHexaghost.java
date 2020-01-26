@@ -172,14 +172,22 @@ public class TheHexaghost extends CustomPlayer {
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("UNLOCK_PING", MathUtils.random(-0.2F, 0.2F));
+        if (MathUtils.randomBoolean()) {// 71
+            CardCrawlGame.sound.play("GHOST_ORB_IGNITE_1", 0.3F);// 72
+        } else {
+            CardCrawlGame.sound.play("GHOST_ORB_IGNITE_2", 0.3F);// 74
+        }
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
     }
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "UNLOCK_PING";
+        if (MathUtils.randomBoolean()) {// 71
+            return "GHOST_ORB_IGNITE_1";// 72
+        } else {
+            return "GHOST_ORB_IGNITE_2";// 74
+        }
     }
 
     @Override

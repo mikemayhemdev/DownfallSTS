@@ -30,7 +30,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
         for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
-            //i have no ghostflame. goodnight
             AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
             if (gf.charged) {
                 att(new ExtinguishAction(gf));
@@ -87,6 +86,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL Ignition: When Ignited, deal #b" + x + " damage to a random enemy for each #yCharged #yGhostflame, then #yExtinguish them.";
+        return s + " NL #yIgnition: When #yIgnited, deal #b" + x + " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them.";
     }
 }
