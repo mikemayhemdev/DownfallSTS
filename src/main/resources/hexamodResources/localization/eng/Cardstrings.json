@@ -287,8 +287,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
-    "DESCRIPTION": "Ethereal. NL Lose 6 HP. Gain [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Lose 6 HP. Gain [E] [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Lose 6 HP. NL Gain [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Lose 6 HP. NL Gain [E] [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust."
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
