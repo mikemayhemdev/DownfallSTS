@@ -19,5 +19,12 @@
     "DESCRIPTIONS": [
       "The first #b3 times you #yhexamod:Ignite a Ghostflame each turn, gain #b3 #yBlock and [E] ."
     ]
+  },
+  "hexamod:IceCube": {
+    "NAME": "Ice Cube",
+    "FLAVOR": "Mortal enemy.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. Remove the Bolstering Ghostflame from your Ghostflames."
+    ]
   }
 }
