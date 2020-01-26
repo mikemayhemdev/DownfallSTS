@@ -317,15 +317,9 @@
     "DESCRIPTION": "hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
   },
   "hexamod:ApocalypticArmor": {
-<<<<<<< HEAD
-    "NAME": "Apocalypse Armor",
-    "DESCRIPTION": "Whenever you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, gain 1 Intangible.",
-    "UPGRADE_DESCRIPTION": "Whenever you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, gain 1 Intangible."
-=======
     "NAME": "Doomsday",
-    "DESCRIPTION": "The next time you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, take an extra turn.",
-    "UPGRADE_DESCRIPTION": "The next time you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, take an extra turn."
->>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
+    "DESCRIPTION": "The next time you Ignite the Inferno Ghostflame and all !M! Ghostflames are Ignited, take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time you Ignite the Inferno Ghostflame and at least !M! Ghostflames are Ignited, take an extra turn."
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",
