@@ -14,7 +14,7 @@
   "hexamod:Float": {
     "NAME": "Float",
     "DESCRIPTION": "Ethereal. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] if the hexamod:Active Ghostflame is Charged. NL Otherwise, draw 1 card. NL hexamod:Advance."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] if the hexamod:Active Ghostflame is hexamod:Ignited. NL Otherwise, draw 1 card. NL hexamod:Advance."
   },
   "hexamod:AdvancingGuard": {
     "NAME": "Advancing Guard",
@@ -26,8 +26,8 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "Ethereal. NL Charge the hexamod:Active Ghostflame. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL Charge the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
     "NAME": "Rewind",
@@ -36,12 +36,12 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then hexamod:Charge, the Ghostflame after the hexamod:Active one."
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
-    "DESCRIPTION": "hexamod:Extinguish, then Charge, the Ghostflame preceding the hexamod:Active one."
+    "DESCRIPTION": "hexamod:Force-Ignite the previous Ghostflame."
   },
   "hexamod:TimeWarp": {
     "NAME": "Time Warp",
@@ -49,16 +49,16 @@
   },
   "hexamod:EmpoweredFlame": {
     "NAME": "Empowered Flame",
-    "DESCRIPTION": "Gain !M! hexamod:Enhance."
+    "DESCRIPTION": "Gain !M! hexamod:Intensity."
   },
   "hexamod:HexaLevel": {
     "NAME": "Hexa-Level",
-    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Enhance.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! hexamod:Enhance."
+    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! hexamod:Intensity."
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "Charge all uncharged Ghostflames in order."
+    "DESCRIPTION": "hexamod:Ignite all Ghostflames in order. NL Exhaust"
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it and Charge it again."
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Extinguish it and hexamod:Ignite it again."
   },
   "hexamod:CrushingStance": {
     "NAME": "Crush",
@@ -98,27 +98,27 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Deal !D! damage."
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is unhexamod:Ignited, gain [E] . NL Deal !D! damage."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is uncharged, gain [E] . NL Gain !B! Block."
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is unhexamod:Ignited, gain [E] . NL Gain !B! Block."
   },
   "hexamod:GhostlyFlex": {
     "NAME": "Ghostly Flex",
-    "DESCRIPTION": "Gain 2 hexamod:Momentary Strength and 2 hexamod:Momentary Dexterity for each Charged Ghostflame."
+    "DESCRIPTION": "Gain 2 hexamod:Momentary Strength and 2 hexamod:Momentary Dexterity for each hexamod:Ignited Ghostflame."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Spectral Adrenaline",
-    "DESCRIPTION": "hexamod:Extinguish all Charged Ghostflames. NL For each Ghostflame hexamod:Extinguished, gain [E] and draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Gain [E] and draw 1 card for each for each hexamod:Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is Charged, hexamod:Advance. If not, Charge the hexamod:Active Ghostflame."
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Advance. If not, hexamod:Ignite the hexamod:Active Ghostflame."
   },
   "hexamod:InspiringFlames": {
     "NAME": "Stoke the Fire",
-    "DESCRIPTION": "Gain !B! Block. NL For each Charged Ghostflame, Upgrade a random card in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL For each hexamod:Ignited Ghostflame, Upgrade a random card in your hand."
   },
   "hexamod:SpectersWail": {
     "NAME": "Specter's Wail",
@@ -142,8 +142,8 @@
   },
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision", 
-    "DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Put an Ethereal card from your exhaust pile into your hand."
+    "DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand."
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Ghostly Gifts",
@@ -172,12 +172,12 @@
   "hexamod:NightmareStrike": {
     "NAME": "Nightmare Strike",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, add a *Shadow *Strike into your hand.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, add a *Shadow *Strike+ into your hand."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage. NL If this card is Exhausted, add a *Shadow *Strike+ to your hand."
   },
   "hexamod:NightmareGuise": {
     "NAME": "Nightmare Guise",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, add a *Shadow *Guise into your hand.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, add a *Shadow *Guise+ into your hand."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If this card is Exhausted, add a *Shadow *Guise+ to your hand."
   },
   "hexamod:ShadowStrike": {
     "NAME": "Shadow Strike",
@@ -231,7 +231,7 @@
   },
   "hexamod:HeatCrush": {
     "NAME": "Heat Crush",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is also affected by enemy's hexamod:Burn."
+    "DESCRIPTION": "Deal !D! damage. NL Damage is increased by enemy's hexamod:Burn."
   },
   "hexamod:InvigoratingFlames": {
     "NAME": "Invigorating Flames",
@@ -269,20 +269,20 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 1 this combat.",
-    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is Charged, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 2 this combat."
+    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 1 this combat.",
+    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 2 this combat."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-    "DESCRIPTION": "For each Charged Ghostflame, hexamod:Extinguish it and deal !D! damage and apply !M! hexamod:Burn to ALL enemies."
+    "DESCRIPTION": "For each hexamod:Ignited Ghostflame, hexamod:Extinguish it and deal !D! damage and apply !M! hexamod:Burn to ALL enemies."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
-    "DESCRIPTION": "Apply !M! hexamod:Burn. NL Repeat for each Charged Ghostflame."
+    "DESCRIPTION": "Apply !M! hexamod:Burn. NL Repeat for each hexamod:Ignited Ghostflame."
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
-    "DESCRIPTION": "Whenever you Charge a Ghostflame, apply !M! hexamod:Burn to a random enemy."
+    "DESCRIPTION": "Whenever you hexamod:Ignite a Ghostflame, apply !M! hexamod:Burn to a random enemy."
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
@@ -291,12 +291,12 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
-    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is Charged, apply !M! hexamod:Burn. If not, deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is hexamod:Ignited, apply !M! hexamod:Burn. If not, deal !D! damage."
   },
   "hexamod:SpiritOfFire": {
     "NAME": "Spirit of Fire",
-    "DESCRIPTION": "Ethereal. NL Gain [E] for each Charged Ghostflame.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] for each Charged Ghostflame. NL Draw 1 card."
+    "DESCRIPTION": "Ethereal. NL Gain [E] for each hexamod:Ignited Ghostflame.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] for each hexamod:Ignited Ghostflame. NL Draw 1 card."
   },
   "hexamod:Again": {
     "NAME": "Again!",
@@ -309,8 +309,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "Apocalypse Armor",
-    "DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, gain 1 Intangible.",
-    "UPGRADE_DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, gain 1 Intangible."
+    "DESCRIPTION": "Whenever you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, gain 1 Intangible.",
+    "UPGRADE_DESCRIPTION": "Whenever you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, gain 1 Intangible."
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",

@@ -63,30 +63,30 @@ public class InfernoGhostflame extends AbstractGhostflame {
         System.out.println(energySpentThisTurn);
         String s = "";
         if (charged) {
-            s = "Charged. ";
+            s = "Ignited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = s + "#yActive. Spend [E] [E] [E] this turn to Charge.";
+                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn.";
                     break;
                 case 2:
-                    s = s + "#yActive. Spend [E] [E] this turn to Charge.";
+                    s = s + "#yActive. Ignites after spending [E] [E] this turn.";
                     break;
                 case 1:
-                    s = s + "#yActive. Spend [E] this turn to Charge.";
+                    s = s + "#yActive. Ignites after spending [E] this turn.";
                     break;
                 default:
                     s = s + "Error. Please report to mod dev: " + x;
             }
         } else {
-            s = s + "Inactive. Spend [E] [E] [E] while #yActive to Charge.";
+            s = s + "Inactive. Ignites after spending [E] [E] [E] while #yActive.";
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL When Charged, deal #b" + x + " damage to a random enemy for each #yCharged #yGhostflame, then #yExtinguish them.";
+        return s + " NL Ignition: When Ignited, deal #b" + x + " damage to a random enemy for each #yCharged #yGhostflame, then #yExtinguish them.";
     }
 }

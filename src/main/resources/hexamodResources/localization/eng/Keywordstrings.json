@@ -4,7 +4,7 @@
     "NAMES": [
       "active"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Charged. At the end of your turn, #yAdvance to the next Ghostflame."
+    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements. At the end of your turn, #yAdvance to the next Ghostflame."
   },
   {
     "PROPER_NAME": "Advance",
@@ -13,7 +13,7 @@
       "advanced",
       "advancing"
     ],
-    "DESCRIPTION": "#yActivate the next Ghostflame. If it's Charged, #yExtinguish it."
+    "DESCRIPTION": "#yActivate the next Ghostflame. If it's Ignited, #yExtinguish it."
   },
   {
     "PROPER_NAME": "Retract",
@@ -22,14 +22,14 @@
       "retracted",
       "retracting"
     ],
-    "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Charged, #yExtinguish it."
+    "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Ignited, #yExtinguish it."
   },
   {
-    "PROPER_NAME": "Enhance",
+    "PROPER_NAME": "Intensity",
     "NAMES": [
-      "enhance"
+      "Intensity"
     ],
-    "DESCRIPTION": "Enhance increases the amount of Damage, Burn, and Block applied by Ghostflames when Charged."
+    "DESCRIPTION": "Intensity increases the amount of Damage, Burn, and Block applied by Ghostflames when Ignited."
   },
   {
     "PROPER_NAME": "Burn",
@@ -37,7 +37,7 @@
       "burn",
       "burned"
     ],
-    "DESCRIPTION": "Burned creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding up)."
+    "DESCRIPTION": "Burning creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding up)."
   },
   {
     "PROPER_NAME": "Extinguish",
@@ -45,7 +45,22 @@
       "extinguish",
       "extinguished"
     ],
-    "DESCRIPTION": "Remove the Charge from a Ghostflame, allowing it to be Charged again."
+    "DESCRIPTION": "Allows Ghostflame to become Ignited again, resetting its Ignition requirements."
+  },
+  {
+    "PROPER_NAME": "Ignite",
+    "NAMES": [
+      "ignite",
+      "ignited"
+    ],
+    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
+  },
+  {
+    "PROPER_NAME": "Force-Ignite",
+    "NAMES": [
+      "force-ignite"
+    ],
+    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame, even if it was already Ignited."
   },
   {
     "PROPER_NAME": "Seal",

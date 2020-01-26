@@ -63,14 +63,14 @@ public class CrushingGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "Charged. ";
+            s = "Ignited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - skillsPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. Play #b" + x + " #ySkill this turn to Charge.";
+                s = s + "#yActive. Ignites after #b" + x + " #ySkill is played this turn.";
             } else {
-                s = s + "#yActive. Play #b" + x + " #ySkills this turn to Charge.";
+                s = s + "#yActive. Ignites after #b" + x + " #ySkills are played this turn.";
             }
         } else {
             s = s + "Inactive. Play #b2 #ySkills while #yActive to Charge.";
@@ -79,6 +79,6 @@ public class CrushingGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL When Charged, deal #b" + x + " damage to a random enemy twice.";
+        return s + " NL Ignition: When Ignited, deal #b" + x + " damage to a random enemy twice.";
     }
 }

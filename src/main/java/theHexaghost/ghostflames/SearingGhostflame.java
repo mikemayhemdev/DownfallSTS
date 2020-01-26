@@ -57,22 +57,22 @@ public class SearingGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "Charged. ";
+            s = "Ignited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - attacksPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. Play #b" + x + " #yAttack this turn to Charge.";
+                s = s + "#yActive. Ignites after #b" + x + " #yAttack is played this turn.";
             } else {
-                s = s + "#yActive. Play #b" + x + " #yAttacks this turn to Charge.";
+                s = s + "#yActive. Ignites after #b" + x + " #yAttacks are played this turn.";
             }
         } else {
-            s = s + "Inactive. Play #b2 #yAttacks while #yActive to Charge.";
+            s = s + "Inactive. Ignites after #b2 #yAttacks are played while #yActive.";
         }
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL When Charged, apply #b" + x + " #yBurn to ALL enemies.";
+        return s + " NL Ignition: When Ignited, apply #b" + x + " #yBurn to ALL enemies.";
     }
 }

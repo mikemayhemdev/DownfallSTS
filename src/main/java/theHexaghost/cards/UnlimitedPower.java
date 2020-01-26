@@ -23,6 +23,7 @@ public class UnlimitedPower extends AbstractHexaCard {
                 atb(new ChargeAction(gf));
             }
         }
+        exhaust = true;
     }
 
     public void upgrade() {

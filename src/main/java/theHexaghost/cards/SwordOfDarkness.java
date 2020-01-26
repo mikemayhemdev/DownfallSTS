@@ -13,8 +13,8 @@ public class SwordOfDarkness extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 11;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 4;
 
     public SwordOfDarkness() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

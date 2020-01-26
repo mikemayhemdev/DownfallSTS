@@ -12,7 +12,6 @@ public class RecurringNightmare extends AbstractHexaCard {
 
     public RecurringNightmare() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        isEthereal = true;
         exhaust = true;
     }
 
