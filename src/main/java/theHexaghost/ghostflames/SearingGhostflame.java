@@ -71,10 +71,7 @@ public class SearingGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-<<<<<<< HEAD
         return s + " NL Ignition: When Ignited, apply #b" + x + " #yBurn to a random enemy.";
-=======
-        return s + " NL When Charged, apply #b" + x + " #yBurn to a random enemy.";
->>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
+
     }
 }
