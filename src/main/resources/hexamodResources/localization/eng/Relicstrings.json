@@ -26,5 +26,12 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. Remove the Bolstering Ghostflame from your Ghostflames."
     ]
+  },
+  "hexamod:SoulConsumer": {
+    "NAME": "Soul Consumer",
+    "FLAVOR": "SLURP...",
+    "DESCRIPTIONS": [
+      "Whenever you kill a #yhexamod:Burning enemy, heal #b2 HP."
+    ]
   }
 }
