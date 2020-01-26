@@ -35,16 +35,16 @@
     "NAME": "Unknown Uncommon Power",
     "DESCRIPTION": "sneckomod:Unknown."
   },
-  "sneckomod:UnknownCommonAttack": {
-    "NAME": "Unknown Common Attack",
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "Unknown Rare Attack",
     "DESCRIPTION": "sneckomod:Unknown."
   },
-  "sneckomod:UnknownCommonAttack": {
-    "NAME": "Unknown Common Attack",
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "Unknown Rare Skill",
     "DESCRIPTION": "sneckomod:Unknown."
   },
-  "sneckomod:UnknownCommonAttack": {
-    "NAME": "Unknown Common Attack",
+  "sneckomod:UnknownRarePower": {
+    "NAME": "Unknown Rare Power",
     "DESCRIPTION": "sneckomod:Unknown."
   }
 }

@@ -2,6 +2,7 @@ package sneckomod.cards.unknowns;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,8 +23,6 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public void upgrade() {
         upgradeName();
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
@@ -31,7 +30,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     @Override
     public boolean atBattleStartPreDraw() {
-        replaceUnknown(false);
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                replaceUnknown(false);
+                isDone = true;
+            }
+        });
         return false;
     }
 

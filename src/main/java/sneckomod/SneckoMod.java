@@ -19,6 +19,8 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.relics.SneckoLibrary;
+import sneckomod.relics.SneckoSoul;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -34,20 +36,20 @@ public class SneckoMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber {
-    public static final String SHOULDER1 = "sneckomodResources/images/char/mainChar/shoulder.png";
-    public static final String SHOULDER2 = "sneckomodResources/images/char/mainChar/shoulder2.png";
-    public static final String CORPSE = "sneckomodResources/images/char/mainChar/corpse.png";
-    private static final String ATTACK_S_ART = "sneckomodResources/images/512/bg_attack_hexaghost.png";
-    private static final String SKILL_S_ART = "sneckomodResources/images/512/bg_skill_hexaghost.png";
-    private static final String POWER_S_ART = "sneckomodResources/images/512/bg_power_hexaghost.png";
-    public static final String CARD_ENERGY_S = "sneckomodResources/images/512/card_hexaghost_orb.png";
-    public static final String TEXT_ENERGY = "sneckomodResources/images/512/card_small_orb.png";
-    private static final String ATTACK_L_ART = "sneckomodResources/images/1024/bg_attack_hexaghost.png";
-    private static final String SKILL_L_ART = "sneckomodResources/images/1024/bg_skill_hexaghost.png";
-    private static final String POWER_L_ART = "sneckomodResources/images/1024/bg_power_hexaghost.png";
-    private static final String CARD_ENERGY_L = "sneckomodResources/images/1024/card_hexaghost_orb.png";
-    private static final String CHARSELECT_BUTTON = "sneckomodResources/images/charSelect/charButton.png";
-    private static final String CHARSELECT_PORTRAIT = "sneckomodResources/images/charSelect/charBG.png";
+    public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
+    public static final String SHOULDER2 = "sneckomodResources/images/char/shoulder2.png";
+    public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
+    private static final String ATTACK_S_ART = "sneckomodResources/images/512/bg_attack_snecko.png";
+    private static final String SKILL_S_ART = "sneckomodResources/images/512/bg_skill_snecko.png";
+    private static final String POWER_S_ART = "sneckomodResources/images/512/bg_power_snecko.png";
+    public static final String CARD_ENERGY_S = "sneckomodResources/images/512/card_snecko_orb.png";
+    public static final String TEXT_ENERGY = "sneckomodResources/images/512/card_small_orb_snecko.png";
+    private static final String ATTACK_L_ART = "sneckomodResources/images/1024/bg_attack_snecko.png";
+    private static final String SKILL_L_ART = "sneckomodResources/images/1024/bg_skill_snecko.png";
+    private static final String POWER_L_ART = "sneckomodResources/images/1024/bg_power_snecko.png";
+    private static final String CARD_ENERGY_L = "sneckomodResources/images/1024/card_snecko_orb.png";
+    private static final String CHARSELECT_BUTTON = "sneckomodResources/images/charSelect/button.png";
+    private static final String CHARSELECT_PORTRAIT = "sneckomodResources/images/charSelect/portrait.png";
     private static String modID;
 
     public static Color placeholderColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1);
@@ -111,7 +113,8 @@ public class SneckoMod implements
 
     @Override
     public void receiveEditRelics() {
-
+        BaseMod.addRelicToCustomPool(new SneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SneckoLibrary(), TheSnecko.Enums.SNECKO_CYAN);
     }
 
     @Override

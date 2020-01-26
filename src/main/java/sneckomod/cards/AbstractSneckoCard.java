@@ -12,14 +12,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
-import theHexaghost.HexaMod;
-import theHexaghost.TheHexaghost;
+
 
 import java.util.ArrayList;
 
-import static theHexaghost.HexaMod.getModID;
-import static theHexaghost.HexaMod.makeCardPath;
+import static sneckomod.SneckoMod.getModID;
+import static sneckomod.SneckoMod.makeCardPath;
+
 
 public abstract class AbstractSneckoCard extends CustomCard {
 
@@ -56,7 +57,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
     private static String getCorrectPlaceholderImage(String id) {
-        return makeCardPath(id.replaceAll((HexaMod.getModID() + ":"), "")) + ".png";
+        return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }
 
     public static String makeID(String blah) {

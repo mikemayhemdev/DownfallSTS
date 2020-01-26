@@ -10,7 +10,7 @@
     "NAME": "Snecko Library",
     "FLAVOR": "Page 132: Roll threes on big attack turns.",
     "DESCRIPTIONS": [
-      "Start the game with #b6 #ysneckomod:Unknown cards. Obtain an additional card reward every #b6 combats. One card reward in each combat is replaced with a #ysneckomod:Unknown card."
+      "Start the game with #b6 #ysneckomod:Unknown cards. Obtain an additional card reward every #b6 combats. One card in each card reward is replaced with a #ysneckomod:Unknown card."
     ]
   }
 }
