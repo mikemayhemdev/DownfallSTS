@@ -1,0 +1,619 @@
+{
+"Slimebound:Strike_Slimebound": {
+    "NAME": "Frappe",
+    "DESCRIPTION": "Inflige !D! dégâts"
+  },
+"Slimebound:Defend_Slimebound": {
+    "NAME": "Défense",
+    "DESCRIPTION": "Gagnez !B! d'armure."
+  },
+"Slimebound:SplitBronze": {
+    "NAME": "Invoquer: Bronze",
+    "DESCRIPTION": "Invoquez un Bronze_Slime. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquer un Bronze_Slime deux fois. NL Epuisement."
+  },
+  "Slimebound:Icky": {
+    "NAME": "Dégoûtant",
+    "DESCRIPTION": "Injouable. NL Lorsque vous le piochez, ajoutez un Slimed aléatoire à votre main."
+  },
+  "Slimebound:GangUp": {
+    "NAME": "Appel au gang",
+    "DESCRIPTION": "Invoquez un Bruiser_Slime X times. NL Bruiser_Slimes inflige !M! de dégât supplémentaire ce combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Bruiser_Slime X+1 fois. NL Bruiser_Slimes inflige !M! de dégât supplémentaire ce combat. NL Exhaust."
+  },
+"Slimebound:LevelUp": {
+    "NAME": "Gain de niveau",
+    "DESCRIPTION": "Gagnez !M! Puissance.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! Puissance et 1 emplacement de Slime."
+
+  },
+"Slimebound:SplitTorchHead": {
+    "NAME": "Invoquez: Tête de torche",
+    "DESCRIPTION": "Invoquez une Tête_de_torche Slime. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez une Tête_de_Torche_Slime deux fois. NL Epuisement."
+  },
+"Slimebound:SplitBruiser": {
+    "NAME": "Invoquez: Bruiser",
+    "DESCRIPTION": "Invoquez un Bruiser_Slime. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Bruiser_Slime. NL Bruiser_Slimes inflige un dégât supplémentaire ce combat. NL Epuisement."
+  },
+"Slimebound:SplitCultist": {
+    "NAME": "Invoquez: Bodybuilder",
+    "DESCRIPTION": "Invoquez un Slime_Bodybuilder. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Slime_Bodybuilder deux fois. NL Epuisement."
+  },
+"Slimebound:SplitLeeching": {
+    "NAME": "Invoquez: Protecteur",
+    "DESCRIPTION": "Invoquez un Slime-Protecteur. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Slime_Protecteur. NL Leeching_Slimes donne 1 de défense supplémentaire ce combat. NL Epuisement."
+  },
+"Slimebound:SplitAcid": {
+    "NAME": "Invoquez: Acid",
+    "DESCRIPTION": "Invoquez un Acid_Slime. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Acid_Slime. NL Acid_Slimes applique 1 de poison supplémentaire ce combat. NL Epuisement."
+  },
+"Slimebound:SplitMire": {
+    "NAME": "Invoquez: Cachon",
+    "DESCRIPTION": "Invoquez un Slime_cachon. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez un Slime_cachon. NL Mire_Slimes applique 1 Slimed supplémentaire ce combat. NL Epuisement."
+  },
+"Slimebound:ProtectTheBoss": {
+    "NAME": "Protéger le Boss",
+    "DESCRIPTION": "La prochaine fois qu'un ennemi vous inflige des dégâts non bloqués, ne subissez aucun dégât, le slime le plus ancien est sacrifié.",
+    "UPGRADE_DESCRIPTION": "Les deux prochaines fois qu'un ennemi vous inflige des dégâts non bloqués, ne subissez aucun dégât, le slime le plus ancien est sacrifié."
+  },
+  "Slimebound:SamplingLick": {
+    "NAME": "Léchouille baveuse",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Gagnez !B! d'armure. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appiquez !SlimeboundSlimed! Slimed NL Gagnez !B! d'armure. NL Piochez une carte. NL Epuisement."
+
+  },
+"Slimebound:DuplicateSlimes": {
+    "NAME": "Duplication",
+    "DESCRIPTION": "Dupliquez tous vos Slimes existants. NL Epuisement."
+  },
+"Slimebound:Replication": {
+    "NAME": "Replication",
+    "DESCRIPTION": "Choisissez une carte dans votre main. Ajoutez une copie de cette carte à votre main. NL Epuisement."
+  },
+"Slimebound:AbsorbAll": {
+    "NAME": "Absorption",
+    "DESCRIPTION": "Absorbez tous vos Slimes existants. Gagnez 3 d'armure par slime Absorbé."
+  },
+"Slimebound:Overexert": {
+    "NAME": "Surpuissance",
+    "DESCRIPTION": "Gagnez 4 puissance. NL !M! tours après, absorbez tous vos slimes existants. NL Epuisement."
+  },
+"Slimebound:Split": {
+    "NAME": "Invocation",
+    "DESCRIPTION": "Invoquez un slime aléatoire. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Invoquez deux slimes aléatoires."
+  },
+"Slimebound:SuperSplit": {
+    "NAME": "Super Invoquation",
+    "DESCRIPTION": "Gagnez X emplacements de Slime. NL Invoquez X slimes aléatoires. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! emplacements de slimes. NL Invoquez 4 slimes aléatoires. NL Epuisement."
+  },
+"Slimebound:LeadByExample": {
+    "NAME": "Mener par l'exemple",
+    "DESCRIPTION": "La première attaque que vous jouez chaque tour fait frapper votre plus ancien slime",
+    "UPGRADE_DESCRIPTION": "Les premières !M! attaques que vous jouez chaque tour fait frapper votre plus ancien slime."
+  },
+  "Slimebound:SlimeTap": {
+      "NAME": "Roue du Slime",
+      "DESCRIPTION": "Absorbez votre plus ancien slime. Gain [E] [E] et piochez 2 cartes. NL Epuisement.",
+      "UPGRADE_DESCRIPTION": "Absorbez vos 2 deux plus anciens slimes. Gagnez [E] [E] et piochez 2 cartes pour chaque slime absorbés. NL Epuisement.",
+      "EXTENDED_DESCRIPTION": [
+        "Besoin... Slimes..."
+      ]
+  },
+"Slimebound:Teamwork": {
+    "NAME": "Travail d'équipe",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Votre !M! plus ancien Slime attaque X fois.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts X fois. NL Votre plus ancien slime attaque X fois."
+  },
+"Slimebound:SlimeBarrage": {
+    "NAME": "Slime Barrage",
+    "DESCRIPTION": "Ingligez !D! de dégât. Tous vos slimes attaquent."
+  },
+"Slimebound:MaxSlimes": {
+    "NAME": "Fait de la place",
+    "DESCRIPTION": "Gagnez !M! emplacements de slime.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! emplacements de slime."
+  },
+"Slimebound:SlimeBrawl": {
+    "NAME": "Baston de Slime",
+    "DESCRIPTION": "Jouez et épuisez la carte en haut de votre pioche. Autant de fois que votre nombre de slime existants. NL Epuisement."
+  },
+"Slimebound:SpikyOuterGoop": {
+    "NAME": "Piques qui pique",
+    "DESCRIPTION": "Gagnez !M! Epines et !M! d'Armure_plaqué."
+  },
+"Slimebound:SelfFormingGoo": {
+    "NAME": "Auto-défense",
+    "DESCRIPTION": "Chaque fois que vous perdez de la vie, gagnez !M! d'armure au début de votre prochain tour"
+  },
+"Slimebound:SlimeSpikes": {
+    "NAME": "Slime piquants",
+    "DESCRIPTION": "Gagnez !B! d'armure and !M! d'épines. NL Perdez !M! Epines à la fin de votre tour"
+  },
+"Slimebound:FormABlockade": {
+    "NAME": "Formez un Blocus",
+    "DESCRIPTION": "Invoquez un slime aléatoire. NL Gagnez !B! d'Armure, plus !M! d'Armure pour chaque slime invoqués. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Invoquez deux slimes aléatoires. NL Gagnez !B! d'Armure, plus !M! d'Armure pour chaque Slime invoqué. NL Epuisement."
+  },
+"Slimebound:LeechingTouch": {
+    "NAME": "MorsureSangsue",
+    "DESCRIPTION": "Gagnez autant d'armure que l'effet Slime de l'ennemi. NL Infligez !D! dégâts."
+  },
+"Slimebound:Dissolve": {
+    "NAME": "Dissoudre",
+    "DESCRIPTION": "Epuisez une carte de votre main. Ajoutez un nombre de carte coutant 0 a votre main, égal au coût de la carte épuisée. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Epuisez une carte de votre main. Ajoutez un nombre de carte coutant 0 a votre main, égal au coût de la carte épuisée plus 1. NL Epuisement."
+},
+"Slimebound:DuplicatedForm": {
+    "NAME": "Forme dupliquée",
+    "UPGRADE_DESCRIPTION": "Perdez la moitié de vos PV max ce combat. NL Gagnez [E] chaque tour. NL Les deux premières cartes jouées chaque tour qui ciblent un ennemi sont jouées deux fois.",
+  "DESCRIPTION": "Perdez la moitié de vos PV max ce combat. NL La première carte qui cible un ennemi est jouée deux fois.",
+  "EXTENDED_DESCRIPTION": [
+      "Trop... De Santé..."
+    ]
+  },
+"Slimebound:Recollect": {
+    "NAME": "Retrouver",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Fait revenir une carte aléatoire épuisée coûtant 0 dans votre main.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Fait revenir deux cartes aléatoires épuisées coûtant 0 dans votre main.",
+    "EXTENDED_DESCRIPTION": [
+      "Pas... Epuisée..."
+    ]
+  },
+"Slimebound:FormOfPuddle": {
+    "NAME": "Flaque salutaire",
+    "DESCRIPTION": "Gagnez 1 Intangible. NL Epuisez."
+  },
+"Slimebound:GrowthPunch": {
+    "NAME": "Bras téléscopique",
+    "DESCRIPTION": "Infligez !D! de dégâts. NL Augmente les dégâts de cette carte de manière permanente de !M!. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Infligez !D! de Dégâts. NL Gagnez !B! d'Armure. NL Augmente les dégâts de cette carte de manière permanente de !M!. NL Epuisement."
+
+},
+  "Slimebound:CheckThePlaybook": {
+    "NAME": "ConsultationStratégique",
+    "DESCRIPTION": "Ajoutez 4 cartes Tackle aléatoires à votre main. Elles coûtent 1 de moins ce combat. NL Epuisement."
+
+  },
+"Slimebound:Recycling": {
+    "NAME": "Recyclage",
+    "DESCRIPTION": "Au début de votre tour, fait revenir une carte épuisée coûtant 0 dans votre main.",
+    "UPGRADE_DESCRIPTION": "Innée. NL Au début de votre tour, fait revenir une carte épuisée coûtant 0 dans votre main."
+  },
+"Slimebound:Repurpose": {
+    "NAME": "Transformation",
+    "DESCRIPTION": "Transformez une carte de votre main. NL Epuisez.",
+    "UPGRADE_DESCRIPTION": "Transformez 2 cartes dans votre main. NL Epuisement."
+  },
+"Slimebound:RollThrough": {
+    "NAME": "Roule dessus",
+    "DESCRIPTION": "Infligez !D! de dégâts à TOUS les ennemis. NL Ennemis reçoivent !M! de dégâts par carte Tackle \"Tackle\" ce combat."
+  },
+"Slimebound:MassRepurpose": {
+    "NAME": "Transformation massive",
+    "DESCRIPTION": "Transformez toutes les cartes de votre main. NL Epuisement."
+  },
+"Slimebound:SoTasty": {
+    "NAME": "Tellement bon!",
+    "DESCRIPTION": "Infligez !D! de dégâts à un ennemi aléatoire X fois. Ajoutez X cartes Licks aléatoires à votre main. NL Epuisement."
+  },
+"Slimebound:Regenerate": {
+    "NAME": "Régenération",
+    "DESCRIPTION": "Gagnez !M! Regénération. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! Regénération. NL Piochez une carte. NL Epuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Besoin... Régeneration..."
+    ]
+  },
+"Slimebound:Lick": {
+    "NAME": "Léchouille",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed. NL Piochez une carte. NL Epuisement."
+  },
+"Slimebound:HauntingLick": {
+    "NAME": "Léchouille hantée",
+    "DESCRIPTION": "Appliquez 1 Vulnérabilité et !SlimeboundSlimed! Slimed. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez 1 Vulnérabilité and !SlimeboundSlimed! Slimed. NL Piochez une carte. NL Epuisement."
+  },
+"Slimebound:PoisonLick": {
+    "NAME": "Léchouille empoisonnée",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed et !SlimeboundSlimePoison! Poison. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed et !SlimeboundSlimePoison! Poison. NL Piochez une carte. NL Epuisement."
+  },
+"Slimebound:MegaLick": {
+    "NAME": "Mega-Léchouille",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed à tous les ennemis. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimePoison! Faiblesse et !SlimeboundSlimed! Slimed to ALL enemies. NL Piochez une carte. NL Epuisez."
+  },
+"Slimebound:FocusedLick": {
+    "NAME": "PréciseLéchouille",
+    "DESCRIPTION": "Retirez Faiblesse et Poison à l'ennemi Remplacez les avec Slimed. NL Appliquez !M! Slimed.",
+    "UPGRADE_DESCRIPTION": "Retirez Faiblesse et Poison à l'ennemi Remplacez les avec Slimed. NL Appliquez !M! Slimed."
+  },
+"Slimebound:RejuvenatingLick": {
+    "NAME": "LéchouilleRajeunissante",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Soignez !M! PV. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Soignez !M! HP. NL Piochez une carte. NL Epuisement."
+  },
+"Slimebound:Gluttony": {
+    "NAME": "Gourmandise",
+    "DESCRIPTION": "La première carte Lick jouée chaque tour ajoute une carte Lick aléatoire à votre main",
+    "UPGRADE_DESCRIPTION": "La première carte Lick jouée chaque tour ajoute 2 cartes Lick aléatoires à votre main."
+  },
+"Slimebound:PressTheAttack": {
+    "NAME": "Attaque préssée",
+    "DESCRIPTION": "Infligez !D! de dégât. Si l'ennemi est Slimed, votre plus ancien slime frappe",
+    "UPGRADE_DESCRIPTION": "Ingligez !D! de dégât. Si l'ennmi est Slimed, votre plus ancien slime frappe 2 fois"
+  },
+"Slimebound:StrikeFrailPoint": {
+    "NAME": "Cueillez la Faiblesse",
+    "DESCRIPTION": "Si l'ennemi est Frail, retirez son armure et retirez 1 Frail. NL Infligez !D! de dégât."
+  },
+"Slimebound:SoulSicken": {
+    "NAME": "Ame empoisonnée",
+    "DESCRIPTION": "Appliquez !M! Poison. NL Convertissez la moitié du Slimed ennemi en Poison. NL Epuisez.",
+  "UPGRADE_DESCRIPTION": "Appliquez !M! Poison. NL Convertissez la moitié du Slimed ennemi en Poison."
+  },
+"Slimebound:AcidGelatin": {
+    "NAME": "Gélatine Acide",
+    "DESCRIPTION": "Quand vous êtes attaqué, appliquez !M! Poison to the attacker."
+  },
+"Slimebound:TongueLash": {
+    "NAME": "LangueFouet",
+    "DESCRIPTION": "Infligez !D! de dégâts. Inflige !M! de dégât en plus pour chacune de vos cartes contenant \"Lick\"."
+  },
+"Slimebound:ItLooksTasty": {
+    "NAME": "Appétisant",
+    "DESCRIPTION": "Infligez !D! de dégât. Ajoutez une carte aléatoire Lick si l'ennemi est Slimed.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! de dégâts. Ajoutez 2 cartes aléatoires Lick si l'ennemi est Slimed."
+  },
+"Slimebound:AcidTongue": {
+    "NAME": "Langue Acide",
+    "DESCRIPTION": "Appliquez !M! Poisonà chaque fois que vous appliquez Slimed.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! Poison chaque fois que vous appliquez Slimes. NL Les cartes appliquant Slimed appliquent 1 de plus."
+  },
+"Slimebound:TendrilStrike": {
+    "NAME": "Frappe Toxique",
+    "DESCRIPTION": "Infligez !D! de dégâts. NL Si l'ennemi est empoisonné, infligez autant de dégât que son taux de poison.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! De dégâts. NL Si l'ennemi est empoisonné, infligez autant de dégât que son taux de poison 2 fois."
+},
+  "Slimebound:FirmFortitude": {
+    "NAME": "Ressens notre douleur !",
+    "DESCRIPTION": "Les  !M! prochaines fois que vous vous infligez des dégâts pendant VOTRE TOUR l'ennemi prend ces dégâts."
+  },
+"Slimebound:AccelerateToxins": {
+    "NAME": "Toxines accélérées ",
+    "DESCRIPTION": "Infligez autant de dégâts que l'ennemi à de poison. Sur TOUS les ennemis. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez autant de dégâts que l'ennemi à de poison. Sur TOUS les ennemis deux fois. NL Epuisement."
+  },
+"Slimebound:QuickStudy": {
+    "NAME": "Etude rapide",
+  "DESCRIPTION": "Ajoute une carte aléatoire Spire_Boss dans votre main. NL Perdez !M! PV. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Ajoute 2 cartes aléatoires Spire_Boss dans votre main. NL Perdez !M! HP. NL Epuisement."
+  },
+"Slimebound:WasteNot": {
+    "NAME": "Pas de gâchis",
+    "DESCRIPTION": "Recuperez toutes vos cartes coutant 0 épuissées dans votre main. NL Epuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Pas... Epuisé..."
+    ]
+  },
+"Slimebound:Prepare": {
+    "NAME": "Preparation",
+    "DESCRIPTION": "A votre prochain tour, gagnez [E] [E] et piochez !M! cartes. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] et piochez !M! cards. NL Conservez !M! carte ce tour. Epuisement."
+  },
+"Slimebound:Grow": {
+    "NAME": "Grandir",
+    "DESCRIPTION": "Perdez un emplacement de Slime contre !M! Force et !M! Dextérité.",
+    "UPGRADE_DESCRIPTION": "Perdez un emplacement de Slime contre !M! Force and !M! Dextérité. NL Reduit le coût de cette carte de 1."
+  },
+"Slimebound:HungryTackle": {
+    "NAME": "Tacle Enervé",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Recuperez une carte epuisée coutant 0 aléatoire dans votre main.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Recuperez deux cartes épuisées coutant 0 aléatoires dans votre main."
+  },
+"Slimebound:FinishingTackle": {
+    "NAME": "Tacle Assassin",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Si cela tue un ennemi, gagnez !B! d'Armure."
+  },
+  "Slimebound:Tackle": {
+    "NAME": "Tacle",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même."
+  },
+"Slimebound:SlimesplosionOLD": {
+    "NAME": "Slimesplosion",
+    "DESCRIPTION": "Appliquez !M! Slimed et !SlimeboundSlimePoison! Poison A TOUS les ennemis X fois. NL Epuisement."
+  },
+"Slimebound:LivingWall": {
+    "NAME": "Mur Vivant",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !SlimeboundSlimed! Slimed aux ennemis qui attaquent ce tour."
+  },
+"Slimebound:Slimepotheosis": {
+    "NAME": "SlimeApothéose",
+    "DESCRIPTION": "Améliorez toutes les cartes de votre main. Perdez !M! PV pour chaque carte améliorer. NL Epuisement."
+  },
+"Slimebound:ComboTackle": {
+    "NAME": "Tacle Combiné",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Piochez une carte",
+    "UPGRADE_DESCRIPTION": "Infligez !D! de dégât !SlimeboundSelfharm! A vous même. NL Piochez une carte pour chaque attaque jouée ce tour-ci (Piochez !M! cartes)."
+  },
+"Slimebound:GoopTackle": {
+    "NAME": "Tacle prévoyant",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Ajoute une carte Tacle aléatoire à votre main. Coûte 0 ce tour.",
+  "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Ajoute une carte Tacle aléatoire améliorée à votre main. Coûte 0 ce tour"
+
+},
+"Slimebound:CorrosiveSpit": {
+    "NAME": "Crachat corrosif",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed."
+  },
+"Slimebound:Chomp": {
+    "NAME": "Mâcher",
+    "DESCRIPTION": "Infligez !D! de dégât 2 fois. NL L'ennemi reçoit !M! de dégât supplémentaire pour chaque carte \"Tackle\" this combat."
+  },
+"Slimebound:DouseInSlime": {
+    "NAME": "Vendre Le Slime",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed. NL Slimed ne se divisera pas ce tour."
+  },
+"Slimebound:FlameTackle": {
+    "NAME": "Tacle enflammé",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. NL Les cartes \"Tackle\" infligent !M! de dégât supplémentaire ce combat."
+  },
+"Slimebound:VenomTackle": {
+    "NAME": "Tacle de venin",
+    "DESCRIPTION": "Infligez !D! de dégât !SlimeboundSelfharm! de dégât à vous même. NL Appliquez !M! Poison."
+  },
+"Slimebound:UsefulSlime": {
+    "NAME": "Gentil Slime!",
+    "DESCRIPTION": "Piochez deux carte. NL Epuisement."
+  },
+"Slimebound:RainOfGoop": {
+    "NAME": "Pluie de dents",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire !M! fois.",
+    "UPGRADE_DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire !M! fois."
+  },
+"Slimebound:GoopSpray": {
+    "NAME": "Gazeuse à Slimed",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed et !M! Poison à tous les ennemis. NL Epuisement."
+  },
+"Slimebound:MassFeed": {
+    "NAME": "Engloutir",
+    "DESCRIPTION": "Infligez !D! de dégât à TOUS les ennemis. NL Pour chaque ennemi non-sbire, Augmente vos PV max de !M!. NL Epuisement."
+  },
+"Slimebound:StrayGoop": {
+    "NAME": "Bave partagée",
+    "DESCRIPTION": "Appliquez !SlimeboundSlimed! Slimed à un ennemi aléatoire à chaque fois que vous perdez des PV dans VOTRE tour."
+  },
+"Slimebound:ViciousTackle": {
+    "NAME": "Tacle Vicieux",
+    "DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. Frappez deux fois plus fort le Slimed de l'ennemi.",
+  "UPGRADE_DESCRIPTION": "Infligez !D! de dégât et !SlimeboundSelfharm! de dégât à vous même. Frappez deux fois plus fort le Slimed ET Soignez vous deux fois plus."
+  },
+"Slimebound:LeechEnergy": {
+    "NAME": "Energie Vitale",
+    "DESCRIPTION": "Infligez !D! de dégât. Piochez une carte si l'ennemi à Slimed.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! de dégât. Piochez deux carte si l'ennemi à Slimed."
+},
+"Slimebound:LeechLife": {
+    "NAME": "Energie Salutaire",
+    "DESCRIPTION": "Infligez !D! de dégât. NL Appliquez !M! Poison. NL Soignez !M! PV. NL Epuisement."
+  },
+  "Slimebound:Equalize": {
+    "NAME": "Egalisateur",
+    "DESCRIPTION": "Infligez !D! de dégât, soignez !M! PV. NL Cette carte est jouée deux fois si votre vie est inférieure à vos PV Max. NL Epuisement."
+
+  },
+"Slimebound:DisruptingSlam": {
+    "NAME": "Claque étourdissante",
+    "DESCRIPTION": "Infligez !D! de dégât à tous les ennemis. Les ennemis qui ne comptaient pas attaquer sont frappés deux fois."
+  },
+"Slimebound:ChargeUp": {
+    "NAME": "Chargement",
+    "DESCRIPTION": "A votre prochain tour, gagnez !B! d'Armure et !M! de Force. NL Epuisement."
+  },
+"Slimebound:GuardianWhirl": {
+    "NAME": "TourbillonDuGardien",
+    "DESCRIPTION": "Infligez !D! de dégât à tous les ennemis X fois. NL Epuisement."
+  },
+"Slimebound:DefensiveMode": {
+    "NAME": "Mode Défensif",
+    "DESCRIPTION": "Gagnez !M! Epines. NL Gagnez !B! Armure, et !B! d'Armure au prochain tour."
+  },
+"Slimebound:PrepareCrush": {
+    "NAME": "Preparation: Crush",
+    "DESCRIPTION": "Au prochain tour, gagnez [E] [E] [E] et !M! Force, et ajoutez SLIME FOU A votre main. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Au prochain tour, gagnez [E] [E] [E] [E] et !M! Force, et ajoutez SLIME FOU à votre main. NL Epuisement."
+  },
+"Slimebound:SlimeCrush": {
+    "NAME": "SLIME FOU!!!",
+    "DESCRIPTION": "Infligez !D! de dégât. NL. NL Ethérée."
+  },
+"Slimebound:SplitGhostflame": {
+    "NAME": "Invoquez: FantômeBrûlant",
+    "DESCRIPTION": "Gagnez Emplacement de Slimes juqu'à en avoir 6. NL Invoquez un Fantôme_Brûlant. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez emplacement de Slimes jusqu'à en avoir 6. NL Invoquez 2 Fantôme_Brulant. NL Epuisement."
+  },
+"Slimebound:PrepareDivider": {
+    "NAME": "Preparation: Diviser",
+    "DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, et ajoutez Diviser à votre main. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] [E] et !M! Force, Ajoutez Diviser à votre main. NL Epuisement."
+  },
+"Slimebound:Hexaburn": {
+    "NAME": "Hexagomme",
+    "DESCRIPTION": "Infligez !D! de dégât à un ennemi aléatoire !M! fois. NL Epuisement."
+  },
+"Slimebound:PrepareBeam": {
+    "NAME": "Preparation: Beam",
+    "DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "A votre prochain tour, gagnez [E] [E] [E] et !M! Force, Ajoutez Hyper Beam à votre main. NL Epuisement."
+  },
+"Slimebound:SlimeBeam": {
+    "NAME": "Slime Beam",
+    "DESCRIPTION": "Infligez !D! de dégât à TOUS les ennemis. NL Epuisement."
+  },
+"Slimebound:Flail": {
+    "NAME": "Fléau",
+    "DESCRIPTION": "Infligez !D! de dégât 2 fois à TOUS les ennemis. NL Gagnez !M! Artefact. NL Epuisement."
+  },
+"Slimebound:DefensiveStance": {
+    "NAME": "Defensive Utopie",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! d'Armure à la fin de chaque tour."
+  },
+"Slimebound:FaceSlap": {
+    "NAME": "Giffle",
+    "DESCRIPTION": "Retirez toute l'arme des ennemis. NL Infligez !D! de dégât. Appliquez !M! Vulnérabilité. NL Epuisement."
+  },
+"Slimebound:LastStand": {
+    "NAME": "Dernier Debout",
+    "DESCRIPTION": "Retirez tous vos Debuffs. NL Gagnez !M! Force, ou !SlimeboundSlimePoison! Force si votre vie est inférieure à vos PV Max. NL Epuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Trop... De...Vie..."
+    ] },
+"Slimebound:Collect": {
+    "NAME": "Collecter",
+    "DESCRIPTION": "Gagnez !M! Force et 1 Puissance. NL Gagnez !B! d'Armure. NL Epuisement."
+  },
+"Slimebound:YouAreMine": {
+    "NAME": "TU ES A MOI!",
+    "DESCRIPTION": "Appliquez !M! Faiblesse et Vulnérabilité à tous les ennemis et détruisez leur Armure. NL Epuisement."
+  },
+"Slimebound:OozeBath": {
+    "NAME": "Bain de Slimed",
+    "DESCRIPTION": "Double le Slimed d'un ennemi. NL Epuisez.",
+    "UPGRADE_DESCRIPTION": "Double le Slimed ET le Poison d'un ennemi. NL Epuisement."
+  },
+"Slimebound:CaCaw": {
+    "NAME": "CA-CAW!",
+    "DESCRIPTION": "Gagnez !M! Force au début de chaque tour.",
+  "UPGRADE_DESCRIPTION": "Gagnez !M! Force. NL Gagnez !M! Force au début de chaque tour."
+  },
+"Slimebound:DarkVoid": {
+    "NAME": "Chemin Sombre",
+    "DESCRIPTION": "Infligez !D! de dégât à tous les ennemis. La prochaine fois qu'un ennemi n'attaque pas, gagnez 1 de Force. NL Epuisement."
+  },
+"Slimebound:TimeRipple": {
+    "NAME": "Gain de Temps",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez Slow à tous les ennemis. NL Epuisement."
+  },
+"Slimebound:HeadSlam": {
+    "NAME": "Frappe Etourdissante",
+    "DESCRIPTION": "Infligez !D! de dégât. Etoudi l'ennemi si ce n'est pas un Boss. NL Epuisement."
+  },
+"Slimebound:ManipulateTime": {
+    "NAME": "Manipulation Temporel",
+    "DESCRIPTION": "Répètez tous les effets qui se passent au début de votre tour. NL Epuisement.",
+    "UPGRADE_DESCRIPTION": "Répètez tous les effets qui se passent au début de votre tour deux fois. NL Epuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Trop... tard..."
+    ]
+  },
+"Slimebound:DonusPower": {
+    "NAME": "Power de Donu",
+    "DESCRIPTION": "Gagnez 1 Force. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Gagnez 1 Force et 1 Artefact. NL Ajoutez une attaque aléatoire à votre main qui coûte 0 ce tour. NL Epuisement."
+},
+"Slimebound:DecasProtection": {
+    "NAME": "Protection de Deca",
+    "DESCRIPTION": "Gagnez 1 Dextérité. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Gagnez 1 Dextérité et 1 Artefact. NL Ajoute un pouvoir aléatoire à votre main qui coûte 0 ce tour. NL Epuisement."
+  },
+"Slimebound:PolyBeam": {
+    "NAME": "Haricot Polyvalent",
+    "DESCRIPTION": "Infligez !D! de dégât deux fois. NL Infligez !D! de dégât deux fois au début de votre prochain tour. NL Epuisement.",
+  "UPGRADE_DESCRIPTION": "Infligez !D! de dégât deux fois. NL Epuisement."
+  },
+"Slimebound:Sear": {
+    "NAME": "Brûler",
+    "DESCRIPTION": "Infligez !D! de dégât, puis !M! de dégât additionnel chaque tour ce combat. NL Epuisement."
+  },
+"Slimebound:StudyAutomaton": {
+    "NAME": "Etude d'Automaton",
+    "DESCRIPTION": "Ajoutez une carte Automaton aléatoire à votre main au début de votre !M! tours.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Automaton aléatoire à votre main chaque tour."
+  },
+"Slimebound:StudyTheSpire": {
+    "NAME": "Etudier la Tour",
+    "DESCRIPTION": "Ajoutez une carte Spire_Boss aléatoire à votre main chaque !M! tours.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Spire_Boss améliorée au début de votre prochain !M! tours."
+  },
+"Slimebound:StudyAwakened": {
+    "NAME": "Etudier Awakened",
+    "DESCRIPTION": "Ajoutez une carte Awakened One aléatoire à votre main au début de votre prochain !M! tour.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Awakened One améliorée dans votre main au début de chaque tour."
+  },
+"Slimebound:StudyChamp": {
+    "NAME": "Etudier Le Champi",
+    "DESCRIPTION": "Ajoutez une carte Champ au début de votre prochain !M! tour.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Champ améliorée à votre main au début de votre prochain tour."
+  },
+"Slimebound:StudyCollector": {
+    "NAME": "Etudier Collector",
+    "DESCRIPTION": "Ajoutez une carte Collector aléatoire à votre main au début de votre prochain !M! tour.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Collector aléatoire améliorée à votre main au début de chaque tour."
+  },
+"Slimebound:StudyGuardian": {
+    "NAME": "Etudier Guardian",
+    "DESCRIPTION": "Ajoutez une carte Guardian aléatoire dans votre main au début de votre prochain !M! tour.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Guardian aléatoire améliorée dans votre main au début de chaque tour."
+  },
+"Slimebound:StudyHexaghost": {
+    "NAME": "Etudier Hexaghost",
+    "DESCRIPTION": "Ajoutez une carte Hexaghost aléatoire à votre main au début de votre prochain !M! tour.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Hexaghost aléatoire améliorée à votre main au début de chaque tour."
+  },
+"Slimebound:StudyShapes": {
+    "NAME": "Etudier Donu & Deca",
+    "DESCRIPTION": "Ajoutez une carte Donu & Deca aléatoire dans votre main au début de votre !M! tour.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Donu & Deca aléatoire améliorée dans votre main au début de chaque tour."
+  },
+"Slimebound:StudyTimeEater": {
+    "NAME": "Etudier Time Eater",
+    "DESCRIPTION": "Ajoutez une carte Time Eater aléatoire à votre main au début de votre prochain !M! tour.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Time Eater aléatoire améliorée dans votre main au début de chaque tour."
+  },
+  "Slimebound:DivideAndConquerConquer": {
+    "NAME": "Conquer",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "Divide",
+    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Divide & Conquer",
+    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Serve & Protect",
+    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "Serve",
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectProtect": {
+    "NAME": "Protect",
+    "DESCRIPTION": "Gain !B! Block, plus !M! Block for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "Minion Master",
+    "DESCRIPTION": "When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Potency. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "The Best Defense",
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 2 more damage to you."
+  }
+}

@@ -45,7 +45,6 @@ public class HexaMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        //OnCardUseSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         PreRoomRenderSubscriber,
@@ -210,35 +209,6 @@ public class HexaMod implements
     public void atb(AbstractGameAction q) {
         AbstractDungeon.actionManager.addToBottom(q);
     }
-
-
-    /*
-    @Override
-    public void receiveCardUsed(AbstractCard abstractCard) {
-        if (!activeGhostFlame.charged && renderFlames)
-            if (activeGhostFlame instanceof SearingGhostflame && abstractCard.type == AbstractCard.CardType.ATTACK) {
-                ((SearingGhostflame) activeGhostFlame).attacksPlayedThisTurn++;
-                if (((SearingGhostflame) activeGhostFlame).attacksPlayedThisTurn == 2) {
-                    atb(new ChargeCurrentFlameAction());
-                }
-            } else if (activeGhostFlame instanceof CrushingGhostflame && abstractCard.type == AbstractCard.CardType.SKILL) {
-                ((CrushingGhostflame) activeGhostFlame).skillsPlayedThisTurn++;
-                if (((CrushingGhostflame) activeGhostFlame).skillsPlayedThisTurn == 2) {
-                    atb(new ChargeCurrentFlameAction());
-                }
-            } else if (activeGhostFlame instanceof BolsteringGhostflame && abstractCard.type == AbstractCard.CardType.POWER) {
-                atb(new ChargeCurrentFlameAction());
-            } else if (activeGhostFlame instanceof InfernoGhostflame) {
-                int x = abstractCard.costForTurn;
-                if (abstractCard.freeToPlayOnce) x = 0;
-                else if (abstractCard.cost == -1) x = abstractCard.energyOnUse;
-                ((InfernoGhostflame) activeGhostFlame).energySpentThisTurn += x;
-                if (((InfernoGhostflame) activeGhostFlame).energySpentThisTurn >= 3) {
-                    atb(new ChargeCurrentFlameAction());
-                }
-            }
-    }
-    */
 
 
     @Override

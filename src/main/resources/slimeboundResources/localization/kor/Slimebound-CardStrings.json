@@ -1,0 +1,620 @@
+{
+"Slimebound:Strike_Slimebound": {
+    "NAME": "타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+"Slimebound:Defend_Slimebound": {
+    "NAME": "수비",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다."
+  },
+"Slimebound:SplitBronze": {
+    "NAME": "분열: 청동",
+    "DESCRIPTION": "청동_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "청동_슬라임 으로 분열 합니다. 이 슬라임은 !M! 방어도를 더 부여하고 피해량이 !M! 증가합니다. NL 소멸."
+  },
+  "Slimebound:GangUp": {
+    "NAME": "다구리",
+    "DESCRIPTION": "싸움꾼_슬라임 으로 X 번 분열합니다. NL 싸움꾼_슬라임 은 이번 전투에서 !M! 추가 피해를 입힙니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "싸움꾼_슬라임 으로 X+1 번 분열합니다. NL 싸움꾼_슬라임 은 이번 전투에서 !M! 추가 피해를 입힙니다. NL 소멸."
+  },
+"Slimebound:LevelUp": {
+    "NAME": "레벨 업",
+    "DESCRIPTION": "잠재력 을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "잠재력 을 !M! 얻고 슬라임 슬롯 하나를 얻습니다."
+
+  },
+"Slimebound:SplitTorchHead": {
+    "NAME": "분열: 붗꽃",
+    "DESCRIPTION": "불꽃_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "불꽃_슬라임 으로 분열 합니다. NL 이 슬라임은 피해를 !M! 더 줍니다. NL 소멸."
+  },
+"Slimebound:SplitBruiser": {
+    "NAME": "분열: 싸움꾼",
+    "DESCRIPTION": "싸움꾼_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "싸움꾼_슬라임 으로 분열 합니다. NL 이 슬라임은 피해를 !M! 더 줍니다. NL 소멸."
+  },
+"Slimebound:SplitCultist": {
+    "NAME": "분열: 광신자",
+    "DESCRIPTION": "광신자_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "광신자_슬라임 으로 분열 합니다. NL 이 슬라임은 피해를 !M! 더 줍니다. NL 소멸."
+  },
+"Slimebound:SplitLeeching": {
+    "NAME": "분열: 거머리",
+    "DESCRIPTION": "거머리_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "거머리_슬라임 으로 분열 합니다. NL 이 슬라임은 방어도 를 !M! 더 부여합니다. NL 소멸."
+  },
+"Slimebound:SplitAcid": {
+    "NAME": "분열: 산성",
+    "DESCRIPTION": "산성_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "산성_슬라임 으로 분열 합니다. NL 이 슬라임은 중독 을 !M! 더 부여합니다. NL 소멸."
+  },
+"Slimebound:SplitMire": {
+    "NAME": "분열: 진흙탕",
+    "DESCRIPTION": "진흙탕_슬라임 으로 분열합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "진흙탕_슬라임 으로 분열합니다. NL 이 슬라임은 점액 을 !M! 더 부여합니다. NL 소멸."
+  },
+"Slimebound:ProtectTheBoss": {
+    "NAME": "두목을 지켜라",
+    "DESCRIPTION": "다음 번에 적의 공격으로 체력을 잃는 것을 막아줍니다, 대신 가장 오래된 슬라임을 잃습니다.",
+    "UPGRADE_DESCRIPTION": "다음 번에 적의 공격으로 체력을 잃는 것을 두번 막아줍니다, 대신 가장 오래된 슬라임을 잃습니다."
+  },
+  "Slimebound:SamplingLick": {
+    "NAME": "맛보며 핥기",
+    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 방어도 를  !B! 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다 NL 방어도 를 !B! 얻습니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+
+  },
+"Slimebound:DuplicateSlimes": {
+    "NAME": "증식",
+    "DESCRIPTION": "생성한 모든 슬라임을 복사합니다. NL 소멸."
+  },
+"Slimebound:Replication": {
+    "NAME": "복제",
+    "DESCRIPTION": "내 카드를 한장 선택합니다. 선택한 카드를 한장 더 얻습니다. NL 소멸."
+  },
+"Slimebound:AbsorbAll": {
+    "NAME": "흡수",
+    "DESCRIPTION": "모든 슬라임을 흡수합니다. 흡수한 슬라임 당 3 방어도 를 얻습니다."
+  },
+"Slimebound:Overexert": {
+    "NAME": "과로",
+    "DESCRIPTION": "잠재력 을 4 얻습니다. NL 사용 후 !M! 턴 후에, 모든 슬라임을 흡수 합니다. NL 소멸."
+  },
+"Slimebound:Split": {
+    "NAME": "분열",
+    "DESCRIPTION": "무작위 슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "무작위 슬라임 으로 두번 분열 합니다."
+  },
+"Slimebound:SuperSplit": {
+    "NAME": "초 분열",
+    "DESCRIPTION": "슬라임 슬롯을 X 개 얻습니다. NL 무작위 슬라임 으로 X 번 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "슬라임 슬롯을 X+1 개 얻습니다. NL 무작위 슬라임 으로 X+1 번 분열 합니다. NL 소멸."
+  },
+"Slimebound:LeadByExample": {
+    "NAME": "시범을 보여주지",
+    "DESCRIPTION": "매턴 첫번째로 적을 대상으로 카드를 사용하면 가장 오래된 슬라임도 따라 공격 합니다.",
+    "UPGRADE_DESCRIPTION": "매턴 처음 !M! 번째로 적을 대상으로 카드를 사용하면 가장 오래된 슬라임도 따라 공격 합니다."
+  },
+  "Slimebound:SlimeTap": {
+      "NAME": "슬라임 회수",
+      "DESCRIPTION": "가장 오래된 슬라임을 흡수합니다. [E] [E] 를 얻습니다 카드를 !M! 장 뽑습니다. NL 소멸.",
+      "UPGRADE_DESCRIPTION": "가장 오래된 슬라임을 2 두마리 흡수합니다. 흡수한 슬라임당 [E] [E] 를 얻고 카드를 2 장 뽑습니다. NL 소멸.",
+      "EXTENDED_DESCRIPTION": [
+        "슬라임이.. 필요해..."
+      ]
+  },
+"Slimebound:Teamwork": {
+    "NAME": "팀웍",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 가장 오래된 !M! 번째 슬라임들이 X 번 공격합니다.",
+    "UPGRADE_DESCRIPTION": "!D! 피해를 X 번 줍니다. NL 가장 오래된 두마리 슬라임들이 X 번 공격합니다."
+  },
+"Slimebound:SlimeBarrage": {
+    "NAME": "집단 구타",
+    "DESCRIPTION": "피해를 !D! 줍니다. 모든 슬라임들이 한번씩 공격합니다."
+  },
+"Slimebound:MaxSlimes": {
+    "NAME": "자리 마련",
+    "DESCRIPTION": "슬라임 슬롯을 !M! 개 얻습니다.",
+    "UPGRADE_DESCRIPTION": "슬라임 슬롯을 !M! 개 얻습니다."
+  },
+"Slimebound:SlimeBrawl": {
+    "NAME": "슬라임 난투",
+    "DESCRIPTION": "뽑을 카드 더미 맨 위의 카드를 사용합니다. 슬라임 부하 수 만큼 반복합니다. NL 소멸."
+  },
+"Slimebound:SpikyOuterGoop": {
+    "NAME": "끈적이 갑옷",
+    "DESCRIPTION": "점액 이 적용된 상대를 공격하면 !M! 방어도 를 얻습니다."
+  },
+"Slimebound:SelfFormingGoo": {
+    "NAME": "자가형성 점액",
+    "DESCRIPTION": "체력을 잃을때 마다, 무작위 적에게 점액 을 !SlimeboundSlimed! 부여하고 다음턴에 방어도 를 !M! 얻습니다."
+  },
+"Slimebound:SlimeSpikes": {
+    "NAME": "슬라임 가시",
+    "DESCRIPTION": "방어도 를 !B! 얻고 가시 를 !M! 얻습니다. NL 다음턴의 시작에 가시 를 !M! 잃습니다."
+  },
+"Slimebound:FormABlockade": {
+    "NAME": "장벽을 쌓아라",
+    "DESCRIPTION": "진흙탕_슬라임 또는 거머리_슬라임 으로 분열 합니다. NL 방어도 를 !B! 얻습니다, 슬라임 부하 수 만큼 !M! 방어도 를 추가로 얻습니다. NL 소멸.",
+  "UPGRADE_DESCRIPTION": "진흙탕_슬라임 과 거머리_슬라임 으로 분열 합니다. NL 방어도 를 !B! 얻습니다 , 슬라임 부하 수 만큼 !M! 방어도 를 추가로 얻습니다. NL 소멸."
+  },
+"Slimebound:LeechingTouch": {
+    "NAME": "흡수의 손길",
+    "DESCRIPTION": "대상의 점액 만큼 방어도 를 얻습니다. NL 피해를 !D! 줍니다."
+  },
+"Slimebound:Dissolve": {
+    "NAME": "용해",
+    "DESCRIPTION": "카드 한장을 소멸 시킵니다. 비용과 같은 수의 무작위 핥기 카드를 얻습니다. NL 소멸.",
+  "UPGRADE_DESCRIPTION": "카드 한장을 소멸 시킵니다. 비용 + 1 과 같은 수의 무작위 핥기 카드를 얻습니다. NL 소멸."
+},
+"Slimebound:DuplicatedForm": {
+    "NAME": "형상 복제",
+    "UPGRADE_DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 [E] 를 얻습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
+  "DESCRIPTION": "체력 !M! 과 최대 체력 !M! 을 잃습니다. NL 매턴 처음에 적에게 사용하는 카드가 두번 사용됩니다.",
+  "EXTENDED_DESCRIPTION": [
+      "너무.. 건강헤..."
+    ]
+  },
+"Slimebound:Recollect": {
+    "NAME": "회상",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 비용이 0인 소멸된 카드 1 장을 다시 손에 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도 를 !B! 얻습니다. NL 비용이 0인 소멸된 카드 2 장을 다시 손에 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "소멸되지.. 않았어.."
+    ]
+  },
+"Slimebound:FormOfPuddle": {
+    "NAME": "웅덩이 형상",
+    "DESCRIPTION": "불가침 을 1 얻습니다. NL 소멸."
+  },
+"Slimebound:GrowthPunch": {
+    "NAME": "성장 펀치",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이 카드의 피해량을 영구히 !M! 증가시킵니다. NL 소멸.",
+  "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 방어도 를 !B! 얻습니다. NL 이 카드의 효과를 영구히 !M! 증가시킵니다. NL 소멸."
+
+},
+  "Slimebound:CheckThePlaybook": {
+    "NAME": "전술교본 참조",
+    "DESCRIPTION": "무작위 태클 카드를 4장 얻습니다. 이번 전투에서 그 카드의 비용이 1 감소합니다. NL 소멸."
+
+  },
+"Slimebound:Recycling": {
+    "NAME": "재활용",
+    "DESCRIPTION": "다음 !M! 턴동안 내 턴이 시작될때, NL 비용이 0인 소멸된 카드 1 장을 다시 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 다음 !M! 턴동안 내 턴이 시작될때, NL 비용이 0인 소멜된 카드 1 장을 다시 얻습니다."
+  },
+"Slimebound:Repurpose": {
+    "NAME": "재설계",
+    "DESCRIPTION": "카드 1 장을 변형 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 1 장 뽑습니다. 카드를 1 장을 변형 합니다. NL 소멸."
+  },
+"Slimebound:RollThrough": {
+    "NAME": "구르기",
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 적들은 앞으로 태클 카드로 부터 !M! 추가 피해를 입습니다."
+  },
+"Slimebound:MassRepurpose": {
+    "NAME": "대량 재설계",
+    "DESCRIPTION": "내 손의 모든 카드를 변형 합니다. NL 소멸."
+  },
+"Slimebound:SoTasty": {
+    "NAME": "너무 맛있어!",
+    "DESCRIPTION": "무작위 적에게 !D! 피해를 X 번 줍니다. 무작위 핥기 카드를 X 개 손으로 가져옵니다. NL 소멸."
+  },
+"Slimebound:Regenerate": {
+    "NAME": "재생",
+    "DESCRIPTION": "재생 을 !M! 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "재생 을 !M! 얻습니다. NL 카드를 1 장 뽑습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "Need... Regeneration..."
+    ]
+  },
+"Slimebound:Lick": {
+    "NAME": "핥기",
+    "DESCRIPTION": "약화를 !SlimeboundSlimePoison! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "약화를 !SlimeboundSlimePoison! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+"Slimebound:HauntingLick": {
+    "NAME": "홀리는 핥기",
+    "DESCRIPTION": "취약 을 1 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "취약 을 1 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+"Slimebound:PoisonLick": {
+    "NAME": "독성 핥기",
+    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여하고 중독 을 !SlimeboundSlimePoison! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여하고 중독 을 !SlimeboundSlimePoison! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+"Slimebound:MegaLick": {
+    "NAME": "마구 핥기",
+    "DESCRIPTION": "모든 적에게 약화 을 !M! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "모든 적에게 약화 을 !M! 부여하고 점액 을 !SlimeboundSlimed! 부여합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+"Slimebound:FocusedLick": {
+    "NAME": "집요한 핥기",
+    "DESCRIPTION": "모든 약화 와 중독 을 점액 으로 대체합니다. NL 점액 을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "모든 약화 와 중독 을 점액 으로 대체합니다. NL 점액 을 !M! 부여합니다."
+  },
+"Slimebound:RejuvenatingLick": {
+    "NAME": "기운나는 핥기",
+    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 체력 을 !M! 회복합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 체력 을 !M! 회복합니다. NL 카드를 1 장 뽑습니다. NL 소멸."
+  },
+"Slimebound:Gluttony": {
+    "NAME": "폭식",
+    "DESCRIPTION": "매턴 처음으로 점액 이 적용된 적을 공격할때 마다 무작위 핥기 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. 매턴 처음으로 점액 이 적용된 적을 공격할때 마다 무작위 핥기 카드를 얻습니다."
+  },
+"Slimebound:PressTheAttack": {
+    "NAME": "계속 공격해",
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 점액 상태이면 가장 오래된 슬라임도 공격합니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 점액 상태이면 가장 오래된 슬라임도 두 번 공격합니다."
+  },
+"Slimebound:StrikeFrailPoint": {
+    "NAME": "약점을 노려라",
+    "DESCRIPTION": "적이 취약 상태이면, 모든 방어도를 없애고, 취약 을 1 제거합니다. NL 피해를 !D! 줍니다."
+  },
+"Slimebound:SoulSicken": {
+    "NAME": "영혼 쇠약",
+    "DESCRIPTION": "중독 을 !M! 부여합니다. NL 점액 의 절반을 중독 으로 전환 합니다.",
+  "UPGRADE_DESCRIPTION": "중독 을 !M! 부여합니다. NL 점액 의 절반을 중독 으로 전환 합니다."
+  },
+"Slimebound:AcidGelatin": {
+    "NAME": "산성 젤라틴",
+    "DESCRIPTION": "점액 상태인 대상을 공격할때마다 대상에게 !M! 중독 을 부여합니다."
+  },
+"Slimebound:TongueLash": {
+    "NAME": "혓바닥 채찍",
+    "DESCRIPTION": "피해를 !D! 줍니다. 덱에 있는 이름에 핥기 가 붙은 카드 하나당 피해량이 !M! 증가합니다."
+  },
+"Slimebound:ItLooksTasty": {
+    "NAME": "맜있겟군",
+    "DESCRIPTION": "피해를 !D! 줍니다. 대상이 점액 상태이면 무작위 핥기 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 대상이 점액 상태이면 무작위 강화된 핥기 카드를 1 장 얻습니다."
+  },
+"Slimebound:AcidTongue": {
+    "NAME": "산성 혓바닥",
+    "DESCRIPTION": "점액 을 부여할때마다 중독 을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "점액 을 부여할때마다 중독 을 !M! 부여합니다. NL 점액을 부여할때 1 추가로 부여합니다."
+  },
+"Slimebound:TendrilStrike": {
+    "NAME": "맹독 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독 수치만큼 피해를 입고 중독이 1 줄어듭니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 중독 수치만큼 피해를 입고 중독이 1 줄어듭니다. NL 소멸."
+},
+  "Slimebound:FirmFortitude": {
+    "NAME": "내 고통을 느껴라",
+    "DESCRIPTION": "처음으로 내 턴에 체력을 잃을때 적이 체력을 대신 잃습니다.",
+	"UPGRADE_DESCRIPTION": "선천성. NL 처음으로 내 턴에 체력을 잃을때 적이 체력을 대신 잃습니다."
+	
+  },
+"Slimebound:AccelerateToxins": {
+    "NAME": "맹독 가속",
+    "DESCRIPTION": "중독 된 적의 수 만큼, 중독 의 턴 종료 효과를 발동합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "중독 된 적의 수 만큼, 중독 의 턴 종료 효과를 두번 발동합니다. NL 소멸."
+  },
+"Slimebound:QuickStudy": {
+    "NAME": "속성 연구",
+  "DESCRIPTION": "무작위 첨탑_보스 카드를 1 장 얻습니다. NL 체력을 !M! 잃습니다. NL 소멸.",
+  "UPGRADE_DESCRIPTION": "무작위 첨탑_보스 카드를 2 장 얻습니다. NL 체력을 !M! 잃습니다. NL 소멸."
+  },
+"Slimebound:WasteNot": {
+    "NAME": "남기면 안돼",
+    "DESCRIPTION": "비용이 0인 모든 소멸된 카드를 다시 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "소멸되지.. 않았어..."
+    ]
+  },
+"Slimebound:Prepare": {
+    "NAME": "준비",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 다음턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음턴에 [E] [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 카드를 !M! 장 보존 합니다. 소멸."
+  },
+"Slimebound:Grow": {
+    "NAME": "성장",
+    "DESCRIPTION": "슬라임 슬롯을 1 개 잃고 힘 !M! 과 민첩 !M! 을 얻습니다."    
+  },
+"Slimebound:HungryTackle": {
+    "NAME": "굶주린 태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 비용이 0인 소멸된 카드 1 장을 다시 손에 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 비용이 0인 소멸된 카드 2 장을 다시 손에 얻습니다."
+  },
+"Slimebound:FinishingTackle": {
+    "NAME": "끝내기 태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 적이 점액 상태이면 방어도 를 !B! 얻습니다."
+  },
+"Slimebound:SlimesplosionOLD": {
+    "NAME": "점액 폭발",
+    "DESCRIPTION": "Apply !M! Slimed and !SlimeboundSlimePoison! Poison to ALL enemies X times. NL 소멸."
+  },
+"Slimebound:LivingWall": {
+    "NAME": "살아있는 벽",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 공격을 받으면 공격자에게 !SlimeboundSlimed! 점액 을 부여 합니다."
+  },
+"Slimebound:Slimepotheosis": {
+    "NAME": "점액 변형",
+    "DESCRIPTION": "손에 있는 모든 카드를 강화합니다. 강화된 카드 1 장당 !M! 피해를 받습니다. NL 소멸."
+  },
+"Slimebound:ComboTackle": {
+    "NAME": "콤보 태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 얻고 카드를 1 장 뽑습니다. ",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 이번 턴에 수행 된 각각의 공격에 대해 카드 한 장을 뽑는다. (얻고 카드를 !M! 장 뽑습니다)"
+  },
+ "Slimebound:Tackle": {
+    "NAME": "태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다."
+  },
+"Slimebound:GoopTackle": {
+    "NAME": "개막 태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 무작위 태클 카드를 손에 얻습니다. 이번 턴 동안 그 카드의 비용이 0이 됩니다.",
+  "UPGRADE_DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 무작위 강화된 태클 카드를 손에 얻습니다. 이번 턴 동안 그 카드의 비용이 0이 됩니다."
+
+},
+"Slimebound:CorrosiveSpit": {
+    "NAME": "부식성 침",
+    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다."
+  },
+"Slimebound:Chomp": {
+    "NAME": "우적우적",
+    "DESCRIPTION": "!D! 피해를 두번 줍니다. NL 대상은 앞으로 태클 카드로 부터 !M! 추가 피해를 입습니다."
+  },
+"Slimebound:DouseInSlime": {
+    "NAME": "점액에 처박기",
+    "DESCRIPTION": "점액 을 !SlimeboundSlimed! 부여합니다. NL 다음번에 그 적을 공격해도 점액이 소모되지 않습니다."
+  },
+"Slimebound:FlameTackle": {
+    "NAME": "화염 태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 태클 카드는 이번 전투에서 !M! 추가 피해를 입힙니다."
+  },
+"Slimebound:VenomTackle": {
+    "NAME": "맹독 태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. NL 적이 점액 상태이면 중독 을 !M! 부여합니다."
+  },
+"Slimebound:UsefulSlime": {
+    "NAME": "쓸만한 점액이군!",
+    "DESCRIPTION": "카드를 2 장 뽑습니다. NL 소멸."
+  },
+"Slimebound:RainOfGoop": {
+    "NAME": "끈적이 비",
+    "DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다.",
+    "UPGRADE_DESCRIPTION": "무작위 적 에게 점액 !SlimeboundSlimed! 을 !M! 번 부여합니다."
+  },
+"Slimebound:GoopSpray": {
+    "NAME": "끈적이 스프레이",
+    "DESCRIPTION": "모든 적에게 점액 을 !SlimeboundSlimed! 부여하고 중독 을 !M! 부여합니다. "
+  },
+"Slimebound:MassFeed": {
+    "NAME": "대량 섭취",
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 이 공격으로 적이 죽으면 영구적으로 최대 체력이 !M! 증가합니다. NL 소멸."
+  },
+"Slimebound:StrayGoop": {
+    "NAME": "흩어진 끈적이",
+    "DESCRIPTION": "이번턴에 체력을 잃을때 마다 무작위 적에게 !SlimeboundSlimed! 점액 을 부여합니다."
+  },
+"Slimebound:ViciousTackle": {
+    "NAME": "사나운 태클",
+    "DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. 점액 에 의한 추가 피해가 두배가 됩니다.",
+  "UPGRADE_DESCRIPTION": "피해를 !D! 주고 자신에게 !SlimeboundSelfharm! 피해를 입힙니다. 점액 에 의한 추가 피해와 회복이 두배가 됩니다."
+  },
+"Slimebound:LeechEnergy": {
+    "NAME": "에너지 흡수",
+    "DESCRIPTION": "피해를 !D! 줍니다. 적이 점액 상태이면 [E] 를 얻고 카드를 1 장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. 적이 점액 상태이면 [E] 를 얻고 카드를 2 장 뽑습니다."
+},
+"Slimebound:LeechLife": {
+    "NAME": "생명력 흡수",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 중독 을 !M! 부여합니다. NL 체력 을 !M! 회복합니다. NL 소멸."
+  },
+  "Slimebound:Equalize": {
+    "NAME": "균일화",
+    "DESCRIPTION": "피해를 !D! 줍니다, 체력을 !M! 회복합니다. NL 현재 체력이 절반 이하이면 두번 발동합니다. NL 소멸."
+
+  },
+"Slimebound:DisruptingSlam": {
+    "NAME": "방해 강타",
+    "DESCRIPTION": "모든 적에게 !D! 피해를 줍니다. 공격할 의도가 없는 적에게는 피해를 두번 줍니다."
+  },
+"Slimebound:ChargeUp": {
+    "NAME": "기 모으기",
+    "DESCRIPTION": "다음턴에 방어도 !B! 와 힘 !M! 을 얻습니다. NL 소멸."
+  },
+"Slimebound:GuardianWhirl": {
+    "NAME": "회오리 바람",
+    "DESCRIPTION": "모든 적에게 !D! 피해를 4 번 줍니다. NL 소멸."
+  },
+"Slimebound:DefensiveMode": {
+    "NAME": "방어 모드",
+    "DESCRIPTION": "가시 를 !M! 얻 습니다. NL 방어도 를 !B! 얻고, 다음턴에도 방어도 를 !B! 얻습니다."
+  },
+"Slimebound:PrepareCrush": {
+    "NAME": "준비: 으깨기",
+    "DESCRIPTION": "다음턴에 [E] [E] [E] 과 !M! 힘 을 얻습니다, 그리고 슬라임 으깬다! 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음턴에 [E] [E] [E] [E] 과 !M! 힘 을 얻습니다, 그리고 슬라임 으깬다! 카드를 얻습니다. NL 소멸."
+  },
+"Slimebound:SlimeCrush": {
+    "NAME": "슬라임 으깬다!!!",
+    "DESCRIPTION": "휘발성. 피해를 !D! 줍니다. NL 소멸."
+  },
+"Slimebound:SplitGhostflame": {
+    "NAME": "분열: 유령불꽃",
+    "DESCRIPTION": "슬라임 슬롯을 6개 까지 늘립니다. NL 유령불꽃_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "슬라임 슬롯을 6개 까지 늘립니다. NL 유령불꽃_슬라임 두마리로 분열 합니다. NL 소멸."
+  },
+ "Slimebound:Icky": {
+    "NAME": "질척거림",
+    "DESCRIPTION": "사용불가. NL 뽑으면, 점액투성이를 손에 넣습니다."
+  },
+"Slimebound:PrepareDivider": {
+    "NAME": "준비: 분리",
+    "DESCRIPTION": "다음턴에 [E] [E] [E] 과 !M! 힘 을 얻습니다, 그리고 분리 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음턴에 [E] [E] [E] [E] 과 !M! 힘 을 얻습니다, 그리고 분리 카드를 얻습니다. NL 소멸."
+  },
+"Slimebound:Hexaburn": {
+    "NAME": "지옥불",
+    "DESCRIPTION": "무작위 적 하나에게 !D! 피해를 !M! 번 줍니다. NL 소멸."
+  },
+"Slimebound:PrepareBeam": {
+    "NAME": "준비: 광선",
+    "DESCRIPTION": "다음턴에 [E] [E] [E] 과 !M! 힘 을 얻습니다, 그리고 광선 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "다음턴에 [E] [E] [E] [E] 과 !M! 힘 을 얻습니다, 그리고 광선 카드를 얻습니다. NL 소멸."
+  },
+"Slimebound:SlimeBeam": {
+    "NAME": "슬라임 광선",
+    "DESCRIPTION": "모든 적에게 피해를 !D! 줍니다. NL 소멸."
+  },
+"Slimebound:Flail": {
+    "NAME": "철퇴",
+    "DESCRIPTION": "모든 적에게 !D! 피해를 두번 줍니다. NL 인공물 을 !M! 얻습니다. NL 소멸."
+  },
+"Slimebound:DefensiveStance": {
+    "NAME": "방어 자세",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 매턴이 끝날때 방어도 를 !M! 얻습니다."
+  },
+"Slimebound:FaceSlap": {
+    "NAME": "따귀",
+    "DESCRIPTION": "적의 모든 방어도를 없앱니다. NL 피해를 !D! 줍니다. 취약 을 !M! 부여합니다. NL 소멸."
+  },
+"Slimebound:LastStand": {
+    "NAME": "최후의 저항",
+    "DESCRIPTION": "모든 해로운 효과를 없앱니다. NL 힘 !M! 을 얻거나 체력이 절반 이하면 힘 !SlimeboundSlimePoison! 을 얻습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "너무.. 건강해..."
+    ] },
+"Slimebound:Collect": {
+    "NAME": "수집",
+    "DESCRIPTION": "힘 !M! 과 잠재력 1 을 얻습니다. NL 방어도 를 !B! 얻습니다. NL 소멸."
+  },
+"Slimebound:YouAreMine": {
+    "NAME": "너는 내것이다!",
+    "DESCRIPTION": "모든 적에게 약화 와 취약 을 !M! 부여하고 방어도를 모두 없앱니다. NL 소멸."
+  },
+"Slimebound:OozeBath": {
+    "NAME": "점액 샤워",
+    "DESCRIPTION": "적의 점액 을 두배로 만듭니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "적의 점액 과 중독 을 두배로 만듭니다. NL 소멸."
+  },
+"Slimebound:CaCaw": {
+    "NAME": "까-악!",
+    "DESCRIPTION": "내턴이 시작할때 힘 !M! 을 얻습니다.",
+  "UPGRADE_DESCRIPTION": "힘 !M! 을 얻습니다. NL 내턴이 시작할때 힘 !M! 을 얻습니다."
+  },
+"Slimebound:DarkVoid": {
+    "NAME": "암흑 공허",
+    "DESCRIPTION": "모든 적에게 !D! 피해를 줍니다. 다음턴에 적이 공격 하지 않으면, 힘 1 을 얻습니다. NL 소멸."
+  },
+"Slimebound:TimeRipple": {
+    "NAME": "시간 파동",
+    "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 모든 적에게 감속 을 부여합니다."
+  },
+"Slimebound:HeadSlam": {
+    "NAME": "Head Slam",
+    "DESCRIPTION": "피해를 !D! 줍니다. 대상이 보스가 아니면 기절 시킵니다. NL 소멸."
+  },
+"Slimebound:ManipulateTime": {
+    "NAME": "시간 조작",
+    "DESCRIPTION": "턴 시작시 적용되는 모든 효과를 적용합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "턴 시작시 적용되는 모든 효과를 적용합니다. 그후 다시 한번 적용합니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": [
+      "너무... 늦었어..."
+    ]
+  },
+"Slimebound:DonusPower": {
+    "NAME": "도누의 힘",
+    "DESCRIPTION": "힘 1 을 얻습니다. NL 무작위 공격 카드를 1 장 얻습니다. 이번 턴에 그 카드의 비용이 0이 됩니다. NL 소멸.",
+  "UPGRADE_DESCRIPTION": "힘 1 과 인공물 1 을 얻습니다.  NL 무작위 공격 카드를 1 장 얻습니다. 이번 턴에 그 카드의 비용이 0이 됩니다. NL 소멸."
+},
+"Slimebound:DecasProtection": {
+    "NAME": "데카의 보호",
+    "DESCRIPTION": "민첩 1 을 얻습니다.  NL 무작위 파워 카드를 1 장 얻습니다. 이번 턴에 그 카드의 비용이 0이 됩니다 NL 소멸.",
+  "UPGRADE_DESCRIPTION": "민첩 1 과 인공물 1 을 얻습니다.  NL 무작위 파워 카드를 1 장 얻습니다. 이번 턴에 그 카드의 비용이 0이 됩니다 NL 소멸."
+  },
+"Slimebound:PolyBeam": {
+    "NAME": "다중 광선",
+    "DESCRIPTION": "!D! 피해를 두번 줍니다. NL 다음턴의 시작에 !D! 피해를 두번 줍니다. NL 소멸.",
+  "UPGRADE_DESCRIPTION": "D! 피해를 두번 줍니다. NL 소멸."
+  },
+"Slimebound:Sear": {
+    "NAME": "그을리기",
+    "DESCRIPTION": "피해를 !D! 줍니다, 이 번 전투 동안 !M! 피해를 추가로 줍니다. NL 소멸."
+  },
+"Slimebound:StudyAutomaton": {
+    "NAME": "자동기계 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 자동기계 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Automaton card to your hand at the start of each turn."
+  },
+"Slimebound:StudyTheSpire": {
+    "NAME": "첨탑 연구",
+    "DESCRIPTION": "!M! 턴 동안 무작위 첨탑_보스 카드를 턴 시작에 얻습니다.",
+    "UPGRADE_DESCRIPTION": "!M! 턴 동안 무작위 강화된 첨탑_보스 카드를 턴 시작에 얻습니다."
+  },
+"Slimebound:StudyAwakened": {
+    "NAME": "깨어난자 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 깨어난자 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Awakened One card to your hand at the start of each turn."
+  },
+"Slimebound:StudyChamp": {
+    "NAME": "투사 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 투사 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Champ card to your hand at the start of each turn."
+  },
+"Slimebound:StudyCollector": {
+    "NAME": "수집가 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 수집가 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Collector card to your hand at the start of each turn."
+  },
+"Slimebound:StudyGuardian": {
+    "NAME": "수호자 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 수호자 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Guardian card to your hand at the start of each turn."
+  },
+"Slimebound:StudyHexaghost": {
+    "NAME": "육각령 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 육각령 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Hexaghost card to your hand at the start of each turn."
+  },
+"Slimebound:StudyShapes": {
+    "NAME": "도누 & 데카 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 도누 와 데카 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Donu & Deca card to your hand at the start of each turn."
+  },
+"Slimebound:StudyTimeEater": {
+    "NAME": "시간포식자 연구",
+    "DESCRIPTION": "다음 !M! 턴 동안 무작위 시간 포식자 카드를 1 장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Time Eater card to your hand at the start of each turn."
+  },
+  "Slimebound:DivideAndConquerConquer": {
+    "NAME": "정복",
+    "DESCRIPTION": "피해를 !D! 줍니다. 생성된 슬라임 갯수당 !M! 피해를 추가로 줍니다. NL 소멸."
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "분할",
+    "DESCRIPTION": "싸움꾼_슬라임 또는 산성_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "싸움꾼_슬라임 과 산성_슬라임 으로 분열 합니다. NL 소멸."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "분할 & 정복",
+    "DESCRIPTION": "분할, 정복 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "강화된 분할, 정복 카드를 얻습니다. NL 소멸."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "섬김 & 보호",
+    "DESCRIPTION": "섬김, 보호 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "강화된 섬김, 보호 카드를 얻습니다. NL 소멸."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "섬김",
+    "DESCRIPTION": "거머리_슬라임 또는 진흙탕_슬라임 으로 분열 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "거머리_슬라임 과 진흙탕_슬라임 으로 분열 합니다. NL 소멸."
+  },
+  "Slimebound:ServeAndProtectProtect": {
+    "NAME": "보호",
+    "DESCRIPTION": "방어도를 !B! 얻습니다, 생성된 슬라임 갯수당 !M! 방어도를 추가로 얻습니다. NL 소멸."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "졸개 마스터",
+    "DESCRIPTION": "슬라임 슬롯을 1 개 얻습니다. 생성된 슬라임이 점액, 중독, 방어도 를 부여할때 1 더 부여합니다.",
+    "UPGRADE_DESCRIPTION": "슬라임 슬롯을 !M! 개 얻습니다. 잠재력 을 1 얻습니다. NL 생성된 슬라임이 점액, 중독, 방어도 를 부여할때 1 더 부여합니다."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "무모함",
+    "DESCRIPTION": "태클 카드가 적에게 !M! 피해를 추가로 주고, 나에게 주는 피해도 2 감소합니다."
+  }
+}

@@ -36,8 +36,13 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
+<<<<<<< HEAD
     "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame NL Exhaust.",
     "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
+=======
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then Charge, the Ghostflame after the hexamod:Active one. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then Charge, the Ghostflame after the hexamod:Active one."
+>>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
@@ -90,7 +95,7 @@
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 0 until played."
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less."
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
@@ -198,7 +203,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
-    "DESCRIPTION": "Deal !D! damage and apply !M! hexamod:Burn to a random enemy 4 times."
+    "DESCRIPTION": "Deal !D! damage and apply 1 hexamod:Burn to a random enemy !M! times."
   },
   "hexamod:Firestarter": {
     "NAME": "Firestarter",
@@ -235,7 +240,7 @@
   },
   "hexamod:InvigoratingFlames": {
     "NAME": "Invigorating Flames",
-    "DESCRIPTION": "Remove the enemy's hexamod:Burn and gain that much Block. NL If they have no hexamod:Burn, apply 5 hexamod:Burn instead."
+    "DESCRIPTION": "Gain !B! Block, increased by hexamod:Burn on ALL enemies."
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
@@ -274,7 +279,12 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
+<<<<<<< HEAD
     "DESCRIPTION": "For each hexamod:Ignited Ghostflame, hexamod:Extinguish it and deal !D! damage and apply !M! hexamod:Burn to ALL enemies."
+=======
+    "DESCRIPTION": "Retain. NL Charge the Inferno Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Charge the hexamod:Active Ghostflame. NL Charge the Inferno Ghostflame. NL Exhaust."
+>>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
@@ -286,8 +296,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
-    "DESCRIPTION": "Ethereal. NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL The Inferno Ghostflame becomes hexamod:Active."
+    "DESCRIPTION": "Ethereal. NL Lose 6 HP. NL Gain [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Lose 6 HP. NL Gain [E] [E] [E] . NL The Inferno Ghostflame becomes hexamod:Active. NL Exhaust."
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
@@ -300,17 +310,22 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of this turn instead of hexamod:Advancing.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Extinguish the hexamod:Active Ghostflame at the end of the next 2 turns instead of hexamod:Advancing."
+    "DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. Do not hexamod:Advance at the end of this turn."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",
     "DESCRIPTION": "hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
   },
   "hexamod:ApocalypticArmor": {
+<<<<<<< HEAD
     "NAME": "Apocalypse Armor",
     "DESCRIPTION": "Whenever you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, gain 1 Intangible.",
     "UPGRADE_DESCRIPTION": "Whenever you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, gain 1 Intangible."
+=======
+    "NAME": "Doomsday",
+    "DESCRIPTION": "The next time you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, take an extra turn."
+>>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",

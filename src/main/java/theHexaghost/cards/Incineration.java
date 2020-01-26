@@ -33,8 +33,8 @@ public class Incineration extends AbstractHexaCard {
                 public void update() {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    atb(new DamageAction(m, makeInfo(), AttackEffect.FIRE));
-                    atb(new BurnAction(m, 1));
+                    addToTop(new DamageAction(m, makeInfo(), AttackEffect.FIRE));
+                    addToTop(new BurnAction(m, 1));
                 }
             });
         }

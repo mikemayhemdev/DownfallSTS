@@ -1,6 +1,7 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.powers.BurnPower;
@@ -28,7 +29,7 @@ public class PhantomFireball extends AbstractHexaCard {
             public void update() {
                 isDone = true;
                 if (m.hasPower(BurnPower.POWER_ID)) {
-                    dmg(m, makeInfo(), AttackEffect.FIRE);
+                    addToTop(new DamageAction(m, makeInfo(), AttackEffect.FIRE));
                 }
             }
         });

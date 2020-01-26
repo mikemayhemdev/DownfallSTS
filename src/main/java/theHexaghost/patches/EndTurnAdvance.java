@@ -23,7 +23,6 @@ public class EndTurnAdvance {
                 AbstractPower p = AbstractDungeon.player.getPower(AgainPower.POWER_ID);
                 p.flash();
                 AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
-                AbstractDungeon.actionManager.addToBottom(new ExtinguishCurrentFlameAction());
             } else
                 AbstractDungeon.actionManager.addToBottom(new AdvanceAction());
         }

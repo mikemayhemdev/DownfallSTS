@@ -1,0 +1,180 @@
+{
+	"Guardian:NextTurnGainStrengthPower": {
+		"NAME": "충전 중",
+		"DESCRIPTIONS": [
+			"다음 턴 시작시 힘을 ",
+			" 얻습니다."
+		]
+	},
+	"Guardian:StunnedPower": {
+	"NAME": "기절",
+	"DESCRIPTIONS": [
+		"다음 턴을 넘깁니다.",
+		"다음 ",
+		" 턴을 넘깁니다."
+	]
+},
+	"Guardian:FloatingOrbsPower": {
+		"NAME": "떠다니는 구체들",
+		"DESCRIPTIONS": [
+			"턴 시작시 구체강타 1 장을 손으로 가져옵니다.",
+			"턴 시작시 구체강타 ",
+			" 장을 손으로 가져옵니다."
+		]
+	},
+	"Guardian:SearingPower": {
+	"NAME": "화상",
+	"DESCRIPTIONS": [
+		"매 턴 시작시 피해를 ",
+		" 입습니다."
+	]
+},
+	"Guardian:OrbwalkPower": {
+		"NAME": "구체방랑",
+		"DESCRIPTIONS": [
+			"매 턴 시작시 힘을 ",
+			" 얻습니다."
+		]
+	},
+	"Guardian:ClonePower": {
+		"NAME": "재배열",
+		"DESCRIPTIONS": [
+			"소멸하지 않는 다음 공격 및 스킬 카드 1 장 사용시 정지장에 넣습니다.",
+			"소멸하지 않는 다음 공격 및 스킬 카드 ",
+			" 장 사용시 정지장에 넣습니다."
+		]
+	},
+	"Guardian:GemFinderPower": {
+		"NAME": "보석 발굴",
+		"DESCRIPTIONS": [
+			"전투 종료시 덱에 넣을 일반 보석 카드를 1 장 선택합니다.",
+			"전투 종료시 덱에 넣을 일반 보석 카드를 ",
+			" 장 선택합니다."
+		]
+	},
+	"Guardian:FuturePlansPower": {
+		"NAME": "미래 계획",
+		"DESCRIPTIONS": [
+			"턴 종료시 카드 #b",
+			" 장을 정지장에 넣습니다.",
+			" 장을 정지장에 넣습니다."
+		]
+	},
+	"Guardian:DefenseModePower": {
+		"NAME": "방어모드",
+		"DESCRIPTIONS": [
+			"방어모드의 지속시간은 ",
+			" 턴 남았습니다. NL 방어 모드가 활성화 되면 가시를 ",
+			" 얻고 주는 피해량이 25% 감소합니다. 카드를 낼 때 마다 방어도를 2씩 얻습니다."
+		]
+	},
+	"Guardian:ConstructModePower": {
+		"NAME": "재구성 모드",
+		"DESCRIPTIONS": [
+			"이번 턴 동안 체력을 잃거나 공격카드를 낼 수 없습니다.",
+			"다음 ",
+			" 턴 동안 체력을 잃거나 공격카드를 낼 수 없습니다."
+		]
+	},
+	"Guardian:MultiBoostPower": {
+		"NAME": "멀티부스트",
+		"DESCRIPTIONS": [
+			"여러번 공격하는 카드를 사용했을 때 추가로 1 번 더 공격합니다.",
+			"여러번 공격하는 카드를 사용했을 때 추가로 ",
+			" 번 더 공격합니다."
+		]
+	},
+	"Guardian:TargetedPower": {
+		"NAME": "목표설정",
+		"DESCRIPTIONS": [
+			"이 적이 피해를 입을 때 마다 이번 턴에만 힘을 ",
+			" 얻습니다."
+		]
+	},
+	"Guardian:LoseThornsPower": {
+		"NAME": "가시 제거",
+		"DESCRIPTIONS": [
+			"다음 턴 시작시 가시를 ",
+			" 잃습니다."
+		]
+	},
+	"Guardian:BeamBuffPower": {
+		"NAME": "격발",
+		"DESCRIPTIONS": [
+			"광선 이 들어간 카드의 피해량이 ",
+			" 증가합니다."
+		]
+	},
+	"Guardian:DefensiveModeBuffsPower": {
+		"NAME": "방어모드 추가모듈",
+		"DESCRIPTIONS": [
+			"일반 방어모드에 추가로 다음 효과를 얻습니다: NL ",
+			" 가시.",
+			" 민첩.",
+			" 금속화.",
+			"매 턴 가장 먼저 뽑은 상태이상 혹은 저주 카드 1 장 소멸",
+			"매 턴 가장 먼저 뽑은 상태이상 혹은 저주 카드 ",
+			" 장 소멸 ",
+			"방어도 를 모두 잃으면 턴 시작시 임시 힘 ",
+			" 증가."
+		]
+	},
+	"Guardian:AutomayhemPower": {
+		"NAME": "시간 분리",
+		"DESCRIPTIONS": [
+			"턴 종료시 정지장 카운터가 2 이상 남은 카드 중 가장 오래된 카드 1장의 카운터를 1 줄입니다.",
+			" 번 반복하여 발동합니다. 턴 종료시 정지장 카운터가 2 이상 남은 카드 중 가장 오래된 카드 1장의 카운터를 1 줄입니다."
+		]
+	},
+	"Guardian:ConstructPower": {
+		"NAME": "고대의 구조물",
+		"DESCRIPTIONS": [
+			"턴 시작시 인공물이 없다면 인공물을 ",
+			" 얻고 [E] 를 ",
+			" 잃습니다."
+		]
+	},
+	"Guardian:ModeShiftPower": {
+		"NAME": "모드 전환",
+		"DESCRIPTIONS": [
+			"1턴에 체력을 ",
+			" 잃을 때 마다 방어도를 10 얻고 방어모드 를 1턴간 얻습니다. NL 모드 전환이 사용될 때 마다 모드 전환에 필요한 요구 체력량이 증가합니다.",
+			"이번 턴에 모드 전환을 이미 사용했습니다."
+		]
+	},
+		"Guardian:ExhaustStatusesPower": {
+			"NAME": "국지 방어",
+			"DESCRIPTIONS": [
+				"매 턴 가장 먼저 뽑은 상태이상 혹은 저주 카드를 1장 까지 소멸 시킵니다.",
+				"매 턴 가장 먼저 뽑은 상태이상 혹은 저주 카드를 ",
+				" 장 까지 소멸시킵니다."
+			]
+		},
+	"Guardian:RevengePower": {
+		"NAME": "복수",
+		"DESCRIPTIONS": [
+			"방어모드 가 제거되면 방어모드가 활성화 되었던 턴 만큼 임시 힘을 ",
+			" 얻습니다. NL 현재 임시 힘을 ",
+			" 얻을 수 있습니다."
+		]
+	},
+	"Guardian:StasisEnginePower": {
+		"NAME": "정지장 엔진",
+		"DESCRIPTIONS": [
+			"한 턴에 비용이 0인 카드를 3장 낼 때 마다 [E]를 ",
+			" 얻고 카드 ",
+			" 장을 뽑습니다. ",
+			" 장을 뽑습니다. ",
+			" "
+		]
+	},
+	"Guardian:EnergizedGuardianPower": {
+		"NAME": "충전",
+		"DESCRIPTIONS": [
+			"다음 턴 시작시 추가 [E] 를 #b",
+			" 얻습니다.",
+			" 얻습니다.",
+			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+		]
+	}
+}

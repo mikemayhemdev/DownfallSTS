@@ -1,0 +1,500 @@
+{
+	"Slimebound:PotencyPower": {
+		"NAME": "潜力",
+		"DESCRIPTIONS": [
+			"你 分裂 出的 #y史莱姆 造成的伤害增加 ",
+			" 。"
+		]
+	},
+	"Slimebound:SlimedPower": {
+		"NAME": "黏液",
+		"DESCRIPTIONS": [
+			"对该敌人的下一次攻击造成额外 ",
+			" 点伤害并为你回复 ",
+			" 点生命，消耗所有 #y黏液 。回合结束时层数减少一半。"
+		]
+	},
+	"Slimebound:SplitDailyTriggerPower": {
+		"NAME": "史莱姆分裂",
+		"DESCRIPTIONS": [
+			"生命值低于50%时将会分裂为 #b2 只史莱姆，史莱姆具有 ",
+			" 当前的生命值。"
+		]
+	},
+	"Slimebound:SplitDailyPower": {
+		"NAME": "要分裂啦",
+		"DESCRIPTIONS": [
+			"这个敌人本回合将要分裂。"
+		]
+	},
+	"Slimebound:BuffAttackSlimesPower": {
+		"NAME": "升级：好斗",
+		"DESCRIPTIONS": [
+			"好斗史莱姆 造成的伤害增加 ",
+			" 点。"
+		]
+	},
+	"Slimebound:BuffPoisonSlimesPower": {
+		"NAME": "升级：酸液",
+		"DESCRIPTIONS": [
+			"酸液史莱姆 给予的 中毒 增加 ",
+			" 层。"
+		]
+	},
+	"Slimebound:BuffSlimingSlimesPower": {
+		"NAME": "升级：污泥",
+		"DESCRIPTIONS": [
+			"污泥史莱姆 给予的 黏液 增加 ",
+			" 层。"
+		]
+	},
+	"Slimebound:BuffShieldSlimesPower": {
+		"NAME": "升级：水蛭",
+		"DESCRIPTIONS": [
+			"水蛭史莱姆 造成的伤害增加 ",
+			" 点。"
+		]
+	},
+	"Slimebound:HexSlimePerTurnPower": {
+		"NAME": "鬼火之力",
+		"DESCRIPTIONS": [
+			"下个回合开始时 分裂 出1只 鬼火史莱姆 。",
+			"接下来的 ",
+			" 回合，每回合开始时 分裂 出1只 鬼火史莱姆 。"
+		]
+	},
+	"Slimebound:ProtectTheBoss": {
+		"NAME": "保护老大",
+		"DESCRIPTIONS": [
+			"阻挡你下1次受到的攻击伤害， 吸收 最早 分裂 出的史莱姆。",
+			"阻挡你下 #b",
+			" 次受到的攻击伤害， 吸收 最早 分裂 出的史莱姆。"
+		]
+	},
+	"Slimebound:SplitForLessPower": {
+		"NAME": "活性污泥",
+		"DESCRIPTIONS": [
+			" 分裂 出需要的生命减少 ",
+			" 点。每回合将 ",
+			" 张随机分裂牌加入你的手牌。",
+			" 张随机分裂牌加入你的手牌。"
+		]
+	},
+	"Slimebound:ComboAttackPower": {
+		"NAME": "身先士卒",
+		"DESCRIPTIONS": [
+			"每回合打出的第1张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
+			"每回合打出的前 ",
+			" 张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
+			" NL 本回合还能触发 ",
+			" 次。",
+			" 次。",
+			" NL 本回合不能再触发了。"
+		]
+	},
+	"Slimebound:RetainCardsOneTurnPower": {
+		"NAME": "伺机待发",
+		"DESCRIPTIONS": [
+			"在本回合保留",
+			" 张牌。",
+			" 张牌。"
+		]
+	},
+	"Slimebound:EnergizedSlimeboundPower": {
+		"NAME": "活化",
+		"DESCRIPTIONS": [
+			"下个回合获得 #b",
+			" 点额外的 [E]。",
+			" 点额外的 [E]。",
+			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+		]
+	},
+	"Slimebound:SelfFormingGooPower": {
+		"NAME": "自成型黏液",
+		"DESCRIPTIONS": [
+			"每当你失去生命时，获得 ",
+			" 点格挡，并给予一个随机敌人 ",
+			" 层黏液。",
+			" 层黏液 ",
+			" 次。"
+		]
+	},
+	"Slimebound:LoseSlimesPower": {
+		"NAME": "超负荷",
+		"DESCRIPTIONS": [
+			"在下个回合，吸收你 分裂 出的所有史莱姆。",
+			" 回合后，吸收你 分裂 出的所有史莱姆。"
+		]
+	},
+	"Slimebound:TackleDebuffPower": {
+		"NAME": "束缚",
+		"DESCRIPTIONS": [
+			"冲撞 牌对该怪物额外造成 ",
+			" 点伤害。"
+		]
+	},
+	"Slimebound:LoseThornsPower": {
+		"NAME": "收回尖刺",
+		"DESCRIPTIONS": [
+			"下个回合开始时失去 ",
+			" 层荆棘。"
+		]
+	},
+	"Slimebound:SlimedThornsPower": {
+		"NAME": "活体墙壁",
+		"DESCRIPTIONS": [
+			"给予本回合攻击你的敌人 ",
+			" 层黏液"
+		]
+	},
+	"Slimebound:PreventSlimeDecayPower": {
+		"NAME": "浸入黏液",
+		"DESCRIPTIONS": [
+			"下 ",
+			"下 ",
+			" 次对该目标发动攻击时， 黏液 不会被消耗。"
+		]
+	},
+	"Slimebound:DuplicatedFormPower": {
+		"NAME": "增殖形态",
+		"DESCRIPTIONS": [
+			"每回合你使用的第1张目标为敌人的牌将打出2次。",
+			"每回合你使用的前 #b",
+			" 张目标为敌人的牌将打出2次。"
+		]
+	},
+	"Slimebound:DuplicatedFormNoHealPower": {
+		"NAME": "分裂",
+		"DESCRIPTIONS": [
+			"最大生命临时减少了 ",
+			" 点"
+		]
+	},
+	"Slimebound:DuplicatedFormEnergyPower": {
+		"NAME": "搭档",
+		"DESCRIPTIONS": [
+			"每回合获得 ",
+			" [E] 。"
+		]
+	},
+	"Slimebound:GluttonyPower": {
+		"NAME": "暴食",
+		"DESCRIPTIONS": [
+			"每回合第 1 次对具有 黏液 的敌人发动攻击时，将一张随机 舔舐 牌加入手牌。",
+			"每回合前 ",
+			" 次对具有 黏液 的敌人发动攻击时，将一张随机 舔舐 牌加入手牌。",
+			" NL 本回合还能触发 ",
+			" 次。",
+			" 次。",
+			" NL 本回合不能再触发了。"
+
+		]
+	},
+	"Slimebound:GluttonyPowerUpgraded": {
+		"NAME": "暴食+",
+		"DESCRIPTIONS": [
+			"每回合将 ",
+			" 张随机 舔舐 牌加入你的手牌。",
+			" 张随机 舔舐 牌加入你的手牌。"
+		]
+	},
+	"Slimebound:PoisonThornsPower": {
+		"NAME": "酸性黏液",
+		"DESCRIPTIONS": [
+			"每当你攻击具有 黏液 的目标时，给予 ",
+			"  层 中毒 。"
+		]
+	},
+	"Slimebound:SlimeRitualPower": {
+		"NAME": "仪式",
+		"DESCRIPTIONS": [
+			"回合开始时，获得 ",
+			" 点 力量 。"
+		]
+	},
+	"Slimebound:RecyclingPower": {
+		"NAME": "回收",
+		"DESCRIPTIONS": [
+			"在你的回合开始时，随机将已被消耗的 ",
+			" 张0费牌加入你的手牌。",
+			" 张0费牌加入你的手牌。"
+		]
+	},
+	"Slimebound:RecyclingPowerUpgraded": {
+		"NAME": "回收+",
+		"DESCRIPTIONS": [
+			"每当你消耗一张耗能为0的牌，回复 ",
+			" 点生命并抽1张牌。"
+		]
+	},
+	"Slimebound:AcidTonguePower": {
+		"NAME": "酸性舌头",
+		"DESCRIPTIONS": [
+			"给予黏液的同时，给予 ",
+			" 层 中毒 。"
+		]
+	},
+	"Slimebound:AcidTonguePowerUpgraded": {
+		"NAME": "黏液舌头",
+		"DESCRIPTIONS": [
+			"给予黏液的效果额外给予 ",
+			" 层 黏液 。"
+		]
+	},
+	"Slimebound:SelfDamageSlimedPower": {
+		"NAME": "黏液四溅",
+		"DESCRIPTIONS": [
+			"每当你在你的回合失去生命时，给予随机1个敌人",
+			" 层 黏液 。"
+		]
+	},
+	"Slimebound:TackleBuffPower": {
+		"NAME": "进攻型冲撞",
+		"DESCRIPTIONS": [
+			"冲撞 牌造成的伤害增加 ",
+			" 点。"
+		]
+	},
+	"Slimebound:PolyBeamAgainPower": {
+		"NAME": "切换光束",
+		"DESCRIPTIONS": [
+			"下回合开始时，打出 多重光束 。 ",
+			"接下来的 ",
+			"回合开始时，打出 多重光束 。"
+		]
+	},
+	"Slimebound:PolyBeamAgainPowerUpgraded": {
+		"NAME": "切换光束+",
+		"DESCRIPTIONS": [
+			"下回合开始时，打出 多重光束+ 。 ",
+			"接下来的 ",
+			" 回合开始时，打出 多重光束+ 。"
+		]
+	},
+	"Slimebound:FirmFortitudePower": {
+		"NAME": "感同身受",
+		"DESCRIPTIONS": [
+			"在你的这个回合，下 1 次即将失去生命时，一个随机的敌人代你承受。",
+			"在你的这个回合，下 ",
+			" 次即将失去生命时，一个随机的敌人代你承受。",
+			" NL 本回合还能触发 ",
+			" 次。",
+			" 次。",
+			" 本回合不能再触发了。"
+		]
+	},
+	"Slimebound:NextTurnGainStrengthPower": {
+		"NAME": "蓄力",
+		"DESCRIPTIONS": [
+			"在你的下个回合，获得 ",
+			" 点 力量 。"
+		]
+	},
+	"Slimebound:NextTurnGainSlimeCrush": {
+		"NAME": "准备撞击",
+		"DESCRIPTIONS": [
+			"在你的下个回合，将1张史莱姆撞击加入手牌。",
+			"在你的下个回合，将 ",
+			" 张 史莱姆撞击 加入手牌。"
+		]
+	},
+	"Slimebound:StunnedPower": {
+		"NAME": "精疲力尽",
+		"DESCRIPTIONS": [
+			"跳过你的下个回合。",
+			"跳过你接下来的 ",
+			" 个回合。"
+		]
+	},
+	"Slimebound:SearingPower": {
+		"NAME": "灼伤",
+		"DESCRIPTIONS": [
+			"每回合受到 ",
+			" 点伤害。"
+		]
+	},
+	"Slimebound:NextTurnGainHyperBeam": {
+		"NAME": "准备射爆",
+		"DESCRIPTIONS": [
+			"下个回合开始时，将1张 #g超能光束 加入手牌。",
+			"下个回合开始时，将 ",
+			" 张超能光束加入手牌。"
+		]
+	},
+	"Slimebound:NextTurnGainDivider": {
+		"NAME": "准备分裂",
+		"DESCRIPTIONS": [
+			"下个回合开始时，将1张 #g分裂 加入手牌。",
+			"下个回合开始时，将 ",
+			" 张分裂加入手牌。"
+		]
+	},
+	"Slimebound:StudyAutomatonPower": {
+		"NAME": "学习铜制机械人偶",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张机械人偶牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张机械人偶牌。"
+		]
+	},
+	"Slimebound:StudyAutomatonPowerUpgraded": {
+		"NAME": "学习铜制机械人偶+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的机械人偶牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的机械人偶牌。"
+		]
+	},
+	"Slimebound:StudyAwakenedPower": {
+		"NAME": "学习觉醒者",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张觉醒者牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张觉醒者牌。"
+		]
+	},
+	"Slimebound:StudyAwakenedPowerUpgraded": {
+		"NAME": "学习觉醒者+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的觉醒者牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的觉醒者牌。"
+		]
+	},
+	"Slimebound:AwakenedOnePower": {
+		"NAME": "黑暗仪式",
+		"DESCRIPTIONS": [
+			"如果这个敌人本回合没有攻击，你获得 ",
+			" 点 力量 。"
+		]
+	},
+	"Slimebound:StudyChampPower": {
+		"NAME": "学习第一勇士",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张第一勇士牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张第一勇士牌。"
+		]
+	},
+	"Slimebound:StudyChampPowerUpgraded": {
+		"NAME": "学习第一勇士+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的第一勇士牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的第一勇士牌。"
+		]
+	},
+	"Slimebound:StudyCollectorPower": {
+		"NAME": "学习收藏家",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张收藏家牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张收藏家牌。"
+		]
+	},
+	"Slimebound:StudyCollectorPowerUpgraded": {
+		"NAME": "学习收藏家+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的收藏家牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的收藏家牌。"
+		]
+	},
+	"Slimebound:StudyGuardianPower": {
+		"NAME": "学习守护者",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张守护者牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张守护者牌。"
+		]
+	},
+	"Slimebound:StudyGuardianPowerUpgraded": {
+		"NAME": "学习守护者+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的守护者牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的守护者牌。"
+		]
+	},
+	"Slimebound:StudyHexaghostPower": {
+		"NAME": "学习六火亡魂",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张六火亡魂牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张六火亡魂牌。"
+		]
+	},
+	"Slimebound:StudyHexaghostPowerUpgraded": {
+		"NAME": "学习六火亡魂+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的六火亡魂牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的六火亡魂牌。"
+		]
+	},
+	"Slimebound:StudyShapesPower": {
+		"NAME": "学习甜圈八体",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张甜圈和八体牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张甜圈和八体牌。"
+		]
+	},
+	"Slimebound:StudyShapesPowerUpgraded": {
+		"NAME": "学习甜圈八体+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的甜圈和八体牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的甜圈和八体牌。"
+		]
+	},
+	"Slimebound:StudyTimeEaterPower": {
+		"NAME": "学习时间吞噬者",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张时间吞噬者牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张时间吞噬者牌。"
+		]
+	},
+	"Slimebound:StudyTimeEaterPowerUpgraded": {
+		"NAME": "学习时间吞噬者+",
+		"DESCRIPTIONS": [
+			"下个回合开始时获得1张升级后的时间吞噬者牌。",
+			"接下来的 ",
+			" 回合，每回合开始时获得1张升级后的时间吞噬者牌。"
+		]
+	},
+	"Slimebound:GreedRespawnPower": {
+		"NAME": "寻回：贪婪黏液",
+		"DESCRIPTIONS": [
+			"贪婪史莱姆将在回合结束时重生。"
+		]
+	},
+	"Slimebound:ScrapRespawnPower": {
+		"NAME": "寻回：破烂黏液",
+		"DESCRIPTIONS": [
+			"破烂史莱姆将在回合结束时重生。"
+		]
+	},
+	"Slimebound:BuffSecondarySlimeEffectsPower": {
+		"NAME": "从者大师",
+		"DESCRIPTIONS": [
+			"每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 ",
+			" 层。"
+		]
+	},
+	"Slimebound:TackleSelfDamagePreventPower": {
+		"NAME": "鲁莽",
+		"DESCRIPTIONS": [
+			"冲撞 牌对自身造成的伤害提高 ",
+			" 点。"
+		]
+	},
+	"Slimebound:GoopArmorPower": {
+		"NAME": "黏液护甲",
+		"DESCRIPTIONS": [
+			"每当你消耗 黏液 时，获得 ",
+			" 点 格挡 。"
+		]
+	}
+}

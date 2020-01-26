@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,8 +19,8 @@ public class SearingWound extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!q.isDying && !q.isDying && q.hasPower(BurnPower.POWER_ID)) {
-                atb(new LoseHPAction(q, p, q.getPower(BurnPower.POWER_ID).amount));
+            if (!q.isDying && q.hasPower(BurnPower.POWER_ID)) {
+                atb(new LoseHPAction(q, p, q.getPower(BurnPower.POWER_ID).amount, AbstractGameAction.AttackEffect.POISON));
             }
         }
     }

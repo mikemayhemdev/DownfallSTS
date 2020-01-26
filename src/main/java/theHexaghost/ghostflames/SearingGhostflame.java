@@ -26,12 +26,10 @@ public class SearingGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        for (int j = AbstractDungeon.getCurrRoom().monsters.monsters.size() - 1; j >= 0; j--) {
-            AbstractMonster m = AbstractDungeon.getCurrRoom().monsters.monsters.get(j);
-            if (!m.isDead && !m.isDying && !m.halfDead) {
-                att(new BurnAction(m, x));
-                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-            }
+        AbstractMonster m = AbstractDungeon.getRandomMonster();
+        if (!m.isDead && !m.isDying && !m.halfDead) {
+            att(new BurnAction(m, x));
+            att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
         }
     }
 
@@ -73,6 +71,10 @@ public class SearingGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL Ignition: When Ignited, apply #b" + x + " #yBurn to ALL enemies.";
+<<<<<<< HEAD
+        return s + " NL Ignition: When Ignited, apply #b" + x + " #yBurn to a random enemy.";
+=======
+        return s + " NL When Charged, apply #b" + x + " #yBurn to a random enemy.";
+>>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
     }
 }

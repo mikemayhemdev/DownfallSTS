@@ -1,0 +1,201 @@
+[
+     {
+      "NAMES": [
+		"흡수",
+        "absorb"
+      ],
+      "PROPERNAME": "흡수",
+      "DESCRIPTION": "생성한 슬라임과 다시 결합합니다. 분열 할때 잃은 최대 체력이 돌아옵니다."
+    },
+    {
+      "NAMES": [
+		"분열",
+        "split"
+      ],
+      "PROPERNAME": "분열",
+      "DESCRIPTION": "체력을 3 잃고 슬라임 부하를 하나 생성합니다. 슬라임은 매턴 공격합니다. 슬라임이 살아있는 동안 최대 체력을 3 잃습니다."
+    },
+    {
+      "NAMES": [
+		"점액",
+        "slimed"
+      ],
+      "PROPERNAME": "점액",
+      "DESCRIPTION": "다음 공격 이 추가 피해를 입히고 점액 효과를 소모합니다, 점액을 소모할때 체력 을 2 회복합니다. 점액의 절반은 턴이 끝날때 없어집니다."
+    },
+     {
+      "NAMES": [
+		"잠재력",
+        "potency"
+      ],
+      "PROPERNAME": "잠재력",
+      "DESCRIPTION": "생성한 슬라임 들의 피해량을 증가 시킵니다."
+    },
+     {
+      "NAMES": [
+		"불꽃 슬라임",
+		"불꽃_슬라임",
+        "torch head slime",
+        "torch_head_slime"
+      ],
+      "PROPERNAME": "불꽃 슬라임",
+      "DESCRIPTION": "매턴 9 피해를 줍니다, 파워 카드를 사용 할때마다 피해량이 1 증가합니다."
+    },
+     {
+      "NAMES": [
+		"싸움꾼 슬라임",
+		"싸움꾼_슬라임",
+        "bruiser slime",
+        "bruiser_slime",
+        "bruiser slimes",
+        "bruiser_slimes"
+      ],
+      "PROPERNAME": "싸움꾼 슬라임",
+      "DESCRIPTION": "매턴 4 피해를 주는 슬라임 입니다."
+    },
+     {
+      "NAMES": [
+		"광신자 슬라임",
+		"광신자_슬라임",
+        "cultist slime",
+        "cultist_slime"
+      ],
+      "PROPERNAME": "광신자 슬라임",
+      "DESCRIPTION": "매턴 6 피해를 줍니다, 턴이 끝나면 피해량이 1 증가합니다."
+    },
+     {
+      "NAMES": [
+		"거머리 슬라임",
+		"거머리_슬라임",
+        "leeching slime",
+        "leeching_slime",
+        "leeching slimes",
+        "leeching_slimes"
+      ],
+      "PROPERNAME": "거머리 슬라임",
+      "DESCRIPTION": "매턴 2 피해를 주고 2 방어도 를 주는 슬라임 입니다."
+    },
+     {
+      "NAMES": [
+		"산성 슬라임",
+		"산성_슬라임",
+        "acid slime",
+        "acid_slime",
+        "acid slimes",
+        "acid_slimes"
+      ],
+      "PROPERNAME": "산성 슬라임",
+      "DESCRIPTION": "매턴 2 피해를 주고 독 을 1 부여하는 슬라임 입니다."
+    },
+     {
+      "NAMES": [
+		"진흙탕 슬라임",
+		"진흙탕_슬라임",
+        "mire slime",
+        "mire_slime",
+        "mire slimes",
+        "mire_slimes"
+      ],
+      "PROPERNAME": "진흙탕 슬라임",
+      "DESCRIPTION": "매턴 1 피해를 주고 점액 을 2 부여하는 슬라임 입니다."
+    },
+     {
+      "NAMES": [
+        "plated armor",
+        "plated_armor"
+      ],
+      "PROPERNAME": "Plated Armor",
+      "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
+    },
+     {
+      "NAMES": [
+		"청동 슬라임",
+		"청동_슬라임",
+        "bronze slime",
+        "bronze_slime"
+      ],
+      "PROPERNAME": "청동 슬라임",
+      "DESCRIPTION": "매턴 6 피해를 주고 6 방어도 를 주는 슬라임 입니다."
+    },
+    {
+      "NAMES": [
+		"핥기",
+        "lick"
+      ],
+      "PROPERNAME": "핥기",
+      "DESCRIPTION": "여러가지 약화를 거는 비용 0 의 카드입니다."
+    },
+     {
+      "NAMES": [
+		"유령불꽃 슬라임",
+		"유령불꽃_슬라임",
+        "ghostflame slime",
+        "ghostflame_slime"
+      ],
+      "PROPERNAME": "유령불꽃 슬라임",
+      "DESCRIPTION": "공격하지 않고 잠재력의 영향을 받지 않는 슬라임 입니다. 힘 1, 민첩 1, 잠재력 2를 제공합니다."
+    },
+    {
+      "NAMES": [
+		"변형",
+        "morph"
+      ],
+      "PROPERNAME": "변형",
+      "DESCRIPTION": "무작위 자신의 클래스 카드로 변화시킵니다, 종류에 상관없이 비용이 1 감소합니다."
+    },
+     {
+      "NAMES": [
+		"둔화",
+        "slow"
+      ],
+      "PROPERNAME": "둔화",
+      "DESCRIPTION": "이번턴에 사용한 카드 한 장당 10% 추가 피해를 받습니다."
+    },
+     {
+      "NAMES": [
+		"태클",
+        "tackle"
+      ],
+      "PROPERNAME": "태클",
+      "DESCRIPTION": "당신에게도 피해를 주는 강력한 공격입니다."
+    },
+     {
+      "NAMES": [
+		"첨탑 보스",
+		"첨탑_보스",
+        "spire boss",
+        "spire_boss"
+      ],
+      "PROPERNAME": "첨탑 보스",
+      "DESCRIPTION": "첨탑의 보스들에게서 영감을 얻은 강력한 0 코스트 카드들입니다."
+    },
+  {
+    "NAMES": [
+      "divide"
+    ],
+    "PROPERNAME": "Divide",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "conquer"
+    ],
+    "PROPERNAME": "Conquer",
+    "DESCRIPTION": "1-cost Attack. NL Deal 8 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
+  },
+  {
+    "NAMES": [
+      "serve"
+    ],
+    "PROPERNAME": "Serve",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "protect"
+    ],
+    "PROPERNAME": "Protect",
+    "DESCRIPTION": "1-cost Skill. NL Gain 7 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
+  }
+
+]
