@@ -109,7 +109,7 @@
     "DESCRIPTION": "Gain 2 hexamod:Momentary Strength and 2 hexamod:Momentary Dexterity for each hexamod:Ignited Ghostflame."
   },
   "hexamod:SpectralAdrenaline": {
-    "NAME": "Dark Ritual",
+    "NAME": "Bright Ritual",
     "DESCRIPTION": "Gain [E] and draw 1 card for each for each hexamod:Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
   },
   "hexamod:StepThrough": {
