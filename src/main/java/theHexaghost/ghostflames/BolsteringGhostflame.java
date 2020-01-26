@@ -51,7 +51,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
             s = "Ignited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + "#yActive. Ignites after a #yPower is played this turn.";
+            s = s + "#yActive. Ignites after a #yPower is played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
         } else {
             s = s + "Inactive. Ignites after a #yPower is played while #yActive.";
         }

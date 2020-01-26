@@ -14,7 +14,7 @@ public class Incineration extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, COMMON
 
-    private static final int DAMAGE = 1;
+    private static final int DAMAGE = 2;
     private static final int UPG_DAMAGE = 1;
 
     private static final int MAGIC = 3;
@@ -43,7 +43,7 @@ public class Incineration extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            //upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_MAGIC);
         }
     }

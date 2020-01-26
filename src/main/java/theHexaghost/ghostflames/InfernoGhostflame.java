@@ -69,13 +69,13 @@ public class InfernoGhostflame extends AbstractGhostflame {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn.";
+                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
                     break;
                 case 2:
-                    s = s + "#yActive. Ignites after spending [E] [E] this turn.";
+                    s = s + "#yActive. Ignites after spending [E] [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
                     break;
                 case 1:
-                    s = s + "#yActive. Ignites after spending [E] this turn.";
+                    s = s + "#yActive. Ignites after spending [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
                     break;
                 default:
                     s = s + "Error. Please report to mod dev: " + x;

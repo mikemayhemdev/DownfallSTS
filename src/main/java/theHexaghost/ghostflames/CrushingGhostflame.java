@@ -68,7 +68,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - skillsPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. Ignites after #b" + x + " #ySkill is played this turn.";
+                s = s + "#yActive. Ignites after #b" + x + " #ySkill is played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
             } else {
                 s = s + "#yActive. Ignites after #b" + x + " #ySkills are played this turn.";
             }

@@ -4,7 +4,7 @@
     "NAMES": [
       "active"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements. At the end of your turn, #yAdvance to the next Ghostflame."
+    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements."
   },
   {
     "PROPER_NAME": "Advance",
@@ -27,7 +27,7 @@
   {
     "PROPER_NAME": "Intensity",
     "NAMES": [
-      "Intensity"
+      "intensity"
     ],
     "DESCRIPTION": "Intensity increases the amount of Damage, Burn, and Block applied by Ghostflames when Ignited."
   },

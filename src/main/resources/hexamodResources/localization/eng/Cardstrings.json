@@ -98,11 +98,11 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is unhexamod:Ignited, gain [E] . NL Deal !D! damage."
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is not hexamod:Ignited, gain [E] . NL Deal !D! damage."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is unhexamod:Ignited, gain [E] . NL Gain !B! Block."
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is not hexamod:Ignited, gain [E] . NL Gain !B! Block."
   },
   "hexamod:GhostlyFlex": {
     "NAME": "Ghostly Flex",
@@ -301,7 +301,7 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "hexamod:Extinguish, then Charge, the hexamod:Active Ghostflame. Do not hexamod:Advance at the end of this turn."
+    "DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. Do not hexamod:Advance at the end of this turn."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",
