@@ -1,4 +1,3 @@
-/*
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -7,7 +6,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.actions.BurnAction;
 import theHexaghost.powers.BurnPower;
+import theHexaghost.util.CardIgnore;
 
+@CardIgnore
 public class TurnItUp extends AbstractHexaCard {
 
     public final static String ID = makeID("TurnItUp");
@@ -42,4 +43,3 @@ public class TurnItUp extends AbstractHexaCard {
         }
     }
 }
-*/

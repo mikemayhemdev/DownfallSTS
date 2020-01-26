@@ -2,6 +2,7 @@ package theHexaghost;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -76,6 +77,9 @@ public class GhostflameHelper {
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnRetractSubscriber) ((OnRetractSubscriber) p).onRetract();
             if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract();
+        }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract();
         }
     }
 

@@ -2,9 +2,11 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.CardIgnore;
 import theHexaghost.actions.RetractAction;
 import theHexaghost.powers.EtherealRefundPower;
 
+@CardIgnore
 public class Ghostwalk extends AbstractHexaCard {
 
     public final static String ID = makeID("Ghostwalk");

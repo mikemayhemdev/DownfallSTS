@@ -1,4 +1,3 @@
-
 /*
 package sneckomod;
 
@@ -24,37 +23,31 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
 
-import static theHexaghost.HexaMod.*;
-import static theHexaghost.TheHexaghost.Enums.GHOST_GREEN;
+import static sneckomod.SneckoMod.*;
+import static sneckomod.TheSnecko.Enums.SNECKO_CYAN;
+
 
 public class TheSnecko extends CustomPlayer {
     private static final String[] orbTextures = {
-            "hexamodResources/images/char/mainChar/orb/layer1.png",
-            "hexamodResources/images/char/mainChar/orb/layer2.png",
-            "hexamodResources/images/char/mainChar/orb/layer3.png",
-            "hexamodResources/images/char/mainChar/orb/layer4.png",
-            "hexamodResources/images/char/mainChar/orb/layer5.png",
-            "hexamodResources/images/char/mainChar/orb/layer6.png",
-            "hexamodResources/images/char/mainChar/orb/layer1d.png",
-            "hexamodResources/images/char/mainChar/orb/layer2d.png",
-            "hexamodResources/images/char/mainChar/orb/layer3d.png",
-            "hexamodResources/images/char/mainChar/orb/layer4d.png",
-            "hexamodResources/images/char/mainChar/orb/layer5d.png",};
-    private static final String ID = makeID("theHexaghost");
+            "sneckomodResources/images/char/mainChar/orb/layer1.png",
+            "sneckomodResources/images/char/mainChar/orb/layer2.png",
+            "sneckomodResources/images/char/mainChar/orb/layer3.png",
+            "sneckomodResources/images/char/mainChar/orb/layer4.png",
+            "sneckomodResources/images/char/mainChar/orb/layer5.png",
+            "sneckomodResources/images/char/mainChar/orb/layer6.png",
+            "sneckomodResources/images/char/mainChar/orb/layer1d.png",
+            "sneckomodResources/images/char/mainChar/orb/layer2d.png",
+            "sneckomodResources/images/char/mainChar/orb/layer3d.png",
+            "sneckomodResources/images/char/mainChar/orb/layer4d.png",
+            "sneckomodResources/images/char/mainChar/orb/layer5d.png",};
+    private static final String ID = makeID("theSnecko");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    @Override
-    protected void updateEscapeAnimation() {
-        super.updateEscapeAnimation();
-        if (escapeTimer > 0.0F)
-            renderFlames = false;
-    }
-
     public TheSnecko(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                "hexamodResources/images/char/mainChar/static_character.scml"));
+        super(name, setClass, new CustomEnergyOrb(orbTextures, "sneckomodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
+                "sneckomodResources/images/char/mainChar/static_character.scml"));
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -105,7 +98,7 @@ public class TheSnecko extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return GHOST_GREEN;
+        return SNECKO_CYAN;
     }
 
     @Override
@@ -168,13 +161,12 @@ public class TheSnecko extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
-        public static PlayerClass THE_SPIRIT;
-        @SpireEnum(name = "HEXA_GHOST_PURPLE")
-        public static AbstractCard.CardColor GHOST_GREEN;
-        @SpireEnum(name = "HEXA_GHOST_PURPLE")
+        public static PlayerClass THE_SNECKO;
+        @SpireEnum(name = "SNECKO_CYAN")
+        public static AbstractCard.CardColor SNECKO_CYAN;
+        @SpireEnum(name = "SNECKO_CYAN")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 }
-
 */
