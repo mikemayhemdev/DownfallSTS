@@ -36,13 +36,8 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-<<<<<<< HEAD
     "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame NL Exhaust.",
     "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
-=======
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then Charge, the Ghostflame after the hexamod:Active one. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Extinguish, then Charge, the Ghostflame after the hexamod:Active one."
->>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
   },
   "hexamod:CatchUp": {
     "NAME": "Catch Up",
@@ -279,12 +274,8 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
-<<<<<<< HEAD
-    "DESCRIPTION": "For each hexamod:Ignited Ghostflame, hexamod:Extinguish it and deal !D! damage and apply !M! hexamod:Burn to ALL enemies."
-=======
-    "DESCRIPTION": "Retain. NL Charge the Inferno Ghostflame. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Charge the hexamod:Active Ghostflame. NL Charge the Inferno Ghostflame. NL Exhaust."
->>>>>>> 55e08e342549f28c9039156a36d8f4ccc49ad94a
+    "DESCRIPTION": "Retain. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Ignite the Inferno Ghostflame. NL Exhaust."
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
@@ -318,8 +309,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "Doomsday",
-    "DESCRIPTION": "The next time you Ignite the Inferno Ghostflame and all !M! Ghostflames are Ignited, take an extra turn.",
-    "UPGRADE_DESCRIPTION": "The next time you Ignite the Inferno Ghostflame and at least !M! Ghostflames are Ignited, take an extra turn."
+    "DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, take an extra turn."
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",
