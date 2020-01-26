@@ -1,0 +1,77 @@
+{
+  "Slimebound:Hunted": {
+    "NAME": "Le Boss s'approche",
+    "DESCRIPTIONS": [
+      "Une forte voix résonne dans la Tour... NL NL #r~TRAITRE!!!~ NL NL L'immense slime tente de vous attraper, vous bloquant le passage. Il vous insulte de tra�tre, et veut d�sormais vous hanter jusqu'� la fin des temps pour vous punir. Il semble terriblement �nerv�.",
+      "Est-ce que sera aussi simple?",
+      "Tout fait sens maintenant. NL Les trous de m�moire, l'ascension, l' #yAncient #yOne. NL NL Cela a toujours �t� ainsi. NL Et ce sera toujours ainsi. NL Tout sera de nouveau oubli� bient�t..."
+    ],
+    "OPTIONS": [
+      "[Affronter] #rCombattre #rSlime #rBoss. Reward: #gPetit #gchapeau #gEtriqu�.",
+      "[Fuir comme un l�che] #rCursed #r- #rShame."
+    ]
+  },
+  "Slimebound:WorldofGoop": {
+    "NAME": "Monde baveux",
+    "DESCRIPTIONS": [
+      "Vous tombez dans une flaque. NL @C'EST@ @FAIT@ @DE@ #g@BAVE@ #g@SLIME!!@ NL Calmly, Calmement, vous prenez une grande inspiration pour vous calmer. NL NL Vous en sortez tout docuement, quand vous remarquez un amas de #ygold appartenant � d'autres aventuriers, jonchant sur une cr�ature qui semble int�r�ss� par tout ce m�tal.",
+      "Vous quittez la flaque de bave, rep�chant tout le #ygold, laissant la cr�ature avec une t�te d�pit�e en voyant tout l'or s'envoler.",
+      "Vous n�gociez avec la cr�ature et lui proposez de lui donner encore plus de m�tal si elle vient vous aider dans votre aventure. NL Vous et votre nouvel #gami quittez cette flaque de bave emsemble."
+    ],
+    "OPTIONS": [
+      "[Attraper l'or] #gGagnez #g75 #gOr.",
+      "[Recruter] #gEnr�ler #yGreed #yOoze.",
+      "[Partir]"
+    ]
+  },
+  "Slimebound:SlimeTalk": {
+    "NAME": "Conversations",
+    "DESCRIPTIONS": [
+      "~SERVITEUR...~ NL #r~TRAITRE!!!~",
+      "~Qu'est-ce~ ~qu'il~ ~fait~ ~lui...~",
+      "~Il ne doit ~ ~pas~ ~partir...~",
+      "~Prevenez~ ~le~ ~Boss...~",
+      "Ce chapeau... NL #r~I~ #r~je dois~ #r~le~ #r~prendre!~",
+      "~Qu'est-ce~ ~qu'il...~",
+      "~...fait~ ~lui...~",
+      "~...�~ ~monter~ ~en Haut...~",
+      "~On~ ~doit~ ~l'arr�ter~ ~maintenant...~",
+      "~c'est~ ~tr�s~ ~�trange...~",
+      "~Il~ ~est~ ~comme nous...~",
+      "~NICE~ #r~HAT!!!~"
+    ]
+  },
+  "Slimebound:ScrapOozePatch": {
+    "NAME": "Scrap Ooze Amical",
+    "DESCRIPTIONS": [
+      "Chaque slime s'�tant �loign� du Boss est un potentiel ami.  Si vous lui offrez quelques babioles, le Scrap Ooze rejoindra votre aventure."
+    ],
+    "OPTIONS": [
+      "[Recruter] Enr�ler le #gScrap #gOoze. #rBloqu� si vous restez � l'int�rieur.",
+      "[Recruter] Bloqu�.",
+      "[Partir]"
+    ]
+  },
+  "Slimebound:ArtOfSlimeWar": {
+    "NAME": "L'art de la guerre selon les Slimes",
+    "DESCRIPTIONS": [
+      "Vous rencontrez un pi�destal tr�s sale qui contient � son sommet un #gbouquin #gscintillant. Il semble que ce bouquin renferme des techniques sp�ciales d�di�es au #gSlime #gBoss et ses serviteurs.",
+      "Quand vous attrapez le bouquin, vous entendez plusieurs pi�ges s'activer. Vous ne serez pas capable de tous y �chapper.",
+      "Vous prenez le bouquin et parvenez � vous extirper de quelques pi�ges, mais tombez finalement dans une immense flaque de bave Slime.",
+      "En prenant le bouquin, vous vous en �tes sorti, au co�t d'une s�rieuse blessure � la jambe.",
+      "D�s que vous prenez le bouquin, vous sentez votre �me vous quitter. Cela a plut�t int�r�t � valoir le coup.",
+      "Vous d�cidez de laisser le bouquin ici et de continuer votre route.",
+      "Vous n'arrivez pas � concevoir que des Slimes peuvent �tre redoutables - Il semble que leur seul technique est de se jeter comme des imb�ciles sur l'ennemi. Enfin bon, si �a marche pour eux alors..."
+    ],
+    "OPTIONS": [
+      "[Lire] #gRetire #gToutesLes Frappes. #gRecevez #g3 Tacles+.",
+      "[Prendre] #gObtenez #gLivrede #gConsultation. #rActionnez #run #rpi�ge.",
+      "[Partir]",
+      "[Profaner] #rDevenez #rMaudit #r- #rD�go�tant.",
+      "[Soyez patient] #rPrenez #r",
+      " #rde D�g�t.",
+      "[Attraper et courir] #rPerdez #r",
+      " #rMax #rPV."
+    ]
+  }
+}

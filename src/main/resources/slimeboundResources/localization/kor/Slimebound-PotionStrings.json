@@ -1,0 +1,33 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "슬라임 병",
+    "DESCRIPTIONS": [
+      "점액을 #b",
+      " 적용합니다."
+    ]
+  },
+
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "점액질 엘릭서",
+    "DESCRIPTIONS": [
+      "점액을 적용할때 마다 #b",
+      " 더 적용합니다."
+    ]
+  },
+
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "병속의 부하",
+    "DESCRIPTIONS": [
+      "무작위 슬라임 ",
+      " 을 생성합니다."
+    ]
+  },
+
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "수액충전된 음료",
+    "DESCRIPTIONS": [
+      "비용이 0인 무작위 카드를 #b",
+      " 개 손에 넣습니다."
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "Slimebound:BronzeSlime": {
+    "NAME": "청동 슬라임",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 주고 방어도 를 ",
+      " 얻습니다."
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "싸움꾼 슬라임",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 줍니다."
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "날붙이 수액",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 줍니다. 흡수되면 턴이 끝날때 다시 생성됩니다. 최대 체력을 줄이지 않습니다."
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "욕심쟁이 수액",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 줍니다. 흡수되면 턴이 끝날때 다시 생성됩니다. 최대 체력을 줄이지 않습니다."
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "불꽃 슬라임",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 줍니다. 파워 카드를 사용하면 피해량이 1 증가합니다."
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "광신자 슬라임",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 줍니다. 매턴 피해량이 1 증가합니다."
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "거머리 슬라임",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 줍니다. 방어도를 ",
+      " 줍니다."
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "산성 슬라임",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 주고 중독 을 ",
+      " 부여합니다."
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "진흙탕 슬라임",
+    "DESCRIPTION": [
+      "턴 시작에 ",
+      " 피해를 주고 점액 을 ",
+      " 부여합니다."
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "유령불꽃 슬라임",
+    "DESCRIPTION": [
+      "공격 하지 않는 대신 힘 1 민첩 1 잠재력 2 를 부여합니다."
+    ]
+  }
+}
+
+
+
+
+
+

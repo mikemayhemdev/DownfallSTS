@@ -1,0 +1,81 @@
+{
+  "Slimebound:BronzeSlime": {
+    "NAME": "Bronze Slime",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn and grants you ",
+      " Block."
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "Bruiser Slime",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn."
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "Scrap Ooze",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "Greed Ooze",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "Torch Head Slime",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn. Gains twice the normal benefit from Potency."
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "Cultist Slime",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn, then increases its damage by 1."
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "Leeching Slime",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage at the start of your turn and grants you ",
+      " Block."
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "Acid Slime",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage and applies ",
+      " Poison at the start of your turn."
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "Mire Slime",
+    "DESCRIPTION": [
+      "Deals ",
+      " damage and applies ",
+      " Goop at the start of your turn."
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "Ghostflame Slime",
+    "DESCRIPTION": [
+      "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
+    ]
+  }
+}
+
+
+
+
+
+

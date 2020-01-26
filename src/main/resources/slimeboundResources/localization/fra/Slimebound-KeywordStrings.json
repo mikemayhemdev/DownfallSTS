@@ -1,0 +1,178 @@
+[
+     {
+      "NAMES": [
+        "absorb"
+      ],
+      "PROPERNAME": "Absorb",
+      "DESCRIPTION": "Recombine with a spawned Slime, healing 3 HP."
+    },
+    {
+      "NAMES": [
+        "split"
+      ],
+      "PROPERNAME": "Split",
+      "DESCRIPTION": "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn.  Absorb your oldest one if you have no room, healing 3 HP."
+    },
+    {
+      "NAMES": [
+        "slimed"
+      ],
+      "PROPERNAME": "Slimed",
+      "DESCRIPTION": "The next attack deals increased damage, consuming the Slimed effect, and healing you for half the amount consumed. Half of Slimed is removed at end of turn."
+    },
+     {
+      "NAMES": [
+        "potency"
+      ],
+      "PROPERNAME": "Potency",
+      "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes."
+    },
+     {
+      "NAMES": [
+        "torch head slime",
+        "torch_head_slime"
+      ],
+      "PROPERNAME": "Torch Head Slime",
+      "DESCRIPTION": "Attacks for 6 each turn. Gains twice the normal benefit from Potency."
+    },
+     {
+      "NAMES": [
+        "bruiser slime",
+        "bruiser_slime",
+        "bruiser slimes",
+        "bruiser_slimes",
+        "bruiser"
+      ],
+      "PROPERNAME": "Bruiser Slime",
+      "DESCRIPTION": "Attacks for 4 each turn."
+    },
+     {
+      "NAMES": [
+        "cultist slime",
+        "cultist_slime"
+      ],
+      "PROPERNAME": "Cultist Slime",
+      "DESCRIPTION": "Attacks for 6 each turn, then increases it's damage by 1."
+    },
+     {
+      "NAMES": [
+        "leeching slime",
+        "leeching_slime",
+        "leeching slimes",
+        "leeching_slimes",
+        "leeching"
+      ],
+      "PROPERNAME": "Leeching Slime",
+      "DESCRIPTION": "Attacks for 2 and grants you 2 Block each turn."
+    },
+     {
+      "NAMES": [
+        "acid slime",
+        "acid_slime",
+        "acid slimes",
+        "acid_slimes",
+        "acid"
+      ],
+      "PROPERNAME": "Acid Slime",
+      "DESCRIPTION": "Attacks for 2 and applies 1 Poison each turn."
+    },
+     {
+      "NAMES": [
+        "mire slime",
+        "mire_slime",
+        "mire slimes",
+        "mire_slimes",
+        "mire"
+      ],
+      "PROPERNAME": "Mire Slime",
+      "DESCRIPTION": "Attacks for 1 and applies 2 Slimed each turn."
+    },
+     {
+      "NAMES": [
+        "plated armor",
+        "plated_armor"
+      ],
+      "PROPERNAME": "Plated Armor",
+      "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
+    },
+     {
+      "NAMES": [
+        "bronze slime",
+        "bronze_slime"
+      ],
+      "PROPERNAME": "Bronze Slime",
+      "DESCRIPTION": "Attacks for 6 and grants you 6 Block each turn."
+    },
+    {
+      "NAMES": [
+        "lick"
+      ],
+      "PROPERNAME": "Lick",
+      "DESCRIPTION": "0-cost cards that apply Slimed a variety of secondary effects."
+    },
+     {
+      "NAMES": [
+        "ghostflame slime",
+        "ghostflame_slime"
+      ],
+      "PROPERNAME": "Ghostflame Slime",
+      "DESCRIPTION": "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
+    },
+    {
+      "NAMES": [
+        "morph"
+      ],
+      "PROPERNAME": "Morph",
+      "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs 1 less."
+    },
+     {
+      "NAMES": [
+        "slow"
+      ],
+      "PROPERNAME": "Slow",
+      "DESCRIPTION": "Receives 10% more damage per card played in a turn."
+    },
+     {
+      "NAMES": [
+        "tackle"
+      ],
+      "PROPERNAME": "Tackle",
+      "DESCRIPTION": "High-damage Attacks that also deal a small amount of damage to you."
+    },
+     {
+      "NAMES": [
+        "spire boss",
+        "spire_boss"
+      ],
+      "PROPERNAME": "Spire Boss",
+      "DESCRIPTION": "Powerful 0-cost cards, inspired by the bosses of the Spire."
+    },
+  {
+    "NAMES": [
+      "divide"
+    ],
+    "PROPERNAME": "Divide",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "conquer"
+    ],
+    "PROPERNAME": "Conquer",
+    "DESCRIPTION": "1-cost Attack. NL Deal 8 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
+  },
+  {
+    "NAMES": [
+      "serve"
+    ],
+    "PROPERNAME": "Serve",
+    "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
+  },
+  {
+    "NAMES": [
+      "protect"
+    ],
+    "PROPERNAME": "Protect",
+    "DESCRIPTION": "1-cost Skill. NL Gain 7 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
+  }
+]

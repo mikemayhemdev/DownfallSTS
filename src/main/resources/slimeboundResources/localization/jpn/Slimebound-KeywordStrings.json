@@ -1,0 +1,183 @@
+[
+     {
+      "NAMES": [
+        "吸収",
+        "absorbing",
+        "absorbed"
+      ],
+      "PROPERNAME": "吸収",
+      "DESCRIPTION": "生み出したスライムをもとに戻す。分裂により失われたHPを最大にまで戻す。"
+    },
+    {
+      "NAMES": [
+        "分裂"
+      ],
+      "PROPERNAME": "分裂",
+      "DESCRIPTION": "HPを3失いスライムを生み出す。ターン開始時にスライムは攻撃する。 スライムが生きているときは最大HPが3減少する。"
+    },
+    {
+      "NAMES": [
+        "粘液",
+        "gooped"
+      ],
+      "PROPERNAME": "粘液",
+      "DESCRIPTION": "次の攻撃のとき、粘液の分だけダメージが増加し、粘液を消費し、HPを2回復する。 粘液の半分はターン終了時に取り除かれる。"
+    },
+     {
+      "NAMES": [
+        "効力"
+      ],
+      "PROPERNAME": "効力",
+      "DESCRIPTION": "生み出したすべてのスライムのダメージを増加する。"
+    },
+     {
+      "NAMES": [
+        "トーチヘッドスライム",
+        "torch_head_slime"
+      ],
+      "PROPERNAME": "トーチヘッドスライム",
+      "DESCRIPTION": "毎ターン、6の攻撃する。 効力の効果を2倍得る。"
+    },
+     {
+      "NAMES": [
+        "ブルーザースライム",
+        "bruiser_slime",
+        "bruiser slimes",
+        "bruiser_slimes",
+        "bruiser"
+      ],
+      "PROPERNAME": "ブルーザースライム",
+      "DESCRIPTION": "毎ターン、4の攻撃する。"
+    },
+     {
+      "NAMES": [
+        "カルティストスライム",
+        "cultist_slime"
+      ],
+      "PROPERNAME": "カルティストスライム",
+      "DESCRIPTION": "毎ターン、6の攻撃する。 ダメージを1増やす。"
+    },
+     {
+      "NAMES": [
+        "リーチングスライム",
+        "leeching_slime",
+        "leeching slimes",
+        "leeching_slimes",
+        "leeching"
+      ],
+      "PROPERNAME": "リーチングスライム",
+      "DESCRIPTION": "毎ターン、2の攻撃と2ブロックを得る。"
+    },
+     {
+      "NAMES": [
+        "アシッドスライム",
+        "acid_slime",
+        "acid slimes",
+        "acid_slimes",
+        "acid"
+      ],
+      "PROPERNAME": "アシッドスライム",
+      "DESCRIPTION": "毎ターン、2の攻撃と毒1を与える。"
+    },
+     {
+      "NAMES": [
+        "マイヤースライム",
+        "mire_slime",
+        "mire slimes",
+        "mire_slimes",
+        "mire"
+      ],
+      "PROPERNAME": "マイヤースライム",
+      "DESCRIPTION": "毎ターン、1の攻撃と粘液2を与える。"
+    },
+     {
+      "NAMES": [
+        "プレートアーマー",
+        "spire_boss"
+      ],
+      "PROPERNAME": "プレートアーマー",
+      "DESCRIPTION": "毎ターンブロックが上昇する。 ダメージを受けると減少する。"
+    },
+     {
+      "NAMES": [
+        "ブロンズスライム",
+        "bronze_slime"
+      ],
+      "PROPERNAME": "ブロンズスライム",
+      "DESCRIPTION": "毎ターン、6の攻撃と4 ブロック を得る。"
+    },
+    {
+      "NAMES": [
+        "リック"
+      ],
+      "PROPERNAME": "リック",
+      "DESCRIPTION": "粘液を与える0コストカード。 様々な追加効果がある。"
+    },
+     {
+      "NAMES": [
+        "ゴーストフレイムスライム",
+        "ghostflame_slime"
+      ],
+      "PROPERNAME": "ゴーストフレイムスライム",
+      "DESCRIPTION": "攻撃しないし、効力にも影響されない。 1 筋力 1、機敏性 1、効力 2を得る。"
+      
+    },
+    {
+      "NAMES": [
+        "変化"
+      ],
+      "PROPERNAME": "変化",
+      "DESCRIPTION": "コストが1少ない、あなたのクラスのランダムなカードに交換する。"
+    },
+     {
+      "NAMES": [
+        "スロー"
+      ],
+      "PROPERNAME": "スロー",
+      "DESCRIPTION": "このターンカードをプレイする度に敵の受けるダメージが10%増加する。"
+    },
+     {
+      "NAMES": [
+        "タックル"
+      ],
+      "PROPERNAME": "タックル",
+      "DESCRIPTION": "高ダメージを与えるが、自分も少しダメージを受ける。"
+    },
+     {
+      "NAMES": [
+        "スパイアボス",
+        "スパイアボス"
+      ],
+      "PROPERNAME": "スパイアボス",
+      "DESCRIPTION": "強力な0コストカード。 スパイアのボスにインスピレーションを受けた。"
+    },
+  {
+    "NAMES": [
+      "分割"
+    ],
+    "PROPERNAME": "分割",
+    "DESCRIPTION": "1コストスキル。 NL ブルーザースライムかアシッドスライムに分裂する。(アップグレードしたら両方に分裂する。) NL 廃棄 。"
+  },
+  
+  {
+    "NAMES": [
+      "征服"
+    ],
+    "PROPERNAME": "征服",
+    "DESCRIPTION": "1コストアタック。 NL 10ダメージを与える。生み出したスライム1体当たり、1 (アップグレードしたら2)のダメージを追加で与える。 NL 廃棄 。"
+  },
+  {
+    "NAMES": [
+      "サーブ"
+    ],
+    "PROPERNAME": "サーブ",
+    "DESCRIPTION": "1コストスキル。 NL リーチングリーチングかマイヤースライムに分裂する。 (アップグレードしたら両方に分裂する。) NL 廃棄 。"
+  },
+  {
+    "NAMES": [
+      "プロテクト"
+    ],
+    "PROPERNAME": "プロテクト",
+    "DESCRIPTION": "1コストスキル。 NL 8ブロックを得る。 生み出したスライム1体当たり、1 (アップグレードしたら2)のブロックを追加で得る。 NL 廃棄 。"
+}
+]

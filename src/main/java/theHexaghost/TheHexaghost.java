@@ -4,11 +4,11 @@ import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -33,7 +32,6 @@ import theHexaghost.relics.SpiritBrand;
 import theHexaghost.vfx.MyBody;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.HexaMod.*;
@@ -118,9 +116,10 @@ public class TheHexaghost extends CustomPlayer {
                             y = AbstractDungeon.player.drawY + (260.0F * Settings.scale);
                             break;
                     }
-                    sb.draw(gf.getHelperTexture(), x - (10 * Settings.scale), y - (10 * Settings.scale));
+                    Texture b = gf.getHelperTexture();
+                    sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
                     sb.setColor(Color.WHITE.cpy());
-                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, Color.WHITE, Settings.scale * 0.75F);// 150 153
+                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, Color.WHITE, Settings.scale);// 150 153
                 }
             }
         super.render(sb);

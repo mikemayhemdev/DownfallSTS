@@ -1,0 +1,81 @@
+{
+  "Slimebound:BronzeSlime": {
+    "NAME": "Bronze Slime",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât au début du tour et offre ",
+      " Armure."
+    ]
+  },
+  "Slimebound:AttackSlime": {
+    "NAME": "Bruiser Slime",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât au début de votre tour."
+    ]
+  },
+  "Slimebound:ScrapOozeSlime": {
+    "NAME": "Scrap Ooze",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât au début de votre tour. Réaparrait immédiatement si tué ou absorbé au lieu de rendre de la vie."
+    ]
+  },
+  "Slimebound:GreedOozeSlime": {
+    "NAME": "Greed Ooze",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât au début du tour. Réaparrait immédiatement si tué ou absorbé au lieu de rendre de la vie."
+    ]
+  },
+  "Slimebound:TorchHeadSlime": {
+    "NAME": "Tête de Torche Slime",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât au début de votre tour. Gagne 1 de force de frappe quand vous jouez un Pouvoir."
+    ]
+  },
+  "Slimebound:CultistSlime": {
+    "NAME": "Cultist Slime",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât au début de votre tout, puis augmente sa force de frappe de 2."
+    ]
+  },
+  "Slimebound:ShieldSlime": {
+    "NAME": "Leeching Slime",
+    "DESCRIPTION": [
+      "Inflige ",
+      " Frappe au début du tour et offre ",
+      " Armure."
+    ]
+  },
+  "Slimebound:PoisonSlime": {
+    "NAME": "Acid Slime",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât et applique ",
+      " Poison au début de votre tour."
+    ]
+  },
+  "Slimebound:SlimingSlime": {
+    "NAME": "Mire Slime",
+    "DESCRIPTION": [
+      "Inflige ",
+      " de dégât et applique ",
+      " Slimed au début de votre tour."
+    ]
+  },
+  "Slimebound:HexSlime": {
+    "NAME": "FantômeBrûlant Slime",
+    "DESCRIPTION": [
+      "N'attaque pas s'il n'est pas affecté par Puissance. Donne 1 Force, 1 Dextérité, and 2 Puissance."
+    ]
+  }
+}
+
+
+
+
+
+

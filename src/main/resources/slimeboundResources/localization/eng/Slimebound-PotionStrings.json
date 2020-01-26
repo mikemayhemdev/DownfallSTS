@@ -1,0 +1,33 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "Jar of Slime",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " Goop."
+    ]
+  },
+
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Slimy Elixir",
+    "DESCRIPTIONS": [
+      "Whenever an effect applies Goop, apply #b",
+      " more."
+    ]
+  },
+
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Bottled Minion",
+    "DESCRIPTIONS": [
+      "Spawn ",
+      " random Slime minion."
+    ]
+  },
+
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Ooze-Infused Drink",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " random 0-cost cards to your hand."
+    ]
+  }
+}

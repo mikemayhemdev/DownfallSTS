@@ -1,0 +1,97 @@
+{
+  "Slimebound:AbsorbEndCombat": {
+    "NAME": "Heart of Goo",
+    "FLAVOR": "Ne jamais laisser un Slime en retrait.",
+    "DESCRIPTIONS": [
+      "Fait appraître un Slime aléatoire au début du combat. NL A la fin du combat, pour chaque Slime vivants, soigne #b3 PV."
+    ]
+  },
+  "Slimebound:AbsorbEndCombatUpgraded": {
+    "NAME": "Black Heart of Goo",
+    "FLAVOR": "Parfois il faut laisser un Slime en retrait.",
+    "DESCRIPTIONS": [
+      "Remplace #gHeart #gof #gGoo. Gagnez [E] au début de votre tour. NL A la fin du combat, pour chaque Slime vivant, soignez #b3 HP."
+    ]
+  },
+  "Slimebound:SlimedTailRelic": {
+    "NAME": "Slimed Tail",
+    "FLAVOR": "Une fausse queue pour tromper l'ennemi.",
+    "DESCRIPTIONS": [
+      "Quand vous chutez sous 50% de votre vie, faites apparaître un Acid Slime, et la prochaine fois que vous prenez des dégâts, votre plus ancien slime disparaît. (une seule fois par combat).",
+      "Cette relique a déjà été utilisée ce combat. Il fonctionnera à nouveau au prochain combat."
+    ]
+  },
+  "Slimebound:PotencyRelic": {
+    "NAME": "Ooze Stone",
+    "FLAVOR": "C'est écrit Gagnez si vous êtes de bonne humeur.",
+    "DESCRIPTIONS": [
+      "Au début du combat, fait apparaître un Mire Slime et gagnez #b1 Puissance."
+    ]
+  },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "Slime la Tour",
+    "FLAVOR": "ALWAYS Split.  Why is this a relic? Cause I can't figure out how to add the custom mod to the list of active mods UI!",
+    "DESCRIPTIONS": [
+      "#bCustom #bRun #bModifier NL Tous les ennemis se transforment en deux slimes quand ils sont sous la moitié de leur PV."
+    ]
+  },
+  "Slimebound:ScrapOozeRelic": {
+    "NAME": "Scrap Ooze",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Au début du combat, fait apparaître Scrap Ooze. NL Aux feux de camps, vous pouvez donner une carte à Scrap Ooze, qui gagnera +1 dégât pour une carte Commune #gUncommons, +2 dégâts pour rare #yRares, -2 dégâts pour Malédiction #rCurses.",
+      "Choisissez une carte de votre deck et modifiez Scrap Ooze's dégât.",
+      "Rien à donner à Scrap Ooze."
+    ]
+  },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "Greed Ooze",
+    "FLAVOR": "Quelqu'un a trouvé qui bouffait l'or dans la Tour.",
+    "DESCRIPTIONS": [
+      "Au début du combat, fait apparaître Greed Ooze. NL Aux faux de camp, Greed Ooze prendra 50 Or de votre bourse, augmentant ses dégâts de 1."
+    ]
+  },
+  "Slimebound:PreparedRelic": {
+    "NAME": "Slimy Théière",
+    "FLAVOR": "Definitely not the key to a refreshing night's rest.",
+    "DESCRIPTIONS": [
+      "Quand vous entrez dans un feu de camp, débutz votre prochain combat avec la carte Preparer qui coûte 0 ce tour."
+    ]
+  },
+  "Slimebound:StudyCardRelic": {
+    "NAME": "Petit chapeau",
+    "FLAVOR": "Celui qui contrôle le chapeau, contrôle la tour.",
+    "DESCRIPTIONS": [
+      "Au début du combat, ajoutez la carte Etudier La Tour à votre main. Elle coûte 0."
+    ]
+  },
+  "Slimebound:AggressiveSlimeRelic": {
+    "NAME": "Goop Dweller",
+    "FLAVOR": "Il m'a suivi à la maison. Je peux le garder?",
+    "DESCRIPTIONS": [
+      "Au début du combat, fait appraître un Bruiser slime."
+    ]
+  },
+  "Slimebound:SlimedSkullRelic": {
+    "NAME": "Crâne dégoûtant",
+    "FLAVOR": "Un crâne de Snecko complètement dégueulasse. Sale et collant, on dirait de la glue.",
+    "DESCRIPTIONS": [
+      "Quand vous appliquez Slimed sur un ennemi, appliquez en plus #b",
+      " Slimed."
+    ]
+  },
+  "Slimebound:MaxSlimesRelic": {
+    "NAME": "Slime Plushie",
+    "FLAVOR": "Trop chou.",
+    "DESCRIPTIONS": [
+      "Au début du combat, fait apparaître un  Leeching slime et Gagnez 1 emplacement de Slime."
+    ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "Protective Gear",
+    "FLAVOR": "The best defense is a good offense.",
+    "DESCRIPTIONS": [
+      "Reduce the damage you take from Tackle cards by 1."
+    ]
+  }
+}

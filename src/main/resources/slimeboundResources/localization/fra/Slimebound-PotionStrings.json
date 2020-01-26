@@ -1,0 +1,33 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "Jarre de Slimed",
+    "DESCRIPTIONS": [
+      "Applique #b",
+      " Slimed."
+    ]
+  },
+
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Slimy Elixir",
+    "DESCRIPTIONS": [
+      "Quand vous appliquez Slimed sur un ennemi, appliquez #b",
+      " de plus."
+    ]
+  },
+
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Bottled Minion",
+    "DESCRIPTIONS": [
+      "Invoque ",
+      " Aléatoire Slime."
+    ]
+  },
+
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Ooze-Thé infusé",
+    "DESCRIPTIONS": [
+      "Ajoutez #b",
+      " Carte aléatoire coûtant 0 à votre main."
+    ]
+  }
+}

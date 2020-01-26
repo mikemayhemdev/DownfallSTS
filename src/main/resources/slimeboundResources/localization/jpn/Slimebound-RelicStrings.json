@@ -1,0 +1,97 @@
+{
+  "Slimebound:AbsorbEndCombat": {
+    "NAME": "ベトベトの心",
+    "FLAVOR": "君は1人じゃないよ",
+    "DESCRIPTIONS": [
+      "戦闘開始時にランダムなスライムを 分裂 する。"
+    ]
+  },
+  "Slimebound:AbsorbEndCombatUpgraded": {
+    "NAME": "ベトベトの黒い心",
+    "FLAVOR": "君とウーズの軍隊",
+    "DESCRIPTIONS": [
+      "#gベトベトの心 と置き換える。 戦闘開始時にランダムな2つのスライムを 分裂 する。 効力 1とスライムスロット1を得る。"
+    ]
+  },
+  "Slimebound:SlimedTailRelic": {
+    "NAME": "スライムテール",
+    "FLAVOR": "完全にスライムで覆われた、戦闘中に敵をだますための偽のしっぽ。",
+    "DESCRIPTIONS": [
+      "最大HPの50％を下回ったとき、 アシッドスライム を 分裂 し、次にあなたが受けるダメージを、最も古いスライムが犠牲となり防ぐ。 （戦闘ごとに1回発動。）",
+      "このレリックはこの戦闘で使用された。 次の戦闘で再びアクティブになる。"
+    ]
+  },
+  "Slimebound:PotencyRelic": {
+    "NAME": "ウーズストーン",
+    "FLAVOR": "得られる力はあなたの気分に左右されると言われています。",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 マイヤースライム を 分裂 し、 効力 #b1 を得る。"
+    ]
+  },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "スライム・ザ・スパイア",
+    "FLAVOR": "常に分裂する。 なぜこれがレリックなのですか？ 原因アクティブなmodのUIにカスタムmodを追加する方法がわかりません。",
+    "DESCRIPTIONS": [
+      "#bカスタムランモディファイア NL 敵全体が50％HPで2つのスライムになる。"
+    ]
+  },
+  "Slimebound:ScrapOozeRelic": {
+    "NAME": "スクラップウーズ",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "戦闘開始時に スクラップウーズ を 分裂 する。 NL 休息場所では、 #gアンコモン に+1ダメージ、#yレア に+2ダメージ、 #r呪い に-2ダメージを与えることで、Scrap Oozeにカードを寄付することができます。",
+      "デッキから削除すると スクラップウーズ のダメージを変える。",
+      "スクラップウーズ に何もあげるな。"
+	  ]
+  },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "グリードウーズ",
+    "FLAVOR": "スパイアで見つけたお金を貯めている見つけた友人。",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 グリードウーズ を分裂する。 NL 休息場所では、 グリードウーズ はあなたからゴールドを50得て、ダメージが1増加する。"
+    ]
+  },
+  "Slimebound:PreparedRelic": {
+    "NAME": "スライムティーセット",
+    "FLAVOR": "爽やかな夜の休息の秘訣は絶対にありません",
+    "DESCRIPTIONS": [
+      "休憩場所を通過した次の戦闘において、最初のターンにコスト0の準備カードを持った状態で始める。"
+    ]
+  },
+  "Slimebound:StudyCardRelic": {
+    "NAME": "タイニーボウラーハット",
+    "FLAVOR": "誰が帽子をコントロールしても、Spireをコントロールします。",
+    "DESCRIPTIONS": [
+      "戦闘の開始時に、スタディ・ザ・スパイアカードをあなたの手札に加える。 このカードのコストは0です。"
+    ]
+  },
+  "Slimebound:AggressiveSlimeRelic": {
+    "NAME": "べとべとの同居人",
+    "FLAVOR": "彼が家までついてきた。 これ飼っていい？",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 ブルーザースライム を 分裂 する。"
+    ]
+  },
+  "Slimebound:SlimedSkullRelic": {
+    "NAME": "スライミースカル",
+    "FLAVOR": "ひどい状態のスネッコの頭蓋骨。 汚れやぬるぬるがこびり付いてる。",
+    "DESCRIPTIONS": [
+      "粘液 を与えるたび、追加で粘液 #b",
+      " を与える。"
+    ]
+  },
+  "Slimebound:MaxSlimesRelic": {
+    "NAME": "スライムのぬいぐるみ",
+    "FLAVOR": "可愛すぎる",
+    "DESCRIPTIONS": [
+      "戦闘開始時に リーチングスライム を 分裂 し、 スライムスロット を1得る。"
+    ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "防具",
+    "FLAVOR": "攻撃は最大の防御",
+    "DESCRIPTIONS": [
+      "タックルカードから受けるダメージを1減らす。"
+    ]
+  }
+}

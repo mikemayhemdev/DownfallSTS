@@ -3,6 +3,7 @@ package theHexaghost.ghostflames;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -52,7 +53,7 @@ public abstract class AbstractGhostflame {
     public AbstractGhostflame(float x, float y) {
         lx = x;
         ly = y;
-        hitbox = new Hitbox(x, y, 64, 64);
+        hitbox = new Hitbox(x, y, 64 * Settings.scale, 64* Settings.scale);
         graphicalRender = new MyOrb(x, y, this, hitbox);
     }
 

@@ -198,7 +198,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
-    "DESCRIPTION": "Deal !D! damage and apply !M! hexamod:Burn to a random enemy 4 times."
+    "DESCRIPTION": "Deal !D! damage and apply 1 hexamod:Burn to a random enemy !M! times."
   },
   "hexamod:Firestarter": {
     "NAME": "Firestarter",
@@ -308,9 +308,9 @@
     "DESCRIPTION": "hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
   },
   "hexamod:ApocalypticArmor": {
-    "NAME": "Apocalypse Armor",
-    "DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, gain 1 Intangible.",
-    "UPGRADE_DESCRIPTION": "Whenever you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, gain 1 Intangible."
+    "NAME": "Doomsday",
+    "DESCRIPTION": "The next time you Charge the Inferno Ghostflame and all !M! Ghostflames are Charged, take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time you Charge the Inferno Ghostflame and at least !M! Ghostflames are Charged, take an extra turn."
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",

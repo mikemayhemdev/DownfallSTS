@@ -1,0 +1,181 @@
+[
+     {
+      "NAMES": [
+        "吸收",
+        "absorbing",
+        "absorbed"
+      ],
+      "PROPERNAME": "吸收",
+      "DESCRIPTION": "融合一只生成的史莱姆，恢复 分裂 时减少的生命上限。"
+    },
+    {
+      "NAMES": [
+        "分裂"
+      ],
+      "PROPERNAME": "分裂",
+      "DESCRIPTION": "失去 3 点生命，生成一只史莱姆仆从，在回合开始时发动攻击。当它存活时，你的生命上限减少3点。"
+    },
+    {
+      "NAMES": [
+        "黏液",
+        "gooped"
+      ],
+      "PROPERNAME": "黏液",
+      "DESCRIPTION": "每层黏液为下次攻击提供 1 点额外伤害。攻击时移除黏液效果，并恢复 2 点生命。回合结束时失去一半层数。"
+    },
+     {
+      "NAMES": [
+        "潜力"
+      ],
+      "PROPERNAME": "潜力",
+      "DESCRIPTION": "提升所有生成的史莱姆的攻击伤害。"
+    },
+     {
+      "NAMES": [
+        "火炬头史莱姆",
+        "torch_head_slime"
+      ],
+      "PROPERNAME": "火炬头史莱姆",
+      "DESCRIPTION": "发动攻击时造成 6 点伤害， 潜力 对其影响翻倍。"
+    },
+     {
+      "NAMES": [
+        "好斗史莱姆",
+        "bruiser_slime",
+        "bruiser slimes",
+        "bruiser_slimes",
+        "bruiser"
+      ],
+      "PROPERNAME": "好斗史莱姆",
+      "DESCRIPTION": "发动攻击时造成 4 点伤害。"
+    },
+     {
+      "NAMES": [
+        "邪教徒史莱姆",
+        "cultist_slime"
+      ],
+      "PROPERNAME": "邪教徒史莱姆",
+      "DESCRIPTION": "发动攻击时造成 6 点伤害，提升自身伤害 1 点。"
+    },
+     {
+      "NAMES": [
+        "水蛭史莱姆",
+        "leeching_slime",
+        "leeching slimes",
+        "leeching_slimes",
+        "leeching"
+      ],
+      "PROPERNAME": "水蛭史莱姆",
+      "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予你 2 点格挡。"
+    },
+     {
+      "NAMES": [
+        "酸液史莱姆",
+        "acid_slime",
+        "acid slimes",
+        "acid_slimes",
+        "acid"
+      ],
+      "PROPERNAME": "酸液史莱姆",
+      "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予敌人 1 层 中毒。"
+    },
+     {
+      "NAMES": [
+        "污泥史莱姆",
+        "mire_slime",
+        "mire slimes",
+        "mire_slimes",
+        "mire"
+      ],
+      "PROPERNAME": "污泥史莱姆",
+      "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 黏液。"
+    },
+     {
+      "NAMES": [
+        "plated armor",
+        "plated_armor"
+      ],
+      "PROPERNAME": "Plated Armor",
+      "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
+    },
+     {
+      "NAMES": [
+        "青铜史莱姆",
+        "bronze_slime"
+      ],
+      "PROPERNAME": "Bronze Slime",
+      "DESCRIPTION": "发动攻击时造成 6 点伤害，并给予你 4 点格挡。"
+    },
+    {
+      "NAMES": [
+        "舔舐"
+      ],
+      "PROPERNAME": "舔舐",
+      "DESCRIPTION": "以舔字结尾的一系列0费卡牌，给予敌人多种负面状态。"
+    },
+     {
+      "NAMES": [
+        "鬼火史莱姆",
+        "ghostflame_slime"
+      ],
+      "PROPERNAME": "鬼火史莱姆",
+      "DESCRIPTION": "提供 1 点力量，1 点敏捷，2 点 潜力 。不会攻击，不受潜力影响。"
+    },
+    {
+      "NAMES": [
+        "重铸"
+      ],
+      "PROPERNAME": "重铸",
+      "DESCRIPTION": "在本场战斗中，将卡牌替换为本职业的一张随机卡牌，它的耗能减少 1 点。"
+    },
+     {
+      "NAMES": [
+        "slow"
+      ],
+      "PROPERNAME": "Slow",
+      "DESCRIPTION": "Receives 10% more damage per card played in a turn."
+    },
+     {
+      "NAMES": [
+        "冲撞"
+      ],
+      "PROPERNAME": "冲撞",
+      "DESCRIPTION": "以冲撞结尾的一系列的高伤害，且会对自己造成伤害的牌。"
+    },
+     {
+      "NAMES": [
+        "尖塔首领",
+        "spire_boss"
+      ],
+      "PROPERNAME": "尖塔首领",
+      "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西。"
+    },
+    {
+      "NAMES": [
+        "分而治之：分裂"
+      ],
+      "PROPERNAME": "分而治之：分裂",
+      "DESCRIPTION": "1费技能牌。 NL 分裂 出 好斗史莱姆 或（和） 酸液史莱姆 。 NL 消耗"
+    },
+    {
+      "NAMES": [
+        "分而治之：统治"
+      ],
+      "PROPERNAME": "分而治之：统治",
+      "DESCRIPTION": "1费攻击牌。 NL 造成 10 点伤害， 每只生成的史莱姆额外提供 1（2） 点伤害。 NL 消耗"
+    },
+    {
+      "NAMES": [
+        "召唤保护：召唤"
+      ],
+      "PROPERNAME": "召唤保护：召唤",
+      "DESCRIPTION": "1费技能牌。 NL 分裂 出 水蛭史莱姆 或（和） 污泥史莱姆。 NL 消耗"
+    },
+    {
+      "NAMES": [
+        "召唤保护：保护"
+      ],
+      "PROPERNAME": "召唤保护：保护",
+      "DESCRIPTION": "1费技能牌. NL 获得 8 点 格挡 ， 每只生成的史莱姆额外提供 1（2） 点 格挡 。 NL 消耗"
+    }
+  ]

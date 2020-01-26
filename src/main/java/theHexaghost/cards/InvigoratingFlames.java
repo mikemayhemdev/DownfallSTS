@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.powers.BurnPower;
+import theHexaghost.util.CardIgnore;
 
 public class InvigoratingFlames extends AbstractHexaCard {
 
