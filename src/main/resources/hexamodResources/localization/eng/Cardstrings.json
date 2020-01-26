@@ -36,7 +36,7 @@
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
-    "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame NL Exhaust.",
+    "DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "hexamod:Advance. NL hexamod:Force-Ignite the next Ghostflame."
   },
   "hexamod:CatchUp": {
@@ -58,7 +58,7 @@
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "hexamod:Ignite all Ghostflames in order. NL Exhaust"
+    "DESCRIPTION": "hexamod:Ignite all Ghostflames in order. NL Exhaust."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
@@ -77,7 +77,7 @@
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Extinguish it and hexamod:Ignite it again."
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Force-Ignite it."
   },
   "hexamod:CrushingStance": {
     "NAME": "Crush",
@@ -109,12 +109,12 @@
     "DESCRIPTION": "Gain 2 hexamod:Momentary Strength and 2 hexamod:Momentary Dexterity for each hexamod:Ignited Ghostflame."
   },
   "hexamod:SpectralAdrenaline": {
-    "NAME": "Spectral Adrenaline",
+    "NAME": "Dark Ritual",
     "DESCRIPTION": "Gain [E] and draw 1 card for each for each hexamod:Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
   },
   "hexamod:StepThrough": {
     "NAME": "Step Through",
-    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Advance. If not, hexamod:Ignite the hexamod:Active Ghostflame."
+    "DESCRIPTION": "Deal !D! damage. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Advance. If not, hexamod:Ignite it."
   },
   "hexamod:InspiringFlames": {
     "NAME": "Stoke the Fire",
@@ -190,7 +190,7 @@
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! cards next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] [E] and draw !M! cards next turn."
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! cards next turn."
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -234,7 +234,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Damage is increased by enemy's hexamod:Burn."
   },
   "hexamod:InvigoratingFlames": {
-    "NAME": "Invigorating Flames",
+    "NAME": "Heat Shield",
     "DESCRIPTION": "Gain !B! Block, increased by hexamod:Burn on ALL enemies."
   },
   "hexamod:TurnItUp": {
@@ -269,8 +269,8 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 1 this combat.",
-    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited, hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 2 this combat."
+    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 1 this combat.",
+    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 2 this combat."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
@@ -301,7 +301,7 @@
   },
   "hexamod:Again": {
     "NAME": "Again!",
-    "DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. Do not hexamod:Advance at the end of this turn."
+    "DESCRIPTION": "hexamod:Force-Ignite the hexamod:Active Ghostflame. NL Do not hexamod:Advance at the end of this turn."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Incorporeal",

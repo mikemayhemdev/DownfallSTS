@@ -13,10 +13,10 @@ public class DynamicBlow extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 3;
 
-    private static final int MAGIC = 9;
+    private static final int MAGIC = 10;
     private static final int UPG_MAGIC = 3;
 
     public DynamicBlow() {

@@ -13,7 +13,7 @@ public class GhostShield extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 6;
     private static final int UPG_BLOCK = 2;
 
     public GhostShield() {
