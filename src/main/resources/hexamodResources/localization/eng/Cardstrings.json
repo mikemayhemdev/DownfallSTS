@@ -98,11 +98,11 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "Sword of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is un hexamod:Ignited, gain [E] . NL Deal !D! damage."
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is hexamod:Unignited, gain [E] . NL Deal !D! damage."
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "Shield of Night",
-    "DESCRIPTION": "If the hexamod:Active Ghostflame is un hexamod:Ignited, gain [E] . NL Gain !B! Block."
+    "DESCRIPTION": "If the hexamod:Active Ghostflame is hexamod:Unignited, gain [E] . NL Gain !B! Block."
   },
   "hexamod:GhostlyFlex": {
     "NAME": "Ghostly Flex",
