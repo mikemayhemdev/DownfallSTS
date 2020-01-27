@@ -63,7 +63,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "Ignited. ";
+            s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - skillsPlayedThisTurn);

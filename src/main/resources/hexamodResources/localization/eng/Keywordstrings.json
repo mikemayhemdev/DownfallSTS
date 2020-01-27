@@ -35,7 +35,8 @@
     "PROPER_NAME": "Burn",
     "NAMES": [
       "burn",
-      "burned"
+      "burned",
+      "burning"
     ],
     "DESCRIPTION": "Burning creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding up)."
   },

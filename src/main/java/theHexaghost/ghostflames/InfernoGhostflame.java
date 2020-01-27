@@ -62,7 +62,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
         System.out.println(energySpentThisTurn);
         String s = "";
         if (charged) {
-            s = "Ignited. ";
+            s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (3 - energySpentThisTurn);

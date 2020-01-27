@@ -48,7 +48,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "Ignited. ";
+            s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             s = s + "#yActive. #yIgnites after a #yPower is played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
