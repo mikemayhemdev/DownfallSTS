@@ -123,7 +123,7 @@ public class MainMenuEvilMode
 
     public static class EvilMainMenuPanelButton extends MainMenuPanelButton
     {
-        private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(EvilWithinMod.makeID("EvilMenuPanel"));
+        public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(EvilWithinMod.makeID("EvilMenuPanel"));
 
         public EvilMainMenuPanelButton(PanelClickResult setResult, PanelColor setColor, float x, float y)
         {
@@ -147,7 +147,7 @@ public class MainMenuEvilMode
         protected void buttonEffect()
         {
             if (getResult() == Enums.PLAY_EVIL || getResult() == PanelClickResult.PLAY_NORMAL) {
-                // TODO: Do something different for evil character screen
+                EvilModeCharacterSelect.evilMode = getResult() == Enums.PLAY_EVIL;
                 CardCrawlGame.mainMenuScreen.charSelectScreen.open(false);
             } else {
                 SpireSuper.call();
