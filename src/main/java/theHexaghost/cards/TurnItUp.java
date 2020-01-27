@@ -13,7 +13,7 @@ public class TurnItUp extends AbstractHexaCard {
     //stupid intellij stuff SKILL, ENEMY, RARE
 
     public TurnItUp() {
-        super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

@@ -56,10 +56,10 @@ public class BolsteringGhostflame extends AbstractGhostflame {
             s = s + "Inactive. #yIgnites after a #yPower is played while #yActive.";
         }
         int x = block;
-        s = s + " NL #yIgnition: When #yIgnited, gain #b" + x + " #yBlock and #b1 #yStrength.";
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
+        s = s + " NL #yIgnition: When #yIgnited, gain #b" + x + " #yBlock and #b1 #yStrength.";
         if (GhostflameHelper.activeGhostFlame == this) {
             s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
         }

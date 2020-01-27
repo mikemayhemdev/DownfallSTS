@@ -19,7 +19,7 @@ public class LoseEnhanceInTurnsPower extends TwoAmountPower implements Cloneable
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/LoseIntensity32.png");
 
     public LoseEnhanceInTurnsPower(final int amount, final int amount2) {
-        this.name = "Again!";
+        this.name = "Heated Up";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;

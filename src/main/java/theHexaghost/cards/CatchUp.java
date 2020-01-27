@@ -13,7 +13,7 @@ public class CatchUp extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, COMMON
 
     public CatchUp() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

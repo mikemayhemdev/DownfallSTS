@@ -43,7 +43,7 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void updateDescription() {
-        description = "Increase the effectiveness of Ghostflames by #b" + amount + ".";
+        description = "Increase the amount of Damage, Burn, and Block applied by Ghostflames when Ignited by #b" + amount + ".";
     }
 
     @Override
