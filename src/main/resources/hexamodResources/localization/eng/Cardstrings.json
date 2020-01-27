@@ -239,8 +239,8 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
-    "DESCRIPTION": "Double the enemy's hexamod:Burn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's hexamod:Burn. NL Exhaust."
+    "DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+1 turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 5 hexamod:Intensity. NL Lose it in X+2 turns. NL Exhaust."
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",
@@ -335,5 +335,9 @@
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",
     "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
+  },
+  "hexamod:SoulSteal": {
+    "NAME": "Soul Steal",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL If the previous Ghostflame is hexamod:Ignited, hexamod:Retract and return this to your hand. Exhaust."
   }
 }

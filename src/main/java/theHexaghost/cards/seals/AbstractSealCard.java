@@ -38,7 +38,15 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
             }
         }
         if (sealList.size() == 6) {
-            AbstractDungeon.player.masterDeck.group.removeIf(sealList::contains);
+            ArrayList<String> notToRemoveList = new ArrayList<>();
+            ArrayList<AbstractCard> removeList = new ArrayList<>();
+            for (AbstractCard c : abstractPlayer.masterDeck.group) {
+                if (c instanceof AbstractSealCard && !notToRemoveList.contains(c.cardID)) {
+                    notToRemoveList.add(c.cardID);
+                    removeList.add(c);
+                }
+            }
+            abstractPlayer.masterDeck.group.removeIf(removeList::contains);
             AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new TheBrokenSeal());
             addToTop(new VFXAction(new BrokenSealText(Color.PURPLE.cpy(), TEXT[0], 5.5f)));
         }
