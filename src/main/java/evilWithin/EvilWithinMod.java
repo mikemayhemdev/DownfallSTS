@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 public class EvilWithinMod implements
         EditStringsSubscriber
 {
+    public static final String modID = "evil-within";
+
     public static void initialize()
     {
         new EvilWithinMod();
@@ -22,7 +24,7 @@ public class EvilWithinMod implements
 
     public static String makeID(String id)
     {
-        return "evil-within:" + id;
+        return modID + ":" + id;
     }
 
     public static String assetPath(String path)
