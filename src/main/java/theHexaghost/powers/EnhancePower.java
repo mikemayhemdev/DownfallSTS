@@ -21,7 +21,7 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public EnhancePower(final int amount) {
-        this.name = "Enhance";
+        this.name = "Intensity";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;

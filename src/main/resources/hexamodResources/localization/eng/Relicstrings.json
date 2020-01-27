@@ -47,5 +47,12 @@
     "DESCRIPTIONS": [
       "At the start of combat, #yhexamod:Ignite a random Ghostflame."
     ]
+  },
+  "hexamod:InflammatoryLetter": {
+    "NAME": "Inflammatory Letter",
+    "FLAVOR": "You just got burned.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #yhexamod:Intensity."
+    ]
   }
 }
