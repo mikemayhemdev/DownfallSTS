@@ -17,7 +17,7 @@
     "NAME": "Unbroken Soul",
     "FLAVOR": "Not yet...",
     "DESCRIPTIONS": [
-      "The first #b3 times you #yhexamod:Ignite a Ghostflame each turn, gain #b3 #yBlock and [E] ."
+      "The first time you #yIgnite a Ghostflame each turn, gain [E] and #b6 #yBlock."
     ]
   },
   "hexamod:IceCube": {
@@ -32,6 +32,13 @@
     "FLAVOR": "SLURP...",
     "DESCRIPTIONS": [
       "Whenever you kill a #yhexamod:Burning enemy, heal #b2 HP."
+    ]
+  },
+  "hexamod:RecyclingMachine": {
+    "NAME": "Recycling Machine",
+    "FLAVOR": "One day it shall be recycled too.",
+    "DESCRIPTIONS": [
+      "The first time an #yEthereal card is #yExhausted each combat, add a copy into your hand that costs #b0 until played."
     ]
   }
 }

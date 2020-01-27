@@ -19,9 +19,10 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("UnbrokenSoul.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("UnbrokenSoul.png"));
 
+    public boolean activated = false;
+
     public UnbrokenSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
-        counter = -1;
     }
 
     @Override
@@ -59,16 +60,18 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
 
     @Override
     public void atTurnStartPostDraw() {
-        counter = 0;
+        activated = false;
+        beginPulse();
     }
 
     @Override
     public void onCharge(AbstractGhostflame g) {
-        if (counter < 3) {
+        if (!activated) {
             flash();
             addToTop(new GainEnergyAction(1));
-            addToTop(new GainBlockAction(AbstractDungeon.player, 3));
-            counter++;
+            addToTop(new GainBlockAction(AbstractDungeon.player, 6));
+            activated = true;
+            stopPulse();
         }
     }
 }
