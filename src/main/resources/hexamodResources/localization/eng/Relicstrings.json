@@ -24,7 +24,7 @@
     "NAME": "Ice Cube",
     "FLAVOR": "Mortal enemy.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. Remove the Bolstering Ghostflame from your Ghostflames."
+      "Gain [E] at the start of your turn. #yhexamod:Burn is removed instead of halved each turn."
     ]
   },
   "hexamod:SoulConsumer": {
@@ -45,7 +45,7 @@
     "NAME": "Matchstick Case",
     "FLAVOR": "It's charred.",
     "DESCRIPTIONS": [
-      "At the start of combat, #yhexamod:Ignite a random Ghostflame."
+      "At the start of the first turn, #yhexamod:Ignite the #yhexamod:Active Ghostflame and #yhexamod:Advance."
     ]
   },
   "hexamod:InflammatoryLetter": {
@@ -53,6 +53,20 @@
     "FLAVOR": "You just got burned.",
     "DESCRIPTIONS": [
       "Start each combat with #b1 #yhexamod:Intensity."
+    ]
+  },
+  "hexamod:SoulOfChaos": {
+    "NAME": "Soul of Chaos",
+    "FLAVOR": "Mayhem, made manifest.",
+    "DESCRIPTIONS": [
+      "The second Searing Ghostflame becomes a Mayhem Ghostflame."
+    ]
+  },
+  "hexamod:JarOfFuel": {
+    "NAME": "Jar of Fuel",
+    "FLAVOR": "Accelerate MUCH faster.",
+    "DESCRIPTIONS": [
+      "Swap the positions of the Bolstering Ghostflame and the first Searing Ghostflame."
     ]
   }
 }

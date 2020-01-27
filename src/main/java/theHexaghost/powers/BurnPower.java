@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.HexaMod;
+import theHexaghost.relics.IceCube;
 import theHexaghost.util.TextureLoader;
 
 public class BurnPower extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
@@ -52,7 +53,9 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 65 66
             this.flashWithoutSound();// 67
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
-            addToBot(new ReducePowerAction(owner, owner, this, ((int)Math.ceil(this.amount / 2F))));
+            int x = ((int)Math.ceil(this.amount / 2F));
+            if (AbstractDungeon.player.hasRelic(IceCube.ID)) x = amount;
+            addToBot(new ReducePowerAction(owner, owner, this, x));
         }
     }// 70
 

@@ -2,10 +2,14 @@ package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
+import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
@@ -21,11 +25,23 @@ public class MatchstickCase extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
     }
 
+    private boolean firstTurn = true;
+
+    public void atPreBattle() {
+        this.firstTurn = true;// 44
+    }// 45
+
     @Override
-    public void atBattleStart() {
-        flash();
-        int i = AbstractDungeon.cardRandomRng.random(GhostflameHelper.hexaGhostFlames.size() - 1);
-        addToBot(new ChargeAction(GhostflameHelper.hexaGhostFlames.get(i)));
-        grayscale = true;
+    public void atTurnStartPostDraw() {
+        super.atTurnStartPostDraw();
+    }
+
+    public void atTurnStart() {
+        if (this.firstTurn) {// 49
+            this.flash();// 50
+            addToBot(new ChargeCurrentFlameAction());
+            addToBot(new AdvanceAction());
+            this.firstTurn = false;// 53
+        }
     }
 }
