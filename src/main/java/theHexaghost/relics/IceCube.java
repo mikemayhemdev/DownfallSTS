@@ -17,8 +17,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class IceCube extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("IceCube");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SpiritBrand.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SpiritBrand.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("IceCube.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("IceCube.png"));
 
     public IceCube() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);

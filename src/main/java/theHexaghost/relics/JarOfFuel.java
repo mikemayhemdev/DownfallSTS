@@ -14,9 +14,9 @@ import static theHexaghost.HexaMod.makeRelicPath;
 
 public class JarOfFuel extends CustomRelic {
 
-    public static final String ID = HexaMod.makeID("IceCube");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SpiritBrand.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SpiritBrand.png"));
+    public static final String ID = HexaMod.makeID("JarOfFuel");
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("AncientSpiritShield.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("AncientSpiritShield.png"));
 
     public JarOfFuel() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);

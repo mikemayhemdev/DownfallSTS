@@ -18,8 +18,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class MatchstickCase extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("MatchstickCase");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("UnbrokenSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("UnbrokenSoul.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("MatchstickCase.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("MatchstickCase.png"));
 
     public MatchstickCase() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
@@ -43,5 +43,10 @@ public class MatchstickCase extends CustomRelic {
             addToBot(new AdvanceAction());
             this.firstTurn = false;// 53
         }
+    }
+
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
     }
 }

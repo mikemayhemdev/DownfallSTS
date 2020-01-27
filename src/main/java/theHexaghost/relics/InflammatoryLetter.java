@@ -14,8 +14,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class InflammatoryLetter extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("InflammatoryLetter");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("UnbrokenSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("UnbrokenSoul.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("InflammatoryLetter.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("InflammatoryLetter.png"));
 
     public InflammatoryLetter() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
@@ -26,5 +26,10 @@ public class InflammatoryLetter extends CustomRelic {
         flash();
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
         grayscale = true;
+    }
+
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
     }
 }

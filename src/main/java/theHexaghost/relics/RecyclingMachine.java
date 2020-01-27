@@ -18,8 +18,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class RecyclingMachine extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("RecyclingMachine");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("UnbrokenSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("UnbrokenSoul.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("RecyclingMachine.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("RecyclingMachine.png"));
 
     public boolean activated = false;
 
@@ -31,6 +31,11 @@ public class RecyclingMachine extends CustomRelic {
     public void atBattleStart() {
         activated = false;
         beginLongPulse();
+    }
+
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
     }
 
     @Override

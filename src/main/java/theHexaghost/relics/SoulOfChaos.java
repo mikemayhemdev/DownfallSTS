@@ -16,8 +16,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class SoulOfChaos extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("SoulOfChaos");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SpiritBrand.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SpiritBrand.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SoulOfChaos.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SoulOfChaos.png"));
 
     public SoulOfChaos() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

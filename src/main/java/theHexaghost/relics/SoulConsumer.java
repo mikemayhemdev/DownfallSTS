@@ -16,8 +16,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class SoulConsumer extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("SoulConsumer");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SpiritBrand.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SpiritBrand.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SoulConsumer.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SoulConsumer.png"));
 
     public SoulConsumer() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
