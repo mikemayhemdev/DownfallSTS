@@ -68,13 +68,13 @@ public class InfernoGhostflame extends AbstractGhostflame {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn.";
                     break;
                 case 2:
-                    s = s + "#yActive. Ignites after spending [E] [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                    s = s + "#yActive. Ignites after spending [E] [E] this turn.";
                     break;
                 case 1:
-                    s = s + "#yActive. Ignites after spending [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                    s = s + "#yActive. Ignites after spending [E] this turn.";
                     break;
                 default:
                     s = s + "Error. Please report to mod dev: " + x;
@@ -86,6 +86,10 @@ public class InfernoGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL #yIgnition: When #yIgnited, deal #b" + x + " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them.";
+        s = s + " NL #yIgnition: When #yIgnited, deal #b" + x + " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them.";
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+        }
+        return s;
     }
 }

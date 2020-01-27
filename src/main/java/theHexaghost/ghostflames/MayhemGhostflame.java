@@ -49,10 +49,14 @@ public class MayhemGhostflame extends AbstractGhostflame {
             s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + "#yActive. #yIgnites when you end your turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+            s = s + "#yActive. #yIgnites when you end your turn.";
         } else {
             s = s + "Inactive. #yIgnites when you end your turn while #yActive.";
         }
-        return s + " NL #yIgnition: When #yIgnited, play the top card of your draw pile.";
+        s = s + " NL #yIgnition: When #yIgnited, play the top card of your draw pile.";
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+        }
+        return s;
     }
 }
