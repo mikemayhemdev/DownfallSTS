@@ -49,6 +49,7 @@ public class EvilWithinMod implements
 
     private void loadLocalization(Settings.GameLanguage language)
     {
+        loadLocalization(language, UIStrings.class);
     }
 
     @Override
