@@ -40,5 +40,12 @@
     "DESCRIPTIONS": [
       "The first time an #yEthereal card is #yExhausted each combat, add a copy into your hand that costs #b0 until played."
     ]
+  },
+  "hexamod:MatchstickCase": {
+    "NAME": "Matchstick Case",
+    "FLAVOR": "It's charred.",
+    "DESCRIPTIONS": [
+      "At the start of combat, #yhexamod:Ignite a random Ghostflame."
+    ]
   }
 }
