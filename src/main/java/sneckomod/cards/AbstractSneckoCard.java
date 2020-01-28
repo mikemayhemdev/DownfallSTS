@@ -69,6 +69,19 @@ public abstract class AbstractSneckoCard extends CustomCard {
         initializeDescription();
     }
 
+    public AbstractSneckoCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
+        super(id, "ERROR", getCorrectPlaceholderImage(img),
+                cost, "ERROR", type, color, rarity, target);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
+    }
+
     public static String getCorrectPlaceholderImage(String id) {
         return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }

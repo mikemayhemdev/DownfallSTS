@@ -16,36 +16,36 @@
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
   },
   "sneckomod:UnknownCommonAttack": {
-    "NAME": "Unknown Common Attack",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Common Attack."
   },
   "sneckomod:UnknownCommonSkill": {
-    "NAME": "Unknown Common Skill",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Common Skill."
   },
   "sneckomod:UnknownUncommonAttack": {
-    "NAME": "Unknown Uncommon Attack",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Attack."
   },
   "sneckomod:UnknownUncommonSkill": {
-    "NAME": "Unknown Uncommon Skill",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Skill."
   },
   "sneckomod:UnknownUncommonPower": {
-    "NAME": "Unknown Uncommon Power",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Power."
   },
   "sneckomod:UnknownRareAttack": {
-    "NAME": "Unknown Rare Attack",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Rare Attack."
   },
   "sneckomod:UnknownRareSkill": {
-    "NAME": "Unknown Rare Skill",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Rare Skill."
   },
   "sneckomod:UnknownRarePower": {
-    "NAME": "Unknown Rare Power",
-    "DESCRIPTION": "sneckomod:Unknown."
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Rare Power."
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
@@ -68,7 +68,7 @@
     ]
   },
   "sneckomod:UnknownStrike": {
-    "NAME": "Unknown Strike",
+    "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown Strike."
   },
   "sneckomod:Nope": {

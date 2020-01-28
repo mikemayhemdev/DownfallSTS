@@ -23,6 +23,10 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         super(id, "SoulRoll", -2, type, rarity, CardTarget.NONE);
     }
 
+    public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity, CardColor color) {
+        super(id, "SoulRoll", -2, type, rarity, CardTarget.NONE, color);
+    }
+
     public void upgrade() {
         upgradeName();
     }
