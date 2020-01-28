@@ -15,7 +15,7 @@ import theHexaghost.util.TextureLoader;
 
 import java.util.ArrayList;
 
-public class FutureUpgradePower extends AbstractPower implements CloneablePowerInterface {
+public class FutureUpgradePower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
 
     public static final String POWER_ID = HexaMod.makeID("FutureUpgradePower");
 

@@ -3,6 +3,7 @@ package theHexaghost;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -23,6 +24,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.BobEffect;
 import theHexaghost.cards.Defend;
 import theHexaghost.cards.Float;
 import theHexaghost.cards.Sear;
@@ -78,13 +80,15 @@ public class TheHexaghost extends CustomPlayer {
         myBody = new MyBody();
     }
 
+    private BobEffect effect = new BobEffect(0.75F);
+
     public MyBody myBody;
 
     @Override
     public void render(SpriteBatch sb) {
         if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom) && !isDead)
             myBody.render(sb);
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !isDead)
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                 if (activeGhostFlame == gf || showAll) {
                     sb.setColor(partialTransparent);
@@ -117,12 +121,26 @@ public class TheHexaghost extends CustomPlayer {
                             break;
                     }
                     Texture b = gf.getHelperTexture();
+                    sb.setColor(oscillarator());
                     sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
-                    sb.setColor(Color.WHITE.cpy());
                     FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, Color.WHITE, Settings.scale);// 150 153
                 }
             }
         super.render(sb);
+    }
+
+
+    private static float oscillatingTimer = 0.0f;
+    private static float oscillatingFader = 0.0f;
+    public static Color oscillarator() {
+        oscillatingFader += Gdx.graphics.getRawDeltaTime();
+        if (oscillatingFader > 0.66F) {
+            oscillatingFader = 0.66F;
+            oscillatingTimer += Gdx.graphics.getRawDeltaTime() * 1.5f;
+        }
+        Color col = Color.WHITE.cpy();
+        col.a = (0.33F + (MathUtils.cos(oscillatingTimer) + 1.0F) / 3.0F) * oscillatingFader;
+        return col;
     }
 
     @Override
@@ -141,6 +159,7 @@ public class TheHexaghost extends CustomPlayer {
     public void update() {
         super.update();
         myBody.update();
+        this.effect.update();// 43
     }
 
     @Override

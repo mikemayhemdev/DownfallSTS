@@ -2,12 +2,16 @@ package theHexaghost.cards.seals;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.RepairPower;
 import theHexaghost.cards.AbstractHexaCard;
+import theHexaghost.powers.RemoveMeBabey;
 import theHexaghost.relics.TheBrokenSeal;
 import theHexaghost.vfx.BrokenSealText;
 
@@ -44,6 +48,11 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 if (c instanceof AbstractSealCard && !notToRemoveList.contains(c.cardID)) {
                     notToRemoveList.add(c.cardID);
                     removeList.add(c);
+                }
+            }
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof RemoveMeBabey || p instanceof RepairPower) {
+                    addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, p));
                 }
             }
             abstractPlayer.masterDeck.group.removeIf(removeList::contains);

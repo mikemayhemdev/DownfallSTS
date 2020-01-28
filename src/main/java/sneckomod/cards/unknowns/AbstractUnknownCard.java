@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard {
@@ -33,14 +33,16 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                replaceUnknown(false);
+                replaceUnknown(myNeeds());
                 isDone = true;
             }
         });
         return false;
     }
 
-    public void replaceUnknown(boolean toHand) {
+    public abstract Predicate<AbstractCard> myNeeds();
+
+    public void replaceUnknown(Predicate<AbstractCard> funkyPredicate) {
         AbstractPlayer p = AbstractDungeon.player;
         p.hand.removeCard(this);
         boolean validCard;
@@ -49,7 +51,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         for (AbstractCard c : CardLibrary.getAllCards()) {
             validCard = true;
 
-            if ((c.rarity == this.rarity) && c.type == this.type && !(c instanceof AbstractUnknownCard)) {
+            if (funkyPredicate.test(c)) {
                 if (Loader.isModLoaded("Yohane")) {
                     if (c.cardID.contains("Yohane")) {
                         validCard = false;
@@ -68,22 +70,8 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {
-            if ((cUnknown.cost >= 0) && (!cUnknown.hasTag(SneckoMod.SNEKPROOF)) && cUnknown.rarity != CardRarity.BASIC && cUnknown.rarity != CardRarity.SPECIAL) {
-                int newCost = AbstractDungeon.cardRandomRng.random(3);
-                if (cUnknown.cost != newCost) {
-                    cUnknown.cost = newCost;
-                    cUnknown.costForTurn = cUnknown.cost;
-                    cUnknown.isCostModified = true;
-                }
-            }
-
             UnlockTracker.markCardAsSeen(cUnknown.cardID);
-            if (!toHand) {
-                p.drawPile.removeCard(this);
-                AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cUnknown, 1, true));
-            }
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cUnknown, 1, true));
         }
     }
 }

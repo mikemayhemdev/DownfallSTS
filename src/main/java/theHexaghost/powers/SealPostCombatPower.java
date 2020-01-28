@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class SealPostCombatPower extends AbstractPower implements CloneablePowerInterface {
+public class SealPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
 
     public static final String POWER_ID = HexaMod.makeID("SealPostCombatPower");
 
