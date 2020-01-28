@@ -55,5 +55,9 @@
     "NAME": "Soul Roll",
     "DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand. NL Draw 1 card."
+  },
+  "sneckomod:PerplexingGlare": {
+    "NAME": "Perplexing Glare",
+    "DESCRIPTION": "sneckomod:Snekproof. NL ALL enemies gain between -3 and !M! Strength."
   }
 }
