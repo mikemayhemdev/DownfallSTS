@@ -60,6 +60,10 @@ public abstract class AbstractSneckoCard extends CustomCard {
         return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }
 
+    public int getRandomNum(int min, int max) {
+        return AbstractDungeon.cardRandomRng.random(min, max);
+    }
+
     public static String makeID(String blah) {
         return getModID() + ":" + blah;
     }
