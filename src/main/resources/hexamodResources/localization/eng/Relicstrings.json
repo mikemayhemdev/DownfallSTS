@@ -3,14 +3,71 @@
     "NAME": "Spirit Brand",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "Whenever you Charge a Ghostflame, gain #b3 #yBlock."
+      "Whenever you #yhexamod:Ignite a Ghostflame, gain #b2 #yBlock."
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "The Broken Seal",
-    "FLAVOR": "UNBOUND... UNBROKEN",
+    "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Enhance."
+      "Upon pickup, raise your Max HP by #b10. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Intensity."
+    ]
+  },
+  "hexamod:UnbrokenSoul": {
+    "NAME": "Mark of the Ether",
+    "FLAVOR": "Let’s see if we can do... better.",
+    "DESCRIPTIONS": [
+      "Replaces " ,
+      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] and #b6 #yBlock."
+    ]
+  },
+  "hexamod:IceCube": {
+    "NAME": "Specter's Snowflake",
+    "FLAVOR": "I feel... cold.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. #yhexamod:Burn is removed instead of halved each turn."
+    ]
+  },
+  "hexamod:SoulConsumer": {
+    "NAME": "Thermal Stone",
+    "FLAVOR": "A fire would liven this thing up!",
+    "DESCRIPTIONS": [
+      "Whenever you kill a #yhexamod:Burning enemy, heal #b2 HP."
+    ]
+  },
+  "hexamod:RecyclingMachine": {
+    "NAME": "Recycler",
+    "FLAVOR": "One day, it shall be recycled too.",
+    "DESCRIPTIONS": [
+      "The first time an #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
+    ]
+  },
+  "hexamod:MatchstickCase": {
+    "NAME": "Quickfire Matchstick",
+    "FLAVOR": "Lights on any surface!",
+    "DESCRIPTIONS": [
+      "At the start of the first turn, #yhexamod:Ignite the #yhexamod:Active Ghostflame and #yhexamod:Advance."
+    ]
+  },
+  "hexamod:InflammatoryLetter": {
+    "NAME": "Kindling",
+    "FLAVOR": "Fire makes everything better.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #yhexamod:Intensity."
+    ]
+  },
+  "hexamod:SoulOfChaos": {
+    "NAME": "Soul of Chaos",
+    "FLAVOR": "Mayhem, made manifest.",
+    "DESCRIPTIONS": [
+      "The second Searing Ghostflame becomes a Mayhem Ghostflame. NL Mayhem Ghostflame activates when you end your turn while it is active. NL Ignition: Play the top card of your draw pile."
+    ]
+  },
+  "hexamod:JarOfFuel": {
+    "NAME": "Ancient Spirit Shield",
+    "FLAVOR": "Protection on-demand.",
+    "DESCRIPTIONS": [
+      "Swap the positions of the Bolstering Ghostflame and the first Searing Ghostflame."
     ]
   }
 }

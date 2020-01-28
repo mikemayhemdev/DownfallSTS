@@ -29,8 +29,7 @@ public class SplitBronze extends AbstractSlimeboundCard {
 
     public SplitBronze() {
         super(ID, NAME, slimebound.SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        tags.add(SlimeboundMod.STUDY_AUTOMATON);
-        tags.add(SlimeboundMod.STUDY);
+
 
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;

@@ -21,8 +21,9 @@ public class ExtinguishAction extends AbstractGameAction {
         if (bruh != 0) {
             int i = GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame);
             i += bruh;
-            if (i > GhostflameHelper.hexaGhostFlames.size())
+            if (i >= GhostflameHelper.hexaGhostFlames.size())
                 i = 0;
+            else if (i == 0) i = GhostflameHelper.hexaGhostFlames.size();
             cuteAnimeGirl = GhostflameHelper.hexaGhostFlames.get(i);
         }
         cuteAnimeGirl.extinguish();

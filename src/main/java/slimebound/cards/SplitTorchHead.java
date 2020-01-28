@@ -30,8 +30,7 @@ public class SplitTorchHead extends AbstractSlimeboundCard {
 
     public SplitTorchHead() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        tags.add(SlimeboundMod.STUDY_COLLECTOR);
-        tags.add(SlimeboundMod.STUDY);
+
         this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
 

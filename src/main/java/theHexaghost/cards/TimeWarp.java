@@ -17,7 +17,7 @@ public class TimeWarp extends AbstractHexaCard implements OnAdvanceOrRetractSubs
     private static final int UPG_DAMAGE = 2;
 
     public TimeWarp() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
 

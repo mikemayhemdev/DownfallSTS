@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import slimebound.SlimeboundMod;
-import slimebound.actions.RandomStudyCardAction;
+import expansionContent.actions.RandomStudyCardAction;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.vfx.TinyHatParticle;
 

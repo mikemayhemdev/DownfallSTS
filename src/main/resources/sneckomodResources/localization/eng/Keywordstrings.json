@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Snekproof",
+    "NAMES": [
+      "snekproof"
+    ],
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion."
+  },
+  {
+    "PROPER_NAME": "Unknown",
+    "NAMES": [
+      "unknown"
+    ],
+    "DESCRIPTION": "Unknown cards transform into other random cards from ANY class that satisfy certain constraints at combat start."
+  }
+]

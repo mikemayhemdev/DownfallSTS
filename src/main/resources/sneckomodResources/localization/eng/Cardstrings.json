@@ -1,0 +1,82 @@
+{
+  "sneckomod:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "sneckomod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "sneckomod:SnekBite": {
+    "NAME": "Snek Bite",
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+  },
+  "sneckomod:TailWhip": {
+    "NAME": "Tail Whip",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+  },
+  "sneckomod:UnknownCommonAttack": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Common Attack."
+  },
+  "sneckomod:UnknownCommonSkill": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Common Skill."
+  },
+  "sneckomod:UnknownUncommonAttack": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Attack."
+  },
+  "sneckomod:UnknownUncommonSkill": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Skill."
+  },
+  "sneckomod:UnknownUncommonPower": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Power."
+  },
+  "sneckomod:UnknownRareAttack": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Rare Attack."
+  },
+  "sneckomod:UnknownRareSkill": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Rare Skill."
+  },
+  "sneckomod:UnknownRarePower": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Rare Power."
+  },
+  "sneckomod:SoulDraw": {
+    "NAME": "Soul Draw",
+    "DESCRIPTION": "Draw 0 - !M! cards."
+  },
+  "sneckomod:SoulRoll": {
+    "NAME": "Soul Roll",
+    "DESCRIPTION": "Randomize the cost of cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Randomize the cost of cards in your hand. NL Draw 1 card."
+  },
+  "sneckomod:PerplexingStare": {
+    "NAME": "Perplexing Stare",
+    "DESCRIPTION": "ALL enemies gain between -3 and !M! Strength."
+  },
+  "sneckomod:SnekBeam": {
+    "NAME": "Snek Beam",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
+  },
+  "sneckomod:UnknownStrike": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Strike."
+  },
+  "sneckomod:Nope": {
+    "NAME": "Nope",
+    "DESCRIPTION": "Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost."
+  },
+  "sneckomod:UnknownClass": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown YouShouldNeverSeeThis-ReportToDev."
+  }
+}

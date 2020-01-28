@@ -21,7 +21,7 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public EnhancePower(final int amount) {
-        this.name = "Enhance";
+        this.name = "Intensity";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -43,7 +43,7 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void updateDescription() {
-        description = "Increase the effectiveness of Ghostflames by #b" + amount + ".";
+        description = "Increase the amount of Damage, Burn, and Block applied by Ghostflames when Ignited by #b" + amount + ".";
     }
 
     @Override

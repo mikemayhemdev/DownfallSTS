@@ -25,7 +25,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import theHexaghost.relics.SpiritBrand;
+import theHexaghost.relics.*;
 import theHexaghost.util.CardFilter;
 import theHexaghost.util.CardIgnore;
 import theHexaghost.util.CardNoSeen;
@@ -69,7 +69,7 @@ public class HexaMod implements
 
     public static boolean unsealed = false;
 
-    public static Color placeholderColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1);
+    public static Color placeholderColor = new Color(0.25F, 1, 0.1F, 1);
 
     public HexaMod() {
         BaseMod.subscribe(this);
@@ -125,6 +125,15 @@ public class HexaMod implements
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new SpiritBrand(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new InflammatoryLetter(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new IceCube(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new JarOfFuel(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new MatchstickCase(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new RecyclingMachine(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new SoulConsumer(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new UnbrokenSoul(), TheHexaghost.Enums.GHOST_GREEN);
     }
 
     @Override

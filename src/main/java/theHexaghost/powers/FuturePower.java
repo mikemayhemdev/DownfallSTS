@@ -39,7 +39,7 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
     @Override
     public void onAdvance() {
         this.flash();
-        addToBot(new GainBlockAction(owner, 2 * this.amount));
+        addToBot(new GainBlockAction(owner, this.amount));
     }
 
     @Override

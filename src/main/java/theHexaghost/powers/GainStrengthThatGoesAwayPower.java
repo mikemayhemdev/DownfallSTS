@@ -33,7 +33,7 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
         this.updateDescription();
     }
 
-    public boolean activated = false;
+    public boolean activated = true;
 
     @Override
     public void updateDescription() {

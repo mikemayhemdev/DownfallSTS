@@ -55,23 +55,27 @@ public class SearingGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "Ignited. ";
+            s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - attacksPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. Ignites after #b" + x + " #yAttack is played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                s = s + "#yActive. #yIgnites after #b" + x + " #yAttack is played this turn.";
             } else {
-                s = s + "#yActive. Ignites after #b" + x + " #yAttacks are played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                s = s + "#yActive. #yIgnites after #b" + x + " #yAttacks are played this turn.";
             }
         } else {
-            s = s + "Inactive. Ignites after #b2 #yAttacks are played while #yActive.";
+            s = s + "Inactive. #yIgnites after #b2 #yAttacks are played while #yActive.";
         }
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL Ignition: When Ignited, apply #b" + x + " #yBurn to a random enemy.";
+        s = s + " NL #yIgnition: When #yIgnited, apply #b" + x + " #yBurn to a random enemy.";
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+        }
+        return s;
 
     }
 }

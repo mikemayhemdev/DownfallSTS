@@ -13,7 +13,7 @@ public class InvigoratingFlames extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF_AND_ENEMY, UNCOMMON
 
     public InvigoratingFlames() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
     }
 

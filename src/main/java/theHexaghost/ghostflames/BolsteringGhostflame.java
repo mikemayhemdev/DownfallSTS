@@ -48,17 +48,21 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "Ignited. ";
+            s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + "#yActive. Ignites after a #yPower is played this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+            s = s + "#yActive. #yIgnites after a #yPower is played this turn.";
         } else {
-            s = s + "Inactive. Ignites after a #yPower is played while #yActive.";
+            s = s + "Inactive. #yIgnites after a #yPower is played while #yActive.";
         }
         int x = block;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL #y Ignition: When Ignited, gain #b" + x + " #yBlock and #b1 #yStrength.";
+        s = s + " NL #yIgnition: When #yIgnited, gain #b" + x + " #yBlock and #b1 #yStrength.";
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+        }
+        return s;
     }
 }

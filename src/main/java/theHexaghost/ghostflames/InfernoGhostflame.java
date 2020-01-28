@@ -30,7 +30,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
         for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
-            //i have no ghostflame. goodnight
             AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
             if (gf.charged) {
                 att(new ExtinguishAction(gf));
@@ -63,19 +62,19 @@ public class InfernoGhostflame extends AbstractGhostflame {
         System.out.println(energySpentThisTurn);
         String s = "";
         if (charged) {
-            s = "Ignited. ";
+            s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn.";
                     break;
                 case 2:
-                    s = s + "#yActive. Ignites after spending [E] [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                    s = s + "#yActive. Ignites after spending [E] [E] this turn.";
                     break;
                 case 1:
-                    s = s + "#yActive. Ignites after spending [E] this turn. NL At the end of your turn, #yAdvance to the next Ghostflame.";
+                    s = s + "#yActive. Ignites after spending [E] this turn.";
                     break;
                 default:
                     s = s + "Error. Please report to mod dev: " + x;
@@ -87,6 +86,10 @@ public class InfernoGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return s + " NL Ignition: When Ignited, deal #b" + x + " damage to a random enemy for each #yCharged #yGhostflame, then #yExtinguish them.";
+        s = s + " NL #yIgnition: When #yIgnited, deal #b" + x + " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them.";
+        if (GhostflameHelper.activeGhostFlame == this) {
+            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+        }
+        return s;
     }
 }

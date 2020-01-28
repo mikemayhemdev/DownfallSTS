@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.StudyChampPower;
+import expansionContent.powers.StudyChampPower;
 
 
 public class zzzStudyChamp extends AbstractSlimeboundCard {

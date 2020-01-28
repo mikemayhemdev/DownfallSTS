@@ -183,7 +183,7 @@ public class SealSealReward extends RewardItem {
             color = Settings.RED_TEXT_COLOR;
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, "Choose a Seal to obtain.", REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
+        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, "Add a Seal to your deck", REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
         if (!this.hb.hovered) {
 
             for (AbstractGameEffect e : effects) {
