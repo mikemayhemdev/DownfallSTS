@@ -50,12 +50,7 @@ public class EnemyEmptyShuffleDeckAction extends AbstractGameAction
                 ++this.count;
                 final AbstractCard e = c.next();
                 c.remove();
-                if (this.count < 11) {
-                    AbstractDungeon.getCurrRoom().souls.shuffle(e, false);
-                }
-                else {
-                    AbstractDungeon.getCurrRoom().souls.shuffle(e, true);
-                }
+                this.boss.drawPile.addToRandomSpot(e);
                 return;
             }
             this.vfxDone = true;

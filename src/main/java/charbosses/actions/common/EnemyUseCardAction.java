@@ -93,7 +93,7 @@ public class EnemyUseCardAction extends AbstractGameAction
             if (this.targetCard.purgeOnUse) {
                 this.addToTop(new EnemyShowCardAndPoofAction(this.targetCard));
                 this.isDone = true;
-                AbstractDungeon.player.cardInUse = null;
+                AbstractCharBoss.boss.cardInUse = null;
                 return;
             }
             if (this.targetCard.type == AbstractCard.CardType.POWER) {

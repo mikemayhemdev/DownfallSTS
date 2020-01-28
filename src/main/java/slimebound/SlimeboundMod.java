@@ -465,7 +465,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(SlimeBarrage.ID);
         UnlockTracker.unlockCard(SlimeBrawl.ID);
         //UnlockTracker.unlockCard(zzzMaxSlimes.ID);
-        UnlockTracker.unlockCard(StudyTheSpire.ID);
+        UnlockTracker.unlockCard(expansionContent.cards.StudyTheSpire.ID);
         UnlockTracker.unlockCard(SelfFormingGoo.ID);
         UnlockTracker.unlockCard(SlimeSpikes.ID);
         UnlockTracker.unlockCard(GoopArmor.ID);
@@ -500,7 +500,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(AcidGelatin.ID);
         UnlockTracker.unlockCard(RejuvenatingLick.ID);
         UnlockTracker.unlockCard(Replication.ID);
-        UnlockTracker.unlockCard(QuickStudy.ID);
+        UnlockTracker.unlockCard(expansionContent.cards.QuickStudy.ID);
 
         UnlockTracker.unlockCard(CheckThePlaybook.ID);
         UnlockTracker.unlockCard(FinishingTackle.ID);

@@ -15,7 +15,7 @@ import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.ui.EnemyEnergyPanel;
 
-public abstract class AbstractBossCard extends CustomCard {
+public abstract class AbstractBossCard extends AbstractCard {
 
 	
 	public AbstractCharBoss owner;
@@ -135,8 +135,16 @@ public abstract class AbstractBossCard extends CustomCard {
     	if (m instanceof AbstractCharBoss) {
     		return (this.type != CardType.STATUS || this.costForTurn >= -1 || (((AbstractCharBoss)m).hasRelic(MedicalKit.ID))) && (this.type != CardType.CURSE || this.costForTurn >= -1 || (((AbstractCharBoss)m).hasRelic(BlueCandle.ID))) && (this.cardPlayable(m) && this.hasEnoughEnergy());
     	} else {
-    		return super.canUse(p, m);
+    		return true;
     	}
+    }
+    
+    public boolean cardPlayable(final AbstractMonster m) {
+        if (((this.target == CardTarget.ENEMY || this.target == CardTarget.SELF_AND_ENEMY) && AbstractDungeon.player != null && AbstractDungeon.player.isDying) || AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            this.cantUseMessage = null;
+            return false;
+        }
+        return true;
     }
     
 }

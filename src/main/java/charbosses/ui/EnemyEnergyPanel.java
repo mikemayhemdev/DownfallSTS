@@ -38,7 +38,7 @@ public class EnemyEnergyPanel extends AbstractPanel
     private AbstractCharBoss owner;
     
     public EnemyEnergyPanel(AbstractCharBoss owner) {
-        super(198.0f * Settings.scale, 190.0f * Settings.scale, -480.0f * Settings.scale, 200.0f * Settings.scale, 12.0f * Settings.scale, -12.0f * Settings.scale, null, false);
+        super(Settings.WIDTH - 198.0f * Settings.scale, Settings.HEIGHT - 190.0f * Settings.scale, -480.0f * Settings.scale, 200.0f * Settings.scale, 12.0f * Settings.scale, -12.0f * Settings.scale, null, false);
         this.tipHitbox = new Hitbox(0.0f, 0.0f, 120.0f * Settings.scale, 120.0f * Settings.scale);
         this.energyVfxAngle = 0.0f;
         this.energyVfxScale = Settings.scale;

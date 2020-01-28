@@ -10,13 +10,19 @@ Event Override patches, and other things that only appear during Evil Runs.
 
 import basemod.BaseMod;
 import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.PostInitializeSubscriber;
+
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+
+import charbosses.bosses.*;
 
 @SpireInitializer
 public class EvilWithinMod implements
-        EditStringsSubscriber
+        EditStringsSubscriber, PostInitializeSubscriber
 {
     public static final String modID = "evil-within";
 
@@ -61,7 +67,6 @@ public class EvilWithinMod implements
     {
         loadLocalization(language, UIStrings.class);
     }
-
     @Override
     public void receiveEditStrings()
     {
@@ -69,5 +74,11 @@ public class EvilWithinMod implements
         if (Settings.language != Settings.GameLanguage.ENG) {
             loadLocalization(Settings.language);
         }
+    }
+    public void receivePostInitialize() {
+    	this.initializeMonsters();
+    }
+    private void initializeMonsters() {
+        BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new MonsterGroup(new AbstractMonster[] { new CharBossIronclad() }));
     }
 }

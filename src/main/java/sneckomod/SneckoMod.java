@@ -29,7 +29,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
-@SpireInitializer
+//@SpireInitializer
 public class SneckoMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,

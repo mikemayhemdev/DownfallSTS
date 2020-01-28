@@ -167,8 +167,8 @@ public class EnemyCardGroup extends CardGroup {
         for (int i=0; i< this.group.size(); i++) {
         	AbstractCard c = this.group.get(i);
         	c.targetDrawScale = 0.75f;
-        	c.target_x = Settings.WIDTH / 3.0f * 2.0f + (AbstractCard.IMG_WIDTH_S * 0.5f) * (i % 3);
-        	c.target_y = Settings.HEIGHT / 2.0f + (AbstractCard.IMG_HEIGHT_S * 0.5f) * ((float)Math.floor(((float)i)/4.0f));
+        	c.target_x = Settings.WIDTH / 3.0f * 2.0f + (AbstractCard.IMG_WIDTH_S * 0.9f) * (i % 3);
+        	c.target_y = Settings.HEIGHT / 2.0f + (AbstractCard.IMG_HEIGHT_S * 0.9f) * ((float)Math.floor(((float)i)/3.0f));
         }
     }
     

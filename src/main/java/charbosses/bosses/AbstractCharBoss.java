@@ -40,11 +40,12 @@ import charbosses.actions.orb.EnemyAnimateOrbAction;
 import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.actions.orb.EnemyEvokeOrbAction;
 import charbosses.actions.orb.EnemyTriggerEndOfTurnOrbActions;
-import charbosses.actions.util.CharbossDelayedTurnstartAction;
+import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
+import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.orbs.EnemyPlasma;
@@ -64,7 +65,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	public int masterHandSize;
 	public int gameHandSize;
 
-	public EnergyManager energy;
+	public EnemyEnergyManager energy;
 	public EnergyOrbInterface energyOrb;
 	public EnemyEnergyPanel energyPanel;
 	
@@ -87,15 +88,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
 		this.chosenClass = playerClass;
 		this.energyPanel = new EnemyEnergyPanel(this);
-		this.masterDeck = new EnemyCardGroup(CardGroupType.MASTER_DECK);
-		this.drawPile = new EnemyCardGroup(CardGroupType.DRAW_PILE);
-		this.discardPile = new EnemyCardGroup(CardGroupType.DISCARD_PILE);
-		this.hand = new EnemyCardGroup(CardGroupType.HAND);
-		this.exhaustPile = new EnemyCardGroup(CardGroupType.EXHAUST_PILE);
+		this.masterDeck = new EnemyCardGroup(CardGroupType.MASTER_DECK, this);
+		this.drawPile = new EnemyCardGroup(CardGroupType.DRAW_PILE, this);
+		this.discardPile = new EnemyCardGroup(CardGroupType.DISCARD_PILE, this);
+		this.hand = new EnemyCardGroup(CardGroupType.HAND, this);
+		this.exhaustPile = new EnemyCardGroup(CardGroupType.EXHAUST_PILE, this);
+		this.limbo = new EnemyCardGroup(CardGroupType.UNSPECIFIED, this);
 		this.masterHandSize = 5;
 		this.gameHandSize = 5;
 		this.masterMaxOrbs = this.maxOrbs = 0;
 		this.stance = new NeutralStance();
+		this.orbs = new ArrayList<AbstractOrb>();
 	}
 	
 	@Override
@@ -103,11 +106,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		AbstractCharBoss.boss = this;
 		this.generateAll();
 		super.init();
+		this.preBattlePrep();
 	}
-
 	@Override
-	public void rollMove() {
-		
+	public void getMove(int num) {
+		this.setMove((byte) 0, Intent.NONE);
 	}
 	
 	public abstract void generateDeck();
@@ -118,7 +121,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		}
 	}
 	public void generateHistory() {
-		CharbossHistoryPower p = new CharbossHistoryPower(this);
+		//CharbossHistoryPower p = new CharbossHistoryPower(this);
 	}
 	
 	public void generateAll() {
@@ -140,11 +143,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	@Override
 	public void takeTurn() {
 		this.startTurn();
+		this.makePlay();
+	}
+	
+	public void makePlay() {
 		for (int i=5; i>-5; i--) {
 			for (AbstractCard _c : this.hand.group) {
 				AbstractBossCard c = (AbstractBossCard)_c;
 				if (c.getPriority() == i && c.canUse(AbstractDungeon.player, this)) {
-					this.addToBot(new DelayedActionAction(new EnemyUseCardAction(c)));
+					this.useCard(c, this, this.energyPanel.totalCount);
+					this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
+					return;
 				}
 			}
 		}
@@ -317,8 +326,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (this.cardInUse != null) {
             this.cardInUse.update();
         }
+        this.energyPanel.update();
         this.limbo.update();
         this.exhaustPile.update();
+        this.hand.update();
+        this.drawPile.update();
+        this.discardPile.update();
         for (final AbstractPower p : this.powers) {
             p.updateParticles();
         }
@@ -793,7 +806,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	/////////////////////////////////////////////////////////////////////////////
 	////////////[[[[[[[[THE ALMIGHTY RENDERING]]]]]]]]///////////////////////////
 	/////////////////////////////////////////////////////////////////////////////
-    
+    @Override
+    public void render(final SpriteBatch sb) {
+    	super.render(sb);
+    	this.renderHand(sb);
+    	for (AbstractRelic r : this.relics) {
+    		r.render(sb);
+    	}
+    	this.energyPanel.render(sb);
+    }
 
     public void renderHand(final SpriteBatch sb) {
         /*if (this.hoveredCard != null) {

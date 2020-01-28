@@ -8,13 +8,14 @@ import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.red.*;
+import charbosses.core.EnemyEnergyManager;
 
-public class CharBossIronclad extends AbstractCharBoss{
+public class CharBossIronclad extends AbstractCharBoss {
 	
 	public CharBossIronclad() {
 		super("Ironclad", "EvilWithin:Ironclad", 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
 		this.energyOrb = new EnergyOrbRed();
-		this.energy = new EnergyManager(3);
+		this.energy = new EnemyEnergyManager(3);
 		this.loadAnimation("images/characters/ironclad/idle/skeleton.atlas", "images/characters/ironclad/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         this.stateData.setMix("Hit", "Idle", 0.1f);
