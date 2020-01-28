@@ -2,16 +2,8 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.SlimeboundMod;
-import slimebound.actions.RandomStudyCardAction;
-import slimebound.cards.AbstractSlimeboundCard;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.vfx.TinyHatParticle;
 
 public class SelfDamagePreventRelic extends CustomRelic {
     public static final String ID = "Slimebound:SelfDamagePreventRelic";

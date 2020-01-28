@@ -2,23 +2,15 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_L;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_L;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import slimebound.SlimeboundMod;
-import slimebound.actions.RandomStudyCardAction;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.dailymods.AllSplit;
 import slimebound.powers.SplitDailyTriggerPower;
-import slimebound.vfx.TinyHatParticle;
 
 public class DailySplitModRelic extends CustomRelic {
     public static final String ID = "Slimebound:DailySplitRelic";

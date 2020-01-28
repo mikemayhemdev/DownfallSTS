@@ -30,8 +30,6 @@ public class SplitGhostflame extends AbstractSlimeboundCard {
 
     public SplitGhostflame() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        tags.add(SlimeboundMod.STUDY_HEXAGHOST);
-        tags.add(SlimeboundMod.STUDY);
 
         this.exhaust = true;
 
