@@ -15,10 +15,12 @@ import sneckomod.cards.AbstractSneckoCard;
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
+import static sneckomod.SneckoMod.makeCardPath;
+
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard {
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity) {
-        super(id, -2, type, rarity, CardTarget.NONE);
+        super(id, "SoulRoll", -2, type, rarity, CardTarget.NONE);
     }
 
     public void upgrade() {
@@ -70,8 +72,8 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {
-            UnlockTracker.markCardAsSeen(cUnknown.cardID);
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cUnknown, 1, true));
+            p.drawPile.removeCard(this);
+            AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
         }
     }
 }

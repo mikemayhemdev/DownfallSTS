@@ -21,7 +21,6 @@ public class SnekBite extends AbstractSneckoCard {
     public SnekBite() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(SneckoMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,23 +1,22 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.RandomizeHandCostAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
+import sneckomod.actions.NopeAction;
 
-public class SoulRoll extends AbstractSneckoCard {
+public class Nope extends AbstractSneckoCard {
 
-    public final static String ID = makeID("SoulRoll");
+    public final static String ID = makeID("Nope");
 
     //stupid intellij stuff SKILL, SELF, COMMON
 
-    public SoulRoll() {
+    public Nope() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new RandomizeHandCostAction());
+        atb(new NopeAction());
         if (upgraded) atb(new DrawCardAction(1));
     }
 

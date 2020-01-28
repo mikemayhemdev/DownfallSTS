@@ -23,7 +23,6 @@ public class SnekBeam extends AbstractSneckoCard {
     public SnekBeam() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
-        tags.add(SneckoMod.SNEKPROOF);
     }
 
     public static int countCards() {

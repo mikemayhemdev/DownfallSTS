@@ -98,12 +98,6 @@ public class TheSnecko extends CustomPlayer {
         }
         retVal.add(TailWhip.ID);
         retVal.add(SnekBite.ID);
-        retVal.add(UnknownCommonAttack.ID);
-        retVal.add(UnknownCommonAttack.ID);
-        retVal.add(UnknownCommonAttack.ID);
-        retVal.add(UnknownCommonSkill.ID);
-        retVal.add(UnknownCommonSkill.ID);
-        retVal.add(UnknownCommonSkill.ID);
         return retVal;
     }
 
@@ -111,7 +105,6 @@ public class TheSnecko extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(SneckoSoul.ID);
         retVal.add(SneckoLibrary.ID);
-        retVal.add(SneckoEye.ID);
         return retVal;
     }
 
