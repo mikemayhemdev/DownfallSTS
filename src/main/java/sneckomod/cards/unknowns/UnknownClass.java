@@ -14,6 +14,12 @@ public class UnknownClass extends AbstractUnknownCard {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON, getRandomCardColor());
     }
 
+    @Override
+    public void update() {
+        super.update();
+        this.rawDescription = "sneckomod:Unknown" + color.name() + ".";
+    }
+
     public static CardColor getRandomCardColor() {
         ArrayList<CardColor> myList = new ArrayList<>(BaseMod.getCardColors());
         return myList.get(AbstractDungeon.cardRandomRng.random(myList.size() - 1));
