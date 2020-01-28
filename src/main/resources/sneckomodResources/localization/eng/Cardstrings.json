@@ -66,5 +66,9 @@
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
+  },
+  "sneckomod:UnknownStrike": {
+    "NAME": "Unknown Strike",
+    "DESCRIPTION": "sneckomod:Unknown Strike."
   }
 }
