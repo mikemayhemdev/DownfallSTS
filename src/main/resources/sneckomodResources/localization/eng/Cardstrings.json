@@ -49,11 +49,11 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "Draw 0 - !M! cards."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
-    "DESCRIPTION": "Randomize the cost of cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Randomize the cost of cards in your hand. NL Draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand. NL Draw 1 card."
   }
 }
