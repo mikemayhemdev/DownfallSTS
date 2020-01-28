@@ -128,6 +128,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		this.generateDeck();
 		this.generateRelics();
 		this.generateHistory();
+		for (AbstractCard c : this.masterDeck.group) {
+			((AbstractBossCard)c).owner = this;
+		}
 	}
 	
 	public void usePreBattleAction() {
@@ -214,7 +217,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.applyStartOfTurnPostDrawPowers();
         }
 	}
-	
+
+    public void applyPowers() {
+        super.applyPowers();
+        this.hand.applyPowers();
+        this.drawPile.applyPowers();
+        this.discardPile.applyPowers();
+    }
 	
 	/////////////////////////////////////////////////////////////////////////////
 	////////////[[[[[[[[PLAYER-MIMICING FUNCTIONS]]]]]]]]////////////////////////

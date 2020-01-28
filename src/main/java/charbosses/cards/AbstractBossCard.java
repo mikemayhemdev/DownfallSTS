@@ -37,6 +37,44 @@ public abstract class AbstractBossCard extends AbstractCard {
 		return 1;
 	}
 	
+	public void applyPowers() {
+        this.applyPowersToBlock();
+        final AbstractPlayer player = AbstractDungeon.player;
+        this.isDamageModified = false;
+        float tmp = (float)this.baseDamage;
+        for (final AbstractRelic r : this.owner.relics) {
+            tmp = r.atDamageModify(tmp, this);
+            if (this.baseDamage != (int)tmp) {
+                this.isDamageModified = true;
+            }
+        }
+        for (final AbstractPower p : this.owner.powers) {
+            tmp = p.atDamageGive(tmp, this.damageTypeForTurn, this);
+        }
+        tmp = this.owner.stance.atDamageGive(tmp, this.damageTypeForTurn, this);
+        if (this.baseDamage != (int)tmp) {
+            this.isDamageModified = true;
+        }
+        for (final AbstractPower p : player.powers) {
+            tmp = p.atDamageReceive(tmp, this.damageTypeForTurn, this);
+        }
+        tmp = player.stance.atDamageReceive(tmp, this.damageTypeForTurn);
+        for (final AbstractPower p : this.owner.powers) {
+            tmp = p.atDamageFinalGive(tmp, this.damageTypeForTurn, this);
+        }
+        for (final AbstractPower p : player.powers) {
+            tmp = p.atDamageFinalReceive(tmp, this.damageTypeForTurn, this);
+        }
+        if (tmp < 0.0f) {
+            tmp = 0.0f;
+        }
+        if (this.baseDamage != MathUtils.floor(tmp)) {
+            this.isDamageModified = true;
+        }
+        this.damage = MathUtils.floor(tmp);
+        this.initializeDescription();
+    }
+	
 	protected void applyPowersToBlock() {
         this.isBlockModified = false;
         float tmp = (float)this.baseBlock;
@@ -94,6 +132,7 @@ public abstract class AbstractBossCard extends AbstractCard {
             }
             this.damage = MathUtils.floor(tmp);
         }
+        this.initializeDescription();
     }
 	
     public void triggerOnEndOfPlayerTurn() {

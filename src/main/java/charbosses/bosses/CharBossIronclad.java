@@ -1,11 +1,13 @@
 package charbosses.bosses;
 
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 
+import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.red.*;
 import charbosses.core.EnemyEnergyManager;
@@ -30,5 +32,8 @@ public class CharBossIronclad extends AbstractCharBoss {
 			this.masterDeck.addToTop(new EnDefendRed());
 		}
 		this.masterDeck.addToTop(new EnBash());
+		this.masterDeck.addToTop(new EnInflame());
+		
+		
 	}
 }
