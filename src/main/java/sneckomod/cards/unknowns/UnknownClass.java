@@ -1,3 +1,4 @@
+/*
 package sneckomod.cards.unknowns;
 
 import basemod.BaseMod;
@@ -30,3 +31,5 @@ public class UnknownClass extends AbstractUnknownCard {
         return c -> c.color == this.color;
     }
 }
+
+*/
