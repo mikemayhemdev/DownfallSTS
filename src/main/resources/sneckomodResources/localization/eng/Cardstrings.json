@@ -59,5 +59,12 @@
   "sneckomod:PerplexingGlare": {
     "NAME": "Perplexing Glare",
     "DESCRIPTION": "sneckomod:Snekproof. NL ALL enemies gain between -3 and !M! Strength."
+  },
+  "sneckomod:SnekBeam": {
+    "NAME": "Snek Beam",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
   }
 }
