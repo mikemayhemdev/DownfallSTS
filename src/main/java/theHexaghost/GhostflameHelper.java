@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -36,7 +35,7 @@ public class GhostflameHelper {
 
     public static AbstractGhostflame getNextGhostFlame() {
         AbstractGhostflame x;
-        if (activeGhostFlame == hexaGhostFlames.get(5)) {
+        if (activeGhostFlame == hexaGhostFlames.get(hexaGhostFlames.size() - 1)) {
             x = hexaGhostFlames.get(0);
         } else
             x = hexaGhostFlames.get((hexaGhostFlames.indexOf(activeGhostFlame) + 1));
@@ -61,6 +60,9 @@ public class GhostflameHelper {
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAdvanceSubscriber) ((OnAdvanceSubscriber) p).onAdvance();
             if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract();
+        }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract();
         }
     }
 
