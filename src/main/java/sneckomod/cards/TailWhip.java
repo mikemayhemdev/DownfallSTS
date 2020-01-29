@@ -1,9 +1,9 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.unique.RandomizeHandCostAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class TailWhip extends AbstractSneckoCard {
 
@@ -25,6 +25,7 @@ public class TailWhip extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
         applyToEnemy(m, autoWeak(m, magicNumber));
         applyToEnemy(m, autoVuln(m, magicNumber));
+        atb(new RandomizeHandCostAction());
     }
 
     public void upgrade() {

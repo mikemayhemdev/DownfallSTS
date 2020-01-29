@@ -9,11 +9,12 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckmod:Muddle !M! random cards in your hand."
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Muddle your hand."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
@@ -82,5 +83,25 @@
   "sneckomod:UnknownInnate": {
     "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown Innate."
+  },
+  "sneckomod:Unknown": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:Unknown0Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 0 Cost."
+  },
+  "sneckomod:Unknown1Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 1 Cost."
+  },
+  "sneckomod:Unknown2Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 2 Cost."
+  },
+  "sneckomod:Unknown3Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 3 Cost."
   }
 }
