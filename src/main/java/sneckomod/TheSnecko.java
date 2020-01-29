@@ -1,6 +1,5 @@
 package sneckomod;
 
-import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -18,15 +17,12 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.SneckoEye;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import sneckomod.cards.Defend;
 import sneckomod.cards.SnekBite;
 import sneckomod.cards.Strike;
 import sneckomod.cards.TailWhip;
-import sneckomod.cards.unknowns.UnknownCommonAttack;
-import sneckomod.cards.unknowns.UnknownCommonSkill;
-import sneckomod.relics.SneckoLibrary;
+import sneckomod.cards.unknowns.Unknown;
 import sneckomod.relics.SneckoSoul;
 
 import java.util.ArrayList;
@@ -59,7 +55,7 @@ public class TheSnecko extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), 10.0F, 200.0F, 150.0F, 150.0F, new EnergyManager(3));
+                getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
         this.reloadAnimation();
@@ -90,7 +86,7 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             retVal.add(Strike.ID);
         }
         for (int i = 0; i < 4; i++) {
@@ -98,19 +94,19 @@ public class TheSnecko extends CustomPlayer {
         }
         retVal.add(TailWhip.ID);
         retVal.add(SnekBite.ID);
+        retVal.add(Unknown.ID);
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(SneckoSoul.ID);
-        retVal.add(SneckoLibrary.ID);
         return retVal;
     }
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("UNLOCK_PING", MathUtils.random(-0.2F, 0.2F));
+        CardCrawlGame.sound.playA("MONSTER_SNECKO_GLARE", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
     }

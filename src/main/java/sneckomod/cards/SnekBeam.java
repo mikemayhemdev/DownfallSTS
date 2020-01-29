@@ -23,6 +23,7 @@ public class SnekBeam extends AbstractSneckoCard {
     public SnekBeam() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
+        isMultiDamage = true;
     }
 
     public static int countCards() {
@@ -50,7 +51,7 @@ public class SnekBeam extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal)));// 38
-        atb(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));// 39
+        allDmg(AbstractGameAction.AttackEffect.FIRE);
         this.rawDescription = cardStrings.DESCRIPTION;// 41
         this.initializeDescription();// 42
     }

@@ -9,11 +9,12 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckmod:Muddle !M! random cards in your hand."
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Muddle your hand."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
@@ -49,7 +50,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "Draw 0 - !M! cards."
+    "DESCRIPTION": "Draw 0 - !M! cards. NL Muddle them."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
@@ -78,5 +79,45 @@
   "sneckomod:UnknownClass": {
     "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown YouShouldNeverSeeThis-ReportToDev."
+  },
+  "sneckomod:UnknownInnate": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Innate."
+  },
+  "sneckomod:Unknown": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown."
+  },
+  "sneckomod:Unknown0Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 0 Cost."
+  },
+  "sneckomod:Unknown1Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 1 Cost."
+  },
+  "sneckomod:Unknown2Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 2 Cost."
+  },
+  "sneckomod:Unknown3Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 3 Cost."
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown X Cost."
+  },
+  "sneckomod:UnknownEthereal": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Ethereal."
+  },
+  "sneckomod:UnknownBlock": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Block."
+  },
+  "sneckomod:UnknownExhaust": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Exhaust."
   }
 }
