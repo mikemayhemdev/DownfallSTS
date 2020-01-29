@@ -1,5 +1,13 @@
 package evilWithin;
 
+/*
+
+This package should contain all content additions strictly related to the
+Evil Mode alternate gameplay run.  This includes Bosses, Events,
+Event Override patches, and other things that only appear during Evil Runs.
+
+ */
+
 import basemod.BaseMod;
 import basemod.interfaces.EditStringsSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;

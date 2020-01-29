@@ -1,31 +1,17 @@
 package slimebound.actions;
 
-import basemod.BaseMod;
-import basemod.ReflectionHacks;
-import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
-import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.*;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.powers.DuplicatedFormNoHealPower;
-import slimebound.powers.FirmFortitudePower;
-import slimebound.powers.StudyAutomatonPower;
-import slimebound.powers.StudyAutomatonPowerUpgraded;
-import slimebound.vfx.SlimeDripsEffect;
-
-import java.util.Random;
 
 
 public class SlimeSpawnAction extends AbstractGameAction {
