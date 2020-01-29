@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import sneckomod.actions.MuddleAction;
+import sneckomod.actions.MuddleRandomCardAction;
 
 public class SnekBite extends AbstractSneckoCard {
 
@@ -25,7 +25,7 @@ public class SnekBite extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-        atb(new MuddleAction(magicNumber));
+        atb(new MuddleRandomCardAction(magicNumber));
     }
 
     public void upgrade() {

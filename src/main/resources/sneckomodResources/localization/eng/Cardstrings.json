@@ -50,7 +50,7 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "Draw 0 - !M! cards."
+    "DESCRIPTION": "Draw 0 - !M! cards. NL Muddle them."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
@@ -103,5 +103,21 @@
   "sneckomod:Unknown3Cost": {
     "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown 3 Cost."
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown X Cost."
+  },
+  "sneckomod:UnknownEthereal": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Ethereal."
+  },
+  "sneckomod:UnknownBlock": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Block."
+  },
+  "sneckomod:UnknownExhaust": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Exhaust."
   }
 }

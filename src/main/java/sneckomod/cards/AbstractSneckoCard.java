@@ -12,9 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
-
 
 import java.util.ArrayList;
 
@@ -96,6 +94,10 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
     protected void atb(AbstractGameAction action) {
         addToBot(action);
+    }
+
+    protected void att(AbstractGameAction action) {
+        addToTop(action);
     }
 
     protected DamageInfo makeInfo() {
