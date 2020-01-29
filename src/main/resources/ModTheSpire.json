@@ -1,7 +1,7 @@
 {
   "modid": "${project.artifactId}",
   "name": "${project.name}",
-  "author_list": ["Vex'd, MichaelMayhem, The Evil Pickle, Blank the Evil, Reina, kiooeht, Half-GoblinHenkins, Keeb"],
+  "author_list": ["Vex'd, MichaelMayhem, The Evil Pickle, Blank the Evil, Reina, kiooeht, Half-GoblinHenkins, erasels"],
   "description": "${project.description}",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",
