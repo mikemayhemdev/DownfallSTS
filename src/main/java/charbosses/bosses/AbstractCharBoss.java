@@ -5,6 +5,7 @@ import java.util.Collections;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -41,9 +42,11 @@ import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.actions.orb.EnemyEvokeOrbAction;
 import charbosses.actions.orb.EnemyTriggerEndOfTurnOrbActions;
 import charbosses.actions.util.CharbossDoNextCardAction;
+import charbosses.actions.util.CharbossSortHandAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
 import charbosses.cards.AbstractBossCard;
+import charbosses.cards.AbstractBossDeckArchetype;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
@@ -51,6 +54,7 @@ import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.orbs.EnemyPlasma;
 import charbosses.powers.CharbossHistoryPower;
 import charbosses.relics.AbstractCharbossRelic;
+import charbosses.relics.*;
 import charbosses.ui.EnemyEnergyPanel;
 
 public abstract class AbstractCharBoss extends AbstractMonster {
@@ -82,6 +86,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     
     public AbstractPlayer.PlayerClass chosenClass;
     protected AbstractCharbossRelic startingRelic = null;
+    public AbstractBossDeckArchetype chosenArchetype = null;
 
     
 	public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
@@ -104,6 +109,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	@Override
 	public void init() {
 		AbstractCharBoss.boss = this;
+        this.setHp(this.maxHealth + (AbstractDungeon.actNum - 1) * 50, this.maxHealth + 20 + (AbstractDungeon.actNum - 1) * 75);
 		this.generateAll();
 		super.init();
 		this.preBattlePrep();
@@ -118,6 +124,18 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		this.relics = new ArrayList<AbstractCharbossRelic>();
 		if (this.startingRelic != null) {
 			this.startingRelic.obtain(this);
+		}
+		ArrayList<AbstractCharbossRelic> roptions = new ArrayList<AbstractCharbossRelic>();
+		roptions.add(new CBR_Kunai());
+		roptions.add(new CBR_BirdFacedUrn());
+		roptions.add(new CBR_BronzeScales());
+		roptions.add(new CBR_Boot());
+		roptions.add(new CBR_DuvuDoll());
+		roptions.add(new CBR_IceCream());
+		roptions.add(new CBR_LetterOpener());
+		roptions.add(new CBR_Mango());
+		for (int i=0; i < AbstractDungeon.actNum * 2; i++) {
+			roptions.remove(AbstractDungeon.monsterRng.random(roptions.size() - 1)).instantObtain(this);
 		}
 	}
 	public void generateHistory() {
@@ -137,7 +155,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		for (AbstractCharbossRelic r : this.relics) {
 			r.atBattleStartPreDraw();
 		}
-		AbstractDungeon.actionManager.addToBottom(new EnemyDrawCardAction(this, this.gameHandSize, true));
+		AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
 		for (AbstractCharbossRelic r : this.relics) {
 			r.atBattleStart();
 		}
@@ -150,14 +168,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	}
 	
 	public void makePlay() {
-		for (int i=5; i>-5; i--) {
-			for (AbstractCard _c : this.hand.group) {
-				AbstractBossCard c = (AbstractBossCard)_c;
-				if (c.getPriority() == i && c.canUse(AbstractDungeon.player, this)) {
-					this.useCard(c, this, this.energyPanel.totalCount);
-					this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
-					return;
-				}
+		for (AbstractCard _c : this.hand.group) {
+			AbstractBossCard c = (AbstractBossCard)_c;
+			if (c.canUse(AbstractDungeon.player, this)) {
+				this.useCard(c, this, this.energyPanel.totalCount);
+				this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
+				return;
 			}
 		}
 	}
@@ -213,6 +229,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	public void endTurnStartTurn() {
 		if (!AbstractDungeon.getCurrRoom().isBattleOver) {
             AbstractDungeon.actionManager.addToBottom(new EnemyDrawCardAction(this, this.gameHandSize, true));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
+            AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
             this.applyStartOfTurnPostDrawRelics();
             this.applyStartOfTurnPostDrawPowers();
         }
@@ -223,6 +241,64 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.hand.applyPowers();
         this.drawPile.applyPowers();
         this.discardPile.applyPowers();
+    }
+    
+    public void sortHand() {
+    	ArrayList<AbstractBossCard> cardsByValue = new ArrayList<AbstractBossCard>();
+    	ArrayList<AbstractBossCard> affordableCards = new ArrayList<AbstractBossCard>();
+    	ArrayList<AbstractBossCard> unaffordableCards = new ArrayList<AbstractBossCard>();
+    	ArrayList<AbstractCard> sortedCards = new ArrayList<AbstractCard>();
+    	for (AbstractCard _c : this.hand.group) {
+    		AbstractBossCard c = (AbstractBossCard) _c;
+    		if (cardsByValue.size() < 1) {
+    			cardsByValue.add(c);
+    		} else {
+    			boolean gotem = false;
+    			for (int i=0; i < cardsByValue.size(); i++) {
+        			if (cardsByValue.get(i).getValue() < c.getValue() + AbstractDungeon.aiRng.random(0, 4) - 2) {
+        				cardsByValue.add(i, c);
+        				gotem = true;
+        				break;
+        			}
+        		}
+    			if (!gotem) {
+    				cardsByValue.add(c);
+    			}
+    		}
+    	}
+    	int budget = this.energy.energy;
+    	for (int i=0; i < cardsByValue.size(); i++) {
+    		AbstractBossCard c = cardsByValue.get(i);
+    		if (c.costForTurn <= budget && c.costForTurn != -2) {
+    			budget -= c.costForTurn;
+    			affordableCards.add(c);
+    		} else {
+    			unaffordableCards.add(c);
+    		}
+    	}
+    	for (int i=0; i < affordableCards.size(); i++) {
+    		AbstractBossCard c = affordableCards.get(i);
+    		if (sortedCards.size() < 1) {
+    			sortedCards.add(c);
+    		} else {
+    			boolean gotem = false;
+    			for (int j=0; j < sortedCards.size(); j++) {
+        			if (((AbstractBossCard)sortedCards.get(j)).getPriority() < c.getPriority()) {
+        				sortedCards.add(j, c);
+        				gotem = true;
+        				break;
+        			}
+        		}
+    			if (!gotem) {
+    				sortedCards.add(c);
+    			}
+    		}
+    	}
+    	for (AbstractBossCard c : unaffordableCards) {
+    		sortedCards.add(c);
+    	}
+    	this.hand.group = sortedCards;
+    	this.hand.refreshHandLayout();
     }
 	
 	/////////////////////////////////////////////////////////////////////////////
@@ -274,7 +350,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 c.setAngle(0.0f, true);
                 c.lighten(false);
                 c.drawScale = 0.12f;
-                c.targetDrawScale = 0.75f;
+                c.targetDrawScale = AbstractBossCard.HAND_SCALE;
                 c.triggerWhenDrawn();
                 this.hand.addToHand(c);
                 this.drawPile.removeTopCard();
@@ -341,6 +417,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.hand.update();
         this.drawPile.update();
         this.discardPile.update();
+        this.hand.updateHoverLogic();
         for (final AbstractPower p : this.powers) {
             p.updateParticles();
         }

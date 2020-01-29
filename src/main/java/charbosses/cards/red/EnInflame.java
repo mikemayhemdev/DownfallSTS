@@ -24,6 +24,7 @@ public class EnInflame extends AbstractBossCard
         super("Inflame", EnInflame.cardStrings.NAME, "red/power/inflame", 1, EnInflame.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.magicValue = 12;
     }
     
     @Override

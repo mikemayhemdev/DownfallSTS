@@ -199,7 +199,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     }
     
     static {
-        START_X = 64.0f * Settings.scale;
+        START_X = 364.0f * Settings.scale;
         START_Y = Settings.HEIGHT - 174.0f * Settings.scale;
         PAD_X = 72.0f * Settings.scale;
     }

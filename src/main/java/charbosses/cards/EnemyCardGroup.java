@@ -15,6 +15,7 @@ import charbosses.actions.common.EnemyDrawCardAction;
 import charbosses.bosses.AbstractCharBoss;
 
 public class EnemyCardGroup extends CardGroup {
+	public static final int HAND_ROW_LENGTH = 5;
 	public AbstractCharBoss owner;
 	public EnemyCardGroup(CardGroupType type) {
 		super(type);
@@ -59,7 +60,7 @@ public class EnemyCardGroup extends CardGroup {
         c.lighten(true);
         c.setAngle(0.0f);
         c.drawScale = 0.12f;
-        c.targetDrawScale = 0.75f;
+        c.targetDrawScale = AbstractBossCard.HAND_SCALE;
         c.current_x = CardGroup.DRAW_PILE_X;
         c.current_y = CardGroup.DRAW_PILE_Y;
         group.removeCard(c);
@@ -75,7 +76,7 @@ public class EnemyCardGroup extends CardGroup {
         c.lighten(true);
         c.setAngle(0.0f);
         c.drawScale = 0.12f;
-        c.targetDrawScale = 0.75f;
+        c.targetDrawScale = AbstractBossCard.HAND_SCALE;
         c.current_x = CardGroup.DRAW_PILE_X;
         c.current_y = CardGroup.DRAW_PILE_Y;
         this.owner.hand.addToTop(c);
@@ -164,11 +165,20 @@ public class EnemyCardGroup extends CardGroup {
         for (final AbstractRelic r : AbstractCharBoss.boss.relics) {
             r.onRefreshHand();
         }
+        AbstractCard hoveredcard = null;
         for (int i=0; i< this.group.size(); i++) {
         	AbstractCard c = this.group.get(i);
-        	c.targetDrawScale = 0.75f;
-        	c.target_x = Settings.WIDTH / 3.0f * 2.0f + (AbstractCard.IMG_WIDTH_S * 0.9f) * (i % 3);
-        	c.target_y = Settings.HEIGHT / 2.0f + (AbstractCard.IMG_HEIGHT_S * 0.9f) * ((float)Math.floor(((float)i)/3.0f));
+        	c.targetDrawScale = AbstractBossCard.HAND_SCALE;
+        	int cardsinrow = Math.min(this.group.size() - HAND_ROW_LENGTH * (int)Math.floor((float)i / (float)HAND_ROW_LENGTH), HAND_ROW_LENGTH);
+        	float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
+        	c.target_x = Settings.WIDTH - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
+        	c.target_y = Settings.HEIGHT / 2.0f + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float)Math.floor(((float)i)/(float)HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
+        	if (((AbstractBossCard)c).hov2 && c.hb.hovered) {
+        		hoveredcard = c;
+        	}
+        }
+        if (hoveredcard != null) {
+        	this.hoverCardPush(hoveredcard);
         }
     }
     
@@ -182,5 +192,83 @@ public class EnemyCardGroup extends CardGroup {
             }
             c.triggerOnGlowCheck();
         }
+    }
+    
+    public int getCardNumber(AbstractCard c) {
+        for (int i = 0; i < this.group.size(); ++i) {
+            if (c.equals(this.group.get(i))) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    public ArrayList<AbstractCard> getCardRow(AbstractCard c) {
+    	int cardNum = getCardNumber(c);
+    	ArrayList<AbstractCard> cardrow = new ArrayList<AbstractCard>();
+    	for (int i = HAND_ROW_LENGTH * (int)Math.floor((float)cardNum / (float)HAND_ROW_LENGTH); i < this.group.size() && i < HAND_ROW_LENGTH * (1 + (int)Math.floor((float)i / (float)HAND_ROW_LENGTH)); i++) {
+    		cardrow.add(this.group.get(i));
+    	}
+    	return cardrow;
+    }
+    
+    public void hoverCardPush(final AbstractCard c) {
+        int cardNum = getCardNumber(c) % HAND_ROW_LENGTH;
+        ArrayList<AbstractCard> cardrow = getCardRow(c);
+        if (cardrow.size() > 1) {
+            float pushAmt = 0.4f;
+            if (cardrow.size() == 2) {
+                pushAmt = 0.2f;
+            }
+            else if (cardrow.size() == 3 || cardrow.size() == 4) {
+                pushAmt = 0.27f;
+            }
+            pushAmt *= AbstractBossCard.HAND_SCALE / 0.75f;
+            for (int currentSlot = cardNum + 1; currentSlot < cardrow.size(); ++currentSlot) {
+                final AbstractCard abstractCard = cardrow.get(currentSlot);
+                abstractCard.target_x += AbstractCard.IMG_WIDTH_S * pushAmt;
+                pushAmt *= 0.25f;
+            }
+            pushAmt = 0.4f;
+            if (cardrow.size() == 2) {
+                pushAmt = 0.2f;
+            }
+            else if (cardrow.size() == 3 || cardrow.size() == 4) {
+                pushAmt = 0.27f;
+            }
+            pushAmt *= AbstractBossCard.HAND_SCALE / 0.75f;
+            for (int currentSlot = cardNum - 1; currentSlot > -1 && currentSlot < cardrow.size(); --currentSlot) {
+                final AbstractCard abstractCard2 = cardrow.get(currentSlot);
+                abstractCard2.target_x -= AbstractCard.IMG_WIDTH_S * pushAmt;
+                pushAmt *= 0.25f;
+            }
+        }
+    }
+
+    public AbstractBossCard getHighestValueCard() {
+    	AbstractBossCard r = null;
+    	int record = -99;
+    	for (AbstractCard c : this.group) {
+    		AbstractBossCard cc = (AbstractBossCard)c;
+    		if (cc.getValue() > record) {
+    			r = cc;
+    			record = cc.getValue();
+    		}
+    	}
+    	return r;
+    }
+    public AbstractBossCard getHighestValueCard(AbstractCard.CardType type) {
+    	AbstractBossCard r = null;
+    	int record = -99;
+    	for (AbstractCard c : this.group) {
+    		if (c.type == type) {
+    			AbstractBossCard cc = (AbstractBossCard)c;
+        		if (cc.getValue() > record) {
+        			r = cc;
+        			record = cc.getValue();
+        		}
+    		}
+    	}
+    	return r;
     }
 }

@@ -7,9 +7,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.EvolvePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BlueCandle;
 import com.megacrit.cardcrawl.relics.MedicalKit;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
@@ -17,8 +19,13 @@ import charbosses.ui.EnemyEnergyPanel;
 
 public abstract class AbstractBossCard extends AbstractCard {
 
+	public static final float HAND_SCALE = 0.55f;
+	public static final float HOVER_SCALE = 0.9f;
 	
 	public AbstractCharBoss owner;
+	public boolean hov2 = false;
+	
+	protected int magicValue = 0;
 	
 	public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
 			CardColor color, CardRarity rarity, CardTarget target) {
@@ -34,7 +41,21 @@ public abstract class AbstractBossCard extends AbstractCard {
 	}
 	
 	public int getPriority() {
+		if (this.type == CardType.STATUS) {
+			return -10;
+		} else if (this.type == CardType.CURSE) {
+			return -100;
+		}
 		return 1;
+	}
+	
+	public int getValue() {
+		if (this.type == CardType.STATUS) {
+			return -10;
+		} else if (this.type == CardType.CURSE) {
+			return -100;
+		}
+		return Math.max(this.damage, 0) + Math.max(this.block, 0) + this.magicNumber * this.magicValue;
 	}
 	
 	public void applyPowers() {
@@ -185,5 +206,47 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
         return true;
     }
+    public void hover() {
+    	super.hover();
+        if (!this.hov2) {
+            this.hov2 = true;
+            AbstractCharBoss.boss.hand.refreshHandLayout();
+            this.targetDrawScale = AbstractBossCard.HOVER_SCALE;
+            this.drawScale = AbstractBossCard.HOVER_SCALE;
+        }
+    }
     
+    public void unhover() {
+    	super.unhover();
+        if (this.hov2) {
+            this.hov2 = false;
+            AbstractCharBoss.boss.hand.refreshHandLayout();
+            this.targetDrawScale = AbstractBossCard.HAND_SCALE;
+        }
+    }
+    
+    public int getUpgradeValue() {
+    	if (!this.canUpgrade()) {
+    		return -1;
+    	}
+    	AbstractBossCard uc = (AbstractBossCard) this.makeCopy();
+    	uc.upgrade();
+    	if (AbstractCharBoss.boss != null) {
+    		uc.owner = this.owner;
+    		uc.applyPowers();
+    	}
+    	return uc.getValue() - uc.getValue();
+    }
+    
+    public static int statusValue() {
+    	int value = -5;
+    	if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractCharBoss.boss != null) {
+    		if (AbstractCharBoss.boss.hasPower(EvolvePower.POWER_ID)) {
+    			value = 0;
+    		} else if (AbstractCharBoss.boss.hasRelic(MedicalKit.ID)) {
+    			value += 4;
+    		}
+    	}
+    	return value;
+    }
 }

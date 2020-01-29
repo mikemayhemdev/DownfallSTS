@@ -23,6 +23,7 @@ public class EnBash extends AbstractBossCard
         this.baseDamage = 8;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.magicValue = 4;
     }
     
     @Override
