@@ -78,5 +78,9 @@
   "sneckomod:UnknownClass": {
     "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown YouShouldNeverSeeThis-ReportToDev."
+  },
+  "sneckomod:UnknownInnate": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Innate."
   }
 }
