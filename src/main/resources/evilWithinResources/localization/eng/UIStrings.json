@@ -5,5 +5,11 @@
       "TODO: Write this text.",
       "Choose Your Villain"
     ]
+  },
+  "evil-within:SoulToGoldChanges": {
+    "TEXT": [
+      "Souls",
+      "TODO: Soul flavor text/explanation."
+    ]
   }
 }
