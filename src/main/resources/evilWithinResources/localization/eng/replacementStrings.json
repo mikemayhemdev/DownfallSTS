@@ -2,5 +2,9 @@
   {
     "KEYS": ["Gold"],
     "VALUE": "Souls"
+  },
+  {
+    "KEYS": ["gold"],
+    "VALUE": "souls"
   }
 ]
