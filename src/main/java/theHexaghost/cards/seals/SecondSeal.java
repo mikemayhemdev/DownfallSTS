@@ -20,7 +20,7 @@ public class SecondSeal extends AbstractSealCard {
     }
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new GoldPostCombatPower(5));
-        AbstractDungeon.getCurrRoom().addGoldToRewards(5);
+        applyToSelf(new GoldPostCombatPower(magicNumber));
+        AbstractDungeon.getCurrRoom().addGoldToRewards(magicNumber);
     }
 }
