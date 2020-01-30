@@ -9,52 +9,53 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckmod:Muddle !M! random cards in your hand."
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Muddle your hand."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Common Attack."
+    "DESCRIPTION": "sneckomod:Unknown Common Attack Card."
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Common Skill."
+    "DESCRIPTION": "sneckomod:Unknown Common Skill Card."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Attack."
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Attack Card."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Skill."
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Skill Card."
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Power."
+    "DESCRIPTION": "sneckomod:Unknown Uncommon Power Card."
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Attack."
+    "DESCRIPTION": "sneckomod:Unknown Rare Attack Card."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Skill."
+    "DESCRIPTION": "sneckomod:Unknown Rare Skill Card."
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Power."
+    "DESCRIPTION": "sneckomod:Unknown Rare Power Card."
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "Draw 0 - !M! cards."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards. NL Muddle them."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
-    "DESCRIPTION": "Randomize the cost of cards in your hand.",
-    "UPGRADE_DESCRIPTION": "Randomize the cost of cards in your hand. NL Draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand. NL Draw 1 card."
   },
   "sneckomod:PerplexingStare": {
     "NAME": "Perplexing Stare",
@@ -69,7 +70,7 @@
   },
   "sneckomod:UnknownStrike": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Strike."
+    "DESCRIPTION": "sneckomod:Unknown Strike Card."
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
@@ -77,6 +78,51 @@
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown YouShouldNeverSeeThis-ReportToDev."
+    "DESCRIPTION": "sneckomod:Unknown YouShouldNeverSeeThis-ReportToDev Card."
+  },
+  "sneckomod:UnknownInnate": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Innate Card."
+  },
+  "sneckomod:Unknown": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Card."
+  },
+  "sneckomod:Unknown0Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 0 Cost Card."
+  },
+  "sneckomod:Unknown1Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 1 Cost Card."
+  },
+  "sneckomod:Unknown2Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 2 Cost Card."
+  },
+  "sneckomod:Unknown3Cost": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown 3 Cost Card."
+  },
+  "sneckomod:UnknownX": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown X Cost Card."
+  },
+  "sneckomod:UnknownEthereal": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Ethereal Card."
+  },
+  "sneckomod:UnknownBlock": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Block Card."
+  },
+  "sneckomod:UnknownExhaust": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Exhaust Card."
+  },
+  "sneckomod:SoulCleanse": {
+    "NAME": "Soul Cleanse",
+    "DESCRIPTION": "sneckomod:Muddle your hand. NL Reduce the cost of a random 3-cost card in your hand to 0. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Muddle your hand. NL Reduce the cost of a random 3-cost card in your hand to 0. NL Draw 1 card. NL Exhaust."
   }
 }

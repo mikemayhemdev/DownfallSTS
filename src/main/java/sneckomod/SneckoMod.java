@@ -11,6 +11,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -19,7 +20,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.relics.SneckoLibrary;
+import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.relics.SneckoSoul;
 
 import java.io.File;
@@ -28,6 +29,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
+
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 //@SpireInitializer
 public class SneckoMod implements
@@ -35,7 +37,8 @@ public class SneckoMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        PostDungeonInitializeSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulder2.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -114,7 +117,6 @@ public class SneckoMod implements
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new SneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new SneckoLibrary(), TheSnecko.Enums.SNECKO_CYAN);
     }
 
     @Override
@@ -196,4 +198,13 @@ public class SneckoMod implements
         }
     }
 
+    @Override
+    public void receivePostDungeonInitialize() {
+        if (AbstractDungeon.player instanceof TheSnecko)
+            for (int i = 0; i < 8; i++) {
+                AbstractCard q = new UnknownClass(UnknownClass.getRandomCardColor());
+                AbstractDungeon.uncommonCardPool.addToTop(q);
+                AbstractDungeon.srcUncommonCardPool.addToTop(q);
+            }
+    }
 }

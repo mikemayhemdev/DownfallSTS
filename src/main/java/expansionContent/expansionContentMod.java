@@ -37,7 +37,7 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import theHexaghost.relics.*;
-import theHexaghost.util.CardFilter;
+import expansionContent.util.CardFilter;
 import theHexaghost.util.CardIgnore;
 import theHexaghost.util.CardNoSeen;
 
@@ -128,13 +128,14 @@ public class expansionContentMod implements
 
     @Override
     public void receiveEditCards() {
-        /*
+/*
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
         */
+
     }
 
     private static void autoAddCards()
@@ -196,7 +197,7 @@ public class expansionContentMod implements
 
     @Override
     public void receiveEditKeywords() {
-        /*
+
         Gson gson = new Gson();
         String json = Gdx.files.internal(getModID() + "Resources/localization/eng/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
@@ -206,7 +207,7 @@ public class expansionContentMod implements
                 BaseMod.addKeyword(getModID() + "", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
-        */
+
     }
 
     public void atb(AbstractGameAction q) {
