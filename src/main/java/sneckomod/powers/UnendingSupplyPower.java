@@ -6,7 +6,9 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.city.Snecko;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -36,7 +38,16 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
             this.flash();// 28
 
             for(int i = 0; i < this.amount; ++i) {// 29
-                this.addToBot(new MakeTempCardInHandAction(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON, AbstractDungeon.cardRandomRng).makeCopy(), 1, false));// 30 32 33
+                AbstractCard card = SneckoMod.getOffClassCard();
+                int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
+                if (card.cost != newCost) {// 34
+                    card.cost = newCost;// 35
+                    card.costForTurn = card.cost;// 36
+                    card.isCostModified = true;// 37
+                }
+
+                card.freeToPlayOnce = false;// 39
+                this.addToBot(new MakeTempCardInHandAction(card, 1, false));// 30 32 33
             }
         }
 

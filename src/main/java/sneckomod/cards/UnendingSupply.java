@@ -2,8 +2,10 @@ package sneckomod.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.CardIgnore;
 import sneckomod.powers.UnendingSupplyPower;
 
+@CardIgnore
 public class UnendingSupply extends AbstractSneckoCard {
 
     public final static String ID = makeID("UnendingSupply");
