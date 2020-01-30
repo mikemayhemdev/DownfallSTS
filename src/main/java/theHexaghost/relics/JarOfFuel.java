@@ -19,7 +19,7 @@ public class JarOfFuel extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("AncientSpiritShield.png"));
 
     public JarOfFuel() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
     @Override
@@ -31,6 +31,7 @@ public class JarOfFuel extends CustomRelic {
         AbstractGhostflame r = new SearingGhostflame(bruh.lx, bruh.ly);
         GhostflameHelper.hexaGhostFlames.set(0, gf);
         GhostflameHelper.hexaGhostFlames.set(3, r);
+        GhostflameHelper.hexaGhostFlames.get(0).activate();
     }
 
     public String getUpdatedDescription() {
