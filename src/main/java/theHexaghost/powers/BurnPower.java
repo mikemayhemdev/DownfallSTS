@@ -62,7 +62,7 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public void updateDescription() {
-        description = "At the start of its turn, loses #b" + amount + " HP, then Burn is halved (rounding down).";
+        description = "At the start of its turn, loses #b" + amount + " HP, then Burn is halved.";
     }
 
     @Override

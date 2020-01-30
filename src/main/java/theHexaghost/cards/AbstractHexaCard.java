@@ -66,6 +66,10 @@ public abstract class AbstractHexaCard extends CustomCard {
         addToBot(action);
     }
 
+    protected void att(AbstractGameAction action) {
+        addToTop(action);
+    }
+
     protected DamageInfo makeInfo() {
         return makeInfo(damageTypeForTurn);
     }

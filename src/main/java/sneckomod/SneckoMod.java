@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -206,5 +207,11 @@ public class SneckoMod implements
                 AbstractDungeon.uncommonCardPool.addToTop(q);
                 AbstractDungeon.srcUncommonCardPool.addToTop(q);
             }
+    }
+
+    public static AbstractCard getOffClassCard() {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN);
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1));
     }
 }
