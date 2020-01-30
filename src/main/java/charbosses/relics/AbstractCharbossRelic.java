@@ -21,6 +21,10 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
 		super(baseRelic.relicId, baseRelic.imgUrl, baseRelic.tier, LandingSound.CLINK);
 		this.baseRelic = baseRelic;
 	}
+	public AbstractCharbossRelic(AbstractRelic baseRelic, RelicTier tier) {
+		super(baseRelic.relicId, baseRelic.imgUrl, tier, LandingSound.CLINK);
+		this.baseRelic = baseRelic;
+	}
 
 	private static float START_X;
 	private static float START_Y;

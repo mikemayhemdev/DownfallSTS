@@ -27,6 +27,8 @@ public abstract class AbstractBossCard extends AbstractCard {
 	
 	protected int magicValue = 0;
 	
+	public static boolean recursionCheck = false;
+	
 	public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
 			CardColor color, CardRarity rarity, CardTarget target) {
 		super(id, name, img, cost, rawDescription, type, color, rarity, target);
@@ -55,7 +57,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 		} else if (this.type == CardType.CURSE) {
 			return -100;
 		}
-		return Math.max(this.damage, 0) + Math.max(this.block, 0) + this.magicNumber * this.magicValue;
+		return (Math.max(this.damage, 0) + Math.max(this.block, 0) + this.magicNumber * this.magicValue) / Math.max(1, this.costForTurn) + (this.isEthereal ? 2 : 0);
 	}
 	
 	public void applyPowers() {
@@ -63,11 +65,15 @@ public abstract class AbstractBossCard extends AbstractCard {
         final AbstractPlayer player = AbstractDungeon.player;
         this.isDamageModified = false;
         float tmp = (float)this.baseDamage;
-        for (final AbstractRelic r : this.owner.relics) {
-            tmp = r.atDamageModify(tmp, this);
-            if (this.baseDamage != (int)tmp) {
-                this.isDamageModified = true;
-            }
+        if (this.owner == null)
+        	this.owner = AbstractCharBoss.boss;
+        if (this.owner.relics != null) {
+	        for (final AbstractRelic r : this.owner.relics) {
+	            tmp = r.atDamageModify(tmp, this);
+	            if (this.baseDamage != (int)tmp) {
+	                this.isDamageModified = true;
+	            }
+	        }
         }
         for (final AbstractPower p : this.owner.powers) {
             tmp = p.atDamageGive(tmp, this.damageTypeForTurn, this);

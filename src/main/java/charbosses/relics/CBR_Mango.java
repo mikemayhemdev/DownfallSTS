@@ -9,6 +9,7 @@ public class CBR_Mango extends AbstractCharbossRelic
     
     public CBR_Mango() {
         super(new Mango());
+        this.tier = RelicTier.COMMON;
     }
     
     @Override

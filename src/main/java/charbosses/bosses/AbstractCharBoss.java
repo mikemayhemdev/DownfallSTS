@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,6 +21,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import com.megacrit.cardcrawl.relics.LizardTail;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -48,6 +50,7 @@ import charbosses.actions.util.DelayedActionAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.AbstractBossDeckArchetype;
 import charbosses.cards.EnemyCardGroup;
+import charbosses.cards.curses.*;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
@@ -87,10 +90,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public AbstractPlayer.PlayerClass chosenClass;
     protected AbstractCharbossRelic startingRelic = null;
     public AbstractBossDeckArchetype chosenArchetype = null;
+    
+    public int uncommonRelicBudget;
+    public int rareRelicBudget;
+    public int relicBudget;
+    public ArrayList<AbstractCharbossRelic> relicPool;
+    public ArrayList<AbstractCharbossRelic> bossRelicPool;
 
     
 	public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
 		super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
+		this.type = EnemyType.BOSS;
 		this.chosenClass = playerClass;
 		this.energyPanel = new EnemyEnergyPanel(this);
 		this.masterDeck = new EnemyCardGroup(CardGroupType.MASTER_DECK, this);
@@ -104,6 +114,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		this.masterMaxOrbs = this.maxOrbs = 0;
 		this.stance = new NeutralStance();
 		this.orbs = new ArrayList<AbstractOrb>();
+		this.relicBudget = AbstractDungeon.actNum * 3 - 1;
+		this.uncommonRelicBudget = AbstractDungeon.actNum * 2 - 1;
+		this.rareRelicBudget = AbstractDungeon.actNum - 1;
+		this.relicPool = new ArrayList<AbstractCharbossRelic>(VALID_RELICS);
+		this.bossRelicPool = new ArrayList<AbstractCharbossRelic>(BOSS_RELICS);
 	}
 	
 	@Override
@@ -125,17 +140,30 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		if (this.startingRelic != null) {
 			this.startingRelic.obtain(this);
 		}
-		ArrayList<AbstractCharbossRelic> roptions = new ArrayList<AbstractCharbossRelic>();
-		roptions.add(new CBR_Kunai());
-		roptions.add(new CBR_BirdFacedUrn());
-		roptions.add(new CBR_BronzeScales());
-		roptions.add(new CBR_Boot());
-		roptions.add(new CBR_DuvuDoll());
-		roptions.add(new CBR_IceCream());
-		roptions.add(new CBR_LetterOpener());
-		roptions.add(new CBR_Mango());
-		for (int i=0; i < AbstractDungeon.actNum * 2; i++) {
-			roptions.remove(AbstractDungeon.monsterRng.random(roptions.size() - 1)).instantObtain(this);
+		
+		for (int i=0; i < AbstractDungeon.actNum - 1; i++) {
+			this.bossRelicPool.remove(AbstractDungeon.monsterRng.random(this.bossRelicPool.size() - 1)).instantObtain(this);
+		}
+		
+		for (int i=0; i < this.relicBudget; i++) {
+			int r = AbstractDungeon.monsterRng.random(this.relicPool.size() - 1);
+			AbstractRelic.RelicTier rt = this.relicPool.get(r).tier;
+			if (rt == RelicTier.UNCOMMON) {
+				if (this.uncommonRelicBudget > 0) {
+					this.uncommonRelicBudget--;
+				} else {
+					i--;
+					continue;
+				}
+			} else if (rt == RelicTier.RARE) {
+				if (this.rareRelicBudget > 0) {
+					this.rareRelicBudget--;
+				} else {
+					i--;
+					continue;
+				}
+			}
+			this.relicPool.remove(r).instantObtain(this);
 		}
 	}
 	public void generateHistory() {
@@ -545,6 +573,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     }
                 }
                 this.die();
+                boss = null;
                 if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.cleanCardQueue();
                     AbstractDungeon.effectList.add(new DeckPoofEffect(64.0f * Settings.scale, 64.0f * Settings.scale, true));
@@ -600,7 +629,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     
     @Override
     public void heal(final int healAmount) {
-        super.heal(healAmount);
+    	int amt = healAmount;
+    	for (final AbstractRelic r : this.relics) {
+            amt = r.onPlayerHeal(amt);
+        } 
+        super.heal(amt);
         if (this.currentHealth > this.maxHealth / 2.0f && this.isBloodied) {
             this.isBloodied = false;
             for (final AbstractRelic r : this.relics) {
@@ -729,6 +762,19 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
     
     public void onStanceChange(final String id) {
+    }
+    
+    public void addBlock(final int blockAmount) {
+        float tmp = (float)blockAmount;
+        for (final AbstractRelic r : this.relics) {
+            tmp = (float)r.onPlayerGainedBlock(tmp);
+        }
+        if (tmp > 0.0f) {
+            for (final AbstractPower p : this.powers) {
+                p.onGainedBlock(tmp);
+            }
+        }
+        super.addBlock((int) Math.floor(tmp));
     }
     ///////////////////////////////////////
     ///////////[ORBS]//////////////////////
@@ -962,7 +1008,54 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	////////////[[[[[[[[STATIC SHIT DOWN HERE]]]]]]]]////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////
 	public static ArrayList<AbstractCharbossRelic> VALID_RELICS;
+	public static ArrayList<AbstractCharbossRelic> BOSS_RELICS;
+	public static ArrayList<AbstractBossCard> CURSES;
 	static {
 		VALID_RELICS = new ArrayList<AbstractCharbossRelic>();
+		VALID_RELICS.add(new CBR_Anchor());
+		VALID_RELICS.add(new CBR_BirdFacedUrn());
+		VALID_RELICS.add(new CBR_Boot());
+		VALID_RELICS.add(new CBR_BronzeScales());
+		VALID_RELICS.add(new CBR_DuvuDoll());
+		VALID_RELICS.add(new CBR_HandDrill());
+		VALID_RELICS.add(new CBR_HappyFlower());
+		VALID_RELICS.add(new CBR_IceCream());
+		VALID_RELICS.add(new CBR_IncenseBurner());
+		VALID_RELICS.add(new CBR_Kunai());
+		VALID_RELICS.add(new CBR_LetterOpener());
+		VALID_RELICS.add(new CBR_LizardTail());
+		VALID_RELICS.add(new CBR_Mango());
+		VALID_RELICS.add(new CBR_MercuryHourglass());
+		VALID_RELICS.add(new CBR_Orichalcum());
+		VALID_RELICS.add(new CBR_SelfFormingClay());
+		VALID_RELICS.add(new CBR_Shuriken());
+		VALID_RELICS.add(new CBR_SmoothStone());
+		VALID_RELICS.add(new CBR_Torii());
+		VALID_RELICS.add(new CBR_TungstenRod());
+		VALID_RELICS.add(new CBR_Vajra());
+		VALID_RELICS.add(new CBR_WarPaint());
+		VALID_RELICS.add(new CBR_Whetstone());
+		
+		
+		BOSS_RELICS = new ArrayList<AbstractCharbossRelic>();
+		BOSS_RELICS.add(new CBR_CursedKey());
+		BOSS_RELICS.add(new CBR_PhilosopherStone());
+		BOSS_RELICS.add(new CBR_Ectoplasm());
+		BOSS_RELICS.add(new CBR_CallingBell());
+		
+		CURSES = new ArrayList<AbstractBossCard>();
+		CURSES.add(new EnInjury());
+		CURSES.add(new EnDecay());
+		CURSES.add(new EnDoubt());
+		CURSES.add(new EnRegret());
+		CURSES.add(new EnWrithe());
+		CURSES.add(new EnShame());
+		
+		CURSES.add(new EnWrithe());
+		CURSES.add(new EnDoubt());
+	}
+	
+	public static AbstractBossCard getRandomCurse() {
+		return CURSES.get(AbstractDungeon.monsterRng.random(CURSES.size()-1));
 	}
 }

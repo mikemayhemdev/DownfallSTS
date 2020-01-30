@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.BronzeScales;
 public class CBR_BronzeScales extends AbstractCharbossRelic {
 	public CBR_BronzeScales() {
 		super(new BronzeScales());
+		this.tier = RelicTier.RARE;
 	}
 
 	@Override
