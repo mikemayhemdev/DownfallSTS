@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
 public class SoulDraw extends AbstractSneckoCard {
@@ -21,6 +22,7 @@ public class SoulDraw extends AbstractSneckoCard {
     public SoulDraw() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(SneckoMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,30 +33,30 @@ public class SoulDraw extends AbstractSneckoCard {
                 isDone = true;
                 if (AbstractDungeon.player.drawPile.size() + AbstractDungeon.player.discardPile.size() < x) {
                 } else if (p.drawPile.isEmpty() || p.drawPile.size() < x) {
+                    att(new DrawCardAction(p, magicNumber));
                     for (int i = 0; i < x; i++) {
                         int r = i;
                         att(new AbstractGameAction() {
                             @Override
                             public void update() {
                                 isDone = true;
-                                att(new DrawCardAction(p, magicNumber));
                                 AbstractCard q = p.drawPile.getNCardFromTop(r);
-                                atb(new MuddleAction(q));
+                                att(new MuddleAction(q));
                             }
                         });
                     }
                     AbstractDungeon.actionManager.addToTop(new EmptyDeckShuffleAction());// 34
                 } else {
                     isDone = true;
+                    att(new DrawCardAction(p, magicNumber));
                     for (int i = 0; i < x; i++) {
                         int r = i;
                         att(new AbstractGameAction() {
                             @Override
                             public void update() {
                                 isDone = true;
-                                att(new DrawCardAction(p, magicNumber));
                                 AbstractCard q = p.drawPile.getNCardFromTop(r);
-                                atb(new MuddleAction(q));
+                                att(new MuddleAction(q));
                             }
                         });
                     }

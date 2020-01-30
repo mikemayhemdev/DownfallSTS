@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.actions.NopeAction;
 
 public class Nope extends AbstractSneckoCard {
@@ -13,6 +14,7 @@ public class Nope extends AbstractSneckoCard {
 
     public Nope() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        tags.add(SneckoMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
