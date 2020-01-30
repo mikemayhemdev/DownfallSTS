@@ -41,10 +41,10 @@ public class UnknownClass extends AbstractUnknownCard {
     @Override
     public void update() {
         super.update();
-        if (!this.rawDescription.equals("sneckomod:Unknown" + getCharName(myColor) + ".")) {
-            if (upgraded) rawDescription = "sneckomod:Unknown Upgraded" + getCharName(myColor) + " Card.";
+        if (!this.rawDescription.equals("sneckomod:Unknown " + getCharName(myColor) + ".")) {
+            if (upgraded) rawDescription = "sneckomod:Unknown Upgraded " + getCharName(myColor) + " Card.";
             else
-                this.rawDescription = "sneckomod:Unknown" + getCharName(myColor) + " Card.";
+                this.rawDescription = "sneckomod:Unknown " + getCharName(myColor) + " Card.";
             initializeDescription();
         }
     }

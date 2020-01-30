@@ -200,10 +200,11 @@ public class SneckoMod implements
 
     @Override
     public void receivePostDungeonInitialize() {
-        for (int i = 0; i < 8; i++) {
-            AbstractCard q = new UnknownClass(UnknownClass.getRandomCardColor());
-            AbstractDungeon.uncommonCardPool.addToTop(q);
-            AbstractDungeon.srcUncommonCardPool.addToTop(q);
-        }
+        if (AbstractDungeon.player instanceof TheSnecko)
+            for (int i = 0; i < 8; i++) {
+                AbstractCard q = new UnknownClass(UnknownClass.getRandomCardColor());
+                AbstractDungeon.uncommonCardPool.addToTop(q);
+                AbstractDungeon.srcUncommonCardPool.addToTop(q);
+            }
     }
 }
