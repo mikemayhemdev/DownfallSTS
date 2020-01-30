@@ -14,6 +14,7 @@ public class SoulRoll extends AbstractSneckoCard {
 
     public SoulRoll() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        tags.add(SneckoMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

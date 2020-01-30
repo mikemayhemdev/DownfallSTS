@@ -12,5 +12,12 @@
       "unknown"
     ],
     "DESCRIPTION": "Unknown cards transform into other random cards from ANY class that satisfy certain constraints at combat start."
+  },
+  {
+    "PROPER_NAME": "Muddle",
+    "NAMES": [
+      "muddle"
+    ],
+    "DESCRIPTION": "Muddling a card randomizes its cost between 0 and 3."
   }
 ]

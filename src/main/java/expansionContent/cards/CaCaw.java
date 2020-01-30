@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import expansionContent.expansionContentMod;
@@ -23,7 +24,7 @@ public class CaCaw extends AbstractExpansionCard {
     private static final int MAGIC = 1;
 
     public CaCaw() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
         tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         tags.add(expansionContentMod.STUDY);
@@ -36,15 +37,14 @@ public class CaCaw extends AbstractExpansionCard {
 
         AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "Caw-CAW!", true));
 
-        atb(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
+        atb(new ApplyPowerAction(p, p, new RitualPower(p, 1, true), 1));
 
       }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(2);
         }
     }
 
