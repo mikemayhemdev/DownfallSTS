@@ -3,8 +3,9 @@ package evilWithin.patches.topPanel;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
@@ -13,9 +14,12 @@ import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.util.ReplaceData;
 import evilWithin.util.TextureLoader;
 import javassist.CannotCompileException;
+import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class GoldToSoulPatches {
@@ -31,6 +35,7 @@ public class GoldToSoulPatches {
             triggered = true;
             GOLD_ICON = ImageMaster.TP_GOLD;
             GOLD_UI_ICON = ImageMaster.UI_GOLD;
+            //postLoadLocalizationStrings();
         }
 
         if (!revert) {
@@ -38,13 +43,13 @@ public class GoldToSoulPatches {
             ImageMaster.UI_GOLD = TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/Souls_UI_Icon.png"));
             TopPanel.LABEL[4] = uiStrings.TEXT[0];
             TopPanel.MSG[4] = uiStrings.TEXT[1];
-            postLoadLocalizationStrings(true);
+            //replaceStrings(true);
         } else {
             ImageMaster.TP_GOLD = GOLD_ICON;
             ImageMaster.UI_GOLD = GOLD_UI_ICON;
             TopPanel.LABEL[4] = GOLD_TEXT[0];
             TopPanel.MSG[4] = GOLD_TEXT[1];
-            postLoadLocalizationStrings(false);
+            //replaceStrings(false);
         }
     }
 
@@ -72,7 +77,7 @@ public class GoldToSoulPatches {
         }
     }
 
-    /*@SpirePatch(clz = CardCrawlGame.class, method = "create")
+    @SpirePatch(clz = CardCrawlGame.class, method = "create")
     public static class PostLoadLocalizationPatch {
         @SpireInsertPatch(locator = Locator.class, localvars = {"languagePack"})
         public static void PostLocalization(CardCrawlGame __instance, LocalizedStrings languagePack) {
@@ -92,83 +97,189 @@ public class GoldToSoulPatches {
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
         }
-    }*/
+    }
 
-    public static void postLoadLocalizationStrings(boolean soulRename) {
+    public static Map<String, CardStrings[]> renameC = new HashMap<>();
+    public static Map<String, EventStrings[]> renameE = new HashMap<>();
+    public static Map<String, RelicStrings[]> renameR = new HashMap<>();
+    public static Map<String, CharacterStrings[]> renameCh = new HashMap<>();
+    public static Map<String, PowerStrings[]> renameP = new HashMap<>();
+    public static Map<String, UIStrings[]> renameUI = new HashMap<>();
+    public static void postLoadLocalizationStrings() {
         try {
             Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
+            //cardStrings.put(AThousandCuts.ID, cardStrings.get(HandOfGreed.ID));
             if (cardStrings != null) {
-                for (CardStrings cardString : cardStrings.values()) {
-                    if (cardString.DESCRIPTION != null)
-                        cardString.DESCRIPTION = filterString(cardString.DESCRIPTION);
+                CardStrings replacementString;
+                for (Map.Entry<String, CardStrings> cardString : cardStrings.entrySet()) {
+                    replacementString = new CardStrings();
+                    replacementString.NAME = cardString.getValue().NAME;
 
-                    if (cardString.UPGRADE_DESCRIPTION != null)
-                        cardString.UPGRADE_DESCRIPTION = filterString(cardString.UPGRADE_DESCRIPTION);
+                    if (cardString.getValue().DESCRIPTION != null) {
+                        replacementString.DESCRIPTION = filterString(cardString.getValue().DESCRIPTION);
+                    }
 
-                    if (cardString.EXTENDED_DESCRIPTION != null)
-                        for (int i = 0; i < cardString.EXTENDED_DESCRIPTION.length; i++)
-                            cardString.EXTENDED_DESCRIPTION[i] = filterString(cardString.EXTENDED_DESCRIPTION[i]);
+                    if (cardString.getValue().UPGRADE_DESCRIPTION != null) {
+                        replacementString.UPGRADE_DESCRIPTION = filterString(cardString.getValue().UPGRADE_DESCRIPTION);
+                    }
+
+                    if (cardString.getValue().EXTENDED_DESCRIPTION != null) {
+                        replacementString.EXTENDED_DESCRIPTION = filterString(cardString.getValue().EXTENDED_DESCRIPTION);
+                    }
+                    if ((replacementString.DESCRIPTION != null && !(replacementString.DESCRIPTION.equals(cardString.getValue().DESCRIPTION))) ||
+                            (replacementString.EXTENDED_DESCRIPTION != null && !(Arrays.equals(replacementString.EXTENDED_DESCRIPTION, cardString.getValue().EXTENDED_DESCRIPTION))) ||
+                            (replacementString.UPGRADE_DESCRIPTION != null && !(replacementString.UPGRADE_DESCRIPTION.equals(cardString.getValue().UPGRADE_DESCRIPTION)))) {
+                        renameC.put(cardString.getKey(), new CardStrings[]{cardString.getValue(), replacementString});
+                    }
                 }
-
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
             }
 
             Map<String, EventStrings> eventStrings = (Map<String, EventStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
             if (eventStrings != null) {
-                for (EventStrings eventString : eventStrings.values()) {
-                    if (eventString.DESCRIPTIONS != null)
-                        eventString.DESCRIPTIONS = filterString(eventString.DESCRIPTIONS); //This might be too much, will catch the color gold being mentioned as well
+                EventStrings replacementString;
+                for (Map.Entry<String, EventStrings> eventString : eventStrings.entrySet()) {
+                    replacementString = new EventStrings();
+                    replacementString.NAME = eventString.getValue().NAME;
 
-                    if (eventString.OPTIONS != null)
-                        eventString.OPTIONS = filterString(eventString.OPTIONS);
+                    if (eventString.getValue().DESCRIPTIONS != null) {
+                        replacementString.DESCRIPTIONS = filterString(eventString.getValue().DESCRIPTIONS);
+                    }
+
+                    if (eventString.getValue().OPTIONS != null) {
+                        replacementString.OPTIONS = filterString(eventString.getValue().OPTIONS);
+                    }
+
+                    if ((replacementString.DESCRIPTIONS != null && !(Arrays.equals(replacementString.DESCRIPTIONS, eventString.getValue().DESCRIPTIONS))) ||
+                            (replacementString.OPTIONS != null && !(Arrays.equals(replacementString.OPTIONS, eventString.getValue().OPTIONS)))) {
+                        renameE.put(eventString.getKey(), new EventStrings[]{eventString.getValue(), replacementString});
+                    }
                 }
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "events", eventStrings);
             }
 
             Map<String, RelicStrings> relicStrings = (Map<String, RelicStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
             if (relicStrings != null) {
-                for (RelicStrings relicString : relicStrings.values()) {
-                    if (relicString.DESCRIPTIONS != null)
-                        relicString.DESCRIPTIONS = filterString(relicString.DESCRIPTIONS);
+                RelicStrings replacementString;
+                for (Map.Entry<String, RelicStrings> relicString : relicStrings.entrySet()) {
+                    replacementString = new RelicStrings();
+                    replacementString.NAME = relicString.getValue().NAME;
+                    replacementString.FLAVOR = relicString.getValue().FLAVOR;
+
+                    if (relicString.getValue().DESCRIPTIONS != null) {
+                        replacementString.DESCRIPTIONS = filterString(relicString.getValue().DESCRIPTIONS);
+                    }
+
+                    if ((replacementString.DESCRIPTIONS != null && !(Arrays.equals(replacementString.DESCRIPTIONS, relicString.getValue().DESCRIPTIONS)))) {
+                        renameR.put(relicString.getKey(), new RelicStrings[]{relicString.getValue(), replacementString});
+                    }
                 }
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "relics", relicStrings);
             }
 
             Map<String, CharacterStrings> characterStrings = (Map<String, CharacterStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "characters");
             if (characterStrings != null) {
-                for (CharacterStrings characterString : characterStrings.values()) {
-                    if (characterString.TEXT != null)
-                        characterString.TEXT = filterString(characterString.TEXT);
+                CharacterStrings replacementString;
+                for (Map.Entry<String, CharacterStrings> characterString : characterStrings.entrySet()) {
+                    replacementString = new CharacterStrings();
+                    replacementString.UNIQUE_REWARDS = characterString.getValue().UNIQUE_REWARDS;
 
-                    if (characterString.OPTIONS != null)
-                        characterString.OPTIONS = filterString(characterString.OPTIONS);
+                    if (characterString.getValue().NAMES != null) {
+                        replacementString.NAMES = filterString(characterString.getValue().NAMES);
+                    }
 
-                    if (characterString.NAMES != null)
-                        characterString.NAMES = filterString(characterString.NAMES);
+                    if (characterString.getValue().TEXT != null) {
+                        replacementString.TEXT = filterString(characterString.getValue().TEXT);
+                    }
+
+                    if (characterString.getValue().OPTIONS != null) {
+                        replacementString.OPTIONS = filterString(characterString.getValue().OPTIONS);
+                    }
+
+                    if ((replacementString.NAMES != null && !(Arrays.equals(replacementString.NAMES, characterString.getValue().NAMES))) ||
+                            (replacementString.TEXT != null && !(Arrays.equals(replacementString.TEXT, characterString.getValue().TEXT))) ||
+                            (replacementString.OPTIONS != null && !(Arrays.equals(replacementString.OPTIONS, characterString.getValue().OPTIONS)))) {
+                        renameCh.put(characterString.getKey(), new CharacterStrings[]{characterString.getValue(), replacementString});
+                    }
                 }
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "characters", characterStrings);
             }
 
             Map<String, PowerStrings> powerStrings = (Map<String, PowerStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "powers");
             if (powerStrings != null) {
-                for (PowerStrings powerString : powerStrings.values()) {
-                    if (powerString.DESCRIPTIONS != null)
-                        powerString.DESCRIPTIONS = filterString(powerString.DESCRIPTIONS);
+                PowerStrings replacementString;
+                for (Map.Entry<String, PowerStrings> powerString : powerStrings.entrySet()) {
+                    replacementString = new PowerStrings();
+                    replacementString.NAME = powerString.getValue().NAME;
+
+                    if (powerString.getValue().DESCRIPTIONS != null) {
+                        replacementString.DESCRIPTIONS = filterString(powerString.getValue().DESCRIPTIONS);
+                    }
+
+                    if ((replacementString.DESCRIPTIONS != null && !(Arrays.equals(replacementString.DESCRIPTIONS, powerString.getValue().DESCRIPTIONS)))) {
+                        renameP.put(powerString.getKey(), new PowerStrings[]{powerString.getValue(), replacementString});
+                    }
                 }
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "powers", powerStrings);
             }
 
             Map<String, UIStrings> uiStrings = (Map<String, UIStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
             if (uiStrings != null) {
-                for (UIStrings uiString : uiStrings.values()) {
-                    if (uiString.TEXT != null)
-                        uiString.TEXT = filterString(uiString.TEXT);
+                UIStrings replacementString;
+                for (Map.Entry<String, UIStrings> uiString : uiStrings.entrySet()) {
+                    replacementString = new UIStrings();
+                    replacementString.EXTRA_TEXT = uiString.getValue().EXTRA_TEXT;
+                    replacementString.TEXT_DICT = uiString.getValue().TEXT_DICT;
+
+                    if (uiString.getValue().TEXT != null) {
+                        replacementString.TEXT = filterString(uiString.getValue().TEXT);
+                    }
+
+                    if ((replacementString.TEXT != null && !(Arrays.equals(replacementString.TEXT, uiString.getValue().TEXT)))) {
+                        renameUI.put(uiString.getKey(), new UIStrings[]{uiString.getValue(), replacementString});
+                    }
                 }
-                ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "ui", uiStrings);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private static void replaceStrings(boolean toSouls) {
+        int tmp = toSouls ? 1 : 0;
+        Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
+        for (Map.Entry<String, CardStrings[]> val : renameC.entrySet()) {
+            cardStrings.put(val.getKey(), val.getValue()[tmp]);
+        }
+        ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "cards", cardStrings);
+
+        Map<String, EventStrings> eventStrings = (Map<String, EventStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
+        for (Map.Entry<String, EventStrings[]> val : renameE.entrySet()) {
+            eventStrings.put(val.getKey(), val.getValue()[tmp]);
+        }
+        ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "events", eventStrings);
+
+        Map<String, RelicStrings> relicStrings = (Map<String, RelicStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "relics");
+        for (Map.Entry<String, RelicStrings[]> val : renameR.entrySet()) {
+            relicStrings.put(val.getKey(), val.getValue()[tmp]);
+        }
+        ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "relics", relicStrings);
+
+        Map<String, CharacterStrings> characterStrings = (Map<String, CharacterStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "characters");
+        for (Map.Entry<String, CharacterStrings[]> val : renameCh.entrySet()) {
+            characterStrings.put(val.getKey(), val.getValue()[tmp]);
+        }
+        ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "characters", characterStrings);
+
+        Map<String, PowerStrings> powerStrings = (Map<String, PowerStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "powers");
+        for (Map.Entry<String, PowerStrings[]> val : renameP.entrySet()) {
+            powerStrings.put(val.getKey(), val.getValue()[tmp]);
+        }
+        ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "powers", powerStrings);
+
+        Map<String, UIStrings> uiStrings = (Map<String, UIStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "ui");
+        for (Map.Entry<String, UIStrings[]> val : renameUI.entrySet()) {
+            uiStrings.put(val.getKey(), val.getValue()[tmp]);
+        }
+        ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "ui", uiStrings);
+
+        //Map<String, CardStrings> cardStringss = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
+        //System.out.println(cardStringss.get(SecondSeal.ID).DESCRIPTION);
     }
 
     private static String[] filterString(String[] str) {
@@ -179,18 +290,19 @@ public class GoldToSoulPatches {
     }
 
     private static String filterString(String spireString) {
-        String returnString = spireString;
+        String replacementString = spireString;
 
         for (ReplaceData data : EvilWithinMod.wordReplacements) {
             for (String phrase : data.KEYS) {
                 if (data.VALUE == null) {
                     data.VALUE = "";
                 }
-                String replacement = returnString.replaceAll(phrase, data.VALUE);
-                returnString = replacement;
+                replacementString = replacementString.replaceAll(phrase, data.VALUE);
             }
         }
 
-        return returnString;
+        return replacementString;
     }
+
+    //TODO: Make work on load
 }
