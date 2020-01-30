@@ -74,7 +74,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost. NL Draw 1 card."
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",

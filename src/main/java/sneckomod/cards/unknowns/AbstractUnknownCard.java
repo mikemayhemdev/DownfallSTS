@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.cards.AbstractSneckoCard;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.function.Predicate;
 
 
@@ -28,9 +27,9 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public void upgrade() {
         upgradeName();
-        String[] funky = rawDescription.split("(?=Unknown)");
+        String[] funky = rawDescription.split("Unknown");
         funky[1] = " Upgraded " + funky[1];
-        rawDescription = Arrays.toString(funky);
+        rawDescription = String.join("Unknown", funky);
         initializeDescription();
     }
 

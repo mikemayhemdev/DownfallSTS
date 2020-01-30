@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import java.util.function.Predicate;
 
 public class UnknownEthereal extends AbstractUnknownCard {
-    public final static String ID = makeID("Unknown");
+    public final static String ID = makeID("UnknownEthereal");
 
     public UnknownEthereal() {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON);
