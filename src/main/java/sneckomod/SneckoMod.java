@@ -212,6 +212,6 @@ public class SneckoMod implements
     public static AbstractCard getOffClassCard() {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
         possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN);
-        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1));
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 }
