@@ -3,3 +3,7 @@ target
 *.psd
 pom.xml
 *.iml
+
+.classpath
+
+.project
