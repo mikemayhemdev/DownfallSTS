@@ -22,6 +22,7 @@ public class EnBarricade extends AbstractBossCard
         super(ID, EnBarricade.cardStrings.NAME, "red/power/barricade", 3, EnBarricade.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
         this.magicValue = 50;
+        this.limit = 2;
     }
     
     @Override

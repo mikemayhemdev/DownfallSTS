@@ -63,6 +63,7 @@ import charbosses.ui.EnemyEnergyPanel;
 public abstract class AbstractCharBoss extends AbstractMonster {
 
 	public static AbstractCharBoss boss;
+	public static boolean finishedSetup;
 	
 	public ArrayList<AbstractCharbossRelic> relics;
 	public AbstractStance stance;
@@ -86,6 +87,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public int damagedThisCombat;
     public int cardsPlayedThisTurn;
+    public int attacksPlayedThisTurn;
     
     public AbstractPlayer.PlayerClass chosenClass;
     protected AbstractCharbossRelic startingRelic = null;
@@ -100,6 +102,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     
 	public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
 		super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
+		AbstractCharBoss.finishedSetup = false;
 		this.type = EnemyType.BOSS;
 		this.chosenClass = playerClass;
 		this.energyPanel = new EnemyEnergyPanel(this);
@@ -128,6 +131,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		this.generateAll();
 		super.init();
 		this.preBattlePrep();
+		AbstractCharBoss.finishedSetup = true;
 	}
 	@Override
 	public void getMove(int num) {
@@ -138,7 +142,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	public void generateRelics() {
 		this.relics = new ArrayList<AbstractCharbossRelic>();
 		if (this.startingRelic != null) {
-			this.startingRelic.obtain(this);
+			this.startingRelic.instantObtain(this);
 		}
 		
 		for (int i=0; i < AbstractDungeon.actNum - 1; i++) {
@@ -247,6 +251,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	
 	public void startTurn() {
 		this.cardsPlayedThisTurn = 0;
+		this.attacksPlayedThisTurn = 0;
 		this.energy.recharge();
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
@@ -413,8 +418,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     		monster = this;
     	}
         if (c.type == AbstractCard.CardType.ATTACK) {
+        	this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();
         }
+    	this.cardsPlayedThisTurn++;
         c.calculateCardDamage(monster);
         if (c.cost == -1 && EnemyEnergyPanel.totalCount < energyOnUse && !c.ignoreEnergyOnUse) {
             c.energyOnUse = EnemyEnergyPanel.totalCount;
@@ -573,7 +580,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     }
                 }
                 this.die();
-                boss = null;
                 if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.cleanCardQueue();
                     AbstractDungeon.effectList.add(new DeckPoofEffect(64.0f * Settings.scale, 64.0f * Settings.scale, true));
@@ -599,6 +605,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 AbstractDungeon.effectList.add(new BlockedWordEffect(this, this.hb.cX, this.hb.cY, AbstractMonster.TEXT[30]));
             }
         }
+    }
+    
+    @Override
+    public void die() {
+    	super.die();
+        AbstractCharBoss.boss = null;
+		AbstractCharBoss.finishedSetup = false;
     }
     
     private void updateCardsOnDamage() {
@@ -644,6 +657,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void preBattlePrep() {
         this.damagedThisCombat = 0;
         this.cardsPlayedThisTurn = 0;
+        this.attacksPlayedThisTurn = 0;
         this.maxOrbs = 0;
         this.orbs.clear();
         this.increaseMaxOrbSlots(this.masterMaxOrbs, false);
@@ -1016,7 +1030,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 		VALID_RELICS.add(new CBR_BirdFacedUrn());
 		VALID_RELICS.add(new CBR_Boot());
 		VALID_RELICS.add(new CBR_BronzeScales());
+		VALID_RELICS.add(new CBR_CaptainsWheel());
 		VALID_RELICS.add(new CBR_DuvuDoll());
+		VALID_RELICS.add(new CBR_Girya());
 		VALID_RELICS.add(new CBR_HandDrill());
 		VALID_RELICS.add(new CBR_HappyFlower());
 		VALID_RELICS.add(new CBR_IceCream());

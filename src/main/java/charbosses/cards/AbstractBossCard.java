@@ -26,6 +26,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 	public boolean hov2 = false;
 	
 	protected int magicValue = 0;
+	public int limit;
 	
 	public static boolean recursionCheck = false;
 	
@@ -33,6 +34,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 			CardColor color, CardRarity rarity, CardTarget target) {
 		super(id, name, img, cost, rawDescription, type, color, rarity, target);
 		this.owner = AbstractCharBoss.boss;
+		this.limit = 99;
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -40,6 +42,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 		super("EvilWithinBossCard:" + baseCard.cardID, baseCard.name, baseCard.assetUrl, baseCard.cost, baseCard.rawDescription, baseCard.type, 
 				baseCard.color, baseCard.rarity, baseCard.target);
 		this.owner = AbstractCharBoss.boss;
+		this.limit = 99;
 	}
 	
 	public int getPriority() {

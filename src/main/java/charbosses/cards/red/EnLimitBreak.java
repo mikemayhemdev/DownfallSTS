@@ -22,6 +22,7 @@ public class EnLimitBreak extends AbstractBossCard
     public EnLimitBreak() {
         super(ID, EnLimitBreak.cardStrings.NAME, "red/skill/limit_break", 1, EnLimitBreak.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
+        this.limit = 1;
     }
     
     @Override

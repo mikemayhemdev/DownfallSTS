@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.*;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.powers.*;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 
 import com.megacrit.cardcrawl.actions.*;
@@ -23,11 +24,17 @@ public class EnDisarm extends AbstractBossCard
         this.magicNumber = this.baseMagicNumber;
         this.magicValue = 6;
         this.exhaust = true;
+        this.limit = 1;
     }
     
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, m, new StrengthPower(p, -this.magicNumber), -this.magicNumber));
+    }
+    
+    @Override
+    public boolean canUpgrade() {
+    	return AbstractCharBoss.finishedSetup;
     }
     
     @Override
