@@ -174,5 +174,10 @@
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1."
+  },
+  "sneckomod:PureSnecko": {
+    "NAME": "Pure Snecko",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Morph all sneckomod:Offclass cards in your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card. NL Morph all sneckomod:Offclass cards in your hand."
   }
 }
