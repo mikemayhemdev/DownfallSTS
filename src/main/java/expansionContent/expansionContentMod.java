@@ -128,13 +128,13 @@ public class expansionContentMod implements
 
     @Override
     public void receiveEditCards() {
-/*
+
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        */
+
 
     }
 
