@@ -2,7 +2,6 @@ package slimebound.actions;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,10 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OverexertionAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private final boolean upgrade;
-
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    private final boolean upgrade;
+    private AbstractPlayer p;
 
 
     public OverexertionAction(boolean upgrade) {
@@ -64,7 +62,7 @@ public class OverexertionAction extends AbstractGameAction {
 
                     logger.info("Add to hand");
                     logger.info("Add to hand");
-                    if (p.hand.size() >= BaseMod.MAX_HAND_SIZE){
+                    if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
                         this.p.discardPile.addToTop(c);
                     } else {
                         this.p.hand.addToHand(c);
@@ -75,8 +73,7 @@ public class OverexertionAction extends AbstractGameAction {
                     c.fadingOut = false;
 
 
-
-            }
+                }
 
 
             }

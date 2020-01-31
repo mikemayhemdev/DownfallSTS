@@ -1,8 +1,6 @@
 package slimebound.powers;
 
 
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,19 +8,15 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.PlayExhausted0CostAction;
-import slimebound.actions.RandomLickCardAction;
 import slimebound.actions.ReturnRandom0Cost;
-import slimebound.cards.Recycling;
 
 
 public class RecyclingPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:RecyclingPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/RecyclingS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
@@ -66,7 +60,7 @@ public class RecyclingPower extends AbstractPower {
 
         flash();
 
-            AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(1));
+        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(1));
         if (this.amount <= 1) {
 
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, RecyclingPower.POWER_ID));

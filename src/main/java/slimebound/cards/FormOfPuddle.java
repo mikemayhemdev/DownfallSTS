@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,17 +18,22 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:FormOfPuddle";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/formofpuddle.png";
-
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-
     private static final int COST = 3;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public FormOfPuddle() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
@@ -41,8 +45,8 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber), this.magicNumber));
-        if (p instanceof SlimeboundCharacter){
-            ((SlimeboundCharacter)p).puddleForm();
+        if (p instanceof SlimeboundCharacter) {
+            ((SlimeboundCharacter) p).puddleForm();
         }
 
     }
@@ -56,13 +60,6 @@ public class FormOfPuddle extends AbstractSlimeboundCard {
             upgradeName();
             upgradeBaseCost(2);
         }
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

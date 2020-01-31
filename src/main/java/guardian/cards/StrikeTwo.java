@@ -18,24 +18,30 @@ import guardian.patches.AbstractCardEnum;
 public class StrikeTwo extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("StrikeTwo");
     public static final String NAME;
-    public static String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/strikeTwo.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
-
-    //TUNING CONSTANTS
-
     private static final int COST = 1;
     private static final int DAMAGE = 6;
+
+    //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 3;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
+    public static String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
+
 
     public StrikeTwo() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
@@ -43,15 +49,14 @@ public class StrikeTwo extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
         this.tags.add(BaseModCardTags.BASIC_STRIKE);
         this.tags.add(CardTags.STRIKE);
-        this.socketCount = SOCKETS;  updateDescription();  loadGemMisc();
+        this.socketCount = SOCKETS;
+        updateDescription();
+        loadGemMisc();
 
 //this.sockets.add(GuardianMod.socketTypes.RED);
 
 
-
     }
-
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
@@ -59,7 +64,6 @@ public class StrikeTwo extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         this.useGems(p, m);
     }
-
 
     public AbstractCard makeCopy() {
         return new StrikeTwo();
@@ -74,23 +78,16 @@ public class StrikeTwo extends AbstractGuardianCard {
 
     }
 
-    public void updateDescription(){
+    public void updateDescription() {
 
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
             } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
             }
         }
         this.initializeDescription();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

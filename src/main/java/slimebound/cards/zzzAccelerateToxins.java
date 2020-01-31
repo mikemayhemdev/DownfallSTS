@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,16 +18,23 @@ public class zzzAccelerateToxins extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:zzzAccelerateToxins";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/acceleratetoxins.png";
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public zzzAccelerateToxins() {
@@ -43,7 +49,6 @@ public class zzzAccelerateToxins extends AbstractSlimeboundCard {
 
     }
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new BorderFlashEffect(Color.GREEN, true), 0.05F, true));
 
@@ -54,31 +59,27 @@ public class zzzAccelerateToxins extends AbstractSlimeboundCard {
                 if ((!monster.isDead) && (!monster.isDying) && monster.hasPower("Poison"))
                     monster.getPower("Poison").atStartOfTurn();
 
-                }
-
             }
-        if (upgraded){
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            flash();
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying) && monster.hasPower("Poison"))
-                    monster.getPower("Poison").atStartOfTurn();
 
-            }
         }
+        if (upgraded) {
+            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                flash();
+                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                    if ((!monster.isDead) && (!monster.isDying) && monster.hasPower("Poison"))
+                        monster.getPower("Poison").atStartOfTurn();
 
+                }
+            }
+
+        }
     }
-}
-
-
-
 
     public AbstractCard makeCopy() {
 
         return new zzzAccelerateToxins();
 
     }
-
 
     public void upgrade() {
 
@@ -91,14 +92,6 @@ public class zzzAccelerateToxins extends AbstractSlimeboundCard {
             this.initializeDescription();
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

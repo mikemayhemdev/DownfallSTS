@@ -15,9 +15,9 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class ShieldParticleEffectInFront extends AbstractGameEffect {
-    private Texture img;
     private static final int RAW_W = 64;
     private static final float DURATION = 2.0F;
+    private Texture img;
     private float x;
     private float y;
     private float scale;

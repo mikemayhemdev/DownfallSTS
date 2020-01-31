@@ -1,11 +1,9 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,20 +23,26 @@ public class VenomTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:VenomTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/poisontackle.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static int baseSelfDamage;
+    public static String UPGRADED_DESCRIPTION;
     public static int originalDamage;
     public static int originalBlock;
     public static int upgradeDamage;
     public static int upgradeSelfDamage;
+    private static int baseSelfDamage;
 
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
     public VenomTackle() {
 
@@ -58,7 +62,7 @@ public class VenomTackle extends AbstractSlimeboundCard {
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int bonus = 0;
-        if (player.hasPower(TackleBuffPower.POWER_ID)){
+        if (player.hasPower(TackleBuffPower.POWER_ID)) {
             bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
         }
         if (mo != null) {
@@ -82,13 +86,11 @@ public class VenomTackle extends AbstractSlimeboundCard {
 
     }
 
-
     public AbstractCard makeCopy() {
 
         return new VenomTackle();
 
     }
-
 
     public void upgrade() {
 
@@ -101,14 +103,6 @@ public class VenomTackle extends AbstractSlimeboundCard {
             upgradeMagicNumber(2);
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

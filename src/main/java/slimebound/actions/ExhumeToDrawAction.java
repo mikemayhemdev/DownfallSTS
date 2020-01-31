@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ExhumeToDrawAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private final boolean upgrade;
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhumeAction");
     public static final String[] TEXT = uiStrings.TEXT;
+    private final boolean upgrade;
+    private AbstractPlayer p;
     private ArrayList<AbstractCard> exhumes = new ArrayList();
 
     public ExhumeToDrawAction(boolean upgrade) {
@@ -30,7 +30,6 @@ public class ExhumeToDrawAction extends AbstractGameAction {
     public void update() {
         Iterator<AbstractCard> card;
         if (this.duration == Settings.ACTION_DUR_FAST) {
-
 
 
             if (this.p.exhaustPile.isEmpty()) {

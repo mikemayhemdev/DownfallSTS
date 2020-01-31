@@ -7,10 +7,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 
 public class SlimeDripsEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private int count = 0;
-    private float timer = 0.0F;
     public float xPos;
     public float yPos;
+    private int count = 0;
+    private float timer = 0.0F;
 
 
     public SlimeDripsEffect(float x, float y, int count) {
@@ -23,6 +23,7 @@ public class SlimeDripsEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
         this.isDone = true;
 
     }
+
     public void update() {
 
         this.timer -= com.badlogic.gdx.Gdx.graphics.getDeltaTime();

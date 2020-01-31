@@ -17,13 +17,13 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class SmallLaserEffectColored extends AbstractGameEffect {
+    private static final float DUR = 0.5F;
+    private static AtlasRegion img;
     private float sX;
     private float sY;
     private float dX;
     private float dY;
     private float dst;
-    private static final float DUR = 0.5F;
-    private static AtlasRegion img;
 
     public SmallLaserEffectColored(float sX, float sY, float dX, float dY, Color color) {
         if (img == null) {
@@ -60,9 +60,9 @@ public class SmallLaserEffectColored extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 1);
         sb.setColor(this.color);
-        sb.draw(img, this.sX, this.sY - (float)img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float)img.packedHeight / 2.0F, this.dst, 50.0F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale, this.rotation);
+        sb.draw(img, this.sX, this.sY - (float) img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float) img.packedHeight / 2.0F, this.dst, 50.0F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale, this.rotation);
         sb.setColor(new Color(0.3F, 0.3F, 1.0F, this.color.a));
-        sb.draw(img, this.sX, this.sY - (float)img.packedHeight / 2.0F, 0.0F, (float)img.packedHeight / 2.0F, this.dst, MathUtils.random(50.0F, 90.0F), this.scale + MathUtils.random(-0.02F, 0.02F), this.scale, this.rotation);
+        sb.draw(img, this.sX, this.sY - (float) img.packedHeight / 2.0F, 0.0F, (float) img.packedHeight / 2.0F, this.dst, MathUtils.random(50.0F, 90.0F), this.scale + MathUtils.random(-0.02F, 0.02F), this.scale, this.rotation);
         sb.setBlendFunction(770, 771);
     }
 

@@ -11,9 +11,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.AttackSlime;
-import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
@@ -22,22 +19,28 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:DivideAndConquerConquer";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/conquer.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static int baseSelfDamage;
+    private static final int POWER = 6;
+    private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
     public static int originalDamage;
     public static int originalBlock;
     public static int upgradeDamage;
     public static int upgradeSelfDamage;
-    private static final int POWER = 6;
-    private static final int UPGRADE_BONUS = 3;
+    private static int baseSelfDamage;
 
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
     public DivideAndConquerConquer() {
 
@@ -55,7 +58,7 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int bonus = 0;
         for (AbstractOrb o : player.orbs)
-            if (o instanceof SpawnedSlime){
+            if (o instanceof SpawnedSlime) {
                 bonus += this.magicNumber;
             }
         return tmp + bonus;
@@ -69,19 +72,13 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
 
-
-
-
-
     }
-
 
     public AbstractCard makeCopy() {
 
         return new DivideAndConquerConquer();
 
     }
-
 
     public void upgrade() {
 
@@ -90,14 +87,6 @@ public class DivideAndConquerConquer extends AbstractSlimeboundCard {
             upgradeName();
             upgradeMagicNumber(1);
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

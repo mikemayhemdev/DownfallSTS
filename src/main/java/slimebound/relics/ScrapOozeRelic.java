@@ -42,11 +42,12 @@ public class ScrapOozeRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.ScrapOozeSlime(), false, false));
 
     }
+
     public boolean canSpawn() {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }
 
-    public void incrementScrapNum(int amount){
+    public void incrementScrapNum(int amount) {
         if (amount != 0) {
             this.counter += amount;
 
@@ -56,7 +57,6 @@ public class ScrapOozeRelic extends CustomRelic {
             this.flash();
         }
     }
-
 
 
     @Override

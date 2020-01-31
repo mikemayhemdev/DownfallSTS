@@ -4,23 +4,20 @@ package slimebound.vfx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.orbs.CultistSlime;
-import slimebound.orbs.SpawnedSlime;
 
 
 public class SticksParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
-    private float scale = 1F;
     private static int W;
-    private Texture img;
-    public CultistSlime p;
     private static int xOffset = 15;
     private static int yOffset = -35;
+    public CultistSlime p;
+    private float scale = 1F;
+    private Texture img;
 
     public SticksParticle(CultistSlime p) {
         this.duration = 0.05F;
@@ -36,10 +33,12 @@ public class SticksParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffec
 
 
     }
-    public void finish(){
+
+    public void finish() {
         this.isDone = true;
 
     }
+
     public void dispose() {
         this.img.dispose();
         this.isDone = true;

@@ -1,33 +1,23 @@
 package slimebound.ui;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
-import com.megacrit.cardcrawl.ui.campfire.RestOption;
-import com.megacrit.cardcrawl.vfx.ShopSpeechBubble;
 import com.megacrit.cardcrawl.vfx.campfire.CampfireTokeEffect;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.ScrapOozeSlime;
-import slimebound.relics.ScrapOozeRelic;
 
 
-public class ScrapBonfireOption extends AbstractCampfireOption
-{
+public class ScrapBonfireOption extends AbstractCampfireOption {
+    public static final String[] DESCRIPTIONS;
     private static final RelicStrings relicStrings;
 
+    static {
+        relicStrings = CardCrawlGame.languagePack.getRelicStrings("Slimebound:ScrapOozeRelic");
+        DESCRIPTIONS = relicStrings.DESCRIPTIONS;
 
-    public static final String[] DESCRIPTIONS;
-
+    }
 
     //private ArrayList<String> idleMessages;
     public ScrapBonfireOption(boolean active) {
@@ -57,10 +47,5 @@ public class ScrapBonfireOption extends AbstractCampfireOption
 
 
         }
-    }
-    static {
-        relicStrings = CardCrawlGame.languagePack.getRelicStrings("Slimebound:ScrapOozeRelic");
-        DESCRIPTIONS = relicStrings.DESCRIPTIONS;
-
     }
 }

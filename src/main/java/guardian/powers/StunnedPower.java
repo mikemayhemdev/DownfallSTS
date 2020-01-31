@@ -19,8 +19,8 @@ public class StunnedPower extends AbstractPower {
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
 
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
     public int storedHandSize;
+    private AbstractCreature source;
 
 
     public StunnedPower(AbstractCreature owner) {

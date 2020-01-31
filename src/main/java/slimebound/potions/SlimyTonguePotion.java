@@ -8,15 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.SlimeboundMod;
-import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.AttackSlime;
-import slimebound.orbs.PoisonSlime;
-import slimebound.orbs.ShieldSlime;
-import slimebound.orbs.SlimingSlime;
 import slimebound.powers.AcidTonguePowerUpgraded;
-
-import java.util.ArrayList;
 
 
 public class SlimyTonguePotion extends CustomPotion {
@@ -36,7 +28,7 @@ public class SlimyTonguePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-       AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AcidTonguePowerUpgraded(AbstractDungeon.player, AbstractDungeon.player, this.potency), this.potency));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AcidTonguePowerUpgraded(AbstractDungeon.player, AbstractDungeon.player, this.potency), this.potency));
 
     }
 

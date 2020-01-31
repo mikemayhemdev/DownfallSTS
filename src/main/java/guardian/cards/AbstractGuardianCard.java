@@ -1,12 +1,8 @@
 package guardian.cards;
 
 import basemod.abstracts.CustomCard;
-
-import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.google.gson.reflect.TypeToken;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -15,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.powers.BeamBuffPower;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 
@@ -34,14 +29,13 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public boolean isSecondaryMModified;
 
 
-
     public AbstractGuardianCard(String id, String name, String img, int cost, String rawDescription, CardType type, CardColor color,
                                 CardRarity rarity, CardTarget target) {
 
         super(id, name, img, cost, rawDescription, type,
                 color, rarity, target);
 
-        if (AbstractDungeon.player != null){
+        if (AbstractDungeon.player != null) {
             upgradeMultihit();
         }
 
@@ -225,102 +219,102 @@ public abstract class AbstractGuardianCard extends CustomCard {
         }
     }
 
-    public void loadGemMisc(){
+    public void loadGemMisc() {
         this.sockets.clear();
-        if (this.misc > 0){
-        GuardianMod.logger.info("Attempting to load non-zero misc " + this.misc);
-        if (Integer.toString(this.misc).length() % 2 == 0) {
-            GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + this.misc);
-            String miscString = Integer.toString(this.misc);
-            String socketCountString = miscString.substring(0, 2);
-            GuardianMod.logger.info("New misc gem load: " + this.name + " socket string = " + socketCountString + " parsed = " + Integer.parseInt(socketCountString));
+        if (this.misc > 0) {
+            GuardianMod.logger.info("Attempting to load non-zero misc " + this.misc);
+            if (Integer.toString(this.misc).length() % 2 == 0) {
+                GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + this.misc);
+                String miscString = Integer.toString(this.misc);
+                String socketCountString = miscString.substring(0, 2);
+                GuardianMod.logger.info("New misc gem load: " + this.name + " socket string = " + socketCountString + " parsed = " + Integer.parseInt(socketCountString));
 
-            this.socketCount = Integer.parseInt(socketCountString) - 10;
-            GuardianMod.logger.info("New misc gem load: " + this.name + " new sockets = " + this.socketCount);
+                this.socketCount = Integer.parseInt(socketCountString) - 10;
+                GuardianMod.logger.info("New misc gem load: " + this.name + " new sockets = " + this.socketCount);
 
-            //SOCKETS
-            if (miscString.length() > 2) {
-                miscString = miscString.substring(2);
-                GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + miscString);
+                //SOCKETS
+                if (miscString.length() > 2) {
+                    miscString = miscString.substring(2);
+                    GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + miscString);
 
-            } else {
-                this.updateDescription();
-                return;
-            }
-
-            //GEMS
-
-            int loops = miscString.length() / 2;
-            String gemString;
-            for (int i = 0; i < loops; i++) {
-                gemString = miscString.substring(0, 2);
-                switch (gemString) {
-                    case "10":
-                        sockets.add(GuardianMod.socketTypes.RED);
-                        break;
-                    case "11":
-                        sockets.add(GuardianMod.socketTypes.GREEN);
-                        break;
-                    case "12":
-                        sockets.add(GuardianMod.socketTypes.ORANGE);
-                        break;
-                    case "13":
-                        sockets.add(GuardianMod.socketTypes.WHITE);
-                        break;
-                    case "14":
-                        sockets.add(GuardianMod.socketTypes.CYAN);
-                        break;
-                    case "15":
-                        sockets.add(GuardianMod.socketTypes.BLUE);
-                        break;
-                    case "16":
-                        sockets.add(GuardianMod.socketTypes.CRIMSON);
-                        break;
-                    case "17":
-                        sockets.add(GuardianMod.socketTypes.FRAGMENTED);
-                        break;
-                    case "18":
-                        sockets.add(GuardianMod.socketTypes.PURPLE);
-                        break;
-                    case "19":
-                        sockets.add(GuardianMod.socketTypes.SYNTHETIC);
-                        break;
-                    case "20":
-                        sockets.add(GuardianMod.socketTypes.YELLOW);
-                        break;
-                    default:
-                        sockets.add(GuardianMod.socketTypes.RED);
-                        break;
+                } else {
+                    this.updateDescription();
+                    return;
                 }
 
-                miscString = miscString.substring(2);
-                GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + miscString);
+                //GEMS
+
+                int loops = miscString.length() / 2;
+                String gemString;
+                for (int i = 0; i < loops; i++) {
+                    gemString = miscString.substring(0, 2);
+                    switch (gemString) {
+                        case "10":
+                            sockets.add(GuardianMod.socketTypes.RED);
+                            break;
+                        case "11":
+                            sockets.add(GuardianMod.socketTypes.GREEN);
+                            break;
+                        case "12":
+                            sockets.add(GuardianMod.socketTypes.ORANGE);
+                            break;
+                        case "13":
+                            sockets.add(GuardianMod.socketTypes.WHITE);
+                            break;
+                        case "14":
+                            sockets.add(GuardianMod.socketTypes.CYAN);
+                            break;
+                        case "15":
+                            sockets.add(GuardianMod.socketTypes.BLUE);
+                            break;
+                        case "16":
+                            sockets.add(GuardianMod.socketTypes.CRIMSON);
+                            break;
+                        case "17":
+                            sockets.add(GuardianMod.socketTypes.FRAGMENTED);
+                            break;
+                        case "18":
+                            sockets.add(GuardianMod.socketTypes.PURPLE);
+                            break;
+                        case "19":
+                            sockets.add(GuardianMod.socketTypes.SYNTHETIC);
+                            break;
+                        case "20":
+                            sockets.add(GuardianMod.socketTypes.YELLOW);
+                            break;
+                        default:
+                            sockets.add(GuardianMod.socketTypes.RED);
+                            break;
+                    }
+
+                    miscString = miscString.substring(2);
+                    GuardianMod.logger.info("New misc gem load: " + this.name + " new misc = " + miscString);
+
+                }
+
+                this.updateDescription();
 
             }
-
-            this.updateDescription();
-
-        }
 
 
         }
     }
 
-    public void addGemToSocket(AbstractGuardianCard gem){
+    public void addGemToSocket(AbstractGuardianCard gem) {
         AbstractDungeon.player.masterDeck.removeCard(gem);
         sockets.add(gem.thisGemsType);
         this.updateDescription();
         this.saveGemMisc();
     }
 
-    public void updateDescription(){
-       //Overwritten in cards
+    public void updateDescription() {
+        //Overwritten in cards
     }
 
-    public void useGems(AbstractPlayer p, AbstractMonster m){
-        for (GuardianMod.socketTypes gem:
-             sockets) {
-            switch (gem){
+    public void useGems(AbstractPlayer p, AbstractMonster m) {
+        for (GuardianMod.socketTypes gem :
+                sockets) {
+            switch (gem) {
                 case RED:
                     Gem_Red.gemEffect(p, m);
                     break;
@@ -358,14 +352,14 @@ public abstract class AbstractGuardianCard extends CustomCard {
         }
     }
 
-    public String updateGemDescription(String desc, Boolean after){
-        String addedDesc= "";
+    public String updateGemDescription(String desc, Boolean after) {
+        String addedDesc = "";
 
         for (int i = 0; i < this.socketCount; i++) {
-            if (this.sockets.size() > i){
+            if (this.sockets.size() > i) {
                 GuardianMod.socketTypes gem = this.sockets.get(i);
                 if (after) addedDesc = addedDesc + " NL ";
-                switch (gem){
+                switch (gem) {
                     case RED:
                         addedDesc = addedDesc + Gem_Red.UPGRADED_DESCRIPTION;
                         break;
@@ -408,7 +402,7 @@ public abstract class AbstractGuardianCard extends CustomCard {
             }
         }
 
-        if (after){
+        if (after) {
             return desc + addedDesc;
         } else {
             return addedDesc + desc;
@@ -420,104 +414,103 @@ public abstract class AbstractGuardianCard extends CustomCard {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        if (socketCount > 0){
+        if (socketCount > 0) {
             Texture socketTexture = null;
             for (int i = 0; i < socketCount; i++) {
 
-                if (sockets.size() > i)
-                {
-                  //  GuardianMod.logger.info("Calculating needs for socket: " + sockets.get(i) + " Index = " + i + " on " + this.name + " sockets array size: " + sockets.size() + " textures array size: " + GuardianMod.socketTextures.size());
+                if (sockets.size() > i) {
+                    //  GuardianMod.logger.info("Calculating needs for socket: " + sockets.get(i) + " Index = " + i + " on " + this.name + " sockets array size: " + sockets.size() + " textures array size: " + GuardianMod.socketTextures.size());
 
-                switch (sockets.get(i)) {
-                    case RED:
-                     //   GuardianMod.logger.info("case RED");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(1);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(1);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(1);
-                        else socketTexture = GuardianMod.socketTextures4.get(1);
-                     //   GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case GREEN:
-                       // GuardianMod.logger.info("case BLUE");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(2);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(2);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(2);
-                        else socketTexture = GuardianMod.socketTextures4.get(2);
-                       // GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case ORANGE:
-                      //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(3);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(3);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(3);
-                        else socketTexture = GuardianMod.socketTextures4.get(3);
-                    //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case WHITE:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(4);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(4);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(4);
-                        else socketTexture = GuardianMod.socketTextures4.get(4);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case CYAN:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(5);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(5);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(5);
-                        else socketTexture = GuardianMod.socketTextures4.get(5);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case BLUE:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(6);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(6);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(6);
-                        else socketTexture = GuardianMod.socketTextures4.get(6);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case CRIMSON:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(7);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(7);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(7);
-                        else socketTexture = GuardianMod.socketTextures4.get(7);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case FRAGMENTED:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(8);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(8);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(8);
-                        else socketTexture = GuardianMod.socketTextures4.get(8);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case PURPLE:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(9);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(9);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(9);
-                        else socketTexture = GuardianMod.socketTextures4.get(9);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case SYNTHETIC:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(10);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(10);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(10);
-                        else socketTexture = GuardianMod.socketTextures4.get(10);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                    case YELLOW:
-                        //  GuardianMod.logger.info("case GREEN");
-                        if (i == 0) socketTexture = GuardianMod.socketTextures.get(11);
-                        else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(11);
-                        else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(11);
-                        else socketTexture = GuardianMod.socketTextures4.get(11);
-                        //    GuardianMod.logger.info("texture is " + socketTexture);
-                        break;
-                }
+                    switch (sockets.get(i)) {
+                        case RED:
+                            //   GuardianMod.logger.info("case RED");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(1);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(1);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(1);
+                            else socketTexture = GuardianMod.socketTextures4.get(1);
+                            //   GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case GREEN:
+                            // GuardianMod.logger.info("case BLUE");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(2);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(2);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(2);
+                            else socketTexture = GuardianMod.socketTextures4.get(2);
+                            // GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case ORANGE:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(3);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(3);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(3);
+                            else socketTexture = GuardianMod.socketTextures4.get(3);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case WHITE:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(4);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(4);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(4);
+                            else socketTexture = GuardianMod.socketTextures4.get(4);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case CYAN:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(5);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(5);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(5);
+                            else socketTexture = GuardianMod.socketTextures4.get(5);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case BLUE:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(6);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(6);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(6);
+                            else socketTexture = GuardianMod.socketTextures4.get(6);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case CRIMSON:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(7);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(7);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(7);
+                            else socketTexture = GuardianMod.socketTextures4.get(7);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case FRAGMENTED:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(8);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(8);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(8);
+                            else socketTexture = GuardianMod.socketTextures4.get(8);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case PURPLE:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(9);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(9);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(9);
+                            else socketTexture = GuardianMod.socketTextures4.get(9);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case SYNTHETIC:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(10);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(10);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(10);
+                            else socketTexture = GuardianMod.socketTextures4.get(10);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                        case YELLOW:
+                            //  GuardianMod.logger.info("case GREEN");
+                            if (i == 0) socketTexture = GuardianMod.socketTextures.get(11);
+                            else if (i == 1) socketTexture = GuardianMod.socketTextures2.get(11);
+                            else if (i == 2) socketTexture = GuardianMod.socketTextures3.get(11);
+                            else socketTexture = GuardianMod.socketTextures4.get(11);
+                            //    GuardianMod.logger.info("texture is " + socketTexture);
+                            break;
+                    }
 
                 } else {
 
@@ -527,27 +520,27 @@ public abstract class AbstractGuardianCard extends CustomCard {
                     else socketTexture = GuardianMod.socketTextures4.get(0);
                 }
 
-               // GuardianMod.logger.info("reached socket texture call, texture is " + socketTexture);
+                // GuardianMod.logger.info("reached socket texture call, texture is " + socketTexture);
                 if (socketTexture != null) renderSocket(sb, socketTexture, i);
-              //  GuardianMod.logger.info("passed socket texture call");
+                //  GuardianMod.logger.info("passed socket texture call");
             }
         }
 
     }
 
-    private void renderSocket(SpriteBatch sb, Texture baseTexture, Integer i){
+    private void renderSocket(SpriteBatch sb, Texture baseTexture, Integer i) {
         //GuardianMod.logger.info("Attempting to render socket: " + baseTexture + " on " + this.name);
         float scale = this.drawScale * Settings.scale;
         float drawX = this.current_x - 256.0F;
         float drawY = this.current_y - 256.0F;
-       // GuardianMod.logger.info(this.angle);
+        // GuardianMod.logger.info(this.angle);
         sb.draw(baseTexture, drawX, drawY, 256.0F, 256.0F, 512.0F, 512.0F, this.drawScale * Settings.scale, this.drawScale * Settings.scale, this.angle, 0, 0, 512, 512, false, false);
 
     }
 
 
-    public void upgradeMultihit(){
-        if (GuardianMod.getMultihitModifiers() > 0){
+    public void upgradeMultihit() {
+        if (GuardianMod.getMultihitModifiers() > 0) {
             this.upgradeMulthit = GuardianMod.getMultihitModifiers();
             if (this.upgradeMulthit > 0) this.isMultihitModified = true;
         }
@@ -557,11 +550,11 @@ public abstract class AbstractGuardianCard extends CustomCard {
     public float calculateBeamDamage() {
         int bonus = 0;
 
-            if (AbstractDungeon.player != null) {
-                if (AbstractDungeon.player.hasPower(BeamBuffPower.POWER_ID)) {
-                    bonus = AbstractDungeon.player.getPower(BeamBuffPower.POWER_ID).amount;
-                }
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.hasPower(BeamBuffPower.POWER_ID)) {
+                bonus = AbstractDungeon.player.getPower(BeamBuffPower.POWER_ID).amount;
             }
+        }
         return bonus;
     }
 

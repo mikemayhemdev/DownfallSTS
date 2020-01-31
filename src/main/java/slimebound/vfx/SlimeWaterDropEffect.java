@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 
 public class SlimeWaterDropEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
+    private static final int W = 64;
+    private static Texture[] imgs = null;
     private float x;
     private float y;
-    private static Texture[] imgs = null;
     private int frame = 0;
     private float animTimer = 0.1F;
-    private static final int W = 64;
 
     public SlimeWaterDropEffect(float x, float y) {
         this.x = x;
@@ -36,10 +36,12 @@ public class SlimeWaterDropEffect extends com.megacrit.cardcrawl.vfx.AbstractGam
         this.scale *= Settings.scale;
         this.color = new Color(0.5F, 0.8F, 0.05F, 0.0F);
     }
+
     public void dispose() {
         this.isDone = true;
 
     }
+
     public void update() {
         this.color.a = com.megacrit.cardcrawl.helpers.MathHelper.fadeLerpSnap(this.color.a, 1.0F);
         this.animTimer -= Gdx.graphics.getDeltaTime();

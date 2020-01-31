@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,8 +23,8 @@ public class ViciousTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:ViciousTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/tendrilstrike.png";
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -34,7 +33,15 @@ public class ViciousTackle extends AbstractSlimeboundCard {
     private static final int COST = 2;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public ViciousTackle() {
@@ -50,7 +57,6 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
     }
 
-
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         int bonus = 0;
         if (mo != null) {
@@ -64,7 +70,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
             }
         }
 
-        if (player.hasPower(TackleBuffPower.POWER_ID)){
+        if (player.hasPower(TackleBuffPower.POWER_ID)) {
             bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
         }
         if (mo != null) {
@@ -83,7 +89,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
 
                 //AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p,  2));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, 2));
 
             }
         }
@@ -95,13 +101,11 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
     }
 
-
     public AbstractCard makeCopy() {
 
         return new ViciousTackle();
 
     }
-
 
     public void upgrade() {
 
@@ -115,14 +119,6 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

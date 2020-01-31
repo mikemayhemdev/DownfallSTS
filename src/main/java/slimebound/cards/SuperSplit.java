@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,8 +15,8 @@ import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.AttackSlime;
-import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
 
@@ -28,18 +27,23 @@ public class SuperSplit extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:SuperSplit";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/supersplit.png";
-
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-
     private static final int COST = -1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
     public static boolean UpgradeCard;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public SuperSplit() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
@@ -58,7 +62,8 @@ public class SuperSplit extends AbstractSlimeboundCard {
         orbs.add(4);
 
         if (this.energyOnUse < EnergyPanel.totalCount) {
-            this.energyOnUse = EnergyPanel.totalCount;}
+            this.energyOnUse = EnergyPanel.totalCount;
+        }
         if (upgraded) this.energyOnUse++;
         if (p.hasRelic(ChemicalX.ID)) {
             this.energyOnUse += 2;
@@ -90,13 +95,6 @@ public class SuperSplit extends AbstractSlimeboundCard {
         p.energy.use(EnergyPanel.totalCount);
 
 
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
     public AbstractCard makeCopy() {

@@ -1,12 +1,10 @@
 package guardian.powers;
 
 
-import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import guardian.actions.PlaceCardsInHandIntoStasisAction;
-import guardian.rewards.GemReward;
 
 
 public class FuturePlansPower extends AbstractGuardianPower {

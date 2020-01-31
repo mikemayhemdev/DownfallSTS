@@ -11,24 +11,14 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
+    private static final float DUR = 0.5F;
     private static TextureAtlas.AtlasRegion outer;
     private static TextureAtlas.AtlasRegion inner;
     private float scaleY;
-    private static final float DUR = 0.5F;
     private AbstractOrb orb;
     private OrbFlareColor flareColor;
     private Color color2;
 
-    public static enum OrbFlareColor {
-        POISON, AGGRESSIVE, SLIMING, LICKING, HEX, CULTIST, TORCHHEAD, BRONZE;
-
-        private OrbFlareColor() {
-        }
-    }
-    public void dispose() {
-        this.isDone = true;
-
-    }
     public SlimeFlareEffect(AbstractOrb orb, OrbFlareColor setColor) {
         if (outer == null) {
             outer = ImageMaster.vfxAtlas.findRegion("combat/orbFlareOuter");
@@ -43,6 +33,11 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
         setColor();
         this.scale = (2.0F * Settings.scale);
         this.scaleY = 0.0F;
+    }
+
+    public void dispose() {
+        this.isDone = true;
+
     }
 
     private void setColor() {
@@ -83,7 +78,6 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
 
     }
 
-
     public void update() {
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {
@@ -119,6 +113,13 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
 
 
                 MathUtils.random(-1.0F, 1.0F));
+    }
+
+    public static enum OrbFlareColor {
+        POISON, AGGRESSIVE, SLIMING, LICKING, HEX, CULTIST, TORCHHEAD, BRONZE;
+
+        private OrbFlareColor() {
+        }
     }
 }
 

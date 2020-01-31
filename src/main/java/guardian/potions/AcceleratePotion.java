@@ -38,8 +38,8 @@ public class AcceleratePotion extends CustomPotion {
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
         AbstractDungeon.topLevelEffectsQueue.add(new com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect());
 
-        for (AbstractOrb o:AbstractDungeon.player.orbs){
-            if (o instanceof StasisOrb){
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof StasisOrb) {
                 o.onStartOfTurn();
                 ((StasisOrb) o).stasisCard.superFlash(Color.GOLDENROD);
             }

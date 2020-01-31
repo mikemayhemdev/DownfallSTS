@@ -18,24 +18,30 @@ import guardian.powers.DefenseModePower;
 public class RollAttack extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("RollAttack");
     public static final String NAME;
-    public static String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/rollAttack.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
-
-    //TUNING CONSTANTS
-
     private static final int COST = 2;
     private static final int DAMAGE = 10;
+
+    //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 3;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
+    public static String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
+
 
     public RollAttack() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
@@ -43,20 +49,19 @@ public class RollAttack extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
-        this.socketCount = SOCKETS;  updateDescription();  loadGemMisc();
-}
-
-
+        this.socketCount = SOCKETS;
+        updateDescription();
+        loadGemMisc();
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (p.hasPower(DefenseModePower.POWER_ID)){
+        if (p.hasPower(DefenseModePower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
         this.useGems(p, m);
     }
-
 
     public AbstractCard makeCopy() {
         return new RollAttack();
@@ -71,23 +76,16 @@ public class RollAttack extends AbstractGuardianCard {
 
     }
 
-    public void updateDescription(){
+    public void updateDescription() {
 
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
             } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
             }
         }
         this.initializeDescription();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

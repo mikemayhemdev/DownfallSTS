@@ -2,7 +2,6 @@ package slimebound.powers;
 
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,18 +10,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.cards.AbstractSlimeboundCard;
-import slimebound.orbs.GreedOozeSlime;
-import slimebound.orbs.ScrapOozeSlime;
 
 
 public class ScrapRespawnPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:ScrapRespawnPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/ScrapRespawn.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
@@ -63,7 +58,7 @@ public class ScrapRespawnPower extends AbstractPower {
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0];
     }
 
 

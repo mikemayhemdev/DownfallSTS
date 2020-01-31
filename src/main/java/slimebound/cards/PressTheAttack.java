@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,16 +21,23 @@ public class PressTheAttack extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:PressTheAttack";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/strikeweak.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = 1;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public PressTheAttack() {
@@ -42,9 +48,7 @@ public class PressTheAttack extends AbstractSlimeboundCard {
         this.baseDamage = 8;
 
 
-
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
@@ -60,27 +64,23 @@ public class PressTheAttack extends AbstractSlimeboundCard {
         }
 
 
-
         if (m.hasPower(SlimedPower.POWER_ID)) {
 
-                if (oldestOrb != null) {
+            if (oldestOrb != null) {
+                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+                if (upgraded)
                     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-                    if (upgraded)  com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
 
-                }
+            }
 
+        }
     }
-}
-
-
-
 
     public AbstractCard makeCopy() {
 
         return new PressTheAttack();
 
     }
-
 
     public void upgrade() {
 
@@ -93,14 +93,6 @@ public class PressTheAttack extends AbstractSlimeboundCard {
             this.initializeDescription();
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

@@ -20,10 +20,10 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class IronWaveParticleBlue extends AbstractGameEffect {
     private static final float EFFECT_DUR = 0.5F;
+    private static AtlasRegion img;
     private float x;
     private float y;
     private float targetY;
-    private static AtlasRegion img;
     private boolean impactHook = false;
 
     public IronWaveParticleBlue(float x, float y) {
@@ -32,8 +32,8 @@ public class IronWaveParticleBlue extends AbstractGameEffect {
         }
 
         this.scale = Settings.scale;
-        this.x = x - (float)img.packedWidth / 2.0F;
-        this.y = (float)Settings.HEIGHT - (float)img.packedHeight / 2.0F;
+        this.x = x - (float) img.packedWidth / 2.0F;
+        this.y = (float) Settings.HEIGHT - (float) img.packedHeight / 2.0F;
         this.duration = 0.5F;
         this.targetY = y - 180.0F * Settings.scale;
         this.rotation = 0.0F;
@@ -41,7 +41,7 @@ public class IronWaveParticleBlue extends AbstractGameEffect {
     }
 
     public void update() {
-        this.y = Interpolation.fade.apply((float)Settings.HEIGHT, this.targetY, 1.0F - this.duration / 0.5F);
+        this.y = Interpolation.fade.apply((float) Settings.HEIGHT, this.targetY, 1.0F - this.duration / 0.5F);
         this.scale += Gdx.graphics.getDeltaTime();
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {
@@ -63,13 +63,13 @@ public class IronWaveParticleBlue extends AbstractGameEffect {
         sb.setBlendFunction(770, 1);
         this.color.g = 1.0F;
         sb.setColor(this.color);
-        sb.draw(img, this.x, this.y + 140.0F * Settings.scale, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth / 2.0F, (float)img.packedHeight * (this.duration + 0.2F) * 3.0F, this.scale * MathUtils.random(0.99F, 1.01F) * 0.5F, this.scale * MathUtils.random(0.99F, 1.01F) * 2.0F * (this.duration + 0.8F), this.rotation);
+        sb.draw(img, this.x, this.y + 140.0F * Settings.scale, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth / 2.0F, (float) img.packedHeight * (this.duration + 0.2F) * 3.0F, this.scale * MathUtils.random(0.99F, 1.01F) * 0.5F, this.scale * MathUtils.random(0.99F, 1.01F) * 2.0F * (this.duration + 0.8F), this.rotation);
         this.color.g = 0.7F;
         sb.setColor(this.color);
-        sb.draw(img, this.x - 50.0F * Settings.scale, this.y + 140.0F * Settings.scale, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth / 2.0F, (float)img.packedHeight * (this.duration + 0.2F) * 2.0F, this.scale * MathUtils.random(0.99F, 1.01F) * 0.6F, this.scale * MathUtils.random(0.99F, 1.01F) * 2.0F * (this.duration + 0.8F), this.rotation);
+        sb.draw(img, this.x - 50.0F * Settings.scale, this.y + 140.0F * Settings.scale, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth / 2.0F, (float) img.packedHeight * (this.duration + 0.2F) * 2.0F, this.scale * MathUtils.random(0.99F, 1.01F) * 0.6F, this.scale * MathUtils.random(0.99F, 1.01F) * 2.0F * (this.duration + 0.8F), this.rotation);
         this.color.g = 0.5F;
         sb.setColor(this.color);
-        sb.draw(img, this.x - 100.0F * Settings.scale, this.y + 140.0F * Settings.scale, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight * (this.duration + 0.2F) * 1.0F, this.scale * MathUtils.random(0.99F, 1.01F) * 0.75F, this.scale * MathUtils.random(0.99F, 1.01F) * 2.0F * (this.duration + 0.8F), this.rotation);
+        sb.draw(img, this.x - 100.0F * Settings.scale, this.y + 140.0F * Settings.scale, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight * (this.duration + 0.2F) * 1.0F, this.scale * MathUtils.random(0.99F, 1.01F) * 0.75F, this.scale * MathUtils.random(0.99F, 1.01F) * 2.0F * (this.duration + 0.8F), this.rotation);
         sb.setBlendFunction(770, 771);
     }
 

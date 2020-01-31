@@ -16,7 +16,7 @@ public class AttackSlime
 
     public AttackSlime() {
 
-        super(ID, -17,new Color (1.0F,100F/255F,100F/255F,100F),"images/monsters/theBottom/slimeAltS/skeleton.atlas","images/monsters/theBottom/slimeAltS/skeleton.json","idle",.85F,new Color(0.8F,0.25F,0.25F,2F), 4, 3, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"), "slimeboundResources/SlimeboundImages/orbs/aggressive.png");
+        super(ID, -17, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), "images/monsters/theBottom/slimeAltS/skeleton.atlas", "images/monsters/theBottom/slimeAltS/skeleton.json", "idle", .85F, new Color(0.8F, 0.25F, 0.25F, 2F), 4, 3, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"), "slimeboundResources/SlimeboundImages/orbs/aggressive.png");
         spawnVFX();
 
     }
@@ -29,7 +29,7 @@ public class AttackSlime
     public void activateEffectUnique() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,false,false,false,0,false,0,false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, 0, false, 0, false));
 
     }
 

@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
-import slimebound.actions.CheckForSixHexAction;
 import slimebound.powers.PotencyPower;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -21,22 +20,20 @@ import slimebound.vfx.SlimeFlareEffect;
 public class HexSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:HexSlime";
-
-
-    private BobEffect effect = new BobEffect(2.0F);
-    private float activateTimer;
+    private static final float PARTICLE_INTERVAL = 0.06F;
     public boolean activated = false;
     public boolean hidden = false;
     public boolean playedSfx = false;
+    private BobEffect effect = new BobEffect(2.0F);
+    private float activateTimer;
     private Color color;
     private float x;
     private float y;
     private float particleTimer = 0.0F;
-    private static final float PARTICLE_INTERVAL = 0.06F;
 
 
     public HexSlime() {
-        super(ID,-25,new Color (.65F,.65F,1.0F,100F),"images/monsters/theBottom/slimeM/skeleton.atlas","images/monsters/theBottom/slimeM/skeleton.json","idle",1.5F,new Color(119F/255F,119/255F,1F,2F), 0,0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/sleep.png"), "slimeboundResources/SlimeboundImages/orbs/hex.png");
+        super(ID, -25, new Color(.65F, .65F, 1.0F, 100F), "images/monsters/theBottom/slimeM/skeleton.atlas", "images/monsters/theBottom/slimeM/skeleton.json", "idle", 1.5F, new Color(119F / 255F, 119 / 255F, 1F, 2F), 0, 0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/sleep.png"), "slimeboundResources/SlimeboundImages/orbs/hex.png");
         this.x = (x * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.y = (y * Settings.scale + MathUtils.random(-10.0F, 10.0F) * Settings.scale);
         this.color = Color.CHARTREUSE.cpy();
@@ -56,7 +53,6 @@ public class HexSlime
     public void applyFocus() {
 
     }
-
 
 
     public void activateEffectUnique() {

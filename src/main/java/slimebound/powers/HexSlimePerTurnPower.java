@@ -8,17 +8,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CheckForSixHexAction;
-import slimebound.actions.SlimeSpawnAction;
 
 
 public class HexSlimePerTurnPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:HexSlimePerTurnPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/nostalgia.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
@@ -66,7 +63,7 @@ public class HexSlimePerTurnPower extends AbstractPower {
 
         flash();
 
-       // AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.HexSlime(), false, false));
+        // AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.HexSlime(), false, false));
 
         if (this.amount <= 1) {
 

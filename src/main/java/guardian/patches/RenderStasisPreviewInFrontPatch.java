@@ -13,10 +13,10 @@ public class RenderStasisPreviewInFrontPatch {
 
     @SpirePostfixPatch
     public static void Postfix(AbstractPlayer obj, SpriteBatch sb) {
-            for (AbstractOrb o : obj.orbs){
-                if (o instanceof StasisOrb){
-                    ((StasisOrb)o).renderPreview(sb);
-                }
+        for (AbstractOrb o : obj.orbs) {
+            if (o instanceof StasisOrb) {
+                ((StasisOrb) o).renderPreview(sb);
+            }
 
         }
     }

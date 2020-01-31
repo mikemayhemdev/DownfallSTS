@@ -1,11 +1,7 @@
 package slimebound.cards;
 
 
-
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -21,17 +17,22 @@ public class Dissolve extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Dissolve";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/dissolve.png";
-
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-
     private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public Dissolve() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
@@ -40,19 +41,19 @@ public class Dissolve extends AbstractSlimeboundCard {
         this.baseBlock = 7;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
-        this.poison=4;
+        this.poison = 4;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-       // AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        // AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false,this.block,1));
+            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false, this.block, 1));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false,this.block,0));
+            AbstractDungeon.actionManager.addToBottom(new DissolveAction(p, p, 1, false, this.block, 0));
         }
 
     }
@@ -67,13 +68,6 @@ public class Dissolve extends AbstractSlimeboundCard {
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

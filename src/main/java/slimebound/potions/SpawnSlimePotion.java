@@ -7,13 +7,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.AttackSlime;
 import slimebound.orbs.PoisonSlime;
 import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.SlimingSlime;
-import slimebound.powers.SlimedPower;
 
 import java.util.ArrayList;
 
@@ -55,7 +53,8 @@ public class SpawnSlimePotion extends CustomPotion {
             case 4:
                 AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, false));
                 break;
-        }    }
+        }
+    }
 
 
     public CustomPotion makeCopy() {

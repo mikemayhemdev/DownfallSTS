@@ -12,12 +12,12 @@ import slimebound.orbs.ScrapOozeSlime;
 public class ScrapParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
-    private float scale = 1F;
     private static int W;
-    private Texture img;
-    public ScrapOozeSlime p;
     private static int xOffset = 20;
     private static int yOffset = 20;
+    public ScrapOozeSlime p;
+    private float scale = 1F;
+    private Texture img;
 
     public ScrapParticle(ScrapOozeSlime p) {
         this.duration = 0.05F;
@@ -28,7 +28,8 @@ public class ScrapParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
 
 
     }
-    public void finish(){
+
+    public void finish() {
         this.isDone = true;
 
     }
@@ -37,6 +38,7 @@ public class ScrapParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
 
 
     }
+
     public void dispose() {
         this.img.dispose();
         this.isDone = true;

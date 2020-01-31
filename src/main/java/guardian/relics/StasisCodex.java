@@ -3,7 +3,6 @@ package guardian.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.unique.CodexAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -26,7 +25,7 @@ public class StasisCodex extends CustomRelic {
     @Override
     public void onPlayerEndTurn() {
         super.onPlayerEndTurn();
-        if (!GuardianMod.isStasisOrbInPlay()){
+        if (!GuardianMod.isStasisOrbInPlay()) {
 
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.actionManager.addToBottom(new StasisCodexAction());

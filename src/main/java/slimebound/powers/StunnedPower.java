@@ -19,13 +19,12 @@ import java.util.Iterator;
 public class StunnedPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:StunnedPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/SleepSmall.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
     public int storedHandSize;
+    private AbstractCreature source;
 
 
     public StunnedPower(AbstractCreature owner, AbstractCreature source, int amount) {

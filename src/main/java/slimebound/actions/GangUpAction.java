@@ -3,7 +3,6 @@ package slimebound.actions;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,8 +13,6 @@ import slimebound.orbs.AttackSlime;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.powers.DuplicatedFormNoHealPower;
-import slimebound.powers.FirmFortitudePower;
-import slimebound.vfx.SlimeDripsEffect;
 
 
 public class GangUpAction extends AbstractGameAction {
@@ -97,14 +94,14 @@ public class GangUpAction extends AbstractGameAction {
         AbstractDungeon.player.channelOrb(this.orbType);
 
 
-            //AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
+        //AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
 
         tickDuration();
 
 
         this.isDone = true;
         if (this.count > 0) {
-            AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.count - 1,this.upgradedamount,false));
+            AbstractDungeon.actionManager.addToBottom(new GangUpAction(this.count - 1, this.upgradedamount, false));
         }
 
     }

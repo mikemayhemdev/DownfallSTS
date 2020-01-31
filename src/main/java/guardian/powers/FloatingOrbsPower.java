@@ -7,21 +7,16 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import guardian.cards.OrbSlam;
 import guardian.vfx.FloatingOrbsEffect;
 
 
 public class FloatingOrbsPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:FloatingOrbsPower";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
-
-    public static String[] DESCRIPTIONS;
-
-    public FloatingOrbsEffect orbVFX;
-
     private static final float yOffset = -70F * Settings.scale;
+    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static String[] DESCRIPTIONS;
+    public FloatingOrbsEffect orbVFX;
 
 
     public FloatingOrbsPower(AbstractCreature owner) {
@@ -40,7 +35,7 @@ public class FloatingOrbsPower extends AbstractGuardianPower {
 
 
     public void updateDescription() {
-        if (this.amount > 0){
+        if (this.amount > 0) {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
 
         } else {

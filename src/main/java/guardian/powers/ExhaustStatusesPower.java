@@ -1,12 +1,8 @@
 package guardian.powers;
 
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import guardian.GuardianMod;
-import guardian.cards.AbstractGuardianCard;
 
 
 public class ExhaustStatusesPower extends AbstractGuardianPower {
@@ -14,9 +10,8 @@ public class ExhaustStatusesPower extends AbstractGuardianPower {
     public static PowerType POWER_TYPE = PowerType.BUFF;
 
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
-
     public int usedThisTurn = 0;
+    private AbstractCreature source;
 
 
     public ExhaustStatusesPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -43,7 +38,7 @@ public class ExhaustStatusesPower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        if (this.amount == 1){
+        if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
         } else {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];

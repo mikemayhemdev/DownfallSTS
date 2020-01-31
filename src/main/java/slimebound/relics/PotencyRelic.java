@@ -35,6 +35,7 @@ public class PotencyRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
     }
+
     public boolean canSpawn() {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }

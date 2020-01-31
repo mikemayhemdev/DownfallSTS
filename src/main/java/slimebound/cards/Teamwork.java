@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,8 +22,8 @@ public class Teamwork extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Teamwork";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/coordinatedstrike.png";
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -33,14 +32,21 @@ public class Teamwork extends AbstractSlimeboundCard {
     private static final int COST = -1;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public Teamwork() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 5;
         this.magicNumber = this.baseMagicNumber = 2;
-       // this.tags.add(CardTags.STRIKE);
+        // this.tags.add(CardTags.STRIKE);
         //this.isMultiDamage = true;
 
 
@@ -55,15 +61,6 @@ public class Teamwork extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse));
 
     }
-
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    }
-
 
     public AbstractCard makeCopy() {
         return new Teamwork();

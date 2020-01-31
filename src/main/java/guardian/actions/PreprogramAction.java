@@ -6,7 +6,6 @@
 package guardian.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -19,8 +18,14 @@ import guardian.GuardianMod;
 import java.util.Iterator;
 
 public class PreprogramAction extends AbstractGameAction {
-    private static final UIStrings uiStrings;
     public static final String[] TEXT;
+    private static final UIStrings uiStrings;
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
+        TEXT = uiStrings.TEXT;
+    }
+
     private float startingDuration;
 
     public PreprogramAction(int numCards) {
@@ -39,16 +44,16 @@ public class PreprogramAction extends AbstractGameAction {
 
             CardGroup tmpGroup = new CardGroup(CardGroupType.UNSPECIFIED);
 
-            for(int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
-                tmpGroup.addToTop((AbstractCard)AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+            for (int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
+                tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
             }
 
             AbstractDungeon.gridSelectScreen.open(tmpGroup, 1, false, TEXT[0]);
         } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             Iterator var3 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-            while(var3.hasNext()) {
-                AbstractCard c = (AbstractCard)var3.next();
+            while (var3.hasNext()) {
+                AbstractCard c = (AbstractCard) var3.next();
                 if (GuardianMod.canSpawnStasisOrb()) {
 
                     AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
@@ -59,10 +64,5 @@ public class PreprogramAction extends AbstractGameAction {
         }
 
         this.tickDuration();
-    }
-
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
-        TEXT = uiStrings.TEXT;
     }
 }

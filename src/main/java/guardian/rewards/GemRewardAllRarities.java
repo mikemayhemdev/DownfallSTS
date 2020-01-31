@@ -10,8 +10,12 @@ import guardian.patches.RewardItemTypePatch;
 
 public class GemRewardAllRarities extends CustomReward {
 
-    private static final Texture TEXTURE = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/gemreward.png"));
     public static final String[] TEXT;
+    private static final Texture TEXTURE = ImageMaster.loadImage(GuardianMod.getResourcePath("ui/gemreward.png"));
+
+    static {
+        TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
+    }
 
     public GemRewardAllRarities() {
         super(TEXTURE, TEXT[6], RewardItemTypePatch.GEMALLRARITIES);
@@ -21,14 +25,10 @@ public class GemRewardAllRarities extends CustomReward {
 
     @Override
     public boolean claimReward() {
-        if(AbstractDungeon.screen == AbstractDungeon.CurrentScreen.COMBAT_REWARD) {
+        if (AbstractDungeon.screen == AbstractDungeon.CurrentScreen.COMBAT_REWARD) {
             AbstractDungeon.cardRewardScreen.open(this.cards, this, TEXT[1]);
             AbstractDungeon.previousScreen = AbstractDungeon.CurrentScreen.COMBAT_REWARD;
         }
         return false;
-    }
-
-    static {
-        TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
     }
 }

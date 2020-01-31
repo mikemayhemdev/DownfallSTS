@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 public class MakeTempCardInHandActionReduceCost extends com.megacrit.cardcrawl.actions.AbstractGameAction {
     private static final float DURATION_PER_CARD = 0.35F;
-    private AbstractCard c;
     private static final float PADDING = 25.0F * Settings.scale;
+    private AbstractCard c;
     private boolean isOtherCardInCenter = true;
 
     public MakeTempCardInHandActionReduceCost(AbstractCard card, boolean isOtherCardInCenter) {
@@ -26,8 +26,6 @@ public class MakeTempCardInHandActionReduceCost extends com.megacrit.cardcrawl.a
 
     public MakeTempCardInHandActionReduceCost(AbstractCard card) {
         this(card, 1);
-
-
 
 
     }

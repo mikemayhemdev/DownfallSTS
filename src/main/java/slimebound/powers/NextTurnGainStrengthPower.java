@@ -14,10 +14,9 @@ import slimebound.SlimeboundMod;
 public class NextTurnGainStrengthPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:NextTurnGainStrengthPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/DelayedAttackSmall.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 

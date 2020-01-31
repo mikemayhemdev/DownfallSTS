@@ -1,6 +1,7 @@
 package guardian;
 
-import basemod.*;
+import basemod.BaseMod;
+import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -13,7 +14,6 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,17 +24,18 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.cards.*;
-import guardian.events.*;
+import guardian.characters.GuardianCharacter;
 import guardian.events.StasisEgg;
+import guardian.events.*;
 import guardian.helpers.MultihitVariable;
 import guardian.helpers.SecondaryMagicVariable;
 import guardian.orbs.StasisOrb;
+import guardian.patches.AbstractCardEnum;
 import guardian.patches.BottledStasisPatch;
 import guardian.patches.GuardianEnum;
 import guardian.patches.RewardItemTypePatch;
@@ -48,9 +49,6 @@ import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import guardian.characters.GuardianCharacter;
-
-import guardian.patches.AbstractCardEnum;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -60,39 +58,29 @@ import java.util.Iterator;
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber, SetUnlocksSubscriber, PostDungeonInitializeSubscriber, PostInitializeSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber {
 
+    public static final Float stasisCardRenderScale = 0.2F;
+    public static final Logger logger = LogManager.getLogger(GuardianMod.class.getName());
     private static final String ATTACK_CARD = "512/bg_attack_guardian.png";
     private static final String SKILL_CARD = "512/bg_skill_guardian.png";
     private static final String POWER_CARD = "512/bg_power_guardian.png";
     private static final String ENERGY_ORB = "512/card_guardian_orb.png";
     private static final String CARD_ENERGY_ORB = "512/card_small_orb.png";
-
     private static final String ATTACK_CARD_PORTRAIT = "1024/bg_attack_guardian.png";
     private static final String SKILL_CARD_PORTRAIT = "1024/bg_skill_guardian.png";
     private static final String POWER_CARD_PORTRAIT = "1024/bg_power_guardian.png";
     private static final String ENERGY_ORB_PORTRAIT = "1024/card_guardian_orb.png";
-
     public static GuardianCharacter guardianCharacter;
-
     public static Color mainGuardianColor = new Color(0.58F, 0.49F, 0.33F, 1.0F);
-
     private static final com.badlogic.gdx.graphics.Color GUARDIAN_COLOR = mainGuardianColor;
-
-
     public static ArrayList<Texture> socketTextures = new ArrayList<>();
     public static ArrayList<Texture> socketTextures2 = new ArrayList<>();
     public static ArrayList<Texture> socketTextures3 = new ArrayList<>();
     public static ArrayList<Texture> socketTextures4 = new ArrayList<>();
-
-    public static final Float stasisCardRenderScale = 0.2F;
-
     public static boolean stasisDelay = false;
     public static int stasisCount;
-
     public static boolean discoveryOverride = false;
     public static boolean discoveryOverrideUpgrade = false;
-
     public static EnhanceBonfireOption socketBonfireOption;
-
     public static boolean talked1 = false;
     public static boolean talked2 = false;
     public static boolean talked3 = false;
@@ -102,9 +90,6 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
     public static boolean talked7 = false;
     public static boolean talked8 = false;
     public static boolean talked9 = false;
-
-    private ModPanel settingsPanel;
-
     public static boolean gridScreenForGems = false;
     public static boolean gridScreenForSockets = false;
     public static boolean gridScreenInGrimForge = false;
@@ -129,12 +114,11 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
     public static AbstractCard.CardTags VOLATILE;
 
     //TODO - Unlock bundles
-
+    private ModPanel settingsPanel;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
-    private CustomUnlockBundle unlocks4;
 
 
     //TODO - content sharing if needed
@@ -152,16 +136,7 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     */
-
-    public static final Logger logger = LogManager.getLogger(GuardianMod.class.getName());
-
-    public static final String getResourcePath(String resource) {
-        return "guardianResources/GuardianImages/" + resource;
-    }
-
-    public static final String getResourcePath() {
-        return "guardianResources/GuardianImages/";
-    }
+    private CustomUnlockBundle unlocks4;
 
     public GuardianMod() {
 
@@ -186,28 +161,28 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
 
     }
 
+    public static final String getResourcePath(String resource) {
+        return "guardianResources/GuardianImages/" + resource;
+    }
+
+    public static final String getResourcePath() {
+        return "guardianResources/GuardianImages/";
+    }
+
     public static void initialize() {
         new GuardianMod();
     }
-
-    public void receiveEditCharacters() {
-
-        guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
-        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN);
-
-    }
-
 
     public static CardGroup getSocketableCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             if (c instanceof AbstractGuardianCard) {
                 AbstractGuardianCard cg = (AbstractGuardianCard) c;
-                if (cg.socketCount > 0 && cg.socketCount < 5){
-                    if (cg.sockets.size() < cg.socketCount){
+                if (cg.socketCount > 0 && cg.socketCount < 5) {
+                    if (cg.sockets.size() < cg.socketCount) {
                         retVal.group.add(c);
                     }
                 }
@@ -221,12 +196,12 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             if (c instanceof AbstractGuardianCard) {
                 AbstractGuardianCard cg = (AbstractGuardianCard) c;
                 logger.info("card name: " + c.name + " socketCount = " + cg.socketCount);
-                if (cg.socketCount > 0 && cg.socketCount < 5){
+                if (cg.socketCount > 0 && cg.socketCount < 5) {
                     logger.info("card name: " + c.name);
                     retVal.group.add(c);
                 }
@@ -240,8 +215,8 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             if (c instanceof AbstractGuardianCard) {
                 AbstractGuardianCard cg = (AbstractGuardianCard) c;
                 if (cg.socketCount > 0) {
@@ -260,8 +235,8 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.MASTER_DECK);
         Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             if (c.hasTag(GuardianMod.GEM)) {
                 retVal.group.add(c);
             }
@@ -270,15 +245,225 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
         return retVal;
     }
 
+    public static String makeID(String input) {
+        String concat = "Guardian:" + input;
+        return concat;
+    }
 
-    public void receivePostDungeonInitialize() {
+    public static String printString(String s) {
+        logger.info(s);
+        return s;
+    }
+
+    public static int getMultihitModifiers() {
+        int amount = 0;
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.hasPower(MultiBoostPower.POWER_ID)) {
+                amount += AbstractDungeon.player.getPower(MultiBoostPower.POWER_ID).amount;
+            }
+        }
+        return amount;
+    }
+
+    public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon) {
+        return getRewardGemCards(onlyCommon, 3);
+    }
+
+    public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon, int count) {
+        ArrayList<String> allGemCards = new ArrayList<>();
+        ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
+
+        allGemCards.add("RED");
+        allGemCards.add("GREEN");
+        if (!onlyCommon) allGemCards.add("ORANGE");
+        allGemCards.add("CYAN");
+        allGemCards.add("WHITE");
+        if (!onlyCommon) allGemCards.add("BLUE");
+        if (!onlyCommon) allGemCards.add("CRIMSON");
+        allGemCards.add("FRAGMENTED");
+        if (!onlyCommon) allGemCards.add("PURPLE");
+        if (!onlyCommon) allGemCards.add("SYNTHETIC");
+        if (!UnlockTracker.isCardLocked(Gem_Yellow.ID)) {
+            if (!onlyCommon) allGemCards.add("YELLOW");
+        }
+
+        int rando;
+        String ID;
+        for (int i = 0; i < count; i++) {
+            rando = AbstractDungeon.cardRng.random(0, allGemCards.size() - 1);
+            ID = allGemCards.get(rando);
+            switch (ID) {
+                case "RED":
+                    rewardGemCards.add(new Gem_Red());
+                    break;
+                case "GREEN":
+                    rewardGemCards.add(new Gem_Green());
+                    break;
+                case "ORANGE":
+                    rewardGemCards.add(new Gem_Orange());
+                    break;
+                case "CYAN":
+                    rewardGemCards.add(new Gem_Cyan());
+                    break;
+                case "WHITE":
+                    rewardGemCards.add(new Gem_White());
+                    break;
+                case "BLUE":
+                    rewardGemCards.add(new Gem_Blue());
+                    break;
+                case "CRIMSON":
+                    rewardGemCards.add(new Gem_Crimson());
+                    break;
+                case "FRAGMENTED":
+                    rewardGemCards.add(new Gem_Fragmented());
+                    break;
+                case "PURPLE":
+                    rewardGemCards.add(new Gem_Purple());
+                    break;
+                case "SYNTHETIC":
+                    rewardGemCards.add(new Gem_Synthetic());
+                    break;
+                case "YELLOW":
+                    rewardGemCards.add(new Gem_Yellow());
+                    break;
+            }
+            allGemCards.remove(rando);
+        }
+
+        return rewardGemCards;
+    }
+
+    public static void updateStasisCount() {
+
+    }
+
+    public static int getStasisCount() {
+        int count = 0;
+        if (AbstractDungeon.player != null) {
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                if (o instanceof StasisOrb) {
+                    count++;
+                }
+            }
+        }
+        stasisCount = count;
+        //logger.info(count);
+        return count;
+    }
+
+    public static boolean canSpawnStasisOrb() {
+        boolean result = false;
+
+        result = AbstractDungeon.player.hasEmptyOrb();
+
+        if (!result) {
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                if (!(o instanceof StasisOrb)) {
+                    result = true;
+                }
+            }
+        }
+
+
+        if (!result) {
+            UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
+
+        }
+        return result;
+
+    }
+
+    //TODO - Part of shared relics
+    /*
+    public void addSharedRelics(){
+        if (contentSharing_relics){
+            BaseMod.addRelic(shareableRelics.get(0), RelicType.SHARED);
+
+        } else {
+            BaseMod.addRelicToCustomPool(shareableRelics.get(0), AbstractCardEnum.GUARDIAN);
+        }
+    }
+    */
+
+    public static boolean isStasisOrbInPlay() {
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (o instanceof StasisOrb) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    public void receiveEditCharacters() {
+
+        guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
+        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN);
+
+    }
+
+/*
+    public static void clearData() {
+    saveData();
+}
+
+
+public static void saveData() {
+
+    try {
+        SpireConfig config = new SpireConfig("GuardianMod", "SlimeboundSaveData", slimeboundDefault);
+        config.setBool(PROP_EVENT_SHARING, contentSharing_events);
+        config.setBool(PROP_RELIC_SHARING, contentSharing_relics);
+        config.setBool(PROP_POTION_SHARING, contentSharing_potions);
+        config.setBool(PROP_UNLOCK_ALL, unlockEverything);
+
+        config.save();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+}
+
+
+    public void adjustRelics(){
+
+        // remove all shareable relics wherever they are, then re-add them.
+        // assuming right now that there are no overheated expansion relics shared by other characters.
+        for (AbstractRelic relic : shareableRelics){
+            BaseMod.removeRelic(relic);
+            BaseMod.removeRelicFromCustomPool(relic,AbstractCardEnum.GUARDIAN);
+        }
+
+        addSharedRelics();
+
 
 
     }
 
-    public static String makeID(String input){
-        String concat = "Guardian:" + input;
-        return concat;
+
+    public static void loadConfigData() {
+
+        try {
+            logger.info("GuardianMod | Loading Config Preferences...");
+            SpireConfig config = new SpireConfig("GuardianMod", "SlimeboundSaveData", slimeboundDefault);
+            config.load();
+            contentSharing_events = config.getBool(PROP_EVENT_SHARING);
+            contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
+            contentSharing_potions = config.getBool(PROP_POTION_SHARING);
+            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            clearData();
+        }
+
+    }
+ */
+
+    public void receivePostDungeonInitialize() {
+
+
     }
 
     @Override
@@ -286,67 +471,59 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
         //TODO - Part of unlocks
 
 
+        BaseMod.addUnlockBundle(unlocks0, GuardianEnum.GUARDIAN, 0);
 
-            BaseMod.addUnlockBundle(unlocks0, GuardianEnum.GUARDIAN, 0);
+        BaseMod.addUnlockBundle(unlocks1, GuardianEnum.GUARDIAN, 1);
 
-            BaseMod.addUnlockBundle(unlocks1, GuardianEnum.GUARDIAN, 1);
+        BaseMod.addUnlockBundle(unlocks2, GuardianEnum.GUARDIAN, 2);
 
-            BaseMod.addUnlockBundle(unlocks2, GuardianEnum.GUARDIAN, 2);
+        BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
 
-            BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
-
-            BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
-
-
-            UnlockTracker.addCard(ShieldCharger.ID);
-            UnlockTracker.addCard(Orbwalk.ID);
-            UnlockTracker.addCard(FierceBash.ID);
+        BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
 
 
-            UnlockTracker.addCard(Gem_Yellow.ID);
-            UnlockTracker.addCard(GemFire.ID);
-            UnlockTracker.addCard(GemFinder.ID);
+        UnlockTracker.addCard(ShieldCharger.ID);
+        UnlockTracker.addCard(Orbwalk.ID);
+        UnlockTracker.addCard(FierceBash.ID);
 
 
-            UnlockTracker.addCard(StasisEngine.ID);
-            UnlockTracker.addCard(FuturePlans.ID);
-            UnlockTracker.addCard(CompilePackage.ID);
+        UnlockTracker.addCard(Gem_Yellow.ID);
+        UnlockTracker.addCard(GemFire.ID);
+        UnlockTracker.addCard(GemFinder.ID);
 
-            UnlockTracker.addRelic(StasisUpgradeRelic.ID);
-            UnlockTracker.addRelic(StasisCodex.ID);
-            UnlockTracker.addRelic(GemCopier.ID);
 
-            UnlockTracker.addRelic(StasisSlotIncreaseRelic.ID);
-            UnlockTracker.addRelic(PocketSentry.ID);
-            UnlockTracker.addRelic(TickHelperRelic.ID);
+        UnlockTracker.addCard(StasisEngine.ID);
+        UnlockTracker.addCard(FuturePlans.ID);
+        UnlockTracker.addCard(CompilePackage.ID);
+
+        UnlockTracker.addRelic(StasisUpgradeRelic.ID);
+        UnlockTracker.addRelic(StasisCodex.ID);
+        UnlockTracker.addRelic(GemCopier.ID);
+
+        UnlockTracker.addRelic(StasisSlotIncreaseRelic.ID);
+        UnlockTracker.addRelic(PocketSentry.ID);
+        UnlockTracker.addRelic(TickHelperRelic.ID);
 
 
     }
 
-    public void clearUnlockBundles(){
+    public void clearUnlockBundles() {
 
         //TODO - Part of unlocks
 
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN,0);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN,1);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN,2);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN,3);
-        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN,4);
+        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 0);
+        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 1);
+        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 2);
+        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 3);
+        BaseMod.removeUnlockBundle(GuardianEnum.GUARDIAN, 4);
         receiveSetUnlocks();
 
     }
 
-
-    public void printEnemies(){
+    public void printEnemies() {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             logger.info(monster.name + " HP " + monster.currentHealth);
         }
-    }
-
-
-    public static String printString(String s) {
-        logger.info(s);
-        return s;
     }
 
     public void receiveEditRelics() {
@@ -373,30 +550,18 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
 
         //shareableRelics.add(new PreparedRelic());
 
-        if (unlocks2 == null){
-        unlocks2 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                StasisSlotIncreaseRelic.ID, PocketSentry.ID, TickHelperRelic.ID
-        );
+        if (unlocks2 == null) {
+            unlocks2 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                    StasisSlotIncreaseRelic.ID, PocketSentry.ID, TickHelperRelic.ID
+            );
 
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                StasisUpgradeRelic.ID, StasisCodex.ID, GemCopier.ID
-        );}
-
-
-
-    }
-
-    //TODO - Part of shared relics
-    /*
-    public void addSharedRelics(){
-        if (contentSharing_relics){
-            BaseMod.addRelic(shareableRelics.get(0), RelicType.SHARED);
-
-        } else {
-            BaseMod.addRelicToCustomPool(shareableRelics.get(0), AbstractCardEnum.GUARDIAN);
+            unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                    StasisUpgradeRelic.ID, StasisCodex.ID, GemCopier.ID
+            );
         }
+
+
     }
-    */
 
     public void receiveEditCards() {
 
@@ -509,7 +674,6 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
         }
 
 
-
         //TODO - Part of unlocks
 
         unlocks0 = new CustomUnlockBundle(
@@ -525,13 +689,9 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
         );
 
 
-
-
-
     }
 
-
-    public void unlockEverything(){
+    public void unlockEverything() {
 
 
         UnlockTracker.unlockCard(Strike_Guardian.ID);
@@ -640,64 +800,6 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
 
     }
 
-/*
-    public static void clearData() {
-    saveData();
-}
-
-
-public static void saveData() {
-
-    try {
-        SpireConfig config = new SpireConfig("GuardianMod", "SlimeboundSaveData", slimeboundDefault);
-        config.setBool(PROP_EVENT_SHARING, contentSharing_events);
-        config.setBool(PROP_RELIC_SHARING, contentSharing_relics);
-        config.setBool(PROP_POTION_SHARING, contentSharing_potions);
-        config.setBool(PROP_UNLOCK_ALL, unlockEverything);
-
-        config.save();
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-
-}
-
-
-    public void adjustRelics(){
-
-        // remove all shareable relics wherever they are, then re-add them.
-        // assuming right now that there are no overheated expansion relics shared by other characters.
-        for (AbstractRelic relic : shareableRelics){
-            BaseMod.removeRelic(relic);
-            BaseMod.removeRelicFromCustomPool(relic,AbstractCardEnum.GUARDIAN);
-        }
-
-        addSharedRelics();
-
-
-
-    }
-
-
-    public static void loadConfigData() {
-
-        try {
-            logger.info("GuardianMod | Loading Config Preferences...");
-            SpireConfig config = new SpireConfig("GuardianMod", "SlimeboundSaveData", slimeboundDefault);
-            config.load();
-            contentSharing_events = config.getBool(PROP_EVENT_SHARING);
-            contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
-            contentSharing_potions = config.getBool(PROP_POTION_SHARING);
-            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-            clearData();
-        }
-
-    }
- */
-
     public void receiveEditKeywords() {
         final Gson gson = new Gson();
         String language;
@@ -732,21 +834,11 @@ public static void saveData() {
             com.evacipated.cardcrawl.mod.stslib.Keyword[] var6 = keywords;
             int var7 = keywords.length;
 
-            for(int var8 = 0; var8 < var7; ++var8) {
+            for (int var8 = 0; var8 < var7; ++var8) {
                 Keyword keyword = var6[var8];
                 BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
-    }
-
-    public static int getMultihitModifiers(){
-        int amount = 0;
-        if (AbstractDungeon.player != null){
-            if (AbstractDungeon.player.hasPower(MultiBoostPower.POWER_ID)){
-                amount += AbstractDungeon.player.getPower(MultiBoostPower.POWER_ID).amount;
-            }
-        }
-        return amount;
     }
 
     public void receiveEditStrings() {
@@ -776,7 +868,6 @@ public static void saveData() {
         }
 
 
-
         logger.info("begin editing strings");
         String relicStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
@@ -801,54 +892,6 @@ public static void saveData() {
 
         logger.info("done editing strings");
     }
-
-
-    public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon) {
-        return getRewardGemCards(onlyCommon,3);
-    }
-
-    public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon, int count){
-        ArrayList<String> allGemCards = new ArrayList<>();
-        ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
-
-        allGemCards.add("RED");
-        allGemCards.add("GREEN");
-        if (!onlyCommon)allGemCards.add("ORANGE");
-        allGemCards.add("CYAN");
-        allGemCards.add("WHITE");
-        if (!onlyCommon)allGemCards.add("BLUE");
-        if (!onlyCommon)allGemCards.add("CRIMSON");
-        allGemCards.add("FRAGMENTED");
-        if (!onlyCommon)allGemCards.add("PURPLE");
-        if (!onlyCommon)allGemCards.add("SYNTHETIC");
-        if (!UnlockTracker.isCardLocked(Gem_Yellow.ID)) {
-            if (!onlyCommon) allGemCards.add("YELLOW");
-        }
-
-        int rando;
-        String ID;
-        for (int i = 0; i < count; i++) {
-            rando = AbstractDungeon.cardRng.random(0, allGemCards.size() - 1);
-            ID = allGemCards.get(rando);
-            switch(ID){
-                case "RED": rewardGemCards.add(new Gem_Red()); break;
-                case "GREEN": rewardGemCards.add(new Gem_Green()); break;
-                case "ORANGE": rewardGemCards.add(new Gem_Orange()); break;
-                case "CYAN": rewardGemCards.add(new Gem_Cyan()); break;
-                case "WHITE": rewardGemCards.add(new Gem_White()); break;
-                case "BLUE": rewardGemCards.add(new Gem_Blue()); break;
-                case "CRIMSON": rewardGemCards.add(new Gem_Crimson()); break;
-                case "FRAGMENTED": rewardGemCards.add(new Gem_Fragmented()); break;
-                case "PURPLE": rewardGemCards.add(new Gem_Purple()); break;
-                case "SYNTHETIC": rewardGemCards.add(new Gem_Synthetic()); break;
-                case "YELLOW": rewardGemCards.add(new Gem_Yellow()); break;
-            }
-            allGemCards.remove(rando);
-        }
-
-        return rewardGemCards;
-    }
-
 
     public void receivePostInitialize() {
 
@@ -945,12 +988,10 @@ public static void saveData() {
         BaseMod.addEvent(UpgradeShrineGuardian.ID, UpgradeShrineGuardian.class);
 
 
-        if (Loader.isModLoaded("TheJungle")){
+        if (Loader.isModLoaded("TheJungle")) {
             BaseMod.addEvent(BackToBasicsGuardian.ID, BackToBasicsGuardian.class, "TheJungle");
             BaseMod.addEvent(CrystalForge.ID, CrystalForge.class, "TheJungle");
         }
-
-
 
 
         //BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Exordium.ID);
@@ -959,7 +1000,7 @@ public static void saveData() {
 
     }
 
-    public void initializeSocketTextures(){
+    public void initializeSocketTextures() {
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket.png")));
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem.png")));
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem.png")));
@@ -1011,7 +1052,7 @@ public static void saveData() {
 
     }
 
-    public void refreshPotions(){
+    public void refreshPotions() {
         /*
         BaseMod.removePotion(AcceleratePotion.POTION_ID);
         BaseMod.removePotion(SlimedPotion.POTION_ID);
@@ -1022,35 +1063,17 @@ public static void saveData() {
         */
     }
 
-    public void addPotions(){
+    public void addPotions() {
 
         BaseMod.addPotion(AcceleratePotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, AcceleratePotion.POTION_ID, GuardianEnum.GUARDIAN);
 
     }
 
-    public static void updateStasisCount(){
-
-    }
-
-    public static int getStasisCount(){
-        int count = 0;
-        if (AbstractDungeon.player != null) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs){
-                if (o instanceof StasisOrb){
-                    count++;
-                }
-            }
-        }
-        stasisCount = count;
-        //logger.info(count);
-        return count;
-    }
-
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
-        if (!stasisDelay){
-            for (AbstractOrb o : AbstractDungeon.player.orbs){
-                if (o instanceof StasisOrb){
-                    if (((StasisOrb)o).passiveAmount == 1){
+        if (!stasisDelay) {
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                if (o instanceof StasisOrb) {
+                    if (((StasisOrb) o).passiveAmount == 1) {
                         stasisDelay = true;
                     }
                 }
@@ -1061,51 +1084,16 @@ public static void saveData() {
 
     @Override
     public void receivePostDraw(AbstractCard abstractCard) {
-        if (abstractCard.type == AbstractCard.CardType.STATUS || abstractCard.type == AbstractCard.CardType.CURSE){
-            if (AbstractDungeon.player.hasPower(ExhaustStatusesPower.POWER_ID)){
-                ExhaustStatusesPower e = (ExhaustStatusesPower)AbstractDungeon.player.getPower(ExhaustStatusesPower.POWER_ID);
-                if (e.usedThisTurn < e.amount){
+        if (abstractCard.type == AbstractCard.CardType.STATUS || abstractCard.type == AbstractCard.CardType.CURSE) {
+            if (AbstractDungeon.player.hasPower(ExhaustStatusesPower.POWER_ID)) {
+                ExhaustStatusesPower e = (ExhaustStatusesPower) AbstractDungeon.player.getPower(ExhaustStatusesPower.POWER_ID);
+                if (e.usedThisTurn < e.amount) {
                     AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(abstractCard, AbstractDungeon.player.hand));
                     e.usedThisTurn++;
                     e.flash();
                 }
             }
         }
-    }
-
-
-    public static boolean canSpawnStasisOrb(){
-        boolean result = false;
-
-        result = AbstractDungeon.player.hasEmptyOrb();
-
-        if (!result) {
-            for (AbstractOrb o:AbstractDungeon.player.orbs){
-                if (!(o instanceof StasisOrb)){
-                    result = true;
-                }
-            }
-        }
-
-
-
-        if (!result) {
-            UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
-
-        }
-        return result;
-
-    }
-
-    public static boolean isStasisOrbInPlay(){
-        for (AbstractOrb o : AbstractDungeon.player.orbs){
-            if (o instanceof StasisOrb){
-                return true;
-            }
-        }
-        return false;
-
     }
 
     public enum socketTypes {

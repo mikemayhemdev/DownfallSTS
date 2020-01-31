@@ -20,25 +20,30 @@ import guardian.patches.AbstractCardEnum;
 public class BaubleBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("BaubleBeam");
     public static final String NAME;
-    public static String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/baubleBeam.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
-
-    //TUNING CONSTANTS
-
     private static final int COST = 2;
     private static final int DAMAGE = 12;
+
+    //TUNING CONSTANTS
     private static final int GEMACTIVATIONS = 2;
     private static final int UPGRADE_GEMACTIVATIONS = 1;
     private static final int SOCKETS = 2;
     private static final boolean SOCKETSAREAFTER = true;
+    public static String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public BaubleBeam() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
@@ -50,8 +55,10 @@ public class BaubleBeam extends AbstractGuardianCard {
         //COST MODIFICATION IS ULTRA HACKY... in AbstractG
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
-this.magicNumber = this.baseMagicNumber = GEMACTIVATIONS;
-        this.socketCount = SOCKETS;  updateDescription();  loadGemMisc();
+        this.magicNumber = this.baseMagicNumber = GEMACTIVATIONS;
+        this.socketCount = SOCKETS;
+        updateDescription();
+        loadGemMisc();
 
     }
 
@@ -59,6 +66,7 @@ this.magicNumber = this.baseMagicNumber = GEMACTIVATIONS;
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         return tmp + calculateBeamDamage();
     }
+
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, float tmp) {
         return tmp + calculateBeamDamage();
@@ -76,9 +84,6 @@ this.magicNumber = this.baseMagicNumber = GEMACTIVATIONS;
         }
     }
 
-
-
-
     public AbstractCard makeCopy() {
         return new BaubleBeam();
     }
@@ -90,22 +95,16 @@ this.magicNumber = this.baseMagicNumber = GEMACTIVATIONS;
         }
     }
 
-    public void updateDescription(){
+    public void updateDescription() {
 
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
             } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
             }
         }
         this.initializeDescription();
-    }
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

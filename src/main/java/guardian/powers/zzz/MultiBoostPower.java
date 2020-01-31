@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
 import guardian.cards.AbstractGuardianCard;
 import guardian.powers.AbstractGuardianPower;
@@ -47,7 +46,7 @@ public class MultiBoostPower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        if (this.amount == 1){
+        if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
         } else {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];

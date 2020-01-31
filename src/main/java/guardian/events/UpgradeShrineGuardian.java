@@ -1,4 +1,3 @@
-
 package guardian.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,13 +16,24 @@ import java.util.ArrayList;
 
 public class UpgradeShrineGuardian extends AbstractImageEvent {
     public static final String ID = "Guardian:UpgradeShrine";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_1;
     private static final String DIALOG_2;
     private static final String IGNORE;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Upgrade Shrine");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+        DIALOG_2 = DESCRIPTIONS[1];
+        IGNORE = DESCRIPTIONS[2];
+    }
+
     private UpgradeShrineGuardian.CUR_SCREEN screen;
 
     public UpgradeShrineGuardian() {
@@ -47,35 +57,35 @@ public class UpgradeShrineGuardian extends AbstractImageEvent {
     public void update() {
         super.update();
         if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             c.upgrade();
             logMetricCardUpgrade("Upgrade Shrine", "Upgraded", c);
             AbstractDungeon.player.bottledCardUpgradeCheck(c);
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
-            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
 
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.screen = UpgradeShrineGuardian.CUR_SCREEN.COMPLETE;
                         this.imageEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("Guardian:Purifier").DESCRIPTIONS[0]);
                         ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 2);
                         ArrayList<AbstractCard> rewards = new ArrayList<>();
                         int rando;
-                        for(int i = 0; i < 2; ++i) {
+                        for (int i = 0; i < 2; ++i) {
                             rando = AbstractDungeon.cardRng.random(gems.size() - 1);
                             rewards.add(gems.get(rando));
                             gems.remove(rando);
                         }
 
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(0), (float)(Settings.WIDTH * 0.35), (float)(Settings.HEIGHT / 2)));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(1), (float)(Settings.WIDTH * 0.7), (float)(Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(0), (float) (Settings.WIDTH * 0.35), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewards.get(1), (float) (Settings.WIDTH * 0.7), (float) (Settings.HEIGHT / 2)));
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.clearRemainingOptions();
@@ -103,16 +113,6 @@ public class UpgradeShrineGuardian extends AbstractImageEvent {
                 this.openMap();
         }
 
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Upgrade Shrine");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-        DIALOG_2 = DESCRIPTIONS[1];
-        IGNORE = DESCRIPTIONS[2];
     }
 
     private static enum CUR_SCREEN {

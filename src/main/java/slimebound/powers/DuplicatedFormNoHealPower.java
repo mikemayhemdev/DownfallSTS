@@ -1,37 +1,23 @@
 package slimebound.powers;
 
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
-import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.PreventCurrentOverMaxHealthAction;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.orbs.SpawnedSlime;
-import slimebound.vfx.DoubleSlimeParticle;
 
 
 public class DuplicatedFormNoHealPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:DuplicatedFormNoHealPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/HalvedS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
     private int maxHpTempLoss = 0;
@@ -71,7 +57,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
             logger.info("Current health: " + currentHealth);
             logger.info("Max health: " + maxHealth);
             logger.info("Current percentage: " + currentPct);
-             if (currentHealth + healAmount > maxHealth) {
+            if (currentHealth + healAmount > maxHealth) {
                 return (maxHealth) - currentHealth;
             } else {
                 return healAmount;
@@ -90,7 +76,6 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     }
 
 
-
     public void onInitialApplication() {
         AbstractPlayer p = AbstractDungeon.player;
 
@@ -101,20 +86,20 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
     }
 
-    public void updateCurrentHealth(){
+    public void updateCurrentHealth() {
         AbstractDungeon.actionManager.addToBottom(new PreventCurrentOverMaxHealthAction());
     }
 
     public void stackPower(int stackAmount) {
         //SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
 
-            this.fontScale = 8.0F;
-            this.amount += stackAmount;
-        if (stackAmount < 0){
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        if (stackAmount < 0) {
             this.owner.heal(stackAmount * -1);
         }
-             updateCurrentHealth();
-        if (this.amount <= 0){
+        updateCurrentHealth();
+        if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, DuplicatedFormNoHealPower.POWER_ID));
 
         }
@@ -125,7 +110,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     public void reducePower(int stackAmount) {
         super.reducePower(stackAmount);
         this.fontScale = 8.0F;
-        if (stackAmount > 0){
+        if (stackAmount > 0) {
             this.owner.heal(stackAmount);
         }
     }
@@ -134,13 +119,13 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
         restoreMaxHP();
     }
 
-    public void restoreMaxHP(){
+    public void restoreMaxHP() {
 
 
         this.owner.heal(this.maxHpTempLoss);
     }
 
-    public void onVictory(){
+    public void onVictory() {
         this.maxHpTempLoss = this.amount;
         this.amount = 0;
         restoreMaxHP();

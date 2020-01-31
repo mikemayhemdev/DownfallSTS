@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.*;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.powers.DuplicatedFormNoHealPower;
 
@@ -28,7 +28,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int bonusUniqueFocus, int bonusSecondary) {
 
-        this(newOrbType,upgraded,SelfDamage);
+        this(newOrbType, upgraded, SelfDamage);
 
         this.bonusUniqueFocus = bonusUniqueFocus;
         this.bonusSecondary = bonusSecondary;
@@ -67,7 +67,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
             int currentHealth = AbstractDungeon.player.currentHealth;
 
             if (TempHPField.tempHp.get(AbstractDungeon.player) != null)
-            currentHealth += TempHPField.tempHp.get(AbstractDungeon.player);
+                currentHealth += TempHPField.tempHp.get(AbstractDungeon.player);
 
             /*
             int maxFortitudes = 0;
@@ -113,41 +113,41 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
                 }
 
-                }
-                // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
-
-                //SlimeboundMod.logger.info("Channeling slime orb");
-                if (this.random || this.orbType == null) {
-
-                    //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
-
-                } else {
-
-                    if (this.bonusUniqueFocus > 0){
-                        ((SpawnedSlime)this.orbType).applyUniqueFocus(bonusUniqueFocus);
-                    }
-                    if (this.bonusSecondary > 0){
-                        ((SpawnedSlime)this.orbType).applySecondaryBonus(bonusSecondary);
-                    }
-
-                    AbstractDungeon.player.channelOrb(this.orbType);
-                }
-
-
-                if (this.upgraded) {
-                    SlimeboundMod.bumpnextlime = true;
-
-                    AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
-                }
-                tickDuration();
-
-
-                this.isDone = true;
-
-
             }
+            // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
+
+            //SlimeboundMod.logger.info("Channeling slime orb");
+            if (this.random || this.orbType == null) {
+
+                //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
+
+            } else {
+
+                if (this.bonusUniqueFocus > 0) {
+                    ((SpawnedSlime) this.orbType).applyUniqueFocus(bonusUniqueFocus);
+                }
+                if (this.bonusSecondary > 0) {
+                    ((SpawnedSlime) this.orbType).applySecondaryBonus(bonusSecondary);
+                }
+
+                AbstractDungeon.player.channelOrb(this.orbType);
+            }
+
+
+            if (this.upgraded) {
+                SlimeboundMod.bumpnextlime = true;
+
+                AbstractDungeon.actionManager.addToTop(new SlimeBuffUpgraded(this.upgradedamount, SlimeboundMod.mostRecentSlime));
+            }
+            tickDuration();
+
+
             this.isDone = true;
+
+
         }
+        this.isDone = true;
+    }
 
 }
 

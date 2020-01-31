@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,17 +20,25 @@ public class GrowthPunch extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:GrowthPunch";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/slimepunch.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private int increaseAmount;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
+
+    private int increaseAmount;
 
 
     public GrowthPunch() {
@@ -46,17 +53,17 @@ public class GrowthPunch extends AbstractSlimeboundCard {
 
         this.exhaust = true;
 
-            this.baseDamage = 6 + this.misc;
-            this.baseBlock = 1 + this.misc;
+        this.baseDamage = 6 + this.misc;
+        this.baseBlock = 1 + this.misc;
 
 
     }
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        if (upgraded)
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         this.increaseAmount = this.magicNumber;
 
         Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
@@ -84,7 +91,6 @@ public class GrowthPunch extends AbstractSlimeboundCard {
 
     }
 
-
     public AbstractCard makeCopy() {
 
         return new GrowthPunch();
@@ -109,14 +115,6 @@ public class GrowthPunch extends AbstractSlimeboundCard {
             //upgradeMagicNumber(1);
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

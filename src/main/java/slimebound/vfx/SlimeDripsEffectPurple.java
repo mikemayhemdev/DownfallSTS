@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 
 public class SlimeDripsEffectPurple extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private int count = 0;
-    private float timer = 0.0F;
     public float xPos;
     public float yPos;
+    private int count = 0;
+    private float timer = 0.0F;
 
 
     public SlimeDripsEffectPurple(float x, float y, int count) {
@@ -19,6 +19,7 @@ public class SlimeDripsEffectPurple extends com.megacrit.cardcrawl.vfx.AbstractG
         this.yPos = y;
         this.count = count;
     }
+
     public void dispose() {
         this.isDone = true;
 

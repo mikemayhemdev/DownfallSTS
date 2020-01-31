@@ -3,18 +3,16 @@ package slimebound.actions;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.powers.SearingPower;
 
 
 public class DividerAction extends AbstractGameAction {
-    private DamageInfo info;
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
+    private DamageInfo info;
     private int numTimes;
 
     public DividerAction(AbstractCreature target, DamageInfo info, int numTimes) {
@@ -49,7 +47,7 @@ public class DividerAction extends AbstractGameAction {
             }
             this.info.applyPowers(this.info.owner, this.target);
             this.target.damage(this.info);
-          //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.info.owner, new SearingPower(this.target, this.info.owner, 1), 1, true, AttackEffect.NONE));
+            //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.info.owner, new SearingPower(this.target, this.info.owner, 1), 1, true, AttackEffect.NONE));
 
             if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
                 this.numTimes -= 1;

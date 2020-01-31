@@ -1,7 +1,6 @@
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -13,13 +12,20 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import java.util.Iterator;
 
 public class MorphCardAction extends AbstractGameAction {
-    private static final UIStrings uiStrings;
     public static final String[] TEXT;
+    private static final UIStrings uiStrings;
+    public static int numExhausted;
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+        TEXT = uiStrings.TEXT;
+
+    }
+
     private AbstractPlayer p;
     private boolean isRandom;
     private boolean anyNumber;
     private boolean canPickZero;
-    public static int numExhausted;
 
     public MorphCardAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom) {
         this(target, source, amount, isRandom, false, false);
@@ -92,11 +98,5 @@ public class MorphCardAction extends AbstractGameAction {
         }
 
         this.tickDuration();
-    }
-
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
-        TEXT = uiStrings.TEXT;
-
     }
 }

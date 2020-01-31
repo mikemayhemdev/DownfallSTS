@@ -10,7 +10,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,11 +17,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
 public class SlimeSpawnProjectile extends AbstractGameEffect {
+    private static final float DUR = 0.25F;
     private static Texture img;
     private float sX;
     private float sY;
@@ -32,7 +31,6 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
     private float dY;
     private float yOffset;
     private float bounceHeight;
-    private static final float DUR = 0.25F;
     private boolean playedSfx = false;
     private boolean skip = false;
     private float height = 100f;
@@ -44,7 +42,7 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
     private ArrayList<Vector2> previousPos = new ArrayList();
 
     public SlimeSpawnProjectile(float srcX, float srcY, AbstractOrb o, float scale, Color color) {
-    this(srcX,srcY,o,null,scale,color);
+        this(srcX, srcY, o, null, scale, color);
     }
 
 
@@ -52,14 +50,11 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
         if (img == null) {
             img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/slimeballWhite.png");
         }
-        if (o==null && p== null) {
-            this.duration=0F;
-            this.startingDuration=0F;
-            this.skip= true;
+        if (o == null && p == null) {
+            this.duration = 0F;
+            this.startingDuration = 0F;
+            this.skip = true;
         } else {
-
-
-
 
 
             //SlimeboundMod.logger.info("Slime spawn projectile firing");
@@ -70,7 +65,7 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
             this.sY = srcY;
             this.cX = this.sX;
             this.cY = this.sY;
-            if (o == null){
+            if (o == null) {
                 this.p = p;
 
             } else {
@@ -82,7 +77,6 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
             this.startingDuration = .35F;
             this.projectileColor = color;
         }
-
 
 
     }
@@ -126,7 +120,7 @@ public class SlimeSpawnProjectile extends AbstractGameEffect {
             sb.setColor(Color.BLACK);
             sb.draw(img, this.cX - (float) (img.getWidth() / 2), this.cY - (float) (img.getHeight() / 2) + this.yOffset, (float) img.getWidth() / 2.0F, (float) img.getHeight() / 2.0F, (float) img.getWidth(), (float) img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
             sb.setColor(this.projectileColor);
-           // SlimeboundMod.logger.info("Projectile color: " + this.projectileColor);
+            // SlimeboundMod.logger.info("Projectile color: " + this.projectileColor);
             sb.draw(img, this.cX - (float) (img.getWidth() / 2), this.cY - (float) (img.getHeight() / 2) + this.yOffset, (float) img.getWidth() / 2.0F, (float) img.getHeight() / 2.0F, (float) img.getWidth(), (float) img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
             //sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 38, 38, false, false);
 

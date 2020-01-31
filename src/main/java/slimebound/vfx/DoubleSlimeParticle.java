@@ -1,9 +1,7 @@
 package slimebound.vfx;
 
 
-import basemod.BaseMod;
 import basemod.animations.AbstractAnimation;
-import basemod.animations.SpineAnimation;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -16,35 +14,30 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ModHelper;
-import com.megacrit.cardcrawl.helpers.ShaderHelper;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 
 public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private float scale = 1.5F;
+    public static SkeletonMeshRenderer sr;
     private static int W;
+    public AnimationState state;
+    public AbstractPlayer p;
+    private float scale = 1.5F;
     private Texture img;
     private float x;
     private float px;
-    public static SkeletonMeshRenderer sr;
     private AbstractCreature.CreatureAnimation animation;
     private float animationTimer;
     private TextureAtlas atlas;
     private Skeleton skeleton;
-    public AnimationState state;
     private AnimationStateData stateData;
     private AbstractAnimation animationA;
-    public AbstractPlayer p;
     private float y;
 
     public DoubleSlimeParticle(AbstractPlayer p) {
         this.atlas = new TextureAtlas(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.atlas"));
         SkeletonJson json = new SkeletonJson(this.atlas);
-
 
 
         json.setScale(Settings.scale / scale);
@@ -62,20 +55,21 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
         this.x = ((p.hb.cX - W / 2.0F) + (100 * Settings.scale));
         this.y = ((p.hb.cY - W / 2.0F) - (95 * Settings.scale));
         this.renderBehind = true;
-       // this.animationA.renderModel(batch, env);
+        // this.animationA.renderModel(batch, env);
         //BaseMod.publishAnimationRender(sb);
     }
-
 
 
     public void dispose() {
         this.isDone = true;
     }
+
     public void update() {
 
 
     }
-    public void finish(){
+
+    public void finish() {
         this.isDone = true;
 
     }
@@ -104,8 +98,6 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
 
         }
     }
-
-
 
 
 }

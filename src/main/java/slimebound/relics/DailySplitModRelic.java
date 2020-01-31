@@ -25,13 +25,13 @@ public class DailySplitModRelic extends CustomRelic {
 
     public void atBattleStart() {
 
-            for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-                if (m.id != AcidSlime_L.ID && m.id != SpikeSlime_L.ID && m.id != SlimeBoss.ID)
-                    //logger.info("Daily Mod adding buff to " + m.name);
-                    //this.printEnemies();
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new SplitDailyTriggerPower(m, 1), 1));
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (m.id != AcidSlime_L.ID && m.id != SpikeSlime_L.ID && m.id != SlimeBoss.ID)
+                //logger.info("Daily Mod adding buff to " + m.name);
+                //this.printEnemies();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new SplitDailyTriggerPower(m, 1), 1));
 
-            }
+        }
 
     }
 

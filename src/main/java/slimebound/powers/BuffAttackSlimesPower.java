@@ -16,10 +16,9 @@ import slimebound.orbs.SpawnedSlime;
 public class BuffAttackSlimesPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:BuffAttackSlimesPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/BuffAttackSlimes.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 

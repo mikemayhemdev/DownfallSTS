@@ -1,12 +1,10 @@
 package slimebound.powers;
 
 
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.ThornsPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -15,10 +13,9 @@ import slimebound.SlimeboundMod;
 public class PreventSlimeDecayPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:PreventSlimeDecayPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/SlimedS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
@@ -65,7 +62,7 @@ public class PreventSlimeDecayPower extends AbstractPower {
     @Override
     public void reducePower(int reduceAmount) {
         super.reducePower(reduceAmount);
-        if (this.amount <= 0){
+        if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, this));
 
         }

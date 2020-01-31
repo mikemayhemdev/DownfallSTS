@@ -1,9 +1,6 @@
 package guardian.powers;
 
 
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnMyBlockBrokenPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -11,8 +8,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 
 public class StasisEnginePower extends AbstractGuardianTwoAmountPower {
@@ -39,7 +34,7 @@ public class StasisEnginePower extends AbstractGuardianTwoAmountPower {
 
 
     public void updateDescription() {
-        if (this.amount == 1){
+        if (this.amount == 1) {
             this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[4];
         } else {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3] + DESCRIPTIONS[4];
@@ -51,9 +46,9 @@ public class StasisEnginePower extends AbstractGuardianTwoAmountPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         super.onUseCard(card, action);
-        if (card.cost == 0 || card.freeToPlayOnce || (card.isCostModifiedForTurn && card.costForTurn == 0)){
+        if (card.cost == 0 || card.freeToPlayOnce || (card.isCostModifiedForTurn && card.costForTurn == 0)) {
             this.amount2++;
-            if (this.amount2 >= 3){
+            if (this.amount2 >= 3) {
                 this.amount2 = 0;
                 AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, this.amount));
                 AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));

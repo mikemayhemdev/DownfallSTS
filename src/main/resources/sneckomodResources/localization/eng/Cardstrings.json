@@ -153,5 +153,18 @@
   "sneckomod:ImprovisedGuard": {
     "NAME": "Improvised Guard",
     "DESCRIPTION": "Gain !B! Block. NL Add a random sneckomod:Offclass Skill into your hand and sneckomod:Muddle it."
+  },
+  "sneckomod:QuickMove": {
+    "NAME": "Quick Move",
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random cards in your hand."
+  },
+  "sneckomod:QuickBite": {
+    "NAME": "Quick Bite",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards and sneckomod:Muddle them."
+  },
+  "sneckomod:Rotation": {
+    "NAME": "Rotation",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M! and sneckomod:Muddle them."
   }
 }

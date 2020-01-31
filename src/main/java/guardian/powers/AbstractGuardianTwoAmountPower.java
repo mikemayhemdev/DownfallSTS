@@ -3,16 +3,15 @@ package guardian.powers;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import guardian.GuardianMod;
 
 public abstract class AbstractGuardianTwoAmountPower extends TwoAmountPower {
 
     /**
-     * @param bigImageName - is the name of the 84x84 image for your power.
+     * @param bigImageName   - is the name of the 84x84 image for your power.
      * @param smallImageName - is the name of the 32x32 image for your power.
      */
-    public void setImage(String bigImageName, String smallImageName){
+    public void setImage(String bigImageName, String smallImageName) {
         String path = GuardianMod.getResourcePath();
 
         String path128 = path + "powers/" + bigImageName;
@@ -25,7 +24,7 @@ public abstract class AbstractGuardianTwoAmountPower extends TwoAmountPower {
     /**
      * @param imgName - is the name of a 16x16 image. Example: setTinyImage("power.png");
      */
-    public void setTinyImage(String imgName){
+    public void setTinyImage(String imgName) {
         String path = GuardianMod.getResourcePath("powers/");
         this.img = ImageMaster.loadImage(path + imgName);
     }

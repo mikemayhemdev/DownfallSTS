@@ -5,29 +5,35 @@
 
 package slimebound.events;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import slimebound.relics.AggressiveSlimeRelic;
 import slimebound.relics.GreedOozeRelic;
 
 public class WorldOfGoopSlimebound extends AbstractImageEvent {
     public static final String ID = "Slimebound:WorldofGoop";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_1;
     private static final String GOLD_DIALOG;
     private static final String LEAVE_DIALOG;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Slimebound:WorldofGoop");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+        GOLD_DIALOG = DESCRIPTIONS[1];
+        LEAVE_DIALOG = DESCRIPTIONS[2];
+    }
+
     private WorldOfGoopSlimebound.CurScreen screen;
     private int damage;
     private int gold;
@@ -60,9 +66,9 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
                         this.imageEventText.clearAllDialogs();
@@ -87,16 +93,6 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
             default:
                 this.openMap();
         }
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Slimebound:WorldofGoop");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-        GOLD_DIALOG = DESCRIPTIONS[1];
-        LEAVE_DIALOG = DESCRIPTIONS[2];
     }
 
     private static enum CurScreen {

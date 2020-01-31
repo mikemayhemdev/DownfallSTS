@@ -12,12 +12,12 @@ import slimebound.orbs.CultistSlime;
 public class SticksParticleRight extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * Settings.scale;
-    private float scale = 1F;
     private static int W;
-    private Texture img;
-    public CultistSlime p;
     private static int xOffset = 0;
     private static int yOffset = -28;
+    public CultistSlime p;
+    private float scale = 1F;
+    private Texture img;
 
     public SticksParticleRight(CultistSlime p) {
         this.duration = 0.05F;
@@ -33,10 +33,12 @@ public class SticksParticleRight extends com.megacrit.cardcrawl.vfx.AbstractGame
 
 
     }
-    public void finish(){
+
+    public void finish() {
         this.isDone = true;
 
     }
+
     public void dispose() {
         this.isDone = true;
         this.img.dispose();

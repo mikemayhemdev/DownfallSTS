@@ -38,8 +38,7 @@ public class CheckForSixHexAction extends AbstractGameAction {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
             for (AbstractOrb o : hexesToAbsorb) {
 
-                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-
+                AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
 
 
             }

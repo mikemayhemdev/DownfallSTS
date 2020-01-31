@@ -27,13 +27,13 @@ public class CultistSlime
     private SticksParticleRight sticksRightVFX;
 
     public CultistSlime() {
-        super(ID,-25,new Color (.55F,.55F,1.0F,100F),"images/monsters/theBottom/slimeM/skeleton.atlas","images/monsters/theBottom/slimeM/skeleton.json","idle",1.5F,new Color(81F/255F,81F/255F,1F,2F), 6,0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("slimeboundResources/SlimeboundImages/orbs/attackBuff.png"), "slimeboundResources/SlimeboundImages/orbs/cultist.png");
+        super(ID, -25, new Color(.55F, .55F, 1.0F, 100F), "images/monsters/theBottom/slimeM/skeleton.atlas", "images/monsters/theBottom/slimeM/skeleton.json", "idle", 1.5F, new Color(81F / 255F, 81F / 255F, 1F, 2F), 6, 0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("slimeboundResources/SlimeboundImages/orbs/attackBuff.png"), "slimeboundResources/SlimeboundImages/orbs/cultist.png");
         spawnVFX();
 
 
     }
 
-    public void postSpawnEffects(){
+    public void postSpawnEffects() {
         this.sticksLeftVFX = new SticksParticle(this);
         this.sticksRightVFX = new SticksParticleRight(this);
 
@@ -49,7 +49,7 @@ public class CultistSlime
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player,this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT,this,false,false,false,0,false,0,true));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, 0, false, 0, true));
 
 
     }
@@ -61,7 +61,7 @@ public class CultistSlime
         cleanUpVFX();
     }
 
-    public void cleanUpVFX(){
+    public void cleanUpVFX() {
         this.sticksLeftVFX.finish();
         this.sticksRightVFX.finish();
     }

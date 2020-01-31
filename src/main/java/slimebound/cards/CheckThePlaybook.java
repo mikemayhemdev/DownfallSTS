@@ -1,8 +1,6 @@
 package slimebound.cards;
 
 
-
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.actions.SlimepotheosisAction;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
@@ -23,20 +20,27 @@ import java.util.Map;
 public class CheckThePlaybook extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:CheckThePlaybook";
     public static final String NAME;
-    private static final CardStrings cardStrings;
     public static final String DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/playbook.png";
-
+    private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-
     private static final int COST = 2;
-    private int numEaten = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+    }
+
+    private int numEaten = 0;
 
 
     public CheckThePlaybook() {
@@ -48,7 +52,6 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
 
 
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
@@ -94,15 +97,6 @@ public class CheckThePlaybook extends AbstractSlimeboundCard {
         }
         */
 
-    }
-
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
     public AbstractCard makeCopy() {

@@ -37,17 +37,15 @@ import slimebound.vfx.*;
 public abstract class SpawnedSlime
         extends AbstractOrb {
 
-    public float NUM_X_OFFSET = 1.0F * Settings.scale;
-    public float NUM_Y_OFFSET = -35.0F * Settings.scale;
-    private float vfxTimer = 1.0F;
-    private float vfxIntervalMin = 0.2F;
-    private float vfxIntervalMax = 0.7F;
-
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final float ORB_WAVY_DIST = 0.04F;
     private static final float PI_4 = 12.566371F;
+    public static String orbID = "";
+    public static SkeletonMeshRenderer sr;
+    private static int W;
+    public float NUM_X_OFFSET = 1.0F * Settings.scale;
+    public float NUM_Y_OFFSET = -35.0F * Settings.scale;
     public AbstractCard lockedCard;
-    protected boolean showChannelValue = true;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public boolean upgraded = false;
     public boolean showPassive = true;
     public boolean activatedThisTurn = false;
@@ -61,45 +59,42 @@ public abstract class SpawnedSlime
     public String originalRelic = "";
     public String[] descriptions;
     public com.badlogic.gdx.graphics.Texture intentImage;
-    private SlimeFlareEffect.OrbFlareColor OrbVFXColor;
-    private Color deathColor;
-    private Color modelColor;
-    public static String orbID = "";
     public boolean noEvokeBonus;
     public float scale = 1F;
-    private static int W;
-    private Texture img;
     public float x;
     public float y;
-    public static SkeletonMeshRenderer sr;
-    private AbstractCreature.CreatureAnimation animation;
-    private float animationTimer;
-
-    private float animationTimerStart;
-    private TextureAtlas atlas;
     public Skeleton skeleton;
     public AnimationState state;
-    private AnimationStateData stateData;
-    private AbstractAnimation animationA;
     public AbstractPlayer p;
-    private Color projectileColor;
-    private float delayTime;
-    private boolean hasSplashed;
-    private boolean deathVFXplayed;
     public boolean noRender;
-    private String atlasString = "images/monsters/theBottom/slimeAltS/skeleton.atlas";
-    private String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
-    private String animString = "idle";
-
     public String customDescription;
-    private float yOffset;
     public int debuffBonusAmount;
     public int debuffAmount;
     public Color extraFontColor = null;
     public boolean topSpawnVFX = false;
-
     public boolean beingAbsorbed = false;
-
+    protected boolean showChannelValue = true;
+    private float vfxTimer = 1.0F;
+    private float vfxIntervalMin = 0.2F;
+    private float vfxIntervalMax = 0.7F;
+    private SlimeFlareEffect.OrbFlareColor OrbVFXColor;
+    private Color deathColor;
+    private Color modelColor;
+    private Texture img;
+    private AbstractCreature.CreatureAnimation animation;
+    private float animationTimer;
+    private float animationTimerStart;
+    private TextureAtlas atlas;
+    private AnimationStateData stateData;
+    private AbstractAnimation animationA;
+    private Color projectileColor;
+    private float delayTime;
+    private boolean hasSplashed;
+    private boolean deathVFXplayed;
+    private String atlasString = "images/monsters/theBottom/slimeAltS/skeleton.atlas";
+    private String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
+    private String animString = "idle";
+    private float yOffset;
 
 
     public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
@@ -150,7 +145,6 @@ public abstract class SpawnedSlime
         SlimeboundMod.mostRecentSlime = this;
 
 
-
         //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeFlareEffect(this, OrbVFXColor), .1F));
         this.applyFocus();
 
@@ -159,17 +153,17 @@ public abstract class SpawnedSlime
 
     }
 
-public void spawnVFX(){
-    if (AbstractDungeon.player.maxOrbs > 0) {
+    public void spawnVFX() {
+        if (AbstractDungeon.player.maxOrbs > 0) {
 
-        if (this.topSpawnVFX) {
-            AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
+            if (this.topSpawnVFX) {
+                AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
 
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeSpawnProjectile(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this, 1.4F, projectileColor)));
+            }
         }
     }
-}
 
 
     public void onEndOfTurn() {
@@ -240,15 +234,15 @@ public void spawnVFX(){
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -2), -2));
 
             }
-            if (this instanceof ScrapOozeSlime){
+            if (this instanceof ScrapOozeSlime) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
-            } else if (this instanceof GreedOozeSlime){
+            } else if (this instanceof GreedOozeSlime) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
             } else {
                 if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID))
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID), 3));
+                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID), 3));
             }
         }
         triggerEvokeAnimation();
@@ -316,8 +310,8 @@ public void spawnVFX(){
             }
         }
 
-            this.cX = MathHelper.orbLerpSnap(this.cX, this.tX);
-            this.cY = MathHelper.orbLerpSnap(this.cY, this.tY);
+        this.cX = MathHelper.orbLerpSnap(this.cX, this.tX);
+        this.cY = MathHelper.orbLerpSnap(this.cY, this.tY);
 
 
         if (this.channelAnimTimer != 0.0F) {
@@ -405,7 +399,6 @@ public void spawnVFX(){
             float fontOffset = 26 * Settings.scale;
             if (this.passiveAmount > 9) fontOffset = fontOffset + (6 * Settings.scale);
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
-
 
 
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + this.slimeBonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET + 1F, this.extraFontColor, this.fontScale);

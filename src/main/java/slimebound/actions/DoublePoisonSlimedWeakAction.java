@@ -2,7 +2,6 @@ package slimebound.actions;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import slimebound.SlimeboundMod;
 import slimebound.powers.SlimedPower;
 
@@ -11,10 +10,10 @@ public class DoublePoisonSlimedWeakAction extends com.megacrit.cardcrawl.actions
     private float startingDuration;
     private boolean upgraded;
 
-    public DoublePoisonSlimedWeakAction(AbstractCreature target, AbstractCreature source,boolean upgraded) {
+    public DoublePoisonSlimedWeakAction(AbstractCreature target, AbstractCreature source, boolean upgraded) {
         this.target = target;
         this.source = source;
-        this.upgraded=upgraded;
+        this.upgraded = upgraded;
         this.startingDuration = com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST;
         this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.DEBUFF;
         this.attackEffect = com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.FIRE;
@@ -50,7 +49,6 @@ public class DoublePoisonSlimedWeakAction extends com.megacrit.cardcrawl.actions
             }
             */
         }
-
 
 
         tickDuration();

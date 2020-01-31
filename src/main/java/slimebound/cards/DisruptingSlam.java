@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,14 +17,21 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:DisruptingSlam";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/violentstop.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = 1;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public DisruptingSlam() {
@@ -39,7 +45,6 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
 
 
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
@@ -70,13 +75,11 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
 
     }
 
-
     public AbstractCard makeCopy() {
 
         return new DisruptingSlam();
 
     }
-
 
     public void upgrade() {
 
@@ -87,14 +90,6 @@ public class DisruptingSlam extends AbstractSlimeboundCard {
             upgradeMagicNumber(1);
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

@@ -2,9 +2,7 @@ package slimebound.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.animations.ShoutAction;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
@@ -12,14 +10,19 @@ import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.relics.StudyCardRelic;
 
-@SpirePatch(clz=SlimeBoss.class,method="takeTurn")
+@SpirePatch(clz = SlimeBoss.class, method = "takeTurn")
 public class SlimeTalk {
-    private static final EventStrings eventStrings;
     public static final String[] DESCRIPTIONS;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Slimebound:SlimeTalk");
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+    }
 
     public static void Prefix(SlimeBoss sb) {
         if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalked == false) {
-            if (AbstractDungeon.player.hasRelic(StudyCardRelic.ID)){
+            if (AbstractDungeon.player.hasRelic(StudyCardRelic.ID)) {
                 AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[11], 1.0F, 2.0F));
 
             } else {
@@ -27,10 +30,5 @@ public class SlimeTalk {
             }
             SlimeboundMod.slimeTalked = true;
         }
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Slimebound:SlimeTalk");
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     }
 }

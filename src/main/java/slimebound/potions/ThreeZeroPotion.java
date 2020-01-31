@@ -2,7 +2,6 @@ package slimebound.potions;
 
 
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,13 +9,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.powers.AcidTonguePowerUpgraded;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 
 public class ThreeZeroPotion extends CustomPotion {

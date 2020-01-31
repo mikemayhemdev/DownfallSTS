@@ -1,10 +1,8 @@
 package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +14,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.SlimeSacrificePower;
-import slimebound.vfx.SlimeSpawnProjectile;
 
 public class SlimedTailRelic extends CustomRelic {
     public static final String ID = "Slimebound:SlimedTailRelic";
@@ -52,7 +49,7 @@ public class SlimedTailRelic extends CustomRelic {
         });
     }
 
-    public void activate(){
+    public void activate() {
         AbstractPlayer p = AbstractDungeon.player;
         flash();
 
@@ -95,6 +92,7 @@ public class SlimedTailRelic extends CustomRelic {
             this.initializeTips();
         }
     }
+
     public boolean canSpawn() {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }

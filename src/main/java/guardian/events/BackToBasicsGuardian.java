@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
@@ -30,16 +29,30 @@ import java.util.List;
 
 public class BackToBasicsGuardian extends AbstractImageEvent {
     public static final String ID = "Guardian:BackToBasics";
-    private static final EventStrings eventStrings;
-    private static final EventStrings eventStringsGuardian;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSGUARDIAN;
     public static final String[] OPTIONSGUARDIAN;
+    private static final EventStrings eventStrings;
+    private static final EventStrings eventStringsGuardian;
     private static final String DIALOG_1;
     private static final String DIALOG_2;
     private static final String DIALOG_3;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Back to Basics");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+        DIALOG_2 = DESCRIPTIONS[1];
+        DIALOG_3 = DESCRIPTIONS[2];
+        eventStringsGuardian = CardCrawlGame.languagePack.getEventString("Guardian:BackToBasics");
+        DESCRIPTIONSGUARDIAN = eventStringsGuardian.DESCRIPTIONS;
+        OPTIONSGUARDIAN = eventStringsGuardian.OPTIONS;
+    }
+
     private BackToBasicsGuardian.CUR_SCREEN screen;
     private List<String> cardsUpgraded;
     private ArrayList<AbstractCard> strikes;
@@ -52,7 +65,7 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
         this.screen = BackToBasicsGuardian.CUR_SCREEN.INTRO;
         this.cardsUpgraded = new ArrayList();
 
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group){
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             c.update();
         }
 
@@ -77,7 +90,6 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
         }
 
 
-
         this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
@@ -95,7 +107,7 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
     public void update() {
         super.update();
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
@@ -104,9 +116,9 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                if (buttonPressed == 0 ){
+                if (buttonPressed == 0) {
 
                     this.newStrike = new StrikeTwo();
                     this.newDefend = new DefendTwo();
@@ -120,16 +132,14 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
                     AbstractDungeon.player.masterDeck.removeCard(this.defends.get(1));
 
 
-
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newStrike, (float)(Settings.WIDTH * .3F), (float)(Settings.HEIGHT / 2)));
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newDefend, (float)(Settings.WIDTH * .7F), (float)(Settings.HEIGHT / 2)));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newStrike, (float) (Settings.WIDTH * .3F), (float) (Settings.HEIGHT / 2)));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newDefend, (float) (Settings.WIDTH * .7F), (float) (Settings.HEIGHT / 2)));
 
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                     this.imageEventText.clearRemainingOptions();
-                }
-                else if (buttonPressed == 1) {
+                } else if (buttonPressed == 1) {
                     if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
                         this.imageEventText.updateBodyText(DIALOG_2);
                         AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[2], false);
@@ -155,36 +165,23 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
     private void upgradeStrikeAndDefends() {
         Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(true) {
+        while (true) {
             AbstractCard c;
             do {
                 if (!var1.hasNext()) {
                     return;
                 }
 
-                c = (AbstractCard)var1.next();
-            } while(!(c instanceof Strike_Red) && !(c instanceof Defend_Red) && !(c instanceof Strike_Green) && !(c instanceof Defend_Green) && !(c instanceof Strike_Blue) && !(c instanceof Defend_Blue) && !(c instanceof Strike_Guardian) && !(c instanceof Defend_Guardian));
+                c = (AbstractCard) var1.next();
+            } while (!(c instanceof Strike_Red) && !(c instanceof Defend_Red) && !(c instanceof Strike_Green) && !(c instanceof Defend_Green) && !(c instanceof Strike_Blue) && !(c instanceof Defend_Blue) && !(c instanceof Strike_Guardian) && !(c instanceof Defend_Guardian));
 
             if (c.canUpgrade()) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);
-                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float)Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float)Settings.HEIGHT));
+                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
             }
         }
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Back to Basics");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-        DIALOG_2 = DESCRIPTIONS[1];
-        DIALOG_3 = DESCRIPTIONS[2];
-        eventStringsGuardian = CardCrawlGame.languagePack.getEventString("Guardian:BackToBasics");
-        DESCRIPTIONSGUARDIAN = eventStringsGuardian.DESCRIPTIONS;
-        OPTIONSGUARDIAN = eventStringsGuardian.OPTIONS;
     }
 
     private static enum CUR_SCREEN {

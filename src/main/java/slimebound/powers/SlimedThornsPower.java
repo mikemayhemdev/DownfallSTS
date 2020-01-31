@@ -18,13 +18,13 @@ import slimebound.vfx.SlimeDripsEffectPurple;
 public class SlimedThornsPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:SlimedThornsPower";
     public static final String NAME = "UsefulSlime";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/LivingWallS.png";
-    public boolean doubleUp = false;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    public boolean doubleUp = false;
     public boolean triggered = false;
+    private AbstractCreature source;
 
 
     public SlimedThornsPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -78,12 +78,11 @@ public class SlimedThornsPower extends AbstractPower {
 
     public int onAttacked(DamageInfo info, int damageAmount) {
 
-            if (info.type == DamageInfo.DamageType.NORMAL && info.owner != AbstractDungeon.player) {
-                flash();
+        if (info.type == DamageInfo.DamageType.NORMAL && info.owner != AbstractDungeon.player) {
+            flash();
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(info.owner, this.owner, new SlimedPower(info.owner, this.owner, this.amount), this.amount , true, AbstractGameAction.AttackEffect.NONE));
-            }
-
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(info.owner, this.owner, new SlimedPower(info.owner, this.owner, this.amount), this.amount, true, AbstractGameAction.AttackEffect.NONE));
+        }
 
 
         return super.onAttacked(info, damageAmount);

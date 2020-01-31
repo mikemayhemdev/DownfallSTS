@@ -27,7 +27,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
     public zzzGuardianModePower(AbstractCreature owner) {
 
-       this.ID = POWER_ID;
+        this.ID = POWER_ID;
         this.IDdef = POWER_ID;
         this.owner = owner;
         this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
@@ -42,7 +42,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        if (inDefensive){
+        if (inDefensive) {
             this.description = DESCRIPTIONSdef[0];
 
         } else {
@@ -54,40 +54,40 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
     public void onInitialApplication() {
         super.onInitialApplication();
-        if (this.owner instanceof GuardianCharacter){
-            ((GuardianCharacter)this.owner).switchToOffensiveMode();
+        if (this.owner instanceof GuardianCharacter) {
+            ((GuardianCharacter) this.owner).switchToOffensiveMode();
         }
     }
 
     public void atStartOfTurn() {
         //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.amount));
-       // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
+        // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
     }
 
-    public void switchToDefensiveMode(){
-        if (this.owner instanceof GuardianCharacter){
-            ((GuardianCharacter)this.owner).switchToDefensiveMode();
+    public void switchToDefensiveMode() {
+        if (this.owner instanceof GuardianCharacter) {
+            ((GuardianCharacter) this.owner).switchToDefensiveMode();
         }
         this.inDefensive = true;
         this.setImage("DefenseModePower84.png", "DefenseModePower32.png");
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.IDdef).NAME;
-       // if (GuardianMod.bronzeOrbInPlay != null) {
+        // if (GuardianMod.bronzeOrbInPlay != null) {
         //    GuardianMod.bronzeOrbInPlay.moveToFrontline();
-       // }
+        // }
         updateDescription();
     }
 
-    public void switchToOffensiveMode(){
+    public void switchToOffensiveMode() {
 
-        if (this.owner instanceof GuardianCharacter){
-            ((GuardianCharacter)this.owner).switchToOffensiveMode();
+        if (this.owner instanceof GuardianCharacter) {
+            ((GuardianCharacter) this.owner).switchToOffensiveMode();
         }
         this.inDefensive = false;
         this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
-       // if (GuardianMod.bronzeOrbInPlay != null) {
-       //     GuardianMod.bronzeOrbInPlay.moveToBackline();
-       // }
+        // if (GuardianMod.bronzeOrbInPlay != null) {
+        //     GuardianMod.bronzeOrbInPlay.moveToBackline();
+        // }
         updateDescription();
     }
 
@@ -102,7 +102,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         public BronzeOrbBlockPower(AbstractCreature owner, int amount) {
 
-           this.ID = POWER_ID;
+            this.ID = POWER_ID;
             this.owner = owner;
 
             this.type = POWER_TYPE;
@@ -135,7 +135,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         public BronzeOrbDamagePower(AbstractCreature owner, int amount) {
 
-           this.ID = POWER_ID;
+            this.ID = POWER_ID;
             this.owner = owner;
             this.loadRegion("strength");
             this.amount = amount;
@@ -150,7 +150,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         }
 
         public void updateDescription() {
-                this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 
         }
 
@@ -164,10 +164,9 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         public static String[] DESCRIPTIONS;
 
 
-
         public BronzeOrbExplodePower(AbstractCreature owner, int explodeAmount, int turns) {
 
-           this.ID = POWER_ID;
+            this.ID = POWER_ID;
             this.owner = owner;
             this.loadRegion("explosive");
 
@@ -182,7 +181,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         }
 
         public void updateDescription() {
-            if (this.amount2 > 1){
+            if (this.amount2 > 1) {
                 this.description = DESCRIPTIONS[2] + this.amount2 + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[1];
             } else {
                 this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
@@ -190,17 +189,17 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
             }
         }
 
-        public void updateExplode(){
+        public void updateExplode() {
             if (this.amount2 == 1 && !this.owner.isDying) {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
-                AbstractDungeon.actionManager.addToBottom(new SuicideAction((AbstractMonster)this.owner));
+                AbstractDungeon.actionManager.addToBottom(new SuicideAction((AbstractMonster) this.owner));
                 DamageInfo damageInfo = new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS);
-                for (AbstractMonster m: AbstractDungeon.getMonsters().monsters) {
+                for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
                     if (!m.isDead && !m.isDying) {
                         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, damageInfo, AbstractGameAction.AttackEffect.FIRE, true));
                     }
                 }
-                } else {
+            } else {
                 this.amount2--;
                 this.updateDescription();
             }
@@ -208,7 +207,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         public void atStartOfTurn() {
             //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.amount));
-           // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
+            // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
         }
 
     }
@@ -225,10 +224,9 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         private String IDdef = "Guardian:BronzeOrbLocationPowerBack";
 
 
-
         public BronzeOrbLocationPower(AbstractCreature owner) {
 
-           this.ID = POWER_ID;
+            this.ID = POWER_ID;
             this.owner = owner;
             this.setImage("bronzeOrbProtectionPower84.png", "bronzeOrbProtectionPower32.png");
 
@@ -243,7 +241,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         }
 
         public void updateDescription() {
-            if (inRear){
+            if (inRear) {
                 this.description = DESCRIPTIONSdef[0];
 
             } else {
@@ -253,7 +251,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         }
 
-        public void moveToBackline(){
+        public void moveToBackline() {
             this.inRear = true;
             this.setImage("bronzeOrbProtectionPowerInactive84.png", "bronzeOrbProtectionPowerInactive32.png");
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.IDdef).NAME;
@@ -261,7 +259,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
             updateDescription();
         }
 
-        public void moveToFrontline(){
+        public void moveToFrontline() {
             this.inRear = false;
             this.setImage("bronzeOrbProtectionPower84.png", "bronzeOrbProtectionPower32.png");
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
@@ -272,7 +270,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         public void atStartOfTurn() {
             //AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, this.amount));
-           // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
+            // AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
         }
 
     }
@@ -288,7 +286,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         public BronzeOrbProtectionPower(AbstractCreature owner) {
 
-           this.ID = POWER_ID;
+            this.ID = POWER_ID;
             this.owner = owner;
             this.setImage("bronzeOrbProtectionPower84.png", "bronzeOrbProtectionPower32.png");
 
@@ -303,7 +301,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         }
 
         public void updateDescription() {
-            if (isActive){
+            if (isActive) {
                 this.description = DESCRIPTIONS[0];
 
             } else {
@@ -313,14 +311,14 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         }
 
-        public void setActive(){
+        public void setActive() {
             this.isActive = true;
             this.setImage("bronzeOrbProtectionPower84.png", "bronzeOrbProtectionPower32.png");
 
             updateDescription();
         }
 
-        public void setInactive(){
+        public void setInactive() {
             this.isActive = false;
             this.setImage("bronzeOrbProtectionPowerInactive84.png", "bronzeOrbProtectionPowerInactive32.png");
 
@@ -331,7 +329,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         public int onAttacked(DamageInfo info, int damageAmount) {
             if (this.isActive) {
                 damageAmount = damageAmount / 2;
-                info.base = info.base /2;
+                info.base = info.base / 2;
                 /*
                 if (GuardianMod.bronzeOrbInPlay != null) {
                     AbstractDungeon.actionManager.addToBottom(new DamageAction(GuardianMod.bronzeOrbInPlay, new DamageInfo(info.owner, damageAmount, info.type), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
@@ -356,7 +354,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
         public BronzeOrbWeakenPower(AbstractCreature owner, int amount) {
 
-           this.ID = POWER_ID;
+            this.ID = POWER_ID;
             this.owner = owner;
 
             this.type = POWER_TYPE;

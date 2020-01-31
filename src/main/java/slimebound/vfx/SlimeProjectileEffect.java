@@ -9,21 +9,18 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.PetalEffect;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
 public class SlimeProjectileEffect extends AbstractGameEffect {
+    private static final float DUR = 0.6F;
     private static Texture img;
     private float sX;
     private float sY;
@@ -33,7 +30,6 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
     private float dY;
     private float yOffset;
     private float bounceHeight;
-    private static final float DUR = 0.6F;
     private boolean playedSfx = false;
     private boolean rain = false;
     private boolean mute = false;
@@ -42,7 +38,7 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
     private ArrayList<Vector2> previousPos = new ArrayList();
 
     public SlimeProjectileEffect(float srcX, float srcY, float destX, float destY, float scale, boolean rain, float duration) {
-        this(srcX,srcY,destX,destY,scale,rain,duration,false,false);
+        this(srcX, srcY, destX, destY, scale, rain, duration, false, false);
     }
 
 
@@ -60,13 +56,13 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
         this.dY = destY;
         this.scale = scale;
         this.rotation = 0.0F;
-        this.mute=mute;
+        this.mute = mute;
         this.duration = duration;
         this.color = new Color(1, 1.0F, 1, 0.0F);
 
         this.rain = rain;
 
-        if (rain) this.height = MathUtils.random(150F,350F);
+        if (rain) this.height = MathUtils.random(150F, 350F);
         if (bigHeight) this.height = 400F;
 
 
@@ -82,8 +78,7 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
         if (!this.playedSfx && !this.mute) {
             this.playedSfx = true;
 
-                CardCrawlGame.sound.playA("MONSTER_SLIME_ATTACK", MathUtils.random(-0.5F, -0.3F));
-
+            CardCrawlGame.sound.playA("MONSTER_SLIME_ATTACK", MathUtils.random(-0.5F, -0.3F));
 
 
         }
@@ -120,11 +115,11 @@ public class SlimeProjectileEffect extends AbstractGameEffect {
 
         sb.setColor(Color.BLACK);
 
-        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
+        sb.draw(img, this.cX - (float) (img.getWidth() / 2), this.cY - (float) (img.getHeight() / 2) + this.yOffset, (float) img.getWidth() / 2.0F, (float) img.getHeight() / 2.0F, (float) img.getWidth(), (float) img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
 
         sb.setColor(new Color(1F, 0.5F, 1.0F, 100F));
 
-        sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
+        sb.draw(img, this.cX - (float) (img.getWidth() / 2), this.cY - (float) (img.getHeight() / 2) + this.yOffset, (float) img.getWidth() / 2.0F, (float) img.getHeight() / 2.0F, (float) img.getWidth(), (float) img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 30, 29, false, false);
         //sb.draw(img, this.cX - (float)(img.getWidth() / 2), this.cY - (float)(img.getHeight() / 2) + this.yOffset, (float)img.getWidth() / 2.0F, (float)img.getHeight() / 2.0F, (float)img.getWidth(), (float)img.getHeight(), this.scale, this.scale, this.rotation, 0, 0, 38, 38, false, false);
 
     }

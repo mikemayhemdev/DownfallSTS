@@ -1,20 +1,16 @@
 package slimebound.cards;
 
 
-
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -29,8 +25,8 @@ public class DouseInSlime extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:DouseInSlime";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/douseinslime.png";
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -39,7 +35,15 @@ public class DouseInSlime extends AbstractSlimeboundCard {
     private static final int COST = 2;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public DouseInSlime() {
@@ -53,24 +57,21 @@ public class DouseInSlime extends AbstractSlimeboundCard {
 
     }
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY - 30,5F,false,.8F,false,true), 0.6F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FakeFlashAtkImgEffect(m.hb.cX, m.hb.cY, Color.PURPLE,2F,false,.4F)));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY - 30, 5F, false, .8F, false, true), 0.6F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new FakeFlashAtkImgEffect(m.hb.cX, m.hb.cY, Color.PURPLE, 2F, false, .4F)));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
 
 
     }
-
 
     public AbstractCard makeCopy() {
 
         return new DouseInSlime();
 
     }
-
 
     public void upgrade() {
 
@@ -81,14 +82,6 @@ public class DouseInSlime extends AbstractSlimeboundCard {
             upgradeSlimed(6);
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

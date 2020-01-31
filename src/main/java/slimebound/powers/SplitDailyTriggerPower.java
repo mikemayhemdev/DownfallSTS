@@ -1,8 +1,5 @@
-
 package slimebound.powers;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.animations.AnimateShakeAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,27 +16,22 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.MonsterHelper;
-import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
-import com.megacrit.cardcrawl.monsters.EnemyMoveInfo;
-import com.megacrit.cardcrawl.monsters.exordium.*;
+import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_M;
+import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_S;
+import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_M;
+import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_S;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import slimebound.SlimeboundMod;
 import slimebound.monsters.AcidSlimeLDailyMod;
 import slimebound.monsters.SlimeBossDailyMod;
 import slimebound.monsters.SpikeSlimeLDailyMod;
 
-import java.lang.reflect.Field;
-
 public class SplitDailyTriggerPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:SplitDailyTriggerPower";
     public static final String NAME = "Slime Sacrifice";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/SplitForLessS.png";
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private boolean isActive;
 
@@ -87,7 +79,6 @@ public class SplitDailyTriggerPower extends AbstractPower {
     }
 
 
-
     public void atStartOfTurn() {
         if (isActive) {
             AbstractMonster m = (AbstractMonster) this.owner;
@@ -106,14 +97,14 @@ public class SplitDailyTriggerPower extends AbstractPower {
                 AbstractMonster mini1 = new AcidSlime_S(saveX - 55F, -4F, 0);
                 mini1.maxHealth = m.currentHealth;
                 mini1.currentHealth = m.currentHealth;
-                mini1.drawX = m.drawX +55F;
+                mini1.drawX = m.drawX + 55F;
 
                 mini1.usePreBattleAction();
                 mini1.useUniversalPreBattleAction();
                 AbstractMonster mini2 = new SpikeSlime_S(saveX + 55F, 4F, 0);
                 mini2.maxHealth = m.currentHealth;
                 mini2.currentHealth = m.currentHealth;
-                mini2.drawX = m.drawX -55F;
+                mini2.drawX = m.drawX - 55F;
                 mini2.usePreBattleAction();
                 mini2.useUniversalPreBattleAction();
 
@@ -121,30 +112,30 @@ public class SplitDailyTriggerPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini2, false));
 
             } else if (m.currentHealth < 40) {
-                AbstractMonster mini1 = new AcidSlime_M(saveX - 70F, -4F, 0,m.currentHealth);
+                AbstractMonster mini1 = new AcidSlime_M(saveX - 70F, -4F, 0, m.currentHealth);
 
-                mini1.drawX = m.drawX +70F;
+                mini1.drawX = m.drawX + 70F;
 
                 mini1.usePreBattleAction();
                 mini1.useUniversalPreBattleAction();
-                AbstractMonster mini2 = new SpikeSlime_M(saveX + 70F, 4F, 0,m.currentHealth);
+                AbstractMonster mini2 = new SpikeSlime_M(saveX + 70F, 4F, 0, m.currentHealth);
 
-                mini2.drawX = m.drawX -70F;
+                mini2.drawX = m.drawX - 70F;
                 mini2.usePreBattleAction();
                 mini2.useUniversalPreBattleAction();
 
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini1, false));
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini2, false));
             } else if (m.currentHealth < 80) {
-                AbstractMonster mini1 = new AcidSlimeLDailyMod(saveX - 100F, -4F, 0,m.currentHealth);
+                AbstractMonster mini1 = new AcidSlimeLDailyMod(saveX - 100F, -4F, 0, m.currentHealth);
 
-                mini1.drawX = m.drawX +100F;
+                mini1.drawX = m.drawX + 100F;
 
                 mini1.usePreBattleAction();
                 mini1.useUniversalPreBattleAction();
-                AbstractMonster mini2 = new SpikeSlimeLDailyMod(saveX + 100F, 4F, 0,m.currentHealth);
+                AbstractMonster mini2 = new SpikeSlimeLDailyMod(saveX + 100F, 4F, 0, m.currentHealth);
 
-                mini2.drawX = m.drawX -100F;
+                mini2.drawX = m.drawX - 100F;
                 mini2.usePreBattleAction();
                 mini2.useUniversalPreBattleAction();
 
@@ -152,7 +143,7 @@ public class SplitDailyTriggerPower extends AbstractPower {
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mini2, false));
             } else {
                 AbstractMonster boss1 = new SlimeBossDailyMod();
-               // boss1.hb_x = saveX + 134.0F;
+                // boss1.hb_x = saveX + 134.0F;
                 boss1.drawX = m.drawX + 164.0F;
                 boss1.maxHealth = m.currentHealth;
                 boss1.currentHealth = m.currentHealth;

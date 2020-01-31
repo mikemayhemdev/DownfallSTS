@@ -11,12 +11,12 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 public class SlimeIntentParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private static final float DURATION = 0.75F;
     private static final float START_SCALE = 1.2F * com.megacrit.cardcrawl.core.Settings.scale;
-    private float scale = 0.01F;
     private static int W;
+    public AbstractOrb o;
+    private float scale = 0.01F;
     private Texture img;
     private float x;
     private float ox;
-    public AbstractOrb o;
     private float y;
 
     public SlimeIntentParticle(Texture img, AbstractOrb o) {
@@ -29,10 +29,12 @@ public class SlimeIntentParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
         this.y = ((o.cY - W / 2.0F) + 65);
         this.renderBehind = true;
     }
+
     public void dispose() {
         this.img.dispose();
         this.isDone = true;
     }
+
     public void update() {
 
 

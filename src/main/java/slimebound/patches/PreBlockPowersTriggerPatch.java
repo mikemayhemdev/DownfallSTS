@@ -1,21 +1,16 @@
 package slimebound.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.FirmFortitudePower;
 
 import java.util.Iterator;
 
-@SpirePatch(clz= AbstractPlayer.class,method="damage")
+@SpirePatch(clz = AbstractPlayer.class, method = "damage")
 public class PreBlockPowersTriggerPatch {
 
     public static void Prefix(AbstractPlayer obj, DamageInfo info) {
@@ -32,7 +27,7 @@ public class PreBlockPowersTriggerPatch {
                     damageAmount = ((FirmFortitudePower) p).onAttackedPreBlock(info, damageAmount);
             }
         }
-        if (damageAmount == 0){
+        if (damageAmount == 0) {
             AbstractDungeon.effectList.add(new StrikeEffect(AbstractDungeon.player, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, damageAmount));
 
         }

@@ -8,10 +8,10 @@ import guardian.GuardianMod;
 public abstract class AbstractGuardianPower extends AbstractPower {
 
     /**
-     * @param bigImageName - is the name of the 84x84 image for your power.
+     * @param bigImageName   - is the name of the 84x84 image for your power.
      * @param smallImageName - is the name of the 32x32 image for your power.
      */
-    public void setImage(String bigImageName, String smallImageName){
+    public void setImage(String bigImageName, String smallImageName) {
         String path = GuardianMod.getResourcePath();
 
         String path128 = path + "powers/" + bigImageName;
@@ -24,7 +24,7 @@ public abstract class AbstractGuardianPower extends AbstractPower {
     /**
      * @param imgName - is the name of a 16x16 image. Example: setTinyImage("power.png");
      */
-    public void setTinyImage(String imgName){
+    public void setTinyImage(String imgName) {
         String path = GuardianMod.getResourcePath("powers/");
         this.img = ImageMaster.loadImage(path + imgName);
     }

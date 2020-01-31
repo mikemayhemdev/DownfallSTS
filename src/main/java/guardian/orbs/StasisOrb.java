@@ -30,18 +30,21 @@ import guardian.vfx.SmallLaserEffectColored;
 
 
 public class StasisOrb extends AbstractOrb {
-    private static final OrbStrings orbString;
     public static final String[] DESC;
+    private static final OrbStrings orbString;
+    private static String ID = GuardianMod.makeID("StasisOrb");
+
+    static {
+        orbString = CardCrawlGame.languagePack.getOrbString(ID);
+        DESC = orbString.DESCRIPTION;
+    }
+
+    public AbstractCard stasisCard;
     private float vfxTimer = 1.0F;
     private float vfxIntervalMin = 0.15F;
     private float vfxIntervalMax = 0.8F;
-
-    private static String ID = GuardianMod.makeID("StasisOrb");
-
-    public AbstractCard stasisCard;
     private AbstractGameEffect stasisStartEffect;
     private boolean initialized;
-
 
     public StasisOrb(AbstractCard card, boolean costHack) {
         this.stasisCard = card;
@@ -50,20 +53,19 @@ public class StasisOrb extends AbstractOrb {
         this.name = orbString.NAME + stasisCard.name;
 
         this.channelAnimTimer = 0.5F;
-            if (card.isCostModifiedForTurn){
-                this.basePassiveAmount = this.passiveAmount = card.costForTurn + 1;
-            }
-            else {
-                this.basePassiveAmount = this.passiveAmount = card.cost + 1;
-            }
+        if (card.isCostModifiedForTurn) {
+            this.basePassiveAmount = this.passiveAmount = card.costForTurn + 1;
+        } else {
+            this.basePassiveAmount = this.passiveAmount = card.cost + 1;
+        }
 
-            if (card.freeToPlayOnce && !costHack){
-                this.basePassiveAmount = this.passiveAmount = 1;
-            }
-        if (this.basePassiveAmount < 1){
+        if (card.freeToPlayOnce && !costHack) {
             this.basePassiveAmount = this.passiveAmount = 1;
         }
-        if (this.stasisCard.hasTag(GuardianMod.TICK) && AbstractDungeon.player.hasRelic(TickHelperRelic.ID)){
+        if (this.basePassiveAmount < 1) {
+            this.basePassiveAmount = this.passiveAmount = 1;
+        }
+        if (this.stasisCard.hasTag(GuardianMod.TICK) && AbstractDungeon.player.hasRelic(TickHelperRelic.ID)) {
             this.basePassiveAmount = this.passiveAmount = this.basePassiveAmount + 2;
             AbstractDungeon.player.getRelic(TickHelperRelic.ID).flash();
 
@@ -72,8 +74,8 @@ public class StasisOrb extends AbstractOrb {
         this.evokeAmount = this.passiveAmount;
         card.targetAngle = 0F;
 
-        if (AbstractDungeon.player != null){
-            if (AbstractDungeon.player.hasRelic(StasisUpgradeRelic.ID)){
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.hasRelic(StasisUpgradeRelic.ID)) {
                 card.upgrade();
             }
         }
@@ -88,14 +90,13 @@ public class StasisOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        if (this.passiveAmount > 1){
+        if (this.passiveAmount > 1) {
             this.description = this.stasisCard.name + DESC[1] + this.passiveAmount + DESC[2];
 
         } else {
             this.description = this.stasisCard.name + DESC[0];
         }
     }
-
 
     @Override
     public void onStartOfTurn() {
@@ -104,45 +105,45 @@ public class StasisOrb extends AbstractOrb {
             AbstractDungeon.actionManager.addToTop(new WaitAction(1.4F));
             GuardianMod.stasisDelay = false;
         }
-        if (this.stasisCard instanceof FierceBash){
-            ((FierceBash)this.stasisCard).stasisBonus();
+        if (this.stasisCard instanceof FierceBash) {
+            ((FierceBash) this.stasisCard).stasisBonus();
         }
-        if (this.stasisCard instanceof Orbwalk){
+        if (this.stasisCard instanceof Orbwalk) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
 
         }
-        if (this.stasisCard instanceof ShieldCharger){
+        if (this.stasisCard instanceof ShieldCharger) {
             stasisCard.applyPowers();
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.stasisCard.block));
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         }
-        if (this.stasisCard instanceof ChargeCore){
-             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+        if (this.stasisCard instanceof ChargeCore) {
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
         }
-        if (this.stasisCard instanceof GatlingBeam){
+        if (this.stasisCard instanceof GatlingBeam) {
 
 
-            for (int i = 0; i < ((GatlingBeam)stasisCard).turnsInStasis + 1; i++) {
+            for (int i = 0; i < ((GatlingBeam) stasisCard).turnsInStasis + 1; i++) {
                 AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.BLUE), 0.1F));
                 stasisCard.applyPowers();
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(AbstractDungeon.player, stasisCard.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
             }
-            ((GatlingBeam)stasisCard).turnsInStasis++;
+            ((GatlingBeam) stasisCard).turnsInStasis++;
 
         }
-        if (this.stasisCard instanceof MultiBeam){
+        if (this.stasisCard instanceof MultiBeam) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BeamBuffPower(AbstractDungeon.player, AbstractDungeon.player, stasisCard.magicNumber), stasisCard.magicNumber));
 
         }
-        if (this.stasisCard instanceof ChargeUp){
+        if (this.stasisCard instanceof ChargeUp) {
             stasisCard.applyPowers();
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.stasisCard.block));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, stasisCard.magicNumber), stasisCard.magicNumber));
 
         }
-        if (this.passiveAmount > 0){
+        if (this.passiveAmount > 0) {
             this.passiveAmount -= 1;
             this.evokeAmount -= 1;
         }
@@ -153,10 +154,10 @@ public class StasisOrb extends AbstractOrb {
     }
 
     public void onEvoke() {
-        if (this.stasisCard instanceof TimeBomb){
+        if (this.stasisCard instanceof TimeBomb) {
             AbstractDungeon.player.exhaustPile.addToTop(this.stasisCard);
             AbstractDungeon.actionManager.addToBottom(new DestroyOrbSlotForDamageAction(this.stasisCard.magicNumber, this));
-        } else if (this.stasisCard.hasTag(GuardianMod.VOLATILE)){
+        } else if (this.stasisCard.hasTag(GuardianMod.VOLATILE)) {
             AbstractDungeon.player.exhaustPile.addToTop(this.stasisCard);
 
         } else {
@@ -175,7 +176,6 @@ public class StasisOrb extends AbstractOrb {
         }
         //GuardianMod.updateStasisCount();
     }
-
 
     public void triggerEvokeAnimation() {
     }
@@ -234,31 +234,29 @@ public class StasisOrb extends AbstractOrb {
     public void render(SpriteBatch sb) {
         if (this.stasisStartEffect == null && !this.hb.hovered) {
             renderActual(sb);
-        }
-        else if (this.stasisStartEffect.isDone == true && !this.hb.hovered) {
+        } else if (this.stasisStartEffect.isDone == true && !this.hb.hovered) {
             renderActual(sb);
         }
     }
 
-    public void renderActual(SpriteBatch sb){
-            this.stasisCard.render(sb);
-            if (!this.hb.hovered) this.renderText(sb);
-            this.hb.render(sb);
+    public void renderActual(SpriteBatch sb) {
+        this.stasisCard.render(sb);
+        if (!this.hb.hovered) this.renderText(sb);
+        this.hb.render(sb);
     }
 
     public void renderPreview(SpriteBatch sb) {
         if (this.stasisStartEffect == null && this.hb.hovered) {
             renderActual(sb);
-        }
-        else if (this.stasisStartEffect.isDone == true && this.hb.hovered) {
+        } else if (this.stasisStartEffect.isDone == true && this.hb.hovered) {
             renderActual(sb);
         }
     }
 
     public void playChannelSFX() {
-       // CardCrawlGame.sound.play("ORB_LIGHTNING_CHANNEL", 0.1F);
+        // CardCrawlGame.sound.play("ORB_LIGHTNING_CHANNEL", 0.1F);
 
-       // GuardianMod.updateStasisCount();
+        // GuardianMod.updateStasisCount();
     }
 
     public AbstractOrb makeCopy() {
@@ -266,10 +264,5 @@ public class StasisOrb extends AbstractOrb {
         so.passiveAmount = so.basePassiveAmount = this.passiveAmount;
         so.evokeAmount = so.baseEvokeAmount = this.evokeAmount;
         return so;
-    }
-
-    static {
-        orbString = CardCrawlGame.languagePack.getOrbString(ID);
-        DESC = orbString.DESCRIPTION;
     }
 }

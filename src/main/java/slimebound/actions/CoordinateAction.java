@@ -5,17 +5,10 @@
 
 package slimebound.actions;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -61,7 +54,7 @@ public class CoordinateAction extends AbstractGameAction {
             }
         }
 
-       ArrayList<AbstractOrb> oldestOrb = new ArrayList <>();
+        ArrayList<AbstractOrb> oldestOrb = new ArrayList<>();
         for (AbstractOrb o : p.orbs) {
             if (o instanceof SpawnedSlime) {
                 oldestOrb.add(o);
@@ -69,16 +62,16 @@ public class CoordinateAction extends AbstractGameAction {
             }
 
         }
-        for(int i = 0; i < effect; ++i) {
+        for (int i = 0; i < effect; ++i) {
 
-        if (oldestOrb.size() > 0) {
-            for (AbstractOrb o : oldestOrb) {
-                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(o));
+            if (oldestOrb.size() > 0) {
+                for (AbstractOrb o : oldestOrb) {
+                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(o));
 
 
+                }
             }
-        }
-         //   com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F * effect));
+            //   com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F * effect));
 
 
             //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(oldestOrb));

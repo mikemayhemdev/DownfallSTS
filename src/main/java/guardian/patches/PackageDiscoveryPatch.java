@@ -12,12 +12,12 @@ import javassist.CtBehavior;
 
 import java.util.ArrayList;
 
-@SpirePatch(clz=CardRewardScreen.class, method = "discoveryOpen", paramtypez = {})
+@SpirePatch(clz = CardRewardScreen.class, method = "discoveryOpen", paramtypez = {})
 public class PackageDiscoveryPatch {
 
 
     @SpireInsertPatch(locator = Locator.class, localvars = {"derp"})
-    public static void Insert(CardRewardScreen __instance, ArrayList<AbstractCard> derp){
+    public static void Insert(CardRewardScreen __instance, ArrayList<AbstractCard> derp) {
         GuardianMod.logger.info("Discovery patch hit");
 
 
@@ -106,28 +106,26 @@ public class PackageDiscoveryPatch {
                         break;
                 }
             }
-                GuardianMod.discoveryOverrideUpgrade = false;
+            GuardianMod.discoveryOverrideUpgrade = false;
 
-                GuardianMod.logger.info(derp.get(0));
-                GuardianMod.logger.info(derp.get(1));
-                GuardianMod.logger.info(derp.get(2));
-                GuardianMod.logger.info(derp.size());
+            GuardianMod.logger.info(derp.get(0));
+            GuardianMod.logger.info(derp.get(1));
+            GuardianMod.logger.info(derp.get(2));
+            GuardianMod.logger.info(derp.size());
 
-                __instance.rewardGroup = derp;
+            __instance.rewardGroup = derp;
 
             GuardianMod.logger.info(__instance.rewardGroup.get(0));
             GuardianMod.logger.info(__instance.rewardGroup.get(1));
             GuardianMod.logger.info(__instance.rewardGroup.get(2));
             GuardianMod.logger.info(__instance.rewardGroup.size());
-            }
-        
+        }
+
     }
 
-    private static class Locator extends SpireInsertLocator
-    {
+    private static class Locator extends SpireInsertLocator {
         @Override
-        public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-        {
+        public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
             Matcher finalMatcher = new Matcher.FieldAccessMatcher(CardRewardScreen.class, "rewardGroup");
             return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
         }

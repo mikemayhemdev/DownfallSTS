@@ -14,9 +14,15 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnergizedGuardianPower extends AbstractPower {
     public static final String POWER_ID = "Energized";
-    private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
+    private static final PowerStrings powerStrings;
+
+    static {
+        powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+        NAME = powerStrings.NAME;
+        DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    }
 
     public EnergizedGuardianPower(AbstractCreature owner, int energyAmt) {
         this.name = NAME;
@@ -52,11 +58,5 @@ public class EnergizedGuardianPower extends AbstractPower {
         this.flash();
         AbstractDungeon.player.gainEnergy(this.amount);
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-    }
-
-    static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-        NAME = powerStrings.NAME;
-        DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     }
 }

@@ -3,8 +3,6 @@ package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.SwordBoomerangAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -14,9 +12,9 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 
 public class MultiLickAction extends AbstractGameAction {
-    private DamageInfo info;
     private static final float DURATION = 0.01F;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
+    private DamageInfo info;
     private int numTimes;
     private int energyOnUse = -1;
     private AbstractPlayer p;
@@ -56,7 +54,7 @@ public class MultiLickAction extends AbstractGameAction {
         if (effect > 0) {
 
             for (int i = 0; i < effect; ++i) {
-               this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
+                this.target = AbstractDungeon.getMonsters().getRandomMonster(true);
                 if (this.target == null) {
                     this.isDone = true;
                 } else if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
@@ -68,8 +66,8 @@ public class MultiLickAction extends AbstractGameAction {
                         // this.target.damageFlash = true;
                         // this.target.damageFlashFrames = 4;
                         AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect));
-                       // this.info.applyPowers(this.info.owner, this.target);
-                       // this.target.damage(this.info);
+                        // this.info.applyPowers(this.info.owner, this.target);
+                        // this.target.damage(this.info);
                         AbstractDungeon.actionManager.addToBottom(new DamageAction(target, this.info, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
                         if (this.numTimes > 1 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
@@ -82,7 +80,6 @@ public class MultiLickAction extends AbstractGameAction {
 
 
                 }
-
 
 
             }

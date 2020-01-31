@@ -15,10 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReturnRandom0Cost extends AbstractGameAction {
-    private AbstractPlayer p;
-    private  int count;
-
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    private AbstractPlayer p;
+    private int count;
 
 
     public ReturnRandom0Cost(int count) {
@@ -62,11 +61,12 @@ public class ReturnRandom0Cost extends AbstractGameAction {
 
 
                     logger.info("Add to hand");
-                    if (p.hand.size() >= BaseMod.MAX_HAND_SIZE){
+                    if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
                         this.p.discardPile.addToTop(c);
                     } else {
                         this.p.hand.addToHand(c);
-                    }                    c.unfadeOut();
+                    }
+                    c.unfadeOut();
                     c.unhover();
                     c.fadingOut = false;
                     cardsReturned++;
@@ -75,7 +75,7 @@ public class ReturnRandom0Cost extends AbstractGameAction {
 
 
                     //logger.info("Modify Cost");
-                   // c.modifyCostForCombat(-1);
+                    // c.modifyCostForCombat(-1);
 
 
                 }
@@ -83,9 +83,6 @@ public class ReturnRandom0Cost extends AbstractGameAction {
             for (AbstractCard c : cardsToExhaust) {
                 this.p.exhaustPile.removeCard(c);
             }
-
-
-
 
 
             //logger.info("Losing HP");
