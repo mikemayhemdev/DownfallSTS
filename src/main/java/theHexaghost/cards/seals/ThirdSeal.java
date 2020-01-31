@@ -15,6 +15,5 @@ public class ThirdSeal extends AbstractSealCard {
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new CommonPostCombatPower(1));
-        AbstractDungeon.getCurrRoom().addCardReward(new SealCommonReward(AbstractDungeon.player.getCardColor()));
     }
 }

@@ -16,6 +16,5 @@ public class FifthSeal extends AbstractSealCard {
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new SealPostCombatPower(1));
-        AbstractDungeon.getCurrRoom().addCardReward(new SealSealReward(AbstractDungeon.player.getCardColor()));
     }
 }

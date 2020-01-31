@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
+import theHexaghost.util.SealCommonReward;
 import theHexaghost.util.TextureLoader;
 
 public class CommonPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
@@ -35,6 +36,12 @@ public class CommonPostCombatPower extends AbstractPower implements CloneablePow
             description = "At the end of combat, obtain #b" + amount + " additional #yCommon cards.";
         else
             description = "At the end of combat, obtain #b" + amount + " additional #yCommon card.";
+    }
+
+    @Override
+    public void onVictory() {
+        for (int i = 0; i < amount; i++)
+            AbstractDungeon.getCurrRoom().addCardReward(new SealCommonReward(AbstractDungeon.player.getCardColor()));
     }
 
     @Override

@@ -17,6 +17,5 @@ public class FourthSeal extends AbstractSealCard {
 
     public void realUse(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new PotionPostCombatPower(1));
-        AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
     }
 }
