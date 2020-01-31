@@ -24,6 +24,18 @@
     "NAME": "Hex Flames",
     "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Gain six expansioncontent:Ghostflames. If expansioncontent:Ghostflames are already in play, gain 2 hexamod:Intensity instead."
   },
+  "expansioncontent:HyperBeam": {
+    "NAME": "Automa-Beam",
+    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]. NL Exhaust."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage twice to ALL enemies. NL Gain 1 Artifact. NL Exhaust."
+  },
+  "expansioncontent:BronzeBeam": {
+    "NAME": "Orb Support",
+    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage. NL Gain !B! Block. NL Exhaust."
+  },
   "expansioncontent:PrepareDivider": {
     "NAME": "Prepare: Divide",
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust.",
@@ -33,14 +45,6 @@
     "NAME": "Prepare: Beam",
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust."
-  },
-  "expansioncontent:SlimeBeam": {
-    "NAME": "Slime Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust."
-  },
-  "expansioncontent:Flail": {
-    "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage twice to ALL enemies. NL Gain !M! Artifact. NL Exhaust."
   },
   "expansioncontent:DefensiveStance": {
     "NAME": "Defensive Stance",

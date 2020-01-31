@@ -1,6 +1,6 @@
 package slimebound.powers;
 
-
+/*
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -79,3 +79,5 @@ public class NextTurnGainHyperBeam extends AbstractPower {
 
 
 
+
+*/
