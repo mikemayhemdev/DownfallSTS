@@ -179,5 +179,10 @@
     "NAME": "Pure Snecko",
     "DESCRIPTION": "sneckomod:Snekproof. NL Morph all sneckomod:Offclass cards in your hand.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card. NL Morph all sneckomod:Offclass cards in your hand."
+  },
+  "sneckomod:Cheat": {
+    "NAME": "Cheat",
+    "DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number."
   }
 }
