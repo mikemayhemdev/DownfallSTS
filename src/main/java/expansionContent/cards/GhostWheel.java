@@ -9,30 +9,34 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import expansioncontent.expansionContentMod;
 import slimebound.powers.NextTurnGainStrengthPower;
+import theHexaghost.HexaMod;
+import theHexaghost.actions.AdvanceAction;
+import theHexaghost.powers.EnhancePower;
 
-public class ChargeUp extends AbstractExpansionCard {
-    public final static String ID = makeID("ChargeUp");
+public class GhostWheel extends AbstractExpansionCard {
+    public final static String ID = makeID("GhostWheel");
 
     private static final int BLOCK = 20;
     private static final int UPGRADE_BLOCK = 10;
     private static final int MAGIC = 2;
 
-    public ChargeUp() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+    public GhostWheel() {
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
-        tags.add(expansionContentMod.STUDY_GUARDIAN);
+        tags.add(expansionContentMod.STUDY_HEXAGHOST);
         tags.add(expansionContentMod.STUDY);
 
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (HexaMod.renderFlames) {
 
-        atb(new SFXAction("MONSTER_GUARDIAN_DESTROY"));
-        atb(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
-        atb(new ApplyPowerAction(p, p, new NextTurnGainStrengthPower(p, p, this.magicNumber), this.magicNumber));
+            atb(new ApplyPowerAction(p, p, new EnhancePower(1), 1));
+        }
+            else {
+
+            atb(new AdvanceAction());
+        }
 
 
 

@@ -12,23 +12,24 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 import slimebound.powers.SearingPower;
 import slimebound.vfx.SearEffect;
+import theHexaghost.actions.BurnAction;
 
 
 public class Sear extends AbstractExpansionCard {
     public final static String ID = makeID("Sear");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int DAMAGE = 12;
+    private static final int UPGRADE_DAMAGE = 2;
+    private static final int MAGIC = 6;
+    private static final int UPGRADE_MAGIC = 2;
 
     public Sear() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
+        tags.add(expansionContentMod.STUDY_HEXAGHOST);
         tags.add(expansionContentMod.STUDY);
 
-        baseBlock = BLOCK;
+        baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         this.isMultiDamage = true;
         this.exhaust = true;
@@ -39,15 +40,15 @@ public class Sear extends AbstractExpansionCard {
         atb(new VFXAction(new SearEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
 
         atb(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        atb(new ApplyPowerAction(m, p, new SearingPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.FIRE));
-
+        atb(new BurnAction(m, magicNumber));
 
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeDamage(2);
+            upgradeMagicNumber(2);
         }
     }
 
