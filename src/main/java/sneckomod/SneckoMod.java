@@ -214,4 +214,10 @@ public class SneckoMod implements
         possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN);
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
+
+    public static AbstractCard getOffClassCard(AbstractCard.CardColor color) {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> c.color == color);
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+    }
 }
