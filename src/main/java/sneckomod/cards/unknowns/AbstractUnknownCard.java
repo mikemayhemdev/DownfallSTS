@@ -16,12 +16,12 @@ import java.util.function.Predicate;
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard {
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity) {
-        super(id, "SoulRoll", -2, type, rarity, CardTarget.NONE);
+        super(id, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
     }
 
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity, CardColor color) {
-        super(id, "SoulRoll", -2, type, rarity, CardTarget.NONE, color);
+        super(id, -2, type, rarity, CardTarget.NONE, color);
         tags.add(CardTags.HEALING);
     }
 
