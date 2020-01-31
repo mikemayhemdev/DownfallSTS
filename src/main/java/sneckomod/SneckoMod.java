@@ -30,6 +30,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.function.Predicate;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -215,9 +216,15 @@ public class SneckoMod implements
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
-    public static AbstractCard getOffClassCard(AbstractCard.CardColor color) {
+    public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color == color);
+        possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN && !q.test(c));
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+    }
+
+    public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> c.color != color);
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 }

@@ -16,10 +16,32 @@ public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
 
     public UnknownClass(CardColor cardColor) {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        super(ID, determineCardImg(cardColor), CardType.SKILL, CardRarity.UNCOMMON);
         myColor = cardColor;
     }
 
+    public static String determineCardImg(CardColor myColor) {
+        switch (myColor.name()) {
+            case "RED":
+                return "UnknownIronclad";
+            case "BLUE":
+                return "UnknownDefect";
+            case "GREEN":
+                return "UnknownSilent";
+            case "PURPLE":
+                return "UnknownWatcher";
+            case "GUARDIAN":
+                return "UnknownGuardian";
+            case "SLIMEBOUND":
+                return "UnknownSlimebound";
+            case "GHOST_GREEN":
+                return "UnknownHexaghost";
+            case "SNECKO_CYAN":
+                return "UnknownSnecko";
+            default:
+                return "UnknownModded";
+        }
+    }
 
     public String getCharName(CardColor myColor) {
         ArrayList<AbstractPlayer> theDudes = new ArrayList<AbstractPlayer>(CardCrawlGame.characterManager.getAllCharacters());

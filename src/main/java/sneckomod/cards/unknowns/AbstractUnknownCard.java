@@ -25,6 +25,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         tags.add(CardTags.HEALING);
     }
 
+    public AbstractUnknownCard(final String id, final String img, final CardType type, final CardRarity rarity) {
+        super(id, img, -2, type, rarity, CardTarget.NONE);
+        tags.add(CardTags.HEALING);
+    }
+
+
     public void upgrade() {
         upgradeName();
         String[] funky = rawDescription.split("Unknown");

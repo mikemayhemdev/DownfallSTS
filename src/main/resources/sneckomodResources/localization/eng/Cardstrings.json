@@ -145,5 +145,13 @@
     "NAME": "Master Eye",
     "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
     "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
+  },
+  "sneckomod:ImprovisedAttack": {
+    "NAME": "Improvised Attack",
+    "DESCRIPTION": "Deal !D! damage. NL Add a random sneckomod:Offclass Attack into your hand and sneckomod:Muddle it."
+  },
+  "sneckomod:ImprovisedGuard": {
+    "NAME": "Improvised Guard",
+    "DESCRIPTION": "Gain !B! Block. NL Add a random sneckomod:Offclass Skill into your hand and sneckomod:Muddle it."
   }
 }

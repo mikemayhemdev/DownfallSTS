@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theHexaghost.TheHexaghost;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.ghostflames.BolsteringGhostflame;
 import theHexaghost.ghostflames.CrushingGhostflame;
@@ -12,6 +13,7 @@ import theHexaghost.ghostflames.InfernoGhostflame;
 import theHexaghost.ghostflames.SearingGhostflame;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
+import static theHexaghost.GhostflameHelper.render;
 import static theHexaghost.HexaMod.renderFlames;
 
 @SpirePatch(
@@ -20,6 +22,8 @@ import static theHexaghost.HexaMod.renderFlames;
 )
 public class TriggerFlamesPatch {
     public static void Prefix(CardGroup __instance, AbstractCard abstractCard) {
+        if (abstractCard.color == TheHexaghost.Enums.GHOST_GREEN)
+            renderFlames = true;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {

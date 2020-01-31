@@ -44,7 +44,7 @@ public class SoulExchangeAction extends AbstractGameAction {
                 p.hand.moveToExhaustPile(c);
                 addToBot(new ExhaustAction(p.hand.size(), true, false));
                 for (int i = 0; i < p.hand.size(); i++) {
-                    AbstractCard card = SneckoMod.getOffClassCard(c.color);
+                    AbstractCard card = SneckoMod.getSpecificClassCard(c.color);
                     if (card.cost >= 0) {// 32
                         int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
                         if (card.cost != newCost) {// 34
