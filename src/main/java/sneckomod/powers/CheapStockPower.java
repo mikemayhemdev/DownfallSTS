@@ -7,18 +7,18 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
 import java.util.ArrayList;
 
 public class CheapStockPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = HexaMod.makeID("CheapStockPower");
+    public static final String POWER_ID = SneckoMod.makeID("CheapStockPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public CheapStockPower(final int amount) {
         this.name = "Cheap Stock";
@@ -58,7 +58,7 @@ public class CheapStockPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public void updateDescription() {
-        description = "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b" + amount+ " times.";
+        description = "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b" + amount + " times.";
     }
 
     @Override

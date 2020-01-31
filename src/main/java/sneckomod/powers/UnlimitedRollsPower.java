@@ -8,16 +8,16 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import sneckomod.SneckoMod;
 import sneckomod.cards.SoulRoll;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
 public class UnlimitedRollsPower extends AbstractPower implements CloneablePowerInterface, NonStackablePower {
 
-    public static final String POWER_ID = HexaMod.makeID("UnlimitedRollsPower");
+    public static final String POWER_ID = SneckoMod.makeID("UnlimitedRollsPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     private boolean bruh;
 

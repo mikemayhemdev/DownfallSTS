@@ -6,18 +6,16 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.city.Snecko;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
 public class UnendingSupplyPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = HexaMod.makeID("UnendingSupplyPower");
+    public static final String POWER_ID = SneckoMod.makeID("UnendingSupplyPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public UnendingSupplyPower(final int amount) {
         this.name = "Unending Supply";
@@ -37,7 +35,7 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 27
             this.flash();// 28
 
-            for(int i = 0; i < this.amount; ++i) {// 29
+            for (int i = 0; i < this.amount; ++i) {// 29
                 AbstractCard card = SneckoMod.getOffClassCard();
                 int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
                 if (card.cost != newCost) {// 34
@@ -52,6 +50,7 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
         }
 
     }
+
     @Override
     public void updateDescription() {
         description = "At the start of your turn, add #b" + amount + "random #yOffclass cards into your hand and #yMuddle them.";
