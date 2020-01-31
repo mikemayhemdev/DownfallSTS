@@ -82,9 +82,7 @@ public class expansionContentMod implements
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
-        modID = "expansionContent";
-
-
+        modID = "expansioncontent";
 
     }
 
@@ -128,14 +126,11 @@ public class expansionContentMod implements
 
     @Override
     public void receiveEditCards() {
-
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     private static void autoAddCards()

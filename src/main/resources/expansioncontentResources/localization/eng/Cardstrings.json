@@ -1,82 +1,82 @@
 {
-  "expansionContent:PrepareDivider": {
+  "expansioncontent:PrepareDivider": {
     "NAME": "Prepare: Divide",
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust."
   },
-  "expansionContent:Hexaburn": {
+  "expansioncontent:Hexaburn": {
     "NAME": "Hexaburn",
     "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/10th of your current HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/6th of your current HP. NL Exhaust."
   },
-  "expansionContent:ChargeUp": {
+  "expansioncontent:ChargeUp": {
     "NAME": "Hexaburn",
     "DESCRIPTION": "Deal !D! damage ",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/6th of your current HP. NL Exhaust."
   },
-  "expansionContent:DefensiveMode": {
+  "expansioncontent:DefensiveMode": {
     "NAME": "Hexaburn",
     "DESCRIPTION": "Deal !D! damage ",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/6th of your current HP. NL Exhaust."
   },
-  "expansionContent:PrepareBeam": {
+  "expansioncontent:PrepareBeam": {
     "NAME": "Prepare: Beam",
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust."
   },
-  "expansionContent:SlimeBeam": {
+  "expansioncontent:SlimeBeam": {
     "NAME": "Slime Beam",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust."
   },
-  "expansionContent:Flail": {
+  "expansioncontent:Flail": {
     "NAME": "Flail",
     "DESCRIPTION": "Deal !D! damage twice to ALL enemies. NL Gain !M! Artifact. NL Exhaust."
   },
-  "expansionContent:DefensiveStance": {
+  "expansioncontent:DefensiveStance": {
     "NAME": "Defensive Stance",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Block at the end of each turn."
   },
-  "expansionContent:FaceSlap": {
+  "expansioncontent:FaceSlap": {
     "NAME": "Face Slap",
     "DESCRIPTION": "Remove all of the enemy's Block. NL Deal !D! damage. Apply !M! Vulnerable. NL Exhaust."
   },
-  "expansionContent:LastStand": {
+  "expansioncontent:LastStand": {
     "NAME": "Last Stand",
     "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength, or !SlimeboundSlimePoison! Strength if you are below half HP. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Too... Healthy..."
     ]
   },
-  "expansionContent:Collect": {
+  "expansioncontent:Collect": {
     "NAME": "Collect",
     "DESCRIPTION": "Gain !M! Strength and 1 Potency. NL Gain !B! Block. NL Exhaust."
   },
-  "expansionContent:YouAreMine": {
+  "expansioncontent:YouAreMine": {
     "NAME": "YOU ARE MINE!",
     "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies and remove all of their Block. NL Exhaust."
   },
-  "expansionContent:OozeBath": {
+  "expansioncontent:OozeBath": {
     "NAME": "Ooze Bath",
     "DESCRIPTION": "Double an enemy's Goop. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Double an enemy's Poison and Goop. NL Exhaust."
   },
-  "expansionContent:CaCaw": {
+  "expansioncontent:CaCaw": {
     "NAME": "CA-CAW!",
     "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL Gain !M! Strength at the start of each turn."
   },
-  "expansionContent:DarkVoid": {
+  "expansioncontent:DarkVoid": {
     "NAME": "Dark Void",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust."
   },
-  "expansionContent:TimeRipple": {
+  "expansioncontent:TimeRipple": {
     "NAME": "Time Ripple",
     "DESCRIPTION": "Gain !B! Block. NL Apply Slow to ALL enemies. NL Exhaust."
   },
-  "expansionContent:HeadSlam": {
+  "expansioncontent:HeadSlam": {
     "NAME": "Head Slam",
     "DESCRIPTION": "Deal !D! damage if the enemy is a Boss. If not, Stun them. NL Exhaust."
   },
-  "expansionContent:ManipulateTime": {
+  "expansioncontent:ManipulateTime": {
     "NAME": "Manipulate Time",
     "DESCRIPTION": "Trigger all effects that happen at the start of your turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Trigger all effects that happen at the start of your turn. NL Exhaust.",
@@ -84,71 +84,71 @@
       "Too... Late..."
     ]
   },
-  "expansionContent:DonusPower": {
+  "expansioncontent:DonusPower": {
     "NAME": "Donu's Power",
     "DESCRIPTION": "Gain 1 Strength. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
   },
-  "expansionContent:DecasProtection": {
+  "expansioncontent:DecasProtection": {
     "NAME": "Deca's Protection",
     "DESCRIPTION": "Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
   },
-  "expansionContent:PolyBeam": {
+  "expansioncontent:PolyBeam": {
     "NAME": "Poly Beam",
     "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },
-  "expansionContent:Sear": {
+  "expansioncontent:Sear": {
     "NAME": "Sear",
     "DESCRIPTION": "Deal !D! damage, plus an additional !M! damage every turn this combat. NL Exhaust."
   },
-  "expansionContent:StudyAutomaton": {
+  "expansioncontent:StudyAutomaton": {
     "NAME": "Study Automaton",
     "DESCRIPTION": "Add a random Automaton card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Automaton card to your hand at the start of each turn."
   },
-  "expansionContent:StudyTheSpire": {
+  "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
     "DESCRIPTION": "Add a random Spire_Boss card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Spire_Boss card to your hand at the start of your next !M! turns."
   },
-  "expansionContent:StudyAwakened": {
+  "expansioncontent:StudyAwakened": {
     "NAME": "Study Awakened",
     "DESCRIPTION": "Add a random Awakened One card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Awakened One card to your hand at the start of each turn."
   },
-  "expansionContent:StudyChamp": {
+  "expansioncontent:StudyChamp": {
     "NAME": "Study the Champ",
     "DESCRIPTION": "Add a random Champ card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Champ card to your hand at the start of each turn."
   },
-  "expansionContent:StudyCollector": {
+  "expansioncontent:StudyCollector": {
     "NAME": "Study Collector",
     "DESCRIPTION": "Add a random Collector card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Collector card to your hand at the start of each turn."
   },
-  "expansionContent:StudyGuardian": {
+  "expansioncontent:StudyGuardian": {
     "NAME": "Study Guardian",
     "DESCRIPTION": "Add a random Guardian card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Guardian card to your hand at the start of each turn."
   },
-  "expansionContent:StudyHexaghost": {
+  "expansioncontent:StudyHexaghost": {
     "NAME": "Study Hexaghost",
     "DESCRIPTION": "Add a random Hexaghost card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Hexaghost card to your hand at the start of each turn."
   },
-  "expansionContent:StudyShapes": {
+  "expansioncontent:StudyShapes": {
     "NAME": "Study Donu & Deca",
     "DESCRIPTION": "Add a random Donu & Deca card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Donu & Deca card to your hand at the start of each turn."
   },
-  "expansionContent:StudyTimeEater": {
+  "expansioncontent:StudyTimeEater": {
     "NAME": "Study Time Eater",
     "DESCRIPTION": "Add a random Time Eater card to your hand at the start of your next !M! turns.",
     "UPGRADE_DESCRIPTION": "Add a random Upgraded Time Eater card to your hand at the start of each turn."
   },
-  "expansionContent:QuickStudy": {
+  "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
     "DESCRIPTION": "Add a random Spire_Boss card to your hand. NL Lose !M! HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Add 2 random Spire_Boss cards to your hand. NL Lose !M! HP. NL Exhaust."
