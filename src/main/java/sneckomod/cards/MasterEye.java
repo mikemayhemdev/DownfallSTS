@@ -15,7 +15,7 @@ public class MasterEye extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 1;
 
     public MasterEye() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, "Beta",1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
