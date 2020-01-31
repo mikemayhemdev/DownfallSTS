@@ -12,19 +12,16 @@ import expansioncontent.expansionContentMod;
 public class GuardianWhirl extends AbstractExpansionCard {
     public final static String ID = makeID("GuardianWhirl");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_DAMAGE = 1;
 
     public GuardianWhirl() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
+        tags.add(expansionContentMod.STUDY_GUARDIAN);
         tags.add(expansionContentMod.STUDY);
 
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;
     }
@@ -46,7 +43,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeDamage(UPGRADE_DAMAGE);
         }
     }
 

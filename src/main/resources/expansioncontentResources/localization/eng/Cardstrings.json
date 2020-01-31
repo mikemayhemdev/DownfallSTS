@@ -1,23 +1,33 @@
 {
+  "expansioncontent:ChargeUp": {
+    "NAME": "Charge Up",
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
+  },
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "Guardian Whirl",
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust."
+   },
+  "expansioncontent:DefensiveMode": {
+    "NAME": "Defensive Mode",
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "Ghost Inferno",
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Lose !M! HP. NL Deal !D! damage a random enemy 6 times. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
+  },
+  "expansioncontent:Sear": {
+    "NAME": "Sear",
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! Burn. NL Exhaust."
+  },
+  "expansioncontent:GhostWheel": {
+    "NAME": "Hex Flames",
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Gain six expansioncontent:Ghostflames. If expansioncontent:Ghostflames are already in play, gain 2 hexamod:Intensity instead."
+  },
   "expansioncontent:PrepareDivider": {
     "NAME": "Prepare: Divide",
     "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust."
-  },
-  "expansioncontent:Hexaburn": {
-    "NAME": "Hexaburn",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/10th of your current HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/6th of your current HP. NL Exhaust."
-  },
-  "expansioncontent:ChargeUp": {
-    "NAME": "Hexaburn",
-    "DESCRIPTION": "Deal !D! damage ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/6th of your current HP. NL Exhaust."
-  },
-  "expansioncontent:DefensiveMode": {
-    "NAME": "Hexaburn",
-    "DESCRIPTION": "Deal !D! damage ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL This card's damage is equal to 1/6th of your current HP. NL Exhaust."
   },
   "expansioncontent:PrepareBeam": {
     "NAME": "Prepare: Beam",
@@ -98,10 +108,6 @@
     "NAME": "Poly Beam",
     "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
-  },
-  "expansioncontent:Sear": {
-    "NAME": "Sear",
-    "DESCRIPTION": "Deal !D! damage, plus an additional !M! damage every turn this combat. NL Exhaust."
   },
   "expansioncontent:StudyAutomaton": {
     "NAME": "Study Automaton",

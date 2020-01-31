@@ -4,6 +4,13 @@
     "NAMES": [
       "boss"
     ],
-    "DESCRIPTION": "Only 1 Spire Boss card of each type can be added to your deck."
+    "DESCRIPTION": "After adding a Boss card to your deck, no other cards of that Boss's set can be added."
+  },
+  {
+    "PROPER_NAME": "Ghostflames",
+    "NAMES": [
+      "ghostflames"
+    ],
+    "DESCRIPTION": "Ghostflames provide additional benefits each turn if their Ignition requirements are met during that turn."
   }
 ]
