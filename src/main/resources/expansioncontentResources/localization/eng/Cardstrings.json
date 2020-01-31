@@ -14,7 +14,7 @@
   "expansioncontent:Hexaburn": {
     "NAME": "Ghost Inferno",
     "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Lose !M! HP. NL Deal !D! damage a random enemy 6 times. NL Exhaust.",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
   },
   "expansioncontent:Sear": {
     "NAME": "Sear",
@@ -36,38 +36,29 @@
     "NAME": "Orb Support",
     "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage. NL Gain !B! Block. NL Exhaust."
   },
-  "expansioncontent:PrepareDivider": {
-    "NAME": "Prepare: Divide",
-    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Divide to your hand. NL Exhaust."
-  },
-  "expansioncontent:PrepareBeam": {
-    "NAME": "Prepare: Beam",
-    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add Hyper Beam to your hand. NL Exhaust."
-  },
   "expansioncontent:DefensiveStance": {
     "NAME": "Defensive Stance",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Block at the end of each turn."
+    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Gain !B! Block. NL Gain !M! Block at the end of each turn."
   },
   "expansioncontent:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Remove all of the enemy's Block. NL Deal !D! damage. Apply !M! Vulnerable. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Block. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength, or !SlimeboundSlimePoison! Strength if you are below half HP. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Too... Healthy..."
-    ]
+    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength and heal !M! HP."
   },
   "expansioncontent:Collect": {
     "NAME": "Collect",
-    "DESCRIPTION": "Gain !M! Strength and 1 Potency. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Collector. NL Gain !B! Block. NL Gain 1 Strength. NL Gain 1 Dexterity."
   },
   "expansioncontent:YouAreMine": {
     "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies and remove all of their Block. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Collector. NL Remove all Block, apply !M! Weak and apply !M! Vulnerable to ALL enemies. NL Exhaust."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Torchfire",
+    "DESCRIPTION": "expansioncontent:Boss - Collector. NL Deal !D! damage. Damage is increased by !M! for each Debuff on the enemy. NL Exhaust."
   },
   "expansioncontent:OozeBath": {
     "NAME": "Ooze Bath",
