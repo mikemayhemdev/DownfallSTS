@@ -8,7 +8,7 @@ import sneckomod.actions.SoulExchangeAction;
 
 public class SoulExchange extends AbstractSneckoCard {
 
-    public final static String ID = makeID("SoulExchangeAction");
+    public final static String ID = makeID("SoulExchange");
 
     //stupid intellij stuff SKILL, SELF, RARE
 

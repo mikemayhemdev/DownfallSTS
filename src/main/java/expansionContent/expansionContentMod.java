@@ -1,4 +1,4 @@
-package expansionContent;
+package expansioncontent;
 
 /*
 
@@ -32,12 +32,12 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
+import expansioncontent.util.CardFilter;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import theHexaghost.relics.*;
-import expansionContent.util.CardFilter;
 import theHexaghost.util.CardIgnore;
 import theHexaghost.util.CardNoSeen;
 

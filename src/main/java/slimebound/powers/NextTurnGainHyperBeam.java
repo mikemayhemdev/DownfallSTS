@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import expansionContent.cards.SlimeBeam;
+import expansioncontent.cards.SlimeBeam;
 
 
 public class NextTurnGainHyperBeam extends AbstractPower {
