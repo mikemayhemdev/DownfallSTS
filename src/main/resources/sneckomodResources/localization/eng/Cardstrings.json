@@ -10,7 +10,7 @@
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
     "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckmod:Muddle !M! random cards in your hand."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random cards in your hand."
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",

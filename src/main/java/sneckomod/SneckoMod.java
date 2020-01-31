@@ -11,6 +11,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -202,7 +203,7 @@ public class SneckoMod implements
 
     @Override
     public void receivePostDungeonInitialize() {
-        if (AbstractDungeon.player instanceof TheSnecko)
+        if (AbstractDungeon.player instanceof TheSnecko && !CardCrawlGame.loadingSave)
             for (int i = 0; i < 8; i++) {
                 AbstractCard q = new UnknownClass(UnknownClass.getRandomCardColor());
                 AbstractDungeon.uncommonCardPool.addToTop(q);
@@ -218,7 +219,7 @@ public class SneckoMod implements
 
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN && !q.test(c));
+        possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN || !q.test(c));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sneckomod.CardIgnore;
+import sneckomod.TheSnecko;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -33,11 +34,9 @@ public class UnknownClass extends AbstractUnknownCard {
             case "GUARDIAN":
                 return "UnknownGuardian";
             case "SLIMEBOUND":
-                return "UnknownSlimebound";
+                return "UnknownSlimeBoss";
             case "GHOST_GREEN":
                 return "UnknownHexaghost";
-            case "SNECKO_CYAN":
-                return "UnknownSnecko";
             default:
                 return "UnknownModded";
         }
@@ -73,6 +72,7 @@ public class UnknownClass extends AbstractUnknownCard {
 
     public static CardColor getRandomCardColor() {
         ArrayList<CardColor> myList = new ArrayList<>(BaseMod.getCardColors());
+        myList.removeIf(c -> c == TheSnecko.Enums.SNECKO_CYAN);
         return myList.get(AbstractDungeon.cardRandomRng.random(myList.size() - 1));
     }
 
