@@ -135,5 +135,10 @@
     "NAME": "Cheap Stock",
     "DESCRIPTION": "At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1."
+  },
+  "sneckomod:UnlimitedRolls": {
+    "NAME": "Unlimited Rolls",
+    "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand with Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a *Soul *Roll+ to your hand with Exhaust."
   }
 }
