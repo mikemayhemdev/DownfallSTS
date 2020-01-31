@@ -140,5 +140,10 @@
     "NAME": "Unlimited Rolls",
     "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand with Exhaust.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, add a *Soul *Roll+ to your hand with Exhaust."
+  },
+  "sneckomod:MasterEye": {
+    "NAME": "Master Eye",
+    "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
+    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
   }
 }
