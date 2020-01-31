@@ -16,7 +16,7 @@ public class RainOfEmbers extends AbstractHexaCard {
     private static final int MAGIC = 0;
 
     public RainOfEmbers() {
-        super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }

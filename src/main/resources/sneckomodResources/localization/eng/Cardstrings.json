@@ -166,5 +166,13 @@
   "sneckomod:Rotation": {
     "NAME": "Rotation",
     "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M! and sneckomod:Muddle them."
+  },
+  "sneckomod:SerpentMind": {
+    "NAME": "Serpent Mind",
+    "DESCRIPTION": "Whenever you play a sneckomod:Offclass card, draw 1 card."
+  },
+  "sneckomod:SlitherStrike": {
+    "NAME": "Slither Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1."
   }
 }
