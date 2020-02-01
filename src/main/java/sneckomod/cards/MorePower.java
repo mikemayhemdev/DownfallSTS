@@ -11,7 +11,7 @@ public class MorePower extends AbstractSneckoCard {
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
     public MorePower() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, "Beta", 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(CardTags.HEALING);
     }
 
