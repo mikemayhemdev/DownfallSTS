@@ -192,5 +192,9 @@
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
     "DESCRIPTION": "sneckomod:Snekproof. NL Set your gold to !M! % - 120 % of its current amount. NL Exhaust."
+  },
+  "sneckomod:Transmogrify": {
+    "NAME": "Transmogrify",
+    "DESCRIPTION": "Lose a random Relic. NL Obtain a random Relic at the same rarity. NL Exhaust."
   }
 }
