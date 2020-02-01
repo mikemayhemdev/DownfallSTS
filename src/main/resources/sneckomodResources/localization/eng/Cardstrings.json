@@ -200,5 +200,9 @@
   "sneckomod:DefensiveFlair": {
     "NAME": "Defensive Flair",
     "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
+  },
+  "sneckomod:DangerNoodle": {
+    "NAME": "Danger Noodle",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
   }
 }
