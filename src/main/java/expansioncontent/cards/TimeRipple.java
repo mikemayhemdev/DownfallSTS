@@ -4,6 +4,7 @@ package expansioncontent.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,26 +17,24 @@ import expansioncontent.expansionContentMod;
 public class TimeRipple extends AbstractExpansionCard {
     public final static String ID = makeID("TimeRipple");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int DAMAGE = 18;
+    private static final int UPGRADE_DAMAGE = 6;
 
     public TimeRipple() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
+        tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
 
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        atb(new com.megacrit.cardcrawl.actions.animations.VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.75F));
+        atb(new com.megacrit.cardcrawl.actions.animations.VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.5F));
+        atb(new com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
@@ -49,7 +48,7 @@ public class TimeRipple extends AbstractExpansionCard {
             }
         }
 
-        atb(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+
 
 
     }
@@ -57,7 +56,7 @@ public class TimeRipple extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeDamage(UPGRADE_DAMAGE);
         }
     }
 

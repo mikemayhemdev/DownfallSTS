@@ -60,34 +60,30 @@
     "NAME": "Torchfire",
     "DESCRIPTION": "expansioncontent:Boss - Collector. NL Deal !D! damage. Damage is increased by !M! for each Debuff on the enemy. NL Exhaust."
   },
-  "expansioncontent:OozeBath": {
-    "NAME": "Ooze Bath",
-    "DESCRIPTION": "Double an enemy's Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Double an enemy's Poison and Goop. NL Exhaust."
-  },
   "expansioncontent:CaCaw": {
     "NAME": "CA-CAW!",
     "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL Gain !M! Strength at the start of each turn."
   },
   "expansioncontent:DarkVoid": {
     "NAME": "Dark Void",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust."
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "Awaken",
+    "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL When you would die, heal !M! HP instead."
   },
   "expansioncontent:TimeRipple": {
     "NAME": "Time Ripple",
-    "DESCRIPTION": "Gain !B! Block. NL Apply Slow to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Deal !D! damage and apply Slow to ALL enemies. NL Exhaust."
   },
-  "expansioncontent:HeadSlam": {
-    "NAME": "Head Slam",
-    "DESCRIPTION": "Deal !D! damage if the enemy is a Boss. If not, Stun them. NL Exhaust."
+  "expansioncontent:Chronoboost": {
+    "NAME": "Chrono-Boost",
+    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 12th card you play.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 10th card you play."
   },
   "expansioncontent:ManipulateTime": {
     "NAME": "Manipulate Time",
-    "DESCRIPTION": "Trigger all effects that happen at the start of your turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Trigger all effects that happen at the start of your turn. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Too... Late..."
-    ]
+    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain !B! Block. NL Trigger all effects that happen at the start of your turn. NL Exhaust."
   },
   "expansioncontent:DonusPower": {
     "NAME": "Donu's Power",
