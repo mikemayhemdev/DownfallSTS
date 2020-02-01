@@ -212,5 +212,9 @@
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Gain [E] equal to its cost."
+  },
+  "sneckomod:DiceBlock": {
+    "NAME": "Dice Block",
+    "DESCRIPTION": "Gain 1 - !B! Block. NL Maximum Block is increased by 1 for each sneckomod:Unknown card you started combat with."
   }
 }
