@@ -32,7 +32,7 @@ public class Hexaburn extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if (!upgraded) atb(new LoseHPAction(p, p, magicNumber));
+        if (!upgraded) atb(new LoseHPAction(p, p, 6));
 
         atb(new VFXAction(p, new ScreenOnFireEffect(), .2F));
         for (int i = 0; i < 6; i++) {

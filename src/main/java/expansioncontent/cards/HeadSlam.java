@@ -1,3 +1,4 @@
+/*
 package expansioncontent.cards;
 
 
@@ -54,3 +55,5 @@ public class HeadSlam extends AbstractExpansionCard {
 }
 
 
+
+*/

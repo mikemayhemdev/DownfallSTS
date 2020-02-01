@@ -17,7 +17,7 @@ import expansioncontent.expansionContentMod;
 public class YouAreMine extends AbstractExpansionCard {
     public final static String ID = makeID("YouAreMine");
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 2;
 
     public YouAreMine() {

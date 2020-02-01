@@ -22,57 +22,31 @@ import theHexaghost.util.TextureLoader;
 public class AwakenedOnePower extends AbstractPower {
     public static final String POWER_ID = expansionContentMod.makeID("AwakenedOnePower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual.png");
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual32.png");
 
-    public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
-    public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
     private AbstractMonster sourceM;
 
 
     public AwakenedOnePower(AbstractCreature owner, AbstractCreature source, int amount) {
 
-        this.name = NAME;
 
+        this.name = "Dark Ritual";
         this.ID = POWER_ID;
-
-
-        this.owner = owner;
-
-        this.source = source;
-        sourceM = (AbstractMonster) owner;
-
-
+        this.owner = AbstractDungeon.player;
+        this.amount = amount;
+        this.type = PowerType.DEBUFF;
+        this.isTurnBased = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        this.type = POWER_TYPE;
+        this.updateDescription();
 
-        this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
-
-        updateDescription();
-
+        sourceM = (AbstractMonster) owner;
     }
 
-    /*
-    public void onExhaust(AbstractCard card) {
-        if (card.cost == 0) {
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));
-        }
 
-    }
-    */
-
-    
     
     public void atStartOfTurn() {
         if (this.sourceM.intent == AbstractMonster.Intent.ATTACK || this.sourceM.intent == AbstractMonster.Intent.ATTACK_BUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEBUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEFEND){
@@ -88,13 +62,9 @@ public class AwakenedOnePower extends AbstractPower {
 
         }
 
+    @Override
     public void updateDescription() {
-
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-
-
-
-
+        description = "When you would die, heal " + amount + " HP and remove this effect.";
     }
 
 

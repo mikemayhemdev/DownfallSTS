@@ -31,8 +31,7 @@ public class DecasProtection extends AbstractExpansionCard {
         if (upgraded) atb(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
-        // c.modifyCostForTurn(this.magicNumber * -1);
-        c.setCostForTurn(c.cost + (this.magicNumber * -1));
+        c.setCostForTurn(0);
         atb(new MakeTempCardInHandAction(c, true));
 
 
