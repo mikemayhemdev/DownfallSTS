@@ -14,19 +14,12 @@ import expansioncontent.expansionContentMod;
 public class DonusPower extends AbstractExpansionCard {
     public final static String ID = makeID("DonusPower");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
-
     public DonusPower() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
+        tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
 
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -45,7 +38,8 @@ public class DonusPower extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 
