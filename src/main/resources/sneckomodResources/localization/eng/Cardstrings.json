@@ -187,6 +187,10 @@
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
-    "DESCRIPTION": "Discard your hand. NL Draw 5-10 cards."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards."
+  },
+  "sneckomod:GlitteringGambit": {
+    "NAME": "Glittering Gambit",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Set your gold to !M! % - 120 % of its current amount. NL Exhaust."
   }
 }
