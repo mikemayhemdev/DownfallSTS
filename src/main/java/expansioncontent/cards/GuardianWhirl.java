@@ -30,7 +30,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
 
         atb(new SFXAction("ATTACK_WHIRLWIND"));
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             atb(new SFXAction("ATTACK_HEAVY"));
 
             atb(new VFXAction(p, new CleaveEffect(), 0.1F));

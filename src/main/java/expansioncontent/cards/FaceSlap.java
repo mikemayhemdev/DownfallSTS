@@ -1,4 +1,4 @@
-/*
+
 package expansioncontent.cards;
 
 
@@ -52,4 +52,3 @@ public class FaceSlap extends AbstractExpansionCard {
 
 }
 
-*/

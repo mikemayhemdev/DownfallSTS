@@ -29,7 +29,7 @@ public class DonusPower extends AbstractExpansionCard {
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
         // c.modifyCostForTurn(this.magicNumber * -1);
-        c.setCostForTurn(c.cost + (this.magicNumber * -1));
+        c.setCostForTurn(0);
         atb(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
 
 

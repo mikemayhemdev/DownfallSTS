@@ -26,7 +26,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 5;
+    private static final int COST = 4;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -45,7 +45,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseDamage = 50;
+        this.baseDamage = 35;
         this.exhaust = true;
         this.isEthereal = true;
 

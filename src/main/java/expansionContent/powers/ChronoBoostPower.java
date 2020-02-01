@@ -51,7 +51,7 @@ public class ChronoBoostPower extends TwoAmountPower implements CloneablePowerIn
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         super.onPlayCard(card, m);
-        if (this.amount2 == 12){
+        if (this.amount2 == 11){
             this.amount2=0;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
 

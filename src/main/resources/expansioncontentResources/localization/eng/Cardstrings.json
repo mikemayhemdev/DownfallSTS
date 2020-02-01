@@ -13,7 +13,7 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Ghost Inferno",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Lose !M! HP. NL Deal !D! damage a random enemy 6 times. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Lose 6 HP. NL Deal !D! damage a random enemy 6 times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
   },
   "expansioncontent:Sear": {
@@ -87,18 +87,30 @@
   },
   "expansioncontent:DonusPower": {
     "NAME": "Donu's Power",
-    "DESCRIPTION": "Gain 1 Strength. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Strength. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
   },
   "expansioncontent:DecasProtection": {
     "NAME": "Deca's Protection",
-    "DESCRIPTION": "Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Poly Beam",
-    "DESCRIPTION": "Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
+  },
+  "expansioncontent:PrepareCrush": {
+    "NAME": "Prepare Crush",
+    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add SLIME CRUSH to your hand. NL Exhaust."
+  },
+  "expansioncontent:GoopSpray": {
+    "NAME": "Goop Spray",
+    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and !M! Poison to ALL enemies. NL Exhaust."
+  },
+  "expansioncontent:SlimeTackle": {
+    "NAME": "Slime Tackle",
+    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Deal !D! damage and 3 damage to yourself. NL Exhaust."
   },
   "expansioncontent:StudyAutomaton": {
     "NAME": "Study Automaton",
