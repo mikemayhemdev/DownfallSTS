@@ -17,7 +17,7 @@ public class ImprovisedAttack extends AbstractSneckoCard {
     private static final int UPG_DAMAGE = 3;
 
     public ImprovisedAttack() {
-        super(ID, "Beta",1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
 

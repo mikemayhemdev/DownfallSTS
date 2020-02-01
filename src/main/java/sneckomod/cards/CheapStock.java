@@ -11,7 +11,7 @@ public class CheapStock extends AbstractSneckoCard {
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
     public CheapStock() {
-        super(ID, "Beta", 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

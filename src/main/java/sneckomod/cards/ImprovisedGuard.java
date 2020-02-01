@@ -16,7 +16,7 @@ public class ImprovisedGuard extends AbstractSneckoCard {
     private static final int UPG_BLOCK = 3;
 
     public ImprovisedGuard() {
-        super(ID, "Beta",1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
     }
 

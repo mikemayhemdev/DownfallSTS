@@ -12,7 +12,7 @@ public class UnlimitedRolls extends AbstractSneckoCard {
     //stupid intellij stuff POWER, SELF, RARE
 
     public UnlimitedRolls() {
-        super(ID, "Beta", 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID,  1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         AbstractCard q = new SoulRoll();
         q.exhaust = true;
         q.rawDescription = q.rawDescription + " NL Exhaust.";
