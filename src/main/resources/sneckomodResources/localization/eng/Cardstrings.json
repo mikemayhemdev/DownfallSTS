@@ -204,5 +204,9 @@
   "sneckomod:DangerNoodle": {
     "NAME": "Danger Noodle",
     "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
+  },
+  "sneckomod:SerpentIdol": {
+    "NAME": "Serpent Idol",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to add into your hand. NL It costs 0 this turn. NL Exhaust."
   }
 }
