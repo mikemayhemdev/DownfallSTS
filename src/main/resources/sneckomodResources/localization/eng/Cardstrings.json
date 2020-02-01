@@ -184,5 +184,9 @@
     "NAME": "Cheat",
     "DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number."
+  },
+  "sneckomod:Restock": {
+    "NAME": "Restock",
+    "DESCRIPTION": "Discard your hand. NL Draw 5-10 cards."
   }
 }
