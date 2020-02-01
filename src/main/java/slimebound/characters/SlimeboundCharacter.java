@@ -171,7 +171,7 @@ public class SlimeboundCharacter extends CustomPlayer {
         float xStartOffset = this.drawX + (float) Settings.scale * -230F;
         float yStartOffset = this.drawY + (float) Settings.scale;
         float ySpaceBottomAlternatingOffset = -70 * Settings.scale;
-        float ySpaceAlternatingOffset = -30 * Settings.scale;
+        float ySpaceAlternatingOffset = -10 * Settings.scale;
         float xSpaceBetweenSlots = 50 * Settings.scale;
         float xSpaceBottomAlternatingOffset = -0.2F * Settings.scale;
 
@@ -189,12 +189,12 @@ public class SlimeboundCharacter extends CustomPlayer {
 
         orbPositionsY[0] = yStartOffset + ySpaceBottomAlternatingOffset;
         orbPositionsY[1] = yStartOffset;
-        orbPositionsY[2] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[3] = yStartOffset;
+        orbPositionsY[2] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
+        orbPositionsY[3] = yStartOffset + ySpaceAlternatingOffset;
         orbPositionsY[4] = yStartOffset + ySpaceBottomAlternatingOffset;
         orbPositionsY[5] = yStartOffset;
-        orbPositionsY[6] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[7] = yStartOffset;
+        orbPositionsY[6] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
+        orbPositionsY[7] = yStartOffset + ySpaceAlternatingOffset;
         orbPositionsY[8] = yStartOffset + ySpaceBottomAlternatingOffset;
         orbPositionsY[9] = yStartOffset;
 
