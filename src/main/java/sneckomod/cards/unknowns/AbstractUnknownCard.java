@@ -83,7 +83,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
 
         if (this.upgraded) cUnknown.upgrade();
-        cUnknown.name = this.name;
+        cUnknown.name = this.getClass().getSimpleName().replaceAll("([^_])([A-Z])", "$1 $2");
         if (cUnknown != null) {
             p.drawPile.removeCard(this);
             AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);

@@ -233,8 +233,12 @@
     "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown Dexterity Card."
   },
-  "sneckomod:UnknownDraw": {
+  "sneckomod:UnknownWeak": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Draw Card."
+    "DESCRIPTION": "sneckomod:Unknown Weak Card."
+  },
+  "sneckomod:UnknownVulnerable": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Vulnerable Card."
   }
 }

@@ -1,19 +1,20 @@
 package sneckomod.cards.unknowns;
 
 import com.evacipated.cardcrawl.modthespire.Loader;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
 
 import java.util.function.Predicate;
 
-public class UnknownDraw extends AbstractUnknownCard {
-    public final static String ID = makeID("UnknownDraw");
+public class UnknownVulnerable extends AbstractUnknownCard {
+    public final static String ID = makeID("UnknownVulnerable");
 
-    public UnknownDraw() {
+    public UnknownVulnerable() {
         super(ID, CardType.SKILL, CardRarity.COMMON);
     }
 
@@ -45,7 +46,7 @@ public class UnknownDraw extends AbstractUnknownCard {
                                 parent = parent.getSuperclass();
                             } while (parent != null && !parent.getName().equals(AbstractPower.class.getName()));
                             if (parent != null && parent.getName().equals(AbstractPower.class.getName())) {
-                                if (ctConstructor.getDeclaringClass().getName().equals(DrawCardAction.class.getName()))
+                                if (ctConstructor.getDeclaringClass().getName().equals(VulnerablePower.class.getName()))
                                     bruh = true;
                             }
                         }
