@@ -208,5 +208,9 @@
   "sneckomod:SerpentIdol": {
     "NAME": "Serpent Idol",
     "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to add into your hand. NL It costs 0 this turn. NL Exhaust."
+  },
+  "sneckomod:TrashToTreasure": {
+    "NAME": "Trash to Treasure",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Gain [E] equal to its cost."
   }
 }
