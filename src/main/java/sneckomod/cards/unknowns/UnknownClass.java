@@ -35,7 +35,7 @@ public class UnknownClass extends AbstractUnknownCard {
                 return "UnknownGuardian";
             case "SLIMEBOUND":
                 return "UnknownSlimeBoss";
-            case "GHOST_GREEN":
+            case "HEXA_GHOST_PURPLE":
                 return "UnknownHexaghost";
             default:
                 return "UnknownModded";
@@ -46,7 +46,7 @@ public class UnknownClass extends AbstractUnknownCard {
         ArrayList<AbstractPlayer> theDudes = new ArrayList<AbstractPlayer>(CardCrawlGame.characterManager.getAllCharacters());
         for (AbstractPlayer p : theDudes) {
             if (p.getCardColor() == myColor)
-                return p.getLocalizedCharacterName();
+                return p.getLocalizedCharacterName().replace("The ", "");
         }
         return "You should never see this. Report to Vex";
     }
