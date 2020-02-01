@@ -1,139 +1,104 @@
 
 skeleton.png
-size: 512,256
+size: 512,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 images/body
   rotate: false
-  xy: 2, 27
-  size: 267, 148
-  orig: 267, 148
+  xy: 2, 246
+  size: 346, 264
+  orig: 346, 264
   offset: 0, 0
   index: -1
-images/drop1
-  rotate: false
-  xy: 353, 236
-  size: 32, 18
-  orig: 32, 18
-  offset: 0, 0
-  index: -1
-images/drop2
-  rotate: true
-  xy: 369, 205
-  size: 11, 7
-  orig: 11, 7
-  offset: 0, 0
-  index: -1
-images/drop3
-  rotate: false
-  xy: 325, 167
-  size: 13, 8
-  orig: 13, 8
-  offset: 0, 0
-  index: -1
-images/eye1
-  rotate: false
-  xy: 53, 9
-  size: 11, 16
-  orig: 11, 16
-  offset: 0, 0
-  index: -1
-images/eye2
-  rotate: false
-  xy: 413, 242
-  size: 13, 12
-  orig: 13, 12
-  offset: 0, 0
-  index: -1
-images/eye3
-  rotate: false
-  xy: 271, 130
-  size: 11, 11
-  orig: 11, 11
-  offset: 0, 0
-  index: -1
-images/eye4
-  rotate: false
-  xy: 353, 204
-  size: 14, 12
-  orig: 14, 12
-  offset: 0, 0
-  index: -1
-images/eye5
-  rotate: false
-  xy: 66, 16
-  size: 11, 9
-  orig: 11, 9
-  offset: 0, 0
-  index: -1
-images/eye6
-  rotate: false
-  xy: 353, 193
-  size: 11, 9
-  orig: 11, 9
-  offset: 0, 0
-  index: -1
-images/eye7
-  rotate: false
-  xy: 428, 246
-  size: 8, 8
-  orig: 8, 8
-  offset: 0, 0
-  index: -1
-images/eyeshadow1
+images/eyeleft
   rotate: true
   xy: 2, 2
-  size: 23, 19
-  orig: 23, 19
+  size: 72, 77
+  orig: 72, 77
   offset: 0, 0
   index: -1
-images/eyeshadow2
+images/eyeright
   rotate: false
-  xy: 23, 9
-  size: 28, 16
-  orig: 28, 16
+  xy: 350, 422
+  size: 93, 88
+  orig: 93, 88
   offset: 0, 0
   index: -1
-images/eyeshadow3
+images/hat
   rotate: false
-  xy: 353, 218
-  size: 26, 16
-  orig: 26, 16
+  xy: 350, 363
+  size: 63, 57
+  orig: 63, 57
   offset: 0, 0
   index: -1
-images/eyeshadow4
+images/mouth
   rotate: false
-  xy: 271, 157
-  size: 30, 18
-  orig: 30, 18
+  xy: 2, 76
+  size: 241, 106
+  orig: 241, 106
   offset: 0, 0
   index: -1
-images/eyeshadow5
+images/mouthbottomleft
   rotate: false
-  xy: 387, 240
-  size: 24, 14
-  orig: 24, 14
+  xy: 167, 2
+  size: 53, 39
+  orig: 53, 39
   offset: 0, 0
   index: -1
-images/eyeshadow6
+images/mouthbottommiddle
   rotate: false
-  xy: 271, 143
-  size: 25, 12
-  orig: 25, 12
+  xy: 167, 43
+  size: 67, 31
+  orig: 67, 31
   offset: 0, 0
   index: -1
-images/eyeshadow7
+images/mouthbottomright
   rotate: false
-  xy: 303, 164
-  size: 20, 11
-  orig: 20, 11
+  xy: 350, 320
+  size: 58, 41
+  orig: 58, 41
+  offset: 0, 0
+  index: -1
+images/mouthleft
+  rotate: false
+  xy: 445, 430
+  size: 38, 80
+  orig: 38, 80
+  offset: 0, 0
+  index: -1
+images/mouthright
+  rotate: true
+  xy: 81, 34
+  size: 40, 84
+  orig: 40, 84
+  offset: 0, 0
+  index: -1
+images/mouthtopleft
+  rotate: true
+  xy: 302, 155
+  size: 27, 77
+  orig: 27, 77
+  offset: 0, 0
+  index: -1
+images/mouthtopmiddle
+  rotate: false
+  xy: 485, 453
+  size: 25, 57
+  orig: 25, 57
+  offset: 0, 0
+  index: -1
+images/mouthtopright
+  rotate: false
+  xy: 245, 108
+  size: 55, 74
+  orig: 55, 74
   offset: 0, 0
   index: -1
 images/shadow
   rotate: false
-  xy: 2, 177
-  size: 349, 77
-  orig: 349, 77
+  xy: 2, 184
+  size: 381, 60
+  orig: 381, 60
   offset: 0, 0
   index: -1

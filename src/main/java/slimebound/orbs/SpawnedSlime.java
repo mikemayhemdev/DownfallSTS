@@ -60,7 +60,7 @@ public abstract class SpawnedSlime
     public String[] descriptions;
     public com.badlogic.gdx.graphics.Texture intentImage;
     public boolean noEvokeBonus;
-    public float scale = 1F;
+    public float scale = 1.15F;
     public float x;
     public float y;
     public Skeleton skeleton;
@@ -99,14 +99,14 @@ public abstract class SpawnedSlime
 
     public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
 
-        this.scale = scale;
+        this.scale = scale * .85F;
         this.modelColor = modelColor;
         this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
         //this.renderBehind=true;
         SkeletonJson json = new SkeletonJson(this.atlas);
 
 
-        json.setScale(Settings.scale / scale);
+        json.setScale(Settings.scale / scale * .85F);
         SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonString));
         this.skeleton = new Skeleton(skeletonData);
         this.skeleton.setColor(Color.WHITE);

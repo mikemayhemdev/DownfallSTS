@@ -758,14 +758,6 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
 
             spritealtered = false;
         }
-        if (p instanceof SlimeboundCharacter) {
-            SlimeboundCharacter hero = (SlimeboundCharacter) p;
-            hero.leftScale = 0.15F;
-
-            ((SlimeboundCharacter) AbstractDungeon.player).xStartOffset = (float) Settings.WIDTH * 0.23F;
-            ((SlimeboundCharacter) AbstractDungeon.player).initializeSlotPositions();
-
-        }
 
         ArrayList<AbstractOrb> slimes = new ArrayList<>();
 
