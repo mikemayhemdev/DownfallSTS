@@ -10,7 +10,7 @@ import sneckomod.SneckoMod;
 public class MuddleHandAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    public MuddleHandAction() {
+    public  MuddleHandAction() {
         this.actionType = ActionType.CARD_MANIPULATION;// 14
         this.p = AbstractDungeon.player;// 15
         this.duration = Settings.ACTION_DUR_FAST;// 16

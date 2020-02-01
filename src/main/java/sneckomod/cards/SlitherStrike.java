@@ -26,6 +26,7 @@ public class SlitherStrike extends AbstractSneckoCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 for (AbstractCard q : p.hand.group) {
                     if (q.color != TheSnecko.Enums.SNECKO_CYAN) {
                         q.modifyCostForCombat(-1);

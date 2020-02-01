@@ -40,8 +40,7 @@ public class SneckoMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        EditCharactersSubscriber,
-        PostDungeonInitializeSubscriber {
+        EditCharactersSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulder2.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -129,6 +128,13 @@ public class SneckoMod implements
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
+            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
+                AbstractCard q = new UnknownClass(p);
+                BaseMod.addCard(q);
+                UnlockTracker.markCardAsSeen(q.cardID);
+            }
+        }
     }
 
     private static void autoAddCards()
@@ -199,16 +205,6 @@ public class SneckoMod implements
                 BaseMod.addKeyword(getModID() + "", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
-    }
-
-    @Override
-    public void receivePostDungeonInitialize() {
-        if (AbstractDungeon.player instanceof TheSnecko && !CardCrawlGame.loadingSave)
-            for (int i = 0; i < 8; i++) {
-                AbstractCard q = new UnknownClass(UnknownClass.getRandomCardColor());
-                AbstractDungeon.uncommonCardPool.addToTop(q);
-                AbstractDungeon.srcUncommonCardPool.addToTop(q);
-            }
     }
 
     public static AbstractCard getOffClassCard() {
