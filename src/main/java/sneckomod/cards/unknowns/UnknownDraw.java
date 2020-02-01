@@ -1,20 +1,20 @@
 package sneckomod.cards.unknowns;
 
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
 
 import java.util.function.Predicate;
 
-public class UnknownDexterity extends AbstractUnknownCard {
-    public final static String ID = makeID("UnknownDexterity");
+public class UnknownDraw extends AbstractUnknownCard {
+    public final static String ID = makeID("UnknownDraw");
 
-    public UnknownDexterity() {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+    public UnknownDraw() {
+        super(ID, CardType.SKILL, CardRarity.COMMON);
     }
 
     public static boolean bruh = false;
@@ -45,7 +45,7 @@ public class UnknownDexterity extends AbstractUnknownCard {
                                 parent = parent.getSuperclass();
                             } while (parent != null && !parent.getName().equals(AbstractPower.class.getName()));
                             if (parent != null && parent.getName().equals(AbstractPower.class.getName())) {
-                                if (ctConstructor.getDeclaringClass().getName().equals(DexterityPower.class.getName()))
+                                if (ctConstructor.getDeclaringClass().getName().equals(DrawCardAction.class.getName()))
                                     bruh = true;
                             }
                         }

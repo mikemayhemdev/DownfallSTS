@@ -233,8 +233,8 @@
     "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown Dexterity Card."
   },
-  "sneckomod:UnknownColorless": {
+  "sneckomod:UnknownDraw": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Colorless Card."
+    "DESCRIPTION": "sneckomod:Unknown Draw Card."
   }
 }

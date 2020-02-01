@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import javassist.*;
 import javassist.expr.ExprEditor;
-import javassist.expr.FieldAccess;
 import javassist.expr.NewExpr;
 
 import java.util.function.Predicate;
@@ -20,7 +19,7 @@ public class UnknownStrength extends AbstractUnknownCard {
 
     public static boolean bruh = false;
 
-    public boolean checkStrength(AbstractCard card) {
+    public boolean useCheck(AbstractCard card) {
         bruh = false;
         try {
             ClassPool pool = Loader.getClassPool();
@@ -62,6 +61,6 @@ public class UnknownStrength extends AbstractUnknownCard {
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return this::checkStrength;
+        return this::useCheck;
     }
 }
