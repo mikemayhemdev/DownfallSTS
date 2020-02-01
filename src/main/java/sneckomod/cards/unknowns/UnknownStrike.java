@@ -9,6 +9,7 @@ public class UnknownStrike extends AbstractUnknownCard {
 
     public UnknownStrike() {
         super(ID, CardType.ATTACK, CardRarity.UNCOMMON);
+        tags.add(CardTags.STRIKE);
     }
 
     @Override

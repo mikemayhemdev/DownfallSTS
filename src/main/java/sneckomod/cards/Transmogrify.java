@@ -17,6 +17,7 @@ public class Transmogrify extends AbstractSneckoCard {
     public Transmogrify() {
         super(ID, "Beta",1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

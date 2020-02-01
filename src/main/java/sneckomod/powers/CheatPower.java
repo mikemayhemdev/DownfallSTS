@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.TextureLoader;
 
@@ -20,8 +21,8 @@ public class CheatPower extends AbstractPower implements CloneablePowerInterface
 
     public static final String POWER_ID = SneckoMod.makeID("CheatPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/Enhance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public CheatPower(final int amount) {
         this.name = "Cheating";

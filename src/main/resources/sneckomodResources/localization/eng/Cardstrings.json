@@ -216,5 +216,13 @@
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
     "DESCRIPTION": "Gain 1 - !B! Block. NL Maximum Block is increased by 1 for each sneckomod:Unknown card you started combat with."
+  },
+  "sneckomod:MixItUp": {
+    "NAME": "Mix It Up!",
+    "DESCRIPTION": "Deal !D! damage for each of your Potions. NL Lose your Potions and replace them with new ones. NL Exhaust."
+  },
+  "sneckomod:MorePower": {
+    "NAME": "More Power!",
+    "DESCRIPTION": "Obtain an additional Upgraded sneckomod:Unknown card reward at the end of combat."
   }
 }

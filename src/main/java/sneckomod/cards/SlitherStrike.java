@@ -18,6 +18,7 @@ public class SlitherStrike extends AbstractSneckoCard {
     public SlitherStrike() {
         super(ID, "Beta", 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

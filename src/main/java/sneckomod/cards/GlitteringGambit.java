@@ -20,6 +20,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
