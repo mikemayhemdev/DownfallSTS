@@ -192,5 +192,17 @@
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
     "DESCRIPTION": "sneckomod:Snekproof. NL Set your gold to !M! % - 120 % of its current amount. NL Exhaust."
+  },
+  "sneckomod:Transmogrify": {
+    "NAME": "Transmogrify",
+    "DESCRIPTION": "Lose a random Relic. NL Obtain a random Relic at the same rarity. NL Exhaust."
+  },
+  "sneckomod:DefensiveFlair": {
+    "NAME": "Defensive Flair",
+    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
+  },
+  "sneckomod:DangerNoodle": {
+    "NAME": "Danger Noodle",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
   }
 }
