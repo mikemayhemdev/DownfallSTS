@@ -1,16 +1,11 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import expansioncontent.expansionContentMod;
-import slimebound.powers.NextTurnGainStrengthPower;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.AdvanceAction;
 import theHexaghost.powers.EnhancePower;
 
 public class GhostWheel extends AbstractExpansionCard {
@@ -32,12 +27,10 @@ public class GhostWheel extends AbstractExpansionCard {
         if (HexaMod.renderFlames) {
 
             atb(new ApplyPowerAction(p, p, new EnhancePower(1), 1));
-        }
-            else {
+        } else {
 
-            atb(new AdvanceAction());
+            HexaMod.renderFlames = true;
         }
-
 
 
     }

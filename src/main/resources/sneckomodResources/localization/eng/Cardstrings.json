@@ -224,5 +224,9 @@
   "sneckomod:MorePower": {
     "NAME": "More Power!",
     "DESCRIPTION": "Obtain an additional Upgraded sneckomod:Unknown card reward at the end of combat."
+  },
+  "sneckomod:UnknownStrength": {
+    "NAME": "???",
+    "DESCRIPTION": "sneckomod:Unknown Strength Card."
   }
 }

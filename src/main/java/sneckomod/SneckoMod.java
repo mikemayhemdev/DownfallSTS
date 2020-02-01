@@ -213,19 +213,19 @@ public class SneckoMod implements
 
     public static AbstractCard getOffClassCard() {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN);
+        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.hasTag(AbstractCard.CardTags.HEALING)));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color == TheSnecko.Enums.SNECKO_CYAN || !q.test(c));
+        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING)));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color != color);
+        possList.removeIf(c -> c.color != color || c.hasTag(AbstractCard.CardTags.HEALING));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 }

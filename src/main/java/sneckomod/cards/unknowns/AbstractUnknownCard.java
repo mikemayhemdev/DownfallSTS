@@ -77,7 +77,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         AbstractCard cUnknown;
         if (tmp.size() > 0) {
-            cUnknown = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+            cUnknown = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeStatEquivalentCopy();
         } else {
             cUnknown = new com.megacrit.cardcrawl.cards.colorless.Madness();
         }
