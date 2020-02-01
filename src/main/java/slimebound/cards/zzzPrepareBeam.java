@@ -1,3 +1,4 @@
+/*
 package slimebound.cards;
 
 
@@ -75,3 +76,5 @@ public class zzzPrepareBeam extends AbstractSlimeboundCard {
 }
 
 
+
+*/

@@ -19,28 +19,21 @@ import slimebound.powers.PotencyPower;
 public class DarkVoid extends AbstractExpansionCard {
     public final static String ID = makeID("DarkVoid");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int DAMAGE = 12;
+    private static final int UPGRADE_DAMAGE = 4;
 
     public DarkVoid() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
         tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         tags.add(expansionContentMod.STUDY);
 
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        atb(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
-        atb(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        atb(new ApplyPowerAction(p, p, new PotencyPower(p, p, 1), 1));
 
         atb(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, new Color(0.1F, 0.0F, 0.2F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
         atb(new com.megacrit.cardcrawl.actions.utility.SFXAction("ATTACK_HEAVY"));
@@ -65,7 +58,7 @@ public class DarkVoid extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeDamage(UPGRADE_DAMAGE);
         }
     }
 

@@ -17,20 +17,16 @@ import expansioncontent.expansionContentMod;
 public class YouAreMine extends AbstractExpansionCard {
     public final static String ID = makeID("YouAreMine");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int MAGIC = 2;
+    private static final int UPGRADE_MAGIC = 2;
 
     public YouAreMine() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
+        tags.add(expansionContentMod.STUDY_COLLECTOR);
         tags.add(expansionContentMod.STUDY);
 
-        baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
-        this.isMultiDamage = true;
         this.exhaust = true;
     }
 
@@ -59,7 +55,7 @@ public class YouAreMine extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeBlock(UPGRADE_MAGIC);
         }
     }
 

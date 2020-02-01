@@ -13,20 +13,16 @@ import slimebound.actions.TriggerStartOfTurnEffectsAction;
 public class ManipulateTime extends AbstractExpansionCard {
     public final static String ID = makeID("ManipulateTime");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int BLOCK = 10;
+    private static final int UPGRADE_BLOCK = 4;
 
     public ManipulateTime() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
+        tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
 
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        this.isMultiDamage = true;
         this.exhaust = true;
     }
 
@@ -37,14 +33,9 @@ public class ManipulateTime extends AbstractExpansionCard {
         CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
         AbstractDungeon.topLevelEffectsQueue.add(new com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect());
+        atb(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
 
         atb(new TriggerStartOfTurnEffectsAction(p));
-        if (upgraded){
-
-            // atb(new TriggerStartOfTurnEffectsAction(p));
-            atb(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
-
-        }
 
     }
 
