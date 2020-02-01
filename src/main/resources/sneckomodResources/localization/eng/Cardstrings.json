@@ -196,5 +196,9 @@
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
     "DESCRIPTION": "Lose a random Relic. NL Obtain a random Relic at the same rarity. NL Exhaust."
+  },
+  "sneckomod:DefensiveFlair": {
+    "NAME": "Defensive Flair",
+    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
   }
 }
