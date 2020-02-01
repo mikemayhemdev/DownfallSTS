@@ -60,7 +60,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     public boolean moved = false;
     public boolean foughtSlimeBoss;
     public float leftScale = 0.15F;
-    public float xStartOffset = (float) Settings.WIDTH * 0.23F;
+    public float xStartOffset = (float) Settings.WIDTH * 0.35F;
     public boolean puddleForm;
     public float[] orbPositionsX = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     public float[] orbPositionsY = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -73,12 +73,12 @@ public class SlimeboundCharacter extends CustomPlayer {
         super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String) null, (String) null);
 
 
-        this.initializeClass((String) null, "slimeboundResources/SlimeboundImages/char/shoulder2.png", "slimeboundResources/SlimeboundImages/char/shoulder.png", "slimeboundResources/SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F, 300.0F, 180.0F, new EnergyManager(3));
+        this.initializeClass((String) null, "slimeboundResources/SlimeboundImages/char/shoulder2.png", "slimeboundResources/SlimeboundImages/char/shoulder.png", "slimeboundResources/SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
         this.reloadAnimation();
 
 
         // this.dialogX = -200 * Settings.scale;
-        this.dialogY += -100 * Settings.scale;
+        //this.dialogY += -100 * Settings.scale;
         initializeSlotPositions();
 
     }
@@ -130,7 +130,7 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public void reloadAnimation() {
         this.loadAnimation(atlasURL, this.currentJson, renderscale);
-        TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
 
@@ -264,15 +264,16 @@ public class SlimeboundCharacter extends CustomPlayer {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        if (!this.moved) this.movePosition((float) Settings.WIDTH * this.leftScale, AbstractDungeon.floorY);
-        this.moved = true;
+       // if (!this.moved) this.movePosition((float) Settings.WIDTH * this.leftScale, AbstractDungeon.floorY);
+       // this.moved = true;
 
 
-        this.hatX = this.skeleton.findBone("eyeback1").getX();
-        this.hatY = this.skeleton.findBone("eyeback1").getY();
+        //this.hatX = this.skeleton.findBone("eyeback1").getX();
+        //this.hatY = this.skeleton.findBone("eyeback1").getY();
 
     }
 
+    /*
     @SpireOverride
     public void renderPowerIcons(SpriteBatch sb, float x, float y) {
         float offset = 10.0F;
@@ -304,6 +305,7 @@ public class SlimeboundCharacter extends CustomPlayer {
             }
         }
     }
+    */
 
 }
 
