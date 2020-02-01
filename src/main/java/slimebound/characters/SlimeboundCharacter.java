@@ -41,11 +41,10 @@ public class SlimeboundCharacter extends CustomPlayer {
     public static final String[] orbTextures = {"slimeboundResources/SlimeboundImages/char/orb/layer1.png", "slimeboundResources/SlimeboundImages/char/orb/layer2.png", "slimeboundResources/SlimeboundImages/char/orb/layer3.png", "slimeboundResources/SlimeboundImages/char/orb/layer4.png", "slimeboundResources/SlimeboundImages/char/orb/layer5.png", "slimeboundResources/SlimeboundImages/char/orb/layer6.png", "slimeboundResources/SlimeboundImages/char/orb/layer1d.png", "slimeboundResources/SlimeboundImages/char/orb/layer2d.png", "slimeboundResources/SlimeboundImages/char/orb/layer3d.png", "slimeboundResources/SlimeboundImages/char/orb/layer4d.png", "slimeboundResources/SlimeboundImages/char/orb/layer5d.png"};
     private static final CharacterStrings charStrings;
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
-    private static float xSpaceBetweenSlots = 90 * Settings.scale;
-    private static float xSpaceBottomAlternatingOffset = 0 * Settings.scale;
-    private static float yStartOffset = AbstractDungeon.floorY + (100 * Settings.scale);
-    private static float ySpaceBottomAlternatingOffset = -100 * Settings.scale;
-    private static float ySpaceAlternatingOffset = -50 * Settings.scale;
+
+    private static float mainRenderYOffset = 90 * Settings.scale;
+
+
 
     static {
         charStrings = CardCrawlGame.languagePack.getCharacterString("Slimebound");
@@ -54,13 +53,14 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     }
 
-    public float renderscale = 1.0F;
+    public float renderscale = 1.2F;
     public float hatX;
     public float hatY;
     public boolean moved = false;
     public boolean foughtSlimeBoss;
-    public float leftScale = 0.15F;
-    public float xStartOffset = (float) Settings.WIDTH * 0.35F;
+    public float leftScale = 0.2F;
+    public float xJumpCharOffset = (float) Settings.WIDTH * 0.21F;
+    public float x = (float) Settings.WIDTH * 0.1F;
     public boolean puddleForm;
     public float[] orbPositionsX = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     public float[] orbPositionsY = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -72,14 +72,15 @@ public class SlimeboundCharacter extends CustomPlayer {
     public SlimeboundCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String) null, (String) null);
 
-
         this.initializeClass((String) null, "slimeboundResources/SlimeboundImages/char/shoulder2.png", "slimeboundResources/SlimeboundImages/char/shoulder.png", "slimeboundResources/SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
+
         this.reloadAnimation();
 
 
+        this.initializeSlotPositions();
         // this.dialogX = -200 * Settings.scale;
         //this.dialogY += -100 * Settings.scale;
-        initializeSlotPositions();
+        //initializeSlotPositions();
 
     }
 
@@ -136,6 +137,14 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     }
 
+    public void movePosition(float x, float y) {
+        super.movePosition(x,y);
+        float dialogOffsetY = this.dialogY - this.drawY + mainRenderYOffset;
+        this.drawY = this.drawY + mainRenderYOffset;
+        this.dialogY = this.drawY + dialogOffsetY;
+        this.refreshHitboxLocation();
+    }
+
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList();
         retVal.add(Strike_Slimebound.ID);
@@ -159,27 +168,36 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void initializeSlotPositions() {
-        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 1);
-        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
-        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 2) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 3);
-        orbPositionsX[5] = xStartOffset + (xSpaceBetweenSlots * 3) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[6] = xStartOffset + (xSpaceBetweenSlots * 4);
-        orbPositionsX[7] = xStartOffset + (xSpaceBetweenSlots * 4) + xSpaceBottomAlternatingOffset;
-        orbPositionsX[8] = xStartOffset + (xSpaceBetweenSlots * 5);
-        orbPositionsX[9] = xStartOffset + (xSpaceBetweenSlots * 5) + xSpaceBottomAlternatingOffset;
+        float xStartOffset = this.drawX + (float) Settings.scale * -230F;
+        float yStartOffset = this.drawY + (float) Settings.scale;
+        float ySpaceBottomAlternatingOffset = -70 * Settings.scale;
+        float ySpaceAlternatingOffset = -30 * Settings.scale;
+        float xSpaceBetweenSlots = 50 * Settings.scale;
+        float xSpaceBottomAlternatingOffset = -0.2F * Settings.scale;
 
-        orbPositionsY[0] = yStartOffset;
-        orbPositionsY[1] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[2] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[3] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
-        orbPositionsY[4] = yStartOffset;
-        orbPositionsY[5] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[6] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[7] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
-        orbPositionsY[8] = yStartOffset;
-        orbPositionsY[9] = yStartOffset + ySpaceBottomAlternatingOffset;
+
+        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 0);
+        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1);
+        orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
+        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 3);
+        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 4);
+        orbPositionsX[5] = xStartOffset + (xSpaceBetweenSlots * 5);
+        orbPositionsX[6] = xStartOffset + (xSpaceBetweenSlots * 6);
+        orbPositionsX[7] = xStartOffset + (xSpaceBetweenSlots * 7);
+        orbPositionsX[8] = xStartOffset + (xSpaceBetweenSlots * 8);
+        orbPositionsX[9] = xStartOffset + (xSpaceBetweenSlots * 9);
+
+        orbPositionsY[0] = yStartOffset + ySpaceBottomAlternatingOffset;
+        orbPositionsY[1] = yStartOffset;
+        orbPositionsY[2] = yStartOffset + ySpaceBottomAlternatingOffset;
+        orbPositionsY[3] = yStartOffset;
+        orbPositionsY[4] = yStartOffset + ySpaceBottomAlternatingOffset;
+        orbPositionsY[5] = yStartOffset;
+        orbPositionsY[6] = yStartOffset + ySpaceBottomAlternatingOffset;
+        orbPositionsY[7] = yStartOffset;
+        orbPositionsY[8] = yStartOffset + ySpaceBottomAlternatingOffset;
+        orbPositionsY[9] = yStartOffset;
+
     }
 
     public CharSelectInfo getLoadout() {
@@ -261,51 +279,7 @@ public class SlimeboundCharacter extends CustomPlayer {
         }
     }
 
-    @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
-       // if (!this.moved) this.movePosition((float) Settings.WIDTH * this.leftScale, AbstractDungeon.floorY);
-       // this.moved = true;
 
-
-        //this.hatX = this.skeleton.findBone("eyeback1").getX();
-        //this.hatY = this.skeleton.findBone("eyeback1").getY();
-
-    }
-
-    /*
-    @SpireOverride
-    public void renderPowerIcons(SpriteBatch sb, float x, float y) {
-        float offset = 10.0F;
-        int powersIterated = 0;
-        float YOffset = 0;
-        Iterator var5;
-        AbstractPower p;
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
-            p = (AbstractPower) var5.next();
-            p.renderIcons(sb, x + (offset * Settings.scale), y + ((-48.0F + YOffset) * Settings.scale), Color.WHITE);
-            powersIterated++;
-            if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F;
-                offset = -38.0F;
-            }
-        }
-
-        offset = 0.0F;
-        powersIterated = 0;
-        YOffset = 0.0F;
-
-        for (var5 = this.powers.iterator(); var5.hasNext(); offset += 48.0F) {
-            p = (AbstractPower) var5.next();
-            p.renderAmount(sb, x + ((offset + 32.0F) * Settings.scale), y + ((-66.0F + YOffset) * Settings.scale), Color.WHITE);
-            powersIterated++;
-            if (powersIterated == 9 || powersIterated == 18) {
-                YOffset += -42F;
-                offset = -48.0F;
-            }
-        }
-    }
-    */
 
 }
 
