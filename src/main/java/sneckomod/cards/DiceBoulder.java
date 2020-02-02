@@ -4,8 +4,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.CardIgnore;
 import sneckomod.actions.RandomDamageAction;
 
+@CardIgnore
 public class DiceBoulder extends AbstractSneckoCard {
 
     public final static String ID = makeID("DiceBoulder");
@@ -16,7 +18,7 @@ public class DiceBoulder extends AbstractSneckoCard {
     private static final int MAGIC = 1;
 
     public DiceBoulder(int eugene) {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, "Beta",2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         timesUpgraded = eugene;

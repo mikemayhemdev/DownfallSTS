@@ -71,6 +71,8 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                         validCard = false;
                     }
                 }
+                if (c.type == CardType.STATUS || c.color == CardColor.CURSE || c.type == CardType.CURSE)
+                    validCard = false;
                 if (validCard) tmp.add(c.cardID);
             }
         }
