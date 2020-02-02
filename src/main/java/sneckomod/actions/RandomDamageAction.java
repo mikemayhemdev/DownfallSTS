@@ -17,14 +17,14 @@ public class RandomDamageAction extends AbstractGameAction {
     private int min;
     private int max;
 
-    public RandomDamageAction(AbstractCreature target, int min, int max, int numTimes) {
+    public RandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx) {
         this.min = min;
         this.max = max;
         int dmg = AbstractDungeon.miscRng.random(min, max);
         this.info = new DamageInfo(AbstractDungeon.player, dmg);
         this.target = target;
         this.actionType = AbstractGameAction.ActionType.DAMAGE;
-        this.attackEffect = AbstractGameAction.AttackEffect.FIRE;
+        this.attackEffect = fx;
         this.duration = DURATION;
         this.numTimes = numTimes;
     }
@@ -81,7 +81,8 @@ public class RandomDamageAction extends AbstractGameAction {
                                 AbstractDungeon.getMonsters().getRandomMonster(true),
                                 min,
                                 max,
-                                this.numTimes
+                                this.numTimes,
+                                attackEffect
                         )
                 );
             }

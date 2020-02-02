@@ -1,29 +1,29 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.actions.RandomDamageAction;
 
-public class DiceCrush extends AbstractSneckoCard {
+public class DiceBoulder extends AbstractSneckoCard {
 
-    public final static String ID = makeID("DiceCrush");
+    public final static String ID = makeID("DiceBoulder");
 
-    //stupid intellij stuff ATTACK, ENEMY, COMMON
+    //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
-
+    private static final int DAMAGE = 30;
     private static final int MAGIC = 1;
 
-    public DiceCrush() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+    public DiceBoulder(int eugene) {
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        timesUpgraded = eugene;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new RandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH));
+        atb(new RandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
     @Override
@@ -41,10 +41,22 @@ public class DiceCrush extends AbstractSneckoCard {
         super.calculateCardDamage(mo);
     }
 
+    @Override
+    public boolean canUpgrade() {
+        return true;
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return new DiceBoulder(this.timesUpgraded);
+    }
+
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-        }
+        this.upgradeDamage(4);// 49
+        upgradeMagicNumber(8);
+        ++this.timesUpgraded;// 50
+        this.upgraded = true;// 51
+        this.name = cardStrings.NAME + "+" + this.timesUpgraded;// 52
+        this.initializeTitle();// 53
     }
 }

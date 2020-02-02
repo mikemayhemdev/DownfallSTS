@@ -252,5 +252,17 @@
   "sneckomod:DiceCrush": {
     "NAME": "Dice Crush",
     "DESCRIPTION": "Deal !M! - !D! damage. NL Maximum damage is increased by 1 for each sneckomod:Unknown card you started combat with."
+  },
+  "sneckomod:SnakeSap": {
+    "NAME": "Snake Sap",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 0 - !M! [E] ."
+  },
+  "sneckomod:DiceBoulder": {
+    "NAME": "Dice Boulder",
+    "DESCRIPTION": "Deal !M! - !D! damage. NL Can be Upgraded any number of times."
+  },
+  "sneckomod:IronFang": {
+    "NAME": "Iron Fang",
+    "DESCRIPTION": "Deal !qqq! - !D! damage. NL Gain !M! - !B! Block."
   }
 }
