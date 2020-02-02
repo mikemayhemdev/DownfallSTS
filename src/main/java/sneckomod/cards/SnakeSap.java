@@ -26,6 +26,19 @@ public class SnakeSap extends AbstractSneckoCard {
     }
 
     @Override
+    public void applyPowers() {
+        int CURRENT_SILLY = baseSilly;
+        int CURRENT_DAMAGE = baseDamage;
+        baseDamage = CURRENT_SILLY;
+        super.applyPowers();
+        silly = damage;
+        isSillyModified = damage != baseDamage;
+
+        baseDamage = CURRENT_DAMAGE;
+        super.applyPowers();
+    }
+
+    @Override
     public void calculateCardDamage(final AbstractMonster m) {
         int CURRENT_SILLY = baseSilly;
         int CURRENT_DAMAGE = baseDamage;

@@ -22,8 +22,6 @@ import static theHexaghost.HexaMod.renderFlames;
 )
 public class TriggerFlamesPatch {
     public static void Prefix(CardGroup __instance, AbstractCard abstractCard) {
-        if (abstractCard.color == TheHexaghost.Enums.GHOST_GREEN)
-            renderFlames = true;
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {

@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.apache.commons.codec.binary.Hex;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import theHexaghost.HexaMod;
@@ -41,6 +40,7 @@ public class CheapStockPower extends AbstractPower implements CloneablePowerInte
             addToBot(new AbstractGameAction() {
                 @Override
                 public void update() {
+                    isDone = true;
                     int x = 999;
                     for (AbstractCard q : AbstractDungeon.player.hand.group) {
                         if (q.color != TheSnecko.Enums.SNECKO_CYAN && q.cost < x)
@@ -51,16 +51,22 @@ public class CheapStockPower extends AbstractPower implements CloneablePowerInte
                         if (q.cost == x)
                             possCardsList.add(q);
                     }
-                    AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
-                    q.modifyCostForCombat(-1);
-                    q.superFlash();
+                    if (!possCardsList.isEmpty()) {
+                        flash();
+                        AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
+                        q.modifyCostForCombat(-1);
+                        q.superFlash();
+                    }
                 }
             });
     }
 
     @Override
     public void updateDescription() {
-        description = "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b" + amount + " times.";
+        if (amount == 1)
+            description = "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b" + amount + " time.";
+        else
+            description = "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b" + amount + " times.";
     }
 
     @Override

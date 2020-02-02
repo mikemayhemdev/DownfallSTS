@@ -22,6 +22,13 @@ public class SneckoSilly extends DynamicVariable {
     }
 
     @Override
+    public void setIsModified(AbstractCard card, boolean v) {
+        if (card instanceof AbstractSneckoCard) {
+            ((AbstractSneckoCard) card).isSillyModified = v;
+        }
+    }
+
+    @Override
     public int baseValue(AbstractCard card) {
         return ((AbstractSneckoCard) card).baseSilly;
     }

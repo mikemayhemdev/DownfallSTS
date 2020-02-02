@@ -25,6 +25,21 @@ public class WideSting extends AbstractSneckoCard {
     }
 
     @Override
+    public void applyPowers() {
+        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
+        int CURRENT_DMG = baseDamage;
+        baseDamage = CURRENT_MAGIC_NUMBER;
+        super.applyPowers(); // takes baseDamage and applies things like Strength or Pen Nib to set damage
+
+        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+
+        // repeat so damage holds the second condition's damage
+        baseDamage = CURRENT_DMG;
+        super.applyPowers();
+    }
+
+    @Override
     public void calculateCardDamage(final AbstractMonster mo) {
         int CURRENT_MAGIC_NUMBER = baseMagicNumber;
         int CURRENT_DMG = baseDamage;

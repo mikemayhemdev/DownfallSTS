@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.TheSnecko;
 import sneckomod.cards.AbstractSneckoCard;
 
 import java.util.ArrayList;
@@ -65,14 +66,10 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         for (AbstractCard c : CardLibrary.getAllCards()) {
             validCard = true;
 
+            if (c.type == CardType.STATUS || c.color == CardColor.CURSE || c.type == CardType.CURSE || c.rarity == CardRarity.SPECIAL || c.color == TheSnecko.Enums.SNECKO_CYAN)
+                validCard = false;
+            if (upgraded && validCard) c.upgrade();
             if (funkyPredicate.test(c)) {
-                if (Loader.isModLoaded("Yohane")) {
-                    if (c.cardID.contains("Yohane")) {
-                        validCard = false;
-                    }
-                }
-                if (c.type == CardType.STATUS || c.color == CardColor.CURSE || c.type == CardType.CURSE)
-                    validCard = false;
                 if (validCard) tmp.add(c.cardID);
             }
         }

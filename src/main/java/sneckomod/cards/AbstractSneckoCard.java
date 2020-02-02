@@ -167,6 +167,13 @@ public abstract class AbstractSneckoCard extends CustomCard {
         return new VulnerablePower(m, i, false);
     }
 
+    @Override
+    public void resetAttributes() {
+        super.resetAttributes();
+        silly = baseSilly;
+        isSillyModified = false;
+    }
+
     public void displayUpgrades() {
         super.displayUpgrades();
         if (upgradedSilly) {
@@ -174,6 +181,8 @@ public abstract class AbstractSneckoCard extends CustomCard {
             isSillyModified = true;
         }
     }
+
+
 
     void upgradeSilly(int amount) {
         baseSilly += amount;

@@ -33,13 +33,21 @@ public class IronFang extends AbstractSneckoCard {
         super.applyPowersToBlock();
         magicNumber = block;
         isMagicNumberModified = block != baseBlock;
-
         baseBlock = CURRENT_BLOCK;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
-            if (q instanceof AbstractUnknownCard)
-                baseBlock += 1;
-        }
         super.applyPowersToBlock();
+    }
+
+    @Override
+    public void applyPowers() {
+        int CURRENT_SILLY = baseSilly;
+        int CURRENT_DAMAGE = baseDamage;
+        baseDamage = CURRENT_SILLY;
+        super.applyPowers();
+        silly = damage;
+        isSillyModified = damage != baseDamage;
+
+        baseDamage = CURRENT_DAMAGE;
+        super.applyPowers();
     }
 
     @Override
@@ -54,7 +62,6 @@ public class IronFang extends AbstractSneckoCard {
         baseDamage = CURRENT_DAMAGE;
         super.calculateCardDamage(m);
     }
-
 
     public IronFang() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

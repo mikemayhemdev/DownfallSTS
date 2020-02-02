@@ -1,13 +1,15 @@
 
 package sneckomod.cards.unknowns;
 
+import basemod.BaseMod;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen;
 import sneckomod.CardIgnore;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -23,6 +25,7 @@ public class UnknownClass extends AbstractUnknownCard {
         originalName = "???";
         if (CardCrawlGame.isInARun())
             rawDescription = "sneckomod:Unknown " + getCharName(myColor) + " Card.";
+        initializeDescription();
     }
 
     public static String determineCardImg(CardColor myColor) {

@@ -1,9 +1,12 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.actions.RandomDamageAction;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 public class DiceCrush extends AbstractSneckoCard {
 
@@ -27,6 +30,27 @@ public class DiceCrush extends AbstractSneckoCard {
     }
 
     @Override
+    public void applyPowers() {
+        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
+        int CURRENT_DMG = baseDamage;
+        baseDamage = CURRENT_MAGIC_NUMBER;
+        super.applyPowers(); // takes baseDamage and applies things like Strength or Pen Nib to set damage
+
+        magicNumber = damage; // magic number holds the first condition's modified damage, so !M! will work
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+
+        // repeat so damage holds the second condition's damage
+        baseDamage = CURRENT_DMG;
+        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+            if (q instanceof AbstractUnknownCard)
+                baseDamage += 1;
+        }
+        super.applyPowers();
+        baseDamage = CURRENT_DMG;
+        isDamageModified = baseDamage != damage;
+    }
+
+    @Override
     public void calculateCardDamage(final AbstractMonster mo) {
         int CURRENT_MAGIC_NUMBER = baseMagicNumber;
         int CURRENT_DMG = baseDamage;
@@ -38,7 +62,13 @@ public class DiceCrush extends AbstractSneckoCard {
 
         // repeat so damage holds the second condition's damage
         baseDamage = CURRENT_DMG;
+        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+            if (q instanceof AbstractUnknownCard)
+                baseDamage += 1;
+        }
         super.calculateCardDamage(mo);
+        baseDamage = CURRENT_DMG;
+        isDamageModified = baseDamage != damage;
     }
 
     public void upgrade() {
