@@ -215,7 +215,7 @@
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
-    "DESCRIPTION": "Gain 1 - !B! Block. NL Maximum Block is increased by 1 for each sneckomod:Unknown card you started combat with."
+    "DESCRIPTION": "Gain !M! - !B! Block. NL Maximum Block is increased by 1 for each sneckomod:Unknown card you started combat with."
   },
   "sneckomod:MixItUp": {
     "NAME": "Mix It Up!",
@@ -244,5 +244,13 @@
   "sneckomod:UnknownColorless": {
     "NAME": "???",
     "DESCRIPTION": "sneckomod:Unknown Colorless Card."
+  },
+  "sneckomod:RainOfDice": {
+    "NAME": "Rain of Dice",
+    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times. NL sneckomod:Muddle the next 2 - !M! cards you draw."
+  },
+  "sneckomod:DiceCrush": {
+    "NAME": "Dice Crush",
+    "DESCRIPTION": "Deal !M! - !D! damage. NL Maximum damage is increased by 1 for each sneckomod:Unknown card you started combat with."
   }
 }

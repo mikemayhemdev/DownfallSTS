@@ -24,6 +24,7 @@ import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.relics.SneckoSoul;
+import sneckomod.util.SneckoSilly;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -123,6 +124,7 @@ public class SneckoMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new SneckoSilly());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
