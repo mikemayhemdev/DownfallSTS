@@ -13,7 +13,7 @@ public class Restock extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public Restock() {
-        super(ID, "Beta", 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID,  1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
     }
 

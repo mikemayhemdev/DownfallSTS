@@ -13,7 +13,7 @@ public class PureSnecko extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public PureSnecko() {
-        super(ID, "Beta", 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID,  0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
     }
 

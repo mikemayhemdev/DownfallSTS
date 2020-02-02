@@ -20,7 +20,7 @@ public class DangerNoodle extends AbstractSneckoCard {
     private static final int UPG_DAMAGE = 3;
 
     public DangerNoodle() {
-        super(ID, "Beta", 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID,  2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
 

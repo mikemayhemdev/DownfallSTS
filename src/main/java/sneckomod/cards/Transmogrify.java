@@ -15,7 +15,7 @@ public class Transmogrify extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public Transmogrify() {
-        super(ID, "Beta",1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         tags.add(CardTags.HEALING);
     }

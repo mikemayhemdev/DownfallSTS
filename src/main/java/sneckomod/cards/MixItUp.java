@@ -19,7 +19,7 @@ public class MixItUp extends AbstractSneckoCard {
     private static final int UPG_DAMAGE = 2;
 
     public MixItUp() {
-        super(ID, "Beta", 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID,  1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(CardTags.HEALING);

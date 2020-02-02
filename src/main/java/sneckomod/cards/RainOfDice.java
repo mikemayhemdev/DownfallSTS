@@ -20,7 +20,7 @@ public class RainOfDice extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 1;
 
     public RainOfDice() {
-        super(ID, "Beta", 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
+        super(ID,  1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 2;

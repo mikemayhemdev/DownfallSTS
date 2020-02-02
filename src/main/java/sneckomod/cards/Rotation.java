@@ -22,7 +22,7 @@ public class Rotation extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 1;
 
     public Rotation() {
-        super(ID, "Beta",0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(SneckoMod.SNEKPROOF);
     }

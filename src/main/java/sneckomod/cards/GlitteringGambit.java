@@ -16,7 +16,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 5;
 
     public GlitteringGambit() {
-        super(ID, "Beta", 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID,  0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;

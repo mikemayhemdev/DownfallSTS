@@ -17,7 +17,7 @@ public class DiceBlock extends AbstractSneckoCard {
     private static final int UPG_BLOCK = 4;
 
     public DiceBlock() {
-        super(ID, "Beta", 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID,  1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 1;
     }

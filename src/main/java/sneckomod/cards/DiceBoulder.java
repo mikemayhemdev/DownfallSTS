@@ -18,7 +18,7 @@ public class DiceBoulder extends AbstractSneckoCard {
     private static final int MAGIC = 1;
 
     public DiceBoulder(int eugene) {
-        super(ID, "Beta",2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         timesUpgraded = eugene;
