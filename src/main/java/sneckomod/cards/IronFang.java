@@ -61,6 +61,7 @@ public class IronFang extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        baseSilly = silly = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

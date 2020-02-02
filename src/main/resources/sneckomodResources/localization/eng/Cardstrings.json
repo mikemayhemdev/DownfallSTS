@@ -264,5 +264,14 @@
   "sneckomod:IronFang": {
     "NAME": "Iron Fang",
     "DESCRIPTION": "Deal !qqq! - !D! damage. NL Gain !M! - !B! Block."
+  },
+  "sneckomod:Mudshield": {
+    "NAME": "Mud Shield",
+    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain 1 Block next turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain 1 Block next turn."
+  },
+  "sneckomod:WideSting": {
+    "NAME": "Wide Sting",
+    "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade and sneckomod:Muddle all sneckomod:Offclass cards in your hand."
   }
 }

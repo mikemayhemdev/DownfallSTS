@@ -136,7 +136,6 @@ public class SneckoMod implements
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
                 AbstractCard q = new UnknownClass(p);
                 BaseMod.addCard(q);
-                UnlockTracker.markCardAsSeen(q.cardID);
             }
         }
     }
