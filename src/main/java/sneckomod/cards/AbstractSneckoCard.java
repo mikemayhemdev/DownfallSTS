@@ -23,6 +23,11 @@ import static sneckomod.SneckoMod.makeCardPath;
 
 public abstract class AbstractSneckoCard extends CustomCard {
 
+    public int silly;
+    public int baseSilly;
+    public boolean upgradedSilly;
+    public boolean isSillyModified;
+
     protected final CardStrings cardStrings;
     protected final String NAME;
     protected final String DESCRIPTION;
@@ -160,5 +165,19 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
     VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedSilly) {
+            silly = baseSilly;
+            isSillyModified = true;
+        }
+    }
+
+    void upgradeSilly(int amount) {
+        baseSilly += amount;
+        silly = baseSilly;
+        upgradedSilly = true;
     }
 }

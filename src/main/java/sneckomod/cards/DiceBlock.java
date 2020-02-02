@@ -19,24 +19,29 @@ public class DiceBlock extends AbstractSneckoCard {
     public DiceBlock() {
         super(ID, "Beta", 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = getRandomNum(1, block);
+        int x = getRandomNum(magicNumber, block);
         atb(new GainBlockAction(p, x));
     }
 
-
     @Override
     protected void applyPowersToBlock() {
-        int realBaseBlock = this.baseBlock;
+        int CURRENT_MAGIC_NUMBER = baseMagicNumber;
+        int CURRENT_BLOCK = baseBlock;
+        baseBlock = CURRENT_MAGIC_NUMBER;
+        super.applyPowersToBlock();
+        magicNumber = block;
+        isMagicNumberModified = block != baseBlock;
+
+        baseBlock = CURRENT_BLOCK;
         for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
             if (q instanceof AbstractUnknownCard)
                 baseBlock += 1;
         }
         super.applyPowersToBlock();
-        this.baseBlock = realBaseBlock;// 75
-        this.isBlockModified = block != baseBlock;
     }
 
     public void upgrade() {

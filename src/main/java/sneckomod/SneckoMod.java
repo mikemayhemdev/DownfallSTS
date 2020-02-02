@@ -11,7 +11,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -22,8 +21,10 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.cards.DiceBoulder;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.relics.SneckoSoul;
+import sneckomod.util.SneckoSilly;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -123,16 +124,18 @@ public class SneckoMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new SneckoSilly());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        BaseMod.addCard(new DiceBoulder(0));
+        UnlockTracker.markCardAsSeen(DiceBoulder.ID);
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
                 AbstractCard q = new UnknownClass(p);
                 BaseMod.addCard(q);
-                UnlockTracker.markCardAsSeen(q.cardID);
             }
         }
     }
