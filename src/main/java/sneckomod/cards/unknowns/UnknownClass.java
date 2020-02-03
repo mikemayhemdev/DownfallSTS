@@ -18,12 +18,12 @@ public class UnknownClass extends AbstractUnknownCard {
         myColor = cardColor;
         name = "???";
         originalName = "???";
-        if (CardCrawlGame.isInARun())
+        if (CardCrawlGame.isInARun() || CardCrawlGame.loadingSave)
             rawDescription = "sneckomod:Unknown " + getCharName(myColor) + " Card.";
         initializeDescription();
     }
 
-    public static String determineCardImg(CardColor myColor) {
+    private static String determineCardImg(CardColor myColor) {
         switch (myColor.name()) {
             case "RED":
                 return "UnknownIronclad";
@@ -44,7 +44,7 @@ public class UnknownClass extends AbstractUnknownCard {
         }
     }
 
-    public static String getCharName(CardColor myColor) {
+    private static String getCharName(CardColor myColor) {
         ArrayList<AbstractPlayer> theDudes = new ArrayList<AbstractPlayer>(CardCrawlGame.characterManager.getAllCharacters());
         for (AbstractPlayer p : theDudes) {
             if (p.getCardColor() == myColor)
@@ -52,7 +52,6 @@ public class UnknownClass extends AbstractUnknownCard {
         }
         return "You should never see this. Report to Vex";
     }
-
 
     private CardColor myColor;
 

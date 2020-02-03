@@ -44,7 +44,8 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
             AbstractCard card = new SoulRoll();
             if (bruh) card.upgrade();
             card.exhaust = true;
-            card.rawDescription = card.rawDescription += " NL Exhaust.";
+            card.rawDescription = card.rawDescription + " NL Exhaust.";
+            card.initializeDescription();
 
             this.addToBot(new MakeTempCardInHandAction(card, 1, false));// 30 32 33
         }

@@ -24,9 +24,10 @@ public class GlitteringGambit extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = getRandomNum(magicNumber, 120) / 100;
+        int x = getRandomNum(magicNumber, 120);
         int y = AbstractDungeon.player.gold * x;
-        atb(new ChangeGoldAction(y-x));
+        int z = y / 100;
+        atb(new ChangeGoldAction(z-x));
     }
 
     public void upgrade() {

@@ -1,11 +1,14 @@
 package sneckomod.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import sneckomod.vfx.AnnouncementEffect;
 
 import java.util.ArrayList;
 
@@ -31,12 +34,17 @@ public class Transmogrify extends AbstractSneckoCard {
                 ArrayList<AbstractRelic> potentialStarters = new ArrayList<>(RelicLibrary.starterList);
                 AbstractRelic s = potentialStarters.get(AbstractDungeon.cardRandomRng.random(potentialStarters.size() - 1));
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, s.makeCopy());
+                AbstractDungeon.effectsQueue.add(new AnnouncementEffect(Color.PURPLE.cpy(), q.name + " traded for " + s.name + "!!!", 5.5F));
             } else if (q.tier == AbstractRelic.RelicTier.SPECIAL) {
                 ArrayList<AbstractRelic> potentialStarters = new ArrayList<>(RelicLibrary.specialList);
                 AbstractRelic s = potentialStarters.get(AbstractDungeon.cardRandomRng.random(potentialStarters.size() - 1));
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, s.makeCopy());
-            } else
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, AbstractDungeon.returnRandomRelic(q.tier));
+                AbstractDungeon.effectsQueue.add(new AnnouncementEffect(Color.PURPLE.cpy(), q.name + " traded for " + s.name + "!!!", 5.5F));
+            } else {
+                AbstractRelic s = AbstractDungeon.returnRandomRelic(q.tier);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, s);
+                AbstractDungeon.effectsQueue.add(new AnnouncementEffect(Color.PURPLE.cpy(), q.name + " traded for " + s.name + "!!!", 5.5F));
+            }
         }
     }
 

@@ -54,8 +54,8 @@
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Randomize the cost of cards in your hand. NL Draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
   },
   "sneckomod:PerplexingStare": {
     "NAME": "Perplexing Stare",
