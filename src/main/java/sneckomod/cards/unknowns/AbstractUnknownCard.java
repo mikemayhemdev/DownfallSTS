@@ -1,7 +1,6 @@
 package sneckomod.cards.unknowns;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
-import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -64,12 +63,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         ArrayList<String> tmp = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            validCard = true;
-
-            if (c.type == CardType.STATUS || c.color == CardColor.CURSE || c.type == CardType.CURSE || c.rarity == CardRarity.SPECIAL || c.color == TheSnecko.Enums.SNECKO_CYAN)
-                validCard = false;
-            if (upgraded && validCard) c.upgrade();
-            if (funkyPredicate.test(c)) {
+            AbstractCard q = c.makeCopy();
+            validCard = c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != TheSnecko.Enums.SNECKO_CYAN;
+            if (this.upgraded) {
+                if (!c.canUpgrade()) validCard = false;
+                if (validCard) q.upgrade();
+            }
+            if (funkyPredicate.test(q)) {
                 if (validCard) tmp.add(c.cardID);
             }
         }

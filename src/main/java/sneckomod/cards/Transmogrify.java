@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -26,7 +27,16 @@ public class Transmogrify extends AbstractSneckoCard {
             AbstractRelic q = eligibleRelicsList.get(AbstractDungeon.cardRandomRng.random(eligibleRelicsList.size() - 1));
             q.flash();
             AbstractDungeon.player.loseRelic(q.relicId);
-            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH/2F, Settings.HEIGHT/2F, AbstractDungeon.returnRandomRelic(q.tier));
+            if (q.tier == AbstractRelic.RelicTier.STARTER) {
+                ArrayList<AbstractRelic> potentialStarters = new ArrayList<>(RelicLibrary.starterList);
+                AbstractRelic s = potentialStarters.get(AbstractDungeon.cardRandomRng.random(potentialStarters.size() - 1));
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, s.makeCopy());
+            } else if (q.tier == AbstractRelic.RelicTier.SPECIAL) {
+                ArrayList<AbstractRelic> potentialStarters = new ArrayList<>(RelicLibrary.specialList);
+                AbstractRelic s = potentialStarters.get(AbstractDungeon.cardRandomRng.random(potentialStarters.size() - 1));
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, s.makeCopy());
+            } else
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, AbstractDungeon.returnRandomRelic(q.tier));
         }
     }
 

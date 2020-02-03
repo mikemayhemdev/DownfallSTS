@@ -1,15 +1,10 @@
 
 package sneckomod.cards.unknowns;
 
-import basemod.BaseMod;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sneckomod.CardIgnore;
-import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;

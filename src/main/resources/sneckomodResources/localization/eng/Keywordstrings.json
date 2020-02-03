@@ -4,7 +4,7 @@
     "NAMES": [
       "snekproof"
     ],
-    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion."
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
   },
   {
     "PROPER_NAME": "Unknown",
