@@ -3,6 +3,7 @@ package expansioncontent.cards;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -29,7 +30,7 @@ public class Collect extends AbstractExpansionCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        atb(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        atb(new GainBlockAction(p, p, this.block));
         atb(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
         atb(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
 

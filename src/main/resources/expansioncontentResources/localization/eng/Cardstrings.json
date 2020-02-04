@@ -78,8 +78,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 10th card you play."
+    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 2 Strength for every 12th card you play.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 2 Strength for every 9th card you play."
   },
   "expansioncontent:ManipulateTime": {
     "NAME": "Manipulate Time",
@@ -121,5 +121,15 @@
     "NAME": "Quick Study",
     "DESCRIPTION": "Add a random Spire_Boss card to your hand. NL Lose !M! HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Add 2 random Spire_Boss cards to your hand. NL Lose !M! HP. NL Exhaust."
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "The Evil Within",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust."
+  },
+  "expansioncontent:Corrupt": {
+    "NAME": "Corrupt",
+    "DESCRIPTION": "Exhaust 1 card. Replace it with a random Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. Replace it with a random Upgraded Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust."
   }
 }
