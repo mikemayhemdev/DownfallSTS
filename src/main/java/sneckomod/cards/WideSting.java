@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.TheSnecko;
 import sneckomod.actions.MuddleAction;
+import sneckomod.actions.NoApplyRandomDamageAction;
 import sneckomod.actions.RandomDamageAction;
 
 public class WideSting extends AbstractSneckoCard {
@@ -56,7 +57,7 @@ public class WideSting extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : monsterList()) {
-            atb(new RandomDamageAction(q, magicNumber, damage, 1, AbstractGameAction.AttackEffect.LIGHTNING));
+            atb(new NoApplyRandomDamageAction(q, magicNumber, damage, 1, AbstractGameAction.AttackEffect.LIGHTNING));
         }
         atb(new AbstractGameAction() {
             @Override

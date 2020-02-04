@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
+import sneckomod.actions.NoApplyRandomDamageAction;
 import sneckomod.actions.RandomDamageAction;
 
 public class SnakeSap extends AbstractSneckoCard {
@@ -52,7 +53,7 @@ public class SnakeSap extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new RandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         atb(new GainEnergyAction(getRandomNum(0, magicNumber)));
     }
 

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.actions.NoApplyRandomDamageAction;
 import sneckomod.actions.RandomDamageAction;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
@@ -26,7 +27,7 @@ public class DiceCrush extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new RandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH));
+        atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.SMASH));
     }
 
     @Override
