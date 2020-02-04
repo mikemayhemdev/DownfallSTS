@@ -112,50 +112,10 @@
     "NAME": "Slime Tackle",
     "DESCRIPTION": "expansioncontent:Boss - Slime. NL Deal !D! damage and 3 damage to yourself. NL Exhaust."
   },
-  "expansioncontent:StudyAutomaton": {
-    "NAME": "Study Automaton",
-    "DESCRIPTION": "Add a random Automaton card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Automaton card to your hand at the start of each turn."
-  },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
-    "DESCRIPTION": "Add a random Spire_Boss card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Spire_Boss card to your hand at the start of your next !M! turns."
-  },
-  "expansioncontent:StudyAwakened": {
-    "NAME": "Study Awakened",
-    "DESCRIPTION": "Add a random Awakened One card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Awakened One card to your hand at the start of each turn."
-  },
-  "expansioncontent:StudyChamp": {
-    "NAME": "Study the Champ",
-    "DESCRIPTION": "Add a random Champ card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Champ card to your hand at the start of each turn."
-  },
-  "expansioncontent:StudyCollector": {
-    "NAME": "Study Collector",
-    "DESCRIPTION": "Add a random Collector card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Collector card to your hand at the start of each turn."
-  },
-  "expansioncontent:StudyGuardian": {
-    "NAME": "Study Guardian",
-    "DESCRIPTION": "Add a random Guardian card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Guardian card to your hand at the start of each turn."
-  },
-  "expansioncontent:StudyHexaghost": {
-    "NAME": "Study Hexaghost",
-    "DESCRIPTION": "Add a random Hexaghost card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Hexaghost card to your hand at the start of each turn."
-  },
-  "expansioncontent:StudyShapes": {
-    "NAME": "Study Donu & Deca",
-    "DESCRIPTION": "Add a random Donu & Deca card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Donu & Deca card to your hand at the start of each turn."
-  },
-  "expansioncontent:StudyTimeEater": {
-    "NAME": "Study Time Eater",
-    "DESCRIPTION": "Add a random Time Eater card to your hand at the start of your next !M! turns.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Time Eater card to your hand at the start of each turn."
+    "DESCRIPTION": "Add a random Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",

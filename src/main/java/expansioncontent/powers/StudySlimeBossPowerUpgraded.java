@@ -15,12 +15,11 @@ import slimebound.SlimeboundMod;
 import theHexaghost.util.TextureLoader;
 
 
-public class StudyAwakenedPowerUpgraded extends AbstractPower {
+public class StudySlimeBossPowerUpgraded extends AbstractPower {
+    public static final String POWER_ID = expansionContentMod.makeID("StudySlimeBossPower");
 
-    public static final String POWER_ID = expansionContentMod.makeID("StudyAwakenedPowerUpgraded");
-
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAwakened84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAwakened32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudySlimeBoss84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudySlimeBoss32.png");
 
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
@@ -30,7 +29,7 @@ public class StudyAwakenedPowerUpgraded extends AbstractPower {
     private AbstractCreature source;
 
 
-    public StudyAwakenedPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount) {
+    public StudySlimeBossPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -62,9 +61,9 @@ public class StudyAwakenedPowerUpgraded extends AbstractPower {
 
 
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         } else {
-            this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
         }
 
 
@@ -75,15 +74,15 @@ public class StudyAwakenedPowerUpgraded extends AbstractPower {
 
         flash();
 
-        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(true,expansionContentMod.STUDY_AWAKENEDONE));
+        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(true,expansionContentMod.STUDY_SLIMEBOSS));
 
         if (this.amount <= 1) {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, StudyAwakenedPowerUpgraded.POWER_ID));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, StudySlimeBossPowerUpgraded.POWER_ID));
 
         } else {
 
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, StudyAwakenedPowerUpgraded.POWER_ID, 1));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, StudySlimeBossPowerUpgraded.POWER_ID, 1));
 
         }
     }

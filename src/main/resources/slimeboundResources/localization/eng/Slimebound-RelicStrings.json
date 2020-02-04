@@ -58,13 +58,6 @@
       "When you enter a Rest site, begin the next combat with a Prepare card that costs 0 for your first turn."
     ]
   },
-  "Slimebound:StudyCardRelic": {
-    "NAME": "Tiny Bowler Hat",
-    "FLAVOR": "Whosoever controls the hat, controls the Spire.",
-    "DESCRIPTIONS": [
-      "At the start of combat, add a Study the Spire card to your hand. It costs 0."
-    ]
-  },
   "Slimebound:AggressiveSlimeRelic": {
     "NAME": "Goop Dweller",
     "FLAVOR": "He followed me home. Can I keep it?",

@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.expansionContentMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import expansioncontent.actions.RandomCollectorCardAction;
 import theHexaghost.util.TextureLoader;
 
 
@@ -19,8 +19,8 @@ public class StudyCollectorPowerUpgraded extends AbstractPower {
 
     public static final String POWER_ID = expansionContentMod.makeID("StudyCollectorPowerUpgraded");
 
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyCollector.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyCollectorS.png");
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyCollector84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyCollector32.png");
 
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
@@ -75,7 +75,7 @@ public class StudyCollectorPowerUpgraded extends AbstractPower {
 
         flash();
 
-        AbstractDungeon.actionManager.addToBottom(new RandomCollectorCardAction(true));
+        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(true,expansionContentMod.STUDY_COLLECTOR));
 
         if (this.amount <= 1) {
 

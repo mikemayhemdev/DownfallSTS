@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
-import slimebound.relics.StudyCardRelic;
+import expansioncontent.relics.StudyCardRelic;
 
 @SpirePatch(clz = SlimeBoss.class, method = "takeTurn")
 public class SlimeTalk {

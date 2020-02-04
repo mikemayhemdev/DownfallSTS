@@ -1,3 +1,4 @@
+/*
 package expansioncontent.cards;
 
 
@@ -47,12 +48,6 @@ public class QuickStudy extends AbstractExpansionCard {
 
         atb(new MakeTempCardInHandAction(CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)))));
 
-        /*
-        if (upgraded){
-            atb(new MakeTempCardInHandAction(CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)))));
-
-        }
-        */
 
     }
 
@@ -63,3 +58,4 @@ public class QuickStudy extends AbstractExpansionCard {
     }
 
 }
+*/

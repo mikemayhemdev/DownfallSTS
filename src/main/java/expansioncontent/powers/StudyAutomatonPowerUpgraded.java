@@ -11,7 +11,7 @@ import expansioncontent.expansionContentMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import expansioncontent.actions.RandomAutomatonCardAction;
+import expansioncontent.actions.RandomCardWithTagAction;
 import theHexaghost.util.TextureLoader;
 
 
@@ -19,8 +19,8 @@ public class StudyAutomatonPowerUpgraded extends AbstractPower {
 
     public static final String POWER_ID = expansionContentMod.makeID("StudyAutomatonPowerUpgraded");
 
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomatonS.png");
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton32.png");
 
     public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
@@ -75,7 +75,7 @@ public class StudyAutomatonPowerUpgraded extends AbstractPower {
 
         flash();
 
-        AbstractDungeon.actionManager.addToBottom(new RandomAutomatonCardAction(true));
+        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(true, expansionContentMod.STUDY_AUTOMATON));
 
         if (this.amount <= 1) {
 

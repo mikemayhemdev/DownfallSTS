@@ -13,11 +13,13 @@ import java.util.Iterator;
 import java.util.Map;
 
 
-public class RandomShapesCardAction extends AbstractGameAction {
+public class RandomCardWithTagAction extends AbstractGameAction {
     public boolean upgradeCard;
+    public AbstractCard.CardTags tag;
 
-    public RandomShapesCardAction(boolean upgraded) {
+    public RandomCardWithTagAction(boolean upgraded, AbstractCard.CardTags tagToSearch) {
         this.upgradeCard = upgraded;
+        this.tag = tagToSearch;
 
 
     }
@@ -30,7 +32,7 @@ public class RandomShapesCardAction extends AbstractGameAction {
 
         while(var3.hasNext()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
-            if (c.getValue().hasTag(expansionContentMod.STUDY_SHAPES)) {
+            if (c.getValue().hasTag(tag)) {
                 tmp.add(c.getKey());
             }
         }
@@ -42,6 +44,7 @@ public class RandomShapesCardAction extends AbstractGameAction {
         }
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cStudy));
+
         this.isDone = true;
     }
 

@@ -11,7 +11,7 @@ import slimebound.events.Hunted;
 import slimebound.events.WorldOfGoopSlimebound;
 import slimebound.relics.GreedOozeRelic;
 import slimebound.relics.ScrapOozeRelic;
-import slimebound.relics.StudyCardRelic;
+import expansioncontent.relics.StudyCardRelic;
 
 @SpirePatch(clz = AbstractDungeon.class, method = "initializeCardPools")
 public class CityRemoveEventPatch {

@@ -1,25 +1,32 @@
-package slimebound.relics;
+package expansioncontent.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import expansioncontent.actions.RandomStudyCardAction;
+import expansioncontent.cards.StudyTheSpire;
+import expansioncontent.expansionContentMod;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.vfx.TinyHatParticle;
+import theHexaghost.util.TextureLoader;
+
+import static expansioncontent.expansionContentMod.makeRelicOutlinePath;
+import static expansioncontent.expansionContentMod.makeRelicPath;
 
 public class StudyCardRelic extends CustomRelic {
-    public static final String ID = "Slimebound:StudyCardRelic";
-    public static final String IMG_PATH = "relics/tinybowlerhat.png";
-    public static final String OUTLINE_IMG_PATH = "relics/tinybowlerhatOutline.png";
-    private static final int HP_PER_CARD = 1;
+
+    public static final String ID = expansionContentMod.makeID("StudyCardRelic");
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("tinybowlerhat.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("tinybowlerhatOutline.png"));
 
     public StudyCardRelic() {
-        super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.BOSS, LandingSound.MAGICAL);
-    }
+            super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
+        }
 
     @Override
     public String getUpdatedDescription() {
@@ -33,7 +40,12 @@ public class StudyCardRelic extends CustomRelic {
         this.flash();
 
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractDungeon.actionManager.addToBottom(new RandomStudyCardAction(false));
+
+        AbstractCard c;
+        c = CardLibrary.getCard(StudyTheSpire.ID).makeCopy();
+
+        c.modifyCostForCombat(-9);
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
     }
 
 

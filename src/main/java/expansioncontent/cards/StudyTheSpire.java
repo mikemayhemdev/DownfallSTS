@@ -20,21 +20,10 @@ import java.util.ArrayList;
 public class StudyTheSpire extends AbstractExpansionCard {
     public final static String ID = makeID("StudyTheSpire");
 
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_BLOCK = 3;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
-
     public StudyTheSpire() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
-        tags.add(expansionContentMod.STUDY);
-
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        this.isMultiDamage = true;
-        this.exhaust = true;
+        baseMagicNumber = magicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -45,17 +34,27 @@ public class StudyTheSpire extends AbstractExpansionCard {
 
         ArrayList<AbstractPower> powers = new ArrayList();
 
-
-        powers.add(new StudyAutomatonPower(p, p, this.magicNumber));
-        powers.add(new StudyAwakenedPower(p, p, this.magicNumber));
-        powers.add(new StudyShapesPower(p, p, this.magicNumber));
-        powers.add(new StudyChampPower(p, p, this.magicNumber));
-        powers.add(new StudyCollectorPower(p, p, this.magicNumber));
-        powers.add(new StudyGuardianPower(p, p, this.magicNumber));
-        powers.add(new StudyHexaghostPower(p, p, this.magicNumber));
-        powers.add(new StudyTimeEaterPower(p, p, this.magicNumber));
-
-
+        if (upgraded){
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAwakenedPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyShapesPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyChampPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyGuardianPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+            powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
+        } else {
+            powers.add(new StudyAutomatonPower(p, p, this.magicNumber));
+            powers.add(new StudyAwakenedPower(p, p, this.magicNumber));
+            powers.add(new StudyShapesPower(p, p, this.magicNumber));
+            powers.add(new StudyChampPower(p, p, this.magicNumber));
+            powers.add(new StudyCollectorPower(p, p, this.magicNumber));
+            powers.add(new StudyGuardianPower(p, p, this.magicNumber));
+            powers.add(new StudyHexaghostPower(p, p, this.magicNumber));
+            powers.add(new StudyTimeEaterPower(p, p, this.magicNumber));
+            powers.add(new StudySlimeBossPower(p, p, this.magicNumber));
+        }
 
         AbstractPower o = powers.get(AbstractDungeon.cardRng.random(powers.size() - 1));
 
@@ -68,7 +67,8 @@ public class StudyTheSpire extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

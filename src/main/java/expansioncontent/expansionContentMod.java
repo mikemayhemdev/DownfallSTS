@@ -11,6 +11,7 @@ Daily/Custom Run modifiers.
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -32,11 +33,14 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
+import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.patches.AbstractCardEnum;
+import slimebound.relics.PotencyRelic;
 import theHexaghost.relics.*;
 import theHexaghost.util.CardIgnore;
 import theHexaghost.util.CardNoSeen;
@@ -122,6 +126,7 @@ public class expansionContentMod implements
     @Override
     public void receiveEditRelics() {
 
+        BaseMod.addRelic(new StudyCardRelic(), RelicType.SHARED);
     }
 
     @Override
@@ -185,7 +190,7 @@ public class expansionContentMod implements
     public void receiveEditStrings() {
         BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/Cardstrings.json");
 
-        //BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
+        BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
         BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
 
     }

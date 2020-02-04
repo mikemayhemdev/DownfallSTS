@@ -114,24 +114,6 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
 
     @SpireEnum
     public static AbstractCard.CardTags TACKLE;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_HEXAGHOST;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_AWAKENEDONE;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_TIMEEATER;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_CHAMP;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_COLLECTOR;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_SHAPES;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_GUARDIAN;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY_AUTOMATON;
-    @SpireEnum
-    public static AbstractCard.CardTags STUDY;
     public static Properties slimeboundDefault = new Properties();
     public static boolean contentSharing_relics = true;
     public static boolean contentSharing_potions = true;
@@ -372,7 +354,6 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addRelicToCustomPool(new MaxSlimesRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new PotencyRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SlimedTailRelic(), AbstractCardEnum.SLIMEBOUND);
-        BaseMod.addRelicToCustomPool(new StudyCardRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SlimedSkullRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new ScrapOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
