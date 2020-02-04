@@ -90,7 +90,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
         return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }
 
-    public int getRandomNum(int min, int max) {
+    public static int getRandomNum(int min, int max) {
         if (AbstractDungeon.player.hasPower(CheatPower.POWER_ID)) {
             AbstractPower q = AbstractDungeon.player.getPower(CheatPower.POWER_ID);
             q.flash();
