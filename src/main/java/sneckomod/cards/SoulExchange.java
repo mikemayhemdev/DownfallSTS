@@ -19,8 +19,8 @@ public class SoulExchange extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(1));
-        atb(new SoulExchangeAction());
         if (upgraded) atb(new DrawCardAction(1));
+        atb(new SoulExchangeAction());
     }
 
     public void upgrade() {

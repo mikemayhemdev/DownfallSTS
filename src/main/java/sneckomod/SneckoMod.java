@@ -61,7 +61,7 @@ public class SneckoMod implements
     private static final String CHARSELECT_PORTRAIT = "sneckomodResources/images/charSelect/portrait.png";
     private static String modID;
 
-    public static Color placeholderColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1);
+    public static Color placeholderColor = new Color(64F/255F, 123F/255F, 147F/255F, 1);
 
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UNKNOWN;

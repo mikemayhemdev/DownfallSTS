@@ -1,14 +1,14 @@
 {
 	"Slimebound": {
 		"NAMES": [
-			"The Slimebound"
+			"The Slime Boss"
 		],
 		"TEXT": [
-			"A rogue minion of the Spire, driven to conquer it.",
+			"The Heart's slimiest general. NL Can fight as one, or as many.",
 			"Must... absorb... the Heart..."
 		],
 		"KEYWORDS": [
-			"A rogue minion of the Spire, driven to conquer it.",
+			"The Heart's slimiest general.",
 			"Must... absorb... the Heart..."
 		]
 	}

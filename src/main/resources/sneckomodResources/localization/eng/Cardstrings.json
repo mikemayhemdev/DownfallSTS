@@ -128,8 +128,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class. NL Draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class."
   },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",
@@ -160,7 +160,7 @@
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random cards in your hand."
   },
   "sneckomod:QuickBite": {
-    "NAME": "Quick Bite",
+    "NAME": "Snake Rake",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards and sneckomod:Muddle them."
   },
   "sneckomod:Rotation": {
@@ -168,7 +168,7 @@
     "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M! and sneckomod:Muddle them."
   },
   "sneckomod:SerpentMind": {
-    "NAME": "Serpent Mind",
+    "NAME": "Exotic Form",
     "DESCRIPTION": "Whenever you play a sneckomod:Offclass card, draw 1 card."
   },
   "sneckomod:SlitherStrike": {

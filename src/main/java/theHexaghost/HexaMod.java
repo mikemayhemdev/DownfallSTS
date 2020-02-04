@@ -69,7 +69,7 @@ public class HexaMod implements
 
     public static boolean unsealed = false;
 
-    public static Color placeholderColor = new Color(0.25F, 1, 0.1F, 1);
+    public static Color placeholderColor = new Color(114F/255F, 62F/255F, 109F/255F, 1);
 
     public HexaMod() {
         BaseMod.subscribe(this);
