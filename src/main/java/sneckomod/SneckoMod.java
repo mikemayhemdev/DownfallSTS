@@ -22,7 +22,7 @@ import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.cards.DiceBoulder;
 import sneckomod.cards.unknowns.UnknownClass;
-import sneckomod.relics.SneckoSoul;
+import sneckomod.relics.*;
 import sneckomod.util.SneckoSilly;
 
 import java.io.File;
@@ -122,6 +122,13 @@ public class SneckoMod implements
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelicToCustomPool(new SneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new CleanMud(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new ConfusingCodex(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new LoadedDie(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new RareBoosterPack(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SleevedAce(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SuperSneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new UnknownEgg(), TheSnecko.Enums.SNECKO_CYAN);
     }
 
     @Override

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import sneckomod.TheSnecko;
 import sneckomod.powers.CheatPower;
+import sneckomod.relics.LoadedDie;
 
 import java.util.ArrayList;
 
@@ -91,12 +92,15 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
     public static int getRandomNum(int min, int max) {
+        int bruh = min;
         if (AbstractDungeon.player.hasPower(CheatPower.POWER_ID)) {
             AbstractPower q = AbstractDungeon.player.getPower(CheatPower.POWER_ID);
             q.flash();
             return max;
         }
-        return AbstractDungeon.cardRandomRng.random(min, max);
+        if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+            bruh++;
+        return AbstractDungeon.cardRandomRng.random(bruh, max);
     }
 
     public static String makeID(String blah) {
@@ -181,7 +185,6 @@ public abstract class AbstractSneckoCard extends CustomCard {
             isSillyModified = true;
         }
     }
-
 
 
     void upgradeSilly(int amount) {

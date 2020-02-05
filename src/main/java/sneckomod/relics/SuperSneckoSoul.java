@@ -8,14 +8,11 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import theHexaghost.util.TextureLoader;
 
-import static theHexaghost.HexaMod.makeRelicOutlinePath;
-import static theHexaghost.HexaMod.makeRelicPath;
-
 public class SuperSneckoSoul extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("SuperSneckoSoul");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SneckoSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SneckoSoulOutline.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoul.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoulOutline.png"));
 
     public SuperSneckoSoul() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
