@@ -7,7 +7,7 @@
     ]
   },
   "sneckomod:SuperSneckoSoul": {
-    "NAME": "SUPER Snecko Soul",
+    "NAME": "Super Snecko Soul",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "Replaces ",
@@ -15,21 +15,21 @@
     ]
   },
   "sneckomod:CleanMud": {
-    "NAME": "Clean Mud",
+    "NAME": "Snake-Charmer's Flute",
     "FLAVOR": "You're an oxy-moron!",
     "DESCRIPTIONS": [
       "#ysneckomod:Muddled cards can't cost #b3."
     ]
   },
   "sneckomod:ConfusingCodex": {
-    "NAME": "Confusing Codex",
+    "NAME": "Ring of the Snek",
     "FLAVOR": "Illegible, unreadable, due by Thursday.",
     "DESCRIPTIONS": [
       "At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies."
     ]
   },
   "sneckomod:CrystallizedMud": {
-    "NAME": "Crystallized Mud",
+    "NAME": "Mesmerising Pendant",
     "FLAVOR": "Dazzling dirt.",
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. #ysneckomod:Muddled cards can't cost #b0."
@@ -43,7 +43,7 @@
     ]
   },
   "sneckomod:RareBoosterPack": {
-    "NAME": "Rare Booster Pack",
+    "NAME": "Rare Booster Box",
     "FLAVOR": "Mint condition.",
     "DESCRIPTIONS": [
       "Upon pickup, obtain a #ysneckomod:Unknown #yRare card of each card type."

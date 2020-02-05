@@ -14,8 +14,8 @@ import theHexaghost.util.TextureLoader;
 public class ConfusingCodex extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("ConfusingCodex");
-    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoulOutline.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("ConfusingCodex.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("ConfusingCodex.png"));
 
     public ConfusingCodex() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);

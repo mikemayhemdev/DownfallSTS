@@ -11,8 +11,8 @@ import theHexaghost.util.TextureLoader;
 public class CleanMud extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("CleanMud");
-    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoulOutline.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("CleanMud.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("CleanMud.png"));
 
     public CleanMud() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

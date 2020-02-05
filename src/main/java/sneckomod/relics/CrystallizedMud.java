@@ -11,8 +11,8 @@ import theHexaghost.util.TextureLoader;
 public class CrystallizedMud extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("CrystallizedMud");
-    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoulOutline.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("CrystallizedMud.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("CrystallizedMud.png"));
 
     public CrystallizedMud() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);

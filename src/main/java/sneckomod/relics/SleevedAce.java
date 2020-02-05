@@ -11,8 +11,8 @@ import theHexaghost.util.TextureLoader;
 public class SleevedAce extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("SleevedAce");
-    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoul.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoSoulOutline.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SleevedAce.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SleevedAce.png"));
 
     public SleevedAce() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
