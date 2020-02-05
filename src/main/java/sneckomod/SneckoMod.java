@@ -4,7 +4,6 @@ import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -61,7 +60,7 @@ public class SneckoMod implements
     private static final String CHARSELECT_PORTRAIT = "sneckomodResources/images/charSelect/portrait.png";
     private static String modID;
 
-    public static Color placeholderColor = new Color(64F/255F, 123F/255F, 147F/255F, 1);
+    public static Color placeholderColor = new Color(64F / 255F, 123F / 255F, 147F / 255F, 1);
 
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UNKNOWN;
@@ -215,19 +214,19 @@ public class SneckoMod implements
 
     public static AbstractCard getOffClassCard() {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
+        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING)));
+        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING)));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 
     public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING));
+        possList.removeIf(c -> c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(AbstractCard.CardTags.HEALING));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
     }
 }

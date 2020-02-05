@@ -3,8 +3,6 @@ package sneckomod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -34,18 +32,12 @@ public class MuddleDrawnCardsPower extends AbstractPower implements CloneablePow
         this.updateDescription();
     }
 
-    public void stackPower(int stackAmount) {
-        this.amount += stackAmount;// 39
-        if (this.amount == 0) {// 41
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));// 42
-        }
-    }// 52
-
-
     @Override
     public void onCardDraw(AbstractCard card) {
         flash();
-        addToTop(new ReducePowerAction(owner, owner, this, 1));
+        this.amount -= 1;
+        if (amount == 0)
+            owner.powers.remove(this);
         addToTop(new MuddleAction(card));
     }
 
@@ -54,7 +46,7 @@ public class MuddleDrawnCardsPower extends AbstractPower implements CloneablePow
         if (amount == 1)
             description = "#yMuddle the next card you draw.";
         else
-            description = "#yMuddle the next #b" + amount + " cards you draw."  ;
+            description = "#yMuddle the next #b" + amount + " cards you draw.";
     }
 
     @Override
