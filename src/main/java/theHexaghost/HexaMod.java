@@ -25,6 +25,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.relics.UnknownEgg;
 import theHexaghost.relics.*;
 import theHexaghost.util.CardFilter;
 import theHexaghost.util.CardIgnore;
@@ -133,7 +134,7 @@ public class HexaMod implements
         BaseMod.addRelicToCustomPool(new SoulConsumer(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new UnbrokenSoul(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new UnknownEgg(), TheHexaghost.Enums.GHOST_GREEN);
     }
 
     @Override
