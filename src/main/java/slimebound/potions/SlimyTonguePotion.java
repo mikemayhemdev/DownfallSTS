@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.AcidTonguePowerUpgraded;
 
@@ -23,7 +24,7 @@ public class SlimyTonguePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SNECKO, PotionColor.WEAK);
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = SlimeboundCharacter.cardRenderColor;
+        this.labOutlineColor = SlimeboundMod.SLIME_COLOR;
     }
 
 

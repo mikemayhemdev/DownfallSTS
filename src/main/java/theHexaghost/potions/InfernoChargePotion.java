@@ -30,7 +30,7 @@ public class InfernoChargePotion extends CustomPotion {
 
 
     public InfernoChargePotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.FAIRY);
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.SPHERE, PotionColor.FAIRY);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = HexaMod.placeholderColor;

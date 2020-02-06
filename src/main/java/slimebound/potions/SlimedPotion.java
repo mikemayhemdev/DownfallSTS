@@ -23,7 +23,7 @@ public class SlimedPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.BOTTLE, PotionColor.WEAK);
         this.isThrown = true;
         this.targetRequired = true;
-        this.labOutlineColor = SlimeboundCharacter.cardRenderColor;
+        this.labOutlineColor = SlimeboundMod.SLIME_COLOR;
     }
 
 

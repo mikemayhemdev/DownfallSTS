@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import sneckomod.SneckoMod;
 import theHexaghost.actions.DiscoverEtherealAction;
 
 
@@ -22,6 +23,7 @@ public class OffclassReductionPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SNECKO, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = SneckoMod.placeholderColor;
     }
 
 

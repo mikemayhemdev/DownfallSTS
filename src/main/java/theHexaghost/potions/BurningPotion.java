@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 
 
@@ -22,6 +23,7 @@ public class BurningPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.JAR, PotionColor.FAIRY);
         this.isThrown = true;
         this.targetRequired = true;
+        this.labOutlineColor = HexaMod.placeholderColor;
     }
 
 

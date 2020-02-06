@@ -9,7 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
+import sneckomod.actions.RandomDamageAction;
 import theHexaghost.powers.BurnPower;
 
 
@@ -24,6 +26,7 @@ public class DiceRollPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.FAIRY);
         this.isThrown = true;
         this.targetRequired = true;
+        this.labOutlineColor = SneckoMod.placeholderColor;
     }
 
 
@@ -36,7 +39,7 @@ public class DiceRollPotion extends CustomPotion {
 
 
     public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new NoApplyRandomDamageAction(target, this.potency, this.potency * 40, 1, AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new RandomDamageAction(target, this.potency, this.potency * 40, 1, AbstractGameAction.AttackEffect.SMASH));
     }
 
 

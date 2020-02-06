@@ -32,7 +32,7 @@ public class SpawnSlimePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.SPHERE, PotionColor.POISON);
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = SlimeboundCharacter.cardRenderColor;
+        this.labOutlineColor = SlimeboundMod.SLIME_COLOR;
     }
 
 

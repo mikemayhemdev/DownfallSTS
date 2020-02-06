@@ -9,7 +9,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import slimebound.powers.AcidTonguePowerUpgraded;
+import sneckomod.SneckoMod;
 import sneckomod.powers.CheatPower;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.DiscoverEtherealAction;
 
 
@@ -23,6 +25,7 @@ public class CheatPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.H, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = SneckoMod.placeholderColor;
     }
 
 

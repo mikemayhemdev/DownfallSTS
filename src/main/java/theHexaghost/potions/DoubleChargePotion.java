@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.BurnPower;
@@ -25,9 +26,10 @@ public class DoubleChargePotion extends CustomPotion {
 
 
     public DoubleChargePotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.M, PotionColor.FAIRY);
+        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.M, PotionColor.FAIRY);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = HexaMod.placeholderColor;
     }
 
     public void initializeData() {

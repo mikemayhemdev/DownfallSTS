@@ -76,7 +76,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
     public static final String PROP_EVENT_SHARING = "contentSharing_events";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-    private static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
+    public static final com.badlogic.gdx.graphics.Color SLIME_COLOR = com.megacrit.cardcrawl.helpers.CardHelper.getColor(25.0F, 95.0F, 25.0F);
     private static final String SLIMEBOUNDMOD_ASSETS_FOLDER = "slimeboundResources/SlimeboundImages";
     private static final String ATTACK_CARD = "512/bg_attack_slimebound.png";
     private static final String SKILL_CARD = "512/bg_skill_slimebound.png";
