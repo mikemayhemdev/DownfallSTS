@@ -13,9 +13,11 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
@@ -25,7 +27,16 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.patches.SlimeboundEnum;
+import slimebound.potions.SlimedPotion;
+import slimebound.potions.SlimyTonguePotion;
+import slimebound.potions.SpawnSlimePotion;
+import slimebound.potions.ThreeZeroPotion;
 import sneckomod.relics.UnknownEgg;
+import theHexaghost.potions.BurningPotion;
+import theHexaghost.potions.DoubleChargePotion;
+import theHexaghost.potions.EctoCoolerPotion;
+import theHexaghost.potions.InfernoChargePotion;
 import theHexaghost.relics.*;
 import theHexaghost.util.CardFilter;
 import theHexaghost.util.CardIgnore;
@@ -46,6 +57,7 @@ public class HexaMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
+        PostInitializeSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         PreRoomRenderSubscriber,
@@ -201,6 +213,8 @@ public class HexaMod implements
         BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
 
         BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/Charstrings.json");
+
+        BaseMod.loadCustomStringsFile(PotionStrings.class, getModID() + "Resources/localization/eng/Potionstrings.json");
     }
 
     @Override
@@ -220,6 +234,15 @@ public class HexaMod implements
         AbstractDungeon.actionManager.addToBottom(q);
     }
 
+
+    public void addPotions() {
+
+        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID);
+        BaseMod.addPotion(BurningPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, BurningPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+
+    }
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
@@ -247,5 +270,10 @@ public class HexaMod implements
     @Override
     public void receivePostDeath() {
         renderFlames = false;
+    }
+
+    public void receivePostInitialize(){
+
+        addPotions();
     }
 }

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
@@ -22,8 +23,17 @@ import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.cards.DiceBoulder;
 import sneckomod.cards.unknowns.UnknownClass;
+import sneckomod.potions.CheatPotion;
+import sneckomod.potions.DiceRollPotion;
+import sneckomod.potions.MuddlingPotion;
+import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.relics.*;
 import sneckomod.util.SneckoSilly;
+import theHexaghost.TheHexaghost;
+import theHexaghost.potions.BurningPotion;
+import theHexaghost.potions.DoubleChargePotion;
+import theHexaghost.potions.EctoCoolerPotion;
+import theHexaghost.potions.InfernoChargePotion;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -43,7 +53,8 @@ public class SneckoMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        EditCharactersSubscriber {
+        EditCharactersSubscriber,
+        PostInitializeSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulder2.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -204,6 +215,16 @@ public class SneckoMod implements
         BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
 
         BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/Charstrings.json");
+        BaseMod.loadCustomStringsFile(PotionStrings.class, getModID() + "Resources/localization/eng/Potionstrings.json");
+    }
+
+    public void addPotions() {
+
+        BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
+        BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
+        BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
+        BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
+
     }
 
     @Override
@@ -235,5 +256,10 @@ public class SneckoMod implements
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
         possList.removeIf(c -> c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(AbstractCard.CardTags.HEALING));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+    }
+
+    public void receivePostInitialize(){
+
+        addPotions();
     }
 }

@@ -1,4 +1,4 @@
-package slimebound.potions;
+package theHexaghost.potions;
 
 
 import basemod.abstracts.CustomPotion;
@@ -8,22 +8,20 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.powers.AcidTonguePowerUpgraded;
+import theHexaghost.powers.BurnPower;
 
 
-public class SlimyTonguePotion extends CustomPotion {
-    public static final String POTION_ID = "Slimebound:SlimyTonguePotion";
+public class BurningPotion extends CustomPotion {
+    public static final String POTION_ID = "hexamod:BurningPotion";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
 
-    public SlimyTonguePotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SNECKO, PotionColor.WEAK);
-        this.isThrown = false;
-        this.targetRequired = false;
-        this.labOutlineColor = SlimeboundCharacter.cardRenderColor;
+    public BurningPotion() {
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.JAR, PotionColor.FAIRY);
+        this.isThrown = true;
+        this.targetRequired = true;
     }
 
 
@@ -34,18 +32,18 @@ public class SlimyTonguePotion extends CustomPotion {
         this.tips.add(new PowerTip(this.name, this.description));
     }
 
-    public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AcidTonguePowerUpgraded(AbstractDungeon.player, AbstractDungeon.player, this.potency), this.potency));
 
+    public void use(AbstractCreature target) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new BurnPower(target, this.potency), this.potency));
     }
 
 
     public CustomPotion makeCopy() {
-        return new SlimyTonguePotion();
+        return new BurningPotion();
     }
 
     public int getPotency(int ascensionLevel) {
-        return 2;
+        return 10;
     }
 }
 

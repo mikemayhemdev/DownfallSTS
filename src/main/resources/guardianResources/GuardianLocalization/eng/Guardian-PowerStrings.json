@@ -176,5 +176,12 @@
 			" additional [E] next turn.",
 			" - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
 		]
+	},
+	"Guardian:BlockOnCardUsePower": {
+		"NAME": "Armorer's Oil",
+		"DESCRIPTIONS": [
+			"Gain #b",
+			" Block each time you play a card."
+		]
 	}
 }

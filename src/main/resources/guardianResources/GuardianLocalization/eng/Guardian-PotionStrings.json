@@ -2,8 +2,33 @@
   "Guardian:AcceleratePotion": {
     "NAME": "Temporal Potion",
     "DESCRIPTIONS": [
-      "Accelerate all cards in Stasis."
+      "Accelerate all cards in Stasis twice.",
+      "Accelerate all cards in Stasis four times."
+    ]
+  },
+  "Guardian:DefensiveModePotion": {
+    "NAME": "Polishing Oil",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Block and ",
+      " Defensive Mode."
+    ]
+  },
+  "Guardian:BlockOnCardUsePotion": {
+    "NAME": "Armorer's Tincture",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Block each time you play a card this turn."
+    ]
+  },
+  "Guardian:StasisDiscoveryPotion": {
+    "NAME": "Quantum Elixir",
+    "DESCRIPTIONS": [
+      "Gain Stasis slots until you have ",
+      ". NL ",
+      " times, choose 1 of 3 cards to place into Stasis."
     ]
   }
+
 
 }

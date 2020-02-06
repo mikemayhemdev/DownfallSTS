@@ -16,10 +16,10 @@
   },
 
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "Bottled Minion",
+    "NAME": "Army in a Bottle",
     "DESCRIPTIONS": [
-      "Spawn ",
-      " random Slime minion."
+      "Gain Slime Slots until you have 3. NL Spawn a Leeching, Mire, and Acid slime. They do not cost HP.",
+      "Gain Slime Slots until you have 6. NL Spawn 2 Leeching, 2 Mire, and 2 Acid slimes. They do not cost HP."
     ]
   },
 

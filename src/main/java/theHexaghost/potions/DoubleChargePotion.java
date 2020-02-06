@@ -1,31 +1,34 @@
-package slimebound.potions;
+package theHexaghost.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.powers.AcidTonguePowerUpgraded;
+import theHexaghost.GhostflameHelper;
+import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ExtinguishAction;
+import theHexaghost.powers.BurnPower;
 
 
-public class SlimyTonguePotion extends CustomPotion {
-    public static final String POTION_ID = "Slimebound:SlimyTonguePotion";
+public class DoubleChargePotion extends CustomPotion {
+    public static final String POTION_ID = "hexamod:DoubleChargePotion";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
 
-    public SlimyTonguePotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SNECKO, PotionColor.WEAK);
+    public DoubleChargePotion() {
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.M, PotionColor.FAIRY);
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = SlimeboundCharacter.cardRenderColor;
     }
-
 
     public void initializeData() {
         this.potency = getPotency();
@@ -35,17 +38,21 @@ public class SlimyTonguePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AcidTonguePowerUpgraded(AbstractDungeon.player, AbstractDungeon.player, this.potency), this.potency));
 
-    }
+        for (int i = 0; i < this.potency; i++) {
+
+            AbstractDungeon.actionManager.addToBottom(new ExtinguishAction(GhostflameHelper.activeGhostFlame));
+            AbstractDungeon.actionManager.addToBottom(new ChargeAction(GhostflameHelper.activeGhostFlame));
+        }
+       }
 
 
     public CustomPotion makeCopy() {
-        return new SlimyTonguePotion();
+        return new DoubleChargePotion();
     }
 
     public int getPotency(int ascensionLevel) {
-        return 2;
+        return 3;
     }
 }
 

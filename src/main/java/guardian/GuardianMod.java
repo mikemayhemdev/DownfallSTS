@@ -40,6 +40,9 @@ import guardian.patches.BottledStasisPatch;
 import guardian.patches.GuardianEnum;
 import guardian.patches.RewardItemTypePatch;
 import guardian.potions.AcceleratePotion;
+import guardian.potions.BlockOnCardUsePotion;
+import guardian.potions.DefensiveModePotion;
+import guardian.potions.StasisDiscoveryPotion;
 import guardian.powers.ExhaustStatusesPower;
 import guardian.powers.zzz.MultiBoostPower;
 import guardian.relics.*;
@@ -1065,7 +1068,10 @@ public static void saveData() {
 
     public void addPotions() {
 
+        BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
         BaseMod.addPotion(AcceleratePotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, AcceleratePotion.POTION_ID, GuardianEnum.GUARDIAN);
+        BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
+        BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
 
     }
 

@@ -25,10 +25,15 @@ public class ThreeZeroPotion extends CustomPotion {
 
     public ThreeZeroPotion() {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.T, PotionColor.POISON);
-        this.potency = getPotency();
-        this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.isThrown = false;
         this.targetRequired = false;
+    }
+
+
+    public void initializeData() {
+        this.potency = getPotency();
+        this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
+        this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
 
@@ -39,7 +44,7 @@ public class ThreeZeroPotion extends CustomPotion {
         AbstractCard c3;
 
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < this.potency; i++) {
             while (var1.hasNext()) {
                 c3 = (AbstractCard) var1.next();
                 if (c3.cost == 0) {
