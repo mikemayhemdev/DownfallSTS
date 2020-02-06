@@ -59,9 +59,10 @@ public class MuddlingPotion extends CustomPotion {
                     } else {
                         truecost = q.cost;
                     }
-                    if (truecost > x)
+                    if (truecost > x) {
                         x = truecost;
                         highest = q;
+                    }
                 }
 
                 //remove highest from possible, add to chosen
