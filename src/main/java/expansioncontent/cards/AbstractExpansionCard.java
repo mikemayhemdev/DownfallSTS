@@ -40,6 +40,19 @@ public abstract class AbstractExpansionCard extends CustomCard {
         initializeDescription();
     }
 
+    public AbstractExpansionCard(final String id, final String img, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
+        super(id, "ERROR", getCorrectPlaceholderImage(img),
+                cost, "ERROR", type, CardColor.COLORLESS, rarity, target);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
+        name = NAME = cardStrings.NAME;
+        originalName = NAME;
+        rawDescription = DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+        initializeTitle();
+        initializeDescription();
+    }
+
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
                 cost, "ERROR", type, color, rarity, target);

@@ -119,8 +119,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
-    "DESCRIPTION": "Add a random Spire_Boss card to your hand. NL Lose !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add 2 random Spire_Boss cards to your hand. NL Lose !M! HP. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain a copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain an Upgraded copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust."
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",

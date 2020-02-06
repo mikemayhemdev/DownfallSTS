@@ -64,7 +64,8 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         ArrayList<String> tmp = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            UnlockTracker.markCardAsSeen(c.cardID);
+            if (!c.isSeen)
+                UnlockTracker.markCardAsSeen(c.cardID);
             AbstractCard q = c.makeCopy();
             validCard = c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != TheSnecko.Enums.SNECKO_CYAN;
             if (this.upgraded) {

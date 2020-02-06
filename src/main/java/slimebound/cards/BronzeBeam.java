@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.actions.SlimeSpawnAction;
 
-public class SplitBronze extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:SplitBronze";
+public class BronzeBeam extends AbstractSlimeboundCard {
+    public static final String ID = "Slimebound:BronzeBeam";
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/splitbronze.png";
@@ -30,7 +30,7 @@ public class SplitBronze extends AbstractSlimeboundCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
-    public SplitBronze() {
+    public BronzeBeam() {
         super(ID, NAME, slimebound.SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
@@ -48,7 +48,7 @@ public class SplitBronze extends AbstractSlimeboundCard {
     }
 
     public AbstractCard makeCopy() {
-        return new SplitBronze();
+        return new BronzeBeam();
     }
 
     public void upgrade() {

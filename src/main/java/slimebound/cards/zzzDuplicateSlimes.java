@@ -79,7 +79,7 @@ public class zzzDuplicateSlimes extends AbstractSlimeboundCard {
                 if (s == "SplitLicking") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, false));
                 }
-                if (s == "SplitBronze") {
+                if (s == "BronzeBeam") {
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.BronzeSlime(), false, false));
                 }
                 if (s == "SplitLeeching") {

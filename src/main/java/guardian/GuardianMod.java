@@ -697,7 +697,7 @@ public static void saveData() {
         UnlockTracker.unlockCard(Strike_Guardian.ID);
         UnlockTracker.unlockCard(Defend_Guardian.ID);
         /*
-        UnlockTracker.unlockCard(SplitBronze.ID);
+        UnlockTracker.unlockCard(BronzeBeam.ID);
         UnlockTracker.unlockCard(LevelUp.ID);
         UnlockTracker.unlockCard(Tackle.ID);
         UnlockTracker.unlockCard(Icky.ID);
