@@ -26,6 +26,8 @@ public class EvilWithinMod implements
 {
     public static final String modID = "evil-within";
 
+    public static final boolean EXPERIMENTAL_FLIP = false;
+
     public static void initialize()
     {
         new EvilWithinMod();

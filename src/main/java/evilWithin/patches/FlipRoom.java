@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.OverlayMenu;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import evilWithin.EvilWithinMod;
 import javassist.CtBehavior;
 
 public class FlipRoom
@@ -27,6 +28,8 @@ public class FlipRoom
 
     public static void startFBO(SpriteBatch sb)
     {
+        if (!EvilWithinMod.EXPERIMENTAL_FLIP) return;
+
         initFBO();
         sb.end();
         fbo.begin();
@@ -38,6 +41,8 @@ public class FlipRoom
 
     public static void endFBO(SpriteBatch sb)
     {
+        if (!EvilWithinMod.EXPERIMENTAL_FLIP) return;
+
         sb.end();
         fbo.end();
 
