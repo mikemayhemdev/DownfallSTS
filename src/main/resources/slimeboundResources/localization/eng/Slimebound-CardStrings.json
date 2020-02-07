@@ -231,9 +231,8 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded Lick card to your hand if the enemy has Goop."
   },
 "Slimebound:AcidTongue": {
-    "NAME": "Acid Tongue",
-    "DESCRIPTION": "Apply !M! Poison whenever you apply Goop.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Poison whenever you apply Goop. NL Effects that apply Goop apply 1 more."
+    "NAME": "Spreading Slime",
+    "DESCRIPTION": "Effects that apply Goop apply 1 more."
   },
 "Slimebound:TendrilStrike": {
     "NAME": "Toxin Strike",
@@ -334,7 +333,7 @@
   },
 "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !M! Poison to ALL enemies."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !M! Vulnerable to ALL enemies."
   },
 "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
@@ -394,8 +393,8 @@
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "Split into a Bruiser or Acid slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Acid slime. NL Exhaust."
+    "DESCRIPTION": "Split into a Bruiser or Guerilla slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Guerilla slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
@@ -442,9 +441,9 @@
     "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime, who grants !M! more Block this combat. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
-    "NAME": "Split: Acid",
-    "DESCRIPTION": "Split into an Acid_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Acid_Slime, who applies !M! more Poison this combat. NL Exhaust."
+    "NAME": "Split: Guerilla",
+    "DESCRIPTION": "Split into an Guerilla_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Guerilla_Slime, who applies !M! more Poison this combat. NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
@@ -457,8 +456,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Gain 1 Slime slot. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL When a spawned Slime applies Goop, Poison, or Block, it applies 1 more."
+    "DESCRIPTION": "Gain 1 Slime slot. NL When a spawned Slime applies Goop or Block, it applies 1 more.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL When a spawned Slime applies Goop or Block, it applies 1 more."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",

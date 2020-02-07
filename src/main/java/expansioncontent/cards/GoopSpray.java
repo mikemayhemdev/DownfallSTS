@@ -21,8 +21,8 @@ import slimebound.vfx.SlimeProjectileEffect;
 public class GoopSpray extends AbstractExpansionCard {
     public final static String ID = makeID("GoopSpray");
 
-    private static final int MAGIC = 8;
-    private static final int UPGRADE_MAGIC = 2;
+    private static final int MAGIC = 12;
+    private static final int UPGRADE_MAGIC = 4;
 
     public GoopSpray() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -51,7 +51,9 @@ public class GoopSpray extends AbstractExpansionCard {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    int vuln = 2;
+                    if (upgraded) vuln++;
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, vuln, false), vuln, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }
@@ -67,6 +69,8 @@ public class GoopSpray extends AbstractExpansionCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

@@ -106,7 +106,8 @@
   },
   "expansioncontent:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and !M! Poison to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and 2 Vulnerable to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and 3 Vulnerable to ALL enemies. NL Exhaust."
   },
   "expansioncontent:SlimeTackle": {
     "NAME": "Slime Tackle",

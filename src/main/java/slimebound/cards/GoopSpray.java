@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
@@ -45,7 +46,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.slimed = this.baseSlimed = 10;
         upgradeSlimed(0);
 
@@ -69,7 +70,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }
@@ -92,8 +93,8 @@ public class GoopSpray extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(2);
-            upgradeMagicNumber(2);
+            upgradeSlimed(10);
+            upgradeMagicNumber(1);
 
         }
 
