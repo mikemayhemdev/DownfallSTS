@@ -1,3 +1,4 @@
+/*
 package guardian.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -32,3 +33,4 @@ public class EventOverridePatchShrines {
 
     }
 }
+*/
