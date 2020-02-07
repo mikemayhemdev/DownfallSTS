@@ -104,7 +104,7 @@
   },
   "Guardian:Incinerate": {
     "NAME": "Incinerate",
-    "DESCRIPTION": "Deal !D! damage, plus an additional !M! damage every turn this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn."
   },
   "Guardian:Orbwalk": {
     "NAME": "Orbwalk",
@@ -117,7 +117,7 @@
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
-    "DESCRIPTION": "For !M! turns, Block is not removed at the start of your turn. NL Gain !B! Block. NL Gain Defensive_Mode."
+    "DESCRIPTION": "For !M! turns, Block is not removed at the start of your turn. NL Gain !B! Block. NL Gain Defensive_Mode. NL Exhaust."
   },
   "Guardian:Harden": {
     "NAME": "Harden",
@@ -326,8 +326,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
-    "DESCRIPTION": "Gem. NL Gain 1 Artifact. Lose 1 HP.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Artifact Lose 1 HP."
+    "DESCRIPTION": "Gem. NL Gain 1 Artifact. Lose 2 HP.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Artifact Lose 2 HP."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "Amber",

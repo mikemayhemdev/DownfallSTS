@@ -53,7 +53,7 @@ public class Gem_Synthetic extends AbstractGuardianCard {
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 1));
+        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 2));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

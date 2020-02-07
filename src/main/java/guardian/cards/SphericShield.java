@@ -50,6 +50,7 @@ public class SphericShield extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

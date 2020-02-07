@@ -24,7 +24,7 @@ public class AncientConstruct extends AbstractGuardianCard {
     private static final int COST = 2;
 
     //TUNING CONSTANTS
-    private static final int ARTIFACT = 2;
+    private static final int ARTIFACT = 1;
     private static final int UPGRADE_ARTIFACT = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
