@@ -14,11 +14,18 @@ import basemod.interfaces.PostInitializeSubscriber;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
+import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 
 import charbosses.bosses.*;
+import eventUtil.EventUtils;
+import evilWithin.events.GremlinMatchGame_Evil;
+import guardian.characters.GuardianCharacter;
+import guardian.events.GemMine;
 
 @SpireInitializer
 public class EvilWithinMod implements
@@ -65,7 +72,9 @@ public class EvilWithinMod implements
 
     private void loadLocalization(Settings.GameLanguage language)
     {
+
         loadLocalization(language, UIStrings.class);
+        loadLocalization(language, EventStrings.class);
     }
     @Override
     public void receiveEditStrings()
@@ -76,7 +85,12 @@ public class EvilWithinMod implements
         }
     }
     public void receivePostInitialize() {
-    	this.initializeMonsters();
+
+        this.initializeMonsters();
+
+        EventUtils.registerEvent(
+                //Event ID//
+                GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class, true, GremlinMatchGame.ID, EventUtils.EventType.FULL_REPLACE);
     }
     private void initializeMonsters() {
         BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new MonsterGroup(new AbstractMonster[] { new CharBossIronclad() }));
