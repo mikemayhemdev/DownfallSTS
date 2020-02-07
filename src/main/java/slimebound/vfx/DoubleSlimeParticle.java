@@ -46,7 +46,7 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
         this.skeleton.setColor(Color.WHITE);
         this.stateData = new AnimationStateData(skeletonData);
         this.state = new AnimationState(this.stateData);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
         this.duration = 0.05F;

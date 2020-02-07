@@ -444,7 +444,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         //BaseMod.addCard(new SoulSicken());
         // BaseMod.addCard(new slimebound.cards.zzzFocusedLick());
         BaseMod.addCard(new HauntingLick());
-        BaseMod.addCard(new AcidGelatin());
+        //BaseMod.addCard(new AcidGelatin());
         BaseMod.addCard(new RejuvenatingLick());
         BaseMod.addCard(new slimebound.cards.TongueLash());
         BaseMod.addCard(new ItLooksTasty());
@@ -561,7 +561,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         //UnlockTracker.unlockCard(SoulSicken.ID);
         // UnlockTracker.unlockCard(zzzFocusedLick.ID);
         UnlockTracker.unlockCard(HauntingLick.ID);
-        UnlockTracker.unlockCard(AcidGelatin.ID);
+        //UnlockTracker.unlockCard(AcidGelatin.ID);
         UnlockTracker.unlockCard(RejuvenatingLick.ID);
         UnlockTracker.unlockCard(Replication.ID);
 
