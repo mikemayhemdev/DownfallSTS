@@ -70,14 +70,14 @@
     },
      {
       "NAMES": [
-        "acid slime",
-        "acid_slime",
-        "acid slimes",
-        "acid_slimes",
-        "acid"
+        "guerilla slime",
+        "guerilla_slime",
+        "guerilla slimes",
+        "guerilla_slimes",
+        "guerilla"
       ],
-      "PROPERNAME": "Acid Slime",
-      "DESCRIPTION": "Attacks for 2 and applies 1 Poison each turn."
+      "PROPERNAME": "Guerilla Slime",
+      "DESCRIPTION": "Attacks for 2 to ALL enemies each turn."
     },
      {
       "NAMES": [

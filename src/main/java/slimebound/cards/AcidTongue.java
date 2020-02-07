@@ -23,7 +23,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
 
@@ -44,11 +44,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AcidTonguePower(p, p, this.magicNumber), this.magicNumber));
-
-        if (upgraded)
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new AcidTonguePowerUpgraded(p, p, this.magicNumber), this.magicNumber));
-
 
     }
 
@@ -59,8 +55,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
 
 
         }

@@ -480,7 +480,7 @@
 	"Slimebound:BuffSecondarySlimeEffectsPower": {
 		"NAME": "Minion Master",
 		"DESCRIPTIONS": [
-			"When your slimes apply Goop, Poison, or Block, they apply ",
+			"When your slimes apply Goop or Block, they apply ",
 			" more."
 		]
 	},

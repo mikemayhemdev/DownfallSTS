@@ -441,7 +441,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addCard(new slimebound.cards.MegaLick());
 
         BaseMod.addCard(new PressTheAttack());
-        BaseMod.addCard(new SoulSicken());
+        //BaseMod.addCard(new SoulSicken());
         // BaseMod.addCard(new slimebound.cards.zzzFocusedLick());
         BaseMod.addCard(new HauntingLick());
         BaseMod.addCard(new AcidGelatin());
@@ -449,15 +449,15 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addCard(new slimebound.cards.TongueLash());
         BaseMod.addCard(new ItLooksTasty());
         BaseMod.addCard(new slimebound.cards.AcidTongue());
-        BaseMod.addCard(new slimebound.cards.TendrilStrike());
-        BaseMod.addCard(new slimebound.cards.PoisonLick());
+        //BaseMod.addCard(new slimebound.cards.TendrilStrike());
+        //BaseMod.addCard(new slimebound.cards.PoisonLick());
         BaseMod.addCard(new slimebound.cards.WasteNot());
         BaseMod.addCard(new HungryTackle());
         BaseMod.addCard(new slimebound.cards.FlameTackle());
         BaseMod.addCard(new RollThrough());
         BaseMod.addCard(new ComboTackle());
         BaseMod.addCard(new GoopTackle());
-        BaseMod.addCard(new VenomTackle());
+        //BaseMod.addCard(new VenomTackle());
         BaseMod.addCard(new slimebound.cards.Grow());
         BaseMod.addCard(new slimebound.cards.Prepare());
         BaseMod.addCard(new slimebound.cards.Gluttony());
@@ -467,7 +467,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addCard(new slimebound.cards.MassFeed());
         BaseMod.addCard(new ViciousTackle());
         BaseMod.addCard(new slimebound.cards.LeechEnergy());
-        BaseMod.addCard(new LeechLife());
+        //BaseMod.addCard(new LeechLife());
         BaseMod.addCard(new Equalize());
 
         BaseMod.addCard(new DisruptingSlam());
@@ -558,7 +558,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(MegaLick.ID);
 
         UnlockTracker.unlockCard(PressTheAttack.ID);
-        UnlockTracker.unlockCard(SoulSicken.ID);
+        //UnlockTracker.unlockCard(SoulSicken.ID);
         // UnlockTracker.unlockCard(zzzFocusedLick.ID);
         UnlockTracker.unlockCard(HauntingLick.ID);
         UnlockTracker.unlockCard(AcidGelatin.ID);
@@ -569,13 +569,13 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(FinishingTackle.ID);
         //UnlockTracker.unlockCard(zzzSlimepotheosis.ID);
         UnlockTracker.unlockCard(TongueLash.ID);
-        UnlockTracker.unlockCard(PoisonLick.ID);
+        //UnlockTracker.unlockCard(PoisonLick.ID);
         UnlockTracker.unlockCard(ItLooksTasty.ID);
         UnlockTracker.unlockCard(AcidTongue.ID);
-        UnlockTracker.unlockCard(TendrilStrike.ID);
+        //UnlockTracker.unlockCard(TendrilStrike.ID);
         UnlockTracker.unlockCard(WasteNot.ID);
         UnlockTracker.unlockCard(HungryTackle.ID);
-        UnlockTracker.unlockCard(VenomTackle.ID);
+        //UnlockTracker.unlockCard(VenomTackle.ID);
         UnlockTracker.unlockCard(GoopTackle.ID);
         UnlockTracker.unlockCard(FlameTackle.ID);
         UnlockTracker.unlockCard(GoopSpray.ID);
@@ -585,7 +585,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(MassFeed.ID);
         UnlockTracker.unlockCard(ViciousTackle.ID);
         UnlockTracker.unlockCard(LeechEnergy.ID);
-        UnlockTracker.unlockCard(LeechLife.ID);
+        //UnlockTracker.unlockCard(LeechLife.ID);
         UnlockTracker.unlockCard(Equalize.ID);
 
         UnlockTracker.unlockCard(DisruptingSlam.ID);

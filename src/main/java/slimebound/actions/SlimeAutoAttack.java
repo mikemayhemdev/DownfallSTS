@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -40,6 +41,7 @@ public class SlimeAutoAttack extends AbstractGameAction {
     private boolean appliesPoison;
     private boolean appliesSlimed;
     private boolean appliesWeak;
+    private boolean hitsAll;
 
 
     public SlimeAutoAttack(AbstractCreature player, Integer damage, AttackEffect AE, SpawnedSlime slime, boolean appliesPoison, boolean appliesSlimed, boolean appliesWeak, Integer debuffamount, boolean beamVFX, int block, boolean CultistBuff) {
@@ -58,6 +60,27 @@ public class SlimeAutoAttack extends AbstractGameAction {
         this.appliesPoison = appliesPoison;
         this.appliesSlimed = appliesSlimed;
         this.appliesWeak = appliesWeak;
+        this.hitsAll = false;
+
+    }
+
+    public SlimeAutoAttack(AbstractCreature player, Integer damage, AttackEffect AE, SpawnedSlime slime, boolean appliesPoison, boolean appliesSlimed, boolean appliesWeak, Integer debuffamount, boolean beamVFX, int block, boolean CultistBuff, boolean hitsall) {
+
+        this.owner = player;
+        this.actionType = ActionType.POWER;
+        this.attackEffect = AttackEffect.POISON;
+        this.duration = 0.01F;
+        this.debuffamount = debuffamount;
+        this.AE = AE;
+        this.damage = damage;
+        this.slime = slime;
+        this.block = block;
+        this.beamVFX = beamVFX;
+        this.CultistBuff = CultistBuff;
+        this.appliesPoison = appliesPoison;
+        this.appliesSlimed = appliesSlimed;
+        this.appliesWeak = appliesWeak;
+        this.hitsAll = hitsall;
 
     }
 
@@ -88,10 +111,14 @@ public class SlimeAutoAttack extends AbstractGameAction {
             if (this.block > 0)
                 AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
 
+            if (this.hitsAll) {
+                AbstractDungeon.actionManager.addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.damage, true, true), DamageInfo.DamageType.THORNS, AttackEffect.POISON));
 
-            AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
-                    new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),
-                    AE));
+            } else {
+                AbstractDungeon.actionManager.addToTop(new DamageAction(mo,
+                        new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),
+                        AE));
+            }
 
             if (this.appliesPoison)
                 AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new PoisonPower(mo, AbstractDungeon.player, this.debuffamount), this.debuffamount, true, AbstractGameAction.AttackEffect.POISON));
