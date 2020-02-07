@@ -18,6 +18,7 @@ public class CBR_Kunai extends AbstractCharbossRelic
     
     public CBR_Kunai() {
         super(new Kunai());
+        this.counter = 0;
     }
     
     @Override

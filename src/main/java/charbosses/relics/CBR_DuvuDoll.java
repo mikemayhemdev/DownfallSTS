@@ -11,6 +11,7 @@ public class CBR_DuvuDoll extends AbstractCharbossRelic {
 
 	public CBR_DuvuDoll() {
 		super(new DuVuDoll());
+		this.tier = RelicTier.COMMON;
 	}
 	@Override
     public String getUpdatedDescription() {

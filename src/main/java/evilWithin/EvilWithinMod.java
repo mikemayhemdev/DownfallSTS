@@ -96,10 +96,14 @@ public class EvilWithinMod implements
     }
     private void initializeMonsters() {
         BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new MonsterGroup(new AbstractMonster[] { new CharBossIronclad() }));
+        BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new MonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
         for (int i=0; i < 20; i++) {
         	BaseMod.addBoss("Exordium", "EvilWithin:CharBossIronclad", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
             BaseMod.addBoss("TheCity", "EvilWithin:CharBossIronclad", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
             BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossIronclad", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
+        	BaseMod.addBoss("Exordium", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
+            BaseMod.addBoss("TheCity", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
+            BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
         }
     }
 }

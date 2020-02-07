@@ -45,16 +45,19 @@ public class EnHeadbutt extends AbstractBossCard
     }
     
     private int returnValue() {
+    	recursionCheck = true;
     	AbstractBossCard c = ((EnemyCardGroup) (AbstractCharBoss.boss.discardPile)).getHighestValueCard();
     	if (c == null) {
     		return 0;
     	}
-    	return ((c.getValue() + 10) / 2) - 5;
+    	int v = c.getValue();
+    	recursionCheck = false;
+    	return ((v + 10) / 2) - 5;
     }
     
     @Override
     public int getValue() {
-    	return super.getValue() + ((AbstractCharBoss.boss == null || !AbstractCharBoss.boss.hand.contains(this)) ? 8 : this.returnValue());
+    	return super.getValue() + ((AbstractCharBoss.boss == null || !AbstractCharBoss.boss.hand.contains(this) || recursionCheck) ? 2 : this.returnValue());
     }
     
     @Override

@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.CharBossIronclad;
 import charbosses.cards.colorless.EnBite;
+import charbosses.cards.curses.EnPain;
+import charbosses.relics.CBR_WarpedTongs;
 
 public class CharbossHistoryPower extends AbstractPower {
 	public static final String POWER_ID = "EvilWithin:History";
@@ -73,11 +75,33 @@ public class CharbossHistoryPower extends AbstractPower {
 	        for (int i = 0; i < 5; ++i) {
 	            boss.masterDeck.addToTop(new EnBite());
 	        }
+	        boss.decreaseMaxHealth((AbstractDungeon.actNum - 1) * 25);
 		}
 		
 		@Override
 		public int friendlyToArchetype(String a) {
-			if (a.equals(CharBossIronclad.ARCHETYPE_IC_STRIKE)) {
+			if (a.equals(CharBossIronclad.ARCHETYPE_IC_STRIKE) || a.equals(CharBossIronclad.ARCHETYPE_IC_RAMPAGE)) {
+				return 0;
+			}
+    		return 1;
+    	}
+    }
+    
+
+    public static class EI_Forge extends EventItem {
+		public EI_Forge() {
+			super(CharbossHistoryPower.DESCRIPTIONS[2], CharbossHistoryPower.DESCRIPTIONS[3]);
+		}
+
+		@Override
+		public void onApply(AbstractCharBoss boss) {
+	        boss.masterDeck.addToTop(new EnPain());
+	        (new CBR_WarpedTongs()).instantObtain(boss);
+		}
+		
+		@Override
+		public int friendlyToArchetype(String a) {
+			if (a.equals(CharBossIronclad.ARCHETYPE_IC_STRIKE) || a.equals(CharBossIronclad.ARCHETYPE_IC_RAMPAGE)) {
 				return 0;
 			}
     		return 1;
