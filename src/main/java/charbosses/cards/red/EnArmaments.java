@@ -39,16 +39,13 @@ public class EnArmaments extends AbstractBossCard
         }
     }
     private int getUpgradeoValue() {
-    	if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractCharBoss.boss != null) {
+    	if (!recursionCheck && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractCharBoss.boss != null) {
 	    	int value = 0;
+	    	recursionCheck = true;
 	    	for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
 	    		if (c.canUpgrade() && c != this) {
 	    			int deltavalue;
-	    			if (c.cardID == this.cardID) {
-	    				deltavalue = 9;
-	    			} else {
-	    				deltavalue = ((AbstractBossCard)c).getUpgradeValue();
-	    			}
+	    			deltavalue = ((AbstractBossCard)c).getUpgradeValue();
 	        		if (this.upgraded) {
 	        			value += deltavalue;
 	        		} else if (deltavalue > value) {
@@ -56,6 +53,7 @@ public class EnArmaments extends AbstractBossCard
 	        		}
 	    		}
 	    	}
+	    	recursionCheck = false;
 	    	return value;
     	}
     	return (this.upgraded ? 3 : 9);

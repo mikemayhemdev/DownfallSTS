@@ -3,6 +3,7 @@ package charbosses.actions.unique;
 import com.megacrit.cardcrawl.actions.*;
 import com.megacrit.cardcrawl.localization.*;
 
+import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToDrawPileEffect;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.EnemyCardGroup;
 
@@ -45,7 +46,8 @@ public class EnemyDiscardPileToTopOfDeckAction extends AbstractGameAction
             if (this.p.discardPile.group.size() > this.amount) {
             	final AbstractCard tmp = ((EnemyCardGroup) (this.p.discardPile)).getHighestValueCard();
                 this.p.discardPile.removeCard(tmp);
-                this.p.discardPile.moveToDeck(tmp, false);
+                //this.p.discardPile.moveToDeck(tmp, false);
+                AbstractDungeon.effectList.add(new EnemyShowCardAndAddToDrawPileEffect(tmp, false, false));
                 this.isDone = true;
                 return;
             }

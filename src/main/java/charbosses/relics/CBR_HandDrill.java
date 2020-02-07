@@ -10,6 +10,7 @@ public class CBR_HandDrill extends AbstractCharbossRelic {
 
 	public CBR_HandDrill() {
 		super(new HandDrill());
+		this.tier = RelicTier.RARE;
 	}
 	@Override
     public String getUpdatedDescription() {

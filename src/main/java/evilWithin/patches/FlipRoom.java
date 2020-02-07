@@ -2,57 +2,90 @@ package evilWithin.patches;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Pixmap;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.graphics.glutils.FrameBuffer;
+import com.badlogic.gdx.math.Matrix4;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.characters.AnimatedNpc;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.OverlayMenu;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.shop.Merchant;
 import evilWithin.EvilWithinMod;
 import javassist.CtBehavior;
 
 public class FlipRoom
 {
-    private static FrameBuffer fbo = null;
+    private static boolean isFlipped = false;
+    private static OrthographicCamera camera = null;
+    private static Matrix4 oldProjectionMatrix = null;
 
-    private static void initFBO()
+    public static boolean isFlipped()
     {
-        if (fbo == null) {
-            fbo = new FrameBuffer(Pixmap.Format.RGBA8888, Settings.WIDTH, Settings.HEIGHT, false);
+        return isFlipped;
+    }
+
+    private static void initFlip()
+    {
+        if (camera == null) {
+            camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+            if (Settings.VERT_LETTERBOX_AMT != 0 || Settings.HORIZ_LETTERBOX_AMT != 0) {
+                camera.position.set(Settings.WIDTH / 2f, Settings.HEIGHT / 2f, 0);
+            } else {
+                camera.position.set(camera.viewportWidth / 2f, camera.viewportHeight / 2f, 0);
+            }
+            camera.rotate(camera.up, 180);
+            camera.update();
         }
     }
 
-    public static void startFBO(SpriteBatch sb)
+    public static void beginFlip(SpriteBatch sb)
     {
         if (!EvilWithinMod.EXPERIMENTAL_FLIP) return;
 
-        initFBO();
-        sb.end();
-        fbo.begin();
+        if (isFlipped()) return;
 
-        Gdx.gl.glClearColor(0, 0, 0, 0);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        sb.begin();
+        initFlip();
+        sb.flush();
+
+        oldProjectionMatrix = sb.getProjectionMatrix().cpy();
+        sb.setProjectionMatrix(camera.combined);
+        CardCrawlGame.psb.setProjectionMatrix(camera.combined);
+
+        isFlipped = true;
     }
 
-    public static void endFBO(SpriteBatch sb)
+    public static void endFlip(SpriteBatch sb)
     {
         if (!EvilWithinMod.EXPERIMENTAL_FLIP) return;
 
-        sb.end();
-        fbo.end();
+        if (isFlipped) {
+            sb.flush();
 
-        sb.begin();
-        sb.setColor(Color.WHITE);
+            if (oldProjectionMatrix != null) {
+                CardCrawlGame.psb.setProjectionMatrix(oldProjectionMatrix);
+                sb.setProjectionMatrix(oldProjectionMatrix);
+                oldProjectionMatrix = null;
+            }
+            isFlipped = false;
+        }
+    }
 
-        TextureRegion fboTex = new TextureRegion(fbo.getColorBufferTexture());
-        // Flip horizontally, it's already flipped vertically so flip it back
-        fboTex.flip(true, true);
-        sb.draw(fboTex, 0, 0, Settings.WIDTH, Settings.HEIGHT);
+    public static void pauseFlip(SpriteBatch sb)
+    {
+        if (isFlipped) {
+            endFlip(sb);
+            isFlipped = true;
+        }
+    }
+
+    public static void unpauseFlip(SpriteBatch sb)
+    {
+        if (isFlipped) {
+            beginFlip(sb);
+        }
     }
 
     @SpirePatch(
@@ -63,12 +96,65 @@ public class FlipRoom
     {
         public static void Prefix(AbstractRoom __instance, SpriteBatch sb)
         {
-            startFBO(sb);
+            beginFlip(sb);
         }
 
         public static void Postfix(AbstractRoom __instance, SpriteBatch sb)
         {
-            endFBO(sb);
+            endFlip(sb);
+        }
+    }
+
+    @SpirePatch(
+            clz = AnimatedNpc.class,
+            method = "render",
+            paramtypez = {SpriteBatch.class}
+    )
+    public static class NPC1
+    {
+        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb)
+        {
+            beginFlip(sb);
+        }
+
+        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb)
+        {
+            endFlip(sb);
+        }
+    }
+
+    @SpirePatch(
+            clz = AnimatedNpc.class,
+            method = "render",
+            paramtypez = {SpriteBatch.class, Color.class}
+    )
+    public static class NPC2
+    {
+        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb, Color color)
+        {
+            beginFlip(sb);
+        }
+
+        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb, Color color)
+        {
+            endFlip(sb);
+        }
+    }
+
+    @SpirePatch(
+            clz = Merchant.class,
+            method = "render"
+    )
+    public static class MerchantRug
+    {
+        public static void Prefix(Merchant __instance, SpriteBatch sb)
+        {
+            beginFlip(sb);
+        }
+
+        public static void Postfix(Merchant __instance, SpriteBatch sb)
+        {
+            endFlip(sb);
         }
     }
 
@@ -83,7 +169,7 @@ public class FlipRoom
         )
         public static void Start(AbstractDungeon __instance, SpriteBatch sb)
         {
-            startFBO(sb);
+            beginFlip(sb);
         }
 
         @SpireInsertPatch(
@@ -91,7 +177,7 @@ public class FlipRoom
         )
         public static void End1(AbstractDungeon __instance, SpriteBatch sb)
         {
-            endFBO(sb);
+            endFlip(sb);
         }
 
         @SpireInsertPatch(
@@ -99,7 +185,7 @@ public class FlipRoom
         )
         public static void End2(AbstractDungeon __instance, SpriteBatch sb)
         {
-            endFBO(sb);
+            endFlip(sb);
         }
 
         @SpireInsertPatch(
@@ -107,7 +193,7 @@ public class FlipRoom
         )
         public static void StartTopLevel(AbstractDungeon __instance, SpriteBatch sb)
         {
-            startFBO(sb);
+            beginFlip(sb);
         }
 
         @SpireInsertPatch(
@@ -115,7 +201,7 @@ public class FlipRoom
         )
         public static void EndTopLevel(AbstractDungeon __instance, SpriteBatch sb)
         {
-            endFBO(sb);
+            endFlip(sb);
         }
 
         private static class StartLocator extends SpireInsertLocator

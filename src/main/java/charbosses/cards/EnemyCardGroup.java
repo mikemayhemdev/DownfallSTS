@@ -271,4 +271,16 @@ public class EnemyCardGroup extends CardGroup {
     	}
     	return r;
     }
+    public AbstractBossCard getHighestUpgradeValueCard() {
+    	AbstractBossCard r = null;
+    	int record = -99;
+    	for (AbstractCard c : this.group) {
+    		AbstractBossCard cc = (AbstractBossCard)c;
+    		if (cc.getUpgradeValue() > record) {
+    			r = cc;
+    			record = cc.getValue();
+    		}
+    	}
+    	return r;
+    }
 }

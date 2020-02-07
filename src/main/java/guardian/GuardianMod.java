@@ -20,6 +20,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
+import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
+import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
+import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
+import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
+import com.megacrit.cardcrawl.events.shrines.UpgradeShrine;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,6 +34,7 @@ import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import eventUtil.EventUtils;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
 import guardian.events.StasisEgg;
@@ -52,6 +59,9 @@ import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.characters.SlimeboundCharacter;
+import slimebound.events.WorldOfGoopSlimebound;
+import slimebound.relics.GreedOozeRelic;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -974,29 +984,89 @@ public static void saveData() {
 
         addPotions();
 
-        //Dungeon patch contains the content sharing event logic
 
-        //TODO - Events here
+        EventUtils.registerEvent(
+                //Event ID//
+                GemMine.ID, GemMine.class,
+                //Character Required//
+                GuardianCharacter.class,
+                //Act ID's this event can appear in//
+                new String[] { Exordium.ID });
+        EventUtils.registerEvent(
+                //Event ID//
+                StasisEgg.ID, StasisEgg.class,
+                //Character Required//
+                GuardianCharacter.class,
+                //Act ID's this event can appear in//
+                new String[] { TheBeyond.ID });
+        EventUtils.registerEvent(
+                //Event ID//
+                BackToBasicsGuardian.ID, BackToBasicsGuardian.class,
+                //Character required//
+                GuardianCharacter.class,
+                //Existing Event to Override//
+                BackToBasics.ID,
+                //Event Spawn type//
+                EventUtils.EventType.FULL_REPLACE);
+        EventUtils.registerEvent(
+                //Event ID//
+                CrystalForge.ID, CrystalForge.class,
+                //Character required//
+                GuardianCharacter.class);
+        EventUtils.registerEvent(
+                //Event ID//
+                BackToBasicsGuardian.ID, BackToBasicsGuardian.class,
+                //Character required//
+                GuardianCharacter.class,
+                //Existing Event to Override//
+                BackToBasics.ID,
+                //Event Spawn type//
+                EventUtils.EventType.FULL_REPLACE);
+        EventUtils.registerEvent(
+                //Event ID//
+                AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class,
+                //Character required//
+                GuardianCharacter.class,
+                //Existing Event to Override//
+                AccursedBlacksmith.ID,
+                //Event Spawn type//
+                EventUtils.EventType.FULL_REPLACE);
+        EventUtils.registerEvent(
+                //Event ID//
+                PurificationShrineGuardian.ID, PurificationShrineGuardian.class,
+                //Character required//
+                GuardianCharacter.class,
+                //Existing Event to Override//
+                PurificationShrine.ID,
+                //Event Spawn type//
+                EventUtils.EventType.FULL_REPLACE);
+        EventUtils.registerEvent(
+                //Event ID//
+                TransmogrifierGuardian.ID, TransmogrifierGuardian.class,
+                //Character required//
+                GuardianCharacter.class,
+                //Existing Event to Override//
+                Transmogrifier.ID,
+                //Event Spawn type//
+                EventUtils.EventType.FULL_REPLACE);
+        EventUtils.registerEvent(
+                //Event ID//
+                UpgradeShrineGuardian.ID, UpgradeShrineGuardian.class,
+                //Character required//
+                GuardianCharacter.class,
+                //Existing Event to Override//
+                UpgradeShrine.ID,
+                //Event Spawn type//
+                EventUtils.EventType.FULL_REPLACE);
 
-        BaseMod.addEvent(GemMine.ID, GemMine.class, Exordium.ID);
-        BaseMod.addEvent(StasisEgg.ID, StasisEgg.class, TheBeyond.ID);
-
-        BaseMod.addEvent(BackToBasicsGuardian.ID, BackToBasicsGuardian.class, TheCity.ID);
-
-        BaseMod.addEvent(CrystalForge.ID, CrystalForge.class);
-
-        BaseMod.addEvent(AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class);
-        BaseMod.addEvent(PurificationShrineGuardian.ID, PurificationShrineGuardian.class);
-        BaseMod.addEvent(TransmogrifierGuardian.ID, TransmogrifierGuardian.class);
-        BaseMod.addEvent(UpgradeShrineGuardian.ID, UpgradeShrineGuardian.class);
-
-
-        if (Loader.isModLoaded("TheJungle")) {
-            BaseMod.addEvent(BackToBasicsGuardian.ID, BackToBasicsGuardian.class, "TheJungle");
-            BaseMod.addEvent(CrystalForge.ID, CrystalForge.class, "TheJungle");
-        }
-
-
+        //BaseMod.addEvent(GemMine.ID, GemMine.class, Exordium.ID);
+        //BaseMod.addEvent(StasisEgg.ID, StasisEgg.class, TheBeyond.ID);
+        //BaseMod.addEvent(BackToBasicsGuardian.ID, BackToBasicsGuardian.class, TheCity.ID);
+        //BaseMod.addEvent(CrystalForge.ID, CrystalForge.class);
+        //BaseMod.addEvent(AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class);
+        //BaseMod.addEvent(PurificationShrineGuardian.ID, PurificationShrineGuardian.class);
+        //BaseMod.addEvent(TransmogrifierGuardian.ID, TransmogrifierGuardian.class);
+        //BaseMod.addEvent(UpgradeShrineGuardian.ID, UpgradeShrineGuardian.class);
         //BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Exordium.ID);
 
         initializeSocketTextures();
