@@ -22,9 +22,9 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
@@ -37,6 +37,8 @@ import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
+import eventUtil.EventUtils;
+import expansioncontent.relics.StudyCardRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.cards.*;
@@ -848,9 +850,14 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
 
         //Dungeon patch contains the content sharing event logic
 
-        BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);
+        /*BaseMod.addEvent(Hunted.ID, Hunted.class, TheCity.ID);
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
-        BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, TheCity.ID);
+        BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, TheCity.ID);*/
+
+        EventUtils.registerEvent(Hunted.ID, Hunted.class, SlimeboundCharacter.class, new String[] { TheCity.ID, TheBeyond.ID, "TheJungle ID Goes Here" }, (c) -> (c instanceof SlimeboundCharacter) && !((SlimeboundCharacter) c).foughtSlimeBoss || c.hasRelic(StudyCardRelic.ID));
+        EventUtils.registerEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, new String[] { TheCity.ID, "The jungle" }, (c) -> c instanceof SlimeboundCharacter || SlimeboundMod.contentSharing_events);
+        EventUtils.registerEvent(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class, SlimeboundCharacter.class, GoopPuddle.ID, (c) -> !c.hasRelic(GreedOozeRelic.ID), EventUtils.EventType.FULL_REPLACE);
+
 
         /*
         if (Loader.isModLoaded("TheJungle")){
@@ -862,7 +869,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         //BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, Exordium.ID);
 
 
-        BaseMod.addEvent(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class, Exordium.ID);
+        //BaseMod.addEvent(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class, Exordium.ID);
 
     }
 
