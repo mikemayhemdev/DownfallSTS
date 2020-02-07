@@ -106,6 +106,59 @@ public class FlipRoom
     }
 
     @SpirePatch(
+            clz = AnimatedNpc.class,
+            method = "render",
+            paramtypez = {SpriteBatch.class}
+    )
+    public static class NPC1
+    {
+        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb)
+        {
+            beginFlip(sb);
+        }
+
+        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb)
+        {
+            endFlip(sb);
+        }
+    }
+
+    @SpirePatch(
+            clz = AnimatedNpc.class,
+            method = "render",
+            paramtypez = {SpriteBatch.class, Color.class}
+    )
+    public static class NPC2
+    {
+        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb, Color color)
+        {
+            beginFlip(sb);
+        }
+
+        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb, Color color)
+        {
+            endFlip(sb);
+        }
+    }
+
+    @SpirePatch(
+            clz = Merchant.class,
+            method = "render"
+    )
+    public static class MerchantRug
+    {
+        public static void Prefix(Merchant __instance, SpriteBatch sb)
+        {
+            beginFlip(sb);
+        }
+
+        public static void Postfix(Merchant __instance, SpriteBatch sb)
+        {
+            endFlip(sb);
+        }
+    }
+
+    @SpirePatch(
             clz = AbstractDungeon.class,
             method = "render"
     )
