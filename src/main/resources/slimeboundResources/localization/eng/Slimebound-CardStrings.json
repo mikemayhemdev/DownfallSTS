@@ -471,5 +471,9 @@
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
     "DESCRIPTION": "Deal !D! damage. NL If the enemy has Goop, it is not removed by this attack."
+  },
+  "Slimebound:OneTwoCombo": {
+    "NAME": "One-Two Combo",
+    "DESCRIPTION": "Deal !D! damage. NL Command. NL Whenever you Split, return this from your exhaust pile to your hand. NL Exhaust."
   }
 }

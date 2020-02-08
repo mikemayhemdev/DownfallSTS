@@ -493,6 +493,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addCard(new SplitSpecialist());
         BaseMod.addCard(new SpecialForces());
         BaseMod.addCard(new SlimeSlap());
+        BaseMod.addCard(new OneTwoCombo());
 
         unlocks0 = new CustomUnlockBundle(
                 RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
@@ -608,6 +609,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(SplitSpecialist.ID);
         UnlockTracker.unlockCard(SpecialForces.ID);
         UnlockTracker.unlockCard(SlimeSlap.ID);
+        UnlockTracker.unlockCard(OneTwoCombo.ID);
 
         //UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);
 

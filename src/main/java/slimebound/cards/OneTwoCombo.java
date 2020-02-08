@@ -2,27 +2,28 @@ package slimebound.cards;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.actions.ExhaustToHandDirectlyAction;
+import slimebound.actions.TrigggerSpecificSlimeAttackAction;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.PreventSlimeDecayPower;
 
 
-public class SlimeSlap extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:SlimeSlap";
+public class OneTwoCombo extends AbstractSlimeboundCard {
+    public static final String ID = "Slimebound:OneTwoCombo";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/acidgelatin.png";
+    public static final String IMG_PATH = "cards/acidtongue.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
@@ -35,26 +36,33 @@ public class SlimeSlap extends AbstractSlimeboundCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
-    public SlimeSlap() {
+    public OneTwoCombo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseDamage = damage = 8;
+        baseDamage = 6;
+        exhaust = true;
+    }
 
-
+    public void onSplit() {
+        addToBot(new ExhaustToHandDirectlyAction(this));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1));
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-    }
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        AbstractOrb oldestOrb = null;
+        for (AbstractOrb o : p.orbs) {
+            if (o instanceof SpawnedSlime) {
+                oldestOrb = o;
+                break;
+            }
 
-    public AbstractCard makeCopy() {
-        return new SlimeSlap();
+        }
+        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(2);
         }
     }
 }

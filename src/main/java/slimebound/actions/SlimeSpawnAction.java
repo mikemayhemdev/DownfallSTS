@@ -3,12 +3,14 @@ package slimebound.actions;
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import slimebound.SlimeboundMod;
+import slimebound.cards.OneTwoCombo;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.powers.DuplicatedFormNoHealPower;
@@ -131,6 +133,11 @@ public class SlimeSpawnAction extends AbstractGameAction {
                 }
 
                 AbstractDungeon.player.channelOrb(this.orbType);
+                for (AbstractCard q : AbstractDungeon.player.exhaustPile.group) {
+                    if (q instanceof OneTwoCombo) {
+                        ((OneTwoCombo) q).onSplit();
+                    }
+                }
             }
 
 
