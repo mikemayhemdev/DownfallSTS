@@ -15,6 +15,7 @@ public class Defend extends AbstractSneckoCard {
     public Defend() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = BLOCK;
+        tags.add(CardTags.STARTER_DEFEND);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
