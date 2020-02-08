@@ -47,7 +47,6 @@
       "bruiser_slime",
       "bruiser slimes",
       "bruiser_slimes"
-
     ],
     "PROPERNAME": "好鬥史萊姆",
     "DESCRIPTION": "發動攻擊時造成 4 點傷害"
@@ -66,7 +65,6 @@
       "leeching_slime",
       "leeching slimes",
       "leeching_slimes"
-
     ],
     "PROPERNAME": "水蛭史萊姆",
     "DESCRIPTION": "發動攻擊時造成 2 點傷害，並給予你 2 點 格擋"
@@ -77,7 +75,6 @@
       "acid_slime",
       "acid slimes",
       "acid_slimes"
-
     ],
     "PROPERNAME": "酸液史萊姆",
     "DESCRIPTION": "發動攻擊時造成 2 點傷害，並給予敵人 1 層 中毒"
@@ -88,7 +85,6 @@
       "mire_slime",
       "mire slimes",
       "mire_slimes"
-
     ],
     "PROPERNAME": "汙泥史萊姆",
     "DESCRIPTION": "發動攻擊時造成 1 點傷害，並給予敵人 2 層 黏液"

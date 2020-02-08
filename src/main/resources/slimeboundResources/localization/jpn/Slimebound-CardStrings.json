@@ -16,7 +16,6 @@
     "NAME": "レベルアップ",
     "DESCRIPTION": "効力 !M! を得る。",
     "UPGRADE_DESCRIPTION": "効力 !M! とスライムスロット1を得る。"
-    
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "ボスを守れ",
@@ -27,7 +26,6 @@
     "NAME": "サンプリングリック",
     "DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る。 NL 廃棄 。",
     "UPGRADE_DESCRIPTION": "粘液 !SlimeboundSlimed! を与える。 NL !B! ブロック を得る。 NL カードを1枚引く。 NL 廃棄 。"
-
   },
   "Slimebound:DuplicateSlimes": {
     "NAME": "スライム複製",
@@ -131,12 +129,10 @@
     "NAME": "グロースパンチ",
     "DESCRIPTION": "!D! ダメージを与える。 NL このカードのダメージを永続的に !M! 増加させる。 NL 廃棄 。",
     "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL !B! ブロック を得る。 NL このカードのダメージと ブロック を永続的に !M! 増加させる。 NL 廃棄 。"
-
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "作戦の確認",
     "DESCRIPTION": "手札に4枚のランダムなタックルカードを加える。 それらのカードのコストは戦闘中1低下する。 NL 廃棄 。"
-
   },
   "Slimebound:Recycling": {
     "NAME": "リサイクル",
@@ -244,7 +240,6 @@
     "NAME": "痛みを感じろ",
     "DESCRIPTION": "自分のターンに初めてHPを失うダメージは、代わりに相手が多くのダメージを受ける。",
     "UPGRADE_DESCRIPTION": "天賦 。 NL 自分のターンに初めてHPを失うダメージは、代わりに相手が多くのダメージを受ける。"
-	
   },
   "Slimebound:AccelerateToxins": {
     "NAME": "アクセラレート・トキシン",
@@ -306,7 +301,6 @@
     "NAME": "グープタックル",
     "DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。",
     "UPGRADE_DESCRIPTION": "!D! ダメージを与え、 !SlimeboundSelfharm! のダメージを受ける。 NL ランダムなアップグレードされたタックルカードを1枚手札に加える。 そのカードのコストはこのターン0になる。"
-
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "腐食性の唾",
@@ -362,7 +356,6 @@
   "Slimebound:Equalize": {
     "NAME": "均等化",
     "DESCRIPTION": "!D! ダメージを与えてHPを !M! 回復する。 NL HPが半分以下のとき2回プレイされる。 NL 廃棄 。"
-
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "破壊的なスラム",
@@ -402,7 +395,6 @@
     "NAME": "ヘキサバーン",
     "DESCRIPTION": "敵全体に、!D! ダメージを2回与える。 NL このカードのダメージは現在のHPの1/10に等しい。 NL 廃棄 。",
     "UPGRADE_DESCRIPTION": "敵全体に、!D! ダメージを2回与える。 NL このカードのダメージは現在のHPの1/6に等しい。 NL 廃棄 。"
-
   },
   "Slimebound:PrepareBeam": {
     "NAME": "準備:ビーム",
@@ -430,7 +422,8 @@
     "DESCRIPTION": "全てのデバフを解除する。 NL 筋力 !M!を得る。 HPが半分以下のとき、 筋力 !SlimeboundSlimePoison! を得る。 NL 廃棄 。",
     "EXTENDED_DESCRIPTION": [
       "とっても... 元気..."
-    ] },
+    ]
+  },
   "Slimebound:Collect": {
     "NAME": "収集",
     "DESCRIPTION": "筋力 !M! と 効力 1を得る。 NL !B! ブロック を得る。 NL 廃棄 。"
@@ -482,7 +475,7 @@
   "Slimebound:PolyBeam": {
     "NAME": "ポリビーム",
     "DESCRIPTION": "!D! ダメージを2回与える。 NL 次のターン開始時に、!D! ダメージを2回与える。 NL 廃棄 。",
-  "UPGRADE_DESCRIPTION": "!D! ダメージを2回与える。 NL 廃棄 。"
+    "UPGRADE_DESCRIPTION": "!D! ダメージを2回与える。 NL 廃棄 。"
   },
   "Slimebound:Sear": {
     "NAME": "焼印",
@@ -600,11 +593,11 @@
     "NAME": "分裂:ゴーストフレイム",
     "DESCRIPTION": "!M! までのスライムスロットを得る。 NL ゴーストフレイムスライム に 分裂 する。 NL 廃棄 。"
   },
-"Slimebound:MinionMaster": {
+  "Slimebound:MinionMaster": {
     "NAME": "ミニオンマスター",
     "DESCRIPTION": "スライムスロットを1つ得る。 生み出したスライムが 粘液 、 毒 、 ブロック を与えるとき、1つ追加で与える。",
     "UPGRADE_DESCRIPTION": "スライムスロットを !M! つ得る。 NL 生み出したスライムが 粘液 、 毒 、 ブロック を与えるとき、1つ追加で与える。"
-},
+  },
   "Slimebound:BestDefense": {
     "NAME": "無謀",
     "DESCRIPTION": "「タックル」を含むカードは !M! 多くのダメージを与え、受けるダメージが2増える。"

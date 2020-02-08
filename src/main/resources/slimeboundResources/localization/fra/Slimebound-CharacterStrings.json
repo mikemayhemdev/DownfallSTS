@@ -1,11 +1,11 @@
 {
-	"Slimebound": {
-		"NAMES": [
-			"The Slimebound"
-		],
-		"TEXT": [
-			"Anciennement fervant serviteur de la Tour, il tente désormais de la conquérir...",
-			"Je dois... détruire...le Coeur..."
-		]
-	}
+  "Slimebound": {
+    "NAMES": [
+      "The Slimebound"
+    ],
+    "TEXT": [
+      "Anciennement fervant serviteur de la Tour, il tente désormais de la conquérir...",
+      "Je dois... détruire...le Coeur..."
+    ]
+  }
 }

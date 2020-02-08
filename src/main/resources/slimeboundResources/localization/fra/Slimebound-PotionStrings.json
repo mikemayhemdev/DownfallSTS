@@ -6,7 +6,6 @@
       " Slimed."
     ]
   },
-
   "Slimebound:SlimyTonguePotion": {
     "NAME": "Slimy Elixir",
     "DESCRIPTIONS": [
@@ -14,7 +13,6 @@
       " de plus."
     ]
   },
-
   "Slimebound:SpawnSlimePotion": {
     "NAME": "Bottled Minion",
     "DESCRIPTIONS": [
@@ -22,7 +20,6 @@
       " Aléatoire Slime."
     ]
   },
-
   "Slimebound:ThreeZeroPotion": {
     "NAME": "Ooze-Thé infusé",
     "DESCRIPTIONS": [

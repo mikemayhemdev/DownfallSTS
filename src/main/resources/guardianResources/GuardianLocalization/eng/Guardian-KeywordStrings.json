@@ -1,13 +1,13 @@
 [
-     {
-      "NAMES": [
-        "socket",
-        "sockets",
-        "socketed"
-      ],
-      "PROPER_NAME": "Socket",
-      "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
-    },
+  {
+    "NAMES": [
+      "socket",
+      "sockets",
+      "socketed"
+    ],
+    "PROPER_NAME": "Socket",
+    "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
+  },
   {
     "NAMES": [
       "stasis"
@@ -32,13 +32,13 @@
     "DESCRIPTION": "While in Defensive Mode, you have 3 Thorns, deal 25% less damage, and gain 2 Block when you play a card."
   },
   {
-  "NAMES": [
-    "ward",
-    "wards"
-  ],
+    "NAMES": [
+      "ward",
+      "wards"
+    ],
     "PROPER_NAME": "Ward",
-  "DESCRIPTION": "Wards are #b0 cost Block cards which Exhaust."
-},
+    "DESCRIPTION": "Wards are #b0 cost Block cards which Exhaust."
+  },
   {
     "NAMES": [
       "accelerate"
