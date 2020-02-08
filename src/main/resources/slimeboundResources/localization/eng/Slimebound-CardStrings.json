@@ -55,8 +55,8 @@
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
-    "DESCRIPTION": "The first card you play each turn that targets enemies also causes your oldest slime to Attack.",
-    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also cause your oldest slime to Attack."
+    "DESCRIPTION": "The first card you play each turn that targets enemies also Commands.",
+    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also Commands."
   },
   "Slimebound:SlimeTap": {
     "NAME": "Slime Tap",
@@ -68,12 +68,12 @@
   },
   "Slimebound:Teamwork": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Deal !D! damage. NL Trigger your !M! oldest Slime's attacks X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Trigger your oldest Slime's attack X times."
+    "DESCRIPTION": "Deal !D! damage. NL Command X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Command X times."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. Trigger all of your Slime's attacks."
+    "DESCRIPTION": "Deal !D! damage. Command ALL slimes."
   },
   "Slimebound:MaxSlimes": {
     "NAME": "Make Some Room",
@@ -201,8 +201,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has Goop, trigger your oldest slime's attack.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has Goop, trigger your oldest slime's attack twice."
+    "DESCRIPTION": "Deal !D! damage. If the enemy has Goop, Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has Goop, Command twice."
   },
   "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",

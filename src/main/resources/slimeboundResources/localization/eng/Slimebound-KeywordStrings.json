@@ -5,14 +5,14 @@
       "absorbing",
       "absorbed"
     ],
-    "PROPERNAME": "Absorb",
+    "PROPER_NAME": "Absorb",
     "DESCRIPTION": "Recombine with a spawned Slime, returning the Max HP it took upon Splitting."
   },
   {
     "NAMES": [
       "split"
     ],
-    "PROPERNAME": "Split",
+    "PROPER_NAME": "Split",
     "DESCRIPTION": "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn. While the Slime is alive, your Max HP is reduced by 3."
   },
   {
@@ -20,22 +20,30 @@
       "goop",
       "gooped"
     ],
-    "PROPERNAME": "Goop",
+    "PROPER_NAME": "Goop",
     "DESCRIPTION": "The next attack deals 1 more damage per Goop, consuming the Goop effect and healing 2 HP. Half of Goop is removed at end of turn."
   },
   {
     "NAMES": [
       "potency"
     ],
-    "PROPERNAME": "Potency",
+    "PROPER_NAME": "Potency",
     "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes."
+  },
+  {
+    "NAMES": [
+      "command",
+      "commands"
+    ],
+    "PROPER_NAME": "Command",
+    "DESCRIPTION": "Your oldest Slime attacks."
   },
   {
     "NAMES": [
       "torch head slime",
       "torch_head_slime"
     ],
-    "PROPERNAME": "Torch Head Slime",
+    "PROPER_NAME": "Torch Head Slime",
     "DESCRIPTION": "Attacks for 6 each turn. Gains twice the normal benefit from Potency."
   },
   {
@@ -46,7 +54,7 @@
       "bruiser_slimes",
       "bruiser"
     ],
-    "PROPERNAME": "Bruiser Slime",
+    "PROPER_NAME": "Bruiser Slime",
     "DESCRIPTION": "Attacks for 4 each turn."
   },
   {
@@ -54,7 +62,7 @@
       "cultist slime",
       "cultist_slime"
     ],
-    "PROPERNAME": "Cultist Slime",
+    "PROPER_NAME": "Cultist Slime",
     "DESCRIPTION": "Attacks for 6 each turn, then increases it's damage by 1."
   },
   {
@@ -65,7 +73,7 @@
       "leeching_slimes",
       "leeching"
     ],
-    "PROPERNAME": "Leeching Slime",
+    "PROPER_NAME": "Leeching Slime",
     "DESCRIPTION": "Attacks for 2 and grants you 2 Block each turn."
   },
   {
@@ -76,7 +84,7 @@
       "guerilla_slimes",
       "guerilla"
     ],
-    "PROPERNAME": "Guerilla Slime",
+    "PROPER_NAME": "Guerilla Slime",
     "DESCRIPTION": "Attacks for 2 to ALL enemies each turn."
   },
   {
@@ -87,7 +95,7 @@
       "mire_slimes",
       "mire"
     ],
-    "PROPERNAME": "Mire Slime",
+    "PROPER_NAME": "Mire Slime",
     "DESCRIPTION": "Attacks for 1 and applies 2 Goop each turn."
   },
   {
@@ -95,7 +103,7 @@
       "plated armor",
       "plated_armor"
     ],
-    "PROPERNAME": "Plated Armor",
+    "PROPER_NAME": "Plated Armor",
     "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
   },
   {
@@ -103,14 +111,14 @@
       "bronze slime",
       "bronze_slime"
     ],
-    "PROPERNAME": "Bronze Slime",
+    "PROPER_NAME": "Bronze Slime",
     "DESCRIPTION": "Attacks for 6 and grants you 4 Block each turn."
   },
   {
     "NAMES": [
       "lick"
     ],
-    "PROPERNAME": "Lick",
+    "PROPER_NAME": "Lick",
     "DESCRIPTION": "0-cost cards that apply Goop a variety of secondary effects."
   },
   {
@@ -118,28 +126,28 @@
       "ghostflame slime",
       "ghostflame_slime"
     ],
-    "PROPERNAME": "Ghostflame Slime",
+    "PROPER_NAME": "Ghostflame Slime",
     "DESCRIPTION": "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
   },
   {
     "NAMES": [
       "morph"
     ],
-    "PROPERNAME": "Morph",
+    "PROPER_NAME": "Morph",
     "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs 1 less."
   },
   {
     "NAMES": [
       "slow"
     ],
-    "PROPERNAME": "Slow",
+    "PROPER_NAME": "Slow",
     "DESCRIPTION": "Receives 10% more damage per card played in a turn."
   },
   {
     "NAMES": [
       "tackle"
     ],
-    "PROPERNAME": "Tackle",
+    "PROPER_NAME": "Tackle",
     "DESCRIPTION": "High-damage Attacks that also deal a small amount of damage to you."
   },
   {
@@ -147,35 +155,35 @@
       "spire boss",
       "spire_boss"
     ],
-    "PROPERNAME": "Spire Boss",
+    "PROPER_NAME": "Spire Boss",
     "DESCRIPTION": "Powerful 0-cost cards, inspired by the bosses of the Spire."
   },
   {
     "NAMES": [
       "divide"
     ],
-    "PROPERNAME": "Divide",
+    "PROPER_NAME": "Divide",
     "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
   },
   {
     "NAMES": [
       "conquer"
     ],
-    "PROPERNAME": "Conquer",
+    "PROPER_NAME": "Conquer",
     "DESCRIPTION": "1-cost Attack. NL Deal 10 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
   },
   {
     "NAMES": [
       "serve"
     ],
-    "PROPERNAME": "Serve",
+    "PROPER_NAME": "Serve",
     "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
   },
   {
     "NAMES": [
       "protect"
     ],
-    "PROPERNAME": "Protect",
+    "PROPER_NAME": "Protect",
     "DESCRIPTION": "1-cost Skill. NL Gain 8 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
   }
 ]
