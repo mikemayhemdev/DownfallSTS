@@ -1,4 +1,4 @@
-package evilWithin.patches.topPanel;
+package evilWithin.patches.ui.topPanel;
 
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;

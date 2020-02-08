@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import evilWithin.EvilWithinMod;
-import evilWithin.patches.topPanel.GoldToSoulPatches;
+import evilWithin.patches.ui.topPanel.GoldToSoulPatches;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
