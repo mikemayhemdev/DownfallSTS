@@ -57,19 +57,8 @@ public class RecyclingPower extends AbstractPower {
     */
 
     public void atStartOfTurn() {
-
         flash();
-
-        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(1));
-        if (this.amount <= 1) {
-
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, RecyclingPower.POWER_ID));
-
-        } else {
-
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, RecyclingPower.POWER_ID, 1));
-
-        }
+        AbstractDungeon.actionManager.addToBottom(new ReturnRandom0Cost(amount));
     }
 
 
@@ -77,9 +66,9 @@ public class RecyclingPower extends AbstractPower {
 
 
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         } else {
-            this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
         }
 
     }

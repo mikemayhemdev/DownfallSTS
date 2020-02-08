@@ -43,7 +43,7 @@ public class Recycling extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RecyclingPower(p, p, 1), 1));
 
     }
 

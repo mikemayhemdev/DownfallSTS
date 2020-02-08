@@ -221,9 +221,9 @@
   "Slimebound:RecyclingPower": {
     "NAME": "Recycling",
     "DESCRIPTIONS": [
-      "Return a random 0-cost Exhausted card to your hand at the start of next turn.",
-      "Return a random 0-cost Exhausted card to your hand at the start of your next ",
-      " turns."
+      "At the start of your turn, return #b",
+      " random 0-Cost card from your exhaust pile to your hand.",
+      " random 0-Cost cards from your exhaust pile to your hand."
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
