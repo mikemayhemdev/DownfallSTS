@@ -23,7 +23,7 @@ public class GoopArmor extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     private static int upgradedamount = 2;
 
@@ -35,7 +35,7 @@ public class GoopArmor extends AbstractSlimeboundCard {
 
     public GoopArmor() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber = 3;
 
 
     }
@@ -52,7 +52,7 @@ public class GoopArmor extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(2);
+            this.upgradeMagicNumber(1);
 
 
         }
