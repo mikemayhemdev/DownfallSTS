@@ -68,8 +68,7 @@
   },
   "Slimebound:Teamwork": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Deal !D! damage. NL Command X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage X times. NL Command X times."
+    "DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
