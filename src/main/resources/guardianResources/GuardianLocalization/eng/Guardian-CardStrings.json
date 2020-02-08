@@ -129,13 +129,13 @@
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Beam",
-    "DESCRIPTION": "Deal !D! Damage. NL Place a Sentry_Wave into Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Place an Upgraded Sentry_Wave into Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! Damage. NL Place a Sentry Wave into Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Place an Sentry Wave+ into Stasis. NL Exhaust."
   },
   "Guardian:SentryWave": {
     "NAME": "Sentry Wave",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw a card. NL Place a Sentry_Beam into Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Draw a card. NL Place an Upgraded Sentry_Beam into Stasis. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Draw a card. NL Place a Sentry Beam into Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Draw a card. NL Place an Sentry Beam+ into Stasis. NL Exhaust."
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
@@ -162,8 +162,8 @@
   },
   "Guardian:PackageSentry": {
     "NAME": "Package: Sentry",
-    "DESCRIPTION": "Add a Sentry Beam and two Sentry Waves to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Sentry Beam and two Sentry Waves to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "DESCRIPTION": "Add a Sentry Beam and two Sentry Waves to your hand and reduce their costs by 1 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a Sentry Beam+ and two Sentry Waves+ to your hand and reduce their costs by 1 this combat. NL Exhaust."
   },
   "Guardian:PackageWalker": {
     "NAME": "Package: Orbwalker",
