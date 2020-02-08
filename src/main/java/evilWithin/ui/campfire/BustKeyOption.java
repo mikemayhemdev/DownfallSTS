@@ -60,7 +60,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                 AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
         }
         if(AddBustKeyButtonPatches.KeyFields.bustedRuby.get(p) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(p) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(p)) {
-            AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
+            p.increaseMaxHp(MAXHP_INC, false);
         }
     }
 }
