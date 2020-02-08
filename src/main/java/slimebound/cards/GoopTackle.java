@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.TackleSelfDamageAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
@@ -80,7 +81,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+        addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
 
         ArrayList<String> tmp = new ArrayList();
         Iterator var3 = CardLibrary.cards.entrySet().iterator();

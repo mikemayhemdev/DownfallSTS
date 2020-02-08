@@ -14,6 +14,13 @@
       " HP, consuming all #yGoop.  Half of the stack is removed at end of turn."
     ]
   },
+  "Slimebound:PreventTackleDamagePower": {
+    "NAME": "Prevent Tackle Damage",
+    "DESCRIPTIONS": [
+      "You do not take damage from the next #b",
+      " Tackles you play."
+    ]
+  },
   "Slimebound:SplitDailyTriggerPower": {
     "NAME": "Slime Split",
     "DESCRIPTIONS": [

@@ -146,7 +146,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Enemies receive !M! more damage from cards containing \"Tackle\" this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next Tackle you play."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
