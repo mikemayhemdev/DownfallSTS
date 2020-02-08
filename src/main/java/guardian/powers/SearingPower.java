@@ -2,23 +2,18 @@ package guardian.powers;
 
 
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 
 
 public class SearingPower extends AbstractGuardianPower implements HealthBarRenderPower {
 
     public static final String POWER_ID = "Guardian:SearingPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/BurningS.png";
-
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 

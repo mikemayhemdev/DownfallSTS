@@ -37,13 +37,15 @@
   },
   "Guardian:Gem_Cyan": {
     "NAME": "蓝晶",
-    "DESCRIPTION": " 宝石 。 NL 增加 1 张 护卫 到你的手牌。", 
+    "DESCRIPTION": " 宝石 。 NL 增加 1 张 护卫 到你的手牌。",
     "UPGRADE_DESCRIPTION": "增加 1 张 护卫 到你的手牌。"
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
     "DESCRIPTION": "将这张卡 凝滞 。 NL 滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL  挥发 。",
-    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+    "EXTENDED_DESCRIPTION": [
+      "~错误:~ #r凝滞 正在进程中。"
+    ]
   },
   "Guardian:DonusPower": {
     "NAME": "先古攻击",
@@ -74,7 +76,7 @@
   "Guardian:VentSteam": {
     "NAME": "蒸汽喷射",
     "DESCRIPTION": "给与 !M! 层 易伤 。",
-	"UPGRADE_DESCRIPTION": "给与 !M! 层 虚弱 和 易伤 。"
+    "UPGRADE_DESCRIPTION": "给与 !M! 层 虚弱 和 易伤 。"
   },
   "Guardian:CurlUp": {
     "NAME": "蜷身",
@@ -83,7 +85,9 @@
   "Guardian:TimeBomb": {
     "NAME": "时间炸弹",
     "DESCRIPTION": "将这张卡 凝滞 。 NL 当这张牌将结束凝滞时, 对所有敌人造成 !M! 点伤害。 NL 挥发 。",
-    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+    "EXTENDED_DESCRIPTION": [
+      "~错误:~ #r凝滞 正在进程中。"
+    ]
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "超能射线",
@@ -109,7 +113,7 @@
   "Guardian:Orbwalk": {
     "NAME": "行者圆球",
     "DESCRIPTION": "获得 !M! 力量。 NL 滴答 -获得 1 点力量。 NL  挥发 。",
-	"UPGRADE_DESCRIPTION": "获得 !M! 力量。 NL 滴答 -获得 1 点 力量 。"
+    "UPGRADE_DESCRIPTION": "获得 !M! 力量。 NL 滴答 -获得 1 点 力量 。"
   },
   "Guardian:WalkerClaw": {
     "NAME": "行者爪击",
@@ -123,7 +127,6 @@
     "NAME": "硬化",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。"
   },
-
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",
     "DESCRIPTION": "造成 !D! 点伤害。 NL  凝滞 一张 哨卫震荡 。 NL 消耗 。",
@@ -180,7 +183,9 @@
   "Guardian:Planning": {
     "NAME": "规划",
     "DESCRIPTION": "将抽牌堆顶部的 !M! 张牌 凝滞 。",
-    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+    "EXTENDED_DESCRIPTION": [
+      "~错误:~ #r凝滞 正在进程中。"
+    ]
   },
   "Guardian:Recover": {
     "NAME": "恢复",
@@ -194,7 +199,9 @@
   "Guardian:Clone": {
     "NAME": "克隆",
     "DESCRIPTION": "选择一张牌。 凝滞 这张牌的1张复制。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["~错误:~  #r凝滞 线程已满。"]
+    "EXTENDED_DESCRIPTION": [
+      "~错误:~  #r凝滞 线程已满。"
+    ]
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
@@ -256,9 +263,9 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL  凝滞 你打出的下一张不消耗的攻击牌或技能牌。"
   },
   "Guardian:PiercingHide": {
-  "NAME": "隐秘荆棘",
-  "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 临时 荆棘 。 NL 获得 防御模式 。"
-},
+    "NAME": "隐秘荆棘",
+    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 临时 荆棘 。 NL 获得 防御模式 。"
+  },
   "Guardian:ShieldSpikes": {
     "NAME": "荆棘装甲",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果你在 防御模式 ，则再获得 !M!  临时 荆棘 。"
@@ -291,7 +298,7 @@
   "Guardian:MultiBeam": {
     "NAME": "多重射线",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL  滴答 -本场战斗所有 射线 牌增加 !M! 点伤害。",
-	"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 X+1 次。 NL 滴答 -本场战斗所有 射线 牌增加 !M! 点伤害。"
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 X+1 次。 NL 滴答 -本场战斗所有 射线 牌增加 !M! 点伤害。"
   },
   "Guardian:BaubleBeam": {
     "NAME": "人偶射线",
@@ -379,12 +386,16 @@
   "Guardian:GatlingBeam": {
     "NAME": "加特林射线",
     "DESCRIPTION": "将这张牌 凝滞 。 NL  滴答 -对随机敌人造成 !D! 点伤害 !M! 次。 NL 每次 滴答次数加 1 。 NL 挥发 。",
-    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+    "EXTENDED_DESCRIPTION": [
+      "~错误:~ #r凝滞 正在进程中。"
+    ]
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",
     "DESCRIPTION": "将这张牌 凝滞 。  NL  滴答 -获得 !B! 点 格挡 和 [E] 。 NL 挥发 。",
-    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+    "EXTENDED_DESCRIPTION": [
+      "~错误:~ #r凝滞 正在进程中。"
+    ]
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",
@@ -422,7 +433,9 @@
     "NAME": "团状炸弹",
     "DESCRIPTION": "向每个空的凝滞栏位加入一张 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
     "UPGRADE_DESCRIPTION": "向每个空的凝滞栏位加入一张已 升级 的 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
-    "EXTENDED_DESCRIPTION": ["~错误:~ #r凝滞 正在进程中。"]
+    "EXTENDED_DESCRIPTION": [
+      "~错误:~ #r凝滞 正在进程中。"
+    ]
   },
   "Guardian:MassSlam": {
     "NAME": "合体撞击",

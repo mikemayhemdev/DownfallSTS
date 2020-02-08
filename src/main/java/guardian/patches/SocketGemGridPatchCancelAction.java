@@ -7,13 +7,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rooms.RestRoom;
-import com.megacrit.cardcrawl.screens.CombatRewardScreen;
-import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
 import com.megacrit.cardcrawl.ui.buttons.CancelButton;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
 
-@SpirePatch(clz= CancelButton.class, method="update")
+@SpirePatch(clz = CancelButton.class, method = "update")
 public class SocketGemGridPatchCancelAction {
 
     @SpirePrefixPatch
@@ -34,7 +31,7 @@ public class SocketGemGridPatchCancelAction {
                         GuardianMod.gridScreenForGems = true;
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
-                        AbstractDungeon.gridSelectScreen.open(gemCards, 1, GuardianMod.currSocketGemEffect.TEXT[3], false, false, true,false);
+                        AbstractDungeon.gridSelectScreen.open(gemCards, 1, GuardianMod.currSocketGemEffect.TEXT[3], false, false, true, false);
 
                     }
 

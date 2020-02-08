@@ -2,7 +2,6 @@ package guardian.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.QueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import guardian.GuardianMod;
-import guardian.actions.StasisCodexAction;
 
 public class GemCopier extends CustomRelic {
     public static final String ID = "Guardian:GemCopier";
@@ -33,7 +31,7 @@ public class GemCopier extends CustomRelic {
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         super.onPlayCard(c, m);
-        if (c.hasTag(GuardianMod.GEM)){
+        if (c.hasTag(GuardianMod.GEM)) {
             AbstractCard gemCard = c.makeStatEquivalentCopy();
             AbstractDungeon.actionManager.addToBottom(new QueueCardAction(gemCard, m));
             this.flash();

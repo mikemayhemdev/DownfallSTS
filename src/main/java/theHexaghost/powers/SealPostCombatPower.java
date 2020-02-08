@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
+import theHexaghost.util.SealSealReward;
 import theHexaghost.util.TextureLoader;
 
 public class SealPostCombatPower extends AbstractPower implements CloneablePowerInterface, RemoveMeBabey {
@@ -35,6 +36,11 @@ public class SealPostCombatPower extends AbstractPower implements CloneablePower
             description = "At the end of combat, obtain #b" + amount + " additional #ySeal cards.";
         else
             description = "At the end of combat, obtain #b" + amount + " additional #ySeal card.";
+    }
+
+    @Override
+    public void onVictory() {
+        AbstractDungeon.getCurrRoom().addCardReward(new SealSealReward(AbstractDungeon.player.getCardColor()));
     }
 
     @Override

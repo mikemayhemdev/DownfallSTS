@@ -7,9 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,8 +18,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import guardian.GuardianMod;
-import guardian.cards.SentryBeam;
-import guardian.rewards.GemRewardAllRarities;
 
 public class PocketSentry extends CustomRelic {
     public static final String ID = "Guardian:PocketSentry";
@@ -47,7 +43,7 @@ public class PocketSentry extends CustomRelic {
     public void atTurnStartPostDraw() {
         super.atTurnStartPostDraw();
         this.flash();
-        if (beaming){
+        if (beaming) {
             beaming = false;
             AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
 
@@ -62,11 +58,11 @@ public class PocketSentry extends CustomRelic {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.ROYAL, ShockWaveEffect.ShockWaveType.ADDITIVE), 0.1F));
             AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP"));
 
-                for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
-                    if (!m2.isDead && !m2.isDying) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m2, AbstractDungeon.player, new WeakPower(m2, 1, false), 1));
-                    }
+            for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+                if (!m2.isDead && !m2.isDying) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m2, AbstractDungeon.player, new WeakPower(m2, 1, false), 1));
                 }
+            }
         }
     }
 

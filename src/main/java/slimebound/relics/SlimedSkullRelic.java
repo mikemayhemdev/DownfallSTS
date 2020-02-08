@@ -6,10 +6,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.AcidTonguePowerUpgraded;
-import slimebound.powers.PotencyPower;
 
 public class SlimedSkullRelic extends CustomRelic {
     public static final String ID = "Slimebound:SlimedSkullRelic";
@@ -35,6 +33,7 @@ public class SlimedSkullRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AcidTonguePowerUpgraded(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
     }
+
     public boolean canSpawn() {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }

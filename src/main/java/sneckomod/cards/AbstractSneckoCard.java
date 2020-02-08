@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import sneckomod.TheSnecko;
+import sneckomod.powers.CheatPower;
+import sneckomod.relics.LoadedDie;
 
 import java.util.ArrayList;
 
@@ -27,6 +29,10 @@ public abstract class AbstractSneckoCard extends CustomCard {
     protected final String DESCRIPTION;
     protected final String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
+    public int silly;
+    public int baseSilly;
+    public boolean upgradedSilly;
+    public boolean isSillyModified;
 
     public AbstractSneckoCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
@@ -84,8 +90,16 @@ public abstract class AbstractSneckoCard extends CustomCard {
         return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }
 
-    public int getRandomNum(int min, int max) {
-        return AbstractDungeon.cardRandomRng.random(min, max);
+    public static int getRandomNum(int min, int max) {
+        int bruh = min;
+        if (AbstractDungeon.player.hasPower(CheatPower.POWER_ID)) {
+            AbstractPower q = AbstractDungeon.player.getPower(CheatPower.POWER_ID);
+            q.flash();
+            return max;
+        }
+        if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
+            bruh++;
+        return AbstractDungeon.cardRandomRng.random(bruh, max);
     }
 
     public static String makeID(String blah) {
@@ -154,5 +168,27 @@ public abstract class AbstractSneckoCard extends CustomCard {
 
     VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
+    }
+
+    @Override
+    public void resetAttributes() {
+        super.resetAttributes();
+        silly = baseSilly;
+        isSillyModified = false;
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedSilly) {
+            silly = baseSilly;
+            isSillyModified = true;
+        }
+    }
+
+
+    void upgradeSilly(int amount) {
+        baseSilly += amount;
+        silly = baseSilly;
+        upgradedSilly = true;
     }
 }

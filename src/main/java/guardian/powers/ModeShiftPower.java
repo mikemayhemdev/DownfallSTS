@@ -9,19 +9,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import guardian.actions.SwitchToDefenseModeAction;
-import guardian.cards.ConstructionForm;
 
 
 public class ModeShiftPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:ModeShiftPower";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
-
-    public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
-    private boolean active;
     private static final int STARTINGAMOUNT = 10;
     private static final int AMOUNTGAINPERACTIVATION = 5;
     private static final int BLOCKONTRIGGER = 10;
+    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static String[] DESCRIPTIONS;
+    private AbstractCreature source;
+    private boolean active;
     private int activations = 0;
     private int nextamount = 0;
 
@@ -43,7 +41,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        if (this.active){
+        if (this.active) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 
         } else {

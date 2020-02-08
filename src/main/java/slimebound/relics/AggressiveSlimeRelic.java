@@ -32,6 +32,7 @@ public class AggressiveSlimeRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true));
 
     }
+
     public boolean canSpawn() {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }

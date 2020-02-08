@@ -22,25 +22,25 @@ public class zzzGuardianSwitchModesAction extends AbstractGameAction {
 
     public void update() {
 
-        if (p.hasPower(zzzGuardianModePower.POWER_ID)){
-            zzzGuardianModePower pG = (zzzGuardianModePower)p.getPower(zzzGuardianModePower.POWER_ID);
+        if (p.hasPower(zzzGuardianModePower.POWER_ID)) {
+            zzzGuardianModePower pG = (zzzGuardianModePower) p.getPower(zzzGuardianModePower.POWER_ID);
 
-            if (toDefensive){
-                if (!pG.inDefensive){
+            if (toDefensive) {
+                if (!pG.inDefensive) {
                     pG.switchToDefensiveMode();
                 }
             } else {
-                if (pG.inDefensive){
+                if (pG.inDefensive) {
                     pG.switchToOffensiveMode();
                 }
             }
 
         } else {
             AbstractPower newPower = new zzzGuardianModePower(p);
-            if (this.toDefensive){
+            if (this.toDefensive) {
                 ((zzzGuardianModePower) newPower).switchToDefensiveMode();
             }
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p,p,new zzzGuardianModePower(p)));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new zzzGuardianModePower(p)));
         }
 
         this.isDone = true;

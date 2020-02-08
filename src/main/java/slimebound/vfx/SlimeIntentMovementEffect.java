@@ -16,10 +16,12 @@ public class SlimeIntentMovementEffect extends com.megacrit.cardcrawl.vfx.Abstra
         this.duration = duration;
         this.o = o;
     }
+
     public void dispose() {
         this.isDone = true;
 
     }
+
     public void update() {
         this.intervalTimer -= Gdx.graphics.getDeltaTime();
 

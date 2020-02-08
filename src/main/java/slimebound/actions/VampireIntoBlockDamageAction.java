@@ -62,7 +62,7 @@ public class VampireIntoBlockDamageAction extends com.megacrit.cardcrawl.actions
 
 
             AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.1F));
-            AbstractDungeon.actionManager.addToTop(new VFXAction(new LeechEffect(this.target.hb.cX, this.target.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5, new Color(0.6F,0.6F,1F,1F)), 0.25F));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new LeechEffect(this.target.hb.cX, this.target.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 5, new Color(0.6F, 0.6F, 1F, 1F)), 0.25F));
 
         }
     }

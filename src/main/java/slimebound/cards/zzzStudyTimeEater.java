@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -13,26 +12,30 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
+import expansioncontent.powers.StudyTimeEaterPower;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import expansionContent.powers.StudyTimeEaterPower;
 
 
 public class zzzStudyTimeEater extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:zzzStudyTimeEater";
-
-    private static final CardStrings cardStrings;
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/studytimeeater.png";
+    private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
-
     private static final int COST = 2;
-
+    public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public zzzStudyTimeEater() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
@@ -61,13 +64,6 @@ public class zzzStudyTimeEater extends AbstractSlimeboundCard {
 
 
         }
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

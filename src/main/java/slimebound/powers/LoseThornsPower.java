@@ -14,13 +14,12 @@ import slimebound.SlimeboundMod;
 public class LoseThornsPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:LoseThornsPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/ThornsDownS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
     private static boolean naturalclear = false;
+    private AbstractCreature source;
 
 
     public LoseThornsPower(AbstractCreature owner, AbstractCreature source, int amount) {

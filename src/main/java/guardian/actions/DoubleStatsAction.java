@@ -7,8 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class DoubleStatsAction extends com.megacrit.cardcrawl.actions.AbstractGameAction
-{
+public class DoubleStatsAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
     private AbstractCreature target;
     private int timesToApply = 1;
 
@@ -19,17 +18,16 @@ public class DoubleStatsAction extends com.megacrit.cardcrawl.actions.AbstractGa
         this.timesToApply = times;
     }
 
-    public void update()
-    {
+    public void update() {
         if (target.hasPower(StrengthPower.POWER_ID)) {
             final int str = target.getPower(StrengthPower.POWER_ID).amount;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    target,target,new StrengthPower(target,str*timesToApply),str*timesToApply));
+                    target, target, new StrengthPower(target, str * timesToApply), str * timesToApply));
         }
         if (target.hasPower(DexterityPower.POWER_ID)) {
             final int dex = target.getPower(DexterityPower.POWER_ID).amount;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
-                    target,target,new DexterityPower(target, dex*timesToApply),dex*timesToApply));
+                    target, target, new DexterityPower(target, dex * timesToApply), dex * timesToApply));
         }
         this.isDone = true;
     }

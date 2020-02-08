@@ -1,7 +1,6 @@
 package slimebound.powers;
 
 
-import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,10 +24,9 @@ import slimebound.vfx.DoubleSlimeParticle;
 public class DuplicatedFormPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:DuplicatedFormPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/DuplicatedEchoS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
     private int cardsDoubledThisTurn = 0;
@@ -78,7 +76,7 @@ public class DuplicatedFormPower extends AbstractPower {
     }
 
     public void onInitialApplication() {
-        SlimeboundMod.spritealtered=true;
+        SlimeboundMod.spritealtered = true;
         AbstractPlayer p = AbstractDungeon.player;
 
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
@@ -95,15 +93,12 @@ public class DuplicatedFormPower extends AbstractPower {
             SlimeboundCharacter hero = (SlimeboundCharacter) p;
             hero.setRenderscale(1.5F);
         }
-            p.hb_x = p.hb_x + (100 * Settings.scale);
-            p.drawX = p.drawX - (100 * Settings.scale);
-            p.hb.cX = p.hb.cX + (100 * Settings.scale);
-
+        p.hb_x = p.hb_x + (100 * Settings.scale);
+        p.drawX = p.drawX - (100 * Settings.scale);
+        p.hb.cX = p.hb.cX + (100 * Settings.scale);
 
 
     }
-
-
 
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -132,13 +127,14 @@ public class DuplicatedFormPower extends AbstractPower {
             AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, m, card.energyOnUse));
         }
     }
+
     public void onDeath() {
         VFX.finish();
     }
 
     public void onVictory() {
         VFX.finish();
-        }
+    }
 }
 
 

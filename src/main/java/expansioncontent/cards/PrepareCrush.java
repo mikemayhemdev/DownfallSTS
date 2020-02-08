@@ -1,0 +1,59 @@
+package expansioncontent.cards;
+
+
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.ShakeScreenAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
+import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
+import expansioncontent.expansionContentMod;
+import slimebound.cards.SlimeCrush;
+import slimebound.powers.NextTurnGainSlimeCrush;
+
+public class PrepareCrush extends AbstractExpansionCard {
+    public final static String ID = makeID("PrepareCrush");
+
+
+    private static final int BLOCK = 16;
+    private static final int UPGRADE_BLOCK = 4;
+    private static final int MAGIC = 2;
+    private static final int UPGRADE_MAGIC = 1;
+
+    public PrepareCrush() {
+        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+
+        tags.add(expansionContentMod.STUDY_SLIMEBOSS);
+        tags.add(expansionContentMod.STUDY);
+
+        baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = MAGIC;
+        this.exhaust = true;
+        cardsToPreview = new SlimeCrush();
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+
+        AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~Slime...~ NL #r~CRUSH!!!~", true));
+
+
+        AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.LOW));
+
+        blck();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainSlimeCrush(p, p, 1), 1));
+
+
+    }
+
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(UPGRADE_BLOCK);
+            upgradeMagicNumber(UPGRADE_MAGIC);
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+{
+  "hexamod:BurningPotion": {
+    "NAME": "Molotov",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " Burn."
+    ]
+  },
+  "hexamod:DoubleChargePotion": {
+    "NAME": "Combustive Fluid",
+    "DESCRIPTIONS": [
+      "Force-Ignite the Active Ghostflame ",
+      " times."
+    ]
+  },
+  "hexamod:EctoCoolerPotion": {
+    "NAME": "Ecto-Cooler",
+    "DESCRIPTIONS": [
+      "Choose #b1 of #b3 random #yEthereal cards from any class to add to your hand, it costs #b0 this turn.",
+      "Choose #b1 of #b3 random #yEthereal cards from any class and add #b2 copies to your hand, they cost #b0 this turn."
+    ]
+  },
+  "hexamod:InfernoChargePotion": {
+    "NAME": "Inferno Potion",
+    "DESCRIPTIONS": [
+      "Ignite the Inferno Ghostflame.",
+      "Ignite the Inferno Ghostflame twice."
+    ]
+  }
+}

@@ -5,9 +5,7 @@
 
 package slimebound.actions;
 
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.QueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
@@ -66,44 +64,42 @@ public class PlayExhausted0CostAction extends AbstractGameAction {
 
                 }
             }
-            if (card == null){
+            if (card == null) {
 
                 this.isDone = true;
                 return;
             }
 
-               //AbstractDungeon.player.exhaustPile.removeCard(card);
+            //AbstractDungeon.player.exhaustPile.removeCard(card);
 
 
+            AbstractDungeon.player.exhaustPile.group.remove(card);
+            AbstractDungeon.getCurrRoom().souls.remove(card);
+            card.freeToPlayOnce = true;
+            //card.exhaustOnUseOnce = this.exhaustCards;
+            AbstractDungeon.player.limbo.group.add(card);
+            card.current_y = -200.0F * Settings.scale;
+            card.target_x = (float) Settings.WIDTH / 2.0F + 200.0F * Settings.scale;
+            card.target_y = (float) Settings.HEIGHT / 2.0F;
+            card.targetAngle = 0.0F;
+            card.lighten(false);
+            card.drawScale = 0.12F;
+            card.targetDrawScale = 0.75F;
+            if (!card.canUse(AbstractDungeon.player, (AbstractMonster) this.target)) {
 
+                AbstractDungeon.actionManager.addToTop(new UnlimboAction(card));
+                AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(card, AbstractDungeon.player.limbo));
+                AbstractDungeon.actionManager.addToTop(new WaitAction(0.4F));
 
-                AbstractDungeon.player.exhaustPile.group.remove(card);
-                AbstractDungeon.getCurrRoom().souls.remove(card);
-                card.freeToPlayOnce = true;
-                //card.exhaustOnUseOnce = this.exhaustCards;
-                AbstractDungeon.player.limbo.group.add(card);
-                card.current_y = -200.0F * Settings.scale;
-                card.target_x = (float)Settings.WIDTH / 2.0F + 200.0F * Settings.scale;
-                card.target_y = (float)Settings.HEIGHT / 2.0F;
-                card.targetAngle = 0.0F;
-                card.lighten(false);
-                card.drawScale = 0.12F;
-                card.targetDrawScale = 0.75F;
-                if (!card.canUse(AbstractDungeon.player, (AbstractMonster)this.target)) {
-
-                        AbstractDungeon.actionManager.addToTop(new UnlimboAction(card));
-                        AbstractDungeon.actionManager.addToTop(new DiscardSpecificCardAction(card, AbstractDungeon.player.limbo));
-                        AbstractDungeon.actionManager.addToTop(new WaitAction(0.4F));
-
+            } else {
+                card.applyPowers();
+                AbstractDungeon.actionManager.addToTop(new QueueCardAction(card, this.target));
+                AbstractDungeon.actionManager.addToTop(new UnlimboAction(card));
+                if (!Settings.FAST_MODE) {
+                    AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
                 } else {
-                    card.applyPowers();
-                    AbstractDungeon.actionManager.addToTop(new QueueCardAction(card, this.target));
-                    AbstractDungeon.actionManager.addToTop(new UnlimboAction(card));
-                    if (!Settings.FAST_MODE) {
-                        AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
-                    } else {
-                        AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
-                    }
+                    AbstractDungeon.actionManager.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
+                }
 
             }
 

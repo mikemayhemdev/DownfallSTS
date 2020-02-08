@@ -46,7 +46,7 @@ public class BurningHitAction extends AbstractGameAction {
             tmp = target.currentHealth;
         }
         if (tmp > 0) {
-            AbstractDungeon.actionManager.addToTop(new BurnAction(((AbstractMonster)target), tmp));
+            AbstractDungeon.actionManager.addToTop(new BurnAction(((AbstractMonster) target), tmp));
         }
     }
 }

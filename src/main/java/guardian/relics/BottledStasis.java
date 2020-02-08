@@ -13,29 +13,25 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import guardian.GuardianMod;
-import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.orbs.StasisOrb;
 import guardian.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 
-import static guardian.GuardianMod.logger;
-
 public class BottledStasis extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
     public static final String ID = "Guardian:BottledStasis";
     public static final String IMG_PATH = "relics/bottledStasis.png";
     public static final String OUTLINE_IMG_PATH = "relics/bottledStasisOutline.png";
-    private boolean cardSelected = true;
     public AbstractCard card = null;
+    private boolean cardSelected = true;
 
-    public BottledStasis()
-    {
+    public BottledStasis() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.SHOP, LandingSound.FLAT);    }
+                RelicTier.SHOP, LandingSound.FLAT);
+    }
 
     @Override
-    public Predicate<AbstractCard> isOnCard()
-    {
+    public Predicate<AbstractCard> isOnCard() {
 
         return BottledStasisPatch.inBottledStasis::get;
     }
@@ -45,20 +41,17 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         return DESCRIPTIONS[0];
     }
 
-    public AbstractCard getCard()
-    {
+    public AbstractCard getCard() {
         return card.makeCopy();
     }
 
     @Override
-    public Integer onSave()
-    {
+    public Integer onSave() {
         return AbstractDungeon.player.masterDeck.group.indexOf(card);
     }
 
     @Override
-    public void onLoad(Integer cardIndex)
-    {
+    public void onLoad(Integer cardIndex) {
         if (cardIndex == null) {
             return;
         }
@@ -72,8 +65,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     }
 
     @Override
-    public void onEquip()
-    {
+    public void onEquip() {
         cardSelected = false;
         if (AbstractDungeon.isScreenUp) {
             AbstractDungeon.dynamicBanner.hide();
@@ -83,7 +75,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-                tmp.addToTop(c);
+            tmp.addToTop(c);
         }
         AbstractDungeon.gridSelectScreen.open(tmp,
                 1, DESCRIPTIONS[1] + name + ".",
@@ -91,8 +83,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     }
 
     @Override
-    public void onUnequip()
-    {
+    public void onUnequip() {
         if (card != null) {
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
             if (cardInDeck != null) {
@@ -102,8 +93,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     }
 
     @Override
-    public void update()
-    {
+    public void update() {
         super.update();
 
         if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
@@ -117,8 +107,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         }
     }
 
-    private void setDescriptionAfterLoading()
-    {
+    private void setDescriptionAfterLoading() {
         this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
@@ -126,16 +115,15 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     }
 
     @Override
-    public AbstractRelic makeCopy()
-    {
+    public AbstractRelic makeCopy() {
         return new BottledStasis();
     }
 
     @Override
     public void atBattleStartPreDraw() {
         super.atBattleStartPreDraw();
-        for (AbstractCard c : AbstractDungeon.player.drawPile.group){
-            if (c.uuid == card.uuid){
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            if (c.uuid == card.uuid) {
                 AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(c, false)));
                 break;
             }

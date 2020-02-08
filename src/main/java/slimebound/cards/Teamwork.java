@@ -1,11 +1,6 @@
 package slimebound.cards;
 
 
-
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,24 +18,30 @@ public class Teamwork extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Teamwork";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/coordinatedstrike.png";
-    private static final CardType TYPE = CardType.ATTACK;
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
     private static final CardStrings cardStrings;
     private static final int COST = -1;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public Teamwork() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseDamage = 5;
-        this.magicNumber = this.baseMagicNumber = 2;
-       // this.tags.add(CardTags.STRIKE);
+        baseBlock = 7;
+        // this.tags.add(CardTags.STRIKE);
         //this.isMultiDamage = true;
 
 
@@ -50,30 +51,15 @@ public class Teamwork extends AbstractSlimeboundCard {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
-        AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse));
+        AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse, block));
 
     }
 
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    }
-
-
-    public AbstractCard makeCopy() {
-        return new Teamwork();
-    }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeDamage(2);
-            this.upgradeMagicNumber(1);
+            upgradeBlock(2);
 
         }
     }

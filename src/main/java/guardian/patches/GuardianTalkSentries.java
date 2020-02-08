@@ -6,15 +6,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.exordium.Sentry;
-import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
-import com.megacrit.cardcrawl.monsters.exordium.TheGuardian;
 import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 
-@SpirePatch(clz= Sentry.class,method="takeTurn")
+@SpirePatch(clz = Sentry.class, method = "takeTurn")
 public class GuardianTalkSentries {
-    private static final EventStrings eventStrings;
     public static final String[] DESCRIPTIONS;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Guardian:GuardianTalk");
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+    }
 
     public static void Prefix(Sentry sb) {
         if (AbstractDungeon.player instanceof GuardianCharacter) {
@@ -30,10 +33,5 @@ public class GuardianTalkSentries {
 
             }
         }
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Guardian:GuardianTalk");
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     }
 }

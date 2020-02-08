@@ -23,11 +23,17 @@ public class StepThrough extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.POISON);
-        if (GhostflameHelper.activeGhostFlame.charged) {
-            atb(new AdvanceAction());
-        } else {
-            atb(new ChargeCurrentFlameAction());
-        }
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (GhostflameHelper.activeGhostFlame.charged) {
+                    att(new AdvanceAction());
+                } else {
+                    att(new ChargeCurrentFlameAction());
+                }
+            }
+        });
     }
 
     public void upgrade() {

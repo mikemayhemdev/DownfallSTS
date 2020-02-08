@@ -39,6 +39,7 @@ public class GreedOozeRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.GreedOozeSlime(), false, false));
 
     }
+
     public boolean canSpawn() {
         return AbstractDungeon.player instanceof SlimeboundCharacter;
     }
@@ -47,20 +48,18 @@ public class GreedOozeRelic extends CustomRelic {
     public void onVictory() {
         AbstractPlayer p = AbstractDungeon.player;
         for (AbstractOrb o : p.orbs) {
-            if (o instanceof GreedOozeSlime){
-                ((GreedOozeSlime)o).stopShiny = true;
+            if (o instanceof GreedOozeSlime) {
+                ((GreedOozeSlime) o).stopShiny = true;
             }
         }
     }
 
 
-
-
     public void onEnterRestRoom() {
         AbstractPlayer p = AbstractDungeon.player;
 
-        if (AbstractDungeon.player.gold >= 50){
-            this.counter+=1;
+        if (AbstractDungeon.player.gold >= 50) {
+            this.counter += 1;
             this.tips.clear();
             this.description = this.getUpdatedDescription();
             this.tips.add(new PowerTip(this.name, this.description));
@@ -74,7 +73,6 @@ public class GreedOozeRelic extends CustomRelic {
         }
 
     }
-
 
 
     @Override

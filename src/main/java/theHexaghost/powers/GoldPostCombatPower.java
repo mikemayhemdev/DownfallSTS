@@ -35,6 +35,11 @@ public class GoldPostCombatPower extends AbstractPower implements CloneablePower
     }
 
     @Override
+    public void onVictory() {
+        AbstractDungeon.getCurrRoom().addGoldToRewards(amount);
+    }
+
+    @Override
     public AbstractPower makeCopy() {
         return new GoldPostCombatPower(amount);
     }

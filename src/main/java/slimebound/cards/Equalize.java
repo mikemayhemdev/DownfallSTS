@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -24,42 +23,48 @@ public class Equalize extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static final String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/retaliate.png";
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
-
     private static final int COST = 2;
     private static final int POWER = 6;
-    public int missingHealth;
     private static final int UPGRADE_BONUS = 3;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
+
+    public int missingHealth;
     private boolean isACopy;
 
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
 
     public Equalize() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-            this.baseDamage = 8;
-            this.magicNumber = this.baseMagicNumber = 4;
+        this.baseDamage = 8;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.exhaust = true;
 
     }
-
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
         logger.info("max health: " + p.maxHealth + ", current health: " + p.currentHealth);
-        if (p.currentHealth <= (p.maxHealth / 2F) && !this.isACopy)
-        {
+        if (p.currentHealth <= (p.maxHealth / 2F) && !this.isACopy) {
             //this.isACopy = true;
             AbstractCard tmp = this.makeStatEquivalentCopy();
-            Equalize tmpEq = (Equalize)tmp;
+            Equalize tmpEq = (Equalize) tmp;
 
-            tmpEq.isACopy=true;
+            tmpEq.isACopy = true;
             AbstractDungeon.player.limbo.addToBottom(tmpEq);
             tmpEq.current_x = this.current_x;
             tmpEq.current_y = this.current_y;
@@ -79,14 +84,11 @@ public class Equalize extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
     }
 
-
-
     public AbstractCard makeCopy() {
 
         return new Equalize();
 
     }
-
 
     public void upgrade() {
 
@@ -98,14 +100,6 @@ public class Equalize extends AbstractSlimeboundCard {
 
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

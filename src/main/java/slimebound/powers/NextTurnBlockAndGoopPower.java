@@ -18,10 +18,9 @@ import slimebound.actions.TendrilFlailAction;
 public class NextTurnBlockAndGoopPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:NextTurnBlockAndGoopPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/PrepareCardS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
@@ -54,7 +53,7 @@ public class NextTurnBlockAndGoopPower extends AbstractPower {
 
     public void updateDescription() {
 
-        if (this.amount == 1){
+        if (this.amount == 1) {
             this.description = (
                     DESCRIPTIONS[0] +
                             this.amount +

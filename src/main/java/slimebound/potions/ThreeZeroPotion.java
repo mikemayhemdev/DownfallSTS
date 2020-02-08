@@ -2,7 +2,6 @@ package slimebound.potions;
 
 
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,13 +9,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.powers.AcidTonguePowerUpgraded;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 
 public class ThreeZeroPotion extends CustomPotion {
@@ -28,10 +25,15 @@ public class ThreeZeroPotion extends CustomPotion {
 
     public ThreeZeroPotion() {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.T, PotionColor.POISON);
-        this.potency = getPotency();
-        this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.isThrown = false;
         this.targetRequired = false;
+    }
+
+
+    public void initializeData() {
+        this.potency = getPotency();
+        this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
+        this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
     }
 
@@ -42,7 +44,7 @@ public class ThreeZeroPotion extends CustomPotion {
         AbstractCard c3;
 
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < this.potency; i++) {
             while (var1.hasNext()) {
                 c3 = (AbstractCard) var1.next();
                 if (c3.cost == 0) {

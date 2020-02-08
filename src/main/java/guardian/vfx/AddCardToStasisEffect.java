@@ -12,8 +12,13 @@ import guardian.orbs.StasisOrb;
 
 public class AddCardToStasisEffect extends AbstractGameEffect {
     private static final float EFFECT_DUR = 1.5F;
-    private AbstractCard card;
     private static final float PADDING;
+
+    static {
+        PADDING = 30.0F * Settings.scale;
+    }
+
+    private AbstractCard card;
     private StasisOrb o;
     private boolean halfwayHit;
     private boolean glowStartHit;
@@ -25,7 +30,7 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
         this.card.current_y = starty;
         this.card.target_x = targetx;
         this.card.target_y = targety;
-        this.o=o;
+        this.o = o;
         //AbstractDungeon.effectsQueue.add(new CardPoofEffect(this.card.target_x, this.card.target_y));
         this.card.drawScale = 0.1F;
         this.card.targetDrawScale = 0.75F;
@@ -37,7 +42,7 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
         this.duration -= Gdx.graphics.getDeltaTime();
         this.card.update();
 
-;
+        ;
         if (this.duration < 1.1F) {
             if (!glowStartHit) {
                 this.card.beginGlowing();
@@ -73,9 +78,5 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
     }
 
     public void dispose() {
-    }
-
-    static {
-        PADDING = 30.0F * Settings.scale;
     }
 }

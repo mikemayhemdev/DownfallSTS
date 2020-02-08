@@ -33,11 +33,13 @@ public class SlimeIntentEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEf
             this.isDone = true;
         }
     }
+
     public void dispose() {
         this.img.dispose();
         this.isDone = true;
 
     }
+
     public void render(SpriteBatch sb) {
     }
 }

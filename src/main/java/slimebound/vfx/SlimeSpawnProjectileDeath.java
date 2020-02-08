@@ -12,16 +12,15 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
 public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
+    private static final float DUR = 0.25F;
     private static Texture img;
     private float sX;
     private float sY;
@@ -31,7 +30,6 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
     private float dY;
     private float yOffset;
     private float bounceHeight;
-    private static final float DUR = 0.25F;
     private boolean playedSfx = false;
     private boolean skip = false;
     private float height = 100f;
@@ -45,7 +43,7 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
     private ArrayList<Vector2> previousPos = new ArrayList();
 
     public SlimeSpawnProjectileDeath(float srcX, float srcY, AbstractOrb o, float scale, Color color, boolean mute) {
-    this(srcX,srcY,o,null,scale,color,mute);
+        this(srcX, srcY, o, null, scale, color, mute);
     }
 
 
@@ -53,25 +51,23 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
         if (img == null) {
             img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/slimeballWhite.png");
         }
-        if (o==null && p== null) {
-            this.duration=0F;
-            this.startingDuration=0F;
-            this.skip= true;
+        if (o == null && p == null) {
+            this.duration = 0F;
+            this.startingDuration = 0F;
+            this.skip = true;
         } else {
-        this.mute = mute;
-
-
+            this.mute = mute;
 
 
             //SlimeboundMod.logger.info("Slime spawn projectile firing");
 
             this.sX = srcX;
-           // if (!this.mute) CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
+            // if (!this.mute) CardCrawlGame.sound.playA("SLIME_SPLIT", 0.3f);
 
             this.sY = srcY;
             this.cX = this.sX;
             this.cY = this.sY;
-            if (o == null){
+            if (o == null) {
                 this.p = p;
 
             } else {
@@ -81,9 +77,8 @@ public class SlimeSpawnProjectileDeath extends AbstractGameEffect {
             this.rotation = 0.0F;
             this.duration = .35F;
             this.startingDuration = .35F;
-            this.projectileColor = new Color (color.r,color.g,color.b,100F);
+            this.projectileColor = new Color(color.r, color.g, color.b, 100F);
         }
-
 
 
     }

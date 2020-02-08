@@ -2,6 +2,7 @@ package theHexaghost.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 
 public class ExtinguishAction extends AbstractGameAction {
@@ -17,6 +18,8 @@ public class ExtinguishAction extends AbstractGameAction {
     }
 
     public void update() {
+        if (!HexaMod.renderFlames)
+            HexaMod.renderFlames = true;
         isDone = true;
         if (bruh != 0) {
             int i = GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame);

@@ -6,7 +6,6 @@
       " 层 黏液 。"
     ]
   },
-
   "Slimebound:SlimyTonguePotion": {
     "NAME": "黏液精华",
     "DESCRIPTIONS": [
@@ -14,7 +13,6 @@
       " 层黏液。"
     ]
   },
-
   "Slimebound:SpawnSlimePotion": {
     "NAME": "瓶装爪牙",
     "DESCRIPTIONS": [
@@ -22,7 +20,6 @@
       " 只随机史莱姆。"
     ]
   },
-
   "Slimebound:ThreeZeroPotion": {
     "NAME": "稠化饮料",
     "DESCRIPTIONS": [

@@ -125,7 +125,7 @@
     "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies."
   },
   "hexamod:Hexaguard": {
-    "NAME": "Hexaguard", 
+    "NAME": "Hexaguard",
     "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw 1 card."
   },
   "hexamod:GhostLash": {
@@ -141,7 +141,7 @@
     "DESCRIPTION": "Ethereal. NL Draw !M! cards. NL All cards in your hand become Ethereal. NL Exhaust."
   },
   "hexamod:RecurringNightmare": {
-    "NAME": "Nightmare Vision", 
+    "NAME": "Nightmare Vision",
     "DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand."
   },

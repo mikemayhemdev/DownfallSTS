@@ -6,27 +6,25 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.city.SphericGuardian;
-import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
-import com.megacrit.cardcrawl.monsters.exordium.TheGuardian;
 import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 
-@SpirePatch(clz= SphericGuardian.class,method="takeTurn")
+@SpirePatch(clz = SphericGuardian.class, method = "takeTurn")
 public class GuardianTalkSphere {
-    private static final EventStrings eventStrings;
     public static final String[] DESCRIPTIONS;
-
-    public static void Prefix(SphericGuardian sb) {
-        if (AbstractDungeon.player instanceof GuardianCharacter && !GuardianMod.talked6) {
-
-                AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[8], 1.0F, 2.0F));
-
-            GuardianMod.talked6 = true;
-        }
-    }
+    private static final EventStrings eventStrings;
 
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString("Guardian:GuardianTalk");
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+    }
+
+    public static void Prefix(SphericGuardian sb) {
+        if (AbstractDungeon.player instanceof GuardianCharacter && !GuardianMod.talked6) {
+
+            AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[8], 1.0F, 2.0F));
+
+            GuardianMod.talked6 = true;
+        }
     }
 }

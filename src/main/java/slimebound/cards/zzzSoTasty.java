@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,14 +18,21 @@ public class zzzSoTasty extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:zzzSoTasty";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/rollthrough.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = -1;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public zzzSoTasty() {
@@ -41,7 +47,6 @@ public class zzzSoTasty extends AbstractSlimeboundCard {
         this.exhaust = true;
     }
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
@@ -53,13 +58,11 @@ public class zzzSoTasty extends AbstractSlimeboundCard {
 
     }
 
-
     public AbstractCard makeCopy() {
 
         return new zzzSoTasty();
 
     }
-
 
     public void upgrade() {
 
@@ -70,14 +73,6 @@ public class zzzSoTasty extends AbstractSlimeboundCard {
             upgradeDamage(3);
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

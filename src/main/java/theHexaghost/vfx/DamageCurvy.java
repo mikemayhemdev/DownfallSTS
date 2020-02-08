@@ -10,9 +10,10 @@ public class DamageCurvy extends DamageImpactCurvyEffect {
     public DamageCurvy(float x, float y, Color color) {
         this(x, y, color, MathUtils.random(0.8F, 1.1F), MathUtils.random(400.0F, 900.0F) * Settings.scale, MathUtils.random(5.0F, 30.0F), MathUtils.random(-20.0F, 20.0F));
     }
+
     public DamageCurvy(float x, float y, Color color, float duration, float speed, float waveIntensity, float waveSpeed) {
         super(x, y, color, false);
-        
+
         this.duration = duration;
         this.startingDuration = this.duration;
 

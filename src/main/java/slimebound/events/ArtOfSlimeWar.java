@@ -8,21 +8,12 @@ package slimebound.events;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
-import com.megacrit.cardcrawl.cards.colorless.Bite;
-import com.megacrit.cardcrawl.cards.curses.Injury;
-import com.megacrit.cardcrawl.cards.curses.Shame;
-import com.megacrit.cardcrawl.cards.green.Strike_Green;
-import com.megacrit.cardcrawl.cards.red.Strike_Red;
-import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -36,10 +27,10 @@ import java.util.Iterator;
 
 public class ArtOfSlimeWar extends AbstractImageEvent {
     public static final String ID = "Slimebound:ArtOfSlimeWar";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_START;
     private static final String DIALOG_TRAP;
     private static final String DIALOG_READ;
@@ -47,26 +38,41 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
     private static final String DIALOG_CHOSE_FIGHT;
     private static final String DIALOG_CHOSE_FLAT;
     private static final String DIALOG_IGNORE;
-    private int screenNum = 0;
     private static final float HP_LOSS_PERCENT = 0.25F;
     private static final float MAX_HP_LOSS_PERCENT = 0.08F;
     private static final float A_2_HP_LOSS_PERCENT = 0.35F;
     private static final float A_2_MAX_HP_LOSS_PERCENT = 0.1F;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Slimebound:ArtOfSlimeWar");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_START = DESCRIPTIONS[0];
+        DIALOG_TRAP = DESCRIPTIONS[1];
+        DIALOG_READ = DESCRIPTIONS[6];
+        DIALOG_CHOSE_RUN = DESCRIPTIONS[2];
+        DIALOG_CHOSE_FIGHT = DESCRIPTIONS[3];
+        DIALOG_CHOSE_FLAT = DESCRIPTIONS[4];
+        DIALOG_IGNORE = DESCRIPTIONS[5];
+    }
+
+    private int screenNum = 0;
     private int damage;
     private int maxHpLoss;
     private AbstractRelic relicMetric = null;
 
     public ArtOfSlimeWar() {
         super(NAME, DIALOG_START, "slimeboundResources/SlimeboundImages/events/slimeTome.jpg");
-        this.imageEventText.setDialogOption(OPTIONS[0], CardLibrary.getCopy("Slimebound:Tackle",1,0));
+        this.imageEventText.setDialogOption(OPTIONS[0], CardLibrary.getCopy("Slimebound:Tackle", 1, 0));
         this.imageEventText.setDialogOption(OPTIONS[1], CardLibrary.getCopy("Slimebound:CheckThePlaybook"));
         this.imageEventText.setDialogOption(OPTIONS[2]);
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.damage = (int)((float)AbstractDungeon.player.maxHealth * 0.45F);
-            this.maxHpLoss = (int)((float)AbstractDungeon.player.maxHealth * 0.15F);
+            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * 0.45F);
+            this.maxHpLoss = (int) ((float) AbstractDungeon.player.maxHealth * 0.15F);
         } else {
-            this.damage = (int)((float)AbstractDungeon.player.maxHealth * 0.35F);
-            this.maxHpLoss = (int)((float)AbstractDungeon.player.maxHealth * 0.1F);
+            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * 0.35F);
+            this.maxHpLoss = (int) ((float) AbstractDungeon.player.maxHealth * 0.1F);
         }
 
         if (this.maxHpLoss < 1) {
@@ -83,14 +89,14 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 1:
                         this.imageEventText.updateBodyText(DIALOG_TRAP);
 
                         AbstractCard card = new CheckThePlaybook();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         CardCrawlGame.screenShake.mildRumble(5.0F);
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[3], CardLibrary.getCopy("Slimebound:Icky"));
@@ -113,13 +119,13 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         return;
                 }
             case 1:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
                         CardCrawlGame.sound.play("SLIME_SPLIT");
                         this.imageEventText.updateBodyText(DIALOG_CHOSE_RUN);
                         AbstractCard curse = new Icky();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
@@ -128,7 +134,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DIALOG_CHOSE_FIGHT);
                         CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
                         CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, this.damage));
+                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, this.damage));
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();
@@ -154,40 +160,27 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
         }
 
     }
+
     private void replaceAttacks() {
         Iterator i = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(true) {
+        while (true) {
             AbstractCard e;
             do {
                 if (!i.hasNext()) {
-                    for(int i2 = 0; i2 < 3; ++i2) {
+                    for (int i2 = 0; i2 < 3; ++i2) {
                         AbstractCard c = new Tackle();
                         c.upgrade();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
 
                     return;
                 }
 
-                e = (AbstractCard)i.next();
-            } while(!(e.hasTag(BaseModCardTags.BASIC_STRIKE)));
+                e = (AbstractCard) i.next();
+            } while (!(e.hasTag(BaseModCardTags.BASIC_STRIKE)));
 
             i.remove();
         }
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Slimebound:ArtOfSlimeWar");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_START = DESCRIPTIONS[0];
-        DIALOG_TRAP = DESCRIPTIONS[1];
-        DIALOG_READ = DESCRIPTIONS[6];
-        DIALOG_CHOSE_RUN = DESCRIPTIONS[2];
-        DIALOG_CHOSE_FIGHT = DESCRIPTIONS[3];
-        DIALOG_CHOSE_FLAT = DESCRIPTIONS[4];
-        DIALOG_IGNORE = DESCRIPTIONS[5];
     }
 }

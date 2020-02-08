@@ -4,7 +4,6 @@ package guardian.powers;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.rewards.GemReward;
 
 
@@ -33,7 +32,7 @@ public class GemFinderPower extends AbstractGuardianPower {
 
 
     public void updateDescription() {
-        if (this.amount == 1){
+        if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
         } else {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];

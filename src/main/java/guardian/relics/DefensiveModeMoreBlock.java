@@ -2,13 +2,9 @@ package guardian.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import guardian.GuardianMod;
-import guardian.cards.SentryBeam;
 
 public class DefensiveModeMoreBlock extends CustomRelic {
     public static final String ID = "Guardian:DefensiveModeMoreBlock";

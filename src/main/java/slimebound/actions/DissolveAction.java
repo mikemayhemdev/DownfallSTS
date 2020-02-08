@@ -6,10 +6,6 @@
 package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
@@ -20,26 +16,28 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import slimebound.SlimeboundMod;
-import slimebound.powers.PotencyPower;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.*;
-
 public class DissolveAction extends AbstractGameAction {
-    private static final UIStrings uiStrings;
     public static final String[] TEXT;
+    private static final UIStrings uiStrings;
+    public static int numExhausted;
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+        TEXT = uiStrings.TEXT;
+    }
+
     private AbstractPlayer p;
     private boolean isRandom;
     private boolean anyNumber;
     private boolean canPickZero;
     private int block;
     private int extraCards;
-    public static int numExhausted;
 
     public DissolveAction(AbstractCreature target, AbstractCreature source, int amount, boolean isRandom, int block, int blockUnc) {
         this(target, source, amount, isRandom, false, false, block, blockUnc);
@@ -49,13 +47,13 @@ public class DissolveAction extends AbstractGameAction {
         this.canPickZero = false;
         this.anyNumber = anyNumber;
         this.canPickZero = canPickZero;
-        this.p = (AbstractPlayer)target;
+        this.p = (AbstractPlayer) target;
         this.isRandom = isRandom;
         this.setValues(target, source, amount);
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
-        this.block=block;
-        this.extraCards=extraCards;
+        this.block = block;
+        this.extraCards = extraCards;
     }
 
     public void update() {
@@ -69,9 +67,9 @@ public class DissolveAction extends AbstractGameAction {
             if (!this.anyNumber && this.p.hand.size() <= this.amount) {
                 this.amount = this.p.hand.size();
                 numExhausted = this.amount;
-               int i2 = this.p.hand.size();
+                int i2 = this.p.hand.size();
 
-                for(i = 0; i < i2; ++i) {
+                for (i = 0; i < i2; ++i) {
                     AbstractCard c = this.p.hand.getTopCard();
                     this.p.hand.moveToExhaustPile(c);
                     dissolveEffect(c);
@@ -89,7 +87,7 @@ public class DissolveAction extends AbstractGameAction {
                 return;
             }
 
-            for(i = 0; i < this.amount; ++i) {
+            for (i = 0; i < this.amount; ++i) {
                 AbstractCard c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
                 this.p.hand.moveToExhaustPile(c);
                 dissolveEffect(c);
@@ -102,10 +100,10 @@ public class DissolveAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
 
-            while(var4.hasNext()) {
-                AbstractCard c = (AbstractCard)var4.next();
+            while (var4.hasNext()) {
+                AbstractCard c = (AbstractCard) var4.next();
                 this.p.hand.moveToExhaustPile(c);
-               dissolveEffect(c);
+                dissolveEffect(c);
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
@@ -117,7 +115,7 @@ public class DissolveAction extends AbstractGameAction {
 
     public void dissolveEffect(AbstractCard c2) {
 
-        if (c2.cost < 0) c2.cost =0;
+        if (c2.cost < 0) c2.cost = 0;
         if (c2.cost + this.extraCards == 0) {
             return;
         }
@@ -125,7 +123,7 @@ public class DissolveAction extends AbstractGameAction {
         ArrayList<String> tmp = new ArrayList();
         Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-        while(var3.hasNext()) {
+        while (var3.hasNext()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
             if (c.getValue().hasTag(SlimeboundMod.LICK)) {
                 tmp.add(c.getKey());
@@ -133,17 +131,16 @@ public class DissolveAction extends AbstractGameAction {
         }
 
 
-
-        if (c2.isCostModifiedForTurn){
+        if (c2.isCostModifiedForTurn) {
             this.extraCards += c2.costForTurn;
-        } else{
+        } else {
             this.extraCards += c2.cost;
         }
 
         for (int i = 0; i < (this.extraCards); i++) {
             AbstractCard cZero;
-            if (tmp.size() > 0){
-             cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+            if (tmp.size() > 0) {
+                cZero = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
             } else {
                 cZero = new Madness();
             }
@@ -159,9 +156,5 @@ public class DissolveAction extends AbstractGameAction {
 
         }
         */
-    }
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
-        TEXT = uiStrings.TEXT;
     }
 }

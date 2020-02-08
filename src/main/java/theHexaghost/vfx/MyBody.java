@@ -12,11 +12,17 @@ import com.megacrit.cardcrawl.vfx.BobEffect;
 
 public class MyBody implements Disposable {
     public static final String ID = "MyBody";
-    private float rotationSpeed = 1.0F;
-    public float targetRotationSpeed = 30.0F;
-    private BobEffect effect = new BobEffect(0.75F);
     private static final String IMG_DIR = "images/monsters/theBottom/boss/ghost/";
     private static final int W = 512;
+    private static final float BODY_OFFSET_Y;
+
+    static {
+        BODY_OFFSET_Y = 256.0F * Settings.scale;// 32
+    }
+
+    public float targetRotationSpeed = 30.0F;
+    private float rotationSpeed = 1.0F;
+    private BobEffect effect = new BobEffect(0.75F);
     private Texture plasma1;
     private Texture plasma2;
     private Texture plasma3;
@@ -24,7 +30,6 @@ public class MyBody implements Disposable {
     private float plasma1Angle = 0.0F;
     private float plasma2Angle = 0.0F;
     private float plasma3Angle = 0.0F;
-    private static final float BODY_OFFSET_Y;
 
     public MyBody() {
         this.plasma1 = ImageMaster.loadImage("images/monsters/theBottom/boss/ghost/plasma1.png");// 36
@@ -56,8 +61,4 @@ public class MyBody implements Disposable {
         this.plasma3.dispose();// 129
         this.shadow.dispose();// 130
     }// 131
-
-    static {
-        BODY_OFFSET_Y = 256.0F * Settings.scale;// 32
-    }
 }

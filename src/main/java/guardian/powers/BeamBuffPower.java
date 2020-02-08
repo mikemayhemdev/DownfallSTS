@@ -1,12 +1,8 @@
 package guardian.powers;
 
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import guardian.GuardianMod;
-import guardian.cards.AbstractGuardianCard;
 
 
 public class BeamBuffPower extends AbstractGuardianPower {
@@ -33,7 +29,7 @@ public class BeamBuffPower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 
     }
 

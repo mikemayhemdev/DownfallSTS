@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import theHexaghost.powers.GhostFlameBarrierPower;
 import theHexaghost.vfx.SpookyFlameBarrier;
 

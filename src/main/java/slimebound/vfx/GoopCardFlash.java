@@ -35,7 +35,7 @@ public class GoopCardFlash extends AbstractGameEffect {
         if (isSuper) {
             this.img = ImageMaster.CARD_FLASH_VFX.getTexture();
         } else {
-            switch(card.type) {
+            switch (card.type) {
                 case POWER:
                     this.img = ImageMaster.CARD_POWER_BG_SILHOUETTE.getTexture();
                     break;
@@ -59,7 +59,7 @@ public class GoopCardFlash extends AbstractGameEffect {
         this.isSuper = false;
         this.card = card;
         this.duration = 0.5F;
-        switch(card.type) {
+        switch (card.type) {
             case POWER:
                 this.img = ImageMaster.CARD_POWER_BG_SILHOUETTE.getTexture();
                 break;
@@ -74,13 +74,13 @@ public class GoopCardFlash extends AbstractGameEffect {
         this.isSuper = false;
     }
 
-    public void finish(){
+    public void finish() {
         this.isDone = true;
 
     }
 
     public void update() {
-        if (!this.backwards){
+        if (!this.backwards) {
             this.duration -= Gdx.graphics.getDeltaTime();
 
         } else {
@@ -93,7 +93,7 @@ public class GoopCardFlash extends AbstractGameEffect {
 
         if (this.duration < 0.0F) {
             this.backwards = true;
-        } else if (this.duration > 0.5F){
+        } else if (this.duration > 0.5F) {
             this.backwards = false;
         }
 

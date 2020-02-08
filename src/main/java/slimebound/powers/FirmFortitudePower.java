@@ -1,31 +1,22 @@
 package slimebound.powers;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.SpawnedSlime;
 
 
 public class FirmFortitudePower extends TwoAmountPower {
     public static final String POWER_ID = "Slimebound:FirmFortitudePower";
     public static final String NAME = "Slime Sacrifice";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/FirmFortitude.png";
-    private boolean isActive = true;
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
+    private boolean isActive = true;
     private AbstractCreature source;
 
     public FirmFortitudePower(AbstractCreature owner, int bufferAmt) {
@@ -50,13 +41,11 @@ public class FirmFortitudePower extends TwoAmountPower {
     }
 
 
-
     public void atEndOfTurn(boolean isPlayer) {
         this.isActive = false;
         this.amount2 = this.amount;
         updateDescription();
     }
-
 
 
     public void atStartOfTurn() {
@@ -65,8 +54,6 @@ public class FirmFortitudePower extends TwoAmountPower {
         this.amount2 = this.amount;
         updateDescription();
     }
-
-
 
 
     public int onLoseHp(int damageAmount) {
@@ -80,7 +67,7 @@ public class FirmFortitudePower extends TwoAmountPower {
             return 0;
         }
 
-       return damageAmount;
+        return damageAmount;
     }
 
     public int onAttackedPreBlock(DamageInfo info, int damageAmount) {
@@ -114,12 +101,12 @@ public class FirmFortitudePower extends TwoAmountPower {
             this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
         }
 
-        if (this.amount2 == 0){
+        if (this.amount2 == 0) {
             this.description += DESCRIPTIONS[6];
-        } else if (this.amount == 1){
-            this.description +=  DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[5];
+        } else if (this.amount == 1) {
+            this.description += DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[5];
         } else {
-            this.description +=  DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[4];
+            this.description += DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[4];
         }
     }
 }

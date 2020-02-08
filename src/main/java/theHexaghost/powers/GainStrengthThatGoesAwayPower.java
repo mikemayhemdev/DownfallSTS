@@ -18,6 +18,7 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present32.png");
+    public boolean activated = true;
 
     public GainStrengthThatGoesAwayPower(final int amount) {
         this.name = "Here and Now";
@@ -32,8 +33,6 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
 
         this.updateDescription();
     }
-
-    public boolean activated = true;
 
     @Override
     public void updateDescription() {

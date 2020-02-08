@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
-import theHexaghost.ghostflames.CrushingGhostflame;
 
 public class EmpoweringStance extends AbstractHexaCard {
 
@@ -31,6 +31,7 @@ public class EmpoweringStance extends AbstractHexaCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
+                HexaMod.renderFlames = true;
                 isDone = true;
                 AbstractGhostflame gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                 GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);

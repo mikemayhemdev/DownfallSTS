@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,23 +15,26 @@ import slimebound.powers.GluttonyPower;
 
 public class Gluttony extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Gluttony";
-
-    private static final CardStrings cardStrings;
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/gluttony.png";
+    private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-
     private static final int COST = 1;
-
+    public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public Gluttony() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
 
 
     }
@@ -58,13 +60,6 @@ public class Gluttony extends AbstractSlimeboundCard {
             this.initializeDescription();
 
         }
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

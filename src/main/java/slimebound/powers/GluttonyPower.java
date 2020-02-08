@@ -2,32 +2,24 @@ package slimebound.powers;
 
 
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.RandomLickCardAction;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
-import slimebound.cards.AbstractSlimeboundCard;
-import slimebound.orbs.SlimingSlime;
 
 
 public class GluttonyPower extends TwoAmountPower {
     public static final String POWER_ID = "Slimebound:GluttonyPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/GluttonyS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
     public int timesTriggeredThisTurn;
+    private AbstractCreature source;
 
 
     public GluttonyPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -56,7 +48,7 @@ public class GluttonyPower extends TwoAmountPower {
 
     }
 
-    public void updateSlimedEffects(){
+    public void updateSlimedEffects() {
 
 
 
@@ -91,7 +83,7 @@ public class GluttonyPower extends TwoAmountPower {
         }
         */
 
-}
+    }
 
     public void atStartOfTurn() {
 
@@ -120,12 +112,12 @@ public class GluttonyPower extends TwoAmountPower {
             this.description = DESCRIPTIONS[0];
         }
 
-        if (this.amount2 == 0){
+        if (this.amount2 == 0) {
             this.description += DESCRIPTIONS[6];
-        } else if (this.amount == 1){
-            this.description +=  DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[5];
+        } else if (this.amount == 1) {
+            this.description += DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[5];
         } else {
-            this.description +=  DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[4];
+            this.description += DESCRIPTIONS[3] + this.amount2 + DESCRIPTIONS[4];
         }
 
     }
@@ -139,7 +131,7 @@ public class GluttonyPower extends TwoAmountPower {
     }
 
 
-    public void activate(){
+    public void activate() {
         if (amount2 > 0) {
             this.flash();
             amount2--;

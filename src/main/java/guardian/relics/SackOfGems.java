@@ -8,8 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
-import guardian.rewards.GemReward;
-import guardian.rewards.GemRewardAllRarities;
 
 import java.util.ArrayList;
 
@@ -33,16 +31,16 @@ public class SackOfGems extends CustomRelic {
         ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 5);
         ArrayList<AbstractCard> rewards = new ArrayList<>();
         int rando;
-        for(int i = 0; i < 5; ++i) {
+        for (int i = 0; i < 5; ++i) {
             rando = AbstractDungeon.cardRng.random(gems.size() - 1);
             rewards.add(gems.get(rando));
             gems.remove(rando);
         }
 
         int times = 0;
-        for (AbstractCard c: rewards){
+        for (AbstractCard c : rewards) {
 
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)(Settings.WIDTH * (0.1 + (0.2 * times))), (float)(Settings.HEIGHT / 2)));
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (Settings.WIDTH * (0.1 + (0.2 * times))), (float) (Settings.HEIGHT / 2)));
             times++;
         }
 

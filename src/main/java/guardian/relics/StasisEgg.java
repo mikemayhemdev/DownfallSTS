@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import guardian.GuardianMod;
-import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
@@ -24,16 +23,14 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
     private boolean cardSelected = true;
     private AbstractCard card = null;
 
-    public StasisEgg()
-    {
+    public StasisEgg() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.SPECIAL, LandingSound.FLAT);    }
-
+                RelicTier.SPECIAL, LandingSound.FLAT);
+    }
 
 
     @Override
-    public Predicate<AbstractCard> isOnCard()
-    {
+    public Predicate<AbstractCard> isOnCard() {
 
         return BottledStasisPatch.inStasisEgg::get;
     }
@@ -43,20 +40,17 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
         return DESCRIPTIONS[0];
     }
 
-    public AbstractCard getCard()
-    {
+    public AbstractCard getCard() {
         return card.makeCopy();
     }
 
     @Override
-    public Integer onSave()
-    {
+    public Integer onSave() {
         return AbstractDungeon.player.masterDeck.group.indexOf(card);
     }
 
     @Override
-    public void onLoad(Integer cardIndex)
-    {
+    public void onLoad(Integer cardIndex) {
         if (cardIndex == null) {
             return;
         }
@@ -70,8 +64,7 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
     }
 
     @Override
-    public void onEquip()
-    {
+    public void onEquip() {
         cardSelected = false;
         if (AbstractDungeon.isScreenUp) {
             AbstractDungeon.dynamicBanner.hide();
@@ -81,7 +74,7 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-                tmp.addToTop(c);
+            tmp.addToTop(c);
         }
         AbstractDungeon.gridSelectScreen.open(tmp,
                 1, DESCRIPTIONS[1] + name + ".",
@@ -89,8 +82,7 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
     }
 
     @Override
-    public void onUnequip()
-    {
+    public void onUnequip() {
         if (card != null) {
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
             if (cardInDeck != null) {
@@ -100,8 +92,7 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
     }
 
     @Override
-    public void update()
-    {
+    public void update() {
         super.update();
 
         if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
@@ -115,8 +106,7 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
         }
     }
 
-    private void setDescriptionAfterLoading()
-    {
+    private void setDescriptionAfterLoading() {
         this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
@@ -124,8 +114,7 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
     }
 
     @Override
-    public AbstractRelic makeCopy()
-    {
+    public AbstractRelic makeCopy() {
         return new StasisEgg();
     }
 
@@ -144,9 +133,9 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
     @Override
     public void atTurnStart() {
         super.atTurnStart();
-        if (this.counter > 0){
+        if (this.counter > 0) {
             this.counter--;
-            if (this.counter == 0){
+            if (this.counter == 0) {
                 this.flash();
                 card.current_x = this.currentX;
                 card.current_y = this.currentY;

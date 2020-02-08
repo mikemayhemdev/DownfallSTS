@@ -17,33 +17,38 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.BeamBuffPower;
-import guardian.powers.ClonePower;
 import guardian.vfx.SmallLaserEffectColored;
 
 
 public class PrimingBeam extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PrimingBeam");
     public static final String NAME;
-    public static String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/primingBeam.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
-
-    //TUNING CONSTANTS
-
     private static final int COST = 1;
     private static final int DAMAGE = 8;
+
+    //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 3;
     private static final int BEAMBUFF = 1;
     private static final int UPGRADE_BEAMBUFF = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
+    public static String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
+
 
     public PrimingBeam() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
@@ -53,9 +58,10 @@ public class PrimingBeam extends AbstractGuardianCard {
 
         this.baseMagicNumber = this.magicNumber = BEAMBUFF;
         //this.sockets.add(GuardianMod.socketTypes.RED);
-        this.socketCount = SOCKETS;  updateDescription();  loadGemMisc();
-}
-
+        this.socketCount = SOCKETS;
+        updateDescription();
+        loadGemMisc();
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
@@ -91,23 +97,16 @@ public class PrimingBeam extends AbstractGuardianCard {
 
     }
 
-    public void updateDescription(){
+    public void updateDescription() {
 
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
             } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
             }
         }
         this.initializeDescription();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

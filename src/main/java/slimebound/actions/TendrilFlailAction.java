@@ -3,10 +3,8 @@ package slimebound.actions;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.SlimeboundMod;
 import slimebound.powers.SlimedPower;
 import slimebound.vfx.SlimeProjectileEffect;
 
@@ -14,8 +12,8 @@ import slimebound.vfx.SlimeProjectileEffect;
 public class TendrilFlailAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
 
     private static final float DURATION = 0.01F;
-    private AbstractCreature owner;
     private static final float POST_ATTACK_WAIT_DUR = 0.2F;
+    private AbstractCreature owner;
     private int numTimes;
     private int slimed;
 
@@ -43,10 +41,10 @@ public class TendrilFlailAction extends com.megacrit.cardcrawl.actions.AbstractG
         }
 
         if (this.target.currentHealth > 0) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(this.owner.hb.cX, this.owner.hb.cY, this.target.hb.cX, this.target.hb.cY,2F,true,0.6F), 0.00F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(this.owner.hb.cX, this.owner.hb.cY, this.target.hb.cX, this.target.hb.cY, 2F, true, 0.6F), 0.00F));
             //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new SlimedPower(this.target, this.owner, slimed ), slimed , true, AttackEffect.POISON));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.owner, new SlimedPower(this.target, this.owner, slimed), slimed, true, AttackEffect.POISON));
 
             if ((this.numTimes > 1) && (!AbstractDungeon.getMonsters().areMonstersBasicallyDead())) {
                 this.numTimes -= 1;

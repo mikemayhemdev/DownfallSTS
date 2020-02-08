@@ -1,0 +1,18 @@
+{
+  "evilWithin:GremlinMatchGame": {
+    "NAME": "Match and Keep!",
+    "DESCRIPTIONS": [
+      "\" ... #bTwelve cards! Match them to keep them! #bFive tries... no do-overs. NL Are you ready? Let's start!\"",
+      "You complete the gremlin's game and look up. NL He disappeared?",
+      "A gremlin is madly shuffling cards on a table. This monster seems to be a harmless one. As you approach, he nervously breaks his composure for a moment, but finds the courage to address you.",
+      "Unwilling to partake in this trivial game, you glare at the Gremlin with a threatening stance. NL He runs away!"
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Leave]",
+      "[Play]",
+      "Remaining Attempts: #y",
+      "[Intimidate] Gain 6 Random cards."
+    ]
+  }
+}

@@ -22,6 +22,7 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burning84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burning32.png");
+    public static Color myColor = new Color(0.529F, 0.922F, 0, 1);
 
     public BurnPower(final AbstractCreature owner, final int amount) {
         this.name = "Burn";
@@ -42,8 +43,6 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
         return amount;
     }
 
-    public static Color myColor = new Color(0.529F, 0.922F, 0, 1);
-
     @Override
     public Color getColor() {
         return myColor.cpy();
@@ -53,7 +52,7 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 65 66
             this.flashWithoutSound();// 67
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
-            int x = ((int)Math.ceil(this.amount / 2F));
+            int x = ((int) Math.ceil(this.amount / 2F));
             if (AbstractDungeon.player.hasRelic(IceCube.ID)) x = amount;
             addToBot(new ReducePowerAction(owner, owner, this, x));
         }
@@ -62,7 +61,7 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public void updateDescription() {
-        description = "At the start of its turn, loses #b" + amount + " HP, then Burn is halved (rounding down).";
+        description = "At the start of its turn, loses #b" + amount + " HP, then Burn is halved.";
     }
 
     @Override

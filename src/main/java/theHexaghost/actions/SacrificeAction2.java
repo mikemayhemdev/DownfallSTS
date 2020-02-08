@@ -15,9 +15,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 
 public class SacrificeAction2 extends AbstractGameAction {
+    public boolean costify;
     private AbstractPlayer p;
     private ArrayList<AbstractCard> cannotUpgrade = new ArrayList<>();
-    public boolean costify;
 
     public SacrificeAction2(boolean upgrade) {
         this.actionType = ActionType.CARD_MANIPULATION;// 22

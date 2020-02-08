@@ -38,19 +38,19 @@ public class DefensiveModeBuffsPower extends AbstractGuardianPower {
     public void updateDescription() {
         String desc;
         desc = DESCRIPTIONS[0];
-        if (this.thorns > 0){
+        if (this.thorns > 0) {
             desc += this.thorns + DESCRIPTIONS[1];
             if (this.dexterity > 0 || this.metallicize > 0 || this.statusNegation > 0 || this.enrage > 0) {
                 desc += " NL ";
             }
         }
-        if (this.dexterity > 0){
+        if (this.dexterity > 0) {
             desc += this.dexterity + DESCRIPTIONS[2];
             if (this.metallicize > 0 || this.statusNegation > 0 || this.enrage > 0) {
                 desc += " NL ";
             }
         }
-        if (this.metallicize > 0){
+        if (this.metallicize > 0) {
             desc += this.metallicize + DESCRIPTIONS[3];
             if (/*this.statusNegation > 0 || */this.enrage > 0) {
                 desc += " NL ";
@@ -69,11 +69,11 @@ public class DefensiveModeBuffsPower extends AbstractGuardianPower {
             }
         }
         */
-        if (this.enrage > 0){
+        if (this.enrage > 0) {
             desc += DESCRIPTIONS[7] + this.enrage + DESCRIPTIONS[8];
         }
 
-            this.description = desc;
+        this.description = desc;
 
     }
 

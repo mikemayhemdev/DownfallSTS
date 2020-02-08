@@ -48,6 +48,7 @@ public class TheSnecko extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
+    public float renderscale = 1.2F;
 
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String) null, (String) null);
@@ -68,8 +69,6 @@ public class TheSnecko extends CustomPlayer {
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.8F);
     }
-
-    public float renderscale = 1.2F;
 
     public void setRenderscale(float renderscale) {
         this.renderscale = renderscale;

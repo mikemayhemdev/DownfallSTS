@@ -9,7 +9,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
@@ -17,10 +16,16 @@ import com.megacrit.cardcrawl.vfx.ExhaustEmberEffect;
 import com.megacrit.cardcrawl.vfx.scene.TorchParticleXLEffect;
 
 public class SpookyFlameBarrier extends AbstractGameEffect {
-    private float x;
-    private float y;
     private static final float X_RADIUS;
     private static final float Y_RADIUS;
+
+    static {
+        X_RADIUS = 200.0F * Settings.scale;// 20
+        Y_RADIUS = 250.0F * Settings.scale;
+    }
+
+    private float x;
+    private float y;
     private boolean flashedBorder = true;
     private Vector2 v = new Vector2(0.0F, 0.0F);
 
@@ -58,9 +63,4 @@ public class SpookyFlameBarrier extends AbstractGameEffect {
 
     public void dispose() {
     }// 71
-
-    static {
-        X_RADIUS = 200.0F * Settings.scale;// 20
-        Y_RADIUS = 250.0F * Settings.scale;
-    }
 }

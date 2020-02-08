@@ -56,13 +56,10 @@ public class TheHexaghost extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
-
-    @Override
-    protected void updateEscapeAnimation() {
-        super.updateEscapeAnimation();
-        if (escapeTimer > 0.0F)
-            renderFlames = false;
-    }
+    private static float oscillatingTimer = 0.0f;
+    private static float oscillatingFader = 0.0f;
+    public MyBody myBody;
+    private BobEffect effect = new BobEffect(0.75F);
 
     public TheHexaghost(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
@@ -80,9 +77,23 @@ public class TheHexaghost extends CustomPlayer {
         myBody = new MyBody();
     }
 
-    private BobEffect effect = new BobEffect(0.75F);
+    public static Color oscillarator() {
+        oscillatingFader += Gdx.graphics.getRawDeltaTime() / 2;
+        if (oscillatingFader > 0.66F) {
+            oscillatingFader = 0.66F;
+            oscillatingTimer += Gdx.graphics.getRawDeltaTime() / 2 * 1.5f;
+        }
+        Color col = Color.WHITE.cpy();
+        col.a = (0.33F + (MathUtils.cos(oscillatingTimer) + 1.0F) / 3.0F) * oscillatingFader;
+        return col;
+    }
 
-    public MyBody myBody;
+    @Override
+    protected void updateEscapeAnimation() {
+        super.updateEscapeAnimation();
+        if (escapeTimer > 0.0F)
+            renderFlames = false;
+    }
 
     @Override
     public void render(SpriteBatch sb) {
@@ -127,20 +138,6 @@ public class TheHexaghost extends CustomPlayer {
                 }
             }
         super.render(sb);
-    }
-
-
-    private static float oscillatingTimer = 0.0f;
-    private static float oscillatingFader = 0.0f;
-    public static Color oscillarator() {
-        oscillatingFader += Gdx.graphics.getRawDeltaTime();
-        if (oscillatingFader > 0.66F) {
-            oscillatingFader = 0.66F;
-            oscillatingTimer += Gdx.graphics.getRawDeltaTime() * 1.5f;
-        }
-        Color col = Color.WHITE.cpy();
-        col.a = (0.33F + (MathUtils.cos(oscillatingTimer) + 1.0F) / 3.0F) * oscillatingFader;
-        return col;
     }
 
     @Override

@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +10,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.ScrapOozeSlime;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
@@ -19,20 +17,27 @@ import slimebound.patches.AbstractCardEnum;
 public class SlimeTap extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:SlimeTap";
     public static final String NAME;
-    private static final CardStrings cardStrings;
     public static final String DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/slimetap.png";
-
+    private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-
     private static final int COST = 0;
-    private int numEaten = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
+    }
+
+    private int numEaten = 0;
 
 
     public SlimeTap() {
@@ -45,7 +50,6 @@ public class SlimeTap extends AbstractSlimeboundCard {
 
 
     }
-
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
@@ -64,7 +68,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
         if (!AbstractDungeon.player.orbs.isEmpty()) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                if (o instanceof SpawnedSlime ) {
+                if (o instanceof SpawnedSlime) {
 
 
                     numEaten = numEaten + 1;
@@ -76,15 +80,6 @@ public class SlimeTap extends AbstractSlimeboundCard {
                 }
             }
         }
-    }
-
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-        EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     }
 
     public AbstractCard makeCopy() {

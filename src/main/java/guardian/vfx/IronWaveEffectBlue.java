@@ -13,11 +13,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class IronWaveEffectBlue extends AbstractGameEffect {
+    private static final float WAVE_INTERVAL = 0.03F;
     private float waveTimer = 0.0F;
     private float x;
     private float y;
     private float cX;
-    private static final float WAVE_INTERVAL = 0.03F;
 
     public IronWaveEffectBlue(float x, float y, float cX) {
         this.x = x + 120.0F * Settings.scale;

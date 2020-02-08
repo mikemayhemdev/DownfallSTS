@@ -30,13 +30,13 @@ public class HeatCrushEffect extends AbstractGameEffect {
             img = ImageMaster.vfxAtlas.findRegion("combat/weightyImpact");// 25
         }
 
-        this.startX = x - 300.0F * Settings.scale - (float)img.packedWidth / 2.0F;// 28
-        this.startX2 = x + 300.0F * Settings.scale - (float)img.packedWidth / 2.0F;// 29
-        this.targetX = x - 120.0F * Settings.scale - (float)img.packedWidth / 2.0F;// 30
-        this.targetX2 = x + 120.0F * Settings.scale - (float)img.packedWidth / 2.0F;// 31
+        this.startX = x - 300.0F * Settings.scale - (float) img.packedWidth / 2.0F;// 28
+        this.startX2 = x + 300.0F * Settings.scale - (float) img.packedWidth / 2.0F;// 29
+        this.targetX = x - 120.0F * Settings.scale - (float) img.packedWidth / 2.0F;// 30
+        this.targetX2 = x + 120.0F * Settings.scale - (float) img.packedWidth / 2.0F;// 31
         this.x = this.startX;// 32
         this.x2 = this.startX2;// 33
-        this.y = y - (float)img.packedHeight / 2.0F;// 35
+        this.y = y - (float) img.packedHeight / 2.0F;// 35
         this.scale = 1.1F;// 36
         this.duration = 0.7F;// 37
         this.startingDuration = 0.7F;// 38
@@ -73,14 +73,14 @@ public class HeatCrushEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 1);// 71
         sb.setColor(new Color(0.5F, 0.5F, 0.9F, this.color.a));// 74
-        sb.draw(img, this.x, this.y, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * this.scale * Settings.scale * 0.5F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation);// 75
-        sb.draw(img, this.x2, this.y, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * this.scale * Settings.scale * 0.5F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation - 180.0F);// 87
+        sb.draw(img, this.x, this.y, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight, this.scale * this.scale * Settings.scale * 0.5F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation);// 75
+        sb.draw(img, this.x2, this.y, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight, this.scale * this.scale * Settings.scale * 0.5F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation - 180.0F);// 87
         sb.setColor(new Color(0.7F, 0.5F, 0.9F, this.color.a));// 100
-        sb.draw(img, this.x, this.y, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * this.scale * Settings.scale * 0.75F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation);// 101
-        sb.draw(img, this.x2, this.y, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * this.scale * Settings.scale * 0.75F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation - 180.0F);// 112
+        sb.draw(img, this.x, this.y, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight, this.scale * this.scale * Settings.scale * 0.75F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation);// 101
+        sb.draw(img, this.x2, this.y, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight, this.scale * this.scale * Settings.scale * 0.75F, this.scale * Settings.scale * (this.duration + 0.8F), this.rotation - 180.0F);// 112
         sb.setColor(this.color);// 125
-        sb.draw(img, this.x, this.y, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * this.scale * Settings.scale, this.scale * Settings.scale * (this.duration + 1.0F), this.rotation);// 126
-        sb.draw(img, this.x2, this.y, (float)img.packedWidth / 2.0F, (float)img.packedHeight / 2.0F, (float)img.packedWidth, (float)img.packedHeight, this.scale * this.scale * Settings.scale, this.scale * Settings.scale * (this.duration + 1.0F), this.rotation - 180.0F);// 138
+        sb.draw(img, this.x, this.y, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight, this.scale * this.scale * Settings.scale, this.scale * Settings.scale * (this.duration + 1.0F), this.rotation);// 126
+        sb.draw(img, this.x2, this.y, (float) img.packedWidth / 2.0F, (float) img.packedHeight / 2.0F, (float) img.packedWidth, (float) img.packedHeight, this.scale * this.scale * Settings.scale, this.scale * Settings.scale * (this.duration + 1.0F), this.rotation - 180.0F);// 138
         sb.setBlendFunction(770, 771);// 149
     }// 150
 

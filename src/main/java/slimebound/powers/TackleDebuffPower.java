@@ -1,30 +1,24 @@
 package slimebound.powers;
 
 
-import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.vfx.FakeFlashAtkImgEffect;
-import slimebound.vfx.SlimeDripsEffectPurple;
 
 
 public class TackleDebuffPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:TackleDebuffPower";
     public static final String NAME = "TackleDebuffPower";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/TackleDebuff.png";
-    public boolean doubleUp = false;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
+    public boolean doubleUp = false;
     public boolean triggered = false;
+    private AbstractCreature source;
 
 
     public TackleDebuffPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -59,10 +53,6 @@ public class TackleDebuffPower extends AbstractPower {
 
 
     }
-
-
-
-
 
 
 }

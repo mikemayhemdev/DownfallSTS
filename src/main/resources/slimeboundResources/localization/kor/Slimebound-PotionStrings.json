@@ -6,7 +6,6 @@
       " 적용합니다."
     ]
   },
-
   "Slimebound:SlimyTonguePotion": {
     "NAME": "점액질 엘릭서",
     "DESCRIPTIONS": [
@@ -14,7 +13,6 @@
       " 더 적용합니다."
     ]
   },
-
   "Slimebound:SpawnSlimePotion": {
     "NAME": "병속의 부하",
     "DESCRIPTIONS": [
@@ -22,7 +20,6 @@
       " 을 생성합니다."
     ]
   },
-
   "Slimebound:ThreeZeroPotion": {
     "NAME": "수액충전된 음료",
     "DESCRIPTIONS": [

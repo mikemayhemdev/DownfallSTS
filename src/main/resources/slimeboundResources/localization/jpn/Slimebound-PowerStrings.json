@@ -3,7 +3,7 @@
     "NAME": "効力",
     "DESCRIPTIONS": [
       "生み出した #yスライム のダメージを",
-	  " 増加させる。"
+      " 増加させる。"
     ]
   },
   "Slimebound:SlimedPower": {
@@ -60,7 +60,7 @@
     "DESCRIPTIONS": [
       "次のターンにゴーストフレイムスライムを生み出す。",
       "ゴーストフレイムスライムを、次の",
-	  " ターンの間生み出す。"
+      " ターンの間生み出す。"
     ]
   },
   "Slimebound:ProtectTheBoss": {
@@ -112,12 +112,12 @@
   "Slimebound:SelfFormingGooPower": {
     "NAME": "自己形成グー",
     "DESCRIPTIONS": [
-			"HPを失うとき、次のターン開始時に、",
-			" ブロックを得て、粘液",
-			" をランダムな敵に与える。",
-			" をランダムな敵に",
-			" 回与える。"
-		]
+      "HPを失うとき、次のターン開始時に、",
+      " ブロックを得て、粘液",
+      " をランダムな敵に与える。",
+      " をランダムな敵に",
+      " 回与える。"
+    ]
   },
   "Slimebound:LoseSlimesPower": {
     "NAME": "やり過ぎ",
@@ -187,7 +187,6 @@
       " 回繰り返される。",
       " 回繰り返される。",
       " NL この効果はこのターン中もう繰り返されない。"
-
     ]
   },
   "Slimebound:GluttonyPowerUpgraded": {
@@ -217,7 +216,7 @@
     "DESCRIPTIONS": [
       "次のターン、廃棄されたランダムなコスト0のカードを手札に戻す。",
       "次の",
-	  " ターン、廃棄されたランダムなコスト0のカードを手札に戻す。"
+      " ターン、廃棄されたランダムなコスト0のカードを手札に戻す。"
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
@@ -281,7 +280,6 @@
       " 回繰り返される。",
       " 回繰り返される。",
       " この効果はこのターン中もう繰り返されない。"
-	  
     ]
   },
   "Slimebound:NextTurnGainStrengthPower": {
@@ -465,37 +463,37 @@
       " ターン開始時にランダムなアップグレードされた「タイムイーターのカード」を手札に加える"
     ]
   },
- 	"Slimebound:GreedRespawnPower": {
-	"NAME": "グリード・リカバー",
-	"DESCRIPTIONS": [
-	    "グリードウーズがターン終了時にリスポーンする。"
-	]
-	},
-	"Slimebound:ScrapRespawnPower": {
-	"NAME": "スクラップ・リカバー",
-	"DESCRIPTIONS": [
-		"スクラップウーズがターン終了時にリスポーンする。"
-	]
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "グリード・リカバー",
+    "DESCRIPTIONS": [
+      "グリードウーズがターン終了時にリスポーンする。"
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "スクラップ・リカバー",
+    "DESCRIPTIONS": [
+      "スクラップウーズがターン終了時にリスポーンする。"
+    ]
   },
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "ミニオンマスター",
     "DESCRIPTIONS": [
-        "あなたのスライムが粘液、毒、ブロックを与えるとき、",
-        " つ追加で与える。"
+      "あなたのスライムが粘液、毒、ブロックを与えるとき、",
+      " つ追加で与える。"
     ]
   },
-	"Slimebound:TackleSelfDamagePreventPower": {
-	"NAME": "無謀",
-	"DESCRIPTIONS": [
-    	"「タックル」を含むカードから受けるダメージを",
-		" 増やす。"
-	]
+  "Slimebound:TackleSelfDamagePreventPower": {
+    "NAME": "無謀",
+    "DESCRIPTIONS": [
+      "「タックル」を含むカードから受けるダメージを",
+      " 増やす。"
+    ]
   },
   "Slimebound:GoopArmorPower": {
     "NAME": "粘液アーマー",
     "DESCRIPTIONS": [
-        "粘液状態の敵を攻撃すると、ブロック",
-        " を得る。"
+      "粘液状態の敵を攻撃すると、ブロック",
+      " を得る。"
     ]
   }
 }

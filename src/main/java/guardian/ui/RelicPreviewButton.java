@@ -14,14 +14,14 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.ui.buttons.LargeDialogOptionButton;
 
 public class RelicPreviewButton extends LargeDialogOptionButton {
+    private static Color TEXT_ACTIVE_COLOR = Color.WHITE.cpy();
+    private static Color TEXT_INACTIVE_COLOR = new Color(0.8F, 0.8F, 0.8F, 1.0F);
+    private static Color TEXT_DISABLED_COLOR = Color.FIREBRICK.cpy();
     private AbstractRelic r;
     private float x;
     private float y;
     private boolean isDisabled;
     private float animTimer;
-    private static Color TEXT_ACTIVE_COLOR = Color.WHITE.cpy();
-    private static Color TEXT_INACTIVE_COLOR = new Color(0.8F, 0.8F, 0.8F, 1.0F);
-    private static Color TEXT_DISABLED_COLOR = Color.FIREBRICK.cpy();
     private Color boxInactiveColor;
     private Color textColor;
     private Color boxColor;
@@ -36,7 +36,7 @@ public class RelicPreviewButton extends LargeDialogOptionButton {
         this.y = -9999.0F * Settings.scale;
         this.pressed = false;
         this.slot = 0;
-        switch(AbstractEvent.type) {
+        switch (AbstractEvent.type) {
             case TEXT:
                 this.x = 895.0F * Settings.scale;
                 break;
@@ -71,7 +71,7 @@ public class RelicPreviewButton extends LargeDialogOptionButton {
             }
 
             this.r.currentY = this.y;
-            TipHelper.queuePowerTips((float)InputHelper.mX - 350.0F * Settings.scale, Settings.HEIGHT/3F, r.tips);
+            TipHelper.queuePowerTips((float) InputHelper.mX - 350.0F * Settings.scale, Settings.HEIGHT / 3F, r.tips);
         }
     }
 

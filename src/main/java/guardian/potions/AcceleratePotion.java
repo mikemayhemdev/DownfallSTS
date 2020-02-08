@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 public class AcceleratePotion extends CustomPotion {
@@ -23,10 +24,20 @@ public class AcceleratePotion extends CustomPotion {
 
     public AcceleratePotion() {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.M, PotionColor.STEROID);
-        this.potency = getPotency();
-        this.description = (DESCRIPTIONS[0]);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = GuardianCharacter.cardRenderColor;
+    }
+
+
+    public void initializeData() {
+        this.potency = getPotency();
+        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SacredBark")) {
+            this.description = potionStrings.DESCRIPTIONS[1];
+        } else {
+            this.description = potionStrings.DESCRIPTIONS[0];
+        }
+        this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("accelerate")), GameDictionary.keywords.get("accelerate")));
 
@@ -38,12 +49,15 @@ public class AcceleratePotion extends CustomPotion {
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
         AbstractDungeon.topLevelEffectsQueue.add(new com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect());
 
-        for (AbstractOrb o:AbstractDungeon.player.orbs){
-            if (o instanceof StasisOrb){
-                o.onStartOfTurn();
-                ((StasisOrb) o).stasisCard.superFlash(Color.GOLDENROD);
+        for (int i = 0; i < this.potency; i++) {
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                if (o instanceof StasisOrb) {
+                    o.onStartOfTurn();
+                    ((StasisOrb) o).stasisCard.superFlash(Color.GOLDENROD);
+                }
             }
         }
+
 
     }
 
@@ -53,7 +67,7 @@ public class AcceleratePotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 4;
+        return 2;
     }
 }
 

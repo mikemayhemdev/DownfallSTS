@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import slimebound.SlimeboundMod;
 import slimebound.powers.SlimedPower;
 
 
@@ -54,7 +53,7 @@ public class SlimesplosionAction extends AbstractGameAction {
                 for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                     if ((!monster.isDead) && (!monster.isDying)) {
 
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed ), this.slimed , true, AbstractGameAction.AttackEffect.NONE));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
                         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, this.poison), this.poison, true, AbstractGameAction.AttackEffect.NONE));
 
 

@@ -21,24 +21,29 @@ import guardian.patches.AbstractCardEnum;
 public class WalkerClaw extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("WalkerClaw");
     public static final String NAME;
-    public static String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/walkerClaw.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
-
-    //TUNING CONSTANTS
-
     private static final int COST = 2;
     private static final int DAMAGE = 16;
+
+    //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
+    public static String DESCRIPTION;
+    public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    }
 
     public WalkerClaw() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
@@ -46,13 +51,15 @@ public class WalkerClaw extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
 
         this.baseMagicNumber = 2;
-        this.socketCount = SOCKETS;  updateDescription();  loadGemMisc();
-}
+        this.socketCount = SOCKETS;
+        updateDescription();
+        loadGemMisc();
+    }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         super.calculateModifiedCardDamage(player, mo, tmp);
         int bonus = 0;
-        if (player.hasPower(StrengthPower.POWER_ID)){
+        if (player.hasPower(StrengthPower.POWER_ID)) {
             bonus = player.getPower(StrengthPower.POWER_ID).amount;
         }
         return tmp + bonus;
@@ -68,7 +75,6 @@ public class WalkerClaw extends AbstractGuardianCard {
         this.useGems(p, m);
     }
 
-
     public AbstractCard makeCopy() {
         return new WalkerClaw();
     }
@@ -81,29 +87,23 @@ public class WalkerClaw extends AbstractGuardianCard {
             if (this.socketCount < 4) {
                 this.socketCount++;
                 this.saveGemMisc();
-            }             this.updateDescription();
+            }
+            this.updateDescription();
         }
 
 
     }
 
-    public void updateDescription(){
+    public void updateDescription() {
 
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
-                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
             } else {
-                this.rawDescription = this.updateGemDescription(DESCRIPTION,true);
+                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
             }
         }
         this.initializeDescription();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 }
 

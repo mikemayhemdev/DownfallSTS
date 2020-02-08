@@ -1,10 +1,10 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.unique.RandomizeHandCostAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
+import sneckomod.actions.MuddleHandAction;
 
 public class SoulRoll extends AbstractSneckoCard {
 
@@ -14,10 +14,11 @@ public class SoulRoll extends AbstractSneckoCard {
 
     public SoulRoll() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        tags.add(SneckoMod.SNEKPROOF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new RandomizeHandCostAction());
+        atb(new MuddleHandAction());
         if (upgraded) atb(new DrawCardAction(1));
     }
 

@@ -9,24 +9,21 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.ThornsPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.ScrapOozeSlime;
 import slimebound.orbs.SpawnedSlime;
 
 
 public class LoseSlimesPower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:LoseSlimesPower";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static final String IMG = "powers/nostalgia.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
     private static boolean naturalclear = false;
+    private AbstractCreature source;
 
 
     public LoseSlimesPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -58,7 +55,6 @@ public class LoseSlimesPower extends AbstractPower {
     public void updateDescription() {
 
 
-
         if (this.amount > 1) {
             this.description = this.amount + DESCRIPTIONS[1];
 
@@ -78,7 +74,7 @@ public class LoseSlimesPower extends AbstractPower {
 
         if (this.amount <= 1) {
 
-           this.naturalclear = true;
+            this.naturalclear = true;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, LoseSlimesPower.POWER_ID));
             killSlimes();
         } else {
@@ -91,22 +87,21 @@ public class LoseSlimesPower extends AbstractPower {
 
 
     public void killSlimes() {
-            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                if (!AbstractDungeon.player.orbs.isEmpty()) {
-                    for (AbstractOrb o : AbstractDungeon.player.orbs) {
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            if (!AbstractDungeon.player.orbs.isEmpty()) {
+                for (AbstractOrb o : AbstractDungeon.player.orbs) {
 
-                        if (o instanceof SpawnedSlime ) {
+                    if (o instanceof SpawnedSlime) {
 
-                            ((SpawnedSlime) o).activateEffect();
-                            AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+                        ((SpawnedSlime) o).activateEffect();
+                        AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
 
-                        }
                     }
-
                 }
+
             }
         }
-
+    }
 
 
 }

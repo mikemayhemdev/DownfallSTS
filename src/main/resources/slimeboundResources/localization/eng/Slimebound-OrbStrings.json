@@ -51,11 +51,10 @@
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "Acid Slime",
+    "NAME": "Guerilla Slime",
     "DESCRIPTION": [
       "Deals ",
-      " damage and applies ",
-      " Poison at the start of your turn."
+      " damage to ALL enemies at the start of your turn."
     ]
   },
   "Slimebound:SlimingSlime": {

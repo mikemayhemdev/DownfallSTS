@@ -14,13 +14,13 @@ public class RelicPreviewPatch {
             rloc = 70
     )
     public static void Insert(GenericEventDialog __instance, SpriteBatch sb) {
-        if (!Loader.isModLoaded("halation")){
+        if (!Loader.isModLoaded("halation")) {
             for (LargeDialogOptionButton b : __instance.optionList) {
                 if (b instanceof RelicPreviewButton) {
                     RelicPreviewButton rb = (RelicPreviewButton) b;
                     rb.renderRelicPreview(sb);
                 }
             }
-    }
+        }
     }
 }

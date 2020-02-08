@@ -6,7 +6,6 @@
       " を与える。"
     ]
   },
-
   "Slimebound:SlimyTonguePotion": {
     "NAME": "スライミーエリクサー",
     "DESCRIPTIONS": [
@@ -14,7 +13,6 @@
       " を与える。"
     ]
   },
-
   "Slimebound:SpawnSlimePotion": {
     "NAME": "ボトル入りミニオン",
     "DESCRIPTIONS": [
@@ -22,7 +20,6 @@
       "　産み出す。"
     ]
   },
-
   "Slimebound:ThreeZeroPotion": {
     "NAME": "ウーズ入りドリンク",
     "DESCRIPTIONS": [

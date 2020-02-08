@@ -12,7 +12,6 @@ import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.cards.StasisField;
 import guardian.cards.StasisStrike;
-import guardian.cards.TimeBomb;
 
 
 public class ClonePower extends AbstractGuardianPower {
@@ -24,7 +23,7 @@ public class ClonePower extends AbstractGuardianPower {
 
     public ClonePower(AbstractCreature owner, int amount) {
 
-       this.ID = POWER_ID;
+        this.ID = POWER_ID;
         this.owner = owner;
 
         this.type = POWER_TYPE;
@@ -40,7 +39,7 @@ public class ClonePower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        if (this.amount != 1){
+        if (this.amount != 1) {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         } else {
             this.description = DESCRIPTIONS[0];
@@ -59,7 +58,7 @@ public class ClonePower extends AbstractGuardianPower {
                 this.amount -= 1;
             }
 
-                AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(card));
+            AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(card));
 
         }
     }
@@ -67,7 +66,7 @@ public class ClonePower extends AbstractGuardianPower {
     @Override
     public void reducePower(int reduceAmount) {
         super.reducePower(reduceAmount);
-        if (this.amount <= 0){
+        if (this.amount <= 0) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
     }

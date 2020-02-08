@@ -40,6 +40,9 @@ public class EtherealExpedition extends AbstractHexaCard {
                 list.add(c);// 1204
             }
         }
+        if (list.isEmpty()) {
+            list.add(new PowerFromBeyond());
+        }
         return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));// 1217
     }
 

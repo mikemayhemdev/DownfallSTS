@@ -16,10 +16,9 @@ import slimebound.SlimeboundMod;
 public class RecyclingPowerUpgraded extends AbstractPower {
     public static final String POWER_ID = "Slimebound:RecyclingPowerUpgraded";
     public static final String NAME = "Potency";
-    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static final String IMG = "powers/RecyclingS.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
+    public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
@@ -53,7 +52,7 @@ public class RecyclingPowerUpgraded extends AbstractPower {
         if (card.cost == 0) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner,this.amount));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
 
         }
 

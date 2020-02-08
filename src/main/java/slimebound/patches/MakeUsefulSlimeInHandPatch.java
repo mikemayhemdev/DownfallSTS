@@ -6,15 +6,11 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import slimebound.SlimeboundMod;
 import slimebound.cards.UsefulSlime;
 import slimebound.characters.SlimeboundCharacter;
 
-@SpirePatch(clz= MakeTempCardInHandAction.class,method = SpirePatch.CONSTRUCTOR,
+@SpirePatch(clz = MakeTempCardInHandAction.class, method = SpirePatch.CONSTRUCTOR,
         paramtypez = {
                 AbstractCard.class,
                 int.class})
@@ -23,12 +19,12 @@ public class MakeUsefulSlimeInHandPatch {
     @SpirePostfixPatch
     public static void Postfix(MakeTempCardInHandAction obj, AbstractCard card, int amount) {
 
-            if (AbstractDungeon.player instanceof SlimeboundCharacter && card instanceof Slimed) {
-                ReflectionHacks.setPrivate(obj, MakeTempCardInHandAction.class, "c", new UsefulSlime());
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && card instanceof Slimed) {
+            ReflectionHacks.setPrivate(obj, MakeTempCardInHandAction.class, "c", new UsefulSlime());
 
-            }
         }
     }
+}
 
 
 

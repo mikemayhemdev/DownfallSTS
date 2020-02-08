@@ -6,7 +6,6 @@
       " Goop."
     ]
   },
-
   "Slimebound:SlimyTonguePotion": {
     "NAME": "Slimy Elixir",
     "DESCRIPTIONS": [
@@ -14,15 +13,13 @@
       " more."
     ]
   },
-
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "Bottled Minion",
+    "NAME": "Army in a Bottle",
     "DESCRIPTIONS": [
-      "Spawn ",
-      " random Slime minion."
+      "Gain Slime Slots until you have 3. NL Spawn a Leeching, Mire, and Guerilla slime. They do not cost HP.",
+      "Gain Slime Slots until you have 6. NL Spawn 2 Leeching, 2 Mire, and 2 Guerilla slimes. They do not cost HP."
     ]
   },
-
   "Slimebound:ThreeZeroPotion": {
     "NAME": "Ooze-Infused Drink",
     "DESCRIPTIONS": [

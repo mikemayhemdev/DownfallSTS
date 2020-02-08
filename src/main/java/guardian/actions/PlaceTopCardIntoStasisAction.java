@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.GuardianMod;
@@ -30,14 +29,14 @@ public class PlaceTopCardIntoStasisAction extends AbstractGameAction {
             if (AbstractDungeon.player.drawPile.isEmpty()) {
                 AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction(this.numCards ));
+                AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction(this.numCards));
 
             } else {
                 if (GuardianMod.canSpawnStasisOrb()) {
-                    if (!AbstractDungeon.player.hasEmptyOrb()){
+                    if (!AbstractDungeon.player.hasEmptyOrb()) {
                         GuardianMod.logger.info("passed has empty orb");
-                        for (AbstractOrb o : AbstractDungeon.player.orbs){
-                            if (!(o instanceof StasisOrb)){
+                        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                            if (!(o instanceof StasisOrb)) {
                                 GuardianMod.logger.info("found non-stasis orb");
                                 AbstractDungeon.player.orbs.remove(o);
                                 AbstractDungeon.player.orbs.add(0, o);

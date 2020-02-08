@@ -2,14 +2,14 @@ package slimebound.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.*;
+import slimebound.orbs.AttackSlime;
+import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.ShieldSlime;
+import slimebound.orbs.SlimingSlime;
 
 import java.util.ArrayList;
 
@@ -34,7 +34,7 @@ public class AbsorbEndCombat extends CustomRelic {
         //Cheaty hack for testing max orbslots
         //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(6));
 
-            this.flash();
+        this.flash();
         ArrayList<Integer> orbs = new ArrayList();
         orbs.add(1);
         orbs.add(2);

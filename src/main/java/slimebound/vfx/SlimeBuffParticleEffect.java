@@ -9,8 +9,8 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 
 public class SlimeBuffParticleEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private TextureAtlas.AtlasRegion img;
     private static final float DURATION = 0.5F;
+    private TextureAtlas.AtlasRegion img;
     private float x;
     private float y;
     private float vY;
@@ -44,6 +44,7 @@ public class SlimeBuffParticleEffect extends com.megacrit.cardcrawl.vfx.Abstract
         this.isDone = true;
 
     }
+
     public void update() {
         this.scale += Gdx.graphics.getDeltaTime() / 2.0F;
 

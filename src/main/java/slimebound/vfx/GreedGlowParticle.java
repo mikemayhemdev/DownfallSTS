@@ -7,18 +7,18 @@ package slimebound.vfx;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.rewards.chests.AbstractChest;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import slimebound.orbs.GreedOozeSlime;
 
 public class GreedGlowParticle extends AbstractGameEffect {
+    private static float xOffset = -30F * Settings.scale;
+    private static float yOffset = -100F * Settings.scale;
     private float effectDuration;
     private float x;
     private float y;
@@ -27,8 +27,6 @@ public class GreedGlowParticle extends AbstractGameEffect {
     private float targetScale;
     private GreedOozeSlime o;
     private AtlasRegion img;
-    private static float xOffset = -30F * Settings.scale;
-    private static float yOffset = -100F * Settings.scale;
 
     public GreedGlowParticle(GreedOozeSlime o) {
         this.o = o;
@@ -75,10 +73,11 @@ public class GreedGlowParticle extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
         sb.setBlendFunction(770, 1);
-        sb.draw(this.img, this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * MathUtils.random(0.9F, 1.1F), this.scale * MathUtils.random(0.7F, 1.3F), this.rotation);
+        sb.draw(this.img, this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * MathUtils.random(0.9F, 1.1F), this.scale * MathUtils.random(0.7F, 1.3F), this.rotation);
         sb.setBlendFunction(770, 771);
     }
-    public void finish(){
+
+    public void finish() {
         this.isDone = true;
 
     }

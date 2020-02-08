@@ -20,6 +20,8 @@ public class GhostflameHelper {
     public static ArrayList<AbstractGhostflame> hexaGhostFlames = new ArrayList<>();
 
     public static AbstractGhostflame activeGhostFlame;
+    public static Color partialTransparent = new Color(1F, 1F, 1F, 0.75F);
+    public static boolean showAll = false;
 
     public static void init() {
         hexaGhostFlames.clear();
@@ -31,7 +33,6 @@ public class GhostflameHelper {
         hexaGhostFlames.add(new InfernoGhostflame(AbstractDungeon.player.drawX - (190.0F * Settings.scale), AbstractDungeon.player.drawY + (240.0F * Settings.scale)));
         hexaGhostFlames.get(0).activate();
     }
-
 
     public static AbstractGhostflame getNextGhostFlame() {
         AbstractGhostflame x;
@@ -85,16 +86,12 @@ public class GhostflameHelper {
         }
     }
 
-    public static Color partialTransparent = new Color(1F, 1F, 1F, 0.75F);
-
     public static void update() {
         if (HexaMod.renderFlames)
             for (AbstractGhostflame gf : hexaGhostFlames) {
                 gf.update();
             }
     }
-
-    public static boolean showAll = false;
 
     public static void render(SpriteBatch sb) {
         if (HexaMod.renderFlames && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {

@@ -6,19 +6,21 @@
 package guardian.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import guardian.GuardianMod;
 
 import java.util.Iterator;
 
 public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
     public static final String[] TEXT;
+
+    static {
+        TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
+    }
 
     public PlaceCardsInHandIntoStasisAction(AbstractCreature source, int amount) {
         this.setValues(AbstractDungeon.player, source, amount);
@@ -33,8 +35,8 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
                 AbstractCard c;
-                for(Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext(); AbstractDungeon.player.hand.addToTop(c)) {
-                    c = (AbstractCard)var1.next();
+                for (Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext(); AbstractDungeon.player.hand.addToTop(c)) {
+                    c = (AbstractCard) var1.next();
                     if (GuardianMod.canSpawnStasisOrb()) {
 
                         c.retain = true;
@@ -49,9 +51,5 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
 
             this.tickDuration();
         }
-    }
-
-    static {
-        TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
     }
 }

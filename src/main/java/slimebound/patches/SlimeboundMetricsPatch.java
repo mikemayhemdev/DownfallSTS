@@ -1,17 +1,16 @@
+package slimebound.patches;
 
-        package slimebound.patches;
 
+import com.evacipated.cardcrawl.modthespire.lib.ByRef;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.metrics.Metrics;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.screens.DeathScreen;
 
-        import com.evacipated.cardcrawl.modthespire.lib.ByRef;
-        import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-        import com.megacrit.cardcrawl.core.Settings;
-        import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-        import com.megacrit.cardcrawl.metrics.Metrics;
-        import com.megacrit.cardcrawl.monsters.MonsterGroup;
-        import com.megacrit.cardcrawl.screens.DeathScreen;
-
-        import java.lang.reflect.InvocationTargetException;
-        import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /* Copied from The Mystic Mod:
    https://github.com/JohnnyDevo/The-Mystic-Project/blob/master/src/main/java/mysticmod/Patches/MysticMetricsPatch.java

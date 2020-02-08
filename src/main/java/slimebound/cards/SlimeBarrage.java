@@ -1,7 +1,6 @@
 package slimebound.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,16 +18,23 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:SlimeBarrage";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static String UPGRADED_DESCRIPTION;
     public static final String IMG_PATH = "cards/slimebarrage.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
     private static final CardStrings cardStrings;
     private static final int COST = 2;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
+    public static String UPGRADED_DESCRIPTION;
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+        NAME = cardStrings.NAME;
+        DESCRIPTION = cardStrings.DESCRIPTION;
+        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    }
 
 
     public SlimeBarrage() {
@@ -43,7 +49,6 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
 
     }
 
-
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
@@ -52,13 +57,11 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
 
     }
 
-
     public AbstractCard makeCopy() {
 
         return new SlimeBarrage();
 
     }
-
 
     public void upgrade() {
 
@@ -69,14 +72,6 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
             upgradeBaseCost(1);
 
         }
-
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-        NAME = cardStrings.NAME;
-        DESCRIPTION = cardStrings.DESCRIPTION;
-        UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     }
 }

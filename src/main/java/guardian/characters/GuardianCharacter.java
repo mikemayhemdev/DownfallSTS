@@ -7,14 +7,14 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.relics.BronzeScales;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.GuardianMod;
@@ -28,26 +28,26 @@ import java.util.List;
 
 
 public class GuardianCharacter extends CustomPlayer {
-    public static Color cardRenderColor = GuardianMod.mainGuardianColor;
-    public float renderscale = 2.5F;
-
-    private static final CharacterStrings charStrings;
     public static final String NAME;
     public static final String DESCRIPTION;
+    public static final String[] orbTextures = {"guardianResources/GuardianImages/char/orb/layer1.png", "guardianResources/GuardianImages/char/orb/layer2.png", "guardianResources/GuardianImages/char/orb/layer3.png", "guardianResources/GuardianImages/char/orb/layer4.png", "guardianResources/GuardianImages/char/orb/layer5.png", "guardianResources/GuardianImages/char/orb/layer6.png", "guardianResources/GuardianImages/char/orb/layer1d.png", "guardianResources/GuardianImages/char/orb/layer2d.png", "guardianResources/GuardianImages/char/orb/layer3d.png", "guardianResources/GuardianImages/char/orb/layer4d.png", "guardianResources/GuardianImages/char/orb/layer5d.png"};
+    private static final CharacterStrings charStrings;
+    public static Color cardRenderColor = GuardianMod.mainGuardianColor;
 
+    static {
+        charStrings = CardCrawlGame.languagePack.getCharacterString("Guardian");
+        NAME = charStrings.NAMES[0];
+        DESCRIPTION = charStrings.TEXT[0];
+
+    }
+
+    public float renderscale = 2.5F;
     private String atlasURL = "guardianResources/GuardianImages/char/skeleton.atlas";
     private String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
     private String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
-
-     private String currentJson = jsonURL;
-
-     private boolean inDefensive;
-     private boolean inShattered;
-
-
-
-    public static final String[] orbTextures = {"guardianResources/GuardianImages/char/orb/layer1.png", "guardianResources/GuardianImages/char/orb/layer2.png", "guardianResources/GuardianImages/char/orb/layer3.png", "guardianResources/GuardianImages/char/orb/layer4.png", "guardianResources/GuardianImages/char/orb/layer5.png", "guardianResources/GuardianImages/char/orb/layer6.png", "guardianResources/GuardianImages/char/orb/layer1d.png", "guardianResources/GuardianImages/char/orb/layer2d.png", "guardianResources/GuardianImages/char/orb/layer3d.png", "guardianResources/GuardianImages/char/orb/layer4d.png", "guardianResources/GuardianImages/char/orb/layer5d.png"};
-
+    private String currentJson = jsonURL;
+    private boolean inDefensive;
+    private boolean inShattered;
 
     public GuardianCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String) null, (String) null);
@@ -59,20 +59,17 @@ public class GuardianCharacter extends CustomPlayer {
 
     }
 
-    public CharSelectInfo getInfo() {
-        return (CharSelectInfo) getLoadout ();
-    }
-
     //TODO - Victory screens
 
-
+    public CharSelectInfo getInfo() {
+        return (CharSelectInfo) getLoadout();
+    }
 
     @Override
     public Texture getCutsceneBg() {
         return ImageMaster.loadImage("images/scenes/greenBg.jpg");
 
     }
-
 
     @Override
     public List<CutscenePanel> getCutscenePanels() {
@@ -82,10 +79,6 @@ public class GuardianCharacter extends CustomPlayer {
         panels.add(new CutscenePanel("guardianResources/GuardianImages/scenes/guardian3.png"));
         return panels;
     }
-
-
-
-
 
     public void reloadAnimation() {
         this.loadAnimation(atlasURL, this.currentJson, renderscale);
@@ -99,7 +92,7 @@ public class GuardianCharacter extends CustomPlayer {
         super.applyStartOfCombatLogic();
     }
 
-    public void switchToDefensiveMode(){
+    public void switchToDefensiveMode() {
         if (!inShattered) {
             if (!inDefensive) {
                 CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
@@ -112,7 +105,7 @@ public class GuardianCharacter extends CustomPlayer {
         }
     }
 
-    public void switchToOffensiveMode(){
+    public void switchToOffensiveMode() {
         if (!inShattered) {
             if (inDefensive) {
                 CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
@@ -130,7 +123,7 @@ public class GuardianCharacter extends CustomPlayer {
         }
     }
 
-    public void switchToShatteredMode(){
+    public void switchToShatteredMode() {
         if (!inShattered) {
             if (inDefensive) {
                 this.stateData.setMix("defensive", "transition", 0.2F);
@@ -138,10 +131,10 @@ public class GuardianCharacter extends CustomPlayer {
                 this.state.setAnimation(0, "transition", true);
                 inShattered = true;
             } else {
-                    this.stateData.setMix("idle", "transition", 0.2F);
-                    this.state.setTimeScale(.75F);
-                    this.state.setAnimation(0, "transition", true);
-                    inShattered = true;
+                this.stateData.setMix("idle", "transition", 0.2F);
+                this.state.setTimeScale(.75F);
+                this.state.setAnimation(0, "transition", true);
+                inShattered = true;
             }
         }
     }
@@ -173,7 +166,6 @@ public class GuardianCharacter extends CustomPlayer {
         return retVal;
     }
 
-
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAME, DESCRIPTION, 80, 80, 3, 99, 5, this,
 
@@ -193,7 +185,6 @@ public class GuardianCharacter extends CustomPlayer {
 
         return cardRenderColor;
     }
-
 
     public AbstractCard getStartCardForEvent() {
         //TODO - Note card goes here
@@ -230,7 +221,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public String getSpireHeartText() {
-        return charStrings.TEXT[1] ;
+        return charStrings.TEXT[1];
     }
 
     public Color getSlashAttackColor() {
@@ -243,13 +234,6 @@ public class GuardianCharacter extends CustomPlayer {
 
     public String getVampireText() {
         return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[5];
-    }
-
-    static {
-        charStrings = CardCrawlGame.languagePack.getCharacterString("Guardian");
-        NAME = charStrings.NAMES[0];
-        DESCRIPTION = charStrings.TEXT[0];
-
     }
 
 }
