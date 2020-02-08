@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.TackleSelfDamageAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.SpawnedSlime;
@@ -63,16 +64,8 @@ public class ForwardTackle extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-        AbstractOrb oldestOrb = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                oldestOrb = o;
-                break;
-            }
-
-        }
-        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+        addToBot(new CommandAction());
+        addToBot(new CommandAction());
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {

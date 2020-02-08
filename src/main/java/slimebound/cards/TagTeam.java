@@ -9,12 +9,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.AttackSlime;
-import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
 
@@ -50,17 +48,9 @@ public class TagTeam extends AbstractSlimeboundCard {
         int bonus = 0;
         if (upgraded) bonus = this.magicNumber;
         addToBot(new SlimeSpawnAction(new AttackSlime(), false, true, bonus, 0));
-        AbstractOrb oldestOrb = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                oldestOrb = o;
-                break;
-            }
-
-        }
-        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+        addToBot(new CommandAction());
+        addToBot(new CommandAction());
+        addToBot(new CommandAction());
     }
 
     public AbstractCard makeCopy() {

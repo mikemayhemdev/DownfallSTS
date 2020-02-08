@@ -62,25 +62,8 @@ public class CoordinateAction extends AbstractGameAction {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, effect), effect));
 
-        ArrayList<AbstractOrb> oldestOrb = new ArrayList<>();
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                oldestOrb.add(o);
-                if (oldestOrb.size() == this.slimesToTrigger) break;
-            }
-
-        }
         for (int i = 0; i < effect; ++i) {
-
-            if (oldestOrb.size() > 0) {
-                for (AbstractOrb o : oldestOrb) {
-                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(o));
-                }
-            }
-            //   com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F * effect));
-
-
-            //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(oldestOrb));
+            addToBot(new CommandAction());
         }
 
         this.isDone = true;

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.ExhaustToHandDirectlyAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.SpawnedSlime;
@@ -48,15 +49,7 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        AbstractOrb oldestOrb = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                oldestOrb = o;
-                break;
-            }
-
-        }
-        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+        addToBot(new CommandAction());
     }
 
     public void upgrade() {
