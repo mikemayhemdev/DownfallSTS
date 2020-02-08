@@ -251,7 +251,6 @@ public class SneckoMod implements
     }
 
     public void receivePostInitialize() {
-
         addPotions();
     }
 }

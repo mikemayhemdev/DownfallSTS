@@ -10,7 +10,7 @@ public class CommandAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         AbstractOrb oldestOrb = null;
-        if (!AbstractDungeon.player.orbs.isEmpty()) {
+        if (AbstractDungeon.player.maxOrbs > 0) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof SpawnedSlime) {
                     oldestOrb = o;
@@ -18,7 +18,8 @@ public class CommandAction extends AbstractGameAction {
                 }
 
             }
-            addToTop(new TrigggerSpecificSlimeAttackAction(oldestOrb));
+            if (oldestOrb != null)
+                addToTop(new TrigggerSpecificSlimeAttackAction(oldestOrb));
         }
     }
 }
