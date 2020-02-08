@@ -458,5 +458,14 @@
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
     "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 2 more damage to you."
+  },
+  "Slimebound:SplitSpecialist": {
+    "NAME": "Split: Specialist",
+    "DESCRIPTION": "Choose 1 of 3 Special Slimes to Split into. NL Exhaust."
+  },
+  "Slimebound:SpecialForces": {
+    "NAME": "Special Forces",
+    "DESCRIPTION": "Add all 4 Special Split cards into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add all 4 Upgraded Special Split cards into your hand. NL Exhaust."
   }
 }

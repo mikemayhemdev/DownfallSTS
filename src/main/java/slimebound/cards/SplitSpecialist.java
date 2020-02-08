@@ -42,6 +42,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
 
     public SplitSpecialist() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
