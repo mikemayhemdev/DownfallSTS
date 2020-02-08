@@ -305,7 +305,7 @@
   },
   "Slimebound:Chomp": {
     "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL The enemy receives !M! additional damage from cards containing \"Tackle\" this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random card containing \"Tackle\"  in your hand by 1 this combat."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",

@@ -69,6 +69,7 @@ public class Chomp extends AbstractSlimeboundCard {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
+                isDone = true;
                 ArrayList<AbstractCard> tackleList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
                     if (q.hasTag(SlimeboundMod.TACKLE)) {
