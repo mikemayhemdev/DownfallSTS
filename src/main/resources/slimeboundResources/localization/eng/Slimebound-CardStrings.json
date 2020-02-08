@@ -41,7 +41,7 @@
   },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 Potency. NL !M! turns from now, Absorb all of your spawned slimes. NL Exhaust."
+    "DESCRIPTION": "Gain 4 Potency. NL Command twice. NL !M! turns from now, Absorb all of your spawned slimes. NL Exhaust."
   },
   "Slimebound:Split": {
     "NAME": "Split",
@@ -330,7 +330,7 @@
   },
   "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL For each non-minion enemy killed, raise your Max HP by !M!. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
