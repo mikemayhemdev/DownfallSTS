@@ -467,5 +467,9 @@
     "NAME": "Special Forces",
     "DESCRIPTION": "Add all 4 Special Split cards into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Add all 4 Upgraded Special Split cards into your hand. NL Exhaust."
+  },
+  "Slimebound:SlimeSlap": {
+    "NAME": "Slime Slap",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Goop, it is not removed by this attack."
   }
 }
