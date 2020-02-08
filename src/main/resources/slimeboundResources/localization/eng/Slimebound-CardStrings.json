@@ -91,6 +91,11 @@
     "NAME": "Self-Forming Goo",
     "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! Goop to a random enemy and gain 2 Block at the start of your next turn."
   },
+  "Slimebound:OozeBath": {
+    "NAME": "Ooze Bath",
+    "DESCRIPTION": "Double the enemy's Goop.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's Goop."
+  },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
     "DESCRIPTION": "Gain !B! Block and !M! hexamod:Momentary Thorns."
