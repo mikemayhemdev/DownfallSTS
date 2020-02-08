@@ -348,7 +348,7 @@
   },
   "Slimebound:LeechLife": {
     "NAME": "Leech Life",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Poison. NL Heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Heal HP equal to the enemy's Goop. NL Deal !D! damage. NL Exhaust."
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",
@@ -484,5 +484,9 @@
     "NAME": "Tag Team",
     "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime. NL Command three times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime who deals !M! more damage. NL Command three times."
+  },
+  "Slimebound:RallyTheTroops": {
+    "NAME": "Rally the Troops",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, Command."
   }
 }
