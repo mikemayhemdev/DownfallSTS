@@ -127,8 +127,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! Damage. NL Increase this card's damage permanently by !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block. NL Increase these effects permanently by !M!. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Damage increased by !M! for each Slime."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
