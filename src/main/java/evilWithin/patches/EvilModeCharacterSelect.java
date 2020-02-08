@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import evilWithin.EvilWithinMod;
+import evilWithin.patches.ui.topPanel.GoldToSoulPatches;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
@@ -63,6 +64,7 @@ public class EvilModeCharacterSelect {
             if (__instance instanceof CustomCharacterSelectScreen) {
                 CustomCharacterSelectScreen screen = (CustomCharacterSelectScreen) __instance;
                 if (evilMode) {
+                    GoldToSoulPatches.changeGoldToSouls(false);
                     screen.options.clear();
                     screen.options.addAll(villains);
 
@@ -80,6 +82,8 @@ public class EvilModeCharacterSelect {
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
                     ResetOptions.saved_maxSelectIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex");
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", 0);
+                } else {
+                    GoldToSoulPatches.changeGoldToSouls(true);
                 }
             }
         }

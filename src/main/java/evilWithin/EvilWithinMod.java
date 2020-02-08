@@ -13,7 +13,9 @@ import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import charbosses.bosses.CharBossIronclad;
 import charbosses.bosses.CharBossSilent;
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -22,6 +24,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import eventUtil.EventUtils;
 import evilWithin.events.GremlinMatchGame_Evil;
+import evilWithin.util.ReplaceData;
+
+import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
 public class EvilWithinMod implements
@@ -29,6 +34,16 @@ public class EvilWithinMod implements
     public static final String modID = "evil-within";
 
     public static final boolean EXPERIMENTAL_FLIP = false;
+    public static Settings.GameLanguage[] SupportedLanguages = {
+            // Insert other languages here
+            Settings.GameLanguage.ENG
+    };
+    public static ReplaceData[] wordReplacements;
+
+    public static void initialize()
+    {
+        new EvilWithinMod();
+    }
 
     public EvilWithinMod() {
         BaseMod.subscribe(this);
@@ -45,19 +60,26 @@ public class EvilWithinMod implements
     public static String assetPath(String path) {
         return "evilWithinResources/" + path;
     }
-
-    private String makeLocalizationPath(Settings.GameLanguage language, String filename) {
-        String langPath;
-        switch (language) {
-            // Insert other languages here
-            default:
-                langPath = "eng";
-                break;
-        }
+  
+    private String makeLocalizationPath(Settings.GameLanguage language, String filename)
+    {
+        String langPath = getLangString();
         return assetPath("localization/" + langPath + "/" + filename + ".json");
     }
 
-    private void loadLocalization(Settings.GameLanguage language, Class<?> stringType) {
+    private String getLangString() {
+        for (Settings.GameLanguage lang : SupportedLanguages)
+        {
+            if (lang.equals(Settings.language))
+            {
+                return Settings.language.name().toLowerCase();
+            }
+        }
+        return "eng";
+    }
+
+    private void loadLocalization(Settings.GameLanguage language, Class<?> stringType)
+    {
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName()));
     }
 
@@ -72,6 +94,16 @@ public class EvilWithinMod implements
         loadLocalization(Settings.GameLanguage.ENG);
         if (Settings.language != Settings.GameLanguage.ENG) {
             loadLocalization(Settings.language);
+        }
+
+        try {
+            String lang = getLangString();
+
+            Gson gson = new Gson();
+            String json = Gdx.files.internal(assetPath("localization/" + lang + "/replacementStrings.json")).readString(String.valueOf(StandardCharsets.UTF_8));
+            wordReplacements = gson.fromJson(json, ReplaceData[].class);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
