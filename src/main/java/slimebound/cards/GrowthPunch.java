@@ -45,14 +45,13 @@ public class GrowthPunch extends AbstractSlimeboundCard {
 
     @Override
     public void applyPowers() {
-        int realBaseDamage = baseDamage;
         super.applyPowers();
         int chainAmt = 0;
         for (AbstractOrb orbBruh : AbstractDungeon.player.orbs) {
             if (orbBruh instanceof SpawnedSlime)
                 chainAmt += magicNumber;
         }
-        this.baseDamage = realBaseDamage + chainAmt;
+        this.baseDamage = 7 + chainAmt;
 
         if (chainAmt > 0) {
             this.isDamageModified = true;

@@ -54,7 +54,7 @@ public class YouAreMine extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_MAGIC);
+            upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }
 

@@ -57,7 +57,7 @@ public class AwakenedOnePower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        description = "When you would die, heal " + amount + " HP and remove this effect.";
+        description = "The next time this enemy doesn't attack on its turn, you gain #b" + amount + " #yStrength.";
     }
 
 

@@ -18,7 +18,7 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:RallyTheTroops";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/acidgelatin.png";
+    public static final String IMG_PATH = "cards/poisontackle.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;

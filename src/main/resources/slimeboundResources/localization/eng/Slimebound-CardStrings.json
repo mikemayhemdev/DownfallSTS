@@ -231,7 +231,7 @@
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
-    "DESCRIPTION": "Effects that apply Goop apply 1 more."
+    "DESCRIPTION": "Effects that apply Goop apply !M! more."
   },
   "Slimebound:TendrilStrike": {
     "NAME": "Toxin Strike",
@@ -457,7 +457,7 @@
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
-    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 2 more damage to you."
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 more damage to you."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
