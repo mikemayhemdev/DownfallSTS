@@ -414,37 +414,37 @@
   "Slimebound:SplitBronze": {
     "NAME": "Split: Bronze",
     "DESCRIPTION": "Split into a Bronze_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime, who deals !M! more damage and grants !M! more Block this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime, who deals !M! more damage and grants !M! more Block. NL Exhaust."
   },
   "Slimebound:SplitTorchHead": {
     "NAME": "Split: Torch Head",
     "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime, who deals !M! more damage this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime, who deals !M! more damage. NL Exhaust."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
     "DESCRIPTION": "Split into a Bruiser_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime, who deals !M! more damage this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime, who deals !M! more damage. NL Exhaust."
   },
   "Slimebound:SplitCultist": {
     "NAME": "Split: Cultist",
     "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime, who deals !M! more damage this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime, who deals !M! more damage. NL Exhaust."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
     "DESCRIPTION": "Split into a Leeching_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime, who grants !M! more Block this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime, who grants !M! more Block. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
     "DESCRIPTION": "Split into an Guerilla_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Guerilla_Slime, who applies !M! more Poison this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Guerilla_Slime, who deals !M! more damage. NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
     "DESCRIPTION": "Split into a Mire_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Mire_Slime, who applies !M! additional Goop this combat. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Split into a Mire_Slime, who applies !M! additional Goop. NL Exhaust."
   },
   "Slimebound:SplitGhostflame": {
     "NAME": "Split: Ghostflame",
@@ -479,5 +479,10 @@
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Command twice."
+  },
+  "Slimebound:TagTeam": {
+    "NAME": "Tag Team",
+    "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime. NL Command three times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime who deals !M! more damage. NL Command three times."
   }
 }
