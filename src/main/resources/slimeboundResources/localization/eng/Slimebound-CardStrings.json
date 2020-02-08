@@ -94,7 +94,7 @@
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! Thorns. NL Lose !M! Thorns at the start of your next turn."
+    "DESCRIPTION": "Gain !B! Block and !M! hexamod:Momentary Thorns."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
