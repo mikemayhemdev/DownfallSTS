@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.ui.panels.TopPanel;
 import evilWithin.EvilWithinMod;
 import evilWithin.patches.EvilModeCharacterSelect;
@@ -289,11 +290,12 @@ public class GoldToSoulPatches {
         }
         ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "ui", uiStrings);
 
-        /*String[] hack = CardCrawlGame.languagePack.getUIString("CharacterOption").TEXT;
+        //If changed once, will stop working
+        String[] hack = CardCrawlGame.languagePack.getUIString("CharacterOption").TEXT;
         for (int i = 0; i < CharacterOption.TEXT.length; i++) {
-            System.out.println(CharacterOption.TEXT[i] + " " + hack[i]);
+            //System.out.println(CharacterOption.TEXT[i] + " " + hack[i]);
             CharacterOption.TEXT[i] = hack[i];
-        }*/
+        }
     }
 
     private static void setFinalStatic(Field field, Object newValue) throws Exception {
