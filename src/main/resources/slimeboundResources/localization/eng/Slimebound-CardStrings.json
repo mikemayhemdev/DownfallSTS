@@ -475,5 +475,9 @@
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
     "DESCRIPTION": "Deal !D! damage. NL Command. NL Whenever you Split, return this from your exhaust pile to your hand. NL Exhaust."
+  },
+  "Slimebound:ForwardTackle": {
+    "NAME": "Forward Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Command twice."
   }
 }

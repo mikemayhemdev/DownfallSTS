@@ -75,8 +75,6 @@ public class CoordinateAction extends AbstractGameAction {
             if (oldestOrb.size() > 0) {
                 for (AbstractOrb o : oldestOrb) {
                     com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(o));
-
-
                 }
             }
             //   com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F * effect));
