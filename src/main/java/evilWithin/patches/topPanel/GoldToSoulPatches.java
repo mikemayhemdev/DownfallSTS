@@ -18,6 +18,8 @@ import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +37,6 @@ public class GoldToSoulPatches {
             triggered = true;
             GOLD_ICON = ImageMaster.TP_GOLD;
             GOLD_UI_ICON = ImageMaster.UI_GOLD;
-            //postLoadLocalizationStrings();
         }
 
         if (!revert) {
@@ -43,13 +44,13 @@ public class GoldToSoulPatches {
             ImageMaster.UI_GOLD = TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/Souls_UI_Icon.png"));
             TopPanel.LABEL[4] = uiStrings.TEXT[0];
             TopPanel.MSG[4] = uiStrings.TEXT[1];
-            //replaceStrings(true);
+            replaceStrings(true);
         } else {
             ImageMaster.TP_GOLD = GOLD_ICON;
             ImageMaster.UI_GOLD = GOLD_UI_ICON;
             TopPanel.LABEL[4] = GOLD_TEXT[0];
             TopPanel.MSG[4] = GOLD_TEXT[1];
-            //replaceStrings(false);
+            replaceStrings(false);
         }
     }
 
@@ -99,16 +100,18 @@ public class GoldToSoulPatches {
         }
     }
 
+    //THE BELOW IS A MESS, YOU PROBABLY SHOULDN'T LOOK AT IT
+
     public static Map<String, CardStrings[]> renameC = new HashMap<>();
     public static Map<String, EventStrings[]> renameE = new HashMap<>();
     public static Map<String, RelicStrings[]> renameR = new HashMap<>();
     public static Map<String, CharacterStrings[]> renameCh = new HashMap<>();
     public static Map<String, PowerStrings[]> renameP = new HashMap<>();
     public static Map<String, UIStrings[]> renameUI = new HashMap<>();
+
     public static void postLoadLocalizationStrings() {
         try {
             Map<String, CardStrings> cardStrings = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
-            //cardStrings.put(AThousandCuts.ID, cardStrings.get(HandOfGreed.ID));
             if (cardStrings != null) {
                 CardStrings replacementString;
                 for (Map.Entry<String, CardStrings> cardString : cardStrings.entrySet()) {
@@ -133,6 +136,14 @@ public class GoldToSoulPatches {
                     }
                 }
             }
+
+            /*for(Map.Entry<String, CardStrings[]> e : renameC.entrySet()) {
+                System.out.println(e.getKey() + ":");
+                for(CardStrings s : e.getValue()) {
+                    System.out.println("Desc: " + s.DESCRIPTION);
+                }
+                System.out.println("CurDesc: " + cardStrings.get(e.getKey()).DESCRIPTION);
+            }*/
 
             Map<String, EventStrings> eventStrings = (Map<String, EventStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "events");
             if (eventStrings != null) {
@@ -278,15 +289,30 @@ public class GoldToSoulPatches {
         }
         ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, "ui", uiStrings);
 
-        //Map<String, CardStrings> cardStringss = (Map<String, CardStrings>) ReflectionHacks.getPrivateStatic(LocalizedStrings.class, "cards");
-        //System.out.println(cardStringss.get(SecondSeal.ID).DESCRIPTION);
+        /*String[] hack = CardCrawlGame.languagePack.getUIString("CharacterOption").TEXT;
+        for (int i = 0; i < CharacterOption.TEXT.length; i++) {
+            System.out.println(CharacterOption.TEXT[i] + " " + hack[i]);
+            CharacterOption.TEXT[i] = hack[i];
+        }*/
+    }
+
+    private static void setFinalStatic(Field field, Object newValue) throws Exception {
+        field.setAccessible(true);
+
+        Field modifiersField = Field.class.getDeclaredField("modifiers");
+        modifiersField.setAccessible(true);
+        modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+
+        field.set(null, newValue);
     }
 
     private static String[] filterString(String[] str) {
+        String[] plsNoReplace = new String[str.length];
+        System.arraycopy(str, 0, plsNoReplace, 0, str.length);
         for (int i = 0; i < str.length; i++) {
-            str[i] = filterString(str[i]);
+            plsNoReplace[i] = filterString(plsNoReplace[i]);
         }
-        return str;
+        return plsNoReplace;
     }
 
     private static String filterString(String spireString) {
