@@ -353,7 +353,7 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "Disrupting Slam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Enemies who do not intend to attack are struck twice."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Weak to each enemy that intends to attack."
   },
   "Slimebound:ChargeUp": {
     "NAME": "Charge Up",
