@@ -11,5 +11,17 @@
       "Souls",
       "TODO: Soul flavor text/explanation."
     ]
+  },
+  "evil-within:BustKeyButton": {
+    "TEXT": [
+      "Break Ruby",
+      "Break Sapphire",
+      "Break Emerald",
+      "Destroy the key and gain ",
+      "Gain 1 Strength at the start of combat.",
+      "Raise your Max HP by 10.",
+      "Gain 1 Dexterity at the start of combat.",
+      " Doubles if you have the 2 other Heart Blessings."
+    ]
   }
 }
