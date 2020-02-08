@@ -3,7 +3,6 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,7 +36,7 @@ public class GhostFlameBarrierPower extends AbstractPower implements CloneablePo
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.owner instanceof AbstractMonster && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != this.owner) {// 44
             this.flash();// 46
-            addToTop(new BurnAction(((AbstractMonster)info.owner), amount));
+            addToTop(new BurnAction(((AbstractMonster) info.owner), amount));
         }
 
         return damageAmount;// 49

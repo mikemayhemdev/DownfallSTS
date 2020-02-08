@@ -1,23 +1,23 @@
 package charbosses.powers.cardpowers;
 
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.colorless.EnShiv;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.cards.tempCards.*;
-import java.util.*;
-import com.megacrit.cardcrawl.core.*;
-
-public class EnemyAccuracyPower extends AbstractPower
-{
+public class EnemyAccuracyPower extends AbstractPower {
     public static final String POWER_ID = "EvilWithin:Enemy Accuracy";
-    private static final PowerStrings powerStrings;
     public static final String[] DESCRIPTIONS;
-    
+    private static final PowerStrings powerStrings;
+
+    static {
+        powerStrings = CardCrawlGame.languagePack.getPowerStrings("Accuracy");
+        DESCRIPTIONS = EnemyAccuracyPower.powerStrings.DESCRIPTIONS;
+    }
+
     public EnemyAccuracyPower(final AbstractCreature owner, final int amt) {
         this.name = EnemyAccuracyPower.powerStrings.NAME;
         this.ID = POWER_ID;
@@ -27,26 +27,25 @@ public class EnemyAccuracyPower extends AbstractPower
         this.loadRegion("accuracy");
         this.updateExistingShivs();
     }
-    
+
     @Override
     public void updateDescription() {
         this.description = EnemyAccuracyPower.DESCRIPTIONS[0] + this.amount + EnemyAccuracyPower.DESCRIPTIONS[1];
     }
-    
+
     @Override
     public void stackPower(final int stackAmount) {
         this.fontScale = 8.0f;
         this.amount += stackAmount;
         this.updateExistingShivs();
     }
-    
+
     private void updateExistingShivs() {
         for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
             if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
-                }
-                else {
+                } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
@@ -55,8 +54,7 @@ public class EnemyAccuracyPower extends AbstractPower
             if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
-                }
-                else {
+                } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
@@ -65,8 +63,7 @@ public class EnemyAccuracyPower extends AbstractPower
             if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
-                }
-                else {
+                } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
@@ -75,30 +72,23 @@ public class EnemyAccuracyPower extends AbstractPower
             if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
-                }
-                else {
+                } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
         }
     }
-    
+
     @Override
     public void onDrawOrDiscard() {
         for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
             if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
-                }
-                else {
+                } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
         }
-    }
-    
-    static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings("Accuracy");
-        DESCRIPTIONS = EnemyAccuracyPower.powerStrings.DESCRIPTIONS;
     }
 }

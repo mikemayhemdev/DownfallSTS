@@ -16,19 +16,16 @@ import com.megacrit.cardcrawl.shop.Merchant;
 import evilWithin.EvilWithinMod;
 import javassist.CtBehavior;
 
-public class FlipRoom
-{
+public class FlipRoom {
     private static boolean isFlipped = false;
     private static OrthographicCamera camera = null;
     private static Matrix4 oldProjectionMatrix = null;
 
-    public static boolean isFlipped()
-    {
+    public static boolean isFlipped() {
         return isFlipped;
     }
 
-    private static void initFlip()
-    {
+    private static void initFlip() {
         if (camera == null) {
             camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
             if (Settings.VERT_LETTERBOX_AMT != 0 || Settings.HORIZ_LETTERBOX_AMT != 0) {
@@ -41,8 +38,7 @@ public class FlipRoom
         }
     }
 
-    public static void beginFlip(SpriteBatch sb)
-    {
+    public static void beginFlip(SpriteBatch sb) {
         if (!EvilWithinMod.EXPERIMENTAL_FLIP) return;
 
         if (isFlipped()) return;
@@ -57,8 +53,7 @@ public class FlipRoom
         isFlipped = true;
     }
 
-    public static void endFlip(SpriteBatch sb)
-    {
+    public static void endFlip(SpriteBatch sb) {
         if (!EvilWithinMod.EXPERIMENTAL_FLIP) return;
 
         if (isFlipped) {
@@ -73,16 +68,14 @@ public class FlipRoom
         }
     }
 
-    public static void pauseFlip(SpriteBatch sb)
-    {
+    public static void pauseFlip(SpriteBatch sb) {
         if (isFlipped) {
             endFlip(sb);
             isFlipped = true;
         }
     }
 
-    public static void unpauseFlip(SpriteBatch sb)
-    {
+    public static void unpauseFlip(SpriteBatch sb) {
         if (isFlipped) {
             beginFlip(sb);
         }
@@ -92,15 +85,12 @@ public class FlipRoom
             clz = AbstractRoom.class,
             method = "render"
     )
-    public static class Room
-    {
-        public static void Prefix(AbstractRoom __instance, SpriteBatch sb)
-        {
+    public static class Room {
+        public static void Prefix(AbstractRoom __instance, SpriteBatch sb) {
             beginFlip(sb);
         }
 
-        public static void Postfix(AbstractRoom __instance, SpriteBatch sb)
-        {
+        public static void Postfix(AbstractRoom __instance, SpriteBatch sb) {
             endFlip(sb);
         }
     }
@@ -110,15 +100,12 @@ public class FlipRoom
             method = "render",
             paramtypez = {SpriteBatch.class}
     )
-    public static class NPC1
-    {
-        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb)
-        {
+    public static class NPC1 {
+        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb) {
             beginFlip(sb);
         }
 
-        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb)
-        {
+        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb) {
             endFlip(sb);
         }
     }
@@ -128,15 +115,12 @@ public class FlipRoom
             method = "render",
             paramtypez = {SpriteBatch.class, Color.class}
     )
-    public static class NPC2
-    {
-        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb, Color color)
-        {
+    public static class NPC2 {
+        public static void Prefix(AnimatedNpc __instance, SpriteBatch sb, Color color) {
             beginFlip(sb);
         }
 
-        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb, Color color)
-        {
+        public static void Postfix(AnimatedNpc __instance, SpriteBatch sb, Color color) {
             endFlip(sb);
         }
     }
@@ -145,15 +129,12 @@ public class FlipRoom
             clz = Merchant.class,
             method = "render"
     )
-    public static class MerchantRug
-    {
-        public static void Prefix(Merchant __instance, SpriteBatch sb)
-        {
+    public static class MerchantRug {
+        public static void Prefix(Merchant __instance, SpriteBatch sb) {
             beginFlip(sb);
         }
 
-        public static void Postfix(Merchant __instance, SpriteBatch sb)
-        {
+        public static void Postfix(Merchant __instance, SpriteBatch sb) {
             endFlip(sb);
         }
     }
@@ -162,96 +143,80 @@ public class FlipRoom
             clz = AbstractDungeon.class,
             method = "render"
     )
-    public static class VFX
-    {
+    public static class VFX {
         @SpireInsertPatch(
                 locator = StartLocator.class
         )
-        public static void Start(AbstractDungeon __instance, SpriteBatch sb)
-        {
+        public static void Start(AbstractDungeon __instance, SpriteBatch sb) {
             beginFlip(sb);
         }
 
         @SpireInsertPatch(
                 locator = End1Locator.class
         )
-        public static void End1(AbstractDungeon __instance, SpriteBatch sb)
-        {
+        public static void End1(AbstractDungeon __instance, SpriteBatch sb) {
             endFlip(sb);
         }
 
         @SpireInsertPatch(
                 locator = End2Locator.class
         )
-        public static void End2(AbstractDungeon __instance, SpriteBatch sb)
-        {
+        public static void End2(AbstractDungeon __instance, SpriteBatch sb) {
             endFlip(sb);
         }
 
         @SpireInsertPatch(
                 locator = StartTopLevelLocator.class
         )
-        public static void StartTopLevel(AbstractDungeon __instance, SpriteBatch sb)
-        {
+        public static void StartTopLevel(AbstractDungeon __instance, SpriteBatch sb) {
             beginFlip(sb);
         }
 
         @SpireInsertPatch(
                 locator = EndTopLevelLocator.class
         )
-        public static void EndTopLevel(AbstractDungeon __instance, SpriteBatch sb)
-        {
+        public static void EndTopLevel(AbstractDungeon __instance, SpriteBatch sb) {
             endFlip(sb);
         }
 
-        private static class StartLocator extends SpireInsertLocator
-        {
+        private static class StartLocator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception
-            {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractDungeon.class, "effectList");
                 return LineFinder.findAllInOrder(ctBehavior, finalMatcher);
             }
         }
 
-        private static class End1Locator extends SpireInsertLocator
-        {
+        private static class End1Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception
-            {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractRoom.class, "render");
                 return LineFinder.findInOrder(ctBehavior, finalMatcher);
             }
         }
 
-        private static class End2Locator extends SpireInsertLocator
-        {
+        private static class End2Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception
-            {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(OverlayMenu.class, "render");
                 return LineFinder.findInOrder(ctBehavior, finalMatcher);
             }
         }
 
-        private static class StartTopLevelLocator extends SpireInsertLocator
-        {
+        private static class StartTopLevelLocator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception
-            {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractDungeon.class, "topLevelEffects");
                 return LineFinder.findInOrder(ctBehavior, finalMatcher);
             }
         }
 
-        private static class EndTopLevelLocator extends SpireInsertLocator
-        {
+        private static class EndTopLevelLocator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception
-            {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(SpriteBatch.class, "setColor");
                 int[] found = LineFinder.findAllInOrder(ctBehavior, finalMatcher);
-                return new int[]{found[found.length-1]};
+                return new int[]{found[found.length - 1]};
             }
         }
     }

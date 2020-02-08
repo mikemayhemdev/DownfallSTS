@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import sneckomod.SneckoMod;
-import theHexaghost.actions.DiscoverEtherealAction;
 
 
 public class OffclassReductionPotion extends CustomPotion {
@@ -50,7 +49,7 @@ public class OffclassReductionPotion extends CustomPotion {
                 }
             });
         }
-       }
+    }
 
 
     public CustomPotion makeCopy() {

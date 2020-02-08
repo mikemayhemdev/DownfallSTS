@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -43,10 +42,10 @@ public class PolyBeam extends AbstractExpansionCard {
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
         if (!this.isACopy) {
-            if (upgraded){
-                atb(new ApplyPowerAction(p, p, new PolyBeamAgainPowerUpgraded(p, p,this.magicNumber, this), this.magicNumber));
-            } else{
-                atb(new ApplyPowerAction(p, p, new PolyBeamAgainPower(p, p,this.magicNumber, this), this.magicNumber));
+            if (upgraded) {
+                atb(new ApplyPowerAction(p, p, new PolyBeamAgainPowerUpgraded(p, p, this.magicNumber, this), this.magicNumber));
+            } else {
+                atb(new ApplyPowerAction(p, p, new PolyBeamAgainPower(p, p, this.magicNumber, this), this.magicNumber));
 
             }
         }

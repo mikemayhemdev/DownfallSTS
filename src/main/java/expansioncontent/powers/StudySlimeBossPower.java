@@ -17,14 +17,11 @@ import theHexaghost.util.TextureLoader;
 
 public class StudySlimeBossPower extends AbstractPower {
     public static final String POWER_ID = expansionContentMod.makeID("StudySlimeBossPower");
-
+    public static final String NAME = "Potency";
+    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudySlimeBoss84.png");
     private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudySlimeBoss32.png");
-
-    public static final String NAME = "Potency";
     public static PowerType POWER_TYPE = PowerType.BUFF;
-    public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
-
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
@@ -74,7 +71,7 @@ public class StudySlimeBossPower extends AbstractPower {
 
         flash();
 
-        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(false,expansionContentMod.STUDY_SLIMEBOSS));
+        AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(false, expansionContentMod.STUDY_SLIMEBOSS));
 
         if (this.amount <= 1) {
 

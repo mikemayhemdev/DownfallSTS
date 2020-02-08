@@ -1,32 +1,27 @@
 package charbosses.relics;
 
-import com.megacrit.cardcrawl.dungeons.*;
+import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.CaptainsWheel;
 
-import charbosses.bosses.AbstractCharBoss;
+public class CBR_CaptainsWheel extends AbstractCharbossRelic {
 
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.actions.common.*;
-
-public class CBR_CaptainsWheel extends AbstractCharbossRelic
-{
-    
     public CBR_CaptainsWheel() {
         super(new CaptainsWheel(), RelicTier.COMMON);
     }
-    
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0] + 18 + this.DESCRIPTIONS[1];
     }
-    
+
     @Override
     public void atBattleStart() {
         this.counter = 0;
     }
-    
+
     @Override
     public void atTurnStart() {
         if (!this.grayscale) {
@@ -40,13 +35,13 @@ public class CBR_CaptainsWheel extends AbstractCharbossRelic
             this.grayscale = true;
         }
     }
-    
+
     @Override
     public void onVictory() {
         this.counter = -1;
         this.grayscale = false;
     }
-    
+
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_CaptainsWheel();

@@ -1,14 +1,12 @@
 package charbosses.helpers;
 
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.dungeons.*;
-
 import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.UUID;
 
-public class EnemyGetAllInBattleInstances
-{
+public class EnemyGetAllInBattleInstances {
     public static HashSet<AbstractCard> get(final UUID uuid) {
         final HashSet<AbstractCard> cards = new HashSet<AbstractCard>();
         if (AbstractCharBoss.boss.cardInUse.uuid.equals(uuid)) {

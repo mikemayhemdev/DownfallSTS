@@ -1,31 +1,38 @@
 package charbosses.orbs;
 
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.badlogic.gdx.math.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.animations.*;
-import com.badlogic.gdx.*;
-import com.megacrit.cardcrawl.vfx.combat.*;
-
 import charbosses.actions.common.EnemyGainEnergyAction;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.OrbStrings;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
+import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbActivateEffect;
+import com.megacrit.cardcrawl.vfx.combat.PlasmaOrbPassiveEffect;
 
-import com.badlogic.gdx.graphics.g2d.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.helpers.*;
-import com.badlogic.gdx.graphics.*;
-
-public class EnemyPlasma extends AbstractEnemyOrb
-{
+public class EnemyPlasma extends AbstractEnemyOrb {
     public static final String ORB_ID = "Plasma";
-    private static final OrbStrings orbString;
     public static final String[] DESC;
+    private static final OrbStrings orbString;
+    private static final float ORB_WAVY_DIST = 0.04f;
+    private static final float PI_4 = 12.566371f;
+
+    static {
+        orbString = CardCrawlGame.languagePack.getOrbString("Plasma");
+        DESC = EnemyPlasma.orbString.DESCRIPTION;
+    }
+
     private float vfxTimer;
     private float vfxIntervalMin;
     private float vfxIntervalMax;
-    private static final float ORB_WAVY_DIST = 0.04f;
-    private static final float PI_4 = 12.566371f;
-    
+
     public EnemyPlasma() {
         this.vfxTimer = 1.0f;
         this.vfxIntervalMin = 0.1f;
@@ -41,30 +48,30 @@ public class EnemyPlasma extends AbstractEnemyOrb
         this.angle = MathUtils.random(360.0f);
         this.channelAnimTimer = 0.5f;
     }
-    
+
     @Override
     public void updateDescription() {
         this.applyFocus();
         this.description = EnemyPlasma.DESC[0] + this.evokeAmount + EnemyPlasma.DESC[1];
     }
-    
+
     @Override
     public void onEvoke() {
         AbstractDungeon.actionManager.addToTop(new EnemyGainEnergyAction(this.evokeAmount));
     }
-    
+
     @Override
     public void onStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.PLASMA), 0.1f));
         AbstractDungeon.actionManager.addToBottom(new EnemyGainEnergyAction(this.passiveAmount));
     }
-    
+
     @Override
     public void triggerEvokeAnimation() {
         CardCrawlGame.sound.play("ORB_PLASMA_EVOKE", 0.1f);
         AbstractDungeon.effectsQueue.add(new PlasmaOrbActivateEffect(this.cX, this.cY));
     }
-    
+
     @Override
     public void updateAnimation() {
         super.updateAnimation();
@@ -75,7 +82,7 @@ public class EnemyPlasma extends AbstractEnemyOrb
             this.vfxTimer = MathUtils.random(this.vfxIntervalMin, this.vfxIntervalMax);
         }
     }
-    
+
     @Override
     public void render(final SpriteBatch sb) {
         this.shineColor.a = this.c.a / 2.0f;
@@ -87,26 +94,21 @@ public class EnemyPlasma extends AbstractEnemyOrb
         this.renderText(sb);
         this.hb.render(sb);
     }
-    
+
     @Override
     protected void renderText(final SpriteBatch sb) {
         if (this.showEvokeValue) {
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.evokeAmount), this.cX + EnemyPlasma.NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0f + EnemyPlasma.NUM_Y_OFFSET - 4.0f * Settings.scale, new Color(0.2f, 1.0f, 1.0f, this.c.a), this.fontScale);
         }
     }
-    
+
     @Override
     public void playChannelSFX() {
         CardCrawlGame.sound.play("ORB_PLASMA_CHANNEL", 0.1f);
     }
-    
+
     @Override
     public AbstractOrb makeCopy() {
         return new EnemyPlasma();
-    }
-    
-    static {
-        orbString = CardCrawlGame.languagePack.getOrbString("Plasma");
-        DESC = EnemyPlasma.orbString.DESCRIPTION;
     }
 }

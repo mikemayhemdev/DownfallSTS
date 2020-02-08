@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -47,12 +46,12 @@ public class LastStand extends AbstractExpansionCard {
         double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
         if (currentPct > 0.5) {
             atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
-        } else{
+        } else {
             AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~DIE~ ~.~ ~.~ ~.~", true));
 
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
-            atb(new HealAction(p, p,this.magicNumber));
+            atb(new HealAction(p, p, this.magicNumber));
         }
 
     }

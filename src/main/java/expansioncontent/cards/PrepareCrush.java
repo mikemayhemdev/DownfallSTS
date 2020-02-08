@@ -1,27 +1,17 @@
 package expansioncontent.cards;
 
 
-
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.ShakeScreenAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import expansioncontent.expansionContentMod;
 import slimebound.cards.SlimeCrush;
-import slimebound.powers.EnergizedSlimeboundPower;
 import slimebound.powers.NextTurnGainSlimeCrush;
-import slimebound.powers.NextTurnGainStrengthPower;
-import slimebound.powers.SlimedPower;
-import slimebound.vfx.SlimeProjectileEffect;
-import theHexaghost.cards.ShadowGuise;
 
 public class PrepareCrush extends AbstractExpansionCard {
     public final static String ID = makeID("PrepareCrush");
@@ -54,7 +44,6 @@ public class PrepareCrush extends AbstractExpansionCard {
         blck();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EnergizedPower(p, magicNumber), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnGainSlimeCrush(p, p, 1), 1));
-
 
 
     }

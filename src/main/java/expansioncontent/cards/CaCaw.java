@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -33,7 +32,7 @@ public class CaCaw extends AbstractExpansionCard {
 
         atb(new ApplyPowerAction(p, p, new RitualPower(p, 1, true), 1));
 
-      }
+    }
 
     public void upgrade() {
         if (!upgraded) {

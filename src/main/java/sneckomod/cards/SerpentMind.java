@@ -13,7 +13,7 @@ public class SerpentMind extends AbstractSneckoCard {
     private static final int MAGIC = 1;
 
     public SerpentMind() {
-        super(ID,  3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 

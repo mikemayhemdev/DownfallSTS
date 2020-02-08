@@ -43,8 +43,8 @@ public class ChronoBoostPlusPower extends TwoAmountPower implements CloneablePow
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         super.onPlayCard(card, m);
-        if (this.amount2 == 8){
-            this.amount2=0;
+        if (this.amount2 == 8) {
+            this.amount2 = 0;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
 
         } else {

@@ -12,12 +12,11 @@ import java.util.function.Predicate;
 
 public class UnknownStrength extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownStrength");
+    public static boolean bruh = false;
 
     public UnknownStrength() {
         super(ID, CardType.SKILL, CardRarity.UNCOMMON);
     }
-
-    public static boolean bruh = false;
 
     public boolean useCheck(AbstractCard card) {
         bruh = false;

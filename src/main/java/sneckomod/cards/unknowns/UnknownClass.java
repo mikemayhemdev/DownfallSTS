@@ -1,4 +1,3 @@
-
 package sneckomod.cards.unknowns;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +11,7 @@ import java.util.function.Predicate;
 @CardIgnore
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
+    private CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
         super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.UNCOMMON);
@@ -52,8 +52,6 @@ public class UnknownClass extends AbstractUnknownCard {
         }
         return "You should never see this. Report to Vex";
     }
-
-    private CardColor myColor;
 
     @Override
     public AbstractCard makeCopy() {

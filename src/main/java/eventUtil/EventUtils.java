@@ -48,90 +48,71 @@ public class EventUtils {
 
      */
     public static Logger eventLogger = LogManager.getLogger("EventUtil");
-
-    private static int id = 0;
-
     public static HashMap<String, Predicate<AbstractPlayer>> normalEventBonusConditions = new HashMap<>();
     public static HashMap<String, Predicate<AbstractPlayer>> specialEventBonusConditions = new HashMap<>();
     public static HashMap<ConditionalEvent, Predicate<AbstractPlayer>> overrideBonusConditions = new HashMap<>();
-
     public static HashMap<String, ConditionalEvent> normalEvents = new HashMap<>();
     public static HashMap<String, ConditionalEvent> shrineEvents = new HashMap<>();
     public static HashMap<String, ConditionalEvent> oneTimeEvents = new HashMap<>();
     public static HashMap<String, ConditionalEvent> fullReplaceEvents = new HashMap<>(); //to actually get the replacement events, after replacement occurs
-
     public static HashMap<String, ArrayList<ConditionalEvent>> overrideEvents = new HashMap<>();
     public static HashMap<String, ArrayList<ConditionalEvent>> fullReplaceEventList = new HashMap<>();
+    private static int id = 0;
 
-    public enum EventType
-    {
-        NORMAL,
-        SHRINE,
-        ONE_TIME,
-        OVERRIDE,
-        FULL_REPLACE
-    }
-
-
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass)
-    {
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass) {
         registerEvent(ID, eventClass, playerClass, null, false, null, null, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, String[] actIDs)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, String[] actIDs) {
         registerEvent(ID, eventClass, null, actIDs, false, null, null, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent) {
         registerEvent(ID, eventClass, null, null, evilEvent, null, null, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String overrideEvent)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String overrideEvent) {
         registerEvent(ID, eventClass, null, null, evilEvent, overrideEvent, null, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String[] actIDs)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String[] actIDs) {
         registerEvent(ID, eventClass, playerClass, actIDs, false, null, null, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String actID)
-    {
-        registerEvent(ID, eventClass, playerClass, new String[] { actID }, false, null, null, EventType.NORMAL);
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String actID) {
+        registerEvent(ID, eventClass, playerClass, new String[]{actID}, false, null, null, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String[] actIDs)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String[] actIDs) {
         registerEvent(ID, eventClass, null, actIDs, evilEvent, null, null, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, String[] actIDs, Predicate<AbstractPlayer> bonusCondition)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, String[] actIDs, Predicate<AbstractPlayer> bonusCondition) {
         registerEvent(ID, eventClass, null, actIDs, false, null, bonusCondition, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String[] actIDs, Predicate<AbstractPlayer> bonusCondition)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String[] actIDs, Predicate<AbstractPlayer> bonusCondition) {
         registerEvent(ID, eventClass, playerClass, actIDs, false, null, bonusCondition, EventType.NORMAL);
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String overrideEvent, boolean fullReplace)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String overrideEvent, boolean fullReplace) {
         registerEvent(ID, eventClass, playerClass, null, false, overrideEvent, null, fullReplace ? EventType.FULL_REPLACE : (overrideEvent == null ? EventType.NORMAL : EventType.OVERRIDE));
     }
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String overrideEvent, Predicate<AbstractPlayer> bonusCondition, EventType type)
-    {
+
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String overrideEvent, Predicate<AbstractPlayer> bonusCondition, EventType type) {
         registerEvent(ID, eventClass, playerClass, null, false, overrideEvent, bonusCondition, type);
     }
 
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String overrideEvent, EventType type)
-    {
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String overrideEvent, EventType type) {
         registerEvent(ID, eventClass, playerClass, null, false, overrideEvent, null, type);
     }
 
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String overrideEvent, EventType type)
-    {
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String overrideEvent, EventType type) {
         registerEvent(ID, eventClass, null, null, evilEvent, overrideEvent, null, type);
     }
 
-    public static<T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String[] actIDs, boolean evilEvent, String overrideEvent, Predicate<AbstractPlayer> bonusCondition, EventType type)
-    {
-        if (!(overrideEvent != null || evilEvent || actIDs != null || playerClass != null || bonusCondition != null))
-        {
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, Class playerClass, String[] actIDs, boolean evilEvent, String overrideEvent, Predicate<AbstractPlayer> bonusCondition, EventType type) {
+        if (!(overrideEvent != null || evilEvent || actIDs != null || playerClass != null || bonusCondition != null)) {
             eventLogger.info("Event " + eventClass.getName() + " has no special conditions, and should be registered through BaseMod instead.");
             return;
         }
@@ -139,38 +120,31 @@ public class EventUtils {
         ConditionalEvent<T> c = new ConditionalEvent<T>(eventClass,
                 playerClass,
                 evilEvent,
-                actIDs == null ? new String[] { } : actIDs);
+                actIDs == null ? new String[]{} : actIDs);
 
-        if (type == EventType.OVERRIDE && overrideEvent != null)
-        {
+        if (type == EventType.OVERRIDE && overrideEvent != null) {
             c.overrideEvent = overrideEvent;
 
-            if (!overrideEvents.containsKey(overrideEvent))
-            {
+            if (!overrideEvents.containsKey(overrideEvent)) {
                 overrideEvents.put(overrideEvent, new ArrayList<>());
             }
             overrideEvents.get(overrideEvent).add(c);
 
             eventLogger.info("Override event " + c + " for event " + overrideEvent + " registered. " + c.getConditions());
 
-            if (bonusCondition != null)
-            {
+            if (bonusCondition != null) {
                 overrideBonusConditions.put(c, bonusCondition);
                 eventLogger.info("  This event has a bonus condition.");
             }
-        }
-        else if (type == EventType.FULL_REPLACE && overrideEvent != null)
-        {
+        } else if (type == EventType.FULL_REPLACE && overrideEvent != null) {
             String key = ID;
-            if (fullReplaceEvents.containsKey(key))
-            {
+            if (fullReplaceEvents.containsKey(key)) {
                 key = generateEventKey(ID);
             }
 
             c.overrideEvent = key;
 
-            if (!fullReplaceEventList.containsKey(overrideEvent))
-            {
+            if (!fullReplaceEventList.containsKey(overrideEvent)) {
                 fullReplaceEventList.put(overrideEvent, new ArrayList<>());
             }
             fullReplaceEventList.get(overrideEvent).add(c);
@@ -178,68 +152,62 @@ public class EventUtils {
             fullReplaceEvents.put(key, c);
 
             eventLogger.info("Full Replacement event " + c + " for event " + overrideEvent + " registered. " + c.getConditions());
-            if (bonusCondition != null)
-            {
+            if (bonusCondition != null) {
                 normalEventBonusConditions.put(key, bonusCondition);
                 specialEventBonusConditions.put(key, bonusCondition);
                 eventLogger.info("  This event has a bonus condition.");
             }
-        }
-        else if (type == EventType.ONE_TIME)
-        {
+        } else if (type == EventType.ONE_TIME) {
             String key = ID;
-            if (oneTimeEvents.containsKey(key))
-            {
+            if (oneTimeEvents.containsKey(key)) {
                 key = generateEventKey(ID);
             }
 
             oneTimeEvents.put(key, c);
 
             eventLogger.info("SpecialOneTimeEvent " + c + " registered. " + c.getConditions());
-            if (bonusCondition != null)
-            {
+            if (bonusCondition != null) {
                 specialEventBonusConditions.put(key, bonusCondition);
                 eventLogger.info("  This event has a bonus condition.");
             }
-        }
-        else if (type == EventType.SHRINE)
-        {
+        } else if (type == EventType.SHRINE) {
             String key = ID;
-            if (shrineEvents.containsKey(key))
-            {
+            if (shrineEvents.containsKey(key)) {
                 key = generateEventKey(ID);
             }
 
             shrineEvents.put(key, c);
 
             eventLogger.info("Shrine " + c + " registered. " + c.getConditions());
-            if (bonusCondition != null)
-            {
+            if (bonusCondition != null) {
                 specialEventBonusConditions.put(key, bonusCondition);
                 eventLogger.info("  This event has a bonus condition.");
             }
-        }
-        else
-        {
+        } else {
             String key = ID;
-            if (normalEvents.containsKey(key))
-            {
+            if (normalEvents.containsKey(key)) {
                 key = generateEventKey(ID);
             }
 
             normalEvents.put(key, c);
 
             eventLogger.info("Event " + c + " registered. " + c.getConditions());
-            if (bonusCondition != null)
-            {
+            if (bonusCondition != null) {
                 normalEventBonusConditions.put(key, bonusCondition);
                 eventLogger.info("  This event has a bonus condition.");
             }
         }
     }
 
-    private static<T extends AbstractEvent> String generateEventKey(String ID)
-    {
+    private static <T extends AbstractEvent> String generateEventKey(String ID) {
         return id++ + ":" + ID;
+    }
+
+    public enum EventType {
+        NORMAL,
+        SHRINE,
+        ONE_TIME,
+        OVERRIDE,
+        FULL_REPLACE
     }
 }

@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -33,7 +32,6 @@ public class ChargeUp extends AbstractExpansionCard {
         atb(new SFXAction("MONSTER_GUARDIAN_DESTROY"));
         atb(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
         atb(new ApplyPowerAction(p, p, new NextTurnGainStrengthPower(p, p, this.magicNumber), this.magicNumber));
-
 
 
     }

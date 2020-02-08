@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.TheSnecko;
 import sneckomod.actions.MuddleAction;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import sneckomod.actions.RandomDamageAction;
 
 public class WideSting extends AbstractSneckoCard {
 

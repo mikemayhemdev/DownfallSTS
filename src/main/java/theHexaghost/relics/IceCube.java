@@ -2,13 +2,8 @@ package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.ghostflames.AbstractGhostflame;
-import theHexaghost.ghostflames.BolsteringGhostflame;
-import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.util.TextureLoader;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;

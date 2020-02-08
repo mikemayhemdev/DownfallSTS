@@ -860,14 +860,14 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
                 //Character required//
                 SlimeboundCharacter.class,
                 //Act ID's this event can appear in//
-                new String[] { TheCity.ID, TheBeyond.ID, "TheJungle" },
+                new String[]{TheCity.ID, TheBeyond.ID, "TheJungle"},
                 //Other predicates//
                 (c) -> (c instanceof SlimeboundCharacter) && !((SlimeboundCharacter) c).foughtSlimeBoss || c.hasRelic(StudyCardRelic.ID));
         EventUtils.registerEvent(
                 //Event ID//
                 ArtOfSlimeWar.ID, ArtOfSlimeWar.class,
                 //Act ID's this event can appear in//
-                new String[] { TheCity.ID, "TheJungle" },
+                new String[]{TheCity.ID, "TheJungle"},
                 //Other predicates//
                 (c) -> c instanceof SlimeboundCharacter || SlimeboundMod.contentSharing_events);
         EventUtils.registerEvent(

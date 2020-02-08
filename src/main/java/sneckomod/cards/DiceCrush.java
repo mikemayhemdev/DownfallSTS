@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import sneckomod.actions.RandomDamageAction;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 public class DiceCrush extends AbstractSneckoCard {

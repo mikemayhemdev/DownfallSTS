@@ -1,26 +1,22 @@
 package charbosses.actions.common;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.unlock.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.vfx.cardManip.*;
-
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToDrawPileEffect;
 import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.Gdx;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-import com.badlogic.gdx.*;
-
-public class EnemyMakeTempCardInDrawPileAction extends AbstractGameAction
-{
+public class EnemyMakeTempCardInDrawPileAction extends AbstractGameAction {
     private AbstractCard cardToMake;
     private boolean randomSpot;
     private boolean autoPosition;
     private boolean toBottom;
     private float x;
     private float y;
-    
+
     public EnemyMakeTempCardInDrawPileAction(final AbstractCard card, final int amount, final boolean randomSpot, final boolean autoPosition, final boolean toBottom, final float cardX, final float cardY) {
         UnlockTracker.markCardAsSeen(card.cardID);
         this.setValues(this.target, this.source, amount);
@@ -34,15 +30,15 @@ public class EnemyMakeTempCardInDrawPileAction extends AbstractGameAction
         this.x = cardX;
         this.y = cardY;
     }
-    
+
     public EnemyMakeTempCardInDrawPileAction(final AbstractCard card, final int amount, final boolean randomSpot, final boolean autoPosition, final boolean toBottom) {
         this(card, amount, randomSpot, autoPosition, toBottom, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f);
     }
-    
+
     public EnemyMakeTempCardInDrawPileAction(final AbstractCard card, final int amount, final boolean shuffleInto, final boolean autoPosition) {
         this(card, amount, shuffleInto, autoPosition, false);
     }
-    
+
     @Override
     public void update() {
         if (this.duration == this.startDuration) {
@@ -54,8 +50,7 @@ public class EnemyMakeTempCardInDrawPileAction extends AbstractGameAction
                     }
                     AbstractDungeon.effectList.add(new EnemyShowCardAndAddToDrawPileEffect(c, this.x, this.y, this.randomSpot, this.autoPosition, this.toBottom));
                 }
-            }
-            else {
+            } else {
                 for (int i = 0; i < this.amount; ++i) {
                     final AbstractCard c = this.cardToMake.makeStatEquivalentCopy();
                     if (c.type != AbstractCard.CardType.CURSE && c.type != AbstractCard.CardType.STATUS && AbstractCharBoss.boss.hasPower("MasterRealityPower")) {

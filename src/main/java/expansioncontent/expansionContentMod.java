@@ -10,13 +10,12 @@ Daily/Custom Run modifiers.
  */
 
 import basemod.BaseMod;
-import basemod.ReflectionHacks;
 import basemod.helpers.RelicType;
-import basemod.interfaces.*;
+import basemod.interfaces.EditCardsSubscriber;
+import basemod.interfaces.EditKeywordsSubscriber;
+import basemod.interfaces.EditRelicsSubscriber;
+import basemod.interfaces.EditStringsSubscriber;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -26,22 +25,15 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.patches.AbstractCardEnum;
-import slimebound.relics.PotencyRelic;
-import theHexaghost.relics.*;
 import theHexaghost.util.CardIgnore;
 import theHexaghost.util.CardNoSeen;
 
@@ -59,8 +51,6 @@ public class expansionContentMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber {
-
- private static String modID;
 
     @SpireEnum
     public static AbstractCard.CardTags STUDY_HEXAGHOST;
@@ -82,7 +72,8 @@ public class expansionContentMod implements
     public static AbstractCard.CardTags STUDY_SLIMEBOSS;
     @SpireEnum
     public static AbstractCard.CardTags STUDY;
-  
+    private static String modID;
+
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
@@ -120,22 +111,6 @@ public class expansionContentMod implements
 
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
-    }
-
-
-    @Override
-    public void receiveEditRelics() {
-
-        BaseMod.addRelic(new StudyCardRelic(), RelicType.SHARED);
-    }
-
-    @Override
-    public void receiveEditCards() {
-        try {
-            autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     private static void autoAddCards()
@@ -185,6 +160,20 @@ public class expansionContentMod implements
         }
     }
 
+    @Override
+    public void receiveEditRelics() {
+
+        BaseMod.addRelic(new StudyCardRelic(), RelicType.SHARED);
+    }
+
+    @Override
+    public void receiveEditCards() {
+        try {
+            autoAddCards();
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public void receiveEditStrings() {

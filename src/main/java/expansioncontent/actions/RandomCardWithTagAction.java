@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -29,14 +28,14 @@ public class RandomCardWithTagAction extends AbstractGameAction {
     public RandomCardWithTagAction(boolean upgraded, AbstractCard.CardTags tagToSearch, boolean free) {
         this.upgradeCard = upgraded;
         this.tag = tagToSearch;
-        this.free=free;
+        this.free = free;
         this.oneless = false;
     }
 
     public RandomCardWithTagAction(boolean upgraded, AbstractCard.CardTags tagToSearch, boolean free, boolean oneless) {
         this.upgradeCard = upgraded;
         this.tag = tagToSearch;
-        this.free=free;
+        this.free = free;
         this.oneless = oneless;
     }
 
@@ -45,7 +44,7 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         ArrayList<String> tmp = new ArrayList();
         Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
-        while(var3.hasNext()) {
+        while (var3.hasNext()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
             if (c.getValue().hasTag(tag)) {
                 tmp.add(c.getKey());
@@ -57,10 +56,10 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         if (this.upgradeCard) {
             cStudy.upgrade();
         }
-        if (this.free){
-            cStudy.freeToPlayOnce =true;
+        if (this.free) {
+            cStudy.freeToPlayOnce = true;
         }
-        if (this.oneless){
+        if (this.oneless) {
             cStudy.modifyCostForCombat(-1);
         }
 

@@ -21,10 +21,10 @@ import static expansioncontent.expansionContentMod.makeCardPath;
 
 public abstract class AbstractExpansionCard extends CustomCard {
 
+    public final String UPGRADE_DESCRIPTION;
     protected final CardStrings cardStrings;
     protected final String NAME;
     protected final String DESCRIPTION;
-    public final String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {

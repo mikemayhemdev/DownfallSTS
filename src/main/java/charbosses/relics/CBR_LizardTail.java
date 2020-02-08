@@ -1,25 +1,21 @@
 package charbosses.relics;
 
-import com.megacrit.cardcrawl.dungeons.*;
+import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.LizardTail;
 
-import charbosses.bosses.AbstractCharBoss;
+public class CBR_LizardTail extends AbstractCharbossRelic {
 
-import com.megacrit.cardcrawl.actions.common.*;
-
-public class CBR_LizardTail extends AbstractCharbossRelic
-{
-    
     public CBR_LizardTail() {
         super(new LizardTail());
     }
-    
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
-    
+
     @Override
     public void setCounter(final int setCounter) {
         if (setCounter == -2) {
@@ -27,7 +23,7 @@ public class CBR_LizardTail extends AbstractCharbossRelic
             this.counter = -2;
         }
     }
-    
+
     @Override
     public void onTrigger() {
         this.flash();
@@ -39,7 +35,7 @@ public class CBR_LizardTail extends AbstractCharbossRelic
         AbstractCharBoss.boss.heal(healAmt, true);
         this.setCounter(-2);
     }
-    
+
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_LizardTail();

@@ -19,9 +19,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
-import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
@@ -59,9 +57,6 @@ import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.events.WorldOfGoopSlimebound;
-import slimebound.relics.GreedOozeRelic;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -991,14 +986,14 @@ public static void saveData() {
                 //Character Required//
                 GuardianCharacter.class,
                 //Act ID's this event can appear in//
-                new String[] { Exordium.ID });
+                new String[]{Exordium.ID});
         EventUtils.registerEvent(
                 //Event ID//
                 StasisEgg.ID, StasisEgg.class,
                 //Character Required//
                 GuardianCharacter.class,
                 //Act ID's this event can appear in//
-                new String[] { TheBeyond.ID });
+                new String[]{TheBeyond.ID});
         EventUtils.registerEvent(
                 //Event ID//
                 BackToBasicsGuardian.ID, BackToBasicsGuardian.class,

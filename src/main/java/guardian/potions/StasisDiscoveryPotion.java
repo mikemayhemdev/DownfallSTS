@@ -3,7 +3,6 @@ package guardian.potions;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import guardian.actions.StasisCodexAction;
-import guardian.actions.SwitchToDefenseModeAction;
 import guardian.characters.GuardianCharacter;
 
 public class StasisDiscoveryPotion extends CustomPotion {
@@ -44,7 +42,7 @@ public class StasisDiscoveryPotion extends CustomPotion {
     public void use(AbstractCreature target) {
 
 
-        if (AbstractDungeon.player.maxOrbs < this.potency ) {
+        if (AbstractDungeon.player.maxOrbs < this.potency) {
 
             AbstractDungeon.actionManager.addToBottom(new IncreaseMaxOrbAction(this.potency - AbstractDungeon.player.maxOrbs));
 

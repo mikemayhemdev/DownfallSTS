@@ -9,20 +9,22 @@ import com.megacrit.cardcrawl.relics.BirdFacedUrn;
 
 public class CBR_BirdFacedUrn extends AbstractCharbossRelic {
 
-	public CBR_BirdFacedUrn() {
-		super(new BirdFacedUrn());
-		this.tier = RelicTier.COMMON;
-	}
-	@Override
+    public CBR_BirdFacedUrn() {
+        super(new BirdFacedUrn());
+        this.tier = RelicTier.COMMON;
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0] + 2 + this.DESCRIPTIONS[1];
     }
-	@Override
-	public AbstractRelic makeCopy() {
-		return new CBR_BirdFacedUrn();
-	}
-	
-	@Override
+
+    @Override
+    public AbstractRelic makeCopy() {
+        return new CBR_BirdFacedUrn();
+    }
+
+    @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if (card.type == AbstractCard.CardType.POWER) {
             this.flash();

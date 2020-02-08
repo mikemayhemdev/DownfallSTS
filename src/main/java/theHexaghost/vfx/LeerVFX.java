@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class LeerVFX extends AbstractGameEffect {
+    private static AtlasRegion img;
+    private final float DUR = 0.5F;
     private float sX;
     private float sY;
     private float dX;
@@ -20,8 +22,6 @@ public class LeerVFX extends AbstractGameEffect {
     private float mY;
     private float dst;
     private boolean isFlipped = false;
-    private final float DUR = 0.5F;
-    private static AtlasRegion img;
 
     public LeerVFX(float sX, float sY, float mXs, float mYs, boolean isFlipped) {
         if (img == null) {

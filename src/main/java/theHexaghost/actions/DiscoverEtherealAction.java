@@ -21,7 +21,7 @@ public class DiscoverEtherealAction extends AbstractGameAction {
     public DiscoverEtherealAction(int count) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
-        this.count=count;
+        this.count = count;
     }
 
     public void update() {

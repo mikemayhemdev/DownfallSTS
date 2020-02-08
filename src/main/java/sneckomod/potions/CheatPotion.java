@@ -8,11 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.powers.AcidTonguePowerUpgraded;
 import sneckomod.SneckoMod;
 import sneckomod.powers.CheatPower;
-import theHexaghost.HexaMod;
-import theHexaghost.actions.DiscoverEtherealAction;
 
 
 public class CheatPotion extends CustomPotion {
@@ -43,7 +40,7 @@ public class CheatPotion extends CustomPotion {
     public void use(AbstractCreature target) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CheatPower(this.potency), this.potency));
 
-       }
+    }
 
 
     public CustomPotion makeCopy() {

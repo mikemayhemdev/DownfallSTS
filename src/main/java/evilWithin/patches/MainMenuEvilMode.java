@@ -16,10 +16,8 @@ import javassist.CtBehavior;
 import java.lang.reflect.Field;
 import java.util.function.Consumer;
 
-public class MainMenuEvilMode
-{
-    public static class Enums
-    {
+public class MainMenuEvilMode {
+    public static class Enums {
         @SpireEnum
         public static MenuPanelScreen.PanelScreen EVIL;
         @SpireEnum
@@ -30,10 +28,8 @@ public class MainMenuEvilMode
             clz = MainMenuPanelButton.class,
             method = "buttonEffect"
     )
-    public static class RedirectPlayNormal
-    {
-        public static SpireReturn<Void> Prefix(MainMenuPanelButton __instance, MainMenuPanelButton.PanelClickResult ___result)
-        {
+    public static class RedirectPlayNormal {
+        public static SpireReturn<Void> Prefix(MainMenuPanelButton __instance, MainMenuPanelButton.PanelClickResult ___result) {
             if (___result == MainMenuPanelButton.PanelClickResult.PLAY_NORMAL) {
                 LatePanelOpen.lateOpen = x -> {
                     x.open(Enums.EVIL);
@@ -48,13 +44,11 @@ public class MainMenuEvilMode
             clz = MenuPanelScreen.class,
             method = "update"
     )
-    public static class RedirectBackButton
-    {
+    public static class RedirectBackButton {
         @SpireInsertPatch(
                 locator = Locator.class
         )
-        public static SpireReturn<Void> Insert(MenuPanelScreen __instance, MenuPanelScreen.PanelScreen ___screen)
-        {
+        public static SpireReturn<Void> Insert(MenuPanelScreen __instance, MenuPanelScreen.PanelScreen ___screen) {
             if (___screen == Enums.EVIL) {
                 __instance.button.hb.clicked = false;
                 __instance.button.hb.hovered = false;
@@ -67,11 +61,9 @@ public class MainMenuEvilMode
             return SpireReturn.Continue();
         }
 
-        public static class Locator extends SpireInsertLocator
-        {
+        public static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception
-            {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher matcher = new Matcher.FieldAccessMatcher(MainMenuScreen.class, "screen");
                 return LineFinder.findInOrder(ctBehavior, matcher);
             }
@@ -83,12 +75,10 @@ public class MainMenuEvilMode
             clz = MenuPanelScreen.class,
             method = "update"
     )
-    public static class LatePanelOpen
-    {
+    public static class LatePanelOpen {
         private static Consumer<MenuPanelScreen> lateOpen = null;
 
-        public static void Postfix(MenuPanelScreen __instance)
-        {
+        public static void Postfix(MenuPanelScreen __instance) {
             if (lateOpen != null) {
                 lateOpen.accept(__instance);
                 lateOpen = null;
@@ -100,10 +90,8 @@ public class MainMenuEvilMode
             clz = MenuPanelScreen.class,
             method = "initializePanels"
     )
-    public static class InitEvilPanels
-    {
-        public static void Postfix(MenuPanelScreen __instance, MenuPanelScreen.PanelScreen ___screen, float ___PANEL_Y)
-        {
+    public static class InitEvilPanels {
+        public static void Postfix(MenuPanelScreen __instance, MenuPanelScreen.PanelScreen ___screen, float ___PANEL_Y) {
             if (___screen == Enums.EVIL) {
                 __instance.panels.add(new EvilMainMenuPanelButton(
                         MainMenuPanelButton.PanelClickResult.PLAY_NORMAL,
@@ -121,18 +109,16 @@ public class MainMenuEvilMode
         }
     }
 
-    public static class EvilMainMenuPanelButton extends MainMenuPanelButton
-    {
+    public static class EvilMainMenuPanelButton extends MainMenuPanelButton {
         public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(EvilWithinMod.makeID("EvilMenuPanel"));
+        private static Field resultField = null;
 
-        public EvilMainMenuPanelButton(PanelClickResult setResult, PanelColor setColor, float x, float y)
-        {
+        public EvilMainMenuPanelButton(PanelClickResult setResult, PanelColor setColor, float x, float y) {
             super(setResult, setColor, x, y);
         }
 
         @SpireOverride
-        protected void setLabel()
-        {
+        protected void setLabel() {
             if (getResult() == Enums.PLAY_EVIL) {
                 ReflectionHacks.setPrivate(this, MainMenuPanelButton.class, "panelImg", ImageMaster.MENU_PANEL_BG_RED);
                 ReflectionHacks.setPrivate(this, MainMenuPanelButton.class, "portraitImg", ImageMaster.P_STAT_CHAR);
@@ -144,8 +130,7 @@ public class MainMenuEvilMode
         }
 
         @SpireOverride
-        protected void buttonEffect()
-        {
+        protected void buttonEffect() {
             if (getResult() == Enums.PLAY_EVIL || getResult() == PanelClickResult.PLAY_NORMAL) {
                 EvilModeCharacterSelect.evilMode = getResult() == Enums.PLAY_EVIL;
                 CardCrawlGame.mainMenuScreen.charSelectScreen.open(false);
@@ -154,8 +139,7 @@ public class MainMenuEvilMode
             }
         }
 
-        protected PanelClickResult getResult()
-        {
+        protected PanelClickResult getResult() {
             if (resultField == null) {
                 try {
                     resultField = MainMenuPanelButton.class.getDeclaredField("result");
@@ -171,7 +155,5 @@ public class MainMenuEvilMode
                 throw new RuntimeException(e);
             }
         }
-
-        private static Field resultField = null;
     }
 }

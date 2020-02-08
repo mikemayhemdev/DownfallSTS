@@ -1,31 +1,33 @@
 package charbosses.cards.red;
 
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.characters.*;
-import com.megacrit.cardcrawl.monsters.*;
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.actions.utility.*;
-import com.megacrit.cardcrawl.vfx.combat.*;
-
 import charbosses.cards.AbstractBossCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
 
-import com.megacrit.cardcrawl.actions.animations.*;
-import com.megacrit.cardcrawl.vfx.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.core.*;
-
-public class EnIronWave extends AbstractBossCard
-{
+public class EnIronWave extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Iron Wave";
     private static final CardStrings cardStrings;
-    
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Iron Wave");
+    }
+
     public EnIronWave() {
         super(ID, EnIronWave.cardStrings.NAME, "red/attack/iron_wave", 1, EnIronWave.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 5;
         this.baseBlock = 5;
     }
-    
+
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new GainBlockAction(m, m, this.block));
@@ -35,7 +37,7 @@ public class EnIronWave extends AbstractBossCard
         }
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
-    
+
     @Override
     public void upgrade() {
         if (!this.upgraded) {
@@ -44,13 +46,9 @@ public class EnIronWave extends AbstractBossCard
             this.upgradeBlock(2);
         }
     }
-    
+
     @Override
     public AbstractCard makeCopy() {
         return new EnIronWave();
-    }
-    
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Iron Wave");
     }
 }

@@ -24,16 +24,15 @@ import static sneckomod.SneckoMod.makeCardPath;
 
 public abstract class AbstractSneckoCard extends CustomCard {
 
-    public int silly;
-    public int baseSilly;
-    public boolean upgradedSilly;
-    public boolean isSillyModified;
-
     protected final CardStrings cardStrings;
     protected final String NAME;
     protected final String DESCRIPTION;
     protected final String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
+    public int silly;
+    public int baseSilly;
+    public boolean upgradedSilly;
+    public boolean isSillyModified;
 
     public AbstractSneckoCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),

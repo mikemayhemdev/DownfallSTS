@@ -2,11 +2,9 @@ package theHexaghost.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
-import theHexaghost.ghostflames.BolsteringGhostflame;
 import theHexaghost.ghostflames.MayhemGhostflame;
 import theHexaghost.util.TextureLoader;
 

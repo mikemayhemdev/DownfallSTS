@@ -1,10 +1,8 @@
 package theHexaghost.cards.seals;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.powers.GoldPostCombatPower;
-import theHexaghost.powers.SealPostCombatPower;
 
 public class SecondSeal extends AbstractSealCard {
 

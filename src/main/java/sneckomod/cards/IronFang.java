@@ -3,14 +3,10 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import sneckomod.actions.RandomDamageAction;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 public class IronFang extends AbstractSneckoCard {
 
@@ -25,6 +21,14 @@ public class IronFang extends AbstractSneckoCard {
     private static final int UPG_BLOCK = 2;
 
     private static final int MAGIC = 3;
+
+    public IronFang() {
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = DAMAGE;
+        baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = MAGIC;
+        baseSilly = silly = MAGIC;
+    }
 
     @Override
     protected void applyPowersToBlock() {
@@ -62,14 +66,6 @@ public class IronFang extends AbstractSneckoCard {
 
         baseDamage = CURRENT_DAMAGE;
         super.calculateCardDamage(m);
-    }
-
-    public IronFang() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
-        baseSilly = silly = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

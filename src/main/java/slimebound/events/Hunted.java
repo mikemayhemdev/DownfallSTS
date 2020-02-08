@@ -15,8 +15,8 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import slimebound.SlimeboundMod;
 import expansioncontent.relics.StudyCardRelic;
+import slimebound.SlimeboundMod;
 
 public class Hunted extends MindBloom {
     public static final String ID = "Slimebound:Hunted";

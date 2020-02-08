@@ -1,27 +1,29 @@
 package charbosses.powers.cardpowers;
 
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.actions.utility.*;
-import com.megacrit.cardcrawl.monsters.*;
+import charbosses.actions.util.CharbossDoCardQueueAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import charbosses.actions.common.EnemyUseCardAction;
-import charbosses.actions.util.CharbossDoCardQueueAction;
-import charbosses.bosses.AbstractCharBoss;
-
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.core.*;
-
-public class EnemyDoubleTapPower extends AbstractPower
-{
+public class EnemyDoubleTapPower extends AbstractPower {
     public static final String POWER_ID = "Double Tap";
-    private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
-    
+    private static final PowerStrings powerStrings;
+
+    static {
+        powerStrings = CardCrawlGame.languagePack.getPowerStrings("Double Tap");
+        NAME = EnemyDoubleTapPower.powerStrings.NAME;
+        DESCRIPTIONS = EnemyDoubleTapPower.powerStrings.DESCRIPTIONS;
+    }
+
     public EnemyDoubleTapPower(final AbstractCreature owner, final int amount) {
         this.name = EnemyDoubleTapPower.NAME;
         this.ID = "Double Tap";
@@ -30,24 +32,23 @@ public class EnemyDoubleTapPower extends AbstractPower
         this.updateDescription();
         this.loadRegion("doubleTap");
     }
-    
+
     @Override
     public void updateDescription() {
         if (this.amount == 1) {
             this.description = EnemyDoubleTapPower.DESCRIPTIONS[0];
-        }
-        else {
+        } else {
             this.description = EnemyDoubleTapPower.DESCRIPTIONS[1] + this.amount + EnemyDoubleTapPower.DESCRIPTIONS[2];
         }
     }
-    
+
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
         if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && this.amount > 0) {
             this.flash();
             AbstractMonster m = null;
             if (action.target != null) {
-                m = (AbstractMonster)action.target;
+                m = (AbstractMonster) action.target;
             }
             final AbstractCard tmp = card.makeSameInstanceOf();
             //AbstractCharBoss.boss.limbo.addToBottom(tmp);
@@ -68,17 +69,11 @@ public class EnemyDoubleTapPower extends AbstractPower
             }
         }
     }
-    
+
     @Override
     public void atEndOfTurn(final boolean isPlayer) {
         if (isPlayer) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Double Tap"));
         }
-    }
-    
-    static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings("Double Tap");
-        NAME = EnemyDoubleTapPower.powerStrings.NAME;
-        DESCRIPTIONS = EnemyDoubleTapPower.powerStrings.DESCRIPTIONS;
     }
 }

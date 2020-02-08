@@ -23,6 +23,15 @@ public abstract class AbstractGhostflame {
     public MyOrb graphicalRender;
 
     public Hitbox hitbox;
+    public float lx;
+    public float ly;
+
+    public AbstractGhostflame(float x, float y) {
+        lx = x;
+        ly = y;
+        hitbox = new Hitbox(x, y, 64 * Settings.scale, 64 * Settings.scale);
+        graphicalRender = new MyOrb(x, y, this, hitbox);
+    }
 
     public void charge() {
         if (!charged) {
@@ -46,16 +55,6 @@ public abstract class AbstractGhostflame {
     }
 
     public abstract void onCharge();
-
-    public float lx;
-    public float ly;
-
-    public AbstractGhostflame(float x, float y) {
-        lx = x;
-        ly = y;
-        hitbox = new Hitbox(x, y, 64 * Settings.scale, 64* Settings.scale);
-        graphicalRender = new MyOrb(x, y, this, hitbox);
-    }
 
     public void update() {
         graphicalRender.update();

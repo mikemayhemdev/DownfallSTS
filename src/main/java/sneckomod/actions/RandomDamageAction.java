@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class RandomDamageAction extends AbstractGameAction {
 
-    private DamageInfo info;
     private static final float DURATION = 0.01F;
+    private DamageInfo info;
     private int numTimes;
     private int min;
     private int max;

@@ -1,25 +1,27 @@
 package charbosses.actions.common;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.unlock.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.actions.utility.*;
-import com.megacrit.cardcrawl.core.*;
-import com.badlogic.gdx.math.*;
-import com.megacrit.cardcrawl.vfx.cardManip.*;
-
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToDiscardEffect;
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToHandEffect;
 import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-public class EnemyMakeTempCardInHandAction extends AbstractGameAction
-{
-    private AbstractCard c;
+public class EnemyMakeTempCardInHandAction extends AbstractGameAction {
     private static final float PADDING;
+
+    static {
+        PADDING = 25.0f * Settings.scale;
+    }
+
+    private AbstractCard c;
     private boolean isOtherCardInCenter;
     private boolean sameUUID;
-    
+
     public EnemyMakeTempCardInHandAction(final AbstractCard card, final boolean isOtherCardInCenter) {
         this.isOtherCardInCenter = true;
         this.sameUUID = false;
@@ -31,11 +33,11 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction
         }
         this.isOtherCardInCenter = isOtherCardInCenter;
     }
-    
+
     public EnemyMakeTempCardInHandAction(final AbstractCard card) {
         this(card, 1);
     }
-    
+
     public EnemyMakeTempCardInHandAction(final AbstractCard card, final int amount) {
         this.isOtherCardInCenter = true;
         this.sameUUID = false;
@@ -47,18 +49,18 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction
             this.c.upgrade();
         }
     }
-    
+
     public EnemyMakeTempCardInHandAction(final AbstractCard card, final int amount, final boolean isOtherCardInCenter) {
         this(card, amount);
         this.isOtherCardInCenter = isOtherCardInCenter;
     }
-    
+
     public EnemyMakeTempCardInHandAction(final AbstractCard card, final boolean isOtherCardInCenter, final boolean sameUUID) {
         this(card, 1);
         this.isOtherCardInCenter = isOtherCardInCenter;
         this.sameUUID = sameUUID;
     }
-    
+
     @Override
     public void update() {
         if (this.amount == 0) {
@@ -78,7 +80,7 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction
         }
         this.isDone = true;
     }
-    
+
     private void addToHand(final int handAmt) {
         switch (this.amount) {
             case 0: {
@@ -133,7 +135,7 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction
             }
         }
     }
-    
+
     private void addToDiscard(final int discardAmt) {
         switch (this.amount) {
             case 0: {
@@ -184,15 +186,11 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction
             }
         }
     }
-    
+
     private AbstractCard makeNewCard() {
         if (this.sameUUID) {
             return this.c.makeSameInstanceOf();
         }
         return this.c.makeStatEquivalentCopy();
-    }
-    
-    static {
-        PADDING = 25.0f * Settings.scale;
     }
 }

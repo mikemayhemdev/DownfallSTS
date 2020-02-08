@@ -1,23 +1,19 @@
 package charbosses.actions.common;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.unlock.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.vfx.cardManip.*;
-
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToDiscardEffect;
 import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.Gdx;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
-import com.badlogic.gdx.*;
-
-public class EnemyMakeTempCardInDiscardAction extends AbstractGameAction
-{
+public class EnemyMakeTempCardInDiscardAction extends AbstractGameAction {
     private AbstractCard c;
     private int numCards;
     private boolean sameUUID;
-    
+
     public EnemyMakeTempCardInDiscardAction(final AbstractCard card, final int amount) {
         UnlockTracker.markCardAsSeen(card.cardID);
         this.numCards = amount;
@@ -27,7 +23,7 @@ public class EnemyMakeTempCardInDiscardAction extends AbstractGameAction
         this.c = card;
         this.sameUUID = false;
     }
-    
+
     public EnemyMakeTempCardInDiscardAction(final AbstractCard card, final boolean sameUUID) {
         this(card, 1);
         this.sameUUID = sameUUID;
@@ -35,7 +31,7 @@ public class EnemyMakeTempCardInDiscardAction extends AbstractGameAction
             this.c.upgrade();
         }
     }
-    
+
     @Override
     public void update() {
         if (this.duration == this.startDuration) {
@@ -48,7 +44,7 @@ public class EnemyMakeTempCardInDiscardAction extends AbstractGameAction
         }
         this.tickDuration();
     }
-    
+
     private AbstractCard makeNewCard() {
         if (this.sameUUID) {
             return this.c.makeSameInstanceOf();

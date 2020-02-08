@@ -1,23 +1,20 @@
 package charbosses.actions.orb;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.monsters.*;
-import java.util.*;
-import com.megacrit.cardcrawl.orbs.*;
-import com.megacrit.cardcrawl.vfx.combat.*;
-import com.badlogic.gdx.graphics.*;
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.actions.utility.*;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class EnemyDarkOrbEvokeAction extends AbstractGameAction
-{
-    private DamageInfo info;
+public class EnemyDarkOrbEvokeAction extends AbstractGameAction {
     private static final float DURATION = 0.1f;
     private static final float POST_ATTACK_WAIT_DUR = 0.1f;
+    private DamageInfo info;
     private boolean muteSfx;
-    
+
     public EnemyDarkOrbEvokeAction(final DamageInfo info, final AttackEffect effect) {
         this.muteSfx = false;
         this.setValues(AbstractDungeon.player, this.info = info);
@@ -25,7 +22,7 @@ public class EnemyDarkOrbEvokeAction extends AbstractGameAction
         this.attackEffect = effect;
         this.duration = 0.1f;
     }
-    
+
     @Override
     public void update() {
         if ((this.shouldCancelAction() && this.info.type != DamageInfo.DamageType.THORNS) || this.target == null) {
@@ -45,8 +42,7 @@ public class EnemyDarkOrbEvokeAction extends AbstractGameAction
             if (this.attackEffect == AttackEffect.POISON) {
                 this.target.tint.color = Color.CHARTREUSE.cpy();
                 this.target.tint.changeColor(Color.WHITE.cpy());
-            }
-            else if (this.attackEffect == AttackEffect.FIRE) {
+            } else if (this.attackEffect == AttackEffect.FIRE) {
                 this.target.tint.color = Color.RED.cpy();
                 this.target.tint.changeColor(Color.WHITE.cpy());
             }

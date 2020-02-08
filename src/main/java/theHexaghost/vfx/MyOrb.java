@@ -16,13 +16,13 @@ import theHexaghost.ghostflames.AbstractGhostflame;
 
 public class MyOrb {
     public static final String ID = "MyOrb";
-    private BobEffect effect = new BobEffect(2.0F);
-    private float activateTimer;
     public AbstractGhostflame myDaddy;
     public Hitbox mom;
     public boolean charged = false;
     public boolean hidden = false;
     public boolean playedSfx = false;
+    private BobEffect effect = new BobEffect(2.0F);
+    private float activateTimer;
     private Color color;
     private float x;
     private float y;

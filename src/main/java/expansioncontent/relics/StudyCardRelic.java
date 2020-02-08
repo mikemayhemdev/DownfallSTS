@@ -25,8 +25,8 @@ public class StudyCardRelic extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("tinybowlerhatOutline.png"));
 
     public StudyCardRelic() {
-            super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
-        }
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);
+    }
 
     @Override
     public String getUpdatedDescription() {

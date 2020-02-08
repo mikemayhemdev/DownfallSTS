@@ -25,15 +25,6 @@ public class SealSealReward extends RewardItem {
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
 
-    public static AbstractCard getRandomSeal() {
-        ArrayList<AbstractCard> list = new ArrayList<>();// 1201
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c instanceof AbstractSealCard)
-                list.add(c);
-        }
-        return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));// 1217
-    }
-
     public SealSealReward(AbstractCard.CardColor colorType) {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
         this.flashTimer = 0.0F;
@@ -75,6 +66,15 @@ public class SealSealReward extends RewardItem {
 
             return;
         }
+    }
+
+    public static AbstractCard getRandomSeal() {
+        ArrayList<AbstractCard> list = new ArrayList<>();// 1201
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (c instanceof AbstractSealCard)
+                list.add(c);
+        }
+        return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));// 1217
     }
 
     public boolean cardListDuplicate(AbstractCard card) {

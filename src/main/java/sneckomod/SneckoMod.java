@@ -29,11 +29,6 @@ import sneckomod.potions.MuddlingPotion;
 import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.relics.*;
 import sneckomod.util.SneckoSilly;
-import theHexaghost.TheHexaghost;
-import theHexaghost.potions.BurningPotion;
-import theHexaghost.potions.DoubleChargePotion;
-import theHexaghost.potions.EctoCoolerPotion;
-import theHexaghost.potions.InfernoChargePotion;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -58,25 +53,23 @@ public class SneckoMod implements
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulder2.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
+    public static final String CARD_ENERGY_S = "sneckomodResources/images/512/card_snecko_orb.png";
+    public static final String TEXT_ENERGY = "sneckomodResources/images/512/card_small_orb_snecko.png";
     private static final String ATTACK_S_ART = "sneckomodResources/images/512/bg_attack_snecko.png";
     private static final String SKILL_S_ART = "sneckomodResources/images/512/bg_skill_snecko.png";
     private static final String POWER_S_ART = "sneckomodResources/images/512/bg_power_snecko.png";
-    public static final String CARD_ENERGY_S = "sneckomodResources/images/512/card_snecko_orb.png";
-    public static final String TEXT_ENERGY = "sneckomodResources/images/512/card_small_orb_snecko.png";
     private static final String ATTACK_L_ART = "sneckomodResources/images/1024/bg_attack_snecko.png";
     private static final String SKILL_L_ART = "sneckomodResources/images/1024/bg_skill_snecko.png";
     private static final String POWER_L_ART = "sneckomodResources/images/1024/bg_power_snecko.png";
     private static final String CARD_ENERGY_L = "sneckomodResources/images/1024/card_snecko_orb.png";
     private static final String CHARSELECT_BUTTON = "sneckomodResources/images/charSelect/button.png";
     private static final String CHARSELECT_PORTRAIT = "sneckomodResources/images/charSelect/portrait.png";
-    private static String modID;
-
     public static Color placeholderColor = new Color(64F / 255F, 123F / 255F, 147F / 255F, 1);
-
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UNKNOWN;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags SNEKPROOF;
+    private static String modID;
 
 
     public SneckoMod() {
@@ -122,42 +115,6 @@ public class SneckoMod implements
 
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
-    }
-
-    @Override
-    public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheSnecko("the Snecko", TheSnecko.Enums.THE_SNECKO),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheSnecko.Enums.THE_SNECKO);
-    }
-
-    @Override
-    public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new SneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new CleanMud(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new ConfusingCodex(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new LoadedDie(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new RareBoosterPack(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new SleevedAce(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new SuperSneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
-        BaseMod.addRelicToCustomPool(new UnknownEgg(), TheSnecko.Enums.SNECKO_CYAN);
-    }
-
-    @Override
-    public void receiveEditCards() {
-        BaseMod.addDynamicVariable(new SneckoSilly());
-        try {
-            autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        BaseMod.addCard(new DiceBoulder(0));
-        UnlockTracker.markCardAsSeen(DiceBoulder.ID);
-        for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
-            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
-                AbstractCard q = new UnknownClass(p);
-                BaseMod.addCard(q);
-            }
-        }
     }
 
     private static void autoAddCards()
@@ -207,6 +164,59 @@ public class SneckoMod implements
         }
     }
 
+    public static AbstractCard getOffClassCard() {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+    }
+
+    public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING)));
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+    }
+
+    public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(AbstractCard.CardTags.HEALING));
+        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+    }
+
+    @Override
+    public void receiveEditCharacters() {
+        BaseMod.addCharacter(new TheSnecko("the Snecko", TheSnecko.Enums.THE_SNECKO),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheSnecko.Enums.THE_SNECKO);
+    }
+
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelicToCustomPool(new SneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new CleanMud(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new ConfusingCodex(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new LoadedDie(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new RareBoosterPack(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SleevedAce(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new SuperSneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
+        BaseMod.addRelicToCustomPool(new UnknownEgg(), TheSnecko.Enums.SNECKO_CYAN);
+    }
+
+    @Override
+    public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new SneckoSilly());
+        try {
+            autoAddCards();
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        BaseMod.addCard(new DiceBoulder(0));
+        UnlockTracker.markCardAsSeen(DiceBoulder.ID);
+        for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
+            if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
+                AbstractCard q = new UnknownClass(p);
+                BaseMod.addCard(q);
+            }
+        }
+    }
 
     @Override
     public void receiveEditStrings() {
@@ -240,25 +250,7 @@ public class SneckoMod implements
         }
     }
 
-    public static AbstractCard getOffClassCard() {
-        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
-        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
-    }
-
-    public static AbstractCard getOffClassCardMatchingPredicate(Predicate<AbstractCard> q) {
-        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> (c.color == TheSnecko.Enums.SNECKO_CYAN || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || !q.test(c) || c.hasTag(AbstractCard.CardTags.HEALING)));
-        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
-    }
-
-    public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
-        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(AbstractCard.CardTags.HEALING));
-        return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
-    }
-
-    public void receivePostInitialize(){
+    public void receivePostInitialize() {
 
         addPotions();
     }

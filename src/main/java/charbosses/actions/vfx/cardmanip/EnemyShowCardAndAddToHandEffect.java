@@ -1,25 +1,27 @@
 package charbosses.actions.vfx.cardmanip;
 
-import com.megacrit.cardcrawl.vfx.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.unlock.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.core.*;
-import java.util.*;
-import com.badlogic.gdx.math.*;
-import com.megacrit.cardcrawl.vfx.combat.*;
-
 import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
 
-import com.badlogic.gdx.*;
-import com.badlogic.gdx.graphics.g2d.*;
-
-public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect
-{
+public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect {
     private static final float EFFECT_DUR = 0.8f;
-    private AbstractCard card;
     private static final float PADDING;
-    
+
+    static {
+        PADDING = 25.0f * Settings.scale;
+    }
+
+    private AbstractCard card;
+
     public EnemyShowCardAndAddToHandEffect(final AbstractCard card, final float offsetX, final float offsetY) {
         this.card = card;
         UnlockTracker.markCardAsSeen(card.cardID);
@@ -47,7 +49,7 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect
             card.setCostForTurn(-9);
         }
     }
-    
+
     public EnemyShowCardAndAddToHandEffect(final AbstractCard card) {
         this.card = card;
         this.identifySpawnLocation(Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f);
@@ -70,7 +72,7 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect
             card.setCostForTurn(-9);
         }
     }
-    
+
     private void playCardObtainSfx() {
         int effectCount = 0;
         for (final AbstractGameEffect e : AbstractDungeon.effectList) {
@@ -82,7 +84,7 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect
             CardCrawlGame.sound.play("CARD_OBTAIN");
         }
     }
-    
+
     private void identifySpawnLocation(final float x, final float y) {
         int effectCount = 0;
         for (final AbstractGameEffect e : AbstractDungeon.effectList) {
@@ -122,7 +124,7 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect
         this.card.current_y = this.card.target_y - 200.0f * Settings.scale;
         AbstractDungeon.effectsQueue.add(new CardPoofEffect(this.card.target_x, this.card.target_y));
     }
-    
+
     @Override
     public void update() {
         this.duration -= Gdx.graphics.getDeltaTime();
@@ -131,19 +133,15 @@ public class EnemyShowCardAndAddToHandEffect extends AbstractGameEffect
             this.isDone = true;
         }
     }
-    
+
     @Override
     public void render(final SpriteBatch sb) {
         if (!this.isDone) {
             this.card.render(sb);
         }
     }
-    
+
     @Override
     public void dispose() {
-    }
-    
-    static {
-        PADDING = 25.0f * Settings.scale;
     }
 }

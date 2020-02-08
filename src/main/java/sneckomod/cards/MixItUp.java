@@ -1,7 +1,6 @@
 package sneckomod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
@@ -19,7 +18,7 @@ public class MixItUp extends AbstractSneckoCard {
     private static final int UPG_DAMAGE = 2;
 
     public MixItUp() {
-        super(ID,  1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(CardTags.HEALING);

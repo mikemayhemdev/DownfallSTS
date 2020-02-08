@@ -1,16 +1,12 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
 import expansioncontent.expansionContentMod;
-import slimebound.powers.SearingPower;
 import slimebound.vfx.SearEffect;
 import theHexaghost.actions.BurnAction;
 

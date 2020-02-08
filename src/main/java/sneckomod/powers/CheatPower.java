@@ -3,19 +3,13 @@ package sneckomod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.TextureLoader;
-
-import java.util.ArrayList;
 
 public class CheatPower extends AbstractPower implements CloneablePowerInterface {
 

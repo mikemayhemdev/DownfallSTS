@@ -1,42 +1,52 @@
 package charbosses.ui;
 
-import com.megacrit.cardcrawl.localization.*;
-import com.badlogic.gdx.graphics.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.vfx.*;
-
 import charbosses.bosses.AbstractCharBoss;
-
-import com.megacrit.cardcrawl.unlock.*;
-import com.megacrit.cardcrawl.helpers.input.*;
-import com.badlogic.gdx.math.*;
-import com.badlogic.gdx.*;
-import com.badlogic.gdx.graphics.g2d.*;
-import com.megacrit.cardcrawl.rooms.*;
-import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.core.*;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.localization.TutorialStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.RefreshEnergyEffect;
 
-public class EnemyEnergyPanel extends AbstractPanel
-{
-    private static final TutorialStrings tutorialStrings;
+public class EnemyEnergyPanel extends AbstractPanel {
     public static final String[] MSG;
     public static final String[] LABEL;
+    public static final float FONT_POP_SCALE = 2.0f;
+    public static final float ENERGY_VFX_TIME = 2.0f;
+    private static final TutorialStrings tutorialStrings;
     private static final int RAW_W = 256;
     private static final Color ENERGY_TEXT_COLOR;
+    private static final float VFX_ROTATE_SPEED = -30.0f;
     public static float fontScale;
-    public static final float FONT_POP_SCALE = 2.0f;
     public static int totalCount;
+    public static float energyVfxTimer;
+
+    static {
+        tutorialStrings = CardCrawlGame.languagePack.getTutorialString("Energy Panel Tip");
+        MSG = EnemyEnergyPanel.tutorialStrings.TEXT;
+        LABEL = EnemyEnergyPanel.tutorialStrings.LABEL;
+        ENERGY_TEXT_COLOR = new Color(1.0f, 1.0f, 0.86f, 1.0f);
+        EnemyEnergyPanel.fontScale = 1.0f;
+        EnemyEnergyPanel.totalCount = 0;
+        EnemyEnergyPanel.energyVfxTimer = 0.0f;
+    }
+
     private Hitbox tipHitbox;
     private Texture gainEnergyImg;
     private float energyVfxAngle;
     private float energyVfxScale;
     private Color energyVfxColor;
-    public static float energyVfxTimer;
-    public static final float ENERGY_VFX_TIME = 2.0f;
-    private static final float VFX_ROTATE_SPEED = -30.0f;
     private AbstractCharBoss owner;
-    
+
     public EnemyEnergyPanel(AbstractCharBoss owner) {
         super(Settings.WIDTH - 198.0f * Settings.scale, Settings.HEIGHT - 190.0f * Settings.scale, -480.0f * Settings.scale, 200.0f * Settings.scale, 12.0f * Settings.scale, -12.0f * Settings.scale, null, false);
         this.tipHitbox = new Hitbox(0.0f, 0.0f, 120.0f * Settings.scale, 120.0f * Settings.scale);
@@ -45,31 +55,31 @@ public class EnemyEnergyPanel extends AbstractPanel
         this.energyVfxColor = Color.WHITE.cpy();
         this.owner = owner;
         switch (this.owner.chosenClass) {
-		case DEFECT:
-			this.gainEnergyImg = ImageMaster.BLUE_ORB_FLASH_VFX;
-			break;
-		case IRONCLAD:
-			this.gainEnergyImg = ImageMaster.RED_ORB_FLASH_VFX;
-			break;
-		case THE_SILENT:
-			this.gainEnergyImg = ImageMaster.GREEN_ORB_FLASH_VFX;
-			break;
-		case WATCHER:
-			this.gainEnergyImg = ImageMaster.PURPLE_ORB_FLASH_VFX;
-			break;
-		default:
-			this.gainEnergyImg = ImageMaster.RED_ORB_FLASH_VFX;
-			break;
+            case DEFECT:
+                this.gainEnergyImg = ImageMaster.BLUE_ORB_FLASH_VFX;
+                break;
+            case IRONCLAD:
+                this.gainEnergyImg = ImageMaster.RED_ORB_FLASH_VFX;
+                break;
+            case THE_SILENT:
+                this.gainEnergyImg = ImageMaster.GREEN_ORB_FLASH_VFX;
+                break;
+            case WATCHER:
+                this.gainEnergyImg = ImageMaster.PURPLE_ORB_FLASH_VFX;
+                break;
+            default:
+                this.gainEnergyImg = ImageMaster.RED_ORB_FLASH_VFX;
+                break;
         }
     }
-    
+
     public static void setEnergy(final int energy) {
         EnemyEnergyPanel.totalCount = energy;
         AbstractDungeon.effectsQueue.add(new RefreshEnergyEffect());
         EnemyEnergyPanel.energyVfxTimer = 2.0f;
         EnemyEnergyPanel.fontScale = 2.0f;
     }
-    
+
     public static void addEnergy(final int e) {
         EnemyEnergyPanel.totalCount += e;
         if (EnemyEnergyPanel.totalCount >= 9) {
@@ -82,7 +92,7 @@ public class EnemyEnergyPanel extends AbstractPanel
         EnemyEnergyPanel.fontScale = 2.0f;
         EnemyEnergyPanel.energyVfxTimer = 2.0f;
     }
-    
+
     public static void useEnergy(final int e) {
         EnemyEnergyPanel.totalCount -= e;
         if (EnemyEnergyPanel.totalCount < 0) {
@@ -92,7 +102,14 @@ public class EnemyEnergyPanel extends AbstractPanel
             EnemyEnergyPanel.fontScale = 2.0f;
         }
     }
-    
+
+    public static int getCurrentEnergy() {
+        if (AbstractDungeon.player == null) {
+            return 0;
+        }
+        return EnemyEnergyPanel.totalCount;
+    }
+
     public void update() {
         this.owner.energyOrb.updateOrb(EnemyEnergyPanel.totalCount);
         this.updateVfx();
@@ -106,13 +123,12 @@ public class EnemyEnergyPanel extends AbstractPanel
         if (Settings.isDebug) {
             if (InputHelper.scrolledDown) {
                 addEnergy(1);
-            }
-            else if (InputHelper.scrolledUp && EnemyEnergyPanel.totalCount > 0) {
+            } else if (InputHelper.scrolledUp && EnemyEnergyPanel.totalCount > 0) {
                 useEnergy(1);
             }
         }
     }
-    
+
     private void updateVfx() {
         if (EnemyEnergyPanel.energyVfxTimer != 0.0f) {
             this.energyVfxColor.a = Interpolation.exp10In.apply(0.5f, 0.0f, 1.0f - EnemyEnergyPanel.energyVfxTimer / 2.0f);
@@ -125,7 +141,7 @@ public class EnemyEnergyPanel extends AbstractPanel
             }
         }
     }
-    
+
     @Override
     public void render(final SpriteBatch sb) {
         this.tipHitbox.move(this.current_x, this.current_y);
@@ -139,16 +155,15 @@ public class EnemyEnergyPanel extends AbstractPanel
             TipHelper.renderGenericTip(50.0f * Settings.scale, 380.0f * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);
         }
     }
-    
+
     private void renderOrb(final SpriteBatch sb) {
         if (EnemyEnergyPanel.totalCount == 0) {
             this.owner.energyOrb.renderOrb(sb, false, this.current_x, this.current_y);
-        }
-        else {
-        	this.owner.energyOrb.renderOrb(sb, true, this.current_x, this.current_y);
+        } else {
+            this.owner.energyOrb.renderOrb(sb, true, this.current_x, this.current_y);
         }
     }
-    
+
     private void renderVfx(final SpriteBatch sb) {
         if (EnemyEnergyPanel.energyVfxTimer != 0.0f) {
             sb.setBlendFunction(770, 1);
@@ -157,22 +172,5 @@ public class EnemyEnergyPanel extends AbstractPanel
             sb.draw(this.gainEnergyImg, this.current_x - 128.0f, this.current_y - 128.0f, 128.0f, 128.0f, 256.0f, 256.0f, this.energyVfxScale, this.energyVfxScale, this.energyVfxAngle, 0, 0, 256, 256, false, false);
             sb.setBlendFunction(770, 771);
         }
-    }
-    
-    public static int getCurrentEnergy() {
-        if (AbstractDungeon.player == null) {
-            return 0;
-        }
-        return EnemyEnergyPanel.totalCount;
-    }
-    
-    static {
-        tutorialStrings = CardCrawlGame.languagePack.getTutorialString("Energy Panel Tip");
-        MSG = EnemyEnergyPanel.tutorialStrings.TEXT;
-        LABEL = EnemyEnergyPanel.tutorialStrings.LABEL;
-        ENERGY_TEXT_COLOR = new Color(1.0f, 1.0f, 0.86f, 1.0f);
-        EnemyEnergyPanel.fontScale = 1.0f;
-        EnemyEnergyPanel.totalCount = 0;
-        EnemyEnergyPanel.energyVfxTimer = 0.0f;
     }
 }

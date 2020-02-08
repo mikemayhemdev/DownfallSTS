@@ -1,21 +1,16 @@
 package theHexaghost.potions;
 
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
 import theHexaghost.actions.ExtinguishAction;
-import theHexaghost.powers.BurnPower;
 
 
 public class DoubleChargePotion extends CustomPotion {
@@ -46,7 +41,7 @@ public class DoubleChargePotion extends CustomPotion {
             AbstractDungeon.actionManager.addToBottom(new ExtinguishAction(GhostflameHelper.activeGhostFlame));
             AbstractDungeon.actionManager.addToBottom(new ChargeAction(GhostflameHelper.activeGhostFlame));
         }
-       }
+    }
 
 
     public CustomPotion makeCopy() {

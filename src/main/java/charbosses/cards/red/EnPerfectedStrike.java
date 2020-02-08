@@ -1,24 +1,24 @@
 package charbosses.cards.red;
 
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import java.util.*;
-import com.megacrit.cardcrawl.characters.*;
-import com.megacrit.cardcrawl.monsters.*;
-
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.core.*;
-
-public class EnPerfectedStrike extends AbstractBossCard
-{
+public class EnPerfectedStrike extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Perfected Strike";
     private static final CardStrings cardStrings;
-    
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Perfected Strike");
+    }
+
     public EnPerfectedStrike() {
         super(ID, EnPerfectedStrike.cardStrings.NAME, "red/attack/perfected_strike", 2, EnPerfectedStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 6;
@@ -26,7 +26,7 @@ public class EnPerfectedStrike extends AbstractBossCard
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTags.STRIKE);
     }
-    
+
     public static int countCards() {
         int count = 0;
         for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
@@ -46,16 +46,16 @@ public class EnPerfectedStrike extends AbstractBossCard
         }
         return count;
     }
-    
+
     public static boolean isStrike(final AbstractCard c) {
         return c.hasTag(CardTags.STRIKE);
     }
-    
+
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
-    
+
     @Override
     public void calculateCardDamage(final AbstractMonster mo) {
         final int realBaseDamage = this.baseDamage;
@@ -64,7 +64,7 @@ public class EnPerfectedStrike extends AbstractBossCard
         this.baseDamage = realBaseDamage;
         this.isDamageModified = (this.damage != this.baseDamage);
     }
-    
+
     @Override
     public void applyPowers() {
         final int realBaseDamage = this.baseDamage;
@@ -73,12 +73,12 @@ public class EnPerfectedStrike extends AbstractBossCard
         this.baseDamage = realBaseDamage;
         this.isDamageModified = (this.damage != this.baseDamage);
     }
-    
+
     @Override
     public AbstractCard makeCopy() {
         return new EnPerfectedStrike();
     }
-    
+
     @Override
     public void upgrade() {
         if (!this.upgraded) {
@@ -87,9 +87,5 @@ public class EnPerfectedStrike extends AbstractBossCard
             this.rawDescription = EnPerfectedStrike.cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
-    }
-    
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Perfected Strike");
     }
 }

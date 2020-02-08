@@ -7,10 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.ChargeAction;
 import theHexaghost.actions.DiscoverEtherealAction;
-import theHexaghost.actions.ExtinguishAction;
 
 
 public class EctoCoolerPotion extends CustomPotion {
@@ -40,7 +37,7 @@ public class EctoCoolerPotion extends CustomPotion {
     public void use(AbstractCreature target) {
 
         AbstractDungeon.actionManager.addToBottom(new DiscoverEtherealAction(this.potency));
-       }
+    }
 
 
     public CustomPotion makeCopy() {
