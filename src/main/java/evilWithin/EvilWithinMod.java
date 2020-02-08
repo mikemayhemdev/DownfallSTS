@@ -40,11 +40,6 @@ public class EvilWithinMod implements
     };
     public static ReplaceData[] wordReplacements;
 
-    public static void initialize()
-    {
-        new EvilWithinMod();
-    }
-
     public EvilWithinMod() {
         BaseMod.subscribe(this);
     }
