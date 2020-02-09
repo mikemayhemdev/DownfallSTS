@@ -196,7 +196,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public int getAscensionMaxHPLoss() {
-        return 10;
+        return 8;
     }
 
     public BitmapFont getEnergyNumFont() {

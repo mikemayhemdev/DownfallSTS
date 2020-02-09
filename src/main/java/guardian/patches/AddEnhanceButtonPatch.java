@@ -25,7 +25,8 @@ public class AddEnhanceButtonPatch {
                 active = false;
             }
             if (AbstractDungeon.player instanceof GuardianCharacter || active) {
-                ___buttons.add(new EnhanceBonfireOption(active));
+                GuardianMod.socketBonfireOption = new EnhanceBonfireOption(active);
+                ___buttons.add(GuardianMod.socketBonfireOption);
             }
         }
     }

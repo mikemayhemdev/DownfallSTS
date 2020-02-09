@@ -195,7 +195,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME, DESCRIPTION, 70, 70, 4, 99, 5, this,
+        return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 4, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }
@@ -214,7 +214,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public AbstractCard getStartCardForEvent() {
-        return new Strike_Slimebound();
+        return new Split();
     }
 
     public Color getCardTrailColor() {
@@ -222,7 +222,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public int getAscensionMaxHPLoss() {
-        return 10;
+        return 6;
     }
 
     public BitmapFont getEnergyNumFont() {
