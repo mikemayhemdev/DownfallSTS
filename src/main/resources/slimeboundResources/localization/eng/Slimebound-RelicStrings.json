@@ -93,5 +93,12 @@
     "DESCRIPTIONS": [
       "Gain [E] at the start of your turn. #ySplitting costs #b1 more HP and Max HP."
     ]
+  },
+  "Slimebound:StickyStick": {
+    "NAME": "Sticky Stick",
+    "FLAVOR": "Hey, it stuck to your body.",
+    "DESCRIPTIONS": [
+      "Whenever you draw a #rCurse or #yStatus card, draw #b1 card."
+    ]
   }
 }
