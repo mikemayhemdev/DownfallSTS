@@ -17,7 +17,7 @@ import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
 
 
-public class SentryBeam extends AbstractGuardianCard {
+public class SentryBeamNoHover extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SentryBeam");
     public static final String NAME;
     public static final String IMG_PATH = "cards/sentryBeam.png";
@@ -45,7 +45,7 @@ public class SentryBeam extends AbstractGuardianCard {
 
     }
 
-    public SentryBeam() {
+    public SentryBeamNoHover() {
 
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
@@ -55,7 +55,6 @@ public class SentryBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        cardsToPreview = new SentryWaveNoHover();
     }
 
     @Override
@@ -77,7 +76,7 @@ public class SentryBeam extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
         if (AbstractDungeon.player.hasEmptyOrb()) {
-            AbstractGuardianCard newCard = new SentryWaveNoHover();
+            AbstractGuardianCard newCard = new SentryWave();
             newCard.sockets = this.sockets;
             if (this.upgraded) newCard.upgrade();
 
@@ -91,7 +90,7 @@ public class SentryBeam extends AbstractGuardianCard {
 
     public AbstractCard makeCopy() {
 
-        return new SentryBeam();
+        return new SentryBeamNoHover();
 
     }
 
@@ -102,9 +101,6 @@ public class SentryBeam extends AbstractGuardianCard {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = UPGRADED_DESCRIPTION;
-            AbstractCard q = new SentryWave();
-            q.upgrade();
-            cardsToPreview = q;
             this.initializeDescription();
 
         }

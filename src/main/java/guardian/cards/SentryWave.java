@@ -52,7 +52,7 @@ public class SentryWave extends AbstractGuardianCard {
         this.baseMagicNumber = this.magicNumber = DEBUFFCOUNT;
         this.exhaust = true;
         this.socketCount = SOCKETS;
-      //  this.cardsToPreview = new SentryBeam();
+        this.cardsToPreview = new SentryBeamNoHover();
         updateDescription();
         loadGemMisc();
     }
@@ -96,7 +96,7 @@ public class SentryWave extends AbstractGuardianCard {
             //upgradeMagicNumber(UPGRADE_DEBUFF);
             this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
-            AbstractCard q = new SentryBeam();
+            AbstractCard q = new SentryBeamNoHover();
             q.upgrade();
             cardsToPreview = q;
             this.initializeDescription();
