@@ -59,6 +59,7 @@ public class RefractedBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        exhaust = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }
 

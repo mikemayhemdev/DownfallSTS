@@ -293,7 +293,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Refracted Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Can be upgraded any number of times."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Can be upgraded any number of times. NL Exhaust."
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
