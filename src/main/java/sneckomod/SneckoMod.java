@@ -201,6 +201,7 @@ public class SneckoMod implements
         BaseMod.addRelicToCustomPool(new UnknownEgg(), TheSnecko.Enums.SNECKO_CYAN);
         BaseMod.addRelic(new SuperSneckoSoul(), RelicType.SHARED);
         BaseMod.addRelic(new SneckoTalon(), RelicType.SHARED);
+        BaseMod.addRelic(new BlankCard(), RelicType.SHARED);
     }
 
     @Override

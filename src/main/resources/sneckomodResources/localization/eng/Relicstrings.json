@@ -69,5 +69,19 @@
     "DESCRIPTIONS": [
       "Replaces Snecko Eye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
     ]
+  },
+  "sneckomod:SneckoTalon": {
+    "NAME": "Snecko Talon",
+    "FLAVOR": "3 -> 2. 2 -> 1. 1 -> 0. 0 -> X?",
+    "DESCRIPTIONS": [
+      "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1."
+    ]
+  },
+  "sneckomod:BlankCard": {
+    "NAME": "Blank Card",
+    "FLAVOR": "Unknown Rare Power's time to shine.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, play a random card from your deck."
+    ]
   }
 }
