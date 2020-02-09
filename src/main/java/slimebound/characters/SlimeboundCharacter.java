@@ -214,7 +214,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public AbstractCard getStartCardForEvent() {
-        return new Strike_Slimebound();
+        return new Split();
     }
 
     public Color getCardTrailColor() {
@@ -222,7 +222,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public int getAscensionMaxHPLoss() {
-        return 10;
+        return 6;
     }
 
     public BitmapFont getEnergyNumFont() {
