@@ -35,7 +35,7 @@ public class AutomayhemPower extends AbstractGuardianPower {
             this.description = DESCRIPTIONS[0];
 
         } else {
-            this.description = this.amount + DESCRIPTIONS[1];
+            this.description = "#b" + this.amount + DESCRIPTIONS[1];
 
         }
 

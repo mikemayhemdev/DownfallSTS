@@ -13,7 +13,7 @@
       "stasis"
     ],
     "PROPER_NAME": "Stasis",
-    "DESCRIPTION": "A card in Stasis gains a turn counter equal to its cost plus 1. NL Turn counter is reduced by 1 at the start of your turn. NL When the counter reaches 0, it is returned to your hand and becomes 0-cost until played."
+    "DESCRIPTION": "A card in #yStasis gains a turn counter equal to its cost plus #b1. NL Turn counter is reduced by #b1 at the start of your turn. NL When the counter reaches #b0, it is returned to your hand and costs #b0 until played."
   },
   {
     "NAMES": [
@@ -21,7 +21,7 @@
       "gems"
     ],
     "PROPER_NAME": "Gem",
-    "DESCRIPTION": "Gems can be placed into Sockets in cards at a Rest Site. Cannot be upgraded."
+    "DESCRIPTION": "#yGems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
   },
   {
     "PROPER_NAME": "Defensive Mode",
@@ -29,7 +29,7 @@
       "defensive mode",
       "defensive_mode"
     ],
-    "DESCRIPTION": "While in Defensive Mode, you have 3 Thorns, deal 25% less damage, and gain 2 Block when you play a card."
+    "DESCRIPTION": "While in #yDefensive #yMode, you have #b3 #yThorns, deal #b25% less damage, and gain #b2 #yBlock when you play a card."
   },
   {
     "NAMES": [
@@ -37,14 +37,14 @@
       "wards"
     ],
     "PROPER_NAME": "Ward",
-    "DESCRIPTION": "Wards are #b0 cost Block cards which Exhaust."
+    "DESCRIPTION": "#yWards are #b0 cost #yBlock cards which #yExhaust."
   },
   {
     "NAMES": [
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",
-    "DESCRIPTION": "Reduce the turn counter of a card in Stasis by 1. If the card's turn counter is now 0, return it to your hand at 0-cost."
+    "DESCRIPTION": "Reduce the turn counter of a card in #yStasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
   },
   {
     "NAMES": [
@@ -52,7 +52,7 @@
       "packages"
     ],
     "PROPER_NAME": "Package",
-    "DESCRIPTION": "0-cost Exhausting Skill that generates three cards inspired by a chosen Construct of the Spire, and reduces their cost by 1 for this combat."
+    "DESCRIPTION": "0-cost #yExhausting #ySkill that generates three cards inspired by a chosen Construct of the Spire, and reduces their cost by #b1 for this combat."
   },
   {
     "NAMES": [
@@ -60,27 +60,27 @@
       "orb_slam"
     ],
     "PROPER_NAME": "Orb Slam",
-    "DESCRIPTION": "Orb Slams are #b0 cost Attack cards which deal damage twice, and Exhaust."
+    "DESCRIPTION": "#yOrb #ySlams are #b0 cost #yAttack cards which deal damage twice, and #yExhaust."
   },
   {
     "NAMES": [
       "momentary"
     ],
     "PROPER_NAME": "Momentary",
-    "DESCRIPTION": "A Momentary buff effect also adds a debuff effect which causes you to lose the buff's effect at the end of your turn."
+    "DESCRIPTION": "A #yMomentary buff effect also adds a debuff effect which causes you to lose the buff's effect at the end of your turn."
   },
   {
     "NAMES": [
       "volatile"
     ],
     "PROPER_NAME": "Volatile",
-    "DESCRIPTION": "When this card leaves Stasis, Exhaust it instead of returning it to your hand."
+    "DESCRIPTION": "When this card leaves #yStasis, #yExhaust it instead of returning it to your hand."
   },
   {
     "NAMES": [
       "tick"
     ],
     "PROPER_NAME": "Tick",
-    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in Stasis."
+    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yStasis."
   }
 ]

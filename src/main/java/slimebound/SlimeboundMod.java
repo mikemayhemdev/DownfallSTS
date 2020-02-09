@@ -197,7 +197,6 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
             if (source.hasPower(TackleSelfDamagePreventPower.POWER_ID)) {
                 bonus += source.getPower(TackleSelfDamagePreventPower.POWER_ID).amount;
             }
-
         }
         return bonus;
     }
@@ -718,8 +717,6 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
         String powerStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-PowerStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String monsterStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
         String potionStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
         String orbStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));

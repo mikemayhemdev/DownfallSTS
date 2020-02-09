@@ -338,8 +338,8 @@
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! Damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from Goop."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from Goop."
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",

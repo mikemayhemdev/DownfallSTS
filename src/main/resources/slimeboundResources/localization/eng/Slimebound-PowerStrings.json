@@ -2,15 +2,15 @@
   "Slimebound:PotencyPower": {
     "NAME": "Potency",
     "DESCRIPTIONS": [
-      "Increase the damage of your spawned #ySlimes by ",
+      "Increase the damage of your spawned Slimes by #b",
       "."
     ]
   },
   "Slimebound:SlimedPower": {
     "NAME": "Goop",
     "DESCRIPTIONS": [
-      "The next Attack against this enemy deals ",
-      " more damage and heals ",
+      "The next #yAttack against this enemy deals #b",
+      " more damage and heals #b",
       " HP, consuming all #yGoop.  Half of the stack is removed at end of turn."
     ]
   },
@@ -18,7 +18,7 @@
     "NAME": "Prevent Tackle Damage",
     "DESCRIPTIONS": [
       "You do not take damage from the next #b",
-      " Tackles you play."
+      " #yTackles you play."
     ]
   },
   "Slimebound:SplitDailyTriggerPower": {
@@ -37,63 +37,63 @@
   "Slimebound:BuffAttackSlimesPower": {
     "NAME": "Upgrade: Bruiser",
     "DESCRIPTIONS": [
-      "Bruiser Slimes deal ",
+      "#yBruiser Slimes deal #b",
       " more damage."
     ]
   },
   "Slimebound:BuffPoisonSlimesPower": {
     "NAME": "Upgrade: Acid",
     "DESCRIPTIONS": [
-      "Poisoning Slimes apply ",
-      " more Poison."
+      "#yPoisoning Slimes apply #b",
+      " more #yPoison."
     ]
   },
   "Slimebound:BuffSlimingSlimesPower": {
     "NAME": "Upgrade: Mire",
     "DESCRIPTIONS": [
-      "Sliming Slimes apply ",
-      " more Goop."
+      "#ySliming Slimes apply #b",
+      " more #yGoop."
     ]
   },
   "Slimebound:BuffShieldSlimesPower": {
     "NAME": "Upgrade: Leeching",
     "DESCRIPTIONS": [
-      "Leeching Slimes deal ",
+      "#yLeeching Slimes deal #b",
       " more damage."
     ]
   },
   "Slimebound:HexSlimePerTurnPower": {
     "NAME": "Hex Power",
     "DESCRIPTIONS": [
-      "Spawn a Ghostflame slime at the start of your next turn.",
-      "Spawn a Ghostflame slime at the start of your next ",
+      "Spawn a #yGhostflame slime at the start of your next turn.",
+      "Spawn a #yGhostflame slime at the start of your next #b",
       " turns."
     ]
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
     "DESCRIPTIONS": [
-      "Prevent the next time you would be damaged by an enemy Attack, Absorb your oldest slime instead.",
+      "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your oldest Slime instead.",
       "Prevent the next #b",
-      " times you would damaged by an enemy Attack, Absorbing your oldest slime instead."
+      " times you would damaged by an enemy attack, #yAbsorbing your oldest Slime instead."
     ]
   },
   "Slimebound:SplitForLessPower": {
     "NAME": "Efficient Goo",
     "DESCRIPTIONS": [
-      "Splitting costs ",
-      " less HP.  Add ",
-      " random Split card to your hand each turn.",
-      " random Split cards to your hand each turn."
+      "#ySplitting costs #b",
+      " less HP.  Add #b",
+      " random #ySplit card to your hand each turn.",
+      " random #ySplit cards to your hand each turn."
     ]
   },
   "Slimebound:ComboAttackPower": {
     "NAME": "Lead By Example",
     "DESCRIPTIONS": [
-      "The first Attack you play each turn causes your oldest slime to also attack.",
-      "The first ",
-      " Attacks you play each turn causes your oldest slime to also attack.",
-      " NL This effect can be triggered ",
+      "The first #yAttack you play each turn causes your oldest Slime to also attack.",
+      "The first #b",
+      " #yAttacks you play each turn causes your oldest Slime to also attack.",
+      " NL This effect can be triggered #b",
       " more times this turn.",
       " more time this turn.",
       " NL This effect cannot be triggered again this turn."
@@ -102,7 +102,7 @@
   "Slimebound:RetainCardsOneTurnPower": {
     "NAME": "Preparing Cards",
     "DESCRIPTIONS": [
-      "Retain ",
+      "Retain #b",
       " card this turn.",
       " cards this turn."
     ]
@@ -119,47 +119,47 @@
   "Slimebound:SelfFormingGooPower": {
     "NAME": "Self-Forming Goo",
     "DESCRIPTIONS": [
-      "Whenever you lose HP, at the start of your next turn, gain ",
-      " Block and apply ",
-      " Goop to a random enemy.",
-      " Goop to a random enemy ",
+      "Whenever you lose HP, at the start of your next turn, gain #b",
+      " #yBlock and apply #b",
+      " #yGoop to a random enemy.",
+      " #yGoop to a random enemy #b",
       " times."
     ]
   },
   "Slimebound:LoseSlimesPower": {
     "NAME": "Overexert",
     "DESCRIPTIONS": [
-      "Next turn, Absorb all of your spawned slimes.",
-      " turns from now, Absorb all of your spawned slimes."
+      "Next turn, #yAbsorb all of your spawned Slimes.",
+      " turns from now, #yAbsorb all of your spawned Slimes."
     ]
   },
   "Slimebound:TackleDebuffPower": {
     "NAME": "Battered",
     "DESCRIPTIONS": [
-      "Receives ",
-      " more damage from cards containing Tackle."
+      "Receives #b",
+      " more damage from cards containing \"Tackle\"."
     ]
   },
   "Slimebound:LoseThornsPower": {
     "NAME": "Retracting Spikes",
     "DESCRIPTIONS": [
-      "Lose ",
-      " Thorns at the start of your next turn."
+      "Lose #b",
+      " #yThorns at the start of your next turn."
     ]
   },
   "Slimebound:SlimedThornsPower": {
     "NAME": "Living Wall",
     "DESCRIPTIONS": [
-      "Apply ",
-      " Goop to attackers this turn."
+      "Apply #b",
+      " #yGoop to attackers this turn."
     ]
   },
   "Slimebound:PreventSlimeDecayPower": {
     "NAME": "Doused in Slime",
     "DESCRIPTIONS": [
-      "The next time an Attack is used on this enemy, Goop benefits will apply without consuming Goop.",
-      "The next ",
-      " times an Attack is used on this enemy, Goop benefits will apply without consuming Goop."
+      "The next time an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop.",
+      "The next #b",
+      " times an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop."
     ]
   },
   "Slimebound:DuplicatedFormPower": {
@@ -167,30 +167,30 @@
     "DESCRIPTIONS": [
       "The first card you play that targets enemies each turn is played twice.",
       "The first #b",
-      " cards you play that targets enemies each turn are played twice."
+      " cards you play that target enemies each turn are played twice."
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {
     "NAME": "Split",
     "DESCRIPTIONS": [
-      "Max HP is temporarily reduced by ",
+      "Max HP is temporarily reduced by #b",
       "."
     ]
   },
   "Slimebound:DuplicatedFormEnergyPower": {
     "NAME": "Tag-Team",
     "DESCRIPTIONS": [
-      "Gain ",
+      "Gain #b",
       " [E] each turn."
     ]
   },
   "Slimebound:GluttonyPower": {
     "NAME": "Gluttony",
     "DESCRIPTIONS": [
-      "The first time you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
+      "The first time you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
       "The first ",
-      " times you Attack a Gooped enemy each turn, add a random Lick card to your hand.",
-      " NL This effect can be triggered ",
+      " times you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
+      " NL This effect can be triggered #b",
       " more times this turn.",
       " more time this turn.",
       " NL This effect cannot be triggered again this turn."
@@ -199,81 +199,81 @@
   "Slimebound:GluttonyPowerUpgraded": {
     "NAME": "Gluttony+",
     "DESCRIPTIONS": [
-      "Add ",
-      " random Upgraded Lick card to your hand each turn.",
-      " random Upgraded Lick cards to your hand each turn."
+      "Add #b",
+      " random #yUpgraded #yLick card to your hand each turn.",
+      " random #yUpgraded #yLick cards to your hand each turn."
     ]
   },
   "Slimebound:PoisonThornsPower": {
     "NAME": "Acidic Goop",
     "DESCRIPTIONS": [
-      "Apply ",
-      " Poison when you Attack an enemy who has Goop."
+      "Apply #b",
+      " #yPoison when you #yAttack an enemy who has #yGoop."
     ]
   },
   "Slimebound:SlimeRitualPower": {
     "NAME": "Ritual",
     "DESCRIPTIONS": [
-      "Gain ",
-      " Strength at the start of each turn."
+      "Gain #b",
+      " #yStrength at the start of each turn."
     ]
   },
   "Slimebound:RecyclingPower": {
     "NAME": "Recycling",
     "DESCRIPTIONS": [
       "At the start of your turn, return #b",
-      " random 0-Cost card from your exhaust pile to your hand.",
-      " random 0-Cost cards from your exhaust pile to your hand."
+      " random 0-Cost card from your #yexhaust pile to your hand.",
+      " random 0-Cost cards from your #yexhaust pile to your hand."
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
     "NAME": "Recycling+",
     "DESCRIPTIONS": [
-      "Heal ",
-      " HP and draw a card when you Exhaust a 0-cost card."
+      "Heal #b",
+      " HP and draw a card when you #yExhaust a 0-cost card."
     ]
   },
   "Slimebound:AcidTonguePower": {
     "NAME": "Acid Tongue",
     "DESCRIPTIONS": [
-      "Apply ",
-      " Poison whenever you apply Goop."
+      "Apply #b",
+      " #yPoison whenever you apply #yGoop."
     ]
   },
   "Slimebound:AcidTonguePowerUpgraded": {
     "NAME": "Slimy Tongue",
     "DESCRIPTIONS": [
-      "Effects that apply Goop apply ",
+      "Effects that apply #yGoop apply #b",
       " more."
     ]
   },
   "Slimebound:SelfDamageSlimedPower": {
     "NAME": "Stray Goop",
     "DESCRIPTIONS": [
-      "Apply ",
-      " Goop to a random enemy whenever you lose HP."
+      "Apply #b",
+      " #yGoop to a random enemy whenever you lose HP."
     ]
   },
   "Slimebound:TackleBuffPower": {
     "NAME": "Offensive Tackle",
     "DESCRIPTIONS": [
-      "Cards containing Tackle deal ",
+      "Cards containing \"Tackle\" deal #b",
       " more damage to enemies."
     ]
   },
   "Slimebound:PolyBeamAgainPower": {
     "NAME": "Alternating Beam",
     "DESCRIPTIONS": [
-      "Poly Beam will be played at the start of your next turn. ",
-      "Poly Beam will be played at the start of your next ",
+      "#yPoly #yBeam will be played at the start of your next turn. ",
+      "#yPoly #yBeam will be played at the start of your next #b",
       " turns."
     ]
   },
   "Slimebound:PolyBeamAgainPowerUpgraded": {
     "NAME": "Alternating Beam+",
     "DESCRIPTIONS": [
-      "Poly Beam+ will be played at the start of your next turn. ",
-      "Poly Beam+ will be played at the start of your next ",
+      "#yPoly #yBeam+ will be played at the start of your next turn. ",
+      "#yPoly #yBeam+ will be played at the start of your next #b",
       " turns."
     ]
   },
@@ -281,9 +281,9 @@
     "NAME": "Feel Our Pain",
     "DESCRIPTIONS": [
       "The next time you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
-      "The next ",
+      "The next #b",
       " times you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
-      " NL This effect can be triggered ",
+      " NL This effect can be triggered #b",
       " more times this turn.",
       " more time this turn.",
       " NL This effect cannot be triggered again this turn."
@@ -292,47 +292,40 @@
   "Slimebound:NextTurnGainStrengthPower": {
     "NAME": "Charging Up",
     "DESCRIPTIONS": [
-      "Gain ",
-      " Strength on your next turn."
+      "Gain #b",
+      " #yStrength on your next turn."
     ]
   },
   "Slimebound:NextTurnGainSlimeCrush": {
     "NAME": "Preparing to Crush",
     "DESCRIPTIONS": [
-      "Gain a SLIME CRUSH on your next turn.",
-      "Gain ",
-      " copies of SLIME CRUSH on your next turn."
+      "Gain a #gSLIME #gCRUSH on your next turn.",
+      "Gain #b",
+      " copies of #gSLIME #gCRUSH on your next turn."
     ]
   },
   "Slimebound:StunnedPower": {
     "NAME": "Completely Exhausted",
     "DESCRIPTIONS": [
       "Skip your next turn.",
-      "Skip your next ",
+      "Skip your next #b",
       " turns."
-    ]
-  },
-  "Slimebound:SearingPower": {
-    "NAME": "Burn",
-    "DESCRIPTIONS": [
-      "Taking ",
-      " damage each turn."
     ]
   },
   "Slimebound:NextTurnGainHyperBeam": {
     "NAME": "Preparing to Beam",
     "DESCRIPTIONS": [
-      "Gain a Hyper Beam on your next turn.",
-      "Gain ",
-      " copies of Hyper Beam on your next turn."
+      "Gain a #yHyper #yBeam on your next turn.",
+      "Gain #b",
+      " copies of #yHyper #yBeam on your next turn."
     ]
   },
   "Slimebound:NextTurnGainDivider": {
     "NAME": "Preparing to Divide",
     "DESCRIPTIONS": [
-      "Gain a Divide on your next turn.",
-      "Gain ",
-      " copies of Divide on your next turn."
+      "Gain a #yDivide on your next turn.",
+      "Gain #b",
+      " copies of #yDivide on your next turn."
     ]
   },
   "Slimebound:StudyAutomatonPower": {
@@ -473,34 +466,34 @@
   "Slimebound:GreedRespawnPower": {
     "NAME": "Greed Recovering",
     "DESCRIPTIONS": [
-      "Greed Ooze will respawn at the end of your turn."
+      "#yGreed #yOoze will respawn at the end of your turn."
     ]
   },
   "Slimebound:ScrapRespawnPower": {
     "NAME": "Scrap Recovering",
     "DESCRIPTIONS": [
-      "Scrap Ooze will respawn at the end of your turn."
+      "#yScrap #yOoze will respawn at the end of your turn."
     ]
   },
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Minion Master",
     "DESCRIPTIONS": [
-      "When your slimes apply Goop or Block, they apply ",
+      "When your slimes apply #yGoop or #yBlock, they apply #b",
       " more."
     ]
   },
   "Slimebound:TackleSelfDamagePreventPower": {
     "NAME": "Reckless",
     "DESCRIPTIONS": [
-      "Cards containing Tackle deal ",
+      "Cards containing \"Tackle\" deal #b",
       " more damage to you."
     ]
   },
   "Slimebound:GoopArmorPower": {
     "NAME": "Goop Armor",
     "DESCRIPTIONS": [
-      "Whenever you Attack an enemy who has Goop, gain ",
-      " Block."
+      "Whenever you #yAttack an enemy who has #yGoop, gain #b",
+      " #yBlock."
     ]
   }
 }

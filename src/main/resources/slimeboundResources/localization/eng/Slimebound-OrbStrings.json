@@ -2,73 +2,73 @@
   "Slimebound:BronzeSlime": {
     "NAME": "Bronze Slime",
     "DESCRIPTION": [
-      "Deals ",
-      " damage at the start of your turn and grants you ",
-      " Block."
+      "Deals #b",
+      " damage at the start of your turn and grants you #b",
+      " #yBlock."
     ]
   },
   "Slimebound:AttackSlime": {
     "NAME": "Bruiser Slime",
     "DESCRIPTION": [
-      "Deals ",
+      "Deals #b",
       " damage at the start of your turn."
     ]
   },
   "Slimebound:ScrapOozeSlime": {
     "NAME": "Scrap Ooze",
     "DESCRIPTION": [
-      "Deals ",
-      " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
+      "Deals #b",
+      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "Greed Ooze",
     "DESCRIPTION": [
-      "Deals ",
-      " damage at the start of your turn. NL Respawns at the end of your turn if Absorbed. NL Does not reduce Max HP."
+      "Deals #b",
+      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
-      "Deals ",
-      " damage at the start of your turn. Gains twice the normal benefit from Potency."
+      "Deals #b",
+      " damage at the start of your turn. Gains twice the normal benefit from #yPotency."
     ]
   },
   "Slimebound:CultistSlime": {
     "NAME": "Cultist Slime",
     "DESCRIPTION": [
-      "Deals ",
-      " damage at the start of your turn, then increases its damage by 1."
+      "Deals #b",
+      " damage at the start of your turn, then increases its damage by #b1."
     ]
   },
   "Slimebound:ShieldSlime": {
     "NAME": "Leeching Slime",
     "DESCRIPTION": [
-      "Deals ",
-      " damage at the start of your turn and grants you ",
-      " Block."
+      "Deals #b",
+      " damage at the start of your turn and grants you #b",
+      " #yBlock."
     ]
   },
   "Slimebound:PoisonSlime": {
     "NAME": "Guerilla Slime",
     "DESCRIPTION": [
-      "Deals ",
+      "Deals #b",
       " damage to ALL enemies at the start of your turn."
     ]
   },
   "Slimebound:SlimingSlime": {
     "NAME": "Mire Slime",
     "DESCRIPTION": [
-      "Deals ",
-      " damage and applies ",
-      " Goop at the start of your turn."
+      "Deals #b",
+      " damage and applies #b",
+      " #yGoop at the start of your turn."
     ]
   },
   "Slimebound:HexSlime": {
     "NAME": "Ghostflame Slime",
     "DESCRIPTION": [
-      "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
+      "Does not attack and is unaffected by Potency. Provides #b1 #yStrength, #b1 #yDexterity, and #b2 #yPotency."
     ]
   }
 }

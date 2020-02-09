@@ -883,8 +883,6 @@ public static void saveData() {
         BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
         String powerStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-PowerStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String monsterStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-MonsterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(MonsterStrings.class, monsterStrings);
         String potionStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
         String orbStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
