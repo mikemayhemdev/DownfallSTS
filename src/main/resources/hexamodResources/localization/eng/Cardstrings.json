@@ -309,8 +309,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "Doomsday",
-    "DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, end your turn and take an extra turn.",
-    "UPGRADE_DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, end your turn and take an extra turn."
+    "DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and all !M! Ghostflames are hexamod:Ignited, take an extra turn.",
+    "UPGRADE_DESCRIPTION": "The next time you hexamod:Ignite the Inferno Ghostflame and at least !M! Ghostflames are hexamod:Ignited, take an extra turn."
   },
   "hexamod:FirstSeal": {
     "NAME": "First Seal",
