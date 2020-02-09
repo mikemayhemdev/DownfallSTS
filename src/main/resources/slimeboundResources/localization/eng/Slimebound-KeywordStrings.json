@@ -6,14 +6,14 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Recombine with a spawned Slime, returning the Max HP it took upon Splitting."
+    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #ySplitting."
   },
   {
     "NAMES": [
       "split"
     ],
     "PROPER_NAME": "Split",
-    "DESCRIPTION": "Lose 3 HP and spawn a Slime minion, who attacks at the start of each turn. While the Slime is alive, your Max HP is reduced by 3."
+    "DESCRIPTION": "Lose #b3 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b3."
   },
   {
     "NAMES": [
@@ -21,7 +21,7 @@
       "gooped"
     ],
     "PROPER_NAME": "Goop",
-    "DESCRIPTION": "The next attack deals 1 more damage per Goop, consuming the Goop effect and healing 2 HP. Half of Goop is removed at end of turn."
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, consuming the #yGoop effect and healing #b2 HP. Half of #yGoop is removed at end of turn."
   },
   {
     "NAMES": [
@@ -44,7 +44,7 @@
       "torch_head_slime"
     ],
     "PROPER_NAME": "Torch Head Slime",
-    "DESCRIPTION": "Attacks for 6 each turn. Gains twice the normal benefit from Potency."
+    "DESCRIPTION": "Attacks for #b6 each turn. Gains twice the normal benefit from #yPotency."
   },
   {
     "NAMES": [
@@ -55,7 +55,7 @@
       "bruiser"
     ],
     "PROPER_NAME": "Bruiser Slime",
-    "DESCRIPTION": "Attacks for 4 each turn."
+    "DESCRIPTION": "Attacks for #b4 each turn."
   },
   {
     "NAMES": [
@@ -63,7 +63,7 @@
       "cultist_slime"
     ],
     "PROPER_NAME": "Cultist Slime",
-    "DESCRIPTION": "Attacks for 6 each turn, then increases it's damage by 1."
+    "DESCRIPTION": "Attacks for #b6 each turn, then increases its damage by #b1."
   },
   {
     "NAMES": [
@@ -74,7 +74,7 @@
       "leeching"
     ],
     "PROPER_NAME": "Leeching Slime",
-    "DESCRIPTION": "Attacks for 2 and grants you 2 Block each turn."
+    "DESCRIPTION": "Attacks for #b2 and grants you #b2 #yBlock each turn."
   },
   {
     "NAMES": [
@@ -85,7 +85,7 @@
       "guerilla"
     ],
     "PROPER_NAME": "Guerilla Slime",
-    "DESCRIPTION": "Attacks for 2 to ALL enemies each turn."
+    "DESCRIPTION": "Attacks for #b2 to ALL enemies each turn."
   },
   {
     "NAMES": [
@@ -96,7 +96,7 @@
       "mire"
     ],
     "PROPER_NAME": "Mire Slime",
-    "DESCRIPTION": "Attacks for 1 and applies 2 Goop each turn."
+    "DESCRIPTION": "Attacks for #b1 and applies #b2 #yGoop each turn."
   },
   {
     "NAMES": [
@@ -104,7 +104,7 @@
       "plated_armor"
     ],
     "PROPER_NAME": "Plated Armor",
-    "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
+    "DESCRIPTION": "Increases #yBlock each turn. Reduced when you take damage."
   },
   {
     "NAMES": [
@@ -112,14 +112,14 @@
       "bronze_slime"
     ],
     "PROPER_NAME": "Bronze Slime",
-    "DESCRIPTION": "Attacks for 6 and grants you 4 Block each turn."
+    "DESCRIPTION": "Attacks for #b6 and grants you #b4 #yBlock each turn."
   },
   {
     "NAMES": [
       "lick"
     ],
     "PROPER_NAME": "Lick",
-    "DESCRIPTION": "0-cost cards that apply Goop a variety of secondary effects."
+    "DESCRIPTION": "0-cost cards that apply #yGoop with a variety of secondary effects."
   },
   {
     "NAMES": [
@@ -127,28 +127,28 @@
       "ghostflame_slime"
     ],
     "PROPER_NAME": "Ghostflame Slime",
-    "DESCRIPTION": "Does not attack and is unaffected by Potency. Provides 1 Strength, 1 Dexterity, and 2 Potency."
+    "DESCRIPTION": "Does not attack and is unaffected by Potency. Provides #b1 #yStrength, #b1 Dexterity, and #b2 #yPotency."
   },
   {
     "NAMES": [
       "morph"
     ],
     "PROPER_NAME": "Morph",
-    "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs 1 less."
+    "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs #b1 less."
   },
   {
     "NAMES": [
       "slow"
     ],
     "PROPER_NAME": "Slow",
-    "DESCRIPTION": "Receives 10% more damage per card played in a turn."
+    "DESCRIPTION": "Receives #b10% more damage per card played in a turn."
   },
   {
     "NAMES": [
       "tackle"
     ],
     "PROPER_NAME": "Tackle",
-    "DESCRIPTION": "High-damage Attacks that also deal a small amount of damage to you."
+    "DESCRIPTION": "High-damage #yAttacks that also deal a small amount of damage to you."
   },
   {
     "NAMES": [
@@ -163,27 +163,27 @@
       "divide"
     ],
     "PROPER_NAME": "Divide",
-    "DESCRIPTION": "1-cost Skill. NL Split into a Bruiser or Acid slime (both if upgraded). NL Exhaust."
+    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yBruiser or #yAcid slime (both if upgraded). NL #yExhaust."
   },
   {
     "NAMES": [
       "conquer"
     ],
     "PROPER_NAME": "Conquer",
-    "DESCRIPTION": "1-cost Attack. NL Deal 10 damage, plus 1 damage (2 damage if upgraded) for each spawned Slime. NL Exhaust"
+    "DESCRIPTION": "1-cost #yAttack. NL Deal #b10 damage, plus #b1 damage ( [REMOVE_SPACE]#b2 damage if upgraded) for each spawned Slime. NL Exhaust."
   },
   {
     "NAMES": [
       "serve"
     ],
     "PROPER_NAME": "Serve",
-    "DESCRIPTION": "1-cost Skill. NL Split into a Leeching or Mire slime (both if upgraded). NL Exhaust."
+    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yLeeching or #yMire slime (both if upgraded). NL #yExhaust."
   },
   {
     "NAMES": [
       "protect"
     ],
     "PROPER_NAME": "Protect",
-    "DESCRIPTION": "1-cost Skill. NL Gain 8 Block, plus 1 Block (2 Block if upgraded) for each spawned Slime. NL Exhaust"
+    "DESCRIPTION": "1-cost Skill. NL Gain #b8 #yBlock, plus #b1 Block ( [REMOVE_SPACE]#b2 #yBlock if upgraded) for each spawned Slime. NL #yExhaust."
   }
 ]

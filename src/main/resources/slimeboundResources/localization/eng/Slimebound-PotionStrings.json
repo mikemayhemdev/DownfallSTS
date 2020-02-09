@@ -3,21 +3,21 @@
     "NAME": "Jar of Slime",
     "DESCRIPTIONS": [
       "Apply #b",
-      " Goop."
+      " #yGoop."
     ]
   },
   "Slimebound:SlimyTonguePotion": {
     "NAME": "Slimy Elixir",
     "DESCRIPTIONS": [
-      "Whenever an effect applies Goop, apply #b",
+      "Whenever an effect applies #yGoop, apply #b",
       " more."
     ]
   },
   "Slimebound:SpawnSlimePotion": {
     "NAME": "Army in a Bottle",
     "DESCRIPTIONS": [
-      "Gain Slime Slots until you have 3. NL Spawn a Leeching, Mire, and Guerilla slime. They do not cost HP.",
-      "Gain Slime Slots until you have 6. NL Spawn 2 Leeching, 2 Mire, and 2 Guerilla slimes. They do not cost HP."
+      "Gain Slime slots until you have #b3. NL Spawn a #yLeeching, #yMire, and #yGuerilla slime. They do not cost HP.",
+      "Gain Slime slots until you have #b6. NL Spawn #b2 #yLeeching, #b2 #yMire, and #b2 #yGuerilla slimes. They do not cost HP."
     ]
   },
   "Slimebound:ThreeZeroPotion": {

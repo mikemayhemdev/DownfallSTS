@@ -56,7 +56,7 @@ public class LoseSlimesPower extends AbstractPower {
 
 
         if (this.amount > 1) {
-            this.description = this.amount + DESCRIPTIONS[1];
+            this.description = "#b" + this.amount + DESCRIPTIONS[1];
 
         } else {
             this.description = DESCRIPTIONS[0];

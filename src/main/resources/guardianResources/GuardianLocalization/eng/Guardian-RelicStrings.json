@@ -3,105 +3,105 @@
     "NAME": "Mode Shifter",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "When you lose 10 HP, gain 3 Defensive Mode and 15 Block. NL When activated, Block will not be removed at the start of your next turn. NL Each activation increases the amount of HP loss required to activate again by 5."
+      "When you lose #b10 HP, gain #b3 #yDefensive_Mode and #b15 #yBlock. NL When activated, #yBlock will not be removed at the start of your next turn. NL Each activation increases the amount of HP loss required to activate again by #b5."
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rMode #rShifter. NL Begin each combat with 5 Defensive Mode."
+      "Replaces #rMode #rShifter. NL Begin each combat with #b5 #yDefensive_Mode."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "Bronze Armor Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "When you use a card while in Defensive Mode, gain 1 more Block."
+      "When you use a card while in #yDefensive_Mode, gain #b1 more Block."
     ]
   },
   "Guardian:GemCopier": {
     "NAME": "Gem Tumbler",
     "FLAVOR": "Only the most pristine will do.",
     "DESCRIPTIONS": [
-      "When you play a Gem card, play a copy of it."
+      "When you play a #yGem card, play a copy of it."
     ]
   },
   "Guardian:PocketSentry": {
     "NAME": "Pocket Sentry",
     "FLAVOR": "Sentry Mode active. Target acquired. No hard feelings.",
     "DESCRIPTIONS": [
-      "At the start of each turn, alternates between: NL Deal ",
-      " damage to a random enemy. NL Apply 1 Weak to ALL enemies."
+      "At the start of each turn, alternates between: NL Deal #b",
+      " damage to a random enemy. NL Apply #b1 #yWeak to ALL enemies."
     ]
   },
   "Guardian:SackOfGems": {
     "NAME": "Sack of Gems",
     "FLAVOR": "Ooh... shiny!",
     "DESCRIPTIONS": [
-      "Upon pickup, add 5 random Gems to your deck."
+      "Upon pickup, add #b5 random #yGems to your deck."
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "Construct's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest prototypes.",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in Stasis, choose 1 of 3 cards to place into Stasis."
+      "If you end your turn with no cards in #yStasis, choose #b1 of #b3 cards to place into #yStasis."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
     "NAME": "Tiny Police Box",
     "FLAVOR": "It's bigger on the inside...",
     "DESCRIPTIONS": [
-      "Gain 2 Stasis slots."
+      "Start each combat with #b2 additional #yStasis slots."
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
     "NAME": "Evacuation Plans",
     "FLAVOR": "Instructions for escaping the Spire.  Best not to let them fall into the wrong hands.",
     "DESCRIPTIONS": [
-      "On pickup, lose 2 Stasis slots. NL Gain [E] at the start of your turn."
+      "On pickup, lose #b2 #yStasis slots. NL Gain [E] at the start of your turn."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo Chamber",
     "FLAVOR": "Things always seem better coming out than they did going in.",
     "DESCRIPTIONS": [
-      "When a card enters Stasis, Upgrade it."
+      "When a card enters #yStasis, #yUpgrade it."
     ]
   },
   "Guardian:BottledStasis": {
     "NAME": "Bottled Black Hole",
     "FLAVOR": "Somewhere, something incredible is waiting to be known.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a #yCard. Start each combat with this card in Stasis.",
+      "Upon pickup, choose a card. Start each combat with this card in #yStasis.",
       "Choose a card for ",
       "Start each combat with ",
-      " in Stasis."
+      " in #yStasis."
     ]
   },
   "Guardian:StasisEgg": {
     "NAME": "Quantum Chamber",
     "FLAVOR": "You get the chicken by hatching the egg, not by smashing it.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a #yCard. Start each combat with this card removed from your deck. At the start of your 4th turn, return it and two copies of it to your hand.",
+      "Upon pickup, choose a card. Start each combat with this card removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand.",
       "Choose a card for ",
       "Start each combat with ",
-      " removed from your deck. At the start of your 4th turn, return it and two copies of it to your hand."
+      " removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand."
     ]
   },
   "Guardian:TickHelperRelic": {
     "NAME": "Cooling Fluid",
     "FLAVOR": "Hazardous. Do not consume.",
     "DESCRIPTIONS": [
-      "When a card with a Tick effect enters Stasis, increase it's turn counter by 2."
+      "When a card with a #yTick effect enters #yStasis, increase its turn counter by #b2."
     ]
   },
   "Guardian:PickAxe": {
     "NAME": "Rhapsody Co. Mining Pick",
     "FLAVOR": "With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them.",
     "DESCRIPTIONS": [
-      "You can #gMine for two #yGems at up to 3 Rest Sites."
+      "You can now #gMine for #b2 #yGems at Rest Sites (up to #b3 times)."
     ]
   }
 }
