@@ -20,8 +20,10 @@ public class ArchetypeBaseIronclad extends AbstractBossDeckArchetype {
     @Override
     public void initialize(){
         //Define Class Starter Deck
-        for (int i=0; i < 5; i++) {
+        for (int i=0; i < 5; ++i) {
             addToStarterDeck(new EnStrikeRed());
+        }
+        for (int i = 0; i < 4; ++i) {
             addToStarterDeck(new EnDefendRed());
         }
         addToStarterDeck(new EnBash());
