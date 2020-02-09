@@ -56,7 +56,7 @@ public class SuperSneckoSoul extends CustomRelic {
         int i = 0;
         for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
             if (q instanceof AbstractUnknownCard) {
-                i++;
+                i += 2;
             }
         }
         AbstractDungeon.player.increaseMaxHp(i, true);

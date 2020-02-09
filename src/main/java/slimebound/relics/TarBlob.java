@@ -19,7 +19,7 @@ public class TarBlob extends CustomRelic {
 
     public TarBlob() {
         super(ID, new Texture(slimebound.SlimeboundMod.getResourcePath(IMG_PATH)), new Texture(slimebound.SlimeboundMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.RARE, LandingSound.MAGICAL);
+                RelicTier.BOSS, LandingSound.MAGICAL);
         this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
     }
 
