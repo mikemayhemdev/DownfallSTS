@@ -46,10 +46,14 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
 	public AbstractCharbossRelic(AbstractRelic baseRelic) {
 		super(baseRelic.relicId, baseRelic.imgUrl, baseRelic.tier, LandingSound.CLINK);
 		this.baseRelic = baseRelic;
+        isSeen = true;
+        UnlockTracker.markRelicAsSeen(this.relicId);
 	}
 	public AbstractCharbossRelic(AbstractRelic baseRelic, RelicTier tier) {
 		super(baseRelic.relicId, baseRelic.imgUrl, tier, LandingSound.CLINK);
 		this.baseRelic = baseRelic;
+        isSeen = true;
+        UnlockTracker.markRelicAsSeen(this.relicId);
 	}
 
 	private static float START_X;
