@@ -64,11 +64,6 @@ public class StasisOrb extends AbstractOrb {
         if (this.basePassiveAmount < 1) {
             this.basePassiveAmount = this.passiveAmount = 1;
         }
-        if (this.stasisCard.hasTag(GuardianMod.TICK) && AbstractDungeon.player.hasRelic(TickHelperRelic.ID)) {
-            this.basePassiveAmount = this.passiveAmount = this.basePassiveAmount + 2;
-            AbstractDungeon.player.getRelic(TickHelperRelic.ID).flash();
-
-        }
         this.baseEvokeAmount = this.basePassiveAmount;
         this.evokeAmount = this.passiveAmount;
         card.targetAngle = 0F;
