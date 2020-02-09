@@ -33,10 +33,17 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
             if (AbstractDungeon.player.drawPile.contains(this) || AbstractDungeon.player.hand.contains(this) || AbstractDungeon.player.discardPile.contains(this) || AbstractDungeon.player.exhaustPile.contains(this)) {
                 this.slimed += SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
             }
-
         }
         if (this.slimed > this.baseSlimed || amount > 0) this.isSlimedModified = true;
+    }
 
+    @Override
+    public void resetAttributes() {
+        super.resetAttributes();
+        selfDamage = baseSelfDamage;
+        isSelfDamageModified = false;
+        slimed = baseSlimed;
+        isSlimedModified = false;
     }
 
     public void upgradeLickSlimed(int amount) {
