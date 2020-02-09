@@ -62,5 +62,12 @@
     "DESCRIPTIONS": [
       "#ysneckomod:Unknown cards in card rewards are #yUpgraded."
     ]
+  },
+  "sneckomod:SuperSneckoEye": {
+    "NAME": "Super Snecko Eye",
+    "FLAVOR": "0121012",
+    "DESCRIPTIONS": [
+      "Replaces Snecko Eye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+    ]
   }
 }
