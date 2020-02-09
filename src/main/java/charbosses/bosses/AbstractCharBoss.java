@@ -115,7 +115,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.generateAll();
         super.init();
 		this.preBattlePrep();
-		this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * (1 + ((AbstractDungeon.actNum - 1) * 0.5F))));
+		this.chosenArchetype.logger.info("Boss initial HP pre - Act Bonus: " + this.maxHealth);
+        this.chosenArchetype.logger.info("Boss bonus HP: " + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
+		this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
 		AbstractCharBoss.finishedSetup = true;
 	}
 	@Override

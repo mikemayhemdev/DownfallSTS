@@ -61,8 +61,10 @@ public class CBR_Vampires extends AbstractCharbossRelic
         }
 
         AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
-        this.hpLoss = MathUtils.floor(AbstractCharBoss.boss.maxHealth * 0.75F);
-        AbstractCharBoss.boss.decreaseMaxHealth(MathUtils.floor(AbstractCharBoss.boss.maxHealth * 0.75F));
+        this.hpLoss = MathUtils.floor(AbstractCharBoss.boss.maxHealth * 0.3F);
+        AbstractBossDeckArchetype.logger.info("Boss's modified max HP is " + this.hpLoss);
+        AbstractCharBoss.boss.decreaseMaxHealth(MathUtils.floor(AbstractCharBoss.boss.maxHealth * 0.3F));
+        AbstractBossDeckArchetype.logger.info("Boss's new max HP is " + AbstractCharBoss.boss.maxHealth);
         getUpdatedDescription();
     }
 
