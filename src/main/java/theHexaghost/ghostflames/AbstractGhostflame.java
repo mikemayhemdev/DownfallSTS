@@ -29,7 +29,7 @@ public abstract class AbstractGhostflame {
     public AbstractGhostflame(float x, float y) {
         lx = x;
         ly = y;
-        hitbox = new Hitbox(x, y, 64 * Settings.scale, 64 * Settings.scale);
+        hitbox = new Hitbox(x, y, 80 * Settings.scale, 80 * Settings.scale);
         graphicalRender = new MyOrb(x, y, this, hitbox);
     }
 

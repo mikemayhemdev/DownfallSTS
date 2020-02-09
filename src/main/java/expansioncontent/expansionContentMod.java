@@ -11,10 +11,7 @@ Daily/Custom Run modifiers.
 
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditKeywordsSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -28,12 +25,16 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import expansioncontent.cards.*;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
+import guardian.characters.GuardianCharacter;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.characters.SlimeboundCharacter;
+import theHexaghost.TheHexaghost;
 import theHexaghost.util.CardIgnore;
 import theHexaghost.util.CardNoSeen;
 
@@ -50,7 +51,8 @@ public class expansionContentMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
-        EditKeywordsSubscriber {
+        EditKeywordsSubscriber,
+        StartGameSubscriber {
 
     @SpireEnum
     public static AbstractCard.CardTags STUDY_HEXAGHOST;
@@ -178,10 +180,27 @@ public class expansionContentMod implements
     @Override
     public void receiveEditStrings() {
         BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/Cardstrings.json");
-
         BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
         BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
+    }
 
+    @Override
+    public void receiveStartGame() {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+            AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
+            AbstractDungeon.colorlessCardPool.removeCard(SlimeTackle.ID);
+            AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
+        }
+        if (AbstractDungeon.player instanceof TheHexaghost) {
+            AbstractDungeon.colorlessCardPool.removeCard(GhostWheel.ID);
+            AbstractDungeon.colorlessCardPool.removeCard(Sear.ID);
+            AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
+        }
+        if (AbstractDungeon.player instanceof GuardianCharacter) {
+            AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
+            AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
+            AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
+        }
     }
 
     @Override
