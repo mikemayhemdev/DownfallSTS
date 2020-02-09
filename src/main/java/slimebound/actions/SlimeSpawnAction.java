@@ -14,6 +14,7 @@ import slimebound.cards.OneTwoCombo;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.powers.DuplicatedFormNoHealPower;
+import slimebound.relics.TarBlob;
 
 
 public class SlimeSpawnAction extends AbstractGameAction {
@@ -53,6 +54,9 @@ public class SlimeSpawnAction extends AbstractGameAction {
         this.upgraded = upgraded;
         this.SelfDamage = SelfDamage;
         this.currentAmount = 3;
+        if (AbstractDungeon.player.hasRelic(TarBlob.ID)) {
+            currentAmount++;
+        }
 
 
         this.count = count;
@@ -106,7 +110,10 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
                     //SlimeboundMod.logger.info("Reducing max HP");
                     int MaxHPActuallyLost = 3;
-                    if (AbstractDungeon.player.maxHealth <= 3) {
+                    if (AbstractDungeon.player.hasRelic(TarBlob.ID)) MaxHPActuallyLost++;
+                    int q = 3;
+                    if (AbstractDungeon.player.hasRelic(TarBlob.ID)) q++;
+                    if (AbstractDungeon.player.maxHealth <= q) {
                         MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;
                     }
 

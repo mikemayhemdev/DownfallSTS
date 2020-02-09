@@ -360,6 +360,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addRelicToCustomPool(new GreedOozeRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new DailySplitModRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new SelfDamagePreventRelic(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new TarBlob(), AbstractCardEnum.SLIMEBOUND);
 
 
         shareableRelics.add(new PreparedRelic());

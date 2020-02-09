@@ -10,7 +10,8 @@
   },
   {
     "NAMES": [
-      "split"
+      "split",
+      "splitting"
     ],
     "PROPER_NAME": "Split",
     "DESCRIPTION": "Lose #b3 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b3."
