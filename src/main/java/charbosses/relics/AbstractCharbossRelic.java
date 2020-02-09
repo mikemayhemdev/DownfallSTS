@@ -1,6 +1,10 @@
 package charbosses.relics;
 
+import charbosses.bosses.AbstractBossDeckArchetype;
+import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
@@ -8,15 +12,37 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+
+import java.util.ArrayList;
 
 public abstract class AbstractCharbossRelic extends AbstractRelic {
 
 	public AbstractCharBoss owner;
 	private AbstractRelic baseRelic;
-	
+
 	public AbstractCharbossRelic(String setId, String imgName, RelicTier tier, LandingSound sfx) {
 		super(setId, imgName, tier, sfx);
+        isSeen = true;
+        UnlockTracker.markRelicAsSeen(this.relicId);
 	}
+
+
+    public AbstractCharbossRelic(String setId, RelicTier tier, LandingSound sfx, Texture texture) {
+        super(setId, "", tier, sfx);
+        texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        this.setTexture(texture);
+
+        isSeen = true;
+        UnlockTracker.markRelicAsSeen(this.relicId);
+    }
+
+    public void setTexture(Texture t) {
+        this.img = t;
+        this.largeImg = t;
+        this.outlineImg = t;
+    }
+
 	public AbstractCharbossRelic(AbstractRelic baseRelic) {
 		super(baseRelic.relicId, baseRelic.imgUrl, baseRelic.tier, LandingSound.CLINK);
 		this.baseRelic = baseRelic;
@@ -30,7 +56,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
 	private static float START_Y;
 	private static float PAD_X;
 
-    
+
     public void reorganizeObtain(final AbstractCharBoss p, final int slot, final boolean callOnEquip, final int relicAmount) {
     	this.owner = p;
         this.isDone = true;
@@ -46,7 +72,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             this.relicTip();
         }
     }
-    
+
     public void instantObtain(final AbstractCharBoss p, final int slot, final boolean callOnEquip) {
     	this.owner = p;
         if (this.relicId.equals("Circlet") && p != null && p.hasRelic("Circlet")) {
@@ -87,6 +113,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     }
     public void instantObtain() {
     	if (this.owner == null) {
+            AbstractBossDeckArchetype.logger.info("OWNER IS NULL!");
     		return;
     	}
         if (this.relicId == "Circlet" && this.owner.hasRelic("Circlet")) {
@@ -111,7 +138,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
         }
         //AbstractDungeon.topPanel.adjustRelicHbs();
     }
-    
+
     public void obtain() {
         if (this.relicId == "Circlet" && this.owner.hasRelic("Circlet")) {
             final AbstractRelic relic;
@@ -137,13 +164,13 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     public int getColumn() {
         return this.owner.relics.indexOf(this);
     }
-	
+
     public void update() {
         //this.updateFlash();
         if (!this.isDone) {
             super.update();
         }
-        else 
+        else
         {
         	if (this.flashTimer != 0.0f) {
                 this.flashTimer -= Gdx.graphics.getDeltaTime();
@@ -162,9 +189,9 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             else {
                 this.hb.hovered = false;
             }*/
-                
+
                 //note to self: delete these comments later
-                
+
             /*if (this.hb.hovered && AbstractDungeon.topPanel.potionUi.isHidden) {
                 this.scale = Settings.scale * 1.25f;
                 CardCrawlGame.cursor.changeType(GameCursor.CursorType.INSPECT);
@@ -176,7 +203,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             updateBosscharRelicPopupClick();
         }
     }
-    
+
 
     private void updateBosscharRelicPopupClick() {
         if (this.hb.hovered && InputHelper.justClickedLeft) {
@@ -189,7 +216,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             this.hb.clickStarted = false;
         }
     }
-    
+
     public void playLandingSFX() {
     	if (this.baseRelic == null) {
     		super.playLandingSFX();
@@ -197,9 +224,13 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     		this.baseRelic.playLandingSFX();
     	}
     }
-    
+
     public boolean canSpawn() {
         return false;
+    }
+
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify){
+
     }
     
     static {

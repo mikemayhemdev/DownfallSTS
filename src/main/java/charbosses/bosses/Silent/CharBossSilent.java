@@ -1,3 +1,4 @@
+/*
 package charbosses.bosses;
 
 import java.util.ArrayList;
@@ -10,7 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.AbstractBossDeckArchetype;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.green.*;
 import charbosses.core.EnemyEnergyManager;
@@ -109,3 +109,4 @@ public class CharBossSilent  extends AbstractCharBoss {
 		
 	}
 }
+*/

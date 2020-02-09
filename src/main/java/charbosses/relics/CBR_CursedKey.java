@@ -1,5 +1,7 @@
 package charbosses.relics;
 
+import charbosses.cards.AbstractBossCard;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.*;
 import com.megacrit.cardcrawl.characters.*;
 import com.megacrit.cardcrawl.rooms.*;
@@ -12,6 +14,8 @@ import com.megacrit.cardcrawl.actions.*;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.core.*;
+
+import java.util.ArrayList;
 
 public class CBR_CursedKey extends AbstractCharbossRelic
 {
@@ -56,10 +60,16 @@ public class CBR_CursedKey extends AbstractCharbossRelic
     public void onEquip() {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         ++energy.energyMaster;
-        AbstractCharBoss.boss.masterDeck.addToTop(AbstractCharBoss.getRandomCurse());
+
+    }
+
+    @Override
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+        AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Cursed Key");
         if (AbstractDungeon.actNum > 2) {
-        	AbstractCharBoss.boss.masterDeck.addToTop(AbstractCharBoss.getRandomCurse());
+            AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Cursed Key");
         }
+
     }
     
     @Override

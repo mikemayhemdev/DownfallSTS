@@ -258,4 +258,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     	}
     	return value;
     }
+
+
+
 }

@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.CharBossIronclad;
+import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.cards.colorless.EnBite;
 import charbosses.cards.curses.EnPain;
 import charbosses.relics.CBR_WarpedTongs;
@@ -80,9 +80,9 @@ public class CharbossHistoryPower extends AbstractPower {
 		
 		@Override
 		public int friendlyToArchetype(String a) {
-			if (a.equals(CharBossIronclad.ARCHETYPE_IC_STRIKE) || a.equals(CharBossIronclad.ARCHETYPE_IC_RAMPAGE)) {
-				return 0;
-			}
+			//if (a.equals(CharBossIronclad.ARCHETYPE_IC_STRIKE) || a.equals(CharBossIronclad.ARCHETYPE_IC_RAMPAGE)) {
+			//	return 0;
+			//}
     		return 1;
     	}
     }
@@ -101,9 +101,9 @@ public class CharbossHistoryPower extends AbstractPower {
 		
 		@Override
 		public int friendlyToArchetype(String a) {
-			if (a.equals(CharBossIronclad.ARCHETYPE_IC_STRIKE) || a.equals(CharBossIronclad.ARCHETYPE_IC_RAMPAGE)) {
-				return 0;
-			}
+			//if (a.equals(CharBossIronclad.ARCHETYPE_IC_STRIKE) || a.equals(CharBossIronclad.ARCHETYPE_IC_RAMPAGE)) {
+			//	return 0;
+			//}
     		return 1;
     	}
     }

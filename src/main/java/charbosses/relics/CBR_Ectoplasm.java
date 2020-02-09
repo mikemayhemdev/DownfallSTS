@@ -42,7 +42,6 @@ public class CBR_Ectoplasm extends AbstractCharbossRelic
     public void onEquip() {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         ++energy.energyMaster;
-        AbstractCharBoss.boss.relicBudget -= (AbstractDungeon.actNum - 1);
     }
     
     @Override
