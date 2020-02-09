@@ -20,15 +20,8 @@ public class PickAxe extends CustomRelic {
     }
 
     @Override
-    public void onEquip() {
-        super.onEquip();
-    }
-
-    @Override
     public String getUpdatedDescription() {
-
         return this.DESCRIPTIONS[0];
-
     }
 
     @Override
@@ -36,8 +29,6 @@ public class PickAxe extends CustomRelic {
         super.onTrigger();
         this.counter--;
         setCounter(this.counter);
-
-
     }
 
     public void setCounter(int counter) {

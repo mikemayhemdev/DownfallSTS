@@ -7,7 +7,9 @@ import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
+import guardian.relics.PickAxe;
 import guardian.ui.EnhanceBonfireOption;
+import guardian.ui.FindGemsOption;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
@@ -27,6 +29,11 @@ public class AddEnhanceButtonPatch {
             if (AbstractDungeon.player instanceof GuardianCharacter || active) {
                 GuardianMod.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GuardianMod.socketBonfireOption);
+            }
+            if (AbstractDungeon.player.hasRelic(PickAxe.ID)) {
+                boolean relicActive;
+                relicActive = AbstractDungeon.player.getRelic(PickAxe.ID).counter != -2;
+                ___buttons.add(new FindGemsOption(relicActive));
             }
         }
     }
