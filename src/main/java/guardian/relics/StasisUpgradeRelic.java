@@ -2,6 +2,7 @@ package guardian.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import guardian.GuardianMod;
@@ -19,11 +20,19 @@ public class StasisUpgradeRelic extends CustomRelic {
         this.largeImg = ImageMaster.loadImage(GuardianMod.getResourcePath(LARGE_IMG_PATH));
     }
 
+    public void onEquip() {
+        ++AbstractDungeon.player.masterMaxOrbs;
+    }
+
+    public void onUnequip() {
+        --AbstractDungeon.player.masterMaxOrbs;
+    }
+
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
-
 
     @Override
     public AbstractRelic makeCopy() {

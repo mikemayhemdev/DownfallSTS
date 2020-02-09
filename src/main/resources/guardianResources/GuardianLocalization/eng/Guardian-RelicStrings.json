@@ -67,7 +67,7 @@
     "NAME": "Cryo Chamber",
     "FLAVOR": "Things always seem better coming out than they did going in.",
     "DESCRIPTIONS": [
-      "When a card enters #yStasis, #yUpgrade it."
+      "Gain #b1 #yStasis slot. When a card enters #yStasis, #yUpgrade it."
     ]
   },
   "Guardian:BottledStasis": {
