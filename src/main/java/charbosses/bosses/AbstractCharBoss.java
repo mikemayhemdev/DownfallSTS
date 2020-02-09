@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -110,10 +111,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 	@Override
 	public void init() {
 		AbstractCharBoss.boss = this;
-        this.setHp(this.maxHealth + (AbstractDungeon.actNum - 1) * 50, this.maxHealth + 20 + (AbstractDungeon.actNum - 1) * 75);
+        this.setHp(this.maxHealth);
         this.generateAll();
         super.init();
 		this.preBattlePrep();
+		this.setHp(MathUtils.floor(this.maxHealth * (1 + ((AbstractDungeon.actNum - 1) * 0.5F))));
 		AbstractCharBoss.finishedSetup = true;
 	}
 	@Override

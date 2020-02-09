@@ -44,10 +44,10 @@ public abstract class AbstractBossDeckArchetype {
 
 	private int[] cardRemovalsPerAct = new int [] {1,1,1};
 	private int[] cardUpgradesPerAct = new int [] {2,2,2};
-	private int[] synergyCardAcquisitionsPerAct = new int [] {1,2,2};
-	private int[] globalCardAcquisitionsPerAct = new int [] {2,1,1};
+	private int[] synergyCardAcquisitionsPerAct = new int [] {1,1,1};
+	private int[] globalCardAcquisitionsPerAct = new int [] {1,1,1};
 	private int[] globalEventPoolAcquisitionsPerAct = new int [] {1,1,1};
-	private int[] globalRelicAcquisitionsPerAct = new int [] {2,2,2};
+	private int[] globalRelicAcquisitionsPerAct = new int [] {1,1,1};
 
 	/// END TUNING CONSTANTS ///
 
