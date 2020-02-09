@@ -24,7 +24,6 @@ import guardian.actions.StasisEvokeIfRoomInHandAction;
 import guardian.cards.*;
 import guardian.powers.BeamBuffPower;
 import guardian.relics.StasisUpgradeRelic;
-import guardian.relics.TickHelperRelic;
 import guardian.vfx.AddCardToStasisEffect;
 import guardian.vfx.SmallLaserEffectColored;
 

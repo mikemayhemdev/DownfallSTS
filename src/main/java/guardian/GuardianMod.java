@@ -476,6 +476,7 @@ public static void saveData() {
 
     @Override
     public void receiveSetUnlocks() {
+
         //TODO - Part of unlocks
 
 
@@ -506,11 +507,8 @@ public static void saveData() {
 
         UnlockTracker.addRelic(StasisUpgradeRelic.ID);
         UnlockTracker.addRelic(StasisCodex.ID);
-        UnlockTracker.addRelic(GemCopier.ID);
 
-        UnlockTracker.addRelic(StasisSlotIncreaseRelic.ID);
         UnlockTracker.addRelic(PocketSentry.ID);
-        UnlockTracker.addRelic(TickHelperRelic.ID);
 
 
     }
@@ -545,9 +543,7 @@ public static void saveData() {
         BaseMod.addRelicToCustomPool(new PocketSentry(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new SackOfGems(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new StasisCodex(), AbstractCardEnum.GUARDIAN);
-        BaseMod.addRelicToCustomPool(new StasisSlotIncreaseRelic(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new StasisSlotReductionRelic(), AbstractCardEnum.GUARDIAN);
-        BaseMod.addRelicToCustomPool(new TickHelperRelic(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new StasisUpgradeRelic(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new guardian.relics.StasisEgg(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new guardian.relics.PickAxe(), AbstractCardEnum.GUARDIAN);
@@ -558,6 +554,7 @@ public static void saveData() {
 
         //shareableRelics.add(new PreparedRelic());
 
+        /*
         if (unlocks2 == null) {
             unlocks2 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
                     StasisSlotIncreaseRelic.ID, PocketSentry.ID, TickHelperRelic.ID
@@ -567,6 +564,7 @@ public static void saveData() {
                     StasisUpgradeRelic.ID, StasisCodex.ID, GemCopier.ID
             );
         }
+        */
 
 
     }
@@ -683,7 +681,7 @@ public static void saveData() {
 
 
         //TODO - Part of unlocks
-
+        /*
         unlocks0 = new CustomUnlockBundle(
                 ShieldCharger.ID, Orbwalk.ID, FierceBash.ID
         );
@@ -695,6 +693,7 @@ public static void saveData() {
         unlocks3 = new CustomUnlockBundle(
                 FuturePlans.ID, StasisEngine.ID, CompilePackage.ID
         );
+        */
 
 
     }
