@@ -4,6 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class LoseEnhanceInTurnsPower extends TwoAmountPower implements CloneablePowerInterface {
+public class LoseEnhanceInTurnsPower extends TwoAmountPower implements CloneablePowerInterface, NonStackablePower {
 
     public static final String POWER_ID = HexaMod.makeID("LoseEnhanceInTurnsPower");
 
