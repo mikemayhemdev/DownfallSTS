@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.expansionContentMod;
-import guardian.vfx.BronzeOrbEffect;
 
 
 public class DashGenerateEvil extends AbstractExpansionCard {
@@ -38,7 +37,7 @@ public class DashGenerateEvil extends AbstractExpansionCard {
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         atb(new GainBlockAction(p, p, this.block));
 
-        atb(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY,true));
+        atb(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, true));
 
 
     }

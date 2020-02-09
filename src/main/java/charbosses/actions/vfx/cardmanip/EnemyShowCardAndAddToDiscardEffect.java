@@ -1,24 +1,26 @@
 package charbosses.actions.vfx.cardmanip;
 
-import com.megacrit.cardcrawl.vfx.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.vfx.combat.*;
-
 import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.CardPoofEffect;
 
-import com.megacrit.cardcrawl.core.*;
-import com.badlogic.gdx.math.*;
-import java.util.*;
-import com.badlogic.gdx.*;
-import com.badlogic.gdx.graphics.g2d.*;
-
-public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect
-{
+public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect {
     private static final float EFFECT_DUR = 1.5f;
-    private AbstractCard card;
     private static final float PADDING;
-    
+
+    static {
+        PADDING = 30.0f * Settings.scale;
+    }
+
+    private AbstractCard card;
+
     public EnemyShowCardAndAddToDiscardEffect(final AbstractCard srcCard, final float x, final float y) {
         this.card = srcCard.makeStatEquivalentCopy();
         this.duration = 1.5f;
@@ -33,7 +35,7 @@ public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect
         }
         AbstractCharBoss.boss.discardPile.addToTop(srcCard);
     }
-    
+
     public EnemyShowCardAndAddToDiscardEffect(final AbstractCard card) {
         this.card = card;
         this.duration = 1.5f;
@@ -46,7 +48,7 @@ public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect
         }
         AbstractCharBoss.boss.discardPile.addToTop(card);
     }
-    
+
     private void identifySpawnLocation(final float x, final float y) {
         int effectCount = 0;
         for (final AbstractGameEffect e : AbstractDungeon.effectList) {
@@ -83,7 +85,7 @@ public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect
             }
         }
     }
-    
+
     @Override
     public void update() {
         this.duration -= Gdx.graphics.getDeltaTime();
@@ -94,19 +96,15 @@ public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect
             //AbstractDungeon.getCurrRoom().souls.discard(this.card, true);
         }
     }
-    
+
     @Override
     public void render(final SpriteBatch sb) {
         if (!this.isDone) {
             this.card.render(sb);
         }
     }
-    
+
     @Override
     public void dispose() {
-    }
-    
-    static {
-        PADDING = 30.0f * Settings.scale;
     }
 }

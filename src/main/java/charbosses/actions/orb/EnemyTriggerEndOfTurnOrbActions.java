@@ -1,15 +1,11 @@
 package charbosses.actions.orb;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.orbs.*;
-
 import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.EmptyOrbSlot;
 
-import java.util.*;
-
-public class EnemyTriggerEndOfTurnOrbActions extends AbstractGameAction
-{
+public class EnemyTriggerEndOfTurnOrbActions extends AbstractGameAction {
     @Override
     public void update() {
         if (!AbstractCharBoss.boss.orbs.isEmpty()) {
@@ -17,7 +13,7 @@ public class EnemyTriggerEndOfTurnOrbActions extends AbstractGameAction
                 o.onEndOfTurn();
             }
             if (AbstractCharBoss.boss.hasRelic("Cables") && !(AbstractCharBoss.boss.orbs.get(0) instanceof EmptyOrbSlot)) {
-            	AbstractCharBoss.boss.orbs.get(0).onEndOfTurn();
+                AbstractCharBoss.boss.orbs.get(0).onEndOfTurn();
             }
         }
         this.isDone = true;

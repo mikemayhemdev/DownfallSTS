@@ -1,13 +1,13 @@
 [
-     {
-      "NAMES": [
-        "socket",
-        "sockets",
-        "socketed"
-      ],
-      "PROPER_NAME": "Socket",
-      "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
-    },
+  {
+    "NAMES": [
+      "socket",
+      "sockets",
+      "socketed"
+    ],
+    "PROPER_NAME": "Socket",
+    "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
+  },
   {
     "NAMES": [
       "stasis"
@@ -32,35 +32,19 @@
     "DESCRIPTION": "While in Defensive Mode, you have 3 Thorns, deal 25% less damage, and gain 2 Block when you play a card."
   },
   {
-  "NAMES": [
-    "ward",
-    "wards"
-  ],
+    "NAMES": [
+      "ward",
+      "wards"
+    ],
     "PROPER_NAME": "Ward",
-  "DESCRIPTION": "Wards are #b0 cost Block cards which Exhaust."
-},
+    "DESCRIPTION": "Wards are #b0 cost Block cards which Exhaust."
+  },
   {
     "NAMES": [
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",
     "DESCRIPTION": "Reduce the turn counter of a card in Stasis by 1. If the card's turn counter is now 0, return it to your hand at 0-cost."
-  },
-  {
-    "NAMES": [
-      "sentry beam",
-      "sentry_beam"
-    ],
-    "PROPER_NAME": "Sentry Beam",
-    "DESCRIPTION": "0-cost Exhausting Attack that deals 5 damage (+2 Upgraded), and places a Sentry Wave into Stasis."
-  },
-  {
-    "NAMES": [
-      "sentry wave",
-      "sentry_wave"
-    ],
-    "PROPER_NAME": "Sentry Wave",
-    "DESCRIPTION": "0-cost Exhausting Skill that applies 1 Weak (to ALL if Upgraded), draws 1 card, and places a Sentry Beam into Stasis."
   },
   {
     "NAMES": [

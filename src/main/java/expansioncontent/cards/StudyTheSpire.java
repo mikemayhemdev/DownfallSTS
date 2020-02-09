@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import expansioncontent.powers.*;
-import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 
@@ -34,7 +32,7 @@ public class StudyTheSpire extends AbstractExpansionCard {
 
         ArrayList<AbstractPower> powers = new ArrayList();
 
-        if (upgraded){
+        if (upgraded) {
             powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
             powers.add(new StudyAwakenedPowerUpgraded(p, p, this.magicNumber));
             powers.add(new StudyShapesPowerUpgraded(p, p, this.magicNumber));

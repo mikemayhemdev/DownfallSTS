@@ -34,5 +34,6 @@ public class AnnouncementEffect extends AbstractGameEffect {
         }
     }
 
-    public void dispose() {}
+    public void dispose() {
+    }
 }

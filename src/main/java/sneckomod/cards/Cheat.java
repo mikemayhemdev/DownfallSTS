@@ -12,7 +12,7 @@ public class Cheat extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, RARE
 
     public Cheat() {
-        super(ID,  0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
     }

@@ -25,15 +25,15 @@ public class UnknownEgg extends CustomRelic {
     public void onEquip() {
         Iterator var1 = AbstractDungeon.combatRewardScreen.rewards.iterator();// 22
 
-        while(true) {
+        while (true) {
             RewardItem reward;
             do {
                 if (!var1.hasNext()) {
                     return;// 29
                 }
 
-                reward = (RewardItem)var1.next();
-            } while(reward.cards == null);// 23
+                reward = (RewardItem) var1.next();
+            } while (reward.cards == null);// 23
 
             for (AbstractCard c : reward.cards) {
                 this.onPreviewObtainCard(c);// 25

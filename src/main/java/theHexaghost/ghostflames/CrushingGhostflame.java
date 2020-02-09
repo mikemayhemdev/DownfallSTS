@@ -15,6 +15,7 @@ import theHexaghost.util.TextureLoader;
 
 public class CrushingGhostflame extends AbstractGhostflame {
 
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
     public int skillsPlayedThisTurn = 0;
 
     public CrushingGhostflame(float x, float y) {
@@ -46,8 +47,6 @@ public class CrushingGhostflame extends AbstractGhostflame {
         if (charged) return "0";
         return String.valueOf(2 - skillsPlayedThisTurn);
     }
-
-    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
 
     @Override
     public Texture getHelperTexture() {

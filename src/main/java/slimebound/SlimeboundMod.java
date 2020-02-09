@@ -469,7 +469,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addCard(new slimebound.cards.MassFeed());
         BaseMod.addCard(new ViciousTackle());
         BaseMod.addCard(new slimebound.cards.LeechEnergy());
-        //BaseMod.addCard(new LeechLife());
+        BaseMod.addCard(new LeechLife());
         BaseMod.addCard(new Equalize());
 
         BaseMod.addCard(new DisruptingSlam());
@@ -490,6 +490,13 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         BaseMod.addCard(new slimebound.cards.Recollect());
         BaseMod.addCard(new slimebound.cards.Icky());
 
+        BaseMod.addCard(new SplitSpecialist());
+        BaseMod.addCard(new SpecialForces());
+        BaseMod.addCard(new SlimeSlap());
+        BaseMod.addCard(new OneTwoCombo());
+        BaseMod.addCard(new ForwardTackle());
+        BaseMod.addCard(new TagTeam());
+        BaseMod.addCard(new RallyTheTroops());
 
         unlocks0 = new CustomUnlockBundle(
                 RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
@@ -587,7 +594,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(MassFeed.ID);
         UnlockTracker.unlockCard(ViciousTackle.ID);
         UnlockTracker.unlockCard(LeechEnergy.ID);
-        //UnlockTracker.unlockCard(LeechLife.ID);
+        UnlockTracker.unlockCard(LeechLife.ID);
         UnlockTracker.unlockCard(Equalize.ID);
 
         UnlockTracker.unlockCard(DisruptingSlam.ID);
@@ -602,6 +609,13 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         UnlockTracker.unlockCard(DivideAndConquerConquer.ID);
         UnlockTracker.unlockCard(DivideAndConquer.ID);
 
+        UnlockTracker.unlockCard(SplitSpecialist.ID);
+        UnlockTracker.unlockCard(SpecialForces.ID);
+        UnlockTracker.unlockCard(SlimeSlap.ID);
+        UnlockTracker.unlockCard(OneTwoCombo.ID);
+        UnlockTracker.unlockCard(ForwardTackle.ID);
+        UnlockTracker.unlockCard(TagTeam.ID);
+        UnlockTracker.unlockCard(RallyTheTroops.ID);
 
         //UnlockTracker.addScore(SlimeboundEnum.SLIMEBOUND, 1000000);
 
@@ -860,14 +874,14 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
                 //Character required//
                 SlimeboundCharacter.class,
                 //Act ID's this event can appear in//
-                new String[] { TheCity.ID, TheBeyond.ID, "TheJungle" },
+                new String[]{TheCity.ID, TheBeyond.ID, "TheJungle"},
                 //Other predicates//
                 (c) -> (c instanceof SlimeboundCharacter) && !((SlimeboundCharacter) c).foughtSlimeBoss || c.hasRelic(StudyCardRelic.ID));
         EventUtils.registerEvent(
                 //Event ID//
                 ArtOfSlimeWar.ID, ArtOfSlimeWar.class,
                 //Act ID's this event can appear in//
-                new String[] { TheCity.ID, "TheJungle" },
+                new String[]{TheCity.ID, "TheJungle"},
                 //Other predicates//
                 (c) -> c instanceof SlimeboundCharacter || SlimeboundMod.contentSharing_events);
         EventUtils.registerEvent(

@@ -3,7 +3,6 @@ package sneckomod.cards.unknowns;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import javassist.*;
 import javassist.expr.ExprEditor;
@@ -13,12 +12,11 @@ import java.util.function.Predicate;
 
 public class UnknownWeak extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownWeak");
+    public static boolean bruh = false;
 
     public UnknownWeak() {
         super(ID, CardType.SKILL, CardRarity.COMMON);
     }
-
-    public static boolean bruh = false;
 
     public boolean useCheck(AbstractCard card) {
         bruh = false;

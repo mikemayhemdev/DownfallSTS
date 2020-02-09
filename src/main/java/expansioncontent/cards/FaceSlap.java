@@ -1,6 +1,4 @@
-
 package expansioncontent.cards;
-
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -12,7 +10,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import expansioncontent.expansionContentMod;
-import theHexaghost.util.CardIgnore;
 
 public class FaceSlap extends AbstractExpansionCard {
     public final static String ID = makeID("FaceSlap");

@@ -1,21 +1,15 @@
 package guardian.potions;
 
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.actions.SwitchToDefenseModeAction;
 import guardian.characters.GuardianCharacter;
-import guardian.orbs.StasisOrb;
 
 public class DefensiveModePotion extends CustomPotion {
     public static final String POTION_ID = "Guardian:DefensiveModePotion";

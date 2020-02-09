@@ -2,19 +2,15 @@ package sneckomod.potions;
 
 
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import sneckomod.TheSnecko;
 import sneckomod.actions.MuddleAction;
-import theHexaghost.actions.DiscoverEtherealAction;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 
 public class MuddlingPotion extends CustomPotion {
@@ -39,7 +35,7 @@ public class MuddlingPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        if (AbstractDungeon.player.hand.size() > 0){
+        if (AbstractDungeon.player.hand.size() > 0) {
             int x = 0;
             int truecost = 0;
             ArrayList<AbstractCard> possCardsList = new ArrayList<>();
@@ -51,7 +47,7 @@ public class MuddlingPotion extends CustomPotion {
 
             for (int i = 0; i < this.potency; i++) {
                 x = -1;
-                highest=null;
+                highest = null;
                 //find highest cost card
                 for (AbstractCard q : possCardsList) {
                     if (q.isCostModifiedForTurn) {
@@ -83,7 +79,7 @@ public class MuddlingPotion extends CustomPotion {
 
         }
 
-       }
+    }
 
 
     public CustomPotion makeCopy() {

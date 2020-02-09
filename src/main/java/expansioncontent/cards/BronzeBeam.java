@@ -5,21 +5,11 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
-import guardian.GuardianMod;
-import guardian.actions.PlaceRandomCardIntoStasisAction;
-import guardian.cards.AbstractGuardianCard;
-import guardian.patches.AbstractCardEnum;
 import guardian.vfx.BronzeOrbEffect;
-import slimebound.vfx.GreenBeamEffect;
 
 
 public class BronzeBeam extends AbstractExpansionCard {
@@ -44,7 +34,7 @@ public class BronzeBeam extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        atb(new VFXAction(new BronzeOrbEffect(p,m), 0.5F));
+        atb(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
 
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         atb(new GainBlockAction(p, p, this.block));

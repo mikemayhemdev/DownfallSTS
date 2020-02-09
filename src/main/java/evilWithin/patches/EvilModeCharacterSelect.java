@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import evilWithin.EvilWithinMod;
+import evilWithin.patches.ui.topPanel.GoldToSoulPatches;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
@@ -19,8 +20,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class EvilModeCharacterSelect
-{
+public class EvilModeCharacterSelect {
     public static boolean evilMode = false;
 
     private static List<CharacterOption> villains = new ArrayList<>();
@@ -29,13 +29,11 @@ public class EvilModeCharacterSelect
             clz = CustomCharacterSelectScreen.class,
             method = "initialize"
     )
-    public static class RemoveEvilOptions
-    {
+    public static class RemoveEvilOptions {
         @SpireInsertPatch(
                 locator = Locator.class
         )
-        public static void Insert(CustomCharacterSelectScreen __instance)
-        {
+        public static void Insert(CustomCharacterSelectScreen __instance) {
             Iterator<CharacterOption> iter = __instance.options.iterator();
             while (iter.hasNext()) {
                 CharacterOption o = iter.next();
@@ -46,11 +44,9 @@ public class EvilModeCharacterSelect
             }
         }
 
-        public static class Locator extends SpireInsertLocator
-        {
+        public static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception
-            {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(CustomCharacterSelectScreen.class, "options");
                 ArrayList<Matcher> matchers = new ArrayList<>();
                 matchers.add(finalMatcher);
@@ -63,13 +59,12 @@ public class EvilModeCharacterSelect
             clz = CharacterSelectScreen.class,
             method = "open"
     )
-    public static class ChangeToEvilOptions
-    {
-        public static void Prefix(CharacterSelectScreen __instance, boolean isEndless)
-        {
+    public static class ChangeToEvilOptions {
+        public static void Prefix(CharacterSelectScreen __instance, boolean isEndless) {
             if (__instance instanceof CustomCharacterSelectScreen) {
                 CustomCharacterSelectScreen screen = (CustomCharacterSelectScreen) __instance;
                 if (evilMode) {
+                    GoldToSoulPatches.changeGoldToSouls(false);
                     screen.options.clear();
                     screen.options.addAll(villains);
 
@@ -87,6 +82,8 @@ public class EvilModeCharacterSelect
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
                     ResetOptions.saved_maxSelectIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex");
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", 0);
+                } else {
+                    GoldToSoulPatches.changeGoldToSouls(true);
                 }
             }
         }
@@ -96,13 +93,11 @@ public class EvilModeCharacterSelect
             clz = MainMenuScreen.class,
             method = "update"
     )
-    public static class ResetOptions
-    {
+    public static class ResetOptions {
         private static int saved_maxSelectIndex = -1;
         private static int saved_optionsPerIndex = 4;
 
-        public static void Prefix(MainMenuScreen __instance)
-        {
+        public static void Prefix(MainMenuScreen __instance) {
             if (__instance.screen != MainMenuScreen.CurScreen.CHAR_SELECT) {
                 if (saved_maxSelectIndex >= 0) {
                     if (__instance.charSelectScreen instanceof CustomCharacterSelectScreen) {
@@ -129,14 +124,11 @@ public class EvilModeCharacterSelect
             clz = CharacterSelectScreen.class,
             method = "render"
     )
-    public static class ChangeText
-    {
-        public static ExprEditor Instrument()
-        {
+    public static class ChangeText {
+        public static ExprEditor Instrument() {
             return new ExprEditor() {
                 @Override
-                public void edit(FieldAccess f) throws CannotCompileException
-                {
+                public void edit(FieldAccess f) throws CannotCompileException {
                     if (f.isReader() && f.getFieldName().equals("CHOOSE_CHAR_MSG")) {
                         f.replace("if (" + EvilModeCharacterSelect.class.getName() + ".evilMode) {" +
                                 "$_ = " + MainMenuEvilMode.EvilMainMenuPanelButton.class.getName() + ".uiStrings.TEXT[2];" +

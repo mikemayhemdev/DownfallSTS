@@ -3,14 +3,9 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.OnAdvanceSubscriber;
 import theHexaghost.util.TextureLoader;
@@ -44,7 +39,7 @@ public class FuturePower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void updateDescription() {
-            description = "Whenever you #yAdvance, gain #b" + amount + " #yBlock.";
+        description = "Whenever you #yAdvance, gain #b" + amount + " #yBlock.";
     }
 
     @Override

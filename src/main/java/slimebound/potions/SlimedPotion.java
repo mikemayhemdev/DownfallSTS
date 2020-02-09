@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.SlimedPower;
 
 

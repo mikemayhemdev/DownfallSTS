@@ -4,10 +4,8 @@ import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState.TrackEntry;
-import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,13 +13,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -31,7 +27,6 @@ import slimebound.patches.SlimeboundEnum;
 import slimebound.relics.AbsorbEndCombat;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -43,7 +38,6 @@ public class SlimeboundCharacter extends CustomPlayer {
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
 
     private static float mainRenderYOffset = 90 * Settings.scale;
-
 
 
     static {
@@ -138,7 +132,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void movePosition(float x, float y) {
-        super.movePosition(x,y);
+        super.movePosition(x, y);
         float dialogOffsetY = this.dialogY - this.drawY + mainRenderYOffset;
         this.drawY = this.drawY + mainRenderYOffset;
         this.dialogY = this.drawY + dialogOffsetY;
@@ -278,7 +272,6 @@ public class SlimeboundCharacter extends CustomPlayer {
 
         }
     }
-
 
 
 }

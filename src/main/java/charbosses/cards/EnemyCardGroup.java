@@ -1,7 +1,7 @@
 package charbosses.cards;
 
-import java.util.ArrayList;
-
+import charbosses.actions.common.EnemyDrawCardAction;
+import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
@@ -11,37 +11,40 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 
-import charbosses.actions.common.EnemyDrawCardAction;
-import charbosses.bosses.AbstractCharBoss;
+import java.util.ArrayList;
 
 public class EnemyCardGroup extends CardGroup {
-	public static final int HAND_ROW_LENGTH = 5;
-	public AbstractCharBoss owner;
-	public EnemyCardGroup(CardGroupType type) {
-		super(type);
-		this.owner = AbstractCharBoss.boss;
-	}
-	public EnemyCardGroup(CardGroupType type, AbstractCharBoss owner) {
-		super(type);
-		this.owner = owner;
-	}
-	public EnemyCardGroup(CardGroup group, CardGroupType type) {
-		super(group, type);
-		this.owner = AbstractCharBoss.boss;
-	}
-	public EnemyCardGroup(CardGroup group, CardGroupType type, AbstractCharBoss owner) {
-		super(group, type);
-		this.owner = owner;
-	}
-	
-	public void moveToDiscardPile(final AbstractCard c) {
+    public static final int HAND_ROW_LENGTH = 5;
+    public AbstractCharBoss owner;
+
+    public EnemyCardGroup(CardGroupType type) {
+        super(type);
+        this.owner = AbstractCharBoss.boss;
+    }
+
+    public EnemyCardGroup(CardGroupType type, AbstractCharBoss owner) {
+        super(type);
+        this.owner = owner;
+    }
+
+    public EnemyCardGroup(CardGroup group, CardGroupType type) {
+        super(group, type);
+        this.owner = AbstractCharBoss.boss;
+    }
+
+    public EnemyCardGroup(CardGroup group, CardGroupType type, AbstractCharBoss owner) {
+        super(group, type);
+        this.owner = owner;
+    }
+
+    public void moveToDiscardPile(final AbstractCard c) {
         this.resetCardBeforeMoving(c);
         c.darken(false);
         this.owner.discardPile.addToTop(c);
         this.owner.onCardDrawOrDiscard();
     }
-	
-	public void moveToExhaustPile(final AbstractCard c) {
+
+    public void moveToExhaustPile(final AbstractCard c) {
         for (final AbstractRelic r : this.owner.relics) {
             r.onExhaust(c);
         }
@@ -54,7 +57,7 @@ public class EnemyCardGroup extends CardGroup {
         this.owner.exhaustPile.addToTop(c);
         this.owner.onCardDrawOrDiscard();
     }
-    
+
     public void moveToHand(final AbstractCard c, final CardGroup group) {
         c.unhover();
         c.lighten(true);
@@ -68,7 +71,7 @@ public class EnemyCardGroup extends CardGroup {
         this.owner.hand.refreshHandLayout();
         this.owner.hand.applyPowers();
     }
-	
+
 
     public void moveToHand(final AbstractCard c) {
         this.resetCardBeforeMoving(c);
@@ -83,20 +86,20 @@ public class EnemyCardGroup extends CardGroup {
         this.owner.hand.refreshHandLayout();
         this.owner.hand.applyPowers();
     }
-    
+
     public void moveToDeck(final AbstractCard c, final boolean randomSpot) {
         this.resetCardBeforeMoving(c);
         if (randomSpot)
-        	this.owner.drawPile.addToRandomSpot(c);
+            this.owner.drawPile.addToRandomSpot(c);
         else
-        	this.owner.drawPile.addToTop(c);
+            this.owner.drawPile.addToTop(c);
     }
-    
+
     public void moveToBottomOfDeck(final AbstractCard c) {
         this.resetCardBeforeMoving(c);
         this.owner.drawPile.addToBottom(c);
     }
-    
+
     private void resetCardBeforeMoving(final AbstractCard c) {
         if (AbstractDungeon.player.hoveredCard == c) {
             AbstractDungeon.player.releaseCard();
@@ -107,7 +110,7 @@ public class EnemyCardGroup extends CardGroup {
         c.stopGlowing();
         this.group.remove(c);
     }
-    
+
     public void initializeDeck(final CardGroup masterDeck) {
         this.clear();
         final CardGroup copy = new CardGroup(masterDeck, CardGroupType.DRAW_PILE);
@@ -116,11 +119,9 @@ public class EnemyCardGroup extends CardGroup {
         for (final AbstractCard c : copy.group) {
             if (c.isInnate) {
                 placeOnTop.add(c);
-            }
-            else if (c.inBottleFlame || c.inBottleLightning || c.inBottleTornado) {
+            } else if (c.inBottleFlame || c.inBottleLightning || c.inBottleTornado) {
                 placeOnTop.add(c);
-            }
-            else {
+            } else {
                 c.target_x = CardGroup.DRAW_PILE_X;
                 c.target_y = CardGroup.DRAW_PILE_Y;
                 c.current_x = CardGroup.DRAW_PILE_X;
@@ -136,7 +137,7 @@ public class EnemyCardGroup extends CardGroup {
         }
         placeOnTop.clear();
     }
-    
+
     public void triggerOnOtherCardPlayed(final AbstractCard usedCard) {
         for (final AbstractCard c : this.group) {
             if (c != usedCard) {
@@ -147,7 +148,7 @@ public class EnemyCardGroup extends CardGroup {
             p.onAfterCardPlayed(usedCard);
         }
     }
-    
+
     public void removeCard(final AbstractCard c) {
         this.group.remove(c);
         if (this.type == CardGroupType.MASTER_DECK) {
@@ -166,34 +167,33 @@ public class EnemyCardGroup extends CardGroup {
             r.onRefreshHand();
         }
         AbstractCard hoveredcard = null;
-        for (int i=0; i< this.group.size(); i++) {
-        	AbstractCard c = this.group.get(i);
-        	c.targetDrawScale = AbstractBossCard.HAND_SCALE;
-        	int cardsinrow = Math.min(this.group.size() - HAND_ROW_LENGTH * (int)Math.floor((float)i / (float)HAND_ROW_LENGTH), HAND_ROW_LENGTH);
-        	float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
-        	c.target_x = Settings.WIDTH - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
-        	c.target_y = Settings.HEIGHT / 2.0f + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float)Math.floor(((float)i)/(float)HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
-        	if (((AbstractBossCard)c).hov2 && c.hb.hovered) {
-        		hoveredcard = c;
-        	}
+        for (int i = 0; i < this.group.size(); i++) {
+            AbstractCard c = this.group.get(i);
+            c.targetDrawScale = AbstractBossCard.HAND_SCALE;
+            int cardsinrow = Math.min(this.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) i / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
+            float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
+            c.target_x = Settings.WIDTH - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
+            c.target_y = Settings.HEIGHT / 2.0f + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float) Math.floor(((float) i) / (float) HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
+            if (((AbstractBossCard) c).hov2 && c.hb.hovered) {
+                hoveredcard = c;
+            }
         }
         if (hoveredcard != null) {
-        	this.hoverCardPush(hoveredcard);
+            this.hoverCardPush(hoveredcard);
         }
     }
-    
+
     public void glowCheck() {
         for (final AbstractCard c : this.group) {
             if (c.canUse(AbstractDungeon.player, AbstractCharBoss.boss) && AbstractDungeon.screen != AbstractDungeon.CurrentScreen.HAND_SELECT) {
                 c.beginGlowing();
-            }
-            else {
+            } else {
                 c.stopGlowing();
             }
             c.triggerOnGlowCheck();
         }
     }
-    
+
     public int getCardNumber(AbstractCard c) {
         for (int i = 0; i < this.group.size(); ++i) {
             if (c.equals(this.group.get(i))) {
@@ -202,16 +202,16 @@ public class EnemyCardGroup extends CardGroup {
         }
         return -1;
     }
-    
+
     public ArrayList<AbstractCard> getCardRow(AbstractCard c) {
-    	int cardNum = getCardNumber(c);
-    	ArrayList<AbstractCard> cardrow = new ArrayList<AbstractCard>();
-    	for (int i = HAND_ROW_LENGTH * (int)Math.floor((float)cardNum / (float)HAND_ROW_LENGTH); i < this.group.size() && i < HAND_ROW_LENGTH * (1 + (int)Math.floor((float)i / (float)HAND_ROW_LENGTH)); i++) {
-    		cardrow.add(this.group.get(i));
-    	}
-    	return cardrow;
+        int cardNum = getCardNumber(c);
+        ArrayList<AbstractCard> cardrow = new ArrayList<AbstractCard>();
+        for (int i = HAND_ROW_LENGTH * (int) Math.floor((float) cardNum / (float) HAND_ROW_LENGTH); i < this.group.size() && i < HAND_ROW_LENGTH * (1 + (int) Math.floor((float) i / (float) HAND_ROW_LENGTH)); i++) {
+            cardrow.add(this.group.get(i));
+        }
+        return cardrow;
     }
-    
+
     public void hoverCardPush(final AbstractCard c) {
         int cardNum = getCardNumber(c) % HAND_ROW_LENGTH;
         ArrayList<AbstractCard> cardrow = getCardRow(c);
@@ -219,8 +219,7 @@ public class EnemyCardGroup extends CardGroup {
             float pushAmt = 0.4f;
             if (cardrow.size() == 2) {
                 pushAmt = 0.2f;
-            }
-            else if (cardrow.size() == 3 || cardrow.size() == 4) {
+            } else if (cardrow.size() == 3 || cardrow.size() == 4) {
                 pushAmt = 0.27f;
             }
             pushAmt *= AbstractBossCard.HAND_SCALE / 0.75f;
@@ -232,8 +231,7 @@ public class EnemyCardGroup extends CardGroup {
             pushAmt = 0.4f;
             if (cardrow.size() == 2) {
                 pushAmt = 0.2f;
-            }
-            else if (cardrow.size() == 3 || cardrow.size() == 4) {
+            } else if (cardrow.size() == 3 || cardrow.size() == 4) {
                 pushAmt = 0.27f;
             }
             pushAmt *= AbstractBossCard.HAND_SCALE / 0.75f;
@@ -246,41 +244,43 @@ public class EnemyCardGroup extends CardGroup {
     }
 
     public AbstractBossCard getHighestValueCard() {
-    	AbstractBossCard r = null;
-    	int record = -99;
-    	for (AbstractCard c : this.group) {
-    		AbstractBossCard cc = (AbstractBossCard)c;
-    		if (cc.getValue() > record) {
-    			r = cc;
-    			record = cc.getValue();
-    		}
-    	}
-    	return r;
+        AbstractBossCard r = null;
+        int record = -99;
+        for (AbstractCard c : this.group) {
+            AbstractBossCard cc = (AbstractBossCard) c;
+            if (cc.getValue() > record) {
+                r = cc;
+                record = cc.getValue();
+            }
+        }
+        return r;
     }
+
     public AbstractBossCard getHighestValueCard(AbstractCard.CardType type) {
-    	AbstractBossCard r = null;
-    	int record = -99;
-    	for (AbstractCard c : this.group) {
-    		if (c.type == type) {
-    			AbstractBossCard cc = (AbstractBossCard)c;
-        		if (cc.getValue() > record) {
-        			r = cc;
-        			record = cc.getValue();
-        		}
-    		}
-    	}
-    	return r;
+        AbstractBossCard r = null;
+        int record = -99;
+        for (AbstractCard c : this.group) {
+            if (c.type == type) {
+                AbstractBossCard cc = (AbstractBossCard) c;
+                if (cc.getValue() > record) {
+                    r = cc;
+                    record = cc.getValue();
+                }
+            }
+        }
+        return r;
     }
+
     public AbstractBossCard getHighestUpgradeValueCard() {
-    	AbstractBossCard r = null;
-    	int record = -99;
-    	for (AbstractCard c : this.group) {
-    		AbstractBossCard cc = (AbstractBossCard)c;
-    		if (cc.getUpgradeValue() > record) {
-    			r = cc;
-    			record = cc.getValue();
-    		}
-    	}
-    	return r;
+        AbstractBossCard r = null;
+        int record = -99;
+        for (AbstractCard c : this.group) {
+            AbstractBossCard cc = (AbstractBossCard) c;
+            if (cc.getUpgradeValue() > record) {
+                r = cc;
+                record = cc.getValue();
+            }
+        }
+        return r;
     }
 }

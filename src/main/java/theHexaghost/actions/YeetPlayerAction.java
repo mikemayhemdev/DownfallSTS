@@ -23,7 +23,10 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 
 public class YeetPlayerAction extends AbstractGameAction {
+    private static final float BLOCK_ICON_X = -14.0F * Settings.scale;
+    private static final float BLOCK_ICON_Y = -14.0F * Settings.scale;
     private AbstractPlayer p;
+
 
     public YeetPlayerAction() {
         this.p = AbstractDungeon.player;
@@ -88,7 +91,6 @@ public class YeetPlayerAction extends AbstractGameAction {
         this.isDone = true;
     }
 
-
     private void loseHP(int damageAmount) {
         decrementBlock();
 
@@ -110,7 +112,6 @@ public class YeetPlayerAction extends AbstractGameAction {
         AbstractDungeon.effectList.add(new StrikeEffect(p, MathUtils.random(0, Settings.WIDTH), MathUtils.random(0, Settings.HEIGHT), MathUtils.randomBoolean() ? damageAmount + damageAmount + damageAmount : damageAmount + damageAmount));
     }
 
-
     private void decrementBlock() {
         if (p.currentBlock > 0) {
             CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
@@ -124,8 +125,4 @@ public class YeetPlayerAction extends AbstractGameAction {
             CardCrawlGame.sound.play("BLOCK_BREAK");
         }
     }
-
-
-    private static final float BLOCK_ICON_X = -14.0F * Settings.scale;
-    private static final float BLOCK_ICON_Y = -14.0F * Settings.scale;
 }

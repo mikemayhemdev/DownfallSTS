@@ -16,6 +16,7 @@ import static theHexaghost.HexaMod.makeUIPath;
 
 public class InfernoGhostflame extends AbstractGhostflame {
 
+    public static Texture myTex = TextureLoader.getTexture(makeUIPath("inferno.png"));
     public int energySpentThisTurn = 0;
 
     public InfernoGhostflame(float x, float y) {
@@ -44,8 +45,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
         if (charged) return "0";
         return String.valueOf(Math.max(0, 3 - energySpentThisTurn));
     }
-
-    public static Texture myTex = TextureLoader.getTexture(makeUIPath("inferno.png"));
 
     @Override
     public Texture getHelperTexture() {

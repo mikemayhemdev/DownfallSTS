@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.CardIgnore;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import sneckomod.actions.RandomDamageAction;
 
 @CardIgnore
 public class DiceBoulder extends AbstractSneckoCard {

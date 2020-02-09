@@ -23,15 +23,15 @@ public class ReplayThisAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 26
             AbstractMonster m = null;// 50
             if (target != null) {// 52
-                m = (AbstractMonster)target;// 53
+                m = (AbstractMonster) target;// 53
             }
 
             AbstractCard tmp = funCard.makeSameInstanceOf();// 56
             AbstractDungeon.player.limbo.addToBottom(tmp);// 57
             tmp.current_x = funCard.current_x;// 58
             tmp.current_y = funCard.current_y;// 59
-            tmp.target_x = (float)Settings.WIDTH / 2.0F - 300.0F * Settings.scale;// 60
-            tmp.target_y = (float)Settings.HEIGHT / 2.0F;// 61
+            tmp.target_x = (float) Settings.WIDTH / 2.0F - 300.0F * Settings.scale;// 60
+            tmp.target_y = (float) Settings.HEIGHT / 2.0F;// 61
             tmp.applyPowers();// 68
             if (tmp.cost > 0) {// 63
                 tmp.freeToPlayOnce = true;// 64

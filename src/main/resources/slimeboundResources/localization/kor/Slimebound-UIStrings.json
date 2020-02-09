@@ -1,10 +1,10 @@
 {
-"slimeboundConfigMenuText": {
-"TEXT": [
-"Allow other characters to encounter some Slimebound relics.",
-"Allow other characters to encounter some Slimebound potions.",
-  "Allow other characters to encounter some Slimebound events.",
-"Unlock everything (Not recommended)"
-]
-}
+  "slimeboundConfigMenuText": {
+    "TEXT": [
+      "Allow other characters to encounter some Slimebound relics.",
+      "Allow other characters to encounter some Slimebound potions.",
+      "Allow other characters to encounter some Slimebound events.",
+      "Unlock everything (Not recommended)"
+    ]
+  }
 }

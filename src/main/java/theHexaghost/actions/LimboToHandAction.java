@@ -5,19 +5,16 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class LimboToHandAction extends AbstractGameAction
-{
+public class LimboToHandAction extends AbstractGameAction {
     private AbstractCard card;
 
-    public LimboToHandAction(AbstractCard card)
-    {
+    public LimboToHandAction(AbstractCard card) {
         actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.card = card;
         duration = Settings.ACTION_DUR_FAST;
     }
 
-    public void update()
-    {
+    public void update() {
         if (duration == Settings.ACTION_DUR_FAST) {
             if (AbstractDungeon.player.limbo.contains(card) &&
                     AbstractDungeon.player.hand.size() < 10) {

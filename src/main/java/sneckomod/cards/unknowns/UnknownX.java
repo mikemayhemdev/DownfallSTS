@@ -13,6 +13,6 @@ public class UnknownX extends AbstractUnknownCard {
 
     @Override
     public Predicate<AbstractCard> myNeeds() {
-        return c -> c.cost == -2;
+        return c -> c.cost == -1;
     }
 }

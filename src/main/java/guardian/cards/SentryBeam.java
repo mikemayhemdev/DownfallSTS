@@ -55,6 +55,7 @@ public class SentryBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        cardsToPreview = new SentryWave();
     }
 
     @Override
@@ -101,7 +102,9 @@ public class SentryBeam extends AbstractGuardianCard {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = UPGRADED_DESCRIPTION;
-
+            AbstractCard q = new SentryWave();
+            q.upgrade();
+            cardsToPreview = q;
             this.initializeDescription();
 
         }

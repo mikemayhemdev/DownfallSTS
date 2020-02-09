@@ -6,14 +6,12 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -27,11 +25,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.patches.SlimeboundEnum;
-import slimebound.potions.SlimedPotion;
-import slimebound.potions.SlimyTonguePotion;
-import slimebound.potions.SpawnSlimePotion;
-import slimebound.potions.ThreeZeroPotion;
 import sneckomod.relics.UnknownEgg;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.potions.DoubleChargePotion;
@@ -65,24 +58,21 @@ public class HexaMod implements
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
+    public static final String CARD_ENERGY_S = "hexamodResources/images/512/card_hexaghost_orb.png";
+    public static final String TEXT_ENERGY = "hexamodResources/images/512/card_small_orb.png";
     private static final String ATTACK_S_ART = "hexamodResources/images/512/bg_attack_hexaghost.png";
     private static final String SKILL_S_ART = "hexamodResources/images/512/bg_skill_hexaghost.png";
     private static final String POWER_S_ART = "hexamodResources/images/512/bg_power_hexaghost.png";
-    public static final String CARD_ENERGY_S = "hexamodResources/images/512/card_hexaghost_orb.png";
-    public static final String TEXT_ENERGY = "hexamodResources/images/512/card_small_orb.png";
     private static final String ATTACK_L_ART = "hexamodResources/images/1024/bg_attack_hexaghost.png";
     private static final String SKILL_L_ART = "hexamodResources/images/1024/bg_skill_hexaghost.png";
     private static final String POWER_L_ART = "hexamodResources/images/1024/bg_power_hexaghost.png";
     private static final String CARD_ENERGY_L = "hexamodResources/images/1024/card_hexaghost_orb.png";
     private static final String CHARSELECT_BUTTON = "hexamodResources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = "hexamodResources/images/charSelect/charBG.png";
-    private static String modID;
-
     public static boolean renderFlames = false;
-
     public static boolean unsealed = false;
-
-    public static Color placeholderColor = new Color(114F/255F, 62F/255F, 109F/255F, 1);
+    public static Color placeholderColor = new Color(114F / 255F, 62F / 255F, 109F / 255F, 1);
+    private static String modID;
 
     public HexaMod() {
         BaseMod.subscribe(this);
@@ -127,35 +117,6 @@ public class HexaMod implements
 
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
-    }
-
-    @Override
-    public void receiveEditCharacters() {
-        BaseMod.addCharacter(new TheHexaghost("the Hexaghost", TheHexaghost.Enums.THE_SPIRIT),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheHexaghost.Enums.THE_SPIRIT);
-    }
-
-    @Override
-    public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new SpiritBrand(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new InflammatoryLetter(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new IceCube(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new JarOfFuel(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new MatchstickCase(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new RecyclingMachine(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new SoulConsumer(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new UnknownEgg(), TheHexaghost.Enums.GHOST_GREEN);
-    }
-
-    @Override
-    public void receiveEditCards() {
-        try {
-            autoAddCards();
-        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     private static void autoAddCards()
@@ -205,6 +166,34 @@ public class HexaMod implements
         }
     }
 
+    @Override
+    public void receiveEditCharacters() {
+        BaseMod.addCharacter(new TheHexaghost("the Hexaghost", TheHexaghost.Enums.THE_SPIRIT),
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheHexaghost.Enums.THE_SPIRIT);
+    }
+
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelicToCustomPool(new SpiritBrand(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new InflammatoryLetter(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new IceCube(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new JarOfFuel(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new MatchstickCase(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new RecyclingMachine(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new SoulConsumer(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelicToCustomPool(new UnknownEgg(), TheHexaghost.Enums.GHOST_GREEN);
+    }
+
+    @Override
+    public void receiveEditCards() {
+        try {
+            autoAddCards();
+        } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public void receiveEditStrings() {
@@ -272,7 +261,7 @@ public class HexaMod implements
         renderFlames = false;
     }
 
-    public void receivePostInitialize(){
+    public void receivePostInitialize() {
 
         addPotions();
     }

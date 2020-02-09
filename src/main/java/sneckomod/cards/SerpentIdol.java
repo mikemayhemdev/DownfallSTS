@@ -12,7 +12,7 @@ public class SerpentIdol extends AbstractSneckoCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public SerpentIdol() {
-        super(ID,  1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         tags.add(SneckoMod.SNEKPROOF);
     }

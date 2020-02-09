@@ -1,29 +1,24 @@
 package charbosses.relics;
 
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.powers.*;
+import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Girya;
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.core.*;
-import java.util.*;
-import com.megacrit.cardcrawl.ui.campfire.*;
 
-import charbosses.bosses.AbstractCharBoss;
+public class CBR_Girya extends AbstractCharbossRelic {
 
-public class CBR_Girya extends AbstractCharbossRelic
-{
-    
     public CBR_Girya() {
         super(new Girya());
     }
-    
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
-    
+
     @Override
     public void atBattleStart() {
         this.counter = AbstractDungeon.actNum;
@@ -33,7 +28,7 @@ public class CBR_Girya extends AbstractCharbossRelic
             this.addToTop(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
         }
     }
-    
+
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_Girya();

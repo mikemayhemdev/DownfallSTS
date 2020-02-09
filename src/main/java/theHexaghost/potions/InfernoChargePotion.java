@@ -1,23 +1,16 @@
 package theHexaghost.potions;
 
 
-import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import slimebound.characters.SlimeboundCharacter;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.TheHexaghost;
 import theHexaghost.actions.ChargeAction;
-import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 
@@ -64,7 +57,7 @@ public class InfernoChargePotion extends CustomPotion {
                 }
             });
         }
-       }
+    }
 
 
     public CustomPotion makeCopy() {

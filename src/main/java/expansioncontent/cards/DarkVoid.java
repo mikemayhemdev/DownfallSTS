@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -9,11 +8,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import expansioncontent.expansionContentMod;
 import expansioncontent.powers.AwakenedOnePower;
-import slimebound.powers.PotencyPower;
 
 
 public class DarkVoid extends AbstractExpansionCard {
@@ -45,7 +42,7 @@ public class DarkVoid extends AbstractExpansionCard {
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
-                    atb(new ApplyPowerAction(monster, p, new AwakenedOnePower(monster, p,1), 1, true, AbstractGameAction.AttackEffect.NONE));
+                    atb(new ApplyPowerAction(monster, p, new AwakenedOnePower(monster, p, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }

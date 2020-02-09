@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.actions.OctoChoiceAction;
 import expansioncontent.expansionContentMod;
+import slimebound.actions.MakeTempCardInHandActionReduceCost;
 
 import java.util.ArrayList;
 
@@ -46,17 +47,14 @@ public class QuickStudy extends AbstractExpansionCard {
         switch (card.cardID) {
             case "expansioncontent:0": {
                 AbstractCard q = new ChargeUp();
-                q.cost--;
                 if (upgraded) q.upgrade();
-                atb(new MakeTempCardInHandAction(q));
+                atb(new MakeTempCardInHandActionReduceCost(q));
                 AbstractCard r = new GuardianWhirl();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new DefensiveMode();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:1": {
@@ -65,13 +63,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new GhostWheel();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new Sear();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:2": {
@@ -80,13 +76,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new GoopSpray();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new SlimeTackle();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:3": {
@@ -95,13 +89,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new HyperBeam();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new Flail();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:4": {
@@ -110,13 +102,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new FaceSlap();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new LastStand();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:5": {
@@ -125,13 +115,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new Collect();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new YouAreMine();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:6": {
@@ -140,13 +128,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new Chronoboost();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new ManipulateTime();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:7": {
@@ -155,13 +141,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new CaCaw();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new AwakenDeath();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
             case "expansioncontent:8": {
@@ -170,13 +154,11 @@ public class QuickStudy extends AbstractExpansionCard {
                 if (upgraded) q.upgrade();
                 atb(new MakeTempCardInHandAction(q));
                 AbstractCard r = new DecasProtection();
-                r.cost--;
                 if (upgraded) r.upgrade();
-                atb(new MakeTempCardInHandAction(r));
+                atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new PolyBeam();
-                z.cost--;
                 if (upgraded) z.upgrade();
-                atb(new MakeTempCardInHandAction(z));
+                atb(new MakeTempCardInHandActionReduceCost(z));
                 break;
             }
         }

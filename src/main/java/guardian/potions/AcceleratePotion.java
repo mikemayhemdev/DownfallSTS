@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
-import slimebound.characters.SlimeboundCharacter;
 
 public class AcceleratePotion extends CustomPotion {
     public static final String POTION_ID = "Guardian:AcceleratePotion";

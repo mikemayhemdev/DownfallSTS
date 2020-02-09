@@ -17,6 +17,7 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past32.png");
+    public boolean activated = false;
 
     public PastPower(final int amount) {
         this.name = "Devil's Dance";
@@ -31,8 +32,6 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
 
         this.updateDescription();
     }
-
-    public boolean activated = false;
 
     @Override
     public void atStartOfTurnPostDraw() {

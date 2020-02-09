@@ -1,22 +1,20 @@
 package charbosses.actions.unique;
 
-import com.megacrit.cardcrawl.actions.*;
-
 import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.Settings;
 
-import com.megacrit.cardcrawl.core.*;
-import com.megacrit.cardcrawl.cards.*;
-
-public class EnemyUpgradeRandomCardAction extends AbstractGameAction
-{
+public class EnemyUpgradeRandomCardAction extends AbstractGameAction {
     private AbstractCharBoss p;
-    
+
     public EnemyUpgradeRandomCardAction() {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.p = AbstractCharBoss.boss;
         this.duration = Settings.ACTION_DUR_FAST;
     }
-    
+
     @Override
     public void update() {
         if (this.duration != Settings.ACTION_DUR_FAST) {

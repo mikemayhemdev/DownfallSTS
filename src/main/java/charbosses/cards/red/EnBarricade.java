@@ -1,30 +1,30 @@
 package charbosses.cards.red;
 
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.characters.*;
-import com.megacrit.cardcrawl.monsters.*;
-import com.megacrit.cardcrawl.powers.*;
-
 import charbosses.cards.AbstractBossCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BarricadePower;
 
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.*;
-import java.util.*;
-import com.megacrit.cardcrawl.core.*;
-
-public class EnBarricade extends AbstractBossCard
-{
+public class EnBarricade extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Barricade";
     private static final CardStrings cardStrings;
-    
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Barricade");
+    }
+
     public EnBarricade() {
         super(ID, EnBarricade.cardStrings.NAME, "red/power/barricade", 3, EnBarricade.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
         this.magicValue = 50;
         this.limit = 2;
     }
-    
+
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         boolean powerExists = false;
@@ -38,7 +38,7 @@ public class EnBarricade extends AbstractBossCard
             this.addToBot(new ApplyPowerAction(m, m, new BarricadePower(m)));
         }
     }
-    
+
     @Override
     public void upgrade() {
         if (!this.upgraded) {
@@ -46,13 +46,9 @@ public class EnBarricade extends AbstractBossCard
             this.upgradeBaseCost(2);
         }
     }
-    
+
     @Override
     public AbstractCard makeCopy() {
         return new EnBarricade();
-    }
-    
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Barricade");
     }
 }

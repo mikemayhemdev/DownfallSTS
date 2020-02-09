@@ -4,18 +4,13 @@ package expansioncontent.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 import theHexaghost.util.TextureLoader;
 
 
@@ -47,12 +42,10 @@ public class AwakenedOnePower extends AbstractPower {
     }
 
 
-    
     public void atStartOfTurn() {
-        if (this.sourceM.intent == AbstractMonster.Intent.ATTACK || this.sourceM.intent == AbstractMonster.Intent.ATTACK_BUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEBUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEFEND){
+        if (this.sourceM.intent == AbstractMonster.Intent.ATTACK || this.sourceM.intent == AbstractMonster.Intent.ATTACK_BUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEBUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
 
-        } else
-        {
+        } else {
             AbstractCreature p = AbstractDungeon.player;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.amount), this.amount));
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, AwakenedOnePower.POWER_ID));
@@ -60,11 +53,11 @@ public class AwakenedOnePower extends AbstractPower {
 
         }
 
-        }
+    }
 
     @Override
     public void updateDescription() {
-        description = "When you would die, heal " + amount + " HP and remove this effect.";
+        description = "The next time this enemy doesn't attack on its turn, you gain #b" + amount + " #yStrength.";
     }
 
 

@@ -18,7 +18,7 @@ public class PotionPostCombatPower extends AbstractPower implements CloneablePow
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/PotionAfterCombat32.png");
 
     public PotionPostCombatPower(final int amount) {
-        this.name = "Post-Combat Common";
+        this.name = "Post-Combat Potion";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;

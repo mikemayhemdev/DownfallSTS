@@ -4,13 +4,10 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.city.Snecko;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
-import theHexaghost.powers.RemoveMeBabey;
-import theHexaghost.util.SealSealReward;
 import theHexaghost.util.TextureLoader;
 
 public class UnknownUpgradedPostCombatPower extends AbstractPower implements CloneablePowerInterface {

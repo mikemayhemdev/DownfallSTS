@@ -15,35 +15,24 @@ import eventUtil.util.ConditionalEvent;
 )
 public class GetEvent {
     @SpirePrefixPatch
-    public static SpireReturn<AbstractEvent> prefix(String key)
-    {
-        if (EventUtils.overrideEvents.containsKey(key))
-        {
-            for (ConditionalEvent c : EventUtils.overrideEvents.get(key))
-            {
+    public static SpireReturn<AbstractEvent> prefix(String key) {
+        if (EventUtils.overrideEvents.containsKey(key)) {
+            for (ConditionalEvent c : EventUtils.overrideEvents.get(key)) {
                 if (c.isValid() &&
-                    (!EventUtils.overrideBonusConditions.containsKey(c)) ||
-                      EventUtils.overrideBonusConditions.get(c).test(AbstractDungeon.player))
-                {
+                        (!EventUtils.overrideBonusConditions.containsKey(c)) ||
+                        EventUtils.overrideBonusConditions.get(c).test(AbstractDungeon.player)) {
                     return SpireReturn.Return(c.getEvent());
                 }
             }
         }
 
-        if (EventUtils.normalEvents.containsKey(key))
-        {
+        if (EventUtils.normalEvents.containsKey(key)) {
             return SpireReturn.Return(EventUtils.normalEvents.get(key).getEvent());
-        }
-        else if (EventUtils.shrineEvents.containsKey(key))
-        {
+        } else if (EventUtils.shrineEvents.containsKey(key)) {
             return SpireReturn.Return(EventUtils.shrineEvents.get(key).getEvent());
-        }
-        else if (EventUtils.oneTimeEvents.containsKey(key))
-        {
+        } else if (EventUtils.oneTimeEvents.containsKey(key)) {
             return SpireReturn.Return(EventUtils.oneTimeEvents.get(key).getEvent());
-        }
-        else if (EventUtils.fullReplaceEvents.containsKey(key))
-        {
+        } else if (EventUtils.fullReplaceEvents.containsKey(key)) {
             return SpireReturn.Return(EventUtils.fullReplaceEvents.get(key).getEvent());
         }
 

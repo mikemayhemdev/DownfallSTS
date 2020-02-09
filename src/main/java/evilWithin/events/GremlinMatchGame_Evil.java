@@ -10,33 +10,44 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.events.GenericEventDialog;
-import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+
+import java.util.*;
 
 public class GremlinMatchGame_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:GremlinMatchGame";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
+    private static final String MSG_2;
+    private static final String MSG_3;
+    private static final String MSG_4;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        MSG_2 = DESCRIPTIONS[0];
+        MSG_3 = DESCRIPTIONS[1];
+        MSG_4 = DESCRIPTIONS[3];
+    }
+
+    ArrayList<AbstractCard> singleCards = new ArrayList();
     private AbstractCard chosenCard;
     private AbstractCard hoveredCard;
     private boolean cardFlipped = false;
@@ -47,11 +58,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     private float waitTimer;
     private int cardsMatched;
     private GremlinMatchGame_Evil.CUR_SCREEN screen;
-    private static final String MSG_2;
-    private static final String MSG_3;
-    private static final String MSG_4;
     private List<String> matchedCards;
-    ArrayList<AbstractCard> singleCards = new ArrayList();
 
     public GremlinMatchGame_Evil() {
         super(NAME, DESCRIPTIONS[2], "images/events/matchAndKeep.jpg");
@@ -87,12 +94,12 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
         Iterator var3 = retVal.iterator();
 
         AbstractCard c;
-        while(var3.hasNext()) {
-            c = (AbstractCard)var3.next();
+        while (var3.hasNext()) {
+            c = (AbstractCard) var3.next();
             Iterator var5 = AbstractDungeon.player.relics.iterator();
 
-            while(var5.hasNext()) {
-                AbstractRelic r = (AbstractRelic)var5.next();
+            while (var5.hasNext()) {
+                AbstractRelic r = (AbstractRelic) var5.next();
                 r.onPreviewObtainCard(c);
             }
 
@@ -102,9 +109,9 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
         singleCards = retVal2;
         retVal.addAll(retVal2);
 
-        for(var3 = retVal.iterator(); var3.hasNext(); c.target_y = c.current_y) {
-            c = (AbstractCard)var3.next();
-            c.current_x = (float)Settings.WIDTH / 2.0F;
+        for (var3 = retVal.iterator(); var3.hasNext(); c.target_y = c.current_y) {
+            c = (AbstractCard) var3.next();
+            c.current_x = (float) Settings.WIDTH / 2.0F;
             c.target_x = c.current_x;
             c.current_y = -300.0F * Settings.scale;
         }
@@ -148,8 +155,8 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
             boolean anyHovered = false;
             int index = 0;
 
-            for(Iterator var3 = this.cards.group.iterator(); var3.hasNext(); ++index) {
-                AbstractCard c = (AbstractCard)var3.next();
+            for (Iterator var3 = this.cards.group.iterator(); var3.hasNext(); ++index) {
+                AbstractCard c = (AbstractCard) var3.next();
                 if (c.hb.hovered) {
                     anyHovered = true;
                     break;
@@ -157,43 +164,43 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
             }
 
             if (!anyHovered) {
-                Gdx.input.setCursorPosition((int)((AbstractCard)this.cards.group.get(0)).hb.cX, Settings.HEIGHT - (int)((AbstractCard)this.cards.group.get(0)).hb.cY);
+                Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(0)).hb.cX, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(0)).hb.cY);
             } else {
                 float x;
                 if (!CInputActionSet.up.isJustPressed() && !CInputActionSet.altUp.isJustPressed()) {
                     if (!CInputActionSet.down.isJustPressed() && !CInputActionSet.altDown.isJustPressed()) {
                         if (!CInputActionSet.left.isJustPressed() && !CInputActionSet.altLeft.isJustPressed()) {
                             if (CInputActionSet.right.isJustPressed() || CInputActionSet.altRight.isJustPressed()) {
-                                x = ((AbstractCard)this.cards.group.get(index)).hb.cX + 210.0F * Settings.scale;
+                                x = ((AbstractCard) this.cards.group.get(index)).hb.cX + 210.0F * Settings.scale;
                                 if (x > 1375.0F * Settings.scale) {
                                     x = 640.0F * Settings.scale;
                                 }
 
-                                Gdx.input.setCursorPosition((int)x, Settings.HEIGHT - (int)((AbstractCard)this.cards.group.get(index)).hb.cY);
+                                Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(index)).hb.cY);
                             }
                         } else {
-                            x = ((AbstractCard)this.cards.group.get(index)).hb.cX - 210.0F * Settings.scale;
+                            x = ((AbstractCard) this.cards.group.get(index)).hb.cX - 210.0F * Settings.scale;
                             if (x < 530.0F * Settings.scale) {
                                 x = 1270.0F * Settings.scale;
                             }
 
-                            Gdx.input.setCursorPosition((int)x, Settings.HEIGHT - (int)((AbstractCard)this.cards.group.get(index)).hb.cY);
+                            Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(index)).hb.cY);
                         }
                     } else {
-                        x = ((AbstractCard)this.cards.group.get(index)).hb.cY - 230.0F * Settings.scale;
+                        x = ((AbstractCard) this.cards.group.get(index)).hb.cY - 230.0F * Settings.scale;
                         if (x < 175.0F * Settings.scale) {
                             x = 750.0F * Settings.scale;
                         }
 
-                        Gdx.input.setCursorPosition((int)((AbstractCard)this.cards.group.get(index)).hb.cX, (int)((float)Settings.HEIGHT - x));
+                        Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(index)).hb.cX, (int) ((float) Settings.HEIGHT - x));
                     }
                 } else {
-                    x = ((AbstractCard)this.cards.group.get(index)).hb.cY + 230.0F * Settings.scale;
+                    x = ((AbstractCard) this.cards.group.get(index)).hb.cY + 230.0F * Settings.scale;
                     if (x > 865.0F * Settings.scale) {
                         x = 290.0F * Settings.scale;
                     }
 
-                    Gdx.input.setCursorPosition((int)((AbstractCard)this.cards.group.get(index)).hb.cX, (int)((float)Settings.HEIGHT - x));
+                    Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(index)).hb.cX, (int) ((float) Settings.HEIGHT - x));
                 }
 
                 if (CInputActionSet.select.isJustPressed()) {
@@ -207,10 +214,10 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
 
     private void cleanUpCards() {
         AbstractCard c;
-        for(Iterator var1 = this.cards.group.iterator(); var1.hasNext(); c.target_y = -300.0F * Settings.scale) {
-            c = (AbstractCard)var1.next();
+        for (Iterator var1 = this.cards.group.iterator(); var1.hasNext(); c.target_y = -300.0F * Settings.scale) {
+            c = (AbstractCard) var1.next();
             c.targetDrawScale = 0.5F;
-            c.target_x = (float)Settings.WIDTH / 2.0F;
+            c.target_x = (float) Settings.WIDTH / 2.0F;
         }
 
     }
@@ -220,9 +227,9 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
             this.hoveredCard = null;
             Iterator var1 = this.cards.group.iterator();
 
-            while(true) {
-                while(var1.hasNext()) {
-                    AbstractCard c = (AbstractCard)var1.next();
+            while (true) {
+                while (var1.hasNext()) {
+                    AbstractCard c = (AbstractCard) var1.next();
                     c.hb.update();
                     if (this.hoveredCard == null && c.hb.hovered) {
                         c.drawScale = 0.7F;
@@ -239,11 +246,11 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                                 if (this.chosenCard.cardID.equals(this.hoveredCard.cardID)) {
                                     this.waitTimer = 1.0F;
                                     this.chosenCard.targetDrawScale = 0.7F;
-                                    this.chosenCard.target_x = (float)Settings.WIDTH / 2.0F;
-                                    this.chosenCard.target_y = (float)Settings.HEIGHT / 2.0F;
+                                    this.chosenCard.target_x = (float) Settings.WIDTH / 2.0F;
+                                    this.chosenCard.target_y = (float) Settings.HEIGHT / 2.0F;
                                     this.hoveredCard.targetDrawScale = 0.7F;
-                                    this.hoveredCard.target_x = (float)Settings.WIDTH / 2.0F;
-                                    this.hoveredCard.target_y = (float)Settings.HEIGHT / 2.0F;
+                                    this.hoveredCard.target_x = (float) Settings.WIDTH / 2.0F;
+                                    this.hoveredCard.target_y = (float) Settings.HEIGHT / 2.0F;
                                 } else {
                                     this.waitTimer = 1.25F;
                                     this.chosenCard.targetDrawScale = 1.0F;
@@ -267,7 +274,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                     this.cards.group.remove(this.chosenCard);
                     this.cards.group.remove(this.hoveredCard);
                     this.matchedCards.add(this.chosenCard.cardID);
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.chosenCard.makeCopy(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.chosenCard.makeCopy(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     this.chosenCard = null;
                     this.hoveredCard = null;
                 } else {
@@ -292,9 +299,9 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(MSG_2);
                         this.imageEventText.removeDialogOption(1);
@@ -305,8 +312,8 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(MSG_4);
                         this.imageEventText.removeDialogOption(1);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-                        for (AbstractCard c: singleCards){
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (MathUtils.random((float)Settings.WIDTH * 0.1F, (float)Settings.WIDTH * 0.9F)), (float) (MathUtils.random((float)Settings.HEIGHT * 0.2F, (float)Settings.HEIGHT * 0.8F))));
+                        for (AbstractCard c : singleCards) {
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (MathUtils.random((float) Settings.WIDTH * 0.1F, (float) Settings.WIDTH * 0.9F)), (float) (MathUtils.random((float) Settings.HEIGHT * 0.2F, (float) Settings.HEIGHT * 0.8F))));
                         }
                         this.screen = CUR_SCREEN.COMPLETE;
                         return;
@@ -314,7 +321,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         return;
                 }
             case RULE_EXPLANATION:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.removeDialogOption(0);
                         GenericEventDialog.hide();
@@ -332,11 +339,11 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     }
 
     private void placeCards() {
-        for(int i = 0; i < this.cards.size(); ++i) {
-            ((AbstractCard)this.cards.group.get(i)).target_x = (float)(i % 4) * 210.0F * Settings.scale + 640.0F * Settings.scale;
-            ((AbstractCard)this.cards.group.get(i)).target_y = (float)(i % 3) * -230.0F * Settings.scale + 750.0F * Settings.scale;
-            ((AbstractCard)this.cards.group.get(i)).targetDrawScale = 0.5F;
-            ((AbstractCard)this.cards.group.get(i)).isFlipped = true;
+        for (int i = 0; i < this.cards.size(); ++i) {
+            ((AbstractCard) this.cards.group.get(i)).target_x = (float) (i % 4) * 210.0F * Settings.scale + 640.0F * Settings.scale;
+            ((AbstractCard) this.cards.group.get(i)).target_y = (float) (i % 3) * -230.0F * Settings.scale + 750.0F * Settings.scale;
+            ((AbstractCard) this.cards.group.get(i)).targetDrawScale = 0.5F;
+            ((AbstractCard) this.cards.group.get(i)).isFlipped = true;
         }
 
     }
@@ -358,16 +365,6 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     }
 
     public void renderAboveTopPanel(SpriteBatch sb) {
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        MSG_2 = DESCRIPTIONS[0];
-        MSG_3 = DESCRIPTIONS[1];
-        MSG_4 = DESCRIPTIONS[3];
     }
 
     private static enum CUR_SCREEN {

@@ -2,13 +2,10 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.BurnAction;
 import theHexaghost.actions.ChargeAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 

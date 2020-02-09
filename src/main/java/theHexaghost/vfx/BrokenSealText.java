@@ -34,5 +34,6 @@ public class BrokenSealText extends AbstractGameEffect {
         }
     }
 
-    public void dispose() {}
+    public void dispose() {
+    }
 }

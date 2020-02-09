@@ -43,7 +43,9 @@
   "Guardian:ChargeUp": {
     "NAME": "충전",
     "DESCRIPTION": "이 카드를 정지장 에 넣습니다. NL 체크포인트 - 방어도 를 !B! 얻고 힘 을 !M! 얻습니다. NL 시한부.",
-    "EXTENDED_DESCRIPTION": ["~에러:~ #r정지장 작업중."]
+    "EXTENDED_DESCRIPTION": [
+      "~에러:~ #r정지장 작업중."
+    ]
   },
   "Guardian:DonusPower": {
     "NAME": "고대의 공격",
@@ -83,7 +85,9 @@
   "Guardian:TimeBomb": {
     "NAME": "시간 폭탄",
     "DESCRIPTION": "이 카드를 정지장 에 넣습니다. NL 이 카드의 정지장 효과가 만료됐을 때 이 카드를 소멸 시키고 모든 적에게 피해를 !M! 줍니다.",
-    "EXTENDED_DESCRIPTION": ["~에러:~ #r정지장 작업중."]
+    "EXTENDED_DESCRIPTION": [
+      "~에러:~ #r정지장 작업중."
+    ]
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "파괴 광선",
@@ -179,7 +183,9 @@
   "Guardian:Planning": {
     "NAME": "설계",
     "DESCRIPTION": "뽑을 카드 더미 맨 윗쪽 카드 !M! 장을 정지장 에 넣습니다.",
-    "EXTENDED_DESCRIPTION": ["~에러:~ #r정지장 작업중."]
+    "EXTENDED_DESCRIPTION": [
+      "~에러:~ #r정지장 작업중."
+    ]
   },
   "Guardian:Recover": {
     "NAME": "복구",
@@ -193,7 +199,9 @@
   "Guardian:Clone": {
     "NAME": "복제",
     "DESCRIPTION": "카드를 1장 선택합니다. 선택한 카드의 복사본을 1장 정지장 에 넣습니다.",
-    "EXTENDED_DESCRIPTION": ["~에러:~ #r정지장 작업중."]
+    "EXTENDED_DESCRIPTION": [
+      "~에러:~ #r정지장 작업중."
+    ]
   },
   "Guardian:Preprogram": {
     "NAME": "사전계획",
@@ -255,9 +263,9 @@
     "DESCRIPTION": "피해를 !D! 줍니다. NL 다음에 사용하는 소멸하지 않는 공격이나 스킬 카드를 정지장 에 넣습니다."
   },
   "Guardian:PiercingHide": {
-  "NAME": "가시 돋친 외골격",
-  "DESCRIPTION": "이번 턴에만 방어도 를 !B! 얻고 가시 를 !M! 얻습니다. NL 방어모드 를 얻습니다."
-},
+    "NAME": "가시 돋친 외골격",
+    "DESCRIPTION": "이번 턴에만 방어도 를 !B! 얻고 가시 를 !M! 얻습니다. NL 방어모드 를 얻습니다."
+  },
   "Guardian:ShieldSpikes": {
     "NAME": "가시 돋친 방패",
     "DESCRIPTION": "방어도 를 !B! 얻습니다. NL 방어모드 라면 임시 가시 를 !M! 얻습니다."
@@ -378,12 +386,16 @@
   "Guardian:GatlingBeam": {
     "NAME": "개틀링 광선",
     "DESCRIPTION": "이 카드를 정지장 에 넣습니다. NL 체크포인트 - 무작위 적에게 피해를 !D! 줍니다. 체크포인트 효과가 발동된 횟수만큼 반복합니다. NL 시한부.",
-    "EXTENDED_DESCRIPTION": ["~에러:~ #r정지장 작업중."]
+    "EXTENDED_DESCRIPTION": [
+      "~에러:~ #r정지장 작업중."
+    ]
   },
   "Guardian:ShieldCharger": {
     "NAME": "보호막 충전기",
     "DESCRIPTION": "이 카드를 정지장 에 넣습니다. NL 체크포인트 - 방어도 를 !B! 얻고 [E] 를 얻습니다. NL 시한부.",
-    "EXTENDED_DESCRIPTION": ["~에러:~ #r정지장 작업중."]
+    "EXTENDED_DESCRIPTION": [
+      "~에러:~ #r정지장 작업중."
+    ]
   },
   "Guardian:StasisEngine": {
     "NAME": "정지장 엔진",
@@ -421,7 +433,9 @@
     "NAME": "폭탄 덩어리",
     "DESCRIPTION": "빈 정지장 슬롯 마다 시간 폭탄 을 넣습니다. NL 2장 이상의 시간 폭탄을 생성하면 소멸 합니다.",
     "UPGRADE_DESCRIPTION": "빈 정지장 슬롯 마다 강화된 시간 폭탄 을 넣습니다. NL 2장 이상의 시간 폭탄을 생성하면 소멸 합니다.",
-    "EXTENDED_DESCRIPTION": ["~에러:~ #r정지장 작업중."]
+    "EXTENDED_DESCRIPTION": [
+      "~에러:~ #r정지장 작업중."
+    ]
   },
   "Guardian:MassSlam": {
     "NAME": "집단 강타",

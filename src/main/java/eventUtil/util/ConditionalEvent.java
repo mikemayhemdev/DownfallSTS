@@ -19,27 +19,21 @@ public class ConditionalEvent<T extends AbstractEvent> {
 
     public String overrideEvent = "";
 
-    public ConditionalEvent(Class<T> eventClass, Class playerClass, boolean evilEvent, String[] actIDs)
-    {
+    public ConditionalEvent(Class<T> eventClass, Class playerClass, boolean evilEvent, String[] actIDs) {
         this.eventClass = eventClass;
         this.playerClass = playerClass;
         this.evilEvent = evilEvent;
         this.actIDs = Arrays.asList(actIDs);
 
-        if (playerClass != null && !AbstractPlayer.class.isAssignableFrom(playerClass))
-        {
+        if (playerClass != null && !AbstractPlayer.class.isAssignableFrom(playerClass)) {
             eventLogger.info("Event " + eventClass.getSimpleName() + " was registered for a class that doesn't extend AbstractPlayer, and therefore cannot appear.");
         }
     }
 
-    public AbstractEvent getEvent()
-    {
-        try
-        {
+    public AbstractEvent getEvent() {
+        try {
             return eventClass.getConstructor().newInstance();
-        }
-        catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e)
-        {
+        } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
             eventLogger.info("Failed to instantiate event " + eventClass.getName());
             e.printStackTrace();
         }
@@ -49,7 +43,7 @@ public class ConditionalEvent<T extends AbstractEvent> {
     public boolean isValid() {
         return (actIDs.isEmpty() || actIDs.contains(AbstractDungeon.id)) &&
                 (!evilEvent || EvilModeCharacterSelect.evilMode) && //not an evil event, or evil event + evil mode
-                (playerClass == null ||  AbstractDungeon.player.getClass().equals(playerClass));
+                (playerClass == null || AbstractDungeon.player.getClass().equals(playerClass));
     }
 
     @Override

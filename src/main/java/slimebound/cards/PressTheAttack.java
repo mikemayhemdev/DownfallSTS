@@ -9,10 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
-import slimebound.orbs.SpawnedSlime;
+import slimebound.actions.CommandAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SlimedPower;
 
@@ -51,28 +49,11 @@ public class PressTheAttack extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-        AbstractOrb oldestOrb = null;
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                oldestOrb = o;
-                break;
-            }
-
-        }
-
-
         if (m.hasPower(SlimedPower.POWER_ID)) {
-
-            if (oldestOrb != null) {
-                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-                if (upgraded)
-                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-
-            }
-
+            addToBot(new CommandAction());
+            if (upgraded)
+                addToBot(new CommandAction());
         }
     }
 

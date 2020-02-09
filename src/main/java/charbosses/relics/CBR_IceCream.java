@@ -2,20 +2,18 @@ package charbosses.relics;
 
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.IceCream;
-import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 
-public class CBR_IceCream extends AbstractCharbossRelic
-{
+public class CBR_IceCream extends AbstractCharbossRelic {
     public CBR_IceCream() {
         super(new IceCream());
         this.tier = RelicTier.UNCOMMON;
     }
-    
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
-    
+
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_IceCream();

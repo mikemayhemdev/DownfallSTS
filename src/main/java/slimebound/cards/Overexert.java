@@ -10,8 +10,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
+import slimebound.actions.TrigggerSpecificSlimeAttackAction;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.LoseSlimesPower;
 import slimebound.powers.PotencyPower;
@@ -55,6 +59,8 @@ public class Overexert extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 4), 4));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
+        addToBot(new CommandAction());
+        addToBot(new CommandAction());
 
     }
 

@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.city.TheCollector;
+import expansioncontent.relics.StudyCardRelic;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
-import expansioncontent.relics.StudyCardRelic;
 
 @SpirePatch(clz = TheCollector.class, method = "takeTurn")
 public class SlimeTalkCollector {

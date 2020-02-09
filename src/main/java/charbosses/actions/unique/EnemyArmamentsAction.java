@@ -1,21 +1,27 @@
 package charbosses.actions.unique;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.localization.*;
-
 import charbosses.bosses.AbstractCharBoss;
-import com.megacrit.cardcrawl.cards.*;
-import java.util.*;
-import com.megacrit.cardcrawl.core.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
-public class EnemyArmamentsAction extends AbstractGameAction
-{
-    private static final UIStrings uiStrings;
+import java.util.ArrayList;
+
+public class EnemyArmamentsAction extends AbstractGameAction {
     public static final String[] TEXT;
+    private static final UIStrings uiStrings;
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ArmamentsAction");
+        TEXT = EnemyArmamentsAction.uiStrings.TEXT;
+    }
+
     private AbstractCharBoss p;
     private ArrayList<AbstractCard> cannotUpgrade;
     private boolean upgraded;
-    
+
     public EnemyArmamentsAction(final boolean armamentsPlus) {
         this.cannotUpgrade = new ArrayList<AbstractCard>();
         this.upgraded = false;
@@ -24,7 +30,7 @@ public class EnemyArmamentsAction extends AbstractGameAction
         this.duration = Settings.ACTION_DUR_FAST;
         this.upgraded = armamentsPlus;
     }
-    
+
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
@@ -49,20 +55,15 @@ public class EnemyArmamentsAction extends AbstractGameAction
                 return;
             }
             for (final AbstractCard c : this.p.hand.group) {
-            	if (c.canUpgrade()) {
-            		c.upgrade();
+                if (c.canUpgrade()) {
+                    c.upgrade();
                     c.superFlash();
                     c.applyPowers();
                     this.isDone = true;
                     return;
-            	}
+                }
             }
         }
         this.tickDuration();
-    }
-    
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ArmamentsAction");
-        TEXT = EnemyArmamentsAction.uiStrings.TEXT;
     }
 }

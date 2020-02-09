@@ -43,7 +43,9 @@
   "Guardian:ChargeUp": {
     "NAME": "Charge Up",
     "DESCRIPTION": "Place this card into Stasis. NL Tick - Gain !B! Block and !M! Strength. NL Volatile.",
-    "EXTENDED_DESCRIPTION": ["~ERROR:~ #rStasis in progress."]
+    "EXTENDED_DESCRIPTION": [
+      "~ERROR:~ #rStasis in progress."
+    ]
   },
   "Guardian:DonusPower": {
     "NAME": "Ancient Attack",
@@ -83,7 +85,9 @@
   "Guardian:TimeBomb": {
     "NAME": "Time Bomb",
     "DESCRIPTION": "Place this card into Stasis. NL When this card would leave Stasis, deal !M! damage to ALL enemies. NL Volatile.",
-    "EXTENDED_DESCRIPTION": ["~ERROR:~ #rStasis in progress."]
+    "EXTENDED_DESCRIPTION": [
+      "~ERROR:~ #rStasis in progress."
+    ]
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Hyper Beam",
@@ -125,13 +129,13 @@
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Beam",
-    "DESCRIPTION": "Deal !D! Damage. NL Place a Sentry_Wave into Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Place an Upgraded Sentry_Wave into Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! Damage. NL Place a Sentry Wave into Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Place an Sentry Wave+ into Stasis. NL Exhaust."
   },
   "Guardian:SentryWave": {
     "NAME": "Sentry Wave",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw a card. NL Place a Sentry_Beam into Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Draw a card. NL Place an Upgraded Sentry_Beam into Stasis. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak. NL Draw a card. NL Place a Sentry Beam into Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Draw a card. NL Place an Sentry Beam+ into Stasis. NL Exhaust."
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
@@ -158,8 +162,8 @@
   },
   "Guardian:PackageSentry": {
     "NAME": "Package: Sentry",
-    "DESCRIPTION": "Add a Sentry Beam and two Sentry Waves to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Sentry Beam and two Sentry Waves to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "DESCRIPTION": "Add a Sentry Beam and two Sentry Waves to your hand and reduce their costs by 1 this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add a Sentry Beam+ and two Sentry Waves+ to your hand and reduce their costs by 1 this combat. NL Exhaust."
   },
   "Guardian:PackageWalker": {
     "NAME": "Package: Orbwalker",
@@ -179,7 +183,9 @@
   "Guardian:Planning": {
     "NAME": "Planning",
     "DESCRIPTION": "Place the top !M! cards of your draw pile into Stasis.",
-    "EXTENDED_DESCRIPTION": ["~ERROR:~ #rStasis in progress."]
+    "EXTENDED_DESCRIPTION": [
+      "~ERROR:~ #rStasis in progress."
+    ]
   },
   "Guardian:Recover": {
     "NAME": "Recover",
@@ -193,7 +199,9 @@
   "Guardian:Clone": {
     "NAME": "Clone",
     "DESCRIPTION": "Choose a card. Place a copy of that card into Stasis. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": ["~ERROR:~ #rStasis in progress."]
+    "EXTENDED_DESCRIPTION": [
+      "~ERROR:~ #rStasis in progress."
+    ]
   },
   "Guardian:Preprogram": {
     "NAME": "Preprogram",
@@ -255,9 +263,9 @@
     "DESCRIPTION": "Deal !D! damage. NL Place the next non-Exhausting Attack or Skill you play this turn into Stasis."
   },
   "Guardian:PiercingHide": {
-  "NAME": "Piercing Hide",
-  "DESCRIPTION": "Gain !B! Block and !M! Momentary Thorns. NL Gain Defensive_Mode."
-},
+    "NAME": "Piercing Hide",
+    "DESCRIPTION": "Gain !B! Block and !M! Momentary Thorns. NL Gain Defensive_Mode."
+  },
   "Guardian:ShieldSpikes": {
     "NAME": "Shield Spikes",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Momentary Thorns if you are in Defensive_Mode."
@@ -378,12 +386,16 @@
   "Guardian:GatlingBeam": {
     "NAME": "Gatling Beam",
     "DESCRIPTION": "Place this card into Stasis. NL Tick - Deal !D! damage to a random enemy. Repeat for each time this Tick effect has triggered. NL Volatile.",
-    "EXTENDED_DESCRIPTION": ["~ERROR:~ #rStasis in progress."]
+    "EXTENDED_DESCRIPTION": [
+      "~ERROR:~ #rStasis in progress."
+    ]
   },
   "Guardian:ShieldCharger": {
     "NAME": "Shield Charger",
     "DESCRIPTION": "Place this card into Stasis. NL Tick - Gain !B! Block and [E]. NL Volatile.",
-    "EXTENDED_DESCRIPTION": ["~ERROR:~ #rStasis in progress."]
+    "EXTENDED_DESCRIPTION": [
+      "~ERROR:~ #rStasis in progress."
+    ]
   },
   "Guardian:StasisEngine": {
     "NAME": "Stasis Engine",
@@ -421,7 +433,9 @@
     "NAME": "Mass Of Bombs",
     "DESCRIPTION": "In each empty Stasis slot, place a Time Bomb there. NL Exhaust if this created 2 or more Time Bombs.",
     "UPGRADE_DESCRIPTION": "In each empty Stasis slot, place an Upgraded Time Bomb there. NL Exhaust if this created 2 or more Time Bombs.",
-    "EXTENDED_DESCRIPTION": ["~ERROR:~ #rStasis in progress."]
+    "EXTENDED_DESCRIPTION": [
+      "~ERROR:~ #rStasis in progress."
+    ]
   },
   "Guardian:MassSlam": {
     "NAME": "Group Slam",

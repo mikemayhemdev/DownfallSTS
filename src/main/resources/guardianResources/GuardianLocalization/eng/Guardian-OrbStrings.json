@@ -4,6 +4,9 @@
     "DESCRIPTION": [
       " will return to your hand at 0-cost at the start of your next turn.",
       " will return to your hand at 0-cost in ",
+      " turns.",
+      " will #yExhaust at the start of your next turn.",
+      " will #yExhaust in ",
       " turns."
     ]
   }

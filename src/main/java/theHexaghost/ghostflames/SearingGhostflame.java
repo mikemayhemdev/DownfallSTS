@@ -13,6 +13,7 @@ import theHexaghost.util.TextureLoader;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
     public int attacksPlayedThisTurn = 0;
 
     public SearingGhostflame(float x, float y) {
@@ -32,8 +33,6 @@ public class SearingGhostflame extends AbstractGhostflame {
             att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
         }
     }
-
-    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
 
     @Override
     public Texture getHelperTexture() {

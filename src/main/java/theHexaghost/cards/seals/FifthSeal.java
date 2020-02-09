@@ -1,11 +1,8 @@
 package theHexaghost.cards.seals;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.powers.SealPostCombatPower;
-import theHexaghost.util.SealCommonReward;
-import theHexaghost.util.SealSealReward;
 
 public class FifthSeal extends AbstractSealCard {
     public final static String ID = makeID("FifthSeal");

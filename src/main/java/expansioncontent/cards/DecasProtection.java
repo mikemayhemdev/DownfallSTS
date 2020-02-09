@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,7 +32,6 @@ public class DecasProtection extends AbstractExpansionCard {
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
         c.setCostForTurn(0);
         atb(new MakeTempCardInHandAction(c, true));
-
 
 
     }

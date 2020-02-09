@@ -3,15 +3,12 @@ package guardian.potions;
 
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import guardian.actions.SwitchToDefenseModeAction;
 import guardian.powers.BlockOnCardUsePower;
-import slimebound.powers.AcidTonguePowerUpgraded;
 
 public class BlockOnCardUsePotion extends CustomPotion {
     public static final String POTION_ID = "Guardian:BlockOnCardUsePotion";

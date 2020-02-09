@@ -1,7 +1,6 @@
 package expansioncontent.cards;
 
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -55,7 +54,7 @@ public class YouAreMine extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_MAGIC);
+            upgradeMagicNumber(UPGRADE_MAGIC);
         }
     }
 

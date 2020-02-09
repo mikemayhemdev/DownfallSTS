@@ -18,22 +18,18 @@ public class AdditionalEventConditions {
             clz = AbstractDungeon.class,
             method = "getEvent"
     )
-    public static class NormalEventConditions
-    {
+    public static class NormalEventConditions {
         @SpireInsertPatch(
                 locator = NormalEventConditionLocator.class,
-                localvars = { "tmp" }
+                localvars = {"tmp"}
         )
-        public static void insert(Random rng, ArrayList<String> tmp)
-        {
-            tmp.removeIf((e)-> EventUtils.normalEventBonusConditions.containsKey(e) && !EventUtils.normalEventBonusConditions.get(e).test(AbstractDungeon.player));
+        public static void insert(Random rng, ArrayList<String> tmp) {
+            tmp.removeIf((e) -> EventUtils.normalEventBonusConditions.containsKey(e) && !EventUtils.normalEventBonusConditions.get(e).test(AbstractDungeon.player));
         }
 
-        private static class NormalEventConditionLocator extends SpireInsertLocator
-        {
+        private static class NormalEventConditionLocator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(ArrayList.class, "isEmpty");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -48,22 +44,18 @@ public class AdditionalEventConditions {
             clz = AbstractDungeon.class,
             method = "getShrine"
     )
-    public static class SpecialEventConditions
-    {
+    public static class SpecialEventConditions {
         @SpireInsertPatch(
                 locator = SpecialEventConditionLocator.class,
-                localvars = { "tmp" }
+                localvars = {"tmp"}
         )
-        public static void insert(Random rng, ArrayList<String> tmp)
-        {
-            tmp.removeIf((e)-> EventUtils.specialEventBonusConditions.containsKey(e) && !EventUtils.specialEventBonusConditions.get(e).test(AbstractDungeon.player));
+        public static void insert(Random rng, ArrayList<String> tmp) {
+            tmp.removeIf((e) -> EventUtils.specialEventBonusConditions.containsKey(e) && !EventUtils.specialEventBonusConditions.get(e).test(AbstractDungeon.player));
         }
 
-        private static class SpecialEventConditionLocator extends SpireInsertLocator
-        {
+        private static class SpecialEventConditionLocator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(ArrayList.class, "get");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }

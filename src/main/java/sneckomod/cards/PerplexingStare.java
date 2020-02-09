@@ -3,7 +3,6 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import sneckomod.SneckoMod;
 
 public class PerplexingStare extends AbstractSneckoCard {
 

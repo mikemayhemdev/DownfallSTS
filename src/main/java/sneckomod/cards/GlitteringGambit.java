@@ -16,7 +16,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
     private static final int UPG_MAGIC = 5;
 
     public GlitteringGambit() {
-        super(ID,  0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
@@ -27,7 +27,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
         int x = getRandomNum(magicNumber, 120);
         int y = AbstractDungeon.player.gold * x;
         int z = y / 100;
-        atb(new ChangeGoldAction(z-x));
+        atb(new ChangeGoldAction(z - x));
     }
 
     public void upgrade() {

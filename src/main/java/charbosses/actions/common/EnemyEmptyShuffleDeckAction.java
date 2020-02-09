@@ -1,28 +1,34 @@
 package charbosses.actions.common;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.helpers.*;
-import com.megacrit.cardcrawl.ui.*;
-
 import charbosses.bosses.AbstractCharBoss;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.TipTracker;
+import com.megacrit.cardcrawl.localization.TutorialStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.ui.FtueTip;
 
-import com.megacrit.cardcrawl.dungeons.*;
-import com.megacrit.cardcrawl.relics.*;
-import java.util.*;
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.core.*;
+import java.util.Iterator;
 
-public class EnemyEmptyShuffleDeckAction extends AbstractGameAction
-{
-    private static final TutorialStrings tutorialStrings;
+public class EnemyEmptyShuffleDeckAction extends AbstractGameAction {
     public static final String[] MSG;
     public static final String[] LABEL;
+    private static final TutorialStrings tutorialStrings;
+
+    static {
+        tutorialStrings = CardCrawlGame.languagePack.getTutorialString("Shuffle Tip");
+        MSG = EnemyEmptyShuffleDeckAction.tutorialStrings.TEXT;
+        LABEL = EnemyEmptyShuffleDeckAction.tutorialStrings.LABEL;
+    }
+
     private boolean shuffled;
     private boolean vfxDone;
     private int count;
     private AbstractCharBoss boss;
-    
+
     public EnemyEmptyShuffleDeckAction(AbstractCharBoss boss) {
         this.shuffled = false;
         this.vfxDone = false;
@@ -37,7 +43,7 @@ public class EnemyEmptyShuffleDeckAction extends AbstractGameAction
             r.onShuffle();
         }
     }
-    
+
     @Override
     public void update() {
         if (!this.shuffled) {
@@ -56,11 +62,5 @@ public class EnemyEmptyShuffleDeckAction extends AbstractGameAction
             this.vfxDone = true;
         }
         this.isDone = true;
-    }
-    
-    static {
-        tutorialStrings = CardCrawlGame.languagePack.getTutorialString("Shuffle Tip");
-        MSG = EnemyEmptyShuffleDeckAction.tutorialStrings.TEXT;
-        LABEL = EnemyEmptyShuffleDeckAction.tutorialStrings.LABEL;
     }
 }

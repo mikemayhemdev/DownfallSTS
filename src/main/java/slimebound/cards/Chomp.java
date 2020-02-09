@@ -4,8 +4,8 @@ package slimebound.cards;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,7 +15,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.TackleDebuffPower;
+
+import java.util.ArrayList;
 
 
 public class Chomp extends AbstractSlimeboundCard {
@@ -49,7 +50,7 @@ public class Chomp extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 4;
+        this.baseDamage = this.originalDamage = 9;
         this.upgradeDamage = 2;
         // this.exhaust = true;
 
@@ -64,13 +65,22 @@ public class Chomp extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY, Color.GREEN), 0.2F));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY, Color.GREEN)));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new TackleDebuffPower(m, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-
-
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                ArrayList<AbstractCard> tackleList = new ArrayList<>();
+                for (AbstractCard q : AbstractDungeon.player.hand.group) {
+                    if (q.hasTag(SlimeboundMod.TACKLE)) {
+                        tackleList.add(q);
+                    }
+                }
+                if (!tackleList.isEmpty()) {
+                    addToTop(new ReduceCostAction(tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1))));
+                }
+            }
+        });
     }
 
     public AbstractCard makeCopy() {

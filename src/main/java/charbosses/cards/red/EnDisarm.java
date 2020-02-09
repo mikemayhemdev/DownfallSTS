@@ -1,23 +1,23 @@
 package charbosses.cards.red;
 
-import com.megacrit.cardcrawl.cards.*;
-import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.characters.*;
-import com.megacrit.cardcrawl.monsters.*;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.powers.*;
-
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import com.megacrit.cardcrawl.actions.*;
-import com.megacrit.cardcrawl.core.*;
-
-public class EnDisarm extends AbstractBossCard
-{
+public class EnDisarm extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Disarm";
     private static final CardStrings cardStrings;
-    
+
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Disarm");
+    }
+
     public EnDisarm() {
         super(ID, EnDisarm.cardStrings.NAME, "red/skill/disarm", 1, EnDisarm.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 2;
@@ -26,17 +26,17 @@ public class EnDisarm extends AbstractBossCard
         this.exhaust = true;
         this.limit = 1;
     }
-    
+
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, m, new StrengthPower(p, -this.magicNumber), -this.magicNumber));
     }
-    
+
     @Override
     public boolean canUpgrade() {
-    	return AbstractCharBoss.finishedSetup;
+        return AbstractCharBoss.finishedSetup;
     }
-    
+
     @Override
     public void upgrade() {
         if (!this.upgraded) {
@@ -44,13 +44,9 @@ public class EnDisarm extends AbstractBossCard
             this.upgradeMagicNumber(1);
         }
     }
-    
+
     @Override
     public AbstractCard makeCopy() {
         return new EnDisarm();
-    }
-    
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Disarm");
     }
 }

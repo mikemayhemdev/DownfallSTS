@@ -3,8 +3,6 @@ package sneckomod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
@@ -34,7 +32,7 @@ public class MudshieldPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void updateDescription() {
-            description = "Whenever you #yMuddle a card, gain #b" + amount + " #yBlock next turn.";
+        description = "Whenever you #yMuddle a card, gain #b" + amount + " #yBlock next turn.";
     }
 
     @Override

@@ -4,7 +4,6 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
@@ -13,12 +12,11 @@ import java.util.function.Predicate;
 
 public class UnknownVulnerable extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownVulnerable");
+    public static boolean bruh = false;
 
     public UnknownVulnerable() {
         super(ID, CardType.SKILL, CardRarity.COMMON);
     }
-
-    public static boolean bruh = false;
 
     public boolean useCheck(AbstractCard card) {
         bruh = false;

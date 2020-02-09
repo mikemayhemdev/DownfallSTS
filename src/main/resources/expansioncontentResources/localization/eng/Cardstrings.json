@@ -6,7 +6,7 @@
   "expansioncontent:GuardianWhirl": {
     "NAME": "Guardian Whirl",
     "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust."
-   },
+  },
   "expansioncontent:DefensiveMode": {
     "NAME": "Defensive Mode",
     "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."

@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
-import theHexaghost.cards.seals.AbstractSealCard;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,15 +24,6 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 public class UpgradedUnknownReward extends RewardItem {
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
-
-    public static AbstractCard getUnknownCard() {
-        ArrayList<AbstractCard> list = new ArrayList<>();// 1201
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c instanceof AbstractUnknownCard)
-                list.add(c);
-        }
-        return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));// 1217
-    }
 
     public UpgradedUnknownReward(AbstractCard.CardColor colorType) {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
@@ -70,6 +60,15 @@ public class UpgradedUnknownReward extends RewardItem {
 
             return;
         }
+    }
+
+    public static AbstractCard getUnknownCard() {
+        ArrayList<AbstractCard> list = new ArrayList<>();// 1201
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (c instanceof AbstractUnknownCard)
+                list.add(c);
+        }
+        return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));// 1217
     }
 
     public boolean cardListDuplicate(AbstractCard card) {
