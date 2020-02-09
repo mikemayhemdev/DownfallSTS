@@ -11,10 +11,6 @@ import theHexaghost.powers.EnhancePower;
 public class GhostWheel extends AbstractExpansionCard {
     public final static String ID = makeID("GhostWheel");
 
-    private static final int BLOCK = 20;
-    private static final int UPGRADE_BLOCK = 10;
-    private static final int MAGIC = 2;
-
     public GhostWheel() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
@@ -26,7 +22,7 @@ public class GhostWheel extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (HexaMod.renderFlames) {
 
-            atb(new ApplyPowerAction(p, p, new EnhancePower(1), 1));
+            atb(new ApplyPowerAction(p, p, new EnhancePower(2), 2));
         } else {
 
             HexaMod.renderFlames = true;
@@ -38,7 +34,7 @@ public class GhostWheel extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeBaseCost(1);
         }
     }
 

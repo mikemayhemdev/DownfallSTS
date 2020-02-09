@@ -90,11 +90,18 @@ public class StasisOrb extends AbstractOrb {
 
     public void updateDescription() {
         this.applyFocus();
-        if (this.passiveAmount > 1) {
-            this.description = this.stasisCard.name + DESC[1] + this.passiveAmount + DESC[2];
-
+        if (this.stasisCard.hasTag(GuardianMod.VOLATILE)) {
+            if (this.passiveAmount > 1) {
+                this.description = this.stasisCard.name + DESC[4] + this.passiveAmount + DESC[5];
+            } else {
+                this.description = this.stasisCard.name + DESC[3];
+            }
         } else {
-            this.description = this.stasisCard.name + DESC[0];
+            if (this.passiveAmount > 1) {
+                this.description = this.stasisCard.name + DESC[1] + this.passiveAmount + DESC[2];
+            } else {
+                this.description = this.stasisCard.name + DESC[0];
+            }
         }
     }
 

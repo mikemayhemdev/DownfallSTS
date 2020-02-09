@@ -1,0 +1,9 @@
+{
+	"evil-within:Vampires": {
+		"NAME": "Event: Vampires",
+		"FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
+		"DESCRIPTIONS": [
+			"Strikes have been replaced with Bites. NL -30% Maximum HP"
+		]
+	}
+}

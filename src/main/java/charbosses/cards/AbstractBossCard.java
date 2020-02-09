@@ -253,4 +253,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
         return uc.getValue() - uc.getValue();
     }
+
+
+
 }
