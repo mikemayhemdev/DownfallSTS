@@ -1,9 +1,10 @@
 package guardian.cards;
 
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,28 +12,30 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.CardIgnore;
 
-
-public class SentryBeam extends AbstractGuardianCard {
-    public static final String ID = GuardianMod.makeID("SentryBeam");
+public class SentryWaveNoHover extends AbstractGuardianCard {
+    public static final String ID = GuardianMod.makeID("SentryWave");
     public static final String NAME;
-    public static final String IMG_PATH = "cards/sentryBeam.png";
-    private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    public static final String DESCRIPTION;
+    public static final String IMG_PATH = "cards/sentryWave.png";
     private static final CardStrings cardStrings;
+    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 0;
-    private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 2;
+    private static final int DEBUFFCOUNT = 1;
+    private static final int UPGRADE_DEBUFF = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
-    public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
 
     //END TUNING CONSTANTS
@@ -42,77 +45,62 @@ public class SentryBeam extends AbstractGuardianCard {
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-
     }
 
-    public SentryBeam() {
-
+    public SentryWaveNoHover() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        this.tags.add(GuardianMod.BEAM);
-        this.baseDamage = DAMAGE;
+        this.baseMagicNumber = this.magicNumber = DEBUFFCOUNT;
         this.exhaust = true;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        cardsToPreview = new SentryWaveNoHover();
-    }
-
-    @Override
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        return tmp + calculateBeamDamage();
-    }
-
-    @Override
-    public float calculateModifiedCardDamage(AbstractPlayer player, float tmp) {
-        return tmp + calculateBeamDamage();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.ROYAL, ShockWaveEffect.ShockWaveType.ADDITIVE), 0.1F));
+        AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP"));
 
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
+        if (upgraded) {
+            for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+                if (!m2.isDead && !m2.isDying) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m2, p, new WeakPower(m2, this.magicNumber, false), this.magicNumber));
+                }
+            }
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+        }
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         if (AbstractDungeon.player.hasEmptyOrb()) {
-            AbstractGuardianCard newCard = new SentryWaveNoHover();
-            newCard.sockets = this.sockets;
+
+            AbstractGuardianCard newCard = new SentryBeam();
             if (this.upgraded) newCard.upgrade();
+            UnlockTracker.markCardAsSeen(SentryWaveNoHover.ID);
 
             AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(newCard));
         }
 
-
         super.useGems(p, m);
-
     }
 
     public AbstractCard makeCopy() {
-
-        return new SentryBeam();
-
+        return new SentryWaveNoHover();
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+            //upgradeMagicNumber(UPGRADE_DEBUFF);
+            this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
-            AbstractCard q = new SentryWave();
-            q.upgrade();
-            cardsToPreview = q;
             this.initializeDescription();
-
         }
-
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
