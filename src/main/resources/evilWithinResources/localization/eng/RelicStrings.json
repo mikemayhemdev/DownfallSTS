@@ -3,7 +3,33 @@
 		"NAME": "Event: Vampires",
 		"FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
 		"DESCRIPTIONS": [
-			"Strikes have been replaced with Bites. NL -30% Maximum HP"
+			"Strikes have been replaced with Bites. NL -",
+			" Maximum HP."
+		]
+	},
+	"evil-within:BonfireSpirits": {
+		"NAME": "Event: Bonfire Spirits",
+		"FLAVOR": "The spirits toss small bones and fragments into the fire, which brilliantly erupts each time...",
+		"DESCRIPTIONS": [
+			" Curse was removed from the deck. NL The spirits were displeased.",
+			" was removed from the deck. NL +10 Maximum HP.",
+			" was removed from the deck."
+		]
+	},
+	"evil-within:BigFish": {
+		"NAME": "Event: Big Fish",
+		"FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
+		"DESCRIPTIONS": [
+			"The Donut was chosen. NL +5 Maximum HP.",
+			"The Box was chosen. NL A Regret curse and a ",
+			" were added."
+		]
+	},
+	"evil-within:Falling": {
+		"NAME": "Event: Falling",
+		"FLAVOR": "While in free fall you consider your options...",
+		"DESCRIPTIONS": [
+			" was removed from the deck."
 		]
 	}
 }

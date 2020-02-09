@@ -8,6 +8,9 @@ import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.*;
 import charbosses.cards.red.EnPerfectedStrike;
 import charbosses.relics.*;
+import charbosses.relics.EventRelics.CBR_BigFish;
+import charbosses.relics.EventRelics.CBR_BonfireSpirits;
+import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Vampires;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
@@ -50,13 +53,16 @@ public abstract class AbstractBossDeckArchetype {
 
 	private static void initializeGlobalEventRelics(){
 		//Global Events
+		globalEventPool.add(new CBR_BonfireSpirits());
 
 		//Act 1 Events
+		globalEventPoolAct1.add(new CBR_BigFish());
 
 		//Act 2 Events
 		globalEventPoolAct2.add(new CBR_Vampires());
 
 		//Act 3 Events
+		globalEventPoolAct3.add(new CBR_Falling());
 	}
 
 	private static void initializeRelics(){
@@ -561,7 +567,7 @@ public abstract class AbstractBossDeckArchetype {
 			}
 
 
-			logger.info("Boss's potential " + (actIndex + 1) + " Event Relics:");
+			logger.info("Boss's potential Act " + (actIndex + 1) + " Event Relics:");
 			for (AbstractCharbossRelic r : validEventRelics){
 				logger.info(r.name);
 			}
@@ -631,7 +637,7 @@ public abstract class AbstractBossDeckArchetype {
 		
 	}
 
-	public void addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards){
+	public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards){
 		if (globalRelicAcquisitionsPerAct[actIndex] > 0) {
 			if (globalRelicPool.size() > 0) {
 				for (int i2 = 0; i2 < globalRelicAcquisitionsPerAct[actIndex]; i2++) {
@@ -646,10 +652,26 @@ public abstract class AbstractBossDeckArchetype {
 					} else {
 						logger.info(loggerName + "added " + randomRelic.name + ".");
 					}
+					return randomRelic.name;
 				}
 			}
 		}
+		return "";
 	}
+
+	public void addSpecificRelic(AbstractCharbossRelic relic, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards) {
+
+		relic.instantObtain(boss);
+		relic.modifyCardsOnCollect(cards);
+		globalRelicPool.remove(relic);
+		if (loggerName.equals("")) {
+			logger.info(relic.name);
+		} else {
+			logger.info(loggerName + "added " + relic.name + ".");
+		}
+	}
+
+
 
 	public void addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
 		addRandomGlobalRelic(actIndex,boss,"", cards);
