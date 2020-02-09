@@ -30,7 +30,6 @@ import sneckomod.potions.MuddlingPotion;
 import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.relics.*;
 import sneckomod.util.SneckoSilly;
-import sun.security.provider.SHA;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -201,6 +200,7 @@ public class SneckoMod implements
         BaseMod.addRelicToCustomPool(new SuperSneckoSoul(), TheSnecko.Enums.SNECKO_CYAN);
         BaseMod.addRelicToCustomPool(new UnknownEgg(), TheSnecko.Enums.SNECKO_CYAN);
         BaseMod.addRelic(new SuperSneckoSoul(), RelicType.SHARED);
+        BaseMod.addRelic(new SneckoTalon(), RelicType.SHARED);
     }
 
     @Override
