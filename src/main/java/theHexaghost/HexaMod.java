@@ -2,6 +2,7 @@ package theHexaghost;
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -184,6 +185,8 @@ public class HexaMod implements
         BaseMod.addRelicToCustomPool(new SoulOfChaos(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new TheBrokenSeal(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelicToCustomPool(new UnknownEgg(), TheHexaghost.Enums.GHOST_GREEN);
+        BaseMod.addRelic(new BolsterEngine(), RelicType.SHARED);
+        BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
     }
 
     @Override

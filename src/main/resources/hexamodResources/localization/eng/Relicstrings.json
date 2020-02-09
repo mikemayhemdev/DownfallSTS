@@ -69,5 +69,19 @@
     "DESCRIPTIONS": [
       "Swap the positions of the Bolstering Ghostflame and the first Searing Ghostflame."
     ]
+  },
+  "hexamod:BolsterEngine": {
+    "NAME": "Bolster Engine",
+    "FLAVOR": "Fire shields! Fire strengthens.",
+    "DESCRIPTIONS": [
+      "The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength."
+    ]
+  },
+  "hexamod:CandleOfCauterizing": {
+    "NAME": "Candle of Cauterizing",
+    "FLAVOR": "Fire BURNS...",
+    "DESCRIPTIONS": [
+      "Whenever an #yAttack deals unblocked damage, apply #b1 #yhexamod:Burn."
+    ]
   }
 }
