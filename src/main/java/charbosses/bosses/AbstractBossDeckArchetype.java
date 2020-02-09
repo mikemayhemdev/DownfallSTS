@@ -527,7 +527,7 @@ public abstract class AbstractBossDeckArchetype {
 				logger.info("The Run is too long, so in act " + (actIndex + 1) + ", Boss obtained another Global Relic:");
 				addRandomGlobalRelic(actIndex, boss, cards);
 			}
-
+			AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
 			logger.info("Boss's potential Class Global Relics:");
 			for (AbstractCharbossRelic r : globalRelicPool){
 				logger.info(r.name);
@@ -566,7 +566,7 @@ public abstract class AbstractBossDeckArchetype {
 
 			}
 
-
+			AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
 			logger.info("Boss's potential Act " + (actIndex + 1) + " Event Relics:");
 			for (AbstractCharbossRelic r : validEventRelics){
 				logger.info(r.name);
@@ -621,6 +621,7 @@ public abstract class AbstractBossDeckArchetype {
 				}
 			}
 
+			AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
 			logger.info("Finished simulating run results from Act " + (actIndex + 1) + " out of " + AbstractDungeon.actNum);
 		}
 

@@ -46,7 +46,6 @@ public class CBR_Falling extends AbstractCharbossRelic
         AbstractBossDeckArchetype.logger.info("Falling event removed 1 " + cardToRemove.name + ".");
         cardName = cardToRemove.name;
         list.remove(cardToRemove);
-        AbstractCharBoss.boss.decreaseMaxHealth(MathUtils.floor(AbstractCharBoss.boss.maxHealth * 0.75F));
         this.updateDescription(AbstractCharBoss.boss.chosenClass);
     }
 
