@@ -103,5 +103,13 @@
     "DESCRIPTIONS": [
       "You can now #gMine for #b2 #yGems at Rest Sites (up to #b3 times)."
     ]
+  },
+  "Guardian:GemstoneGun": {
+    "NAME": "Gemstone Gun",
+    "FLAVOR": "Bang! Bang! Bang! Hey, I matched three!",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b3 #yGems. At the start of each combat, activate their effects in order.",
+      "At the start of each combat: NL "
+    ]
   }
 }

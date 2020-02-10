@@ -241,10 +241,8 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
 
     public static CardGroup getGemCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.MASTER_DECK);
-        Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while (var2.hasNext()) {
-            AbstractCard c = (AbstractCard) var2.next();
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.hasTag(GuardianMod.GEM)) {
                 retVal.group.add(c);
             }
