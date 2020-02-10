@@ -525,7 +525,14 @@ public abstract class AbstractBossDeckArchetype {
 			else
 			{
 				logger.info("The Run is too long, so in act " + (actIndex + 1) + ", Boss obtained another Global Relic:");
-				addRandomGlobalRelic(actIndex, boss, cards);
+
+				ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(globalRelicPool);
+				int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
+				AbstractCharbossRelic randomRelic = sortedRelics.get(random);
+				randomRelic.instantObtain(boss);
+				randomRelic.modifyCardsOnCollect(cards);
+				globalRelicPool.remove(randomRelic);
+				logger.info(randomRelic.name);
 			}
 			AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
 			logger.info("Boss's potential Class Global Relics:");
@@ -639,9 +646,9 @@ public abstract class AbstractBossDeckArchetype {
 	}
 
 	public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards){
-		if (globalRelicAcquisitionsPerAct[actIndex] > 0) {
+		if (globalRelicAcquisitionsPerAct[Math.min(actIndex, 2)] > 0) {
 			if (globalRelicPool.size() > 0) {
-				for (int i2 = 0; i2 < globalRelicAcquisitionsPerAct[actIndex]; i2++) {
+				for (int i2 = 0; i2 < globalRelicAcquisitionsPerAct[Math.min(actIndex, 2)]; i2++) {
 					ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(globalRelicPool);
 					int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
 					AbstractCharbossRelic randomRelic = sortedRelics.get(random);
