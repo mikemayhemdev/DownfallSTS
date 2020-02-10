@@ -3,6 +3,7 @@ package guardian;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -538,7 +539,6 @@ public static void saveData() {
         BaseMod.addRelicToCustomPool(new BottledStasis(), AbstractCardEnum.GUARDIAN);
         BaseMod.registerBottleRelic(BottledStasisPatch.inBottledStasis, new BottledStasis());
         BaseMod.addRelicToCustomPool(new DefensiveModeMoreBlock(), AbstractCardEnum.GUARDIAN);
-        BaseMod.addRelicToCustomPool(new PocketSentry(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new SackOfGems(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new StasisCodex(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new StasisSlotReductionRelic(), AbstractCardEnum.GUARDIAN);
@@ -546,6 +546,8 @@ public static void saveData() {
         BaseMod.addRelicToCustomPool(new guardian.relics.StasisEgg(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new guardian.relics.PickAxe(), AbstractCardEnum.GUARDIAN);
         BaseMod.registerBottleRelic(BottledStasisPatch.inStasisEgg, new guardian.relics.StasisEgg());
+        BaseMod.addRelic(new GemstoneGun(), RelicType.SHARED);
+        BaseMod.addRelic(new PocketSentry(), RelicType.SHARED);
 
 
         //TODO - Part of unlocks and shared mechanics
