@@ -20,7 +20,7 @@ public class DrawThenMuddleAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         if (AbstractDungeon.player.drawPile.size() + AbstractDungeon.player.discardPile.size() < bruh) {
-        } else if (p.drawPile.isEmpty() || p.drawPile.size() < bruh) {
+        } else if (p.drawPile.isEmpty() || p.drawPile.size() <= bruh) {
             for (int i = 0; i < bruh; i++) {
                 int r = i;
                 addToTop(new AbstractGameAction() {
@@ -33,7 +33,7 @@ public class DrawThenMuddleAction extends AbstractGameAction {
                 });
             }
             addToTop(new DrawCardAction(p, bruh));
-            AbstractDungeon.actionManager.addToTop(new EmptyDeckShuffleAction());// 34
+            addToTop(new EmptyDeckShuffleAction());// 34
         } else {
             isDone = true;
             for (int i = 0; i < bruh; i++) {

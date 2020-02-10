@@ -83,5 +83,12 @@
     "DESCRIPTIONS": [
       "Whenever an #yAttack deals unblocked damage, apply #b1 #yhexamod:Burn."
     ]
+  },
+  "hexamod:Sixitude": {
+    "NAME": "Sixitude",
+    "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
+    "DESCRIPTIONS": [
+      "Whenever you play #b6 cards, deal #b6 damage to a random enemy."
+    ]
   }
 }
