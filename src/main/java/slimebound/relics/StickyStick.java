@@ -14,9 +14,9 @@ import slimebound.powers.AcidTonguePowerUpgraded;
 
 public class StickyStick extends CustomRelic {
     public static final String ID = "Slimebound:StickyStick";
-    public static final String IMG_PATH = "relics/slimedSkull.png";
-    public static final String IMG_PATH_LARGE = "relics/slimedSkullLarge.png";
-    public static final String OUTLINE_IMG_PATH = "relics/slimedSkullOutline.png";
+    public static final String IMG_PATH = "relics/StickyStick.png";
+    public static final String IMG_PATH_LARGE = "relics/StickyStickLarge.png";
+    public static final String OUTLINE_IMG_PATH = "relics/StickyStickOutline.png";
     private static final int HP_PER_CARD = 1;
 
     public StickyStick() {

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class BottledStasisPatch {
     public static SpireField<Boolean> inBottledStasis = new SpireField<>(() -> false);
     public static SpireField<Boolean> inStasisEgg = new SpireField<>(() -> false);
+    public static SpireField<Boolean> inBottledAnomaly = new SpireField<>(() -> false);
 
     @SpirePatch(
             clz = AbstractCard.class,
@@ -23,12 +24,12 @@ public class BottledStasisPatch {
         public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
             inBottledStasis.set(__result, inBottledStasis.get(__instance));
             inStasisEgg.set(__result, inStasisEgg.get(__instance));
+            inBottledAnomaly.set(__result, inBottledAnomaly.get(__instance));
             if (__instance instanceof AbstractGuardianCard) {
 
                 ((AbstractGuardianCard) __result).socketCount = ((AbstractGuardianCard) __instance).socketCount;
 
                 ((AbstractGuardianCard) __result).sockets = new ArrayList<>(((AbstractGuardianCard) __instance).sockets);
-
 
                 ((AbstractGuardianCard) __result).updateDescription();
             }

@@ -11,8 +11,8 @@ import theHexaghost.util.TextureLoader;
 public class SuperSneckoEye extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("SuperSneckoEye");
-    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("CleanMud.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("CleanMud.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SuperSneckoEye.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SuperSneckoEye.png"));
 
     public SuperSneckoEye() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

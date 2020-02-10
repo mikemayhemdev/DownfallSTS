@@ -19,8 +19,8 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
 
     public static final String ID = GuardianMod.makeID("GemstoneGun");
 
-    public static final String IMG_PATH = "relics/modeShifter.png";
-    public static final String OUTLINE_IMG_PATH = "relics/modeShifterOutline.png";
+    public static final String IMG_PATH = "relics/GemstoneGun.png";
+    public static final String OUTLINE_IMG_PATH = "relics/GemstoneGunOutline.png";
 
     private boolean cardSelected = true;
 

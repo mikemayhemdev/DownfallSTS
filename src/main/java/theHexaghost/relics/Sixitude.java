@@ -18,8 +18,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class Sixitude extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("Sixitude");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("IceCube.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("IceCube.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Sixitude.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Sixitude.png"));
 
     public Sixitude() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

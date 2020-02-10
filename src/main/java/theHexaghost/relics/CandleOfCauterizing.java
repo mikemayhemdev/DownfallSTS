@@ -22,8 +22,8 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class CandleOfCauterizing extends CustomRelic {
 
     public static final String ID = HexaMod.makeID("CandleOfCauterizing");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("IceCube.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("IceCube.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("CandleOfCauterizing.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CandleOfCauterizing.png"));
 
     public CandleOfCauterizing() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);

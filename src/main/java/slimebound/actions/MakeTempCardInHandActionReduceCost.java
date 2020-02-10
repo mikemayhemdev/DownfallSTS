@@ -40,6 +40,16 @@ public class MakeTempCardInHandActionReduceCost extends com.megacrit.cardcrawl.a
 
     }
 
+    public MakeTempCardInHandActionReduceCost(AbstractCard card, int amount, int amountToReduce) {
+        com.megacrit.cardcrawl.unlock.UnlockTracker.markCardAsSeen(card.cardID);
+        this.amount = amount;
+        this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.CARD_MANIPULATION;
+        this.duration = 0.35F;
+        this.c = card.makeStatEquivalentCopy();
+        this.c.modifyCostForCombat(amountToReduce);
+
+    }
+
 
     public void update() {
         if (this.amount == 0) {

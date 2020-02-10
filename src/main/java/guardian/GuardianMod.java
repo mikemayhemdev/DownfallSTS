@@ -548,6 +548,8 @@ public static void saveData() {
         BaseMod.registerBottleRelic(BottledStasisPatch.inStasisEgg, new guardian.relics.StasisEgg());
         BaseMod.addRelic(new GemstoneGun(), RelicType.SHARED);
         BaseMod.addRelic(new PocketSentry(), RelicType.SHARED);
+        BaseMod.addRelic(new BottledAnomaly(), RelicType.SHARED);
+        BaseMod.registerBottleRelic(BottledStasisPatch.inBottledAnomaly, new BottledAnomaly());
 
 
         //TODO - Part of unlocks and shared mechanics
