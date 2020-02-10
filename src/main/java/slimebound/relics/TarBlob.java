@@ -12,9 +12,9 @@ import slimebound.powers.PotencyPower;
 
 public class TarBlob extends CustomRelic {
     public static final String ID = "Slimebound:TarBlob";
-    public static final String IMG_PATH = "relics/oozeStone.png";
-    public static final String IMG_PATH_LARGE = "relics/oozeStonearge.png";
-    public static final String OUTLINE_IMG_PATH = "relics/oozeStoneOutline.png";
+    public static final String IMG_PATH = "relics/tarblob.png";
+    public static final String IMG_PATH_LARGE = "relics/tarblob.png";
+    public static final String OUTLINE_IMG_PATH = "relics/tarblobOutline.png";
     private static final int HP_PER_CARD = 1;
 
     public TarBlob() {

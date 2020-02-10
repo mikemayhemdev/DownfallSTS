@@ -52,8 +52,8 @@
     ]
   },
   "Slimebound:PreparedRelic": {
-    "NAME": "Slimy Tea Set",
-    "FLAVOR": "Definitely not the key to a refreshing night's rest.",
+    "NAME": "Slime Soup",
+    "FLAVOR": "Tastes awful, but incredibly healthy.",
     "DESCRIPTIONS": [
       "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0 for your first turn."
     ]
@@ -74,8 +74,8 @@
     ]
   },
   "Slimebound:MaxSlimesRelic": {
-    "NAME": "Slime Plushie",
-    "FLAVOR": "Too adorable.",
+    "NAME": "Banner of Command",
+    "FLAVOR": "It's a little damp.",
     "DESCRIPTIONS": [
       "At the start of combat, #ySplit into a #yLeeching slime and gain #b1 Slime slot."
     ]
@@ -95,7 +95,7 @@
     ]
   },
   "Slimebound:StickyStick": {
-    "NAME": "Sticky Stick",
+    "NAME": "Gelatinous Cube",
     "FLAVOR": "Hey, it stuck to your body.",
     "DESCRIPTIONS": [
       "Whenever you draw a #rCurse or #yStatus card, draw #b1 card."

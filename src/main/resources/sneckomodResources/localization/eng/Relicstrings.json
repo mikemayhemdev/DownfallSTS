@@ -71,7 +71,7 @@
     ]
   },
   "sneckomod:SneckoTalon": {
-    "NAME": "Snecko Talon",
+    "NAME": "Snecko Fang",
     "FLAVOR": "3 -> 2. 2 -> 1. 1 -> 0. 0 -> X?",
     "DESCRIPTIONS": [
       "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1."
@@ -79,7 +79,7 @@
   },
   "sneckomod:BlankCard": {
     "NAME": "Blank Card",
-    "FLAVOR": "Unknown Rare Power's time to shine.",
+    "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
       "At the start of each combat, play a random card from your deck."
     ]
