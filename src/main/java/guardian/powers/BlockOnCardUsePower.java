@@ -45,7 +45,7 @@ public class BlockOnCardUsePower extends AbstractGuardianPower {
     }
 
     public void atEndOfRound() {
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, StunnedPower.POWER_ID));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
 
 
     }
