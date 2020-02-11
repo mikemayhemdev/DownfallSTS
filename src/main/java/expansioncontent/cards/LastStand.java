@@ -44,12 +44,11 @@ public class LastStand extends AbstractExpansionCard {
 
         atb(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
         double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
-        if (currentPct > 0.5) {
-            atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
-        } else {
+        if (currentPct < 0.5) {
             AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~DIE~ ~.~ ~.~ ~.~", true));
 
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
+            atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
             atb(new HealAction(p, p, this.magicNumber));
         }
