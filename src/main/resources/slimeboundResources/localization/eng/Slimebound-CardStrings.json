@@ -94,8 +94,8 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
-    "DESCRIPTION": "Double the enemy's Goop.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's Goop."
+    "DESCRIPTION": "Double the enemy's Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's Goop. NL Exhaust."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
