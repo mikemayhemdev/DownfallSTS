@@ -53,7 +53,7 @@ public class SlowingSlime
     public void activateEffectUnique() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, true, 0, false, 0, false, false, false, false, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, true, 1, false, 0, false, false, false, false, false));
 
     }
 

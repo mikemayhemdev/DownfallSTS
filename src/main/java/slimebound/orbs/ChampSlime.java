@@ -51,7 +51,7 @@ public class ChampSlime
     public void activateEffectUnique() {
 
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, false, 0, false, 0, false, false, true, false, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this, false, false, false, 1, false, 0, false, false, true, false, false));
 
     }
 
