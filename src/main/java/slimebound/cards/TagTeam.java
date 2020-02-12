@@ -7,13 +7,19 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.AttackSlime;
+import slimebound.orbs.PoisonSlime;
+import slimebound.orbs.ShieldSlime;
+import slimebound.orbs.SlimingSlime;
 import slimebound.patches.AbstractCardEnum;
+
+import java.util.ArrayList;
 
 
 public class TagTeam extends AbstractSlimeboundCard {
@@ -45,12 +51,30 @@ public class TagTeam extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        int bonus = 0;
-        if (upgraded) bonus = this.magicNumber;
-        addToBot(new SlimeSpawnAction(new AttackSlime(), false, true, bonus, 0));
-        addToBot(new CommandAction());
-        addToBot(new CommandAction());
-        addToBot(new CommandAction());
+        ArrayList<Integer> orbs = new ArrayList();
+        orbs.add(1);
+        orbs.add(2);
+        orbs.add(3);
+        orbs.add(4);
+        Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
+
+        switch (o) {
+            case 1:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+                break;
+            case 2:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
+                break;
+            case 3:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                break;
+            case 4:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                break;
+        }
+        for (int i = 0; i < this.magicNumber; i++) {
+            addToBot(new CommandAction());
+        }
     }
 
     public AbstractCard makeCopy() {
@@ -60,9 +84,8 @@ public class TagTeam extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeDamage(4);
+            upgradeMagicNumber(1);
         }
     }
 }

@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -13,13 +14,15 @@ import slimebound.vfx.SlimeFlareEffect;
 public class ShieldSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:ShieldSlime";
+    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/shield.atlas");
+    public static final String skeletonString = "images/monsters/theBottom/slimeS/skeleton.json";
 
 
     public ShieldSlime() {
 
-        super(ID, -36, new Color(0f, 1f, 1.00F, 100F), "images/monsters/theBottom/slimeS/skeleton.atlas", "images/monsters/theBottom/slimeS/skeleton.json", "idle", .85F, new Color(.4F, .8F, 1F, 2F), 2, 3, true, new Color(0F, .4F, 1F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"), "slimeboundResources/SlimeboundImages/orbs/licking.png");
+        super(ID, new Color(0f, 1f, 1.00F, 100F),atlasString, skeletonString, false, false,1, 0, true, new Color(0F, .4F, 1F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
+        this.debuffAmount = 3;
         this.extraFontColor = Color.ROYAL;
-        this.debuffAmount = 2;
         spawnVFX();
 
     }
@@ -32,7 +35,7 @@ public class ShieldSlime
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, 0, false, this.debuffAmount + this.debuffBonusAmount, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.BLUNT_LIGHT, this, false, false, false, 0, false, this.debuffAmount, false));
 
     }
 

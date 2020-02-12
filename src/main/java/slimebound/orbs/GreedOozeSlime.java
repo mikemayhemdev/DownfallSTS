@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.relics.GreedOozeRelic;
 import slimebound.vfx.GoldCoinsParticle;
@@ -19,17 +20,18 @@ import slimebound.vfx.SlimeFlareEffect;
 public class GreedOozeSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:GreedOozeSlime";
+    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/greed.atlas");
+    public static final String skeletonString = "images/monsters/theBottom/slimeS/skeleton.json";
 
     public float attachmentX;
     public float attachmentY;
     public Boolean stopShiny = false;
-    private GoldCoinsParticle goldcoinsVFX;
     private float shinyTimer;
 
 
     public GreedOozeSlime() {
 
-        super(ID, -36, new Color(1F, 1F, 0F / 255F, 100F), "images/monsters/theBottom/slimeS/skeleton.atlas", "images/monsters/theBottom/slimeS/skeleton.json", "idle", .85F, new Color(1F, 1F, 30F / 255F, 2F), 0, 3, true, new Color(1F, 1F, 30F / 255F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/4.png"), "slimeboundResources/SlimeboundImages/orbs/aggressive.png");
+        super(ID, new Color(1F, 1F, 0F / 255F, 100F), atlasString, skeletonString, false, false, 0, 3, true, new Color(1F, 1F, 30F / 255F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/4.png"));
         spawnVFX();
         if (AbstractDungeon.player.hasRelic(GreedOozeRelic.ID)) {
             applyUniqueFocus(AbstractDungeon.player.getRelic(GreedOozeRelic.ID).counter);
@@ -41,22 +43,6 @@ public class GreedOozeSlime
         this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];
     }
 
-
-    public void postSpawnEffects() {
-        this.goldcoinsVFX = new GoldCoinsParticle(this);
-        AbstractDungeon.effectList.add(this.goldcoinsVFX);
-    }
-
-    @Override
-    public void onEvoke() {
-        super.onEvoke();
-        cleanUpVFX();
-    }
-
-    public void cleanUpVFX() {
-        this.goldcoinsVFX.finish();
-
-    }
 
     public void activateEffectUnique() {
 

@@ -20,9 +20,9 @@ public class MinionMaster extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/minionmaster.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
 
@@ -41,7 +41,6 @@ public class MinionMaster extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(this.magicNumber));
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BuffSecondarySlimeEffectsPower(p, p, 1), 1));
 
@@ -54,7 +53,7 @@ public class MinionMaster extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
+            this.isInnate = true;
             this.rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
 

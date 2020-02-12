@@ -417,8 +417,9 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         //BaseMod.addCard(new slimebound.cards.zzzAbsorbAll());
         BaseMod.addCard(new Overexert());
         BaseMod.addCard(new Split());
-        BaseMod.addCard(new SuperSplit());
+        //BaseMod.addCard(new SuperSplit());
         BaseMod.addCard(new LeadByExample());
+        BaseMod.addCard(new Nibble());
         BaseMod.addCard(new slimebound.cards.SlimeTap());
         BaseMod.addCard(new Teamwork());
         BaseMod.addCard(new slimebound.cards.SlimeBarrage());
@@ -533,9 +534,10 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         //UnlockTracker.unlockCard(zzzAbsorbAll.ID);
         UnlockTracker.unlockCard(Overexert.ID);
         UnlockTracker.unlockCard(Split.ID);
-        UnlockTracker.unlockCard(SuperSplit.ID);
+        //UnlockTracker.unlockCard(SuperSplit.ID);
         UnlockTracker.unlockCard(LeadByExample.ID);
         UnlockTracker.unlockCard(SlimeTap.ID);
+        UnlockTracker.unlockCard(Nibble.ID);
         UnlockTracker.unlockCard(RainOfGoop.ID);
         UnlockTracker.unlockCard(Teamwork.ID);
         UnlockTracker.unlockCard(SlimeBarrage.ID);
@@ -761,12 +763,6 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
             if (o instanceof CultistSlime) {
                 ((CultistSlime) o).cleanUpVFX();
-            }
-            if (o instanceof GreedOozeSlime) {
-                ((GreedOozeSlime) o).cleanUpVFX();
-            }
-            if (o instanceof ScrapOozeSlime) {
-                ((ScrapOozeSlime) o).cleanUpVFX();
             }
             if (o instanceof SpawnedSlime) {
                 slimes.add(o);

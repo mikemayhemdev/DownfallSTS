@@ -37,12 +37,12 @@
       "commands"
     ],
     "PROPER_NAME": "Command",
-    "DESCRIPTION": "Your oldest Slime attacks."
+    "DESCRIPTION": "Your leading Slime attacks."
   },
   {
     "NAMES": [
-      "torch head slime",
-      "torch_head_slime"
+      "torchhead slime",
+      "torchhead_slime"
     ],
     "PROPER_NAME": "Torch Head Slime",
     "DESCRIPTION": "Attacks for #b6 each turn. Gains twice the normal benefit from #yPotency."
@@ -75,7 +75,7 @@
       "leeching"
     ],
     "PROPER_NAME": "Leeching Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b2 #yBlock each turn."
+    "DESCRIPTION": "Attacks for #b1 and grants you #b2 #yBlock each turn."
   },
   {
     "NAMES": [
@@ -97,7 +97,7 @@
       "mire"
     ],
     "PROPER_NAME": "Mire Slime",
-    "DESCRIPTION": "Attacks for #b1 and applies #b2 #yGoop each turn."
+    "DESCRIPTION": "Attacks for #b2 and applies #b2 #yGoop each turn."
   },
   {
     "NAMES": [
@@ -113,7 +113,7 @@
       "bronze_slime"
     ],
     "PROPER_NAME": "Bronze Slime",
-    "DESCRIPTION": "Attacks for #b6 and grants you #b4 #yBlock each turn."
+    "DESCRIPTION": "Attacks for #b4 and grants you #b4 #yBlock each turn."
   },
   {
     "NAMES": [
@@ -128,7 +128,7 @@
       "ghostflame_slime"
     ],
     "PROPER_NAME": "Ghostflame Slime",
-    "DESCRIPTION": "Does not attack and is unaffected by Potency. Provides #b1 #yStrength, #b1 Dexterity, and #b2 #yPotency."
+    "DESCRIPTION": "Attacks for #b3 and applies #b3 #yBurn each turn."
   },
   {
     "NAMES": [
@@ -164,7 +164,7 @@
       "divide"
     ],
     "PROPER_NAME": "Divide",
-    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yBruiser or #yAcid slime (both if upgraded). NL #yExhaust."
+    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yBruiser or #yAcid slime (both if upgraded). NL Command. NL #yExhaust."
   },
   {
     "NAMES": [
@@ -178,7 +178,7 @@
       "serve"
     ],
     "PROPER_NAME": "Serve",
-    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yLeeching or #yMire slime (both if upgraded). NL #yExhaust."
+    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yLeeching or #yMire slime (both if upgraded). NL Command. NL #yExhaust."
   },
   {
     "NAMES": [
@@ -186,5 +186,37 @@
     ],
     "PROPER_NAME": "Protect",
     "DESCRIPTION": "1-cost Skill. NL Gain #b8 #yBlock, plus #b1 Block ( [REMOVE_SPACE]#b2 #yBlock if upgraded) for each spawned Slime. NL #yExhaust."
+  },
+  {
+    "NAMES": [
+      "protector slime",
+      "protector_slime"
+    ],
+    "PROPER_NAME": "Protector Slime",
+    "DESCRIPTION": "Attacks for #b2 and grants you #b6 #yBlock each turn."
+  },
+  {
+    "NAMES": [
+      "insulting slime",
+      "insulting_slime"
+    ],
+    "PROPER_NAME": "Insulting Slime",
+    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yVulnerable each turn."
+  },
+  {
+    "NAMES": [
+      "ancient slime",
+      "ancient_slime"
+    ],
+    "PROPER_NAME": "Ancient Slime",
+    "DESCRIPTION": "Attacks for #b3 and causes you to draw #b1 card each turn."
+  },
+  {
+    "NAMES": [
+      "time slime",
+      "time_slime"
+    ],
+    "PROPER_NAME": "Time Slime",
+    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yWeak each turn."
   }
 ]

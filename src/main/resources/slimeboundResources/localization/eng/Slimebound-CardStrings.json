@@ -19,8 +19,8 @@
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy Attack, Absorbing your oldest Slime instead.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy Attack, Absorbing your oldest Slime instead."
+    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy Attack, Absorbing your leading Slime instead.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy Attack, Absorbing your leading Slime instead."
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
@@ -60,15 +60,16 @@
   },
   "Slimebound:SlimeTap": {
     "NAME": "Slime Tap",
-    "DESCRIPTION": "Absorb your oldest Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Absorb your 2 oldest Slimes. Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust.",
+    "DESCRIPTION": "Absorb your leading Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Absorb your 2 leading Slimes. Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Need... slimes..."
     ]
   },
   "Slimebound:Teamwork": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times."
+    "DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times. NL Exhaust."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
@@ -309,7 +310,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL The next time an Attack is used on this enemy, Goop benefits will apply without consuming Goop."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL The next time an Attack is used on this enemy, Goop is not removed."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
@@ -389,8 +390,8 @@
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "Split into a Bruiser or Guerilla slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Guerilla slime. NL Exhaust."
+    "DESCRIPTION": "Split into a Bruiser or Guerilla slime. NL Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Guerilla slime. NL Command. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
@@ -404,8 +405,8 @@
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
-    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Exhaust."
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Command. NL Exhaust."
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
@@ -423,8 +424,7 @@
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Split into a Bruiser_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser_Slime, who deals !M! more damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime. NL Exhaust."
   },
   "Slimebound:SplitCultist": {
     "NAME": "Split: Cultist",
@@ -433,18 +433,15 @@
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "Split into a Leeching_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching_Slime, who grants !M! more Block. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Split into a Leeching_Slime. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
-    "DESCRIPTION": "Split into an Guerilla_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Guerilla_Slime, who deals !M! more damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Split into a Guerilla_Slime. NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
-    "DESCRIPTION": "Split into a Mire_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Mire_Slime, who applies !M! additional Goop. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Split into a Mire_Slime. NL Exhaust."
   },
   "Slimebound:SplitGhostflame": {
     "NAME": "Split: Ghostflame",
@@ -452,8 +449,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Gain 1 Slime slot. NL When a spawned Slime applies Goop or Block, it applies 1 more.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots. NL When a spawned Slime applies Goop or Block, it applies 1 more."
+    "DESCRIPTION": "Whenever you Command, Command again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Command, Command again."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
@@ -465,8 +462,7 @@
   },
   "Slimebound:SpecialForces": {
     "NAME": "Special Forces",
-    "DESCRIPTION": "Add all 4 Special Split cards into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add all 4 Upgraded Special Split cards into your hand. NL Exhaust."
+    "DESCRIPTION": "For each of your Slime Slots: NL Choose 1 of 3 Special Slimes to Split into. NL Exhaust."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
@@ -482,11 +478,15 @@
   },
   "Slimebound:TagTeam": {
     "NAME": "Tag Team",
-    "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime. NL Command three times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime who deals !M! more damage. NL Command three times."
+    "DESCRIPTION": "Deal !D! damage. NL Split into a random Slime. NL Command !M! times."
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, Command."
+  },
+  "Slimebound:Nibble": {
+    "NAME": "Nibble",
+    "DESCRIPTION": "Deal !D! damage. NL Add a random 0-cost card to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded 0-cost card to your hand. NL Exhaust."
   }
 }

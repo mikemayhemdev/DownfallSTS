@@ -11,25 +11,22 @@ import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 import slimebound.actions.OctoChoiceAction;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.BronzeSlime;
-import slimebound.orbs.CultistSlime;
-import slimebound.orbs.HexSlime;
-import slimebound.orbs.TorchHeadSlime;
+import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
 
 
 public class SplitSpecialist extends AbstractSlimeboundCard {
-    public static final String ID = "Slimebound:SplitSpecialist";
-    public static final String NAME;
-    public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/zzzcorrosivespit.png";
-    private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    public static String ID = "Slimebound:SplitSpecialist";
+    public static String NAME;
+    public static String DESCRIPTION;
+    public static String IMG_PATH = "cards/zzzcorrosivespit.png";
+    public static CardStrings cardStrings;
+    public static CardType TYPE = CardType.SKILL;
+    public static CardRarity RARITY = CardRarity.UNCOMMON;
+    public static CardTarget TARGET = CardTarget.SELF;
+    public static int COST = 1;
     public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
 
@@ -46,6 +43,10 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        choice();
+    }
+
+    public void choice(){
         addToBot(new OctoChoiceAction(this));
     }
 
@@ -55,6 +56,10 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
         cardList.add(new OctoChoiceCard("Slimebound:SplotGhostflame", "Split: Ghostflame", expansionContentMod.makeCardPath("QuickHexa.png"), "Split into a Ghostflame_Slime."));
         cardList.add(new OctoChoiceCard("Slimebound:SplotTorchhead", "Split: Torchhead", expansionContentMod.makeCardPath("QuickCollector.png"), "Split into a Torchhead_Slime."));
         cardList.add(new OctoChoiceCard("Slimebound:SplotCultist", "Split: Cultist", expansionContentMod.makeCardPath("QuickAwakened.png"), "Split into a Cultist_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotProtector", "Split: Protector", expansionContentMod.makeCardPath("QuickGuardian.png"), "Split into a Protector_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotInsulting", "Split: Insulting", expansionContentMod.makeCardPath("QuickChamp.png"), "Split into an Insulting_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotAncient", "Split: Ancient", expansionContentMod.makeCardPath("QuickAncients.png"), "Split into an Ancient_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotSlowing", "Split: Time", expansionContentMod.makeCardPath("QuickTimeEater.png"), "Split into a Time_Slime."));
         ArrayList<OctoChoiceCard> realList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             realList.add(cardList.remove(AbstractDungeon.cardRandomRng.random(cardList.size() - 1)));
@@ -78,6 +83,22 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
             }
             case "Slimebound:SplotCultist": {
                 addToBot(new SlimeSpawnAction(new CultistSlime(), false, true));
+                break;
+            }
+            case "Slimebound:SplotProtector": {
+                addToBot(new SlimeSpawnAction(new ProtectorSlime(), false, true));
+                break;
+            }
+            case "Slimebound:SplotInsulting": {
+                addToBot(new SlimeSpawnAction(new ChampSlime(), false, true));
+                break;
+            }
+            case "Slimebound:SplotAncient": {
+                addToBot(new SlimeSpawnAction(new DrawingSlime(), false, true));
+                break;
+            }
+            case "Slimebound:SplotSlowing": {
+                addToBot(new SlimeSpawnAction(new SlowingSlime(), false, true));
                 break;
             }
         }

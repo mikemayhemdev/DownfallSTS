@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.ShieldSlime;
 import slimebound.orbs.SlimingSlime;
@@ -58,6 +59,8 @@ public class ServeAndProtectServe extends AbstractSlimeboundCard {
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
             AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
         }
+
+        this.addToBot(new CommandAction());
     }
 
     public AbstractCard makeCopy() {

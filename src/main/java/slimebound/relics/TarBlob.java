@@ -24,12 +24,12 @@ public class TarBlob extends CustomRelic {
     }
 
     public void onEquip() {
-        ++AbstractDungeon.player.energy.energyMaster;// 37
-    }// 38
+        ++AbstractDungeon.player.energy.energyMaster;
+    }
 
     public void onUnequip() {
-        --AbstractDungeon.player.energy.energyMaster;// 42
-    }// 43
+        --AbstractDungeon.player.energy.energyMaster;
+    }
 
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];

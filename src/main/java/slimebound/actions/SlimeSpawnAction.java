@@ -109,9 +109,12 @@ public class SlimeSpawnAction extends AbstractGameAction {
                     //AbstractDungeon.player.damageFlashFrames = 4;
 
                     //SlimeboundMod.logger.info("Reducing max HP");
-                    int MaxHPActuallyLost = 3;
-                    if (AbstractDungeon.player.hasRelic(TarBlob.ID)) MaxHPActuallyLost++;
-                    int q = 3;
+                    int MaxHPActuallyLost = 4;
+                    if (AbstractDungeon.player.hasRelic(TarBlob.ID)) {
+                        MaxHPActuallyLost++;
+                        MaxHPActuallyLost++;
+                    }
+                    int q = 4;
                     if (AbstractDungeon.player.hasRelic(TarBlob.ID)) q++;
                     if (AbstractDungeon.player.maxHealth <= q) {
                         MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;

@@ -68,7 +68,41 @@
   "Slimebound:HexSlime": {
     "NAME": "Ghostflame Slime",
     "DESCRIPTION": [
-      "Does not attack and is unaffected by Potency. Provides #b1 #yStrength, #b1 #yDexterity, and #b2 #yPotency."
+      "Deals #b",
+      " damage and applies #b",
+      " #yBurn at the start of your turn."
+    ]
+  },
+  "Slimebound:ChampSlime": {
+    "NAME": "Insulting Slime",
+    "DESCRIPTION": [
+      "Deals #b",
+      " damage and applies #b",
+      " #yVulnerable at the start of your turn."
+    ]
+  },
+  "Slimebound:SlowingSlime": {
+    "NAME": "Time Slime",
+    "DESCRIPTION": [
+      "Deals #b",
+      " damage and applies #b",
+      " #yWeak at the start of your turn."
+    ]
+  },
+  "Slimebound:ProtectorSlime": {
+    "NAME": "Protector Slime",
+    "DESCRIPTION": [
+      "Deals #b",
+      " damage at the start of your turn and grants you #b",
+      " #yBlock."
+    ]
+  },
+  "Slimebound:DrawingSlime": {
+    "NAME": "Ancient Slime",
+    "DESCRIPTION": [
+      "Deals #b",
+      " damage at the start of your turn and causes you to draw #b",
+      " card."
     ]
   }
 }

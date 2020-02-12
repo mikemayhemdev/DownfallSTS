@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -13,10 +14,12 @@ import slimebound.vfx.SlimeFlareEffect;
 public class AttackSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:AttackSlime";
+    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/attack.atlas");
+    public static final String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
 
     public AttackSlime() {
 
-        super(ID, -17, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), "images/monsters/theBottom/slimeAltS/skeleton.atlas", "images/monsters/theBottom/slimeAltS/skeleton.json", "idle", .85F, new Color(0.8F, 0.25F, 0.25F, 2F), 4, 3, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"), "slimeboundResources/SlimeboundImages/orbs/aggressive.png");
+        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, false, true, 4, 3, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"));
         spawnVFX();
 
     }

@@ -49,60 +49,16 @@ public class BuffSecondarySlimeEffectsPower extends AbstractPower {
 
 
     public void updateDescription() {
+        if (this.amount > 1){
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        } else {
 
-
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-
-
-    }
-
-    public void onInitialApplication() {
-
-
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applySecondaryBonus(this.amount);
-
-            }
-        }
-    }
-
-
-    public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
-
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applySecondaryBonus(stackAmount);
-            }
+            this.description = DESCRIPTIONS[0];
         }
 
     }
 
-    public void reducePower(int stackAmount) {
-        super.reducePower(stackAmount);
 
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applySecondaryBonus(-1 * stackAmount);
-            }
-        }
-    }
-
-    @Override
-    public void onRemove() {
-        super.onRemove();
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof PoisonSlime || o instanceof SlimingSlime || o instanceof ShieldSlime || o instanceof BronzeSlime) {
-                SpawnedSlime s = (SpawnedSlime) o;
-                s.applySecondaryBonus(-1 * this.amount);
-
-            }
-        }
-    }
 }
 
 

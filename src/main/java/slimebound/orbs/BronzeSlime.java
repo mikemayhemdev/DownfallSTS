@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -13,10 +14,12 @@ import slimebound.vfx.SlimeFlareEffect;
 public class BronzeSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:BronzeSlime";
+    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/bronze.atlas");
+    public static final String skeletonString = "images/monsters/theBottom/slimeAltM/skeleton.json";
 
     public BronzeSlime() {
 
-        super(ID, -10, new Color(1.0F, 217F / 255F, 70F / 255F, 100F), "images/monsters/theBottom/slimeAltM/skeleton.atlas", "images/monsters/theBottom/slimeAltM/skeleton.json", "idle", 1.5F, new Color(1F, 150F / 255F, 0F, 2F), 6, 0, false, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"), "slimeboundResources/SlimeboundImages/orbs/bronzeslime.png");
+        super(ID, new Color(1.0F, 217F / 255F, 70F / 255F, 100F), atlasString, skeletonString, true, true,4, 0, false, new Color(.63F, .58F, .41F, 1), SlimeFlareEffect.OrbFlareColor.BRONZE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
         this.extraFontColor = Color.ROYAL;
         this.debuffAmount = 4;
         spawnVFX();

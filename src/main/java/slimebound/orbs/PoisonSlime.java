@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -13,13 +14,15 @@ import slimebound.vfx.SlimeFlareEffect;
 public class PoisonSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:PoisonSlime";
+    public static final String atlasString = "images/monsters/theBottom/slimeS/skeleton.atlas";
+    public static final String skeletonString = "images/monsters/theBottom/slimeS/skeleton.json";
 
     public PoisonSlime() {
         this(false);
     }
 
     public PoisonSlime(boolean topLevelVFX) {
-        super(ID, -36, new Color(.5F, 1.0F, .5F, 100F), "images/monsters/theBottom/slimeS/skeleton.atlas", "images/monsters/theBottom/slimeS/skeleton.json", "idle", .85F, new Color(0.6F, .9F, .6F, 2F), 2, 1, true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("slimeboundResources/SlimeboundImages/orbs/debuff1.png"), "slimeboundResources/SlimeboundImages/orbs/poisonous.png");
+        super(ID, new Color(.5F, 1.0F, .5F, 100F), atlasString, skeletonString,  false, false,2, 1, true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("slimeboundResources/SlimeboundImages/orbs/4.png"));
         this.topSpawnVFX = topLevelVFX;
         spawnVFX();
     }

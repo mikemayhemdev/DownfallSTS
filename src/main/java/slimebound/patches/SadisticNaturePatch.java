@@ -1,3 +1,4 @@
+/*
 package slimebound.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -35,4 +36,5 @@ public class SadisticNaturePatch {
 
     }
 }
+*/
 

@@ -17,7 +17,7 @@
     "NAME": "Slimed Tail",
     "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
     "DESCRIPTIONS": [
-      "When you fall below #b50% of your Maximum HP, #ySplit into a #yGuerilla Slime, and the next time you take damage, your oldest slime is #yAbsorbed instead. (works once per combat).",
+      "When you fall below #b50% of your Maximum HP, #ySplit into a #yGuerilla Slime, and the next time you take damage, your leading slime is #yAbsorbed instead. (works once per combat).",
       "This relic has been used this combat. It will become active again next combat."
     ]
   },
@@ -91,7 +91,7 @@
     "NAME": "Tarr Blob",
     "FLAVOR": "The bad kind of Slime.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #ySplitting costs #b1 more HP and Max HP."
+      "Gain [E] at the start of your turn. #ySplitting costs #b2 more HP and Max HP."
     ]
   },
   "Slimebound:StickyStick": {

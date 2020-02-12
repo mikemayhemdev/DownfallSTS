@@ -91,13 +91,12 @@ public abstract class SpawnedSlime
     private float delayTime;
     private boolean hasSplashed;
     private boolean deathVFXplayed;
-    private String atlasString = "images/monsters/theBottom/slimeAltS/skeleton.atlas";
-    private String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
     private String animString = "idle";
     private float yOffset;
 
 
-    public SpawnedSlime(String ID, int yOffset, Color projectileColor, String atlasString, String skeletonString, String animString, float scale, Color modelColor, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage, String IMGURL) {
+
+    public SpawnedSlime(String ID, Color projectileColor, String atlasString, String skeletonString, boolean medScale, boolean alt, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage) {
 
         this.scale = scale * .85F;
         this.modelColor = modelColor;
@@ -105,8 +104,22 @@ public abstract class SpawnedSlime
         //this.renderBehind=true;
         SkeletonJson json = new SkeletonJson(this.atlas);
 
+        if (medScale){
+            json.setScale(Settings.scale / .85F * .7F);
+            if (alt) {
+                this.yOffset = -7F * Settings.scale;
+            } else {
+                this.yOffset = -27F * Settings.scale;
+            }
+        } else {
+            json.setScale(Settings.scale / .5F * .7F);
+            if (alt) {
+                this.yOffset = -17F * Settings.scale;
+            } else {
+                this.yOffset = -32F * Settings.scale;
+            }
+        }
 
-        json.setScale(Settings.scale / scale * .85F);
         SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonString));
         this.skeleton = new Skeleton(skeletonData);
         this.skeleton.setColor(Color.WHITE);
@@ -120,13 +133,12 @@ public abstract class SpawnedSlime
 
         this.ID = ID;
 
-        //this.img = ImageMaster.loadImage(IMGURL);
 
 
         this.basePassiveAmount = passive;
         this.movesToAttack = movesToAttack;
 
-        this.deathColor = deathColor;
+        this.deathColor = projectileColor;
 
         this.evokeAmount = 1;
 
@@ -153,7 +165,7 @@ public abstract class SpawnedSlime
 
     }
 
-    public void spawnVFX() {
+        public void spawnVFX() {
         if (AbstractDungeon.player.maxOrbs > 0) {
 
             if (this.topSpawnVFX) {
@@ -192,7 +204,7 @@ public abstract class SpawnedSlime
         super.applyFocus();
         AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
         int bonus = 0;
-        if ((this instanceof ShieldSlime || this instanceof PoisonSlime || this instanceof BronzeSlime || this instanceof SlimingSlime) && AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID))
+        if ((this instanceof ShieldSlime || this instanceof ProtectorSlime || this instanceof BronzeSlime || this instanceof SlimingSlime) && AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID))
             this.debuffBonusAmount += AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount;
         if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(PotencyPower.POWER_ID))
             bonus = AbstractDungeon.player.getPower(PotencyPower.POWER_ID).amount;
@@ -227,13 +239,6 @@ public abstract class SpawnedSlime
 
     public void onEvoke() {
         if (!noEvokeBonus) {
-            if (this instanceof HexSlime) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
-
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PotencyPower(AbstractDungeon.player, AbstractDungeon.player, -2), -2));
-
-            }
             if (this instanceof ScrapOozeSlime) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
 
@@ -242,7 +247,7 @@ public abstract class SpawnedSlime
 
             } else {
                 if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID))
-                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID), 3));
+                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID), 4));
             }
         }
         triggerEvokeAnimation();
@@ -374,7 +379,7 @@ public abstract class SpawnedSlime
                     this.skeleton.setPosition(this.x, this.y);
                     //logger.info("x = " + this.cX + " y = " + (this.cY + AbstractDungeon.sceneOffsetY));
 
-                    this.skeleton.setColor(modelColor);
+                    //this.skeleton.setColor(modelColor);
                     this.skeleton.setFlip(true, false);
                     sb.end();
                     CardCrawlGame.psb.begin();
@@ -403,9 +408,12 @@ public abstract class SpawnedSlime
 
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.debuffBonusAmount + this.slimeBonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET + 1F, this.extraFontColor, this.fontScale);
 
-        } else {
+        } else if (this instanceof PoisonSlime) {
 
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount) + " All", this.cX + this.NUM_X_OFFSET - (Settings.scale * 0.01F), this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+        } else {
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+
         }
     }
 

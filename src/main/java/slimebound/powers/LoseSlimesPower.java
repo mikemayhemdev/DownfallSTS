@@ -93,7 +93,6 @@ public class LoseSlimesPower extends AbstractPower {
 
                     if (o instanceof SpawnedSlime) {
 
-                        ((SpawnedSlime) o).activateEffect();
                         AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
 
                     }

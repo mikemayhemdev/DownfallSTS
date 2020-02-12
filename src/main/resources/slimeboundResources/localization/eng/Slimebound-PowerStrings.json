@@ -73,9 +73,9 @@
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
     "DESCRIPTIONS": [
-      "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your oldest Slime instead.",
+      "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead.",
       "Prevent the next #b",
-      " times you would damaged by an enemy attack, #yAbsorbing your oldest Slime instead."
+      " times you would damaged by an enemy attack, #yAbsorbing your leading Slime instead."
     ]
   },
   "Slimebound:SplitForLessPower": {
@@ -90,9 +90,9 @@
   "Slimebound:ComboAttackPower": {
     "NAME": "Lead By Example",
     "DESCRIPTIONS": [
-      "The first #yAttack you play each turn causes your oldest Slime to also attack.",
+      "The first #yAttack you play each turn causes your leading Slime to also attack.",
       "The first #b",
-      " #yAttacks you play each turn causes your oldest Slime to also attack.",
+      " #yAttacks you play each turn causes your leading Slime to also attack.",
       " NL This effect can be triggered #b",
       " more times this turn.",
       " more time this turn.",
@@ -478,8 +478,9 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Minion Master",
     "DESCRIPTIONS": [
-      "When your slimes apply #yGoop or #yBlock, they apply #b",
-      " more."
+      "Whenever you Command, Command again.",
+      "Whenever you Command, Command #b",
+      " more times."
     ]
   },
   "Slimebound:TackleSelfDamagePreventPower": {

@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TriggerSlimeAttacksAction;
+import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.BuffSecondarySlimeEffectsPower;
 
 
 public class SlimeBarrage extends AbstractSlimeboundCard {
@@ -42,7 +44,7 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 4;
+        this.baseDamage = 8;
         this.magicNumber = this.baseMagicNumber = 2;
 
         //this.exhaust = true;
@@ -54,6 +56,11 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
         AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+        if (AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID)) {
+            for (int i = 0; i < AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount; i++) {
+                AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
+            }
+        }
 
     }
 

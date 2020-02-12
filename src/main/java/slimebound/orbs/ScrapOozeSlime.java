@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.relics.ScrapOozeRelic;
 import slimebound.vfx.ScrapGlowParticle;
@@ -17,6 +18,8 @@ import slimebound.vfx.SlimeFlareEffect;
 public class ScrapOozeSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:ScrapOozeSlime";
+    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/scrap.atlas");
+    public static final String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
 
     public float attachmentX;
     public float attachmentY;
@@ -30,7 +33,7 @@ public class ScrapOozeSlime
 
     public ScrapOozeSlime() {
 
-        super(ID, -17, new Color(1.0F, 140F / 255F, 140F / 255F, 100F), "images/monsters/theBottom/slimeAltS/skeleton.atlas", "images/monsters/theBottom/slimeAltS/skeleton.json", "idle", .85F, new Color(0.8F, 0.4F, 0.4F, 2F), 0, 3, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"), "slimeboundResources/SlimeboundImages/orbs/aggressive.png");
+        super(ID, new Color(1.0F, 140F / 255F, 140F / 255F, 100F), atlasString, skeletonString, false, true, 0, 3, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"));
         spawnVFX();
         if (AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID)) {
             applyUniqueFocus(AbstractDungeon.player.getRelic(ScrapOozeRelic.ID).counter);

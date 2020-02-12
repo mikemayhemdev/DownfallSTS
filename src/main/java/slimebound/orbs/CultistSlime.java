@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 import slimebound.vfx.SticksParticle;
@@ -16,6 +17,8 @@ import slimebound.vfx.SticksParticleRight;
 public class CultistSlime
         extends SpawnedSlime {
     public static final String ID = "Slimebound:CultistSlime";
+    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/cultist.atlas");
+    public static final String skeletonString = "images/monsters/theBottom/slimeM/skeleton.json";
 
     public float attachmentX;
     public float attachmentY;
@@ -27,7 +30,7 @@ public class CultistSlime
     private SticksParticleRight sticksRightVFX;
 
     public CultistSlime() {
-        super(ID, -25, new Color(.55F, .55F, 1.0F, 100F), "images/monsters/theBottom/slimeM/skeleton.atlas", "images/monsters/theBottom/slimeM/skeleton.json", "idle", 1.5F, new Color(81F / 255F, 81F / 255F, 1F, 2F), 6, 0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("slimeboundResources/SlimeboundImages/orbs/attackBuff.png"), "slimeboundResources/SlimeboundImages/orbs/cultist.png");
+        super(ID, new Color(.55F, .55F, 1.0F, 100F), atlasString, skeletonString, true, false, 5, 0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("slimeboundResources/SlimeboundImages/orbs/attackBuff.png"));
         spawnVFX();
 
 

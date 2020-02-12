@@ -37,7 +37,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     private static final CharacterStrings charStrings;
     public static Color cardRenderColor = new Color(0.0F, 0.1F, 0.0F, 1.0F);
 
-    private static float mainRenderYOffset = 90 * Settings.scale;
+    private static float mainRenderYOffset = 75 * Settings.scale;
 
 
     static {
@@ -163,39 +163,29 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public void initializeSlotPositions() {
         float xStartOffset = this.drawX + (float) Settings.scale * -230F;
-        float yStartOffset = this.drawY + (float) Settings.scale;
+        float yStartOffset = this.drawY + (float) Settings.scale * -55F;
         float ySpaceBottomAlternatingOffset = -70 * Settings.scale;
-        float ySpaceAlternatingOffset = -10 * Settings.scale;
-        float xSpaceBetweenSlots = 50 * Settings.scale;
+        float ySpaceAlternatingOffset = -20 * Settings.scale;
+        float xSpaceBetweenSlots = 110 * Settings.scale;
         float xSpaceBottomAlternatingOffset = -0.2F * Settings.scale;
 
 
-        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 0);
-        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1);
+        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 0);
+        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 1);
         orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
-        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 3);
-        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 4);
-        orbPositionsX[5] = xStartOffset + (xSpaceBetweenSlots * 5);
-        orbPositionsX[6] = xStartOffset + (xSpaceBetweenSlots * 6);
-        orbPositionsX[7] = xStartOffset + (xSpaceBetweenSlots * 7);
-        orbPositionsX[8] = xStartOffset + (xSpaceBetweenSlots * 8);
-        orbPositionsX[9] = xStartOffset + (xSpaceBetweenSlots * 9);
+        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 3);
+        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 4);
 
-        orbPositionsY[0] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[1] = yStartOffset;
-        orbPositionsY[2] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
+        orbPositionsY[4] = yStartOffset;
         orbPositionsY[3] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[4] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[5] = yStartOffset;
-        orbPositionsY[6] = yStartOffset + ySpaceBottomAlternatingOffset + ySpaceAlternatingOffset;
-        orbPositionsY[7] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[8] = yStartOffset + ySpaceBottomAlternatingOffset;
-        orbPositionsY[9] = yStartOffset;
+        orbPositionsY[2] = yStartOffset;
+        orbPositionsY[1] = yStartOffset + ySpaceAlternatingOffset;
+        orbPositionsY[0] = yStartOffset;
 
     }
 
     public CharSelectInfo getLoadout() {
-        return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 4, 99, 5, this,
+        return new CharSelectInfo(NAME, DESCRIPTION, 60, 60, 3, 99, 5, this,
 
                 getStartingRelics(), getStartingDeck(), false);
     }
