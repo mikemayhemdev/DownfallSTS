@@ -30,7 +30,7 @@ public class CultistSlime
     private SticksParticleRight sticksRightVFX;
 
     public CultistSlime() {
-        super(ID, new Color(.55F, .55F, 1.0F, 100F), atlasString, skeletonString, true, false, 5, 0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("slimeboundResources/SlimeboundImages/orbs/attackBuff.png"));
+        super(ID, new Color(.55F, .55F, 1.0F, 100F), atlasString, skeletonString, true, false, 6, 0, true, new Color(.4F, .45F, .63F, 1), SlimeFlareEffect.OrbFlareColor.CULTIST, new Texture("slimeboundResources/SlimeboundImages/orbs/attackBuff.png"));
         spawnVFX();
 
 
