@@ -12,7 +12,9 @@ import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import evilWithin.EvilWithinMod;
 import evilWithin.powers.FairyPotionPower;
 import evilWithin.util.TextureLoader;
+import evilWithin.vfx.PotionThrowEffect;
 import evilWithin.vfx.combat.ShootAnythingAction;
+import slimebound.vfx.SlimeProjectileEffect;
 
 public class LadyInBlue extends AbstractMonster {
 
@@ -48,30 +50,39 @@ public class LadyInBlue extends AbstractMonster {
     public void takeTurn() {
         switch (this.nextMove) {
             case 1:
-                addToBot(new ShootAnythingAction(AbstractDungeon.player, this, TextureLoader.getTexture("evilWithinResources/images/vfx/FirePotion.png")));
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/FirePotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.FIRE));
+
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/CultistPotion.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 addToBot(new ApplyPowerAction(this, this, new RitualPower(this, 1, false), 1));
                 break;
             case 2:
-                addToBot(new ShootAnythingAction(AbstractDungeon.player, this, TextureLoader.getTexture("evilWithinResources/images/vfx/ExplosivePotion.png")));
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/ExplosivePotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.1F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.NONE));
+
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/BlockPotion.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, 12));
                 break;
             case 3:
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/EssenceOfSteel.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 4), 4));
+
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/AncientPotion.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 1), 1));
                 break;
             case 4:
                 usedDebuffs = true;
-                addToBot(new ShootAnythingAction(AbstractDungeon.player, this, TextureLoader.getTexture("evilWithinResources/images/vfx/WeakPotion.png")));
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/WeakPotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 3, true), 3));
-                addToBot(new ShootAnythingAction(AbstractDungeon.player, this, TextureLoader.getTexture("evilWithinResources/images/vfx/FearPotion.png")));
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/FearPotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 3, true), 3));
                 break;
             case 5:
                 usedEmergency = true;
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/GhostInAJar.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePower(this, 1), 1));
+                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/FairyinaBottle.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FairyPotionPower(this, 1), 1));
                 break;
         }
