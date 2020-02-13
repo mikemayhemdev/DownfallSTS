@@ -21,11 +21,11 @@ import static theHexaghost.HexaMod.makeRelicPath;
 public class GremlinSack extends CustomRelic {
 
     public static final String ID = EvilWithinMod.makeID("GremlinSack");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("MatchstickCase.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("MatchstickCase.png"));
+    private static final Texture IMG = new Texture(EvilWithinMod.assetPath("images/relics/GremlinSack.png"));
+    private static final Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/GremlinSack.png"));
 
     public GremlinSack() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
     }
 
     @Override
