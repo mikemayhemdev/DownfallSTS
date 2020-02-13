@@ -2,17 +2,18 @@
   "evilWithin:GremlinMatchGame": {
     "NAME": "Match and Keep!",
     "DESCRIPTIONS": [
-      "\" ... #bTwelve cards! Match them to keep them! #bFive tries... no do-overs. NL Are you ready? Let's start!\"",
+      "\" ... #bT-twelve cards! Match them to keep them! #bF-five tries... no do-overs. NL Are you ready? Let's start!\"",
       "You complete the gremlin's game and look up. NL He disappeared?",
       "A gremlin is madly shuffling cards on a table. This monster seems to be a harmless one. As you approach, he nervously breaks his composure for a moment, but finds the courage to address you.",
-      "Unwilling to partake in this trivial game, you glare at the Gremlin with a threatening stance. NL He runs away!"
+      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"Are you sure you don't want to play the game?\", the gremlin asks."
     ],
     "OPTIONS": [
       "[Continue]",
       "[Leave]",
       "[Play]",
       "Remaining Attempts: #y",
-      "[Intimidate] Gain 6 Random cards."
+      "[Intimidate] Steal 6 cards.",
+      "[Punch] #rFight. #gGain #g6 #gCards."
     ]
   },
   "evilWithin:WomanInBlue": {
