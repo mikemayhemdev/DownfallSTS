@@ -31,13 +31,13 @@ public class LadyInBlue extends AbstractMonster {
         super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/default.png");
         switch (AbstractDungeon.actNum) {
             case 1:
-                setHp(75);
-                break;
-            case 2:
                 setHp(100);
                 break;
-            case 3:
+            case 2:
                 setHp(150);
+                break;
+            case 3:
+                setHp(175);
                 break;
         }
 
@@ -63,12 +63,14 @@ public class LadyInBlue extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 1), 1));
                 break;
             case 4:
+                usedDebuffs = true;
                 addToBot(new ShootAnythingAction(AbstractDungeon.player, this, TextureLoader.getTexture("evilWithinResources/images/vfx/WeakPotion.png")));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 3, true), 3));
                 addToBot(new ShootAnythingAction(AbstractDungeon.player, this, TextureLoader.getTexture("evilWithinResources/images/vfx/FearPotion.png")));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 3, true), 3));
                 break;
             case 5:
+                usedEmergency = true;
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePower(this, 1), 1));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FairyPotionPower(this, 1), 1));
                 break;
