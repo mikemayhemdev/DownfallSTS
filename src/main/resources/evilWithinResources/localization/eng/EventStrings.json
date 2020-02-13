@@ -14,5 +14,20 @@
       "Remaining Attempts: #y",
       "[Intimidate] Gain 6 Random cards."
     ]
+  },
+  "evilWithin:WomanInBlue": {
+    "NAME": "The Woman in Blue",
+    "DESCRIPTIONS": [
+      "Tucked in the darkness, you spot a small shop. Within, you see a pale woman in sharp clothes managing an inventory of potions, stacked along a wall. She is startled by your threatening appearance. NL \"Leave me and my wares alone, cretin!\" she screams.",
+      "You exit the shop cautiously, not wanting to spur the woman into a fight.",
+      "#r@WHAM@ NL Her gloved fist collides with your face, nearly knocking you off your feet. NL \"Get out before I litter the floor with your guts.\" You take her word and exit with your guts still safely in your body."
+
+    ],
+    "OPTIONS": [
+      "[Leave]",
+      "[Leave] #rTake #r",
+      " #rDamage.",
+      "[Punch] #rFight. #gGain #ga #gPotion #gRelic."
+    ]
   }
 }

@@ -17,6 +17,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
+import com.megacrit.cardcrawl.events.shrines.WomanInBlue;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -24,6 +25,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import eventUtil.EventUtils;
 import evilWithin.events.GremlinMatchGame_Evil;
+import evilWithin.events.WomanInBlue_Evil;
 import evilWithin.monsters.LadyInBlue;
 import evilWithin.util.ReplaceData;
 
@@ -106,7 +108,19 @@ public class EvilWithinMod implements
 
         EventUtils.registerEvent(
                 //Event ID//
-                GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class, true, GremlinMatchGame.ID, EventUtils.EventType.FULL_REPLACE);
+                GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class, true,
+                //Event ID to Override//
+                GremlinMatchGame.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                WomanInBlue_Evil.ID, WomanInBlue_Evil.class, true,
+                //Event ID to Override//
+                WomanInBlue.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
