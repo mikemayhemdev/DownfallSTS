@@ -99,7 +99,14 @@ public class TheHexaghost extends CustomPlayer {
     public void render(SpriteBatch sb) {
         if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom) && !isDead)
             myBody.render(sb);
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !isDead)
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !isDead) {
+            oscillarator();
+            oscillarator();
+            oscillarator();
+            oscillarator();
+            oscillarator();
+            oscillarator();
+            sb.setColor(oscillarator());
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                 if (activeGhostFlame == gf || showAll) {
                     sb.setColor(partialTransparent);
@@ -132,11 +139,11 @@ public class TheHexaghost extends CustomPlayer {
                             break;
                     }
                     Texture b = gf.getHelperTexture();
-                    sb.setColor(oscillarator());
                     sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
-                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, Color.WHITE, Settings.scale);// 150 153
+                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, sb.getColor(), Settings.scale);// 150 153
                 }
             }
+        }
         super.render(sb);
     }
 

@@ -26,7 +26,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
     @Override
     public void onCharge() {
         for (int i = 0; i < 2; i++) {
-            att(new AbstractGameAction() {
+            atb(new AbstractGameAction() {
                 @Override
                 public void update() {
                     int x = damage;

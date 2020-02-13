@@ -29,8 +29,8 @@ public class SearingGhostflame extends AbstractGhostflame {
         }
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (!m.isDead && !m.isDying && !m.halfDead) {
-            att(new BurnAction(m, x));
-            att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
+            atb(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
+            atb(new BurnAction(m, x));
         }
     }
 

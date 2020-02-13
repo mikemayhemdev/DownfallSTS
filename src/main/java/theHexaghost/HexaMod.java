@@ -27,6 +27,11 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.relics.UnknownEgg;
+import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.ghostflames.BolsteringGhostflame;
+import theHexaghost.ghostflames.CrushingGhostflame;
+import theHexaghost.ghostflames.InfernoGhostflame;
+import theHexaghost.ghostflames.SearingGhostflame;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
@@ -43,6 +48,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static theHexaghost.GhostflameHelper.activeGhostFlame;
+
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
 public class HexaMod implements
@@ -55,7 +62,8 @@ public class HexaMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         PreRoomRenderSubscriber,
-        PostDeathSubscriber {
+        PostDeathSubscriber,
+        OnCardUseSubscriber {
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
@@ -267,5 +275,10 @@ public class HexaMod implements
     public void receivePostInitialize() {
 
         addPotions();
+    }
+
+    @Override
+    public void receiveCardUsed(AbstractCard abstractCard) {
+
     }
 }

@@ -26,6 +26,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
+        atb(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
@@ -33,11 +34,11 @@ public class InfernoGhostflame extends AbstractGhostflame {
         for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
             AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
             if (gf.charged) {
-                att(new ExtinguishAction(gf));
-                att(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                atb(new ExtinguishAction(gf));
             }
         }
-        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 1.0F));
+
     }
 
     @Override
