@@ -22,8 +22,12 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
+import com.megacrit.cardcrawl.monsters.exordium.GremlinThief;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import evilWithin.relics.GremlinSack;
 
 import java.util.*;
 
@@ -53,6 +57,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     private boolean cardFlipped = false;
     private boolean gameDone = false;
     private boolean cleanUpCalled = false;
+    private boolean threatened = false;
     private int attemptCount = 5;
     private CardGroup cards;
     private float waitTimer;
@@ -69,7 +74,6 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
         this.cards.group = this.initializeCards();
         Collections.shuffle(this.cards.group, new Random(AbstractDungeon.miscRng.randomLong()));
         this.imageEventText.setDialogOption(OPTIONS[0]);
-        this.imageEventText.setDialogOption(OPTIONS[4]);
         this.matchedCards = new ArrayList();
     }
 
@@ -306,16 +310,8 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(MSG_2);
                         this.imageEventText.removeDialogOption(1);
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
                         this.screen = GremlinMatchGame_Evil.CUR_SCREEN.RULE_EXPLANATION;
-                        return;
-                    case 1:
-                        this.imageEventText.updateBodyText(MSG_4);
-                        this.imageEventText.removeDialogOption(1);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-                        for (AbstractCard c : singleCards) {
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (MathUtils.random((float) Settings.WIDTH * 0.1F, (float) Settings.WIDTH * 0.9F)), (float) (MathUtils.random((float) Settings.HEIGHT * 0.2F, (float) Settings.HEIGHT * 0.8F))));
-                        }
-                        this.screen = CUR_SCREEN.COMPLETE;
                         return;
                     default:
                         return;
@@ -325,13 +321,37 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.removeDialogOption(0);
                         GenericEventDialog.hide();
-                        this.screen = GremlinMatchGame_Evil.CUR_SCREEN.PLAY;
+                        this.screen = CUR_SCREEN.PLAY;
                         this.placeCards();
                         return;
+                    case 1:
+                        if (!this.threatened) {
+                            this.imageEventText.updateBodyText(MSG_4);
+                            this.imageEventText.updateDialogOption(1, OPTIONS[5]);
+                            this.threatened = true;
+                        } else {
+                            this.screen = CUR_SCREEN.FIGHT;
+                            MonsterGroup monsters = new MonsterGroup(new GremlinThief(-300F, 0F));
+                            monsters.add(new GremlinNob(0F, 0F));
+                            AbstractDungeon.getCurrRoom().monsters = monsters;
+                            AbstractDungeon.getCurrRoom().rewards.clear();
+                            AbstractDungeon.getCurrRoom().addRelicToRewards(new GremlinSack());
+                            AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+
+                            AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                            this.imageEventText.clearRemainingOptions();
+                            this.enterCombatFromImage();
+                            break;
+                        }
                     default:
                         return;
                 }
             case COMPLETE:
+                this.imageEventText.clearRemainingOptions();
+                //logMetricObtainCards("Match and Keep!", this.cardsMatched + " cards matched", this.matchedCards);
+                this.openMap();
+            default:
+                this.imageEventText.clearRemainingOptions();
                 //logMetricObtainCards("Match and Keep!", this.cardsMatched + " cards matched", this.matchedCards);
                 this.openMap();
         }
@@ -372,6 +392,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
         RULE_EXPLANATION,
         PLAY,
         COMPLETE,
+        FIGHT,
         CLEAN_UP;
 
         private CUR_SCREEN() {

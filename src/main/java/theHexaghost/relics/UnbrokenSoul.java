@@ -68,8 +68,8 @@ public class UnbrokenSoul extends CustomRelic implements OnChargeSubscriber {
     public void onCharge(AbstractGhostflame g) {
         if (!activated) {
             flash();
-            addToTop(new GainEnergyAction(1));
-            addToTop(new GainBlockAction(AbstractDungeon.player, 6));
+            addToBot(new GainBlockAction(AbstractDungeon.player, 6));
+            addToBot(new GainEnergyAction(1));
             activated = true;
             stopPulse();
         }
