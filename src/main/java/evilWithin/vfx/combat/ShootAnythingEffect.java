@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class ShootAnythingEffect extends AbstractGameEffect {
@@ -70,6 +69,8 @@ public class ShootAnythingEffect extends AbstractGameEffect {
         private Texture image;
 
         CandyInfo(AbstractCreature ac, AbstractCreature source, Texture blah) {
+            this.source = source;
+
             targetX = ac.hb.cX + MathUtils.random(ac.hb.width) - ac.hb.width * 1 / 4;
             targetY = ac.hb.cY + MathUtils.random(ac.hb.height) - ac.hb.height * 1 / 4;
 
