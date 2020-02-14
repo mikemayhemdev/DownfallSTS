@@ -1,0 +1,29 @@
+{
+  "evil-within:ChangingTotem": {
+    "MOVES": [
+      "Transformative Gaze"
+    ],
+    "NAME": "Head of Change",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "evil-within:ForgetfulTotem": {
+    "MOVES": [
+      "Forgetful Stare"
+    ],
+    "NAME": "Forgetful Head",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "evil-within:GrowingTotem": {
+    "MOVES": [
+      "Growth Beam"
+    ],
+    "NAME": "Head of Growth",
+    "DIALOG": [
+      ""
+    ]
+  }
+}

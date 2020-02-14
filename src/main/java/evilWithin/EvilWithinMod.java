@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.events.shrines.GremlinWheelGame;
 import com.megacrit.cardcrawl.events.shrines.WomanInBlue;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -29,6 +30,9 @@ import evilWithin.events.GremlinMatchGame_Evil;
 import evilWithin.events.GremlinWheelGame_Evil;
 import evilWithin.events.GremlinWheelGame_Rest;
 import evilWithin.events.WomanInBlue_Evil;
+import evilWithin.monsters.ChangingTotem;
+import evilWithin.monsters.ForgetfulTotem;
+import evilWithin.monsters.GrowingTotem;
 import evilWithin.monsters.LadyInBlue;
 import evilWithin.util.ReplaceData;
 
@@ -85,6 +89,7 @@ public class EvilWithinMod implements
         loadLocalization(language, UIStrings.class);
         loadLocalization(language, EventStrings.class);
         loadLocalization(language, RelicStrings.class);
+        loadLocalization(language, MonsterStrings.class);
     }
 
     @Override
@@ -141,6 +146,13 @@ public class EvilWithinMod implements
     private void initializeMonsters() {
 
         BaseMod.addMonster(LadyInBlue.ID, LadyInBlue::new);
+
+        BaseMod.addMonster("EvilWithin:Heads", "Living Wall Heads", () -> new MonsterGroup(
+                new AbstractMonster[] {
+                        new ChangingTotem(),
+                        new ForgetfulTotem(),
+                        new GrowingTotem(),
+                }));
 
         BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new MonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
         //BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new MonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
