@@ -32,7 +32,6 @@ public class GremlinWheel extends CustomRelic {
         if (setCounter <= 0) {
             this.usedUp();
         }
-
     }
 
 }

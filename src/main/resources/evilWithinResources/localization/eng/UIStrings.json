@@ -23,5 +23,11 @@
       "Gain 1 Dexterity at the start of combat.",
       " Doubles if you have the 2 other Heart Blessings."
     ]
+  },
+  "evil-within:WheelSpinButton": {
+    "TEXT": [
+      "Spin Wheel",
+      "Spin the Wheel."
+    ]
   }
 }
