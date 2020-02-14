@@ -17,6 +17,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
+import com.megacrit.cardcrawl.events.shrines.GremlinWheelGame;
 import com.megacrit.cardcrawl.events.shrines.WomanInBlue;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -25,6 +26,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import eventUtil.EventUtils;
 import evilWithin.events.GremlinMatchGame_Evil;
+import evilWithin.events.GremlinWheelGame_Evil;
+import evilWithin.events.GremlinWheelGame_Rest;
 import evilWithin.events.WomanInBlue_Evil;
 import evilWithin.monsters.LadyInBlue;
 import evilWithin.util.ReplaceData;
@@ -113,6 +116,18 @@ public class EvilWithinMod implements
                 GremlinMatchGame.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                GremlinWheelGame_Evil.ID, GremlinWheelGame_Evil.class, true,
+                //Event ID to Override//
+                GremlinWheelGame.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event only used in Gremlin Wheel relic.  Is not initialized into any Act.
+                GremlinWheelGame_Rest.ID, GremlinWheelGame_Rest.class, new String[]{""});
 
         EventUtils.registerEvent(
                 //Event ID//

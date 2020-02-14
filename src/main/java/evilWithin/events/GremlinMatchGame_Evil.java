@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.exordium.GremlinFat;
 import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.monsters.exordium.GremlinThief;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -347,7 +348,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         } else {
                             this.screen = CUR_SCREEN.FIGHT;
                             SlimeboundMod.logger.info("fight");
-                            MonsterGroup monsters = new MonsterGroup(new GremlinThief(-400F, 0F));
+                            MonsterGroup monsters = new MonsterGroup(new GremlinFat(-400F, 0F));
                             monsters.add(new GremlinNob(0F, 0F));
                             AbstractDungeon.getCurrRoom().monsters = monsters;
                             AbstractDungeon.getCurrRoom().rewards.clear();

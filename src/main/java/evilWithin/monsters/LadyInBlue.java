@@ -19,7 +19,7 @@ import slimebound.vfx.SlimeProjectileEffect;
 public class LadyInBlue extends AbstractMonster {
 
     public static final String ID = EvilWithinMod.makeID("LadyInBlue");
-    public static final String NAME = "Lady in Blue";
+    public static final String NAME = "The Woman in Blue";
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 150.0F;

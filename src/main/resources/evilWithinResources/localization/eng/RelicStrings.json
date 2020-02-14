@@ -41,5 +41,13 @@
 			", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
 			", a random Common, a random Uncommon, a random Rare, two random Curses."
 		]
+	},
+	"evil-within:GremlinWheel": {
+		"NAME": "Wheel of Change",
+		"FLAVOR": "No one gets two spins, he says.",
+		"DESCRIPTIONS": [
+			"At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic.",
+			"This relic has been used up."
+		]
 	}
 }

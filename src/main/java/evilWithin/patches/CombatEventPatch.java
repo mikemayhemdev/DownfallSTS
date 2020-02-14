@@ -20,7 +20,7 @@ public class CombatEventPatch {
             public void edit(Instanceof i) throws CannotCompileException {
                 try {
                     if (i.getType().getName().equals(Mushrooms.class.getName())) {
-                        i.replace("$_ = $proceed($$) || currentRoom.event instanceof evilWithin.events.WomanInBlue_Evil || currentRoom.event instanceof evilWithin.events.GremlinMatchGame_Evil;");
+                        i.replace("$_ = $proceed($$) || currentRoom.event instanceof evilWithin.events.WomanInBlue_Evil || currentRoom.event instanceof evilWithin.events.GremlinMatchGame_Evil || currentRoom.event instanceof evilWithin.events.GremlinWheelGame_Evil;");
                     }
                 } catch (NotFoundException e) {
                     SlimeboundMod.logger.error("Combat proceed button patch broken.", e);

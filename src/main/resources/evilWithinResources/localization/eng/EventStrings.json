@@ -30,5 +30,47 @@
       " #rDamage.",
       "[Punch] #rFight. #gGain #ga #gPotion #gRelic #gand #g3 #gPotions."
     ]
+  },
+  "evilWithin:GremlinWheelGame": {
+    "NAME": "Wheel of Change",
+    "DESCRIPTIONS": [
+      "You come upon a dapper looking, cheery gremlin. Despite your menacing appearance, he seems to be unfazed, though you do catch him hesitantly glancing backstage. NL \"It's time to spin the wheel! Are you ready?\"",
+      "\"You win some #yGOLD! NL YAY!!!!\"",
+      "\"Ah, a #ggift! NL Enjoy!\"",
+      "\"Oooh, a free #gHeal for you!\"",
+      "\"Looks like you won a #pCurse! NL That's not good. NL Oh well! Better luck next time!\"",
+      "\"Ohh, the power of #r~darkness...~ NL Choose a card to remove from your deck!\"",
+      "\"Uh oh! NL You lose!\" NL You spot him readying a shiv...",
+      "You slash at the crazy gremlin but he's simply too quick! NL He gets you a few times with a crude shiv. NL \"The price has been paid!!\" NL and with that, both the gremlin and its wheel disappear in a puff of smoke.",
+      "The gremlin nervously looks over his shoulder, but quickly relaxes. You eye him gesturing with his hand, but disregard it. NL \"Now, now, friend, the wheel has fairly decided your reward! No one gets a second spin.\"",
+      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"My friend here suggests you take what the wheel has offered.\".",
+      "Settling in by the fire, you decide to see if you have better luck with the Wheel than your last attempt.",
+      "The Wheel has chosen a prize. NL NL You need only to reach out and take it.",
+      "Success! You've found what you are looking for, and just in time! NL NL #r@CRACK!@ NL NL You may have been a little rough with that last spin... the Wheel has been broken.",
+      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure."
+    ],
+    "OPTIONS": [
+      "[Play]",
+      "[Prize!] YAY!!!!",
+      "[Prize!] #gObtain #ga #gRelic.",
+      "[Prize!] #gHeal #gto #gfull #ghealth.",
+      "[Prize?] #rCurse #r- #rDecay.",
+      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Prize?] #rLose #r",
+      " #rHP.",
+      "[Leave]",
+      "Select a Card to Remove.",
+      "[Again!]",
+      "[AGAIN!!]",
+      "[Punch] #rFight. #gGain #gGremlin #gWheel.",
+      "[Pass] Try again later."
+    ]
+  },
+  "evilWithin:GremlinWheelGameRest": {
+    "NAME": "Wheel of Change",
+    "DESCRIPTIONS": [
+    ],
+    "OPTIONS": [
+    ]
   }
 }
