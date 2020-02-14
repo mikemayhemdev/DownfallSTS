@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL Muddle your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL sneckomod:Muddle your hand."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
