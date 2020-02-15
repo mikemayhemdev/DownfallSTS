@@ -16,6 +16,7 @@ import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.LivingWall;
 import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.events.shrines.GremlinWheelGame;
@@ -142,6 +143,14 @@ public class EvilWithinMod implements
                 LivingWall_Evil.ID, LivingWall_Evil.class, true,
                 //Event ID to Override//
                 LivingWall.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Augmenter_Evil.ID, Augmenter_Evil.class, true,
+                //Event ID to Override//
+                DrugDealer.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

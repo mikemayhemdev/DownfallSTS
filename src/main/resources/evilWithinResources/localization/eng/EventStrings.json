@@ -78,5 +78,14 @@
     "OPTIONS": [
       "[Punch] #rFight. #gUse #gall #g3 #gHeads."
     ]
+  },
+  "evilWithin:Augmenter": {
+    "NAME": "Augmenter",
+    "DESCRIPTIONS": [
+      "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
+     ],
+    "OPTIONS": [
+      "[Punch] #rFight. #gTake #gEverything."
+    ]
   }
 }
