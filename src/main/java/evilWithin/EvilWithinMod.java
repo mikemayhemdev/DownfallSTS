@@ -18,6 +18,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.LivingWall;
+import com.megacrit.cardcrawl.events.shrines.Bonfire;
 import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.events.shrines.GremlinWheelGame;
 import com.megacrit.cardcrawl.events.shrines.WomanInBlue;
@@ -151,6 +152,14 @@ public class EvilWithinMod implements
                 Augmenter_Evil.ID, Augmenter_Evil.class, true,
                 //Event ID to Override//
                 DrugDealer.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                BonfireSpirits_Evil.ID, BonfireSpirits_Evil.class, true,
+                //Event ID to Override//
+                Bonfire.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }
