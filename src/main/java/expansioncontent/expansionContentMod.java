@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import evilWithin.ui.campfire.WheelSpinButton;
 import expansioncontent.cards.*;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
@@ -52,7 +53,8 @@ public class expansionContentMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        StartGameSubscriber {
+        StartGameSubscriber,
+        PostUpdateSubscriber {
 
     @SpireEnum
     public static AbstractCard.CardTags STUDY_HEXAGHOST;
@@ -76,11 +78,21 @@ public class expansionContentMod implements
     public static AbstractCard.CardTags STUDY;
     private static String modID;
 
+    public static boolean teleportToWheelTime = false;
+
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
         modID = "expansioncontent";
 
+    }
+
+    @Override
+    public void receivePostUpdate() {
+        if (teleportToWheelTime) {
+            WheelSpinButton.doStuff();
+            teleportToWheelTime = false;
+        }
     }
 
     public static String makeCardPath(String resourcePath) {

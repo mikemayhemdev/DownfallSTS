@@ -29,9 +29,6 @@ import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinThief;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
@@ -99,7 +96,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
         this.purgeResult = false;
         this.buttonPressed = false;
         this.buttonHb = new Hitbox(450.0F * Settings.scale, 300.0F * Settings.scale);
-        this.imgX = (float)Settings.WIDTH / 2.0F;
+        this.imgX = (float) Settings.WIDTH / 2.0F;
         this.imgY = START_Y;
         this.wheelAngle = 0.0F;
         this.color = new Color(1.0F, 1.0F, 1.0F, 0.0F);
@@ -211,7 +208,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     }
 
     private void preApplyResult() {
-        switch(this.result) {
+        switch (this.result) {
             case 0:
                 this.imageEventText.updateBodyText(DESCRIPTIONS[11]);
                 this.imageEventText.setDialogOption(OPTIONS[1]);
@@ -235,10 +232,10 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
                 break;
             default:
                 this.imageEventText.updateBodyText(DESCRIPTIONS[11]);
-                this.imageEventText.setDialogOption(OPTIONS[6] + (int)((float)AbstractDungeon.player.maxHealth * this.hpLossPercent) + OPTIONS[7]);
+                this.imageEventText.setDialogOption(OPTIONS[6] + (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent) + OPTIONS[7]);
                 this.color = new Color(0.5F, 0.5F, 0.5F, 1.0F);
         }
-            this.imageEventText.setDialogOption(OPTIONS[13]);
+        this.imageEventText.setDialogOption(OPTIONS[13]);
 
 
     }
@@ -246,12 +243,12 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         SlimeboundMod.logger.info(this.screen);
 
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
                     GenericEventDialog.hide();
                     this.result = AbstractDungeon.miscRng.random(0, 5);
-                    this.resultAngle = (float)this.result * 60.0F + MathUtils.random(-10.0F, 10.0F);
+                    this.resultAngle = (float) this.result * 60.0F + MathUtils.random(-10.0F, 10.0F);
                     this.wheelAngle = 0.0F;
                     this.startSpin = true;
                     this.bounceTimer = 2.0F;
@@ -263,7 +260,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
             case POSTSPIN1:
                 if (buttonPressed == 0) {
                     this.applyResult();
-                    if (this.goldchosen){
+                    if (this.goldchosen) {
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmount));
                         AbstractDungeon.player.gainGold(this.goldAmount);
                     }
@@ -289,7 +286,10 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     }
 
     private void applyResult() {
-        switch(this.result) {
+        if (AbstractDungeon.player.hasRelic(GremlinWheel.ID)) {
+            AbstractDungeon.player.getRelic(GremlinWheel.ID).setCounter(0);
+        }
+        switch (this.result) {
             case 0:
                 this.hasFocus = false;
                 logMetricGainGold("Wheel of Change", "Gold", this.goldAmount);
@@ -310,7 +310,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
             case 3:
                 AbstractCard curse = new Decay();
                 logMetricObtainCard("Wheel of Change", "Cursed", curse);
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                 this.hasFocus = false;
                 break;
             case 4:
@@ -324,8 +324,8 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
                 this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
                 CardCrawlGame.sound.play("ATTACK_DAGGER_6");
                 CardCrawlGame.sound.play("BLOOD_SPLAT");
-                int damageAmount = (int)((float)AbstractDungeon.player.maxHealth * this.hpLossPercent);
-                AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, damageAmount, DamageType.HP_LOSS));
+                int damageAmount = (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent);
+                AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, damageAmount, DamageType.HP_LOSS));
                 logMetricTakeDamage("Wheel of Change", "Damaged", damageAmount);
         }
 
@@ -333,7 +333,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
 
     private void purgeLogic() {
         if (this.purgeResult && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             logMetricCardRemoval("Wheel of Change", "Card Removal", c);
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
@@ -362,7 +362,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
         if (this.buttonHb.hovered) {
             sb.setColor(1.0F, 1.0F, 1.0F, 0.25F);
         } else {
-            sb.setColor(new Color(1.0F, 1.0F, 1.0F, (MathUtils.cosDeg((float)(System.currentTimeMillis() / 5L % 360L)) + 1.25F) / 3.5F));
+            sb.setColor(new Color(1.0F, 1.0F, 1.0F, (MathUtils.cosDeg((float) (System.currentTimeMillis() / 5L % 360L)) + 1.25F) / 3.5F));
         }
 
         if (this.buttonHb.hovered) {
