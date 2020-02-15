@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,12 +37,14 @@ public class TransformDrawnCardsPower extends AbstractPower implements Cloneable
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        flash();
         this.amount -= 1;
         if (amount == 0)
-            owner.powers.remove(this);
-        addToTop(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
-        addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        else {
+            flash();
+            addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+            addToBot(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
+        }
     }
 
     @Override

@@ -11,24 +11,18 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.city.Colosseum;
-import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.PotionBelt;
 import com.megacrit.cardcrawl.relics.ToyOrnithopter;
 import com.megacrit.cardcrawl.relics.WhiteBeast;
 import com.megacrit.cardcrawl.rewards.RewardItem;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import evilWithin.monsters.LadyInBlue;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,7 +41,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
         this.screen = WomanInBlue_Evil.CurScreen.INTRO;
         this.imageEventText.setDialogOption(OPTIONS[3]);
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.imageEventText.setDialogOption(OPTIONS[1] + MathUtils.ceil((float)AbstractDungeon.player.maxHealth * 0.05F) + OPTIONS[2]);
+            this.imageEventText.setDialogOption(OPTIONS[1] + MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F) + OPTIONS[2]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[0]);
         }
@@ -55,9 +49,9 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.screen = WomanInBlue_Evil.CurScreen.FIGHT;
                         AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new LadyInBlue());
@@ -92,7 +86,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
                             CardCrawlGame.sound.play("BLUNT_FAST");
-                            AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, MathUtils.ceil((float)AbstractDungeon.player.maxHealth * 0.05F), DamageType.HP_LOSS));
+                            AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F), DamageType.HP_LOSS));
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         }
