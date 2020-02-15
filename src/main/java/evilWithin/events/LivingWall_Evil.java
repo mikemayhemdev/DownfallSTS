@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.events.GenericEventDialog;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MathHelper;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -36,6 +37,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import evilWithin.EvilWithinMod;
 import evilWithin.relics.GremlinWheel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -56,11 +58,12 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 public class LivingWall_Evil extends AbstractImageEvent {
-    public static final String ID = "Living Wall";
+    public static final String ID = "evilWithin:LivingWall";
     private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    public static final String[] OPTIONSEXTRA;
     private static final String DIALOG_1;
     private static final String RESULT_DIALOG;
     private LivingWall_Evil.CurScreen screen;
@@ -79,6 +82,7 @@ public class LivingWall_Evil extends AbstractImageEvent {
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
+        this.imageEventText.setDialogOption(OPTIONSEXTRA[0]);
 
     }
 
@@ -144,18 +148,29 @@ public class LivingWall_Evil extends AbstractImageEvent {
                         }
                         break;
                     case 3:
-                        this.choice = LivingWall_Evil.Choice.GROW;
-                        if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
-                            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[5], true, false, false, false);
-                        }
+                        this.choice = Choice.FIGHT;
+                        SlimeboundMod.logger.info("fight");
+                        MonsterGroup monsters =
+                                AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("EvilWithin:Heads");
+                        AbstractDungeon.getCurrRoom().monsters = monsters;
+                        AbstractDungeon.getCurrRoom().rewards.clear();
+                        AbstractDungeon.getCurrRoom().addGoldToRewards(100);
+                        AbstractDungeon.getCurrRoom().eliteTrigger = true;
+                        this.imageEventText.clearRemainingOptions();
+                        this.enterCombatFromImage();
+                        break;
                 }
 
-                this.pickCard = true;
-                this.imageEventText.updateBodyText(RESULT_DIALOG);
-                this.imageEventText.clearAllDialogs();
-                this.imageEventText.setDialogOption(OPTIONS[6]);
-                this.screen = LivingWall_Evil.CurScreen.RESULT;
+                if (this.choice != Choice.FIGHT){
+                    this.pickCard = true;
+                    this.imageEventText.updateBodyText(RESULT_DIALOG);
+                    this.imageEventText.clearAllDialogs();
+                    this.imageEventText.setDialogOption(OPTIONS[6]);
+                    this.screen = LivingWall_Evil.CurScreen.RESULT;
+                    break;
+                }
                 break;
+
             default:
                 this.openMap();
         }
@@ -167,6 +182,7 @@ public class LivingWall_Evil extends AbstractImageEvent {
         NAME = eventStrings.NAME;
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;
+        OPTIONSEXTRA = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
         DIALOG_1 = DESCRIPTIONS[0];
         RESULT_DIALOG = DESCRIPTIONS[1];
     }

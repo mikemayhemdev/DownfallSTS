@@ -16,6 +16,7 @@ import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.events.exordium.LivingWall;
 import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.events.shrines.GremlinWheelGame;
 import com.megacrit.cardcrawl.events.shrines.WomanInBlue;
@@ -26,14 +27,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import eventUtil.EventUtils;
-import evilWithin.events.GremlinMatchGame_Evil;
-import evilWithin.events.GremlinWheelGame_Evil;
-import evilWithin.events.GremlinWheelGame_Rest;
-import evilWithin.events.WomanInBlue_Evil;
-import evilWithin.monsters.ChangingTotem;
-import evilWithin.monsters.ForgetfulTotem;
-import evilWithin.monsters.GrowingTotem;
-import evilWithin.monsters.LadyInBlue;
+import evilWithin.events.*;
+import evilWithin.monsters.*;
 import evilWithin.util.ReplaceData;
 
 import java.nio.charset.StandardCharsets;
@@ -141,11 +136,21 @@ public class EvilWithinMod implements
                 WomanInBlue.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                LivingWall_Evil.ID, LivingWall_Evil.class, true,
+                //Event ID to Override//
+                LivingWall.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
 
         BaseMod.addMonster(LadyInBlue.ID, LadyInBlue::new);
+
+        BaseMod.addMonster(Augmenter.ID, Augmenter::new);
 
         BaseMod.addMonster("EvilWithin:Heads", "Living Wall Heads", () -> new MonsterGroup(
                 new AbstractMonster[] {

@@ -1,5 +1,7 @@
 package evilWithin.monsters;
 
+import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -22,7 +24,8 @@ public class Augmenter extends AbstractMonster {
     private static final float HB_H = 320.0F;
 
     public Augmenter() {
-        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/default.png");
+        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/augmenter/augmenter.png");
+        this.loadAnimation(EvilWithinMod.assetPath("images/monsters/augmenter/augmenter.atlas"), EvilWithinMod.assetPath("images/monsters/augmenter/augmenter.json"), 1.0F);
         switch (AbstractDungeon.actNum) {
             case 1:
                 setHp(100);
@@ -37,6 +40,12 @@ public class Augmenter extends AbstractMonster {
 
         this.damage.add(new DamageInfo(this, 10));
         this.damage.add(new DamageInfo(this, 12));
+
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        this.stateData.setMix("Hit", "Idle", 0.2F);
+        this.stateData.setMix("Attack", "Idle", 0.2F);
+        this.state.setTimeScale(0.8F);
     }
 
     @Override

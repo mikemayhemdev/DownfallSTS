@@ -72,5 +72,11 @@
     ],
     "OPTIONS": [
     ]
+  },
+  "evilWithin:LivingWall": {
+    "NAME": "Living Wall",
+    "OPTIONS": [
+      "[Punch] #rFight. #gUse #gall #g3 #gHeads."
+    ]
   }
 }

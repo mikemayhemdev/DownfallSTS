@@ -1,0 +1,62 @@
+
+augmenter.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow
+  rotate: false
+  xy: 147, 111
+  size: 175, 29
+  orig: 179, 33
+  offset: 2, 2
+  index: -1
+hand (left)
+  rotate: false
+  xy: 386, 59
+  size: 48, 69
+  orig: 48, 69
+  offset: 0, 0
+  index: -1
+skin
+  rotate: false
+  xy: 237, 1
+  size: 64, 75
+  orig: 68, 79
+  offset: 2, 2
+  index: -1
+robe
+  rotate: false
+  xy: 1, 1
+  size: 144, 233
+  orig: 144, 233
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 303, 61
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+hood
+  rotate: false
+  xy: 147, 1
+  size: 88, 108
+  orig: 88, 108
+  offset: 0, 0
+  index: -1
+hand (right)
+  rotate: false
+  xy: 303, 1
+  size: 81, 58
+  orig: 81, 58
+  offset: 0, 0
+  index: -1
+arm (right)
+  rotate: false
+  xy: 386, 1
+  size: 82, 56
+  orig: 82, 56
+  offset: 0, 0
+  index: -1
