@@ -49,5 +49,12 @@
 			"At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic.",
 			"This relic has been used up."
 		]
+	},
+	"evil-within:CloakOfManyFaces": {
+		"NAME": "Coat of Many Faces",
+		"FLAVOR": "It was Steve, and Bill, and Ian, and Fred, and John...",
+		"DESCRIPTIONS": [
+			"Upon pickup, gain Cultist Headpiece, Face Of Cleric, N'loth's Hungry Face, Gremlin Visage, and Ssserpent Head."
+		]
 	}
 }

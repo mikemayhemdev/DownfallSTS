@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.LivingWall;
 import com.megacrit.cardcrawl.events.shrines.*;
+import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -165,6 +166,14 @@ public class EvilWithinMod implements
                 GoldenShrine_Evil.ID, GoldenShrine_Evil.class, true,
                 //Event ID to Override//
                 GoldShrine.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                FaceTrader_Evil.ID, FaceTrader_Evil.class, true,
+                //Event ID to Override//
+                FaceTrader.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

@@ -106,5 +106,14 @@
       "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
       "You ignore the shrine."
     ]
+  },
+  "evilWithin:FaceTrader": {
+    "NAME": "Face Trader",
+    "DESCRIPTIONS": [
+      " NL NL He doesn't look like he would put up much of a fight, but he has survived in this place. Perhaps these masks hold some power..."
+    ],
+    "OPTIONS": [
+      "[Punch] #rFight. #g100%: #gAll #gFace."
+    ]
   }
 }
