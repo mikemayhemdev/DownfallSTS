@@ -18,10 +18,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.LivingWall;
-import com.megacrit.cardcrawl.events.shrines.Bonfire;
-import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
-import com.megacrit.cardcrawl.events.shrines.GremlinWheelGame;
-import com.megacrit.cardcrawl.events.shrines.WomanInBlue;
+import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
@@ -160,6 +157,14 @@ public class EvilWithinMod implements
                 BonfireSpirits_Evil.ID, BonfireSpirits_Evil.class, true,
                 //Event ID to Override//
                 Bonfire.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                GoldenShrine_Evil.ID, GoldenShrine_Evil.class, true,
+                //Event ID to Override//
+                GoldShrine.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

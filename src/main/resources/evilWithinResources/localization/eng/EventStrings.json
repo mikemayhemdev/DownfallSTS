@@ -97,5 +97,14 @@
       "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
       "[Lcked] Requires 150 Souls."
     ]
+  },
+  "evilWithin:GoldenShrine": {
+    "NAME": "Soul Shrine",
+    "DESCRIPTIONS": [
+      "Before you lies an elaborate shrine to an ancient spirit of evil. ",
+      "As your hand touches the shrine, #ysouls spill forth from the shrine, ~showering~ ~you~ ~in~ ~power.~ ",
+      "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
+      "You ignore the shrine."
+    ]
   }
 }
