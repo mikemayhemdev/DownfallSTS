@@ -28,7 +28,7 @@ public class DefensiveFlair extends AbstractSneckoCard {
     protected void applyPowersToBlock() {
         int realBaseBlock = this.baseBlock;
         for (AbstractCard q : AbstractDungeon.player.hand.group) {
-            if (q.color != TheSnecko.Enums.SNECKO_CYAN)
+            if (q.color != AbstractDungeon.player.getCardColor())
                 baseBlock += magicNumber;
         }
         super.applyPowersToBlock();

@@ -43,12 +43,12 @@ public class CheapStockPower extends AbstractPower implements CloneablePowerInte
                     isDone = true;
                     int x = 0;
                     for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (q.color != TheSnecko.Enums.SNECKO_CYAN && q.cost > x)
+                        if (q.color != AbstractDungeon.player.getCardColor() && q.cost > x)
                             x = q.cost;
                     }
                     ArrayList<AbstractCard> possCardsList = new ArrayList<>();
                     for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                        if (q.cost == x && q.color != TheSnecko.Enums.SNECKO_CYAN)
+                        if (q.cost == x && q.color != AbstractDungeon.player.getCardColor())
                             possCardsList.add(q);
                     }
                     if (!possCardsList.isEmpty()) {

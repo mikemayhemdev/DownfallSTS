@@ -7,7 +7,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.actions.OctoChoiceAction;
 import expansioncontent.expansionContentMod;
+import guardian.patches.GuardianEnum;
 import slimebound.actions.MakeTempCardInHandActionReduceCost;
+import slimebound.patches.SlimeboundEnum;
+import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
@@ -27,9 +30,12 @@ public class QuickStudy extends AbstractExpansionCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("0"), "Guardian", expansionContentMod.makeCardPath("QuickGuardian.png"), "Obtain Guardian expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("1"), "Hexaghost", expansionContentMod.makeCardPath("QuickHexa.png"), "Obtain Hexaghost expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("2"), "Slime", expansionContentMod.makeCardPath("QuickSlime.png"), "Obtain Slime Boss expansioncontent:Boss cards."));
+        if (AbstractDungeon.player.chosenClass != GuardianEnum.GUARDIAN)
+            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("0"), "Guardian", expansionContentMod.makeCardPath("QuickGuardian.png"), "Obtain Guardian expansioncontent:Boss cards."));
+        if (AbstractDungeon.player.chosenClass != TheHexaghost.Enums.THE_SPIRIT)
+            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("1"), "Hexaghost", expansionContentMod.makeCardPath("QuickHexa.png"), "Obtain Hexaghost expansioncontent:Boss cards."));
+        if (AbstractDungeon.player.chosenClass != SlimeboundEnum.SLIMEBOUND)
+            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("2"), "Slime", expansionContentMod.makeCardPath("QuickSlime.png"), "Obtain Slime Boss expansioncontent:Boss cards."));
         cardList.add(new OctoChoiceCard(expansionContentMod.makeID("3"), "Automaton", expansionContentMod.makeCardPath("QuickAutomaton.png"), "Obtain Automaton expansioncontent:Boss cards."));
         cardList.add(new OctoChoiceCard(expansionContentMod.makeID("4"), "Champ", expansionContentMod.makeCardPath("QuickChamp.png"), "Obtain Champ expansioncontent:Boss cards."));
         cardList.add(new OctoChoiceCard(expansionContentMod.makeID("5"), "Collector", expansionContentMod.makeCardPath("QuickCollector.png"), "Obtain Collector expansioncontent:Boss cards."));

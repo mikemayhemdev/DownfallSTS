@@ -36,7 +36,7 @@ public class SerpentMindPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.color != TheSnecko.Enums.SNECKO_CYAN) {
+        if (card.color != AbstractDungeon.player.getCardColor()) {
             flash();
             addToBot(new DrawCardAction(amount));
         }

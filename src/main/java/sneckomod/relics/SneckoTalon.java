@@ -34,7 +34,7 @@ public class SneckoTalon extends CustomRelic {
                 }
                 ArrayList<AbstractCard> possCardsList = new ArrayList<>();
                 for (AbstractCard q : AbstractDungeon.player.hand.group) {
-                    if (q.cost == x && q.color != TheSnecko.Enums.SNECKO_CYAN)
+                    if (q.cost == x)
                         possCardsList.add(q);
                 }
                 if (!possCardsList.isEmpty()) {

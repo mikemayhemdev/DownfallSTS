@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
@@ -34,7 +35,7 @@ public class Rotation extends AbstractSneckoCard {
                 int x = 0;
                 ArrayList<AbstractCard> cardsToDiscard = new ArrayList<>();
                 for (AbstractCard q : p.hand.group) {
-                    if (q.color != TheSnecko.Enums.SNECKO_CYAN) {
+                    if (q.color != AbstractDungeon.player.getCardColor()) {
                         cardsToDiscard.add(q);
                         x++;
                     }
