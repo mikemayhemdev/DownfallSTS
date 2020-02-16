@@ -24,7 +24,7 @@ public class PureSneckoAction extends AbstractGameAction {
         int handSize = 0;
 
         for (AbstractCard c : p.hand.group) {
-            if (c.color != TheSnecko.Enums.SNECKO_CYAN) {
+            if (c.color != AbstractDungeon.player.getCardColor()) {
                 handSize++;
                 AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, p.hand, true));
             }

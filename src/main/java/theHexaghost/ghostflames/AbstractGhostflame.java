@@ -1,5 +1,6 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.TheHexaghost;
+import theHexaghost.actions.GreenFlameAction;
 import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.vfx.MyOrb;
 
@@ -35,15 +37,16 @@ public abstract class AbstractGhostflame {
 
     public void charge() {
         if (!charged) {
-            graphicalRender.charge();
             charged = true;
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
-            }
+            flash();
+            atb(new GreenFlameAction(graphicalRender));
+            onCharge();
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnChargeSubscriber) ((OnChargeSubscriber) p).onCharge(this);
             }
-            onCharge();
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                if (r instanceof OnChargeSubscriber) ((OnChargeSubscriber) r).onCharge(this);
+            }
             if (AbstractDungeon.player instanceof TheHexaghost) {
                 int x = 0;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames)
@@ -59,6 +62,10 @@ public abstract class AbstractGhostflame {
     public void update() {
         graphicalRender.update();
         hitbox.update();
+        if (flashTimer > 1.0F)
+            flashTimer -= Gdx.graphics.getDeltaTime();
+        if (flashTimer < 1.0F)
+            flashTimer = 1.0F;
     }
 
     public abstract Texture getHelperTexture();
@@ -87,6 +94,12 @@ public abstract class AbstractGhostflame {
                 if (gf.charged) x++;
             ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
         }
+    }
+
+    public float flashTimer = 1.0F;
+
+    public void flash() {
+        flashTimer = 2.0F;
     }
 
     public void reset() {

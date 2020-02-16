@@ -3,6 +3,7 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.TheSnecko;
 
@@ -28,7 +29,7 @@ public class SlitherStrike extends AbstractSneckoCard {
             public void update() {
                 isDone = true;
                 for (AbstractCard q : p.hand.group) {
-                    if (q.color != TheSnecko.Enums.SNECKO_CYAN) {
+                    if (q.color != AbstractDungeon.player.getCardColor()) {
                         q.modifyCostForCombat(-1);
                         q.superFlash();
                     }

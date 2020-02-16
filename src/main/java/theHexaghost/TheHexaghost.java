@@ -140,7 +140,9 @@ public class TheHexaghost extends CustomPlayer {
                     }
                     Texture b = gf.getHelperTexture();
                     sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
-                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, sb.getColor(), Settings.scale);// 150 153
+                    if (gf.flashTimer > 1.0F)
+                        sb.setColor(Color.GREEN.cpy());
+                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, sb.getColor(), Settings.scale * gf.flashTimer);// 150 153
                 }
             }
         }
