@@ -115,5 +115,25 @@
     "OPTIONS": [
       "[Punch] #rFight. #g100%: #gAll #gFace."
     ]
+  },
+  "evilWithin:CursedFountain": {
+    "NAME": "The Cursed Fountain",
+    "DESCRIPTIONS": [
+      "You come across a tinged #p~purple~ #p~liquid~ flowing endlessly from a fountain on a nearby wall. It is one you recognize as deadly to most creatures, but quite beneficial to those subjected to a curse.",
+      "As you drink the #p~liquid,~ you feel a #pdark #pgrasp reach into your mind. It feels luxurious and refreshing.",
+      "Sensing that this #p~liquid~ may be useful, you decide to capture some in a jar to use later. Creatures not attuned to the #pdark #pwater will surely suffer when doused in it.",
+      "The fountain's #p~liquid~ is roiling in the souls of the lost. It seems a waste to not make use of them. You channel the souls into your form, ripping them from the #pcursed #pfountain's magic.",
+      "Leaving the fountain behind, you continue on your way."
+    ],
+    "OPTIONS": [
+      "[Bottle] #gGain #gCursed #gLiquid #gPotion.",
+      "[Consume] #gGain #g75 #ySouls.",
+      "[Drink] #gHeal #gto #gfull #gHP.",
+      "[Locked] Requires a curse.",
+      "[Locked] Requires 2 curses.",
+      "[Locked] Requires 3 curses.",
+      "[Locked] Already used.",
+      "[Leave]"
+    ]
   }
 }

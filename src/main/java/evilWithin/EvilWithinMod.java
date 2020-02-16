@@ -13,6 +13,7 @@ import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
@@ -20,16 +21,19 @@ import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.LivingWall;
 import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
-import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.localization.MonsterStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import eventUtil.EventUtils;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
+import evilWithin.potions.CursedFountainPotion;
 import evilWithin.util.ReplaceData;
+import guardian.patches.GuardianEnum;
+import guardian.potions.AcceleratePotion;
+import guardian.potions.BlockOnCardUsePotion;
+import guardian.potions.DefensiveModePotion;
+import guardian.potions.StasisDiscoveryPotion;
 
 import java.nio.charset.StandardCharsets;
 
@@ -85,6 +89,7 @@ public class EvilWithinMod implements
         loadLocalization(language, EventStrings.class);
         loadLocalization(language, RelicStrings.class);
         loadLocalization(language, MonsterStrings.class);
+        loadLocalization(language, PotionStrings.class);
     }
 
     @Override
@@ -176,6 +181,14 @@ public class EvilWithinMod implements
                 FaceTrader.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                CursedFountain.ID, CursedFountain.class, true,
+                //Event ID to Override//
+                FountainOfCurseRemoval.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
@@ -201,5 +214,13 @@ public class EvilWithinMod implements
             //BaseMod.addBoss("TheCity", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
             //BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
         }
+
+        addPotions();
+    }
+
+    public void addPotions() {
+
+        BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
+
     }
 }
