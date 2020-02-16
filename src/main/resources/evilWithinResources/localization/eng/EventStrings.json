@@ -135,5 +135,25 @@
       "[Locked] Already used.",
       "[Leave]"
     ]
+  },
+  "evilWithin:WeMeetAgain": {
+    "NAME": "We Meet Again!",
+    "DESCRIPTIONS": [
+      "\"BOSS!\" A cheery disheveled fellow approaches you gleefully. You know this man well. NL \"It's me, #yRanwid! You wouldn't believe what I've swindled from the cursed heroes! Do you have any more junk I can give them?\" NL You appreciate his friendliness and consider your options. Surely you have something Ranwid can use in his next \"deal\"...",
+      "\"Oh, this is perfect! It's complete junk! Here, take these elixirs the last few fools gave me!\" NL Ranwid fumbles around his pouches, producing three bottles for you, though nearly dropping them in the process.",
+      "\"Magnificent! This will be quite handy for my next deal. Oh, and I've been harvesting the corpses, as you requested!\" NL Ranwid hands you a soul stone, then scurries away, looking for a new face to sell your useless trinket to.",
+      "\"Exemplary! With just a little work, I can make this look like something truly special.\" NL Ranwid departs, examining the relic carefully, no doubt pondering how he will exaggerate its usefulness to the next adventurer he meets.",
+      "\"Nothing today boss? Okay!\" NL He scampers away."
+    ],
+    "OPTIONS": [
+      "[Give ",
+      "] ",
+      "#gGain #g3 #gPotions",
+      "#gGain ",
+      " #ySouls",
+      "#gGain #ga #yRare #gCard",
+      "[Leave]",
+      "[Locked] No Relic to give."
+    ]
   }
 }

@@ -189,6 +189,14 @@ public class EvilWithinMod implements
                 FountainOfCurseRemoval.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                WeMeetAgain_Evil.ID, WeMeetAgain_Evil.class, true,
+                //Event ID to Override//
+                WeMeetAgain.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
