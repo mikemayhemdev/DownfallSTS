@@ -197,6 +197,14 @@ public class EvilWithinMod implements
                 WeMeetAgain.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Designer_Evil.ID, Designer_Evil.class, true,
+                //Event ID to Override//
+                Designer.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {

@@ -22,7 +22,6 @@
       "Tucked in the darkness, you spot a small shop. Within, you see a pale woman in sharp clothes managing an inventory of potions, stacked along a wall. She is startled by your threatening appearance. NL \"Leave me and my wares alone, cretin!\" she screams.",
       "You exit the shop cautiously, not wanting to spur the woman into a fight.",
       "#r@WHAM@ NL Her gloved fist collides with your face, nearly knocking you off your feet. NL \"Get out before I litter the floor with your guts.\" You take her word and exit with your guts still safely in your body."
-
     ],
     "OPTIONS": [
       "[Leave]",
@@ -83,7 +82,7 @@
     "NAME": "Augmenter",
     "DESCRIPTIONS": [
       "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
-     ],
+    ],
     "OPTIONS": [
       "[Punch] #rFight. #gTake #gEverything."
     ]
@@ -154,6 +153,25 @@
       "#gGain #ga #yRare #gCard.",
       "[Leave]",
       "[Locked] No Relic to give."
+    ]
+  },
+  "evilWithin:Designer": {
+    "NAME": "Designer In-Spire",
+    "DESCRIPTIONS": [
+      "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @gold!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
+      "It takes little effort to deal with the thief, but the fight does not go without some injury on your part. A man with ridiculous clothing appears at the shop entrance. NL \"Thank you, kind overlord!\", the man says, beckoning you inside.",
+      "You see no reason to get involved with this. There is important killing to be done.",
+      "\"Oh my, you are just dreadful!! This will not do, no no. What is this style? You are to be @menacing!@ A feared and intimidating #roverlord of the Spire! You simply ~must~ let me give you a proper makeover.\" NL NL You aren't sure whether to take this man at his word and accept his services, or if you should be insulted at his disgust at your style.",
+      "\"Okay, bye bye now! Tell your #roverlord friends!\" NL NL Though you were apprehensive of this man's ability, you definitely feel more intimidating.",
+      "You punch him. NL \"My @FACE!!@ Now I'll have to-\" NL NL He fainted. Perhaps next time he will give pause before insulting a creature of your status."
+    ],
+    "OPTIONS": [
+      "[Adjustments] ",
+      "[Clean Up] ",
+      "[Full Service] ",
+      "[Ignore] Leave.",
+      "[Punch] Leave.",
+      "[Enter Shop]"
     ]
   }
 }
