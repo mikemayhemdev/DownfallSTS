@@ -138,7 +138,7 @@ public class TheHexaghost extends CustomPlayer {
                     Texture b = gf.getHelperTexture();
                     sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
                     float flashP = (gf.flashTimer - 1F) / .5F;
-                    SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
+                    //SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
                     float fontScale = Settings.scale;
                     if (flashP > 0F){
                         if (flashP > .5F){
