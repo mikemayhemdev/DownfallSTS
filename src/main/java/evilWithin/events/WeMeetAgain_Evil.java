@@ -63,11 +63,13 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
 
         for (int i = 0; i < 3; i++) {
             if (playerCommonRelics.size() > 0){
-                this.relicsOffered.add(playerCommonRelics.get(i));
+                this.relicsOffered.add(playerCommonRelics.get(0));
                 this.relicOffersAvailable++;
+                playerCommonRelics.remove(0);
             } else if (playerUncommonRelics.size() > 0){
-                this.relicsOffered.add(playerUncommonRelics.get(i));
+                this.relicsOffered.add(playerUncommonRelics.get(0));
                 this.relicOffersAvailable++;
+                playerUncommonRelics.remove(0);
             }
         }
 
