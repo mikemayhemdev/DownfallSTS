@@ -1,6 +1,5 @@
 package evilWithin.events;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -9,19 +8,15 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.events.GenericEventDialog;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
-import java.util.Random;
 
 public class WeMeetAgain_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:WeMeetAgain";
@@ -29,11 +24,12 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
-    private AbstractRelic givenRelic;
     private static final String DIALOG_1;
     private CUR_SCREEN screen;
-    private ArrayList<AbstractRelic> relicsOffered;
+    private ArrayList<AbstractRelic> relicsOffered = new ArrayList<>();
     private int relicOffersAvailable;
+    private int relicCOffers = 0;
+    private int relicUOffers = 0;
     private int goldAmt;
 
     public WeMeetAgain_Evil() {
@@ -63,30 +59,30 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
 
         for (int i = 0; i < 3; i++) {
             if (playerCommonRelics.size() > 0){
-                this.relicsOffered.add(playerCommonRelics.get(0));
+                this.relicsOffered.add(playerCommonRelics.get(this.relicCOffers));
                 this.relicOffersAvailable++;
-                playerCommonRelics.remove(0);
+                this.relicCOffers++;
             } else if (playerUncommonRelics.size() > 0){
-                this.relicsOffered.add(playerUncommonRelics.get(0));
+                this.relicsOffered.add(playerUncommonRelics.get(this.relicUOffers));
                 this.relicOffersAvailable++;
-                playerUncommonRelics.remove(0);
+                this.relicUOffers++;
             }
         }
 
         if (this.relicOffersAvailable >= 1){
-            this.imageEventText.setDialogOption(OPTIONS[1]+ FontHelper.colorString(this.relicsOffered.get(0).name, "r") + OPTIONS[1] + OPTIONS[2]);
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[2]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
 
         if (this.relicOffersAvailable >= 2){
-            this.imageEventText.setDialogOption(OPTIONS[1]+ FontHelper.colorString(this.relicsOffered.get(1).name, "r") + OPTIONS[1] + OPTIONS[3] + this.goldAmt + OPTIONS[4]);
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(1).name + OPTIONS[1] + OPTIONS[3] + "#g" + this.goldAmt + OPTIONS[4]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
 
         if (this.relicOffersAvailable >= 3){
-            this.imageEventText.setDialogOption(OPTIONS[1]+ FontHelper.colorString(this.relicsOffered.get(2).name, "r") + OPTIONS[1] + OPTIONS[5]);
+            this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(2).name + OPTIONS[1] + OPTIONS[5]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
@@ -100,7 +96,6 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                 this.screen = CUR_SCREEN.COMPLETE;
                 switch(buttonPressed) {
                     case 0:
-                        GenericEventDialog.hide();
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
 
@@ -110,9 +105,19 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
                         }
                         AbstractDungeon.player.loseRelic(this.relicsOffered.get(0).relicId);
+
+                        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                         AbstractDungeon.combatRewardScreen.open();
                         break;
                     case 1:
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
+
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
+                        AbstractDungeon.player.gainGold(this.goldAmt);
+                        AbstractDungeon.player.loseRelic(this.relicsOffered.get(2).relicId);
+
+                        break;
+                    case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         AbstractCard rewardCard = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewardCard, Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.2F));
@@ -120,14 +125,6 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
 
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[6]);
-                        break;
-                    case 2:
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
-                        AbstractDungeon.player.gainGold(this.goldAmt);
-                        AbstractDungeon.player.loseRelic(this.relicsOffered.get(2).relicId);
-
                         break;
                     case 3:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);

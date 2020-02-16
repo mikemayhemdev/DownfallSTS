@@ -146,12 +146,12 @@
       "\"Nothing today boss? Okay!\" NL He scampers away."
     ],
     "OPTIONS": [
-      "[Give ",
+      "[Lose ",
       "] ",
-      "#gGain #g3 #gPotions",
+      "#gGain #g3 #gPotions.",
       "#gGain ",
-      " #ySouls",
-      "#gGain #ga #yRare #gCard",
+      " #ySouls.",
+      "#gGain #ga #yRare #gCard.",
       "[Leave]",
       "[Locked] No Relic to give."
     ]
