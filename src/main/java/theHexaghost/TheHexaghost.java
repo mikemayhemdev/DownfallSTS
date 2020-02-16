@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -25,6 +26,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import slimebound.SlimeboundMod;
 import theHexaghost.cards.Defend;
 import theHexaghost.cards.Float;
 import theHexaghost.cards.Sear;
@@ -101,11 +103,6 @@ public class TheHexaghost extends CustomPlayer {
             myBody.render(sb);
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !isDead) {
             oscillarator();
-            oscillarator();
-            oscillarator();
-            oscillarator();
-            oscillarator();
-            oscillarator();
             sb.setColor(oscillarator());
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                 if (activeGhostFlame == gf || showAll) {
@@ -140,9 +137,35 @@ public class TheHexaghost extends CustomPlayer {
                     }
                     Texture b = gf.getHelperTexture();
                     sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
-                    if (gf.flashTimer > 1.0F)
-                        sb.setColor(Color.GREEN.cpy());
-                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, sb.getColor(), Settings.scale * gf.flashTimer);// 150 153
+                    float flashP = (gf.flashTimer - 1F) / .5F;
+                    SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
+                    float fontScale = Settings.scale;
+                    if (flashP > 0F){
+                        if (flashP > .5F){
+                            if (gf.charged) {
+                                sb.setColor(Interpolation.exp5Out.apply(0F,1F,flashP),1F,Interpolation.exp5Out.apply(0F,1F,flashP),1F);
+                                fontScale = Interpolation.linear.apply(Settings.scale * 4F,Settings.scale,flashP);
+                            } else {
+                                sb.setColor(1F,1F,1F,1F);
+                                fontScale = Interpolation.pow2Out.apply(Settings.scale * 5F,Settings.scale,flashP);
+
+                            }
+                        } else {
+                            if (gf.charged) {
+                                sb.setColor(Interpolation.exp5Out.apply(1F,0F,flashP),1F,Interpolation.exp5Out.apply(1F,0F,flashP),1F);
+
+                                fontScale = Interpolation.linear.apply(Settings.scale,Settings.scale * 4F,flashP);
+                            } else {
+                                sb.setColor(1F,1F,1F,1F);
+                                fontScale = Interpolation.exp5In.apply(Settings.scale,Settings.scale * 5F,flashP);
+                            }
+                        }
+                    } else {
+                        sb.setColor(1F,1F,1F,1F);
+                    }
+
+
+                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, sb.getColor(), fontScale);// 150 153
                 }
             }
         }

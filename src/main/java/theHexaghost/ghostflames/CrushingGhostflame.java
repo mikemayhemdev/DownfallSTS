@@ -67,12 +67,12 @@ public class CrushingGhostflame extends AbstractGhostflame {
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - skillsPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. #yIgnites after #b" + x + " #ySkill is played this turn.";
+                s = s + "#yActive. #yIgnites when #b" + x + " #ySkill is played this turn.";
             } else {
-                s = s + "#yActive. #yIgnites after #b" + x + " #ySkills are played this turn.";
+                s = s + "#yActive. #yIgnites when #b" + x + " #ySkills are played this turn.";
             }
         } else {
-            s = s + "Inactive. #yIgnites after #b2 #ySkills are played while #yActive.";
+            s = s + "Inactive. #yIgnites when #b2 #ySkills are played while #yActive.";
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {

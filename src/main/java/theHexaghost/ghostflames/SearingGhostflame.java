@@ -59,12 +59,12 @@ public class SearingGhostflame extends AbstractGhostflame {
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - attacksPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. #yIgnites after #b" + x + " #yAttack is played this turn.";
+                s = s + "#yActive. #yIgnites when #b" + x + " #yAttack is played this turn.";
             } else {
-                s = s + "#yActive. #yIgnites after #b" + x + " #yAttacks are played this turn.";
+                s = s + "#yActive. #yIgnites when #b" + x + " #yAttacks are played this turn.";
             }
         } else {
-            s = s + "Inactive. #yIgnites after #b2 #yAttacks are played while #yActive.";
+            s = s + "Inactive. #yIgnites when #b2 #yAttacks are played while #yActive.";
         }
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {

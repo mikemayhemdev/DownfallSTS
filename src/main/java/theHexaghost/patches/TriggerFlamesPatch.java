@@ -22,11 +22,15 @@ public class TriggerFlamesPatch {
                 ((SearingGhostflame) activeGhostFlame).attacksPlayedThisTurn++;
                 if (((SearingGhostflame) activeGhostFlame).attacksPlayedThisTurn == 2) {
                     activeGhostFlame.charge();
+                } else {
+                    activeGhostFlame.flash();
                 }
             } else if (activeGhostFlame instanceof CrushingGhostflame && abstractCard.type == AbstractCard.CardType.SKILL) {
                 ((CrushingGhostflame) activeGhostFlame).skillsPlayedThisTurn++;
                 if (((CrushingGhostflame) activeGhostFlame).skillsPlayedThisTurn == 2) {
                     activeGhostFlame.charge();
+                } else {
+                    activeGhostFlame.flash();
                 }
             } else if (activeGhostFlame instanceof BolsteringGhostflame && abstractCard.type == AbstractCard.CardType.POWER) {
                 activeGhostFlame.charge();
@@ -37,6 +41,8 @@ public class TriggerFlamesPatch {
                 ((InfernoGhostflame) activeGhostFlame).energySpentThisTurn += x;
                 if (((InfernoGhostflame) activeGhostFlame).energySpentThisTurn >= 3) {
                     activeGhostFlame.charge();
+                } else {
+                    activeGhostFlame.flash();
                 }
             }
     }

@@ -37,8 +37,8 @@ public abstract class AbstractGhostflame {
 
     public void charge() {
         if (!charged) {
-            charged = true;
             flash();
+            charged = true;
             atb(new GreenFlameAction(graphicalRender));
             onCharge();
             for (AbstractPower p : AbstractDungeon.player.powers) {
@@ -99,7 +99,7 @@ public abstract class AbstractGhostflame {
     public float flashTimer = 1.0F;
 
     public void flash() {
-        flashTimer = 2.0F;
+        if (!this.charged) flashTimer = 1.5F;
     }
 
     public void reset() {

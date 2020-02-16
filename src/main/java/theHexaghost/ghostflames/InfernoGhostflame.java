@@ -68,19 +68,19 @@ public class InfernoGhostflame extends AbstractGhostflame {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = s + "#yActive. Ignites after spending [E] [E] [E] this turn.";
+                    s = s + "#yActive. Ignites when spending [E] [E] [E] this turn.";
                     break;
                 case 2:
-                    s = s + "#yActive. Ignites after spending [E] [E] this turn.";
+                    s = s + "#yActive. Ignites when spending [E] [E] this turn.";
                     break;
                 case 1:
-                    s = s + "#yActive. Ignites after spending [E] this turn.";
+                    s = s + "#yActive. Ignites when spending [E] this turn.";
                     break;
                 default:
                     s = s + "Error. Please report to mod dev: " + x;
             }
         } else {
-            s = s + "Inactive. Ignites after spending [E] [E] [E] while #yActive.";
+            s = s + "Inactive. Ignites when spending [E] [E] [E] while #yActive.";
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {

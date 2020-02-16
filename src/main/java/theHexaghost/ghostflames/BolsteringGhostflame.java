@@ -50,9 +50,9 @@ public class BolsteringGhostflame extends AbstractGhostflame {
             s = "#yIgnited. ";
         }
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + "#yActive. #yIgnites after a #yPower is played this turn.";
+            s = s + "#yActive. #yIgnites when a #yPower is played this turn.";
         } else {
-            s = s + "Inactive. #yIgnites after a #yPower is played while #yActive.";
+            s = s + "Inactive. #yIgnites when a #yPower is played while #yActive.";
         }
         int x = block;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
