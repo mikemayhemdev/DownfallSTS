@@ -97,6 +97,7 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                         this.imageEventText.removeDialogOption(1);
+                        AbstractDungeon.player.loseGold(150);
                         AbstractDungeon.player.increaseMaxHp(10, false);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                         this.screen = CUR_SCREEN.COMPLETE;
