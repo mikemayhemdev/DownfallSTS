@@ -173,5 +173,28 @@
       "[Punch] Leave.",
       "[Enter Shop]"
     ]
+  },
+  "evilWithin:DeadAdventurer": {
+    "NAME": "Dead Adventurer",
+    "DESCRIPTIONS": [
+      "While channeling the ritual you are caught off guard!",
+      "You exit without a sound.",
+      "You come across a #rdead #radventurer on the floor. NL His spirit still lingers in the area. Also, ",
+      "the armor and face appear to be #r@scoured@ #r@by@ #r@flames.@ ",
+      "it looks as though he's been #r@gouged@ #r@and@ #r@trampled@ by a horned beast. ",
+      "he looks to have been #r@eviscerated@ #r@and@ #r@chopped@ by giant claws. ",
+      "NL A soul harvesting ritual could yield results here, but whichever creature slew this man may return soon.",
+      "The ritual yields souls from the corpse! NL Continue channeling?",
+      "The spell is unable to pull the fallen man's spirit... NL Continue channeling?",
+      "Your magic causes the body to twitch and shake, and from its pockets falls a #yrelic! NL Continue channeling?",
+      "The ritual has been completed!"
+    ],
+    "OPTIONS": [
+      "[Soul Harvest] #gFind #gLoot. #r",
+      "[Leave]",
+      "[Fight]",
+      "[Continue] #gFind #gLoot. #r",
+      "%: #rmonster #rreturns."
+    ]
   }
 }
