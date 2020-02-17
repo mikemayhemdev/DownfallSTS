@@ -13,8 +13,11 @@ import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import slimebound.cards.Icky;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -63,8 +66,8 @@ public class ShiningLight_Evil extends AbstractImageEvent {
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[1]);
                     this.screen = CUR_SCREEN.COMPLETE;
-                    AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.damage));
-                    AbstractDungeon.effectList.add(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AttackEffect.FIRE));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Regret(), (float)Settings.WIDTH * .5F + 10.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
+
                     this.upgradeCards();
                 } else {
                     this.imageEventText.updateBodyText(DISAGREE_DIALOG);

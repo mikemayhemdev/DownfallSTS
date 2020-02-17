@@ -19,6 +19,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.DeadAdventurer;
+import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.events.exordium.LivingWall;
 import com.megacrit.cardcrawl.events.exordium.ShiningLight;
 import com.megacrit.cardcrawl.events.shrines.*;
@@ -227,6 +228,14 @@ public class EvilWithinMod implements
                 ShiningLight_Evil.ID, ShiningLight_Evil.class, true,
                 //Event ID to Override//
                 ShiningLight.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                WorldOfGoop_Evil.ID, WorldOfGoop_Evil.class, true,
+                //Event ID to Override//
+                GoopPuddle.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }
