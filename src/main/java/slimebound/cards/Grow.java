@@ -22,7 +22,7 @@ public class Grow extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/grow.png";
     private static final CardStrings cardStrings;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 2;
@@ -47,10 +47,9 @@ public class Grow extends AbstractSlimeboundCard {
         if (p.maxOrbs > 0) {
             AbstractDungeon.actionManager.addToBottom(new DecreaseMaxOrbAction(1));
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 2), 2));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         }
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ReduceCostAction(this.uuid, this.magicNumber));
 
 
     }

@@ -174,8 +174,8 @@
       "[Enter Shop]"
     ]
   },
-  "evilWithin:DeadAdventurer": {
-    "NAME": "Dead Adventurer",
+  "evilWithin:DeadGuy": {
+    "NAME": "Fallen Adventurer",
     "DESCRIPTIONS": [
       "While channeling the ritual you are caught off guard!",
       "You exit without a sound.",

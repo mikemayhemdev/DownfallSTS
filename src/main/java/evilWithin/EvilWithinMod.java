@@ -115,7 +115,12 @@ public class EvilWithinMod implements
     public void receivePostInitialize() {
 
         this.initializeMonsters();
+        this.addPotions();
+        this.initializeEvents();
 
+    }
+
+    private void initializeEvents(){
         EventUtils.registerEvent(
                 //Event ID//
                 GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class, true,
@@ -208,9 +213,10 @@ public class EvilWithinMod implements
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
 
+
         EventUtils.registerEvent(
                 //Event ID//
-                DeadAdventurer_Evil.ID, DeadAdventurer_Evil.class, true,
+                DeadGuy_Evil.ID, DeadGuy_Evil.class, true,
                 //Event ID to Override//
                 DeadAdventurer.ID,
                 //Event Type//
@@ -249,7 +255,7 @@ public class EvilWithinMod implements
             //BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
         }
 
-        addPotions();
+
     }
 
     public void addPotions() {

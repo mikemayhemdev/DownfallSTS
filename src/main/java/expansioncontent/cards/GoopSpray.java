@@ -36,19 +36,19 @@ public class GoopSpray extends AbstractExpansionCard {
             flash();
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY, 3F, false, 0.6F), 0.01F));
+                    atb(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY, 3F, false, 0.6F), 0.01F));
 
 
                 }
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2F));
+                atb(new WaitAction(0.2F));
             }
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    atb(new ApplyPowerAction(monster, p, new SlimedPower(monster, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                     int vuln = 2;
                     if (upgraded) vuln++;
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(monster, p, new VulnerablePower(monster, vuln, false), vuln, true, AbstractGameAction.AttackEffect.NONE));
+                    atb(new ApplyPowerAction(monster, p, new VulnerablePower(monster, vuln, false), vuln, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }

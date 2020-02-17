@@ -41,7 +41,7 @@ public class MassFeed extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
+        this.tags.add(CardTags.HEALING);
         this.baseDamage = 10;
         this.magicNumber = this.baseMagicNumber = 3;
 

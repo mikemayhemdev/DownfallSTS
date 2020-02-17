@@ -1,3 +1,4 @@
+
 package evilWithin.events;
 
 import com.badlogic.gdx.graphics.Color;
@@ -18,20 +19,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Random;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-public class DeadAdventurer_Evil extends AbstractEvent {
-    private static final Logger logger = LogManager.getLogger(DeadAdventurer_Evil.class.getName());
-    public static final String ID = "evilWithin:DeadAdventurer";
+public class DeadGuy_Evil extends AbstractEvent {
+    public static final String ID = "evilWithin:DeadGuy";
     private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
-    private static final int GOLD_REWARD = 30;
-    private static final int ENCOUNTER_CHANCE_START = 25;
-    private static final int A_2_CHANCE_START = 35;
-    private static final int ENCOUNTER_CHANCE_RAMP = 25;
     private static final String FIGHT_MSG;
     private static final String ESCAPE_MSG;
     private int numRewards = 0;
@@ -40,20 +34,15 @@ public class DeadAdventurer_Evil extends AbstractEvent {
     private float x;
     private float y;
     private int enemy;
-    private DeadAdventurer_Evil.CUR_SCREEN screen;
+    private DeadGuy_Evil.CUR_SCREEN screen;
     private static final Color DARKEN_COLOR;
-    public static final String LAGAVULIN_FIGHT = "Lagavulin Dead Adventurers Fight";
     private Texture adventurerImg;
-    private int goldRewardMetric;
-    private AbstractRelic relicRewardMetric;
 
-    public DeadAdventurer_Evil() {
+    public DeadGuy_Evil() {
         this.x = 800.0F * Settings.scale;
         this.y = AbstractDungeon.floorY;
         this.enemy = 0;
-        this.screen = DeadAdventurer_Evil.CUR_SCREEN.INTRO;
-        this.goldRewardMetric = 0;
-        this.relicRewardMetric = null;
+        this.screen = DeadGuy_Evil.CUR_SCREEN.INTRO;
         this.rewards.add("GOLD");
         this.rewards.add("NOTHING");
         this.rewards.add("RELIC");
@@ -79,8 +68,12 @@ public class DeadAdventurer_Evil extends AbstractEvent {
         }
 
         this.body = this.body + DESCRIPTIONS[6];
-        this.roomEventText.addDialogOption(OPTIONS[0] + this.encounterChance + OPTIONS[4]);
-        this.roomEventText.addDialogOption(OPTIONS[1]);
+
+        if (!this.hasDialog){
+            this.roomEventText.addDialogOption(OPTIONS[0] + this.encounterChance + OPTIONS[4]);
+            this.roomEventText.addDialogOption(OPTIONS[1]);
+        }
+
         this.hasDialog = true;
         this.hasFocus = true;
     }
@@ -105,7 +98,7 @@ public class DeadAdventurer_Evil extends AbstractEvent {
                 switch(buttonPressed) {
                     case 0:
                         if (AbstractDungeon.miscRng.random(0, 99) < this.encounterChance) {
-                            this.screen = DeadAdventurer_Evil.CUR_SCREEN.FAIL;
+                            this.screen = DeadGuy_Evil.CUR_SCREEN.FAIL;
                             this.roomEventText.updateBodyText(FIGHT_MSG);
                             this.roomEventText.updateDialogOption(0, OPTIONS[2]);
                             this.roomEventText.removeDialogOption(1);
@@ -123,7 +116,7 @@ public class DeadAdventurer_Evil extends AbstractEvent {
 
                         return;
                     case 1:
-                        this.screen = DeadAdventurer_Evil.CUR_SCREEN.ESCAPE;
+                        this.screen = DeadGuy_Evil.CUR_SCREEN.ESCAPE;
                         this.roomEventText.updateBodyText(ESCAPE_MSG);
                         this.roomEventText.updateDialogOption(0, OPTIONS[1]);
                         this.roomEventText.removeDialogOption(1);
@@ -149,14 +142,14 @@ public class DeadAdventurer_Evil extends AbstractEvent {
                 this.enterCombat();
                 AbstractDungeon.lastCombatMetricKey = this.getMonster();
                 ++this.numRewards;
-                this.logMetric(this.numRewards);
+
                 break;
             case ESCAPE:
-                this.logMetric(this.numRewards);
+
                 this.openMap();
                 break;
             default:
-                logger.info("WHY YOU CALLED?");
+
         }
 
     }
@@ -199,7 +192,6 @@ public class DeadAdventurer_Evil extends AbstractEvent {
                 this.roomEventText.updateBodyText(DESCRIPTIONS[7]);
                 EffectHelper.gainGold(AbstractDungeon.player, this.x, this.y, 30);
                 AbstractDungeon.player.gainGold(30);
-                this.goldRewardMetric = 30;
                 break;
             case 1:
                 this.roomEventText.updateBodyText(DESCRIPTIONS[8]);
@@ -207,33 +199,23 @@ public class DeadAdventurer_Evil extends AbstractEvent {
             case 2:
                 this.roomEventText.updateBodyText(DESCRIPTIONS[9]);
                 AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
-                this.relicRewardMetric = r;
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.x, this.y, r);
                 break;
             default:
-                logger.info("HOW IS THIS POSSSIBLLEEEE");
+
         }
 
         if (this.numRewards == 3) {
             this.roomEventText.updateBodyText(DESCRIPTIONS[10]);
             this.roomEventText.updateDialogOption(0, OPTIONS[1]);
             this.roomEventText.removeDialogOption(1);
-            this.screen = DeadAdventurer_Evil.CUR_SCREEN.SUCCESS;
-            this.logMetric(this.numRewards);
+            this.screen = DeadGuy_Evil.CUR_SCREEN.SUCCESS;
+
         } else {
-            logger.info("SHOULD NOT DISMISS");
+
             this.roomEventText.updateDialogOption(0, OPTIONS[3] + this.encounterChance + OPTIONS[4]);
             this.roomEventText.updateDialogOption(1, OPTIONS[1]);
-            this.screen = DeadAdventurer_Evil.CUR_SCREEN.INTRO;
-        }
-
-    }
-
-    public void logMetric(int numAttempts) {
-        if (this.relicRewardMetric != null) {
-            AbstractEvent.logMetricGainGoldAndRelic("Dead Adventurer", "Searched '" + numAttempts + "' times", this.relicRewardMetric, this.goldRewardMetric);
-        } else {
-            AbstractEvent.logMetricGainGold("Dead Adventurer", "Searched '" + numAttempts + "' times", this.goldRewardMetric);
+            this.screen = DeadGuy_Evil.CUR_SCREEN.INTRO;
         }
 
     }
