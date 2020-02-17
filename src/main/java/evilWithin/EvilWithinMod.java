@@ -27,6 +27,7 @@ import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.GremlinMask;
 import eventUtil.EventUtils;
 import evilWithin.events.*;
@@ -255,6 +256,14 @@ public class EvilWithinMod implements
                 WingStatue_Evil.ID, WingStatue_Evil.class, true,
                 //Event ID to Override//
                 GoldenWing.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                GoldenIdol_Evil.ID, GoldenIdol_Evil.class, true,
+                //Event ID to Override//
+                GoldenIdol.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

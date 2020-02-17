@@ -257,5 +257,23 @@
       "[Collect] #gGain #gBroken #gWing #gStatue.",
       "[Leave]"
     ]
+  },
+  "evilWithin:GoldenIdol": {
+    "NAME": "Golden Idol",
+    "DESCRIPTIONS": [
+      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL Wandering adventurers are certain to be attracted to this object. It may be worthwhile to set up a trap.",
+      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL The body of an adventurer lays a short distance down the hall, clearly crushed by a massive object. Their soul still lingers in the area.",
+      "Using the Idol's weight as a trigger, you rig up a simple trap to cause a nearby giant boulder to collapse into the room should anyone try to claim the #yshining artifact. NL Satisfied with the construction of your trap, you decide to move on.",
+      "You channel the adventurer's spirit into your body, absorbing its energy into your own.",
+      "You decide to leave the pedestal intact. Setting a trap is beneath you.",
+      "You decide to leave the soul alone and continue on your way."
+    ],
+    "OPTIONS": [
+      "[Set Trap] #rLose #ra #rStrike.",
+      "[Harvest] #gGain #y",
+      " #ySouls.",
+      "[Leave]",
+      "[Locked] Requires a Strike."
+    ]
   }
 }
