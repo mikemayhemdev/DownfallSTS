@@ -19,6 +19,7 @@ public class DonusPower extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_SHAPES);
         tags.add(expansionContentMod.STUDY);
 
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

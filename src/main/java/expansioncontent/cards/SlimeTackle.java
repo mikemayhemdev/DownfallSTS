@@ -30,8 +30,8 @@ public class SlimeTackle extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new DamageInfo(p, 3, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
+        atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        atb(new DamageAction(p, new DamageInfo(p, 3, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
 
 
     }
