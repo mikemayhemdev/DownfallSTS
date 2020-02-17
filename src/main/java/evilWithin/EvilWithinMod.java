@@ -9,6 +9,7 @@ Event Override patches, and other things that only appear during Evil Runs.
  */
 
 import basemod.BaseMod;
+import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import charbosses.bosses.Ironclad.CharBossIronclad;
@@ -37,12 +38,13 @@ import guardian.potions.AcceleratePotion;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.potions.DefensiveModePotion;
 import guardian.potions.StasisDiscoveryPotion;
+import slimebound.patches.AbstractCardEnum;
 
 import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
 public class EvilWithinMod implements
-        EditStringsSubscriber, PostInitializeSubscriber {
+        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber {
     public static final String modID = "evil-within";
 
     public static final boolean EXPERIMENTAL_FLIP = false;
@@ -118,7 +120,6 @@ public class EvilWithinMod implements
         this.initializeMonsters();
         this.addPotions();
         this.initializeEvents();
-        this.initializeRelics();
 
     }
 
@@ -290,11 +291,12 @@ public class EvilWithinMod implements
 
     }
 
-    private void initializeRelics(){
-        BaseMod.addRelicToCustomPool(new ShatteredFragment(), AbstractCard.CardColor.COLORLESS);
-        BaseMod.addRelicToCustomPool(new BrokenWingStatue(), AbstractCard.CardColor.COLORLESS);
-        BaseMod.addRelicToCustomPool(new CloakOfManyFaces(), AbstractCard.CardColor.COLORLESS);
-        BaseMod.addRelicToCustomPool(new GremlinSack(), AbstractCard.CardColor.COLORLESS);
-        BaseMod.addRelicToCustomPool(new GremlinWheel(), AbstractCard.CardColor.COLORLESS);
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelicToCustomPool(new ShatteredFragment(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new BrokenWingStatue(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new CloakOfManyFaces(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new GremlinSack(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelicToCustomPool(new GremlinWheel(), AbstractCardEnum.SLIMEBOUND);
     }
 }

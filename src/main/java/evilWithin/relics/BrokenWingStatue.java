@@ -66,7 +66,7 @@ public class BrokenWingStatue extends CustomRelic {
             forceWait(5);
             addToBot(new RelicAboveCreatureAction(receiver,this));
             addToBot(new SpeechBubbleAction(DIALOG[DialogIndex], receiver, 2F));
-            forceWait(10);
+            forceWait(12);
             addToBot(new SpeechBubbleAction(DIALOG[DialogIndex + 1], receiver, 2F));
             forceWait(7);
             AbstractDungeon.actionManager.addToBottom(new LoseRelicAction(this.relicId));
