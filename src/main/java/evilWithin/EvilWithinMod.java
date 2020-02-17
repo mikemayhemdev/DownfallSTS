@@ -18,10 +18,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
-import com.megacrit.cardcrawl.events.exordium.DeadAdventurer;
-import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
-import com.megacrit.cardcrawl.events.exordium.LivingWall;
-import com.megacrit.cardcrawl.events.exordium.ShiningLight;
+import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.localization.*;
@@ -236,6 +233,14 @@ public class EvilWithinMod implements
                 WorldOfGoop_Evil.ID, WorldOfGoop_Evil.class, true,
                 //Event ID to Override//
                 GoopPuddle.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Serpent_Evil.ID, Serpent_Evil.class, true,
+                //Event ID to Override//
+                Sssserpent.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

@@ -223,5 +223,20 @@
       "[Remove] #rBecome #rCursed #r- #rIcky.",
       "[Leave]"
     ]
+  },
+  "evilWithin:Serpent": {
+    "NAME": "The Ssssserpent",
+    "DESCRIPTIONS": [
+      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous serpent creature appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~hello!~ ~what~ ~have~ ~we~ ~got~ ~here?~ To you, my overlord, I ask a simple question. NL The most fulfilling of lives is that in which you can #r~punch~ #r~anything!~ NL Do you agree?\"",
+      "~\"Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
+      "The serpent stares at you with a look of extreme disappointment.",
+      " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself..."
+    ],
+    "OPTIONS": [
+      "[Agree] [Punch] #gGain #g",
+      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
+      "[Disagree]",
+      "[Leave]"
+    ]
   }
 }
