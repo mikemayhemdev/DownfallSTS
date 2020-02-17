@@ -196,5 +196,18 @@
       "[Continue] #gFind #gLoot. #r",
       "%: #rmonster #rreturns."
     ]
+  },
+  "evilWithin:ShiningLight": {
+    "NAME": "Shining Light",
+    "DESCRIPTIONS": [
+      "You find a shimmering #ymass #yof #ylight encompassing the center of the room. NL NL Its ~warm~ ~glow~ and ~enchanting~ ~patterns~ cause your stomach to turn, but you know this light carries an immense power.",
+      "As you walk through the light, you grimace as it is absorbed into you. NL It's #r@scorching@ #r@hot@ ! You feel no pain, and though you are newly #binvigorated, the haunting memory of this disgusting warmth will stay with you for a long time to come.",
+      "You walk around it, wondering what could have been."
+    ],
+    "OPTIONS": [
+      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
+      "[Leave]",
+      "[Locked] Requires: Upgradeable Cards"
+    ]
   }
 }

@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.DeadAdventurer;
 import com.megacrit.cardcrawl.events.exordium.LivingWall;
+import com.megacrit.cardcrawl.events.exordium.ShiningLight;
 import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.localization.*;
@@ -212,6 +213,14 @@ public class EvilWithinMod implements
                 DeadAdventurer_Evil.ID, DeadAdventurer_Evil.class, true,
                 //Event ID to Override//
                 DeadAdventurer.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                ShiningLight_Evil.ID, ShiningLight_Evil.class, true,
+                //Event ID to Override//
+                ShiningLight.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }
