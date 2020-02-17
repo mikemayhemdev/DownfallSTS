@@ -16,6 +16,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.*;
@@ -24,10 +25,12 @@ import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.relics.GremlinMask;
 import eventUtil.EventUtils;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
 import evilWithin.potions.CursedFountainPotion;
+import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
 import guardian.patches.GuardianEnum;
 import guardian.potions.AcceleratePotion;
@@ -115,6 +118,7 @@ public class EvilWithinMod implements
         this.initializeMonsters();
         this.addPotions();
         this.initializeEvents();
+        this.initializeRelics();
 
     }
 
@@ -243,6 +247,14 @@ public class EvilWithinMod implements
                 Sssserpent.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                WingStatue_Evil.ID, WingStatue_Evil.class, true,
+                //Event ID to Override//
+                GoldenWing.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
@@ -276,5 +288,13 @@ public class EvilWithinMod implements
 
         BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
 
+    }
+
+    private void initializeRelics(){
+        BaseMod.addRelicToCustomPool(new ShatteredFragment(), AbstractCard.CardColor.COLORLESS);
+        BaseMod.addRelicToCustomPool(new BrokenWingStatue(), AbstractCard.CardColor.COLORLESS);
+        BaseMod.addRelicToCustomPool(new CloakOfManyFaces(), AbstractCard.CardColor.COLORLESS);
+        BaseMod.addRelicToCustomPool(new GremlinSack(), AbstractCard.CardColor.COLORLESS);
+        BaseMod.addRelicToCustomPool(new GremlinWheel(), AbstractCard.CardColor.COLORLESS);
     }
 }

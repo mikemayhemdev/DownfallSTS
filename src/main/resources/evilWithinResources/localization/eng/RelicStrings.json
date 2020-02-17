@@ -56,5 +56,19 @@
 		"DESCRIPTIONS": [
 			"Upon pickup, gain Cultist Headpiece, Face Of Cleric, N'loth's Hungry Face, Gremlin Visage, and Ssserpent Head."
 		]
+	},
+	"evil-within:BrokenWingStatue": {
+		"NAME": "Broken Wing Statue",
+		"FLAVOR": "A broken hunk of a once-magnificent statue.",
+		"DESCRIPTIONS": [
+			"The cultists that worship the Awakened One will be interested in this."
+		]
+	},
+	"evil-within:ShatteredFragment": {
+		"NAME": "Sharpened Fragment",
+		"FLAVOR": "Once a broken statue - now a makeshift weapon.",
+		"DESCRIPTIONS": [
+			"At the start of each combat, add a Crystal Shiv to your hand."
+		]
 	}
 }
