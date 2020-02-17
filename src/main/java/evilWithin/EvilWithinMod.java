@@ -9,6 +9,7 @@ Event Override patches, and other things that only appear during Evil Runs.
  */
 
 import basemod.BaseMod;
+import basemod.helpers.RelicType;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
@@ -293,10 +294,10 @@ public class EvilWithinMod implements
 
     @Override
     public void receiveEditRelics() {
-        BaseMod.addRelicToCustomPool(new ShatteredFragment(), AbstractCardEnum.SLIMEBOUND);
-        BaseMod.addRelicToCustomPool(new BrokenWingStatue(), AbstractCardEnum.SLIMEBOUND);
-        BaseMod.addRelicToCustomPool(new CloakOfManyFaces(), AbstractCardEnum.SLIMEBOUND);
-        BaseMod.addRelicToCustomPool(new GremlinSack(), AbstractCardEnum.SLIMEBOUND);
-        BaseMod.addRelicToCustomPool(new GremlinWheel(), AbstractCardEnum.SLIMEBOUND);
+        BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
+        BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
+        BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
+        BaseMod.addRelic(new GremlinSack(), RelicType.SHARED);
+        BaseMod.addRelic(new GremlinWheel(), RelicType.SHARED);
     }
 }
