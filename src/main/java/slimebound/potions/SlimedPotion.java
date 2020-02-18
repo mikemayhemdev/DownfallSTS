@@ -34,7 +34,7 @@ public class SlimedPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(target, AbstractDungeon.player, new SlimedPower(target, AbstractDungeon.player, this.potency), this.potency));
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ApplyPowerAction(target, AbstractDungeon.player, new SlimedPower(target, AbstractDungeon.player, this.potency + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)), this.potency + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)));
     }
 
 
@@ -43,7 +43,7 @@ public class SlimedPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 15 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+        return 15;
     }
 }
 
