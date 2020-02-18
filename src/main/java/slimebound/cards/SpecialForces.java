@@ -61,7 +61,7 @@ public class SpecialForces extends AbstractSlimeboundCard {
         cardList.add(new OctoChoiceCard("Slimebound:SplotProtector", "Split: Protector", expansionContentMod.makeCardPath("QuickGuardian.png"), "Split into a Protector_Slime."));
         cardList.add(new OctoChoiceCard("Slimebound:SplotInsulting", "Split: Insulting", expansionContentMod.makeCardPath("QuickChamp.png"), "Split into an Insulting_Slime."));
         cardList.add(new OctoChoiceCard("Slimebound:SplotAncient", "Split: Ancient", expansionContentMod.makeCardPath("QuickAncients.png"), "Split into an Ancient_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotSlowing", "Split: Slowing", expansionContentMod.makeCardPath("QuickTimeEater.png"), "Split into a Slowing_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotSlowing", "Split: Time", expansionContentMod.makeCardPath("QuickTimeEater.png"), "Split into a Time_Slime."));
         ArrayList<OctoChoiceCard> realList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             realList.add(cardList.remove(AbstractDungeon.cardRandomRng.random(cardList.size() - 1)));
