@@ -50,7 +50,7 @@ public class Gem_White extends AbstractGuardianCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
 
     }
 
