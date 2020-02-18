@@ -70,7 +70,7 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
-                        if (!this.trapAlreadySet) {
+                        if (!trapAlreadySet) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.strike, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             AbstractDungeon.player.masterDeck.removeCard(strike);

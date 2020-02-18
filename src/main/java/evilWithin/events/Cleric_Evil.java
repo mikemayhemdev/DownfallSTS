@@ -21,6 +21,8 @@ public class Cleric_Evil extends AbstractImageEvent {
     private OptionChosen option;
     private int gold;
 
+    public static boolean heDead = false;
+
     public Cleric_Evil() {
         super(NAME, DESC[0], "images/events/cleric.jpg");
         this.curScreen = CurrentScreen.INTRO;
@@ -35,6 +37,7 @@ public class Cleric_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
+        heDead = false;
     }
 
 
@@ -59,6 +62,7 @@ public class Cleric_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                         AbstractDungeon.player.gainGold(this.gold);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
+                        heDead = true;
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESC[2]);

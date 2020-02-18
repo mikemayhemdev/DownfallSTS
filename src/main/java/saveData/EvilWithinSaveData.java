@@ -7,4 +7,6 @@ public class EvilWithinSaveData {
     public boolean RED_KEY_CONSUMED = false;
     public boolean GREEN_KEY_CONSUMED = false;
     public boolean BLUE_KEY_CONSUMED = false;
+
+    public boolean KILLED_CLERIC = false;
 }

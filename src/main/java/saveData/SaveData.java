@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
+import evilWithin.events.Cleric_Evil;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
 import javassist.CtBehavior;
@@ -23,6 +24,8 @@ public class SaveData {
     public static final String GREEN_KEY_CONSUMED = "GREEN_KEY_CONSUMED";
     public static final String BLUE_KEY_CONSUMED = "BLUE_KEY_CONSUMED";
 
+    public static final String KILLED_CLERIC = "KILLED_CLERIC";
+
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
     private static boolean evilMode;
@@ -30,6 +33,8 @@ public class SaveData {
     private static boolean consumedRed;
     private static boolean consumedGreen;
     private static boolean consumedBlue;
+
+    private static boolean killedCleric;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -45,6 +50,8 @@ public class SaveData {
             consumedRed = AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player);
             consumedGreen = AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player);
             consumedBlue = AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player);
+
+            killedCleric = Cleric_Evil.heDead;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -65,6 +72,7 @@ public class SaveData {
             params.put(RED_KEY_CONSUMED, consumedRed);
             params.put(GREEN_KEY_CONSUMED, consumedGreen);
             params.put(BLUE_KEY_CONSUMED, consumedBlue);
+            params.put(KILLED_CLERIC, killedCleric);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -95,6 +103,8 @@ public class SaveData {
                 consumedRed = data.RED_KEY_CONSUMED;
                 consumedGreen = data.GREEN_KEY_CONSUMED;
                 consumedBlue = data.BLUE_KEY_CONSUMED;
+
+                killedCleric = data.KILLED_CLERIC;
 
                 saveLogger.info("Loaded EvilWithin save data successfully.");
             } catch (Exception e) {
@@ -127,6 +137,8 @@ public class SaveData {
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, consumedRed);
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, consumedGreen);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, consumedBlue);
+
+            Cleric_Evil.heDead = killedCleric;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
