@@ -38,12 +38,14 @@ public class TransformDrawnCardsPower extends AbstractPower implements Cloneable
     @Override
     public void onCardDraw(AbstractCard card) {
         this.amount -= 1;
-        if (amount <= 0)
-            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
-        else {
-            flash();
-            addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
-            addToBot(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
+        if (amount >= 0) {
+            if (this.amount == 0)
+                addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+            else {
+                flash();
+                addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+                addToBot(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
+            }
         }
     }
 
