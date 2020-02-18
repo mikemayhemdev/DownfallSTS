@@ -286,7 +286,8 @@
     "OPTIONS": [
       "[Punch] #gGain #y100 #ySouls.",
       "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
-      "[Leave]"
+      "[Leave]",
+      "Select a Card to Remove."
     ]
   }
 }
