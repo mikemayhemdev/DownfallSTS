@@ -13,20 +13,18 @@ public class Rewind extends AbstractHexaCard {
 
     public Rewind() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new RetractAction());
-        atb(new GainEnergyAction(1));
-        if (upgraded) {
-            atb(new RetractAction());
-            atb(new GainEnergyAction(1));
-        }
+        atb(new GainEnergyAction(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

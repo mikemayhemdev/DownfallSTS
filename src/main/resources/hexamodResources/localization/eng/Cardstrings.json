@@ -32,7 +32,7 @@
   "hexamod:Rewind": {
     "NAME": "Rewind",
     "DESCRIPTION": "hexamod:Retract. NL Gain [E] .",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] . NL Repeat this once."
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E] ."
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",
@@ -58,7 +58,7 @@
   },
   "hexamod:UnlimitedPower": {
     "NAME": "Unlimited Power",
-    "DESCRIPTION": "hexamod:Ignite all Ghostflames in order. NL Exhaust."
+    "DESCRIPTION": "hexamod:Force-Ignite all Ghostflames in order. NL Exhaust."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
