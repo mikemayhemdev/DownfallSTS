@@ -275,5 +275,21 @@
       "[Leave]",
       "[Locked] Requires a Strike."
     ]
+  },
+  "evilWithin:Cleric": {
+    "NAME": "The Cleric",
+    "DESCRIPTIONS": [
+      "A strange blue humanoid with a golden helm(?) approaches you with a huge smile. NL Upon realizing just what you are, it immediately turns to a frown. NL @\"M-MONSTER! I must get out of here!\" the creature shouts, turning around to flee.",
+      "The creature crumples in one punch. You absorb its #ysouls and continue on your way.",
+      "\"Cleric help! Cleric help!\" the creature says as you approach menacingly. NL A cold blue flame envelops your body and dissipates. NL Immediately after, \"Cleric\" flees.",
+      "You channel the adventurer's spirit into your body, absorbing its energy into your own.",
+      "You decide to leave the pedestal intact. Setting a trap is beneath you.",
+      "You decide to leave the soul alone and continue on your way."
+    ],
+    "OPTIONS": [
+      "[Punch] #gGain #y100 #ySouls.",
+      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Leave]"
+    ]
   }
 }

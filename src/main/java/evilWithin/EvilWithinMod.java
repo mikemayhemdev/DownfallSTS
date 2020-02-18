@@ -285,6 +285,14 @@ public class EvilWithinMod implements
                 GoldenIdol.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Cleric_Evil.ID, Cleric_Evil.class, true,
+                //Event ID to Override//
+                Cleric.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {

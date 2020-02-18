@@ -74,11 +74,12 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.strike, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             AbstractDungeon.player.masterDeck.removeCard(strike);
-
+                            trapAlreadySet = true;
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                             AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                             AbstractDungeon.player.gainGold(this.gold);
+                            trapAlreadySet = false;
                         }
 
                         this.imageEventText.clearAllDialogs();
