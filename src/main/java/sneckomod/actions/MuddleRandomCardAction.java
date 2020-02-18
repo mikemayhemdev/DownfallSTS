@@ -13,24 +13,21 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MuddleRandomCardAction extends AbstractGameAction {
-    public int bruh = 0;
-
     public MuddleRandomCardAction(int i) {
-        bruh = i;
+        amount = i;
     }
 
     public void update() {
         isDone = true;
-        ArrayList<AbstractCard> myList = new ArrayList<>(AbstractDungeon.player.hand.group);
-        Collections.shuffle(myList, AbstractDungeon.cardRandomRng.random);
-        for (int i = 0; i < bruh; i++) {
-            if (!myList.isEmpty()) {
+        ArrayList<AbstractCard> myCardList = new ArrayList<>(AbstractDungeon.player.hand.group);
+        for(int i = 0; i < this.amount; ++i) {// 101
+            if (!myCardList.isEmpty()) {
                 if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
                     AbstractPower q = AbstractDungeon.player.getPower(MudshieldPower.POWER_ID);
                     q.flash();
                     addToBot(new ApplyPowerAction(q.owner, q.owner, new NextTurnBlockPower(q.owner, q.amount)));
                 }
-                AbstractCard card = myList.remove(0);
+                AbstractCard card = myCardList.remove(AbstractDungeon.cardRandomRng.random(myCardList.size()-1));
                 card.superFlash();
                 if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
                     int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
