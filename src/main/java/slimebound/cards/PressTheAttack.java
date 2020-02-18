@@ -52,8 +52,6 @@ public class PressTheAttack extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         if (m.hasPower(SlimedPower.POWER_ID)) {
             addToBot(new CommandAction());
-            if (upgraded)
-                addToBot(new CommandAction());
         }
     }
 
@@ -64,18 +62,9 @@ public class PressTheAttack extends AbstractSlimeboundCard {
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
-            upgradeDamage(2);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
-
+            upgradeDamage(3);
         }
-
     }
 }
-
-
