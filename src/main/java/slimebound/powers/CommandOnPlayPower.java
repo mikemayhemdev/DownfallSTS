@@ -3,6 +3,7 @@ package slimebound.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -20,7 +21,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public CommandOnPlayPower(final int amount) {
-        this.name = "Cheating";
+        this.name = "Rallying";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -46,6 +47,13 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
         }
         addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
     }
+
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {// 73
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, ID));// 74
+        }
+
+    }// 76
 
     @Override
     public void updateDescription() {
