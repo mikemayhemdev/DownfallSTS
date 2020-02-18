@@ -17,9 +17,9 @@ public class Cleric_Evil extends AbstractImageEvent {
     public static final String NAME;
     public static final String[] DESC;
     public static final String[] OPTIONS;
-    public static final String[] OPTIONSALT;
     private CurrentScreen curScreen;
     private OptionChosen option;
+    private int gold;
 
     public Cleric_Evil() {
         super(NAME, DESC[0], "images/events/cleric.jpg");
@@ -27,23 +27,25 @@ public class Cleric_Evil extends AbstractImageEvent {
         this.option = null;
         this.option = OptionChosen.NONE;
         if (AbstractDungeon.ascensionLevel >= 15) {
-            //something here sometime
+            this.gold = 50;
+        } else {
+            this.gold = 100;
         }
 
-        this.imageEventText.setDialogOption(OPTIONSALT[0]);
-        this.imageEventText.setDialogOption(OPTIONSALT[1]);
+        this.imageEventText.setDialogOption(OPTIONS[0]);
+        this.imageEventText.setDialogOption(OPTIONS[1]);
 
     }
 
 
     public void update() {
         super.update();
-        if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {// 65
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);// 66
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));// 67
-            AbstractEvent.logMetricCardRemovalAtCost("The Cleric", "Card Removal", c, 0);// 68
-            AbstractDungeon.player.masterDeck.removeCard(c);// 69
-            AbstractDungeon.gridSelectScreen.selectedCards.remove(c);// 70
+        if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+            AbstractEvent.logMetricCardRemovalAtCost("The Cleric", "Card Removal", c, 0);
+            AbstractDungeon.player.masterDeck.removeCard(c);
+            AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
         }
     }
 
@@ -54,13 +56,14 @@ public class Cleric_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(DESC[1]);
                         this.option = OptionChosen.PUNCH;
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(100));
-                        AbstractDungeon.player.gainGold(100);
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
+                        AbstractDungeon.player.gainGold(this.gold);
+                        CardCrawlGame.sound.play("BLUNT_HEAVY");
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESC[2]);
                         this.option = OptionChosen.THREATEN;
-                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);// 90 91 92
+                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
                         break;
                 }
 
@@ -76,11 +79,10 @@ public class Cleric_Evil extends AbstractImageEvent {
     }
 
     static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Designer");
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
         NAME = eventStrings.NAME;
-        DESC = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        DESC = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
     }
 
     private static enum OptionChosen {

@@ -111,7 +111,7 @@ public class AbstractTotemMonster extends AbstractMonster {
 
 
 
-        this.type = EnemyType.BOSS;
+        this.type = EnemyType.ELITE;
         this.dialogX = -100.0F * Settings.scale;
         this.dialogY = 10.0F * Settings.scale;
         this.drawY = 1000F * Settings.scale;
