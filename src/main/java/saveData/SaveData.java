@@ -35,13 +35,11 @@ public class SaveData {
     @SpirePatch(
             clz = SaveFile.class,
             method = SpirePatch.CONSTRUCTOR,
-            paramtypez = { SaveFile.SaveType.class }
+            paramtypez = {SaveFile.SaveType.class}
     )
-    public static class SaveTheSaveData
-    {
+    public static class SaveTheSaveData {
         @SpirePostfixPatch
-        public static void saveAllTheSaveData(SaveFile __instance, SaveFile.SaveType type)
-        {
+        public static void saveAllTheSaveData(SaveFile __instance, SaveFile.SaveType type) {
             evilMode = EvilModeCharacterSelect.evilMode;
 
             consumedRed = AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player);
@@ -53,29 +51,25 @@ public class SaveData {
     }
 
     @SpirePatch(
-            clz=SaveAndContinue.class,
-            method="save",
-            paramtypez={ SaveFile.class }
+            clz = SaveAndContinue.class,
+            method = "save",
+            paramtypez = {SaveFile.class}
     )
-    public static class SaveDataToFile
-    {
+    public static class SaveDataToFile {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "params" }
+                localvars = {"params"}
         )
-        public static void addCustomSaveData(SaveFile save, HashMap<Object, Object> params)
-        {
+        public static void addCustomSaveData(SaveFile save, HashMap<Object, Object> params) {
             params.put(EVIL_MODE_KEY, evilMode);
             params.put(RED_KEY_CONSUMED, consumedRed);
             params.put(GREEN_KEY_CONSUMED, consumedGreen);
             params.put(BLUE_KEY_CONSUMED, consumedBlue);
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(GsonBuilder.class, "create");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -83,20 +77,17 @@ public class SaveData {
     }
 
     @SpirePatch(
-            clz=SaveAndContinue.class,
-            method="loadSaveFile",
-            paramtypez = { String.class }
+            clz = SaveAndContinue.class,
+            method = "loadSaveFile",
+            paramtypez = {String.class}
     )
-    public static class LoadDataFromFile
-    {
+    public static class LoadDataFromFile {
         @SpireInsertPatch(
                 locator = Locator.class,
-                localvars = { "gson", "savestr" }
+                localvars = {"gson", "savestr"}
         )
-        public static void loadCustomSaveData(String path, Gson gson, String savestr)
-        {
-            try
-            {
+        public static void loadCustomSaveData(String path, Gson gson, String savestr) {
+            try {
                 EvilWithinSaveData data = gson.fromJson(savestr, EvilWithinSaveData.class);
 
                 evilMode = data.EVIL_MODE;
@@ -106,19 +97,15 @@ public class SaveData {
                 consumedBlue = data.BLUE_KEY_CONSUMED;
 
                 saveLogger.info("Loaded EvilWithin save data successfully.");
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 saveLogger.error("Failed to load EvilWithin save data.");
                 e.printStackTrace();
             }
         }
 
-        private static class Locator extends SpireInsertLocator
-        {
+        private static class Locator extends SpireInsertLocator {
             @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception
-            {
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(Gson.class, "fromJson");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
@@ -130,11 +117,9 @@ public class SaveData {
             clz = AbstractDungeon.class,
             method = "loadSave"
     )
-    public static class loadSave
-    {
+    public static class loadSave {
         @SpirePostfixPatch
-        public static void loadSave(AbstractDungeon __instance, SaveFile file)
-        {
+        public static void loadSave(AbstractDungeon __instance, SaveFile file) {
             //Some data, after loading into this file, will need to actually be assigned here.
             //When the game loads, the SaveFile is instantiated first, which loads data from save into itself.
             //AbstractDungeon then loads that data from the SaveFile.

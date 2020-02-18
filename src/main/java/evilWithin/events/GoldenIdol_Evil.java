@@ -1,9 +1,7 @@
 package evilWithin.events;
 
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,9 +9,9 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import evilWithin.relics.BrokenWingStatue;
-import evilWithin.relics.ShatteredFragment;
+import evilWithin.EvilWithinMod;
+
+import java.io.IOException;
 
 public class GoldenIdol_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:GoldenIdol";
@@ -22,23 +20,39 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     private CurScreen screen;
-    private boolean trapAlreadySet = true;
+    public static boolean trapAlreadySet = false;
     private int gold = 100;
     private AbstractCard strike = null;
+
+    public static void save() {
+        if (AbstractDungeon.player != null && EvilWithinMod.bruhData != null) {
+            try {
+                EvilWithinMod.bruhData.setBool("trapEvent", trapAlreadySet);
+                EvilWithinMod.bruhData.save();
+            } catch (IOException ignored) {
+            }
+        }
+    }
+
+    public static void load() {
+        if (EvilWithinMod.bruhData != null && EvilWithinMod.bruhData.has("trapEvent")) {
+            trapAlreadySet = EvilWithinMod.bruhData.getBool("trapEvent");
+        }
+    }
 
     public GoldenIdol_Evil() {
         super(NAME, "", "images/events/goldenIdol.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (!this.trapAlreadySet){
-            for (AbstractCard c : AbstractDungeon.player.masterDeck.group){
-                if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)){
+        if (!this.trapAlreadySet) {
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                     this.strike = c;
                     this.imageEventText.setDialogOption(OPTIONS[0]);
                     break;
                 }
             }
-            if (this.strike == null){
+            if (this.strike == null) {
                 this.imageEventText.setDialogOption(OPTIONS[4], true);
             }
             this.body = DESCRIPTIONS[0];
@@ -52,13 +66,13 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
-                        if (!this.trapAlreadySet){
+                        if (!this.trapAlreadySet) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-                            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.strike, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.strike, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             AbstractDungeon.player.masterDeck.removeCard(strike);
 
                         } else {
@@ -73,7 +87,7 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
                         return;
                     case 1:
 
-                        if (!this.trapAlreadySet){
+                        if (!this.trapAlreadySet) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[5]);

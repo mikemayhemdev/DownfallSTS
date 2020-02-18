@@ -62,8 +62,7 @@ public class HexaMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         PreRoomRenderSubscriber,
-        PostDeathSubscriber,
-        OnCardUseSubscriber {
+        PostDeathSubscriber {
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulder2.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
@@ -273,12 +272,6 @@ public class HexaMod implements
     }
 
     public void receivePostInitialize() {
-
         addPotions();
-    }
-
-    @Override
-    public void receiveCardUsed(AbstractCard abstractCard) {
-
     }
 }

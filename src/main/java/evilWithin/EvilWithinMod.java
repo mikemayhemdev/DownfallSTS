@@ -16,32 +16,26 @@ import basemod.interfaces.PostInitializeSubscriber;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.exordium.*;
-import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
+import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
-import com.megacrit.cardcrawl.relics.GremlinMask;
 import eventUtil.EventUtils;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
 import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
-import guardian.patches.GuardianEnum;
-import guardian.potions.AcceleratePotion;
-import guardian.potions.BlockOnCardUsePotion;
-import guardian.potions.DefensiveModePotion;
-import guardian.potions.StasisDiscoveryPotion;
-import slimebound.patches.AbstractCardEnum;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
@@ -99,6 +93,29 @@ public class EvilWithinMod implements
         loadLocalization(language, PotionStrings.class);
     }
 
+    public static SpireConfig bruhData = null;
+
+    public static void saveData() {
+        try {
+            if (bruhData == null) {
+                bruhData = new SpireConfig("EvilWithin", "TrapSaveData");
+            }
+            GoldenIdol_Evil.save();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void loadOtherData()
+    {
+        try {
+            bruhData = new SpireConfig("EvilWithin", "TrapSaveData");
+            GoldenIdol_Evil.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void receiveEditStrings() {
         loadLocalization(Settings.GameLanguage.ENG);
@@ -119,13 +136,15 @@ public class EvilWithinMod implements
 
     public void receivePostInitialize() {
 
+        loadOtherData();
+
         this.initializeMonsters();
         this.addPotions();
         this.initializeEvents();
 
     }
 
-    private void initializeEvents(){
+    private void initializeEvents() {
         EventUtils.registerEvent(
                 //Event ID//
                 GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class, true,
@@ -275,7 +294,7 @@ public class EvilWithinMod implements
         BaseMod.addMonster(Augmenter.ID, Augmenter::new);
 
         BaseMod.addMonster("EvilWithin:Heads", "Living Wall Heads", () -> new MonsterGroup(
-                new AbstractMonster[] {
+                new AbstractMonster[]{
                         new ChangingTotem(),
                         new ForgetfulTotem(),
                         new GrowingTotem(),
