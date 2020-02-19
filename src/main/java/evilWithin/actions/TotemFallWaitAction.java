@@ -1,4 +1,4 @@
-package evilWithin;
+package evilWithin.actions;
 
 public class TotemFallWaitAction {
 }

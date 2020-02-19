@@ -20,10 +20,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.events.city.CursedTome;
-import com.megacrit.cardcrawl.events.city.DrugDealer;
-import com.megacrit.cardcrawl.events.city.ForgottenAltar;
-import com.megacrit.cardcrawl.events.city.Ghosts;
+import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
@@ -321,6 +318,14 @@ public class EvilWithinMod implements
                 ForgottenAltar_Evil.ID, ForgottenAltar_Evil.class, true,
                 //Event ID to Override//
                 ForgottenAltar.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Bandits_Evil.ID, Bandits_Evil.class, true,
+                //Event ID to Override//
+                MaskedBandits.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

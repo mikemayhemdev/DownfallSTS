@@ -324,5 +324,17 @@
       " Souls.",
       "[Leave]"
     ]
+  },
+  "evilWithin:Bandits": {
+    "NAME": "Masked Bandits",
+    "DESCRIPTIONS": [
+      "You encounter a group of bandits wearing large #rred #rmasks. NL \"Hello, pay up t- Oh, a ~monster.~ Maybe you'd have need of our services?\"",
+      "Thanks a bunch, whacko! You certainly won't regret this..."
+    ],
+    "OPTIONS": [
+      "[Lose ",
+      "] #gHire #gthe #gBandits.",
+      "[Locked] Requires more Relics."
+    ]
   }
 }
