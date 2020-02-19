@@ -20,6 +20,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.events.city.CursedTome;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.events.exordium.*;
@@ -303,6 +304,14 @@ public class EvilWithinMod implements
                 CouncilOfGhosts_Evil.ID, CouncilOfGhosts_Evil.class, true,
                 //Event ID to Override//
                 Ghosts.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                CursedTome_Evil.ID, CursedTome_Evil.class, true,
+                //Event ID to Override//
+                CursedTome.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

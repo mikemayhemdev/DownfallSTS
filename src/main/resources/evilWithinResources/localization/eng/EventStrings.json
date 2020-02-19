@@ -300,7 +300,14 @@
       "[Offer] #rLose #r",
       " Souls. #gReceive Apparition.",
       "[Locked] Requires ",
-      " Souls"
+      " Souls."
+    ]
+  },
+  "evilWithin:CursedTome": {
+    "NAME": "Cursed Tome",
+    "DESCRIPTIONS": [
+      "In an abandoned temple, you find a giant book, open, riddled with #p@cryptic@ #p@writings.@ NL NL You need not interpret the elaborate script, for you know the power that lies within - and the #rcost it incurs upon its owner.",
+      "Understanding the cost, you decide to take the tome with you. As you reach for the pedestal, the trance of the tome speaks to you in a #rthousand #rvoices, clawing at your very soul! NL NL With the book secured, and your mind even more corrupted than it was before, you exit the temple feeling #b~drained...~"
     ]
   }
 }
