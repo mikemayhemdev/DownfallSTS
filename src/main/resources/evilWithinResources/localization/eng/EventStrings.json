@@ -289,5 +289,18 @@
       "[Leave]",
       "Select a Card to Remove."
     ]
+  },
+  "evilWithin:Ghosts": {
+    "NAME": "Council of Ghosts",
+    "DESCRIPTIONS": [
+      "As you continue your descent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"Another~ ~puppet~ ~of~ #r~the~ #r~Heart~ ~I~ ~think.\"~ NL #r@\"AGREED!@ #r@IT@ #r@ALWAYS@ #r@SENDS@ #r@THE@ #r@WEAKEST@ #r@PAWNS!\"@ NL NL You notice an over-sized grin as the third addresses you. NL \"Ignore the others... Would you like a taste of our #y~power?\"~ ",
+      "\"An @offering!@ How ~tempting...\"~ NL NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. Within your body, you feel the #b~souls~ collected from the dead forced out in a violent spiral into the spirit's gaping maw. It takes all of your strength to maintain your ground and not be pulled in yourself. NL NL Just before your stamina gives out, the ghostly vortex stops, and the spirits fade into the ether. NL NL You continue on, feeling slightly #bhollow."
+    ],
+    "OPTIONS": [
+      "[Offer] #rLose #r",
+      " Souls. #gReceive Apparition.",
+      "[Locked] Requires ",
+      " Souls"
+    ]
   }
 }
