@@ -309,5 +309,20 @@
       "In an abandoned temple, you find a giant book, open, riddled with #p@cryptic@ #p@writings.@ NL NL You need not interpret the elaborate script, for you know the power that lies within - and the #rcost it incurs upon its owner.",
       "Understanding the cost, you decide to take the tome with you. As you reach for the pedestal, the trance of the tome speaks to you in a #rthousand #rvoices, clawing at your very soul! NL NL With the book secured, and your mind even more corrupted than it was before, you exit the temple feeling #b~drained...~"
     ]
+  },
+  "evilWithin:ForgottenAltar": {
+    "NAME": "Forgotten Altar",
+    "DESCRIPTIONS": [
+      "You stand on the altar and channel the spiritual energy from your inner being. NL As the #bsouls spill out in an offering to the goddess, the arms of the statue reach out and emanate a soothing #p~cursed~ #p~magic.~ NL Everything goes dark. NL You wake up a short time later, your wounds and injuries from battle suddenly healed.",
+      "After taking a brief moment to admire the evil that resides within the statue, you depart, continuing through the City."
+    ],
+    "OPTIONS": [
+      "[Offer Souls] #rLose #r",
+      " #rSouls. #gHeal #g",
+      " #gHP.",
+      "[Locked] Requires ",
+      " Souls.",
+      "[Leave]"
+    ]
   }
 }

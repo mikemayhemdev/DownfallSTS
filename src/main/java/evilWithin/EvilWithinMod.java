@@ -22,6 +22,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.CursedTome;
 import com.megacrit.cardcrawl.events.city.DrugDealer;
+import com.megacrit.cardcrawl.events.city.ForgottenAltar;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
@@ -312,6 +313,14 @@ public class EvilWithinMod implements
                 CursedTome_Evil.ID, CursedTome_Evil.class, true,
                 //Event ID to Override//
                 CursedTome.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                ForgottenAltar_Evil.ID, ForgottenAltar_Evil.class, true,
+                //Event ID to Override//
+                ForgottenAltar.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }
