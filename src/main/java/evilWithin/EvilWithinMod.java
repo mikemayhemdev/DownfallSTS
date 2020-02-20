@@ -342,6 +342,14 @@ public class EvilWithinMod implements
                 KnowingSkull.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Vagrant_Evil.ID, Vagrant_Evil.class, true,
+                //Event ID to Override//
+                Addict.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {

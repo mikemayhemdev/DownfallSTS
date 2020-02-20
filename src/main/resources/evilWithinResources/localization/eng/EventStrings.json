@@ -358,5 +358,15 @@
       "[Leave]",
       " #rHP."
     ]
+  },
+  "evilWithin:Vagrant": {
+    "NAME": "Pleading Vagrant",
+    "DESCRIPTIONS": [
+      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
+    ],
+    "OPTIONS": [
+      "[Punch] #gGain #g85 #gSouls. #rLose #r",
+      " #rHP."
+    ]
   }
 }
