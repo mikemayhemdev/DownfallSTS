@@ -284,10 +284,11 @@
       "\"Cleric help! Cleric help!\" the creature says as you approach menacingly. NL A cold blue flame envelops your body and dissipates. NL Immediately after, this \"Cleric\" flees."
     ],
     "OPTIONS": [
-      "[Punch] #gGain #y100 #ySouls.",
+      "[Punch] #gGain #y",
       "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
       "[Leave]",
-      "Select a Card to Remove."
+      "Select a Card to Remove.",
+      " #ySouls."
     ]
   },
   "evilWithin:Ghosts": {
@@ -359,14 +360,22 @@
       " #rHP."
     ]
   },
-  "evilWithin:Vagrant": {
-    "NAME": "Pleading Vagrant",
-    "DESCRIPTIONS": [
-      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
-    ],
-    "OPTIONS": [
-      "[Punch] #gGain #g85 #gSouls. #rLose #r",
-      " #rHP."
-    ]
-  }
+  "evilWithin:Beggar": {
+  "NAME": "Old Beggar",
+  "DESCRIPTIONS": [
+    "The beggar takes off its cloak, revealing a blue humanoid form with a golden helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
+    "The old beggar looks around, seemingly puzzled. He ignores you at first as he searches the area, then glances towards you. NL \"Have you seen a young, blue-skinned man near here? Wears an odd, golden helm? He usually comes by the City, spending his tithe on food for us...\" NL The beggar must be referring to the one called #bCleric, who you dispatched a short while ago.",
+    "@\"Do@ @not@ @fear,@ @old@ @man.@ @You@ @shall@ @see@ @your@ @friend@ @sooner@ @than@ @you@ @think.\"@ NL NL The beggar struggles to provide any semblance of defense, and you strike him down easily. NL Leaving the alley behind, you stride ahead, excessively #yproud of the work you have done this day.",
+    "This man has suffered enough as a result of your earlier actions. You decide to spare him his life, and move on.",
+    "The beggar takes off its cloak to reveal that he is #bCleric! NL @\"You@ @are@ @a@ @horrible@ @soul.@ @Cleric@ @bought@ @protection!\"@ he screams. NL NL Two massive figures emerge from the alley, each wearing full plate. Before you have a chance to react, they draw their blades and charge!",
+    "Having slain this #bCleric's bodyguards, you turn to him and back him into a corner of the alley. He is terrified and trembling.",
+    "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You happily absorb its #ysoul and continue onward. NL NL As you leave, you notice the other beggars peering from behind buildings and alleys. You bask in their fear - let this be a lesson to anyone who dare defy a Spire overlord.",
+    "\"Cleric help! Cleric help!\" the creature says once again, barely able to speak as he cowers in fear. NL A cold blue flame envelops your body and dissipates. NL NL Deciding his powers may of use later, and that you can easily dispatch of any bodyguards he tries to employ in the future, you let this \"Cleric\" live once more."
+  ],
+  "OPTIONS": [
+    " #rBecome #rCursed #r- #rPride.",
+    "[Fight]",
+    "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck."
+  ]
+}
 }
