@@ -35,7 +35,7 @@ public class Cleric_Evil extends AbstractImageEvent {
             this.gold = 100;
         }
 
-        this.imageEventText.setDialogOption(OPTIONS[0] + this.gold + OPTIONS[5]);
+        this.imageEventText.setDialogOption(OPTIONS[0] + this.gold + OPTIONS[4]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
         heDead = true;

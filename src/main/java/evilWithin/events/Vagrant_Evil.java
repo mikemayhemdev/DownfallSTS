@@ -35,7 +35,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
 
     public Vagrant_Evil() {
         super(NAME, DESCRIPTIONS[0], "images/events/addict.jpg");
-        takeCost = AbstractDungeon.player.getAscensionMaxHPLoss();
+        takeCost = AbstractDungeon.player.getAscensionMaxHPLoss() * 2;
         if (AbstractDungeon.ascensionLevel >= 15) {
             takeCost *= 2;
         }
@@ -53,7 +53,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.gainGold(85);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         this.screenNum = 1;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[2]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[5]);
                         this.imageEventText.clearRemainingOptions();
                         return;
                     case 1:
