@@ -336,5 +336,14 @@
       "] #gHire #gthe #gBandits.",
       "[Locked] Requires more Relics."
     ]
+  },
+  "evilWithin:Nloth": {
+    "NAME": "N'loth",
+    "DESCRIPTIONS": [
+      "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
+    ],
+    "OPTIONS": [
+      "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
+    ]
   }
 }

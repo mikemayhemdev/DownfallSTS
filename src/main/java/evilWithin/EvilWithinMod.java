@@ -328,6 +328,16 @@ public class EvilWithinMod implements
                 MaskedBandits.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Nloth_Evil.ID, Nloth_Evil.class, true,
+                //Event ID to Override//
+                Nloth.ID,
+                //Other predicates//
+                (c) -> (c.relics.size() >= 2),
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
