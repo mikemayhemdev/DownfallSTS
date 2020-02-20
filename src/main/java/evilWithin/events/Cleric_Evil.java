@@ -28,15 +28,12 @@ public class Cleric_Evil extends AbstractImageEvent {
     }
 
     private CurrentScreen curScreen;
-    private OptionChosen option;
     private int gold;
 
 
     public Cleric_Evil() {
         super(NAME, DESC[0], "images/events/cleric.jpg");
         this.curScreen = CurrentScreen.INTRO;
-        this.option = null;
-        this.option = OptionChosen.NONE;
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.gold = 50;
         } else {
@@ -46,7 +43,7 @@ public class Cleric_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[0] + this.gold + OPTIONS[4]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
-        heDead = true;
+        heDead = false;
         encountered = true;
     }
 
@@ -67,7 +64,6 @@ public class Cleric_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESC[1]);
-                        this.option = OptionChosen.PUNCH;
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                         AbstractDungeon.player.gainGold(this.gold);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
@@ -75,7 +71,6 @@ public class Cleric_Evil extends AbstractImageEvent {
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESC[2]);
-                        this.option = OptionChosen.THREATEN;
                         AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
                         break;
                 }
@@ -91,14 +86,6 @@ public class Cleric_Evil extends AbstractImageEvent {
 
     }
 
-    private enum OptionChosen {
-        PUNCH,
-        THREATEN,
-        NONE;
-
-        OptionChosen() {
-        }
-    }
 
     private enum CurrentScreen {
         INTRO,

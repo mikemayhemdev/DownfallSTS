@@ -358,6 +358,14 @@ public class EvilWithinMod implements
                 TheMausoleum.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Beggar_Evil.ID, Beggar_Evil.class, true,
+                //Event ID to Override//
+                Beggar.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
