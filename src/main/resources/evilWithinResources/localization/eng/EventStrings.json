@@ -345,5 +345,18 @@
     "OPTIONS": [
       "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
     ]
+  },
+  "evilWithin:KnowingSkull": {
+    "NAME": "Knowing Skull",
+    "DESCRIPTIONS": [
+      "You find yourself in an old, decorated chamber. In the center of the room, a large skull sits atop an ornate pedestal. As you approach, the skull #g@bursts@ #g@into@ #g@flames@ and turns to face you. NL NL \"WHAT IS IT YOU SEEK? WHAT IS IT YOU OFFER?\" NL In sync with its final words, the door behind you @slams@ @shut.@",
+      "\"Heyheyheyheyhandsoffthenoggin-\" You pluck the skull from the pedestal, momentarily #rscorched by its flames. Maybe it'll come in handy later...,",
+      "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
+    ],
+    "OPTIONS": [
+      "[You.] #gObtain #gthe #gSkull. #rLose #r",
+      "[Leave]",
+      " #rHP."
+    ]
   }
 }

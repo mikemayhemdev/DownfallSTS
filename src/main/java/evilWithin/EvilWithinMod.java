@@ -34,8 +34,8 @@ import evilWithin.cards.KnowingSkullWish;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
 import evilWithin.potions.CursedFountainPotion;
-import evilWithin.relics.*;
 import evilWithin.relics.KnowingSkull;
+import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
 
 import java.io.IOException;
@@ -332,6 +332,14 @@ public class EvilWithinMod implements
                 Bandits_Evil.ID, Bandits_Evil.class, true,
                 //Event ID to Override//
                 MaskedBandits.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                KnowingSkull_Evil.ID, KnowingSkull_Evil.class, true,
+                //Event ID to Override//
+                KnowingSkull.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }
