@@ -334,14 +334,6 @@ public class EvilWithinMod implements
                 MaskedBandits.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
-
-        EventUtils.registerEvent(
-                //Event ID//
-                KnowingSkull_Evil.ID, KnowingSkull_Evil.class, true,
-                //Event ID to Override//
-                KnowingSkull.ID,
-                //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {

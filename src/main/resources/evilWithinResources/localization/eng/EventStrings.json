@@ -337,17 +337,13 @@
       "[Locked] Requires more Relics."
     ]
   },
-  "evilWithin:KnowingSkull": {
-    "NAME": "Knowing Skull",
+  "evilWithin:Nloth": {
+    "NAME": "N'loth",
     "DESCRIPTIONS": [
-      "You find yourself in an old, decorated chamber. In the center of the room, a large skull sits atop an ornate pedestal. As you approach, the skull #g@bursts@ #g@into@ #g@flames@ and turns to face you. NL NL \"WHAT IS IT YOU SEEK? WHAT IS IT YOU OFFER?\" NL In sync with its final words, the door behind you @slams@ @shut.@",
-      "\"Heyheyheyheyhandsoffthenoggin-\" You pluck the skull from the pedestal, momentarily #rscorched by its flames. Maybe it'll come in handy later...,",
-      "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
+      "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
     ],
     "OPTIONS": [
-      "[You.] #gObtain #gthe #gSkull. #rLose #r",
-      "[Leave]",
-      " #rHP."
+      "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
     ]
   }
 }
