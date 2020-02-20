@@ -8,15 +8,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import evilWithin.EvilWithinMod;
-import theHexaghost.HexaMod;
-import theHexaghost.actions.AdvanceAction;
-import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.util.TextureLoader;
 
 import java.util.ArrayList;
-
-import static theHexaghost.HexaMod.makeRelicOutlinePath;
-import static theHexaghost.HexaMod.makeRelicPath;
 
 public class GremlinSack extends CustomRelic {
 
@@ -31,14 +24,14 @@ public class GremlinSack extends CustomRelic {
     @Override
     public String getUpdatedDescription() {
         String starterCardName = "";
-        if (AbstractDungeon.player != null){
-            if (AbstractDungeon.player.getStartCardForEvent() != null){
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.getStartCardForEvent() != null) {
                 starterCardName = AbstractDungeon.player.getStartCardForEvent().name;
             }
 
         }
         if (AbstractDungeon.ascensionLevel >= 15) {
-            if (starterCardName != ""){
+            if (starterCardName != "") {
                 return DESCRIPTIONS[0] + starterCardName + DESCRIPTIONS[3];
             } else {
                 return DESCRIPTIONS[0] + DESCRIPTIONS[1] + DESCRIPTIONS[3];
@@ -67,7 +60,7 @@ public class GremlinSack extends CustomRelic {
             retVal.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
         }
         for (AbstractCard c : retVal) {
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) (MathUtils.random((float) Settings.WIDTH * 0.1F, (float) Settings.WIDTH * 0.9F)), (float) (MathUtils.random((float) Settings.HEIGHT * 0.2F, (float) Settings.HEIGHT * 0.8F))));
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (MathUtils.random((float) Settings.WIDTH * 0.1F, (float) Settings.WIDTH * 0.9F)), (MathUtils.random((float) Settings.HEIGHT * 0.2F, (float) Settings.HEIGHT * 0.8F))));
         }
     }
 }

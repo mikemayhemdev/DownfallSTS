@@ -29,7 +29,7 @@ public class EnemyLightningOrbPassiveAction extends AbstractGameAction {
     public void update() {
         AbstractCreature t = AbstractCharBoss.boss;
 
-        float speedTime = 0.2F / (float)AbstractCharBoss.boss.orbs.size();
+        float speedTime = 0.2F / (float) AbstractCharBoss.boss.orbs.size();
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }

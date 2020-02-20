@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
-import sneckomod.actions.RandomDamageAction;
 
 
 public class DiceRollPotion extends CustomPotion {

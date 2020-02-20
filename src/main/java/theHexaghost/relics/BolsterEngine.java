@@ -20,12 +20,11 @@ public class BolsterEngine extends CustomRelic {
     public static final String ID = HexaMod.makeID("BolsterEngine");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BolsterEngine.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BolsterEngine.png"));
+    public boolean activated = false;
 
     public BolsterEngine() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
-
-    public boolean activated = false;
 
     @Override
     public void atBattleStart() {

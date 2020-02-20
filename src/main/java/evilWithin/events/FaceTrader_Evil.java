@@ -1,8 +1,6 @@
 package evilWithin.events;
 
 
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,13 +9,9 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinFat;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import evilWithin.monsters.FaceTrader;
 import evilWithin.relics.CloakOfManyFaces;
-import evilWithin.relics.GremlinSack;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -26,14 +20,24 @@ import java.util.Random;
 
 public class FaceTrader_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:FaceTrader";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSALT;
     public static final String[] OPTIONSALT;
+    private static final EventStrings eventStrings;
     private static int goldReward;
     private static int damage;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("FaceTrader");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+    }
+
     private CurScreen screen;
 
     public FaceTrader_Evil() {
@@ -54,9 +58,9 @@ public class FaceTrader_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1] + DESCRIPTIONSALT[0]);
                         this.imageEventText.updateDialogOption(0, OPTIONSALT[0]);
@@ -68,7 +72,7 @@ public class FaceTrader_Evil extends AbstractImageEvent {
                         return;
                 }
             case MAIN:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
 
                         this.screen = CurScreen.FIGHT;
@@ -85,7 +89,7 @@ public class FaceTrader_Evil extends AbstractImageEvent {
                     case 1:
                         AbstractRelic r = this.getRandomFace();
                         logMetricObtainRelic("FaceTrader", "Trade", r);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, r);
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, r);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
@@ -132,29 +136,20 @@ public class FaceTrader_Evil extends AbstractImageEvent {
         }
 
         Collections.shuffle(ids, new Random(AbstractDungeon.miscRng.randomLong()));
-        return RelicLibrary.getRelic((String)ids.get(0)).makeCopy();
+        return RelicLibrary.getRelic(ids.get(0)).makeCopy();
     }
 
     public void logMetric(String actionTaken) {
         AbstractEvent.logMetric("FaceTrader", actionTaken);
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("FaceTrader");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-    }
-
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         MAIN,
         FIGHT,
         RESULT;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

@@ -1,4 +1,3 @@
-
 package evilWithin.patches.ui.topPanel;
 
 import basemod.ReflectionHacks;
@@ -27,12 +26,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class GoldToSoulPatches {
+    public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(EvilWithinMod.makeID("SoulToGoldChanges"));
+    private static final String[] GOLD_TEXT = {TopPanel.LABEL[4], TopPanel.MSG[4]};
+    public static Map<String, CardStrings[]> renameC = new HashMap<>();
+    public static Map<String, EventStrings[]> renameE = new HashMap<>();
+    public static Map<String, RelicStrings[]> renameR = new HashMap<>();
+    public static Map<String, CharacterStrings[]> renameCh = new HashMap<>();
+    public static Map<String, PowerStrings[]> renameP = new HashMap<>();
+    public static Map<String, UIStrings[]> renameUI = new HashMap<>();
+
+    //THE BELOW IS A MESS, YOU PROBABLY SHOULDN'T LOOK AT IT
     private static Texture GOLD_ICON;
     private static Texture GOLD_UI_ICON;
     private static boolean triggered = false;
-    private static final String[] GOLD_TEXT = {TopPanel.LABEL[4], TopPanel.MSG[4]};
-    public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(EvilWithinMod.makeID("SoulToGoldChanges"));
-
 
     public static void changeGoldToSouls(boolean revert) {
         if (!triggered) {
@@ -55,61 +61,6 @@ public class GoldToSoulPatches {
             replaceStrings(false);
         }
     }
-
-    @SpirePatch(clz = TopPanel.class, method = "renderGold")
-    public static class BlueSoulsText {
-        public static boolean firstInstance = true;
-
-        public static ExprEditor Instrument() {
-            return new ExprEditor() {
-                @Override
-                public void edit(MethodCall m) throws CannotCompileException {
-                    if (m.getMethodName().equals("renderFontLeftTopAligned") && firstInstance) {
-                        firstInstance = false;
-                        m.replace("{" +
-                                "if(" + EvilModeCharacterSelect.class.getName() + ".evilMode) {" +
-                                "$proceed($1, $2, $3, $4, $5, " + Color.class.getName() + ".SKY);" +
-                                "} else {" +
-                                "$proceed($$);" +
-                                "}" +
-                                "}"
-                        );
-                    }
-                }
-            };
-        }
-    }
-
-    @SpirePatch(clz = CardCrawlGame.class, method = "create")
-    public static class PostLoadLocalizationPatch {
-        @SpireInsertPatch(locator = Locator.class, localvars = {"languagePack"})
-        public static void PostLocalization(CardCrawlGame __instance, LocalizedStrings languagePack) {
-            for (Settings.GameLanguage lang : EvilWithinMod.SupportedLanguages) {
-                if (lang.equals(Settings.language)) {
-                    postLoadLocalizationStrings();
-                    return;
-                }
-            }
-        }
-
-        private static class Locator extends SpireInsertLocator {
-            @Override
-            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
-                //Matcher finalMatcher = new Matcher.ConstructorCallMatcher(SingleCardViewPopup.class);
-                Matcher finalMatcher = new Matcher.FieldAccessMatcher(Settings.class, "IS_FULLSCREEN");
-                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
-            }
-        }
-    }
-
-    //THE BELOW IS A MESS, YOU PROBABLY SHOULDN'T LOOK AT IT
-
-    public static Map<String, CardStrings[]> renameC = new HashMap<>();
-    public static Map<String, EventStrings[]> renameE = new HashMap<>();
-    public static Map<String, RelicStrings[]> renameR = new HashMap<>();
-    public static Map<String, CharacterStrings[]> renameCh = new HashMap<>();
-    public static Map<String, PowerStrings[]> renameP = new HashMap<>();
-    public static Map<String, UIStrings[]> renameUI = new HashMap<>();
 
     public static void postLoadLocalizationStrings() {
         try {
@@ -331,6 +282,52 @@ public class GoldToSoulPatches {
         }
 
         return replacementString;
+    }
+
+    @SpirePatch(clz = TopPanel.class, method = "renderGold")
+    public static class BlueSoulsText {
+        public static boolean firstInstance = true;
+
+        public static ExprEditor Instrument() {
+            return new ExprEditor() {
+                @Override
+                public void edit(MethodCall m) throws CannotCompileException {
+                    if (m.getMethodName().equals("renderFontLeftTopAligned") && firstInstance) {
+                        firstInstance = false;
+                        m.replace("{" +
+                                "if(" + EvilModeCharacterSelect.class.getName() + ".evilMode) {" +
+                                "$proceed($1, $2, $3, $4, $5, " + Color.class.getName() + ".SKY);" +
+                                "} else {" +
+                                "$proceed($$);" +
+                                "}" +
+                                "}"
+                        );
+                    }
+                }
+            };
+        }
+    }
+
+    @SpirePatch(clz = CardCrawlGame.class, method = "create")
+    public static class PostLoadLocalizationPatch {
+        @SpireInsertPatch(locator = Locator.class, localvars = {"languagePack"})
+        public static void PostLocalization(CardCrawlGame __instance, LocalizedStrings languagePack) {
+            for (Settings.GameLanguage lang : EvilWithinMod.SupportedLanguages) {
+                if (lang.equals(Settings.language)) {
+                    postLoadLocalizationStrings();
+                    return;
+                }
+            }
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            @Override
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
+                //Matcher finalMatcher = new Matcher.ConstructorCallMatcher(SingleCardViewPopup.class);
+                Matcher finalMatcher = new Matcher.FieldAccessMatcher(Settings.class, "IS_FULLSCREEN");
+                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
+            }
+        }
     }
 
     //TODO: Make work on load

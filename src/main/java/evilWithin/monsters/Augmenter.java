@@ -22,6 +22,7 @@ public class Augmenter extends AbstractMonster {
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 150.0F;
     private static final float HB_H = 320.0F;
+    boolean move2 = false;
 
     public Augmenter() {
         super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/augmenter/augmenter.png");
@@ -70,8 +71,6 @@ public class Augmenter extends AbstractMonster {
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
-
-    boolean move2 = false;
 
     protected void getMove(int num) {
         if (move2) {

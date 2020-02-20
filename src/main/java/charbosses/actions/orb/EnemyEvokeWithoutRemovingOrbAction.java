@@ -21,7 +21,7 @@ public class EnemyEvokeWithoutRemovingOrbAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == this.startDuration) {
-            for(int i = 0; i < this.orbCount; ++i) {
+            for (int i = 0; i < this.orbCount; ++i) {
                 AbstractCharBoss.boss.evokeWithoutLosingOrb();
             }
         }

@@ -107,7 +107,7 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
     public void update() {
         super.update();
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
@@ -132,8 +132,8 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
                     AbstractDungeon.player.masterDeck.removeCard(this.defends.get(1));
 
 
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newStrike, (float) (Settings.WIDTH * .3F), (float) (Settings.HEIGHT / 2)));
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newDefend, (float) (Settings.WIDTH * .7F), (float) (Settings.HEIGHT / 2)));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newStrike, (Settings.WIDTH * .3F), (float) (Settings.HEIGHT / 2)));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(newDefend, (Settings.WIDTH * .7F), (float) (Settings.HEIGHT / 2)));
 
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
@@ -184,11 +184,11 @@ public class BackToBasicsGuardian extends AbstractImageEvent {
         }
     }
 
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

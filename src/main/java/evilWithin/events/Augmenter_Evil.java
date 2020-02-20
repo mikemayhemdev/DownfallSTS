@@ -8,32 +8,40 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.MutagenicStrength;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import evilWithin.monsters.Augmenter;
-import evilWithin.monsters.LadyInBlue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Augmenter_Evil extends AbstractImageEvent {
-    private static final Logger logger = LogManager.getLogger(com.megacrit.cardcrawl.events.city.DrugDealer.class.getName());
     public static final String ID = "evilWithin:Augmenter";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSALT;
     public static final String[] OPTIONSALT;
+    private static final Logger logger = LogManager.getLogger(com.megacrit.cardcrawl.events.city.DrugDealer.class.getName());
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Drug Dealer");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+    }
+
     private int screenNum = 0;
     private boolean cardsSelected = false;
 
@@ -51,14 +59,14 @@ public class Augmenter_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         AbstractCard jax = new JAX();
                         logMetricObtainCard("Drug Dealer", "Obtain J.A.X.", jax);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(jax, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(jax, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
                         break;
@@ -73,13 +81,13 @@ public class Augmenter_Evil extends AbstractImageEvent {
                         Object r;
                         if (!AbstractDungeon.player.hasRelic("MutagenicStrength")) {
                             r = new MutagenicStrength();
-                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, (AbstractRelic)r);
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, (AbstractRelic) r);
                         } else {
                             r = new Circlet();
-                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, (AbstractRelic)r);
+                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, (AbstractRelic) r);
                         }
 
-                        logMetricObtainRelic("Drug Dealer", "Inject Mutagens", (AbstractRelic)r);
+                        logMetricObtainRelic("Drug Dealer", "Inject Mutagens", (AbstractRelic) r);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
                         break;
@@ -116,8 +124,8 @@ public class Augmenter_Evil extends AbstractImageEvent {
                 float displayCount = 0.0F;
                 Iterator i = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(i.hasNext()) {
-                    AbstractCard card = (AbstractCard)i.next();
+                while (i.hasNext()) {
+                    AbstractCard card = (AbstractCard) i.next();
                     card.untip();
                     card.unhover();
                     transformedCards.add(card.cardID);
@@ -126,8 +134,8 @@ public class Augmenter_Evil extends AbstractImageEvent {
                     AbstractCard c = AbstractDungeon.getTransformedCard();
                     obtainedCards.add(c.cardID);
                     if (AbstractDungeon.screen != CurrentScreen.TRANSFORM && c != null) {
-                        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float)Settings.WIDTH / 3.0F + displayCount, (float)Settings.HEIGHT / 2.0F, false));
-                        displayCount += (float)Settings.WIDTH / 6.0F;
+                        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));
+                        displayCount += (float) Settings.WIDTH / 6.0F;
                     }
                 }
 
@@ -148,14 +156,5 @@ public class Augmenter_Evil extends AbstractImageEvent {
             AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), 2, OPTIONS[5], false, false, false, false);
         }
 
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Drug Dealer");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
     }
 }

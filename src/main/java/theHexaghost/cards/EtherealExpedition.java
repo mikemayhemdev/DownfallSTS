@@ -43,7 +43,7 @@ public class EtherealExpedition extends AbstractHexaCard {
         if (list.isEmpty()) {
             list.add(new PowerFromBeyond());
         }
-        return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));// 1217
+        return list.get(cardRandomRng.random(list.size() - 1));// 1217
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

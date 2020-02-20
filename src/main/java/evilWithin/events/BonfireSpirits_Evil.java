@@ -1,29 +1,41 @@
 package evilWithin.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-        import com.megacrit.cardcrawl.cards.CardGroup;
-        import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-        import com.megacrit.cardcrawl.core.CardCrawlGame;
-        import com.megacrit.cardcrawl.core.Settings;
-        import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-        import com.megacrit.cardcrawl.events.AbstractImageEvent;
-        import com.megacrit.cardcrawl.helpers.RelicLibrary;
-        import com.megacrit.cardcrawl.localization.EventStrings;
-        import com.megacrit.cardcrawl.relics.Circlet;
-        import com.megacrit.cardcrawl.relics.SpiritPoop;
-        import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
+import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.Circlet;
+import com.megacrit.cardcrawl.relics.SpiritPoop;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 public class BonfireSpirits_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:BonfireSpirits";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSALT;
     public static final String[] OPTIONSALT;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_1;
     private static final String DIALOG_2;
     private static final String DIALOG_3;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Bonfire Elementals");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+        DIALOG_2 = DESCRIPTIONS[1];
+        DIALOG_3 = DESCRIPTIONS[2];
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+    }
+
     private CUR_SCREEN screen;
     private AbstractCard offeredCard;
     private boolean cardSelect;
@@ -34,7 +46,7 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
         this.offeredCard = null;
         this.cardSelect = false;
         this.imageEventText.setDialogOption(OPTIONS[0]);
-        if (AbstractDungeon.player.gold >= 150){
+        if (AbstractDungeon.player.gold >= 150) {
             this.imageEventText.setDialogOption(OPTIONSALT[0]);
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[1], true);
@@ -51,8 +63,8 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
     public void update() {
         super.update();
         if (this.cardSelect && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            this.offeredCard = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.remove(0);
-            switch(this.offeredCard.rarity) {
+            this.offeredCard = AbstractDungeon.gridSelectScreen.selectedCards.remove(0);
+            switch (this.offeredCard.rarity) {
                 case CURSE:
                     logMetricRemoveCardAndObtainRelic("Bonfire Elementals", "Offered Curse", this.offeredCard, new SpiritPoop());
                     break;
@@ -74,7 +86,7 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
             }
 
             this.setReward(this.offeredCard.rarity);
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.offeredCard, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.offeredCard, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
             AbstractDungeon.player.masterDeck.removeCard(this.offeredCard);
             this.imageEventText.updateDialogOption(0, OPTIONS[1]);
             this.screen = CUR_SCREEN.COMPLETE;
@@ -84,7 +96,7 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
@@ -122,11 +134,11 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
 
     private void setReward(AbstractCard.CardRarity rarity) {
         String dialog = DIALOG_3;
-        switch(rarity) {
+        switch (rarity) {
             case CURSE:
                 dialog = dialog + DESCRIPTIONS[3];
                 if (!AbstractDungeon.player.hasRelic("Spirit Poop")) {
-                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, RelicLibrary.getRelic("Spirit Poop").makeCopy());
+                    AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, RelicLibrary.getRelic("Spirit Poop").makeCopy());
                 } else {
                     AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, new Circlet());
                 }
@@ -152,24 +164,12 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
         this.imageEventText.updateBodyText(dialog);
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Bonfire Elementals");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-        DIALOG_2 = DESCRIPTIONS[1];
-        DIALOG_3 = DESCRIPTIONS[2];
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         CHOOSE,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

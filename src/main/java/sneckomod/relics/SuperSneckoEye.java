@@ -13,12 +13,11 @@ public class SuperSneckoEye extends CustomRelic {
     public static final String ID = SneckoMod.makeID("SuperSneckoEye");
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SuperSneckoEye.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SuperSneckoEye.png"));
+    public boolean activated = false;
 
     public SuperSneckoEye() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
-
-    public boolean activated = false;
 
     @Override
     public void atBattleStart() {

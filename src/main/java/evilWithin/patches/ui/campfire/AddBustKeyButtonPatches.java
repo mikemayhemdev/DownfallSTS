@@ -25,6 +25,20 @@ import javassist.expr.MethodCall;
 import java.util.ArrayList;
 
 public class AddBustKeyButtonPatches {
+    public static Texture brokenKeyCheck(Texture tex) {
+        if (tex.equals(ImageMaster.RUBY_KEY) && KeyFields.bustedRuby.get(AbstractDungeon.player)) {
+            return TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/key_red.png"));
+        }
+        if (tex.equals(ImageMaster.EMERALD_KEY) && KeyFields.bustedEmerald.get(AbstractDungeon.player)) {
+            return TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/key_green.png"));
+        }
+        if (tex.equals(ImageMaster.SAPPHIRE_KEY) && KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
+            return TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/key_blue.png"));
+        }
+
+        return tex;
+    }
+
     @SpirePatch(clz = AbstractPlayer.class, method = SpirePatch.CLASS)
     public static class KeyFields {
         public static SpireField<Boolean> bustedRuby = new SpireField<>(() -> false);
@@ -36,7 +50,7 @@ public class AddBustKeyButtonPatches {
     public static class AddKeys {
         @SpireInsertPatch(locator = Locator.class)
         public static void patch(CampfireUI __instance, ArrayList<AbstractCampfireOption> ___buttons) {
-            if(EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode) {
                 if (Settings.hasRubyKey && !KeyFields.bustedRuby.get(AbstractDungeon.player)) {
                     ___buttons.add(new BustKeyOption(BustKeyOption.Keys.RUBY));
                 }
@@ -61,14 +75,15 @@ public class AddBustKeyButtonPatches {
     @SpirePatch(clz = AbstractPlayer.class, method = "applyStartOfCombatLogic")
     public static class KeyBustBuffs {
         private static final int STACK = 1;
+
         @SpirePostfixPatch
         public static void patch(AbstractPlayer __instance) {
             boolean allBusts = KeyFields.bustedRuby.get(__instance) && KeyFields.bustedEmerald.get(__instance) && KeyFields.bustedSapphire.get(__instance);
-            int stacks = STACK * (allBusts?2:1);
-            if(KeyFields.bustedRuby.get(__instance)) {
+            int stacks = STACK * (allBusts ? 2 : 1);
+            if (KeyFields.bustedRuby.get(__instance)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(__instance, __instance, new StrengthPower(__instance, stacks), stacks));
             }
-            if(KeyFields.bustedEmerald.get(__instance)) {
+            if (KeyFields.bustedEmerald.get(__instance)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(__instance, __instance, new DexterityPower(__instance, stacks), stacks));
             }
         }
@@ -88,20 +103,6 @@ public class AddBustKeyButtonPatches {
                 }
             };
         }
-    }
-
-    public static Texture brokenKeyCheck(Texture tex) {
-        if(tex.equals(ImageMaster.RUBY_KEY) && KeyFields.bustedRuby.get(AbstractDungeon.player)) {
-            return TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/key_red.png"));
-        }
-        if(tex.equals(ImageMaster.EMERALD_KEY) && KeyFields.bustedEmerald.get(AbstractDungeon.player)) {
-            return TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/key_green.png"));
-        }
-        if(tex.equals(ImageMaster.SAPPHIRE_KEY) && KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
-            return TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/key_blue.png"));
-        }
-
-        return tex;
     }
 
     //TODO: Save these values

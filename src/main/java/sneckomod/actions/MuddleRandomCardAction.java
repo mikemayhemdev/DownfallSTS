@@ -10,7 +10,6 @@ import sneckomod.SneckoMod;
 import sneckomod.powers.MudshieldPower;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MuddleRandomCardAction extends AbstractGameAction {
     public MuddleRandomCardAction(int i) {
@@ -20,14 +19,14 @@ public class MuddleRandomCardAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         ArrayList<AbstractCard> myCardList = new ArrayList<>(AbstractDungeon.player.hand.group);
-        for(int i = 0; i < this.amount; ++i) {// 101
+        for (int i = 0; i < this.amount; ++i) {// 101
             if (!myCardList.isEmpty()) {
                 if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
                     AbstractPower q = AbstractDungeon.player.getPower(MudshieldPower.POWER_ID);
                     q.flash();
                     addToBot(new ApplyPowerAction(q.owner, q.owner, new NextTurnBlockPower(q.owner, q.amount)));
                 }
-                AbstractCard card = myCardList.remove(AbstractDungeon.cardRandomRng.random(myCardList.size()-1));
+                AbstractCard card = myCardList.remove(AbstractDungeon.cardRandomRng.random(myCardList.size() - 1));
                 card.superFlash();
                 if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
                     int newCost = AbstractDungeon.cardRandomRng.random(3);// 33

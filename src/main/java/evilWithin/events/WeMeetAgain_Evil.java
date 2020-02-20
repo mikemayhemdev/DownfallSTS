@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.GenericEventDialog;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -20,11 +18,20 @@ import java.util.Collections;
 
 public class WeMeetAgain_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:WeMeetAgain";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_1;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+    }
+
     private CUR_SCREEN screen;
     private ArrayList<AbstractRelic> relicsOffered = new ArrayList<>();
     private int relicOffersAvailable;
@@ -45,11 +52,11 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
         ArrayList<AbstractRelic> playerCommonRelics = new ArrayList<>();
         ArrayList<AbstractRelic> playerUncommonRelics = new ArrayList<>();
 
-        for (AbstractRelic r : AbstractDungeon.player.relics){
-            if (r.tier == AbstractRelic.RelicTier.COMMON){
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r.tier == AbstractRelic.RelicTier.COMMON) {
                 playerCommonRelics.add(r);
             }
-            if (r.tier == AbstractRelic.RelicTier.COMMON){
+            if (r.tier == AbstractRelic.RelicTier.COMMON) {
                 playerUncommonRelics.add(r);
             }
         }
@@ -58,30 +65,30 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
         Collections.shuffle(playerUncommonRelics);
 
         for (int i = 0; i < 3; i++) {
-            if (playerCommonRelics.size() > 0){
+            if (playerCommonRelics.size() > 0) {
                 this.relicsOffered.add(playerCommonRelics.get(this.relicCOffers));
                 this.relicOffersAvailable++;
                 this.relicCOffers++;
-            } else if (playerUncommonRelics.size() > 0){
+            } else if (playerUncommonRelics.size() > 0) {
                 this.relicsOffered.add(playerUncommonRelics.get(this.relicUOffers));
                 this.relicOffersAvailable++;
                 this.relicUOffers++;
             }
         }
 
-        if (this.relicOffersAvailable >= 1){
+        if (this.relicOffersAvailable >= 1) {
             this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(0).name + OPTIONS[1] + OPTIONS[2]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
 
-        if (this.relicOffersAvailable >= 2){
+        if (this.relicOffersAvailable >= 2) {
             this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(1).name + OPTIONS[1] + OPTIONS[3] + "#g" + this.goldAmt + OPTIONS[4]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
         }
 
-        if (this.relicOffersAvailable >= 3){
+        if (this.relicOffersAvailable >= 3) {
             this.imageEventText.setDialogOption(OPTIONS[0] + this.relicsOffered.get(2).name + OPTIONS[1] + OPTIONS[5]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[7], true);
@@ -91,10 +98,10 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 this.screen = CUR_SCREEN.COMPLETE;
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
@@ -139,19 +146,11 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

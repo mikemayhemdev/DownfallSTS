@@ -18,12 +18,22 @@ import java.util.ArrayList;
 
 public class Bandits_Evil extends AbstractEvent {
     public static final String ID = "evilWithin:Bandits";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSALT;
     public static final String[] OPTIONSALT;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Masked Bandits");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+    }
+
     private CUR_SCREEN screen;
     private AbstractRelic wantThisOne = null;
 
@@ -116,20 +126,11 @@ public class Bandits_Evil extends AbstractEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Masked Bandits");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

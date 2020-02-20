@@ -52,13 +52,13 @@ public class FlameTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = this.originalDamage = 15;
-        this.baseSelfDamage = this.selfDamage = 3;
-        this.upgradeDamage = 3;
+        this.baseDamage = originalDamage = 15;
+        baseSelfDamage = this.selfDamage = 3;
+        upgradeDamage = 3;
 
         this.magicNumber = this.baseMagicNumber = 2;
         //this.exhaust = true;
-        this.upgradeSelfDamage(this.baseSelfDamage);
+        this.upgradeSelfDamage(baseSelfDamage);
 
     }
 

@@ -34,7 +34,7 @@ public class DiscardPileToStasisAction extends AbstractGameAction {
 
     public void update() {
         if (this.p.discardPile.size() == 1) {
-            AbstractCard card = (AbstractCard) this.p.discardPile.group.get(0);
+            AbstractCard card = this.p.discardPile.group.get(0);
             card.lighten(false);
             AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(card));
             this.isDone = true;

@@ -12,12 +12,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import slimebound.orbs.SpawnedSlime;
 import slimebound.powers.PotencyPower;
-
-import java.util.ArrayList;
 
 public class CoordinateAction extends AbstractGameAction {
     private boolean freeToPlayOnce = false;

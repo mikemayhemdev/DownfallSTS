@@ -9,12 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
 import slimebound.actions.TackleSelfDamageAction;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
-import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
@@ -52,12 +49,12 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = this.originalDamage = 14;
-        this.baseSelfDamage = this.selfDamage = 3;
-        this.upgradeDamage = 4;
+        this.baseDamage = originalDamage = 14;
+        baseSelfDamage = this.selfDamage = 3;
+        upgradeDamage = 4;
 
         //this.exhaust = true;
-        this.upgradeSelfDamage(this.baseSelfDamage);
+        this.upgradeSelfDamage(baseSelfDamage);
 
     }
 

@@ -19,6 +19,11 @@ import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 public class EnemyFrost extends AbstractOrb {
     public static final String ORB_ID = "Frost";
     private static final OrbStrings orbString;
+
+    static {
+        orbString = CardCrawlGame.languagePack.getOrbString("Frost");
+    }
+
     private boolean hFlip1 = MathUtils.randomBoolean();
     private boolean hFlip2 = MathUtils.randomBoolean();
     private float vfxTimer = 1.0F;
@@ -60,7 +65,7 @@ public class EnemyFrost extends AbstractOrb {
     }
 
     public void onEndOfTurn() {
-        float speedTime = 0.6F / (float)AbstractCharBoss.boss.orbs.size();
+        float speedTime = 0.6F / (float) AbstractCharBoss.boss.orbs.size();
         if (Settings.FAST_MODE) {
             speedTime = 0.0F;
         }
@@ -89,9 +94,5 @@ public class EnemyFrost extends AbstractOrb {
 
     public AbstractOrb makeCopy() {
         return new EnemyFrost();
-    }
-
-    static {
-        orbString = CardCrawlGame.languagePack.getOrbString("Frost");
     }
 }

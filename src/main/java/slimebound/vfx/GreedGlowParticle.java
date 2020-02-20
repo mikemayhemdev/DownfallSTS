@@ -34,8 +34,8 @@ public class GreedGlowParticle extends AbstractGameEffect {
         this.effectDuration = MathUtils.random(1.0F, 3.0F);
         this.duration = this.effectDuration;
         this.startingDuration = this.effectDuration;
-        this.x = this.o.attachmentX + this.o.animX + this.o.cX + this.xOffset + (MathUtils.random(-50.0F, 50.0F) * Settings.scale);
-        this.y = this.o.attachmentY + this.o.animY + this.o.cY + this.yOffset + (MathUtils.random(30.0F, -10.0F) * Settings.scale);
+        this.x = this.o.attachmentX + this.o.animX + this.o.cX + xOffset + (MathUtils.random(-50.0F, 50.0F) * Settings.scale);
+        this.y = this.o.attachmentY + this.o.animY + this.o.cY + yOffset + (MathUtils.random(30.0F, -10.0F) * Settings.scale);
         this.vY = MathUtils.random(10.0F, 40.0F) * Settings.scale;
         this.alpha = MathUtils.random(0.5F, .7F);
         this.color = new Color(1.0F, 1.0F, MathUtils.random(0.6F, 0.9F), this.alpha);

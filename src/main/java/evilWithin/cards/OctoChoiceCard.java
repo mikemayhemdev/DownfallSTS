@@ -3,7 +3,6 @@ package evilWithin.cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.expansionContentMod;
 import theHexaghost.util.CardIgnore;
 
 @CardIgnore

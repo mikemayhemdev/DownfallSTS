@@ -20,7 +20,7 @@ public class ShieldSlime
 
     public ShieldSlime() {
 
-        super(ID, new Color(0f, 1f, 1.00F, 100F),atlasString, skeletonString, false, false,1, 0, true, new Color(0F, .4F, 1F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
+        super(ID, new Color(0f, 1f, 1.00F, 100F), atlasString, skeletonString, false, false, 1, 0, true, new Color(0F, .4F, 1F, 1), SlimeFlareEffect.OrbFlareColor.LICKING, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDefend.png"));
         this.debuffAmount = 3;
         this.extraFontColor = Color.ROYAL;
         spawnVFX();

@@ -64,9 +64,9 @@ public class SlimeboundCharacter extends CustomPlayer {
     private String currentJson = jsonURL;
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String)null, (String)null);
 
-        this.initializeClass((String) null, "slimeboundResources/SlimeboundImages/char/shoulder2.png", "slimeboundResources/SlimeboundImages/char/shoulder.png", "slimeboundResources/SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
+        this.initializeClass(null, "slimeboundResources/SlimeboundImages/char/shoulder2.png", "slimeboundResources/SlimeboundImages/char/shoulder.png", "slimeboundResources/SlimeboundImages/char/corpse.png", this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
 
         this.reloadAnimation();
 
@@ -162,8 +162,8 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void initializeSlotPositions() {
-        float xStartOffset = this.drawX + (float) Settings.scale * -230F;
-        float yStartOffset = this.drawY + (float) Settings.scale * -55F;
+        float xStartOffset = this.drawX + Settings.scale * -230F;
+        float yStartOffset = this.drawY + Settings.scale * -55F;
         float ySpaceBottomAlternatingOffset = -70 * Settings.scale;
         float ySpaceAlternatingOffset = -20 * Settings.scale;
         float xSpaceBetweenSlots = 110 * Settings.scale;

@@ -18,11 +18,16 @@ import com.megacrit.cardcrawl.vfx.combat.LightningOrbPassiveEffect;
 public class EnemyLightning extends AbstractEnemyOrb {
     public static final String ORB_ID = "Lightning";
     private static final OrbStrings orbString;
-    private float vfxTimer = 1.0F;
     private static final float PI_DIV_16 = 0.19634955F;
     private static final float ORB_WAVY_DIST = 0.05F;
     private static final float PI_4 = 12.566371F;
     private static final float ORB_BORDER_SCALE = 1.2F;
+
+    static {
+        orbString = CardCrawlGame.languagePack.getOrbString("Lightning");
+    }
+
+    private float vfxTimer = 1.0F;
 
     public EnemyLightning() {
         this.ID = ORB_ID;
@@ -44,10 +49,6 @@ public class EnemyLightning extends AbstractEnemyOrb {
 
     public void onEvoke() {
         AbstractDungeon.actionManager.addToTop(new EnemyLightningOrbEvokeAction(new DamageInfo(AbstractCharBoss.boss, this.evokeAmount, DamageInfo.DamageType.THORNS), false));
-    }
-
-    public void onEndOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new EnemyLightningOrbPassiveAction(new DamageInfo(AbstractCharBoss.boss, this.passiveAmount, DamageInfo.DamageType.THORNS), this, false));
     }
 
     /*private void triggerPassiveEffect(DamageInfo info, boolean hitAll) {
@@ -83,6 +84,10 @@ public class EnemyLightning extends AbstractEnemyOrb {
         }
 
     }// 140*/
+
+    public void onEndOfTurn() {
+        AbstractDungeon.actionManager.addToBottom(new EnemyLightningOrbPassiveAction(new DamageInfo(AbstractCharBoss.boss, this.passiveAmount, DamageInfo.DamageType.THORNS), this, false));
+    }
 
     public void triggerEvokeAnimation() {
         CardCrawlGame.sound.play("ORB_LIGHTNING_EVOKE", 0.1F);
@@ -122,9 +127,5 @@ public class EnemyLightning extends AbstractEnemyOrb {
 
     public AbstractOrb makeCopy() {
         return new EnemyLightning();
-    }
-
-    static {
-        orbString = CardCrawlGame.languagePack.getOrbString("Lightning");
     }
 }

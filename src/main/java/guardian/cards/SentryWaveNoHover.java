@@ -18,7 +18,6 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
-import sneckomod.CardIgnore;
 
 public class SentryWaveNoHover extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SentryWave");

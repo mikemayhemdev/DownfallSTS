@@ -51,13 +51,13 @@ public class VenomTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
         tags.add(SlimeboundMod.GOOPEXPLOIT);
 
-        this.baseDamage = this.originalDamage = 11;
-        this.baseSelfDamage = this.selfDamage = 3;
-        this.upgradeDamage = 2;
+        this.baseDamage = originalDamage = 11;
+        baseSelfDamage = this.selfDamage = 3;
+        upgradeDamage = 2;
 
         this.magicNumber = this.baseMagicNumber = 5;
 
-        this.upgradeSelfDamage(this.baseSelfDamage);
+        this.upgradeSelfDamage(baseSelfDamage);
 
     }
 

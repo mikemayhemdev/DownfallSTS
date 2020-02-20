@@ -26,7 +26,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BobEffect;
-import slimebound.SlimeboundMod;
 import theHexaghost.cards.Defend;
 import theHexaghost.cards.Float;
 import theHexaghost.cards.Sear;
@@ -140,28 +139,28 @@ public class TheHexaghost extends CustomPlayer {
                     float flashP = (gf.flashTimer - 1F) / .5F;
                     //SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
                     float fontScale = Settings.scale;
-                    if (flashP > 0F){
-                        if (flashP > .5F){
+                    if (flashP > 0F) {
+                        if (flashP > .5F) {
                             if (gf.charged) {
-                                sb.setColor(Interpolation.exp5Out.apply(0F,1F,flashP),1F,Interpolation.exp5Out.apply(0F,1F,flashP),1F);
-                                fontScale = Interpolation.linear.apply(Settings.scale * 4F,Settings.scale,flashP);
+                                sb.setColor(Interpolation.exp5Out.apply(0F, 1F, flashP), 1F, Interpolation.exp5Out.apply(0F, 1F, flashP), 1F);
+                                fontScale = Interpolation.linear.apply(Settings.scale * 4F, Settings.scale, flashP);
                             } else {
-                                sb.setColor(1F,1F,1F,1F);
-                                fontScale = Interpolation.pow2Out.apply(Settings.scale * 5F,Settings.scale,flashP);
+                                sb.setColor(1F, 1F, 1F, 1F);
+                                fontScale = Interpolation.pow2Out.apply(Settings.scale * 5F, Settings.scale, flashP);
 
                             }
                         } else {
                             if (gf.charged) {
-                                sb.setColor(Interpolation.exp5Out.apply(1F,0F,flashP),1F,Interpolation.exp5Out.apply(1F,0F,flashP),1F);
+                                sb.setColor(Interpolation.exp5Out.apply(1F, 0F, flashP), 1F, Interpolation.exp5Out.apply(1F, 0F, flashP), 1F);
 
-                                fontScale = Interpolation.linear.apply(Settings.scale,Settings.scale * 4F,flashP);
+                                fontScale = Interpolation.linear.apply(Settings.scale, Settings.scale * 4F, flashP);
                             } else {
-                                sb.setColor(1F,1F,1F,1F);
-                                fontScale = Interpolation.exp5In.apply(Settings.scale,Settings.scale * 5F,flashP);
+                                sb.setColor(1F, 1F, 1F, 1F);
+                                fontScale = Interpolation.exp5In.apply(Settings.scale, Settings.scale * 5F, flashP);
                             }
                         }
                     } else {
-                        sb.setColor(1F,1F,1F,1F);
+                        sb.setColor(1F, 1F, 1F, 1F);
                     }
 
 

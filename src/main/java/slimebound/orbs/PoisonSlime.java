@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.SlimeFlareEffect;
 
@@ -22,7 +21,7 @@ public class PoisonSlime
     }
 
     public PoisonSlime(boolean topLevelVFX) {
-        super(ID, new Color(.5F, 1.0F, .5F, 100F), atlasString, skeletonString,  false, false,2, 1, true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("slimeboundResources/SlimeboundImages/orbs/4.png"));
+        super(ID, new Color(.5F, 1.0F, .5F, 100F), atlasString, skeletonString, false, false, 2, 1, true, new Color(.58F, .81F, .35F, 1), SlimeFlareEffect.OrbFlareColor.POISON, new Texture("slimeboundResources/SlimeboundImages/orbs/4.png"));
         this.topSpawnVFX = topLevelVFX;
         spawnVFX();
     }

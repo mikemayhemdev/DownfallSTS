@@ -13,7 +13,7 @@ public class SocketGemGridPatchCancelButton {
     @SpirePrefixPatch
     public static void Prefix(GridCardSelectScreen obj, CardGroup group, int numCards, String tipMsg, boolean forUpgrade, boolean forTransform, boolean canCancel, boolean forPurge) {
         if ((GuardianMod.gridScreenForGems || GuardianMod.gridScreenForSockets) && canCancel) {
-            AbstractDungeon.overlayMenu.cancelButton.show(obj.TEXT[1]);
+            AbstractDungeon.overlayMenu.cancelButton.show(GridCardSelectScreen.TEXT[1]);
         }
     }
 

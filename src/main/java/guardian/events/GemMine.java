@@ -116,7 +116,7 @@ public class GemMine extends AbstractImageEvent {
 
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, this.damage));
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
                         this.tookGems = true;
                         return;
                     default:

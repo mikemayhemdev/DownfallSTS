@@ -134,7 +134,7 @@ public class ArtOfSlimeWar extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DIALOG_CHOSE_FIGHT);
                         CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
                         CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, this.damage));
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.clearRemainingOptions();

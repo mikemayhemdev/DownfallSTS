@@ -42,13 +42,31 @@ import slimebound.SlimeboundMod;
 import java.util.Objects;
 
 public class GremlinWheelGame_Rest extends AbstractImageEvent {
-    private static final Logger logger = LogManager.getLogger(GremlinWheelGame_Rest.class.getName());
     public static final String ID = "evilWithin:GremlinWheelGameRest";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String INTRO_DIALOG;
+    private static final Logger logger = LogManager.getLogger(GremlinWheelGame_Rest.class.getName());
+    private static final EventStrings eventStrings;
+    private static final float START_Y;
+    private static final float TARGET_Y;
+    private static final int WHEEL_W = 1024;
+    private static final int ARROW_W = 512;
+    private static final float ARROW_OFFSET_X;
+    private static final float A_2_HP_LOSS = 0.15F;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(GremlinWheelGame_Evil.ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        INTRO_DIALOG = DESCRIPTIONS[10];
+        START_Y = Settings.OPTION_Y + 1000.0F * Settings.scale;
+        TARGET_Y = Settings.OPTION_Y;
+        ARROW_OFFSET_X = 300.0F * Settings.scale;
+    }
+
     private GremlinWheelGame_Rest.CUR_SCREEN screen;
     private int result;
     private float resultAngle;
@@ -67,17 +85,11 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
     private Texture wheelImg;
     private Texture arrowImg;
     private Texture buttonImg;
-    private static final float START_Y;
-    private static final float TARGET_Y;
     private float imgX;
     private float imgY;
     private float wheelAngle;
-    private static final int WHEEL_W = 1024;
-    private static final int ARROW_W = 512;
-    private static final float ARROW_OFFSET_X;
     private Color color;
     private float hpLossPercent;
-    private static final float A_2_HP_LOSS = 0.15F;
     private boolean secondSpin;
     private boolean threatened;
     private boolean threatened2;
@@ -325,7 +337,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
                 CardCrawlGame.sound.play("ATTACK_DAGGER_6");
                 CardCrawlGame.sound.play("BLOOD_SPLAT");
                 int damageAmount = (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent);
-                AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, damageAmount, DamageType.HP_LOSS));
+                AbstractDungeon.player.damage(new DamageInfo(null, damageAmount, DamageType.HP_LOSS));
                 logMetricTakeDamage("Wheel of Change", "Damaged", damageAmount);
         }
 
@@ -333,7 +345,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
 
     private void purgeLogic() {
         if (this.purgeResult && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             logMetricCardRemoval("Wheel of Change", "Card Removal", c);
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
@@ -391,18 +403,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(GremlinWheelGame_Evil.ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        INTRO_DIALOG = DESCRIPTIONS[10];
-        START_Y = Settings.OPTION_Y + 1000.0F * Settings.scale;
-        TARGET_Y = Settings.OPTION_Y;
-        ARROW_OFFSET_X = 300.0F * Settings.scale;
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         LEAVE,
         POSTSPIN1,
@@ -410,7 +411,7 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
         FIGHT,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

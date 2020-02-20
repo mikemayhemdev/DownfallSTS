@@ -11,14 +11,23 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+
 import java.util.ArrayList;
 
 public class CursedTome_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:CursedTome";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = CardCrawlGame.languagePack.getEventString("Cursed Tome").OPTIONS;
+    }
+
     private int finalDmg;
     private CurScreen screen;
 
@@ -37,13 +46,13 @@ public class CursedTome_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 this.imageEventText.clearAllDialogs();
                 if (buttonPressed == 0) {
                     CardCrawlGame.sound.play("EVENT_TOME");
                     this.imageEventText.clearAllDialogs();
-                    AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, this.finalDmg, DamageType.HP_LOSS));
+                    AbstractDungeon.player.damage(new DamageInfo(null, this.finalDmg, DamageType.HP_LOSS));
                     this.imageEventText.setDialogOption(OPTIONS[7]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                     this.screen = CurScreen.END;
@@ -81,7 +90,7 @@ public class CursedTome_Evil extends AbstractImageEvent {
             possibleBooks.add(RelicLibrary.getRelic("Circlet").makeCopy());
         }
 
-        AbstractRelic r = (AbstractRelic)possibleBooks.get(AbstractDungeon.miscRng.random(possibleBooks.size() - 1));
+        AbstractRelic r = possibleBooks.get(AbstractDungeon.miscRng.random(possibleBooks.size() - 1));
         AbstractDungeon.getCurrRoom().rewards.clear();
         AbstractDungeon.getCurrRoom().addRelicToRewards(r);
         AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;
@@ -89,18 +98,11 @@ public class CursedTome_Evil extends AbstractImageEvent {
         this.screen = CurScreen.END;
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = CardCrawlGame.languagePack.getEventString("Cursed Tome").OPTIONS;
-    }
-
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         END;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

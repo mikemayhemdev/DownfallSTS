@@ -47,7 +47,7 @@ public class FutureUpgradePower extends AbstractPower implements CloneablePowerI
             }
 
             if (!possibleCards.isEmpty()) {// 45
-                AbstractCard card = (AbstractCard) possibleCards.get(AbstractDungeon.miscRng.random(0, possibleCards.size() - 1));// 46
+                AbstractCard card = possibleCards.get(AbstractDungeon.miscRng.random(0, possibleCards.size() - 1));// 46
                 card.upgrade();// 47
                 AbstractDungeon.player.bottledCardUpgradeCheck(card);// 48
                 card.upgrade();

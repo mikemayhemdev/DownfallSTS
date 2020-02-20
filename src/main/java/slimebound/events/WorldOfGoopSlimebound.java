@@ -95,11 +95,11 @@ public class WorldOfGoopSlimebound extends AbstractImageEvent {
         }
     }
 
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         RESULT;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

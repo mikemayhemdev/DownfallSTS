@@ -19,7 +19,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class PotionThrowEffect extends AbstractGameEffect {
     private static final float DUR = 0.6F;
@@ -72,10 +71,13 @@ public class PotionThrowEffect extends AbstractGameEffect {
         if (!this.playedSfx && !this.mute) {
             this.playedSfx = true;
             String sound = "POTION_1";
-            switch (AbstractDungeon.cardRng.random(0,2)){
-                case 0: sound = "POTION_1";
-                case 1: sound = "POTION_2";
-                case 2: sound = "POTION_3";
+            switch (AbstractDungeon.cardRng.random(0, 2)) {
+                case 0:
+                    sound = "POTION_1";
+                case 1:
+                    sound = "POTION_2";
+                case 2:
+                    sound = "POTION_3";
             }
 
             CardCrawlGame.sound.playA(sound, MathUtils.random(-0.1F, 0.1F));

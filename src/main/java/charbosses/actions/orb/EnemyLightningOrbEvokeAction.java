@@ -3,7 +3,6 @@ package charbosses.actions.orb;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -29,7 +28,7 @@ public class EnemyLightningOrbEvokeAction extends AbstractGameAction {
         AbstractCreature t = AbstractDungeon.player;
         float speedTime = 0.1F;
         if (!AbstractDungeon.player.orbs.isEmpty()) {
-            speedTime = 0.2F / (float)AbstractDungeon.player.orbs.size();
+            speedTime = 0.2F / (float) AbstractDungeon.player.orbs.size();
         }
 
         if (Settings.FAST_MODE) {

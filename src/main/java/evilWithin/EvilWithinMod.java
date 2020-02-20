@@ -20,6 +20,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
@@ -52,13 +53,14 @@ public class EvilWithinMod implements
             Settings.GameLanguage.ENG
     };
     public static ReplaceData[] wordReplacements;
-
-    public static void initialize() {
-        new EvilWithinMod();
-    }
+    public static SpireConfig bruhData = null;
 
     public EvilWithinMod() {
         BaseMod.subscribe(this);
+    }
+
+    public static void initialize() {
+        new EvilWithinMod();
     }
 
     public static String makeID(String id) {
@@ -67,6 +69,26 @@ public class EvilWithinMod implements
 
     public static String assetPath(String path) {
         return "evilWithinResources/" + path;
+    }
+
+    public static void saveData() {
+        try {
+            if (bruhData == null) {
+                bruhData = new SpireConfig("EvilWithin", "TrapSaveData");
+            }
+            GoldenIdol_Evil.save();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void loadOtherData() {
+        try {
+            bruhData = new SpireConfig("EvilWithin", "TrapSaveData");
+            GoldenIdol_Evil.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private String makeLocalizationPath(Settings.GameLanguage language, String filename) {
@@ -94,28 +116,6 @@ public class EvilWithinMod implements
         loadLocalization(language, RelicStrings.class);
         loadLocalization(language, MonsterStrings.class);
         loadLocalization(language, PotionStrings.class);
-    }
-
-    public static SpireConfig bruhData = null;
-
-    public static void saveData() {
-        try {
-            if (bruhData == null) {
-                bruhData = new SpireConfig("EvilWithin", "TrapSaveData");
-            }
-            GoldenIdol_Evil.save();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void loadOtherData() {
-        try {
-            bruhData = new SpireConfig("EvilWithin", "TrapSaveData");
-            GoldenIdol_Evil.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
@@ -226,7 +226,7 @@ public class EvilWithinMod implements
                 //Event ID to Override//
                 FountainOfCurseRemoval.ID,
                 //Other predicates//
-                (c) -> c.isCursed(),
+                AbstractPlayer::isCursed,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
 
@@ -348,6 +348,14 @@ public class EvilWithinMod implements
                 Vagrant_Evil.ID, Vagrant_Evil.class, true,
                 //Event ID to Override//
                 Addict.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Mausoleum_Evil.ID, Mausoleum_Evil.class, true,
+                //Event ID to Override//
+                TheMausoleum.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

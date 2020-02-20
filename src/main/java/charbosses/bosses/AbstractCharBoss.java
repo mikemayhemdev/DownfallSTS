@@ -1,8 +1,23 @@
 package charbosses.bosses;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
+import charbosses.actions.common.EnemyDiscardAtEndOfTurnAction;
+import charbosses.actions.common.EnemyDrawCardAction;
+import charbosses.actions.common.EnemyUseCardAction;
+import charbosses.actions.orb.EnemyAnimateOrbAction;
+import charbosses.actions.orb.EnemyChannelAction;
+import charbosses.actions.orb.EnemyEvokeOrbAction;
+import charbosses.actions.orb.EnemyTriggerEndOfTurnOrbActions;
+import charbosses.actions.util.CharbossDoNextCardAction;
+import charbosses.actions.util.CharbossSortHandAction;
+import charbosses.actions.util.CharbossTurnstartDrawAction;
+import charbosses.actions.util.DelayedActionAction;
+import charbosses.cards.AbstractBossCard;
+import charbosses.cards.EnemyCardGroup;
+import charbosses.core.EnemyEnergyManager;
+import charbosses.orbs.EnemyDark;
+import charbosses.orbs.EnemyEmptyOrbSlot;
+import charbosses.relics.AbstractCharbossRelic;
+import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -19,7 +34,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import com.megacrit.cardcrawl.relics.LizardTail;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -34,45 +48,27 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 
-import charbosses.actions.common.EnemyDiscardAtEndOfTurnAction;
-import charbosses.actions.common.EnemyDrawCardAction;
-import charbosses.actions.common.EnemyUseCardAction;
-import charbosses.actions.orb.EnemyAnimateOrbAction;
-import charbosses.actions.orb.EnemyChannelAction;
-import charbosses.actions.orb.EnemyEvokeOrbAction;
-import charbosses.actions.orb.EnemyTriggerEndOfTurnOrbActions;
-import charbosses.actions.util.CharbossDoNextCardAction;
-import charbosses.actions.util.CharbossSortHandAction;
-import charbosses.actions.util.CharbossTurnstartDrawAction;
-import charbosses.actions.util.DelayedActionAction;
-import charbosses.cards.AbstractBossCard;
-import charbosses.cards.EnemyCardGroup;
-import charbosses.cards.curses.*;
-import charbosses.core.EnemyEnergyManager;
-import charbosses.orbs.EnemyDark;
-import charbosses.orbs.EnemyEmptyOrbSlot;
-import charbosses.relics.AbstractCharbossRelic;
-import charbosses.relics.*;
-import charbosses.ui.EnemyEnergyPanel;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public abstract class AbstractCharBoss extends AbstractMonster {
 
-	public static AbstractCharBoss boss;
-	public static boolean finishedSetup;
-	
-	public ArrayList<AbstractCharbossRelic> relics;
-	public AbstractStance stance;
-	public ArrayList<AbstractOrb> orbs;
-	public int maxOrbs;
-    public int masterMaxOrbs;
-	public int masterHandSize;
-	public int gameHandSize;
+    public static AbstractCharBoss boss;
+    public static boolean finishedSetup;
 
-	public EnemyEnergyManager energy;
-	public EnergyOrbInterface energyOrb;
-	public EnemyEnergyPanel energyPanel;
-	
-	public CardGroup masterDeck;
+    public ArrayList<AbstractCharbossRelic> relics;
+    public AbstractStance stance;
+    public ArrayList<AbstractOrb> orbs;
+    public int maxOrbs;
+    public int masterMaxOrbs;
+    public int masterHandSize;
+    public int gameHandSize;
+
+    public EnemyEnergyManager energy;
+    public EnergyOrbInterface energyOrb;
+    public EnemyEnergyPanel energyPanel;
+
+    public CardGroup masterDeck;
     public CardGroup drawPile;
     public CardGroup hand;
     public CardGroup discardPile;
@@ -83,114 +79,114 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public int damagedThisCombat;
     public int cardsPlayedThisTurn;
     public int attacksPlayedThisTurn;
-    
+
     public AbstractPlayer.PlayerClass chosenClass;
     public AbstractBossDeckArchetype chosenArchetype = null;
 
-    
-	public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
-		super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
-		AbstractCharBoss.finishedSetup = false;
-		this.type = EnemyType.BOSS;
-		this.chosenClass = playerClass;
-		this.energyPanel = new EnemyEnergyPanel(this);
-		this.masterDeck = new EnemyCardGroup(CardGroupType.MASTER_DECK, this);
-		this.drawPile = new EnemyCardGroup(CardGroupType.DRAW_PILE, this);
-		this.discardPile = new EnemyCardGroup(CardGroupType.DISCARD_PILE, this);
-		this.hand = new EnemyCardGroup(CardGroupType.HAND, this);
-		this.exhaustPile = new EnemyCardGroup(CardGroupType.EXHAUST_PILE, this);
-		this.limbo = new EnemyCardGroup(CardGroupType.UNSPECIFIED, this);
-		this.masterHandSize = 5;
-		this.gameHandSize = 5;
-		this.masterMaxOrbs = this.maxOrbs = 0;
-		this.stance = new NeutralStance();
-		this.orbs = new ArrayList<AbstractOrb>();
+
+    public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
+        super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
+        AbstractCharBoss.finishedSetup = false;
+        this.type = EnemyType.BOSS;
+        this.chosenClass = playerClass;
+        this.energyPanel = new EnemyEnergyPanel(this);
+        this.masterDeck = new EnemyCardGroup(CardGroupType.MASTER_DECK, this);
+        this.drawPile = new EnemyCardGroup(CardGroupType.DRAW_PILE, this);
+        this.discardPile = new EnemyCardGroup(CardGroupType.DISCARD_PILE, this);
+        this.hand = new EnemyCardGroup(CardGroupType.HAND, this);
+        this.exhaustPile = new EnemyCardGroup(CardGroupType.EXHAUST_PILE, this);
+        this.limbo = new EnemyCardGroup(CardGroupType.UNSPECIFIED, this);
+        this.masterHandSize = 5;
+        this.gameHandSize = 5;
+        this.masterMaxOrbs = this.maxOrbs = 0;
+        this.stance = new NeutralStance();
+        this.orbs = new ArrayList<AbstractOrb>();
         this.relics = new ArrayList<AbstractCharbossRelic>();
-	}
-	
-	@Override
-	public void init() {
-		AbstractCharBoss.boss = this;
+    }
+
+    @Override
+    public void init() {
+        AbstractCharBoss.boss = this;
         this.setHp(this.maxHealth);
         this.generateAll();
         super.init();
-		this.preBattlePrep();
-		this.chosenArchetype.logger.info("Boss initial HP pre - Act Bonus: " + this.maxHealth);
-        this.chosenArchetype.logger.info("Boss bonus HP: " + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
-		this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
-		AbstractCharBoss.finishedSetup = true;
-	}
-	@Override
-	public void getMove(int num) {
-		this.setMove((byte) 0, Intent.NONE);
-	}
-
-
-
-	public void generateDeck(){
+        this.preBattlePrep();
+        AbstractBossDeckArchetype.logger.info("Boss initial HP pre - Act Bonus: " + this.maxHealth);
+        AbstractBossDeckArchetype.logger.info("Boss bonus HP: " + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
+        this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
+        AbstractCharBoss.finishedSetup = true;
     }
 
-	
-	public void generateAll() {
-		this.generateDeck();
-		for (AbstractCard c : this.masterDeck.group) {
-			((AbstractBossCard)c).owner = this;
-		}
-	}
-	
-	public void usePreBattleAction() {
-		for (AbstractCharbossRelic r : this.relics) {
-			r.atBattleStartPreDraw();
-		}
-		AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
-		for (AbstractCharbossRelic r : this.relics) {
-			r.atBattleStart();
-		}
+    @Override
+    public void getMove(int num) {
+        this.setMove((byte) 0, Intent.NONE);
     }
 
-	@Override
-	public void takeTurn() {
-		this.startTurn();
-		this.makePlay();
-	}
-	
-	public void makePlay() {
-		for (AbstractCard _c : this.hand.group) {
-			AbstractBossCard c = (AbstractBossCard)_c;
-			if (c.canUse(AbstractDungeon.player, this)) {
-				this.useCard(c, this, this.energyPanel.totalCount);
-				this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
-				return;
-			}
-		}
-	}
-	
-	@Override
-	public void update() {
-		super.update();
-		for (AbstractRelic r : this.relics) {
-			r.update();
-		}
-		this.combatUpdate();
-	}
 
-	@Override
-	public void applyEndOfTurnTriggers() {
-		for (final AbstractRelic r : this.relics) {
-			r.onPlayerEndTurn();
-		}
+    public void generateDeck() {
+    }
+
+
+    public void generateAll() {
+        this.generateDeck();
+        for (AbstractCard c : this.masterDeck.group) {
+            ((AbstractBossCard) c).owner = this;
+        }
+    }
+
+    public void usePreBattleAction() {
+        for (AbstractCharbossRelic r : this.relics) {
+            r.atBattleStartPreDraw();
+        }
+        AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
+        for (AbstractCharbossRelic r : this.relics) {
+            r.atBattleStart();
+        }
+    }
+
+    @Override
+    public void takeTurn() {
+        this.startTurn();
+        this.makePlay();
+    }
+
+    public void makePlay() {
+        for (AbstractCard _c : this.hand.group) {
+            AbstractBossCard c = (AbstractBossCard) _c;
+            if (c.canUse(AbstractDungeon.player, this)) {
+                this.useCard(c, this, EnemyEnergyPanel.totalCount);
+                this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
+                return;
+            }
+        }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        for (AbstractRelic r : this.relics) {
+            r.update();
+        }
+        this.combatUpdate();
+    }
+
+    @Override
+    public void applyEndOfTurnTriggers() {
+        for (final AbstractRelic r : this.relics) {
+            r.onPlayerEndTurn();
+        }
         for (final AbstractPower p : this.powers) {
             if (!this.isPlayer) {
                 p.atEndOfTurnPreEndTurnCards(false);
             }
             p.atEndOfTurn(this.isPlayer);
         }
-		AbstractDungeon.actionManager.addToBottom(new EnemyTriggerEndOfTurnOrbActions());
+        AbstractDungeon.actionManager.addToBottom(new EnemyTriggerEndOfTurnOrbActions());
         for (final AbstractCard c : this.hand.group) {
             c.triggerOnEndOfTurnForPlayingCard();
         }
         this.stance.onEndOfTurn();
-        
+
         AbstractDungeon.actionManager.addToBottom(new EnemyDiscardAtEndOfTurnAction());
         for (final AbstractCard c : this.drawPile.group) {
             c.resetAttributes();
@@ -203,26 +199,27 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
     }
-	
-	public void startTurn() {
-		this.cardsPlayedThisTurn = 0;
-		this.attacksPlayedThisTurn = 0;
-		this.energy.recharge();
+
+    public void startTurn() {
+        this.cardsPlayedThisTurn = 0;
+        this.attacksPlayedThisTurn = 0;
+        this.energy.recharge();
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
         this.applyStartOfTurnPowers();
         this.applyStartOfTurnOrbs();
-	}
-	public void endTurnStartTurn() {
-		if (!AbstractDungeon.getCurrRoom().isBattleOver) {
+    }
+
+    public void endTurnStartTurn() {
+        if (!AbstractDungeon.getCurrRoom().isBattleOver) {
             AbstractDungeon.actionManager.addToBottom(new EnemyDrawCardAction(this, this.gameHandSize, true));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
             AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
             this.applyStartOfTurnPostDrawRelics();
             this.applyStartOfTurnPostDrawPowers();
         }
-	}
+    }
 
     public void applyPowers() {
         super.applyPowers();
@@ -230,69 +227,69 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.drawPile.applyPowers();
         this.discardPile.applyPowers();
     }
-    
+
     public void sortHand() {
-    	ArrayList<AbstractBossCard> cardsByValue = new ArrayList<AbstractBossCard>();
-    	ArrayList<AbstractBossCard> affordableCards = new ArrayList<AbstractBossCard>();
-    	ArrayList<AbstractBossCard> unaffordableCards = new ArrayList<AbstractBossCard>();
-    	ArrayList<AbstractCard> sortedCards = new ArrayList<AbstractCard>();
-    	for (AbstractCard _c : this.hand.group) {
-    		AbstractBossCard c = (AbstractBossCard) _c;
-    		if (cardsByValue.size() < 1) {
-    			cardsByValue.add(c);
-    		} else {
-    			boolean gotem = false;
-    			for (int i=0; i < cardsByValue.size(); i++) {
-        			if (cardsByValue.get(i).getValue() < c.getValue() + AbstractDungeon.aiRng.random(0, 4) - 2) {
-        				cardsByValue.add(i, c);
-        				gotem = true;
-        				break;
-        			}
-        		}
-    			if (!gotem) {
-    				cardsByValue.add(c);
-    			}
-    		}
-    	}
-    	int budget = this.energy.energy;
-    	for (int i=0; i < cardsByValue.size(); i++) {
-    		AbstractBossCard c = cardsByValue.get(i);
-    		if (c.costForTurn <= budget && c.costForTurn != -2) {
-    			budget -= c.costForTurn;
-    			affordableCards.add(c);
-    		} else {
-    			unaffordableCards.add(c);
-    		}
-    	}
-    	for (int i=0; i < affordableCards.size(); i++) {
-    		AbstractBossCard c = affordableCards.get(i);
-    		if (sortedCards.size() < 1) {
-    			sortedCards.add(c);
-    		} else {
-    			boolean gotem = false;
-    			for (int j=0; j < sortedCards.size(); j++) {
-        			if (((AbstractBossCard)sortedCards.get(j)).getPriority() < c.getPriority()) {
-        				sortedCards.add(j, c);
-        				gotem = true;
-        				break;
-        			}
-        		}
-    			if (!gotem) {
-    				sortedCards.add(c);
-    			}
-    		}
-    	}
-    	for (AbstractBossCard c : unaffordableCards) {
-    		sortedCards.add(c);
-    	}
-    	this.hand.group = sortedCards;
-    	this.hand.refreshHandLayout();
+        ArrayList<AbstractBossCard> cardsByValue = new ArrayList<AbstractBossCard>();
+        ArrayList<AbstractBossCard> affordableCards = new ArrayList<AbstractBossCard>();
+        ArrayList<AbstractBossCard> unaffordableCards = new ArrayList<AbstractBossCard>();
+        ArrayList<AbstractCard> sortedCards = new ArrayList<AbstractCard>();
+        for (AbstractCard _c : this.hand.group) {
+            AbstractBossCard c = (AbstractBossCard) _c;
+            if (cardsByValue.size() < 1) {
+                cardsByValue.add(c);
+            } else {
+                boolean gotem = false;
+                for (int i = 0; i < cardsByValue.size(); i++) {
+                    if (cardsByValue.get(i).getValue() < c.getValue() + AbstractDungeon.aiRng.random(0, 4) - 2) {
+                        cardsByValue.add(i, c);
+                        gotem = true;
+                        break;
+                    }
+                }
+                if (!gotem) {
+                    cardsByValue.add(c);
+                }
+            }
+        }
+        int budget = this.energy.energy;
+        for (int i = 0; i < cardsByValue.size(); i++) {
+            AbstractBossCard c = cardsByValue.get(i);
+            if (c.costForTurn <= budget && c.costForTurn != -2) {
+                budget -= c.costForTurn;
+                affordableCards.add(c);
+            } else {
+                unaffordableCards.add(c);
+            }
+        }
+        for (int i = 0; i < affordableCards.size(); i++) {
+            AbstractBossCard c = affordableCards.get(i);
+            if (sortedCards.size() < 1) {
+                sortedCards.add(c);
+            } else {
+                boolean gotem = false;
+                for (int j = 0; j < sortedCards.size(); j++) {
+                    if (((AbstractBossCard) sortedCards.get(j)).getPriority() < c.getPriority()) {
+                        sortedCards.add(j, c);
+                        gotem = true;
+                        break;
+                    }
+                }
+                if (!gotem) {
+                    sortedCards.add(c);
+                }
+            }
+        }
+        for (AbstractBossCard c : unaffordableCards) {
+            sortedCards.add(c);
+        }
+        this.hand.group = sortedCards;
+        this.hand.refreshHandLayout();
     }
-	
-	/////////////////////////////////////////////////////////////////////////////
-	////////////[[[[[[[[PLAYER-MIMICING FUNCTIONS]]]]]]]]////////////////////////
-	/////////////////////////////////////////////////////////////////////////////
-	public boolean hasRelic(final String targetID) {
+
+    /////////////////////////////////////////////////////////////////////////////
+    ////////////[[[[[[[[PLAYER-MIMICING FUNCTIONS]]]]]]]]////////////////////////
+    /////////////////////////////////////////////////////////////////////////////
+    public boolean hasRelic(final String targetID) {
         for (final AbstractRelic r : this.relics) {
             if (r.relicId.equals(targetID)) {
                 return true;
@@ -300,8 +297,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         return false;
     }
-	
-	public AbstractRelic getRelic(final String targetID) {
+
+    public AbstractRelic getRelic(final String targetID) {
         for (final AbstractRelic r : this.relics) {
             if (r.relicId.equals(targetID)) {
                 return r;
@@ -309,16 +306,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         return null;
     }
-	
-	public void gainEnergy(final int e) {
+
+    public void gainEnergy(final int e) {
         EnemyEnergyPanel.addEnergy(e);
         this.hand.glowCheck();
     }
-    
+
     public void loseEnergy(final int e) {
-    	EnemyEnergyPanel.useEnergy(e);
+        EnemyEnergyPanel.useEnergy(e);
     }
-    
+
     public void draw() {
         if (this.hand.size() == 10) {
             //this.createHandIsFullDialog();
@@ -351,6 +348,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
+
     public void onCardDrawOrDiscard() {
         for (final AbstractPower p : this.powers) {
             p.onDrawOrDiscard();
@@ -368,15 +366,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.hand.applyPowers();
         this.hand.glowCheck();
     }
+
     public void useCard(final AbstractCard c, AbstractMonster monster, final int energyOnUse) {
-    	if (monster == null) {
-    		monster = this;
-    	}
+        if (monster == null) {
+            monster = this;
+        }
         if (c.type == AbstractCard.CardType.ATTACK) {
-        	this.attacksPlayedThisTurn++;
+            this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();
         }
-    	this.cardsPlayedThisTurn++;
+        this.cardsPlayedThisTurn++;
         c.calculateCardDamage(monster);
         if (c.cost == -1 && EnemyEnergyPanel.totalCount < energyOnUse && !c.ignoreEnergyOnUse) {
             c.energyOnUse = EnemyEnergyPanel.totalCount;
@@ -391,12 +390,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.hand.removeCard(c);
         this.cardInUse = c;
-        c.target_x = (float)(Settings.WIDTH / 2);
-        c.target_y = (float)(Settings.HEIGHT / 2);
+        c.target_x = (float) (Settings.WIDTH / 2);
+        c.target_y = (float) (Settings.HEIGHT / 2);
         if (c.costForTurn > 0 && !c.freeToPlay() && !c.isInAutoplay && (!this.hasPower("Corruption") || c.type != AbstractCard.CardType.SKILL)) {
             this.energy.use(c.costForTurn);
         }
     }
+
     public void combatUpdate() {
         if (this.cardInUse != null) {
             this.cardInUse.update();
@@ -416,7 +416,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.stance.update();
     }
-    
+
 
     @Override
     public void damage(final DamageInfo info) {
@@ -502,7 +502,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 for (final AbstractRelic r : this.relics) {
                     r.onLoseHp(damageAmount);
                 }
-            	if (info.owner != this) {
+                if (info.owner != this) {
                     this.useStaggerAnimation();
                 }
                 if (damageAmount >= 99 && !CardCrawlGame.overkill) {
@@ -528,7 +528,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
             if (this.currentHealth < 1) {
                 if (!this.hasRelic("Mark of the Bloom")) {
-                    if (this.hasRelic("Lizard Tail") && ((LizardTail)this.getRelic("Lizard Tail")).counter == -1) {
+                    if (this.hasRelic("Lizard Tail") && ((LizardTail) this.getRelic("Lizard Tail")).counter == -1) {
                         this.currentHealth = 0;
                         this.getRelic("Lizard Tail").onTrigger();
                         return;
@@ -546,29 +546,26 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     AbstractDungeon.effectList.add(new HbBlockBrokenEffect(this.hb.cX - this.hb.width / 2.0f + AbstractMonster.BLOCK_ICON_X, this.hb.cY - this.hb.height / 2.0f + AbstractMonster.BLOCK_ICON_Y));
                 }
             }
-        }
-        else if (!probablyInstantKill) {
+        } else if (!probablyInstantKill) {
             if (weakenedToZero && this.currentBlock == 0) {
                 if (hadBlock) {
                     AbstractDungeon.effectList.add(new BlockedWordEffect(this, this.hb.cX, this.hb.cY, AbstractMonster.TEXT[30]));
-                }
-                else {
+                } else {
                     AbstractDungeon.effectList.add(new StrikeEffect(this, this.hb.cX, this.hb.cY, 0));
                 }
-            }
-            else if (Settings.SHOW_DMG_BLOCK) {
+            } else if (Settings.SHOW_DMG_BLOCK) {
                 AbstractDungeon.effectList.add(new BlockedWordEffect(this, this.hb.cX, this.hb.cY, AbstractMonster.TEXT[30]));
             }
         }
     }
-    
+
     @Override
     public void die() {
-    	super.die();
+        super.die();
         AbstractCharBoss.boss = null;
-		AbstractCharBoss.finishedSetup = false;
+        AbstractCharBoss.finishedSetup = false;
     }
-    
+
     private void updateCardsOnDamage() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             for (final AbstractCard c : this.hand.group) {
@@ -582,7 +579,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void updateCardsOnDiscard() {
         for (final AbstractCard c : this.hand.group) {
             c.didDiscard();
@@ -594,13 +591,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.didDiscard();
         }
     }
-    
+
     @Override
     public void heal(final int healAmount) {
-    	int amt = healAmount;
-    	for (final AbstractRelic r : this.relics) {
+        int amt = healAmount;
+        for (final AbstractRelic r : this.relics) {
             amt = r.onPlayerHeal(amt);
-        } 
+        }
         super.heal(amt);
         if (this.currentHealth > this.maxHealth / 2.0f && this.isBloodied) {
             this.isBloodied = false;
@@ -609,6 +606,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
+
     public void preBattlePrep() {
         this.damagedThisCombat = 0;
         this.cardsPlayedThisTurn = 0;
@@ -626,14 +624,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.discardPile.clear();
         this.exhaustPile.clear();
         if (this.hasRelic("SlaversCollar")) {
-            ((SlaversCollar)this.getRelic("SlaversCollar")).beforeEnergyPrep();
+            ((SlaversCollar) this.getRelic("SlaversCollar")).beforeEnergyPrep();
         }
         this.energy.prep();
         this.powers.clear();
         this.healthBarUpdatedEvent();
         this.applyPreCombatLogic();
     }
-    
+
     public ArrayList<String> getRelicNames() {
         final ArrayList<String> arr = new ArrayList<String>();
         for (final AbstractRelic relic : this.relics) {
@@ -641,7 +639,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         return arr;
     }
-    
+
     public void applyPreCombatLogic() {
         for (final AbstractRelic r : this.relics) {
             if (r != null) {
@@ -649,7 +647,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void applyStartOfCombatLogic() {
         for (final AbstractRelic r : this.relics) {
             if (r != null) {
@@ -657,7 +655,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void applyStartOfCombatPreDrawLogic() {
         for (final AbstractRelic r : this.relics) {
             if (r != null) {
@@ -665,7 +663,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void applyStartOfTurnRelics() {
         this.stance.atStartOfTurn();
         for (final AbstractRelic r : this.relics) {
@@ -674,7 +672,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void applyStartOfTurnPostDrawRelics() {
         for (final AbstractRelic r : this.relics) {
             if (r != null) {
@@ -682,7 +680,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void applyStartOfTurnPreDrawCards() {
         for (final AbstractCard c : this.hand.group) {
             if (c != null) {
@@ -690,7 +688,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void applyStartOfTurnCards() {
         for (final AbstractCard c : this.drawPile.group) {
             if (c != null) {
@@ -708,7 +706,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public boolean relicsDoneAnimating() {
         for (final AbstractRelic r : this.relics) {
             if (!r.isDone) {
@@ -717,7 +715,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         return true;
     }
-    
+
     public void switchedStance() {
         for (final AbstractCard c : this.hand.group) {
             c.switchedStance();
@@ -729,14 +727,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.switchedStance();
         }
     }
-    
+
     public void onStanceChange(final String id) {
     }
-    
+
     public void addBlock(final int blockAmount) {
-        float tmp = (float)blockAmount;
+        float tmp = (float) blockAmount;
         for (final AbstractRelic r : this.relics) {
-            tmp = (float)r.onPlayerGainedBlock(tmp);
+            tmp = (float) r.onPlayerGainedBlock(tmp);
         }
         if (tmp > 0.0f) {
             for (final AbstractPower p : this.powers) {
@@ -748,7 +746,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     ///////////////////////////////////////
     ///////////[ORBS]//////////////////////
     ///////////////////////////////////////
-    
+
 
     public void triggerEvokeAnimation(final int slot) {
         if (this.maxOrbs <= 0) {
@@ -756,7 +754,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.orbs.get(slot).triggerEvokeAnimation();
     }
-    
+
     public void evokeOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
             this.orbs.get(0).onEvoke();
@@ -770,19 +768,19 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public void evokeNewestOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(this.orbs.size() - 1) instanceof EnemyEmptyOrbSlot)) {
             this.orbs.get(this.orbs.size() - 1).onEvoke();
         }
     }
-    
+
     public void evokeWithoutLosingOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
             this.orbs.get(0).onEvoke();
         }
     }
-    
+
     public void removeNextOrb() {
         if (!this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot)) {
             final AbstractOrb orbSlot = new EnemyEmptyOrbSlot(this.orbs.get(0).cX, this.orbs.get(0).cY);
@@ -795,7 +793,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
+
     public boolean hasEmptyOrb() {
         if (this.orbs.isEmpty()) {
             return false;
@@ -807,11 +805,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         return false;
     }
-    
+
     public boolean hasOrb() {
         return !this.orbs.isEmpty() && !(this.orbs.get(0) instanceof EnemyEmptyOrbSlot);
     }
-    
+
     public int filledOrbCount() {
         int orbCount = 0;
         for (final AbstractOrb o : this.orbs) {
@@ -821,7 +819,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         return orbCount;
     }
-    
+
     public void channelOrb(AbstractOrb orbToSet) {
         if (this.maxOrbs <= 0) {
             AbstractDungeon.effectList.add(new ThoughtBubble(this.dialogX, this.dialogY, 3.0f, AbstractPlayer.MSG[4], true));
@@ -850,15 +848,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.orbsChanneledThisCombat.add(orbToSet);
                 AbstractDungeon.actionManager.orbsChanneledThisTurn.add(orbToSet);
                 orbToSet.applyFocus();
-            }
-            else {
+            } else {
                 AbstractDungeon.actionManager.addToTop(new EnemyChannelAction(orbToSet));
                 AbstractDungeon.actionManager.addToTop(new EnemyEvokeOrbAction(1));
                 AbstractDungeon.actionManager.addToTop(new EnemyAnimateOrbAction(1));
             }
         }
     }
-    
+
     public void increaseMaxOrbSlots(final int amount, final boolean playSfx) {
         if (this.maxOrbs == 10) {
             AbstractDungeon.effectList.add(new ThoughtBubble(this.dialogX, this.dialogY, 3.0f, AbstractPlayer.MSG[3], true));
@@ -875,7 +872,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.orbs.get(i).setSlot(i, this.maxOrbs);
         }
     }
-    
+
     public void decreaseMaxOrbSlots(final int amount) {
         if (this.maxOrbs <= 0) {
             return;
@@ -891,7 +888,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.orbs.get(i).setSlot(i, this.maxOrbs);
         }
     }
-    
+
     public void applyStartOfTurnOrbs() {
         if (!this.orbs.isEmpty()) {
             for (final AbstractOrb o : this.orbs) {
@@ -902,19 +899,19 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-    
-    
-	/////////////////////////////////////////////////////////////////////////////
-	////////////[[[[[[[[THE ALMIGHTY RENDERING]]]]]]]]///////////////////////////
-	/////////////////////////////////////////////////////////////////////////////
+
+
+    /////////////////////////////////////////////////////////////////////////////
+    ////////////[[[[[[[[THE ALMIGHTY RENDERING]]]]]]]]///////////////////////////
+    /////////////////////////////////////////////////////////////////////////////
     @Override
     public void render(final SpriteBatch sb) {
-    	super.render(sb);
-    	this.renderHand(sb);
-    	for (AbstractRelic r : this.relics) {
-    		r.render(sb);
-    	}
-    	this.energyPanel.render(sb);
+        super.render(sb);
+        this.renderHand(sb);
+        for (AbstractRelic r : this.relics) {
+            r.render(sb);
+        }
+        this.energyPanel.render(sb);
     }
 
     public void renderHand(final SpriteBatch sb) {
@@ -959,7 +956,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         else {
             this.hand.renderHand(sb, this.cardInUse);
         }*/
-    	this.hand.renderHand(sb, this.cardInUse);
+        this.hand.renderHand(sb, this.cardInUse);
         if (this.cardInUse != null && AbstractDungeon.screen != AbstractDungeon.CurrentScreen.HAND_SELECT && !PeekButton.isPeeking) {
             this.cardInUse.render(sb);
             if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
@@ -969,7 +966,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.limbo.render(sb);
     }
-    
-    
+
 
 }

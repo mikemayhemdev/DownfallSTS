@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.ui.buttons.CancelButton;
 import guardian.GuardianMod;
+import guardian.vfx.SocketGemEffect;
 
 @SpirePatch(clz = CancelButton.class, method = "update")
 public class SocketGemGridPatchCancelAction {
@@ -17,7 +18,7 @@ public class SocketGemGridPatchCancelAction {
     public static void Prefix(CancelButton obj) {
         if (!obj.isHidden) {
             obj.hb.update();
-            if (obj.hb.clicked || (InputHelper.pressedEscape || CInputActionSet.cancel.isJustPressed()) && obj.current_x != obj.HIDE_X) {
+            if (obj.hb.clicked || (InputHelper.pressedEscape || CInputActionSet.cancel.isJustPressed()) && obj.current_x != CancelButton.HIDE_X) {
 
                 if (AbstractDungeon.screen == AbstractDungeon.CurrentScreen.GRID && GuardianMod.gridScreenForSockets) {
                     if (!AbstractDungeon.gridSelectScreen.confirmScreenUp) {
@@ -31,7 +32,7 @@ public class SocketGemGridPatchCancelAction {
                         GuardianMod.gridScreenForGems = true;
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
-                        AbstractDungeon.gridSelectScreen.open(gemCards, 1, GuardianMod.currSocketGemEffect.TEXT[3], false, false, true, false);
+                        AbstractDungeon.gridSelectScreen.open(gemCards, 1, SocketGemEffect.TEXT[3], false, false, true, false);
 
                     }
 

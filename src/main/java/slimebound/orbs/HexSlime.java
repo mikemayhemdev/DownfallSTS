@@ -6,19 +6,13 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
-import slimebound.powers.PotencyPower;
-import slimebound.vfx.SearEffect;
 import slimebound.vfx.SlimeFlareEffect;
 
 
@@ -40,7 +34,7 @@ public class HexSlime
 
 
     public HexSlime() {
-        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false,3, 0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        super(ID, new Color(.65F, .65F, 1.0F, 100F), atlasString, skeletonString, true, false, 3, 0, false, new Color(.36F, .55F, .85F, 1), SlimeFlareEffect.OrbFlareColor.HEX, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
         this.x = (x * Settings.scale + (5F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.y = (y * Settings.scale + (-30F + MathUtils.random(-10.0F, 10.0F) * Settings.scale));
         this.color = Color.CHARTREUSE.cpy();

@@ -2,14 +2,7 @@ package evilWithin.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import evilWithin.EvilWithinMod;
-
-import java.util.ArrayList;
 
 public class GremlinWheel extends CustomRelic {
 
@@ -24,7 +17,7 @@ public class GremlinWheel extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-      return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0];
     }
 
     public void setCounter(int setCounter) {

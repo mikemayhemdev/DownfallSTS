@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import evilWithin.cards.KnowingSkullWish;
 import expansioncontent.cards.OctoChoiceCard;
-import expansioncontent.cards.QuickStudy;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 

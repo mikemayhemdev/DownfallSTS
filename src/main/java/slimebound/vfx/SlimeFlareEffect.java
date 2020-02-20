@@ -115,10 +115,10 @@ public class SlimeFlareEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEff
                 MathUtils.random(-1.0F, 1.0F));
     }
 
-    public static enum OrbFlareColor {
+    public enum OrbFlareColor {
         POISON, AGGRESSIVE, SLIMING, LICKING, HEX, CULTIST, TORCHHEAD, BRONZE;
 
-        private OrbFlareColor() {
+        OrbFlareColor() {
         }
     }
 }

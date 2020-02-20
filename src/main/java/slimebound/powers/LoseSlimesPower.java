@@ -43,7 +43,7 @@ public class LoseSlimesPower extends AbstractPower {
         this.type = POWER_TYPE;
 
         this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
@@ -74,7 +74,7 @@ public class LoseSlimesPower extends AbstractPower {
 
         if (this.amount <= 1) {
 
-            this.naturalclear = true;
+            naturalclear = true;
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, LoseSlimesPower.POWER_ID));
             killSlimes();
         } else {

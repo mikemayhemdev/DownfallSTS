@@ -24,7 +24,7 @@ public class TorchHeadSlime
 
     public TorchHeadSlime() {
 
-        super(ID, new Color(1.0F, 1.0F, 1.0F, 100F), atlasString, skeletonString, true, true,6, 0, true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("slimeboundResources/SlimeboundImages/orbs/5.png"));
+        super(ID, new Color(1.0F, 1.0F, 1.0F, 100F), atlasString, skeletonString, true, true, 6, 0, true, new Color(.65F, .65F, .57F, 1), SlimeFlareEffect.OrbFlareColor.TORCHHEAD, new Texture("slimeboundResources/SlimeboundImages/orbs/5.png"));
         spawnVFX();
     }
 

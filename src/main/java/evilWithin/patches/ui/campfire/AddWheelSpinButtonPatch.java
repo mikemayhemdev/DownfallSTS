@@ -7,11 +7,6 @@ import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import evilWithin.relics.GremlinWheel;
 import evilWithin.ui.campfire.WheelSpinButton;
-import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
-import guardian.relics.PickAxe;
-import guardian.ui.EnhanceBonfireOption;
-import guardian.ui.FindGemsOption;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;

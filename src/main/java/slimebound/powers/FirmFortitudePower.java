@@ -32,7 +32,7 @@ public class FirmFortitudePower extends TwoAmountPower {
 
         this.type = POWER_TYPE;
 
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         this.amount2 = this.amount;

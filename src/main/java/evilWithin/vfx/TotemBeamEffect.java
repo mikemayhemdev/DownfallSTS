@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class TotemBeamEffect extends AbstractGameEffect {
+    private static final float DUR = 0.5F;
+    private static AtlasRegion img;
     private float sX;
     private float sY;
     private float sX2;
@@ -20,8 +22,6 @@ public class TotemBeamEffect extends AbstractGameEffect {
     private float dY;
     private float dst;
     private float dst2;
-    private static final float DUR = 0.5F;
-    private static AtlasRegion img;
 
     public TotemBeamEffect(float sX, float sY, float dX, float dY, Color color, float sX2, float sY2) {
         if (img == null) {
@@ -62,8 +62,8 @@ public class TotemBeamEffect extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setBlendFunction(770, 1);
         sb.setColor(this.color);
-        sb.draw(img, this.sX2, this.sY2 - (float)img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float)img.packedHeight / 2.0F, this.dst2, 50.0F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale, this.rotation);
-        sb.draw(img, this.sX, this.sY - (float)img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float)img.packedHeight / 2.0F, this.dst, 50.0F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale, this.rotation);
+        sb.draw(img, this.sX2, this.sY2 - (float) img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float) img.packedHeight / 2.0F, this.dst2, 50.0F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale, this.rotation);
+        sb.draw(img, this.sX, this.sY - (float) img.packedHeight / 2.0F + 10.0F * Settings.scale, 0.0F, (float) img.packedHeight / 2.0F, this.dst, 50.0F, this.scale + MathUtils.random(-0.01F, 0.01F), this.scale, this.rotation);
         sb.setBlendFunction(770, 771);
 
     }

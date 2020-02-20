@@ -26,7 +26,7 @@ public class MultiBoostPower extends AbstractGuardianPower {
         this.setImage("Orbwalk84.png", "Orbwalk32.png");
         this.type = POWER_TYPE;
         this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         updateDescription();

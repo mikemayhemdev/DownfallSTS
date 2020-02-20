@@ -2,7 +2,6 @@ package slimebound.cards;
 
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,13 +14,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.PreventSlimeDecayPower;
-import sneckomod.TheSnecko;
 
 import java.util.ArrayList;
-
-import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.CURSE;
-import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.STATUS;
 
 
 public class Nibble extends AbstractSlimeboundCard {

@@ -7,37 +7,36 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import evilWithin.EvilWithinMod;
 import evilWithin.powers.DrawReductionPowerPlus;
 import evilWithin.vfx.TotemBeamEffect;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class ForgetfulTotem extends AbstractTotemMonster {
     public static final String ID = EvilWithinMod.makeID("ForgetfulTotem");
-    private static final MonsterStrings monsterStrings;
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
-    public Integer attackDmg;
+    private static final MonsterStrings monsterStrings;
+    public static Color totemColor = Color.GREEN;
 
+    static {
+        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
+        NAME = monsterStrings.NAME;
+        MOVES = monsterStrings.MOVES;
+        DIALOG = monsterStrings.DIALOG;
+
+    }
+
+    public Integer attackDmg;
     public Integer secondaryEffect;
 
-    public static Color totemColor = Color.GREEN;
 
     public ForgetfulTotem() {
         super(NAME, ID, EvilWithinMod.assetPath("images/monsters/totemgreen.png"));
@@ -64,7 +63,6 @@ public class ForgetfulTotem extends AbstractTotemMonster {
 
     }
 
-
     @Override
     public void totemAttack() {
         // AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
@@ -77,18 +75,9 @@ public class ForgetfulTotem extends AbstractTotemMonster {
 
     }
 
-    public void getUniqueTotemMove() {this.setMove((byte)1, intentType, this.attackDmg);
+    public void getUniqueTotemMove() {
+        this.setMove((byte) 1, intentType, this.attackDmg);
     }
-
-    static {
-        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
-        NAME = monsterStrings.NAME;
-        MOVES = monsterStrings.MOVES;
-        DIALOG = monsterStrings.DIALOG;
-
-    }
-
-
 
 
 }

@@ -32,28 +32,43 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.monsters.exordium.GremlinThief;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinWarrior;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import java.util.Objects;
-
-import evilWithin.relics.GremlinSack;
 import evilWithin.relics.GremlinWheel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 
+import java.util.Objects;
+
 public class GremlinWheelGame_Evil extends AbstractImageEvent {
-    private static final Logger logger = LogManager.getLogger(GremlinWheelGame_Evil.class.getName());
     public static final String ID = "evilWithin:GremlinWheelGame";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String INTRO_DIALOG;
+    private static final Logger logger = LogManager.getLogger(GremlinWheelGame_Evil.class.getName());
+    private static final EventStrings eventStrings;
+    private static final float START_Y;
+    private static final float TARGET_Y;
+    private static final int WHEEL_W = 1024;
+    private static final int ARROW_W = 512;
+    private static final float ARROW_OFFSET_X;
+    private static final float A_2_HP_LOSS = 0.15F;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        INTRO_DIALOG = DESCRIPTIONS[0];
+        START_Y = Settings.OPTION_Y + 1000.0F * Settings.scale;
+        TARGET_Y = Settings.OPTION_Y;
+        ARROW_OFFSET_X = 300.0F * Settings.scale;
+    }
+
     private GremlinWheelGame_Evil.CUR_SCREEN screen;
     private int result;
     private float resultAngle;
@@ -72,17 +87,11 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     private Texture wheelImg;
     private Texture arrowImg;
     private Texture buttonImg;
-    private static final float START_Y;
-    private static final float TARGET_Y;
     private float imgX;
     private float imgY;
     private float wheelAngle;
-    private static final int WHEEL_W = 1024;
-    private static final int ARROW_W = 512;
-    private static final float ARROW_OFFSET_X;
     private Color color;
     private float hpLossPercent;
-    private static final float A_2_HP_LOSS = 0.15F;
     private boolean secondSpin;
     private boolean threatened;
     private boolean threatened2;
@@ -101,7 +110,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
         this.purgeResult = false;
         this.buttonPressed = false;
         this.buttonHb = new Hitbox(450.0F * Settings.scale, 300.0F * Settings.scale);
-        this.imgX = (float)Settings.WIDTH / 2.0F;
+        this.imgX = (float) Settings.WIDTH / 2.0F;
         this.imgY = START_Y;
         this.wheelAngle = 0.0F;
         this.color = new Color(1.0F, 1.0F, 1.0F, 0.0F);
@@ -213,7 +222,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     }
 
     private void preApplyResult() {
-        switch(this.result) {
+        switch (this.result) {
             case 0:
                 this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                 this.imageEventText.setDialogOption(OPTIONS[1]);
@@ -237,10 +246,10 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 break;
             default:
                 this.imageEventText.updateBodyText(DESCRIPTIONS[6]);
-                this.imageEventText.setDialogOption(OPTIONS[6] + (int)((float)AbstractDungeon.player.maxHealth * this.hpLossPercent) + OPTIONS[7]);
+                this.imageEventText.setDialogOption(OPTIONS[6] + (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent) + OPTIONS[7]);
                 this.color = new Color(0.5F, 0.5F, 0.5F, 1.0F);
         }
-        if ( this.screen == CUR_SCREEN.POSTSPIN1){
+        if (this.screen == CUR_SCREEN.POSTSPIN1) {
             this.imageEventText.setDialogOption(OPTIONS[10]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[11]);
@@ -251,12 +260,12 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
         SlimeboundMod.logger.info(this.screen);
 
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
                     GenericEventDialog.hide();
                     this.result = AbstractDungeon.miscRng.random(0, 5);
-                    this.resultAngle = (float)this.result * 60.0F + MathUtils.random(-10.0F, 10.0F);
+                    this.resultAngle = (float) this.result * 60.0F + MathUtils.random(-10.0F, 10.0F);
                     this.wheelAngle = 0.0F;
                     this.startSpin = true;
                     this.bounceTimer = 2.0F;
@@ -268,7 +277,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
             case POSTSPIN1:
                 if (buttonPressed == 0) {
                     this.applyResult();
-                    if (this.goldchosen){
+                    if (this.goldchosen) {
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmount));
                         AbstractDungeon.player.gainGold(this.goldAmount);
                     }
@@ -278,7 +287,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                     break;
                 }
                 if (buttonPressed == 1) {
-                    if (!this.threatened){
+                    if (!this.threatened) {
                         this.imageEventText.updateDialogOption(1, OPTIONS[11]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[8]);
                         this.threatened = true;
@@ -315,7 +324,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
     }
 
     private void applyResult() {
-        switch(this.result) {
+        switch (this.result) {
             case 0:
                 this.hasFocus = false;
                 logMetricGainGold("Wheel of Change", "Gold", this.goldAmount);
@@ -336,7 +345,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
             case 3:
                 AbstractCard curse = new Decay();
                 logMetricObtainCard("Wheel of Change", "Cursed", curse);
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                 this.hasFocus = false;
                 break;
             case 4:
@@ -350,8 +359,8 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
                 this.imageEventText.updateBodyText(DESCRIPTIONS[7]);
                 CardCrawlGame.sound.play("ATTACK_DAGGER_6");
                 CardCrawlGame.sound.play("BLOOD_SPLAT");
-                int damageAmount = (int)((float)AbstractDungeon.player.maxHealth * this.hpLossPercent);
-                AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, damageAmount, DamageType.HP_LOSS));
+                int damageAmount = (int) ((float) AbstractDungeon.player.maxHealth * this.hpLossPercent);
+                AbstractDungeon.player.damage(new DamageInfo(null, damageAmount, DamageType.HP_LOSS));
                 logMetricTakeDamage("Wheel of Change", "Damaged", damageAmount);
         }
 
@@ -359,7 +368,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
 
     private void purgeLogic() {
         if (this.purgeResult && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             logMetricCardRemoval("Wheel of Change", "Card Removal", c);
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.effectList.add(new PurgeCardEffect(c));
@@ -388,7 +397,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
         if (this.buttonHb.hovered) {
             sb.setColor(1.0F, 1.0F, 1.0F, 0.25F);
         } else {
-            sb.setColor(new Color(1.0F, 1.0F, 1.0F, (MathUtils.cosDeg((float)(System.currentTimeMillis() / 5L % 360L)) + 1.25F) / 3.5F));
+            sb.setColor(new Color(1.0F, 1.0F, 1.0F, (MathUtils.cosDeg((float) (System.currentTimeMillis() / 5L % 360L)) + 1.25F) / 3.5F));
         }
 
         if (this.buttonHb.hovered) {
@@ -417,18 +426,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        INTRO_DIALOG = DESCRIPTIONS[0];
-        START_Y = Settings.OPTION_Y + 1000.0F * Settings.scale;
-        TARGET_Y = Settings.OPTION_Y;
-        ARROW_OFFSET_X = 300.0F * Settings.scale;
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         LEAVE,
         POSTSPIN1,
@@ -436,7 +434,7 @@ public class GremlinWheelGame_Evil extends AbstractImageEvent {
         FIGHT,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

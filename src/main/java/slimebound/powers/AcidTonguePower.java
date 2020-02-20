@@ -40,7 +40,7 @@ public class AcidTonguePower extends AbstractPower {
         this.type = POWER_TYPE;
 
         this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 

@@ -7,10 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.EvolvePower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import slimebound.characters.SlimeboundCharacter;
-import slimebound.powers.AcidTonguePowerUpgraded;
 
 public class StickyStick extends CustomRelic {
     public static final String ID = "Slimebound:StickyStick";
@@ -36,6 +33,7 @@ public class StickyStick extends CustomRelic {
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EvolvePower(AbstractDungeon.player, 1), 1));// 25
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 31
     }// 32
+
     @Override
     public AbstractRelic makeCopy() {
         return new StickyStick();

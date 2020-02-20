@@ -42,7 +42,6 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
         this.duration -= Gdx.graphics.getDeltaTime();
         this.card.update();
 
-        ;
         if (this.duration < 1.1F) {
             if (!glowStartHit) {
                 this.card.beginGlowing();

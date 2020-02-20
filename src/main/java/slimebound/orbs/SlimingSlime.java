@@ -18,7 +18,7 @@ public class SlimingSlime
     public static final String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
 
     public SlimingSlime() {
-        super(ID, new Color(1.0F, .5F, 1.0F, 100F), atlasString, skeletonString,  false, true, 2, 0, true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("slimeboundResources/SlimeboundImages/orbs/debuff2.png"));
+        super(ID, new Color(1.0F, .5F, 1.0F, 100F), atlasString, skeletonString, false, true, 2, 0, true, new Color(.6F, .47F, .59F, 1), SlimeFlareEffect.OrbFlareColor.SLIMING, new Texture("slimeboundResources/SlimeboundImages/orbs/debuff2.png"));
         this.extraFontColor = new Color(.7F, .3F, .7F, 1F);
         this.debuffAmount = 2;
 

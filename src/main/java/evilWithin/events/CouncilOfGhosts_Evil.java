@@ -9,37 +9,51 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class CouncilOfGhosts_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:Ghosts";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSALT;
     public static final String[] OPTIONSALT;
+    private static final EventStrings eventStrings;
     private static final String INTRO_BODY_M;
     private static final String ACCEPT_BODY;
     private static final String EXIT_BODY;
     private static final float HP_DRAIN = 0.5F;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Ghosts");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+        INTRO_BODY_M = DESCRIPTIONS[0];
+        ACCEPT_BODY = DESCRIPTIONS[2];
+        EXIT_BODY = DESCRIPTIONS[3];
+    }
+
     private int screenNum = 0;
     private int hpLoss = 0;
     private int goldCost = 200;
 
     public CouncilOfGhosts_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/ghost.jpg");
-        this.hpLoss = MathUtils.ceil((float)AbstractDungeon.player.maxHealth * 0.5F);
+        this.hpLoss = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.5F);
         if (this.hpLoss >= AbstractDungeon.player.maxHealth) {
             this.hpLoss = AbstractDungeon.player.maxHealth - 1;
         }
 
 
-        if (AbstractDungeon.player.gold >= goldCost){
+        if (AbstractDungeon.player.gold >= goldCost) {
             this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1], new Apparition());
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[2] + this.goldCost + OPTIONSALT[3],true);
+            this.imageEventText.setDialogOption(OPTIONSALT[2] + this.goldCost + OPTIONSALT[3], true);
 
         }
 
@@ -61,12 +75,12 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Apparition(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Apparition(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         this.screenNum = 1;
                         AbstractDungeon.player.loseGold(150);
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);
@@ -101,24 +115,12 @@ public class CouncilOfGhosts_Evil extends AbstractImageEvent {
             amount -= 2;
         }
 
-        for(int i = 0; i < amount; ++i) {
+        for (int i = 0; i < amount; ++i) {
             AbstractCard c = new Apparition();
             cards.add(c.cardID);
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
         }
 
         logMetricObtainCardsLoseMapHP("Ghosts", "Became a Ghost", cards, this.hpLoss);
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Ghosts");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-        INTRO_BODY_M = DESCRIPTIONS[0];
-        ACCEPT_BODY = DESCRIPTIONS[2];
-        EXIT_BODY = DESCRIPTIONS[3];
     }
 }

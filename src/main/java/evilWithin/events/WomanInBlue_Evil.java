@@ -29,11 +29,20 @@ import java.util.Collections;
 
 public class WomanInBlue_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:WomanInBlue";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_1;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+    }
+
     private WomanInBlue_Evil.CurScreen screen;
 
     public WomanInBlue_Evil() {
@@ -86,7 +95,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                             CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.MED, false);
                             CardCrawlGame.sound.play("BLUNT_FAST");
-                            AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F), DamageType.HP_LOSS));
+                            AbstractDungeon.player.damage(new DamageInfo(null, MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.05F), DamageType.HP_LOSS));
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         }
@@ -108,22 +117,13 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
 
     }
 
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-    }
-
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         RESULT,
         FIGHT;
 
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

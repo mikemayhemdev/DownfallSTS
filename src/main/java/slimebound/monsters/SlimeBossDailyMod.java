@@ -90,14 +90,14 @@ public class SlimeBossDailyMod extends SlimeBoss {
                 AbstractDungeon.actionManager.addToBottom(new AnimateJumpAction(this));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.1F, 1.0F, 0.1F, 0.0F))));
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.8F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(1), AttackEffect.POISON));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AttackEffect.POISON));
                 this.setMove(STICKY_NAME, (byte) 4, Intent.STRONG_DEBUFF);
                 break;
             case 2:
                 this.playSfx();
                 AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[0], 1.0F, 2.0F));
                 AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.3F, ShakeDur.LONG, ShakeIntensity.LOW));
-                this.setMove(SLAM_NAME, (byte) 1, Intent.ATTACK, ((DamageInfo) this.damage.get(1)).base);
+                this.setMove(SLAM_NAME, (byte) 1, Intent.ATTACK, this.damage.get(1).base);
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new CannotLoseAction());

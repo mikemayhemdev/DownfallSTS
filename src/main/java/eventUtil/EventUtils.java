@@ -107,7 +107,7 @@ public class EventUtils {
         registerEvent(ID, eventClass, playerClass, null, false, overrideEvent, null, type);
     }
 
-    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String overrideEvent, Predicate<AbstractPlayer> bonusCondition,  EventType type) {
+    public static <T extends AbstractEvent> void registerEvent(String ID, Class<T> eventClass, boolean evilEvent, String overrideEvent, Predicate<AbstractPlayer> bonusCondition, EventType type) {
         registerEvent(ID, eventClass, null, null, evilEvent, overrideEvent, bonusCondition, type);
     }
 

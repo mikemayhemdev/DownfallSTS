@@ -1,4 +1,3 @@
-
 package evilWithin.events;
 
 import com.badlogic.gdx.graphics.Color;
@@ -15,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -22,12 +22,24 @@ import java.util.Random;
 
 public class DeadGuy_Evil extends AbstractEvent {
     public static final String ID = "evilWithin:DeadGuy";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final String FIGHT_MSG;
     private static final String ESCAPE_MSG;
+    private static final Color DARKEN_COLOR;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        FIGHT_MSG = DESCRIPTIONS[0];
+        ESCAPE_MSG = DESCRIPTIONS[1];
+        DARKEN_COLOR = new Color(0.5F, 0.5F, 0.5F, 1.0F);
+    }
+
     private int numRewards = 0;
     private int encounterChance = 0;
     private ArrayList<String> rewards = new ArrayList();
@@ -35,7 +47,6 @@ public class DeadGuy_Evil extends AbstractEvent {
     private float y;
     private int enemy;
     private DeadGuy_Evil.CUR_SCREEN screen;
-    private static final Color DARKEN_COLOR;
     private Texture adventurerImg;
 
     public DeadGuy_Evil() {
@@ -56,7 +67,7 @@ public class DeadGuy_Evil extends AbstractEvent {
         this.enemy = AbstractDungeon.miscRng.random(0, 2);
         this.adventurerImg = ImageMaster.loadImage("images/npcs/nopants.png");
         this.body = DESCRIPTIONS[2];
-        switch(this.enemy) {
+        switch (this.enemy) {
             case 0:
                 this.body = this.body + DESCRIPTIONS[3];
                 break;
@@ -69,7 +80,7 @@ public class DeadGuy_Evil extends AbstractEvent {
 
         this.body = this.body + DESCRIPTIONS[6];
 
-        if (!this.hasDialog){
+        if (!this.hasDialog) {
             this.roomEventText.addDialogOption(OPTIONS[0] + this.encounterChance + OPTIONS[4]);
             this.roomEventText.addDialogOption(OPTIONS[1]);
         }
@@ -93,9 +104,9 @@ public class DeadGuy_Evil extends AbstractEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         if (AbstractDungeon.miscRng.random(0, 99) < this.encounterChance) {
                             this.screen = DeadGuy_Evil.CUR_SCREEN.FAIL;
@@ -130,8 +141,8 @@ public class DeadGuy_Evil extends AbstractEvent {
             case FAIL:
                 Iterator var2 = this.rewards.iterator();
 
-                while(var2.hasNext()) {
-                    String s = (String)var2.next();
+                while (var2.hasNext()) {
+                    String s = (String) var2.next();
                     if (s.equals("GOLD")) {
                         AbstractDungeon.getCurrRoom().addGoldToRewards(30);
                     } else if (s.equals("RELIC")) {
@@ -155,7 +166,7 @@ public class DeadGuy_Evil extends AbstractEvent {
     }
 
     private String getMonster() {
-        switch(this.enemy) {
+        switch (this.enemy) {
             case 0:
                 return "3 Sentries";
             case 1:
@@ -168,9 +179,9 @@ public class DeadGuy_Evil extends AbstractEvent {
     private void randomReward() {
         ++this.numRewards;
         this.encounterChance += 25;
-        String var1 = (String)this.rewards.remove(0);
+        String var1 = this.rewards.remove(0);
         byte var2 = -1;
-        switch(var1.hashCode()) {
+        switch (var1.hashCode()) {
             case -1447660627:
                 if (var1.equals("NOTHING")) {
                     var2 = 1;
@@ -187,7 +198,7 @@ public class DeadGuy_Evil extends AbstractEvent {
                 }
         }
 
-        switch(var2) {
+        switch (var2) {
             case 0:
                 this.roomEventText.updateBodyText(DESCRIPTIONS[7]);
                 EffectHelper.gainGold(AbstractDungeon.player, this.x, this.y, 30);
@@ -235,23 +246,13 @@ public class DeadGuy_Evil extends AbstractEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        FIGHT_MSG = DESCRIPTIONS[0];
-        ESCAPE_MSG = DESCRIPTIONS[1];
-        DARKEN_COLOR = new Color(0.5F, 0.5F, 0.5F, 1.0F);
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         FAIL,
         SUCCESS,
         ESCAPE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

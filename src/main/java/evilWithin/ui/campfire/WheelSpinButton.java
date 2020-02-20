@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import evilWithin.EvilWithinMod;
 import evilWithin.events.GremlinWheelGame_Rest;
-import evilWithin.relics.GremlinWheel;
 import evilWithin.util.TextureLoader;
 import expansioncontent.expansionContentMod;
 
@@ -25,11 +24,6 @@ public class WheelSpinButton extends AbstractCampfireOption {
         description = TEXT[1];
         this.usable = bruh;
         this.img = TextureLoader.getTexture("evilWithinResources/images/ui/campfire/wheel.png");
-    }
-
-    @Override
-    public void useOption() {
-        expansionContentMod.teleportToWheelTime = true;
     }
 
     public static void doStuff() {
@@ -61,6 +55,11 @@ public class WheelSpinButton extends AbstractCampfireOption {
         AbstractDungeon.getCurrRoom().onPlayerEntry();// 76
         AbstractDungeon.scene.nextRoom(node.room);// 77
         AbstractDungeon.rs = node.room.event instanceof AbstractImageEvent ? AbstractDungeon.RenderScene.EVENT : AbstractDungeon.RenderScene.NORMAL;// 78
+    }
+
+    @Override
+    public void useOption() {
+        expansionContentMod.teleportToWheelTime = true;
     }
 }
 

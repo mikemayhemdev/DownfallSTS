@@ -11,10 +11,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import evilWithin.EvilWithinMod;
 import evilWithin.powers.FairyPotionPower;
-import evilWithin.util.TextureLoader;
 import evilWithin.vfx.PotionThrowEffect;
-import evilWithin.vfx.combat.ShootAnythingAction;
-import slimebound.vfx.SlimeProjectileEffect;
 
 public class LadyInBlue extends AbstractMonster {
 

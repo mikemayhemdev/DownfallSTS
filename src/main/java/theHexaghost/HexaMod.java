@@ -27,11 +27,6 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.relics.UnknownEgg;
-import theHexaghost.actions.ChargeCurrentFlameAction;
-import theHexaghost.ghostflames.BolsteringGhostflame;
-import theHexaghost.ghostflames.CrushingGhostflame;
-import theHexaghost.ghostflames.InfernoGhostflame;
-import theHexaghost.ghostflames.SearingGhostflame;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
@@ -47,8 +42,6 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
-
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer

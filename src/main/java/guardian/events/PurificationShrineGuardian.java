@@ -52,9 +52,9 @@ public class PurificationShrineGuardian extends AbstractImageEvent {
         super.update();
         if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             CardCrawlGame.sound.play("CARD_EXHAUST");
-            logMetricCardRemoval("Purifier", "Purged", (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0));
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-            AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            logMetricCardRemoval("Purifier", "Purged", AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
 
@@ -105,11 +105,11 @@ public class PurificationShrineGuardian extends AbstractImageEvent {
 
     }
 
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

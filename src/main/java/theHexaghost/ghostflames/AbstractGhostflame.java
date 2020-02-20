@@ -27,6 +27,7 @@ public abstract class AbstractGhostflame {
     public Hitbox hitbox;
     public float lx;
     public float ly;
+    public float flashTimer = 1.0F;
 
     public AbstractGhostflame(float x, float y) {
         lx = x;
@@ -95,8 +96,6 @@ public abstract class AbstractGhostflame {
             ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
         }
     }
-
-    public float flashTimer = 1.0F;
 
     public void flash() {
         if (!this.charged) flashTimer = 1.5F;

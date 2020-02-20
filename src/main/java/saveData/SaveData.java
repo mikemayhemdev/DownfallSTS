@@ -16,17 +16,13 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashMap;
 
 public class SaveData {
-    private static Logger saveLogger = LogManager.getLogger("EvilWithinSaveData");
-
     public static final String EVIL_MODE_KEY = "EVIL_MODE";
-
     public static final String RED_KEY_CONSUMED = "RED_KEY_CONSUMED";
     public static final String GREEN_KEY_CONSUMED = "GREEN_KEY_CONSUMED";
     public static final String BLUE_KEY_CONSUMED = "BLUE_KEY_CONSUMED";
-
     public static final String KILLED_CLERIC = "KILLED_CLERIC";
     public static final String ENCOUNTERED_CLERIC = "ENCOUNTERED_CLERIC";
-
+    private static Logger saveLogger = LogManager.getLogger("EvilWithinSaveData");
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
     private static boolean evilMode;

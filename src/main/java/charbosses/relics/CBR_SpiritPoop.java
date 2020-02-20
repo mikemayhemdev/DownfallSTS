@@ -1,7 +1,6 @@
 package charbosses.relics;
 
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.IceCream;
 import com.megacrit.cardcrawl.relics.SpiritPoop;
 
 public class CBR_SpiritPoop extends AbstractCharbossRelic {

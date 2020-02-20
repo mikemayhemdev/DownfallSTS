@@ -47,9 +47,9 @@ public class ComboTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = this.originalDamage = 11;
+        this.baseDamage = originalDamage = 11;
         this.baseSelfDamage = this.selfDamage = 3;
-        this.upgradeDamage = 3;
+        upgradeDamage = 3;
 
         this.magicNumber = this.baseMagicNumber = 1;
 

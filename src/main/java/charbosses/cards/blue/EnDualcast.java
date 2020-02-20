@@ -15,6 +15,10 @@ public class EnDualcast extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Dualcast";
     private static final CardStrings cardStrings;
 
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Dualcast");
+    }
+
     public EnDualcast() {
         super(ID, cardStrings.NAME, "blue/skill/dualcast", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.NONE);
         this.showEvokeValue = true;
@@ -36,9 +40,5 @@ public class EnDualcast extends AbstractBossCard {
 
     public AbstractCard makeCopy() {
         return new Dualcast();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Dualcast");
     }
 }

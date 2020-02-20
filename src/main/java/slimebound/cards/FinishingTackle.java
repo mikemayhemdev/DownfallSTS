@@ -52,13 +52,13 @@ public class FinishingTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
         tags.add(SlimeboundMod.GOOPEXPLOIT);
 
-        this.baseDamage = this.originalDamage = 16;
-        this.baseSelfDamage = this.selfDamage = 3;
-        this.upgradeDamage = 4;
+        this.baseDamage = originalDamage = 16;
+        baseSelfDamage = this.selfDamage = 3;
+        upgradeDamage = 4;
 
         this.baseBlock = 10;
 
-        this.upgradeSelfDamage(this.baseSelfDamage);
+        this.upgradeSelfDamage(baseSelfDamage);
 
     }
 

@@ -43,7 +43,7 @@ public class SelfFormingGooPower extends TwoAmountPower {
 
         this.amount = amount;
         this.amount2 = 0;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 

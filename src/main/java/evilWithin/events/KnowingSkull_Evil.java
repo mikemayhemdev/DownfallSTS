@@ -11,10 +11,18 @@ import evilWithin.relics.KnowingSkull;
 
 public class KnowingSkull_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:KnowingSkull";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESC;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESC = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+    }
+
     private CurrentScreen curScreen;
     private int takeCost;
 
@@ -37,7 +45,7 @@ public class KnowingSkull_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESC[1]);
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, takeCost, DamageInfo.DamageType.HP_LOSS));// 114
+                        AbstractDungeon.player.damage(new DamageInfo(null, takeCost, DamageInfo.DamageType.HP_LOSS));// 114
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new KnowingSkull());
                         break;
                     case 1:
@@ -56,18 +64,11 @@ public class KnowingSkull_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESC = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-    }
-
-    private static enum CurrentScreen {
+    private enum CurrentScreen {
         INTRO,
         DONE;
 
-        private CurrentScreen() {
+        CurrentScreen() {
         }
     }
 }

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class CampfirePatch {
     public static void Prefix(CampfireUI obj) {
 
-        final ArrayList<AbstractCampfireOption> campfireButtons = (ArrayList<AbstractCampfireOption>) ReflectionHacks.getPrivate((Object) obj, (Class) CampfireUI.class, "buttons");
+        final ArrayList<AbstractCampfireOption> campfireButtons = (ArrayList<AbstractCampfireOption>) ReflectionHacks.getPrivate(obj, CampfireUI.class, "buttons");
 
         if (AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID)) {
             campfireButtons.add(new ScrapBonfireOption(!AbstractDungeon.player.masterDeck.getPurgeableCards().isEmpty()));

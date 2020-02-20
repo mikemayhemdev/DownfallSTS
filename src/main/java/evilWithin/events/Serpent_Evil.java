@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -16,26 +15,31 @@ import evilWithin.EvilWithinMod;
 
 public class Serpent_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:Serpent";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_1;
     private static final String AGREE_DIALOG;
     private static final String DISAGREE_DIALOG;
     private static final String GOLD_RAIN_MSG;
-    private CUR_SCREEN screen;
     private static final int GOLD_REWARD = 175;
     private static final int A_2_GOLD_REWARD = 150;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+        AGREE_DIALOG = DESCRIPTIONS[1];
+        DISAGREE_DIALOG = DESCRIPTIONS[2];
+        GOLD_RAIN_MSG = DESCRIPTIONS[3];
+    }
+
+    private CUR_SCREEN screen;
     private int goldReward;
     private AbstractCard curse;
-
-    public void onEnterRoom() {
-        if (Settings.AMBIANCE_ON) {
-            CardCrawlGame.sound.play("EVENT_SERPENT");
-        }
-
-    }
 
     public Serpent_Evil() {
         super(NAME, DIALOG_1, "images/events/liarsGame.jpg");
@@ -51,14 +55,21 @@ public class Serpent_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[2]);
     }
 
+    public void onEnterRoom() {
+        if (Settings.AMBIANCE_ON) {
+            CardCrawlGame.sound.play("EVENT_SERPENT");
+        }
+
+    }
+
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
                     this.imageEventText.updateBodyText(AGREE_DIALOG + GOLD_RAIN_MSG);
                     this.imageEventText.removeDialogOption(1);
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
-                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldReward));
                     AbstractDungeon.player.gainGold(this.goldReward);
                     CardCrawlGame.sound.play("BLUNT_HEAVY");
@@ -78,24 +89,13 @@ public class Serpent_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-        AGREE_DIALOG = DESCRIPTIONS[1];
-        DISAGREE_DIALOG = DESCRIPTIONS[2];
-        GOLD_RAIN_MSG = DESCRIPTIONS[3];
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         AGREE,
         DISAGREE,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

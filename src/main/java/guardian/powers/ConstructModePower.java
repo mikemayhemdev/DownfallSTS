@@ -19,7 +19,7 @@ public class ConstructModePower extends AbstractGuardianPower {
         this.owner = owner;
         this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
         this.type = POWER_TYPE;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         this.amount = amount;

@@ -45,7 +45,7 @@ public class PreprogramAction extends AbstractGameAction {
             CardGroup tmpGroup = new CardGroup(CardGroupType.UNSPECIFIED);
 
             for (int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
-                tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+                tmpGroup.addToTop(AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
             }
 
             AbstractDungeon.gridSelectScreen.open(tmpGroup, 1, false, TEXT[0]);

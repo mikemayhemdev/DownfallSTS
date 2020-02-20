@@ -15,18 +15,30 @@ import evilWithin.EvilWithinMod;
 
 public class GoldenShrine_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:GoldenShrine";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
     private static final int GOLD_AMT = 100;
     private static final int CURSE_GOLD_AMT = 275;
     private static final int A_2_GOLD_AMT = 50;
-    private int goldAmt;
     private static final String DIALOG_1;
     private static final String DIALOG_2;
     private static final String DIALOG_3;
     private static final String IGNORE;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Golden Shrine");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+        DIALOG_2 = DESCRIPTIONS[1];
+        DIALOG_3 = DESCRIPTIONS[2];
+        IGNORE = DESCRIPTIONS[3];
+    }
+
+    private int goldAmt;
     private CUR_SCREEN screen;
 
     public GoldenShrine_Evil() {
@@ -56,9 +68,9 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.screen = CUR_SCREEN.COMPLETE;
                         logMetricGainGold("Golden Shrine", "Pray", this.goldAmt);
@@ -74,7 +86,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
                         logMetricGainGoldAndCard("Golden Shrine", "Desecrate", curse, 275);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(275));
                         AbstractDungeon.player.gainGold(275);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         this.imageEventText.updateBodyText(DIALOG_3);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();
@@ -95,22 +107,11 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Golden Shrine");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-        DIALOG_2 = DESCRIPTIONS[1];
-        DIALOG_3 = DESCRIPTIONS[2];
-        IGNORE = DESCRIPTIONS[3];
-    }
-
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

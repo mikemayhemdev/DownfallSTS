@@ -39,7 +39,7 @@ public class ExhumeToDrawAction extends AbstractGameAction {
             AbstractCard c;
             if (this.p.exhaustPile.size() == 1) {
 
-                if (((AbstractCard) this.p.exhaustPile.group.get(0)).cardID.equals("Recollect")) {
+                if (this.p.exhaustPile.group.get(0).cardID.equals("Recollect")) {
                     this.isDone = true;
                     return;
                 }

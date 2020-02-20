@@ -23,15 +23,23 @@ import java.util.ArrayList;
 
 public class GrowingTotem extends AbstractTotemMonster {
     public static final String ID = EvilWithinMod.makeID("GrowingTotem");
-    private static final MonsterStrings monsterStrings;
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
-    public Integer attackDmg;
+    private static final MonsterStrings monsterStrings;
+    public static Color totemColor = Color.GREEN;
 
+    static {
+        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
+        NAME = monsterStrings.NAME;
+        MOVES = monsterStrings.MOVES;
+        DIALOG = monsterStrings.DIALOG;
+
+    }
+
+    public Integer attackDmg;
     public Integer secondaryEffect;
 
-    public static Color totemColor = Color.GREEN;
 
     public GrowingTotem() {
         super(NAME, ID, EvilWithinMod.assetPath("images/monsters/totemgreen.png"));
@@ -58,7 +66,6 @@ public class GrowingTotem extends AbstractTotemMonster {
 
     }
 
-
     @Override
     public void totemAttack() {
         // AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
@@ -72,26 +79,16 @@ public class GrowingTotem extends AbstractTotemMonster {
         targets.addAll(AbstractDungeon.getMonsters().monsters);
 
 
-
-        for (AbstractMonster m : targets){
+        for (AbstractMonster m : targets) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StrengthPower(m, this.secondaryEffect), this.secondaryEffect));
 
         }
 
     }
 
-    public void getUniqueTotemMove() {this.setMove((byte)1, intentType, this.attackDmg);
+    public void getUniqueTotemMove() {
+        this.setMove((byte) 1, intentType, this.attackDmg);
     }
-
-    static {
-        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
-        NAME = monsterStrings.NAME;
-        MOVES = monsterStrings.MOVES;
-        DIALOG = monsterStrings.DIALOG;
-
-    }
-
-
 
 
 }

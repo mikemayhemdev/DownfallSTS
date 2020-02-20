@@ -32,8 +32,8 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
         this.owner = owner;
         this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
         this.type = POWER_TYPE;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-        this.DESCRIPTIONSdef = CardCrawlGame.languagePack.getPowerStrings(this.IDdef).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONSdef = CardCrawlGame.languagePack.getPowerStrings(this.IDdef).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
@@ -109,7 +109,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
             this.amount = amount;
             this.loadRegion("dexterity");
 
-            this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+            DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
@@ -140,7 +140,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
             this.loadRegion("strength");
             this.amount = amount;
             this.type = POWER_TYPE;
-            this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+            DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
 
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
@@ -171,7 +171,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
             this.loadRegion("explosive");
 
             this.type = POWER_TYPE;
-            this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+            DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
             this.amount2 = turns;
             this.amount = explodeAmount;
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
@@ -231,8 +231,8 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
             this.setImage("bronzeOrbProtectionPower84.png", "bronzeOrbProtectionPower32.png");
 
             this.type = POWER_TYPE;
-            this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-            this.DESCRIPTIONSdef = CardCrawlGame.languagePack.getPowerStrings(this.IDdef).DESCRIPTIONS;
+            DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+            DESCRIPTIONSdef = CardCrawlGame.languagePack.getPowerStrings(this.IDdef).DESCRIPTIONS;
 
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
@@ -291,7 +291,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
             this.setImage("bronzeOrbProtectionPower84.png", "bronzeOrbProtectionPower32.png");
 
             this.type = POWER_TYPE;
-            this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+            DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
 
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
@@ -359,7 +359,7 @@ public class zzzGuardianModePower extends AbstractGuardianPower {
 
             this.type = POWER_TYPE;
             this.amount = amount;
-            this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+            DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
             this.setImage("BronzeOrbWeaken84.png", "BronzeOrbWeaken32.png");
 
             this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;

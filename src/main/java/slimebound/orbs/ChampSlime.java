@@ -11,8 +11,6 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.CrownParticle;
 import slimebound.vfx.SlimeFlareEffect;
-import slimebound.vfx.SticksParticle;
-import slimebound.vfx.SticksParticleRight;
 
 
 public class ChampSlime
@@ -29,9 +27,9 @@ public class ChampSlime
 
     public ChampSlime() {
 
-        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, true, true,4, 0, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
+        super(ID, new Color(1.0F, 100F / 255F, 100F / 255F, 100F), atlasString, skeletonString, true, true, 4, 0, true, new Color(.45F, .58F, .58F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/attackDebuff.png"));
         this.debuffAmount = 1;
-        this.extraFontColor = new Color(204F/255F, 98F/255F, 114F/255F, 1F);
+        this.extraFontColor = new Color(204F / 255F, 98F / 255F, 114F / 255F, 1F);
         spawnVFX();
 
     }

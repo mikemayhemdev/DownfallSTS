@@ -3,7 +3,6 @@ package evilWithin.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,22 +13,26 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Circlet;
-import com.megacrit.cardcrawl.relics.NlothsGift;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
 
 public class Vagrant_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:Vagrant";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSALT;
     public static final String[] OPTIONSALT;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Addict");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+    }
+
     private int screenNum = 0;
     private int takeCost = 0;
 
@@ -45,11 +48,11 @@ public class Vagrant_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature) null, takeCost, DamageInfo.DamageType.HP_LOSS));// 114
+                        AbstractDungeon.player.damage(new DamageInfo(null, takeCost, DamageInfo.DamageType.HP_LOSS));// 114
                         AbstractDungeon.player.gainGold(85);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         this.screenNum = 1;
@@ -61,7 +64,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         AbstractCard card = new Shame();// 62
                         AbstractRelic relic = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());// 63 64
                         AbstractEvent.logMetricObtainCardAndRelic("Addict", "Stole Relic", card, relic);// 65
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));// 66
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));// 66
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, relic);// 68
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 70
                         this.imageEventText.clearRemainingOptions();// 71
@@ -75,14 +78,5 @@ public class Vagrant_Evil extends AbstractImageEvent {
                 this.openMap();
         }
 
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Addict");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
     }
 }

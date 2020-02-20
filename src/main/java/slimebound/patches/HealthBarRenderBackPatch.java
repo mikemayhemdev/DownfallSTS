@@ -36,7 +36,7 @@ public class HealthBarRenderBackPatch {
             float HEALTH_BAR_HEIGHT = 20.0F * Settings.scale;
             float HEALTH_BAR_OFFSET_Y = -28.0F * Settings.scale;
 
-            float w = (1.0F - (float) ((__instance.maxHealth - amt) / (float) __instance.maxHealth)) * __instance.hb.width;
+            float w = (1.0F - ((__instance.maxHealth - amt) / (float) __instance.maxHealth)) * __instance.hb.width;
             x = __instance.hb.cX + __instance.hb.width / 2F - w;
             //SlimeboundMod.logger.info("Health render: " + amt + " " + HEALTH_BAR_HEIGHT + " " + x + " " + (x + w) + " " + w);
 

@@ -57,7 +57,7 @@ public class UpgradeShrineGuardian extends AbstractImageEvent {
     public void update() {
         super.update();
         if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             c.upgrade();
             logMetricCardUpgrade("Upgrade Shrine", "Upgraded", c);
             AbstractDungeon.player.bottledCardUpgradeCheck(c);
@@ -115,11 +115,11 @@ public class UpgradeShrineGuardian extends AbstractImageEvent {
 
     }
 
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

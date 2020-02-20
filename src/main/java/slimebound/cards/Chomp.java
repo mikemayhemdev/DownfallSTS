@@ -50,8 +50,8 @@ public class Chomp extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = this.originalDamage = 9;
-        this.upgradeDamage = 2;
+        this.baseDamage = originalDamage = 9;
+        upgradeDamage = 2;
         // this.exhaust = true;
 
         this.magicNumber = this.baseMagicNumber = 3;

@@ -3,8 +3,6 @@ package evilWithin.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.events.exordium.Mushrooms;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
-import evilWithin.EvilWithinMod;
-import evilWithin.events.WomanInBlue_Evil;
 import javassist.CannotCompileException;
 import javassist.NotFoundException;
 import javassist.expr.ExprEditor;

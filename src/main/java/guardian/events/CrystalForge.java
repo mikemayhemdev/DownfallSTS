@@ -100,7 +100,7 @@ public class CrystalForge extends AbstractImageEvent {
     public void update() {
         super.update();
         if (this.pickCardForGemRemoval && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             ((AbstractGuardianCard) c).sockets.clear();
             ((AbstractGuardianCard) c).updateDescription();
             AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
@@ -108,7 +108,7 @@ public class CrystalForge extends AbstractImageEvent {
             this.pickCardForGemRemoval = false;
             updateEnhance();
         } else if (this.pickCardForSalvageGems && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractGuardianCard cg = (AbstractGuardianCard) c;
             ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
 
@@ -171,8 +171,8 @@ public class CrystalForge extends AbstractImageEvent {
 
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
 
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
-            AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             this.pickCardForTransmute = false;

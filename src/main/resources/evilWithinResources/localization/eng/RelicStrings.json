@@ -1,88 +1,88 @@
 {
-	"evil-within:Vampires": {
-		"NAME": "Event: Vampires",
-		"FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
-		"DESCRIPTIONS": [
-			"Strikes have been replaced with Bites. NL -",
-			" Maximum HP."
-		]
-	},
-	"evil-within:BonfireSpirits": {
-		"NAME": "Event: Bonfire Spirits",
-		"FLAVOR": "The spirits toss small bones and fragments into the fire, which brilliantly erupts each time...",
-		"DESCRIPTIONS": [
-			" Curse was removed from the deck. NL The spirits were displeased.",
-			" was removed from the deck. NL +10 Maximum HP.",
-			" was removed from the deck."
-		]
-	},
-	"evil-within:BigFish": {
-		"NAME": "Event: Big Fish",
-		"FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
-		"DESCRIPTIONS": [
-			"The Donut was chosen. NL +5 Maximum HP.",
-			"The Box was chosen. NL A Regret curse and a ",
-			" were added."
-		]
-	},
-	"evil-within:Falling": {
-		"NAME": "Event: Falling",
-		"FLAVOR": "While in free fall you consider your options...",
-		"DESCRIPTIONS": [
-			" was removed from the deck."
-		]
-	},
-	"evil-within:GremlinSack": {
-		"NAME": "Gremlin Sack",
-		"FLAVOR": "You were no match for the Gremlin and his bodyguard.",
-		"DESCRIPTIONS": [
-			"Upon pickup, add the following cards to your deck: ",
-			"a Starter card",
-			", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
-			", a random Common, a random Uncommon, a random Rare, two random Curses."
-		]
-	},
-	"evil-within:GremlinWheel": {
-		"NAME": "Wheel of Change",
-		"FLAVOR": "No one gets two spins, he says.",
-		"DESCRIPTIONS": [
-			"At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic.",
-			"This relic has been used up."
-		]
-	},
-	"evil-within:CloakOfManyFaces": {
-		"NAME": "Coat of Many Faces",
-		"FLAVOR": "It was Steve, and Bill, and Ian, and Fred, and John...",
-		"DESCRIPTIONS": [
-			"Upon pickup, gain Cultist Headpiece, Face Of Cleric, N'loth's Hungry Face, Gremlin Visage, and Ssserpent Head."
-		]
-	},
-	"evil-within:BrokenWingStatue": {
-		"NAME": "Broken Wing Statue",
-		"FLAVOR": "A broken hunk of a once-magnificent statue.",
-		"DESCRIPTIONS": [
-			"The cultists that worship the Awakened One will be interested in this."
-		]
-	},
-	"evil-within:ShatteredFragment": {
-		"NAME": "Sharpened Fragment",
-		"FLAVOR": "Once a broken statue - now a makeshift weapon.",
-		"DESCRIPTIONS": [
-			"At the start of each combat, add a Crystal Shiv to your hand."
-		]
-	},
-	"evil-within:RedIOU": {
-		"NAME": "Red Mask IOU",
-		"FLAVOR": "thanks for the relic duuude",
-		"DESCRIPTIONS": [
-			"At the start of the #b3rd boss, Red Mask Bandits do... something."
-		]
-	},
-	"evil-within:KnowingSkull": {
-		"NAME": "Knowing Skull",
-		"FLAVOR": "Put me down!",
-		"DESCRIPTIONS": [
-			"At the start of each combat, you may Wish for Souls, Success, or a Pick me Up."
-		]
-	}
+  "evil-within:Vampires": {
+    "NAME": "Event: Vampires",
+    "FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
+    "DESCRIPTIONS": [
+      "Strikes have been replaced with Bites. NL -",
+      " Maximum HP."
+    ]
+  },
+  "evil-within:BonfireSpirits": {
+    "NAME": "Event: Bonfire Spirits",
+    "FLAVOR": "The spirits toss small bones and fragments into the fire, which brilliantly erupts each time...",
+    "DESCRIPTIONS": [
+      " Curse was removed from the deck. NL The spirits were displeased.",
+      " was removed from the deck. NL +10 Maximum HP.",
+      " was removed from the deck."
+    ]
+  },
+  "evil-within:BigFish": {
+    "NAME": "Event: Big Fish",
+    "FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
+    "DESCRIPTIONS": [
+      "The Donut was chosen. NL +5 Maximum HP.",
+      "The Box was chosen. NL A Regret curse and a ",
+      " were added."
+    ]
+  },
+  "evil-within:Falling": {
+    "NAME": "Event: Falling",
+    "FLAVOR": "While in free fall you consider your options...",
+    "DESCRIPTIONS": [
+      " was removed from the deck."
+    ]
+  },
+  "evil-within:GremlinSack": {
+    "NAME": "Gremlin Sack",
+    "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
+    "DESCRIPTIONS": [
+      "Upon pickup, add the following cards to your deck: ",
+      "a Starter card",
+      ", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
+      ", a random Common, a random Uncommon, a random Rare, two random Curses."
+    ]
+  },
+  "evil-within:GremlinWheel": {
+    "NAME": "Wheel of Change",
+    "FLAVOR": "No one gets two spins, he says.",
+    "DESCRIPTIONS": [
+      "At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic.",
+      "This relic has been used up."
+    ]
+  },
+  "evil-within:CloakOfManyFaces": {
+    "NAME": "Coat of Many Faces",
+    "FLAVOR": "It was Steve, and Bill, and Ian, and Fred, and John...",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain Cultist Headpiece, Face Of Cleric, N'loth's Hungry Face, Gremlin Visage, and Ssserpent Head."
+    ]
+  },
+  "evil-within:BrokenWingStatue": {
+    "NAME": "Broken Wing Statue",
+    "FLAVOR": "A broken hunk of a once-magnificent statue.",
+    "DESCRIPTIONS": [
+      "The cultists that worship the Awakened One will be interested in this."
+    ]
+  },
+  "evil-within:ShatteredFragment": {
+    "NAME": "Sharpened Fragment",
+    "FLAVOR": "Once a broken statue - now a makeshift weapon.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a Crystal Shiv to your hand."
+    ]
+  },
+  "evil-within:RedIOU": {
+    "NAME": "Red Mask IOU",
+    "FLAVOR": "thanks for the relic duuude",
+    "DESCRIPTIONS": [
+      "At the start of the #b3rd boss, Red Mask Bandits do... something."
+    ]
+  },
+  "evil-within:KnowingSkull": {
+    "NAME": "Knowing Skull",
+    "FLAVOR": "Put me down!",
+    "DESCRIPTIONS": [
+      "At the start of each combat, you may Wish for Souls, Success, or a Pick me Up."
+    ]
+  }
 }

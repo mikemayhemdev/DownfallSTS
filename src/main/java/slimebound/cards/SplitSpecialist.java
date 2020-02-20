@@ -46,7 +46,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
         choice();
     }
 
-    public void choice(){
+    public void choice() {
         addToBot(new OctoChoiceAction(this));
     }
 

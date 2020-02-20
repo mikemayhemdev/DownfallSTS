@@ -54,7 +54,7 @@ public class TransmogrifierGuardian extends AbstractImageEvent {
     public void update() {
         super.update();
         if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractDungeon.player.masterDeck.removeCard(c);
             AbstractDungeon.transformCard(c);
             AbstractCard transCard = AbstractDungeon.getTransformedCard();
@@ -110,11 +110,11 @@ public class TransmogrifierGuardian extends AbstractImageEvent {
 
     }
 
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

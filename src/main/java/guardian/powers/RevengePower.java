@@ -26,7 +26,7 @@ public class RevengePower extends AbstractGuardianTwoAmountPower {
         this.type = POWER_TYPE;
         this.amount = amount;
         this.amount2 = 0;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         updateDescription();

@@ -72,7 +72,6 @@ public class MassFeed extends AbstractSlimeboundCard {
 
             upgradeDamage(2);
             upgradeMagicNumber(1);
-            ;
 
         }
 

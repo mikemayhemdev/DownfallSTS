@@ -268,8 +268,8 @@ public class SocketGemScreen implements ScrollBarListener {
             }
 
             if (!anyHovered) {
-                Gdx.input.setCursorPosition((int) ((AbstractCard) this.targetGroup.group.get(0)).hb.cX, (int) ((AbstractCard) this.targetGroup.group.get(0)).hb.cY);
-                this.controllerCard = (AbstractCard) this.targetGroup.group.get(0);
+                Gdx.input.setCursorPosition((int) this.targetGroup.group.get(0).hb.cX, (int) this.targetGroup.group.get(0).hb.cY);
+                this.controllerCard = this.targetGroup.group.get(0);
             } else if ((CInputActionSet.up.isJustPressed() || CInputActionSet.altUp.isJustPressed()) && this.targetGroup.size() > 5) {
                 if (index < 5) {
                     index = this.targetGroup.size() + 2 - (4 - index);
@@ -284,8 +284,8 @@ public class SocketGemScreen implements ScrollBarListener {
                     index -= 5;
                 }
 
-                Gdx.input.setCursorPosition((int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cX, Settings.HEIGHT - (int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cY);
-                this.controllerCard = (AbstractCard) this.targetGroup.group.get(index);
+                Gdx.input.setCursorPosition((int) this.targetGroup.group.get(index).hb.cX, Settings.HEIGHT - (int) this.targetGroup.group.get(index).hb.cY);
+                this.controllerCard = this.targetGroup.group.get(index);
             } else if ((CInputActionSet.down.isJustPressed() || CInputActionSet.altDown.isJustPressed()) && this.targetGroup.size() > 5) {
                 if (index < this.targetGroup.size() - 5) {
                     index += 5;
@@ -293,8 +293,8 @@ public class SocketGemScreen implements ScrollBarListener {
                     index %= 5;
                 }
 
-                Gdx.input.setCursorPosition((int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cX, Settings.HEIGHT - (int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cY);
-                this.controllerCard = (AbstractCard) this.targetGroup.group.get(index);
+                Gdx.input.setCursorPosition((int) this.targetGroup.group.get(index).hb.cX, Settings.HEIGHT - (int) this.targetGroup.group.get(index).hb.cY);
+                this.controllerCard = this.targetGroup.group.get(index);
             } else if (!CInputActionSet.left.isJustPressed() && !CInputActionSet.altLeft.isJustPressed()) {
                 if (CInputActionSet.right.isJustPressed() || CInputActionSet.altRight.isJustPressed()) {
                     if (index % 5 < 4) {
@@ -309,8 +309,8 @@ public class SocketGemScreen implements ScrollBarListener {
                         }
                     }
 
-                    Gdx.input.setCursorPosition((int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cX, Settings.HEIGHT - (int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cY);
-                    this.controllerCard = (AbstractCard) this.targetGroup.group.get(index);
+                    Gdx.input.setCursorPosition((int) this.targetGroup.group.get(index).hb.cX, Settings.HEIGHT - (int) this.targetGroup.group.get(index).hb.cY);
+                    this.controllerCard = this.targetGroup.group.get(index);
                 }
             } else {
                 if (index % 5 > 0) {
@@ -322,8 +322,8 @@ public class SocketGemScreen implements ScrollBarListener {
                     }
                 }
 
-                Gdx.input.setCursorPosition((int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cX, Settings.HEIGHT - (int) ((AbstractCard) this.targetGroup.group.get(index)).hb.cY);
-                this.controllerCard = (AbstractCard) this.targetGroup.group.get(index);
+                Gdx.input.setCursorPosition((int) this.targetGroup.group.get(index).hb.cX, Settings.HEIGHT - (int) this.targetGroup.group.get(index).hb.cY);
+                this.controllerCard = this.targetGroup.group.get(index);
             }
 
         }
@@ -337,37 +337,37 @@ public class SocketGemScreen implements ScrollBarListener {
                     this.targetGroup.getBottomCard().target_x = (float) Settings.WIDTH / 2.0F;
                     break;
                 case 2:
-                    ((AbstractCard) this.targetGroup.group.get(0)).current_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(0)).target_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(1)).current_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(1)).target_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
+                    this.targetGroup.group.get(0).current_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
+                    this.targetGroup.group.get(0).target_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
+                    this.targetGroup.group.get(1).current_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
+                    this.targetGroup.group.get(1).target_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
                     break;
                 case 3:
-                    ((AbstractCard) this.targetGroup.group.get(0)).current_x = drawStartX + padX;
-                    ((AbstractCard) this.targetGroup.group.get(1)).current_x = drawStartX + padX * 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(2)).current_x = drawStartX + padX * 3.0F;
-                    ((AbstractCard) this.targetGroup.group.get(0)).target_x = drawStartX + padX;
-                    ((AbstractCard) this.targetGroup.group.get(1)).target_x = drawStartX + padX * 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(2)).target_x = drawStartX + padX * 3.0F;
+                    this.targetGroup.group.get(0).current_x = drawStartX + padX;
+                    this.targetGroup.group.get(1).current_x = drawStartX + padX * 2.0F;
+                    this.targetGroup.group.get(2).current_x = drawStartX + padX * 3.0F;
+                    this.targetGroup.group.get(0).target_x = drawStartX + padX;
+                    this.targetGroup.group.get(1).target_x = drawStartX + padX * 2.0F;
+                    this.targetGroup.group.get(2).target_x = drawStartX + padX * 3.0F;
                     break;
                 case 4:
-                    ((AbstractCard) this.targetGroup.group.get(0)).current_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F - padX;
-                    ((AbstractCard) this.targetGroup.group.get(0)).target_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F - padX;
-                    ((AbstractCard) this.targetGroup.group.get(1)).current_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(1)).target_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(2)).current_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(2)).target_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
-                    ((AbstractCard) this.targetGroup.group.get(3)).current_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F + padX;
-                    ((AbstractCard) this.targetGroup.group.get(3)).target_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F + padX;
+                    this.targetGroup.group.get(0).current_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F - padX;
+                    this.targetGroup.group.get(0).target_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F - padX;
+                    this.targetGroup.group.get(1).current_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
+                    this.targetGroup.group.get(1).target_x = (float) Settings.WIDTH / 2.0F - padX / 2.0F;
+                    this.targetGroup.group.get(2).current_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
+                    this.targetGroup.group.get(2).target_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F;
+                    this.targetGroup.group.get(3).current_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F + padX;
+                    this.targetGroup.group.get(3).target_x = (float) Settings.WIDTH / 2.0F + padX / 2.0F + padX;
             }
 
             ArrayList<AbstractCard> c2 = this.targetGroup.group;
 
             for (int i = 0; i < c2.size(); ++i) {
-                ((AbstractCard) c2.get(i)).target_y = drawStartY + this.currentDiffY;
-                ((AbstractCard) c2.get(i)).fadingOut = false;
-                ((AbstractCard) c2.get(i)).update();
-                ((AbstractCard) c2.get(i)).updateHoverLogic();
+                c2.get(i).target_y = drawStartY + this.currentDiffY;
+                c2.get(i).fadingOut = false;
+                c2.get(i).update();
+                c2.get(i).updateHoverLogic();
                 this.hoveredCard = null;
                 Iterator var9 = c2.iterator();
 
@@ -389,11 +389,11 @@ public class SocketGemScreen implements ScrollBarListener {
                     ++lineNum;
                 }
 
-                ((AbstractCard) cards.get(i)).target_x = drawStartX + (float) mod * padX;
-                ((AbstractCard) cards.get(i)).target_y = drawStartY + this.currentDiffY - (float) lineNum * padY;
-                ((AbstractCard) cards.get(i)).fadingOut = false;
-                ((AbstractCard) cards.get(i)).update();
-                ((AbstractCard) cards.get(i)).updateHoverLogic();
+                cards.get(i).target_x = drawStartX + (float) mod * padX;
+                cards.get(i).target_y = drawStartY + this.currentDiffY - (float) lineNum * padY;
+                cards.get(i).fadingOut = false;
+                cards.get(i).update();
+                cards.get(i).updateHoverLogic();
                 this.hoveredCard = null;
                 Iterator var5 = cards.iterator();
 
@@ -577,17 +577,17 @@ public class SocketGemScreen implements ScrollBarListener {
         ArrayList<AbstractCard> cards = this.targetGroup.group;
 
         for (int i = 0; i < cards.size(); ++i) {
-            ((AbstractCard) cards.get(i)).setAngle(0.0F, true);
+            cards.get(i).setAngle(0.0F, true);
             int mod = i % 5;
             if (mod == 0 && i != 0) {
                 ++lineNum;
             }
 
-            ((AbstractCard) cards.get(i)).lighten(true);
-            ((AbstractCard) cards.get(i)).current_x = drawStartX + (float) mod * padX;
-            ((AbstractCard) cards.get(i)).current_y = drawStartY + this.currentDiffY - (float) lineNum * padY - MathUtils.random(100.0F * Settings.scale, 200.0F * Settings.scale);
-            ((AbstractCard) cards.get(i)).targetDrawScale = 0.75F;
-            ((AbstractCard) cards.get(i)).drawScale = 0.75F;
+            cards.get(i).lighten(true);
+            cards.get(i).current_x = drawStartX + (float) mod * padX;
+            cards.get(i).current_y = drawStartY + this.currentDiffY - (float) lineNum * padY - MathUtils.random(100.0F * Settings.scale, 200.0F * Settings.scale);
+            cards.get(i).targetDrawScale = 0.75F;
+            cards.get(i).drawScale = 0.75F;
         }
 
     }
@@ -616,8 +616,8 @@ public class SocketGemScreen implements ScrollBarListener {
                 ++lineNum;
             }
 
-            ((AbstractCard) cards.get(i)).current_x = drawStartX + (float) mod * padX;
-            ((AbstractCard) cards.get(i)).current_y = drawStartY + this.currentDiffY - (float) lineNum * padY;
+            cards.get(i).current_x = drawStartX + (float) mod * padX;
+            cards.get(i).current_y = drawStartY + this.currentDiffY - (float) lineNum * padY;
         }
 
         this.tipMsg = this.lastTip;

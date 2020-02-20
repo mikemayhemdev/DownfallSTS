@@ -3,13 +3,10 @@ package slimebound.powers;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.orbs.*;
 
 
 public class BuffSecondarySlimeEffectsPower extends AbstractPower {
@@ -39,7 +36,7 @@ public class BuffSecondarySlimeEffectsPower extends AbstractPower {
         this.type = POWER_TYPE;
 
         this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
@@ -49,7 +46,7 @@ public class BuffSecondarySlimeEffectsPower extends AbstractPower {
 
 
     public void updateDescription() {
-        if (this.amount > 1){
+        if (this.amount > 1) {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         } else {
 

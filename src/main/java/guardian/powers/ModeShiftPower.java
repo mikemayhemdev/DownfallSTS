@@ -32,8 +32,8 @@ public class ModeShiftPower extends AbstractGuardianPower {
         this.type = POWER_TYPE;
         this.amount = STARTINGAMOUNT;
         this.active = true;
-        this.nextamount = this.STARTINGAMOUNT + (this.activations * AMOUNTGAINPERACTIVATION);
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        this.nextamount = STARTINGAMOUNT + (this.activations * AMOUNTGAINPERACTIVATION);
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         updateDescription();
@@ -78,7 +78,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
         super.atStartOfTurn();
         if (!this.active) {
             this.active = true;
-            this.amount = this.STARTINGAMOUNT + (this.activations * AMOUNTGAINPERACTIVATION);
+            this.amount = STARTINGAMOUNT + (this.activations * AMOUNTGAINPERACTIVATION);
         }
     }
 }

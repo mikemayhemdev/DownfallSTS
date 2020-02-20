@@ -76,23 +76,14 @@ public class expansionContentMod implements
     public static AbstractCard.CardTags STUDY_SLIMEBOSS;
     @SpireEnum
     public static AbstractCard.CardTags STUDY;
-    private static String modID;
-
     public static boolean teleportToWheelTime = false;
+    private static String modID;
 
     public expansionContentMod() {
         BaseMod.subscribe(this);
 
         modID = "expansioncontent";
 
-    }
-
-    @Override
-    public void receivePostUpdate() {
-        if (teleportToWheelTime) {
-            WheelSpinButton.doStuff();
-            teleportToWheelTime = false;
-        }
     }
 
     public static String makeCardPath(String resourcePath) {
@@ -171,6 +162,14 @@ public class expansionContentMod implements
             } else {
                 UnlockTracker.unlockCard(card.cardID);
             }
+        }
+    }
+
+    @Override
+    public void receivePostUpdate() {
+        if (teleportToWheelTime) {
+            WheelSpinButton.doStuff();
+            teleportToWheelTime = false;
         }
     }
 

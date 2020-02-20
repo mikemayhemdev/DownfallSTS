@@ -3,36 +3,21 @@ package evilWithin.events;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
-import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.cards.curses.Pride;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.events.city.Colosseum;
-import com.megacrit.cardcrawl.helpers.MonsterHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.city.Centurion;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinFat;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import slimebound.SlimeboundMod;
 
-import java.util.ArrayList;
-
 public class Beggar_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:Beggar";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
@@ -40,6 +25,19 @@ public class Beggar_Evil extends AbstractImageEvent {
     public static final String[] OPTIONSALT;
     public static final String[] DESCRIPTIONSOG;
     public static final String[] OPTIONSOG;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Beggar");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+        DESCRIPTIONSOG = CardCrawlGame.languagePack.getEventString(Cleric_Evil.ID).DESCRIPTIONS;
+        OPTIONSOG = CardCrawlGame.languagePack.getEventString(Cleric_Evil.ID).OPTIONS;
+    }
+
     private int finalDmg;
     private int gold;
     private CurScreen screen;
@@ -63,18 +61,18 @@ public class Beggar_Evil extends AbstractImageEvent {
     public void update() {
         super.update();
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            if (cardsToRemove == 1){
-                AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            if (cardsToRemove == 1) {
+                AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                 AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                 AbstractDungeon.player.masterDeck.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
             } else {
-                AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH * 0.3F), (float) (Settings.HEIGHT / 2)));
+                AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (Settings.WIDTH * 0.3F), (float) (Settings.HEIGHT / 2)));
                 AbstractDungeon.player.masterDeck.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
-                c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1);
-                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH * 0.7F), (float) (Settings.HEIGHT / 2)));
+                c = AbstractDungeon.gridSelectScreen.selectedCards.get(1);
+                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (Settings.WIDTH * 0.7F), (float) (Settings.HEIGHT / 2)));
                 AbstractDungeon.player.masterDeck.removeCard(c);
                 AbstractDungeon.gridSelectScreen.selectedCards.remove(c);
             }
@@ -136,7 +134,7 @@ public class Beggar_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
                         AbstractDungeon.player.gainGold(this.gold);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Pride(), (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Pride(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
 
                         this.screen = CurScreen.END;
                         this.imageEventText.setDialogOption(OPTIONS[5]);
@@ -196,7 +194,7 @@ public class Beggar_Evil extends AbstractImageEvent {
             AbstractDungeon.getCurrRoom().rewards.clear();
             AbstractDungeon.getCurrRoom().rewardAllowed = false;
             AbstractDungeon.resetPlayer();
-            AbstractDungeon.player.drawX = (float)Settings.WIDTH * 0.25F;
+            AbstractDungeon.player.drawX = (float) Settings.WIDTH * 0.25F;
             AbstractDungeon.player.preBattlePrep();
             this.imageEventText.clearAllDialogs();
             this.imageEventText.updateBodyText(DESCRIPTIONSALT[5]);
@@ -207,18 +205,7 @@ public class Beggar_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Beggar");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-        DESCRIPTIONSOG = CardCrawlGame.languagePack.getEventString(Cleric_Evil.ID).DESCRIPTIONS;
-        OPTIONSOG = CardCrawlGame.languagePack.getEventString(Cleric_Evil.ID).OPTIONS;
-    }
-
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         CLERICFRESHINTRO,
         CLERICALIVEINTRO,
@@ -226,7 +213,7 @@ public class Beggar_Evil extends AbstractImageEvent {
         POSTFIGHT,
         END;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

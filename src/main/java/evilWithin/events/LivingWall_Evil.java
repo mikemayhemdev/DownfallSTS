@@ -25,13 +25,24 @@ import slimebound.SlimeboundMod;
 
 public class LivingWall_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:LivingWall";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] OPTIONSEXTRA;
+    private static final EventStrings eventStrings;
     private static final String DIALOG_1;
     private static final String RESULT_DIALOG;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Living Wall");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        OPTIONSEXTRA = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+        DIALOG_1 = DESCRIPTIONS[0];
+        RESULT_DIALOG = DESCRIPTIONS[1];
+    }
+
     private LivingWall_Evil.CurScreen screen;
     private boolean pickCard;
     private LivingWall_Evil.Choice choice;
@@ -64,12 +75,12 @@ public class LivingWall_Evil extends AbstractImageEvent {
             switch (this.choice) {
                 case FORGET:
                     CardCrawlGame.sound.play("CARD_EXHAUST");
-                    AbstractDungeon.topLevelEffects.add(new PurgeCardEffect((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
-                    AbstractEvent.logMetricCardRemoval("Living Wall", "Forget", (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0));
-                    AbstractDungeon.player.masterDeck.removeCard((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+                    AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                    AbstractEvent.logMetricCardRemoval("Living Wall", "Forget", AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+                    AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
                     break;
                 case CHANGE:
-                    AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                    AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                     AbstractDungeon.player.masterDeck.removeCard(c);
                     AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                     AbstractCard transCard = AbstractDungeon.getTransformedCard();
@@ -78,8 +89,8 @@ public class LivingWall_Evil extends AbstractImageEvent {
                     break;
                 case GROW:
                     AbstractDungeon.effectsQueue.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-                    ((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0)).upgrade();
-                    AbstractCard upgCard = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                    AbstractDungeon.gridSelectScreen.selectedCards.get(0).upgrade();
+                    AbstractCard upgCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                     AbstractEvent.logMetricCardUpgrade("Living Wall", "Grow", upgCard);
                     AbstractDungeon.player.bottledCardUpgradeCheck(upgCard);
             }
@@ -144,31 +155,21 @@ public class LivingWall_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Living Wall");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        OPTIONSEXTRA = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
-        RESULT_DIALOG = DESCRIPTIONS[1];
-    }
-
-    private static enum Choice {
+    private enum Choice {
         FORGET,
         CHANGE,
         GROW,
         FIGHT;
 
-        private Choice() {
+        Choice() {
         }
     }
 
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         RESULT;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

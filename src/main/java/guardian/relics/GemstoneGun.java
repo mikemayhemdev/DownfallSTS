@@ -21,16 +21,12 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
 
     public static final String IMG_PATH = "relics/GemstoneGun.png";
     public static final String OUTLINE_IMG_PATH = "relics/GemstoneGunOutline.png";
-
+    int numPicked = 0;
     private boolean cardSelected = true;
-
     private AbstractCard myGemOne = null;
     private AbstractCard myGemTwo = null;
     private AbstractCard myGemThree = null;
-
     private boolean allDone = false;
-
-    int numPicked = 0;
 
     public GemstoneGun() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.CLINK);

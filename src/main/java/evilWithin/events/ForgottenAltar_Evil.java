@@ -2,33 +2,32 @@ package evilWithin.events;
 
 
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
-import com.megacrit.cardcrawl.cards.curses.Decay;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-
-import java.util.ArrayList;
 
 public class ForgottenAltar_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:ForgottenAltar";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     public static final String[] DESCRIPTIONSALT;
     public static final String[] OPTIONSALT;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Forgotten Altar");
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+    }
+
     private int hpLoss;
     private int goldCost = 50;
     private CurScreen screen;
@@ -38,15 +37,15 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.hpLoss = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.35F);
+            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.35F);
         } else {
-            this.hpLoss = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.25F);
+            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.25F);
         }
 
-        if (AbstractDungeon.player.gold >= goldCost){
+        if (AbstractDungeon.player.gold >= goldCost) {
             this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + this.hpLoss + OPTIONSALT[2], new Apparition());
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldCost + OPTIONSALT[4],true);
+            this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldCost + OPTIONSALT[4], true);
 
         }
 
@@ -55,9 +54,9 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.clearAllDialogs();
                         AbstractDungeon.player.loseGold(this.goldCost);
@@ -73,7 +72,7 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.setDialogOption(OPTIONSALT[5]);
                         AbstractDungeon.player.increaseMaxHp(5, false);
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, this.hpLoss));
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.hpLoss));
                         CardCrawlGame.sound.play("HEAL_3");
                         this.screenNum = 1;
 
@@ -92,21 +91,11 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         }
     }
 
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Forgotten Altar");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-    }
-
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         END;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

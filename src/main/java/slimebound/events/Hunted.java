@@ -100,12 +100,12 @@ public class Hunted extends MindBloom {
 
     }
 
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         FIGHT,
         LEAVE;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

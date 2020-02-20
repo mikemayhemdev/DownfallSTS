@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.vfx.SlimeFlareEffect;
 
 

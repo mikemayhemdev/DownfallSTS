@@ -7,8 +7,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import slimebound.orbs.ChampSlime;
-import slimebound.orbs.CultistSlime;
-import slimebound.orbs.SpawnedSlime;
 
 
 public class CrownParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {

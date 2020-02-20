@@ -51,8 +51,6 @@ import slimebound.helpers.PoisonVariable;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
 import slimebound.orbs.CultistSlime;
-import slimebound.orbs.GreedOozeSlime;
-import slimebound.orbs.ScrapOozeSlime;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;

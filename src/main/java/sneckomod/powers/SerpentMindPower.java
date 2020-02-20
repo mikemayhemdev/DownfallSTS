@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 

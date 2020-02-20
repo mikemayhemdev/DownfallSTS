@@ -40,6 +40,5 @@ public class CharBossDefect extends AbstractCharBoss {
         this.chosenArchetype.simulateBuild(AbstractCharBoss.boss);
 
 
-
     }
 }

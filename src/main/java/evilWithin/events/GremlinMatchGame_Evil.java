@@ -8,7 +8,6 @@ package evilWithin.events;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -25,7 +24,6 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.exordium.GremlinFat;
 import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
-import com.megacrit.cardcrawl.monsters.exordium.GremlinThief;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import evilWithin.relics.GremlinSack;
@@ -171,43 +169,43 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
             }
 
             if (!anyHovered) {
-                Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(0)).hb.cX, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(0)).hb.cY);
+                Gdx.input.setCursorPosition((int) this.cards.group.get(0).hb.cX, Settings.HEIGHT - (int) this.cards.group.get(0).hb.cY);
             } else {
                 float x;
                 if (!CInputActionSet.up.isJustPressed() && !CInputActionSet.altUp.isJustPressed()) {
                     if (!CInputActionSet.down.isJustPressed() && !CInputActionSet.altDown.isJustPressed()) {
                         if (!CInputActionSet.left.isJustPressed() && !CInputActionSet.altLeft.isJustPressed()) {
                             if (CInputActionSet.right.isJustPressed() || CInputActionSet.altRight.isJustPressed()) {
-                                x = ((AbstractCard) this.cards.group.get(index)).hb.cX + 210.0F * Settings.scale;
+                                x = this.cards.group.get(index).hb.cX + 210.0F * Settings.scale;
                                 if (x > 1375.0F * Settings.scale) {
                                     x = 640.0F * Settings.scale;
                                 }
 
-                                Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(index)).hb.cY);
+                                Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) this.cards.group.get(index).hb.cY);
                             }
                         } else {
-                            x = ((AbstractCard) this.cards.group.get(index)).hb.cX - 210.0F * Settings.scale;
+                            x = this.cards.group.get(index).hb.cX - 210.0F * Settings.scale;
                             if (x < 530.0F * Settings.scale) {
                                 x = 1270.0F * Settings.scale;
                             }
 
-                            Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) ((AbstractCard) this.cards.group.get(index)).hb.cY);
+                            Gdx.input.setCursorPosition((int) x, Settings.HEIGHT - (int) this.cards.group.get(index).hb.cY);
                         }
                     } else {
-                        x = ((AbstractCard) this.cards.group.get(index)).hb.cY - 230.0F * Settings.scale;
+                        x = this.cards.group.get(index).hb.cY - 230.0F * Settings.scale;
                         if (x < 175.0F * Settings.scale) {
                             x = 750.0F * Settings.scale;
                         }
 
-                        Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(index)).hb.cX, (int) ((float) Settings.HEIGHT - x));
+                        Gdx.input.setCursorPosition((int) this.cards.group.get(index).hb.cX, (int) ((float) Settings.HEIGHT - x));
                     }
                 } else {
-                    x = ((AbstractCard) this.cards.group.get(index)).hb.cY + 230.0F * Settings.scale;
+                    x = this.cards.group.get(index).hb.cY + 230.0F * Settings.scale;
                     if (x > 865.0F * Settings.scale) {
                         x = 290.0F * Settings.scale;
                     }
 
-                    Gdx.input.setCursorPosition((int) ((AbstractCard) this.cards.group.get(index)).hb.cX, (int) ((float) Settings.HEIGHT - x));
+                    Gdx.input.setCursorPosition((int) this.cards.group.get(index).hb.cX, (int) ((float) Settings.HEIGHT - x));
                 }
 
                 if (CInputActionSet.select.isJustPressed()) {
@@ -369,10 +367,10 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
 
     private void placeCards() {
         for (int i = 0; i < this.cards.size(); ++i) {
-            ((AbstractCard) this.cards.group.get(i)).target_x = (float) (i % 4) * 210.0F * Settings.scale + 640.0F * Settings.scale;
-            ((AbstractCard) this.cards.group.get(i)).target_y = (float) (i % 3) * -230.0F * Settings.scale + 750.0F * Settings.scale;
-            ((AbstractCard) this.cards.group.get(i)).targetDrawScale = 0.5F;
-            ((AbstractCard) this.cards.group.get(i)).isFlipped = true;
+            this.cards.group.get(i).target_x = (float) (i % 4) * 210.0F * Settings.scale + 640.0F * Settings.scale;
+            this.cards.group.get(i).target_y = (float) (i % 3) * -230.0F * Settings.scale + 750.0F * Settings.scale;
+            this.cards.group.get(i).targetDrawScale = 0.5F;
+            this.cards.group.get(i).isFlipped = true;
         }
 
     }
@@ -396,7 +394,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
     public void renderAboveTopPanel(SpriteBatch sb) {
     }
 
-    private static enum CUR_SCREEN {
+    private enum CUR_SCREEN {
         INTRO,
         RULE_EXPLANATION,
         PLAY,
@@ -404,7 +402,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
         FIGHT,
         CLEAN_UP;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

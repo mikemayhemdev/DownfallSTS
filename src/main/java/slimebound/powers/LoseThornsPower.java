@@ -39,7 +39,7 @@ public class LoseThornsPower extends AbstractPower {
         this.type = POWER_TYPE;
 
         this.amount = amount;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
@@ -65,7 +65,7 @@ public class LoseThornsPower extends AbstractPower {
 
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, LoseThornsPower.POWER_ID));
-        this.naturalclear = true;
+        naturalclear = true;
 
     }
 

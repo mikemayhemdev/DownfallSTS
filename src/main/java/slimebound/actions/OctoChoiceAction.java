@@ -31,7 +31,7 @@ public class OctoChoiceAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (funCard != null){
+        if (funCard != null) {
             for (OctoChoiceCard q : funCard.choiceList()) {
                 group.addToTop(q);
             }
@@ -54,7 +54,7 @@ public class OctoChoiceAction extends AbstractGameAction {
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 CenterGridCardSelectScreen.centerGridSelect = false;
             }
-            if (funCard != null){
+            if (funCard != null) {
                 funCard.doChoiceStuff(cardChoice);
             } else {
                 funCard2.doChoiceStuff(cardChoice);

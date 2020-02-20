@@ -20,7 +20,7 @@ public class MayhemGhostflame extends AbstractGhostflame {
     public void onCharge() {
         atb(new AbstractGameAction() {// 39
             public void update() {
-                this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), false));// 42 44
+                this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng), false));// 42 44
                 this.isDone = true;// 49
             }// 50
         });

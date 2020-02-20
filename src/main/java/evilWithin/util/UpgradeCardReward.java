@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 public class UpgradeCardReward extends RewardItem {
+    public boolean cardsSelected = true;
+
     public UpgradeCardReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
         this.flashTimer = 0.0F;
@@ -19,8 +21,6 @@ public class UpgradeCardReward extends RewardItem {
 
         this.text = "Remove a card in your deck.";
     }
-
-    public boolean cardsSelected = true;
 
     @Override
     public void update() {

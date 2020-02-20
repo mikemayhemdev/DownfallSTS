@@ -29,7 +29,7 @@ public class StunnedPower extends AbstractPower {
         this.owner = owner;
         this.img = ImageMaster.loadImage("images/stslib/powers/32/stun.png");
         this.type = POWER_TYPE;
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         updateDescription();

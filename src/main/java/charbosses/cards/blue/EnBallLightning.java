@@ -16,6 +16,10 @@ public class EnBallLightning extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Ball Lightning";
     private static final CardStrings cardStrings;
 
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Ball Lightning");
+    }
+
     public EnBallLightning() {
         super(ID, cardStrings.NAME, "blue/attack/ball_lightning", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY);// 19
         this.showEvokeValue = true;
@@ -28,7 +32,7 @@ public class EnBallLightning extends AbstractBossCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
-        for(int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new EnemyChannelAction(new EnemyLightning()));
         }
     }
@@ -43,9 +47,5 @@ public class EnBallLightning extends AbstractBossCard {
 
     public AbstractCard makeCopy() {
         return new EnBallLightning();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Ball Lightning");
     }
 }

@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.relics.GreedOozeRelic;
-import slimebound.vfx.GoldCoinsParticle;
 import slimebound.vfx.GreedGlowParticle;
 import slimebound.vfx.SlimeFlareEffect;
 

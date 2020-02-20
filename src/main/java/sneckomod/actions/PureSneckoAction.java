@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import slimebound.actions.MakeTempCardInHandActionReduceCost;
-import sneckomod.TheSnecko;
 
 
 public class PureSneckoAction extends AbstractGameAction {

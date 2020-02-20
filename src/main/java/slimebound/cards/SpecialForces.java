@@ -48,7 +48,7 @@ public class SpecialForces extends AbstractSlimeboundCard {
         }
     }
 
-    public void choice(){
+    public void choice() {
         addToBot(new OctoChoiceAction(this));
     }
 

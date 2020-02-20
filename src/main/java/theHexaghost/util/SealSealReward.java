@@ -74,7 +74,7 @@ public class SealSealReward extends RewardItem {
             if (c instanceof AbstractSealCard)
                 list.add(c);
         }
-        return (AbstractCard) list.get(cardRandomRng.random(list.size() - 1));// 1217
+        return list.get(cardRandomRng.random(list.size() - 1));// 1217
     }
 
     public boolean cardListDuplicate(AbstractCard card) {

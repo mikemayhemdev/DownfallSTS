@@ -13,16 +13,24 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 
 public class Cleric_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:Cleric";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESC;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
+    public static boolean heDead = true;
+    public static boolean encountered = true;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESC = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+    }
+
     private CurrentScreen curScreen;
     private OptionChosen option;
     private int gold;
 
-    public static boolean heDead = true;
-    public static boolean encountered = true;
 
     public Cleric_Evil() {
         super(NAME, DESC[0], "images/events/cleric.jpg");
@@ -42,11 +50,10 @@ public class Cleric_Evil extends AbstractImageEvent {
         encountered = true;
     }
 
-
     public void update() {
         super.update();
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
             AbstractEvent.logMetricCardRemovalAtCost("The Cleric", "Card Removal", c, 0);
             AbstractDungeon.player.masterDeck.removeCard(c);
@@ -84,27 +91,20 @@ public class Cleric_Evil extends AbstractImageEvent {
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESC = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-    }
-
-    private static enum OptionChosen {
+    private enum OptionChosen {
         PUNCH,
         THREATEN,
         NONE;
 
-        private OptionChosen() {
+        OptionChosen() {
         }
     }
 
-    private static enum CurrentScreen {
+    private enum CurrentScreen {
         INTRO,
         DONE;
 
-        private CurrentScreen() {
+        CurrentScreen() {
         }
     }
 }

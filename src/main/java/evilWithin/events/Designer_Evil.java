@@ -18,24 +18,30 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import evilWithin.EvilWithinMod;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Designer_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:Designer";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESC;
     public static final String[] OPTIONS;
     public static final String[] OPTIONSALT;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString("Designer");
+        NAME = eventStrings.NAME;
+        DESC = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
+    }
+
     private CurrentScreen curScreen;
     private OptionChosen option;
     private boolean adjustmentUpgradesOne;
     private boolean cleanUpRemovesCards;
     private int hpLoss;
+
 
     public Designer_Evil() {
         super(NAME, DESC[0], (EvilWithinMod.assetPath("images/events/designerThreatened.png")));
@@ -63,19 +69,17 @@ public class Designer_Evil extends AbstractImageEvent {
         }
     }
 
-
-
     public void update() {
         super.update();
         if (this.option != OptionChosen.NONE) {
             AbstractCard c;
             AbstractCard upgradeCard;
-            switch(this.option) {
+            switch (this.option) {
                 case REMOVE:
                     if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                         CardCrawlGame.sound.play("CARD_EXHAUST");
-                        upgradeCard = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(upgradeCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        upgradeCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(upgradeCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.player.masterDeck.removeCard(upgradeCard);
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         this.option = OptionChosen.NONE;
@@ -83,16 +87,16 @@ public class Designer_Evil extends AbstractImageEvent {
                     break;
                 case REMOVE_AND_UPGRADE:
                     if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                        AbstractCard removeCard = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                        AbstractCard removeCard = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                         CardCrawlGame.sound.play("CARD_EXHAUST");
-                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(removeCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH - 20.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(removeCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH - 20.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.player.masterDeck.removeCard(removeCard);
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         ArrayList<AbstractCard> upgradableCards = new ArrayList();
                         Iterator var9 = AbstractDungeon.player.masterDeck.group.iterator();
 
-                        while(var9.hasNext()) {
-                            c = (AbstractCard)var9.next();
+                        while (var9.hasNext()) {
+                            c = (AbstractCard) var9.next();
                             if (c.canUpgrade()) {
                                 upgradableCards.add(c);
                             }
@@ -100,11 +104,11 @@ public class Designer_Evil extends AbstractImageEvent {
 
                         Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
                         if (!upgradableCards.isEmpty()) {
-                            upgradeCard = (AbstractCard)upgradableCards.get(0);
+                            upgradeCard = upgradableCards.get(0);
                             upgradeCard.upgrade();
                             AbstractDungeon.player.bottledCardUpgradeCheck(upgradeCard);
                             AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(upgradeCard.makeStatEquivalentCopy()));
-                            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         } else {
                         }
 
@@ -117,27 +121,27 @@ public class Designer_Evil extends AbstractImageEvent {
                         List<String> obtainedCards = new ArrayList();
                         AbstractCard newCard1;
                         if (AbstractDungeon.gridSelectScreen.selectedCards.size() == 2) {
-                            c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                            c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                             AbstractDungeon.player.masterDeck.removeCard(c);
                             transCards.add(c.cardID);
                             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                             newCard1 = AbstractDungeon.getTransformedCard();
                             obtainedCards.add(newCard1.cardID);
-                            AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(newCard1, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 20.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
-                            c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(1);
+                            AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(newCard1, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 20.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                            c = AbstractDungeon.gridSelectScreen.selectedCards.get(1);
                             AbstractDungeon.player.masterDeck.removeCard(c);
                             transCards.add(c.cardID);
                             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                             c = AbstractDungeon.getTransformedCard();
                             obtainedCards.add(c.cardID);
-                            AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 20.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 20.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                             AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         } else {
-                            c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                            c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                             AbstractDungeon.player.masterDeck.removeCard(c);
                             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                             newCard1 = AbstractDungeon.getTransformedCard();
-                            AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(newCard1, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(newCard1, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                             AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         }
 
@@ -146,10 +150,10 @@ public class Designer_Evil extends AbstractImageEvent {
                     break;
                 case UPGRADE:
                     if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                        ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).upgrade();
-                        AbstractDungeon.player.bottledCardUpgradeCheck((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0));
-                        AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeStatEquivalentCopy()));
-                        AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.gridSelectScreen.selectedCards.get(0).upgrade();
+                        AbstractDungeon.player.bottledCardUpgradeCheck(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
+                        AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeStatEquivalentCopy()));
+                        AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
                         this.option = OptionChosen.NONE;
                     }
@@ -161,13 +165,12 @@ public class Designer_Evil extends AbstractImageEvent {
     protected void buttonEffect(int buttonPressed) {
 
 
-
-        switch(this.curScreen) {
+        switch (this.curScreen) {
             case LOOTER:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESC[1]);
-                        AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, this.hpLoss, DamageType.HP_LOSS));
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.hpLoss, DamageType.HP_LOSS));
                         int roll = MathUtils.random(2);
                         if (roll == 0) {
                             CardCrawlGame.sound.play("VO_LOOTER_2A");
@@ -210,7 +213,7 @@ public class Designer_Evil extends AbstractImageEvent {
                 this.curScreen = CurrentScreen.MAIN;
                 break;
             case MAIN:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESC[4]);
                         if (this.adjustmentUpgradesOne) {
@@ -257,8 +260,8 @@ public class Designer_Evil extends AbstractImageEvent {
         ArrayList<AbstractCard> upgradableCards = new ArrayList();
         Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(var2.hasNext()) {
-            AbstractCard c = (AbstractCard)var2.next();
+        while (var2.hasNext()) {
+            AbstractCard c = (AbstractCard) var2.next();
             if (c.canUpgrade()) {
                 upgradableCards.add(c);
             }
@@ -267,51 +270,43 @@ public class Designer_Evil extends AbstractImageEvent {
         Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
         if (upgradableCards.isEmpty()) {
         } else if (upgradableCards.size() == 1) {
-            ((AbstractCard)upgradableCards.get(0)).upgrade();
-            AbstractDungeon.player.bottledCardUpgradeCheck((AbstractCard)upgradableCards.get(0));
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(((AbstractCard)upgradableCards.get(0)).makeStatEquivalentCopy()));
-            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            upgradableCards.get(0).upgrade();
+            AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy()));
+            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
         } else {
             List<String> cards = new ArrayList();
-            cards.add(((AbstractCard)upgradableCards.get(0)).cardID);
-            cards.add(((AbstractCard)upgradableCards.get(1)).cardID);
-            ((AbstractCard)upgradableCards.get(0)).upgrade();
-            ((AbstractCard)upgradableCards.get(1)).upgrade();
-            AbstractDungeon.player.bottledCardUpgradeCheck((AbstractCard)upgradableCards.get(0));
-            AbstractDungeon.player.bottledCardUpgradeCheck((AbstractCard)upgradableCards.get(1));
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(((AbstractCard)upgradableCards.get(0)).makeStatEquivalentCopy(), (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 20.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(((AbstractCard)upgradableCards.get(1)).makeStatEquivalentCopy(), (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 20.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F));
-            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+            cards.add(upgradableCards.get(0).cardID);
+            cards.add(upgradableCards.get(1).cardID);
+            upgradableCards.get(0).upgrade();
+            upgradableCards.get(1).upgrade();
+            AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(0));
+            AbstractDungeon.player.bottledCardUpgradeCheck(upgradableCards.get(1));
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(upgradableCards.get(0).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F - 20.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(upgradableCards.get(1).makeStatEquivalentCopy(), (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F + 20.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+            AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
         }
 
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Designer");
-        NAME = eventStrings.NAME;
-        DESC = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-    }
-
-    private static enum OptionChosen {
+    private enum OptionChosen {
         UPGRADE,
         REMOVE,
         REMOVE_AND_UPGRADE,
         TRANSFORM,
         NONE;
 
-        private OptionChosen() {
+        OptionChosen() {
         }
     }
 
-    private static enum CurrentScreen {
+    private enum CurrentScreen {
         LOOTER,
         INTRO,
         MAIN,
         DONE;
 
-        private CurrentScreen() {
+        CurrentScreen() {
         }
     }
 }

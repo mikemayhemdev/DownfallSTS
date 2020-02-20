@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.actions.TriggerSlimeAttacksAction;
-import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.BuffSecondarySlimeEffectsPower;
 

@@ -56,5 +56,6 @@ public class BustKeyEffect extends AbstractGameEffect {
     }
 
     @Override
-    public void dispose() { }
+    public void dispose() {
+    }
 }

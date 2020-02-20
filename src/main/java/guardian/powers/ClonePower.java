@@ -30,7 +30,7 @@ public class ClonePower extends AbstractGuardianPower {
         this.amount = amount;
         this.setImage("ClonePower84.png", "ClonePower32.png");
 
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 

@@ -25,8 +25,6 @@ import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -95,7 +93,6 @@ public abstract class SpawnedSlime
     private float yOffset;
 
 
-
     public SpawnedSlime(String ID, Color projectileColor, String atlasString, String skeletonString, boolean medScale, boolean alt, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage) {
 
         this.scale = scale * .85F;
@@ -104,7 +101,7 @@ public abstract class SpawnedSlime
         //this.renderBehind=true;
         SkeletonJson json = new SkeletonJson(this.atlas);
 
-        if (medScale){
+        if (medScale) {
             json.setScale(Settings.scale / .85F * .7F);
             if (alt) {
                 this.yOffset = -7F * Settings.scale;
@@ -132,7 +129,6 @@ public abstract class SpawnedSlime
         this.yOffset = yOffset * Settings.scale;
 
         this.ID = ID;
-
 
 
         this.basePassiveAmount = passive;
@@ -165,7 +161,7 @@ public abstract class SpawnedSlime
 
     }
 
-        public void spawnVFX() {
+    public void spawnVFX() {
         if (AbstractDungeon.player.maxOrbs > 0) {
 
             if (this.topSpawnVFX) {
@@ -410,7 +406,7 @@ public abstract class SpawnedSlime
 
         } else if (this instanceof PoisonSlime) {
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount) + " All", this.cX + this.NUM_X_OFFSET - (Settings.scale * 0.01F), this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + " All", this.cX + this.NUM_X_OFFSET - (Settings.scale * 0.01F), this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
         } else {
             FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
 

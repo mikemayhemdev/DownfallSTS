@@ -5,25 +5,16 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ShaderHelper;
-import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -33,8 +24,14 @@ import java.util.Iterator;
 
 public class AbstractTotemMonster extends AbstractMonster {
 
+    public static Float beamOffsetX = 25F * Settings.scale;
+    public static Float beamOffsetY = 10F * Settings.scale;
+    public static Float beamOffsetX2 = -35F * Settings.scale;
+    public static Float beamOffsetY2 = 10F * Settings.scale;
     public Integer baseHP = 40;
     public Integer HPAscBuffed = 0;
+    public Intent intentType = Intent.BUFF;
+    public Color totemLivingColor;
     private Method refrenderIntentVfxBehind;
     private Method refrenderIntent;
     private Method refrenderIntentVfxAfter;
@@ -50,20 +47,8 @@ public class AbstractTotemMonster extends AbstractMonster {
     private Method refrenderBlockOutline;
     private Method refupdateDeathAnimation;
     private Method refupdateIntent;
-
-    public static Float beamOffsetX = 25F * Settings.scale;
-    public static Float beamOffsetY = 10F * Settings.scale;
-
-    public static Float beamOffsetX2 = -35F * Settings.scale;
-    public static Float beamOffsetY2 = 10F * Settings.scale;
-
-
-
-    public Intent intentType = Intent.BUFF;
     private boolean wasFalling = false;
     private boolean spawnedAfterFirst3 = false;
-
-    public Color totemLivingColor;
 
 
     public AbstractTotemMonster(String name, String ID, String imgPath) {
@@ -110,7 +95,6 @@ public class AbstractTotemMonster extends AbstractMonster {
         this.refupdateIntent.setAccessible(true);
 
 
-
         this.type = EnemyType.ELITE;
         this.dialogX = -100.0F * Settings.scale;
         this.dialogY = 10.0F * Settings.scale;
@@ -124,14 +108,14 @@ public class AbstractTotemMonster extends AbstractMonster {
             this.setHp(baseHP);
         }
 
-        if (spawnedAfterFirst3){
-            this.setMove((byte)0, Intent.STUN);
+        if (spawnedAfterFirst3) {
+            this.setMove((byte) 0, Intent.STUN);
             createIntent();
         }
 
     }
 
-    public void totemAttack(){
+    public void totemAttack() {
 
     }
 
@@ -207,8 +191,8 @@ public class AbstractTotemMonster extends AbstractMonster {
 
         Iterator var1 = this.powers.iterator();
 
-        while(var1.hasNext()) {
-            AbstractPower p = (AbstractPower)var1.next();
+        while (var1.hasNext()) {
+            AbstractPower p = (AbstractPower) var1.next();
             p.updateParticles();
         }
 
@@ -217,7 +201,7 @@ public class AbstractTotemMonster extends AbstractMonster {
         this.updateAnimations();
         try {
             refupdateDeathAnimation.invoke(this);
-            this.intentHb.move(this.hb.cX - 120F * Settings.scale,this.drawY + 160F * Settings.scale);
+            this.intentHb.move(this.hb.cX - 120F * Settings.scale, this.drawY + 160F * Settings.scale);
 
             refupdateIntent.invoke(this);
         } catch (InvocationTargetException | IllegalAccessException e) {
@@ -228,10 +212,8 @@ public class AbstractTotemMonster extends AbstractMonster {
     }
 
 
-
-
     protected void getMove(int num) {
-        if (this.spawnedAfterFirst3){
+        if (this.spawnedAfterFirst3) {
             this.setMove((byte) 0, Intent.STUN);
             this.spawnedAfterFirst3 = false;
 
@@ -240,7 +222,7 @@ public class AbstractTotemMonster extends AbstractMonster {
         }
     }
 
-    public void getUniqueTotemMove(){
+    public void getUniqueTotemMove() {
 
     }
 
@@ -251,7 +233,7 @@ public class AbstractTotemMonster extends AbstractMonster {
         ArrayList<AbstractMonster> targets = new ArrayList<>();
         targets.addAll(AbstractDungeon.getMonsters().monsters);
 
-        for (AbstractMonster m : targets){
+        for (AbstractMonster m : targets) {
             if (m.drawY > AbstractDungeon.floorY - (35F * Settings.scale)) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StunMonsterPower(m, 0), 1));
             }
@@ -271,8 +253,7 @@ public class AbstractTotemMonster extends AbstractMonster {
                 if (this.img != null) {
                     sb.draw(this.img, this.drawX - (float) this.img.getWidth() * Settings.scale / 2.0F + this.animX, this.drawY + this.animY + AbstractDungeon.sceneOffsetY, (float) this.img.getWidth() * Settings.scale, (float) this.img.getHeight() * Settings.scale, 0, 0, this.img.getWidth(), this.img.getHeight(), this.flipHorizontal, this.flipVertical);
                 }
-            }
-            else {
+            } else {
                 this.state.update(Gdx.graphics.getDeltaTime());
                 this.state.apply(this.skeleton);
                 this.skeleton.updateWorldTransform();
@@ -318,7 +299,7 @@ public class AbstractTotemMonster extends AbstractMonster {
 
 
             this.intentHb.render(sb);
-            this.healthHb.move(this.hb.cX,this.drawY + 50F * Settings.scale);
+            this.healthHb.move(this.hb.cX, this.drawY + 50F * Settings.scale);
 
             this.healthHb.render(sb);
         }
@@ -337,10 +318,9 @@ public class AbstractTotemMonster extends AbstractMonster {
     }
 
 
-
     public void renderHealth(SpriteBatch sb) {
-        Float thbwidth = (Float)ReflectionHacks.getPrivate(this,AbstractCreature.class,"targetHealthBarWidth");
-        Float yoffset = (Float)ReflectionHacks.getPrivate(this,AbstractCreature.class,"hbYOffset");
+        Float thbwidth = (Float) ReflectionHacks.getPrivate(this, AbstractCreature.class, "targetHealthBarWidth");
+        Float yoffset = (Float) ReflectionHacks.getPrivate(this, AbstractCreature.class, "hbYOffset");
         yoffset += 90F * Settings.scale;
 
         if (!Settings.hideCombatElements) {

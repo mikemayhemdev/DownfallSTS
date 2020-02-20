@@ -50,10 +50,10 @@ public class GuardianCharacter extends CustomPlayer {
     private boolean inShattered;
 
     public GuardianCharacter(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
 
 
-        this.initializeClass((String) null, "guardianResources/GuardianImages/char/shoulder2.png", "guardianResources/GuardianImages/char/shoulder.png", "guardianResources/GuardianImages/char/corpse.png", this.getLoadout(), 0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
+        this.initializeClass(null, "guardianResources/GuardianImages/char/shoulder2.png", "guardianResources/GuardianImages/char/shoulder.png", "guardianResources/GuardianImages/char/corpse.png", this.getLoadout(), 0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
         this.reloadAnimation();
 
 
@@ -62,7 +62,7 @@ public class GuardianCharacter extends CustomPlayer {
     //TODO - Victory screens
 
     public CharSelectInfo getInfo() {
-        return (CharSelectInfo) getLoadout();
+        return getLoadout();
     }
 
     @Override

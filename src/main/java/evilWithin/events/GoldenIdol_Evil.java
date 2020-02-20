@@ -15,36 +15,28 @@ import java.io.IOException;
 
 public class GoldenIdol_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:GoldenIdol";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
-    private CurScreen screen;
+    private static final EventStrings eventStrings;
     public static boolean trapAlreadySet = false;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+    }
+
+    private CurScreen screen;
     private int gold = 100;
     private AbstractCard strike = null;
-
-    public static void save() {
-        if (AbstractDungeon.player != null && EvilWithinMod.bruhData != null) {
-            try {
-                EvilWithinMod.bruhData.setBool("trapEvent", trapAlreadySet);
-                EvilWithinMod.bruhData.save();
-            } catch (IOException ignored) {
-            }
-        }
-    }
-
-    public static void load() {
-        if (EvilWithinMod.bruhData != null && EvilWithinMod.bruhData.has("trapEvent")) {
-            trapAlreadySet = EvilWithinMod.bruhData.getBool("trapEvent");
-        }
-    }
 
     public GoldenIdol_Evil() {
         super(NAME, "", "images/events/goldenIdol.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (!this.trapAlreadySet) {
+        if (!trapAlreadySet) {
             for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                     this.strike = c;
@@ -63,6 +55,22 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
             this.imageEventText.setDialogOption(OPTIONS[1] + this.gold + OPTIONS[2]);
         }
         this.imageEventText.setDialogOption(OPTIONS[3]);
+    }
+
+    public static void save() {
+        if (AbstractDungeon.player != null && EvilWithinMod.bruhData != null) {
+            try {
+                EvilWithinMod.bruhData.setBool("trapEvent", trapAlreadySet);
+                EvilWithinMod.bruhData.save();
+            } catch (IOException ignored) {
+            }
+        }
+    }
+
+    public static void load() {
+        if (EvilWithinMod.bruhData != null && EvilWithinMod.bruhData.has("trapEvent")) {
+            trapAlreadySet = EvilWithinMod.bruhData.getBool("trapEvent");
+        }
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -88,7 +96,7 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
                         return;
                     case 1:
 
-                        if (!this.trapAlreadySet) {
+                        if (!trapAlreadySet) {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                         } else {
                             this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
@@ -106,18 +114,11 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
         }
     }
 
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
-    }
-
-    private static enum CurScreen {
+    private enum CurScreen {
         INTRO,
         RESULT;
 
-        private CurScreen() {
+        CurScreen() {
         }
     }
 }

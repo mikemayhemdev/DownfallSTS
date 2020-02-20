@@ -13,6 +13,10 @@ public class EnZap extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Zap";
     private static final CardStrings cardStrings;
 
+    static {
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Zap");
+    }
+
     public EnZap() {
         super(ID, cardStrings.NAME, "blue/skill/zap", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.SELF);
         this.showEvokeValue = true;
@@ -22,7 +26,7 @@ public class EnZap extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < this.magicNumber; ++i) {
+        for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new EnemyChannelAction(new Lightning()));
         }
     }
@@ -36,9 +40,5 @@ public class EnZap extends AbstractBossCard {
 
     public AbstractCard makeCopy() {
         return new EnZap();
-    }
-
-    static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Zap");
     }
 }

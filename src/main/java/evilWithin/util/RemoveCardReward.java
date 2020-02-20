@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 public class RemoveCardReward extends RewardItem {
+    public boolean cardsSelected = true;
+
     public RemoveCardReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
         this.flashTimer = 0.0F;
@@ -20,8 +22,6 @@ public class RemoveCardReward extends RewardItem {
 
         this.text = "Upgrade a card in your deck.";
     }
-
-    public boolean cardsSelected = true;
 
     @Override
     public void update() {
