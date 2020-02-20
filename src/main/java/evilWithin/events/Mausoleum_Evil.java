@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import evilWithin.EvilWithinMod;
 
 public class Mausoleum_Evil extends AbstractImageEvent {
     public static final String ID = "evilWithin:Mausoleum";
@@ -33,10 +34,10 @@ public class Mausoleum_Evil extends AbstractImageEvent {
         OPTIONS = eventStrings.OPTIONS;
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];// 21
-        CURSED_RESULT = DESCRIPTIONS[1];// 22
-        NORMAL_RESULT = DESCRIPTIONS[2];// 23
-        NOPE_RESULT = DESCRIPTIONS[3];// 24
+        DIALOG_1 = DESCRIPTIONS[0];
+        CURSED_RESULT = DESCRIPTIONS[1];
+        NORMAL_RESULT = DESCRIPTIONS[2];
+        NOPE_RESULT = DESCRIPTIONS[3];
     }
 
     private int screenNum = 0;
@@ -45,7 +46,7 @@ public class Mausoleum_Evil extends AbstractImageEvent {
     public Mausoleum_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/mausoleum.jpg");
         this.imageEventText.setDialogOption(OPTIONSALT[0], CardLibrary.getCopy(Writhe.ID));
-        this.imageEventText.setDialogOption(OPTIONS[4], CardLibrary.getCopy(Writhe.ID));// 38
+        this.imageEventText.setDialogOption(OPTIONS[4], CardLibrary.getCopy(Writhe.ID));
         this.imageEventText.setDialogOption(OPTIONS[5]);
     }
 
@@ -56,58 +57,53 @@ public class Mausoleum_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch (this.screen) {// 61
+        switch (this.screen) {
             case INTRO:
-                switch (buttonPressed) {// 63
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Writhe(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));// 73
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Writhe(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(200));
                         AbstractDungeon.player.gainGold(200);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
                     case 1:
-                        boolean result = AbstractDungeon.miscRng.randomBoolean();// 66
-                        if (AbstractDungeon.ascensionLevel >= 15) {// 67
-                            result = true;// 68
+                        boolean result = AbstractDungeon.miscRng.randomBoolean();
+                        if (AbstractDungeon.ascensionLevel >= 15) {
+                            result = true;
                         }
 
-                        if (result) {// 71
-                            this.imageEventText.updateBodyText(CURSED_RESULT);// 72
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Writhe(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));// 73
+                        if (result) {
+                            this.imageEventText.updateBodyText(CURSED_RESULT);
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Writhe(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         } else {
-                            this.imageEventText.updateBodyText(NORMAL_RESULT);// 76
+                            this.imageEventText.updateBodyText(NORMAL_RESULT);
                         }
 
-                        CardCrawlGame.sound.play("BLUNT_HEAVY");// 79
-                        CardCrawlGame.screenShake.rumble(2.0F);// 80
-                        AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());// 81 82
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);// 83
-                        if (result) {// 85
-                            logMetricObtainCardAndRelic("The Mausoleum", "Opened", new Writhe(), r);// 86
-                        } else {
-                            logMetricObtainRelic("The Mausoleum", "Opened", r);// 88
-                        }
+                        CardCrawlGame.sound.play("BLUNT_HEAVY");
+                        this.imageEventText.loadImage(EvilWithinMod.assetPath("images/events/mausoleumNoSpirit.png"));
+                        CardCrawlGame.screenShake.rumble(2.0F);
+                        AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);
                         break;
                     default:
-                        this.imageEventText.updateBodyText(NOPE_RESULT);// 92
-                        logMetricIgnored("The Mausoleum");// 93
+                        this.imageEventText.updateBodyText(NOPE_RESULT);
                 }
 
-                this.imageEventText.clearAllDialogs();// 96
-                this.imageEventText.setDialogOption(OPTIONS[2]);// 97
-                this.screen = CurScreen.RESULT;// 98
-                break;// 99
+                this.imageEventText.clearAllDialogs();
+                this.imageEventText.setDialogOption(OPTIONS[2]);
+                this.screen = CurScreen.RESULT;
+                break;
             default:
-                this.openMap();// 101
+                this.openMap();
         }
 
-    }// 104
+    }
 
     private enum CurScreen {
         INTRO,
         RESULT;
 
         CurScreen() {
-        }// 30
+        }
     }
 }
