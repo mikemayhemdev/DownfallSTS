@@ -132,5 +132,9 @@
     "NAME": "Corrupt",
     "DESCRIPTION": "Exhaust 1 card. Replace it with a random Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Exhaust 1 card. Replace it with a random Upgraded Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust."
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "Wish",
+    "DESCRIPTION": "Ethereal. NL Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
   }
 }

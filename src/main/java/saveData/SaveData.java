@@ -25,6 +25,7 @@ public class SaveData {
     public static final String BLUE_KEY_CONSUMED = "BLUE_KEY_CONSUMED";
 
     public static final String KILLED_CLERIC = "KILLED_CLERIC";
+    public static final String ENCOUNTERED_CLERIC = "ENCOUNTERED_CLERIC";
 
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
@@ -35,6 +36,7 @@ public class SaveData {
     private static boolean consumedBlue;
 
     private static boolean killedCleric;
+    private static boolean encounteredCleric;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -52,6 +54,7 @@ public class SaveData {
             consumedBlue = AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player);
 
             killedCleric = Cleric_Evil.heDead;
+            encounteredCleric = Cleric_Evil.encountered;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -73,6 +76,7 @@ public class SaveData {
             params.put(GREEN_KEY_CONSUMED, consumedGreen);
             params.put(BLUE_KEY_CONSUMED, consumedBlue);
             params.put(KILLED_CLERIC, killedCleric);
+            params.put(ENCOUNTERED_CLERIC, encounteredCleric);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -105,6 +109,7 @@ public class SaveData {
                 consumedBlue = data.BLUE_KEY_CONSUMED;
 
                 killedCleric = data.KILLED_CLERIC;
+                encounteredCleric = data.ENCOUNTERED_CLERIC;
 
                 saveLogger.info("Loaded EvilWithin save data successfully.");
             } catch (Exception e) {
@@ -139,6 +144,7 @@ public class SaveData {
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, consumedBlue);
 
             Cleric_Evil.heDead = killedCleric;
+            Cleric_Evil.encountered = encounteredCleric;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here

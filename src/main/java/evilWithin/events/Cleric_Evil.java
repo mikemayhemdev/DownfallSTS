@@ -22,6 +22,7 @@ public class Cleric_Evil extends AbstractImageEvent {
     private int gold;
 
     public static boolean heDead = false;
+    public static boolean encountered = false;
 
     public Cleric_Evil() {
         super(NAME, DESC[0], "images/events/cleric.jpg");
@@ -38,6 +39,7 @@ public class Cleric_Evil extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
         heDead = false;
+        encountered = true;
     }
 
 

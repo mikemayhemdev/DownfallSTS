@@ -10,6 +10,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
+import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
@@ -29,10 +30,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import eventUtil.EventUtils;
+import evilWithin.cards.KnowingSkullWish;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
 import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.*;
+import evilWithin.relics.KnowingSkull;
 import evilWithin.util.ReplaceData;
 
 import java.io.IOException;
@@ -40,7 +43,7 @@ import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
 public class EvilWithinMod implements
-        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber {
+        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber {
     public static final String modID = "evil-within";
 
     public static final boolean EXPERIMENTAL_FLIP = false;
@@ -113,6 +116,11 @@ public class EvilWithinMod implements
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void receiveEditCards() {
+        BaseMod.addCard(new KnowingSkullWish());
     }
 
     @Override
@@ -326,6 +334,14 @@ public class EvilWithinMod implements
                 MaskedBandits.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                KnowingSkull_Evil.ID, KnowingSkull_Evil.class, true,
+                //Event ID to Override//
+                KnowingSkull.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
@@ -371,5 +387,6 @@ public class EvilWithinMod implements
         BaseMod.addRelic(new GremlinSack(), RelicType.SHARED);
         BaseMod.addRelic(new GremlinWheel(), RelicType.SHARED);
         BaseMod.addRelic(new RedIOU(), RelicType.SHARED);
+        BaseMod.addRelic(new KnowingSkull(), RelicType.SHARED);
     }
 }

@@ -9,4 +9,5 @@ public class EvilWithinSaveData {
     public boolean BLUE_KEY_CONSUMED = false;
 
     public boolean KILLED_CLERIC = false;
+    public boolean ENCOUNTERED_CLERIC = false;
 }
