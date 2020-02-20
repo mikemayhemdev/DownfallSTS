@@ -21,8 +21,8 @@ public class Cleric_Evil extends AbstractImageEvent {
     private OptionChosen option;
     private int gold;
 
-    public static boolean heDead = false;
-    public static boolean encountered = false;
+    public static boolean heDead = true;
+    public static boolean encountered = true;
 
     public Cleric_Evil() {
         super(NAME, DESC[0], "images/events/cleric.jpg");
@@ -35,10 +35,10 @@ public class Cleric_Evil extends AbstractImageEvent {
             this.gold = 100;
         }
 
-        this.imageEventText.setDialogOption(OPTIONS[0]);
+        this.imageEventText.setDialogOption(OPTIONS[0] + this.gold + OPTIONS[5]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
-        heDead = false;
+        heDead = true;
         encountered = true;
     }
 
