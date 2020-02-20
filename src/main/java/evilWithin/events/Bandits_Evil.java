@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.RedMask;
+import evilWithin.relics.RedIOU;
 import evilWithin.vfx.StealRelicEffect;
 
 import java.util.ArrayList;
@@ -83,7 +84,7 @@ public class Bandits_Evil extends AbstractEvent {
                         AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.getMonster("BanditLeader");
                         AbstractDungeon.effectList.add(new StealRelicEffect(AbstractDungeon.player.getRelic(wantThisOne.relicId), q));
                         AbstractDungeon.player.loseRelic(wantThisOne.relicId);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new Circlet());
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new RedIOU());
                         this.roomEventText.updateBodyText(DESCRIPTIONSALT[1]);// 61
                         this.roomEventText.updateDialogOption(0, OPTIONS[3]);// 62
                         this.roomEventText.clearRemainingOptions();// 63

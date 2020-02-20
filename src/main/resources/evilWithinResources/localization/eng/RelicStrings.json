@@ -70,5 +70,12 @@
 		"DESCRIPTIONS": [
 			"At the start of each combat, add a Crystal Shiv to your hand."
 		]
+	},
+	"evil-within:RedIOU": {
+		"NAME": "Red Mask IOU",
+		"FLAVOR": "thanks for the relic duuude",
+		"DESCRIPTIONS": [
+			"At the start of the #b3rd boss, Red Mask Bandits do... something."
+		]
 	}
 }

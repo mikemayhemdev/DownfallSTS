@@ -34,7 +34,6 @@ import evilWithin.monsters.*;
 import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
-import slimebound.relics.GreedOozeRelic;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -107,8 +106,7 @@ public class EvilWithinMod implements
         }
     }
 
-    public static void loadOtherData()
-    {
+    public static void loadOtherData() {
         try {
             bruhData = new SpireConfig("EvilWithin", "TrapSaveData");
             GoldenIdol_Evil.load();
@@ -372,5 +370,6 @@ public class EvilWithinMod implements
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
         BaseMod.addRelic(new GremlinSack(), RelicType.SHARED);
         BaseMod.addRelic(new GremlinWheel(), RelicType.SHARED);
+        BaseMod.addRelic(new RedIOU(), RelicType.SHARED);
     }
 }
