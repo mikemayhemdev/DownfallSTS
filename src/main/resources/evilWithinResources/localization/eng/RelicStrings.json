@@ -72,10 +72,10 @@
     ]
   },
   "evil-within:RedIOU": {
-    "NAME": "Red Mask IOU",
-    "FLAVOR": "thanks for the relic duuude",
+    "NAME": "Bandit Contract",
+    "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
     "DESCRIPTIONS": [
-      "At the start of the #b3rd boss, Red Mask Bandits do... something."
+      "At the start of the #b3rd boss, Red Mask Bandits will assist you."
     ]
   },
   "evil-within:KnowingSkull": {

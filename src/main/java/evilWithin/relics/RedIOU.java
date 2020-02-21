@@ -9,8 +9,8 @@ import evilWithin.EvilWithinMod;
 public class RedIOU extends CustomRelic {
 
     public static final String ID = EvilWithinMod.makeID("RedIOU");
-    private static final Texture IMG = new Texture(EvilWithinMod.assetPath("images/relics/WingStatue.png"));
-    private static final Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/WingStatue.png"));
+    private static final Texture IMG = new Texture(EvilWithinMod.assetPath("images/relics/BanditContract.png"));
+    private static final Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/BanditContract.png"));
 
     public RedIOU() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
