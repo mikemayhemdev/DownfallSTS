@@ -397,5 +397,30 @@
     "OPTIONS": [
       "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rWrithe."
     ]
+  },
+  "evilWithin:Nest": {
+    "NAME": "The Nest",
+    "DESCRIPTIONS": [
+      "A long line of #b~hooded~ #b~figures~ can be seen entering an #punassuming #pcathedral. NL The moment you enter the cathedral, the figures turn to you! NL NL Your ears are near-instantly filled with a cacophony of gasps, cheers, and caws. One of the cultists approaches you with an offering.",
+      "Eyeing a dangerous-looking weapon lying on an altar, you cut through the line of cultists and simply take your prize. You are quickly surrounded by #rCultists! NL NL #r@\"MURDER!!@ #r@MURDER@ #r@MURDER!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL The cultists quickly draw their own daggers, #rslicing and #rslashing as you push through them to exit the building.",
+      "Accepting the cultist's offering, you take the strange elixir from its hands. NL NL The cultists @chant@ and @holler@ for you! NL NL #b~\"CAAW~ #b~CAW~ #b~CAAAAAAWW!!\"~ NL NL You chant, too. Why not? These cultists are an odd bunch, but they serve one of your fellow overlords well.",
+      "#r@\"BIRDGOD!!@ #r@RETURNED!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL Wading through the cheering crowd of cultists, you soon come face-to-face with the leader. A well-dressed cultist hands you an #yOrnate #yDagger.",
+      "You take the dagger, unsure of exactly what is about to transpire. The cultist leader reaches into his robe and offers you a #bblue #boily #bmixture.",
+      "The cultists surrounding the leader provide him with replacements, and soon with his own dagger and potion in hand, he gestures for you to follow in his actions.",
+      "Mimicking the cultist leader's ritual process, you uncork the potion and gently pour a small amount of it over the blade. The steel seems to glow an #b~eerie~ #b~hue~ in the cathedral's light. NL NL Without a single word or gesture from the cult's leader, two cultists step forward - one to you, and one to him. NL NL It is now painfully clear what they want you to do.",
+      "#rYou #rplunge #rthe #rdagger #rinto #rthe #rcultist's #rheart! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL The ritual is completed, and the surviving cultists could not appear happier. They wave their sticks in celebration and continue to call out a cheering caw as you exit the cathedral."
+    ],
+    "OPTIONS": [
+      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
+      "[Locked] Requires Broken Wing Statue.",
+      "[Accept] #gGain #gCultist #gPotion.",
+      "[Steal] #gObtain Ritual Dagger. #rLose #r",
+      " #rHP.",
+      "[Leave]",
+      "[Continue]",
+      "[Take Dagger] #gGain #gRitual #gDagger.",
+      "[Anoint] #gUpgrade #gRitual #gDagger.",
+      "[Sacrifice] #rKill #rCultist with Ritual Dagger+."
+    ]
   }
 }

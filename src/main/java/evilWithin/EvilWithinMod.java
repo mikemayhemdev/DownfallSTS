@@ -366,6 +366,14 @@ public class EvilWithinMod implements
                 Beggar.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                TheNest_Evil.ID, TheNest_Evil.class, true,
+                //Event ID to Override//
+                Nest.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
