@@ -422,5 +422,23 @@
       "[Anoint] #gUpgrade #gRitual #gDagger.",
       "[Sacrifice] #rKill #rCultist with Ritual Dagger+."
     ]
+  },
+  "evilWithin:Colosseum": {
+    "NAME": "The Colosseum",
+    "DESCRIPTIONS": [
+      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"We await these who would assault our City - the ones you seek to destroy! We have an audience awaiting a fresh capture. The people love a #rfight to the #rdeath!\"",
+      "The slavers are no threat to you, and may prove useful if they do manage to slow down or injure your prey. NL NL However, this bloodsport might just be too tempting to pass up...",
+      "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
+      "@\"BRING@ @ME@ @YOUR@ @BEST!\"@ you boom into the crowd, opening a challenge to their champions. NL Two challengers approach, warning you that the rules of the arena prevent them from holding back, despite your position as a lord of the Spire. NL NL You would assume nothing less.",
+      "@\"THE@ @NEXT@ @ONE@ @IS@ @MINE!\"@ you boom into the crowd, who replies with a deafening applause. NL NL It does not take long for the slavers to drag in their latest catch. The unwitting challenger awakens, ~groggy~ from the ambush, but readies themselves. NL NL This should be fun.",
+      "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
+    ],
+    "OPTIONS": [
+      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards.",
+      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[Leave]",
+      "[FIGHT!]",
+      "[Continue]"
+    ]
   }
 }

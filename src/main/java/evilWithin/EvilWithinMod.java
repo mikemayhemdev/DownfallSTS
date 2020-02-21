@@ -374,6 +374,14 @@ public class EvilWithinMod implements
                 Nest.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Colosseum_Evil.ID, Colosseum_Evil.class, true,
+                //Event ID to Override//
+                Colosseum.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
