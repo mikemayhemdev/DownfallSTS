@@ -9,8 +9,8 @@ import evilWithin.EvilWithinMod;
 public class TeleportStone extends CustomRelic {
 
     public static final String ID = EvilWithinMod.makeID("TeleportStone");
-    private static final Texture IMG = new Texture(EvilWithinMod.assetPath("images/relics/BanditContract.png"));
-    private static final Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/BanditContract.png"));
+    private static final Texture IMG = new Texture(EvilWithinMod.assetPath("images/relics/TeleportStone.png"));
+    private static final Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/TeleportStone.png"));
 
     public TeleportStone() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
@@ -24,7 +24,14 @@ public class TeleportStone extends CustomRelic {
 
     @Override
     public void onTrigger() {
-        this.counter = 0;
-        this.usedUp();
+        this.setCounter(0);
+    }
+
+    public void setCounter(int setCounter) {
+        this.counter = setCounter;
+        if (setCounter <= 0) {
+            this.usedUp();
+        }
+
     }
 }

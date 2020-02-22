@@ -493,11 +493,11 @@
   "evilWithin:SecretPortal": {
     "NAME": "Secret Portal",
     "DESCRIPTIONS": [
-      "intro",
-      "took stone"
+      "Before you is a welcome sight - in one of the living walls of the Beyond is an enclosed stone entrance filled with a #p~swirling~ #p~magical~ #p~portal.~ NL NL This portal allows for quick access to the Beyond's overlord. However, if you take the stone that powers it, your journey through the Spire would be hastened.",
+      "The portal can always be repaired later. You pry the runed stone that powers the gateway, and quickly contemplate where to head next. The stone will only remain useful for a brief moment."
     ],
     "OPTIONS": [
-      "[Take Stone] Skip to any room"
+      "[Take Stone] Skip to any Room."
     ]
   }
 }
