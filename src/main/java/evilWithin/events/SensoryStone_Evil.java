@@ -127,10 +127,11 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                     memory = DESCRIPTIONSALT[AbstractDungeon.cardRng.random(0, 8)];
                 }
             } else {
-                memory = MEMORY_CHAMP_TEXT;
+                //Set this to whatever text needs to be debugged and set the above DEBUG variable to true
+                memory = MEMORY_GUARDIAN_TEXT;
             }
         } else {
-            //Set this to whatever text needs to be debugged and set the above DEBUG variable to true
+            //triggers if no card is chosen
             memory = DESCRIPTIONSALT[9];
         }
      //   SlimeboundMod.logger.info(memory);
