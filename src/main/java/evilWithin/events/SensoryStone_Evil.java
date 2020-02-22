@@ -109,7 +109,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         String memory = "";
         AbstractCard c = this.memoryCard;
 
-        boolean debug = true;
+        boolean debug = false;
         if (c != null) {
             if (!debug) {
               //  SlimeboundMod.logger.info("searching tags for " + c.name);
