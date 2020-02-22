@@ -30,7 +30,6 @@ public class Portal_Evil extends AbstractImageEvent {
     public Portal_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/secretPortal.jpg");
         this.screen = CurScreen.INTRO;
-        this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONSALT[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
     }
