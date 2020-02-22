@@ -105,5 +105,14 @@
     "DESCRIPTIONS": [
       "Start each combat with #b1 #yDexterity."
     ]
+  },
+  "evil-within:TeleportStone": {
+    "NAME": "Teleport Stone",
+    "FLAVOR": "Never leave home without it.",
+    "DESCRIPTIONS": [
+      "You may skip any number of rooms the next time you move.",
+      "",
+      "This relic has been used up."
+    ]
   }
 }

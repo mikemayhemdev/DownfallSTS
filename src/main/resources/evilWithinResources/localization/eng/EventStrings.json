@@ -489,5 +489,15 @@
       "[Recall] #gAdd #g2 #gColorless Boss #gcards #gto #gyour #gdeck. #rLose #r",
       "[Recall] #gAdd #g3 #gColorless Boss #gcards #gto #gyour #gdeck. #rLose #r"
     ]
+  },
+  "evilWithin:SecretPortal": {
+    "NAME": "Secret Portal",
+    "DESCRIPTIONS": [
+      "intro",
+      "took stone"
+    ],
+    "OPTIONS": [
+      "[Take Stone] Skip to any room"
+    ]
   }
 }

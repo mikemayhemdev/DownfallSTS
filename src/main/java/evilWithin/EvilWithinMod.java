@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.MindBloom;
 import com.megacrit.cardcrawl.events.beyond.MoaiHead;
+import com.megacrit.cardcrawl.events.beyond.SecretPortal;
 import com.megacrit.cardcrawl.events.beyond.SensoryStone;
 import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
@@ -417,6 +418,14 @@ public class EvilWithinMod implements
                 SensoryStone.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Portal_Evil.ID, Portal_Evil.class, true,
+                //Event ID to Override//
+                SecretPortal.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
@@ -466,5 +475,6 @@ public class EvilWithinMod implements
         BaseMod.addRelic(new HeartBlessingBlue(), RelicType.SHARED);
         BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
         BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
+        BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
     }
 }
