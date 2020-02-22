@@ -3,16 +3,17 @@ package evilWithin.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import evilWithin.EvilWithinMod;
 
-public class RedIOU extends CustomRelic {
+public class RedIOUUpgrade extends CustomRelic {
 
-    public static String ID = EvilWithinMod.makeID("RedIOU");
-    private static Texture IMG = new Texture(EvilWithinMod.assetPath("images/relics/BanditContract.png"));
-    private static Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/BanditContract.png"));
+    public static String ID = EvilWithinMod.makeID("RedIOUUpgrade");
+    private static Texture IMG = new Texture(EvilWithinMod.assetPath("images/relics/BanditContractUpgrade.png"));
+    private static Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/BanditContractUpgrade.png"));
 
-    public RedIOU() {
+    public RedIOUUpgrade() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
     }
 

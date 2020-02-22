@@ -499,5 +499,23 @@
     "OPTIONS": [
       "[Take Stone] Skip to any Room."
     ]
+  },
+  "evilWithin:TombRedMask": {
+    "NAME": "Tomb of Lord Red Mask",
+    "DESCRIPTIONS": [
+      "A highly ornamented tomb can be seen on the other side of a floating path. NL NL Upon reaching the tomb, you notice a soft wall, likely holding a secret compartment. One good strike should be enough to break it down.",
+      "You don the #rmask. The bandits who agreed to assist you seem to have a connection with this Lord - perhaps they will be inspired by your new adornment.",
+      "An opening appears in the tomb and out slides a small red mask with a note attached. \"Take from others as I have taken from you!\"",
+      "Deciding against disturbing the tomb, you continue on.",
+      "Satisfied with collecting the mask, you continue on."
+    ],
+    "OPTIONS": [
+      "[Don the Red Mask] #gUpgrade #gBandit #gContract.",
+      "[Locked] Requires: Red Mask & Bandit Contract.",
+      "[Bash] #rLose #r",
+      ". #gObtain #gRed #gMask.",
+      "[Locked] Requires an Attack.",
+      "[Leave]"
+    ]
   }
 }
