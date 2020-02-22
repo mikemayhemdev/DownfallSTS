@@ -72,23 +72,6 @@ public class AddBustKeyButtonPatches {
         }
     }
 
-    @SpirePatch(clz = AbstractPlayer.class, method = "applyStartOfCombatLogic")
-    public static class KeyBustBuffs {
-        private static final int STACK = 1;
-
-        @SpirePostfixPatch
-        public static void patch(AbstractPlayer __instance) {
-            boolean allBusts = KeyFields.bustedRuby.get(__instance) && KeyFields.bustedEmerald.get(__instance) && KeyFields.bustedSapphire.get(__instance);
-            int stacks = STACK * (allBusts ? 2 : 1);
-            if (KeyFields.bustedRuby.get(__instance)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(__instance, __instance, new StrengthPower(__instance, stacks), stacks));
-            }
-            if (KeyFields.bustedEmerald.get(__instance)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(__instance, __instance, new DexterityPower(__instance, stacks), stacks));
-            }
-        }
-    }
-
     @SpirePatch(clz = TopPanel.class, method = "renderName")
     public static class BrokenKeyRender {
         public static ExprEditor Instrument() {
@@ -105,5 +88,4 @@ public class AddBustKeyButtonPatches {
         }
     }
 
-    //TODO: Save these values
 }

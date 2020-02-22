@@ -22,6 +22,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.events.beyond.MindBloom;
 import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
@@ -382,6 +383,14 @@ public class EvilWithinMod implements
                 Colosseum.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                MindBloom_Evil.ID, MindBloom_Evil.class, true,
+                //Event ID to Override//
+                MindBloom.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
@@ -428,5 +437,8 @@ public class EvilWithinMod implements
         BaseMod.addRelic(new GremlinWheel(), RelicType.SHARED);
         BaseMod.addRelic(new RedIOU(), RelicType.SHARED);
         BaseMod.addRelic(new KnowingSkull(), RelicType.SHARED);
+        BaseMod.addRelic(new HeartBlessingBlue(), RelicType.SHARED);
+        BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
+        BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
     }
 }

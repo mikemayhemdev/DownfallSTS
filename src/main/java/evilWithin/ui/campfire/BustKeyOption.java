@@ -2,11 +2,15 @@ package evilWithin.ui.campfire;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import evilWithin.EvilWithinMod;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+import evilWithin.relics.HeartBlessingBlue;
+import evilWithin.relics.HeartBlessingGreen;
+import evilWithin.relics.HeartBlessingRed;
 import evilWithin.util.TextureLoader;
 import evilWithin.vfx.campfire.BustKeyEffect;
 
@@ -39,7 +43,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                 this.description += TEXT[4];
                 this.img = TextureLoader.getTexture(EvilWithinMod.assetPath("images/ui/campfire/ruby.png"));
         }
-        this.description += "\n" + TEXT[7];
+
     }
 
     @Override
@@ -49,13 +53,16 @@ public class BustKeyOption extends AbstractCampfireOption {
         switch (key) {
             case SAPPHIRE:
                 AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
-                p.increaseMaxHp(MAXHP_INC, false);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingBlue());
+
                 break;
             case EMERALD:
                 AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(p, true);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingGreen());
                 break;
             default:
                 AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
         }
         if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(p) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(p) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(p)) {
             p.increaseMaxHp(MAXHP_INC, false);

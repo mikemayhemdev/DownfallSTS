@@ -26,7 +26,8 @@ public class CombatEventPatch {
                                 "currentRoom.event instanceof evilWithin.events.Augmenter_Evil || " +
                                 "currentRoom.event instanceof evilWithin.events.FaceTrader_Evil || " +
                                 "currentRoom.event instanceof evilWithin.events.Beggar_Evil || " +
-                                "currentRoom.event instanceof evilWithin.events.Colosseum_Evil;");
+                                "currentRoom.event instanceof evilWithin.events.Colosseum_Evil || " +
+                                "currentRoom.event instanceof evilWithin.events.MindBloom_Evil;");
                     }
                 } catch (NotFoundException e) {
                     SlimeboundMod.logger.error("Combat proceed button patch broken.", e);

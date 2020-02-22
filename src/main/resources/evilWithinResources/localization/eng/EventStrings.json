@@ -440,5 +440,20 @@
       "[FIGHT!]",
       "[Continue]"
     ]
+  },
+  "evilWithin:MindBloom": {
+    "NAME": "Mind Bloom",
+    "DESCRIPTIONS": [
+      "While walking and traversing through the beauty of the Beyond, your thoughts suddenly begin to feel very... #p~real...~ NL NL Imaginings of #rslain #radventurers and #bhoarded #bsouls begin to manifest themselves into reality. NL The sensation is quickly fleeting. What do you do?",
+      "You know you have been here before. NL NL Hunting the same adventurer. NL NL Is any of this real? NL NL How many times have you been slain?",
+      "Everything makes sense now. NL The singular purpose, the descent, the #pHeart. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+    ],
+    "OPTIONS": [
+      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
+      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
+      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rall #r3 #rHeart #rBlessings.",
+      "[Locked] Requires all 3 Heart Blessings.",
+      "[Leave]"
+    ]
   }
 }
