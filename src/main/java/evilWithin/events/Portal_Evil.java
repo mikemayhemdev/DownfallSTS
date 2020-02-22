@@ -46,13 +46,6 @@ public class Portal_Evil extends AbstractImageEvent {
             case INTRO:
                 switch(buttonPressed) {
                     case 0:
-                        this.imageEventText.updateBodyText(DIALOG_2);
-                        this.screen = CurScreen.ACCEPT;
-                        this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-                        CardCrawlGame.screenShake.mildRumble(5.0F);
-                        CardCrawlGame.sound.play("ATTACK_MAGIC_SLOW_2");
-                        break;
-                    case 1:
 
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screen = CurScreen.LEAVE;
@@ -62,7 +55,7 @@ public class Portal_Evil extends AbstractImageEvent {
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
 
                         break;
-                    case 2:
+                    case 1:
                         this.imageEventText.updateBodyText(DIALOG_3);
                         this.screen = CurScreen.LEAVE;
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
