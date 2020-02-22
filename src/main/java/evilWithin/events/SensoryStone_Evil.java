@@ -109,7 +109,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         String memory = "";
         AbstractCard c = this.memoryCard;
 
-        boolean debug = false;
+        boolean debug = true;
         if (c != null) {
             if (!debug) {
               //  SlimeboundMod.logger.info("searching tags for " + c.name);
@@ -128,7 +128,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
                 }
             } else {
                 //Set this to whatever text needs to be debugged and set the above DEBUG variable to true
-                memory = MEMORY_GUARDIAN_TEXT;
+                memory = MEMORY_TIMEEATER_TEXT;
             }
         } else {
             //triggers if no card is chosen
