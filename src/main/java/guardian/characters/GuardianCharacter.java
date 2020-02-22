@@ -233,7 +233,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public String getVampireText() {
-        return com.megacrit.cardcrawl.events.city.Vampires.DESCRIPTIONS[5];
+        return charStrings.TEXT[3];
     }
 
 }
