@@ -23,6 +23,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.MindBloom;
+import com.megacrit.cardcrawl.events.beyond.MoaiHead;
 import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
@@ -389,6 +390,22 @@ public class EvilWithinMod implements
                 MindBloom_Evil.ID, MindBloom_Evil.class, true,
                 //Event ID to Override//
                 MindBloom.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                MoaiHead_Evil.ID, MoaiHead_Evil.class, true,
+                //Event ID to Override//
+                MoaiHead.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Nloth_Evil.ID, Nloth_Evil.class, true,
+                //Event ID to Override//
+                Nloth.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

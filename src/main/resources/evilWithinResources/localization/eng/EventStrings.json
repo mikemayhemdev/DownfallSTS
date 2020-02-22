@@ -455,5 +455,19 @@
       "[Locked] Requires all 3 Heart Blessings.",
       "[Leave]"
     ]
+  },
+  "evilWithin:MoaiHead": {
+    "NAME": "The Moai Head",
+    "DESCRIPTIONS": [
+      "You decide to take a slight detour to one of the Beyond's greatest monuments - an enormous stony head, emerging from a large wall segment. NL NL The head's mouth is wide open, and it reveals large intimidating teeth stained red with blood. The surface of the statue is riddled with pictographs that seem to indicate people throwing themselves into the mouth of this head and being devoured.",
+      "You step up into the mouth of the statue, waiting for the statue to activate, knowing you will have to pay its cost in blood. Within a short time, the huge molars slam down from above, crushing you whole. NL @Darkness.@ NL Sometime later from within the dark, you see a sliver of light, and hear what you now realize is the sound of stony teeth slowly rising upwards. NL NL You leave restored, the statue's magic flowing through you.",
+      "You step up into the mouth of the statue, and let flow from your body an immense amount of #bspiritual #benergy. The statue's eyes glow #b~aflame,~ and its huge molars slam down upon you. NL #b~Blue~ #b~light~ #b~is~ #b~everywhere.~ NL NL As the teeth rise, you feel completely reinvigorated, and more powerful than ever before.",
+      "You leave, wondering what could have been."
+    ],
+    "OPTIONS": [
+      "[Offer Souls] #rLose #r",
+      " #rSouls. #gGain #g",
+      " #gMax #gHP and #gHeal #gto #gfull."
+    ]
   }
 }
