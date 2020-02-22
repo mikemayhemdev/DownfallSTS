@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.MindBloom;
 import com.megacrit.cardcrawl.events.beyond.MoaiHead;
+import com.megacrit.cardcrawl.events.beyond.SensoryStone;
 import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
@@ -406,6 +407,14 @@ public class EvilWithinMod implements
                 Nloth_Evil.ID, Nloth_Evil.class, true,
                 //Event ID to Override//
                 Nloth.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                SensoryStone_Evil.ID, SensoryStone_Evil.class, true,
+                //Event ID to Override//
+                SensoryStone.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
     }

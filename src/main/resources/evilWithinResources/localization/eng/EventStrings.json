@@ -469,5 +469,25 @@
       " #rSouls. #gGain #g",
       " #gMax #gHP and #gHeal #gto #gfull."
     ]
+  },
+  "evilWithin:SensoryStone": {
+    "NAME": "Sensory Stone",
+    "DESCRIPTIONS": [
+      "#g~AUTHORITY.~ NL NL",
+      "#y~SECURITY.~ NL NL",
+      "#p~HOPELESSNESS.~ NL NL",
+      "#y~DETACHMENT.~ NL NL",
+      "#b~PRIDE.~ NL NL You stand at the center of a grand arena. Everything you have worked for culminates in this one singular combat. You take up a #bdefensive #bstance, draining the stamina of your enemy, until an opening presents itself. With your last bit of strength, you #rplunge #ryour #rblade into the chest of your opponent. The audience erupts in @thunderous@ @applause!@ NL NL Not one to stop at just winning, you raise your open hand and strike your foe ~across~ ~the~ ~face,~ delivering a most insulting final blow. NL NL There is no one in your way now. You are the new #b@Champion!@",
+      "#p~GREED.~ NL NL",
+      "#g~GRIEF.~ NL NL",
+      "#b~RAGE.~ NL NL",
+      "#g~ARROGANCE.~ NL NL",
+      "On second thought, perhaps memories are best left in the past."
+      ],
+    "OPTIONS": [
+      "[Recall] #gAdd #g1 #gColorless #gBoss #gcard #gto #gyour #gdeck.",
+      "[Recall] #gAdd #g2 #gColorless #gBoss #gcards #gto #gyour #gdeck. #rLose #r",
+      "[Recall] #gAdd #g3 #gColorless #gBoss #gcards #gto #gyour #gdeck. #rLose #r"
+    ]
   }
 }
