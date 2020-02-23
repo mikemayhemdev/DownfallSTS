@@ -21,26 +21,18 @@ public class CharBossIronclad extends AbstractCharBoss {
         this.stateData.setMix("Hit", "Idle", 0.1f);
         this.flipHorizontal = true;
         e.setTimeScale(0.6f);
-
-
     }
 
     @Override
     public void generateDeck() {
-
         ArrayList<AbstractBossDeckArchetype> archetypes = new ArrayList<AbstractBossDeckArchetype>();
         archetypes.add(new ArchetypeIcStrike());
         //archetypes.add(new ArchetypeIcStrength());
         //archetypes.add(new ArchetypeIcRampage());
         //archetypes.add(new ArchetypeIcBlock());
-
         this.chosenArchetype = archetypes.get(AbstractDungeon.monsterRng.random(archetypes.size() - 1));
-
         this.chosenArchetype.initialize();
-
         this.chosenArchetype.simulateBuild(AbstractCharBoss.boss);
-
-
     }
 
 }
