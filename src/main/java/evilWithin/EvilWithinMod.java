@@ -442,6 +442,14 @@ public class EvilWithinMod implements
                 WindingHalls.ID,
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                Joust_Evil.ID, Joust_Evil.class, true,
+                //Event ID to Override//
+                TheJoust.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {

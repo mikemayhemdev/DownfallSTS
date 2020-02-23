@@ -528,5 +528,18 @@
       "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic.",
       "[Straight] #gHunt #gdown #gthe #gMerchant."
     ]
+  },
+  "evilWithin:Joust": {
+    "NAME": "The Joust",
+    "DESCRIPTIONS": [
+      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide..."
+    ],
+    "OPTIONS": [
+      "[Left] #r50%: #rLose #r",
+      " HP.",
+      " #g50%: #gGain #g200 #gSouls.",
+      "[Right] #r25%: #rLose #r",
+      " #g75%: #gGain #g100 #gSouls."
+    ]
   }
 }
