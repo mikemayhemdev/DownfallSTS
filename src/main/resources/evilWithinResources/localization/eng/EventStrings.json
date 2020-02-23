@@ -517,5 +517,16 @@
       "[Locked] Requires an Attack.",
       "[Leave]"
     ]
+  },
+  "evilWithin:WindingHalls": {
+    "NAME": "Winding Halls",
+    "DESCRIPTIONS": [
+      "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
+    ],
+    "OPTIONS": [
+      "[Left] #gExplore #gan #gEvent.",
+      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic.",
+      "[Straight] #gHunt #gdown #gthe #gMerchant."
+    ]
   }
 }

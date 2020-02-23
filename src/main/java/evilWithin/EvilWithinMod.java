@@ -434,6 +434,14 @@ public class EvilWithinMod implements
                 (c) -> c.hasRelic(RedIOU.ID),
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
+
+        EventUtils.registerEvent(
+                //Event ID//
+                WindingHalls_Evil.ID, WindingHalls_Evil.class, true,
+                //Event ID to Override//
+                WindingHalls.ID,
+                //Event Type//
+                EventUtils.EventType.FULL_REPLACE);
     }
 
     private void initializeMonsters() {
