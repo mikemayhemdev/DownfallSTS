@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
+import java.util.ArrayList;
+
 public class EnDoubleTap extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Double Tap";
     private static final CardStrings cardStrings;
@@ -25,7 +27,6 @@ public class EnDoubleTap extends AbstractBossCard {
         super(ID, EnDoubleTap.cardStrings.NAME, "red/skill/double_tap", 1, EnDoubleTap.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 20;
     }
 
     @Override
@@ -40,38 +41,18 @@ public class EnDoubleTap extends AbstractBossCard {
             this.upgradeMagicNumber(1);
             this.rawDescription = EnDoubleTap.cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
-            this.magicValue -= 5;
         }
     }
 
     @Override
-    public int getPriority() {
-        if (!recursionCheck && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractCharBoss.boss != null && !AbstractCharBoss.boss.hand.isEmpty()) {
-            recursionCheck = true;
-            AbstractBossCard c = ((EnemyCardGroup) (AbstractCharBoss.boss.hand)).getHighestValueCard(CardType.ATTACK);
-            if (c != null) {
-                int p = c.getPriority();
-                recursionCheck = false;
-                return p + 1;
+    public int getPriority(ArrayList<AbstractCard> hand)
+    {
+        for (AbstractCard c : hand){
+            if (c.type == CardType.ATTACK){
+                return 20;
             }
-            recursionCheck = false;
         }
-        return 3;
-    }
-
-    @Override
-    public int getValue() {
-        if (!recursionCheck && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractCharBoss.boss != null && !AbstractCharBoss.boss.hand.isEmpty()) {
-            recursionCheck = true;
-            AbstractBossCard c = ((EnemyCardGroup) (AbstractCharBoss.boss.hand)).getHighestValueCard(CardType.ATTACK);
-            if (c != null) {
-                int v = c.getValue();
-                recursionCheck = false;
-                return v * Math.max(1, c.costForTurn);
-            }
-            recursionCheck = false;
-        }
-        return super.getValue();
+        return 0;
     }
 
     @Override

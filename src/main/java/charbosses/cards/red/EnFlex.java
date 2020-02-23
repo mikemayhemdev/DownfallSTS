@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import java.util.ArrayList;
+
 public class EnFlex extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Flex";
     private static final CardStrings cardStrings;
@@ -22,7 +24,6 @@ public class EnFlex extends AbstractBossCard {
         super(ID, EnFlex.cardStrings.NAME, "red/skill/flex", 0, EnFlex.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 2;
     }
 
     @Override
@@ -32,9 +33,15 @@ public class EnFlex extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority() {
-        return 4;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        int priority = 100;
+        //Make this very low priority if its cost has been modified beyond 1
+        if (this.cost > 1){
+            priority -= 1000;
+        }
+        return priority;
     }
+
 
     @Override
     public void upgrade() {

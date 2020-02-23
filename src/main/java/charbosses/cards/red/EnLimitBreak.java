@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnLimitBreak extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Limit Break";
@@ -22,6 +25,7 @@ public class EnLimitBreak extends AbstractBossCard {
         super(ID, EnLimitBreak.cardStrings.NAME, "red/skill/limit_break", 1, EnLimitBreak.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         this.limit = 1;
+        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
     }
 
     @Override
@@ -35,7 +39,7 @@ public class EnLimitBreak extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
+    public int getPriority(ArrayList<AbstractCard> hand) {
         if (AbstractCharBoss.boss != null) {
             int v = 0;
             if (AbstractCharBoss.boss.hasPower(StrengthPower.POWER_ID)) {
@@ -48,17 +52,7 @@ public class EnLimitBreak extends AbstractBossCard {
             }
             return v * 3;
         }
-        return 20;
-    }
-
-    @Override
-    public int getPriority() {
-        return 3;
-    }
-
-    @Override
-    public int getUpgradeValue() {
-        return 12;
+        return 0;
     }
 
     @Override

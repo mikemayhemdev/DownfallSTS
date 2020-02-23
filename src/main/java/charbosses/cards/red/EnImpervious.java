@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import evilWithin.EvilWithinMod;
 
 public class EnImpervious extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Impervious";
@@ -20,6 +21,7 @@ public class EnImpervious extends AbstractBossCard {
         super(ID, EnImpervious.cardStrings.NAME, "red/skill/impervious", 2, EnImpervious.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
         this.baseBlock = 30;
         this.exhaust = true;
+        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
     }
 
     @Override

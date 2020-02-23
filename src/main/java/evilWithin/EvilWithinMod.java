@@ -18,8 +18,10 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.events.beyond.*;
@@ -48,6 +50,11 @@ import java.nio.charset.StandardCharsets;
 public class EvilWithinMod implements
         EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber {
     public static final String modID = "evil-within";
+
+    @SpireEnum
+    public static AbstractCard.CardTags CHARBOSS_ATTACK;
+    @SpireEnum
+    public static AbstractCard.CardTags CHARBOSS_SETUP;
 
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {

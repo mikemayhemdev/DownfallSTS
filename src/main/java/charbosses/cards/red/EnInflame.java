@@ -10,6 +10,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnInflame extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Inflame";
@@ -23,7 +26,7 @@ public class EnInflame extends AbstractBossCard {
         super("Inflame", EnInflame.cardStrings.NAME, "red/power/inflame", 1, EnInflame.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 12;
+        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
     }
 
     @Override
@@ -47,7 +50,8 @@ public class EnInflame extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority() {
-        return 4;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 50;
     }
+
 }

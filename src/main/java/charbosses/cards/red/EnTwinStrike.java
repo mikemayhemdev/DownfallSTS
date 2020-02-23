@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnTwinStrike extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Twin Strike";
@@ -22,6 +25,7 @@ public class EnTwinStrike extends AbstractBossCard {
         super(ID, EnTwinStrike.cardStrings.NAME, "red/attack/twin_strike", 1, EnTwinStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 5;
         this.tags.add(CardTags.STRIKE);
+        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
     }
 
     @Override
@@ -39,8 +43,8 @@ public class EnTwinStrike extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
-        return super.getValue() * 2;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() * 2;
     }
 
     @Override

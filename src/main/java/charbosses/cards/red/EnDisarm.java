@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnDisarm extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Disarm";
@@ -22,14 +25,19 @@ public class EnDisarm extends AbstractBossCard {
         super(ID, EnDisarm.cardStrings.NAME, "red/skill/disarm", 1, EnDisarm.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 6;
         this.exhaust = true;
         this.limit = 1;
+        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, m, new StrengthPower(p, -this.magicNumber), -this.magicNumber));
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 20;
     }
 
     @Override

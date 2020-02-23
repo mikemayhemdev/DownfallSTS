@@ -5,6 +5,7 @@ import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,6 +16,8 @@ import com.megacrit.cardcrawl.relics.BlueCandle;
 import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
+import java.util.ArrayList;
+
 public abstract class AbstractBossCard extends AbstractCard {
 
     public static final float HAND_SCALE = 0.55f;
@@ -23,7 +26,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public AbstractCharBoss owner;
     public boolean hov2 = false;
     public int limit;
-    protected int magicValue = 0;
+    public int magicValue; //DEPRECATED
+    public boolean forceDraw = false;
 
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                             CardColor color, CardRarity rarity, CardTarget target) {
@@ -38,6 +42,9 @@ public abstract class AbstractBossCard extends AbstractCard {
                 baseCard.color, baseCard.rarity, baseCard.target);
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;
+        if (this.type == CardType.CURSE || this.type == CardType.STATUS) {
+            this.forceDraw = true;
+        }
     }
 
     public static int statusValue() {
@@ -52,22 +59,39 @@ public abstract class AbstractBossCard extends AbstractCard {
         return value;
     }
 
-    public int getPriority() {
-        if (this.type == CardType.STATUS) {
-            return -10;
-        } else if (this.type == CardType.CURSE) {
-            return -100;
+    public int getPriority(ArrayList<AbstractCard> hand){
+        //Overwritten in each card as needed
+        if (this.type == CardType.STATUS){
+            return statusValue();
+        } else {
+            return autoPriority();
         }
-        return 1;
+
     }
 
-    public int getValue() {
+    public int getPriority(){  //DEPRECATED
+        return 0;
+    }
+
+    public int getValue(){  //DEPRECATED
+        return 0;
+    }
+
+    public int getUpgradeValue(){  //DEPRECATED
+        return 0;
+    }
+
+    public int autoPriority() {
+        int value = 0;
         if (this.type == CardType.STATUS) {
-            return -10;
+            value += -10;
         } else if (this.type == CardType.CURSE) {
-            return -100;
+            value += -100;
         }
-        return (Math.max(this.damage, 0) + Math.max(this.block, 0) + this.magicNumber * this.magicValue) / Math.max(1, this.costForTurn) + (this.isEthereal ? 2 : 0);
+        value += Math.max(this.damage, 0);
+        value += Math.max(this.block, 0);
+        if (isEthereal) value *= 2;
+        return value;
     }
 
     public void applyPowers() {
@@ -240,19 +264,5 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.targetDrawScale = AbstractBossCard.HAND_SCALE;
         }
     }
-
-    public int getUpgradeValue() {
-        if (!this.canUpgrade()) {
-            return -1;
-        }
-        AbstractBossCard uc = (AbstractBossCard) this.makeCopy();
-        uc.upgrade();
-        if (AbstractCharBoss.boss != null) {
-            uc.owner = this.owner;
-            uc.applyPowers();
-        }
-        return uc.getValue() - uc.getValue();
-    }
-
 
 }

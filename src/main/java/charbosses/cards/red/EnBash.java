@@ -11,6 +11,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnBash extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Bash";
@@ -25,7 +28,7 @@ public class EnBash extends AbstractBossCard {
         this.baseDamage = 8;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 4;
+        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
     }
 
     @Override
@@ -49,7 +52,7 @@ public class EnBash extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority() {
-        return 2;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 6;
     }
 }

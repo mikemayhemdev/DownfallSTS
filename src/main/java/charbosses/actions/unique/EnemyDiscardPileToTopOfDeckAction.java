@@ -2,6 +2,7 @@ package charbosses.actions.unique;
 
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToDrawPileEffect;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,6 +44,8 @@ public class EnemyDiscardPileToTopOfDeckAction extends AbstractGameAction {
                 final AbstractCard tmp = this.p.discardPile.getTopCard();
                 this.p.discardPile.removeCard(tmp);
                 this.p.discardPile.moveToDeck(tmp, false);
+                AbstractBossCard tmpB = (AbstractBossCard)tmp;
+                tmpB.forceDraw = true;
                 this.isDone = true;
             }
             if (this.p.discardPile.group.size() > this.amount) {
@@ -50,6 +53,8 @@ public class EnemyDiscardPileToTopOfDeckAction extends AbstractGameAction {
                 this.p.discardPile.removeCard(tmp);
                 //this.p.discardPile.moveToDeck(tmp, false);
                 AbstractDungeon.effectList.add(new EnemyShowCardAndAddToDrawPileEffect(tmp, false, false));
+                AbstractBossCard tmpB = (AbstractBossCard)tmp;
+                tmpB.forceDraw = true;
                 this.isDone = true;
                 return;
             }

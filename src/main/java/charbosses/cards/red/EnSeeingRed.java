@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnSeeingRed extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Seeing Red";
@@ -19,6 +22,7 @@ public class EnSeeingRed extends AbstractBossCard {
     public EnSeeingRed() {
         super(ID, EnSeeingRed.cardStrings.NAME, "red/skill/seeing_red", 1, EnSeeingRed.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.NONE);
         this.exhaust = true;
+
     }
 
     @Override
@@ -35,13 +39,13 @@ public class EnSeeingRed extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
-        return 20 - 5 * this.cost;
-    }
-
-    @Override
-    public int getPriority() {
-        return 4;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        int priority = 100;
+        //Make this very low priority if its cost has been modified beyond 1
+        if (this.cost > 1){
+            priority -= 1000;
+        }
+        return priority;
     }
 
     @Override
