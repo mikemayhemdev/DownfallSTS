@@ -8,7 +8,7 @@ import charbosses.relics.CBR_Vajra;
 public class ArchetypeIcStrength extends ArchetypeBaseIronclad {
 
     public ArchetypeIcStrength() {
-        super("IC_BLOCK_ARCHETYPE", "Strength");
+        super("IC_STRENGTH_ARCHETYPE", "Strength");
     }
 
     public void initialize() {
