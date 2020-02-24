@@ -86,7 +86,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public AbstractPlayer.PlayerClass chosenClass;
     public AbstractBossDeckArchetype chosenArchetype = null;
 
-    private boolean onSetupTurn = true;
+    public boolean onSetupTurn = true;
 
     private static boolean debugLog = true;
 
@@ -122,8 +122,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         super.init();
         this.preBattlePrep();
         AbstractBossDeckArchetype.logger.info("Boss initial HP pre - Act Bonus: " + this.maxHealth);
-        AbstractBossDeckArchetype.logger.info("Boss bonus HP: " + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
-        this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
+        AbstractBossDeckArchetype.logger.info("Boss bonus HP: " + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum) * 0.75F)));
+        this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum) * 0.75F)));
         AbstractCharBoss.finishedSetup = true;
     }
 
@@ -293,7 +293,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         for (AbstractBossCard c : unaffordableCards) {
-            c.bossDarken();
             sortedCards.add(c);
         }
 
