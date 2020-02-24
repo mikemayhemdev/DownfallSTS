@@ -1,13 +1,19 @@
 package charbosses.cards;
 
+import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.ui.EnemyEnergyPanel;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ShaderHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EvolvePower;
@@ -15,19 +21,23 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BlueCandle;
 import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 import java.util.ArrayList;
 
 public abstract class AbstractBossCard extends AbstractCard {
 
-    public static final float HAND_SCALE = 0.55f;
-    public static final float HOVER_SCALE = 0.9f;
+    public static final float HAND_SCALE = 0.45f;
+    public static final float HOVER_SCALE = 0.8f;
     public static boolean recursionCheck = false;
     public AbstractCharBoss owner;
     public boolean hov2 = false;
     public int limit;
     public int magicValue; //DEPRECATED
     public boolean forceDraw = false;
+    public boolean bossDarkened = false;
+    public boolean tempLighten = false;
+    public int energyGeneratedIfPlayed = 0;
 
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                             CardColor color, CardRarity rarity, CardTarget target) {
@@ -254,6 +264,10 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.targetDrawScale = AbstractBossCard.HOVER_SCALE;
             this.drawScale = AbstractBossCard.HOVER_SCALE;
         }
+        if (this.bossDarkened){
+            this.bossLighten();
+            this.tempLighten = true;
+        }
     }
 
     public void unhover() {
@@ -263,6 +277,34 @@ public abstract class AbstractBossCard extends AbstractCard {
             AbstractCharBoss.boss.hand.refreshHandLayout();
             this.targetDrawScale = AbstractBossCard.HAND_SCALE;
         }
+        if (this.tempLighten){
+            this.bossDarken();
+        }
     }
 
+    @Override
+    public void darken(boolean immediate) {
+    }
+
+    @Override
+    public void lighten(boolean immediate) {
+        }
+
+        public void bossDarken(){
+            ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(0F, 0F, 0F, .75F));
+            this.bossDarkened = true;
+        }
+
+    public void bossLighten(){
+            ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(255F * .43F, 255F * .37F, 255F * .65F, 0F));
+            this.bossDarkened = false;
+        }
+
+    @Override
+    public void beginGlowing() {
+    }
+
+    @Override
+    public void stopGlowing() {
+    }
 }

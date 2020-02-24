@@ -22,7 +22,7 @@ public class EnSeeingRed extends AbstractBossCard {
     public EnSeeingRed() {
         super(ID, EnSeeingRed.cardStrings.NAME, "red/skill/seeing_red", 1, EnSeeingRed.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.NONE);
         this.exhaust = true;
-
+        this.energyGeneratedIfPlayed = 2;
     }
 
     @Override

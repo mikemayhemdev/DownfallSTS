@@ -293,8 +293,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         for (AbstractBossCard c : unaffordableCards) {
+            c.bossDarken();
             sortedCards.add(c);
         }
+
+        budget = this.energy.energy;
+        for (int i = 0; i < sortedCards.size(); i++) {
+            AbstractBossCard c = (AbstractBossCard)sortedCards.get(i);
+            if (c.costForTurn <= budget && c.costForTurn != -2) {
+                budget -= c.costForTurn;
+                budget += c.energyGeneratedIfPlayed;
+            } else {
+                c.bossDarken();
+            }
+        }
+
         this.hand.group = sortedCards;
 
         this.hand.refreshHandLayout();
@@ -515,6 +528,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             if (!this.drawPile.isEmpty()) {
 
                 final AbstractCard c = chooseCardToDraw(this.drawPile.group);
+                AbstractBossCard cB = (AbstractBossCard)c;
+                cB.bossLighten();
 
                 c.current_x = CardGroup.DRAW_PILE_X;
                 c.current_y = CardGroup.DRAW_PILE_Y;
