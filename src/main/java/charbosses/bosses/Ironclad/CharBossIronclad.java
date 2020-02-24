@@ -21,6 +21,7 @@ public class CharBossIronclad extends AbstractCharBoss {
         this.stateData.setMix("Hit", "Idle", 0.1f);
         this.flipHorizontal = true;
         e.setTimeScale(0.6f);
+        this.energyString = "[R]";
     }
 
     @Override

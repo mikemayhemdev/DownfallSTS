@@ -93,6 +93,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     private static int attacksDrawnForAttackPhase = 0;
     private static int setupsDrawnForSetupPhase = 0;
 
+    public String energyString = "[E]";
+
 
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
@@ -106,8 +108,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.hand = new EnemyCardGroup(CardGroupType.HAND, this);
         this.exhaustPile = new EnemyCardGroup(CardGroupType.EXHAUST_PILE, this);
         this.limbo = new EnemyCardGroup(CardGroupType.UNSPECIFIED, this);
-        this.masterHandSize = 5;
-        this.gameHandSize = 5;
+        this.masterHandSize = 3;
+        this.gameHandSize = 3;
         this.masterMaxOrbs = this.maxOrbs = 0;
         this.stance = new NeutralStance();
         this.orbs = new ArrayList<AbstractOrb>();
@@ -120,10 +122,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.setHp(this.maxHealth);
         this.generateAll();
         super.init();
+        this.energy.energyMaster = 2;
         this.preBattlePrep();
-        AbstractBossDeckArchetype.logger.info("Boss initial HP pre - Act Bonus: " + this.maxHealth);
-        AbstractBossDeckArchetype.logger.info("Boss bonus HP: " + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum) * 0.75F)));
-        this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum) * 0.75F)));
         AbstractCharBoss.finishedSetup = true;
     }
 
@@ -145,6 +145,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public void usePreBattleAction() {
+        this.energy.recharge();
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStartPreDraw();
         }
@@ -152,6 +153,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStart();
         }
+
+
     }
 
     @Override
@@ -185,6 +188,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     @Override
     public void applyEndOfTurnTriggers() {
+
+        this.energy.recharge();
+
         for (final AbstractRelic r : this.relics) {
             r.onPlayerEndTurn();
         }
@@ -216,7 +222,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void startTurn() {
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
-        this.energy.recharge();
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
@@ -830,6 +835,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.powers.clear();
         this.healthBarUpdatedEvent();
         this.applyPreCombatLogic();
+
     }
 
     public ArrayList<String> getRelicNames() {
@@ -849,6 +855,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public void applyStartOfCombatLogic() {
+
         for (final AbstractRelic r : this.relics) {
             if (r != null) {
                 r.atBattleStart();

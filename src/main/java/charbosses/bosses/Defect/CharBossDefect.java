@@ -21,6 +21,7 @@ public class CharBossDefect extends AbstractCharBoss {
         this.stateData.setMix("Hit", "Idle", 0.1f);
         this.flipHorizontal = true;
         e.setTimeScale(0.9f);
+        this.energyString = "[B]";
 
 
     }

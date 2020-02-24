@@ -1,4 +1,12 @@
 {
+  "evil-within:NeowBlessing": {
+    "NAME": "Neow's Blsesing",
+    "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain ",
+      " Maximum HP. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
+    ]
+  },
   "evil-within:Vampires": {
     "NAME": "Event: Vampires",
     "FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",

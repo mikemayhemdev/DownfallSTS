@@ -424,6 +424,9 @@ public abstract class AbstractBossDeckArchetype {
                 logger.info("Adding card to Starter Deck: " + c.name);
             }
         }
+        //Initialize Neow Relic
+        AbstractRelic neowRelic = new CBR_NeowsBlessing();
+        ((CBR_NeowsBlessing) neowRelic).instantObtain(boss);
 
         //Initialize Starter Relic
         starterRelic.instantObtain(boss);

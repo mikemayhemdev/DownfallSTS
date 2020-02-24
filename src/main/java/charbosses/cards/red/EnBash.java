@@ -53,6 +53,6 @@ public class EnBash extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-        return autoPriority() + 6;
+        return autoPriority() + 10;
     }
 }
