@@ -26,8 +26,8 @@
   },
   "hexamod:FastForward": {
     "NAME": "Fast Forward",
-    "DESCRIPTION": "Ethereal. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL hexamod:Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
+    "DESCRIPTION": "Ethereal. NL hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL hexamod:Advance. NL hexamod:Force-Ignite the hexamod:Active Ghostflame. NL hexamod:Advance."
   },
   "hexamod:Rewind": {
     "NAME": "Rewind",

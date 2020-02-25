@@ -46,12 +46,12 @@ public abstract class AbstractBossDeckArchetype {
     /// END TUNING CONSTANTS ///
     public ArrayList<AbstractBossCard> cards;
     protected AbstractCharbossRelic starterRelic;
-    private int[] cardRemovalsPerAct = new int[]{0, 1, 1};
+    private int[] cardRemovalsPerAct = new int[]{1, 1, 1};
     private int[] cardUpgradesPerAct = new int[]{1, 1, 1};
     private int[] synergyCardAcquisitionsPerAct = new int[]{0, 1, 2};
     private int[] globalCardAcquisitionsPerAct = new int[]{2, 1, 0};
     private int[] globalEventPoolAcquisitionsPerAct = new int[]{1, 1, 1};
-    private int[] globalRelicAcquisitionsPerAct = new int[]{0, 1, 1};
+    private int[] globalRelicAcquisitionsPerAct = new int[]{1, 1, 1};
     private ArrayList<AbstractBossCard> allCards;
     private ArrayList<AbstractBossCard> curseCards;
     private ArrayList<AbstractBossCard> synergyCards;
