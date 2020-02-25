@@ -22,7 +22,7 @@ public class EnSwordBoomerang extends AbstractBossCard {
     }
 
     public EnSwordBoomerang() {
-        super(ID, EnSwordBoomerang.cardStrings.NAME, "red/attack/sword_boomerang", 1, EnSwordBoomerang.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, EnSwordBoomerang.cardStrings.NAME, "red/attack/sword_boomerang", 1, EnSwordBoomerang.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;

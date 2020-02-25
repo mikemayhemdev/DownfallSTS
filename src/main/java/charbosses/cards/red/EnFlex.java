@@ -21,7 +21,7 @@ public class EnFlex extends AbstractBossCard {
     }
 
     public EnFlex() {
-        super(ID, EnFlex.cardStrings.NAME, "red/skill/flex", 0, EnFlex.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, EnFlex.cardStrings.NAME, "red/skill/flex", 0, EnFlex.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }

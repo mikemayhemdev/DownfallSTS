@@ -21,7 +21,7 @@ public class EnEntrench extends AbstractBossCard {
     }
 
     public EnEntrench() {
-        super(ID, EnEntrench.cardStrings.NAME, "red/skill/entrench", 2, EnEntrench.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnEntrench.cardStrings.NAME, "red/skill/entrench", 2, EnEntrench.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = this.block = 10;
     }
 

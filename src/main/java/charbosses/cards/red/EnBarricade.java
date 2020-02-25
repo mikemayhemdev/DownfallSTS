@@ -21,7 +21,7 @@ public class EnBarricade extends AbstractBossCard {
     }
 
     public EnBarricade() {
-        super(ID, EnBarricade.cardStrings.NAME, "red/power/barricade", 3, EnBarricade.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
+        super(ID, EnBarricade.cardStrings.NAME, "red/power/barricade", 3, EnBarricade.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = this.magicNumber = 1;
         this.limit = 2;
     }

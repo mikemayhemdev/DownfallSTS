@@ -20,7 +20,7 @@ public class EnTrueGrit extends AbstractBossCard {
     }
 
     public EnTrueGrit() {
-        super(ID, EnTrueGrit.cardStrings.NAME, "red/skill/true_grit", 1, EnTrueGrit.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, EnTrueGrit.cardStrings.NAME, "red/skill/true_grit", 1, EnTrueGrit.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 7;
     }
 

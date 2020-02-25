@@ -22,10 +22,12 @@ public class EnTwinStrike extends AbstractBossCard {
     }
 
     public EnTwinStrike() {
-        super(ID, EnTwinStrike.cardStrings.NAME, "red/attack/twin_strike", 1, EnTwinStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnTwinStrike.cardStrings.NAME, "red/attack/twin_strike", 1, EnTwinStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 5;
         this.tags.add(CardTags.STRIKE);
         this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.isMultiDamage = true;
+        this.magicNumber = 2;
     }
 
     @Override

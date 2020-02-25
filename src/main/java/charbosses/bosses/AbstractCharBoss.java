@@ -307,6 +307,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             if (c.costForTurn <= budget && c.costForTurn != -2) {
                 budget -= c.costForTurn;
                 budget += c.energyGeneratedIfPlayed;
+                c.createIntent();
             } else {
                 c.bossDarken();
             }
@@ -315,6 +316,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.hand.group = sortedCards;
 
         this.hand.refreshHandLayout();
+
+        for (AbstractCard c : this.hand.group){
+            AbstractBossCard cB = (AbstractBossCard)c;
+            cB.refreshIntentHbLocation();
+        }
     }
 
     /////////////////////////////////////////////////////////////////////////////

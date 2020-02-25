@@ -24,7 +24,7 @@ public class EnAnger extends AbstractBossCard {
     }
 
     public EnAnger() {
-        super(ID, EnAnger.cardStrings.NAME, "red/attack/anger", 0, EnAnger.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnAnger.cardStrings.NAME, "red/attack/anger", 0, EnAnger.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
     }

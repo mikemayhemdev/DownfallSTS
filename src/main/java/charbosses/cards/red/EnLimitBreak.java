@@ -22,7 +22,7 @@ public class EnLimitBreak extends AbstractBossCard {
     }
 
     public EnLimitBreak() {
-        super(ID, EnLimitBreak.cardStrings.NAME, "red/skill/limit_break", 1, EnLimitBreak.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
+        super(ID, EnLimitBreak.cardStrings.NAME, "red/skill/limit_break", 1, EnLimitBreak.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.exhaust = true;
         this.limit = 1;
         this.tags.add(EvilWithinMod.CHARBOSS_SETUP);

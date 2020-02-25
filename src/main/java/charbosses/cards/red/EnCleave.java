@@ -23,7 +23,7 @@ public class EnCleave extends AbstractBossCard {
     }
 
     public EnCleave() {
-        super(ID, EnCleave.cardStrings.NAME, "red/attack/cleave", 1, EnCleave.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, EnCleave.cardStrings.NAME, "red/attack/cleave", 1, EnCleave.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 8;
         this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
     }

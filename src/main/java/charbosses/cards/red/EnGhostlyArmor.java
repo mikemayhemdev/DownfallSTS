@@ -18,7 +18,7 @@ public class EnGhostlyArmor extends AbstractBossCard {
     }
 
     public EnGhostlyArmor() {
-        super(ID, EnGhostlyArmor.cardStrings.NAME, "red/skill/ghostly_armor", 1, EnGhostlyArmor.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnGhostlyArmor.cardStrings.NAME, "red/skill/ghostly_armor", 1, EnGhostlyArmor.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.isEthereal = true;
         this.baseBlock = 10;
     }

@@ -23,7 +23,7 @@ public class EnMetallicize extends AbstractBossCard {
     }
 
     public EnMetallicize() {
-        super(ID, EnMetallicize.cardStrings.NAME, "red/power/metallicize", 1, EnMetallicize.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnMetallicize.cardStrings.NAME, "red/power/metallicize", 1, EnMetallicize.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(EvilWithinMod.CHARBOSS_SETUP);

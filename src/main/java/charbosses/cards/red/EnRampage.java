@@ -23,7 +23,7 @@ public class EnRampage extends AbstractBossCard {
     }
 
     public EnRampage() {
-        super(ID, EnRampage.cardStrings.NAME, "red/attack/rampage", 1, EnRampage.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, EnRampage.cardStrings.NAME, "red/attack/rampage", 1, EnRampage.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 8;
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;

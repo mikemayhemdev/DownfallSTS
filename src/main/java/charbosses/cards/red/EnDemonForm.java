@@ -21,7 +21,7 @@ public class EnDemonForm extends AbstractBossCard {
     }
 
     public EnDemonForm() {
-        super(ID, EnDemonForm.cardStrings.NAME, "red/power/demon_form", 3, EnDemonForm.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.NONE);
+        super(ID, EnDemonForm.cardStrings.NAME, "red/power/demon_form", 3, EnDemonForm.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(EvilWithinMod.CHARBOSS_SETUP);

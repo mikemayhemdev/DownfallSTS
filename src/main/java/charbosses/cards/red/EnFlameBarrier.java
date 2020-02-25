@@ -24,7 +24,7 @@ public class EnFlameBarrier extends AbstractBossCard {
     }
 
     public EnFlameBarrier() {
-        super("Flame Barrier", EnFlameBarrier.cardStrings.NAME, "red/skill/flame_barrier", 2, EnFlameBarrier.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super("Flame Barrier", EnFlameBarrier.cardStrings.NAME, "red/skill/flame_barrier", 2, EnFlameBarrier.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 12;
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;

@@ -23,7 +23,7 @@ public class EnBodySlam extends AbstractBossCard {
     }
 
     public EnBodySlam() {
-        super(ID, EnBodySlam.cardStrings.NAME, "red/attack/body_slam", 1, EnBodySlam.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnBodySlam.cardStrings.NAME, "red/attack/body_slam", 1, EnBodySlam.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 0;
     }
 

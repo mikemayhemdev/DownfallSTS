@@ -21,7 +21,7 @@ public class EnJuggernaut extends AbstractBossCard {
     }
 
     public EnJuggernaut() {
-        super(ID, EnJuggernaut.cardStrings.NAME, "red/power/juggernaut", 2, EnJuggernaut.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
+        super(ID, EnJuggernaut.cardStrings.NAME, "red/power/juggernaut", 2, EnJuggernaut.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(EvilWithinMod.CHARBOSS_SETUP);

@@ -21,7 +21,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
     }
 
     public EnPerfectedStrike() {
-        super(ID, EnPerfectedStrike.cardStrings.NAME, "red/attack/perfected_strike", 2, EnPerfectedStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnPerfectedStrike.cardStrings.NAME, "red/attack/perfected_strike", 2, EnPerfectedStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;

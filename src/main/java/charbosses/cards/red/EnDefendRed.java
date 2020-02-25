@@ -17,7 +17,7 @@ public class EnDefendRed extends AbstractBossCard {
     }
 
     public EnDefendRed() {
-        super(ID, EnDefendRed.cardStrings.NAME, "red/skill/defend", 1, EnDefendRed.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, EnDefendRed.cardStrings.NAME, "red/skill/defend", 1, EnDefendRed.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 5;
         this.tags.add(CardTags.STARTER_DEFEND);
     }

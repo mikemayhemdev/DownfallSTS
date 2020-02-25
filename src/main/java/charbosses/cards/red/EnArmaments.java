@@ -24,7 +24,7 @@ public class EnArmaments extends AbstractBossCard {
     }
 
     public EnArmaments() {
-        super(ID, EnArmaments.cardStrings.NAME, "red/skill/armaments", 1, EnArmaments.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, EnArmaments.cardStrings.NAME, "red/skill/armaments", 1, EnArmaments.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 5;
     }
 
