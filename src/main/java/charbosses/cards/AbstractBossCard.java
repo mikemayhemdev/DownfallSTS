@@ -5,14 +5,19 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.ShaderHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -22,8 +27,15 @@ import com.megacrit.cardcrawl.relics.BlueCandle;
 import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.BobEffect;
+import com.megacrit.cardcrawl.vfx.DebuffParticleEffect;
+import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
+import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
+import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
+import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public abstract class AbstractBossCard extends AbstractCard {
 
@@ -38,6 +50,31 @@ public abstract class AbstractBossCard extends AbstractCard {
     public boolean bossDarkened = false;
     public boolean tempLighten = false;
     public int energyGeneratedIfPlayed = 0;
+    public static final String[] TEXT;
+
+
+    private static final float INTENT_HB_W = 64.0F * Settings.scale;;
+    public Hitbox intentHb;
+    public AbstractMonster.Intent intent;
+    public AbstractMonster.Intent tipIntent;
+    public float intentAlpha;
+    public float intentAlphaTarget;
+    public float intentOffsetX;
+    public float intentOffsetY;
+    private BobEffect bobEffect = new BobEffect();
+    private Texture intentImg;
+    private Texture intentBg;
+    private PowerTip intentTip = new PowerTip();
+    private int intentDmg;
+    private int intentBaseDmg;
+    private int intentMultiAmt;
+    private boolean isMultiDmg;
+    private Color intentColor;
+    private float intentParticleTimer;
+    private float intentAngle;
+    public ArrayList<AbstractGameEffect> intentFlash = new ArrayList<>();
+    private ArrayList<AbstractGameEffect> intentVfx = new ArrayList<>();
+
 
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
                             CardColor color, CardRarity rarity, CardTarget target) {
@@ -148,6 +185,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
         this.damage = MathUtils.floor(tmp);
         this.initializeDescription();
+        if (this.intent != null) this.updateIntentTip();
     }
 
     protected void applyPowersToBlock() {
@@ -311,4 +349,231 @@ public abstract class AbstractBossCard extends AbstractCard {
     @Override
     public void stopGlowing() {
     }
+
+    @Override
+    public void update() {
+        super.update();
+        if (this.intent != null) updateIntent();
+    }
+
+    public void refreshIntentHbLocation() {
+        this.intentHb.move(this.hb.cX + this.intentOffsetX, this.hb.cY + this.intentOffsetY);
+    }
+
+    private void updateIntent() {
+        this.bobEffect.update();
+        this.intentDmg = this.damage;
+        if (this.intentAlpha != this.intentAlphaTarget && this.intentAlphaTarget == 1.0F) {
+            this.intentAlpha += Gdx.graphics.getDeltaTime();
+            if (this.intentAlpha > this.intentAlphaTarget) {
+                this.intentAlpha = this.intentAlphaTarget;
+            }
+        } else if (this.intentAlphaTarget == 0.0F) {
+            this.intentAlpha -= Gdx.graphics.getDeltaTime() / 1.5F;
+            if (this.intentAlpha < 0.0F) {
+                this.intentAlpha = 0.0F;
+            }
+        }
+
+        if (!this.owner.isDying && !this.owner.isEscaping) {
+            this.updateIntentVFX();
+        }
+
+        Iterator i = this.intentVfx.iterator();
+
+        AbstractGameEffect e;
+        while(i.hasNext()) {
+            e = (AbstractGameEffect)i.next();
+            e.update();
+            if (e.isDone) {
+                i.remove();
+            }
+        }
+
+        i = this.intentFlash.iterator();
+
+        while(i.hasNext()) {
+            e = (AbstractGameEffect)i.next();
+            e.update();
+            if (e.isDone) {
+                i.remove();
+            }
+        }
+
+    }
+
+    private void updateIntentVFX() {
+        if (this.intentAlpha > 0.0F) {
+            if (this.intent != AbstractMonster.Intent.ATTACK_DEBUFF && this.intent != AbstractMonster.Intent.DEBUFF && this.intent != AbstractMonster.Intent.STRONG_DEBUFF && this.intent != AbstractMonster.Intent.DEFEND_DEBUFF) {
+                if (this.intent != AbstractMonster.Intent.ATTACK_BUFF && this.intent != AbstractMonster.Intent.BUFF && this.intent != AbstractMonster.Intent.DEFEND_BUFF) {
+                    if (this.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+                        this.intentParticleTimer -= Gdx.graphics.getDeltaTime();
+                        if (this.intentParticleTimer < 0.0F) {
+                            this.intentParticleTimer = 0.5F;
+                            this.intentVfx.add(new ShieldParticleEffect(this.intentHb.cX, this.intentHb.cY));
+                        }
+                    } else if (this.intent == AbstractMonster.Intent.UNKNOWN) {
+                        this.intentParticleTimer -= Gdx.graphics.getDeltaTime();
+                        if (this.intentParticleTimer < 0.0F) {
+                            this.intentParticleTimer = 0.5F;
+                            this.intentVfx.add(new UnknownParticleEffect(this.intentHb.cX, this.intentHb.cY));
+                        }
+                    } else if (this.intent == AbstractMonster.Intent.STUN) {
+                        this.intentParticleTimer -= Gdx.graphics.getDeltaTime();
+                        if (this.intentParticleTimer < 0.0F) {
+                            this.intentParticleTimer = 0.67F;
+                            this.intentVfx.add(new StunStarEffect(this.intentHb.cX, this.intentHb.cY));
+                        }
+                    }
+                } else {
+                    this.intentParticleTimer -= Gdx.graphics.getDeltaTime();
+                    if (this.intentParticleTimer < 0.0F) {
+                        this.intentParticleTimer = 0.1F;
+                        this.intentVfx.add(new BuffParticleEffect(this.intentHb.cX, this.intentHb.cY));
+                    }
+                }
+            } else {
+                this.intentParticleTimer -= Gdx.graphics.getDeltaTime();
+                if (this.intentParticleTimer < 0.0F) {
+                    this.intentParticleTimer = 1.0F;
+                    this.intentVfx.add(new DebuffParticleEffect(this.intentHb.cX, this.intentHb.cY));
+                }
+            }
+        }
+
+    }
+
+    private void updateIntentTip() {
+        switch(this.intent) {
+            case ATTACK:
+                this.intentTip.header = TEXT[0];
+                if (this.isMultiDmg) {
+                    this.intentTip.body = TEXT[1] + this.intentDmg + TEXT[2] + this.intentMultiAmt + TEXT[3];
+                } else {
+                    this.intentTip.body = TEXT[4] + this.intentDmg + TEXT[5];
+                }
+
+                this.intentTip.img = this.getAttackIntentTip();
+                break;
+            case ATTACK_BUFF:
+                this.intentTip.header = TEXT[6];
+                if (this.isMultiDmg) {
+                    this.intentTip.body = TEXT[7] + this.intentDmg + TEXT[2] + this.intentMultiAmt + TEXT[8];
+                } else {
+                    this.intentTip.body = TEXT[9] + this.intentDmg + TEXT[5];
+                }
+
+                this.intentTip.img = ImageMaster.INTENT_ATTACK_BUFF;
+                break;
+            case ATTACK_DEBUFF:
+                this.intentTip.header = TEXT[10];
+                this.intentTip.body = TEXT[11] + this.intentDmg + TEXT[5];
+                this.intentTip.img = ImageMaster.INTENT_ATTACK_DEBUFF;
+                break;
+            case ATTACK_DEFEND:
+                this.intentTip.header = TEXT[0];
+                if (this.isMultiDmg) {
+                    this.intentTip.body = TEXT[12] + this.intentDmg + TEXT[2] + this.intentMultiAmt + TEXT[3];
+                } else {
+                    this.intentTip.body = TEXT[12] + this.intentDmg + TEXT[5];
+                }
+
+                this.intentTip.img = ImageMaster.INTENT_ATTACK_DEFEND;
+                break;
+            case BUFF:
+                this.intentTip.header = TEXT[10];
+                this.intentTip.body = TEXT[19];
+                this.intentTip.img = ImageMaster.INTENT_BUFF;
+                break;
+            case DEBUFF:
+                this.intentTip.header = TEXT[10];
+                this.intentTip.body = TEXT[20];
+                this.intentTip.img = ImageMaster.INTENT_DEBUFF;
+                break;
+            case STRONG_DEBUFF:
+                this.intentTip.header = TEXT[10];
+                this.intentTip.body = TEXT[21];
+                this.intentTip.img = ImageMaster.INTENT_DEBUFF2;
+                break;
+            case DEFEND:
+                this.intentTip.header = TEXT[13];
+                this.intentTip.body = TEXT[22];
+                this.intentTip.img = ImageMaster.INTENT_DEFEND;
+                break;
+            case DEFEND_DEBUFF:
+                this.intentTip.header = TEXT[13];
+                this.intentTip.body = TEXT[23];
+                this.intentTip.img = ImageMaster.INTENT_DEFEND;
+                break;
+            case DEFEND_BUFF:
+                this.intentTip.header = TEXT[13];
+                this.intentTip.body = TEXT[24];
+                this.intentTip.img = ImageMaster.INTENT_DEFEND_BUFF;
+                break;
+            case ESCAPE:
+                this.intentTip.header = TEXT[14];
+                this.intentTip.body = TEXT[25];
+                this.intentTip.img = ImageMaster.INTENT_ESCAPE;
+                break;
+            case MAGIC:
+                this.intentTip.header = TEXT[15];
+                this.intentTip.body = TEXT[26];
+                this.intentTip.img = ImageMaster.INTENT_MAGIC;
+                break;
+            case SLEEP:
+                this.intentTip.header = TEXT[16];
+                this.intentTip.body = TEXT[27];
+                this.intentTip.img = ImageMaster.INTENT_SLEEP;
+                break;
+            case STUN:
+                this.intentTip.header = TEXT[17];
+                this.intentTip.body = TEXT[28];
+                this.intentTip.img = ImageMaster.INTENT_STUN;
+                break;
+            case UNKNOWN:
+                this.intentTip.header = TEXT[18];
+                this.intentTip.body = TEXT[29];
+                this.intentTip.img = ImageMaster.INTENT_UNKNOWN;
+                break;
+            case NONE:
+                this.intentTip.header = "";
+                this.intentTip.body = "";
+                this.intentTip.img = ImageMaster.INTENT_UNKNOWN;
+                break;
+            default:
+                this.intentTip.header = "NOT SET";
+                this.intentTip.body = "NOT SET";
+                this.intentTip.img = ImageMaster.INTENT_UNKNOWN;
+        }
+
+    }
+
+    private Texture getAttackIntentTip() {
+        int tmp;
+        if (this.isMultiDmg) {
+            tmp = this.intentDmg * this.intentMultiAmt;
+        } else {
+            tmp = this.intentDmg;
+        }
+
+        if (tmp < 5) {
+            return ImageMaster.INTENT_ATK_TIP_1;
+        } else if (tmp < 10) {
+            return ImageMaster.INTENT_ATK_TIP_2;
+        } else if (tmp < 15) {
+            return ImageMaster.INTENT_ATK_TIP_3;
+        } else if (tmp < 20) {
+            return ImageMaster.INTENT_ATK_TIP_4;
+        } else if (tmp < 25) {
+            return ImageMaster.INTENT_ATK_TIP_5;
+        } else {
+            return tmp < 30 ? ImageMaster.INTENT_ATK_TIP_6 : ImageMaster.INTENT_ATK_TIP_7;
+        }
+    }
+
+    static {
+        TEXT = CardCrawlGame.languagePack.getUIString("AbstractMonster").TEXT;
+
+    }
+
 }

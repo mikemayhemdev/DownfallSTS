@@ -26,6 +26,8 @@ public class EnStrikeRed extends AbstractBossCard {
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
 
+        this.intent = AbstractMonster.Intent.ATTACK;
+
     }
 
     @Override
