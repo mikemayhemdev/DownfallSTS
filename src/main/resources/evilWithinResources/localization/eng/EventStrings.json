@@ -541,5 +541,18 @@
       "[Right] #r25%: #rLose #r",
       " #g75%: #gGain #g100 #gSouls."
     ]
+  },
+  "evilWithin:BossTester": {
+    "NAME": "Debug Boss Prep",
+    "DESCRIPTIONS": [
+      "Choose an Act to gain the simulated rewards for that act. If you want to test an Act 3 encounter, run this event 3 times - once for Act 1, then for Act 2, then for Act 3.",
+      "Rewards complete. After shopping, run this event again if you want to simulate another act's rewards."
+    ],
+    "OPTIONS": [
+      "[Act 1]",
+      "[Act 2]",
+      "[Act 3]",
+      "[Head to Shop]"
+    ]
   }
 }
