@@ -323,6 +323,22 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
     }
 
+    public int getIntentDmg() {
+        int totalIntentDmg = 0;
+        for (AbstractCard c : this.hand.group){
+            AbstractBossCard cB = (AbstractBossCard)c;
+            if (cB.intentDmg > 0){
+                totalIntentDmg += cB.intentDmg;
+            }
+        }
+        return totalIntentDmg;
+    }
+
+    public int getIntentBaseDmg() {
+        return getIntentDmg();
+    }
+
+
     /////////////////////////////////////////////////////////////////////////////
     ////////////[[[[[[[[PLAYER-MIMICING FUNCTIONS]]]]]]]]////////////////////////
     /////////////////////////////////////////////////////////////////////////////

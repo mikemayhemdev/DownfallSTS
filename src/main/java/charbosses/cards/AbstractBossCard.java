@@ -63,8 +63,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     private Texture intentImg;
     private Texture intentBg;
     private PowerTip intentTip = new PowerTip();
-    private int intentDmg;
-    private int intentBaseDmg;
+    public int intentDmg;
+    public int intentBaseDmg;
     private int intentMultiAmt;
     private boolean isMultiDmg;
     private Color intentColor = Color.WHITE.cpy();
@@ -754,6 +754,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
 
     }
+
 
 
     static {
