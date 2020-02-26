@@ -2,10 +2,7 @@ package charbosses.bosses.Ironclad;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.cards.red.*;
-import charbosses.relics.CBR_BurningBlood;
-import charbosses.relics.CBR_MagicFlower;
-import charbosses.relics.CBR_RedSkull;
-import charbosses.relics.CBR_StrikeDummy;
+import charbosses.relics.*;
 
 public class ArchetypeBaseIronclad extends AbstractBossDeckArchetype {
 
@@ -37,12 +34,12 @@ public class ArchetypeBaseIronclad extends AbstractBossDeckArchetype {
         addCardToList(new EnSeeingRed(), CardBenefitType.GLOBAL);
         addCardToList(new EnGhostlyArmor(), CardBenefitType.GLOBAL);
         addCardToList(new EnFlex(), CardBenefitType.GLOBAL);
-        addCardToList(new EnGhostlyArmor(), CardBenefitType.GLOBAL);
 
         //Define Class-specific Relics that can appear in the pool
         addRelicToList(new CBR_MagicFlower(), CardBenefitType.GLOBAL);
         addRelicToList(new CBR_RedSkull(), CardBenefitType.GLOBAL);
-        addRelicToList(new CBR_StrikeDummy(), CardBenefitType.GLOBAL);
+
+        addRelicToList(new CBR_MarkOfPain(), CardBenefitType.ENERGY);
 
     }
 

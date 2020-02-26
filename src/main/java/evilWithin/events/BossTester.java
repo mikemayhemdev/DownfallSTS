@@ -89,6 +89,7 @@ public class BossTester extends AbstractImageEvent {
     }
 
     private void simulateRewards(int act) {
+            AbstractDungeon.getCurrRoom().rewards.clear();
             if (act > 1) addBossRelicReward();
             if (act > 1) addBossCardReward();
             addCardReward();
@@ -108,7 +109,7 @@ public class BossTester extends AbstractImageEvent {
             addPotionReward();
             addCardReward();
             addCardUpgradeReward();
-            addGoldReward(400);
+            addGoldReward(250);
     }
 
     private void addCardReward(){

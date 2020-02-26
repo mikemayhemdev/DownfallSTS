@@ -29,8 +29,8 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     }
 
     public void onEquip() {
+        this.descInt = MathUtils.floor(owner.maxHealth * ((AbstractDungeon.actNum) * 0.75F));
         owner.increaseMaxHp(MathUtils.floor(owner.maxHealth * ((AbstractDungeon.actNum) * 0.75F)), false);
-        descInt = MathUtils.floor(owner.maxHealth * ((AbstractDungeon.actNum) * 0.75F));
         updateDescription(null);
     }
 

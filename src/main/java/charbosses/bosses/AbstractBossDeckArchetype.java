@@ -36,22 +36,28 @@ public abstract class AbstractBossDeckArchetype {
     /// END WEIGHT CONSTANTS///
 
     /// TUNING CONSTANTS ///
-    private static ArrayList<AbstractCharbossRelic> globalRelicPool;
-    private static ArrayList<AbstractCharbossRelic> globalEventPoolAct1;
-    private static ArrayList<AbstractCharbossRelic> globalEventPoolAct2;
-    private static ArrayList<AbstractCharbossRelic> globalEventPoolAct3;
-    private static ArrayList<AbstractCharbossRelic> globalEventPool;
-    public String ID;
+
+    public int[] cardRemovalsPerAct = new int[]{1, 1, 2};
+    public int[] cardUpgradesPerAct = new int[]{1, 1, 2};
+    public int[] synergyCardAcquisitionsPerAct = new int[]{0, 1, 2};
+    public int[] globalCardAcquisitionsPerAct = new int[]{2, 1, 0};
+    public int[] globalEventPoolAcquisitionsPerAct = new int[]{1, 1, 1};
+    public int[] globalRelicAcquisitionsPerAct = new int[]{0, 0, 1};
 
     /// END TUNING CONSTANTS ///
+
+    public String ID;
+
+    private ArrayList<AbstractCharbossRelic> globalRelicPool;
+    private ArrayList<AbstractCharbossRelic> globalEventPoolAct1;
+    private ArrayList<AbstractCharbossRelic> globalEventPoolAct2;
+    private ArrayList<AbstractCharbossRelic> globalEventPoolAct3;
+    private ArrayList<AbstractCharbossRelic> globalEventPool;
+    private ArrayList<AbstractCharbossRelic> energyRelicPool;
+    private ArrayList<AbstractCharbossRelic> bossNonEnergyRelicPool;
+
     public ArrayList<AbstractBossCard> cards;
     protected AbstractCharbossRelic starterRelic;
-    private int[] cardRemovalsPerAct = new int[]{1, 1, 1};
-    private int[] cardUpgradesPerAct = new int[]{1, 1, 1};
-    private int[] synergyCardAcquisitionsPerAct = new int[]{0, 1, 2};
-    private int[] globalCardAcquisitionsPerAct = new int[]{2, 1, 0};
-    private int[] globalEventPoolAcquisitionsPerAct = new int[]{1, 1, 1};
-    private int[] globalRelicAcquisitionsPerAct = new int[]{1, 1, 1};
     private ArrayList<AbstractBossCard> allCards;
     private ArrayList<AbstractBossCard> curseCards;
     private ArrayList<AbstractBossCard> synergyCards;
@@ -73,61 +79,76 @@ public abstract class AbstractBossDeckArchetype {
         this.synergyCards = new ArrayList<AbstractBossCard>();
         this.signatureCardPerAct = new AbstractBossCard[3];
         this.signatureRelicPerAct = new AbstractCharbossRelic[3];
-        globalRelicPool = new ArrayList<AbstractCharbossRelic>();
+        this.globalRelicPool = new ArrayList<AbstractCharbossRelic>();
         this.loggerClassName = loggerClassName;
         this.loggerArchetypeName = loggerArchetypeName;
         this.curseCards = new ArrayList<AbstractBossCard>();
         this.blacklistedCards = new ArrayList<String>();
         this.blacklistedRelics = new ArrayList<String>();
-        globalEventPool = new ArrayList<AbstractCharbossRelic>();
-        globalEventPoolAct1 = new ArrayList<AbstractCharbossRelic>();
-        globalEventPoolAct2 = new ArrayList<AbstractCharbossRelic>();
-        globalEventPoolAct3 = new ArrayList<AbstractCharbossRelic>();
+        this.globalEventPool = new ArrayList<AbstractCharbossRelic>();
+        this.globalEventPoolAct1 = new ArrayList<AbstractCharbossRelic>();
+        this.globalEventPoolAct2 = new ArrayList<AbstractCharbossRelic>();
+        this.globalEventPoolAct3 = new ArrayList<AbstractCharbossRelic>();
+        this.energyRelicPool = new ArrayList<AbstractCharbossRelic>();
+        this.bossNonEnergyRelicPool = new ArrayList<AbstractCharbossRelic>();
         this.cards = new ArrayList<AbstractBossCard>();
 
 
     }
 
-    private static void initializeGlobalEventRelics() {
+    private void initializeGlobalEventRelics() {
         //Global Events
-        globalEventPool.add(new CBR_BonfireSpirits());
+        this.globalEventPool.add(new CBR_BonfireSpirits());
 
         //Act 1 Events
-        globalEventPoolAct1.add(new CBR_BigFish());
+        this.globalEventPoolAct1.add(new CBR_BigFish());
 
         //Act 2 Events
-        globalEventPoolAct2.add(new CBR_Vampires());
+        this.globalEventPoolAct2.add(new CBR_Vampires());
 
         //Act 3 Events
-        globalEventPoolAct3.add(new CBR_Falling());
+        this.globalEventPoolAct3.add(new CBR_Falling());
     }
 
-    private static void initializeRelics() {
-        globalRelicPool.add(new CBR_Anchor());
-        globalRelicPool.add(new CBR_BirdFacedUrn());
-        globalRelicPool.add(new CBR_Boot());
-        globalRelicPool.add(new CBR_BronzeScales());
-        globalRelicPool.add(new CBR_CaptainsWheel());
-        globalRelicPool.add(new CBR_DuvuDoll());
-        globalRelicPool.add(new CBR_Girya());
-        globalRelicPool.add(new CBR_HandDrill());
-        globalRelicPool.add(new CBR_HappyFlower());
-        globalRelicPool.add(new CBR_IceCream());
-        globalRelicPool.add(new CBR_IncenseBurner());
-        globalRelicPool.add(new CBR_Kunai());
-        globalRelicPool.add(new CBR_LetterOpener());
-        globalRelicPool.add(new CBR_LizardTail());
-        globalRelicPool.add(new CBR_Mango());
-        globalRelicPool.add(new CBR_MercuryHourglass());
-        globalRelicPool.add(new CBR_Orichalcum());
-        globalRelicPool.add(new CBR_SelfFormingClay());
-        globalRelicPool.add(new CBR_Shuriken());
-        globalRelicPool.add(new CBR_SmoothStone());
-        globalRelicPool.add(new CBR_Torii());
-        globalRelicPool.add(new CBR_TungstenRod());
-        globalRelicPool.add(new CBR_Vajra());
-        globalRelicPool.add(new CBR_WarPaint());
-        globalRelicPool.add(new CBR_Whetstone());
+    private void initializeRelics() {
+        this.globalRelicPool.add(new CBR_Anchor());
+        this.globalRelicPool.add(new CBR_BirdFacedUrn());
+        this.globalRelicPool.add(new CBR_Boot());
+        this.globalRelicPool.add(new CBR_BronzeScales());
+        this.globalRelicPool.add(new CBR_CaptainsWheel());
+        this.globalRelicPool.add(new CBR_DuvuDoll());
+        this.globalRelicPool.add(new CBR_Girya());
+        this.globalRelicPool.add(new CBR_HandDrill());
+        this.globalRelicPool.add(new CBR_HappyFlower());
+        this.globalRelicPool.add(new CBR_IceCream());
+        this.globalRelicPool.add(new CBR_IncenseBurner());
+        this.globalRelicPool.add(new CBR_Kunai());
+        this.globalRelicPool.add(new CBR_LetterOpener());
+        this.globalRelicPool.add(new CBR_LizardTail());
+        this.globalRelicPool.add(new CBR_Mango());
+        this.globalRelicPool.add(new CBR_MercuryHourglass());
+        this.globalRelicPool.add(new CBR_Orichalcum());
+        this.globalRelicPool.add(new CBR_SelfFormingClay());
+        this.globalRelicPool.add(new CBR_Shuriken());
+        this.globalRelicPool.add(new CBR_SmoothStone());
+        this.globalRelicPool.add(new CBR_Torii());
+        this.globalRelicPool.add(new CBR_TungstenRod());
+        this.globalRelicPool.add(new CBR_Vajra());
+        this.globalRelicPool.add(new CBR_WarPaint());
+        this.globalRelicPool.add(new CBR_Whetstone());
+
+        this.energyRelicPool.add(new CBR_CursedKey());
+        this.energyRelicPool.add(new CBR_PhilosopherStone());
+        this.energyRelicPool.add(new CBR_Ectoplasm());
+        this.energyRelicPool.add(new CBR_FusionHammer());
+        this.energyRelicPool.add(new CBR_CoffeeDripper());
+        this.energyRelicPool.add(new CBR_RunicDome());
+
+        this.bossNonEnergyRelicPool.add(new CBR_CallingBell());
+        this.bossNonEnergyRelicPool.add(new CBR_EmptyCage());
+        this.bossNonEnergyRelicPool.add(new CBR_BlackStar());
+        this.bossNonEnergyRelicPool.add(new CBR_SneckoEye());
+        this.bossNonEnergyRelicPool.add(new CBR_TinyHouse());
     }
 
     private static AbstractBossCard getRandomCardFromSource(ArrayList<AbstractBossCard> source) {
@@ -187,10 +208,22 @@ public abstract class AbstractBossDeckArchetype {
         switch (type) {
             case SIGNATUREACT1:
                 signatureRelicPerAct[0] = r;
+                break;
             case SIGNATUREACT2:
                 signatureRelicPerAct[1] = r;
+                break;
             case SIGNATUREACT3:
                 signatureRelicPerAct[2] = r;
+                break;
+            case ENERGY:
+                this.energyRelicPool.add(r);
+                break;
+            case BOSSNONENERGY:
+                this.bossNonEnergyRelicPool.add(r);
+                break;
+            case GLOBAL:
+                this.globalRelicPool.add(r);
+                break;
             default:
         }
     }
@@ -402,18 +435,9 @@ public abstract class AbstractBossDeckArchetype {
         initializeGlobalEventRelics();
         initializeRelics();
 
-        //Remove any Signature relics out of the Global pool if they are present there
-        for (int i2 = 0; i2 < 3; i2++) {
-            if (this.signatureRelicPerAct[i2] != null) {
-                AbstractCharbossRelic relicToRemove = null;
-                for (AbstractCharbossRelic r : globalRelicPool) {
-                    if (r.relicId.equals(this.signatureRelicPerAct[i2].relicId)) {
-                        relicToRemove = r;
-                    }
-                }
-                if (relicToRemove != null) globalRelicPool.remove(relicToRemove);
-            }
-        }
+
+
+
 
 
         logger.info("Initializing Boss : " + loggerArchetypeName + " " + loggerClassName);
@@ -452,12 +476,15 @@ public abstract class AbstractBossDeckArchetype {
 
         //Remove Blacklisted Relics from the global pool
         if (this.blacklistedRelics.size() > 0) {
-            removeRelicsFromList(globalRelicPool);
-            removeRelicsFromList(globalEventPool);
-            removeRelicsFromList(globalEventPoolAct1);
-            removeRelicsFromList(globalEventPoolAct2);
-            removeRelicsFromList(globalEventPoolAct3);
+            removeRelicsFromList(this.globalRelicPool);
+            removeRelicsFromList(this.globalEventPool);
+            removeRelicsFromList(this.globalEventPoolAct1);
+            removeRelicsFromList(this.globalEventPoolAct2);
+            removeRelicsFromList(this.globalEventPoolAct3);
+            removeRelicsFromList(this.energyRelicPool);
         }
+
+
 
         logger.info("Boss's potential Synergy Cards:");
         for (AbstractBossCard c : this.synergyCards) {
@@ -475,6 +502,134 @@ public abstract class AbstractBossDeckArchetype {
             int safeIndex = Math.min(actIndex, 2); //just in case for the future, where actIndex might go past 2.
 
             logger.info("Simulating run results from Act " + (actIndex + 1) + " out of " + AbstractDungeon.actNum);
+
+            //Initialize Energy relic if this is an act 3 boss
+            if (actIndex == 2 && this.energyRelicPool.size() > 0){
+                logger.info("In Act " + (actIndex + 1) + ", Boss gained this Boss Energy Relic:");
+                AbstractCharbossRelic randomRelic = this.energyRelicPool.get(AbstractDungeon.cardRng.random(0, this.energyRelicPool.size() - 1));
+                randomRelic.instantObtain(boss);
+                randomRelic.modifyCardsOnCollect(cards);
+                this.energyRelicPool.remove(randomRelic);
+                logger.info(randomRelic.name);
+            }
+
+            //Initialize Boss non-energy relic if this is an act 3 boss
+            if (actIndex == 1 && this.bossNonEnergyRelicPool.size() > 0) {
+                logger.info("In Act " + (actIndex + 1) + ", Boss gained this Boss Non-Energy Relic:");
+                AbstractCharbossRelic randomRelic = this.bossNonEnergyRelicPool.get(AbstractDungeon.cardRng.random(0, this.bossNonEnergyRelicPool.size() - 1));
+                randomRelic.instantObtain(boss);
+                randomRelic.modifyCardsOnCollect(cards);
+                this.bossNonEnergyRelicPool.remove(randomRelic);
+                logger.info(randomRelic.name);
+            }
+
+            //Remove any Signature relics out of the Global pool if they are present there
+            for (int i2 = 0; i2 < 3; i2++) {
+                if (this.signatureRelicPerAct[i2] != null) {
+                    AbstractCharbossRelic relicToRemove = null;
+                    for (AbstractCharbossRelic r : this.globalRelicPool) {
+                        if (r.relicId.equals(this.signatureRelicPerAct[i2].relicId)) {
+                            relicToRemove = r;
+                        }
+                    }
+                    if (relicToRemove != null) this.globalRelicPool.remove(relicToRemove);
+                }
+            }
+
+            //Add Signature Relic if one is declared
+            if (boss == null) logger.info("Boss is returning NULL!");
+            if (actIndex < 3) {
+                logger.info("In Act " + (actIndex + 1) + ", Boss gained these Signature Relics:");
+                if (this.signatureRelicPerAct[actIndex] == null) {
+                    logger.info("Signature Relic is returning Null for this Act. Choosing a global instead.");
+                    addRandomGlobalRelic(actIndex, boss, cards);
+                }
+                else {
+                    this.signatureRelicPerAct[actIndex].instantObtain(boss);
+                    logger.info(this.signatureRelicPerAct[actIndex].name);
+                    if (actIndex == 0 && signatureRelicPerAct[actIndex].tier == AbstractRelic.RelicTier.BOSS)
+                        logger.info("WARNING!  Act 1 Signature Relic is a Boss Relic, which is not attainable normally.");
+                }
+            } else {
+                logger.info("The Run is too long, so in act " + (actIndex + 1) + ", Boss obtained another Global Relic:");
+
+                addRandomGlobalRelic(actIndex,boss,cards);
+            }
+            AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
+            logger.info("Boss's potential Class Global Relics:");
+            for (AbstractCharbossRelic r : this.globalRelicPool) {
+                logger.info(r.name);
+            }
+
+            //Add Global Relics based on the act and the number of declared simulated relics per act
+
+            if (globalRelicAcquisitionsPerAct[Math.min(actIndex, 2)] > 0) {
+                logger.info("In Act " + (actIndex + 1) + ", Boss gained these Global Relics:");
+                for (int i = 0; i < globalRelicAcquisitionsPerAct[actIndex]; i++) {
+                    addRandomGlobalRelic(actIndex, boss, cards);
+                }
+
+            }
+
+
+
+            ArrayList<AbstractCharbossRelic> validEventRelics = new ArrayList<AbstractCharbossRelic>();
+
+            if (this.globalEventPool.size() > 0) {
+                validEventRelics.addAll(this.globalEventPool);
+            }
+            switch (actIndex % 3) {
+                case 0:
+                    if (this.globalEventPoolAct1.size() > 0) {
+                        validEventRelics.addAll(this.globalEventPoolAct1);
+                    }
+                    break;
+
+                case 1:
+                    logger.info(this.globalEventPoolAct2.size());
+                    if (this.globalEventPoolAct2.size() > 0) {
+                        validEventRelics.addAll(this.globalEventPoolAct2);
+                    }
+                    break;
+
+                case 2:
+                    if (this.globalEventPoolAct3.size() > 0) {
+                        validEventRelics.addAll(this.globalEventPoolAct3);
+                    }
+                    break;
+
+            }
+
+            AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
+            logger.info("Boss's potential Act " + (actIndex + 1) + " Event Relics:");
+            for (AbstractCharbossRelic r : validEventRelics) {
+                logger.info(r.name);
+            }
+
+            //Add Event-simulation Relics based on the act and the number of declared simulated Events per act
+            logger.info("In Act " + (actIndex + 1) + ", Boss gained these Event Relics:");
+
+
+            if (globalEventPoolAcquisitionsPerAct[safeIndex] > 0) {
+                if (validEventRelics.size() > 0) {
+                    for (int i2 = 0; i2 < globalEventPoolAcquisitionsPerAct[safeIndex]; i2++) {
+                        Collections.shuffle(validEventRelics);
+                        AbstractCharbossRelic randomRelic = validEventRelics.get(0);
+                        logger.info(randomRelic.name);
+                        randomRelic.instantObtain(boss);
+                        randomRelic.modifyCardsOnCollect(cards);
+                        switch (actIndex % 3) {
+                            case 0:
+                                this.globalEventPoolAct1.remove(randomRelic);
+                            case 1:
+                                this.globalEventPoolAct2.remove(randomRelic);
+                            case 2:
+                                this.globalEventPoolAct3.remove(randomRelic);
+                        }
+                        this.globalEventPool.remove(randomRelic);
+                    }
+                }
+            }
 
             //Add Signature card, if one is declared for this Act
             logger.info("In Act " + (actIndex + 1) + ", Boss gained these Signature cards:");
@@ -512,106 +667,14 @@ public abstract class AbstractBossDeckArchetype {
                 }
             }
 
-            //Add Signature Relic if one is declared
-            if (boss == null) logger.info("Boss is returning NULL!");
-            if (actIndex < 3) {
-                logger.info("In Act " + (actIndex + 1) + ", Boss gained these Signature Relics:");
-                if (this.signatureRelicPerAct[actIndex] == null) logger.info("Relic is returning NULL!");
-                if (this.signatureRelicPerAct[actIndex] != null) {
-                    this.signatureRelicPerAct[actIndex].instantObtain(boss);
-                    logger.info(this.signatureRelicPerAct[actIndex].name);
-                    if (actIndex == 0 && signatureRelicPerAct[actIndex].tier == AbstractRelic.RelicTier.BOSS)
-                        logger.info("WARNING!  Act 1 Signature Relic is a Boss Relic, which is not attainable normally.");
-                }
-            } else {
-                logger.info("The Run is too long, so in act " + (actIndex + 1) + ", Boss obtained another Global Relic:");
 
-                ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(globalRelicPool);
-                int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
-                AbstractCharbossRelic randomRelic = sortedRelics.get(random);
-                randomRelic.instantObtain(boss);
-                randomRelic.modifyCardsOnCollect(cards);
-                globalRelicPool.remove(randomRelic);
-                logger.info(randomRelic.name);
-            }
-            AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
-            logger.info("Boss's potential Class Global Relics:");
-            for (AbstractCharbossRelic r : globalRelicPool) {
-                logger.info(r.name);
-            }
-
-            //Add Global Relics based on the act and the number of declared simulated relics per act
-            logger.info("In Act " + (actIndex + 1) + ", Boss gained these Global Relics:");
-            addRandomGlobalRelic(actIndex, boss, cards);
-
-
-            ArrayList<AbstractCharbossRelic> validEventRelics = new ArrayList<AbstractCharbossRelic>();
-
-            if (globalEventPool.size() > 0) {
-                validEventRelics.addAll(globalEventPool);
-            }
-            switch (actIndex % 3) {
-                case 0:
-                    if (globalEventPoolAct1.size() > 0) {
-                        validEventRelics.addAll(globalEventPoolAct1);
-                    }
-                    break;
-
-                case 1:
-                    logger.info(globalEventPoolAct2.size());
-                    if (globalEventPoolAct2.size() > 0) {
-                        validEventRelics.addAll(globalEventPoolAct2);
-                    }
-                    break;
-
-                case 2:
-                    if (globalEventPoolAct3.size() > 0) {
-                        validEventRelics.addAll(globalEventPoolAct3);
-                    }
-                    break;
-
-            }
-
-            AbstractBossDeckArchetype.logger.info("Boss's current max HP is " + AbstractCharBoss.boss.maxHealth);
-            logger.info("Boss's potential Act " + (actIndex + 1) + " Event Relics:");
-            for (AbstractCharbossRelic r : validEventRelics) {
-                logger.info(r.name);
-            }
-
-            //Add Event-simulation Relics based on the act and the number of declared simulated Events per act
-            logger.info("In Act " + (actIndex + 1) + ", Boss gained these Event Relics:");
-
-
-            if (globalEventPoolAcquisitionsPerAct[safeIndex] > 0) {
-                if (validEventRelics.size() > 0) {
-                    for (int i2 = 0; i2 < globalEventPoolAcquisitionsPerAct[safeIndex]; i2++) {
-                        Collections.shuffle(validEventRelics);
-                        AbstractCharbossRelic randomRelic = validEventRelics.get(0);
-                        logger.info(randomRelic.name);
-                        randomRelic.instantObtain(boss);
-                        randomRelic.modifyCardsOnCollect(cards);
-                        switch (actIndex % 3) {
-                            case 0:
-                                globalEventPoolAct1.remove(randomRelic);
-                            case 1:
-                                globalEventPoolAct2.remove(randomRelic);
-                            case 2:
-                                globalEventPoolAct3.remove(randomRelic);
-                        }
-                        globalEventPool.remove(randomRelic);
-                    }
-                }
-            }
 
             //Remove Strikes and Defends based on the act and the number of declared simulated Card Removals per act
             logger.info("In Act " + (actIndex + 1) + ", Boss removed these cards from their deck:");
             if (cardRemovalsPerAct[actIndex] > 0) {
                 for (int i2 = 0; i2 < cardRemovalsPerAct[actIndex]; i2++) {
                     AbstractBossCard cut = getStrikeOrDefend();
-                    if (cut != null) {
-                        logger.info(cut.name);
-                        cards.remove(cut);
-                    }
+                    removeBasicCard("Initialization");
                 }
             }
 
@@ -619,11 +682,7 @@ public abstract class AbstractBossDeckArchetype {
             logger.info("In Act " + (actIndex + 1) + ", Boss upgraded these cards:");
             if (cardUpgradesPerAct[actIndex] > 0) {
                 for (int i2 = 0; i2 < cardUpgradesPerAct[actIndex]; i2++) {
-                    AbstractBossCard up = getCardToUpgrade(cards);
-                    if (up != null) {
-                        logger.info(up.name);
-                        up.upgrade();
-                    }
+                    upgradeRandomCard("Initializzation");
                 }
             }
 
@@ -644,23 +703,38 @@ public abstract class AbstractBossDeckArchetype {
 
     }
 
+    public void removeBasicCard(String debugName){
+        AbstractBossCard cut = getStrikeOrDefend();
+        if (cut != null) {
+            logger.info(debugName + " removed a " + cut.name);
+            cards.remove(cut);
+        }
+    }
+
+    public void upgradeRandomCard(String debugName){
+        AbstractBossCard up = getCardToUpgrade(cards);
+        if (up != null) {
+            logger.info(debugName + " upgraded a " + up.name);
+            up.upgrade();
+        }
+    }
+
     public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards) {
-        if (globalRelicAcquisitionsPerAct[Math.min(actIndex, 2)] > 0) {
-            if (globalRelicPool.size() > 0) {
-                for (int i2 = 0; i2 < globalRelicAcquisitionsPerAct[Math.min(actIndex, 2)]; i2++) {
-                    ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(globalRelicPool);
-                    int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
-                    AbstractCharbossRelic randomRelic = sortedRelics.get(random);
-                    randomRelic.instantObtain(boss);
-                    randomRelic.modifyCardsOnCollect(cards);
-                    globalRelicPool.remove(randomRelic);
-                    if (loggerName.equals("")) {
-                        logger.info(randomRelic.name);
-                    } else {
-                        logger.info(loggerName + "added " + randomRelic.name + ".");
-                    }
-                    return randomRelic.name;
+
+        if (this.globalRelicPool.size() > 0) {
+            for (int i2 = 0; i2 < globalRelicAcquisitionsPerAct[Math.min(actIndex, 2)]; i2++) {
+                ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(this.globalRelicPool);
+                int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
+                AbstractCharbossRelic randomRelic = sortedRelics.get(random);
+                randomRelic.instantObtain(boss);
+                randomRelic.modifyCardsOnCollect(cards);
+                this.globalRelicPool.remove(randomRelic);
+                if (loggerName.equals("")) {
+                    logger.info(randomRelic.name);
+                } else {
+                    logger.info(loggerName + "added " + randomRelic.name + ".");
                 }
+                return randomRelic.name;
             }
         }
         return "";
@@ -670,7 +744,7 @@ public abstract class AbstractBossDeckArchetype {
 
         relic.instantObtain(boss);
         relic.modifyCardsOnCollect(cards);
-        globalRelicPool.remove(relic);
+        this.globalRelicPool.remove(relic);
         if (loggerName.equals("")) {
             logger.info(relic.name);
         } else {
@@ -754,6 +828,8 @@ public abstract class AbstractBossDeckArchetype {
         SIGNATUREACT2,
         SIGNATUREACT3,
         SUPPORTING,
+        ENERGY,
+        BOSSNONENERGY,
         GLOBAL;
 
         CardBenefitType() {

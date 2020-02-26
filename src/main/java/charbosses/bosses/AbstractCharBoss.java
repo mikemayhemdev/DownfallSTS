@@ -17,6 +17,7 @@ import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.AbstractCharbossRelic;
+import charbosses.relics.CBR_RunicDome;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -120,9 +121,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void init() {
         AbstractCharBoss.boss = this;
         this.setHp(this.maxHealth);
+        this.energy.energyMaster = 2;
         this.generateAll();
         super.init();
-        this.energy.energyMaster = 2;
         this.preBattlePrep();
         AbstractCharBoss.finishedSetup = true;
     }
@@ -258,7 +259,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             } else {
                 boolean gotem = false;
                 for (int i = 0; i < cardsByValue.size(); i++) {
-                    if (cardsByValue.get(i).getPriority(this.hand.group) < c.getPriority(this.hand.group) + AbstractDungeon.aiRng.random(0, 4) - 2) {
+                    int maxRange = 4;
+                    if (boss.hasRelic(CBR_RunicDome.ID)) maxRange += 4;
+                    if (cardsByValue.get(i).getPriority(this.hand.group) < c.getPriority(this.hand.group) + AbstractDungeon.aiRng.random(0, maxRange) - 2) {
                         cardsByValue.add(i, c);
                         gotem = true;
                         break;

@@ -30,8 +30,8 @@ public class ArchetypeIcStrike extends ArchetypeBaseIronclad {
         this.addCardToList(new EnMetallicize(), CardBenefitType.SUPPORTING);
 
         //Define Signature relics - These are guaranteed to be chosen based on the Act the boss is fought in
-        this.addRelicToList(new CBR_Mango(), CardBenefitType.SIGNATUREACT1);
-        this.addRelicToList(new CBR_Vajra(), CardBenefitType.SIGNATUREACT2);
+        //this.addRelicToList(new CBR_Mango(), CardBenefitType.SIGNATUREACT1);
+        //this.addRelicToList(new CBR_Vajra(), CardBenefitType.SIGNATUREACT2);
         this.addRelicToList(new CBR_StrikeDummy(), CardBenefitType.SIGNATUREACT3);
 
         //Blacklist Cards & Relics out of the global or class-wide pools

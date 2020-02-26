@@ -7,6 +7,36 @@
       " Maximum HP. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
     ]
   },
+  "evil-within:CoffeeDripper": {
+    "DESCRIPTIONS": [
+      " NL Being unable to Rest, Boss started with less than maximum health."
+    ]
+  },
+  "evil-within:BustedCrown": {
+    "DESCRIPTIONS": [
+      " NL Being unable to pick optimal cards, Boss has fewer synergistic cards than usual."
+    ]
+  },
+  "evil-within:FusionHammer": {
+    "DESCRIPTIONS": [
+      " NL Being unable to Smith, Boss has fewer upgraded cards than usual."
+    ]
+  },
+  "evil-within:Ectoplasm": {
+    "DESCRIPTIONS": [
+      " NL Being unable to gain gold, Boss has fewer card removals than usual."
+    ]
+  },
+  "evil-within:BlackStar": {
+    "DESCRIPTIONS": [
+      " NL Boss acquired two additional relics, but starts with less than maximum health."
+    ]
+  },
+  "evil-within:RunicDome": {
+    "DESCRIPTIONS": [
+      " NL Boss may choose the order of cards unfavorably."
+    ]
+  },
   "evil-within:Vampires": {
     "NAME": "Event: Vampires",
     "FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
