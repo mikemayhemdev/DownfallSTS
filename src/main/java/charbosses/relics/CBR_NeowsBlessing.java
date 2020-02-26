@@ -46,9 +46,9 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     @Override
     public String getUpdatedDescription() {
         if (this.owner != null) {
-            return this.DESCRIPTIONS[0] + this.descInt + this.DESCRIPTIONS[1] + this.owner.energyString + ".";
+            return this.DESCRIPTIONS[0] + this.descInt + this.DESCRIPTIONS[1] + this.owner.energyString + " .";
         }
-        return this.DESCRIPTIONS[0] + this.descInt + this.DESCRIPTIONS[1] + "[E].";
+        return this.DESCRIPTIONS[0] + this.descInt + this.DESCRIPTIONS[1] + "[E] .";
     }
 
 
