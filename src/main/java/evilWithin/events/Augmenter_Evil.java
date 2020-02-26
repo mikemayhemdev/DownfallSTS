@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.MutagenicStrength;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import evilWithin.monsters.Augmenter;
+import evilWithin.util.JaxReward;
+import evilWithin.util.TransformCardReward;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -98,6 +100,9 @@ public class Augmenter_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new MutagenicStrength());
+                        AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());
+                        AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());
+                        AbstractDungeon.getCurrRoom().rewards.add(new JaxReward());
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearRemainingOptions();
                         this.enterCombatFromImage();

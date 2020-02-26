@@ -10,10 +10,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
-import basemod.interfaces.EditCardsSubscriber;
-import basemod.interfaces.EditRelicsSubscriber;
-import basemod.interfaces.EditStringsSubscriber;
-import basemod.interfaces.PostInitializeSubscriber;
+import basemod.interfaces.*;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -24,16 +21,22 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.beyond.*;
 import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import eventUtil.EventUtils;
 import evilWithin.cards.KnowingSkullWish;
 import evilWithin.events.*;
@@ -42,15 +45,20 @@ import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.KnowingSkull;
 import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
-import slimebound.relics.GreedOozeRelic;
+import expansioncontent.patches.CenterGridCardSelectScreen;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 @SpireInitializer
 public class EvilWithinMod implements
-        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber {
+        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber {
     public static final String modID = "evil-within";
+
+    public static boolean choosingBossRelic = false;
+    public static boolean choosingRemoveCard = false;
+    public static boolean choosingUpgradeCard = false;
+    public static boolean choosingTransformCard = false;
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
@@ -459,7 +467,7 @@ public class EvilWithinMod implements
                 //Event Type//
                 EventUtils.EventType.FULL_REPLACE);
 
-        EventUtils.registerEvent(BossTester.ID,BossTester.class,  new String[]{""});
+        EventUtils.registerEvent(BossTester.ID, BossTester.class, new String[]{""});
     }
 
     private void initializeMonsters() {
@@ -511,5 +519,48 @@ public class EvilWithinMod implements
         BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
         BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
         BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
+    }
+
+    @Override
+    public void receivePostUpdate() {
+        if (choosingBossRelic && AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
+            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, RelicLibrary.getRelic(AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID));
+            choosingBossRelic = false;
+            CenterGridCardSelectScreen.centerGridSelect = false;
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+        }
+        if (choosingUpgradeCard && AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
+            AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractDungeon.effectsQueue.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 54
+            card.upgrade();
+            AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));// 59
+            choosingUpgradeCard = false;
+            CenterGridCardSelectScreen.centerGridSelect = false;
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+        }
+        if (choosingRemoveCard && AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
+            AbstractCard card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            card.untip();// 73
+            card.unhover();// 74
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(card, (float) Settings.WIDTH / 2, (float) Settings.HEIGHT / 2.0F));// 75
+            AbstractDungeon.player.masterDeck.removeCard(card);// 78
+            choosingRemoveCard = false;
+            CenterGridCardSelectScreen.centerGridSelect = false;
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+        }
+        if (choosingTransformCard && AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            AbstractDungeon.player.masterDeck.removeCard(c);// 79
+            AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);// 80
+            AbstractCard transCard = AbstractDungeon.getTransformedCard();// 81
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(transCard, c.current_x, c.current_y));// 82
+            choosingTransformCard = false;
+            CenterGridCardSelectScreen.centerGridSelect = false;
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+        }
     }
 }

@@ -1,18 +1,20 @@
-package charbosses.util;
+package evilWithin.util;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import evilWithin.EvilWithinMod;
 import evilWithin.cards.OctoChoiceCard;
 import expansioncontent.expansionContentMod;
+import expansioncontent.patches.CenterGridCardSelectScreen;
+
+import java.util.ArrayList;
 
 public class BossRelicReward extends RewardItem {
-    public boolean cardsSelected = true;
-
     public BossRelicReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
         this.flashTimer = 0.0F;
@@ -24,16 +26,8 @@ public class BossRelicReward extends RewardItem {
     }
 
     @Override
-    public void update() {
-        super.update();
-        if (!this.cardsSelected) {// 61 62
-            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, RelicLibrary.getRelic(AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID));
-        }
-    }
-
-    @Override
     public boolean claimReward() {
-        this.cardsSelected = false;// 28
+        EvilWithinMod.choosingBossRelic = true;
         if (AbstractDungeon.isScreenUp) {// 29
             AbstractDungeon.dynamicBanner.hide();// 30
             AbstractDungeon.overlayMenu.cancelButton.hide();// 31
@@ -41,13 +35,24 @@ public class BossRelicReward extends RewardItem {
         }
 
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;// 34
-        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);// 36
+        ArrayList<AbstractCard> tmp = new ArrayList<>();
 
         for (String q : AbstractDungeon.bossRelicPool) {
-            tmp.addToTop(new OctoChoiceCard(q, q.replaceAll("(.)([A-Z])", "$1 $2"), expansionContentMod.makeCardPath("QuickGuardian.png"), "Obtain a " + q.replaceAll("(.)([A-Z])", "$1 $2") + "."));
+            String d = q;
+            if (q.contains(":")) {
+                d = q.replaceAll("(.)([A-Z])", "$1 $2").substring(q.indexOf(":") + 1);
+                d = d.trim();
+            }
+            tmp.add(new OctoChoiceCard(q, d, expansionContentMod.makeCardPath("QuickGuardian.png"), "Obtain a " + d + "."));
         }
 
-        AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, "Choose a Relic.. sorta", true, false, false, false);// 47 48
+        CardGroup qqq = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (int i = 0; i < 3; i++) {
+            qqq.addToTop(tmp.remove(AbstractDungeon.cardRandomRng.random(tmp.size() - 1)));
+        }
+
+        CenterGridCardSelectScreen.centerGridSelect = true;
+        AbstractDungeon.gridSelectScreen.open(qqq, 1, "Choose a Relic.. sorta", false, false, false, false);// 47 48
         return true;
     }
 }

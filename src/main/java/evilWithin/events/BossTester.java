@@ -2,29 +2,19 @@ package evilWithin.events;
 
 
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.events.GenericEventDialog;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
-import com.megacrit.cardcrawl.rewards.chests.AbstractChest;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
-import evilWithin.monsters.FaceTrader;
-import evilWithin.relics.CloakOfManyFaces;
-import evilWithin.util.RemoveCardReward;
+import evilWithin.util.BossRelicReward;
+import evilWithin.util.RareCardReward;
 import evilWithin.util.UpgradeCardReward;
-import slimebound.SlimeboundMod;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
+import evilWithin.util.RemoveCardReward;
 
 public class BossTester extends AbstractImageEvent {
     public static final String ID = "evilWithin:BossTester";
@@ -126,9 +116,7 @@ public class BossTester extends AbstractImageEvent {
     }
 
     private void addBossCardReward(){
-        //TODO - Make a Custom Reward for only Rare cards
-        AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.player.getCardColor()));
-
+        AbstractDungeon.getCurrRoom().rewards.add(new RareCardReward(AbstractDungeon.player.getCardColor()));
     }
 
     private void addStandardRelicReward(){
@@ -147,7 +135,7 @@ public class BossTester extends AbstractImageEvent {
     }
 
     private void addBossRelicReward(){
-        //TODO - make a 'choose one of 3 boss relics' custom reward using octochoice
+        AbstractDungeon.getCurrRoom().rewards.add(new BossRelicReward());
     }
 
     private void addPotionReward(){
@@ -159,11 +147,11 @@ public class BossTester extends AbstractImageEvent {
     }
 
     private void addCardUpgradeReward(){
-        AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
+        AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
     }
 
     private void addCardRemoveReward(){
-        AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
+        AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
     }
 
 

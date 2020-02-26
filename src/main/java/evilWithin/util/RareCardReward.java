@@ -1,4 +1,4 @@
-package charbosses.util;
+package evilWithin.util;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -41,10 +41,11 @@ public class RareCardReward extends RewardItem {
         int cardsToJankReplace = this.cards.size();
 
         this.cards.clear();
+
         for (int i = 0; i < cardsToJankReplace; i++) {
-            AbstractCard cardToAdd = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE);
+            AbstractCard cardToAdd = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy();
             while (cardListDuplicate(cardToAdd)) {
-                cardToAdd = getRandomSeal().makeCopy();
+                cardToAdd = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy();
             }
             this.cards.add(cardToAdd);
         }

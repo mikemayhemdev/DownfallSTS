@@ -19,8 +19,9 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import evilWithin.util.RemoveCardReward;
+import evilWithin.util.TransformCardReward;
 import evilWithin.util.UpgradeCardReward;
+import evilWithin.util.RemoveCardReward;
 import slimebound.SlimeboundMod;
 
 public class LivingWall_Evil extends AbstractImageEvent {
@@ -131,8 +132,9 @@ public class LivingWall_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().monsters = monsters;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
-                        AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
                         AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
+                        AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
+                        AbstractDungeon.getCurrRoom().rewards.add(new TransformCardReward());
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearRemainingOptions();
                         this.enterCombatFromImage();

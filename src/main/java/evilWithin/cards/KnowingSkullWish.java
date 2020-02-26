@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import evilWithin.actions.OctoChoiceAction;
 import expansioncontent.cards.AbstractExpansionCard;
-import expansioncontent.cards.OctoChoiceCard;
 import expansioncontent.expansionContentMod;
 import sneckomod.actions.ChangeGoldAction;
 
