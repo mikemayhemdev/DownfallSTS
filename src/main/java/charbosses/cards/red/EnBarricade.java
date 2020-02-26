@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 
+import java.util.ArrayList;
+
 public class EnBarricade extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Barricade";
     private static final CardStrings cardStrings;
@@ -19,10 +21,14 @@ public class EnBarricade extends AbstractBossCard {
     }
 
     public EnBarricade() {
-        super(ID, EnBarricade.cardStrings.NAME, "red/power/barricade", 3, EnBarricade.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF);
+        super(ID, EnBarricade.cardStrings.NAME, "red/power/barricade", 3, EnBarricade.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = this.magicNumber = 1;
-        this.magicValue = 50;
         this.limit = 2;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 50;
     }
 
     @Override

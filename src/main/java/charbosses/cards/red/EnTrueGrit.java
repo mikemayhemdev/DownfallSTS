@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnTrueGrit extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:True Grit";
     private static final CardStrings cardStrings;
@@ -18,7 +20,7 @@ public class EnTrueGrit extends AbstractBossCard {
     }
 
     public EnTrueGrit() {
-        super(ID, EnTrueGrit.cardStrings.NAME, "red/skill/true_grit", 1, EnTrueGrit.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, EnTrueGrit.cardStrings.NAME, "red/skill/true_grit", 1, EnTrueGrit.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 7;
     }
 
@@ -33,13 +35,17 @@ public class EnTrueGrit extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority() {
-        return (this.upgraded ? 0 : -1);
-    }
+    public int getPriority(ArrayList<AbstractCard> hand)
+    {
+        int badCards = 0;
+        for (AbstractCard c : hand){
+            if (c.type == CardType.CURSE || c.type == CardType.STATUS){
+                badCards++;
+            }
+        }
 
-    @Override
-    public int getValue() {
-        return super.getValue() + (this.upgraded ? 5 : 1);
+        return autoPriority() + (badCards * 5);
+
     }
 
     @Override

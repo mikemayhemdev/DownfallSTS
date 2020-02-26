@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnSwordBoomerang extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Sword Boomerang";
@@ -19,11 +22,11 @@ public class EnSwordBoomerang extends AbstractBossCard {
     }
 
     public EnSwordBoomerang() {
-        super(ID, EnSwordBoomerang.cardStrings.NAME, "red/attack/sword_boomerang", 1, EnSwordBoomerang.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, EnSwordBoomerang.cardStrings.NAME, "red/attack/sword_boomerang", 1, EnSwordBoomerang.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 0;
+        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
     }
 
     @Override
@@ -34,8 +37,8 @@ public class EnSwordBoomerang extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
-        return super.getValue() * this.magicNumber;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() * 3;
     }
 
     @Override

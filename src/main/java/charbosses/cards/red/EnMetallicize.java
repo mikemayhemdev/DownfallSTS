@@ -10,6 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnMetallicize extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Metallicize";
@@ -20,10 +23,10 @@ public class EnMetallicize extends AbstractBossCard {
     }
 
     public EnMetallicize() {
-        super(ID, EnMetallicize.cardStrings.NAME, "red/power/metallicize", 1, EnMetallicize.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnMetallicize.cardStrings.NAME, "red/power/metallicize", 1, EnMetallicize.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 4;
+        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
     }
 
     @Override
@@ -40,11 +43,8 @@ public class EnMetallicize extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
-        if (AbstractCharBoss.boss != null) {
-            this.magicValue = 1 + AbstractCharBoss.boss.currentHealth / (25 + 5 * AbstractDungeon.actNum);
-        }
-        return super.getValue();
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 50;
     }
 
     @Override

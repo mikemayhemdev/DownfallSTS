@@ -18,7 +18,7 @@ public class EnSentinel extends AbstractBossCard {
     }
 
     public EnSentinel() {
-        super(ID, EnSentinel.cardStrings.NAME, "red/skill/sentinel", 1, EnSentinel.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnSentinel.cardStrings.NAME, "red/skill/sentinel", 1, EnSentinel.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 5;
     }
 

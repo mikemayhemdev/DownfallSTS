@@ -8,6 +8,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DemonFormPower;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnDemonForm extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Demon Form";
@@ -18,15 +21,20 @@ public class EnDemonForm extends AbstractBossCard {
     }
 
     public EnDemonForm() {
-        super(ID, EnDemonForm.cardStrings.NAME, "red/power/demon_form", 3, EnDemonForm.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.NONE);
+        super(ID, EnDemonForm.cardStrings.NAME, "red/power/demon_form", 3, EnDemonForm.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 12;
+        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new DemonFormPower(p, this.magicNumber), this.magicNumber));
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 200;
     }
 
     @Override

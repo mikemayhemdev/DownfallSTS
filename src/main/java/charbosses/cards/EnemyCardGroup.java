@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import java.util.ArrayList;
 
 public class EnemyCardGroup extends CardGroup {
-    public static final int HAND_ROW_LENGTH = 5;
+    public static final int HAND_ROW_LENGTH = 10;
     public AbstractCharBoss owner;
 
     public EnemyCardGroup(CardGroupType type) {
@@ -173,7 +173,7 @@ public class EnemyCardGroup extends CardGroup {
             int cardsinrow = Math.min(this.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) i / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
             float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
             c.target_x = Settings.WIDTH - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
-            c.target_y = Settings.HEIGHT / 2.0f + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float) Math.floor(((float) i) / (float) HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
+            c.target_y = Settings.HEIGHT * 0.55F + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float) Math.floor(((float) i) / (float) HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
             if (((AbstractBossCard) c).hov2 && c.hb.hovered) {
                 hoveredcard = c;
             }

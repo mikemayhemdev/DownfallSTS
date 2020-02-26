@@ -147,7 +147,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
         this.tipHitbox.move(this.current_x, this.current_y);
         this.renderOrb(sb);
         this.renderVfx(sb);
-        final String energyMsg = EnemyEnergyPanel.totalCount + "/" + AbstractDungeon.player.energy.energy;
+        final String energyMsg = EnemyEnergyPanel.totalCount + "/" + this.owner.energy.energy;
         AbstractDungeon.player.getEnergyNumFont().getData().setScale(EnemyEnergyPanel.fontScale);
         FontHelper.renderFontCentered(sb, AbstractDungeon.player.getEnergyNumFont(), energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
         this.tipHitbox.render(sb);

@@ -47,9 +47,9 @@ public abstract class AbstractBossDeckArchetype {
     public ArrayList<AbstractBossCard> cards;
     protected AbstractCharbossRelic starterRelic;
     private int[] cardRemovalsPerAct = new int[]{1, 1, 1};
-    private int[] cardUpgradesPerAct = new int[]{2, 2, 2};
-    private int[] synergyCardAcquisitionsPerAct = new int[]{1, 1, 1};
-    private int[] globalCardAcquisitionsPerAct = new int[]{1, 1, 1};
+    private int[] cardUpgradesPerAct = new int[]{1, 1, 1};
+    private int[] synergyCardAcquisitionsPerAct = new int[]{0, 1, 2};
+    private int[] globalCardAcquisitionsPerAct = new int[]{2, 1, 0};
     private int[] globalEventPoolAcquisitionsPerAct = new int[]{1, 1, 1};
     private int[] globalRelicAcquisitionsPerAct = new int[]{1, 1, 1};
     private ArrayList<AbstractBossCard> allCards;
@@ -424,6 +424,9 @@ public abstract class AbstractBossDeckArchetype {
                 logger.info("Adding card to Starter Deck: " + c.name);
             }
         }
+        //Initialize Neow Relic
+        AbstractRelic neowRelic = new CBR_NeowsBlessing();
+        ((CBR_NeowsBlessing) neowRelic).instantObtain(boss);
 
         //Initialize Starter Relic
         starterRelic.instantObtain(boss);

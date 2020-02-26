@@ -47,9 +47,12 @@ import com.megacrit.cardcrawl.vfx.combat.BlockedWordEffect;
 import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
+import evilWithin.EvilWithinMod;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.function.Predicate;
 
 public abstract class AbstractCharBoss extends AbstractMonster {
 
@@ -83,6 +86,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public AbstractPlayer.PlayerClass chosenClass;
     public AbstractBossDeckArchetype chosenArchetype = null;
 
+    public boolean onSetupTurn = true;
+
+    private static boolean debugLog = true;
+
+    private static int attacksDrawnForAttackPhase = 0;
+    private static int setupsDrawnForSetupPhase = 0;
+
+    public String energyString = "[E]";
+
 
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
@@ -96,8 +108,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.hand = new EnemyCardGroup(CardGroupType.HAND, this);
         this.exhaustPile = new EnemyCardGroup(CardGroupType.EXHAUST_PILE, this);
         this.limbo = new EnemyCardGroup(CardGroupType.UNSPECIFIED, this);
-        this.masterHandSize = 5;
-        this.gameHandSize = 5;
+        this.masterHandSize = 3;
+        this.gameHandSize = 3;
         this.masterMaxOrbs = this.maxOrbs = 0;
         this.stance = new NeutralStance();
         this.orbs = new ArrayList<AbstractOrb>();
@@ -110,10 +122,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.setHp(this.maxHealth);
         this.generateAll();
         super.init();
+        this.energy.energyMaster = 2;
         this.preBattlePrep();
-        AbstractBossDeckArchetype.logger.info("Boss initial HP pre - Act Bonus: " + this.maxHealth);
-        AbstractBossDeckArchetype.logger.info("Boss bonus HP: " + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
-        this.setHp(this.maxHealth + MathUtils.floor(this.maxHealth * ((AbstractDungeon.actNum - 1) * 0.5F)));
         AbstractCharBoss.finishedSetup = true;
     }
 
@@ -135,6 +145,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public void usePreBattleAction() {
+        this.energy.recharge();
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStartPreDraw();
         }
@@ -142,12 +153,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStart();
         }
+
+
     }
 
     @Override
     public void takeTurn() {
+        attacksDrawnForAttackPhase = 0;
+        setupsDrawnForSetupPhase = 0;
         this.startTurn();
         this.makePlay();
+        this.onSetupTurn = !this.onSetupTurn;
     }
 
     public void makePlay() {
@@ -172,6 +188,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     @Override
     public void applyEndOfTurnTriggers() {
+
+        this.energy.recharge();
+
         for (final AbstractRelic r : this.relics) {
             r.onPlayerEndTurn();
         }
@@ -203,7 +222,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void startTurn() {
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
-        this.energy.recharge();
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
@@ -240,7 +258,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             } else {
                 boolean gotem = false;
                 for (int i = 0; i < cardsByValue.size(); i++) {
-                    if (cardsByValue.get(i).getValue() < c.getValue() + AbstractDungeon.aiRng.random(0, 4) - 2) {
+                    if (cardsByValue.get(i).getPriority(this.hand.group) < c.getPriority(this.hand.group) + AbstractDungeon.aiRng.random(0, 4) - 2) {
                         cardsByValue.add(i, c);
                         gotem = true;
                         break;
@@ -268,7 +286,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             } else {
                 boolean gotem = false;
                 for (int j = 0; j < sortedCards.size(); j++) {
-                    if (((AbstractBossCard) sortedCards.get(j)).getPriority() < c.getPriority()) {
+                    if (((AbstractBossCard) sortedCards.get(j)).getPriority(this.hand.group) < c.getPriority(this.hand.group)) {
                         sortedCards.add(j, c);
                         gotem = true;
                         break;
@@ -282,9 +300,44 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractBossCard c : unaffordableCards) {
             sortedCards.add(c);
         }
+
+        budget = this.energy.energy;
+        for (int i = 0; i < sortedCards.size(); i++) {
+            AbstractBossCard c = (AbstractBossCard)sortedCards.get(i);
+            if (c.costForTurn <= budget && c.costForTurn != -2) {
+                budget -= c.costForTurn;
+                budget += c.energyGeneratedIfPlayed;
+                c.createIntent();
+            } else {
+                c.bossDarken();
+            }
+        }
+
         this.hand.group = sortedCards;
+
         this.hand.refreshHandLayout();
+
+        for (AbstractCard c : this.hand.group){
+            AbstractBossCard cB = (AbstractBossCard)c;
+            cB.refreshIntentHbLocation();
+        }
     }
+
+    public int getIntentDmg() {
+        int totalIntentDmg = 0;
+        for (AbstractCard c : this.hand.group){
+            AbstractBossCard cB = (AbstractBossCard)c;
+            if (cB.intentDmg > 0){
+                totalIntentDmg += cB.intentDmg;
+            }
+        }
+        return totalIntentDmg;
+    }
+
+    public int getIntentBaseDmg() {
+        return getIntentDmg();
+    }
+
 
     /////////////////////////////////////////////////////////////////////////////
     ////////////[[[[[[[[PLAYER-MIMICING FUNCTIONS]]]]]]]]////////////////////////
@@ -326,10 +379,184 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.onCardDrawOrDiscard();
     }
 
+    private AbstractCard findReplacementCardInDraw(ArrayList<AbstractCard> drawPile, boolean attack, boolean setup){
+        for (AbstractCard c : drawPile){
+            //Skip the top card.
+            if (drawPile.get(0) != c){
+                if (attack && c.hasTag(EvilWithinMod.CHARBOSS_ATTACK)){
+                    if (debugLog) SlimeboundMod.logger.info("Attack replacement was requested. Returning: " + c.name);
+                    return c;
+                }
+                if (setup && c.hasTag(EvilWithinMod.CHARBOSS_SETUP)){
+                    if (debugLog) SlimeboundMod.logger.info("Setup replacement was requested. Returning: " + c.name);
+                    return c;
+                }
+                if (!setup && !attack && !c.hasTag(EvilWithinMod.CHARBOSS_SETUP) && !c.hasTag(EvilWithinMod.CHARBOSS_ATTACK)){
+                    if (debugLog) SlimeboundMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
+                    return c;
+                }
+            }
+        }
+        if (debugLog) SlimeboundMod.logger.info("Replacement was requested, but no card was valid. Returning null");
+
+        return null;
+    }
+
+    private AbstractCard performCardSearch(ArrayList<AbstractCard> drawPile, DrawTypes firstPriority, DrawTypes secondPriority, DrawTypes thirdPriority){
+        AbstractCard replacementCard = null;
+
+        if (firstPriority == secondPriority || firstPriority == thirdPriority || secondPriority == thirdPriority){
+            SlimeboundMod.logger.info("ERROR! performCardSearch has two parameters as the same priority! These all need to be different! First priority:" + firstPriority + "Second priority: " + secondPriority + "Third priority: " + thirdPriority);
+
+            return null;
+        }
+
+        SlimeboundMod.logger.info("Replacement search requested.  First priority: " + firstPriority);
+
+        if (firstPriority == DrawTypes.Setup) {
+                replacementCard = findReplacementCardInDraw(drawPile, false, true);
+            }
+            else if (firstPriority == DrawTypes.Attack) {
+                replacementCard = findReplacementCardInDraw(drawPile, true, false);
+            } else {
+                replacementCard = findReplacementCardInDraw(drawPile, false, false);
+            }
+
+        if (replacementCard != null) {
+            SlimeboundMod.logger.info("First priority search successful. Returning " + replacementCard.name);
+            return replacementCard;
+        }
+
+        SlimeboundMod.logger.info("First priority failed.  Second priority: " + secondPriority);
+
+        if (secondPriority == DrawTypes.Setup) {
+            replacementCard = findReplacementCardInDraw(drawPile, false, true);
+        }
+        else if (secondPriority == DrawTypes.Attack) {
+            replacementCard = findReplacementCardInDraw(drawPile, true, false);
+        } else {
+            replacementCard = findReplacementCardInDraw(drawPile, false, false);
+        }
+
+        if (replacementCard != null) {
+            SlimeboundMod.logger.info("Second priority search successful. Returning " + replacementCard.name);
+            return replacementCard;
+        }
+
+        SlimeboundMod.logger.info("Second priority failed.  Third priority: " + thirdPriority);
+
+        if (thirdPriority == DrawTypes.Setup) {
+            replacementCard = findReplacementCardInDraw(drawPile, false, true);
+        }
+        else if (thirdPriority == DrawTypes.Attack) {
+            replacementCard = findReplacementCardInDraw(drawPile, true, false);
+        } else {
+            replacementCard = findReplacementCardInDraw(drawPile, false, false);
+        }
+
+        if (replacementCard != null) {
+            SlimeboundMod.logger.info("Third priority search successful. Returning " + replacementCard.name);
+            return replacementCard;
+        }
+
+        SlimeboundMod.logger.info("Priority search yielded no result. Returning null.");
+        return null;    }
+
+
+    private AbstractCard chooseCardToDraw(ArrayList<AbstractCard> drawPile){
+
+        AbstractBossCard c = (AbstractBossCard) drawPile.get(0);
+        AbstractCard replacementCard = null;
+
+        if (drawPile.size() > 1) {
+
+            //Force Draw is for mechanics like Headbutt, where a card should be drawn regardless of phase
+            if (c.forceDraw) {
+                if (debugLog) SlimeboundMod.logger.info("Force Drawing " + c.name);
+                return c;
+            }
+
+            if (this.onSetupTurn) {
+                if (setupsDrawnForSetupPhase < 1) {
+                    if (debugLog) SlimeboundMod.logger.info("Attempting to draw a Setup card");
+                    if (c.hasTag(EvilWithinMod.CHARBOSS_SETUP)) {
+                        if (debugLog) SlimeboundMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
+                        setupsDrawnForSetupPhase++;
+                        return c;
+                    } else {
+                        if (debugLog)
+                            SlimeboundMod.logger.info("Top card is not a Setup. Finding Setup->Either->Attack replacement.");
+                        replacementCard = performCardSearch(drawPile, DrawTypes.Setup, DrawTypes.EitherPhase, DrawTypes.Attack);
+                        if (replacementCard != null) {
+                            if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            return replacementCard;
+                        } else {
+                            if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        }
+                    }
+                } else {
+                    if (debugLog)
+                        SlimeboundMod.logger.info("Setup card already drawn. Finding Either->Setup->Attack replacement.");
+                    replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Setup, DrawTypes.Attack);
+                    if (replacementCard != null) {
+                        if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        return replacementCard;
+                    } else {
+                        if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                    }
+                }
+            }
+
+            if (!this.onSetupTurn) {
+                if (attacksDrawnForAttackPhase < 1) {
+                    if (debugLog) SlimeboundMod.logger.info("Attempting to draw a Attack card");
+                    if (c.hasTag(EvilWithinMod.CHARBOSS_ATTACK)) {
+                        if (debugLog) SlimeboundMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
+                        attacksDrawnForAttackPhase++;
+                        return c;
+                    } else {
+                        if (debugLog)
+                            SlimeboundMod.logger.info("Top card is not a Attack. Finding Attack->Either->Setup replacement.");
+                        replacementCard = performCardSearch(drawPile, DrawTypes.Attack, DrawTypes.EitherPhase, DrawTypes.Setup);
+                        if (replacementCard != null) {
+                            if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            return replacementCard;
+                        } else {
+                            if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        }
+                    }
+                } else {
+                    if (debugLog)
+                        SlimeboundMod.logger.info("2 Attack cards already drawn. Finding Either->Attack->Setup replacement.");
+                    replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Attack, DrawTypes.Setup);
+                    if (replacementCard != null) {
+                        if (debugLog) SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        return replacementCard;
+                    } else {
+                        if (debugLog) SlimeboundMod.logger.info("Null was returned by replacement search.");
+                    }
+                }
+            }
+
+
+            if (debugLog)
+                SlimeboundMod.logger.info("WARNING: All draw logic has failed.  Drawing top card as a default: " + c.name);
+            return c;
+        } else {
+            SlimeboundMod.logger.info("Drawing the last card in the deck, no logic used: " + c.name);
+            return c;
+        }
+
+    }
+
     public void draw(final int numCards) {
         for (int i = 0; i < numCards; ++i) {
             if (!this.drawPile.isEmpty()) {
-                final AbstractCard c = this.drawPile.getTopCard();
+
+                final AbstractCard c = chooseCardToDraw(this.drawPile.group);
+                AbstractBossCard cB = (AbstractBossCard)c;
+                cB.bossLighten();
+
                 c.current_x = CardGroup.DRAW_PILE_X;
                 c.current_y = CardGroup.DRAW_PILE_Y;
                 c.setAngle(0.0f, true);
@@ -338,7 +565,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 c.targetDrawScale = AbstractBossCard.HAND_SCALE;
                 c.triggerWhenDrawn();
                 this.hand.addToHand(c);
-                this.drawPile.removeTopCard();
+                this.drawPile.removeCard(c);
                 for (final AbstractPower p : this.powers) {
                     p.onCardDraw(c);
                 }
@@ -630,6 +857,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.powers.clear();
         this.healthBarUpdatedEvent();
         this.applyPreCombatLogic();
+
     }
 
     public ArrayList<String> getRelicNames() {
@@ -649,6 +877,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public void applyStartOfCombatLogic() {
+
         for (final AbstractRelic r : this.relics) {
             if (r != null) {
                 r.atBattleStart();
@@ -967,5 +1196,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.limbo.render(sb);
     }
 
+    private enum DrawTypes {
+        Attack,
+        Setup,
+        EitherPhase;
+
+        DrawTypes() {
+        }
+    }
 
 }

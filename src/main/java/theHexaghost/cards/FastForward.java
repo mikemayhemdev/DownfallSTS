@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.actions.ExtinguishCurrentFlameAction;
 
 public class FastForward extends AbstractHexaCard {
 
@@ -18,6 +19,7 @@ public class FastForward extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) atb(new AdvanceAction());
+        atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
         atb(new AdvanceAction());
     }

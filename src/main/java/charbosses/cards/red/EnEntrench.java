@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnEntrench extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Entrench";
     private static final CardStrings cardStrings;
@@ -19,7 +21,7 @@ public class EnEntrench extends AbstractBossCard {
     }
 
     public EnEntrench() {
-        super(ID, EnEntrench.cardStrings.NAME, "red/skill/entrench", 2, EnEntrench.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnEntrench.cardStrings.NAME, "red/skill/entrench", 2, EnEntrench.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = this.block = 10;
     }
 
@@ -34,16 +36,11 @@ public class EnEntrench extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority() {
-        return 0;
-    }
-
-    @Override
-    public int getValue() {
+    public int getPriority(ArrayList<AbstractCard> hand) {
         if (AbstractCharBoss.boss != null && !AbstractCharBoss.boss.isDead) {
             return AbstractCharBoss.boss.currentBlock + 8;
         }
-        return super.getValue();
+        return 0;
     }
 
     @Override

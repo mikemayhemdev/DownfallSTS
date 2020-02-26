@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import evilWithin.EvilWithinMod;
 
 public class EnPerfectedStrike extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Perfected Strike";
@@ -20,11 +21,12 @@ public class EnPerfectedStrike extends AbstractBossCard {
     }
 
     public EnPerfectedStrike() {
-        super(ID, EnPerfectedStrike.cardStrings.NAME, "red/attack/perfected_strike", 2, EnPerfectedStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnPerfectedStrike.cardStrings.NAME, "red/attack/perfected_strike", 2, EnPerfectedStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTags.STRIKE);
+        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
     }
 
     public static int countCards() {

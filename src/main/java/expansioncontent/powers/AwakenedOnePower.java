@@ -43,7 +43,7 @@ public class AwakenedOnePower extends AbstractPower {
 
 
     public void atStartOfTurn() {
-        if (this.sourceM.intent == AbstractMonster.Intent.ATTACK || this.sourceM.intent == AbstractMonster.Intent.ATTACK_BUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEBUFF || this.sourceM.intent == AbstractMonster.Intent.ATTACK_DEFEND) {
+        if (this.sourceM.getIntentDmg() > -1) {
 
         } else {
             AbstractCreature p = AbstractDungeon.player;

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.VerticalAuraEffect;
+import evilWithin.EvilWithinMod;
 
 public class EnAnger extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Anger";
@@ -23,8 +24,9 @@ public class EnAnger extends AbstractBossCard {
     }
 
     public EnAnger() {
-        super(ID, EnAnger.cardStrings.NAME, "red/attack/anger", 0, EnAnger.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnAnger.cardStrings.NAME, "red/attack/anger", 0, EnAnger.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
+        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
     }
 
     @Override

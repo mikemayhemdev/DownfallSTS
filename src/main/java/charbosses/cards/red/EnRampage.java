@@ -10,6 +10,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class EnRampage extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Rampage";
@@ -20,11 +23,11 @@ public class EnRampage extends AbstractBossCard {
     }
 
     public EnRampage() {
-        super(ID, EnRampage.cardStrings.NAME, "red/attack/rampage", 1, EnRampage.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, EnRampage.cardStrings.NAME, "red/attack/rampage", 1, EnRampage.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 8;
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
-        this.magicValue = 1;
+        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
     }
 
     @Override
@@ -40,6 +43,12 @@ public class EnRampage extends AbstractBossCard {
             this.upgradeMagicNumber(3);
             this.initializeDescription();
         }
+    }
+
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() * 2;
     }
 
     @Override
