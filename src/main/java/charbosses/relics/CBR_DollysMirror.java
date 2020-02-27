@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class CBR_DollysMirror extends AbstractCharbossRelic {
     public static final String ID = "DollysMirror";
 
-    private String addedDesc;
+    private String addedDesc = "";
 
     public CBR_DollysMirror() {
         super(new DollysMirror());
@@ -39,6 +39,10 @@ public class CBR_DollysMirror extends AbstractCharbossRelic {
 
         this.description = getUpdatedDescription();
         this.refreshDescription();
+    }
+
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+     modifyCardsOnCollect(groupToModify, AbstractDungeon.actNum - 1);
     }
 
     @Override

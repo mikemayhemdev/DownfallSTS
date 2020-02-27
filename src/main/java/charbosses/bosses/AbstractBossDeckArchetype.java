@@ -762,7 +762,7 @@ public abstract class AbstractBossDeckArchetype {
             int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
             AbstractCharbossRelic randomRelic = sortedRelics.get(random);
             randomRelic.instantObtain(boss);
-            randomRelic.modifyCardsOnCollect(cards);
+            randomRelic.modifyCardsOnCollect(cards, actIndex);
             this.globalRelicPool.remove(randomRelic);
             if (loggerName.equals("")) {
                 logger.info(randomRelic.name);
@@ -777,7 +777,7 @@ public abstract class AbstractBossDeckArchetype {
     public void addSpecificRelic(AbstractCharbossRelic relic, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards) {
 
         relic.instantObtain(boss);
-        relic.modifyCardsOnCollect(cards);
+        relic.modifyCardsOnCollect(cards, AbstractDungeon.actNum - 1);
         this.globalRelicPool.remove(relic);
         if (loggerName.equals("")) {
             logger.info(relic.name);
