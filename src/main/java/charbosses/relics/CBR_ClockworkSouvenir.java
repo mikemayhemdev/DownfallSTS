@@ -10,7 +10,7 @@ public class CBR_ClockworkSouvenir extends AbstractCharbossRelic {
     public static final String ID = "ClockworkSouvenir";
 
     public CBR_ClockworkSouvenir() {
-        super(new ClockworkSouvenir(), RelicTier.COMMON);
+        super(new ClockworkSouvenir(), RelicTier.UNCOMMON);
     }
 
     @Override

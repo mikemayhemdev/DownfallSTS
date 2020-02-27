@@ -239,5 +239,8 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
 
     }
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
+
+    }
 
 }

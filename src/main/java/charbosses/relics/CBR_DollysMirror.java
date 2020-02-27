@@ -18,6 +18,7 @@ public class CBR_DollysMirror extends AbstractCharbossRelic {
 
     public CBR_DollysMirror() {
         super(new DollysMirror());
+        this.tier = RelicTier.RARE;
     }
 
     public String getUpdatedDescription() {
@@ -27,15 +28,17 @@ public class CBR_DollysMirror extends AbstractCharbossRelic {
 
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
+        AbstractCharBoss.boss.chosenArchetype.logger.info("Dolly's Mirror is trying to duplicate " + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex].name);
 
-        if (AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[(AbstractDungeon.actNum) % 3] != null) {
-            groupToModify.add(AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[(AbstractDungeon.actNum) % 3]);
-            AbstractCharBoss.boss.chosenArchetype.logger.info("Dolly's Mirror duplicated " + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[(AbstractDungeon.actNum) % 3].name);
-            addedDesc += CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[AbstractDungeon.actNum].name + ".";
+        if (AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex] != null) {
+            groupToModify.add(AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex]);
+            AbstractCharBoss.boss.chosenArchetype.logger.info("Dolly's Mirror duplicated " + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex].name);
+            addedDesc += CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex].name + ".";
         }
 
-        this.updateDescription(null);
+        this.description = getUpdatedDescription();
+        this.refreshDescription();
     }
 
     @Override

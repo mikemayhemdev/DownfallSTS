@@ -118,7 +118,9 @@ public abstract class AbstractBossDeckArchetype {
         this.globalRelicPool.add(new CBR_ArtOfWar());
         this.globalRelicPool.add(new CBR_BagOfMarbles());
         this.globalRelicPool.add(new CBR_BagOfPreparation());
+        this.globalRelicPool.add(new CBR_BirdFacedUrn());
         this.globalRelicPool.add(new CBR_Boot());
+        this.globalRelicPool.add(new CBR_CaptainsWheel());
         this.globalRelicPool.add(new CBR_CentennialPuzzle());
         this.globalRelicPool.add(new CBR_DreamCatcher());
         this.globalRelicPool.add(new CBR_Lantern());
@@ -131,6 +133,7 @@ public abstract class AbstractBossDeckArchetype {
         this.globalRelicPool.add(new CBR_Whetstone());
         this.globalRelicPool.add(new CBR_BlueCandle());
         this.globalRelicPool.add(new CBR_Abacus());   ///Overwritten from original rarity
+        this.globalRelicPool.add(new CBR_CentennialPuzzle());
 
         //// UNCOMMONS ////
 
@@ -138,16 +141,19 @@ public abstract class AbstractBossDeckArchetype {
         this.globalRelicPool.add(new CBR_Akabeko());   ///Overwritten from original rarity
         this.globalRelicPool.add(new CBR_ArtOfWar());
         this.globalRelicPool.add(new CBR_BlueCandle());
+        this.globalRelicPool.add(new CBR_ClockworkSouvenir());   ///Overwritten from original rarity
 
         //// RARE ////
 
         this.globalRelicPool.add(new CBR_BronzeScales());   ///Overwritten from original rarity
+        this.globalRelicPool.add(new CBR_DollysMirror());   ///Overwritten from original rarity
+        this.globalRelicPool.add(new CBR_Calipers());
 
         //////////
 
 
 
-        this.globalRelicPool.add(new CBR_CaptainsWheel());
+
         this.globalRelicPool.add(new CBR_DuvuDoll());
         this.globalRelicPool.add(new CBR_Girya());
         this.globalRelicPool.add(new CBR_HandDrill());
@@ -544,7 +550,7 @@ public abstract class AbstractBossDeckArchetype {
                 logger.info("In Act " + (actIndex + 1) + ", Boss gained this Boss Energy Relic:");
                 AbstractCharbossRelic randomRelic = this.energyRelicPool.get(AbstractDungeon.cardRng.random(0, this.energyRelicPool.size() - 1));
                 randomRelic.instantObtain(boss);
-                randomRelic.modifyCardsOnCollect(cards);
+                randomRelic.modifyCardsOnCollect(cards, actIndex);
                 this.energyRelicPool.remove(randomRelic);
                 logger.info(randomRelic.name);
             }
@@ -554,7 +560,7 @@ public abstract class AbstractBossDeckArchetype {
                 logger.info("In Act " + (actIndex + 1) + ", Boss gained this Boss Non-Energy Relic:");
                 AbstractCharbossRelic randomRelic = this.bossNonEnergyRelicPool.get(AbstractDungeon.cardRng.random(0, this.bossNonEnergyRelicPool.size() - 1));
                 randomRelic.instantObtain(boss);
-                randomRelic.modifyCardsOnCollect(cards);
+                randomRelic.modifyCardsOnCollect(cards, actIndex);
                 this.bossNonEnergyRelicPool.remove(randomRelic);
                 logger.info(randomRelic.name);
             }

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Calipers;
 
 public class CBR_Calipers extends AbstractCharbossRelic {
+    public static final String ID = "Calipers";
 
     public CBR_Calipers() {
         super(new Calipers());
