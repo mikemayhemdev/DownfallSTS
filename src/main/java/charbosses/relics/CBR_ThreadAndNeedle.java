@@ -3,14 +3,13 @@ package charbosses.relics;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.EmptyCage;
 import com.megacrit.cardcrawl.relics.TinyHouse;
 
 import java.util.ArrayList;
 
-public class CBR_TinyHouse extends AbstractCharbossRelic {
+public class CBR_ThreadAndNeedle extends AbstractCharbossRelic {
 
-    public CBR_TinyHouse() {
+    public CBR_ThreadAndNeedle() {
         super(new TinyHouse());
     }
 
@@ -28,6 +27,6 @@ public class CBR_TinyHouse extends AbstractCharbossRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new CBR_TinyHouse();
+        return new CBR_ThreadAndNeedle();
     }
 }

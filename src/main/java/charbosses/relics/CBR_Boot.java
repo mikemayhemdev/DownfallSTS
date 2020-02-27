@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.relics.Boot;
 public class CBR_Boot extends AbstractCharbossRelic {
     public CBR_Boot() {
         super(new Boot());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     @Override

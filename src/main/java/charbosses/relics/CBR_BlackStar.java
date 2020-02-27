@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class CBR_BlackStar extends AbstractCharbossRelic {
     public static final String ID = "BlackStar";
+    private int numRelics;
 
     public CBR_BlackStar() {
         super(new BlackStar());
@@ -22,13 +23,18 @@ public class CBR_BlackStar extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + this.numRelics + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[1];
     }
 
     @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
-        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum,this.owner,"Black Star", groupToModify);
-        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum,this.owner,"Black Star", groupToModify);
+
+        for (int i = AbstractDungeon.actNum; i < 3; i++) {
+            AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum,this.owner,"Black Star", groupToModify);
+            this.numRelics++;
+        }
+
+        this.updateDescription(null);
     }
 
     @Override

@@ -29,12 +29,40 @@
   },
   "evil-within:BlackStar": {
     "DESCRIPTIONS": [
-      " NL Boss acquired two additional relics, but starts with less than maximum health."
+      " NL Boss acquired ",
+      " additional relics, but starts with less than maximum health."
+    ]
+  },
+  "evil-within:CursedKey": {
+    "DESCRIPTIONS": [
+      " NL Boss gained ",
+      " Curses from this relic."
+    ]
+  },
+  "evil-within:DreamCatcher": {
+    "DESCRIPTIONS": [
+      " NL Boss gained ",
+      " extra cards from this relic."
     ]
   },
   "evil-within:RunicDome": {
     "DESCRIPTIONS": [
       " NL Boss may choose the order of cards unfavorably."
+    ]
+  },
+  "evil-within:CentennialPuzzle": {
+    "DESCRIPTIONS": [
+      " NL Cannot trigger on the Boss's turn."
+    ]
+  },
+  "evil-within:Omamori": {
+    "DESCRIPTIONS": [
+      " NL Prevented the Boss from gaining a "
+    ]
+  },
+  "evil-within:DollysMirror": {
+    "DESCRIPTIONS": [
+      " NL The mirror duplicated a "
     ]
   },
   "evil-within:Vampires": {

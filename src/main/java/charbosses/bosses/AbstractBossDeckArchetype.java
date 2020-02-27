@@ -61,7 +61,7 @@ public abstract class AbstractBossDeckArchetype {
     private ArrayList<AbstractBossCard> allCards;
     private ArrayList<AbstractBossCard> curseCards;
     private ArrayList<AbstractBossCard> synergyCards;
-    private AbstractBossCard[] signatureCardPerAct;
+    public AbstractBossCard[] signatureCardPerAct;
     private ArrayList<AbstractBossCard> classGlobalCards;
     private ArrayList<AbstractBossCard> starterCards;
     private String loggerClassName;
@@ -111,15 +111,43 @@ public abstract class AbstractBossDeckArchetype {
     }
 
     private void initializeRelics() {
+
+        //// COMMONS ////
+
         this.globalRelicPool.add(new CBR_Anchor());
-        this.globalRelicPool.add(new CBR_BirdFacedUrn());
+        this.globalRelicPool.add(new CBR_ArtOfWar());
+        this.globalRelicPool.add(new CBR_BagOfMarbles());
+        this.globalRelicPool.add(new CBR_BagOfPreparation());
         this.globalRelicPool.add(new CBR_Boot());
-        this.globalRelicPool.add(new CBR_BronzeScales());
+        this.globalRelicPool.add(new CBR_CentennialPuzzle());
+        this.globalRelicPool.add(new CBR_DreamCatcher());
+        this.globalRelicPool.add(new CBR_Lantern());
+        this.globalRelicPool.add(new CBR_Orichalcum());
+        this.globalRelicPool.add(new CBR_Omamori());
+        this.globalRelicPool.add(new CBR_PenNib());
+        this.globalRelicPool.add(new CBR_Strawberry());
+        this.globalRelicPool.add(new CBR_Vajra());
+        this.globalRelicPool.add(new CBR_WarPaint());
+        this.globalRelicPool.add(new CBR_Whetstone());
+        this.globalRelicPool.add(new CBR_BlueCandle());
+
+        //// UNCOMMONS ////
+
+        this.globalRelicPool.add(new CBR_HappyFlower());   ///Overwritten from original rarity
+        this.globalRelicPool.add(new CBR_Akabeko());   ///Overwritten from original rarity
+
+        //// RARE ////
+
+        this.globalRelicPool.add(new CBR_BronzeScales());   ///Overwritten from original rarity
+
+        //////////
+
+
+        this.globalRelicPool.add(new CBR_BirdFacedUrn());
         this.globalRelicPool.add(new CBR_CaptainsWheel());
         this.globalRelicPool.add(new CBR_DuvuDoll());
         this.globalRelicPool.add(new CBR_Girya());
         this.globalRelicPool.add(new CBR_HandDrill());
-        this.globalRelicPool.add(new CBR_HappyFlower());
         this.globalRelicPool.add(new CBR_IceCream());
         this.globalRelicPool.add(new CBR_IncenseBurner());
         this.globalRelicPool.add(new CBR_Kunai());
@@ -127,15 +155,11 @@ public abstract class AbstractBossDeckArchetype {
         this.globalRelicPool.add(new CBR_LizardTail());
         this.globalRelicPool.add(new CBR_Mango());
         this.globalRelicPool.add(new CBR_MercuryHourglass());
-        this.globalRelicPool.add(new CBR_Orichalcum());
         this.globalRelicPool.add(new CBR_SelfFormingClay());
         this.globalRelicPool.add(new CBR_Shuriken());
         this.globalRelicPool.add(new CBR_SmoothStone());
         this.globalRelicPool.add(new CBR_Torii());
         this.globalRelicPool.add(new CBR_TungstenRod());
-        this.globalRelicPool.add(new CBR_Vajra());
-        this.globalRelicPool.add(new CBR_WarPaint());
-        this.globalRelicPool.add(new CBR_Whetstone());
 
         this.energyRelicPool.add(new CBR_CursedKey());
         this.energyRelicPool.add(new CBR_PhilosopherStone());
@@ -178,9 +202,21 @@ public abstract class AbstractBossDeckArchetype {
     }
 
     public void addRandomCurse(AbstractCharBoss boss, String loggerSource) {
+
         Collections.shuffle(this.curseCards);
-        AbstractBossDeckArchetype.logger.info(loggerSource + " added 1 " + this.curseCards.get(0).name + ".");
+
+        if (boss.hasRelic(CBR_Omamori.ID)) {
+            CBR_Omamori oma = (CBR_Omamori) boss.getRelic(CBR_Omamori.ID);
+            if (oma.counter > 0) {
+                logger.info(loggerSource + " tried to add a " + this.curseCards.get(0).name + ", but Omamori blocked it.");
+                oma.use(this.curseCards.get(0).name);
+                return;
+            }
+
+        }
+        logger.info(loggerSource + " added 1 " + this.curseCards.get(0).name + ".");
         boss.masterDeck.addToTop(this.curseCards.get(0).makeCopy());
+
     }
 
     protected void addCardToList(AbstractBossCard c, CardBenefitType type) {
@@ -437,9 +473,6 @@ public abstract class AbstractBossDeckArchetype {
 
 
 
-
-
-
         logger.info("Initializing Boss : " + loggerArchetypeName + " " + loggerClassName);
         //Initialize Starter Deck
         if (this.starterCards.size() > 0) {
@@ -644,11 +677,7 @@ public abstract class AbstractBossDeckArchetype {
             if (this.synergyCards.size() > 0) {
                 if (synergyCardAcquisitionsPerAct[safeIndex] > 0) {
                     for (int i2 = 0; i2 < synergyCardAcquisitionsPerAct[safeIndex]; i2++) {
-                        ArrayList<AbstractBossCard> sortedCards = sortCardListToRarity(this.synergyCards);
-                        int random = AbstractDungeon.cardRng.random(0, sortedCards.size() - 1);
-                        AbstractBossCard randomCard = sortedCards.get(random);
-                        cards.add((AbstractBossCard) randomCard.makeCopy());
-                        logger.info(randomCard.name);
+                        addRandomSynergyCard("Initialization");
                     }
                 }
             }
@@ -658,11 +687,7 @@ public abstract class AbstractBossDeckArchetype {
             if (this.classGlobalCards.size() > 0) {
                 if (globalCardAcquisitionsPerAct[safeIndex] > 0) {
                     for (int i2 = 0; i2 < globalCardAcquisitionsPerAct[safeIndex]; i2++) {
-                        ArrayList<AbstractBossCard> sortedCards = sortCardListToRarity(this.classGlobalCards);
-                        int random = AbstractDungeon.cardRng.random(0, sortedCards.size() - 1);
-                        AbstractBossCard randomCard = sortedCards.get(random);
-                        cards.add((AbstractBossCard) randomCard.makeCopy());
-                        logger.info(randomCard.name);
+                        addRandomGlobalClassCard("Initialization");
                     }
                 }
             }
@@ -732,7 +757,7 @@ public abstract class AbstractBossDeckArchetype {
                 if (loggerName.equals("")) {
                     logger.info(randomRelic.name);
                 } else {
-                    logger.info(loggerName + "added " + randomRelic.name + ".");
+                    logger.info(loggerName + " added " + randomRelic.name + ".");
                 }
                 return randomRelic.name;
             }
@@ -748,7 +773,34 @@ public abstract class AbstractBossDeckArchetype {
         if (loggerName.equals("")) {
             logger.info(relic.name);
         } else {
-            logger.info(loggerName + "added " + relic.name + ".");
+            logger.info(loggerName + " added " + relic.name + ".");
+        }
+    }
+
+    public void addRandomGlobalClassCard(String debugName) {
+        if (this.classGlobalCards.size() > 0) {
+            ArrayList<AbstractBossCard> sortedCards = sortCardListToRarity(this.classGlobalCards);
+            int random = AbstractDungeon.cardRng.random(0, sortedCards.size() - 1);
+            AbstractBossCard randomCard = sortedCards.get(random);
+            cards.add((AbstractBossCard) randomCard.makeCopy());
+            logger.info(debugName + " added " + randomCard.name + ".");
+        } else {
+
+            logger.info("ERROR: Global class card was requested, but none remain in the list.  Adding no card.");
+        }
+
+    }
+
+    public void addRandomSynergyCard(String debugName){
+        if (this.synergyCards.size() > 0) {
+            ArrayList<AbstractBossCard> sortedCards = sortCardListToRarity(this.synergyCards);
+            int random = AbstractDungeon.cardRng.random(0, sortedCards.size() - 1);
+            AbstractBossCard randomCard = sortedCards.get(random);
+            cards.add((AbstractBossCard) randomCard.makeCopy());
+            logger.info(debugName + " added " + randomCard.name + ".");
+        } else {
+            logger.info("No synergy cards to add.  Adding a class card instead.");
+            addRandomGlobalClassCard(debugName);
         }
     }
 
