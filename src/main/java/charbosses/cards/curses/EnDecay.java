@@ -22,7 +22,7 @@ public class EnDecay extends AbstractBossCard {
     }
 
     public EnDecay() {
-        super(ID, EnDecay.cardStrings.NAME, "curse/decay", -2, EnDecay.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
+        super(ID, EnDecay.cardStrings.NAME, "curse/decay", -2, EnDecay.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
     }
 
     @Override

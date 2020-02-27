@@ -1,6 +1,7 @@
 package charbosses.actions.common;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -39,9 +40,7 @@ public class EnemyEmptyShuffleDeckAction extends AbstractGameAction {
             AbstractDungeon.ftue = new FtueTip(EnemyEmptyShuffleDeckAction.LABEL[0], EnemyEmptyShuffleDeckAction.MSG[0], Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f, FtueTip.TipType.SHUFFLE);
             TipTracker.neverShowAgain("SHUFFLE_TIP");
         }
-        for (final AbstractRelic r : this.boss.relics) {
-            r.onShuffle();
-        }
+
     }
 
     @Override
@@ -61,6 +60,10 @@ public class EnemyEmptyShuffleDeckAction extends AbstractGameAction {
             }
             this.vfxDone = true;
         }
+        for (AbstractCharbossRelic r : this.boss.relics){
+            r.onShuffle();
+        }
+        this.vfxDone = true;
         this.isDone = true;
     }
 }

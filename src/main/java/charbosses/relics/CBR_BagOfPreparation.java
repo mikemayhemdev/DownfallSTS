@@ -1,5 +1,6 @@
 package charbosses.relics;
 
+import charbosses.actions.common.EnemyDrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -15,11 +16,15 @@ public class CBR_BagOfPreparation extends AbstractCharbossRelic {
         super(new BagOfPreparation());
     }
 
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + 2 + this.DESCRIPTIONS[1];
+    }
+
 
     public void atBattleStart() {
         this.flash();
         this.addToBot(new RelicAboveCreatureAction(this.owner, this));
-        this.addToBot(new DrawCardAction(this.owner, 2));
+        this.addToBot(new EnemyDrawCardAction(this.owner, 2));
     }
 
     @Override

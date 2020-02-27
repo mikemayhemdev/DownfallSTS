@@ -20,6 +20,9 @@ public class CBR_BagOfMarbles extends AbstractCharbossRelic {
         super(new BagOfMarbles());
     }
 
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1];
+    }
 
     public void atBattleStart() {
         this.flash();

@@ -23,10 +23,13 @@ public class CBR_BlueCandle extends AbstractCharbossRelic {
         super(new BlueCandle());
     }
 
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1];
+    }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.CURSE) {
-            this.owner.getRelic("Blue Candle").flash();
+            this.flash();
             this.addToBot(new LoseHPAction(this.owner, this.owner, 1, AbstractGameAction.AttackEffect.FIRE));
             card.exhaust = true;
             action.exhaustCard = true;

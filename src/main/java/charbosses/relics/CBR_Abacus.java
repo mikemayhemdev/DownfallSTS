@@ -1,17 +1,27 @@
 package charbosses.relics;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.Abacus;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.SpiritPoop;
 
 public class CBR_Abacus extends AbstractCharbossRelic {
     public CBR_Abacus() {
-        super(new SpiritPoop());
-        this.tier = RelicTier.SPECIAL;
+        super(new Abacus());
+        this.tier = RelicTier.COMMON;
     }
 
-    @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + 6 + this.DESCRIPTIONS[1];
+    }
+
+
+    public void onShuffle() {
+        this.flash();
+        this.addToBot(new RelicAboveCreatureAction(this.owner, this));
+        this.addToBot(new GainBlockAction(this.owner, this.owner, 6));
     }
 
     @Override

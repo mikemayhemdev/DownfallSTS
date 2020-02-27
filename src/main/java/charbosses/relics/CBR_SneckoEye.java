@@ -28,12 +28,12 @@ public class CBR_SneckoEye extends AbstractCharbossRelic {
 
     @Override
     public void onEquip() {
-        this.owner.masterHandSize += 2;
+        this.owner.masterHandSize += 1;
     }
 
     @Override
     public void onUnequip() {
-        this.owner.masterHandSize -= 2;
+        this.owner.masterHandSize -= 1;
     }
 
 

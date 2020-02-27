@@ -1,10 +1,8 @@
 package charbosses.bosses.Ironclad;
 
+import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.red.*;
-import charbosses.relics.CBR_Mango;
-import charbosses.relics.CBR_StrikeDummy;
-import charbosses.relics.CBR_Vajra;
-import charbosses.relics.CBR_Whetstone;
+import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Vampires;
 import com.megacrit.cardcrawl.relics.LetterOpener;
 import com.megacrit.cardcrawl.relics.Shuriken;
@@ -30,9 +28,9 @@ public class ArchetypeIcStrike extends ArchetypeBaseIronclad {
         this.addCardToList(new EnMetallicize(), CardBenefitType.SUPPORTING);
 
         //Define Signature relics - These are guaranteed to be chosen based on the Act the boss is fought in
-        //this.addRelicToList(new CBR_Mango(), CardBenefitType.SIGNATUREACT1);
-        //this.addRelicToList(new CBR_Vajra(), CardBenefitType.SIGNATUREACT2);
-        this.addRelicToList(new CBR_StrikeDummy(), CardBenefitType.SIGNATUREACT3);
+        this.addRelicToList(new CBR_BustedCrown(), CardBenefitType.SIGNATUREACT1);
+        this.addRelicToList(new CBR_BlackStar(), CardBenefitType.SIGNATUREACT2);
+        this.addRelicToList(new CBR_Calipers(), CardBenefitType.SIGNATUREACT3);
 
         //Blacklist Cards & Relics out of the global or class-wide pools
         this.blacklistRelic(CBR_Vampires.ID);

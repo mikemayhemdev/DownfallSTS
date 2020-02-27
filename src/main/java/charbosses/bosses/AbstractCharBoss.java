@@ -35,6 +35,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.BlueCandle;
 import com.megacrit.cardcrawl.relics.LizardTail;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -310,9 +311,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             if (c.costForTurn <= budget && c.costForTurn != -2) {
                 budget -= c.costForTurn;
                 budget += c.energyGeneratedIfPlayed;
+                if (budget < 0) budget = 0;
                 c.createIntent();
             } else {
-                c.bossDarken();
+                if (c.type == AbstractCard.CardType.CURSE && boss.hasRelic(BlueCandle.ID)) {
+                    c.createIntent();
+                } else {
+                    c.bossDarken();
+                }
             }
         }
 
@@ -663,9 +669,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         final boolean weakenedToZero = damageAmount == 0;
         damageAmount = this.decrementBlock(info, damageAmount);
+        //SlimeboundMod.logger.info(info.owner + " pre damage about to apply relics");
         if (info.owner == this) {
             for (final AbstractRelic r : this.relics) {
+                //SlimeboundMod.logger.info(r.name + " onAttackToChange firing");
                 damageAmount = r.onAttackToChangeDamage(info, damageAmount);
+
+
             }
         }
         if (info.owner == AbstractDungeon.player) {

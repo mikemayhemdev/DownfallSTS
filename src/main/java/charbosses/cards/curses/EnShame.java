@@ -21,7 +21,7 @@ public class EnShame extends AbstractBossCard {
     }
 
     public EnShame() {
-        super(ID, EnShame.cardStrings.NAME, "curse/shame", -2, EnShame.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
+        super(ID, EnShame.cardStrings.NAME, "curse/shame", -2, EnShame.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
     }
 
     @Override

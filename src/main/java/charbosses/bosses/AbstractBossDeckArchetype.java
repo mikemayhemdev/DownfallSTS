@@ -130,11 +130,14 @@ public abstract class AbstractBossDeckArchetype {
         this.globalRelicPool.add(new CBR_WarPaint());
         this.globalRelicPool.add(new CBR_Whetstone());
         this.globalRelicPool.add(new CBR_BlueCandle());
+        this.globalRelicPool.add(new CBR_Abacus());   ///Overwritten from original rarity
 
         //// UNCOMMONS ////
 
         this.globalRelicPool.add(new CBR_HappyFlower());   ///Overwritten from original rarity
         this.globalRelicPool.add(new CBR_Akabeko());   ///Overwritten from original rarity
+        this.globalRelicPool.add(new CBR_ArtOfWar());
+        this.globalRelicPool.add(new CBR_BlueCandle());
 
         //// RARE ////
 
@@ -143,7 +146,7 @@ public abstract class AbstractBossDeckArchetype {
         //////////
 
 
-        this.globalRelicPool.add(new CBR_BirdFacedUrn());
+
         this.globalRelicPool.add(new CBR_CaptainsWheel());
         this.globalRelicPool.add(new CBR_DuvuDoll());
         this.globalRelicPool.add(new CBR_Girya());
@@ -579,6 +582,7 @@ public abstract class AbstractBossDeckArchetype {
                 }
                 else {
                     this.signatureRelicPerAct[actIndex].instantObtain(boss);
+                    this.signatureRelicPerAct[actIndex].modifyCardsOnCollect(cards);
                     logger.info(this.signatureRelicPerAct[actIndex].name);
                     if (actIndex == 0 && signatureRelicPerAct[actIndex].tier == AbstractRelic.RelicTier.BOSS)
                         logger.info("WARNING!  Act 1 Signature Relic is a Boss Relic, which is not attainable normally.");
@@ -745,22 +749,21 @@ public abstract class AbstractBossDeckArchetype {
     }
 
     public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards) {
-
+        logger.info("Global relic has been requested by " + loggerName + ", global pool size = " + this.globalRelicPool.size());
         if (this.globalRelicPool.size() > 0) {
-            for (int i2 = 0; i2 < globalRelicAcquisitionsPerAct[Math.min(actIndex, 2)]; i2++) {
-                ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(this.globalRelicPool);
-                int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
-                AbstractCharbossRelic randomRelic = sortedRelics.get(random);
-                randomRelic.instantObtain(boss);
-                randomRelic.modifyCardsOnCollect(cards);
-                this.globalRelicPool.remove(randomRelic);
-                if (loggerName.equals("")) {
-                    logger.info(randomRelic.name);
-                } else {
-                    logger.info(loggerName + " added " + randomRelic.name + ".");
-                }
-                return randomRelic.name;
+
+            ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(this.globalRelicPool);
+            int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
+            AbstractCharbossRelic randomRelic = sortedRelics.get(random);
+            randomRelic.instantObtain(boss);
+            randomRelic.modifyCardsOnCollect(cards);
+            this.globalRelicPool.remove(randomRelic);
+            if (loggerName.equals("")) {
+                logger.info(randomRelic.name);
+            } else {
+                logger.info(loggerName + " added " + randomRelic.name + ".");
             }
+            return randomRelic.name;
         }
         return "";
     }
@@ -808,11 +811,11 @@ public abstract class AbstractBossDeckArchetype {
         addRandomGlobalRelic(actIndex, boss, "", cards);
 
     }
-
-    public void addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName) {
-        addRandomGlobalRelic(actIndex, boss, loggerName, this.cards);
+    public void addRandomGlobalRelic(AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
+        addRandomGlobalRelic(0, boss, "", cards);
 
     }
+
 
     public AbstractBossCard getRandomCard() {
         return getRandomCardFromSource(this.allCards);

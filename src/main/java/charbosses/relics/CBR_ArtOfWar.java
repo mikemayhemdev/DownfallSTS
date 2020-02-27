@@ -1,5 +1,6 @@
 package charbosses.relics;
 
+import charbosses.actions.common.EnemyGainEnergyAction;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CBR_ArtOfWar extends AbstractCharbossRelic {
 
+    public static final String ID = "Art of War";
     private boolean gainEnergyNext = false;
     private boolean firstTurn = false;
     
@@ -49,13 +51,13 @@ public class CBR_ArtOfWar extends AbstractCharbossRelic {
 
     }
 
-    public void atTurnStart() {
+    public void onTrigger() {
         this.beginPulse();
         this.pulse = true;
         if (this.gainEnergyNext && !this.firstTurn) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(this.owner, this));
-            this.addToBot(new GainEnergyAction(1));
+            this.addToBot(new EnemyGainEnergyAction(1));
         }
 
         this.firstTurn = false;

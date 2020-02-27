@@ -6,10 +6,12 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BlackStar;
 import com.megacrit.cardcrawl.relics.EmptyCage;
 import evilWithin.EvilWithinMod;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -34,7 +36,9 @@ public class CBR_BlackStar extends AbstractCharbossRelic {
             this.numRelics++;
         }
 
-        this.updateDescription(null);
+        this.description = getUpdatedDescription();
+        this.refreshDescription();
+
     }
 
     @Override

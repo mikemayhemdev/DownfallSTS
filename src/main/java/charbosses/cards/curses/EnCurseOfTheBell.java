@@ -17,7 +17,7 @@ public class EnCurseOfTheBell extends AbstractBossCard {
     }
 
     public EnCurseOfTheBell() {
-        super(ID, EnCurseOfTheBell.cardStrings.NAME, "curse/curse_of_the_bell", -2, EnCurseOfTheBell.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.SPECIAL, CardTarget.NONE);
+        super(ID, EnCurseOfTheBell.cardStrings.NAME, "curse/curse_of_the_bell", -2, EnCurseOfTheBell.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.SPECIAL, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
         SoulboundField.soulbound.set(this, true);
     }
 

@@ -16,7 +16,7 @@ public class EnInjury extends AbstractBossCard {
     }
 
     public EnInjury() {
-        super(ID, EnInjury.cardStrings.NAME, "curse/injury", -2, EnInjury.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
+        super(ID, EnInjury.cardStrings.NAME, "curse/injury", -2, EnInjury.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
     }
 
     @Override

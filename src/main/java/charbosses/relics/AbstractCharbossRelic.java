@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -54,6 +55,13 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
         this.baseRelic = baseRelic;
         isSeen = true;
         UnlockTracker.markRelicAsSeen(this.relicId);
+    }
+
+    public void refreshDescription(){
+
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
     }
 
     public void setTexture(Texture t) {
@@ -231,4 +239,5 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
 
     }
+
 }

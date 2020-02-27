@@ -18,7 +18,7 @@ public class EnPain extends AbstractBossCard {
     }
 
     public EnPain() {
-        super(ID, EnPain.cardStrings.NAME, "curse/pain", -2, EnPain.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
+        super(ID, EnPain.cardStrings.NAME, "curse/pain", -2, EnPain.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
     }
 
     @Override

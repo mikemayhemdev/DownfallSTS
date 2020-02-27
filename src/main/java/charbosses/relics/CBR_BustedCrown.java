@@ -16,7 +16,7 @@ import evilWithin.EvilWithinMod;
 import java.util.ArrayList;
 
 public class CBR_BustedCrown extends AbstractCharbossRelic {
-    public static final String ID = "BrokenCrown";
+    public static final String ID = "BustedCrown";
 
     public CBR_BustedCrown() {
         super(new BustedCrown());
@@ -57,9 +57,12 @@ public class CBR_BustedCrown extends AbstractCharbossRelic {
 
     @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
-        for (int i = AbstractDungeon.actNum; i < 3; i++) {
-            this.owner.chosenArchetype.globalCardAcquisitionsPerAct[i] += this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i];
-            this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] = 0;
+        for (int i = 0; i <= 2; i++) {
+            if (this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] > 0) {
+                this.owner.chosenArchetype.logger.info("Busted Crown is removing " + this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] + " synergy card picks and replacing them with global picks in Act " + (i + 1));
+                this.owner.chosenArchetype.globalCardAcquisitionsPerAct[i] += this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i];
+                this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] = 0;
+            }
         }
 
     }

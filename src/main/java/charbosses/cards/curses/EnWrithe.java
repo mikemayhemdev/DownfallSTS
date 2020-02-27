@@ -16,7 +16,7 @@ public class EnWrithe extends AbstractBossCard {
     }
 
     public EnWrithe() {
-        super(ID, EnWrithe.cardStrings.NAME, "curse/writhe", -2, EnWrithe.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE);
+        super(ID, EnWrithe.cardStrings.NAME, "curse/writhe", -2, EnWrithe.cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
         this.isInnate = true;
     }
 

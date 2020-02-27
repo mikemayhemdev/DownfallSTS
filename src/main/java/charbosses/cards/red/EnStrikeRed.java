@@ -21,7 +21,7 @@ public class EnStrikeRed extends AbstractBossCard {
 
     public EnStrikeRed() {
         super(ID, EnStrikeRed.cardStrings.NAME, "red/attack/strike", 1, EnStrikeRed.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 6;
+        this.baseDamage = 1;
         this.tags.add(CardTags.STRIKE);
         this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
