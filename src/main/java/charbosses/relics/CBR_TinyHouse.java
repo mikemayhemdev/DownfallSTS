@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.TinyHouse;
 import java.util.ArrayList;
 
 public class CBR_TinyHouse extends AbstractCharbossRelic {
+    public static final String ID = "TinyHouse";
 
     public CBR_TinyHouse() {
         super(new TinyHouse());

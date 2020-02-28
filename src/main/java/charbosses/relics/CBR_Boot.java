@@ -8,6 +8,7 @@ import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
 
 public class CBR_Boot extends AbstractCharbossRelic {
+    public static final String ID = "Boot";
     public CBR_Boot() {
         super(new Boot());
     }

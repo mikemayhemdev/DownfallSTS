@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.CaptainsWheel;
 
 public class CBR_HornCleat extends AbstractCharbossRelic {
+    public static final String ID = "HornCleat";
 
     public CBR_HornCleat() {
         super(new CaptainsWheel(), RelicTier.COMMON);

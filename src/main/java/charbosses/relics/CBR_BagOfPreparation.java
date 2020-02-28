@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.relics.BagOfMarbles;
 import com.megacrit.cardcrawl.relics.BagOfPreparation;
 
 public class CBR_BagOfPreparation extends AbstractCharbossRelic {
+    public static final String ID = "BagOfPreparation";
 
     public CBR_BagOfPreparation() {
         super(new BagOfPreparation());

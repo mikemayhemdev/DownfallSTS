@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.relics.CallingBell;
 import java.util.ArrayList;
 
 public class CBR_CallingBell extends AbstractCharbossRelic {
+    public static final String ID = "CallingBell";
 
     public CBR_CallingBell() {
         super(new CallingBell());

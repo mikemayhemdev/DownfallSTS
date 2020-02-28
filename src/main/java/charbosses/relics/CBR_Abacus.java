@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.SpiritPoop;
 
 public class CBR_Abacus extends AbstractCharbossRelic {
+    public static final String ID = "Abacus";
+
     public CBR_Abacus() {
         super(new Abacus());
         this.tier = RelicTier.COMMON;

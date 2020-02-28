@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.HandDrill;
 
 public class CBR_HandDrill extends AbstractCharbossRelic {
+    public static final String ID = "HandDrill";
 
     public CBR_HandDrill() {
         super(new HandDrill());

@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import java.util.ArrayList;
 
 public class CBR_SneckoEye extends AbstractCharbossRelic {
+    public static final String ID = "SneckoEye";
 
     public CBR_SneckoEye() {
         super(new SneckoEye());

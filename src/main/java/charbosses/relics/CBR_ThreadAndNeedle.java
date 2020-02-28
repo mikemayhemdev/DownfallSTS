@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.TinyHouse;
 import java.util.ArrayList;
 
 public class CBR_ThreadAndNeedle extends AbstractCharbossRelic {
+    public static final String ID = "ThreadAndNeedle";
 
     public CBR_ThreadAndNeedle() {
         super(new TinyHouse());

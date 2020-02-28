@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Lantern;
 
 public class CBR_FrozenEgg extends AbstractCharbossRelic {
+    public static final String ID = "FrozenEgg";
 
     private boolean firstTurn = true;
 

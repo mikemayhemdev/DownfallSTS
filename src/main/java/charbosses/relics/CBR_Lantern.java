@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.relics.Lantern;
 import com.megacrit.cardcrawl.relics.LetterOpener;
 
 public class CBR_Lantern extends AbstractCharbossRelic {
+    public static final String ID = "Lantern";
 
     private boolean firstTurn = true;
     

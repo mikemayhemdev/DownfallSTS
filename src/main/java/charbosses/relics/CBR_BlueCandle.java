@@ -18,6 +18,7 @@ import evilWithin.EvilWithinMod;
 import java.util.ArrayList;
 
 public class CBR_BlueCandle extends AbstractCharbossRelic {
+    public static final String ID = "BlueCandle";
 
     public CBR_BlueCandle() {
         super(new BlueCandle());

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.IncenseBurner;
 
 public class CBR_IncenseBurner extends AbstractCharbossRelic {
+    public static final String ID = "IncenseBurner";
 
     public CBR_IncenseBurner() {
         super(new IncenseBurner());

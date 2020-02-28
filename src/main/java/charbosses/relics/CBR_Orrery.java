@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.TinyHouse;
 import java.util.ArrayList;
 
 public class CBR_Orrery extends AbstractCharbossRelic {
+    public static final String ID = "Orrery";
 
     public CBR_Orrery() {
         super(new TinyHouse());

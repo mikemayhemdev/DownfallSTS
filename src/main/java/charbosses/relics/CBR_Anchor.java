@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.Anchor;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CBR_Anchor extends AbstractCharbossRelic {
+    public static final String ID = "Anchor";
 
     public CBR_Anchor() {
         super(new Anchor());

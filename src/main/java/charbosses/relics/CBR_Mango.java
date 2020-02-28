@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Mango;
 
 public class CBR_Mango extends AbstractCharbossRelic {
+    public static final String ID = "Mango";
 
     public CBR_Mango() {
         super(new Mango());

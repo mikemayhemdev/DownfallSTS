@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.PhilosopherStone;
 
 public class CBR_PhilosopherStone extends AbstractCharbossRelic {
+    public static final String ID = "PhilosopherStone";
 
     public CBR_PhilosopherStone() {
         super(new PhilosopherStone());

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.PeacePipe;
 import java.util.ArrayList;
 
 public class CBR_PeacePipe extends AbstractCharbossRelic {
+    public static final String ID = "PeacePipe";
 
     public CBR_PeacePipe() {
         super(new PeacePipe());

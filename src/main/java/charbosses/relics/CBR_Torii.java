@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Torii;
 
 public class CBR_Torii extends AbstractCharbossRelic {
+    public static final String ID = "Torii";
 
     public CBR_Torii() {
         super(new Torii());

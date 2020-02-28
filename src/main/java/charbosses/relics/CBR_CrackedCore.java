@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.CrackedCore;
 
 public class CBR_CrackedCore extends AbstractCharbossRelic {
+    public static final String ID = "CrakedCore";
     public CBR_CrackedCore() {
         super(new CrackedCore());
     }

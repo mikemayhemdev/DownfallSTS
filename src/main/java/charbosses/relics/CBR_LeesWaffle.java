@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Strawberry;
 
 public class CBR_LeesWaffle extends AbstractCharbossRelic {
+    public static final String ID = "LeesWaffle";
 
     public CBR_LeesWaffle() {
         super(new Strawberry());

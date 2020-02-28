@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.HappyFlower;
 
 public class CBR_HappyFlower extends AbstractCharbossRelic {
+    public static final String ID = "HappyFlower";
 
     public CBR_HappyFlower() {
         super(new HappyFlower());

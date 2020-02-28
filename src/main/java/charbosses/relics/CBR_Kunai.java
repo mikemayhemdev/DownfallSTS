@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Kunai;
 
 public class CBR_Kunai extends AbstractCharbossRelic {
+    public static final String ID = "Kunai";
 
     public CBR_Kunai() {
         super(new Kunai());

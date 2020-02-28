@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.WarpedTongs;
 
 public class CBR_WarpedTongs extends AbstractCharbossRelic {
+    public static final String ID = "WarpedTongs";
 
     public CBR_WarpedTongs() {
         super(new WarpedTongs());

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
 
 public class CBR_DuvuDoll extends AbstractCharbossRelic {
+    public static final String ID = "DuvuDoll";
 
     public CBR_DuvuDoll() {
         super(new DuVuDoll());

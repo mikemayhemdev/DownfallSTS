@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.LizardTail;
 
 public class CBR_LizardTail extends AbstractCharbossRelic {
+    public static final String ID = "LizardTail";
 
     public CBR_LizardTail() {
         super(new LizardTail());

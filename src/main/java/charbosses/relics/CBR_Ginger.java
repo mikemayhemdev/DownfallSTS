@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.relics.Girya;
 import java.util.ArrayList;
 
 public class CBR_Ginger extends AbstractCharbossRelic {
+    public static final String ID = "Ginger";
 
     public CBR_Ginger() {
         super(new Girya());

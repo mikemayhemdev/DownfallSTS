@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.SelfFormingClay;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CBR_SelfFormingClay extends AbstractCharbossRelic {
+    public static final String ID = "SelfFormingClay";
 
     public CBR_SelfFormingClay() {
         super(new SelfFormingClay());

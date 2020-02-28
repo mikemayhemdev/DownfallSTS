@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.relics.PrayerWheel;
 import java.util.ArrayList;
 
 public class CBR_PrayerWheel extends AbstractCharbossRelic {
+    public static final String ID = "PrayerWheel";
 
     public CBR_PrayerWheel() {
         super(new PrayerWheel());

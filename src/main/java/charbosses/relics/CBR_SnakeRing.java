@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.SnakeRing;
 
 public class CBR_SnakeRing extends AbstractCharbossRelic {
+    public static final String ID = "SnakeRing";
 
     public CBR_SnakeRing() {
         super(new SnakeRing());

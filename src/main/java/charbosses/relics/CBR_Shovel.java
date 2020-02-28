@@ -16,7 +16,7 @@ import evilWithin.EvilWithinMod;
 import java.util.ArrayList;
 
 public class CBR_Shovel extends AbstractCharbossRelic {
-    public static final String ID = "FusionHammer";
+    public static final String ID = "Shovel";
 
     public CBR_Shovel() {
         super(new FusionHammer());

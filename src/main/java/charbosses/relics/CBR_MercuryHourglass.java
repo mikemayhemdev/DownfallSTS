@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.MercuryHourglass;
 
 public class CBR_MercuryHourglass extends AbstractCharbossRelic {
+    public static final String ID = "MercuryHourglass";
 
     public CBR_MercuryHourglass() {
         super(new MercuryHourglass());

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Shuriken;
 
 public class CBR_Shuriken extends AbstractCharbossRelic {
+    public static final String ID = "Shuriken";
 
     public CBR_Shuriken() {
         super(new Shuriken());

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.LetterOpener;
 
 public class CBR_LetterOpener extends AbstractCharbossRelic {
+    public static final String ID = "LetterOpener";
 
     public CBR_LetterOpener() {
         super(new LetterOpener());

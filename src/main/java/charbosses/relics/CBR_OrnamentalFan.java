@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.relics.Omamori;
 import evilWithin.EvilWithinMod;
 
 public class CBR_OrnamentalFan extends AbstractCharbossRelic {
-    public static final String ID = "Omamori";
+    public static final String ID = "OrnamentalFan";
 
 
     public CBR_OrnamentalFan() {

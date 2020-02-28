@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Strawberry;
 
 public class CBR_MedicalKit extends AbstractCharbossRelic {
+    public static final String ID = "MedicalKit";
 
     public CBR_MedicalKit() {
         super(new Strawberry());

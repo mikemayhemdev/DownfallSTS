@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.relics.BirdFacedUrn;
 import java.util.Iterator;
 
 public class CBR_BagOfMarbles extends AbstractCharbossRelic {
+    public static final String ID = "BagOfMarbles";
 
     public CBR_BagOfMarbles() {
         super(new BagOfMarbles());

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.relics.MagicFlower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CBR_MagicFlower extends AbstractCharbossRelic {
+    public static final String ID = "MagicFlower";
 
     public CBR_MagicFlower() {
         super(new MagicFlower(), RelicTier.COMMON);

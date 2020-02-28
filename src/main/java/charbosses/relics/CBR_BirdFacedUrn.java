@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BirdFacedUrn;
 
 public class CBR_BirdFacedUrn extends AbstractCharbossRelic {
+    public static final String ID = "BirdFacedUrn";
 
     public CBR_BirdFacedUrn() {
         super(new BirdFacedUrn());

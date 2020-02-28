@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class CBR_WarPaint extends AbstractCharbossRelic {
+    public static final String ID = "WarPaint";
 
     public CBR_WarPaint() {
         super(new WarPaint());

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.relics.Pear;
 import com.megacrit.cardcrawl.relics.Strawberry;
 
 public class CBR_Pear extends AbstractCharbossRelic {
+    public static final String ID = "Pear";
 
     public CBR_Pear() {
         super(new Pear());

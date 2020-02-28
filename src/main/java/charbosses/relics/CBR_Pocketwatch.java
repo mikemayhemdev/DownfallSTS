@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.PenNib;
 
 public class CBR_Pocketwatch extends AbstractCharbossRelic {
+    public static final String ID = "Pocketwatch";
 
     public CBR_Pocketwatch() {
         super(new PenNib());

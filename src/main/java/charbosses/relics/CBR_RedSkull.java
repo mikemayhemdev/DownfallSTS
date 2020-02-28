@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.relics.RedSkull;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class CBR_RedSkull extends AbstractCharbossRelic {
+    public static final String ID = "RedSkull";
     private boolean isActive;
 
     public CBR_RedSkull() {

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Lantern;
 
 public class CBR_ToxicEgg extends AbstractCharbossRelic {
+    public static final String ID = "ToxicEgg";
 
     private boolean firstTurn = true;
 

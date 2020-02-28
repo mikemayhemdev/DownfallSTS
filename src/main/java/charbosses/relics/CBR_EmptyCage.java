@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.relics.EmptyCage;
 import java.util.ArrayList;
 
 public class CBR_EmptyCage extends AbstractCharbossRelic {
+    public static final String ID = "EmptyCage";
 
     public CBR_EmptyCage() {
         super(new EmptyCage());

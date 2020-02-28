@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.TungstenRod;
 
 public class CBR_TungstenRod extends AbstractCharbossRelic {
+    public static final String ID = "TungstenRod";
 
     public CBR_TungstenRod() {
         super(new TungstenRod());

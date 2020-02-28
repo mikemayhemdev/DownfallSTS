@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class CBR_Whetstone extends AbstractCharbossRelic {
+    public static final String ID = "Whetstone";
 
     public CBR_Whetstone() {
         super(new Whetstone());

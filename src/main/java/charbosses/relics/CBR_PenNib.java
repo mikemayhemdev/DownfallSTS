@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.relics.PenNib;
 import com.megacrit.cardcrawl.relics.Shuriken;
 
 public class CBR_PenNib extends AbstractCharbossRelic {
+    public static final String ID = "PenNib";
 
     public CBR_PenNib() {
         super(new PenNib());
