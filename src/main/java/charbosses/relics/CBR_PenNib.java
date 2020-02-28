@@ -19,8 +19,12 @@ public class CBR_PenNib extends AbstractCharbossRelic {
     public CBR_PenNib() {
         super(new PenNib());
         this.counter = 0;
+        this.tier = RelicTier.RARE;
     }
 
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
+    }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
@@ -40,15 +44,7 @@ public class CBR_PenNib extends AbstractCharbossRelic {
 
     }
 
-    public void atBattleStart() {
-        if (this.counter == 9) {
-            this.beginPulse();
-            this.pulse = true;
-            this.owner.hand.refreshHandLayout();
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new PenNibPower(this.owner, 1), 1, true));
-        }
 
-    }
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_PenNib();

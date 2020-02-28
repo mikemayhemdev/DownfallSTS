@@ -10,7 +10,7 @@ import evilWithin.EvilWithinMod;
 
 public class CBR_Omamori extends AbstractCharbossRelic {
     public static final String ID = "Omamori";
-    private String addedDesc;
+    private String addedDesc = "";
 
     @Override
     public String getUpdatedDescription() {
@@ -21,6 +21,7 @@ public class CBR_Omamori extends AbstractCharbossRelic {
 
     public CBR_Omamori() {
         super(new Omamori());
+        this.counter = 2;
     }
 
     public void use(String cardName) {
@@ -29,12 +30,14 @@ public class CBR_Omamori extends AbstractCharbossRelic {
         this.addedDesc = this.addedDesc + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + cardName + ".";
 
         if (this.counter == 0) {
-            this.setCounter(0);
+            this.usedUp();
         }
 
-        this.updateDescription(null);
+        this.description = getUpdatedDescription();
+        refreshDescription();
 
     }
+
 
     @Override
     public AbstractRelic makeCopy() {

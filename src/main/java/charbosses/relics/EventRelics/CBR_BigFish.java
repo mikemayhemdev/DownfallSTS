@@ -29,7 +29,7 @@ public class CBR_BigFish extends AbstractCharbossRelic {
 
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
         if (AbstractDungeon.cardRng.randomBoolean()) {
             donut(list);
         } else {

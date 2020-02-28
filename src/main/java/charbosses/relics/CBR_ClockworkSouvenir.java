@@ -21,7 +21,7 @@ public class CBR_ClockworkSouvenir extends AbstractCharbossRelic {
     @Override
     public void atBattleStart() {
         this.flash();
-        this.addToTop(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new ArtifactPower(AbstractCharBoss.boss, 1), 1));
+        this.addToTop(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, 1), 1));
     }
 
     @Override

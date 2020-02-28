@@ -1,5 +1,6 @@
 package charbosses.relics;
 
+import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Pear;
 import com.megacrit.cardcrawl.relics.Strawberry;
@@ -9,6 +10,11 @@ public class CBR_Pear extends AbstractCharbossRelic {
 
     public CBR_Pear() {
         super(new Pear());
+        this.tier = RelicTier.COMMON;
+    }
+
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + 10 + LocalizedStrings.PERIOD;
     }
 
     @Override

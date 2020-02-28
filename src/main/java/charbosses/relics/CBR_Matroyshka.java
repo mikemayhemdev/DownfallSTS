@@ -2,28 +2,43 @@ package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.Matryoshka;
 import com.megacrit.cardcrawl.relics.TinyHouse;
+import evilWithin.EvilWithinMod;
 
 import java.util.ArrayList;
 
 public class CBR_Matroyshka extends AbstractCharbossRelic {
     public static final String ID = "Matroyshka";
+    private int numRelics;
+
 
     public CBR_Matroyshka() {
-        super(new TinyHouse());
+        super(new Matryoshka());
+        this.counter = 2;
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
-        AbstractCharBoss.boss.chosenArchetype.removeBasicCard("Tiny House");
-        AbstractCharBoss.boss.chosenArchetype.upgradeRandomCard("Tiny House");
-        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalClassCard("Tiny House");
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + this.numRelics + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[1];
     }
 
     @Override
-    public void onEquip() {
-        this.owner.increaseMaxHp(5, true);
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
+        for (int i = actIndex; i < 3; i++) {
+            AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex,this.owner,"Matroyshka", groupToModify);
+            this.numRelics++;
+            this.counter--;
+            if (this.counter == 0){
+                this.usedUp();
+                break;
+            }
+        }
+
+        this.description = getUpdatedDescription();
+        this.refreshDescription();
     }
 
     @Override

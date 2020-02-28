@@ -1,19 +1,21 @@
 package charbosses.relics;
 
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.StrangeSpoon;
 import com.megacrit.cardcrawl.relics.Strawberry;
 
 public class CBR_StrangeSpoon extends AbstractCharbossRelic {
     public static final String ID = "StrangeSpoon";
 
     public CBR_StrangeSpoon() {
-        super(new Strawberry());
+        super(new StrangeSpoon());
     }
 
-    @Override
-    public void onEquip() {
-        this.owner.increaseMaxHp(7, true);
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
     }
+
+    // TODO - Patch to make Strange Spoon work
 
     @Override
     public AbstractRelic makeCopy() {

@@ -21,8 +21,8 @@ public class EnemyEnergyManager extends EnergyManager {
     }
 
     public void recharge() {
-        if (AbstractCharBoss.boss.hasRelic(CBR_ArtOfWar.ID)) {
-                AbstractCharBoss.boss.getRelic(CBR_ArtOfWar.ID).onTrigger();
+        if (AbstractCharBoss.boss.hasRelic("Art of War")) {
+                AbstractCharBoss.boss.getRelic("Art of War").onTrigger();
         }
         if (AbstractCharBoss.boss.hasRelic("Ice Cream")) {
             if (EnemyEnergyPanel.totalCount > 0) {

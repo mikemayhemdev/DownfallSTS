@@ -2,6 +2,8 @@ package charbosses.cards;
 
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.relics.CBR_BlueCandle;
+import charbosses.relics.CBR_MedicalKit;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -106,7 +108,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && AbstractCharBoss.boss != null) {
             if (AbstractCharBoss.boss.hasPower(EvolvePower.POWER_ID)) {
                 value = 0;
-            } else if (AbstractCharBoss.boss.hasRelic(MedicalKit.ID)) {
+            } else if (AbstractCharBoss.boss.hasRelic("Medical Kit")) {
                 value += 4;
             }
         }
@@ -291,10 +293,24 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (m instanceof AbstractCharBoss) {
-            return (this.type != CardType.STATUS || this.costForTurn >= -1 || (((AbstractCharBoss) m).hasRelic(MedicalKit.ID))) && (this.type != CardType.CURSE || this.costForTurn >= -1 || (((AbstractCharBoss) m).hasRelic(BlueCandle.ID))) && (this.cardPlayable(m) && this.hasEnoughEnergy());
-        } else {
-            return true;
+            AbstractCharBoss cB = (AbstractCharBoss) m;
+            if ((this.type == CardType.STATUS) && (this.costForTurn < -1) &&
+                    (cB.hasRelic("Medical Kit"))) {
+                return true;
+            }
+
+            if ((this.type == CardType.CURSE) && (this.costForTurn < -1) &&
+                    (cB.hasRelic("Blue Candle"))) {
+                return true;
+            }
+
+            if ((cardPlayable(m)) && (hasEnoughEnergy())) {
+                return true;
+            }
+
+            return false;
         }
+        return false;
     }
 
     public boolean cardPlayable(final AbstractMonster m) {

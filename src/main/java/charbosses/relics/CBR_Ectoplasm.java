@@ -10,11 +10,13 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Ectoplasm;
 import evilWithin.EvilWithinMod;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
 public class CBR_Ectoplasm extends AbstractCharbossRelic {
     public static final String ID = "Ectoplasm";
+    private int numCards;
 
     public CBR_Ectoplasm() {
         super(new Ectoplasm());
@@ -29,7 +31,7 @@ public class CBR_Ectoplasm extends AbstractCharbossRelic {
     }
 
     private String setDescription(final AbstractPlayer.PlayerClass c) {
-        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + this.numCards + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[1];
     }
 
     @Override
@@ -41,10 +43,16 @@ public class CBR_Ectoplasm extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
-        for (int i = AbstractDungeon.actNum; i < 3; i++) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
+        SlimeboundMod.logger.info("Ectoplasm received act index: " + actIndex);
+        for (int i = actIndex; i < 3; i++) {
+            if (this.owner.chosenArchetype.cardRemovalsPerAct[i] > 0)
             this.owner.chosenArchetype.cardRemovalsPerAct[i] -= 1;
+            this.numCards +=1;
         }
+
+        this.description = getUpdatedDescription();
+        this.refreshDescription();
 
     }
 
@@ -58,11 +66,6 @@ public class CBR_Ectoplasm extends AbstractCharbossRelic {
     public void onUnequip() {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         --energy.energyMaster;
-    }
-
-    @Override
-    public boolean canSpawn() {
-        return AbstractDungeon.actNum <= 1;
     }
 
     @Override

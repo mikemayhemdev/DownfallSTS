@@ -29,10 +29,10 @@ public class CBR_BlackStar extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
 
-        for (int i = AbstractDungeon.actNum; i < 3; i++) {
-            AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum,this.owner,"Black Star", groupToModify);
+        for (int i = actIndex; i < 3; i++) {
+            AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex,this.owner,"Black Star", groupToModify);
             this.numRelics++;
         }
 

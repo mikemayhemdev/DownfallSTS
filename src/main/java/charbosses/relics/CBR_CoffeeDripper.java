@@ -53,10 +53,6 @@ public class CBR_CoffeeDripper extends AbstractCharbossRelic {
         --energy.energyMaster;
     }
 
-    @Override
-    public boolean canSpawn() {
-        return AbstractDungeon.actNum <= 1;
-    }
 
     @Override
     public AbstractRelic makeCopy() {

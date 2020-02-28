@@ -41,10 +41,6 @@ public class CBR_DollysMirror extends AbstractCharbossRelic {
         this.refreshDescription();
     }
 
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
-     modifyCardsOnCollect(groupToModify, AbstractDungeon.actNum - 1);
-    }
-
     @Override
     public void onEquip() {
 

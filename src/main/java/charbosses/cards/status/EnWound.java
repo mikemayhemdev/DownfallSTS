@@ -16,7 +16,7 @@ public class EnWound extends AbstractBossCard {
     }
 
     public EnWound() {
-        super(ID, EnWound.cardStrings.NAME, "status/wound", -2, EnWound.cardStrings.DESCRIPTION, CardType.STATUS, CardColor.COLORLESS, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, EnWound.cardStrings.NAME, "status/wound", -2, EnWound.cardStrings.DESCRIPTION, CardType.STATUS, CardColor.COLORLESS, CardRarity.COMMON, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
     }
 
     @Override

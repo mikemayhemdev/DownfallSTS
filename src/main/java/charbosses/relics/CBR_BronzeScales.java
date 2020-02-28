@@ -9,7 +9,7 @@ public class CBR_BronzeScales extends AbstractCharbossRelic {
     public static final String ID = "BronzeScales";
     public CBR_BronzeScales() {
         super(new BronzeScales());
-        this.tier = RelicTier.RARE;
+        this.tier = RelicTier.BOSS;
     }
 
     @Override

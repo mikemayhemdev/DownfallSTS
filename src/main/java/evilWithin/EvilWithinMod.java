@@ -11,6 +11,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -483,7 +484,7 @@ public class EvilWithinMod implements
                         new GrowingTotem(),
                 }));
 
-        BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new MonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
+        BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
         //BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new MonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
 
         for (int i = 0; i < 20; i++) {

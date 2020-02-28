@@ -1,33 +1,42 @@
 package charbosses.relics;
 
 import charbosses.actions.common.EnemyGainEnergyAction;
+import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Lantern;
+import com.megacrit.cardcrawl.relics.ToxicEgg2;
+import evilWithin.EvilWithinMod;
+
+import java.util.ArrayList;
 
 public class CBR_ToxicEgg extends AbstractCharbossRelic {
     public static final String ID = "ToxicEgg";
+    int numCards = 0;
 
-    private boolean firstTurn = true;
 
     public CBR_ToxicEgg() {
-        super(new Lantern());
+        super(new ToxicEgg2());
     }
 
-    public void atPreBattle() {
-        this.firstTurn = true;
+
+    @Override
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + this.numCards + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[1];
     }
 
-    public void atTurnStart() {
-        if (this.firstTurn) {
-            this.flash();
-            this.addToTop(new EnemyGainEnergyAction(1));
-            this.addToTop(new RelicAboveCreatureAction(this.owner, this));
-            this.firstTurn = false;
-        }
-
+    @Override
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
+        this.owner.chosenArchetype.upgradeAllSkills = true;
     }
-    
+
+    @Override
+    public void onTrigger() {
+        numCards++;
+        this.description = this.getUpdatedDescription();
+        this.refreshDescription();
+    }
 
     @Override
     public AbstractRelic makeCopy() {

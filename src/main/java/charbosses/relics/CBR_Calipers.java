@@ -8,6 +8,7 @@ public class CBR_Calipers extends AbstractCharbossRelic {
 
     public CBR_Calipers() {
         super(new Calipers());
+        this.tier = RelicTier.BOSS;
     }
 
     @Override

@@ -22,22 +22,8 @@ public class CBR_RunicDome extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        if (AbstractCharBoss.boss != null) {
-            return this.setDescription(AbstractCharBoss.boss.chosenClass);
-        }
-        return this.setDescription(null);
-    }
-
-    private String setDescription(final AbstractPlayer.PlayerClass c) {
         return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0];
-    }
 
-    @Override
-    public void updateDescription(final AbstractPlayer.PlayerClass c) {
-        this.description = this.setDescription(c);
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
     }
 
     @Override
@@ -52,10 +38,6 @@ public class CBR_RunicDome extends AbstractCharbossRelic {
         --energy.energyMaster;
     }
 
-    @Override
-    public boolean canSpawn() {
-        return AbstractDungeon.actNum <= 1;
-    }
 
     @Override
     public AbstractRelic makeCopy() {

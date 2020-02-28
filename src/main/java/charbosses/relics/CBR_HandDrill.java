@@ -28,7 +28,7 @@ public class CBR_HandDrill extends AbstractCharbossRelic {
     @Override
     public void onBlockBroken(final AbstractCreature m) {
         this.flash();
-        this.addToBot(new RelicAboveCreatureAction(m, this));
-        this.addToBot(new ApplyPowerAction(m, this.owner, new VulnerablePower(m, 2, false), 2));
+        this.addToBot(new RelicAboveCreatureAction(this.owner, this));
+        this.addToBot(new ApplyPowerAction(m, this.owner, new VulnerablePower(m, 2, true), 2));
     }
 }

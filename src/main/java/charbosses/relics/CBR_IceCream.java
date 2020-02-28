@@ -7,7 +7,6 @@ public class CBR_IceCream extends AbstractCharbossRelic {
     public static final String ID = "IceCream";
     public CBR_IceCream() {
         super(new IceCream());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     @Override

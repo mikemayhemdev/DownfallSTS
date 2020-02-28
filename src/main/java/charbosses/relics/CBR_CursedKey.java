@@ -62,10 +62,10 @@ public class CBR_CursedKey extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
         AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Cursed Key");
         this.numCurses++;
-        if (AbstractDungeon.actNum > 2) {
+        if (actIndex > 1) {
             AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Cursed Key");
             this.numCurses++;
         }

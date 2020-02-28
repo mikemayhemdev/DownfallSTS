@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
@@ -113,6 +114,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
                 this.onEquip();
                 this.relicTip();
             }
+            this.modifyCardsOnCollect(this.owner.chosenArchetype.cards, this.owner.chosenArchetype.safeIndex);
             this.getUpdatedDescription();
             //AbstractDungeon.topPanel.adjustRelicHbs();
         }
@@ -134,7 +136,6 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             ++relic.counter;
             circ.flash();
         } else {
-            this.playLandingSFX();
             this.isDone = true;
             this.isObtained = true;
             this.currentX = Settings.WIDTH - START_X - this.owner.relics.size() * PAD_X;
@@ -145,6 +146,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             this.owner.relics.add(this);
             this.hb.move(this.currentX, this.currentY);
             this.onEquip();
+            this.modifyCardsOnCollect(this.owner.chosenArchetype.cards, this.owner.chosenArchetype.safeIndex);
             this.relicTip();
         }
         //AbstractDungeon.topPanel.adjustRelicHbs();
@@ -225,22 +227,19 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
     }
 
     public void playLandingSFX() {
-        if (this.baseRelic == null) {
-            super.playLandingSFX();
-        } else {
-            this.baseRelic.playLandingSFX();
-        }
+
     }
 
     public boolean canSpawn() {
         return false;
     }
 
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
-
-    }
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
 
     }
 
+    @Override
+    public void onEnergyRecharge() {
+
+    }
 }

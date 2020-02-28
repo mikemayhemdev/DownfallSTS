@@ -29,7 +29,7 @@ public class CBR_Vampires extends AbstractCharbossRelic {
 
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
         ArrayList<AbstractBossCard> cardsToRemove = new ArrayList<>();
         for (AbstractBossCard c : list) {
             if (c.hasTag(AbstractBossCard.CardTags.STARTER_STRIKE)) {

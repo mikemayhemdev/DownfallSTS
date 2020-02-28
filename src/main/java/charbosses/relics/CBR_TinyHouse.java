@@ -16,7 +16,7 @@ public class CBR_TinyHouse extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
         AbstractCharBoss.boss.chosenArchetype.removeBasicCard("Tiny House");
         AbstractCharBoss.boss.chosenArchetype.upgradeRandomCard("Tiny House");
         AbstractCharBoss.boss.chosenArchetype.addRandomGlobalClassCard("Tiny House");

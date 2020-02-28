@@ -46,7 +46,7 @@ public class CBR_HappyFlower extends AbstractCharbossRelic {
     }
 
     @Override
-    public void atTurnStart() {
+    public void onEnergyRecharge() {
         if (this.counter == -1) {
             this.counter += 2;
         } else {
@@ -59,4 +59,5 @@ public class CBR_HappyFlower extends AbstractCharbossRelic {
             this.addToBot(new EnemyGainEnergyAction(this.owner, 1));
         }
     }
+
 }

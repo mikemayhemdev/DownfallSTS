@@ -2,14 +2,17 @@ package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.LizardTail;
+import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 
 public class CBR_LizardTail extends AbstractCharbossRelic {
     public static final String ID = "LizardTail";
 
     public CBR_LizardTail() {
         super(new LizardTail());
+        this.tier = RelicTier.BOSS;
     }
 
     @Override
@@ -22,6 +25,7 @@ public class CBR_LizardTail extends AbstractCharbossRelic {
         if (setCounter == -2) {
             this.usedUp();
             this.counter = -2;
+            this.grayscale = true;
         }
     }
 
@@ -34,6 +38,8 @@ public class CBR_LizardTail extends AbstractCharbossRelic {
             healAmt = 1;
         }
         AbstractCharBoss.boss.heal(healAmt, true);
+        AbstractDungeon.effectsQueue.add(new HealEffect(this.hb.cX, this.hb.cY, healAmt));
+
         this.setCounter(-2);
     }
 

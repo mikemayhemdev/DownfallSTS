@@ -29,7 +29,7 @@ public class CBR_BonfireSpirits extends AbstractCharbossRelic {
 
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
         ArrayList<AbstractBossCard> cardsToRemove = new ArrayList<>();
         Collections.shuffle(list);
 

@@ -56,7 +56,7 @@ public class CBR_BustedCrown extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
         for (int i = 0; i <= 2; i++) {
             if (this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] > 0) {
                 this.owner.chosenArchetype.logger.info("Busted Crown is removing " + this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] + " synergy card picks and replacing them with global picks in Act " + (i + 1));
@@ -67,10 +67,6 @@ public class CBR_BustedCrown extends AbstractCharbossRelic {
 
     }
 
-    @Override
-    public boolean canSpawn() {
-        return AbstractDungeon.actNum <= 1;
-    }
 
     @Override
     public AbstractRelic makeCopy() {

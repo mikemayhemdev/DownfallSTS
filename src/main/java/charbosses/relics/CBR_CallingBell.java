@@ -27,13 +27,13 @@ public class CBR_CallingBell extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
         final AbstractCard bellCurse = new EnCurseOfTheBell();
         AbstractCharBoss.boss.masterDeck.addToTop(bellCurse.makeCopy());
         AbstractBossDeckArchetype.logger.info("Calling Bell added 1 " + bellCurse.name + ".");
-        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum, AbstractCharBoss.boss, "Calling Bell", groupToModify);
-        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum, AbstractCharBoss.boss, "Calling Bell", groupToModify);
-        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum, AbstractCharBoss.boss, "Calling Bell", groupToModify);
+        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex, AbstractCharBoss.boss, "Calling Bell", groupToModify);
+        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex, AbstractCharBoss.boss, "Calling Bell", groupToModify);
+        AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex, AbstractCharBoss.boss, "Calling Bell", groupToModify);
     }
 
     @Override

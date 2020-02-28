@@ -17,20 +17,57 @@
       " NL Being unable to pick optimal cards, Boss has fewer synergistic cards than usual."
     ]
   },
+  "evil-within:Girya": {
+    "DESCRIPTIONS": [
+      " NL Opting to Lift instead of Rest, Boss started with less than maximum health."
+    ]
+  },
+  "evil-within:Matroyshka": {
+    "DESCRIPTIONS": [
+      " NL Boss acquired ",
+      " additional relics."
+    ]
+  },
   "evil-within:FusionHammer": {
     "DESCRIPTIONS": [
-      " NL Being unable to Smith, Boss has fewer upgraded cards than usual."
+      " NL Being unable to Smith, Boss has ",
+      " fewer upgraded cards than usual."
     ]
   },
   "evil-within:Ectoplasm": {
     "DESCRIPTIONS": [
-      " NL Being unable to gain gold, Boss has fewer card removals than usual."
+      " NL Being unable to gain gold, Boss has ",
+      " fewer card removals than usual."
     ]
   },
   "evil-within:BlackStar": {
     "DESCRIPTIONS": [
       " NL Boss acquired ",
       " additional relics, but starts with less than maximum health."
+    ]
+  },
+  "evil-within:MoltenEgg": {
+    "DESCRIPTIONS": [
+      " NL Boss upgraded ",
+      " Attacks from this relic."
+    ]
+  },
+  "evil-within:ToxicEgg": {
+    "DESCRIPTIONS": [
+      " NL Boss upgraded ",
+      " Skills from this relic."
+    ]
+  },
+  "evil-within:FrozenEgg": {
+    "DESCRIPTIONS": [
+      " NL Boss upgraded ",
+      " Powers from this relic."
+    ]
+  },
+  "evil-within:Shovel": {
+    "DESCRIPTIONS": [
+      " NL Boss acquired ",
+      " additional relics, but starts with less than maximum health due to not Resting."
     ]
   },
   "evil-within:CursedKey": {
@@ -43,6 +80,18 @@
     "DESCRIPTIONS": [
       " NL Boss gained ",
       " extra cards from this relic."
+    ]
+  },
+  "evil-within:PrayerWheel": {
+    "DESCRIPTIONS": [
+      " NL Boss gained ",
+      " extra cards from this relic."
+    ]
+  },
+  "evil-within:PeacePipe": {
+    "DESCRIPTIONS": [
+      " NL Boss removed ",
+      " additional cards, but starts with less than maximum health."
     ]
   },
   "evil-within:RunicDome": {

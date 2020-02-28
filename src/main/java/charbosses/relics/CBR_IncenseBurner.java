@@ -25,7 +25,7 @@ public class CBR_IncenseBurner extends AbstractCharbossRelic {
     }
 
     @Override
-    public void atTurnStart() {
+    public void onEnergyRecharge() {
         if (this.counter == -1) {
             this.counter += 2;
         } else {

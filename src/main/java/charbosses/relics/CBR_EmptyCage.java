@@ -28,7 +28,7 @@ public class CBR_EmptyCage extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify) {
+    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
         AbstractCharBoss.boss.chosenArchetype.removeBasicCard("Empty Cage");
         AbstractCharBoss.boss.chosenArchetype.removeBasicCard("Empty Cage");
     }
