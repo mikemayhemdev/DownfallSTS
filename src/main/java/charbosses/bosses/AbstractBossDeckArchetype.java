@@ -811,6 +811,7 @@ public abstract class AbstractBossDeckArchetype {
         return "";
     }
 
+
     public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards) {
         logger.info("Global relic has been requested by " + loggerName + ", global pool size = " + this.globalRelicPool.size());
         if (this.globalRelicPool.size() > 0) {
@@ -828,6 +829,46 @@ public abstract class AbstractBossDeckArchetype {
             return randomRelic.name;
         }
         return "";
+    }
+
+    public String addRandomGlobalRelicOfRarity(AbstractCharBoss boss, String loggerName, AbstractRelic.RelicTier tier) {
+        logger.info("Global relic has been requested by " + loggerName + ", global pool size = " + this.globalRelicPool.size());
+        if (this.globalRelicPool.size() > 0) {
+
+            ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(this.globalRelicPool);
+            ArrayList<AbstractCharbossRelic> invalid = sortRelicListToRarity(this.globalRelicPool);
+            for (AbstractCharbossRelic r : sortedRelics){
+                if (r.tier != tier) invalid.add(r);
+            }
+            for (AbstractCharbossRelic r : invalid){
+                sortedRelics.remove(r);
+            }
+            int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
+            AbstractCharbossRelic randomRelic = sortedRelics.get(random);
+            randomRelic.instantObtain(boss);
+            this.globalRelicPool.remove(randomRelic);
+            if (loggerName.equals("")) {
+                logger.info(randomRelic.name);
+            } else {
+                logger.info(loggerName + " added " + randomRelic.name + ".");
+            }
+            return randomRelic.name;
+        }
+        return "";
+    }
+
+    public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
+        String name = addRandomGlobalRelic(actIndex, boss, "", cards);
+        return name;
+    }
+
+    public void addRandomGlobalRelic(AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
+        addRandomGlobalRelic(0, boss, "", cards);
+
+    }
+    public void addRandomGlobalRelic(AbstractCharBoss boss, ArrayList<AbstractBossCard> cards, AbstractRelic.RelicTier tier) {
+        addRandomGlobalRelic(0, boss, "", cards);
+
     }
 
     public void addSpecificRelic(AbstractCharbossRelic relic, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards) {
@@ -880,15 +921,7 @@ public abstract class AbstractBossDeckArchetype {
         }
     }
 
-    public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
-        String name = addRandomGlobalRelic(actIndex, boss, "", cards);
-        return name;
-    }
 
-    public void addRandomGlobalRelic(AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
-        addRandomGlobalRelic(0, boss, "", cards);
-
-    }
 
 
     public AbstractBossCard getRandomCard() {

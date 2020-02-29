@@ -236,6 +236,28 @@
       " was removed from the deck."
     ]
   },
+  "evil-within:OldBeggar": {
+    "NAME": "Event: Old Beggar",
+    "FLAVOR": "Spare some coin, child?",
+    "DESCRIPTIONS": [
+      " was removed from the deck."
+    ]
+  },
+  "evil-within:Colosseum": {
+    "NAME": "Event: Colosseum",
+    "FLAVOR": "WE NOW@ BEGIN THE COMBAT!!!!",
+    "DESCRIPTIONS": [
+      "Boss completed the Colosseum event, gaining ",
+      ", but starts with less than maximum health."
+    ]
+  },
+  "evil-within:PleadingVagrant": {
+    "NAME": "Event: Pleading Vagrant",
+    "FLAVOR": "Got anything for me friend? Please... maybe some #yCoin?",
+    "DESCRIPTIONS": [
+      "Boss robbed the Vagrants, gaining a Shame curse and "
+    ]
+  },
   "evil-within:Mushroom": {
     "NAME": "Event: Mushrooms",
     "FLAVOR": "You enter a corridor full of hypnotizing colored mushrooms.",
