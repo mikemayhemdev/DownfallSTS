@@ -1,13 +1,10 @@
-package charbosses.relics.EventRelics;
+package charbosses.relics;
 
-import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.CultistMask;
-import com.megacrit.cardcrawl.relics.FaceOfCleric;
 
 public class CBR_MaskCultist extends AbstractCharbossRelic {
     public static final String ID = "CBRCultistMask";

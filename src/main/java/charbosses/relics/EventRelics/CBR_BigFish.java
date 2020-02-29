@@ -53,14 +53,7 @@ public class CBR_BigFish extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        switch (descInt) {
-            case 0:
-                return this.DESCRIPTIONS[0];
-            case 1:
-                return this.DESCRIPTIONS[1] + this.relicName + this.DESCRIPTIONS[2];
-            default:
-                return this.DESCRIPTIONS[0];
-        }
+         return this.DESCRIPTIONS[1] + this.relicName + this.DESCRIPTIONS[2];
     }
 
 

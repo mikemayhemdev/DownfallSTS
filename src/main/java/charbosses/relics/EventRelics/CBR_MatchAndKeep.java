@@ -28,14 +28,14 @@ public class CBR_MatchAndKeep extends AbstractCharbossRelic {
         int choice = AbstractDungeon.cardRng.random(0,2);
         switch (choice){
             case 0:
-                AbstractCharBoss.boss.chosenArchetype.addRandomGlobalClassCard("Match and Keep");
-                this.description = DESCRIPTIONS[0];
+                cardName = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalClassCard("Match and Keep");
+                this.description = DESCRIPTIONS[0] + this.cardName + ".";
             case 1:
-                AbstractCharBoss.boss.chosenArchetype.addRandomSynergyCard("Match and Keep");
-                this.description = DESCRIPTIONS[0];
+                cardName = AbstractCharBoss.boss.chosenArchetype.addRandomSynergyCard("Match and Keep");
+                this.description = DESCRIPTIONS[0] + this.cardName + ".";
             case 2:
-                AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Match and Keep");
-                this.description = DESCRIPTIONS[1];
+                cardName = AbstractCharBoss.boss.chosenArchetype.addRandomCurse(AbstractCharBoss.boss, "Match and Keep");
+                this.description = DESCRIPTIONS[0] + this.cardName + ".";
           }
 
         refreshDescription();

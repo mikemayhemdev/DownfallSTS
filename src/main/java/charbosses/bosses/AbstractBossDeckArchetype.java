@@ -4,10 +4,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.*;
 import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_BigFish;
-import charbosses.relics.EventRelics.CBR_BonfireSpirits;
-import charbosses.relics.EventRelics.CBR_Falling;
-import charbosses.relics.EventRelics.CBR_Vampires;
+import charbosses.relics.EventRelics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -107,9 +104,28 @@ public abstract class AbstractBossDeckArchetype {
     private void initializeGlobalEventRelics() {
         //Global Events
         this.globalEventPool.add(new CBR_BonfireSpirits());
+        this.globalEventPool.add(new CBR_DesignerInSpire());
+        this.globalEventPool.add(new CBR_DivineFountain());
+        this.globalEventPool.add(new CBR_Duplicator());
+        this.globalEventPool.add(new CBR_FaceTrader());
+        this.globalEventPool.add(new CBR_GoldenShrine());
+        this.globalEventPool.add(new CBR_MatchAndKeep());
+        this.globalEventPool.add(new CBR_Purifier());
+        this.globalEventPool.add(new CBR_Transmogrifier());
+        this.globalEventPool.add(new CBR_OminousForge());
+        this.globalEventPool.add(new CBR_UpgradeShrine());
+        this.globalEventPool.add(new CBR_WeMeetAgain());
+        this.globalEventPool.add(new CBR_WheelOfChange());
 
         //Act 1 Events
         this.globalEventPoolAct1.add(new CBR_BigFish());
+        this.globalEventPoolAct1.add(new CBR_GoldenIdolEvent());
+        this.globalEventPoolAct1.add(new CBR_Mushroom());
+        this.globalEventPoolAct1.add(new CBR_ScrapOoze());
+        this.globalEventPoolAct1.add(new CBR_ShiningLight());
+        this.globalEventPoolAct1.add(new CBR_Cleric());
+        this.globalEventPoolAct1.add(new CBR_Serpent());
+        this.globalEventPoolAct1.add(new CBR_WingStatue());
 
         //Act 2 Events
         this.globalEventPoolAct2.add(new CBR_Vampires());
@@ -238,7 +254,7 @@ public abstract class AbstractBossDeckArchetype {
         this.blacklistedRelics.add(id);
     }
 
-    public void addRandomCurse(AbstractCharBoss boss, String loggerSource) {
+    public String addRandomCurse(AbstractCharBoss boss, String loggerSource) {
 
         Collections.shuffle(this.curseCards);
 
@@ -248,12 +264,13 @@ public abstract class AbstractBossDeckArchetype {
             if (oma.counter > 0) {
                 logger.info(loggerSource + " tried to add a " + this.curseCards.get(0).name + ", but Omamori blocked it.");
                 oma.use(this.curseCards.get(0).name);
-                return;
+                return "";
             }
 
         }
         logger.info(loggerSource + " added 1 " + this.curseCards.get(0).name + ".");
         boss.masterDeck.addToTop(this.curseCards.get(0).makeCopy());
+        return this.curseCards.get(0).name;
 
     }
 
@@ -773,20 +790,25 @@ public abstract class AbstractBossDeckArchetype {
         }
     }
 
-    public void removeBasicCard(String debugName) {
+    public String removeBasicCard(String debugName) {
         AbstractBossCard cut = getStrikeOrDefend();
         if (cut != null) {
             logger.info(debugName + " removed a " + cut.name);
             cards.remove(cut);
+            return cut.name;
         }
+        return "";
     }
 
-    public void upgradeRandomCard(String debugName) {
+    public String upgradeRandomCard(String debugName) {
         AbstractBossCard up = getCardToUpgrade(cards);
         if (up != null) {
             logger.info(debugName + " upgraded a " + up.name);
+            String storedName = up.name;
             up.upgrade();
+            return storedName;
         }
+        return "";
     }
 
     public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, String loggerName, ArrayList<AbstractBossCard> cards) {
@@ -819,7 +841,7 @@ public abstract class AbstractBossDeckArchetype {
         }
     }
 
-    public void addRandomGlobalClassCard(String debugName) {
+    public String addRandomGlobalClassCard(String debugName) {
         if (this.classGlobalCards.size() > 0) {
             ArrayList<AbstractBossCard> sortedCards = sortCardListToRarity(this.classGlobalCards);
             int random = AbstractDungeon.cardRng.random(0, sortedCards.size() - 1);
@@ -827,9 +849,11 @@ public abstract class AbstractBossDeckArchetype {
             eggCheck(randomCard);
             cards.add((AbstractBossCard) randomCard.makeCopy());
             logger.info(debugName + " added " + randomCard.name + ".");
+            return randomCard.name;
         } else {
 
             logger.info("ERROR: Global class card was requested, but none remain in the list.  Adding no card.");
+            return "";
         }
 
     }
@@ -840,7 +864,7 @@ public abstract class AbstractBossDeckArchetype {
         logger.info(debugName + " added " + card.name + ".");
     }
 
-    public void addRandomSynergyCard(String debugName) {
+    public String addRandomSynergyCard(String debugName) {
         if (this.synergyCards.size() > 0) {
             ArrayList<AbstractBossCard> sortedCards = sortCardListToRarity(this.synergyCards);
             int random = AbstractDungeon.cardRng.random(0, sortedCards.size() - 1);
@@ -848,15 +872,17 @@ public abstract class AbstractBossDeckArchetype {
             eggCheck(randomCard);
             cards.add((AbstractBossCard) randomCard.makeCopy());
             logger.info(debugName + " added " + randomCard.name + ".");
+            return randomCard.name;
         } else {
             logger.info("No synergy cards to add.  Adding a class card instead.");
             addRandomGlobalClassCard(debugName);
+            return "";
         }
     }
 
-    public void addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
-        addRandomGlobalRelic(actIndex, boss, "", cards);
-
+    public String addRandomGlobalRelic(int actIndex, AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {
+        String name = addRandomGlobalRelic(actIndex, boss, "", cards);
+        return name;
     }
 
     public void addRandomGlobalRelic(AbstractCharBoss boss, ArrayList<AbstractBossCard> cards) {

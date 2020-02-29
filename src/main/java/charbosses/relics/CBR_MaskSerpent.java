@@ -1,10 +1,8 @@
-package charbosses.relics.EventRelics;
+package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.FaceOfCleric;
 import com.megacrit.cardcrawl.relics.SsserpentHead;
 
 import java.util.ArrayList;

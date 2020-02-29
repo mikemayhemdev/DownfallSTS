@@ -1,12 +1,9 @@
-package charbosses.relics.EventRelics;
+package charbosses.relics;
 
-import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.FaceOfCleric;
 import com.megacrit.cardcrawl.relics.GremlinMask;
 
 public class CBR_MaskGremlin extends AbstractCharbossRelic {

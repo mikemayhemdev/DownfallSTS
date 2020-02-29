@@ -1,11 +1,9 @@
-package charbosses.relics.EventRelics;
+package charbosses.relics;
 
-import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.FaceOfCleric;
-import com.megacrit.cardcrawl.relics.SpiritPoop;
 import evilWithin.EvilWithinMod;
 
 public class CBR_MaskCleric extends AbstractCharbossRelic {

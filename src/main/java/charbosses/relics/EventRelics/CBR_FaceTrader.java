@@ -2,7 +2,7 @@ package charbosses.relics.EventRelics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.relics.AbstractCharbossRelic;
+import charbosses.relics.*;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;

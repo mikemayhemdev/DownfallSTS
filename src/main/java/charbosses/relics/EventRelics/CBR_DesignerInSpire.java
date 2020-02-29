@@ -19,6 +19,8 @@ public class CBR_DesignerInSpire extends AbstractCharbossRelic {
     public static String ID = EvilWithinMod.makeID("DesignerInSpire");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
+    private String upgradedName;
+    private String removedName;
 
     public CBR_DesignerInSpire() {
         super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/designerinspire.png")));
@@ -26,13 +28,16 @@ public class CBR_DesignerInSpire extends AbstractCharbossRelic {
 
     @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        AbstractCharBoss.boss.chosenArchetype.removeBasicCard("Designer in Spire");
-        AbstractCharBoss.boss.chosenArchetype.upgradeRandomCard("Designer in Spire");
+        removedName = AbstractCharBoss.boss.chosenArchetype.removeBasicCard("Designer in Spire");
+        upgradedName = AbstractCharBoss.boss.chosenArchetype.upgradeRandomCard("Designer in Spire");
+
+        this.description = getUpdatedDescription();
+        refreshDescription();
     }
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + this.removedName + this.DESCRIPTIONS[1] + this.upgradedName + ".";
     }
 
     @Override

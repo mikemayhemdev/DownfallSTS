@@ -2,7 +2,6 @@ package charbosses.relics.EventRelics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.curses.EnRegret;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -11,21 +10,22 @@ import evilWithin.EvilWithinMod;
 import java.util.ArrayList;
 
 
-public class CBR_GoldenShrine extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("GoldenShrine");
+public class CBR_Transmogrifier extends AbstractCharbossRelic {
+    public static String ID = EvilWithinMod.makeID("Transmogrifier");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
+    private String removedName;
+    private String addedName;
 
-    public String relicName = "";
 
-    public CBR_GoldenShrine() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/goldenshrine.png")));
+    public CBR_Transmogrifier() {
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/transmogrifier.png")));
     }
 
     @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        relicName = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex,this.owner,"Golden Shrine", list);
-        AbstractCharBoss.boss.chosenArchetype.addSpecificCard("Golden Shrine",new EnRegret());
+        removedName = AbstractCharBoss.boss.chosenArchetype.removeBasicCard("Transmogrifier");
+        addedName = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalClassCard("Transmogrifier");
 
         this.description = getUpdatedDescription();
         refreshDescription();
@@ -33,11 +33,11 @@ public class CBR_GoldenShrine extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.relicName + ".";
+        return this.removedName + this.DESCRIPTIONS[0] + this.addedName + ".";
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new CBR_GoldenShrine();
+        return new CBR_Transmogrifier();
     }
 }

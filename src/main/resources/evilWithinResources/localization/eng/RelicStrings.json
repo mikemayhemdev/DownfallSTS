@@ -145,7 +145,15 @@
     "NAME": "Event: Designer-In-Spire",
     "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
     "DESCRIPTIONS": [
-      " was removed from the deck, and a random card was Upgraded."
+      " was removed from the deck, and ",
+      " was upgraded."
+    ]
+  },
+  "evil-within:DivineFountain": {
+    "NAME": "Event: Divine Fountain",
+    "FLAVOR": "You come across shimmering water flowing endlessly from a fountain on a nearby wall.",
+    "DESCRIPTIONS": [
+      " Curses have been removed from the deck."
     ]
   },
   "evil-within:Duplicator": {
@@ -164,11 +172,100 @@
       " were added."
     ]
   },
+  "evil-within:WheelOfChange": {
+    "NAME": "Event: Wheel of Change",
+    "FLAVOR": "It's time to spin the wheel! Are you READY? Of course you are!",
+    "DESCRIPTIONS": [
+      "The Wheel gave the Boss a ",
+      "Boss was healed to maximum health.",
+      "The Wheel removed a ",
+      " from the Boss's deck.",
+      "The Wheel caused damage to the Boss."
+    ]
+  },
   "evil-within:Falling": {
     "NAME": "Event: Falling",
     "FLAVOR": "While in free fall you consider your options...",
     "DESCRIPTIONS": [
       " was removed from the deck."
+    ]
+  },
+  "evil-within:Augmenter": {
+    "NAME": "Event: Augmenter",
+    "FLAVOR": "Hey there, stranger. Interested in advancing science?",
+    "DESCRIPTIONS": [
+      "Boss transformed ",
+      " into ",
+      "Boss gained J.A.X.",
+      "Boss gained the Mutagenic Strength relic."
+    ]
+  },
+  "evil-within:AncientWriting": {
+    "NAME": "Event: Ancient Writing",
+    "FLAVOR": "Suddenly, the message becomes clear...",
+    "DESCRIPTIONS": [
+      "Boss upgraded ",
+      " Strikes/Defends."
+    ]
+  },
+  "evil-within:Bandits": {
+    "NAME": "Event: Red Mask Bandits",
+    "FLAVOR": "Get em Bear!",
+    "DESCRIPTIONS": [
+      "Boss defeated the Bandits, gaining the Red Mask, but starts with less than maximum health."
+    ]
+  },
+  "evil-within:WingStatue": {
+    "NAME": "Event: Wing Statue",
+    "FLAVOR": "Among the stone and boulders, you notice an intricate large blue statue resembling a wing.",
+    "DESCRIPTIONS": [
+      " was removed from the deck."
+    ]
+  },
+  "evil-within:Serpent": {
+    "NAME": "Event: The Ssssserpent",
+    "FLAVOR": "The most fulfilling of lives is that in which you can buy anything! Do you agree?",
+    "DESCRIPTIONS": [
+      "Boss gained a Doubt curse to gain gold, which was used to buy a "
+    ]
+  },
+  "evil-within:Cleric": {
+    "NAME": "Event: Cleric",
+    "FLAVOR": "Hello friend! I am Cleric! Are you interested in my services?!",
+    "DESCRIPTIONS": [
+      " was removed from the deck."
+    ]
+  },
+  "evil-within:Mushroom": {
+    "NAME": "Event: Mushrooms",
+    "FLAVOR": "You enter a corridor full of hypnotizing colored mushrooms.",
+    "DESCRIPTIONS": [
+      "Boss healed to full and gained a Parasite curse.",
+      "Boss gained the Odd Mushroom relic, but starts with less than maximum health."
+    ]
+  },
+  "evil-within:ShiningLight": {
+    "NAME": "Event: Shining Light",
+    "FLAVOR": "You find a shimmering mass of light encompassing the center of the room.",
+    "DESCRIPTIONS": [
+      "Boss upgraded ",
+      " and ",
+      ", but starts with less than maximum health."
+    ]
+  },
+  "evil-within:ScrapOoze": {
+    "NAME": "Event: Scrap Ooze",
+    "FLAVOR": "Before you is a slime-like creature that ate too much scrap for its own good.",
+    "DESCRIPTIONS": [
+      "Boss gain a ",
+      "relic, but starts with less than maximum health."
+    ]
+  },
+  "evil-within:GoldenIdolEvent": {
+    "NAME": "Event: Golden Idol",
+    "FLAVOR": "Atop the altar sits an ornate female statue with arms outstretched. NL She calls out to you, demanding sacrifice.",
+    "DESCRIPTIONS": [
+      "Boss took the Golden Idol, gaining an Injury curse and use the extra gold to buy "
     ]
   },
   "evil-within:FaceTrader": {
@@ -189,22 +286,43 @@
     "NAME": "Event: Purifier",
     "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
     "DESCRIPTIONS": [
-      "Boss removed a card."
+      " was removed from the deck."
     ]
   },
   "evil-within:MatchAndKeep": {
     "NAME": "Event: Match and Keep",
     "FLAVOR": "Twelve cards! Match them to keep them! Five tries, no do-overs. Are you ready? Let's start!",
     "DESCRIPTIONS": [
-      "Boss matched successfully and gained a card.",
-      "Boss matched successfully, but gained a Curse."
+      "Boss matched successfully and gained ",
+      "Boss matched successfully, but gained a Curse - "
+    ]
+  },
+  "evil-within:Transmogrifier": {
+    "NAME": "Event: Transmogrifier",
+    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "DESCRIPTIONS": [
+      " was transformed into a "
+    ]
+  },
+  "evil-within:UpgradeShrine": {
+    "NAME": "Event: Upgrade Shrine",
+    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "DESCRIPTIONS": [
+      "Boss upgraded a "
+    ]
+  },
+  "evil-within:WeMeetAgain": {
+    "NAME": "Event: We Meet Again",
+    "FLAVOR": "It's me, #yRanwid! Have any goods for me today? The usual? A fella like me can't make it alone, you know?",
+    "DESCRIPTIONS": [
+      " was traded to Ranwid in exchange for "
     ]
   },
   "evil-within:GoldenShrine": {
     "NAME": "Event: Golden Shrine",
     "FLAVOR": "Before you lies an elaborate shrine to an ancient spirit.",
     "DESCRIPTIONS": [
-      "Boss gained a Regret curse in exchange for gold, and used this gold to buy a relic."
+      "Boss gained a Regret curse in exchange for gold, and used this gold to buy "
     ]
   },
   "evil-within:GremlinSack": {

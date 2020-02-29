@@ -11,40 +11,37 @@ import evilWithin.EvilWithinMod;
 import java.util.ArrayList;
 
 
-public class CBR_DivineFountain extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("DivineFountain");
+public class CBR_AncientWriting extends AbstractCharbossRelic {
+    public static String ID = EvilWithinMod.makeID("AncientWriting");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
-    private int numCurses;
+    private int count;
 
-    public CBR_DivineFountain() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/divinefountain.png")));
+    public CBR_AncientWriting() {
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/ancientwriting.png")));
     }
 
     @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        ArrayList<AbstractBossCard> cardsToRemove = new ArrayList<>();
-        for (AbstractBossCard c : AbstractCharBoss.boss.chosenArchetype.cards){
-            if (c.type == AbstractCard.CardType.CURSE){
-                cardsToRemove.add(c);
-                this.numCurses++;
-            }
+        for (AbstractBossCard c : list){
+            if (!c.upgraded && (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)));
+            c.upgrade();
+            count++;
         }
-        for (AbstractBossCard c : cardsToRemove){
-            AbstractCharBoss.boss.chosenArchetype.cards.remove(c);
-        }
+
 
         this.description = getUpdatedDescription();
         refreshDescription();
+
     }
 
     @Override
     public String getUpdatedDescription() {
-        return this.numCurses + this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + this.count + this.DESCRIPTIONS[1];
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new CBR_DivineFountain();
+        return new CBR_AncientWriting();
     }
 }
