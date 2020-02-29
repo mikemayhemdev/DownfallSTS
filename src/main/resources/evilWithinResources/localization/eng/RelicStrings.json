@@ -4,7 +4,7 @@
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
       "Upon pickup, gain ",
-      " Maximum HP. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
+      " Maximum HP. Gain it again at the start of each Act. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
     ]
   },
   "evil-within:CoffeeDripper": {
@@ -70,6 +70,11 @@
       " additional relics, but starts with less than maximum health due to not Resting."
     ]
   },
+  "evil-within:CBRSerpentHead": {
+    "DESCRIPTIONS": [
+      " NL Boss used this gold to remove 2 cards from their deck."
+    ]
+  },
   "evil-within:CursedKey": {
     "DESCRIPTIONS": [
       " NL Boss gained ",
@@ -104,6 +109,11 @@
       " NL Cannot trigger on the Boss's turn."
     ]
   },
+  "evil-within:CBRFaceOfCleric": {
+    "DESCRIPTIONS": [
+      " Max HP was gained via this relic."
+    ]
+  },
   "evil-within:Omamori": {
     "DESCRIPTIONS": [
       " NL Prevented the Boss from gaining a "
@@ -131,6 +141,20 @@
       " was removed from the deck."
     ]
   },
+  "evil-within:DesignerInSpire": {
+    "NAME": "Event: Designer-In-Spire",
+    "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
+    "DESCRIPTIONS": [
+      " was removed from the deck, and a random card was Upgraded."
+    ]
+  },
+  "evil-within:Duplicator": {
+    "NAME": "Event: Duplicator",
+    "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
+    "DESCRIPTIONS": [
+      " was duplicated."
+    ]
+  },
   "evil-within:BigFish": {
     "NAME": "Event: Big Fish",
     "FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
@@ -145,6 +169,42 @@
     "FLAVOR": "While in free fall you consider your options...",
     "DESCRIPTIONS": [
       " was removed from the deck."
+    ]
+  },
+  "evil-within:FaceTrader": {
+    "NAME": "Event: Face Trader",
+    "FLAVOR": "Face. Let me touch? Maybe trade?",
+    "DESCRIPTIONS": [
+      "Boss gained a random face relic."
+    ]
+  },
+  "evil-within:OminousForge": {
+    "NAME": "Event: Ominous Forge",
+    "FLAVOR": "CLANG! CLAAANG! CLANG!",
+    "DESCRIPTIONS": [
+      "Boss gained Warped Tongs and a Pain curse."
+    ]
+  },
+  "evil-within:Purifier": {
+    "NAME": "Event: Purifier",
+    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "DESCRIPTIONS": [
+      "Boss removed a card."
+    ]
+  },
+  "evil-within:MatchAndKeep": {
+    "NAME": "Event: Match and Keep",
+    "FLAVOR": "Twelve cards! Match them to keep them! Five tries, no do-overs. Are you ready? Let's start!",
+    "DESCRIPTIONS": [
+      "Boss matched successfully and gained a card.",
+      "Boss matched successfully, but gained a Curse."
+    ]
+  },
+  "evil-within:GoldenShrine": {
+    "NAME": "Event: Golden Shrine",
+    "FLAVOR": "Before you lies an elaborate shrine to an ancient spirit.",
+    "DESCRIPTIONS": [
+      "Boss gained a Regret curse in exchange for gold, and used this gold to buy a relic."
     ]
   },
   "evil-within:GremlinSack": {

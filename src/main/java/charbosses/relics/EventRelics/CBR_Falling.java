@@ -43,15 +43,9 @@ public class CBR_Falling extends AbstractCharbossRelic {
         AbstractBossDeckArchetype.logger.info("Falling event removed 1 " + cardToRemove.name + ".");
         cardName = cardToRemove.name;
         list.remove(cardToRemove);
-        this.updateDescription(AbstractCharBoss.boss.chosenClass);
-    }
 
-    @Override
-    public void updateDescription(final AbstractPlayer.PlayerClass c) {
         this.description = getUpdatedDescription();
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
+        refreshDescription();
     }
 
     @Override

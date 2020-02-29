@@ -223,6 +223,7 @@ public abstract class AbstractBossDeckArchetype {
         this.curseCards.add(new EnRegret());
         this.curseCards.add(new EnWrithe());
         this.curseCards.add(new EnShame());
+        this.curseCards.add(new EnPain());
     }
 
     public void initialize() {

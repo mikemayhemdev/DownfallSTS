@@ -22,15 +22,15 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     public String relicName = "";
-    private int descInt = 0;
+    private int HP = 0;
 
     public CBR_NeowsBlessing() {
         super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/blessing.png")));
     }
 
     public void onEquip() {
-        this.descInt = MathUtils.floor(owner.maxHealth * ((AbstractDungeon.actNum) * 0.75F));
-        owner.increaseMaxHp(MathUtils.floor(owner.maxHealth * ((AbstractDungeon.actNum) * 0.75F)), false);
+        this.HP = MathUtils.floor(owner.maxHealth + ((AbstractDungeon.actNum) * 80));
+        owner.increaseMaxHp(MathUtils.floor(this.HP), false);
         updateDescription(null);
     }
 
@@ -46,9 +46,9 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     @Override
     public String getUpdatedDescription() {
         if (this.owner != null) {
-            return this.DESCRIPTIONS[0] + this.descInt + this.DESCRIPTIONS[1] + this.owner.energyString + " .";
+            return this.DESCRIPTIONS[0] + this.HP + this.DESCRIPTIONS[1] + this.owner.energyString + " .";
         }
-        return this.DESCRIPTIONS[0] + this.descInt + this.DESCRIPTIONS[1] + "[E] .";
+        return this.DESCRIPTIONS[0] + this.HP + this.DESCRIPTIONS[1] + "[E] .";
     }
 
 

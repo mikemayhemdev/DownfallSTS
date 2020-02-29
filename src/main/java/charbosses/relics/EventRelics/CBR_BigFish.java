@@ -30,19 +30,9 @@ public class CBR_BigFish extends AbstractCharbossRelic {
 
     @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        if (AbstractDungeon.cardRng.randomBoolean()) {
-            donut(list);
-        } else {
-            box(list);
-        }
+        box(list);
     }
 
-    public void donut(ArrayList<AbstractBossCard> list) {
-        AbstractBossDeckArchetype.logger.info("Big Fish event added Max HP.");
-        AbstractCharBoss.boss.increaseMaxHp(5, false);
-        this.descInt = 0;
-        this.updateDescription(AbstractCharBoss.boss.chosenClass);
-    }
 
     public void box(ArrayList<AbstractBossCard> list) {
         this.relicName = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(AbstractDungeon.actNum, AbstractCharBoss.boss, "Big Fish", list);

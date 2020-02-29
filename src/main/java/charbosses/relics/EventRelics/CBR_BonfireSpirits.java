@@ -60,6 +60,20 @@ public class CBR_BonfireSpirits extends AbstractCharbossRelic {
             }
         }
 
+        if (cardsToRemove.size() == 0) {
+            for (AbstractBossCard c : list) {
+                if (c.rarity == AbstractCard.CardRarity.UNCOMMON || c.rarity == AbstractCard.CardRarity.COMMON) {
+                    AbstractBossDeckArchetype.logger.info("Bonfire Spirits event removed 1 " + c.name + ".");
+                    cardsToRemove.add(c);
+                    cardName = c.name;
+                    AbstractCharBoss.boss.increaseMaxHp(10, false);
+                    this.descInt = 1;
+                    this.updateDescription(AbstractCharBoss.boss.chosenClass);
+                    break;
+                }
+            }
+        }
+
         //If no Starters were found, choose a Rare instead.
         if (cardsToRemove.size() == 0) {
             for (AbstractBossCard c : list) {
