@@ -114,7 +114,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
                 this.onEquip();
                 this.relicTip();
             }
-            this.modifyCardsOnCollect(this.owner.chosenArchetype.cards, this.owner.chosenArchetype.safeIndex);
+            //this.modifyCardsOnCollect(this.owner.chosenArchetype.cards, this.owner.chosenArchetype.safeIndex);
             this.getUpdatedDescription();
             //AbstractDungeon.topPanel.adjustRelicHbs();
         }
@@ -146,7 +146,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
             this.owner.relics.add(this);
             this.hb.move(this.currentX, this.currentY);
             this.onEquip();
-            this.modifyCardsOnCollect(this.owner.chosenArchetype.cards, this.owner.chosenArchetype.safeIndex);
+            //this.modifyCardsOnCollect(this.owner.chosenArchetype.cards, this.owner.chosenArchetype.safeIndex);
             this.relicTip();
         }
         //AbstractDungeon.topPanel.adjustRelicHbs();

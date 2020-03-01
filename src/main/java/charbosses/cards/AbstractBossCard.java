@@ -293,7 +293,9 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (m instanceof AbstractCharBoss) {
+            /*
             AbstractCharBoss cB = (AbstractCharBoss) m;
+
             if ((this.type == CardType.STATUS) && (this.costForTurn < -1) &&
                     (cB.hasRelic("Medical Kit"))) {
                 return true;
@@ -303,6 +305,9 @@ public abstract class AbstractBossCard extends AbstractCard {
                     (cB.hasRelic("Blue Candle"))) {
                 return true;
             }
+            */
+            if (this.type == CardType.CURSE) return false;
+            if (this.type == CardType.STATUS) return false;
 
             if ((cardPlayable(m)) && (hasEnoughEnergy())) {
                 return true;

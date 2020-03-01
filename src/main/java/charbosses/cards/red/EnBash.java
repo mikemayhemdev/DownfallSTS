@@ -25,7 +25,7 @@ public class EnBash extends AbstractBossCard {
 
     public EnBash() {
         super(ID, EnBash.cardStrings.NAME, "red/attack/bash", 2, EnBash.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
-        this.baseDamage = 1;
+        this.baseDamage = 8;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(EvilWithinMod.CHARBOSS_SETUP);

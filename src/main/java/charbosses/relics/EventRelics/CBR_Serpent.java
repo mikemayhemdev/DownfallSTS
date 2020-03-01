@@ -36,7 +36,7 @@ public class CBR_Serpent extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.addedName + ".";
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

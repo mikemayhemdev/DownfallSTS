@@ -126,7 +126,7 @@ public abstract class AbstractBossDeckArchetype {
         //No Dead Adventurer, too generic
         this.globalEventPoolAct1.add(new CBR_GoldenIdolEvent());
         this.globalEventPoolAct1.add(new CBR_Mushroom());
-        //TODO - Living wall
+        this.globalEventPoolAct1.add(new CBR_LivingWall());
         this.globalEventPoolAct1.add(new CBR_ScrapOoze());
         this.globalEventPoolAct1.add(new CBR_ShiningLight());
         this.globalEventPoolAct1.add(new CBR_Cleric());
@@ -138,7 +138,7 @@ public abstract class AbstractBossDeckArchetype {
         this.globalEventPoolAct2.add(new CBR_AncientWriting());
         this.globalEventPoolAct2.add(new CBR_Augmenter());
         this.globalEventPoolAct2.add(new CBR_Bandits());
-        //TODO - Council of Ghosts
+        //No Council of Ghosts - Apparition is too strong in context of a boss
         //No Cursed Book - Nilry's Codex is probably bad for the boss, Necronomicon too powerful, so it'd have to be Enchridon every time
         //No Forgotten Altar, Bloody Altar doesn't do much
         //No Knowing Skull until a suite of colorless cards is made (maybe never)
@@ -162,6 +162,16 @@ public abstract class AbstractBossDeckArchetype {
         //Tomb of Lord Red Mask
         //Winding Halls
         this.globalEventPoolAct3.add(new CBR_DivineFountain());  //Intentionally made an Act 3 only event
+    }
+
+    public void addToDeck(AbstractBossCard c, boolean upgraded){
+        if (upgraded) c.upgrade();
+        AbstractCharBoss.boss.masterDeck.addToTop(c.makeCopy());
+    }
+
+    public void addRelic(AbstractCharbossRelic r){
+        r.instantObtain(AbstractCharBoss.boss);
+
     }
 
     private void initializeRelics() {

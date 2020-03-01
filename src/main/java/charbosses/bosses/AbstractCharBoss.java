@@ -20,6 +20,7 @@ import charbosses.relics.*;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -53,7 +54,11 @@ import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.function.Predicate;
+
+import static com.megacrit.cardcrawl.cards.CardGroup.DRAW_PILE_X;
+import static com.megacrit.cardcrawl.cards.CardGroup.DRAW_PILE_Y;
 
 public abstract class AbstractCharBoss extends AbstractMonster {
 
@@ -261,9 +266,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             } else {
                 boolean gotem = false;
                 for (int i = 0; i < cardsByValue.size(); i++) {
-                    int maxRange = 4;
+                    int maxRange = 0;
                     if (boss.hasRelic("Runic Dome")) maxRange += 4;
-                    if (cardsByValue.get(i).getPriority(this.hand.group) < c.getPriority(this.hand.group) + AbstractDungeon.aiRng.random(0, maxRange) - 2) {
+                    if (cardsByValue.get(i).getPriority(this.hand.group) < c.getPriority(this.hand.group) + AbstractDungeon.aiRng.random(0, maxRange)) {
                         cardsByValue.add(i, c);
                         gotem = true;
                         break;
@@ -314,15 +319,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 budget += c.energyGeneratedIfPlayed;
                 if (budget < 0) budget = 0;
                 c.createIntent();
-            } else {
+            } else c.bossDarken();
+
+                /*
                 if (c.type == AbstractCard.CardType.CURSE && boss.hasRelic("Blue Candle")) {
                     c.createIntent();
                 } else if (c.type == AbstractCard.CardType.STATUS && boss.hasRelic("Medical Kit")) {
                     c.createIntent();
                 } else {
-                    c.bossDarken();
-                }
-            }
+                */
         }
 
         this.hand.group = sortedCards;
@@ -564,12 +569,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (int i = 0; i < numCards; ++i) {
             if (!this.drawPile.isEmpty()) {
 
-                final AbstractCard c = chooseCardToDraw(this.drawPile.group);
+                //final AbstractCard c = chooseCardToDraw(this.drawPile.group);
+                final AbstractCard c = this.drawPile.getTopCard();
                 AbstractBossCard cB = (AbstractBossCard) c;
                 cB.bossLighten();
 
-                c.current_x = CardGroup.DRAW_PILE_X;
-                c.current_y = CardGroup.DRAW_PILE_Y;
+                c.current_x = DRAW_PILE_X;
+                c.current_y = DRAW_PILE_Y;
                 c.setAngle(0.0f, true);
                 c.lighten(false);
                 c.drawScale = 0.12f;
@@ -862,7 +868,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         AbstractPlayer.poisonKillCount = 0;
         this.gameHandSize = this.masterHandSize;
         this.cardInUse = null;
-        this.drawPile.initializeDeck(this.masterDeck);
+
+        // this.drawPile.initializeDeck(this.masterDeck);
+
+        this.drawPile.clear();
+        CardGroup copy = new CardGroup(this.masterDeck, CardGroup.CardGroupType.DRAW_PILE);
+        for (AbstractCard c : copy.group){
+            this.drawPile.addToBottom(c);
+        }
+
         AbstractDungeon.overlayMenu.endTurnButton.enabled = false;
         this.hand.clear();
         this.discardPile.clear();

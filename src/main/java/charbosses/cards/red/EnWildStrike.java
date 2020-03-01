@@ -24,7 +24,7 @@ public class EnWildStrike extends AbstractBossCard {
 
     public EnWildStrike() {
         super(ID, EnWildStrike.cardStrings.NAME, "red/attack/wild_strike", 1, EnWildStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 1;
+        this.baseDamage = 12;
         this.tags.add(CardTags.STRIKE);
         this.cardsToPreview = new Wound();
         this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);

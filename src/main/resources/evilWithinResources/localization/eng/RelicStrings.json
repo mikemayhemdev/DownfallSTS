@@ -3,7 +3,7 @@
     "NAME": "Neow's Blsesing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Upon pickup, gain ",
+      "Replaces starter relic. Upon pickup, gain ",
       " Maximum HP. Gain it again at the start of each Act. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
     ]
   },
@@ -172,6 +172,16 @@
       " were added."
     ]
   },
+  "evil-within:LivingWall": {
+    "NAME": "Event: Living Wall",
+    "FLAVOR": "Forget what you know, and I'll let you go.",
+    "DESCRIPTIONS": [
+      "Boss removed a ",
+      "Boss upgraded a ",
+      "Boss transformed a ",
+      " into a "
+    ]
+  },
   "evil-within:WheelOfChange": {
     "NAME": "Event: Wheel of Change",
     "FLAVOR": "It's time to spin the wheel! Are you READY? Of course you are!",
@@ -226,7 +236,7 @@
     "NAME": "Event: The Ssssserpent",
     "FLAVOR": "The most fulfilling of lives is that in which you can buy anything! Do you agree?",
     "DESCRIPTIONS": [
-      "Boss gained a Doubt curse to gain gold, which was used to buy a "
+      "Boss gained a Doubt curse to gain gold, which was used to buy a relic."
     ]
   },
   "evil-within:Cleric": {
