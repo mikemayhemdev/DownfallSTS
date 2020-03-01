@@ -25,8 +25,8 @@ public class HauntingEcho extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         if (GhostflameHelper.activeGhostFlame.charged) {
-            atb(new ChargeCurrentFlameAction());
             atb(new ExtinguishCurrentFlameAction());
+            atb(new ChargeCurrentFlameAction());
         }
     }
 

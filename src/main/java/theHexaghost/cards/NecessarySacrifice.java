@@ -11,7 +11,7 @@ public class NecessarySacrifice extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public NecessarySacrifice() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
