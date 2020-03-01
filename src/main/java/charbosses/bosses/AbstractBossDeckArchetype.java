@@ -103,35 +103,65 @@ public abstract class AbstractBossDeckArchetype {
 
     private void initializeGlobalEventRelics() {
         //Global Events
+
+        //No Note for Yourself, doesn't make sense ehre
         this.globalEventPool.add(new CBR_BonfireSpirits());
         this.globalEventPool.add(new CBR_DesignerInSpire());
         this.globalEventPool.add(new CBR_DivineFountain());
         this.globalEventPool.add(new CBR_Duplicator());
         this.globalEventPool.add(new CBR_FaceTrader());
         this.globalEventPool.add(new CBR_GoldenShrine());
+        //No Lab, bosses don't use potions
         this.globalEventPool.add(new CBR_MatchAndKeep());
-        this.globalEventPool.add(new CBR_Purifier());
-        this.globalEventPool.add(new CBR_Transmogrifier());
         this.globalEventPool.add(new CBR_OminousForge());
+        this.globalEventPool.add(new CBR_Purifier());
+        //No Woman in Blue, bosses don't use potions
+        this.globalEventPool.add(new CBR_Transmogrifier());
         this.globalEventPool.add(new CBR_UpgradeShrine());
         this.globalEventPool.add(new CBR_WeMeetAgain());
         this.globalEventPool.add(new CBR_WheelOfChange());
 
         //Act 1 Events
         this.globalEventPoolAct1.add(new CBR_BigFish());
+        //No Dead Adventurer, too generic
         this.globalEventPoolAct1.add(new CBR_GoldenIdolEvent());
         this.globalEventPoolAct1.add(new CBR_Mushroom());
+        //TODO - Living wall
         this.globalEventPoolAct1.add(new CBR_ScrapOoze());
         this.globalEventPoolAct1.add(new CBR_ShiningLight());
         this.globalEventPoolAct1.add(new CBR_Cleric());
         this.globalEventPoolAct1.add(new CBR_Serpent());
+        //No World of Goop, just refers to gold
         this.globalEventPoolAct1.add(new CBR_WingStatue());
 
         //Act 2 Events
+        this.globalEventPoolAct2.add(new CBR_AncientWriting());
+        this.globalEventPoolAct2.add(new CBR_Augmenter());
+        this.globalEventPoolAct2.add(new CBR_Bandits());
+        //TODO - Council of Ghosts
+        //No Cursed Book - Nilry's Codex is probably bad for the boss, Necronomicon too powerful, so it'd have to be Enchridon every time
+        //No Forgotten Altar, Bloody Altar doesn't do much
+        //No Knowing Skull until a suite of colorless cards is made (maybe never)
+        //TODO - Nloth
+        this.globalEventPoolAct2.add(new CBR_OldBeggar());
+        this.globalEventPoolAct2.add(new CBR_PleadingVagrant());
+        this.globalEventPoolAct2.add(new CBR_Colosseum());
+        //No Joust - only refers to gold
+        this.globalEventPoolAct2.add(new CBR_Library());
+        this.globalEventPoolAct2.add(new CBR_Mausoleum());
+        this.globalEventPoolAct2.add(new CBR_Nest());
         this.globalEventPoolAct2.add(new CBR_Vampires());
 
         //Act 3 Events
         this.globalEventPoolAct3.add(new CBR_Falling());
+        //Mind Bloom
+        //No Secret Portal, doesn't make sense for a boss
+        //No Sensory Stone until colorless cards (maybe never)
+        //Sphere
+        //Moai Head
+        //Tomb of Lord Red Mask
+        //Winding Halls
+        this.globalEventPoolAct3.add(new CBR_DivineFountain());  //Intentionally made an Act 3 only event
     }
 
     private void initializeRelics() {

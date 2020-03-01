@@ -243,6 +243,27 @@
       " was removed from the deck."
     ]
   },
+  "evil-within:Library": {
+    "NAME": "Event: Library",
+    "FLAVOR": "You come across an ornate building which appears abandoned.",
+    "DESCRIPTIONS": [
+      "Boss chose to add a card, and chose "
+    ]
+  },
+  "evil-within:Mausoleum": {
+    "NAME": "Event: Mausoleum",
+    "FLAVOR": "You cannot make out the writing on the coffin, however, you do notice black fog seeping out from the sides.",
+    "DESCRIPTIONS": [
+      "Boss gained a Writhe curse, and a "
+    ]
+  },
+  "evil-within:Nest": {
+    "NAME": "Event: Nest",
+    "FLAVOR": "CAW CAW CAAAAAWWW!",
+    "DESCRIPTIONS": [
+      "Boss gained a Ritual Dagger."
+    ]
+  },
   "evil-within:Colosseum": {
     "NAME": "Event: Colosseum",
     "FLAVOR": "WE NOW@ BEGIN THE COMBAT!!!!",
