@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class CharBossIronclad extends AbstractCharBoss {
 
     public CharBossIronclad() {
-        super("Ironclad", "EvilWithin:Ironclad", 100, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
+        super("Ironclad", "EvilWithin:Ironclad", 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
         this.energyOrb = new EnergyOrbRed();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/ironclad/idle/skeleton.atlas", "images/characters/ironclad/idle/skeleton.json", 1.0f);
@@ -26,14 +26,23 @@ public class CharBossIronclad extends AbstractCharBoss {
 
     @Override
     public void generateDeck() {
-        ArrayList<AbstractBossDeckArchetype> archetypes = new ArrayList<AbstractBossDeckArchetype>();
-        archetypes.add(new ArchetypeAct1PerfectedStrike());
+        //ArrayList<AbstractBossDeckArchetype> archetypes = new ArrayList<AbstractBossDeckArchetype>();
+        AbstractBossDeckArchetype archetype;
+        switch (AbstractDungeon.actNum){
+            case 1: archetype = new ArchetypeAct1PerfectedStrike(); break;
+            case 2: archetype = new ArchetypeAct2Strength(); break;
+            case 3: archetype = new ArchetypeAct3Block(); break;
+            default: archetype = new ArchetypeAct3Block(); break;
+        }
+
+        archetype.initialize();
+
         //archetypes.add(new ArchetypeIcStrike());
         //archetypes.add(new ArchetypeIcStrength());
         //archetypes.add(new ArchetypeIcRampage());
         //archetypes.add(new ArchetypeIcBlock());
-        this.chosenArchetype = archetypes.get(AbstractDungeon.monsterRng.random(archetypes.size() - 1));
-        this.chosenArchetype.initialize();
+        //this.chosenArchetype = archetypes.get(AbstractDungeon.monsterRng.random(archetypes.size() - 1));
+
         //this.chosenArchetype.simulateBuild(AbstractCharBoss.boss);
     }
 

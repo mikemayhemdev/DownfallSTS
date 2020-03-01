@@ -1,73 +1,87 @@
 package charbosses.bosses.Ironclad;
 
+import charbosses.cards.colorless.EnJAX;
 import charbosses.cards.curses.EnDoubt;
+import charbosses.cards.curses.EnRegret;
 import charbosses.cards.red.*;
-import charbosses.relics.CBR_NeowsBlessing;
-import charbosses.relics.CBR_Orichalcum;
-import charbosses.relics.CBR_Vajra;
-import charbosses.relics.CBR_WarPaint;
+import charbosses.relics.*;
+import charbosses.relics.EventRelics.CBR_Augmenter;
+import charbosses.relics.EventRelics.CBR_BigFish;
 import charbosses.relics.EventRelics.CBR_Serpent;
 
 public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
 
     public ArchetypeAct2Strength() {
-        super("IC_STRIKE_ARCHETYPE", "Strike");
+        super("IC_STRENGTH_ARCHETYPE", "Strength");
     }
 
     public void initialize() {
-        //Tuning Recommendation per Act: 1 Card Removal, 2 Upgrades, ~6-8 cards added to deck
-        //Make the total divisible by 3 - Shuffle should not occur on a partial hand
-        //Should be given 2 relics and an Event relic (simulate what the Event did)
+        //Tuning Recommendation per Act (CARDS): 1 Card Removal, 2 Upgrades, ~6-8 cards added to deck for act 1 plus ~3 per act beyond it
+        //Tuning Recommendation per Act (RELICS): 2 relics and an Event relic (simulate what the Event did)
+        //Tuning Recommendation for Act 2-3: At least 1 Rare and 1 Boss Relic in addition to above 2
+        //Make the total cards always divisible by 3 - Shuffle should not occur on a partial hand
 
         //STARTER DECK - 5 Strikes, 4 Defends, 1 Bash
 
-        //1 Strike 1 Defend Removed
+        //2 Strike 2 Defend Removed
 
-        //6 Cards Added:
-        //Metallicize
-        //Perfected Strike
+        //11 Cards Added, 4 Upgrades:
+        //Demon Form
+        //Seeing Red
+        //Inflame+
+        //Heavy Blade
+        //Armaments+
         //Twin Strike
-        //Ghostly Armor
-        //Inflame
-        //Wild Strike
-
-        //Metallicize and Ghostly Armor upgraded
+        //Iron Wave+
+        //Iron Wave
+        //Flame Barrier
+        //Clothesline+
 
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
 
-        addRelic(new CBR_Vajra());
-        addRelic(new CBR_WarPaint());   //Upgrade 2 Defends
-        addRelic(new CBR_Orichalcum());
-        addRelic(new CBR_Serpent());   //Money used to buy Orichalcum
+        addRelic(new CBR_Girya(2));
+        addRelic(new CBR_Ginger());
+        addRelic(new CBR_BigFish());
+        addRelic(new CBR_CaptainsWheel());  //Extra relic from Big Fish
+        addRelic(new CBR_RedSkull());
+        addRelic(new CBR_Torii());
+        addRelic(new CBR_Augmenter(1));
 
         /////   CARDS   /////
 
+
+
         //Turn 1
-        addToDeck(new EnBash(), false);
-        addToDeck(new EnMetallicize(), false);
-        addToDeck(new EnDoubt(), false);
+        addToDeck(new EnInflame(), true);
+        addToDeck(new EnArmaments(), true);
+        addToDeck(new EnDefendRed(), false);
 
         //Turn 2
-        addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnDefendRed(), false);
-        addToDeck(new EnStrikeRed(), false);
+        addToDeck(new EnTwinStrike(), false);
+        addToDeck(new EnIronWave(), false);
+        addToDeck(new EnRegret(), false);
 
         //Turn 3
-        addToDeck(new EnPerfectedStrike(), false);
-        addToDeck(new EnDefendRed(), true);
+        addToDeck(new EnFlameBarrier(), false);
+        addToDeck(new EnJAX(), false);
         addToDeck(new EnStrikeRed(), false);
 
         //Turn 4
-        addToDeck(new EnTwinStrike(), false);
-        addToDeck(new EnGhostlyArmor(), true);
-        addToDeck(new EnStrikeRed(), false);
+        addToDeck(new EnHeavyBlade(), false);
+        addToDeck(new EnDefendRed(), false);
+        addToDeck(new EnIronWave(), true);
 
         //Turn 5
+        addToDeck(new EnBash(), false);
         addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnInflame(), false);
-        addToDeck(new EnWildStrike(), true);
+        addToDeck(new EnStrikeRed(), false);
+
+        //Turn 6
+        addToDeck(new EnDemonForm(), false);
+        addToDeck(new EnSeeingRed(), false);
+        addToDeck(new EnClothesline(), true);
 
 
 

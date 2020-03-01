@@ -1,5 +1,6 @@
-package charbosses.bosses.Ironclad;
+package charbosses.bosses.Ironclad.old;
 
+import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.red.*;
 import charbosses.relics.CBR_Girya;
 import charbosses.relics.CBR_RedSkull;
@@ -27,7 +28,7 @@ public class ArchetypeIcStrength extends ArchetypeBaseIronclad {
         //Define Signature relics - These are guaranteed to be chosen based on the Act the boss is fought in
         addRelicToList(new CBR_RedSkull(), CardBenefitType.SIGNATUREACT1);
         addRelicToList(new CBR_Vajra(), CardBenefitType.SIGNATUREACT2);
-        addRelicToList(new CBR_Girya(), CardBenefitType.SIGNATUREACT3);
+        addRelicToList(new CBR_Girya(3), CardBenefitType.SIGNATUREACT3);
 
         //Blacklist Cards & Relics out of the global or class-wide pools
     }

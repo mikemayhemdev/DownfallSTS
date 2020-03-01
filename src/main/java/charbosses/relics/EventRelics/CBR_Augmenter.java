@@ -24,10 +24,13 @@ public class CBR_Augmenter extends AbstractCharbossRelic {
     private String addedName;
     private String removedName;
     private String addedName2;
+    private int descInt = 0;
     private String removedName2;
 
-    public CBR_Augmenter() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/wheelofchange.png")));
+    public CBR_Augmenter(int choiceIndex) {
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/augmenter.png")));
+        this.descInt = choiceIndex;
+
     }
 
     @Override
@@ -55,11 +58,11 @@ public class CBR_Augmenter extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[descInt];
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new CBR_Augmenter();
+        return new CBR_Augmenter(0);
     }
 }

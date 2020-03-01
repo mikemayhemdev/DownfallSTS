@@ -1,5 +1,6 @@
-package charbosses.bosses.Ironclad;
+package charbosses.bosses.Ironclad.old;
 
+import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.red.*;
 import charbosses.relics.CBR_CaptainsWheel;
 import charbosses.relics.CBR_SelfFormingClay;

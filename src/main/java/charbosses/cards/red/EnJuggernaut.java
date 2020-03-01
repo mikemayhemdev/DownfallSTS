@@ -1,6 +1,7 @@
 package charbosses.cards.red;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyJuggernautPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +30,7 @@ public class EnJuggernaut extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new JuggernautPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyJuggernautPower(m, this.magicNumber), this.magicNumber));
     }
 
     @Override

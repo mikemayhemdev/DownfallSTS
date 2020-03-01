@@ -18,8 +18,9 @@ import java.util.ArrayList;
 public class CBR_Girya extends AbstractCharbossRelic {
     public static final String ID = "Girya";
 
-    public CBR_Girya() {
+    public CBR_Girya(int counter) {
         super(new Girya());
+        this.counter = counter;
     }
 
     @Override
@@ -38,12 +39,6 @@ public class CBR_Girya extends AbstractCharbossRelic {
     }
 
     @Override
-    public void onEquip() {
-        this.owner.damage(new DamageInfo(this.owner, MathUtils.floor(this.owner.maxHealth * 0.15F), DamageInfo.DamageType.HP_LOSS));
-
-    }
-
-    @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
         for (int i = actIndex; i < 3; i++) {
             this.owner.chosenArchetype.cardUpgradesPerAct[i] -= 1;
@@ -53,6 +48,6 @@ public class CBR_Girya extends AbstractCharbossRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new CBR_Girya();
+        return new CBR_Girya(0);
     }
 }

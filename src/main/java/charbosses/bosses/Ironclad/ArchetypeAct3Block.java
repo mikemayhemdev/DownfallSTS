@@ -1,73 +1,101 @@
 package charbosses.bosses.Ironclad;
 
 import charbosses.cards.curses.EnDoubt;
+import charbosses.cards.curses.EnWrithe;
 import charbosses.cards.red.*;
-import charbosses.relics.CBR_NeowsBlessing;
-import charbosses.relics.CBR_Orichalcum;
-import charbosses.relics.CBR_Vajra;
-import charbosses.relics.CBR_WarPaint;
-import charbosses.relics.EventRelics.CBR_Serpent;
+import charbosses.relics.*;
+import charbosses.relics.EventRelics.*;
 
 public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
     public ArchetypeAct3Block() {
-        super("IC_STRIKE_ARCHETYPE", "Strike");
+        super("IC_BLOCK_ARCHETYPE", "Block");
     }
 
     public void initialize() {
-        //Tuning Recommendation per Act: 1 Card Removal, 2 Upgrades, ~6-8 cards added to deck
-        //Make the total divisible by 3 - Shuffle should not occur on a partial hand
-        //Should be given 2 relics and an Event relic (simulate what the Event did)
+        //Tuning Recommendation per Act (CARDS): 1 Card Removal, 2 Upgrades, ~6-8 cards added to deck for act 1 plus ~3 per act beyond it
+        //Tuning Recommendation per Act (RELICS): 2 relics and an Event relic (simulate what the Event did)
+        //Tuning Recommendation for Act 2-3: At least 1 Rare and 1 Boss Relic in addition to above 2
+        //Make the total cards always divisible by 3 - Shuffle should not occur on a partial hand
 
         //STARTER DECK - 5 Strikes, 4 Defends, 1 Bash
 
-        //1 Strike 1 Defend Removed
+        //4 Strike Removed
 
-        //6 Cards Added:
-        //Metallicize
-        //Perfected Strike
-        //Twin Strike
+        //15 Cards Added, 5 Upgrades:
+        //Barricade
+        //Body Slam+
+        //Body Slam+
+        //Impervious
+        //Iron Wave+
+        //Iron Wave
+        //Ghostly Armor+
         //Ghostly Armor
-        //Inflame
-        //Wild Strike
+        //Metallicize
+        //Metallicize+
+        //Armaments
+        //Juggernaut
+        //FlameBarrier
+        //PowerThrough
+        //Entrench
 
-        //Metallicize and Ghostly Armor upgraded
+
+
 
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
 
-        addRelic(new CBR_Vajra());
-        addRelic(new CBR_WarPaint());   //Upgrade 2 Defends
-        addRelic(new CBR_Orichalcum());
-        addRelic(new CBR_Serpent());   //Money used to buy Orichalcum
+
+        addRelic(new CBR_ThreadAndNeedle());
+        addRelic(new CBR_HornCleat());
+        addRelic(new CBR_MatchAndKeep());   //excuse for having both jug and barricade
+        addRelic(new CBR_IncenseBurner());
+        addRelic(new CBR_AncientWriting());   //upgraded all defends
+        addRelic(new CBR_CursedKey());  //1 curse remaining in the deck
+        addRelic(new CBR_Calipers());
+        addRelic(new CBR_OrnamentalFan());
+        addRelic(new CBR_TombOfRedMask());  // gain mask
+        addRelic(new CBR_RedMask());  // gremlin mask
+
 
         /////   CARDS   /////
 
+
         //Turn 1
-        addToDeck(new EnBash(), false);
         addToDeck(new EnMetallicize(), false);
-        addToDeck(new EnDoubt(), false);
+        addToDeck(new EnIronWave(), true);
+        addToDeck(new EnBodySlam(), true);
 
         //Turn 2
-        addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnDefendRed(), false);
-        addToDeck(new EnStrikeRed(), false);
+        addToDeck(new EnIronWave(), false);
+        addToDeck(new EnArmaments(), false);
+        addToDeck(new EnWrithe(), true);
 
         //Turn 3
-        addToDeck(new EnPerfectedStrike(), false);
         addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnStrikeRed(), false);
+        addToDeck(new EnPowerThrough(), false);
+        addToDeck(new EnEntrench(), false);
 
         //Turn 4
-        addToDeck(new EnTwinStrike(), false);
-        addToDeck(new EnGhostlyArmor(), true);
-        addToDeck(new EnStrikeRed(), false);
+        addToDeck(new EnImpervious(), false);
+        addToDeck(new EnBodySlam(), true);
+        addToDeck(new EnMetallicize(), true);
 
         //Turn 5
-        addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnInflame(), false);
-        addToDeck(new EnWildStrike(), true);
+        addToDeck(new EnDefendRed(), true);
+        addToDeck(new EnFlameBarrier(), false);
+        addToDeck(new EnBash(), false);
+
+        //turn 6
+        addToDeck(new EnGhostlyArmor(), true);
+        addToDeck(new EnJuggernaut(), false);
+        addToDeck(new EnDefendRed(), true);
+
+        //Turn 7
+        addToDeck(new EnBarricade(), false);
+        addToDeck(new EnGhostlyArmor(), false);
+        addToDeck(new EnDefendRed(), true);
 
 
 

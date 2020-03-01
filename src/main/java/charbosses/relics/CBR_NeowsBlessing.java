@@ -29,7 +29,7 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     }
 
     public void onEquip() {
-        this.HP = MathUtils.floor(AbstractDungeon.actNum * 80);
+        this.HP = MathUtils.floor(100 + ((AbstractDungeon.actNum - 1 ) * 60));
         owner.increaseMaxHp(MathUtils.floor(this.HP), false);
         updateDescription(null);
     }
@@ -46,9 +46,9 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     @Override
     public String getUpdatedDescription() {
         if (this.owner != null) {
-            return this.DESCRIPTIONS[0] + this.HP + this.DESCRIPTIONS[1] + this.owner.energyString + " .";
+            return this.DESCRIPTIONS[0] + this.owner.energyString + " .";
         }
-        return this.DESCRIPTIONS[0] + this.HP + this.DESCRIPTIONS[1] + "[E] .";
+        return this.DESCRIPTIONS[0] + "[E] .";
     }
 
 

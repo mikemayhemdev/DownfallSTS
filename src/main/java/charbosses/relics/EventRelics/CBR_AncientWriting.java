@@ -18,7 +18,7 @@ public class CBR_AncientWriting extends AbstractCharbossRelic {
     private int count;
 
     public CBR_AncientWriting() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/ancientwriting.png")));
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/backtobasics.png")));
     }
 
     @Override
@@ -37,7 +37,7 @@ public class CBR_AncientWriting extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.count + this.DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

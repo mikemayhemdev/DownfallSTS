@@ -1,5 +1,6 @@
-package charbosses.bosses.Ironclad;
+package charbosses.bosses.Ironclad.old;
 
+import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.red.EnDoubleTap;
 import charbosses.cards.red.EnHeadbutt;
 import charbosses.cards.red.EnRampage;

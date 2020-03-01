@@ -25,15 +25,14 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
 
         //1 Strike 1 Defend Removed
 
-        //6 Cards Added:
-        //Metallicize
+        //6 Cards Added, 2 Upgrades:
+        //Metallicize+
         //Perfected Strike
         //Twin Strike
-        //Ghostly Armor
+        //Ghostly Armor+
         //Inflame
         //Wild Strike
 
-        //Metallicize and Ghostly Armor upgraded
 
         /////   RELICS   /////
 

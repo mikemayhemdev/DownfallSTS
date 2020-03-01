@@ -1,5 +1,6 @@
-package charbosses.bosses.Ironclad;
+package charbosses.bosses.Ironclad.old;
 
+import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.colorless.EnBite;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.red.*;

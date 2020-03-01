@@ -2,7 +2,7 @@ package charbosses.bosses.Defect;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Ironclad.ArchetypeIcStrike;
+import charbosses.bosses.Ironclad.old.ArchetypeIcStrike;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

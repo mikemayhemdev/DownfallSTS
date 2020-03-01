@@ -3,8 +3,7 @@
     "NAME": "Neow's Blsesing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Replaces starter relic. Upon pickup, gain ",
-      " Maximum HP. Gain it again at the start of each Act. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
+      "Replaces starter relic. Upon pickup, gain 100 Maximum HP. Gain 60 Maximum HP at the start of each Act. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
     ]
   },
   "evil-within:CoffeeDripper": {
@@ -168,8 +167,7 @@
     "FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
     "DESCRIPTIONS": [
       "The Donut was chosen. NL +5 Maximum HP.",
-      "The Box was chosen. NL A Regret curse and a ",
-      " were added."
+      "The Box was chosen. NL A Regret curse and a relic was added."
     ]
   },
   "evil-within:LivingWall": {
@@ -204,18 +202,16 @@
     "NAME": "Event: Augmenter",
     "FLAVOR": "Hey there, stranger. Interested in advancing science?",
     "DESCRIPTIONS": [
-      "Boss transformed ",
-      " into ",
+      "Boss transformed 2 cards",
       "Boss gained J.A.X.",
-      "Boss gained the Mutagenic Strength relic."
+      "Boss gained the Mutagenic Strength."
     ]
   },
   "evil-within:AncientWriting": {
     "NAME": "Event: Ancient Writing",
     "FLAVOR": "Suddenly, the message becomes clear...",
     "DESCRIPTIONS": [
-      "Boss upgraded ",
-      " Strikes/Defends."
+      "Boss upgraded all Strikes & Defends."
     ]
   },
   "evil-within:Bandits": {
@@ -257,7 +253,7 @@
     "NAME": "Event: Library",
     "FLAVOR": "You come across an ornate building which appears abandoned.",
     "DESCRIPTIONS": [
-      "Boss chose to add a card, and chose "
+      "Boss gained an extra synergistic card."
     ]
   },
   "evil-within:Mausoleum": {
@@ -346,8 +342,7 @@
     "NAME": "Event: Match and Keep",
     "FLAVOR": "Twelve cards! Match them to keep them! Five tries, no do-overs. Are you ready? Let's start!",
     "DESCRIPTIONS": [
-      "Boss matched successfully and gained ",
-      "Boss matched successfully, but gained a Curse - "
+      "Boss matched successfully and gained a powerful card."
     ]
   },
   "evil-within:Transmogrifier": {
@@ -355,6 +350,13 @@
     "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
     "DESCRIPTIONS": [
       " was transformed into a "
+    ]
+  },
+  "evil-within:TombRedMask": {
+    "NAME": "Event: Tomb of Lord Red Mask",
+    "FLAVOR": "A highly ornamented tomb can be seen on the other side of a floating path.",
+    "DESCRIPTIONS": [
+      "Boss gained the Red Mask relic."
     ]
   },
   "evil-within:UpgradeShrine": {

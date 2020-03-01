@@ -53,7 +53,7 @@ public class CBR_BigFish extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-         return this.DESCRIPTIONS[1] + this.relicName + this.DESCRIPTIONS[2];
+         return this.DESCRIPTIONS[1];
     }
 
 

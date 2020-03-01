@@ -136,7 +136,7 @@ public abstract class AbstractBossDeckArchetype {
 
         //Act 2 Events
         this.globalEventPoolAct2.add(new CBR_AncientWriting());
-        this.globalEventPoolAct2.add(new CBR_Augmenter());
+        this.globalEventPoolAct2.add(new CBR_Augmenter(0));
         this.globalEventPoolAct2.add(new CBR_Bandits());
         //No Council of Ghosts - Apparition is too strong in context of a boss
         //No Cursed Book - Nilry's Codex is probably bad for the boss, Necronomicon too powerful, so it'd have to be Enchridon every time
@@ -226,7 +226,7 @@ public abstract class AbstractBossDeckArchetype {
 
         this.globalRelicPool.add(new CBR_DollysMirror());   ///Overwritten from original rarity
         this.globalRelicPool.add(new CBR_FossilizedHelix());
-        this.globalRelicPool.add(new CBR_Girya());
+        this.globalRelicPool.add(new CBR_Girya(0));
         this.globalRelicPool.add(new CBR_Ginger());
         this.globalRelicPool.add(new CBR_HandDrill());   ///Overwritten from original rarity
         this.globalRelicPool.add(new CBR_IceCream());
