@@ -27,7 +27,7 @@ public class EnJAX extends AbstractBossCard {
     }
 
     public EnJAX() {
-        super(ID, EnJAX.cardStrings.NAME, "colorless/attack/jax", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF, AbstractMonster.Intent.BUFF);
+        super(ID, EnJAX.cardStrings.NAME, "colorless/skill/jax", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTags.HEALING);

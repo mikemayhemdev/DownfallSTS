@@ -94,19 +94,17 @@ public class BossTester extends AbstractImageEvent {
             if (act > 1) addBossCardReward();
             addCardReward();
             addCardReward();
-            addCardRemoveReward();
-            addCardReward();
             addCardReward();
             addPotionReward();
             addCardUpgradeReward();
             addStandardRelicReward();
             addCardRemoveReward();
             addStandardRelicReward();
-            addPotionReward();
             addCardReward();
             addCardReward();
             addCardUpgradeReward();
             addPotionReward();
+            addCardRemoveReward();
             addCardReward();
             addCardUpgradeReward();
             addGoldReward(250);
@@ -148,11 +146,11 @@ public class BossTester extends AbstractImageEvent {
     }
 
     private void addCardUpgradeReward(){
-        AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
+        AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
     }
 
     private void addCardRemoveReward(){
-        AbstractDungeon.getCurrRoom().rewards.add(new UpgradeCardReward());
+        AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
     }
 
 

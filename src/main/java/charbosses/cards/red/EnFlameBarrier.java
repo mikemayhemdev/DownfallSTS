@@ -1,6 +1,7 @@
 package charbosses.cards.red;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyFlameBarrierPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -38,7 +39,7 @@ public class EnFlameBarrier extends AbstractBossCard {
             this.addToBot(new VFXAction(m, new FlameBarrierEffect(m.hb.cX, m.hb.cY), 0.5f));
         }
         this.addToBot(new GainBlockAction(m, m, this.block));
-        this.addToBot(new ApplyPowerAction(m, m, new FlameBarrierPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyFlameBarrierPower(m, this.magicNumber), this.magicNumber));
     }
 
 

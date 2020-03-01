@@ -29,7 +29,7 @@ public class GhostLash extends AbstractHexaCard {
             public void update() {
                 isDone = true;
                 if (hasEthereal())
-                    addToTop(new DamageAction(m, makeInfo(), AttackEffect.BLUNT_HEAVY));
+                    addToTop(new DamageAction(m, makeInfo(), AttackEffect.SLASH_HEAVY));
             }
         });
     }

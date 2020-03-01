@@ -28,6 +28,11 @@ public class EnBodySlam extends AbstractBossCard {
     }
 
     @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 0;
+    }
+
+    @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.baseDamage = p.currentBlock;
         this.calculateCardDamage(m);

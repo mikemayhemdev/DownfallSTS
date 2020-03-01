@@ -573,6 +573,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 final AbstractCard c = this.drawPile.getTopCard();
                 AbstractBossCard cB = (AbstractBossCard) c;
                 cB.bossLighten();
+                cB.intent = null;
 
                 c.current_x = DRAW_PILE_X;
                 c.current_y = DRAW_PILE_Y;

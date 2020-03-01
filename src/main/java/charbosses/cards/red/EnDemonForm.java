@@ -29,7 +29,7 @@ public class EnDemonForm extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new DemonFormPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new DemonFormPower(m, this.magicNumber), this.magicNumber));
     }
 
     @Override

@@ -19,7 +19,7 @@ public class ApplyBurnAtTurnStartOncePower extends AbstractPower implements Clon
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApplyBurnAtStartOfTurn32.png");
 
     public ApplyBurnAtTurnStartOncePower(final int amount) {
-        this.name = "Burn At Start Of Turn";
+        this.name = "Delayed Flame";
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
