@@ -573,7 +573,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 final AbstractCard c = this.drawPile.getTopCard();
                 AbstractBossCard cB = (AbstractBossCard) c;
                 cB.bossLighten();
-                cB.intent = null;
 
                 c.current_x = DRAW_PILE_X;
                 c.current_y = DRAW_PILE_Y;
@@ -640,6 +639,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (c.costForTurn > 0 && !c.freeToPlay() && !c.isInAutoplay && (!this.hasPower("Corruption") || c.type != AbstractCard.CardType.SKILL)) {
             this.energy.use(c.costForTurn);
         }
+
+        AbstractBossCard cB = (AbstractBossCard) c;
+        cB.intent = null;
     }
 
     public void combatUpdate() {
