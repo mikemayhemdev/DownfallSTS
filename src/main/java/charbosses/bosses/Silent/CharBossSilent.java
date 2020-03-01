@@ -2,6 +2,9 @@ package charbosses.bosses.Silent;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Ironclad.ArchetypeAct1PerfectedStrike;
+import charbosses.bosses.Ironclad.ArchetypeAct2Strength;
+import charbosses.bosses.Ironclad.ArchetypeAct3Block;
 import charbosses.bosses.Ironclad.old.ArchetypeIcStrike;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
@@ -28,11 +31,14 @@ public class CharBossSilent extends AbstractCharBoss {
 
     @Override
     public void generateDeck() {
-        ArrayList<AbstractBossDeckArchetype> archetypes = new ArrayList<AbstractBossDeckArchetype>();
-        archetypes.add(new ArchetypeIcStrike());
+        AbstractBossDeckArchetype archetype;
+        switch (AbstractDungeon.actNum){
+            case 1: archetype = new ArchetypeAct1PerfectedStrike(); break;
+            case 2: archetype = new ArchetypeAct2Strength(); break;
+            case 3: archetype = new ArchetypeAct3Block(); break;
+            default: archetype = new ArchetypeAct3Block(); break;
+        }
 
-        this.chosenArchetype = archetypes.get(AbstractDungeon.monsterRng.random(archetypes.size() - 1));
-        this.chosenArchetype.initialize();
-        this.chosenArchetype.simulateBuild(AbstractCharBoss.boss);
+        archetype.initialize();
     }
 }
