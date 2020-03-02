@@ -30,7 +30,7 @@ public class CBR_Cleric extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.cardName + this.DESCRIPTIONS[0];
+        return DESCRIPTIONS[0];
     }
 
     @Override

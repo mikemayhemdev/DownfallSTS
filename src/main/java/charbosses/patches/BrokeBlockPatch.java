@@ -2,6 +2,7 @@ package charbosses.patches;
 
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.relics.AbstractCharbossRelic;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,10 +23,9 @@ public class BrokeBlockPatch {
             if (AbstractDungeon.getMonsters().monsters.size() > 0){
                 if (AbstractDungeon.getMonsters().monsters.get(0) instanceof AbstractCharBoss) {
                     AbstractCharBoss cB = (AbstractCharBoss)AbstractDungeon.getMonsters().monsters.get(0);
-                    Iterator var1 = cB.relics.iterator();
 
-                    while(var1.hasNext()) {
-                        AbstractRelic r = (AbstractRelic)var1.next();
+                    for (AbstractCharbossRelic abstractCharbossRelic : cB.relics) {
+                        AbstractRelic r = (AbstractRelic) abstractCharbossRelic;
                         r.onBlockBroken(instance);
                     }
                 }

@@ -82,8 +82,7 @@
   },
   "evil-within:DreamCatcher": {
     "DESCRIPTIONS": [
-      " NL Boss gained ",
-      " extra cards from this relic."
+      " NL Boss gained additional cards when resting."
     ]
   },
   "evil-within:PrayerWheel": {
@@ -239,7 +238,7 @@
     "NAME": "Event: Cleric",
     "FLAVOR": "Hello friend! I am Cleric! Are you interested in my services?!",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      "Boss removed a card from its deck in exchange for #b50 #yGold."
     ]
   },
   "evil-within:OldBeggar": {
@@ -363,7 +362,7 @@
     "NAME": "Event: Upgrade Shrine",
     "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
     "DESCRIPTIONS": [
-      "Boss upgraded a "
+      "Boss #yUpgraded a card with Upgrade Shrine."
     ]
   },
   "evil-within:WeMeetAgain": {

@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -210,6 +211,10 @@ public abstract class AbstractBossCard extends AbstractCard {
             tmp = 0.0f;
         }
         this.block = MathUtils.floor(tmp);
+    }
+
+    public void atb(AbstractGameAction action) {
+        addToBot(action);
     }
 
     public void calculateCardDamage(AbstractMonster mo) {

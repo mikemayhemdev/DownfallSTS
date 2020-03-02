@@ -164,6 +164,10 @@ public abstract class AbstractBossDeckArchetype {
         this.globalEventPoolAct3.add(new CBR_DivineFountain());  //Intentionally made an Act 3 only event
     }
 
+    public void addToDeck(AbstractBossCard c) {
+        addToDeck(c, false);
+    }
+
     public void addToDeck(AbstractBossCard c, boolean upgraded){
         if (upgraded) c.upgrade();
         AbstractCharBoss.boss.masterDeck.addToTop(c.makeCopy());

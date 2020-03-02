@@ -30,7 +30,7 @@ public class CBR_UpgradeShrine extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.cardName + ".";
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

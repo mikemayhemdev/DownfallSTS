@@ -22,10 +22,8 @@ public class CBR_DreamCatcher extends AbstractCharbossRelic {
     }
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + this.numCards + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0];
     }
-
-
 
     @Override
     public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
