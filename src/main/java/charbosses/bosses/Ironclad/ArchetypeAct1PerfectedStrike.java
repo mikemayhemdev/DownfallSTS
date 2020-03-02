@@ -25,9 +25,9 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
 
         //1 Strike 1 Defend Removed
 
-        //6 Cards Added, 2 Upgrades:
+        //6 Cards Added, 3 Upgrades:
         //Metallicize+
-        //Perfected Strike
+        //Perfected Strike+
         //Twin Strike
         //Ghostly Armor+
         //Inflame
@@ -56,7 +56,7 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
         addToDeck(new EnDefendRed(), false);
 
         //Turn 3
-        addToDeck(new EnPerfectedStrike(), false);
+        addToDeck(new EnPerfectedStrike(), true);
         addToDeck(new EnDefendRed(), true);
         addToDeck(new EnStrikeRed(), false);
 
