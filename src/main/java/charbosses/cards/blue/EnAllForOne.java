@@ -25,7 +25,7 @@ public class EnAllForOne extends AbstractBossCard {
     }
 
     public EnAllForOne() {
-        super(ID, cardStrings.NAME, "blue/attack/all_for_one", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.RARE, CardTarget.ENEMY);// 19
+        super(ID, cardStrings.NAME, "blue/attack/all_for_one", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);// 19
         this.baseDamage = 10;
     }
 

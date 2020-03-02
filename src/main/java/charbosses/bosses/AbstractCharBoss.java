@@ -1171,8 +1171,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void render(final SpriteBatch sb) {
         super.render(sb);
         this.renderHand(sb);
+        this.stance.render(sb);
         for (AbstractRelic r : this.relics) {
             r.render(sb);
+        }
+        if (!this.orbs.isEmpty()) {
+            Iterator var2 = this.orbs.iterator();
+
+            while(var2.hasNext()) {
+                AbstractOrb o = (AbstractOrb)var2.next();
+                o.render(sb);
+            }
         }
         this.energyPanel.render(sb);
     }

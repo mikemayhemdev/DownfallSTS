@@ -1,6 +1,7 @@
 package charbosses.bosses.Ironclad;
 
 import charbosses.cards.curses.EnDoubt;
+import charbosses.cards.curses.EnPain;
 import charbosses.cards.curses.EnWrithe;
 import charbosses.cards.red.*;
 import charbosses.relics.*;
@@ -22,7 +23,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
         //4 Strike Removed
 
-        //15 Cards Added, 5 Upgrades:
+        //14 Cards Added, 5 Upgrades:
         //Barricade
         //Body Slam+
         //Body Slam+
@@ -37,7 +38,6 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         //Juggernaut
         //FlameBarrier
         //PowerThrough
-        //Entrench
 
 
 
@@ -52,7 +52,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         addRelic(new CBR_MatchAndKeep());   //excuse for having both jug and barricade
         addRelic(new CBR_IncenseBurner());
         addRelic(new CBR_AncientWriting());   //upgraded all defends
-        addRelic(new CBR_CursedKey());  //1 curse remaining in the deck
+        addRelic(new CBR_CursedKey());  //2 curse remaining in the deck
         addRelic(new CBR_Calipers());
         addRelic(new CBR_OrnamentalFan());
         addRelic(new CBR_TombOfRedMask());  // gain mask
@@ -75,7 +75,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         //Turn 3
         addToDeck(new EnDefendRed(), true);
         addToDeck(new EnPowerThrough(), false);
-        addToDeck(new EnEntrench(), false);
+        addToDeck(new EnPain(), false);
 
         //Turn 4
         addToDeck(new EnImpervious(), false);

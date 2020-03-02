@@ -2,6 +2,9 @@ package charbosses.bosses.Defect;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Ironclad.ArchetypeAct1PerfectedStrike;
+import charbosses.bosses.Ironclad.ArchetypeAct2Strength;
+import charbosses.bosses.Ironclad.ArchetypeAct3Block;
 import charbosses.bosses.Ironclad.old.ArchetypeIcStrike;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
@@ -23,22 +26,24 @@ public class CharBossDefect extends AbstractCharBoss {
         e.setTimeScale(0.9f);
         this.energyString = "[B]";
 
+        this.masterMaxOrbs = 3;
+        this.maxOrbs = 3;
 
     }
 
     @Override
     public void generateDeck() {
-        ArrayList<AbstractBossDeckArchetype> archetypes = new ArrayList<>();
-        archetypes.add(new ArchetypeIcStrike());
-        //archetypes.add(new ArchetypeIcStrength());
-        //archetypes.add(new ArchetypeIcRampage());
-        //archetypes.add(new ArchetypeIcBlock());
+        AbstractBossDeckArchetype archetype;
 
-        this.chosenArchetype = archetypes.get(AbstractDungeon.monsterRng.random(archetypes.size() - 1));
+        switch (AbstractDungeon.actNum){
+            case 1: archetype = new ArchetypeAct1Streamline(); break;
+            case 2: archetype = new ArchetypeAct1Streamline(); break;
+            case 3: archetype = new ArchetypeAct1Streamline(); break;
+            default: archetype = new ArchetypeAct1Streamline(); break;
+        }
 
-        this.chosenArchetype.initialize();
+        archetype.initialize();
 
-        this.chosenArchetype.simulateBuild(AbstractCharBoss.boss);
 
 
     }

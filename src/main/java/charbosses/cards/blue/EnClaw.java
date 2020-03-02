@@ -25,7 +25,7 @@ public class EnClaw extends AbstractBossCard {
     }
 
     public EnClaw() {
-        super(ID, cardStrings.NAME, "blue/attack/claw", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY);// 19
+        super(ID, cardStrings.NAME, "blue/attack/claw", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.baseDamage = 3;

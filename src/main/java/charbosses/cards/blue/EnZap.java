@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.Lightning;
 
+import java.util.ArrayList;
+
 public class EnZap extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Zap";
     private static final CardStrings cardStrings;
@@ -18,7 +20,7 @@ public class EnZap extends AbstractBossCard {
     }
 
     public EnZap() {
-        super(ID, cardStrings.NAME, "blue/skill/zap", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, cardStrings.NAME, "blue/skill/zap", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.showEvokeValue = true;
         this.showEvokeOrbCount = 1;
         this.baseMagicNumber = 1;
@@ -29,6 +31,11 @@ public class EnZap extends AbstractBossCard {
         for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new EnemyChannelAction(new Lightning()));
         }
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 10;
     }
 
     public void upgrade() {

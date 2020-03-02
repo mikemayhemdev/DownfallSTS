@@ -3,7 +3,7 @@ package charbosses.bosses.Defect;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.relics.CBR_NeowsBlessing;
 
-public class ArchetypeAct3 extends ArchetypeBaseIronclad {
+public class ArchetypeAct3 extends ArchetypeBaseDefect {
 
     public ArchetypeAct3() {
         super("DF_ARCHETYPE_", "Strike");

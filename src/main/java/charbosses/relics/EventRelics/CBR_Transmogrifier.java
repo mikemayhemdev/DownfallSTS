@@ -19,7 +19,7 @@ public class CBR_Transmogrifier extends AbstractCharbossRelic {
 
 
     public CBR_Transmogrifier() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/transmogrifier.png")));
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/shrine1.png")));
     }
 
     @Override
@@ -33,7 +33,7 @@ public class CBR_Transmogrifier extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.removedName + this.DESCRIPTIONS[0] + this.addedName + ".";
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

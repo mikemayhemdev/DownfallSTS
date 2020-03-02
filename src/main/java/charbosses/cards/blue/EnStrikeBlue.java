@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.sun.org.apache.bcel.internal.generic.DADD;
 
 public class EnStrikeBlue extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Strike_B";
@@ -19,7 +20,7 @@ public class EnStrikeBlue extends AbstractBossCard {
     }
 
     public EnStrikeBlue() {
-        super(ID, cardStrings.NAME, "blue/attack/strike", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, cardStrings.NAME, "blue/attack/strike", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.tags.add(CardTags.STRIKE);
         this.tags.add(CardTags.STARTER_STRIKE);

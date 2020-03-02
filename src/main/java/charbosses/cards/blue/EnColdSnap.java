@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnColdSnap extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Cold Snap";
     private static final CardStrings cardStrings;
@@ -21,7 +23,7 @@ public class EnColdSnap extends AbstractBossCard {
     }
 
     public EnColdSnap() {
-        super(ID, cardStrings.NAME, "blue/attack/cold_snap", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY);// 19
+        super(ID, cardStrings.NAME, "blue/attack/cold_snap", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         this.showEvokeValue = true;
         this.showEvokeOrbCount = 1;
         this.baseMagicNumber = 1;
@@ -35,6 +37,11 @@ public class EnColdSnap extends AbstractBossCard {
         for (int i = 0; i < this.magicNumber; ++i) {
             this.addToBot(new EnemyChannelAction(new EnemyFrost()));
         }
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 6;
     }
 
     public void upgrade() {

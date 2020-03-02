@@ -22,7 +22,7 @@ public class EnBeamCell extends AbstractBossCard {
     }
 
     public EnBeamCell() {
-        super(ID, cardStrings.NAME, "blue/attack/beam_cell", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY);// 19
+        super(ID, cardStrings.NAME, "blue/attack/beam_cell", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.baseDamage = 3;

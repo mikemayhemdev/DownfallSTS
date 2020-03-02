@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnDualcast extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Dualcast";
     private static final CardStrings cardStrings;
@@ -20,8 +22,13 @@ public class EnDualcast extends AbstractBossCard {
     }
 
     public EnDualcast() {
-        super(ID, cardStrings.NAME, "blue/skill/dualcast", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.NONE);
+        super(ID, cardStrings.NAME, "blue/skill/dualcast", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.BASIC, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         this.showEvokeValue = true;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -39,6 +46,6 @@ public class EnDualcast extends AbstractBossCard {
     }
 
     public AbstractCard makeCopy() {
-        return new Dualcast();
+        return new EnDualcast();
     }
 }
