@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.FrostOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
 
-public class EnemyFrost extends AbstractOrb {
+public class EnemyFrost extends AbstractEnemyOrb {
     public static final String ORB_ID = "Frost";
     private static final OrbStrings orbString;
 
@@ -70,8 +70,8 @@ public class EnemyFrost extends AbstractOrb {
             speedTime = 0.0F;
         }
 
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), speedTime));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractCharBoss.boss, AbstractCharBoss.boss, this.passiveAmount, true));
+        AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), speedTime));
+        AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractCharBoss.boss, AbstractCharBoss.boss, this.passiveAmount, true));
     }
 
     public void triggerEvokeAnimation() {

@@ -1,5 +1,6 @@
 package charbosses.cards.blue;
 
+import charbosses.actions.common.EnemyReduceCostAction;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -28,7 +29,8 @@ public class EnStreamline extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        this.addToBot(new ReduceCostAction(this.uuid, this.magicNumber));
+
+        this.addToBot(new EnemyReduceCostAction(this));
     }
 
     public void upgrade() {

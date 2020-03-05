@@ -64,7 +64,7 @@ public class EnemyDark extends AbstractEnemyOrb {
         if (Settings.FAST_MODE) {
             speedTime = 0.0f;
         }
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.DARK), speedTime));
+        AbstractDungeon.actionManager.addToTop(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.DARK), speedTime));
         this.evokeAmount += this.passiveAmount;
         this.updateDescription();
     }

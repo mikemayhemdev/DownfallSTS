@@ -1,5 +1,6 @@
 package charbosses.powers.cardpowers;
 
+import charbosses.actions.common.EnemyUseCardAction;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
+import slimebound.SlimeboundMod;
 
 public class EnemyReboundPower extends AbstractPower {
     public static final String POWER_ID = "Rebound";
@@ -40,12 +42,14 @@ public class EnemyReboundPower extends AbstractPower {
 
     }
 
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+
+    public void onAfterUse(AbstractCard card, EnemyUseCardAction action) {
         if (this.justEvoked) {
             this.justEvoked = false;
         } else {
             if (card.type != CardType.POWER) {
                 this.flash();
+                SlimeboundMod.logger.info("marking rebound card in EUCA");
                 action.reboundCard = true;
             }
 
@@ -54,9 +58,7 @@ public class EnemyReboundPower extends AbstractPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Rebound"));
-        }
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Rebound"));
 
     }
 

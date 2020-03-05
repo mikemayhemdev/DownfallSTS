@@ -251,11 +251,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public void endTurnStartTurn() {
         if (!AbstractDungeon.getCurrRoom().isBattleOver) {
+            this.applyStartOfTurnPostDrawRelics();
+            this.applyStartOfTurnPostDrawPowers();
             AbstractDungeon.actionManager.addToBottom(new EnemyDrawCardAction(this, this.gameHandSize, true));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
             AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
-            this.applyStartOfTurnPostDrawRelics();
-            this.applyStartOfTurnPostDrawPowers();
         }
     }
 
@@ -291,7 +291,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 }
             }
         }
-        int budget = this.energy.energy;
+        int budget = energyPanel.getCurrentEnergy();
+        SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < cardsByValue.size(); i++) {
             AbstractBossCard c = cardsByValue.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2) {
@@ -323,7 +324,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             sortedCards.add(c);
         }
 
-        budget = this.energy.energy;
+        budget = energyPanel.getCurrentEnergy();
+        SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < sortedCards.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) sortedCards.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2) {

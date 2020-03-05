@@ -103,7 +103,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
         }
     }
 
-    public static int getCurrentEnergy() {
+    public int getCurrentEnergy() {
         if (AbstractDungeon.player == null) {
             return 0;
         }

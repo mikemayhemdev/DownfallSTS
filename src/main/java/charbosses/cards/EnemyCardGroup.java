@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -92,8 +93,10 @@ public class EnemyCardGroup extends CardGroup {
         this.resetCardBeforeMoving(c);
         if (randomSpot)
             this.owner.drawPile.addToRandomSpot(c);
-        else
+        else {
+            SlimeboundMod.logger.info("adding card to top");
             this.owner.drawPile.addToTop(c);
+        }
     }
 
     public void moveToBottomOfDeck(final AbstractCard c) {

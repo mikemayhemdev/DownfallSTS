@@ -25,7 +25,7 @@ public class EnChargeBattery extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(m, m, this.block));
-        this.addToBot(new ApplyPowerAction(m, m, new EnemyEnergizedPower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyEnergizedPower(m, 1), 1));
     }
 
     public void upgrade() {

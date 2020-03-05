@@ -6,9 +6,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import slimebound.SlimeboundMod;
 
 public class EnemyEnergizedPower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:Enemy Energized";
+    public static final String POWER_ID = "EvilWithin:EnemyEnergized";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     private static final PowerStrings powerStrings;
@@ -32,14 +33,6 @@ public class EnemyEnergizedPower extends AbstractPower {
     }
 
     @Override
-    public void stackPower(final int stackAmount) {
-        super.stackPower(stackAmount);
-        if (this.amount >= 999) {
-            this.amount = 999;
-        }
-    }
-
-    @Override
     public void updateDescription() {
         if (this.amount == 1) {
             this.description = EnemyEnergizedPower.DESCRIPTIONS[0] + this.amount + EnemyEnergizedPower.DESCRIPTIONS[1];
@@ -52,6 +45,8 @@ public class EnemyEnergizedPower extends AbstractPower {
     public void onEnergyRecharge() {
         this.flash();
         AbstractCharBoss.boss.gainEnergy(this.amount);
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+
     }
+
 }
