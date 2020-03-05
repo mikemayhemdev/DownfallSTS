@@ -40,7 +40,7 @@ import java.util.Iterator;
 
 public abstract class AbstractBossCard extends AbstractCard {
 
-    public static final float HAND_SCALE = 0.45f;
+    public static final float HAND_SCALE = 0.35f;
     public static final float HOVER_SCALE = 0.8f;
     public static boolean recursionCheck = false;
     public AbstractCharBoss owner;
@@ -61,7 +61,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public float intentAlpha;
     public float intentAlphaTarget;
     public float intentOffsetX;
-    public float intentOffsetY = -120F * Settings.scale;
+    public float intentOffsetY = -90F * Settings.scale;
     private BobEffect bobEffect = new BobEffect();
     private Texture intentImg;
     private Texture intentBg;

@@ -1,5 +1,6 @@
 package slimebound.patches;
 
+import charbosses.orbs.AbstractEnemyOrb;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,7 +16,7 @@ public class OrbPositionPatch {
 
     public static SpireReturn<Void> Prefix(AbstractOrb abstractOrb_instance, int slotNum, int maxOrbs) {
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && !(abstractOrb_instance instanceof AbstractEnemyOrb)) {
             abstractOrb_instance.tX = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsX[slotNum];
             abstractOrb_instance.tY = ((SlimeboundCharacter) AbstractDungeon.player).orbPositionsY[slotNum];
 

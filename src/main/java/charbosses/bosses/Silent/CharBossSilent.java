@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class CharBossSilent extends AbstractCharBoss {
 
     public CharBossSilent() {
-        super("Silent", "EvilWithin:Silent", 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, 0.0f, PlayerClass.THE_SILENT);
+        super("Silent", "EvilWithin:Silent", 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.THE_SILENT);
         this.energyOrb = new EnergyOrbGreen();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);

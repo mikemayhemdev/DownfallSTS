@@ -189,6 +189,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractRelic r : this.relics) {
             r.update();
         }
+
+        Iterator var1 = this.orbs.iterator();
+
+        while(var1.hasNext()) {
+            AbstractOrb o = (AbstractOrb)var1.next();
+            o.update();
+            o.updateAnimation();
+        }
+
         this.combatUpdate();
     }
 
@@ -196,6 +205,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void applyEndOfTurnTriggers() {
 
         this.energy.recharge();
+
+        AbstractDungeon.actionManager.addToTop(new EnemyTriggerEndOfTurnOrbActions());
 
         for (final AbstractRelic r : this.relics) {
             r.onPlayerEndTurn();
@@ -208,7 +219,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             p.atEndOfTurn(this.isPlayer);
             p.onEnergyRecharge();
         }
-        AbstractDungeon.actionManager.addToBottom(new EnemyTriggerEndOfTurnOrbActions());
+
+
         for (final AbstractCard c : this.hand.group) {
             c.triggerOnEndOfTurnForPlayingCard();
         }

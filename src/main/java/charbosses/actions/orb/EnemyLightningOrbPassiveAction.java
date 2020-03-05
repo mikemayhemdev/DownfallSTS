@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
@@ -27,7 +28,7 @@ public class EnemyLightningOrbPassiveAction extends AbstractGameAction {
     }
 
     public void update() {
-        AbstractCreature t = AbstractCharBoss.boss;
+        AbstractCreature t = AbstractDungeon.player;
 
         float speedTime = 0.2F / (float) AbstractCharBoss.boss.orbs.size();
         if (Settings.FAST_MODE) {

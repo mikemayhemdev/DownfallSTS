@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class CharBossDefect extends AbstractCharBoss {
     public CharBossDefect() {
-        super("Defect", "EvilWithin:Defect", 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, 0.0f, AbstractPlayer.PlayerClass.DEFECT);
+        super("Defect", "EvilWithin:Defect", 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, -20.0f, AbstractPlayer.PlayerClass.DEFECT);
         this.energyOrb = new EnergyOrbBlue();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/defect/idle/skeleton.atlas", "images/characters/defect/idle/skeleton.json", 1.0F);

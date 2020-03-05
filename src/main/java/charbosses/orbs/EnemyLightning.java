@@ -86,7 +86,7 @@ public class EnemyLightning extends AbstractEnemyOrb {
     }// 140*/
 
     public void onEndOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new EnemyLightningOrbPassiveAction(new DamageInfo(AbstractCharBoss.boss, this.passiveAmount, DamageInfo.DamageType.THORNS), this, false));
+        AbstractDungeon.actionManager.addToTop(new EnemyLightningOrbPassiveAction(new DamageInfo(AbstractCharBoss.boss, this.passiveAmount, DamageInfo.DamageType.THORNS), this, false));
     }
 
     public void triggerEvokeAnimation() {
