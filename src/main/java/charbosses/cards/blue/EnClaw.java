@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 
+import java.util.ArrayList;
+
 public class EnClaw extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Gash";
     private static final CardStrings cardStrings;
@@ -38,6 +40,11 @@ public class EnClaw extends AbstractBossCard {
 
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));// 44
         this.addToBot(new EnemyGashAction((AbstractCharBoss) m, this, this.magicNumber));// 45
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return super.getPriority(hand) + 5;
     }
 
     public void upgrade() {

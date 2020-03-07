@@ -34,7 +34,7 @@ public class EnemyGashAction extends AbstractGameAction {
             }
         }
 
-        var1 = AbstractDungeon.player.drawPile.group.iterator();// 28
+        var1 = AbstractCharBoss.boss.drawPile.group.iterator();// 28
 
         while (var1.hasNext()) {
             c = (AbstractCard) var1.next();
@@ -44,7 +44,7 @@ public class EnemyGashAction extends AbstractGameAction {
             }
         }
 
-        var1 = AbstractDungeon.player.hand.group.iterator();// 35
+        var1 = AbstractCharBoss.boss.hand.group.iterator();// 35
 
         while (var1.hasNext()) {
             c = (AbstractCard) var1.next();

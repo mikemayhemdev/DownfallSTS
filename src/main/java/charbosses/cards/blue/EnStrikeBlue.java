@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.sun.org.apache.bcel.internal.generic.DADD;
 
 public class EnStrikeBlue extends AbstractBossCard {
     public static final String ID = "EvilWithin_Charboss:Strike_B";

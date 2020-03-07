@@ -251,11 +251,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public void endTurnStartTurn() {
         if (!AbstractDungeon.getCurrRoom().isBattleOver) {
-            this.applyStartOfTurnPostDrawRelics();
-            this.applyStartOfTurnPostDrawPowers();
             AbstractDungeon.actionManager.addToBottom(new EnemyDrawCardAction(this, this.gameHandSize, true));
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
             AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
+            this.applyStartOfTurnPostDrawRelics();
+            this.applyStartOfTurnPostDrawPowers();
         }
     }
 

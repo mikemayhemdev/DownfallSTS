@@ -21,6 +21,15 @@ public class CBR_DollysMirror extends AbstractCharbossRelic {
         this.tier = RelicTier.RARE;
     }
 
+    public CBR_DollysMirror(String cardName) {
+        super(new DollysMirror());
+        this.tier = RelicTier.RARE;
+        addedDesc = cardName;
+
+        this.description = getUpdatedDescription();
+        this.refreshDescription();
+    }
+
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0] + this.addedDesc;
     }

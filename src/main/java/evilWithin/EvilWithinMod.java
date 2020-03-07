@@ -493,12 +493,13 @@ public class EvilWithinMod implements
             BaseMod.addBoss("Exordium", "EvilWithin:CharBossIronclad", assetPath("images/ui/map/ironclad.png"), assetPath("images/ui/map/ironcladoutline.png"));
             BaseMod.addBoss("TheCity", "EvilWithin:CharBossIronclad", assetPath("images/ui/map/ironclad.png"), assetPath("images/ui/map/ironcladoutline.png"));
             BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossIronclad", assetPath("images/ui/map/ironclad.png"), assetPath("images/ui/map/ironcladoutline.png"));
+
             //BaseMod.addBoss("Exordium", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
             //BaseMod.addBoss("TheCity", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
             //BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossSilent", "images/ui/map/boss/champ.png", "images/ui/map/bossOutline/champ.png");
 
             BaseMod.addBoss("Exordium", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
-            //BaseMod.addBoss("TheCity", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
+            BaseMod.addBoss("TheCity", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
             //BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
 
         }

@@ -37,7 +37,7 @@ public class CharBossDefect extends AbstractCharBoss {
 
         switch (AbstractDungeon.actNum){
             case 1: archetype = new ArchetypeAct1Streamline(); break;
-            case 2: archetype = new ArchetypeAct1Streamline(); break;
+            case 2: archetype = new ArchetypeAct2Claw(); break;
             case 3: archetype = new ArchetypeAct1Streamline(); break;
             default: archetype = new ArchetypeAct1Streamline(); break;
         }

@@ -42,7 +42,7 @@ public class EnRebound extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-        return autoPriority() + 20;
+        return autoPriority() + 10;
     }
 
     public AbstractCard makeCopy() {
