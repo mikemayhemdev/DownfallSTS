@@ -7,14 +7,25 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.MathHelper;
-import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import java.util.ArrayList;
+
 public abstract class AbstractEnemyOrb extends AbstractOrb {
-    
+
+    public static AbstractOrb getRandomOrb(boolean useCardRng) {
+        ArrayList<AbstractOrb> orbs = new ArrayList();
+        orbs.add(new EnemyDark());
+        orbs.add(new EnemyFrost());
+        orbs.add(new EnemyLightning());
+        orbs.add(new EnemyPlasma());
+        return useCardRng ? (AbstractOrb)orbs.get(AbstractDungeon.cardRandomRng.random(orbs.size() - 1)) : (AbstractOrb)orbs.get(MathUtils.random(orbs.size() - 1));
+    }
+
     public void setSlot(int slotNum, int maxOrbs) {
         float dist = 160.0F * Settings.scale + (float)maxOrbs * 10.0F * Settings.scale;
-        float angle = -100.0F + (float)maxOrbs * 12.0F;
+        float angle = 100.0F + (float)maxOrbs * 12.0F;
         float offsetAngle = angle / 2.0F;
         angle *= (float)slotNum / ((float)maxOrbs - 1.0F);
         angle += 90.0F - offsetAngle;

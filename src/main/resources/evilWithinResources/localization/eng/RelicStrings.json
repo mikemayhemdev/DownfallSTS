@@ -273,8 +273,7 @@
     "NAME": "Event: Colosseum",
     "FLAVOR": "WE NOW@ BEGIN THE COMBAT!!!!",
     "DESCRIPTIONS": [
-      "Boss completed the Colosseum event, gaining ",
-      ", but starts with less than maximum health."
+      "Boss completed the Colosseum event, gaining two additional relics."
     ]
   },
   "evil-within:PleadingVagrant": {
@@ -305,8 +304,7 @@
     "NAME": "Event: Scrap Ooze",
     "FLAVOR": "Before you is a slime-like creature that ate too much scrap for its own good.",
     "DESCRIPTIONS": [
-      "Boss gain a ",
-      "relic, but starts with less than maximum health."
+      "Boss gain an additional relic."
     ]
   },
   "evil-within:GoldenIdolEvent": {

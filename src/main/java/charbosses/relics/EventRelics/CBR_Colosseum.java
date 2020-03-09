@@ -26,18 +26,8 @@ public class CBR_Colosseum extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        addedName = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelicOfRarity(AbstractCharBoss.boss, "Colosseum", RelicTier.RARE);
-        addedName2 = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelicOfRarity(AbstractCharBoss.boss, "Colosseum", RelicTier.UNCOMMON);
-        addedName3 = AbstractCharBoss.boss.chosenArchetype.addRandomSynergyCard("Colosseum");
-        this.owner.damage(new DamageInfo(this.owner, MathUtils.floor(this.owner.maxHealth * 0.2F), DamageInfo.DamageType.HP_LOSS));
-
-        this.description = getUpdatedDescription();
-        refreshDescription();
-    }
-    @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.addedName + ", " + this.addedName2 + ", & " + this.addedName3 + DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

@@ -24,36 +24,16 @@ public class CBR_FusionHammer extends AbstractCharbossRelic {
         super(new FusionHammer());
     }
 
-    public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + this.numCards  + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[1];
-    }
-
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
-        for (int i = actIndex; i < 3; i++) {
-            if (this.owner.chosenArchetype.cardUpgradesPerAct[i] > 0) {
-                this.owner.chosenArchetype.cardUpgradesPerAct[i] -= 1;
-            this.numCards++;
-            }
-
-        }
-        this.description = getUpdatedDescription();
-        this.refreshDescription();
-    }
-
     @Override
     public void onEquip() {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         ++energy.energyMaster;
-        this.owner.damage(new DamageInfo(this.owner, MathUtils.floor(this.owner.maxHealth * 0.15F), DamageInfo.DamageType.HP_LOSS));
+
     }
 
-    @Override
-    public void onUnequip() {
-        final EnergyManager energy = AbstractCharBoss.boss.energy;
-        --energy.energyMaster;
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0];
     }
-
 
     @Override
     public AbstractRelic makeCopy() {

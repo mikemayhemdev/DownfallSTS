@@ -1,5 +1,6 @@
 package charbosses.orbs;
 
+import charbosses.actions.orb.EnemyDarkOrbEvokeAction;
 import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -55,7 +56,7 @@ public class EnemyDark extends AbstractEnemyOrb {
 
     @Override
     public void onEvoke() {
-        AbstractDungeon.actionManager.addToTop(new DarkOrbEvokeAction(new DamageInfo(AbstractCharBoss.boss, this.evokeAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToTop(new EnemyDarkOrbEvokeAction(new DamageInfo(AbstractCharBoss.boss, this.evokeAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override

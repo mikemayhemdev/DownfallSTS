@@ -26,17 +26,8 @@ public class CBR_ScrapOoze extends AbstractCharbossRelic {
     }
 
     @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        addedName = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex, AbstractCharBoss.boss, list);
-        this.owner.damage(new DamageInfo(this.owner, MathUtils.floor(this.owner.maxHealth * 0.05F), DamageInfo.DamageType.HP_LOSS));
-
-        this.description = getUpdatedDescription();
-        this.refreshDescription();
-    }
-
-    @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.addedName + this.DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0];
     }
 
     @Override
