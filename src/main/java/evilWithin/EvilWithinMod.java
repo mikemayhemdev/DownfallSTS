@@ -14,6 +14,7 @@ import basemod.interfaces.*;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Watcher.CharBossWatcher;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
@@ -488,6 +489,7 @@ public class EvilWithinMod implements
         BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
         //BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new MonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
         BaseMod.addMonster("EvilWithin:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
+        BaseMod.addMonster("EvilWithin:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
         for (int i = 0; i < 20; i++) {
             BaseMod.addBoss("Exordium", "EvilWithin:CharBossIronclad", assetPath("images/ui/map/ironclad.png"), assetPath("images/ui/map/ironcladoutline.png"));
@@ -501,6 +503,10 @@ public class EvilWithinMod implements
             BaseMod.addBoss("Exordium", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
             BaseMod.addBoss("TheCity", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
             BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
+
+            //BaseMod.addBoss("Exordium", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
+            //BaseMod.addBoss("TheCity", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
+            //BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
 
         }
 

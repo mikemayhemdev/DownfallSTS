@@ -17,6 +17,7 @@ import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.*;
+import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -73,6 +74,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public int masterHandSize;
     public int gameHandSize;
 
+    public int mantraGained = 0;
+
     public EnemyEnergyManager energy;
     public EnergyOrbInterface energyOrb;
     public EnemyEnergyPanel energyPanel;
@@ -117,7 +120,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.masterHandSize = 3;
         this.gameHandSize = 3;
         this.masterMaxOrbs = this.maxOrbs = 0;
-        this.stance = new NeutralStance();
+        this.stance = new EnNeutralStance();
         this.orbs = new ArrayList<AbstractOrb>();
         this.relics = new ArrayList<AbstractCharbossRelic>();
     }
