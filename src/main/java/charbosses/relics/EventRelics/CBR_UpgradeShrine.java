@@ -17,7 +17,7 @@ public class CBR_UpgradeShrine extends AbstractCharbossRelic {
     private String cardName;
 
     public CBR_UpgradeShrine() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/upgradeshrine.png")));
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/shrine2.png")));
     }
 
     @Override

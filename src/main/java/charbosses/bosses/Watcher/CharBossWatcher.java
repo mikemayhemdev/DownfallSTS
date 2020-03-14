@@ -2,9 +2,6 @@ package charbosses.bosses.Watcher;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Ironclad.ArchetypeAct1PerfectedStrike;
-import charbosses.bosses.Ironclad.ArchetypeAct2Strength;
-import charbosses.bosses.Ironclad.ArchetypeAct3Block;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -30,10 +27,10 @@ public class CharBossWatcher extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         switch (AbstractDungeon.actNum){
-            case 1: archetype = new ArchetypeAct1(); break;
-            case 2: archetype = new ArchetypeAct1(); break;
-            case 3: archetype = new ArchetypeAct1(); break;
-            default: archetype = new ArchetypeAct1(); break;
+            case 1: archetype = new ArchetypeAct1Retain(); break;
+            case 2: archetype = new ArchetypeAct1Retain(); break;
+            case 3: archetype = new ArchetypeAct1Retain(); break;
+            default: archetype = new ArchetypeAct1Retain(); break;
         }
 
         archetype.initialize();

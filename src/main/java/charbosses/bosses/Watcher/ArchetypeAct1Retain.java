@@ -3,14 +3,13 @@ package charbosses.bosses.Watcher;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.cards.purple.*;
-import charbosses.relics.CBR_DataDisk;
-import charbosses.relics.CBR_NeowsBlessing;
-import charbosses.relics.CBR_SmoothStone;
+import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Transmogrifier;
+import charbosses.relics.EventRelics.CBR_UpgradeShrine;
 
-public class ArchetypeAct1 extends ArchetypeBaseDefect {
+public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
 
-    public ArchetypeAct1() {
+    public ArchetypeAct1Retain() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
     }
 
@@ -69,29 +68,44 @@ public class ArchetypeAct1 extends ArchetypeBaseDefect {
 
 
 
+
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
+        addRelic(new CBR_CloakClasp());
+        addRelic(new CBR_BagOfPreparation());
+        addRelic(new CBR_Lantern());
+        addRelic(new CBR_UpgradeShrine());
+        addRelic(new CBR_IceCream());
 
         /////   CARDS   /////
 
         //Turn 1
-        addToDeck(new EnWorship(), false);
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnEstablishment(), true);
+        addToDeck(new EnVigilance(), false);
+        addToDeck(new EnPerseverance(), true);
+        addToDeck(new EnWindmillStrike(), true);
+        addToDeck(new EnStrikePurple(), false);
 
         //Turn 2
-        addToDeck(new EnWorship(), false);
-        addToDeck(new EnStrikePurple(), true);
+        addToDeck(new EnSandsOfTime(), true);
+        addToDeck(new EnFlyingSleeves(), false);
         addToDeck(new EnStrikePurple(), false);
 
         //Turn 3
-        addToDeck(new EnEruption(), false);
-        addToDeck(new EnVigilance(), false);
+        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnTalkToTheHand(), false);
+        addToDeck(new EnStrikePurple(), false);
 
         //Turn 4
+        addToDeck(new EnEmptyBody(), false);
+        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnWindmillStrike(), false);
 
         //Turn 5
+        addToDeck(new EnBattleHymn(), false);
+        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnDefendPurple(), false);
 
 
 

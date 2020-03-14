@@ -610,6 +610,8 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public void createIntent() {
         if (this.intent == null) return;
+
+        bossLighten();
         refreshIntentHbLocation();
         this.intentParticleTimer = 0.5F;
         this.intentBaseDmg = this.damage;
