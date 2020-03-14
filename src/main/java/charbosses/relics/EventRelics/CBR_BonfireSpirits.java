@@ -81,7 +81,6 @@ public class CBR_BonfireSpirits extends AbstractCharbossRelic {
                     AbstractBossDeckArchetype.logger.info("Bonfire Spirits event removed 1 " + c.name + ".");
                     cardsToRemove.add(c);
                     cardName = c.name;
-                    AbstractCharBoss.boss.increaseMaxHp(10, false);
                     this.descInt = 1;
                     this.updateDescription(AbstractCharBoss.boss.chosenClass);
                     break;
@@ -105,17 +104,13 @@ public class CBR_BonfireSpirits extends AbstractCharbossRelic {
     }
 
     @Override
+    public void onEquip() {
+        AbstractCharBoss.boss.increaseMaxHp(10, true);
+    }
+
+    @Override
     public String getUpdatedDescription() {
-        switch (descInt) {
-            case 0:
-                return this.cardName + this.DESCRIPTIONS[0];
-            case 1:
-                return this.cardName + this.DESCRIPTIONS[1];
-            case 2:
-                return this.cardName + this.DESCRIPTIONS[2];
-            default:
-                return this.cardName + this.DESCRIPTIONS[0];
-        }
+       return this.DESCRIPTIONS[0];
     }
 
     @Override

@@ -59,8 +59,7 @@
   },
   "evil-within:FrozenEgg": {
     "DESCRIPTIONS": [
-      " NL Boss upgraded ",
-      " Powers from this relic."
+      "Boss has many Upgraded Powers."
     ]
   },
   "evil-within:Shovel": {
@@ -134,9 +133,7 @@
     "NAME": "Event: Bonfire Spirits",
     "FLAVOR": "The spirits toss small bones and fragments into the fire, which brilliantly erupts each time...",
     "DESCRIPTIONS": [
-      " Curse was removed from the deck. NL The spirits were displeased.",
-      " was removed from the deck. NL +10 Maximum HP.",
-      " was removed from the deck."
+      "Boss removed a card from its deck to gain 10 Max HP."
     ]
   },
   "evil-within:DesignerInSpire": {
@@ -156,9 +153,9 @@
   },
   "evil-within:Duplicator": {
     "NAME": "Event: Duplicator",
-    "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
+    "FLAVOR": "Before you lies a decorated altar to some ancient entity.",
     "DESCRIPTIONS": [
-      " was duplicated."
+      "Boss duplicated a powerful card."
     ]
   },
   "evil-within:BigFish": {
@@ -238,7 +235,7 @@
     "NAME": "Event: Cleric",
     "FLAVOR": "Hello friend! I am Cleric! Are you interested in my services?!",
     "DESCRIPTIONS": [
-      "Boss removed a card from its deck in exchange for #b50 #yGold."
+      "Boss removed a card from its deck."
     ]
   },
   "evil-within:OldBeggar": {

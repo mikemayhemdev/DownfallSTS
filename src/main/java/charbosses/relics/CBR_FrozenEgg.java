@@ -21,7 +21,7 @@ public class CBR_FrozenEgg extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0] + this.numCards + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[1];
+        return this.DESCRIPTIONS[0];
     }
 
     @Override
