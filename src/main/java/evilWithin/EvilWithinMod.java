@@ -505,7 +505,7 @@ public class EvilWithinMod implements
             BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
 
             BaseMod.addBoss("Exordium", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
-            //BaseMod.addBoss("TheCity", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
+            BaseMod.addBoss("TheCity", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
             //BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
 
         }

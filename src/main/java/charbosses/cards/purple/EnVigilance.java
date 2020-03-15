@@ -1,7 +1,9 @@
 package charbosses.cards.purple;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.stances.EnCalmStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -33,6 +35,7 @@ public class EnVigilance extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
+        if (AbstractCharBoss.boss.stance instanceof EnCalmStance) return 4;
         return super.getPriority(hand) + 10;
     }
 

@@ -6,9 +6,9 @@ import charbosses.cards.purple.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
 
-public class ArchetypeAct3Calm extends ArchetypeBaseDefect {
+public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
 
-    public ArchetypeAct3Calm() {
+    public ArchetypeAct2Calm() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
     }
 
@@ -72,52 +72,46 @@ public class ArchetypeAct3Calm extends ArchetypeBaseDefect {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_FrozenEgg());
         addRelic(new CBR_SmoothStone());
-        addRelic(new CBR_WarPaint());
-        addRelic(new CBR_Cleric());
+        addRelic(new CBR_TeardropLocket());
+        addRelic(new CBR_Duplicator());
         addRelic(new CBR_MercuryHourglass());
         addRelic(new CBR_ArtOfWar());
         addRelic(new CBR_Nest());
-        addRelic(new CBR_PhilosopherStone());
-        addRelic(new CBR_Duplicator());
+        //addRelic(new CBR_PhilosopherStone());
 
         /////   CARDS   /////
 
         //Turn 1
-        addToDeck(new EnLikeWater(), true);
-        addToDeck(new EnAlpha(), true);
+        addToDeck(new EnLikeWater(), false);
         addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnWallop(), true);
 
         //Turn 2
-        addToDeck(new EnVigilance(), false);
+        addToDeck(new EnDefendPurple(), false);
         addToDeck(new EnStrikePurple(), false);
         addToDeck(new EnRitualDagger(), true);
 
         //Turn 3
-        addToDeck(new EnLikeWater(), true);
-        addToDeck(new EnWaveOfTheHand(), false);
         addToDeck(new EnReachHeaven(), true);
+        addToDeck(new EnWaveOfTheHand(), false);
+        addToDeck(new EnStrikePurple(), false);
 
         //Turn 4
-        addToDeck(new EnCrushJoints(), false);
         addToDeck(new EnReachHeaven(), true);
+        addToDeck(new EnCrushJoints(), false);
         addToDeck(new EnThroughViolence(), false);
 
         //Turn 5
-        addToDeck(new EnBeta(), false);
+        addToDeck(new EnLikeWater(), true);
         addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnWallop(), true);
+        addToDeck(new EnSashWhip(), false);
 
         //Turn 6
-        addToDeck(new EnLikeWater(), true);
-        addToDeck(new EnSashWhip(), false);
+        addToDeck(new EnDevaForm(), false);
         addToDeck(new EnThroughViolence(), false);
+        addToDeck(new EnRagnarok(), false);
 
-        //Turn 7
-        addToDeck(new EnOmega(), false);
-        addToDeck(new EnStrikePurple(), false);
-        addToDeck(new EnAlpha(), false);
 
     }
 

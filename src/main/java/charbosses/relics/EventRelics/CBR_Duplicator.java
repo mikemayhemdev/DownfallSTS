@@ -12,14 +12,14 @@ import java.util.ArrayList;
 
 
 public class CBR_Duplicator extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("CBR_Duplicator");
+    public static String ID = EvilWithinMod.makeID("Duplicator");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
 
     public String cardName = "";
 
     public CBR_Duplicator() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/duplicator.png")));
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/shrine4.png")));
     }
 
     @Override

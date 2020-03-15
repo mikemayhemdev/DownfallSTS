@@ -37,9 +37,9 @@ public class EnOmega extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new OmegaPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new OmegaPower(m, this.magicNumber), this.magicNumber));
     }
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Alpha");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Omega");
     }
 }

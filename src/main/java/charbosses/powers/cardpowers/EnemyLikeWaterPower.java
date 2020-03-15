@@ -38,13 +38,11 @@ public class EnemyLikeWaterPower extends AbstractPower {
     }
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
-        if (isPlayer) {
             AbstractCharBoss p = (AbstractCharBoss)this.owner;
-            if (AbstractCharBoss.boss.stance instanceof EnCalmStance) {
+            if (p.stance instanceof EnCalmStance) {
                 this.flash();
                 this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
             }
-        }
 
     }
 
