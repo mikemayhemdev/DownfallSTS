@@ -2,12 +2,13 @@ package charbosses.bosses.Silent;
 
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.green.*;
+import charbosses.relics.CBR_BagOfPreparation;
 import charbosses.relics.CBR_DreamCatcher;
 import charbosses.relics.CBR_Lantern;
 import charbosses.relics.CBR_NeowsBlessing;
-import charbosses.relics.CBR_SnakeRing;
 import charbosses.relics.EventRelics.CBR_Cleric;
 import charbosses.relics.EventRelics.CBR_UpgradeShrine;
+import charbosses.relics.EventRelics.CBR_WeMeetAgain;
 
 public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
 
@@ -40,12 +41,13 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_SnakeRing());
 
         addRelic(new CBR_DreamCatcher());
         addRelic(new CBR_Lantern());
         addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
         addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
+        addRelic(new CBR_WeMeetAgain());
+        addRelic(new CBR_BagOfPreparation());
 
         /////   CARDS   /////
 
