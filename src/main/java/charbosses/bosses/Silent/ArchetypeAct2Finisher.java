@@ -9,7 +9,7 @@ import charbosses.relics.EventRelics.CBR_Serpent;
 public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
 
     public ArchetypeAct2Finisher() {
-        super("SI_SHIV_ARCHETYPE", "Shivs");
+        super("SI_SPAM_ARCHETYPE", "Combo");
     }
 
     public void initialize() {
@@ -53,6 +53,7 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
         addRelic(new CBR_LetterOpener());
         addRelic(new CBR_Shuriken());
         addRelic(new CBR_Serpent()); // Gold used to buy cards
+        addRelic(new CBR_Ectoplasm());
         addRelic(new CBR_Boot());
         addRelic(new CBR_HornCleat());
 

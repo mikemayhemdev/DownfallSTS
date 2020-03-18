@@ -2,6 +2,7 @@ package charbosses.cards.green;
 
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
+import charbosses.powers.cardpowers.EnemyInfiniteBladesPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -26,7 +27,7 @@ public class EnInfiniteBlades extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new InfiniteBladesPower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyInfiniteBladesPower(m, 1), 1));
     }
 
     @Override
