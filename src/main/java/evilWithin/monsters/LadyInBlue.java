@@ -1,5 +1,7 @@
 package evilWithin.monsters;
 
+import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -26,8 +28,12 @@ public class LadyInBlue extends AbstractMonster {
     boolean usedDebuffs = false;
     boolean usedEmergency = false;
 
+
     public LadyInBlue() {
-        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/default.png");
+        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/womaninblue/WomanInBlue.png");
+
+        this.loadAnimation("evilWithinResources/images/monsters/womaninblue/WomanInBlue.atlas", "evilWithinResources/images/monsters/womaninblue/WomanInBlue.json", 1.0F);
+
         switch (AbstractDungeon.actNum) {
             case 1:
                 setHp(100);
@@ -42,11 +48,32 @@ public class LadyInBlue extends AbstractMonster {
 
         this.damage.add(new DamageInfo(this, 20));
         this.damage.add(new DamageInfo(this, 10));
+
+
+
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+        this.stateData.setMix("Hit", "Idle", 0.2F);
+        this.stateData.setMix("Attack", "Idle", 0.2F);
+        this.state.setTimeScale(0.8F);
+    }
+
+
+    @Override
+    public void changeState(String stateName) {
+        switch(stateName) {
+            case "ATTACK":
+                this.state.setAnimation(0, "Attack", false);
+                this.state.addAnimation(0, "Idle", true, 0.0F);
+                break;
+        }
+
     }
 
     public void takeTurn() {
         switch (this.nextMove) {
             case 1:
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
                 addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/FirePotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.FIRE));
 
@@ -54,6 +81,7 @@ public class LadyInBlue extends AbstractMonster {
                 addToBot(new ApplyPowerAction(this, this, new RitualPower(this, 1, false), 1));
                 break;
             case 2:
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
                 addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/ExplosivePotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.1F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.NONE));
@@ -62,6 +90,7 @@ public class LadyInBlue extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, 12));
                 break;
             case 3:
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
                 addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/EssenceOfSteel.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 4), 4));
 
@@ -69,6 +98,7 @@ public class LadyInBlue extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 1), 1));
                 break;
             case 4:
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
                 usedDebuffs = true;
                 addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/WeakPotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 3, true), 3));
@@ -76,6 +106,7 @@ public class LadyInBlue extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 3, true), 3));
                 break;
             case 5:
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
                 usedEmergency = true;
                 addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/GhostInAJar.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePower(this, 1), 1));
@@ -90,6 +121,10 @@ public class LadyInBlue extends AbstractMonster {
     @Override
     public void damage(DamageInfo info) {
         super.damage(info);
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output > 0) {
+            this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+        }
         if (this.currentHealth <= 0 && this.hasPower(FairyPotionPower.POWER_ID)) {
             this.heal((int) (this.maxHealth / 0.3F), true);
             addToTop(new RemoveSpecificPowerAction(this, this, FairyPotionPower.POWER_ID));

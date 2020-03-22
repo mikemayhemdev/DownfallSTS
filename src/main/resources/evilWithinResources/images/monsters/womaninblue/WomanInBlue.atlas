@@ -1,0 +1,83 @@
+
+WomanInBlue.png
+size: 557,877
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+upperarm_left
+  rotate: false
+  xy: 140, 293
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 418, 293
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+potion
+  rotate: false
+  xy: 140, 585
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 1, 293
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1, 1
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+hat
+  rotate: false
+  xy: 279, 585
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+forearm_left
+  rotate: false
+  xy: 279, 293
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+foot_right
+  rotate: false
+  xy: 140, 1
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+foot_left
+  rotate: false
+  xy: 418, 1
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+coat
+  rotate: false
+  xy: 1, 585
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1
+arm_right
+  rotate: false
+  xy: 279, 1
+  size: 137, 290
+  orig: 137, 290
+  offset: 0, 0
+  index: -1

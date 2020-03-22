@@ -72,6 +72,16 @@ public class Augmenter extends AbstractMonster {
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
+
+    public void damage(DamageInfo info) {
+        super.damage(info);
+        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output > 0) {
+            this.state.setAnimation(0, "Hit", false);
+            this.state.addAnimation(0, "Idle", true, 0.0F);
+        }
+
+    }
+
     protected void getMove(int num) {
         if (move2) {
             move2 = false;
