@@ -52,6 +52,7 @@ import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 
+import javax.smartcardio.Card;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -570,11 +571,13 @@ public class EvilWithinMod implements
 
     @Override
     public void receiveStartGame() {
-        possEncounterList.clear();
-        possEncounterList.add("EvilWithin:CharBossIronclad");
-        possEncounterList.add("EvilWithin:CharBossSilent");
-        possEncounterList.add("EvilWithin:CharBossDefect");
-        possEncounterList.add("EvilWithin:CharBossWatcher");
+        if (!CardCrawlGame.loadingSave) {
+            possEncounterList.clear();
+            possEncounterList.add("EvilWithin:CharBossIronclad");
+            possEncounterList.add("EvilWithin:CharBossSilent");
+            possEncounterList.add("EvilWithin:CharBossDefect");
+            possEncounterList.add("EvilWithin:CharBossWatcher");
+        }
     }
 
     @Override

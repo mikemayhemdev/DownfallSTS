@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
+import evilWithin.EvilWithinMod;
 import evilWithin.events.Cleric_Evil;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
@@ -13,6 +14,7 @@ import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SaveData {
@@ -22,6 +24,7 @@ public class SaveData {
     public static final String BLUE_KEY_CONSUMED = "BLUE_KEY_CONSUMED";
     public static final String KILLED_CLERIC = "KILLED_CLERIC";
     public static final String ENCOUNTERED_CLERIC = "ENCOUNTERED_CLERIC";
+    public static final String UPCOMING_BOSSES = "UPCOMING_BOSSES";
     private static Logger saveLogger = LogManager.getLogger("EvilWithinSaveData");
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
@@ -33,6 +36,8 @@ public class SaveData {
 
     private static boolean killedCleric;
     private static boolean encounteredCleric;
+
+    private static ArrayList<String> myVillains;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -51,6 +56,8 @@ public class SaveData {
 
             killedCleric = Cleric_Evil.heDead;
             encounteredCleric = Cleric_Evil.encountered;
+
+            myVillains = EvilWithinMod.possEncounterList;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -73,6 +80,7 @@ public class SaveData {
             params.put(BLUE_KEY_CONSUMED, consumedBlue);
             params.put(KILLED_CLERIC, killedCleric);
             params.put(ENCOUNTERED_CLERIC, encounteredCleric);
+            params.put(UPCOMING_BOSSES, myVillains);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -106,6 +114,8 @@ public class SaveData {
 
                 killedCleric = data.KILLED_CLERIC;
                 encounteredCleric = data.ENCOUNTERED_CLERIC;
+
+                myVillains = data.UPCOMING_BOSSES;
 
                 saveLogger.info("Loaded EvilWithin save data successfully.");
             } catch (Exception e) {
@@ -141,6 +151,8 @@ public class SaveData {
 
             Cleric_Evil.heDead = killedCleric;
             Cleric_Evil.encountered = encounteredCleric;
+
+            EvilWithinMod.possEncounterList = myVillains;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
