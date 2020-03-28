@@ -138,6 +138,7 @@ public class EvilWithinMod implements
         loadLocalization(language, RelicStrings.class);
         loadLocalization(language, MonsterStrings.class);
         loadLocalization(language, PotionStrings.class);
+        loadLocalization(language, CharacterStrings.class);
     }
 
     @Override

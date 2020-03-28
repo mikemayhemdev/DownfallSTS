@@ -1,0 +1,35 @@
+{
+  "Heart Event": {
+    "NAMES": [
+      "The Heart"
+    ],
+    "TEXT": [
+      "~Serve...~ NL ~me..~ ~now...~",
+      "~Rise...~ NL ~Servant..~",
+      "~Arise...~",
+      "~Slay~ NL ~intruders...~",
+      "~Reach~ ~the~ ~intruder...~ NL ~to~ ~receive~ ~more..~ ~blessings...~",
+      "~At~ ~least...~ ~confront~ NL ~the~ ~first~ ~intruder...~",
+      "~I~ ~brought~ ~you~ ~back...~",
+      "~Choose...~",
+      "~Granted...~",
+      "~Sacrifice...~ NL ~...for power....~",
+      "~PROVE~ ~your~ NL ~worth...~",
+      "Rewards",
+      "~Continue~ ~for~ ~me...~",
+      "~Descend...~ ~..into madness...~",
+      "~Impressive...~ ~more...~",
+      "Cursed!",
+      "Scatterbrain!",
+      "Transformation!"
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Talk]",
+      "[Skip]",
+      "[Leave]",
+      "Choose 10 cards to add to your deck.",
+      "[ #gEnemies #gin #gyour #gnext #gthree #gcombats #gflee #gin #gterror ]"
+    ]
+  }
+}
