@@ -2,10 +2,10 @@ package charbosses.bosses.Watcher;
 
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.colorless.EnRitualDagger;
+import charbosses.cards.curses.EnWrithe;
 import charbosses.cards.purple.*;
 import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_Duplicator;
-import charbosses.relics.EventRelics.CBR_Nest;
+import charbosses.relics.EventRelics.*;
 
 public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
@@ -31,7 +31,6 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         //Flying Sleeves - 4 damage twice, retain
         //Halt - Gain block, extra if Wrath
         //Pressure Points
-        //Prostrate - 2 mantra, 4 block
         //Protect - 12 block, retain
         //Sash Whip - 8 damage 1 weak if last was attack
         //stance enterers that retain
@@ -50,14 +49,15 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         //Wallop - 9 damage, gain block equal to unblocked damage
         //wave of the hand - 1 weak whenever you gain block
         //windmill strike - big damage, gets bigger when retained
-        //worship - gain 5 mantra
         //wreath of flame - next attack deal 5 more damage
         //alpha - beta - omega
-        //brilliance - damage equal to mantra gained
-        //devotion - 2 mantra per turn
         //establishment - retain costs less
         //ragnarok - 5x5 damage
         //wish - plated armor or 3 strength
+        //Prostrate - 2 mantra, 4 block
+        //worship - gain 5 mantra
+        //brilliance - damage equal to mantra gained
+        //devotion - 2 mantra per turn
 
 
         //Retain build, starts with Establishment, battle hymn at the end
@@ -68,50 +68,55 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
 
 
-
-
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_SmoothStone());
-        addRelic(new CBR_TeardropLocket());
-        addRelic(new CBR_Duplicator());
-        addRelic(new CBR_MercuryHourglass());
-        addRelic(new CBR_ArtOfWar());
-        addRelic(new CBR_Nest());
-        //addRelic(new CBR_PhilosopherStone());
+        addRelic(new CBR_HandDrill());
+        addRelic(new CBR_FaceTrader());
+        addRelic(new CBR_MaskGremlin());
+        addRelic(new CBR_Abacus());
+        addRelic(new CBR_Mausoleum());
+        addRelic(new CBR_IceCream());
+        addRelic(new CBR_WarPaint());
+        addRelic(new CBR_PhilosopherStone());
+        addRelic(new CBR_Falling());
 
         /////   CARDS   /////
 
         //Turn 1
-        addToDeck(new EnLikeWater(), false);
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnWallop(), true);
+        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnDevotion(), false);
+        addToDeck(new EnWrithe(), false);
 
         //Turn 2
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnStrikePurple(), false);
-        addToDeck(new EnRitualDagger(), true);
+        addToDeck(new EnSashWhip(), false);
+        addToDeck(new EnWorship(), false);
+        addToDeck(new EnProstrate(), true);
 
         //Turn 3
-        addToDeck(new EnReachHeaven(), true);
+        addToDeck(new EnProstrate(), false);
         addToDeck(new EnWaveOfTheHand(), false);
-        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnWallop(), false);
 
         //Turn 4
-        addToDeck(new EnReachHeaven(), true);
-        addToDeck(new EnCrushJoints(), false);
-        addToDeck(new EnThroughViolence(), false);
+        addToDeck(new EnProtect(), true);
+        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnStrikePurple(), false);
 
         //Turn 5
-        addToDeck(new EnLikeWater(), true);
-        addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnSashWhip(), false);
+        addToDeck(new EnFasting(), false);
+        addToDeck(new EnCrushJoints(), false);
+        addToDeck(new EnDefendPurple(), false);
 
         //Turn 6
-        addToDeck(new EnDevaForm(), false);
-        addToDeck(new EnThroughViolence(), false);
-        addToDeck(new EnRagnarok(), false);
+        addToDeck(new EnProtect(), true);
+        addToDeck(new EnWallop(), false);
+        addToDeck(new EnBrilliance(), false);
+
+        //Turn 7
+        addToDeck(new EnBattleHymn(), false);
+        addToDeck(new EnFasting(), true);
+        addToDeck(new EnDefendPurple(), false);
 
 
     }

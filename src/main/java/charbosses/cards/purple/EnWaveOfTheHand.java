@@ -41,7 +41,7 @@ public class EnWaveOfTheHand extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-        return 8;
+        return 30;
     }
 
     public AbstractCard makeCopy() {

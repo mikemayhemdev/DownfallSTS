@@ -1,12 +1,14 @@
 package charbosses.cards.purple;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.cardpowers.EnemyMantraPower;
+import charbosses.stances.EnCalmStance;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.purple.Worship;
+import com.megacrit.cardcrawl.cards.purple.Prostrate;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
@@ -16,33 +18,29 @@ import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 
 import java.util.ArrayList;
 
-public class EnWorship extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Worship";
+public class EnProstrate extends AbstractBossCard {
+    public static final String ID = "EvilWithin_Charboss:Prostrate";
     private static final CardStrings cardStrings;
 
-    public EnWorship() {
-        super(ID, cardStrings.NAME, "purple/skill/worship", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        this.baseMagicNumber = 5;
-        this.magicNumber = 5;
+    public EnProstrate() {
+        super(ID, cardStrings.NAME, "purple/skill/prostrate", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
+        this.baseMagicNumber = 2;
+        this.magicNumber = 2;
+        this.baseBlock = 4;
+        this.block = this.baseBlock;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(m, m, new EnemyMantraPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new GainBlockAction(m, this.block));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.selfRetain = true;
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            this.upgradeMagicNumber(1);
         }
 
-    }
-
-    @Override
-    public int getPriority(ArrayList<AbstractCard> hand) {
-        return 8;
     }
 
     public void initializeDescription() {
@@ -51,10 +49,10 @@ public class EnWorship extends AbstractBossCard {
     }
 
     public AbstractCard makeCopy() {
-        return new EnWorship();
+        return new EnProstrate();
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Worship");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Prostrate");
     }
 }

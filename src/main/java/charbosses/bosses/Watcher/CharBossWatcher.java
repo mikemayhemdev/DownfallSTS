@@ -29,7 +29,7 @@ public class CharBossWatcher extends AbstractCharBoss {
         switch (AbstractDungeon.actNum){
             case 1: archetype = new ArchetypeAct1Retain(); break;
             case 2: archetype = new ArchetypeAct2Calm(); break;
-            case 3: archetype = new ArchetypeAct1Retain(); break;
+            case 3: archetype = new ArchetypeAct3Divinity(); break;
             default: archetype = new ArchetypeAct1Retain(); break;
         }
 

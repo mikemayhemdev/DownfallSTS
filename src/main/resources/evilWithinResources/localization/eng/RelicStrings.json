@@ -191,7 +191,7 @@
     "NAME": "Event: Falling",
     "FLAVOR": "While in free fall you consider your options...",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      "Strike was removed from the deck."
     ]
   },
   "evil-within:Augmenter": {
@@ -256,7 +256,7 @@
     "NAME": "Event: Mausoleum",
     "FLAVOR": "You cannot make out the writing on the coffin, however, you do notice black fog seeping out from the sides.",
     "DESCRIPTIONS": [
-      "Boss gained a Writhe curse, and a "
+      "Boss gained a Writhe curse and an extra relic."
     ]
   },
   "evil-within:Nest": {
