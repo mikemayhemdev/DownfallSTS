@@ -25,7 +25,7 @@ public class FaceTrader extends AbstractMonster {
     int turnNum = 0;
 
     public FaceTrader() {
-        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/default.png");
+        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/facetrader/facetrader.png");
         switch (AbstractDungeon.actNum) {
             case 1:
                 setHp(100);

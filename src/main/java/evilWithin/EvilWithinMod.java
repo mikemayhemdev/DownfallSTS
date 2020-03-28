@@ -488,6 +488,8 @@ public class EvilWithinMod implements
 
         BaseMod.addMonster(Augmenter.ID, Augmenter::new);
 
+        BaseMod.addMonster(evilWithin.monsters.FaceTrader.ID, evilWithin.monsters.FaceTrader::new);
+
         BaseMod.addMonster("EvilWithin:Heads", "Living Wall Heads", () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new ChangingTotem(),
@@ -496,7 +498,7 @@ public class EvilWithinMod implements
                 }));
 
         BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
-        BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new MonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
+        BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
         BaseMod.addMonster("EvilWithin:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster("EvilWithin:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
     }
