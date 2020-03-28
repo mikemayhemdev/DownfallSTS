@@ -24,6 +24,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.beyond.*;
@@ -51,12 +52,18 @@ import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 
+import javax.smartcardio.Card;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+
+import static evilWithin.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class EvilWithinMod implements
-        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber {
+        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
     public static final String modID = "evil-within";
 
     public static boolean choosingBossRelic = false;
@@ -475,6 +482,8 @@ public class EvilWithinMod implements
         EventUtils.registerEvent(BossTester.ID, BossTester.class, new String[]{""});
     }
 
+    public static ArrayList<String> possEncounterList = new ArrayList<>();
+
     private void initializeMonsters() {
 
         BaseMod.addMonster(LadyInBlue.ID, LadyInBlue::new);
@@ -494,28 +503,6 @@ public class EvilWithinMod implements
         BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
         BaseMod.addMonster("EvilWithin:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster("EvilWithin:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
-
-        for (int i = 0; i < 20; i++) {
-            BaseMod.addBoss("Exordium", "EvilWithin:CharBossIronclad", assetPath("images/ui/map/ironclad.png"), assetPath("images/ui/map/ironcladoutline.png"));
-            BaseMod.addBoss("TheCity", "EvilWithin:CharBossIronclad", assetPath("images/ui/map/ironclad.png"), assetPath("images/ui/map/ironcladoutline.png"));
-            BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossIronclad", assetPath("images/ui/map/ironclad.png"), assetPath("images/ui/map/ironcladoutline.png"));
-
-            BaseMod.addBoss("Exordium", "EvilWithin:CharBossSilent", "images/ui/map/boss/silent.png", "images/ui/map/silentoutline.png");
-            BaseMod.addBoss("TheCity", "EvilWithin:CharBossSilent", "images/ui/map/boss/silent.png", "images/ui/map/silentoutline.png");
-            BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossSilent", "images/ui/map/boss/silent.png", "images/ui/map/silentoutline.png");
-
-            BaseMod.addBoss("Exordium", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
-            BaseMod.addBoss("TheCity", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
-            BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossDefect", assetPath("images/ui/map/defect.png"), assetPath("images/ui/map/defectoutline.png"));
-
-            BaseMod.addBoss("Exordium", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
-            BaseMod.addBoss("TheCity", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
-            BaseMod.addBoss("TheBeyond", "EvilWithin:CharBossWatcher", assetPath("images/ui/map/watcher.png"), assetPath("images/ui/map/watcheroutline.png"));
-
-        }
-
-
-
     }
 
     public void addPotions() {
@@ -580,6 +567,32 @@ public class EvilWithinMod implements
             CenterGridCardSelectScreen.centerGridSelect = false;
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+        }
+    }
+
+    @Override
+    public void receiveStartGame() {
+        if (!CardCrawlGame.loadingSave) {
+            possEncounterList.clear();
+            possEncounterList.add("EvilWithin:CharBossIronclad");
+            possEncounterList.add("EvilWithin:CharBossSilent");
+            possEncounterList.add("EvilWithin:CharBossDefect");
+            possEncounterList.add("EvilWithin:CharBossWatcher");
+        }
+    }
+
+    @Override
+    public void receiveStartAct() {
+        if (evilMode) {
+            Method setBoss = null;
+            try {
+                AbstractDungeon.bossKey = possEncounterList.remove(AbstractDungeon.cardRandomRng.random(possEncounterList.size() - 1));
+                setBoss = AbstractDungeon.class.getDeclaredMethod("setBoss", String.class);
+                setBoss.setAccessible(true);
+                setBoss.invoke(CardCrawlGame.dungeon, AbstractDungeon.bossKey);
+            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
