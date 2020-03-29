@@ -1,5 +1,7 @@
 package saveData;
 
+import java.util.ArrayList;
+
 //gotta put anything you wanna save in here
 public class EvilWithinSaveData {
     public boolean EVIL_MODE = false;
@@ -10,4 +12,6 @@ public class EvilWithinSaveData {
 
     public boolean KILLED_CLERIC = false;
     public boolean ENCOUNTERED_CLERIC = false;
+
+    public ArrayList<String> UPCOMING_BOSSES = new ArrayList<>();
 }
