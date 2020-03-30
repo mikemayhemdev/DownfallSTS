@@ -30,6 +30,8 @@ public class MyBody implements Disposable {
     private float plasma1Angle = 0.0F;
     private float plasma2Angle = 0.0F;
     private float plasma3Angle = 0.0F;
+    public float XOffset;
+    public float YOffset;
 
     public MyBody() {
         this.plasma1 = ImageMaster.loadImage("images/monsters/theBottom/boss/ghost/plasma1.png");// 36
@@ -49,10 +51,10 @@ public class MyBody implements Disposable {
 
     public void render(SpriteBatch sb) {
         sb.setColor(AbstractDungeon.player.tint.color);// 53
-        sb.draw(this.plasma3, AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX - 12.0F * Settings.scale, AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y * 2.0F - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale * 0.95F, Settings.scale * 0.95F, this.plasma3Angle, 0, 0, 512, 512, false, false);// 54
-        sb.draw(this.plasma2, AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX - 6.0F * Settings.scale, AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale, Settings.scale, this.plasma2Angle, 0, 0, 512, 512, false, false);// 71
-        sb.draw(this.plasma1, AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX, AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y * 0.5F - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale, Settings.scale, this.plasma1Angle, 0, 0, 512, 512, false, false);// 88
-        sb.draw(this.shadow, AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX - 12.0F * Settings.scale, AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y / 4.0F - 15.0F * Settings.scale - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 512, 512, false, false);// 106
+        sb.draw(this.plasma3, XOffset + AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX - 12.0F * Settings.scale, YOffset + AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y * 2.0F - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale * 0.95F, Settings.scale * 0.95F, this.plasma3Angle, 0, 0, 512, 512, false, false);// 54
+        sb.draw(this.plasma2, XOffset + AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX - 6.0F * Settings.scale, YOffset + AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale, Settings.scale, this.plasma2Angle, 0, 0, 512, 512, false, false);// 71
+        sb.draw(this.plasma1, XOffset + AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX, YOffset + AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y * 0.5F - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale, Settings.scale, this.plasma1Angle, 0, 0, 512, 512, false, false);// 88
+        sb.draw(this.shadow, XOffset + AbstractDungeon.player.drawX - 256.0F + AbstractDungeon.player.animX - 12.0F * Settings.scale, YOffset + AbstractDungeon.player.drawY + AbstractDungeon.player.animY + this.effect.y / 4.0F - 15.0F * Settings.scale - 256.0F + BODY_OFFSET_Y, 256.0F, 256.0F, 512.0F, 512.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 512, 512, false, false);// 106
     }// 123
 
     public void dispose() {
