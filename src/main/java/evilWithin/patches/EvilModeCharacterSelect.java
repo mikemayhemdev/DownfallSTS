@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import evilWithin.EvilWithinMod;
 import evilWithin.patches.ui.topPanel.GoldToSoulPatches;
+import expansioncontent.cards.Collect;
 import guardian.characters.GuardianCharacter;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
@@ -43,11 +44,11 @@ public class EvilModeCharacterSelect {
                 locator = Locator.class
         )
         public static void Insert(CustomCharacterSelectScreen __instance) {
-            SlimeboundMod.logger.info("Remove Evil Options ran");
+            villains.clear();
             Iterator<CharacterOption> iter = __instance.options.iterator();
             while (iter.hasNext()) {
                 CharacterOption o = iter.next();
-                if (EvilWithinMod.modID.equals(WhatMod.findModID(o.c.getClass()))) {
+                if (!villains.contains(o) && EvilWithinMod.modID.equals(WhatMod.findModID(o.c.getClass()))) {
                     iter.remove();
                     villains.add(o);
                 }
@@ -89,7 +90,6 @@ public class EvilModeCharacterSelect {
     public static class ChangeToEvilOptions {
         public static void Prefix(CharacterSelectScreen __instance, boolean isEndless) {
 
-            SlimeboundMod.logger.info("Change to Evil Options ran");
             if (__instance instanceof CustomCharacterSelectScreen) {
                 CustomCharacterSelectScreen screen = (CustomCharacterSelectScreen) __instance;
                 if (evilMode) {
@@ -130,7 +130,6 @@ public class EvilModeCharacterSelect {
 
             if (__instance.screen != MainMenuScreen.CurScreen.CHAR_SELECT) {
                 if (saved_maxSelectIndex >= 0) {
-                    SlimeboundMod.logger.info("Reset Options ran");
                     if (__instance.charSelectScreen instanceof CustomCharacterSelectScreen) {
                         CustomCharacterSelectScreen screen = (CustomCharacterSelectScreen) __instance.charSelectScreen;
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
