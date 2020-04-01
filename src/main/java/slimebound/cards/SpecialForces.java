@@ -21,7 +21,7 @@ public class SpecialForces extends AbstractSlimeboundCard {
     public static String ID = "Slimebound:SpecialForces";
     public static String NAME;
     public static String DESCRIPTION;
-    public static String IMG_PATH = "cards/acidgelatin.png";
+    public static String IMG_PATH = "cards/slimespecialforces.png";
     public static CardStrings cardStrings;
     public static CardType TYPE = CardType.SKILL;
     public static CardRarity RARITY = CardRarity.RARE;

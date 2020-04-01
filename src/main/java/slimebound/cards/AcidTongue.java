@@ -17,7 +17,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:AcidTongue";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/acidtongue.png";
+    public static final String IMG_PATH = "cards/spreadingslime.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;

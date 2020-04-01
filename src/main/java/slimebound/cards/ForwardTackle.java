@@ -21,7 +21,7 @@ public class ForwardTackle extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:ForwardTackle";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/tendrilflail.png";
+    public static final String IMG_PATH = "cards/forwardtackle.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
