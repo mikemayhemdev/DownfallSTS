@@ -26,7 +26,7 @@ public class TagTeam extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:TagTeam";
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/zzzeventtackle.png";
+    public static final String IMG_PATH = "cards/tagteam.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;

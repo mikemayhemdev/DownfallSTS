@@ -21,7 +21,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
     public static String ID = "Slimebound:SplitSpecialist";
     public static String NAME;
     public static String DESCRIPTION;
-    public static String IMG_PATH = "cards/zzzcorrosivespit.png";
+    public static String IMG_PATH = "cards/splitspecialist.png";
     public static CardStrings cardStrings;
     public static CardType TYPE = CardType.SKILL;
     public static CardRarity RARITY = CardRarity.UNCOMMON;
