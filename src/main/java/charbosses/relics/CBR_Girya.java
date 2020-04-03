@@ -38,13 +38,6 @@ public class CBR_Girya extends AbstractCharbossRelic {
         }
     }
 
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
-        for (int i = actIndex; i < 3; i++) {
-            this.owner.chosenArchetype.cardUpgradesPerAct[i] -= 1;
-        }
-
-    }
 
     @Override
     public AbstractRelic makeCopy() {

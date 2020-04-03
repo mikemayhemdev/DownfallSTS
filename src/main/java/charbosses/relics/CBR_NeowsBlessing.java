@@ -3,6 +3,7 @@ package charbosses.relics;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.ArchetypeAct3MerchantBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.curses.EnRegret;
 import com.badlogic.gdx.graphics.Texture;

@@ -14,6 +14,7 @@ import basemod.interfaces.*;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import com.badlogic.gdx.Gdx;
@@ -491,6 +492,8 @@ public class EvilWithinMod implements
         BaseMod.addMonster(Augmenter.ID, Augmenter::new);
 
         BaseMod.addMonster(FleeingMerchant.ID, FleeingMerchant::new);
+
+        BaseMod.addMonster("EvilWithin:CharBossMerchant", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
 
         BaseMod.addMonster(evilWithin.monsters.FaceTrader.ID, evilWithin.monsters.FaceTrader::new);
 
