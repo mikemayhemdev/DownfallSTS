@@ -30,7 +30,6 @@ public class BossSetPatch {
                 DungeonMap.bossOutline = ImageMaster.loadImage("evilWithinResources/images/ui/map/watcheroutline.png");// 433
                 break;
             }
-
         }
     }
 }

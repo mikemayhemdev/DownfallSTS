@@ -4,42 +4,24 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
-import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
-import com.megacrit.cardcrawl.actions.utility.ShakeScreenAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.colorless.PanicButton;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.potions.StrengthPotion;
-import com.megacrit.cardcrawl.powers.*;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.shop.Merchant;
-import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
-import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
-import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
+import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.NoBlockPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import evilWithin.actions.ForceWaitAction;
 import evilWithin.actions.LoseGoldAction;
 import evilWithin.actions.MerchantThrowGoldAction;
 import evilWithin.vfx.SoulStealEffect;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 /*
 First Turn - Panic Button
@@ -79,11 +61,16 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String[] DIALOG = {
 
     };
-    public static final String PANICBUTTONNAME = CardCrawlGame.languagePack.getCardStrings("PanicButton").NAME;
+    public static final String PANICBUTTONNAME = CardCrawlGame.languagePack.getCardStrings(PanicButton.ID).NAME;
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     private static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     private static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
     private static final int START_HP = 500;
+
+    public static int CURRENT_HP = 500;
+    public static int CURRENT_STRENGTH = 0;
+
+    public static boolean DEAD = false;
 
     // Move bytes
     private static byte ATTACK = 0;
@@ -114,6 +101,7 @@ public class FleeingMerchant extends AbstractMonster {
         halfDead = false;
 
         damage.add(new DamageInfo(this, 2));
+        setHp(CURRENT_HP);
     }
 
     @Override
@@ -135,11 +123,18 @@ public class FleeingMerchant extends AbstractMonster {
 
         //AbstractDungeon.actionManager.addToTop(new TalkAction(this, (abuse >= 3 ? DIALOG[2] : DIALOG[0]), 0.5F, 3.0F));
 
+        if (CURRENT_STRENGTH > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, CURRENT_STRENGTH), CURRENT_STRENGTH));
+        }
     }
 
     @Override
     public void takeTurn() {
         if (nextMove == ESCAPE) {
+            CURRENT_HP = this.currentHealth;
+            if (hasPower(StrengthPower.POWER_ID)) {
+                CURRENT_STRENGTH = getPower(StrengthPower.POWER_ID).amount;
+            }
             AbstractDungeon.getCurrRoom().smoked = true;
             AbstractDungeon.getCurrRoom().rewards.clear();
             this.addToBot(new CanLoseAction());
@@ -153,7 +148,7 @@ public class FleeingMerchant extends AbstractMonster {
                 this.addToBot(new DamageAction(AbstractDungeon.player, damage.get(0), true));
             }
         } else if (nextMove == DEFEND) {
-            this.addToBot(new GainBlockAction(this,this,30));
+            this.addToBot(new GainBlockAction(this, this, 30));
             this.addToBot(new ApplyPowerAction(this, this, new NoBlockPower(this, 1, true), 1));
         } else if (nextMove == SOULSTEAL) {
             this.addToBot((new VFXAction(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX, this.hb.cY), 0.5F)));
@@ -175,7 +170,7 @@ public class FleeingMerchant extends AbstractMonster {
             return;
         }
         if (turn == 1) {
-            setMove(ATTACK, Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base, 5, true);
+            setMove(ATTACK, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base, 5, true);
             return;
         }
         if (turn == 2) {
@@ -189,8 +184,8 @@ public class FleeingMerchant extends AbstractMonster {
     }
 
     @Override
-    public void damage(DamageInfo info) {
-        super.damage(info);
+    public void die() {
+        super.die();
+        DEAD = true;
     }
-
 }
