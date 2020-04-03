@@ -36,7 +36,7 @@ public class EnemyTheBombPower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
         if (this.amount == 1) {
-            this.addToBot(new DamageAction(this.owner, new DamageInfo(AbstractDungeon.player, this.damage, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(this.owner, this.damage, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
 
 

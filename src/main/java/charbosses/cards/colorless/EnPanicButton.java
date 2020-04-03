@@ -39,6 +39,11 @@ public class EnPanicButton extends AbstractBossCard {
 
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return (!m.hasPower(NoBlockPower.POWER_ID));
+    }
+
     public AbstractCard makeCopy() {
         return new EnPanicButton();
     }

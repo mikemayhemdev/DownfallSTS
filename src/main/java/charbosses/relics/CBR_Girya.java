@@ -30,7 +30,7 @@ public class CBR_Girya extends AbstractCharbossRelic {
 
     @Override
     public void atBattleStart() {
-        this.counter = AbstractDungeon.actNum;
+        //this.counter = AbstractDungeon.actNum;
         if (this.counter != 0) {
             this.flash();
             this.addToTop(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new StrengthPower(AbstractCharBoss.boss, this.counter), this.counter));

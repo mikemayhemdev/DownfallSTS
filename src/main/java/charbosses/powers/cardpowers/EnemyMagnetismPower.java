@@ -46,7 +46,7 @@ public class EnemyMagnetismPower extends AbstractPower {
         }
     }
 
-    public void atStartOfTurn() {
+    public void atStartOfTurnPostDraw() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
 
