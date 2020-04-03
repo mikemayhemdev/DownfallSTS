@@ -69,7 +69,7 @@ public class TheHexaghost extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), 10.0F, 200.0F, 150.0F, 150.0F, new EnergyManager(3));
+                getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
 
 
         dialogX = (drawX + 0.0F * Settings.scale);

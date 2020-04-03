@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import evilWithin.EvilWithinMod;
 import evilWithin.events.Cleric_Evil;
+import evilWithin.monsters.FleeingMerchant;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
 import javassist.CtBehavior;
@@ -25,6 +26,9 @@ public class SaveData {
     public static final String KILLED_CLERIC = "KILLED_CLERIC";
     public static final String ENCOUNTERED_CLERIC = "ENCOUNTERED_CLERIC";
     public static final String UPCOMING_BOSSES = "UPCOMING_BOSSES";
+    public static final String MERCHANT_HEALTH = "MERCHANT_HEALTH";
+    public static final String MERCHANT_STRENGTH = "MERCHANT_STRENGTH";
+    public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
     private static Logger saveLogger = LogManager.getLogger("EvilWithinSaveData");
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
@@ -38,6 +42,10 @@ public class SaveData {
     private static boolean encounteredCleric;
 
     private static ArrayList<String> myVillains;
+
+    private static int merchantHealth;
+    private static int merchantStrength;
+    private static boolean merchantDead;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -58,6 +66,10 @@ public class SaveData {
             encounteredCleric = Cleric_Evil.encountered;
 
             myVillains = EvilWithinMod.possEncounterList;
+
+            merchantHealth = FleeingMerchant.CURRENT_HP;
+            merchantStrength = FleeingMerchant.CURRENT_STRENGTH;
+            merchantDead = FleeingMerchant.DEAD;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -81,6 +93,9 @@ public class SaveData {
             params.put(KILLED_CLERIC, killedCleric);
             params.put(ENCOUNTERED_CLERIC, encounteredCleric);
             params.put(UPCOMING_BOSSES, myVillains);
+            params.put(MERCHANT_HEALTH, merchantHealth);
+            params.put(MERCHANT_STRENGTH, merchantStrength);
+            params.put(MERCHANT_DEAD, merchantDead);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -116,6 +131,10 @@ public class SaveData {
                 encounteredCleric = data.ENCOUNTERED_CLERIC;
 
                 myVillains = data.UPCOMING_BOSSES;
+
+                merchantHealth = data.MERCHANT_HEALTH;
+                merchantStrength = data.MERCHANT_STRENGTH;
+                merchantDead = data.MERCHANT_DEAD;
 
                 saveLogger.info("Loaded EvilWithin save data successfully.");
             } catch (Exception e) {
@@ -153,6 +172,10 @@ public class SaveData {
             Cleric_Evil.encountered = encounteredCleric;
 
             EvilWithinMod.possEncounterList = myVillains;
+
+            FleeingMerchant.CURRENT_HP = merchantHealth;
+            FleeingMerchant.CURRENT_STRENGTH = merchantStrength;
+            FleeingMerchant.DEAD = merchantDead;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
