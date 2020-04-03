@@ -490,6 +490,8 @@ public class EvilWithinMod implements
 
         BaseMod.addMonster(Augmenter.ID, Augmenter::new);
 
+        BaseMod.addMonster(FleeingMerchant.ID, FleeingMerchant::new);
+
         BaseMod.addMonster(evilWithin.monsters.FaceTrader.ID, evilWithin.monsters.FaceTrader::new);
 
         BaseMod.addMonster("EvilWithin:Heads", "Living Wall Heads", () -> new MonsterGroup(
