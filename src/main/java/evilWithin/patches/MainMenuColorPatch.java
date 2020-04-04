@@ -2,6 +2,7 @@ package evilWithin.patches;
 
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.scenes.TitleBackground;
 import com.megacrit.cardcrawl.scenes.TitleCloud;
 import evilWithin.EvilWithinMod;
+import evilWithin.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -53,6 +55,13 @@ public class MainMenuColorPatch {
         setTitleBackgroundAtlasRegion(__instance, atlas, "botGlow", "mg3BotGlow");
 
         setClouds(__instance, atlas);
+        setLogo(__instance);
+    }
+
+    private static void setLogo(TitleBackground menu) {
+        Texture empty = TextureLoader.getTexture(getAsset("logo.png"));
+
+        ReflectionHacks.setPrivate(menu, TitleBackground.class, "titleLogoImg", empty);
     }
 
     private static void setClouds(TitleBackground menu, TextureAtlas atlas) {
