@@ -12,13 +12,21 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
+import evilWithin.EvilWithinMod;
 
 public class CharBossMerchant extends AbstractCharBoss {
 
 
 
     public CharBossMerchant() {
-        super("Merchant", "EvilWithin:Merchant", 200, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+        super("Merchant", "EvilWithin:Merchant", 280, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+
+        if (EvilWithinMod.tempAscensionHack){
+            EvilWithinMod.tempAscensionHack = false;
+            AbstractDungeon.ascensionLevel = EvilWithinMod.tempAscensionOriginalValue;
+            EvilWithinMod.tempAscensionOriginalValue = 0;
+        }
+
         this.energyOrb = new EnergyOrbRed();
         this.energy = new EnemyEnergyManager(3);
 

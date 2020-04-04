@@ -73,6 +73,8 @@ public class EvilWithinMod implements
     public static boolean choosingTransformCard = false;
 
     public static boolean replaceMenuColor = true;
+    public static boolean tempAscensionHack = false;
+    public static int tempAscensionOriginalValue = 0;
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
