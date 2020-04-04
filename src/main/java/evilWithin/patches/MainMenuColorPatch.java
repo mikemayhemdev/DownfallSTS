@@ -28,7 +28,9 @@ public class MainMenuColorPatch {
 
         @SpirePostfixPatch
         public static void evilWithinTitleBackgroundAtlasReplacer(TitleBackground __instance) {
-            setMainMenuBG(__instance);
+            if (EvilWithinMod.replaceMenuColor) {
+                setMainMenuBG(__instance);
+            }
         }
     }
 
