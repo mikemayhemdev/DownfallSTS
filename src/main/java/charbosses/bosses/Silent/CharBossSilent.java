@@ -33,10 +33,10 @@ public class CharBossSilent extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         switch (AbstractDungeon.actNum){
-            case 1: archetype = new ArchetypeAct1PerfectedStrike(); break;
-            case 2: archetype = new ArchetypeAct2Strength(); break;
-            case 3: archetype = new ArchetypeAct3Block(); break;
-            default: archetype = new ArchetypeAct3Block(); break;
+            case 1: archetype = new ArchetypeAct1Shivs(); break;
+            case 2: archetype = new ArchetypeAct2Finisher(); break;
+            case 3: archetype = new ArchetypeAct3Poison(); break;
+            default: archetype = new ArchetypeAct1Shivs(); break;
         }
 
         archetype.initialize();

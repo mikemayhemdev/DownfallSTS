@@ -11,6 +11,8 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossSortHandAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
+import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.core.EnemyEnergyManager;
@@ -22,6 +24,7 @@ import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -33,6 +36,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_L;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -51,6 +56,10 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import evilWithin.EvilWithinMod;
+import evilWithin.monsters.FleeingMerchant;
+import evilWithin.patches.EvilModeCharacterSelect;
+import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+import saveData.EvilWithinSaveData;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -829,9 +838,39 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     @Override
     public void die() {
-        super.die();
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
+
+        if (EvilModeCharacterSelect.evilMode &&
+                !(this instanceof CharBossMerchant) &&
+                AbstractDungeon.actNum == 3 &&
+                AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
+                AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
+                AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
+                FleeingMerchant.DEAD
+        ){
+            if (AbstractDungeon.ascensionLevel < 20){
+                hackSecretBoss();
+            } else if (AbstractDungeon.bossList.size() != 2){
+                hackSecretBoss();
+            }
+        }
+        super.die();
+    }
+
+    private void hackSecretBoss(){
+        EvilWithinMod.tempAscensionHack = true;
+        EvilWithinMod.tempAscensionOriginalValue = AbstractDungeon.ascensionLevel;
+        AbstractDungeon.bossList.clear();
+        AbstractDungeon.bossList.add("EvilWithin:CharBossMerchant");
+        AbstractDungeon.bossList.add("EvilWithin:CharBossMerchant");
+        AbstractDungeon.ascensionLevel = 20;
+    }
+
+    @Override
+    protected void onFinalBossVictoryLogic() {
+        super.onFinalBossVictoryLogic();
+        //AbstractDungeon.ascensionLevel = storedAsc;
     }
 
     private void updateCardsOnDamage() {
