@@ -72,6 +72,7 @@ public class EvilWithinMod implements
     public static boolean choosingUpgradeCard = false;
     public static boolean choosingTransformCard = false;
 
+    public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;
     public static int tempAscensionOriginalValue = 0;
 
