@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.NoBlockPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import evilWithin.actions.ForceWaitAction;
 import evilWithin.actions.LoseGoldAction;
@@ -193,5 +194,11 @@ public class FleeingMerchant extends AbstractMonster {
         DEAD = true;
         HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
         hR.showHeartMerchant();
+    }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
     }
 }
