@@ -534,6 +534,7 @@ public class EvilWithinMod implements
         BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
         BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
         BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
+        BaseMod.addRelic(new HeartsMalice(), RelicType.SHARED);
     }
 
     @Override
