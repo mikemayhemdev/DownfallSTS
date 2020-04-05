@@ -63,8 +63,8 @@ public class FleeingMerchant extends AbstractMonster {
     };
     public static final String PANICBUTTONNAME = CardCrawlGame.languagePack.getCardStrings(PanicButton.ID).NAME;
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
-    private static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
-    private static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
+    public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
+    public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
     private static final int START_HP = 500;
 
     public static int CURRENT_HP = 500;
