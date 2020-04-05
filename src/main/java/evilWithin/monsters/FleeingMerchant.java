@@ -126,6 +126,9 @@ public class FleeingMerchant extends AbstractMonster {
         if (CURRENT_STRENGTH > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, CURRENT_STRENGTH), CURRENT_STRENGTH));
         }
+
+        AbstractDungeon.getCurrRoom().rewardAllowed = false;
+        AbstractDungeon.getCurrRoom().rewards.clear();
     }
 
     @Override

@@ -40,5 +40,39 @@
       "This character is unlocked by completing a run with every other character, including Standard characters."
 
     ]
-  }
+  },
+  "HeartMerchant": {
+  "NAMES": [
+    "~Food...~",
+    "~Sacrifice...~"
+  ],
+  "TEXT": [
+    "~You~ ~grow...~ ~stronger...~",
+    "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
+    "~Slay...~ ~and~ ~be~ ~rewarded...~",
+    "~More...~ ~souls...~",
+    "~Feed~ ~us......~ NL ~FEED~ ~US......~",
+    "~Fuel...~ ~the~ ~corruption...~",
+    "~Blessings...~ ~are~ ~earned...~",
+    "~No...~ ~mercy...~",
+    "~Ever...~ ~stronger...~",
+    "~Our~ ~power...~ ~is~ ~yours...~",
+    "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
+    "~Fight...~ ~fell...~ ~and~ ~feed...~",
+    "~We~ ~are...~ ~legion...~",
+    "~Go~ ~forth...~ ~and~ ~harvest...~",
+    "~Delicious...~ ~souls...~",
+    "~Reap...~ ~the~ ~fallen...~"
+  ],
+  "OPTIONS": [
+    "~Neow...~ ~cannot~ ~win...~",
+    "~Fear...~ ~nothing...~",
+    "..... NL .... NL .........",
+    "~Finish...~ ~them...~",
+    "~Good...~ ~luck...~",
+    "~Don't...~ ~die...~",
+    "~We will...~ ~be~ ~waiting...~",
+    "~Destroy...~ ~them~ ~all...~"
+  ]
+}
 }
