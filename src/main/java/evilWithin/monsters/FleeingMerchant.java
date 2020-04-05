@@ -197,6 +197,13 @@ public class FleeingMerchant extends AbstractMonster {
     }
 
     @Override
+    public void escape() {
+        super.escape();
+        HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
+        hR.showHeartMerchant();
+    }
+
+    @Override
     public void dispose() {
         super.dispose();
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
