@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import evilWithin.actions.ForceWaitAction;
 import evilWithin.actions.LoseGoldAction;
 import evilWithin.actions.MerchantThrowGoldAction;
+import evilWithin.rooms.HeartShopRoom;
 import evilWithin.vfx.SoulStealEffect;
 
 /*
@@ -190,5 +191,7 @@ public class FleeingMerchant extends AbstractMonster {
     public void die() {
         super.die();
         DEAD = true;
+        HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
+        hR.showHeartMerchant();
     }
 }

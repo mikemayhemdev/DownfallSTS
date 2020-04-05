@@ -3,6 +3,7 @@ package evilWithin.util;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Disposable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AnimatedNpc;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.HeartAnimListener;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
@@ -17,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.shop.Merchant;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,9 +39,10 @@ public class HeartMerchant implements Disposable {
     private ArrayList<AbstractCard> cards2;
     private ArrayList<String> idleMessages;
     private float speechTimer;
+    private float introAnimTimer;
     private boolean saidWelcome;
-    private static final float MIN_IDLE_MSG_TIME = 40.0F;
-    private static final float MAX_IDLE_MSG_TIME = 60.0F;
+    private static final float HB_WIDTH = 360.0F;
+    private static final float HB_HEIGHT = 60.0F;
     private static final float SPEECH_DURATION = 3.0F;
     private int shopScreen;
     protected float modX;
@@ -49,7 +53,7 @@ public class HeartMerchant implements Disposable {
     }
 
     public HeartMerchant(float x, float y, int newShopScreen) {
-        this.hb = new Hitbox(360.0F * Settings.scale, 300.0F * Settings.scale);
+       // SlimeboundMod.logger.info("New Heart Merchant made");
         this.cards1 = new ArrayList();
         this.cards2 = new ArrayList();
         this.idleMessages = new ArrayList();
@@ -57,6 +61,8 @@ public class HeartMerchant implements Disposable {
         this.saidWelcome = false;
         this.shopScreen = 1;
         this.anim = new AnimatedNpc(1334.0F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle");
+
+        anim.addListener(new HeartAnimListener());
 
         AbstractCard c;
         for(c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy(); c.color == AbstractCard.CardColor.COLORLESS; c = AbstractDungeon.getCardFromPool(AbstractDungeon.rollRarity(), AbstractCard.CardType.ATTACK, true).makeCopy()) {
@@ -94,13 +100,20 @@ public class HeartMerchant implements Disposable {
         this.speechTimer = 1.5F;
         this.modX = x;
         this.modY = y;
-        this.hb.move(DRAW_X + (250.0F + x) * Settings.scale, DRAW_Y + (130.0F + y) * Settings.scale);
         this.shopScreen = newShopScreen;
         AbstractDungeon.shopScreen.init(this.cards1, this.cards2);
     }
 
     public void update() {
+
+        if (introAnimTimer > 0F) {
+            this.introAnimTimer -= Gdx.graphics.getDeltaTime();
+            float animY = Interpolation.pow2.apply(AbstractDungeon.floorY - 60.0F * Settings.scale,AbstractDungeon.floorY + 700F * Settings.scale,this.introAnimTimer / 2F);
+            this.anim.skeleton.setY(animY);
+        }
+
         this.hb.update();
+
         if ((this.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) && !AbstractDungeon.isScreenUp && !AbstractDungeon.isFadingOut && !AbstractDungeon.player.viewingRelics) {
             AbstractDungeon.overlayMenu.proceedButton.setLabel(NAMES[0]);
             this.saidWelcome = true;
@@ -128,6 +141,8 @@ public class HeartMerchant implements Disposable {
             this.speechTimer = MathUtils.random(40.0F, 60.0F);
         }
 
+
+
     }
 
     private void welcomeSfx() {
@@ -139,14 +154,6 @@ public class HeartMerchant implements Disposable {
     }
 
     public void render(SpriteBatch sb) {
-        sb.setColor(Color.WHITE);
-        sb.draw(ImageMaster.MERCHANT_RUG_IMG, DRAW_X + this.modX, DRAW_Y + this.modY, 512.0F * Settings.scale, 512.0F * Settings.scale);
-        if (this.hb.hovered) {
-            sb.setBlendFunction(770, 1);
-            sb.setColor(Settings.HALF_TRANSPARENT_WHITE_COLOR);
-            sb.draw(ImageMaster.MERCHANT_RUG_IMG, DRAW_X + this.modX, DRAW_Y + this.modY, 512.0F * Settings.scale, 512.0F * Settings.scale);
-            sb.setBlendFunction(770, 771);
-        }
 
         if (Settings.isControllerMode) {
             sb.setColor(Color.WHITE);
@@ -157,22 +164,30 @@ public class HeartMerchant implements Disposable {
             this.anim.render(sb);
         }
 
-        this.hb.render(sb);
+        if (this.hb != null) this.hb.render(sb);
+        //SlimeboundMod.logger.info("Heart Merchant render tick.");
     }
 
     public void dispose() {
         if (this.anim != null) {
             this.anim.dispose();
+           // SlimeboundMod.logger.info("Heart Merchant disposed.");
         }
 
     }
 
+    public void spawnHitbox(){
+        this.hb = new Hitbox(500.0F * Settings.scale, 700.0F * Settings.scale);
+        this.hb.move(DRAW_X * Settings.scale, DRAW_Y * Settings.scale);
+        this.introAnimTimer = 2F;
+    }
+
     static {
-        characterStrings = CardCrawlGame.languagePack.getCharacterString("Merchant");
+        characterStrings = CardCrawlGame.languagePack.getCharacterString("HeartMerchant");
         NAMES = characterStrings.NAMES;
         TEXT = characterStrings.TEXT;
         ENDING_TEXT = characterStrings.OPTIONS;
-        DRAW_X = (float)Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
-        DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
+        DRAW_X = (float)Settings.WIDTH * 0.7F * Settings.scale;
+        DRAW_Y = AbstractDungeon.floorY + 300.0F * Settings.scale;
     }
 }

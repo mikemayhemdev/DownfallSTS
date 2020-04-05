@@ -28,7 +28,8 @@ import evilWithin.util.HeartMerchant;
 import java.util.Iterator;
 
 public class HeartShopRoom extends ShopRoom {
-    public HeartMerchant merchant;
+    public HeartMerchant heartMerchant;
+    public boolean heartMerchantShown;
 
     public HeartShopRoom() {
         super();
@@ -40,7 +41,7 @@ public class HeartShopRoom extends ShopRoom {
     }
 
     public void setHeartMerchant(HeartMerchant merc) {
-        merchant = merc;
+        this.heartMerchant = merc;
     }
 
     public void onPlayerEntry() {
@@ -48,7 +49,7 @@ public class HeartShopRoom extends ShopRoom {
             if (!FleeingMerchant.DEAD)
                 startCombat();
             else
-                ((HeartShopRoom) AbstractDungeon.getCurrRoom()).merchant = new HeartMerchant();
+                ((HeartShopRoom) AbstractDungeon.getCurrRoom()).heartMerchant = new HeartMerchant();
 
         if (!AbstractDungeon.id.equals("TheEnding")) {
             this.playBGM("SHOP");
@@ -72,9 +73,39 @@ public class HeartShopRoom extends ShopRoom {
             m.usePreBattleAction();
             m.useUniversalPreBattleAction();
         }
-        ((HeartShopRoom) AbstractDungeon.getCurrRoom()).merchant = new HeartMerchant();
+        ((HeartShopRoom) AbstractDungeon.getCurrRoom()).heartMerchant = new HeartMerchant();
         AbstractRoom.waitTimer = 0.1f;
         AbstractDungeon.player.preBattlePrep();
     }
 
+    public void render(SpriteBatch sb) {
+        if (this.heartMerchant != null && this.heartMerchantShown) {
+            this.heartMerchant.render(sb);
+        }
+
+        super.render(sb);
+        this.renderTips(sb);
+    }
+
+    public void dispose() {
+        super.dispose();
+        if (this.heartMerchant != null) {
+            this.heartMerchant.dispose();
+            this.heartMerchant = null;
+        }
+
+    }
+
+    public void update() {
+        super.update();
+        if (this.heartMerchant != null && this.heartMerchantShown) {
+            this.heartMerchant.update();
+        }
+
+    }
+
+    public void showHeartMerchant(){
+        this.heartMerchantShown = true;
+        this.heartMerchant.spawnHitbox();
+    }
 }
