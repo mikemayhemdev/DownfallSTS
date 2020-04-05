@@ -43,6 +43,7 @@ public class FloatingOrbs extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        cardsToPreview = new OrbSlam();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

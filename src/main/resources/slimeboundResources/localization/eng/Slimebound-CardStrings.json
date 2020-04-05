@@ -353,7 +353,7 @@
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",
-    "DESCRIPTION": "Deal !D! damage, heal !M! HP. NL This card is played twice if below half of max HP. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL This card is played twice if below half of max HP. NL Exhaust."
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "Disrupting Slam",

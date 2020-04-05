@@ -99,8 +99,8 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Floating Orbs",
-    "DESCRIPTION": "At the start of your turn, add an Orb_Slam to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an Orb_Slam to your hand."
+    "DESCRIPTION": "At the start of your turn, add an *Orb *Slam to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an *Orb *Slam to your hand."
   },
   "Guardian:OrbSlam": {
     "NAME": "Orb Slam",
