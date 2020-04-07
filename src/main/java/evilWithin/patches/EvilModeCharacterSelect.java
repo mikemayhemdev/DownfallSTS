@@ -53,8 +53,11 @@ public class EvilModeCharacterSelect {
                     villains.add(o);
                 }
             }
-            Collections.swap(villains,0,2);  //Switch Guardian and Slimeboss G H S -> S H G
-            Collections.swap(villains,1,2);  //Switch Hexaghost and Guardian S H G -> S G H
+
+            if (villains.size() >= 2) {
+                Collections.swap(villains, 0, 2);  //Switch Guardian and Slimeboss G H S -> S H G
+                Collections.swap(villains, 1, 2);  //Switch Hexaghost and Guardian S H G -> S G H
+            }
             
             for (CharacterOption co : villains){
                 if (co.c instanceof GuardianCharacter && UnlockTracker.isCharacterLocked("Guardian")){
