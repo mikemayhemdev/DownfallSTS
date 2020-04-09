@@ -1,10 +1,16 @@
 package evilWithin.relics;
 
 import basemod.abstracts.CustomRelic;
+import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
 import evilWithin.EvilWithinMod;
+import evilWithin.actions.BanditIOUAction;
+import evilWithin.vfx.BanditIOUEffect;
 
 public class RedIOU extends CustomRelic {
 
@@ -24,8 +30,13 @@ public class RedIOU extends CustomRelic {
     @Override
     public void atBattleStart() {
         if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
-            flash();
+
+
         }
+
+        flash();
+
+        this.addToBot(new BanditIOUAction(AbstractDungeon.player, AbstractDungeon.getMonsters().getRandomMonster(true)));
     }
 
 }
