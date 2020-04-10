@@ -47,8 +47,8 @@ import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.STATUS;
 public class SneckoMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        EditStringsSubscriber,
-        EditKeywordsSubscriber,
+        //EditStringsSubscriber,
+        //EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
@@ -222,15 +222,7 @@ public class SneckoMod implements
         }
     }
 
-    @Override
-    public void receiveEditStrings() {
-        BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/Cardstrings.json");
 
-        BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
-
-        BaseMod.loadCustomStringsFile(CharacterStrings.class, getModID() + "Resources/localization/eng/Charstrings.json");
-        BaseMod.loadCustomStringsFile(PotionStrings.class, getModID() + "Resources/localization/eng/Potionstrings.json");
-    }
 
     public void addPotions() {
 
@@ -241,18 +233,7 @@ public class SneckoMod implements
 
     }
 
-    @Override
-    public void receiveEditKeywords() {
-        Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        Keyword[] keywords = gson.fromJson(json, Keyword[].class);
 
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(getModID() + "", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
-    }
 
     public void receivePostInitialize() {
         addPotions();

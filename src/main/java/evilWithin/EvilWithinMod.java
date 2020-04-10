@@ -19,6 +19,7 @@ import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -51,7 +52,12 @@ import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.KnowingSkull;
 import evilWithin.relics.*;
 import evilWithin.util.ReplaceData;
+import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
+import guardian.GuardianMod;
+import slimebound.SlimeboundMod;
+import sneckomod.SneckoMod;
+import theHexaghost.HexaMod;
 
 import javax.smartcardio.Card;
 import java.io.IOException;
@@ -64,7 +70,7 @@ import static evilWithin.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class EvilWithinMod implements
-        EditStringsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
+        EditStringsSubscriber, EditKeywordsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
     public static final String modID = "evil-within";
 
     public static boolean choosingBossRelic = false;
@@ -84,7 +90,8 @@ public class EvilWithinMod implements
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
-            Settings.GameLanguage.ENG
+            Settings.GameLanguage.ENG,
+            Settings.GameLanguage.ZHS
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
@@ -102,6 +109,17 @@ public class EvilWithinMod implements
     }
 
     public static String assetPath(String path) {
+        return "evilWithinResources/" + path;
+    }
+
+    public static String assetPath(String path, otherPackagePaths otherPath) {
+        switch (otherPath) {
+            case PACKAGE_GUARDIAN: return "guardianResources/" + path;
+            case PACKAGE_SLIME: return "slimeboundResources/" + path;
+            case PACKAGE_SNECKO: return "sneckomodResources/" + path;
+            case PACKAGE_HEXAGHOST: return "hexamodResources/" + path;
+            case PACKAGE_EXPANSION: return "expansioncontentResources/" + path;
+        }
         return "evilWithinResources/" + path;
     }
 
@@ -130,6 +148,11 @@ public class EvilWithinMod implements
         return assetPath("localization/" + langPath + "/" + filename + ".json");
     }
 
+    private String makeLocalizationPath(Settings.GameLanguage language, String filename, otherPackagePaths otherPackage) {
+        String langPath = getLangString();
+        return assetPath("localization/" + langPath + "/" + filename + ".json", otherPackage);
+    }
+
     private String getLangString() {
         for (Settings.GameLanguage lang : SupportedLanguages) {
             if (lang.equals(Settings.language)) {
@@ -140,7 +163,23 @@ public class EvilWithinMod implements
     }
 
     private void loadLocalization(Settings.GameLanguage language, Class<?> stringType) {
+        SlimeboundMod.logger.info("loading loc:" + language + " evilWithin" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName()));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_EXPANSION" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_EXPANSION));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_GUARDIAN" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_GUARDIAN));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HEXAGHOST" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HEXAGHOST));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SLIME" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SLIME));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -151,6 +190,10 @@ public class EvilWithinMod implements
         loadLocalization(language, MonsterStrings.class);
         loadLocalization(language, PotionStrings.class);
         loadLocalization(language, CharacterStrings.class);
+        loadLocalization(language, CardStrings.class);
+        //loadLocalization(language, KeywordStrings.class);
+        loadLocalization(language, OrbStrings.class);
+        loadLocalization(language, RunModStrings.class);
     }
 
     @Override
@@ -174,6 +217,33 @@ public class EvilWithinMod implements
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void loadModKeywords(String modID, otherPackagePaths otherPath) {
+
+        String lang = getLangString();
+        SlimeboundMod.logger.info("loading loc:" + lang + " " + otherPath + " keywords");
+
+        Gson gson = new Gson();
+        String json = Gdx.files.internal(assetPath("localization/" + lang + "/KeywordStrings.json", otherPath)).readString(String.valueOf(StandardCharsets.UTF_8));
+
+        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+
+        if (keywords != null) {
+            for (Keyword keyword : keywords) {
+                BaseMod.addKeyword(modID + "", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+    }
+
+    @Override
+    public void receiveEditKeywords() {
+        loadModKeywords(HexaMod.getModID(), otherPackagePaths.PACKAGE_HEXAGHOST);
+        loadModKeywords(expansionContentMod.getModID(), otherPackagePaths.PACKAGE_EXPANSION);
+        loadModKeywords(SneckoMod.getModID(), otherPackagePaths.PACKAGE_SNECKO);
+        loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
+        loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
+
     }
 
     public void receivePostInitialize() {
@@ -603,6 +673,17 @@ public class EvilWithinMod implements
             } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public enum otherPackagePaths {
+        PACKAGE_SLIME,
+        PACKAGE_GUARDIAN,
+        PACKAGE_HEXAGHOST,
+        PACKAGE_SNECKO,
+        PACKAGE_EXPANSION;
+
+        otherPackagePaths() {
         }
     }
 }

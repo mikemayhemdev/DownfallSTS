@@ -1,0 +1,492 @@
+{
+  "Slimebound:Strike_Slimebound": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "Slimebound:Defend_Slimebound": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "Slimebound:GangUp": {
+    "NAME": "Gang Up",
+    "DESCRIPTION": "Gain X Slime slots. NL Split into a Bruiser_Slime X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL Split into a Bruiser_Slime X+1 times. NL Exhaust."
+  },
+  "Slimebound:LevelUp": {
+    "NAME": "Level Up",
+    "DESCRIPTION": "Gain !M! Potency.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Potency and 1 Slime slot."
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Protect the Boss",
+    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy Attack, Absorbing your leading Slime instead.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy Attack, Absorbing your leading Slime instead."
+  },
+  "Slimebound:SamplingLick": {
+    "NAME": "Sampling Lick",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
+  },
+  "Slimebound:DuplicateSlimes": {
+    "NAME": "Replication",
+    "DESCRIPTION": "Duplicate all of your spawned Slimes. NL Exhaust."
+  },
+  "Slimebound:Replication": {
+    "NAME": "Replication",
+    "DESCRIPTION": "Choose a card in your hand. Add a copy of that card to your hand. NL Exhaust."
+  },
+  "Slimebound:AbsorbAll": {
+    "NAME": "Absorption",
+    "DESCRIPTION": "Absorb all of your spawned Slimes. Gain 3 Block per slime Absorbed."
+  },
+  "Slimebound:Overexert": {
+    "NAME": "Overexert",
+    "DESCRIPTION": "Gain 4 Potency. NL Command twice. NL !M! turns from now, Absorb all of your spawned slimes. NL Exhaust."
+  },
+  "Slimebound:Split": {
+    "NAME": "Split",
+    "DESCRIPTION": "Split into a random slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into 2 random slimes."
+  },
+  "Slimebound:SuperSplit": {
+    "NAME": "Super Split",
+    "DESCRIPTION": "Gain X Slime slots. NL Split into a random slime X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL Split into a random slime X+1 times. NL Exhaust."
+  },
+  "Slimebound:LeadByExample": {
+    "NAME": "Lead By Example",
+    "DESCRIPTION": "The first card you play each turn that targets enemies also Commands.",
+    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also Commands."
+  },
+  "Slimebound:SlimeTap": {
+    "NAME": "Slime Tap",
+    "DESCRIPTION": "Absorb your leading Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Absorb your 2 leading Slimes. Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Need... slimes..."
+    ]
+  },
+  "Slimebound:Teamwork": {
+    "NAME": "Teamwork",
+    "DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times. NL Exhaust."
+  },
+  "Slimebound:SlimeBarrage": {
+    "NAME": "Pile On!",
+    "DESCRIPTION": "Deal !D! damage. Command ALL slimes."
+  },
+  "Slimebound:MaxSlimes": {
+    "NAME": "Make Some Room",
+    "DESCRIPTION": "Gain !M! Slime slot.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots."
+  },
+  "Slimebound:SlimeBrawl": {
+    "NAME": "Slime Brawl",
+    "DESCRIPTION": "Play the top card of your draw pile. Repeat for each of your spawned Slimes. NL Exhaust."
+  },
+  "Slimebound:SpikyOuterGoop": {
+    "NAME": "Goop Armor",
+    "DESCRIPTION": "Gain !M! Block whenever you Attack an enemy who has Goop."
+  },
+  "Slimebound:SelfFormingGoo": {
+    "NAME": "Self-Forming Goo",
+    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! Goop to a random enemy and gain 2 Block at the start of your next turn."
+  },
+  "Slimebound:OozeBath": {
+    "NAME": "Ooze Bath",
+    "DESCRIPTION": "Double the enemy's Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's Goop. NL Exhaust."
+  },
+  "Slimebound:SlimeSpikes": {
+    "NAME": "Slime Spikes",
+    "DESCRIPTION": "Gain !B! Block and !M! hexamod:Momentary Thorns."
+  },
+  "Slimebound:LeechingTouch": {
+    "NAME": "Leeching Touch",
+    "DESCRIPTION": "Gain Block equal to an enemy's Goop. NL Deal !D! damage."
+  },
+  "Slimebound:Dissolve": {
+    "NAME": "Dissolve",
+    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
+  },
+  "Slimebound:DuplicatedForm": {
+    "NAME": "Duplicated Form",
+    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
+    "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL The first card you play each turn that targets enemies is played twice.",
+    "EXTENDED_DESCRIPTION": [
+      "Need... Health..."
+    ]
+  },
+  "Slimebound:Recollect": {
+    "NAME": "Recollect",
+    "DESCRIPTION": "Gain !B! Block. NL Return a random 0-cost Exhausted card to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Return 2 random 0-cost Exhausted cards to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Not... Exhausted..."
+    ]
+  },
+  "Slimebound:FormOfPuddle": {
+    "NAME": "Form of Puddle",
+    "DESCRIPTION": "Gain 1 Intangible. NL Exhaust."
+  },
+  "Slimebound:GrowthPunch": {
+    "NAME": "Growth Punch",
+    "DESCRIPTION": "Deal !D! damage. NL Damage increased by !M! for each Slime."
+  },
+  "Slimebound:CheckThePlaybook": {
+    "NAME": "Consult Playbook",
+    "DESCRIPTION": "Add 4 random Tackle cards to your hand. They cost 1 less this combat. NL Exhaust."
+  },
+  "Slimebound:Recycling": {
+    "NAME": "Recycling",
+    "DESCRIPTION": "At the start of your turn, return a random Exhausted 0-cost card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, return a random Exhausted 0-cost card to your hand."
+  },
+  "Slimebound:Repurpose": {
+    "NAME": "Repurpose",
+    "DESCRIPTION": "Morph a card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card. NL Morph a card in your hand. NL Exhaust."
+  },
+  "Slimebound:RollThrough": {
+    "NAME": "Roll Through",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next Tackle you play."
+  },
+  "Slimebound:MassRepurpose": {
+    "NAME": "Mass Repurpose",
+    "DESCRIPTION": "Draw a card. NL Morph all cards in your hand. NL Exhaust."
+  },
+  "Slimebound:SoTasty": {
+    "NAME": "SO TASTY!",
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times. Add X random Lick cards to your hand. NL Exhaust."
+  },
+  "Slimebound:Regenerate": {
+    "NAME": "Regenerate",
+    "DESCRIPTION": "Gain !M! Regen. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Regen. NL Draw a card. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Need... Regeneration..."
+    ]
+  },
+  "Slimebound:Lick": {
+    "NAME": "Lick",
+    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop. NL Draw a card. NL Exhaust."
+  },
+  "Slimebound:HauntingLick": {
+    "NAME": "Haunting Lick",
+    "DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! Goop. NL Draw a card. NL Exhaust."
+  },
+  "Slimebound:PoisonLick": {
+    "NAME": "Poison Lick",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !SlimeboundSlimePoison! Poison. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !SlimeboundSlimePoison! Poison. NL Draw a card. NL Exhaust."
+  },
+  "Slimebound:MegaLick": {
+    "NAME": "Mega-Lick",
+    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop to ALL enemies. NL Draw a card. NL Exhaust."
+  },
+  "Slimebound:FocusedLick": {
+    "NAME": "Focused Lick",
+    "DESCRIPTION": "Remove all Weak and Poison, replacing them with Goop. NL Apply !M! Goop.",
+    "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with Goop. NL Apply !M! Goop."
+  },
+  "Slimebound:RejuvenatingLick": {
+    "NAME": "Rejuvenating Lick",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
+  },
+  "Slimebound:Gluttony": {
+    "NAME": "Gluttony",
+    "DESCRIPTION": "The first time you attack an enemy with Goop each turn, add a random Lick card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you attack an enemy with Goop each turn, add a random Lick card to your hand."
+  },
+  "Slimebound:PressTheAttack": {
+    "NAME": "Press the Attack",
+    "DESCRIPTION": "Deal !D! damage. If the enemy has Goop, Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has Goop, Command twice."
+  },
+  "Slimebound:StrikeFrailPoint": {
+    "NAME": "Cull the Frail",
+    "DESCRIPTION": "If the enemy is Frail, remove all of their Block, then remove 1 Frail. NL Deal !D! damage."
+  },
+  "Slimebound:SoulSicken": {
+    "NAME": "Soul Sicken",
+    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Goop to Poison.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Goop to Poison."
+  },
+  "Slimebound:AcidGelatin": {
+    "NAME": "Acidic Goop",
+    "DESCRIPTION": "Apply !M! Poison whenever you Attack an enemy who has Goop."
+  },
+  "Slimebound:TongueLash": {
+    "NAME": "Tongue Lash",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your cards containing \"Lick\" (including Exhausted cards)."
+  },
+  "Slimebound:ItLooksTasty": {
+    "NAME": "It Looks Tasty",
+    "DESCRIPTION": "Deal !D! damage. Add a random Lick card to your hand if the enemy has Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded Lick card to your hand if the enemy has Goop."
+  },
+  "Slimebound:AcidTongue": {
+    "NAME": "Spreading Slime",
+    "DESCRIPTION": "Effects that apply Goop apply !M! more."
+  },
+  "Slimebound:TendrilStrike": {
+    "NAME": "Toxin Strike",
+    "DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to its Poison, then reduce its Poison by 1. NL Exhaust",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to twice its Poison, then reduce its Poison by 2. NL Exhaust"
+  },
+  "Slimebound:FirmFortitude": {
+    "NAME": "Feel Our Pain",
+    "DESCRIPTION": "The first time you would take damage or lose HP on each of YOUR turns, an enemy takes that much damage instead.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead."
+  },
+  "Slimebound:AccelerateToxins": {
+    "NAME": "Accelerate Toxins",
+    "DESCRIPTION": "For each Poisoned enemy, trigger the Poison's end of turn effect. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "For each Poisoned enemy, trigger the Poison's end of turn effect twice. NL Exhaust."
+  },
+  "Slimebound:WasteNot": {
+    "NAME": "Waste Not",
+    "DESCRIPTION": "Return all 0-cost Exhausted cards to your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Not... Exhausted..."
+    ]
+  },
+  "Slimebound:Prepare": {
+    "NAME": "Prepare",
+    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
+  },
+  "Slimebound:Grow": {
+    "NAME": "Grow",
+    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and !M! Dexterity."
+  },
+  "Slimebound:HungryTackle": {
+    "NAME": "Hungry Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
+  },
+  "Slimebound:FinishingTackle": {
+    "NAME": "Finishing Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. If the enemy has Goop, gain !B! Block."
+  },
+  "Slimebound:SlimesplosionOLD": {
+    "NAME": "Slimesplosion",
+    "DESCRIPTION": "Apply !M! Goop and !SlimeboundSlimePoison! Poison to ALL enemies X times. NL Exhaust."
+  },
+  "Slimebound:LivingWall": {
+    "NAME": "Living Wall",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! Goop to attackers this turn."
+  },
+  "Slimebound:Slimepotheosis": {
+    "NAME": "Slimepotheosis",
+    "DESCRIPTION": "Upgrade all cards in your hand. Lose !M! HP for each card Upgraded. NL Exhaust."
+  },
+  "Slimebound:ComboTackle": {
+    "NAME": "Combo Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card for each Attack played this turn (Draws !M! cards)."
+  },
+  "Slimebound:Tackle": {
+    "NAME": "Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself."
+  },
+  "Slimebound:GoopTackle": {
+    "NAME": "Opening Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Tackle card to your hand. It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Upgraded Tackle card to your hand. It costs 0 this turn."
+  },
+  "Slimebound:CorrosiveSpit": {
+    "NAME": "Corrosive Spit",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop."
+  },
+  "Slimebound:Chomp": {
+    "NAME": "Chomp",
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random card containing \"Tackle\"  in your hand by 1 this combat."
+  },
+  "Slimebound:DouseInSlime": {
+    "NAME": "Douse in Slime",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL The next time an Attack is used on this enemy, Goop is not removed."
+  },
+  "Slimebound:FlameTackle": {
+    "NAME": "Flame Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Cards containing \"Tackle\" deal !M! more damage this combat."
+  },
+  "Slimebound:VenomTackle": {
+    "NAME": "Venom Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. Apply !M! Poison if the enemy has Goop."
+  },
+  "Slimebound:UsefulSlime": {
+    "NAME": "Useful Slime!",
+    "DESCRIPTION": "Draw 2 Cards. NL Exhaust."
+  },
+  "Slimebound:RainOfGoop": {
+    "NAME": "Rain of Goop",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy !M! times.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy !M! times."
+  },
+  "Slimebound:GoopSpray": {
+    "NAME": "Goop Spray",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !M! Vulnerable to ALL enemies."
+  },
+  "Slimebound:MassFeed": {
+    "NAME": "Mass Feed",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
+  },
+  "Slimebound:ViciousTackle": {
+    "NAME": "Vicious Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from Goop."
+  },
+  "Slimebound:LeechEnergy": {
+    "NAME": "Leech Energy",
+    "DESCRIPTION": "Deal !D! damage. Gain [E] and draw a card if the enemy has Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] and draw 2 cards if the enemy has Goop."
+  },
+  "Slimebound:LeechLife": {
+    "NAME": "Leech Life",
+    "DESCRIPTION": "Heal HP equal to the enemy's Goop. NL Deal !D! damage. NL Exhaust."
+  },
+  "Slimebound:Equalize": {
+    "NAME": "Equalize",
+    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL This card is played twice if below half of max HP. NL Exhaust."
+  },
+  "Slimebound:DisruptingSlam": {
+    "NAME": "Disrupting Slam",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Weak to each enemy that intends to attack."
+  },
+  "Slimebound:ChargeUp": {
+    "NAME": "Charge Up",
+    "DESCRIPTION": "On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
+  },
+  "Slimebound:GuardianWhirl": {
+    "NAME": "Guardian Whirl",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 3 times. NL Exhaust."
+  },
+  "Slimebound:DefensiveMode": {
+    "NAME": "Defensive Mode",
+    "DESCRIPTION": "Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
+  },
+  "Slimebound:PrepareCrush": {
+    "NAME": "Prepare: Crush",
+    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust."
+  },
+  "Slimebound:SlimeCrush": {
+    "NAME": "SLIME CRUSH!!!",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+  },
+  "Slimebound:Icky": {
+    "NAME": "Icky",
+    "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed Status to your hand."
+  },
+  "Slimebound:DivideAndConquerConquer": {
+    "NAME": "Conquer",
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquerDivide": {
+    "NAME": "Divide",
+    "DESCRIPTION": "Split into a Bruiser or Guerilla slime. NL Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Guerilla slime. NL Command. NL Exhaust."
+  },
+  "Slimebound:DivideAndConquer": {
+    "NAME": "Divide & Conquer",
+    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtect": {
+    "NAME": "Serve & Protect",
+    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectServe": {
+    "NAME": "Serve",
+    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Command. NL Exhaust."
+  },
+  "Slimebound:ServeAndProtectProtect": {
+    "NAME": "Protect",
+    "DESCRIPTION": "Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
+  },
+  "Slimebound:SplitBronze": {
+    "NAME": "Split: Bronze",
+    "DESCRIPTION": "Split into a Bronze_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime, who deals !M! more damage and grants !M! more Block. NL Exhaust."
+  },
+  "Slimebound:SplitTorchHead": {
+    "NAME": "Split: Torch Head",
+    "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime, who deals !M! more damage. NL Exhaust."
+  },
+  "Slimebound:SplitBruiser": {
+    "NAME": "Split: Bruiser",
+    "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime. NL Exhaust."
+  },
+  "Slimebound:SplitCultist": {
+    "NAME": "Split: Cultist",
+    "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime, who deals !M! more damage. NL Exhaust."
+  },
+  "Slimebound:SplitLeeching": {
+    "NAME": "Split: Leeching",
+    "DESCRIPTION": "Gain !B! Block. NL Split into a Leeching_Slime. NL Exhaust."
+  },
+  "Slimebound:SplitAcid": {
+    "NAME": "Split: Guerilla",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Split into a Guerilla_Slime. NL Exhaust."
+  },
+  "Slimebound:SplitMire": {
+    "NAME": "Split: Mire",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Split into a Mire_Slime. NL Exhaust."
+  },
+  "Slimebound:SplitGhostflame": {
+    "NAME": "Split: Ghostflame",
+    "DESCRIPTION": "Gain Slime Slots until you have !M!. NL Split into a Ghostflame_Slime. NL Exhaust."
+  },
+  "Slimebound:MinionMaster": {
+    "NAME": "Minion Master",
+    "DESCRIPTION": "Whenever you Command, Command again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Command, Command again."
+  },
+  "Slimebound:BestDefense": {
+    "NAME": "Recklessness",
+    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 more damage to you."
+  },
+  "Slimebound:SplitSpecialist": {
+    "NAME": "Split: Specialist",
+    "DESCRIPTION": "Choose 1 of 3 Special Slimes to Split into. NL Exhaust."
+  },
+  "Slimebound:SpecialForces": {
+    "NAME": "Special Forces",
+    "DESCRIPTION": "For each of your Slime Slots: NL Choose 1 of 3 Special Slimes to Split into. NL Exhaust."
+  },
+  "Slimebound:SlimeSlap": {
+    "NAME": "Slime Slap",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Goop, it is not removed by this attack."
+  },
+  "Slimebound:OneTwoCombo": {
+    "NAME": "One-Two Combo",
+    "DESCRIPTION": "Deal !D! damage. NL Command. NL Whenever you Split, return this from your exhaust pile to your hand. NL Exhaust."
+  },
+  "Slimebound:ForwardTackle": {
+    "NAME": "Forward Tackle",
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Command twice."
+  },
+  "Slimebound:TagTeam": {
+    "NAME": "Tag Team",
+    "DESCRIPTION": "Deal !D! damage. NL Split into a random Slime. NL Command !M! times."
+  },
+  "Slimebound:RallyTheTroops": {
+    "NAME": "Rally the Troops",
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, Command."
+  },
+  "Slimebound:Nibble": {
+    "NAME": "Nibble",
+    "DESCRIPTION": "Deal !D! damage. NL Add a random 0-cost card to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded 0-cost card to your hand. NL Exhaust."
+  }
+}

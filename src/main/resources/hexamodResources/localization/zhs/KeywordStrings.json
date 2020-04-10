@@ -1,0 +1,80 @@
+[
+  {
+    "PROPER_NAME": "Active",
+    "NAMES": [
+      "active"
+    ],
+    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements."
+  },
+  {
+    "PROPER_NAME": "Advance",
+    "NAMES": [
+      "advance",
+      "advanced",
+      "advancing"
+    ],
+    "DESCRIPTION": "#yActivate the next Ghostflame. If it's Ignited, #yExtinguish it."
+  },
+  {
+    "PROPER_NAME": "Retract",
+    "NAMES": [
+      "retract",
+      "retracted",
+      "retracting"
+    ],
+    "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Ignited, #yExtinguish it."
+  },
+  {
+    "PROPER_NAME": "Intensity",
+    "NAMES": [
+      "intensity"
+    ],
+    "DESCRIPTION": "Intensity increases the amount of Damage, Burn, and Block applied by Ghostflames when Ignited."
+  },
+  {
+    "PROPER_NAME": "Burn",
+    "NAMES": [
+      "burn",
+      "burned",
+      "burning"
+    ],
+    "DESCRIPTION": "Burning creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding up)."
+  },
+  {
+    "PROPER_NAME": "Extinguish",
+    "NAMES": [
+      "extinguish",
+      "extinguished"
+    ],
+    "DESCRIPTION": "Allows Ghostflame to become Ignited again, resetting its Ignition requirements."
+  },
+  {
+    "PROPER_NAME": "Ignite",
+    "NAMES": [
+      "ignite",
+      "ignited"
+    ],
+    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
+  },
+  {
+    "PROPER_NAME": "Force-Ignite",
+    "NAMES": [
+      "force-ignite"
+    ],
+    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame, even if it was already Ignited."
+  },
+  {
+    "PROPER_NAME": "Seal",
+    "NAMES": [
+      "seal"
+    ],
+    "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+  },
+  {
+    "PROPER_NAME": "Momentary",
+    "NAMES": [
+      "momentary"
+    ],
+    "DESCRIPTION": "A Momentary buff also adds a debuff which causes you to lose the buff at the end of your turn."
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "sneckomod:SneckoSoul": {
+    "NAME": "Snecko Soul",
+    "FLAVOR": "0...3...2...2...1",
+    "DESCRIPTIONS": [
+      "Whenever you add a #ysneckomod:Unknown card into your deck, increase your Max HP by #b1."
+    ]
+  },
+  "sneckomod:SuperSneckoSoul": {
+    "NAME": "Super Snecko Soul",
+    "FLAVOR": "3120231321230320",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      ".[] NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
+    ]
+  },
+  "sneckomod:CleanMud": {
+    "NAME": "Snake-Charmer's Flute",
+    "FLAVOR": "You're an oxy-moron!",
+    "DESCRIPTIONS": [
+      "#ysneckomod:Muddled cards can't cost #b3."
+    ]
+  },
+  "sneckomod:ConfusingCodex": {
+    "NAME": "Ring of the Snek",
+    "FLAVOR": "Illegible, unreadable, due by Thursday.",
+    "DESCRIPTIONS": [
+      "At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies."
+    ]
+  },
+  "sneckomod:CrystallizedMud": {
+    "NAME": "Mesmerising Pendant",
+    "FLAVOR": "Dazzling dirt.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. #ysneckomod:Muddled cards can't cost #b0."
+    ]
+  },
+  "sneckomod:LoadedDie": {
+    "NAME": "Loaded Die",
+    "FLAVOR": "Cheese-stuffed.",
+    "DESCRIPTIONS": [
+      "Cards that choose random numbers have +1 minimum."
+    ]
+  },
+  "sneckomod:RareBoosterPack": {
+    "NAME": "Rare Booster Box",
+    "FLAVOR": "Mint condition.",
+    "DESCRIPTIONS": [
+      "Upon pickup, obtain a #ysneckomod:Unknown #yRare card of each card type."
+    ]
+  },
+  "sneckomod:SleevedAce": {
+    "NAME": "Sleeved Ace",
+    "FLAVOR": "We're all aces.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a #yCheat into your hand with #yRetain."
+    ]
+  },
+  "sneckomod:UnknownEgg": {
+    "NAME": "Unknown Egg",
+    "FLAVOR": "What will hatch? Pay $1000 to see.",
+    "DESCRIPTIONS": [
+      "#ysneckomod:Unknown cards in card rewards are #yUpgraded."
+    ]
+  },
+  "sneckomod:SuperSneckoEye": {
+    "NAME": "Super Snecko Eye",
+    "FLAVOR": "0121012",
+    "DESCRIPTIONS": [
+      "Replaces Snecko Eye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+    ]
+  },
+  "sneckomod:SneckoTalon": {
+    "NAME": "Snecko Fang",
+    "FLAVOR": "3 -> 2. 2 -> 1. 1 -> 0. 0 -> X?",
+    "DESCRIPTIONS": [
+      "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1."
+    ]
+  },
+  "sneckomod:BlankCard": {
+    "NAME": "Blank Card",
+    "FLAVOR": "Card Mimic.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, play a random card from your deck."
+    ]
+  }
+}

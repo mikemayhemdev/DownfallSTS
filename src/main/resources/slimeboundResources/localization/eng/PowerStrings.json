@@ -1,0 +1,500 @@
+{
+  "Slimebound:PotencyPower": {
+    "NAME": "Potency",
+    "DESCRIPTIONS": [
+      "Increase the damage of your spawned Slimes by #b",
+      "."
+    ]
+  },
+  "Slimebound:SlimedPower": {
+    "NAME": "Goop",
+    "DESCRIPTIONS": [
+      "The next #yAttack against this enemy deals #b",
+      " more damage and heals #b",
+      " HP, consuming all #yGoop.  Half of the stack is removed at end of turn."
+    ]
+  },
+  "Slimebound:PreventTackleDamagePower": {
+    "NAME": "Prevent Tackle Damage",
+    "DESCRIPTIONS": [
+      "You do not take damage from the next #b",
+      " #yTackles you play."
+    ]
+  },
+  "Slimebound:SplitDailyTriggerPower": {
+    "NAME": "Slime Split",
+    "DESCRIPTIONS": [
+      "When its HP is at or below #b50%, will split into #b2 Slime enemies with ",
+      "'s current HP."
+    ]
+  },
+  "Slimebound:SplitDailyPower": {
+    "NAME": "Splitting",
+    "DESCRIPTIONS": [
+      "This enemy is splitting this turn."
+    ]
+  },
+  "Slimebound:BuffAttackSlimesPower": {
+    "NAME": "Upgrade: Bruiser",
+    "DESCRIPTIONS": [
+      "#yBruiser Slimes deal #b",
+      " more damage."
+    ]
+  },
+  "Slimebound:BuffPoisonSlimesPower": {
+    "NAME": "Upgrade: Acid",
+    "DESCRIPTIONS": [
+      "#yPoisoning Slimes apply #b",
+      " more #yPoison."
+    ]
+  },
+  "Slimebound:BuffSlimingSlimesPower": {
+    "NAME": "Upgrade: Mire",
+    "DESCRIPTIONS": [
+      "#ySliming Slimes apply #b",
+      " more #yGoop."
+    ]
+  },
+  "Slimebound:BuffShieldSlimesPower": {
+    "NAME": "Upgrade: Leeching",
+    "DESCRIPTIONS": [
+      "#yLeeching Slimes deal #b",
+      " more damage."
+    ]
+  },
+  "Slimebound:HexSlimePerTurnPower": {
+    "NAME": "Hex Power",
+    "DESCRIPTIONS": [
+      "Spawn a #yGhostflame slime at the start of your next turn.",
+      "Spawn a #yGhostflame slime at the start of your next #b",
+      " turns."
+    ]
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Protect the Boss",
+    "DESCRIPTIONS": [
+      "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead.",
+      "Prevent the next #b",
+      " times you would damaged by an enemy attack, #yAbsorbing your leading Slime instead."
+    ]
+  },
+  "Slimebound:SplitForLessPower": {
+    "NAME": "Efficient Goo",
+    "DESCRIPTIONS": [
+      "#ySplitting costs #b",
+      " less HP.  Add #b",
+      " random #ySplit card to your hand each turn.",
+      " random #ySplit cards to your hand each turn."
+    ]
+  },
+  "Slimebound:ComboAttackPower": {
+    "NAME": "Lead By Example",
+    "DESCRIPTIONS": [
+      "The first #yAttack you play each turn causes your leading Slime to also attack.",
+      "The first #b",
+      " #yAttacks you play each turn causes your leading Slime to also attack.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+    ]
+  },
+  "Slimebound:RetainCardsOneTurnPower": {
+    "NAME": "Preparing Cards",
+    "DESCRIPTIONS": [
+      "Retain #b",
+      " card this turn.",
+      " cards this turn."
+    ]
+  },
+  "Slimebound:EnergizedSlimeboundPower": {
+    "NAME": "Energized",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " additional [E] next turn.",
+      " additional [E] next turn.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "Slimebound:SelfFormingGooPower": {
+    "NAME": "Self-Forming Goo",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP, at the start of your next turn, gain #b",
+      " #yBlock and apply #b",
+      " #yGoop to a random enemy.",
+      " #yGoop to a random enemy #b",
+      " times."
+    ]
+  },
+  "Slimebound:LoseSlimesPower": {
+    "NAME": "Overexert",
+    "DESCRIPTIONS": [
+      "Next turn, #yAbsorb all of your spawned Slimes.",
+      " turns from now, #yAbsorb all of your spawned Slimes."
+    ]
+  },
+  "Slimebound:TackleDebuffPower": {
+    "NAME": "Battered",
+    "DESCRIPTIONS": [
+      "Receives #b",
+      " more damage from cards containing \"Tackle\"."
+    ]
+  },
+  "Slimebound:LoseThornsPower": {
+    "NAME": "Retracting Spikes",
+    "DESCRIPTIONS": [
+      "Lose #b",
+      " #yThorns at the start of your next turn."
+    ]
+  },
+  "Slimebound:SlimedThornsPower": {
+    "NAME": "Living Wall",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yGoop to attackers this turn."
+    ]
+  },
+  "Slimebound:PreventSlimeDecayPower": {
+    "NAME": "Doused in Slime",
+    "DESCRIPTIONS": [
+      "The next time an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop.",
+      "The next #b",
+      " times an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop."
+    ]
+  },
+  "Slimebound:DuplicatedFormPower": {
+    "NAME": "Duplicated Form",
+    "DESCRIPTIONS": [
+      "The first card you play that targets enemies each turn is played twice.",
+      "The first #b",
+      " cards you play that target enemies each turn are played twice."
+    ]
+  },
+  "Slimebound:DuplicatedFormNoHealPower": {
+    "NAME": "Split",
+    "DESCRIPTIONS": [
+      "Max HP is temporarily reduced by #b",
+      "."
+    ]
+  },
+  "Slimebound:DuplicatedFormEnergyPower": {
+    "NAME": "Tag-Team",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " [E] each turn."
+    ]
+  },
+  "Slimebound:GluttonyPower": {
+    "NAME": "Gluttony",
+    "DESCRIPTIONS": [
+      "The first time you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
+      "The first ",
+      " times you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+    ]
+  },
+  "Slimebound:GluttonyPowerUpgraded": {
+    "NAME": "Gluttony+",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " random #yUpgraded #yLick card to your hand each turn.",
+      " random #yUpgraded #yLick cards to your hand each turn."
+    ]
+  },
+  "Slimebound:PoisonThornsPower": {
+    "NAME": "Acidic Goop",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison when you #yAttack an enemy who has #yGoop."
+    ]
+  },
+  "Slimebound:SlimeRitualPower": {
+    "NAME": "Ritual",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength at the start of each turn."
+    ]
+  },
+  "Slimebound:RecyclingPower": {
+    "NAME": "Recycling",
+    "DESCRIPTIONS": [
+      "At the start of your turn, return #b",
+      " random 0-Cost card from your #yexhaust pile to your hand.",
+      " random 0-Cost cards from your #yexhaust pile to your hand."
+    ]
+  },
+  "Slimebound:RecyclingPowerUpgraded": {
+    "NAME": "Recycling+",
+    "DESCRIPTIONS": [
+      "Heal #b",
+      " HP and draw a card when you #yExhaust a 0-cost card."
+    ]
+  },
+  "Slimebound:AcidTonguePower": {
+    "NAME": "Acid Tongue",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison whenever you apply #yGoop."
+    ]
+  },
+  "Slimebound:AcidTonguePowerUpgraded": {
+    "NAME": "Slimy Tongue",
+    "DESCRIPTIONS": [
+      "Effects that apply #yGoop apply #b",
+      " more."
+    ]
+  },
+  "Slimebound:SelfDamageSlimedPower": {
+    "NAME": "Stray Goop",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yGoop to a random enemy whenever you lose HP."
+    ]
+  },
+  "Slimebound:TackleBuffPower": {
+    "NAME": "Offensive Tackle",
+    "DESCRIPTIONS": [
+      "Cards containing \"Tackle\" deal #b",
+      " more damage to enemies."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPower": {
+    "NAME": "Alternating Beam",
+    "DESCRIPTIONS": [
+      "#yPoly #yBeam will be played at the start of your next turn. ",
+      "#yPoly #yBeam will be played at the start of your next #b",
+      " turns."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Alternating Beam+",
+    "DESCRIPTIONS": [
+      "#yPoly #yBeam+ will be played at the start of your next turn. ",
+      "#yPoly #yBeam+ will be played at the start of your next #b",
+      " turns."
+    ]
+  },
+  "Slimebound:FirmFortitudePower": {
+    "NAME": "Feel Our Pain",
+    "DESCRIPTIONS": [
+      "The next time you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
+      "The next #b",
+      " times you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+    ]
+  },
+  "Slimebound:NextTurnGainStrengthPower": {
+    "NAME": "Charging Up",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength on your next turn."
+    ]
+  },
+  "Slimebound:NextTurnGainSlimeCrush": {
+    "NAME": "Preparing to Crush",
+    "DESCRIPTIONS": [
+      "Gain a #gSLIME #gCRUSH on your next turn.",
+      "Gain #b",
+      " copies of #gSLIME #gCRUSH on your next turn."
+    ]
+  },
+  "Slimebound:StunnedPower": {
+    "NAME": "Completely Exhausted",
+    "DESCRIPTIONS": [
+      "Skip your next turn.",
+      "Skip your next #b",
+      " turns."
+    ]
+  },
+  "Slimebound:NextTurnGainHyperBeam": {
+    "NAME": "Preparing to Beam",
+    "DESCRIPTIONS": [
+      "Gain a #yHyper #yBeam on your next turn.",
+      "Gain #b",
+      " copies of #yHyper #yBeam on your next turn."
+    ]
+  },
+  "Slimebound:NextTurnGainDivider": {
+    "NAME": "Preparing to Divide",
+    "DESCRIPTIONS": [
+      "Gain a #yDivide on your next turn.",
+      "Gain #b",
+      " copies of #yDivide on your next turn."
+    ]
+  },
+  "Slimebound:StudyAutomatonPower": {
+    "NAME": "Study Automaton",
+    "DESCRIPTIONS": [
+      "Gain a random Automaton card at the start of next turn.",
+      "Gain a random Automaton card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyAutomatonPowerUpgraded": {
+    "NAME": "Study Automaton+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Automaton card at the start of next turn.",
+      "Gain a random Upgraded Automaton card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyAwakenedPower": {
+    "NAME": "Study Awakened One",
+    "DESCRIPTIONS": [
+      "Gain a random Awakened One card at the start of next turn.",
+      "Gain a random Awakened One card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyAwakenedPowerUpgraded": {
+    "NAME": "Study Awakened One+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Awakened One card at the start of next turn.",
+      "Gain a random Upgraded Awakened One card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:AwakenedOnePower": {
+    "NAME": "Dark Ritual",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Strength if this enemy does not attack on its turn."
+    ]
+  },
+  "Slimebound:StudyChampPower": {
+    "NAME": "Study Champ",
+    "DESCRIPTIONS": [
+      "Gain a random Champ card at the start of next turn.",
+      "Gain a random Champ card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyChampPowerUpgraded": {
+    "NAME": "Study Champ+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Champ card at the start of next turn.",
+      "Gain a random Upgraded Champ card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyCollectorPower": {
+    "NAME": "Study Collector",
+    "DESCRIPTIONS": [
+      "Gain a random Collector card at the start of next turn.",
+      "Gain a random Collector card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyCollectorPowerUpgraded": {
+    "NAME": "Study Collector+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Collector card at the start of next turn.",
+      "Gain a random Upgraded Collector card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyGuardianPower": {
+    "NAME": "Study Guardian",
+    "DESCRIPTIONS": [
+      "Gain a random Guardian card at the start of next turn.",
+      "Gain a random Guardian card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyGuardianPowerUpgraded": {
+    "NAME": "Study Guardian+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Guardian card at the start of next turn.",
+      "Gain a random Upgraded Guardian card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyHexaghostPower": {
+    "NAME": "Study Hexaghost",
+    "DESCRIPTIONS": [
+      "Gain a random Hexaghost card at the start of next turn.",
+      "Gain a random Hexaghost card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyHexaghostPowerUpgraded": {
+    "NAME": "Study Hexaghost+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Hexaghost card at the start of next turn.",
+      "Gain a random Upgraded Hexaghost card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyShapesPower": {
+    "NAME": "Study Donu & Deca",
+    "DESCRIPTIONS": [
+      "Gain a random Donu & Deca card at the start of next turn.",
+      "Gain a random Donu & Deca card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyShapesPowerUpgraded": {
+    "NAME": "Study Donu & Deca+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Donu & Deca card at the start of next turn.",
+      "Gain a random Upgraded Donu & Deca card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPower": {
+    "NAME": "Study Time Eater",
+    "DESCRIPTIONS": [
+      "Gain a random Time Eater card at the start of next turn.",
+      "Gain a random Time Eater card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPowerUpgraded": {
+    "NAME": "Study Time Eater+",
+    "DESCRIPTIONS": [
+      "Gain a random Upgraded Time Eater card at the start of next turn.",
+      "Gain a random Upgraded Time Eater card at the start of your next ",
+      " turns."
+    ]
+  },
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "Greed Recovering",
+    "DESCRIPTIONS": [
+      "#yGreed #yOoze will respawn at the end of your turn."
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "Scrap Recovering",
+    "DESCRIPTIONS": [
+      "#yScrap #yOoze will respawn at the end of your turn."
+    ]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "Minion Master",
+    "DESCRIPTIONS": [
+      "Whenever you Command, Command again.",
+      "Whenever you Command, Command #b",
+      " more times."
+    ]
+  },
+  "Slimebound:TackleSelfDamagePreventPower": {
+    "NAME": "Reckless",
+    "DESCRIPTIONS": [
+      "Cards containing \"Tackle\" deal #b",
+      " more damage to you."
+    ]
+  },
+  "Slimebound:GoopArmorPower": {
+    "NAME": "Goop Armor",
+    "DESCRIPTIONS": [
+      "Whenever you #yAttack an enemy who has #yGoop, gain #b",
+      " #yBlock."
+    ]
+  }
+}

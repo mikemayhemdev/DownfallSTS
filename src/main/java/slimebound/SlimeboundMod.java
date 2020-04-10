@@ -69,7 +69,17 @@ import java.util.Properties;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber, AddCustomModeModsSubscriber, PostDungeonInitializeSubscriber, PostBattleSubscriber, PostInitializeSubscriber, PreMonsterTurnSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber, basemod.interfaces.PostDrawSubscriber, basemod.interfaces.OnStartBattleSubscriber {
+public class SlimeboundMod implements OnCardUseSubscriber,
+        SetUnlocksSubscriber, AddCustomModeModsSubscriber,
+        PostDungeonInitializeSubscriber, PostBattleSubscriber,
+        PostInitializeSubscriber, PreMonsterTurnSubscriber,
+        basemod.interfaces.EditCharactersSubscriber,
+        basemod.interfaces.EditRelicsSubscriber,
+        basemod.interfaces.EditCardsSubscriber,
+        //basemod.interfaces.EditKeywordsSubscriber,
+        //EditStringsSubscriber,
+        basemod.interfaces.PostDrawSubscriber,
+        basemod.interfaces.OnStartBattleSubscriber {
     public static final boolean hasHubris;
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
     public static final String PROP_POTION_SHARING = "contentSharing_potions";
@@ -136,10 +146,13 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
+    private static String modID;
+
     public SlimeboundMod() {
 
 
         BaseMod.subscribe(this);
+        modID = "slimeboundmod";
 
         BaseMod.addColor(AbstractCardEnum.SLIMEBOUND,
                 SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR, SLIME_COLOR,
@@ -240,6 +253,11 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
     public static void triggerGoopCardVFX() {
         goopGlow = true;
     }
+
+    public static String getModID() {
+        return modID;
+    }
+
 
     public static void checkForEndGoopCardVFX() {
         boolean noGoop = true;
@@ -639,102 +657,7 @@ public class SlimeboundMod implements OnCardUseSubscriber, SetUnlocksSubscriber,
 
     }
 
-    public void receiveEditKeywords() {
-        final Gson gson = new Gson();
-        String language;
-        switch (Settings.language) {
-            case KOR:
-                language = "kor";
-                break;
-            case ZHS:
-                language = "zhs";
-                break;
-            case ZHT:
-                language = "zht";
-                break;
-            case FRA:
-                language = "fra";
-                break;
-            case JPN:
-                language = "jpn";
-                break;
-            default:
-                language = "eng";
-        }
 
-/*
-        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
-        if (Settings.language == Settings.GameLanguage.ZHT) language = "zht";
-        if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
-        if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
-        if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
-*/
-
-
-        logger.info("begin editing strings");
-        final String json = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-
-        final com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = (com.evacipated.cardcrawl.mod.stslib.Keyword[]) gson.fromJson(json, (Class) com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-        if (keywords != null) {
-            for (final com.evacipated.cardcrawl.mod.stslib.Keyword keyword : keywords) {
-                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
-    }
-
-    public void receiveEditStrings() {
-
-        String language;
-        switch (Settings.language) {
-            case KOR:
-                language = "kor";
-                break;
-            case ZHS:
-                language = "zhs";
-                break;
-            case ZHT:
-                language = "zht";
-                break;
-            case FRA:
-                language = "fra";
-                break;
-            case JPN:
-                language = "jpn";
-                break;
-            default:
-                language = "eng";
-        }
-/*
-        if (Settings.language == Settings.GameLanguage.ZHS) language = "zhs";
-        if (Settings.language == Settings.GameLanguage.ZHT) language = "zht";
-        if (Settings.language == Settings.GameLanguage.FRA) language = "fra";
-        if (Settings.language == Settings.GameLanguage.KOR) language = "kor";
-        if (Settings.language == Settings.GameLanguage.JPN) language = "jpn";
-*/
-
-
-        logger.info("begin editing strings");
-        String relicStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-        String cardStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-CardStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-        String powerStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-PowerStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String potionStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
-        String orbStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
-        String eventStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-EventStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
-        String modStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-DailyModStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(RunModStrings.class, modStrings);
-        String charStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-CharacterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(CharacterStrings.class, charStrings);
-        String UIStrings = Gdx.files.internal("slimeboundResources/localization/" + language + "/Slimebound-UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(UIStrings.class, UIStrings);
-
-        logger.info("done editing strings");
-    }
 
     public void receivePostBattle(AbstractRoom r) {
 

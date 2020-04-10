@@ -1,0 +1,32 @@
+{
+  "evil-within:EvilMenuPanel": {
+    "TEXT": [
+      "The Evil Within",
+      "Defend the Heart from adventuring intruders who intend to Slay the Spire.",
+      "Choose Your Villain"
+    ]
+  },
+  "evil-within:SoulToGoldChanges": {
+    "TEXT": [
+      "Souls",
+      "TODO: Soul flavor text/explanation."
+    ]
+  },
+  "evil-within:BustKeyButton": {
+    "TEXT": [
+      "Break Ruby",
+      "Break Sapphire",
+      "Break Emerald",
+      "Destroy the key to ",
+      "gain 1 Strength at the start of combat.",
+      "raise your Max HP by 10.",
+      "gain 1 Dexterity at the start of combat."
+    ]
+  },
+  "evil-within:WheelSpinButton": {
+    "TEXT": [
+      "Spin Wheel",
+      "Spin the Wheel."
+    ]
+  }
+}

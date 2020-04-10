@@ -1,0 +1,127 @@
+{
+  "Guardian:GemMine": {
+    "NAME": "Gem Mine",
+    "DESCRIPTIONS": [
+      "You step inside an old mine shaft.  In the rocky crevices, you can see a number of shiny gemstones.  #gEmeralds, #rrubies, #ytopazes, and several others.  Looking around, you can’t seem to locate any mining picks, but the gems are so close to the surface that, with some determination, you might be able to pry them from the stone.",
+      "Digging into the rocky wall, you manage to pluck a gem from it’s resting spot.  It hurt a little, but there is no glory without sacrifice",
+      "Though the prospect of treasure is appealing, you opt to save your armor for more important ventures.",
+      "Having successfully won over the old mine, you leave with a sense of accomplishment.  And some sore bronze appendages.",
+      "You snatch up the mining pick, which seems to be in poor condition. You could use it here to gain some gems, or stash it away to use later in your climb.",
+      "Using the mining pick, you hammer away at the wall and carve out a gem. The pick takes some wear and tear in the process, but better to damage it than your claws."
+    ],
+    "OPTIONS": [
+      "[Mine] #gGain #grandom #gGem. #rLose #r",
+      " #rHP.",
+      "[Leave]",
+      "[Loot] #gGain #gRhapsody #gCo. #gMining #gPick.",
+      "[Mine] #gGain #grandom #gGem. #rLose #rPick #rcharge.",
+      "[Locked] Pick #rBroken."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Quantum Chamber",
+    "DESCRIPTIONS": [
+      "You stumble open a box, its cover etched in strange runic symbols.  Peering inside, you notice a strange egg-shaped device, humming softly.  You don’t know what it is, or what it is used for, but the energy coming from it makes you think it must be powerful.",
+      "You decide that something this powerful is meant to be used.  You pocket the egg and be on your way, but as the runes glow, you can’t help but feel a little pain in your energy core.  Hopefully, it was worth it.",
+      "You decide that something this powerful should not be left for any adventurer to misuse, and decide to destroy it.  As you look at the smashed pieces, your bronze body is filled with a renewed vigor, but as the runes glow, you can’t help but feel regretful that such power will never see it’s potential.",
+      "You decide that something this powerful is probably kept in this box for a reason.  Though your directive says that you should do something with such a powerful object, you reason that whoever left this here did so for a reason.  Closing the lid, you look back once more as you continue your ascent."
+    ],
+    "OPTIONS": [
+      "[Use] #gGain #gQuantum #gChamber. #rBecome #rCursed #r- #rPain",
+      "[Smash] #gGain #g",
+      " #gMax #gHP. #rBecome #rCursed #r- #rRegret",
+      "[Leave]"
+    ]
+  },
+  "Guardian:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "You decide to put the forge to use and... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...make some room in your arsenal for new gemstones."
+    ],
+    "OPTIONS": [
+      "[Tinker] #gAdd #ga #gsocket #gto #gany #gsocketed #gcard.",
+      "Add a socket to a card.",
+      "[Locked] Requires a card with sockets."
+    ]
+  },
+  "Guardian:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Two is better than one."
+    ],
+    "OPTIONS": [
+      "[Synchronicity] #gMerge #g2 #gStrikes #gand #g2 #gDefends.",
+      "[Locked] Requires 2 Strikes and 2 Defends."
+    ]
+  },
+  "Guardian:GuardianTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "REPLACEMENT - RETURN TO ASSEMBLY.",
+      "ANOMALY DETECTED.",
+      "GUARDIAN MODEL DEFECTIVE.",
+      "OVERRIDE ALPHA PROTOCOL.",
+      "GUARDIAN: RETURN TO POST.",
+      "COMPLETE PROTOCOL FAILURE DETECTED.",
+      "TERMINATE GUARDIAN IMMEDIATELY.",
+      "NEW PROTOCOL: DESTROY.",
+      "CEASE AND RETURN TO EXORDIUM."
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:CrystalForge": {
+    "NAME": "Grim Forge",
+    "DESCRIPTIONS": [
+      "Through secret passages known only to the Constructs of the Spire, you enter a chamber designed for maintenance and repairs on Automaton models. The tools available here will be of certain use to you, even if they were not intended for Guardians.",
+      "Using the enchanted anvil, you smash an unnecessary piece of equipment to pieces, all to gain back the precious gems you foolishly placed into it earlier.",
+      "With the magic tongs, you carefully pry open a socket and remove the gems inside it, making room for better installments later, at the cost of making the gems completely unusable.",
+      "The Forge's ability to transmute matter is put to use immediately as you toss in an unneeded piece of equipment. Some moments later, the material dissolves and compresses into a beautiful gem.",
+      "You escape through the same secret passage you came in, leaving the Grim Forge behind you. Your journey continues towards the Dawn awaiting at the top of the Spire.",
+      "Select a Card to Dismantle.",
+      "Select a Card to Pry.",
+      "Select a Card to Transmute.",
+      "Select a Gem.",
+      "Select a Card to receive Gem.",
+      "Taking advantage of this break in the climb, you place a gemstone into your equipment, instantly feeling your power grow."
+    ],
+    "OPTIONS": [
+      "[Dismantle] #rRemove Socketed Card. Gain it's #gGems.",
+      "[Locked] Requires Socketed Card with a Gem installed.",
+      "[Pry] #rDestroy all #gGems in a Socketed Card.",
+      "[Transmute] #rRemove a Card. Gain a random #gGem.",
+      "[Locked] Already used.",
+      "[Leave]",
+      "[Enhance] Add a #gGem to a #gSocket.",
+      "[Locked] Requires a Gem and an open Socket."
+    ]
+  },
+  "Guardian:Purifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "With a swift crushing blow, you shatter the Shrine into pieces in order to uncover the treasures within. Within the rubble, you find two pristine and usable gemstones, patiently awaiting their place in your weaponry. NL NL You leave the remains of the Shrine and continue the climb."
+    ],
+    "OPTIONS": [
+      "[Smash] #gGain #g2 #gRandom #gGems."
+    ]
+  },
+  "Guardian:Transmorgrifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:UpgradeShrine": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  }
+}

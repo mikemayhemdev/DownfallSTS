@@ -51,8 +51,8 @@ import java.util.Collection;
 public class expansionContentMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
-        EditStringsSubscriber,
-        EditKeywordsSubscriber,
+        //EditStringsSubscriber,
+        //EditKeywordsSubscriber,
         StartGameSubscriber,
         PostUpdateSubscriber {
 
@@ -188,12 +188,14 @@ public class expansionContentMod implements
         }
     }
 
+    /*
     @Override
     public void receiveEditStrings() {
         BaseMod.loadCustomStringsFile(CardStrings.class, getModID() + "Resources/localization/eng/Cardstrings.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, getModID() + "Resources/localization/eng/Relicstrings.json");
         BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
     }
+    */
 
     @Override
     public void receiveStartGame() {
@@ -214,20 +216,7 @@ public class expansionContentMod implements
         }
     }
 
-    @Override
-    public void receiveEditKeywords() {
 
-        Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/Keywordstrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(getModID() + "", keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
-
-    }
 
     public void atb(AbstractGameAction q) {
         AbstractDungeon.actionManager.addToBottom(q);

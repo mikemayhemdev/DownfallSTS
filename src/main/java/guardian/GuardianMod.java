@@ -64,7 +64,17 @@ import java.util.Iterator;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
-public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber, SetUnlocksSubscriber, PostDungeonInitializeSubscriber, PostInitializeSubscriber, basemod.interfaces.EditCharactersSubscriber, basemod.interfaces.EditRelicsSubscriber, basemod.interfaces.EditCardsSubscriber, basemod.interfaces.EditKeywordsSubscriber, EditStringsSubscriber {
+public class GuardianMod implements PostDrawSubscriber,
+        PreMonsterTurnSubscriber,
+        SetUnlocksSubscriber,
+        PostDungeonInitializeSubscriber,
+        PostInitializeSubscriber,
+        basemod.interfaces.EditCharactersSubscriber,
+        basemod.interfaces.EditRelicsSubscriber,
+        basemod.interfaces.EditCardsSubscriber
+        //basemod.interfaces.EditKeywordsSubscriber
+        //EditStringsSubscriber
+{
 
     public static final Float stasisCardRenderScale = 0.2F;
     public static final Logger logger = LogManager.getLogger(GuardianMod.class.getName());
@@ -103,6 +113,9 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
     public static boolean gridScreenInGrimForge = false;
 
     public static SocketGemEffect currSocketGemEffect = null;
+
+
+    private static String modID;
 
     //public static BronzeOrb bronzeOrbInPlay;
 
@@ -149,6 +162,7 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
     public GuardianMod() {
 
         BaseMod.subscribe(this);
+        modID = "guardianmod";
 
         BaseMod.addColor(AbstractCardEnum.GUARDIAN,
                 GUARDIAN_COLOR, GUARDIAN_COLOR, GUARDIAN_COLOR, GUARDIAN_COLOR, GUARDIAN_COLOR, GUARDIAN_COLOR, GUARDIAN_COLOR,
@@ -274,6 +288,11 @@ public class GuardianMod implements PostDrawSubscriber, PreMonsterTurnSubscriber
     public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon) {
         return getRewardGemCards(onlyCommon, 3);
     }
+
+    public static String getModID() {
+        return modID;
+    }
+
 
     public static ArrayList<AbstractCard> getRewardGemCards(boolean onlyCommon, int count) {
         ArrayList<String> allGemCards = new ArrayList<>();
@@ -808,96 +827,6 @@ public static void saveData() {
 
     }
 
-    public void receiveEditKeywords() {
-        final Gson gson = new Gson();
-        String language;
-        switch (Settings.language) {
-
-            case KOR:
-                language = "kor";
-                break;
-            case ZHS:
-                language = "zhs";
-                break;
-                /*
-            case ZHT:
-                language = "zht";
-                break;
-            case FRA:
-                language = "fra";
-                break;
-            case JPN:
-                language = "jpn";
-                break;
-                */
-            default:
-                language = "eng";
-        }
-
-        logger.info("begin editing strings");
-        final String json = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-KeywordStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-        if (keywords != null) {
-            com.evacipated.cardcrawl.mod.stslib.Keyword[] var6 = keywords;
-            int var7 = keywords.length;
-
-            for (int var8 = 0; var8 < var7; ++var8) {
-                Keyword keyword = var6[var8];
-                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-            }
-        }
-    }
-
-    public void receiveEditStrings() {
-
-        String language;
-        switch (Settings.language) {
-            /*
-            case KOR:
-                language = "kor";
-                break;
-            case ZHS:
-                language = "zhs";
-                break;
-
-            case ZHT:
-                language = "zht";
-                break;
-            case FRA:
-                language = "fra";
-                break;
-            case JPN:
-                language = "jpn";
-                break;
-                */
-            default:
-                language = "eng";
-        }
-
-
-        logger.info("begin editing strings");
-        String relicStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-RelicStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
-        String cardStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-CardStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
-        String powerStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-PowerStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
-        String potionStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-PotionStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
-        String orbStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-OrbStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
-        String eventStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-EventStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
-        String modStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-DailyModStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(RunModStrings.class, modStrings);
-        String charStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-CharacterStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(CharacterStrings.class, charStrings);
-        String UIStrings = Gdx.files.internal("guardianResources/GuardianLocalization/" + language + "/Guardian-UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        BaseMod.loadCustomStrings(UIStrings.class, UIStrings);
-
-        logger.info("done editing strings");
-    }
 
     public void receivePostInitialize() {
 

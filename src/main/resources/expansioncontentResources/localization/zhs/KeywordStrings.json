@@ -1,0 +1,16 @@
+[
+  {
+    "PROPER_NAME": "Boss",
+    "NAMES": [
+      "boss"
+    ],
+    "DESCRIPTION": "After adding a Boss card to your deck, no other cards of that Boss's set can be added."
+  },
+  {
+    "PROPER_NAME": "Ghostflames",
+    "NAMES": [
+      "ghostflames"
+    ],
+    "DESCRIPTION": "Ghostflames provide additional benefits each turn if their Ignition requirements are met during that turn."
+  }
+]
