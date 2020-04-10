@@ -68,11 +68,11 @@
   },
   {
     "NAMES": [
-      "leeching slime",
-      "leeching_slime",
-      "leeching slimes",
-      "leeching_slimes",
-      "leeching"
+      "Leeching slime",
+      "Leeching_slime",
+      "Leeching slimes",
+      "Leeching_slimes",
+      "Leeching"
     ],
     "PROPER_NAME": "Leeching Slime",
     "DESCRIPTION": "Attacks for #b1 and grants you #b2 #yBlock each turn."
@@ -90,11 +90,11 @@
   },
   {
     "NAMES": [
-      "mire slime",
-      "mire_slime",
-      "mire slimes",
-      "mire_slimes",
-      "mire"
+      "Mire slime",
+      "Mire_slime",
+      "Mire slimes",
+      "Mire_slimes",
+      "Mire"
     ],
     "PROPER_NAME": "Mire Slime",
     "DESCRIPTION": "Attacks for #b2 and applies #b2 #yGoop each turn."

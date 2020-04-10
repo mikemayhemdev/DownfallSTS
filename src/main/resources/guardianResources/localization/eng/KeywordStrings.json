@@ -6,7 +6,7 @@
       "socketed"
     ],
     "PROPER_NAME": "Socket",
-    "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
+    "DESCRIPTION": "guardianmod:Gems can be placed into this Socket at a Rest Site to combine the guardianmod:Gem's effect with this card's effect."
   },
   {
     "NAMES": [
@@ -21,7 +21,7 @@
       "gems"
     ],
     "PROPER_NAME": "Gem",
-    "DESCRIPTION": "#yGems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
+    "DESCRIPTION": "#yguardianmod:Gems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
   },
   {
     "PROPER_NAME": "Defensive Mode",
@@ -44,7 +44,7 @@
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",
-    "DESCRIPTION": "Reduce the turn counter of a card in #yStasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
+    "DESCRIPTION": "Reduce the turn counter of a card in #yguardianmod:stasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
   },
   {
     "NAMES": [
@@ -66,13 +66,13 @@
       "volatile"
     ],
     "PROPER_NAME": "Volatile",
-    "DESCRIPTION": "When this card leaves #yStasis, #yExhaust it instead of returning it to your hand."
+    "DESCRIPTION": "When this card leaves #yguardianmod:stasis, #yExhaust it instead of returning it to your hand."
   },
   {
     "NAMES": [
       "tick"
     ],
     "PROPER_NAME": "Tick",
-    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yStasis."
+    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yguardianmod:stasis."
   }
 ]

@@ -6,7 +6,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #ySplitting."
+    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #yslimeboundmod:splitting."
   },
   {
     "NAMES": [
@@ -101,14 +101,6 @@
   },
   {
     "NAMES": [
-      "plated armor",
-      "plated_armor"
-    ],
-    "PROPER_NAME": "Plated Armor",
-    "DESCRIPTION": "Increases #yBlock each turn. Reduced when you take damage."
-  },
-  {
-    "NAMES": [
       "bronze slime",
       "bronze_slime"
     ],
@@ -146,7 +138,8 @@
   },
   {
     "NAMES": [
-      "tackle"
+      "tackle",
+      "tackles"
     ],
     "PROPER_NAME": "Tackle",
     "DESCRIPTION": "High-damage #yAttacks that also deal a small amount of damage to you."
@@ -158,34 +151,6 @@
     ],
     "PROPER_NAME": "Spire Boss",
     "DESCRIPTION": "Powerful 0-cost cards, inspired by the bosses of the Spire."
-  },
-  {
-    "NAMES": [
-      "divide"
-    ],
-    "PROPER_NAME": "Divide",
-    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yBruiser or #yAcid slime (both if upgraded). NL Command. NL #yExhaust."
-  },
-  {
-    "NAMES": [
-      "conquer"
-    ],
-    "PROPER_NAME": "Conquer",
-    "DESCRIPTION": "1-cost #yAttack. NL Deal #b10 damage, plus #b1 damage ( [REMOVE_SPACE]#b2 damage if upgraded) for each spawned Slime. NL Exhaust."
-  },
-  {
-    "NAMES": [
-      "serve"
-    ],
-    "PROPER_NAME": "Serve",
-    "DESCRIPTION": "1-cost #ySkill. NL #ySplit into a #yLeeching or #yMire slime (both if upgraded). NL Command. NL #yExhaust."
-  },
-  {
-    "NAMES": [
-      "protect"
-    ],
-    "PROPER_NAME": "Protect",
-    "DESCRIPTION": "1-cost Skill. NL Gain #b8 #yBlock, plus #b1 Block ( [REMOVE_SPACE]#b2 #yBlock if upgraded) for each spawned Slime. NL #yExhaust."
   },
   {
     "NAMES": [

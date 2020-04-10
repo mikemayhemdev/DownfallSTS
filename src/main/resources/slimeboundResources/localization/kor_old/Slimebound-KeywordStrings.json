@@ -67,10 +67,10 @@
     "NAMES": [
       "거머리 슬라임",
       "거머리_슬라임",
-      "leeching slime",
-      "leeching_slime",
-      "leeching slimes",
-      "leeching_slimes"
+      "Leeching slime",
+      "Leeching_slime",
+      "Leeching slimes",
+      "Leeching_slimes"
     ],
     "PROPERNAME": "거머리 슬라임",
     "DESCRIPTION": "매턴 2 피해를 주고 2 방어도 를 주는 슬라임 입니다."
@@ -91,10 +91,10 @@
     "NAMES": [
       "진흙탕 슬라임",
       "진흙탕_슬라임",
-      "mire slime",
-      "mire_slime",
-      "mire slimes",
-      "mire_slimes"
+      "Mire slime",
+      "Mire_slime",
+      "Mire slimes",
+      "Mire_slimes"
     ],
     "PROPERNAME": "진흙탕 슬라임",
     "DESCRIPTION": "매턴 1 피해를 주고 점액 을 2 부여하는 슬라임 입니다."

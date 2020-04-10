@@ -60,10 +60,10 @@
   {
     "NAMES": [
       "リーチングスライム",
-      "leeching_slime",
-      "leeching slimes",
-      "leeching_slimes",
-      "leeching"
+      "Leeching_slime",
+      "Leeching slimes",
+      "Leeching_slimes",
+      "Leeching"
     ],
     "PROPERNAME": "リーチングスライム",
     "DESCRIPTION": "毎ターン、2の攻撃と2ブロックを得る。"
@@ -82,10 +82,10 @@
   {
     "NAMES": [
       "マイヤースライム",
-      "mire_slime",
-      "mire slimes",
-      "mire_slimes",
-      "mire"
+      "Mire_slime",
+      "Mire slimes",
+      "Mire_slimes",
+      "Mire"
     ],
     "PROPERNAME": "マイヤースライム",
     "DESCRIPTION": "毎ターン、1の攻撃と粘液2を与える。"

@@ -62,9 +62,9 @@
   {
     "NAMES": [
       "水蛭史萊姆",
-      "leeching_slime",
-      "leeching slimes",
-      "leeching_slimes"
+      "Leeching_slime",
+      "Leeching slimes",
+      "Leeching_slimes"
     ],
     "PROPERNAME": "水蛭史萊姆",
     "DESCRIPTION": "發動攻擊時造成 2 點傷害，並給予你 2 點 格擋"
@@ -82,9 +82,9 @@
   {
     "NAMES": [
       "汙泥史萊姆",
-      "mire_slime",
-      "mire slimes",
-      "mire_slimes"
+      "Mire_slime",
+      "Mire slimes",
+      "Mire_slimes"
     ],
     "PROPERNAME": "汙泥史萊姆",
     "DESCRIPTION": "發動攻擊時造成 1 點傷害，並給予敵人 2 層 黏液"

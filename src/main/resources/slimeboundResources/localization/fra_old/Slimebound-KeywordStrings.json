@@ -56,11 +56,11 @@
   },
   {
     "NAMES": [
-      "leeching slime",
-      "leeching_slime",
-      "leeching slimes",
-      "leeching_slimes",
-      "leeching"
+      "Leeching slime",
+      "Leeching_slime",
+      "Leeching slimes",
+      "Leeching_slimes",
+      "Leeching"
     ],
     "PROPERNAME": "Leeching Slime",
     "DESCRIPTION": "Attacks for 2 and grants you 2 Block each turn."
@@ -78,11 +78,11 @@
   },
   {
     "NAMES": [
-      "mire slime",
-      "mire_slime",
-      "mire slimes",
-      "mire_slimes",
-      "mire"
+      "Mire slime",
+      "Mire_slime",
+      "Mire slimes",
+      "Mire_slimes",
+      "Mire"
     ],
     "PROPERNAME": "Mire Slime",
     "DESCRIPTION": "Attacks for 1 and applies 2 Slimed each turn."
