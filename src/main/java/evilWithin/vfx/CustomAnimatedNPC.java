@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.HeartAnimListener;
+import slimebound.SlimeboundMod;
 
 public class CustomAnimatedNPC {
     public TextureAtlas atlas = null;
@@ -26,6 +27,8 @@ public class CustomAnimatedNPC {
     public AnimationStateData stateData;
 
     public boolean customFlipX;
+    public Float customRot = 0F;
+    public Float customShadowScale = 0F;
 
     public CustomAnimatedNPC(float x, float y, String atlasUrl, String skeletonUrl, String trackName) {
         this.loadAnimation(atlasUrl, skeletonUrl, 1.0F);
@@ -48,6 +51,14 @@ public class CustomAnimatedNPC {
     public void render(SpriteBatch sb) {
         this.state.update(Gdx.graphics.getDeltaTime());
         this.state.apply(this.skeleton);
+        if (this.skeleton.getRootBone() != null) {
+            this.skeleton.getRootBone().setRotation(customRot);
+            if (this.skeleton.findBone("shadow") != null) {
+                SlimeboundMod.logger.info(this.skeleton.findBone("shadow"));
+                this.skeleton.findBone("shadow").setRotation(-1 * customRot);
+                this.skeleton.findBone("shadow").setScale(customShadowScale);
+            }
+        }
         this.skeleton.updateWorldTransform();
         this.skeleton.setFlip(customFlipX, false);
         this.skeleton.setColor(Color.WHITE);

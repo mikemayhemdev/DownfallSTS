@@ -27,20 +27,17 @@ public class RedIOU extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 
-    @Override
-    public void atBattleStart() {
-        if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
-
-
-        }
-
-      }
 
     @Override
     public void atBattleStartPreDraw() {
-        flash();
+        if (!usedUp) {
+            if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
+                flash();
 
-        this.addToBot(new BanditIOUAction(AbstractDungeon.player, AbstractDungeon.getMonsters().getRandomMonster(true)));
+                this.addToBot(new BanditIOUAction(AbstractDungeon.player, AbstractDungeon.getMonsters().getRandomMonster(true)));
+                this.usedUp();
+            }
+        }
 
     }
 }
