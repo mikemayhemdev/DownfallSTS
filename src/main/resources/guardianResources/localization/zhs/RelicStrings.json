@@ -3,28 +3,28 @@
     "NAME": "Mode Shifter",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "When you lose #b10 HP, gain #b3 #yDefensive_Mode and #b15 #yBlock. NL When activated, #yBlock will not be removed at the start of your next turn. NL Each activation increases the amount of HP loss required to activate again by #b5."
+      "When you lose #b10 HP, gain #b3 #yguardianmod:Defensive_Mode and #b15 #yBlock. NL When activated, #yBlock will not be removed at the start of your next turn. NL Each activation increases the amount of HP loss required to activate again by #b5."
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rMode #rShifter. NL Begin each combat with #b5 #yDefensive_Mode."
+      "Replaces #rMode #rShifter. NL Begin each combat with #b5 #yguardianmod:Defensive_Mode."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "Bronze Armor Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "When you use a card while in #yDefensive_Mode, gain #b1 more Block."
+      "When you use a card while in #yguardianmod:Defensive_Mode, gain #b1 more Block."
     ]
   },
-  "Guardian:GemCopier": {
+  "Guardian:guardianmod:GemCopier": {
     "NAME": "Gem Tumbler",
     "FLAVOR": "Only the most pristine will do.",
     "DESCRIPTIONS": [
-      "When you play a #yGem card, play a copy of it."
+      "When you play a #yguardianmod:Gem card, play a copy of it."
     ]
   },
   "Guardian:PocketSentry": {
@@ -39,45 +39,45 @@
     "NAME": "Sack of Gems",
     "FLAVOR": "Ooh... shiny!",
     "DESCRIPTIONS": [
-      "Upon pickup, add #b5 random #yGems to your deck."
+      "Upon pickup, add #b5 random #yguardianmod:Gems to your deck."
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "Construct's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest prototypes.",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in #yStasis, choose #b1 of #b3 cards to place into #yStasis."
+      "If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
     "NAME": "Tiny Police Box",
     "FLAVOR": "It's bigger on the inside...",
     "DESCRIPTIONS": [
-      "Start each combat with #b2 additional #yStasis slots."
+      "Start each combat with #b2 additional #yguardianmod:Stasis slots."
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
     "NAME": "Evacuation Plans",
     "FLAVOR": "Instructions for escaping the Spire.  Best not to let them fall into the wrong hands.",
     "DESCRIPTIONS": [
-      "On pickup, lose #b2 #yStasis slots. NL Gain [E] at the start of your turn."
+      "On pickup, lose #b2 #yguardianmod:Stasis slots. NL Gain [E] at the start of your turn."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
     "NAME": "Cryo Chamber",
     "FLAVOR": "Things always seem better coming out than they did going in.",
     "DESCRIPTIONS": [
-      "Gain #b1 #yStasis slot. When a card enters #yStasis, #yUpgrade it."
+      "Gain #b1 #yguardianmod:Stasis slot. When a card enters #yguardianmod:Stasis, #yUpgrade it."
     ]
   },
   "Guardian:BottledStasis": {
     "NAME": "Bottled Black Hole",
     "FLAVOR": "Somewhere, something incredible is waiting to be known.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. Start each combat with this card in #yStasis.",
+      "Upon pickup, choose a card. Start each combat with this card in #yguardianmod:Stasis.",
       "Choose a card for ",
       "Start each combat with ",
-      " in #yStasis."
+      " in #yguardianmod:Stasis."
     ]
   },
   "Guardian:StasisEgg": {
@@ -94,21 +94,21 @@
     "NAME": "Cooling Fluid",
     "FLAVOR": "Hazardous. Do not consume.",
     "DESCRIPTIONS": [
-      "When a card with a #yTick effect enters #yStasis, increase its turn counter by #b2."
+      "When a card with a #yguardianmod:Tick effect enters #yguardianmod:Stasis, increase its turn counter by #b2."
     ]
   },
   "Guardian:PickAxe": {
     "NAME": "Rhapsody Co. Mining Pick",
     "FLAVOR": "With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them.",
     "DESCRIPTIONS": [
-      "You can now #gMine for #b2 #yGems at Rest Sites (up to #b3 times)."
+      "You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times)."
     ]
   },
   "Guardian:GemstoneGun": {
     "NAME": "Gemstone Gun",
     "FLAVOR": "Bang! Bang! Bang! Hey, I matched three!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b3 #yGems. At the start of each combat, activate their effects in order.",
+      "Upon pickup, choose #b3 #yguardianmod:Gems. At the start of each combat, activate their effects in order.",
       "At the start of each combat: NL "
     ]
   },

@@ -9,23 +9,23 @@
   },
   "Slimebound:GangUp": {
     "NAME": "Gang Up",
-    "DESCRIPTION": "Gain X Slime slots. NL Split into a Bruiser_Slime X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL Split into a Bruiser_Slime X+1 times. NL Exhaust."
+    "DESCRIPTION": "Gain X Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X+1 times. NL Exhaust."
   },
   "Slimebound:LevelUp": {
     "NAME": "Level Up",
-    "DESCRIPTION": "Gain !M! Potency.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Potency and 1 Slime slot."
+    "DESCRIPTION": "Gain !M! slimeboundmod:Potency.",
+    "UPGRADE_DESCRIPTION": "Gain !M! slimeboundmod:Potency and 1 Slime slot."
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy Attack, Absorbing your leading Slime instead.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy Attack, Absorbing your leading Slime instead."
+    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy Attack, slimeboundmod:Absorbing your leading Slime instead.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy Attack, slimeboundmod:Absorbing your leading Slime instead."
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
   },
   "Slimebound:DuplicateSlimes": {
     "NAME": "Replication",
@@ -37,43 +37,43 @@
   },
   "Slimebound:AbsorbAll": {
     "NAME": "Absorption",
-    "DESCRIPTION": "Absorb all of your spawned Slimes. Gain 3 Block per slime Absorbed."
+    "DESCRIPTION": "slimeboundmod:Absorb all of your spawned Slimes. Gain 3 Block per slime slimeboundmod:Absorbed."
   },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 Potency. NL Command twice. NL !M! turns from now, Absorb all of your spawned slimes. NL Exhaust."
+    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all of your spawned slimes. NL Exhaust."
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "Split into a random slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into 2 random slimes."
+    "DESCRIPTION": "slimeboundmod:Split into a random slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into 2 random slimes."
   },
   "Slimebound:SuperSplit": {
     "NAME": "Super Split",
-    "DESCRIPTION": "Gain X Slime slots. NL Split into a random slime X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL Split into a random slime X+1 times. NL Exhaust."
+    "DESCRIPTION": "Gain X Slime slots. NL slimeboundmod:Split into a random slime X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL slimeboundmod:Split into a random slime X+1 times. NL Exhaust."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
-    "DESCRIPTION": "The first card you play each turn that targets enemies also Commands.",
-    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also Commands."
+    "DESCRIPTION": "The first card you play each turn that targets enemies also slimeboundmod:Commands.",
+    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also slimeboundmod:Commands."
   },
   "Slimebound:SlimeTap": {
     "NAME": "Slime Tap",
-    "DESCRIPTION": "Absorb your leading Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Absorb your 2 leading Slimes. Gain [E] [E] and draw 2 cards for each Absorbed. NL Exhaust.",
+    "DESCRIPTION": "slimeboundmod:Absorb your leading Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb your 2 leading Slimes. Gain [E] [E] and draw 2 cards for each slimeboundmod:Absorbed. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Need... slimes..."
     ]
   },
   "Slimebound:Teamwork": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Gain X Potency. NL Command X times. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block X times. NL Gain X slimeboundmod:Potency. NL slimeboundmod:Command X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Gain X slimeboundmod:Potency. NL slimeboundmod:Command X times. NL Exhaust."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. Command ALL slimes."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes."
   },
   "Slimebound:MaxSlimes": {
     "NAME": "Make Some Room",
@@ -86,29 +86,29 @@
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "Goop Armor",
-    "DESCRIPTION": "Gain !M! Block whenever you Attack an enemy who has Goop."
+    "DESCRIPTION": "Gain !M! Block whenever you Attack an enemy who has slimeboundmod:Goop."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Self-Forming Goo",
-    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! Goop to a random enemy and gain 2 Block at the start of your next turn."
+    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy and gain 2 Block at the start of your next turn."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
-    "DESCRIPTION": "Double the enemy's Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's Goop. NL Exhaust."
+    "DESCRIPTION": "Double the enemy's slimeboundmod:Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's slimeboundmod:Goop. NL Exhaust."
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! hexamod:Momentary Thorns."
+    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
-    "DESCRIPTION": "Gain Block equal to an enemy's Goop. NL Deal !D! damage."
+    "DESCRIPTION": "Gain Block equal to an enemy's slimeboundmod:Goop. NL Deal !D! damage."
   },
   "Slimebound:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
+    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random slimeboundmod:Lick cards to your hand equal to it's cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random slimeboundmod:Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
@@ -136,7 +136,7 @@
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
-    "DESCRIPTION": "Add 4 random Tackle cards to your hand. They cost 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Add 4 random slimeboundmod:Tackle cards to your hand. They cost 1 less this combat. NL Exhaust."
   },
   "Slimebound:Recycling": {
     "NAME": "Recycling",
@@ -145,20 +145,20 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "Morph a card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Morph a card in your hand. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Morph a card in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card. NL slimeboundmod:Morph a card in your hand. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next Tackle you play."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next slimeboundmod:Tackle you play."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "Draw a card. NL Morph all cards in your hand. NL Exhaust."
+    "DESCRIPTION": "Draw a card. NL slimeboundmod:Morph all cards in your hand. NL Exhaust."
   },
   "Slimebound:SoTasty": {
     "NAME": "SO TASTY!",
-    "DESCRIPTION": "Deal !D! damage to a random enemy X times. Add X random Lick cards to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times. Add X random slimeboundmod:Lick cards to your hand. NL Exhaust."
   },
   "Slimebound:Regenerate": {
     "NAME": "Regenerate",
@@ -170,43 +170,43 @@
   },
   "Slimebound:Lick": {
     "NAME": "Lick",
-    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
   },
   "Slimebound:HauntingLick": {
     "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! Goop. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
   },
   "Slimebound:PoisonLick": {
     "NAME": "Poison Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !SlimeboundSlimePoison! Poison. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !SlimeboundSlimePoison! Poison. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison. NL Draw a card. NL Exhaust."
   },
   "Slimebound:MegaLick": {
     "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! Goop to ALL enemies. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
   },
   "Slimebound:FocusedLick": {
     "NAME": "Focused Lick",
-    "DESCRIPTION": "Remove all Weak and Poison, replacing them with Goop. NL Apply !M! Goop.",
-    "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with Goop. NL Apply !M! Goop."
+    "DESCRIPTION": "Remove all Weak and Poison, replacing them with slimeboundmod:Goop. NL Apply !M! slimeboundmod:Goop.",
+    "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with slimeboundmod:Goop. NL Apply !M! slimeboundmod:Goop."
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "Rejuvenating Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
   },
   "Slimebound:Gluttony": {
     "NAME": "Gluttony",
-    "DESCRIPTION": "The first time you attack an enemy with Goop each turn, add a random Lick card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you attack an enemy with Goop each turn, add a random Lick card to your hand."
+    "DESCRIPTION": "The first time you attack an enemy with slimeboundmod:Goop each turn, add a random slimeboundmod:Lick card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you attack an enemy with slimeboundmod:Goop each turn, add a random slimeboundmod:Lick card to your hand."
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has Goop, Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has Goop, Command twice."
+    "DESCRIPTION": "Deal !D! damage. If the enemy has slimeboundmod:Goop, slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has slimeboundmod:Goop, slimeboundmod:Command twice."
   },
   "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",
@@ -214,25 +214,25 @@
   },
   "Slimebound:SoulSicken": {
     "NAME": "Soul Sicken",
-    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Goop to Poison.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's Goop to Poison."
+    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison."
   },
   "Slimebound:AcidGelatin": {
     "NAME": "Acidic Goop",
-    "DESCRIPTION": "Apply !M! Poison whenever you Attack an enemy who has Goop."
+    "DESCRIPTION": "Apply !M! Poison whenever you Attack an enemy who has slimeboundmod:Goop."
   },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your cards containing \"Lick\" (including Exhausted cards)."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your slimeboundmod:Lick cards (including Exhausted cards)."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. Add a random Lick card to your hand if the enemy has Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded Lick card to your hand if the enemy has Goop."
+    "DESCRIPTION": "Deal !D! damage. Add a random slimeboundmod:Lick card to your hand if the enemy has slimeboundmod:Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded slimeboundmod:Lick card to your hand if the enemy has slimeboundmod:Goop."
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
-    "DESCRIPTION": "Effects that apply Goop apply !M! more."
+    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more."
   },
   "Slimebound:TendrilStrike": {
     "NAME": "Toxin Strike",
@@ -272,15 +272,15 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. If the enemy has Goop, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. If the enemy has slimeboundmod:Goop, gain !B! Block."
   },
   "Slimebound:SlimesplosionOLD": {
     "NAME": "Slimesplosion",
-    "DESCRIPTION": "Apply !M! Goop and !SlimeboundSlimePoison! Poison to ALL enemies X times. NL Exhaust."
+    "DESCRIPTION": "Apply !M! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison to ALL enemies X times. NL Exhaust."
   },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! Goop to attackers this turn."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! slimeboundmod:Goop to attackers this turn."
   },
   "Slimebound:Slimepotheosis": {
     "NAME": "Slimepotheosis",
@@ -297,28 +297,28 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "Opening Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Tackle card to your hand. It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Upgraded Tackle card to your hand. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random slimeboundmod:Tackle card to your hand. It costs 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Upgraded slimeboundmod:Tackle card to your hand. It costs 0 this turn."
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Corrosive Spit",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop."
   },
   "Slimebound:Chomp": {
     "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random card containing \"Tackle\"  in your hand by 1 this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand by 1 this combat."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL The next time an Attack is used on this enemy, Goop is not removed."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL The next time an Attack is used on this enemy, slimeboundmod:Goop is not removed."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Cards containing \"Tackle\" deal !M! more damage this combat."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Tackles deal !M! more damage this combat."
   },
   "Slimebound:VenomTackle": {
     "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. Apply !M! Poison if the enemy has Goop."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. Apply !M! Poison if the enemy has slimeboundmod:Goop."
   },
   "Slimebound:UsefulSlime": {
     "NAME": "Useful Slime!",
@@ -326,12 +326,12 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy !M! times.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! Goop to a random enemy !M! times."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times."
   },
   "Slimebound:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop and !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !M! Vulnerable to ALL enemies."
   },
   "Slimebound:MassFeed": {
     "NAME": "Mass Feed",
@@ -339,17 +339,17 @@
   },
   "Slimebound:ViciousTackle": {
     "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from Goop."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from slimeboundmod:Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. Gain [E] and draw a card if the enemy has Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] and draw 2 cards if the enemy has Goop."
+    "DESCRIPTION": "Deal !D! damage. Gain [E] and draw a card if the enemy has slimeboundmod:Goop.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] and draw 2 cards if the enemy has slimeboundmod:Goop."
   },
   "Slimebound:LeechLife": {
     "NAME": "Leech Life",
-    "DESCRIPTION": "Heal HP equal to the enemy's Goop. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Heal HP equal to the enemy's slimeboundmod:Goop. NL Deal !D! damage. NL Exhaust."
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",
@@ -390,8 +390,8 @@
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "Split into a Bruiser or Guerilla slime. NL Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bruiser AND Guerilla slime. NL Command. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser or slimeboundmod:Guerilla slime. NL slimeboundmod:Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser AND slimeboundmod:Guerilla slime. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
@@ -405,84 +405,65 @@
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
-    "DESCRIPTION": "Split into a Leeching or Mire slime. NL Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Leeching AND Mire slime. NL Command. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching or slimeboundmod:Mire slime. NL slimeboundmod:Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching AND slimeboundmod:Mire slime. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
     "DESCRIPTION": "Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
   },
-  "Slimebound:SplitBronze": {
-    "NAME": "Split: Bronze",
-    "DESCRIPTION": "Split into a Bronze_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Bronze_Slime, who deals !M! more damage and grants !M! more Block. NL Exhaust."
-  },
-  "Slimebound:SplitTorchHead": {
-    "NAME": "Split: Torch Head",
-    "DESCRIPTION": "Split into a Torch_Head_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Torch_Head_Slime, who deals !M! more damage. NL Exhaust."
-  },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Deal !D! damage. NL Split into a Bruiser_Slime. NL Exhaust."
-  },
-  "Slimebound:SplitCultist": {
-    "NAME": "Split: Cultist",
-    "DESCRIPTION": "Split into a Cultist_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Split into a Cultist_Slime, who deals !M! more damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL Exhaust."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "Gain !B! Block. NL Split into a Leeching_Slime. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Split into a Guerilla_Slime. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! Goop. NL Split into a Mire_Slime. NL Exhaust."
-  },
-  "Slimebound:SplitGhostflame": {
-    "NAME": "Split: Ghostflame",
-    "DESCRIPTION": "Gain Slime Slots until you have !M!. NL Split into a Ghostflame_Slime. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL Exhaust."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you Command, Command again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Command, Command again."
+    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command again."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
-    "DESCRIPTION": "Cards containing Tackle deal !M! more damage to enemies, and 1 more damage to you."
+    "DESCRIPTION": "slimeboundmod:Tackles deal !M! more damage to enemies, and 1 more damage to you."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 Special Slimes to Split into. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
   },
   "Slimebound:SpecialForces": {
     "NAME": "Special Forces",
-    "DESCRIPTION": "For each of your Slime Slots: NL Choose 1 of 3 Special Slimes to Split into. NL Exhaust."
+    "DESCRIPTION": "For each of your Slime Slots: NL Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has Goop, it is not removed by this attack."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has slimeboundmod:Goop, it is not removed by this attack."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
-    "DESCRIPTION": "Deal !D! damage. NL Command. NL Whenever you Split, return this from your exhaust pile to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL Whenever you slimeboundmod:Split, return this from your exhaust pile to your hand. NL Exhaust."
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Command twice."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command twice."
   },
   "Slimebound:TagTeam": {
     "NAME": "Tag Team",
-    "DESCRIPTION": "Deal !D! damage. NL Split into a random Slime. NL Command !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random Slime. NL slimeboundmod:Command !M! times."
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, Command."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
   },
   "Slimebound:Nibble": {
     "NAME": "Nibble",

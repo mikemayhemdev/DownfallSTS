@@ -3,21 +3,21 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "You are not alone.",
     "DESCRIPTIONS": [
-      "#ySplit into a random Slime at the start of combat."
+      "#yslimeboundmod:Split into a random Slime at the start of combat."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
     "NAME": "Black Heart of Goo",
     "FLAVOR": "You and ooze army.",
     "DESCRIPTIONS": [
-      "Replaces #gHeart #gof #gGoo. At the start of combat, #ySplit into #b2 random Slimes, gain #b1 #yPotency, and gain #b1 Slime slot."
+      "Replaces #gHeart #gof #gGoo. At the start of combat, #yslimeboundmod:Split into #b2 random Slimes, gain #b1 #yslimeboundmod:Potency, and gain #b1 Slime slot."
     ]
   },
   "Slimebound:SlimedTailRelic": {
     "NAME": "Slimed Tail",
     "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
     "DESCRIPTIONS": [
-      "When you fall below #b50% of your Maximum HP, #ySplit into a #yGuerilla Slime, and the next time you take damage, your leading slime is #yAbsorbed instead. (works once per combat).",
+      "When you fall below #b50% of your Maximum HP, #yslimeboundmod:Split into a #yslimeboundmod:Guerilla Slime, and the next time you take damage, your leading slime is #yslimeboundmod:Absorbed instead. (works once per combat).",
       "This relic has been used this combat. It will become active again next combat."
     ]
   },
@@ -25,7 +25,7 @@
     "NAME": "Ooze Stone",
     "FLAVOR": "It is said to gain power based on your mood.",
     "DESCRIPTIONS": [
-      "At the start of combat, #ySplit into a #yMire Slime and gain #b1 #yPotency."
+      "At the start of combat, #yslimeboundmod:split into a #yslimeboundmod:Mire Slime and gain #b1 #yslimeboundmod:Potency."
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -62,36 +62,36 @@
     "NAME": "Goop Dweller",
     "FLAVOR": "He followed me home. Can I keep it?",
     "DESCRIPTIONS": [
-      "At the start of combat, #ySplit into a #yBruiser Slime."
+      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser Slime."
     ]
   },
   "Slimebound:SlimedSkullRelic": {
     "NAME": "Slimy Skull",
     "FLAVOR": "A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
     "DESCRIPTIONS": [
-      "Whenever you apply #yGoop, apply an additional #b",
-      " #yGoop."
+      "Whenever you apply #yslimeboundmod:Goop, apply an additional #b",
+      " #yslimeboundmod:Goop."
     ]
   },
   "Slimebound:MaxSlimesRelic": {
     "NAME": "Banner of Command",
     "FLAVOR": "It's a little damp.",
     "DESCRIPTIONS": [
-      "At the start of combat, #ySplit into a #yLeeching slime and gain #b1 Slime slot."
+      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching slime and gain #b1 Slime slot."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
     "NAME": "Protective Gear",
     "FLAVOR": "The best defense is a good offense.",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from Tackle cards by #b1."
+      "Reduce the damage you take from slimeboundmod:Tackle cards by #b1."
     ]
   },
   "Slimebound:TarBlob": {
     "NAME": "Tarr Blob",
     "FLAVOR": "The bad kind of Slime.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #ySplitting costs #b2 more HP and Max HP."
+      "Gain [E] at the start of your turn. #yslimeboundmod:Splitting costs #b2 more HP and Max HP."
     ]
   },
   "Slimebound:StickyStick": {

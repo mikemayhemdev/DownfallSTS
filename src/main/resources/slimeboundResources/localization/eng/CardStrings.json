@@ -99,7 +99,7 @@
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! hexamod:Momentary Thorns."
+    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
