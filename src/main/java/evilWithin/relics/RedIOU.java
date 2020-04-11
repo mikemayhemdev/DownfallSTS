@@ -34,9 +34,13 @@ public class RedIOU extends CustomRelic {
 
         }
 
+      }
+
+    @Override
+    public void atBattleStartPreDraw() {
         flash();
 
         this.addToBot(new BanditIOUAction(AbstractDungeon.player, AbstractDungeon.getMonsters().getRandomMonster(true)));
-    }
 
+    }
 }

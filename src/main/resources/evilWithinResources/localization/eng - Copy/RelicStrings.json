@@ -411,7 +411,12 @@
     "NAME": "Bandit Contract",
     "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
     "DESCRIPTIONS": [
-      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you."
+      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you.",
+      "It's time for work, boys!",
+      "Get 'em Bear!",
+      "A deal's a deal. NL We're done here.",
+      "All hail the new NL ~Lord~ ~Red~ ~Mask!~",
+      "Good luck, boss!"
     ]
   },
   "evil-within:RedIOUUpgrade": {

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.ChemicalX;
@@ -32,6 +33,7 @@ public class BanditIOUAction extends AbstractGameAction {
         this.p = p;
         this.m = m;
 
+        if (m == null) SlimeboundMod.logger.info("Bandit Cutscene has a null monster!!");
         this.duration = 2F;
     }
 
@@ -59,6 +61,8 @@ public class BanditIOUAction extends AbstractGameAction {
 
             effect = new BanditIOUEffect();
             effect.action = this;
+            effect.pointyStartX = this.m.drawX - this.m.hb.width / 2 - (150F * Settings.scale);
+            effect.pointyStartY = this.m.drawY;
             AbstractDungeon.effectList.add(effect);
             
         } else {
