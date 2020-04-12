@@ -194,6 +194,7 @@ public class EvilWithinMod implements
         //loadLocalization(language, KeywordStrings.class);
         loadLocalization(language, OrbStrings.class);
         loadLocalization(language, RunModStrings.class);
+        loadLocalization(language, PowerStrings.class);
     }
 
     @Override

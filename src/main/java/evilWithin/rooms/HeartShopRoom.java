@@ -46,17 +46,24 @@ public class HeartShopRoom extends ShopRoom {
 
     public void onPlayerEntry() {
         if (EvilModeCharacterSelect.evilMode)
-            if (!FleeingMerchant.DEAD)
+
+
+            if (!FleeingMerchant.DEAD){
+
                 startCombat();
+            }
             else
-                ((HeartShopRoom) AbstractDungeon.getCurrRoom()).heartMerchant = new HeartMerchant();
+            {
+                this.setHeartMerchant(new HeartMerchant());
+                this.heartMerchant.spawnHitbox();
+                showHeartMerchant();
+            }
 
         if (!AbstractDungeon.id.equals("TheEnding")) {
             this.playBGM("SHOP");
         }
 
         AbstractDungeon.overlayMenu.proceedButton.setLabel(TEXT[0]);
-        this.setHeartMerchant(new HeartMerchant());
     }
 
 

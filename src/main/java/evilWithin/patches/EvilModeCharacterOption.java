@@ -37,7 +37,12 @@ public class EvilModeCharacterOption {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[2]);
                 }
             } else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
-                TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[3]);
+                if (UnlockTracker.isCharacterLocked("Hexaghost"))
+                {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[3]);
+                } else {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[4]);
+                }
             }
         }
     }
