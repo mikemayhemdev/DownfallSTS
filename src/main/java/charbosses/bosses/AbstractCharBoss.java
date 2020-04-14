@@ -269,6 +269,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.applyStartOfTurnPostDrawRelics();
             this.applyStartOfTurnPostDrawPowers();
         }
+
+
     }
 
     public void applyPowers() {
@@ -341,11 +343,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (int i = 0; i < sortedCards.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) sortedCards.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2) {
+                c.createIntent();
+                c.bossLighten();
                 budget -= c.costForTurn;
                 budget += c.energyGeneratedIfPlayed;
                 if (budget < 0) budget = 0;
-                c.createIntent();
-            } else c.bossDarken();
+            }
 
                 /*
                 if (c.type == AbstractCard.CardType.CURSE && boss.hasRelic("Blue Candle")) {
@@ -598,12 +601,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 //final AbstractCard c = chooseCardToDraw(this.drawPile.group);
                 final AbstractCard c = this.drawPile.getTopCard();
                 AbstractBossCard cB = (AbstractBossCard) c;
-                cB.bossLighten();
+                cB.bossDarken();
+                cB.destroyIntent();
 
                 c.current_x = DRAW_PILE_X;
                 c.current_y = DRAW_PILE_Y;
                 c.setAngle(0.0f, true);
                 c.lighten(false);
+
                 c.drawScale = 0.12f;
                 c.targetDrawScale = AbstractBossCard.HAND_SCALE;
                 c.triggerWhenDrawn();
@@ -667,7 +672,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         AbstractBossCard cB = (AbstractBossCard) c;
-        cB.intent = null;
+        cB.showIntent = false;
     }
 
     public void combatUpdate() {

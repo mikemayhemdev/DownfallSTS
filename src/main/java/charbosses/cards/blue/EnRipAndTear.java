@@ -29,6 +29,7 @@ public class EnRipAndTear extends AbstractBossCard {
         this.baseDamage = 7;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -50,6 +50,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public boolean forceDraw = false;
     public boolean bossDarkened = false;
     public boolean tempLighten = false;
+
+    public boolean showIntent = false;
     public int energyGeneratedIfPlayed = 0;
     public static final String[] TEXT;
 
@@ -69,7 +71,6 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int intentDmg;
     public int intentBaseDmg;
     private int intentMultiAmt;
-    private boolean isMultiDmg;
     private Color intentColor = Color.WHITE.cpy();
     private float intentParticleTimer;
     private float intentAngle;
@@ -370,11 +371,13 @@ public abstract class AbstractBossCard extends AbstractCard {
         public void bossDarken(){
             ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(0F, 0F, 0F, .75F));
             this.bossDarkened = true;
+            SlimeboundMod.logger.info(this.name + " darkened.");
         }
 
     public void bossLighten(){
             ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(255F * .43F, 255F * .37F, 255F * .65F, 0F));
             this.bossDarkened = false;
+            SlimeboundMod.logger.info(this.name + " lightened.");
         }
 
     @Override
@@ -484,7 +487,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         switch(this.intent) {
             case ATTACK:
                 this.intentTip.header = TEXT[0];
-                if (this.isMultiDmg) {
+                if (this.isMultiDamage) {
                     this.intentTip.body = TEXT[1] + this.intentDmg + TEXT[2] + this.intentMultiAmt + TEXT[3];
                 } else {
                     this.intentTip.body = TEXT[4] + this.intentDmg + TEXT[5];
@@ -494,7 +497,7 @@ public abstract class AbstractBossCard extends AbstractCard {
                 break;
             case ATTACK_BUFF:
                 this.intentTip.header = TEXT[6];
-                if (this.isMultiDmg) {
+                if (this.isMultiDamage) {
                     this.intentTip.body = TEXT[7] + this.intentDmg + TEXT[2] + this.intentMultiAmt + TEXT[8];
                 } else {
                     this.intentTip.body = TEXT[9] + this.intentDmg + TEXT[5];
@@ -509,7 +512,7 @@ public abstract class AbstractBossCard extends AbstractCard {
                 break;
             case ATTACK_DEFEND:
                 this.intentTip.header = TEXT[0];
-                if (this.isMultiDmg) {
+                if (this.isMultiDamage) {
                     this.intentTip.body = TEXT[12] + this.intentDmg + TEXT[2] + this.intentMultiAmt + TEXT[3];
                 } else {
                     this.intentTip.body = TEXT[12] + this.intentDmg + TEXT[5];
@@ -587,7 +590,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     private Texture getAttackIntentTip() {
         int tmp;
-        if (this.isMultiDmg) {
+        if (this.isMultiDamage) {
             tmp = this.intentDmg * this.intentMultiAmt;
         } else {
             tmp = this.intentDmg;
@@ -611,7 +614,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public void createIntent() {
         if (this.intent == null) return;
 
-        bossLighten();
+        //bossLighten();
         refreshIntentHbLocation();
         this.intentParticleTimer = 0.5F;
         this.intentBaseDmg = this.damage;
@@ -630,22 +633,41 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.intentAlpha = 0.0F;
         this.intentAlphaTarget = 1.0F;
         this.updateIntentTip();
+        this.showIntent = true;
+
+        SlimeboundMod.logger.info(this.name + " intent made.");
+    }
+
+    public void destroyIntent() {
+        if (this.intent != null){
+            this.intentImg = null;
+            this.intentBg = null;
+            this.intentAlpha = 0F;
+            this.intentAlphaTarget = 0F;
+            this.showIntent = false;
+            this.intentParticleTimer = 0F;
+            this.intentBaseDmg = 0;
+            this.tipIntent = null;
+            SlimeboundMod.logger.info(this.name + " intent destroyed.");
+        }
     }
 
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
         if (this.intent != null) {
-            if (!this.hov2) {
-                if (!this.owner.isDying && !this.owner.isEscaping && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.player.isDead && !AbstractDungeon.player.hasRelic("Runic Dome") && this.intent != AbstractMonster.Intent.NONE && !Settings.hideCombatElements) {
-                    this.renderIntentVfxBehind(sb);
-                    this.renderIntent(sb);
-                    this.renderIntentVfxAfter(sb);
-                    this.renderDamageRange(sb);
-                }
+            if (this.showIntent) {
+                if (!this.hov2) {
+                    if (!this.owner.isDying && !this.owner.isEscaping && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.player.isDead && !AbstractDungeon.player.hasRelic("Runic Dome") && this.intent != AbstractMonster.Intent.NONE && !Settings.hideCombatElements) {
+                        this.renderIntentVfxBehind(sb);
+                        this.renderIntent(sb);
+                        this.renderIntentVfxAfter(sb);
+                        this.renderDamageRange(sb);
+                    }
 
-                this.hb.render(sb);
-                this.intentHb.render(sb);
+                    this.hb.render(sb);
+                    this.intentHb.render(sb);
+                }
             }
         }
     }
@@ -698,7 +720,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     protected Texture getAttackIntent() {
         int tmp;
-        if (this.isMultiDmg) {
+        if (this.isMultiDamage) {
             tmp = this.intentDmg * this.intentMultiAmt;
         } else {
             tmp = this.intentDmg;
@@ -720,9 +742,10 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     private void renderDamageRange(SpriteBatch sb) {
+        //SlimeboundMod.logger.info(this.name + " " + this.isMultiDamage);
         if (this.intent.name().contains("ATTACK")) {
-            if (this.isMultiDmg) {
-                FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(this.intentDmg) + "x" + Integer.toString(this.intentMultiAmt), this.intentHb.cX - 30.0F * Settings.scale, this.intentHb.cY + this.bobEffect.y - 12.0F * Settings.scale, this.intentColor);
+            if (this.isMultiDamage) {
+                FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, this.intentDmg + "x" + this.intentMultiAmt, this.intentHb.cX - 30.0F * Settings.scale, this.intentHb.cY + this.bobEffect.y - 12.0F * Settings.scale, this.intentColor);
             } else {
                 FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(this.intentDmg), this.intentHb.cX - 30.0F * Settings.scale, this.intentHb.cY + this.bobEffect.y - 12.0F * Settings.scale, this.intentColor);
             }
