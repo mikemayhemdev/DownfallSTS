@@ -3,8 +3,10 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import theHexaghost.HexaMod;
@@ -17,8 +19,12 @@ public class PotionPostCombatPower extends AbstractPower implements CloneablePow
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/PotionAfterCombat84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/PotionAfterCombat32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public PotionPostCombatPower(final int amount) {
-        this.name = "Post-Combat Potion";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -39,9 +45,9 @@ public class PotionPostCombatPower extends AbstractPower implements CloneablePow
     @Override
     public void updateDescription() {
         if (amount > 1)
-            description = "At the end of combat, obtain #b" + amount + " additional Potions.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = "At the end of combat, obtain #b" + amount + " additional Potion.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
     @Override

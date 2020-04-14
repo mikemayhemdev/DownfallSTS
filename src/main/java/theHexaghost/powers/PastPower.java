@@ -5,7 +5,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.OnRetractSubscriber;
@@ -19,8 +21,12 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Past32.png");
     public boolean activated = false;
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public PastPower(final int amount) {
-        this.name = "Devil's Dance";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -51,15 +57,15 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
     @Override
     public void updateDescription() {
         StringBuilder sb = new StringBuilder();
-        sb.append("The first time you #yRetract each turn, gain ");
+        sb.append(DESCRIPTIONS[0]);
 
         for (int i = 0; i < this.amount; ++i) {
             sb.append("[E] ");
         }
         if (amount == 1)
-            sb.append(" and draw #b" + amount + " card.");
+            sb.append(DESCRIPTIONS[1]).append(amount).append(DESCRIPTIONS[2]);
         else
-            sb.append(" and draw #b" + amount + " cards.");
+            sb.append(DESCRIPTIONS[1]).append(amount).append(DESCRIPTIONS[2]);
         this.description = sb.toString();
     }
 

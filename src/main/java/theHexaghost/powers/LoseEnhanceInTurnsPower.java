@@ -7,7 +7,9 @@ import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
@@ -19,8 +21,12 @@ public class LoseEnhanceInTurnsPower extends TwoAmountPower implements Cloneable
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/LoseIntensity84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/LoseIntensity32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public LoseEnhanceInTurnsPower(final int amount, final int amount2) {
-        this.name = "Heated Up";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -54,9 +60,9 @@ public class LoseEnhanceInTurnsPower extends TwoAmountPower implements Cloneable
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "At the end of your turn, lose #b" + amount2 + " #yEnhance.";
+            description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[3];
         else
-            description = "In #b" + amount + " turns, lose #b" + amount2 + " #yEnhance.";
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + amount2 + DESCRIPTIONS[3];
     }
 
     @Override

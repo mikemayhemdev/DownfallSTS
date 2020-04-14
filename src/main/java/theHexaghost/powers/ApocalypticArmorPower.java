@@ -4,7 +4,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
@@ -20,8 +22,12 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApocalypseArmor84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/ApocalypseArmor32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public ApocalypticArmorPower(final int amount) {
-        this.name = "Doomsday";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -50,8 +56,8 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
     @Override
     public void updateDescription() {
         if (amount >= GhostflameHelper.hexaGhostFlames.size())
-            description = "The next time you #yIgnite the Inferno Ghostflame and all #b" + amount + " Ghostflames are #yIgnited, end your turn and take an additional turn.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = "Whenver you #yIgnite the Inferno Ghostflame and at least #b" + amount + " Ghostflames are #yIgnited, end your turn and take an additional turn.";
+            description = DESCRIPTIONS[2] + amount + DESCRIPTIONS[1];
     }
 }

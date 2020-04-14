@@ -9,7 +9,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.HexaMod;
@@ -24,8 +26,12 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Burning32.png");
     public static Color myColor = new Color(0.529F, 0.922F, 0, 1);
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public BurnPower(final AbstractCreature owner, final int amount) {
-        this.name = "Burn";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
@@ -61,7 +67,10 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public void updateDescription() {
-        description = "At the start of its turn, loses #b" + amount + " HP, then Burn is halved.";
+        if (AbstractDungeon.player.hasRelic(IceCube.ID)) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        } else
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
     @Override

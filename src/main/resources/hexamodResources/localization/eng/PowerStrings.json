@@ -1,1 +1,187 @@
-{}
+{
+  "hexamod:AgainPower": {
+    "NAME": "Again!",
+    "DESCRIPTIONS": [
+      "Do not #yAdvance at the end of the next turn.",
+      "Do not #yAdvance at the end of the next #b",
+      " turns."
+    ]
+  },
+  "hexamod:ApocalypticArmorPower": {
+    "NAME": "Doomsday",
+    "DESCRIPTIONS": [
+      "The next time you #yIgnite the Inferno Ghostflame and all #b",
+      " Ghostflames are #yIgnited, end your turn and take an additional turn.",
+      "Whenever you #yIgnite the Inferno Ghostflame and at least #b"
+    ]
+  },
+  "hexamod:ApplyBurnAtTurnStartOncePower": {
+    "NAME": "Delayed Flame",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, apply #b",
+      " #yBurn to ALL enemies."
+    ]
+  },
+  "hexamod:BurnPerTurnPower": {
+    "NAME": "Melting Metal",
+    "DESCRIPTIONS": [
+      "Gains #b",
+      " #yBurn at the start of its turn."
+    ]
+  },
+  "hexamod:BurnPower": {
+    "NAME": "Burn",
+    "DESCRIPTIONS": [
+      "At the start of its turn, loses #b",
+      " HP, then Burn is #rremoved.",
+      " HP, then Burn is halved."
+    ]
+  },
+  "hexamod:BurnvenomPower": {
+    "NAME": "Wildfire Weapon",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, apply #b",
+      " #yBurn."
+    ]
+  },
+  "hexamod:CommonPostCombatPower": {
+    "NAME": "Post-Combat Common",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional #yCommon cards.",
+      " additional #yCommon card."
+    ]
+  },
+  "hexamod:CrispyPower": {
+    "NAME": "Extra Crispy",
+    "DESCRIPTIONS": [
+      "Burn applied is increased by #b",
+      "."
+    ]
+  },
+  "hexamod:EnhancePower": {
+    "NAME": "Intensity",
+    "DESCRIPTIONS": [
+      "Increase the amount of Damage, Burn, and Block applied by Ghostflames when Ignited by #b",
+      "."
+    ]
+  },
+  "hexamod:EtherealRefundPower": {
+    "NAME": "Ethereal Refund",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yEthereal card this turn, gain ",
+      " ."
+    ]
+  },
+  "hexamod:FuturePower": {
+    "NAME": "Speedrun",
+    "DESCRIPTIONS": [
+      "Whenever you #yAdvance, gain #b",
+      " #yBlock."
+    ]
+  },
+  "hexamod:FutureUpgradePower": {
+    "NAME": "Post-Combat Experience",
+    "DESCRIPTIONS": [
+      "At the end of combat, #yUpgrade #b",
+      " random card in your deck.",
+      " random cards in your deck."
+    ]
+  },
+  "hexamod:GainStrengthThatGoesAwayPower": {
+    "NAME": "Here and Now",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract."
+    ]
+  },
+  "hexamod:GhostFlameBarrierPower": {
+    "NAME": "Ghostflame Barrier",
+    "DESCRIPTIONS": [
+      "When attacked, applies #b",
+      " #yBurn to the attacker."
+    ]
+  },
+  "hexamod:GiftsFromTheDeadPower": {
+    "NAME": "Ghostly Gifts",
+    "DESCRIPTIONS": [
+      "Whenever an #yEthereal card is #yExhausted, gain ",
+      " next turn."
+    ]
+  },
+  "hexamod:GoldPostCombatPower": {
+    "NAME": "Post-Combat Gold",
+    "DESCRIPTIONS": [
+      "Gold reward from this combat is increased by #b",
+      " ."
+    ]
+  },
+  "hexamod:HexalevelPower": {
+    "NAME": "Hexalevel",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yEnhance."
+    ]
+  },
+  "hexamod:LoseEnhanceInTurnsPower": {
+    "NAME": "Heated Up",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b",
+      "In #b",
+      " turns, lose #b",
+      " #yEnhance."
+    ]
+  },
+  "hexamod:ParanormalFormPower": {
+    "NAME": "Paranormal Form",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yEthereal card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "hexamod:Pastower": {
+    "NAME": "Devil's Dance",
+    "DESCRIPTIONS": [
+      "The first time you #yRetract each turn, gain ",
+      " and draw #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "hexamod:PotionPostCombatPower": {
+    "NAME": "Post-Combat Potion",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional Potions.",
+      " additional Potion."
+    ]
+  },
+  "hexamod:RadiantPower": {
+    "NAME": "Radiant Flame",
+    "DESCRIPTIONS": [
+      "Whenever a Ghostflame becomes Charged, apply #b",
+      " #yBurn to a random enemy."
+    ]
+  },
+  "hexamod:SealPostCombatPower": {
+    "NAME": "Post-Combat Seal",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional #ySeal cards.",
+      " additional #ySeal card."
+    ]
+  },
+  "hexamod:TimeStopPower": {
+    "NAME": "ZA WARUDO!",
+    "DESCRIPTIONS": [
+      "At the end of your turn, immediately start another turn. NL Energy and Block are maintained."
+    ]
+  },
+  "hexamod:VolcanoVisagePower": {
+    "NAME": "Volcanic Visage",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yBurn to all enemies."
+    ]
+  }
+}

@@ -37,7 +37,7 @@ public class TimeStopPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        description = "At the end of your turn, immediately start another turn. NL Energy and Block are maintained.";
+        description = DESCRIPTIONS[0];
     }
 
     @Override
