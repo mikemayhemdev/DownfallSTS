@@ -61,7 +61,10 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public void updateDescription() {
-        description = "At the start of its turn, loses #b" + amount + " HP, then Burn is halved.";
+        if (AbstractDungeon.player.hasRelic(IceCube.ID)) {
+            description = "At the start of its turn, loses #b" + amount + " HP, then Burn is #rremoved.";
+        } else
+            description = "At the start of its turn, loses #b" + amount + " HP, then Burn is halved.";
     }
 
     @Override

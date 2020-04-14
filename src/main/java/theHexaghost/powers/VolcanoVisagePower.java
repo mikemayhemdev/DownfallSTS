@@ -40,7 +40,7 @@ public class VolcanoVisagePower extends AbstractPower implements CloneablePowerI
 
     @Override
     public void updateDescription() {
-        description = "At the start of your turn, apply #b" + amount + " #yBurn to all enemies";
+        description = "At the start of your turn, apply #b" + amount + " #yBurn to all enemies.";
     }
 
     @Override

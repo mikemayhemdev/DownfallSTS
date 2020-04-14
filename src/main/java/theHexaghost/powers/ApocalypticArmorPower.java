@@ -52,6 +52,6 @@ public class ApocalypticArmorPower extends AbstractPower implements OnChargeSubs
         if (amount >= GhostflameHelper.hexaGhostFlames.size())
             description = "The next time you #yIgnite the Inferno Ghostflame and all #b" + amount + " Ghostflames are #yIgnited, end your turn and take an additional turn.";
         else
-            description = "Whenver you #yIgnite the Inferno Ghostflame and at least #b" + amount + " Ghostflames are #yIgnited, end your turn and take an additional turn.";
+            description = "Whenever you #yIgnite the Inferno Ghostflame and at least #b" + amount + " Ghostflames are #yIgnited, end your turn and take an additional turn.";
     }
 }

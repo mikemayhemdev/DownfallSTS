@@ -57,9 +57,9 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
             sb.append("[E] ");
         }
         if (amount == 1)
-            sb.append(" and draw #b" + amount + " card.");
+            sb.append(" and draw #b").append(amount).append(" card.");
         else
-            sb.append(" and draw #b" + amount + " cards.");
+            sb.append(" and draw #b").append(amount).append(" cards.");
         this.description = sb.toString();
     }
 
