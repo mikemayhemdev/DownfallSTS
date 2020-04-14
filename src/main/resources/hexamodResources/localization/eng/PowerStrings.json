@@ -47,8 +47,9 @@
   "hexamod:CommonPostCombatPower": {
     "NAME": "Post-Combat Common",
     "DESCRIPTIONS": [
-      "Whenever you deal unblocked attack damage, apply #b",
-      " #yBurn."
+      "At the end of combat, obtain #b",
+      " additional #yCommon cards.",
+      " additional #yCommon card."
     ]
   },
   "hexamod:CrispyPower": {

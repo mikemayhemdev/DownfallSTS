@@ -5,8 +5,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
@@ -22,8 +24,12 @@ public class FutureUpgradePower extends AbstractPower implements CloneablePowerI
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/FutureUpgrade84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/FutureUpgrade32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public FutureUpgradePower(final int amount) {
-        this.name = "Post-Combat Experience";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -62,9 +68,9 @@ public class FutureUpgradePower extends AbstractPower implements CloneablePowerI
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "At the end of combat, #yUpgrade #b" + amount + " random card in your deck.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = "At the end of combat, #yUpgrade #b" + amount + " random cards in your deck.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
     @Override

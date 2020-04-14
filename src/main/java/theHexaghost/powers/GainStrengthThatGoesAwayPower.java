@@ -5,7 +5,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
@@ -20,8 +22,12 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Present32.png");
     public boolean activated = true;
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public GainStrengthThatGoesAwayPower(final int amount) {
-        this.name = "Here and Now";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -36,7 +42,7 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
 
     @Override
     public void updateDescription() {
-        description = "At the start of your turn, gain #b" + amount + " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract.";
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     public void atStartOfTurnPostDraw() {

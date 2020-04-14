@@ -4,7 +4,9 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
@@ -16,8 +18,12 @@ public class HexalevelPower extends AbstractPower implements CloneablePowerInter
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Hexalevel84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Hexalevel32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public HexalevelPower(final int amount) {
-        this.name = "Hexalevel";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -32,7 +38,7 @@ public class HexalevelPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void updateDescription() {
-        description = "At the start of your turn, gain #b" + amount + " #yEnhance.";
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     public void atStartOfTurnPostDraw() {

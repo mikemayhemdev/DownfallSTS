@@ -6,7 +6,9 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
@@ -19,8 +21,12 @@ public class EtherealRefundPower extends AbstractPower implements CloneablePower
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/EtherealRefund84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/EtherealRefund32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public EtherealRefundPower(final int amount) {
-        this.name = "Ethereal Refund";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -45,13 +51,13 @@ public class EtherealRefundPower extends AbstractPower implements CloneablePower
     @Override
     public void updateDescription() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Whenever you play an #yEthereal card this turn, gain ");
+        sb.append(DESCRIPTIONS[0]);
 
         for (int i = 0; i < this.amount; ++i) {
             sb.append("[E] ");
         }
 
-        sb.append(" .");
+        sb.append(DESCRIPTIONS[1]);
         this.description = sb.toString();
     }
 
