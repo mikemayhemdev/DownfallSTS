@@ -28,10 +28,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
-import com.megacrit.cardcrawl.helpers.HeartAnimListener;
-import com.megacrit.cardcrawl.helpers.ModHelper;
-import com.megacrit.cardcrawl.helpers.SaveHelper;
-import com.megacrit.cardcrawl.helpers.TipTracker;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -47,9 +44,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import evilWithin.util.HeartReward;
+import evilWithin.vfx.PortalBorderEffect;
 import org.apache.commons.net.pop3.POP3Reply;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.SlimeboundMod;
 
 public class HeartEvent extends AbstractEvent {
     private static final Logger logger = LogManager.getLogger(HeartEvent.class.getName());
@@ -68,6 +67,14 @@ public class HeartEvent extends AbstractEvent {
     public static boolean waitingToSave;
     private static final float DIALOG_X;
     private static final float DIALOG_Y;
+
+    public static int borderEffectCount = 36;
+
+    private ArrayList<PortalBorderEffect> borderEffects = new ArrayList<>();
+
+    private float heartCenterX = 1334.0F * Settings.scale;
+    private float heartCenterY = (AbstractDungeon.floorY - 60.0F * Settings.scale) + 300.0F * Settings.scale; //same values used in npc
+    public Texture portalImage = ImageMaster.loadImage("evilWithinResources/images/vfx/beyondPortal.png");
 
     private HeartAnimListener animListener = new HeartAnimListener();
 
@@ -96,8 +103,11 @@ public class HeartEvent extends AbstractEvent {
         this.pickCard = false;
         waitingToSave = false;
         if (this.npc == null) {
-            this.npc = new AnimatedNpc(1334.0F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle");
+            this.npc = new AnimatedNpc(1350.0F * Settings.scale, AbstractDungeon.floorY - 30.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle");
         }
+
+        this.npc.skeleton.getRootBone().setScale(0.8F);
+
 
         npc.addListener(new HeartAnimListener());
 
@@ -144,6 +154,15 @@ public class HeartEvent extends AbstractEvent {
 
         this.hasDialog = true;
         this.hasFocus = true;
+
+        for (int i = 1; i <= borderEffectCount; i++) {
+
+            PortalBorderEffect effect = new PortalBorderEffect(heartCenterX, heartCenterY, i * 100 * (borderEffectCount / 360.0f));
+            borderEffects.add(effect);
+            effect.orbitalInterval = borderEffects.get(0).orbitalInterval;
+            effect.calculateEllipseSize();
+        }
+
     }
 
     public HeartEvent() {
@@ -160,6 +179,11 @@ public class HeartEvent extends AbstractEvent {
 
     public void update() {
         super.update();
+
+        for (PortalBorderEffect pb : borderEffects){
+            pb.update();
+        }
+
         Iterator var2;
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             CardGroup group = new CardGroup(CardGroupType.UNSPECIFIED);
@@ -212,8 +236,18 @@ public class HeartEvent extends AbstractEvent {
         //mask effect
         if (maskDuration < PORTAL_GROW_TIME) {
             maskDuration += Gdx.graphics.getDeltaTime();
+
+            for (PortalBorderEffect pb : borderEffects){
+                pb.ELLIPSIS_SCALE = maskDuration / PORTAL_GROW_TIME;
+                pb.calculateEllipseSize();
+            }
+
             if (maskDuration > PORTAL_GROW_TIME) {
                 maskDuration = PORTAL_GROW_TIME;
+                for (PortalBorderEffect pb : borderEffects){
+                    pb.ELLIPSIS_SCALE = 1F;
+                    pb.calculateEllipseSize();
+                }
             }
         }
     }
@@ -468,6 +502,9 @@ public class HeartEvent extends AbstractEvent {
     }
 
     public void render(SpriteBatch sb) {
+
+
+
         /*
         Masking is done by instructing the SpriteBatch, via blend function, to only keep certain pixels based upon a
         "mask" texture rendered after the thing you want masked is rendered. In a vacuum, all you have to do is set the
@@ -514,9 +551,7 @@ public class HeartEvent extends AbstractEvent {
         //we'll use a simple scale variable based on the duration. At the start, it's super tiny. At the end, it should equal 1.0.
         float scale = (maskDuration / PORTAL_GROW_TIME) * Settings.scale;
 
-        float heartCenterX = 1334.0F * Settings.scale;
-        float heartCenterY = AbstractDungeon.floorY - 60.0F * Settings.scale; //same values used in npc
-        heartCenterY += 300.0F * Settings.scale; //... plus some because the coordinates don't seem to correspond to the center.
+
         float w = MASK_REGION.getRegionWidth();
         float h = MASK_REGION.getRegionHeight();
         sb.draw(MASK_REGION, heartCenterX - w / 2, heartCenterY - h / 2, w / 2, h / 2, w, h, scale, scale, 0.0f);
@@ -547,6 +582,8 @@ public class HeartEvent extends AbstractEvent {
         // render the npc. Since we're using a FrameBuffer that's the same size as the screen, there should be no issues
         // using the regular render function of the npc. Note that if you want any background, you'd render it right here
         // right before this render.
+
+        sb.draw(this.portalImage, this.heartCenterX - 250F, this.heartCenterY - 250F);
         this.npc.render(sb);
 
         /*
