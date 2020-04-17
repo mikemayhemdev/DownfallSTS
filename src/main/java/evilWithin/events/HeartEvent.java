@@ -45,6 +45,7 @@ import java.util.Iterator;
 
 import evilWithin.util.HeartReward;
 import evilWithin.vfx.PortalBorderEffect;
+import evilWithin.vfx.TopLevelInfiniteSpeechBubble;
 import org.apache.commons.net.pop3.POP3Reply;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -253,7 +254,7 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private void talk(String msg) {
-        AbstractDungeon.effectList.add(new InfiniteSpeechBubble(DIALOG_X, DIALOG_Y, msg));
+        AbstractDungeon.topLevelEffects.add(new TopLevelInfiniteSpeechBubble(DIALOG_X, DIALOG_Y, msg));
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -486,8 +487,8 @@ public class HeartEvent extends AbstractEvent {
 
         while(var1.hasNext()) {
             AbstractGameEffect e = (AbstractGameEffect)var1.next();
-            if (e instanceof InfiniteSpeechBubble) {
-                ((InfiniteSpeechBubble)e).dismiss();
+            if (e instanceof TopLevelInfiniteSpeechBubble) {
+                ((TopLevelInfiniteSpeechBubble)e).dismiss();
             }
         }
 
