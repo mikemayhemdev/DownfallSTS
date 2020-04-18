@@ -101,9 +101,9 @@ public class BanditIOUEffect extends AbstractGameEffect {
     private int romeoWeakUpgraded = 3;
 
     public BanditIOUEffect() {
-        this.bear = new CustomAnimatedNPC(-300F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/monsters/theCity/bear/skeleton.atlas", "images/monsters/theCity/bear/skeleton.json", "Idle");
-        this.romeo = new CustomAnimatedNPC(-300F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/monsters/theCity/romeo/skeleton.atlas", "images/monsters/theCity/romeo/skeleton.json", "Idle");
-        this.pointy = new CustomAnimatedNPC(-300F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/monsters/theCity/pointy/skeleton.atlas", "images/monsters/theCity/pointy/skeleton.json", "Idle");
+        this.bear = new CustomAnimatedNPC(-300F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/monsters/theCity/bear/skeleton.atlas", "images/monsters/theCity/bear/skeleton.json", "Idle", false, 0);
+        this.romeo = new CustomAnimatedNPC(-300F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/monsters/theCity/romeo/skeleton.atlas", "images/monsters/theCity/romeo/skeleton.json", "Idle", false, 0);
+        this.pointy = new CustomAnimatedNPC(-300F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, "images/monsters/theCity/pointy/skeleton.atlas", "images/monsters/theCity/pointy/skeleton.json", "Idle", false, 0);
 
         this.romeo.setTimeScale(0.6F);
 
