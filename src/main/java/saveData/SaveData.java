@@ -28,6 +28,7 @@ public class SaveData {
     public static final String UPCOMING_BOSSES = "UPCOMING_BOSSES";
     public static final String MERCHANT_HEALTH = "MERCHANT_HEALTH";
     public static final String MERCHANT_STRENGTH = "MERCHANT_STRENGTH";
+    public static final String MERCHANT_SOULS = "MERCHANT_SOULS";
     public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
     private static Logger saveLogger = LogManager.getLogger("EvilWithinSaveData");
     //data is stored here in addition to the actual location
@@ -45,6 +46,7 @@ public class SaveData {
 
     private static int merchantHealth;
     private static int merchantStrength;
+    private static int merchantSouls;
     private static boolean merchantDead;
 
     //Save data whenever SaveFile is constructed
@@ -69,6 +71,7 @@ public class SaveData {
 
             merchantHealth = FleeingMerchant.CURRENT_HP;
             merchantStrength = FleeingMerchant.CURRENT_STRENGTH;
+            merchantSouls = FleeingMerchant.CURRENT_SOULS;
             merchantDead = FleeingMerchant.DEAD;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
@@ -95,6 +98,7 @@ public class SaveData {
             params.put(UPCOMING_BOSSES, myVillains);
             params.put(MERCHANT_HEALTH, merchantHealth);
             params.put(MERCHANT_STRENGTH, merchantStrength);
+            params.put(MERCHANT_SOULS, merchantSouls);
             params.put(MERCHANT_DEAD, merchantDead);
         }
 

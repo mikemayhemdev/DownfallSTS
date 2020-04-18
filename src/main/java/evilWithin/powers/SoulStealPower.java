@@ -10,14 +10,14 @@ import evilWithin.EvilWithinMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class FairyPotionPower extends AbstractPower implements CloneablePowerInterface {
+public class SoulStealPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = EvilWithinMod.makeID("FairyPotion");
+    public static final String POWER_ID = EvilWithinMod.makeID("SoulSteal");
 
-    private static final Texture tex84 = TextureLoader.getTexture(EvilWithinMod.assetPath("images/powers/FairyPotion84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(EvilWithinMod.assetPath("images/powers/FairyPotion32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(EvilWithinMod.assetPath("images/powers/SoulSteal84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(EvilWithinMod.assetPath("images/powers/SoulSteal32.png"));
 
-    public FairyPotionPower(final AbstractCreature owner, final int amount) {
+    public SoulStealPower(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
@@ -35,11 +35,11 @@ public class FairyPotionPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new FairyPotionPower(owner, amount);
+        return new SoulStealPower(owner, amount);
     }
 }

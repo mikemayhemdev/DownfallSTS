@@ -39,6 +39,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
 import com.megacrit.cardcrawl.vfx.InfiniteSpeechBubble;
+import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.scene.LevelTransitionTextOverlayEffect;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -69,6 +70,8 @@ public class HeartEvent extends AbstractEvent {
     public static boolean waitingToSave;
     private static final float DIALOG_X;
     private static final float DIALOG_Y;
+
+    private TopLevelInfiniteSpeechBubble speechBubble;
 
     public HeartEvent(boolean isDone) {
         dismissBubble(); //remove message from original event
@@ -198,7 +201,8 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private void talk(String msg) {
-        AbstractDungeon.topLevelEffects.add(new TopLevelInfiniteSpeechBubble(DIALOG_X, DIALOG_Y, msg));
+        speechBubble = new TopLevelInfiniteSpeechBubble(DIALOG_X, DIALOG_Y, msg);
+        AbstractDungeon.topLevelEffects.add(speechBubble);
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -225,6 +229,7 @@ public class HeartEvent extends AbstractEvent {
                 if (buttonPressed == 0) {
                     this.blessing();
                 } else {
+                    if (this.speechBubble != null) this.speechBubble.dismiss();
                     this.openMap();
                 }
                 break;
@@ -267,6 +272,7 @@ public class HeartEvent extends AbstractEvent {
                 this.screenNum = 99;
                 break;
             default:
+                if (this.speechBubble != null) this.speechBubble.dismiss();
                 this.openMap();
         }
 
@@ -431,8 +437,8 @@ public class HeartEvent extends AbstractEvent {
 
         while(var1.hasNext()) {
             AbstractGameEffect e = (AbstractGameEffect)var1.next();
-            if (e instanceof TopLevelInfiniteSpeechBubble) {
-                ((TopLevelInfiniteSpeechBubble)e).dismiss();
+            if (e instanceof InfiniteSpeechBubble) {
+                ((InfiniteSpeechBubble)e).dismiss();
             }
         }
 
