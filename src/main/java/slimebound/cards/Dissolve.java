@@ -41,8 +41,6 @@ public class Dissolve extends AbstractSlimeboundCard {
         this.baseBlock = 7;
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
-        this.poison = 4;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
-import slimebound.powers.TackleSelfDamagePreventPower;
+import slimebound.powers.PreventTackleDamagePower;
 
 
 public class RollThrough extends AbstractSlimeboundCard {
@@ -51,10 +51,8 @@ public class RollThrough extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-        addToBot(new ApplyPowerAction(p, p, new TackleSelfDamagePreventPower(p, p, 1), 1));
+        addToBot(new ApplyPowerAction(p, p, new PreventTackleDamagePower(p, p, 1), 1));
     }
 
     public AbstractCard makeCopy() {

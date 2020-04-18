@@ -65,19 +65,6 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         addToBot(new CommandAction());
     }
 
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        int bonus = 0;
-        if (player.hasPower(TackleBuffPower.POWER_ID)) {
-            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
-        }
-        if (mo != null) {
-            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
-                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
-            }
-        }
-        return tmp + bonus;
-    }
-
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();

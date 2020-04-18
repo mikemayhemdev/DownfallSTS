@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.TackleBuffPower;
-import slimebound.powers.TackleSelfDamagePreventPower;
+import slimebound.powers.TackleModifyDamagePower;
 
 
 public class BestDefense extends AbstractSlimeboundCard {
@@ -41,7 +41,7 @@ public class BestDefense extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TackleBuffPower(p, p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TackleSelfDamagePreventPower(p, p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TackleModifyDamagePower(p, p, 1), 1));
 
     }
 

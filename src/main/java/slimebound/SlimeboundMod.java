@@ -45,7 +45,6 @@ import slimebound.dailymods.AllSplit;
 import slimebound.events.ArtOfSlimeWar;
 import slimebound.events.Hunted;
 import slimebound.events.WorldOfGoopSlimebound;
-import slimebound.helpers.PoisonVariable;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
 import slimebound.orbs.CultistSlime;
@@ -57,7 +56,6 @@ import slimebound.potions.SlimyTonguePotion;
 import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
-import slimebound.powers.TackleSelfDamagePreventPower;
 import slimebound.relics.*;
 
 import java.util.ArrayList;
@@ -182,36 +180,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             }
         }
         return bonus;
-    }
-
-    public static int getGluttonyBonus(AbstractCreature source) {
-        int bonus = 0;
-        /*
-        if (source != null) {
-            if (source.hasPower(GluttonyPower.POWER_ID)) {
-                bonus = source.getPower(GluttonyPower.POWER_ID).amount;
-            }
-        }
-        */
-        return bonus;
-    }
-
-    public static int getTackleSelfDamageBonus(AbstractPlayer source) {
-        int bonus = 0;
-        if (source != null) {
-            if (source.hasRelic(SelfDamagePreventRelic.ID)) {
-                bonus += -1;
-            }
-            if (source.hasPower(TackleSelfDamagePreventPower.POWER_ID)) {
-                bonus += source.getPower(TackleSelfDamagePreventPower.POWER_ID).amount;
-            }
-        }
-        return bonus;
-    }
-
-    public static String printString(String s) {
-        logger.info(s);
-        return s;
     }
 
     public static void clearData() {
@@ -405,7 +373,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new SelfDamageVariable());
-        BaseMod.addDynamicVariable(new PoisonVariable());
         BaseMod.addDynamicVariable(new SlimedVariable());
 
         BaseMod.addCard(new DivideAndConquerDivide());

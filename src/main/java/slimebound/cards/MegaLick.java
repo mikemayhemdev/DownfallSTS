@@ -53,8 +53,6 @@ public class MegaLick extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 1;
 
         this.slimed = this.baseSlimed = 4;
-        upgradeSlimed(0);
-        upgradeLickSlimed(0);
         this.exhaust = true;
 
 

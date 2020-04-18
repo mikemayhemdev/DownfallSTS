@@ -1,6 +1,10 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -45,13 +49,20 @@ public class PreventTackleDamagePower extends AbstractPower {
     }
 
     public void updateDescription() {
-
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-
-
     }
 
-
+    @Override
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.hasTag(SlimeboundMod.TACKLE)) {
+            flash();
+            if (this.amount == 0) {// 46
+                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));// 47
+            } else {
+                this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));// 49
+            }
+        }
+    }
 }
 
 

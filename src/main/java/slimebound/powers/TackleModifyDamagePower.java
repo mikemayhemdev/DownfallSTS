@@ -12,8 +12,8 @@ import slimebound.SlimeboundMod;
 import slimebound.cards.AbstractSlimeboundCard;
 
 
-public class TackleSelfDamagePreventPower extends AbstractPower {
-    public static final String POWER_ID = "Slimebound:TackleSelfDamagePreventPower";
+public class TackleModifyDamagePower extends AbstractPower {
+    public static final String POWER_ID = "Slimebound:TackleModifyDamagePower";
     public static final String NAME = "TackleDebuffPower";
     public static final String IMG = "powers/recklessPower.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
@@ -24,7 +24,7 @@ public class TackleSelfDamagePreventPower extends AbstractPower {
     private AbstractCreature source;
 
 
-    public TackleSelfDamagePreventPower(AbstractCreature owner, AbstractCreature source, int amount) {
+    public TackleModifyDamagePower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 

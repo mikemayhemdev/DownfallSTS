@@ -52,8 +52,6 @@ public class HauntingLick extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.slimed = this.baseSlimed = 4;
         this.magicNumber = this.baseMagicNumber = 1;
-        upgradeSlimed(0);
-        upgradeLickSlimed(0);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -48,16 +48,9 @@ public class Lick extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.LICK);
-
-
         this.slimed = this.baseSlimed = 4;
         this.magicNumber = this.baseMagicNumber = 1;
-        upgradeSlimed(0);
-        upgradeLickSlimed(0);
-        this.poison = 1;
         this.exhaust = true;
-
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -79,11 +72,8 @@ public class Lick extends AbstractSlimeboundCard {
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
             upgradeMagicNumber(1);
             upgradeSlimed(2);
         }

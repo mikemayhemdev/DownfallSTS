@@ -46,14 +46,9 @@ public class PoisonLick extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.LICK);
-
-
         this.slimed = this.baseSlimed = 4;
-        upgradeSlimed(0);
-        upgradeLickSlimed(0);
         this.exhaust = true;
-        this.poison = 2;
-
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -62,7 +57,7 @@ public class PoisonLick extends AbstractSlimeboundCard {
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.poison), this.poison, true, AbstractGameAction.AttackEffect.POISON));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PoisonPower(m, p, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.POISON));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(Color.FOREST)), 0.1F));
 
         // if (upgraded)  AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
@@ -76,17 +71,11 @@ public class PoisonLick extends AbstractSlimeboundCard {
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
             upgradeSlimed(2);
-            this.poison = 3;
-            this.isPoisonModified = true;
-
+            upgradeMagicNumber(1);
         }
-
     }
 }
 

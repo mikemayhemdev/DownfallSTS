@@ -1,3 +1,5 @@
+
+/*
 package slimebound.cards;
 
 
@@ -83,3 +85,4 @@ public class zzzSlimesplosion extends AbstractSlimeboundCard {
 }
 
 
+*/
