@@ -13,6 +13,7 @@ import evilWithin.vfx.SoulStealEffect;
 import javassist.CtBehavior;
 
 public class BetterEndingPatches {
+    //Determine and overwrite strings on room creation
     @SpirePatch(clz = SpireHeart.class, method = SpirePatch.CONSTRUCTOR)
     public static class StringChanges {
         @SpirePrefixPatch
@@ -35,6 +36,7 @@ public class BetterEndingPatches {
         }
     }
 
+    //Change effect when showing the player the score
     @SpirePatch(clz = SpireHeart.class, method = "buttonEffect")
     public static class BetterEffect {
         @SpireInsertPatch(locator = Locator.class)
@@ -49,9 +51,12 @@ public class BetterEndingPatches {
             return SpireReturn.Continue();
         }
 
+        //Overwrite character specific dialogue vs the heart because it doesn't fit.
         @SpireInsertPatch(locator =  Locator2.class)
         public static void patch(SpireHeart __instance, int buttonPressed) {
-            __instance.roomEventText.updateBodyText("@.@ @.@ @.@");
+            if(EvilModeCharacterSelect.evilMode) {
+                __instance.roomEventText.updateBodyText("@.@ @.@ @.@");
+            }
         }
 
         public static class Locator extends SpireInsertLocator {
