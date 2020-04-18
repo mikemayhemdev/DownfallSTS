@@ -554,5 +554,32 @@
       "[Act 3]",
       "[Head to Shop]"
     ]
+  },
+  "evilWithin:BetterEnding": {
+    "NAME": "Spire Heart",
+    "DESCRIPTIONS": [
+      "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL A comforting heartbeat can be felt throughout the room... NL Are you at the ~end~ ? Is your purpose fulfilled?",
+      "You give #b",
+      " Souls back to the heart! NL The heart #b@squirms@ in elation, pounding forever more.",
+      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~ NL You feel that you have given a total of #b",
+      " Souls to the heart.",
+      " NL A total of #b",
+      " Souls have been given by all who have been summoned by it.",
+      " NL The heart pulses louder and louder as your #y~consciousness~ #y~fades...~",
+      "NL You ready your blade...",
+      "NL You prepare your daggers...",
+      "NL You charge your core to its maximum...",
+      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~",
+      " NL The heart pulses louder and louder as your #p~consciousness~ #p~begins~ #p~to~ #p~fade...~",
+      " NL A sudden burst of #y@energy@ emanates from inside you, #b@jolting@ you awake.",
+      " NL The heart #gretreats upwards! A large door is revealed in its place.",
+      "NL You prime your staff with divine energy..."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Give] #b???",
+      "[Sleep]",
+      "[Approach Door]"
+    ]
   }
 }
