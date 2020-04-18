@@ -42,6 +42,7 @@ public class CustomAnimatedNPC {
 
     public boolean portalRender;
     public boolean portalRenderActive = false;
+    public boolean dontShowHeart = false;
 
     public static int borderEffectCount = 36;
 
@@ -83,6 +84,9 @@ public class CustomAnimatedNPC {
 
         if (portalType == 0){
             portalImage = ImageMaster.loadImage("evilWithinResources/images/vfx/beyondPortal.png");
+        }
+        if (portalType == 1){
+            portalImage = ImageMaster.loadImage("evilWithinResources/images/vfx/cityPortal.png");
         }
 
         if (this.portalRender) {
@@ -277,25 +281,28 @@ public class CustomAnimatedNPC {
     }
 
     public void standardRender(SpriteBatch sb, Color color){
-        this.state.update(Gdx.graphics.getDeltaTime());
-        this.state.apply(this.skeleton);
-        if (this.skeleton.getRootBone() != null) {
-            this.skeleton.getRootBone().setRotation(customRot);
-            if (this.skeleton.findBone("shadow") != null) {
-               // SlimeboundMod.logger.info(this.skeleton.findBone("shadow"));
-                this.skeleton.findBone("shadow").setRotation(-1 * customRot);
-                this.skeleton.findBone("shadow").setScale(customShadowScale);
+        if (!dontShowHeart) {
+            this.state.update(Gdx.graphics.getDeltaTime());
+            this.state.apply(this.skeleton);
+            if (this.skeleton.getRootBone() != null) {
+                this.skeleton.getRootBone().setRotation(customRot);
+                if (this.skeleton.findBone("shadow") != null) {
+                    // SlimeboundMod.logger.info(this.skeleton.findBone("shadow"));
+                    this.skeleton.findBone("shadow").setRotation(-1 * customRot);
+                    this.skeleton.findBone("shadow").setScale(customShadowScale);
+                }
             }
+            this.skeleton.updateWorldTransform();
+            this.skeleton.setFlip(customFlipX, false);
+            this.skeleton.setColor(color);
+
+            sb.end();
+            CardCrawlGame.psb.begin();
+            AbstractCreature.sr.draw(CardCrawlGame.psb, this.skeleton);
+            CardCrawlGame.psb.end();
+            sb.begin();
+            sb.setBlendFunction(770, 771);
         }
-        this.skeleton.updateWorldTransform();
-        this.skeleton.setFlip(customFlipX, false);
-        this.skeleton.setColor(color);
-        sb.end();
-        CardCrawlGame.psb.begin();
-        AbstractCreature.sr.draw(CardCrawlGame.psb, this.skeleton);
-        CardCrawlGame.psb.end();
-        sb.begin();
-        sb.setBlendFunction(770, 771);
     }
 
     public void standardRender(SpriteBatch sb){

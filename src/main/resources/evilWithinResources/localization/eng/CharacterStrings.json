@@ -75,5 +75,18 @@
     "~We will...~ ~be~ ~waiting...~",
     "~Destroy...~ ~them~ ~all...~"
   ]
-}
+},
+  "HeartProceed": {
+    "TEXT": [
+      "~Intruders... NL ~...in~ ",
+      "~You~ ~are~ ~needed...~ NL ~...in~ ",
+      "~They~ ~have~ ~reached...~ NL ",
+      "~Return...~ NL ~protect~ ",
+      "~Slay~ ~them~ ~all...~ NL ~...in~ "
+    ],
+    "OPTIONS": [
+      "~The~ ~City~...",
+      "~The~ ~Beyond~..."
+    ]
+  }
 }

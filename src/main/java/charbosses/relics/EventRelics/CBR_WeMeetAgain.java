@@ -14,14 +14,14 @@ import java.util.ArrayList;
 
 
 public class CBR_WeMeetAgain extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("Transmogrifier");
+    public static String ID = EvilWithinMod.makeID("WeMeetAgain");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     private String removedName;
     private String addedName;
 
     public CBR_WeMeetAgain() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/transmogrifier.png")));
+        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/wemeetagain.png")));
     }
 
     @Override
@@ -50,7 +50,7 @@ public class CBR_WeMeetAgain extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.removedName + this.DESCRIPTIONS[0] + this.addedName + ".";
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

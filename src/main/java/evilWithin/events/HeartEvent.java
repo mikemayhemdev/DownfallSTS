@@ -201,6 +201,7 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private void talk(String msg) {
+        if (speechBubble != null) speechBubble.dismiss();
         speechBubble = new TopLevelInfiniteSpeechBubble(DIALOG_X, DIALOG_Y, msg);
         AbstractDungeon.topLevelEffects.add(speechBubble);
     }

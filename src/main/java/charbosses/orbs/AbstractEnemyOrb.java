@@ -41,17 +41,19 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
 
     public void updateAnimation() {
         this.bobEffect.update();
-        this.cX = MathHelper.orbLerpSnap(this.cX, AbstractCharBoss.boss.animX + this.tX);
-        this.cY = MathHelper.orbLerpSnap(this.cY, AbstractCharBoss.boss.animY + this.tY);
-        if (this.channelAnimTimer != 0.0F) {
-            this.channelAnimTimer -= Gdx.graphics.getDeltaTime();
-            if (this.channelAnimTimer < 0.0F) {
-                this.channelAnimTimer = 0.0F;
+        if (AbstractCharBoss.boss != null) {
+            this.cX = MathHelper.orbLerpSnap(this.cX, AbstractCharBoss.boss.animX + this.tX);
+            this.cY = MathHelper.orbLerpSnap(this.cY, AbstractCharBoss.boss.animY + this.tY);
+            if (this.channelAnimTimer != 0.0F) {
+                this.channelAnimTimer -= Gdx.graphics.getDeltaTime();
+                if (this.channelAnimTimer < 0.0F) {
+                    this.channelAnimTimer = 0.0F;
+                }
             }
-        }
 
-        this.c.a = Interpolation.pow2In.apply(1.0F, 0.01F, this.channelAnimTimer / 0.5F);
-        this.scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, this.channelAnimTimer / 0.5F);
+            this.c.a = Interpolation.pow2In.apply(1.0F, 0.01F, this.channelAnimTimer / 0.5F);
+            this.scale = Interpolation.swingIn.apply(Settings.scale, 0.01F, this.channelAnimTimer / 0.5F);
+        }
     }
 
     public void applyFocus() {

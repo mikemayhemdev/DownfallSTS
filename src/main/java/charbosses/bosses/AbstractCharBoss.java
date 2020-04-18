@@ -59,6 +59,8 @@ import evilWithin.EvilWithinMod;
 import evilWithin.monsters.FleeingMerchant;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+import evilWithin.vfx.CustomAnimatedNPC;
+import evilWithin.vfx.TopLevelInfiniteSpeechBubble;
 import saveData.EvilWithinSaveData;
 import slimebound.SlimeboundMod;
 
@@ -114,6 +116,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public String energyString = "[E]";
 
 
+
+
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
         AbstractCharBoss.finishedSetup = false;
@@ -132,6 +136,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.stance = new EnNeutralStance();
         this.orbs = new ArrayList<AbstractOrb>();
         this.relics = new ArrayList<AbstractCharbossRelic>();
+
+
     }
 
     @Override
@@ -861,6 +867,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         super.die();
+
     }
 
     private void hackSecretBoss(){
