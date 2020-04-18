@@ -441,9 +441,9 @@
     "NAME": "Split: Specialist",
     "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
   },
-  "Slimebound:SpecialForces": {
-    "NAME": "Special Forces",
-    "DESCRIPTION": "For each of your Slime Slots: NL Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
+  "Slimebound:Darklings": {
+    "NAME": "Darkling Trio",
+    "DESCRIPTION": "Split into a slimeboundmod:darkling_slime three times. NL Exhaust."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
