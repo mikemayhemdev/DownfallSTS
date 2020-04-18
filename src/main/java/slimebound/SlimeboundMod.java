@@ -6,13 +6,11 @@ import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -62,7 +60,6 @@ import slimebound.powers.AcidTonguePowerUpgraded;
 import slimebound.powers.TackleSelfDamagePreventPower;
 import slimebound.relics.*;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -510,7 +507,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new slimebound.cards.Icky());
 
         BaseMod.addCard(new SplitSpecialist());
-        BaseMod.addCard(new SpecialForces());
+        BaseMod.addCard(new Darklings());
         BaseMod.addCard(new SlimeSlap());
         BaseMod.addCard(new OneTwoCombo());
         BaseMod.addCard(new ForwardTackle());
@@ -630,7 +627,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         UnlockTracker.unlockCard(DivideAndConquer.ID);
 
         UnlockTracker.unlockCard(SplitSpecialist.ID);
-        UnlockTracker.unlockCard(SpecialForces.ID);
+        UnlockTracker.unlockCard(Darklings.ID);
         UnlockTracker.unlockCard(SlimeSlap.ID);
         UnlockTracker.unlockCard(OneTwoCombo.ID);
         UnlockTracker.unlockCard(ForwardTackle.ID);

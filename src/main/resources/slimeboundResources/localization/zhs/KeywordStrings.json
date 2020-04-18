@@ -183,5 +183,13 @@
     ],
     "PROPER_NAME": "Time Slime",
     "DESCRIPTION": "Attacks for #b4 and applies #b1 #yWeak each turn."
+  },
+  {
+    "NAMES": [
+      "darkling slime",
+      "darkling_slime"
+    ],
+    "PROPER_NAME": "Darkling Slime",
+    "DESCRIPTION": "Attacks for #b4 each turn. When a Darkling is commanded, other Darklings will also attack."
   }
 ]

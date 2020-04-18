@@ -1043,7 +1043,7 @@ public static void saveData() {
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/fraggem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/purplegem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/blackgem4.png")));
-        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem4 .png")));
+        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/yellowgem4.png")));
 
     }
 

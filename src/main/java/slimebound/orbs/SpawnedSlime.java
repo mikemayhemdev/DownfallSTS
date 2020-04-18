@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.beyond.Darkling;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
@@ -101,29 +102,41 @@ public abstract class SpawnedSlime
         //this.renderBehind=true;
         SkeletonJson json = new SkeletonJson(this.atlas);
 
-        if (medScale) {
-            json.setScale(Settings.scale / .85F * .7F);
-            if (alt) {
-                this.yOffset = -7F * Settings.scale;
-            } else {
-                this.yOffset = -27F * Settings.scale;
-            }
+        if (this instanceof DarklingSlime){
+            json.setScale(Settings.scale * .35F);
+
         } else {
-            json.setScale(Settings.scale / .5F * .7F);
-            if (alt) {
-                this.yOffset = -17F * Settings.scale;
+            if (medScale) {
+                json.setScale(Settings.scale / .85F * .7F);
+                if (alt) {
+                    this.yOffset = -7F * Settings.scale;
+                } else {
+                    this.yOffset = -27F * Settings.scale;
+                }
             } else {
-                this.yOffset = -32F * Settings.scale;
+                json.setScale(Settings.scale / .5F * .7F);
+                if (alt) {
+                    this.yOffset = -17F * Settings.scale;
+                } else {
+                    this.yOffset = -32F * Settings.scale;
+                }
             }
         }
+
+
 
         SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonString));
         this.skeleton = new Skeleton(skeletonData);
         this.skeleton.setColor(Color.WHITE);
         this.stateData = new AnimationStateData(skeletonData);
         this.state = new AnimationState(this.stateData);
-        AnimationState.TrackEntry e = this.state.setAnimation(0, animString, true);
-        e.setTime(e.getEndTime() * MathUtils.random());
+        if (this instanceof DarklingSlime){
+            AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+            e.setTime(e.getEndTime() * MathUtils.random());
+        } else {
+            AnimationState.TrackEntry e = this.state.setAnimation(0, animString, true);
+            e.setTime(e.getEndTime() * MathUtils.random());
+        }
         this.state.addListener(new SlimeAnimListener());
         this.delayTime = 0.27F;
         this.yOffset = yOffset * Settings.scale;

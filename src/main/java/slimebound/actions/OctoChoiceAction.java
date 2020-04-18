@@ -7,14 +7,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import evilWithin.cards.OctoChoiceCard;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
-import slimebound.cards.SpecialForces;
 import slimebound.cards.SplitSpecialist;
 
 public class OctoChoiceAction extends AbstractGameAction {
     private boolean pickCard = false;
     private CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
     private SplitSpecialist funCard;
-    private SpecialForces funCard2;
 
     public OctoChoiceAction(SplitSpecialist card) {
         duration = Settings.ACTION_DUR_XFAST;
@@ -23,20 +21,10 @@ public class OctoChoiceAction extends AbstractGameAction {
     }
 
 
-    public OctoChoiceAction(SpecialForces card) {
-        duration = Settings.ACTION_DUR_XFAST;
-        actionType = ActionType.WAIT;
-        funCard2 = card;
-    }
-
     @Override
     public void update() {
         if (funCard != null) {
             for (OctoChoiceCard q : funCard.choiceList()) {
-                group.addToTop(q);
-            }
-        } else {
-            for (OctoChoiceCard q : funCard2.choiceList()) {
                 group.addToTop(q);
             }
         }
@@ -56,8 +44,6 @@ public class OctoChoiceAction extends AbstractGameAction {
             }
             if (funCard != null) {
                 funCard.doChoiceStuff(cardChoice);
-            } else {
-                funCard2.doChoiceStuff(cardChoice);
             }
 
             isDone = true;
