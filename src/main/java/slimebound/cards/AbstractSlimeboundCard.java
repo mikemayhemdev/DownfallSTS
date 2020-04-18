@@ -60,9 +60,6 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
                     bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
                 }
             }
-            if (AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID)) {
-                return 0;
-            }
             return tmp + bonus;
         }
         return tmp;
