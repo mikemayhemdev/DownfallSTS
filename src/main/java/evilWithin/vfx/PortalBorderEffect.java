@@ -53,7 +53,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
     public float angle;
     public float orbitalInterval;
 
-
+    public Color borderColor = Color.VIOLET;
 
 
     public PortalBorderEffect(float startX, float startY, float angle) {
@@ -114,7 +114,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
         ELLIPSIS_WIDTH = ELLIPSIS_BASE_WIDTH * ELLIPSIS_SCALE;
         ELLIPSIS_HEIGHT = ELLIPSIS_BASE_HEIGHT * ELLIPSIS_SCALE;
 
-        NON_ORBITAL_ADJUSTMENT_SPEED = Interpolation.linear.apply(NON_ORBITAL_ADJUSTMENT_MIN_SPEED, NON_ORBITAL_ADJUSTMENT_MAX_SPEED, (float) (Math.min(TARGET_WISP_COUNT_MAX_SIZE_ELLIPSE, HeartEvent.borderEffectCount)) / (float) TARGET_WISP_COUNT_MAX_SIZE_ELLIPSE);
+        NON_ORBITAL_ADJUSTMENT_SPEED = Interpolation.linear.apply(NON_ORBITAL_ADJUSTMENT_MIN_SPEED, NON_ORBITAL_ADJUSTMENT_MAX_SPEED, (float) (Math.min(TARGET_WISP_COUNT_MAX_SIZE_ELLIPSE, CustomAnimatedNPC.borderEffectCount)) / (float) TARGET_WISP_COUNT_MAX_SIZE_ELLIPSE);
     }
 
     public void update() {
@@ -123,7 +123,7 @@ public class PortalBorderEffect extends AbstractGameEffect {
         this.vfxTimer -= Gdx.graphics.getDeltaTime();
         if (this.vfxTimer < 0.0F) {
             this.vfxTimer = 0.016F;
-            AbstractDungeon.effectsQueue.add(new PortalEdgeFlareParticleEffect(this.cX, this.cY, Color.VIOLET, this.angle, this));
+            AbstractDungeon.effectsQueue.add(new PortalEdgeFlareParticleEffect(this.cX, this.cY, borderColor, this.angle, this));
             //AbstractDungeon.effectsQueue.add(new LightFlareParticleEffect(this.cX, this.cY, Color.PURPLE));
 //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.x, this.y));
         }

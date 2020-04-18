@@ -25,18 +25,10 @@ public class AcidTonguePower extends AbstractPower {
 
     public AcidTonguePower(AbstractCreature owner, AbstractCreature source, int amount) {
 
-        this.name = NAME;
-
         this.ID = POWER_ID;
-
-
         this.owner = owner;
-
         this.source = source;
-
-
         this.img = new com.badlogic.gdx.graphics.Texture(SlimeboundMod.getResourcePath(IMG));
-
         this.type = POWER_TYPE;
 
         this.amount = amount;
@@ -60,9 +52,7 @@ public class AcidTonguePower extends AbstractPower {
 
     public void updateDescription() {
 
-
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-
 
     }
 

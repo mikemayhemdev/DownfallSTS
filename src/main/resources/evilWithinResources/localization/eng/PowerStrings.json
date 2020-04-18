@@ -1,34 +1,15 @@
 {
-  "EvilWithin:History": {
-    "NAME": "History",
+  "evil-within:FairyPotion": {
+    "NAME": "Fairy Potion",
     "DESCRIPTIONS": [
-      "Joined the Vampires",
-      "Deck contains Bites and no Strikes",
-      "Searched the Forge",
-      "Obtained a special relic and Pain",
-      "Entered the light",
-      "Upgraded 2 cards",
-      "Took the Box",
-      "Obtained a random relic and Regret",
-      "Took the Donut",
-      "Gained max HP",
-      "Tested JAX",
-      "Obtained a copy of J.A.X.",
-      "Read the Ancient Writing",
-      "All basic Strikes and Defends were upgraded",
-      "Read the Cursed Tome",
-      "Obtained Enchiridion",
-      "Obtained the Necronomicon",
-      "Made Deals with Ghosts",
-      "Obtained copies of Apparition",
-      "Fought for the Sphere",
-      "Obtained a rare relic",
-      "Recalled",
-      "Obtained colorless cards",
-      "Fought off Bandits",
-      "Obtained a Red Mask",
-      "Joined the Ritual",
-      "Obtained Ritual Dagger"
+      "Heals to 30% of Max HP instead of dying, removing this effect."
+    ]
+  },
+  "evil-within:SoulSteal": {
+    "NAME": "Fairy Potion",
+    "DESCRIPTIONS": [
+      "Has stolen ",
+      " of your Souls."
     ]
   }
 }
