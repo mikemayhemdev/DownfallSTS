@@ -11,20 +11,17 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossSortHandAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
-import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
-import charbosses.relics.*;
+import charbosses.relics.AbstractCharbossRelic;
+import charbosses.relics.CBR_LizardTail;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -36,17 +33,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_L;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BlueCandle;
-import com.megacrit.cardcrawl.relics.LizardTail;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.AbstractStance;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.ui.buttons.PeekButton;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbInterface;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -59,15 +51,11 @@ import evilWithin.EvilWithinMod;
 import evilWithin.monsters.FleeingMerchant;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
-import evilWithin.vfx.CustomAnimatedNPC;
-import evilWithin.vfx.TopLevelInfiniteSpeechBubble;
-import saveData.EvilWithinSaveData;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
-import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.CardGroup.DRAW_PILE_X;
 import static com.megacrit.cardcrawl.cards.CardGroup.DRAW_PILE_Y;
@@ -114,8 +102,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     private static int setupsDrawnForSetupPhase = 0;
 
     public String energyString = "[E]";
-
-
 
 
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
@@ -210,8 +196,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         Iterator var1 = this.orbs.iterator();
 
-        while(var1.hasNext()) {
-            AbstractOrb o = (AbstractOrb)var1.next();
+        while (var1.hasNext()) {
+            AbstractOrb o = (AbstractOrb) var1.next();
             o.update();
             o.updateAnimation();
         }
@@ -851,6 +837,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void die() {
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
+        hand.clear();
+        drawPile.clear();
+        discardPile.clear();
+        exhaustPile.clear();
+        limbo.clear();
 
         if (EvilModeCharacterSelect.evilMode &&
                 !(this instanceof CharBossMerchant) &&
@@ -859,10 +850,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
                 AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
                 FleeingMerchant.DEAD
-        ){
-            if (AbstractDungeon.ascensionLevel < 20){
+        ) {
+            if (AbstractDungeon.ascensionLevel < 20) {
                 hackSecretBoss();
-            } else if (AbstractDungeon.bossList.size() != 2){
+            } else if (AbstractDungeon.bossList.size() != 2) {
                 hackSecretBoss();
             }
         }
@@ -870,7 +861,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     }
 
-    private void hackSecretBoss(){
+    private void hackSecretBoss() {
         EvilWithinMod.tempAscensionHack = true;
         EvilWithinMod.tempAscensionOriginalValue = AbstractDungeon.ascensionLevel;
         AbstractDungeon.bossList.clear();
@@ -898,7 +889,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
     }
-
 
 
     public void updateCardsOnDiscard() {
@@ -944,7 +934,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         this.drawPile.clear();
         CardGroup copy = new CardGroup(this.masterDeck, CardGroup.CardGroupType.DRAW_PILE);
-        for (AbstractCard c : copy.group){
+        for (AbstractCard c : copy.group) {
             this.drawPile.addToBottom(c);
         }
 
@@ -1246,8 +1236,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (!this.orbs.isEmpty()) {
             Iterator var2 = this.orbs.iterator();
 
-            while(var2.hasNext()) {
-                AbstractOrb o = (AbstractOrb)var2.next();
+            while (var2.hasNext()) {
+                AbstractOrb o = (AbstractOrb) var2.next();
                 o.render(sb);
             }
         }

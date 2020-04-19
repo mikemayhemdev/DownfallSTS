@@ -168,6 +168,8 @@ public class SaveData {
             //When the game loads, the SaveFile is instantiated first, which loads data from save into itself.
             //AbstractDungeon then loads that data from the SaveFile.
 
+            EvilModeCharacterSelect.evilMode = evilMode;
+
             AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, consumedRed);
             AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, consumedGreen);
             AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, consumedBlue);
