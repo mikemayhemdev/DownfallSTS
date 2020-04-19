@@ -139,6 +139,7 @@ public class SaveData {
                 merchantHealth = data.MERCHANT_HEALTH;
                 merchantStrength = data.MERCHANT_STRENGTH;
                 merchantDead = data.MERCHANT_DEAD;
+                merchantSouls = data.MERCHANT_SOULS;
 
                 saveLogger.info("Loaded EvilWithin save data successfully.");
             } catch (Exception e) {
@@ -181,6 +182,7 @@ public class SaveData {
 
             FleeingMerchant.CURRENT_HP = merchantHealth;
             FleeingMerchant.CURRENT_STRENGTH = merchantStrength;
+            FleeingMerchant.CURRENT_SOULS = merchantSouls;
             FleeingMerchant.DEAD = merchantDead;
 
             saveLogger.info("Save loaded.");

@@ -138,7 +138,6 @@ public class FleeingMerchant extends AbstractMonster {
         }
         if (CURRENT_SOULS > 0){
             this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, CURRENT_SOULS), CURRENT_SOULS));
-
         }
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();

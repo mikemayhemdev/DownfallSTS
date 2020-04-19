@@ -48,6 +48,8 @@ import eventUtil.EventUtils;
 import evilWithin.cards.KnowingSkullWish;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
+import evilWithin.patches.EvilModeCharacterSelect;
+import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
 import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.KnowingSkull;
 import evilWithin.relics.*;
@@ -659,6 +661,15 @@ public class EvilWithinMod implements
             possEncounterList.add("EvilWithin:CharBossSilent");
             possEncounterList.add("EvilWithin:CharBossDefect");
             possEncounterList.add("EvilWithin:CharBossWatcher");
+            FleeingMerchant.DEAD = false;
+            FleeingMerchant.CURRENT_HP = 500;
+            FleeingMerchant.CURRENT_STRENGTH = 0;
+            FleeingMerchant.CURRENT_SOULS = 0;
+            Cleric_Evil.encountered = false;
+            Cleric_Evil.heDead = false;
+            AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(AbstractDungeon.player, false);
+            AddBustKeyButtonPatches.KeyFields.bustedRuby.set(AbstractDungeon.player, false);
+            AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(AbstractDungeon.player, false);
         }
     }
 
