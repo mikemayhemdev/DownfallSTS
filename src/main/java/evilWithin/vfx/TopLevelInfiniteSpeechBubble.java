@@ -29,10 +29,10 @@ public class TopLevelInfiniteSpeechBubble extends AbstractGameEffect {
     private static final float ADJUST_Y;
     private boolean facingRight;
     private static final float FADE_TIME = 0.3F;
-    private SpeechTextEffect textEffect;
+    public CustomSpeechTextEffect textEffect;
 
     public TopLevelInfiniteSpeechBubble(float x, float y, String msg) {
-        this.textEffect = new SpeechTextEffect(x - 170.0F * Settings.scale, y + 124.0F * Settings.scale, 3.4028235E38F, msg, AppearEffect.BUMP_IN);
+        this.textEffect = new CustomSpeechTextEffect(x - 170.0F * Settings.scale, y + 124.0F * Settings.scale, 3.4028235E38F, msg, AppearEffect.BUMP_IN);
         AbstractDungeon.topLevelEffectsQueue.add(this.textEffect);
         this.x = x - ADJUST_X;
         this.y = y + ADJUST_Y;
@@ -76,13 +76,16 @@ public class TopLevelInfiniteSpeechBubble extends AbstractGameEffect {
     }
 
     public void render(SpriteBatch sb) {
-        sb.setColor(new Color(0.0F, 0.0F, 0.0F, this.color.a / 4.0F));
-        sb.draw(ImageMaster.SPEECH_BUBBLE_IMG, this.x - 256.0F + this.shadow_offset, this.y - 256.0F + this.wavy_y - this.shadow_offset, 256.0F, 256.0F, 512.0F, 512.0F, this.scale_x, this.scale_y, this.rotation, 0, 0, 512, 512, this.facingRight, false);
-        sb.setColor(this.color);
-        sb.draw(ImageMaster.SPEECH_BUBBLE_IMG, this.x - 256.0F, this.y - 256.0F + this.wavy_y, 256.0F, 256.0F, 512.0F, 512.0F, this.scale_x, this.scale_y, this.rotation, 0, 0, 512, 512, this.facingRight, false);
-    }
+        if (!AbstractDungeon.isScreenUp) {
+            sb.setColor(new Color(0.0F, 0.0F, 0.0F, this.color.a / 4.0F));
+            sb.draw(ImageMaster.SPEECH_BUBBLE_IMG, this.x - 256.0F + this.shadow_offset, this.y - 256.0F + this.wavy_y - this.shadow_offset, 256.0F, 256.0F, 512.0F, 512.0F, this.scale_x, this.scale_y, this.rotation, 0, 0, 512, 512, this.facingRight, false);
+            sb.setColor(this.color);
+            sb.draw(ImageMaster.SPEECH_BUBBLE_IMG, this.x - 256.0F, this.y - 256.0F + this.wavy_y, 256.0F, 256.0F, 512.0F, 512.0F, this.scale_x, this.scale_y, this.rotation, 0, 0, 512, 512, this.facingRight, false);
+        }
+        }
 
     public void dispose() {
+        this.textEffect.dispose();
     }
 
     static {

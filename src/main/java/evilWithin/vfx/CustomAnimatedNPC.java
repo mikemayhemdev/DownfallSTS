@@ -42,16 +42,17 @@ public class CustomAnimatedNPC {
 
     public boolean portalRender;
     public boolean portalRenderActive = false;
-    public boolean dontShowHeart = false;
 
     public static int borderEffectCount = 36;
 
     private boolean colorSwapped = false;
+    private boolean noMesh;
 
     private ArrayList<PortalBorderEffect> borderEffects = new ArrayList<>();
 
-    private float heartCenterX = 1334.0F * Settings.scale;
-    private float heartCenterY = (AbstractDungeon.floorY - 60.0F * Settings.scale) + 300.0F * Settings.scale; //same values used in npc
+    private float heartCenterX;
+    private float heartCenterY;
+    private float heartScale;
     public Texture portalImage;
 
     private HeartAnimListener animListener = new HeartAnimListener();
@@ -73,14 +74,25 @@ public class CustomAnimatedNPC {
     //I like the render options better when I'm using a TextureRegion.
     private static final TextureRegion MASK_REGION = new TextureRegion(new Texture("evilWithinResources/images/vfx/HeartMask.png"), 500, 500);
 
-
     public CustomAnimatedNPC(float x, float y, String atlasUrl, String skeletonUrl, String trackName, boolean portalRender, int portalType) {
-        this.loadAnimation(atlasUrl, skeletonUrl, 1.0F);
-        this.skeleton.setPosition(x, y);
-        this.state.setAnimation(0, trackName, true);
-        this.state.setTimeScale(1.0F);
+        this(x,y,atlasUrl,skeletonUrl,trackName,portalRender,portalType,false, 1F);
+    }
+
+    public CustomAnimatedNPC(float x, float y, String atlasUrl, String skeletonUrl, String trackName, boolean portalRender, int portalType, boolean noMesh, float heartScale) {
+        this.noMesh = noMesh;
+        this.heartScale = heartScale;
+
+        if (!this.noMesh) {
+            this.loadAnimation(atlasUrl, skeletonUrl, 1.0F);
+            this.skeleton.setPosition(x, y - 300F * Settings.scale * this.heartScale);
+            this.state.setAnimation(0, trackName, true);
+            this.state.setTimeScale(1.0F);
+        }
 
         this.portalRender = portalRender;
+
+        this.heartCenterX = x;
+        this.heartCenterY = y;
 
         if (portalType == 0){
             portalImage = ImageMaster.loadImage("evilWithinResources/images/vfx/beyondPortal.png");
@@ -90,13 +102,16 @@ public class CustomAnimatedNPC {
         }
 
         if (this.portalRender) {
-            this.skeleton.getRootBone().setScale(0.8F);
-            this.addListener(new HeartAnimListener());
+            if (!this.noMesh) {
+                this.addListener(new HeartAnimListener());
+                this.skeleton.getRootBone().setScale(0.8F * this.heartScale);
+            }
             for (int i = 1; i <= borderEffectCount; i++) {
 
-                PortalBorderEffect effect = new PortalBorderEffect(heartCenterX, heartCenterY, i * 100 * (borderEffectCount / 360.0f));
+                PortalBorderEffect effect = new PortalBorderEffect(this.heartCenterX, this.heartCenterY, i * 100 * (borderEffectCount / 360.0f), this.heartScale);
                 borderEffects.add(effect);
                 effect.orbitalInterval = borderEffects.get(0).orbitalInterval;
+                effect.ELLIPSIS_SCALE = this.heartScale;
                 effect.calculateEllipseSize();
             }
         }
@@ -128,24 +143,24 @@ public class CustomAnimatedNPC {
     }
 
     public void update(){
-        if (portalRender){
-            if (portalRenderActive){
+        if (this.portalRender){
+            if (this.portalRenderActive){
                 for (PortalBorderEffect pb : borderEffects){
                     pb.update();
                 }
                 //mask effect
-                if (maskDuration < PORTAL_GROW_TIME) {
-                    maskDuration += Gdx.graphics.getDeltaTime();
+                if (this.maskDuration < PORTAL_GROW_TIME) {
+                    this.maskDuration += Gdx.graphics.getDeltaTime();
 
                     for (PortalBorderEffect pb : borderEffects){
-                        pb.ELLIPSIS_SCALE = maskDuration / PORTAL_GROW_TIME;
+                        pb.ELLIPSIS_SCALE = (maskDuration / PORTAL_GROW_TIME) * this.heartScale;
                         pb.calculateEllipseSize();
                     }
 
-                    if (maskDuration > PORTAL_GROW_TIME) {
-                        maskDuration = PORTAL_GROW_TIME;
+                    if (this.maskDuration > PORTAL_GROW_TIME) {
+                        this.maskDuration = PORTAL_GROW_TIME;
                         for (PortalBorderEffect pb : borderEffects){
-                            pb.ELLIPSIS_SCALE = 1F;
+                            pb.ELLIPSIS_SCALE = (maskDuration / PORTAL_GROW_TIME) * this.heartScale;
                             pb.calculateEllipseSize();
                         }
                     }
@@ -160,7 +175,7 @@ public class CustomAnimatedNPC {
     }
 
     public void render(SpriteBatch sb, Color color) {
-        if (portalRender){
+        if (this.portalRender){
         /*
         Masking is done by instructing the SpriteBatch, via blend function, to only keep certain pixels based upon a
         "mask" texture rendered after the thing you want masked is rendered. In a vacuum, all you have to do is set the
@@ -208,8 +223,8 @@ public class CustomAnimatedNPC {
                 float scale = (maskDuration / PORTAL_GROW_TIME) * Settings.scale;
 
 
-                float w = MASK_REGION.getRegionWidth();
-                float h = MASK_REGION.getRegionHeight();
+                float w = MASK_REGION.getRegionWidth() * this.heartScale;
+                float h = MASK_REGION.getRegionHeight() * this.heartScale;
                 sb.draw(MASK_REGION, heartCenterX - w / 2, heartCenterY - h / 2, w / 2, h / 2, w, h, scale, scale, 0.0f);
 
                 // now that the mask is rendered inside the frameBuffer, we want to end the frameBuffer, and capture the texture.
@@ -239,7 +254,7 @@ public class CustomAnimatedNPC {
                 // using the regular render function of the npc. Note that if you want any background, you'd render it right here
                 // right before this render.
 
-                sb.draw(this.portalImage, this.heartCenterX - 250F, this.heartCenterY - 250F);
+                sb.draw(this.portalImage, this.heartCenterX - (250F * this.heartScale * Settings.scale), this.heartCenterY - (250F * this.heartScale * Settings.scale));
                 this.standardRender(sb);
 
         /*
@@ -277,11 +292,11 @@ public class CustomAnimatedNPC {
     }
 
     public void dispose() {
-        this.atlas.dispose();
+        if (this.atlas != null) this.atlas.dispose();
     }
 
     public void standardRender(SpriteBatch sb, Color color){
-        if (!dontShowHeart) {
+        if (!this.noMesh) {
             this.state.update(Gdx.graphics.getDeltaTime());
             this.state.apply(this.skeleton);
             if (this.skeleton.getRootBone() != null) {

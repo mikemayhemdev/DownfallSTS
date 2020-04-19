@@ -81,7 +81,7 @@ public class HeartEvent extends AbstractEvent {
         this.pickCard = false;
         waitingToSave = false;
         if (this.npc == null) {
-            this.npc = new CustomAnimatedNPC(1350.0F * Settings.scale, AbstractDungeon.floorY - 30.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
+            this.npc = new CustomAnimatedNPC(1334.0F * Settings.scale, AbstractDungeon.floorY + 200.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
         }
         this.npc.portalRenderActive = true;
 

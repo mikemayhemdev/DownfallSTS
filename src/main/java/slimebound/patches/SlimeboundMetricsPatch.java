@@ -1,6 +1,6 @@
 package slimebound.patches;
 
-
+/*
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.core.Settings;
@@ -12,9 +12,6 @@ import com.megacrit.cardcrawl.screens.DeathScreen;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* Copied from The Mystic Mod:
-   https://github.com/JohnnyDevo/The-Mystic-Project/blob/master/src/main/java/mysticmod/Patches/MysticMetricsPatch.java
- */
 public class SlimeboundMetricsPatch {
 
     @SpirePatch(clz = Metrics.class, method = "sendPost", paramtypez = {String.class, String.class})
@@ -57,3 +54,5 @@ public class SlimeboundMetricsPatch {
 
     }
 }
+
+*/

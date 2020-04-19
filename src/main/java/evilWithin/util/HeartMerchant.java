@@ -58,7 +58,7 @@ public class HeartMerchant implements Disposable {
         this.speechTimer = 1.5F;
         this.saidWelcome = false;
         this.shopScreen = 1;
-        this.anim = new CustomAnimatedNPC(1350.0F * Settings.scale, AbstractDungeon.floorY - 30.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
+        this.anim = new CustomAnimatedNPC(1350.0F * Settings.scale, AbstractDungeon.floorY + 200.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
 
 
         AbstractCard c;

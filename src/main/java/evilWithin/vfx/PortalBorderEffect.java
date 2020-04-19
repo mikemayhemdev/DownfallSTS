@@ -26,24 +26,24 @@ import java.awt.geom.Point2D;
 public class PortalBorderEffect extends AbstractGameEffect {
     private float vfxTimer = 0.0F;
 
-    private static final float NON_ORBITAL_ADJUSTMENT_MIN_SPEED = 400.0f * Settings.scale;
-    private static final float NON_ORBITAL_ADJUSTMENT_MAX_SPEED = 600.0f * Settings.scale;
-    private static final int TARGET_WISP_COUNT_MAX_SIZE_ELLIPSE = 12;
-    private static final float DEFAULT_ORBIT_DURATION = 8F;
+    private final float NON_ORBITAL_ADJUSTMENT_MIN_SPEED = 400.0f * Settings.scale;
+    private final float NON_ORBITAL_ADJUSTMENT_MAX_SPEED = 600.0f * Settings.scale;
+    private final int TARGET_WISP_COUNT_MAX_SIZE_ELLIPSE = 12;
+    private final float DEFAULT_ORBIT_DURATION = 8F;
 
-    private static float ELLIPSIS_WIDTH = 235F * Settings.scale;
-    private static float ELLIPSIS_HEIGHT = 235F * Settings.scale;
+    private float ELLIPSIS_WIDTH = 235F * Settings.scale;
+    private float ELLIPSIS_HEIGHT = 235F * Settings.scale;
 
-    private static float ELLIPSIS_BASE_WIDTH = 235F * Settings.scale;
-    private static float ELLIPSIS_BASE_HEIGHT = 235F * Settings.scale;
+    private float ELLIPSIS_BASE_WIDTH = 235F * Settings.scale;
+    private float ELLIPSIS_BASE_HEIGHT = 235F * Settings.scale;
 
     public float ELLIPSIS_SCALE = 1F;
 
-    private static float ORBIT_DURATION = DEFAULT_ORBIT_DURATION;
-    private static float NON_ORBITAL_ADJUSTMENT_SPEED = 200.0f * Settings.scale;
-    private static float ELLIPSIS_X = 0.0f;
-    private static float ELLIPSIS_Y = 0.0f;
-    private static boolean orbitClockwise = false;
+    private float ORBIT_DURATION = DEFAULT_ORBIT_DURATION;
+    private float NON_ORBITAL_ADJUSTMENT_SPEED = 200.0f * Settings.scale;
+    private float ELLIPSIS_X = 0.0f;
+    private float ELLIPSIS_Y = 0.0f;
+    private boolean orbitClockwise = false;
 
     public float cX;
     public float cY;
@@ -55,8 +55,11 @@ public class PortalBorderEffect extends AbstractGameEffect {
 
     public Color borderColor = Color.VIOLET;
 
-
     public PortalBorderEffect(float startX, float startY, float angle) {
+        this(startX,startY,angle, 1F);
+    }
+
+    public PortalBorderEffect(float startX, float startY, float angle, float scale) {
         this.cX = startX;
         this.cY = startY;
         this.tX = startX;
@@ -69,6 +72,10 @@ public class PortalBorderEffect extends AbstractGameEffect {
         //SlimeboundMod.logger.info("new border effect, angle: " + initialAngle + " " + orbitalInterval + " " + ORBIT_DURATION);
 
         this.renderBehind = false;
+
+        this.ELLIPSIS_SCALE *= scale;
+
+        this.calculateEllipseSize();
     }
 
     public void calculateNewPosition(){
