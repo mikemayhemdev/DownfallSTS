@@ -35,7 +35,7 @@ public class Defend_Slimebound extends AbstractSlimeboundCard {
 
 
         this.baseBlock = 5;
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
+        this.tags.add(CardTags.STARTER_DEFEND);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

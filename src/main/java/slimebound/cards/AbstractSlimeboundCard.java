@@ -81,7 +81,7 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         isSelfDamageModified = tmp != selfDamage;
 
         int que = slimed;
-        slimed = SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+        slimed = slimed + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
         if (slimed != que) isSlimedModified = true;
     }
 }

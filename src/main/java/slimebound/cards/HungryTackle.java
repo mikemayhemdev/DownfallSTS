@@ -55,8 +55,6 @@ public class HungryTackle extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 1;
 
-        this.upgradeSelfDamage(baseSelfDamage);
-
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {

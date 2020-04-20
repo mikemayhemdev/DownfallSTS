@@ -54,7 +54,6 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         upgradeDamage = 4;
 
         //this.exhaust = true;
-        this.upgradeSelfDamage(baseSelfDamage);
 
     }
 

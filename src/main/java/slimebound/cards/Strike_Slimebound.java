@@ -36,7 +36,7 @@ public class Strike_Slimebound extends AbstractSlimeboundCard {
         super(ID, NAME, slimebound.SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 6;
-        this.tags.add(BaseModCardTags.BASIC_STRIKE);
+        this.tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(AbstractCard.CardTags.STRIKE);
     }
 

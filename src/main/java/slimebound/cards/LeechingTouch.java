@@ -46,8 +46,6 @@ public class LeechingTouch extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 5;
-        this.tags.add(AbstractCard.CardTags.HEALING);
-
 
     }
 

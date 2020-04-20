@@ -43,7 +43,6 @@ public class SplitLicking extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 2;
         this.slimed = this.baseSlimed = 5;
-        upgradeSlimed(0);
         this.exhaust = true;
     }
 
