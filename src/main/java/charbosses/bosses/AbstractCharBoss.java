@@ -152,6 +152,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : this.masterDeck.group) {
             ((AbstractBossCard) c).owner = this;
         }
+        ArrayList<AbstractCard> newCardList = new ArrayList<>();
     }
 
     public void usePreBattleAction() {
