@@ -8,10 +8,10 @@ import com.badlogic.gdx.math.Vector2;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.map.*;
-import com.megacrit.cardcrawl.neow.NeowEvent;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
 import evilWithin.patches.EvilModeCharacterSelect;
@@ -28,8 +28,14 @@ public class FlipMap {
             clz = AbstractDungeon.class,
             method = "generateMap"
     )
+    @SpirePatch(
+            clz = TheEnding.class,
+            method = "generateSpecialMap"
+    )
     public static class EverythingIsWrong
     {
+        public static int startY = 0;
+
         @SpireInsertPatch(
                 locator = Locator.class
         )
@@ -41,11 +47,16 @@ public class FlipMap {
 
         private static void flip(ArrayList<ArrayList<MapRoomNode>> map)
         {
+            startY = 0;
+
             ArrayList<MapNodeData> edges = new ArrayList<>();
 
             for (ArrayList<MapRoomNode> row : map)
                 for (MapRoomNode n : row)
                 {
+                    if (n.room == null || n.getRoomSymbol(true) == null || n.room instanceof MonsterRoomBoss)
+                        continue; //for some reason act 4 map generates the boss room node and final victory room nodes even though they aren't used
+
                     for (MapEdge e : n.getEdges())
                         if (!edgeArrayContains(edges, e))
                         {
@@ -60,6 +71,12 @@ public class FlipMap {
 
             for (MapNodeData data : edges)
             {
+                if (data.end.room == null || data.end.getRoomSymbol(true) == null || data.end.room instanceof MonsterRoomBoss)
+                    continue;
+
+                if (data.end.y > startY)
+                    startY = data.end.y;
+
                 data.end.addEdge(new MapEdge(data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, data.start.x, data.start.y, data.start.offsetX, data.start.offsetY,false));
                 data.end.getEdges().sort(MapEdge::compareTo);
 
@@ -117,7 +134,7 @@ public class FlipMap {
         {
             if (EvilModeCharacterSelect.evilMode)
             {
-                if (n.y == AbstractDungeon.map.size() - 1)
+                if (n.y == FlipMap.EverythingIsWrong.startY)
                 {
                     return 0;
                 }
@@ -204,8 +221,8 @@ public class FlipMap {
     )
     public static class YouAreScrollingTheWrongWay
     {
-        private static final float ADJUST = 150.0f * Settings.scale;
-        private static final float MORE_ADJUST = 300.0f * Settings.scale;
+        private static final float ADJUST = 50.0f * Settings.scale;
+        private static final float MORE_ADJUST = 250.0f * Settings.scale;
 
         @SpireInsertPatch(
                 locator = Locator.class,
@@ -217,8 +234,8 @@ public class FlipMap {
             {
                 if (scrolly)
                 {
-                    WhyDoYouNotPayAnyRealAttentionToTheVariables.lower = targetOffsetY[0] + MORE_ADJUST;
-                    WhyDoYouNotPayAnyRealAttentionToTheVariables.upper = targetOffsetY[0] = DungeonMapScreen.offsetY;
+                    WhyDoYouNotPayAnyRealAttentionToTheVariables.lower = targetOffsetY[0] + ADJUST;
+                    WhyDoYouNotPayAnyRealAttentionToTheVariables.upper = targetOffsetY[0] = DungeonMapScreen.offsetY + MORE_ADJUST;
                     DungeonMapScreen.offsetY = WhyDoYouNotPayAnyRealAttentionToTheVariables.lower;
                 }
                 else
@@ -227,8 +244,11 @@ public class FlipMap {
                     {
                         targetOffsetY[0] = DungeonMapScreen.offsetY = ___mapScrollUpperLimit;
                     }
-                    targetOffsetY[0] += ADJUST;
-                    DungeonMapScreen.offsetY += ADJUST;
+                    /*else
+                    {
+                        targetOffsetY[0] += MORE_ADJUST;
+                        DungeonMapScreen.offsetY += MORE_ADJUST;
+                    }*/
                 }
             }
         }
@@ -307,7 +327,7 @@ public class FlipMap {
                 {
                     ++count;
 
-                    if (count == 1)
+                    if (count == 1 || count == 2)
                     {
                         f.replace("{" +
                                 "$_ = " + BossStuff.class.getName() + ".getARealY($0);" +
@@ -322,7 +342,7 @@ public class FlipMap {
             if (EvilModeCharacterSelect.evilMode)
             {
                 if (mmmmmm.y == 0)
-                    return 14;
+                    return AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14;
                 return 0;
             }
             return mmmmmm.y;
