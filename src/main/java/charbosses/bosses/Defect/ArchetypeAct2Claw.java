@@ -86,5 +86,8 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_IceCream());
+    }
 }

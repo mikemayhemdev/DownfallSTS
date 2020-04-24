@@ -93,5 +93,8 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_BlueCandle());
+    }
 }

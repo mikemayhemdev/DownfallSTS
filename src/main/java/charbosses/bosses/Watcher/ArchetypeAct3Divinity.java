@@ -121,5 +121,8 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_SmoothStone());
+    }
 }

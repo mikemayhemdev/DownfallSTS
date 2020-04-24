@@ -19,4 +19,8 @@ public class ArchetypeBaseSilent extends AbstractBossDeckArchetype {
 
     }
 
+    @Override
+    public void initializeBonusRelic() {
+
+    }
 }

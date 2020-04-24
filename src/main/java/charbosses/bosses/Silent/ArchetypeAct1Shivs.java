@@ -2,10 +2,7 @@ package charbosses.bosses.Silent;
 
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.green.*;
-import charbosses.relics.CBR_BagOfPreparation;
-import charbosses.relics.CBR_DreamCatcher;
-import charbosses.relics.CBR_Lantern;
-import charbosses.relics.CBR_NeowsBlessing;
+import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Cleric;
 import charbosses.relics.EventRelics.CBR_UpgradeShrine;
 import charbosses.relics.EventRelics.CBR_WeMeetAgain;
@@ -80,5 +77,8 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_Vajra());
+    }
 }

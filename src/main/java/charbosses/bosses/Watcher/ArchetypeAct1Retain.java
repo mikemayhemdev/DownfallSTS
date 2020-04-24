@@ -112,5 +112,8 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_TungstenRod());
+    }
 }

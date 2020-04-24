@@ -84,9 +84,10 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
         addToDeck(new EnClothesline(), true);
 
 
-
-
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_Shuriken());
+    }
 }

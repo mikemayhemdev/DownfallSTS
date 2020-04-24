@@ -102,5 +102,8 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_SmoothStone());
+    }
 }

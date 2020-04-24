@@ -100,5 +100,8 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_DataDisk());
+    }
 }

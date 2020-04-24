@@ -115,5 +115,8 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_StrikeDummy());
+    }
 }
