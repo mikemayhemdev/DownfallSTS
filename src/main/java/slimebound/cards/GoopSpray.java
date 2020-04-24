@@ -47,7 +47,6 @@ public class GoopSpray extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 2;
         this.slimed = this.baseSlimed = 10;
-        upgradeSlimed(0);
 
 
     }

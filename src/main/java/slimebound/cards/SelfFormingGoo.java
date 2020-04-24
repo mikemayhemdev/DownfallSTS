@@ -35,7 +35,6 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
     public SelfFormingGoo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         this.slimed = this.baseSlimed = 2;
-        upgradeSlimed(0);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

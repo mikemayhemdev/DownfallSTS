@@ -51,7 +51,7 @@ public class TagTeam extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        ArrayList<Integer> orbs = new ArrayList();
+        ArrayList<Integer> orbs = new ArrayList<>();
         orbs.add(1);
         orbs.add(2);
         orbs.add(3);

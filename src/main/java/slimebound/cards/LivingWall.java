@@ -48,7 +48,6 @@ public class LivingWall extends AbstractSlimeboundCard {
 
 
         this.slimed = this.baseSlimed = 4;
-        upgradeSlimed(0);
         //this.baseBlock = 2;
 
         this.baseBlock = 12;

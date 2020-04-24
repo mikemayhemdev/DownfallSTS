@@ -50,10 +50,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
         this.baseDamage = originalDamage = 11;
         this.baseSelfDamage = this.selfDamage = 3;
         upgradeDamage = 3;
-
         this.magicNumber = this.baseMagicNumber = 1;
-
-        this.upgradeSelfDamage(this.baseSelfDamage);
 
     }
 

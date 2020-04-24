@@ -57,8 +57,6 @@ public class VenomTackle extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 5;
 
-        this.upgradeSelfDamage(baseSelfDamage);
-
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {

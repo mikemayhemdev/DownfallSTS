@@ -53,8 +53,6 @@ public class Tackle extends AbstractSlimeboundCard {
         upgradeDamage = 3;
 
         this.magicNumber = this.baseMagicNumber = 1;
-
-        this.upgradeSelfDamage(baseSelfDamage);
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {

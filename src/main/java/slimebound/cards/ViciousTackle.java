@@ -54,8 +54,6 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         this.baseDamage = 14;
         this.baseSelfDamage = this.selfDamage = 3;
 
-        this.upgradeSelfDamage(this.baseSelfDamage);
-
     }
 
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {

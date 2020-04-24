@@ -49,9 +49,6 @@ public class CorrosiveSpit extends AbstractSlimeboundCard {
 
 
         this.slimed = this.baseSlimed = 6;
-        upgradeSlimed(0);
-
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

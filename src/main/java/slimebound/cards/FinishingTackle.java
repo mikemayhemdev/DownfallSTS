@@ -58,8 +58,6 @@ public class FinishingTackle extends AbstractSlimeboundCard {
 
         this.baseBlock = 10;
 
-        this.upgradeSelfDamage(baseSelfDamage);
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
