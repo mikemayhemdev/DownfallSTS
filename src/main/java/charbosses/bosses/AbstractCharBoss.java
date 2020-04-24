@@ -843,32 +843,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         exhaustPile.clear();
         limbo.clear();
 
-        if (EvilModeCharacterSelect.evilMode &&
-                !(this instanceof CharBossMerchant) &&
-                AbstractDungeon.actNum == 3 &&
-                AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
-                AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
-                AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
-                FleeingMerchant.DEAD
-        ) {
-            if (AbstractDungeon.ascensionLevel < 20) {
-                hackSecretBoss();
-            } else if (AbstractDungeon.bossList.size() != 2) {
-                hackSecretBoss();
-            }
-        }
+
         super.die();
 
     }
 
-    private void hackSecretBoss() {
-        EvilWithinMod.tempAscensionHack = true;
-        EvilWithinMod.tempAscensionOriginalValue = AbstractDungeon.ascensionLevel;
-        AbstractDungeon.bossList.clear();
-        AbstractDungeon.bossList.add("EvilWithin:CharBossMerchant");
-        AbstractDungeon.bossList.add("EvilWithin:CharBossMerchant");
-        AbstractDungeon.ascensionLevel = 20;
-    }
 
     @Override
     protected void onFinalBossVictoryLogic() {
