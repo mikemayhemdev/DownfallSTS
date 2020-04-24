@@ -104,6 +104,13 @@
       " damage at the start of your turn and causes you to draw #b",
       " card."
     ]
+  },
+  "Slimebound:DarklingSlime": {
+    "NAME": "Darkling Slime",
+    "DESCRIPTION": [
+      "Deals #b",
+      " damage at the start of your turn. When commanded, any other Darklings will also attack."
+    ]
   }
 }
 

@@ -1,6 +1,8 @@
 package evilWithin.patches.rooms;
 
 import basemod.ReflectionHacks;
+import charbosses.bosses.Merchant.CharBossMerchant;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AnimatedNpc;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,7 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import evilWithin.monsters.FleeingMerchant;
 import evilWithin.patches.EvilModeCharacterSelect;
+import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
 import evilWithin.vfx.SoulStealEffect;
 import javassist.CtBehavior;
 
@@ -18,7 +23,7 @@ public class BetterEndingPatches {
     public static class StringChanges {
         @SpirePrefixPatch
         public static void patch(SpireHeart __instance) {
-            if(EvilModeCharacterSelect.evilMode) {
+            if (EvilModeCharacterSelect.evilMode) {
                 ReflectionHacks.setPrivateStaticFinal(SpireHeart.class, "eventStrings", CardCrawlGame.languagePack.getEventString("evilWithin:BetterEnding"));
             } else {
                 ReflectionHacks.setPrivateStaticFinal(SpireHeart.class, "eventStrings", CardCrawlGame.languagePack.getEventString(SpireHeart.ID));
@@ -33,6 +38,42 @@ public class BetterEndingPatches {
             for (int i = 0; i < SpireHeart.OPTIONS.length; i++) {
                 SpireHeart.OPTIONS[i] = tmp.OPTIONS[i];
             }
+
+        }
+    }
+
+    @SpirePatch(clz = SpireHeart.class, method = "buttonEffect")
+    public static class MoveToAct4 {
+        @SpirePrefixPatch
+        public static SpireReturn<Void> Prefix(SpireHeart __instance) {
+
+            if (EvilModeCharacterSelect.evilMode// &&
+                    //AbstractDungeon.actNum == 3 &&
+                    //AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
+                    //AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
+                    //AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
+                    //FleeingMerchant.DEAD
+            ) {
+
+                __instance.roomEventText.clear();
+                __instance.hasFocus = false;
+                __instance.roomEventText.hide();
+                Color color = (Color)ReflectionHacks.getPrivate(__instance, SpireHeart.class, "fadeColor");
+                ReflectionHacks.setPrivate(__instance, SpireHeart.class, "fadeColor", new Color(color.r, color.g, color.b, 0F));
+
+                CardCrawlGame.mode = CardCrawlGame.GameMode.GAMEPLAY;
+                CardCrawlGame.nextDungeon = "TheEnding";
+                CardCrawlGame.music.fadeOutBGM();
+                CardCrawlGame.music.fadeOutTempBGM();
+                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+                AbstractDungeon.fadeOut();
+                AbstractDungeon.isDungeonBeaten = true;
+
+                return SpireReturn.Return(null);
+
+            }
+            return SpireReturn.Continue();
+
         }
     }
 
