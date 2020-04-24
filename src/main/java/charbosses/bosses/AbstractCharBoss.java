@@ -18,6 +18,7 @@ import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
+import charbosses.relics.CBR_MagicFlower;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -163,6 +164,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         if (AbstractDungeon.ascensionLevel >= 19) {
             chosenArchetype.initializeBonusRelic();
+        }
+        if (AbstractDungeon.ascensionLevel >= 20) {
+            new CBR_LizardTail().instantObtain(this);
+            new CBR_MagicFlower().instantObtain(this);
         }
     }
 
