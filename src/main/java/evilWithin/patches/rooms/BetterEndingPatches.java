@@ -47,12 +47,12 @@ public class BetterEndingPatches {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(SpireHeart __instance) {
 
-            if (EvilModeCharacterSelect.evilMode &&
+            if (EvilModeCharacterSelect.evilMode// &&
                     //AbstractDungeon.actNum == 3 &&
                     //AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
                     //AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
                     //AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
-                    FleeingMerchant.DEAD
+                    //FleeingMerchant.DEAD
             ) {
 
                 __instance.roomEventText.clear();

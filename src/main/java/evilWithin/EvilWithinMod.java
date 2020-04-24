@@ -585,6 +585,10 @@ public class EvilWithinMod implements
         BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
         BaseMod.addMonster("EvilWithin:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster("EvilWithin:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+
+        BaseMod.addMonster("EvilWithin:NeowBoss", LadyInBlue::new);
+
+
     }
 
     public void addPotions() {
