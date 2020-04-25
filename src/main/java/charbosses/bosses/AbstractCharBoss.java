@@ -48,13 +48,10 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import evilWithin.EvilWithinMod;
-<<<<<<< HEAD
 import evilWithin.monsters.FleeingMerchant;
 import evilWithin.monsters.NeowBoss;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
-=======
->>>>>>> 4afb1321610676b2020e0d9d5eaac4b0d86e7504
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
