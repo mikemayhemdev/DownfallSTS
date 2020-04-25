@@ -1,164 +1,272 @@
 package evilWithin.monsters;
 
+import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
+import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.curses.Pain;
+import com.megacrit.cardcrawl.cards.curses.Regret;
+import com.megacrit.cardcrawl.cards.status.*;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.NeowEye;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
+import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import evilWithin.EvilWithinMod;
+import evilWithin.actions.NeowRezAction;
 import evilWithin.powers.FairyPotionPower;
+import evilWithin.powers.NeowInvulnerablePower;
 import evilWithin.vfx.PotionThrowEffect;
+import guardian.vfx.SmallLaserEffectColored;
 
 public class NeowBoss extends AbstractMonster {
 
-    public static final String ID = EvilWithinMod.makeID("LadyInBlue");
-    public static final String NAME = "The Woman in Blue";
-    private static final float HB_X = 0.0F;
-    private static final float HB_Y = 0.0F;
-    private static final float HB_W = 150.0F;
-    private static final float HB_H = 320.0F;
+    public static final String ID = EvilWithinMod.makeID("NeowBoss");
+    public static final String NAME = "Neow";
+    private static final float HB_X = -40.0F;
+    private static final float HB_Y = -40.0F;
+    private static final float HB_W = 700.0F;
+    private static final float HB_H = 500.0F;
 
-    int turnNum = 0;
-    boolean usedDebuffs = false;
-    boolean usedEmergency = false;
+
+    private static final float EYE1_X = -130.0F * Settings.scale;
+    private static final float EYE1_Y = -50F * Settings.scale;
+
+    private static final float EYE2_X = -20.0F * Settings.scale;
+    private static final float EYE2_Y = -50F * Settings.scale;
+
+    private static final float EYE3_X = 80.0F * Settings.scale;
+    private static final float EYE3_Y = -50F * Settings.scale;
+
+    private static final float INTENT_X = -210.0F * Settings.scale;
+    private static final float INTENT_Y = 280.0F * Settings.scale;
+
+    private static final float DRAWX_OFFSET = 100F * Settings.scale;
+    private static final float DRAWY_OFFSET = 30F * Settings.scale;
+
+    private float baseDrawX;
+
+    private int turnNum = 0;
+
+    private int strAmt;
+    private int blockAmt;
+
+    private static boolean isRezzing;
+    private static boolean offscreen;
+    private static boolean movingOffscreen;
+    private static boolean movingBack;
+
+    private static float moveTimer;
+
+    public static NeowBoss neowboss;
 
 
     public NeowBoss() {
-        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "evilWithinResources/images/monsters/womaninblue/WomanInBlue.png");
+        super(NAME, ID, 150, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
 
-        this.loadAnimation("evilWithinResources/images/monsters/womaninblue/WomanInBlue.atlas", "evilWithinResources/images/monsters/womaninblue/WomanInBlue.json", 1.0F);
+        this.loadAnimation("images/npcs/neow/skeleton.atlas", "images/npcs/neow/skeleton.json", 1.0F);
 
-        switch (AbstractDungeon.actNum) {
-            case 1:
-                setHp(100);
-                break;
-            case 2:
-                setHp(150);
-                break;
-            case 3:
-                setHp(175);
-                break;
-        }
+        this.drawX += DRAWX_OFFSET;
+        this.drawY += DRAWY_OFFSET;
 
-        this.damage.add(new DamageInfo(this, 20));
-        this.damage.add(new DamageInfo(this, 10));
+        neowboss = this;
 
+        this.baseDrawX = drawX;
 
-
-        AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
-        this.stateData.setMix("Hit", "Idle", 0.2F);
-        this.stateData.setMix("Attack", "Idle", 0.2F);
-        this.state.setTimeScale(0.8F);
+
+        this.damage.add(new DamageInfo(this, 6)); //Eye Beam Damage
+        this.damage.add(new DamageInfo(this, 20));  //Scream Damage
+
+        this.strAmt = 2; //Strength Scaling for growth ability
+        this.blockAmt = 20; //Block for growth ability
+
+        this.intentOffsetX = INTENT_X;
+
+
     }
 
+    @Override
+    public void update() {
+        super.update();
+
+        if (movingOffscreen) {
+            moveTimer -= Gdx.graphics.getDeltaTime();
+            this.drawX = Interpolation.linear.apply(this.baseDrawX + 600F * Settings.scale, this.baseDrawX, moveTimer / 2F);
+
+            if (moveTimer <= 0F) {
+                movingOffscreen = false;
+                offscreen = true;
+            }
+        } else if (movingBack) {
+            moveTimer -= Gdx.graphics.getDeltaTime();
+            this.drawX = Interpolation.linear.apply(this.baseDrawX, this.baseDrawX + 600F * Settings.scale, moveTimer / 2F);
+
+            if (moveTimer <= 0F) {
+                movingBack = false;
+                offscreen = false;
+                this.drawX = this.baseDrawX;
+                AbstractCharBoss.boss = null;
+                getMove(0);
+            }
+        }
+    }
 
     @Override
-    public void changeState(String stateName) {
-        switch(stateName) {
-            case "ATTACK":
-                this.state.setAnimation(0, "Attack", false);
-                this.state.addAnimation(0, "Idle", true, 0.0F);
-                break;
-        }
+    public void usePreBattleAction() {
+        super.usePreBattleAction();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
 
     }
 
     public void takeTurn() {
         switch (this.nextMove) {
+            case 0:
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new HeartMegaDebuffEffect()));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 2, true), 2));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 2, true), 2));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, false, false, (float) Settings.WIDTH * 0.2F, (float) Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Slimed(), 1, true, false, false, (float) Settings.WIDTH * 0.35F, (float) Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Wound(), 1, true, false, false, (float) Settings.WIDTH * 0.5F, (float) Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Burn(), 1, true, false, false, (float) Settings.WIDTH * 0.65F, (float) Settings.HEIGHT / 2.0F));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, false, false, (float) Settings.WIDTH * 0.8F, (float) Settings.HEIGHT / 2.0F));
+                break;
             case 1:
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/FirePotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
-                addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.FIRE));
-
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/CultistPotion.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
-                addToBot(new ApplyPowerAction(this, this, new RitualPower(this, 1, false), 1));
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.7F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE2_X, this.hb.cY + EYE2_Y, Color.GOLD), 0.25F));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.8F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE3_X, this.hb.cY + EYE3_Y, Color.GOLD), 0.25F));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
                 break;
             case 2:
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/ExplosivePotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY), 0.1F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.NONE));
-
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/BlockPotion.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, 12));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.YELLOW, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.GOLD, ShockWaveEffect.ShockWaveType.CHAOTIC), .5F));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(1), AbstractGameAction.AttackEffect.SMASH));
+                if (AbstractDungeon.cardRng.randomBoolean()) {
+                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Pain(), 1, true, false));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Regret(), 1, true, false));
+                }
                 break;
             case 3:
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/EssenceOfSteel.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 4), 4));
-
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/AncientPotion.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ArtifactPower(this, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
+                AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.strAmt * 3), this.strAmt * 3));
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
                 break;
             case 4:
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                usedDebuffs = true;
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/WeakPotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 3, true), 3));
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/FearPotion.png", this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 2F, 0.6F, false, false), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 3, true), 3));
+                AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
                 break;
             case 5:
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                usedEmergency = true;
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/GhostInAJar.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePower(this, 1), 1));
-                addToBot(new VFXAction(new PotionThrowEffect("evilWithinResources/images/vfx/FairyinaBottle.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FairyPotionPower(this, 1), 1));
                 break;
         }
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
-    @Override
-    public void damage(DamageInfo info) {
-        super.damage(info);
-        if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output > 0) {
-            this.state.setAnimation(0, "Hit", false);
-            this.state.addAnimation(0, "Idle", true, 0.0F);
+    private void playSfx() {
+
+        int roll = MathUtils.random(3);
+
+        if (roll == 0) {
+            CardCrawlGame.sound.play("VO_NEOW_1A");
+        } else if (roll == 1) {
+            CardCrawlGame.sound.play("VO_NEOW_1B");
+        } else if (roll == 2) {
+            CardCrawlGame.sound.play("VO_NEOW_2A");
+        } else {
+            CardCrawlGame.sound.play("VO_NEOW_2B");
         }
-        if (this.currentHealth <= 0 && this.hasPower(FairyPotionPower.POWER_ID)) {
-            this.heal((int) (this.maxHealth / 0.3F), true);
-            addToTop(new RemoveSpecificPowerAction(this, this, FairyPotionPower.POWER_ID));
-            addToTop(new TalkAction(this, "Ha! Fairy Potion, jerk!"));
+
+    }
+
+    public void switchToRez() {
+        if (!isRezzing) {
+            this.setMove((byte) 4, Intent.MAGIC);
+            isRezzing = true;
+            createIntent();
         }
+
+
+    }
+
+    public void moveForRez() {
+        if (offscreen) {
+            this.heal(this.maxHealth);
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, NeowInvulnerablePower.POWER_ID, 1));
+
+            movingBack = true;
+            moveTimer = 2F;
+            isRezzing = false;
+        } else {
+            movingOffscreen = true;
+            moveTimer = 2F;
+        }
+
     }
 
     protected void getMove(int num) {
-        if (currentHealth <= 0.3F * maxHealth && !usedEmergency) {
-            setMove((byte) 5, Intent.BUFF);
+        if (AbstractCharBoss.boss != null || movingOffscreen || offscreen) {
+            this.setMove((byte) 5, Intent.SLEEP);
+        } else if (!isRezzing) {
+            if (turnNum == 0) {
+                this.setMove((byte) 0, Intent.STRONG_DEBUFF);
+                turnNum = 1;
+            } else {
+                switch (turnNum) {
+                    case 1:
+                        this.setMove((byte) 1, Intent.ATTACK, this.damage.get(0).base, 3, true);
+                        break;
+                    case 2:
+                        this.setMove((byte) 2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
+                        break;
+                    case 3:
+                        this.setMove((byte) 3, Intent.DEFEND_BUFF);
+                        break;
+                }
+
+                this.turnNum++;
+                if (this.turnNum == (4)) {
+                    this.turnNum = 1;
+                }
+            }
         } else {
-            switch (turnNum) {
-                case 0:
-                    this.setMove((byte) 1, Intent.ATTACK_BUFF, this.damage.get(0).base);
-                    break;
-                case 1:
-                    this.setMove((byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
-                    break;
-                case 2:
-                    this.setMove((byte) 3, Intent.BUFF);
-                    break;
-                case 3:
-                    if (!usedDebuffs)
-                        this.setMove((byte) 4, Intent.STRONG_DEBUFF);
-                    else {
-                        turnNum--;
-                        getMove(num);
-                    }
-                    break;
-            }
-            this.turnNum++;
-            if (this.turnNum == (usedDebuffs ? 3 : 4)) {
-                this.turnNum = 0;
-            }
+            this.setMove((byte) 4, Intent.MAGIC);
         }
     }
 }
+
+
+

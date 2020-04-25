@@ -49,6 +49,7 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import evilWithin.EvilWithinMod;
 import evilWithin.monsters.FleeingMerchant;
+import evilWithin.monsters.NeowBoss;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
 import slimebound.SlimeboundMod;
@@ -846,6 +847,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         super.die();
 
+        if (NeowBoss.neowboss != null){
+            NeowBoss.neowboss.moveForRez();
+        }
     }
 
 

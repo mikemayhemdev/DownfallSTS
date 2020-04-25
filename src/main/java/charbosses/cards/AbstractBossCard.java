@@ -369,15 +369,20 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
 
         public void bossDarken(){
+        if (!this.bossDarkened) {
             ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(0F, 0F, 0F, .75F));
             this.bossDarkened = true;
-            SlimeboundMod.logger.info(this.name + " darkened.");
+            //SlimeboundMod.logger.info(this.name + " darkened.");
+        }
         }
 
     public void bossLighten(){
+        if (this.bossDarkened) {
+
             ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(255F * .43F, 255F * .37F, 255F * .65F, 0F));
             this.bossDarkened = false;
-            SlimeboundMod.logger.info(this.name + " lightened.");
+            //SlimeboundMod.logger.info(this.name + " lightened.");
+        }
         }
 
     @Override

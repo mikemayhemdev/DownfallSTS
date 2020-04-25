@@ -32,7 +32,7 @@ public class CharBossIronclad extends AbstractCharBoss {
             case 1: archetype = new ArchetypeAct1PerfectedStrike(); break;
             case 2: archetype = new ArchetypeAct2Strength(); break;
             case 3: archetype = new ArchetypeAct3Block(); break;
-            default: archetype = new ArchetypeAct3Block(); break;
+            default: archetype = new ArchetypeAct1PerfectedStrike(); break;
         }
 
         archetype.initialize();
