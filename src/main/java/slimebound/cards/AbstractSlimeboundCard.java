@@ -68,20 +68,22 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        int tmp = selfDamage;
+        int base = baseSelfDamage;
         if (AbstractDungeon.player.hasRelic(SelfDamagePreventRelic.ID)) {
-            selfDamage -= 1;
+            base -= 1;
         }
         if (AbstractDungeon.player.hasPower(TackleModifyDamagePower.POWER_ID)) {
-            selfDamage += AbstractDungeon.player.getPower(TackleModifyDamagePower.POWER_ID).amount;
+            base += AbstractDungeon.player.getPower(TackleModifyDamagePower.POWER_ID).amount;
         }
         if (AbstractDungeon.player.hasPower(PreventTackleDamagePower.POWER_ID)) {
-            selfDamage = 0;
+            base = 0;
         }
-        isSelfDamageModified = tmp != selfDamage;
+        selfDamage = base;
+        isSelfDamageModified = (this.selfDamage != this.baseSelfDamage);
 
-        int que = slimed;
-        slimed = slimed + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
-        if (slimed != que) isSlimedModified = true;
+        int que = baseSlimed;
+        que += SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player);
+        slimed = que;
+        isSlimedModified = (slimed != baseSlimed);
     }
 }

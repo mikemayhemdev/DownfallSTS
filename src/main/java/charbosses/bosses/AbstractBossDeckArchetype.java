@@ -76,6 +76,8 @@ public abstract class AbstractBossDeckArchetype {
     public boolean upgradeAllSkills = false;
     public boolean upgradeAllAttacks = false;
 
+    public abstract void initializeBonusRelic();
+
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
         this.ID = id;
         this.allCards = new ArrayList<AbstractBossCard>();
@@ -262,7 +264,7 @@ public abstract class AbstractBossDeckArchetype {
         this.bossNonEnergyRelicPool.add(new CBR_BlackStar());
         this.bossNonEnergyRelicPool.add(new CBR_SneckoEye());
         this.bossNonEnergyRelicPool.add(new CBR_TinyHouse());
-        this.bossNonEnergyRelicPool.add(new CBR_LizardTail());   ///Overwritten from original rarity
+        // this.bossNonEnergyRelicPool.add(new CBR_LizardTail());   ///Overwritten from original rarity
         this.bossNonEnergyRelicPool.add(new CBR_BronzeScales());   ///Overwritten from original rarity
         this.bossNonEnergyRelicPool.add(new CBR_Pocketwatch());   ///Overwritten from original rarity
         this.bossNonEnergyRelicPool.add(new CBR_Shuriken());   ///Overwritten from original rarity

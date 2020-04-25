@@ -11,7 +11,6 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossSortHandAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
-import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.core.EnemyEnergyManager;
@@ -19,6 +18,7 @@ import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
+import charbosses.relics.CBR_MagicFlower;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -48,10 +48,13 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import evilWithin.EvilWithinMod;
+<<<<<<< HEAD
 import evilWithin.monsters.FleeingMerchant;
 import evilWithin.monsters.NeowBoss;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+=======
+>>>>>>> 4afb1321610676b2020e0d9d5eaac4b0d86e7504
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -123,8 +126,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.stance = new EnNeutralStance();
         this.orbs = new ArrayList<AbstractOrb>();
         this.relics = new ArrayList<AbstractCharbossRelic>();
-
-
     }
 
     @Override
@@ -153,6 +154,28 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : this.masterDeck.group) {
             ((AbstractBossCard) c).owner = this;
         }
+        if (AbstractDungeon.ascensionLevel >= 4) {
+            ArrayList<AbstractCard> newCardList = new ArrayList<>();
+            for (AbstractCard q : this.masterDeck.group) {
+                if (q.canUpgrade()) {
+                    newCardList.add(q);
+                }
+            }
+            for (int i = 0; i < 3; i++) {
+                if (!newCardList.isEmpty()) {
+                    AbstractCard q = newCardList.get(AbstractDungeon.cardRandomRng.random(newCardList.size() - 1));
+                    q.upgrade();
+                    newCardList.remove(q);
+                }
+            }
+        }
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            chosenArchetype.initializeBonusRelic();
+        }
+        if (AbstractDungeon.ascensionLevel >= 20) {
+            new CBR_LizardTail().instantObtain(this);
+            new CBR_MagicFlower().instantObtain(this);
+        }
     }
 
     public void usePreBattleAction() {
@@ -164,8 +187,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStart();
         }
-
-
     }
 
     @Override

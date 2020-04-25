@@ -92,5 +92,8 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
         addToDeck(new EnDefendGreen());
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_HappyFlower());
+    }
 }

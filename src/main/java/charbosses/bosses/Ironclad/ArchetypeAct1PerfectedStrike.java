@@ -75,5 +75,8 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_MercuryHourglass());
+    }
 }

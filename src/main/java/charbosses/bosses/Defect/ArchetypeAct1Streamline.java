@@ -1,11 +1,10 @@
 package charbosses.bosses.Defect;
 
-import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.blue.*;
-import charbosses.cards.curses.EnDoubt;
-import charbosses.cards.red.*;
-import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_Serpent;
+import charbosses.relics.CBR_Abacus;
+import charbosses.relics.CBR_DataDisk;
+import charbosses.relics.CBR_NeowsBlessing;
+import charbosses.relics.CBR_SmoothStone;
 import charbosses.relics.EventRelics.CBR_Transmogrifier;
 
 public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
@@ -32,7 +31,6 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         //Rebound
         //Charge Battery
         //Rip and Tear
-
 
 
         /////   RELICS   /////
@@ -72,9 +70,10 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         addToDeck(new EnStrikeBlue(), false);
 
 
-
-
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_Abacus());
+    }
 }

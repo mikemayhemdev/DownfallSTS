@@ -75,5 +75,8 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
     }
 
-
+    @Override
+    public void initializeBonusRelic() {
+        addRelic(new CBR_ThreadAndNeedle());
+    }
 }

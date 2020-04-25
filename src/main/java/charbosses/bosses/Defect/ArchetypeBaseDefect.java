@@ -14,4 +14,8 @@ public class ArchetypeBaseDefect extends AbstractBossDeckArchetype {
 
     }
 
+    public void initializeBonusRelic() {
+
+    }
+
 }

@@ -14,4 +14,8 @@ public class ArchetypeBaseMerchant extends AbstractBossDeckArchetype {
 
     }
 
+    @Override
+    public void initializeBonusRelic() {
+
+    }
 }
