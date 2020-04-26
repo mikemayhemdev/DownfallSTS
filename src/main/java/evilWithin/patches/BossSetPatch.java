@@ -35,6 +35,8 @@ public class BossSetPatch {
             AbstractDungeon.eliteMonsterList.add("EvilWithin:CharBossMerchant");
 
             key = "EvilWithin:NeowBoss";
+
+            AbstractDungeon.bossKey = key;
         }
 
         switch (key) {

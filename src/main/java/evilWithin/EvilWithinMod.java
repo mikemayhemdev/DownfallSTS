@@ -586,7 +586,7 @@ public class EvilWithinMod implements
         BaseMod.addMonster("EvilWithin:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster("EvilWithin:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
-        BaseMod.addMonster("EvilWithin:NeowBoss", LadyInBlue::new);
+        BaseMod.addMonster("EvilWithin:NeowBoss", NeowBoss::new);
 
 
     }
@@ -680,14 +680,16 @@ public class EvilWithinMod implements
     @Override
     public void receiveStartAct() {
         if (evilMode) {
-            Method setBoss = null;
-            try {
-                AbstractDungeon.bossKey = possEncounterList.remove(AbstractDungeon.cardRandomRng.random(possEncounterList.size() - 1));
-                setBoss = AbstractDungeon.class.getDeclaredMethod("setBoss", String.class);
-                setBoss.setAccessible(true);
-                setBoss.invoke(CardCrawlGame.dungeon, AbstractDungeon.bossKey);
-            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-                e.printStackTrace();
+            if (AbstractDungeon.actNum <= 3) {
+                Method setBoss = null;
+                try {
+                    AbstractDungeon.bossKey = possEncounterList.remove(AbstractDungeon.cardRandomRng.random(possEncounterList.size() - 1));
+                    setBoss = AbstractDungeon.class.getDeclaredMethod("setBoss", String.class);
+                    setBoss.setAccessible(true);
+                    setBoss.invoke(CardCrawlGame.dungeon, AbstractDungeon.bossKey);
+                } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

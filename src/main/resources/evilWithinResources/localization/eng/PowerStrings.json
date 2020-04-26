@@ -11,5 +11,11 @@
       "Has stolen ",
       " of your Souls."
     ]
+  },
+  "EvilWithin:NeowInvulnerable": {
+    "NAME": "God of Life",
+    "DESCRIPTIONS": [
+      "Cannot be killed.  Retreats to recover when reduced to 1 HP."
+    ]
   }
 }
