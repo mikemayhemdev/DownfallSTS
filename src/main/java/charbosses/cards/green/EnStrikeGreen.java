@@ -19,7 +19,7 @@ public class EnStrikeGreen extends AbstractBossCard {
     }
 
     public EnStrikeGreen() {
-        super(ID, EnStrikeGreen.cardStrings.NAME, "green/attack/strike", 1, EnStrikeGreen.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, EnStrikeGreen.cardStrings.NAME, "green/attack/strike", 1, EnStrikeGreen.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
         this.tags.add(CardTags.STRIKE);
         this.tags.add(CardTags.STARTER_STRIKE);

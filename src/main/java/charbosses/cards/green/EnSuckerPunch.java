@@ -23,7 +23,7 @@ public class EnSuckerPunch extends AbstractBossCard {
     }
 
     public EnSuckerPunch() {
-        super(ID, EnSuckerPunch.cardStrings.NAME, "green/attack/sucker_punch", 1, EnSuckerPunch.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnSuckerPunch.cardStrings.NAME, "green/attack/sucker_punch", 1, EnSuckerPunch.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 8;
         this.baseMagicNumber = magicNumber = 1;
     }

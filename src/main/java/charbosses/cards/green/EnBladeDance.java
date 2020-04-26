@@ -18,7 +18,7 @@ public class EnBladeDance extends AbstractBossCard {
     }
 
     public EnBladeDance() {
-        super(ID, EnBladeDance.cardStrings.NAME, "green/skill/blade_dance", 1, EnBladeDance.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, EnBladeDance.cardStrings.NAME, "green/skill/blade_dance", 1, EnBladeDance.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new EnShiv();

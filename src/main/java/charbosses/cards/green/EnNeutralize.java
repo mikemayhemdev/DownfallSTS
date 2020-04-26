@@ -21,7 +21,7 @@ public class EnNeutralize extends AbstractBossCard {
     }
 
     public EnNeutralize() {
-        super(ID, EnNeutralize.cardStrings.NAME, "green/attack/neutralize", 0, EnNeutralize.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, EnNeutralize.cardStrings.NAME, "green/attack/neutralize", 0, EnNeutralize.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 3;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;

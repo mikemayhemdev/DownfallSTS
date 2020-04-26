@@ -19,7 +19,7 @@ public class EnAfterImage extends AbstractBossCard {
     }
 
     public EnAfterImage() {
-        super(ID, EnAfterImage.cardStrings.NAME, "green/attack/leg_sweep", 1, EnAfterImage.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, EnAfterImage.cardStrings.NAME, "green/attack/after_image", 1, EnAfterImage.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.BUFF);
     }
 
     @Override

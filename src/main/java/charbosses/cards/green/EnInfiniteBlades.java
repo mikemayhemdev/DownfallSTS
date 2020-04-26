@@ -20,7 +20,7 @@ public class EnInfiniteBlades extends AbstractBossCard {
     }
 
     public EnInfiniteBlades() {
-        super(ID, EnInfiniteBlades.cardStrings.NAME, "green/power/infinite_blades", 1, EnInfiniteBlades.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnInfiniteBlades.cardStrings.NAME, "green/power/infinite_blades", 1, EnInfiniteBlades.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.cardsToPreview = new EnShiv();
         this.limit = 2;
     }

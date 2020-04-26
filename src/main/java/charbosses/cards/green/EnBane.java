@@ -21,7 +21,7 @@ public class EnBane extends AbstractBossCard {
     }
 
     public EnBane() {
-        super(ID, EnBane.cardStrings.NAME, "green/attack/bane", 1, EnBane.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnBane.cardStrings.NAME, "green/attack/bane", 1, EnBane.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 7;
     }
 

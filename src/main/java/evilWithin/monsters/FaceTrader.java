@@ -96,7 +96,7 @@ public class FaceTrader extends AbstractMonster {
                 this.setMove((byte) 2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
                 break;
             case 2:
-                this.setMove((byte) 3, Intent.ATTACK_DEBUFF);
+                this.setMove((byte) 3, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
                 break;
             case 3:
                 this.setMove((byte) 4, Intent.DEFEND_BUFF);

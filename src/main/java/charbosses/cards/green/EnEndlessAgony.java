@@ -21,7 +21,7 @@ public class EnEndlessAgony extends AbstractBossCard {
     }
 
     public EnEndlessAgony() {
-        super(ID, EnEndlessAgony.cardStrings.NAME, "green/attack/endless_agony", 0, EnEndlessAgony.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, EnEndlessAgony.cardStrings.NAME, "green/attack/endless_agony", 0, EnEndlessAgony.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 4;
         exhaust = true;
     }

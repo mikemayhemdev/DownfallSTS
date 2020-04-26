@@ -19,7 +19,7 @@ public class EnCripplingCloud extends AbstractBossCard {
     }
 
     public EnCripplingCloud() {
-        super(ID, EnCripplingCloud.cardStrings.NAME, "green/attack/crippling_cloud", 2, EnCripplingCloud.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, EnCripplingCloud.cardStrings.NAME, "green/attack/crippling_cloud", 2, EnCripplingCloud.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         exhaust = true;

@@ -19,7 +19,7 @@ public class EnFootwork extends AbstractBossCard {
     }
 
     public EnFootwork() {
-        super(ID, EnFootwork.cardStrings.NAME, "green/power/footwork", 1, EnFootwork.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, EnFootwork.cardStrings.NAME, "green/power/footwork", 1, EnFootwork.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         baseMagicNumber = magicNumber = 2;
     }
 

@@ -21,7 +21,7 @@ public class EnPoisonedStab extends AbstractBossCard {
     }
 
     public EnPoisonedStab() {
-        super(ID, EnPoisonedStab.cardStrings.NAME, "green/attack/poisoned_stab", 1, EnPoisonedStab.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnPoisonedStab.cardStrings.NAME, "green/attack/poisoned_stab", 1, EnPoisonedStab.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 6;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;

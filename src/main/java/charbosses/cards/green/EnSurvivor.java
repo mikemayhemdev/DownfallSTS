@@ -18,7 +18,7 @@ public class EnSurvivor extends AbstractBossCard {
     }
 
     public EnSurvivor() {
-        super(ID, EnSurvivor.cardStrings.NAME, "green/skill/survivor", 1, EnSurvivor.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, EnSurvivor.cardStrings.NAME, "green/skill/survivor", 1, EnSurvivor.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 8;
     }
 

@@ -18,7 +18,7 @@ public class EnOutmaneuver extends AbstractBossCard {
     }
 
     public EnOutmaneuver() {
-        super(ID, EnOutmaneuver.cardStrings.NAME, "green/skill/outmaneuver", 1, EnOutmaneuver.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.NONE);
+        super(ID, EnOutmaneuver.cardStrings.NAME, "green/skill/outmaneuver", 1, EnOutmaneuver.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.NONE, AbstractMonster.Intent.BUFF);
     }
 
     @Override

@@ -23,7 +23,7 @@ public class EnSlice extends AbstractBossCard {
     }
 
     public EnSlice() {
-        super(ID, EnSlice.cardStrings.NAME, "green/attack/quick_slash", 0, EnSlice.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnSlice.cardStrings.NAME, "green/attack/quick_slash", 0, EnSlice.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 5;
     }
 

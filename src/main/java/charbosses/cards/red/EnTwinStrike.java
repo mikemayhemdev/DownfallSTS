@@ -27,7 +27,7 @@ public class EnTwinStrike extends AbstractBossCard {
         this.tags.add(CardTags.STRIKE);
         this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
         this.isMultiDamage = true;
-        this.magicNumber = 2;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

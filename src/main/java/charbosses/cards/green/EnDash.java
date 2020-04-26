@@ -22,7 +22,7 @@ public class EnDash extends AbstractBossCard {
     }
 
     public EnDash() {
-        super(ID, EnDash.cardStrings.NAME, "green/attack/poisoned_stab", 2, EnDash.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
+        super(ID, EnDash.cardStrings.NAME, "green/attack/poisoned_stab", 2, EnDash.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY, AbstractMonster.Intent.ATTACK_DEFEND);
         this.baseDamage = 10;
         this.baseBlock = 10;
     }

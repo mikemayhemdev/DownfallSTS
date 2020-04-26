@@ -21,7 +21,7 @@ public class EnPredator extends AbstractBossCard {
     }
 
     public EnPredator() {
-        super(ID, EnPredator.cardStrings.NAME, "green/attack/predator", 2, EnPredator.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, EnPredator.cardStrings.NAME, "green/attack/predator", 2, EnPredator.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         this.baseDamage = 15;
         this.magicNumber = this.baseMagicNumber = 2;
         this.magicValue = 5;

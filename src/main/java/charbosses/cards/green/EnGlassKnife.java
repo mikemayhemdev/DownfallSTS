@@ -20,7 +20,7 @@ public class EnGlassKnife extends AbstractBossCard {
     }
 
     public EnGlassKnife() {
-        super(ID, EnGlassKnife.cardStrings.NAME, "green/attack/glass_knife", 1, EnGlassKnife.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, EnGlassKnife.cardStrings.NAME, "green/attack/glass_knife", 1, EnGlassKnife.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 8;
     }
 

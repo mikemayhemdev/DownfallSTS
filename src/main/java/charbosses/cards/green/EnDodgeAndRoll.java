@@ -19,7 +19,7 @@ public class EnDodgeAndRoll extends AbstractBossCard {
     }
 
     public EnDodgeAndRoll() {
-        super(ID, EnDodgeAndRoll.cardStrings.NAME, "green/skill/dodge_and_roll", 1, EnDodgeAndRoll.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, EnDodgeAndRoll.cardStrings.NAME, "green/skill/dodge_and_roll", 1, EnDodgeAndRoll.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 4;
     }
 

@@ -22,7 +22,7 @@ public class EnFlyingKnee extends AbstractBossCard {
     }
 
     public EnFlyingKnee() {
-        super(ID, EnFlyingKnee.cardStrings.NAME, "green/attack/flying_knee", 1, EnFlyingKnee.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, EnFlyingKnee.cardStrings.NAME, "green/attack/flying_knee", 1, EnFlyingKnee.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         this.baseDamage = 8;
     }
 

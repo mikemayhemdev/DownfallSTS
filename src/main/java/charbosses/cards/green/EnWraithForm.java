@@ -20,7 +20,7 @@ public class EnWraithForm extends AbstractBossCard {
     }
 
     public EnWraithForm() {
-        super(ID, EnWraithForm.cardStrings.NAME, "green/power/wraith_form", 3, EnWraithForm.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.RARE, CardTarget.SELF);
+        super(ID, EnWraithForm.cardStrings.NAME, "green/power/wraith_form", 3, EnWraithForm.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         baseMagicNumber = magicNumber = 2;
     }
 

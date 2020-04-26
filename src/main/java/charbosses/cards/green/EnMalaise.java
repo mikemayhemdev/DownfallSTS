@@ -25,7 +25,7 @@ public class EnMalaise extends AbstractBossCard {
     }
 
     public EnMalaise() {
-        super(ID, EnMalaise.cardStrings.NAME, "green/attack/malaise", -1, EnMalaise.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, EnMalaise.cardStrings.NAME, "green/attack/malaise", -1, EnMalaise.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
     }
 
     @Override

@@ -21,7 +21,6 @@ public class SlimeSpawnAction extends AbstractGameAction {
     private AbstractOrb orbType;
     private boolean SelfDamage = true;
     private boolean upgraded = false;
-    private boolean random = false;
     private int currentAmount;
     private int upgradedamount;
     private int count;
@@ -42,7 +41,6 @@ public class SlimeSpawnAction extends AbstractGameAction {
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage) {
 
         this.duration = Settings.ACTION_DUR_FAST;
-        this.random = random;
 
         if (newOrbType != null) {
             this.orbType = newOrbType;
@@ -53,13 +51,10 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
         this.upgraded = upgraded;
         this.SelfDamage = SelfDamage;
-        this.currentAmount = 3;
+        this.currentAmount = 4;
         if (AbstractDungeon.player.hasRelic(TarBlob.ID)) {
             currentAmount++;
         }
-
-
-        this.count = count;
 
 
     }
@@ -114,9 +109,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
                         MaxHPActuallyLost++;
                         MaxHPActuallyLost++;
                     }
-                    int q = 4;
-                    if (AbstractDungeon.player.hasRelic(TarBlob.ID)) q++;
-                    if (AbstractDungeon.player.maxHealth <= q) {
+                    if (AbstractDungeon.player.maxHealth <= MaxHPActuallyLost) {
                         MaxHPActuallyLost = AbstractDungeon.player.maxHealth - 1;
                     }
 
@@ -129,7 +122,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
             // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
             //SlimeboundMod.logger.info("Channeling slime orb");
-            if (this.random || this.orbType == null) {
+            if (this.orbType == null) {
 
                 //OLD RANDOM, NOW UNUSED, CLEAN UP LATER
 
