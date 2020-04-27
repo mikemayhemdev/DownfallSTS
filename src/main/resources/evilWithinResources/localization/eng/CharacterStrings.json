@@ -88,5 +88,12 @@
       "~the~ ~City...~",
       "~the~ ~Beyond...~"
     ]
+  },
+  "NeowEnding": {
+    "TEXT": [
+      "You... have... slain... my... champions?",
+      "...the Heart still beats.....",
+      "..and so...... shall... NL ....mine......"
+    ]
   }
 }
