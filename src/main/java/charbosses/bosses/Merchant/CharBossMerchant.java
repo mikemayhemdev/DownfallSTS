@@ -21,8 +21,11 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
+import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import evilWithin.EvilWithinMod;
 import evilWithin.monsters.FleeingMerchant;
+import evilWithin.vfx.NeowBossRezEffect;
 
 public class CharBossMerchant extends AbstractCharBoss {
 
@@ -39,8 +42,11 @@ public class CharBossMerchant extends AbstractCharBoss {
     private boolean curveUp = false;
     private float curveDuration = 1F;
 
+    private NeowBossRezEffect rezVFX;
+    private float rezTimer;
+
     public CharBossMerchant() {
-        super("Merchant", "EvilWithin:Merchant", 280, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+        super("Merchant", "EvilWithin:Merchant", 500, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
 
         if (EvilWithinMod.tempAscensionHack){
             EvilWithinMod.tempAscensionHack = false;
@@ -64,6 +70,14 @@ public class CharBossMerchant extends AbstractCharBoss {
         this.energyString = "[R]";
 
         initGlowMesh(time);
+
+
+        this.tint.color = new Color(.5F, .5F, 1F, 0F);
+        this.tint.changeColor(Color.WHITE.cpy(), 2F);
+        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.CYAN, true));
+        AbstractDungeon.effectsQueue.add(new IntenseZoomEffect(this.hb.cX, this.hb.cY, false));
+        rezVFX = new NeowBossRezEffect(this.hb.cX, this.hb.cY);
+        this.rezTimer = 2F;
     }
 
     public void initGlowMesh(float time) {
@@ -148,6 +162,11 @@ public class CharBossMerchant extends AbstractCharBoss {
     public void update() {
         this.bob.update();
         super.update();
+        if (this.rezTimer <= 0F){
+            this.rezVFX.end();
+        } else {
+            this.rezTimer -= Gdx.graphics.getDeltaTime();
+        }
     }
 }
 
