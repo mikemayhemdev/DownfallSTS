@@ -1,10 +1,12 @@
 package charbosses.bosses.Silent;
 
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.anticards.Antidote;
 import charbosses.cards.green.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_DesignerInSpire;
 import charbosses.relics.EventRelics.CBR_OldBeggar;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
@@ -90,6 +92,11 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
         addToDeck(new EnNeutralize(), true);
         addToDeck(new EnCripplingCloud());
         addToDeck(new EnDefendGreen());
+    }
+
+    @Override
+    public AbstractCard anticard() {
+        return new Antidote();
     }
 
     @Override

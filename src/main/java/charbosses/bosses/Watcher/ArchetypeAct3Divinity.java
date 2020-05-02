@@ -1,11 +1,14 @@
 package charbosses.bosses.Watcher;
 
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
-import charbosses.cards.colorless.EnRitualDagger;
+import charbosses.cards.anticards.PeaceOut;
 import charbosses.cards.curses.EnWrithe;
 import charbosses.cards.purple.*;
 import charbosses.relics.*;
-import charbosses.relics.EventRelics.*;
+import charbosses.relics.EventRelics.CBR_FaceTrader;
+import charbosses.relics.EventRelics.CBR_Falling;
+import charbosses.relics.EventRelics.CBR_Mausoleum;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
@@ -67,7 +70,6 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         //Calm build, alpha/beta/omega
 
 
-
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
@@ -117,8 +119,11 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         addToDeck(new EnBattleHymn(), false);
         addToDeck(new EnFasting(), true);
         addToDeck(new EnDefendPurple(), false);
+    }
 
-
+    @Override
+    public AbstractCard anticard() {
+        return new PeaceOut();
     }
 
     @Override

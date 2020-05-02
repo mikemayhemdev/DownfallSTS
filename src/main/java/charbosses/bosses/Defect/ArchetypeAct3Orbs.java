@@ -1,11 +1,13 @@
 package charbosses.bosses.Defect;
 
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.anticards.Debug;
 import charbosses.cards.blue.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Colosseum;
 import charbosses.relics.EventRelics.CBR_ScrapOoze;
 import charbosses.relics.EventRelics.CBR_WheelOfChange;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
@@ -98,6 +100,11 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
 
 
+    }
+
+    @Override
+    public AbstractCard anticard() {
+        return new Debug();
     }
 
     @Override

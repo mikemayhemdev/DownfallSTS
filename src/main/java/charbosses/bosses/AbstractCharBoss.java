@@ -23,6 +23,7 @@ import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -173,6 +174,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (AbstractDungeon.ascensionLevel >= 20) {
             new CBR_LizardTail().instantObtain(this);
             new CBR_MagicFlower().instantObtain(this);
+        }
+        if (AbstractDungeon.actNum == 3) {
+            if (AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(chosenArchetype.anticard().makeCopy()));
+            }
+            if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player)) {
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(chosenArchetype.anticard().makeCopy()));
+            }
+            if (AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)) {
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(chosenArchetype.anticard().makeCopy()));
+            }
         }
     }
 
