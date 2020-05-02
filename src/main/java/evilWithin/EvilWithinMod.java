@@ -17,6 +17,10 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.cards.anticards.Antidote;
+import charbosses.cards.anticards.Debug;
+import charbosses.cards.anticards.PeaceOut;
+import charbosses.cards.anticards.ShieldSmash;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
@@ -48,7 +52,6 @@ import eventUtil.EventUtils;
 import evilWithin.cards.KnowingSkullWish;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
-import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
 import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.KnowingSkull;
@@ -61,7 +64,6 @@ import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 
-import javax.smartcardio.Card;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -116,11 +118,16 @@ public class EvilWithinMod implements
 
     public static String assetPath(String path, otherPackagePaths otherPath) {
         switch (otherPath) {
-            case PACKAGE_GUARDIAN: return "guardianResources/" + path;
-            case PACKAGE_SLIME: return "slimeboundResources/" + path;
-            case PACKAGE_SNECKO: return "sneckomodResources/" + path;
-            case PACKAGE_HEXAGHOST: return "hexamodResources/" + path;
-            case PACKAGE_EXPANSION: return "expansioncontentResources/" + path;
+            case PACKAGE_GUARDIAN:
+                return "guardianResources/" + path;
+            case PACKAGE_SLIME:
+                return "slimeboundResources/" + path;
+            case PACKAGE_SNECKO:
+                return "sneckomodResources/" + path;
+            case PACKAGE_HEXAGHOST:
+                return "hexamodResources/" + path;
+            case PACKAGE_EXPANSION:
+                return "expansioncontentResources/" + path;
         }
         return "evilWithinResources/" + path;
     }
@@ -202,6 +209,10 @@ public class EvilWithinMod implements
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new KnowingSkullWish());
+        BaseMod.addCard(new Antidote());
+        BaseMod.addCard(new ShieldSmash());
+        BaseMod.addCard(new Debug());
+        BaseMod.addCard(new PeaceOut());
     }
 
     @Override
@@ -582,7 +593,7 @@ public class EvilWithinMod implements
                 }));
 
         BaseMod.addMonster("EvilWithin:CharBossIronclad", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
-        BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[] { new CharBossSilent() }));
+        BaseMod.addMonster("EvilWithin:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster("EvilWithin:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster("EvilWithin:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
