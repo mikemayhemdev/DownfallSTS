@@ -24,19 +24,19 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_MercuryHourglass());
-        addRelic(new CBR_Torii());
-        addRelic(new CBR_SelfFormingClay());
-        addRelic(new CBR_IncenseBurner());
+        //addRelic(new CBR_Torii());
+        //addRelic(new CBR_SelfFormingClay());
+        //addRelic(new CBR_IncenseBurner());
         addRelic(new CBR_Calipers());
-        addRelic(new CBR_Girya(3));
-        addRelic(new CBR_Vajra());
+        //addRelic(new CBR_Girya(3));
+        //addRelic(new CBR_Vajra());
         addRelic(new CBR_SmoothStone());
-        addRelic(new CBR_FossilizedHelix());
-        addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_ClockworkSouvenir());
-        addRelic(new CBR_TungstenRod());
+        //addRelic(new CBR_FossilizedHelix());
+        //addRelic(new CBR_BagOfPreparation());
+        //addRelic(new CBR_ClockworkSouvenir());
+        //addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
-        addRelic(new CBR_FusionHammer());
+        //addRelic(new CBR_FusionHammer());
 
         /////   CARDS   /////
 
@@ -44,11 +44,9 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         addToDeck(new EnPanicButton(), false);
         addToDeck(new EnApotheosis(), true);
         addToDeck(new EnDramaticEntrance(), false);
-        addToDeck(new EnSwiftStrike(), false);
-        addToDeck(new EnGoodInstincts(), false);
 
         //Turn 2
-        addToDeck(new EnTheBomb(), false);
+        addToDeck(new EnSwiftStrike(), false);
         addToDeck(new EnPanacea(), false);
         addToDeck(new EnSadisticNature(), false);
 
@@ -58,7 +56,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         addToDeck(new EnHandOfGreed(), false);
 
         //Turn 4
-        addToDeck(new EnMagnetism(), false);
+        addToDeck(new EnGoodInstincts(), false);
         addToDeck(new EnGoodInstincts(), false);
         addToDeck(new EnTheBomb(), false);
 
@@ -77,6 +75,6 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_ThreadAndNeedle());
+        addRelic(new CBR_SelfFormingClay());
     }
 }

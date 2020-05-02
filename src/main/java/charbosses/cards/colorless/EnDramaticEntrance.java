@@ -23,7 +23,6 @@ public class EnDramaticEntrance extends AbstractBossCard {
     public EnDramaticEntrance() {
         super(ID, cardStrings.NAME, "colorless/attack/dramatic_entrance", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
-        this.isMultiDamage = true;
         this.exhaust = true;
         this.isInnate = true;
     }
