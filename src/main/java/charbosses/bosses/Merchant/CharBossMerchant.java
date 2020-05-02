@@ -13,6 +13,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -44,9 +46,10 @@ public class CharBossMerchant extends AbstractCharBoss {
 
     private NeowBossRezEffect rezVFX;
     private float rezTimer;
+    private boolean startVFX = false;
 
     public CharBossMerchant() {
-        super("Merchant", "EvilWithin:Merchant", 500, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+        super("Merchant", "EvilWithin:Merchant", 200, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
 
         if (EvilWithinMod.tempAscensionHack){
             EvilWithinMod.tempAscensionHack = false;
@@ -71,13 +74,22 @@ public class CharBossMerchant extends AbstractCharBoss {
 
         initGlowMesh(time);
 
-
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
-        this.tint.changeColor(Color.WHITE.cpy(), 2F);
-        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.CYAN, true));
-        AbstractDungeon.effectsQueue.add(new IntenseZoomEffect(this.hb.cX, this.hb.cY, false));
-        rezVFX = new NeowBossRezEffect(this.hb.cX, this.hb.cY);
-        this.rezTimer = 2F;
+
+    }
+
+    @Override
+    public void usePreBattleAction() {
+        //Super Fast cheat
+        for (int i = 0; i < 10; i++) {
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.CYAN, true), 2F));
+
+        super.usePreBattleAction();
+        this.tint.color = new Color(.5F, .5F, 1F, 0F);
+        this.rezTimer = 3F;
     }
 
     public void initGlowMesh(float time) {
@@ -115,8 +127,7 @@ public class CharBossMerchant extends AbstractCharBoss {
 
     }
 
-    public void renderGlow(SpriteBatch sb){
-
+    public void updateGlow(){
         if (!this.curveUp){
             this.curveDuration -= Gdx.graphics.getDeltaTime();
             if (this.curveDuration < 0.0F) {
@@ -140,6 +151,9 @@ public class CharBossMerchant extends AbstractCharBoss {
         this.skeletonGlow.updateWorldTransform();
         this.skeletonGlow.setPosition(this.drawX + this.animX, this.drawY + this.animY);
         this.skeletonGlow.setFlip(this.flipHorizontal, this.flipVertical);
+    }
+
+    public void renderGlow(SpriteBatch sb){
         sb.end();
         CardCrawlGame.psb.begin();
         sr.draw(CardCrawlGame.psb, this.skeletonGlow);
@@ -154,18 +168,29 @@ public class CharBossMerchant extends AbstractCharBoss {
         sb.setColor(Color.WHITE);
         sb.draw(ImageMaster.MERCHANT_RUG_IMG, FleeingMerchant.DRAW_X, FleeingMerchant.DRAW_Y, 512 * Settings.scale, 512 * Settings.scale);
         //sb.draw(ImageMaster.loadImage(EvilWithinMod.assetPath("images/monsters/merchant/onlyShadow/skeleton.png")), FleeingMerchant.DRAW_X, FleeingMerchant.DRAW_Y, 201F * Settings.scale, 51F * Settings.scale);
-        renderGlow(sb);
+        if (rezTimer <= 0F) renderGlow(sb);
         super.render(sb);
     }
 
     @Override
     public void update() {
         this.bob.update();
+        updateGlow();
         super.update();
         if (this.rezTimer <= 0F){
             this.rezVFX.end();
         } else {
             this.rezTimer -= Gdx.graphics.getDeltaTime();
+            if (!this.startVFX && rezTimer <= 2F){
+                this.startVFX = true;
+                this.tint.changeColor(Color.WHITE.cpy(), 2F);
+                AbstractDungeon.effectsQueue.add(new IntenseZoomEffect(this.hb.cX, this.hb.cY, false));
+                rezVFX = new NeowBossRezEffect(this.hb.cX, this.hb.cY);
+                AbstractDungeon.effectsQueue.add(rezVFX);
+            }
+            if (rezTimer > 2F){
+                this.tint.color = new Color(.5F, .5F, 1F, 0F);
+            }
         }
     }
 }

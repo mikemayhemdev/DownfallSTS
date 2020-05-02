@@ -31,7 +31,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         //addRelic(new CBR_Girya(3));
         //addRelic(new CBR_Vajra());
         addRelic(new CBR_SmoothStone());
-        //addRelic(new CBR_FossilizedHelix());
+        addRelic(new CBR_FossilizedHelix());
         //addRelic(new CBR_BagOfPreparation());
         //addRelic(new CBR_ClockworkSouvenir());
         //addRelic(new CBR_TungstenRod());
