@@ -7,6 +7,7 @@ import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import evilWithin.EvilWithinMod;
@@ -77,6 +78,10 @@ public abstract class AbstractBossDeckArchetype {
     public boolean upgradeAllAttacks = false;
 
     public abstract void initializeBonusRelic();
+
+    public AbstractCard anticard() {
+        return new Shiv();
+    }
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
         this.ID = id;
@@ -170,12 +175,12 @@ public abstract class AbstractBossDeckArchetype {
         addToDeck(c, false);
     }
 
-    public void addToDeck(AbstractBossCard c, boolean upgraded){
+    public void addToDeck(AbstractBossCard c, boolean upgraded) {
         if (upgraded) c.upgrade();
         AbstractCharBoss.boss.masterDeck.addToTop(c.makeCopy());
     }
 
-    public void addRelic(AbstractCharbossRelic r){
+    public void addRelic(AbstractCharbossRelic r) {
         r.instantObtain(AbstractCharBoss.boss);
 
     }
@@ -883,10 +888,10 @@ public abstract class AbstractBossDeckArchetype {
 
             ArrayList<AbstractCharbossRelic> sortedRelics = sortRelicListToRarity(this.globalRelicPool);
             ArrayList<AbstractCharbossRelic> invalid = sortRelicListToRarity(this.globalRelicPool);
-            for (AbstractCharbossRelic r : sortedRelics){
+            for (AbstractCharbossRelic r : sortedRelics) {
                 if (r.tier != tier) invalid.add(r);
             }
-            for (AbstractCharbossRelic r : invalid){
+            for (AbstractCharbossRelic r : invalid) {
                 sortedRelics.remove(r);
             }
             int random = AbstractDungeon.cardRng.random(0, sortedRelics.size() - 1);
@@ -912,6 +917,7 @@ public abstract class AbstractBossDeckArchetype {
         addRandomGlobalRelic(0, boss, "", cards);
 
     }
+
     public void addRandomGlobalRelic(AbstractCharBoss boss, ArrayList<AbstractBossCard> cards, AbstractRelic.RelicTier tier) {
         addRandomGlobalRelic(0, boss, "", cards);
 
@@ -966,8 +972,6 @@ public abstract class AbstractBossDeckArchetype {
             return "";
         }
     }
-
-
 
 
     public AbstractBossCard getRandomCard() {

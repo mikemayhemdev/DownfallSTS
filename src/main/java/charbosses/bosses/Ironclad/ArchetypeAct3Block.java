@@ -1,11 +1,13 @@
 package charbosses.bosses.Ironclad;
 
+import charbosses.cards.anticards.ShieldSmash;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnPain;
 import charbosses.cards.curses.EnWrithe;
 import charbosses.cards.red.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
@@ -96,10 +98,11 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         addToDeck(new EnBarricade(), false);
         addToDeck(new EnGhostlyArmor(), false);
         addToDeck(new EnDefendRed(), true);
+    }
 
-
-
-
+    @Override
+    public AbstractCard anticard() {
+        return new ShieldSmash();
     }
 
     @Override

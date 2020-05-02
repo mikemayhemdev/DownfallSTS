@@ -8,10 +8,14 @@ import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
         clz = CharacterSelectScreen.class,
         method = "render"
 )
-public class Ascension20Patch {
+public class AscensionTextPatch {
     public static void Prefix(CharacterSelectScreen __instance, SpriteBatch sb) {
-        if (__instance.ascensionLevel == 20 && EvilModeCharacterSelect.evilMode) {
-            __instance.ascLevelInfoString = "20. Act 3 Boss has Lizard Tail and Magic Flower.";
+        if (EvilModeCharacterSelect.evilMode) {
+            if (__instance.ascensionLevel == 20) {
+                __instance.ascLevelInfoString = "20. Act 3 Boss has Lizard Tail and Magic Flower.";
+            } else if (__instance.ascensionLevel == 19) {
+                __instance.ascLevelInfoString = "19. Bosses have an extra Relic.";
+            }
         }
     }
 }
