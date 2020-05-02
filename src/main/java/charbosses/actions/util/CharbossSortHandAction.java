@@ -7,7 +7,7 @@ public class CharbossSortHandAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractCharBoss.boss.sortHand();
+        if (AbstractCharBoss.boss != null) AbstractCharBoss.boss.sortHand();
         this.isDone = true;
     }
 

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import evilWithin.EvilWithinMod;
+import evilWithin.monsters.NeowBoss;
 
 import java.util.ArrayList;
 
@@ -30,11 +31,19 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
     }
 
     public void onEquip() {
-        this.HP = MathUtils.floor(100 + ((AbstractDungeon.actNum - 1 ) * 60));
-        if (AbstractDungeon.ascensionLevel >= 9) {
-            this.HP += 20;
+        if (NeowBoss.neowboss == null) {
+            this.HP = MathUtils.floor(100 + ((AbstractDungeon.actNum - 1) * 60));
+            if (AbstractDungeon.ascensionLevel >= 9) {
+                this.HP += 20;
+            }
+            owner.increaseMaxHp(MathUtils.floor(this.HP), false);
+        } else {
+            this.HP = MathUtils.floor(100 + ((1) * 60));
+            if (AbstractDungeon.ascensionLevel >= 9) {
+                this.HP += 20;
+            }
+            owner.increaseMaxHp(MathUtils.floor(this.HP), false);
         }
-        owner.increaseMaxHp(MathUtils.floor(this.HP), false);
         updateDescription(null);
     }
 

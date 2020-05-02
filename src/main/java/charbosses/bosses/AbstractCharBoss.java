@@ -21,6 +21,7 @@ import charbosses.relics.CBR_LizardTail;
 import charbosses.relics.CBR_MagicFlower;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -854,6 +855,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     @Override
     public void die() {
+        if (NeowBoss.neowboss != null){
+            NeowBoss.neowboss.moveForRez();
+            NeowBoss.neowboss.minion = null;
+        }
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
         hand.clear();
@@ -865,9 +870,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         super.die();
 
-        if (NeowBoss.neowboss != null){
-            NeowBoss.neowboss.moveForRez();
-        }
     }
 
 
@@ -1230,19 +1232,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void render(final SpriteBatch sb) {
         super.render(sb);
         this.renderHand(sb);
-        this.stance.render(sb);
-        for (AbstractRelic r : this.relics) {
-            r.render(sb);
-        }
-        if (!this.orbs.isEmpty()) {
-            Iterator var2 = this.orbs.iterator();
-
-            while (var2.hasNext()) {
-                AbstractOrb o = (AbstractOrb) var2.next();
-                o.render(sb);
+        if (!this.isDead) {
+            this.stance.render(sb);
+            for (AbstractRelic r : this.relics) {
+                r.render(sb);
             }
+            if (!this.orbs.isEmpty()) {
+                Iterator var2 = this.orbs.iterator();
+
+                while (var2.hasNext()) {
+                    AbstractOrb o = (AbstractOrb) var2.next();
+                    o.render(sb);
+                }
+            }
+            this.energyPanel.render(sb);
         }
-        this.energyPanel.render(sb);
     }
 
     public void renderHand(final SpriteBatch sb) {

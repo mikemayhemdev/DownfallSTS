@@ -38,6 +38,11 @@ import evilWithin.powers.FairyPotionPower;
 import evilWithin.powers.NeowInvulnerablePower;
 import evilWithin.vfx.PotionThrowEffect;
 import guardian.vfx.SmallLaserEffectColored;
+import saveData.EvilWithinSaveData;
+import slimebound.SlimeboundMod;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class NeowBoss extends AbstractMonster {
 
@@ -71,14 +76,18 @@ public class NeowBoss extends AbstractMonster {
     private int strAmt;
     private int blockAmt;
 
-    private static boolean isRezzing;
-    private static boolean offscreen;
-    private static boolean movingOffscreen;
-    private static boolean movingBack;
+    private boolean isRezzing;
+    private boolean offscreen;
+    private boolean movingOffscreen;
+    private boolean movingBack;
 
-    private static float moveTimer;
+    private float moveTimer;
 
     public static NeowBoss neowboss;
+
+    public AbstractCharBoss minion;
+
+    public ArrayList<String> bossesToRez = new ArrayList<>();
 
 
     public NeowBoss() {
@@ -105,6 +114,30 @@ public class NeowBoss extends AbstractMonster {
         this.intentOffsetX = INTENT_X;
 
 
+        isRezzing = false;
+        offscreen = false;
+        movingOffscreen = false;
+        movingBack = false;
+
+        //Initialize the boss list with the four
+        bossesToRez.clear();
+        bossesToRez.add("EvilWithin:CharBossIronclad");
+        bossesToRez.add("EvilWithin:CharBossSilent");
+        bossesToRez.add("EvilWithin:CharBossDefect");
+        bossesToRez.add("EvilWithin:CharBossWatcher");
+
+        //Remove any that were not encountered (Colosseum event means you could have seen 3 or 4 in the run)
+        for (String bossName : EvilWithinMod.possEncounterList){
+            SlimeboundMod.logger.info("neow checking " + bossName);
+            if (bossesToRez.contains(bossName)){
+                SlimeboundMod.logger.info("Found this boss, removing it.");
+                bossesToRez.remove(bossName);
+            }
+        }
+
+        Collections.shuffle(bossesToRez);
+
+
     }
 
     @Override
@@ -126,6 +159,10 @@ public class NeowBoss extends AbstractMonster {
             if (moveTimer <= 0F) {
                 movingBack = false;
                 offscreen = false;
+                this.halfDead = false;
+                if (!this.hasPower(NeowInvulnerablePower.POWER_ID)){
+                    AbstractDungeon.getCurrRoom().cannotLose = false;
+                }
                 this.drawX = this.baseDrawX;
                 AbstractCharBoss.boss = null;
                 getMove(0);
@@ -137,7 +174,7 @@ public class NeowBoss extends AbstractMonster {
     public void usePreBattleAction() {
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
-
+        AbstractDungeon.getCurrRoom().cannotLose = true;
     }
 
     public void takeTurn() {
@@ -187,6 +224,7 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
                 break;
             case 4:
+                this.halfDead = true;
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
                 break;
             case 5:
@@ -230,7 +268,9 @@ public class NeowBoss extends AbstractMonster {
             movingBack = true;
             moveTimer = 2F;
             isRezzing = false;
+            this.halfDead = false;
         } else {
+
             movingOffscreen = true;
             moveTimer = 2F;
         }
@@ -238,7 +278,7 @@ public class NeowBoss extends AbstractMonster {
     }
 
     protected void getMove(int num) {
-        if (AbstractCharBoss.boss != null || movingOffscreen || offscreen) {
+        if (minion != null || movingOffscreen || offscreen) {
             this.setMove((byte) 5, Intent.SLEEP);
         } else if (!isRezzing) {
             if (turnNum == 0) {

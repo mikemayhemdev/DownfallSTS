@@ -7,7 +7,7 @@ public class CharbossTurnstartDrawAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractCharBoss.boss.endTurnStartTurn();
+        if (AbstractCharBoss.boss != null) AbstractCharBoss.boss.endTurnStartTurn();
         this.isDone = true;
     }
 
