@@ -81,18 +81,15 @@ public class GoopTackle extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
 
-        ArrayList<String> tmp = new ArrayList();
-        Iterator var3 = CardLibrary.cards.entrySet().iterator();
-
-        while (var3.hasNext()) {
-            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
-            if (c.getValue().hasTag(SlimeboundMod.TACKLE)) {
-                tmp.add(c.getKey());
+        ArrayList<AbstractCard> qCardList = new ArrayList<>();
+        for (AbstractCard q : CardLibrary.getAllCards()) {
+            if (q.hasTag(SlimeboundMod.TACKLE) && !(q instanceof GoopTackle)) {
+                qCardList.add(q.makeCopy());
             }
         }
 
 
-        AbstractCard cTackle = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+        AbstractCard cTackle = qCardList.get(AbstractDungeon.cardRng.random(0, qCardList.size() - 1));
         if (upgraded) {
             cTackle.upgrade();
         }

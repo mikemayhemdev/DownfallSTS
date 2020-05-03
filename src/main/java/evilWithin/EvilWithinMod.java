@@ -53,6 +53,7 @@ import evilWithin.cards.KnowingSkullWish;
 import evilWithin.events.*;
 import evilWithin.monsters.*;
 import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+import evilWithin.patches.ui.topPanel.GoldToSoulPatches;
 import evilWithin.potions.CursedFountainPotion;
 import evilWithin.relics.KnowingSkull;
 import evilWithin.relics.*;
@@ -670,6 +671,9 @@ public class EvilWithinMod implements
 
     @Override
     public void receiveStartGame() {
+        if (CardCrawlGame.loadingSave) {
+            GoldToSoulPatches.changeGoldToSouls(false);
+        }
         if (!CardCrawlGame.loadingSave) {
             possEncounterList.clear();
             possEncounterList.add("EvilWithin:CharBossIronclad");

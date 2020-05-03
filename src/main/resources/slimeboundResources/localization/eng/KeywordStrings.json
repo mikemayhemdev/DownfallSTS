@@ -170,6 +170,14 @@
   },
   {
     "NAMES": [
+      "darkling slime",
+      "darkling_slime"
+    ],
+    "PROPER_NAME": "Darkling Slime",
+    "DESCRIPTION": "Attacks for #b4 each turn. When Commanded, other Darkling Slimes also attack."
+  },
+  {
+    "NAMES": [
       "ancient slime",
       "ancient_slime"
     ],
