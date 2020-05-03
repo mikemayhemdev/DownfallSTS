@@ -86,7 +86,7 @@ public class FlipMap {
 
             for (MapRoomNode n : finalNodes)
             {
-                n.addEdge(new MapEdge(n.x, n.y, n.offsetX, n.offsetY, 3, 1, 0.0F, 0.0F, true));
+                n.addEdge(new MapEdge(n.x, n.y, n.offsetX, n.offsetY, 3, -1, 0.0F, Settings.MAP_DST_Y * 2, true));
             }
         }
 
