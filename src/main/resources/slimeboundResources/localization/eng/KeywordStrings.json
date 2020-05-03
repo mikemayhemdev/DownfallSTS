@@ -6,7 +6,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #yslimeboundmod:splitting."
+    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #yslimeboundmod:splitting and gaining 1 #yStrength."
   },
   {
     "NAMES": [
@@ -14,7 +14,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Split",
-    "DESCRIPTION": "Lose #b4 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b4."
+    "DESCRIPTION": "Lose #b4 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b4. If it is Absorbed, gain 1 #yStrength."
   },
   {
     "NAMES": [
