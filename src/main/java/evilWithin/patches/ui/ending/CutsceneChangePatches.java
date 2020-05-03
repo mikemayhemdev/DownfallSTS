@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.cutscenes.Cutscene;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import evilWithin.EvilWithinMod;
 import evilWithin.patches.EvilModeCharacterSelect;
 
 import java.lang.reflect.Field;
@@ -19,7 +20,7 @@ public class CutsceneChangePatches {
     @SpirePostfixPatch
     public static void patch(Cutscene __instance, AbstractPlayer.PlayerClass chosenClass) {
         if (EvilModeCharacterSelect.evilMode) {
-            //TODO: Change this to the custom BG
+
             Texture customBg = ImageMaster.loadImage("images/scenes/redBg.jpg");;
             if (customBg != null) {
                 try {
@@ -34,11 +35,10 @@ public class CutsceneChangePatches {
                 }
             }
 
-            //TODO: Change this to the custom panels
             List<CutscenePanel> customPanels = new ArrayList<>();
-            customPanels.add(new CutscenePanel("images/scenes/ironclad1.png", "ATTACK_HEAVY"));
-            customPanels.add(new CutscenePanel("images/scenes/ironclad2.png"));
-            customPanels.add(new CutscenePanel("images/scenes/ironclad3.png"));
+            customPanels.add(new CutscenePanel(EvilWithinMod.assetPath("images/scenes/ending1.png")));
+            customPanels.add(new CutscenePanel(EvilWithinMod.assetPath("images/scenes/ending2.png")));
+            customPanels.add(new CutscenePanel(EvilWithinMod.assetPath("images/scenes/ending3.png")));
             if (customPanels != null) {
                 try {
                     Field f = Cutscene.class.getDeclaredField("panels");
