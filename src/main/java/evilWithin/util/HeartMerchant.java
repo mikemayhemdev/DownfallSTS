@@ -58,7 +58,7 @@ public class HeartMerchant implements Disposable {
         this.speechTimer = 1.5F;
         this.saidWelcome = false;
         this.shopScreen = 1;
-        this.anim = new CustomAnimatedNPC(1350.0F * Settings.scale, AbstractDungeon.floorY + 200.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
+        this.anim = new CustomAnimatedNPC(1350.0F * Settings.scale, AbstractDungeon.floorY + 350.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
 
 
         AbstractCard c;
@@ -115,6 +115,8 @@ public class HeartMerchant implements Disposable {
         if ((this.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) && !AbstractDungeon.isScreenUp && !AbstractDungeon.isFadingOut && !AbstractDungeon.player.viewingRelics) {
             AbstractDungeon.overlayMenu.proceedButton.setLabel(NAMES[0]);
             this.saidWelcome = true;
+            AbstractDungeon.getCurrRoom().rewards.clear();
+            AbstractDungeon.getCurrRoom().rewardAllowed = false;
             AbstractDungeon.shopScreen.open();
             this.hb.hovered = false;
         }
