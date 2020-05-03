@@ -4,9 +4,11 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
+import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossWatcher extends AbstractCharBoss {
 
@@ -34,5 +36,19 @@ public class CharBossWatcher extends AbstractCharBoss {
         }
 
         archetype.initialize();
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            archetype.initializeBonusRelic();
+        }
+        if (AbstractDungeon.actNum == 3) {
+            if (AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(archetype.anticard().makeCopy()));
+            }
+            if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player)) {
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(archetype.anticard().makeCopy()));
+            }
+            if (AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)) {
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(archetype.anticard().makeCopy()));
+            }
+        }
     }
 }

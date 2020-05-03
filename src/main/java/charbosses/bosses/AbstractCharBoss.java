@@ -168,23 +168,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 }
             }
         }
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            chosenArchetype.initializeBonusRelic();
-        }
         if (AbstractDungeon.ascensionLevel >= 20) {
             new CBR_LizardTail().instantObtain(this);
             new CBR_MagicFlower().instantObtain(this);
-        }
-        if (AbstractDungeon.actNum == 3) {
-            if (AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(chosenArchetype.anticard().makeCopy()));
-            }
-            if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player)) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(chosenArchetype.anticard().makeCopy()));
-            }
-            if (AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(chosenArchetype.anticard().makeCopy()));
-            }
         }
     }
 
@@ -226,10 +212,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             r.update();
         }
 
-        Iterator var1 = this.orbs.iterator();
-
-        while (var1.hasNext()) {
-            AbstractOrb o = (AbstractOrb) var1.next();
+        for (AbstractOrb o : this.orbs) {
             o.update();
             o.updateAnimation();
         }
