@@ -30,78 +30,42 @@ public class FinishingTackle extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
     private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
-    public static int originalDamage;
-    public static int originalBlock;
-    public static int upgradeDamage;
-    public static int upgradeSelfDamage;
-    private static int baseSelfDamage;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
         DESCRIPTION = cardStrings.DESCRIPTION;
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-
     }
 
 
     public FinishingTackle() {
-
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
         tags.add(SlimeboundMod.TACKLE);
         tags.add(SlimeboundMod.GOOPEXPLOIT);
-
-        this.baseDamage = originalDamage = 16;
+        this.baseDamage = 16;
         baseSelfDamage = this.selfDamage = 3;
-        upgradeDamage = 4;
-
         this.baseBlock = 10;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-
         if (m.hasPower(SlimedPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-
         }
-
-    }
-
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        int bonus = 0;
-        if (player.hasPower(TackleBuffPower.POWER_ID)) {
-            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
-        }
-        if (mo != null) {
-            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
-                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
-            }
-        }
-        return tmp + bonus;
     }
 
     public AbstractCard makeCopy() {
-
         return new FinishingTackle();
-
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
-            upgradeDamage(upgradeDamage);
+            upgradeDamage(4);
             upgradeBlock(2);
-
         }
-
     }
 }
 

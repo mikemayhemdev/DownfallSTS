@@ -29,9 +29,6 @@ public class ComboTackle extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
-    public static int originalDamage;
-    public static int originalBlock;
-    public static int upgradeDamage;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -42,37 +39,16 @@ public class ComboTackle extends AbstractSlimeboundCard {
     }
 
     public ComboTackle() {
-
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-
-
-        this.baseDamage = originalDamage = 11;
+        this.baseDamage = 11;
         this.baseSelfDamage = this.selfDamage = 3;
-        upgradeDamage = 3;
         this.magicNumber = this.baseMagicNumber = 1;
-
-    }
-
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        int bonus = 0;
-        if (player.hasPower(TackleBuffPower.POWER_ID)) {
-            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
-        }
-        if (mo != null) {
-            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
-                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
-            }
-        }
-        if (upgraded) this.baseMagicNumber = SlimeboundMod.attacksPlayedThisTurn + 1;
-        return tmp + bonus;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-
         if (upgraded) {
             for (int i = 0; i < SlimeboundMod.attacksPlayedThisTurn; i++) {
                 AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
@@ -81,28 +57,15 @@ public class ComboTackle extends AbstractSlimeboundCard {
         } else {
             AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
         }
-
-    }
-
-    public AbstractCard makeCopy() {
-
-        return new ComboTackle();
-
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
-            upgradeDamage(upgradeDamage);
+            upgradeDamage(3);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-
-
         }
-
     }
 }
 

@@ -31,11 +31,6 @@ public class FlameTackle extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
     private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
-    public static int originalDamage;
-    public static int originalBlock;
-    public static int upgradeDamage;
-    public static int upgradeSelfDamage;
-    private static int baseSelfDamage;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -45,66 +40,27 @@ public class FlameTackle extends AbstractSlimeboundCard {
 
     }
 
-
     public FlameTackle() {
-
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-
-
-        this.baseDamage = originalDamage = 15;
+        this.baseDamage = 15;
         baseSelfDamage = this.selfDamage = 3;
-        upgradeDamage = 3;
-
         this.magicNumber = this.baseMagicNumber = 2;
-        //this.exhaust = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new InflameEffect(p), 0.5F));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new TackleBuffPower(p, p, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
-
-
-    }
-
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        int bonus = 0;
-        if (player.hasPower(TackleBuffPower.POWER_ID)) {
-            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
-        }
-        if (mo != null) {
-            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
-                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
-            }
-        }
-        return tmp + bonus;
-    }
-
-    public AbstractCard makeCopy() {
-
-        return new FlameTackle();
-
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
-            upgradeDamage(upgradeDamage);
-
+            upgradeDamage(3);
             upgradeMagicNumber(1);
-
         }
-
     }
 }
 

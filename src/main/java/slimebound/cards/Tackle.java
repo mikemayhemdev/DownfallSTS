@@ -27,11 +27,6 @@ public class Tackle extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
-    public static int originalDamage;
-    public static int originalBlock;
-    public static int upgradeDamage;
-    public static int upgradeSelfDamage;
-    private static int baseSelfDamage;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -45,57 +40,20 @@ public class Tackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-
-
-        this.baseDamage = originalDamage = 10;
+        this.baseDamage = 10;
         baseSelfDamage = this.selfDamage = 3;
-
-        upgradeDamage = 3;
-
-        this.magicNumber = this.baseMagicNumber = 1;
-    }
-
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        int bonus = 0;
-        if (player.hasPower(TackleBuffPower.POWER_ID)) {
-            bonus = player.getPower(TackleBuffPower.POWER_ID).amount;
-        }
-        if (mo != null) {
-            if (mo.hasPower(TackleDebuffPower.POWER_ID)) {
-                bonus = bonus + mo.getPower(TackleDebuffPower.POWER_ID).amount;
-            }
-        }
-        return tmp + bonus;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(p, new DamageInfo(p, this.selfDamage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
-
-
-        //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
-
-    }
-
-    public AbstractCard makeCopy() {
-
-        return new Tackle();
-
     }
 
     public void upgrade() {
-
         if (!this.upgraded) {
-
             upgradeName();
-
-            upgradeDamage(upgradeDamage);
-
-
+            upgradeDamage(3);
         }
-
     }
 }
 

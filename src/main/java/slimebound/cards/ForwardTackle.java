@@ -28,11 +28,6 @@ public class ForwardTackle extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
     private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
-    public static int originalDamage;
-    public static int originalBlock;
-    public static int upgradeDamage;
-    public static int upgradeSelfDamage;
-    private static int baseSelfDamage;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -49,9 +44,8 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = originalDamage = 14;
+        this.baseDamage = 14;
         baseSelfDamage = this.selfDamage = 3;
-        upgradeDamage = 4;
 
         //this.exhaust = true;
 
@@ -67,7 +61,7 @@ public class ForwardTackle extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(upgradeDamage);
+            upgradeDamage(4);
         }
     }
 }
