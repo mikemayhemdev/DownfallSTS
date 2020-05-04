@@ -15,7 +15,7 @@ public class Debug extends AbstractExpansionCard {
     public final static String ID = makeID("Debug");
 
     public Debug() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
         exhaust = true;
         selfRetain = true;
     }
@@ -24,7 +24,7 @@ public class Debug extends AbstractExpansionCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                if (AbstractCharBoss.boss instanceof CharBossDefect) {
+                if (m instanceof CharBossDefect) {
                     while(AbstractCharBoss.boss.filledOrbCount() > 0) {// 14
                         AbstractCharBoss.boss.removeNextOrb();// 15
                     }

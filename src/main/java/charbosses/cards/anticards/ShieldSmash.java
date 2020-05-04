@@ -9,7 +9,7 @@ public class ShieldSmash extends AbstractExpansionCard {
     public final static String ID = makeID("ShieldSmash");
 
     public ShieldSmash() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.ENEMY);
         exhaust = true;
         selfRetain = true;
     }

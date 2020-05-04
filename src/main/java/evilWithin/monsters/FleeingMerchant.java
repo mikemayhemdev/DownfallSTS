@@ -28,6 +28,7 @@ import evilWithin.actions.MerchantThrowGoldAction;
 import evilWithin.powers.SoulStealPower;
 import evilWithin.rooms.HeartShopRoom;
 import evilWithin.vfx.SoulStealEffect;
+import slimebound.SlimeboundMod;
 
 /*
 First Turn - Panic Button
@@ -210,31 +211,30 @@ public class FleeingMerchant extends AbstractMonster {
     public void die() {
         AbstractDungeon.getCurrRoom().rewardAllowed = true;
         AbstractDungeon.getCurrRoom().rewards.clear();
-        AbstractDungeon.getCurrRoom().addStolenGoldToRewards(this.CURRENT_SOULS);
+        if (FleeingMerchant.CURRENT_SOULS > 0) AbstractDungeon.getCurrRoom().addStolenGoldToRewards(FleeingMerchant.CURRENT_SOULS);
         AbstractDungeon.getCurrRoom().addGoldToRewards(50);
         AbstractDungeon.getCurrRoom().addCardToRewards();
         AbstractDungeon.getCurrRoom().addCardToRewards();
         AbstractDungeon.getCurrRoom().addCardReward(new RewardItem(AbstractCard.CardColor.COLORLESS));
         AbstractDungeon.getCurrRoom().addPotionToRewards();
         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.SHOP);
+        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         super.die();
         DEAD = true;
-        AbstractDungeon.combatRewardScreen.open();
 
-        HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
-        hR.showHeartMerchant();
     }
 
     @Override
     public void escape() {
         super.escape();
-        HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
-        hR.showHeartMerchant();
     }
 
     @Override
     public void dispose() {
         super.dispose();
-        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+        HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
+        hR.showHeartMerchant();
+        AbstractDungeon.combatRewardScreen.open();
+
     }
 }

@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.RepairPower;
 import theHexaghost.cards.AbstractHexaCard;
 import theHexaghost.powers.RemoveMeBabey;
 import theHexaghost.relics.TheBrokenSeal;
-import theHexaghost.vfx.BrokenSealText;
+import theHexaghost.vfx.BrokenSealEffect;
 
 import java.util.ArrayList;
 
@@ -41,7 +41,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 }
             }
         }
-        if (sealList.size() == 6) {
+        if (sealList.size() == 1) {
             ArrayList<String> notToRemoveList = new ArrayList<>();
             ArrayList<AbstractCard> removeList = new ArrayList<>();
             for (AbstractCard c : abstractPlayer.masterDeck.group) {
@@ -56,8 +56,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 }
             }
             abstractPlayer.masterDeck.group.removeIf(removeList::contains);
-            AbstractDungeon.getCurrRoom().spawnRelicAndObtain(Settings.WIDTH / 2F, Settings.HEIGHT / 2F, new TheBrokenSeal());
-            addToTop(new VFXAction(new BrokenSealText(Color.PURPLE.cpy(), TEXT[0], 5.5f)));
+            addToTop(new VFXAction(new BrokenSealEffect()));
         }
         realUse(abstractPlayer, abstractMonster);
     }
