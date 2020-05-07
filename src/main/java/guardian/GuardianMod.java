@@ -3,6 +3,8 @@ package guardian;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -32,7 +34,6 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
-import eventUtil.EventUtils;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
 import guardian.events.StasisEgg;
@@ -977,80 +978,62 @@ public static void saveData() {
 
         addPotions();
 
-
-        EventUtils.registerEvent(
-                //Event ID//
-                GemMine.ID, GemMine.class,
-                //Character Required//
-                GuardianCharacter.class,
-                //Act ID's this event can appear in//
-                new String[]{Exordium.ID});
-        EventUtils.registerEvent(
-                //Event ID//
-                StasisEgg.ID, StasisEgg.class,
-                //Character Required//
-                GuardianCharacter.class,
-                //Act ID's this event can appear in//
-                new String[]{TheBeyond.ID});
-        EventUtils.registerEvent(
-                //Event ID//
-                BackToBasicsGuardian.ID, BackToBasicsGuardian.class,
-                //Character required//
-                GuardianCharacter.class,
+        BaseMod.addEvent(new AddEventParams.Builder(GemMine.ID, GemMine.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
+                //Act
+                .dungeonID(Exordium.ID)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(StasisEgg.ID, StasisEgg.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
+                //Act
+                .dungeonID(TheBeyond.ID)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(CrystalForge.ID, CrystalForge.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGuardian.ID, BackToBasicsGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
                 //Existing Event to Override//
-                BackToBasics.ID,
-                //Event Spawn type//
-                EventUtils.EventType.FULL_REPLACE);
-        EventUtils.registerEvent(
-                //Event ID//
-                CrystalForge.ID, CrystalForge.class,
-                //Character required//
-                GuardianCharacter.class);
-        EventUtils.registerEvent(
-                //Event ID//
-                BackToBasicsGuardian.ID, BackToBasicsGuardian.class,
-                //Character required//
-                GuardianCharacter.class,
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
                 //Existing Event to Override//
-                BackToBasics.ID,
-                //Event Spawn type//
-                EventUtils.EventType.FULL_REPLACE);
-        EventUtils.registerEvent(
-                //Event ID//
-                AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class,
-                //Character required//
-                GuardianCharacter.class,
+                .overrideEvent(AccursedBlacksmith.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(PurificationShrineGuardian.ID, PurificationShrineGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
                 //Existing Event to Override//
-                AccursedBlacksmith.ID,
-                //Event Spawn type//
-                EventUtils.EventType.FULL_REPLACE);
-        EventUtils.registerEvent(
-                //Event ID//
-                PurificationShrineGuardian.ID, PurificationShrineGuardian.class,
-                //Character required//
-                GuardianCharacter.class,
+                .overrideEvent(PurificationShrine.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(TransmogrifierGuardian.ID, TransmogrifierGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
                 //Existing Event to Override//
-                PurificationShrine.ID,
-                //Event Spawn type//
-                EventUtils.EventType.FULL_REPLACE);
-        EventUtils.registerEvent(
-                //Event ID//
-                TransmogrifierGuardian.ID, TransmogrifierGuardian.class,
-                //Character required//
-                GuardianCharacter.class,
+                .overrideEvent(Transmogrifier.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+        BaseMod.addEvent(new AddEventParams.Builder(UpgradeShrineGuardian.ID, UpgradeShrineGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
                 //Existing Event to Override//
-                Transmogrifier.ID,
-                //Event Spawn type//
-                EventUtils.EventType.FULL_REPLACE);
-        EventUtils.registerEvent(
-                //Event ID//
-                UpgradeShrineGuardian.ID, UpgradeShrineGuardian.class,
-                //Character required//
-                GuardianCharacter.class,
-                //Existing Event to Override//
-                UpgradeShrine.ID,
-                //Event Spawn type//
-                EventUtils.EventType.FULL_REPLACE);
+                .overrideEvent(UpgradeShrine.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
 
         //BaseMod.addEvent(GemMine.ID, GemMine.class, Exordium.ID);
         //BaseMod.addEvent(StasisEgg.ID, StasisEgg.class, TheBeyond.ID);
