@@ -9,6 +9,7 @@ Event Override patches, and other things that only appear during Evil Runs.
  */
 
 import basemod.BaseMod;
+import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import charbosses.actions.util.CharBossMonsterGroup;
@@ -182,304 +183,346 @@ public class EvilWithinMod implements
     }
 
     private void initializeEvents() {
-        EventUtils.registerEvent(
-                //Event ID//
-                GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                GremlinMatchGame.ID,
+                .overrideEvent(GremlinMatchGame.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                GremlinWheelGame_Evil.ID, GremlinWheelGame_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(GremlinWheelGame_Evil.ID, GremlinWheelGame_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                GremlinWheelGame.ID,
+                .overrideEvent(GremlinWheelGame.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event only used in Gremlin Wheel relic.  Is not initialized into any Act.
-                GremlinWheelGame_Rest.ID, GremlinWheelGame_Rest.class, new String[]{""});
+        //Event only used in Gremlin Wheel relic.  Is not initialized into any Act.
+        BaseMod.addEvent(new AddEventParams.Builder(GremlinWheelGame_Rest.ID, GremlinWheelGame_Rest.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->false)
+                //Act//
+                .dungeonID("")
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                WomanInBlue_Evil.ID, WomanInBlue_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(WomanInBlue_Evil.ID, WomanInBlue_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                WomanInBlue.ID,
+                .overrideEvent(WomanInBlue.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                LivingWall_Evil.ID, LivingWall_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(LivingWall_Evil.ID, LivingWall_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                LivingWall.ID,
+                .overrideEvent(LivingWall.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Augmenter_Evil.ID, Augmenter_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Augmenter_Evil.ID, Augmenter_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                DrugDealer.ID,
+                .overrideEvent(DrugDealer.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                BonfireSpirits_Evil.ID, BonfireSpirits_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(BonfireSpirits_Evil.ID, BonfireSpirits_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Bonfire.ID,
+                .overrideEvent(Bonfire.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                GoldenShrine_Evil.ID, GoldenShrine_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(GoldenShrine_Evil.ID, GoldenShrine_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                GoldShrine.ID,
+                .overrideEvent(GoldShrine.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                FaceTrader_Evil.ID, FaceTrader_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(FaceTrader_Evil.ID, FaceTrader_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                FaceTrader.ID,
+                .overrideEvent(FaceTrader.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                CursedFountain.ID, CursedFountain.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(CursedFountain.ID, CursedFountain.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                FountainOfCurseRemoval.ID,
-                //Other predicates//
-                AbstractPlayer::isCursed,
+                .overrideEvent(FountainOfCurseRemoval.ID)
+                //Additional Condition//
+                .bonusCondition(()->AbstractDungeon.player.isCursed())
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                WeMeetAgain_Evil.ID, WeMeetAgain_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(WeMeetAgain_Evil.ID, WeMeetAgain_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                WeMeetAgain.ID,
+                .overrideEvent(WeMeetAgain.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Designer_Evil.ID, Designer_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Designer_Evil.ID, Designer_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Designer.ID,
+                .overrideEvent(Designer.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-
-        EventUtils.registerEvent(
-                //Event ID//
-                DeadGuy_Evil.ID, DeadGuy_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(DeadGuy_Evil.ID, DeadGuy_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                DeadAdventurer.ID,
+                .overrideEvent(DeadAdventurer.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                ShiningLight_Evil.ID, ShiningLight_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(ShiningLight_Evil.ID, ShiningLight_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                ShiningLight.ID,
+                .overrideEvent(ShiningLight.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                WorldOfGoop_Evil.ID, WorldOfGoop_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoop_Evil.ID, WorldOfGoop_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                GoopPuddle.ID,
+                .overrideEvent(GoopPuddle.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Serpent_Evil.ID, Serpent_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Serpent_Evil.ID, Serpent_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Sssserpent.ID,
+                .overrideEvent(Sssserpent.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                WingStatue_Evil.ID, WingStatue_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(WingStatue_Evil.ID, WingStatue_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                GoldenWing.ID,
+                .overrideEvent(GoldenWing.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                GoldenIdol_Evil.ID, GoldenIdol_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(GoldenIdol_Evil.ID, GoldenIdol_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                GoldenIdol.ID,
+                .overrideEvent(GoldenIdol.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Cleric_Evil.ID, Cleric_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Cleric_Evil.ID, Cleric_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Cleric.ID,
+                .overrideEvent(Cleric.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                CouncilOfGhosts_Evil.ID, CouncilOfGhosts_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(CouncilOfGhosts_Evil.ID, CouncilOfGhosts_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Ghosts.ID,
+                .overrideEvent(Ghosts.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                CursedTome_Evil.ID, CursedTome_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(CursedTome_Evil.ID, CursedTome_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                CursedTome.ID,
+                .overrideEvent(CursedTome.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                ForgottenAltar_Evil.ID, ForgottenAltar_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(ForgottenAltar_Evil.ID, ForgottenAltar_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                ForgottenAltar.ID,
+                .overrideEvent(ForgottenAltar.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Bandits_Evil.ID, Bandits_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Bandits_Evil.ID, Bandits_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                MaskedBandits.ID,
+                .overrideEvent(MaskedBandits.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                KnowingSkull_Evil.ID, KnowingSkull_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(KnowingSkull_Evil.ID, KnowingSkull_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                KnowingSkull.ID,
+                .overrideEvent(KnowingSkull.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Vagrant_Evil.ID, Vagrant_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Vagrant_Evil.ID, Vagrant_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Addict.ID,
+                .overrideEvent(Addict.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Mausoleum_Evil.ID, Mausoleum_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Mausoleum_Evil.ID, Mausoleum_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                TheMausoleum.ID,
+                .overrideEvent(TheMausoleum.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Beggar_Evil.ID, Beggar_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Beggar_Evil.ID, Beggar_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Beggar.ID,
+                .overrideEvent(Beggar.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                TheNest_Evil.ID, TheNest_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(TheNest_Evil.ID, TheNest_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Nest.ID,
+                .overrideEvent(Nest.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Colosseum_Evil.ID, Colosseum_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Colosseum.ID,
+                .overrideEvent(Colosseum.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                MindBloom_Evil.ID, MindBloom_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(MindBloom_Evil.ID, MindBloom_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                MindBloom.ID,
+                .overrideEvent(MindBloom.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                MoaiHead_Evil.ID, MoaiHead_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(MoaiHead_Evil.ID, MoaiHead_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                MoaiHead.ID,
+                .overrideEvent(MoaiHead.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Nloth_Evil.ID, Nloth_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Nloth_Evil.ID, Nloth_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                Nloth.ID,
+                .overrideEvent(Nloth.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                SensoryStone_Evil.ID, SensoryStone_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(SensoryStone_Evil.ID, SensoryStone_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                SensoryStone.ID,
+                .overrideEvent(SensoryStone.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Portal_Evil.ID, Portal_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Portal_Evil.ID, Portal_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                SecretPortal.ID,
+                .overrideEvent(SecretPortal.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                TombRedMask_Evil.ID, TombRedMask_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(TombRedMask_Evil.ID, TombRedMask_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                TombRedMask.ID,
-                //Other predicates//
-                (c) -> c.hasRelic(RedIOU.ID),
+                .overrideEvent(TombRedMask.ID)
+                //Additional Condition//
+                .bonusCondition(()->AbstractDungeon.player.hasRelic(RedIOU.ID))
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                WindingHalls_Evil.ID, WindingHalls_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(WindingHalls_Evil.ID, WindingHalls_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                WindingHalls.ID,
+                .overrideEvent(WindingHalls.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(
-                //Event ID//
-                Joust_Evil.ID, Joust_Evil.class, true,
+        BaseMod.addEvent(new AddEventParams.Builder(Joust_Evil.ID, Joust_Evil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
                 //Event ID to Override//
-                TheJoust.ID,
+                .overrideEvent(TheJoust.ID)
                 //Event Type//
-                EventUtils.EventType.FULL_REPLACE);
+                .eventType(basemod.eventUtil.EventUtils.EventType.FULL_REPLACE)
+                .create());
 
-        EventUtils.registerEvent(BossTester.ID, BossTester.class, new String[]{""});
+        BaseMod.addEvent(new AddEventParams.Builder(BossTester.ID, BossTester.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->false)
+                .create());
     }
 
     public static ArrayList<String> possEncounterList = new ArrayList<>();
