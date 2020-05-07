@@ -6,32 +6,20 @@
 package evilWithin.rooms;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 import com.megacrit.cardcrawl.shop.Merchant;
-import com.megacrit.cardcrawl.shop.ShopScreen;
-import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import evilWithin.monsters.FleeingMerchant;
 import evilWithin.patches.EvilModeCharacterSelect;
 import evilWithin.util.HeartMerchant;
 
-import java.util.Iterator;
-
 public class HeartShopRoom extends ShopRoom {
     public HeartMerchant heartMerchant;
     public boolean heartMerchantShown;
+    public boolean startedCombat = false;
 
     public HeartShopRoom() {
         super();
@@ -48,14 +36,10 @@ public class HeartShopRoom extends ShopRoom {
 
     public void onPlayerEntry() {
         if (EvilModeCharacterSelect.evilMode)
-
-
-            if (!FleeingMerchant.DEAD){
-
+            if (!FleeingMerchant.DEAD) {
                 startCombat();
-            }
-            else
-            {
+                startedCombat = true;
+            } else {
                 this.setHeartMerchant(new HeartMerchant());
                 this.heartMerchant.spawnHitbox();
                 showHeartMerchant();
@@ -113,7 +97,7 @@ public class HeartShopRoom extends ShopRoom {
 
     }
 
-    public void showHeartMerchant(){
+    public void showHeartMerchant() {
         this.heartMerchantShown = true;
         this.heartMerchant.spawnHitbox();
     }

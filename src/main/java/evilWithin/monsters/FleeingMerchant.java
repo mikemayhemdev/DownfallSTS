@@ -28,7 +28,6 @@ import evilWithin.actions.MerchantThrowGoldAction;
 import evilWithin.powers.SoulStealPower;
 import evilWithin.rooms.HeartShopRoom;
 import evilWithin.vfx.SoulStealEffect;
-import slimebound.SlimeboundMod;
 
 /*
 First Turn - Panic Button
@@ -137,7 +136,7 @@ public class FleeingMerchant extends AbstractMonster {
         if (CURRENT_STRENGTH > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, CURRENT_STRENGTH), CURRENT_STRENGTH));
         }
-        if (CURRENT_SOULS > 0){
+        if (CURRENT_SOULS > 0) {
             this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, CURRENT_SOULS), CURRENT_SOULS));
         }
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
@@ -170,11 +169,11 @@ public class FleeingMerchant extends AbstractMonster {
             this.addToBot((new VFXAction(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX, this.hb.cY), 0.5F)));
 
             this.addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
-            if (AbstractDungeon.player.gold >= 15){
+            if (AbstractDungeon.player.gold >= 15) {
                 this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, 15), 15));
                 CURRENT_SOULS += 15;
             } else {
-                this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, AbstractDungeon.player.gold),  AbstractDungeon.player.gold));
+                this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, AbstractDungeon.player.gold), AbstractDungeon.player.gold));
                 CURRENT_SOULS += AbstractDungeon.player.gold;
             }
             this.addToBot(new LoseGoldAction(15));
@@ -211,14 +210,14 @@ public class FleeingMerchant extends AbstractMonster {
     public void die() {
         AbstractDungeon.getCurrRoom().rewardAllowed = true;
         AbstractDungeon.getCurrRoom().rewards.clear();
-        if (FleeingMerchant.CURRENT_SOULS > 0) AbstractDungeon.getCurrRoom().addStolenGoldToRewards(FleeingMerchant.CURRENT_SOULS);
+        if (FleeingMerchant.CURRENT_SOULS > 0)
+            AbstractDungeon.getCurrRoom().addStolenGoldToRewards(FleeingMerchant.CURRENT_SOULS);
         AbstractDungeon.getCurrRoom().addGoldToRewards(50);
         AbstractDungeon.getCurrRoom().addCardToRewards();
         AbstractDungeon.getCurrRoom().addCardToRewards();
         AbstractDungeon.getCurrRoom().addCardReward(new RewardItem(AbstractCard.CardColor.COLORLESS));
         AbstractDungeon.getCurrRoom().addPotionToRewards();
         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.SHOP);
-        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         super.die();
         DEAD = true;
 
@@ -232,9 +231,9 @@ public class FleeingMerchant extends AbstractMonster {
     @Override
     public void dispose() {
         super.dispose();
+        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
         hR.showHeartMerchant();
         AbstractDungeon.combatRewardScreen.open();
-
     }
 }
