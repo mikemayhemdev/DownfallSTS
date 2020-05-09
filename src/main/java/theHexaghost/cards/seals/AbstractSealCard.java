@@ -41,7 +41,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 }
             }
         }
-        if (sealList.size() == 1) {
+        if (sealList.size() == 6) {
             ArrayList<String> notToRemoveList = new ArrayList<>();
             ArrayList<AbstractCard> removeList = new ArrayList<>();
             for (AbstractCard c : abstractPlayer.masterDeck.group) {

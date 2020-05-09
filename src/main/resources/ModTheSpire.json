@@ -2,7 +2,7 @@
   "modid": "${project.artifactId}",
   "name": "${project.name}",
   "author_list": [
-    "Vex'd, MichaelMayhem, The Evil Pickle, Blank the Evil, Reina, kiooeht, Half-GoblinHenkins, erasels"
+    "MichaelMayhem, Vex, kiooeht, Alchyr, GK, The Evil Pickle, Blank the Evil, JohnnyDevo, Freshbone, Half-GoblinHankins, AlexDrieger, Erim-Nelhah, Reina, moocowgoesmoo.  Artist Credit: Casey Yano - monster art, reddit u/justaschema - ending art, Bruce Brenneise - ending art, reddit u/Atrolux - snecko art, Chronometrics - snecko art, George Eracleous - merchant art.  Music Credit: PandorasBread"
   ],
   "description": "${project.description}",
   "version": "${project.version}",

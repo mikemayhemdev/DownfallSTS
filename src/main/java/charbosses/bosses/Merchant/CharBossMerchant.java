@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
+import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import evilWithin.EvilWithinMod;
 import evilWithin.monsters.FleeingMerchant;
@@ -47,6 +48,8 @@ public class CharBossMerchant extends AbstractCharBoss {
     private NeowBossRezEffect rezVFX;
     private float rezTimer;
     private boolean startVFX = false;
+
+    private boolean neowSpoke = false;
 
     public CharBossMerchant() {
         super("Merchant", "EvilWithin:Merchant", 200, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
@@ -89,7 +92,7 @@ public class CharBossMerchant extends AbstractCharBoss {
 
         super.usePreBattleAction();
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
-        this.rezTimer = 3F;
+        this.rezTimer = 5F;
     }
 
     public void initGlowMesh(float time) {
@@ -191,6 +194,11 @@ public class CharBossMerchant extends AbstractCharBoss {
             if (rezTimer > 2F){
                 this.tint.color = new Color(.5F, .5F, 1F, 0F);
             }
+        }
+        if (!this.neowSpoke){
+            this.neowSpoke = true;
+            AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH, Settings.HEIGHT / 2F, 4.0F, CardCrawlGame.languagePack.getCharacterString("NeowEnding").OPTIONS[0], false));
+            CardCrawlGame.sound.play("VO_NEOW_2B");
         }
     }
 }

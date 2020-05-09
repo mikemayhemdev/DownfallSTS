@@ -36,7 +36,8 @@ public class CutsceneChangePatches {
             }
 
             List<CutscenePanel> customPanels = new ArrayList<>();
-            customPanels.add(new CutscenePanel(EvilWithinMod.assetPath("images/scenes/ending1.png")));
+
+            customPanels.add(new CutscenePanel(EvilWithinMod.assetPath("images/scenes/ending1.png"), "VO_NEOW_1A"));
             customPanels.add(new CutscenePanel(EvilWithinMod.assetPath("images/scenes/ending2.png")));
             customPanels.add(new CutscenePanel(EvilWithinMod.assetPath("images/scenes/ending3.png")));
             if (customPanels != null) {
