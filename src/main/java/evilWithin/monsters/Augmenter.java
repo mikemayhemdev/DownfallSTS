@@ -29,18 +29,18 @@ public class Augmenter extends AbstractMonster {
         this.loadAnimation(EvilWithinMod.assetPath("images/monsters/augmenter/augmenter.atlas"), EvilWithinMod.assetPath("images/monsters/augmenter/augmenter.json"), 1.0F);
         switch (AbstractDungeon.actNum) {
             case 1:
-                setHp(100);
+                setHp(140);
                 break;
             case 2:
-                setHp(150);
+                setHp(170);
                 break;
             case 3:
-                setHp(175);
+                setHp(200);
                 break;
         }
 
         this.damage.add(new DamageInfo(this, 10));
-        this.damage.add(new DamageInfo(this, 12));
+        this.damage.add(new DamageInfo(this, 18));
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
