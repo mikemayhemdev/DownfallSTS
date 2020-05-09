@@ -140,8 +140,6 @@ public class FleeingMerchant extends AbstractMonster {
         if (CURRENT_SOULS > 0) {
             this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, CURRENT_SOULS), CURRENT_SOULS));
         }
-        AbstractDungeon.getCurrRoom().rewardAllowed = false;
-        AbstractDungeon.getCurrRoom().rewards.clear();
     }
 
     @Override
@@ -152,7 +150,6 @@ public class FleeingMerchant extends AbstractMonster {
                 CURRENT_STRENGTH = getPower(StrengthPower.POWER_ID).amount;
             }
             AbstractDungeon.getCurrRoom().smoked = true;
-            AbstractDungeon.getCurrRoom().rewards.clear();
             this.addToBot(new CanLoseAction());
             this.addToBot(new VFXAction(new SmokeBombEffect(hb.cX, hb.cY)));
             this.addToBot(new EscapeAction(this));
@@ -238,8 +235,6 @@ public class FleeingMerchant extends AbstractMonster {
     public void dispose() {
         super.dispose();
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-        HeartShopRoom hR = (HeartShopRoom) AbstractDungeon.getCurrRoom();
-        hR.showHeartMerchant();
         AbstractDungeon.combatRewardScreen.open();
     }
 }

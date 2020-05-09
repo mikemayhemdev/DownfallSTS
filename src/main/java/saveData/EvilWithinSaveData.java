@@ -20,4 +20,5 @@ public class EvilWithinSaveData {
     public int MERCHANT_SOULS  = -1;
 
     public boolean MERCHANT_DEAD = false;
+    public boolean MERCHANT_ESCAPED = false;
 }

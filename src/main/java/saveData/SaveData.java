@@ -30,6 +30,7 @@ public class SaveData {
     public static final String MERCHANT_STRENGTH = "MERCHANT_STRENGTH";
     public static final String MERCHANT_SOULS = "MERCHANT_SOULS";
     public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
+    public static final String MERCHANT_ESCAPED = "MERCHANT_ESCAPED";
     private static Logger saveLogger = LogManager.getLogger("EvilWithinSaveData");
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
@@ -47,7 +48,9 @@ public class SaveData {
     private static int merchantHealth;
     private static int merchantStrength;
     private static int merchantSouls;
+
     private static boolean merchantDead;
+    private static boolean merchantEscaped;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -72,7 +75,9 @@ public class SaveData {
             merchantHealth = FleeingMerchant.CURRENT_HP;
             merchantStrength = FleeingMerchant.CURRENT_STRENGTH;
             merchantSouls = FleeingMerchant.CURRENT_SOULS;
+
             merchantDead = FleeingMerchant.DEAD;
+            merchantEscaped = FleeingMerchant.ESCAPED;
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -100,6 +105,7 @@ public class SaveData {
             params.put(MERCHANT_STRENGTH, merchantStrength);
             params.put(MERCHANT_SOULS, merchantSouls);
             params.put(MERCHANT_DEAD, merchantDead);
+            params.put(MERCHANT_ESCAPED, merchantEscaped);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -138,8 +144,10 @@ public class SaveData {
 
                 merchantHealth = data.MERCHANT_HEALTH;
                 merchantStrength = data.MERCHANT_STRENGTH;
-                merchantDead = data.MERCHANT_DEAD;
                 merchantSouls = data.MERCHANT_SOULS;
+
+                merchantDead = data.MERCHANT_DEAD;
+                merchantEscaped = data.MERCHANT_ESCAPED;
 
                 saveLogger.info("Loaded EvilWithin save data successfully.");
             } catch (Exception e) {
@@ -183,7 +191,9 @@ public class SaveData {
             FleeingMerchant.CURRENT_HP = merchantHealth;
             FleeingMerchant.CURRENT_STRENGTH = merchantStrength;
             FleeingMerchant.CURRENT_SOULS = merchantSouls;
+
             FleeingMerchant.DEAD = merchantDead;
+            FleeingMerchant.ESCAPED = merchantEscaped;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
