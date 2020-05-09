@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.EscapeAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Chosen;
@@ -23,7 +24,8 @@ public class BrokenWingStatue extends CustomRelic {
     private static final Texture OUTLINE = new Texture(EvilWithinMod.assetPath("images/relics/WingStatue.png"));
 
     private static final String[] DIALOG = CardCrawlGame.languagePack.getEventString(WingStatue_Evil.ID).DESCRIPTIONS;
-
+    
+    private AbstractMonster receiver;
 
     public BrokenWingStatue() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
@@ -35,18 +37,18 @@ public class BrokenWingStatue extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        AbstractMonster receiver = null;
+    public void atBattleStartPreDraw() {
+        this.receiver = null;
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             if (m instanceof Cultist || m instanceof Chosen) {
-                receiver = m;
+                this.receiver = m;
                 SlimeboundMod.logger.info("found valid target");
                 break;
             }
         }
-        if (receiver != null) {
+        if (this.receiver != null) {
             int DialogIndex;
-            if (receiver instanceof Cultist) {
+            if (this.receiver instanceof Cultist) {
                 DialogIndex = 4;
                 SlimeboundMod.logger.info("assigned dialog index 4");
             } else {
@@ -55,13 +57,17 @@ public class BrokenWingStatue extends CustomRelic {
             }
             this.flash();
             forceWait(5);
-            addToBot(new RelicAboveCreatureAction(receiver, this));
-            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex], receiver, 2F));
+            addToBot(new RelicAboveCreatureAction(this.receiver, this));
+            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex], this.receiver, 2F));
             forceWait(12);
-            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex + 1], receiver, 2F));
+            this.flash();
+            addToBot(new RelicAboveCreatureAction(this.receiver, this));
+            addToBot(new SpeechBubbleAction(DIALOG[DialogIndex + 1], this.receiver, 2F));
             forceWait(7);
+            this.flash();
+            addToBot(new RelicAboveCreatureAction(this.receiver, this));
             AbstractDungeon.actionManager.addToBottom(new LoseRelicAction(this.relicId));
-            AbstractDungeon.actionManager.addToBottom(new EscapeAction(receiver));
+            AbstractDungeon.actionManager.addToBottom(new EscapeAction(this.receiver));
 
         }
     }
@@ -72,4 +78,5 @@ public class BrokenWingStatue extends CustomRelic {
             addToBot(new WaitAction(0.1F));
         }
     }
+
 }
