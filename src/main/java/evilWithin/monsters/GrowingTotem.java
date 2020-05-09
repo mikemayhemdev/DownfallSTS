@@ -49,13 +49,13 @@ public class GrowingTotem extends AbstractTotemMonster {
         e.setTime(e.getEndTime() * MathUtils.random());
 
         if (AbstractDungeon.ascensionLevel >= 19) {
-            this.attackDmg = 5;
+            this.attackDmg = 7;
             this.secondaryEffect = 2;
         } else if (AbstractDungeon.ascensionLevel >= 4) {
-            this.attackDmg = 5;
+            this.attackDmg = 7;
             this.secondaryEffect = 1;
         } else {
-            this.attackDmg = 4;
+            this.attackDmg = 6;
             this.secondaryEffect = 1;
         }
         this.damage.add(new DamageInfo(this, this.attackDmg));
