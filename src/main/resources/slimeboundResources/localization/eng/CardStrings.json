@@ -86,7 +86,7 @@
   },
   "Slimebound:SpikyOuterGoop": {
     "NAME": "Goop Armor",
-    "DESCRIPTION": "Gain !M! Block whenever you Attack an enemy who has slimeboundmod:Goop."
+    "DESCRIPTION": "Gain !M! Block whenever you slimeboundmod:Consume."
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Self-Forming Goo",
@@ -200,13 +200,13 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "Gluttony",
-    "DESCRIPTION": "The first time you attack an enemy with slimeboundmod:Goop each turn, add a random slimeboundmod:Lick card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you attack an enemy with slimeboundmod:Goop each turn, add a random slimeboundmod:Lick card to your hand."
+    "DESCRIPTION": "The first time you slimeboundmod:Consume each turn, add a random slimeboundmod:Lick card to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you slimeboundmod:Consume each turn, add a random slimeboundmod:Lick card to your hand."
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has slimeboundmod:Goop, slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has slimeboundmod:Goop, slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. Consume: slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Consume: slimeboundmod:Command twice."
   },
   "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",
@@ -219,7 +219,7 @@
   },
   "Slimebound:AcidGelatin": {
     "NAME": "Acidic Goop",
-    "DESCRIPTION": "Apply !M! Poison whenever you Attack an enemy who has slimeboundmod:Goop."
+    "DESCRIPTION": "Apply !M! Poison whenever you slimeboundmod:Consume."
   },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
@@ -227,8 +227,8 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. Add a random slimeboundmod:Lick card to your hand if the enemy has slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded slimeboundmod:Lick card to your hand if the enemy has slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Add a random slimeboundmod:Lick to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Add a random slimeboundmod:Lick to your hand."
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
@@ -272,7 +272,7 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. If the enemy has slimeboundmod:Goop, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume: gain !B! Block."
   },
   "Slimebound:SlimesplosionOLD": {
     "NAME": "Slimesplosion",
@@ -318,7 +318,7 @@
   },
   "Slimebound:VenomTackle": {
     "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. Apply !M! Poison if the enemy has slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume: Apply !M! Poison."
   },
   "Slimebound:UsefulSlime": {
     "NAME": "Useful Slime!",
@@ -344,8 +344,8 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. Gain [E] and draw a card if the enemy has slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] and draw 2 cards if the enemy has slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Gain [E] and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Gain [E] and draw !M! cards."
   },
   "Slimebound:LeechLife": {
     "NAME": "Leech Life",
