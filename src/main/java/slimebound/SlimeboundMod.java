@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
+import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
@@ -48,6 +49,7 @@ import slimebound.characters.SlimeboundCharacter;
 import slimebound.dailymods.AllSplit;
 import slimebound.events.ArtOfSlimeWar;
 import slimebound.events.Hunted;
+import slimebound.events.ScrapOozeSlimebound;
 import slimebound.events.WorldOfGoopSlimebound;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
@@ -779,6 +781,16 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
+        BaseMod.addEvent(new AddEventParams.Builder(ScrapOozeSlimebound.ID, ScrapOozeSlimebound.class) //Event ID//
+                //Event Character//
+                .playerClass(SlimeboundEnum.SLIMEBOUND)
+                //Existing Event to Override//
+                .overrideEvent(ScrapOoze.ID)
+                //Additional Condition//
+                .bonusCondition(()->!AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID))
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
 
         /*
         if (Loader.isModLoaded("TheJungle")){

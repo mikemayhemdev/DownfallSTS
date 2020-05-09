@@ -28,7 +28,7 @@ public class TokePatch {
                 amount = 1;
             }
             if (card.rarity == COMMON || card.rarity == BASIC) {
-                amount = 0;
+                amount = -1;
             }
             if (card.rarity == CURSE) {
                 amount = -2;

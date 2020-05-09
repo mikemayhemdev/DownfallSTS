@@ -39,7 +39,7 @@
     "NAME": "Scrap Ooze",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yScrap #yOoze. NL At Rest Sites, you can donate a card to the Scrap Ooze, granting #b+1 damage for #gUncommons, #b+2 damage for #yRares, #b-2 damage for #rCurses.",
+      "At the start of combat, spawn #yScrap #yOoze. NL At Rest Sites, you can donate a card to the Scrap Ooze, modifying it's damage: NL #b+1 damage for #gUncommons NL #b+2 damage for #yRares NL #b-1 damage for Commons NL #b-2 damage for #rCurses",
       "Remove a card from your deck and modify Scrap Ooze's damage.",
       "Nothing to give to the Scrap Ooze."
     ]

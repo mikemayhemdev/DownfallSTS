@@ -61,7 +61,7 @@ public class CoordinateAction extends AbstractGameAction {
         }
 
         addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, effect), effect));
-        
+
         for (int i = 0; i < effect; ++i) {
             addToBot(new CommandAction());
         }
