@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
-import evilWithin.events.Designer_Evil;
 import evilWithin.monsters.FleeingMerchant;
 import evilWithin.rooms.HeartShopRoom;
 import javassist.CtBehavior;
@@ -25,7 +24,7 @@ public class ProceedButtonPatch {
     public static SpireReturn Insert(ProceedButton __instance) {
         AbstractRoom r = AbstractDungeon.getCurrRoom();
         if (r instanceof HeartShopRoom) {
-            if (((HeartShopRoom) r).startedCombat && FleeingMerchant.DEAD) {
+            if (((HeartShopRoom) r).startedCombat && (FleeingMerchant.DEAD || FleeingMerchant.ESCAPED)) {
                 AbstractRoom tRoom = new HeartShopRoom(false);
                 AbstractDungeon.currMapNode.setRoom(tRoom);
                 AbstractDungeon.scene.nextRoom(tRoom);
