@@ -191,5 +191,12 @@
     ],
     "PROPER_NAME": "Time Slime",
     "DESCRIPTION": "Attacks for #b4 and applies #b1 #yWeak each turn."
+  },
+  {
+    "NAMES": [
+      "consume"
+    ],
+    "PROPER_NAME": "Consume",
+    "DESCRIPTION": "Bonus effect activates when attack is used to consume Goop."
   }
 ]
