@@ -6,8 +6,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.ui.ScrapBonfireOption;
+
+import java.util.ArrayList;
 
 public class ScrapOozeRelic extends CustomRelic {
     public static final String ID = "Slimebound:ScrapOozeRelic";
@@ -24,6 +28,11 @@ public class ScrapOozeRelic extends CustomRelic {
         this.tips.remove(0);
         this.tips.add(new PowerTip(this.name, this.description));
 
+    }
+
+    @Override
+    public void addCampfireOption(ArrayList<AbstractCampfireOption> options) {
+        options.add(new ScrapBonfireOption(!AbstractDungeon.player.masterDeck.getPurgeableCards().isEmpty()));
     }
 
     public void updateDescription(AbstractPlayer.PlayerClass c) {
