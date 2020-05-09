@@ -78,6 +78,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static int CURRENT_SOULS = 0;
 
     public static boolean DEAD = false;
+    public static boolean ESCAPED = false;
 
     // Move bytes
     private static byte ATTACK = 0;
@@ -111,7 +112,7 @@ public class FleeingMerchant extends AbstractMonster {
         setHp(500);
         this.currentHealth = CURRENT_HP;
 
-
+        ESCAPED = false;
     }
 
     @Override
@@ -220,12 +221,17 @@ public class FleeingMerchant extends AbstractMonster {
         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.SHOP);
         super.die();
         DEAD = true;
-
     }
 
     @Override
     public void escape() {
         super.escape();
+        ESCAPED = true;
+    }
+
+    @Override
+    public void update() {
+        super.update();
     }
 
     @Override

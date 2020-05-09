@@ -20,9 +20,15 @@ public class HeartShopRoom extends ShopRoom {
     public HeartMerchant heartMerchant;
     public boolean heartMerchantShown;
     public boolean startedCombat = false;
+    public boolean yesFight = true;
 
     public HeartShopRoom() {
         super();
+    }
+
+    public HeartShopRoom(boolean yesFight) {
+        super();
+        this.yesFight = yesFight;
     }
 
     @Override
@@ -36,7 +42,7 @@ public class HeartShopRoom extends ShopRoom {
 
     public void onPlayerEntry() {
         if (EvilModeCharacterSelect.evilMode)
-            if (!FleeingMerchant.DEAD) {
+            if (!FleeingMerchant.DEAD && yesFight) {
                 startCombat();
                 startedCombat = true;
             } else {

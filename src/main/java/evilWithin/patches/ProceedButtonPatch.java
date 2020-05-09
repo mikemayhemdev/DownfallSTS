@@ -26,7 +26,7 @@ public class ProceedButtonPatch {
         AbstractRoom r = AbstractDungeon.getCurrRoom();
         if (r instanceof HeartShopRoom) {
             if (((HeartShopRoom) r).startedCombat && FleeingMerchant.DEAD) {
-                AbstractRoom tRoom = new HeartShopRoom();
+                AbstractRoom tRoom = new HeartShopRoom(false);
                 AbstractDungeon.currMapNode.setRoom(tRoom);
                 AbstractDungeon.scene.nextRoom(tRoom);
                 CardCrawlGame.fadeIn(1.5F);
