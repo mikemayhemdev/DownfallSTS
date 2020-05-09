@@ -55,10 +55,13 @@ public class CoordinateAction extends AbstractGameAction {
             }
         }
 
-        for (int i = 0; i < effect; i++)
-            addToBot(new GainBlockAction(p, p, block));
-        addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, effect), effect));
 
+        for (int i = 0; i < effect; i++) {
+            addToBot(new GainBlockAction(p, p, block));
+        }
+
+        addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, effect), effect));
+        
         for (int i = 0; i < effect; ++i) {
             addToBot(new CommandAction());
         }
