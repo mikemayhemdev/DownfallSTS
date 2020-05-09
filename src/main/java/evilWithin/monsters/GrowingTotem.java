@@ -42,8 +42,8 @@ public class GrowingTotem extends AbstractTotemMonster {
 
 
     public GrowingTotem() {
-        super(NAME, ID, EvilWithinMod.assetPath("images/monsters/totemgreen.png"));
-        this.loadAnimation(EvilWithinMod.assetPath("images/monsters/green/Totem.atlas"), EvilWithinMod.assetPath("images/monsters/green/Totem.json"), 1.0F);
+        super(NAME, ID, EvilWithinMod.assetPath("images/monsters/livingwall/Head3.png"));
+        this.loadAnimation(EvilWithinMod.assetPath("images/monsters/livingwall/Head3.atlas"), EvilWithinMod.assetPath("images/monsters/livingwall/Head3.json"), 1.0F);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());

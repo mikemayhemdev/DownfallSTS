@@ -52,7 +52,7 @@ public class AbstractTotemMonster extends AbstractMonster {
 
 
     public AbstractTotemMonster(String name, String ID, String imgPath) {
-        super(name, ID, 420, 0.0F, 0F, 160.0F, 220.0F, null, -50.0F, 15.0F);
+        super(name, ID, 420, 0.0F, 0F, 160.0F, 180.0F, null, -50.0F, 15.0F);
 
         //ReflectionHacks.setPrivate(this, AbstractCreature.class,"HB_Y_OFFSET_DIST",-200F);
 
@@ -99,7 +99,9 @@ public class AbstractTotemMonster extends AbstractMonster {
         this.dialogX = -100.0F * Settings.scale;
         this.dialogY = 10.0F * Settings.scale;
         this.drawY = 1000F * Settings.scale;
-        this.drawX = Settings.WIDTH * 0.6F;
+        this.drawX = Settings.WIDTH * 0.75F;
+
+        this.hb.move(this.hb.cX, this.hb.cY - 90F * Settings.scale);
 
 
         if (AbstractDungeon.ascensionLevel >= 9) {
@@ -157,7 +159,7 @@ public class AbstractTotemMonster extends AbstractMonster {
             }
         }
 
-        if (Y == 0F) {
+        if (Y == 100F) {
             // TheActMod.logger.info(this.id + " drawY " + this.drawY + " vs floorY " + AbstractDungeon.floorY);
 
             // This is the lowest totem.  If it is not at the floor, it needs to fall.
@@ -173,7 +175,7 @@ public class AbstractTotemMonster extends AbstractMonster {
             if (this.drawY > Y) {
                 //  TheActMod.logger.info(this.id + " difference: " + (this.drawY - Y));
 
-                if (this.drawY - Y > 220F * Settings.scale) {
+                if (this.drawY - Y > 250F * Settings.scale) {
                     shouldFall = true;
                 }
             }
@@ -318,6 +320,7 @@ public class AbstractTotemMonster extends AbstractMonster {
     }
 
 
+    /*
     public void renderHealth(SpriteBatch sb) {
         Float thbwidth = (Float) ReflectionHacks.getPrivate(this, AbstractCreature.class, "targetHealthBarWidth");
         Float yoffset = (Float) ReflectionHacks.getPrivate(this, AbstractCreature.class, "hbYOffset");
@@ -379,6 +382,7 @@ public class AbstractTotemMonster extends AbstractMonster {
 
         }
     }
+    */
 
 
 }
