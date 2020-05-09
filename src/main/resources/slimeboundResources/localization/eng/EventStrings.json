@@ -41,15 +41,17 @@
       "~NICE~ #r~HAT!!!~"
     ]
   },
-  "Slimebound:ScrapOozePatch": {
-    "NAME": "Scrap Ooze Alternate",
+  "Slimebound:ScrapOoze": {
+    "NAME": "Scrap Ooze",
     "DESCRIPTIONS": [
       "Any slime who has found a different path is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
     ],
     "OPTIONS": [
-      "[Recruit] Gain the #gScrap #gOoze. #rLocked if you Reach Inside.",
-      "[Recruit] Locked.",
-      "[Leave]"
+      "[Recruit] #rLose ",
+      ". Gain #gScrap #gOoze. #rLocked if you Reach Inside.",
+      "[Recruit] Locked (Angered the Scrap Ooze)",
+      "[Leave]",
+      "[Recruit] Locked (Requires a Common or Uncommon Relic)"
     ]
   },
   "Slimebound:ArtOfSlimeWar": {

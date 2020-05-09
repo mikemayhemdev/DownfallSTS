@@ -3,6 +3,7 @@ package charbosses.actions.common;
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToDiscardEffect;
 import charbosses.actions.vfx.cardmanip.EnemyShowCardAndAddToHandEffect;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -28,6 +29,8 @@ public class EnemyMakeTempCardInHandAction extends AbstractGameAction {
         this.amount = 1;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.c = card;
+        AbstractBossCard cB = (AbstractBossCard) c;
+        cB.createIntent();
         if (this.c.type != AbstractCard.CardType.CURSE && this.c.type != AbstractCard.CardType.STATUS && AbstractCharBoss.boss.hasPower("MasterRealityPower")) {
             this.c.upgrade();
         }

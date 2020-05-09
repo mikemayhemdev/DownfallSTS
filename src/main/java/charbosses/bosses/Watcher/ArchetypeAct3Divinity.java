@@ -92,11 +92,11 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
         //Turn 2
         addToDeck(new EnSashWhip(), false);
-        addToDeck(new EnWorship(), false);
-        addToDeck(new EnProstrate(), true);
+        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnDefendPurple(), true);
 
         //Turn 3
-        addToDeck(new EnProstrate(), false);
+        addToDeck(new EnDefendPurple(), false);
         addToDeck(new EnWaveOfTheHand(), false);
         addToDeck(new EnWallop(), false);
 
@@ -108,17 +108,17 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         //Turn 5
         addToDeck(new EnFasting(), false);
         addToDeck(new EnCrushJoints(), false);
-        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnBrilliance(), false);
 
         //Turn 6
         addToDeck(new EnProtect(), true);
         addToDeck(new EnWallop(), false);
-        addToDeck(new EnBrilliance(), false);
+        addToDeck(new EnDefendPurple(), false);
 
         //Turn 7
         addToDeck(new EnBattleHymn(), false);
         addToDeck(new EnFasting(), true);
-        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnDevotion(), false);
     }
 
     @Override

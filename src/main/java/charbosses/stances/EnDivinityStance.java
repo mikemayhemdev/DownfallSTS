@@ -50,7 +50,7 @@ public class EnDivinityStance extends AbstractEnemyStance {
 
     }
 
-    public void atStartOfTurn() {
+    public void onEndOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new EnemyChangeStanceAction("Neutral"));
     }
 

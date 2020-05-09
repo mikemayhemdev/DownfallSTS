@@ -40,7 +40,7 @@ public class Teamwork extends AbstractSlimeboundCard {
     public Teamwork() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        baseBlock = 6;
+        baseBlock = 3;
         // this.tags.add(CardTags.STRIKE);
         //this.isMultiDamage = true;
         this.exhaust = true;

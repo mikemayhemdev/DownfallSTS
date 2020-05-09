@@ -640,7 +640,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.updateIntentTip();
         this.showIntent = true;
 
-        SlimeboundMod.logger.info(this.name + " intent made.");
+        //SlimeboundMod.logger.info(this.name + " intent made.");
     }
 
     public void destroyIntent() {
