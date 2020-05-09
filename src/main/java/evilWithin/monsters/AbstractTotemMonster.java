@@ -28,8 +28,8 @@ public class AbstractTotemMonster extends AbstractMonster {
     public static Float beamOffsetY = 10F * Settings.scale;
     public static Float beamOffsetX2 = -35F * Settings.scale;
     public static Float beamOffsetY2 = 10F * Settings.scale;
-    public Integer baseHP = 40;
-    public Integer HPAscBuffed = 0;
+    public Integer baseHP = 70;
+    public Integer HPAscBuffed = 10;
     public Intent intentType = Intent.BUFF;
     public Color totemLivingColor;
     private Method refrenderIntentVfxBehind;
