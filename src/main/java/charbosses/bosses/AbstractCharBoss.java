@@ -99,7 +99,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public boolean onSetupTurn = true;
 
-    private static boolean debugLog = true;
+    private static boolean debugLog = false;
 
     private static int attacksDrawnForAttackPhase = 0;
     private static int setupsDrawnForSetupPhase = 0;
@@ -259,6 +259,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public void startTurn() {
+        //SlimeboundMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
         this.applyStartOfTurnRelics();
@@ -311,7 +312,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         int budget = energyPanel.getCurrentEnergy();
-        SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
+        //SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < cardsByValue.size(); i++) {
             AbstractBossCard c = cardsByValue.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2) {
@@ -344,7 +345,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         budget = energyPanel.getCurrentEnergy();
-        SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
+        //SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < sortedCards.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) sortedCards.get(i);
             if (c.costForTurn <= budget && c.costForTurn != -2) {
@@ -463,7 +464,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             return null;
         }
 
-        SlimeboundMod.logger.info("Replacement search requested.  First priority: " + firstPriority);
+        //SlimeboundMod.logger.info("Replacement search requested.  First priority: " + firstPriority);
 
         if (firstPriority == DrawTypes.Setup) {
             replacementCard = findReplacementCardInDraw(drawPile, false, true);
