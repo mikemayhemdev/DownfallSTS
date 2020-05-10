@@ -39,8 +39,8 @@ public class ForgetfulTotem extends AbstractTotemMonster {
 
 
     public ForgetfulTotem() {
-        super(NAME, ID, EvilWithinMod.assetPath("images/monsters/totemgreen.png"));
-        this.loadAnimation(EvilWithinMod.assetPath("images/monsters/green/Totem.atlas"), EvilWithinMod.assetPath("images/monsters/green/Totem.json"), 1.0F);
+        super(NAME, ID, EvilWithinMod.assetPath("images/monsters/livingwall/Head2.png"));
+        this.loadAnimation(EvilWithinMod.assetPath("images/monsters/livingwall/Head2.atlas"), EvilWithinMod.assetPath("images/monsters/livingwall/Head2.json"), 1.0F);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
