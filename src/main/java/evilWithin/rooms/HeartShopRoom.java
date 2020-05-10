@@ -51,7 +51,7 @@ public class HeartShopRoom extends ShopRoom {
                 showHeartMerchant();
             }
 
-        if (!AbstractDungeon.id.equals("TheEnding")) {
+        if (!AbstractDungeon.id.equals("TheEnding") && !yesFight) {
             this.playBGM("SHOP");
         }
 

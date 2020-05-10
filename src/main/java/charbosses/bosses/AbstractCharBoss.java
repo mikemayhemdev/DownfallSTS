@@ -276,8 +276,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.applyStartOfTurnPostDrawPowers();
             AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
         }
-
-
     }
 
     public void applyPowers() {
