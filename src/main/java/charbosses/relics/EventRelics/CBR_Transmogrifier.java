@@ -5,13 +5,13 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_Transmogrifier extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("Transmogrifier");
+    public static String ID = downfallMod.makeID("Transmogrifier");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     private String removedName;
@@ -19,7 +19,7 @@ public class CBR_Transmogrifier extends AbstractCharbossRelic {
 
 
     public CBR_Transmogrifier() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/shrine1.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/shrine1.png")));
     }
 
     @Override

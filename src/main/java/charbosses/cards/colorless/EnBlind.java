@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class EnBlind extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Blind";
+    public static final String ID = "downfall_Charboss:Blind";
     private static final CardStrings cardStrings;
 
     public EnBlind() {

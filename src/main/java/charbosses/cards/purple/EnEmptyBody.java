@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 import java.util.ArrayList;
 
 public class EnEmptyBody extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:EmptyBody";
+    public static final String ID = "downfall_Charboss:EmptyBody";
     private static final CardStrings cardStrings;
 
     public EnEmptyBody() {

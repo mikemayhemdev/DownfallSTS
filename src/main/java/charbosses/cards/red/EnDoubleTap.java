@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import java.util.ArrayList;
 
 public class EnDoubleTap extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Double Tap";
+    public static final String ID = "downfall_Charboss:Double Tap";
     private static final CardStrings cardStrings;
 
     static {

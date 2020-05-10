@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.Iterator;
 
 public class EnChill extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Chill";
+    public static final String ID = "downfall_Charboss:Chill";
     private static final CardStrings cardStrings;
 
     public EnChill() {

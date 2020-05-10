@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import java.util.ArrayList;
 
 public class EnFlex extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Flex";
+    public static final String ID = "downfall_Charboss:Flex";
     private static final CardStrings cardStrings;
 
     static {

@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnChaos extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Chaos";
+    public static final String ID = "downfall_Charboss:Chaos";
     private static final CardStrings cardStrings;
 
     public EnChaos() {

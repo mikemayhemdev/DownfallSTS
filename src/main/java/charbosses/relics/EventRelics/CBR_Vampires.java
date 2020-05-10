@@ -10,20 +10,20 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_Vampires extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("Vampires");
+    public static String ID = downfallMod.makeID("Vampires");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = AbstractRelic.LandingSound.MAGICAL;
 
     public int hpLoss;
 
     public CBR_Vampires() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/vampires.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/vampires.png")));
 
     }
 

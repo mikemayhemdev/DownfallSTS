@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnDefendRed extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Defend_R";
+    public static final String ID = "downfall_Charboss:Defend_R";
     private static final CardStrings cardStrings;
 
     static {

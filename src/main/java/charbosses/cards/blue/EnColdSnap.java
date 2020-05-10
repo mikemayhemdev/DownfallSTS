@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnColdSnap extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Cold Snap";
+    public static final String ID = "downfall_Charboss:Cold Snap";
     private static final CardStrings cardStrings;
 
     static {

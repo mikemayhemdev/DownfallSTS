@@ -3,18 +3,12 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.cards.OctoChoiceCard;
-import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
-import slimebound.actions.OctoChoiceAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
-
-import java.util.ArrayList;
 
 
 public class Darklings extends AbstractSlimeboundCard {

@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import java.util.ArrayList;
 
 public class EnTheBomb extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:The Bomb";
+    public static final String ID = "downfall_Charboss:The Bomb";
     private static final CardStrings cardStrings;
 
     public EnTheBomb() {

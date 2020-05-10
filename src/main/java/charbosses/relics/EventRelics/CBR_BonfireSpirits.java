@@ -10,21 +10,21 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 
 public class CBR_BonfireSpirits extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("BonfireSpirits");
+    public static String ID = downfallMod.makeID("BonfireSpirits");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     public String cardName = "";
     private int descInt = 0;
 
     public CBR_BonfireSpirits() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/bonfirespirits.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/bonfirespirits.png")));
     }
 
 

@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnRampage extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Rampage";
+    public static final String ID = "downfall_Charboss:Rampage";
     private static final CardStrings cardStrings;
 
     static {
@@ -27,7 +27,7 @@ public class EnRampage extends AbstractBossCard {
         this.baseDamage = 8;
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 
     @Override

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.InfiniteBladesPower;
 
 public class EnInfiniteBlades extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Infinite Blades";
+    public static final String ID = "downfall_Charboss:Infinite Blades";
     private static final CardStrings cardStrings;
 
     static {

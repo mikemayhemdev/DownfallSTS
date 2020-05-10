@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 import java.util.ArrayList;
 
 public class EnClaw extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Gash";
+    public static final String ID = "downfall_Charboss:Gash";
     private static final CardStrings cardStrings;
 
     static {

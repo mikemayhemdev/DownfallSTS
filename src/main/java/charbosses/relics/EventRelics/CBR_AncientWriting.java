@@ -1,24 +1,23 @@
 package charbosses.relics.EventRelics;
 
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_AncientWriting extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("AncientWriting");
+    public static String ID = downfallMod.makeID("AncientWriting");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     private int count;
 
     public CBR_AncientWriting() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/backtobasics.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/backtobasics.png")));
     }
 
     @Override

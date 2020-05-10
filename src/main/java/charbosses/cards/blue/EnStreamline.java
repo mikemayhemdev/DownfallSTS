@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
 
 public class EnStreamline extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Streamline";
+    public static final String ID = "downfall_Charboss:Streamline";
     private static final CardStrings cardStrings;
 
     public EnStreamline() {

@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.watcher.BlockReturnPower;
 import java.util.ArrayList;
 
 public class EnTalkToTheHand extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:TalkToTheHand";
+    public static final String ID = "downfall_Charboss:TalkToTheHand";
     private static final CardStrings cardStrings;
 
     public EnTalkToTheHand() {

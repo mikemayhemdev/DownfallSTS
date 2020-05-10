@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 import java.util.ArrayList;
 
 public class EnThroughViolence extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:ThroughViolence";
+    public static final String ID = "downfall_Charboss:ThroughViolence";
     private static final CardStrings cardStrings;
 
     public EnThroughViolence() {

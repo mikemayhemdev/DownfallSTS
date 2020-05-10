@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.cards.OctoChoiceCard;
+import downfall.cards.OctoChoiceCard;
 import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 import slimebound.actions.OctoChoiceAction;

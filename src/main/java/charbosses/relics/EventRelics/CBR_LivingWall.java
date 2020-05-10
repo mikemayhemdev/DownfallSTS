@@ -6,20 +6,20 @@ import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_LivingWall extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("LivingWall");
+    public static String ID = downfallMod.makeID("LivingWall");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     private String cardName;
     private String cardName2;
 
     public CBR_LivingWall() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/livingwall.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/livingwall.png")));
     }
 
     @Override

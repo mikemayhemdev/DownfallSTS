@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.StormPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class EnStorm extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Storm";
+    public static final String ID = "downfall_Charboss:Storm";
     private static final CardStrings cardStrings;
 
     public EnStorm() {

@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import java.util.ArrayList;
 
 public class EnMagnetism extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Magnetism";
+    public static final String ID = "downfall_Charboss:Magnetism";
     private static final CardStrings cardStrings;
 
     public EnMagnetism() {

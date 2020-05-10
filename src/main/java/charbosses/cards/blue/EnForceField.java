@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class EnForceField extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:ForceField";
+    public static final String ID = "downfall_Charboss:ForceField";
     private static final CardStrings cardStrings;
 
     public EnForceField() {

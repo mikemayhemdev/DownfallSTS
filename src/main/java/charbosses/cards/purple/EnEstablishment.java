@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.watcher.EstablishmentPower;
 import java.util.ArrayList;
 
 public class EnEstablishment extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Establishment";
+    public static final String ID = "downfall_Charboss:Establishment";
     private static final CardStrings cardStrings;
 
     public EnEstablishment() {

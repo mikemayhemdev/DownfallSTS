@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnBeta extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Beta";
+    public static final String ID = "downfall_Charboss:Beta";
     private static final CardStrings cardStrings;
     private boolean usedOnce;
 

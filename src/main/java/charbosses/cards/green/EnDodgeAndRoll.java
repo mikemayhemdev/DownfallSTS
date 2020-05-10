@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 public class EnDodgeAndRoll extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Dodge and Roll";
+    public static final String ID = "downfall_Charboss:Dodge and Roll";
     private static final CardStrings cardStrings;
 
     static {

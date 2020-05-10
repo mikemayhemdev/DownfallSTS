@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.EmptyStanceEffect;
 import java.util.ArrayList;
 
 public class EnBrilliance extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Brilliance";
+    public static final String ID = "downfall_Charboss:Brilliance";
     private static final CardStrings cardStrings;
 
     public EnBrilliance() {

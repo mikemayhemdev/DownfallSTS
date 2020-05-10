@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnGhostlyArmor extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Ghostly Armor";
+    public static final String ID = "downfall_Charboss:Ghostly Armor";
     private static final CardStrings cardStrings;
 
     static {

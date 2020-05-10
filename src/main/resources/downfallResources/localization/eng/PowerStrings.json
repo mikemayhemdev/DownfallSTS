@@ -1,0 +1,21 @@
+{
+  "downfall:FairyPotion": {
+    "NAME": "Fairy Potion",
+    "DESCRIPTIONS": [
+      "Heals to 30% of Max HP instead of dying, removing this effect."
+    ]
+  },
+  "downfall:SoulSteal": {
+    "NAME": "Soul Stealer",
+    "DESCRIPTIONS": [
+      "Has stolen ",
+      " of your Souls."
+    ]
+  },
+  "downfall:NeowInvulnerable": {
+    "NAME": "God of Life",
+    "DESCRIPTIONS": [
+      "Cannot be killed.  Retreats to recover when reduced to 1 HP."
+    ]
+  }
+}

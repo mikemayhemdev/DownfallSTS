@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.ArrayList;
 
 public class CharbossHistoryPower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:History";
+    public static final String POWER_ID = "downfall:History";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     private static final PowerStrings powerStrings;

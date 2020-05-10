@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnSlice extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Slice";
+    public static final String ID = "downfall_Charboss:Slice";
     private static final CardStrings cardStrings;
 
     static {

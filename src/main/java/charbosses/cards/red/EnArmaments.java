@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import java.util.ArrayList;
 
 public class EnArmaments extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Armaments";
+    public static final String ID = "downfall_Charboss:Armaments";
     private static final CardStrings cardStrings;
 
     static {

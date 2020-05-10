@@ -6,17 +6,15 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.red.Uppercut;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import evilWithin.EvilWithinMod;
 
 public class EnUppercut extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Uppercut";
+    public static final String ID = "downfall_Charboss:Uppercut";
     private static final CardStrings cardStrings;
 
     public EnUppercut() {

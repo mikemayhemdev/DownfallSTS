@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import java.util.ArrayList;
 
 public class EnChargeBattery extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:ConserveBattery";
+    public static final String ID = "downfall_Charboss:ConserveBattery";
     private static final CardStrings cardStrings;
 
     public EnChargeBattery() {

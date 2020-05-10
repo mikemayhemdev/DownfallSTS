@@ -6,11 +6,11 @@ import com.google.gson.GsonBuilder;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
-import evilWithin.EvilWithinMod;
-import evilWithin.events.Cleric_Evil;
-import evilWithin.monsters.FleeingMerchant;
-import evilWithin.patches.EvilModeCharacterSelect;
-import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+import downfall.downfallMod;
+import downfall.events.Cleric_Evil;
+import downfall.monsters.FleeingMerchant;
+import downfall.patches.EvilModeCharacterSelect;
+import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,7 +31,7 @@ public class SaveData {
     public static final String MERCHANT_SOULS = "MERCHANT_SOULS";
     public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
     public static final String MERCHANT_ESCAPED = "MERCHANT_ESCAPED";
-    private static Logger saveLogger = LogManager.getLogger("EvilWithinSaveData");
+    private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
     private static boolean evilMode;
@@ -70,7 +70,7 @@ public class SaveData {
             killedCleric = Cleric_Evil.heDead;
             encounteredCleric = Cleric_Evil.encountered;
 
-            myVillains = EvilWithinMod.possEncounterList;
+            myVillains = downfallMod.possEncounterList;
 
             merchantHealth = FleeingMerchant.CURRENT_HP;
             merchantStrength = FleeingMerchant.CURRENT_STRENGTH;
@@ -129,7 +129,7 @@ public class SaveData {
         )
         public static void loadCustomSaveData(String path, Gson gson, String savestr) {
             try {
-                EvilWithinSaveData data = gson.fromJson(savestr, EvilWithinSaveData.class);
+                downfallSaveData data = gson.fromJson(savestr, downfallSaveData.class);
 
                 evilMode = data.EVIL_MODE;
 
@@ -149,9 +149,9 @@ public class SaveData {
                 merchantDead = data.MERCHANT_DEAD;
                 merchantEscaped = data.MERCHANT_ESCAPED;
 
-                saveLogger.info("Loaded EvilWithin save data successfully.");
+                saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
-                saveLogger.error("Failed to load EvilWithin save data.");
+                saveLogger.error("Failed to load downfall save data.");
                 e.printStackTrace();
             }
         }
@@ -186,7 +186,7 @@ public class SaveData {
             Cleric_Evil.heDead = killedCleric;
             Cleric_Evil.encountered = encounteredCleric;
 
-            EvilWithinMod.possEncounterList = myVillains;
+            downfallMod.possEncounterList = myVillains;
 
             FleeingMerchant.CURRENT_HP = merchantHealth;
             FleeingMerchant.CURRENT_STRENGTH = merchantStrength;

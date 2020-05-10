@@ -21,9 +21,7 @@ import charbosses.relics.CBR_LizardTail;
 import charbosses.relics.CBR_MagicFlower;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -49,11 +47,8 @@ import com.megacrit.cardcrawl.vfx.combat.BlockedWordEffect;
 import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
-import evilWithin.EvilWithinMod;
-import evilWithin.monsters.FleeingMerchant;
-import evilWithin.monsters.NeowBoss;
-import evilWithin.patches.EvilModeCharacterSelect;
-import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+import downfall.downfallMod;
+import downfall.monsters.NeowBoss;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -435,15 +430,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : drawPile) {
             //Skip the top card.
             if (drawPile.get(0) != c) {
-                if (attack && c.hasTag(EvilWithinMod.CHARBOSS_ATTACK)) {
+                if (attack && c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
                     if (debugLog) SlimeboundMod.logger.info("Attack replacement was requested. Returning: " + c.name);
                     return c;
                 }
-                if (setup && c.hasTag(EvilWithinMod.CHARBOSS_SETUP)) {
+                if (setup && c.hasTag(downfallMod.CHARBOSS_SETUP)) {
                     if (debugLog) SlimeboundMod.logger.info("Setup replacement was requested. Returning: " + c.name);
                     return c;
                 }
-                if (!setup && !attack && !c.hasTag(EvilWithinMod.CHARBOSS_SETUP) && !c.hasTag(EvilWithinMod.CHARBOSS_ATTACK)) {
+                if (!setup && !attack && !c.hasTag(downfallMod.CHARBOSS_SETUP) && !c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
                     if (debugLog)
                         SlimeboundMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
                     return c;
@@ -530,7 +525,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             if (this.onSetupTurn) {
                 if (setupsDrawnForSetupPhase < 1) {
                     if (debugLog) SlimeboundMod.logger.info("Attempting to draw a Setup card");
-                    if (c.hasTag(EvilWithinMod.CHARBOSS_SETUP)) {
+                    if (c.hasTag(downfallMod.CHARBOSS_SETUP)) {
                         if (debugLog) SlimeboundMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
                         setupsDrawnForSetupPhase++;
                         return c;
@@ -561,7 +556,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             if (!this.onSetupTurn) {
                 if (attacksDrawnForAttackPhase < 1) {
                     if (debugLog) SlimeboundMod.logger.info("Attempting to draw a Attack card");
-                    if (c.hasTag(EvilWithinMod.CHARBOSS_ATTACK)) {
+                    if (c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
                         if (debugLog) SlimeboundMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
                         attacksDrawnForAttackPhase++;
                         return c;

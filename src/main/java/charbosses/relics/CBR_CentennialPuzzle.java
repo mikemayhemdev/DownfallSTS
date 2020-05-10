@@ -2,15 +2,13 @@ package charbosses.relics;
 
 import charbosses.actions.common.EnemyDrawCardAction;
 import charbosses.actions.util.CharbossSortHandAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BagOfPreparation;
 import com.megacrit.cardcrawl.relics.CentennialPuzzle;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 public class CBR_CentennialPuzzle extends AbstractCharbossRelic {
     public static final String ID = "CentennialPuzzle";
@@ -22,7 +20,7 @@ public class CBR_CentennialPuzzle extends AbstractCharbossRelic {
 
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + 3 + this.DESCRIPTIONS[1] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + 3 + this.DESCRIPTIONS[1] + CardCrawlGame.languagePack.getRelicStrings(downfallMod.makeID(ID)).DESCRIPTIONS[0];
     }
 
     public void atPreBattle() {

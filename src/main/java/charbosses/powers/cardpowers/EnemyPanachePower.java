@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnemyPanachePower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:EnemyPanache";
+    public static final String POWER_ID = "downfall:EnemyPanache";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final int CARD_AMT = 5;

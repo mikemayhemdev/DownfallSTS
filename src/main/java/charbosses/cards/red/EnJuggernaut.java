@@ -8,13 +8,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.JuggernautPower;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnJuggernaut extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Juggernaut";
+    public static final String ID = "downfall_Charboss:Juggernaut";
     private static final CardStrings cardStrings;
 
     static {
@@ -25,7 +24,7 @@ public class EnJuggernaut extends AbstractBossCard {
         super(ID, EnJuggernaut.cardStrings.NAME, "red/power/juggernaut", 2, EnJuggernaut.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
-        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
+        this.tags.add(downfallMod.CHARBOSS_SETUP);
     }
 
     @Override

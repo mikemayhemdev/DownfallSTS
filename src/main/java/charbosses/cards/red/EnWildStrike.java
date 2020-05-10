@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 public class EnWildStrike extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Wild Strike";
+    public static final String ID = "downfall_Charboss:Wild Strike";
     private static final CardStrings cardStrings;
 
     static {
@@ -27,7 +27,7 @@ public class EnWildStrike extends AbstractBossCard {
         this.baseDamage = 12;
         this.tags.add(CardTags.STRIKE);
         this.cardsToPreview = new Wound();
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 
     @Override

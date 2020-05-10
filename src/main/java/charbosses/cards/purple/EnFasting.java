@@ -24,7 +24,7 @@ import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
 import java.util.ArrayList;
 
 public class EnFasting extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Fasting2";
+    public static final String ID = "downfall_Charboss:Fasting2";
     private static final CardStrings cardStrings;
 
     public EnFasting() {

@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.DrawPower;
 import java.util.ArrayList;
 
 public class EnMachineLearning extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:MachineLearning";
+    public static final String ID = "downfall_Charboss:MachineLearning";
     private static final CardStrings cardStrings;
 
     public EnMachineLearning() {

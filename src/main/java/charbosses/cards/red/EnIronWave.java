@@ -13,10 +13,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.IronWaveEffect;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 public class EnIronWave extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Iron Wave";
+    public static final String ID = "downfall_Charboss:Iron Wave";
     private static final CardStrings cardStrings;
 
     static {
@@ -27,7 +27,7 @@ public class EnIronWave extends AbstractBossCard {
         super(ID, EnIronWave.cardStrings.NAME, "red/attack/iron_wave", 1, EnIronWave.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEFEND);
         this.baseDamage = 5;
         this.baseBlock = 5;
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 
     @Override

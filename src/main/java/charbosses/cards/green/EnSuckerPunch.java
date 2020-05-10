@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class EnSuckerPunch extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Sucker Punch";
+    public static final String ID = "downfall_Charboss:Sucker Punch";
     private static final CardStrings cardStrings;
 
     static {

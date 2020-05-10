@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.watcher.LikeWaterPower;
 import java.util.ArrayList;
 
 public class EnLikeWater extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:LikeWater";
+    public static final String ID = "downfall_Charboss:LikeWater";
     private static final CardStrings cardStrings;
 
     public EnLikeWater() {

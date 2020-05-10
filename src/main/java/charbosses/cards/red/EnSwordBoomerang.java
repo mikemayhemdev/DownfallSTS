@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnSwordBoomerang extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Sword Boomerang";
+    public static final String ID = "downfall_Charboss:Sword Boomerang";
     private static final CardStrings cardStrings;
 
     static {
@@ -26,7 +26,7 @@ public class EnSwordBoomerang extends AbstractBossCard {
         this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 
     @Override

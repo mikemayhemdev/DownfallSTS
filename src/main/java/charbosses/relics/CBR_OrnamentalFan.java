@@ -4,12 +4,8 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.Omamori;
 import com.megacrit.cardcrawl.relics.OrnamentalFan;
-import evilWithin.EvilWithinMod;
 
 public class CBR_OrnamentalFan extends AbstractCharbossRelic {
     public static final String ID = "OrnamentalFan";

@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
 public class EnDash extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Dash";
+    public static final String ID = "downfall_Charboss:Dash";
     private static final CardStrings cardStrings;
 
     static {

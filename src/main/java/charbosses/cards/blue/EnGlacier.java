@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnGlacier extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Glacier";
+    public static final String ID = "downfall_Charboss:Glacier";
     private static final CardStrings cardStrings;
 
     public EnGlacier() {

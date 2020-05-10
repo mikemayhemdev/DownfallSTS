@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class EnDoubt extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Doubt";
+    public static final String ID = "downfall_Charboss:Doubt";
     private static final CardStrings cardStrings;
 
     static {

@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.watcher.WaveOfTheHandPower;
 import java.util.ArrayList;
 
 public class EnWaveOfTheHand extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:SandsOfTime";
+    public static final String ID = "downfall_Charboss:SandsOfTime";
     private static final CardStrings cardStrings;
 
     public EnWaveOfTheHand() {

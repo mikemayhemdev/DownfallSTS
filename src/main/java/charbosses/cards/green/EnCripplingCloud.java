@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class EnCripplingCloud extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Crippling Cloud";
+    public static final String ID = "downfall_Charboss:Crippling Cloud";
     private static final CardStrings cardStrings;
 
     static {

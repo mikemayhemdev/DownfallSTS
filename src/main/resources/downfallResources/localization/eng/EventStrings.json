@@ -1,0 +1,585 @@
+{
+  "downfall:GremlinMatchGame": {
+    "NAME": "Match and Keep!",
+    "DESCRIPTIONS": [
+      "\" ... #bT-twelve cards! Match them to keep them! #bF-five tries... no do-overs. NL Are you ready? Let's start!\"",
+      "You complete the gremlin's game and look up. NL He disappeared?",
+      "A gremlin is madly shuffling cards on a table. This monster seems to be a harmless one. As you approach, he nervously breaks his composure for a moment, but finds the courage to address you.",
+      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"Are you sure you don't want to play the game?\", the gremlin asks."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Leave]",
+      "[Play]",
+      "Remaining Attempts: #y",
+      "[Intimidate] Steal 6 cards.",
+      "[Punch] #rFight. #gGain #g6 #gCards."
+    ]
+  },
+  "downfall:WomanInBlue": {
+    "NAME": "The Woman in Blue",
+    "DESCRIPTIONS": [
+      "Tucked in the darkness, you spot a small shop. Within, you see a pale woman in sharp clothes managing an inventory of potions, stacked along a wall. She is startled by your threatening appearance. NL \"Leave me and my wares alone, cretin!\" she screams.",
+      "You exit the shop cautiously, not wanting to spur the woman into a fight.",
+      "#r@WHAM@ NL Her gloved fist collides with your face, nearly knocking you off your feet. NL \"Get out before I litter the floor with your guts.\" You take her word and exit with your guts still safely in your body."
+    ],
+    "OPTIONS": [
+      "[Leave]",
+      "[Leave] #rTake #r",
+      " #rDamage.",
+      "[Punch] #rFight. #gGain #ga #gPotion #gRelic #gand #g3 #gPotions."
+    ]
+  },
+  "downfall:GremlinWheelGame": {
+    "NAME": "Wheel of Change",
+    "DESCRIPTIONS": [
+      "You come upon a dapper looking, cheery gremlin. Despite your menacing appearance, he seems to be unfazed, though you do catch him hesitantly glancing backstage. NL \"It's time to spin the wheel! Are you ready?\"",
+      "\"You win some #yGOLD! NL YAY!!!!\"",
+      "\"Ah, a #ggift! NL Enjoy!\"",
+      "\"Oooh, a free #gHeal for you!\"",
+      "\"Looks like you won a #pCurse! NL That's not good. NL Oh well! Better luck next time!\"",
+      "\"Ohh, the power of #r~darkness...~ NL Choose a card to remove from your deck!\"",
+      "\"Uh oh! NL You lose!\" NL You spot him readying a shiv...",
+      "You slash at the crazy gremlin but he's simply too quick! NL He gets you a few times with a crude shiv. NL \"The price has been paid!!\" NL and with that, both the gremlin and its wheel disappear in a puff of smoke.",
+      "The gremlin nervously looks over his shoulder, but quickly relaxes. You eye him gesturing with his hand, but disregard it. NL \"Now, now, friend, the wheel has fairly decided your reward! No one gets a second spin.\"",
+      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"My friend here suggests you take what the wheel has offered.\".",
+      "Settling in by the fire, you decide to see if you have better luck with the Wheel than your last attempt.",
+      "The Wheel has chosen a prize. NL NL You need only to reach out and take it.",
+      "Success! You've found what you are looking for, and just in time! NL NL #r@CRACK!@ NL NL You may have been a little rough with that last spin... the Wheel has been broken.",
+      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure."
+    ],
+    "OPTIONS": [
+      "[Play]",
+      "[Prize!] YAY!!!!",
+      "[Prize!] #gObtain #ga #gRelic.",
+      "[Prize!] #gHeal #gto #gfull #ghealth.",
+      "[Prize?] #rCurse #r- #rDecay.",
+      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Prize?] #rLose #r",
+      " #rHP.",
+      "[Leave]",
+      "Select a Card to Remove.",
+      "[Again!]",
+      "[AGAIN!!]",
+      "[Punch] #rFight. #gGain #gGremlin #gWheel.",
+      "[Pass] Try again later."
+    ]
+  },
+  "downfall:GremlinWheelGameRest": {
+    "NAME": "Wheel of Change",
+    "DESCRIPTIONS": [
+    ],
+    "OPTIONS": [
+    ]
+  },
+  "downfall:LivingWall": {
+    "NAME": "Living Wall",
+    "OPTIONS": [
+      "[Punch] #rFight. #gUse #gall #g3 #gHeads."
+    ]
+  },
+  "downfall:Augmenter": {
+    "NAME": "Augmenter",
+    "DESCRIPTIONS": [
+      "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
+    ],
+    "OPTIONS": [
+      "[Punch] #rFight. #gTake #gEverything."
+    ]
+  },
+  "downfall:BonfireSpirits": {
+    "NAME": "Bonfire Elemental",
+    "DESCRIPTIONS": [
+      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases by #b10 and you are #ghealed to full HP."
+    ],
+    "OPTIONS": [
+      "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
+      "[Lcked] Requires 150 Souls."
+    ]
+  },
+  "downfall:GoldenShrine": {
+    "NAME": "Soul Shrine",
+    "DESCRIPTIONS": [
+      "Before you lies an elaborate shrine to an ancient spirit of evil. ",
+      "As your hand touches the shrine, #ysouls spill forth from the shrine, ~showering~ ~you~ ~in~ ~power.~ ",
+      "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
+      "You ignore the shrine."
+    ]
+  },
+  "downfall:FaceTrader": {
+    "NAME": "Face Trader",
+    "DESCRIPTIONS": [
+      " NL NL He doesn't look like he would put up much of a fight, but he has survived in this place. Perhaps these masks hold some power..."
+    ],
+    "OPTIONS": [
+      "[Punch] #rFight. #g100%: #gAll #gFace."
+    ]
+  },
+  "downfall:CursedFountain": {
+    "NAME": "The Cursed Fountain",
+    "DESCRIPTIONS": [
+      "You come across a tinged #p~purple~ #p~liquid~ flowing endlessly from a fountain on a nearby wall. It is one you recognize as deadly to most creatures, but quite beneficial to those subjected to a curse.",
+      "As you drink the #p~liquid,~ you feel a #pdark #pgrasp reach into your mind. It feels luxurious and refreshing.",
+      "Sensing that this #p~liquid~ may be useful, you decide to capture some in a jar to use later. Creatures not attuned to the #pdark #pwater will surely suffer when doused in it.",
+      "The fountain's #p~liquid~ is roiling in the souls of the lost. It seems a waste to not make use of them. You channel the souls into your form, ripping them from the #pcursed #pfountain's magic.",
+      "Leaving the fountain behind, you continue on your way."
+    ],
+    "OPTIONS": [
+      "[Bottle] #gGain #gCursed #gLiquid #gPotion.",
+      "[Consume] #gGain #g75 #ySouls.",
+      "[Drink] #gHeal #gto #gfull #gHP.",
+      "[Locked] Requires a curse.",
+      "[Locked] Requires 2 curses.",
+      "[Locked] Requires 3 curses.",
+      "[Locked] Already used.",
+      "[Leave]"
+    ]
+  },
+  "downfall:WeMeetAgain": {
+    "NAME": "We Meet Again!",
+    "DESCRIPTIONS": [
+      "\"BOSS!\" A cheery disheveled fellow approaches you gleefully. You know this man well. NL \"It's me, #yRanwid! You wouldn't believe what I've swindled from the cursed heroes! Do you have any more junk I can give them?\" NL You appreciate his friendliness and consider your options. Surely you have something Ranwid can use in his next \"deal\"...",
+      "\"Oh, this is perfect! It's complete junk! Here, take these elixirs the last few fools gave me!\" NL Ranwid fumbles around his pouches, producing three bottles for you, though nearly dropping them in the process.",
+      "\"Magnificent! This will be quite handy for my next deal. Oh, and I've been harvesting the corpses, as you requested!\" NL Ranwid hands you a soul stone, then scurries away, looking for a new face to sell your useless trinket to.",
+      "\"Exemplary! With just a little work, I can make this look like something truly special.\" NL Ranwid departs, examining the relic carefully, no doubt pondering how he will exaggerate its usefulness to the next adventurer he meets.",
+      "\"Nothing today boss? Okay!\" NL He scampers away."
+    ],
+    "OPTIONS": [
+      "[Lose ",
+      "] ",
+      "#gGain #g3 #gPotions.",
+      "#gGain ",
+      " #ySouls.",
+      "#gGain #ga #yRare #gCard.",
+      "[Leave]",
+      "[Locked] No Relic to give."
+    ]
+  },
+  "downfall:Designer": {
+    "NAME": "Designer In-Spire",
+    "DESCRIPTIONS": [
+      "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @gold!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
+      "It takes little effort to deal with the thief, but the fight does not go without some injury on your part. A man with ridiculous clothing appears at the shop entrance. NL \"Thank you, kind overlord!\", the man says, beckoning you inside.",
+      "You see no reason to get involved with this. There is important killing to be done.",
+      "\"Oh my, you are just dreadful!! This will not do, no no. What is this style? You are to be @menacing!@ A feared and intimidating #roverlord of the Spire! You simply ~must~ let me give you a proper makeover.\" NL NL You aren't sure whether to take this man at his word and accept his services, or if you should be insulted at his disgust at your style.",
+      "\"Okay, bye bye now! Tell your #roverlord friends!\" NL NL Though you were apprehensive of this man's ability, you definitely feel more intimidating.",
+      "You punch him. NL \"My @FACE!!@ Now I'll have to-\" NL NL He fainted. Perhaps next time he will give pause before insulting a creature of your status."
+    ],
+    "OPTIONS": [
+      "[Adjustments] ",
+      "[Clean Up] ",
+      "[Full Service] ",
+      "[Ignore] Leave.",
+      "[Punch] Leave.",
+      "[Enter Shop]"
+    ]
+  },
+  "downfall:DeadGuy": {
+    "NAME": "Fallen Adventurer",
+    "DESCRIPTIONS": [
+      "While channeling the ritual you are caught off guard!",
+      "You exit without a sound.",
+      "You come across a #rdead #radventurer on the floor. NL His spirit still lingers in the area. Also, ",
+      "the armor and face appear to be #r@scoured@ #r@by@ #r@flames.@ ",
+      "it looks as though he's been #r@gouged@ #r@and@ #r@trampled@ by a horned beast. ",
+      "he looks to have been #r@eviscerated@ #r@and@ #r@chopped@ by giant claws. ",
+      "NL A soul harvesting ritual could yield results here, but whichever creature slew this man may return soon.",
+      "The ritual yields souls from the corpse! NL Continue channeling?",
+      "The spell is unable to pull the fallen man's spirit... NL Continue channeling?",
+      "Your magic causes the body to twitch and shake, and from its pockets falls a #yrelic! NL Continue channeling?",
+      "The ritual has been completed!"
+    ],
+    "OPTIONS": [
+      "[Soul Harvest] #gFind #gLoot. #r",
+      "[Leave]",
+      "[Fight]",
+      "[Continue] #gFind #gLoot. #r",
+      "%: #rmonster #rreturns."
+    ]
+  },
+  "downfall:ShiningLight": {
+    "NAME": "Shining Light",
+    "DESCRIPTIONS": [
+      "You find a shimmering #ymass #yof #ylight encompassing the center of the room. NL NL Its ~warm~ ~glow~ and ~enchanting~ ~patterns~ cause your stomach to turn, but you know this light carries an immense power.",
+      "As you walk through the light, you grimace as it is absorbed into you. NL It's #r@scorching@ #r@hot@ ! You feel no pain, and though you are newly #binvigorated, the haunting memory of this disgusting warmth will stay with you for a long time to come.",
+      "You walk around it, wondering what could have been."
+    ],
+    "OPTIONS": [
+      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
+      "[Leave]",
+      "[Locked] Requires: Upgradeable Cards"
+    ]
+  },
+  "downfall:WorldOfGoop": {
+    "NAME": "World of Goop",
+    "DESCRIPTIONS": [
+      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL You can feel goop in your ears, goop in your nose, goop everywhere. NL NL Climbing out, you notice that stuck to your body is a unique-looking #yyellow Slime creature. It appears to have been collecting #ygold from unfortunate adventurers who fell into the puddle.",
+      "Not wanting to make this unfortunate puddle incident go without reward, you strike at the #yyellow slime creature. NL NL It @bursts@ instantly! NL NL You didn't think it possible, but you find yourself even more covered in goop than you were before.",
+      "Brushing off the #yyellow slime, you continue on your journey, though still partially covered in goop. It certainly adds to your menacing aesthetic."
+    ],
+    "OPTIONS": [
+      "[Punch] #gGain #g",
+      " #gSouls. #rBecome #rCursed #rTwice #r- #rIcky.",
+      "[Remove] #rBecome #rCursed #r- #rIcky.",
+      "[Leave]"
+    ]
+  },
+  "downfall:Serpent": {
+    "NAME": "The Ssssserpent",
+    "DESCRIPTIONS": [
+      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous serpent creature appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~hello!~ ~what~ ~have~ ~we~ ~got~ ~here?~ To you, my overlord, I ask a simple question. NL The most fulfilling of lives is that in which you can #r~punch~ #r~anything!~ NL Do you agree?\"",
+      "~\"Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
+      "The serpent stares at you with a look of extreme disappointment.",
+      " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself..."
+    ],
+    "OPTIONS": [
+      "[Agree] [Punch] #gGain #g",
+      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
+      "[Disagree]",
+      "[Leave]"
+    ]
+  },
+  "downfall:WingStatue": {
+    "NAME": "Wing Statue",
+    "DESCRIPTIONS": [
+      "Among the stone and boulders, you notice an intricate large blue statue resembling a wing. NL You notice #ygold spilling from its cracks, but this has no value to you. The statue itself, however...",
+      "Knowing that you may encounter cultists of the Awakened One, you take the broken statue with you. It may prove useful to turn the cult's members to your cause.",
+      "With all your might, you hack away at the statue. NL It soon @crumbles,@ splintering into a sharp and deadly fragment. You grab the shard and continue onwards.",
+      "You walk past and continue onward.",
+      "CA...Caw?! Gift for BIRD GOD?",
+      "CA-CAAAW!!",
+      "An exchange? A fair offer...",
+      "The cult will be pleased."
+    ],
+    "OPTIONS": [
+      "[Destroy] #rLose #r",
+      " #rHP. #gGain #gSharpened #gFragment.",
+      "[Collect] #gGain #gBroken #gWing #gStatue.",
+      "[Leave]"
+    ]
+  },
+  "downfall:GoldenIdol": {
+    "NAME": "Golden Idol",
+    "DESCRIPTIONS": [
+      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL Wandering adventurers are certain to be attracted to this object. It may be worthwhile to set up a trap.",
+      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL The body of an adventurer lays a short distance down the hall, clearly crushed by a massive object. Their soul still lingers in the area.",
+      "Using the Idol's weight as a trigger, you rig up a simple trap to cause a nearby giant boulder to collapse into the room should anyone try to claim the #yshining artifact. NL Satisfied with the construction of your trap, you decide to move on.",
+      "You channel the adventurer's spirit into your body, absorbing its energy into your own.",
+      "You decide to leave the pedestal intact. Setting a trap is beneath you.",
+      "You decide to leave the soul alone and continue on your way."
+    ],
+    "OPTIONS": [
+      "[Set Trap] #rLose #ra #rStrike.",
+      "[Harvest] #gGain #y",
+      " #ySouls.",
+      "[Leave]",
+      "[Locked] Requires a Strike."
+    ]
+  },
+  "downfall:Cleric": {
+    "NAME": "The Cleric",
+    "DESCRIPTIONS": [
+      "A strange blue humanoid with a golden helm(?) approaches you with a huge smile. NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
+      "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You absorb its #ysoul and continue on your way.",
+      "\"Cleric help! Cleric help!\" the creature says as you approach menacingly. NL A cold blue flame envelops your body and dissipates. NL Immediately after, this \"Cleric\" flees."
+    ],
+    "OPTIONS": [
+      "[Punch] #gGain #y",
+      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Leave]",
+      "Select a Card to Remove.",
+      " #ySouls."
+    ]
+  },
+  "downfall:Ghosts": {
+    "NAME": "Council of Ghosts",
+    "DESCRIPTIONS": [
+      "As you continue your descent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"Another~ ~puppet~ ~of~ #r~the~ #r~Heart~ ~I~ ~think.\"~ NL #r@\"AGREED!@ #r@IT@ #r@ALWAYS@ #r@SENDS@ #r@THE@ #r@WEAKEST@ #r@PAWNS!\"@ NL NL You notice an over-sized grin as the third addresses you. NL \"Ignore the others... Would you like a taste of our #y~power?\"~ ",
+      "\"An @offering!@ How ~tempting...\"~ NL NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. Within your body, you feel the #b~souls~ collected from the dead forced out in a violent spiral into the spirit's gaping maw. It takes all of your strength to maintain your ground and not be pulled in yourself. NL NL Just before your stamina gives out, the ghostly vortex stops, and the spirits fade into the ether. NL NL You continue on, feeling slightly #bhollow."
+    ],
+    "OPTIONS": [
+      "[Offer] #rLose #r",
+      " Souls. #gReceive Apparition.",
+      "[Locked] Requires ",
+      " Souls."
+    ]
+  },
+  "downfall:CursedTome": {
+    "NAME": "Cursed Tome",
+    "DESCRIPTIONS": [
+      "In an abandoned temple, you find a giant book, open, riddled with #p@cryptic@ #p@writings.@ NL NL You need not interpret the elaborate script, for you know the power that lies within - and the #rcost it incurs upon its owner.",
+      "Understanding the cost, you decide to take the tome with you. As you reach for the pedestal, the trance of the tome speaks to you in a #rthousand #rvoices, clawing at your very soul! NL NL With the book secured, and your mind even more corrupted than it was before, you exit the temple feeling #b~drained...~"
+    ]
+  },
+  "downfall:ForgottenAltar": {
+    "NAME": "Forgotten Altar",
+    "DESCRIPTIONS": [
+      "You stand on the altar and channel the spiritual energy from your inner being. NL As the #bsouls spill out in an offering to the goddess, the arms of the statue reach out and emanate a soothing #p~cursed~ #p~magic.~ NL Everything goes dark. NL You wake up a short time later, your wounds and injuries from battle suddenly healed.",
+      "After taking a brief moment to admire the evil that resides within the statue, you depart, continuing through the City."
+    ],
+    "OPTIONS": [
+      "[Offer Souls] #rLose #r",
+      " #rSouls. #gHeal #g",
+      " #gHP.",
+      "[Locked] Requires ",
+      " Souls.",
+      "[Leave]"
+    ]
+  },
+  "downfall:Bandits": {
+    "NAME": "Masked Bandits",
+    "DESCRIPTIONS": [
+      "You encounter a group of bandits wearing large #rred #rmasks. NL \"Hello, pay up t- Oh, a ~monster.~ Maybe you'd have need of our services?\"",
+      "Thanks a bunch, whacko! You certainly won't regret this..."
+    ],
+    "OPTIONS": [
+      "[Lose ",
+      "] #gHire #gthe #gBandits.",
+      "[Locked] Requires more Relics."
+    ]
+  },
+  "downfall:Nloth": {
+    "NAME": "N'loth",
+    "DESCRIPTIONS": [
+      "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
+    ],
+    "OPTIONS": [
+      "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
+    ]
+  },
+  "downfall:KnowingSkull": {
+    "NAME": "Knowing Skull",
+    "DESCRIPTIONS": [
+      "You find yourself in an old, decorated chamber. In the center of the room, a large skull sits atop an ornate pedestal. As you approach, the skull #g@bursts@ #g@into@ #g@flames@ and turns to face you. NL NL \"WHAT IS IT YOU SEEK? WHAT IS IT YOU OFFER?\" NL In sync with its final words, the door behind you @slams@ @shut.@",
+      "\"Heyheyheyheyhandsoffthenoggin-\" You pluck the skull from the pedestal, momentarily #rscorched by its flames. Maybe it'll come in handy later...,",
+      "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
+    ],
+    "OPTIONS": [
+      "[You.] #gObtain #gthe #gSkull. #rLose #r",
+      "[Leave]",
+      " #rHP."
+    ]
+  },
+  "downfall:Vagrant": {
+    "NAME": "Pleading Vagrant",
+    "DESCRIPTIONS": [
+      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
+    ],
+    "OPTIONS": [
+      "[Punch] #gGain #g85 #gSouls. #rLose #r",
+      " #rHP."
+    ]
+  },
+  "downfall:Beggar": {
+    "NAME": "Old Beggar",
+    "DESCRIPTIONS": [
+      "The beggar takes off its cloak, revealing a blue humanoid form with a golden helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
+      "The old beggar looks around, seemingly puzzled. He ignores you at first as he searches the area, then glances towards you. NL \"Have you seen a young, blue-skinned man near here? Wears an odd, golden helm? He usually comes by the City, spending his tithe on food for us...\" NL The beggar must be referring to the one called #bCleric, who you dispatched a short while ago.",
+      "@\"Do@ @not@ @fear,@ @old@ @man.@ @You@ @shall@ @see@ @your@ @friend@ @sooner@ @than@ @you@ @think.\"@ NL NL The beggar struggles to provide any semblance of defense, and you strike him down easily. NL Leaving the alley behind, you stride ahead, excessively #yproud of the work you have done this day.",
+      "This man has suffered enough as a result of your earlier actions. You decide to spare him his life, and move on.",
+      "The beggar takes off its cloak to reveal that he is #bCleric! NL @\"You@ @are@ @a@ @horrible@ @soul.@ @Cleric@ @bought@ @protection!\"@ he screams. NL NL Two massive figures emerge from the alley, each wearing full plate. Before you have a chance to react, they draw their blades and charge!",
+      "Having slain this #bCleric's bodyguards, you turn to him and back him into a corner of the alley. He is terrified and trembling.",
+      "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You happily absorb its #ysoul and continue onward. NL NL As you leave, you notice the other beggars peering from behind buildings and alleys. You bask in their fear - let this be a lesson to anyone who dare defy a Spire overlord.",
+      "\"Cleric help! Cleric help!\" the creature says once again, barely able to speak as he cowers in fear. NL A cold blue flame envelops your body and dissipates. NL NL Deciding his powers may of use later, and that you can easily dispatch of any bodyguards he tries to employ in the future, you let this \"Cleric\" live once more."
+    ],
+    "OPTIONS": [
+      " #rBecome #rCursed #r- #rPride.",
+      "[Fight]",
+      "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck."
+    ]
+  },
+  "downfall:Mausoleum": {
+    "NAME": "The Mausoleum",
+    "DESCRIPTIONS": [
+      "Venturing through a series of tombs, you are faced with a large sarcophagus ~studded~ ~with~ ~gems~ in the center of a circular room. NL You cannot make out the writing on the coffin, however, you do notice #p~black~ #p~fog~ seeping out from the sides. NL You're familiar with this fog - a clear sign of #y~spirits.~",
+      "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@cough...@"
+    ],
+    "OPTIONS": [
+      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rWrithe."
+    ]
+  },
+  "downfall:Nest": {
+    "NAME": "The Nest",
+    "DESCRIPTIONS": [
+      "A long line of #b~hooded~ #b~figures~ can be seen entering an #punassuming #pcathedral. NL The moment you enter the cathedral, the figures turn to you! NL NL Your ears are near-instantly filled with a cacophony of gasps, cheers, and caws. One of the cultists approaches you with an offering.",
+      "Eyeing a dangerous-looking weapon lying on an altar, you cut through the line of cultists and simply take your prize. You are quickly surrounded by #rCultists! NL NL #r@\"MURDER!!@ #r@MURDER@ #r@MURDER!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL The cultists quickly draw their own daggers, #rslicing and #rslashing as you push through them to exit the building.",
+      "Accepting the cultist's offering, you take the strange elixir from its hands. NL NL The cultists @chant@ and @holler@ for you! NL NL #b~\"CAAW~ #b~CAW~ #b~CAAAAAAWW!!\"~ NL NL You chant, too. Why not? These cultists are an odd bunch, but they serve one of your fellow overlords well.",
+      "#r@\"BIRDGOD!!@ #r@RETURNED!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL Wading through the cheering crowd of cultists, you soon come face-to-face with the leader. A well-dressed cultist hands you an #yOrnate #yDagger.",
+      "You take the dagger, unsure of exactly what is about to transpire. The cultist leader reaches into his robe and offers you a #bblue #boily #bmixture.",
+      "The cultists surrounding the leader provide him with replacements, and soon with his own dagger and potion in hand, he gestures for you to follow in his actions.",
+      "Mimicking the cultist leader's ritual process, you uncork the potion and gently pour a small amount of it over the blade. The steel seems to glow an #b~eerie~ #b~hue~ in the cathedral's light. NL NL Without a single word or gesture from the cult's leader, two cultists step forward - one to you, and one to him. NL NL It is now painfully clear what they want you to do.",
+      "#rYou #rplunge #rthe #rdagger #rinto #rthe #rcultist's #rheart! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL The ritual is completed, and the surviving cultists could not appear happier. They wave their sticks in celebration and continue to call out a cheering caw as you exit the cathedral."
+    ],
+    "OPTIONS": [
+      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
+      "[Locked] Requires Broken Wing Statue.",
+      "[Accept] #gGain #gCultist #gPotion.",
+      "[Steal] #gObtain Ritual Dagger. #rLose #r",
+      " #rHP.",
+      "[Leave]",
+      "[Continue]",
+      "[Take Dagger] #gGain #gRitual #gDagger.",
+      "[Anoint] #gUpgrade #gRitual #gDagger.",
+      "[Sacrifice] #rKill #rCultist with Ritual Dagger+."
+    ]
+  },
+  "downfall:Colosseum": {
+    "NAME": "The Colosseum",
+    "DESCRIPTIONS": [
+      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"We await these who would assault our City - the ones you seek to destroy! We have an audience awaiting a fresh capture. The people love a #rfight to the #rdeath!\"",
+      "The slavers are no threat to you, and may prove useful if they do manage to slow down or injure your prey. NL NL However, this bloodsport might just be too tempting to pass up...",
+      "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
+      "@\"BRING@ @ME@ @YOUR@ @BEST!\"@ you boom into the crowd, opening a challenge to their champions. NL Two challengers approach, warning you that the rules of the arena prevent them from holding back, despite your position as a lord of the Spire. NL NL You would assume nothing less.",
+      "@\"THE@ @NEXT@ @ONE@ @IS@ @MINE!\"@ you boom into the crowd, who replies with a deafening applause. NL NL It does not take long for the slavers to drag in their latest catch. The unwitting challenger awakens, ~groggy~ from the ambush, but readies themselves. NL NL This should be fun.",
+      "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
+    ],
+    "OPTIONS": [
+      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards.",
+      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[Leave]",
+      "[FIGHT!]",
+      "[Continue]"
+    ]
+  },
+  "downfall:MindBloom": {
+    "NAME": "Mind Bloom",
+    "DESCRIPTIONS": [
+      "While walking and traversing through the beauty of the Beyond, your thoughts suddenly begin to feel very... #p~real...~ NL NL Imaginings of #rslain #radventurers and #bhoarded #bsouls begin to manifest themselves into reality. NL The sensation is quickly fleeting. What do you do?",
+      "You know you have been here before. NL NL Hunting the same adventurer. NL NL Is any of this real? NL NL How many times have you been slain?",
+      "Everything makes sense now. NL The singular purpose, the descent, the #pHeart. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+    ],
+    "OPTIONS": [
+      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
+      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
+      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rall #r3 #rHeart #rBlessings.",
+      "[Locked] Requires all 3 Heart Blessings.",
+      "[Leave]"
+    ]
+  },
+  "downfall:MoaiHead": {
+    "NAME": "The Moai Head",
+    "DESCRIPTIONS": [
+      "You decide to take a slight detour to one of the Beyond's greatest monuments - an enormous stony head, emerging from a large wall segment. NL NL The head's mouth is wide open, and it reveals large intimidating teeth stained red with blood. The surface of the statue is riddled with pictographs that seem to indicate people throwing themselves into the mouth of this head and being devoured.",
+      "You step up into the mouth of the statue, waiting for the statue to activate, knowing you will have to pay its cost in blood. Within a short time, the huge molars slam down from above, crushing you whole. NL @Darkness.@ NL Sometime later from within the dark, you see a sliver of light, and hear what you now realize is the sound of stony teeth slowly rising upwards. NL NL You leave restored, the statue's magic flowing through you.",
+      "You step up into the mouth of the statue, and let flow from your body an immense amount of #bspiritual #benergy. The statue's eyes glow #b~aflame,~ and its huge molars slam down upon you. NL #b~Blue~ #b~light~ #b~is~ #b~everywhere.~ NL NL As the teeth rise, you feel completely reinvigorated, and more powerful than ever before.",
+      "You leave, wondering what could have been."
+    ],
+    "OPTIONS": [
+      "[Offer Souls] #rLose #r",
+      " #rSouls. #gGain #g",
+      " #gMax #gHP and #gHeal #gto #gfull."
+    ]
+  },
+  "downfall:SensoryStone": {
+    "NAME": "Sensory Stone",
+    "DESCRIPTIONS": [
+      "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for bits of gold and scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ygold and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
+      "#y~FRAILTY.~ NL NL The #rblade enters your chest, and the cheer of the #bcrowd fills your ears... the last thing you will ever feel is a hand striking across your face, and your eyes close. NL NL You awaken in an unfamiliar room, @unable@ @to@ @move.@ You try to speak, but no words come out, and your vision is clouded in a #ggreen #gfog. Is this a dream? Is this the afterlife? You try to remember, but your thoughts are as disjointed as your arms and legs. NL NL You hear a voice in your mind - a single command. #g\"BALANCE #gmust #gbe #gENFORCED.\"",
+      "#p~HOPELESSNESS.~ NL NL #yWatch. #yRemember. #yLive. This is the Watcher's mission. Your assignment is to investigate a Spire of unknown origin.  You enter a hexagonal room and before you can react, the door @collapses@ @behind@ @you!@ NL NL There is no escape. The only path that may lead out is by taking a tablet, clearly infused with magic, which lays upon a pedestal. The moment your skin touches the artifact, your body ~dissolves~ ~into~ ~nothing,~ and your #psoul is pulled into the #pstone. NL NL Your fate will forever be tied to the #ptablet, #rcursed to wander the Spire for eternity.",
+      "#y~DETACHMENT.~ NL NL You are the first. You serve the ~Maker.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yguardians of the Maker’s legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
+      "#b~PRIDE.~ NL NL You stand at the center of a grand arena. Everything you have worked for culminates in this one singular combat. You take up a #bdefensive #bstance, draining the stamina of your enemy, until an opening presents itself. With your last bit of strength, you #rplunge #ryour #rblade into the chest of your opponent. The audience erupts in @thunderous@ @applause!@ NL NL Not one to stop at just winning, you raise your open hand and strike your foe ~across~ ~the~ ~face,~ delivering a most insulting final blow. NL NL There is no one in your way now. You are the new #b@Champion!@",
+      "#p~GREED.~ NL NL Few men can resist the #btemptation #bof #bpower. But power comes at a cost, and great power an even greater price. NL NL You sit upon your throne above the Colosseum, watching men #rfight #rto #rthe #rdeath for your amusement for the title of #bChampion. The price for entry - the #g~flame~ #g~of~ #g~their~ #g~eternal~ #g~soul~ in service to you. Each name etched in a tablet, binding them to you in the afterlife. NL NL The crowd cheers as one fighter is struck down with a final blow across the face. You go to your vault, but someone has been here. Traps are sprung, but no body to be found... and the #p@tablet@ @is@ @missing!@",
+      "#g~GRIEF.~ NL NL You stand, at long last, atop the highest peak of the Spire. You have spent your years working tirelessly to bring this colossal feat of architecture, a monument to the Great One, to life. Every #gcurve rounded to perfection. Every #yedge meticulously placed. NL NL “It is done, my love.” Covering their lifeless hand with yours, you turn on the machine. A soft hum fills the room, and soon you feel your very #b~essence~ being pulled into your creation - swiftly joined by another. You will both live for all eternity in this place, just as you planned. NL NL With a resounding echo... the #pHeart ~thumps~ its first beat.",
+      "#b~RAGE.~ NL NL You are powerless to stop the #yornate #ydagger that enters your chest. In your final moment, you pray to whatever #pdeity rules over this Spire to give you the strength to live, ~no~ ~matter~ ~the~ ~cost.~ NL NL Your #pheart thumps a strong final beat, then is silenced... for a moment. Your eyes glow with #b@blue@ #b@fire@ as you return to life with the strength of ten men, bursting your bonds with ease and roaring into the crowd of #brobed #bfigures surrounding you! NL NL As you feel your body begin to morph into a #bmonstrous #bshape, the figures bow before you.",
+      "#p~ARROGANCE.~ NL NL You spite the #pgod-like #pHeart that controls this place, dictating your fate. It is #ytime to take action. NL NL The Beyond is the least guarded of the Spire's sections, and you are able to slip into its #ytreasury with ease. There are many artifacts of power here, but one in particular speaks to you - a #y~glowing~ #y~pocketwatch.~ NL NL With unyielding confidence, you reach out and snatch the pocketwa... @...awtekcop@ @eht@ @hctans@ @dna@ @tuo@ @hcaer@ @uoy@ @,ecnedifnoc@ @gnidleiynu@ @htiW@ NL NL You spite the #pgod-like #pHeart that controls this... place...?",
+      "On second thought, perhaps memories are best left in the past."
+      ],
+    "OPTIONS": [
+      "[Recall] #gAdd #g1 #gColorless Boss #gcard #gto #gyour #gdeck.",
+      "[Recall] #gAdd #g2 #gColorless Boss #gcards #gto #gyour #gdeck. #rLose #r",
+      "[Recall] #gAdd #g3 #gColorless Boss #gcards #gto #gyour #gdeck. #rLose #r"
+    ]
+  },
+  "downfall:SecretPortal": {
+    "NAME": "Secret Portal",
+    "DESCRIPTIONS": [
+      "Before you is a welcome sight - in one of the living walls of the Beyond is an enclosed stone entrance filled with a #p~swirling~ #p~magical~ #p~portal.~ NL NL This portal allows for quick access to the Beyond's overlord. However, if you take the stone that powers it, your journey through the Spire would be hastened.",
+      "The portal can always be repaired later. You pry the runed stone that powers the gateway, and quickly contemplate where to head next. The stone will only remain useful for a brief moment."
+    ],
+    "OPTIONS": [
+      "[Take Stone] Skip to any Room."
+    ]
+  },
+  "downfall:TombRedMask": {
+    "NAME": "Tomb of Lord Red Mask",
+    "DESCRIPTIONS": [
+      "A highly ornamented tomb can be seen on the other side of a floating path. NL NL Upon reaching the tomb, you notice a soft wall, likely holding a secret compartment. One good strike should be enough to break it down.",
+      "You don the #rmask. The bandits who agreed to assist you seem to have a connection with this Lord - perhaps they will be inspired by your new adornment.",
+      "An opening appears in the tomb and out slides a small red mask with a note attached. \"Take from others as I have taken from you!\"",
+      "Deciding against disturbing the tomb, you continue on.",
+      "Satisfied with collecting the mask, you continue on."
+    ],
+    "OPTIONS": [
+      "[Don the Red Mask] #gUpgrade #gBandit #gContract.",
+      "[Locked] Requires: Red Mask & Bandit Contract.",
+      "[Bash] #rLose #r",
+      ". #gObtain #gRed #gMask.",
+      "[Locked] Requires an Attack.",
+      "[Leave]"
+    ]
+  },
+  "downfall:WindingHalls": {
+    "NAME": "Winding Halls",
+    "DESCRIPTIONS": [
+      "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
+    ],
+    "OPTIONS": [
+      "[Left] #gExplore #gan #gEvent.",
+      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic.",
+      "[Straight] #gHunt #gdown #gthe #gMerchant."
+    ]
+  },
+  "downfall:Joust": {
+    "NAME": "The Joust",
+    "DESCRIPTIONS": [
+      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide..."
+    ],
+    "OPTIONS": [
+      "[Left] #r50%: #rLose #r",
+      " HP.",
+      " #g50%: #gGain #g200 #gSouls.",
+      "[Right] #r25%: #rLose #r",
+      " #g75%: #gGain #g100 #gSouls."
+    ]
+  },
+  "downfall:BossTester": {
+    "NAME": "Debug Boss Prep",
+    "DESCRIPTIONS": [
+      "Choose an Act to gain the simulated rewards for that act. If you want to test an Act 3 encounter, run this event 3 times - once for Act 1, then for Act 2, then for Act 3.",
+      "Rewards complete. After shopping, run this event again if you want to simulate another act's rewards. Otherwise, proceed to the boss fight. Do not collect its rewards."
+    ],
+    "OPTIONS": [
+      "[Act 1]",
+      "[Act 2]",
+      "[Act 3]",
+      "[Head to Shop]"
+    ]
+  },
+  "downfall:BetterEnding": {
+    "NAME": "Spire Heart",
+    "DESCRIPTIONS": [
+      "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL A comforting heartbeat can be felt throughout the room... NL Are you at the ~end~ ? Is your purpose fulfilled?",
+      "You give #b",
+      " Souls back to the heart! NL The heart #b@squirms@ in elation, pounding forever more.",
+      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~ NL You feel that you have given a total of #b",
+      " Souls to the heart.",
+      " NL A total of #b",
+      " Souls have been given by all who have been summoned by it.",
+      " NL The heart pulses louder and louder as your #y~consciousness~ #y~fades...~",
+      "NL You ready your blade...",
+      "NL You prepare your daggers...",
+      "NL You charge your core to its maximum...",
+      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~",
+      " NL The heart pulses louder and louder as your #p~consciousness~ #p~begins~ #p~to~ #p~fade...~",
+      " NL A sudden burst of #y@energy@ emanates from inside you, #b@jolting@ you awake.",
+      " NL The heart #gretreats upwards! A large door is revealed in its place.",
+      "NL You prime your staff with divine energy..."
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Give] #b???",
+      "[Sleep]",
+      "[Approach Door]"
+    ]
+  }
+}

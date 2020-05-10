@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 public class EnHandOfGreed extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:HandOfGreed";
+    public static final String ID = "downfall_Charboss:HandOfGreed";
     private static final CardStrings cardStrings;
 
     public EnHandOfGreed() {

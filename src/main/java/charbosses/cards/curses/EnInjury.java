@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnInjury extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Injury";
+    public static final String ID = "downfall_Charboss:Injury";
     private static final CardStrings cardStrings;
 
     static {

@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnFlyingKnee extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Flying Knee";
+    public static final String ID = "downfall_Charboss:Flying Knee";
     private static final CardStrings cardStrings;
 
     static {

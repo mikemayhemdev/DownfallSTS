@@ -9,11 +9,10 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
-import evilWithin.vfx.NeowBossRezEffect;
+import downfall.vfx.NeowBossRezEffect;
 import theHexaghost.cards.seals.*;
 import theHexaghost.relics.TheBrokenSeal;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 

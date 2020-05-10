@@ -1,17 +1,11 @@
 package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.FusionHammer;
 import com.megacrit.cardcrawl.relics.RunicDome;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 public class CBR_RunicDome extends AbstractCharbossRelic {
     public static final String ID = "RunicDome";
@@ -22,7 +16,7 @@ public class CBR_RunicDome extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(EvilWithinMod.makeID(ID)).DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[1] + this.DESCRIPTIONS[0] + CardCrawlGame.languagePack.getRelicStrings(downfallMod.makeID(ID)).DESCRIPTIONS[0];
 
     }
 

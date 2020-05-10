@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnBladeDance extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Blade Dance";
+    public static final String ID = "downfall_Charboss:Blade Dance";
     private static final CardStrings cardStrings;
 
     static {

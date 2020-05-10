@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.watcher.OmegaPower;
 import java.util.ArrayList;
 
 public class EnOmega extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Omega";
+    public static final String ID = "downfall_Charboss:Omega";
     private static final CardStrings cardStrings;
 
     public EnOmega() {

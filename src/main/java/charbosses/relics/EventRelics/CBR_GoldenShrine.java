@@ -6,20 +6,20 @@ import charbosses.cards.curses.EnRegret;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_GoldenShrine extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("GoldenShrine");
+    public static String ID = downfallMod.makeID("GoldenShrine");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
 
     public String relicName = "";
 
     public CBR_GoldenShrine() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/goldenshrine.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/goldenshrine.png")));
     }
 
     @Override

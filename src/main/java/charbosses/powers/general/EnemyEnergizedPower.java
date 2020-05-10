@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import slimebound.SlimeboundMod;
 
 public class EnemyEnergizedPower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:EnemyEnergized";
+    public static final String POWER_ID = "downfall:EnemyEnergized";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     private static final PowerStrings powerStrings;

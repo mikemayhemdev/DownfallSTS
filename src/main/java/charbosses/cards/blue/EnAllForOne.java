@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class EnAllForOne extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:All For One";
+    public static final String ID = "downfall_Charboss:All For One";
     private static final CardStrings cardStrings;
 
     static {

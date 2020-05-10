@@ -23,7 +23,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnDarkness extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Darkness";
+    public static final String ID = "downfall_Charboss:Darkness";
     private static final CardStrings cardStrings;
 
     public EnDarkness() {

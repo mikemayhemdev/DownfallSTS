@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import java.util.ArrayList;
 
 public class EnWorship extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Worship";
+    public static final String ID = "downfall_Charboss:Worship";
     private static final CardStrings cardStrings;
 
     public EnWorship() {

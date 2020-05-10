@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.NoxiousFumesPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
 public class EnemyNoxiousFumesPower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:Enemy Noxious Fumes";
+    public static final String POWER_ID = "downfall:Enemy Noxious Fumes";
     private static final PowerStrings powerStrings;
 
     static {

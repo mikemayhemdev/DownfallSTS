@@ -1,0 +1,38 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "Transformative Gaze"
+    ],
+    "NAME": "Head of Change",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "Forgetful Stare"
+    ],
+    "NAME": "Forgetful Head",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "Growth Beam"
+    ],
+    "NAME": "Head of Growth",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "Soul Steal"
+    ],
+    "NAME": "Head of Growth",
+    "DIALOG": [
+      ""
+    ]
+  }
+}

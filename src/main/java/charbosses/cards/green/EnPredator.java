@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnPredator extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Predator";
+    public static final String ID = "downfall_Charboss:Predator";
     private static final CardStrings cardStrings;
 
     static {

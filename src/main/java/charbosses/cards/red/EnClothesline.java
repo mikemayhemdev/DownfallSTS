@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class EnClothesline extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Clothesline";
+    public static final String ID = "downfall_Charboss:Clothesline";
     private static final CardStrings cardStrings;
 
     public EnClothesline() {

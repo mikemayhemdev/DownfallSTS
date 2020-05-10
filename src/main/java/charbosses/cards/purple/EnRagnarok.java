@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnRagnarok extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Ragnarok";
+    public static final String ID = "downfall_Charboss:Ragnarok";
     private static final CardStrings cardStrings;
 
     public EnRagnarok() {

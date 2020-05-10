@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnCoreSurge extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:CoreSurge";
+    public static final String ID = "downfall_Charboss:CoreSurge";
     private static final CardStrings cardStrings;
 
     public EnCoreSurge() {

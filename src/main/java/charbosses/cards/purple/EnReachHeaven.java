@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnReachHeaven extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:ReachHeaven";
+    public static final String ID = "downfall_Charboss:ReachHeaven";
     private static final CardStrings cardStrings;
     private boolean usedOnce;
 

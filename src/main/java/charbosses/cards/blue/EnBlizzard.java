@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class EnBlizzard extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Blizzard";
+    public static final String ID = "downfall_Charboss:Blizzard";
     private static final CardStrings cardStrings;
 
     public EnBlizzard() {

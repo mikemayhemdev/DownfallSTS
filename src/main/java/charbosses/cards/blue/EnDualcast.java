@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnDualcast extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Dualcast";
+    public static final String ID = "downfall_Charboss:Dualcast";
     private static final CardStrings cardStrings;
 
     static {

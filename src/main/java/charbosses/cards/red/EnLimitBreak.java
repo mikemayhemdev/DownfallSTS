@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnLimitBreak extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Limit Break";
+    public static final String ID = "downfall_Charboss:Limit Break";
     private static final CardStrings cardStrings;
 
     static {
@@ -25,7 +25,7 @@ public class EnLimitBreak extends AbstractBossCard {
         super(ID, EnLimitBreak.cardStrings.NAME, "red/skill/limit_break", 1, EnLimitBreak.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.RED, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.exhaust = true;
         this.limit = 1;
-        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
+        this.tags.add(downfallMod.CHARBOSS_SETUP);
     }
 
     @Override

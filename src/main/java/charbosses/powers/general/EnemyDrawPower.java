@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnemyDrawPower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:EnemyDraw";
+    public static final String POWER_ID = "downfall:EnemyDraw";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     private static final PowerStrings powerStrings;

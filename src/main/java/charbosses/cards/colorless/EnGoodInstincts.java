@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 public class EnGoodInstincts extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Good Instincts";
+    public static final String ID = "downfall_Charboss:Good Instincts";
     private static final CardStrings cardStrings;
 
     public EnGoodInstincts() {

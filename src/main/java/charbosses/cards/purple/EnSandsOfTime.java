@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnSandsOfTime extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:SandsOfTime";
+    public static final String ID = "downfall_Charboss:SandsOfTime";
     private static final CardStrings cardStrings;
 
     public EnSandsOfTime() {

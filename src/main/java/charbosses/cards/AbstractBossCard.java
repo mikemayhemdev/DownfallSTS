@@ -96,7 +96,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     public AbstractBossCard(AbstractCard baseCard) {
-        super("EvilWithinBossCard:" + baseCard.cardID, baseCard.name, baseCard.assetUrl, baseCard.cost, baseCard.rawDescription, baseCard.type,
+        super("downfallBossCard:" + baseCard.cardID, baseCard.name, baseCard.assetUrl, baseCard.cost, baseCard.rawDescription, baseCard.type,
                 baseCard.color, baseCard.rarity, baseCard.target);
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;

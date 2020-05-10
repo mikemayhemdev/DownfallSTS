@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnOutmaneuver extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Outmaneuver";
+    public static final String ID = "downfall_Charboss:Outmaneuver";
     private static final CardStrings cardStrings;
 
     static {

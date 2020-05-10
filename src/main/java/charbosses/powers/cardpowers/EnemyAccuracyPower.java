@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnemyAccuracyPower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:Enemy Accuracy";
+    public static final String POWER_ID = "downfall:Enemy Accuracy";
     public static final String[] DESCRIPTIONS;
     private static final PowerStrings powerStrings;
 

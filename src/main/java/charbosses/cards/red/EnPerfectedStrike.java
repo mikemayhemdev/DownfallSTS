@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 public class EnPerfectedStrike extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Perfected Strike";
+    public static final String ID = "downfall_Charboss:Perfected Strike";
     private static final CardStrings cardStrings;
 
     static {
@@ -26,7 +26,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTags.STRIKE);
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 
     public static int countCards() {

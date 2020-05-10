@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import java.util.ArrayList;
 
 public class EnSadisticNature extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Sadistic Nature";
+    public static final String ID = "downfall_Charboss:Sadistic Nature";
     private static final CardStrings cardStrings;
 
 

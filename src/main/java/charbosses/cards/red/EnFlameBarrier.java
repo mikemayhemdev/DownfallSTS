@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import java.util.ArrayList;
 
 public class EnFlameBarrier extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Flame Barrier";
+    public static final String ID = "downfall_Charboss:Flame Barrier";
     private static final CardStrings cardStrings;
 
     static {

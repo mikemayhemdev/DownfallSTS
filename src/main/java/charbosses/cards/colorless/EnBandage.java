@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnBandage extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Bandage Up";
+    public static final String ID = "downfall_Charboss:Bandage Up";
     private static final CardStrings cardStrings;
 
     public EnBandage() {

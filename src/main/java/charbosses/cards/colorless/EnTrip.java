@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class EnTrip extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Trip";
+    public static final String ID = "downfall_Charboss:Trip";
     private static final CardStrings cardStrings;
 
 

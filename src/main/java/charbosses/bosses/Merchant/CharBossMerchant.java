@@ -2,9 +2,6 @@ package charbosses.bosses.Merchant;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Ironclad.ArchetypeAct1PerfectedStrike;
-import charbosses.bosses.Ironclad.ArchetypeAct2Strength;
-import charbosses.bosses.Ironclad.ArchetypeAct3Block;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -26,9 +23,9 @@ import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
-import evilWithin.EvilWithinMod;
-import evilWithin.monsters.FleeingMerchant;
-import evilWithin.vfx.NeowBossRezEffect;
+import downfall.downfallMod;
+import downfall.monsters.FleeingMerchant;
+import downfall.vfx.NeowBossRezEffect;
 
 public class CharBossMerchant extends AbstractCharBoss {
 
@@ -52,12 +49,12 @@ public class CharBossMerchant extends AbstractCharBoss {
     private boolean neowSpoke = false;
 
     public CharBossMerchant() {
-        super("Merchant", "EvilWithin:Merchant", 200, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+        super("Merchant", "downfall:Merchant", 200, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
 
-        if (EvilWithinMod.tempAscensionHack){
-            EvilWithinMod.tempAscensionHack = false;
-            AbstractDungeon.ascensionLevel = EvilWithinMod.tempAscensionOriginalValue;
-            EvilWithinMod.tempAscensionOriginalValue = 0;
+        if (downfallMod.tempAscensionHack){
+            downfallMod.tempAscensionHack = false;
+            AbstractDungeon.ascensionLevel = downfallMod.tempAscensionOriginalValue;
+            downfallMod.tempAscensionOriginalValue = 0;
         }
 
         this.energyOrb = new EnergyOrbRed();
@@ -66,7 +63,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         drawX = 1260.0F * Settings.scale;
         drawY = 460.0F * Settings.scale;
 
-        loadAnimation(EvilWithinMod.assetPath("images/monsters/merchant/noShadow/skeleton.atlas"), EvilWithinMod.assetPath("images/monsters/merchant/noShadow/skeleton.json"), 1.0F);
+        loadAnimation(downfallMod.assetPath("images/monsters/merchant/noShadow/skeleton.atlas"), downfallMod.assetPath("images/monsters/merchant/noShadow/skeleton.json"), 1.0F);
         AnimationState.TrackEntry e = state.setAnimation(0, "idle", true);
 
         float time = e.getEndTime() * MathUtils.random();
@@ -97,7 +94,7 @@ public class CharBossMerchant extends AbstractCharBoss {
 
     public void initGlowMesh(float time) {
         float glowscale = .98F;
-        this.atlasGlow = new TextureAtlas(Gdx.files.internal(EvilWithinMod.assetPath("images/monsters/merchant/noShadow/skeletonGlow.atlas")));
+        this.atlasGlow = new TextureAtlas(Gdx.files.internal(downfallMod.assetPath("images/monsters/merchant/noShadow/skeletonGlow.atlas")));
         SkeletonJson json = new SkeletonJson(this.atlasGlow);
         if (CardCrawlGame.dungeon != null && AbstractDungeon.player != null) {
             if (AbstractDungeon.player.hasRelic("PreservedInsect") && !this.isPlayer && AbstractDungeon.getCurrRoom().eliteTrigger) {
@@ -110,7 +107,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         }
 
         json.setScale(Settings.scale / glowscale);
-        SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(EvilWithinMod.assetPath("images/monsters/merchant/noShadow/skeleton.json")));
+        SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(downfallMod.assetPath("images/monsters/merchant/noShadow/skeleton.json")));
         this.skeletonGlow = new Skeleton(skeletonData);
         this.skeletonGlow.setColor(glowColor);
         this.stateDataGlow = new AnimationStateData(skeletonData);
@@ -170,7 +167,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         this.animY = this.bob.y;
         sb.setColor(Color.WHITE);
         sb.draw(ImageMaster.MERCHANT_RUG_IMG, FleeingMerchant.DRAW_X, FleeingMerchant.DRAW_Y, 512 * Settings.scale, 512 * Settings.scale);
-        //sb.draw(ImageMaster.loadImage(EvilWithinMod.assetPath("images/monsters/merchant/onlyShadow/skeleton.png")), FleeingMerchant.DRAW_X, FleeingMerchant.DRAW_Y, 201F * Settings.scale, 51F * Settings.scale);
+        //sb.draw(ImageMaster.loadImage(downfallMod.assetPath("images/monsters/merchant/onlyShadow/skeleton.png")), FleeingMerchant.DRAW_X, FleeingMerchant.DRAW_Y, 201F * Settings.scale, 51F * Settings.scale);
         if (rezTimer <= 0F) renderGlow(sb);
         super.render(sb);
     }

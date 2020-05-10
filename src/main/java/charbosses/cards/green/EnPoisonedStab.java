@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
 public class EnPoisonedStab extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Poisoned Stab";
+    public static final String ID = "downfall_Charboss:Poisoned Stab";
     private static final CardStrings cardStrings;
 
     static {

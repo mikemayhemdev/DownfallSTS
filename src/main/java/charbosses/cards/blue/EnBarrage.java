@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnBarrage extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Barrage";
+    public static final String ID = "downfall_Charboss:Barrage";
     private static final CardStrings cardStrings;
 
     public EnBarrage() {

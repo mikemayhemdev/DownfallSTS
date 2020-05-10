@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 public class EnApparition extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Ghostly";
+    public static final String ID = "downfall_Charboss:Ghostly";
     private static final CardStrings cardStrings;
 
     static {

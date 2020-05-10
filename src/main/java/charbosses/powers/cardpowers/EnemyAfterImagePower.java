@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnemyAfterImagePower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:Enemy After Image";
+    public static final String POWER_ID = "downfall:Enemy After Image";
     private static final PowerStrings powerStrings;
 
     static {

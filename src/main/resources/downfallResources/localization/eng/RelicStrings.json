@@ -1,0 +1,474 @@
+{
+  "downfall:NeowBlessing": {
+    "NAME": "Neow's Blsesing",
+    "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
+    "DESCRIPTIONS": [
+      "Replaces starter relic. Upon pickup, gain 100 Maximum HP. Gain 60 Maximum HP at the start of each Act. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
+    ]
+  },
+  "downfall:CoffeeDripper": {
+    "DESCRIPTIONS": [
+      " NL Being unable to Rest, Boss started with less than maximum health."
+    ]
+  },
+  "downfall:BustedCrown": {
+    "DESCRIPTIONS": [
+      " NL Being unable to pick optimal cards, Boss has fewer synergistic cards than usual."
+    ]
+  },
+  "downfall:Girya": {
+    "DESCRIPTIONS": [
+      " NL Opting to Lift instead of Rest, Boss started with less than maximum health."
+    ]
+  },
+  "downfall:Matroyshka": {
+    "DESCRIPTIONS": [
+      " NL Boss acquired ",
+      " additional relics."
+    ]
+  },
+  "downfall:Ectoplasm": {
+    "DESCRIPTIONS": [
+      " NL Being unable to gain gold, Boss has ",
+      " fewer card removals than usual."
+    ]
+  },
+  "downfall:BlackStar": {
+    "DESCRIPTIONS": [
+      " NL Boss acquired ",
+      " additional relics, but starts with less than maximum health."
+    ]
+  },
+  "downfall:MoltenEgg": {
+    "DESCRIPTIONS": [
+      " NL Boss upgraded ",
+      " Attacks from this relic."
+    ]
+  },
+  "downfall:ToxicEgg": {
+    "DESCRIPTIONS": [
+      " NL Boss upgraded ",
+      " Skills from this relic."
+    ]
+  },
+  "downfall:FrozenEgg": {
+    "DESCRIPTIONS": [
+      "Boss has many Upgraded Powers."
+    ]
+  },
+  "downfall:Shovel": {
+    "DESCRIPTIONS": [
+      " NL Boss acquired ",
+      " additional relics, but starts with less than maximum health due to not Resting."
+    ]
+  },
+  "downfall:CBRSerpentHead": {
+    "DESCRIPTIONS": [
+      " NL Boss used this gold to remove 2 cards from their deck."
+    ]
+  },
+  "downfall:CursedKey": {
+    "DESCRIPTIONS": [
+      " NL Boss gained ",
+      " Curses from this relic."
+    ]
+  },
+  "downfall:DreamCatcher": {
+    "DESCRIPTIONS": [
+      " NL Boss gained additional cards when resting."
+    ]
+  },
+  "downfall:PrayerWheel": {
+    "DESCRIPTIONS": [
+      " NL Boss gained ",
+      " extra cards from this relic."
+    ]
+  },
+  "downfall:PeacePipe": {
+    "DESCRIPTIONS": [
+      " NL Boss removed ",
+      " additional cards, but starts with less than maximum health."
+    ]
+  },
+  "downfall:RunicDome": {
+    "DESCRIPTIONS": [
+      " NL Boss may choose the order of cards unfavorably."
+    ]
+  },
+  "downfall:CentennialPuzzle": {
+    "DESCRIPTIONS": [
+      " NL Cannot trigger on the Boss's turn."
+    ]
+  },
+  "downfall:CBRFaceOfCleric": {
+    "DESCRIPTIONS": [
+      " Max HP was gained via this relic."
+    ]
+  },
+  "downfall:Omamori": {
+    "DESCRIPTIONS": [
+      " NL Prevented the Boss from gaining a "
+    ]
+  },
+  "downfall:DollysMirror": {
+    "DESCRIPTIONS": [
+      " NL The mirror duplicated "
+    ]
+  },
+  "downfall:Vampires": {
+    "NAME": "Event: Vampires",
+    "FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
+    "DESCRIPTIONS": [
+      "Strikes have been replaced with Bites. NL -",
+      " Maximum HP."
+    ]
+  },
+  "downfall:BonfireSpirits": {
+    "NAME": "Event: Bonfire Spirits",
+    "FLAVOR": "The spirits toss small bones and fragments into the fire, which brilliantly erupts each time...",
+    "DESCRIPTIONS": [
+      "Boss removed a card from its deck to gain 10 Max HP."
+    ]
+  },
+  "downfall:DesignerInSpire": {
+    "NAME": "Event: Designer-In-Spire",
+    "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
+    "DESCRIPTIONS": [
+      " was removed from the deck, and ",
+      " was upgraded."
+    ]
+  },
+  "downfall:DivineFountain": {
+    "NAME": "Event: Divine Fountain",
+    "FLAVOR": "You come across shimmering water flowing endlessly from a fountain on a nearby wall.",
+    "DESCRIPTIONS": [
+      " Curses have been removed from the deck."
+    ]
+  },
+  "downfall:Duplicator": {
+    "NAME": "Event: Duplicator",
+    "FLAVOR": "Before you lies a decorated altar to some ancient entity.",
+    "DESCRIPTIONS": [
+      "Boss duplicated a powerful card."
+    ]
+  },
+  "downfall:BigFish": {
+    "NAME": "Event: Big Fish",
+    "FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
+    "DESCRIPTIONS": [
+      "The Donut was chosen. NL +5 Maximum HP.",
+      "The Box was chosen. NL A Regret curse and a relic was added."
+    ]
+  },
+  "downfall:LivingWall": {
+    "NAME": "Event: Living Wall",
+    "FLAVOR": "Forget what you know, and I'll let you go.",
+    "DESCRIPTIONS": [
+      "Boss removed a ",
+      "Boss upgraded a ",
+      "Boss transformed a ",
+      " into a "
+    ]
+  },
+  "downfall:WheelOfChange": {
+    "NAME": "Event: Wheel of Change",
+    "FLAVOR": "It's time to spin the wheel! Are you READY? Of course you are!",
+    "DESCRIPTIONS": [
+      "The Wheel gave the Boss a ",
+      "Boss was healed to maximum health.",
+      "The Wheel removed a ",
+      " from the Boss's deck.",
+      "The Wheel caused damage to the Boss."
+    ]
+  },
+  "downfall:Falling": {
+    "NAME": "Event: Falling",
+    "FLAVOR": "While in free fall you consider your options...",
+    "DESCRIPTIONS": [
+      "Strike was removed from the deck."
+    ]
+  },
+  "downfall:Augmenter": {
+    "NAME": "Event: Augmenter",
+    "FLAVOR": "Hey there, stranger. Interested in advancing science?",
+    "DESCRIPTIONS": [
+      "Boss transformed 2 cards",
+      "Boss gained J.A.X.",
+      "Boss gained the Mutagenic Strength."
+    ]
+  },
+  "downfall:AncientWriting": {
+    "NAME": "Event: Ancient Writing",
+    "FLAVOR": "Suddenly, the message becomes clear...",
+    "DESCRIPTIONS": [
+      "Boss upgraded all Strikes & Defends."
+    ]
+  },
+  "downfall:Bandits": {
+    "NAME": "Event: Red Mask Bandits",
+    "FLAVOR": "Get em Bear!",
+    "DESCRIPTIONS": [
+      "Boss defeated the Bandits, gaining the Red Mask, but starts with less than maximum health."
+    ]
+  },
+  "downfall:WingStatue": {
+    "NAME": "Event: Wing Statue",
+    "FLAVOR": "Among the stone and boulders, you notice an intricate large blue statue resembling a wing.",
+    "DESCRIPTIONS": [
+      " was removed from the deck."
+    ]
+  },
+  "downfall:Serpent": {
+    "NAME": "Event: The Ssssserpent",
+    "FLAVOR": "The most fulfilling of lives is that in which you can buy anything! Do you agree?",
+    "DESCRIPTIONS": [
+      "Boss gained a Doubt curse to gain gold, which was used to buy a relic."
+    ]
+  },
+  "downfall:Cleric": {
+    "NAME": "Event: Cleric",
+    "FLAVOR": "Hello friend! I am Cleric! Are you interested in my services?!",
+    "DESCRIPTIONS": [
+      "Boss removed a card from its deck."
+    ]
+  },
+  "downfall:OldBeggar": {
+    "NAME": "Event: Old Beggar",
+    "FLAVOR": "Spare some coin, child?",
+    "DESCRIPTIONS": [
+      " was removed from the deck."
+    ]
+  },
+  "downfall:Library": {
+    "NAME": "Event: Library",
+    "FLAVOR": "You come across an ornate building which appears abandoned.",
+    "DESCRIPTIONS": [
+      "Boss gained an extra synergistic card."
+    ]
+  },
+  "downfall:Mausoleum": {
+    "NAME": "Event: Mausoleum",
+    "FLAVOR": "You cannot make out the writing on the coffin, however, you do notice black fog seeping out from the sides.",
+    "DESCRIPTIONS": [
+      "Boss gained a Writhe curse and an extra relic."
+    ]
+  },
+  "downfall:Nest": {
+    "NAME": "Event: Nest",
+    "FLAVOR": "CAW CAW CAAAAAWWW!",
+    "DESCRIPTIONS": [
+      "Boss gained a Ritual Dagger."
+    ]
+  },
+  "downfall:Colosseum": {
+    "NAME": "Event: Colosseum",
+    "FLAVOR": "WE NOW@ BEGIN THE COMBAT!!!!",
+    "DESCRIPTIONS": [
+      "Boss completed the Colosseum event, gaining two additional relics."
+    ]
+  },
+  "downfall:PleadingVagrant": {
+    "NAME": "Event: Pleading Vagrant",
+    "FLAVOR": "Got anything for me friend? Please... maybe some #yCoin?",
+    "DESCRIPTIONS": [
+      "Boss robbed the Vagrants, gaining a Shame curse and "
+    ]
+  },
+  "downfall:Mushroom": {
+    "NAME": "Event: Mushrooms",
+    "FLAVOR": "You enter a corridor full of hypnotizing colored mushrooms.",
+    "DESCRIPTIONS": [
+      "Boss healed to full and gained a Parasite curse.",
+      "Boss gained the Odd Mushroom relic, but starts with less than maximum health."
+    ]
+  },
+  "downfall:ShiningLight": {
+    "NAME": "Event: Shining Light",
+    "FLAVOR": "You find a shimmering mass of light encompassing the center of the room.",
+    "DESCRIPTIONS": [
+      "Boss upgraded ",
+      " and ",
+      ", but starts with less than maximum health."
+    ]
+  },
+  "downfall:ScrapOoze": {
+    "NAME": "Event: Scrap Ooze",
+    "FLAVOR": "Before you is a slime-like creature that ate too much scrap for its own good.",
+    "DESCRIPTIONS": [
+      "Boss gain an additional relic."
+    ]
+  },
+  "downfall:GoldenIdolEvent": {
+    "NAME": "Event: Golden Idol",
+    "FLAVOR": "Atop the altar sits an ornate female statue with arms outstretched. NL She calls out to you, demanding sacrifice.",
+    "DESCRIPTIONS": [
+      "Boss took the Golden Idol, gaining an Injury curse and use the extra gold to buy "
+    ]
+  },
+  "downfall:FaceTrader": {
+    "NAME": "Event: Face Trader",
+    "FLAVOR": "Face. Let me touch? Maybe trade?",
+    "DESCRIPTIONS": [
+      "Boss gained a random face relic."
+    ]
+  },
+  "downfall:OminousForge": {
+    "NAME": "Event: Ominous Forge",
+    "FLAVOR": "CLANG! CLAAANG! CLANG!",
+    "DESCRIPTIONS": [
+      "Boss gained Warped Tongs and a Pain curse."
+    ]
+  },
+  "downfall:Purifier": {
+    "NAME": "Event: Purifier",
+    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "DESCRIPTIONS": [
+      " was removed from the deck."
+    ]
+  },
+  "downfall:MatchAndKeep": {
+    "NAME": "Event: Match and Keep",
+    "FLAVOR": "Twelve cards! Match them to keep them! Five tries, no do-overs. Are you ready? Let's start!",
+    "DESCRIPTIONS": [
+      "Boss matched successfully and gained a powerful card."
+    ]
+  },
+  "downfall:Transmogrifier": {
+    "NAME": "Event: Transmogrifier",
+    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "DESCRIPTIONS": [
+      "Boss transformed a starter card into a new card."
+    ]
+  },
+  "downfall:TombRedMask": {
+    "NAME": "Event: Tomb of Lord Red Mask",
+    "FLAVOR": "A highly ornamented tomb can be seen on the other side of a floating path.",
+    "DESCRIPTIONS": [
+      "Boss gained the Red Mask relic."
+    ]
+  },
+  "downfall:UpgradeShrine": {
+    "NAME": "Event: Upgrade Shrine",
+    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "DESCRIPTIONS": [
+      "Boss #yUpgraded a card with Upgrade Shrine."
+    ]
+  },
+  "downfall:WeMeetAgain": {
+    "NAME": "Event: We Meet Again",
+    "FLAVOR": "It's me, #yRanwid! Have any goods for me today? The usual? A fella like me can't make it alone, you know?",
+    "DESCRIPTIONS": [
+      "Gold was traded to Ranwid in exchange for an extra relic."
+    ]
+  },
+  "downfall:GoldenShrine": {
+    "NAME": "Event: Golden Shrine",
+    "FLAVOR": "Before you lies an elaborate shrine to an ancient spirit.",
+    "DESCRIPTIONS": [
+      "Boss gained a Regret curse in exchange for gold, and used this gold to buy "
+    ]
+  },
+  "downfall:GremlinSack": {
+    "NAME": "Gremlin Sack",
+    "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
+    "DESCRIPTIONS": [
+      "Upon pickup, add the following cards to your deck: ",
+      "a Starter card",
+      ", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
+      ", a random Common, a random Uncommon, a random Rare, two random Curses."
+    ]
+  },
+  "downfall:GremlinWheel": {
+    "NAME": "Wheel of Change",
+    "FLAVOR": "No one gets two spins, he says.",
+    "DESCRIPTIONS": [
+      "At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic.",
+      "This relic has been used up."
+    ]
+  },
+  "downfall:CloakOfManyFaces": {
+    "NAME": "Coat of Many Faces",
+    "FLAVOR": "It was Steve, and Bill, and Ian, and Fred, and John...",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain Cultist Headpiece, Face Of Cleric, N'loth's Hungry Face, Gremlin Visage, and Ssserpent Head."
+    ]
+  },
+  "downfall:BrokenWingStatue": {
+    "NAME": "Broken Wing Statue",
+    "FLAVOR": "A broken hunk of a once-magnificent statue.",
+    "DESCRIPTIONS": [
+      "The cultists that worship the Awakened One will be interested in this."
+    ]
+  },
+  "downfall:ShatteredFragment": {
+    "NAME": "Sharpened Fragment",
+    "FLAVOR": "Once a broken statue - now a makeshift weapon.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a Crystal Shiv to your hand."
+    ]
+  },
+  "downfall:RedIOU": {
+    "NAME": "Bandit Contract",
+    "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
+    "DESCRIPTIONS": [
+      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you.",
+      "It's time for work, boys!",
+      "Get 'em Bear!",
+      "A deal's a deal. NL We're done here.",
+      "All hail the new NL ~Lord~ ~Red~ ~Mask!~",
+      "Good luck, boss!"
+    ]
+  },
+  "downfall:RedIOUUpgrade": {
+    "NAME": "Bandit Contract+",
+    "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
+    "DESCRIPTIONS": [
+      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you."
+    ]
+  },
+  "downfall:KnowingSkull": {
+    "NAME": "Knowing Skull",
+    "FLAVOR": "Put me down!",
+    "DESCRIPTIONS": [
+      "At the start of each combat, you may Wish for Souls, Success, or a Pick me Up."
+    ]
+  },
+  "downfall:HeartBlessingRed": {
+    "NAME": "Ruby Heart Blessing",
+    "FLAVOR": "The heart is strong. The heart is pleased.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #yStrength. NL At the start of combat with the Beyond's boss, gain a special card."
+    ]
+  },
+  "downfall:HeartBlessingBlue": {
+    "NAME": "Sapphire Heart Blessing",
+    "FLAVOR": "The heart is pleased.",
+    "DESCRIPTIONS": [
+      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card."
+    ]
+  },
+  "downfall:HeartBlessingGreen": {
+    "NAME": "Emerald Heart Blessing",
+    "FLAVOR": "The heart is everything.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b1 #yDexterity. NL At the start of combat with the Beyond's boss, gain a special card."
+    ]
+  },
+  "downfall:TeleportStone": {
+    "NAME": "Teleport Stone",
+    "FLAVOR": "Never leave home without it.",
+    "DESCRIPTIONS": [
+      "You may skip any number of rooms the next time you move.",
+      "",
+      "This relic has been used up."
+    ]
+  },
+  "downfall:HeartsMalice": {
+    "NAME": "The Heart's Malice",
+    "FLAVOR": "The malice of corruption bestowed by the Heart.",
+    "DESCRIPTIONS": [
+      "Enemies in your first #b3 combats will flee in terror.",
+      "This relic has been used up."
+    ]
+  }
+}

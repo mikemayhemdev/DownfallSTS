@@ -13,10 +13,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 public class EnBite extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Bite";
+    public static final String ID = "downfall_Charboss:Bite";
     private static final CardStrings cardStrings;
 
     static {
@@ -29,7 +29,7 @@ public class EnBite extends AbstractBossCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTags.HEALING);
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
         this.magicValue = 1;
     }
 

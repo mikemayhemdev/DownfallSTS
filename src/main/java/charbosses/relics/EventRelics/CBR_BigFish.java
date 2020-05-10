@@ -11,20 +11,20 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_BigFish extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("BigFish");
+    public static String ID = downfallMod.makeID("BigFish");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     public String relicName = "";
     private int descInt = 0;
 
     public CBR_BigFish() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/bigfish.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/bigfish.png")));
     }
 
 

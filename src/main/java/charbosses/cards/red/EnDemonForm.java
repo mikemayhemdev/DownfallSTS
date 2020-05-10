@@ -8,12 +8,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DemonFormPower;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnDemonForm extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Demon Form";
+    public static final String ID = "downfall_Charboss:Demon Form";
     private static final CardStrings cardStrings;
 
     static {
@@ -24,7 +24,7 @@ public class EnDemonForm extends AbstractBossCard {
         super(ID, EnDemonForm.cardStrings.NAME, "red/power/demon_form", 3, EnDemonForm.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
+        this.tags.add(downfallMod.CHARBOSS_SETUP);
     }
 
     @Override

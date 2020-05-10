@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnInflame extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Inflame";
+    public static final String ID = "downfall_Charboss:Inflame";
     private static final CardStrings cardStrings;
 
     static {
@@ -26,7 +26,7 @@ public class EnInflame extends AbstractBossCard {
         super("Inflame", EnInflame.cardStrings.NAME, "red/power/inflame", 1, EnInflame.cardStrings.DESCRIPTION, CardType.POWER, CardColor.RED, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
+        this.tags.add(downfallMod.CHARBOSS_SETUP);
     }
 
     @Override

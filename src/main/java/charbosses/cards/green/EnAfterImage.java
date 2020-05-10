@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnAfterImage extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:After Image";
+    public static final String ID = "downfall_Charboss:After Image";
     private static final CardStrings cardStrings;
 
     static {

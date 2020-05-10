@@ -2,25 +2,24 @@ package charbosses.relics.EventRelics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.curses.EnRegret;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_MatchAndKeep extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("MatchAndKeep");
+    public static String ID = downfallMod.makeID("MatchAndKeep");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
 
     public String cardName = "";
 
     public CBR_MatchAndKeep() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/matchandkeep.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/matchandkeep.png")));
     }
 
     @Override

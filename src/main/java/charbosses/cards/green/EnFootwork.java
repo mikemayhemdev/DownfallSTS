@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 
 public class EnFootwork extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Footwork";
+    public static final String ID = "downfall_Charboss:Footwork";
     private static final CardStrings cardStrings;
 
     static {

@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.orbs.Lightning;
 import java.util.ArrayList;
 
 public class EnZap extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Zap";
+    public static final String ID = "downfall_Charboss:Zap";
     private static final CardStrings cardStrings;
 
     static {

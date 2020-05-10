@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 
 public class EnDaggerSpray extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Dagger Spray";
+    public static final String ID = "downfall_Charboss:Dagger Spray";
     private static final CardStrings cardStrings;
 
     static {

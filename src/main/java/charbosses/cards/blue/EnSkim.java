@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnSkim extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Skim";
+    public static final String ID = "downfall_Charboss:Skim";
     private static final CardStrings cardStrings;
 
     static {

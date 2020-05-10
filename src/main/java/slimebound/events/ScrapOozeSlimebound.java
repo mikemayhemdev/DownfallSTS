@@ -10,9 +10,6 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.events.WeMeetAgain_Evil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import slimebound.relics.ScrapOozeRelic;
 
 import java.util.ArrayList;

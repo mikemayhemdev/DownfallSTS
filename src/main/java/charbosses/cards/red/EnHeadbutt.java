@@ -12,12 +12,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnHeadbutt extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Headbutt";
+    public static final String ID = "downfall_Charboss:Headbutt";
     private static final CardStrings cardStrings;
 
     static {
@@ -27,7 +27,7 @@ public class EnHeadbutt extends AbstractBossCard {
     public EnHeadbutt() {
         super(ID, EnHeadbutt.cardStrings.NAME, "red/attack/headbutt", 1, EnHeadbutt.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 9;
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 
     @Override

@@ -1,13 +1,8 @@
 package charbosses.relics;
 
-import charbosses.actions.common.EnemyGainEnergyAction;
 import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.FrozenEgg2;
-import com.megacrit.cardcrawl.relics.Lantern;
-import evilWithin.EvilWithinMod;
 
 import java.util.ArrayList;
 

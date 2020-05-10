@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.vfx.combat.DevotionEffect;
 import java.util.ArrayList;
 
 public class EnDevotion extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Devotion";
+    public static final String ID = "downfall_Charboss:Devotion";
     private static final CardStrings cardStrings;
 
     public EnDevotion() {

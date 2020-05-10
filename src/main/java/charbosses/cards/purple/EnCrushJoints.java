@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnCrushJoints extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:CrushJoints";
+    public static final String ID = "downfall_Charboss:CrushJoints";
     private static final CardStrings cardStrings;
 
     public EnCrushJoints() {

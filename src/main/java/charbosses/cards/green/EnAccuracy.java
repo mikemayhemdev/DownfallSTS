@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnAccuracy extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Accuracy";
+    public static final String ID = "downfall_Charboss:Accuracy";
     private static final CardStrings cardStrings;
 
     static {

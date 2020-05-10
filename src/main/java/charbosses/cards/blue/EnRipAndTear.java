@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
 import java.util.ArrayList;
 
 public class EnRipAndTear extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:RipAndTear";
+    public static final String ID = "downfall_Charboss:RipAndTear";
     private static final CardStrings cardStrings;
 
     public EnRipAndTear() {

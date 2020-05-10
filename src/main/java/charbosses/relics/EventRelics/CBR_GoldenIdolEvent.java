@@ -2,28 +2,24 @@ package charbosses.relics.EventRelics;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.curses.EnDecay;
 import charbosses.cards.curses.EnInjury;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_GoldenIdol;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_GoldenIdolEvent extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("GoldenIdolEvent");
+    public static String ID = downfallMod.makeID("GoldenIdolEvent");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     private String addedName;
 
     public CBR_GoldenIdolEvent() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/goldenidol.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/goldenidol.png")));
     }
 
     @Override

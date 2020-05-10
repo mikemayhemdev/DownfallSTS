@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnEntrench extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Entrench";
+    public static final String ID = "downfall_Charboss:Entrench";
     private static final CardStrings cardStrings;
 
     static {

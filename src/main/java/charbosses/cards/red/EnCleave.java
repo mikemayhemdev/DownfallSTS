@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 public class EnCleave extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Cleave";
+    public static final String ID = "downfall_Charboss:Cleave";
     private static final CardStrings cardStrings;
 
     static {
@@ -25,7 +25,7 @@ public class EnCleave extends AbstractBossCard {
     public EnCleave() {
         super(ID, EnCleave.cardStrings.NAME, "red/attack/cleave", 1, EnCleave.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 8;
-        this.tags.add(EvilWithinMod.CHARBOSS_ATTACK);
+        this.tags.add(downfallMod.CHARBOSS_ATTACK);
     }
 
     @Override

@@ -10,12 +10,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import evilWithin.EvilWithinMod;
 
 import java.util.ArrayList;
 
 public class EnBodySlam extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Body Slam";
+    public static final String ID = "downfall_Charboss:Body Slam";
     private static final CardStrings cardStrings;
 
     static {

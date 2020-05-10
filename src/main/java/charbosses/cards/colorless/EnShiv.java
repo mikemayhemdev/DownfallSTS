@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnShiv extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Shiv";
+    public static final String ID = "downfall_Charboss:Shiv";
     public static final int ATTACK_DMG = 4;
     public static final int UPG_ATTACK_DMG = 2;
     private static final CardStrings cardStrings;

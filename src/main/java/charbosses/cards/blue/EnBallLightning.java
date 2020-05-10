@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnBallLightning extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Ball Lightning";
+    public static final String ID = "downfall_Charboss:Ball Lightning";
     private static final CardStrings cardStrings;
 
     static {

@@ -8,20 +8,20 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_WeMeetAgain extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("WeMeetAgain");
+    public static String ID = downfallMod.makeID("WeMeetAgain");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     private String removedName;
     private String addedName;
 
     public CBR_WeMeetAgain() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/wemeetagain.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/wemeetagain.png")));
     }
 
     @Override

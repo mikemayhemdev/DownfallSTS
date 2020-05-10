@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public abstract class AbstractBossDeckArchetype {
-    public static final Logger logger = LogManager.getLogger(EvilWithinMod.class.getName());
+    public static final Logger logger = LogManager.getLogger(downfallMod.class.getName());
 
     /// WEIGHT CONSTANTS ///
 

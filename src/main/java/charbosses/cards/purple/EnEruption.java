@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnEruption extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Eruption";
+    public static final String ID = "downfall_Charboss:Eruption";
     private static final CardStrings cardStrings;
 
     public EnEruption() {

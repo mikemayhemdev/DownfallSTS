@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import java.util.ArrayList;
 
 public class EnApotheosis extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Apotheosis";
+    public static final String ID = "downfall_Charboss:Apotheosis";
     private static final CardStrings cardStrings;
 
     public EnApotheosis() {

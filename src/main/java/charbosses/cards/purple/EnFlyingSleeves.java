@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 import java.util.ArrayList;
 
 public class EnFlyingSleeves extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:FlyingSleeves";
+    public static final String ID = "downfall_Charboss:FlyingSleeves";
     private static final CardStrings cardStrings;
 
     public EnFlyingSleeves() {

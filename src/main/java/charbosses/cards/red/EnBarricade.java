@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.BarricadePower;
 import java.util.ArrayList;
 
 public class EnBarricade extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Barricade";
+    public static final String ID = "downfall_Charboss:Barricade";
     private static final CardStrings cardStrings;
 
     static {

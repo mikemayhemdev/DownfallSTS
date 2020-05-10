@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.NoBlockPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 public class EnPanicButton extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:PanicButton";
+    public static final String ID = "downfall_Charboss:PanicButton";
     private static final CardStrings cardStrings;
 
     public EnPanicButton() {

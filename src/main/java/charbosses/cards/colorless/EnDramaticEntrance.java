@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
 public class EnDramaticEntrance extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Dramatic Entrance";
+    public static final String ID = "downfall_Charboss:Dramatic Entrance";
     private static final CardStrings cardStrings;
 
     public EnDramaticEntrance() {

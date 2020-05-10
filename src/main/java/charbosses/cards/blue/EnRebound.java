@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.powers.ReboundPower;
 import java.util.ArrayList;
 
 public class EnRebound extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Rebound";
+    public static final String ID = "downfall_Charboss:Rebound";
     private static final CardStrings cardStrings;
 
     public EnRebound() {

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnTrueGrit extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:True Grit";
+    public static final String ID = "downfall_Charboss:True Grit";
     private static final CardStrings cardStrings;
 
     static {

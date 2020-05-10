@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnWindmillStrike extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:WindmillStrike";
+    public static final String ID = "downfall_Charboss:WindmillStrike";
     private static final CardStrings cardStrings;
 
     public EnWindmillStrike() {

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.WraithFormPower;
 
 public class EnWraithForm extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Wraith Form";
+    public static final String ID = "downfall_Charboss:Wraith Form";
     private static final CardStrings cardStrings;
 
     static {

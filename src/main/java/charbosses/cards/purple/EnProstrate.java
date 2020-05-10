@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.powers.watcher.MantraPower;
 import java.util.ArrayList;
 
 public class EnProstrate extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Prostrate";
+    public static final String ID = "downfall_Charboss:Prostrate";
     private static final CardStrings cardStrings;
 
     public EnProstrate() {

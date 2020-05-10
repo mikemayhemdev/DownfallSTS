@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.watcher.OmegaPower;
 import java.util.ArrayList;
 
 public class EnDevaForm extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:DevaForm";
+    public static final String ID = "downfall_Charboss:DevaForm";
     private static final CardStrings cardStrings;
 
     public EnDevaForm() {

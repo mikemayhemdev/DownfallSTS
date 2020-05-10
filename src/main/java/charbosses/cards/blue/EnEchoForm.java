@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.EchoPower;
 import java.util.ArrayList;
 
 public class EnEchoForm extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:EchoForm";
+    public static final String ID = "downfall_Charboss:EchoForm";
     private static final CardStrings cardStrings;
 
     public EnEchoForm() {

@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.watcher.BattleHymnPower;
 import java.util.ArrayList;
 
 public class EnBattleHymn extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:BattleHymn";
+    public static final String ID = "downfall_Charboss:BattleHymn";
     private static final CardStrings cardStrings;
 
     public EnBattleHymn() {

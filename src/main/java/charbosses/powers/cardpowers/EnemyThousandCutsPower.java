@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.ThousandCutsPower;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 public class EnemyThousandCutsPower extends AbstractPower {
-    public static final String POWER_ID = "EvilWithin:Enemy Thousand Cuts";
+    public static final String POWER_ID = "downfall:Enemy Thousand Cuts";
     private static final PowerStrings powerStrings;
 
     static {

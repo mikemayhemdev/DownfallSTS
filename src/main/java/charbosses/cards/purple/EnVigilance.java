@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnVigilance extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Vigilance";
+    public static final String ID = "downfall_Charboss:Vigilance";
     private static final CardStrings cardStrings;
 
     public EnVigilance() {

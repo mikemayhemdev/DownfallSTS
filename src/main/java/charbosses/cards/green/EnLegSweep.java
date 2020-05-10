@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class EnLegSweep extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Leg Sweep";
+    public static final String ID = "downfall_Charboss:Leg Sweep";
     private static final CardStrings cardStrings;
 
     static {

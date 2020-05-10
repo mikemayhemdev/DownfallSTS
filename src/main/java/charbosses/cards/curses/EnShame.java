@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
 
 public class EnShame extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Shame";
+    public static final String ID = "downfall_Charboss:Shame";
     private static final CardStrings cardStrings;
 
     static {

@@ -11,12 +11,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 public class EnBash extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Bash";
+    public static final String ID = "downfall_Charboss:Bash";
     private static final CardStrings cardStrings;
 
     static {
@@ -28,7 +28,7 @@ public class EnBash extends AbstractBossCard {
         this.baseDamage = 8;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.tags.add(EvilWithinMod.CHARBOSS_SETUP);
+        this.tags.add(downfallMod.CHARBOSS_SETUP);
     }
 
     @Override

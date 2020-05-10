@@ -8,12 +8,12 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
-import evilWithin.patches.ui.campfire.AddBustKeyButtonPatches;
+import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossWatcher extends AbstractCharBoss {
 
     public CharBossWatcher() {
-        super("Watcher", "EvilWithin:Watcher", 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
+        super("Watcher", "downfall:Watcher", 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
         this.energyOrb = new EnergyOrbGreen();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/watcher/idle/skeleton.atlas", "images/characters/watcher/idle/skeleton.json", 1.0f);

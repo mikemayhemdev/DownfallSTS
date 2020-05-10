@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnBiasedCognition extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:BiasedCognition";
+    public static final String ID = "downfall_Charboss:BiasedCognition";
     private static final CardStrings cardStrings;
 
     public EnBiasedCognition() {

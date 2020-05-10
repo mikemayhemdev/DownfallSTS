@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnCapacitor extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Capacitor";
+    public static final String ID = "downfall_Charboss:Capacitor";
     private static final CardStrings cardStrings;
 
     public EnCapacitor() {

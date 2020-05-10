@@ -1,0 +1,32 @@
+{
+  "downfall:EvilMenuPanel": {
+    "TEXT": [
+      "Downfall",
+      "Defend the Heart from adventuring intruders who intend to Slay the Spire.",
+      "Choose Your Villain"
+    ]
+  },
+  "downfall:SoulToGoldChanges": {
+    "TEXT": [
+      "Souls",
+      "TODO: Soul flavor text/explanation."
+    ]
+  },
+  "downfall:BustKeyButton": {
+    "TEXT": [
+      "Break Ruby",
+      "Break Sapphire",
+      "Break Emerald",
+      "Destroy the key to ",
+      "gain 1 Strength at the start of combat.",
+      "raise your Max HP by 10.",
+      "gain 1 Dexterity at the start of combat."
+    ]
+  },
+  "downfall:WheelSpinButton": {
+    "TEXT": [
+      "Spin Wheel",
+      "Spin the Wheel."
+    ]
+  }
+}

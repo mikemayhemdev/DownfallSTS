@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnSmite extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Smite";
+    public static final String ID = "downfall_Charboss:Smite";
     private static final CardStrings cardStrings;
 
     public EnSmite() {

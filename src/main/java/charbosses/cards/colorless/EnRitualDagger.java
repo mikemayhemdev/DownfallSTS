@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class EnRitualDagger extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:RitualDagger";
+    public static final String ID = "downfall_Charboss:RitualDagger";
     private static final CardStrings cardStrings;
 
     static {

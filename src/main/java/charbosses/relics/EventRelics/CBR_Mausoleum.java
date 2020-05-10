@@ -1,31 +1,25 @@
 package charbosses.relics.EventRelics;
 
-import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.curses.EnRegret;
-import charbosses.cards.curses.EnShame;
 import charbosses.cards.curses.EnWrithe;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import evilWithin.EvilWithinMod;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
 
 public class CBR_Mausoleum extends AbstractCharbossRelic {
-    public static String ID = EvilWithinMod.makeID("Mausoleum");
+    public static String ID = downfallMod.makeID("Mausoleum");
     private static RelicTier tier = RelicTier.SPECIAL;
     private static LandingSound sound = LandingSound.MAGICAL;
     public String addedName = "";
 
     public CBR_Mausoleum() {
-        super(ID, tier, sound, new Texture(EvilWithinMod.assetPath("images/relics/mausoleum.png")));
+        super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/mausoleum.png")));
     }
 
     @Override

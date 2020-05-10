@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import java.util.ArrayList;
 
 public class EnDefragment extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Defragment";
+    public static final String ID = "downfall_Charboss:Defragment";
     private static final CardStrings cardStrings;
 
     public EnDefragment() {

@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class EnNeutralize extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Neutralize";
+    public static final String ID = "downfall_Charboss:Neutralize";
     private static final CardStrings cardStrings;
 
     static {

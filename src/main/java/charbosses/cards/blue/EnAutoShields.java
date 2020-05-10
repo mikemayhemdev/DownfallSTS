@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnAutoShields extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:AutoShields";
+    public static final String ID = "downfall_Charboss:AutoShields";
     private static final CardStrings cardStrings;
 
     public EnAutoShields() {

@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import java.util.ArrayList;
 
 public class EnPanacea extends AbstractBossCard {
-    public static final String ID = "EvilWithin_Charboss:Panacea";
+    public static final String ID = "downfall_Charboss:Panacea";
     private static final CardStrings cardStrings;
 
 
