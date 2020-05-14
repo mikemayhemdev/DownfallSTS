@@ -205,8 +205,8 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. Consume: slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Consume: slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: slimeboundmod:Command twice."
   },
   "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",
