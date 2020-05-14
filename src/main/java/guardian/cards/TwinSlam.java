@@ -59,12 +59,10 @@ public class TwinSlam extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        this.useGems(p, m);
         for (int i = 0; i < this.multihit; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-
         }
-
+        super.useGems(p, m);
     }
 
     public AbstractCard makeCopy() {
