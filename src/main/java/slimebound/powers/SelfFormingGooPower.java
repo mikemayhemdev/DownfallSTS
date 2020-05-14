@@ -53,18 +53,17 @@ public class SelfFormingGooPower extends TwoAmountPower {
 
 
     public void updateDescription() {
-
         if (this.amount == 1) {
             this.description = (
                     DESCRIPTIONS[0] +
-                            this.amount +
+                            this.amount * 2 +
                             DESCRIPTIONS[1] +
                             (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[2]);
         } else {
             this.description = (
                     DESCRIPTIONS[0] +
-                            this.amount +
+                            this.amount * 2 +
                             DESCRIPTIONS[1] +
                             (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[3] +
