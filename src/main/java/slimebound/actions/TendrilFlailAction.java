@@ -30,8 +30,7 @@ public class TendrilFlailAction extends com.megacrit.cardcrawl.actions.AbstractG
 
     public void update() {
         if (this.target == null) {
-            this.isDone = true;
-            return;
+            target = AbstractDungeon.getRandomMonster();
         }
 
         if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

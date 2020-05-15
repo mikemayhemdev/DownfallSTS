@@ -103,7 +103,7 @@
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Gain Block equal to enemy's Goop."
+    "DESCRIPTION": "Gain Block equal to an enemy's slimeboundmod:Goop. NL Deal !D! damage."
   },
   "Slimebound:Dissolve": {
     "NAME": "Dissolve",
@@ -205,12 +205,21 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. Consume - slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Consume - slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: slimeboundmod:Command twice."
   },
   "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",
     "DESCRIPTION": "If the enemy is Frail, remove all of their Block, then remove 1 Frail. NL Deal !D! damage."
+  },
+  "Slimebound:SoulSicken": {
+    "NAME": "Soul Sicken",
+    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison."
+  },
+  "Slimebound:AcidGelatin": {
+    "NAME": "Acidic Goop",
+    "DESCRIPTION": "Apply !M! Poison whenever you slimeboundmod:Consume."
   },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
@@ -218,8 +227,8 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a random slimeboundmod:Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a random slimeboundmod:Lick to your hand."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Add a random slimeboundmod:Lick to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Add a random slimeboundmod:Lick to your hand."
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
@@ -263,7 +272,7 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume: gain !B! Block."
   },
   "Slimebound:SlimesplosionOLD": {
     "NAME": "Slimesplosion",
@@ -301,7 +310,7 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL The next Attack used on this enemy does not remove slimeboundmod:Goop."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL The next time an Attack is used on this enemy, slimeboundmod:Goop is not removed."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
@@ -309,7 +318,7 @@
   },
   "Slimebound:VenomTackle": {
     "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - Apply !M! Poison."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume: Apply !M! Poison."
   },
   "Slimebound:UsefulSlime": {
     "NAME": "Useful Slime!",
@@ -335,12 +344,12 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain [E] and draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain [E] and draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Gain [E] and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Gain [E] and draw !M! cards."
   },
   "Slimebound:LeechLife": {
     "NAME": "Leech Life",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Heal HP equal to the enemy's slimeboundmod:Goop. NL Exhaust."
+    "DESCRIPTION": "Heal HP equal to the enemy's slimeboundmod:Goop. NL Deal !D! damage. NL Exhaust."
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",
@@ -434,11 +443,11 @@
   },
   "Slimebound:Darklings": {
     "NAME": "Darkling Trio",
-    "DESCRIPTION": "Split into a slimeboundmod:darkling_slime three times. NL Exhaust."
+    "DESCRIPTION": "Split into a slimeboundmod:Darkling_Slime three times. NL Exhaust."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Does not remove slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has slimeboundmod:Goop, it is not removed by this attack."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",

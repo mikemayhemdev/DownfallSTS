@@ -532,7 +532,11 @@
   "downfall:Joust": {
     "NAME": "The Joust",
     "DESCRIPTIONS": [
-      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide..."
+      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide...",
+      "This knight was clearly stronger than the other one, and you tried your best but were ultimately thrashed. NL \"I'd like to see you best a beast like that!\" he says to the other knight as they leave, bickering."
+      "You ruthlessly avoid the knight's attacks and #rkill him, sucking his #gsouls out gleefully. The other knight screams and flees. What a coward...",
+      "The cowardly knight gives you a few pesky scratches from afar with his longsword, then runs away screaming. The other knight runs after him, angry. You return to your work, annoyed.",
+      "You ~loom~ over the knight, and rather than even trying to run, he simply cowers. You #rslay him easily and take his #gsouls, but when you turn for the other knight, he's already ran away."
     ],
     "OPTIONS": [
       "[Left] #r50%: #rLose #r",

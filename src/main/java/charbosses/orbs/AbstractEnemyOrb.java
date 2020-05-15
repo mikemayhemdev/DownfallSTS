@@ -15,12 +15,12 @@ import java.util.ArrayList;
 public abstract class AbstractEnemyOrb extends AbstractOrb {
 
     public static AbstractOrb getRandomOrb(boolean useCardRng) {
-        ArrayList<AbstractOrb> orbs = new ArrayList();
+        ArrayList<AbstractOrb> orbs = new ArrayList<>();
         orbs.add(new EnemyDark());
         orbs.add(new EnemyFrost());
         orbs.add(new EnemyLightning());
         orbs.add(new EnemyPlasma());
-        return useCardRng ? (AbstractOrb)orbs.get(AbstractDungeon.cardRandomRng.random(orbs.size() - 1)) : (AbstractOrb)orbs.get(MathUtils.random(orbs.size() - 1));
+        return useCardRng ? orbs.get(AbstractDungeon.cardRandomRng.random(orbs.size() - 1)) : orbs.get(MathUtils.random(orbs.size() - 1));
     }
 
     public void setSlot(int slotNum, int maxOrbs) {
@@ -65,7 +65,5 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
             this.passiveAmount = this.basePassiveAmount;
             this.evokeAmount = this.baseEvokeAmount;
         }
-
     }
-
 }

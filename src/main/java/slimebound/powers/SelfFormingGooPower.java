@@ -53,18 +53,17 @@ public class SelfFormingGooPower extends TwoAmountPower {
 
 
     public void updateDescription() {
-
         if (this.amount == 1) {
             this.description = (
                     DESCRIPTIONS[0] +
-                            this.amount +
+                            this.amount * 2 +
                             DESCRIPTIONS[1] +
                             (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[2]);
         } else {
             this.description = (
                     DESCRIPTIONS[0] +
-                            this.amount +
+                            this.amount * 2 +
                             DESCRIPTIONS[1] +
                             (2 + SlimeboundMod.getAcidTongueBonus(this.owner)) +
                             DESCRIPTIONS[3] +
@@ -91,7 +90,7 @@ public class SelfFormingGooPower extends TwoAmountPower {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.owner.hb.cX, this.owner.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, (this.amount2 * 2) * this.amount));
             AbstractDungeon.actionManager.addToTop(new TendrilFlailAction(this.owner,
-                    AbstractDungeon.getMonsters().getRandomMonster(true), this.amount2 * this.amount, 2 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)));
+                    null, this.amount2 * this.amount, 2 + SlimeboundMod.getAcidTongueBonus(AbstractDungeon.player)));
 
             this.amount2 = 0;
 
