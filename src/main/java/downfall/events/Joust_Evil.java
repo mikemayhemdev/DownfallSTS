@@ -71,6 +71,7 @@ public class Joust_Evil extends AbstractImageEvent {
                             AbstractDungeon.player.gainGold(200);
                             imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
                         }
+                        break;
                     case 1:
                         this.joustTimer = 0.01F;// 97
                         int x = AbstractDungeon.cardRandomRng.random(100);
@@ -82,6 +83,7 @@ public class Joust_Evil extends AbstractImageEvent {
                             AbstractDungeon.player.gainGold(100);
                             imageEventText.updateBodyText(DESCRIPTIONSALT[4]);
                         }
+                        break;
                     default:
                         this.imageEventText.updateDialogOption(0, OPTIONS[7]);// 75
                         this.imageEventText.clearRemainingOptions();// 76
