@@ -54,13 +54,16 @@ public class LeechingTouch extends AbstractSlimeboundCard {
 
         if (m.hasPower(SlimedPower.POWER_ID)) {
             blockAmount = m.getPower(SlimedPower.POWER_ID).amount;
+          }
+
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
+        if (blockAmount > 0){
             AbstractDungeon.actionManager.addToTop(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, 5, new Color(0.6F, 0.6F, 1F, 1F)), 0.25F));
 
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, blockAmount));
+
         }
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
-
     }
 
     public AbstractCard makeCopy() {
