@@ -283,6 +283,47 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     @Override
     public void receiveSetUnlocks() {
         if (!unlockEverything) {
+            unlocks0 = new CustomUnlockBundle(
+                    RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
+            );
+
+            UnlockTracker.addCard(RollThrough.ID);
+            UnlockTracker.addCard(Chomp.ID);
+            UnlockTracker.addCard(CheckThePlaybook.ID);
+
+            unlocks1 = new CustomUnlockBundle(
+                    SplitSpecialist.ID, TagTeam.ID, Darklings.ID
+            );
+
+            UnlockTracker.addCard(SplitSpecialist.ID);
+            UnlockTracker.addCard(TagTeam.ID);
+            UnlockTracker.addCard(Darklings.ID);
+
+            unlocks2 = new CustomUnlockBundle(
+                    HungryTackle.ID, Recollect.ID, Recycling.ID
+            );
+
+            UnlockTracker.addCard(HungryTackle.ID);
+            UnlockTracker.addCard(Recollect.ID);
+            UnlockTracker.addCard(Recycling.ID);
+
+
+            unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                    SlimedTailRelic.ID, PotencyRelic.ID, SlimedSkullRelic.ID
+            );
+
+            UnlockTracker.addRelic(SlimedTailRelic.ID);
+            UnlockTracker.addRelic(PotencyRelic.ID);
+            UnlockTracker.addRelic(SlimedSkullRelic.ID);
+
+            unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                    PreparedRelic.ID, StudyCardRelic.ID, StickyStick.ID
+            );
+
+            UnlockTracker.addRelic(PreparedRelic.ID);
+            UnlockTracker.addRelic(StudyCardRelic.ID);
+            UnlockTracker.addRelic(StickyStick.ID);
+
 
             BaseMod.addUnlockBundle(unlocks0, SlimeboundEnum.SLIMEBOUND, 0);
 
@@ -294,28 +335,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
             BaseMod.addUnlockBundle(unlocks4, SlimeboundEnum.SLIMEBOUND, 4);
 
-
-            UnlockTracker.addCard(RollThrough.ID);
-            UnlockTracker.addCard(Chomp.ID);
-            UnlockTracker.addCard(CheckThePlaybook.ID);
-
-
-            UnlockTracker.addCard(Dissolve.ID);
-            UnlockTracker.addCard(Repurpose.ID);
-            UnlockTracker.addCard(MassRepurpose.ID);
-
-
-            UnlockTracker.addCard(HungryTackle.ID);
-            UnlockTracker.addCard(Recollect.ID);
-            UnlockTracker.addCard(Recycling.ID);
-
-            UnlockTracker.addRelic(AggressiveSlimeRelic.ID);
-            UnlockTracker.addRelic(PotencyRelic.ID);
-            UnlockTracker.addRelic(MaxSlimesRelic.ID);
-
-            UnlockTracker.addRelic(PreparedRelic.ID);
-            UnlockTracker.addRelic(SlimedTailRelic.ID);
-            UnlockTracker.addRelic(SlimedSkullRelic.ID);
         }
 
     }
@@ -350,19 +369,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addRelicToCustomPool(new TarBlob(), AbstractCardEnum.SLIMEBOUND);
 
         shareableRelics.add(new StickyStick());
-
-
         shareableRelics.add(new PreparedRelic());
 
-        if (unlocks2 == null) {
-            unlocks2 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                    AggressiveSlimeRelic.ID, PotencyRelic.ID, MaxSlimesRelic.ID
-            );
-
-            unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                    PreparedRelic.ID, SlimedTailRelic.ID, SlimedSkullRelic.ID
-            );
-        }
 
         addSharedRelics();
 
@@ -486,18 +494,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new ForwardTackle());
         BaseMod.addCard(new TagTeam());
         BaseMod.addCard(new RallyTheTroops());
-
-        unlocks0 = new CustomUnlockBundle(
-                RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
-        );
-
-        unlocks1 = new CustomUnlockBundle(
-                Dissolve.ID, Repurpose.ID, MassRepurpose.ID
-        );
-
-        unlocks3 = new CustomUnlockBundle(
-                HungryTackle.ID, Recollect.ID, Recycling.ID
-        );
 
 
     }
@@ -626,7 +622,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
 
     }
-
 
 
     public void receivePostBattle(AbstractRoom r) {
@@ -762,13 +757,13 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 //Act//
                 .dungeonIDs(TheCity.ID, TheBeyond.ID, "TheJungle")
                 //Additional Condition//
-                .bonusCondition(()->(AbstractDungeon.player instanceof SlimeboundCharacter) && !((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss || AbstractDungeon.player.hasRelic(StudyCardRelic.ID))
+                .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter) && !((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss || AbstractDungeon.player.hasRelic(StudyCardRelic.ID))
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
                 //Act//
                 .dungeonIDs(TheCity.ID, "TheJungle")
                 //Additional Condition//
-                .bonusCondition(()->(AbstractDungeon.player instanceof SlimeboundCharacter) || SlimeboundMod.contentSharing_events)
+                .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter) || SlimeboundMod.contentSharing_events)
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class) //Event ID//
                 //Event Character//
@@ -776,7 +771,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 //Existing Event to Override//
                 .overrideEvent(GoopPuddle.ID)
                 //Additional Condition//
-                .bonusCondition(()->!AbstractDungeon.player.hasRelic(GreedOozeRelic.ID))
+                .bonusCondition(() -> !AbstractDungeon.player.hasRelic(GreedOozeRelic.ID))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -787,7 +782,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 //Existing Event to Override//
                 .overrideEvent(ScrapOoze.ID)
                 //Additional Condition//
-                .bonusCondition(()->!AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID))
+                .bonusCondition(() -> !AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());

@@ -1,6 +1,7 @@
 package sneckomod;
 
 import basemod.BaseMod;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -17,19 +18,26 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.cards.DiceBoulder;
+import sneckomod.cards.*;
 import sneckomod.cards.unknowns.UnknownClass;
+import sneckomod.cards.unknowns.UnknownColorless;
+import sneckomod.cards.unknowns.UnknownDexterity;
+import sneckomod.cards.unknowns.UnknownStrength;
 import sneckomod.potions.CheatPotion;
 import sneckomod.potions.DiceRollPotion;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.relics.*;
 import sneckomod.util.SneckoSilly;
+import theHexaghost.TheHexaghost;
+import theHexaghost.cards.*;
+import theHexaghost.relics.*;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -49,6 +57,7 @@ public class SneckoMod implements
         EditRelicsSubscriber,
         //EditStringsSubscriber,
         //EditKeywordsSubscriber,
+        SetUnlocksSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
@@ -72,6 +81,11 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags SNEKPROOF;
     private static String modID;
 
+    private CustomUnlockBundle unlocks0;
+    private CustomUnlockBundle unlocks1;
+    private CustomUnlockBundle unlocks2;
+    private CustomUnlockBundle unlocks3;
+    private CustomUnlockBundle unlocks4;
 
     public SneckoMod() {
         BaseMod.subscribe(this);
@@ -222,7 +236,55 @@ public class SneckoMod implements
         }
     }
 
+    @Override
+    public void receiveSetUnlocks() {
 
+        unlocks0 = new CustomUnlockBundle(
+                Cheat.ID, PureSnecko.ID, Rotation.ID
+        );
+        UnlockTracker.addCard(Cheat.ID);
+        UnlockTracker.addCard(PureSnecko.ID);
+        UnlockTracker.addCard(Rotation.ID);
+
+        unlocks1 = new CustomUnlockBundle(
+                UnknownColorless.ID, UnknownStrength.ID, UnknownDexterity.ID
+        );
+        UnlockTracker.addCard(UnknownColorless.ID);
+        UnlockTracker.addCard(UnknownStrength.ID);
+        UnlockTracker.addCard(UnknownDexterity.ID);
+
+        unlocks2 = new CustomUnlockBundle(
+                MixItUp.ID, Transmogrify.ID, GlitteringGambit.ID
+        );
+        UnlockTracker.addCard(MixItUp.ID);
+        UnlockTracker.addCard(Transmogrify.ID);
+        UnlockTracker.addCard(GlitteringGambit.ID);
+
+        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                RareBoosterPack.ID, SleevedAce.ID, CleanMud.ID
+        );
+        UnlockTracker.addRelic(RareBoosterPack.ID);
+        UnlockTracker.addRelic(SleevedAce.ID);
+        UnlockTracker.addRelic(CleanMud.ID);
+
+        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                SuperSneckoEye.ID, SneckoTalon.ID, BlankCard.ID
+        );
+        UnlockTracker.addRelic(SuperSneckoEye.ID);
+        UnlockTracker.addRelic(SneckoTalon.ID);
+        UnlockTracker.addRelic(BlankCard.ID);
+
+        BaseMod.addUnlockBundle(unlocks0, TheSnecko.Enums.THE_SNECKO, 0);
+
+        BaseMod.addUnlockBundle(unlocks1, TheSnecko.Enums.THE_SNECKO, 1);
+
+        BaseMod.addUnlockBundle(unlocks2, TheSnecko.Enums.THE_SNECKO, 2);
+
+        BaseMod.addUnlockBundle(unlocks3, TheSnecko.Enums.THE_SNECKO, 3);
+
+        BaseMod.addUnlockBundle(unlocks4, TheSnecko.Enums.THE_SNECKO, 4);
+
+    }
 
     public void addPotions() {
 
