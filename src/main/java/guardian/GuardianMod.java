@@ -679,6 +679,8 @@ public static void saveData() {
         BaseMod.addCard(new StrikeTwo());
         BaseMod.addCard(new DefendTwo());
 
+        BaseMod.addCard(new Aged());
+
         //CONSTRUCT cross-mod
         if (Loader.isModLoaded("constructmod")) {
             BaseMod.addCard(new HammerDown());
