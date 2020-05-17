@@ -44,16 +44,6 @@
       "[Locked] Requires a card with sockets."
     ]
   },
-  "Guardian:BackToBasics": {
-    "NAME": "",
-    "DESCRIPTIONS": [
-      "Two is better than one."
-    ],
-    "OPTIONS": [
-      "[Synchronicity] #gMerge #g2 #gStrikes #gand #g2 #gDefends.",
-      "[Locked] Requires 2 Strikes and 2 Defends."
-    ]
-  },
   "Guardian:GuardianTalk": {
     "NAME": "",
     "DESCRIPTIONS": [

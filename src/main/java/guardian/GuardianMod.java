@@ -7,18 +7,14 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
@@ -59,8 +55,8 @@ import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sneckomod.events.BackToBasicsSnecko;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -909,14 +905,6 @@ public static void saveData() {
                 //Event Character//
                 .playerClass(GuardianEnum.GUARDIAN)
                 .create());
-        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGuardian.ID, BackToBasicsGuardian.class) //Event ID//
-                //Event Character//
-                .playerClass(GuardianEnum.GUARDIAN)
-                //Existing Event to Override//
-                .overrideEvent(BackToBasics.ID)
-                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
         BaseMod.addEvent(new AddEventParams.Builder(AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class) //Event ID//
                 //Event Character//
                 .playerClass(GuardianEnum.GUARDIAN)
@@ -952,7 +940,7 @@ public static void saveData() {
 
         //BaseMod.addEvent(GemMine.ID, GemMine.class, Exordium.ID);
         //BaseMod.addEvent(StasisEgg.ID, StasisEgg.class, TheBeyond.ID);
-        //BaseMod.addEvent(BackToBasicsGuardian.ID, BackToBasicsGuardian.class, TheCity.ID);
+        //BaseMod.addEvent(BackToBasicsSnecko.ID, BackToBasicsSnecko.class, TheCity.ID);
         //BaseMod.addEvent(CrystalForge.ID, CrystalForge.class);
         //BaseMod.addEvent(AccursedBlacksmithGuardian.ID, AccursedBlacksmithGuardian.class);
         //BaseMod.addEvent(PurificationShrineGuardian.ID, PurificationShrineGuardian.class);

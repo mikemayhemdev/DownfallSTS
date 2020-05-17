@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import guardian.events.AccursedBlacksmithGuardian;
-import guardian.events.BackToBasicsGuardian;
+import sneckomod.events.BackToBasicsSnecko;
 import guardian.events.GemMine;
 import guardian.events.StasisEgg;
 import guardian.relics.BottledStasis;

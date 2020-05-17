@@ -3,6 +3,7 @@ package sneckomod;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -15,6 +16,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -36,6 +38,7 @@ import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.cards.unknowns.UnknownColorless;
 import sneckomod.cards.unknowns.UnknownDexterity;
 import sneckomod.cards.unknowns.UnknownStrength;
+import sneckomod.events.BackToBasicsSnecko;
 import sneckomod.events.D8;
 import sneckomod.patches.BottledD8Patch;
 import sneckomod.potions.CheatPotion;
@@ -316,6 +319,15 @@ public class SneckoMod implements
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSnecko.ID, BackToBasicsSnecko.class) //Event ID//
+                //Event Character//
+                .playerClass(TheSnecko.Enums.THE_SNECKO)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
     }
 }
