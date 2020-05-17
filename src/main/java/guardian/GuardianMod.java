@@ -672,8 +672,6 @@ public static void saveData() {
         BaseMod.addCard(new ShieldCharger());
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
-        BaseMod.addCard(new StrikeTwo());
-        BaseMod.addCard(new DefendTwo());
 
         BaseMod.addCard(new Aged());
 
