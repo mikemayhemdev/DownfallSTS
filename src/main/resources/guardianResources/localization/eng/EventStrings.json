@@ -22,14 +22,14 @@
     "NAME": "Quantum Chamber",
     "DESCRIPTIONS": [
       "You stumble open a box, its cover etched in strange runic symbols.  Peering inside, you notice a strange egg-shaped device, humming softly.  You don’t know what it is, or what it is used for, but the energy coming from it makes you think it must be powerful.",
-      "You decide that something this powerful is meant to be used.  You pocket the egg and be on your way, but as the runes glow, you can’t help but feel a little pain in your energy core.  Hopefully, it was worth it.",
-      "You decide that something this powerful should not be left for any adventurer to misuse, and decide to destroy it.  As you look at the smashed pieces, your bronze body is filled with a renewed vigor, but as the runes glow, you can’t help but feel regretful that such power will never see it’s potential.",
+      "You decide that something this powerful is meant to be used.  You pocket the egg and be on your way, but as the runes glow, you slowly feel ~slower~ ~and~ ~slower~ ~.~ ~.~ ~.~",
+      "You decide that something this powerful should not be left for any adventurer to misuse, and decide to destroy it. #rPainful glass shards scratch your chassis. As you look at the smashed pieces, your bronze body is filled with a renewed vigor.",
       "You decide that something this powerful is probably kept in this box for a reason.  Though your directive says that you should do something with such a powerful object, you reason that whoever left this here did so for a reason.  Closing the lid, you look back once more as you continue your ascent."
     ],
     "OPTIONS": [
-      "[Use] #gGain #gQuantum #gChamber. #rBecome #rCursed #r- #rPain",
+      "[Use] #gGain #gQuantum #gChamber. #rBecome #rCursed #r- #rAged",
       "[Smash] #gGain #g",
-      " #gMax #gHP. #rBecome #rCursed #r- #rRegret",
+      " #gMax #gHP. #rBecome #rCursed #r- #rPain",
       "[Leave]"
     ]
   },

@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
+import guardian.cards.Aged;
 import guardian.ui.RelicPreviewButton;
 
 public class StasisEgg extends AbstractImageEvent {
@@ -52,8 +53,8 @@ public class StasisEgg extends AbstractImageEvent {
         } else {
             this.maxHP = (int) ((float) AbstractDungeon.player.maxHealth * 0.15F);
         }
-        imageEventText.optionList.add(new RelicPreviewButton(0, OPTIONS[0], new guardian.relics.StasisEgg(), false, new Pain()));
-        this.imageEventText.setDialogOption(OPTIONS[1] + this.maxHP + OPTIONS[2], CardLibrary.getCopy(Regret.ID, 0, 0));
+        imageEventText.optionList.add(new RelicPreviewButton(0, OPTIONS[0], new guardian.relics.StasisEgg(), false, new Aged()));
+        this.imageEventText.setDialogOption(OPTIONS[1] + this.maxHP + OPTIONS[2], CardLibrary.getCopy(Pain.ID, 0, 0));
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }
 
