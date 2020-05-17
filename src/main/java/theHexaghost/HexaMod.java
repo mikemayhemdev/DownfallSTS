@@ -2,6 +2,7 @@ package theHexaghost;
 
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -20,13 +21,18 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
+import guardian.cards.*;
+import guardian.patches.GuardianEnum;
+import guardian.relics.*;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.relics.UnknownEgg;
+import theHexaghost.cards.*;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
@@ -54,6 +60,7 @@ public class HexaMod implements
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
+SetUnlocksSubscriber,
         PreRoomRenderSubscriber,
         PostDeathSubscriber {
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
@@ -74,6 +81,12 @@ public class HexaMod implements
     public static boolean unsealed = false;
     public static Color placeholderColor = new Color(114F / 255F, 62F / 255F, 109F / 255F, 1);
     private static String modID;
+
+    private CustomUnlockBundle unlocks0;
+    private CustomUnlockBundle unlocks1;
+    private CustomUnlockBundle unlocks2;
+    private CustomUnlockBundle unlocks3;
+    private CustomUnlockBundle unlocks4;
 
     public HexaMod() {
         BaseMod.subscribe(this);
@@ -224,6 +237,57 @@ public class HexaMod implements
             }
         }
     }
+
+    @Override
+    public void receiveSetUnlocks() {
+
+        unlocks0 = new CustomUnlockBundle(
+                GiftsFromTheDead.ID, PowerFromBeyond.ID, FlamesFromBeyond.ID
+        );
+        UnlockTracker.addCard(GiftsFromTheDead.ID);
+        UnlockTracker.addCard(PowerFromBeyond.ID);
+        UnlockTracker.addCard(FlamesFromBeyond.ID);
+
+        unlocks1 = new CustomUnlockBundle(
+                Toasty.ID, SpectralSpark.ID, SuperheatedStrike.ID
+        );
+        UnlockTracker.addCard(Toasty.ID);
+        UnlockTracker.addCard(SpectralSpark.ID);
+        UnlockTracker.addCard(SuperheatedStrike.ID);
+
+        unlocks2 = new CustomUnlockBundle(
+                ApocalypticArmor.ID, ApocalypseNow.ID, UnlimitedPower.ID
+        );
+        UnlockTracker.addCard(ApocalypticArmor.ID);
+        UnlockTracker.addCard(ApocalypseNow.ID);
+        UnlockTracker.addCard(UnlimitedPower.ID);
+
+        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                RecyclingMachine.ID, SoulOfChaos.ID, JarOfFuel.ID
+        );
+        UnlockTracker.addRelic(RecyclingMachine.ID);
+        UnlockTracker.addRelic(SoulOfChaos.ID);
+        UnlockTracker.addRelic(JarOfFuel.ID);
+
+        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                BolsterEngine.ID, CandleOfCauterizing.ID, Sixitude.ID
+        );
+        UnlockTracker.addRelic(BolsterEngine.ID);
+        UnlockTracker.addRelic(CandleOfCauterizing.ID);
+        UnlockTracker.addRelic(Sixitude.ID);
+
+        BaseMod.addUnlockBundle(unlocks0, TheHexaghost.Enums.THE_SPIRIT, 0);
+
+        BaseMod.addUnlockBundle(unlocks1, TheHexaghost.Enums.THE_SPIRIT, 1);
+
+        BaseMod.addUnlockBundle(unlocks2, TheHexaghost.Enums.THE_SPIRIT, 2);
+
+        BaseMod.addUnlockBundle(unlocks3, TheHexaghost.Enums.THE_SPIRIT, 3);
+
+        BaseMod.addUnlockBundle(unlocks4, TheHexaghost.Enums.THE_SPIRIT, 4);
+
+    }
+
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {

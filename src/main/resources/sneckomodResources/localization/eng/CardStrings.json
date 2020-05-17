@@ -273,5 +273,9 @@
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
     "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade and sneckomod:Muddle all sneckomod:Offclass cards in your hand."
+  },
+  "sneckomod:Bewildered": {
+    "NAME": "Bewildered",
+    "DESCRIPTION": "Unplayable. NL When drawn, randomize the cost of two cards in your hand."
   }
 }

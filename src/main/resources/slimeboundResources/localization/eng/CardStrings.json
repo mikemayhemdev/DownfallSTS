@@ -103,7 +103,7 @@
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Touch",
-    "DESCRIPTION": "Gain Block equal to an enemy's slimeboundmod:Goop. NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Gain Block equal to the enemy's slimeboundmod:Goop."
   },
   "Slimebound:Dissolve": {
     "NAME": "Dissolve",
@@ -178,20 +178,10 @@
     "DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
   },
-  "Slimebound:PoisonLick": {
-    "NAME": "Poison Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison. NL Draw a card. NL Exhaust."
-  },
   "Slimebound:MegaLick": {
     "NAME": "Mega-Lick",
     "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
-  },
-  "Slimebound:FocusedLick": {
-    "NAME": "Focused Lick",
-    "DESCRIPTION": "Remove all Weak and Poison, replacing them with slimeboundmod:Goop. NL Apply !M! slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with slimeboundmod:Goop. NL Apply !M! slimeboundmod:Goop."
   },
   "Slimebound:RejuvenatingLick": {
     "NAME": "Rejuvenating Lick",
@@ -205,21 +195,12 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command twice."
   },
   "Slimebound:StrikeFrailPoint": {
     "NAME": "Cull the Frail",
     "DESCRIPTION": "If the enemy is Frail, remove all of their Block, then remove 1 Frail. NL Deal !D! damage."
-  },
-  "Slimebound:SoulSicken": {
-    "NAME": "Soul Sicken",
-    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison."
-  },
-  "Slimebound:AcidGelatin": {
-    "NAME": "Acidic Goop",
-    "DESCRIPTION": "Apply !M! Poison whenever you slimeboundmod:Consume."
   },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
@@ -227,27 +208,17 @@
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Add a random slimeboundmod:Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Add a random slimeboundmod:Lick to your hand."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a random slimeboundmod:Lick to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a random slimeboundmod:Lick to your hand."
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
     "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more."
   },
-  "Slimebound:TendrilStrike": {
-    "NAME": "Toxin Strike",
-    "DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to its Poison, then reduce its Poison by 1. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to twice its Poison, then reduce its Poison by 2. NL Exhaust"
-  },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",
     "DESCRIPTION": "The first time you would take damage or lose HP on each of YOUR turns, an enemy takes that much damage instead.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead."
-  },
-  "Slimebound:AccelerateToxins": {
-    "NAME": "Accelerate Toxins",
-    "DESCRIPTION": "For each Poisoned enemy, trigger the Poison's end of turn effect. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "For each Poisoned enemy, trigger the Poison's end of turn effect twice. NL Exhaust."
   },
   "Slimebound:WasteNot": {
     "NAME": "Waste Not",
@@ -272,11 +243,7 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume: gain !B! Block."
-  },
-  "Slimebound:SlimesplosionOLD": {
-    "NAME": "Slimesplosion",
-    "DESCRIPTION": "Apply !M! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison to ALL enemies X times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - gain !B! Block."
   },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
@@ -310,15 +277,11 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL The next time an Attack is used on this enemy, slimeboundmod:Goop is not removed."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL The next Attack used on this enemy does not remove slimeboundmod:Goop."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Tackles deal !M! more damage this combat."
-  },
-  "Slimebound:VenomTackle": {
-    "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume: Apply !M! Poison."
   },
   "Slimebound:UsefulSlime": {
     "NAME": "Useful Slime!",
@@ -344,12 +307,12 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Gain [E] and draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume: Gain [E] and draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain [E] and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain [E] and draw !M! cards."
   },
   "Slimebound:LeechLife": {
     "NAME": "Leech Life",
-    "DESCRIPTION": "Heal HP equal to the enemy's slimeboundmod:Goop. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Heal HP equal to the enemy's slimeboundmod:Goop. NL Exhaust."
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",

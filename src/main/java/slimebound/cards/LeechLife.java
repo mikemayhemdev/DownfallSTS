@@ -44,12 +44,16 @@ public class LeechLife extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int x = 0;
         if (m.hasPower(SlimedPower.POWER_ID)) {
-            int x = m.getPower(SlimedPower.POWER_ID).amount;
+           x = m.getPower(SlimedPower.POWER_ID).amount;
+        }
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
+        if (x>0) {
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new LeechEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, x, new Color(0.75F, 0F, 0F, 1F)), 0.15F));
             AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, x));
         }
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
     public AbstractCard makeCopy() {

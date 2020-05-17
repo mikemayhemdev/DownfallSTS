@@ -32,6 +32,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rewards.RewardSave;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.cards.*;
@@ -141,6 +142,7 @@ public class GuardianMod implements PostDrawSubscriber,
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
+    private CustomUnlockBundle unlocks4;
 
 
     //TODO - content sharing if needed
@@ -158,7 +160,6 @@ public class GuardianMod implements PostDrawSubscriber,
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     */
-    private CustomUnlockBundle unlocks4;
 
     public GuardianMod() {
 
@@ -495,8 +496,40 @@ public static void saveData() {
     @Override
     public void receiveSetUnlocks() {
 
-        //TODO - Part of unlocks
+        unlocks0 = new CustomUnlockBundle(
+                ShieldCharger.ID, Orbwalk.ID, FierceBash.ID
+        );
+        UnlockTracker.addCard(ShieldCharger.ID);
+        UnlockTracker.addCard(Orbwalk.ID);
+        UnlockTracker.addCard(FierceBash.ID);
 
+        unlocks1 = new CustomUnlockBundle(
+                Gem_Yellow.ID, GemFire.ID, GemFinder.ID
+        );
+        UnlockTracker.addCard(Gem_Yellow.ID);
+        UnlockTracker.addCard(GemFire.ID);
+        UnlockTracker.addCard(GemFinder.ID);
+
+        unlocks2 = new CustomUnlockBundle(
+                FuturePlans.ID, StasisEngine.ID, CompilePackage.ID
+        );
+        UnlockTracker.addCard(StasisEngine.ID);
+        UnlockTracker.addCard(FuturePlans.ID);
+        UnlockTracker.addCard(CompilePackage.ID);
+
+        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                StasisUpgradeRelic.ID, DefensiveModeMoreBlock.ID, StasisCodex.ID
+        );
+        UnlockTracker.addRelic(StasisUpgradeRelic.ID);
+        UnlockTracker.addRelic(DefensiveModeMoreBlock.ID);
+        UnlockTracker.addRelic(StasisCodex.ID);
+
+        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                GemstoneGun.ID, PocketSentry.ID, BottledAnomaly.ID
+        );
+        UnlockTracker.addRelic(GemstoneGun.ID);
+        UnlockTracker.addRelic(PocketSentry.ID);
+        UnlockTracker.addRelic(BottledAnomaly.ID);
 
         BaseMod.addUnlockBundle(unlocks0, GuardianEnum.GUARDIAN, 0);
 
@@ -507,27 +540,6 @@ public static void saveData() {
         BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
 
         BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
-
-
-        UnlockTracker.addCard(ShieldCharger.ID);
-        UnlockTracker.addCard(Orbwalk.ID);
-        UnlockTracker.addCard(FierceBash.ID);
-
-
-        UnlockTracker.addCard(Gem_Yellow.ID);
-        UnlockTracker.addCard(GemFire.ID);
-        UnlockTracker.addCard(GemFinder.ID);
-
-
-        UnlockTracker.addCard(StasisEngine.ID);
-        UnlockTracker.addCard(FuturePlans.ID);
-        UnlockTracker.addCard(CompilePackage.ID);
-
-        UnlockTracker.addRelic(StasisUpgradeRelic.ID);
-        UnlockTracker.addRelic(StasisCodex.ID);
-
-        UnlockTracker.addRelic(PocketSentry.ID);
-
 
     }
 
@@ -569,23 +581,6 @@ public static void saveData() {
         BaseMod.addRelic(new PocketSentry(), RelicType.SHARED);
         BaseMod.addRelic(new BottledAnomaly(), RelicType.SHARED);
         BaseMod.registerBottleRelic(BottledStasisPatch.inBottledAnomaly, new BottledAnomaly());
-
-
-        //TODO - Part of unlocks and shared mechanics
-
-        //shareableRelics.add(new PreparedRelic());
-
-        /*
-        if (unlocks2 == null) {
-            unlocks2 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                    StasisSlotIncreaseRelic.ID, PocketSentry.ID, TickHelperRelic.ID
-            );
-
-            unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                    StasisUpgradeRelic.ID, StasisCodex.ID, GemCopier.ID
-            );
-        }
-        */
 
 
     }
@@ -684,6 +679,8 @@ public static void saveData() {
         BaseMod.addCard(new StrikeTwo());
         BaseMod.addCard(new DefendTwo());
 
+        BaseMod.addCard(new Aged());
+
         //CONSTRUCT cross-mod
         if (Loader.isModLoaded("constructmod")) {
             BaseMod.addCard(new HammerDown());
@@ -701,20 +698,9 @@ public static void saveData() {
         }
 
 
-        //TODO - Part of unlocks
-        /*
-        unlocks0 = new CustomUnlockBundle(
-                ShieldCharger.ID, Orbwalk.ID, FierceBash.ID
-        );
 
-        unlocks1 = new CustomUnlockBundle(
-                Gem_Yellow.ID, GemFire.ID, GemFinder.ID
-        );
 
-        unlocks3 = new CustomUnlockBundle(
-                FuturePlans.ID, StasisEngine.ID, CompilePackage.ID
-        );
-        */
+
 
 
     }
