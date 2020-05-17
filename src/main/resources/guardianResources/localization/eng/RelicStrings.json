@@ -3,7 +3,7 @@
     "NAME": "Mode Shifter",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "When you lose #b10 HP, gain #b3 #yguardianmod:Defensive_Mode and #b15 #yBlock. NL When activated, #yBlock will not be removed at the start of your next turn. NL Each activation increases the amount of HP loss required to activate again by #b5."
+      "When you lose #b10 HP, enter #yguardianmod:Defensive_Mode and gain #b15 #yBlock. NL When activated, #yBlock will not be removed at the start of your next turn. NL Each activation increases the amount of HP loss required to activate again by #b5."
     ]
   },
   "Guardian:ModeShifterPlus": {

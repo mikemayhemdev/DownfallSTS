@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import guardian.characters.DefensiveMode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -89,6 +90,10 @@ public class Equalize extends AbstractSlimeboundCard {
         return new Equalize();
 
     }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.currentHealth <= (AbstractDungeon.player.maxHealth / 2F) ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
 
     public void upgrade() {
 

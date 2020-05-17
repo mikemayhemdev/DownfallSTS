@@ -69,6 +69,10 @@ public class TemporalStrike extends AbstractGuardianCard {
 
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = GuardianMod.isStasisOrbInPlay() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
+
     public AbstractCard makeCopy() {
         return new TemporalStrike();
     }

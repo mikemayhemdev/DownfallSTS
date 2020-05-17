@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
+import guardian.characters.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
-import guardian.powers.DefenseModePower;
 
 
 public class RollAttack extends AbstractGuardianCard {
@@ -57,11 +57,15 @@ public class RollAttack extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (p.hasPower(DefenseModePower.POWER_ID)) {
+        if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
         this.useGems(p, m);
     }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.stance instanceof DefensiveMode ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
 
     public AbstractCard makeCopy() {
         return new RollAttack();

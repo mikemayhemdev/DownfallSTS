@@ -3,12 +3,13 @@ package guardian.potions;
 
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import guardian.actions.SwitchToDefenseModeAction;
+import guardian.characters.DefensiveMode;
 import guardian.characters.GuardianCharacter;
 
 public class DefensiveModePotion extends CustomPotion {
@@ -29,21 +30,15 @@ public class DefensiveModePotion extends CustomPotion {
     public void initializeData() {
         this.potency = getPotency();
 
-        this.description = (DESCRIPTIONS[0] + this.potency * 5 + DESCRIPTIONS[1] + this.potency + DESCRIPTIONS[2]);
+        this.description = (DESCRIPTIONS[0] + this.potency * 5 + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
 
     }
 
     public void use(AbstractCreature target) {
-
-
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, this.potency * 5));
-        for (int i = 0; i < this.potency; i++) {
-
-            AbstractDungeon.actionManager.addToBottom(new SwitchToDefenseModeAction(AbstractDungeon.player));
-        }
-
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
     }
 
 

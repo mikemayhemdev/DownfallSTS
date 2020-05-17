@@ -80,7 +80,7 @@
   },
   "Guardian:CurlUp": {
     "NAME": "Curl Up",
-    "DESCRIPTION": "Gain !B! Block. NL Gain guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain !B! Block. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:TimeBomb": {
     "NAME": "Time Bomb",
@@ -121,7 +121,7 @@
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
-    "DESCRIPTION": "For !M! turns, Block is not removed at the start of your turn. NL Gain !B! Block. NL Gain guardianmod:Defensive_Mode. NL Exhaust."
+    "DESCRIPTION": "For !M! turns, Block is not removed at the start of your turn. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode. NL Exhaust."
   },
   "Guardian:Harden": {
     "NAME": "Harden",
@@ -264,7 +264,7 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Piercing Hide",
-    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns. NL Gain guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Shield Spikes",
@@ -310,15 +310,18 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
-    "DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Gain !M! guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode. NL Don't leave guardianmod:Defensive_Mode at the start of your next turn."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Gain 3 Thorns while in guardianmod:Defensive_Mode. NL Gain !M! guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain 3 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "Gain 3 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode. NL Don't leave guardianmod:Defensive_Mode at the start of your next turn."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Gain !M! guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode. NL Don't leave guardianmod:Defensive_Mode at the start of your next turn."
   },
   "Guardian:TimeSifter": {
     "NAME": "Time Sifter",
@@ -354,8 +357,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "Sapphire",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain guardianmod:Defensive_Mode."
+    "DESCRIPTION": "guardianmod:Gem. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "Enter guardianmod:Defensive_Mode."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Fragmented Gem",
@@ -381,7 +384,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
-    "DESCRIPTION": "When Defensive Mode is removed, gain 1 Strength for each turn it was active. NL Gain !M! guardianmod:Defensive_Mode."
+    "DESCRIPTION": "When you leave guardiamod:Defensive_Mode, gain !M! guardianmod:Momentary Strength. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Gatling Beam",

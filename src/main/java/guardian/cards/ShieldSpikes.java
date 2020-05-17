@@ -11,8 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import guardian.GuardianMod;
+import guardian.characters.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
-import guardian.powers.DefenseModePower;
 import guardian.powers.LoseThornsPower;
 
 public class ShieldSpikes extends AbstractGuardianCard {
@@ -60,12 +60,15 @@ public class ShieldSpikes extends AbstractGuardianCard {
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
-        if (p.hasPower(DefenseModePower.POWER_ID)) {
+        if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
-
         }
     }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.stance instanceof DefensiveMode ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
 
     public AbstractCard makeCopy() {
         return new ShieldSpikes();

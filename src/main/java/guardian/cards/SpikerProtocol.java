@@ -2,6 +2,7 @@ package guardian.cards;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,10 +11,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import guardian.GuardianMod;
-import guardian.actions.SwitchToDefenseModeAction;
+import guardian.characters.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
-import guardian.powers.DefenseModePower;
-import guardian.powers.DefensiveModeBuffsPower;
+import guardian.powers.DontLeaveDefensiveModePower;
+import guardian.powers.SpikerProtocolPower;
 
 public class SpikerProtocol extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SpikerProtocol");
@@ -28,8 +29,6 @@ public class SpikerProtocol extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int THORNS = 3;
-    private static final int DEFMODETURNS = 2;
-    private static final int UPGRADE_DEFMODETURNS = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -46,7 +45,7 @@ public class SpikerProtocol extends AbstractGuardianCard {
     public SpikerProtocol() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = DEFMODETURNS;
+        this.magicNumber = this.baseMagicNumber = THORNS;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -55,21 +54,14 @@ public class SpikerProtocol extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        if (p.hasPower(DefensiveModeBuffsPower.POWER_ID)) {
-            ((DefensiveModeBuffsPower) p.getPower(DefensiveModeBuffsPower.POWER_ID)).thorns += THORNS;
-            p.getPower(DefensiveModeBuffsPower.POWER_ID).flash();
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefensiveModeBuffsPower(p, p, THORNS, 0, 0, 0, 0)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpikerProtocolPower(p, magicNumber)));
+        if (p.stance instanceof DefensiveMode) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
+        } else
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DontLeaveDefensiveModePower(p, 1), 1));
         }
-        if (p.hasPower(DefenseModePower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, THORNS), THORNS));
-        }
-
-        for (int i = 0; i < this.magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new SwitchToDefenseModeAction(p));
-
-        }
-
     }
 
     public AbstractCard makeCopy() {
@@ -79,7 +71,8 @@ public class SpikerProtocol extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_DEFMODETURNS);
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 

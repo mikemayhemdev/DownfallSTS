@@ -38,6 +38,10 @@ public class TemporalShield extends AbstractGuardianCard {
 
     //END TUNING CONSTANTS
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = GuardianMod.isStasisOrbInPlay() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+    }// 68
+
     private int lastKnownStasisCount = 0;
 
     public TemporalShield() {

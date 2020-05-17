@@ -2,6 +2,7 @@ package guardian.cards;
 
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,10 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
-import guardian.actions.SwitchToDefenseModeAction;
+import guardian.characters.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
-import guardian.powers.DefenseModePower;
-import guardian.powers.DefensiveModeBuffsPower;
 import guardian.powers.RevengePower;
 
 public class RevengeProtocol extends AbstractGuardianCard {
@@ -24,12 +23,10 @@ public class RevengeProtocol extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int STRENGTHFORTURN = 1;
-    private static final int DEFMODETURNS = 2;
-    private static final int UPGRADE_TURNS = 1;
+    private static final int STRENGTHFORTURN = 3;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -46,7 +43,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
     public RevengeProtocol() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = DEFMODETURNS;
+        this.magicNumber = this.baseMagicNumber = STRENGTHFORTURN;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -55,20 +52,8 @@ public class RevengeProtocol extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        if (p.hasPower(DefensiveModeBuffsPower.POWER_ID)) {
-            ((DefensiveModeBuffsPower) p.getPower(DefensiveModeBuffsPower.POWER_ID)).enrage += STRENGTHFORTURN;
-            p.getPower(DefensiveModeBuffsPower.POWER_ID).flash();
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefensiveModeBuffsPower(p, p, 0, 0, 0, 0, STRENGTHFORTURN)));
-        }
-        if (p.hasPower(DefenseModePower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RevengePower(p, p, STRENGTHFORTURN), STRENGTHFORTURN));
-        }
-
-        for (int i = 0; i < this.magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new SwitchToDefenseModeAction(p));
-
-        }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RevengePower(p, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
     }
 
     public AbstractCard makeCopy() {
@@ -78,7 +63,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_TURNS);
+            upgradeMagicNumber(1);
         }
     }
 
@@ -94,5 +79,3 @@ public class RevengeProtocol extends AbstractGuardianCard {
         this.initializeDescription();
     }
 }
-
-

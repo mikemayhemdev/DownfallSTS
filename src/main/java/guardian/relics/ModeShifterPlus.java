@@ -2,11 +2,11 @@ package guardian.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import guardian.GuardianMod;
-import guardian.powers.DefenseModePower;
+import guardian.characters.DefensiveMode;
 
 public class ModeShifterPlus extends CustomRelic {
     public static final String ID = "Guardian:ModeShifterPlus";
@@ -26,9 +26,7 @@ public class ModeShifterPlus extends CustomRelic {
 
     public void atBattleStartPreDraw() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DefenseModePower(AbstractDungeon.player), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DefenseModePower(AbstractDungeon.player), 4));
-
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
     }
 
 

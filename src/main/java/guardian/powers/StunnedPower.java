@@ -50,10 +50,8 @@ public class StunnedPower extends AbstractPower {
         this.storedHandSize = AbstractDungeon.player.gameHandSize;
         AbstractDungeon.player.gameHandSize = 0;
         AbstractDungeon.actionManager.cardQueue.clear();
-        Iterator var1 = AbstractDungeon.player.limbo.group.iterator();
 
-        while (var1.hasNext()) {
-            AbstractCard c = (AbstractCard) var1.next();
+        for (AbstractCard c : AbstractDungeon.player.limbo.group) {
             AbstractDungeon.effectList.add(new ExhaustCardEffect(c));
         }
 

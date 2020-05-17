@@ -10,8 +10,7 @@
     "NAME": "Polishing Oil",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yBlock and #b",
-      " #yDefensive #yMode."
+      " #yBlock and enter #yDefensive #yMode."
     ]
   },
   "Guardian:BlockOnCardUsePotion": {

@@ -176,5 +176,34 @@
       "Gain #b",
       " #yBlock whenever you play a card this turn."
     ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "Evasive Protocol",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yDexterity while in #yDefensive #yMode."
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "Spiker Protocol",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yThorns while in #yDefensive #yMode."
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "Armored Protocol",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock when you end your turn while in #yDefensive #yMode."
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "Entrenched",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, don't leave #yDefensive #yMode.",
+      "At the start of your next #b",
+      " turns, don't leave #yDefensive #yMode."
+    ]
   }
 }
