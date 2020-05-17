@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 import sneckomod.powers.MuddleDrawnCardsPower;
 
@@ -24,6 +25,7 @@ public class RainOfDice extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 2;
+        tags.add(SneckoMod.RNG);
     }
 
     @Override
@@ -54,8 +56,8 @@ public class RainOfDice extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NoApplyRandomDamageAction(AbstractDungeon.getMonsters().getRandomMonster(true), silly, damage, getRandomNum(2, magicNumber), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        applyToSelf(new MuddleDrawnCardsPower(getRandomNum(2, magicNumber)));
+        atb(new NoApplyRandomDamageAction(AbstractDungeon.getMonsters().getRandomMonster(true), silly, damage, getRandomNum(2, magicNumber, this), AbstractGameAction.AttackEffect.BLUNT_LIGHT, this));
+        applyToSelf(new MuddleDrawnCardsPower(getRandomNum(2, magicNumber, this)));
     }
 
     public void upgrade() {

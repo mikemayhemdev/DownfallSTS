@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
 
 public class QuickBite extends AbstractSneckoCard {
@@ -27,12 +28,13 @@ public class QuickBite extends AbstractSneckoCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-        int x = getRandomNum(magicNumber, 2);
+        int x = getRandomNum(magicNumber, 2, this);
         atb(new AbstractGameAction() {
             @Override
             public void update() {

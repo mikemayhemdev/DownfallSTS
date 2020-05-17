@@ -18,10 +18,11 @@ public class SoulDraw extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(SneckoMod.SNEKPROOF);
+        tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = getRandomNum(0, magicNumber);
+        int x = getRandomNum(0, magicNumber, this);
         atb(new DrawThenMuddleAction(x));
     }
 

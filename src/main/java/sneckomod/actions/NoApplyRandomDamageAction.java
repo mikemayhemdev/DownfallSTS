@@ -3,6 +3,7 @@ package sneckomod.actions;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,11 +17,13 @@ public class NoApplyRandomDamageAction extends AbstractGameAction {
     private int numTimes;
     private int min;
     private int max;
+    private AbstractSneckoCard source;
 
-    public NoApplyRandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx) {
+    public NoApplyRandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx, AbstractSneckoCard source) {
         this.min = min;
         this.max = max;
-        int dmg = AbstractSneckoCard.getRandomNum(min, max);
+        this.source = source;
+        int dmg = AbstractSneckoCard.getRandomNum(min, max, source);
         this.info = new DamageInfo(AbstractDungeon.player, dmg);
         this.target = target;
         this.actionType = ActionType.DAMAGE;
@@ -84,7 +87,8 @@ public class NoApplyRandomDamageAction extends AbstractGameAction {
                                 min,
                                 max,
                                 this.numTimes,
-                                attackEffect
+                                attackEffect,
+                                source
                         )
                 );
             }

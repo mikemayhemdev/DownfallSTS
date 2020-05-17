@@ -21,10 +21,11 @@ public class GlitteringGambit extends AbstractSneckoCard {
         tags.add(SneckoMod.SNEKPROOF);
         exhaust = true;
         tags.add(CardTags.HEALING);
+        tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = getRandomNum(magicNumber, 120);
+        int x = getRandomNum(magicNumber, 120, this);
         int y = AbstractDungeon.player.gold * x;
         int z = y / 100;
         atb(new ChangeGoldAction(z - x));

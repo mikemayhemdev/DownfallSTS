@@ -83,5 +83,15 @@
     "DESCRIPTIONS": [
       "At the start of each combat, play a random card from your deck."
     ]
+  },
+  "sneckomod:D8": {
+    "NAME": "Mystical Octahedron",
+    "FLAVOR": "It appears weighted toward one side.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a card that selects a random number for its effects. This card always selects its maximum possible number.",
+      "Choose a card for ",
+      "Whenever ",
+      " is played, it chooses its maximum possible number for its effect."
+    ]
   }
 }

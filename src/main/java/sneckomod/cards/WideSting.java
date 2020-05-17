@@ -56,7 +56,7 @@ public class WideSting extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : monsterList()) {
-            atb(new NoApplyRandomDamageAction(q, magicNumber, damage, 1, AbstractGameAction.AttackEffect.LIGHTNING));
+            atb(new NoApplyRandomDamageAction(q, magicNumber, damage, 1, AbstractGameAction.AttackEffect.LIGHTNING, this));
         }
         atb(new AbstractGameAction() {
             @Override

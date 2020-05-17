@@ -36,7 +36,7 @@ public class DiceRollPotion extends CustomPotion {
 
 
     public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new NoApplyRandomDamageAction(target, this.potency, this.potency * 40, 1, AbstractGameAction.AttackEffect.SMASH));
+        AbstractDungeon.actionManager.addToBottom(new NoApplyRandomDamageAction(target, this.potency, this.potency * 40, 1, AbstractGameAction.AttackEffect.SMASH, null));
     }
 
 

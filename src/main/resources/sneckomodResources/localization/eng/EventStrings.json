@@ -1,1 +1,18 @@
-{}
+{
+  "sneckomod:D8": {
+    "NAME": "Mystical Octahedron",
+    "DESCRIPTIONS": [
+      "Approach the mystical octahedron.",
+      "Relic go boom.",
+      "Got relic.",
+      "Decided to leave."
+    ],
+    "OPTIONS": [
+      "[Shatter] #rLose #r",
+      " #r HP. #gGain #g5 #gUnknown #gCards",
+      "[Take] #gGain #gMystical #gOctahedron. #rCursed #r- #rPain.",
+      "[Leave]",
+      "[Locked] Requires a card that uses a randomly chosen number."
+    ]
+  }
+}

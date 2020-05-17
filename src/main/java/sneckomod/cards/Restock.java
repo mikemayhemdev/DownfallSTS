@@ -15,11 +15,12 @@ public class Restock extends AbstractSneckoCard {
     public Restock() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
+        tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DiscardAction(p, p, p.hand.size(), true));
-        atb(new DrawCardAction(getRandomNum(5, 10)));
+        atb(new DrawCardAction(getRandomNum(5, 10, this)));
     }
 
     public void upgrade() {

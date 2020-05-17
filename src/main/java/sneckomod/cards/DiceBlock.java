@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 public class DiceBlock extends AbstractSneckoCard {
@@ -20,10 +21,11 @@ public class DiceBlock extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 1;
+        tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = getRandomNum(magicNumber, block);
+        int x = getRandomNum(magicNumber, block, this);
         atb(new GainBlockAction(p, x));
     }
 

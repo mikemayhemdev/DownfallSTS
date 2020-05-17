@@ -23,6 +23,7 @@ public class SnakeSap extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 0;
         tags.add(SneckoMod.SNEKPROOF);
+        tags.add(SneckoMod.RNG);
     }
 
     @Override
@@ -52,8 +53,8 @@ public class SnakeSap extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        atb(new GainEnergyAction(getRandomNum(0, magicNumber)));
+        atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, this));
+        atb(new GainEnergyAction(getRandomNum(0, magicNumber, this)));
     }
 
     public void upgrade() {

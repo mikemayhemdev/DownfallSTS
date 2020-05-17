@@ -12,8 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import slimebound.SlimeboundMod;
 import sneckomod.TheSnecko;
 import sneckomod.powers.CheatPower;
+import sneckomod.relics.D8;
 import sneckomod.relics.LoadedDie;
 
 import java.util.ArrayList;
@@ -91,11 +93,27 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
     public static int getRandomNum(int min, int max) {
+        return getRandomNum(min,max,null);
+    }
+
+
+    public static int getRandomNum(int min, int max, AbstractSneckoCard source) {
+
         int bruh = min;
         if (AbstractDungeon.player.hasPower(CheatPower.POWER_ID)) {
             AbstractPower q = AbstractDungeon.player.getPower(CheatPower.POWER_ID);
             q.flash();
             return max;
+        }
+        if (AbstractDungeon.player.hasRelic(D8.ID)){
+            SlimeboundMod.logger.info("min/max check passed D8 relic check");
+            if (source != null) {
+                SlimeboundMod.logger.info("min/max check passed card source check");
+                D8 d8relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
+                if (d8relic.card == source)
+                    SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
+                return max;
+            }
         }
         if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
             bruh++;

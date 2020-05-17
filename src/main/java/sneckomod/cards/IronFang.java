@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import sneckomod.SneckoMod;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class IronFang extends AbstractSneckoCard {
@@ -28,6 +29,7 @@ public class IronFang extends AbstractSneckoCard {
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = MAGIC;
+        tags.add(SneckoMod.RNG);
     }
 
     @Override
@@ -70,8 +72,8 @@ public class IronFang extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
-        atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.NONE));
-        atb(new GainBlockAction(p, getRandomNum(magicNumber, block)));
+        atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.NONE, this));
+        atb(new GainBlockAction(p, getRandomNum(magicNumber, block, this)));
     }
 
     public void upgrade() {
