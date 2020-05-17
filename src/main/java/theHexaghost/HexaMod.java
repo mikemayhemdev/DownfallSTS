@@ -28,6 +28,7 @@ import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.relics.UnknownEgg;
 import theHexaghost.cards.*;
+import theHexaghost.events.SealChamber;
 import theHexaghost.events.WanderingSpecter;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.potions.DoubleChargePotion;
@@ -304,9 +305,13 @@ public class HexaMod implements
         addPotions();
 
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
+                //Extra Requirement
+                .bonusCondition(HexaMod::canGetCurseRelic)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
                 //Event Character//
                 .playerClass(TheHexaghost.Enums.THE_SPIRIT)
-                .bonusCondition(HexaMod::canGetCurseRelic)
                 .create());
     }
 
