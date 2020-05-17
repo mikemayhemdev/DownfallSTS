@@ -3,36 +3,32 @@ package theHexaghost;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.BlueCandle;
+import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
+import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
-import guardian.cards.*;
-import guardian.patches.GuardianEnum;
-import guardian.relics.*;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.relics.UnknownEgg;
 import theHexaghost.cards.*;
+import theHexaghost.events.WanderingSpecter;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
@@ -45,7 +41,6 @@ import theHexaghost.util.CardNoSeen;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -54,13 +49,13 @@ import java.util.Collection;
 public class HexaMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
-       // EditStringsSubscriber,
+        // EditStringsSubscriber,
         //EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
-SetUnlocksSubscriber,
+        SetUnlocksSubscriber,
         PreRoomRenderSubscriber,
         PostDeathSubscriber {
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
@@ -307,5 +302,24 @@ SetUnlocksSubscriber,
 
     public void receivePostInitialize() {
         addPotions();
+
+        BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
+                //Event Character//
+                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                .bonusCondition(HexaMod::canGetCurseRelic)
+                .create());
+    }
+
+    public static boolean canGetCurseRelic() {
+        ArrayList<String> possRelicsList = new ArrayList<>();
+        possRelicsList.add(BlueCandle.ID);
+        possRelicsList.add(DarkstonePeriapt.ID);
+        possRelicsList.add(DuVuDoll.ID);
+
+        for (AbstractRelic q : AbstractDungeon.player.relics) {
+            possRelicsList.removeIf(q.relicId::equals);
+        }
+
+        return possRelicsList.isEmpty();
     }
 }

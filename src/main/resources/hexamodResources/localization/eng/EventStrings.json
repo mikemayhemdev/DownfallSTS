@@ -1,77 +1,16 @@
 {
-  "Slimebound:Hunted": {
-    "NAME": "The Boss Approaches",
+  "hexamod:WanderingSpecter": {
+    "NAME": "Wandering Specter",
     "DESCRIPTIONS": [
-      "A booming voice echoes the spire... NL NL #r~BETRAYER!!!~ NL NL The hulking slime quickly catches up to you, blocking your path forward. It appears it isn't happy with one of it's own minions going rogue, and has abandoned the Exordium to hunt you down and absorb you.",
-      "Can it really be this easy?",
-      "Everything makes sense now. NL The lack of memories, the ascent, the #yAncient #yOne. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+      "This area of the Spire appears to be a #pgraveyard. You carefully continue through when a strange, faint ~apparition~ stops you. It reaches out with one hand, apparently offering some sort of #rdeal.",
+      "The #bghostly #bbeing touches your shoulder and you @collapse.@ NL NL You awaken later in an empty area of the Spire with a #gtrinket at your feet. As you continue, you feel ~oddly~ ~watched...~",
+      "You shake your head and the #bghost gives you one last, laborious look before continuing on in its ~endless~ ~walk.~ You continue onwards, as well. "
     ],
     "OPTIONS": [
-      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat.",
-      "[Flee in Terror] #rCursed #r- #rShame."
-    ]
-  },
-  "Slimebound:WorldofGoop": {
-    "NAME": "World of Goop",
-    "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool a pile of #ygold from unfortunate adventurers, along with a curious creature who seems to be attracted to the shiny metal.",
-      "You exit the invigorating slime bath, fishing out the #ygold, leaving the creature with a sad look upon its amorphous face.",
-      "You succeed in negotiating a deal with the creature to provide it with more shiny metal if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
-    ],
-    "OPTIONS": [
-      "[Gather Gold] #gGain #g75 #gGold.",
-      "[Recruit] #gGain #yGreed #yOoze.",
+      "[Accept] Obtain ",
+      ". #rBecome #rCursed #r- #rHaunted.",
+      "[Decline]",
       "[Leave]"
-    ]
-  },
-  "Slimebound:SlimeTalk": {
-    "NAME": "TalkStrings",
-    "DESCRIPTIONS": [
-      "~MINION...~ NL #r~BETRAYER!!!~",
-      "~What~ ~is~ ~it~ ~doing...~",
-      "~It~ ~cannot~ ~leave...~",
-      "~Tell~ ~the~ ~Boss...~",
-      "That hat... NL #r~I~ #r~must~ #r~have~ #r~it!~",
-      "~What~ ~is...~",
-      "~...it~ ~doing...~",
-      "~...in~ ~the~ ~Beyond...~",
-      "~We~ ~must~ ~stop~ ~it...~",
-      "~It's~ ~so~ ~strong...~",
-      "~It's~ ~like~ ~us...~",
-      "~NICE~ #r~HAT!!!~"
-    ]
-  },
-  "Slimebound:ScrapOozePatch": {
-    "NAME": "Scrap Ooze Alternate",
-    "DESCRIPTIONS": [
-      "Any slime who has found a different path is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
-    ],
-    "OPTIONS": [
-      "[Recruit] Gain the #gScrap #gOoze. #rLocked if you Reach Inside.",
-      "[Recruit] Locked.",
-      "[Leave]"
-    ]
-  },
-  "Slimebound:ArtOfSlimeWar": {
-    "NAME": "The Art of Slime War",
-    "DESCRIPTIONS": [
-      "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
-      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
-      "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
-      "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
-      "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",
-      "You decide to leave the book where it is and continue on.",
-      "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
-    ],
-    "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
-      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
-      "[Leave]",
-      "[Dive] #rBecome #rCursed #r- #rIcky.",
-      "[Be Patient] #rTake #r",
-      " #rDamage.",
-      "[Grab and Run] #rLose #r",
-      " #rMax #rHP."
     ]
   }
 }
