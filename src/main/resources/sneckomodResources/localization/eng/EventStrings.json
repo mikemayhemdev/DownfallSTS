@@ -24,5 +24,18 @@
       "[Improvisation] #gReplace all #gStrikes and #gDefends with random #gUnknown cards.",
       "[Locked] Requires a Strike or Defend."
     ]
+  },
+  "sneckomod:Serpent": {
+    "NAME": "The Ssssserpent",
+    "DESCRIPTIONS": [
+      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous scaled creature, not unlike yourself, appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~snake~ ~friend!~ Let me ask you something... NL NL You hear the serpent speak words, but find yourself utterly perplexed, comprehending none of it. NL NL \"Do you agree?\"",
+      "~\"Excellent!\"~ NL NL You still have no idea what the question was, but it appears you've made the Serpent's day. NL The creature offers you a trinket to assist in your goal, then slithers back into the hole.",
+      "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
+    ],
+    "OPTIONS": [
+      "[Agree] #gGain #ga #grandom #gRelic. #rBecome #rCursed #r- #rBewildered.",
+      "[Disagree]",
+      "[Leave]"
+    ]
   }
 }

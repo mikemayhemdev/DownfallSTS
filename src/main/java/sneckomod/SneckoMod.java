@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
+import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
@@ -24,6 +25,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.events.Serpent_Evil;
 import guardian.events.GemMine;
 import guardian.patches.AbstractCardEnum;
 import guardian.patches.BottledStasisPatch;
@@ -40,6 +42,7 @@ import sneckomod.cards.unknowns.UnknownDexterity;
 import sneckomod.cards.unknowns.UnknownStrength;
 import sneckomod.events.BackToBasicsSnecko;
 import sneckomod.events.D8;
+import sneckomod.events.Serpent_Snecko;
 import sneckomod.patches.BottledD8Patch;
 import sneckomod.potions.CheatPotion;
 import sneckomod.potions.DiceRollPotion;
@@ -61,6 +64,7 @@ import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.CURSE;
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.STATUS;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -326,6 +330,24 @@ public class SneckoMod implements
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->!evilMode)
+                //Event ID to Override//
+                .overrideEvent(Sssserpent.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(()->evilMode)
+                //Event ID to Override//
+                .overrideEvent(Serpent_Evil.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
