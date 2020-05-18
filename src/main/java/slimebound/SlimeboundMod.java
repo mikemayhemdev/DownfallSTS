@@ -47,10 +47,7 @@ import org.apache.logging.log4j.Logger;
 import slimebound.cards.*;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.dailymods.AllSplit;
-import slimebound.events.ArtOfSlimeWar;
-import slimebound.events.Hunted;
-import slimebound.events.ScrapOozeSlimebound;
-import slimebound.events.WorldOfGoopSlimebound;
+import slimebound.events.*;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
 import slimebound.orbs.CultistSlime;
@@ -785,6 +782,13 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 .bonusCondition(() -> !AbstractDungeon.player.hasRelic(ScrapOozeRelic.ID))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(DarklingsSlimebound.ID, DarklingsSlimebound.class) //Event ID//
+                //Act//
+                .dungeonIDs(TheBeyond.ID)
+                //Additional Condition//
+                .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter))
                 .create());
 
         /*

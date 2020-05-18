@@ -75,5 +75,18 @@
       "[Grab and Run] #rLose #r",
       " #rMax #rHP."
     ]
+  },
+  "Slimebound:Darklings": {
+    "NAME": "Darklings",
+    "DESCRIPTIONS": [
+      "Three unfamiliar looking slimes stand(?) in your way. They look hostile, but as you approach, they note that you are of similar consistency and look at you with curiosity.",
+      "As you ~prepare~ ~to~ ~battle,~ so do the inky black slimes!",
+      "After a short conversation, these fellow slimes are on your side as well - guarding for intruders. They can leave their post for a little while to assist you."
+    ],
+    "OPTIONS": [
+      "[Recruit] #gObtain #gDarklings.",
+      "[Fight]",
+      "[Leave]"
+    ]
   }
 }
