@@ -1,0 +1,97 @@
+
+BabySnecko.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BabySnecko/Shadow
+  rotate: false
+  xy: 1, 1
+  size: 153, 24
+  orig: 153, 24
+  offset: 0, 0
+  index: -1
+BabySnecko/Other Leg_0
+  rotate: false
+  xy: 211, 33
+  size: 26, 31
+  orig: 26, 31
+  offset: 0, 0
+  index: -1
+BabySnecko/Other_Hip
+  rotate: false
+  xy: 59, 47
+  size: 21, 23
+  orig: 21, 23
+  offset: 0, 0
+  index: -1
+BabySnecko/Upper_Body
+  rotate: false
+  xy: 156, 1
+  size: 53, 48
+  orig: 53, 48
+  offset: 0, 0
+  index: -1
+BabySnecko/Lower_Body
+  rotate: false
+  xy: 90, 27
+  size: 50, 20
+  orig: 50, 20
+  offset: 0, 0
+  index: -1
+BabySnecko/Hip
+  rotate: false
+  xy: 29, 47
+  size: 28, 20
+  orig: 28, 20
+  offset: 0, 0
+  index: -1
+BabySnecko/Other_Leg
+  rotate: false
+  xy: 1, 47
+  size: 26, 27
+  orig: 26, 27
+  offset: 0, 0
+  index: -1
+BabySnecko/Tongue
+  rotate: false
+  xy: 82, 49
+  size: 22, 6
+  orig: 22, 6
+  offset: 0, 0
+  index: -1
+BabySnecko/Head
+  rotate: false
+  xy: 211, 1
+  size: 39, 30
+  orig: 39, 30
+  offset: 0, 0
+  index: -1
+BabySnecko/White
+  rotate: false
+  xy: 29, 69
+  size: 22, 18
+  orig: 22, 18
+  offset: 0, 0
+  index: -1
+BabySnecko/Iris
+  rotate: false
+  xy: 1, 76
+  size: 15, 11
+  orig: 15, 11
+  offset: 0, 0
+  index: -1
+BabySnecko/Pupil
+  rotate: false
+  xy: 18, 76
+  size: 7, 8
+  orig: 7, 8
+  offset: 0, 0
+  index: -1
+BabySnecko/Tail
+  rotate: false
+  xy: 1, 27
+  size: 87, 18
+  orig: 87, 18
+  offset: 0, 0
+  index: -1

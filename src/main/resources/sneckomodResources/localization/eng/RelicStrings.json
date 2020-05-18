@@ -93,5 +93,12 @@
       "Whenever ",
       " is played, it chooses its maximum possible number for its effect."
     ]
+  },
+  "sneckomod:BabySnecko": {
+    "NAME": "Young Snecko",
+    "FLAVOR": "Bewilderingly adorable.",
+    "DESCRIPTIONS": [
+      "Deals 5 damage to a random enemy at the start of your turn."
+    ]
   }
 }

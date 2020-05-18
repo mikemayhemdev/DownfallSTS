@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -43,6 +44,7 @@ import sneckomod.cards.unknowns.UnknownStrength;
 import sneckomod.events.BackToBasicsSnecko;
 import sneckomod.events.D8;
 import sneckomod.events.Serpent_Snecko;
+import sneckomod.events.SuspiciousHouse;
 import sneckomod.patches.BottledD8Patch;
 import sneckomod.potions.CheatPotion;
 import sneckomod.potions.DiceRollPotion;
@@ -236,6 +238,7 @@ public class SneckoMod implements
         BaseMod.addRelic(new BlankCard(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new sneckomod.relics.D8(), TheSnecko.Enums.SNECKO_CYAN);
         BaseMod.registerBottleRelic(BottledD8Patch.inD8, new sneckomod.relics.D8());
+        BaseMod.addRelic(new BabySnecko(), RelicType.SHARED);
     }
 
     @Override
@@ -323,6 +326,7 @@ public class SneckoMod implements
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
+                .eventType(EventUtils.EventType.SHRINE)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSnecko.ID, BackToBasicsSnecko.class) //Event ID//
@@ -350,6 +354,11 @@ public class SneckoMod implements
                 .overrideEvent(Serpent_Evil.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(SuspiciousHouse.ID, SuspiciousHouse.class) //Event ID//
+                .dungeonID(TheCity.ID)
+                .eventType(EventUtils.EventType.NORMAL)
                 .create());
     }
 }

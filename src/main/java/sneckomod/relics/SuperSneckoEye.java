@@ -2,8 +2,11 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ConfusionPower;
 import com.megacrit.cardcrawl.relics.SneckoEye;
 import sneckomod.SneckoMod;
 import theHexaghost.util.TextureLoader;
@@ -49,6 +52,21 @@ public class SuperSneckoEye extends CustomRelic {
             card.isCostModified = true;// 37
             card.freeToPlayOnce = false;// 39
         }
+    }
+
+    public void onEquip() {
+        AbstractPlayer var10000 = AbstractDungeon.player;
+        var10000.masterHandSize += 2;
+    }
+
+    public void onUnequip() {
+        AbstractPlayer var10000 = AbstractDungeon.player;
+        var10000.masterHandSize -= 2;
+    }
+
+    public void atPreBattle() {
+        this.flash();
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConfusionPower(AbstractDungeon.player)));
     }
 
     @Override
