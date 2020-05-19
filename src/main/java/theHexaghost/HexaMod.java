@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
@@ -13,6 +14,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.beyond.Falling;
+import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BlueCandle;
 import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
@@ -26,8 +29,12 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.events.ScrapOozeSlimebound;
+import slimebound.patches.SlimeboundEnum;
+import slimebound.relics.ScrapOozeRelic;
 import sneckomod.relics.UnknownEgg;
 import theHexaghost.cards.*;
+import theHexaghost.events.HexaFalling;
 import theHexaghost.events.SealChamber;
 import theHexaghost.events.WanderingSpecter;
 import theHexaghost.potions.BurningPotion;
@@ -312,6 +319,15 @@ public class HexaMod implements
         BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
                 //Event Character//
                 .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(HexaFalling.ID, HexaFalling.class) //Event ID//
+                //Event Character//
+                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                //Existing Event to Override//
+                .overrideEvent(Falling.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
     }
 
