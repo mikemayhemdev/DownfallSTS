@@ -228,6 +228,10 @@ public class FleeingMerchant extends AbstractMonster {
     @Override
     public void update() {
         super.update();
+        if (escaped) {
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            AbstractDungeon.combatRewardScreen.open();
+        }
     }
 
     @Override

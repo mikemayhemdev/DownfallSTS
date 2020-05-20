@@ -19,8 +19,8 @@
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy Attack, slimeboundmod:Absorbing your leading Slime instead.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy Attack, slimeboundmod:Absorbing your leading Slime instead."
+    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy attack, slimeboundmod:Absorbing your leading Slime instead.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy attack, slimeboundmod:Absorbing your leading Slime instead."
   },
   "Slimebound:SamplingLick": {
     "NAME": "Sampling Lick",
