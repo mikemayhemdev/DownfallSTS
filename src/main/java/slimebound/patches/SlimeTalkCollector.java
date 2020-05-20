@@ -21,7 +21,7 @@ public class SlimeTalkCollector {
     }
 
     public static void Prefix(TheCollector sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedCollector == false && AbstractDungeon.player.hasRelic(StudyCardRelic.ID)) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && !SlimeboundMod.slimeTalkedCollector && AbstractDungeon.player.hasRelic(StudyCardRelic.ID)) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, DESCRIPTIONS[4], 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedCollector = true;
         }

@@ -6,7 +6,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #yslimeboundmod:splitting and gaining 1 #yStrength."
+    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #ySplitting and gaining 1 #yStrength."
   },
   {
     "NAMES": [
@@ -197,6 +197,6 @@
       "consume"
     ],
     "PROPER_NAME": "Consume",
-    "DESCRIPTION": "Bonus effect which activates when an Attack is used on an enemy who has Goop."
+    "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop."
   }
 ]

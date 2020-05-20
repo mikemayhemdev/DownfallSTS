@@ -20,7 +20,7 @@ public class SlimeTalkAcidM {
     }
 
     public static void Prefix(AcidSlime_M sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalkedAcidM == false) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && !SlimeboundMod.slimeTalkedAcidM) {
             AbstractDungeon.actionManager.addToBottom(new TalkAction(sb, DESCRIPTIONS[2], 1.0F, 2.0F));
             SlimeboundMod.slimeTalkedAcidM = true;
         }
