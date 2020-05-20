@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
@@ -29,6 +30,8 @@ public class Bewildered extends CustomCard {
     private static final int COST = -2;
     public static String UPGRADED_DESCRIPTION;
 
+    private boolean activateThisTurn = false;
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
         NAME = cardStrings.NAME;
@@ -48,8 +51,23 @@ public class Bewildered extends CustomCard {
     }
 
     @Override
+    public void triggerWhenDrawn() {
+        activateThisTurn = true;
+    }
+
+    @Override
     public void atTurnStart() {
-        AbstractDungeon.actionManager.addToBottom(new MuddleRandomCardAction(2));
+        if (activateThisTurn) {
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    superFlash(Color.PURPLE);
+                    isDone = true;
+                }
+            });
+            AbstractDungeon.actionManager.addToBottom(new MuddleRandomCardAction(2));
+            activateThisTurn = false;
+        }
     }
 
     public AbstractCard makeCopy() {
