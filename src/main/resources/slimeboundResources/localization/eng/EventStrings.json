@@ -44,7 +44,7 @@
   "Slimebound:ScrapOoze": {
     "NAME": "Scrap Ooze",
     "DESCRIPTIONS": [
-      "Any slime who has found a different path is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
+      "Any slime is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
     ],
     "OPTIONS": [
       "[Recruit] #rLose ",
