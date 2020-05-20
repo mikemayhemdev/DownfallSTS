@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.beyond.Falling;
+import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BlueCandle;
@@ -34,6 +35,7 @@ import slimebound.patches.SlimeboundEnum;
 import slimebound.relics.ScrapOozeRelic;
 import sneckomod.relics.UnknownEgg;
 import theHexaghost.cards.*;
+import theHexaghost.events.CouncilOfGhosts_Hexa;
 import theHexaghost.events.HexaFalling;
 import theHexaghost.events.SealChamber;
 import theHexaghost.events.WanderingSpecter;
@@ -326,6 +328,15 @@ public class HexaMod implements
                 .playerClass(TheHexaghost.Enums.THE_SPIRIT)
                 //Existing Event to Override//
                 .overrideEvent(Falling.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(CouncilOfGhosts_Hexa.ID, CouncilOfGhosts_Hexa.class) //Event ID//
+                //Event Character//
+                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                //Existing Event to Override//
+                .overrideEvent(Ghosts.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());

@@ -65,6 +65,7 @@ public class BabySnecko extends CustomRelic {
     public void onVictory() {
         if (this.baby != null){
         this.baby.dispose();
+        this.baby = null;
         SlimeboundMod.logger.info("Disposing baby snecko ");
         }
     }

@@ -343,5 +343,9 @@
   "hexamod:Haunted": {
     "NAME": "Haunted",
     "DESCRIPTION": "Ethereal. Unplayable. NL At the start of your turn, exhaust a random other card in your hand."
+  },
+  "hexamod:CouncilsJustice": {
+    "NAME": "Council's Justice",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }
