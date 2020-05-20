@@ -6,7 +6,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorb",
-    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #ysplitting and gaining 1 #yStrength."
+    "DESCRIPTION": "Recombine with a spawned #ySlime, returning the Max HP it took upon #ySplitting and gaining 1 #yStrength."
   },
   {
     "NAMES": [

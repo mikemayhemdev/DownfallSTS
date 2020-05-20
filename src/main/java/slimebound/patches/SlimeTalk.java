@@ -21,10 +21,9 @@ public class SlimeTalk {
     }
 
     public static void Prefix(SlimeBoss sb) {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter && SlimeboundMod.slimeTalked == false) {
+        if (AbstractDungeon.player instanceof SlimeboundCharacter && !SlimeboundMod.slimeTalked) {
             if (AbstractDungeon.player.hasRelic(StudyCardRelic.ID)) {
                 AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[11], 1.0F, 2.0F));
-
             } else {
                 AbstractDungeon.actionManager.addToBottom(new ShoutAction(sb, DESCRIPTIONS[0], 1.0F, 2.0F));
             }
