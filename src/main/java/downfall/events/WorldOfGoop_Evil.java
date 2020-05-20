@@ -37,9 +37,9 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.gold = 50;
+            this.gold = 150;
         } else {
-            this.gold = 100;
+            this.gold = 200;
         }
 
         this.imageEventText.setDialogOption(OPTIONS[0] + this.gold + OPTIONS[1], new Icky());

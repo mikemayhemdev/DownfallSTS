@@ -110,7 +110,7 @@ public class SealChamber extends AbstractImageEvent {
                         this.imageEventText.setDialogOption(OPTIONS[8]);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.screen = CurScreen.END;
-                        break;
+                        return;
                     case 1:
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldLoss));
                         AbstractDungeon.player.gainGold(this.goldLoss);

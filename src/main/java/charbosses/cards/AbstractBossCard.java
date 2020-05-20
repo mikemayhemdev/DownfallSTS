@@ -397,8 +397,10 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     @Override
     public void update() {
-        super.update();
-        if (this.intent != null) updateIntent();
+        if (AbstractCharBoss.boss != null) {
+            super.update();
+            if (this.intent != null) updateIntent();
+        }
     }
 
     public void refreshIntentHbLocation() {
