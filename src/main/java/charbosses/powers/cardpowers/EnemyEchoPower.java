@@ -1,6 +1,7 @@
 package charbosses.powers.cardpowers;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -42,7 +43,7 @@ public class EnemyEchoPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && this.amount > 0 && this.cardsDoubledThisTurn < this.amount) {
+        if (!card.purgeOnUse && this.amount > 0 && this.cardsDoubledThisTurn < this.amount && card instanceof AbstractBossCard) {
             ++this.cardsDoubledThisTurn;
             this.flash();
             AbstractMonster m = null;

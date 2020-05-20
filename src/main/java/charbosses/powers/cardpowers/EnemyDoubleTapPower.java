@@ -1,6 +1,7 @@
 package charbosses.powers.cardpowers;
 
 import charbosses.actions.util.CharbossDoCardQueueAction;
+import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -44,7 +45,7 @@ public class EnemyDoubleTapPower extends AbstractPower {
 
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
-        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && this.amount > 0) {
+        if (!card.purgeOnUse && card.type == AbstractCard.CardType.ATTACK && this.amount > 0 && card instanceof AbstractBossCard) {
             this.flash();
             AbstractMonster m = null;
             if (action.target != null) {

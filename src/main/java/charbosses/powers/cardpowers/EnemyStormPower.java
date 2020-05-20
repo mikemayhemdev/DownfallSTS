@@ -1,6 +1,7 @@
 package charbosses.powers.cardpowers;
 
 import charbosses.actions.orb.EnemyChannelAction;
+import charbosses.cards.AbstractBossCard;
 import charbosses.orbs.EnemyLightning;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -28,7 +29,7 @@ public class EnemyStormPower extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == CardType.POWER && this.amount > 0) {
+        if (card.type == CardType.POWER && this.amount > 0 && card instanceof AbstractBossCard) {
             this.flash();
 
             for(int i = 0; i < this.amount; ++i) {
