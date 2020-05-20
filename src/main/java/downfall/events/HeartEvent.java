@@ -3,13 +3,7 @@ package downfall.events;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.blights.AbstractBlight;
-import com.megacrit.cardcrawl.blights.GrotesqueTrophy;
-import com.megacrit.cardcrawl.blights.MimicInfestation;
-import com.megacrit.cardcrawl.blights.Muzzle;
-import com.megacrit.cardcrawl.blights.Shield;
-import com.megacrit.cardcrawl.blights.Spear;
-import com.megacrit.cardcrawl.blights.TimeMaze;
+import com.megacrit.cardcrawl.blights.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -18,7 +12,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.helpers.SaveHelper;
+import com.megacrit.cardcrawl.helpers.TipTracker;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -30,14 +26,16 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
 import com.megacrit.cardcrawl.vfx.InfiniteSpeechBubble;
 import com.megacrit.cardcrawl.vfx.scene.LevelTransitionTextOverlayEffect;
-import java.util.ArrayList;
-import java.util.Iterator;
-
 import downfall.util.HeartReward;
 import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 public class HeartEvent extends AbstractEvent {
     private static final Logger logger = LogManager.getLogger(HeartEvent.class.getName());
@@ -67,7 +65,7 @@ public class HeartEvent extends AbstractEvent {
         this.pickCard = false;
         waitingToSave = false;
         if (this.npc == null) {
-            this.npc = new CustomAnimatedNPC(1334.0F * Settings.scale, AbstractDungeon.floorY + 200.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
+            this.npc = new CustomAnimatedNPC(1334.0F * Settings.scale, AbstractDungeon.floorY + 200.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0);
         }
         this.npc.portalRenderActive = true;
 
@@ -94,7 +92,7 @@ public class HeartEvent extends AbstractEvent {
             this.talk(TEXT[10]);
             this.roomEventText.addDialogOption(OPTIONS[1]);
         } else if (!isDone) {
-            if (!(Boolean)TipTracker.tips.get("NEOW_INTRO")) {
+            if (!(Boolean) TipTracker.tips.get("NEOW_INTRO")) {
                 this.screenNum = 0;
                 TipTracker.neverShowAgain("NEOW_INTRO");
                 this.talk(TEXT[0]);
@@ -115,6 +113,10 @@ public class HeartEvent extends AbstractEvent {
         this.hasDialog = true;
         this.hasFocus = true;
 
+        if (evilMode) {
+            Settings.isFinalActAvailable = true;
+            AbstractDungeon.topPanel.setPlayerName();
+        }
     }
 
     public HeartEvent() {
@@ -139,8 +141,8 @@ public class HeartEvent extends AbstractEvent {
             CardGroup group = new CardGroup(CardGroupType.UNSPECIFIED);
             var2 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-            while(var2.hasNext()) {
-                AbstractCard c = (AbstractCard)var2.next();
+            while (var2.hasNext()) {
+                AbstractCard c = (AbstractCard) var2.next();
                 group.addToBottom(c.makeCopy());
             }
 
@@ -150,8 +152,8 @@ public class HeartEvent extends AbstractEvent {
 
         Iterator var4 = this.rewards.iterator();
 
-        while(var4.hasNext()) {
-            HeartReward r = (HeartReward)var4.next();
+        while (var4.hasNext()) {
+            HeartReward r = (HeartReward) var4.next();
             r.update();
         }
 
@@ -168,8 +170,8 @@ public class HeartEvent extends AbstractEvent {
             boolean doneAnims = true;
             var2 = AbstractDungeon.player.relics.iterator();
 
-            while(var2.hasNext()) {
-                AbstractRelic r = (AbstractRelic)var2.next();
+            while (var2.hasNext()) {
+                AbstractRelic r = (AbstractRelic) var2.next();
                 if (!r.isDone) {
                     doneAnims = false;
                     break;
@@ -183,7 +185,6 @@ public class HeartEvent extends AbstractEvent {
         }
 
 
-
     }
 
     private void talk(String msg) {
@@ -193,7 +194,7 @@ public class HeartEvent extends AbstractEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
                 this.dismissBubble();
                 this.talk(TEXT[4]);
@@ -223,21 +224,21 @@ public class HeartEvent extends AbstractEvent {
             case 3:
                 this.dismissBubble();
                 this.roomEventText.clearRemainingOptions();
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
-                        ((HeartReward)this.rewards.get(0)).activate();
+                        ((HeartReward) this.rewards.get(0)).activate();
                         this.talk(TEXT[8]);
                         break;
                     case 1:
-                        ((HeartReward)this.rewards.get(1)).activate();
+                        ((HeartReward) this.rewards.get(1)).activate();
                         this.talk(TEXT[8]);
                         break;
                     case 2:
-                        ((HeartReward)this.rewards.get(2)).activate();
+                        ((HeartReward) this.rewards.get(2)).activate();
                         this.talk(TEXT[9]);
                         break;
                     case 3:
-                        ((HeartReward)this.rewards.get(3)).activate();
+                        ((HeartReward) this.rewards.get(3)).activate();
                         this.talk(TEXT[9]);
                 }
 
@@ -272,7 +273,7 @@ public class HeartEvent extends AbstractEvent {
             tmp.incrementUp();
             tmp.flash();
         } else {
-            AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, new Spear());
+            AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new Spear());
         }
 
         if (AbstractDungeon.player.hasBlight("ToughEnemies")) {
@@ -280,7 +281,7 @@ public class HeartEvent extends AbstractEvent {
             tmp.incrementUp();
             tmp.flash();
         } else {
-            AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, new Shield());
+            AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new Shield());
         }
 
         this.uniqueBlight();
@@ -297,17 +298,17 @@ public class HeartEvent extends AbstractEvent {
                     if (temp != null) {
                         AbstractDungeon.player.getBlight("GrotesqueTrophy").stack();
                     } else {
-                        AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, new GrotesqueTrophy());
+                        AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new GrotesqueTrophy());
                     }
                 } else {
-                    AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, new Muzzle());
+                    AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new Muzzle());
                 }
             } else {
-                AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, new TimeMaze());
+                AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new TimeMaze());
             }
 
         } else {
-            AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, new MimicInfestation());
+            AbstractDungeon.getCurrRoom().spawnBlightAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new MimicInfestation());
         }
     }
 
@@ -316,7 +317,7 @@ public class HeartEvent extends AbstractEvent {
         this.dismissBubble();
         this.talk(TEXT[8]);
         if (ModHelper.isModEnabled("Heirloom")) {
-            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F, AbstractDungeon.returnRandomRelic(RelicTier.RARE));
+            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, AbstractDungeon.returnRandomRelic(RelicTier.RARE));
         }
 
         boolean addedCards = false;
@@ -325,7 +326,7 @@ public class HeartEvent extends AbstractEvent {
         if (ModHelper.isModEnabled("Allstar")) {
             addedCards = true;
 
-            for(int i = 0; i < 5; ++i) {
+            for (int i = 0; i < 5; ++i) {
                 card = AbstractDungeon.getColorlessCardFromPool(AbstractDungeon.rollRareOrUncommon(0.5F));
                 UnlockTracker.markCardAsSeen(card.cardID);
                 group.addToBottom(card.makeCopy());
@@ -346,9 +347,9 @@ public class HeartEvent extends AbstractEvent {
             } else {
                 rareCard = AbstractDungeon.returnTrulyRandomCard();
 
-                for(int i = 0; i < 5; ++i) {
+                for (int i = 0; i < 5; ++i) {
                     AbstractCard tmpCard = rareCard.makeCopy();
-                    AbstractDungeon.topLevelEffectsQueue.add(new FastCardObtainEffect(tmpCard, MathUtils.random((float)Settings.WIDTH * 0.2F, (float)Settings.WIDTH * 0.8F), MathUtils.random((float)Settings.HEIGHT * 0.3F, (float)Settings.HEIGHT * 0.7F)));
+                    AbstractDungeon.topLevelEffectsQueue.add(new FastCardObtainEffect(tmpCard, MathUtils.random((float) Settings.WIDTH * 0.2F, (float) Settings.WIDTH * 0.8F), MathUtils.random((float) Settings.HEIGHT * 0.3F, (float) Settings.HEIGHT * 0.7F)));
                 }
             }
         }
@@ -365,7 +366,7 @@ public class HeartEvent extends AbstractEvent {
         if (ModHelper.isModEnabled("SealedDeck")) {
             CardGroup sealedGroup = new CardGroup(CardGroupType.UNSPECIFIED);
 
-            for(int i = 0; i < 30; ++i) {
+            for (int i = 0; i < 30; ++i) {
                 card = AbstractDungeon.getCard(AbstractDungeon.rollRarity());
                 if (!sealedGroup.contains(card)) {
                     sealedGroup.addToBottom(card.makeCopy());
@@ -376,8 +377,8 @@ public class HeartEvent extends AbstractEvent {
 
             Iterator var11 = sealedGroup.group.iterator();
 
-            while(var11.hasNext()) {
-                AbstractCard c = (AbstractCard)var11.next();
+            while (var11.hasNext()) {
+                AbstractCard c = (AbstractCard) var11.next();
                 UnlockTracker.markCardAsSeen(c.cardID);
             }
 
@@ -396,7 +397,7 @@ public class HeartEvent extends AbstractEvent {
         this.rewards.add(new HeartReward(false));
         this.roomEventText.clearRemainingOptions();
         this.roomEventText.updateDialogOption(0, OPTIONS[5]);
-        this.roomEventText.addDialogOption(((HeartReward)this.rewards.get(1)).optionLabel);
+        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);
         this.screenNum = 3;
     }
 
@@ -412,20 +413,20 @@ public class HeartEvent extends AbstractEvent {
         this.rewards.add(new HeartReward(2));
         this.rewards.add(new HeartReward(3));
         this.roomEventText.clearRemainingOptions();
-        this.roomEventText.updateDialogOption(0, ((HeartReward)this.rewards.get(0)).optionLabel);
-        this.roomEventText.addDialogOption(((HeartReward)this.rewards.get(1)).optionLabel);
-        this.roomEventText.addDialogOption(((HeartReward)this.rewards.get(2)).optionLabel);
-        this.roomEventText.addDialogOption(((HeartReward)this.rewards.get(3)).optionLabel);
+        this.roomEventText.updateDialogOption(0, ((HeartReward) this.rewards.get(0)).optionLabel);
+        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);
+        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(2)).optionLabel);
+        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(3)).optionLabel);
         this.screenNum = 3;
     }
 
     private void dismissBubble() {
         Iterator var1 = AbstractDungeon.effectList.iterator();
 
-        while(var1.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect)var1.next();
+        while (var1.hasNext()) {
+            AbstractGameEffect e = (AbstractGameEffect) var1.next();
             if (e instanceof InfiniteSpeechBubble) {
-                ((InfiniteSpeechBubble)e).dismiss();
+                ((InfiniteSpeechBubble) e).dismiss();
             }
         }
 

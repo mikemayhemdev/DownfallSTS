@@ -274,7 +274,7 @@ public class downfallMod implements
     private void initializeEvents() {
         BaseMod.addEvent(new AddEventParams.Builder(GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(GremlinMatchGame.ID)
                 //Event Type//
@@ -283,7 +283,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(GremlinWheelGame_Evil.ID, GremlinWheelGame_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(GremlinWheelGame.ID)
                 //Event Type//
@@ -293,14 +293,14 @@ public class downfallMod implements
         //Event only used in Gremlin Wheel relic.  Is not initialized into any Act.
         BaseMod.addEvent(new AddEventParams.Builder(GremlinWheelGame_Rest.ID, GremlinWheelGame_Rest.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->false)
+                .spawnCondition(() -> false)
                 //Act//
                 .dungeonID("")
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WomanInBlue_Evil.ID, WomanInBlue_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(WomanInBlue.ID)
                 //Event Type//
@@ -309,7 +309,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(LivingWall_Evil.ID, LivingWall_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(LivingWall.ID)
                 //Event Type//
@@ -318,7 +318,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Augmenter_Evil.ID, Augmenter_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(DrugDealer.ID)
                 //Event Type//
@@ -327,7 +327,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(BonfireSpirits_Evil.ID, BonfireSpirits_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Bonfire.ID)
                 //Event Type//
@@ -336,7 +336,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(GoldenShrine_Evil.ID, GoldenShrine_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(GoldShrine.ID)
                 //Event Type//
@@ -345,7 +345,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(FaceTrader_Evil.ID, FaceTrader_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(FaceTrader.ID)
                 //Event Type//
@@ -354,18 +354,18 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(CursedFountain.ID, CursedFountain.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(FountainOfCurseRemoval.ID)
                 //Additional Condition//
-                .bonusCondition(()->AbstractDungeon.player.isCursed())
+                .bonusCondition(() -> AbstractDungeon.player.isCursed())
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WeMeetAgain_Evil.ID, WeMeetAgain_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(WeMeetAgain.ID)
                 //Event Type//
@@ -374,7 +374,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Designer_Evil.ID, Designer_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Designer.ID)
                 //Event Type//
@@ -383,7 +383,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(DeadGuy_Evil.ID, DeadGuy_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(DeadAdventurer.ID)
                 //Event Type//
@@ -392,7 +392,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(ShiningLight_Evil.ID, ShiningLight_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(ShiningLight.ID)
                 //Event Type//
@@ -401,7 +401,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoop_Evil.ID, WorldOfGoop_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(GoopPuddle.ID)
                 //Event Type//
@@ -410,7 +410,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Evil.ID, Serpent_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Sssserpent.ID)
                 //Event Type//
@@ -419,7 +419,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(WingStatue_Evil.ID, WingStatue_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
                 //Event Type//
@@ -428,7 +428,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(GoldenIdol_Evil.ID, GoldenIdol_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(GoldenIdol.ID)
                 //Event Type//
@@ -437,7 +437,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Cleric_Evil.ID, Cleric_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Cleric.ID)
                 //Event Type//
@@ -446,7 +446,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(CouncilOfGhosts_Evil.ID, CouncilOfGhosts_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Ghosts.ID)
                 //Event Type//
@@ -455,7 +455,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(CursedTome_Evil.ID, CursedTome_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(CursedTome.ID)
                 //Event Type//
@@ -464,7 +464,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(ForgottenAltar_Evil.ID, ForgottenAltar_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(ForgottenAltar.ID)
                 //Event Type//
@@ -473,7 +473,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Bandits_Evil.ID, Bandits_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(MaskedBandits.ID)
                 //Event Type//
@@ -482,7 +482,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(KnowingSkull_Evil.ID, KnowingSkull_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(KnowingSkull.ID)
                 //Event Type//
@@ -491,7 +491,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Vagrant_Evil.ID, Vagrant_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Addict.ID)
                 //Event Type//
@@ -500,7 +500,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Mausoleum_Evil.ID, Mausoleum_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(TheMausoleum.ID)
                 //Event Type//
@@ -509,7 +509,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Beggar_Evil.ID, Beggar_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Beggar.ID)
                 //Event Type//
@@ -518,7 +518,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(TheNest_Evil.ID, TheNest_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
                 //Event Type//
@@ -527,7 +527,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//
@@ -536,7 +536,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(MindBloom_Evil.ID, MindBloom_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(MindBloom.ID)
                 //Event Type//
@@ -545,7 +545,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(MoaiHead_Evil.ID, MoaiHead_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(MoaiHead.ID)
                 //Event Type//
@@ -554,7 +554,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Nloth_Evil.ID, Nloth_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Nloth.ID)
                 //Event Type//
@@ -563,7 +563,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(SensoryStone_Evil.ID, SensoryStone_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(SensoryStone.ID)
                 //Event Type//
@@ -572,7 +572,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Portal_Evil.ID, Portal_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(SecretPortal.ID)
                 //Event Type//
@@ -581,18 +581,18 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(TombRedMask_Evil.ID, TombRedMask_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(TombRedMask.ID)
                 //Additional Condition//
-                .bonusCondition(()->AbstractDungeon.player.hasRelic(RedIOU.ID))
+                .bonusCondition(() -> AbstractDungeon.player.hasRelic(RedIOU.ID))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WindingHalls_Evil.ID, WindingHalls_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(WindingHalls.ID)
                 //Event Type//
@@ -601,7 +601,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Joust_Evil.ID, Joust_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(TheJoust.ID)
                 //Event Type//
@@ -610,7 +610,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(BossTester.ID, BossTester.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(()->false)
+                .spawnCondition(() -> false)
                 .create());
     }
 
