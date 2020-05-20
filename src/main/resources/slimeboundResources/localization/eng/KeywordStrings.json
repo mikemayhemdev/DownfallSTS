@@ -197,6 +197,6 @@
       "consume"
     ],
     "PROPER_NAME": "Consume",
-    "DESCRIPTION": "Bonus effect which activates when an Attack is used on an enemy who has Goop."
+    "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop."
   }
 ]
