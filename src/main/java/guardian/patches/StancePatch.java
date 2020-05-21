@@ -4,7 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.stances.AbstractStance;
-import guardian.characters.DefensiveMode;
+import guardian.stances.DefensiveMode;
 
 @SpirePatch(clz = AbstractStance.class, method = "getStanceFromName")
 public class StancePatch {

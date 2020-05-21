@@ -3,9 +3,13 @@ package downfall.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import downfall.downfallMod;
 import theHexaghost.util.TextureLoader;
 
@@ -15,6 +19,8 @@ public class FairyPotionPower extends AbstractPower implements CloneablePowerInt
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/FairyPotion84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/FairyPotion32.png"));
+
+    public static boolean CANNOT_END = false;
 
     public FairyPotionPower(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
@@ -31,6 +37,41 @@ public class FairyPotionPower extends AbstractPower implements CloneablePowerInt
 
         this.updateDescription();
     }
+
+    private void healUndead(AbstractCreature m, int healAmount) {
+        if (m.isDying) m.isDying = false;
+        for (AbstractPower p : m.powers) {
+            p.onHeal(healAmount);
+        }
+
+        m.currentHealth += healAmount;// 451
+        if (m.currentHealth > m.maxHealth) {// 452
+            m.currentHealth = m.maxHealth;// 453
+        }
+
+
+        if (healAmount > 0) {// 465
+            m.healthBarUpdatedEvent();// 470
+        }
+
+    }
+
+    @Override
+    public void onDeath() {
+        CANNOT_END = true;
+        super.onDeath();
+        int healAmt = (int) (owner.maxHealth / 0.3F);
+        healUndead(owner, healAmt);
+        AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX, owner.hb.cY, healAmt));
+        addToTop(new RemoveSpecificPowerAction(owner, owner, FairyPotionPower.POWER_ID));
+        addToTop(new TalkAction(owner, "Ha! Fairy Potion, jerk!"));
+        CANNOT_END = false;
+    }
+
+    /*
+
+
+     */
 
     @Override
     public void updateDescription() {

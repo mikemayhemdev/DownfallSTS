@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
-import guardian.characters.DefensiveMode;
+import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 
 

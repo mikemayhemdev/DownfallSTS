@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import guardian.characters.DefensiveMode;
+import guardian.stances.DefensiveMode;
 import guardian.characters.GuardianCharacter;
 
 public class DefensiveModePotion extends CustomPotion {

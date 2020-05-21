@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import guardian.GuardianMod;
-import guardian.characters.DefensiveMode;
+import guardian.stances.DefensiveMode;
 
 public class ModeShifterPlus extends CustomRelic {
     public static final String ID = "Guardian:ModeShifterPlus";

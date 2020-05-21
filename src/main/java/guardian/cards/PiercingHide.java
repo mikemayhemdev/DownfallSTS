@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import guardian.GuardianMod;
-import guardian.characters.DefensiveMode;
+import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
 

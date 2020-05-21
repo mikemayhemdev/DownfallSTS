@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.BufferPower;
-import guardian.characters.DefensiveMode;
+import guardian.stances.DefensiveMode;
 
 
 public class ModeShiftPower extends AbstractGuardianPower {

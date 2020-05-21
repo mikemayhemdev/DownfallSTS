@@ -384,7 +384,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
-    "DESCRIPTION": "When you leave guardiamod:Defensive_Mode, gain !M! guardianmod:Momentary Strength. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "When you leave guardianmod:Defensive_Mode, gain !M! guardianmod:Momentary Strength. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Gatling Beam",

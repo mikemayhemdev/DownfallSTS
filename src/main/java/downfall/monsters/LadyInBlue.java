@@ -125,11 +125,6 @@ public class LadyInBlue extends AbstractMonster {
             this.state.setAnimation(0, "Hit", false);
             this.state.addAnimation(0, "Idle", true, 0.0F);
         }
-        if (this.currentHealth <= 0 && this.hasPower(FairyPotionPower.POWER_ID)) {
-            this.heal((int) (this.maxHealth / 0.3F), true);
-            addToTop(new RemoveSpecificPowerAction(this, this, FairyPotionPower.POWER_ID));
-            addToTop(new TalkAction(this, "Ha! Fairy Potion, jerk!"));
-        }
     }
 
     protected void getMove(int num) {

@@ -1,4 +1,4 @@
-package guardian.characters;
+package guardian.stances;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.stances.NeutralStance;
+import guardian.characters.GuardianCharacter;
 import guardian.powers.DefensiveModeBooster;
 import guardian.powers.DontLeaveDefensiveModePower;
 import guardian.relics.DefensiveModeMoreBlock;
@@ -62,7 +64,7 @@ public class DefensiveMode extends AbstractStance {
             AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
         } else
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction("Neutral"));// 49
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));// 49
     }// 50
 
     @Override

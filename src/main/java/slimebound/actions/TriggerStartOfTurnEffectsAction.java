@@ -16,7 +16,6 @@ public class TriggerStartOfTurnEffectsAction extends AbstractGameAction {
     }
 
     public void update() {
-
         p.applyStartOfTurnPowers();
         p.applyStartOfTurnCards();
         p.applyStartOfTurnPostDrawRelics();
