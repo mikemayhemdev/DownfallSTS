@@ -1,11 +1,14 @@
 package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
+import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.downfallMod;
 
 public class HeartBlessingRed extends CustomRelic {
@@ -29,4 +32,12 @@ public class HeartBlessingRed extends CustomRelic {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
+    @Override
+    public void atBattleStartPreDraw() {
+        if (AbstractDungeon.actNum == 3 && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
+            flash();
+            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractCharBoss.boss.chosenArchetype.anticard().makeCopy()));
+        }
+    }
 }

@@ -39,17 +39,6 @@ public class CharBossIronclad extends AbstractCharBoss {
         if (AbstractDungeon.ascensionLevel >= 19) {
             archetype.initializeBonusRelic();
         }
-        if (AbstractDungeon.actNum == 3) {
-            if (AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(archetype.anticard().makeCopy()));
-            }
-            if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player)) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(archetype.anticard().makeCopy()));
-            }
-            if (AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(archetype.anticard().makeCopy()));
-            }
-        }
 
         //archetypes.add(new ArchetypeIcStrike());
         //archetypes.add(new ArchetypeIcStrength());

@@ -32,7 +32,6 @@ public class EnemyWaveOfTheHandPower extends AbstractPower {
             this.flash();
             AbstractCreature p = AbstractCharBoss.boss;
             AbstractCreature mo = AbstractDungeon.player;
-            Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
             this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.amount, true), this.amount, true, AttackEffect.NONE));
 
