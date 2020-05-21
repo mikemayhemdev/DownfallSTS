@@ -20,7 +20,7 @@ public class HeartsMalice extends CustomRelic {
 
     public HeartsMalice() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
-        this.counter = 3;
+        this.counter = 2;
     }
 
     public String getUpdatedDescription() {
