@@ -19,7 +19,7 @@ public class EnBlur extends AbstractBossCard {
     }
 
     public EnBlur() {
-        super(ID, EnBlur.cardStrings.NAME, "green/attack/blur", 1, EnBlur.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
+        super(ID, EnBlur.cardStrings.NAME, "green/skill/blur", 1, EnBlur.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 5;
     }
 
