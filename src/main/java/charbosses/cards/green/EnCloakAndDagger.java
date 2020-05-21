@@ -25,6 +25,8 @@ public class EnCloakAndDagger extends AbstractBossCard {
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new EnShiv();
         this.magicValue = 4;
+        baseDamage = 4;
+        isMultiDamage = true;
     }
 
     @Override

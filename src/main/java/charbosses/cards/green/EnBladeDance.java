@@ -23,6 +23,8 @@ public class EnBladeDance extends AbstractBossCard {
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new EnShiv();
         this.magicValue = 4;
+        intentBaseDmg = 4;
+        isMultiDamage = true;
     }
 
     @Override
