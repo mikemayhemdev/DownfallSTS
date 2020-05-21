@@ -23,6 +23,7 @@ public class QuickStudy extends AbstractExpansionCard {
 
     public QuickStudy() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
