@@ -51,7 +51,7 @@ public class HeartMerchant implements Disposable {
         this.speechTimer = 1.5F;
         this.saidWelcome = false;
         this.shopScreen = 1;
-        this.anim = new CustomAnimatedNPC(1350.0F * Settings.scale, AbstractDungeon.floorY + 350.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
+        this.anim = new CustomAnimatedNPC(DRAW_X, DRAW_Y + 100F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
 
 
         AbstractCard c;
@@ -96,14 +96,18 @@ public class HeartMerchant implements Disposable {
 
     public void update() {
 
-        if (this.hb.hovered){
-            this.anim.changeBorderColor(Color.WHITE);
-        } else {
-            this.anim.changeBorderColor(Color.VIOLET);
-        }
 
         this.hb.update();
         this.anim.update();
+
+
+        if (this.hb.hovered){
+            this.anim.changeBorderColor(Color.WHITE);
+            this.anim.highlighted = true;
+        } else {
+            this.anim.changeBorderColor(Color.VIOLET);
+            this.anim.highlighted = false;
+        }
 
         if ((this.hb.hovered && InputHelper.justClickedLeft || CInputActionSet.select.isJustPressed()) && !AbstractDungeon.isScreenUp && !AbstractDungeon.isFadingOut && !AbstractDungeon.player.viewingRelics) {
             AbstractDungeon.overlayMenu.proceedButton.setLabel(NAMES[0]);
@@ -172,7 +176,7 @@ public class HeartMerchant implements Disposable {
     }
 
     public void spawnHitbox(){
-        this.hb = new Hitbox(500.0F * Settings.scale, 500.0F * Settings.scale);
+        this.hb = new Hitbox(500.0F * Settings.scale, 700.0F * Settings.scale);
         this.hb.move(DRAW_X * Settings.scale, DRAW_Y * Settings.scale);
         this.anim.portalRenderActive = true;
     }
@@ -182,7 +186,7 @@ public class HeartMerchant implements Disposable {
         NAMES = characterStrings.NAMES;
         TEXT = characterStrings.TEXT;
         ENDING_TEXT = characterStrings.OPTIONS;
-        DRAW_X = (float)Settings.WIDTH * 0.7F * Settings.scale;
-        DRAW_Y = AbstractDungeon.floorY + 300.0F * Settings.scale;
+        DRAW_X = 1240.0F * Settings.scale;
+        DRAW_Y = AbstractDungeon.floorY + 220.0F * Settings.scale;
     }
 }

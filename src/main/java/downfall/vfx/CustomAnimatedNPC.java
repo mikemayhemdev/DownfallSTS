@@ -37,6 +37,8 @@ public class CustomAnimatedNPC {
     public Float customRot = 0F;
     public Float customShadowScale = 0F;
 
+    public boolean highlighted = false;
+
 
     public boolean portalRender;
     public boolean portalRenderActive = false;
@@ -127,16 +129,8 @@ public class CustomAnimatedNPC {
     }
 
     public void changeBorderColor(Color color){
-        if (!this.colorSwapped) {
-            this.colorSwapped = true;
-            for (PortalBorderEffect pb : borderEffects) {
-                pb.borderColor = color;
-            }
-        } else if (color == Color.VIOLET){
-            this.colorSwapped = false;
-            for (PortalBorderEffect pb : borderEffects) {
-                pb.borderColor = color;
-            }
+        for (PortalBorderEffect pb : borderEffects) {
+            pb.borderColor = color;
         }
     }
 
@@ -246,7 +240,12 @@ public class CustomAnimatedNPC {
                 Gdx.gl.glColorMask(true,true,true,true);
                 sb.begin();
 
-                sb.setColor(Color.WHITE);
+                if (this.highlighted){
+                    sb.setColor(Color.WHITE);
+                } else {
+                    sb.setColor(Color.LIGHT_GRAY);
+                }
+
 
                 // render the npc. Since we're using a FrameBuffer that's the same size as the screen, there should be no issues
                 // using the regular render function of the npc. Note that if you want any background, you'd render it right here
