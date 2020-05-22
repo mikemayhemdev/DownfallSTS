@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoom;
+import downfall.rooms.HeartShopRoom;
 
 public class WindingHalls_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:WindingHalls";
@@ -58,7 +59,7 @@ public class WindingHalls_Evil extends AbstractImageEvent {
                         return;
                     case 2:
                         AbstractDungeon.getCurrRoom().clearEvent();
-                        AbstractRoom sRoom = new ShopRoom();
+                        AbstractRoom sRoom = new HeartShopRoom();
                         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMBAT;
                         AbstractDungeon.getCurrRoom().smoked = false;
                         AbstractDungeon.player.isEscaping = false;
