@@ -9,6 +9,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -340,10 +341,6 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.targetDrawScale = AbstractBossCard.HOVER_SCALE;
             this.drawScale = AbstractBossCard.HOVER_SCALE;
         }
-        if (this.bossDarkened){
-            this.bossLighten();
-            this.tempLighten = true;
-        }
     }
 
     public void unhover() {
@@ -353,37 +350,44 @@ public abstract class AbstractBossCard extends AbstractCard {
             AbstractCharBoss.boss.hand.refreshHandLayout();
             this.targetDrawScale = AbstractBossCard.HAND_SCALE;
         }
-        if (this.tempLighten){
-            this.bossDarken();
-        }
     }
 
     ///////////// DARKEN IF IS NOT BEING USED IN A GIVEN TURN ////////////////
 
-    @Override
-    public void darken(boolean immediate) {
-    }
-
-    @Override
-    public void lighten(boolean immediate) {
-        }
-
         public void bossDarken(){
         if (!this.bossDarkened) {
-            ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(0F, 0F, 0F, .75F));
             this.bossDarkened = true;
-            //SlimeboundMod.logger.info(this.name + " darkened.");
+            SlimeboundMod.logger.info(this.name + " darkened.");
         }
         }
 
     public void bossLighten(){
         if (this.bossDarkened) {
-
-            ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(255F * .43F, 255F * .37F, 255F * .65F, 0F));
             this.bossDarkened = false;
-            //SlimeboundMod.logger.info(this.name + " lightened.");
+            SlimeboundMod.logger.info(this.name + " lightened.");
         }
         }
+
+
+    public void renderHelperB(SpriteBatch sb, Color color, TextureAtlas.AtlasRegion img, float drawX, float drawY) {
+        sb.setColor(color);
+        sb.draw(img, drawX + img.offsetX - (float)img.originalWidth / 2.0F, drawY + img.offsetY - (float)img.originalHeight / 2.0F, (float)img.originalWidth / 2.0F - img.offsetX, (float)img.originalHeight / 2.0F - img.offsetY, (float)img.packedWidth, (float)img.packedHeight, this.drawScale * Settings.scale, this.drawScale * Settings.scale, this.angle);
+    }
+
+    public void renderHelperB(SpriteBatch sb, Color color, TextureAtlas.AtlasRegion img, float drawX, float drawY, float scale) {
+        sb.setColor(color);
+        sb.draw(img, drawX + img.offsetX - (float)img.originalWidth / 2.0F, drawY + img.offsetY - (float)img.originalHeight / 2.0F, (float)img.originalWidth / 2.0F - img.offsetX, (float)img.originalHeight / 2.0F - img.offsetY, (float)img.packedWidth, (float)img.packedHeight, this.drawScale * Settings.scale * scale, this.drawScale * Settings.scale * scale, this.angle);
+    }
+
+    public void renderHelperB(SpriteBatch sb, Color color, Texture img, float drawX, float drawY) {
+        sb.setColor(color);
+        sb.draw(img, drawX + 256.0F, drawY + 256.0F, 256.0F, 256.0F, 512.0F, 512.0F, this.drawScale * Settings.scale, this.drawScale * Settings.scale, this.angle, 0, 0, 512, 512, false, false);
+    }
+
+    public void renderHelperB(SpriteBatch sb, Color color, Texture img, float drawX, float drawY, float scale) {
+        sb.setColor(color);
+        sb.draw(img, drawX, drawY, 256.0F, 256.0F, 512.0F, 512.0F, this.drawScale * Settings.scale * scale, this.drawScale * Settings.scale * scale, this.angle, 0, 0, 512, 512, false, false);
+    }
 
     @Override
     public void beginGlowing() {
@@ -401,7 +405,13 @@ public abstract class AbstractBossCard extends AbstractCard {
             super.update();
             if (this.intent != null) updateIntent();
         }
+        if (this.bossDarkened){
+
+            ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(255F * .43F, 255F * .37F, 255F * .65F, 0F));
+
+        }
     }
+
 
     public void refreshIntentHbLocation() {
         this.intentHb.move(this.target_x + this.intentOffsetX, this.target_y + this.intentOffsetY);

@@ -19,7 +19,7 @@ public class EnThousandCuts extends AbstractBossCard {
     }
 
     public EnThousandCuts() {
-        super(ID, EnThousandCuts.cardStrings.NAME, "green/attack/leg_sweep", 2, EnThousandCuts.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.BUFF);
+        super(ID, EnThousandCuts.cardStrings.NAME, "green/power/a_thousand_cuts", 2, EnThousandCuts.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.BUFF);
         baseMagicNumber = magicNumber = 1;
     }
 
