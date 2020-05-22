@@ -15,7 +15,9 @@ public class HeartShopUIPatch {
     @SpirePostfixPatch
     public static void Postfix(ShopScreen __result, ArrayList<AbstractCard> coloredCards, ArrayList<AbstractCard> colorlessCards) {
 
-        ReflectionHacks.setPrivate(__result,ShopScreen.class,"rugImg",ImageMaster.loadImage(downfallMod.assetPath("images/ui/heartRug.png")));
-        ReflectionHacks.setPrivate(__result,ShopScreen.class,"handImg",ImageMaster.loadImage(downfallMod.assetPath("images/ui/heartHand.png")));
+        if (EvilModeCharacterSelect.evilMode) {
+            ReflectionHacks.setPrivate(__result, ShopScreen.class, "rugImg", ImageMaster.loadImage(downfallMod.assetPath("images/ui/heartRug.png")));
+            ReflectionHacks.setPrivate(__result, ShopScreen.class, "handImg", ImageMaster.loadImage(downfallMod.assetPath("images/ui/heartHand.png")));
+        }
     }
 }
