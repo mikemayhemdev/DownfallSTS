@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.monsters.FleeingMerchant;
 import downfall.patches.EvilModeCharacterSelect;
+import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.vfx.SoulStealEffect;
 import javassist.CtBehavior;
 
@@ -44,12 +46,12 @@ public class BetterEndingPatches {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(SpireHeart __instance) {
 
-            if (EvilModeCharacterSelect.evilMode// &&
-                    //AbstractDungeon.actNum == 3 &&
-                    //AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
-                    //AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
-                    //AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
-                    //FleeingMerchant.DEAD
+            if (EvilModeCharacterSelect.evilMode &&
+                    AbstractDungeon.actNum == 3 &&
+                    AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
+                    AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
+                    AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
+                    FleeingMerchant.DEAD
             ) {
 
                 __instance.roomEventText.clear();
