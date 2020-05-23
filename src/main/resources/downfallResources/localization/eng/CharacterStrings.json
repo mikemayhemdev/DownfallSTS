@@ -98,5 +98,41 @@
     "OPTIONS": [
       "~I~ ~brought...~ NL ~HIM...~ ~back...~"
     ]
+  },
+  "HeartMerchantScreen": {
+    "NAMES": [
+      "~Greetings~ NL ~minion...~",
+      "~Bring~ ~more~ ~souls...~",
+      "~I~ ~need~ @more...@",
+      "~You~ ~are~ ~not~ NL @worthy...@",
+      "~No.~",
+      "~Harvest~ ~more~ NL ~for~ ~that...~",
+      "~Insufficient~ ~sacrifice...~",
+      "~Yes...~",
+      "~More...~ @More...!@",
+      "~Grow~ ~strong...~",
+      "~I~ ~am~ ~renewed~...",
+      "~Go~ ~forth~...",
+      "Leave",
+      "Select a card to remove from your deck."
+    ],
+    "TEXT": [
+      "~You~ ~grow...~ ~stronger...~",
+      "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
+      "~Slay...~ ~and~ ~be~ ~rewarded...~",
+      "~More...~ ~souls...~",
+      "~Feed~ ~us......~ NL ~FEED~ ~US......~",
+      "~Fuel...~ ~the~ ~corruption...~",
+      "~Blessings...~ ~are~ ~earned...~",
+      "~No...~ ~mercy...~",
+      "~Ever...~ ~stronger...~",
+      "~Our~ ~power...~ ~is~ ~yours...~",
+      "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
+      "~Fight...~ ~fell...~ ~and~ ~feed...~",
+      "~We~ ~are...~ ~legion...~",
+      "~Go~ ~forth...~ ~and~ ~harvest...~",
+      "~Delicious...~ ~souls...~",
+      "~Reap...~ ~the~ ~fallen...~"
+    ]
   }
 }
