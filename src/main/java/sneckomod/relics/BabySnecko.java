@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.vfx.CustomAnimatedNPC;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
+import sneckomod.actions.BabySneckoAttackAction;
 import sneckomod.patches.BottledD8Patch;
 import theHexaghost.util.TextureLoader;
 
@@ -34,7 +35,7 @@ public class BabySnecko extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("BabySnecko.png"));
 
 
-    private CustomAnimatedNPC baby;
+    public CustomAnimatedNPC baby;
 
     public BabySnecko() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
@@ -43,7 +44,7 @@ public class BabySnecko extends CustomRelic {
 
     public void atPreBattle() {
         this.flash();
-        this.baby = new CustomAnimatedNPC(AbstractDungeon.player.hb.cX - 250F * Settings.scale, AbstractDungeon.player.hb.cY + 160.0F * Settings.scale, "sneckomodResources/images/monsters/BabySnecko/BabySnecko.atlas", "sneckomodResources/images/monsters/BabySnecko/BabySnecko.json", "idle", false, 0);
+        this.baby = new CustomAnimatedNPC(AbstractDungeon.player.hb.cX + 230F * Settings.scale, AbstractDungeon.player.hb.cY + 130.0F * Settings.scale, "sneckomodResources/images/monsters/BabySnecko/BabySnecko.atlas", "sneckomodResources/images/monsters/BabySnecko/BabySnecko.json", "idle", false, 0);
         this.baby.customFlipX = true;
         this.baby.setTimeScale(0.9F);
     }
@@ -52,12 +53,10 @@ public class BabySnecko extends CustomRelic {
     @Override
     public void atTurnStartPostDraw() {
         super.atTurnStartPostDraw();
-        this.baby.state.setAnimation(0, "boop", false);
-        this.baby.state.addAnimation(0, "idle", true, 0.0f);
         AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
 
         if (m != null) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, 5, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractDungeon.actionManager.addToBottom(new BabySneckoAttackAction(m, this));
         }
     }
 
@@ -73,14 +72,13 @@ public class BabySnecko extends CustomRelic {
     @Override
     public void update() {
         super.update();
-        if (this.baby != null) this.baby.update();
+        if (this.baby != null){
+            this.baby.update();
+        }
     }
 
-    @Override
-    public void renderInTopPanel(SpriteBatch sb) {
-        super.renderInTopPanel(sb);
+    public void renderBaby(SpriteBatch sb) {
         //SlimeboundMod.logger.info("Rendering");
-        super.render(sb);
         if (this.baby != null){
             this.baby.render(sb);
            // SlimeboundMod.logger.info("Rendering baby snecko " + this.baby.skeleton.getX() + " " + this.baby.skeleton.getY());
