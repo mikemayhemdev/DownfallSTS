@@ -68,15 +68,6 @@ public class DefensiveMode extends AbstractStance {
     }// 50
 
     @Override
-    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        if (type == DamageInfo.DamageType.NORMAL) {
-            return damage * 0.75F;
-        } else {
-            return damage;
-        }
-    }
-
-    @Override
     public void updateDescription() {
         this.description = GuardianCharacter.charStrings.TEXT[5];
     }
