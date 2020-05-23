@@ -22,10 +22,10 @@ public class CurlUp extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 0;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 2;
     private static final int UPGRADE_BONUS = 3;
     private static final int MULTICOUNT = 0;
     private static final int SOCKETS = 0;
