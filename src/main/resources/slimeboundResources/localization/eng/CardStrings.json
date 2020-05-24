@@ -46,7 +46,7 @@
   "Slimebound:Split": {
     "NAME": "Split",
     "DESCRIPTION": "slimeboundmod:Split into a random slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into 2 random slimes."
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into !M! random slimes. NL Exhaust."
   },
   "Slimebound:SuperSplit": {
     "NAME": "Super Split",
@@ -69,7 +69,7 @@
   "Slimebound:Teamwork": {
     "NAME": "Teamwork",
     "DESCRIPTION": "Gain !B! Block X times. NL Gain X slimeboundmod:Potency. NL slimeboundmod:Command X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Gain X slimeboundmod:Potency. NL slimeboundmod:Command X times. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. NL Gain X+1 slimeboundmod:Potency. NL slimeboundmod:Command X+1 times. NL Exhaust."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
@@ -90,7 +90,8 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Self-Forming Goo",
-    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy and gain 2 Block at the start of your next turn."
+    "DESCRIPTION": "Whenever you slimeboundmod:Absorb a Slime, gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Absorb a Slime, gain !M! Dexterity."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
@@ -145,8 +146,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Morph a card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL slimeboundmod:Morph a card in your hand. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb your newest Slime. NL If you do, gain !M! slimeboundmod:Potency and heal 4 HP. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -154,7 +154,7 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "Draw a card. NL slimeboundmod:Morph all cards in your hand. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain 1 slimeboundmod:Potency and !B! Block for each Slime slimeboundmod:Absorbed. NL Exhaust."
   },
   "Slimebound:SoTasty": {
     "NAME": "SO TASTY!",
@@ -426,7 +426,8 @@
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
   },
   "Slimebound:Nibble": {
     "NAME": "Nibble",

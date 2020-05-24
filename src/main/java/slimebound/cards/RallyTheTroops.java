@@ -36,6 +36,7 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
     public RallyTheTroops() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseDamage = 9;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -46,7 +47,9 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            exhaust = false;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

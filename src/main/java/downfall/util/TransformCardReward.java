@@ -39,7 +39,7 @@ public class TransformCardReward extends RewardItem {
         if (tmp.group.isEmpty()) {// 41
             downfallMod.choosingTransformCard = false;
         } else {
-            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), 1, "Choose a Card to Remove", false, true, false, false);// 47 48
+            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), 1, "Choose a Card to Transform", false, true, false, false);// 47 48
         }
         return true;
     }

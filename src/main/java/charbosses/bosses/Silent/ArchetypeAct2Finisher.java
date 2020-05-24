@@ -90,7 +90,6 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
         addToDeck(new EnDefendGreen(), true);
         addToDeck(new EnDefendGreen());
         addToDeck(new EnBladeDance(), true);
-
     }
 
     @Override

@@ -263,8 +263,6 @@ public abstract class SpawnedSlime
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
 
         triggerEvokeAnimation();
-
-
     }
 
 

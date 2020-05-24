@@ -24,8 +24,9 @@ public class CoordinateAction extends AbstractGameAction {
     private int energyOnUse = -1;
     private int slimesToTrigger = 0;
     private int block;
+    private boolean upgraded;
 
-    public CoordinateAction(AbstractPlayer p, AbstractMonster m, int slimesToTrigger, boolean freeToPlayOnce, int energyOnUse, int block) {
+    public CoordinateAction(AbstractPlayer p, AbstractMonster m, int slimesToTrigger, boolean freeToPlayOnce, int energyOnUse, int block, boolean upgraded) {
         this.p = p;
         this.m = m;
         this.freeToPlayOnce = freeToPlayOnce;
@@ -34,6 +35,7 @@ public class CoordinateAction extends AbstractGameAction {
         this.slimesToTrigger = slimesToTrigger;
         this.energyOnUse = energyOnUse;
         this.block = block;
+        this.upgraded = upgraded;
     }
 
     public void update() {
@@ -46,6 +48,8 @@ public class CoordinateAction extends AbstractGameAction {
             effect += 2;
             this.p.getRelic("Chemical X").flash();
         }
+        if (upgraded)
+            effect++;
 
         if (effect > 0) {
 

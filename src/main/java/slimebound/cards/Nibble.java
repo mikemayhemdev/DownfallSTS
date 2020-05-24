@@ -49,7 +49,7 @@ public class Nibble extends AbstractSlimeboundCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-        possList.removeIf(c -> (c.color != AbstractDungeon.player.getCardColor() || c.cost > 0) || c.hasTag(AbstractCard.CardTags.HEALING));
+        possList.removeIf(c -> (c.color != AbstractDungeon.player.getCardColor() || c.cost > 0) || c.hasTag(AbstractCard.CardTags.HEALING) || c.cardID.equals(ID));
         AbstractCard c = possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
         if (upgraded) c.upgrade();
         this.addToBot(new MakeTempCardInHandAction(c, true));

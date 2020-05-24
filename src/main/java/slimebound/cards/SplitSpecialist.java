@@ -52,14 +52,14 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("Slimebound:SplotBronze", "Split: Bronze", expansionContentMod.makeCardPath("QuickAutomaton.png"), "Split into a Bronze_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotGhostflame", "Split: Ghostflame", expansionContentMod.makeCardPath("QuickHexa.png"), "Split into a Ghostflame_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotTorchhead", "Split: Torchhead", expansionContentMod.makeCardPath("QuickCollector.png"), "Split into a Torchhead_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotCultist", "Split: Cultist", expansionContentMod.makeCardPath("QuickAwakened.png"), "Split into a Cultist_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotProtector", "Split: Protector", expansionContentMod.makeCardPath("QuickGuardian.png"), "Split into a Protector_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotInsulting", "Split: Insulting", expansionContentMod.makeCardPath("QuickChamp.png"), "Split into an Insulting_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotAncient", "Split: Ancient", expansionContentMod.makeCardPath("QuickAncients.png"), "Split into an Ancient_Slime."));
-        cardList.add(new OctoChoiceCard("Slimebound:SplotSlowing", "Split: Time", expansionContentMod.makeCardPath("QuickTimeEater.png"), "Split into a Time_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotBronze", "Split: Bronze", expansionContentMod.makeCardPath("QuickAutomaton.png"), "slimeboundmod:Split into a slimeboundmod:Bronze_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotGhostflame", "Split: Ghostflame", expansionContentMod.makeCardPath("QuickHexa.png"), "slimeboundmod:Split into a slimeboundmod:Ghostflame_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotTorchhead", "Split: Torchhead", expansionContentMod.makeCardPath("QuickCollector.png"), "slimeboundmod:Split into a slimeboundmod:Torchhead_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotCultist", "Split: Cultist", expansionContentMod.makeCardPath("QuickAwakened.png"), "slimeboundmod:Split into a slimeboundmod:Cultist_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotProtector", "Split: Protector", expansionContentMod.makeCardPath("QuickGuardian.png"), "slimeboundmod:Split into a slimeboundmod:Protector_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotInsulting", "Split: Insulting", expansionContentMod.makeCardPath("QuickChamp.png"), "slimeboundmod:Split into an slimeboundmod:Insulting_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotAncient", "Split: Ancient", expansionContentMod.makeCardPath("QuickAncients.png"), "slimeboundmod:Split into an slimeboundmod:Ancient_Slime."));
+        cardList.add(new OctoChoiceCard("Slimebound:SplotSlowing", "Split: Time", expansionContentMod.makeCardPath("QuickTimeEater.png"), "slimeboundmod:Split into a Tslimeboundmod:ime_Slime."));
         ArrayList<OctoChoiceCard> realList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             realList.add(cardList.remove(AbstractDungeon.cardRandomRng.random(cardList.size() - 1)));

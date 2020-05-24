@@ -1,7 +1,9 @@
 package slimebound.cards;
 
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,8 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.actions.MorphCardAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.PotencyPower;
 
 
 public class Repurpose extends AbstractSlimeboundCard {
@@ -24,8 +26,6 @@ public class Repurpose extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -38,16 +38,16 @@ public class Repurpose extends AbstractSlimeboundCard {
 
     public Repurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
-
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
+        this.baseMagicNumber = magicNumber = 2;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-        AbstractDungeon.actionManager.addToBottom(new MorphCardAction(p, p, this.magicNumber, false, true, true));
+        addToBot(new EvokeOrbAction(1));
+        if (AbstractDungeon.player.hasOrb()) {
+            addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
+            addToBot(new HealAction(p, p, 4));
+        }
     }
 
     public AbstractCard makeCopy() {
@@ -57,9 +57,7 @@ public class Repurpose extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(1);
         }
     }
 }

@@ -129,8 +129,8 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
         AbstractCard c2 = new DivideAndConquerDivide();
         if (upgraded) c2.upgrade();
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c2));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
 
     }
 
@@ -141,11 +141,10 @@ public class DivideAndConquer extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-
-
+            conker.upgrade();
+            divvy.upgrade();
         }
     }
 }

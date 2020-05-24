@@ -34,13 +34,11 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
 
     public SelfFormingGoo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.slimed = this.baseSlimed = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfFormingGooPower(p, p, 1), 1));
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfFormingGooPower(p, 1), 1));
     }
 
     public AbstractCard makeCopy() {
@@ -50,8 +48,8 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeBaseCost(0);
-
+            isInnate = true;
+            rawDescription = UPGRADED_DESCRIPTION;
 
         }
     }

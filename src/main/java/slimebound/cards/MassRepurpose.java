@@ -1,16 +1,22 @@
 package slimebound.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.defect.EvokeAllOrbsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.actions.MassRepurposeAction;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.PotencyPower;
 
 
 public class MassRepurpose extends AbstractSlimeboundCard {
@@ -23,9 +29,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -38,29 +42,24 @@ public class MassRepurpose extends AbstractSlimeboundCard {
 
     public MassRepurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
-
-        this.baseMagicNumber = 3;
-        this.magicNumber = this.baseMagicNumber;
+        baseBlock = 4;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-
-        AbstractDungeon.actionManager.addToBottom(new MassRepurposeAction(p));
-
-
-    }
-
-    public AbstractCard makeCopy() {
-        return new MassRepurpose();
+        addToBot(new EvokeAllOrbsAction());
+        for (AbstractOrb o : p.orbs) {
+            if (o instanceof SpawnedSlime) {
+                addToBot(new GainBlockAction(p, block));
+                addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, 1), 1));
+            }
+        }
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBlock(2);
         }
     }
 }

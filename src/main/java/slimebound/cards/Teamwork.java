@@ -26,8 +26,6 @@ public class Teamwork extends AbstractSlimeboundCard {
 
     private static final CardStrings cardStrings;
     private static final int COST = -1;
-    private static final int POWER = 6;
-    private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -39,20 +37,15 @@ public class Teamwork extends AbstractSlimeboundCard {
 
     public Teamwork() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
         baseBlock = 3;
-        // this.tags.add(CardTags.STRIKE);
-        //this.isMultiDamage = true;
         this.exhaust = true;
-
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.energyOnUse < EnergyPanel.totalCount) {
             this.energyOnUse = EnergyPanel.totalCount;
         }
-        AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse, block));
+        AbstractDungeon.actionManager.addToBottom(new CoordinateAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse, block, upgraded));
 
     }
 
@@ -60,12 +53,10 @@ public class Teamwork extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
-
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
-
-
 }
 
 

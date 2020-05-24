@@ -145,11 +145,10 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
-
-
+            servo.upgrade();
+            protecto.upgrade();
         }
     }
 }
