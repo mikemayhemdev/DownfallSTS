@@ -59,6 +59,7 @@ import slimebound.potions.SlimyTonguePotion;
 import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.powers.AcidTonguePowerUpgraded;
+import slimebound.powers.DuplicatedFormNoHealPower;
 import slimebound.relics.*;
 
 import java.util.ArrayList;
@@ -661,6 +662,9 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 soundPlayed = true;
             }
             s.triggerEvokeAnimation();
+            if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID)){
+                AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID).onVictory();
+            }
 
             s.noRender = true;
         }

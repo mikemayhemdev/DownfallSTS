@@ -29,7 +29,12 @@ public class MoaiHead_Evil extends AbstractImageEvent {
         }
 
         this.imageEventText.setDialogOption(OPTIONS[0] + this.hpAmt + OPTIONS[1]);
-        this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldAmount + OPTIONSALT[1] + this.hpAmt + OPTIONSALT[2]);
+
+        if (AbstractDungeon.player.gold >= this.goldAmount) {
+            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldAmount + OPTIONSALT[1] + this.hpAmt + OPTIONSALT[2]);
+        } else {
+            this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldAmount + OPTIONSALT[4], true);
+        }
 
         this.imageEventText.setDialogOption(OPTIONS[4]);
     }

@@ -17,7 +17,7 @@
     "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
   },
   "expansioncontent:Sear": {
-    "NAME": "Sear",
+    "NAME": "Greater Sear",
     "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! Burn. NL Exhaust."
   },
   "expansioncontent:GhostWheel": {
@@ -96,7 +96,7 @@
     "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
   },
   "expansioncontent:PolyBeam": {
-    "NAME": "Poly Beam",
+    "NAME": "Twin Beam",
     "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },

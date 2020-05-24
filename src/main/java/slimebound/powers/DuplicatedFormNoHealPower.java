@@ -1,6 +1,7 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -21,6 +22,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
     private int maxHpTempLoss = 0;
+    private boolean victoryUsed;
 
 
     public DuplicatedFormNoHealPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -81,6 +83,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
         //if (p.currentHealth > (p.maxHealth/2)){
         //  AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player,AbstractDungeon.player,p.currentHealth-(p.maxHealth/2)));
+        AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, this.amount, DamageInfo.DamageType.HP_LOSS));
 
         updateCurrentHealth();
 
@@ -92,6 +95,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
     public void stackPower(int stackAmount) {
         //SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
+        if (stackAmount > 0) AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, stackAmount, DamageInfo.DamageType.HP_LOSS));
 
         this.fontScale = 8.0F;
         this.amount += stackAmount;
@@ -126,9 +130,12 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     }
 
     public void onVictory() {
-        this.maxHpTempLoss = this.amount;
-        this.amount = 0;
-        restoreMaxHP();
+        if (!victoryUsed) {
+            this.maxHpTempLoss = this.amount;
+            this.amount = 0;
+            restoreMaxHP();
+            victoryUsed = true;
+        }
     }
 }
 

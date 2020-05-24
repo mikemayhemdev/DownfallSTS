@@ -39,10 +39,10 @@ public class LadyInBlue extends AbstractMonster {
                 setHp(100);
                 break;
             case 2:
-                setHp(150);
+                setHp(125);
                 break;
             case 3:
-                setHp(175);
+                setHp(150);
                 break;
         }
 
@@ -133,13 +133,13 @@ public class LadyInBlue extends AbstractMonster {
         } else {
             switch (turnNum) {
                 case 0:
-                    this.setMove((byte) 1, Intent.ATTACK_BUFF, this.damage.get(0).base);
-                    break;
-                case 1:
                     this.setMove((byte) 2, Intent.ATTACK_DEFEND, this.damage.get(1).base);
                     break;
-                case 2:
+                case 1:
                     this.setMove((byte) 3, Intent.BUFF);
+                    break;
+                case 2:
+                    this.setMove((byte) 1, Intent.ATTACK_BUFF, this.damage.get(0).base);
                     break;
                 case 3:
                     if (!usedDebuffs)

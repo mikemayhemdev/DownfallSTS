@@ -22,7 +22,7 @@ public class Flail extends AbstractExpansionCard {
     public Flail() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
-        tags.add(expansionContentMod.STUDY_CHAMP);
+        tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
 
         baseDamage = DAMAGE;

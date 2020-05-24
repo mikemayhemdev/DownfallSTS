@@ -33,17 +33,17 @@ public class QuickStudy extends AbstractExpansionCard {
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         if (AbstractDungeon.player.chosenClass != GuardianEnum.GUARDIAN)
-            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("0"), "Guardian", expansionContentMod.makeCardPath("QuickGuardian.png"), "Obtain Guardian expansioncontent:Boss cards."));
+            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("0"), "Guardian", expansionContentMod.makeCardPath("QuickGuardian.png"), "Obtain Guardian expansioncontent:Boss cards.", new DefensiveMode(), new ChargeUp(), new GuardianWhirl()));
         if (AbstractDungeon.player.chosenClass != TheHexaghost.Enums.THE_SPIRIT)
-            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("1"), "Hexaghost", expansionContentMod.makeCardPath("QuickHexa.png"), "Obtain Hexaghost expansioncontent:Boss cards."));
+            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("1"), "Hexaghost", expansionContentMod.makeCardPath("QuickHexa.png"), "Obtain Hexaghost expansioncontent:Boss cards.", new Hexaburn(), new GhostWheel(), new Sear()));
         if (AbstractDungeon.player.chosenClass != SlimeboundEnum.SLIMEBOUND)
-            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("2"), "Slime", expansionContentMod.makeCardPath("QuickSlime.png"), "Obtain Slime Boss expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("3"), "Automaton", expansionContentMod.makeCardPath("QuickAutomaton.png"), "Obtain Automaton expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("4"), "Champ", expansionContentMod.makeCardPath("QuickChamp.png"), "Obtain Champ expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("5"), "Collector", expansionContentMod.makeCardPath("QuickCollector.png"), "Obtain Collector expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("6"), "TimeEater", expansionContentMod.makeCardPath("QuickTimeEater.png"), "Obtain Time Eater expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("7"), "Awakened", expansionContentMod.makeCardPath("QuickAwakened.png"), "Obtain Awakened One expansioncontent:Boss cards."));
-        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("8"), "Ancients", expansionContentMod.makeCardPath("QuickAncients.png"), "Obtain Ancients expansioncontent:Boss cards."));
+            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("2"), "Slime", expansionContentMod.makeCardPath("QuickSlime.png"), "Obtain Slime Boss expansioncontent:Boss cards.", new PrepareCrush(), new SlimeTackle(), new GoopSpray()));
+        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("3"), "Automaton", expansionContentMod.makeCardPath("QuickAutomaton.png"), "Obtain Automaton expansioncontent:Boss cards.", new BronzeBeam(), new HyperBeam(), new Flail()));
+        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("4"), "Champ", expansionContentMod.makeCardPath("QuickChamp.png"), "Obtain Champ expansioncontent:Boss cards.", new FaceSlap(), new LastStand(), new DefensiveStance()));
+        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("5"), "Collector", expansionContentMod.makeCardPath("QuickCollector.png"), "Obtain Collector expansioncontent:Boss cards.", new Collect(), new Torchfire(), new YouAreMine()));
+        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("6"), "TimeEater", expansionContentMod.makeCardPath("QuickTimeEater.png"), "Obtain Time Eater expansioncontent:Boss cards.", new ManipulateTime(), new TimeRipple(), new Chronoboost()));
+        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("7"), "Awakened", expansionContentMod.makeCardPath("QuickAwakened.png"), "Obtain Awakened One expansioncontent:Boss cards.", new CaCaw(), new AwakenDeath(), new DarkVoid()));
+        cardList.add(new OctoChoiceCard(expansionContentMod.makeID("8"), "Ancients", expansionContentMod.makeCardPath("QuickAncients.png"), "Obtain Ancients expansioncontent:Boss cards.", new DonusPower(), new DecasProtection(), new PolyBeam()));
         ArrayList<OctoChoiceCard> realList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             realList.add(cardList.remove(AbstractDungeon.cardRandomRng.random(cardList.size() - 1)));

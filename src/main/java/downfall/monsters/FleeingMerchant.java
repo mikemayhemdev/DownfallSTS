@@ -153,15 +153,43 @@ public class FleeingMerchant extends AbstractMonster {
             this.addToBot(new VFXAction(new SmokeBombEffect(hb.cX, hb.cY)));
             this.addToBot(new EscapeAction(this));
             this.addToBot(new SetMoveAction(this, ESCAPE, Intent.ESCAPE));
+
+            int roll = MathUtils.random(2);
+            if (roll == 0) {
+                CardCrawlGame.sound.play("VO_MERCHANT_KA");
+            } else if (roll == 1) {
+                CardCrawlGame.sound.play("VO_MERCHANT_KB");
+            } else {
+                CardCrawlGame.sound.play("VO_MERCHANT_KC");
+            }
         } else if (nextMove == ATTACK) {
             this.addToBot(new MerchantThrowGoldAction(AbstractDungeon.player, this, 5, false));
             this.addToBot(new ForceWaitAction(1.6f));
             for (int i = 0; i < 5; ++i) {
                 this.addToBot(new DamageAction(AbstractDungeon.player, damage.get(0), true));
             }
+
+            int roll = MathUtils.random(2);
+            if (roll == 0) {
+                CardCrawlGame.sound.play("VO_MERCHANT_MA");
+            } else if (roll == 1) {
+                CardCrawlGame.sound.play("VO_MERCHANT_MB");
+            } else {
+                CardCrawlGame.sound.play("VO_MERCHANT_MC");
+            }
         } else if (nextMove == DEFEND) {
             this.addToBot(new GainBlockAction(this, this, 30));
             this.addToBot(new ApplyPowerAction(this, this, new NoBlockPower(this, 1, true), 1));
+
+
+            int roll = MathUtils.random(2);
+            if (roll == 0) {
+                CardCrawlGame.sound.play("VO_MERCHANT_2A");
+            } else if (roll == 1) {
+                CardCrawlGame.sound.play("VO_MERCHANT_2B");
+            } else {
+                CardCrawlGame.sound.play("VO_MERCHANT_2C");
+            }
         } else if (nextMove == SOULSTEAL) {
             this.addToBot((new VFXAction(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX, this.hb.cY), 0.5F)));
 
@@ -174,7 +202,14 @@ public class FleeingMerchant extends AbstractMonster {
                 CURRENT_SOULS += AbstractDungeon.player.gold;
             }
             this.addToBot(new LoseGoldAction(15));
-
+            int roll = MathUtils.random(2);
+            if (roll == 0) {
+                CardCrawlGame.sound.play("VO_MERCHANT_3A");
+            } else if (roll == 1) {
+                CardCrawlGame.sound.play("VO_MERCHANT_3B");
+            } else {
+                CardCrawlGame.sound.play("VO_MERCHANT_3C");
+            }
         }
 
         if (turn >= 0) {
@@ -222,6 +257,7 @@ public class FleeingMerchant extends AbstractMonster {
     @Override
     public void escape() {
         super.escape();
+
     }
 
     @Override

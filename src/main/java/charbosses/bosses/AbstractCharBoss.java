@@ -870,6 +870,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         super.die();
 
+        if (this.currentHealth <= 0) {
+        useFastShakeAnimation(5.0F);
+        CardCrawlGame.screenShake.rumble(4.0F);
+        onBossVictoryLogic();
+        }
+
     }
 
 

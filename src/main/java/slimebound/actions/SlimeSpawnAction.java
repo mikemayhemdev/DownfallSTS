@@ -97,7 +97,6 @@ public class SlimeSpawnAction extends AbstractGameAction {
                         SlimeboundMod.disabledStrikeVFX = true;
                     }
                     //SlimeboundMod.logger.info("No buffer, proceeding");
-                    AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, currentAmount, DamageInfo.DamageType.HP_LOSS));
 
 
                     //AbstractDungeon.player.damageFlash = true;

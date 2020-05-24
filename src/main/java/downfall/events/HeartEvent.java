@@ -1,6 +1,7 @@
 package downfall.events;
 
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.blights.*;
@@ -68,6 +69,7 @@ public class HeartEvent extends AbstractEvent {
             this.npc = new CustomAnimatedNPC(1334.0F * Settings.scale, AbstractDungeon.floorY + 200.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0);
         }
         this.npc.portalRenderActive = true;
+        this.npc.changeBorderColor(Color.MAROON);
 
         this.roomEventText.clear();
         this.playSfx();
