@@ -47,17 +47,15 @@ public class CorruptAction extends AbstractGameAction {
                 return;
             }
 
-            int i;
             if (!this.anyNumber && this.p.hand.size() <= this.amount) {
                 this.amount = this.p.hand.size();
                 numExhausted = this.amount;
-                i = this.p.hand.size();
+                int i = this.p.hand.size();
 
-                for (i = 0; i < i; ++i) {
+                for (int q = 0; q < i; ++q) {
                     AbstractCard c = this.p.hand.getTopCard();
                     this.p.hand.moveToExhaustPile(c);
                     AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, false, true));
-
                 }
 
                 CardCrawlGame.dungeon.checkForPactAchievement();
@@ -71,7 +69,7 @@ public class CorruptAction extends AbstractGameAction {
                 return;
             }
 
-            for (i = 0; i < this.amount; ++i) {
+            for (int i = 0; i < this.amount; ++i) {
                 this.p.hand.moveToExhaustPile(this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng));
             }
 
@@ -79,10 +77,7 @@ public class CorruptAction extends AbstractGameAction {
         }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-            Iterator var4 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
-
-            while (var4.hasNext()) {
-                AbstractCard c = (AbstractCard) var4.next();
+            for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 this.p.hand.moveToExhaustPile(c);
                 AbstractDungeon.actionManager.addToBottom(new RandomCardWithTagAction(upgraded, expansionContentMod.STUDY, false, true));
 

@@ -6,9 +6,14 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import guardian.cards.AbstractGuardianCard;
+import guardian.patches.GuardianEnum;
+import slimebound.cards.AbstractSlimeboundCard;
+import slimebound.patches.SlimeboundEnum;
+import theHexaghost.TheHexaghost;
+import theHexaghost.cards.AbstractHexaCard;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map;
 
 
@@ -41,12 +46,11 @@ public class RandomCardWithTagAction extends AbstractGameAction {
 
     public void update() {
 
-        ArrayList<String> tmp = new ArrayList();
-        Iterator var3 = CardLibrary.cards.entrySet().iterator();
+        ArrayList<String> tmp = new ArrayList<>();
 
-        while (var3.hasNext()) {
-            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
-            if (c.getValue().hasTag(tag)) {
+        for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
+            if (c.getValue().hasTag(tag) && (!(c instanceof AbstractSlimeboundCard && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND)) && (!(c instanceof AbstractGuardianCard && AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN)) && (!(c instanceof AbstractHexaCard && AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT))) {
                 tmp.add(c.getKey());
             }
         }
