@@ -2,9 +2,11 @@ package charbosses.bosses.Ironclad;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.anticards.ShieldSmash;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
@@ -47,6 +49,11 @@ public class CharBossIronclad extends AbstractCharBoss {
         //this.chosenArchetype = archetypes.get(AbstractDungeon.monsterRng.random(archetypes.size() - 1));
 
         //this.chosenArchetype.simulateBuild(AbstractCharBoss.boss);
+    }
+
+    @Override
+    public AbstractCard anticard() {
+        return new ShieldSmash();
     }
 
 }

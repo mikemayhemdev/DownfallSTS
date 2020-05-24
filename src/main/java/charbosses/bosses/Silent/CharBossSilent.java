@@ -2,9 +2,11 @@ package charbosses.bosses.Silent;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.cards.anticards.Antidote;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
@@ -24,7 +26,6 @@ public class CharBossSilent extends AbstractCharBoss {
         this.energyString = "[G]";
     }
 
-
     @Override
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
@@ -39,5 +40,10 @@ public class CharBossSilent extends AbstractCharBoss {
         if (AbstractDungeon.ascensionLevel >= 19) {
             archetype.initializeBonusRelic();
         }
+    }
+
+    @Override
+    public AbstractCard anticard() {
+        return new Antidote();
     }
 }

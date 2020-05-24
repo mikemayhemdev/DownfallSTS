@@ -33,7 +33,7 @@ public class HeartBlessingBlue extends CustomRelic {
         if (AbstractDungeon.actNum == 3 && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractCharBoss.boss.chosenArchetype.anticard().makeCopy()));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractCharBoss.boss.anticard().makeCopy()));
         }
     }
 }

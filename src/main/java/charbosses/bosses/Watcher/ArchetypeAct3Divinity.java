@@ -121,10 +121,6 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         addToDeck(new EnDevotion(), false);
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new PeaceOut();
-    }
 
     @Override
     public void initializeBonusRelic() {

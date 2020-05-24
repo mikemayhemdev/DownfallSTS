@@ -102,10 +102,6 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new Debug();
-    }
 
     @Override
     public void initializeBonusRelic() {

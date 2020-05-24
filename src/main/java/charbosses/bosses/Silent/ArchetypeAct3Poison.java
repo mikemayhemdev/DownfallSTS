@@ -94,10 +94,7 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
         addToDeck(new EnDefendGreen());
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new Antidote();
-    }
+
 
     @Override
     public void initializeBonusRelic() {

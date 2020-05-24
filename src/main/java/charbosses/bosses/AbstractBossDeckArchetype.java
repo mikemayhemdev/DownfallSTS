@@ -79,9 +79,7 @@ public abstract class AbstractBossDeckArchetype {
 
     public abstract void initializeBonusRelic();
 
-    public AbstractCard anticard() {
-        return new Shiv();
-    }
+
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
         this.ID = id;

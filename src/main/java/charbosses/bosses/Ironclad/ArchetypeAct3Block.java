@@ -100,10 +100,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         addToDeck(new EnDefendRed(), true);
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new ShieldSmash();
-    }
+
 
     @Override
     public void initializeBonusRelic() {
