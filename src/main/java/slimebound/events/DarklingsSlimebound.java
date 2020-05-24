@@ -20,7 +20,7 @@ import slimebound.cards.Darklings;
 
 public class DarklingsSlimebound extends AbstractEvent {
     private static final Logger logger = LogManager.getLogger(DarklingsSlimebound.class.getName());
-    public static final String ID = "DarklingsSlimebound";
+    public static final String ID = "Slimebound:Darklings";
     private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
@@ -74,7 +74,7 @@ public class DarklingsSlimebound extends AbstractEvent {
     }// 108
 
     static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("DarklingsSlimebound");// 28
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);// 28
         NAME = eventStrings.NAME;// 29
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;// 30
         OPTIONS = eventStrings.OPTIONS;// 31
