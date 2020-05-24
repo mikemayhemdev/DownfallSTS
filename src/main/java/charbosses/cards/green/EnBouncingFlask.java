@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.PotionBounceEffect;
 
+import java.util.ArrayList;
+
 public class EnBouncingFlask extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Deadly Poison";
     private static final CardStrings cardStrings;
@@ -23,6 +25,11 @@ public class EnBouncingFlask extends AbstractBossCard {
         super(ID, EnBouncingFlask.cardStrings.NAME, "green/attack/bouncing_flask", 2, EnBouncingFlask.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return magicNumber * 4;
     }
 
     @Override

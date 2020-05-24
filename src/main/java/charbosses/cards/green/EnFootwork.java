@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 
+import java.util.ArrayList;
+
 public class EnFootwork extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Footwork";
     private static final CardStrings cardStrings;
@@ -26,6 +28,11 @@ public class EnFootwork extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(m, magicNumber), magicNumber));
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 20;
     }
 
     @Override

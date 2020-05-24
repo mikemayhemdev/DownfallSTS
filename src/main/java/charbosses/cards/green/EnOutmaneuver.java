@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnOutmaneuver extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Outmaneuver";
     private static final CardStrings cardStrings;
@@ -31,7 +33,7 @@ public class EnOutmaneuver extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
+    public int getPriority(ArrayList<AbstractCard> hand) {
         return (this.upgraded ? 14 : 7);
     }
 

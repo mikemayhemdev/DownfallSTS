@@ -128,10 +128,6 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     }
 
-    public int getPriority(){  //DEPRECATED
-        return 0;
-    }
-
     public int getValue(){  //DEPRECATED
         return 0;
     }
@@ -326,11 +322,14 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     public boolean cardPlayable(final AbstractMonster m) {
-        if (((this.target == CardTarget.ENEMY || this.target == CardTarget.SELF_AND_ENEMY) && AbstractDungeon.player != null && AbstractDungeon.player.isDying) || AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.cantUseMessage = null;
-            return false;
+        if (m != null) {
+            if (((this.target == CardTarget.ENEMY || this.target == CardTarget.SELF_AND_ENEMY) && AbstractDungeon.player != null && AbstractDungeon.player.isDying) || AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                this.cantUseMessage = null;
+                return false;
+            }
+            return true;
         }
-        return true;
+        return false;
     }
 
     public void hover() {

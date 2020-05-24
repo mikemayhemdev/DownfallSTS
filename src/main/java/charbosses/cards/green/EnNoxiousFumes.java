@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnNoxiousFumes extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Noxious Fumes";
     private static final CardStrings cardStrings;
@@ -27,6 +29,11 @@ public class EnNoxiousFumes extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(m, m, new EnemyNoxiousFumesPower(m, magicNumber), magicNumber));
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 15;
     }
 
     @Override

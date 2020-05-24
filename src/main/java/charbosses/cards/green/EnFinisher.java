@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnFinisher extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Finisher";
     private static final CardStrings cardStrings;
@@ -49,29 +51,6 @@ public class EnFinisher extends AbstractBossCard {
         this.initializeDescription();
     }
 
-    @Override
-    public int getPriority() {
-        return 0;
-    }
-
-    @Override
-    public int getValue() {
-        int mult = 1;
-        if (AbstractCharBoss.boss != null && AbstractCharBoss.finishedSetup) {
-            mult += AbstractCharBoss.boss.attacksPlayedThisTurn;
-            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                if (c.type == CardType.ATTACK && c.cardID != this.cardID) {
-                    mult++;
-                }
-            }
-            if (AbstractCharBoss.boss.hasPower(EnemyInfiniteBladesPower.POWER_ID)) {
-                mult += AbstractCharBoss.boss.getPower(EnemyInfiniteBladesPower.POWER_ID).amount;
-            }
-        } else {
-            mult = 2;
-        }
-        return super.getValue() * mult;
-    }
 
     @Override
     public void onMoveToDiscard() {

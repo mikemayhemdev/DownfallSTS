@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnGlassKnife extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Glass Knife";
     private static final CardStrings cardStrings;
@@ -24,6 +26,7 @@ public class EnGlassKnife extends AbstractBossCard {
         this.baseDamage = 8;
     }
 
+
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -32,8 +35,8 @@ public class EnGlassKnife extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
-        return super.getValue() * 2;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() * 2;
     }
 
     @Override

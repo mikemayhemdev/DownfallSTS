@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnFlyingKnee extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Flying Knee";
     private static final CardStrings cardStrings;
@@ -30,6 +32,11 @@ public class EnFlyingKnee extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         this.addToBot(new ApplyPowerAction(m, m, new EnemyEnergizedPower(m, 1), 1));
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 4;
     }
 
     @Override

@@ -16,6 +16,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnMalaise extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Bane";
     private static final CardStrings cardStrings;
@@ -31,6 +33,11 @@ public class EnMalaise extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new EnemyMalaiseAction((AbstractCharBoss)m, this.upgraded, this.freeToPlayOnce, this.energyOnUse));// 31
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 100;
     }
 
     @Override

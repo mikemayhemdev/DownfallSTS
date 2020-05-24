@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
+import java.util.ArrayList;
+
 public class EnCripplingCloud extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Crippling Cloud";
     private static final CardStrings cardStrings;
@@ -23,6 +25,11 @@ public class EnCripplingCloud extends AbstractBossCard {
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         exhaust = true;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return magicNumber * 2;
     }
 
     @Override

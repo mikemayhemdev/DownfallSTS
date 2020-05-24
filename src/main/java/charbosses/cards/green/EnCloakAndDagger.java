@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PoisonPower;
+
+import java.util.ArrayList;
 
 public class EnCloakAndDagger extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Cloak And Dagger";
@@ -19,14 +22,16 @@ public class EnCloakAndDagger extends AbstractBossCard {
     }
 
     public EnCloakAndDagger() {
-        super(ID, EnCloakAndDagger.cardStrings.NAME, "green/skill/cloak_and_dagger", 1, EnCloakAndDagger.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
+        super(ID, EnCloakAndDagger.cardStrings.NAME, "green/skill/cloak_and_dagger", 1, EnCloakAndDagger.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.ATTACK_DEFEND);
         this.baseBlock = 6;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new EnShiv();
         this.magicValue = 4;
         baseDamage = 4;
-        isMultiDamage = true;
+        if (upgraded) {
+            isMultiDamage = true;
+        }
     }
 
     @Override
@@ -46,9 +51,12 @@ public class EnCloakAndDagger extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
-        this.magicValue = (new EnShiv()).getValue();
-        return super.getValue();
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        if (upgraded) {
+            return autoPriority() * 2;
+        } else {
+            return autoPriority();
+        }
     }
 
     @Override

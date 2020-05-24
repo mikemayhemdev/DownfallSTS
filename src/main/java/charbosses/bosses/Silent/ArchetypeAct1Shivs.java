@@ -58,7 +58,7 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         //Turn 2
         addToDeck(new EnFlyingKnee(), true);
         addToDeck(new EnDefendGreen());
-        addToDeck(new EnSurvivor());
+        addToDeck(new EnAccuracy());
 
         //Turn 3
         addToDeck(new EnCloakAndDagger(), true);

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
+import java.util.ArrayList;
+
 public class EnApparition extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Ghostly";
     private static final CardStrings cardStrings;
@@ -31,13 +33,8 @@ public class EnApparition extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
+    public int getPriority(ArrayList<AbstractCard> hand) {
         return 25;
-    }
-
-    @Override
-    public int getPriority() {
-        return super.getPriority() + 1 + (AbstractDungeon.player.hasPower(ThornsPower.POWER_ID) ? 1 : 0);
     }
 
     @Override

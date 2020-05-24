@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
+import java.util.ArrayList;
+
 public class EnDodgeAndRoll extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Dodge and Roll";
     private static final CardStrings cardStrings;
@@ -21,6 +23,11 @@ public class EnDodgeAndRoll extends AbstractBossCard {
     public EnDodgeAndRoll() {
         super(ID, EnDodgeAndRoll.cardStrings.NAME, "green/skill/dodge_and_roll", 1, EnDodgeAndRoll.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 4;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return this.block * 2;
     }
 
     @Override
@@ -37,10 +44,6 @@ public class EnDodgeAndRoll extends AbstractBossCard {
         }
     }
 
-    @Override
-    public int getValue() {
-        return super.getValue() * 2;
-    }
 
     @Override
     public AbstractCard makeCopy() {

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.WraithFormPower;
 
+import java.util.ArrayList;
+
 public class EnWraithForm extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Wraith Form";
     private static final CardStrings cardStrings;
@@ -36,6 +38,11 @@ public class EnWraithForm extends AbstractBossCard {
             this.upgradeName();
             upgradeMagicNumber(1);
         }
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 100;
     }
 
     @Override

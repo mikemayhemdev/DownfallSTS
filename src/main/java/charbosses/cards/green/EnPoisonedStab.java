@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
+import java.util.ArrayList;
+
 public class EnPoisonedStab extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Poisoned Stab";
     private static final CardStrings cardStrings;
@@ -32,6 +34,11 @@ public class EnPoisonedStab extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         this.addToBot(new ApplyPowerAction(p, m, new PoisonPower(p, m, this.magicNumber), this.magicNumber));
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 3;
     }
 
     @Override
