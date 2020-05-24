@@ -1,6 +1,7 @@
 package charbosses.cards.red;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.vfx.IronWaveReversedEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -35,7 +36,7 @@ public class EnIronWave extends AbstractBossCard {
         this.addToBot(new GainBlockAction(m, m, this.block));
         this.addToBot(new WaitAction(0.1f));
         if (p != null && m != null) {
-            this.addToBot(new VFXAction(new IronWaveEffect(m.hb.cX, m.hb.cY, p.hb.cX), 0.5f));
+            this.addToBot(new VFXAction(new IronWaveReversedEffect(p.hb.cX, p.hb.cY, p.hb.cX), 0.5f));
         }
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }

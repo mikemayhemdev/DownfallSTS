@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnPredator extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Predator";
     private static final CardStrings cardStrings;
@@ -31,6 +33,11 @@ public class EnPredator extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         this.addToBot(new ApplyPowerAction(m, m, new EnemyDrawCardNextTurnPower(m, 2), 2));
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 2;
     }
 
     @Override

@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
+import java.util.ArrayList;
+
 public class EnLegSweep extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Leg Sweep";
     private static final CardStrings cardStrings;
@@ -27,6 +29,11 @@ public class EnLegSweep extends AbstractBossCard {
         super(ID, EnLegSweep.cardStrings.NAME, "green/skill/leg_sweep", 2, EnLegSweep.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.DEFEND_DEBUFF);
         this.baseBlock = 11;
         this.baseMagicNumber = 2;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 3;
     }
 
     @Override

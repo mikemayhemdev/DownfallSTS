@@ -27,6 +27,10 @@ public class EnFlyingSleeves extends AbstractBossCard {
         super(ID, cardStrings.NAME, "purple/attack/flying_sleeves", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.PURPLE, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 4;
         this.selfRetain = true;
+
+        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber;
+        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.InfiniteBladesPower;
 
+import java.util.ArrayList;
+
 public class EnInfiniteBlades extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Infinite Blades";
     private static final CardStrings cardStrings;
@@ -23,6 +25,11 @@ public class EnInfiniteBlades extends AbstractBossCard {
         super(ID, EnInfiniteBlades.cardStrings.NAME, "green/power/infinite_blades", 1, EnInfiniteBlades.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.cardsToPreview = new EnShiv();
         this.limit = 2;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 15;
     }
 
     @Override

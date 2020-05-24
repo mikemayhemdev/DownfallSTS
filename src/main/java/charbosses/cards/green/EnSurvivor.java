@@ -28,10 +28,6 @@ public class EnSurvivor extends AbstractBossCard {
         this.addToBot(new EnemyDiscardAction(m, m, 1, false));
     }
 
-    @Override
-    public int getPriority() {
-        return super.getPriority() - 2;
-    }
 
     @Override
     public void upgrade() {

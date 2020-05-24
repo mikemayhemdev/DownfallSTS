@@ -467,7 +467,9 @@
     "OPTIONS": [
       "[Offer Souls] #rLose #r",
       " #rSouls. #gGain #g",
-      " #gMax #gHP and #gHeal #gto #gfull."
+      " #gMax #gHP and #gHeal #gto #gfull.",
+      "[Locked] Requires ",
+      " Souls."
     ]
   },
   "downfall:SensoryStone": {

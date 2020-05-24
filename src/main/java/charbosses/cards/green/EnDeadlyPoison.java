@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 
+import java.util.ArrayList;
+
 public class EnDeadlyPoison extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Deadly Poison";
     private static final CardStrings cardStrings;
@@ -22,6 +24,11 @@ public class EnDeadlyPoison extends AbstractBossCard {
         super(ID, EnDeadlyPoison.cardStrings.NAME, "green/skill/deadly_poison", 1, EnDeadlyPoison.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.DEBUFF);
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return magicNumber * 2;
     }
 
     @Override

@@ -105,9 +105,7 @@ public class ThrowGoldEffect extends AbstractGameEffect
             this.y = MathUtils.lerp(this.y, this.finalTargetY, Gdx.graphics.getDeltaTime() * 4.0F);
             if (!hitTarget && Math.abs(this.x - this.targetX) < 20.0F) {
                 hitTarget = true;
-                if (MathUtils.randomBoolean()) {
-                    CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
-                }
+                CardCrawlGame.sound.play("MONSTER_BOOK_STAB_3", 0.1F);
 
                 AbstractDungeon.effectsQueue.add(new ShineLinesEffect(this.x, this.y));
             }

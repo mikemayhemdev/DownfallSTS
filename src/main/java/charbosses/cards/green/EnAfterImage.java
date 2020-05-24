@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnAfterImage extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:After Image";
     private static final CardStrings cardStrings;
@@ -35,6 +37,11 @@ public class EnAfterImage extends AbstractBossCard {
             rawDescription = EnAfterImage.cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 30;
     }
 
     @Override

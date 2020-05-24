@@ -109,8 +109,8 @@ public class SoulStealParticle extends AbstractGameEffect {
                 }
             }
 
-            CardCrawlGame.sound.playAV("BLUNT_HEAVY", MathUtils.random(0.6F, 0.9F), 0.5F);
-            CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.SHORT, false);
+            //CardCrawlGame.sound.playAV("BLUNT_HEAVY", MathUtils.random(0.6F, 0.9F), 0.5F);
+            //CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.SHORT, false);
             this.isDone = true;
         }
 

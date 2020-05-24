@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 
+import java.util.ArrayList;
+
 public class EnBlur extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Blur";
     private static final CardStrings cardStrings;
@@ -21,6 +23,11 @@ public class EnBlur extends AbstractBossCard {
     public EnBlur() {
         super(ID, EnBlur.cardStrings.NAME, "green/skill/blur", 1, EnBlur.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 5;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 3;
     }
 
     @Override

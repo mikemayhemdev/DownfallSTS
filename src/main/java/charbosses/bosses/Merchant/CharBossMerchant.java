@@ -49,7 +49,7 @@ public class CharBossMerchant extends AbstractCharBoss {
     private boolean neowSpoke = false;
 
     public CharBossMerchant() {
-        super("Merchant", "downfall:Merchant", 200, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+        super("Merchant", "downfall:Merchant", 200, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
 
         if (downfallMod.tempAscensionHack){
             downfallMod.tempAscensionHack = false;
@@ -168,7 +168,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         sb.setColor(Color.WHITE);
         sb.draw(ImageMaster.MERCHANT_RUG_IMG, FleeingMerchant.DRAW_X, FleeingMerchant.DRAW_Y, 512 * Settings.scale, 512 * Settings.scale);
         //sb.draw(ImageMaster.loadImage(downfallMod.assetPath("images/monsters/merchant/onlyShadow/skeleton.png")), FleeingMerchant.DRAW_X, FleeingMerchant.DRAW_Y, 201F * Settings.scale, 51F * Settings.scale);
-        if (rezTimer <= 0F) renderGlow(sb);
+        if (rezTimer <= 0F && !this.isDying && !this.isDead) renderGlow(sb);
         super.render(sb);
     }
 

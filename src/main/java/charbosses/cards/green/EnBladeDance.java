@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnBladeDance extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Blade Dance";
     private static final CardStrings cardStrings;
@@ -18,7 +20,7 @@ public class EnBladeDance extends AbstractBossCard {
     }
 
     public EnBladeDance() {
-        super(ID, EnBladeDance.cardStrings.NAME, "green/skill/blade_dance", 1, EnBladeDance.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.NONE, AbstractMonster.Intent.BUFF);
+        super(ID, EnBladeDance.cardStrings.NAME, "green/skill/blade_dance", 1, EnBladeDance.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.NONE, AbstractMonster.Intent.ATTACK);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new EnShiv();
@@ -41,10 +43,10 @@ public class EnBladeDance extends AbstractBossCard {
     }
 
     @Override
-    public int getValue() {
-        this.magicValue = (new EnShiv()).getValue();
-        return super.getValue();
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() * 2;
     }
+
 
     @Override
     public AbstractCard makeCopy() {

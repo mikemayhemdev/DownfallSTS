@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnAccuracy extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Accuracy";
     private static final CardStrings cardStrings;
@@ -40,8 +42,8 @@ public class EnAccuracy extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority() {
-        return 3;
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 20;
     }
 
     @Override

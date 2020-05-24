@@ -1,5 +1,6 @@
 package downfall.patches;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -70,6 +71,8 @@ public class PostBossHeartChatPatch {
                         msg = msg + CardCrawlGame.languagePack.getCharacterString("HeartProceed").OPTIONS[1];
                     }
                     heart.portalRenderActive = true;
+
+                    heart.changeBorderColor(Color.MAROON);
                     behindPlayerPortal.portalRenderActive = true;
                     speechBubble = new TopLevelInfiniteSpeechBubble(heart.skeleton.getX() - (200F * Settings.scale), heart.skeleton.getY() + 150F * Settings.scale, msg);
                     AbstractDungeon.topLevelEffects.add(speechBubble);

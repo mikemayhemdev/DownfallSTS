@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnThousandCuts extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Thousand Cuts";
     private static final CardStrings cardStrings;
@@ -34,6 +36,11 @@ public class EnThousandCuts extends AbstractBossCard {
             this.upgradeName();
             upgradeMagicNumber(1);
         }
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return 25;
     }
 
     @Override

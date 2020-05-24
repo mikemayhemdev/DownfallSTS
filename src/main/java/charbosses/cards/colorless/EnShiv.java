@@ -23,7 +23,7 @@ public class EnShiv extends AbstractBossCard {
     }
 
     public EnShiv() {
-        super(ID, EnShiv.cardStrings.NAME, "colorless/attack/shiv", 0, EnShiv.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, EnShiv.cardStrings.NAME, "colorless/attack/shiv", 0, EnShiv.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         if (AbstractCharBoss.boss != null && AbstractCharBoss.boss.hasPower(EnemyAccuracyPower.POWER_ID)) {
             this.baseDamage = 4 + AbstractCharBoss.boss.getPower(EnemyAccuracyPower.POWER_ID).amount;
         } else {

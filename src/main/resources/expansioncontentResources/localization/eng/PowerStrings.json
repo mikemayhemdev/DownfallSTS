@@ -1,5 +1,5 @@
 {
-  "Slimebound:StudyAutomatonPower": {
+  "expansioncontent:StudyAutomatonPower": {
     "NAME": "Study Automaton",
     "DESCRIPTIONS": [
       "Gain a random Automaton card at the start of next turn.",
@@ -7,7 +7,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyAutomatonPowerUpgraded": {
+  "expansioncontent:StudyAutomatonPowerUpgraded": {
     "NAME": "Study Automaton+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Automaton card at the start of next turn.",
@@ -15,7 +15,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyAwakenedPower": {
+  "expansioncontent:StudyAwakenedPower": {
     "NAME": "Study Awakened One",
     "DESCRIPTIONS": [
       "Gain a random Awakened One card at the start of next turn.",
@@ -23,7 +23,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyAwakenedPowerUpgraded": {
+  "expansioncontent:StudyAwakenedPowerUpgraded": {
     "NAME": "Study Awakened One+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Awakened One card at the start of next turn.",
@@ -31,14 +31,14 @@
       " turns."
     ]
   },
-  "Slimebound:AwakenedOnePower": {
+  "expansioncontent:AwakenedOnePower": {
     "NAME": "Dark Ritual",
     "DESCRIPTIONS": [
       "Gain ",
       " Strength if this enemy does not attack on its turn."
     ]
   },
-  "Slimebound:StudyChampPower": {
+  "expansioncontent:StudyChampPower": {
     "NAME": "Study Champ",
     "DESCRIPTIONS": [
       "Gain a random Champ card at the start of next turn.",
@@ -46,7 +46,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyChampPowerUpgraded": {
+  "expansioncontent:StudyChampPowerUpgraded": {
     "NAME": "Study Champ+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Champ card at the start of next turn.",
@@ -54,7 +54,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyCollectorPower": {
+  "expansioncontent:StudyCollectorPower": {
     "NAME": "Study Collector",
     "DESCRIPTIONS": [
       "Gain a random Collector card at the start of next turn.",
@@ -62,7 +62,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyCollectorPowerUpgraded": {
+  "expansioncontent:StudyCollectorPowerUpgraded": {
     "NAME": "Study Collector+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Collector card at the start of next turn.",
@@ -70,7 +70,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyGuardianPower": {
+  "expansioncontent:StudyGuardianPower": {
     "NAME": "Study Guardian",
     "DESCRIPTIONS": [
       "Gain a random Guardian card at the start of next turn.",
@@ -78,7 +78,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyGuardianPowerUpgraded": {
+  "expansioncontent:StudyGuardianPowerUpgraded": {
     "NAME": "Study Guardian+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Guardian card at the start of next turn.",
@@ -86,7 +86,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyHexaghostPower": {
+  "expansioncontent:StudyHexaghostPower": {
     "NAME": "Study Hexaghost",
     "DESCRIPTIONS": [
       "Gain a random Hexaghost card at the start of next turn.",
@@ -94,7 +94,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyHexaghostPowerUpgraded": {
+  "expansioncontent:StudyHexaghostPowerUpgraded": {
     "NAME": "Study Hexaghost+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Hexaghost card at the start of next turn.",
@@ -102,7 +102,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyShapesPower": {
+  "expansioncontent:StudyShapesPower": {
     "NAME": "Study Donu & Deca",
     "DESCRIPTIONS": [
       "Gain a random Donu & Deca card at the start of next turn.",
@@ -110,7 +110,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyShapesPowerUpgraded": {
+  "expansioncontent:StudyShapesPowerUpgraded": {
     "NAME": "Study Donu & Deca+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Donu & Deca card at the start of next turn.",
@@ -118,7 +118,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyTimeEaterPower": {
+  "expansioncontent:StudyTimeEaterPower": {
     "NAME": "Study Time Eater",
     "DESCRIPTIONS": [
       "Gain a random Time Eater card at the start of next turn.",
@@ -126,7 +126,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudyTimeEaterPowerUpgraded": {
+  "expansioncontent:StudyTimeEaterPowerUpgraded": {
     "NAME": "Study Time Eater+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Time Eater card at the start of next turn.",
@@ -134,7 +134,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudySlimeBossPower": {
+  "expansioncontent:StudySlimeBossPower": {
     "NAME": "Study Slime Boss",
     "DESCRIPTIONS": [
       "Gain a random Slime Boss card at the start of next turn.",
@@ -142,7 +142,7 @@
       " turns."
     ]
   },
-  "Slimebound:StudySlimeBossPowerUpgraded": {
+  "expansioncontent:StudySlimeBossPowerUpgraded": {
     "NAME": "Study Slime Boss+",
     "DESCRIPTIONS": [
       "Gain a random Upgraded Slime Boss card at the start of next turn.",

@@ -70,7 +70,7 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
         addToDeck(new EnOutmaneuver());
 
         //Turn 3
-        addToDeck(new EnSurvivor());
+        addToDeck(new EnSlice());
         addToDeck(new EnInfiniteBlades());
         addToDeck(new EnDefendGreen());
         addToDeck(new EnDoubt());

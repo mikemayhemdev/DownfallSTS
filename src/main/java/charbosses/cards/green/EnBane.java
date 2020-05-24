@@ -9,8 +9,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.green.Bane;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PoisonPower;
+
+import java.util.ArrayList;
 
 public class EnBane extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Bane";
@@ -24,6 +28,17 @@ public class EnBane extends AbstractBossCard {
         super(ID, EnBane.cardStrings.NAME, "green/attack/bane", 1, EnBane.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 7;
     }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        if (AbstractDungeon.player != null){
+            if (AbstractDungeon.player.hasPower(PoisonPower.POWER_ID)){
+                return autoPriority() * 2;
+            }
+        }
+        return autoPriority();
+    }
+
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {

@@ -35,7 +35,10 @@ public class BustKeyEffect extends AbstractGameEffect {
         }
         if (this.duration < 0.0f) {
             this.isDone = true;
-            ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
+            if ( AbstractDungeon.getCurrRoom() instanceof RestRoom) {
+                ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
+            }
+
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         }
     }

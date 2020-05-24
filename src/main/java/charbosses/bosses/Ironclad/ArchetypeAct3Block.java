@@ -67,17 +67,17 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         //Turn 1
         addToDeck(new EnMetallicize(), false);
         addToDeck(new EnIronWave(), true);
-        addToDeck(new EnBodySlam(), true);
+        addToDeck(new EnWrithe(), true);
 
         //Turn 2
         addToDeck(new EnIronWave(), false);
         addToDeck(new EnArmaments(), false);
-        addToDeck(new EnWrithe(), true);
+        addToDeck(new EnBodySlam(), true);
 
         //Turn 3
         addToDeck(new EnDefendRed(), true);
         addToDeck(new EnPowerThrough(), false);
-        addToDeck(new EnPain(), false);
+        addToDeck(new EnJuggernaut(), false);
 
         //Turn 4
         addToDeck(new EnImpervious(), false);

@@ -178,6 +178,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStart();
         }
+
+
+        CardCrawlGame.music.unsilenceBGM();
+        AbstractDungeon.scene.fadeOutAmbiance();
+        String musicKey;
+        if (AbstractDungeon.actNum == 0) musicKey = "BOSS_BOTTOM";
+        else if (AbstractDungeon.actNum == 1) musicKey = "BOSS_CITY";
+        else if (AbstractDungeon.actNum == 2) musicKey = "BOSS_BEYOND";
+        else musicKey = "BOSS_ENDING";
+
+        AbstractDungeon.getCurrRoom().playBgmInstantly(musicKey);
     }
 
     @Override
@@ -858,6 +869,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
 
         super.die();
+
+        if (this.currentHealth <= 0) {
+        useFastShakeAnimation(5.0F);
+        CardCrawlGame.screenShake.rumble(4.0F);
+        onBossVictoryLogic();
+        }
 
     }
 
