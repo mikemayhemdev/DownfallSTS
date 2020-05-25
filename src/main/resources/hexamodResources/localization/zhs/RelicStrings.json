@@ -1,70 +1,70 @@
 {
   "hexamod:SpiritBrand": {
-    "NAME": "Spirit Brand",
+    "NAME": "精神烙印",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "Whenever you #yhexamod:Ignite a Ghostflame, gain #b2 #yBlock."
+      "每当你 #yhexamod:点燃 鬼火时，获得 #b2 点 #y格挡 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
-    "NAME": "The Broken Seal",
+    "NAME": "破损容器",
     "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. Start each combat with #b2 #yStrength, #b2 #yDexterity, and #b2 #yhexamod:Intensity."
+      "拾起时，获得 #b10 点最大生命。每场战斗开始时获得 #b2 点 #y力量 、 #y敏捷 和 #yhexamod:热烈 。"
     ]
   },
   "hexamod:UnbrokenSoul": {
-    "NAME": "Mark of the Ether",
+    "NAME": "以太印记",
     "FLAVOR": "Let’s see if we can do... better.",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] and #b6 #yBlock."
+      "替换 #r",
+      " 。 NL 每回合第一次 #y点燃 时，获得 [E] 和 #b6 点 #y格挡 。"
     ]
   },
   "hexamod:IceCube": {
-    "NAME": "Specter's Snowflake",
+    "NAME": "幽灵雪花",
     "FLAVOR": "I feel... cold.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yhexamod:Burn is removed instead of halved each turn."
+      "每回合获得 [E] 。 #yhexamod:灼伤 每回合将直接移除而不是减半。"
     ]
   },
   "hexamod:SoulConsumer": {
-    "NAME": "Thermal Stone",
+    "NAME": "保暖石",
     "FLAVOR": "A fire would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you kill a #yhexamod:Burning enemy, heal #b2 HP."
+      "每当你杀死一名 #yhexamod:点燃 的敌人，回复 #b2 点生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
-    "NAME": "Recycler",
+    "NAME": "回收器",
     "FLAVOR": "One day, it shall be recycled too.",
     "DESCRIPTIONS": [
-      "The first time an #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
+      "每场战斗第一次 #y虚无 牌 #y消耗 时，将一张直到打出前耗能为0的复制品加入手牌。"
     ]
   },
   "hexamod:MatchstickCase": {
-    "NAME": "Quickfire Matchstick",
+    "NAME": "快燃火柴",
     "FLAVOR": "Lights on any surface!",
     "DESCRIPTIONS": [
-      "At the start of the first turn, #yhexamod:Ignite the #yhexamod:Active Ghostflame and #yhexamod:Advance."
+      "每场战斗的第一回合， #yhexamod:点燃 #yhexamod:活跃 的鬼火并 #yhexamod:步进 。"
     ]
   },
   "hexamod:InflammatoryLetter": {
-    "NAME": "Kindling",
+    "NAME": "火种",
     "FLAVOR": "Fire makes everything better.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yhexamod:Intensity."
+      "每场战斗开始时获得 #b1 点 #yhexamod:热烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {
-    "NAME": "Soul of Chaos",
+    "NAME": "混沌灵魂",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
       "The second Searing Ghostflame becomes a Mayhem Ghostflame. NL Mayhem Ghostflame activates when you end your turn while it is active. NL Ignition: Play the top card of your draw pile."
     ]
   },
   "hexamod:JarOfFuel": {
-    "NAME": "Ancient Spirit Shield",
+    "NAME": "古灵盾",
     "FLAVOR": "Protection on-demand.",
     "DESCRIPTIONS": [
       "Swap the positions of the Bolstering Ghostflame and the first Searing Ghostflame."
@@ -74,21 +74,21 @@
     "NAME": "Rod of Bolstering Flame",
     "FLAVOR": "Fire shields! Fire strengthens.",
     "DESCRIPTIONS": [
-      "The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength."
+      "每场战斗第一次打出 #yPower 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
-    "NAME": "Red Candle",
+    "NAME": "红蜡烛",
     "FLAVOR": "Fire BURNS...",
     "DESCRIPTIONS": [
-      "Whenever an #yAttack deals unblocked damage, apply #b1 #yhexamod:Burn."
+      "每当你造成未被格挡的 #y攻击 伤害，给予 #b1 层 #yhexamod:点燃 。"
     ]
   },
   "hexamod:Sixitude": {
-    "NAME": "Six-Point Brand",
-    "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
+    "NAME": "六点烙印",
+    "FLAVOR": "点火，点火，点火，点火，点火，点 火！",
     "DESCRIPTIONS": [
-      "Whenever you play #b6 cards, deal #b6 damage to a random enemy."
+      "每当你打出 #b6 张牌时，对随机一名敌人造成 #b6 点伤害。"
     ]
   }
 }

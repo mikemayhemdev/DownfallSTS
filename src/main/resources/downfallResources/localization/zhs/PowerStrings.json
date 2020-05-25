@@ -1,34 +1,21 @@
 {
-  "downfall:History": {
-    "NAME": "History",
+  "downfall:FairyPotion": {
+    "NAME": "瓶中精灵",
     "DESCRIPTIONS": [
-      "Joined the Vampires",
-      "Deck contains Bites and no Strikes",
-      "Searched the Forge",
-      "Obtained a special relic and Pain",
-      "Entered the light",
-      "Upgraded 2 cards",
-      "Took the Box",
-      "Obtained a random relic and Regret",
-      "Took the Donut",
-      "Gained max HP",
-      "Tested JAX",
-      "Obtained a copy of J.A.X.",
-      "Read the Ancient Writing",
-      "All basic Strikes and Defends were upgraded",
-      "Read the Cursed Tome",
-      "Obtained Enchiridion",
-      "Obtained the Necronomicon",
-      "Made Deals with Ghosts",
-      "Obtained copies of Apparition",
-      "Fought for the Sphere",
-      "Obtained a rare relic",
-      "Recalled",
-      "Obtained colorless cards",
-      "Fought off Bandits",
-      "Obtained a Red Mask",
-      "Joined the Ritual",
-      "Obtained Ritual Dagger"
+      "当你要被杀死时，免死并回复到最大生命值的 #b30% ,移除本效果。"
+    ]
+  },
+  "downfall:SoulSteal": {
+    "NAME": "灵魂窃取",
+    "DESCRIPTIONS": [
+      "已经偷走了你 ",
+      " 灵魂。"
+    ]
+  },
+  "downfall:NeowInvulnerable": {
+    "NAME": "生命之神",
+    "DESCRIPTIONS": [
+      "不能被击杀。当生命值降低到1时撤退休息。"
     ]
   }
 }

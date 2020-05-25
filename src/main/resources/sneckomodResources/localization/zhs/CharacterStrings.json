@@ -1,13 +1,13 @@
 {
   "sneckomod:theSnecko": {
     "NAMES": [
-      "The Snecko",
-      "the Snecko"
+      "异蛇",
+      "异蛇"
     ],
     "TEXT": [
-      "A serpentine creature, native to the City. NL Known for a stare that confuses predators.",
-      "NL Sssssssss....",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~snake~ ~friend,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "生于城市之间的蜿蜒生物。 NL 以迷惑捕食者的凝视而闻名。",
+      "NL 嘶嘶嘶嘶嘶嘶嘶嘶嘶……",
+      "在一条昏暗的街上，你遇见几个戴着兜帽的人在进行某种黑暗的仪式。当你靠近时，他们全都同时转身面对你，让你觉得十分诡异。 其中个子最高的一个微微一笑，露出了长长的尖牙，向你伸出了一只苍白而瘦长的手： NL ~“加入我们，异蛇朋友啊。一起来感受高塔的温暖吧。”~"
     ]
   }
 }

@@ -1,5 +1,6 @@
 package charbosses.bosses.Watcher;
 
+import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.anticards.PeaceOut;
@@ -8,15 +9,20 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
+import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
+import downfall.downfallMod;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossWatcher extends AbstractCharBoss {
+    public static final String ID = downfallMod.makeID("Watcher");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Watcher").NAMES[0];
 
     public CharBossWatcher() {
-        super("Watcher", "downfall:Watcher", 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
-        this.energyOrb = new EnergyOrbGreen();
+        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
+        this.energyOrb = new EnergyOrbPurple();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/watcher/idle/skeleton.atlas", "images/characters/watcher/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);

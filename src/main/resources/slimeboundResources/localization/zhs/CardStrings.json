@@ -1,449 +1,455 @@
 {
   "Slimebound:Strike_Slimebound": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "Slimebound:Defend_Slimebound": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "Slimebound:GangUp": {
-    "NAME": "Gang Up",
-    "DESCRIPTION": "Gain X Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X+1 times. NL Exhaust."
+    "NAME": "结伙",
+    "DESCRIPTION": "获得 X 个史莱姆槽位，分裂 出1只 好斗史莱姆 X 次。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得 X+1 个史莱姆槽位，分裂 出1只 好斗史莱姆 X+1 次。 NL 消耗"
   },
   "Slimebound:LevelUp": {
-    "NAME": "Level Up",
-    "DESCRIPTION": "Gain !M! slimeboundmod:Potency.",
-    "UPGRADE_DESCRIPTION": "Gain !M! slimeboundmod:Potency and 1 Slime slot."
+    "NAME": "等级提升",
+    "DESCRIPTION": "获得 !M! 点 潜力 ",
+    "UPGRADE_DESCRIPTION": "获得 !M! 潜力 和1个史莱姆槽位。"
   },
   "Slimebound:ProtectTheBoss": {
-    "NAME": "Protect the Boss",
-    "DESCRIPTION": "Prevent the next time you would be damaged by an enemy Attack, slimeboundmod:Absorbing your leading Slime instead.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would be damaged by an enemy Attack, slimeboundmod:Absorbing your leading Slime instead."
+    "NAME": "保护老大",
+    "DESCRIPTION": "阻挡下1次受到的来自敌人的攻击伤害，受伤时 吸收 最早 分裂 出的史莱姆。",
+    "UPGRADE_DESCRIPTION": "阻挡下2次受到的来自敌人的攻击伤害，受伤时 吸收 最早 分裂 出的史莱姆。"
   },
   "Slimebound:SamplingLick": {
-    "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
+    "NAME": "试探之舔",
+    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。 NL 获得 !B! 点 格挡 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。 NL 获得 !B! 点 格挡 。NL 抽一张牌。 NL 消耗"
   },
   "Slimebound:DuplicateSlimes": {
-    "NAME": "Replication",
-    "DESCRIPTION": "Duplicate all of your spawned Slimes. NL Exhaust."
+    "NAME": "增殖",
+    "DESCRIPTION": "复制你 分裂 出的史莱姆。 NL 消耗"
   },
   "Slimebound:Replication": {
-    "NAME": "Replication",
-    "DESCRIPTION": "Choose a card in your hand. Add a copy of that card to your hand. NL Exhaust."
+    "NAME": "复制",
+    "DESCRIPTION": "选择一张牌，在手牌中加入它的复制品。 NL 消耗"
   },
   "Slimebound:AbsorbAll": {
-    "NAME": "Absorption",
-    "DESCRIPTION": "slimeboundmod:Absorb all of your spawned Slimes. Gain 3 Block per slime slimeboundmod:Absorbed."
+    "NAME": "胞吞",
+    "DESCRIPTION": "吸收 所有分裂出的史莱姆，每吸收一只获得3点 格挡 。"
   },
   "Slimebound:Overexert": {
-    "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all of your spawned slimes. NL Exhaust."
+    "NAME": "超负荷",
+    "DESCRIPTION": "获得4点 潜力 。 NL  !M! 回合后， 吸收 所有分裂出的史莱姆。 NL 消耗"
   },
   "Slimebound:Split": {
-    "NAME": "Split",
-    "DESCRIPTION": "slimeboundmod:Split into a random slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into 2 random slimes."
+    "NAME": "分裂",
+    "DESCRIPTION": " 分裂 出1只随机史莱姆。 NL 消耗",
+    "UPGRADE_DESCRIPTION": " 分裂 出2只随机史莱姆。 NL 消耗"
   },
   "Slimebound:SuperSplit": {
-    "NAME": "Super Split",
-    "DESCRIPTION": "Gain X Slime slots. NL slimeboundmod:Split into a random slime X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL slimeboundmod:Split into a random slime X+1 times. NL Exhaust."
+    "NAME": "超级分裂",
+    "DESCRIPTION": "获得 X 个史莱姆槽位。 NL  分裂 出1只随机史莱姆 X 次。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得 X+1 个史莱姆槽位。 NL  分裂 出1只随机史莱姆 X+1 次。 NL 消耗"
   },
   "Slimebound:LeadByExample": {
-    "NAME": "Lead By Example",
-    "DESCRIPTION": "The first card you play each turn that targets enemies also slimeboundmod:Commands.",
-    "UPGRADE_DESCRIPTION": "The first !M! cards you play each turn that targets enemies also slimeboundmod:Commands."
+    "NAME": "身先士卒",
+    "DESCRIPTION": "每回合打出的第1张目标为敌人的牌会使最早 分裂 出的史莱姆发起攻击。",
+    "UPGRADE_DESCRIPTION": "每回合打出的前 !M! 张目标为敌人的牌会使最早 分裂 出的史莱姆发起攻击。"
   },
   "Slimebound:SlimeTap": {
-    "NAME": "Slime Tap",
-    "DESCRIPTION": "slimeboundmod:Absorb your leading Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb your 2 leading Slimes. Gain [E] [E] and draw 2 cards for each slimeboundmod:Absorbed. NL Exhaust.",
+    "NAME": "污泥回用",
+    "DESCRIPTION": "吸收 最早分裂出的史莱姆。获得 [E] [E] 并抽 !M! 张牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "吸收 最早分裂出的2只史莱姆。每吸收1只获得 [E] [E] 并抽2张牌。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
-      "Need... slimes..."
+      "需要……史莱姆……"
     ]
   },
   "Slimebound:Teamwork": {
-    "NAME": "Teamwork",
-    "DESCRIPTION": "Gain !B! Block X times. NL Gain X slimeboundmod:Potency. NL slimeboundmod:Command X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X times. NL Gain X slimeboundmod:Potency. NL slimeboundmod:Command X times. NL Exhaust."
+    "NAME": "团队合作",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 使最早 分裂 出的 !M! 只史莱姆发起攻击 X 次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害X次。 NL 使你最早 分裂 出的 !M! 只史莱姆发起攻击 X 次。"
   },
   "Slimebound:SlimeBarrage": {
-    "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes."
+    "NAME": "蜂拥齐上",
+    "DESCRIPTION": "造成 !D! 点伤害。使所有 分裂 出的史莱姆发起攻击。"
   },
   "Slimebound:MaxSlimes": {
-    "NAME": "Make Some Room",
-    "DESCRIPTION": "Gain !M! Slime slot.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots."
+    "NAME": "来点空间",
+    "DESCRIPTION": "获得 !M! 个史莱姆槽位。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 个史莱姆槽位。"
   },
   "Slimebound:SlimeBrawl": {
-    "NAME": "Slime Brawl",
-    "DESCRIPTION": "Play the top card of your draw pile. Repeat for each of your spawned Slimes. NL Exhaust."
+    "NAME": "史莱姆乱战",
+    "DESCRIPTION": "打出你抽牌堆顶部的一张牌。每个 分裂 出的史莱姆使这个效果重复一次。 NL 消耗"
   },
   "Slimebound:SpikyOuterGoop": {
-    "NAME": "Goop Armor",
-    "DESCRIPTION": "Gain !M! Block whenever you Attack an enemy who has slimeboundmod:Goop."
+    "NAME": "带刺芽孢",
+    "DESCRIPTION": "每当你攻击一个拥有 黏液 的敌人时，获得 !M! 点 格挡 。"
   },
   "Slimebound:SelfFormingGoo": {
-    "NAME": "Self-Forming Goo",
-    "DESCRIPTION": "Whenever you lose HP, apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy and gain 2 Block at the start of your next turn."
+    "NAME": "自成型黏液",
+    "DESCRIPTION": "每当你失去生命时，在下个回合，给予随机敌人 !SlimeboundSlimed! 层 黏液 ，获得 2 点 格挡 。"
   },
-  "Slimebound:OozeBath": {
+    "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
     "DESCRIPTION": "Double the enemy's slimeboundmod:Goop. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's slimeboundmod:Goop. NL Exhaust."
   },
   "Slimebound:SlimeSpikes": {
-    "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns."
+    "NAME": "黏性尖刺",
+    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 荆棘 。 NL 下个回合开始时失去 !M! 点 荆棘 。"
   },
   "Slimebound:LeechingTouch": {
-    "NAME": "Leeching Touch",
-    "DESCRIPTION": "Gain Block equal to an enemy's slimeboundmod:Goop. NL Deal !D! damage."
+    "NAME": "吮吸之触",
+    "DESCRIPTION": "获得等同于一个敌人 黏液 层数的 格挡 。 NL 造成 !D! 点伤害。"
   },
   "Slimebound:Dissolve": {
-    "NAME": "Dissolve",
-    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random slimeboundmod:Lick cards to your hand equal to it's cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random slimeboundmod:Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
+    "NAME": "裂解",
+    "DESCRIPTION": "抽 1 张牌，消耗 1 张手牌，将等同其耗能的随机 舔舐 牌加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌，消耗 1 张手牌，将等同其耗能+1的随机 舔舐 牌加入手牌。 NL 消耗"
   },
   "Slimebound:DuplicatedForm": {
-    "NAME": "Duplicated Form",
-    "UPGRADE_DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL Gain [E] each turn. NL The first card you play each turn that targets enemies is played twice.",
-    "DESCRIPTION": "Lose !M! HP and !M! Max HP this combat. NL The first card you play each turn that targets enemies is played twice.",
+    "NAME": "增殖形态",
+    "DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合获得 [E] ，你使用的第1张目标为敌人的牌将打出2次。",
+    "UPGRADE_DESCRIPTION": "本场战斗中失去 !M! 点生命和 !M! 点生命上限。 NL 每回合你使用的第1张目标为敌人的牌将打出2次。",
     "EXTENDED_DESCRIPTION": [
-      "Need... Health..."
+      "需要... 生命..."
     ]
   },
   "Slimebound:Recollect": {
-    "NAME": "Recollect",
-    "DESCRIPTION": "Gain !B! Block. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Return 2 random 0-cost Exhausted cards to your hand.",
+    "NAME": "回忆",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 随机将1张已被消耗的0费牌放回你的手牌。",
+    "UPGRADE_DESCRIPTION": "得 !B! 点 格挡 。 NL 随机将2张已被消耗的0费牌放回你的手牌。",
     "EXTENDED_DESCRIPTION": [
-      "Not... Exhausted..."
+      "还…… 能用……"
     ]
   },
   "Slimebound:FormOfPuddle": {
-    "NAME": "Form of Puddle",
-    "DESCRIPTION": "Gain 1 Intangible. NL Exhaust."
+    "NAME": "化为泥淖",
+    "DESCRIPTION": "获得1层 无实体 。 NL 消耗"
   },
   "Slimebound:GrowthPunch": {
-    "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Damage increased by !M! for each Slime."
+    "NAME": "成长拳",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 这张牌造成的伤害永久增加 !M!。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 这张牌的效果数值永久增加 !M!。 NL 消耗"
   },
   "Slimebound:CheckThePlaybook": {
-    "NAME": "Consult Playbook",
-    "DESCRIPTION": "Add 4 random slimeboundmod:Tackle cards to your hand. They cost 1 less this combat. NL Exhaust."
+    "NAME": "查找策略",
+    "DESCRIPTION": "随机将4张 冲撞 牌加入你的手牌。本场战斗中它们的耗能减少1。 NL 消耗"
   },
   "Slimebound:Recycling": {
-    "NAME": "Recycling",
-    "DESCRIPTION": "At the start of your turn, return a random Exhausted 0-cost card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, return a random Exhausted 0-cost card to your hand."
+    "NAME": "循环再生",
+    "DESCRIPTION": "在你的回合开始时，随机将1张已被消耗的0费牌放回你的手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，随机将1张已被消耗的0费牌放回你的手牌。"
   },
   "Slimebound:Repurpose": {
-    "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Morph a card in your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL slimeboundmod:Morph a card in your hand. NL Exhaust."
+    "NAME": "重新考虑",
+    "DESCRIPTION": "重铸 1 张手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌。 重铸 1 张手牌。 NL 消耗"
   },
   "Slimebound:RollThrough": {
-    "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next slimeboundmod:Tackle you play."
+    "NAME": "翻滚碾压",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 本场战斗中敌人受到的来自 冲撞 牌伤害增加 !M! 。"
   },
   "Slimebound:MassRepurpose": {
-    "NAME": "Mass Repurpose",
-    "DESCRIPTION": "Draw a card. NL slimeboundmod:Morph all cards in your hand. NL Exhaust."
+    "NAME": "回炉重造",
+    "DESCRIPTION": "抽 1 张牌。 重铸 所有手牌。 NL 消耗"
   },
   "Slimebound:SoTasty": {
-    "NAME": "SO TASTY!",
-    "DESCRIPTION": "Deal !D! damage to a random enemy X times. Add X random slimeboundmod:Lick cards to your hand. NL Exhaust."
+    "NAME": "真香！",
+    "DESCRIPTION": "对随机1个敌人造成 !D! 点伤害 X 次。将 X 随机 舔舐 牌加入手牌。 NL 消耗"
   },
   "Slimebound:Regenerate": {
-    "NAME": "Regenerate",
-    "DESCRIPTION": "Gain !M! Regen. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Regen. NL Draw a card. NL Exhaust.",
+    "NAME": "再生",
+    "DESCRIPTION": "获得 !M! 层再生。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层再生。 NL 抽一张牌。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
-      "Need... Regeneration..."
+      "需要……再生……"
     ]
   },
   "Slimebound:Lick": {
-    "NAME": "Lick",
-    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
+    "NAME": "舔舔",
+    "DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 黏液 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 黏液 。 NL 抽1张牌。 NL 消耗"
   },
   "Slimebound:HauntingLick": {
-    "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
+    "NAME": "缠绕之舔",
+    "DESCRIPTION": "给予 !M! 层 易伤 和 !SlimeboundSlimed! 层 黏液 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 易伤 和 !SlimeboundSlimed! 层 黏液 。 NL 抽1张牌。 NL 消耗"
   },
   "Slimebound:PoisonLick": {
-    "NAME": "Poison Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison. NL Draw a card. NL Exhaust."
+    "NAME": "剧毒之舔",
+    "DESCRIPTION": "给予 !SlimeboundSlimePoison! 层 中毒 和 !SlimeboundSlimed! 层 黏液 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予 !SlimeboundSlimePoison! 层 中毒 和 !SlimeboundSlimed! 层 黏液 。 NL 抽1张牌。 NL 消耗"
   },
   "Slimebound:MegaLick": {
-    "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
+    "NAME": "大舔特舔",
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 和 !SlimeboundSlimed! 层 黏液 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 和 !SlimeboundSlimed! 层 黏液 。 NL 抽1张牌。 NL 消耗"
   },
   "Slimebound:FocusedLick": {
-    "NAME": "Focused Lick",
-    "DESCRIPTION": "Remove all Weak and Poison, replacing them with slimeboundmod:Goop. NL Apply !M! slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Remove all Weak and Poison, replacing them with slimeboundmod:Goop. NL Apply !M! slimeboundmod:Goop."
+    "NAME": "会心一舔",
+    "DESCRIPTION": "移除所有 虚弱 和 中毒 ，用等层数的 黏液 替代。 NL 给予 !M! 层 黏液 。",
+    "UPGRADE_DESCRIPTION": "移除所有 虚弱 和 中毒 ，用等层数的 黏液 替代。 NL 给予 !M! 层 黏液 。"
   },
   "Slimebound:RejuvenatingLick": {
-    "NAME": "Rejuvenating Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
+    "NAME": "回春之舔",
+    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。 NL 回复 !M! 点生命。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。 NL 回复 !M! 点生命。 NL 抽1张牌。 NL 消耗"
   },
   "Slimebound:Gluttony": {
-    "NAME": "Gluttony",
-    "DESCRIPTION": "The first time you attack an enemy with slimeboundmod:Goop each turn, add a random slimeboundmod:Lick card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you attack an enemy with slimeboundmod:Goop each turn, add a random slimeboundmod:Lick card to your hand."
+    "NAME": "暴食",
+    "DESCRIPTION": "每回合第 1 次消耗掉敌人身上的 黏液 时，将 1 张随机 舔舐 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "固有 。每回合第 1 次消耗掉敌人身上的 黏液 时，将 1 张随机 舔舐 牌加入手牌。"
   },
   "Slimebound:PressTheAttack": {
-    "NAME": "Press the Attack",
-    "DESCRIPTION": "Deal !D! damage. If the enemy has slimeboundmod:Goop, slimeboundmod:Command.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. If the enemy has slimeboundmod:Goop, slimeboundmod:Command twice."
+    "NAME": "强攻",
+    "DESCRIPTION": "造成 !D! 点伤害。如果敌人具有 黏液 ，使最早 分裂 出的史莱姆发起攻击。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。如果敌人具有 黏液 ，使最早 分裂 出的史莱姆发起攻击2次。"
   },
   "Slimebound:StrikeFrailPoint": {
-    "NAME": "Cull the Frail",
-    "DESCRIPTION": "If the enemy is Frail, remove all of their Block, then remove 1 Frail. NL Deal !D! damage."
+    "NAME": "不攻自破",
+    "DESCRIPTION": "如果敌人具有 脆弱 ，移除它全部的 格挡 并移除1层 脆弱 。 NL 造成 !D! 点伤害"
   },
   "Slimebound:SoulSicken": {
-    "NAME": "Soul Sicken",
-    "DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Poison. NL Convert half of the enemy's slimeboundmod:Goop to Poison."
+    "NAME": "灵魂冲击",
+    "DESCRIPTION": "给予 !M! 层 中毒 。 NL 将其一半层数的 黏液 转化为 中毒 。",
+    "UPGRADE_DESCRIPTION": "给予 !M! 层 中毒 。 NL 将其一半层数的 黏液 转化为 中毒 。"
   },
   "Slimebound:AcidGelatin": {
-    "NAME": "Acidic Goop",
-    "DESCRIPTION": "Apply !M! Poison whenever you Attack an enemy who has slimeboundmod:Goop."
+    "NAME": "酸性黏液",
+    "DESCRIPTION": "每当你攻击具有 黏液 的目标时，给予 !M! 层 中毒 。"
   },
   "Slimebound:TongueLash": {
-    "NAME": "Tongue Lash",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your slimeboundmod:Lick cards (including Exhausted cards)."
+    "NAME": "舌鞭",
+    "DESCRIPTION": "造成 !D! 点伤害。每拥有 1 张 舔舐 牌（包括已消耗的），造成额外 !M! 点伤害。"
   },
   "Slimebound:ItLooksTasty": {
-    "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. Add a random slimeboundmod:Lick card to your hand if the enemy has slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded slimeboundmod:Lick card to your hand if the enemy has slimeboundmod:Goop."
+    "NAME": "垂涎欲滴",
+    "DESCRIPTION": "造成 !D! 点伤害。如果敌人具有 黏液 ，将1张随机 舔舐 牌加入手牌。 ",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。如果敌人具有 黏液 ，将1张 升级 过的随机 舔舐 牌加入手牌。"
   },
   "Slimebound:AcidTongue": {
-    "NAME": "Spreading Slime",
-    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more."
+    "NAME": "酸性舌头",
+    "DESCRIPTION": "每当给予 黏液 时，额外给予 !M! 层 中毒 。",
+    "UPGRADE_DESCRIPTION": "每当给予 黏液 时，额外给予1层 黏液 ， !M! 层 中毒 。"
   },
   "Slimebound:TendrilStrike": {
-    "NAME": "Toxin Strike",
-    "DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to its Poison, then reduce its Poison by 1. NL Exhaust",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. The enemy loses HP equal to twice its Poison, then reduce its Poison by 2. NL Exhaust"
+    "NAME": "隐毒打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 触发敌人的 中毒 效果2次。 NL 消耗"
   },
   "Slimebound:FirmFortitude": {
-    "NAME": "Feel Our Pain",
-    "DESCRIPTION": "The first time you would take damage or lose HP on each of YOUR turns, an enemy takes that much damage instead.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead."
+    "NAME": "感同身受",
+    "DESCRIPTION": "在你的每个回合，第一次将要失去生命时，一个随机敌人代你承受。",
+    "UPGRADE_DESCRIPTION": "固有 。在你的每个回合，第一次将要失去生命时，一个随机敌人代你承受。"
   },
   "Slimebound:AccelerateToxins": {
-    "NAME": "Accelerate Toxins",
-    "DESCRIPTION": "For each Poisoned enemy, trigger the Poison's end of turn effect. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "For each Poisoned enemy, trigger the Poison's end of turn effect twice. NL Exhaust."
+    "NAME": "毒性加速",
+    "DESCRIPTION": "触发所有敌人的 中毒 效果。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "触发所有敌人的 中毒 效果2次。 NL 消耗"
   },
   "Slimebound:WasteNot": {
-    "NAME": "Waste Not",
-    "DESCRIPTION": "Return all 0-cost Exhausted cards to your hand. NL Exhaust.",
+    "NAME": "别浪费",
+    "DESCRIPTION": "将所有已被消耗的0费牌加入手牌。 NL 消耗",
     "EXTENDED_DESCRIPTION": [
-      "Not... Exhausted..."
+      "不能……浪费……"
     ]
   },
   "Slimebound:Prepare": {
-    "NAME": "Prepare",
-    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
+    "NAME": "伺机待发",
+    "DESCRIPTION": "获得 !B! 格挡 。下个回合获得 [E] [E] 并抽 !M! 张牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "下个回合获得 [E] [E] 并抽 !M! 张牌。 本回合 保留 至多 !M!  张牌。 消耗"
   },
   "Slimebound:Grow": {
-    "NAME": "Grow",
-    "DESCRIPTION": "Lose 1 Slime slot in exchange for !M! Strength and !M! Dexterity."
+    "NAME": "生长",
+    "DESCRIPTION": "失去1个史莱姆槽位，获得 !M! 点 力量 和 !M! 点 敏捷 。"
   },
   "Slimebound:HungryTackle": {
-    "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return a random 0-cost Exhausted card to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Return 2 random 0-cost Exhausted cards to your hand."
+    "NAME": "饥饿冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害，对自身造成 !SlimeboundSelfharm! 点伤害。 NL 随机将1张被消耗的0费牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害，对自身造成 !SlimeboundSelfharm! 点伤害。 NL 随机将1张被消耗的0费牌加入手牌。"
   },
   "Slimebound:FinishingTackle": {
-    "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. If the enemy has slimeboundmod:Goop, gain !B! Block."
+    "NAME": "最终冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成 !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，获得 !B! 点 格挡 。"
   },
   "Slimebound:SlimesplosionOLD": {
-    "NAME": "Slimesplosion",
-    "DESCRIPTION": "Apply !M! slimeboundmod:Goop and !SlimeboundSlimePoison! Poison to ALL enemies X times. NL Exhaust."
+    "NAME": "黏液爆破",
+    "DESCRIPTION": "给予所有敌人 !M! 层 黏液 和 !SlimeboundSlimePoison! 层 中毒 X 次。 NL 消耗"
   },
   "Slimebound:LivingWall": {
-    "NAME": "Living Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! slimeboundmod:Goop to attackers this turn."
+    "NAME": "活体墙壁",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 本回合每当你受到攻击时，给予攻击者 !SlimeboundSlimed! 层 黏液 。"
   },
   "Slimebound:Slimepotheosis": {
-    "NAME": "Slimepotheosis",
-    "DESCRIPTION": "Upgrade all cards in your hand. Lose !M! HP for each card Upgraded. NL Exhaust."
+    "NAME": "黏液升华",
+    "DESCRIPTION": " 升级 所有手牌，每张 升级 的卡牌失去 !M! 点生命。 NL 消耗"
   },
   "Slimebound:ComboTackle": {
-    "NAME": "Combo Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card for each Attack played this turn (Draws !M! cards)."
+    "NAME": "连续冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 抽 1 张牌",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 本回合每打出 1 张攻击，额外抽 1 张牌（抽 !M! 张牌）"
   },
   "Slimebound:Tackle": {
-    "NAME": "Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself."
+    "NAME": "冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害，对自身造成 !SlimeboundSelfharm! 点伤害。"
   },
   "Slimebound:GoopTackle": {
-    "NAME": "Opening Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random slimeboundmod:Tackle card to your hand. It costs 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Add a random Upgraded slimeboundmod:Tackle card to your hand. It costs 0 this turn."
+    "NAME": "开幕冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 随机将1张 冲撞 牌加入你的手牌。它的耗能变为0。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 随机将1张 升级 过的 冲撞 牌加入你的手牌。它的耗能变为0。"
   },
   "Slimebound:CorrosiveSpit": {
-    "NAME": "Corrosive Spit",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop."
+    "NAME": "腐蚀喷吐",
+    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。"
   },
   "Slimebound:Chomp": {
-    "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand by 1 this combat."
+    "NAME": "唔呣嗯呣",
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本场战斗中敌人受到的来自 冲撞 牌的伤害增加 !M! 。"
   },
   "Slimebound:DouseInSlime": {
-    "NAME": "Douse in Slime",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL The next time an Attack is used on this enemy, slimeboundmod:Goop is not removed."
+    "NAME": "浸入黏液",
+    "DESCRIPTION": "给予 !SlimeboundSlimed! 层 黏液 。 NL 下次对这个目标的攻击不会消耗 黏液 。"
   },
   "Slimebound:FlameTackle": {
-    "NAME": "Flame Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Tackles deal !M! more damage this combat."
+    "NAME": "烈焰冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 本场战斗中敌人受到的来自 冲撞 牌的伤害增加 !M! 。"
   },
   "Slimebound:VenomTackle": {
-    "NAME": "Venom Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. Apply !M! Poison if the enemy has slimeboundmod:Goop."
+    "NAME": "毒液冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 如果敌人具有 黏液 ，给予 !M! 层 中毒 。"
   },
   "Slimebound:UsefulSlime": {
-    "NAME": "Useful Slime!",
-    "DESCRIPTION": "Draw 2 Cards. NL Exhaust."
+    "NAME": "实用黏液",
+    "DESCRIPTION": "抽 2 张牌。 NL 消耗"
   },
   "Slimebound:RainOfGoop": {
-    "NAME": "Rain of Goop",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop to a random enemy !M! times."
+    "NAME": "黏液雨",
+    "DESCRIPTION": "随机给予1个敌人 !SlimeboundSlimed! 层黏液 !M! 次。",
+    "UPGRADE_DESCRIPTION": "随机给予1个敌人 !SlimeboundSlimed! 层黏液 !M! 次。"
   },
   "Slimebound:GoopSpray": {
-    "NAME": "Goop Spray",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop and !M! Vulnerable to ALL enemies."
+    "NAME": "黏液喷射",
+    "DESCRIPTION": "给予所有敌人 !SlimeboundSlimed! 层 黏液 和 !M! 层 中毒 。"
   },
   "Slimebound:MassFeed": {
-    "NAME": "Mass Feed",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If Fatal, raise your Max HP by !M!. NL Exhaust."
+    "NAME": "同质化",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 每杀死一个非爪牙的怪物，你的最大生命增加 !M!。 NL 消耗"
   },
   "Slimebound:ViciousTackle": {
-    "NAME": "Vicious Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus from slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. This gains twice the damage bonus AND healing from slimeboundmod:Goop."
+    "NAME": "狂暴冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 黏液 产生的额外伤害翻倍。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害并对自身造成  !SlimeboundSelfharm! 点伤害。 NL 黏液 产生的额外伤害和回复翻倍。"
   },
   "Slimebound:LeechEnergy": {
-    "NAME": "Leech Energy",
-    "DESCRIPTION": "Deal !D! damage. Gain [E] and draw a card if the enemy has slimeboundmod:Goop.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Gain [E] and draw 2 cards if the enemy has slimeboundmod:Goop."
+    "NAME": "吸取能量",
+    "DESCRIPTION": "造成 !D! 点伤害。如果敌人有 黏液 ，抽 1 张牌，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。如果敌人有 黏液 ，抽 2 张牌，获得 [E] 。"
   },
   "Slimebound:LeechLife": {
-    "NAME": "Leech Life",
-    "DESCRIPTION": "Heal HP equal to the enemy's slimeboundmod:Goop. NL Deal !D! damage. NL Exhaust."
+    "NAME": "吸取生命",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 中毒 。 NL 回复 !M! 点生命。 NL 消耗"
   },
   "Slimebound:Equalize": {
-    "NAME": "Equalize",
-    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL This card is played twice if below half of max HP. NL Exhaust."
+    "NAME": "均质化",
+    "DESCRIPTION": "造成 !D! 点伤害并回复 !M! 点生命。 NL 如果你的生命低于50%，这张牌将打出两次。 NL 消耗"
   },
   "Slimebound:DisruptingSlam": {
-    "NAME": "Disrupting Slam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Weak to each enemy that intends to attack."
+    "NAME": "扰乱猛击",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。意图不是攻击的敌人受到2次伤害。"
   },
   "Slimebound:ChargeUp": {
-    "NAME": "Charge Up",
-    "DESCRIPTION": "On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
+    "NAME": "蓄力",
+    "DESCRIPTION": "在下个回合，获得 !B! 点 格挡 和 !M! 点 力量 。 NL 消耗"
   },
   "Slimebound:GuardianWhirl": {
-    "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies 3 times. NL Exhaust."
+    "NAME": "旋风",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害3次。 NL 消耗"
   },
   "Slimebound:DefensiveMode": {
-    "NAME": "Defensive Mode",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
+    "NAME": "防御模式",
+    "DESCRIPTION": "获得 !M! 点 荆棘 。 NL 获得 !B! 点 格挡 并在下个回合获得 !B! 点 格挡 。"
   },
   "Slimebound:PrepareCrush": {
-    "NAME": "Prepare: Crush",
-    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust."
+    "NAME": "准备：猛撞",
+    "DESCRIPTION": "在下个回合获得 [E] [E] [E] 和 !M! 点 力量 ，并将 史莱姆撞击 加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "在你的下个回合获得 [E] [E] [E] [E] 和 !M! 点 力量 ，并将 史莱姆撞击 加入手牌。 NL 消耗"
   },
   "Slimebound:SlimeCrush": {
-    "NAME": "SLIME CRUSH!!!",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
+    "NAME": "史莱姆撞击！！！",
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 消耗"
   },
   "Slimebound:Icky": {
-    "NAME": "Icky",
-    "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed Status to your hand."
+    "NAME": "黏液附身",
+    "DESCRIPTION": "不能被打出。 NL 当抽到这张牌时，在手牌中加入1张 黏液（状态） 。"
   },
   "Slimebound:DivideAndConquerConquer": {
-    "NAME": "Conquer",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+    "NAME": "分而治之：统治",
+    "DESCRIPTION": "造成 !D! 点伤害。 每只 分裂 出的史莱姆额外提供 !M! 点伤害。 NL 消耗"
   },
   "Slimebound:DivideAndConquerDivide": {
-    "NAME": "Divide",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser or slimeboundmod:Guerilla slime. NL slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser AND slimeboundmod:Guerilla slime. NL slimeboundmod:Command. NL Exhaust."
+    "NAME": "分而治之：分裂",
+    "DESCRIPTION": "分裂 出1只 好斗史莱姆 或 酸液史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出 好斗史莱姆 和 酸液史莱姆 。 NL 消耗"
   },
   "Slimebound:DivideAndConquer": {
-    "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
+    "NAME": "分而治之",
+    "DESCRIPTION": "将 分而治之：分裂 和 分而治之：统治 加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "将 升级过的 分而治之：分裂 和 分而治之：统治 加入手牌。 NL 消耗"
   },
   "Slimebound:ServeAndProtect": {
-    "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
+    "NAME": "召唤保护",
+    "DESCRIPTION": "将 召唤保护：召唤 和 召唤保护：保护 加入手牌。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "将 升级过的 召唤保护：召唤 和 召唤保护：保护 加入手牌。 NL 消耗"
   },
   "Slimebound:ServeAndProtectServe": {
-    "NAME": "Serve",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching or slimeboundmod:Mire slime. NL slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching AND slimeboundmod:Mire slime. NL slimeboundmod:Command. NL Exhaust."
+    "NAME": "召唤保护：召唤",
+    "DESCRIPTION": "分裂 出1只 水蛭史莱姆 或 污泥史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出 水蛭史莱姆 和 污泥史莱姆 。 NL 消耗"
   },
   "Slimebound:ServeAndProtectProtect": {
-    "NAME": "Protect",
-    "DESCRIPTION": "Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
+    "NAME": "召唤保护：保护",
+    "DESCRIPTION": "获得 !B! 点 格挡 ，每只 分裂 出的史莱姆额外提供 !M! 点 格挡 。 NL 消耗"
   },
-  "Slimebound:SplitBruiser": {
-    "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL Exhaust."
+    "Slimebound:SplitBruiser": {
+    "NAME": "分裂：好斗",
+    "DESCRIPTION": "分裂 出1只 好斗史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 好斗史莱姆 。 NL 这只史莱姆额外造成 !M! 点 伤害 。 NL 消耗"
   },
-  "Slimebound:SplitLeeching": {
-    "NAME": "Split: Leeching",
-    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL Exhaust."
+    "Slimebound:SplitLeeching": {
+    "NAME": "分裂：水蛭",
+    "DESCRIPTION": "分裂 出1只 水蛭史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 水蛭史莱姆 。 NL 这只史莱姆额外给予 !M! 点 格挡 。 NL 消耗"
   },
-  "Slimebound:SplitAcid": {
-    "NAME": "Split: Guerilla",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL Exhaust."
+    "Slimebound:SplitAcid": {
+    "NAME": "分裂：酸液",
+    "DESCRIPTION": "分裂 出1只 酸液史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 酸液史莱姆 。 NL 这只史莱姆额外给予 !M! 层 中毒 。 NL 消耗"
   },
-  "Slimebound:SplitMire": {
-    "NAME": "Split: Mire",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL Exhaust."
+    "Slimebound:SplitMire": {
+    "NAME": "分裂：污泥",
+    "DESCRIPTION": "分裂 出1只 污泥史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 污泥史莱姆 。 NL 这只史莱姆额外给予 !M! 层 黏液 。 NL 消耗"
   },
-  "Slimebound:MinionMaster": {
-    "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command again."
+    "Slimebound:MinionMaster": {
+    "NAME": "从者大师",
+    "DESCRIPTION": "获得 1 史莱姆槽位 。每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 史莱姆槽位 。每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。"
   },
   "Slimebound:BestDefense": {
-    "NAME": "Recklessness",
-    "DESCRIPTION": "slimeboundmod:Tackles deal !M! more damage to enemies, and 1 more damage to you."
+    "NAME": "鲁莽",
+    "DESCRIPTION": "冲撞 牌对敌人额外造成 !M! 点伤害，对自身额外造成 2 点伤害。"
   },
-  "Slimebound:SplitSpecialist": {
+    "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
     "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
   },
-  "Slimebound:Darklings": {
-    "NAME": "Darkling Trio",
-    "DESCRIPTION": "Split into a slimeboundmod:darkling_slime three times. NL Exhaust."
+  "Slimebound:SpecialForces": {
+    "NAME": "Special Forces",
+    "DESCRIPTION": "For each of your Slime Slots: NL Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",

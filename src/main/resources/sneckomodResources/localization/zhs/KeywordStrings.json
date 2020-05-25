@@ -1,31 +1,30 @@
 [
   {
-    "PROPER_NAME": "Snekproof",
+    "PROPER_NAME": "蛇证",
     "NAMES": [
-      "snekproof"
+      "蛇证"
     ],
-    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
+    "DESCRIPTION": "不受 #y混乱 和 #y混淆 影响。"
   },
   {
-    "PROPER_NAME": "Unknown",
+    "PROPER_NAME": "未知",
     "NAMES": [
-      "unknown"
+      "未知"
     ],
-    "DESCRIPTION": "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints."
+    "DESCRIPTION": "每场战斗开始时，未知牌将根据当前情况变为其他角色的随机牌。"
   },
   {
-    "PROPER_NAME": "Muddle",
+    "PROPER_NAME": "混淆",
     "NAMES": [
-      "muddle",
-      "muddled"
+      "混淆"
     ],
-    "DESCRIPTION": "Muddling a card randomizes its cost between 0 and 3."
+    "DESCRIPTION": "将一张牌的耗能在0到3之间随机。"
   },
   {
-    "PROPER_NAME": "Offclass",
+    "PROPER_NAME": "异色",
     "NAMES": [
-      "offclass"
+      "异色"
     ],
-    "DESCRIPTION": "An Offclass card is any obtainable card from a class other than Snecko."
+    "DESCRIPTION": "除了异蛇牌以外的所有可获得牌。"
   }
 ]

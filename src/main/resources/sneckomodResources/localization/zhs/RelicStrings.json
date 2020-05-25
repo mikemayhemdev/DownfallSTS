@@ -1,87 +1,104 @@
 {
   "sneckomod:SneckoSoul": {
-    "NAME": "Snecko Soul",
-    "FLAVOR": "0...3...2...2...1",
+    "NAME": "异蛇之魂",
+    "FLAVOR": "0……3……2……2……1",
     "DESCRIPTIONS": [
-      "Whenever you add a #ysneckomod:Unknown card into your deck, increase your Max HP by #b1."
+      "每当你将一张 #ysneckomod:未知 牌加入牌组中时，获得 #b1 点最大生命。"
     ]
   },
   "sneckomod:SuperSneckoSoul": {
-    "NAME": "Super Snecko Soul",
+    "NAME": "超级蛇魂",
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
-      "Replaces ",
-      ".[] NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
+      "替换 #r",
+      " 。 NL 拾起时，你的牌组中每有一张 #ysneckomod:未知 牌，获得 #b2 点最大生命。"
     ]
   },
   "sneckomod:CleanMud": {
-    "NAME": "Snake-Charmer's Flute",
+    "NAME": "蛇笛",
     "FLAVOR": "You're an oxy-moron!",
     "DESCRIPTIONS": [
-      "#ysneckomod:Muddled cards can't cost #b3."
+      "#ysneckomod:混淆 数值不为 #b3."
     ]
   },
   "sneckomod:ConfusingCodex": {
-    "NAME": "Ring of the Snek",
+    "NAME": "异蛇戒指",
     "FLAVOR": "Illegible, unreadable, due by Thursday.",
     "DESCRIPTIONS": [
-      "At the start of combat, apply #b0-2 #yWeak and #yVulnerable to ALL enemies."
+      "每场战斗开始时，给予所有敌人 #b0-2 层 #y虚弱 和 #y易伤 。"
     ]
   },
   "sneckomod:CrystallizedMud": {
-    "NAME": "Mesmerising Pendant",
+    "NAME": "催眠吊坠",
     "FLAVOR": "Dazzling dirt.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #ysneckomod:Muddled cards can't cost #b0."
+      "每回合开始时获得 [E] 。 #ysneckomod:混淆 数值不为 #b0 。"
     ]
   },
   "sneckomod:LoadedDie": {
-    "NAME": "Loaded Die",
+    "NAME": "注铅骰子",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Cards that choose random numbers have +1 minimum."
+      "卡牌随机值下限提高1。"
     ]
   },
   "sneckomod:RareBoosterPack": {
-    "NAME": "Rare Booster Box",
+    "NAME": "稀有增强箱",
     "FLAVOR": "Mint condition.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain a #ysneckomod:Unknown #yRare card of each card type."
+      "拾起时，获得不同类型的 #ysneckomod:未知 #y稀有 牌各一张。"
     ]
   },
   "sneckomod:SleevedAce": {
-    "NAME": "Sleeved Ace",
+    "NAME": "王牌袖子",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a #yCheat into your hand with #yRetain."
+      "每场战斗开始时，将一张 #yCheat 加入手牌并 #y保留 。"
     ]
   },
   "sneckomod:UnknownEgg": {
-    "NAME": "Unknown Egg",
+    "NAME": "未知之蛋",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "#ysneckomod:Unknown cards in card rewards are #yUpgraded."
+      "卡牌奖励中的 #ysneckomod:未知 将被 #y升级 。"
     ]
   },
   "sneckomod:SuperSneckoEye": {
-    "NAME": "Super Snecko Eye",
+    "NAME": "超级蛇眼",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Replaces Snecko Eye. At the start of your turn, draw #b2 additional cards. Start each combat #yConfused. The first time you draw a card that costs #b3 each combat, reduce its cost to #b0."
+      "替换 #r异蛇之眼 。 你的回合开始时，额外抽 #b2 张牌。战斗开始时获得 #y混乱 。 NL 每场战斗你第一次抽到耗能为3的牌时，将这张牌的耗能变为 #b0 。"
     ]
   },
   "sneckomod:SneckoTalon": {
-    "NAME": "Snecko Fang",
-    "FLAVOR": "3 -> 2. 2 -> 1. 1 -> 0. 0 -> X?",
+    "NAME": "异蛇獠牙",
+    "FLAVOR": "3变2，2变1，1变0。0变X？",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1."
+      "你的回合开始时，将手牌中耗能最高的牌的耗能减少 #b1 。"
     ]
   },
   "sneckomod:BlankCard": {
-    "NAME": "Blank Card",
+    "NAME": "黑色牌",
     "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
-      "At the start of each combat, play a random card from your deck."
+      "每场战斗开始时，将牌组中的随机一张牌打出。"
+    ]
+  },
+  "sneckomod:D8": {
+    "NAME": "神秘八面体",
+    "FLAVOR": "它似乎灌铅的。",
+    "DESCRIPTIONS": [
+      "拾起时，选择随机数值效果的牌。这张牌总是选择最大值。",
+      "选择一张牌 ",
+      " 每当 ",
+      " 被打出时，使用它的最大效果值。"
+    ]
+  },
+  "sneckomod:BabySnecko": {
+    "NAME": "年轻异蛇",
+    "FLAVOR": "令人困惑的可爱。",
+    "DESCRIPTIONS": [
+      "你的回合开始时对随机一名敌人造成 5 点伤害。"
     ]
   }
 }

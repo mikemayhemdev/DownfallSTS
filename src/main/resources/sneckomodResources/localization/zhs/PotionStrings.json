@@ -2,30 +2,30 @@
   "sneckomod:DiceRollPotion": {
     "NAME": "Potentially Potent Potion",
     "DESCRIPTIONS": [
-      "Deal #b",
-      "-",
-      " damage."
+      "造成 #b",
+      "到",
+      " 点伤害。"
     ]
   },
   "sneckomod:CheatPotion": {
-    "NAME": "Liquid Luck",
+    "NAME": "流动幸运",
     "DESCRIPTIONS": [
-      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
-      "For 2 turns, cards that choose a random number for their effect choose the maximum possible number."
+      "本回合内，卡牌随机数固定为上限。",
+      "2个回合内，卡牌随机数固定为上限。"
     ]
   },
   "sneckomod:MuddlingPotion": {
-    "NAME": "Spiked Energy Drink",
+    "NAME": "尖峰苏打",
     "DESCRIPTIONS": [
-      "Muddle the #b",
-      " highest-cost cards in your hand."
+      "混淆手牌中耗能最高的 #b",
+      " 张牌。"
     ]
   },
   "sneckomod:OffclassReductionPotion": {
-    "NAME": "Exotic Beverage",
+    "NAME": "奇异饮料",
     "DESCRIPTIONS": [
-      "Reduce the cost of Offclass cards in your hand by #b",
-      "."
+      "将手牌中的异色牌的耗能降低 #b",
+      "。"
     ]
   }
 }

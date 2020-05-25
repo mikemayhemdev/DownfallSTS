@@ -1,13 +1,13 @@
 {
   "hexamod:theHexaghost": {
     "NAMES": [
-      "The Hexaghost",
-      "the Hexaghost"
+      "六火亡魂",
+      "六火亡魂"
     ],
     "TEXT": [
-      "An accursed spirit of the Spire. NL Sealed to an eternal fate as a protector.",
-      "NL You accrue the burning hatred of the dead...",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~ghastly~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
+      "尖塔上被诅咒的灵魂。 NL 作为保护者被永远地关在容器之中。",
+      "NL 你燃起了死者的熊熊怒火……",
+      "在一条昏暗的街上，你遇见几个戴着兜帽的人在进行某种黑暗的仪式。当你靠近时，他们全都同时转身面对你，让你觉得十分诡异。 其中个子最高的一个微微一笑，露出了长长的尖牙，向你伸出了一只苍白而瘦长的手： NL ~“加入我们，幽魂的存在啊。一起来感受高塔的温暖吧。”~"
     ]
   }
 }

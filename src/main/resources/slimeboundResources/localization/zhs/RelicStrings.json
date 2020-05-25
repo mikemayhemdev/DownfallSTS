@@ -1,93 +1,100 @@
 {
   "Slimebound:AbsorbEndCombat": {
-    "NAME": "Heart of Goo",
-    "FLAVOR": "You are not alone.",
+    "NAME": "黏液之心",
+    "FLAVOR": "你不是一个人！",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Split into a random Slime at the start of combat."
+      "战斗开始时， 分裂 出1只随机史莱姆。"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
-    "NAME": "Black Heart of Goo",
-    "FLAVOR": "You and ooze army.",
+    "NAME": "黏液腐心",
+    "FLAVOR": "你和你的黏黏军团。",
     "DESCRIPTIONS": [
-      "Replaces #gHeart #gof #gGoo. At the start of combat, #yslimeboundmod:Split into #b2 random Slimes, gain #b1 #yslimeboundmod:Potency, and gain #b1 Slime slot."
+      "替代 #g黏液之心 。每场战斗开始 分裂 出2只随机史莱姆，获得1点 潜力 ， 获得1个史莱姆槽位。"
     ]
   },
   "Slimebound:SlimedTailRelic": {
-    "NAME": "Slimed Tail",
-    "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
+    "NAME": "黏质断尾",
+    "FLAVOR": "一条完全由黏液包裹的断尾，战斗时可以迷惑敌人。",
     "DESCRIPTIONS": [
-      "When you fall below #b50% of your Maximum HP, #yslimeboundmod:Split into a #yslimeboundmod:Guerilla Slime, and the next time you take damage, your leading slime is #yslimeboundmod:Absorbed instead. (works once per combat).",
-      "This relic has been used this combat. It will become active again next combat."
+      "当你的生命值低于50%时， 分裂 出一1只 酸液史莱姆 。你下一次承受的伤害将以移除你最早 分裂 出的史莱姆代替（每场战斗最多生效一次）。",
+      "这个遗物在本场战斗中已被使用，下次战斗才能继续使用。"
     ]
   },
   "Slimebound:PotencyRelic": {
-    "NAME": "Ooze Stone",
-    "FLAVOR": "It is said to gain power based on your mood.",
+    "NAME": "黏黏石",
+    "FLAVOR": "据说它能根据你的情绪获得力量",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:split into a #yslimeboundmod:Mire Slime and gain #b1 #yslimeboundmod:Potency."
+      "战斗开始时， 分裂 出1只 污泥史莱姆 并获得 #b1 点 潜力 。"
     ]
   },
   "Slimebound:DailySplitRelic": {
-    "NAME": "Slime the Spire",
-    "FLAVOR": "ALWAYS Split.  Why is this a relic? Cause I can't figure out how to add the custom mod to the list of active mods UI!",
+    "NAME": "黏黏尖塔",
+    "FLAVOR": "永远分裂！为啥这是个遗物？因为我不知道怎么把自定义mod加到已激活mod的UI里！",
     "DESCRIPTIONS": [
-      "#bCustom #bRun #bModifier NL All enemies form into two Slime enemies at #b50% HP."
+      "#b自定义模式 NL 所有敌人在生命值低于50%时分裂成两个史莱姆敌人。"
     ]
   },
   "Slimebound:ScrapOozeRelic": {
-    "NAME": "Scrap Ooze",
+    "NAME": "破烂黏液",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yScrap #yOoze. NL At Rest Sites, you can donate a card to the Scrap Ooze, granting #b+1 damage for #gUncommons, #b+2 damage for #yRares, #b-2 damage for #rCurses.",
-      "Remove a card from your deck and modify Scrap Ooze's damage.",
-      "Nothing to give to the Scrap Ooze."
+      "战斗开始时，生成1只 破烂史莱姆 。 NL 在休息处，你可以献上一张 #g罕见牌 使它造成的的伤害+1，或献上一张 #y稀有牌 使它造成的伤害+2，或献上一张 #r诅咒牌 使它造成的伤害-2。",
+      "从牌堆中移除一张牌，改变破烂史莱姆的伤害。",
+      "没有可以给破烂史莱姆的东西了。"
     ]
   },
   "Slimebound:GreedOozeRelic": {
-    "NAME": "Greed Ooze",
-    "FLAVOR": "A friend found in the Spire who hoards gold.",
+    "NAME": "贪婪黏液",
+    "FLAVOR": "尖塔里找到的囤金子的朋友。",
     "DESCRIPTIONS": [
-      "At the start of combat, spawn #yGreed #yOoze. NL At Rest Sites, #yGreed #yOoze will take #b50 of your gold, increasing its damage by #b1."
+      "战斗开始时，生成1只贪婪史莱姆。 NL 在休息处，贪婪史莱姆会吞食50金币并使它造成的伤害+1。"
     ]
   },
   "Slimebound:PreparedRelic": {
-    "NAME": "Slime Soup",
-    "FLAVOR": "Tastes awful, but incredibly healthy.",
+    "NAME": "黏茶具套装",
+    "FLAVOR": "显然不是夜宵的好餐具。",
     "DESCRIPTIONS": [
-      "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0 for your first turn."
+      "在休息处后的下1场战斗开始时，将1张 #g伺机待发 加入手牌，它的耗能变为0。"
+    ]
+  },
+  "Slimebound:StudyCardRelic": {
+    "NAME": "袖珍圆顶礼帽",
+    "FLAVOR": "谁掌控了这顶礼帽，谁就掌控了这座尖塔！",
+    "DESCRIPTIONS": [
+      "战斗开始时，将1张耗能为0的 #g研究尖塔 加入你的手牌。"
     ]
   },
   "Slimebound:AggressiveSlimeRelic": {
-    "NAME": "Goop Dweller",
-    "FLAVOR": "He followed me home. Can I keep it?",
+    "NAME": "黏液居民",
+    "FLAVOR": "是它跟着我回家的。我能收养它吗？",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser Slime."
+      "战斗开始时， 分裂 出1只 好斗史莱姆 。"
     ]
   },
   "Slimebound:SlimedSkullRelic": {
-    "NAME": "Slimy Skull",
-    "FLAVOR": "A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
+    "NAME": "黏蛇头骨",
+    "FLAVOR": "一个非常恶心的异蛇头骨，灰尘和污垢像胶一样粘在上面，又脏又黏。",
     "DESCRIPTIONS": [
-      "Whenever you apply #yslimeboundmod:Goop, apply an additional #b",
-      " #yslimeboundmod:Goop."
+      "每当你给予敌人 #y黏液 ，额外给予 #b",
+      " 层 #y黏液."
     ]
   },
   "Slimebound:MaxSlimesRelic": {
-    "NAME": "Banner of Command",
-    "FLAVOR": "It's a little damp.",
+    "NAME": "史莱姆玩偶",
+    "FLAVOR": "太可爱了。",
     "DESCRIPTIONS": [
-      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching slime and gain #b1 Slime slot."
+      "战斗开始时， 分裂 出1只 水蛭史莱姆 并获得1个史莱姆槽位。"
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
-    "NAME": "Protective Gear",
-    "FLAVOR": "The best defense is a good offense.",
+    "NAME": "保护齿轮",
+    "FLAVOR": "进攻是最好的防守！",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from slimeboundmod:Tackle cards by #b1."
+      "自身受到来自 冲撞 牌的伤害降低 1 点。"
     ]
   },
-  "Slimebound:TarBlob": {
+    "Slimebound:TarBlob": {
     "NAME": "Tarr Blob",
     "FLAVOR": "The bad kind of Slime.",
     "DESCRIPTIONS": [

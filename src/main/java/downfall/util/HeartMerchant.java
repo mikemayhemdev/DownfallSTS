@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import downfall.downfallMod;
 import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelSpeechBubble;
 
@@ -182,7 +183,7 @@ public class HeartMerchant implements Disposable {
     }
 
     static {
-        characterStrings = CardCrawlGame.languagePack.getCharacterString("HeartMerchant");
+        characterStrings = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("HeartMerchant"));
         NAMES = characterStrings.NAMES;
         TEXT = characterStrings.TEXT;
         ENDING_TEXT = characterStrings.OPTIONS;

@@ -1,153 +1,153 @@
 {
   "Slimebound:StudyAutomatonPower": {
-    "NAME": "Study Automaton",
+    "NAME": "学习机械人偶",
     "DESCRIPTIONS": [
-      "Gain a random Automaton card at the start of next turn.",
-      "Gain a random Automaton card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张机械人偶牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张机械人偶牌。"
     ]
   },
   "Slimebound:StudyAutomatonPowerUpgraded": {
-    "NAME": "Study Automaton+",
+    "NAME": "学习机械人偶+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Automaton card at the start of next turn.",
-      "Gain a random Upgraded Automaton card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的机械人偶牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的机械人偶牌。"
     ]
   },
   "Slimebound:StudyAwakenedPower": {
-    "NAME": "Study Awakened One",
+    "NAME": "学习觉醒者",
     "DESCRIPTIONS": [
-      "Gain a random Awakened One card at the start of next turn.",
-      "Gain a random Awakened One card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张觉醒者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张觉醒者牌。"
     ]
   },
   "Slimebound:StudyAwakenedPowerUpgraded": {
-    "NAME": "Study Awakened One+",
+    "NAME": "学习觉醒者+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Awakened One card at the start of next turn.",
-      "Gain a random Upgraded Awakened One card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的觉醒者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的觉醒者牌。"
     ]
   },
   "Slimebound:AwakenedOnePower": {
-    "NAME": "Dark Ritual",
+    "NAME": "黑暗仪式",
     "DESCRIPTIONS": [
-      "Gain ",
-      " Strength if this enemy does not attack on its turn."
+      "如果这个敌人本回合没有攻击，你获得 ",
+      " 点 力量 。"
     ]
   },
   "Slimebound:StudyChampPower": {
-    "NAME": "Study Champ",
+    "NAME": "学习第一勇士",
     "DESCRIPTIONS": [
-      "Gain a random Champ card at the start of next turn.",
-      "Gain a random Champ card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张第一勇士牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张第一勇士牌。"
     ]
   },
   "Slimebound:StudyChampPowerUpgraded": {
-    "NAME": "Study Champ+",
+    "NAME": "学习第一勇士+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Champ card at the start of next turn.",
-      "Gain a random Upgraded Champ card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的第一勇士牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的第一勇士牌。"
     ]
   },
   "Slimebound:StudyCollectorPower": {
-    "NAME": "Study Collector",
+    "NAME": "学习收藏家",
     "DESCRIPTIONS": [
-      "Gain a random Collector card at the start of next turn.",
-      "Gain a random Collector card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张收藏家牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张收藏家牌。"
     ]
   },
   "Slimebound:StudyCollectorPowerUpgraded": {
-    "NAME": "Study Collector+",
+    "NAME": "学习收藏家+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Collector card at the start of next turn.",
-      "Gain a random Upgraded Collector card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的收藏家牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的收藏家牌。"
     ]
   },
   "Slimebound:StudyGuardianPower": {
-    "NAME": "Study Guardian",
+    "NAME": "学习守护者",
     "DESCRIPTIONS": [
-      "Gain a random Guardian card at the start of next turn.",
-      "Gain a random Guardian card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张守护者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张守护者牌。"
     ]
   },
   "Slimebound:StudyGuardianPowerUpgraded": {
-    "NAME": "Study Guardian+",
+    "NAME": "学习守护者+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Guardian card at the start of next turn.",
-      "Gain a random Upgraded Guardian card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的守护者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的守护者牌。"
     ]
   },
   "Slimebound:StudyHexaghostPower": {
-    "NAME": "Study Hexaghost",
+    "NAME": "学习六火亡魂",
     "DESCRIPTIONS": [
-      "Gain a random Hexaghost card at the start of next turn.",
-      "Gain a random Hexaghost card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张六火亡魂牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张六火亡魂牌。"
     ]
   },
   "Slimebound:StudyHexaghostPowerUpgraded": {
-    "NAME": "Study Hexaghost+",
+    "NAME": "学习六火亡魂+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Hexaghost card at the start of next turn.",
-      "Gain a random Upgraded Hexaghost card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的六火亡魂牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的六火亡魂牌。"
     ]
   },
   "Slimebound:StudyShapesPower": {
-    "NAME": "Study Donu & Deca",
+    "NAME": "学习甜圈八体",
     "DESCRIPTIONS": [
-      "Gain a random Donu & Deca card at the start of next turn.",
-      "Gain a random Donu & Deca card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张甜圈和八体牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张甜圈和八体牌。"
     ]
   },
   "Slimebound:StudyShapesPowerUpgraded": {
-    "NAME": "Study Donu & Deca+",
+    "NAME": "学习甜圈八体+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Donu & Deca card at the start of next turn.",
-      "Gain a random Upgraded Donu & Deca card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的甜圈和八体牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的甜圈和八体牌。"
     ]
   },
   "Slimebound:StudyTimeEaterPower": {
-    "NAME": "Study Time Eater",
+    "NAME": "学习时间吞噬者",
     "DESCRIPTIONS": [
-      "Gain a random Time Eater card at the start of next turn.",
-      "Gain a random Time Eater card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张时间吞噬者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张时间吞噬者牌。"
     ]
   },
   "Slimebound:StudyTimeEaterPowerUpgraded": {
-    "NAME": "Study Time Eater+",
+    "NAME": "学习时间吞噬者+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Time Eater card at the start of next turn.",
-      "Gain a random Upgraded Time Eater card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的时间吞噬者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的时间吞噬者牌。"
     ]
   },
   "Slimebound:StudySlimeBossPower": {
-    "NAME": "Study Slime Boss",
+    "NAME": "学习史莱姆老大",
     "DESCRIPTIONS": [
-      "Gain a random Slime Boss card at the start of next turn.",
-      "Gain a random Slime Boss card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张史莱姆老大牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张史莱姆老大牌牌。"
     ]
   },
   "Slimebound:StudySlimeBossPowerUpgraded": {
-    "NAME": "Study Slime Boss+",
+    "NAME": "学习史莱姆老大+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Slime Boss card at the start of next turn.",
-      "Gain a random Upgraded Slime Boss card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的史莱姆老大牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的史莱姆老大牌牌。"
     ]
   }
 }

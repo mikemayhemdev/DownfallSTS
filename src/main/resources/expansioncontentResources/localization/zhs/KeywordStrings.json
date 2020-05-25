@@ -1,16 +1,16 @@
 [
   {
-    "PROPER_NAME": "Boss",
+    "PROPER_NAME": "首领",
     "NAMES": [
-      "boss"
+      "首领"
     ],
-    "DESCRIPTION": "After adding a Boss card to your deck, no other cards of that Boss's set can be added."
+    "DESCRIPTION": "当加入首领卡到你的牌组时，不能再获得其他首领的牌。"
   },
   {
-    "PROPER_NAME": "Ghostflames",
+    "PROPER_NAME": "鬼火",
     "NAMES": [
-      "ghostflames"
+      "鬼火"
     ],
-    "DESCRIPTION": "Ghostflames provide additional benefits each turn if their Ignition requirements are met during that turn."
+    "DESCRIPTION": "鬼火能在达到点燃条件时提供额外的效果。"
   }
 ]

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import theHexaghost.GhostflameHelper;
@@ -18,6 +19,10 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     public static Texture myTex = TextureLoader.getTexture(makeUIPath("inferno.png"));
     public int energySpentThisTurn = 0;
+
+    private String ID = "hexamod:InfernoGhostflame";
+    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
+    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
     public InfernoGhostflame(float x, float y) {
         super(x, y);
@@ -57,38 +62,42 @@ public class InfernoGhostflame extends AbstractGhostflame {
         energySpentThisTurn = 0;
     }
 
+
+    @Override
+    public String getName(){ return NAME;}
+
     @Override
     public String getDescription() {
         System.out.println(energySpentThisTurn);
         String s = "";
         if (charged) {
-            s = "#yIgnited. ";
+            s = DESCRIPTIONS[0];
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (3 - energySpentThisTurn);
             switch (x) {
                 case 3:
-                    s = s + "#yActive. Ignites when spending [E] [E] [E] this turn.";
+                    s = s + DESCRIPTIONS[1];
                     break;
                 case 2:
-                    s = s + "#yActive. Ignites when spending [E] [E] this turn.";
+                    s = s + DESCRIPTIONS[2];
                     break;
                 case 1:
-                    s = s + "#yActive. Ignites when spending [E] this turn.";
+                    s = s + DESCRIPTIONS[3];
                     break;
                 default:
-                    s = s + "Error. Please report to mod dev: " + x;
+                    s = s + DESCRIPTIONS[4] + x;
             }
         } else {
-            s = s + "Inactive. Ignites when spending [E] [E] [E] while #yActive.";
+            s = s + DESCRIPTIONS[5];
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        s = s + " NL #yIgnition: When #yIgnited, deal #b" + x + " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them.";
+        s = s + DESCRIPTIONS[6] + x + DESCRIPTIONS[7];
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+            s = s + DESCRIPTIONS[8];
         }
         return s;
     }

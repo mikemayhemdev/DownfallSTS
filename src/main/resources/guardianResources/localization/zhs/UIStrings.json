@@ -1,29 +1,29 @@
 {
-  "Guardian:EnhanceBonfireOptions": {
-    "TEXT": [
-      "Enhance",
-      "(Free Action) Place a Gem into an open Socket.",
-      "Requires a Gem and an open Socket.",
-      "Select a Gem.",
-      "Select a Card to receive the Gem."
-    ]
-  },
+"Guardian:EnhanceBonfireOptions": {
+	"TEXT": [
+		"镶嵌",
+		"(自由行动) 镶嵌一个宝石到孔位。",
+		"需要一颗宝石和一个孔位。",
+		"选择一颗宝石。",
+		"选择一个有剩余孔位的牌。"
+]
+},
   "Guardian:UIOptions": {
     "TEXT": [
-      "Choose a Card to place into Stasis.",
-      "Pick a Gem.",
-      "Add a Common Gem to your deck",
-      "place into Stasis.",
-      "~ERROR:~ Cannot #rAttack in Construction Mode.",
-      "~ERROR:~ #rStasis in progress.",
-      "Add a Gem to your deck"
+      "选择一张牌凝滞。",
+      "拾起一颗宝石。",
+      "增加一颗普通宝石到你的牌库。",
+      "进行凝滞。",
+      "~错误:~ 不能在建设形态时 #r攻击 。",
+      "~错误:~ 在 #r凝滞 进程中。",
+      "增加一颗宝石到你的牌库。"
     ]
   },
   "Guardian:FindGemsOption": {
     "TEXT": [
-      "Mine",
-      "Gain 2 random Gems.",
-      "Pick broken."
+      "挖掘",
+      "获得两颗随机宝石。",
+      "镐已损毁。"
     ]
   }
 }

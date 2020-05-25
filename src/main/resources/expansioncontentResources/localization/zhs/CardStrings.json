@@ -1,140 +1,156 @@
 {
   "expansioncontent:ChargeUp": {
-    "NAME": "Charge Up",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
+    "NAME": "充能",
+    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 下一回合获得 !B! 点 格挡 和 !M! 点 力量 。 NL 消耗 。"
   },
   "expansioncontent:GuardianWhirl": {
-    "NAME": "Guardian Whirl",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Deal !D! damage to ALL enemies 4 times. NL Exhaust."
+    "NAME": "守护者旋风",
+    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 对所有敌人造成 !D! 点伤害 4 次。 NL 消耗 。"
   },
   "expansioncontent:DefensiveMode": {
-    "NAME": "Defensive Mode",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
+    "NAME": "防御模式",
+    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 获得 !M! 层 荆棘 。 NL 获得 !B! 点 格挡 。下一回合获得 !B! 点 格挡 。"
   },
   "expansioncontent:Hexaburn": {
-    "NAME": "Ghost Inferno",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Lose 6 HP. NL Deal !D! damage a random enemy 6 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage a random enemy 6 times. NL Exhaust."
+    "NAME": "幽灵地狱",
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 失去 6 点生命。 NL 对随机一名敌人造成 !D! 点伤害 6 次。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 对随机一名敌人造成 !D! 点伤害 6 次。 NL 消耗 。"
   },
   "expansioncontent:Sear": {
-    "NAME": "Sear",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! Burn. NL Exhaust."
+    "NAME": "大灼热",
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 hexamod:灼伤 。 NL 消耗 。"
   },
   "expansioncontent:GhostWheel": {
-    "NAME": "Hex Flames",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Gain six expansioncontent:Ghostflames. If expansioncontent:Ghostflames are already in play, gain 2 hexamod:Intensity instead."
+    "NAME": "六火",
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 获得六个 expansioncontent:鬼火 。 如果已有 expansioncontent:鬼火 ，则获得 2 点 hexamod:热烈 。"
   },
   "expansioncontent:HyperBeam": {
-    "NAME": "Automa-Beam",
-    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage to ALL enemies. NL At the start of your next turn, lose [E]. NL Exhaust."
+    "NAME": "超能射线",
+    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害。 NL 下一回合，失去 [E] 。 NL 消耗 。"
   },
   "expansioncontent:Flail": {
-    "NAME": "Flail",
-    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage twice to ALL enemies. NL Gain 1 Artifact. NL Exhaust."
+    "NAME": "链枷",
+    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害两次。 NL 获得 1 层 人工制品。 NL 消耗 。"
   },
   "expansioncontent:BronzeBeam": {
-    "NAME": "Orb Support",
-    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage. NL Gain !B! Block. NL Exhaust."
+    "NAME": "铜球支援",
+    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "expansioncontent:DefensiveStance": {
-    "NAME": "Defensive Stance",
-    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Gain !B! Block. NL Gain !M! Block at the end of each turn."
+    "NAME": "防御态势",
+    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 获得 !B! 点 格挡 。 NL 每回合结束时获得 !M! 点 格挡 。"
   },
   "expansioncontent:FaceSlap": {
-    "NAME": "Face Slap",
-    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Block. NL Deal !D! damage. NL Apply !M! Vulnerable. NL Exhaust."
+    "NAME": "打脸",
+    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有 格挡 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。 NL 消耗 。"
   },
   "expansioncontent:LastStand": {
-    "NAME": "Last Stand",
-    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength and heal !M! HP."
+    "NAME": "最后一战",
+    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 并回复 !M! 点生命。"
   },
   "expansioncontent:Collect": {
-    "NAME": "Collect",
-    "DESCRIPTION": "expansioncontent:Boss - Collector. NL Gain !B! Block. NL Gain 1 Strength. NL Gain 1 Dexterity."
+    "NAME": "收藏家",
+    "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 获得 !B! 点 格挡 。 NL 获得 1 点 力量 和 敏捷 。"
   },
   "expansioncontent:YouAreMine": {
-    "NAME": "YOU ARE MINE!",
-    "DESCRIPTION": "expansioncontent:Boss - Collector. NL Remove all Block, apply !M! Weak and apply !M! Vulnerable to ALL enemies. NL Exhaust."
+    "NAME": "你是我的了！",
+    "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 移除所有 格挡 ，给予所有敌人 !M! 层 虚弱 和 易伤 。 NL 消耗 。"
   },
   "expansioncontent:Torchfire": {
-    "NAME": "Torchfire",
-    "DESCRIPTION": "expansioncontent:Boss - Collector. NL Deal !D! damage. Damage is increased by !M! for each Debuff on the enemy. NL Exhaust."
+    "NAME": "火炬头",
+    "DESCRIPTION": "expansioncontent:首领 - 收藏家。 NL 造成 !D! 点伤害。敌人每有一种负面效果，伤害提高 !M! 。 NL 消耗 。"
   },
   "expansioncontent:CaCaw": {
-    "NAME": "CA-CAW!",
-    "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL Gain !M! Strength at the start of each turn."
+    "NAME": "咔咔！",
+    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 每回合开始时获得 !M! 点 力量 。"
   },
   "expansioncontent:DarkVoid": {
-    "NAME": "Dark Void",
-    "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL Deal !D! damage to ALL enemies. The next time each enemy does not Attack on their turn, gain 1 Strength. NL Exhaust."
+    "NAME": "黑暗虚空",
+    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 对所有敌人造成 !D! 点伤害。下一次敌人不攻击时，获得 1 点 力量 。 NL 消耗 。"
   },
   "expansioncontent:AwakenDeath": {
-    "NAME": "Awaken",
-    "DESCRIPTION": "expansioncontent:Boss - Awakened One. NL When you would die, heal !M! HP instead."
+    "NAME": "觉醒",
+    "DESCRIPTION": "expansioncontent:首领 - 觉醒者。 NL 你将要死亡时，免死并回复 !M! 生命。"
   },
   "expansioncontent:TimeRipple": {
-    "NAME": "Time Ripple",
-    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Deal !D! damage and apply Slow to ALL enemies. NL Exhaust."
+    "NAME": "时间纹波",
+    "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 对所有敌人造成 !D! 点伤害并给予缓慢。 NL 消耗 。"
   },
   "expansioncontent:Chronoboost": {
-    "NAME": "Chrono-Boost",
-    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 2 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 2 Strength for every 9th card you play."
+    "NAME": "时空加速",
+    "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 每打出12张牌，获得 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 每打出9张牌，获得 2 点 力量 。"
   },
   "expansioncontent:ManipulateTime": {
-    "NAME": "Manipulate Time",
-    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain !B! Block. NL Trigger all effects that happen at the start of your turn. NL Exhaust."
+    "NAME": "操控时间",
+    "DESCRIPTION": "expansioncontent:首领 - 时间吞噬者。 NL 获得 !B! 点 格挡 。 NL 触发所有你的回合开始时的效果。 NL 消耗 。"
   },
   "expansioncontent:DonusPower": {
-    "NAME": "Donu's Power",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Strength. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
+    "NAME": "甜圈力量",
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 和 人工制品。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
   },
   "expansioncontent:DecasProtection": {
-    "NAME": "Deca's Protection",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
+    "NAME": "八体保护",
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 。 NL 将一张随机能力牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 和 人工制品。 NL 将一张随机能力牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
   },
   "expansioncontent:PolyBeam": {
-    "NAME": "Poly Beam",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
+    "NAME": "双重射线",
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 你的下一回合造成 !D! 点伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 造成 !D! 点伤害两次。 NL 消耗 。"
   },
   "expansioncontent:PrepareCrush": {
-    "NAME": "Prepare Crush",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Gain !B! Block. NL On your next turn, gain [E] [E] [E] and add SLIME CRUSH to your hand. NL Exhaust."
+    "NAME": "准备：猛撞",
+    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 获得 !B! 点 格挡 。 NL 你的下一回合，获得 [E] [E] [E] 并将一张 *史莱姆撞击 加入你的手牌。 NL 消耗 。"
   },
   "expansioncontent:GoopSpray": {
-    "NAME": "Goop Spray",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and 2 Vulnerable to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and 3 Vulnerable to ALL enemies. NL Exhaust."
+    "NAME": "黏液喷射",
+    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 黏液 和 2 层 易伤 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 黏液 和 3 层 易伤 。 NL 消耗 。"
   },
   "expansioncontent:SlimeTackle": {
-    "NAME": "Slime Tackle",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Deal !D! damage and 3 damage to yourself. NL Exhaust."
+    "NAME": "史莱姆撞击",
+    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 造成 !D! 点伤害，受到 3 点伤害。 NL 消耗 。"
   },
   "expansioncontent:StudyTheSpire": {
-    "NAME": "Study the Spire",
-    "DESCRIPTION": "Add a random Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played."
+    "NAME": "研究尖塔",
+    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机无色 expansioncontent:首领 牌。它直到打出前耗能为0。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机无色 expansioncontent:首领 牌。它直到打出前耗能为0。"
   },
   "expansioncontent:QuickStudy": {
-    "NAME": "Quick Study",
-    "DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain a copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain an Upgraded copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust."
+    "NAME": "快速学习",
+    "DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它的耗能减少1。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它的耗能减少1。 NL 消耗 。"
   },
   "expansioncontent:DashGenerateEvil": {
-    "NAME": "The Evil Within",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust."
+    "NAME": "恶灵附身",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一张无色 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 将随机一已 升级 的张无色 expansioncontent:首领 牌加入你的手牌。它直到打出前耗能为0。 NL 消耗 。"
   },
   "expansioncontent:Corrupt": {
-    "NAME": "Corrupt",
-    "DESCRIPTION": "Exhaust 1 card. Replace it with a random Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust 1 card. Replace it with a random Upgraded Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust."
+    "NAME": "贿赂",
+    "DESCRIPTION": "消耗 1 张牌。 将其替换为一张随机无色 expansioncontent:首领 牌且耗能减少1。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗 1 张牌。 将其替换为一张已 升级 的随机无色 expansioncontent:首领 牌且耗能减少1。 NL 消耗 。"
   },
   "expansioncontent:KnowingSkullWish": {
-    "NAME": "Wish",
-    "DESCRIPTION": "Ethereal. NL Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
+    "NAME": "许愿",
+    "DESCRIPTION": "虚无 。 NL Wish for Souls, Success, or a Pick Me Up。 NL 消耗 。"
+  },
+  "expansioncontent:ShieldSmash": {
+    "NAME": "破甲",
+    "DESCRIPTION": "保留 。 NL 移除敌人的 格挡 。 NL 消耗 。"
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "解毒剂",
+    "DESCRIPTION": "保留 。 NL 失去所有的 中毒 。 NL 消耗 。"
+  },
+  "expansioncontent:Debug": {
+    "NAME": "破损核心",
+    "DESCRIPTION": "保留 。 NL 移除敌人的充能球。 NL 消耗 。"
+  },
+  "expansioncontent:PeaceOut": {
+    "NAME": "暗黑低语",
+    "DESCRIPTION": "保留 。 NL 敌人离开它们的姿态。 NL 移除敌人的 真言 。 NL 消耗 。"
   }
 }

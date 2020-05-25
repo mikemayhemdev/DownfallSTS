@@ -1,500 +1,499 @@
 {
   "Slimebound:PotencyPower": {
-    "NAME": "Potency",
+    "NAME": "潜力",
     "DESCRIPTIONS": [
-      "Increase the damage of your spawned Slimes by #b",
-      "."
+      "你 分裂 出的 #y史莱姆 造成的伤害增加 ",
+      " 。"
     ]
   },
   "Slimebound:SlimedPower": {
-    "NAME": "Goop",
+    "NAME": "黏液",
     "DESCRIPTIONS": [
-      "The next #yAttack against this enemy deals #b",
-      " more damage and heals #b",
-      " HP, consuming all #yGoop.  Half of the stack is removed at end of turn."
-    ]
-  },
-  "Slimebound:PreventTackleDamagePower": {
-    "NAME": "Prevent Tackle Damage",
-    "DESCRIPTIONS": [
-      "You do not take damage from the next #b",
-      " #yTackles you play."
+      "对该敌人的下一次攻击造成额外 ",
+      " 点伤害并为你回复 ",
+      " 点生命，消耗所有 #y黏液 。回合结束时层数减少一半。"
     ]
   },
   "Slimebound:SplitDailyTriggerPower": {
-    "NAME": "Slime Split",
+    "NAME": "史莱姆分裂",
     "DESCRIPTIONS": [
-      "When its HP is at or below #b50%, will split into #b2 Slime enemies with ",
-      "'s current HP."
+      "生命值低于50%时将会分裂为 #b2 只史莱姆，史莱姆具有 ",
+      " 当前的生命值。"
     ]
   },
   "Slimebound:SplitDailyPower": {
-    "NAME": "Splitting",
+    "NAME": "要分裂啦",
     "DESCRIPTIONS": [
-      "This enemy is splitting this turn."
+      "这个敌人本回合将要分裂。"
     ]
   },
   "Slimebound:BuffAttackSlimesPower": {
-    "NAME": "Upgrade: Bruiser",
+    "NAME": "升级：好斗",
     "DESCRIPTIONS": [
-      "#yBruiser Slimes deal #b",
-      " more damage."
+      "好斗史莱姆 造成的伤害增加 ",
+      " 点。"
     ]
   },
   "Slimebound:BuffPoisonSlimesPower": {
-    "NAME": "Upgrade: Acid",
+    "NAME": "升级：酸液",
     "DESCRIPTIONS": [
-      "#yPoisoning Slimes apply #b",
-      " more #yPoison."
+      "酸液史莱姆 给予的 中毒 增加 ",
+      " 层。"
     ]
   },
   "Slimebound:BuffSlimingSlimesPower": {
-    "NAME": "Upgrade: Mire",
+    "NAME": "升级：污泥",
     "DESCRIPTIONS": [
-      "#ySliming Slimes apply #b",
-      " more #yGoop."
+      "污泥史莱姆 给予的 黏液 增加 ",
+      " 层。"
     ]
   },
   "Slimebound:BuffShieldSlimesPower": {
-    "NAME": "Upgrade: Leeching",
+    "NAME": "升级：水蛭",
     "DESCRIPTIONS": [
-      "#yLeeching Slimes deal #b",
-      " more damage."
+      "水蛭史莱姆 造成的伤害增加 ",
+      " 点。"
     ]
   },
   "Slimebound:HexSlimePerTurnPower": {
-    "NAME": "Hex Power",
+    "NAME": "鬼火之力",
     "DESCRIPTIONS": [
-      "Spawn a #yGhostflame slime at the start of your next turn.",
-      "Spawn a #yGhostflame slime at the start of your next #b",
-      " turns."
+      "下个回合开始时 分裂 出1只 鬼火史莱姆 。",
+      "接下来的 ",
+      " 回合，每回合开始时 分裂 出1只 鬼火史莱姆 。"
     ]
   },
   "Slimebound:ProtectTheBoss": {
-    "NAME": "Protect the Boss",
+    "NAME": "保护老大",
     "DESCRIPTIONS": [
-      "Prevent the next time you would be damaged by an enemy attack, #yAbsorbing your leading Slime instead.",
-      "Prevent the next #b",
-      " times you would damaged by an enemy attack, #yAbsorbing your leading Slime instead."
+      "阻挡你下1次受到的攻击伤害， 吸收 最早 分裂 出的史莱姆。",
+      "阻挡你下 #b",
+      " 次受到的攻击伤害， 吸收 最早 分裂 出的史莱姆。"
     ]
   },
   "Slimebound:SplitForLessPower": {
-    "NAME": "Efficient Goo",
+    "NAME": "活性污泥",
     "DESCRIPTIONS": [
-      "#ySplitting costs #b",
-      " less HP.  Add #b",
-      " random #ySplit card to your hand each turn.",
-      " random #ySplit cards to your hand each turn."
+      " 分裂 出需要的生命减少 ",
+      " 点。每回合将 ",
+      " 张随机分裂牌加入你的手牌。",
+      " 张随机分裂牌加入你的手牌。"
     ]
   },
   "Slimebound:ComboAttackPower": {
-    "NAME": "Lead By Example",
+    "NAME": "身先士卒",
     "DESCRIPTIONS": [
-      "The first #yAttack you play each turn causes your leading Slime to also attack.",
-      "The first #b",
-      " #yAttacks you play each turn causes your leading Slime to also attack.",
-      " NL This effect can be triggered #b",
-      " more times this turn.",
-      " more time this turn.",
-      " NL This effect cannot be triggered again this turn."
+      "每回合打出的第1张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
+      "每回合打出的前 ",
+      " 张攻击牌会使你最早 分裂 出的史莱姆发起攻击。",
+      " NL 本回合还能触发 ",
+      " 次。",
+      " 次。",
+      " NL 本回合不能再触发了。"
     ]
   },
   "Slimebound:RetainCardsOneTurnPower": {
-    "NAME": "Preparing Cards",
+    "NAME": "伺机待发",
     "DESCRIPTIONS": [
-      "Retain #b",
-      " card this turn.",
-      " cards this turn."
+      "在本回合保留",
+      " 张牌。",
+      " 张牌。"
     ]
   },
   "Slimebound:EnergizedSlimeboundPower": {
-    "NAME": "Energized",
+    "NAME": "活化",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " additional [E] next turn.",
-      " additional [E] next turn.",
+      "下个回合获得 #b",
+      " 点额外的 [E]。",
+      " 点额外的 [E]。",
       " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "Slimebound:SelfFormingGooPower": {
-    "NAME": "Self-Forming Goo",
+    "NAME": "自成型黏液",
     "DESCRIPTIONS": [
-      "Whenever you lose HP, at the start of your next turn, gain #b",
-      " #yBlock and apply #b",
-      " #yGoop to a random enemy.",
-      " #yGoop to a random enemy #b",
-      " times."
+      "每当你失去生命时，获得 ",
+      " 点格挡，并给予一个随机敌人 ",
+      " 层黏液。",
+      " 层黏液 ",
+      " 次。"
     ]
   },
   "Slimebound:LoseSlimesPower": {
-    "NAME": "Overexert",
+    "NAME": "超负荷",
     "DESCRIPTIONS": [
-      "Next turn, #yAbsorb all of your spawned Slimes.",
-      " turns from now, #yAbsorb all of your spawned Slimes."
+      "在下个回合，吸收你 分裂 出的所有史莱姆。",
+      " 回合后，吸收你 分裂 出的所有史莱姆。"
     ]
   },
   "Slimebound:TackleDebuffPower": {
-    "NAME": "Battered",
+    "NAME": "束缚",
     "DESCRIPTIONS": [
-      "Receives #b",
-      " more damage from cards containing \"Tackle\"."
+      "冲撞 牌对该怪物额外造成 ",
+      " 点伤害。"
     ]
   },
   "Slimebound:LoseThornsPower": {
-    "NAME": "Retracting Spikes",
+    "NAME": "收回尖刺",
     "DESCRIPTIONS": [
-      "Lose #b",
-      " #yThorns at the start of your next turn."
+      "下个回合开始时失去 ",
+      " 层荆棘。"
     ]
   },
   "Slimebound:SlimedThornsPower": {
-    "NAME": "Living Wall",
+    "NAME": "活体墙壁",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " #yGoop to attackers this turn."
+      "给予本回合攻击你的敌人 ",
+      " 层黏液"
     ]
   },
   "Slimebound:PreventSlimeDecayPower": {
-    "NAME": "Doused in Slime",
+    "NAME": "浸入黏液",
     "DESCRIPTIONS": [
-      "The next time an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop.",
-      "The next #b",
-      " times an #yAttack is used on this enemy, #yGoop benefits will apply without consuming #yGoop."
+      "下 ",
+      "下 ",
+      " 次对该目标发动攻击时， 黏液 不会被消耗。"
     ]
   },
   "Slimebound:DuplicatedFormPower": {
-    "NAME": "Duplicated Form",
+    "NAME": "增殖形态",
     "DESCRIPTIONS": [
-      "The first card you play that targets enemies each turn is played twice.",
-      "The first #b",
-      " cards you play that target enemies each turn are played twice."
+      "每回合你使用的第1张目标为敌人的牌将打出2次。",
+      "每回合你使用的前 #b",
+      " 张目标为敌人的牌将打出2次。"
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {
-    "NAME": "Split",
+    "NAME": "分裂",
     "DESCRIPTIONS": [
-      "Max HP is temporarily reduced by #b",
-      "."
+      "最大生命临时减少了 ",
+      " 点"
     ]
   },
   "Slimebound:DuplicatedFormEnergyPower": {
-    "NAME": "Tag-Team",
+    "NAME": "搭档",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " [E] each turn."
+      "每回合获得 ",
+      " [E] 。"
     ]
   },
   "Slimebound:GluttonyPower": {
-    "NAME": "Gluttony",
+    "NAME": "暴食",
     "DESCRIPTIONS": [
-      "The first time you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
-      "The first ",
-      " times you #yAttack a #yGooped enemy each turn, add a random #yLick card to your hand.",
-      " NL This effect can be triggered #b",
-      " more times this turn.",
-      " more time this turn.",
-      " NL This effect cannot be triggered again this turn."
+      "每回合第 1 次对具有 黏液 的敌人发动攻击时，将一张随机 舔舐 牌加入手牌。",
+      "每回合前 ",
+      " 次对具有 黏液 的敌人发动攻击时，将一张随机 舔舐 牌加入手牌。",
+      " NL 本回合还能触发 ",
+      " 次。",
+      " 次。",
+      " NL 本回合不能再触发了。"
     ]
   },
   "Slimebound:GluttonyPowerUpgraded": {
-    "NAME": "Gluttony+",
+    "NAME": "暴食+",
     "DESCRIPTIONS": [
-      "Add #b",
-      " random #yUpgraded #yLick card to your hand each turn.",
-      " random #yUpgraded #yLick cards to your hand each turn."
+      "每回合将 ",
+      " 张随机 舔舐 牌加入你的手牌。",
+      " 张随机 舔舐 牌加入你的手牌。"
     ]
   },
   "Slimebound:PoisonThornsPower": {
-    "NAME": "Acidic Goop",
+    "NAME": "酸性黏液",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " #yPoison when you #yAttack an enemy who has #yGoop."
+      "每当你攻击具有 黏液 的目标时，给予 ",
+      "  层 中毒 。"
     ]
   },
   "Slimebound:SlimeRitualPower": {
-    "NAME": "Ritual",
+    "NAME": "仪式",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength at the start of each turn."
+      "回合开始时，获得 ",
+      " 点 力量 。"
     ]
   },
   "Slimebound:RecyclingPower": {
-    "NAME": "Recycling",
+    "NAME": "回收",
     "DESCRIPTIONS": [
-      "At the start of your turn, return #b",
-      " random 0-Cost card from your #yexhaust pile to your hand.",
-      " random 0-Cost cards from your #yexhaust pile to your hand."
+      "在你的回合开始时，随机将已被消耗的 ",
+      " 张0费牌加入你的手牌。",
+      " 张0费牌加入你的手牌。"
     ]
   },
   "Slimebound:RecyclingPowerUpgraded": {
-    "NAME": "Recycling+",
+    "NAME": "回收+",
     "DESCRIPTIONS": [
-      "Heal #b",
-      " HP and draw a card when you #yExhaust a 0-cost card."
+      "每当你消耗一张耗能为0的牌，回复 ",
+      " 点生命并抽1张牌。"
     ]
   },
   "Slimebound:AcidTonguePower": {
-    "NAME": "Acid Tongue",
+    "NAME": "酸性舌头",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " #yPoison whenever you apply #yGoop."
+      "给予黏液的同时，给予 ",
+      " 层 中毒 。"
     ]
   },
   "Slimebound:AcidTonguePowerUpgraded": {
-    "NAME": "Slimy Tongue",
+    "NAME": "黏液舌头",
     "DESCRIPTIONS": [
-      "Effects that apply #yGoop apply #b",
-      " more."
+      "给予黏液的效果额外给予 ",
+      " 层 黏液 。"
     ]
   },
   "Slimebound:SelfDamageSlimedPower": {
-    "NAME": "Stray Goop",
+    "NAME": "黏液四溅",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " #yGoop to a random enemy whenever you lose HP."
+      "每当你在你的回合失去生命时，给予随机1个敌人",
+      " 层 黏液 。"
     ]
   },
   "Slimebound:TackleBuffPower": {
-    "NAME": "Offensive Tackle",
+    "NAME": "进攻型冲撞",
     "DESCRIPTIONS": [
-      "Cards containing \"Tackle\" deal #b",
-      " more damage to enemies."
+      "冲撞 牌造成的伤害增加 ",
+      " 点。"
     ]
   },
   "Slimebound:PolyBeamAgainPower": {
-    "NAME": "Alternating Beam",
+    "NAME": "切换光束",
     "DESCRIPTIONS": [
-      "#yPoly #yBeam will be played at the start of your next turn. ",
-      "#yPoly #yBeam will be played at the start of your next #b",
-      " turns."
+      "下回合开始时，打出 多重光束 。 ",
+      "接下来的 ",
+      "回合开始时，打出 多重光束 。"
     ]
   },
   "Slimebound:PolyBeamAgainPowerUpgraded": {
-    "NAME": "Alternating Beam+",
+    "NAME": "切换光束+",
     "DESCRIPTIONS": [
-      "#yPoly #yBeam+ will be played at the start of your next turn. ",
-      "#yPoly #yBeam+ will be played at the start of your next #b",
-      " turns."
+      "下回合开始时，打出 多重光束+ 。 ",
+      "接下来的 ",
+      " 回合开始时，打出 多重光束+ 。"
     ]
   },
   "Slimebound:FirmFortitudePower": {
-    "NAME": "Feel Our Pain",
+    "NAME": "感同身受",
     "DESCRIPTIONS": [
-      "The next time you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
-      "The next #b",
-      " times you would take damage or lose HP on your turn, an enemy takes that much damage instead.",
-      " NL This effect can be triggered #b",
-      " more times this turn.",
-      " more time this turn.",
-      " NL This effect cannot be triggered again this turn."
+      "在你的这个回合，下 1 次即将失去生命时，一个随机的敌人代你承受。",
+      "在你的这个回合，下 ",
+      " 次即将失去生命时，一个随机的敌人代你承受。",
+      " NL 本回合还能触发 ",
+      " 次。",
+      " 次。",
+      " 本回合不能再触发了。"
     ]
   },
   "Slimebound:NextTurnGainStrengthPower": {
-    "NAME": "Charging Up",
+    "NAME": "蓄力",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength on your next turn."
+      "在你的下个回合，获得 ",
+      " 点 力量 。"
     ]
   },
   "Slimebound:NextTurnGainSlimeCrush": {
-    "NAME": "Preparing to Crush",
+    "NAME": "准备撞击",
     "DESCRIPTIONS": [
-      "Gain a #gSLIME #gCRUSH on your next turn.",
-      "Gain #b",
-      " copies of #gSLIME #gCRUSH on your next turn."
+      "在你的下个回合，将1张史莱姆撞击加入手牌。",
+      "在你的下个回合，将 ",
+      " 张 史莱姆撞击 加入手牌。"
     ]
   },
   "Slimebound:StunnedPower": {
-    "NAME": "Completely Exhausted",
+    "NAME": "精疲力尽",
     "DESCRIPTIONS": [
-      "Skip your next turn.",
-      "Skip your next #b",
-      " turns."
+      "跳过你的下个回合。",
+      "跳过你接下来的 ",
+      " 个回合。"
+    ]
+  },
+  "Slimebound:SearingPower": {
+    "NAME": "灼伤",
+    "DESCRIPTIONS": [
+      "每回合受到 ",
+      " 点伤害。"
     ]
   },
   "Slimebound:NextTurnGainHyperBeam": {
-    "NAME": "Preparing to Beam",
+    "NAME": "准备射爆",
     "DESCRIPTIONS": [
-      "Gain a #yHyper #yBeam on your next turn.",
-      "Gain #b",
-      " copies of #yHyper #yBeam on your next turn."
+      "下个回合开始时，将1张 #g超能光束 加入手牌。",
+      "下个回合开始时，将 ",
+      " 张超能光束加入手牌。"
     ]
   },
   "Slimebound:NextTurnGainDivider": {
-    "NAME": "Preparing to Divide",
+    "NAME": "准备分裂",
     "DESCRIPTIONS": [
-      "Gain a #yDivide on your next turn.",
-      "Gain #b",
-      " copies of #yDivide on your next turn."
+      "下个回合开始时，将1张 #g分裂 加入手牌。",
+      "下个回合开始时，将 ",
+      " 张分裂加入手牌。"
     ]
   },
   "Slimebound:StudyAutomatonPower": {
-    "NAME": "Study Automaton",
+    "NAME": "学习铜制机械人偶",
     "DESCRIPTIONS": [
-      "Gain a random Automaton card at the start of next turn.",
-      "Gain a random Automaton card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张机械人偶牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张机械人偶牌。"
     ]
   },
   "Slimebound:StudyAutomatonPowerUpgraded": {
-    "NAME": "Study Automaton+",
+    "NAME": "学习铜制机械人偶+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Automaton card at the start of next turn.",
-      "Gain a random Upgraded Automaton card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的机械人偶牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的机械人偶牌。"
     ]
   },
   "Slimebound:StudyAwakenedPower": {
-    "NAME": "Study Awakened One",
+    "NAME": "学习觉醒者",
     "DESCRIPTIONS": [
-      "Gain a random Awakened One card at the start of next turn.",
-      "Gain a random Awakened One card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张觉醒者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张觉醒者牌。"
     ]
   },
   "Slimebound:StudyAwakenedPowerUpgraded": {
-    "NAME": "Study Awakened One+",
+    "NAME": "学习觉醒者+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Awakened One card at the start of next turn.",
-      "Gain a random Upgraded Awakened One card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的觉醒者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的觉醒者牌。"
     ]
   },
   "Slimebound:AwakenedOnePower": {
-    "NAME": "Dark Ritual",
+    "NAME": "黑暗仪式",
     "DESCRIPTIONS": [
-      "Gain ",
-      " Strength if this enemy does not attack on its turn."
+      "如果这个敌人本回合没有攻击，你获得 ",
+      " 点 力量 。"
     ]
   },
   "Slimebound:StudyChampPower": {
-    "NAME": "Study Champ",
+    "NAME": "学习第一勇士",
     "DESCRIPTIONS": [
-      "Gain a random Champ card at the start of next turn.",
-      "Gain a random Champ card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张第一勇士牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张第一勇士牌。"
     ]
   },
   "Slimebound:StudyChampPowerUpgraded": {
-    "NAME": "Study Champ+",
+    "NAME": "学习第一勇士+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Champ card at the start of next turn.",
-      "Gain a random Upgraded Champ card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的第一勇士牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的第一勇士牌。"
     ]
   },
   "Slimebound:StudyCollectorPower": {
-    "NAME": "Study Collector",
+    "NAME": "学习收藏家",
     "DESCRIPTIONS": [
-      "Gain a random Collector card at the start of next turn.",
-      "Gain a random Collector card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张收藏家牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张收藏家牌。"
     ]
   },
   "Slimebound:StudyCollectorPowerUpgraded": {
-    "NAME": "Study Collector+",
+    "NAME": "学习收藏家+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Collector card at the start of next turn.",
-      "Gain a random Upgraded Collector card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的收藏家牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的收藏家牌。"
     ]
   },
   "Slimebound:StudyGuardianPower": {
-    "NAME": "Study Guardian",
+    "NAME": "学习守护者",
     "DESCRIPTIONS": [
-      "Gain a random Guardian card at the start of next turn.",
-      "Gain a random Guardian card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张守护者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张守护者牌。"
     ]
   },
   "Slimebound:StudyGuardianPowerUpgraded": {
-    "NAME": "Study Guardian+",
+    "NAME": "学习守护者+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Guardian card at the start of next turn.",
-      "Gain a random Upgraded Guardian card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的守护者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的守护者牌。"
     ]
   },
   "Slimebound:StudyHexaghostPower": {
-    "NAME": "Study Hexaghost",
+    "NAME": "学习六火亡魂",
     "DESCRIPTIONS": [
-      "Gain a random Hexaghost card at the start of next turn.",
-      "Gain a random Hexaghost card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张六火亡魂牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张六火亡魂牌。"
     ]
   },
   "Slimebound:StudyHexaghostPowerUpgraded": {
-    "NAME": "Study Hexaghost+",
+    "NAME": "学习六火亡魂+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Hexaghost card at the start of next turn.",
-      "Gain a random Upgraded Hexaghost card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的六火亡魂牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的六火亡魂牌。"
     ]
   },
   "Slimebound:StudyShapesPower": {
-    "NAME": "Study Donu & Deca",
+    "NAME": "学习甜圈八体",
     "DESCRIPTIONS": [
-      "Gain a random Donu & Deca card at the start of next turn.",
-      "Gain a random Donu & Deca card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张甜圈和八体牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张甜圈和八体牌。"
     ]
   },
   "Slimebound:StudyShapesPowerUpgraded": {
-    "NAME": "Study Donu & Deca+",
+    "NAME": "学习甜圈八体+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Donu & Deca card at the start of next turn.",
-      "Gain a random Upgraded Donu & Deca card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的甜圈和八体牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的甜圈和八体牌。"
     ]
   },
   "Slimebound:StudyTimeEaterPower": {
-    "NAME": "Study Time Eater",
+    "NAME": "学习时间吞噬者",
     "DESCRIPTIONS": [
-      "Gain a random Time Eater card at the start of next turn.",
-      "Gain a random Time Eater card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张时间吞噬者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张时间吞噬者牌。"
     ]
   },
   "Slimebound:StudyTimeEaterPowerUpgraded": {
-    "NAME": "Study Time Eater+",
+    "NAME": "学习时间吞噬者+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Time Eater card at the start of next turn.",
-      "Gain a random Upgraded Time Eater card at the start of your next ",
-      " turns."
+      "下个回合开始时获得1张升级后的时间吞噬者牌。",
+      "接下来的 ",
+      " 回合，每回合开始时获得1张升级后的时间吞噬者牌。"
     ]
   },
   "Slimebound:GreedRespawnPower": {
-    "NAME": "Greed Recovering",
+    "NAME": "寻回：贪婪黏液",
     "DESCRIPTIONS": [
-      "#yGreed #yOoze will respawn at the end of your turn."
+      "贪婪史莱姆将在回合结束时重生。"
     ]
   },
   "Slimebound:ScrapRespawnPower": {
-    "NAME": "Scrap Recovering",
+    "NAME": "寻回：破烂黏液",
     "DESCRIPTIONS": [
-      "#yScrap #yOoze will respawn at the end of your turn."
+      "破烂史莱姆将在回合结束时重生。"
     ]
   },
   "Slimebound:BuffSecondarySlimeEffectsPower": {
-    "NAME": "Minion Master",
+    "NAME": "从者大师",
     "DESCRIPTIONS": [
-      "Whenever you Command, Command again.",
-      "Whenever you Command, Command #b",
-      " more times."
+      "每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 ",
+      " 层。"
     ]
   },
   "Slimebound:TackleSelfDamagePreventPower": {
-    "NAME": "Reckless",
+    "NAME": "鲁莽",
     "DESCRIPTIONS": [
-      "Cards containing \"Tackle\" deal #b",
-      " more damage to you."
+      "冲撞 牌对自身造成的伤害提高 ",
+      " 点。"
     ]
   },
   "Slimebound:GoopArmorPower": {
-    "NAME": "Goop Armor",
+    "NAME": "黏液护甲",
     "DESCRIPTIONS": [
-      "Whenever you #yAttack an enemy who has #yGoop, gain #b",
-      " #yBlock."
+      "每当你消耗 黏液 时，获得 ",
+      " 点 格挡 。"
     ]
   }
 }

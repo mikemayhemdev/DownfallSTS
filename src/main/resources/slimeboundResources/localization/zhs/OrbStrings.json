@@ -1,88 +1,88 @@
 {
   "Slimebound:BronzeSlime": {
-    "NAME": "Bronze Slime",
+    "NAME": "青铜史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      "回合开始时造成 ",
+      " 伤害并给予你 ",
+      " 点格挡。"
     ]
   },
   "Slimebound:AttackSlime": {
-    "NAME": "Bruiser Slime",
+    "NAME": "好斗史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn."
+      "回合开始时造成 ",
+      " 点伤害"
     ]
   },
   "Slimebound:ScrapOozeSlime": {
-    "NAME": "Scrap Ooze",
+    "NAME": "破烂史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
+      "回合开始时造成 ",
+      " 点伤害。 NL 被 吸收 后在回合结束时重生。不减少生命上限。"
     ]
   },
   "Slimebound:GreedOozeSlime": {
-    "NAME": "Greed Ooze",
+    "NAME": "贪婪史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
+      "回合开始时造成 ",
+      " 点伤害。 NL 被 吸收 后在回合结束时重生。不减少生命上限。"
     ]
   },
   "Slimebound:TorchHeadSlime": {
-    "NAME": "Torch Head Slime",
+    "NAME": "火炬头史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. Gains twice the normal benefit from #yPotency."
+      "回合开始时造成 ",
+      " 点伤害。 潜力 对其影响加倍。"
     ]
   },
   "Slimebound:CultistSlime": {
-    "NAME": "Cultist Slime",
+    "NAME": "邪教徒史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn, then increases its damage by #b1."
+      "回合开始时造成 ",
+      " 点伤害并提高下次造成的伤害1点。"
     ]
   },
   "Slimebound:ShieldSlime": {
-    "NAME": "Leeching Slime",
+    "NAME": "水蛭史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      "回合开始时造成 ",
+      " 点伤害并给予你 ",
+      " 点格挡。"
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "Guerilla Slime",
+    "NAME": "酸液史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage to ALL enemies at the start of your turn."
+      "回合开始时造成 ",
+      " 点伤害并给予 ",
+      " 层中毒。"
     ]
   },
   "Slimebound:SlimingSlime": {
-    "NAME": "Mire Slime",
+    "NAME": "污泥史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yGoop at the start of your turn."
+      "回合开始时造成 ",
+      " 点伤害并给予 ",
+      " 层黏液。"
     ]
   },
   "Slimebound:HexSlime": {
-    "NAME": "Ghostflame Slime",
+    "NAME": "鬼火史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yBurn at the start of your turn."
+      "不发起攻击，潜力对其无效。提供1点 力量 、1点 敏捷 和2点 潜力 。"
     ]
   },
+
   "Slimebound:ChampSlime": {
-    "NAME": "Insulting Slime",
+    "NAME": "侮辱史莱姆",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yVulnerable at the start of your turn."
+      "回合开始时造成 #b",
+      " 点伤害并给予 #b",
+      " 层 #y易伤 。"
     ]
   },
   "Slimebound:SlowingSlime": {
-    "NAME": "Time Slime",
+    "NAME": "时间史莱姆",
     "DESCRIPTION": [
       "Deals #b",
       " damage and applies #b",
@@ -90,7 +90,7 @@
     ]
   },
   "Slimebound:ProtectorSlime": {
-    "NAME": "Protector Slime",
+    "NAME": "保护史莱姆",
     "DESCRIPTION": [
       "Deals #b",
       " damage at the start of your turn and grants you #b",
@@ -98,7 +98,7 @@
     ]
   },
   "Slimebound:DrawingSlime": {
-    "NAME": "Ancient Slime",
+    "NAME": "先古史莱姆",
     "DESCRIPTION": [
       "Deals #b",
       " damage at the start of your turn and causes you to draw #b",
@@ -106,7 +106,7 @@
     ]
   },
   "Slimebound:DarklingSlime": {
-    "NAME": "Darkling Slime",
+    "NAME": "小黑史莱姆",
     "DESCRIPTION": [
       "Deals #b",
       " damage at the start of your turn. When commanded, any other Darklings will also attack."

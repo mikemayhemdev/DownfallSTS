@@ -8,14 +8,18 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
+import downfall.downfallMod;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossSilent extends AbstractCharBoss {
+    public static final String ID = downfallMod.makeID("Silent");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];
 
     public CharBossSilent() {
-        super("Silent", "downfall:Silent", 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.THE_SILENT);
+        super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.THE_SILENT);
         this.energyOrb = new EnergyOrbGreen();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);

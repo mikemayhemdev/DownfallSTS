@@ -1,30 +1,30 @@
 {
   "Slimebound:SlimedPotion": {
-    "NAME": "Jar of Slime",
+    "NAME": "罐装黏液",
     "DESCRIPTIONS": [
-      "Apply #b",
-      " #yGoop."
+      "给予 #b",
+      " 层 黏液 。"
     ]
   },
   "Slimebound:SlimyTonguePotion": {
-    "NAME": "Slimy Elixir",
+    "NAME": "黏液精华",
     "DESCRIPTIONS": [
-      "Whenever an effect applies #yGoop, apply #b",
-      " more."
+      "本场战斗中，每次给予黏液时，额外给予 #b",
+      " 层黏液。"
     ]
   },
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "Army in a Bottle",
+    "NAME": "瓶装爪牙",
     "DESCRIPTIONS": [
-      "Gain Slime slots until you have #b3. NL Spawn a #yLeeching, #yMire, and #yGuerilla slime. They do not cost HP.",
-      "Gain Slime slots until you have #b6. NL Spawn #b2 #yLeeching, #b2 #yMire, and #b2 #yGuerilla slimes. They do not cost HP."
+      "获得直到你有 #b3 个史莱姆栏位。 NL 不失去生命生成1个 #y水蛭 #y污泥 和 #yGuerilla 史莱姆。",
+      "获得直到你有 #b6 个史莱姆栏位。 NL 不失去生命生成2个 #y水蛭 #y污泥 和 #yGuerilla 史莱姆。"
     ]
   },
   "Slimebound:ThreeZeroPotion": {
-    "NAME": "Ooze-Infused Drink",
+    "NAME": "稠化饮料",
     "DESCRIPTIONS": [
-      "Add #b",
-      " random 0-cost cards to your hand."
+      "在你的手牌中加入 #b",
+      " 张随机0费牌。"
     ]
   }
 }

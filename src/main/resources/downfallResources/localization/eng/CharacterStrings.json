@@ -1,5 +1,5 @@
 {
-  "Heart Event": {
+  "downfall:Heart Event": {
     "NAMES": [
       "The Heart"
     ],
@@ -32,7 +32,7 @@
       "[ #gEnemies #gin #gyour #gnext #gtwo #gcombats #gflee #gin #gterror ]"
     ]
   },
-  "Unlock": {
+  "downfall:Unlock": {
     "TEXT": [
       "This character is unlocked by completing a run with the Slime Boss.",
       "This character is unlocked by completing a run with the 2nd Villain character.",
@@ -42,7 +42,7 @@
 
     ]
   },
-  "HeartMerchant": {
+  "downfall:HeartMerchant": {
   "NAMES": [
     "Proceed",
     "~Sacrifice...~"
@@ -76,7 +76,7 @@
     "~Destroy...~ ~them~ ~all...~"
   ]
 },
-  "HeartProceed": {
+  "downfall:HeartProceed": {
     "TEXT": [
       "~Intruders...~ NL ~...in~ ",
       "~You~ ~are~ ~needed...~ NL ~...in~ ",
@@ -89,7 +89,7 @@
       "~the~ ~Beyond...~"
     ]
   },
-  "NeowEnding": {
+  "downfall:NeowEnding": {
     "TEXT": [
       "You... have... slain... everyone...",
       "...the cycle... has died.....",
@@ -99,7 +99,7 @@
       "~I~ ~brought...~ NL ~HIM...~ ~back...~"
     ]
   },
-  "HeartMerchantScreen": {
+  "downfall:HeartMerchantScreen": {
     "NAMES": [
       "~Greetings~ NL ~minion...~",
       "~Bring~ ~more~ ~souls...~",

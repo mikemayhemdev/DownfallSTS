@@ -1,16 +1,17 @@
 {
-  "Guardian": {
-    "NAMES": [
-      "The Guardian"
-    ],
-    "TEXT": [
-      "A construct of the Spire, programmed to defend it. NL Able to defend itself from harm on command.",
-      "PRIME DIRECTIVE - #r~DESTROY~ #r~HEART.~",
-      "[ guardianmod:Socket ]",
-      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~ancient~ ~protector,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
-
-    ],
-    "KEYWORDS": [
-    ]
-  }
+	"Guardian": {
+		"NAMES": [
+			"守护者"
+		],
+		"TEXT": [
+			"高塔内被编程以保护它的造物之一。 NL 能在命令之下保护自己免受伤害。",
+			"最高指令 - #r~摧毁心脏。~",
+			"[ 孔位 ]",
+			"在一条昏暗的街上，你遇见几个戴着兜帽的人在进行某种黑暗的仪式。当你靠近时，他们全都同时转身面对你，让你觉得十分诡异。 其中个子最高的一个微微一笑，露出了长长的尖牙，向你伸出了一只苍白而瘦长的手： NL ~“加入我们，高塔守护者。一起来感受高塔的温暖吧。”~",
+			"防御模式",
+			"拥有 #b3 层 #y荆棘 ，每打出一张牌获得 #b2 点 #y格挡 。回合结束时退出该姿态。"
+		],
+		"KEYWORDS": [
+		]
+	}
 }
