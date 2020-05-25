@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,6 +19,8 @@ import java.util.ArrayList;
 public class KnowingSkullWish extends AbstractExpansionCard {
 
     public final static String ID = makeID("KnowingSkullWish");
+    public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
+    public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
 
     //stupid intellij stuff SKILL, SELF, RARE
 
@@ -33,9 +36,9 @@ public class KnowingSkullWish extends AbstractExpansionCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("ks:0", "Wish for Souls", expansionContentMod.makeCardPath("QuickGuardian.png"), "Lose 6 HP. NL Gain 40 Souls."));
-        cardList.add(new OctoChoiceCard("ks:1", "Wish for Success", expansionContentMod.makeCardPath("QuickGuardian.png"), "Lose 3 HP. NL Get a Colorless card."));
-        cardList.add(new OctoChoiceCard("ks:2", "Wish for A Pick Me Up", expansionContentMod.makeCardPath("QuickGuardian.png"), "Lose 9 HP. NL Get a Potion."));
+        cardList.add(new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[0]));
+        cardList.add(new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[1]));
+        cardList.add(new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[2]));
         return cardList;
     }
 
