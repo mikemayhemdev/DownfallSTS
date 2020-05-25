@@ -19,12 +19,12 @@ public class SearingGhostflame extends AbstractGhostflame {
     public int attacksPlayedThisTurn = 0;
 
     private String ID = "hexamod:SearingGhostflame";
+    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
     public SearingGhostflame(float x, float y) {
         super(x, y);
         magic = 3;
-        NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     }
 
     @Override
@@ -61,6 +61,9 @@ public class SearingGhostflame extends AbstractGhostflame {
     public void reset() {
         attacksPlayedThisTurn = 0;
     }
+
+    @Override
+    public String getName(){ return NAME;}
 
     @Override
     public String getDescription() {

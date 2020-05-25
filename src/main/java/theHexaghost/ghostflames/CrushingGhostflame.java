@@ -20,12 +20,12 @@ public class CrushingGhostflame extends AbstractGhostflame {
     public int skillsPlayedThisTurn = 0;
 
     private String ID = "hexamod:CrushingGhostflame";
+    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
     public CrushingGhostflame(float x, float y) {
         super(x, y);
         damage = 5;
-        NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     }
 
     @Override
@@ -62,6 +62,9 @@ public class CrushingGhostflame extends AbstractGhostflame {
     public void reset() {
         skillsPlayedThisTurn = 0;
     }
+
+    @Override
+    public String getName(){ return NAME;}
 
     @Override
     public String getDescription() {

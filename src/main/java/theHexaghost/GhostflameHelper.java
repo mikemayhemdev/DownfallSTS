@@ -102,11 +102,11 @@ public class GhostflameHelper {
                     if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
                         TipHelper.renderGenericTip(
                                 (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                gf.NAME,
+                                gf.getName(),
                                 gf.getDescription());
                     } else {
                         TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                                gf.NAME,
+                                gf.getName(),
                                 gf.getDescription());
                     }
                 }

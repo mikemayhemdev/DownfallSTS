@@ -17,12 +17,12 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("bolster.png"));
 
     private String ID = "hexamod:BolsteringGhostflame";
+    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
     public BolsteringGhostflame(float x, float y) {
         super(x, y);
         block = 6;
-        NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     }
 
     @Override
@@ -47,6 +47,9 @@ public class BolsteringGhostflame extends AbstractGhostflame {
             return "0";
         return "1";
     }
+
+    @Override
+    public String getName(){ return NAME;}
 
     @Override
     public String getDescription() {

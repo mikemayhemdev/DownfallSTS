@@ -21,12 +21,12 @@ public class InfernoGhostflame extends AbstractGhostflame {
     public int energySpentThisTurn = 0;
 
     private String ID = "hexamod:InfernoGhostflame";
+    private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
     public InfernoGhostflame(float x, float y) {
         super(x, y);
         damage = 6;
-        NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     }
 
     @Override
@@ -61,6 +61,10 @@ public class InfernoGhostflame extends AbstractGhostflame {
     public void reset() {
         energySpentThisTurn = 0;
     }
+
+
+    @Override
+    public String getName(){ return NAME;}
 
     @Override
     public String getDescription() {
