@@ -1,77 +1,77 @@
 {
   "Slimebound:Hunted": {
-    "NAME": "The Boss Approaches",
+    "NAME": "老大来了",
     "DESCRIPTIONS": [
-      "A booming voice echoes the spire... NL NL #r~BETRAYER!!!~ NL NL The hulking slime quickly catches up to you, blocking your path forward. It appears it isn't happy with one of it's own minions going rogue, and has abandoned the Exordium to hunt you down and absorb you.",
-      "Can it really be this easy?",
-      "Everything makes sense now. NL The lack of memories, the ascent, the #yAncient #yOne. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+      "尖塔中，一个声音在回荡…… NL NL #r~叛徒！！！~ NL NL 笨重的黏液很快追上了你，阻挡住了你前进的道路。看来它对自己曾经的爪牙跑出来单干非常不满。它从塔底一路追到这里，一心想要打倒并吞噬你。",
+      "真的这么容易吗？",
+      "一切都清楚了。 NL 缺失的记忆，进阶，#y先古居民。 NL NL 从来都是这样。 NL 未来也是这样。 NL 一切都将被遗忘……"
     ],
     "OPTIONS": [
-      "[Confront] #rFight #rSlime #rBoss. Reward: #gTiny #gBowler #gHat.",
-      "[Flee in Terror] #rCursed #r- #rShame."
+      "[对峙] 与 #r史莱姆老大 战斗。 奖励： #g袖珍圆顶礼帽",
+      "[惊慌逃离] #r被诅咒 #r- #r羞耻。"
     ]
   },
   "Slimebound:WorldofGoop": {
-    "NAME": "World of Goop",
+    "NAME": "黏液世界",
     "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL Calmly, you bathe yourself as you bond with the goop, enjoying a moment of reprieve. NL NL Climbing out, you notice in the pool a pile of #ygold from unfortunate adventurers, along with a curious creature who seems to be attracted to the shiny metal.",
-      "You exit the invigorating slime bath, fishing out the #ygold, leaving the creature with a sad look upon its amorphous face.",
-      "You succeed in negotiating a deal with the creature to provide it with more shiny metal if it will aid you in your quest. NL You and your newfound #gfriend exit the slime bath together."
+      "你掉进了一个水坑里。 NL 可是坑里 @全是@ #g@史莱姆黏液@ ！ NL 不过冷静想想，你不就是黏液组成的吗？你沐浴在黏液里好好地放松了一下。 NL NL 准备爬出来的时候，你注意到不知哪个倒霉鬼的一堆金币掉在坑底，还有个被这闪亮的金币吸引来的好奇的生物。",
+      "你结束了舒服的黏液浴，带走了 #y金币 ，把看不出形状的脸上写满了悲伤的生物留在了背后。",
+      "你成功和这个生物达成了交易：你提供更多亮闪闪，它助你一臂之力。 NL 你和你的新 #g朋友 一起离开了黏液浴。"
     ],
     "OPTIONS": [
-      "[Gather Gold] #gGain #g75 #gGold.",
-      "[Recruit] #gGain #yGreed #yOoze.",
-      "[Leave]"
+      "[带走金币] #g获得 #g75 #g金币。",
+      "[招募伙伴] #g获得 #y贪婪史莱姆 。",
+      "[离开]"
     ]
   },
   "Slimebound:SlimeTalk": {
     "NAME": "TalkStrings",
     "DESCRIPTIONS": [
-      "~MINION...~ NL #r~BETRAYER!!!~",
-      "~What~ ~is~ ~it~ ~doing...~",
-      "~It~ ~cannot~ ~leave...~",
-      "~Tell~ ~the~ ~Boss...~",
-      "That hat... NL #r~I~ #r~must~ #r~have~ #r~it!~",
-      "~What~ ~is...~",
-      "~...it~ ~doing...~",
-      "~...in~ ~the~ ~Beyond...~",
-      "~We~ ~must~ ~stop~ ~it...~",
-      "~It's~ ~so~ ~strong...~",
-      "~It's~ ~like~ ~us...~",
-      "~NICE~ #r~HAT!!!~"
+      "~仆从...不...~ NL #r~叛徒！！！~",
+      "~它~ ~在~ ~做~ ~什么...~",
+      "~不能~ ~让它~ ~走...~",
+      "~快~ ~告诉~ ~老大...~",
+      "它的帽子... NL #r~我~ #r~必须收藏！~",
+      "~这是~ ~怎么...~",
+      "~...它~ ~在...~",
+      "~...在~ ~另~ ~一边...~",
+      "~我们~ ~必须~ ~阻止~ ~它...~",
+      "~它...~ ~好强大~ ~...~",
+      "~它~ ~和我们~ ~一样...~",
+      "~帽子...~ #r~好看...~"
     ]
   },
   "Slimebound:ScrapOozePatch": {
-    "NAME": "Scrap Ooze Alternate",
+    "NAME": "另一只小史莱姆",
     "DESCRIPTIONS": [
-      "Any slime who has found a different path is a friend in your cause.  With offerings of new scrap and treasure, the Scrap Ooze joins your quest."
+      "任何不走寻常路的史莱姆在你征服尖塔的道路上都是你的朋友。 献上新的破烂和财宝, 破烂史莱姆 加入了你的征途。"
     ],
     "OPTIONS": [
-      "[Recruit] Gain the #gScrap #gOoze. #rLocked if you Reach Inside.",
-      "[Recruit] Locked.",
-      "[Leave]"
+      "[招募] 获得 #g破烂史莱姆 。如果你伸手进去了， #r锁定 。",
+      "[招募] 锁定。",
+      "[离开]"
     ]
   },
   "Slimebound:ArtOfSlimeWar": {
-    "NAME": "The Art of Slime War",
+    "NAME": "史莱姆的战争之道",
     "DESCRIPTIONS": [
-      "You come across a disgusting pedestal with a #gglowing #gbook sitting atop. It appears this book contains the complicated and advanced combat techniques used by the #gSlime #gBoss and its minions.",
-      "As you reach for the book, you hear several traps activate.  You won't be able to avoid them all.",
-      "You steal the book and manage to avoid the traps, but fall into a horrible puddle of goop.",
-      "Grabbing the book revealed a trap of spikes below the floor, which you narrowly escape, but not without a severe gash.",
-      "As soon as the book leaves the pedestal, you feel it draining your very life essence. It had better be worth it.",
-      "You decide to leave the book where it is and continue on.",
-      "You can't figure out how the Slime minions are a threat to anyone - it appears the only tactic they use is to violently throw their bodies at enemies.  Well, if it works for them..."
+      "你遇到了一个令人作呕的底座，上面放置着一本 #g发光的书 。 看上去，这本书记载着 #g史莱姆老大 和它的爪牙们所使用的复杂高深的战斗技巧...",
+      "在你接近这本书的时候，你听到了陷阱被激活的声音。你没办法在陷阱阵中毫发无伤！",
+      "你悄悄拿走了这本书，小心翼翼地躲开了陷阱，却掉进了黏糊糊的坑中！",
+      "拿走这本书激活了地板上的尖刺陷阱！你小心翼翼地尝试躲开，却还是被尖刺划开了一道伤口。",
+      "你从底座上抓起书时，突然感觉它正在吸取着你的生命能量。只能希望这一切都是值得的。",
+      "你决定不去碰这本书，继续你的行程。",
+      "你实在是想不通史莱姆的爪牙们到底是怎样对任何人造成伤害的。 看起来它们唯一的战术就是把自己身体的一部分粗暴地丢向敌人。好吧，如果这种战术已经被它们证明过是有效的话..."
     ],
     "OPTIONS": [
-      "[Read] #gRemove #gall Strikes. #gReceive #g3 #gUpgraded Tackles.",
-      "[Take] #gObtain #gConsult #gPlaybook. #rTrigger #ra #rtrap.",
-      "[Leave]",
-      "[Dive] #rBecome #rCursed #r- #rIcky.",
-      "[Be Patient] #rTake #r",
-      " #rDamage.",
-      "[Grab and Run] #rLose #r",
-      " #rMax #rHP."
+      "[阅读] #g移除所有 打击 。 #g获得3张 冲撞+ 。",
+      "[带走] 获得 #g查找策略 。 #r触发一个陷阱 。",
+      "[离开]",
+      "[潜入] #r被诅咒 #r黏液附身 。",
+      "[耐心等待] #r受到 #r",
+      " #r点伤害。",
+      "[抓起就跑] #r失去 #r",
+      " #r点最大生命。"
     ]
   }
 }

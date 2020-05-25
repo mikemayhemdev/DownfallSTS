@@ -14,15 +14,15 @@ import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 
 
-public class SelfFormingGooPower extends AbstractPower {
-    public static final String POWER_ID = "Slimebound:SelfFormingGooPower";
+public class SelfFormingGooPowerPlus extends AbstractPower {
+    public static final String POWER_ID = "Slimebound:SelfFormingGooPowerPlus";
     public static final String NAME = "Potency";
-    public static final String IMG = "powers/MalleableRed.png";
+    public static final String IMG = "powers/Malleable.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
 
-    public SelfFormingGooPower(AbstractCreature owner, int amount) {
+    public SelfFormingGooPowerPlus(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -38,13 +38,14 @@ public class SelfFormingGooPower extends AbstractPower {
     public void onEvokeOrb(AbstractOrb orb) {
         flash();
         if (orb instanceof SpawnedSlime) {
-            addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount)));
+            addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount)));
         }
     }
 
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
+
 }
 
 

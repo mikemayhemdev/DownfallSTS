@@ -56,7 +56,7 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         }
 
 
-        AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
+        AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeStatEquivalentCopy();
         if (this.upgradeCard) {
             cStudy.upgrade();
         }

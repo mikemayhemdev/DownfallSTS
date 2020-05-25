@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,6 +30,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     public static float fontScale;
     public static int totalCount;
     public static float energyVfxTimer;
+    private BitmapFont energyNumFont;
 
     static {
         tutorialStrings = CardCrawlGame.languagePack.getTutorialString("Energy Panel Tip");
@@ -57,18 +59,23 @@ public class EnemyEnergyPanel extends AbstractPanel {
         switch (this.owner.chosenClass) {
             case DEFECT:
                 this.gainEnergyImg = ImageMaster.BLUE_ORB_FLASH_VFX;
+                this.energyNumFont = FontHelper.energyNumFontBlue;
                 break;
             case IRONCLAD:
                 this.gainEnergyImg = ImageMaster.RED_ORB_FLASH_VFX;
+                this.energyNumFont = FontHelper.energyNumFontRed;
                 break;
             case THE_SILENT:
                 this.gainEnergyImg = ImageMaster.GREEN_ORB_FLASH_VFX;
+                this.energyNumFont = FontHelper.energyNumFontGreen;
                 break;
             case WATCHER:
                 this.gainEnergyImg = ImageMaster.PURPLE_ORB_FLASH_VFX;
+                this.energyNumFont = FontHelper.energyNumFontPurple;
                 break;
             default:
                 this.gainEnergyImg = ImageMaster.RED_ORB_FLASH_VFX;
+                this.energyNumFont = FontHelper.energyNumFontRed;
                 break;
         }
     }
@@ -149,7 +156,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
         this.renderVfx(sb);
         final String energyMsg = EnemyEnergyPanel.totalCount + "/" + this.owner.energy.energy;
         AbstractDungeon.player.getEnergyNumFont().getData().setScale(EnemyEnergyPanel.fontScale);
-        FontHelper.renderFontCentered(sb, AbstractDungeon.player.getEnergyNumFont(), energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
+        FontHelper.renderFontCentered(sb, energyNumFont, energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
         this.tipHitbox.render(sb);
         if (this.tipHitbox.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
             TipHelper.renderGenericTip(50.0f * Settings.scale, 380.0f * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);

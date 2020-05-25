@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
+import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 
 
@@ -47,25 +48,23 @@ public class SlimeSacrificePower extends AbstractPower {
         if (info.type == DamageInfo.DamageType.NORMAL) {
             if (info.owner != AbstractDungeon.player) {
                 if (damageAmount > AbstractDungeon.player.currentBlock) {
-                    if (!AbstractDungeon.player.orbs.isEmpty()) {
-                        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                    AbstractOrb o = SlimeboundMod.getLeadingSlime();
+                    if (o != null) {
 
-                            if (o instanceof SpawnedSlime) {
+                        SpawnedSlime s = (SpawnedSlime) o;
+                        //s.noEvokeBonus = true;
+                        this.flash();
+                        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
+                        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));
+                        AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(o));
+                        return AbstractDungeon.player.currentBlock;
 
-                                SpawnedSlime s = (SpawnedSlime) o;
-                                //s.noEvokeBonus = true;
-                                this.flash();
-                                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new VFXAction(new ShieldParticleEffect(o.cX, o.cY)));
-                                com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, this.ID, 1));
-                                AbstractDungeon.actionManager.addToTop(new EvokeSpecificOrbAction(o));
-                                return AbstractDungeon.player.currentBlock;
-
-                            }
-                        }
                     }
                 }
             }
         }
+
+
         return damageAmount;
     }
 

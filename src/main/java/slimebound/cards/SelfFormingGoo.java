@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.SelfFormingGooPower;
+import slimebound.powers.SelfFormingGooPowerPlus;
 
 
 public class SelfFormingGoo extends AbstractSlimeboundCard {
@@ -20,7 +21,7 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/straygoop.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.POWER;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
@@ -39,6 +40,8 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfFormingGooPower(p, 1), 1));
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SelfFormingGooPowerPlus(p, 1), 1));
+
     }
 
     public AbstractCard makeCopy() {

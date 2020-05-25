@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import slimebound.SlimeboundMod;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 import slimebound.orbs.SpawnedSlime;
 import theHexaghost.HexaMod;
@@ -37,15 +38,10 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
     @Override
     public void onAfterCardPlayed(AbstractCard usedCard) {
         flash();
-        AbstractOrb oldestOrb = null;
-        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-            if (o instanceof SpawnedSlime) {
-                oldestOrb = o;
-                break;
-            }
-
+        AbstractOrb o = SlimeboundMod.getLeadingSlime();
+        if (o != null) {
+            addToBot(new TrigggerSpecificSlimeAttackAction(o));
         }
-        addToBot(new TrigggerSpecificSlimeAttackAction(oldestOrb));
     }
 
     public void atEndOfTurn(boolean isPlayer) {

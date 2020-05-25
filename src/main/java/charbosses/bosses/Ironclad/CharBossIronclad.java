@@ -8,14 +8,18 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
+import downfall.downfallMod;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossIronclad extends AbstractCharBoss {
+    public static final String ID = downfallMod.makeID("Ironclad");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Ironclad").NAMES[0];
 
     public CharBossIronclad() {
-        super("Ironclad", "downfall:Ironclad", 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+        super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
         this.energyOrb = new EnergyOrbRed();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/ironclad/idle/skeleton.atlas", "images/characters/ironclad/idle/skeleton.json", 1.0f);
@@ -56,6 +60,9 @@ public class CharBossIronclad extends AbstractCharBoss {
         return new ShieldSmash();
     }
 
+    static {
+
+    }
 }
 
 

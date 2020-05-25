@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import guardian.patches.GuardianEnum;
 import sneckomod.TheSnecko;
 import theHexaghost.TheHexaghost;
@@ -17,7 +18,7 @@ import theHexaghost.TheHexaghost;
         method = "updateHitbox"
 )
 public class EvilModeCharacterOption {
-    public static final String[] TEXT = CardCrawlGame.languagePack.getCharacterString("Unlock").TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Unlock")).TEXT;
 
     @SpirePostfixPatch
     public static void Prefix(CharacterOption __instance) {

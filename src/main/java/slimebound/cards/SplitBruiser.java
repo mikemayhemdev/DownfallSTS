@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
@@ -49,6 +50,7 @@ public class SplitBruiser extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true, bonus, 0));
 
+        if (upgraded) addToBot(new CommandAction());
     }
 
     public AbstractCard makeCopy() {
@@ -58,7 +60,9 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
 
 
         }

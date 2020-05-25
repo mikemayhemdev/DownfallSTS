@@ -1,32 +1,32 @@
 {
   "Guardian:AcceleratePotion": {
-    "NAME": "Temporal Potion",
+    "NAME": "质朴药水",
     "DESCRIPTIONS": [
-      "Accelerate all cards in #yStasis twice.",
-      "Accelerate all cards in #yStasis four times."
+      "将所有被凝滞中的牌 #y加速 两次。",
+      "将所有被凝滞中的牌 #y加速 四次。"
     ]
   },
-  "Guardian:DefensiveModePotion": {
-    "NAME": "Polishing Oil",
+    "Guardian:DefensiveModePotion": {
+    "NAME": "抛光油",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock and #b",
-      " #yDefensive #yMode."
+      "获得 #b",
+      " 点 #y格挡 并进入 #yguardianmod:防御模式 。"
     ]
   },
   "Guardian:BlockOnCardUsePotion": {
-    "NAME": "Armorer's Tincture",
+    "NAME": "盔甲涂料",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock each time you play a card this turn."
+      "本回合你每打出一张牌，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "Guardian:StasisDiscoveryPotion": {
-    "NAME": "Quantum Elixir",
+    "NAME": "量子万灵药",
     "DESCRIPTIONS": [
-      "Gain #yStasis slots until you have #b",
-      ". NL ",
-      " times, choose #b1 of #b3 cards to place into #yStasis."
+      "获得 #y凝滞栏位 直到你有 #b",
+      " 个， NL ",
+      " 次，从 #b3 张牌中选择 #b1 张牌 #y凝滞 。"
     ]
   }
+
 }

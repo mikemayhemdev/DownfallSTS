@@ -162,7 +162,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void initializeSlotPositions() {
-        float xStartOffset = this.drawX + Settings.scale * -230F;
+        float xStartOffset = this.drawX + Settings.scale * -150F;
         float yStartOffset = this.drawY + Settings.scale * -55F;
         float ySpaceBottomAlternatingOffset = -70 * Settings.scale;
         float ySpaceAlternatingOffset = -20 * Settings.scale;
@@ -170,17 +170,17 @@ public class SlimeboundCharacter extends CustomPlayer {
         float xSpaceBottomAlternatingOffset = -0.2F * Settings.scale;
 
 
-        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 0);
-        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 1);
+        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 0);
+        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 1);
         orbPositionsX[2] = xStartOffset + (xSpaceBetweenSlots * 2);
-        orbPositionsX[1] = xStartOffset + (xSpaceBetweenSlots * 3);
-        orbPositionsX[0] = xStartOffset + (xSpaceBetweenSlots * 4);
+        orbPositionsX[3] = xStartOffset + (xSpaceBetweenSlots * 3);
+        orbPositionsX[4] = xStartOffset + (xSpaceBetweenSlots * 4);
 
-        orbPositionsY[4] = yStartOffset;
-        orbPositionsY[3] = yStartOffset + ySpaceAlternatingOffset;
-        orbPositionsY[2] = yStartOffset;
-        orbPositionsY[1] = yStartOffset + ySpaceAlternatingOffset;
         orbPositionsY[0] = yStartOffset;
+        orbPositionsY[1] = yStartOffset + ySpaceAlternatingOffset;
+        orbPositionsY[2] = yStartOffset;
+        orbPositionsY[3] = yStartOffset + ySpaceAlternatingOffset;
+        orbPositionsY[4] = yStartOffset;
 
     }
 

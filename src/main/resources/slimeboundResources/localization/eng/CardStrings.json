@@ -89,9 +89,9 @@
     "DESCRIPTION": "Gain !M! Block whenever you slimeboundmod:Consume."
   },
   "Slimebound:SelfFormingGoo": {
-    "NAME": "Self-Forming Goo",
-    "DESCRIPTION": "Whenever you slimeboundmod:Absorb a Slime, gain !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Absorb a Slime, gain !M! Dexterity."
+    "NAME": "Reformation",
+    "DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength and !M! Dexterity."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
@@ -146,7 +146,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb your newest Slime. NL If you do, gain !M! slimeboundmod:Potency and heal 4 HP. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb your leading Slime. NL If you do, gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -154,7 +154,7 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain 1 slimeboundmod:Potency and !B! Block for each Slime slimeboundmod:Absorbed. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP for each slimeboundmod:Absorbed. NL Exhaust."
   },
   "Slimebound:SoTasty": {
     "NAME": "SO TASTY!",
@@ -377,19 +377,28 @@
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command.  NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command.  NL Exhaust."
+  },
+  "Slimebound:SplitSpecialist": {
+    "NAME": "Split: Specialist",
+    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL slimeboundmod:Command.  NL Exhaust."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
@@ -399,10 +408,6 @@
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
     "DESCRIPTION": "slimeboundmod:Tackles deal !M! more damage to enemies, and 1 more damage to you."
-  },
-  "Slimebound:SplitSpecialist": {
-    "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
   },
   "Slimebound:Darklings": {
     "NAME": "Darkling Trio",

@@ -1,9 +1,11 @@
 package slimebound.cards;
 
 
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeAllOrbsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -43,22 +45,24 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     public MassRepurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseBlock = 4;
+        this.baseMagicNumber = magicNumber = 1;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new EvokeAllOrbsAction());
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                addToBot(new GainBlockAction(p, block));
-                addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, 1), 1));
-            }
+        AbstractOrb o = SlimeboundMod.getLeadingSlime();
+        if (o != null){
+            AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+            addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
+            addToBot(new HealAction(p, p, 4));
+            addToBot(new GainBlockAction(p, block));
         }
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             upgradeBlock(2);
         }
     }

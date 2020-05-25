@@ -1,78 +1,138 @@
 {
-  "Heart Event": {
+  "downfall:Heart Event": {
     "NAMES": [
-      "The Heart"
+      "腐化之心"
     ],
     "TEXT": [
-      "~Serve...~ NL ~me..~ ~now...~",
-      "~Rise...~ NL ~Servant..~",
-      "~Arise...~",
-      "~Slay~ NL ~intruders...~",
-      "~Reach~ ~the~ ~intruder...~ NL ~to~ ~receive~ ~more..~ ~blessings...~",
-      "~At~ ~least...~ ~confront~ NL ~the~ ~first~ ~intruder...~",
-      "~I~ ~brought~ ~you~ ~back...~",
-      "~Choose...~",
-      "~Granted...~",
-      "~Sacrifice...~ NL ~...for power....~",
-      "~PROVE~ ~your~ NL ~worth...~",
-      "Rewards",
-      "~Continue~ ~for~ ~me...~",
-      "~Descend...~ ~..into madness...~",
-      "~Impressive...~ ~more...~",
-      "Cursed!",
-      "Scatterbrain!",
-      "Transformation!"
+      "~现在……~ NL ~服从……~ ~于我……~",
+      "~起来……~ NL ~奴仆……~",
+      "~起来……~",
+      "~消灭~ NL ~入侵者……~",
+      "~见到~ ~入侵者……~ NL ~就能获得~ ~更多…~ ~祝福……~",
+      "~至少…~ ~也要见到~ NL ~第一个~ ~入侵者~ ~吧……~",
+      "~我把你~ ~带回来了……~",
+      "~选择……~",
+      "~实现了……~",
+      "~献祭……~ NL ~……与力量…….~",
+      "~证明~ ~你的~ NL ~价值……~",
+      "奖励",
+      "~继续~ ~为我~ ~而战……~",
+      "~陷入……~ ~……疯狂……~",
+      "~了不起……~ ~继续……~",
+      "诅咒！",
+      "杂念！",
+      "转化！"
     ],
     "OPTIONS": [
-      "[Continue]",
-      "[Talk]",
-      "[Skip]",
-      "[Leave]",
-      "Choose 10 cards to add to your deck.",
-      "[ #gEnemies #gin #gyour #gnext #gthree #gcombats #gflee #gin #gterror ]"
+      "[继续]",
+      "[对话]",
+      "[跳过]",
+      "[离开]",
+      "选择10张牌加入你的牌组。",
+      "[ #g接下来2场战斗中的敌人将落荒而逃 ]"
     ]
   },
-  "Unlock": {
+  "downfall:Unlock": {
     "TEXT": [
-      "This character is unlocked by completing a run with the Slime Boss.",
-      "This character is unlocked by completing a run with the 2nd Villain character.",
-      "This character is unlocked by completing a run with the Guardian.",
-      "This character is unlocked by completing a run with every other character, including Standard characters."
-
+      "这名角色需要用史莱姆老大打过一局游戏才能解锁。",
+      "这名角色需要用第二名恶棍打过一局游戏才能解锁。",
+      "这名角色需要用守护者打过一局游戏才能解锁。",
+      "这名角色需要用第三名恶棍打过一局游戏才能解锁。",
+      "这名角色需要用六火亡魂打过一局游戏才能解锁。"
+	  
     ]
   },
-  "HeartMerchant": {
+  "downfall:HeartMerchant": {
   "NAMES": [
-    "Proceed",
-    "~Sacrifice...~"
+    "继续",
+    "~必要的牺牲……~"
   ],
   "TEXT": [
-    "~You~ ~grow...~ ~stronger...~",
+    "~你~ ~变得...~ ~更强了……~",
     "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
     "~Slay...~ ~and~ ~be~ ~rewarded...~",
-    "~More...~ ~souls...~",
+    "~更多……的……灵魂……~",
     "~Feed~ ~us......~ NL ~FEED~ ~US......~",
     "~Fuel...~ ~the~ ~corruption...~",
     "~Blessings...~ ~are~ ~earned...~",
     "~No...~ ~mercy...~",
     "~Ever...~ ~stronger...~",
-    "~Our~ ~power...~ ~is~ ~yours...~",
+    "~我们……的……力量……是……你的……了……~",
     "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
     "~Fight...~ ~fell...~ ~and~ ~feed...~",
     "~We~ ~are...~ ~legion...~",
     "~Go~ ~forth...~ ~and~ ~harvest...~",
-    "~Delicious...~ ~souls...~",
+    "~美味……的……灵魂……~",
     "~Reap...~ ~the~ ~fallen...~"
   ],
   "OPTIONS": [
-    "~Neow...~ ~cannot~ ~win...~",
-    "~Fear...~ ~nothing...~",
-    "..... NL .... NL .........",
-    "~Finish...~ ~them...~",
-    "~Good...~ ~luck...~",
-    "~Don't...~ ~die...~",
-    "~We will...~ ~be~ ~waiting...~",
-    "~Destroy...~ ~them~ ~all...~"
+    "~涅奥……不会赢的……~",
+    "~无需……恐惧……~",
+    "…… NL …… NL …………",
+    "~结果……他们……~",
+    "~祝你……好运……~",
+    "~不要……死……~",
+    "~我们……会……等着……~",
+    "~摧毁……他们……~"
   ]
-}
+},
+  "downfall:HeartProceed": {
+    "TEXT": [
+      "~Intruders...~ NL ~...in~ ",
+      "~You~ ~are~ ~needed...~ NL ~...in~ ",
+      "~They~ ~have~ ~reached...~ NL ",
+      "~Return...~ NL ~Protect~ ",
+      "~Slay~ ~them~ ~all...~ NL ~...in~ "
+    ],
+    "OPTIONS": [
+      "~the~ ~City...~",
+      "~the~ ~Beyond...~"
+    ]
+  },
+    "downfall:NeowEnding": {
+    "TEXT": [
+      "You... have... slain... everyone...",
+      "...the cycle... has died.....",
+      "..and so...... shall... NL ....I......"
+    ],
+    "OPTIONS": [
+      "~I~ ~brought...~ NL ~HIM...~ ~back...~"
+    ]
+  },
+  "downfall:HeartMerchantScreen": {
+    "NAMES": [
+      "~Greetings~ NL ~minion...~",
+      "~Bring~ ~more~ ~souls...~",
+      "~I~ ~need~ @more...@",
+      "~You~ ~are~ ~not~ NL @worthy...@",
+      "~No.~",
+      "~Harvest~ ~more~ NL ~for~ ~that...~",
+      "~Insufficient~ ~sacrifice...~",
+      "~Yes...~",
+      "~More...~ @More...!@",
+      "~Grow~ ~strong...~",
+      "~I~ ~am~ ~renewed~...",
+      "~Go~ ~forth~...",
+      "离开",
+      "选择一张牌移除出你的牌组。"
+    ],
+    "TEXT": [
+      "~You~ ~grow...~ ~stronger...~",
+      "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
+      "~Slay...~ ~and~ ~be~ ~rewarded...~",
+      "~More...~ ~souls...~",
+      "~Feed~ ~us......~ NL ~FEED~ ~US......~",
+      "~Fuel...~ ~the~ ~corruption...~",
+      "~Blessings...~ ~are~ ~earned...~",
+      "~No...~ ~mercy...~",
+      "~Ever...~ ~stronger...~",
+      "~Our~ ~power...~ ~is~ ~yours...~",
+      "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
+      "~Fight...~ ~fell...~ ~and~ ~feed...~",
+      "~We~ ~are...~ ~legion...~",
+      "~Go~ ~forth...~ ~and~ ~harvest...~",
+      "~Delicious...~ ~souls...~",
+      "~Reap...~ ~the~ ~fallen...~"
+    ]
+  }
 }

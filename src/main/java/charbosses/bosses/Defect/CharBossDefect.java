@@ -8,13 +8,18 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
+import downfall.downfallMod;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossDefect extends AbstractCharBoss {
+    public static final String ID = downfallMod.makeID("Defect");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Defect").NAMES[0];
+
     public CharBossDefect() {
-        super("Defect", "downfall:Defect", 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, -20.0f, AbstractPlayer.PlayerClass.DEFECT);
+        super(NAME, ID, 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, -20.0f, AbstractPlayer.PlayerClass.DEFECT);
         this.energyOrb = new EnergyOrbBlue();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/defect/idle/skeleton.atlas", "images/characters/defect/idle/skeleton.json", 1.0F);

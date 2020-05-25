@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.ShieldSlime;
 import slimebound.patches.AbstractCardEnum;
@@ -46,6 +47,7 @@ public class SplitLeeching extends AbstractSlimeboundCard {
         int bonus = 0;
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true, 0, bonus));
+        if (upgraded) addToBot(new CommandAction());
 
     }
 
@@ -56,7 +58,9 @@ public class SplitLeeching extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
 
         }
     }

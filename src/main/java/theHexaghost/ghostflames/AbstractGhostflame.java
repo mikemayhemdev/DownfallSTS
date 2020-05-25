@@ -71,6 +71,8 @@ public abstract class AbstractGhostflame {
 
     public abstract Texture getHelperTexture();
 
+    public abstract String getName();
+
     public abstract String getDescription();
 
     public abstract String returnHoverHelperText();

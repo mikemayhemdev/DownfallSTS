@@ -3,6 +3,8 @@ package sneckomod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,7 +14,7 @@ import sneckomod.actions.MuddleAction;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class MuddleDrawnCardsPower extends AbstractPower implements CloneablePowerInterface {
+public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = SneckoMod.makeID("MuddleDrawnCardsPower");
 
@@ -30,18 +32,22 @@ public class MuddleDrawnCardsPower extends AbstractPower implements CloneablePow
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
+        this.amount2 -= this.amount;
         this.updateDescription();
     }
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        this.amount -= 1;
-        if (amount == 0)
-            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
-        else {
+        this.amount2 -= 1;
+        if (amount2 > 0) {
             flash();
             addToTop(new MuddleAction(card));
+            this.updateDescription();
         }
+    }
+
+    public void atEndOfRound() {
+        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
@@ -49,7 +55,7 @@ public class MuddleDrawnCardsPower extends AbstractPower implements CloneablePow
         if (amount == 1)
             description = "#yMuddle the next card you draw.";
         else
-            description = "#yMuddle the next #b" + amount + " cards you draw.";
+            description = "#yMuddle the first #b" + amount + " cards drawn this turn. (" + Math.max(0,this.amount2) + " remaining)";
     }
 
     @Override

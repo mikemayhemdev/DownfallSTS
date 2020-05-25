@@ -117,13 +117,17 @@
     ]
   },
   "Slimebound:SelfFormingGooPower": {
-    "NAME": "Self-Forming Goo",
+    "NAME": "Reformation",
     "DESCRIPTIONS": [
-      "Whenever you lose HP, at the start of your next turn, gain #b",
-      " #yBlock and apply #b",
-      " #yGoop to a random enemy.",
-      " #yGoop to a random enemy #b",
-      " times."
+      "Whenever you Absorb a Slime, gain #b",
+      " Strength."
+    ]
+  },
+  "Slimebound:SelfFormingGooPowerPlus": {
+    "NAME": "Reformation+",
+    "DESCRIPTIONS": [
+      "Whenever you Absorb a Slime, gain #b",
+      " Dexterity."
     ]
   },
   "Slimebound:LoseSlimesPower": {
