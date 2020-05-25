@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
@@ -18,9 +19,13 @@ public class CrushingGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
     public int skillsPlayedThisTurn = 0;
 
+    private String ID = "hexamod:CrushingGhostflame";
+    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+
     public CrushingGhostflame(float x, float y) {
         super(x, y);
         damage = 5;
+        NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     }
 
     @Override
@@ -62,25 +67,25 @@ public class CrushingGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "#yIgnited. ";
+            s = DESCRIPTIONS[0];
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - skillsPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. #yIgnites when #b" + x + " #ySkill is played this turn.";
+                s = s + DESCRIPTIONS[1] + x + DESCRIPTIONS[2];
             } else {
-                s = s + "#yActive. #yIgnites when #b" + x + " #ySkills are played this turn.";
+                s = s + DESCRIPTIONS[1] + x + DESCRIPTIONS[3];
             }
         } else {
-            s = s + "Inactive. #yIgnites when #b2 #ySkills are played while #yActive.";
+            s = s + DESCRIPTIONS[4];
         }
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        s = s + " NL #yIgnition: When #yIgnited, deal #b" + x + " damage to a random enemy twice.";
+        s = s + DESCRIPTIONS[5] + x + DESCRIPTIONS[6];
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+            s = s + DESCRIPTIONS[7];
         }
         return s;
     }

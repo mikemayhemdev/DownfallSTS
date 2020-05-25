@@ -27,6 +27,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
 import com.megacrit.cardcrawl.vfx.InfiniteSpeechBubble;
 import com.megacrit.cardcrawl.vfx.scene.LevelTransitionTextOverlayEffect;
+import downfall.downfallMod;
 import downfall.util.HeartReward;
 import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
@@ -457,7 +458,7 @@ public class HeartEvent extends AbstractEvent {
     }
 
     static {
-        characterStrings = CardCrawlGame.languagePack.getCharacterString("Heart Event");
+        characterStrings = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event"));
         NAMES = characterStrings.NAMES;
         TEXT = characterStrings.TEXT;
         OPTIONS = characterStrings.OPTIONS;

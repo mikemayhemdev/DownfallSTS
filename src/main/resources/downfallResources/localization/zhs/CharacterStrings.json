@@ -1,5 +1,5 @@
 {
-  "Heart Event": {
+  "downfall:Heart Event": {
     "NAMES": [
       "腐化之心"
     ],
@@ -32,7 +32,7 @@
       "[ #g接下来2场战斗中的敌人将落荒而逃 ]"
     ]
   },
-  "Unlock": {
+  "downfall:Unlock": {
     "TEXT": [
       "这名角色需要用史莱姆老大打过一局游戏才能解锁。",
       "这名角色需要用第二名恶棍打过一局游戏才能解锁。",
@@ -42,13 +42,13 @@
 	  
     ]
   },
-  "HeartMerchant": {
+  "downfall:HeartMerchant": {
   "NAMES": [
     "继续",
-    "~牺牲……~"
+    "~必要的牺牲……~"
   ],
   "TEXT": [
-    "~You~ ~grow...~ ~stronger...~",
+    "~你~ ~变得...~ ~更强了……~",
     "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
     "~Slay...~ ~and~ ~be~ ~rewarded...~",
     "~更多……的……灵魂……~",
@@ -76,7 +76,7 @@
     "~摧毁……他们……~"
   ]
 },
-  "HeartProceed": {
+  "downfall:HeartProceed": {
     "TEXT": [
       "~Intruders...~ NL ~...in~ ",
       "~You~ ~are~ ~needed...~ NL ~...in~ ",
@@ -89,7 +89,7 @@
       "~the~ ~Beyond...~"
     ]
   },
-    "NeowEnding": {
+    "downfall:NeowEnding": {
     "TEXT": [
       "You... have... slain... everyone...",
       "...the cycle... has died.....",
@@ -99,7 +99,7 @@
       "~I~ ~brought...~ NL ~HIM...~ ~back...~"
     ]
   },
-  "HeartMerchantScreen": {
+  "downfall:HeartMerchantScreen": {
     "NAMES": [
       "~Greetings~ NL ~minion...~",
       "~Bring~ ~more~ ~souls...~",
@@ -113,8 +113,8 @@
       "~Grow~ ~strong...~",
       "~I~ ~am~ ~renewed~...",
       "~Go~ ~forth~...",
-      "Leave",
-      "Select a card to remove from your deck."
+      "离开",
+      "选择一张牌移除出你的牌组。"
     ],
     "TEXT": [
       "~You~ ~grow...~ ~stronger...~",

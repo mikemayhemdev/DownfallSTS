@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
@@ -15,9 +16,13 @@ import theHexaghost.util.TextureLoader;
 public class BolsteringGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("bolster.png"));
 
+    private String ID = "hexamod:BolsteringGhostflame";
+    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+
     public BolsteringGhostflame(float x, float y) {
         super(x, y);
         block = 6;
+        NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     }
 
     @Override
@@ -47,20 +52,20 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "#yIgnited. ";
+            s = DESCRIPTIONS[0];
         }
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + "#yActive. #yIgnites when a #yPower is played this turn.";
+            s = s + DESCRIPTIONS[1];
         } else {
-            s = s + "Inactive. #yIgnites when a #yPower is played while #yActive.";
+            s = s + DESCRIPTIONS[2];
         }
         int x = block;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        s = s + " NL #yIgnition: When #yIgnited, gain #b" + x + " #yBlock and #b1 #yStrength.";
+        s = s + DESCRIPTIONS[3] + x + DESCRIPTIONS[4];
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+            s = s + DESCRIPTIONS[5];
         }
         return s;
     }

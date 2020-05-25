@@ -1,108 +1,53 @@
 {
-  "Slimebound:BronzeSlime": {
-    "NAME": "Bronze Slime",
+  "hexamod:SearingGhostflame": {
+    "NAME": "Searing Ghostflame",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
+      "#yIgnited. ",
+	  "#yActive. #yIgnites when #b" ,
+	  " #yAttack is played this turn.",
+	  " #yAttacks are played this turn.",
+	  "Inactive. #yIgnites when #b2 #yAttacks are played while #yActive.",
+	  " NL #yIgnition: When #yIgnited, apply #b",
+	  " #yBurn to a random enemy.",
+	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
+    ]
+  }, 
+  "hexamod:CrushingGhostflame": {
+    "NAME": "Crushing Ghostflame",
+    "DESCRIPTION": [
+      "#yIgnited. ",
+	  "#yActive. #yIgnites when #b" ,
+	  " #ySkill is played this turn.",
+	  " #ySkills are played this turn.",
+	  "Inactive. #yIgnites when #b2 #ySkills are played while #yActive.",
+	  " NL #yIgnition: When #yIgnited, deal #b",
+	  " damage to a random enemy twice.",
+	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
   },
-  "Slimebound:AttackSlime": {
-    "NAME": "Bruiser Slime",
+  "hexamod:BolsteringGhostflame": {
+    "NAME": "Bolstering Ghostflame",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn."
+      "#yIgnited. ",
+	  "#yActive. #yIgnites when a #yPower is played this turn.",
+	  "Inactive. #yIgnites when a #yPower is played while #yActive.",
+	  " NL #yIgnition: When #yIgnited, gain #b",
+	  " #yBlock and #b1 #yStrength.",
+	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
   },
-  "Slimebound:ScrapOozeSlime": {
-    "NAME": "Scrap Ooze",
+    "hexamod:InfernoGhostflame": {
+    "NAME": "Inferno Ghostflame",
     "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
-    ]
-  },
-  "Slimebound:GreedOozeSlime": {
-    "NAME": "Greed Ooze",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. NL Respawns at the end of your turn if #yAbsorbed. NL Does not reduce Max HP."
-    ]
-  },
-  "Slimebound:TorchHeadSlime": {
-    "NAME": "Torch Head Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn. Gains twice the normal benefit from #yPotency."
-    ]
-  },
-  "Slimebound:CultistSlime": {
-    "NAME": "Cultist Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn, then increases its damage by #b1."
-    ]
-  },
-  "Slimebound:ShieldSlime": {
-    "NAME": "Leeching Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
-    ]
-  },
-  "Slimebound:PoisonSlime": {
-    "NAME": "Guerilla Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage to ALL enemies at the start of your turn."
-    ]
-  },
-  "Slimebound:SlimingSlime": {
-    "NAME": "Mire Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yGoop at the start of your turn."
-    ]
-  },
-  "Slimebound:HexSlime": {
-    "NAME": "Ghostflame Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yBurn at the start of your turn."
-    ]
-  },
-  "Slimebound:ChampSlime": {
-    "NAME": "Insulting Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yVulnerable at the start of your turn."
-    ]
-  },
-  "Slimebound:SlowingSlime": {
-    "NAME": "Time Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage and applies #b",
-      " #yWeak at the start of your turn."
-    ]
-  },
-  "Slimebound:ProtectorSlime": {
-    "NAME": "Protector Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and grants you #b",
-      " #yBlock."
-    ]
-  },
-  "Slimebound:DrawingSlime": {
-    "NAME": "Ancient Slime",
-    "DESCRIPTION": [
-      "Deals #b",
-      " damage at the start of your turn and causes you to draw #b",
-      " card."
+      "#yIgnited. ",
+	  "#yActive. Ignites when spending [E] [E] [E] this turn.",
+	  "#yActive. Ignites when spending [E] [E] this turn.",
+	  "#yActive. Ignites when spending [E] this turn.",
+	  "Error. Please report to mod dev: ",
+	  "Inactive. Ignites when spending [E] [E] [E] while #yActive.",
+	  " NL #yIgnition: When #yIgnited, deal #b",
+	  " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them.",
+	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
   }
 }

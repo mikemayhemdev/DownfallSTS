@@ -3,6 +3,7 @@ package theHexaghost.ghostflames;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
@@ -17,9 +18,13 @@ public class SearingGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
     public int attacksPlayedThisTurn = 0;
 
+    private String ID = "hexamod:SearingGhostflame";
+    private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+
     public SearingGhostflame(float x, float y) {
         super(x, y);
         magic = 3;
+        NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     }
 
     @Override
@@ -61,25 +66,25 @@ public class SearingGhostflame extends AbstractGhostflame {
     public String getDescription() {
         String s = "";
         if (charged) {
-            s = "#yIgnited. ";
+            s = DESCRIPTIONS[0];
         }
         if (GhostflameHelper.activeGhostFlame == this) {
             int x = (2 - attacksPlayedThisTurn);
             if (x == 1) {
-                s = s + "#yActive. #yIgnites when #b" + x + " #yAttack is played this turn.";
+                s = s + DESCRIPTIONS[1] + x + DESCRIPTIONS[2];
             } else {
-                s = s + "#yActive. #yIgnites when #b" + x + " #yAttacks are played this turn.";
+                s = s + DESCRIPTIONS[1] + x + DESCRIPTIONS[3];
             }
         } else {
-            s = s + "Inactive. #yIgnites when #b2 #yAttacks are played while #yActive.";
+            s = s + DESCRIPTIONS[4];
         }
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        s = s + " NL #yIgnition: When #yIgnited, apply #b" + x + " #yBurn to a random enemy.";
+        s = s + DESCRIPTIONS[5] + x + DESCRIPTIONS[6];
         if (GhostflameHelper.activeGhostFlame == this) {
-            s = s + " NL NL At the end of your turn, #yAdvance to the next Ghostflame.";
+            s = s + DESCRIPTIONS[7];
         }
         return s;
 

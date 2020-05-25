@@ -29,6 +29,8 @@ public abstract class AbstractGhostflame {
     public float ly;
     public float flashTimer = 1.0F;
 
+    public String NAME;
+
     public AbstractGhostflame(float x, float y) {
         lx = x;
         ly = y;

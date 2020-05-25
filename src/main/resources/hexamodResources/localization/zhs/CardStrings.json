@@ -85,7 +85,7 @@
   },
   "hexamod:EmpoweringStance": {
     "NAME": "高热",
-    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火调换为高热鬼火。"
+    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火替换为高热鬼火。"
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",

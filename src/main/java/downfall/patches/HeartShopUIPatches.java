@@ -25,10 +25,10 @@ public class HeartShopUIPatches {
                 ReflectionHacks.setPrivate(__result, ShopScreen.class, "handImg", ImageMaster.loadImage(downfallMod.assetPath("images/ui/heartHand.png")));
 
 
-                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "characterStrings", CardCrawlGame.languagePack.getCharacterString("HeartMerchantScreen"));
-                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "WELCOME_MSG", CardCrawlGame.languagePack.getCharacterString("HeartMerchantScreen").NAMES[0]);
-                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "NAMES", CardCrawlGame.languagePack.getCharacterString("HeartMerchantScreen").NAMES);
-                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "TEXT", CardCrawlGame.languagePack.getCharacterString("HeartMerchantScreen").TEXT);
+                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "characterStrings", CardCrawlGame.languagePack.getCharacterString( downfallMod.makeID("HeartMerchantScreen")));
+                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "WELCOME_MSG", CardCrawlGame.languagePack.getCharacterString( downfallMod.makeID("HeartMerchantScreen")).NAMES[0]);
+                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "NAMES", CardCrawlGame.languagePack.getCharacterString( downfallMod.makeID("HeartMerchantScreen")).NAMES);
+                ReflectionHacks.setPrivateStaticFinal(ShopScreen.class, "TEXT", CardCrawlGame.languagePack.getCharacterString( downfallMod.makeID("HeartMerchantScreen")).TEXT);
 
 
             } else {

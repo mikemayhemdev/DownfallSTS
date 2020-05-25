@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoomBoss;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.SpeechTextEffect;
+import downfall.downfallMod;
 import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
 import slimebound.SlimeboundMod;
@@ -63,12 +64,12 @@ public class PostBossHeartChatPatch {
                     //SlimeboundMod.logger.info("heart chat patch hit activate");
                     activated = true;
                     int Rand = AbstractDungeon.cardRng.random(0, 4);
-                    String msg = CardCrawlGame.languagePack.getCharacterString("HeartProceed").TEXT[Rand];
+                    String msg = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("HeartProceed")).TEXT[Rand];
                     if (AbstractDungeon.actNum == 1) {
-                        msg = msg + CardCrawlGame.languagePack.getCharacterString("HeartProceed").OPTIONS[0];
+                        msg = msg + CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("HeartProceed")).OPTIONS[0];
                     }
                     if (AbstractDungeon.actNum == 2) {
-                        msg = msg + CardCrawlGame.languagePack.getCharacterString("HeartProceed").OPTIONS[1];
+                        msg = msg + CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("HeartProceed")).OPTIONS[1];
                     }
                     heart.portalRenderActive = true;
 
