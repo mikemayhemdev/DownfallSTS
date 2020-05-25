@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cards.OctoChoiceCard;
 import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.OctoChoiceAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
@@ -48,6 +49,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
 
     public void choice() {
         addToBot(new OctoChoiceAction(this));
+        if (upgraded) addToBot(new CommandAction());
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -65,6 +67,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
             realList.add(cardList.remove(AbstractDungeon.cardRandomRng.random(cardList.size() - 1)));
         }
         return realList;
+
     }
 
     public void doChoiceStuff(OctoChoiceCard card) {
@@ -107,7 +110,9 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

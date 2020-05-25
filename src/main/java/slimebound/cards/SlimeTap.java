@@ -53,32 +53,28 @@ public class SlimeTap extends AbstractSlimeboundCard {
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
+        if (canUse) {
 
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof SpawnedSlime) {
-                return canUse = true;
+            canUse = false;
+            for (AbstractOrb o : p.orbs) {
+                if (o instanceof SpawnedSlime) {
+                    canUse = true;
+                }
             }
+            if (!canUse) this.cantUseMessage = EXTENDED_DESCRIPTION[0];
         }
-        this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-        return canUse = false;
+        return canUse;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        if (!AbstractDungeon.player.orbs.isEmpty()) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-
-                if (o instanceof SpawnedSlime) {
-
-
-                    numEaten = numEaten + 1;
-                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(AbstractDungeon.player, this.magicNumber));
-                    AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(2));
-                    return;
-
-                }
-            }
+        AbstractOrb o = SlimeboundMod.getLeadingSlime();
+        if (o != null) {
+            numEaten = numEaten + 1;
+            AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DrawCardAction(AbstractDungeon.player, this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainEnergyAction(2));
+            return;
         }
     }
 

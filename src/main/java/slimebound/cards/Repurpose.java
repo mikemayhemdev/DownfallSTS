@@ -48,16 +48,12 @@ public class Repurpose extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!AbstractDungeon.player.orbs.isEmpty()) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                if (o instanceof SpawnedSlime) {
-                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-                    addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
-                    addToBot(new HealAction(p, p, 4));
-                    addToBot(new GainBlockAction(p, block));
-                    return;
-                }
-            }
+        AbstractOrb o = SlimeboundMod.getLeadingSlime();
+        if (o != null){
+            AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+            addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
+            addToBot(new HealAction(p, p, 4));
+            addToBot(new GainBlockAction(p, block));
         }
 
     }

@@ -278,6 +278,20 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     }
 
+    public static AbstractOrb getLeadingSlime() {
+        AbstractOrb oldestOrb = null;
+
+        if (AbstractDungeon.player.maxOrbs > 0) {
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                if (o instanceof SpawnedSlime) {
+                    oldestOrb = o;
+                }
+
+            }
+        }
+        return oldestOrb;
+    }
+
     @Override
     public void receiveSetUnlocks() {
         if (!unlockEverything) {
@@ -662,7 +676,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 soundPlayed = true;
             }
             s.triggerEvokeAnimation();
-            if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID)){
+            if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID)) {
                 AbstractDungeon.player.getPower(DuplicatedFormNoHealPower.POWER_ID).onVictory();
             }
 

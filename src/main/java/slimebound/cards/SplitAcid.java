@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.patches.AbstractCardEnum;
 
@@ -49,6 +50,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
         int bonus = 0;
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true, 0, bonus));
+        if (upgraded) addToBot(new CommandAction());
 
     }
 
@@ -59,7 +61,9 @@ public class SplitAcid extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
 
 
         }

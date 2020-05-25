@@ -377,19 +377,28 @@
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command.  NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL Exhaust."
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command.  NL Exhaust."
+  },
+  "Slimebound:SplitSpecialist": {
+    "NAME": "Split: Specialist",
+    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL slimeboundmod:Command.  NL Exhaust."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
@@ -399,10 +408,6 @@
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
     "DESCRIPTION": "slimeboundmod:Tackles deal !M! more damage to enemies, and 1 more damage to you."
-  },
-  "Slimebound:SplitSpecialist": {
-    "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
   },
   "Slimebound:Darklings": {
     "NAME": "Darkling Trio",
