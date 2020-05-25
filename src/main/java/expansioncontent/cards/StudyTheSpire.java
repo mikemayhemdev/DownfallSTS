@@ -30,7 +30,7 @@ public class StudyTheSpire extends AbstractExpansionCard {
         atb(new VFXAction(p, new IntenseZoomEffect(p.hb.cX, p.hb.cY, false), 0.05F));
 
 
-        ArrayList<AbstractPower> powers = new ArrayList();
+        ArrayList<AbstractPower> powers = new ArrayList<>();
 
         if (upgraded) {
             powers.add(new StudyAutomatonPowerUpgraded(p, p, this.magicNumber));
