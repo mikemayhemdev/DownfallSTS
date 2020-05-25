@@ -20,9 +20,8 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
-    private AbstractCreature source;
-    private int maxHpTempLoss = 0;
     private boolean victoryUsed;
+    private boolean beingRemoved;
 
 
     public DuplicatedFormNoHealPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -33,9 +32,6 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
 
         this.owner = owner;
-
-        this.source = source;
-
 
         this.img = new com.badlogic.gdx.graphics.Texture(SlimeboundMod.getResourcePath(IMG));
 
@@ -51,14 +47,14 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     }
 
     public int onHeal(int healAmount) {
-        if ((AbstractDungeon.currMapNode != null) && (AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT)) {
+        if (!this.beingRemoved && this.amount > 0 && (AbstractDungeon.currMapNode != null) && (AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT)) {
             //flash();
             int currentHealth = this.owner.currentHealth;
             int maxHealth = this.owner.maxHealth - this.amount;
             double currentPct = currentHealth * 1.001 / maxHealth * 1.001;
-            logger.info("Current health: " + currentHealth);
-            logger.info("Max health: " + maxHealth);
-            logger.info("Current percentage: " + currentPct);
+            logger.info("Split: Current health: " + currentHealth);
+            logger.info("Split: Max health: " + maxHealth);
+            logger.info("Split: Current percentage: " + currentPct);
             if (currentHealth + healAmount > maxHealth) {
                 return (maxHealth) - currentHealth;
             } else {
@@ -94,47 +90,37 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     }
 
     public void stackPower(int stackAmount) {
-        //SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
-        if (stackAmount > 0) AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, stackAmount, DamageInfo.DamageType.HP_LOSS));
-
-        this.fontScale = 8.0F;
-        this.amount += stackAmount;
-        if (stackAmount < 0) {
-            this.owner.heal(stackAmount * -1);
-        }
-        updateCurrentHealth();
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, DuplicatedFormNoHealPower.POWER_ID));
-
+        super.stackPower(stackAmount);
+        SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
+        if (stackAmount > 0){
+            AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, stackAmount, DamageInfo.DamageType.HP_LOSS));
         }
 
     }
 
-    @Override
     public void reducePower(int stackAmount) {
         super.reducePower(stackAmount);
-        this.fontScale = 8.0F;
+        SlimeboundMod.logger.info("Reducing Split: " + stackAmount);
         if (stackAmount > 0) {
+            logger.info("Split is returning HP (normal): " + stackAmount);
             this.owner.heal(stackAmount);
         }
+
     }
 
     public void onRemove() {
-        restoreMaxHP();
-    }
-
-    public void restoreMaxHP() {
-
-
-        this.owner.heal(this.maxHpTempLoss);
+        this.beingRemoved = true;
+        logger.info("Split is returning HP (removed): " + this.amount);
+        this.owner.heal(this.amount);
+        //restoreMaxHP();
     }
 
     public void onVictory() {
         if (!victoryUsed) {
-            this.maxHpTempLoss = this.amount;
-            this.amount = 0;
-            restoreMaxHP();
+            logger.info("Split is returning HP (victory): " + this.amount);
+            this.owner.heal(this.amount);
             victoryUsed = true;
+            this.amount = 0;
         }
     }
 }

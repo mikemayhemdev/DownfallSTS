@@ -1,7 +1,9 @@
 package slimebound.cards;
 
 
+import com.evacipated.cardcrawl.mod.stslib.actions.defect.EvokeSpecificOrbAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,7 +12,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
 
@@ -38,16 +42,24 @@ public class Repurpose extends AbstractSlimeboundCard {
 
     public Repurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.baseMagicNumber = magicNumber = 2;
+        this.baseMagicNumber = magicNumber = 1;
         exhaust = true;
+        baseBlock = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new EvokeOrbAction(1));
-        if (AbstractDungeon.player.hasOrb()) {
-            addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
-            addToBot(new HealAction(p, p, 4));
+        if (!AbstractDungeon.player.orbs.isEmpty()) {
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                if (o instanceof SpawnedSlime) {
+                    AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+                    addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
+                    addToBot(new HealAction(p, p, 4));
+                    addToBot(new GainBlockAction(p, block));
+                    return;
+                }
+            }
         }
+
     }
 
     public AbstractCard makeCopy() {
@@ -58,6 +70,7 @@ public class Repurpose extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
+            upgradeBlock(2);
         }
     }
 }

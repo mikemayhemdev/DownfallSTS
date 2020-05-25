@@ -89,9 +89,9 @@
     "DESCRIPTION": "Gain !M! Block whenever you slimeboundmod:Consume."
   },
   "Slimebound:SelfFormingGoo": {
-    "NAME": "Self-Forming Goo",
-    "DESCRIPTION": "Whenever you slimeboundmod:Absorb a Slime, gain !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Absorb a Slime, gain !M! Dexterity."
+    "NAME": "Reformation",
+    "DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "When you slimeboundmod:Absorb a Slime, gain !M! Strength and !M! Dexterity."
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
@@ -146,7 +146,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb your newest Slime. NL If you do, gain !M! slimeboundmod:Potency and heal 4 HP. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb your leading Slime. NL If you do, gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -154,7 +154,7 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain 1 slimeboundmod:Potency and !B! Block for each Slime slimeboundmod:Absorbed. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP for each slimeboundmod:Absorbed. NL Exhaust."
   },
   "Slimebound:SoTasty": {
     "NAME": "SO TASTY!",
