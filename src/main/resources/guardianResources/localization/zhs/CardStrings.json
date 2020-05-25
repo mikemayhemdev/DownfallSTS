@@ -1,444 +1,451 @@
 {
   "Guardian:Strike_Guardian": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "Guardian:StrikeTwo": {
-    "NAME": "Double Strike",
-    "DESCRIPTION": "Deal !D! damage twice."
+    "NAME": "双重打击",
+    "DESCRIPTION": "造成 !D! 点伤害两次。"
   },
   "Guardian:Defend_Guardian": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "Guardian:DefendTwo": {
-    "NAME": "Double Defend",
-    "DESCRIPTION": "Gain !B! Block twice."
+    "NAME": "双重防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 两次。"
   },
   "Guardian:Gem_Red": {
-    "NAME": "Ruby",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Strength.",
-    "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Strength."
+    "NAME": "红宝石",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 力量 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 力量 。"
   },
   "Guardian:Gem_Green": {
-    "NAME": "Emerald",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Dexterity."
+    "NAME": "翡翠",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 敏捷 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 敏捷 。"
   },
   "Guardian:Gem_White": {
-    "NAME": "Quartz",
-    "DESCRIPTION": "guardianmod:Gem. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Draw a card."
+    "NAME": "石英",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌。"
   },
   "Guardian:Gem_Orange": {
-    "NAME": "Citrine",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain [E].",
-    "UPGRADE_DESCRIPTION": "Gain [E]."
+    "NAME": "茶晶",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。"
   },
   "Guardian:Gem_Cyan": {
-    "NAME": "Aquamarine",
-    "DESCRIPTION": "guardianmod:Gem. NL Add a guardianmod:Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a guardianmod:Ward to your hand."
+    "NAME": "蓝晶",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 增加 1 张 guardianmod:护卫 到你的手牌。", 
+    "UPGRADE_DESCRIPTION": "增加 1 张 guardianmod:护卫 到你的手牌。"
   },
   "Guardian:ChargeUp": {
-    "NAME": "Charge Up",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Gain !B! Block and !M! Strength. NL guardianmod:Volatile.",
+    "NAME": "充能",
+    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL  guardianmod:挥发 。",
     "EXTENDED_DESCRIPTION": [
-      "~ERROR:~ #rStasis in progress."
-    ]
+	"~错误:~ #r凝滞 正在进程中。"
+	]
   },
   "Guardian:DonusPower": {
-    "NAME": "Ancient Attack",
-    "DESCRIPTION": "Gain 1 Strength. NL Add a random Attack card to your hand. It costs 1 less this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 1 less this combat. NL Exhaust."
+    "NAME": "先古攻击",
+    "DESCRIPTION": "获得 1 点 力量 。 NL 增加一张随机攻击牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 力量 和 1 层 人工制品 。 增加一张随机攻击牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL  消耗 。"
   },
   "Guardian:DecasProtection": {
-    "NAME": "Ancient Power",
-    "DESCRIPTION": "Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust."
+    "NAME": "先古防御",
+    "DESCRIPTION": "获得 1 敏捷 。 NL 增加一张随机能力牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 敏捷 和 1 层 人工制品 。增加一张随机能力牌到你的手牌。本场战斗这张牌耗能降低 1 。 NL  消耗 。"
   },
   "Guardian:FierceBash": {
-    "NAME": "Fierce Bash",
-    "DESCRIPTION": "Deal !D! damage. NL guardianmod:Tick - Increase this card's damage by !M!."
+    "NAME": "猛烈痛击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:滴答 - 增加其伤害 !M! 点。"
   },
   "Guardian:PolyBeam": {
-    "NAME": "Poly Beam",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "NAME": "极光射线",
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 !M! 次。"
   },
   "Guardian:TwinSlam": {
-    "NAME": "Twin Slam",
-    "DESCRIPTION": "Deal !D! damage !GuardianMulti! times."
+    "NAME": "双斩",
+    "DESCRIPTION": "造成 !D! 点伤害 !GuardianMulti! 次。"
   },
   "Guardian:GuardianWhirl": {
-    "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Deal !D! damage !GuardianMulti! times to ALL enemies."
+    "NAME": "守护者旋风",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !GuardianMulti! 次。"
   },
   "Guardian:VentSteam": {
-    "NAME": "Vent Steam",
-    "DESCRIPTION": "Apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable."
+    "NAME": "蒸汽喷射",
+    "DESCRIPTION": "给与 !M! 层 易伤 。",
+	"UPGRADE_DESCRIPTION": "给与 !M! 层 虚弱 和 易伤 。"
   },
   "Guardian:CurlUp": {
-    "NAME": "Curl Up",
-    "DESCRIPTION": "Gain !B! Block. NL Gain guardianmod:Defensive_Mode."
+    "NAME": "蜷身",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。"
   },
   "Guardian:TimeBomb": {
-    "NAME": "Time Bomb",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL When this card would leave guardianmod:Stasis, deal !M! damage to ALL enemies. NL guardianmod:Volatile.",
+    "NAME": "时间炸弹",
+    "DESCRIPTION": "将这张卡 guardianmod:凝滞 。 NL 当这张牌将结束 guardianmod:凝滞 时，对所有敌人造成 !M! 点伤害。 NL guardianmod:挥发 。",
     "EXTENDED_DESCRIPTION": [
-      "~ERROR:~ #rStasis in progress."
-    ]
+	"~错误:~ #r凝滞 正在进程中。"
+	]
   },
   "Guardian:HyperBeam_Guardian": {
-    "NAME": "Hyper Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Strength affects this card !M! times. NL Skip your next turn."
+    "NAME": "超能射线",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 力量 在本牌中发挥 !M! 倍效果。 NL 跳过你的下个回合。"
   },
   "Guardian:BronzeArmor": {
-    "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain !M! Artifact. NL Exhaust."
+    "NAME": "铜制装甲",
+    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 消耗 。"
   },
   "Guardian:FloatingOrbs": {
-    "NAME": "Floating Orbs",
-    "DESCRIPTION": "At the start of your turn, add an *Orb *Slam to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an *Orb *Slam to your hand."
+    "NAME": "浮游圆球",
+    "DESCRIPTION": "在你的回合开始时，增加一张 *圆球撞击 到你的手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 在你的回合开始时，增加一张 *圆球撞击 到你的手牌。"
   },
   "Guardian:OrbSlam": {
-    "NAME": "Orb Slam",
-    "DESCRIPTION": "Deal !D! damage !GuardianMulti! times. NL Exhaust."
+    "NAME": "圆球撞击",
+    "DESCRIPTION": "造成 !D! 点伤害 !GuardianMulti! 次。 NL 消耗 。"
   },
   "Guardian:Incinerate": {
-    "NAME": "Incinerate",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn."
+    "NAME": "焚烧",
+    "DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 hexamod:灼伤 。"
   },
   "Guardian:Orbwalk": {
-    "NAME": "Orbwalk",
-    "DESCRIPTION": "Gain !M! Strength. NL guardianmod:Tick - Gain 1 Strength. NL guardianmod:Volatile.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL guardianmod:Tick - Gain 1 Strength."
+    "NAME": "行者圆球",
+    "DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点力量 。 NL  guardianmod:挥发 。",
+	"UPGRADE_DESCRIPTION": "获得 !M! 力量 。 NL guardianmod:滴答 -获得 1 点 力量 。"
   },
   "Guardian:WalkerClaw": {
-    "NAME": "Walker Claw",
-    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times."
+    "NAME": "行者爪击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 力量 在本牌中发挥 !M! 倍效果。"
   },
   "Guardian:SphericShield": {
-    "NAME": "Spheric Shield",
-    "DESCRIPTION": "For !M! turns, Block is not removed at the start of your turn. NL Gain !B! Block. NL Gain guardianmod:Defensive_Mode. NL Exhaust."
+    "NAME": "球形护盾",
+    "DESCRIPTION": "在 !M! 回合内， 格挡 不再在你的回合开始时消失。 NL 获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。 NL 消耗 。"
   },
   "Guardian:Harden": {
-    "NAME": "Harden",
-    "DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block."
+    "NAME": "硬化",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。"
   },
   "Guardian:SentryBeam": {
-    "NAME": "Sentry Beam",
-    "DESCRIPTION": "Deal !D! Damage. NL Place a Sentry Wave into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Place an Sentry Wave+ into guardianmod:Stasis. NL Exhaust."
+    "NAME": "哨卫射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 一张 *哨卫震荡 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 一张的 *哨卫震荡+ 。 NL 消耗 。"
   },
   "Guardian:SentryWave": {
-    "NAME": "Sentry Wave",
-    "DESCRIPTION": "Apply !M! Weak. NL Draw a card. NL Place a Sentry Beam into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Draw a card. NL Place an Sentry Beam+ into guardianmod:Stasis. NL Exhaust."
+    "NAME": "哨卫震荡",
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 抽 1 张牌。 guardianmod:凝滞 一张 *哨卫射线 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 抽 1 张牌。 guardianmod:凝滞 一张 *哨卫射线+ 。 NL 消耗 。"
   },
   "Guardian:CompilePackage": {
-    "NAME": "Compile Package",
-    "DESCRIPTION": "Choose one of three guardianmod:Packages to add to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose one of three guardianmod:Packages to add to your hand. The cards the guardianmod:Package adds will all be Upgraded. NL Exhaust.",
+    "NAME": "完整组件",
+    "DESCRIPTION": "从3个 guardianmod:组件 牌中选择 1 张加入你的手牌。 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3个已 升级 的 guardianmod:组件 牌中选择 1 张加入你的手牌。 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "Choose a Package."
+      "选择一个组件。"
     ]
   },
   "Guardian:PackageShapes": {
-    "NAME": "Package: Shapes",
-    "DESCRIPTION": "Add a Time Bomb, Spiker Protocol, and Repulsor to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Time Bomb, Spiker Protocol, and Repulsor to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 机械",
+    "DESCRIPTION": "增加一张时间炸弹，荆棘协议和反冲协议到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的时间炸弹，荆棘协议和反冲协议到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageDonuDeca": {
-    "NAME": "Package: Ancients",
-    "DESCRIPTION": "Add an Ancient Attack, Ancient Power, and Ancient Construct to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Ancient Attack, Ancient Power, and Ancient Construct to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 先古",
+    "DESCRIPTION": "增加1张 先古攻击 , 先古防御 和 先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加1张已 升级 的 先古攻击 ，先古防御 和 先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
-    "NAME": "Package: Spheric",
-    "DESCRIPTION": "Add a Spheric Shield, Harden, and Floating Orbs to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Spheric Shield, Harden, and Floating Orbs to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 圆球",
+    "DESCRIPTION": "增加一张球形护盾,硬化和浮动圆球到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的球形护盾，硬化和浮动圆球到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
-    "NAME": "Package: Sentry",
-    "DESCRIPTION": "Add a Sentry Beam and two Sentry Waves to your hand and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Sentry Beam+ and two Sentry Waves+ to your hand and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 哨卫",
+    "DESCRIPTION": "增加一张哨兵射线和两张哨兵震荡到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的哨兵射线和两张哨兵震荡到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
-    "NAME": "Package: Orbwalker",
-    "DESCRIPTION": "Add an Orbwalk, Walker Claw, and Incinerate to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Orbwalk, Walker Claw, and Incinerate to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 行者",
+    "DESCRIPTION": "增加一张圆球运转,行者爪击和焚烧到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的圆球运转,行者爪击和焚烧到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageAutomaton": {
-    "NAME": "Package: Bronze",
-    "DESCRIPTION": "Add a Hyper Beam, Bronze Orb, and Bronze Armor to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Hyper Beam, Bronze Orb, and Bronze Armor to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 铜制",
+    "DESCRIPTION": "增加一张超能射线，铜制圆球和铜制装甲到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的超能射线，铜制圆球和铜制装甲 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
-    "NAME": "Package: Defect",
-    "DESCRIPTION": "Add a Reroute, Preprogram, and Time Capacitor to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Reroute, Preprogram, and Time Capacitor to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 故障",
+    "DESCRIPTION": "增加一张重连，预编程和时间电容器到你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的重连，预编程和时间电容器到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:Planning": {
-    "NAME": "Planning",
-    "DESCRIPTION": "Place the top !M! cards of your draw pile into guardianmod:Stasis.",
+    "NAME": "规划",
+    "DESCRIPTION": "将抽牌堆顶部的 !M! 张牌 guardianmod:凝滞 。",
     "EXTENDED_DESCRIPTION": [
-      "~ERROR:~ #rStasis in progress."
-    ]
+	"~错误:~ #r凝滞 正在进程中。"
+	]
   },
   "Guardian:Recover": {
-    "NAME": "Recover",
-    "DESCRIPTION": "Gain !B! Block. NL Place a card from your discard pile into guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Place up to !M! cards from your discard pile into guardianmod:Stasis."
+    "NAME": "恢复",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆中的一张牌 guardianmod:凝滞 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆的 !M! 张牌 guardianmod:凝滞 。"
   },
   "Guardian:Emergency": {
-    "NAME": "Emergency",
-    "DESCRIPTION": "guardianmod:Accelerate your right-most card in guardianmod:Stasis until it's turn counter reaches 0. NL Exhaust."
+    "NAME": "应激",
+    "DESCRIPTION": " guardianmod:加速 最右侧的 guardianmod:凝滞 到 0。 NL 消耗 。"
   },
   "Guardian:Clone": {
-    "NAME": "Clone",
-    "DESCRIPTION": "Choose a card. Place a copy of that card into guardianmod:Stasis. NL Exhaust.",
+    "NAME": "克隆",
+    "DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "~ERROR:~ #rStasis in progress."
-    ]
+	"~错误:~ #r凝滞 正在进程中。"
+	]
   },
   "Guardian:Preprogram": {
-    "NAME": "Preprogram",
-    "DESCRIPTION": "Look at the top !M! cards of your draw pile. You may choose one to place into guardianmod:Stasis."
+    "NAME": "预编程",
+    "DESCRIPTION": "查看你的抽牌堆顶部的 !M! 张牌。可以选择其中 1 张 guardianmod:凝滞 。"
   },
   "Guardian:GemFinder": {
-    "NAME": "Gem Finder",
-    "DESCRIPTION": "At the end of combat, you may choose a Common guardianmod:Gem to add to your deck."
+    "NAME": "宝石发现",
+    "DESCRIPTION": "战斗结束后，选择一张普通 guardianmod:宝石 加入你的牌库。"
   },
   "Guardian:StasisField": {
-    "NAME": "Stasis Field",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Place this card into guardianmod:Stasis."
+    "NAME": "凝滞屏障",
+    "DESCRIPTION": " 虚无 。 NL 获得 !B! 点 格挡 。 NL 将这张牌 guardianmod:凝滞 。"
   },
   "Guardian:StasisStrike": {
-    "NAME": "Stasis Strike",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Place this card into guardianmod:Stasis."
+    "NAME": "凝滞打击",
+    "DESCRIPTION": " 虚无 。 NL 造成 !D! 点伤害。 NL 将这张牌 guardianmod:凝滞 。"
   },
   "Guardian:FuturePlans": {
-    "NAME": "Future Plans",
-    "DESCRIPTION": "At the end of your turn, place up to !M! card in your hand in guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, place up to !M! card in your hand in guardianmod:Stasis."
+    "NAME": "未来计划",
+    "DESCRIPTION": "你的回合结束时，最多将手牌中的 !M! 张牌 guardianmod:凝滞 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 你的回合结束时，最多将手牌中的 !M! 张牌 guardianmod:凝滞 。"
   },
   "Guardian:Suspension": {
-    "NAME": "Suspension",
-    "DESCRIPTION": "Place a card in your hand into guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Draw a card. NL Place a card in your hand into guardianmod:Stasis."
+    "NAME": "挂起",
+    "DESCRIPTION": "选择手牌中的1张牌 guardianmod:凝滞 。",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌。 NL 选择手牌中的 1 张牌 guardianmod:凝滞 。"
   },
   "Guardian:FastForward": {
-    "NAME": "Fast Forward",
-    "DESCRIPTION": "guardianmod:Accelerate all cards in guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Accelerate all cards in guardianmod:Stasis twice."
+    "NAME": "快进",
+    "DESCRIPTION": "将所有 guardianmod:凝滞 中的牌 guardianmod:加速 。",
+    "UPGRADE_DESCRIPTION": "将所有 guardianmod:凝滞 中的牌 guardianmod:加速 两次。"
   },
   "Guardian:TimeCapacitor": {
-    "NAME": "Time Capacitor",
-    "DESCRIPTION": "Gain !M! guardianmod:Stasis Slots."
+    "NAME": "时间电容器",
+    "DESCRIPTION": "获得 !M! 个 guardianmod:凝滞 栏位。"
   },
   "Guardian:ConstructionForm": {
-    "NAME": "Construction Form",
-    "DESCRIPTION": "For !M! turns, you cannot lose HP or play Attacks."
+    "NAME": "建造形态",
+    "DESCRIPTION": "在接下来 !M! 个回合， 你不会失去生命但不能打出攻击牌。"
   },
   "Guardian:WeakpointTargeting": {
-    "NAME": "Spot Weakpoint",
-    "DESCRIPTION": "Whenever targeted enemy takes damage, gain 1 guardianmod:Momentary Strength. NL Exhaust."
+    "NAME": "标记弱点",
+    "DESCRIPTION": "无论何时受标记的敌人受到伤害， 获得 1 层 guardianmod:临时 力量 。 NL 消耗 。"
   },
   "Guardian:RollAttack": {
-    "NAME": "Roll Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage if you are in guardianmod:Defensive_Mode."
+    "NAME": "蜷身攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果处于 guardianmod:防御模式 ，再造成 !D! 点伤害。"
   },
   "Guardian:GemFire": {
-    "NAME": "Gem Cannon",
-    "DESCRIPTION": "Exhaust all guardianmod:Gems and cards with guardianmod:Gems in them in your hand. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards."
+    "NAME": "宝石加农炮",
+    "DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。"
   },
   "Guardian:ChargeCore": {
-    "NAME": "Charge Core",
-    "DESCRIPTION": "Deal !D! damage, then place this card into guardianmod:Stasis. NL guardianmod:Tick - Draw a card. NL guardianmod:Volatile."
+    "NAME": "充能核心",
+    "DESCRIPTION": "造成 !D! 点伤害并将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 -抽 1 张牌。 guardianmod:挥发 。"
   },
   "Guardian:Reroute": {
-    "NAME": "Reroute",
-    "DESCRIPTION": "Deal !D! damage. NL Place the next non-Exhausting Attack or Skill you play this turn into guardianmod:Stasis."
+    "NAME": "重连",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 你打出的下一张非消耗攻击或技能牌。"
   },
   "Guardian:PiercingHide": {
-    "NAME": "Piercing Hide",
-    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns. NL Gain guardianmod:Defensive_Mode."
-  },
+  "NAME": "隐秘荆棘",
+  "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 guardianmod:临时 荆棘 。 NL 进入 guardianmod:防御模式 。"
+},
   "Guardian:ShieldSpikes": {
-    "NAME": "Shield Spikes",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! guardianmod:Momentary Thorns if you are in guardianmod:Defensive_Mode."
+    "NAME": "荆棘装甲",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果处于 guardianmod:防御模式 ，则再获得 !M! guardianmod:临时 荆棘 。"
   },
   "Guardian:PrismaticBeam": {
-    "NAME": "Prismatic Beam",
-    "DESCRIPTION": "Deal !D! damage, then repeat for each guardianmod:Gem in this card."
+    "NAME": "棱镜射线",
+    "DESCRIPTION": "造成 !D! 点伤害，每有一颗 guardianmod:宝石 重复一次。"
   },
   "Guardian:PrismaticBarrier": {
-    "NAME": "Prismatic Barrier",
-    "DESCRIPTION": "Gain !B! Block, then repeat for each guardianmod:Gem in this card."
+    "NAME": "棱镜屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 ，这张牌每有一颗 guardianmod:宝石 重复一次。"
   },
   "Guardian:TemporalStrike": {
-    "NAME": "Temporal Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage if you have a card in guardianmod:Stasis."
+    "NAME": "质朴打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 ，再造成 !D! 点伤害。"
   },
   "Guardian:TemporalShield": {
-    "NAME": "Temporal Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block if you have a card in guardianmod:Stasis."
+    "NAME": "质朴屏障",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 ，再获得 !B! 点格挡。"
   },
   "Guardian:ExploitGems": {
-    "NAME": "Exploit Gems",
-    "DESCRIPTION": "Draw a card.",
-    "UPGRADE_DESCRIPTION": "Gain [E]. NL Draw a card."
+    "NAME": "宝石利用",
+    "DESCRIPTION": "抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 抽 1 张牌。"
   },
   "Guardian:RefractedBeam": {
-    "NAME": "Refracted Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Can be upgraded any number of times. NL Exhaust."
+    "NAME": "折射射线",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 能被多次 升级 。 NL 消耗 。"
   },
   "Guardian:MultiBeam": {
-    "NAME": "Multi-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat."
+    "NAME": "多重射线",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 X 次。 NL  guardianmod:滴答 -本场战斗所有射线牌增加 !M! 点伤害。",
+	"UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害 X+1 次。 NL guardianmod:滴答 -本场战斗所有射线牌增加 !M! 点伤害。"
   },
   "Guardian:BaubleBeam": {
-    "NAME": "Bauble Beam",
-    "DESCRIPTION": "Deal !D! damage. NL Perform the following !M! times:"
+    "NAME": "人偶射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 重复以下效果 !M! 次："
   },
   "Guardian:PrimingBeam": {
-    "NAME": "Priming Beam",
-    "DESCRIPTION": "Deal !D! damage. NL Increase the damage dealt by Beam cards by !M! this combat."
+    "NAME": "充能射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗所有射线牌增加 !M! 点伤害。"
   },
   "Guardian:EvasiveProtocol": {
-    "NAME": "Evasive Protocol",
-    "DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Gain !M! guardianmod:Defensive_Mode."
+    "NAME": "闪避协议",
+    "DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。",
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
   },
   "Guardian:SpikerProtocol": {
-    "NAME": "Spiker Protocol",
-    "DESCRIPTION": "Gain 3 Thorns while in guardianmod:Defensive_Mode. NL Gain !M! guardianmod:Defensive_Mode."
+    "NAME": "荆棘协议",
+    "DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。",
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。NL guardianmod:防御模式 额外持续一回合。"
   },
   "Guardian:ArmoredProtocol": {
-    "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Gain !M! guardianmod:Defensive_Mode."
+    "NAME": "装甲协议",
+    "DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 。",
+	"UPGRADE_DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 。 guardianmod:防御模式 额外持续一回合。"
   },
   "Guardian:TimeSifter": {
-    "NAME": "Time Sifter",
-    "DESCRIPTION": "At the end of your turn, guardianmod:Accelerate the right-most card in guardianmod:Stasis with a turn counter of 2 or more."
+    "NAME": "时间沙漏",
+    "DESCRIPTION": "在你的回合结束时， guardianmod:加速 最右侧的 guardianmod:凝滞 大于等于两点的牌。"
   },
   "Guardian:AncientConstruct": {
-    "NAME": "Ancient Construct",
-    "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact and lose [E]."
+    "NAME": "先古建造",
+    "DESCRIPTION": "在你的回合开始时， 如果你没有 人工制品 ，获得 !M! 层人工制品并失去 [E] 。"
   },
   "Guardian:CrystalBeam": {
-    "NAME": "Crystal Beam",
-    "DESCRIPTION": "Deal !D! Damage. Damage is increased by !M! for each guardianmod:Gem in ALL of your guardianmod:Socketed cards."
+    "NAME": "水晶射线",
+    "DESCRIPTION": "造成 !D! 点伤害。 所有的 guardianmod:镶嵌 有宝石的牌，每 guardianmod:镶嵌 一颗 guardianmod:宝石 增加这张牌 !M! 点伤害。"
   },
   "Guardian:Gem_Synthetic": {
-    "NAME": "Onyx",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 Artifact. Lose 2 HP.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Artifact Lose 2 HP."
+    "NAME": "玛瑙",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 层 人工制品 。 NL 失去 2 点生命。",
+    "UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 失去 2 点生命。"
   },
   "Guardian:Gem_Yellow": {
-    "NAME": "Amber",
-    "DESCRIPTION": "guardianmod:Gem. NL guardianmod:Accelerate the right-most card in guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Accelerate the right-most card in guardianmod:Stasis."
+    "NAME": "琥珀",
+    "DESCRIPTION": " guardianmod:宝石 。 NL  guardianmod:加速 最右侧的凝滞牌。",
+    "UPGRADE_DESCRIPTION": " guardianmod:加速 最右侧的凝滞牌。"
   },
   "Guardian:Gem_Purple": {
-    "NAME": "Amethyst",
-    "DESCRIPTION": "guardianmod:Gem. NL ALL enemies lose 2 Strength this turn.",
-    "UPGRADE_DESCRIPTION": "ALL enemies lose 2 Strength this turn."
+    "NAME": "紫晶",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 所有敌人本回合失去 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "所有敌人本回合失去 2 点 力量 。"
   },
   "Guardian:Gem_Crimson": {
-    "NAME": "Garnet",
-    "DESCRIPTION": "guardianmod:Gem. NL Apply 1 Vulnerable to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable to ALL enemies."
+    "NAME": "石榴石",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 给予所有敌人 1 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 1 层 易伤 。"
   },
   "Guardian:Gem_Blue": {
-    "NAME": "Sapphire",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain guardianmod:Defensive_Mode."
+    "NAME": "蓝宝石",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 进入 guardianmod:防御模式 。",
+    "UPGRADE_DESCRIPTION": "进入 guardianmod:防御模式 。"
   },
   "Guardian:Gem_Fragmented": {
-    "NAME": "Fragmented Gem",
-    "DESCRIPTION": "guardianmod:Gem. NL Add a Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a Shiv to your hand."
+    "NAME": "宝石碎片",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 增加 1 张 *水晶小刀 到你的手牌中。",
+    "UPGRADE_DESCRIPTION": "增加 1 张 *水晶小刀 到你的手牌中。"
   },
   "Guardian:CrystalShiv": {
-    "NAME": "Crystal Shiv",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+    "NAME": "水晶小刀",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:CrystalWard": {
-    "NAME": "Crystal Ward",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+    "NAME": "护卫",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "Guardian:Repulse": {
-    "NAME": "Repulsor",
-    "DESCRIPTION": "Exhaust the first Status or Curse drawn each turn.",
-    "UPGRADE_DESCRIPTION": "Exhaust the first 2 Status or Curse cards drawn each turn."
+    "NAME": "反冲协议",
+    "DESCRIPTION": "消耗每回合抽到的前 1 张状态或诅咒牌。",
+    "UPGRADE_DESCRIPTION": "消耗每回合抽到的前 2 张状态或诅咒牌。"
   },
   "Guardian:BronzeOrb": {
-    "NAME": "Bronze Orb",
-    "DESCRIPTION": "Innate. NL Place a random card from your draw pile into guardianmod:Stasis. NL Deal !D! Damage. NL Gain !B! Block. NL Exhaust."
+    "NAME": "铜制圆球",
+    "DESCRIPTION": " 固有 。 NL 随机将抽牌堆的 1 张牌 guardianmod:凝滞 。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "Guardian:RevengeProtocol": {
-    "NAME": "Revenge Protocol",
-    "DESCRIPTION": "When Defensive Mode is removed, gain 1 Strength for each turn it was active. NL Gain !M! guardianmod:Defensive_Mode."
+    "NAME": "复仇协议",
+    "DESCRIPTION": "退出 guardianmod:防御模式 时，获得 !M! 点 guardianmod:临时 力量 。进入 guardianmod:防御模式 。"
   },
   "Guardian:GatlingBeam": {
-    "NAME": "Gatling Beam",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. Repeat for each time this guardianmod:Tick effect has triggered. NL guardianmod:Volatile.",
+    "NAME": "加特林射线",
+    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL  guardianmod:滴答 -对随机敌人造成 !D! 点伤害。 NL 每次 滴答次数加 1 。 NL guardianmod:挥发 。",
     "EXTENDED_DESCRIPTION": [
-      "~ERROR:~ #rStasis in progress."
-    ]
+	"~错误:~ #r凝滞 正在进程中。"
+	]
   },
   "Guardian:ShieldCharger": {
-    "NAME": "Shield Charger",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Gain !B! Block and [E]. NL guardianmod:Volatile.",
+    "NAME": "护盾充能",
+    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 [E] 。 NL guardianmod:挥发 。",
     "EXTENDED_DESCRIPTION": [
-      "~ERROR:~ #rStasis in progress."
-    ]
+	"~错误:~ #r凝滞 正在进程中。"
+	]
   },
   "Guardian:StasisEngine": {
-    "NAME": "Stasis Engine",
-    "DESCRIPTION": "For every 3rd 0-cost card you play, gain [E] and draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL For every 3rd 0-cost card you play, gain [E] and draw a card."
+    "NAME": "凝滞引擎",
+    "DESCRIPTION": "每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。",
+    "UPGRADE_DESCRIPTION": "固有 ， NL 每打出 3 张0费卡时，获得 [E] 并抽 1 张卡。"
   },
   "Guardian:HammerDown": {
-    "NAME": "Hammer Down",
-    "DESCRIPTION": "Deal !D! damage. NL Double your Strength and Dexterity. NL Exhaust."
+    "NAME": "坠落重锤",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 翻倍你的 力量 和 敏捷 。 NL 消耗 。"
   },
   "Guardian:OmegaCannon": {
-    "NAME": "Omega Cannon",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 1 less [E] for each Strength you have."
+    "NAME": "终极加农炮",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 你每有 1 点 力量，降低 1 点费用。"
   },
   "Guardian:ModeShift": {
-    "NAME": "Mode Shift",
-    "DESCRIPTION": "Swap your Strength and Dexterity. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Swap your Strength and Dexterity. NL Draw a card."
+    "NAME": "模式切换",
+    "DESCRIPTION": "交换你的 力量 与 敏捷 。 NL 抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 交换你的 力量 与 敏捷 。 NL 抽 !M! 张牌。"
   },
   "Guardian:PackageConstruct": {
-    "NAME": "Package: Construct",
-    "DESCRIPTION": "Add a Hammer Down, Omega Cannon, and Mode Shift to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Hammer Down, Omega Cannon, and Mode Shift to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件：建造",
+    "DESCRIPTION": "增加 1 张坠落重锤，终极加农炮和模式切换到你的手牌中。 它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加 1 张已 升级 的坠落重锤，终极加农炮和模式切换到你的手牌中。 它们的费用本场战斗降低1点。 NL 消耗。"
   },
   "Guardian:PackageMass": {
-    "NAME": "Package: Mass",
-    "DESCRIPTION": "Add a Mass of Spikes, Mass of Bombs, and Group Slam to your hand, and reduce their costs by 1 this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add a Mass of Spikes, Mass of Bombs, and Group Slam to your hand, Upgrade them, and reduce their costs by 1 this combat. NL Exhaust."
+    "NAME": "组件: 团块",
+    "DESCRIPTION": "增加一张扭曲荆棘，团状炸弹和合体撞击到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的扭曲荆棘，团状炸弹和合体撞击到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:MassOfThorns": {
-    "NAME": "Mass Of Spikes",
-    "DESCRIPTION": "Gain !M! guardianmod:Momentary Thorns. NL Exhaust if you have Artifact."
+    "NAME": "团状荆棘",
+    "DESCRIPTION": "获得 !M! 层 guardianmod:临时 荆棘 。 NL 当你有 人工制品 时 消耗 。"
   },
   "Guardian:MassTimeBomb": {
-    "NAME": "Mass Of Bombs",
-    "DESCRIPTION": "In each empty guardianmod:Stasis slot, place a Time Bomb there. NL Exhaust if this created 2 or more Time Bombs.",
-    "UPGRADE_DESCRIPTION": "In each empty guardianmod:Stasis slot, place an Upgraded Time Bomb there. NL Exhaust if this created 2 or more Time Bombs.",
+    "NAME": "团状炸弹",
+    "DESCRIPTION": "向每个空的凝滞栏位加入一张 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
+    "UPGRADE_DESCRIPTION": "向每个空的凝滞栏位加入一张已 升级 的 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "~ERROR:~ #rStasis in progress."
-    ]
+	"~错误:~ #r凝滞 正在进程中。"
+	]
   },
   "Guardian:MassSlam": {
-    "NAME": "Group Slam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Exhaust if you have 3 or more Strength."
+    "NAME": "合体撞击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。NL 力量大于等于 3 时， 消耗 。"
+  },
+    "Guardian:Aged": {
+    "NAME": "岁月",
+    "DESCRIPTION": "不能被打出 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
   }
 }

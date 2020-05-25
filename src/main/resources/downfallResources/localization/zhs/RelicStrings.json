@@ -1,469 +1,475 @@
 {
   "downfall:NeowBlessing": {
-    "NAME": "Neow's Blsesing",
-    "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
+    "NAME": "涅奥的祝福",
+    "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
-      "Replaces starter relic. Upon pickup, gain 100 Maximum HP. Gain 60 Maximum HP at the start of each Act. NL Draw 2 less cards each turn. NL Lose 1 Maximum "
+      "替换初始遗物。拾起时，获得 #b100 最大生命。每一阶段开始时获得 #b60 最大生命。 NL 每回合开始时少抽2张牌。每回合开始时失去 ",
+	  " 。"
     ]
   },
   "downfall:CoffeeDripper": {
     "DESCRIPTIONS": [
-      " NL Being unable to Rest, Boss started with less than maximum health."
+      " NL 不能够休息，Boss的最大生命变少。"
     ]
   },
   "downfall:BustedCrown": {
     "DESCRIPTIONS": [
-      " NL Being unable to pick optimal cards, Boss has fewer synergistic cards than usual."
+      " NL 不能获得其他牌，Boss的牌组配合比正常时少。"
     ]
   },
   "downfall:Girya": {
     "DESCRIPTIONS": [
-      " NL Opting to Lift instead of Rest, Boss started with less than maximum health."
+      " NL 篝火能够选择举重，Boss的最大生命变少。"
     ]
   },
   "downfall:Matroyshka": {
     "DESCRIPTIONS": [
-      " NL Boss acquired ",
-      " additional relics."
+      " NL Boss额外获得了 ",
+      " 件遗物。"
     ]
   },
   "downfall:Ectoplasm": {
     "DESCRIPTIONS": [
-      " NL Being unable to gain gold, Boss has ",
-      " fewer card removals than usual."
+      " NL 不能获得金币，Boss的牌组比正常时少移除 ",
+      " 张牌。"
     ]
   },
   "downfall:BlackStar": {
     "DESCRIPTIONS": [
-      " NL Boss acquired ",
-      " additional relics, but starts with less than maximum health."
+      " NL Boss额外获得了 ",
+      " 件遗物，但最大生命变少。"
     ]
   },
   "downfall:MoltenEgg": {
     "DESCRIPTIONS": [
-      " NL Boss upgraded ",
-      " Attacks from this relic."
+      " NL Boss从这件遗物中升级了 ",
+      " 张攻击牌。"
     ]
   },
   "downfall:ToxicEgg": {
     "DESCRIPTIONS": [
-      " NL Boss upgraded ",
-      " Skills from this relic."
+      " NL Boss从这件遗物中升级了 ",
+      " 张技能牌。"
     ]
   },
   "downfall:FrozenEgg": {
     "DESCRIPTIONS": [
-      "Boss has many Upgraded Powers."
+      "Boss有很多张已升级的能力牌。"
     ]
   },
   "downfall:Shovel": {
     "DESCRIPTIONS": [
-      " NL Boss acquired ",
-      " additional relics, but starts with less than maximum health due to not Resting."
+      " NL Boss额外获得了 ",
+      " 件遗物，但因为缺少休息最大生命变少。"
     ]
   },
   "downfall:CBRSerpentHead": {
     "DESCRIPTIONS": [
-      " NL Boss used this gold to remove 2 cards from their deck."
+      " NL Boss使用这些金币移除了2张牌。"
     ]
   },
   "downfall:CursedKey": {
     "DESCRIPTIONS": [
-      " NL Boss gained ",
-      " Curses from this relic."
+      " NL Boss从这件遗物中获得了 ",
+      " 张诅咒。"
     ]
   },
   "downfall:DreamCatcher": {
     "DESCRIPTIONS": [
-      " NL Boss gained additional cards when resting."
+      " NL Boss休息时获得了额外的牌。"
     ]
   },
   "downfall:PrayerWheel": {
     "DESCRIPTIONS": [
-      " NL Boss gained ",
-      " extra cards from this relic."
+      " NL Boss从这件遗物中额外获得了 ",
+      " 张牌。"
     ]
   },
   "downfall:PeacePipe": {
     "DESCRIPTIONS": [
-      " NL Boss removed ",
-      " additional cards, but starts with less than maximum health."
+      " NL Boss移除了 ",
+      " 张牌，但最大生命变少"
     ]
   },
   "downfall:RunicDome": {
     "DESCRIPTIONS": [
-      " NL Boss may choose the order of cards unfavorably."
+      " NL Boss可能不根据习惯出牌。"
     ]
   },
   "downfall:CentennialPuzzle": {
     "DESCRIPTIONS": [
-      " NL Cannot trigger on the Boss's turn."
+      " NL 不能在boss的回合触发。"
     ]
   },
   "downfall:CBRFaceOfCleric": {
     "DESCRIPTIONS": [
-      " Max HP was gained via this relic."
+      " 这件遗物提高了最大生命。"
     ]
   },
   "downfall:Omamori": {
     "DESCRIPTIONS": [
-      " NL Prevented the Boss from gaining a "
+      " NL 阻止boss获得一张 "
     ]
   },
   "downfall:DollysMirror": {
     "DESCRIPTIONS": [
-      " NL The mirror duplicated "
+      " NL 镜子复制了 "
     ]
   },
   "downfall:Vampires": {
-    "NAME": "Event: Vampires",
-    "FLAVOR": "The master's blood... the master's blood! THE MASTER'S BLOOD!",
+    "NAME": "事件: 吸血鬼",
+    "FLAVOR": "主人的血……主人的血！主 人 的 血！！",
     "DESCRIPTIONS": [
-      "Strikes have been replaced with Bites. NL -",
-      " Maximum HP."
+      "打击被替换为噬咬。 NL 失去 ",
+      " 最大生命。"
     ]
   },
   "downfall:BonfireSpirits": {
-    "NAME": "Event: Bonfire Spirits",
-    "FLAVOR": "The spirits toss small bones and fragments into the fire, which brilliantly erupts each time...",
+    "NAME": "事件: 篝火精灵",
+    "FLAVOR": "精灵们将小小的骨头和不知什么碎片丢进火中，每一次都会爆发出炫目的火焰……",
     "DESCRIPTIONS": [
-      "Boss removed a card from its deck to gain 10 Max HP."
+      "Boss从牌组中移除了一张牌并获得了10点最大生命。"
     ]
   },
   "downfall:DesignerInSpire": {
-    "NAME": "Event: Designer-In-Spire",
-    "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
+    "NAME": "事件: “尖端”设计师",
+    "FLAVOR": "不行不行，这怎么能行呢。哎呀，你这算是什么风格？令人作呕！什么，你还流流、流着血？哎呀好恶心啊。",
     "DESCRIPTIONS": [
-      " was removed from the deck, and ",
-      " was upgraded."
+      " 被移除出牌组，且将 ",
+      " 升级。"
     ]
   },
   "downfall:DivineFountain": {
-    "NAME": "Event: Divine Fountain",
-    "FLAVOR": "You come across shimmering water flowing endlessly from a fountain on a nearby wall.",
+    "NAME": "事件: 神圣泉水",
+    "FLAVOR": "你经过墙壁上的一处饮水池，里面流淌着源源不断闪着光的水。",
     "DESCRIPTIONS": [
-      " Curses have been removed from the deck."
+      " 移除所有诅咒牌。"
     ]
   },
   "downfall:Duplicator": {
-    "NAME": "Event: Duplicator",
-    "FLAVOR": "Before you lies a decorated altar to some ancient entity.",
+    "NAME": "事件: 复制祭坛",
+    "FLAVOR": "在你面前是一个用来崇拜某种古老存在的华丽祭坛。",
     "DESCRIPTIONS": [
-      "Boss duplicated a powerful card."
+      "Boss复制了一张强力牌。"
     ]
   },
   "downfall:BigFish": {
-    "NAME": "Event: Big Fish",
-    "FLAVOR": "As you make your way down a long corridor you see a banana, a donut, and a box floating about.",
+    "NAME": "事件: 大鱼",
+    "FLAVOR": "当你走过一条长廊时，你看见空中漂浮着一根香蕉，一个甜甜圈，和一个盒子。",
     "DESCRIPTIONS": [
-      "The Donut was chosen. NL +5 Maximum HP.",
-      "The Box was chosen. NL A Regret curse and a relic was added."
+      "选择了甜甜圈。 NL 获得5点最大生命。",
+      "选择了盒子。 NL 获得了一件遗物并被 #p诅咒-悔恨 。"
     ]
   },
   "downfall:LivingWall": {
-    "NAME": "Event: Living Wall",
-    "FLAVOR": "Forget what you know, and I'll let you go.",
+    "NAME": "事件: 活墙壁",
+    "FLAVOR": "忘记你所知道的，我就让你走。",
     "DESCRIPTIONS": [
-      "Boss removed a ",
-      "Boss upgraded a ",
-      "Boss transformed a ",
-      " into a "
+      "Boss移除了一张 ",
+      "Boss升级了一张 ",
+      "Boss将 ",
+      " 变化为 "
     ]
   },
   "downfall:WheelOfChange": {
-    "NAME": "Event: Wheel of Change",
-    "FLAVOR": "It's time to spin the wheel! Are you READY? Of course you are!",
+    "NAME": "事件: 变化大转盘",
+    "FLAVOR": "是时候转动转盘了！你准备好了吗？你当然准备好了！",
     "DESCRIPTIONS": [
-      "The Wheel gave the Boss a ",
-      "Boss was healed to maximum health.",
-      "The Wheel removed a ",
-      " from the Boss's deck.",
-      "The Wheel caused damage to the Boss."
+      "转盘让给boss一件 ",
+      "Boss回复所有生命。",
+      "转盘让Boss移除了一张 ",
+      " 。",
+      "转盘让Boss受到了伤害。"
     ]
   },
   "downfall:Falling": {
-    "NAME": "Event: Falling",
-    "FLAVOR": "While in free fall you consider your options...",
+    "NAME": "事件: 坠落",
+    "FLAVOR": "在摔下的途中，你开始考虑自己有什么选择……",
     "DESCRIPTIONS": [
-      "Strike was removed from the deck."
+      "打击被移除出牌组。"
     ]
   },
   "downfall:Augmenter": {
-    "NAME": "Event: Augmenter",
-    "FLAVOR": "Hey there, stranger. Interested in advancing science?",
+    "NAME": "事件: 增益研究者",
+    "FLAVOR": "嘿陌生人，想不想试试高端的科技？",
     "DESCRIPTIONS": [
-      "Boss transformed 2 cards",
-      "Boss gained J.A.X.",
-      "Boss gained the Mutagenic Strength."
+      "Boss变化了两张牌。",
+      "Boss获得了 J.A.X.",
+      "Boss获得了突变之力。"
     ]
   },
   "downfall:AncientWriting": {
-    "NAME": "Event: Ancient Writing",
-    "FLAVOR": "Suddenly, the message becomes clear...",
+    "NAME": "事件: 古老文字",
+    "FLAVOR": "突然之间，文字的意义变得清晰了……",
     "DESCRIPTIONS": [
-      "Boss upgraded all Strikes & Defends."
+      "Boss升级了所有的打击和防御。"
     ]
   },
   "downfall:Bandits": {
-    "NAME": "Event: Red Mask Bandits",
-    "FLAVOR": "Get em Bear!",
+    "NAME": "事件: 蒙面强盗",
+    "FLAVOR": "熊，给我上！！",
     "DESCRIPTIONS": [
-      "Boss defeated the Bandits, gaining the Red Mask, but starts with less than maximum health."
+      "Boss战胜了强盗，获得了红面具，但是战斗开始时失去最大生命。"
     ]
   },
   "downfall:WingStatue": {
-    "NAME": "Event: Wing Statue",
-    "FLAVOR": "Among the stone and boulders, you notice an intricate large blue statue resembling a wing.",
+    "NAME": "事件: 翅膀雕像",
+    "FLAVOR": "在形状不同的巨石之间，你看见一尊做工精细的翅膀形状的蓝色雕像。",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      " 被移除出牌组。"
     ]
   },
   "downfall:Serpent": {
-    "NAME": "Event: The Ssssserpent",
-    "FLAVOR": "The most fulfilling of lives is that in which you can buy anything! Do you agree?",
+    "NAME": "事件： 蛇～",
+    "FLAVOR": "最幸福的人生当然就是什么东西都能买得起的土豪生活了！你同意吗？",
     "DESCRIPTIONS": [
-      "Boss gained a Doubt curse to gain gold, which was used to buy a relic."
+      "Boss因为获得了钱而被 #p诅咒-疑虑 。 NL 这些钱被用来买遗物。"
     ]
   },
   "downfall:Cleric": {
-    "NAME": "Event: Cleric",
-    "FLAVOR": "Hello friend! I am Cleric! Are you interested in my services?!",
+    "NAME": "事件: 牧师",
+    "FLAVOR": " 你好啊朋友！我是牧师！你想不想试试我的服务呐？！",
     "DESCRIPTIONS": [
-      "Boss removed a card from its deck."
+      "Boss移除了牌组中的一张牌。"
     ]
   },
   "downfall:OldBeggar": {
-    "NAME": "Event: Old Beggar",
-    "FLAVOR": "Spare some coin, child?",
+    "NAME": "事件: 老乞丐",
+    "FLAVOR": "施舍点钱吧，孩子？",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      " 被移除出牌组。"
     ]
   },
   "downfall:Library": {
-    "NAME": "Event: Library",
-    "FLAVOR": "You come across an ornate building which appears abandoned.",
+    "NAME": "事件: 图书馆",
+    "FLAVOR": "你经过一栋被遗弃的华美建筑物。",
     "DESCRIPTIONS": [
-      "Boss gained an extra synergistic card."
+      "Boss获得了一张额外的配合卡。"
     ]
   },
   "downfall:Mausoleum": {
-    "NAME": "Event: Mausoleum",
-    "FLAVOR": "You cannot make out the writing on the coffin, however, you do notice black fog seeping out from the sides.",
+    "NAME": "事件: 陵墓",
+    "FLAVOR": "你辨认不出石棺上的字迹，但你能注意到有黑色的雾气从石棺的两侧渗透出来。",
     "DESCRIPTIONS": [
-      "Boss gained a Writhe curse and an extra relic."
+      "Boss获得了一件额外的遗物并被 #p诅咒-苦恼 。"
     ]
   },
   "downfall:Nest": {
-    "NAME": "Event: Nest",
-    "FLAVOR": "CAW CAW CAAAAAWWW!",
+    "NAME": "事件: 巢穴",
+    "FLAVOR": "咔 咔 咔咔!",
     "DESCRIPTIONS": [
-      "Boss gained a Ritual Dagger."
+      "Boss获得了仪式匕首。"
     ]
   },
   "downfall:Colosseum": {
-    "NAME": "Event: Colosseum",
-    "FLAVOR": "WE NOW@ BEGIN THE COMBAT!!!!",
+    "NAME": "事件: 竞技场",
+    "FLAVOR": "那么现在，就让我们开始战斗！！！！",
     "DESCRIPTIONS": [
-      "Boss completed the Colosseum event, gaining two additional relics."
+      "Boss完成了竞技场事件，获得了两件额外的遗物。"
     ]
   },
   "downfall:PleadingVagrant": {
-    "NAME": "Event: Pleading Vagrant",
+      "NAME": "事件: Pleading Vagrant",
     "FLAVOR": "Got anything for me friend? Please... maybe some #yCoin?",
     "DESCRIPTIONS": [
       "Boss robbed the Vagrants, gaining a Shame curse and "
     ]
   },
   "downfall:Mushroom": {
-    "NAME": "Event: Mushrooms",
-    "FLAVOR": "You enter a corridor full of hypnotizing colored mushrooms.",
+    "NAME": "事件: 蘑菇",
+    "FLAVOR": "你走进一条遍地是五彩斑斓蘑菇的走廊",
     "DESCRIPTIONS": [
-      "Boss healed to full and gained a Parasite curse.",
-      "Boss gained the Odd Mushroom relic, but starts with less than maximum health."
+      "Boss回满血但是被 #p诅咒-寄生",
+      "Boss获得了奇怪蘑菇,但是战斗开始时失去最大生命。"
     ]
   },
   "downfall:ShiningLight": {
-    "NAME": "Event: Shining Light",
-    "FLAVOR": "You find a shimmering mass of light encompassing the center of the room.",
+    "NAME": "事件: 闪耀之光",
+    "FLAVOR": "你发现在房间中央围绕着一束很粗的光柱 。",
     "DESCRIPTIONS": [
-      "Boss upgraded ",
-      " and ",
-      ", but starts with less than maximum health."
+      "Boss升级了 ",
+      " 和 ",
+      "，但战斗开始时失去了最大生命。"
     ]
   },
   "downfall:ScrapOoze": {
-    "NAME": "Event: Scrap Ooze",
-    "FLAVOR": "Before you is a slime-like creature that ate too much scrap for its own good.",
+    "NAME": "事件: 破烂软泥",
+    "FLAVOR": "在你面前的是一个史莱姆状的生物，它显然是吃了太多的破铜烂铁，消化不良了。",
     "DESCRIPTIONS": [
-      "Boss gain an additional relic."
+      "Boss额外获得了一件遗物。"
     ]
   },
   "downfall:GoldenIdolEvent": {
-    "NAME": "Event: Golden Idol",
-    "FLAVOR": "Atop the altar sits an ornate female statue with arms outstretched. NL She calls out to you, demanding sacrifice.",
+    "NAME": "事件: 金神像",
+    "FLAVOR": "在祭坛上方，是一尊双手伸出的精致女性雕像。她呼唤着你，要求你献上祭品。",
     "DESCRIPTIONS": [
-      "Boss took the Golden Idol, gaining an Injury curse and use the extra gold to buy "
+      "Boss拿走了金神像，被 #p诅咒-受伤 并用得来的钱买了"
     ]
   },
   "downfall:FaceTrader": {
-    "NAME": "Event: Face Trader",
-    "FLAVOR": "Face. Let me touch? Maybe trade?",
+    "NAME": "事件: 换脸商",
+    "FLAVOR": "你的脸。让我碰碰？或者，想要交易？",
     "DESCRIPTIONS": [
-      "Boss gained a random face relic."
+      "Boss获得随机一件容貌遗物。"
     ]
   },
   "downfall:OminousForge": {
-    "NAME": "Event: Ominous Forge",
-    "FLAVOR": "CLANG! CLAAANG! CLANG!",
+    "NAME": "事件: 邪恶熔炉",
+    "FLAVOR": "铛！铛！铛！",
     "DESCRIPTIONS": [
-      "Boss gained Warped Tongs and a Pain curse."
+      "Boss获得了弯曲铁钳并被 #p诅咒-疼痛 。"
     ]
   },
   "downfall:Purifier": {
-    "NAME": "Event: Purifier",
-    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "NAME": "事件: 净化",
+    "FLAVOR": "在你面前是一个被遗忘神灵的精致神龛。",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      " 从牌组中移除。"
     ]
   },
   "downfall:MatchAndKeep": {
-    "NAME": "Event: Match and Keep",
-    "FLAVOR": "Twelve cards! Match them to keep them! Five tries, no do-overs. Are you ready? Let's start!",
+    "NAME": "事件: 对对碰",
+    "FLAVOR": "十二张牌！搭对就拿走！五次机会，没有重来！",
     "DESCRIPTIONS": [
-      "Boss matched successfully and gained a powerful card."
+      "Boss搭对了并获得了一张强力的牌。"
     ]
   },
   "downfall:Transmogrifier": {
-    "NAME": "Event: Transmogrifier",
-    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "NAME": "事件: 转化神龛",
+    "FLAVOR": "在你面前是一个被遗忘神灵的精致神龛。",
     "DESCRIPTIONS": [
-      "Boss transformed a starter card into a new card."
+      "Boss将一张初始牌转化。"
     ]
   },
   "downfall:TombRedMask": {
-    "NAME": "Event: Tomb of Lord Red Mask",
-    "FLAVOR": "A highly ornamented tomb can be seen on the other side of a floating path.",
+    "NAME": "事件: 红面具大人之墓",
+    "FLAVOR": "在一条悬浮道路的尽头，你可以看见一处装饰华丽的古墓。",
     "DESCRIPTIONS": [
-      "Boss gained the Red Mask relic."
+      "Boss获得了红面具。"
     ]
   },
   "downfall:UpgradeShrine": {
-    "NAME": "Event: Upgrade Shrine",
-    "FLAVOR": "Before you lies an elaborate shrine to a forgotten spirit.",
+    "NAME": "事件： 升级神龛",
+    "FLAVOR": "在你面前是一个被遗忘神灵的精致神龛。",
     "DESCRIPTIONS": [
-      "Boss #yUpgraded a card with Upgrade Shrine."
+      "Boss在升级神龛中 #y升级 了一张牌。"
     ]
   },
   "downfall:WeMeetAgain": {
-    "NAME": "Event: We Meet Again",
-    "FLAVOR": "It's me, #yRanwid! Have any goods for me today? The usual? A fella like me can't make it alone, you know?",
+    "NAME": "事件: 我们又见面了",
+    "FLAVOR": "是我，兰伟德啊！所以今天有什么好东西给我吗？和往常一样？哎呀呀，像我这样的人，独自一个可实在不好混啊，对不对？",
     "DESCRIPTIONS": [
-      " was traded to Ranwid in exchange for "
+      " 给兰伟德交换为 "
     ]
   },
   "downfall:GoldenShrine": {
-    "NAME": "Event: Golden Shrine",
-    "FLAVOR": "Before you lies an elaborate shrine to an ancient spirit.",
+    "NAME": "事件: 金色神龛",
+    "FLAVOR": "在你面前是一座古老神灵的精巧神龛。",
     "DESCRIPTIONS": [
-      "Boss gained a Regret curse in exchange for gold, and used this gold to buy "
+      "Boss为了获得金钱被 #p诅咒-悔恨 。它用这些钱去买了 "
     ]
   },
   "downfall:GremlinSack": {
-    "NAME": "Gremlin Sack",
+    "NAME": "地精战利品",
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
-      "Upon pickup, add the following cards to your deck: ",
-      "a Starter card",
-      ", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
-      ", a random Common, a random Uncommon, a random Rare, two random Curses."
+      "拾起时，将下列牌加入你的牌组： ",
+      "一张初始牌",
+      "， 随机普通、罕见、稀有、罕见无色和诅咒牌各一张。",
+      "， 随机普通、罕见、稀有牌各一张还有两张诅咒牌。"
     ]
   },
   "downfall:GremlinWheel": {
-    "NAME": "Wheel of Change",
-    "FLAVOR": "No one gets two spins, he says.",
+    "NAME": "变化大转盘",
+    "FLAVOR": "“不能反悔”，他说。",
     "DESCRIPTIONS": [
-      "At each Rest Site, you may spin the wheel once. Choosing to collect its reward uses up this relic.",
-      "This relic has been used up."
+      "在休息处，你能转一次转盘。获得奖励时将会耗尽本遗物效果。",
+      "这个遗物的效果已经耗尽。"
     ]
   },
   "downfall:CloakOfManyFaces": {
-    "NAME": "Coat of Many Faces",
-    "FLAVOR": "It was Steve, and Bill, and Ian, and Fred, and John...",
+    "NAME": "众脸大衣",
+    "FLAVOR": "这是史蒂夫、比利、伊恩、弗雷德、约翰……",
     "DESCRIPTIONS": [
-      "Upon pickup, gain Cultist Headpiece, Face Of Cleric, N'loth's Hungry Face, Gremlin Visage, and Ssserpent Head."
+      "拾起时，获得邪教徒头套、牧师的脸、恩洛斯的饥饿的脸、地精容貌、蛇的头。"
     ]
   },
   "downfall:BrokenWingStatue": {
-    "NAME": "Broken Wing Statue",
-    "FLAVOR": "A broken hunk of a once-magnificent statue.",
+    "NAME": "破碎翅膀雕像",
+    "FLAVOR": "一座曾经宏伟的雕像的残缺部分。",
     "DESCRIPTIONS": [
-      "The cultists that worship the Awakened One will be interested in this."
+      "崇拜觉醒者的邪教徒会对此感兴趣。"
     ]
   },
   "downfall:ShatteredFragment": {
-    "NAME": "Sharpened Fragment",
-    "FLAVOR": "Once a broken statue - now a makeshift weapon.",
+    "NAME": "锐化碎片",
+    "FLAVOR": "曾经破碎的雕像 - 如今打造成了武器。",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a Crystal Shiv to your hand."
+      "每场战斗开始时，将一张水晶小刀加入你的手牌。"
     ]
   },
   "downfall:RedIOU": {
-    "NAME": "Bandit Contract",
-    "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
+    "NAME": "强盗约定",
+    "FLAVOR": "跟红面具强盗达成的约定 - 一部分是为了换取一件小饰物，但大部分是为了活命。",
     "DESCRIPTIONS": [
-      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you."
+      "#b第三场 boss战开始时，红面具强盗将会帮助你。",
+      "该干活了，伙计们！",
+      "熊，拿下他！",
+      "按照约定， NL 我们的任务结束了。",
+      "大家欢迎新的 NL ~红面具大人!~",
+      "祝你好运，老大！"
     ]
   },
   "downfall:RedIOUUpgrade": {
-    "NAME": "Bandit Contract+",
-    "FLAVOR": "An agreement from the Bandit trio - partially in exchange for a trinket, but mostly in exchange for their lives.",
+    "NAME": "强盗约定+",
+    "FLAVOR": "跟红面具强盗达成的约定 - 一部分是为了换取一件小饰物，但大部分是为了活命。",
     "DESCRIPTIONS": [
-      "At the start of the #b3rd boss combat, Red Mask Bandits will assist you."
+      "#b第三场 boss战开始时，红面具强盗将会帮助你。"
     ]
   },
   "downfall:KnowingSkull": {
-    "NAME": "Knowing Skull",
-    "FLAVOR": "Put me down!",
+    "NAME": "全知头骨",
+    "FLAVOR": "放我下来！",
     "DESCRIPTIONS": [
-      "At the start of each combat, you may Wish for Souls, Success, or a Pick me Up."
+      "每场战斗开始时，你能许愿灵魂，成功或者来点喝的。"
     ]
   },
   "downfall:HeartBlessingRed": {
-    "NAME": "Ruby Heart Blessing",
-    "FLAVOR": "The heart is strong. The heart is pleased.",
+    "NAME": "红宝石心脏的祝福",
+    "FLAVOR": "腐化之心很强大。它很欣慰。",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yStrength. NL At the start of combat with the Beyond's boss, gain a special card."
+      "每场战斗开始时获得 #b1 点 #y力量 。 NL 在深处boss战时，获得一张特别的牌。"
     ]
   },
   "downfall:HeartBlessingBlue": {
-    "NAME": "Sapphire Heart Blessing",
-    "FLAVOR": "The heart is pleased.",
+    "NAME": "蓝宝石心脏的祝福",
+    "FLAVOR": "心脏很欣慰。",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card."
+      "拾起时，将你的最大生命值提升 #b10 。 NL 在深处boss战时，获得一张特别的牌。"
     ]
   },
   "downfall:HeartBlessingGreen": {
-    "NAME": "Emerald Heart Blessing",
-    "FLAVOR": "The heart is everything.",
+    "NAME": "绿宝石心脏的祝福",
+    "FLAVOR": "心脏就是一切。",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yDexterity. NL At the start of combat with the Beyond's boss, gain a special card."
+      "每场战斗开始时获得 #b1 点 #y敏捷 。 NL 在深处boss战时，获得一张特别的牌。"
     ]
   },
   "downfall:TeleportStone": {
-    "NAME": "Teleport Stone",
-    "FLAVOR": "Never leave home without it.",
+    "NAME": "传送石",
+    "FLAVOR": "出门必备。",
     "DESCRIPTIONS": [
-      "You may skip any number of rooms the next time you move.",
+      "你下一次移动的时候可以跳过任意数量的房间。",
       "",
-      "This relic has been used up."
+      "这个遗物的效果已经耗尽。"
     ]
   },
   "downfall:HeartsMalice": {
-    "NAME": "The Heart's Malice",
-    "FLAVOR": "The malice of corruption bestowed by the Heart.",
+    "NAME": "心脏的怨恨",
+    "FLAVOR": "腐化之心的恶意。",
     "DESCRIPTIONS": [
-      "Enemies in your first #b3 combats will flee in terror.",
-      "This relic has been used up."
+      "前 #b2 场战斗的敌人将落荒而逃。",
+      "这个遗物的效果已经耗尽。"
     ]
   }
 }

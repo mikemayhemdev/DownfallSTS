@@ -1,122 +1,122 @@
 {
   "downfall:GremlinMatchGame": {
-    "NAME": "Match and Keep!",
+    "NAME": "对对碰！",
     "DESCRIPTIONS": [
-      "\" ... #bT-twelve cards! Match them to keep them! #bF-five tries... no do-overs. NL Are you ready? Let's start!\"",
-      "You complete the gremlin's game and look up. NL He disappeared?",
-      "A gremlin is madly shuffling cards on a table. This monster seems to be a harmless one. As you approach, he nervously breaks his composure for a moment, but finds the courage to address you.",
-      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"Are you sure you don't want to play the game?\", the gremlin asks."
+      "“ #b十二张牌！ #b搭对就拿走！ 五次机会，没有重来！ NL 准备好了吗？开始！”",
+      "你完成了地精的游戏，当你抬头看时，却发现…… NL 他已经不见了？",
+      "有一位地精正在桌子上疯狂地摆弄着一副牌，他似乎没有危害。你出于好奇接近了他，当你靠近时，他因紧张打破了刚才的镇静，随后鼓起勇气开口跟你说话。",
+      "突然，地精大叫了起来！ NL NL “大块头！！！” NL NL 一只魁梧的地精从阴影中走出来，矗立在地精、桌子和你的上方。 NL “你真的确定你不想玩游戏？”，地精问到。"
     ],
     "OPTIONS": [
-      "[Continue]",
-      "[Leave]",
-      "[Play]",
-      "Remaining Attempts: #y",
-      "[Intimidate] Steal 6 cards.",
-      "[Punch] #rFight. #gGain #g6 #gCards."
+      "[继续]",
+      "[离开]",
+      "[玩小游戏]",
+      "剩余次数： #y",
+      "[恐吓] 偷6张牌。",
+      "[一拳过去] #r战斗 。 #g获得6张牌。"
     ]
   },
   "downfall:WomanInBlue": {
-    "NAME": "The Woman in Blue",
+    "NAME": "蓝衣女子",
     "DESCRIPTIONS": [
-      "Tucked in the darkness, you spot a small shop. Within, you see a pale woman in sharp clothes managing an inventory of potions, stacked along a wall. She is startled by your threatening appearance. NL \"Leave me and my wares alone, cretin!\" she screams.",
-      "You exit the shop cautiously, not wanting to spur the woman into a fight.",
-      "#r@WHAM@ NL Her gloved fist collides with your face, nearly knocking you off your feet. NL \"Get out before I litter the floor with your guts.\" You take her word and exit with your guts still safely in your body."
+      "从黑暗中，一只手伸出来把你拉进了一家小店。眼睛适应了这里的亮度之后，你看见一个穿着鲜艳衣服的苍白女子正伸手展示整整一墙壁的药水。 NL “来买药水，快点！”她对你说。",
+      "你小心地离开了这家店，不想惹那个女人打架。",
+      "#r@砰@ NL 她戴着手套的拳头狠狠打在了你的脸上，差点就把你打翻在地。 NL “在我把你打得满地找牙之前给我滚出去。”你觉得她有可能说到做到，趁着牙齿还没事赶紧离开了这家店。"
     ],
     "OPTIONS": [
-      "[Leave]",
-      "[Leave] #rTake #r",
-      " #rDamage.",
-      "[Punch] #rFight. #gGain #ga #gPotion #gRelic #gand #g3 #gPotions."
+      "[离开]",
+      "[离开] #r受到 #r",
+      " #r点伤害。",
+      "[一拳过去] #r战斗 。 #g获得一件药水遗物和3瓶药水。"
     ]
   },
   "downfall:GremlinWheelGame": {
-    "NAME": "Wheel of Change",
+    "NAME": "变化大转盘",
     "DESCRIPTIONS": [
-      "You come upon a dapper looking, cheery gremlin. Despite your menacing appearance, he seems to be unfazed, though you do catch him hesitantly glancing backstage. NL \"It's time to spin the wheel! Are you ready?\"",
-      "\"You win some #yGOLD! NL YAY!!!!\"",
-      "\"Ah, a #ggift! NL Enjoy!\"",
-      "\"Oooh, a free #gHeal for you!\"",
-      "\"Looks like you won a #pCurse! NL That's not good. NL Oh well! Better luck next time!\"",
-      "\"Ohh, the power of #r~darkness...~ NL Choose a card to remove from your deck!\"",
-      "\"Uh oh! NL You lose!\" NL You spot him readying a shiv...",
-      "You slash at the crazy gremlin but he's simply too quick! NL He gets you a few times with a crude shiv. NL \"The price has been paid!!\" NL and with that, both the gremlin and its wheel disappear in a puff of smoke.",
-      "The gremlin nervously looks over his shoulder, but quickly relaxes. You eye him gesturing with his hand, but disregard it. NL \"Now, now, friend, the wheel has fairly decided your reward! No one gets a second spin.\"",
-      "Immediately, the gremlin shouts! NL NL \"NOB!!!\" NL NL A lumbering gremlin emerges from the shadows, towering over the gremlin, the table, and you. NL \"My friend here suggests you take what the wheel has offered.\".",
-      "Settling in by the fire, you decide to see if you have better luck with the Wheel than your last attempt.",
-      "The Wheel has chosen a prize. NL NL You need only to reach out and take it.",
-      "Success! You've found what you are looking for, and just in time! NL NL #r@CRACK!@ NL NL You may have been a little rough with that last spin... the Wheel has been broken.",
-      "You decide to try your luck another day. NL NL For now, you must rest and regain your composure."
+      "你见到一位穿着帅气、满面笑容的地精。 NL “是时候转动转盘了！ ~你准备好了吗？~ 你当然准备好了！”",
+      "“你赢得了一些 #y金币 ！ NL 噢耶！！！”",
+      "“啊，一件 #g礼物 ！ NL 请收下吧！”",
+      "“哦哦，一次免费的 #g回复 ！”",
+      "“看起来你赢得了一个 #p诅咒 ！ NL 这就比较糟糕啦。 NL 好吧！那么祝你下次好运啦！”",
+      "“哦哦， #r~黑暗的力量……~ NL 在你的牌组中选择一张移除吧！”",
+      "“呃欧！ NL 你输了！” NL 你看见他拿出了一把小刀……",
+      "你向这个疯子地精砍了过去，但他的速度太快了！ NL 你被他的小刀砍中了几次。 NL “代价已经付清！！” NL 他说着就和转盘一起在烟雾中消失了。",
+      "地精紧张地看了看他的肩膀，然后很快地放松了下来。你看着他用手做手势，却不理会。 NL “现在，朋友，转盘已经公正的决定了你的奖励，不能反悔”",
+      "突然，地精大叫了起来！ NL NL “大块头！！！” NL NL 一只魁梧的地精从阴影中走出来，矗立在地精、桌子和你的上方。 NL “我朋友说你最好拿着转盘给的”。",
+      "坐在篝火前，你决定试试看转转盘的运气有没有比上次的好。",
+      "转盘停了下来。 NL NL 你现在只需要拿走奖励。",
+      "成功！ 你找到了你想要的东西，正是时候！ NL NL #r@噼啪！@ NL NL 你刚才可能有点粗鲁了……转盘坏了。",
+      "你决定下次再试试。 NL NL 现在，你必须休息并保持镇静。"
     ],
     "OPTIONS": [
-      "[Play]",
-      "[Prize!] YAY!!!!",
-      "[Prize!] #gObtain #ga #gRelic.",
-      "[Prize!] #gHeal #gto #gfull #ghealth.",
-      "[Prize?] #rCurse #r- #rDecay.",
-      "[Prize!] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
-      "[Prize?] #rLose #r",
-      " #rHP.",
-      "[Leave]",
-      "Select a Card to Remove.",
-      "[Again!]",
-      "[AGAIN!!]",
-      "[Punch] #rFight. #gGain #gGremlin #gWheel.",
-      "[Pass] Try again later."
+      "[玩小游戏]",
+      "[奖品！] 耶！！！",
+      "[奖品！] #g获得遗物。",
+      "[奖品！] #g回复所有生命。",
+      "[奖品？] #r诅咒——腐朽。",
+      "[奖品！] #g从你的牌组中移除一张牌。",
+      "[奖品？] #r失去 #r",
+      " #r生命。",
+      "[离开]",
+      "选择一张牌移除。",
+      "[再来！]",
+      "[再来！！]",
+      "[一拳过去] #r战斗。 #g获得地精转盘。",
+      "[跳过] 之后在来。"
     ]
   },
   "downfall:GremlinWheelGameRest": {
-    "NAME": "Wheel of Change",
+    "NAME": "变化大转盘",
     "DESCRIPTIONS": [
     ],
     "OPTIONS": [
     ]
   },
   "downfall:LivingWall": {
-    "NAME": "Living Wall",
+    "NAME": "活墙壁",
     "OPTIONS": [
-      "[Punch] #rFight. #gUse #gall #g3 #gHeads."
+      "[一拳过去] #r战斗。 #g使用3种效果。"
     ]
   },
   "downfall:Augmenter": {
-    "NAME": "Augmenter",
+    "NAME": "增益研究者",
     "DESCRIPTIONS": [
-      "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
+      "一个戴着眼罩的邪笑着的男人大摇大摆地走到你面前： NL “嘿陌生人，想不想试试高端的科技？ 可会让你变得比任何训练和祝福都要强哦。 如果你是那种一心求死的英雄的话可不能没有它呢。 NL 你说怎么样？ 想不想试一下？” "
     ],
     "OPTIONS": [
-      "[Punch] #rFight. #gTake #gEverything."
+      "[一拳过去] #r战斗。 #g拿走全部。"
     ]
   },
   "downfall:BonfireSpirits": {
-    "NAME": "Bonfire Elemental",
+    "NAME": "篝火精灵",
     "DESCRIPTIONS": [
-      "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases by #b10 and you are #ghealed to full HP."
+      "精灵们如饥似渴地享用着你献上的灵魂！他们以灵魂为食，火光亮了约有 @一倍@ 。 NL 精灵们在你身边兴奋地舞蹈着，然后 ~融入了你的躯体~ ，让你充满了温暖和力量。 NL 你的最大生命值增加了 #b10 ，你的生命 #g回复 到最大了。"
     ],
     "OPTIONS": [
-      "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
-      "[Lcked] Requires 150 Souls."
+      "[献上] #r失去150灵魂。 #g获得10点最大生命。",
+      "[锁定] 需要至少150灵魂。"
     ]
   },
   "downfall:GoldenShrine": {
-    "NAME": "Soul Shrine",
+    "NAME": "灵魂神龛",
     "DESCRIPTIONS": [
       "Before you lies an elaborate shrine to an ancient spirit of evil. ",
       "As your hand touches the shrine, #ysouls spill forth from the shrine, ~showering~ ~you~ ~in~ ~power.~ ",
       "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
-      "You ignore the shrine."
+      "你无视了神龛。"
     ]
   },
   "downfall:FaceTrader": {
-    "NAME": "Face Trader",
+    "NAME": "换脸商",
     "DESCRIPTIONS": [
-      " NL NL He doesn't look like he would put up much of a fight, but he has survived in this place. Perhaps these masks hold some power..."
+      " NL NL 他看起来不太愿意打架，但他在这里活了下来。也许这些面具里面潜藏了有力量……"
     ],
     "OPTIONS": [
-      "[Punch] #rFight. #g100%: #gAll #gFace."
+      "[一拳过去] #r战斗。 #g100%：获得全部面容。"
     ]
   },
   "downfall:CursedFountain": {
-    "NAME": "The Cursed Fountain",
+    "NAME": "诅咒泉水",
     "DESCRIPTIONS": [
       "You come across a tinged #p~purple~ #p~liquid~ flowing endlessly from a fountain on a nearby wall. It is one you recognize as deadly to most creatures, but quite beneficial to those subjected to a curse.",
       "As you drink the #p~liquid,~ you feel a #pdark #pgrasp reach into your mind. It feels luxurious and refreshing.",
@@ -125,18 +125,18 @@
       "Leaving the fountain behind, you continue on your way."
     ],
     "OPTIONS": [
-      "[Bottle] #gGain #gCursed #gLiquid #gPotion.",
-      "[Consume] #gGain #g75 #ySouls.",
-      "[Drink] #gHeal #gto #gfull #gHP.",
-      "[Locked] Requires a curse.",
-      "[Locked] Requires 2 curses.",
-      "[Locked] Requires 3 curses.",
-      "[Locked] Already used.",
-      "[Leave]"
+      "[瓶装] #g获得药水-流动诅咒。",
+      "[Consume] #g获得75灵魂。",
+      "[喝水] #g回复到满血。",
+      "[锁定] 需要一张诅咒。",
+      "[锁定] 需要两张诅咒。",
+      "[锁定] 需要三张诅咒。",
+      "[锁定] Already used.",
+      "[离开]"
     ]
   },
   "downfall:WeMeetAgain": {
-    "NAME": "We Meet Again!",
+    "NAME": "我们又见面了！",
     "DESCRIPTIONS": [
       "\"BOSS!\" A cheery disheveled fellow approaches you gleefully. You know this man well. NL \"It's me, #yRanwid! You wouldn't believe what I've swindled from the cursed heroes! Do you have any more junk I can give them?\" NL You appreciate his friendliness and consider your options. Surely you have something Ranwid can use in his next \"deal\"...",
       "\"Oh, this is perfect! It's complete junk! Here, take these elixirs the last few fools gave me!\" NL Ranwid fumbles around his pouches, producing three bottles for you, though nearly dropping them in the process.",
@@ -145,18 +145,18 @@
       "\"Nothing today boss? Okay!\" NL He scampers away."
     ],
     "OPTIONS": [
-      "[Lose ",
+      "[失去 ",
       "] ",
-      "#gGain #g3 #gPotions.",
-      "#gGain ",
-      " #ySouls.",
-      "#gGain #ga #yRare #gCard.",
-      "[Leave]",
-      "[Locked] No Relic to give."
+      "#g获得3瓶药水。",
+      "#g获得 ",
+      " #y灵魂。",
+      "#g获得一张稀有牌。",
+      "[离开]",
+      "[锁定] 需要遗物。"
     ]
   },
   "downfall:Designer": {
-    "NAME": "Designer In-Spire",
+    "NAME": "“尖端”设计师",
     "DESCRIPTIONS": [
       "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @gold!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
       "It takes little effort to deal with the thief, but the fight does not go without some injury on your part. A man with ridiculous clothing appears at the shop entrance. NL \"Thank you, kind overlord!\", the man says, beckoning you inside.",
@@ -166,16 +166,16 @@
       "You punch him. NL \"My @FACE!!@ Now I'll have to-\" NL NL He fainted. Perhaps next time he will give pause before insulting a creature of your status."
     ],
     "OPTIONS": [
-      "[Adjustments] ",
-      "[Clean Up] ",
-      "[Full Service] ",
-      "[Ignore] Leave.",
-      "[Punch] Leave.",
-      "[Enter Shop]"
+      "[小修一下] ",
+      "[清洁一下] ",
+      "[全套服务] ",
+      "[无视] 离开。",
+      "[一拳过去] 离开。",
+      "[进入商店]"
     ]
   },
   "downfall:DeadGuy": {
-    "NAME": "Fallen Adventurer",
+    "NAME": "冒险者尸体",
     "DESCRIPTIONS": [
       "While channeling the ritual you are caught off guard!",
       "You exit without a sound.",
@@ -190,11 +190,11 @@
       "The ritual has been completed!"
     ],
     "OPTIONS": [
-      "[Soul Harvest] #gFind #gLoot. #r",
-      "[Leave]",
-      "[Fight]",
-      "[Continue] #gFind #gLoot. #r",
-      "%: #rmonster #rreturns."
+      "[搜索] #g寻找东西。 #r",
+      "[离开]",
+      "[战斗]",
+      "[继续] #g寻找东西。 #r",
+      "%： #r遇见回来的怪物。"
     ]
   },
   "downfall:ShiningLight": {
@@ -206,8 +206,8 @@
     ],
     "OPTIONS": [
       "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
-      "[Leave]",
-      "[Locked] Requires: Upgradeable Cards"
+      "[离开]",
+      "[锁定] Requires: Upgradeable Cards"
     ]
   },
   "downfall:WorldOfGoop": {
@@ -221,7 +221,7 @@
       "[Punch] #gGain #g",
       " #gSouls. #rBecome #rCursed #rTwice #r- #rIcky.",
       "[Remove] #rBecome #rCursed #r- #rIcky.",
-      "[Leave]"
+      "[离开]"
     ]
   },
   "downfall:Serpent": {
@@ -236,7 +236,7 @@
       "[Agree] [Punch] #gGain #g",
       " #gSouls. #rBecome #rCursed #r- #rDoubt.",
       "[Disagree]",
-      "[Leave]"
+      "[离开]"
     ]
   },
   "downfall:WingStatue": {
@@ -255,7 +255,7 @@
       "[Destroy] #rLose #r",
       " #rHP. #gGain #gSharpened #gFragment.",
       "[Collect] #gGain #gBroken #gWing #gStatue.",
-      "[Leave]"
+      "[离开]"
     ]
   },
   "downfall:GoldenIdol": {
@@ -272,8 +272,8 @@
       "[Set Trap] #rLose #ra #rStrike.",
       "[Harvest] #gGain #y",
       " #ySouls.",
-      "[Leave]",
-      "[Locked] Requires a Strike."
+      "[离开]",
+      "[锁定] Requires a Strike."
     ]
   },
   "downfall:Cleric": {
@@ -286,7 +286,7 @@
     "OPTIONS": [
       "[Punch] #gGain #y",
       "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
-      "[Leave]",
+      "[离开]",
       "Select a Card to Remove.",
       " #ySouls."
     ]
@@ -300,7 +300,7 @@
     "OPTIONS": [
       "[Offer] #rLose #r",
       " Souls. #gReceive Apparition.",
-      "[Locked] Requires ",
+      "[锁定] Requires ",
       " Souls."
     ]
   },
@@ -321,43 +321,43 @@
       "[Offer Souls] #rLose #r",
       " #rSouls. #gHeal #g",
       " #gHP.",
-      "[Locked] Requires ",
+      "[锁定] Requires ",
       " Souls.",
-      "[Leave]"
+      "[离开]"
     ]
   },
   "downfall:Bandits": {
-    "NAME": "Masked Bandits",
+    "NAME": "蒙面强盗",
     "DESCRIPTIONS": [
-      "You encounter a group of bandits wearing large #rred #rmasks. NL \"Hello, pay up t- Oh, a ~monster.~ Maybe you'd have need of our services?\"",
-      "Thanks a bunch, whacko! You certainly won't regret this..."
+      "你遇见一群戴着巨大 #r红面具 的强盗。 NL “你好啊，留下……哦，一只 ~怪物~ 。也许你需要我们的服务？”",
+      "多谢，太棒了！ 你肯定不会后悔的……"
     ],
     "OPTIONS": [
-      "[Lose ",
-      "] #gHire #gthe #gBandits.",
-      "[Locked] Requires more Relics."
+      "[失去 ",
+      "] #g雇佣强盗。",
+      "[锁定] 需要更多的遗物。"
     ]
   },
   "downfall:Nloth": {
-    "NAME": "N'loth",
+    "NAME": "恩洛斯",
     "DESCRIPTIONS": [
       "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
     ],
     "OPTIONS": [
-      "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
+      "[一拳过去] #g获得随机遗物。 #r被诅咒 #r- 疼痛。"
     ]
   },
   "downfall:KnowingSkull": {
-    "NAME": "Knowing Skull",
+    "NAME": "全知头骨",
     "DESCRIPTIONS": [
-      "You find yourself in an old, decorated chamber. In the center of the room, a large skull sits atop an ornate pedestal. As you approach, the skull #g@bursts@ #g@into@ #g@flames@ and turns to face you. NL NL \"WHAT IS IT YOU SEEK? WHAT IS IT YOU OFFER?\" NL In sync with its final words, the door behind you @slams@ @shut.@",
-      "\"Heyheyheyheyhandsoffthenoggin-\" You pluck the skull from the pedestal, momentarily #rscorched by its flames. Maybe it'll come in handy later...,",
-      "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
+      "你发现自己在一个古老的有装饰的房间里，在房间正中央，有一个巨大的头骨被放在精致的高台上，在你靠近时，头骨 #g@迸发出火焰@ 转向了你。“你想寻找什么？你会献出什么？” NL 它的话音刚落，你背后的门就 @砰地关上了@ 。",
+      "~“喂喂喂，把手拿开！”- 你从取下后便融为大火的底座上拿走了头骨。也许以后能派上用场……",
+      "“看你背后，凡人。” NL 你回头一瞥，果然，有一扇门在哪里。"
     ],
     "OPTIONS": [
-      "[You.] #gObtain #gthe #gSkull. #rLose #r",
-      "[Leave]",
-      " #rHP."
+      "[你] #g获得全知头骨。 #r失去 #r",
+      "[离开]",
+      " #r生命。"
     ]
   },
   "downfall:Vagrant": {
@@ -366,12 +366,12 @@
       "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
     ],
     "OPTIONS": [
-      "[Punch] #gGain #g85 #gSouls. #rLose #r",
-      " #rHP."
+      "[一拳过去] #g获得85灵魂。 #r失去 #r",
+      " #r生命。"
     ]
   },
   "downfall:Beggar": {
-    "NAME": "Old Beggar",
+    "NAME": "老乞丐",
     "DESCRIPTIONS": [
       "The beggar takes off its cloak, revealing a blue humanoid form with a golden helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
       "The old beggar looks around, seemingly puzzled. He ignores you at first as he searches the area, then glances towards you. NL \"Have you seen a young, blue-skinned man near here? Wears an odd, golden helm? He usually comes by the City, spending his tithe on food for us...\" NL The beggar must be referring to the one called #bCleric, who you dispatched a short while ago.",
@@ -383,9 +383,9 @@
       "\"Cleric help! Cleric help!\" the creature says once again, barely able to speak as he cowers in fear. NL A cold blue flame envelops your body and dissipates. NL NL Deciding his powers may of use later, and that you can easily dispatch of any bodyguards he tries to employ in the future, you let this \"Cleric\" live once more."
     ],
     "OPTIONS": [
-      " #rBecome #rCursed #r- #rPride.",
-      "[Fight]",
-      "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck."
+      " #r被诅咒 #r- #r傲慢。",
+      "[战斗]",
+      "[威胁] #g移除2张牌。"
     ]
   },
   "downfall:Mausoleum": {
@@ -412,11 +412,11 @@
     ],
     "OPTIONS": [
       "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
-      "[Locked] Requires Broken Wing Statue.",
+      "[锁定] Requires Broken Wing Statue.",
       "[Accept] #gGain #gCultist #gPotion.",
       "[Steal] #gObtain Ritual Dagger. #rLose #r",
       " #rHP.",
-      "[Leave]",
+      "[离开]",
       "[Continue]",
       "[Take Dagger] #gGain #gRitual #gDagger.",
       "[Anoint] #gUpgrade #gRitual #gDagger.",
@@ -436,28 +436,28 @@
     "OPTIONS": [
       "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards.",
       "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
-      "[Leave]",
+      "[离开]",
       "[FIGHT!]",
       "[Continue]"
     ]
   },
   "downfall:MindBloom": {
-    "NAME": "Mind Bloom",
+    "NAME": "心灵绽放",
     "DESCRIPTIONS": [
-      "While walking and traversing through the beauty of the Beyond, your thoughts suddenly begin to feel very... #p~real...~ NL NL Imaginings of #rslain #radventurers and #bhoarded #bsouls begin to manifest themselves into reality. NL The sensation is quickly fleeting. What do you do?",
-      "You know you have been here before. NL NL Hunting the same adventurer. NL NL Is any of this real? NL NL How many times have you been slain?",
-      "Everything makes sense now. NL The singular purpose, the descent, the #pHeart. NL NL This is the way it always was. NL This is the way it always will be. NL All will be forgotten again soon..."
+      "你在高塔的混沌深处不断下探，不知不觉间，你愕然发现自己的思绪开始变得非常…… #p~真实……~ NL NL 各种 #r冒险者 与 #y存集的灵魂开始出现了实体。 NL 这些感觉稍纵即逝，你准备怎么做？",
+      "你知道你以前来过这里。 NL NL 追捕同样的冒险者。 NL NL 这是真的吗？ NL NL 你被杀了多少次？",
+      "一切都明白了。 NL 唯一的目的，不断的下探，那个 #p腐化之心 。 NL NL 这是一切事物原本的样子， NL 也是一切事物将有的样子。 NL 很快，这一切又会被再次遗忘……"
     ],
     "OPTIONS": [
-      "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
-      "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
-      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rall #r3 #rHeart #rBlessings.",
-      "[Locked] Requires all 3 Heart Blessings.",
-      "[Leave]"
+      "[我为回响] #r与自己战斗。 #g获得一件稀有遗物。",
+      "[我将富有] #g获得999灵魂。 #r被诅咒 #r- #r2 #r张凡庸。",
+      "[我将完整] #g升级所有牌。 #r失去3件心脏的祝福。",
+      "[锁定] 需要全部3件心脏的祝福。",
+      "[离开]"
     ]
   },
   "downfall:MoaiHead": {
-    "NAME": "The Moai Head",
+    "NAME": "摩艾石像",
     "DESCRIPTIONS": [
       "You decide to take a slight detour to one of the Beyond's greatest monuments - an enormous stony head, emerging from a large wall segment. NL NL The head's mouth is wide open, and it reveals large intimidating teeth stained red with blood. The surface of the statue is riddled with pictographs that seem to indicate people throwing themselves into the mouth of this head and being devoured.",
       "You step up into the mouth of the statue, waiting for the statue to activate, knowing you will have to pay its cost in blood. Within a short time, the huge molars slam down from above, crushing you whole. NL @Darkness.@ NL Sometime later from within the dark, you see a sliver of light, and hear what you now realize is the sound of stony teeth slowly rising upwards. NL NL You leave restored, the statue's magic flowing through you.",
@@ -465,43 +465,43 @@
       "You leave, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Offer Souls] #rLose #r",
-      " #rSouls. #gGain #g",
-      " #gMax #gHP and #gHeal #gto #gfull."
+      "[献上灵魂] #r失去 #r",
+      " #r灵魂。 #g获得 #g",
+      " #g点最大生命并回满血。"
     ]
   },
   "downfall:SensoryStone": {
-    "NAME": "Sensory Stone",
+    "NAME": "感知石",
     "DESCRIPTIONS": [
-      "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for bits of gold and scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ygold and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
-      "#y~FRAILTY.~ NL NL The #rblade enters your chest, and the cheer of the #bcrowd fills your ears... the last thing you will ever feel is a hand striking across your face, and your eyes close. NL NL You awaken in an unfamiliar room, @unable@ @to@ @move.@ You try to speak, but no words come out, and your vision is clouded in a #ggreen #gfog. Is this a dream? Is this the afterlife? You try to remember, but your thoughts are as disjointed as your arms and legs. NL NL You hear a voice in your mind - a single command. #g\"BALANCE #gmust #gbe #gENFORCED.\"",
-      "#p~HOPELESSNESS.~ NL NL #yWatch. #yRemember. #yLive. This is the Watcher's mission. Your assignment is to investigate a Spire of unknown origin.  You enter a hexagonal room and before you can react, the door @collapses@ @behind@ @you!@ NL NL There is no escape. The only path that may lead out is by taking a tablet, clearly infused with magic, which lays upon a pedestal. The moment your skin touches the artifact, your body ~dissolves~ ~into~ ~nothing,~ and your #psoul is pulled into the #pstone. NL NL Your fate will forever be tied to the #ptablet, #rcursed to wander the Spire for eternity.",
-      "#y~DETACHMENT.~ NL NL You are the first. You serve the ~Maker.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yguardians of the Maker’s legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
-      "#b~PRIDE.~ NL NL You stand at the center of a grand arena. Everything you have worked for culminates in this one singular combat. You take up a #bdefensive #bstance, draining the stamina of your enemy, until an opening presents itself. With your last bit of strength, you #rplunge #ryour #rblade into the chest of your opponent. The audience erupts in @thunderous@ @applause!@ NL NL Not one to stop at just winning, you raise your open hand and strike your foe ~across~ ~the~ ~face,~ delivering a most insulting final blow. NL NL There is no one in your way now. You are the new #b@Champion!@",
-      "#p~GREED.~ NL NL Few men can resist the #btemptation #bof #bpower. But power comes at a cost, and great power an even greater price. NL NL You sit upon your throne above the Colosseum, watching men #rfight #rto #rthe #rdeath for your amusement for the title of #bChampion. The price for entry - the #g~flame~ #g~of~ #g~their~ #g~eternal~ #g~soul~ in service to you. Each name etched in a tablet, binding them to you in the afterlife. NL NL The crowd cheers as one fighter is struck down with a final blow across the face. You go to your vault, but someone has been here. Traps are sprung, but no body to be found... and the #p@tablet@ @is@ @missing!@",
-      "#g~GRIEF.~ NL NL You stand, at long last, atop the highest peak of the Spire. You have spent your years working tirelessly to bring this colossal feat of architecture, a monument to the Great One, to life. Every #gcurve rounded to perfection. Every #yedge meticulously placed. NL NL “It is done, my love.” Covering their lifeless hand with yours, you turn on the machine. A soft hum fills the room, and soon you feel your very #b~essence~ being pulled into your creation - swiftly joined by another. You will both live for all eternity in this place, just as you planned. NL NL With a resounding echo... the #pHeart ~thumps~ its first beat.",
-      "#b~RAGE.~ NL NL You are powerless to stop the #yornate #ydagger that enters your chest. In your final moment, you pray to whatever #pdeity rules over this Spire to give you the strength to live, ~no~ ~matter~ ~the~ ~cost.~ NL NL Your #pheart thumps a strong final beat, then is silenced... for a moment. Your eyes glow with #b@blue@ #b@fire@ as you return to life with the strength of ten men, bursting your bonds with ease and roaring into the crowd of #brobed #bfigures surrounding you! NL NL As you feel your body begin to morph into a #bmonstrous #bshape, the figures bow before you.",
-      "#p~ARROGANCE.~ NL NL You spite the #pgod-like #pHeart that controls this place, dictating your fate. It is #ytime to take action. NL NL The Beyond is the least guarded of the Spire's sections, and you are able to slip into its #ytreasury with ease. There are many artifacts of power here, but one in particular speaks to you - a #y~glowing~ #y~pocketwatch.~ NL NL With unyielding confidence, you reach out and snatch the pocketwa... @...awtekcop@ @eht@ @hctans@ @dna@ @tuo@ @hcaer@ @uoy@ @,ecnedifnoc@ @gnidleiynu@ @htiW@ NL NL You spite the #pgod-like #pHeart that controls this... place...?",
-      "On second thought, perhaps memories are best left in the past."
+      "#g~虚荣.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for bits of gold and scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ygold and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
+      "#y~脆弱。~ NL NL The #rblade enters your chest, and the cheer of the #bcrowd fills your ears... the last thing you will ever feel is a hand striking across your face, and your eyes close. NL NL You awaken in an unfamiliar room, @unable@ @to@ @move.@ You try to speak, but no words come out, and your vision is clouded in a #ggreen #gfog. Is this a dream? Is this the afterlife? You try to remember, but your thoughts are as disjointed as your arms and legs. NL NL You hear a voice in your mind - a single command. #g\"BALANCE #gmust #gbe #gENFORCED.\"",
+      "#p~绝望。~ NL NL #yWatch. #yRemember. #yLive. This is the Watcher's mission. Your assignment is to investigate a Spire of unknown origin.  You enter a hexagonal room and before you can react, the door @collapses@ @behind@ @you!@ NL NL There is no escape. The only path that may lead out is by taking a tablet, clearly infused with magic, which lays upon a pedestal. The moment your skin touches the artifact, your body ~dissolves~ ~into~ ~nothing,~ and your #psoul is pulled into the #pstone. NL NL Your fate will forever be tied to the #ptablet, #rcursed to wander the Spire for eternity.",
+      "#y~超脱。~ NL NL You are the first. You serve the ~Maker.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yguardians of the Maker’s legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
+      "#b~骄傲。~ NL NL You stand at the center of a grand arena. Everything you have worked for culminates in this one singular combat. You take up a #bdefensive #bstance, draining the stamina of your enemy, until an opening presents itself. With your last bit of strength, you #rplunge #ryour #rblade into the chest of your opponent. The audience erupts in @thunderous@ @applause!@ NL NL Not one to stop at just winning, you raise your open hand and strike your foe ~across~ ~the~ ~face,~ delivering a most insulting final blow. NL NL There is no one in your way now. You are the new #b@Champion!@",
+      "#p~贪婪。~ NL NL Few men can resist the #btemptation #bof #bpower. But power comes at a cost, and great power an even greater price. NL NL You sit upon your throne above the Colosseum, watching men #rfight #rto #rthe #rdeath for your amusement for the title of #bChampion. The price for entry - the #g~flame~ #g~of~ #g~their~ #g~eternal~ #g~soul~ in service to you. Each name etched in a tablet, binding them to you in the afterlife. NL NL The crowd cheers as one fighter is struck down with a final blow across the face. You go to your vault, but someone has been here. Traps are sprung, but no body to be found... and the #p@tablet@ @is@ @missing!@",
+      "#g~不幸。~ NL NL You stand, at long last, atop the highest peak of the Spire. You have spent your years working tirelessly to bring this colossal feat of architecture, a monument to the Great One, to life. Every #gcurve rounded to perfection. Every #yedge meticulously placed. NL NL “It is done, my love.” Covering their lifeless hand with yours, you turn on the machine. A soft hum fills the room, and soon you feel your very #b~essence~ being pulled into your creation - swiftly joined by another. You will both live for all eternity in this place, just as you planned. NL NL With a resounding echo... the #pHeart ~thumps~ its first beat.",
+      "#b~愤怒。~ NL NL You are powerless to stop the #yornate #ydagger that enters your chest. In your final moment, you pray to whatever #pdeity rules over this Spire to give you the strength to live, ~no~ ~matter~ ~the~ ~cost.~ NL NL Your #pheart thumps a strong final beat, then is silenced... for a moment. Your eyes glow with #b@blue@ #b@fire@ as you return to life with the strength of ten men, bursting your bonds with ease and roaring into the crowd of #brobed #bfigures surrounding you! NL NL As you feel your body begin to morph into a #bmonstrous #bshape, the figures bow before you.",
+      "#p~傲慢。~ NL NL You spite the #pgod-like #pHeart that controls this place, dictating your fate. It is #ytime to take action. NL NL The Beyond is the least guarded of the Spire's sections, and you are able to slip into its #ytreasury with ease. There are many artifacts of power here, but one in particular speaks to you - a #y~glowing~ #y~pocketwatch.~ NL NL With unyielding confidence, you reach out and snatch the pocketwa... @...awtekcop@ @eht@ @hctans@ @dna@ @tuo@ @hcaer@ @uoy@ @,ecnedifnoc@ @gnidleiynu@ @htiW@ NL NL You spite the #pgod-like #pHeart that controls this... place...?",
+      "仔细想想，也许记忆最好留在过去。"
       ],
     "OPTIONS": [
-      "[Recall] #gAdd #g1 #gColorless Boss #gcard #gto #gyour #gdeck.",
-      "[Recall] #gAdd #g2 #gColorless Boss #gcards #gto #gyour #gdeck. #rLose #r",
-      "[Recall] #gAdd #g3 #gColorless Boss #gcards #gto #gyour #gdeck. #rLose #r"
+      "[回忆] #g在你的牌组中加入 #g1 #g张首领牌。",
+      "[回忆] #g在你的牌组中加入 #g2 #g张首领牌。 #r失去 #r",
+      "[回忆] #g在你的牌组中加入 #g3 #g张首领牌。 #r失去 #r"
     ]
   },
   "downfall:SecretPortal": {
-    "NAME": "Secret Portal",
+    "NAME": "秘密传送门",
     "DESCRIPTIONS": [
       "Before you is a welcome sight - in one of the living walls of the Beyond is an enclosed stone entrance filled with a #p~swirling~ #p~magical~ #p~portal.~ NL NL This portal allows for quick access to the Beyond's overlord. However, if you take the stone that powers it, your journey through the Spire would be hastened.",
       "The portal can always be repaired later. You pry the runed stone that powers the gateway, and quickly contemplate where to head next. The stone will only remain useful for a brief moment."
     ],
     "OPTIONS": [
-      "[Take Stone] Skip to any Room."
+      "[拿走] 跳过任意房间。"
     ]
   },
   "downfall:TombRedMask": {
-    "NAME": "Tomb of Lord Red Mask",
+    "NAME": "红面具大人之墓",
     "DESCRIPTIONS": [
       "A highly ornamented tomb can be seen on the other side of a floating path. NL NL Upon reaching the tomb, you notice a soft wall, likely holding a secret compartment. One good strike should be enough to break it down.",
       "You don the #rmask. The bandits who agreed to assist you seem to have a connection with this Lord - perhaps they will be inspired by your new adornment.",
@@ -510,36 +510,40 @@
       "Satisfied with collecting the mask, you continue on."
     ],
     "OPTIONS": [
-      "[Don the Red Mask] #gUpgrade #gBandit #gContract.",
-      "[Locked] Requires: Red Mask & Bandit Contract.",
-      "[Bash] #rLose #r",
-      ". #gObtain #gRed #gMask.",
-      "[Locked] Requires an Attack.",
-      "[Leave]"
+      "[戴上红面具] #g升级强盗约定。",
+      "[锁定] 需要：红面具和强盗约定。",
+      "[猛击] #r失去 #r",
+      "。 #g获得红面具。",
+      "[锁定] 需要攻击牌。",
+      "[离开]"
     ]
   },
   "downfall:WindingHalls": {
-    "NAME": "Winding Halls",
+    "NAME": "蜿蜒走廊",
     "DESCRIPTIONS": [
       "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
     ],
     "OPTIONS": [
-      "[Left] #gExplore #gan #gEvent.",
-      "[Right] #gSearch #gthe #gTreasury #gfor #ga #gRelic.",
-      "[Straight] #gHunt #gdown #gthe #gMerchant."
+      "[向左走] #g经历一个事件。",
+      "[向右走] #g打开宝箱获得遗物。",
+      "[径直前进] #g击杀商人。"
     ]
   },
   "downfall:Joust": {
-    "NAME": "The Joust",
+    "NAME": "长枪决斗",
     "DESCRIPTIONS": [
-      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide..."
+       "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide...",
+      "This knight was clearly stronger than the other one, and you tried your best but were ultimately thrashed. NL \"I'd like to see you best a beast like that!\" he says to the other knight as they leave, bickering.",
+      "You ruthlessly avoid the knight's attacks and #rkill him, sucking his #gsouls out gleefully. The other knight screams and flees. What a coward...",
+      "The cowardly knight gives you a few pesky scratches from afar with his longsword, then runs away screaming. The other knight runs after him, angry. You return to your work, annoyed.",
+      "You ~loom~ over the knight, and rather than even trying to run, he simply cowers. You #rslay him easily and take his #gsouls, but when you turn for the other knight, he's already ran away."
     ],
     "OPTIONS": [
-      "[Left] #r50%: #rLose #r",
-      " HP.",
-      " #g50%: #gGain #g200 #gSouls.",
-      "[Right] #r25%: #rLose #r",
-      " #g75%: #gGain #g100 #gSouls."
+      "[左] #r50%: #r失去 #r",
+      " 生命。",
+      " #g50%: #g获得200灵魂。",
+      "[右] #r25%: #r失去 #r",
+      " #g75%: #g获得100灵魂。"
     ]
   },
   "downfall:BossTester": {
@@ -555,31 +559,31 @@
       "[Head to Shop]"
     ]
   },
-  "downfall:BetterEnding": {
-    "NAME": "Spire Heart",
+    "downfall:BetterEnding": {
+    "NAME": "高塔之心",
     "DESCRIPTIONS": [
-      "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL A comforting heartbeat can be felt throughout the room... NL Are you at the ~end~ ? Is your purpose fulfilled?",
-      "You give #b",
-      " Souls back to the heart! NL The heart #b@squirms@ in elation, pounding forever more.",
-      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~ NL You feel that you have given a total of #b",
-      " Souls to the heart.",
-      " NL A total of #b",
-      " Souls have been given by all who have been summoned by it.",
-      " NL The heart pulses louder and louder as your #y~consciousness~ #y~fades...~",
-      "NL You ready your blade...",
-      "NL You prepare your daggers...",
-      "NL You charge your core to its maximum...",
-      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~",
-      " NL The heart pulses louder and louder as your #p~consciousness~ #p~begins~ #p~to~ #p~fade...~",
-      " NL A sudden burst of #y@energy@ emanates from inside you, #b@jolting@ you awake.",
-      " NL The heart #gretreats upwards! A large door is revealed in its place.",
-      "NL You prime your staff with divine energy..."
+      "@砰咚@ …… @砰咚@ …… @砰咚@ …… NL 整个房间里弥漫着脉动的安心…… NL 这就是你的 ~终结~ ？你的目标实现了吗？",
+      "你给心脏献上了 #b",
+      " 点灵魂！ NL 心脏高兴地 #b@蠕动着@ ，比以往的跳动都更加激烈。",
+      "你自问： ~“你做的真的够了吗？”~ NL 你觉得你总共献给了心脏 #b",
+      " 灵魂。",
+      " NL 所有献上灵魂的人总共献上了 #b",
+      " 灵魂。",
+      " NL 心跳声越来越响了，你的 #y~意识逐渐消散……~",
+      "NL 你握紧你的长刀……",
+      "NL 你握住你的匕首……",
+      "NL 你将你的核心充能到极限……",
+      "你自问： ~“你做的真的够了吗？”~",
+      " NL 心跳声越来越响，你感觉到自己的 #p~意识逐渐开始消散……~",
+      " NL 但瞬间一股 #y@能量@ 从你体内深处迸发而出， 让你 #b@一个激灵@ 清醒了过来。",
+      " NL 心脏朝上方 #g逃跑 了！ 在心脏原先在的位置，出现了一扇巨大的门。",
+      "NL 你将神圣能量注入你的长杖……"
     ],
     "OPTIONS": [
-      "[Continue]",
-      "[Give] #b???",
-      "[Sleep]",
-      "[Approach Door]"
+      "[继续]",
+      "[攻击] #b???",
+      "[睡眠]",
+      "[走向门前]"
     ]
   }
 }

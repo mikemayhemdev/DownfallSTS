@@ -1,277 +1,277 @@
 {
   "sneckomod:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "sneckomod:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "sneckomod:SnekBite": {
-    "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random cards in your hand."
+    "NAME": "异蛇噬咬",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 !M! 张随机手牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 !M! 张随机手牌。"
   },
   "sneckomod:TailWhip": {
-    "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL sneckomod:Muddle your hand."
+    "NAME": "扫尾",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL sneckomod:混淆 你的手牌。"
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Common Attack Card."
+    "DESCRIPTION": "sneckomod:未知 普通攻击牌。"
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Common Skill Card."
+    "DESCRIPTION": "sneckomod:未知 普通技能牌。"
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Attack Card."
+    "DESCRIPTION": "sneckomod:未知 罕见攻击牌。"
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Skill Card."
+    "DESCRIPTION": "sneckomod:未知 罕见技能牌。"
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Uncommon Power Card."
+    "DESCRIPTION": "sneckomod:未知 罕见能力牌。"
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Attack Card."
+    "DESCRIPTION": "sneckomod:未知 稀有攻击牌。"
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Skill Card."
+    "DESCRIPTION": "sneckomod:未知 稀有技能牌。"
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Rare Power Card."
+    "DESCRIPTION": "sneckomod:未知 稀有能力牌。"
   },
   "sneckomod:SoulDraw": {
-    "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards. NL Muddle them."
+    "NAME": "灵魂抽牌",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽 0 - !M! 张牌并 sneckomod:混淆 。"
   },
   "sneckomod:SoulRoll": {
-    "NAME": "Soul Roll",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
+    "NAME": "灵魂随机",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 抽1张牌。"
   },
   "sneckomod:PerplexingStare": {
-    "NAME": "Perplexing Stare",
-    "DESCRIPTION": "ALL enemies gain between -3 and !M! Strength."
+    "NAME": "困惑凝视",
+    "DESCRIPTION": "所有敌人获得 -3 到 !M! 点 力量 。"
   },
   "sneckomod:SnekBeam": {
-    "NAME": "Snek Beam",
-    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
+    "NAME": "蛇线",
+    "DESCRIPTION": "对所有敌人造成牌组中 sneckomod:未知 牌数量的伤害。",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)"
+      " NL （造成 !D! 点伤害。）"
     ]
   },
   "sneckomod:UnknownStrike": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Strike Card."
+    "DESCRIPTION": "sneckomod:未知 打击牌。"
   },
   "sneckomod:Nope": {
-    "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost. NL Draw 1 card."
+    "NAME": "不行",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为已 sneckomod:混淆 的同类型牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 耗 一张手牌。 NL 替换为已 sneckomod:混淆 的同类型牌。 NL 抽1张牌。"
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown YouShouldNeverSeeThis-ReportToDev Card."
+    "DESCRIPTION": "sneckomod:未知 bug-报告开发组牌。"
   },
   "sneckomod:UnknownInnate": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Innate Card."
+    "DESCRIPTION": "sneckomod:未知 固有 牌。"
   },
   "sneckomod:Unknown": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Card."
+    "DESCRIPTION": "sneckomod:未知 牌。"
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 0 Cost Card."
+    "DESCRIPTION": "sneckomod:未知 0 耗能牌。"
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 1 Cost Card."
+    "DESCRIPTION": "sneckomod:未知 1 耗能牌。"
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 2 Cost Card."
+    "DESCRIPTION": "sneckomod:未知 2 耗能牌。"
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown 3 Cost Card."
+    "DESCRIPTION": "sneckomod:未知 3 耗能牌。"
   },
   "sneckomod:UnknownX": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown X Cost Card."
+    "DESCRIPTION": "sneckomod:未知 X 耗能牌。"
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Ethereal Card."
+    "DESCRIPTION": "sneckomod:未知 虚无 牌。"
   },
   "sneckomod:UnknownBlock": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Block Card."
+    "DESCRIPTION": "sneckomod:未知 格挡 牌。"
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Exhaust Card."
+    "DESCRIPTION": "sneckomod:未知 消耗 牌。"
   },
   "sneckomod:SoulCleanse": {
-    "NAME": "Soul Cleanse",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Reduce the cost of a random 3-cost card in your hand to 0. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Reduce the cost of a random 3-cost card in your hand to 0. NL Draw 1 card. NL Exhaust."
+    "NAME": "灵魂净化",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 将手牌中随机一张耗能为3的牌的耗能变为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 将手牌中随机一张耗能为3的牌的耗能变为0。 NL 抽1张牌。 NL 消耗 。"
   },
   "sneckomod:SoulExchange": {
-    "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class."
+    "NAME": "灵魂交换",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为已 sneckomod:混淆 的随机同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为已 sneckomod:混淆 的随机同角色牌。"
   },
   "sneckomod:CheapStock": {
-    "NAME": "Cheap Stock",
-    "DESCRIPTION": "At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, reduce the cost of the highest cost sneckomod:Offclass card in your hand by 1."
+    "NAME": "廉价股票",
+    "DESCRIPTION": "你的回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能减少1。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 你的回合开始时，将手牌中耗能最高的 sneckomod:异色 牌的耗能减少1。"
   },
   "sneckomod:UnlimitedRolls": {
-    "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand with Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a *Soul *Roll+ to your hand with Exhaust."
+    "NAME": "无限随机",
+    "DESCRIPTION": "你的回合开始时，将一张有 消耗 的 *灵魂随机 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "你的回合开始时，将一张有 消耗 的 *灵魂随机+ 加入你的手牌。"
   },
   "sneckomod:MasterEye": {
-    "NAME": "Master Eye",
-    "DESCRIPTION": "Become Confused. NL Draw !M! additional card each turn.",
-    "UPGRADE_DESCRIPTION": "Become Confused. NL Draw !M! additional cards each turn."
+    "NAME": "主宰之眼",
+    "DESCRIPTION": "获得混乱。 NL 每回合开始时额外抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得混乱。 NL 每回合开始时额外抽 !M! 张牌。"
   },
   "sneckomod:ImprovisedAttack": {
-    "NAME": "Improvised Attack",
-    "DESCRIPTION": "Deal !D! damage. NL Add a random sneckomod:Offclass Attack into your hand and sneckomod:Muddle it."
+    "NAME": "改良攻击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张随机 sneckomod:异色 攻击牌加入你的手牌并 sneckomod:混淆 。"
   },
   "sneckomod:ImprovisedGuard": {
-    "NAME": "Improvised Guard",
-    "DESCRIPTION": "Gain !B! Block. NL Add a random sneckomod:Offclass Skill into your hand and sneckomod:Muddle it."
+    "NAME": "改良防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张随机 sneckomod:异色 技能牌加入你的手牌并 sneckomod:混淆 。"
   },
   "sneckomod:QuickMove": {
-    "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random cards in your hand."
+    "NAME": "快速移动",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张手牌 sneckomod:混淆 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张手牌 sneckomod:混淆 。"
   },
   "sneckomod:QuickBite": {
-    "NAME": "Snake Rake",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards and sneckomod:Muddle them."
+    "NAME": "蛇耙",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! - 2 张牌并 sneckomod:混淆 。"
   },
   "sneckomod:Rotation": {
-    "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M! and sneckomod:Muddle them."
+    "NAME": "旋转",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌并 sneckomod:混淆 。"
   },
   "sneckomod:SerpentMind": {
-    "NAME": "Exotic Form",
-    "DESCRIPTION": "Whenever you play a sneckomod:Offclass card, draw 1 card."
+    "NAME": "异色形态",
+    "DESCRIPTION": "每当你打出 sneckomod:异色 牌，抽1张牌。"
   },
   "sneckomod:SlitherStrike": {
-    "NAME": "Slither Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1."
+    "NAME": "滑动打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将手牌中的 sneckomod:异色 牌的耗能减少1。"
   },
   "sneckomod:PureSnecko": {
-    "NAME": "Pure Snecko",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Morph all sneckomod:Offclass cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card. NL Morph all sneckomod:Offclass cards in your hand."
+    "NAME": "纯种异蛇",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 变化手牌中的 sneckomod:异色 牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌。 NL 变化手牌中的 sneckomod:异色 牌。"
   },
   "sneckomod:Cheat": {
-    "NAME": "Cheat",
-    "DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL This turn, cards that choose a random number for their effect choose the maximum possible number."
+    "NAME": "作弊",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌随机数固定为上限。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌随机数固定为上限。"
   },
   "sneckomod:Restock": {
-    "NAME": "Restock",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards."
+    "NAME": "补充",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃你的手牌。 NL 抽 5-10 张牌。"
   },
   "sneckomod:GlitteringGambit": {
-    "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Set your gold to !M! % - 120 % of its current amount. NL Exhaust."
+    "NAME": "闪光伎俩",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 将你当前的灵魂变为当前量的 !M! % - 120 % 。 NL 消耗 。"
   },
   "sneckomod:Transmogrify": {
-    "NAME": "Transmogrify",
-    "DESCRIPTION": "Lose a random Relic. NL Obtain a random Relic at the same rarity. NL Exhaust."
+    "NAME": "惊变",
+    "DESCRIPTION": "变化随机一个遗物为相同稀有度的遗物。 NL 消耗 。"
   },
   "sneckomod:DefensiveFlair": {
-    "NAME": "Defensive Flair",
-    "DESCRIPTION": "Gain !B! Block, increased by !M! for each sneckomod:Offclass card in your hand."
+    "NAME": "防御才华",
+    "DESCRIPTION": "获得 !B! 点 格挡 。手牌中每有一张 sneckomod:异色 牌，获得 格挡 提高 !M! 点。"
   },
   "sneckomod:DangerNoodle": {
-    "NAME": "Danger Noodle",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat this for each sneckomod:Offclass card in your hand, then Exhaust those cards."
+    "NAME": "危险毒针",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张 sneckomod:异色 牌重复一次，并将这些牌 消耗 。"
   },
   "sneckomod:SerpentIdol": {
-    "NAME": "Serpent Idol",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Choose 1 of 3 random sneckomod:Offclass cards to add into your hand. NL It costs 0 this turn. NL Exhaust."
+    "NAME": "蛇神像",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择1张加入你的手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
   },
   "sneckomod:TrashToTreasure": {
-    "NAME": "Trash to Treasure",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Gain [E] equal to its cost."
+    "NAME": "垃圾宝",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。"
   },
   "sneckomod:DiceBlock": {
-    "NAME": "Dice Block",
-    "DESCRIPTION": "Gain !M! - !B! Block. NL Maximum Block is increased by 1 for each sneckomod:Unknown card you started combat with."
+    "NAME": "骰子格挡",
+    "DESCRIPTION": "获得 !M! - !B! 点 格挡 。 NL 你牌组中每有一张 sneckomod:未知 牌，上限提高1."
   },
   "sneckomod:MixItUp": {
-    "NAME": "Mix It Up!",
-    "DESCRIPTION": "Deal !D! damage for each of your Potions. NL Lose your Potions and replace them with new ones. NL Exhaust."
+    "NAME": "混合起来！",
+    "DESCRIPTION": "每有一瓶药水，造成 !D! 点伤害。 NL 变化你的药水。 NL 消耗 。"
   },
   "sneckomod:MorePower": {
-    "NAME": "More Power!",
-    "DESCRIPTION": "Obtain an additional Upgraded sneckomod:Unknown card reward at the end of combat."
+    "NAME": "更多力量！",
+    "DESCRIPTION": "在战斗结束时在卡牌奖励中加入一张已 升级 的 sneckomod:未知 牌。"
   },
   "sneckomod:UnknownStrength": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Strength Card."
+    "DESCRIPTION": "sneckomod:未知 力量 牌。"
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Dexterity Card."
+    "DESCRIPTION": "sneckomod:未知 敏捷 牌。"
   },
   "sneckomod:UnknownWeak": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Weak Card."
+    "DESCRIPTION": "sneckomod:未知 虚弱 牌。"
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Vulnerable Card."
+    "DESCRIPTION": "sneckomod:未知 易伤 牌。"
   },
   "sneckomod:UnknownColorless": {
     "NAME": "???",
-    "DESCRIPTION": "sneckomod:Unknown Colorless Card."
+    "DESCRIPTION": "sneckomod:未知 无色牌。"
   },
   "sneckomod:RainOfDice": {
-    "NAME": "Rain of Dice",
-    "DESCRIPTION": "Deal !qqq! - !D! damage to a random enemy 2 - !M! times. NL sneckomod:Muddle the next 2 - !M! cards you draw."
+    "NAME": "骰子雨",
+    "DESCRIPTION": "对随机敌人造成 !qqq! - !D! 点伤害 2 - !M! 次。 NL sneckomod:混淆 下 2 - !M! 张你抽到的牌。"
   },
   "sneckomod:DiceCrush": {
-    "NAME": "Dice Crush",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Maximum damage is increased by 1 for each sneckomod:Unknown card you started combat with."
+    "NAME": "骰子撞击",
+    "DESCRIPTION": "造成 !M! - !D! 点伤害。 NL 你牌组中每有一张 sneckomod:未知 牌，上限提高1。"
   },
   "sneckomod:SnakeSap": {
-    "NAME": "Snake Sap",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 0 - !M! [E] ."
+    "NAME": "蛇液",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 造成 !qqq! - !D! 点伤害。 NL 获得 0 - !M! [E] 。"
   },
   "sneckomod:DiceBoulder": {
-    "NAME": "Dice Boulder",
-    "DESCRIPTION": "Deal !M! - !D! damage. NL Can be Upgraded any number of times."
+    "NAME": "巨型骰子",
+    "DESCRIPTION": "造成 !M! - !D! 点伤害。 NL 能被多次 升级 。"
   },
   "sneckomod:IronFang": {
-    "NAME": "Iron Fang",
-    "DESCRIPTION": "Deal !qqq! - !D! damage. NL Gain !M! - !B! Block."
+    "NAME": "铁齿",
+    "DESCRIPTION": "造成 !qqq! - !D! 点伤害。 NL 获得 !M! - !B! 点 格挡 。"
   },
   "sneckomod:Mudshield": {
-    "NAME": "Mud Shield",
-    "DESCRIPTION": "Whenever you sneckomod:Muddle a card, gain 1 Block next turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you sneckomod:Muddle a card, gain 1 Block next turn."
+    "NAME": "泥泞护盾",
+    "DESCRIPTION": "每当你 sneckomod:混淆 一张牌，下回合获得1点 格挡 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你 sneckomod:混淆 一张牌，下回合获得1点 格挡 。"
   },
   "sneckomod:WideSting": {
-    "NAME": "Wide Sting",
-    "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade and sneckomod:Muddle all sneckomod:Offclass cards in your hand."
+    "NAME": "宽刺",
+    "DESCRIPTION": "对所有敌人造成 !M! - !D! 点伤害。 NL 升级 并 sneckomod:混淆 手牌中的 sneckomod:异色 牌。"
   }
 }

@@ -1,14 +1,14 @@
 [
   {
     "KEYS": [
-      "Gold"
+      "金币"
     ],
-    "VALUE": "Souls"
+    "VALUE": "灵魂"
   },
   {
     "KEYS": [
-      "gold"
+      "金币"
     ],
-    "VALUE": "souls"
+    "VALUE": "灵魂"
   }
 ]

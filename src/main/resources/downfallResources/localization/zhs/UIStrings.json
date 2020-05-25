@@ -1,32 +1,32 @@
 {
   "downfall:EvilMenuPanel": {
     "TEXT": [
-      "Downfall",
-      "Defend the Heart from adventuring intruders who intend to Slay the Spire.",
-      "Choose Your Villain"
+      "恶灵附身",
+      "保护腐化之心不受想要杀戮尖塔的冒险入侵者的伤害。",
+      "选择你的恶棍"
     ]
   },
   "downfall:SoulToGoldChanges": {
     "TEXT": [
-      "Souls",
+      "灵魂",
       "TODO: Soul flavor text/explanation."
     ]
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "Break Ruby",
-      "Break Sapphire",
-      "Break Emerald",
-      "Destroy the key to ",
-      "gain 1 Strength at the start of combat.",
-      "raise your Max HP by 10.",
-      "gain 1 Dexterity at the start of combat."
+      "打碎红宝石",
+      "打碎蓝宝石",
+      "打碎绿宝石",
+      "摧毁宝石并 ",
+      "在每场战斗开始时获得1点力量。",
+      "获得10点最大生命。",
+      "在每场战斗开始时获得1点敏捷。"
     ]
   },
   "downfall:WheelSpinButton": {
     "TEXT": [
-      "Spin Wheel",
-      "Spin the Wheel."
+      "转动转盘",
+      "转动转盘"
     ]
   }
 }

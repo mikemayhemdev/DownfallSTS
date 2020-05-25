@@ -136,5 +136,21 @@
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Wish",
     "DESCRIPTION": "Ethereal. NL Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
+  },
+  "expansioncontent:ShieldSmash": {
+    "NAME": "Armor Break",
+    "DESCRIPTION": "Retain. NL Remove all Block from the enemy. NL Exhaust."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "Antidote",
+    "DESCRIPTION": "Retain. NL Lose all Poison. NL Exhaust."
+  },
+  "expansioncontent:Debug": {
+    "NAME": "Corrupt Core",
+    "DESCRIPTION": "Retain. NL Remove all enemy Orbs. NL Exhaust."
+  },
+  "expansioncontent:PeaceOut": {
+    "NAME": "Dark Whisper",
+    "DESCRIPTION": "Retain. NL Enemy leaves their Stance. NL Remove all Mantra from the enemy. NL Exhaust."
   }
 }

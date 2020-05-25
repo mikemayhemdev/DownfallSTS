@@ -1,13 +1,13 @@
 {
   "Guardian:StasisOrb": {
-    "NAME": "Stasis: ",
+    "NAME": "凝滞: ",
     "DESCRIPTION": [
-      " will return to your hand at 0-cost at the start of your next turn.",
-      " will return to your hand at 0-cost in #b",
-      " turns.",
-      " will #yExhaust at the start of your next turn.",
-      " will #yExhaust in #b",
-      " turns."
+      " 将会在你的下个回合开始时以0费返回到你的手牌中。",
+      " 将会在你的下 #b",
+      " 个回合以0费返回到你的手牌中。",
+      " 将会在你的下个回合开始时 #y消耗 。",
+      " 将会在你的下 #b",
+      " 个回合 #y消耗 。"
     ]
   }
 }

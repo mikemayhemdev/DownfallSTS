@@ -1,78 +1,72 @@
 [
+     {
+      "NAMES": [
+        "镶嵌"
+      ],
+      "PROPER_NAME": "镶嵌",
+      "DESCRIPTION": "宝石能够被镶嵌到有孔位的牌上，使宝石的效果加到牌上。"
+    },
   {
     "NAMES": [
-      "socket",
-      "sockets",
-      "socketed"
+      "凝滞"
     ],
-    "PROPER_NAME": "Socket",
-    "DESCRIPTION": "Gems can be placed into this Socket at a Rest Site to combine the Gem's effect with this card's effect."
+    "PROPER_NAME": "凝滞",
+    "DESCRIPTION": "一张牌被凝滞时回合计数器等于费用加1。 NL 回合计数器每回合开始时减少1。 NL 当计数器归零时，返回牌到手牌中并在打出前费用为0。"
   },
   {
     "NAMES": [
-      "stasis"
+      "宝石"
     ],
-    "PROPER_NAME": "Stasis",
-    "DESCRIPTION": "A card in #yStasis gains a turn counter equal to its cost plus #b1. NL Turn counter is reduced by #b1 at the start of your turn. NL When the counter reaches #b0, it is returned to your hand and costs #b0 until played."
+    "PROPER_NAME": "宝石",
+    "DESCRIPTION": "宝石能够在篝火被镶嵌到有孔位的牌上。不能被升级。"
+  },
+  {
+    "PROPER_NAME": "防御模式",
+    "NAMES": [
+      "防御模式"
+    ],
+    "DESCRIPTION": "处于在防御模式时，拥有 #b3 层 #y荆棘 ，每打出一张牌获得 #b2 点 #y格挡 。回合结束时退出该姿态。"
+  },
+  {
+  "NAMES": [
+    "护卫"
+  ],
+    "PROPER_NAME": "护卫",
+  "DESCRIPTION": "护卫是消耗的 #b0 费 格挡 牌"
+},
+  {
+    "NAMES": [
+      "加速"
+    ],
+    "PROPER_NAME": "加速",
+    "DESCRIPTION": "降低凝滞回合计数器1点。如果已经到0, 以0费返回牌到手牌中。"
   },
   {
     "NAMES": [
-      "gem",
-      "gems"
+      "组件"
     ],
-    "PROPER_NAME": "Gem",
-    "DESCRIPTION": "#yGems can be placed into #ySockets in cards at a Rest Site. Cannot be #yUpgraded."
-  },
-  {
-    "PROPER_NAME": "Defensive Mode",
-    "NAMES": [
-      "defensive mode",
-      "defensive_mode"
-    ],
-    "DESCRIPTION": "While in #yDefensive #yMode, you have #b3 #yThorns, deal #b25% less damage, and gain #b2 #yBlock when you play a card."
+    "PROPER_NAME": "组件",
+    "DESCRIPTION": "0费消耗技能牌，生成三张组件牌。他们的费用本场战斗降低 1  点。"
   },
   {
     "NAMES": [
-      "ward",
-      "wards"
+      "临时"
     ],
-    "PROPER_NAME": "Ward",
-    "DESCRIPTION": "#yWards are #b0 cost #yBlock cards which #yExhaust."
+    "PROPER_NAME": "临时",
+    "DESCRIPTION": "类似活动肌肉的效果（获得bufff和回合后消失的deff），扩展到多个属性。"
   },
   {
     "NAMES": [
-      "accelerate"
+      "挥发"
     ],
-    "PROPER_NAME": "Accelerate",
-    "DESCRIPTION": "Reduce the turn counter of a card in #yStasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
+    "PROPER_NAME": "挥发",
+    "DESCRIPTION": "当结束凝滞时,消耗这张牌而不是返回到手牌中。"
   },
   {
     "NAMES": [
-      "package",
-      "packages"
+      "滴答"
     ],
-    "PROPER_NAME": "Package",
-    "DESCRIPTION": "0-cost #yExhausting #ySkill that generates three cards inspired by a chosen Construct of the Spire, and reduces their cost by #b1 for this combat."
-  },
-  {
-    "NAMES": [
-      "momentary"
-    ],
-    "PROPER_NAME": "Momentary",
-    "DESCRIPTION": "A #yMomentary buff effect also adds a debuff effect which causes you to lose the buff's effect at the end of your turn."
-  },
-  {
-    "NAMES": [
-      "volatile"
-    ],
-    "PROPER_NAME": "Volatile",
-    "DESCRIPTION": "When this card leaves #yStasis, #yExhaust it instead of returning it to your hand."
-  },
-  {
-    "NAMES": [
-      "tick"
-    ],
-    "PROPER_NAME": "Tick",
-    "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yStasis."
+    "PROPER_NAME": "滴答",
+    "DESCRIPTION": "凝滞并且当回合计数器减少时，这个效果被触发。"
   }
 ]

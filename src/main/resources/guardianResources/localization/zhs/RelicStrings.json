@@ -1,125 +1,125 @@
 {
   "Guardian:ModeShifter": {
-    "NAME": "Mode Shifter",
-    "FLAVOR": "Protection where you need it most.",
+    "NAME": "形态转换器",
+    "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "When you lose #b10 HP, gain #b3 #yguardianmod:Defensive_Mode and #b15 #yBlock. NL When activated, #yBlock will not be removed at the start of your next turn. NL Each activation increases the amount of HP loss required to activate again by #b5."
+      "当你失去10点生命, 进入 #yguardianmod:防御模式 并获得 #b15 点 #y格挡 。 NL 触发时，获得一层残影。 每次动作后阈值增加 5 。"
     ]
   },
   "Guardian:ModeShifterPlus": {
-    "NAME": "Guardian Gear",
-    "FLAVOR": "Replace every 3,000 floors.",
+    "NAME": "守护者齿轮",
+    "FLAVOR": "每3000层更换一次",
     "DESCRIPTIONS": [
-      "Replaces #rMode #rShifter. NL Begin each combat with #b5 #yguardianmod:Defensive_Mode."
+      "替换 #r形态转换器 。每场战斗开始时获得 5 层 防御模式 。"
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
-    "NAME": "Bronze Armor Plate",
-    "FLAVOR": "One can never have enough armor.",
+    "NAME": "铜制装甲板",
+    "FLAVOR": "装甲再多也不为过。",
     "DESCRIPTIONS": [
-      "When you use a card while in #yguardianmod:Defensive_Mode, gain #b1 more Block."
+      "当你在防御模式打出牌时，额外多获得 1 点 格挡 。"
     ]
   },
-  "Guardian:guardianmod:GemCopier": {
-    "NAME": "Gem Tumbler",
-    "FLAVOR": "Only the most pristine will do.",
+  "Guardian:GemCopier": {
+    "NAME": "宝石不倒翁",
+    "FLAVOR": "只有最原始的人才会把玩。",
     "DESCRIPTIONS": [
-      "When you play a #yguardianmod:Gem card, play a copy of it."
+      "每当你打出一张 宝石 时，再打出一次。"
     ]
   },
   "Guardian:PocketSentry": {
-    "NAME": "Pocket Sentry",
-    "FLAVOR": "Sentry Mode active. Target acquired. No hard feelings.",
+    "NAME": "便携哨兵",
+    "FLAVOR": "哨兵模式启动。 获得目标。无慈悲。",
     "DESCRIPTIONS": [
-      "At the start of each turn, alternates between: NL Deal #b",
-      " damage to a random enemy. NL Apply #b1 #yWeak to ALL enemies."
+      "在你的回合开始时,，以下行动交替进行: NL 对随机敌人造成 ",
+      " 点伤害。 NL 对所有敌人给予 1 层 虚弱 。"
     ]
   },
   "Guardian:SackOfGems": {
-    "NAME": "Sack of Gems",
-    "FLAVOR": "Ooh... shiny!",
+    "NAME": "宝石袋",
+    "FLAVOR": "噢。。。闪闪发光!",
     "DESCRIPTIONS": [
-      "Upon pickup, add #b5 random #yguardianmod:Gems to your deck."
+      "拾起时，向牌库中加入5张随机 宝石 。"
     ]
   },
   "Guardian:StasisCodex": {
-    "NAME": "Construct's Codex",
-    "FLAVOR": "Designs and diagrams of the Spire's earliest prototypes.",
+    "NAME": "机械宝典",
+    "FLAVOR": "尖塔最早原型的设计和图表。",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
+      "回合结束时如果没有被 凝滞 的牌, 三选一，凝滞 一张牌。"
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
-    "NAME": "Tiny Police Box",
-    "FLAVOR": "It's bigger on the inside...",
+    "NAME": "警务亭",
+    "FLAVOR": "在里面的更大。。。",
     "DESCRIPTIONS": [
-      "Start each combat with #b2 additional #yguardianmod:Stasis slots."
+      "获得 2 个 凝滞 栏位。"
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
-    "NAME": "Evacuation Plans",
-    "FLAVOR": "Instructions for escaping the Spire.  Best not to let them fall into the wrong hands.",
+    "NAME": "撤离计划",
+    "FLAVOR": "撤离尖塔的指令。最好不要让他们落入坏人之手。",
     "DESCRIPTIONS": [
-      "On pickup, lose #b2 #yguardianmod:Stasis slots. NL Gain [E] at the start of your turn."
+      "拾起时， 失去 2 个 #y凝滞 栏位，每回合开始时获得 [E] 。"
     ]
   },
   "Guardian:StasisUpgradeRelic": {
-    "NAME": "Cryo Chamber",
-    "FLAVOR": "Things always seem better coming out than they did going in.",
+    "NAME": "低温瓶",
+    "FLAVOR": "出来的东西总是比进去的好。",
     "DESCRIPTIONS": [
-      "Gain #b1 #yguardianmod:Stasis slot. When a card enters #yguardianmod:Stasis, #yUpgrade it."
+      "当牌被 凝滞 时，升级这张牌。"
     ]
   },
   "Guardian:BottledStasis": {
-    "NAME": "Bottled Black Hole",
-    "FLAVOR": "Somewhere, something incredible is waiting to be known.",
+    "NAME": "瓶装黑洞",
+    "FLAVOR": "在某个地方，一些不可思议的事情等待着人们去发现。",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. Start each combat with this card in #yguardianmod:Stasis.",
-      "Choose a card for ",
-      "Start each combat with ",
-      " in #yguardianmod:Stasis."
+      "拾起时，选择 #y一张牌 。每场战斗开始时将它 #y凝滞 。",
+      "选择一张牌 ",
+      "每场战斗开始时 ",
+      " 凝滞。"
     ]
   },
   "Guardian:StasisEgg": {
-    "NAME": "Quantum Chamber",
-    "FLAVOR": "You get the chicken by hatching the egg, not by smashing it.",
+    "NAME": "量子容器",
+    "FLAVOR": "你通过孵化鸡蛋而不是砸碎鸡蛋来获得鸡。",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. Start each combat with this card removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand.",
-      "Choose a card for ",
-      "Start each combat with ",
-      " removed from your deck. At the start of your #b4th turn, return it and #b2 copies of it to your hand."
+      "拾起时，选择 #y一张牌。每场战斗开始时移出战斗。在第 4 回合开始时，增加两张复制到你的手牌中。",
+      "选择一张牌 ",
+      "每场战斗开始时 ",
+      " 移出战斗。 在第 4 回合开始时，增加两张复制到你的手牌中。"
     ]
   },
-  "Guardian:TickHelperRelic": {
-    "NAME": "Cooling Fluid",
-    "FLAVOR": "Hazardous. Do not consume.",
+    "Guardian:TickHelperRelic": {
+    "NAME": "冷却液",
+    "FLAVOR": "有公害，不要随便丢弃",
     "DESCRIPTIONS": [
-      "When a card with a #yguardianmod:Tick effect enters #yguardianmod:Stasis, increase its turn counter by #b2."
+      "当一张牌触发 滴答 时, #y提高 回合计数器 2 点。"
     ]
   },
   "Guardian:PickAxe": {
-    "NAME": "Rhapsody Co. Mining Pick",
-    "FLAVOR": "With as many gemstones that litter the Spire, it is hard to imagine anyone so unlucky to have needed this Pick to aid them.",
+    "NAME": "狂热公司采矿镐",
+    "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
-      "You can now #gMine for #b2 #yguardianmod:Gems at Rest Sites (up to #b3 times)."
+	"你能在 3 处 篝火 #g挖掘 2 颗 #y宝石。"
     ]
   },
-  "Guardian:GemstoneGun": {
-    "NAME": "Gemstone Gun",
-    "FLAVOR": "Bang! Bang! Bang! Hey, I matched three!",
+    "Guardian:GemstoneGun": {
+    "NAME": "宝石枪",
+    "FLAVOR": "砰！砰！砰！嘿，我打中了三个！",
     "DESCRIPTIONS": [
-      "Upon pickup, choose #b3 #yguardianmod:Gems. At the start of each combat, activate their effects in order.",
-      "At the start of each combat: NL "
+      "拾起时，选择 #b3 张 #yguardianmod:宝石 牌。 每场战斗开始时，按顺序触发它们的效果。",
+      "每场战斗开始时： NL "
     ]
   },
   "Guardian:BottledAnomaly": {
-    "NAME": "Bottled Anomaly",
-    "FLAVOR": "Swirling and swirling and finally breaking.",
+    "NAME": "瓶装异常",
+    "FLAVOR": "旋转，旋转，最后破碎。",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. At the start of each combat, remove it from your draw pile. At the start of turn #b3, add it into your hand. It costs #b2 less.",
-      "Choose a card for ",
-      "Start each combat with ",
-      " removed from your draw pile. Add it into your hand costing #b2 less on turn #b3."
+      "拾起时，选择一张牌。每场战斗开始时，将它从抽牌堆中移除。在第 #b3 回合开始时，将它加入你的手牌。它的耗能降低 #b2 。",
+      "选择一张牌 ",
+      "在每场战斗开始时 ",
+      " 移出你的抽牌堆。并在第 #b3 回合开始时，将它加入你的手牌。它的耗能降低 #b2 。"
     ]
   }
 }

@@ -1,180 +1,210 @@
 {
-  "Guardian:NextTurnGainStrengthPower": {
-    "NAME": "Charging Up",
-    "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength on your next turn."
-    ]
-  },
-  "Guardian:StunnedPower": {
-    "NAME": "Stunned",
-    "DESCRIPTIONS": [
-      "Skip your next turn.",
-      "Skip your next #b",
-      " turns."
-    ]
-  },
-  "Guardian:FloatingOrbsPower": {
-    "NAME": "Floating Orbs",
-    "DESCRIPTIONS": [
-      "At the start of your turn, add an #yOrb #ySlam to your hand.",
-      "At the start of your turn, add #b",
-      " #yOrb #ySlams to your hand."
-    ]
-  },
-  "Guardian:OrbwalkPower": {
-    "NAME": "Orbwalk",
-    "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength at the start of each turn."
-    ]
-  },
-  "Guardian:ClonePower": {
-    "NAME": "Reroute",
-    "DESCRIPTIONS": [
-      "Place the next non-Exhausting #yAttack or #ySkill you play this turn into #yStasis.",
-      "Place the next #b",
-      " non-Exhausting #yAttacks or #ySkills you play this turn into #yStasis."
-    ]
-  },
-  "Guardian:GemFinderPower": {
-    "NAME": "Gem Finder",
-    "DESCRIPTIONS": [
-      "At the end of combat, choose a Common #yGem to add to your deck.",
-      "At the end of combat, choose #b",
-      " Common #yGems to add to your deck."
-    ]
-  },
-  "Guardian:FuturePlansPower": {
-    "NAME": "Future Plans",
-    "DESCRIPTIONS": [
-      "At the end of your turn, you may place #b",
-      " card into #yStasis.",
-      " cards into #yStasis."
-    ]
-  },
-  "Guardian:DefenseModePower": {
-    "NAME": "Defensive Mode",
-    "DESCRIPTIONS": [
-      "#yDefensive #yMode will remain active for #b",
-      " turns. #yDefensive #yMode grants #b",
-      " #yThorns, reduces damage dealt by #b25%, and grants #b2 #yBlock when you play a card."
-    ]
-  },
-  "Guardian:ConstructModePower": {
-    "NAME": "Construction Mode",
-    "DESCRIPTIONS": [
-      "You cannot lose HP or play #yAttacks this turn.",
-      "You cannot lose HP or play #yAttacks for #b",
-      " turns."
-    ]
-  },
-  "Guardian:MultiBoostPower": {
-    "NAME": "MultiBoost",
-    "DESCRIPTIONS": [
-      "#yAttacks that deal damage multiple times do so an additional time.",
-      "#yAttacks that deal damage multiple times do so #b",
-      " additional times."
-    ]
-  },
-  "Guardian:TargetedPower": {
-    "NAME": "Targeted",
-    "DESCRIPTIONS": [
-      "Each time this enemy takes damage, gain #b",
-      " #yStrength for this turn."
-    ]
-  },
-  "Guardian:LoseThornsPower": {
-    "NAME": "Thorns Down",
-    "DESCRIPTIONS": [
-      "Lose #b",
-      " #yThorns at the start of your next turn."
-    ]
-  },
-  "Guardian:BeamBuffPower": {
-    "NAME": "Primed",
-    "DESCRIPTIONS": [
-      "Beam cards deal #b",
-      " more damage."
-    ]
-  },
-  "Guardian:DefensiveModeBuffsPower": {
-    "NAME": "Defensive Mode+",
-    "DESCRIPTIONS": [
-      "In addition to its normal effects, #yDefensive #yMode will apply: NL #b",
-      " #yThorns.",
-      " #yDexterity.",
-      " #yBlock at the end of each turn.",
-      "#yExhaust the first #yStatus or #yCurse drawn each turn.",
-      "#yExhaust the first #b",
-      " #yStatus or #yCurse cards drawn each turn.",
-      "Gain #b",
-      " #yStrength for each turn #yDefensive #yMode was active when it ends."
-    ]
-  },
-  "Guardian:AutomayhemPower": {
-    "NAME": "Time Sifter",
-    "DESCRIPTIONS": [
-      "At the end of your turn, reduce the turn counter of the right-most card in #yStasis with a counter of #b2 or more by #b1.",
-      " times, at the end of your turn, reduce the turn counter of the right-most card in #yStasis with a counter of #b2 or more by #b1."
-    ]
-  },
-  "Guardian:ConstructPower": {
-    "NAME": "Ancient Construct",
-    "DESCRIPTIONS": [
-      "Gain #b",
-      " #yArtifact and lose #b",
-      " [E] at the start of your turn if you have no #yArtifact."
-    ]
-  },
-  "Guardian:ModeShiftPower": {
-    "NAME": "Mode Shift",
-    "DESCRIPTIONS": [
-      "When you lose #b",
-      " HP, gain #b10 #yBlock, then gain #b3 #yDefensive #yMode. NL The amount required to activate increases each time #yMode #yShift is activated.",
-      "#yMode #yShift already activated this turn."
-    ]
-  },
-  "Guardian:ExhaustStatusesPower": {
-    "NAME": "Repulse",
-    "DESCRIPTIONS": [
-      "#yExhaust the first #yStatus or #yCurse card drawn each turn.",
-      "#yExhaust the first #b",
-      " #yStatus or #yCurse cards drawn each turn."
-    ]
-  },
-  "Guardian:RevengePower": {
-    "NAME": "Revenge",
-    "DESCRIPTIONS": [
-      "When #yDefensive #yMode is removed, gain ",
-      " #yStrength for each turn it was active. NL Currently will grant #b",
-      " #yStrength."
-    ]
-  },
-  "Guardian:StasisEnginePower": {
-    "NAME": "Stasis Engine",
-    "DESCRIPTIONS": [
-      "Gain #b",
-      " [E] and draw #b",
-      " card",
-      " cards",
-      " whenever you play 3 0-cost cards in a single turn."
-    ]
-  },
-  "Guardian:EnergizedGuardianPower": {
-    "NAME": "Energized",
-    "DESCRIPTIONS": [
-      "Gain #b",
-      " additional [E] next turn.",
-      " additional [E] next turn.",
-      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
-    ]
-  },
+	"Guardian:NextTurnGainStrengthPower": {
+		"NAME": "充能",
+		"DESCRIPTIONS": [
+			"在下一回合获得 ",
+			" 点力量。"
+		]
+	},
+	"Guardian:StunnedPower": {
+	"NAME": "击晕",
+	"DESCRIPTIONS": [
+		"跳过你的下回合。",
+		"跳过你下 ",
+		" 个回合。"
+	]
+},
+	"Guardian:FloatingOrbsPower": {
+		"NAME": "浮动圆球",
+		"DESCRIPTIONS": [
+			"在你的回合开始时, 增加一张 圆球撞击 在你的手牌中。",
+			"在你的回合开始时，增加 ",
+			" 张 圆球撞击 在你的手牌中。"
+		]
+	},
+	"Guardian:OrbwalkPower": {
+		"NAME": "圆球回转",
+		"DESCRIPTIONS": [
+			"每回合开始时获得 ",
+			" 点力量。"
+		]
+	},
+	"Guardian:ClonePower": {
+		"NAME": "重连",
+		"DESCRIPTIONS": [
+			"将打出的下张非消耗攻击或技能牌将凝滞。",
+			"将打出的下 ",
+			" 张非消耗攻击或技能牌将凝滞。"
+		]
+	},
+	"Guardian:GemFinderPower": {
+		"NAME": "开采宝石",
+		"DESCRIPTIONS": [
+			"在战斗结束后，选择一个普通宝石加入你的牌库。",
+			"在战斗结束后，选择 ",
+			" 个普通宝石加入你的牌库。"
+		]
+	},
+	"Guardian:FuturePlansPower": {
+		"NAME": "未来计划",
+		"DESCRIPTIONS": [
+			"在你的回合结束时，选择 #b",
+			" 张牌凝滞。",
+			" 张牌凝滞。"
+		]
+	},
+	"Guardian:DefenseModePower": {
+		"NAME": "防御模式",
+		"DESCRIPTIONS": [
+			" 防御模式会维持 ",
+			" 个回合。 NL 期间防御模式给予你 ",
+			" 层荆棘但降低 25% 的伤害。每打出一张牌获得 2 点格挡。"
+		]
+	},
+	"Guardian:ConstructModePower": {
+		"NAME": "建造模式",
+		"DESCRIPTIONS": [
+			"你不能在这个回合失去生命或打出攻击牌。",
+			"你不能在 ",
+			" 个回合失去生命或打出攻击牌。"
+		]
+	},
+	"Guardian:MultiBoostPower": {
+		"NAME": "多重促进",
+		"DESCRIPTIONS": [
+			"多次造成伤害的攻击会造成额外进行 1 次。",
+			"多次造成伤害的攻击会造成额外进行 ",
+			" 次。"
+		]
+	},
+	"Guardian:TargetedPower": {
+		"NAME": "标记",
+		"DESCRIPTIONS": [
+			"每当这个敌人受伤时, 本回合获得 ",
+			" 层临时力量。"
+		]
+	},
+	"Guardian:LoseThornsPower": {
+		"NAME": "蜕刺",
+		"DESCRIPTIONS": [
+			"下回合开始时失去 ",
+			" 层荆棘。"
+		]
+	},
+	"Guardian:BeamBuffPower": {
+		"NAME": "装填",
+		"DESCRIPTIONS": [
+			"射线牌额外获得 ",
+			" 点伤害。"
+		]
+	},
+	"Guardian:DefensiveModeBuffsPower": {
+		"NAME": "防御模式+",
+		"DESCRIPTIONS": [
+			"在防御模式的基础上, 防御模式+将获得: NL ",
+			" 层荆棘。",
+			" 点敏捷。",
+			" 点格挡于回合结束时。",
+			"消耗在每回合抽到的第一张状态或诅咒牌",
+			"消耗在每回合抽到的第 ",
+			" 张状态或诅咒牌 ",
+			"当 防御模式 结束时 ",
+			" 点 临时 力量 。"
+		]
+	},
+	"Guardian:AutomayhemPower": {
+		"NAME": "时间沙漏",
+		"DESCRIPTIONS": [
+			"你的回合结束时， 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点。 ",
+			" 次, 你的回合结束时, 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点"
+		]
+	},
+	"Guardian:ConstructPower": {
+		"NAME": "先古建造",
+		"DESCRIPTIONS": [
+			"如果回合开始时你没有 人工制品 获得 ",
+			" 层 人工制品 并失去 ",
+			" [E] 。"
+		]
+	},
+	"Guardian:ModeShiftPower": {
+		"NAME": "模式转换",
+		"DESCRIPTIONS": [
+			"当你失去 ",
+			" 点生命时，获得10点格挡，获得 3 层 防御模式。 NL 每次启用模式转换时，激活所需的量都会增加。",
+			"模式转换本回合已经激活。"
+		]
+	},
+		"Guardian:ExhaustStatusesPower": {
+			"NAME": "反冲",
+			"DESCRIPTIONS": [
+				"消耗每回合抽到的前1张状态或诅咒牌。",
+				"消耗每回合抽到的前 ",
+				" 张状态或诅咒牌。"
+			]
+		},
+	"Guardian:RevengePower": {
+		"NAME": "复仇",
+		"DESCRIPTIONS": [
+			"离开 #y防御模式 时，获得 ",
+			" 点防御模式持续回合数的 力量 。 NL 目前将获得",
+			" 点 临时 力量 。"
+		]
+	},
+	"Guardian:StasisEnginePower": {
+		"NAME": "凝滞引擎",
+		"DESCRIPTIONS": [
+			"在一回合内打出3张0费卡时，获得 ",
+			" [E] 并抽 ",
+			" 张卡 ",
+			" 张卡 ",
+			" 。"
+		]
+	},
+	"Guardian:EnergizedGuardianPower": {
+		"NAME": "通电",
+		"DESCRIPTIONS": [
+			"下回合获得 #b",
+			" 点额外 [E] 。",
+			" 点额外 [E] 。",
+			" - 翻译注意: - 如需区分单复数，则上面的是复数。"
+		]
+	},
+	
   "Guardian:BlockOnCardUsePower": {
-    "NAME": "Armorer's Oil",
+    "NAME": "抛光油",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yBlock whenever you play a card this turn."
+      "本回合每当打出一张牌，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "回避协议",
+    "DESCRIPTIONS": [
+      "处于 #y防御模式 时，获得 #b",
+      " 点 #y敏捷 。"
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "荆棘协议",
+    "DESCRIPTIONS": [
+      "处于 #y防御模式 时，获得 #b",
+      " 层 #y荆棘 。"
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "装甲协议",
+    "DESCRIPTIONS": [
+      "处于 #y防御模式 时，回合结束时获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "盘踞",
+    "DESCRIPTIONS": [
+      "你的下一回合开始时，不会退出 #y防御模式 。",
+      "你的下 #b",
+      " 个回合开始时，不会退出 #y防御模式 。"
     ]
   }
 }

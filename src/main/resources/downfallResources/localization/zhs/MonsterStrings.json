@@ -1,36 +1,36 @@
 {
   "downfall:ChangingTotem": {
     "MOVES": [
-      "Transformative Gaze"
+      "改变凝视"
     ],
-    "NAME": "Head of Change",
+    "NAME": "改变头像",
     "DIALOG": [
       ""
     ]
   },
   "downfall:ForgetfulTotem": {
     "MOVES": [
-      "Forgetful Stare"
+      "忘却注视"
     ],
-    "NAME": "Forgetful Head",
+    "NAME": "忘却头像",
     "DIALOG": [
       ""
     ]
   },
   "downfall:GrowingTotem": {
     "MOVES": [
-      "Growth Beam"
+      "成长射线"
     ],
-    "NAME": "Head of Growth",
+    "NAME": "成长头像",
     "DIALOG": [
       ""
     ]
   },
   "downfall:FleeingMerchant": {
     "MOVES": [
-      "Soul Steal"
+      "灵魂窃取"
     ],
-    "NAME": "Head of Growth",
+    "NAME": "商人",
     "DIALOG": [
       ""
     ]
