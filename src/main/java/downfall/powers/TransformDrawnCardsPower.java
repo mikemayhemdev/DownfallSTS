@@ -3,6 +3,7 @@ package downfall.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -14,7 +15,9 @@ import downfall.downfallMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class TransformDrawnCardsPower extends AbstractPower implements CloneablePowerInterface {
+import static jdk.nashorn.internal.objects.NativeMath.min;
+
+public class TransformDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("TransformDrawnCardsPower");
 
@@ -22,7 +25,7 @@ public class TransformDrawnCardsPower extends AbstractPower implements Cloneable
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public TransformDrawnCardsPower(final AbstractCreature owner, final int amount) {
-        this.name = "Transformed!!";
+        this.name = "Transformed!";
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
@@ -32,28 +35,30 @@ public class TransformDrawnCardsPower extends AbstractPower implements Cloneable
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
+        this.amount2 = this.amount;
         this.updateDescription();
     }
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (amount >= 0) {
-            if (this.amount == 0)
-                addToTop(new RemoveSpecificPowerAction(owner, owner, this));
-            else {
-                flash();
-                addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
-                addToBot(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
-            }
+        if (amount2 >= 0) {
+            flash();
+            this.amount2 -= 1;
+            addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
+            addToBot(new MakeTempCardInHandAction(AbstractDungeon.returnTrulyRandomCardInCombat()));
+            this.updateDescription();
         }
-        this.amount -= 1;
-        if (this.amount == 0)
-            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        super.atEndOfTurn(isPlayer);
+        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
     public void updateDescription() {
-        description = "#yTransform the next #b" + amount + " cards you draw.";
+        description = "#yTransform the first #b" + amount + " cards drawn this turn. (" + Math.max(0,this.amount2) + " remaining)";
     }
 
     @Override
