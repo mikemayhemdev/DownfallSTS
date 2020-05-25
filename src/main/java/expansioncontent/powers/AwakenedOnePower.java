@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -37,6 +38,8 @@ public class AwakenedOnePower extends AbstractPower {
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.updateDescription();
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         sourceM = (AbstractMonster) owner;
     }
@@ -57,10 +60,8 @@ public class AwakenedOnePower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        description = "The next time this enemy doesn't attack on its turn, you gain #b" + amount + " #yStrength.";
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
-
-
 }
 
 

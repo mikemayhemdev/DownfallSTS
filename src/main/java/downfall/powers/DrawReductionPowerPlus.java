@@ -40,7 +40,7 @@ public class DrawReductionPowerPlus extends AbstractPower {
     }
 
     public void atEndOfRound() {
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, "Draw Reduction", 1));
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
     }
 
     public void onRemove() {

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
@@ -25,7 +26,6 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public TransformDrawnCardsPower(final AbstractCreature owner, final int amount) {
-        this.name = "Transformed!";
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
@@ -36,6 +36,8 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.amount2 = this.amount;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         this.updateDescription();
     }
 
@@ -58,7 +60,7 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
 
     @Override
     public void updateDescription() {
-        description = "#yTransform the first #b" + amount + " cards drawn this turn. (" + Math.max(0,this.amount2) + " remaining)";
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + Math.max(0,this.amount2) + DESCRIPTIONS[2];
     }
 
     @Override
