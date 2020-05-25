@@ -37,10 +37,8 @@ public class EnBlizzard extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int frostCount = 0;
-        Iterator var4 = AbstractDungeon.actionManager.orbsChanneledThisCombat.iterator();
 
-        while(var4.hasNext()) {
-            AbstractOrb o = (AbstractOrb)var4.next();
+        for (AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
             if (o instanceof Frost) {
                 ++frostCount;
             }
@@ -59,10 +57,8 @@ public class EnBlizzard extends AbstractBossCard {
 
     public void applyPowers() {
         int frostCount = 0;
-        Iterator var2 = AbstractDungeon.actionManager.orbsChanneledThisCombat.iterator();
 
-        while(var2.hasNext()) {
-            AbstractOrb o = (AbstractOrb)var2.next();
+        for (AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
             if (o instanceof EnemyFrost) {
                 ++frostCount;
             }
