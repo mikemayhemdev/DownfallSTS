@@ -2,6 +2,7 @@ package charbosses.actions.unique;
 
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.orbs.EnemyEmptyOrbSlot;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -21,7 +22,7 @@ public class EnemyBarrageAction extends AbstractGameAction {
 
     public void update() {
         for(int i = 0; i < AbstractCharBoss.boss.orbs.size(); ++i) {
-            if (!(AbstractCharBoss.boss.orbs.get(i) instanceof EmptyOrbSlot)) {
+            if (!(AbstractCharBoss.boss.orbs.get(i) instanceof EnemyEmptyOrbSlot)) {
                 this.addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT, true));
             }
         }
