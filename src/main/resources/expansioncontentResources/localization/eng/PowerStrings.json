@@ -10,8 +10,8 @@
   "expansioncontent:StudyAutomatonPowerUpgraded": {
     "NAME": "Study Automaton+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Automaton card at the start of next turn.",
-      "Gain a random Upgraded Automaton card at the start of your next ",
+      "Gain a random #yUpgraded Automaton card at the start of next turn.",
+      "Gain a random #yUpgraded Automaton card at the start of your next ",
       " turns."
     ]
   },
@@ -26,8 +26,8 @@
   "expansioncontent:StudyAwakenedPowerUpgraded": {
     "NAME": "Study Awakened One+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Awakened One card at the start of next turn.",
-      "Gain a random Upgraded Awakened One card at the start of your next ",
+      "Gain a random #yUpgraded Awakened One card at the start of next turn.",
+      "Gain a random #yUpgraded Awakened One card at the start of your next ",
       " turns."
     ]
   },
@@ -35,7 +35,7 @@
     "NAME": "Dark Ritual",
     "DESCRIPTIONS": [
       "Gain ",
-      " Strength if this enemy does not attack on its turn."
+      " #yStrength if this enemy does not attack on its turn."
     ]
   },
   "expansioncontent:StudyChampPower": {
@@ -49,8 +49,8 @@
   "expansioncontent:StudyChampPowerUpgraded": {
     "NAME": "Study Champ+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Champ card at the start of next turn.",
-      "Gain a random Upgraded Champ card at the start of your next ",
+      "Gain a random #yUpgraded Champ card at the start of next turn.",
+      "Gain a random #yUpgraded Champ card at the start of your next ",
       " turns."
     ]
   },
@@ -65,8 +65,8 @@
   "expansioncontent:StudyCollectorPowerUpgraded": {
     "NAME": "Study Collector+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Collector card at the start of next turn.",
-      "Gain a random Upgraded Collector card at the start of your next ",
+      "Gain a random #yUpgraded Collector card at the start of next turn.",
+      "Gain a random #yUpgraded Collector card at the start of your next ",
       " turns."
     ]
   },
@@ -81,8 +81,8 @@
   "expansioncontent:StudyGuardianPowerUpgraded": {
     "NAME": "Study Guardian+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Guardian card at the start of next turn.",
-      "Gain a random Upgraded Guardian card at the start of your next ",
+      "Gain a random #yUpgraded Guardian card at the start of next turn.",
+      "Gain a random #yUpgraded Guardian card at the start of your next ",
       " turns."
     ]
   },
@@ -97,8 +97,8 @@
   "expansioncontent:StudyHexaghostPowerUpgraded": {
     "NAME": "Study Hexaghost+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Hexaghost card at the start of next turn.",
-      "Gain a random Upgraded Hexaghost card at the start of your next ",
+      "Gain a random #yUpgraded Hexaghost card at the start of next turn.",
+      "Gain a random #yUpgraded Hexaghost card at the start of your next ",
       " turns."
     ]
   },
@@ -113,8 +113,8 @@
   "expansioncontent:StudyShapesPowerUpgraded": {
     "NAME": "Study Donu & Deca+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Donu & Deca card at the start of next turn.",
-      "Gain a random Upgraded Donu & Deca card at the start of your next ",
+      "Gain a random #yUpgraded Donu & Deca card at the start of next turn.",
+      "Gain a random #yUpgraded Donu & Deca card at the start of your next ",
       " turns."
     ]
   },
@@ -129,8 +129,8 @@
   "expansioncontent:StudyTimeEaterPowerUpgraded": {
     "NAME": "Study Time Eater+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Time Eater card at the start of next turn.",
-      "Gain a random Upgraded Time Eater card at the start of your next ",
+      "Gain a random #yUpgraded Time Eater card at the start of next turn.",
+      "Gain a random #yUpgraded Time Eater card at the start of your next ",
       " turns."
     ]
   },
@@ -145,9 +145,31 @@
   "expansioncontent:StudySlimeBossPowerUpgraded": {
     "NAME": "Study Slime Boss+",
     "DESCRIPTIONS": [
-      "Gain a random Upgraded Slime Boss card at the start of next turn.",
-      "Gain a random Upgraded Slime Boss card at the start of your next ",
+      "Gain a random #yUpgraded Slime Boss card at the start of next turn.",
+      "Gain a random #yUpgraded Slime Boss card at the start of your next ",
       " turns."
+    ]
+  },
+  "expansioncontent:AwakenDeathPower": {
+    "NAME": "Awakening",
+    "DESCRIPTIONS": [
+      "When you would die, heal ",
+      " HP and remove this effect."
+    ]
+  },
+  "expansioncontent:ChronoBoostPower": {
+    "NAME": "Chrono Boost",
+    "DESCRIPTIONS": [
+      "After playing ",
+      " more cards, gain ",
+      " #yStrength."
+    ]
+  },
+  "expansioncontent:DeEnergizedPower": {
+    "NAME": "De-Energized",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, lose ",
+      " [E]."
     ]
   }
 }

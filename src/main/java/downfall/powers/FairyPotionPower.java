@@ -64,7 +64,7 @@ public class FairyPotionPower extends AbstractPower implements CloneablePowerInt
         healUndead(owner, healAmt);
         AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX, owner.hb.cY, healAmt));
         addToTop(new RemoveSpecificPowerAction(owner, owner, FairyPotionPower.POWER_ID));
-        addToTop(new TalkAction(owner, "Ha! Fairy Potion, jerk!"));
+        addToTop(new TalkAction(owner, DESCRIPTIONS[1]));
         CANNOT_END = false;
     }
 

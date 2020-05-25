@@ -18,6 +18,7 @@ public class EnemyCardGroup extends CardGroup {
     public static final int HAND_ROW_LENGTH = 10;
     public static final float HAND_HEIGHT_OFFSET = 0.56F;
     public AbstractCharBoss owner;
+	public static AbstractBossCard hov2holder = null;
 
     public EnemyCardGroup(CardGroupType type) {
         super(type);
@@ -173,13 +174,17 @@ public class EnemyCardGroup extends CardGroup {
         AbstractCard hoveredcard = null;
         for (int i = 0; i < this.group.size(); i++) {
             AbstractCard c = this.group.get(i);
-            c.targetDrawScale = AbstractBossCard.HAND_SCALE;
+			if (EnemyCardGroup.hov2holder != c) {
+				c.targetDrawScale = AbstractBossCard.HAND_SCALE;
+			}
             int cardsinrow = Math.min(this.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) i / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
             float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
             c.target_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
             c.target_y = Settings.HEIGHT * HAND_HEIGHT_OFFSET + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float) Math.floor(((float) i) / (float) HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
             if (((AbstractBossCard) c).hov2 && c.hb.hovered) {
-                hoveredcard = c;
+				if (hoveredcard == null || EnemyCardGroup.hov2holder == c) {
+					hoveredcard = c;
+				}
             }
         }
         if (hoveredcard != null) {

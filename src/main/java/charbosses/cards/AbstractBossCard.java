@@ -336,6 +336,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         super.hover();
         if (!this.hov2) {
             this.hov2 = true;
+			EnemyCardGroup.hov2holder = this;
             AbstractCharBoss.boss.hand.refreshHandLayout();
             this.targetDrawScale = AbstractBossCard.HOVER_SCALE;
             this.drawScale = AbstractBossCard.HOVER_SCALE;
@@ -346,6 +347,9 @@ public abstract class AbstractBossCard extends AbstractCard {
         super.unhover();
         if (this.hov2) {
             this.hov2 = false;
+			if (EnemyCardGroup.hov2holder == this) {
+				EnemyCardGroup.hov2holder = null;
+			}
             AbstractCharBoss.boss.hand.refreshHandLayout();
             this.targetDrawScale = AbstractBossCard.HAND_SCALE;
         }

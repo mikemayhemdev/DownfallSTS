@@ -8,6 +8,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -36,6 +37,8 @@ public class ChronoBoostPlusPower extends TwoAmountPower implements CloneablePow
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(ChronoBoostPower.POWER_ID).DESCRIPTIONS;
+        this.name = CardCrawlGame.languagePack.getPowerStrings(ChronoBoostPower.POWER_ID).NAME;
         this.updateDescription();
 
     }
@@ -59,7 +62,7 @@ public class ChronoBoostPlusPower extends TwoAmountPower implements CloneablePow
 
     @Override
     public void updateDescription() {
-        description = "After playing " + amount2 + " more cards, gain " + amount + " Strength.";
+        description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1] +amount + DESCRIPTIONS[2];
     }
 
 }

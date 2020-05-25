@@ -2,6 +2,7 @@ package expansioncontent.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.cards.OctoChoiceCard;
@@ -13,6 +14,7 @@ public class OctoChoiceAction extends AbstractGameAction {
     private boolean pickCard = false;
     private CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
     private QuickStudy funCard;
+    private String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:lazyStorage").TEXT;
 
     public OctoChoiceAction(QuickStudy card) {
         duration = Settings.ACTION_DUR_XFAST;
@@ -28,9 +30,9 @@ public class OctoChoiceAction extends AbstractGameAction {
         if (duration == Settings.ACTION_DUR_XFAST && !group.isEmpty()) {
             pickCard = true;
             CenterGridCardSelectScreen.centerGridSelect = true;
-            AbstractDungeon.gridSelectScreen.open(group, 1, ("Choose a Boss to Study."), false);
+            AbstractDungeon.gridSelectScreen.open(group, 1, TEXT[0], false);
         } else if ((pickCard && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
-            OctoChoiceCard cardChoice = new OctoChoiceCard("null", "null", expansionContentMod.makeCardPath("AwakenDeath.png"), "You should never see this.");
+            OctoChoiceCard cardChoice = new OctoChoiceCard("null", "null", expansionContentMod.makeCardPath("AwakenDeath.png"), "ERROR");
             if (pickCard && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 pickCard = false;
                 cardChoice = (OctoChoiceCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
