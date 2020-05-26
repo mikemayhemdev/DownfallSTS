@@ -7,7 +7,7 @@
 	  " #yAttack is played this turn.",
 	  " #yAttacks are played this turn.",
 	  "Inactive. #yIgnites when #b2 #yAttacks are played while #yActive.",
-	  " NL #yIgnition: When #yIgnited, apply #b",
+	  " NL NL #yIgnition: When #yIgnited, apply #b",
 	  " #yBurn to a random enemy.",
 	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
@@ -20,7 +20,7 @@
 	  " #ySkill is played this turn.",
 	  " #ySkills are played this turn.",
 	  "Inactive. #yIgnites when #b2 #ySkills are played while #yActive.",
-	  " NL #yIgnition: When #yIgnited, deal #b",
+	  " NL NL #yIgnition: When #yIgnited, deal #b",
 	  " damage to a random enemy twice.",
 	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
@@ -31,7 +31,7 @@
       "#yIgnited. ",
 	  "#yActive. #yIgnites when a #yPower is played this turn.",
 	  "Inactive. #yIgnites when a #yPower is played while #yActive.",
-	  " NL #yIgnition: When #yIgnited, gain #b",
+	  " NL NL #yIgnition: When #yIgnited, gain #b",
 	  " #yBlock and #b1 #yStrength.",
 	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
@@ -45,7 +45,7 @@
 	  "#yActive. Ignites when spending [E] this turn.",
 	  "Error. Please report to mod dev: ",
 	  "Inactive. Ignites when spending [E] [E] [E] while #yActive.",
-	  " NL #yIgnition: When #yIgnited, deal #b",
+	  " NL NL #yIgnition: When #yIgnited, deal #b",
 	  " damage to a random enemy for each #yIgnited #yGhostflame, then #yExtinguish them.",
 	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
@@ -56,7 +56,7 @@
       "#yIgnited. ",
 	  "#yActive. #yIgnites when you end your turn.",
 	  "Inactive. #yIgnites when you end your turn while #yActive.",
-	  " NL #yIgnition: When #yIgnited, play the top card of your draw pile.",
+	  " NL NL #yIgnition: When #yIgnited, play the top card of your draw pile.",
 	  " NL NL At the end of your turn, #yAdvance to the next Ghostflame."
     ]
   }
