@@ -30,8 +30,9 @@ import theHexaghost.cards.Defend;
 import theHexaghost.cards.Float;
 import theHexaghost.cards.Sear;
 import theHexaghost.cards.Strike;
-import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.ghostflames.*;
 import theHexaghost.relics.SpiritBrand;
+import theHexaghost.util.TextureLoader;
 import theHexaghost.vfx.MyBody;
 
 import java.util.ArrayList;
@@ -96,11 +97,15 @@ public class TheHexaghost extends CustomPlayer {
             renderFlames = false;
     }
 
+
+
+
     @Override
     public void render(SpriteBatch sb) {
         if (!(AbstractDungeon.getCurrRoom() instanceof RestRoom) && !isDead)
             myBody.render(sb);
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !isDead) {
+            if (activeGhostFlame != null) activeGhostFlame.renderGhostflameTriggerUI(sb);
             oscillarator();
             sb.setColor(oscillarator());
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
@@ -110,61 +115,79 @@ public class TheHexaghost extends CustomPlayer {
                     float y = 0;
                     switch (hexaGhostFlames.indexOf(gf)) {
                         case 0:
-                            x = AbstractDungeon.player.drawX - (130.0F * Settings.scale);
+                            x = AbstractDungeon.player.drawX - (115.0F * Settings.scale);
                             y = AbstractDungeon.player.drawY + (440.0F * Settings.scale);
                             break;
                         case 1:
-                            x = AbstractDungeon.player.drawX + (130.0F * Settings.scale);
+                            x = AbstractDungeon.player.drawX + (180.0F * Settings.scale);
                             y = AbstractDungeon.player.drawY + (440.0F * Settings.scale);
                             break;
                         case 2:
-                            x = AbstractDungeon.player.drawX + (200.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (260.0F * Settings.scale);
+                            x = AbstractDungeon.player.drawX + (240.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (270.0F * Settings.scale);
                             break;
                         case 3:
-                            x = AbstractDungeon.player.drawX + (130.0F * Settings.scale);
+                            x = AbstractDungeon.player.drawX + (170.0F * Settings.scale);
                             y = AbstractDungeon.player.drawY + (100.0F * Settings.scale);
                             break;
                         case 4:
-                            x = AbstractDungeon.player.drawX - (130.0F * Settings.scale);
+                            x = AbstractDungeon.player.drawX - (115.0F * Settings.scale);
                             y = AbstractDungeon.player.drawY + (100.0F * Settings.scale);
                             break;
                         case 5:
                             x = AbstractDungeon.player.drawX - (200.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (260.0F * Settings.scale);
+                            y = AbstractDungeon.player.drawY + (270.0F * Settings.scale);
                             break;
                     }
-                    Texture b = gf.getHelperTexture();
-                    sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
+                    /*
+                    if (showAll) {
+                        Texture b = gf.getHelperTexture();
+                        sb.draw(b, x - (10 * Settings.scale), y - (10 * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
+                    }
+                    */
+
                     float flashP = (gf.flashTimer - 1F) / .5F;
                     //SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
-                    float fontScale = Settings.scale;
+                    float fontScale = Settings.scale * 0.8F;
                     if (flashP > 0F) {
                         if (flashP > .5F) {
                             if (gf.charged) {
                                 sb.setColor(Interpolation.exp5Out.apply(0F, 1F, flashP), 1F, Interpolation.exp5Out.apply(0F, 1F, flashP), 1F);
-                                fontScale = Interpolation.linear.apply(Settings.scale * 4F, Settings.scale, flashP);
+                                fontScale = Interpolation.linear.apply(Settings.scale * 2.5F, Settings.scale * 0.8F, flashP);
                             } else {
                                 sb.setColor(1F, 1F, 1F, 1F);
-                                fontScale = Interpolation.pow2Out.apply(Settings.scale * 5F, Settings.scale, flashP);
+                                fontScale = Interpolation.pow2Out.apply(Settings.scale * 3F, Settings.scale * 0.8F, flashP);
 
                             }
                         } else {
                             if (gf.charged) {
                                 sb.setColor(Interpolation.exp5Out.apply(1F, 0F, flashP), 1F, Interpolation.exp5Out.apply(1F, 0F, flashP), 1F);
 
-                                fontScale = Interpolation.linear.apply(Settings.scale, Settings.scale * 4F, flashP);
+                                fontScale = Interpolation.linear.apply(Settings.scale * 0.8F, Settings.scale * 2.5F, flashP);
                             } else {
                                 sb.setColor(1F, 1F, 1F, 1F);
-                                fontScale = Interpolation.exp5In.apply(Settings.scale, Settings.scale * 5F, flashP);
+                                fontScale = Interpolation.exp5In.apply(Settings.scale * 0.8F, Settings.scale * 3F, flashP);
                             }
                         }
                     } else {
                         sb.setColor(1F, 1F, 1F, 1F);
                     }
 
+                    Texture b = gf.getHelperEffectTexture();
+                    sb.setColor(1F,1F,1F,0.6F);
+                    sb.draw(b, x - (gf.effectIconXOffset * Settings.scale), y + gf.effectIconYOffset * Settings.scale, 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
 
-                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, sb.getColor(), fontScale);// 150 153
+                    sb.setColor(1F,1F,1F,1F);
+                    FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, gf.textColor, fontScale);// 150 153
+
+                    if (gf instanceof BolsteringGhostflame){
+                        sb.setColor(1F,1F,1F,0.6F);
+                        Texture c = TextureLoader.getTexture(HexaMod.makeUIPath("strength.png"));
+                        sb.draw(c, x - (gf.effectIconXOffset * Settings.scale), y + (gf.effectIconYOffset * Settings.scale) - (50F * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
+                        sb.setColor(1F,1F,1F,1F);
+                        FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, "1", x, y - 50F * Settings.scale, gf.textColor, fontScale);// 150 153
+
+                    }
                 }
             }
         }

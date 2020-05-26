@@ -20,7 +20,7 @@ public class EndTurnAdvance {
     public static void Postfix(GameActionManager __instance) {
         if (HexaMod.renderFlames) {
             if (GhostflameHelper.activeGhostFlame instanceof MayhemGhostflame)
-                GhostflameHelper.activeGhostFlame.charge();
+                GhostflameHelper.activeGhostFlame.advanceTrigger(null);
             if (AbstractDungeon.player.hasPower(AgainPower.POWER_ID)) {
                 AbstractPower p = AbstractDungeon.player.getPower(AgainPower.POWER_ID);
                 p.flash();

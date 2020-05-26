@@ -1,8 +1,10 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,16 +17,32 @@ import theHexaghost.util.TextureLoader;
 
 public class SearingGhostflame extends AbstractGhostflame {
 
-    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
+    public static Texture bruhB = TextureLoader.getTexture(HexaMod.makeUIPath("searingBright.png"));
+    public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("burn.png"));
     public int attacksPlayedThisTurn = 0;
 
     private String ID = "hexamod:SearingGhostflame";
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
+
     public SearingGhostflame(float x, float y) {
         super(x, y);
         magic = 3;
+
+        //this.textColor = new Color(.75F,1F,.75F,1F);
+        this.triggersRequired = 2;
+
+        this.effectIconXOffset = 60F;
+        this.effectIconYOffset = -20F;
+        this.advanceOnCardUse = true;
+
+    }
+
+    @Override
+    public int getActiveFlamesTriggerCount() {
+        return attacksPlayedThisTurn;
     }
 
     @Override
@@ -47,14 +65,36 @@ public class SearingGhostflame extends AbstractGhostflame {
     }
 
     @Override
+    public void advanceTrigger(AbstractCard c) {
+        if (!charged && c.type == AbstractCard.CardType.ATTACK){
+            if (attacksPlayedThisTurn < 2) {
+                advanceTriggerAnim();
+                attacksPlayedThisTurn++;
+                if (attacksPlayedThisTurn == 2){
+                    charge();
+                }
+            }
+        }
+    }
+
+    @Override
     public Texture getHelperTexture() {
         return bruh;
     }
 
     @Override
+    public Texture getHelperTextureBright() {
+        return bruhB;
+    }
+
+    @Override
+    public Texture getHelperEffectTexture() {
+        return bruh2;
+    }
+
+    @Override
     public String returnHoverHelperText() {
-        if (charged) return "0";
-        return String.valueOf(2 - attacksPlayedThisTurn);
+        return this.magic + "";
     }
 
     @Override

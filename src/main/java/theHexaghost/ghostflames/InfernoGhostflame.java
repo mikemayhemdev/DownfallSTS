@@ -1,9 +1,12 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,20 +16,37 @@ import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.TextureLoader;
 
+import static theHexaghost.GhostflameHelper.activeGhostFlame;
 import static theHexaghost.HexaMod.makeUIPath;
 
 public class InfernoGhostflame extends AbstractGhostflame {
 
     public static Texture myTex = TextureLoader.getTexture(makeUIPath("inferno.png"));
+    public static Texture myTexB = TextureLoader.getTexture(makeUIPath("infernoBright.png"));
+    public static Texture bruh2 = TextureLoader.getTexture(makeUIPath("damage.png"));
     public int energySpentThisTurn = 0;
 
     private String ID = "hexamod:InfernoGhostflame";
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
+
+
     public InfernoGhostflame(float x, float y) {
         super(x, y);
         damage = 6;
+        //this.textColor = new Color(1F,.75F,.75F,1F);
+        this.triggersRequired = 3;
+
+        this.effectIconXOffset = 80F;
+        this.effectIconYOffset = -20F;
+
+        this.advanceOnCardUse = true;
+    }
+
+    @Override
+    public int getActiveFlamesTriggerCount() {
+        return energySpentThisTurn;
     }
 
     @Override
@@ -40,6 +60,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
             AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
             if (gf.charged) {
                 atb(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                //atb(new WaitAction(0.1F));  //Critical for keeping the UI not broken, and helps sell the anim
                 atb(new ExtinguishAction(gf));
             }
         }
@@ -48,13 +69,50 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     @Override
     public String returnHoverHelperText() {
-        if (charged) return "0";
-        return String.valueOf(Math.max(0, 3 - energySpentThisTurn));
+        int chargedFlames = 0;
+        for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
+            AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
+            if (gf.charged) {
+                chargedFlames++;
+            }
+        }
+        return (this.damage + "x" + Math.min(chargedFlames + 1,6));
+    }
+
+    @Override
+    public void advanceTrigger(AbstractCard c) {
+        if (!charged) {
+            int x = c.costForTurn;
+            if (c.freeToPlayOnce) x = 0;
+            else if (c.cost == -1) x = c.energyOnUse;
+
+            if (x > 0) {
+                for (int i = 0; i < x; i++) {
+                    advanceTriggerAnim();
+                }
+                energySpentThisTurn += x;
+                if (energySpentThisTurn >= 3) {
+                    charge();
+                } else {
+                    //activeGhostFlame.flash();
+                }
+            }
+        }
     }
 
     @Override
     public Texture getHelperTexture() {
         return myTex;
+    }
+
+    @Override
+    public Texture getHelperTextureBright() {
+        return myTexB;
+    }
+
+    @Override
+    public Texture getHelperEffectTexture() {
+        return bruh2;
     }
 
     @Override

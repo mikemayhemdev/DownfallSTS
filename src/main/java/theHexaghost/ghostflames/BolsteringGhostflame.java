@@ -1,9 +1,11 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -13,8 +15,12 @@ import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.TextureLoader;
 
+import static theHexaghost.GhostflameHelper.activeGhostFlame;
+
 public class BolsteringGhostflame extends AbstractGhostflame {
     public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("bolster.png"));
+    public static Texture bruhB = TextureLoader.getTexture(HexaMod.makeUIPath("bolsterBright.png"));
+    public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("block.png"));
 
     private String ID = "hexamod:BolsteringGhostflame";
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
@@ -23,6 +29,14 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     public BolsteringGhostflame(float x, float y) {
         super(x, y);
         block = 6;
+
+        //this.textColor = new Color(.75F,.75F,1F,1F);
+        this.triggersRequired = 1;
+
+        this.effectIconXOffset = 60F;
+        this.effectIconYOffset = -20F;
+
+        this.advanceOnCardUse = true;
     }
 
     @Override
@@ -42,10 +56,36 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     }
 
     @Override
+    public Texture getHelperTextureBright() {
+        return bruhB;
+    }
+
+    @Override
+    public int getActiveFlamesTriggerCount(){
+        if (charged) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
+    public void advanceTrigger(AbstractCard c) {
+        if (!charged && c.type == AbstractCard.CardType.POWER){
+            advanceTriggerAnim();
+            charge();
+        }
+    }
+
+    @Override
+    public Texture getHelperEffectTexture() {
+        return bruh2;
+    }
+
+
+    @Override
     public String returnHoverHelperText() {
-        if (charged)
-            return "0";
-        return "1";
+        return this.block + "";
     }
 
     @Override
