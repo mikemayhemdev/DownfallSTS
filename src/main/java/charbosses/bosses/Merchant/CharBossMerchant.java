@@ -48,8 +48,11 @@ public class CharBossMerchant extends AbstractCharBoss {
 
     private boolean neowSpoke = false;
 
+    public static final String ID = downfallMod.makeID("Merchant");
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString(ID).NAMES[0];
+
     public CharBossMerchant() {
-        super("Merchant", "downfall:Merchant", 200, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
+        super(NAME, ID, 200, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
 
         if (downfallMod.tempAscensionHack){
             downfallMod.tempAscensionHack = false;

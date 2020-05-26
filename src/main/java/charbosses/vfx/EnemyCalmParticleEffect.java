@@ -28,8 +28,10 @@ public class EnemyCalmParticleEffect extends AbstractGameEffect {
         this.color = new Color(MathUtils.random(0.2F, 0.3F), MathUtils.random(0.65F, 0.8F), 1.0F, 0.0F);
         this.vX = MathUtils.random(-300.0F, -50.0F) * Settings.scale;
         this.vY = MathUtils.random(-200.0F, -100.0F) * Settings.scale;
-        this.x = AbstractCharBoss.boss.hb.cX + MathUtils.random(100.0F, 160.0F) * Settings.scale - 32.0F;
-        this.y = AbstractCharBoss.boss.hb.cY + MathUtils.random(-50.0F, 220.0F) * Settings.scale - 32.0F;
+        if(AbstractCharBoss.boss != null){
+            this.x = AbstractCharBoss.boss.hb.cX + MathUtils.random(100.0F, 160.0F) * Settings.scale - 32.0F;
+            this.y = AbstractCharBoss.boss.hb.cY + MathUtils.random(-50.0F, 220.0F) * Settings.scale - 32.0F;
+        }
         this.renderBehind = MathUtils.randomBoolean(0.2F + (this.scale - 0.5F));
         this.dvx = 400.0F * Settings.scale * this.scale;
         this.dvy = 100.0F * Settings.scale;
@@ -56,9 +58,11 @@ public class EnemyCalmParticleEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
-        sb.setBlendFunction(770, 1);
-        sb.draw(ImageMaster.FROST_ACTIVATE_VFX_1, this.x, this.y, 32.0F, 32.0F, 25.0F, 128.0F, this.scale, this.scale + (this.dur_div2 * 0.4F - this.duration) * Settings.scale, this.rotation, 0, 0, 64, 64, false, false);
-        sb.setBlendFunction(770, 771);
+        if(AbstractCharBoss.boss != null) {
+            sb.setBlendFunction(770, 1);
+            sb.draw(ImageMaster.FROST_ACTIVATE_VFX_1, this.x, this.y, 32.0F, 32.0F, 25.0F, 128.0F, this.scale, this.scale + (this.dur_div2 * 0.4F - this.duration) * Settings.scale, this.rotation, 0, 0, 64, 64, false, false);
+            sb.setBlendFunction(770, 771);
+        }
     }
 
     public void dispose() {

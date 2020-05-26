@@ -52,9 +52,11 @@ public class EnemyWrathStanceChangeParticle extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         if (this.delayTimer <= 0.0F) {
             sb.setColor(this.color);
-            sb.setBlendFunction(770, 1);
-            sb.draw(this.img, AbstractCharBoss.boss.hb.cX + this.x, this.y, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * MathUtils.random(2.9F, 3.1F), this.scale * MathUtils.random(0.95F, 1.05F), this.rotation);
-            sb.setBlendFunction(770, 771);
+            if(AbstractCharBoss.boss != null) {
+                sb.setBlendFunction(770, 1);
+                sb.draw(this.img, AbstractCharBoss.boss.hb.cX + this.x, this.y, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * MathUtils.random(2.9F, 3.1F), this.scale * MathUtils.random(0.95F, 1.05F), this.rotation);
+                sb.setBlendFunction(770, 771);
+            }
         }
     }
 

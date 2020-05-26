@@ -177,8 +177,8 @@ public class HeartMerchant implements Disposable {
     }
 
     public void spawnHitbox(){
-        this.hb = new Hitbox(500.0F * Settings.scale, 700.0F * Settings.scale);
-        this.hb.move(DRAW_X * Settings.scale, DRAW_Y * Settings.scale);
+        this.hb = new Hitbox(500.0F * Settings.scale, 500.0F * Settings.scale);
+        this.hb.move(DRAW_X , DRAW_Y + 100.0F * Settings.scale);
         this.anim.portalRenderActive = true;
     }
 

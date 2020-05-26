@@ -870,7 +870,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         discardPile.clear();
         exhaustPile.clear();
         limbo.clear();
-
+        stance.onExitStance();
 
         super.die();
 

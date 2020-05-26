@@ -187,5 +187,19 @@
     "TEXT": [
       "Choose a Boss to Study."
     ]
+  },
+  "downfall:Merchant": {
+    "NAMES": [
+      "Merchant"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:NeowBoss": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
+    ]
   }
 }

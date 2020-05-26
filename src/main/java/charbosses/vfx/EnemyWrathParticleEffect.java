@@ -26,8 +26,10 @@ public class EnemyWrathParticleEffect extends AbstractGameEffect {
         this.scale = MathUtils.random(0.6F, 1.0F) * Settings.scale;
         this.dur_div2 = this.duration / 2.0F;
         this.color = new Color(MathUtils.random(0.5F, 1.0F), 0.0F, MathUtils.random(0.0F, 0.2F), 0.0F);
-        this.x = AbstractCharBoss.boss.hb.cX + MathUtils.random(-AbstractCharBoss.boss.hb.width / 2.0F - 30.0F * Settings.scale, AbstractCharBoss.boss.hb.width / 2.0F + 30.0F * Settings.scale);
-        this.y = AbstractCharBoss.boss.hb.cY + MathUtils.random(-AbstractCharBoss.boss.hb.height / 2.0F - -10.0F * Settings.scale, AbstractCharBoss.boss.hb.height / 2.0F - 10.0F * Settings.scale);
+        if(AbstractCharBoss.boss != null) {
+            this.x = AbstractCharBoss.boss.hb.cX + MathUtils.random(-AbstractCharBoss.boss.hb.width / 2.0F - 30.0F * Settings.scale, AbstractCharBoss.boss.hb.width / 2.0F + 30.0F * Settings.scale);
+            this.y = AbstractCharBoss.boss.hb.cY + MathUtils.random(-AbstractCharBoss.boss.hb.height / 2.0F - -10.0F * Settings.scale, AbstractCharBoss.boss.hb.height / 2.0F - 10.0F * Settings.scale);
+        }
         this.x -= (float)this.img.packedWidth / 2.0F;
         this.y -= (float)this.img.packedHeight / 2.0F;
         this.renderBehind = MathUtils.randomBoolean(0.2F + (this.scale - 0.5F));
@@ -51,9 +53,11 @@ public class EnemyWrathParticleEffect extends AbstractGameEffect {
 
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
-        sb.setBlendFunction(770, 1);
-        sb.draw(this.img, this.x, this.y + this.vY, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.8F, (0.1F + (this.dur_div2 * 2.0F - this.duration) * 2.0F * this.scale) * Settings.scale, this.rotation);
-        sb.setBlendFunction(770, 771);
+        if(AbstractCharBoss.boss != null) {
+            sb.setBlendFunction(770, 1);
+            sb.draw(this.img, this.x, this.y + this.vY, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.8F, (0.1F + (this.dur_div2 * 2.0F - this.duration) * 2.0F * this.scale) * Settings.scale, this.rotation);
+            sb.setBlendFunction(770, 771);
+        }
     }
 
     public void dispose() {

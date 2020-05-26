@@ -416,8 +416,8 @@
   },
     "Slimebound:SplitBruiser": {
     "NAME": "分裂：好斗",
-    "DESCRIPTION": "分裂 出1只 好斗史莱姆 。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "分裂 出1只 好斗史莱姆 。 NL 这只史莱姆额外造成 !M! 点 伤害 。 NL 消耗"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 出1只 slimeboundmod:好斗史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL slimeboundmod:分裂 出1只 slimeboundmod:好斗史莱姆 。 NL slimeboundmod:命令 。 NL 消耗"
   },
     "Slimebound:SplitLeeching": {
     "NAME": "分裂：水蛭",
@@ -434,6 +434,25 @@
     "DESCRIPTION": "分裂 出1只 污泥史莱姆 。 NL 消耗",
     "UPGRADE_DESCRIPTION": "分裂 出1只 污泥史莱姆 。 NL 这只史莱姆额外给予 !M! 层 黏液 。 NL 消耗"
   },
+  "Slimebound:SplitGhostflame": {
+    "NAME": "分裂：鬼火",
+    "DESCRIPTION": "获得史莱姆槽位直到达到 !M! 个。 NL 分裂 出1只 鬼火史莱姆 。 NL 消耗"
+  },
+  "Slimebound:SplitBronze": {
+    "NAME": "分裂：青铜",
+    "DESCRIPTION": " 分裂 出1只 青铜史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 青铜史莱姆 。这只史莱姆额外造成 !M! 点伤害， 提供 !M! 点 格挡 。 NL 消耗"
+  },
+  "Slimebound:SplitCultist": {
+    "NAME": "分裂：邪教徒",
+    "DESCRIPTION": "分裂 出1只 邪教徒史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 邪教徒史莱姆 。 NL 这只史莱姆额外造成 !M! 点 伤害 。 NL 消耗"
+  },
+  "Slimebound:SplitTorchHead": {
+    "NAME": "分裂：火炬头",
+    "DESCRIPTION": "分裂 出1只 火炬头史莱姆 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "分裂 出1只 火炬头史莱姆 。 NL 这只史莱姆额外造成 !M! 点 伤害 。 NL 消耗"
+  },
     "Slimebound:MinionMaster": {
     "NAME": "从者大师",
     "DESCRIPTION": "获得 1 史莱姆槽位 。每当你的史莱姆给予 黏液 、 中毒 或 格挡 时，额外给予 1 层。",
@@ -445,7 +464,8 @@
   },
     "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust.",
+	"UPGRADE_DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL slimeboundmod:Command.  NL Exhaust."
   },
   "Slimebound:SpecialForces": {
     "NAME": "Special Forces",
@@ -475,5 +495,9 @@
     "NAME": "Nibble",
     "DESCRIPTION": "Deal !D! damage. NL Add a random 0-cost card to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded 0-cost card to your hand. NL Exhaust."
+  },
+  "Slimebound:BronzeBeam": {
+    "NAME": "铜球支援",
+    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 消耗 。"
   }
 }

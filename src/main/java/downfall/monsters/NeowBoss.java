@@ -36,7 +36,7 @@ import java.util.Collections;
 public class NeowBoss extends AbstractMonster {
 
     public static final String ID = downfallMod.makeID("NeowBoss");
-    public static final String NAME = "Neow";
+    public static final String NAME = CardCrawlGame.languagePack.getCharacterString(ID).NAMES[0];
     private static final float HB_X = -40.0F;
     private static final float HB_Y = -40.0F;
     private static final float HB_W = 700.0F;
@@ -103,11 +103,6 @@ public class NeowBoss extends AbstractMonster {
         this.intentOffsetX = INTENT_X;
 
 
-        isRezzing = false;
-        offscreen = false;
-        movingOffscreen = false;
-        movingBack = false;
-
         //Initialize the boss list with the four
         bossesToRez.clear();
         bossesToRez.add("downfall:CharBossIronclad");
@@ -164,6 +159,10 @@ public class NeowBoss extends AbstractMonster {
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
         AbstractDungeon.getCurrRoom().cannotLose = true;
+        isRezzing = false;
+        offscreen = false;
+        movingOffscreen = false;
+        movingBack = false;
     }
 
     public void takeTurn() {
