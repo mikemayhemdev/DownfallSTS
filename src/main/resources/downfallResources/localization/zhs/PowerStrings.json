@@ -2,7 +2,8 @@
   "downfall:FairyPotion": {
     "NAME": "瓶中精灵",
     "DESCRIPTIONS": [
-      "当你要被杀死时，免死并回复到最大生命值的 #b30% ,移除本效果。"
+      "当你要被杀死时，免死并回复到最大生命值的 #b30% ,移除本效果。",
+      "Ha! Fairy Potion, jerk!"
     ]
   },
   "downfall:SoulSteal": {
@@ -16,6 +17,14 @@
     "NAME": "生命之神",
     "DESCRIPTIONS": [
       "不能被击杀。当生命值降低到1时撤退休息。"
+    ]
+  },
+  "downfall:TransformDrawnCardsPower": {
+    "NAME": "Transform Drawn Cards",
+    "DESCRIPTIONS": [
+      "#yTransform the first #b",
+      " cards drawn this turn. (",
+      " remaining)"
     ]
   }
 }

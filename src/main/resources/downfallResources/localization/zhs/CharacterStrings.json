@@ -45,7 +45,7 @@
   "downfall:HeartMerchant": {
   "NAMES": [
     "继续",
-    "~必要的牺牲……~"
+    "~贡献吧……~"
   ],
   "TEXT": [
     "~你~ ~变得...~ ~更强了……~",
@@ -133,6 +133,60 @@
       "~Go~ ~forth...~ ~and~ ~harvest...~",
       "~Delicious...~ ~souls...~",
       "~Reap...~ ~the~ ~fallen...~"
+    ]
+  },
+
+  "downfall:OctoChoiceCards": {
+    "NAMES": [
+      "Wish for Souls",
+      "Wish for Success",
+      "Wish for A Pick Me Up",
+      "Guardian",
+      "Hexaghost",
+      "Slime Boss",
+      "Automaton",
+      "Champ",
+      "Collector",
+      "Time Eater",
+      "Awakened One",
+      "Ancients",
+      "Split: Bronze",
+      "Split: Torchhead",
+      "Split: Cultist",
+      "Split: Protector",
+      "Split: Insulting",
+      "Split: Ancient",
+      "Split: Time"
+    ],
+    "TEXT": [
+      "Lose 6 HP. NL Gain 40 Souls.",
+      "Lose 3 HP. NL Get a Colorless card.",
+      "Lose 9 HP. NL Get a Potion.",
+      "Obtain Guardian expansioncontent:Boss cards.",
+      "Obtain Hexaghost expansioncontent:Boss cards.",
+      "Obtain Slime Boss expansioncontent:Boss cards.",
+      "Obtain Automaton expansioncontent:Boss cards.",
+      "Obtain Champ expansioncontent:Boss cards.",
+      "Obtain Collector expansioncontent:Boss cards.",
+      "Obtain Time Eater expansioncontent:Boss cards.",
+      "Obtain Awakened One expansioncontent:Boss cards.",
+      "Obtain Ancients expansioncontent:Boss cards.",
+      "slimeboundmod:Split into a slimeboundmod:Bronze_Slime.",
+      "slimeboundmod:Split into a slimeboundmod:Ghostflame_Slime.",
+      "slimeboundmod:Split into a slimeboundmod:Torchhead_Slime.",
+      "slimeboundmod:Split into a slimeboundmod:Cultist_Slime.",
+      "slimeboundmod:Split into a slimeboundmod:Protector_Slime.",
+      "slimeboundmod:Split into an slimeboundmod:Insulting_Slime.",
+      "slimeboundmod:Split into an slimeboundmod:Ancient_Slime.",
+      "slimeboundmod:Split into a Tslimeboundmod:ime_Slime."
+    ]
+  },
+  "downfall:lazyStorage": {
+    "NAMES": [
+
+    ],
+    "TEXT": [
+      "Choose a Boss to Study."
     ]
   }
 }

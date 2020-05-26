@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Haunt extends AbstractHexaCard {
@@ -15,6 +16,7 @@ public class Haunt extends AbstractHexaCard {
 
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
+    public static final String EXTENDED_DESCRIPTION[] = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION;
 
     public Haunt() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -32,8 +34,8 @@ public class Haunt extends AbstractHexaCard {
                 for (AbstractCard c : p.hand.group) {
                     if (!c.isEthereal) {
                         c.isEthereal = true;
-                        if (!c.rawDescription.contains("Ethereal"))
-                            c.rawDescription = "Ethereal. NL " + c.rawDescription;
+                        if (!c.rawDescription.contains(EXTENDED_DESCRIPTION[0]))
+                            c.rawDescription = EXTENDED_DESCRIPTION[1] + c.rawDescription;
                         c.initializeDescription();
                         c.superFlash(Color.PURPLE.cpy());
                     }

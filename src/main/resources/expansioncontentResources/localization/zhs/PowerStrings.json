@@ -149,5 +149,27 @@
       "接下来的 ",
       " 回合，每回合开始时获得1张升级后的史莱姆老大牌牌。"
     ]
+  },
+  "expansioncontent:AwakenDeathPower": {
+    "NAME": "Awakening",
+    "DESCRIPTIONS": [
+      "When you would die, heal ",
+      " HP and remove this effect."
+    ]
+  },
+  "expansioncontent:ChronoBoostPower": {
+    "NAME": "Chrono Boost",
+    "DESCRIPTIONS": [
+      "After playing ",
+      " more cards, gain ",
+      " #yStrength."
+    ]
+  },
+  "expansioncontent:DeEnergizedPower": {
+    "NAME": "De-Energized",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, lose ",
+      " [E]."
+    ]
   }
 }

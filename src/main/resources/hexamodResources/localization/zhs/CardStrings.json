@@ -138,7 +138,8 @@
   },
   "hexamod:Haunt": {
     "NAME": "鬼手",
-    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": ["虚无","虚无 。 NL "]
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
