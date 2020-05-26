@@ -186,7 +186,21 @@
 
     ],
     "TEXT": [
-      "Choose a Boss to Study."
+      "选择一名Boss学习。"
+    ]
+  },
+  "downfall:Merchant": {
+    "NAMES": [
+      "商人"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:NeowBoss": {
+    "NAMES": [
+      "涅奥"
+    ],
+    "TEXT": [
     ]
   }
 }
