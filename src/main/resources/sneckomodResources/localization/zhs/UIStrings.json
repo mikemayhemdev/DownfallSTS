@@ -1,1 +1,19 @@
-{}
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "未知",
+      " 已 升级 的"
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "？？？",
+      "sneckomod:未知 ",
+      " 牌。",
+      "角色",
+      " ",
+      "你应该看不到这个的。请报告给Vex"
+    ]
+  }
+}
+
