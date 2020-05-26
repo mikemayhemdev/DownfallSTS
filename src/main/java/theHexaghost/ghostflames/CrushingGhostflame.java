@@ -1,9 +1,11 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,19 +18,47 @@ import theHexaghost.util.TextureLoader;
 
 public class CrushingGhostflame extends AbstractGhostflame {
 
-    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("searing.png"));
+    public static Texture bruh = TextureLoader.getTexture(HexaMod.makeUIPath("crushing.png"));
+    public static Texture bruhB = TextureLoader.getTexture(HexaMod.makeUIPath("crushingBright.png"));
+    public static Texture bruh2 = TextureLoader.getTexture(HexaMod.makeUIPath("damage.png"));
     public int skillsPlayedThisTurn = 0;
 
     private String ID = "hexamod:CrushingGhostflame";
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
+
+
     public CrushingGhostflame(float x, float y) {
         super(x, y);
         damage = 5;
+        //this.textColor = new Color(1F,.75F,.75F,1F);
+        this.triggersRequired = 2;
+
+        this.effectIconXOffset = 80F;
+        this.effectIconYOffset = -20F;
+        this.advanceOnCardUse = true;
     }
 
     @Override
+    public void advanceTrigger(AbstractCard c) {
+        if (!charged && c.type == AbstractCard.CardType.SKILL){
+            if (skillsPlayedThisTurn < 2) {
+                advanceTriggerAnim();
+                skillsPlayedThisTurn++;
+                if (skillsPlayedThisTurn == 2){
+                    charge();
+                }
+            }
+        }
+    }
+
+    @Override
+    public int getActiveFlamesTriggerCount() {
+        return skillsPlayedThisTurn;
+    }
+
+        @Override
     public void onCharge() {
         for (int i = 0; i < 2; i++) {
             atb(new AbstractGameAction() {
@@ -49,13 +79,22 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
     @Override
     public String returnHoverHelperText() {
-        if (charged) return "0";
-        return String.valueOf(2 - skillsPlayedThisTurn);
+        return (this.damage + "x2");
     }
 
     @Override
     public Texture getHelperTexture() {
         return bruh;
+    }
+
+    @Override
+    public Texture getHelperTextureBright() {
+        return bruhB;
+    }
+
+    @Override
+    public Texture getHelperEffectTexture() {
+        return bruh2;
     }
 
     @Override

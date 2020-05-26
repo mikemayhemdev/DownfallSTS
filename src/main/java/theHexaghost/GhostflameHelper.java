@@ -97,7 +97,7 @@ public class GhostflameHelper {
         if (HexaMod.renderFlames && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             showAll = false;
             for (AbstractGhostflame gf : hexaGhostFlames) {
-                if (gf.hitbox.hovered) {
+                if (gf.hitbox.hovered || (gf.hitbox2.hovered && gf == activeGhostFlame)) {
                     showAll = true;
                     if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
                         TipHelper.renderGenericTip(
