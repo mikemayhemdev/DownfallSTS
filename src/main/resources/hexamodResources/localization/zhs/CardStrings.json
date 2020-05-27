@@ -149,7 +149,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 。",
+    "DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，抽一张牌。",
     "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 并抽一张牌。"
   },
   "hexamod:Ghostwalk": {
