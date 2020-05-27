@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,6 +16,8 @@ import java.util.function.Predicate;
 
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard {
+    private String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
+
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity) {
         super(id, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
@@ -33,9 +36,9 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public void upgrade() {
         upgradeName();
-        String[] funky = rawDescription.split("Unknown");
-        funky[1] = " Upgraded " + funky[1];
-        rawDescription = String.join("Unknown", funky);
+        String[] funky = rawDescription.split(unknownUpgrade[0]);
+        funky[1] = unknownUpgrade[1] + funky[1];
+        rawDescription = String.join(unknownUpgrade[0], funky);
         initializeDescription();
     }
 

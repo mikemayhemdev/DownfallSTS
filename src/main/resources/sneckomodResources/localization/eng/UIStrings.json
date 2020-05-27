@@ -1,1 +1,18 @@
-{}
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "Unknown",
+      " Upgraded "
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "???",
+      "sneckomod:Unknown ",
+      " Card.",
+      "Character",
+      "The ",
+      "You should never see this. Report to Vex"
+    ]
+  }
+}

@@ -11,15 +11,22 @@ import java.util.function.Predicate;
 @CardIgnore
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
+    private static String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
     private CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
         super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.UNCOMMON);
         myColor = cardColor;
-        name = "???";
-        originalName = "???";
-        if (CardCrawlGame.isInARun() || CardCrawlGame.loadingSave)
-            rawDescription = "sneckomod:Unknown " + getCharName(myColor) + " Card.";
+        name = unknownClass[0];
+        originalName = unknownClass[0];
+        if (CardCrawlGame.isInARun() || CardCrawlGame.loadingSave) {
+            rawDescription = unknownClass[1] + getCharName(myColor)
+                    + unknownClass[2];
+        }else {
+            rawDescription = unknownClass[1] + unknownClass[3]
+                    + unknownClass[2];
+        }
+
         initializeDescription();
     }
 
@@ -48,9 +55,9 @@ public class UnknownClass extends AbstractUnknownCard {
         ArrayList<AbstractPlayer> theDudes = new ArrayList<AbstractPlayer>(CardCrawlGame.characterManager.getAllCharacters());
         for (AbstractPlayer p : theDudes) {
             if (p.getCardColor() == myColor)
-                return p.getLocalizedCharacterName().replace("The ", "");
+                return p.getLocalizedCharacterName().replace(unknownClass[4], "");
         }
-        return "You should never see this. Report to Vex";
+        return unknownClass[5];
     }
 
     @Override

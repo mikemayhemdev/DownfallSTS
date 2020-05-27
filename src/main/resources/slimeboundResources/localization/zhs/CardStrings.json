@@ -489,7 +489,8 @@
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
   },
   "Slimebound:Nibble": {
     "NAME": "Nibble",
