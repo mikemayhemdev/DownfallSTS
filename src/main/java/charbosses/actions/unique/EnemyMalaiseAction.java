@@ -42,7 +42,7 @@ public class EnemyMalaiseAction extends AbstractGameAction {
             this.addToBot(new ApplyPowerAction(AbstractDungeon.player, c, new StrengthPower(AbstractDungeon.player, -effect), -effect));// 51
             this.addToBot(new ApplyPowerAction(AbstractDungeon.player, c, new WeakPower(AbstractDungeon.player, effect, false), effect));// 52
             if (!this.freeToPlayOnce) {// 54
-                c.energy.use(EnergyPanel.totalCount);// 55
+                c.energy.use(EnemyEnergyPanel.totalCount);// 55
             }
         }
 

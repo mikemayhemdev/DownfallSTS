@@ -1,5 +1,6 @@
 package charbosses.cards.green;
 
+import charbosses.actions.unique.EnemyBouncingFlaskAction;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.unique.BouncingFlaskAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.combat.PotionBounceEffect;
 import java.util.ArrayList;
 
 public class EnBouncingFlask extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:Deadly Poison";
+    public static final String ID = "downfall_Charboss:Bouncing Flask";
     private static final CardStrings cardStrings;
 
     static {
@@ -35,7 +36,7 @@ public class EnBouncingFlask extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new VFXAction(new PotionBounceEffect(m.hb.cX, m.hb.cY, p.hb.cX, this.hb.cY), 0.4F));// 41
-        this.addToBot(new BouncingFlaskAction(p, 3, this.magicNumber));// 43
+        this.addToBot(new EnemyBouncingFlaskAction(3, m, this.magicNumber));// 43
     }
 
     @Override

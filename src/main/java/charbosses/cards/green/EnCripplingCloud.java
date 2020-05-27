@@ -3,6 +3,7 @@ package charbosses.cards.green;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.green.CripplingPoison;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -13,15 +14,15 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import java.util.ArrayList;
 
 public class EnCripplingCloud extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:Crippling Cloud";
+    public static final String ID = "downfall_Charboss:Crippling Poison";
     private static final CardStrings cardStrings;
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings(EnCripplingCloud.ID);
+        cardStrings = CardCrawlGame.languagePack.getCardStrings(CripplingPoison.ID);
     }
 
     public EnCripplingCloud() {
-        super(ID, EnCripplingCloud.cardStrings.NAME, "green/skill/crippling_cloud", 2, EnCripplingCloud.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
+        super(ID, EnCripplingCloud.cardStrings.NAME, "green/skill/crippling_poison", 2, EnCripplingCloud.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         exhaust = true;

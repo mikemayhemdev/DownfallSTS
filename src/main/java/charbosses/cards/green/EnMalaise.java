@@ -4,6 +4,7 @@ import charbosses.actions.unique.EnemyBaneAction;
 import charbosses.actions.unique.EnemyMalaiseAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.ui.EnemyEnergyPanel;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.MalaiseAction;
@@ -28,11 +29,12 @@ public class EnMalaise extends AbstractBossCard {
 
     public EnMalaise() {
         super(ID, EnMalaise.cardStrings.NAME, "green/skill/malaise", -1, EnMalaise.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
+        this.exhaust = true;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new EnemyMalaiseAction((AbstractCharBoss)m, this.upgraded, this.freeToPlayOnce, this.energyOnUse));// 31
+        this.addToBot(new EnemyMalaiseAction((AbstractCharBoss)m, this.upgraded, this.freeToPlayOnce, EnemyEnergyPanel.totalCount));// 31
     }
 
     @Override
