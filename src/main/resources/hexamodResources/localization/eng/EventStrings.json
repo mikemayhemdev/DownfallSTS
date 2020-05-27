@@ -35,7 +35,8 @@
   "hexamod:HexaFalling": {
     "NAME": "HexaFalling",
     "DESCRIPTIONS": [
-      "You, being unbound by the feeble laws of gravity, ~float~ over the pit harmlessly."
+      "You, being unbound by the feeble laws of gravity, ~float~ over the pit harmlessly.",
+      "TODO..."
     ],
     "OPTIONS": [
       "[Float] #rLose #rnothing...",

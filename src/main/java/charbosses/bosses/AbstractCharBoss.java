@@ -7,6 +7,7 @@ import charbosses.actions.orb.EnemyAnimateOrbAction;
 import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.actions.orb.EnemyEvokeOrbAction;
 import charbosses.actions.orb.EnemyTriggerEndOfTurnOrbActions;
+import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossSortHandAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
@@ -942,6 +943,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         AbstractPlayer.poisonKillCount = 0;
         this.gameHandSize = this.masterHandSize;
         this.cardInUse = null;
+
 
         // this.drawPile.initializeDeck(this.masterDeck);
 
