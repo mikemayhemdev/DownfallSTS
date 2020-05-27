@@ -109,6 +109,15 @@
       " 。"
     ]
   },
+  "hexamod:GiftsFromTheDeadPowerPlus": {
+    "NAME": "亡魂馈赠+",
+    "DESCRIPTIONS": [
+      "每当一张 #y虚无 牌被 #y消耗 时，下回合额外抽 ",
+      " 张牌",
+      " 张牌",
+      " 。"
+    ]
+  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "战后灵魂",
     "DESCRIPTIONS": [

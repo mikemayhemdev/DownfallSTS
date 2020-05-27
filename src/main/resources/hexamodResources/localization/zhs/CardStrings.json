@@ -13,8 +13,9 @@
   },
   "hexamod:Float": {
     "NAME": "浮动",
-    "DESCRIPTION": "虚无 。 NL hexamod:步进 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 如果 hexamod:激活 的鬼火 被 hexamod:点燃 ，获得 [E] 。 NL 否则抽1张牌。 NL hexamod:步进 。"
+    "DESCRIPTION": "虚无 。 NL 抽一张牌。 NL hexamod:步进 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 抽一张牌。 NL 选择 hexamod:回退 或 hexamod:步进 。",
+    "EXTENDED_DESCRIPTION": ["hexamod:步进 。","hexamod:回退 。"]
   },
   "hexamod:AdvancingGuard": {
     "NAME": "进阶防御",
@@ -62,8 +63,8 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "魔鬼之舞",
-    "DESCRIPTION": "每回合第一次 hexamod:回退 时，获得 [E] 并抽1张牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合第一次 hexamod:回退 时，获得 [E] 并抽1张牌。"
+    "DESCRIPTION": "每回合第一次 hexamod:回退 时，获得 [E] 并抽1张牌。 NL hexamod:回退 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合第一次 hexamod:回退 时，获得 [E] 并抽1张牌。 NL hexamod:回退 。"
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "疾走",
@@ -147,8 +148,9 @@
     "UPGRADE_DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。"
   },
   "hexamod:GiftsFromTheDead": {
-    "NAME": "亡魂馈赠",
-    "DESCRIPTION": "虚无 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 。"
+    "NAME": "深处之礼",
+    "DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 ， hexamod:阴世 。 NL 每当一张 虚无 牌 消耗 时，下回合获得 [E] 并抽一张牌。"
   },
   "hexamod:Ghostwalk": {
     "NAME": "鬼步",
@@ -190,8 +192,8 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 如果这张牌被 消耗 ，下回合获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 如果这张牌被 消耗 ，下回合获得 [E] 并抽 !M! 张牌。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。"
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
@@ -199,7 +201,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予1层 hexamod:灼伤 !M! 次。"
+    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 3 层 hexamod:灼伤 !M! 次。"
   },
   "hexamod:Firestarter": {
     "NAME": "点火",
@@ -262,7 +264,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL 如果这张牌被 消耗 ， 下一回合开始时给予所有敌人 !M! 层 hexamod:灼伤 。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !M! 层 hexamod:灼伤 。"
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
