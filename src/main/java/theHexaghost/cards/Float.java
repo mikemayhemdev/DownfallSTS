@@ -5,8 +5,17 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.cards.OctoChoiceCard;
+import expansioncontent.actions.OctoChoiceAction;
+import expansioncontent.cards.*;
+import expansioncontent.expansionContentMod;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
+import theHexaghost.actions.OctoChoiceFloat;
+import theHexaghost.actions.RetractAction;
+
+import java.util.ArrayList;
 
 public class Float extends AbstractHexaCard {
 
@@ -19,16 +28,37 @@ public class Float extends AbstractHexaCard {
         isEthereal = true;
     }
 
+    public ArrayList<OctoChoiceCard> choiceList() {
+
+        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+        cardList.add(new OctoChoiceCard("octo:OctoRetract", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[1]));
+        cardList.add(new OctoChoiceCard("octo:OctoAdvance", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[0]));
+
+        return cardList;
+    }
+
+    public void doChoiceStuff(OctoChoiceCard card) {
+        switch (card.cardID) {
+            case "octo:OctoAdvance":
+                atb(new AdvanceAction());
+                break;
+            case "octo:OctoRetract":
+                atb(new RetractAction());
+                break;
+        }
+
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AnimateHopAction(p));
+        //atb(new DrawCardAction(1));
         if (upgraded) {
-            if (GhostflameHelper.activeGhostFlame.charged) {
-                atb(new GainEnergyAction(1));
-            } else {
-                atb(new DrawCardAction(1));
-            }
+            atb(new OctoChoiceFloat(this));
+        } else {
+            atb(new AdvanceAction());
         }
-        atb(new AdvanceAction());
+
+
     }
 
     public void upgrade() {

@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.actions.RetractAction;
 import theHexaghost.powers.PastPower;
 
 public class GhostOfSpirePast extends AbstractHexaCard {
@@ -19,6 +20,7 @@ public class GhostOfSpirePast extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new PastPower(1));
+        atb(new RetractAction());
     }
 
     public void upgrade() {

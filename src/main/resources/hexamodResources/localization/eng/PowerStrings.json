@@ -109,6 +109,15 @@
       " next turn."
     ]
   },
+  "hexamod:GiftsFromTheDeadPowerPlus": {
+    "NAME": "Ghostly Gifts+",
+    "DESCRIPTIONS": [
+      "Whenever an #yEthereal card is #yExhausted, draw ",
+      " cards",
+      " card",
+      " next turn."
+    ]
+  },
   "hexamod:GoldPostCombatPower": {
     "NAME": "Post-Combat Gold",
     "DESCRIPTIONS": [

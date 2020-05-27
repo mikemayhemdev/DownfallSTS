@@ -13,14 +13,14 @@ public class Incineration extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, COMMON
 
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
     private static final int UPG_DAMAGE = 1;
 
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
     public Incineration() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }
@@ -33,7 +33,7 @@ public class Incineration extends AbstractHexaCard {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     addToTop(new DamageAction(m, makeInfo(), AttackEffect.FIRE));
-                    addToTop(new BurnAction(m, 1));
+                    addToTop(new BurnAction(m, 3));
                 }
             });
         }
