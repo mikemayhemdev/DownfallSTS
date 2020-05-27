@@ -13,21 +13,20 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import theHexaghost.HexaMod;
-import theHexaghost.cards.GiftsFromTheDead;
 import theHexaghost.util.TextureLoader;
 
-public class GiftsFromTheDeadPower extends TwoAmountPower implements CloneablePowerInterface {
+public class GiftsFromTheDeadPowerPlus extends TwoAmountPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = HexaMod.makeID("GiftsFromTheDeadPower");
+    public static final String POWER_ID = HexaMod.makeID("GiftsFromTheDeadPowerPlus");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GiftsFromTheDead84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GiftsFromTheDead32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GiftsFromTheDeadPlus84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/GiftsFromTheDeadPlus32.png");
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public GiftsFromTheDeadPower(final int amount) {
+    public GiftsFromTheDeadPowerPlus(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -45,31 +44,29 @@ public class GiftsFromTheDeadPower extends TwoAmountPower implements CloneablePo
     @Override
     public void onExhaust(AbstractCard card) {
         if (card.isEthereal) {
-            addToBot(new ApplyPowerAction(owner, owner, new EnergizedBluePower(owner, amount), amount));
-            if (this.amount2 > 0){
-                addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
-
-            }
+            addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
         }
     }
 
     @Override
     public void updateDescription() {
         StringBuilder sb = new StringBuilder();
-        if (this.amount2 <=0) {
-            sb.append(DESCRIPTIONS[0]);
 
-            for (int i = 0; i < this.amount; ++i) {
-                sb.append("[E] ");
+            sb.append(DESCRIPTIONS[0]);
+            sb.append(this.amount2);
+            if (this.amount2 == 1){
+                sb.append(DESCRIPTIONS[1]);
+            } else {
+                sb.append(DESCRIPTIONS[2]);
             }
-            sb.append(DESCRIPTIONS[1]);
-        }
+            sb.append(DESCRIPTIONS[3]);
+
 
         this.description = sb.toString();
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new GiftsFromTheDeadPower(amount);
+        return new GiftsFromTheDeadPowerPlus(amount);
     }
 }

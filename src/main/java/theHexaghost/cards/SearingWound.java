@@ -14,7 +14,8 @@ public class SearingWound extends AbstractHexaCard {
     //stupid intellij stuff ATTACK, ALL_ENEMY, UNCOMMON
 
     public SearingWound() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.exhaust = false;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +29,7 @@ public class SearingWound extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            this.exhaust = false;
         }
     }
 }

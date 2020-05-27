@@ -69,5 +69,12 @@
       "seal"
     ],
     "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
+  },
+  {
+    "PROPER_NAME": "Afterlife",
+    "NAMES": [
+      "afterlife"
+    ],
+    "DESCRIPTION": "When this card becomes Exhausted, it is immediately played."
   }
 ]

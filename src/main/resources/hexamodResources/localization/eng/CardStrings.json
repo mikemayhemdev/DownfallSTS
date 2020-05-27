@@ -13,8 +13,9 @@
   },
   "hexamod:Float": {
     "NAME": "Float",
-    "DESCRIPTION": "Ethereal. NL hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] if the hexamod:Active Ghostflame is hexamod:Ignited. NL Otherwise, draw 1 card. NL hexamod:Advance."
+    "DESCRIPTION": "Ethereal. NL Draw a card. NL hexamod:Advance.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Draw a card. NL Choose to NL hexamod:Retract or hexamod:Advance.",
+    "EXTENDED_DESCRIPTION": ["hexamod:Advance.","hexamod:Retract."]
   },
   "hexamod:AdvancingGuard": {
     "NAME": "Advancing Guard",
@@ -62,8 +63,8 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
-    "DESCRIPTION": "The first time you hexamod:Retract each turn, gain [E] and draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you hexamod:Retract each turn, gain [E] and draw 1 card."
+    "DESCRIPTION": "The first time you hexamod:Retract each turn, gain [E] and draw 1 card. NL Retract.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you hexamod:Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Speedrunning",
@@ -147,8 +148,10 @@
     "UPGRADE_DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand."
   },
   "hexamod:GiftsFromTheDead": {
-    "NAME": "Ghostly Gifts",
-    "DESCRIPTION": "Ethereal. NL Whenever an Ethereal card is Exhausted, gain [E] next turn."
+    "NAME": "Gifts From Beyond",
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn."
+
   },
   "hexamod:Ghostwalk": {
     "NAME": "Ghostwalk",
@@ -190,8 +193,8 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, gain [E] and draw !M! cards next turn."
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Gain [E] and draw !M! card next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn."
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -199,7 +202,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
-    "DESCRIPTION": "Deal !D! damage and apply 1 hexamod:Burn to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage and apply 3 hexamod:Burn to a random enemy !M! times."
   },
   "hexamod:Firestarter": {
     "NAME": "Firestarter",
@@ -262,7 +265,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL If this card is Exhausted, apply !M! hexamod:Burn to ALL enemies at the start of your next turn."
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !M! hexamod:Burn to ALL enemies at the start of your next turn."
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
