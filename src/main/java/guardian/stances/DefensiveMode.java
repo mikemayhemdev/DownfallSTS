@@ -66,11 +66,12 @@ public class DefensiveMode extends AbstractStance {
              if (sfxId != -1L) {
                   stopIdleSfx();
              }
+        if (!(AbstractDungeon.player instanceof GuardianCharacter)) {
 //             CardCrawlGame.sound.play("STANCE_ENTER_CALM");
-             sfxId = CardCrawlGame.sound.playAndLoop("EVENT_ANCIENT");
-
+            sfxId = CardCrawlGame.sound.playAndLoop("EVENT_ANCIENT");
+        }
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY, false), 0.05F, true));
-        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLDENROD, true));
+//        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLDENROD, true));
 
         if (AbstractDungeon.player instanceof GuardianCharacter) {
             ((GuardianCharacter) AbstractDungeon.player).switchToDefensiveMode();

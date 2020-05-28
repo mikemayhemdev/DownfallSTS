@@ -14,8 +14,8 @@
   "hexamod:Float": {
     "NAME": "浮动",
     "DESCRIPTION": "虚无 。 NL 抽一张牌。 NL hexamod:步进 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 抽一张牌。 NL 选择 hexamod:回退 或 hexamod:步进 。",
-    "EXTENDED_DESCRIPTION": ["hexamod:步进 。","hexamod:回退 。"]
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 抽一张牌。 NL 可选择 hexamod:回退 或 hexamod:步进 。",
+    "EXTENDED_DESCRIPTION": ["hexamod:步进 。","hexamod:回退 。","不动。"]
   },
   "hexamod:AdvancingGuard": {
     "NAME": "进阶防御",
@@ -264,7 +264,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !M! 层 hexamod:灼伤 。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !M! 层 hexamod:灼伤 。"
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
