@@ -28,5 +28,11 @@
       "Spin Wheel",
       "Spin the Wheel."
     ]
+  },
+  "downfall:AscensionText": {
+    "TEXT": [
+      "19. Bosses have an extra Relic.",
+      "20. Act 3 Boss has Lizard Tail and Magic Flower."
+    ]
   }
 }
