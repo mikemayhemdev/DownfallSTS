@@ -276,6 +276,6 @@
   },
   "sneckomod:Bewildered": {
     "NAME": "Bewildered",
-    "DESCRIPTION": "Unplayable. NL When drawn, randomize the cost of two cards in your hand."
+    "DESCRIPTION": "Unplayable. NL When you play a card, sneckomod:Muddle your hand, then discard this."
   }
 }

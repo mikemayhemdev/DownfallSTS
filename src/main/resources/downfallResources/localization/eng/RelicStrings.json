@@ -405,7 +405,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "At the start of each combat, add a Crystal Shiv to your hand."
+      "At the start of each turn, add a Crystal Shiv to your hand."
     ]
   },
   "downfall:RedIOU": {

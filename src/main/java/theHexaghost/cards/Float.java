@@ -32,6 +32,7 @@ public class Float extends AbstractHexaCard {
 
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         cardList.add(new OctoChoiceCard("octo:OctoRetract", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[1]));
+        cardList.add(new OctoChoiceCard("octo:OctoNothing", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[2]));
         cardList.add(new OctoChoiceCard("octo:OctoAdvance", this.name, HexaMod.makeCardPath("Float.png"), this.EXTENDED_DESCRIPTION[0]));
 
         return cardList;
@@ -45,13 +46,15 @@ public class Float extends AbstractHexaCard {
             case "octo:OctoRetract":
                 atb(new RetractAction());
                 break;
+            case "octo:OctoNothing":
+                break;
         }
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AnimateHopAction(p));
-        //atb(new DrawCardAction(1));
+        atb(new DrawCardAction(1));
         if (upgraded) {
             atb(new OctoChoiceFloat(this));
         } else {

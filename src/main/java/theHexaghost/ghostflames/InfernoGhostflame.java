@@ -67,8 +67,10 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
     }
 
+
     @Override
     public String returnHoverHelperText() {
+        int x = getEffectCount();
         int chargedFlames = 0;
         for (int j = GhostflameHelper.hexaGhostFlames.size() - 1; j >= 0; j--) {
             AbstractGhostflame gf = GhostflameHelper.hexaGhostFlames.get(j);
@@ -76,7 +78,20 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 chargedFlames++;
             }
         }
-        return (this.damage + "x" + Math.min(chargedFlames + 1,6));
+        if (charged){
+            return (x + "x" + chargedFlames);
+        } else {
+            return (x + "x" + (chargedFlames + 1));
+        }
+    }
+
+
+    public int getEffectCount(){
+        int x = damage;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        return x;
     }
 
     @Override
@@ -149,10 +164,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
         } else {
             s = s + DESCRIPTIONS[5];
         }
-        int x = damage;
-        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-        }
+        int x = getEffectCount();
         s = s + DESCRIPTIONS[6] + x + DESCRIPTIONS[7];
         if (GhostflameHelper.activeGhostFlame == this) {
             s = s + DESCRIPTIONS[8];

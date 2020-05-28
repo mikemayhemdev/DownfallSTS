@@ -40,22 +40,26 @@ public class DefensiveMode extends AbstractStance {
 
     @Override
     public void updateAnimation() {
-             if (!Settings.DISABLE_EFFECTS) {
+        if (!(AbstractDungeon.player instanceof GuardianCharacter)) {
+            if (!Settings.DISABLE_EFFECTS) {
 
-                   this.particleTimer -= Gdx.graphics.getDeltaTime();
-                   if (this.particleTimer < 0.0F) {
-                         this.particleTimer = 0.04F;
-                       AbstractDungeon.effectsQueue.add(new DefensiveModeStanceParticleEffect());
-                       }
+                this.particleTimer -= Gdx.graphics.getDeltaTime();
+                if (this.particleTimer < 0.0F) {
+                    this.particleTimer = 0.04F;
+                    AbstractDungeon.effectsQueue.add(new DefensiveModeStanceParticleEffect());
                 }
+            }
 
 
             this.particleTimer2 -= Gdx.graphics.getDeltaTime();
-             if (this.particleTimer2 < 0.0F) {
-                   this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
-                  AbstractDungeon.effectsQueue.add(new StanceAuraEffect("DefensiveMode"));
-                 }
+            if (this.particleTimer2 < 0.0F) {
+                this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
+                AbstractDungeon.effectsQueue.add(new StanceAuraEffect("DefensiveMode"));
+            }
+        }
     }
+
+
 
     @Override
     public void onEnterStance() {

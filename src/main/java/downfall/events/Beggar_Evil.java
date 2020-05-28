@@ -167,7 +167,7 @@ public class Beggar_Evil extends AbstractImageEvent {
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[6]);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 3));
-                        AbstractDungeon.player.gainGold(this.gold * 3);
+                        AbstractDungeon.player.gainGold(this.gold * 2);
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
                         this.screen = CurScreen.END;
                         this.imageEventText.setDialogOption(OPTIONS[5]);

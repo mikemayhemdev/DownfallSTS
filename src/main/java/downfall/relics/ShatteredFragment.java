@@ -23,7 +23,8 @@ public class ShatteredFragment extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 
-    public void atBattleStartPreDraw() {
+    @Override
+    public void atTurnStart() {
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.addToBot(new MakeTempCardInHandAction(new CrystalShiv(), 1, false));
     }

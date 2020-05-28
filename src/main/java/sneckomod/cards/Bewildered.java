@@ -4,9 +4,7 @@ package sneckomod.cards;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.EmptyDeckShuffleAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
+import sneckomod.actions.MuddleHandAction;
 import sneckomod.actions.MuddleRandomCardAction;
 
 
@@ -50,24 +49,10 @@ public class Bewildered extends CustomCard {
         
     }
 
-    @Override
-    public void triggerWhenDrawn() {
-        activateThisTurn = true;
-    }
-
-    @Override
-    public void atTurnStart() {
-        if (activateThisTurn) {
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    superFlash(Color.PURPLE);
-                    isDone = true;
-                }
-            });
-            AbstractDungeon.actionManager.addToBottom(new MuddleRandomCardAction(2));
-            activateThisTurn = false;
-        }
+    public void triggerOnOtherCardPlayed(AbstractCard c) {
+        AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new DiscardSpecificCardAction(this));
     }
 
     public AbstractCard makeCopy() {

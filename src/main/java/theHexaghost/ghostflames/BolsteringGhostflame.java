@@ -85,7 +85,16 @@ public class BolsteringGhostflame extends AbstractGhostflame {
 
     @Override
     public String returnHoverHelperText() {
-        return this.block + "";
+        int x = getEffectCount();
+        return x + "";
+    }
+
+    public int getEffectCount(){
+        int x = block;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        return x;
     }
 
     @Override
@@ -102,10 +111,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
         } else {
             s = s + DESCRIPTIONS[2];
         }
-        int x = block;
-        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-        }
+        int x = getEffectCount();
         s = s + DESCRIPTIONS[3] + x + DESCRIPTIONS[4];
         if (GhostflameHelper.activeGhostFlame == this) {
             s = s + DESCRIPTIONS[5];

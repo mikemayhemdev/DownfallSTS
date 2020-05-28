@@ -94,7 +94,17 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public String returnHoverHelperText() {
-        return this.magic + "";
+        int x = getEffectCount();
+        return x + "";
+    }
+
+
+    public int getEffectCount(){
+        int x = magic;
+        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        return x;
     }
 
     @Override
@@ -121,10 +131,7 @@ public class SearingGhostflame extends AbstractGhostflame {
         } else {
             s = s + DESCRIPTIONS[4];
         }
-        int x = magic;
-        if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-        }
+        int x = getEffectCount();
         s = s + DESCRIPTIONS[5] + x + DESCRIPTIONS[6];
         if (GhostflameHelper.activeGhostFlame == this) {
             s = s + DESCRIPTIONS[7];

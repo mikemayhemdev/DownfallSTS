@@ -260,6 +260,7 @@ public abstract class AbstractGhostflame {
 
             animAlphaBySlot[i] = 0F;
             useBrightTexture[i] = false;
+            update();
         }
     }
 
