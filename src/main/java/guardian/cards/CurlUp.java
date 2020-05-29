@@ -25,7 +25,7 @@ public class CurlUp extends AbstractGuardianCard {
     private static final int COST = 0;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 2;
+    private static final int BLOCK = 0;
     private static final int UPGRADE_BONUS = 3;
     private static final int MULTICOUNT = 0;
     private static final int SOCKETS = 0;
@@ -54,7 +54,7 @@ public class CurlUp extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        //if (upgraded) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
         super.useGems(p, m);
     }

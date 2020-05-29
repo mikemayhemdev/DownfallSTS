@@ -3,6 +3,7 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.actions.GrowthPunchAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 
@@ -34,35 +36,25 @@ public class GrowthPunch extends AbstractSlimeboundCard {
     public GrowthPunch() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.block = this.baseBlock = 4;
 
-        this.baseDamage = 7;
+        this.baseDamage = 4;
+
+        this.magicNumber = this.baseMagicNumber = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-    }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        int chainAmt = 0;
-        for (AbstractOrb orbBruh : AbstractDungeon.player.orbs) {
-            if (orbBruh instanceof SpawnedSlime)
-                chainAmt += magicNumber;
-        }
-        this.baseDamage = 7 + chainAmt;
-
-        if (chainAmt > 0) {
-            this.isDamageModified = true;
-        }
-        this.initializeDescription();
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, this.block));
+        AbstractDungeon.actionManager.addToBottom(new GrowthPunchAction(this,this.magicNumber));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
+            upgradeDamage(1);
+            upgradeBlock(1);
         }
     }
 }

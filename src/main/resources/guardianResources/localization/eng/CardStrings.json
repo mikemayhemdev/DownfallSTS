@@ -80,7 +80,7 @@
   },
   "Guardian:CurlUp": {
     "NAME": "Curl Up",
-    "DESCRIPTION": "Gain !B! Block. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Enter guardianmod:Defensive_Mode."
   },
   "Guardian:TimeBomb": {
     "NAME": "Time Bomb",

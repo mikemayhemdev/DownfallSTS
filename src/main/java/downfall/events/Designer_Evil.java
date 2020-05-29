@@ -55,7 +55,7 @@ public class Designer_Evil extends AbstractImageEvent {
             this.hpLoss = 8;
         }
 
-        this.imageEventText.setDialogOption(OPTIONS[4] + this.hpLoss + OPTIONS[5]);
+        this.imageEventText.setDialogOption(OPTIONS[4] + this.hpLoss + OPTIONS[5] + OPTIONSALT[6]);
         this.imageEventText.setDialogOption(OPTIONSALT[3]);
 
         int roll = MathUtils.random(2);

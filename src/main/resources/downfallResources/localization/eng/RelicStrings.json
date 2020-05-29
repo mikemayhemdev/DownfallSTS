@@ -3,7 +3,7 @@
     "NAME": "Neow's Blsesing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Replaces starter relic. NL Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b60 at the start of each Act. NL Draw #b2 less cards each turn. NL Lose ",
+      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b60 at the start of each Act. NL Draw #b2 less cards and lose ",
       " at the start of your turn."
     ]
   },

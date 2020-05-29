@@ -133,7 +133,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Damage increased by !M! for each Slime."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Increase this card's damage and Block by !M! for this combat."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
