@@ -78,6 +78,8 @@ public class downfallMod implements
         EditStringsSubscriber, EditKeywordsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
     public static final String modID = "downfall";
 
+
+
     public static boolean choosingBossRelic = false;
     public static boolean choosingRemoveCard = false;
     public static boolean choosingUpgradeCard = false;

@@ -20,12 +20,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.BobEffect;
+import sneckomod.SneckoMod;
 import theHexaghost.cards.Defend;
 import theHexaghost.cards.Float;
 import theHexaghost.cards.Sear;
@@ -192,6 +194,11 @@ public class TheHexaghost extends CustomPlayer {
             }
         }
         super.render(sb);
+    }
+
+    @Override
+    public Texture getCustomModeCharacterButtonImage() {
+        return ImageMaster.loadImage(HexaMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
     @Override

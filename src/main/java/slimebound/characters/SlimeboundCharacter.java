@@ -21,6 +21,8 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import guardian.GuardianMod;
+import slimebound.SlimeboundMod;
 import slimebound.cards.*;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
@@ -98,6 +100,11 @@ public class SlimeboundCharacter extends CustomPlayer {
         reloadAnimation();
 
 
+    }
+
+    @Override
+    public Texture getCustomModeCharacterButtonImage() {
+        return ImageMaster.loadImage(SlimeboundMod.getResourcePath("images/charSelect/leaderboard.png"));
     }
 
     @Override
