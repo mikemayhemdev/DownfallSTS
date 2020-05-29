@@ -1,5 +1,6 @@
 package guardian.characters;
 
+import TheGuardianChan.TheGuardianChan;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -42,19 +43,41 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public float renderscale = 2.5F;
+	public float renderscale2 = 3.0F;
+	
     private String atlasURL = "guardianResources/GuardianImages/char/skeleton.atlas";
     private String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
     private String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
+	
+	private String atlasURL2 = "TheGuardianChan/monsters/TheGuardianChan/Guardian.atlas";
+	private String jsonURL2 = "TheGuardianChan/monsters/TheGuardianChan/Guardian.json";
+		
     private String currentJson = jsonURL;
+	private String currentJson2 = jsonURL2;
+	
     private boolean inDefensive;
     private boolean inShattered;
 
     public GuardianCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
 
+        if(TheGuardianChan.GuardianOriginalAnimation){
+        this.initializeClass(null,
+                "guardianResources/GuardianImages/char/shoulder2.png",
+                "guardianResources/GuardianImages/char/shoulder.png",
+                "guardianResources/GuardianImages/char/corpse.png", this.getLoadout(),
+                0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
+        }else
+            {
+                this.initializeClass((String) null,
+                 "TheGuardianChan/img/GuardianMod/shoulder2.png",
+                 "TheGuardianChan/img/GuardianMod/shoulder.png",
+                 "TheGuardianChan/img/GuardianMod/corpse.png", this.getLoadout(),
+                  0.0F, -10F, 400.0F, 350.0F, new EnergyManager(3));
 
-        this.initializeClass(null, "guardianResources/GuardianImages/char/shoulder2.png", "guardianResources/GuardianImages/char/shoulder.png", "guardianResources/GuardianImages/char/corpse.png", this.getLoadout(), 0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
-        this.reloadAnimation();
+            }
+		
+		this.reloadAnimation();
 
 
     }
@@ -81,7 +104,11 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        this.loadAnimation(atlasURL, this.currentJson, renderscale);
+        if(TheGuardianChan.GuardianOriginalAnimation){
+            this.loadAnimation(atlasURL, this.currentJson, renderscale);
+        }else {
+            this.loadAnimation(atlasURL2, this.currentJson2, renderscale2);
+        }
         this.state.setAnimation(0, "idle", true);
 
 
@@ -94,28 +121,50 @@ public class GuardianCharacter extends CustomPlayer {
         this.state.setAnimation(0, "idle", true);
     }
 
-    public void switchToDefensiveMode() {
+
+    public void switchToDefensiveMode(){
         if (!inShattered) {
             if (!inDefensive) {
-                CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
-                this.stateData.setMix("idle", "defensive", 0.2F);
-                this.state.setTimeScale(.75F);
-                this.state.setAnimation(0, "defensive", true);
+                if(TheGuardianChan.GuardianOriginalAnimation){
+                    CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
+                    this.stateData.setMix("idle", "defensive", 0.2F);
+                    this.state.setTimeScale(.75F);
+                    this.state.setAnimation(0, "defensive", true);
 
-                inDefensive = true;
+                    inDefensive = true;
+                }else {
+                    CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
+                    reloadAnimation();
+                    this.state.setTimeScale(2.0F);
+                    this.state.setAnimation(0, "transition", false);
+                    this.state.addAnimation(0, "defensive", true,0.0f);
+//                    this.stateData.setMix("idle", "defensive", 0.2F);
+//                    this.state.setTimeScale(2.0F);
+//                    this.state.addAnimation(0, "defensive", true, 0.0F);
+
+                    inDefensive = true;}
             }
         }
     }
 
-    public void switchToOffensiveMode() {
+    public void switchToOffensiveMode(){
         if (!inShattered) {
             if (inDefensive) {
-                CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
-                this.stateData.setMix("defensive", "idle", 0.2F);
-                this.state.setTimeScale(.75F);
-                this.state.setAnimation(0, "idle", true);
+                if(TheGuardianChan.GuardianOriginalAnimation){
+                    CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
+                    this.stateData.setMix("defensive", "idle", 0.2F);
+                    this.state.setTimeScale(.75F);
+                    this.state.setAnimation(0, "idle", true);
 
-                inDefensive = false;
+                    inDefensive = false;
+                }else{
+                    CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
+                    this.stateData.setMix("defensive", "offensive", 0.1F);
+                    this.state.setTimeScale(.75F);
+                    this.state.setAnimation(0, "offensive", false);this.state.addAnimation(0, "idle", true, 0.0F);
+
+                    inDefensive = false;
+                }
             }
         } else {
             this.stateData.setMix("transition", "idle", 0.2F);
@@ -125,7 +174,7 @@ public class GuardianCharacter extends CustomPlayer {
         }
     }
 
-    public void switchToShatteredMode() {
+    public void switchToShatteredMode(){
         if (!inShattered) {
             if (inDefensive) {
                 this.stateData.setMix("defensive", "transition", 0.2F);
@@ -140,7 +189,6 @@ public class GuardianCharacter extends CustomPlayer {
             }
         }
     }
-
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList();
         //TODO - Starting deck goes here

@@ -1,0 +1,25 @@
+{
+  "TheGuardianChan:ReSkin": {
+    "TEXT": [
+      "Skin",
+      "Original",
+      "Guardian Chan",
+      "Original",
+      "Slaifu"
+    ]
+  },
+  "TheGuardianChan:NameGuardian": {
+    "TEXT": [
+      "수호자",
+      "끈적한슬라임"
+    ]
+  },
+  "TheGuardianChan:modSettings": {
+  "TEXT": [
+    "Remove mask of Hexaghost",
+    "Remove ghost Surround Hexaghost",
+    "Disable animated portrait--Guardian",
+    "Disable enemy's reskin"
+  ]
+}
+}
