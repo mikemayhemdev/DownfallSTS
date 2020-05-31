@@ -13,16 +13,29 @@ public class BossSetPatch {
     @SpirePostfixPatch
     public static void Postfix(AbstractDungeon __instance, String key) {
         if (EvilModeCharacterSelect.evilMode){
+            boolean nukeLooter = false;
+            boolean nukeLooter2 = false;
+
             for (String s : AbstractDungeon.monsterList) {
                 if (s == "Looter") {
-                    AbstractDungeon.monsterList.remove("Looter");
-                    AbstractDungeon.monsterList.add("downfall:LooterAlt");
+                    nukeLooter = true;
                 }
 
                 if (s == "2 Thieves") {
-                    AbstractDungeon.monsterList.remove("2 Thieves");
-                    AbstractDungeon.monsterList.add("downfall:LooterAlt2");
+                    nukeLooter2 = true;
                 }
+            }
+
+            if (nukeLooter){
+                AbstractDungeon.monsterList.remove("Looter");
+                AbstractDungeon.monsterList.add("downfall:LooterAlt");
+
+            }
+
+            if (nukeLooter2){
+                AbstractDungeon.monsterList.remove("2 Thieves");
+                AbstractDungeon.monsterList.add("downfall:LooterAlt2");
+
             }
 
         }

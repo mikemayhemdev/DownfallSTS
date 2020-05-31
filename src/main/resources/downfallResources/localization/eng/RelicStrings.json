@@ -471,5 +471,18 @@
       "Enemies in your first #b2 combats will flee in terror.",
       "This relic has been used up."
     ]
+  },
+  "downfall:replacements": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "During Merchant, Boss, and Elite combats, gain [E] at the start of your turn.",
+      "Cursed Coin",
+      "Few who still live know the true cost of this old coin...",
+      "MVB Card",
+      "Truly, you are the Heart's MVB: Most Valuable Boss.",
+      "The Heart's corruption knows no limits - not even precious pets.",
+      "Corrupted Courier"
+    ]
   }
 }

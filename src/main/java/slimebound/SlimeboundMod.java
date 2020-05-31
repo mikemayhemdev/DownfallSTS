@@ -296,11 +296,11 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public void receiveSetUnlocks() {
         if (!unlockEverything) {
             unlocks0 = new CustomUnlockBundle(
-                    RollThrough.ID, Chomp.ID, CheckThePlaybook.ID
+                    DivideAndConquer.ID, ServeAndProtect.ID, CheckThePlaybook.ID
             );
 
-            UnlockTracker.addCard(RollThrough.ID);
-            UnlockTracker.addCard(Chomp.ID);
+            UnlockTracker.addCard(DivideAndConquer.ID);
+            UnlockTracker.addCard(ServeAndProtect.ID);
             UnlockTracker.addCard(CheckThePlaybook.ID);
 
             unlocks1 = new CustomUnlockBundle(
@@ -472,7 +472,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new slimebound.cards.Grow());
         BaseMod.addCard(new slimebound.cards.Prepare());
         BaseMod.addCard(new slimebound.cards.Gluttony());
-        BaseMod.addCard(new slimebound.cards.UsefulSlime());
+        //BaseMod.addCard(new slimebound.cards.UsefulSlime());
         BaseMod.addCard(new RainOfGoop());
         BaseMod.addCard(new slimebound.cards.GoopSpray());
         BaseMod.addCard(new slimebound.cards.MassFeed());

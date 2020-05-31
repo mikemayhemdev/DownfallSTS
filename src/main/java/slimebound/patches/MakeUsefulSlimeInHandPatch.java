@@ -1,4 +1,6 @@
+/*
 package slimebound.patches;
+
 
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -26,5 +28,5 @@ public class MakeUsefulSlimeInHandPatch {
     }
 }
 
-
+*/
 
