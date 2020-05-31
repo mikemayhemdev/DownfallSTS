@@ -34,5 +34,24 @@
     "DIALOG": [
       ""
     ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Looter",
+    "DIALOG": [
+      "~Hey,~ you don't have any money!",
+      "@NOOOoooo!@",
+      "You're gonna die today, chump."
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Mugger",
+    "DIALOG": [
+      "Let's teach 'em a lesson.",
+      "Teach 'em all the way!"
+    ]
   }
 }

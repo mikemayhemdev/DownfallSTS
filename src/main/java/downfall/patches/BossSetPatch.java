@@ -12,6 +12,20 @@ public class BossSetPatch {
 
     @SpirePostfixPatch
     public static void Postfix(AbstractDungeon __instance, String key) {
+        if (EvilModeCharacterSelect.evilMode){
+            for (String s : AbstractDungeon.monsterList) {
+                if (s == "Looter") {
+                    AbstractDungeon.monsterList.remove("Looter");
+                    AbstractDungeon.monsterList.add("downfall:LooterAlt");
+                }
+
+                if (s == "2 Thieves") {
+                    AbstractDungeon.monsterList.remove("2 Thieves");
+                    AbstractDungeon.monsterList.add("downfall:LooterAlt2");
+                }
+            }
+
+        }
         if (__instance instanceof TheEnding && EvilModeCharacterSelect.evilMode) {
 
             AbstractDungeon.bossList.clear();

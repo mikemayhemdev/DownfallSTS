@@ -637,6 +637,17 @@ public class downfallMod implements
                         new GrowingTotem(),
                 }));
 
+        BaseMod.addMonster("downfall:LooterAlt", "Looter Evil", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new LooterAlt(0.0F, 0.0F)
+                }));
+
+        BaseMod.addMonster("downfall:LooterAlt2", "Looter Evil x2", () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new LooterAlt(-200.0F, 15.0F),
+                        new MuggerAlt(80.0F, 0.0F)
+                }));
+
         BaseMod.addMonster("downfall:CharBossIronclad", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
         BaseMod.addMonster("downfall:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
         BaseMod.addMonster("downfall:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
