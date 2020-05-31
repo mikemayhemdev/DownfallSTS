@@ -91,6 +91,21 @@ public class RelicOverrides {
         }
     }
 
+    @SpirePatch(
+            clz = Courier.class,
+            method = "setDescription"
+    )
+    public static class courierCollarDesc {
+        @SpirePrefixPatch
+        public static SpireReturn<String> Prefix() {
+            if (EvilModeCharacterSelect.evilMode) {
+                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[7]);
+
+            }
+            return SpireReturn.Continue();
+        }
+
+    }
 
 
 
