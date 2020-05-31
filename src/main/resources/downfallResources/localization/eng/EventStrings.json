@@ -500,7 +500,7 @@
       "The portal can always be repaired later. You pry the runed stone that powers the gateway, and quickly contemplate where to head next. The stone will only remain useful for a brief moment."
     ],
     "OPTIONS": [
-      "[Take Stone] Skip to any Room."
+      "[Take Stone] Skip to any non-Boss Room."
     ]
   },
   "downfall:TombRedMask": {

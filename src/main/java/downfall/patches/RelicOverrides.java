@@ -90,7 +90,7 @@ public class RelicOverrides {
 
         }
     }
-
+/*
     @SpirePatch(
             clz = Courier.class,
             method = "setDescription"
@@ -106,6 +106,7 @@ public class RelicOverrides {
         }
 
     }
+    */
 
 
 

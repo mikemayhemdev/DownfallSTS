@@ -294,6 +294,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     @Override
     public void receiveSetUnlocks() {
+        /*
         if (!unlockEverything) {
             unlocks0 = new CustomUnlockBundle(
                     DivideAndConquer.ID, ServeAndProtect.ID, CheckThePlaybook.ID
@@ -349,6 +350,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         }
 
+*/
     }
 
     public void clearUnlockBundles() {

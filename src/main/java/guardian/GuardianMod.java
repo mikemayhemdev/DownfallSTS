@@ -492,6 +492,7 @@ public static void saveData() {
     @Override
     public void receiveSetUnlocks() {
 
+        /*
         unlocks0 = new CustomUnlockBundle(
                 ShieldCharger.ID, Orbwalk.ID, FierceBash.ID
         );
@@ -523,6 +524,7 @@ public static void saveData() {
         unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
                 GemstoneGun.ID, PocketSentry.ID, BottledAnomaly.ID
         );
+
         UnlockTracker.addRelic(GemstoneGun.ID);
         UnlockTracker.addRelic(PocketSentry.ID);
         UnlockTracker.addRelic(BottledAnomaly.ID);
@@ -536,7 +538,7 @@ public static void saveData() {
         BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
 
         BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
-
+*/
     }
 
     public void clearUnlockBundles() {

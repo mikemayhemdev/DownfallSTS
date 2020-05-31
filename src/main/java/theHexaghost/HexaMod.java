@@ -245,7 +245,7 @@ public class HexaMod implements
 
     @Override
     public void receiveSetUnlocks() {
-
+/*
         unlocks0 = new CustomUnlockBundle(
                 GiftsFromTheDead.ID, PowerFromBeyond.ID, FlamesFromBeyond.ID
         );
@@ -290,7 +290,7 @@ public class HexaMod implements
         BaseMod.addUnlockBundle(unlocks3, TheHexaghost.Enums.THE_SPIRIT, 3);
 
         BaseMod.addUnlockBundle(unlocks4, TheHexaghost.Enums.THE_SPIRIT, 4);
-
+*/
     }
 
 

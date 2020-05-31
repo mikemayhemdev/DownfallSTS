@@ -261,7 +261,7 @@ public class SneckoMod implements
 
     @Override
     public void receiveSetUnlocks() {
-
+/*
         unlocks0 = new CustomUnlockBundle(
                 Cheat.ID, PureSnecko.ID, Rotation.ID
         );
@@ -306,7 +306,7 @@ public class SneckoMod implements
         BaseMod.addUnlockBundle(unlocks3, TheSnecko.Enums.THE_SNECKO, 3);
 
         BaseMod.addUnlockBundle(unlocks4, TheSnecko.Enums.THE_SNECKO, 4);
-
+*/
     }
 
     public void addPotions() {

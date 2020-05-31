@@ -39,11 +39,15 @@ public class PostBossHeartChatPatch {
                     SlimeboundMod.logger.info("heart chat patch hit create act 1");
                     heart = new CustomAnimatedNPC(1600.0F * Settings.scale, AbstractDungeon.floorY + 300.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0, false, 0.75F);
                     behindPlayerPortal = new CustomAnimatedNPC(AbstractDungeon.player.hb.cX + (450F * Settings.scale), AbstractDungeon.player.hb.cY, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 1, true, 1F);
+                    heart.changeBorderColor(Color.MAROON);
+                    behindPlayerPortal.changeBorderColor(Color.MAROON);
                 }
                 if (AbstractDungeon.actNum == 2 && EvilModeCharacterSelect.evilMode) {
                     SlimeboundMod.logger.info("heart chat patch hit create act 2");
                     heart = new CustomAnimatedNPC(1600.0F * Settings.scale, AbstractDungeon.floorY + 300.0F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0, false, 0.75F);
                     behindPlayerPortal = new CustomAnimatedNPC(AbstractDungeon.player.hb.cX + (450F * Settings.scale), AbstractDungeon.player.hb.cY, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true, 0, true, 1F);
+                    heart.changeBorderColor(Color.MAROON);
+                    behindPlayerPortal.changeBorderColor(Color.MAROON);
 
                 }
             }

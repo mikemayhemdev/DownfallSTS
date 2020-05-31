@@ -459,7 +459,7 @@
     "NAME": "Teleport Stone",
     "FLAVOR": "Never leave home without it.",
     "DESCRIPTIONS": [
-      "You may skip any number of rooms the next time you move.",
+      "You may skip any number of rooms the next time you move, but cannot move into a Boss Room.",
       "",
       "This relic has been used up."
     ]
