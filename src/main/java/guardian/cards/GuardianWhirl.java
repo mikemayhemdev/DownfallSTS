@@ -2,17 +2,21 @@ package guardian.cards;
 
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ChangeStateAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import guardian.stances.DefensiveMode;
 
 
 public class GuardianWhirl extends AbstractGuardianCard {
@@ -24,7 +28,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 1;
@@ -43,6 +47,15 @@ public class GuardianWhirl extends AbstractGuardianCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (p.stance instanceof DefensiveMode) {
+            return super.canUse(p, m);
+        } else {
+            return false;
+        }
+
+    }
 
     public GuardianWhirl() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
@@ -52,24 +65,27 @@ public class GuardianWhirl extends AbstractGuardianCard {
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
 
-        this.multihit = MULTICOUNT;
+        this.magicNumber = this.baseMagicNumber = MULTICOUNT;
         this.isMultiDamage = true;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-
+        this.exhaust = true;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_WHIRLWIND"));
-        for (int i = 0; i < MULTICOUNT; i++) {
+        for (int i = 0; i < this.magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
 
             AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new CleaveEffect(), 0.05F));
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect.NONE));
+
         }
         this.useGems(p, m);
     }
@@ -81,12 +97,9 @@ public class GuardianWhirl extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+            upgradeDamage(1);
+            upgradeMagicNumber(1);
 
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
             this.updateDescription();
         }
 

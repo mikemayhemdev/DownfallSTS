@@ -24,7 +24,7 @@ public class Suspension extends AbstractGuardianCard {
     private static final int COST = 0;
 
     //TUNING CONSTANTS
-    private static final int SOCKETS = 0;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -39,6 +39,9 @@ public class Suspension extends AbstractGuardianCard {
 
     public Suspension() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
+        this.socketCount = SOCKETS;
+        updateDescription();
+        loadGemMisc();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -46,7 +49,7 @@ public class Suspension extends AbstractGuardianCard {
         if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         AbstractDungeon.actionManager.addToBottom(new PlaceCardsInHandIntoStasisAction(p, 1));
-
+        super.useGems(p, m);
     }
 
     public AbstractCard makeCopy() {

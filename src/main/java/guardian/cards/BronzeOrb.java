@@ -58,10 +58,22 @@ public class BronzeOrb extends AbstractGuardianCard {
         this.isInnate = true;
         this.exhaust = true;
         this.socketCount = SOCKETS;
+        this.tags.add(GuardianMod.BEAM);
         updateDescription();
         loadGemMisc();
 
     }
+
+    @Override
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        return tmp + calculateBeamDamage();
+    }
+
+    @Override
+    public float calculateModifiedCardDamage(AbstractPlayer player, float tmp) {
+        return tmp + calculateBeamDamage();
+    }
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);

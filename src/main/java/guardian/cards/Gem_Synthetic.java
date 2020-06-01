@@ -49,6 +49,7 @@ public class Gem_Synthetic extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = SYNTHETIC;
+        this.cardsToPreview = new CrystalShiv();
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

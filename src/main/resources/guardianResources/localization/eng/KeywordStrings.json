@@ -44,7 +44,7 @@
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",
-    "DESCRIPTION": "Reduce the turn counter of a card in #yStasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
+    "DESCRIPTION": "Reduce the turn counter of the right-most card in #yStasis by #b1. If the card's turn counter is now #b0, return it to your hand. It costs #b0 until played."
   },
   {
     "NAMES": [

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
+import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
 import theHexaghost.powers.BurnPower;
 
@@ -20,7 +21,7 @@ public class Incinerate extends AbstractGuardianCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/incinerate.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
@@ -65,7 +66,7 @@ public class Incinerate extends AbstractGuardianCard {
         //AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new BurnPower(m, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction(false));
 
         super.useGems(p, m);
 

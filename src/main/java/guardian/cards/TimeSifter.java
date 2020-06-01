@@ -21,7 +21,7 @@ public class TimeSifter extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_COST = 1;
@@ -58,7 +58,10 @@ public class TimeSifter extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            this.isInnate = true;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+
+            this.updateDescription();
         }
     }
 

@@ -26,7 +26,7 @@ public class Planning extends AbstractGuardianCard {
     //TUNING CONSTANTS
     private static final int CARDS = 2;
     private static final int UPGRADE_CARDS = 1;
-    private static final int SOCKETS = 0;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -53,7 +53,6 @@ public class Planning extends AbstractGuardianCard {
         super.use(p, m);
 
         AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction(this.magicNumber));
-
 
         super.useGems(p, m);
     }

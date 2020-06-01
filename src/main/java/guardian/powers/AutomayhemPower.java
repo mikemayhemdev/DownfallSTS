@@ -42,9 +42,9 @@ public class AutomayhemPower extends AbstractGuardianPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        super.atEndOfTurn(isPlayer);
-        if (isPlayer) {
+    public void atStartOfTurnPostDraw() {
+        super.atStartOfTurnPostDraw();
+
             if (AbstractDungeon.player.orbs.size() > 0) {
 
                 for (int i = 0; i < this.amount; i++) {
@@ -53,6 +53,7 @@ public class AutomayhemPower extends AbstractGuardianPower {
                 }
 
             }
-        }
+
     }
+
 }
