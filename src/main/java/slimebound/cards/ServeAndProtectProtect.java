@@ -36,7 +36,7 @@ public class ServeAndProtectProtect extends AbstractSlimeboundCard {
     }
 
     public ServeAndProtectProtect() {
-        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
+        super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
         this.baseBlock = 8;

@@ -35,23 +35,14 @@
     "NAME": "Replication",
     "DESCRIPTION": "Choose a card in your hand. Add a copy of that card to your hand. NL Exhaust."
   },
-  "Slimebound:AbsorbAll": {
-    "NAME": "Absorption",
-    "DESCRIPTION": "slimeboundmod:Absorb all of your spawned Slimes. Gain 3 Block per slime slimeboundmod:Absorbed."
-  },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all of your spawned slimes. NL Exhaust."
+    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
   },
   "Slimebound:Split": {
     "NAME": "Split",
     "DESCRIPTION": "slimeboundmod:Split into a random slime. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Split into !M! random slimes. NL Exhaust."
-  },
-  "Slimebound:SuperSplit": {
-    "NAME": "Super Split",
-    "DESCRIPTION": "Gain X Slime slots. NL slimeboundmod:Split into a random slime X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL slimeboundmod:Split into a random slime X+1 times. NL Exhaust."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
@@ -60,20 +51,21 @@
   },
   "Slimebound:SlimeTap": {
     "NAME": "Slime Tap",
-    "DESCRIPTION": "slimeboundmod:Absorb your leading Slime. Gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb your 2 leading Slimes. Gain [E] [E] and draw 2 cards for each slimeboundmod:Absorbed. NL Exhaust.",
+    "DESCRIPTION": "slimeboundmod:Absorb - Gain [E] [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb Twice - Gain [E] [E] and draw 2 cards for each slimeboundmod:Absorbed. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Need... slimes..."
     ]
   },
   "Slimebound:Teamwork": {
     "NAME": "Teamwork",
-    "DESCRIPTION": "Gain !B! Block X times. NL Gain X slimeboundmod:Potency. NL slimeboundmod:Command X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X+1 times. NL Gain X+1 slimeboundmod:Potency. NL slimeboundmod:Command X+1 times. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Command X times. NL Gain !B! Block X times.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Command X+1 times. NL Gain !B! Block X+1 times."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Pile On!",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes twice."
   },
   "Slimebound:MaxSlimes": {
     "NAME": "Make Some Room",
@@ -108,8 +100,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Dissolve",
-    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random slimeboundmod:Lick cards to your hand equal to it's cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of random slimeboundmod:Lick cards to your hand equal to it's cost plus 1. NL Exhaust."
+    "DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to it's cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw a card, then Exhaust a card in your hand. Add a number of *Licks to your hand equal to it's cost plus 1. NL Exhaust."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Duplicated Form",
@@ -128,7 +120,7 @@
     ]
   },
   "Slimebound:FormOfPuddle": {
-    "NAME": "Form of Puddle",
+    "NAME": "Shape of Puddle",
     "DESCRIPTION": "Gain 1 Intangible. NL Exhaust."
   },
   "Slimebound:GrowthPunch": {
@@ -146,7 +138,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb your leading Slime. NL If you do, gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb - Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -154,23 +146,11 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP for each slimeboundmod:Absorbed. NL Exhaust."
-  },
-  "Slimebound:SoTasty": {
-    "NAME": "SO TASTY!",
-    "DESCRIPTION": "Deal !D! damage to a random enemy X times. Add X random slimeboundmod:Lick cards to your hand. NL Exhaust."
-  },
-  "Slimebound:Regenerate": {
-    "NAME": "Regenerate",
-    "DESCRIPTION": "Gain !M! Regen. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Regen. NL Draw a card. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Need... Regeneration..."
-    ]
+    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP for each slimeboundmod:Absorbed. NL Exhaust."
   },
   "Slimebound:Lick": {
     "NAME": "Lick",
-    "DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
   },
   "Slimebound:HauntingLick": {
@@ -190,26 +170,22 @@
   },
   "Slimebound:Gluttony": {
     "NAME": "Gluttony",
-    "DESCRIPTION": "The first time you slimeboundmod:Consume each turn, add a random slimeboundmod:Lick card to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you slimeboundmod:Consume each turn, add a random slimeboundmod:Lick card to your hand."
+    "DESCRIPTION": "The first time you slimeboundmod:Consume each turn, add a *Lick to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you slimeboundmod:Consume each turn, add a *Lick to your hand."
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Press the Attack",
     "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - slimeboundmod:Command twice."
   },
-  "Slimebound:StrikeFrailPoint": {
-    "NAME": "Cull the Frail",
-    "DESCRIPTION": "If the enemy is Frail, remove all of their Block, then remove 1 Frail. NL Deal !D! damage."
-  },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your slimeboundmod:Lick cards (including Exhausted cards)."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your cards containing \"Lick\" (including Exhausted cards)."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a random slimeboundmod:Lick to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a random slimeboundmod:Lick to your hand."
+    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Add a *Lick to your hand."
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
@@ -229,8 +205,8 @@
   },
   "Slimebound:Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "Gain !B! Block. NL On your next turn, gain [E] [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] and draw !M! cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
   },
   "Slimebound:Grow": {
     "NAME": "Grow",
@@ -243,7 +219,7 @@
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Finishing Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. slimeboundmod:Consume - Gain !B! Block."
   },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
@@ -256,7 +232,7 @@
   "Slimebound:ComboTackle": {
     "NAME": "Combo Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card for each Attack played this turn (Draws !M! cards)."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw !M! cards."
   },
   "Slimebound:Tackle": {
     "NAME": "Tackle",
@@ -273,7 +249,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "Chomp",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand by 1 this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
@@ -282,10 +259,6 @@
   "Slimebound:FlameTackle": {
     "NAME": "Flame Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Tackles deal !M! more damage this combat."
-  },
-  "Slimebound:UsefulSlime": {
-    "NAME": "Useful Slime!",
-    "DESCRIPTION": "Draw 2 Cards. NL Exhaust."
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Rain of Goop",
@@ -316,19 +289,11 @@
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",
-    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL This card is played twice if below half of max HP. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL slimeboundmod:Consume - Play this twice. NL Exhaust."
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "Disrupting Slam",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Weak to each enemy that intends to attack."
-  },
-  "Slimebound:ChargeUp": {
-    "NAME": "Charge Up",
-    "DESCRIPTION": "On your next turn, gain !B! Block and !M! Strength. NL Exhaust."
-  },
-  "Slimebound:GuardianWhirl": {
-    "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies 3 times. NL Exhaust."
   },
   "Slimebound:DefensiveMode": {
     "NAME": "Defensive Mode",
@@ -336,8 +301,8 @@
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
-    "DESCRIPTION": "On your next turn, gain [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "On your next turn, gain [E] [E] [E] [E] and !M! Strength, and add SLIME CRUSH to your hand. NL Exhaust."
+    "DESCRIPTION": "Next turn, gain [E] [E] [E] and !M! Strength, and add Slime Crush to your hand.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] [E] and !M! Strength, and add Slime Crush to your hand."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "SLIME CRUSH!!!",
@@ -397,8 +362,8 @@
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Special Slimes to slimeboundmod:Split into. NL slimeboundmod:Command.  NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL slimeboundmod:Command.  NL Exhaust."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
@@ -415,11 +380,11 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has slimeboundmod:Goop, it is not removed by this attack."
+    "DESCRIPTION": "Deal !D! damage. NL Does not remove slimeboundmod:Goop."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL Whenever you slimeboundmod:Split, return this from your exhaust pile to your hand. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, place this in your hand (wherever it is)."
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
@@ -438,5 +403,9 @@
     "NAME": "Nibble",
     "DESCRIPTION": "Deal !D! damage. NL Add a random 0-cost card to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Add a random Upgraded 0-cost card to your hand. NL Exhaust."
+  },
+  "Slimebound:Schlurp": {
+    "NAME": "Schlurp",
+    "DESCRIPTION": "Add !M! *Licks to your hand."
   }
 }

@@ -36,7 +36,7 @@ public class Dissolve extends AbstractSlimeboundCard {
 
     public Dissolve() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-
+        this.cardsToPreview = new Lick();
 
         this.baseBlock = 7;
         this.exhaust = true;

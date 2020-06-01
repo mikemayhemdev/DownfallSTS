@@ -37,8 +37,8 @@ public class Teamwork extends AbstractSlimeboundCard {
 
     public Teamwork() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseBlock = 3;
-        this.exhaust = true;
+        baseBlock = 5;
+        //this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

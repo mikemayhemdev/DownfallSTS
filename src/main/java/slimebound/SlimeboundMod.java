@@ -416,8 +416,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new BronzeBeam());
         BaseMod.addCard(new LevelUp());
         BaseMod.addCard(new SplitBruiser());
-        BaseMod.addCard(new SplitTorchHead());
-        BaseMod.addCard(new SplitCultist());
         BaseMod.addCard(new SplitAcid());
         BaseMod.addCard(new SplitLeeching());
         BaseMod.addCard(new SplitLicking());
@@ -487,7 +485,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new slimebound.cards.CorrosiveSpit());
         BaseMod.addCard(new PrepareCrush());
         BaseMod.addCard(new slimebound.cards.SlimeCrush());
-        BaseMod.addCard(new SplitGhostflame());
 
         BaseMod.addCard(new slimebound.cards.Tackle());
         //BaseMod.addCard(new zzzSlimepotheosis());
@@ -503,6 +500,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         BaseMod.addCard(new SplitSpecialist());
         BaseMod.addCard(new Darklings());
+        BaseMod.addCard(new Schlurp());
         BaseMod.addCard(new SlimeSlap());
         BaseMod.addCard(new OneTwoCombo());
         BaseMod.addCard(new ForwardTackle());
@@ -519,10 +517,9 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         UnlockTracker.unlockCard(BronzeBeam.ID);
         UnlockTracker.unlockCard(LevelUp.ID);
         UnlockTracker.unlockCard(Tackle.ID);
+        UnlockTracker.unlockCard(Schlurp.ID);
         UnlockTracker.unlockCard(Icky.ID);
-        UnlockTracker.unlockCard(SplitTorchHead.ID);
         UnlockTracker.unlockCard(SplitBruiser.ID);
-        UnlockTracker.unlockCard(SplitCultist.ID);
         UnlockTracker.unlockCard(SplitLeeching.ID);
         UnlockTracker.unlockCard(SplitAcid.ID);
         UnlockTracker.unlockCard(SplitLicking.ID);

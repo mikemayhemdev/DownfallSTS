@@ -16,7 +16,7 @@ public class ExhaustToHandDirectlyAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 19
-            if (AbstractDungeon.player.exhaustPile.contains(this.card) && AbstractDungeon.player.hand.size() < 10) {// 20 21
+            if ((AbstractDungeon.player.exhaustPile.contains(this.card) || AbstractDungeon.player.drawPile.contains(this.card) || AbstractDungeon.player.discardPile.contains(this.card)) && AbstractDungeon.player.hand.size() < 10) {// 20 21
                 AbstractDungeon.player.hand.addToHand(this.card);// 22
                 this.card.unhover();// 23
                 this.card.setAngle(0.0F, true);// 24

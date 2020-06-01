@@ -36,7 +36,7 @@ public class OneTwoCombo extends AbstractSlimeboundCard {
 
     public OneTwoCombo() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseDamage = 6;
+        baseDamage = 3;
         exhaust = true;
     }
 

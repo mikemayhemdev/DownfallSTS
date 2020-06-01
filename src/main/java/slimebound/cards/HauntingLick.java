@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -56,13 +57,12 @@ public class HauntingLick extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-
         AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(m.hb.cX, m.hb.cY, 3));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(ROYAL)), 0.1F));
 
-        //if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        if (upgraded) addToBot(new DrawCardAction(1));
 
 
     }
@@ -79,8 +79,8 @@ public class HauntingLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
-            upgradeSlimed(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }

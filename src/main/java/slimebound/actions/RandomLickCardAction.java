@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import slimebound.SlimeboundMod;
+import slimebound.cards.Lick;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,6 +26,7 @@ public class RandomLickCardAction extends AbstractGameAction {
 
     public void update() {
 
+        /*
         ArrayList<String> tmp = new ArrayList();
         Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
@@ -40,8 +42,10 @@ public class RandomLickCardAction extends AbstractGameAction {
         if (this.upgradeCard) {
             cLick.upgrade();
         }
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cLick));
+*/
+        AbstractCard c = new Lick();
+        if (upgradeCard) c.upgrade();
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
         this.isDone = true;
     }
 

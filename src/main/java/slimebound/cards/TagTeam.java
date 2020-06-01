@@ -44,34 +44,14 @@ public class TagTeam extends AbstractSlimeboundCard {
 
     public TagTeam() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseDamage = 14;
+        baseDamage = 12;
         baseMagicNumber = magicNumber = 3;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        ArrayList<Integer> orbs = new ArrayList<>();
-        orbs.add(1);
-        orbs.add(2);
-        orbs.add(3);
-        orbs.add(4);
-        Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
-        switch (o) {
-            case 1:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
-                break;
-            case 2:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
-                break;
-            case 3:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
-                break;
-            case 4:
-                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
-                break;
-        }
         for (int i = 0; i < this.magicNumber; i++) {
             addToBot(new CommandAction());
         }
@@ -84,7 +64,7 @@ public class TagTeam extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
         }
     }

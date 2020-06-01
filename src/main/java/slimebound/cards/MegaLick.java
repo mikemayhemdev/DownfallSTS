@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -75,7 +76,7 @@ public class MegaLick extends AbstractSlimeboundCard {
 
                 }
             }
-            //if (upgraded)   AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+            if (upgraded)   AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
         }
 
@@ -94,8 +95,8 @@ public class MegaLick extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeMagicNumber(1);
-            upgradeSlimed(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

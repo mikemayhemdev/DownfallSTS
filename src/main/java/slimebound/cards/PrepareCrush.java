@@ -43,7 +43,8 @@ public class PrepareCrush extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.exhaust = true;
+        //this.exhaust = true;
+        this.cardsToPreview = new SlimeCrush();
         this.magicNumber = this.baseMagicNumber = 3;
     }
 

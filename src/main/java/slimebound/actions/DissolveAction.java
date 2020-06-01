@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import slimebound.SlimeboundMod;
+import slimebound.cards.Lick;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -120,6 +121,13 @@ public class DissolveAction extends AbstractGameAction {
             return;
         }
 
+        for (int i = 0; i < (this.extraCards); i++) {
+            AbstractCard c = new Lick();
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+
+        }
+
+        /*
         ArrayList<String> tmp = new ArrayList();
         Iterator var3 = CardLibrary.cards.entrySet().iterator();
 
@@ -147,6 +155,7 @@ public class DissolveAction extends AbstractGameAction {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cZero));
 
         }
+        */
         /*
         if (c.rarity == AbstractCard.CardRarity.UNCOMMON) {
             AbstractDungeon.actionManager.addToBottom(new HealAction(p,p,this.blockUnc));

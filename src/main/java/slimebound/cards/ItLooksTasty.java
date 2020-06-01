@@ -21,7 +21,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/itlookstasty.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
@@ -44,7 +44,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 8;
-
+        this.cardsToPreview = new Lick();
 
     }
 

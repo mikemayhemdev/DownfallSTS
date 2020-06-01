@@ -22,7 +22,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/slimeslap.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
@@ -54,7 +54,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(3);
         }
     }
 }

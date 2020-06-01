@@ -25,7 +25,7 @@ public class FinishingTackle extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/finishingtackle.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
@@ -43,7 +43,7 @@ public class FinishingTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
         tags.add(SlimeboundMod.GOOPEXPLOIT);
-        this.baseDamage = 16;
+        this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
         this.baseBlock = 10;
     }
@@ -63,8 +63,8 @@ public class FinishingTackle extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
-            upgradeBlock(2);
+            upgradeDamage(3);
+            upgradeBlock(3);
         }
     }
 }

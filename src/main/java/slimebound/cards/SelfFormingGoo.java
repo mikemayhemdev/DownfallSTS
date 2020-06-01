@@ -51,8 +51,8 @@ public class SelfFormingGoo extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            isInnate = true;
-            rawDescription = UPGRADED_DESCRIPTION;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
     }

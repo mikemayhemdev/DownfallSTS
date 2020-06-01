@@ -23,7 +23,7 @@ public class Overexert extends AbstractSlimeboundCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/knowledgepool.png";
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
@@ -43,8 +43,6 @@ public class Overexert extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust = true;
-
 
     }
 
@@ -56,8 +54,8 @@ public class Overexert extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 4), 4));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
-        addToBot(new CommandAction());
-        addToBot(new CommandAction());
+        //addToBot(new CommandAction());
+        //addToBot(new CommandAction());
 
     }
 

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -50,7 +51,7 @@ public class Chomp extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = originalDamage = 9;
+        this.baseDamage = originalDamage = 7;
         upgradeDamage = 2;
         // this.exhaust = true;
 
@@ -77,7 +78,13 @@ public class Chomp extends AbstractSlimeboundCard {
                     }
                 }
                 if (!tackleList.isEmpty()) {
-                    addToTop(new ReduceCostAction(tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1))));
+                    if (upgraded){
+                        tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1)).modifyCostForCombat(-9);
+
+
+                    } else {
+                        addToTop(new ReduceCostForTurnAction(tackleList.get(AbstractDungeon.cardRandomRng.random(tackleList.size() - 1)), 9));
+                    }
                 }
             }
         });
@@ -96,6 +103,8 @@ public class Chomp extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(upgradeDamage);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
 
         }

@@ -55,11 +55,8 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
         AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
-        if (AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID)) {
-            for (int i = 0; i < AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount; i++) {
-                AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
-            }
-        }
+        if (upgraded)
+            AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
 
     }
 
@@ -74,8 +71,10 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
-            upgradeBaseCost(1);
+
 
         }
 

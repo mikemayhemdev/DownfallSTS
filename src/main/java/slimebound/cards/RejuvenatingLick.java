@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -77,7 +78,8 @@ public class RejuvenatingLick extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new LickEffect(m.hb.cX, m.hb.cY, 0.6F, new Color(Color.PURPLE)), 0.1F));
 
         AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber));
-        // if (upgraded) AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+
+        if (upgraded) addToBot(new DrawCardAction(1));
 
     }
 
@@ -92,9 +94,8 @@ public class RejuvenatingLick extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-
-            upgradeSlimed(2);
-            upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
 

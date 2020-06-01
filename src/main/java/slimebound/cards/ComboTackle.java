@@ -49,20 +49,15 @@ public class ComboTackle extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-        if (upgraded) {
-            for (int i = 0; i < SlimeboundMod.attacksPlayedThisTurn; i++) {
-                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
 
-            }
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-        }
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeDamage(2);
+            upgradeMagicNumber(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
         }

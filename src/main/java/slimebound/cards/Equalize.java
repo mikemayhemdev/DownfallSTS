@@ -15,6 +15,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.SlimedPower;
 
 
 public class Equalize extends AbstractSlimeboundCard {
@@ -59,7 +60,7 @@ public class Equalize extends AbstractSlimeboundCard {
 
 
         logger.info("max health: " + p.maxHealth + ", current health: " + p.currentHealth);
-        if (p.currentHealth <= (p.maxHealth / 2F) && !this.isACopy) {
+        if (m.hasPower(SlimedPower.POWER_ID) && !this.isACopy) {
             //this.isACopy = true;
             AbstractCard tmp = this.makeStatEquivalentCopy();
             Equalize tmpEq = (Equalize) tmp;
