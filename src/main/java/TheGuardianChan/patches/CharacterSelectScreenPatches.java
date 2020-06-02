@@ -2,14 +2,17 @@ package TheGuardianChan.patches;
 
 import TheGuardianChan.TheGuardianChan;
 
+import TheGuardianChan.helpers.PortraitHexaghostOrb;
+import TheGuardianChan.vfx.PortraitScreenOnFireEffect;
+import TheGuardianChan.vfx.PortraitWhirlwindEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -20,12 +23,15 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 import guardian.GuardianMod;
-import guardian.characters.GuardianCharacter;
+
 import slimebound.SlimeboundMod;
 
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,6 +54,32 @@ public class CharacterSelectScreenPatches
     private static float X_fixed = 30.0f *Settings.scale;
 
     public static Field charInfoField;
+
+//    Guardian var
+    private static float guardianSFX_timer = 12.0f;
+    private static boolean guardianWhirl_played = false;
+
+//    Hexaghost var
+    private static ArrayList<PortraitHexaghostOrb> orbs = new ArrayList();
+    private static final String ACTIVATE_STATE = "Activate";
+    private static final String ACTIVATE_ORB = "Activate Orb";
+    private static final String DEACTIVATE_ALL_ORBS = "Deactivate";
+    private static int orbActiveCount = 0;
+
+    private static final Float ghostFireTimer_time = 1.0f;
+    private static final Float giantGhostFireTimer_time = 3.0f;
+    private static final Float ghostFireDeactivate_time = 0.5f;
+    private static float ghostFireTimer = ghostFireTimer_time;
+    private static boolean giantGhostFire = false;
+    private static float giantGhostFireTimer = giantGhostFireTimer_time;
+
+    public static Hitbox hexaghostMask;
+    public static boolean hexaghostMask_switch = true;//true for take on
+
+    public static ArrayList<AbstractGameEffect> char_effectsQueue = new ArrayList();;
+    public static ArrayList<AbstractGameEffect> char_effectsQueue_toRemove = new ArrayList();;
+
+
 
 
 //    portrait img
@@ -76,14 +108,16 @@ public class CharacterSelectScreenPatches
     private static Texture sneckoTexture2 =  ImageMaster.loadImage(TheGuardianChan.assetPath("img/SneckoMod/portrait_waifu2.png"));
 
 
-    private static TextureAtlas portraitAtlas = null ;
-    private static Skeleton portraitSkeleton;
-    private static AnimationState portraitState ;
-    private static AnimationStateData portraitStateData;
-    private static SkeletonData portraitData;
+//portrait Skeleton
+    public static TextureAtlas portraitAtlas = null ;
+    public static Skeleton portraitSkeleton;
+    public static AnimationState portraitState ;
+    public static AnimationStateData portraitStateData;
+    public static SkeletonData portraitData;
 
     private static Map<Integer, String> characterOptionNames;
     private static Map<Integer, String> portraitAtlasMaps;
+
 
     static{
         characterOptionNames = new HashMap<>();
@@ -97,10 +131,11 @@ public class CharacterSelectScreenPatches
 
         portraitAtlasMaps.put( 0 ,TheGuardianChan.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
         portraitAtlasMaps.put( 1 ,TheGuardianChan.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
-        portraitAtlasMaps.put( 2 ,TheGuardianChan.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
+        portraitAtlasMaps.put( 2 ,TheGuardianChan.assetPath("img/HexaghostMod/animation/Hexaghost_portrait"));
         portraitAtlasMaps.put( 3 ,TheGuardianChan.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
 
     }
+
 
     @SpirePatch(clz = CharacterSelectScreen.class, method = "initialize")
     public static class CharacterSelectScreenPatch_Initialize
@@ -109,16 +144,26 @@ public class CharacterSelectScreenPatches
         public static void Postfix(CharacterSelectScreen __instance)
         {
             // Called when you first open the screen, create hitbox for each button
+
+            char_effectsQueue.clear();
+
             reskinRight = new Hitbox(reskin_RIGHT_W - 10.0F * Settings.scale + X_fixed, 50.0F * Settings.scale);
             reskinLeft = new Hitbox(reskin_RIGHT_W - 10.0F * Settings.scale + X_fixed, 50.0F * Settings.scale);
             reskinRight.move(Settings.WIDTH / 2.0F - reskin_RIGHT_W / 2.0F - 550.0F * Settings.scale + 16.0f*Settings.scale + X_fixed, 800.0F * Settings.scale);
             reskinLeft.move(Settings.WIDTH / 2.0F - reskin_LEFT_W / 2.0F - 800.0F * Settings.scale + 16.0f*Settings.scale + X_fixed, 800.0F * Settings.scale);
 
-            if(!disablePortraitAnimation)
-            loadPortraitAnimation(0);
+            hexaghostMask = new Hitbox(300.0f * Settings.scale + X_fixed, 450.0f * Settings.scale);
 
+
+            if(!disablePortraitAnimation && reskinCount != 0){
+                loadPortraitAnimation(0);
+                System.out.println("立绘载入1");
+                orbs.clear();
+            }
         }
     }
+
+
 //载入动态立绘
     private static void loadPortraitAnimation(Integer characterCount) {
         portraitAtlas = new TextureAtlas(Gdx.files.internal(portraitAtlasMaps.get(characterCount)) + ".atlas");
@@ -133,10 +178,97 @@ public class CharacterSelectScreenPatches
         portraitState = new AnimationState(portraitStateData);
         portraitStateData.setDefaultMix(0.2F);
 
-        portraitState.setTimeScale(0.5f);
-        portraitState.setAnimation(1, "fade_in", false);
-        portraitState.addAnimation(0, "idle", true,0.0f);
+        portraitState.setTimeScale(1.0f);
+
+
+        if(characterCount !=2){
+            portraitState.setAnimation(1, "fade_in", false);
+            portraitState.addAnimation(0, "idle", true,0.0f);
+            guardianSFX_timer = 12.0f;
+            guardianWhirl_played = false;
+        }
+
+
+        if(characterCount ==2){
+
+            portraitState.setAnimation(1, "fade_in", false);
+            portraitState.addAnimation(0, "idle_loop_Mask", true,0.0f);
+            portraitState.addAnimation(2, "PlasmaRation", true,0.0f);
+            portraitState.addAnimation(3, "maskHalo_fade_in", true,0.0f);
+            portraitState.addAnimation(3, "maskHalo_loop", true,0.0f);
+
+            if (TheGuardianChan.hexaghostMask){
+                hexaghostMask_switch = false;
+                portraitState.addAnimation(3, "Mask_off", false,1.0f);
+            }
+
+            ghostFireTimer = ghostFireTimer_time;
+            if(orbs.size() == 0){
+                createOrbs();
+                hexaghostChangeState(ACTIVATE_STATE);
+            }}
+
     }
+
+
+     private static void createOrbs() {
+            orbs.add(new PortraitHexaghostOrb(-90.0F, 380.0F, orbs.size()));
+            orbs.add(new PortraitHexaghostOrb(90.0F, 380.0F, orbs.size()));
+            orbs.add(new PortraitHexaghostOrb(160.0F, 250.0F, orbs.size()));
+            orbs.add(new PortraitHexaghostOrb(90.0F, 120.0F, orbs.size()));
+            orbs.add(new PortraitHexaghostOrb(-90.0F, 120.0F, orbs.size()));
+            orbs.add(new PortraitHexaghostOrb(-160.0F, 250.0F, orbs.size()));
+         }
+
+
+       public static void hexaghostChangeState(String stateName) {
+             switch (stateName) {
+               case ACTIVATE_STATE:
+                        for (PortraitHexaghostOrb orb : orbs) {
+                               orb.activate(portraitSkeleton.getX(), portraitSkeleton.getY());
+                             }
+                      orbActiveCount = 6;
+                         break;
+
+               case ACTIVATE_ORB:
+                        for (PortraitHexaghostOrb orb : orbs) {
+                            if (!orb.activated) {
+                                   orb.activate(portraitSkeleton.getX(), portraitSkeleton.getY());
+                                   break;
+                                  }
+                            }
+
+                       orbActiveCount++;
+
+                         if (orbActiveCount > 6) {
+                             for (PortraitHexaghostOrb orb : orbs) {
+                                     orb.hellFlameActivate();
+                             }
+
+                             char_effectsQueue.add(new PortraitScreenOnFireEffect());
+                              orbActiveCount = 0;
+                              giantGhostFire = true;
+                             ghostFireTimer = ghostFireTimer_time + ghostFireDeactivate_time;
+                            } else {
+                             ghostFireTimer = ghostFireTimer_time;
+                         }
+                        break;
+
+
+              case DEACTIVATE_ALL_ORBS:
+                     for (PortraitHexaghostOrb orb : orbs) {
+                         orb.deactivate();
+                     }
+                  CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
+                  CardCrawlGame.sound.play("CARD_EXHAUST", 0.2F);
+
+                     giantGhostFire = false;
+                     giantGhostFireTimer = giantGhostFireTimer_time;
+                     break;
+                 }
+          }
+
+
 
 
 
@@ -147,17 +279,18 @@ public class CharacterSelectScreenPatches
         public static void Initialize(CharacterSelectScreen __instance, SpriteBatch sb)
         {
             // Render your buttons/images by passing SpriteBatch
-            if (!(reskinCount == 0 || reskinCount == 1 ))
-            {reskinCount = 0;}
+
 
             for (CharacterOption o : __instance.options) {
                 for(int i = 0; i <= 3; i++){
-
+                    InitializeReskinCount(i);
 
                 if (o.name.equals(characterOptionNames.get(i)) && o.selected) {
-
                     reskinRight.render(sb);
                     reskinLeft.render(sb);
+
+                    if(i == 2 && reskinCount == 1)
+                        hexaghostMask.render(sb);
 
                     if (reskinRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
                     sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F - reskin_RIGHT_W / 2.0F - 550.0F * Settings.scale + X_fixed, 800.0F * Settings.scale - 16.0F, 16.0F, 16.0F, 32.0F, 32.0F, Settings.scale*2.0f, Settings.scale*2.0f, 0.0F, 0, 0, 48, 48, false, false);
@@ -185,19 +318,23 @@ public class CharacterSelectScreenPatches
         public static void Insert(CharacterSelectScreen __instance, SpriteBatch sb)
         {
             // Render your buttons/images by passing SpriteBatch
-            if (!(reskinCount == 0 || reskinCount == 1 ))
-            {reskinCount = 0;}
 
             for (CharacterOption o : __instance.options) {
                 for(int i = 0; i <= 3; i++){
-
+                    InitializeReskinCount(i);
 
                     if (o.name.equals(characterOptionNames.get(i)) && o.selected && reskinCount == 1 && !disablePortraitAnimation) {
 
                         portraitState.update(Gdx.graphics.getDeltaTime());
                         portraitState.apply(portraitSkeleton);
                         portraitSkeleton.updateWorldTransform();
-                        portraitSkeleton.setPosition(1092.0f * Settings.scale,Settings.HEIGHT- 1032.0f * Settings.scale);
+
+                        if(i != 2)
+                            portraitSkeleton.setPosition(1092.0f * Settings.scale, Settings.HEIGHT - 1032.0f * Settings.scale);   //                       立绘位置
+
+                        if(i == 2)
+                            portraitSkeleton.setPosition(1266.0f * Settings.scale, Settings.HEIGHT - 597.0f * Settings.scale);
+
                         portraitSkeleton.setColor(Color.WHITE);
                         portraitSkeleton.setFlip(false,false);
 
@@ -208,16 +345,26 @@ public class CharacterSelectScreenPatches
                     sb.begin();
 
 
-                        sb.draw(portraitFix, Settings.WIDTH / 2.0F - 960.0F, Settings.HEIGHT / 2.0F - 600.0F, 960.0F, 600.0F, 1920.0F, 1200.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 1920, 1200, false, false);
-                    }
 
+// render specific effect
+                        if(char_effectsQueue.size() > 0){
+                            for(int k =0;k < char_effectsQueue.size(); k++){
+                                if(!char_effectsQueue.get(k).isDone){
+                                    char_effectsQueue.get(k).render(sb);
+                                    char_effectsQueue.get(k).update();
+                                }else {
+                                    if(char_effectsQueue_toRemove == null)
+                                        char_effectsQueue_toRemove = new ArrayList<>();
+                                    if(!char_effectsQueue_toRemove.contains(char_effectsQueue.get(k)))
+                                        char_effectsQueue_toRemove.add(char_effectsQueue.get(k));
+                                }
+                            }
+//  dispose
+                            if(char_effectsQueue_toRemove != null)
+                                char_effectsQueue.removeAll(char_effectsQueue_toRemove);
+                        }
 
-
-                }
-            }
-        }
-
-    }
+                    } }}}}
 
 //    立绘动画重置
 
@@ -228,15 +375,21 @@ public class CharacterSelectScreenPatches
         @SpireInsertPatch(rloc = 56)
         public static void Insert(CharacterOption __instance)
         {
+            char_effectsQueue.clear();
+
             for(int i = 0; i <= 3; i++){
+                InitializeReskinCount(i);
+
             if(__instance.name.equals(characterOptionNames.get(i)) && !disablePortraitAnimation){
-                loadPortraitAnimation(i);
-            }
-            }
-        }
+                orbs.clear();
 
+                if(reskinCount != 0)
+                 loadPortraitAnimation(i);
+                System.out.println("立绘载入2");
 
-    }
+            }
+
+     }}}
 
 
     @SpirePatch(clz = CharacterSelectScreen.class, method = "update")
@@ -245,176 +398,57 @@ public class CharacterSelectScreenPatches
         @SpirePostfixPatch
         public static void Postfix(CharacterSelectScreen __instance)
         {
-            // Update your buttons position, check if the player clicked them, and do something if they did
+
+
+// deal with click box and portrait img
             for (CharacterOption o : __instance.options) {
                 for(int i = 0; i <= 3; i++){
-                if (o.name.equals(characterOptionNames.get(i)) && o.selected) {
+                    InitializeReskinCount(i);
 
+                if (o.name.equals(characterOptionNames.get(i)) && o.selected) {
+                    __instance.bgCharImg = updateBgImg(i);
 
                     if (InputHelper.justClickedLeft && reskinLeft.hovered) {
                         reskinLeft.clickStarted = true;
                         CardCrawlGame.sound.play("UI_CLICK_1");
-                        if(reskinCount == 0 && !disablePortraitAnimation){
-                            loadPortraitAnimation(i);
-                        }
                     }
+
                     if (InputHelper.justClickedLeft && reskinRight.hovered) {
                         reskinRight.clickStarted = true;
-                        CardCrawlGame.sound.play("UI_CLICK_1");
-                        if(reskinCount == 0 && !disablePortraitAnimation ){
-                            loadPortraitAnimation(i);
-                        }
-                    }
+                        CardCrawlGame.sound.play("UI_CLICK_1"); }
 
-                    if (reskinLeft.justHovered || reskinRight.justHovered) {
+                    if (reskinLeft.justHovered || reskinRight.justHovered)
                         CardCrawlGame.sound.playV("UI_HOVER", 0.75f);
-                    }
-//==================================
-                    if (!(reskinCount == 0 ||reskinCount == 1 ))
-                    {reskinCount = 0;}
 
-
-
-
-                    switch (i){
-                        case 0 :
-                            if(TheGuardianChan.GuardianOriginalAnimation ){
-                                if(reskinCount != 0)   reskinCount = 0;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(__instance.bgCharImg != GuardianOriginal ){
-                                        __instance.bgCharImg = GuardianOriginal;
-                                    }
-
-
-                            }else {
-                                if(reskinCount != 1) reskinCount = 1;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(disablePortraitAnimation){
-                                        if(__instance.bgCharImg != GuardianChan ){
-                                            __instance.bgCharImg = GuardianChan;
-                                        }
-                                    }else {
-                                        if (__instance.bgCharImg != GuardianChan2) {
-                                            __instance.bgCharImg = GuardianChan2;
-                                        }
-                                    }
-
-                            }
-                            break;
-
-                        case 1:
-                            if(TheGuardianChan.SlimeOriginalAnimation ){
-                                if(reskinCount != 0)   reskinCount = 0;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(__instance.bgCharImg != SlimeOriginal ){
-                                    __instance.bgCharImg = SlimeOriginal;
-                                }
-
-
-                            }else {
-                                if(reskinCount != 1) reskinCount = 1;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(disablePortraitAnimation){
-                                    if(__instance.bgCharImg != SlaifuTexture ){
-                                        __instance.bgCharImg = SlaifuTexture;
-                                    }
-                                }else {
-                                    if (__instance.bgCharImg != SlaifuTexture2) {
-                                        __instance.bgCharImg = SlaifuTexture2;
-                                    }
-                                }
-
-                            }
-                            break;
-
-                        case 2:
-                            if(TheGuardianChan.HexaghostOriginalAnimation ){
-                                if(reskinCount != 0)   reskinCount = 0;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(__instance.bgCharImg != hexaghostOriginal ){
-                                    __instance.bgCharImg = hexaghostOriginal;
-                                }
-
-
-                            }else {
-                                if(reskinCount != 1) reskinCount = 1;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(disablePortraitAnimation){
-                                    if(__instance.bgCharImg != hexaghostTexture ){
-                                        __instance.bgCharImg = hexaghostTexture;
-                                    }
-                                }else {
-                                    if (__instance.bgCharImg != hexaghostTexture2) {
-                                        __instance.bgCharImg = hexaghostTexture2;
-                                    }
-                                }
-
-                            }
-                            break;
-
-                        case 3:
-                            if(TheGuardianChan.SneckoOriginalAnimation ){
-                                if(reskinCount != 0)   reskinCount = 0;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(__instance.bgCharImg != sneckoOriginal ){
-                                    __instance.bgCharImg = sneckoOriginal;
-                                }
-
-
-                            }else {
-                                if(reskinCount != 1) reskinCount = 1;
-
-                                __instance.bgCharImg = updateBgImg(i);
-
-                                if(disablePortraitAnimation){
-                                    if(__instance.bgCharImg != sneckoTexture ){
-                                        __instance.bgCharImg = sneckoTexture;
-                                    }
-                                }else {
-                                    if (__instance.bgCharImg != sneckoTexture2) {
-                                        __instance.bgCharImg = sneckoTexture2;
-                                    }
-                                }
-                            }
-                            break;
-
-                        default:
-                            break;
-                    }
+                    if (InputHelper.justClickedLeft && hexaghostMask.hovered)
+                        hexaghostMask.clickStarted = true;
 
 //==================================
-
-
 
 
                         if(reskinRight.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()){
                             reskinRight.clicked = false;
+                            orbs.clear();
+                            char_effectsQueue.clear();
+
                             if (reskinCount < 1) {
                                 reskinCount += 1;
+                                loadPortraitAnimation(i);
                             } else {
                                 reskinCount = 0;
                             }
+
                             __instance.bgCharImg = updateBgImg(i);
                         }
 
                         if(reskinLeft.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()){
                             reskinLeft.clicked = false;
+                            orbs.clear();
+                            char_effectsQueue.clear();
+
                             if (reskinCount > 0) {
                                 reskinCount -= 1;
+                                loadPortraitAnimation(i);
                             } else {
                                 reskinCount = 1;
                             }
@@ -422,20 +456,128 @@ public class CharacterSelectScreenPatches
                         }
 
 
+
+                    InitializeReskinCount(i);
+//============================
+// 蹲酱
+                    if(i == 0 && reskinCount == 1){
+                        guardianSFX_timer -= Gdx.graphics.getDeltaTime();
+                        if( guardianSFX_timer < 10.05f && !guardianWhirl_played){
+                            char_effectsQueue.add(new PortraitWhirlwindEffect(new Color(MathUtils.random(0.6F, 0.7F), MathUtils.random(0.6F, 0.7F), MathUtils.random(0.5F, 0.55F),1.0F),false));
+                            guardianWhirl_played = true;
+                        }
+
+                        if( guardianSFX_timer < 0.0f){
+                            CardCrawlGame.sound.playA("MONSTER_GUARDIAN_DESTROY", MathUtils.random(-0.1F, 0.1F));
+                            guardianSFX_timer = 12.0f;
+                            guardianWhirl_played = false;
+                        }
+                    }
+
+
+
+
+//-----------------------
+//六火
+
+//面具互动
+
+                    if(i == 2 && reskinCount == 1) {
+                        if (hexaghostMask.clicked || CInputActionSet.pageRightViewExhaust.isJustPressed()) {
+                            hexaghostMask.clicked = false;
+
+                            if (hexaghostMask_switch) {
+                                portraitState.setAnimation(3, "Mask_off", false);
+                                hexaghostMask_switch = false;
+                                TheGuardianChan.hexaghostMask = true;
+                                TheGuardianChan.saveSettings();
+                            } else {
+                                portraitState.setAnimation(3, "Mask_on", false);
+                                portraitState.addAnimation(3, "maskHalo_loop", true, 0.0f);
+                                hexaghostMask_switch = true;
+                                TheGuardianChan.hexaghostMask = false;
+                                TheGuardianChan.saveSettings();
+                            }
+                        }
+
+//  地狱火相关
+                        if(orbs.size() != 0){
+                            if(!giantGhostFire){
+                                ghostFireTimer -= Gdx.graphics.getDeltaTime();
+                                if(ghostFireTimer < 0){
+                                    hexaghostChangeState(ACTIVATE_ORB);
+                                }
+                            }else {
+                                giantGhostFireTimer -= Gdx.graphics.getDeltaTime();
+                                if(giantGhostFireTimer <= 0){
+                                    hexaghostChangeState(DEACTIVATE_ALL_ORBS);
+                                }}
+                        }
+
+// 鬼火更新
+                        for (PortraitHexaghostOrb orb : orbs) {
+                            orb.update(portraitSkeleton.getX(), portraitSkeleton.getY());
+                        }
+//面具hitbox
+                        hexaghostMask.move(
+                                portraitSkeleton.getX()+portraitSkeleton.findBone("Mask").getWorldX(),
+                                portraitSkeleton.getY()+portraitSkeleton.findBone("Mask").getWorldY()
+                        );
+                    }
+
+
+
+// hitbox update
+
+
                     reskinLeft.update();
                     reskinRight.update();
-                }
-            }
-            }
+                    hexaghostMask.update();
+
+                }}
+            }}}
+
+
+
+    private static void InitializeReskinCount(int characterCount){
+        switch (characterCount){
+            case 0 :
+                reflashReskinCount(TheGuardianChan.GuardianOriginalAnimation);
+                break;
+            case 1:
+                reflashReskinCount(TheGuardianChan.SlimeOriginalAnimation);
+                break;
+            case 2:
+                reflashReskinCount(TheGuardianChan.HexaghostOriginalAnimation);
+                break;
+            case 3:
+                reflashReskinCount(TheGuardianChan.SneckoOriginalAnimation);
+                break;
+            default:
+                break;
         }
+
+        if (!(reskinCount == 0 || reskinCount == 1 ))
+            reskinCount = 0;
     }
 
 
 
+    public static void reflashReskinCount(boolean originalAnimation){
+        if(originalAnimation){
+            if(reskinCount != 0)
+                reskinCount = 0;
+        }else {
+            if(reskinCount != 1)
+                reskinCount = 1;
+        }
+    }
 
     public static Texture updateBgImg(int selectedCharCount){
-        if(selectedCharCount == 0){
-            switch (reskinCount ){
+
+        switch(selectedCharCount){
+           case 0:
+            switch (reskinCount){
                 case 0:
                     TheGuardianChan.GuardianOriginalAnimation = true;
                     TheGuardianChan.saveSettings();
@@ -448,12 +590,11 @@ public class CharacterSelectScreenPatches
                     }else {
                         return GuardianChan2;
                     }
-
                 default:
                     return GuardianOriginal;
             }
-        }
-        else if (selectedCharCount == 1){
+
+            case 1:
             switch (reskinCount ){
                 case 0:
                     TheGuardianChan.SlimeOriginalAnimation = true;
@@ -470,8 +611,9 @@ public class CharacterSelectScreenPatches
                 default:
                     return SlimeOriginal;
             }
-        }
-        else if (selectedCharCount == 2){
+
+
+            case 2:
             switch (reskinCount ){
                 case 0:
                     TheGuardianChan.HexaghostOriginalAnimation = true;
@@ -488,8 +630,10 @@ public class CharacterSelectScreenPatches
                 default:
                     return hexaghostOriginal;
             }
-        }
-        else if (selectedCharCount == 3){
+
+
+
+            case 3:
             switch (reskinCount ){
                 case 0:
                     TheGuardianChan.SneckoOriginalAnimation = true;
@@ -506,11 +650,11 @@ public class CharacterSelectScreenPatches
                 default:
                     return sneckoOriginal;
             }
-        }
-        else {
+
+
+
+        default:
             return null;
-        }
 
-        }
-
+        } }
 }

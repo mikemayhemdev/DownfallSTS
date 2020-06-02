@@ -1,0 +1,20 @@
+
+Hexaghost_original.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+core/core
+  rotate: false
+  xy: 322, 1
+  size: 127, 132
+  orig: 127, 132
+  offset: 0, 0
+  index: -1
+core/shadow
+  rotate: false
+  xy: 1, 1
+  size: 319, 67
+  orig: 319, 67
+  offset: 0, 0
+  index: -1

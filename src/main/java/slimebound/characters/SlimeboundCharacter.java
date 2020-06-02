@@ -65,11 +65,11 @@ public class SlimeboundCharacter extends CustomPlayer {
     private String jsonURL = "slimeboundResources/SlimeboundImages/char/skeleton.json";
     private String jsonURLPuddle = "slimeboundResources/SlimeboundImages/char/skeletonPuddle.json";
 	
-	private String atlasURL2 = "TheGuardianChan/monsters/TheSlimeBossWaifu/TheSlimeBossWaifu.atlas";
-    private String atlasURLPuddle2 = "TheGuardianChan/monsters/TheSlimeBossWaifu/char/Slime_acid_char_puddle.atlas";
+	private String atlasURL2 = "TheGuardianChan/img/Slimebound/animation/TheSlimeBossWaifuDownFall.atlas";
+    private String atlasURLPuddle2 = "TheGuardianChan/img/Slimebound/animation/Slime_acid_char_puddle.atlas";
 
-    private String jsonURL2 = "TheGuardianChan/monsters/TheSlimeBossWaifu/TheSlimeBossWaifu.json";
-    private String jsonURLPuddle2 = "TheGuardianChan/monsters/TheSlimeBossWaifu/char/Slime_acid_char_puddle.json";
+    private String jsonURL2 = "TheGuardianChan/img/Slimebound/animation/TheSlimeBossWaifuDownFall.json";
+    private String jsonURLPuddle2 = "TheGuardianChan/img/Slimebound/animation/Slime_acid_char_puddle.json";
 
 	
 	

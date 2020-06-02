@@ -31,7 +31,18 @@ import java.util.List;
 public class GuardianCharacter extends CustomPlayer {
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String[] orbTextures = {"guardianResources/GuardianImages/char/orb/layer1.png", "guardianResources/GuardianImages/char/orb/layer2.png", "guardianResources/GuardianImages/char/orb/layer3.png", "guardianResources/GuardianImages/char/orb/layer4.png", "guardianResources/GuardianImages/char/orb/layer5.png", "guardianResources/GuardianImages/char/orb/layer6.png", "guardianResources/GuardianImages/char/orb/layer1d.png", "guardianResources/GuardianImages/char/orb/layer2d.png", "guardianResources/GuardianImages/char/orb/layer3d.png", "guardianResources/GuardianImages/char/orb/layer4d.png", "guardianResources/GuardianImages/char/orb/layer5d.png"};
+    public static final String[] orbTextures = {
+            "guardianResources/GuardianImages/char/orb/layer1.png",
+            "guardianResources/GuardianImages/char/orb/layer2.png",
+            "guardianResources/GuardianImages/char/orb/layer3.png",
+            "guardianResources/GuardianImages/char/orb/layer4.png",
+            "guardianResources/GuardianImages/char/orb/layer5.png",
+            "guardianResources/GuardianImages/char/orb/layer6.png",
+            "guardianResources/GuardianImages/char/orb/layer1d.png",
+            "guardianResources/GuardianImages/char/orb/layer2d.png",
+            "guardianResources/GuardianImages/char/orb/layer3d.png",
+            "guardianResources/GuardianImages/char/orb/layer4d.png",
+            "guardianResources/GuardianImages/char/orb/layer5d.png"};
     public static final CharacterStrings charStrings;
     public static Color cardRenderColor = GuardianMod.mainGuardianColor;
 
