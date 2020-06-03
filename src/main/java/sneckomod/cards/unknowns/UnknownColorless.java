@@ -8,7 +8,7 @@ public class UnknownColorless extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownColorless");
 
     public UnknownColorless() {
-        super(ID, CardType.SKILL, CardRarity.UNCOMMON);
+        super(ID, CardType.SKILL, CardRarity.RARE);
     }
 
     @Override

@@ -65,7 +65,7 @@ public class WideSting extends AbstractSneckoCard {
                 for (AbstractCard q : p.hand.group) {
                     if (q.color != AbstractDungeon.player.getCardColor()) {
                         atb(new UpgradeSpecificCardAction(q));
-                        atb(new MuddleAction(q));
+                     //  atb(new MuddleAction(q));
                     }
                 }
             }

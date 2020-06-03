@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable. NL sneckomod:Muddle your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Apply !M! Vulnerable."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
@@ -177,8 +177,8 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "Pure Snecko",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Morph all sneckomod:Offclass cards in your hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card. NL Morph all sneckomod:Offclass cards in your hand."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with cards of your class that cost 1 less.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card. NL  Exhaust all sneckomod:Offclass cards in your hand, replacing them with cards of your class that cost 1 less."
   },
   "sneckomod:Cheat": {
     "NAME": "Cheat",
@@ -272,7 +272,7 @@
   },
   "sneckomod:WideSting": {
     "NAME": "Wide Sting",
-    "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade and sneckomod:Muddle all sneckomod:Offclass cards in your hand."
+    "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
   },
   "sneckomod:Bewildered": {
     "NAME": "Bewildered",
