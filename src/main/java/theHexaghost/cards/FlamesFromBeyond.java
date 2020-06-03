@@ -14,7 +14,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
     private static final int UPG_MAGIC = 3;
 
     public FlamesFromBeyond() {
-        super(ID, -2, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
     }

@@ -21,7 +21,7 @@ public class ThermalTransfer extends AbstractHexaCard {
     private static final int UPG_BLOCK = 3;
 
     public ThermalTransfer() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
     }

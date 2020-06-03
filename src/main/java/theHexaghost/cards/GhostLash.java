@@ -17,7 +17,7 @@ public class GhostLash extends AbstractHexaCard {
     private static final int UPG_DAMAGE = 2;
 
     public GhostLash() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         isEthereal = true;
     }
