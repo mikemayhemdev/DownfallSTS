@@ -13,12 +13,11 @@ public class FastForward extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, COMMON
 
     public FastForward() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) atb(new AdvanceAction());
         atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
         atb(new AdvanceAction());
@@ -27,8 +26,7 @@ public class FastForward extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 }
