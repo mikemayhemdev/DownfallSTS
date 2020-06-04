@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PreventSlimeDecayPower;
+import slimebound.powers.SlimedPower;
 
 
 public class SlimeSlap extends AbstractSlimeboundCard {
@@ -43,7 +44,9 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1));
+        if (m.hasPower(SlimedPower.POWER_ID)){
+            addToBot(new ApplyPowerAction(m, p, new PreventSlimeDecayPower(m, p, 1), 1));
+        }
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
