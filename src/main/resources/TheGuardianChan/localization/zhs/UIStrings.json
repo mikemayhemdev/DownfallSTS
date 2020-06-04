@@ -4,9 +4,16 @@
       "皮肤",
       "原版",
       "蹲酱",
-      " 史莱姆娘",
+      "史莱姆娘",
       "六子",
       "蛇蛇"
+    ]
+  },
+  "TheGuardianChan:PortraitAnimation": {
+    "TEXT": [
+      "立绘类型",
+      "动态",
+      "静态"
     ]
   },
   "TheGuardianChan:Name": {

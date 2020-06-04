@@ -4,8 +4,16 @@
       "Skin",
       "Original",
       "Guardian Chan",
-      "Original",
-      "Slaifu"
+      "Slaifu",
+      "Hexago",
+      "SSSSnecko"
+    ]
+  },
+  "TheGuardianChan:PortraitAnimation": {
+    "TEXT": [
+      "Portrait Type",
+      "Animated",
+      "Static"
     ]
   },
   "TheGuardianChan:Name": {

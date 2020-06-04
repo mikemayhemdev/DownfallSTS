@@ -60,8 +60,8 @@ public class GuardianCharacter extends CustomPlayer {
     private String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
     private String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
 	
-	private String atlasURL2 = "TheGuardianChan/monsters/TheGuardianChan/Guardian.atlas";
-	private String jsonURL2 = "TheGuardianChan/monsters/TheGuardianChan/Guardian.json";
+	private String atlasURL2 = "TheGuardianChan/img/GuardianMod/animation/Guardian.atlas";
+	private String jsonURL2 = "TheGuardianChan/img/GuardianMod/animation/Guardian.json";
 		
     private String currentJson = jsonURL;
 	private String currentJson2 = jsonURL2;
