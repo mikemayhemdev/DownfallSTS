@@ -116,6 +116,12 @@ public class DissolveAction extends AbstractGameAction {
 
     public void dissolveEffect(AbstractCard c2) {
 
+        if (c2.isCostModifiedForTurn) {
+            this.extraCards += c2.costForTurn;
+        } else {
+            this.extraCards += c2.cost;
+        }
+
         if (c2.cost < 0) c2.cost = 0;
         if (c2.cost + this.extraCards == 0) {
             return;
@@ -139,11 +145,7 @@ public class DissolveAction extends AbstractGameAction {
         }
 
 
-        if (c2.isCostModifiedForTurn) {
-            this.extraCards += c2.costForTurn;
-        } else {
-            this.extraCards += c2.cost;
-        }
+
 
         for (int i = 0; i < (this.extraCards); i++) {
             AbstractCard cZero;
