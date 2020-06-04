@@ -33,7 +33,7 @@ public class HyperBeam extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         atb(new SFXAction("ATTACK_HEAVY"));
-        this.addToBot(new VFXAction(p, new MindblastEffect(p.dialogX, p.dialogY, p.flipHorizontal), 0.1F));
+        this.addToBot(new VFXAction(p, new MindblastEffect(p.hb.cX, p.hb.cY, p.flipHorizontal), 0.1F));
         atb(new WaitAction(0.1F));
 
         allDmg(AbstractGameAction.AttackEffect.NONE);
