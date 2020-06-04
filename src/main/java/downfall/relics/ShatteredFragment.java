@@ -12,7 +12,7 @@ public class ShatteredFragment extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("ShatteredFragment");
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/WingShiv.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/WingShiv.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/WingShiv.png"));
 
     public ShatteredFragment() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

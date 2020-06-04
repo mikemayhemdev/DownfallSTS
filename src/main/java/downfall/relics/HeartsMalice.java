@@ -16,7 +16,7 @@ public class HeartsMalice extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("HeartsMalice");
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/HeartsMalice.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/HeartsMalice.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/HeartsMalice.png"));
 
     public HeartsMalice() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

@@ -11,7 +11,7 @@ public class CloakOfManyFaces extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("CloakOfManyFaces");
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/CloakOfManyFaces.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/CloakOfManyFaces.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/CloakOfManyFaces.png"));
 
     public CloakOfManyFaces() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

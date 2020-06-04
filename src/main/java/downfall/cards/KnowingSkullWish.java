@@ -1,6 +1,7 @@
 package downfall.cards;
 
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,27 +37,27 @@ public class KnowingSkullWish extends AbstractExpansionCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[0]));
-        cardList.add(new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[1]));
-        cardList.add(new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[2]));
+        cardList.add(new OctoChoiceCard("ks:0", NAMES[0], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[0]));
+        cardList.add(new OctoChoiceCard("ks:1", NAMES[1], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[1]));
+        cardList.add(new OctoChoiceCard("ks:2", NAMES[2], expansionContentMod.makeCardPath("KnowingSkullWish.png"), TEXT[2]));
         return cardList;
     }
 
     public void doChoiceStuff(OctoChoiceCard card) {
         switch (card.cardID) {
             case "ks:0": {
-                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 6));
+                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 3));
                 atb(new ChangeGoldAction(40));
                 break;
             }
             case "ks:1": {
-                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1));
                 AbstractCard q = AbstractDungeon.returnColorlessCard();
-                atb(new AddCardToDeckAction(q));
+                atb(new MakeTempCardInHandAction(q));
                 break;
             }
             case "ks:2": {
-                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 9));
+                atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 5));
                 atb(new ObtainPotionAction(PotionHelper.getRandomPotion()));
                 break;
             }

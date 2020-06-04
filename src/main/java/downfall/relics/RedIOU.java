@@ -11,7 +11,7 @@ public class RedIOU extends CustomRelic {
 
     public static String ID = downfallMod.makeID("RedIOU");
     private static Texture IMG = new Texture(downfallMod.assetPath("images/relics/BanditContract.png"));
-    private static Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/BanditContract.png"));
+    private static Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/BanditContract.png"));
 
     public RedIOU() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

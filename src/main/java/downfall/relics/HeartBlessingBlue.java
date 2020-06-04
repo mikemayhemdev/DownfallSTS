@@ -13,7 +13,7 @@ public class HeartBlessingBlue extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("HeartBlessingBlue");
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/HeartBlessingBlue.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/HeartBlessingBlue.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/HeartBlessing.png"));
 
     public HeartBlessingBlue() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

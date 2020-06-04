@@ -20,7 +20,7 @@ public class YouAreMine extends AbstractExpansionCard {
     private static final int UPGRADE_MAGIC = 2;
 
     public YouAreMine() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
 
         tags.add(expansionContentMod.STUDY_COLLECTOR);
         tags.add(expansionContentMod.STUDY);

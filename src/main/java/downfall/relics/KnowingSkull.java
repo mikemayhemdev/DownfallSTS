@@ -11,8 +11,8 @@ import downfall.cards.KnowingSkullWish;
 public class KnowingSkull extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("KnowingSkull");
-    private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/WingStatue.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/WingStatue.png"));
+    private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/KnowingSkull.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/KnowingSkull.png"));
 
     public KnowingSkull() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);

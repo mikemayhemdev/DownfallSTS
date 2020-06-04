@@ -135,7 +135,7 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Wish",
-    "DESCRIPTION": "Ethereal. NL Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Spend HP to Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
   },
   "expansioncontent:ShieldSmash": {
     "NAME": "Armor Break",

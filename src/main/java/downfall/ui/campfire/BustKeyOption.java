@@ -64,9 +64,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                 AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
         }
-        if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(p) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(p) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(p)) {
-            p.increaseMaxHp(MAXHP_INC, false);
-        }
+
     }
 
     public enum Keys {

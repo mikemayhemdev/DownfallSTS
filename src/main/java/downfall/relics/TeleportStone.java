@@ -8,7 +8,7 @@ public class TeleportStone extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("TeleportStone");
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/TeleportStone.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/TeleportStone.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/TeleportStone.png"));
 
     public TeleportStone() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

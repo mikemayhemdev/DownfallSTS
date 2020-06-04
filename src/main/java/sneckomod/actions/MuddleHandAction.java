@@ -14,10 +14,17 @@ import sneckomod.powers.MudshieldPower;
 public class MuddleHandAction extends AbstractGameAction {
     private AbstractPlayer p;
 
+    private int maxRangeModifier;
+
     public MuddleHandAction() {
+        this(0);
+    }
+
+    public MuddleHandAction(int maxRangeMod) {
         this.actionType = ActionType.CARD_MANIPULATION;// 14
         this.p = AbstractDungeon.player;// 15
         this.duration = Settings.ACTION_DUR_FAST;// 16
+        this.maxRangeModifier = maxRangeMod;
     }// 17
 
     public void update() {
@@ -30,7 +37,7 @@ public class MuddleHandAction extends AbstractGameAction {
                     addToBot(new ApplyPowerAction(q.owner, q.owner, new NextTurnBlockPower(q.owner, q.amount)));
                 }
                 if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 24
-                    int newCost = AbstractDungeon.cardRandomRng.random(3);// 25
+                    int newCost = AbstractDungeon.cardRandomRng.random(3 + maxRangeModifier);// 25
                     if (card.cost != newCost) {// 26
                         card.cost = newCost;// 27
                         card.costForTurn = card.cost;// 28

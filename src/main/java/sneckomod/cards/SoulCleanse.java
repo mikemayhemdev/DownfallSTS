@@ -25,26 +25,7 @@ public class SoulCleanse extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new MuddleHandAction());
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                ArrayList<AbstractCard> myList = new ArrayList<>(AbstractDungeon.player.hand.group);
-                Collections.shuffle(myList, AbstractDungeon.cardRandomRng.random);
-                for (AbstractCard card : myList) {
-                    if (card.cost == 3) {
-                        card.cost = 0;// 35
-                        card.costForTurn = card.cost;// 36
-                        card.isCostModified = true;// 37
-
-                        card.freeToPlayOnce = false;// 39
-                        break;
-                    }
-                }
-            }
-        });
-        if (upgraded) atb(new DrawCardAction(1));
+        atb(new MuddleHandAction(-1));
     }
 
     public void upgrade() {
@@ -52,6 +33,7 @@ public class SoulCleanse extends AbstractSneckoCard {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
+            this.exhaust = false;
         }
     }
 }

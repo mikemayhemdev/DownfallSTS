@@ -15,7 +15,7 @@ public class GremlinSack extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("GremlinSack");
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/GremlinSack.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/GremlinSack.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/GremlinSack.png"));
 
     public GremlinSack() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);

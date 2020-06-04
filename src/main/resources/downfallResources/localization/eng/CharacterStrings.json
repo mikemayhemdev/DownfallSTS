@@ -158,9 +158,9 @@
       "Split: Time"
     ],
     "TEXT": [
-      "Lose 6 HP. NL Gain 40 Souls.",
-      "Lose 3 HP. NL Get a Colorless card.",
-      "Lose 9 HP. NL Get a Potion.",
+      "Lose 3 HP. NL Gain 40 Souls.",
+      "Lose 1 HP. NL Add a random Colorless card to your hand.",
+      "Lose 5 HP. NL Gain a random Potion.",
       "Obtain Guardian expansioncontent:Boss cards.",
       "Obtain Hexaghost expansioncontent:Boss cards.",
       "Obtain Slime Boss expansioncontent:Boss cards.",

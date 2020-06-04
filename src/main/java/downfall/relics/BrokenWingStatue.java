@@ -20,7 +20,7 @@ public class BrokenWingStatue extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("BrokenWingStatue");
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/WingStatue.png"));
-    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/WingStatue.png"));
+    private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/WingStatue.png"));
 
     private static final String[] DIALOG = CardCrawlGame.languagePack.getEventString(WingStatue_Evil.ID).DESCRIPTIONS;
     

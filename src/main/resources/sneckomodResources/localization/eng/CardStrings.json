@@ -123,8 +123,8 @@
   },
   "sneckomod:SoulCleanse": {
     "NAME": "Soul Cleanse",
-    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Reduce the cost of a random 3-cost card in your hand to 0. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Reduce the cost of a random 3-cost card in your hand to 0. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. Cards sneckomod:Muddled this way cannot cost 3."
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
