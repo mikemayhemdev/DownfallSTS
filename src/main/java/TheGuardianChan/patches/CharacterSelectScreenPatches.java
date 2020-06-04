@@ -104,7 +104,7 @@ public class CharacterSelectScreenPatches
     private static Texture hexaghostOriginal =  ImageMaster.loadImage("hexamodResources/images/charSelect/charBG.png");
     private static Texture hexaghostTexture =  ImageMaster.loadImage(TheGuardianChan.assetPath("img/HexaghostMod/portrait_waifu.png"));
     private static Texture hexaghostTexture2 =  ImageMaster.loadImage(TheGuardianChan.assetPath("img/HexaghostMod/portrait_waifu2.png"));
-    private static Texture hexaghostTextureMask =  ImageMaster.loadImage(TheGuardianChan.assetPath("img/HexaghostMod/portrait_waifu_mask.png"));
+    private static Texture hexaghostTextureMask =  ImageMaster.loadImage(TheGuardianChan.assetPath("img/HexaghostMod/portrait_waifu_m.png"));
 
 //Snecko
     private static Texture sneckoOriginal =  ImageMaster.loadImage("sneckomodResources/images/charSelect/portrait.png");
@@ -288,9 +288,6 @@ public class CharacterSelectScreenPatches
                      break;
                  }
           }
-
-
-
 
 
     @SpirePatch(clz = CharacterSelectScreen.class, method = "render")
