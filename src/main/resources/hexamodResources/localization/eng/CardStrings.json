@@ -33,7 +33,7 @@
   "hexamod:Rewind": {
     "NAME": "Rewind",
     "DESCRIPTION": "hexamod:Retract. NL Gain [E] .",
-    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] [E] ."
+    "UPGRADE_DESCRIPTION": "hexamod:Retract. NL Gain [E] and draw 1 card."
   },
   "hexamod:SkipABeat": {
     "NAME": "Skip a Beat",

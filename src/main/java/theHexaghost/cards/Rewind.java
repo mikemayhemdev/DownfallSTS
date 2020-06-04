@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,12 +20,14 @@ public class Rewind extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new RetractAction());
         atb(new GainEnergyAction(magicNumber));
+        if (upgraded) {
+            atb(new DrawCardAction(1));
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
