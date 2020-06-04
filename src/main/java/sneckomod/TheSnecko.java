@@ -1,5 +1,6 @@
 package sneckomod;
 
+import TheGuardianChan.TheGuardianChan;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -51,22 +52,39 @@ public class TheSnecko extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
+
     public float renderscale = 1.2F;
 
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
-        initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
-                getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
+
+        if(TheGuardianChan.SneckoOriginalAnimation) {
+            initializeClass(null,
+                    SHOULDER1,
+                    SHOULDER2,
+                    CORPSE,
+                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
+        }else {
+            initializeClass(null,
+                    "TheGuardianChan/img/SneckoMod/shoulder2.png",
+                    "TheGuardianChan/img/SneckoMod/shoulder.png",
+                    "TheGuardianChan/img/SneckoMod/corpse.png",
+                    getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
+        }
+
+
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
         this.reloadAnimation();
     }
 
     public void reloadAnimation() {
-        loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
+        if(TheGuardianChan.SneckoOriginalAnimation){
+            loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
+        }else {
+            loadAnimation("TheGuardianChan/img/SneckoMod/animation/Snecko_waifu.atlas", "TheGuardianChan/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
+        }
+
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.stateData.setMix("Hit", "Idle", 0.1F);

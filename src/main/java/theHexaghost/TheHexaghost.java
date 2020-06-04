@@ -1,5 +1,6 @@
 package theHexaghost;
 
+import TheGuardianChan.TheGuardianChan;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
@@ -65,20 +66,62 @@ public class TheHexaghost extends CustomPlayer {
     public MyBody myBody;
     private BobEffect effect = new BobEffect(0.75F);
 
-    public TheHexaghost(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", null), new SpriterAnimation(
-                "hexamodResources/images/char/mainChar/static_character.scml"));
-        initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
-                getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
+    public float renderscale = 1.0F;
+    public float renderscale2 = 1.0F;
 
+    private String atlasURL = "TheGuardianChan/img/HexaghostMod/animation/Hexaghost_original.atlas";
+    private String jsonURL = "TheGuardianChan/img/HexaghostMod/animation/Hexaghost_original.json";
+
+    private String atlasURL2 = "TheGuardianChan/img/HexaghostMod/animation/Hexaghost_self_downfall.atlas";
+    private String jsonURL2 = "TheGuardianChan/img/HexaghostMod/animation/Hexaghost_self_downfall.json";
+
+    public TheHexaghost(String name, PlayerClass setClass) {
+        super(name, setClass, orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
+        if(TheGuardianChan.HexaghostOriginalAnimation) {
+            initializeClass(null,
+                    SHOULDER1,
+                    SHOULDER2,
+                    CORPSE,
+                    getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
+        }else {
+            if(TheGuardianChan.hexaghostMask){
+            initializeClass(null,
+                    "TheGuardianChan/img/HexaghostMod/shoulder2.png",
+                    "TheGuardianChan/img/HexaghostMod/shoulder.png",
+                    CORPSE,
+                    getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
+
+            }else {
+                initializeClass(null,
+                        "TheGuardianChan/img/HexaghostMod/shoulderMask2.png",
+                        "TheGuardianChan/img/HexaghostMod/shoulderMask.png",
+                        CORPSE,
+                        getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
+            }
+        }
+
+        this.reloadAnimation();
 
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 240.0F * Settings.scale);
 
         myBody = new MyBody();
+    }
+
+    public void reloadAnimation() {
+        if(TheGuardianChan.HexaghostOriginalAnimation){
+            this.loadAnimation(atlasURL, this.jsonURL, renderscale);
+        }else {
+            this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);
+        }
+        if(TheGuardianChan.hexaghostMask){
+            this.state.setAnimation(0, "idle2", true);
+        }else {
+            this.state.setAnimation(0, "idle2_mask", true);
+        }
+
+
+
     }
 
     public static Color oscillarator() {

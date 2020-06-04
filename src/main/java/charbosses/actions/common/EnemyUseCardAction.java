@@ -81,6 +81,7 @@ public class EnemyUseCardAction extends AbstractGameAction {
     public void update() {
         if (this.duration == 0.15f) {
             SlimeboundMod.logger.info("using card" + this.reboundCard);
+            if(AbstractCharBoss.boss != null){
             for (final AbstractPower p : AbstractCharBoss.boss.powers) {
                 if (!this.targetCard.dontTriggerOnUseCard && p.type != PowerType.DEBUFF) {
                     SlimeboundMod.logger.info(p);
@@ -94,6 +95,7 @@ public class EnemyUseCardAction extends AbstractGameAction {
                     p.onAfterUseCard(this.targetCard, this.makeNormalCardAction());
                 }
             }
+
             this.targetCard.freeToPlayOnce = false;
             this.targetCard.isInAutoplay = false;
             if (this.targetCard.purgeOnUse) {
@@ -145,6 +147,7 @@ public class EnemyUseCardAction extends AbstractGameAction {
             this.targetCard.exhaustOnUseOnce = false;
             this.targetCard.dontTriggerOnUseCard = false;
             this.addToBot(new EnemyHandCheckAction());
+        }
         }
         this.tickDuration();
     }

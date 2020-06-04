@@ -1,0 +1,118 @@
+
+TheSlimeBossWaifuDownFall.png
+size: 512,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+out/shadow
+  rotate: false
+  xy: 1, 555
+  size: 411, 121
+  orig: 411, 121
+  offset: 0, 0
+  index: -1
+out/Spoon
+  rotate: false
+  xy: 441, 1
+  size: 50, 55
+  orig: 50, 55
+  offset: 0, 0
+  index: -1
+out/skull
+  rotate: false
+  xy: 373, 467
+  size: 59, 52
+  orig: 59, 52
+  offset: 0, 0
+  index: -1
+out/foot
+  rotate: false
+  xy: 377, 58
+  size: 72, 33
+  orig: 72, 33
+  offset: 0, 0
+  index: -1
+out/kaka
+  rotate: false
+  xy: 373, 369
+  size: 113, 43
+  orig: 113, 43
+  offset: 0, 0
+  index: -1
+out/gold
+  rotate: false
+  xy: 434, 497
+  size: 40, 20
+  orig: 42, 21
+  offset: 1, 1
+  index: -1
+out/core
+  rotate: false
+  xy: 437, 414
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+out/body_color
+  rotate: false
+  xy: 1, 280
+  size: 370, 273
+  orig: 370, 273
+  offset: 0, 0
+  index: -1
+out/mouth_color
+  rotate: false
+  xy: 151, 678
+  size: 145, 53
+  orig: 145, 53
+  offset: 0, 0
+  index: -1
+out/body_line
+  rotate: false
+  xy: 1, 1
+  size: 374, 277
+  orig: 374, 277
+  offset: 0, 0
+  index: -1
+out/mouth_line
+  rotate: false
+  xy: 1, 678
+  size: 148, 57
+  orig: 148, 57
+  offset: 0, 0
+  index: -1
+out/eye_L
+  rotate: false
+  xy: 373, 521
+  size: 63, 28
+  orig: 63, 28
+  offset: 0, 0
+  index: -1
+out/eye_R
+  rotate: false
+  xy: 434, 467
+  size: 59, 28
+  orig: 59, 28
+  offset: 0, 0
+  index: -1
+out/eyebrow_L
+  rotate: false
+  xy: 373, 414
+  size: 62, 51
+  orig: 62, 51
+  offset: 0, 0
+  index: -1
+out/eyebrow_R
+  rotate: false
+  xy: 377, 1
+  size: 62, 49
+  orig: 62, 49
+  offset: 0, 0
+  index: -1
+out/hat
+  rotate: false
+  xy: 373, 280
+  size: 111, 87
+  orig: 111, 87
+  offset: 0, 0
+  index: -1

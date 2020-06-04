@@ -1,0 +1,33 @@
+{
+  "TheGuardianChan:ReSkin": {
+    "TEXT": [
+      "皮肤",
+      "原版",
+      "蹲酱",
+      "史莱姆娘",
+      "六子",
+      "蛇蛇"
+    ]
+  },
+  "TheGuardianChan:PortraitAnimation": {
+    "TEXT": [
+      "立绘类型",
+      "动态",
+      "静态"
+    ]
+  },
+  "TheGuardianChan:Name": {
+    "TEXT": [
+      "守护者",
+      "黏黏史莱姆"
+    ]
+  },
+  "TheGuardianChan:modSettings": {
+    "TEXT": [
+      "去除六火的面具",
+      "去除六火周围的鬼魂",
+      "关闭动态立绘--蹲酱",
+      "禁用敌人皮肤"
+    ]
+  }
+}
