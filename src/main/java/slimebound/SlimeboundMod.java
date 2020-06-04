@@ -859,7 +859,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     }
 
     public void receiveCustomModeMods(List<CustomMod> l) {
-
         l.add(new CustomMod(AllSplit.ID, "r", true));
     }
 

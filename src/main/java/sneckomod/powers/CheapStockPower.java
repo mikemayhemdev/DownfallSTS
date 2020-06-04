@@ -5,7 +5,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
@@ -20,8 +22,12 @@ public class CheapStockPower extends AbstractPower implements CloneablePowerInte
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public CheapStockPower(final int amount) {
-        this.name = "Cheap Stock";
+        name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -63,9 +69,9 @@ public class CheapStockPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b" + amount + " time.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b" + amount + " times.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
     @Override

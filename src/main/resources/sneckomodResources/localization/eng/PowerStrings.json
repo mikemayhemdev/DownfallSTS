@@ -1,1 +1,10 @@
-{}
+{
+  "sneckomod:CheapStockPower": {
+    "NAME": "Cheap Stock",
+    "DESCRIPTIONS": [
+      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b",
+      " time.",
+      " times."
+    ]
+  }
+}

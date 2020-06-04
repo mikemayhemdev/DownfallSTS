@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import expansioncontent.patches.CenterGridCardSelectScreen;
@@ -14,8 +15,7 @@ import guardian.GuardianMod;
 
 import java.util.ArrayList;
 
-public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<AbstractCard>> {
-
+public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<String>> {
 
     public static final String ID = GuardianMod.makeID("GemstoneGun");
 
@@ -23,9 +23,9 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
     public static final String OUTLINE_IMG_PATH = "relics/GemstoneGunOutline.png";
     int numPicked = 0;
     private boolean cardSelected = true;
-    private AbstractCard myGemOne = null;
-    private AbstractCard myGemTwo = null;
-    private AbstractCard myGemThree = null;
+    private String myGemOne = null;
+    private String myGemTwo = null;
+    private String myGemThree = null;
     private boolean allDone = false;
 
     public GemstoneGun() {
@@ -43,14 +43,14 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
     public void atBattleStart() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        myGemOne.use(AbstractDungeon.player, null);
-        myGemTwo.use(AbstractDungeon.player, null);
-        myGemThree.use(AbstractDungeon.player, null);
+        CardLibrary.getCopy(myGemOne).use(AbstractDungeon.player, null);
+        CardLibrary.getCopy(myGemTwo).use(AbstractDungeon.player, null);
+        CardLibrary.getCopy(myGemThree).use(AbstractDungeon.player, null);
     }
 
     @Override
-    public ArrayList<AbstractCard> onSave() {
-        ArrayList<AbstractCard> myList = new ArrayList<>();
+    public ArrayList<String> onSave() {
+        ArrayList<String> myList = new ArrayList<>();
         myList.add(myGemOne);
         myList.add(myGemTwo);
         myList.add(myGemThree);
@@ -58,7 +58,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
     }
 
     @Override
-    public void onLoad(ArrayList<AbstractCard> abstractCards) {
+    public void onLoad(ArrayList<String> abstractCards) {
         myGemOne = abstractCards.get(0);
         myGemTwo = abstractCards.get(1);
         myGemThree = abstractCards.get(2);
@@ -93,13 +93,13 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
             numPicked++;
             switch (numPicked) {
                 case 1:
-                    myGemOne = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                    myGemOne = AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID;
                     break;
                 case 2:
-                    myGemTwo = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                    myGemTwo = AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID;
                     break;
                 case 3:
-                    myGemThree = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                    myGemThree = AbstractDungeon.gridSelectScreen.selectedCards.get(0).cardID;
                     break;
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
@@ -115,7 +115,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
     }
 
     private void setDescriptionAfterLoading() {
-        this.description = DESCRIPTIONS[1] + myGemOne.rawDescription.replaceAll("Gem. NL ", "") + " NL " + myGemTwo.rawDescription.replaceAll("Gem. NL ", "") + " NL " + myGemThree.rawDescription.replaceAll("Gem. NL ", "");
+        this.description = DESCRIPTIONS[1] + CardLibrary.getCopy(myGemOne).rawDescription.replaceAll("Gem. NL ", "") + " NL " + CardLibrary.getCopy(myGemTwo).rawDescription.replaceAll("Gem. NL ", "") + " NL " + CardLibrary.getCopy(myGemThree).rawDescription.replaceAll("Gem. NL ", "");
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();
@@ -124,7 +124,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
     @Override
     public String getUpdatedDescription() {
         if (allDone) {
-            return DESCRIPTIONS[1] + myGemOne.rawDescription.replaceAll("Gem. NL ", "") + " NL " + myGemTwo.rawDescription.replaceAll("Gem. NL ", "") + " NL " + myGemThree.rawDescription.replaceAll("Gem. NL ", "");
+            return DESCRIPTIONS[1] + CardLibrary.getCopy(myGemOne).rawDescription.replaceAll("Gem. NL ", "") + " NL " + CardLibrary.getCopy(myGemTwo).rawDescription.replaceAll("Gem. NL ", "") + " NL " + CardLibrary.getCopy(myGemThree).rawDescription.replaceAll("Gem. NL ", "");
         }
         return DESCRIPTIONS[0];
     }

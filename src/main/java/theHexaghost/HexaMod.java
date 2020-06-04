@@ -179,8 +179,6 @@ public class HexaMod implements
             BaseMod.addCard(card);
             if (cls.hasAnnotation(CardNoSeen.class)) {
                 UnlockTracker.hardUnlockOverride(card.cardID);
-            } else {
-                UnlockTracker.unlockCard(card.cardID);
             }
         }
     }
