@@ -70,7 +70,6 @@ public class GuardianWhirl extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        this.exhaust = true;
 
     }
 
