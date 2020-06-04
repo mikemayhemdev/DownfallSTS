@@ -237,9 +237,9 @@
     "NAME": "Heat Crush",
     "DESCRIPTION": "Deal !D! damage. NL Damage is increased by enemy's hexamod:Burn."
   },
-  "hexamod:InvigoratingFlames": {
+  "hexamod:HeatShield": {
     "NAME": "Heat Shield",
-    "DESCRIPTION": "Gain !B! Block, increased by hexamod:Burn on ALL enemies."
+    "DESCRIPTION": "Gain !M! Block, increased by hexamod:Burn on ALL enemies. (Current: !B! Block)"
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
