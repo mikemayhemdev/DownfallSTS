@@ -118,8 +118,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public static SpawnedSlime mostRecentSlime;
     @SpireEnum
     public static AbstractCard.CardTags LICK;
-    @SpireEnum
-    public static AbstractCard.CardTags GOOPEXPLOIT;
 
     @SpireEnum
     public static AbstractCard.CardTags TACKLE;

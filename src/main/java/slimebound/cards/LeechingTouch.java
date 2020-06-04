@@ -43,7 +43,6 @@ public class LeechingTouch extends AbstractSlimeboundCard {
     public LeechingTouch() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 5;
 
@@ -64,6 +63,11 @@ public class LeechingTouch extends AbstractSlimeboundCard {
             AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, blockAmount));
 
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        slimedGlowCheck();
     }
 
     public AbstractCard makeCopy() {

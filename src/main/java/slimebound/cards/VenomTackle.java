@@ -49,7 +49,6 @@ public class VenomTackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = originalDamage = 11;
         baseSelfDamage = this.selfDamage = 3;
@@ -89,6 +88,11 @@ public class VenomTackle extends AbstractSlimeboundCard {
 
         return new VenomTackle();
 
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        slimedGlowCheck();
     }
 
     public void upgrade() {

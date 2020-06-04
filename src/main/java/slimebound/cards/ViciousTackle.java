@@ -49,7 +49,6 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 14;
         this.baseSelfDamage = this.selfDamage = 3;
@@ -98,6 +97,11 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
 
 
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        slimedGlowCheck();
     }
 
     public AbstractCard makeCopy() {
