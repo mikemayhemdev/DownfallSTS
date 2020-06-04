@@ -19,7 +19,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.beyond.Falling;
 import com.megacrit.cardcrawl.events.city.Ghosts;
-import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BlueCandle;
@@ -27,18 +26,13 @@ import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.events.ScrapOozeSlimebound;
-import slimebound.patches.SlimeboundEnum;
-import slimebound.relics.ScrapOozeRelic;
 import sneckomod.relics.UnknownEgg;
-import theHexaghost.cards.*;
 import theHexaghost.events.CouncilOfGhosts_Hexa;
 import theHexaghost.events.HexaFalling;
 import theHexaghost.events.SealChamber;
@@ -62,7 +56,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static theHexaghost.GhostflameHelper.*;
-import static theHexaghost.GhostflameHelper.hexaGhostFlames;
 import static theHexaghost.TheHexaghost.oscillarator;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
@@ -312,7 +305,7 @@ public class HexaMod implements
         if (renderFlames) {
             GhostflameHelper.render(sb);
         }
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.player.isDead) {
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.player.isDead && renderFlames) {
             if (activeGhostFlame != null) activeGhostFlame.renderGhostflameTriggerUI(sb);
             oscillarator();
             sb.setColor(oscillarator());
@@ -382,17 +375,17 @@ public class HexaMod implements
                     }
 
                     Texture b = gf.getHelperEffectTexture();
-                    sb.setColor(1F,1F,1F,0.6F);
+                    sb.setColor(1F, 1F, 1F, 0.6F);
                     sb.draw(b, x - (gf.effectIconXOffset * Settings.scale), y + gf.effectIconYOffset * Settings.scale, 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
 
-                    sb.setColor(1F,1F,1F,1F);
+                    sb.setColor(1F, 1F, 1F, 1F);
                     FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, gf.returnHoverHelperText(), x, y, gf.textColor, fontScale);// 150 153
 
-                    if (gf instanceof BolsteringGhostflame){
-                        sb.setColor(1F,1F,1F,0.6F);
+                    if (gf instanceof BolsteringGhostflame) {
+                        sb.setColor(1F, 1F, 1F, 0.6F);
                         Texture c = TextureLoader.getTexture(HexaMod.makeUIPath("strength.png"));
                         sb.draw(c, x - (gf.effectIconXOffset * Settings.scale), y + (gf.effectIconYOffset * Settings.scale) - (50F * Settings.scale), 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
-                        sb.setColor(1F,1F,1F,1F);
+                        sb.setColor(1F, 1F, 1F, 1F);
                         FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, "1", x, y - 50F * Settings.scale, gf.textColor, fontScale);// 150 153
 
                     }
