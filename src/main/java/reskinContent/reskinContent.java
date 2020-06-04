@@ -30,6 +30,7 @@ import java.util.Properties;
 @SpireInitializer
 public class reskinContent implements
         EditStringsSubscriber,
+        PostInitializeSubscriber,
          StartGameSubscriber
 {
 
@@ -103,7 +104,7 @@ public class reskinContent implements
         String uiStrings = Gdx.files.internal("reskinContent/localization/" + language + "/UIStrings.json").readString(String.valueOf(StandardCharsets.UTF_8));
         BaseMod.loadCustomStrings(UIStrings.class, uiStrings);
     }
-/*
+
     @Override
     public void receivePostInitialize() {
         loadSettings();
@@ -111,7 +112,7 @@ public class reskinContent implements
         ModPanel settingsPanel = new ModPanel();
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-    }*/
+    }
 
     public static void saveSettings() {
         try {
