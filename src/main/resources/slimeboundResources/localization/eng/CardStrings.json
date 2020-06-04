@@ -189,7 +189,8 @@
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
-    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more."
+    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Effects that apply slimeboundmod:Goop apply !M! more."
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",

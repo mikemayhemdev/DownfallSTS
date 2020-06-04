@@ -1,0 +1,38 @@
+{
+  "reskinContent:ReSkin": {
+    "TEXT": [
+      "皮肤",
+      "原版",
+      "蹲酱",
+      "史莱姆娘",
+      "六子",
+      "蛇蛇"
+    ]
+  },
+  "reskinContent:PortraitAnimation": {
+    "TEXT": [
+      "立绘类型"
+    ]
+  },
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "静态",
+      "动态",
+      "全特效"
+    ]
+  },
+  "reskinContent:Name": {
+    "TEXT": [
+      "守护者",
+      "黏黏史莱姆"
+    ]
+  },
+  "reskinContent:modSettings": {
+    "TEXT": [
+      "去除六火的面具",
+      "去除六火周围的鬼魂",
+      "关闭动态立绘--蹲酱",
+      "禁用敌人皮肤"
+    ]
+  }
+}

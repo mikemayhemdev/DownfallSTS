@@ -5,13 +5,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.powers.BurnPower;
 
-public class InvigoratingFlames extends AbstractHexaCard {
+public class HeatShield extends AbstractHexaCard {
 
-    public final static String ID = makeID("InvigoratingFlames");
+    public final static String ID = makeID("HeatShield");
 
     //stupid intellij stuff SKILL, SELF_AND_ENEMY, UNCOMMON
 
-    public InvigoratingFlames() {
+    public HeatShield() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
     }
@@ -19,6 +19,8 @@ public class InvigoratingFlames extends AbstractHexaCard {
     @Override
     protected void applyPowersToBlock() {
         int realBaseBlock = this.baseBlock;
+        super.applyPowersToBlock();
+        this.magicNumber = this.baseMagicNumber = this.block;
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (mo.hasPower(BurnPower.POWER_ID))
                 baseBlock += mo.getPower(BurnPower.POWER_ID).amount;

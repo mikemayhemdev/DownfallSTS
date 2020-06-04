@@ -71,7 +71,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Must be in *Defensive *Mode, and exits the mode. NL Deal !D! damage !GuardianMulti! times to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Must be in *Defensive *Mode, and exits the mode. NL Deal !D! damage !M! times to ALL enemies."
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",

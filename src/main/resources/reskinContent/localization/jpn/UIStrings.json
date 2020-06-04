@@ -1,0 +1,26 @@
+{
+  "reskinContent:ReSkin": {
+    "TEXT": [
+      "きせかえ",
+      "オリジナル",
+      "コアちゃん",
+      "オリジナル",
+      "スライム娘"
+    ]
+  },
+  "reskinContent:Name": {
+    "TEXT": [
+      "The Guardian",
+      "スライムバウンド"
+    ]
+  },
+  "reskinContent:modSettings": {
+  "TEXT": [
+    "Remove mask of Hexaghost",
+    "Remove ghost Surround Hexaghost",
+    "Disable animated portrait--Guardian",
+    "Disable enemy's reskin"
+
+  ]
+}
+}

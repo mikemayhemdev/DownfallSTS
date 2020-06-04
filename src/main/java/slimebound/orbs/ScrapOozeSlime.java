@@ -27,6 +27,8 @@ public class ScrapOozeSlime
     public float attachmentGlowX;
     public float attachmentGlowY;
 
+    public boolean evoked;
+
     private ScrapParticle scrapVFX;
     private ScrapGlowParticle scrapGlowVFX;
 
@@ -54,15 +56,18 @@ public class ScrapOozeSlime
     }
 
     @Override
-    public void onEvoke() {
-        super.onEvoke();
+    public void triggerEvokeAnimation() {
+        super.triggerEvokeAnimation();
+        SlimeboundMod.logger.info("Evoking Scrap Ooze");
+        this.evoked = true;
         cleanUpVFX();
     }
 
-    public void cleanUpVFX() {
-
+    private void cleanUpVFX() {
+        SlimeboundMod.logger.info("Cleaning up Scrap Ooze VFX");
         this.scrapVFX.finish();
         this.scrapGlowVFX.finish();
+        this.evoked = true;
     }
 
     public void activateEffectUnique() {

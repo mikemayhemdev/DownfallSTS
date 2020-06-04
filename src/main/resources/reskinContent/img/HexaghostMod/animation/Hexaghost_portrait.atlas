@@ -1,0 +1,272 @@
+
+Hexaghost_portrait.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+output/Plasma3
+  rotate: false
+  xy: 1, 1
+  size: 1954, 1948
+  orig: 1954, 1948
+  offset: 0, 0
+  index: -1
+output/Plasma2
+  rotate: false
+  xy: 1957, 1
+  size: 1722, 1778
+  orig: 1722, 1778
+  offset: 0, 0
+  index: -1
+output/Plasma1
+  rotate: false
+  xy: 1957, 1781
+  size: 1495, 1432
+  orig: 1495, 1432
+  offset: 0, 0
+  index: -1
+output/Plasma0
+  rotate: false
+  xy: 1, 1951
+  size: 1223, 1229
+  orig: 1223, 1229
+  offset: 0, 0
+  index: -1
+output/HairBack
+  rotate: false
+  xy: 3763, 2515
+  size: 209, 176
+  orig: 209, 176
+  offset: 0, 0
+  index: -1
+output/HairLong
+  rotate: false
+  xy: 3454, 1781
+  size: 418, 581
+  orig: 418, 581
+  offset: 0, 0
+  index: -1
+output/ClothBodyBack2
+  rotate: false
+  xy: 3681, 1501
+  size: 213, 259
+  orig: 213, 259
+  offset: 0, 0
+  index: -1
+output/ClothBodyFront
+  rotate: false
+  xy: 3681, 1221
+  size: 262, 278
+  orig: 262, 278
+  offset: 0, 0
+  index: -1
+output/Leg_R3
+  rotate: false
+  xy: 4031, 1744
+  size: 49, 90
+  orig: 49, 90
+  offset: 0, 0
+  index: -1
+output/Leg_L1
+  rotate: false
+  xy: 3945, 1177
+  size: 127, 254
+  orig: 127, 254
+  offset: 0, 0
+  index: -1
+output/Leg_L2
+  rotate: false
+  xy: 3454, 2364
+  size: 307, 161
+  orig: 307, 161
+  offset: 0, 0
+  index: -1
+output/Leg_R1
+  rotate: false
+  xy: 3454, 2856
+  size: 256, 104
+  orig: 256, 104
+  offset: 0, 0
+  index: -1
+output/Leg_R2
+  rotate: false
+  xy: 3642, 2693
+  size: 201, 161
+  orig: 201, 161
+  offset: 0, 0
+  index: -1
+output/Body2
+  rotate: false
+  xy: 3945, 1433
+  size: 97, 65
+  orig: 97, 65
+  offset: 0, 0
+  index: -1
+output/ClothBodyBack
+  rotate: false
+  xy: 3681, 889
+  size: 223, 330
+  orig: 223, 330
+  offset: 0, 0
+  index: -1
+output/Body
+  rotate: false
+  xy: 3681, 1
+  size: 355, 457
+  orig: 355, 457
+  offset: 0, 0
+  index: -1
+output/Cloth_L1B
+  rotate: false
+  xy: 3874, 2054
+  size: 157, 250
+  orig: 157, 250
+  offset: 0, 0
+  index: -1
+output/Arm_L2
+  rotate: false
+  xy: 3642, 2527
+  size: 92, 154
+  orig: 92, 154
+  offset: 0, 0
+  index: -1
+output/Hand_L
+  rotate: false
+  xy: 3845, 2693
+  size: 117, 193
+  orig: 117, 193
+  offset: 0, 0
+  index: -1
+output/Hand_R
+  rotate: false
+  xy: 3763, 2364
+  size: 100, 113
+  orig: 100, 113
+  offset: 0, 0
+  index: -1
+output/Cloth_L2
+  rotate: false
+  xy: 3712, 2856
+  size: 108, 178
+  orig: 108, 178
+  offset: 0, 0
+  index: -1
+output/Cloth_L1
+  rotate: false
+  xy: 3896, 1501
+  size: 183, 241
+  orig: 183, 241
+  offset: 0, 0
+  index: -1
+output/Cloth_RB
+  rotate: false
+  xy: 3964, 2829
+  size: 80, 213
+  orig: 80, 213
+  offset: 0, 0
+  index: -1
+output/Cloth_R
+  rotate: false
+  xy: 3874, 1762
+  size: 155, 290
+  orig: 155, 290
+  offset: 0, 0
+  index: -1
+output/Neck
+  rotate: false
+  xy: 4009, 760
+  size: 65, 87
+  orig: 65, 87
+  offset: 0, 0
+  index: -1
+output/HairSide_R
+  rotate: false
+  xy: 3974, 2515
+  size: 74, 312
+  orig: 74, 312
+  offset: 0, 0
+  index: -1
+output/Head
+  rotate: false
+  xy: 3874, 2306
+  size: 179, 207
+  orig: 179, 207
+  offset: 0, 0
+  index: -1
+output/Ear
+  rotate: false
+  xy: 4044, 1433
+  size: 27, 56
+  orig: 27, 56
+  offset: 0, 0
+  index: -1
+output/HairFornt
+  rotate: false
+  xy: 3454, 2527
+  size: 186, 186
+  orig: 186, 186
+  offset: 0, 0
+  index: -1
+output/HairSide_L
+  rotate: false
+  xy: 4009, 460
+  size: 80, 298
+  orig: 80, 298
+  offset: 0, 0
+  index: -1
+output/Eye_R
+  rotate: false
+  xy: 3454, 2715
+  size: 110, 33
+  orig: 110, 33
+  offset: 0, 0
+  index: -1
+output/Eye_L
+  rotate: false
+  xy: 4009, 849
+  size: 60, 34
+  orig: 60, 34
+  offset: 0, 0
+  index: -1
+output/Eyebrow_R
+  rotate: false
+  xy: 3763, 2479
+  size: 39, 34
+  orig: 39, 34
+  offset: 0, 0
+  index: -1
+output/Eyebrow_L
+  rotate: false
+  xy: 3804, 2479
+  size: 38, 27
+  orig: 38, 27
+  offset: 0, 0
+  index: -1
+output/Nose
+  rotate: false
+  xy: 4069, 1491
+  size: 4, 6
+  orig: 4, 6
+  offset: 0, 0
+  index: -1
+output/Mouth
+  rotate: false
+  xy: 4044, 1491
+  size: 23, 6
+  orig: 23, 6
+  offset: 0, 0
+  index: -1
+output/MaskHalo
+  rotate: false
+  xy: 3681, 460
+  size: 326, 427
+  orig: 326, 427
+  offset: 0, 0
+  index: -1
+output/Mask
+  rotate: false
+  xy: 3906, 889
+  size: 175, 286
+  orig: 175, 286
+  offset: 0, 0
+  index: -1

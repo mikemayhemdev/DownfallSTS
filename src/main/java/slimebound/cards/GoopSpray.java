@@ -91,7 +91,7 @@ public class GoopSpray extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(10);
+            upgradeSlimed(4);
             upgradeMagicNumber(1);
 
         }

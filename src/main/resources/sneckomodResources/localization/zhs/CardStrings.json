@@ -276,6 +276,6 @@
   },
   "sneckomod:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "不能被打出 。 NL 抽到时，将随机两张手牌 sneckomod:混淆 。"
+    "DESCRIPTION": "不能被打出 。 NL 当你打出牌时， sneckomod:混淆 你的手牌并将这张牌丢弃。"
   }
 }

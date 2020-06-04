@@ -31,10 +31,12 @@ public class ScrapParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
 
     public void finish() {
         this.isDone = true;
+        dispose();
 
     }
 
     public void update() {
+        if (p == null) finish();
 
 
     }
@@ -45,17 +47,21 @@ public class ScrapParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect
     }
 
     public void render(SpriteBatch sb, float x, float y) {
+        if (p == null) finish();
     }
 
 
     public void render(SpriteBatch sb) {
+        if (p == null || p.evoked) {
+            finish();
+        } else {
 
 
-        sb.setColor(new Color(.8F, .8F, .8F, 2F));
+            sb.setColor(new Color(.8F, .8F, .8F, 2F));
 
-        sb.draw(this.img, this.p.attachmentX + p.animX + this.p.cX - W / 2.0F + ((xOffset) * Settings.scale), this.p.attachmentY + this.p.animY + this.p.cY - W / 2.0F + ((yOffset) * Settings.scale), W / 2.0F, W / 2.0F, W, W, this.scale * Settings.scale, this.scale * Settings.scale, 0.0F, 0, 0, W, W, false, false);
+            sb.draw(this.img, this.p.attachmentX + p.animX + this.p.cX - W / 2.0F + ((xOffset) * Settings.scale), this.p.attachmentY + this.p.animY + this.p.cY - W / 2.0F + ((yOffset) * Settings.scale), W / 2.0F, W / 2.0F, W, W, this.scale * Settings.scale, this.scale * Settings.scale, 0.0F, 0, 0, W, W, false, false);
 
-
+        }
     }
 }
 

@@ -1,0 +1,38 @@
+{
+  "reskinContent:ReSkin": {
+    "TEXT": [
+      "Skin",
+      "Original",
+      "Guardian Chan",
+      "Slaifu",
+      "Hexago",
+      "SSSSnecko"
+    ]
+  },
+  "reskinContent:PortraitAnimation": {
+    "TEXT": [
+      "Portrait Type"
+    ]
+  },
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "Static",
+      "Animated",
+      "Full Effect"
+    ]
+  },
+  "reskinContent:Name": {
+    "TEXT": [
+      "The Guardian",
+      "The Slimebound"
+    ]
+  },
+  "reskinContent:modSettings": {
+  "TEXT": [
+    "Remove mask of Hexaghost",
+    "Remove ghost Surround Hexaghost",
+    "Disable animated portrait--Guardian",
+    "Disable enemy's reskin"
+  ]
+}
+}

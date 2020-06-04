@@ -7,6 +7,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.CanLoseAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.colorless.PanicButton;
@@ -26,6 +27,8 @@ import downfall.actions.ForceWaitAction;
 import downfall.actions.LoseGoldAction;
 import downfall.actions.MerchantThrowGoldAction;
 import downfall.powers.SoulStealPower;
+import downfall.rooms.HeartShopRoom;
+import downfall.vfx.GainSingleSoulEffect;
 import downfall.vfx.SoulStealEffect;
 
 /*
@@ -240,17 +243,17 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void die() {
-        AbstractDungeon.getCurrRoom().rewardAllowed = true;
+        AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();
+        int increaseGold = 300;
         if (FleeingMerchant.CURRENT_SOULS > 0)
-            AbstractDungeon.getCurrRoom().addStolenGoldToRewards(FleeingMerchant.CURRENT_SOULS);
-        AbstractDungeon.getCurrRoom().addGoldToRewards(50);
-        AbstractDungeon.getCurrRoom().addCardToRewards();
-        AbstractDungeon.getCurrRoom().addCardToRewards();
-        AbstractDungeon.getCurrRoom().addCardReward(new RewardItem(AbstractCard.CardColor.COLORLESS));
-        AbstractDungeon.getCurrRoom().addPotionToRewards();
-        AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.SHOP);
+            increaseGold += FleeingMerchant.CURRENT_SOULS;
+
+        for (int i = 0; i < increaseGold; i++) {
+            AbstractDungeon.effectList.add(new GainSingleSoulEffect(this, this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
+            }
         super.die();
+        this.deathTimer += 2F;
         DEAD = true;
     }
 
@@ -274,6 +277,15 @@ public class FleeingMerchant extends AbstractMonster {
     public void dispose() {
         super.dispose();
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-        AbstractDungeon.combatRewardScreen.open();
+        //AbstractDungeon.combatRewardScreen.open();
+        if (DEAD){
+            AbstractRoom tRoom = new HeartShopRoom(false);
+            AbstractDungeon.currMapNode.setRoom(tRoom);
+            AbstractDungeon.scene.nextRoom(tRoom);
+            CardCrawlGame.fadeIn(1.5F);
+            AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
+            tRoom.onPlayerEntry();
+            AbstractDungeon.closeCurrentScreen();
+        }
     }
 }

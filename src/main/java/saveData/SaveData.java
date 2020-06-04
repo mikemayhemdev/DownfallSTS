@@ -8,9 +8,11 @@ import com.megacrit.cardcrawl.saveAndContinue.SaveAndContinue;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import downfall.downfallMod;
 import downfall.events.Cleric_Evil;
+import downfall.events.WomanInBlue_Evil;
 import downfall.monsters.FleeingMerchant;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
+import downfall.relics.BrokenWingStatue;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,6 +33,8 @@ public class SaveData {
     public static final String MERCHANT_SOULS = "MERCHANT_SOULS";
     public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
     public static final String MERCHANT_ESCAPED = "MERCHANT_ESCAPED";
+    public static final String WING_GIVEN = "WING_GIVEN";
+
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
     //when data is "saved" it is saved here, and written to the actual save file slightly later
@@ -51,6 +55,8 @@ public class SaveData {
 
     private static boolean merchantDead;
     private static boolean merchantEscaped;
+
+    private static boolean brokenWingGiven;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -79,6 +85,8 @@ public class SaveData {
             merchantDead = FleeingMerchant.DEAD;
             merchantEscaped = FleeingMerchant.ESCAPED;
 
+            brokenWingGiven = BrokenWingStatue.GIVEN;
+
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
     }
@@ -106,6 +114,7 @@ public class SaveData {
             params.put(MERCHANT_SOULS, merchantSouls);
             params.put(MERCHANT_DEAD, merchantDead);
             params.put(MERCHANT_ESCAPED, merchantEscaped);
+            params.put(WING_GIVEN, brokenWingGiven);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -148,6 +157,8 @@ public class SaveData {
 
                 merchantDead = data.MERCHANT_DEAD;
                 merchantEscaped = data.MERCHANT_ESCAPED;
+
+                brokenWingGiven = data.WING_GIVEN;
 
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
@@ -194,6 +205,8 @@ public class SaveData {
 
             FleeingMerchant.DEAD = merchantDead;
             FleeingMerchant.ESCAPED = merchantEscaped;
+
+            BrokenWingStatue.GIVEN = brokenWingGiven;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here
