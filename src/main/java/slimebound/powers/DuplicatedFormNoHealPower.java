@@ -55,9 +55,11 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
             logger.info("Split: Current health: " + currentHealth);
             logger.info("Split: Max health: " + maxHealth);
             logger.info("Split: Current percentage: " + currentPct);
-            if (currentHealth + healAmount > maxHealth) {
+            if (currentHealth + healAmount > maxHealth && !victoryUsed) {
+                logger.info("Split: Capping HP returned.");
                 return (maxHealth) - currentHealth;
             } else {
+                logger.info("Split: Full heal allowed.");
                 return healAmount;
             }
         }
@@ -118,8 +120,8 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     public void onVictory() {
         if (!victoryUsed) {
             logger.info("Split is returning HP (victory): " + this.amount);
-            this.owner.heal(this.amount);
             victoryUsed = true;
+            this.owner.heal(this.amount);
             this.amount = 0;
         }
     }
