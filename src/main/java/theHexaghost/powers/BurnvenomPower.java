@@ -3,6 +3,7 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,7 +12,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.BurnAction;
 import theHexaghost.util.TextureLoader;
 
 public class BurnvenomPower extends AbstractPower implements CloneablePowerInterface {
@@ -42,7 +42,7 @@ public class BurnvenomPower extends AbstractPower implements CloneablePowerInter
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (damageAmount > 0 && target != this.owner && target instanceof AbstractMonster && info.type == DamageInfo.DamageType.NORMAL) {// 32
             this.flash();// 33
-            this.addToTop(new BurnAction(((AbstractMonster) target), amount));
+            addToBot(new ApplyPowerAction(target, owner, new BurnPower(target, amount), amount));
         }
     }
 

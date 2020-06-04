@@ -3,13 +3,13 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.BurnAction;
 import theHexaghost.util.TextureLoader;
 
 public class BurnPerTurnPower extends AbstractPower implements CloneablePowerInterface {
@@ -41,7 +41,7 @@ public class BurnPerTurnPower extends AbstractPower implements CloneablePowerInt
     public void atStartOfTurn() {
         if (owner instanceof AbstractMonster) {
             flash();
-            addToBot(new BurnAction(((AbstractMonster) owner), amount));
+            addToBot(new ApplyPowerAction(owner, owner, new BurnPower(owner, amount), amount));
         }
     }
 

@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.actions.BurnAction;
 
 public class SuperheatedStrike extends AbstractHexaCard {
 
@@ -22,14 +21,14 @@ public class SuperheatedStrike extends AbstractHexaCard {
     public SuperheatedStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBurn = burn = MAGIC;
         isEthereal = true;
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        atb(new BurnAction(m, magicNumber));
+        burn(m, burn);
     }
 
     @Override
@@ -41,7 +40,7 @@ public class SuperheatedStrike extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeBurn(UPG_MAGIC);
         }
     }
 }

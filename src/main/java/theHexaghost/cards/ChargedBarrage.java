@@ -3,7 +3,6 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.BurnAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 
 public class ChargedBarrage extends AbstractHexaCard {
@@ -18,14 +17,14 @@ public class ChargedBarrage extends AbstractHexaCard {
 
     public ChargedBarrage() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBurn = burn = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new BurnAction(m, magicNumber));
+        burn(m, burn);
         for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
             if (gf.charged) {
-                atb(new BurnAction(m, magicNumber));
+                burn(m, burn);
             }
         }
     }
@@ -33,7 +32,7 @@ public class ChargedBarrage extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeBurn(UPG_MAGIC);
         }
     }
 }

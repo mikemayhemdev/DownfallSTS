@@ -214,8 +214,8 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "Whenever you apply hexamod:Burn, apply !M! more.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you apply hexamod:Burn, apply !M! more."
+    "DESCRIPTION": "Cards and Ghostflames apply !M! more hexamod:Burn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Cards and Ghostflames apply !M! more hexamod:Burn."
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "Ghostflame Wall",
@@ -273,8 +273,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 1 this combat.",
-    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it, return this card to your hand, and increase its hexamod:Burn by 2 this combat."
+    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",

@@ -44,10 +44,7 @@ import theHexaghost.potions.DoubleChargePotion;
 import theHexaghost.potions.EctoCoolerPotion;
 import theHexaghost.potions.InfernoChargePotion;
 import theHexaghost.relics.*;
-import theHexaghost.util.CardFilter;
-import theHexaghost.util.CardIgnore;
-import theHexaghost.util.CardNoSeen;
-import theHexaghost.util.TextureLoader;
+import theHexaghost.util.*;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -211,6 +208,7 @@ public class HexaMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new BurnVariable());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {

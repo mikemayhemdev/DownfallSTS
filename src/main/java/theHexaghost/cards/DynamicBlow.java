@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.BurnAction;
 
 public class DynamicBlow extends AbstractHexaCard {
 
@@ -22,13 +21,13 @@ public class DynamicBlow extends AbstractHexaCard {
     public DynamicBlow() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBurn = burn = MAGIC;
         isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (GhostflameHelper.activeGhostFlame.charged) {
-            atb(new BurnAction(m, magicNumber));
+            burn(m, burn);
         } else {
             dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         }
@@ -42,7 +41,7 @@ public class DynamicBlow extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPG_DAMAGE);
-            upgradeMagicNumber(UPG_MAGIC);
+            upgradeBurn(UPG_MAGIC);
         }
     }
 }
