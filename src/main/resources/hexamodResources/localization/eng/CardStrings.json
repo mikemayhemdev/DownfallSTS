@@ -63,7 +63,7 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Devil's Dance",
-    "DESCRIPTION": "The first time you hexamod:Retract each turn, gain [E] and draw 1 card. NL Retract.",
+    "DESCRIPTION": "The first time you hexamod:Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you hexamod:Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
   },
   "hexamod:GhostOfSpireFuture": {
