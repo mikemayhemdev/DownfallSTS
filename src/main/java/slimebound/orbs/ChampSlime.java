@@ -54,8 +54,8 @@ public class ChampSlime
     }
 
     @Override
-    public void onEvoke() {
-        super.onEvoke();
+    public void triggerEvokeAnimation() {
+        super.triggerEvokeAnimation();
         cleanUpVFX();
     }
 

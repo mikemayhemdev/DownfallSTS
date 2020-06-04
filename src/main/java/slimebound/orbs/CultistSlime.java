@@ -59,8 +59,8 @@ public class CultistSlime
 
 
     @Override
-    public void onEvoke() {
-        super.onEvoke();
+    public void triggerEvokeAnimation() {
+        super.triggerEvokeAnimation();
         cleanUpVFX();
     }
 

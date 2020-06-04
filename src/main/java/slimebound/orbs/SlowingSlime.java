@@ -61,8 +61,8 @@ public class SlowingSlime
 
 
     @Override
-    public void onEvoke() {
-        super.onEvoke();
+    public void triggerEvokeAnimation() {
+        super.triggerEvokeAnimation();
         cleanUpVFX();
     }
 

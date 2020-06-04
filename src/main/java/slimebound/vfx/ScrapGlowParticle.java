@@ -40,7 +40,7 @@ public class ScrapGlowParticle extends AbstractGameEffect {
 
     public void finish() {
         this.isDone = true;
-
+        dispose();
     }
 
     public void update() {
@@ -57,17 +57,24 @@ public class ScrapGlowParticle extends AbstractGameEffect {
             this.duration = 0.5F;
         }
 
+        if (p == null) finish();
     }
 
     public void render(SpriteBatch sb) {
-        sb.setColor(Color.BLACK);
-        sb.draw(this.img, this.p.x + xOffset, this.p.y + yOffset, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
-        sb.setColor(this.color);
-        sb.draw(this.img, this.p.x + xOffset, this.p.y + yOffset, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
-    }
+        if (p == null || p.evoked){
+            finish();
+        } else {
+            sb.setColor(Color.BLACK);
+            sb.draw(this.img, this.p.x + xOffset, this.p.y + yOffset, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
+            sb.setColor(this.color);
+            sb.draw(this.img, this.p.x + xOffset, this.p.y + yOffset, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 2.0F, this.scale * 2.0F, this.rotation);
+
+        }
+         }
 
 
     public void dispose() {
         this.isDone = true;
+
     }
 }
