@@ -34,8 +34,12 @@ public class TheNest_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONS[0], "images/events/theNest.jpg");
         this.noCardsInRewards = true;
         AbstractDungeon.getCurrRoom().rewards.clear();
-        if (AbstractDungeon.player.hasRelic(BrokenWingStatue.ID)){
-            this.imageEventText.setDialogOption(OPTIONS[0]);
+        if (AbstractDungeon.player.hasRelic(BrokenWingStatue.ID) || BrokenWingStatue.GIVEN){
+            if ((AbstractDungeon.player.hasRelic(BrokenWingStatue.ID))) {
+                this.imageEventText.setDialogOption(OPTIONS[0]);
+            } else {
+                this.imageEventText.setDialogOption(OPTIONS[10]);
+            }
         } else {
             this.imageEventText.setDialogOption(OPTIONS[1], true);
         }

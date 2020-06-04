@@ -23,7 +23,9 @@ public class BrokenWingStatue extends CustomRelic {
     private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/WingStatue.png"));
 
     private static final String[] DIALOG = CardCrawlGame.languagePack.getEventString(WingStatue_Evil.ID).DESCRIPTIONS;
-    
+
+    public static boolean GIVEN = false;
+
     private AbstractMonster receiver;
 
     public BrokenWingStatue() {
@@ -46,6 +48,7 @@ public class BrokenWingStatue extends CustomRelic {
             }
         }
         if (this.receiver != null) {
+            GIVEN = true;
             int DialogIndex;
             if (this.receiver instanceof Cultist) {
                 DialogIndex = 4;

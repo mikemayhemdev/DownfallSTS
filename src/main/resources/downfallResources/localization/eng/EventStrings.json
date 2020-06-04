@@ -421,7 +421,8 @@
       "[Continue]",
       "[Take Dagger] #gGain #gRitual #gDagger.",
       "[Anoint] #gUpgrade #gRitual #gDagger.",
-      "[Sacrifice] #rKill #rCultist with Ritual Dagger+."
+      "[Sacrifice] #rKill #rCultist with Ritual Dagger+.",
+      "[Be Praised] #gGain #grewards for returning the #gBroken #gWing #gStatue."
     ]
   },
   "downfall:Colosseum": {

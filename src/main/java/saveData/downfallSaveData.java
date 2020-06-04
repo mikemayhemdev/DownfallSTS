@@ -21,4 +21,6 @@ public class downfallSaveData {
 
     public boolean MERCHANT_DEAD = false;
     public boolean MERCHANT_ESCAPED = false;
+
+    public boolean WING_GIVEN = false;
 }
