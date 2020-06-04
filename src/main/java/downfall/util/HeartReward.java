@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import downfall.downfallMod;
 import downfall.events.HeartEvent;
 import downfall.relics.HeartsMalice;
 import org.apache.logging.log4j.LogManager;
@@ -44,6 +45,8 @@ public class HeartReward {
     private static final int LARGE_GOLD_BONUS = 250;
     private HeartReward.NeowRewardDrawbackDef drawbackDef;
 
+    private String fleeText = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("Heart Event")).OPTIONS[5];
+
     public HeartReward(boolean firstMini) {
         this.drawback = HeartReward.NeowRewardDrawback.NONE;
         this.activated = false;
@@ -52,7 +55,7 @@ public class HeartReward {
         this.hp_bonus = (int)((float)AbstractDungeon.player.maxHealth * 0.1F);
         HeartReward.NeowRewardDef reward;
         if (firstMini) {
-            reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_ENEMY_KILL, TEXT[28]);
+            reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_ENEMY_KILL, fleeText);
         } else {
             reward = new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]");
         }
@@ -101,7 +104,8 @@ public class HeartReward {
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_SMALL_POTIONS, TEXT[5]));
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.RANDOM_COMMON_RELIC, TEXT[6]));
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.TEN_PERCENT_HP_BONUS, TEXT[7] + this.hp_bonus + " ]"));
-                rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_ENEMY_KILL, TEXT[28]));
+
+                rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.THREE_ENEMY_KILL, fleeText));
                 rewardOptions.add(new HeartReward.NeowRewardDef(HeartReward.NeowRewardType.HUNDRED_GOLD, TEXT[8] + 100 + TEXT[9]));
                 break;
             case 2:
