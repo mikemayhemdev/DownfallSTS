@@ -33,11 +33,11 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        ArrayList<AbstractCard> sealList = new ArrayList<>();
+        ArrayList<String> sealList = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
             if (c instanceof AbstractSealCard) {
-                if (!(sealList.contains(c))) {
-                    sealList.add(c);
+                if (!(sealList.contains(c.cardID))) {
+                    sealList.add(c.cardID);
                 }
             }
         }

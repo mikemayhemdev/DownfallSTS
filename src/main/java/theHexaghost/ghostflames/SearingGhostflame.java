@@ -1,6 +1,5 @@
 package theHexaghost.ghostflames;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -56,7 +55,7 @@ public class SearingGhostflame extends AbstractGhostflame {
                     x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
                 }
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
-                if (!m.isDead && !m.isDying && !m.halfDead) {
+                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
                     att(new BurnAction(m, x));
                     att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
                 }
@@ -66,11 +65,11 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public void advanceTrigger(AbstractCard c) {
-        if (!charged && c.type == AbstractCard.CardType.ATTACK){
+        if (!charged && c.type == AbstractCard.CardType.ATTACK) {
             if (attacksPlayedThisTurn < 2) {
                 advanceTriggerAnim();
                 attacksPlayedThisTurn++;
-                if (attacksPlayedThisTurn == 2){
+                if (attacksPlayedThisTurn == 2) {
                     charge();
                 }
             }
@@ -99,7 +98,7 @@ public class SearingGhostflame extends AbstractGhostflame {
     }
 
 
-    public int getEffectCount(){
+    public int getEffectCount() {
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
@@ -113,7 +112,9 @@ public class SearingGhostflame extends AbstractGhostflame {
     }
 
     @Override
-    public String getName(){ return NAME;}
+    public String getName() {
+        return NAME;
+    }
 
     @Override
     public String getDescription() {

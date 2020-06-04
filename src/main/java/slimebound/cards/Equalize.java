@@ -92,7 +92,7 @@ public class Equalize extends AbstractSlimeboundCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDungeon.player.currentHealth <= (AbstractDungeon.player.maxHealth / 2F) ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+        slimedGlowCheck();
     }// 68
 
     public void upgrade() {

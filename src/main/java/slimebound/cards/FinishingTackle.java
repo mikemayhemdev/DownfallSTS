@@ -42,7 +42,6 @@ public class FinishingTackle extends AbstractSlimeboundCard {
     public FinishingTackle() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-        tags.add(SlimeboundMod.GOOPEXPLOIT);
         this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
         this.baseBlock = 10;
@@ -54,6 +53,11 @@ public class FinishingTackle extends AbstractSlimeboundCard {
         if (m.hasPower(SlimedPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        slimedGlowCheck();
     }
 
     public AbstractCard makeCopy() {

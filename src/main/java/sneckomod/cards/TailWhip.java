@@ -23,8 +23,8 @@ public class TailWhip extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        applyToEnemy(m, autoWeak(m, magicNumber));
-        applyToEnemy(m, autoVuln(m, magicNumber));
+        applyToEnemy(m, autoWeak(m, getRandomNum(0, magicNumber)));
+        applyToEnemy(m, autoVuln(m, getRandomNum(0, magicNumber)));
        // atb(new MuddleHandAction());
     }
 

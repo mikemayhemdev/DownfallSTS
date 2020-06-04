@@ -43,6 +43,11 @@ public class LeechLife extends AbstractSlimeboundCard {
         this.exhaust = true;
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        slimedGlowCheck();
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         int x = 0;
         if (m.hasPower(SlimedPower.POWER_ID)) {

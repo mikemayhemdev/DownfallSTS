@@ -45,11 +45,15 @@ public class LeechEnergy extends AbstractSlimeboundCard {
     public LeechEnergy() {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        tags.add(SlimeboundMod.GOOPEXPLOIT);
 
         this.baseDamage = 5;
         baseMagicNumber = magicNumber = 1;
 
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        slimedGlowCheck();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,14 +1,12 @@
 package slimebound.cards;
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
-import slimebound.powers.PreventTackleDamagePower;
-import slimebound.powers.TackleBuffPower;
-import slimebound.powers.TackleDebuffPower;
-import slimebound.powers.TackleModifyDamagePower;
+import slimebound.powers.*;
 import slimebound.relics.SelfDamagePreventRelic;
 
 
@@ -64,6 +62,18 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         }
         return tmp;
     }
+
+    protected void slimedGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();// 39
+
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m.isDeadOrEscaped() && m.hasPower(SlimedPower.POWER_ID)) {// 41
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();// 42
+                break;// 43
+            }
+        }
+    }
+
 
     @Override
     public void applyPowers() {
