@@ -3,11 +3,13 @@ package expansioncontent.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 import slimebound.vfx.SearEffect;
+import theHexaghost.powers.BurnPower;
 
 
 public class Sear extends AbstractExpansionCard {
@@ -35,7 +37,7 @@ public class Sear extends AbstractExpansionCard {
         atb(new VFXAction(new SearEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
 
         atb(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        atb(new BurnAction(m, magicNumber));
+        atb(new ApplyPowerAction(m, p, new BurnPower(m, magicNumber), magicNumber));
 
     }
 

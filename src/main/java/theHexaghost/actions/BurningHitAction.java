@@ -1,12 +1,15 @@
 package theHexaghost.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import theHexaghost.powers.BurnPower;
+import theHexaghost.powers.CrispyPower;
 
 public class BurningHitAction extends AbstractGameAction {
     private int damage;
@@ -46,7 +49,11 @@ public class BurningHitAction extends AbstractGameAction {
             tmp = target.currentHealth;
         }
         if (tmp > 0) {
-            AbstractDungeon.actionManager.addToTop(new BurnAction(((AbstractMonster) target), tmp));
+            int x = tmp;
+            if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
+                x += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
+            }
+            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new BurnPower(target, x), x));
         }
     }
 }
