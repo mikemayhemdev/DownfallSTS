@@ -1,5 +1,5 @@
 {
-  "TheGuardianChan:ReSkin": {
+  "reskinContent:ReSkin": {
     "TEXT": [
       "Skin",
       "Original",
@@ -9,20 +9,25 @@
       "SSSSnecko"
     ]
   },
-  "TheGuardianChan:PortraitAnimation": {
+  "reskinContent:PortraitAnimation": {
     "TEXT": [
-      "Portrait Type",
-      "Animated",
-      "Static"
+      "Portrait Type"
     ]
   },
-  "TheGuardianChan:Name": {
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "Static",
+      "Animated",
+      "Full Effect"
+    ]
+  },
+  "reskinContent:Name": {
     "TEXT": [
       "The Guardian",
       "The Slimebound"
     ]
   },
-  "TheGuardianChan:modSettings": {
+  "reskinContent:modSettings": {
   "TEXT": [
     "Remove mask of Hexaghost",
     "Remove ghost Surround Hexaghost",

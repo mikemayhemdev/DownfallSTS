@@ -1,6 +1,6 @@
- package TheGuardianChan.vfx;
+ package reskinContent.vfx;
  
- import TheGuardianChan.patches.CharacterSelectScreenPatches;
+ import reskinContent.patches.CharacterSelectScreenPatches;
  import com.badlogic.gdx.Gdx;
  import com.badlogic.gdx.graphics.Color;
  import com.badlogic.gdx.graphics.g2d.SpriteBatch;

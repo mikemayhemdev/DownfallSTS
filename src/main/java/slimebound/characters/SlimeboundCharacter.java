@@ -1,6 +1,6 @@
 package slimebound.characters;
 
-import TheGuardianChan.TheGuardianChan;
+import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -67,11 +67,11 @@ public class SlimeboundCharacter extends CustomPlayer {
     private String jsonURL = "slimeboundResources/SlimeboundImages/char/skeleton.json";
     private String jsonURLPuddle = "slimeboundResources/SlimeboundImages/char/skeletonPuddle.json";
 	
-	private String atlasURL2 = "TheGuardianChan/img/Slimebound/animation/TheSlimeBossWaifuDownFall.atlas";
-    private String atlasURLPuddle2 = "TheGuardianChan/img/Slimebound/animation/Slime_acid_char_puddle.atlas";
+	private String atlasURL2 = "reskinContent/img/Slimebound/animation/TheSlimeBossWaifuDownFall.atlas";
+    private String atlasURLPuddle2 = "reskinContent/img/Slimebound/animation/Slime_acid_char_puddle.atlas";
 
-    private String jsonURL2 = "TheGuardianChan/img/Slimebound/animation/TheSlimeBossWaifuDownFall.json";
-    private String jsonURLPuddle2 = "TheGuardianChan/img/Slimebound/animation/Slime_acid_char_puddle.json";
+    private String jsonURL2 = "reskinContent/img/Slimebound/animation/TheSlimeBossWaifuDownFall.json";
+    private String jsonURLPuddle2 = "reskinContent/img/Slimebound/animation/Slime_acid_char_puddle.json";
 
 	
 	
@@ -82,7 +82,7 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public SlimeboundCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String)null, (String)null);
-        if(TheGuardianChan.SlimeOriginalAnimation){
+        if(reskinContent.slimeOriginalAnimation){
         this.initializeClass(null,
                 "slimeboundResources/SlimeboundImages/char/shoulder2.png",
                 "slimeboundResources/SlimeboundImages/char/shoulder.png",
@@ -90,9 +90,9 @@ public class SlimeboundCharacter extends CustomPlayer {
                 this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
         }else {
         this.initializeClass((String) null,
-               "TheGuardianChan/img/Slimebound/shoulder2.png",
-                "TheGuardianChan/img/Slimebound/shoulder.png",
-                "TheGuardianChan/img/Slimebound/corpse.png", this.getLoadout(),
+               "reskinContent/img/Slimebound/shoulder2.png",
+                "reskinContent/img/Slimebound/shoulder.png",
+                "reskinContent/img/Slimebound/corpse.png", this.getLoadout(),
                 0.0F, 0.0F, 300.0F, 180.0F, new EnergyManager(3));
 
         }
@@ -162,7 +162,7 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(TheGuardianChan.SlimeOriginalAnimation){
+        if(reskinContent.slimeOriginalAnimation){
             this.loadAnimation(atlasURL, this.currentJson, renderscale);
         }else {
             this.loadAnimation(currentAtlas2, this.currentJson2, renderscale);

@@ -1,4 +1,4 @@
-package TheGuardianChan.patches;
+package reskinContent.patches;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
@@ -17,7 +17,7 @@ import guardian.patches.GuardianEnum;
 
 import java.lang.reflect.Method;
 
-import static TheGuardianChan.TheGuardianChan.*;
+import static reskinContent.reskinContent.*;
 
 public class OrbPatches
 {
@@ -26,7 +26,7 @@ public class OrbPatches
     public static class SetSlotPatch{
         @SpirePrefixPatch
         public  static SpireReturn<Void> Prefix(AbstractOrb abstractOrb_instance,int slotNum,int maxOrbs){
-            if(AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && !GuardianOriginalAnimation){
+            if(AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && !guardianOriginalAnimation){
                      float dist = 230.0F * Settings.scale + maxOrbs * 10.0F * Settings.scale;
                      float angle = 100.0F + maxOrbs * 12.0F;
                      float offsetAngle = angle / 2.0F;

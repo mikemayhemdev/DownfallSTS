@@ -1,6 +1,6 @@
 package guardian.characters;
 
-import TheGuardianChan.TheGuardianChan;
+import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -60,8 +60,8 @@ public class GuardianCharacter extends CustomPlayer {
     private String jsonURL = "guardianResources/GuardianImages/char/skeleton.json";
     private String jsonURLPuddle = "guardianResources/GuardianImages/char/skeletonPuddle.json";
 
-	private String atlasURL2 = "TheGuardianChan/img/GuardianMod/animation/Guardian.atlas";
-	private String jsonURL2 = "TheGuardianChan/img/GuardianMod/animation/Guardian.json";
+	private String atlasURL2 = "reskinContent/img/GuardianMod/animation/Guardian.atlas";
+	private String jsonURL2 = "reskinContent/img/GuardianMod/animation/Guardian.json";
 
     private String currentJson = jsonURL;
 	private String currentJson2 = jsonURL2;
@@ -72,7 +72,7 @@ public class GuardianCharacter extends CustomPlayer {
     public GuardianCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
 
-        if(TheGuardianChan.GuardianOriginalAnimation){
+        if(reskinContent.guardianOriginalAnimation){
         this.initializeClass(null,
                 "guardianResources/GuardianImages/char/shoulder2.png",
                 "guardianResources/GuardianImages/char/shoulder.png",
@@ -81,9 +81,9 @@ public class GuardianCharacter extends CustomPlayer {
         }else
             {
                 this.initializeClass((String) null,
-                 "TheGuardianChan/img/GuardianMod/shoulder2.png",
-                 "TheGuardianChan/img/GuardianMod/shoulder.png",
-                 "TheGuardianChan/img/GuardianMod/corpse.png", this.getLoadout(),
+                 "reskinContent/img/GuardianMod/shoulder2.png",
+                 "reskinContent/img/GuardianMod/shoulder.png",
+                 "reskinContent/img/GuardianMod/corpse.png", this.getLoadout(),
                   0.0F, -10F, 400.0F, 350.0F, new EnergyManager(3));
 
             }
@@ -115,7 +115,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(TheGuardianChan.GuardianOriginalAnimation){
+        if(reskinContent.guardianOriginalAnimation){
             this.loadAnimation(atlasURL, this.currentJson, renderscale);
         }else {
             this.loadAnimation(atlasURL2, this.currentJson2, renderscale2);
@@ -136,7 +136,7 @@ public class GuardianCharacter extends CustomPlayer {
     public void switchToDefensiveMode(){
         if (!inShattered) {
             if (!inDefensive) {
-                if(TheGuardianChan.GuardianOriginalAnimation){
+                if(reskinContent.guardianOriginalAnimation){
                     CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
                     this.stateData.setMix("idle", "defensive", 0.2F);
                     this.state.setTimeScale(.75F);
@@ -166,7 +166,7 @@ public class GuardianCharacter extends CustomPlayer {
     public void switchToOffensiveMode() {
         if (!inShattered) {
             if (inDefensive) {
-                if(TheGuardianChan.GuardianOriginalAnimation){
+                if(reskinContent.guardianOriginalAnimation){
                     CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
                     this.stateData.setMix("defensive", "idle", 0.2F);
                     this.state.setTimeScale(.75F);

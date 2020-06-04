@@ -1,4 +1,4 @@
- package TheGuardianChan.vfx;
+ package reskinContent.vfx;
 
  import com.badlogic.gdx.Gdx;
  import com.badlogic.gdx.graphics.Color;

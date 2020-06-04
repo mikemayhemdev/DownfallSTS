@@ -1,9 +1,10 @@
- package TheGuardianChan.helpers;
+ package reskinContent.helpers;
  
- import TheGuardianChan.patches.CharacterSelectScreenPatches;
- import TheGuardianChan.vfx.PortraitGhostIgniteEffect;
- import TheGuardianChan.vfx.PortraitGhostlyFireEffect;
- import TheGuardianChan.vfx.PortraitGhostlyWeakFireEffect;
+ import reskinContent.patches.CharacterSelectScreenPatches;
+ import reskinContent.reskinContent;
+ import reskinContent.vfx.PortraitGhostIgniteEffect;
+ import reskinContent.vfx.PortraitGhostlyFireEffect;
+ import reskinContent.vfx.PortraitGhostlyWeakFireEffect;
  import com.badlogic.gdx.Gdx;
  import com.badlogic.gdx.graphics.Color;
  import com.badlogic.gdx.math.MathUtils;
@@ -107,7 +108,7 @@
            if (this.particleTimer < 0.0F) {
                CharacterSelectScreenPatches.char_effectsQueue.add(new PortraitGhostlyFireEffect(this.x + oX + this.effect.y * 2.0F, this.y + oY + this.effect.y * 2.0F, this.scale));
              
-             this.particleTimer = 0.12F;
+             this.particleTimer = 0.12F/(float)reskinContent.portraitAnimationType;
            } 
          } 
        } else {
@@ -116,7 +117,7 @@
          if (this.particleTimer < 0.0F) {
              CharacterSelectScreenPatches.char_effectsQueue.add(new PortraitGhostlyWeakFireEffect(this.x + oX + this.effect.y * 2.0F, this.y + oY + this.effect.y * 2.0F, this.scale));
 
-           this.particleTimer = 0.12F;
+           this.particleTimer = 0.12F/(float)reskinContent.portraitAnimationType;
          } 
        } 
      } else {

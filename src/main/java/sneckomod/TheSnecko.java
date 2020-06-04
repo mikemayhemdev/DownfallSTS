@@ -1,6 +1,6 @@
 package sneckomod;
 
-import TheGuardianChan.TheGuardianChan;
+import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -58,7 +58,7 @@ public class TheSnecko extends CustomPlayer {
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
 
-        if(TheGuardianChan.SneckoOriginalAnimation) {
+        if(reskinContent.sneckoOriginalAnimation) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
@@ -66,9 +66,9 @@ public class TheSnecko extends CustomPlayer {
                     getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
         }else {
             initializeClass(null,
-                    "TheGuardianChan/img/SneckoMod/shoulder2.png",
-                    "TheGuardianChan/img/SneckoMod/shoulder.png",
-                    "TheGuardianChan/img/SneckoMod/corpse.png",
+                    "reskinContent/img/SneckoMod/shoulder2.png",
+                    "reskinContent/img/SneckoMod/shoulder.png",
+                    "reskinContent/img/SneckoMod/corpse.png",
                     getLoadout(), 10.0F, -20.0F, 300.0F, 300.0F, new EnergyManager(3));
         }
 
@@ -79,10 +79,10 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(TheGuardianChan.SneckoOriginalAnimation){
+        if(reskinContent.sneckoOriginalAnimation){
             loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
         }else {
-            loadAnimation("TheGuardianChan/img/SneckoMod/animation/Snecko_waifu.atlas", "TheGuardianChan/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
+            loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);

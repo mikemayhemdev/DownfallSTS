@@ -1,5 +1,5 @@
 {
-  "TheGuardianChan:ReSkin": {
+  "reskinContent:ReSkin": {
     "TEXT": [
       "きせかえ",
       "オリジナル",
@@ -8,13 +8,13 @@
       "スライム娘"
     ]
   },
-  "TheGuardianChan:Name": {
+  "reskinContent:Name": {
     "TEXT": [
       "The Guardian",
       "スライムバウンド"
     ]
   },
-  "TheGuardianChan:modSettings": {
+  "reskinContent:modSettings": {
   "TEXT": [
     "Remove mask of Hexaghost",
     "Remove ghost Surround Hexaghost",
