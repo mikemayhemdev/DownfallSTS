@@ -100,9 +100,9 @@
   "downfall:GoldenShrine": {
     "NAME": "灵魂神龛",
     "DESCRIPTIONS": [
-      "Before you lies an elaborate shrine to an ancient spirit of evil. ",
-      "As your hand touches the shrine, #ysouls spill forth from the shrine, ~showering~ ~you~ ~in~ ~power.~ ",
-      "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
+      "在你面前是一座古老恶灵的精巧神龛。",
+      "当你的手触碰神龛时，神龛中喷涌出 #y灵魂 ， ~如此强大的力量！~",
+      "你每攻击一次神龛，就有更多的 #y灵魂 飞溅出来！ NL NL 你在吸收这些力量时犹豫了，意识到神龛本可能是个无尽的力量源泉。 你不知道自己是否作出了 #r正确的选择 。",
       "你无视了神龛。"
     ]
   },
@@ -118,31 +118,31 @@
   "downfall:CursedFountain": {
     "NAME": "诅咒泉水",
     "DESCRIPTIONS": [
-      "You come across a tinged #p~purple~ #p~liquid~ flowing endlessly from a fountain on a nearby wall. It is one you recognize as deadly to most creatures, but quite beneficial to those subjected to a curse.",
-      "As you drink the #p~liquid,~ you feel a #pdark #pgrasp reach into your mind. It feels luxurious and refreshing.",
-      "Sensing that this #p~liquid~ may be useful, you decide to capture some in a jar to use later. Creatures not attuned to the #pdark #pwater will surely suffer when doused in it.",
-      "The fountain's #p~liquid~ is roiling in the souls of the lost. It seems a waste to not make use of them. You channel the souls into your form, ripping them from the #pcursed #pfountain's magic.",
-      "Leaving the fountain behind, you continue on your way."
+      "你经过墙壁上的一处饮水池，里面流淌着源源不断 #p~紫色的液体~ 。 你知道它对大多数生物是致命的，只对被诅咒者有益。",
+      "你喝下 #p~液体~ 后，感觉到 #p黑暗的束缚 探入心灵，令你清爽舒适。",
+      "想到这些 #p~液体~ 可能有用，你决定用瓶子装一些以备日后之需。 向不适应这 #p黑暗之水 的生物泼洒它能带来极大的痛苦。",
+      "泉水的 #p~液体~ 在迷失者的灵魂间翻搅着。不利用它们简直是浪费。你将这些灵魂从 #p诅咒泉水 的魔力中扯离，纳入自身的形体中。",
+      "将泉水甩到身后，你重新踏上了旅程。"
     ],
     "OPTIONS": [
-      "[瓶装] #g获得药水-流动诅咒。",
-      "[Consume] #g获得75灵魂。",
+      "[瓶装] #g获得药水-诅咒泉水。",
+      "[吸收] #g获得75灵魂。",
       "[喝水] #g回复到满血。",
       "[锁定] 需要一张诅咒。",
       "[锁定] 需要两张诅咒。",
       "[锁定] 需要三张诅咒。",
-      "[锁定] Already used.",
+      "[锁定] 已选择。",
       "[离开]"
     ]
   },
   "downfall:WeMeetAgain": {
     "NAME": "我们又见面了！",
     "DESCRIPTIONS": [
-      "\"BOSS!\" A cheery disheveled fellow approaches you gleefully. You know this man well. NL \"It's me, #yRanwid! You wouldn't believe what I've swindled from the cursed heroes! Do you have any more junk I can give them?\" NL You appreciate his friendliness and consider your options. Surely you have something Ranwid can use in his next \"deal\"...",
-      "\"Oh, this is perfect! It's complete junk! Here, take these elixirs the last few fools gave me!\" NL Ranwid fumbles around his pouches, producing three bottles for you, though nearly dropping them in the process.",
-      "\"Magnificent! This will be quite handy for my next deal. Oh, and I've been harvesting the corpses, as you requested!\" NL Ranwid hands you a soul stone, then scurries away, looking for a new face to sell your useless trinket to.",
-      "\"Exemplary! With just a little work, I can make this look like something truly special.\" NL Ranwid departs, examining the relic carefully, no doubt pondering how he will exaggerate its usefulness to the next adventurer he meets.",
-      "\"Nothing today boss? Okay!\" NL He scampers away."
+      "“老板！” 一个蓬头垢面的男子欢快地出现在你面前向你问好，你对这个男人再熟悉不过了。 NL “是我， #y兰伟德 啊！你肯定想不到我被那些被诅咒的英雄敲诈了多少东西！你还有别的能给他们的垃圾吗？” NL 你称赞了他的友善并考虑你的做法。肯定有什么能给兰伟德用于他的下一次 “交易”...",
+      "“哦，完美！ 这完全就是个垃圾！ 给，这是前几个傻瓜给我的饮料！” NL 兰伟德摸索着他的口袋，掏出三个瓶子交给你，差点就掉到地上去了。",
+      "“太棒了！之后的交易中这会很有用的。哦对了，按您的吩咐，我一直在收集尸体！” NL 兰伟德交出一个灵魂石，之后匆匆走开，寻找能兜售你那无用饰品的新面孔去了。",
+      "“有意思！ 稍微做一点加工，我能让它看起来是个独一无二的珍宝。” NL 兰伟德离开了，一边仔细地检查着这遗物，显然是在沉思着怎么向遇到的下一个冒险者夸大这东西的作用。",
+      "“今儿没货吗老板？成！” NL 他欢快地走开了。"
     ],
     "OPTIONS": [
       "[失去 ",
@@ -158,12 +158,12 @@
   "downfall:Designer": {
     "NAME": "“尖端”设计师",
     "DESCRIPTIONS": [
-      "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @gold!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
-      "It takes little effort to deal with the thief, but the fight does not go without some injury on your part. A man with ridiculous clothing appears at the shop entrance. NL \"Thank you, kind overlord!\", the man says, beckoning you inside.",
-      "You see no reason to get involved with this. There is important killing to be done.",
-      "\"Oh my, you are just dreadful!! This will not do, no no. What is this style? You are to be @menacing!@ A feared and intimidating #roverlord of the Spire! You simply ~must~ let me give you a proper makeover.\" NL NL You aren't sure whether to take this man at his word and accept his services, or if you should be insulted at his disgust at your style.",
-      "\"Okay, bye bye now! Tell your #roverlord friends!\" NL NL Though you were apprehensive of this man's ability, you definitely feel more intimidating.",
-      "You punch him. NL \"My @FACE!!@ Now I'll have to-\" NL NL He fainted. Perhaps next time he will give pause before insulting a creature of your status."
+      "你发现一家 #g~五彩斑斓~ 的店，横幅上挂着大大的“尖端”两个字。一个 #r强盗 站在入口处向里大吼，恐吓着里面的人。 NL NL @“把钱交出来！”@ NL NL 强盗专注于他的抢劫计划，丝毫没有注意到你。",
+      "解决这个小贼没花你多少时间，但是战斗过程不可避免地在你身上留下了伤。一个穿着打扮无比荒唐的男人出现在门口， NL “感激不尽，慈悲的领主大人！”， 男人说着话，将你请进店内。",
+      "你没理由卷入这种小事，还有更重要的杀戮等着你。",
+      "“我的天哪，您可太糟了！！不行不行，这怎么能行呢。哎呀，您这算是什么风格？您得有个 @凶狠@ 的样子！一个令人害怕畏惧的尖塔 #领主 ！您 ~必须~ 让我给您打扮一下。” NL NL 你不确定应不应该接受这个男人的话语和服务，以及是否被他贬低你风格的语言侮辱了。",
+      "“好啦，那下次再来哦。向你的 #r领主 朋友们宣传下小店吧!” NL NL 虽然你曾对这个男人的手艺感到担忧，现在你感到更多的是害怕。",
+      "你一拳揍了过去。 NL “我的 @脸@ 啊！！ 这下我要——” NL NL 他晕了过去，或许下次他在贬低别人品味前会懂的等一等了。"
     ],
     "OPTIONS": [
       "[小修一下] ",
@@ -177,17 +177,17 @@
   "downfall:DeadGuy": {
     "NAME": "冒险者尸体",
     "DESCRIPTIONS": [
-      "While channeling the ritual you are caught off guard!",
-      "You exit without a sound.",
-      "You come across a #rdead #radventurer on the floor. NL His spirit still lingers in the area. Also, ",
-      "the armor and face appear to be #r@scoured@ #r@by@ #r@flames.@ ",
-      "it looks as though he's been #r@gouged@ #r@and@ #r@trampled@ by a horned beast. ",
-      "he looks to have been #r@eviscerated@ #r@and@ #r@chopped@ by giant claws. ",
-      "NL A soul harvesting ritual could yield results here, but whichever creature slew this man may return soon.",
-      "The ritual yields souls from the corpse! NL Continue channeling?",
-      "The spell is unable to pull the fallen man's spirit... NL Continue channeling?",
-      "Your magic causes the body to twitch and shake, and from its pockets falls a #yrelic! NL Continue channeling?",
-      "The ritual has been completed!"
+      "在引导仪式时你被偷袭了！",
+      "你一声不发地离开了。",
+      "你发现地上有一具 #r冒险者尸体 。 NL 他的灵魂还在这片区域游荡。而且，",
+      "他的护甲和脸似乎被 #r@火焰灼烧@ 过。",
+      "看起来他被一个带角的生物 #r@戳伤@ 和 #r@踩踏@ 过。",
+      "他的内脏似乎被巨大的爪子 #r@撕扯出来@ 并 #r@切碎@ 了。",
+      "NL 一场灵魂收割仪式可以搞清楚这里发生了什么，但是杀了这个冒险者的生物很快就会回来。",
+      "仪式从尸体中提取出了灵魂！ NL 继续引导吗？",
+      "咒语无法引出这个死者的灵魂... NL 继续引导吗？",
+      "你的魔力使尸体抽搐并颤抖起来，从口袋中掉出了一个 #y遗物 ！ NL 继续引导吗？",
+      "仪式完成了！"
     ],
     "OPTIONS": [
       "[搜索] #g寻找东西。 #r",
@@ -198,29 +198,29 @@
     ]
   },
   "downfall:ShiningLight": {
-    "NAME": "Shining Light",
+    "NAME": "闪耀之光",
     "DESCRIPTIONS": [
-      "You find a shimmering #ymass #yof #ylight encompassing the center of the room. NL NL Its ~warm~ ~glow~ and ~enchanting~ ~patterns~ cause your stomach to turn, but you know this light carries an immense power.",
-      "As you walk through the light, you grimace as it is absorbed into you. NL It's #r@scorching@ #r@hot@ ! You feel no pain, and though you are newly #binvigorated, the haunting memory of this disgusting warmth will stay with you for a long time to come.",
-      "You walk around it, wondering what could have been."
+      "你发现在房间中央围绕着 #y一束很粗的光柱 。 NL NL 光柱上 ~温暖而闪烁的美丽花纹~ 让你反胃，但你知道这光柱蕴含着巨大的能量。",
+      "你走进光柱，光被吸入身体使你露出痛苦的表情。 NL 这道光 #r@热得发烫@ ！疼痛停止了，即便你重新 #b振作 起来，关于这恶心的温暖的记忆仍挥之不去，久久伴随着你。",
+      "你绕过光柱，虽然心中仍有些好奇如果走进去会怎么样。"
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
+      "[走进] #g随机升级 #g2 #g张牌。 #r被诅咒- #r悔恨。",
       "[离开]",
-      "[锁定] Requires: Upgradeable Cards"
+      "[锁定] 需要： 可以升级的牌"
     ]
   },
   "downfall:WorldOfGoop": {
-    "NAME": "World of Goop",
+    "NAME": "黏液世界",
     "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL You can feel goop in your ears, goop in your nose, goop everywhere. NL NL Climbing out, you notice that stuck to your body is a unique-looking #yyellow Slime creature. It appears to have been collecting #ygold from unfortunate adventurers who fell into the puddle.",
-      "Not wanting to make this unfortunate puddle incident go without reward, you strike at the #yyellow slime creature. NL NL It @bursts@ instantly! NL NL You didn't think it possible, but you find yourself even more covered in goop than you were before.",
-      "Brushing off the #yyellow slime, you continue on your journey, though still partially covered in goop. It certainly adds to your menacing aesthetic."
+      "你掉进了一个水坑里。 NL 可是坑里 @全是@ #g@史莱姆黏液@ ！ NL 你感到耳朵里是黏液，鼻子里是黏液，到处都是黏液。 NL NL 爬出水坑后，你注意到一个样貌奇特的 #y黄色 史莱姆生物粘在你的身上。它看上去收集了许多不幸落入水坑的冒险者的 #y金币 。",
+      "你不想白白地掉进水坑里，于是击打了这个 #y黄色 的史莱姆生物。 NL NL 它立即 @爆开@ 了！ NL NL 这出乎你的意料，更多黏液粘到了你的身上。",
+      "你把这 #y黄色 史莱姆从身上擦掉，继续你的旅程。虽然身上还裹着黏液，不过它还挺符合你恐怖审美的。"
     ],
     "OPTIONS": [
-      "[Punch] #gGain #g",
-      " #gSouls. #rBecome #rCursed #rTwice #r- #rIcky.",
-      "[Remove] #rBecome #rCursed #r- #rIcky.",
+      "[给它一拳] #g获得 #g",
+      " #g灵魂. #r被双倍诅咒 #r- #r黏液附身。",
+      "[擦除] #r被诅咒 #r- #r黏液附身。",
       "[离开]"
     ]
   },

@@ -20,6 +20,7 @@ public class CBR_MatchAndKeep extends AbstractCharbossRelic {
 
     public CBR_MatchAndKeep() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/matchandkeep.png")));
+        this.largeImg = null;
     }
 
     @Override

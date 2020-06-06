@@ -18,6 +18,7 @@ public class CBR_Cleric extends AbstractCharbossRelic {
 
     public CBR_Cleric() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/cleric.png")));
+        this.largeImg = null;
     }
 
     @Override

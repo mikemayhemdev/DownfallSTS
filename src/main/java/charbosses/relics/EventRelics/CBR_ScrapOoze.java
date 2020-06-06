@@ -14,6 +14,7 @@ public class CBR_ScrapOoze extends AbstractCharbossRelic {
 
     public CBR_ScrapOoze() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/scrapooze.png")));
+        this.largeImg = null;
     }
 
     @Override

@@ -23,6 +23,7 @@ public class CBR_Mushroom extends AbstractCharbossRelic {
 
     public CBR_Mushroom() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/mushroom.png")));
+        this.largeImg = null;
     }
 
     @Override

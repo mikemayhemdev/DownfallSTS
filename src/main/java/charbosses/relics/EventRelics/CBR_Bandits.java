@@ -21,6 +21,7 @@ public class CBR_Bandits extends AbstractCharbossRelic {
 
     public CBR_Bandits() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/bandits.png")));
+        this.largeImg = null;
     }
 
     @Override

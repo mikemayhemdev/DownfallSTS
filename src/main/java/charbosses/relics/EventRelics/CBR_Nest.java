@@ -18,6 +18,7 @@ public class CBR_Nest extends AbstractCharbossRelic {
 
     public CBR_Nest() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/nest.png")));
+        this.largeImg = null;
     }
 
     @Override

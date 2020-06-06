@@ -25,6 +25,7 @@ public class CBR_BonfireSpirits extends AbstractCharbossRelic {
 
     public CBR_BonfireSpirits() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/bonfirespirits.png")));
+        this.largeImg = null;
     }
 
 

@@ -27,6 +27,8 @@ public class EnRagnarok extends AbstractBossCard {
         this.baseDamage = 5;
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
+
+        this.isMultiDamage = true;
     }
 
     @Override

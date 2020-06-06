@@ -20,6 +20,7 @@ public class CBR_Transmogrifier extends AbstractCharbossRelic {
 
     public CBR_Transmogrifier() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/shrine1.png")));
+        this.largeImg = null;
     }
 
     @Override

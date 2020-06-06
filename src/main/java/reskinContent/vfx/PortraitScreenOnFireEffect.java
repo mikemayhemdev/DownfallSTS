@@ -9,6 +9,7 @@
  import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
  import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
  import com.megacrit.cardcrawl.vfx.combat.GiantFireEffect;
+ import reskinContent.reskinContent;
 
  public class PortraitScreenOnFireEffect extends AbstractGameEffect {
    private float timer = 0.0F;
@@ -32,10 +33,12 @@
        CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
        CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
        CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
-//       CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
-//       CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
-//       CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
-//       CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
+       if(reskinContent.portraitAnimationType == 2){
+           CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
+           CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
+           CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
+           CharacterSelectScreenPatches.char_effectsQueue.add(new GiantFireEffect());
+       }
        this.timer = 0.05F;
      } 
      if (this.duration < 0.0F)

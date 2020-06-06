@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AnimatedNpc;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
@@ -15,6 +16,7 @@ import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.vfx.SoulStealEffect;
 import javassist.CtBehavior;
+import slimebound.SlimeboundMod;
 
 public class BetterEndingPatches {
     //Determine and overwrite strings on room creation
@@ -53,7 +55,7 @@ public class BetterEndingPatches {
                     AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
                     FleeingMerchant.DEAD
             ) {
-
+                /*
                 __instance.roomEventText.clear();
                 __instance.hasFocus = false;
                 __instance.roomEventText.hide();
@@ -67,9 +69,14 @@ public class BetterEndingPatches {
                 AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                 AbstractDungeon.fadeOut();
                 AbstractDungeon.isDungeonBeaten = true;
+                */
 
-                return SpireReturn.Return(null);
+                return SpireReturn.Continue();
 
+            } else {
+                Settings.hasRubyKey = false;
+                Settings.hasEmeraldKey = false;
+                Settings.hasSapphireKey = false;
             }
             return SpireReturn.Continue();
 
@@ -83,7 +90,7 @@ public class BetterEndingPatches {
         public static SpireReturn<Void> Insert(SpireHeart __instance, int buttonPressed) {
             if(EvilModeCharacterSelect.evilMode) {
                 AnimatedNpc heart = (AnimatedNpc) ReflectionHacks.getPrivate(__instance, SpireHeart.class, "npc");
-                AbstractDungeon.effectsQueue.add(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, heart.skeleton.getX(), heart.skeleton.getY()));
+                AbstractDungeon.effectsQueue.add(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, heart.skeleton.getX(), heart.skeleton.getY() + 300F * Settings.scale));
 
                 return SpireReturn.Return(null);
             }
@@ -95,7 +102,7 @@ public class BetterEndingPatches {
         @SpireInsertPatch(locator =  Locator2.class)
         public static void patch(SpireHeart __instance, int buttonPressed) {
             if(EvilModeCharacterSelect.evilMode) {
-                __instance.roomEventText.updateBodyText("@.@ @.@ @.@");
+                __instance.roomEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("downfall:BetterEnding").DESCRIPTIONS[16]);
             }
         }
 
