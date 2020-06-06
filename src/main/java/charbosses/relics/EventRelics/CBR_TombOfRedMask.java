@@ -17,6 +17,7 @@ public class CBR_TombOfRedMask extends AbstractCharbossRelic {
 
     public CBR_TombOfRedMask() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/redmasktomb.png")));
+        this.largeImg = null;
     }
 
     @Override

@@ -20,6 +20,7 @@ public class CBR_FaceTrader extends AbstractCharbossRelic {
 
     public CBR_FaceTrader() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/facetrader.png")));
+        this.largeImg = null;
     }
 
     @Override

@@ -22,6 +22,7 @@ public class CBR_WeMeetAgain extends AbstractCharbossRelic {
 
     public CBR_WeMeetAgain() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/wemeetagain.png")));
+        this.largeImg = null;
     }
 
     @Override

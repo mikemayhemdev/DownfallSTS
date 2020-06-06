@@ -187,13 +187,18 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         CardCrawlGame.music.unsilenceBGM();
         AbstractDungeon.scene.fadeOutAmbiance();
-        String musicKey;
-        if (AbstractDungeon.actNum == 0) musicKey = "BOSS_BOTTOM";
-        else if (AbstractDungeon.actNum == 1) musicKey = "BOSS_CITY";
-        else if (AbstractDungeon.actNum == 2) musicKey = "BOSS_BEYOND";
-        else musicKey = "BOSS_ENDING";
 
-        AbstractDungeon.getCurrRoom().playBgmInstantly(musicKey);
+        if (NeowBoss.neowboss != null) {
+            if (NeowBoss.neowboss.minion != this) {
+                String musicKey;
+                if (AbstractDungeon.actNum == 0) musicKey = "BOSS_BOTTOM";
+                else if (AbstractDungeon.actNum == 1) musicKey = "BOSS_CITY";
+                else if (AbstractDungeon.actNum == 2) musicKey = "BOSS_BEYOND";
+                else musicKey = "MINDBLOOM";
+
+                AbstractDungeon.getCurrRoom().playBgmInstantly(musicKey);
+            }
+        }
     }
 
     @Override
@@ -860,7 +865,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     @Override
     public void die() {
-        if (NeowBoss.neowboss != null){
+        if (NeowBoss.neowboss != null) {
             NeowBoss.neowboss.moveForRez();
             NeowBoss.neowboss.minion = null;
         }
@@ -876,9 +881,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         super.die();
 
         if (this.currentHealth <= 0) {
-        useFastShakeAnimation(5.0F);
-        CardCrawlGame.screenShake.rumble(4.0F);
-        onBossVictoryLogic();
+            useFastShakeAnimation(5.0F);
+            CardCrawlGame.screenShake.rumble(4.0F);
+            if (NeowBoss.neowboss != null) {
+                if (NeowBoss.neowboss.minion != this) {
+                    onBossVictoryLogic();
+                }
+            }
+
         }
 
     }

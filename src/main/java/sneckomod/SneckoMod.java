@@ -36,6 +36,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.patches.SlimeboundEnum;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.cards.unknowns.UnknownColorless;
@@ -337,6 +338,8 @@ public class SneckoMod implements
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
+                //Event Character//
+                .playerClass(TheSnecko.Enums.THE_SNECKO)
                 //Event Spawn Condition//
                 .spawnCondition(()->!evilMode)
                 //Event ID to Override//
@@ -346,6 +349,8 @@ public class SneckoMod implements
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Serpent_Snecko.ID, Serpent_Snecko.class) //Event ID//
+                //Event Character//
+                .playerClass(TheSnecko.Enums.THE_SNECKO)
                 //Event Spawn Condition//
                 .spawnCondition(()->evilMode)
                 //Event ID to Override//
