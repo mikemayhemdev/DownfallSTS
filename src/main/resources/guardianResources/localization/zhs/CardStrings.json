@@ -37,8 +37,8 @@
   },
   "Guardian:Gem_Cyan": {
     "NAME": "蓝晶",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 增加 1 张 guardianmod:护卫 到你的手牌。", 
-    "UPGRADE_DESCRIPTION": "增加 1 张 guardianmod:护卫 到你的手牌。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得增加 1 张 *水晶护卫 。",
+    "UPGRADE_DESCRIPTION": "获得 1 张 *水晶护卫 。"
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
@@ -71,7 +71,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "守护者旋风",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 !GuardianMulti! 次。"
+    "DESCRIPTION": "guardianmod:防御模式 时才能被打出，退出当前 姿态 。对所有敌人造成 !D! 点伤害 !M! 次。"
   },
   "Guardian:VentSteam": {
     "NAME": "蒸汽喷射",
@@ -80,7 +80,7 @@
   },
   "Guardian:CurlUp": {
     "NAME": "蜷身",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。"
+    "DESCRIPTION": "进入 guardianmod:防御模式 。"
   },
   "Guardian:TimeBomb": {
     "NAME": "时间炸弹",
@@ -95,7 +95,7 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "铜制装甲",
-    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 层 人工制品 。 NL 进入 guardianmod:防御模式 。 NL 消耗 。"
   },
   "Guardian:FloatingOrbs": {
     "NAME": "浮游圆球",
@@ -108,7 +108,7 @@
   },
   "Guardian:Incinerate": {
     "NAME": "焚烧",
-    "DESCRIPTION": "造成 !D! 点伤害，给予 !M! 层 hexamod:灼伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:加速 。"
   },
   "Guardian:Orbwalk": {
     "NAME": "行者圆球",
@@ -189,7 +189,7 @@
   },
   "Guardian:Recover": {
     "NAME": "恢复",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆中的一张牌 guardianmod:凝滞 。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆中的 1 张牌 guardianmod:凝滞 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆的 !M! 张牌 guardianmod:凝滞 。"
   },
   "Guardian:Emergency": {
@@ -240,7 +240,7 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "建造形态",
-    "DESCRIPTION": "在接下来 !M! 个回合， 你不会失去生命但不能打出攻击牌。"
+    "DESCRIPTION": "在接下来 !M! 个回合，你不会失去生命但不能打出攻击牌。"
   },
   "Guardian:WeakpointTargeting": {
     "NAME": "标记弱点",
@@ -280,11 +280,11 @@
   },
   "Guardian:TemporalStrike": {
     "NAME": "质朴打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 ，再造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 NL 再造成 !D! 点伤害。"
   },
   "Guardian:TemporalShield": {
     "NAME": "质朴屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 ，再获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 再获得 !B! 点格挡。"
   },
   "Guardian:ExploitGems": {
     "NAME": "宝石利用",
@@ -325,7 +325,8 @@
   },
   "Guardian:TimeSifter": {
     "NAME": "时间沙漏",
-    "DESCRIPTION": "在你的回合结束时， guardianmod:加速 最右侧的 guardianmod:凝滞 大于等于两点的牌。"
+    "DESCRIPTION": "在你的回合结束时， guardianmod:加速 最右侧的 guardianmod:凝滞 大于等于两点的牌。",
+    "UPGRADE_DESCRIPTION": "固有 。在你的回合结束时， guardianmod:加速 最右侧的 guardianmod:凝滞 大于等于两点的牌。"
   },
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
@@ -370,7 +371,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:CrystalWard": {
-    "NAME": "护卫",
+    "NAME": "水晶护卫",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 消耗 。"
   },
   "Guardian:Repulse": {
