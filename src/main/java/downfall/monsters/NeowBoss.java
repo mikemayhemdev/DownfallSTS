@@ -111,9 +111,9 @@ public class NeowBoss extends AbstractMonster {
         bossesToRez.add("downfall:CharBossWatcher");
 
         //Remove any that were not encountered (Colosseum event means you could have seen 3 or 4 in the run)
-        for (String bossName : downfallMod.possEncounterList){
+        for (String bossName : downfallMod.possEncounterList) {
             SlimeboundMod.logger.info("neow checking " + bossName);
-            if (bossesToRez.contains(bossName)){
+            if (bossesToRez.contains(bossName)) {
                 SlimeboundMod.logger.info("Found this boss, removing it.");
                 bossesToRez.remove(bossName);
             }
@@ -144,7 +144,7 @@ public class NeowBoss extends AbstractMonster {
                 movingBack = false;
                 offscreen = false;
                 this.halfDead = false;
-                if (!this.hasPower(NeowInvulnerablePower.POWER_ID)){
+                if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
                     AbstractDungeon.getCurrRoom().cannotLose = false;
                 }
                 this.drawX = this.baseDrawX;
@@ -163,6 +163,7 @@ public class NeowBoss extends AbstractMonster {
         offscreen = false;
         movingOffscreen = false;
         movingBack = false;
+        AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
     }
 
     public void takeTurn() {
@@ -292,6 +293,19 @@ public class NeowBoss extends AbstractMonster {
             }
         } else {
             this.setMove((byte) 4, Intent.MAGIC);
+        }
+    }
+
+    @Override
+    public void die() {
+        if (!AbstractDungeon.getCurrRoom().cannotLose) {
+            super.die();
+            useFastShakeAnimation(5.0F);
+            CardCrawlGame.screenShake.rumble(4.0F);
+            onBossVictoryLogic();
+            onFinalBossVictoryLogic();
+            CardCrawlGame.stopClock = true;
+
         }
     }
 }
