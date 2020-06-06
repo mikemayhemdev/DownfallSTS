@@ -18,6 +18,7 @@ public class CBR_OldBeggar extends AbstractCharbossRelic {
 
     public CBR_OldBeggar() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/oldbeggar.png")));
+        this.largeImg = null;
     }
 
     @Override

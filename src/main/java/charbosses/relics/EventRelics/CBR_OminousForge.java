@@ -21,6 +21,7 @@ public class CBR_OminousForge extends AbstractCharbossRelic {
 
     public CBR_OminousForge() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/ominousforge.png")));
+        this.largeImg = null;
     }
 
     @Override

@@ -20,6 +20,7 @@ public class CBR_GoldenShrine extends AbstractCharbossRelic {
 
     public CBR_GoldenShrine() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/goldenshrine.png")));
+        this.largeImg = null;
     }
 
     @Override

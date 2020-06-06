@@ -19,6 +19,7 @@ public class CBR_Duplicator extends AbstractCharbossRelic {
 
     public CBR_Duplicator() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/shrine4.png")));
+        this.largeImg = null;
     }
 
     @Override

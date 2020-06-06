@@ -19,6 +19,7 @@ public class CBR_PleadingVagrant extends AbstractCharbossRelic {
 
     public CBR_PleadingVagrant() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/pleadingvagrant.png")));
+        this.largeImg = null;
     }
 
     @Override

@@ -24,6 +24,7 @@ public class CBR_Vampires extends AbstractCharbossRelic {
 
     public CBR_Vampires() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/vampires.png")));
+        this.largeImg = null;
 
     }
 

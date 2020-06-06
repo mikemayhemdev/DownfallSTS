@@ -25,6 +25,7 @@ public class CBR_BigFish extends AbstractCharbossRelic {
 
     public CBR_BigFish() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/bigfish.png")));
+        this.largeImg = null;
     }
 
 

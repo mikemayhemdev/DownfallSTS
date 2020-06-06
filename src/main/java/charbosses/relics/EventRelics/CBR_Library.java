@@ -18,6 +18,7 @@ public class CBR_Library extends AbstractCharbossRelic {
 
     public CBR_Library() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/library.png")));
+        this.largeImg = null;
     }
 
     @Override

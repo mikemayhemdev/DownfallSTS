@@ -20,6 +20,7 @@ public class CBR_GoldenIdolEvent extends AbstractCharbossRelic {
 
     public CBR_GoldenIdolEvent() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/goldenidol.png")));
+        this.largeImg = null;
     }
 
     @Override

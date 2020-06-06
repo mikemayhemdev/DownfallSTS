@@ -4,15 +4,23 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.GameCursor;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -35,6 +43,7 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
         super(setId, imgName, tier, sfx);
         isSeen = true;
         UnlockTracker.markRelicAsSeen(this.relicId);
+        refreshDescription();
     }
 
     public AbstractCharbossRelic(String setId, RelicTier tier, LandingSound sfx, Texture texture) {
@@ -44,19 +53,44 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
 
         isSeen = true;
         UnlockTracker.markRelicAsSeen(this.relicId);
+        refreshDescription();
     }
     public AbstractCharbossRelic(AbstractRelic baseRelic) {
         super(baseRelic.relicId, baseRelic.imgUrl, baseRelic.tier, LandingSound.CLINK);
         this.baseRelic = baseRelic;
         isSeen = true;
         UnlockTracker.markRelicAsSeen(this.relicId);
+        refreshDescription();
     }
     public AbstractCharbossRelic(AbstractRelic baseRelic, RelicTier tier) {
         super(baseRelic.relicId, baseRelic.imgUrl, tier, LandingSound.CLINK);
         this.baseRelic = baseRelic;
         isSeen = true;
         UnlockTracker.markRelicAsSeen(this.relicId);
+        refreshDescription();
     }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+        //SlimeboundMod.logger.info("boss relic rendering hovered = " + this.hb.hovered);
+        if (this.hb.hovered && !CardCrawlGame.relicPopup.isOpen) {
+           // SlimeboundMod.logger.info("boss relic rendering hovered");
+            if (!this.isSeen) {
+                if ((float)InputHelper.mX < 1400.0F * Settings.scale) {
+                    TipHelper.renderGenericTip((float)InputHelper.mX + 60.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
+                } else {
+                    TipHelper.renderGenericTip((float)InputHelper.mX - 350.0F * Settings.scale, (float)InputHelper.mY - 50.0F * Settings.scale, LABEL[1], MSG[1]);
+                }
+
+              //  SlimeboundMod.logger.info("boss relic rendering prereturn");
+                return;
+            }
+
+            this.renderTip(sb);
+        }
+    }
+
 
     public void refreshDescription(){
 
@@ -202,14 +236,14 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
 
             //note to self: delete these comments later
 
-            /*if (this.hb.hovered && AbstractDungeon.topPanel.potionUi.isHidden) {
+            if (this.hb.hovered && AbstractDungeon.topPanel.potionUi.isHidden) {
                 this.scale = Settings.scale * 1.25f;
                 CardCrawlGame.cursor.changeType(GameCursor.CursorType.INSPECT);
             }
             else {
                 this.scale = MathHelper.scaleLerpSnap(this.scale, Settings.scale);
             }
-            this.updateRelicPopupClick();*/
+            //this.updateRelicPopupClick();
             updateBosscharRelicPopupClick();
         }
     }

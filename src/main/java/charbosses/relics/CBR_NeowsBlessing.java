@@ -18,6 +18,7 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
 
     public CBR_NeowsBlessing() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/blessing.png")));
+        this.largeImg = null;
     }
 
     public void onEquip() {

@@ -18,6 +18,7 @@ public class CBR_AncientWriting extends AbstractCharbossRelic {
 
     public CBR_AncientWriting() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/backtobasics.png")));
+        this.largeImg = null;
     }
 
     @Override

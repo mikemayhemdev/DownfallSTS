@@ -16,6 +16,7 @@ public class CBR_Colosseum extends AbstractCharbossRelic {
 
     public CBR_Colosseum() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/colosseum.png")));
+        this.largeImg = null;
     }
 
     @Override

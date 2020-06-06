@@ -21,6 +21,7 @@ public class CBR_ShiningLight extends AbstractCharbossRelic {
 
     public CBR_ShiningLight() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/shininglight.png")));
+        this.largeImg = null;
     }
 
     @Override

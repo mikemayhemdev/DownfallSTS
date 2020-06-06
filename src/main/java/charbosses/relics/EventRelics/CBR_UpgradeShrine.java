@@ -18,6 +18,7 @@ public class CBR_UpgradeShrine extends AbstractCharbossRelic {
 
     public CBR_UpgradeShrine() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/shrine2.png")));
+        this.largeImg = null;
     }
 
     @Override

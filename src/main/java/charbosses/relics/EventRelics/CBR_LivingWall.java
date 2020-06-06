@@ -20,6 +20,7 @@ public class CBR_LivingWall extends AbstractCharbossRelic {
 
     public CBR_LivingWall() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/livingwall.png")));
+        this.largeImg = null;
     }
 
     @Override
