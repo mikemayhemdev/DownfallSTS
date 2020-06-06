@@ -10,7 +10,7 @@ public class ExtraCrispy extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     // private static final int UPG_MAGIC = 1;
 
     public ExtraCrispy() {
@@ -19,13 +19,12 @@ public class ExtraCrispy extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CrispyPower(1));
+        applyToSelf(new CrispyPower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeMagicNumber(UPG_MAGIC);
             isInnate = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

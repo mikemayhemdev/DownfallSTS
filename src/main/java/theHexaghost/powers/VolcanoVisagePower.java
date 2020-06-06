@@ -3,13 +3,13 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.BurnAction;
 import theHexaghost.util.TextureLoader;
 
 public class VolcanoVisagePower extends AbstractPower implements CloneablePowerInterface {
@@ -40,7 +40,7 @@ public class VolcanoVisagePower extends AbstractPower implements CloneablePowerI
     @Override
     public void atStartOfTurnPostDraw() {
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            addToBot(new BurnAction(m, amount));
+            addToBot(new ApplyPowerAction(m, owner, new BurnPower(m, amount), amount));
         }
     }
 

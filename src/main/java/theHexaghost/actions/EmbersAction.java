@@ -1,12 +1,14 @@
 package theHexaghost.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.powers.BurnPower;
 
 public class EmbersAction extends AbstractXAction {
 
@@ -16,8 +18,9 @@ public class EmbersAction extends AbstractXAction {
     private AbstractPlayer p;
     private AbstractMonster m;
     private DamageInfo.DamageType damageTypeForTurn;
+    private int burn;
 
-    public EmbersAction(int bonusAmt, AbstractPlayer p, AbstractMonster m, int damage, DamageInfo.DamageType damageTypeForTurn) {
+    public EmbersAction(int bonusAmt, AbstractPlayer p, AbstractMonster m, int damage, DamageInfo.DamageType damageTypeForTurn, int burn) {
         this.bonusAmt = bonusAmt;
         this.duration = Settings.ACTION_DUR_XFAST;
         this.actionType = ActionType.SPECIAL;
@@ -25,6 +28,7 @@ public class EmbersAction extends AbstractXAction {
         this.p = p;
         this.m = m;
         this.damageTypeForTurn = damageTypeForTurn;
+        this.burn = burn;
     }
 
     @Override
@@ -40,7 +44,7 @@ public class EmbersAction extends AbstractXAction {
                 public void update() {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    addToTop(new BurnAction(m, 4));
+                    addToTop(new ApplyPowerAction(target, p, new BurnPower(target, burn), burn));
                     addToTop(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
                 }
             });

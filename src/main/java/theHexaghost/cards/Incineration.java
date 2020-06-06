@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theHexaghost.actions.BurnAction;
 
 public class Incineration extends AbstractHexaCard {
 
@@ -23,6 +22,7 @@ public class Incineration extends AbstractHexaCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        baseBurn = burn = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,7 +33,7 @@ public class Incineration extends AbstractHexaCard {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     addToTop(new DamageAction(m, makeInfo(), AttackEffect.FIRE));
-                    addToTop(new BurnAction(m, 3));
+                    burn(m, burn);
                 }
             });
         }

@@ -4,6 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -11,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.BurnAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.util.OnChargeSubscriber;
 import theHexaghost.util.TextureLoader;
@@ -47,7 +47,7 @@ public class RadiantPower extends AbstractPower implements CloneablePowerInterfa
         AbstractMonster m = AbstractDungeon.getRandomMonster();
         if (!m.isDead && !m.isDying) {
             addToBot(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-            addToBot(new BurnAction(m, amount));
+            addToBot(new ApplyPowerAction(m, owner, new BurnPower(m, amount), amount));
         }
     }
 

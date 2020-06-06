@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import theHexaghost.powers.BurnPower;
+import theHexaghost.powers.CrispyPower;
 
 import java.util.ArrayList;
 
@@ -27,6 +29,11 @@ public abstract class AbstractHexaCard extends CustomCard {
     protected final String DESCRIPTION;
     protected final String UPGRADE_DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
+
+    public int burn;
+    public int baseBurn;
+    public boolean upgradedBurn;
+    public boolean isBurnModified;
 
     public AbstractHexaCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
@@ -124,5 +131,51 @@ public abstract class AbstractHexaCard extends CustomCard {
 
     VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        int base = this.baseBurn;
+        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
+            base += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
+        }
+        this.magicNumber = base;
+        this.isMagicNumberModified = (this.magicNumber != this.baseMagicNumber);
+    }
+
+    public void burn(AbstractMonster m, int amount) {
+        applyToEnemy(m, new BurnPower(m, amount));
+    }
+
+    public void resetAttributes() {
+        super.resetAttributes();
+        burn = baseBurn;
+        isBurnModified = false;
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedBurn) {
+            burn = baseBurn;
+            isBurnModified = true;
+        }
+    }
+
+    void upgradeBurn(int amount) {
+        baseBurn += amount;
+        burn = baseBurn;
+        upgradedBurn = true;
+    }
+
+    protected void burnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();// 39
+
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {// 41
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();// 42
+                break;// 43
+            }
+        }
     }
 }

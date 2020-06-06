@@ -33,7 +33,7 @@ public class PrismaticBeam extends AbstractGuardianCard {
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 1;
     private static final int MULTICOUNT = 1;
-    private static final int SOCKETS = 1;
+    private static final int SOCKETS = 2;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -64,7 +64,7 @@ public class PrismaticBeam extends AbstractGuardianCard {
 
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        this.multihit = 1 + this.sockets.size();
+        this.multihit = this.sockets.size();
         return tmp + calculateBeamDamage();
 
     }

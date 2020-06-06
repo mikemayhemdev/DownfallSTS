@@ -233,10 +233,8 @@ public class GuardianMod implements PostDrawSubscriber,
 
     public static CardGroup getCardsWithFilledSockets() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while (var2.hasNext()) {
-            AbstractCard c = (AbstractCard) var2.next();
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c instanceof AbstractGuardianCard) {
                 AbstractGuardianCard cg = (AbstractGuardianCard) c;
                 if (cg.socketCount > 0) {
@@ -250,6 +248,7 @@ public class GuardianMod implements PostDrawSubscriber,
 
         return retVal;
     }
+
 
     public static CardGroup getGemCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.MASTER_DECK);

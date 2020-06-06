@@ -3,6 +3,7 @@ package theHexaghost.ghostflames;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,7 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.BurnAction;
+import theHexaghost.powers.BurnPower;
+import theHexaghost.powers.CrispyPower;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.TextureLoader;
 
@@ -50,13 +52,10 @@ public class SearingGhostflame extends AbstractGhostflame {
             @Override
             public void update() {
                 isDone = true;
-                int x = magic;
-                if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-                    x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
-                }
+                int x = getEffectCount();
                 AbstractMonster m = AbstractDungeon.getRandomMonster();
                 if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                    att(new BurnAction(m, x));
+                    att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
                     att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
                 }
             }
@@ -102,6 +101,9 @@ public class SearingGhostflame extends AbstractGhostflame {
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+        }
+        if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
         }
         return x;
     }

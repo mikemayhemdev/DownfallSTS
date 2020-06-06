@@ -26,7 +26,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
     private static final int BLOCK = 4;
     private static final int UPGRADE_BONUS = 0;
     private static final int MULTICOUNT = 1;
-    private static final int SOCKETS = 1;
+    private static final int SOCKETS = 2;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -79,7 +79,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         super.calculateModifiedCardDamage(player, mo, tmp);
-        this.multihit = 1 + this.sockets.size();
+        this.multihit = this.sockets.size();
         return tmp;
 
     }

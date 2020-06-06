@@ -18,6 +18,7 @@ public class RainOfEmbers extends AbstractHexaCard {
     public RainOfEmbers() {
         super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
+        baseBurn = burn = 4;
         baseMagicNumber = magicNumber = MAGIC;
     }
 
@@ -25,7 +26,7 @@ public class RainOfEmbers extends AbstractHexaCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
-        EmbersAction r = new EmbersAction(magicNumber, p, m, damage, damageTypeForTurn);
+        EmbersAction r = new EmbersAction(magicNumber, p, m, damage, damageTypeForTurn, burn);
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
     }
 
