@@ -237,7 +237,7 @@
     "NAME": "高热撞击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 敌人的 hexamod:灼伤 增加这张牌的伤害。"
   },
-  "hexamod:InvigoratingFlames": {
+  "hexamod:HeatShield": {
     "NAME": "高热护盾",
     "DESCRIPTION": "获得 !M! 点 格挡 ， NL 所有敌人的 hexamod:灼伤 提高这张牌的 格挡 。（当前： !B! 点 格挡 。）"
   },

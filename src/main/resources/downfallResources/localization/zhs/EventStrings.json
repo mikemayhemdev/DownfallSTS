@@ -233,9 +233,9 @@
       " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself..."
     ],
     "OPTIONS": [
-      "[Agree] [Punch] #gGain #g",
-      " #gSouls. #rBecome #rCursed #r- #rDoubt.",
-      "[Disagree]",
+      "[同意] [一拳过去] #g获得 #g",
+      " #g灵魂。 #r被诅咒-疑虑。",
+      "[不同意]",
       "[离开]"
     ]
   },
@@ -252,9 +252,9 @@
       "The cult will be pleased."
     ],
     "OPTIONS": [
-      "[Destroy] #rLose #r",
-      " #rHP. #gGain #gSharpened #gFragment.",
-      "[Collect] #gGain #gBroken #gWing #gStatue.",
+      "[摧毁] #r失去 #r",
+      " #r生命。 #g获得 #gSharpened #gFragment.",
+      "[收集] #g获得 #gBroken #gWing #gStatue.",
       "[离开]"
     ]
   },
@@ -269,11 +269,11 @@
       "You decide to leave the soul alone and continue on your way."
     ],
     "OPTIONS": [
-      "[Set Trap] #rLose #ra #rStrike.",
-      "[Harvest] #gGain #y",
-      " #ySouls.",
+      "[设置陷阱] #r失去一张打击。",
+      "[收获] #g获得 #y",
+      " #y灵魂。",
       "[离开]",
-      "[锁定] Requires a Strike."
+      "[锁定] 需要一张打击。"
     ]
   },
   "downfall:Cleric": {
@@ -284,11 +284,11 @@
       "\"Cleric help! Cleric help!\" the creature says as you approach menacingly. NL A cold blue flame envelops your body and dissipates. NL Immediately after, this \"Cleric\" flees."
     ],
     "OPTIONS": [
-      "[Punch] #gGain #y",
-      "[Intimidate] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[一拳过去] #g获得 #y",
+      "[Intimidate] #g移除牌组中的一张牌。",
       "[离开]",
-      "Select a Card to Remove.",
-      " #ySouls."
+      "将牌组中的一张牌移除。",
+      " #y灵魂。"
     ]
   },
   "downfall:Ghosts": {
@@ -298,10 +298,10 @@
       "\"An @offering!@ How ~tempting...\"~ NL NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. Within your body, you feel the #b~souls~ collected from the dead forced out in a violent spiral into the spirit's gaping maw. It takes all of your strength to maintain your ground and not be pulled in yourself. NL NL Just before your stamina gives out, the ghostly vortex stops, and the spirits fade into the ether. NL NL You continue on, feeling slightly #bhollow."
     ],
     "OPTIONS": [
-      "[Offer] #rLose #r",
-      " Souls. #gReceive Apparition.",
-      "[锁定] Requires ",
-      " Souls."
+      "[Offer] #r失去 #r",
+      " 灵魂。 #g获得灵体。",
+      "[锁定] 需要 ",
+      " 灵魂。"
     ]
   },
   "downfall:CursedTome": {
@@ -318,11 +318,11 @@
       "After taking a brief moment to admire the evil that resides within the statue, you depart, continuing through the City."
     ],
     "OPTIONS": [
-      "[Offer Souls] #rLose #r",
-      " #rSouls. #gHeal #g",
-      " #gHP.",
-      "[锁定] Requires ",
-      " Souls.",
+      "[Offer Souls] #r失去 #r",
+      " #r灵魂。 #g回复 #g",
+      " #g生命。",
+      "[锁定] 需要 ",
+      " 灵魂。",
       "[离开]"
     ]
   },
@@ -395,7 +395,7 @@
       "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@cough...@"
     ],
     "OPTIONS": [
-      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rWrithe."
+      "[Feast] #g获得200灵魂。 #r被诅咒- #rWrithe."
     ]
   },
   "downfall:Nest": {
@@ -411,16 +411,16 @@
       "#rYou #rplunge #rthe #rdagger #rinto #rthe #rcultist's #rheart! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL The ritual is completed, and the surviving cultists could not appear happier. They wave their sticks in celebration and continue to call out a cheering caw as you exit the cathedral."
     ],
     "OPTIONS": [
-      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
-      "[锁定] Requires Broken Wing Statue.",
-      "[Accept] #gGain #gCultist #gPotion.",
-      "[Steal] #gObtain Ritual Dagger. #rLose #r",
-      " #rHP.",
+      "[Return Statue] #r失去 #rBroken #rWing #rStatue. #g获得众多奖励。",
+      "[锁定] 需要 Broken Wing Statue.",
+      "[Accept] #g获得邪教徒药水。",
+      "[Steal] #g获得仪式匕首 #r失去 #r",
+      " #r生命。",
       "[离开]",
       "[Continue]",
-      "[Take Dagger] #gGain #gRitual #gDagger.",
-      "[Anoint] #gUpgrade #gRitual #gDagger.",
-      "[Sacrifice] #rKill #rCultist with Ritual Dagger+."
+      "[Take Dagger] #g获得仪式匕首。",
+      "[Anoint] #g升级仪式匕首。",
+      "[Sacrifice] #r杀死带有仪式匕首+的邪教徒。"
     ]
   },
   "downfall:Colosseum": {
@@ -434,11 +434,11 @@
       "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
     ],
     "OPTIONS": [
-      "[Challenge] #rFight Arena Champions. #gGain #gmany #grewards.",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[挑战] #r与区域冠军战斗。 #g获得众多奖励。",
+      "[Participate] #r与被俘英雄战斗。 #g获得众多奖励。",
       "[离开]",
-      "[FIGHT!]",
-      "[Continue]"
+      "[开战！]",
+      "[继续]"
     ]
   },
   "downfall:MindBloom": {
