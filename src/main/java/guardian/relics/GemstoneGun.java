@@ -185,7 +185,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
     @Override
     public String getUpdatedDescription() {
         if (allDone) {
-            return DESCRIPTIONS[1] + CardLibrary.getCopy(myGemOne).rawDescription.replaceAll("Gem. NL ", "") + " NL " + CardLibrary.getCopy(myGemTwo).rawDescription.replaceAll("Gem. NL ", "") + " NL " + CardLibrary.getCopy(myGemThree).rawDescription.replaceAll("Gem. NL ", "");
+            return DESCRIPTIONS[1] + CardLibrary.getCopy(myGemOne).rawDescription.replaceAll("Gem. NL ", "").replaceAll(GuardianMod.getModID(), "#y") + " NL " + CardLibrary.getCopy(myGemTwo).rawDescription.replaceAll("Gem. NL ", "").replaceAll(GuardianMod.getModID(), "#y") + " NL " + CardLibrary.getCopy(myGemThree).rawDescription.replaceAll("Gem. NL ", "").replaceAll(GuardianMod.getModID(), "#y");
         }
         return DESCRIPTIONS[0];
     }
