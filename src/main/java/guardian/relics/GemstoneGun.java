@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
+import guardian.cards.*;
 
 import java.util.ArrayList;
 
@@ -65,6 +66,66 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         setDescriptionAfterLoading();
     }
 
+    public static ArrayList<AbstractCard> getCharacterSafeGems(int count) {
+        ArrayList<String> allGemCards = new ArrayList<>();
+        ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
+
+        allGemCards.add("RED");
+        allGemCards.add("GREEN");
+        allGemCards.add("ORANGE");
+        allGemCards.add("CYAN");
+        allGemCards.add("WHITE");
+        allGemCards.add("CRIMSON");
+        allGemCards.add("FRAGMENTED");
+        allGemCards.add("PURPLE");
+        allGemCards.add("SYNTHETIC");
+
+        int rando;
+        String ID;
+        for (int i = 0; i < count; i++) {
+            rando = AbstractDungeon.cardRng.random(0, allGemCards.size() - 1);
+            ID = allGemCards.get(rando);
+            switch (ID) {
+                case "RED":
+                    rewardGemCards.add(new Gem_Red());
+                    break;
+                case "GREEN":
+                    rewardGemCards.add(new Gem_Green());
+                    break;
+                case "ORANGE":
+                    rewardGemCards.add(new Gem_Orange());
+                    break;
+                case "CYAN":
+                    rewardGemCards.add(new Gem_Cyan());
+                    break;
+                case "WHITE":
+                    rewardGemCards.add(new Gem_White());
+                    break;
+                case "BLUE":
+                    rewardGemCards.add(new Gem_Blue());
+                    break;
+                case "CRIMSON":
+                    rewardGemCards.add(new Gem_Crimson());
+                    break;
+                case "FRAGMENTED":
+                    rewardGemCards.add(new Gem_Fragmented());
+                    break;
+                case "PURPLE":
+                    rewardGemCards.add(new Gem_Purple());
+                    break;
+                case "SYNTHETIC":
+                    rewardGemCards.add(new Gem_Synthetic());
+                    break;
+                case "YELLOW":
+                    rewardGemCards.add(new Gem_Yellow());
+                    break;
+            }
+            allGemCards.remove(rando);
+        }
+
+        return rewardGemCards;
+    }
+
     private void openScreen() {
         this.cardSelected = false;
         if (AbstractDungeon.isScreenUp) {
@@ -76,7 +137,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CenterGridCardSelectScreen.centerGridSelect = true;
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 3);
+        ArrayList<AbstractCard> gems = getCharacterSafeGems(3);
         for (AbstractCard q : gems) {
             group.addToTop(q);
         }
