@@ -26,6 +26,7 @@ public class CBR_Augmenter extends AbstractCharbossRelic {
     public CBR_Augmenter(int choiceIndex) {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/augmenter.png")));
         this.descInt = choiceIndex;
+        this.largeImg = null;
 
     }
 

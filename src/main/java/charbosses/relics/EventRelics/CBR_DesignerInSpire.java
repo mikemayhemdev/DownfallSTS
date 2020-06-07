@@ -19,6 +19,7 @@ public class CBR_DesignerInSpire extends AbstractCharbossRelic {
 
     public CBR_DesignerInSpire() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/designerinspire.png")));
+        this.largeImg = null;
     }
 
     @Override

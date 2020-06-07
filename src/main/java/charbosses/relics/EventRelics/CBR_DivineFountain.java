@@ -19,6 +19,7 @@ public class CBR_DivineFountain extends AbstractCharbossRelic {
 
     public CBR_DivineFountain() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/divinefountain.png")));
+        this.largeImg = null;
     }
 
     @Override

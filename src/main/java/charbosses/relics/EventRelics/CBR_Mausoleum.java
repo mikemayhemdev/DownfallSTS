@@ -20,6 +20,7 @@ public class CBR_Mausoleum extends AbstractCharbossRelic {
 
     public CBR_Mausoleum() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/mausoleum.png")));
+        this.largeImg = null;
     }
 
     @Override

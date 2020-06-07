@@ -10,13 +10,17 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
+import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
+import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.vfx.NeowBossRezEffect;
 import slimebound.SlimeboundMod;
@@ -41,6 +45,28 @@ public class NeowRezAction extends AbstractGameAction {
         if (!this.instructedMove) {
             owner.moveForRez();
             this.instructedMove = true;
+            switch (owner.Rezzes) {
+                case 0: {
+                    AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[0], false));
+
+                    CardCrawlGame.sound.play("VO_NEOW_2A");
+                    break;
+                }
+
+                case 1: {
+                    AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[1], false));
+
+                    CardCrawlGame.sound.play("VO_NEOW_3B");
+                    break;
+                }
+                case 2: {
+                    AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[2], false));
+
+                    CardCrawlGame.sound.play("VO_NEOW_1A");
+                    break;
+                }
+            }
+            owner.Rezzes++;
         }
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration <= 1.5F && !rezInit) {
@@ -87,7 +113,7 @@ public class NeowRezAction extends AbstractGameAction {
         }
     }
 
-    public void rezBoss(String name){
+    public void rezBoss(String name) {
         //Separated here for patching in case of modded characters being made into bosses
         switch (name) {
             case "downfall:CharBossIronclad": {

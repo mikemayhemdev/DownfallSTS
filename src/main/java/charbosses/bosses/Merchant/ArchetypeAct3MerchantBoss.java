@@ -42,28 +42,28 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         //Turn 1
         addToDeck(new EnPanicButton(), false);
-        addToDeck(new EnApotheosis(), true);
         addToDeck(new EnDramaticEntrance(), false);
+        addToDeck(new EnTheBomb(), false);
 
         //Turn 2
-        addToDeck(new EnSwiftStrike(), false);
         addToDeck(new EnPanacea(), false);
-        addToDeck(new EnSadisticNature(), false);
+        addToDeck(new EnApotheosis(), true);
+        addToDeck(new EnHandOfGreed(), false);
 
         //Turn 3
+        addToDeck(new EnSadisticNature(), false);
         addToDeck(new EnTrip(), false);
-        addToDeck(new EnBlind(), false);
-        addToDeck(new EnHandOfGreed(), false);
+        addToDeck(new EnGoodInstincts(), false);
 
         //Turn 4
         addToDeck(new EnGoodInstincts(), false);
-        addToDeck(new EnGoodInstincts(), false);
-        addToDeck(new EnTheBomb(), false);
+        addToDeck(new EnBlind(), false);
+        addToDeck(new EnSwiftStrike(), false);
 
         //Turn 5
         addToDeck(new EnSwiftStrike(), false);
         addToDeck(new EnGoodInstincts(), false);
-        addToDeck(new EnSwiftStrike(), false);
+        addToDeck(new EnTheBomb(), false);
 
         //Turn 6
         addToDeck(new EnPanacea(), false);

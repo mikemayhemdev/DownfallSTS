@@ -22,6 +22,7 @@ public class CBR_WheelOfChange extends AbstractCharbossRelic {
 
     public CBR_WheelOfChange() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/wheelofchange.png")));
+        this.largeImg = null;
     }
 
     @Override

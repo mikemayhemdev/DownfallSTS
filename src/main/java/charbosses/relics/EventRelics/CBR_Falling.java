@@ -21,6 +21,7 @@ public class CBR_Falling extends AbstractCharbossRelic {
 
     public CBR_Falling() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/falling.png")));
+        this.largeImg = null;
 
     }
 

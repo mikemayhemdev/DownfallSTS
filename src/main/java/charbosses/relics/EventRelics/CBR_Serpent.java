@@ -19,6 +19,7 @@ public class CBR_Serpent extends AbstractCharbossRelic {
 
     public CBR_Serpent() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/serpent.png")));
+        this.largeImg = null;
     }
 
     @Override

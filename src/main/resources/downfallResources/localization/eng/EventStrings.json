@@ -34,7 +34,7 @@
     "NAME": "Wheel of Change",
     "DESCRIPTIONS": [
       "You come upon a dapper looking, cheery gremlin. Despite your menacing appearance, he seems to be unfazed, though you do catch him hesitantly glancing backstage. NL \"It's time to spin the wheel! Are you ready?\"",
-      "\"You win some #yGOLD! NL YAY!!!!\"",
+      "\"You win some #ySOULS! NL YAY!!!!\"",
       "\"Ah, a #ggift! NL Enjoy!\"",
       "\"Oooh, a free #gHeal for you!\"",
       "\"Looks like you won a #pCurse! NL That's not good. NL Oh well! Better luck next time!\"",
@@ -158,7 +158,7 @@
   "downfall:Designer": {
     "NAME": "Designer In-Spire",
     "DESCRIPTIONS": [
-      "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @gold!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
+      "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @money!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
       "It takes little effort to deal with the thief, but the fight does not go without some injury on your part. A man with ridiculous clothing appears at the shop entrance. NL \"Thank you, kind overlord!\", the man says, beckoning you inside.",
       "You see no reason to get involved with this. There is important killing to be done.",
       "\"Oh my, you are just dreadful!! This will not do, no no. What is this style? You are to be @menacing!@ A feared and intimidating #roverlord of the Spire! You simply ~must~ let me give you a proper makeover.\" NL NL You aren't sure whether to take this man at his word and accept his services, or if you should be insulted at his disgust at your style.",
@@ -580,8 +580,9 @@
       "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~",
       " NL The heart pulses louder and louder as your #p~consciousness~ #p~begins~ #p~to~ #p~fade...~",
       " NL A sudden burst of #y@energy@ emanates from inside you, #b@jolting@ you awake.",
-      " NL The heart #gretreats upwards! A large door is revealed in its place.",
-      "NL You prime your staff with divine energy..."
+      " NL The heart #gretreats, sensing an approaching threat! The fight is not over yet...",
+      "NL You prime your staff with divine energy...",
+      "You feel #psomething #p@evil@ at your very core..."
     ],
     "OPTIONS": [
       "[Continue]",

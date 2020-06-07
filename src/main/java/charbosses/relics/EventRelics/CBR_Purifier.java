@@ -18,6 +18,7 @@ public class CBR_Purifier extends AbstractCharbossRelic {
 
     public CBR_Purifier() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/purifier.png")));
+        this.largeImg = null;
     }
 
     @Override
