@@ -52,7 +52,7 @@ public class HeartMerchant implements Disposable {
         this.speechTimer = 1.5F;
         this.saidWelcome = false;
         this.shopScreen = 1;
-        this.anim = new CustomAnimatedNPC(DRAW_X, DRAW_Y + 100F * Settings.scale, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
+        this.anim = new CustomAnimatedNPC(DRAW_X, DRAW_Y, "images/npcs/heart/skeleton.atlas", "images/npcs/heart/skeleton.json", "idle", true,0);
 
 
         AbstractCard c;
@@ -177,8 +177,8 @@ public class HeartMerchant implements Disposable {
     }
 
     public void spawnHitbox(){
-        this.hb = new Hitbox(500.0F * Settings.scale, 500.0F * Settings.scale);
-        this.hb.move(DRAW_X , DRAW_Y + 100.0F * Settings.scale);
+        this.hb = new Hitbox(500.0F * Settings.scale, 700.0F * Settings.scale);
+        this.hb.move(DRAW_X , DRAW_Y);
         this.anim.portalRenderActive = true;
     }
 

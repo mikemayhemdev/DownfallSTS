@@ -76,6 +76,8 @@ public class NeowBoss extends AbstractMonster {
 
     public AbstractCharBoss minion;
 
+    public int Rezzes;
+
     public ArrayList<String> bossesToRez = new ArrayList<>();
 
 

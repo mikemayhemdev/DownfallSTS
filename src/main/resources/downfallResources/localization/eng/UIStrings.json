@@ -10,7 +10,7 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "Souls",
-      "TODO: Soul flavor text/explanation."
+      "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards."
     ]
   },
   "downfall:BustKeyButton": {
