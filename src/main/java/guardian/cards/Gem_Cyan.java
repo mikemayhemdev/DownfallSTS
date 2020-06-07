@@ -47,6 +47,7 @@ public class Gem_Cyan extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = CYAN;
+        this.cardsToPreview = new CrystalWard();
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

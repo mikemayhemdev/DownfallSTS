@@ -37,8 +37,8 @@
   },
   "Guardian:Gem_Cyan": {
     "NAME": "Aquamarine",
-    "DESCRIPTION": "guardianmod:Gem. NL Add a guardianmod:Ward to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a guardianmod:Ward to your hand."
+    "DESCRIPTION": "guardianmod:Gem. NL Add a *Crystal *Ward to your hand.",
+    "UPGRADE_DESCRIPTION": "Add a *Crystal *Ward to your hand."
   },
   "Guardian:ChargeUp": {
     "NAME": "Charge Up",

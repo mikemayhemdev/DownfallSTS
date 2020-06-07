@@ -69,9 +69,9 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
-    private static final int START_HP = 500;
+    private static final int START_HP = 400;
 
-    public static int CURRENT_HP = 500;
+    public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;
     public static int CURRENT_SOULS = 0;
 
@@ -250,7 +250,7 @@ public class FleeingMerchant extends AbstractMonster {
             AbstractDungeon.effectList.add(new GainSingleSoulEffect(this, this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
         }
         super.die();
-        this.deathTimer += 2F;
+        this.deathTimer += ((0.01F * increaseGold) - 1F);
         DEAD = true;
     }
 
