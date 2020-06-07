@@ -121,7 +121,7 @@
   },
   "Guardian:SphericShield": {
     "NAME": "球形护盾",
-    "DESCRIPTION": "在 !M! 回合内， 格挡 不再在你的回合开始时消失。 NL 获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !M! 层 残影 。 NL 获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。 NL 消耗 。"
   },
   "Guardian:Harden": {
     "NAME": "硬化",
@@ -311,17 +311,17 @@
   "Guardian:EvasiveProtocol": {
     "NAME": "闪避协议",
     "DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。  NL guardianmod:防御模式 额外持续一回合。"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "荆棘协议",
     "DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。NL guardianmod:防御模式 额外持续一回合。"
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "装甲协议",
     "DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 。 guardianmod:防御模式 额外持续一回合。"
+	"UPGRADE_DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
   },
   "Guardian:TimeSifter": {
     "NAME": "时间沙漏",

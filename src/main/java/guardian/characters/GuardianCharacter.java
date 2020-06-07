@@ -124,14 +124,14 @@ public class GuardianCharacter extends CustomPlayer {
 
 
     }
-
+/*
     @Override
     public void applyStartOfCombatLogic() {
         super.applyStartOfCombatLogic();
         this.state.setTimeScale(.75F);
         this.state.setAnimation(0, "idle", true);
     }
-
+*/
 
     public void switchToDefensiveMode(){
         if (!inShattered) {
@@ -303,6 +303,11 @@ public class GuardianCharacter extends CustomPlayer {
         return charStrings.TEXT[3];
     }
 
+    @Override
+    public void onVictory() {
+        super.onVictory();
+        switchToOffensiveMode();
+    }
 }
 
 
