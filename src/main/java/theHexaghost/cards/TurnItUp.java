@@ -15,6 +15,7 @@ public class TurnItUp extends AbstractHexaCard {
     public TurnItUp() {
         super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

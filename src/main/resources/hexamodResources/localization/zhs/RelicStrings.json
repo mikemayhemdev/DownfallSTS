@@ -18,7 +18,7 @@
     "FLAVOR": "Let’s see if we can do... better.",
     "DESCRIPTIONS": [
       "替换 #r",
-      " 。 NL 每回合第一次 #y点燃 时，获得 [E] 和 #b6 点 #y格挡 。"
+      " 。[]  NL 每回合第一次 #y点燃 时，获得 [E] 和 #b6 点 #y格挡 。"
     ]
   },
   "hexamod:IceCube": {
@@ -32,7 +32,7 @@
     "NAME": "保暖石",
     "FLAVOR": "A fire would liven this thing up!",
     "DESCRIPTIONS": [
-      "每当你杀死一名 #yhexamod:点燃 的敌人，回复 #b2 点生命。"
+      "每当你杀死带有 #yhexamod:灼伤 的敌人，回复 #b2 点生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -60,21 +60,21 @@
     "NAME": "混沌灵魂",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
-      "The second Searing Ghostflame becomes a Mayhem Ghostflame. NL Mayhem Ghostflame activates when you end your turn while it is active. NL Ignition: Play the top card of your draw pile."
+      "第二个灼热鬼火变为狂徒鬼火。 NL 狂徒鬼火在激活时结束回合点燃。 NL 点燃：打出抽牌堆顶部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "古灵盾",
     "FLAVOR": "Protection on-demand.",
     "DESCRIPTIONS": [
-      "Swap the positions of the Bolstering Ghostflame and the first Searing Ghostflame."
+      "将高热鬼火与第一个灼热鬼火交换。"
     ]
   },
   "hexamod:BolsterEngine": {
-    "NAME": "Rod of Bolstering Flame",
+    "NAME": "高热之杖",
     "FLAVOR": "Fire shields! Fire strengthens.",
     "DESCRIPTIONS": [
-      "每场战斗第一次打出 #yPower 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
+      "每场战斗第一次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {

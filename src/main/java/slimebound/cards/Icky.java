@@ -38,7 +38,7 @@ public class Icky extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 1;
-
+        cardsToPreview = new Slimed();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

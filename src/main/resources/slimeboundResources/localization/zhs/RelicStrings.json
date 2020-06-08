@@ -95,17 +95,17 @@
     ]
   },
     "Slimebound:TarBlob": {
-    "NAME": "Tarr Blob",
+    "NAME": "焦油团",
     "FLAVOR": "The bad kind of Slime.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yslimeboundmod:Splitting costs #b2 more HP and Max HP."
+      "你的回合开始时获得 [E] 。 #yslimeboundmod:分裂 需要额外 #b2 点生命和最大生命。"
     ]
   },
   "Slimebound:StickyStick": {
-    "NAME": "Gelatinous Cube",
+    "NAME": "粘胶方块",
     "FLAVOR": "Hey, it stuck to your body.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse or #yStatus card, draw #b1 card."
+      "每当你抽到 #r诅咒 或 #y状态 牌时，抽 #b1 张牌。"
     ]
   }
 }
