@@ -6,7 +6,9 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
@@ -19,8 +21,12 @@ public class SerpentMindPower extends AbstractPower implements CloneablePowerInt
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public SerpentMindPower(final int amount) {
-        this.name = "Serpent Mind";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -44,9 +50,9 @@ public class SerpentMindPower extends AbstractPower implements CloneablePowerInt
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "Whenever you play an #yOffclass card, draw #b" + amount + " card.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         else
-            description = "Whenever you play an #yOffclass card, draw #b" + amount + " cards.";
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
     @Override

@@ -5,7 +5,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
@@ -18,8 +20,12 @@ public class CheatPower extends AbstractPower implements CloneablePowerInterface
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public CheatPower(final int amount) {
-        this.name = "Cheating";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -43,9 +49,9 @@ public class CheatPower extends AbstractPower implements CloneablePowerInterface
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "This turn, cards that choose a random number for their effect choose the maximum possible number.";
+            description = DESCRIPTIONS[0];
         else
-            description = "For the next #b" + amount + " turns, cards that choose a random number for their effect choose the maximum possible number.";
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 
     @Override
