@@ -15,7 +15,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     public FlamesFromBeyond() {
         super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBurn = burn = MAGIC;
         isEthereal = true;
     }
 
@@ -30,7 +30,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     @Override
     public void triggerOnExhaust() {
-        applyToSelf(new ApplyBurnAtTurnStartOncePower(magicNumber));
+        applyToSelf(new ApplyBurnAtTurnStartOncePower(burn));
     }
 
     public void upgrade() {

@@ -33,14 +33,6 @@
   },
   {
     "NAMES": [
-      "ward",
-      "wards"
-    ],
-    "PROPER_NAME": "Ward",
-    "DESCRIPTION": "#yWards are #b0 cost #yBlock cards which #yExhaust."
-  },
-  {
-    "NAMES": [
       "accelerate"
     ],
     "PROPER_NAME": "Accelerate",

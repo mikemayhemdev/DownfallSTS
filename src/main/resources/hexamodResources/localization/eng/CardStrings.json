@@ -9,7 +9,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Apply !M! hexamod:Burn."
+    "DESCRIPTION": "Apply !burny! hexamod:Burn."
   },
   "hexamod:Float": {
     "NAME": "Float",
@@ -151,7 +151,6 @@
     "NAME": "Gifts From Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, draw 1 card next turn.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn."
-
   },
   "hexamod:Ghostwalk": {
     "NAME": "Ghostwalk",
@@ -198,15 +197,15 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
-    "DESCRIPTION": "If the enemy has hexamod:Burn, apply !M! hexamod:Burn. NL Apply !M! hexamod:Burn."
+    "DESCRIPTION": "If the enemy has hexamod:Burn, apply !burny! hexamod:Burn. NL Apply !burny! hexamod:Burn."
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
-    "DESCRIPTION": "Deal !D! damage and apply 3 hexamod:Burn to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Burn to a random enemy !M! times."
   },
   "hexamod:Firestarter": {
     "NAME": "Firestarter",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! hexamod:Burn."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !burny! hexamod:Burn."
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
@@ -252,8 +251,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn to a random enemy X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply 4 hexamod:Burn to a random enemy X+1 times."
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Burn to a random enemy X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Burn to a random enemy X+1 times."
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
@@ -261,11 +260,11 @@
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "Searing Strike",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !M! hexamod:Burn. NL If this card is Exhausted, take !M! damage."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !burny! hexamod:Burn. NL If this card is Exhausted, take !M! damage."
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !M! hexamod:Burn to ALL enemies at the start of your next turn."
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Burn to ALL enemies at the start of your next turn."
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
@@ -273,7 +272,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !M! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
+    "DESCRIPTION": "Apply !burny! hexamod:Burn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
@@ -282,7 +281,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
-    "DESCRIPTION": "Apply !M! hexamod:Burn. NL Repeat for each hexamod:Ignited Ghostflame."
+    "DESCRIPTION": "Apply !burny! hexamod:Burn. NL Repeat for each hexamod:Ignited Ghostflame."
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
@@ -295,7 +294,7 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
-    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is hexamod:Ignited, apply !M! hexamod:Burn. If not, deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is hexamod:Ignited, apply !burny! hexamod:Burn. If not, deal !D! damage."
   },
   "hexamod:SpiritOfFire": {
     "NAME": "Spirit of Fire",

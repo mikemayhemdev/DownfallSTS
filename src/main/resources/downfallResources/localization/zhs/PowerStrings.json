@@ -20,11 +20,11 @@
     ]
   },
   "downfall:TransformDrawnCardsPower": {
-    "NAME": "Transform Drawn Cards",
+    "NAME": "变化抽牌",
     "DESCRIPTIONS": [
-      "#yTransform the first #b",
-      " cards drawn this turn. (",
-      " remaining)"
+      "将本回合抽到的前 #b",
+      " 张牌 #y变化 。（还剩 ",
+      " 张牌）"
     ]
   }
 }

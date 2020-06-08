@@ -135,7 +135,7 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "许愿",
-    "DESCRIPTION": "虚无 。 NL Wish for Souls, Success, or a Pick Me Up。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 选择： *灵魂 、 *成功 或 *来点喝的 。 NL 消耗 。"
   },
   "expansioncontent:ShieldSmash": {
     "NAME": "破甲",
@@ -143,14 +143,14 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "保留 。 NL 失去所有的 中毒 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 移除所有的 中毒 。 NL 消耗 。"
   },
   "expansioncontent:Debug": {
-    "NAME": "破损核心",
+    "NAME": "核心错误",
     "DESCRIPTION": "保留 。 NL 移除敌人的充能球。 NL 消耗 。"
   },
   "expansioncontent:PeaceOut": {
     "NAME": "暗黑低语",
-    "DESCRIPTION": "保留 。 NL 敌人离开它们的姿态。 NL 移除敌人的 真言 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 敌人退出当前姿态。 NL 移除敌人的 真言 。 NL 消耗 。"
   }
 }

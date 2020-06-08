@@ -1,9 +1,7 @@
 [
   {
     "NAMES": [
-      "吸收",
-      "absorbing",
-      "absorbed"
+      "吸收"
     ],
     "PROPERNAME": "吸收",
     "DESCRIPTION": "融合一只生成的史莱姆，恢复 分裂 时减少的生命上限。"
@@ -17,8 +15,7 @@
   },
   {
     "NAMES": [
-      "黏液",
-      "gooped"
+      "黏液"
     ],
     "PROPERNAME": "黏液",
     "DESCRIPTION": "每层黏液为下次攻击提供 1 点额外伤害。攻击时移除黏液效果，并恢复 2 点生命。回合结束时失去一半层数。"
@@ -31,97 +28,58 @@
     "DESCRIPTION": "提升所有生成的史莱姆的攻击伤害。"
   },
   { "NAMES": [
-      "command",
-      "commands"
+      "命令"
     ],
-    "PROPER_NAME": "Command",
-    "DESCRIPTION": "Your leading Slime attacks."
+    "PROPER_NAME": "命令",
+    "DESCRIPTION": "最前面的史莱姆将会攻击。"
   },
   {
     "NAMES": [
-      "火炬头史莱姆",
-      "torch_head_slime"
+      "火炬头史莱姆"
     ],
     "PROPERNAME": "火炬头史莱姆",
-    "DESCRIPTION": "发动攻击时造成 6 点伤害， 潜力 对其影响翻倍。"
+    "DESCRIPTION": "发动攻击时造成 6 点伤害， #y潜力 对其影响翻倍。"
   },
   {
     "NAMES": [
-      "好斗史莱姆",
-      "bruiser_slime",
-      "bruiser slimes",
-      "bruiser_slimes",
-      "bruiser"
+      "好斗史莱姆"
     ],
     "PROPERNAME": "好斗史莱姆",
     "DESCRIPTION": "发动攻击时造成 4 点伤害。"
   },
   {
     "NAMES": [
-      "邪教徒史莱姆",
-      "cultist_slime"
+      "邪教徒史莱姆"
     ],
     "PROPERNAME": "邪教徒史莱姆",
     "DESCRIPTION": "发动攻击时造成 6 点伤害，提升自身伤害 1 点。"
   },
   {
     "NAMES": [
-      "水蛭史莱姆",
-      "Leeching_slime",
-      "Leeching slimes",
-      "Leeching_slimes",
-      "Leeching"
+      "水蛭史莱姆"
     ],
     "PROPERNAME": "水蛭史莱姆",
     "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予你 2 点格挡。"
   },
     {
     "NAMES": [
-      "guerilla slime",
-      "guerilla_slime",
-      "guerilla slimes",
-      "guerilla_slimes",
-      "guerilla"
+      "游击史莱姆"
     ],
-    "PROPER_NAME": "Guerilla Slime",
-    "DESCRIPTION": "Attacks for #b2 to ALL enemies each turn."
+    "PROPER_NAME": "游击史莱姆",
+    "DESCRIPTION": "对所有敌人造成 #b2 点伤害。"
   },
   {
     "NAMES": [
-      "酸液史莱姆",
-      "acid_slime",
-      "acid slimes",
-      "acid_slimes",
-      "acid"
-    ],
-    "PROPERNAME": "酸液史莱姆",
-    "DESCRIPTION": "发动攻击时造成 2 点伤害，并给予敌人 1 层 中毒。"
-  },
-  {
-    "NAMES": [
-      "污泥史莱姆",
-      "Mire_slime",
-      "Mire slimes",
-      "Mire_slimes",
-      "Mire"
+      "污泥史莱姆"
     ],
     "PROPERNAME": "污泥史莱姆",
-    "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 黏液。"
+    "DESCRIPTION": "发动攻击时造成 1 点伤害，并给予敌人 2 层 #y黏液。"
   },
   {
     "NAMES": [
-      "plated armor",
-      "plated_armor"
+      "青铜史莱姆"
     ],
-    "PROPERNAME": "Plated Armor",
-    "DESCRIPTION": "Increases Block each turn. Reduced when you take damage."
-  },
-  {
-    "NAMES": [
-      "青铜史莱姆",
-      "bronze_slime"
-    ],
-    "PROPERNAME": "Bronze Slime",
+    "PROPERNAME": "青铜史莱姆",
     "DESCRIPTION": "发动攻击时造成 6 点伤害，并给予你 4 点格挡。"
   },
   {
@@ -133,11 +91,10 @@
   },
   {
     "NAMES": [
-      "鬼火史莱姆",
-      "ghostflame_slime"
+      "鬼火史莱姆"
     ],
     "PROPERNAME": "鬼火史莱姆",
-    "DESCRIPTION": "提供 1 点力量，1 点敏捷，2 点 潜力 。不会攻击，不受潜力影响。"
+    "DESCRIPTION": "每回合攻击造成 #b3 点伤害并给予 #b3 层 #y灼伤 。"
   },
   {
     "NAMES": [
@@ -148,10 +105,10 @@
   },
   {
     "NAMES": [
-      "slow"
+      "缓慢"
     ],
-    "PROPERNAME": "Slow",
-    "DESCRIPTION": "Receives 10% more damage per card played in a turn."
+    "PROPERNAME": "缓慢",
+    "DESCRIPTION": "一回合内每打出一张牌额外受到 10% 的伤害。"
   },
   {
     "NAMES": [
@@ -162,70 +119,51 @@
   },
   {
     "NAMES": [
-      "尖塔首领",
-      "spire_boss"
+      "尖塔首领"
     ],
     "PROPERNAME": "尖塔首领",
     "DESCRIPTION": "强力的0费牌，受尖塔中的首领启发而学会的新东西。"
   },
-  {
+    {
     "NAMES": [
-      "分而治之：分裂"
+      "保护史莱姆"
     ],
-    "PROPERNAME": "分而治之：分裂",
-    "DESCRIPTION": "1费技能牌。 NL 分裂 出 好斗史莱姆 或（和） 酸液史莱姆 。 NL 消耗"
+    "PROPER_NAME": "保护史莱姆",
+    "DESCRIPTION": "攻击造成 #b2 点伤害并给予你 #b6 点 #y格挡 。"
   },
   {
     "NAMES": [
-      "分而治之：统治"
+      "羞辱史莱姆"
     ],
-    "PROPERNAME": "分而治之：统治",
-    "DESCRIPTION": "1费攻击牌。 NL 造成 10 点伤害， 每只生成的史莱姆额外提供 1（2） 点伤害。 NL 消耗"
+    "PROPER_NAME": "羞辱史莱姆",
+    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y易伤 。"
+  }, 
+  {
+    "NAMES": [
+      "小黑史莱姆"
+    ],
+    "PROPER_NAME": "小黑史莱姆",
+    "DESCRIPTION": "攻击造成 #b4 点伤害。命令时，其他小黑史莱姆也会攻击。"
   },
   {
     "NAMES": [
-      "召唤保护：召唤"
+      "先古史莱姆"
     ],
-    "PROPERNAME": "召唤保护：召唤",
-    "DESCRIPTION": "1费技能牌。 NL 分裂 出 水蛭史莱姆 或（和） 污泥史莱姆。 NL 消耗"
+    "PROPER_NAME": "先古史莱姆",
+    "DESCRIPTION": "攻击造成 #b3 点伤害并使你抽 #b1 张牌。"
   },
   {
     "NAMES": [
-      "召唤保护：保护"
+      "时间史莱姆"
     ],
-    "PROPERNAME": "召唤保护：保护",
-    "DESCRIPTION": "1费技能牌. NL 获得 8 点 格挡 ， 每只生成的史莱姆额外提供 1（2） 点 格挡 。 NL 消耗"
+    "PROPER_NAME": "时间史莱姆",
+    "DESCRIPTION": "攻击造成 #b4 点伤害并给予 #b1 层 #y虚弱 。"
   },
     {
     "NAMES": [
-      "protector slime",
-      "protector_slime"
+      "消耗黏液"
     ],
-    "PROPER_NAME": "Protector Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b6 #yBlock each turn."
-  },
-  {
-    "NAMES": [
-      "insulting slime",
-      "insulting_slime"
-    ],
-    "PROPER_NAME": "Insulting Slime",
-    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yVulnerable each turn."
-  },
-  {
-    "NAMES": [
-      "ancient slime",
-      "ancient_slime"
-    ],
-    "PROPER_NAME": "Ancient Slime",
-    "DESCRIPTION": "Attacks for #b3 and causes you to draw #b1 card each turn."
-  },
-  {
-    "NAMES": [
-      "time slime",
-      "time_slime"
-    ],
-    "PROPER_NAME": "Time Slime",
-    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yWeak each turn."
+    "PROPER_NAME": "消耗黏液",
+    "DESCRIPTION": "当 #y攻击 带有 #y黏液 的敌人时获得的额外效果。"
   }
 ]

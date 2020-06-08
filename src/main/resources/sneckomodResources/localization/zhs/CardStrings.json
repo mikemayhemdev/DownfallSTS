@@ -17,35 +17,35 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL sneckomod:混淆 你的手牌。"
   },
   "sneckomod:UnknownCommonAttack": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 普通攻击牌。"
   },
   "sneckomod:UnknownCommonSkill": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 普通技能牌。"
   },
   "sneckomod:UnknownUncommonAttack": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 罕见攻击牌。"
   },
   "sneckomod:UnknownUncommonSkill": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 罕见技能牌。"
   },
   "sneckomod:UnknownUncommonPower": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 罕见能力牌。"
   },
   "sneckomod:UnknownRareAttack": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 稀有攻击牌。"
   },
   "sneckomod:UnknownRareSkill": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 稀有技能牌。"
   },
   "sneckomod:UnknownRarePower": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 稀有能力牌。"
   },
   "sneckomod:SoulDraw": {
@@ -69,7 +69,7 @@
     ]
   },
   "sneckomod:UnknownStrike": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 打击牌。"
   },
   "sneckomod:Nope": {
@@ -78,47 +78,47 @@
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 耗 一张手牌。 NL 替换为已 sneckomod:混淆 的同类型牌。 NL 抽1张牌。"
   },
   "sneckomod:UnknownClass": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 bug-报告开发组牌。"
   },
   "sneckomod:UnknownInnate": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 固有 牌。"
   },
   "sneckomod:Unknown": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 牌。"
   },
   "sneckomod:Unknown0Cost": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 0 耗能牌。"
   },
   "sneckomod:Unknown1Cost": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 1 耗能牌。"
   },
   "sneckomod:Unknown2Cost": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 2 耗能牌。"
   },
   "sneckomod:Unknown3Cost": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 3 耗能牌。"
   },
   "sneckomod:UnknownX": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 X 耗能牌。"
   },
   "sneckomod:UnknownEthereal": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 虚无 牌。"
   },
   "sneckomod:UnknownBlock": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 格挡 牌。"
   },
   "sneckomod:UnknownExhaust": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 消耗 牌。"
   },
   "sneckomod:SoulCleanse": {
@@ -226,23 +226,23 @@
     "DESCRIPTION": "在战斗结束时在卡牌奖励中加入一张已 升级 的 sneckomod:未知 牌。"
   },
   "sneckomod:UnknownStrength": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 力量 牌。"
   },
   "sneckomod:UnknownDexterity": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 敏捷 牌。"
   },
   "sneckomod:UnknownWeak": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 虚弱 牌。"
   },
   "sneckomod:UnknownVulnerable": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 易伤 牌。"
   },
   "sneckomod:UnknownColorless": {
-    "NAME": "???",
+    "NAME": "？？？",
     "DESCRIPTION": "sneckomod:未知 无色牌。"
   },
   "sneckomod:RainOfDice": {

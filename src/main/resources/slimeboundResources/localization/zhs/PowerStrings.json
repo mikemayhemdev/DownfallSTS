@@ -14,6 +14,13 @@
       " 点生命，消耗所有 #y黏液 。回合结束时层数减少一半。"
     ]
   },
+    "Slimebound:PreventTackleDamagePower": {
+    "NAME": "阻止冲撞伤害",
+    "DESCRIPTIONS": [
+      "你下 #b",
+      " 张 #y冲撞 牌将不会受到伤害。"
+    ]
+  },
   "Slimebound:SplitDailyTriggerPower": {
     "NAME": "史莱姆分裂",
     "DESCRIPTIONS": [
@@ -112,11 +119,15 @@
   "Slimebound:SelfFormingGooPower": {
     "NAME": "自成型黏液",
     "DESCRIPTIONS": [
-      "每当你失去生命时，获得 ",
-      " 点格挡，并给予一个随机敌人 ",
-      " 层黏液。",
-      " 层黏液 ",
-      " 次。"
+      "每当你吸收时，获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+    "Slimebound:SelfFormingGooPowerPlus": {
+    "NAME": "Reformation+",
+    "DESCRIPTIONS": [
+      "每当你吸收时，获得 #b",
+      " 点 #y敏捷 。"
     ]
   },
   "Slimebound:LoseSlimesPower": {
