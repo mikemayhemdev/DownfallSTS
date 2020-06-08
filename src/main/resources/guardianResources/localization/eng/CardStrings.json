@@ -81,7 +81,7 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "Time Bomb",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL When this card would leave guardianmod:Stasis, deal !M! damage to ALL enemies. NL guardianmod:Volatile.",
+    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL When this card would leave guardianmod:Stasis, deal !M! damage to ALL enemies. NL guardianmod:Volatile."
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Hyper Beam",

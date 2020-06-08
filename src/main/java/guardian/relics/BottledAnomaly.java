@@ -130,7 +130,9 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
 
     @Override
     public void atTurnStartPostDraw() {
-        counter++;
+        if (!this.grayscale) {// 26
+            ++this.counter;// 27
+        }
         if (counter == 3) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -142,5 +144,6 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
     @Override
     public void onVictory() {
         counter = -1;
+        grayscale = false;
     }
 }
