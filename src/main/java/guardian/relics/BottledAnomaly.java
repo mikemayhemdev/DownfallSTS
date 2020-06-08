@@ -4,6 +4,7 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -14,7 +15,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import guardian.GuardianMod;
 import guardian.patches.BottledStasisPatch;
-import slimebound.actions.MakeTempCardInHandActionReduceCost;
 
 import java.util.function.Predicate;
 
@@ -136,7 +136,9 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
         if (counter == 3) {
             flash();
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new MakeTempCardInHandActionReduceCost(card, 1, -2));
+            //addToBot(new MakeTempCardInHandActionReduceCost(card, 1, -2));
+            card.modifyCostForCombat(-999);
+            addToBot(new MakeTempCardInHandAction(card));
             this.grayscale = true;
         }
     }
