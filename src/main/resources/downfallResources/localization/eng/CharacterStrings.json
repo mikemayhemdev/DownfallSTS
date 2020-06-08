@@ -171,14 +171,18 @@
       "Obtain Time Eater expansioncontent:Boss cards.",
       "Obtain Awakened One expansioncontent:Boss cards.",
       "Obtain Ancients expansioncontent:Boss cards.",
-      "slimeboundmod:Split into a slimeboundmod:Bronze_Slime.",
-      "slimeboundmod:Split into a slimeboundmod:Ghostflame_Slime.",
-      "slimeboundmod:Split into a slimeboundmod:Torchhead_Slime.",
-      "slimeboundmod:Split into a slimeboundmod:Cultist_Slime.",
-      "slimeboundmod:Split into a slimeboundmod:Protector_Slime.",
-      "slimeboundmod:Split into an slimeboundmod:Insulting_Slime.",
-      "slimeboundmod:Split into an slimeboundmod:Ancient_Slime.",
-      "slimeboundmod:Split into a Tslimeboundmod:ime_Slime."
+      "Split into a slimeboundmod:Bronze_Slime.",
+      "Split into a slimeboundmod:Ghostflame_Slime.",
+      "Split into a slimeboundmod:Torchhead_Slime.",
+      "Split into a slimeboundmod:Cultist_Slime.",
+      "Split into a slimeboundmod:Protector_Slime.",
+      "Split into an slimeboundmod:Insulting_Slime.",
+      "Split into an slimeboundmod:Ancient_Slime.",
+      "Split into a slimeboundmod:Time_Slime.",
+      "Split into a slimeboundmod:Bruiser_Slime.",
+      "Split into a slimeboundmod:Guerilla_Slime.",
+      "Split into a slimeboundmod:Mire_Slime.",
+      "Split into a slimeboundmod:Leeching_Slime."
     ]
   },
   "downfall:lazyStorage": {

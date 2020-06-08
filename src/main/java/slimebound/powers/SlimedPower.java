@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.powers.PoisonPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.relics.AbsorbEndCombat;
+import slimebound.relics.AbsorbEndCombatUpgraded;
 import slimebound.vfx.FakeFlashAtkImgEffect;
 import slimebound.vfx.SlimeDripsEffectPurple;
 
@@ -60,7 +62,7 @@ public class SlimedPower extends AbstractPower {
 
     public void updateDescription() {
 
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + 2 + DESCRIPTIONS[2]);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 
 
     }
@@ -82,12 +84,13 @@ public class SlimedPower extends AbstractPower {
 
     }
 
-
+/*
     public void atStartOfTurn() {
 
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(this.owner, this.owner, SlimedPower.POWER_ID, this.amount / 2));
 
     }
+   */
 
 
     public float atDamageFinalReceive(float damage, DamageInfo.DamageType damageType) {
@@ -106,7 +109,18 @@ public class SlimedPower extends AbstractPower {
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
-            AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 2));
+            if (AbstractDungeon.player.hasRelic(AbsorbEndCombat.ID)){
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 2));
+                AbstractDungeon.player.getRelic(AbsorbEndCombat.ID).flash();
+            }
+
+            if (AbstractDungeon.player.hasRelic(AbsorbEndCombatUpgraded.ID)) {
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 2));
+                AbstractDungeon.player.getRelic(AbsorbEndCombatUpgraded.ID).flash();
+                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, 3));
+
+            }
+
             if (this.source.hasPower(GoopArmorPower.POWER_ID)) {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, this.source.getPower(GoopArmorPower.POWER_ID).amount));
                 this.source.getPower(GoopArmorPower.POWER_ID).flash();

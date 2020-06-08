@@ -42,20 +42,22 @@ public class SplitLicking extends AbstractSlimeboundCard {
     public SplitLicking() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.slimed = this.baseSlimed = 5;
+        this.magicNumber = this.baseMagicNumber = 3;
+        this.slimed = this.baseSlimed = 8;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int bonus = 0;
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, 2F, false, 0.6F), 0.3F));
+        // AbstractDungeon.actionManager.addToBottom(new VFXAction(new SlimeProjectileEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, 2F, false, 0.6F), 0.3F));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
+        // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
 
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true, 0, bonus));
-
+        addToBot(new CommandAction());
         if (upgraded) addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
+
     }
 
     public AbstractCard makeCopy() {

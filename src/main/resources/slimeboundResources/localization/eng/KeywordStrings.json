@@ -22,7 +22,7 @@
       "gooped"
     ],
     "PROPER_NAME": "Goop",
-    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, consuming the #yGoop effect and healing #b2 HP. Half of #yGoop is removed at end of turn."
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
   },
   {
     "NAMES": [
@@ -56,7 +56,7 @@
       "bruiser"
     ],
     "PROPER_NAME": "Bruiser Slime",
-    "DESCRIPTION": "Attacks for #b4 each turn."
+    "DESCRIPTION": "Attacks for #b5 each turn."
   },
   {
     "NAMES": [
@@ -75,7 +75,7 @@
       "leeching"
     ],
     "PROPER_NAME": "Leeching Slime",
-    "DESCRIPTION": "Attacks for #b1 and grants you #b2 #yBlock each turn."
+    "DESCRIPTION": "Attacks for #b2 and grants you #b2 #yBlock each turn."
   },
   {
     "NAMES": [
@@ -86,7 +86,7 @@
       "guerilla"
     ],
     "PROPER_NAME": "Guerilla Slime",
-    "DESCRIPTION": "Attacks for #b2 to ALL enemies each turn."
+    "DESCRIPTION": "Attacks for #b3 to ALL enemies each turn."
   },
   {
     "NAMES": [

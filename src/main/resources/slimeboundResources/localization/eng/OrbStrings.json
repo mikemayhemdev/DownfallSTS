@@ -109,7 +109,7 @@
     "NAME": "Darkling Slime",
     "DESCRIPTION": [
       "Deals #b",
-      " damage at the start of your turn. When commanded, any other Darklings will also attack."
+      " damage at the start of your turn. When you Command, all Darklings will attack (regardless of position)."
     ]
   }
 }

@@ -178,7 +178,11 @@
       "slimeboundmod:Split into a slimeboundmod:Protector_Slime.",
       "slimeboundmod:Split into an slimeboundmod:Insulting_Slime.",
       "slimeboundmod:Split into an slimeboundmod:Ancient_Slime.",
-      "slimeboundmod:Split into a Tslimeboundmod:ime_Slime."
+      "slimeboundmod:Split into a slimeboundmod:Time_Slime.",
+      "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime.",
+      "slimeboundmod:Split into an slimeboundmod:Guerilla_Slime.",
+      "slimeboundmod:Split into an slimeboundmod:Mire_Slime.",
+      "slimeboundmod:Split into a slimeboundmod:Leeching_Slime."
     ]
   },
   "downfall:lazyStorage": {

@@ -6,12 +6,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.OctoChoiceActionSplit;
+import downfall.cards.OctoChoiceCard;
+import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
+import slimebound.actions.OctoChoiceAction;
 import slimebound.actions.SlimeSpawnAction;
-import slimebound.orbs.AttackSlime;
-import slimebound.orbs.PoisonSlime;
-import slimebound.orbs.ShieldSlime;
-import slimebound.orbs.SlimingSlime;
+import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
 
 import java.util.ArrayList;
@@ -28,6 +30,8 @@ public class Split extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
     private static final int COST = 0;
     public static String UPGRADED_DESCRIPTION;
+    public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
+    public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -38,12 +42,14 @@ public class Split extends AbstractSlimeboundCard {
 
     public Split() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 0;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++) {
+        choice();
+
+        /*        for (int i = 0; i < magicNumber; i++) {
             ArrayList<Integer> orbs = new ArrayList<>();
             orbs.add(1);
             orbs.add(2);
@@ -51,7 +57,7 @@ public class Split extends AbstractSlimeboundCard {
             orbs.add(4);
             Integer o = orbs.get(AbstractDungeon.cardRng.random(orbs.size() - 1));
 
-            switch (o) {
+                    switch (o) {
                 case 1:
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
                     break;
@@ -64,14 +70,73 @@ public class Split extends AbstractSlimeboundCard {
                 case 4:
                     AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
                     break;
+         */
+    }
+
+    public void choice() {
+        addToBot(new OctoChoiceActionSplit(this));
+        if (upgraded) addToBot(new OctoChoiceActionSplit(this));
+    }
+
+    public ArrayList<OctoChoiceCard> choiceList() {
+        ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
+        if (this.baseMagicNumber != 1)
+            cardList.add(new OctoChoiceCard("Slimebound:SplotBruiser", CardCrawlGame.languagePack.getOrbString("Slimebound:AttackSlime").NAME, SlimeboundMod.getResourcePath("cards/splitBruiser.png"), TEXT[20]));
+        if (this.baseMagicNumber != 2)
+            cardList.add(new OctoChoiceCard("Slimebound:SplotGuerilla", CardCrawlGame.languagePack.getOrbString("Slimebound:PoisonSlime").NAME, SlimeboundMod.getResourcePath(IMG_PATH), TEXT[21]));
+        if (this.baseMagicNumber != 3)
+            cardList.add(new OctoChoiceCard("Slimebound:SplotMire", CardCrawlGame.languagePack.getOrbString("Slimebound:SlimingSlime").NAME, SlimeboundMod.getResourcePath("cards/splitMire.png"), TEXT[22]));
+        if (this.baseMagicNumber != 4)
+            cardList.add(new OctoChoiceCard("Slimebound:SplotLeeching", CardCrawlGame.languagePack.getOrbString("Slimebound:ShieldSlime").NAME, SlimeboundMod.getResourcePath("cards/splitLeeching.png"), TEXT[23]));
+        return cardList;
+
+    }
+
+    private void updateMagic(int index) {
+        if (upgraded) {
+            if (this.baseMagicNumber == 0) {
+                this.baseMagicNumber = index;
+            } else {
+                this.baseMagicNumber = 0;
             }
+        } else {
+            this.baseMagicNumber = 0;
+        }
+    }
+
+    public void doChoiceStuff(OctoChoiceCard card) {
+        switch (card.cardID) {
+            case "Slimebound:SplotBruiser": {
+                addToBot(new SlimeSpawnAction(new AttackSlime(), false, true));
+                updateMagic(1);
+                break;
+            }
+            case "Slimebound:SplotGuerilla": {
+                addToBot(new SlimeSpawnAction(new PoisonSlime(), false, true));
+
+                updateMagic(2);
+                break;
+            }
+            case "Slimebound:SplotLeeching": {
+                addToBot(new SlimeSpawnAction(new ShieldSlime(), false, true));
+
+                updateMagic(4);
+                break;
+            }
+            case "Slimebound:SplotMire": {
+                addToBot(new SlimeSpawnAction(new SlimingSlime(), false, true));
+
+                updateMagic(3);
+                break;
+            }
+
         }
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }

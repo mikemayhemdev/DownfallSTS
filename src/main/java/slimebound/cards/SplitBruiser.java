@@ -38,7 +38,7 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public SplitBruiser() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseDamage = 6;
+        this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
     }
@@ -46,11 +46,14 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         int bonus = 0;
-        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true, bonus, 0));
 
+        addToBot(new CommandAction());
         if (upgraded) addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
+
     }
 
     public AbstractCard makeCopy() {

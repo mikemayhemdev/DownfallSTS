@@ -50,12 +50,13 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractOrb o = SlimeboundMod.getLeadingSlime();
-        if (o != null){
-            AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-            addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
-            addToBot(new HealAction(p, p, 4));
-            addToBot(new GainBlockAction(p, block));
+        for (AbstractOrb o : p.orbs){
+            if (o instanceof SpawnedSlime) {
+                AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
+                addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
+                addToBot(new HealAction(p, p, 4));
+                addToBot(new GainBlockAction(p, block));
+            }
         }
     }
 

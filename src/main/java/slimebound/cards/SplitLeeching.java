@@ -38,16 +38,19 @@ public class SplitLeeching extends AbstractSlimeboundCard {
     public SplitLeeching() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.baseBlock = 5;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.baseBlock = 8;
+        this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int bonus = 0;
-        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
+        //AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true, 0, bonus));
+        addToBot(new CommandAction());
         if (upgraded) addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
+
 
     }
 
