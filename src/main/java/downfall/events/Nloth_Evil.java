@@ -101,7 +101,7 @@ public class Nloth_Evil extends AbstractImageEvent {
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Pain(), (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), AbstractDungeon.returnRandomRelic(AbstractDungeon.returnRandomRelicTier()));
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
                         this.screenNum = 1;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
