@@ -311,7 +311,7 @@
   "Guardian:EvasiveProtocol": {
     "NAME": "闪避协议",
     "DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。  NL guardianmod:防御模式 额外持续一回合。"
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "荆棘协议",
