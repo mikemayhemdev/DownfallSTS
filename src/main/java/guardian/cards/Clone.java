@@ -51,18 +51,6 @@ public class Clone extends AbstractGuardianCard {
         this.exhaust = true;
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean result;
-        if (GuardianMod.canSpawnStasisOrb()) {
-            result = true;
-        } else {
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-            result = false;
-        }
-        return result;
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
