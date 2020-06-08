@@ -1,12 +1,14 @@
 package slimebound.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeSpawnAction;
@@ -39,6 +41,9 @@ public class SpawnSlimePotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:leeching")), BaseMod.getKeywordDescription("slimeboundmod:leeching")));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:mire")), BaseMod.getKeywordDescription("slimeboundmod:mire")));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("slimeboundmod:guerilla")), BaseMod.getKeywordDescription("slimeboundmod:guerilla")));
     }
 
     public void use(AbstractCreature target) {
