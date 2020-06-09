@@ -2,15 +2,15 @@
   "Guardian:AcceleratePotion": {
     "NAME": "Temporal Potion",
     "DESCRIPTIONS": [
-      "Accelerate all cards in #yguardianmod:Stasis twice.",
-      "Accelerate all cards in #yguardianmod:Stasis four times."
+      "Accelerate all cards in #yStasis twice.",
+      "Accelerate all cards in #yStasis four times."
     ]
   },
   "Guardian:DefensiveModePotion": {
     "NAME": "Polishing Oil",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yBlock and enter #yguardianmod:Defensive_Mode."
+      " #yBlock and enter #yDefensive #yMode."
     ]
   },
   "Guardian:BlockOnCardUsePotion": {
@@ -23,7 +23,7 @@
   "Guardian:StasisDiscoveryPotion": {
     "NAME": "Quantum Elixir",
     "DESCRIPTIONS": [
-      "Gain #yguardianmod:Stasis slots until you have #b",
+      "Gain #yStasis slots until you have #b",
       ". NL ",
       " times, choose #b1 of #b3 cards to place into #yStasis."
     ]

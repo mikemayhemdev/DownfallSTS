@@ -54,7 +54,6 @@ public class GuardianWhirl extends AbstractGuardianCard {
         } else {
             return false;
         }
-
     }
 
     public GuardianWhirl() {

@@ -46,20 +46,20 @@ public class NeowRezAction extends AbstractGameAction {
             owner.moveForRez();
             this.instructedMove = true;
             switch (owner.Rezzes) {
-                case 0: {
+                case 1: {
                     AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[0], false));
 
                     CardCrawlGame.sound.play("VO_NEOW_2A");
                     break;
                 }
 
-                case 1: {
+                case 2: {
                     AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[1], false));
 
                     CardCrawlGame.sound.play("VO_NEOW_3B");
                     break;
                 }
-                case 2: {
+                case 3: {
                     AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[2], false));
 
                     CardCrawlGame.sound.play("VO_NEOW_1A");

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
@@ -20,7 +21,6 @@ public class AcceleratePotion extends CustomPotion {
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
-
 
     public AcceleratePotion() {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.M, PotionColor.STEROID);
@@ -40,7 +40,6 @@ public class AcceleratePotion extends CustomPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("accelerate")), GameDictionary.keywords.get("accelerate")));
-
     }
 
     public void use(AbstractCreature target) {

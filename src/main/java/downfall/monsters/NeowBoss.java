@@ -76,7 +76,7 @@ public class NeowBoss extends AbstractMonster {
 
     public AbstractCharBoss minion;
 
-    public int Rezzes;
+    public static int Rezzes = 1;
 
     public ArrayList<String> bossesToRez = new ArrayList<>();
 
@@ -106,6 +106,7 @@ public class NeowBoss extends AbstractMonster {
 
 
         //Initialize the boss list with the four
+        Rezzes = 1;
         bossesToRez.clear();
         bossesToRez.add("downfall:CharBossIronclad");
         bossesToRez.add("downfall:CharBossSilent");

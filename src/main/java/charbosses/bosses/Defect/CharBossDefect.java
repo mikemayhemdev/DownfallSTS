@@ -2,6 +2,9 @@ package charbosses.bosses.Defect;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Silent.ArchetypeAct1Shivs;
+import charbosses.bosses.Silent.ArchetypeAct2Finisher;
+import charbosses.bosses.Silent.ArchetypeAct3Poison;
 import charbosses.cards.anticards.Debug;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
@@ -12,6 +15,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
+import downfall.monsters.NeowBoss;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossDefect extends AbstractCharBoss {
@@ -48,6 +52,15 @@ public class CharBossDefect extends AbstractCharBoss {
             case 1: archetype = new ArchetypeAct1Streamline(); break;
             case 2: archetype = new ArchetypeAct2Claw(); break;
             case 3: archetype = new ArchetypeAct3Orbs(); break;
+            case 4: {
+                switch (NeowBoss.Rezzes) {
+                    case 1: archetype = new ArchetypeAct1Streamline(); break;
+                    case 2: archetype = new ArchetypeAct2Claw(); break;
+                    case 3: archetype = new ArchetypeAct3Orbs(); break;
+                    default: archetype = new ArchetypeAct1Streamline(); break;
+                }
+                break;
+            }
             default: archetype = new ArchetypeAct1Streamline(); break;
         }
 
