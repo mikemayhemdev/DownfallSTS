@@ -92,17 +92,6 @@ public class GatlingBeam extends AbstractGuardianCard {
 
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean result;
-        if (GuardianMod.canSpawnStasisOrb()) {
-            result = true;
-        } else {
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-            result = false;
-        }
-        return result;
-    }
 
     public void updateDescription() {
 

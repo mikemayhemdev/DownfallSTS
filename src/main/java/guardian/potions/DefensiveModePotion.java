@@ -1,13 +1,16 @@
 package guardian.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import guardian.stances.DefensiveMode;
 import guardian.characters.GuardianCharacter;
@@ -29,10 +32,10 @@ public class DefensiveModePotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-
         this.description = (DESCRIPTIONS[0] + this.potency * 5 + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("defensive mode")), GameDictionary.keywords.get("defensive mode")));
 
     }
 

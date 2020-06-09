@@ -10,12 +10,11 @@
     "NAME": "Goop",
     "DESCRIPTIONS": [
       "The next #yAttack against this enemy deals #b",
-      " more damage and heals #b",
-      " HP, consuming all #yGoop.  Half of the stack is removed at end of turn."
+      " more damage, consuming all #yGoop."
     ]
   },
   "Slimebound:PreventTackleDamagePower": {
-    "NAME": "Prevent Tackle Damage",
+    "NAME": "Protected",
     "DESCRIPTIONS": [
       "You do not take damage from the next #b",
       " #yTackles you play."

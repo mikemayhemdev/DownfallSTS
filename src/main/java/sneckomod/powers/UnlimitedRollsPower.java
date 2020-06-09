@@ -6,7 +6,9 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import sneckomod.cards.SoulRoll;
@@ -22,8 +24,12 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
 
     private boolean bruh;
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public UnlimitedRollsPower(boolean upgraded) {
-        this.name = "Unlimited Rolls";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = -1;
@@ -44,7 +50,7 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
             AbstractCard card = new SoulRoll();
             if (bruh) card.upgrade();
             card.exhaust = true;
-            card.rawDescription = card.rawDescription + " NL Exhaust.";
+            card.rawDescription = card.rawDescription + DESCRIPTIONS[2];
             card.initializeDescription();
 
             this.addToBot(new MakeTempCardInHandAction(card, 1, false));// 30 32 33
@@ -54,9 +60,9 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
     @Override
     public void updateDescription() {
         if (bruh) {
-            description = "At the start of your turn, add a #ySoul #yRoll+ into your hand with #yExhaust.";
+            description = DESCRIPTIONS[0];
         } else
-            description = "At the start of your turn, add a #ySoul #yRoll into your hand with #yExhaust.";
+            description = DESCRIPTIONS[1];
     }
 
     @Override

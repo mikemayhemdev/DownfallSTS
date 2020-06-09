@@ -83,17 +83,6 @@ public class ShieldCharger extends AbstractGuardianCard {
         this.initializeDescription();
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean result;
-        if (GuardianMod.canSpawnStasisOrb()) {
-            result = true;
-        } else {
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-            result = false;
-        }
-        return result;
-    }
 }
 
 

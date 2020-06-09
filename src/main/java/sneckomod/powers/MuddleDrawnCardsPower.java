@@ -7,7 +7,9 @@ import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
@@ -21,8 +23,12 @@ public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePo
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public MuddleDrawnCardsPower(final int amount) {
-        this.name = "Muddle Drawn Cards";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -53,9 +59,9 @@ public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePo
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "#yMuddle the next card you draw.";
+            description = DESCRIPTIONS[0];
         else
-            description = "#yMuddle the first #b" + amount + " cards drawn this turn. (" + Math.max(0,this.amount2) + " remaining)";
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + Math.max(0,this.amount2) + DESCRIPTIONS[3];
     }
 
     @Override

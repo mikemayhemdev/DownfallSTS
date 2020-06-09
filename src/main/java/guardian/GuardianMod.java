@@ -11,6 +11,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -18,17 +19,16 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
-import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
 import com.megacrit.cardcrawl.events.shrines.UpgradeShrine;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rewards.RewardSave;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.cards.*;
@@ -55,21 +55,21 @@ import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import sneckomod.events.BackToBasicsSnecko;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 
-@com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
+@SpireInitializer
 public class GuardianMod implements PostDrawSubscriber,
         PreMonsterTurnSubscriber,
         SetUnlocksSubscriber,
         PostDungeonInitializeSubscriber,
         PostInitializeSubscriber,
-        basemod.interfaces.EditCharactersSubscriber,
-        basemod.interfaces.EditRelicsSubscriber,
-        basemod.interfaces.EditCardsSubscriber
+        EditCharactersSubscriber,
+        EditRelicsSubscriber,
+        EditCardsSubscriber,
+        PostBattleSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -693,11 +693,6 @@ public static void saveData() {
         }
 
 
-
-
-
-
-
     }
 
     public void unlockEverything() {
@@ -1065,6 +1060,14 @@ public static void saveData() {
 
     }
 
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        if (AbstractDungeon.player instanceof GuardianCharacter) {
+            if (((GuardianCharacter) AbstractDungeon.player).inDefensive) {
+                ((GuardianCharacter) AbstractDungeon.player).switchToOffensiveMode();
+            }
+        }
+    }
 }
 
 

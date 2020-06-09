@@ -17,14 +17,14 @@
   "sneckomod:MuddlingPotion": {
     "NAME": "Spiked Energy Drink",
     "DESCRIPTIONS": [
-      "Muddle the #b",
+      "#yMuddle the #b",
       " highest-cost cards in your hand."
     ]
   },
   "sneckomod:OffclassReductionPotion": {
     "NAME": "Exotic Beverage",
     "DESCRIPTIONS": [
-      "Reduce the cost of Offclass cards in your hand by #b",
+      "Reduce the cost of #yOffclass cards in your hand by #b",
       "."
     ]
   }

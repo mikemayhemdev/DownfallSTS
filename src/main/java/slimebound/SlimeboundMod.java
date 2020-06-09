@@ -73,7 +73,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         basemod.interfaces.EditCardsSubscriber,
         //basemod.interfaces.EditKeywordsSubscriber,
         //EditStringsSubscriber,
-        basemod.interfaces.PostDrawSubscriber,
+        //basemod.interfaces.PostDrawSubscriber,
         basemod.interfaces.OnStartBattleSubscriber {
     public static final boolean hasHubris;
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -657,8 +657,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             }
         }
         boolean soundPlayed = false;
-        for (int i = 0; i < slimes.size(); i++) {
-            SpawnedSlime s = (SpawnedSlime) slimes.get(i);
+        for (AbstractOrb slime : slimes) {
+            SpawnedSlime s = (SpawnedSlime) slime;
             s.noEvokeBonus = true;
             if (soundPlayed) {
                 s.noEvokeSound = true;
@@ -673,22 +673,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             s.noRender = true;
         }
     }
-
-    public void receivePostDraw(AbstractCard c) {
-        AbstractPlayer player = AbstractDungeon.player;
-
-        if (c.cardID == "Slimed") {
-
-            if (player.chosenClass.name() == "SLIMEBOUND") {
-
-
-                AbstractCard slimeCard = CardLibrary.getCard(UsefulSlime.ID).makeCopy();
-                AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, player.hand));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(slimeCard));
-            }
-        }
-    }
-
 
     public void receivePostInitialize() {
         UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");

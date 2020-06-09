@@ -82,16 +82,6 @@ public class ViciousTackle extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        if (upgraded) {
-            if (m.hasPower(SlimedPower.POWER_ID)) {
-
-
-                //AbstractDungeon.actionManager.addToTop(new WaitAction(.2f));
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(p, p, 2));
-
-            }
-        }
-
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
         //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p,p,TackleBuffPower.POWER_ID));
@@ -117,8 +107,8 @@ public class ViciousTackle extends AbstractSlimeboundCard {
             upgradeName();
 
             upgradeDamage(4);
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            //this.rawDescription = UPGRADED_DESCRIPTION;
+            //this.initializeDescription();
 
 
         }

@@ -155,7 +155,7 @@ public abstract class SpawnedSlime
         this.passiveAmount = this.basePassiveAmount;
         this.OrbVFXColor = OrbFlareColor;
         this.intentImage = intentImage;
-        this.upgradedInitialBoost = initialBoost;
+        this.upgradedInitialBoost = 0;
 
 
         this.channelAnimTimer = 0.5F;

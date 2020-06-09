@@ -41,8 +41,8 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "slimeboundmod:Split into a random slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into !M! random slimes. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 4 Slimes to slimeboundmod:Split into. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 2 of 4 Slimes to slimeboundmod:Split into. NL Exhaust."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
@@ -125,7 +125,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Increase this card's damage and Block by !M! for this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL slimeboundmod:Consume - Increase this card's damage and Block by !M! for this combat."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
@@ -142,7 +142,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next slimeboundmod:Tackle you play."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackle cards you play."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
@@ -319,8 +319,7 @@
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser or slimeboundmod:Guerilla slime. NL slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser AND slimeboundmod:Guerilla slime. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! guardianmod:Momentary Strength for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
@@ -334,8 +333,7 @@
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching or slimeboundmod:Mire slime. NL slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching AND slimeboundmod:Mire slime. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! guardianmod:Momentary Dexterity for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
@@ -343,28 +341,28 @@
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command.  NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command.  NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
     "DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL slimeboundmod:Command.  NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",

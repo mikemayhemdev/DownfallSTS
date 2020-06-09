@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.GuardianMod;
+import guardian.characters.GuardianCharacter;
 
 import java.util.Iterator;
 
@@ -53,6 +55,8 @@ public class DiscardPileToStasisAction extends AbstractGameAction {
                     if (GuardianMod.canSpawnStasisOrb()) {
 
                         AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
+                    } else {
+                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
                     }
                     c.lighten(false);
                     c.unhover();

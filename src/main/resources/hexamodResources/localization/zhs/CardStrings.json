@@ -9,7 +9,7 @@
   },
   "hexamod:Sear": {
     "NAME": "灼烧",
-    "DESCRIPTION": "给予 !M! 层 hexamod:灼伤 。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼伤 。"
   },
   "hexamod:Float": {
     "NAME": "浮动",
@@ -198,15 +198,15 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
-    "DESCRIPTION": "如果敌人有 hexamod:灼伤 ，给予 !M! 层 hexamod:灼伤 。 NL 给予 !M! 层 hexamod:灼伤 。"
+    "DESCRIPTION": "如果敌人有 hexamod:灼伤 ，给予 !burny! 层 hexamod:灼伤 。 NL 给予 !burny! 层 hexamod:灼伤 。"
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 3 层 hexamod:灼伤 !M! 次。"
+    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 3 层 hexamod:灼伤 !burny! 次。"
   },
   "hexamod:Firestarter": {
     "NAME": "点火",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 hexamod:灼伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼伤 。"
   },
   "hexamod:SearingWound": {
     "NAME": "灼热伤口",
@@ -252,8 +252,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予4层 hexamod:灼伤 X 次。",
-    "UPGRADE_DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予4层 hexamod:灼伤 X+1 次。"
+    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼伤 X 次。",
+    "UPGRADE_DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼伤 X+1 次。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -261,11 +261,11 @@
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "灼热打击",
-    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 hexamod:灼伤 。 NL 如果这张牌被 消耗 ，受到 !M! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 造成 !D! 点伤害。 NL 给予 !burny! 层 hexamod:灼伤 。 NL 如果这张牌被 消耗 ，受到 !M! 点伤害。"
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 。 hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !M! 层 hexamod:灼伤 。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !burny! 层 hexamod:灼伤 。"
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
@@ -273,7 +273,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "光谱火花",
-    "DESCRIPTION": "给予 !M! 层 hexamod:灼伤 。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 : hexamod:熄灭 并将这张牌返回你的手牌。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼伤 。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 : hexamod:熄灭 并将这张牌返回你的手牌。"
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
@@ -282,7 +282,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "充能弹幕",
-    "DESCRIPTION": "给予 !M! 层 hexamod:灼伤 。 NL 每 hexamod:点燃 一个鬼火 重复一次。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼伤 。 NL 每 hexamod:点燃 一个鬼火 重复一次。"
   },
   "hexamod:RadiantFlame": {
     "NAME": "火焰辐射",
@@ -295,7 +295,7 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "动态攻击",
-    "DESCRIPTION": "虚无 。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 ，给予 !M! 层 hexamod:灼伤 。否则造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 NL 如果 hexamod:激活 的鬼火已 hexamod:点燃 ，给予 !burny! 层 hexamod:灼伤 。否则造成 !D! 点伤害。"
   },
   "hexamod:SpiritOfFire": {
     "NAME": "火焰之魂",

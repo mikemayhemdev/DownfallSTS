@@ -1,12 +1,14 @@
 package theHexaghost.potions;
 
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
@@ -39,6 +41,7 @@ public class InfernoChargePotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("ignite"))), BaseMod.getKeywordDescription(HexaMod.makeID("ignite"))));
     }
 
     public void use(AbstractCreature target) {

@@ -1,16 +1,16 @@
 {
   "Slimebound:AbsorbEndCombat": {
     "NAME": "Heart of Goo",
-    "FLAVOR": "You are not alone.",
+    "FLAVOR": "I feel so funky.",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Split into a random Slime at the start of combat."
+      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
     "NAME": "Black Heart of Goo",
-    "FLAVOR": "You and ooze army.",
+    "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
-      "Replaces #gHeart #gof #gGoo. At the start of combat, #yslimeboundmod:Split into #b2 random Slimes, gain #b1 #yslimeboundmod:Potency, and gain #b1 Slime slot."
+      "Whenever you Attack an enemy who has #yslimeboundmod:Goop, heal 2 HP and gain 3 Block."
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -75,7 +75,7 @@
   },
   "Slimebound:MaxSlimesRelic": {
     "NAME": "Banner of Command",
-    "FLAVOR": "It's a little damp.",
+    "FLAVOR": "You and ooze army.",
     "DESCRIPTIONS": [
       "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching slime and gain #b1 Slime slot."
     ]

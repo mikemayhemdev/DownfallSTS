@@ -30,6 +30,7 @@ public class AbsorbEndCombat extends CustomRelic {
     }
 
 
+    /*
     public void atBattleStartPreDraw() {
         //Cheaty hack for testing max orbslots
         //com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.IncreaseMaxOrbAction(6));
@@ -59,6 +60,7 @@ public class AbsorbEndCombat extends CustomRelic {
 
 
     }
+    */
 
     @Override
     public void onUnequip() {

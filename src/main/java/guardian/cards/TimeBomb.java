@@ -53,7 +53,6 @@ public class TimeBomb extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
         AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this));
     }
 
@@ -69,7 +68,6 @@ public class TimeBomb extends AbstractGuardianCard {
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
@@ -78,18 +76,6 @@ public class TimeBomb extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean result;
-        if (GuardianMod.canSpawnStasisOrb()) {
-            result = true;
-        } else {
-            this.cantUseMessage = EXTENDED_DESCRIPTION[0];
-            result = false;
-        }
-        return result;
     }
 }
 

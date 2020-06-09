@@ -16,7 +16,7 @@ import slimebound.SlimeboundMod;
 public class PreventTackleDamagePower extends AbstractPower {
     public static final String POWER_ID = "Slimebound:PreventTackleDamagePower";
     public static final String NAME = "Potency";
-    public static final String IMG = "powers/AcidTongueS.png";
+    public static final String IMG = "powers/tackleProtection.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;

@@ -51,7 +51,6 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
 
     public void choice() {
         addToBot(new OctoChoiceAction(this));
-        if (upgraded) addToBot(new CommandAction());
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -76,34 +75,42 @@ public class SplitSpecialist extends AbstractSlimeboundCard {
         switch (card.cardID) {
             case "Slimebound:SplotBronze": {
                 addToBot(new SlimeSpawnAction(new BronzeSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
             case "Slimebound:SplotGhostflame": {
                 addToBot(new SlimeSpawnAction(new HexSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
             case "Slimebound:SplotTorchhead": {
                 addToBot(new SlimeSpawnAction(new TorchHeadSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
             case "Slimebound:SplotCultist": {
                 addToBot(new SlimeSpawnAction(new CultistSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
             case "Slimebound:SplotProtector": {
                 addToBot(new SlimeSpawnAction(new ProtectorSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
             case "Slimebound:SplotInsulting": {
                 addToBot(new SlimeSpawnAction(new ChampSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
             case "Slimebound:SplotAncient": {
                 addToBot(new SlimeSpawnAction(new DrawingSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
             case "Slimebound:SplotSlowing": {
                 addToBot(new SlimeSpawnAction(new SlowingSlime(), false, true));
+                if (upgraded) addToBot(new CommandAction());
                 break;
             }
         }
