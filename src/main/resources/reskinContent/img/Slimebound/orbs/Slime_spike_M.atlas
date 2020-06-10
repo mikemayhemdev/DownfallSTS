@@ -1,0 +1,104 @@
+
+Slime_spike_M.png
+size: 512,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+out/shadow
+  rotate: false
+  xy: 1, 555
+  size: 411, 121
+  orig: 411, 121
+  offset: 0, 0
+  index: -1
+out/gold
+  rotate: false
+  xy: 377, 43
+  size: 40, 20
+  orig: 42, 21
+  offset: 1, 1
+  index: -1
+out/body_color
+  rotate: false
+  xy: 1, 280
+  size: 370, 273
+  orig: 370, 273
+  offset: 0, 0
+  index: -1
+out_spike/eyewhite_spike
+  rotate: false
+  xy: 373, 498
+  size: 117, 37
+  orig: 117, 37
+  offset: 0, 0
+  index: -1
+out_spike/core_spike
+  rotate: false
+  xy: 472, 437
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+out_spike/eyelash_spike_1
+  rotate: false
+  xy: 373, 537
+  size: 53, 16
+  orig: 53, 16
+  offset: 0, 0
+  index: -1
+out_spike/eyelash_spike_2
+  rotate: false
+  xy: 377, 1
+  size: 55, 40
+  orig: 55, 40
+  offset: 0, 0
+  index: -1
+out_spike/eyelash_spike_31
+  rotate: false
+  xy: 1, 678
+  size: 147, 26
+  orig: 147, 26
+  offset: 0, 0
+  index: -1
+out/body_line
+  rotate: false
+  xy: 1, 1
+  size: 374, 277
+  orig: 374, 277
+  offset: 0, 0
+  index: -1
+out_spike/catEar_color_spike_L
+  rotate: false
+  xy: 373, 366
+  size: 68, 81
+  orig: 68, 81
+  offset: 0, 0
+  index: -1
+out_spike/catEar_color_spike_R
+  rotate: false
+  xy: 445, 1
+  size: 62, 66
+  orig: 62, 66
+  offset: 0, 0
+  index: -1
+out_spike/eyebrow_spike
+  rotate: false
+  xy: 373, 449
+  size: 97, 47
+  orig: 97, 47
+  offset: 0, 0
+  index: -1
+out_spike/catEar_line_spike_L
+  rotate: false
+  xy: 373, 280
+  size: 70, 84
+  orig: 70, 84
+  offset: 0, 0
+  index: -1
+out_spike/catEar_line_spike_R
+  rotate: false
+  xy: 443, 366
+  size: 65, 69
+  orig: 65, 69
+  offset: 0, 0
+  index: -1

@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import reskinContent.reskinContent;
 
 
 public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
@@ -36,16 +37,33 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
     private float y;
 
     public DoubleSlimeParticle(AbstractPlayer p) {
-        this.atlas = new TextureAtlas(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.atlas"));
-        SkeletonJson json = new SkeletonJson(this.atlas);
+        if(reskinContent.slimeOriginalAnimation){
+            this.atlas = new TextureAtlas(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.atlas"));
+            SkeletonJson json = new SkeletonJson(this.atlas);
 
 
-        json.setScale(Settings.scale / scale);
-        SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.json"));
-        this.skeleton = new Skeleton(skeletonData);
-        this.skeleton.setColor(Color.WHITE);
-        this.stateData = new AnimationStateData(skeletonData);
-        this.state = new AnimationState(this.stateData);
+            json.setScale(Settings.scale / scale);
+            SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.json"));
+            this.skeleton = new Skeleton(skeletonData);
+            this.skeleton.setColor(Color.WHITE);
+            this.stateData = new AnimationStateData(skeletonData);
+            this.state = new AnimationState(this.stateData);
+        }else {
+            this.atlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/animation/TheSlimeBossWaifuDownFall.atlas")));
+            SkeletonJson json = new SkeletonJson(this.atlas);
+
+
+
+            json.setScale(Settings.scale / scale);
+            SkeletonData skeletonData = json.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/Slimebound/animation/TheSlimeBossWaifuDownFall.json")));
+            this.skeleton = new Skeleton(skeletonData);
+            this.skeleton.setColor(Color.WHITE);
+            this.stateData = new AnimationStateData(skeletonData);
+            this.state = new AnimationState(this.stateData);
+        }
+
+
+
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         this.state.addListener(new SlimeAnimListener());
