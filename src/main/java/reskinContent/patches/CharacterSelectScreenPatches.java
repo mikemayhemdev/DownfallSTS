@@ -1,10 +1,11 @@
 package reskinContent.patches;
 
+
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import reskinContent.reskinContent;
 
 import reskinContent.helpers.PortraitHexaghostOrb;
-import reskinContent.vfx.PortraitScreenOnFireEffect;
-import reskinContent.vfx.PortraitWhirlwindEffect;
+import reskinContent.vfx.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -24,7 +25,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
+
 import guardian.GuardianMod;
 
 import slimebound.SlimeboundMod;
@@ -81,7 +82,17 @@ public class CharacterSelectScreenPatches
     public static ArrayList<AbstractGameEffect> char_effectsQueue = new ArrayList();;
     public static ArrayList<AbstractGameEffect> char_effectsQueue_toRemove = new ArrayList();;
 
+//  Snecko var
+    private static boolean confuseUsed = false;
+    private static boolean confuseSFXUsed = false;
+    private static boolean debuffSFXUsed = false;
+    private static boolean waifuAppar = false;
+    private static float sneckoTimer = 8.0f;
+    private static float sneckoAfterImageTimer = 0.0f;
 
+    private static Color halfWhite = Color.WHITE.cpy();
+    private static float sneckoWaifuX = 0.0f;
+    private static float sneckoWaifuY = 0.0f;
 
 
 //    portrait img
@@ -116,6 +127,12 @@ public class CharacterSelectScreenPatches
     public static AnimationStateData portraitStateData;
     public static SkeletonData portraitData;
 
+    public static TextureAtlas sneckoAtlas = null ;
+    public static Skeleton sneckoSkeleton;
+    public static AnimationState sneckoState ;
+    public static AnimationStateData sneckoStateData;
+    public static SkeletonData sneckoData;
+
     private static Map<Integer, String> characterOptionNames;
     private static Map<Integer, String> portraitAtlasMaps;
 
@@ -133,7 +150,7 @@ public class CharacterSelectScreenPatches
         portraitAtlasMaps.put( 0 ,reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
         portraitAtlasMaps.put( 1 ,reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
         portraitAtlasMaps.put( 2 ,reskinContent.assetPath("img/HexaghostMod/animation/Hexaghost_portrait"));
-        portraitAtlasMaps.put( 3 ,reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
+        portraitAtlasMaps.put( 3 ,reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait"));
 
     }
 
@@ -162,6 +179,8 @@ public class CharacterSelectScreenPatches
             hexaghostMask = new Hitbox(250.0f * Settings.scale, 350.0f * Settings.scale);
             hexaghostMask.move(1350.0F * Settings.scale ,  780.0F * Settings.scale);
 
+
+
             if(reskinContent.portraitAnimationType != 0 && reskinCount != 0){
                 loadPortraitAnimation(0);
                 System.out.println("立绘载入1");
@@ -189,7 +208,7 @@ public class CharacterSelectScreenPatches
         portraitState.setTimeScale(1.0f);
 
 
-        if(characterCount !=2){
+        if(characterCount <= 1){
             portraitState.setAnimation(1, "fade_in", false);
             portraitState.addAnimation(0, "idle", true,0.0f);
             InitializeStaticPortraitVar();
@@ -218,7 +237,33 @@ public class CharacterSelectScreenPatches
                 hexaghostChangeState(ACTIVATE_STATE);
             }}
 
-        }else {
+
+            if(characterCount == 3){
+                sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.atlas")));
+                SkeletonJson sneckoJson = new SkeletonJson(sneckoAtlas);
+                sneckoJson.setScale(Settings.scale / 1.0F);
+                sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.json")));
+
+
+                sneckoSkeleton = new Skeleton(sneckoData);
+                sneckoSkeleton.setColor(Color.WHITE);
+                sneckoStateData = new AnimationStateData(sneckoData);
+                sneckoState = new AnimationState(sneckoStateData);
+                sneckoStateData.setDefaultMix(0.2F);
+
+                sneckoState.setTimeScale(1.0f);
+
+
+                portraitState.addAnimation(0, "layout", true,0.0f);
+
+//                sneckoState.setAnimation(1, "all_hide", false);
+                sneckoState.addAnimation(0, "layout_effect", true,0.0f);
+                InitializeStaticPortraitVar();
+            }
+
+        }
+
+        else {
             InitializeStaticPortraitVar();
         }
     }
@@ -229,6 +274,13 @@ public class CharacterSelectScreenPatches
         ghostFireTimer = ghostFireTimer_time;
         giantGhostFireTimer =giantGhostFireTimer_time;
         orbActiveCount = 0;
+
+        confuseUsed = false;
+        confuseSFXUsed = false;
+        debuffSFXUsed = false;
+        waifuAppar = false;
+        sneckoTimer = 8.0f;
+        sneckoAfterImageTimer = 0.0f;
     }
 
 
@@ -356,19 +408,75 @@ public class CharacterSelectScreenPatches
                         portraitState.apply(portraitSkeleton);
                         portraitSkeleton.updateWorldTransform();
 
-                        if(i != 2)
+
+
+                        if(i <= 1)
                             portraitSkeleton.setPosition(1092.0f * Settings.scale, Settings.HEIGHT - 1032.0f * Settings.scale);   //                       立绘位置
 
                         if(i == 2)
                             portraitSkeleton.setPosition(1266.0f * Settings.scale, Settings.HEIGHT - 597.0f * Settings.scale);
+
+                        if(i == 3){
+                            sneckoState.update(Gdx.graphics.getDeltaTime());
+                            sneckoState.apply(sneckoSkeleton);
+                            sneckoSkeleton.updateWorldTransform();
+
+                            portraitSkeleton.setPosition(1296.0f * Settings.scale, Settings.HEIGHT - 1276.0f * Settings.scale);
+                            sneckoSkeleton.setPosition(1296.0f * Settings.scale, Settings.HEIGHT - 1276.0f * Settings.scale);
+
+                            sneckoSkeleton.setColor(Color.WHITE);
+                            sneckoSkeleton.setFlip(false,false);
+                        }
+
 
                         portraitSkeleton.setColor(Color.WHITE);
                         portraitSkeleton.setFlip(false,false);
 
                     sb.end();
                     CardCrawlGame.psb.begin();
-                    sr.draw(CardCrawlGame.psb, portraitSkeleton);
-                    CardCrawlGame.psb.end();
+
+
+
+                        if(i == 3 ) {
+                            if(reskinContent.portraitAnimationType == 2 && waifuAppar){
+                                sneckoWaifuX = portraitSkeleton.findBone("Waifu1_root").getX();
+                                sneckoWaifuY = portraitSkeleton.findBone("Waifu1_root").getY();
+
+                                portraitSkeleton.setColor(halfWhite);
+
+
+                                portraitSkeleton.findBone("Waifu1_root").setPosition(
+                                        sneckoWaifuX + 100.0f * Settings.scale * (float)Math.cos( sneckoAfterImageTimer * Math.PI) - 100.0f * Settings.scale,
+                                        sneckoWaifuY + 50.0f * Settings.scale * (float)Math.sin( sneckoAfterImageTimer * Math.PI));
+                                portraitSkeleton.updateWorldTransform();
+                                sr.draw(CardCrawlGame.psb, portraitSkeleton);
+//===========
+                                portraitSkeleton.setColor(Color.WHITE);
+                                portraitSkeleton.findBone("Waifu1_root").setPosition(sneckoWaifuX,sneckoWaifuY);
+                                portraitSkeleton.updateWorldTransform();
+                                sr.draw(CardCrawlGame.psb, portraitSkeleton);
+//=============
+
+                                portraitSkeleton.setColor(halfWhite);
+                                portraitSkeleton.findBone("Waifu1_root").setPosition(
+                                        sneckoWaifuX + 100.0f * Settings.scale * (float)Math.cos( (sneckoAfterImageTimer + 1.0f) * Math.PI) + 100.0f * Settings.scale,
+                                        sneckoWaifuY + 50.0f * Settings.scale * (float)Math.sin( (sneckoAfterImageTimer + 1.0f) * Math.PI));
+                                portraitSkeleton.updateWorldTransform();
+                                sr.draw(CardCrawlGame.psb, portraitSkeleton);
+
+                            }
+                            else {
+                                 sr.draw(CardCrawlGame.psb, portraitSkeleton);
+                              }
+
+                            sr.draw(CardCrawlGame.psb, sneckoSkeleton);
+                        }else {
+
+                          sr.draw(CardCrawlGame.psb, portraitSkeleton);
+                        }
+
+
+                        CardCrawlGame.psb.end();
                     sb.begin();
 
 
@@ -604,6 +712,63 @@ public class CharacterSelectScreenPatches
                                     reskinContent.saveSettings();
                                 }
                             }
+                        }
+                    }
+
+
+
+//   异蛇相关
+                    if(i == 3 && reskinCount == 1 && reskinContent.portraitAnimationType != 0) {
+                        sneckoTimer -= Gdx.graphics.getDeltaTime();
+                        sneckoAfterImageTimer += Gdx.graphics.getDeltaTime();
+
+                        if(!confuseUsed && sneckoTimer < 7.0f){
+
+                            CardCrawlGame.sound.play("MONSTER_SNECKO_GLARE");
+                            char_effectsQueue.add(new PortraitIntimidateEffect(
+                                    portraitSkeleton.getX()+portraitSkeleton.findBone("Snecko_eyeBall_R").getWorldX(),
+                                    portraitSkeleton.getY()+portraitSkeleton.findBone("Snecko_eyeBall_R").getWorldY()
+                            ));
+                            char_effectsQueue.add(new PortraitIntimidateEffect(
+                                    portraitSkeleton.getX()+portraitSkeleton.findBone("Snecko_eyeBall_L").getWorldX(),
+                                    portraitSkeleton.getY()+portraitSkeleton.findBone("Snecko_eyeBall_L").getWorldY()
+                            ));
+
+                            confuseUsed = true;
+                        }
+
+                        if(!confuseSFXUsed && sneckoTimer < 5.5f){
+                            CardCrawlGame.sound.play("POWER_CONFUSION", 0.05F);
+                            confuseSFXUsed = true;
+                        }
+
+                        if(!debuffSFXUsed && sneckoTimer < 0.5f){
+                                  int roll = MathUtils.random(0, 2);
+                                  if (roll == 0) {
+                                        CardCrawlGame.sound.play("DEBUFF_1");
+                                       } else if (roll == 1) {
+                                         CardCrawlGame.sound.play("DEBUFF_2");
+                                      } else {
+                                        CardCrawlGame.sound.play("DEBUFF_3");
+                                     }
+
+                            CardCrawlGame.sound.play("BLOCK_BREAK");
+                            debuffSFXUsed = true;
+                        }
+
+
+                        if(sneckoTimer < 4.9f )     waifuAppar = true;
+                        if(sneckoTimer < 1.05f )     waifuAppar = false;
+
+                        if(sneckoAfterImageTimer > 2.0f)
+                            sneckoAfterImageTimer = 0.0f;
+                        halfWhite.a = 0.2f + 0.3f * sneckoAfterImageTimer;
+
+                        if(sneckoTimer < 0.0f){
+                            sneckoTimer = 8.0f;
+                            confuseUsed = false;
+                            confuseSFXUsed = false;
+                            debuffSFXUsed = false;
                         }
                     }
 

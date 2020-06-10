@@ -1,0 +1,307 @@
+
+Snecko_portrait.png
+size: 4096,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+output/Snecko_tail
+  rotate: false
+  xy: 807, 1739
+  size: 626, 213
+  orig: 626, 213
+  offset: 0, 0
+  index: -1
+output/Snecko_Leg_L1
+  rotate: false
+  xy: 1780, 1
+  size: 254, 183
+  orig: 254, 183
+  offset: 0, 0
+  index: -1
+output/Snecko_Leg_L2
+  rotate: false
+  xy: 2034, 1616
+  size: 223, 381
+  orig: 223, 381
+  offset: 0, 0
+  index: -1
+output/Snecko_body
+  rotate: false
+  xy: 1059, 1
+  size: 719, 862
+  orig: 719, 862
+  offset: 0, 0
+  index: -1
+output/Snecko_tongue
+  rotate: false
+  xy: 2167, 793
+  size: 86, 281
+  orig: 86, 281
+  offset: 0, 0
+  index: -1
+output/Snecko_head
+  rotate: false
+  xy: 1222, 1261
+  size: 340, 476
+  orig: 340, 476
+  offset: 0, 0
+  index: -1
+output/Snecko_eye_white
+  rotate: false
+  xy: 2035, 186
+  size: 255, 167
+  orig: 255, 167
+  offset: 0, 0
+  index: -1
+output/Snecko_eyeBall
+  rotate: false
+  xy: 374, 1979
+  size: 42, 52
+  orig: 42, 52
+  offset: 0, 0
+  index: -1
+output/Snecko_eyeCenter
+  rotate: false
+  xy: 405, 1804
+  size: 21, 25
+  orig: 21, 25
+  offset: 0, 0
+  index: -1
+output/Snecko_Leg_R1
+  rotate: false
+  xy: 1780, 186
+  size: 253, 182
+  orig: 253, 182
+  offset: 0, 0
+  index: -1
+output/Snecko_Leg_R2
+  rotate: false
+  xy: 2259, 1616
+  size: 222, 380
+  orig: 222, 380
+  offset: 0, 0
+  index: -1
+output/Waifu1_body_under
+  rotate: false
+  xy: 431, 1261
+  size: 374, 505
+  orig: 374, 505
+  offset: 0, 0
+  index: -1
+output/Waifu1_hand_L
+  rotate: false
+  xy: 701, 1768
+  size: 69, 168
+  orig: 69, 168
+  offset: 0, 0
+  index: -1
+output/Waifu1_arm_L
+  rotate: false
+  xy: 1845, 1207
+  size: 187, 532
+  orig: 187, 532
+  offset: 0, 0
+  index: -1
+output/Waifu1_arm_R1
+  rotate: false
+  xy: 1, 1804
+  size: 305, 203
+  orig: 305, 203
+  offset: 0, 0
+  index: -1
+output/Waifu1_Body
+  rotate: false
+  xy: 1564, 1261
+  size: 279, 479
+  orig: 279, 479
+  offset: 0, 0
+  index: -1
+output/Waifu1_hand_R
+  rotate: false
+  xy: 2060, 1079
+  size: 105, 109
+  orig: 105, 109
+  offset: 0, 0
+  index: -1
+output/Waifu1_arm_R2
+  rotate: false
+  xy: 1653, 1742
+  size: 240, 214
+  orig: 240, 214
+  offset: 0, 0
+  index: -1
+output/Waifu1_hair_back
+  rotate: false
+  xy: 1763, 865
+  size: 295, 340
+  orig: 295, 340
+  offset: 0, 0
+  index: -1
+output/Waifu1_neck
+  rotate: false
+  xy: 308, 1919
+  size: 64, 104
+  orig: 64, 104
+  offset: 0, 0
+  index: -1
+output/Waifu1_ear
+  rotate: false
+  xy: 374, 1919
+  size: 42, 58
+  orig: 42, 58
+  offset: 0, 0
+  index: -1
+output/Waifu1_head
+  rotate: false
+  xy: 1435, 1742
+  size: 216, 266
+  orig: 216, 266
+  offset: 0, 0
+  index: -1
+output/Waifu1_hair_front
+  rotate: false
+  xy: 1780, 576
+  size: 227, 200
+  orig: 227, 200
+  offset: 0, 0
+  index: -1
+output/Waifu1_hair_side_L
+  rotate: false
+  xy: 1895, 1741
+  size: 128, 304
+  orig: 128, 304
+  offset: 0, 0
+  index: -1
+output/Waifu1_hair_side_R
+  rotate: false
+  xy: 2060, 793
+  size: 105, 284
+  orig: 105, 284
+  offset: 0, 0
+  index: -1
+output/Waifu1_hair_ahoge
+  rotate: false
+  xy: 2036, 1
+  size: 68, 140
+  orig: 68, 140
+  offset: 0, 0
+  index: -1
+output/Waifu1_face
+  rotate: false
+  xy: 2167, 1076
+  size: 212, 112
+  orig: 212, 112
+  offset: 0, 0
+  index: -1
+output/Waifu1_tongue
+  rotate: false
+  xy: 2106, 1
+  size: 55, 141
+  orig: 55, 141
+  offset: 0, 0
+  index: -1
+output/Waifu2_body_under
+  rotate: false
+  xy: 807, 1261
+  size: 413, 449
+  orig: 413, 449
+  offset: 0, 0
+  index: -1
+output/Waifu2_hairBack
+  rotate: false
+  xy: 1780, 370
+  size: 224, 204
+  orig: 224, 204
+  offset: 0, 0
+  index: -1
+output/Waifu2_hairSide_L
+  rotate: false
+  xy: 2009, 370
+  size: 202, 223
+  orig: 202, 223
+  offset: 0, 0
+  index: -1
+output/Waifu2_neck
+  rotate: false
+  xy: 2210, 595
+  size: 152, 99
+  orig: 152, 99
+  offset: 0, 0
+  index: -1
+output/Waifu2_head
+  rotate: false
+  xy: 431, 1768
+  size: 268, 278
+  orig: 268, 278
+  offset: 0, 0
+  index: -1
+output/Waifu2_hairFront
+  rotate: false
+  xy: 2009, 595
+  size: 199, 196
+  orig: 199, 196
+  offset: 0, 0
+  index: -1
+output/Waifu2_hairSide_R
+  rotate: false
+  xy: 1059, 865
+  size: 328, 380
+  orig: 328, 380
+  offset: 0, 0
+  index: -1
+output/Waifu2_hand_L
+  rotate: false
+  xy: 308, 1804
+  size: 95, 113
+  orig: 95, 113
+  offset: 0, 0
+  index: -1
+output/Waifu2_hand_R
+  rotate: false
+  xy: 2163, 1
+  size: 64, 100
+  orig: 64, 100
+  offset: 0, 0
+  index: -1
+output/Waifu2_arm_L
+  rotate: false
+  xy: 1389, 865
+  size: 372, 335
+  orig: 372, 335
+  offset: 0, 0
+  index: -1
+output/Waifu2_body
+  rotate: false
+  xy: 1, 1261
+  size: 428, 541
+  orig: 428, 541
+  offset: 0, 0
+  index: -1
+output/Waifu2_arm_R
+  rotate: false
+  xy: 2034, 1207
+  size: 243, 407
+  orig: 243, 407
+  offset: 0, 0
+  index: -1
+output/Waifu2_face
+  rotate: false
+  xy: 1209, 1954
+  size: 75, 88
+  orig: 75, 88
+  offset: 0, 0
+  index: -1
+output/BIG_tail
+  rotate: false
+  xy: 1, 1
+  size: 1056, 1258
+  orig: 1056, 1258
+  offset: 0, 0
+  index: -1
+output/effect_white
+  rotate: false
+  xy: 701, 1954
+  size: 506, 62
+  orig: 506, 62
+  offset: 0, 0
+  index: -1
