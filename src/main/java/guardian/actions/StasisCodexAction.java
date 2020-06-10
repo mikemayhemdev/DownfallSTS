@@ -5,6 +5,9 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import guardian.GuardianMod;
+import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 public class StasisCodexAction extends AbstractGameAction {
@@ -26,7 +29,11 @@ public class StasisCodexAction extends AbstractGameAction {
                     AbstractCard codexCard = AbstractDungeon.cardRewardScreen.codexCard.makeStatEquivalentCopy();
                     codexCard.current_x = -1000.0F * Settings.scale;
 
-                    AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(codexCard, false)));
+                    if (GuardianMod.canSpawnStasisOrb()) {
+                        AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(codexCard, false)));
+                    } else {
+                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                    }
 
                     AbstractDungeon.cardRewardScreen.codexCard = null;
                 }

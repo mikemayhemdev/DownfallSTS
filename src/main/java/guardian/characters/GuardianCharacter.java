@@ -66,7 +66,7 @@ public class GuardianCharacter extends CustomPlayer {
     private String currentJson = jsonURL;
 	private String currentJson2 = jsonURL2;
 
-    private boolean inDefensive;
+    public boolean inDefensive;
     private boolean inShattered;
 
     public GuardianCharacter(String name, PlayerClass setClass) {

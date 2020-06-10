@@ -6,10 +6,12 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import guardian.GuardianMod;
+import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map;
 
 
@@ -26,11 +28,10 @@ public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
             this.isDone = true;
         }
 
-        ArrayList<String> tmp = new ArrayList();
-        Iterator var3 = CardLibrary.cards.entrySet().iterator();
+        ArrayList<String> tmp = new ArrayList<>();
 
-        while (var3.hasNext()) {
-            Map.Entry<String, AbstractCard> c = (Map.Entry) var3.next();
+        for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
+            Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
             if (c.getValue().cost == 1 && c.getValue().color == AbstractDungeon.player.getCardColor()) {
                 tmp.add(c.getKey());
             }
@@ -38,8 +39,12 @@ public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
 
         for (int i = 0; i < this.numCards; i++) {
             AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
-            AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(cStudy.makeStatEquivalentCopy(), false)));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+            if (GuardianMod.canSpawnStasisOrb()) {
+                AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(cStudy.makeStatEquivalentCopy(), false)));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+            } else {
+                AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+            }
 
         }
 

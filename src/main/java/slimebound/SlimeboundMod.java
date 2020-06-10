@@ -657,8 +657,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             }
         }
         boolean soundPlayed = false;
-        for (int i = 0; i < slimes.size(); i++) {
-            SpawnedSlime s = (SpawnedSlime) slimes.get(i);
+        for (AbstractOrb slime : slimes) {
+            SpawnedSlime s = (SpawnedSlime) slime;
             s.noEvokeBonus = true;
             if (soundPlayed) {
                 s.noEvokeSound = true;

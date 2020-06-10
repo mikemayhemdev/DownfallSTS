@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.GuardianMod;
+import guardian.characters.GuardianCharacter;
 import guardian.orbs.StasisOrb;
 
 
@@ -39,6 +41,8 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
             }
 
             AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(card, this.hack)));
+        } else {
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
         }
 
         this.isDone = true;

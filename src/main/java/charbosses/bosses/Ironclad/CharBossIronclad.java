@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
+import downfall.monsters.NeowBoss;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossIronclad extends AbstractCharBoss {
@@ -38,6 +39,15 @@ public class CharBossIronclad extends AbstractCharBoss {
             case 1: archetype = new ArchetypeAct1PerfectedStrike(); break;
             case 2: archetype = new ArchetypeAct2Strength(); break;
             case 3: archetype = new ArchetypeAct3Block(); break;
+            case 4: {
+                switch (NeowBoss.Rezzes) {
+                    case 1: archetype = new ArchetypeAct1PerfectedStrike(); break;
+                    case 2: archetype = new ArchetypeAct2Strength(); break;
+                    case 3: archetype = new ArchetypeAct3Block(); break;
+                    default: archetype = new ArchetypeAct1PerfectedStrike(); break;
+                }
+                break;
+            }
             default: archetype = new ArchetypeAct1PerfectedStrike(); break;
         }
 
