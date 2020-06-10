@@ -34,7 +34,7 @@
     "NAME": "变化大转盘",
     "DESCRIPTIONS": [
       "你见到一位穿着帅气、满面笑容的地精。 NL “是时候转动转盘了！ ~你准备好了吗？~ 你当然准备好了！”",
-      "“你赢得了一些 #y金币 ！ NL 噢耶！！！”",
+      "“你赢得了一些 #y灵魂 ！ NL 噢耶！！！”",
       "“啊，一件 #g礼物 ！ NL 请收下吧！”",
       "“哦哦，一次免费的 #g回复 ！”",
       "“看起来你赢得了一个 #p诅咒 ！ NL 这就比较糟糕啦。 NL 好吧！那么祝你下次好运啦！”",
@@ -225,51 +225,51 @@
     ]
   },
   "downfall:Serpent": {
-    "NAME": "The Ssssserpent",
+    "NAME": "蛇～",
     "DESCRIPTIONS": [
-      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous serpent creature appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~hello!~ ~what~ ~have~ ~we~ ~got~ ~here?~ To you, my overlord, I ask a simple question. NL The most fulfilling of lives is that in which you can #r~punch~ #r~anything!~ NL Do you agree?\"",
-      "~\"Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....\"~",
-      "The serpent stares at you with a look of extreme disappointment.",
-      " NL NL The serpent rears its head and cries an awful scream. As its body goes limp and falls into the pit, the life force of the creature becomes readily available for harvesting. NL NL It is awe-inspiring, but you can't help but wonder if the serpent was speaking metaphorically. Perhaps it intended to aid and encourage you to do violence on others, but not itself..."
+      "你走进一间房间，看见地上有一个大洞。当你靠近洞时，一条巨大的蛇形生物从里面钻了出来。 NL NL “~嚯嚯嚯！你好，你好啊！这是谁呀？~ 哎呀呀，我的领主呀，我就问一个简单的问题。 NL 最幸福的生活当然就是 #y~什么东西都能打得倒~ 的霸王生活了！　 NL 你同意吗？”",
+      "~“嘶……嘶～嘶……”~",
+      "蛇非常失望地看着你。",
+      " NL NL 蛇抬起头，发出一阵瘆人的尖啸。这生物的身体瘫软下来，坠入大洞之中，而它的生命力已经可以被吸收了。 NL NL 这情景令人惊叹，但你止不住去想蛇是否话里有话。或许它想要支援并鼓励你去对别人施行暴力，而不是对它自己..."
     ],
     "OPTIONS": [
       "[同意] [一拳过去] #g获得 #g",
-      " #g灵魂。 #r被诅咒-疑虑。",
-      "[不同意]",
+      " #g灵魂 。 #r被诅咒 #r- #r疑虑。",
+      "[反对]",
       "[离开]"
     ]
   },
   "downfall:WingStatue": {
-    "NAME": "Wing Statue",
+    "NAME": "翅膀雕像",
     "DESCRIPTIONS": [
-      "Among the stone and boulders, you notice an intricate large blue statue resembling a wing. NL You notice #yglittering #ycoins spilling from its cracks, but this has no value to you. The statue itself, however...",
-      "Knowing that you may encounter cultists of the Awakened One, you take the broken statue with you. It may prove useful to turn the cult's members to your cause.",
-      "With all your might, you hack away at the statue. NL It soon @crumbles,@ splintering into a sharp and deadly fragment. You grab the shard and continue onwards.",
-      "You walk past and continue onward.",
-      "CA...Caw?! Gift for BIRD GOD?",
-      "CA-CAAAW!!",
-      "An exchange? A fair offer...",
-      "The cult will be pleased."
+      "在形状不同的巨石之间，你看见一尊做工精细的翅膀形状的蓝色雕像。 NL 你注意到雕像的裂缝中有 #y闪亮 的 #y金币 掉出来，这对你毫无价值。然而，这座雕像本身...",
+      "你知道之后会遇到信奉觉醒者的邪教徒，于是带走了这座残破的雕像。它应该能让那些教徒为你服务。",
+      "你使出浑身的力气开始砸雕像。 NL 很快它就 @彻底裂开@ ，散落成一地尖锐致命的碎片。你收集起碎片重新上路。",
+      "你径直走开，继续旅程。",
+      "咔...咔？！ 给鸟神的贡品？",
+      "咔-咔！！",
+      "交换？公平公道...",
+      "教团会满意的"
     ],
     "OPTIONS": [
       "[摧毁] #r失去 #r",
-      " #r生命。 #g获得 #g尖锐碎片。",
-      "[收集] #g获得 #g破碎翅膀雕像。",
+      " #r生命。 #g获得 #g锐化碎片。",
+      "[收集] #g获得 #破碎的翅膀雕像。",
       "[离开]"
     ]
   },
   "downfall:GoldenIdol": {
-    "NAME": "Golden Idol",
+    "NAME": "金神像",
     "DESCRIPTIONS": [
-      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL Wandering adventurers are certain to be attracted to this object. It may be worthwhile to set up a trap.",
-      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL The body of an adventurer lays a short distance down the hall, clearly crushed by a massive object. Their soul still lingers in the area.",
-      "Using the Idol's weight as a trigger, you rig up a simple trap to cause a nearby giant boulder to collapse into the room should anyone try to claim the #yshining artifact. NL Satisfied with the construction of your trap, you decide to move on.",
-      "You channel the adventurer's spirit into your body, absorbing its energy into your own.",
-      "You decide to leave the pedestal intact. Setting a trap is beneath you.",
-      "You decide to leave the soul alone and continue on your way."
+      "在一个不引人注意的小高台上，你发现了一个 #y闪闪发光 的金神像 安然放置在上面，看起来非常值钱。 NL NL  途经的冒险者肯定会对这个东西有兴趣。应该值得你设一个陷阱。",
+      "在一个不引人注意的小高台上，你发现了一个 #y闪闪发光 的金神像 安然放置在上面，看起来非常值钱。 NL NL 长廊下不远处横着一具冒险者的尸体，明显是被什么巨物撞击过。他的灵魂还在附近游荡。",
+      "你用雕像的重量作为触发器设置了一个简单的机关，只要有人想要拿走这个 #y闪闪发光 的工艺品，旁边的一块巨大圆石就会冲入房间里 NL 你对陷阱的构造很满意，决定继续前进。",
+      "你引导冒险者的灵魂进入自己体内，将他的能量据为己有。",
+      "你决定不去碰这个底座。设陷阱对你来说有失身份。",
+      "你决定把这个灵魂留在哪里，继续你的路程。"
     ],
     "OPTIONS": [
-      "[设置陷阱] #r失去一张打击。",
+      "[设置陷阱] #r失去 #r一张 #r打击。",
       "[收获] #g获得 #y",
       " #y灵魂。",
       "[离开]",
@@ -277,49 +277,49 @@
     ]
   },
   "downfall:Cleric": {
-    "NAME": "The Cleric",
+    "NAME": "牧师",
     "DESCRIPTIONS": [
-      "A strange blue humanoid with a golden helm(?) approaches you with a huge smile. NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
-      "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You absorb its #ysoul and continue on your way.",
-      "\"Cleric help! Cleric help!\" the creature says as you approach menacingly. NL A cold blue flame envelops your body and dissipates. NL Immediately after, this \"Cleric\" flees."
+      "一个戴着金头盔（？）的奇怪蓝色人形生物脸上带着大大的微笑走到了你面前。NL 一认出你的样子，这个生物的灿烂笑容立刻变为纯粹的恐惧。 NL ~“怪~怪物！！”~ 这个人形生物大喊着，转身想要逃跑。",
+      "这个生物被一拳打扁了，倒在地上成了一摊破碎的肉团。你吸收了它的 #y灵魂 并继续你的路程。",
+      "“牧师帮你！牧师帮你！” 这个生物在你逼近时说道。 NL 一道寒冷的蓝色火焰笼罩了你然后消散了。 NL 下一刻，这 “牧师” 逃跑了。"
     ],
     "OPTIONS": [
       "[一拳过去] #g获得 #y",
-      "[Intimidate] #g移除牌组中的一张牌。",
+      "[恐吓] #g从牌组中移除一张牌。",
       "[离开]",
-      "将牌组中的一张牌移除。",
+      "选择一张牌移除。",
       " #y灵魂。"
     ]
   },
   "downfall:Ghosts": {
-    "NAME": "Council of Ghosts",
+    "NAME": "幽灵议会",
     "DESCRIPTIONS": [
-      "As you continue your descent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"Another~ ~puppet~ ~of~ #r~the~ #r~Heart~ ~I~ ~think.\"~ NL #r@\"AGREED!@ #r@IT@ #r@ALWAYS@ #r@SENDS@ #r@THE@ #r@WEAKEST@ #r@PAWNS!\"@ NL NL You notice an over-sized grin as the third addresses you. NL \"Ignore the others... Would you like a taste of our #y~power?\"~ ",
-      "\"An @offering!@ How ~tempting...\"~ NL NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. Within your body, you feel the #b~souls~ collected from the dead forced out in a violent spiral into the spirit's gaping maw. It takes all of your strength to maintain your ground and not be pulled in yourself. NL NL Just before your stamina gives out, the ghostly vortex stops, and the spirits fade into the ether. NL NL You continue on, feeling slightly #bhollow."
+      "在你向下深入时，突然四周的墙壁和地面开始冒出 #p~浓重的黑烟~ ，逐渐聚成了三个戴着面具的形状，它们交头接耳地说起话来。 ~“看来这又是一个~ #y~心脏~ ~的玩偶。”~ NL #r@“我看也是！@ #r@它总是派来最弱的棋子！”@ NL NL 你注意到第三个存在有着巨大的嘴，它露出了一个大到夸张的微笑对你说： NL “别管那两个家伙……总之，你想不想尝试一下我们的 #y~力量~ 呢？”",
+      "“一份 @供品!@ 多么 ~诱人...”~ NL NL 那个幽灵鬼影的话音刚落，你就看见它本已硕大的嘴张开得越来越大。你感到体内收集的死者 #b~灵魂~ 被一个强力的漩涡吸入鬼影的大嘴里。 你用尽全力才稳定在地上不被吸走。 NL NL 在你脱力的前一刻，幽灵的涡旋停止了，鬼影消散在虚空中。 你重新上路，但总觉得自己的内心变得有些 #b空洞 。"
     ],
     "OPTIONS": [
-      "[Offer] #r失去 #r",
-      " 灵魂。 #g获得灵体。",
-      "[锁定] 需要 ",
+      "[供奉] #r失去 #r",
+      " 灵魂 #g获得 灵体。",
+      "[锁定] 需要",
       " 灵魂。"
     ]
   },
   "downfall:CursedTome": {
-    "NAME": "Cursed Tome",
+    "NAME": "诅咒书本",
     "DESCRIPTIONS": [
-      "In an abandoned temple, you find a giant book, open, riddled with #p@cryptic@ #p@writings.@ NL NL You need not interpret the elaborate script, for you know the power that lies within - and the #rcost it incurs upon its owner.",
-      "Understanding the cost, you decide to take the tome with you. As you reach for the pedestal, the trance of the tome speaks to you in a #rthousand #rvoices, clawing at your very soul! NL NL With the book secured, and your mind even more corrupted than it was before, you exit the temple feeling #b~drained...~"
+      "在一所被遗弃的神庙里，你找到一本翻开着的巨大书本，里面满是 #p@神秘的文字@ 。 NL NL 你不需要解读这些复杂的文本，因为你早已知道其中蕴含的力量 - 以及它会给拥有者招致的 #r代价 。",
+      "明知其中的代价，你还是决定把书带上。刚触碰到高台，书本便向你传来 #r无数话音 ，撕扯着你的灵魂！ NL NL 书本被带走了，你的意志变得更为腐坏，你转身离开神庙，觉得自己 #b~精疲力尽……~"
     ]
   },
   "downfall:ForgottenAltar": {
-    "NAME": "Forgotten Altar",
+    "NAME": "被遗忘的祭坛",
     "DESCRIPTIONS": [
-      "You stand on the altar and channel the spiritual energy from your inner being. NL As the #bsouls spill out in an offering to the goddess, the arms of the statue reach out and emanate a soothing #p~cursed~ #p~magic.~ NL Everything goes dark. NL You wake up a short time later, your wounds and injuries from battle suddenly healed.",
-      "After taking a brief moment to admire the evil that resides within the statue, you depart, continuing through the City."
+      "你站在祭坛前，引导着内在的精神能量。 NL 随着献给女神的 #b灵魂 涌出，雕像的双手伸到你的面前，散发出一股 #p~诅咒的魔法~ 抚慰着你。 NL 一切坠入黑暗。 NL 你在一段时间后苏醒了过来，战斗中受的大小伤口都愈合了。",
+      "简要地感谢了雕像中寄宿的恶灵后，你离开了，继续在城市中穿行。"
     ],
     "OPTIONS": [
-      "[Offer Souls] #r失去 #r",
-      " #r灵魂。 #g回复 #g",
+      "[献上灵魂] #r失去 #r",
+      " #r灵魂。 #g治疗 #g",
       " #g生命。",
       "[锁定] 需要 ",
       " 灵魂。",
@@ -341,7 +341,7 @@
   "downfall:Nloth": {
     "NAME": "恩洛斯",
     "DESCRIPTIONS": [
-      "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
+      "你觉得这个捡垃圾的生物并不属于尖塔，于是用一记迅猛的拳击招呼在它的胸口上。 NL NL 这生物因痛苦而蜷缩，但它的触手却反射般地 @鞭打@ 向你，留下了 #r剧痛 的蜇伤！ NL NL 当这生物了无生机的躯体砸向地面时，你听到了各种饰物的咔嗒作响。你就像它翻垃圾堆一样翻着它的尸体，从中发现了一个强力的魔法物品。"
     ],
     "OPTIONS": [
       "[一拳过去] #g获得随机遗物。 #r被诅咒 #r- 疼痛。"
@@ -361,9 +361,9 @@
     ]
   },
   "downfall:Vagrant": {
-    "NAME": "Pleading Vagrant",
+    "NAME": "流浪汉的恳求",
     "DESCRIPTIONS": [
-      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
+      "你杀死了这个人并收割了他的灵魂。身后的人群中传来一阵 ~骚动~ 。 NL “他杀了勃艮第！” 一个人喊道。更多与那人一样的瘾君子向你逼近。NL NL 你逃脱了，身上带着一些 #r抓痕 和 #r咬痕 。"
     ],
     "OPTIONS": [
       "[一拳过去] #g获得85灵魂。 #r失去 #r",
@@ -373,14 +373,14 @@
   "downfall:Beggar": {
     "NAME": "老乞丐",
     "DESCRIPTIONS": [
-      "The beggar takes off its cloak, revealing a blue humanoid form with a golden helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
-      "The old beggar looks around, seemingly puzzled. He ignores you at first as he searches the area, then glances towards you. NL \"Have you seen a young, blue-skinned man near here? Wears an odd, golden helm? He usually comes by the City, spending his tithe on food for us...\" NL The beggar must be referring to the one called #bCleric, who you dispatched a short while ago.",
-      "@\"Do@ @not@ @fear,@ @old@ @man.@ @You@ @shall@ @see@ @your@ @friend@ @sooner@ @than@ @you@ @think.\"@ NL NL The beggar struggles to provide any semblance of defense, and you strike him down easily. NL Leaving the alley behind, you stride ahead, excessively #yproud of the work you have done this day.",
-      "This man has suffered enough as a result of your earlier actions. You decide to spare him his life, and move on.",
-      "The beggar takes off its cloak to reveal that he is #bCleric! NL @\"You@ @are@ @a@ @horrible@ @soul.@ @Cleric@ @bought@ @protection!\"@ he screams. NL NL Two massive figures emerge from the alley, each wearing full plate. Before you have a chance to react, they draw their blades and charge!",
-      "Having slain this #bCleric's bodyguards, you turn to him and back him into a corner of the alley. He is terrified and trembling.",
-      "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You happily absorb its #ysoul and continue onward. NL NL As you leave, you notice the other beggars peering from behind buildings and alleys. You bask in their fear - let this be a lesson to anyone who dare defy a Spire overlord.",
-      "\"Cleric help! Cleric help!\" the creature says once again, barely able to speak as he cowers in fear. NL A cold blue flame envelops your body and dissipates. NL NL Deciding his powers may of use later, and that you can easily dispatch of any bodyguards he tries to employ in the future, you let this \"Cleric\" live once more."
+      "老乞丐脱下了它的外套，露出一个戴着金头盔（？）的奇怪蓝色人形生物。 NL 一认出你的样子，这个生物的灿烂笑容立刻变为纯粹的恐惧。 NL ~“怪~怪物！！”~ 这个人形生物大喊着，转身想要逃跑。",
+      "老乞丐四处张望，神情疑惑。他用目光搜索了这片地区，之后才把注意力转移到你身上。 NL “请问你在附近见过一个蓝皮肤的年轻人吗？他戴着一个奇怪的金头盔。平时他从城市过来，给我们分发食物...” NL 老乞丐说的应该是那个叫 #b牧师 的，你不久前刚刚办掉他。",
+      "@“不要害怕，老伙计。你很快就会见到你的朋友了。”@ NL NL 老乞丐努力做出防御的样子，但你轻而易举地击倒了他。 NL 你大步走出小巷，今天的成果使你无比 #y自豪 。",
+      "你之前干的好事已经够让这个人喝一壶了。你决定留他一命，继续上路。",
+      "老乞丐脱下了它的外套，原来他就是 #b牧师 ！ NL @“你这个坏透了的家伙，牧师带援兵来了！”@ 他大喊道。 NL NL 两个庞大的人影从小巷中钻出，都穿着全副武装的板甲。 你还没来得及反应，他们就拔剑冲了过来！",
+      "干掉 #b牧师 的保镖后，你转向他并把他逼到巷子的角落里。他神色惊恐，战栗不已。",
+      "这个生物被一拳打扁了，倒在地上成了一摊破碎的肉团。你愉快地吸收了它的 #y灵魂 并继续你的路程。 NL NL 离开时，你注意到建筑后与小巷中有许多其他乞丐在窥视。你享受着他们的恐惧 - 这给那些胆敢违抗尖塔领主的人好好上了一课。",
+      "“牧师帮你！牧师帮你！” 这生物又一次说道，声音几乎因恐惧而不成型。 NL 一道寒冷的蓝色火焰笼罩了你然后消散了。 NL NL 他的能力还可以再被利用，而且打倒他以后再雇的保镖也不是难事，你决定让这个 “牧师” 多活一次。"
     ],
     "OPTIONS": [
       " #r被诅咒 #r- #r傲慢。",
@@ -389,55 +389,55 @@
     ]
   },
   "downfall:Mausoleum": {
-    "NAME": "The Mausoleum",
+    "NAME": "陵墓",
     "DESCRIPTIONS": [
-      "Venturing through a series of tombs, you are faced with a large sarcophagus ~studded~ ~with~ ~gems~ in the center of a circular room. NL You cannot make out the writing on the coffin, however, you do notice #p~black~ #p~fog~ seeping out from the sides. NL You're familiar with this fog - a clear sign of #y~spirits.~",
-      "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@cough...@"
+      "你在一系列坟墓间穿行，前方出现了一个圆形房间，中间是一口 ~镶嵌着许多宝石的~ 巨大石棺。 NL 你辨认不出石棺上的字迹，但你能注意到有 #p~黑色的雾气~ 从石棺的两侧渗透出来。 NL 你很熟悉这种雾气 - 有 #y~灵魂~ 存在的明确标志。",
+      "你将这些e #p~幽灵般的雾气~ 吸入体内，聚集起其中的灵魂。然而，你离开时，却不住地 #r@咳嗽@ 起来..."
     ],
     "OPTIONS": [
-      "[Feast] #g获得200灵魂。 #r被诅咒- #rWrithe."
+      "[吞噬] #g获得 #g200 #g灵魂。 #r被诅咒 #r- #r苦恼 。"
     ]
   },
   "downfall:Nest": {
     "NAME": "巢穴",
     "DESCRIPTIONS": [
-      "A long line of #b~hooded~ #b~figures~ can be seen entering an #punassuming #pcathedral. NL The moment you enter the cathedral, the figures turn to you! NL NL Your ears are near-instantly filled with a cacophony of gasps, cheers, and caws. One of the cultists approaches you with an offering.",
-      "Eyeing a dangerous-looking weapon lying on an altar, you cut through the line of cultists and simply take your prize. You are quickly surrounded by #rCultists! NL NL #r@\"MURDER!!@ #r@MURDER@ #r@MURDER!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL The cultists quickly draw their own daggers, #rslicing and #rslashing as you push through them to exit the building.",
-      "Accepting the cultist's offering, you take the strange elixir from its hands. NL NL The cultists @chant@ and @holler@ for you! NL NL #b~\"CAAW~ #b~CAW~ #b~CAAAAAAWW!!\"~ NL NL You chant, too. Why not? These cultists are an odd bunch, but they serve one of your fellow overlords well.",
-      "#r@\"BIRDGOD!!@ #r@RETURNED!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL NL Wading through the cheering crowd of cultists, you soon come face-to-face with the leader. A well-dressed cultist hands you an #yOrnate #yDagger.",
-      "You take the dagger, unsure of exactly what is about to transpire. The cultist leader reaches into his robe and offers you a #bblue #boily #bmixture.",
-      "The cultists surrounding the leader provide him with replacements, and soon with his own dagger and potion in hand, he gestures for you to follow in his actions.",
-      "Mimicking the cultist leader's ritual process, you uncork the potion and gently pour a small amount of it over the blade. The steel seems to glow an #b~eerie~ #b~hue~ in the cathedral's light. NL NL Without a single word or gesture from the cult's leader, two cultists step forward - one to you, and one to him. NL NL It is now painfully clear what they want you to do.",
-      "#rYou #rplunge #rthe #rdagger #rinto #rthe #rcultist's #rheart! NL NL #b~\"CAW~ #b~CAAAAW~ #b~CAAAAAWWW!\"~ NL NL The ritual is completed, and the surviving cultists could not appear happier. They wave their sticks in celebration and continue to call out a cheering caw as you exit the cathedral."
+      "你看见一长串 #b~戴着兜帽的人们~ 正鱼贯走进一座 #p看起来没什么特别 的大教堂。 NL 你刚走进教堂，所有的人都看向了你！ NL NL 你耳中几乎立刻充满了嘈杂的呼气声，欢呼声，以及鸦叫声。 其中一个血教徒带着献礼走上前来。",
+      "你注视着祭坛上那把危险的武器，穿过邪教徒的队伍径直拿走了它。 #r邪教徒 们迅速包围了你！ NL NL #r@“杀！@ #r@杀～@ #r@杀杀杀！！”@ NL #b~“咔～~ #b~咔～~ #b~咔—咔！”~ NL NL 邪教徒们拔出了各自的匕首，你从他们的 #r切割 #r挥砍 间闯出了教堂。",
+      "你从邪教徒的手中接过作为献礼的陌生饮料。 NL NL 邪教徒们开始围着你 @大喊@ @大叫@ ！ NL NL #b~“咔～~ #b~咔～~ #b~咔——咔！”~ NL NL 你也跟着喊了起来。为什么不呢？ 这些邪教徒是群怪人，但他们为你的同僚服务得很好。",
+      "#r@“神鸟！！重临！！”@ NL #b~“咔～~ #b~咔～~ #b~咔——咔！”~ NL NL 最终你到达了队伍的最前，与教徒的领袖面对面。 一名身着华服的邪教徒交给你一把 #y华丽的匕首 。",
+      "你接过匕首，不知道应该回应什么。教徒的领袖将手探入袍中，又交给你一瓶 #b蓝色 #b油状 #b混合物 。",
+      "领袖身边的邪教徒把替代品交给了他，过了一会，他拿着自己的匕首与药水，用手势示意你跟随他的动作。",
+      "模仿着教徒领袖的仪式流程，你拔开药瓶的木塞，轻轻地倒出一点涂在刀刃上。在教堂的灯光下，刀上的钢铁似乎发出了 #b~诡异的色彩~ 。NL NL 没有来自教徒领袖的一句指令或手势，两名邪教徒走上前来 - 一位对着你，一位对着他。 NL NL 他们要你做的事情再清楚不过了。",
+      "#r你用匕首刺穿了邪教徒的心脏！ NL NL #b~“咔～~ #b~咔～~ #b~咔——咔！”~ NL NL 仪式完成了，活下来的邪教徒们表现地无比高兴。他们挥舞手中的树枝庆祝着，在你离开教堂时还在大喊大叫。"
     ],
     "OPTIONS": [
-      "[交还雕像] #r失去 #r破碎翅膀雕像。 #g获得众多奖励。",
-      "[锁定] 需要 破碎翅膀雕像。",
-      "[接受] #g获得邪教徒药水。",
-      "[偷窃] #g获得仪式匕首 #r失去 #r",
+      "[归还雕像] #r失去 #r破碎的翅膀雕像。 #g获得许多回报。",
+      "[锁定] 需要破碎的翅膀雕像。",
+      "[接受] #g获得 #g邪教徒药水。",
+      "[偷窃] #g获得 仪式匕首 。 #r失去 #r",
       " #r生命。",
       "[离开]",
       "[继续]",
-      "[拿走匕首] #g获得仪式匕首。",
-      "[饮血] #g升级仪式匕首。",
-      "[献祭] #r杀死带有仪式匕首+的邪教徒。"
+      "[收下匕首] #g获得 #g仪式匕首。",
+      "[涂油] #g升级 #g仪式匕首。",
+      "[献祭] #r用 仪式匕首+ #r杀死邪教徒。"
     ]
   },
   "downfall:Colosseum": {
-    "NAME": "The Colosseum",
+    "NAME": "竞技场",
     "DESCRIPTIONS": [
-      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"We await these who would assault our City - the ones you seek to destroy! We have an audience awaiting a fresh capture. The people love a #rfight to the #rdeath!\"",
-      "The slavers are no threat to you, and may prove useful if they do manage to slow down or injure your prey. NL NL However, this bloodsport might just be too tempting to pass up...",
-      "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
-      "@\"BRING@ @ME@ @YOUR@ @BEST!\"@ you boom into the crowd, opening a challenge to their champions. NL Two challengers approach, warning you that the rules of the arena prevent them from holding back, despite your position as a lord of the Spire. NL NL You would assume nothing less.",
-      "@\"THE@ @NEXT@ @ONE@ @IS@ @MINE!\"@ you boom into the crowd, who replies with a deafening applause. NL NL It does not take long for the slavers to drag in their latest catch. The unwitting challenger awakens, ~groggy~ from the ambush, but readies themselves. NL NL This should be fun.",
-      "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
+      "你一路向塔底前进，突然发现一群人形生物在一个大会场附近埋伏着。这些奴隶贩子被你的接近吓了一跳，但是迅速地恢复过来并向你解释。 NL NL “我们在埋伏那些袭击城市的人 - 也是你要去毁灭的人！ 我们有一群等着要活捉他们的观众。人们喜欢 #r厮杀至死 的表演！”",
+      "这些奴隶贩子对你没有威胁，如果真的能拖住或伤害你的猎物，还算是对你有帮助。 NL NL 然而，这项血腥运动实在是太有吸引力了，你实在难以拒绝...",
+      "你进入大竞技场，发现观众席上挤满了 #b奴隶贩子 、 #p邪教徒 和城市区的其他居民们。 NL NL ",
+      "@“叫最厉害的出来！”@ 你向人群大喊，发起了对角斗士们的挑战。 NL 两个挑战者出现了，警告你说，即便你是一名尖塔领主，在竞技场的规则下他们也不会手下留情。 NL NL 和你想的一样。",
+      "@“下一个挑战者也归我了！”@ 你向人群大喊，他们回报以震耳欲聋的喝彩。 NL NL 奴隶贩子们花了没多长时间就把新抓到的人带了上来。 毫不知情的挑战者在被伏击后 ~摇摇晃晃~ 地醒来，立即做好了战斗准备。 NL NL 这应该会很有趣。",
+      "尽管在这儿打一场很有吸引力，你还是觉得那会对你的行程造成不必要的干扰。你继续你的旅程，让奴隶贩子们回去接着埋伏。"
     ],
     "OPTIONS": [
-      "[挑战] #r与区域冠军战斗。 #g获得众多奖励。",
-      "[Participate] #r与被俘英雄战斗。 #g获得众多奖励。",
+      "[挑战] #r与竞技场角斗士战斗。 #g获得许多奖赏。",
+      "[参与] #r与被捕获的英雄战斗. #g获得许多奖赏。",
       "[离开]",
-      "[开战！]",
+      "[开打！]",
       "[继续]"
     ]
   },
@@ -459,10 +459,10 @@
   "downfall:MoaiHead": {
     "NAME": "摩艾石像",
     "DESCRIPTIONS": [
-      "You decide to take a slight detour to one of the Beyond's greatest monuments - an enormous stony head, emerging from a large wall segment. NL NL The head's mouth is wide open, and it reveals large intimidating teeth stained red with blood. The surface of the statue is riddled with pictographs that seem to indicate people throwing themselves into the mouth of this head and being devoured.",
-      "You step up into the mouth of the statue, waiting for the statue to activate, knowing you will have to pay its cost in blood. Within a short time, the huge molars slam down from above, crushing you whole. NL @Darkness.@ NL Sometime later from within the dark, you see a sliver of light, and hear what you now realize is the sound of stony teeth slowly rising upwards. NL NL You leave restored, the statue's magic flowing through you.",
-      "You step up into the mouth of the statue, and let flow from your body an immense amount of #bspiritual #benergy. The statue's eyes glow #b~aflame,~ and its huge molars slam down upon you. NL #b~Blue~ #b~light~ #b~is~ #b~everywhere.~ NL NL As the teeth rise, you feel completely reinvigorated, and more powerful than ever before.",
-      "You leave, wondering what could have been."
+      "你决定绕道去看看深处最著名的纪念碑 - 从一段墙壁上凸出来的一个巨大的石制头像。 NL NL 石像的嘴大张着，里面有许多巨大的染着血迹的牙齿。石像表面上写着许多象形文字，似乎是说有许多人会自己跳进嘴里被石像吞噬。",
+      "你踏进石像的嘴里，等待着石像启动，并做好了以血肉为代价的准备。过了不久，巨大的臼齿砸了下来，将你整个碾碎了。 NL @黑暗。@ NL 一段时间后，你在黑暗中见到一线光明，并听见了轰隆作响的声音，你这才反应过来那是石像的牙齿重新缓慢地升了上去。 NL NL 你完好如初地离开了，石像的魔力在你体内流淌。",
+      "你踏进石像的嘴里，从体内放出一股 #b灵魂 #b能量 。石像的眼睛如 #b~燃烧~ 般发着光芒，它巨大的臼齿砸了下来。 NL #b~蓝色的光芒遍布四周。~ NL NL 牙齿升了上去，你恢复了活力，感觉比之前更有力量。",
+      "你离开了，但心里还是有一些好奇。"
     ],
     "OPTIONS": [
       "[献上灵魂] #r失去 #r",
@@ -473,15 +473,15 @@
   "downfall:SensoryStone": {
     "NAME": "感知石",
     "DESCRIPTIONS": [
-      "#g~虚荣.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for bits of gold and scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ygold and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
-      "#y~脆弱。~ NL NL The #rblade enters your chest, and the cheer of the #bcrowd fills your ears... the last thing you will ever feel is a hand striking across your face, and your eyes close. NL NL You awaken in an unfamiliar room, @unable@ @to@ @move.@ You try to speak, but no words come out, and your vision is clouded in a #ggreen #gfog. Is this a dream? Is this the afterlife? You try to remember, but your thoughts are as disjointed as your arms and legs. NL NL You hear a voice in your mind - a single command. #g\"BALANCE #gmust #gbe #gENFORCED.\"",
-      "#p~绝望。~ NL NL #yWatch. #yRemember. #yLive. This is the Watcher's mission. Your assignment is to investigate a Spire of unknown origin.  You enter a hexagonal room and before you can react, the door @collapses@ @behind@ @you!@ NL NL There is no escape. The only path that may lead out is by taking a tablet, clearly infused with magic, which lays upon a pedestal. The moment your skin touches the artifact, your body ~dissolves~ ~into~ ~nothing,~ and your #psoul is pulled into the #pstone. NL NL Your fate will forever be tied to the #ptablet, #rcursed to wander the Spire for eternity.",
-      "#y~超脱。~ NL NL You are the first. You serve the ~Maker.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yguardians of the Maker’s legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
-      "#b~骄傲。~ NL NL You stand at the center of a grand arena. Everything you have worked for culminates in this one singular combat. You take up a #bdefensive #bstance, draining the stamina of your enemy, until an opening presents itself. With your last bit of strength, you #rplunge #ryour #rblade into the chest of your opponent. The audience erupts in @thunderous@ @applause!@ NL NL Not one to stop at just winning, you raise your open hand and strike your foe ~across~ ~the~ ~face,~ delivering a most insulting final blow. NL NL There is no one in your way now. You are the new #b@Champion!@",
-      "#p~贪婪。~ NL NL Few men can resist the #btemptation #bof #bpower. But power comes at a cost, and great power an even greater price. NL NL You sit upon your throne above the Colosseum, watching men #rfight #rto #rthe #rdeath for your amusement for the title of #bChampion. The price for entry - the #g~flame~ #g~of~ #g~their~ #g~eternal~ #g~soul~ in service to you. Each name etched in a tablet, binding them to you in the afterlife. NL NL The crowd cheers as one fighter is struck down with a final blow across the face. You go to your vault, but someone has been here. Traps are sprung, but no body to be found... and the #p@tablet@ @is@ @missing!@",
-      "#g~不幸。~ NL NL You stand, at long last, atop the highest peak of the Spire. You have spent your years working tirelessly to bring this colossal feat of architecture, a monument to the Great One, to life. Every #gcurve rounded to perfection. Every #yedge meticulously placed. NL NL “It is done, my love.” Covering their lifeless hand with yours, you turn on the machine. A soft hum fills the room, and soon you feel your very #b~essence~ being pulled into your creation - swiftly joined by another. You will both live for all eternity in this place, just as you planned. NL NL With a resounding echo... the #pHeart ~thumps~ its first beat.",
-      "#b~愤怒。~ NL NL You are powerless to stop the #yornate #ydagger that enters your chest. In your final moment, you pray to whatever #pdeity rules over this Spire to give you the strength to live, ~no~ ~matter~ ~the~ ~cost.~ NL NL Your #pheart thumps a strong final beat, then is silenced... for a moment. Your eyes glow with #b@blue@ #b@fire@ as you return to life with the strength of ten men, bursting your bonds with ease and roaring into the crowd of #brobed #bfigures surrounding you! NL NL As you feel your body begin to morph into a #bmonstrous #bshape, the figures bow before you.",
-      "#p~傲慢。~ NL NL You spite the #pgod-like #pHeart that controls this place, dictating your fate. It is #ytime to take action. NL NL The Beyond is the least guarded of the Spire's sections, and you are able to slip into its #ytreasury with ease. There are many artifacts of power here, but one in particular speaks to you - a #y~glowing~ #y~pocketwatch.~ NL NL With unyielding confidence, you reach out and snatch the pocketwa... @...awtekcop@ @eht@ @hctans@ @dna@ @tuo@ @hcaer@ @uoy@ @,ecnedifnoc@ @gnidleiynu@ @htiW@ NL NL You spite the #pgod-like #pHeart that controls this... place...?",
+      "#g~虚荣.~ NL NL 生命如此地美妙，壮丽... 对一只 #g史莱姆 也是如此。 NL NL 你早就知道你命中注定要成就伟大的事业。那些庸人安于铜钱布片，而你不是。你如苍鹰猛虎般蓄势待发，只待那独一无二，绝无仅有，~举世无双~ 之物。 NL NL 日复一日... 亦或年复一年... 尖塔内时日难辨。终有一日，你遇见了它。蛟龙得云雨，终非池中物！世人贪爱 #y金银财宝 ，而你则有鸿鹄之志... NL NL @一顶圆礼帽！@ 冲呀！",
+      "#y~脆弱。~ NL NL #r刀刃 插入你的胸膛，#b人群 的呼喊声淹没了你的耳朵... 你的最后最后一丝感受是一只大手打在脸上，随后你闭上了眼睛。 NL NL 你在一个陌生的房间醒来， @动弹不得。@ 你尝试着讲话，但没有蹦出一个音节，你的视像中弥漫着 #g绿色迷雾 。这是梦吗？还是来世？ 你试着回忆，但你的思绪就像你的四肢一样脱离了身体。 NL NL 你听到脑海里传来的声音 - 一句简单的指令。 #g“必须维系平衡。守护塔底。”",
+      "#p~绝望。~ NL NL #y观察。 #y铭记。 #y生存。 这就是观者的使命。你的任务是观察一座来历不明的高塔。你踏入一个六边形房间的一刹那，@你背后的房门关闭了！@ NL NL 无处可逃。唯一可能的出路是拿下高台上放置的一个明显被附魔过的石板。皮肤接触到这造物的那一刻，你的身体 ~消散于虚无~ ， #p灵魂 被拖入 #p石板 。 NL NL 你的命运被永远束缚于 #p石板 之中， #r被诅咒 在尖塔中彷徨直至永恒。",
+      "#y~超脱。~ NL NL 神之长子。侍奉 ~造物主~ 。创制，没有降生者的脆弱。完美。赋予理念，创制更多造物。 #y守护者 是造物主的遗产。 NL NL 每一个都设计无瑕，每一个都赋予独特目的。万物一心。维系城市平衡。 #y故障 #y的造物 从至高的窗口扔出，坠入尖塔至底，篡得城市保护者的位。 NL NL 必须维系平衡。",
+      "#b~骄傲。~ NL NL 你站立在大竞技场的正中。你所作的一切将在这一场战斗中了结。你摆出 #b防御姿态 ，消耗敌人的耐力，等待破绽自行出现。用尽最后的一点力气，你将 #r刀刃刺入 对手的胸膛。观众爆发出 @雷鸣般的掌声！@ NL NL 仅是胜利还不够，你举起手掌，用力 ~打在敌人的脸上~ ，作为最侮辱性的终结一击。 NL NL 现在没有人能阻挡你了。你是新的 #b@第一勇士！。@",
+      "#p~贪婪。~ NL NL 没多少人能拒绝 #b权力的诱惑 。但权力是有代价的，权力越大，代价越大。 NL NL 你坐在竞技场上方的王座中，观看着人们为 #b第一勇士 的头衔 #r奋战至死 的情景作为娱乐。进场的代价 - #g~他们永恒的灵魂之火~ 归属于你。每个名字都雕刻在一块石板上，为你约束着他们的来世。 NL NL 观众因一名斗士被打在脸上的一击终结而欢呼。你进入你的密室，但是有人来过这里。陷阱被触发了，却没有留下尸体... #p@石板不见了！@",
+      "#g~不幸。~ NL NL 终于，你站在尖塔的最顶端。你花费了许多岁月孜孜不倦地劳作，将这座巨大的建筑壮举，伟大存在的雕像，赋予了生机。每条 #g曲线 都臻于完美。每个 #y棱边 都严丝合缝。 NL NL “做好了，亲爱的。” 你握住它们没有生命的手，启动了机器。一阵轻轻的嗡响充满了房间，紧接着你感到浑身的 #b~精华~ 都被抽至你的创作中 - 迅速与另一个合并。正如你计划中的一样，你们将在此地永远地生活下去。 NL NL 伴随着一阵反复的回声... #p心脏 发起了第一次 ~搏动~ 。",
+      "#b~愤怒。~ NL NL 你无力阻止那把 #y华丽的匕首 进入你的胸腔。在弥留之际，你向不知哪位掌管尖塔的 #p神 祈祷生存下去的力量， ~不计代价。~ NL NL 你的 #p心脏 强力地跳动了最后一下，然后静止了... 一小会。你以十倍于常人的力量复活，眼睛发出 #b@蓝色的火焰@，轻易地挣脱了束缚，并向环绕你的那群  #b身着长袍的人 吼叫！ NL NL 随着你的身体渐渐变为 #b怪物 般的 #b样貌 ，那些人向你弯腰行礼。",
+      "#p~傲慢。~ NL NL 你对控制着这个地区，支配着你的命运的那个 #p神一般的心脏 恨之入骨。 #y是时候 做出行动了。 NL NL 深处是尖塔中防守最松的地区，你可以不费吹灰之力地溜进这里的 #y宝库 。这里有许多充满力量的物品，有一个特别地吸引你  - 一块 #y~发光的怀表~ NL NL 怀揣着无比的自信，你伸手抓住了那个怀比... @...比怀个那了住抓手伸你，信自的比无着揣怀@ NL NL 你对控制着这个地区的那个 #p神一般的心脏 恨之...入骨...？",
       "仔细想想，也许记忆最好留在过去。"
       ],
     "OPTIONS": [
@@ -493,8 +493,8 @@
   "downfall:SecretPortal": {
     "NAME": "秘密传送门",
     "DESCRIPTIONS": [
-      "Before you is a welcome sight - in one of the living walls of the Beyond is an enclosed stone entrance filled with a #p~swirling~ #p~magical~ #p~portal.~ NL NL This portal allows for quick access to the Beyond's overlord. However, if you take the stone that powers it, your journey through the Spire would be hastened.",
-      "The portal can always be repaired later. You pry the runed stone that powers the gateway, and quickly contemplate where to head next. The stone will only remain useful for a brief moment."
+      "在你面前有一样令人愉快的东西 - 在深处地区一面活墙壁上，有一道石做的拱门，里面有一个 #p~旋转的魔法传送门~ 。 NL NL 这个传送门可以快速通向深处的领主房间。不过呢，如果你带上驱动它的石头，你在高塔内的旅程应该会被缩短。",
+      "传送门之后什么时候修都可以。你撬下驱动传送门的符文石，迅速地思考下一步要去的地方。石头的功能只能保持很短一段时间。"
     ],
     "OPTIONS": [
       "[拿走] 跳过任意房间。"
@@ -503,11 +503,11 @@
   "downfall:TombRedMask": {
     "NAME": "红面具大人之墓",
     "DESCRIPTIONS": [
-      "A highly ornamented tomb can be seen on the other side of a floating path. NL NL Upon reaching the tomb, you notice a soft wall, likely holding a secret compartment. One good strike should be enough to break it down.",
-      "You don the #rmask. The bandits who agreed to assist you seem to have a connection with this Lord - perhaps they will be inspired by your new adornment.",
-      "An opening appears in the tomb and out slides a small red mask with a note attached. \"Take from others as I have taken from you!\"",
-      "Deciding against disturbing the tomb, you continue on.",
-      "Satisfied with collecting the mask, you continue on."
+      "在一条悬浮道路的尽头，你可以看见一处装饰华丽的古墓，当你到达古墓时，你注意到一堵软墙，似乎包围着什么秘密。 用力一击足以将这面墙破坏。",
+      "你戴上 #r面具 。同意帮助你的那些强盗似乎与这位大人有些联系 - 或许他们会从你的新装扮中受到鼓舞。",
+      "古墓上出现一个开口，一个小小的红面具滑了出来，旁边还有一张纸条：“如同我夺走你的东西一般，去抢夺别人的东西吧！”",
+      "你决定不去打扰墓的主人，继续你的旅途。",
+      "你对收集的面具感到很满意，继续踏上旅途。"
     ],
     "OPTIONS": [
       "[戴上红面具] #g升级强盗约定。",
@@ -521,7 +521,7 @@
   "downfall:WindingHalls": {
     "NAME": "蜿蜒走廊",
     "DESCRIPTIONS": [
-      "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
+      "你沿着弯曲的道路慢慢前进，突然发现自己身处深处著名的变幻走廊之中。那些下级的存在可能会因寻路而发狂，但对你来说，这里就像老朋友一样熟悉。 NL NL 这里的 #p~轻声低语~ 使你心情放松，悠闲地决定要去的方向。"
     ],
     "OPTIONS": [
       "[向左走] #g经历一个事件。",
@@ -532,11 +532,11 @@
   "downfall:Joust": {
     "NAME": "长枪决斗",
     "DESCRIPTIONS": [
-       "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide...",
-      "This knight was clearly stronger than the other one, and you tried your best but were ultimately thrashed. NL \"I'd like to see you best a beast like that!\" he says to the other knight as they leave, bickering.",
-      "You ruthlessly avoid the knight's attacks and #rkill him, sucking his #gsouls out gleefully. The other knight screams and flees. What a coward...",
-      "The cowardly knight gives you a few pesky scratches from afar with his longsword, then runs away screaming. The other knight runs after him, angry. You return to your work, annoyed.",
-      "You ~loom~ over the knight, and rather than even trying to run, he simply cowers. You #rslay him easily and take his #gsouls, but when you turn for the other knight, he's already ran away."
+       "你在巨大的建筑物间穿行时，遇见了一条长长的窄桥，两头似乎都有一名骑士彼此对望着。你刚走上前去，他们就分开来瞪着彼此。 NL “怪物！你去干掉它，你不是说你擅长杀戮吗！” NL “不，你去干掉它，你养了只 ~恶魔猫~ ，还不了解怪物？” NL NL 他们吵得不可开交。你得做个决断...",
+      "这名骑士明显比另一名强大得多，你用尽浑身解数，最终还是一败涂地。 NL “你在我眼里和这只畜生没什么区别！” 他向另一名骑士说道，随后两人争吵着离开了。",
+      "你无情地闪躲开骑士的攻击并 #r击杀 了他，欣喜地吸收了他的 #g灵魂 。另一个骑士尖叫着逃跑了。真是个懦夫...",
+      "这个懦弱的骑士用长剑远远地戳了你几下，随后尖叫着跑掉了。另一名骑士愤怒地追了上去。你十分恼火地回到工作之中。",
+      "你耸身 ~逼近~ 这个骑士。他甚至没尝试逃跑，仅仅是蜷缩起来。你轻松地 #r杀死 他并带走了他的 #g灵魂 ，但当你转身寻找另一名骑士时，他已经不见踪影了。"
     ],
     "OPTIONS": [
       "[左] #r50%: #r失去 #r",
