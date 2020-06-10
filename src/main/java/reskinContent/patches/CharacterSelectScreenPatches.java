@@ -758,8 +758,8 @@ public class CharacterSelectScreenPatches
                         }
 
 
-                        if(sneckoTimer < 3.1f )     waifuAppar = true;
-                        if(sneckoTimer < 6.95f )     waifuAppar = false;
+                        if(sneckoTimer > 3.1f )     waifuAppar = true;
+                        if(sneckoTimer > 6.95f )     waifuAppar = false;
 
                         if(sneckoAfterImageTimer > 2.0f)
                             sneckoAfterImageTimer = 0.0f;
