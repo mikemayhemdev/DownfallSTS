@@ -42,10 +42,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "充能",
-    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL  guardianmod:挥发 。",
-    "EXTENDED_DESCRIPTION": [
-	"~错误:~ #r凝滞 正在进程中。"
-	]
+    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 !M! 点 力量 。 NL  guardianmod:挥发 。"
   },
   "Guardian:DonusPower": {
     "NAME": "先古攻击",
@@ -84,10 +81,7 @@
   },
   "Guardian:TimeBomb": {
     "NAME": "时间炸弹",
-    "DESCRIPTION": "将这张卡 guardianmod:凝滞 。 NL 当这张牌将结束 guardianmod:凝滞 时，对所有敌人造成 !M! 点伤害。 NL guardianmod:挥发 。",
-    "EXTENDED_DESCRIPTION": [
-	"~错误:~ #r凝滞 正在进程中。"
-	]
+    "DESCRIPTION": "将这张卡 guardianmod:凝滞 。 NL 当这张牌将结束 guardianmod:凝滞 时，对所有敌人造成 !M! 点伤害。 NL guardianmod:挥发 。"
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "超能射线",
@@ -182,10 +176,7 @@
   },
   "Guardian:Planning": {
     "NAME": "规划",
-    "DESCRIPTION": "将抽牌堆顶部的 !M! 张牌 guardianmod:凝滞 。",
-    "EXTENDED_DESCRIPTION": [
-	"~错误:~ #r凝滞 正在进程中。"
-	]
+    "DESCRIPTION": "将抽牌堆顶部的 !M! 张牌 guardianmod:凝滞 。"
   },
   "Guardian:Recover": {
     "NAME": "恢复",
@@ -198,10 +189,7 @@
   },
   "Guardian:Clone": {
     "NAME": "克隆",
-    "DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": [
-	"~错误:~ #r凝滞 正在进程中。"
-	]
+    "DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL 消耗 。"
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
@@ -389,17 +377,11 @@
   },
   "Guardian:GatlingBeam": {
     "NAME": "加特林射线",
-    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL  guardianmod:滴答 -对随机敌人造成 !D! 点伤害。 NL 每次 滴答次数加 1 。 NL guardianmod:挥发 。",
-    "EXTENDED_DESCRIPTION": [
-	"~错误:~ #r凝滞 正在进程中。"
-	]
+    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL  guardianmod:滴答 -对随机敌人造成 !D! 点伤害。 NL 每次 滴答次数加 1 。 NL guardianmod:挥发 。"
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",
-    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 [E] 。 NL guardianmod:挥发 。",
-    "EXTENDED_DESCRIPTION": [
-	"~错误:~ #r凝滞 正在进程中。"
-	]
+    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 -获得 !B! 点 格挡 和 [E] 。 NL guardianmod:挥发 。"
   },
   "Guardian:StasisEngine": {
     "NAME": "凝滞引擎",
@@ -436,10 +418,7 @@
   "Guardian:MassTimeBomb": {
     "NAME": "团状炸弹",
     "DESCRIPTION": "向每个空的凝滞栏位加入一张 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
-    "UPGRADE_DESCRIPTION": "向每个空的凝滞栏位加入一张已 升级 的 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。",
-    "EXTENDED_DESCRIPTION": [
-	"~错误:~ #r凝滞 正在进程中。"
-	]
+    "UPGRADE_DESCRIPTION": "向每个空的凝滞栏位加入一张已 升级 的 时间炸弹 。 NL 生成大于等于 2 个时， 消耗 。"
   },
   "Guardian:MassSlam": {
     "NAME": "合体撞击",

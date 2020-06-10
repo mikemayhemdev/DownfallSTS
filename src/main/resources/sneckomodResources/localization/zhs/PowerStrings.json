@@ -1,1 +1,65 @@
-{}
+{
+  "sneckomod:CheapStockPower": {
+    "NAME": "Cheap Stock",
+    "DESCRIPTIONS": [
+      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1.",
+      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b",
+      " times."
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "作弊",
+    "DESCRIPTIONS": [
+      "本回合内，卡牌随机数固定为上限。",
+      "接下来的 #b",
+      " 个回合，卡牌随机数固定为上限。"
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "混淆抽牌",
+    "DESCRIPTIONS": [
+      "#y混淆你本回合抽到的下一张牌。",
+      "#y混淆你本回合抽到的下 #b",
+      " 张牌。（还剩 ",
+      " 张)"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "泥泞护盾",
+    "DESCRIPTIONS": [
+      "每当你 #y混淆 一张牌，下一回合获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "异色形态",
+    "DESCRIPTIONS": [
+      "每当你打出一张 #y异色 牌，抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "无限供应",
+    "DESCRIPTIONS": [
+      "你的回合开始时，将 #b",
+      " 张随机 #y异色 牌加入你的手牌并 #y混淆 。"
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "战后升级未知",
+    "DESCRIPTIONS": [
+      "在战斗结束时，获得 #b",
+      " 张额外已 #y升级 的 #y未知 牌。",
+      " 张额外已 #y升级 的 #y未知 牌。"
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "无限随机",
+    "DESCRIPTIONS": [
+      "你的回合开始时，将一张带有 #y消耗 的 #y灵魂随机+ 加入你的手牌。",
+      "你的回合开始时，将一张带有 #y消耗 的 #y灵魂随机 加入你的手牌。",
+      " NL 消耗 。."
+    ]
+  }
+}
