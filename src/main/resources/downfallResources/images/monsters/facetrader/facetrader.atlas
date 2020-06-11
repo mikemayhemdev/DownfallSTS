@@ -1,0 +1,153 @@
+
+facetrader.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Body
+  rotate: false
+  xy: 1156, 383
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+Shadow
+  rotate: false
+  xy: 1541, 1
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+Hair
+  rotate: false
+  xy: 1156, 1
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+UpperArmTopRight
+  rotate: false
+  xy: 1, 1
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+gremlinMask2
+  rotate: false
+  xy: 644, 1787
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ArmMidRight
+  rotate: false
+  xy: 386, 765
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+UpperArmMidRight
+  rotate: false
+  xy: 1, 383
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+ArmBotRight
+  rotate: false
+  xy: 1, 1147
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+ForearmBotRight
+  rotate: false
+  xy: 386, 383
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+ArmTopLeft
+  rotate: false
+  xy: 386, 1
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+ForearmTopLeft
+  rotate: false
+  xy: 386, 1147
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+armTopRight
+  rotate: false
+  xy: 1, 1529
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+mask
+  rotate: false
+  xy: 771, 383
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+serpentHead
+  rotate: false
+  xy: 386, 1529
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+nloth
+  rotate: false
+  xy: 902, 1787
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+cultistMask
+  rotate: false
+  xy: 386, 1787
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ForearmMidLeft
+  rotate: false
+  xy: 1541, 383
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+ArmMidLeft
+  rotate: false
+  xy: 1, 765
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+clericFace
+  rotate: false
+  xy: 771, 765
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ArmBotLeft
+  rotate: false
+  xy: 771, 1
+  size: 383, 380
+  orig: 383, 380
+  offset: 0, 0
+  index: -1
+gremlinMask
+  rotate: false
+  xy: 644, 1529
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
