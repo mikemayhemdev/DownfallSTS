@@ -96,14 +96,14 @@
   },
     "Slimebound:TarBlob": {
     "NAME": "焦油团",
-    "FLAVOR": "The bad kind of Slime.",
+    "FLAVOR": "坏的那种史莱姆。",
     "DESCRIPTIONS": [
       "你的回合开始时获得 [E] 。 #yslimeboundmod:分裂 需要额外 #b2 点生命和最大生命。"
     ]
   },
   "Slimebound:StickyStick": {
     "NAME": "粘胶方块",
-    "FLAVOR": "Hey, it stuck to your body.",
+    "FLAVOR": "嘿，它粘到你身上了。",
     "DESCRIPTIONS": [
       "每当你抽到 #r诅咒 或 #y状态 牌时，抽 #b1 张牌。"
     ]

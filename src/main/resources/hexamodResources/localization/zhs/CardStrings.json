@@ -344,7 +344,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 如果上一个 鬼火 已 hexamod:点燃 ， hexamod:回退 并将这张牌返回手牌。 消耗 。"
   },
   "hexamod:Haunted": {
-    "NAME": "忧心",
+    "NAME": "闹鬼",
     "DESCRIPTION": "虚无 。 不能被打出 。 NL 你的回合开始时，随机 消耗 一张手牌。"
   },
   "hexamod:CouncilsJustice": {
