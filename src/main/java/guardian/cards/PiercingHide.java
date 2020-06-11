@@ -20,7 +20,7 @@ public class PiercingHide extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("PiercingHide");
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "cards/curlUp.png";
+    public static final String IMG_PATH = "cards/piercingHide.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;

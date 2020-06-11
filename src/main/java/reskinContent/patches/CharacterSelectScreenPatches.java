@@ -59,7 +59,7 @@ public class CharacterSelectScreenPatches
     public static Field charInfoField;
 
 //    Guardian var
-    private static float guardianSFX_timer = 12.0f;
+    private static float guardianSFX_timer = 0.0f;
     private static boolean guardianWhirl_played = false;
 
 //    Hexaghost var
@@ -87,7 +87,7 @@ public class CharacterSelectScreenPatches
     private static boolean confuseSFXUsed = false;
     private static boolean debuffSFXUsed = false;
     private static boolean waifuAppar = false;
-    private static float sneckoTimer = 8.0f;
+    private static float sneckoTimer = 0.0f;
     private static float sneckoAfterImageTimer = 0.0f;
 
     private static Color halfWhite = Color.WHITE.cpy();
@@ -208,6 +208,7 @@ public class CharacterSelectScreenPatches
         portraitState.setTimeScale(1.0f);
 
 
+
         if(characterCount <= 1){
             portraitState.setAnimation(1, "fade_in", false);
             portraitState.addAnimation(0, "idle", true,0.0f);
@@ -268,7 +269,7 @@ public class CharacterSelectScreenPatches
         }
     }
     private static void InitializeStaticPortraitVar(){
-        guardianSFX_timer = 12.0f;
+        guardianSFX_timer = 0.0f;
         guardianWhirl_played = false;
 
         ghostFireTimer = ghostFireTimer_time;
@@ -279,7 +280,7 @@ public class CharacterSelectScreenPatches
         confuseSFXUsed = false;
         debuffSFXUsed = false;
         waifuAppar = false;
-        sneckoTimer = 8.0f;
+        sneckoTimer = 0.0f;
         sneckoAfterImageTimer = 0.0f;
     }
 
@@ -635,15 +636,15 @@ public class CharacterSelectScreenPatches
 //============================
 // 蹲酱
                     if(i == 0 && reskinCount == 1 && reskinContent.portraitAnimationType != 0){
-                        guardianSFX_timer -= Gdx.graphics.getDeltaTime();
-                        if( guardianSFX_timer < 10.05f && !guardianWhirl_played){
+                        guardianSFX_timer += Gdx.graphics.getDeltaTime();
+                        if( guardianSFX_timer > 1.95f && !guardianWhirl_played){
                             char_effectsQueue.add(new PortraitWhirlwindEffect(new Color(MathUtils.random(0.6F, 0.7F), MathUtils.random(0.6F, 0.7F), MathUtils.random(0.5F, 0.55F),1.0F),false));
                             guardianWhirl_played = true;
                         }
 
-                        if( guardianSFX_timer < 0.0f){
+                        if( guardianSFX_timer > 12.0f){
                             CardCrawlGame.sound.playA("MONSTER_GUARDIAN_DESTROY", MathUtils.random(-0.1F, 0.1F));
-                            guardianSFX_timer = 12.0f;
+                            guardianSFX_timer = guardianSFX_timer % 1;
                             guardianWhirl_played = false;
                         }
                     }
@@ -719,10 +720,10 @@ public class CharacterSelectScreenPatches
 
 //   异蛇相关
                     if(i == 3 && reskinCount == 1 && reskinContent.portraitAnimationType != 0) {
-                        sneckoTimer -= Gdx.graphics.getDeltaTime();
+                        sneckoTimer += Gdx.graphics.getDeltaTime();
                         sneckoAfterImageTimer += Gdx.graphics.getDeltaTime();
 
-                        if(!confuseUsed && sneckoTimer < 7.0f){
+                        if(!confuseUsed && sneckoTimer > 1.0f){
 
                             CardCrawlGame.sound.play("MONSTER_SNECKO_GLARE");
                             char_effectsQueue.add(new PortraitIntimidateEffect(
@@ -737,12 +738,12 @@ public class CharacterSelectScreenPatches
                             confuseUsed = true;
                         }
 
-                        if(!confuseSFXUsed && sneckoTimer < 5.5f){
+                        if(!confuseSFXUsed && sneckoTimer > 2.5f){
                             CardCrawlGame.sound.play("POWER_CONFUSION", 0.05F);
                             confuseSFXUsed = true;
                         }
 
-                        if(!debuffSFXUsed && sneckoTimer < 0.5f){
+                        if(!debuffSFXUsed && sneckoTimer > 7.5f){
                                   int roll = MathUtils.random(0, 2);
                                   if (roll == 0) {
                                         CardCrawlGame.sound.play("DEBUFF_1");
@@ -757,15 +758,15 @@ public class CharacterSelectScreenPatches
                         }
 
 
-                        if(sneckoTimer < 4.9f )     waifuAppar = true;
-                        if(sneckoTimer < 1.05f )     waifuAppar = false;
+                        if(sneckoTimer > 3.1f )     waifuAppar = true;
+                        if(sneckoTimer > 6.95f )     waifuAppar = false;
 
                         if(sneckoAfterImageTimer > 2.0f)
                             sneckoAfterImageTimer = 0.0f;
                         halfWhite.a = 0.2f + 0.3f * sneckoAfterImageTimer;
 
-                        if(sneckoTimer < 0.0f){
-                            sneckoTimer = 8.0f;
+                        if(sneckoTimer > 8.0f){
+                            sneckoTimer = sneckoTimer % 1 ;
                             confuseUsed = false;
                             confuseSFXUsed = false;
                             debuffSFXUsed = false;

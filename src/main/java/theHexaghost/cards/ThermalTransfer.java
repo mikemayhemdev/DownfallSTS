@@ -29,16 +29,15 @@ public class ThermalTransfer extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (m.hasPower(BurnPower.POWER_ID)) {
-                    addToTop(new GainBlockAction(p, block));
-                    addToTop(new VFXAction(new FireballEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.5F));
-                }
-            }
-        });
+        if (m.hasPower(BurnPower.POWER_ID)) {
+            addToTop(new GainBlockAction(p, block));
+            addToTop(new VFXAction(new FireballEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.5F));
+        }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        burnGlowCheck();
     }
 
     public void upgrade() {
