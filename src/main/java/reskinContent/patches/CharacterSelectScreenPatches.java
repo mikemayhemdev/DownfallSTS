@@ -403,10 +403,13 @@ public class CharacterSelectScreenPatches
                     if(i == 2 && reskinCount == 1)
                         hexaghostMask.render(sb);
 
-                    if (portraitAnimationLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
-                    sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
-                    if (portraitAnimationRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
-                    sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
+                    if(reskinCount != 0){
+                        if (portraitAnimationLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
+                        sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
+                        if (portraitAnimationRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
+                        sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
+
+                    }
 
                     if (reskinRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
                     sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
@@ -415,11 +418,18 @@ public class CharacterSelectScreenPatches
 
                     FontHelper.cardTitleFont.getData().setScale(1.0F);
                     FontHelper.bannerFont.getData().setScale(0.8F);
-                    FontHelper.renderFontCentered(sb, FontHelper.bannerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale , Settings.GOLD_COLOR);
-                    FontHelper.renderFontCentered(sb, FontHelper.bannerFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimation")).TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 970 * Settings.scale , Settings.GOLD_COLOR);
 
-                    FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[(reskinCount % 2) * ( i + 1 ) + 1], Settings.WIDTH / 2.0F - reskinX_center, 800.0F * Settings.scale , Settings.GOLD_COLOR);
-                    FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[reskinContent.portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center, 920.0F * Settings.scale , Settings.GOLD_COLOR);
+                    if(reskinCount != 0) {
+                        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[reskinContent.portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center, 920.0F * Settings.scale, Settings.GOLD_COLOR);
+                        FontHelper.renderFontCentered(sb, FontHelper.bannerFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimation")).TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 970 * Settings.scale , Settings.GOLD_COLOR);
+                    }
+
+                    FontHelper.renderFontCentered(sb, FontHelper.bannerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale , Settings.GOLD_COLOR);
+                    FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[(reskinCount % 2) * (i + 1) + 1], Settings.WIDTH / 2.0F - reskinX_center, 800.0F * Settings.scale, Settings.GOLD_COLOR);
+
+
+
+
 
                 }
             }
@@ -599,15 +609,18 @@ public class CharacterSelectScreenPatches
                         reskinRight.clickStarted = true;
                         CardCrawlGame.sound.play("UI_CLICK_1"); }
 
-                    if (InputHelper.justClickedLeft && portraitAnimationLeft.hovered) {
+                    if (InputHelper.justClickedLeft && portraitAnimationLeft.hovered && reskinCount != 0) {
                         portraitAnimationLeft.clickStarted = true;
                         CardCrawlGame.sound.play("UI_CLICK_1"); }
 
-                    if (InputHelper.justClickedLeft && portraitAnimationRight.hovered) {
+                    if (InputHelper.justClickedLeft && portraitAnimationRight.hovered && reskinCount != 0) {
                         portraitAnimationRight.clickStarted = true;
                         CardCrawlGame.sound.play("UI_CLICK_1"); }
 
-                    if (reskinLeft.justHovered || reskinRight.justHovered || portraitAnimationLeft.justHovered || portraitAnimationRight.justHovered)
+                    if (reskinLeft.justHovered || reskinRight.justHovered )
+                        CardCrawlGame.sound.playV("UI_HOVER", 0.75f);
+
+                    if ( (portraitAnimationLeft.justHovered || portraitAnimationRight.justHovered) && reskinCount != 0)
                         CardCrawlGame.sound.playV("UI_HOVER", 0.75f);
 
                     if (InputHelper.justClickedLeft && hexaghostMask.hovered && i == 2 && reskinCount != 0)
@@ -867,8 +880,12 @@ public class CharacterSelectScreenPatches
 
                     reskinLeft.update();
                     reskinRight.update();
-                    portraitAnimationLeft.update();
-                    portraitAnimationRight.update();
+
+                    if(reskinCount != 0){
+                        portraitAnimationLeft.update();
+                        portraitAnimationRight.update();
+                    }
+
                     hexaghostMask.update();
 
                 }}
