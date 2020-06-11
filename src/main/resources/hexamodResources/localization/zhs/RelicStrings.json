@@ -1,21 +1,21 @@
 {
   "hexamod:SpiritBrand": {
     "NAME": "精神烙印",
-    "FLAVOR": "A bound protector.",
+    "FLAVOR": "对约束的一道保护。",
     "DESCRIPTIONS": [
       "每当你 #yhexamod:点燃 鬼火时，获得 #b2 点 #y格挡 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "破损容器",
-    "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
+    "FLAVOR": "未阻，无限，不灭的力量。",
     "DESCRIPTIONS": [
       "拾起时，获得 #b10 点最大生命。每场战斗开始时获得 #b2 点 #y力量 、 #y敏捷 和 #yhexamod:热烈 。"
     ]
   },
   "hexamod:UnbrokenSoul": {
     "NAME": "以太印记",
-    "FLAVOR": "Let’s see if we can do... better.",
+    "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 #r",
       " 。[]  NL 每回合第一次 #y点燃 时，获得 [E] 和 #b6 点 #y格挡 。"
@@ -23,63 +23,63 @@
   },
   "hexamod:IceCube": {
     "NAME": "幽灵雪花",
-    "FLAVOR": "I feel... cold.",
+    "FLAVOR": "我感觉... 好冷。",
     "DESCRIPTIONS": [
       "每回合获得 [E] 。 #yhexamod:灼伤 每回合将直接移除而不是减半。"
     ]
   },
   "hexamod:SoulConsumer": {
     "NAME": "保暖石",
-    "FLAVOR": "A fire would liven this thing up!",
+    "FLAVOR": "一点火苗就能激活这东西了！",
     "DESCRIPTIONS": [
       "每当你杀死带有 #yhexamod:灼伤 的敌人，回复 #b2 点生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
     "NAME": "回收器",
-    "FLAVOR": "One day, it shall be recycled too.",
+    "FLAVOR": "总有一天它也会被回收掉。",
     "DESCRIPTIONS": [
       "每场战斗第一次 #y虚无 牌 #y消耗 时，将一张直到打出前耗能为0的复制品加入手牌。"
     ]
   },
   "hexamod:MatchstickCase": {
     "NAME": "快燃火柴",
-    "FLAVOR": "Lights on any surface!",
+    "FLAVOR": "划在哪儿都能着！",
     "DESCRIPTIONS": [
       "每场战斗的第一回合， #yhexamod:点燃 #yhexamod:活跃 的鬼火并 #yhexamod:步进 。"
     ]
   },
   "hexamod:InflammatoryLetter": {
     "NAME": "火种",
-    "FLAVOR": "Fire makes everything better.",
+    "FLAVOR": "火使一切更美好。",
     "DESCRIPTIONS": [
       "每场战斗开始时获得 #b1 点 #yhexamod:热烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {
     "NAME": "混沌灵魂",
-    "FLAVOR": "Mayhem, made manifest.",
+    "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
       "第二个灼热鬼火变为狂徒鬼火。 NL 狂徒鬼火在激活时结束回合点燃。 NL 点燃：打出抽牌堆顶部的牌。"
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "古灵盾",
-    "FLAVOR": "Protection on-demand.",
+    "FLAVOR": "按需防护。",
     "DESCRIPTIONS": [
       "将高热鬼火与第一个灼热鬼火交换。"
     ]
   },
   "hexamod:BolsterEngine": {
     "NAME": "高热之杖",
-    "FLAVOR": "Fire shields! Fire strengthens.",
+    "FLAVOR": "火焰护身！火焰助力。",
     "DESCRIPTIONS": [
       "每场战斗第一次打出 #y能力 牌时，获得 #b6 点 #y格挡 和 #b1 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "红蜡烛",
-    "FLAVOR": "Fire BURNS...",
+    "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
       "每当你造成未被格挡的 #y攻击 伤害，给予 #b1 层 #yhexamod:点燃 。"
     ]

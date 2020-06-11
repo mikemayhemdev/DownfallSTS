@@ -2,13 +2,13 @@
   "hexamod:WanderingSpecter": {
     "NAME": "游荡幽灵",
     "DESCRIPTIONS": [
-      "This area of the Spire appears to be a #pgraveyard. You carefully continue through when a strange, faint ~apparition~ stops you. It reaches out with one hand, apparently offering some sort of #rdeal.",
-      "The #bghostly #bbeing touches your shoulder and you @collapse.@ NL NL You awaken later in an empty area of the Spire with a #gtrinket at your feet. As you continue, you feel ~oddly~ ~watched...~",
-      "You shake your head and the #bghost gives you one last, laborious look before continuing on in its ~endless~ ~walk.~ You continue onwards, as well. "
+      "这片地区似乎是尖塔的 #p墓地 。正当你小心翼翼地穿过时，一个奇怪的微弱 ~鬼影~ 使你停下脚步。 它伸出一只手来，似乎在提供某种 #r交易 。",
+      "这个 #b幽灵般的存在 触碰了你的肩膀，你立即 @倒下@ 了。 NL NL 之后你在塔内的一片空地上醒来，脚边放着一个 #g宝物 。 你离开时，感到被， ~怪异~ ~的目光~ 注视着...",
+      "你摇了摇头， #b鬼影 吃力地看了你最后一眼，继续它 ~无休止的~ ~漫步。~ 你也继续了你的旅程。 "
     ],
     "OPTIONS": [
       "[接受] 获得 ",
-      "。 #r被诅咒- #rHaunted.",
+      "。 #r被诅咒- #r闹鬼。",
       "[拒绝]",
       "[离开]"
     ]
@@ -46,12 +46,12 @@
   "hexamod:CouncilOfGhosts": {
     "NAME": "幽灵议会",
     "DESCRIPTIONS": [
-      "As you continue your ascent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"This~ ~one~ ~is~ #r~doomed...\"~ NL \"We understand your plight, #pcursed one... Would you like to learn our #y~secrets?\"~ ",
-      "#y\"Excellent!\" NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. #p~Thick~ #p~black~ #p~smoke~ spews forth and envelops the room. You cannot see or breathe...",
-      "Still shrouded in #p~black~ #p~smoke~, your body withers, but your spirit #pburns #pbrighter than ever before. NL You understand how the corporeal and incorporeal are connected, in ways you never thought possible.",
-      "Within the darkness, you see with eyes unclouded. The spirits have shown you have to master your form, to transition between this worth and another with ease.",
-      "\"Good luck, #pcursed one...\" NL ~\"We~ ~will~ ~stay~ ~and~ ~help~ ~others...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL You aren't quite sure why the last one laughed as the Council faded, but you are grateful to have gained their knowledge.",
-      "\"How disappointing...\" NL ~\"You~ ~will~ ~never~ ~escape~ ~this~ ~place...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL The shapes fade away, leaving only the unnerving laughter ringing in your ears."
+      "在你向下深入时，突然四周的墙壁和地面开始冒出 #p~浓重的黑烟~ ，逐渐聚成了三个戴着面具的形状，它们交头接耳地说起话来。 NL NL ~“这个已经 #r~毁了...”~ NL “我们知道你的困境，被 #p诅咒 者... 你想不想了解一下我们的 #y~秘密~ 呢？”",
+      "#y“好极了！” NL 那个幽灵鬼影的话音刚落，你就看见它本已硕大的嘴张开得越来越大，从中涌出更多 #p~浓重的黑烟~ 笼罩了整个房间。你什么也看不见，也无法呼吸……",
+      "房间里依旧笼罩着 #p~浓重的黑烟~ ，你的躯体枯萎凋零，但你的精神愈发 #p炽热明亮 。 NL 你理解了实界与虚界的连接方式，那是你未曾设想过的。",
+      "在黑暗之中，你的视野明如白昼。 鬼影们教会了你掌控形态的方式，让你能够在两种形态间变换自如。",
+      "“祝你好运，被 #p诅咒 者。” NL ~“我们会留在这里帮助其他人...”~ NL #r@“哈哈@ #r@哈哈哈哈！”@ NL NL 你不太明白幽灵议会消失前的为什么要笑， 但你还是很感激他们提供的知识。",
+      "“真令人失望……” NL ~“你永远别想逃出这个地方...”~ NL #r@“哈哈@ #r@哈哈哈哈！”@ NL NL 那些幽影消散了，只留下这令人不安的大笑声在你耳中回荡。"
       ],
     "OPTIONS": [
       "[接受] #r失去 #r",

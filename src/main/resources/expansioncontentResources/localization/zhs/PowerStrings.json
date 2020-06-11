@@ -151,25 +151,25 @@
     ]
   },
   "expansioncontent:AwakenDeathPower": {
-    "NAME": "Awakening",
+    "NAME": "未觉醒",
     "DESCRIPTIONS": [
-      "When you would die, heal ",
-      " HP and remove this effect."
+      "当你即将死亡时，恢复",
+      " 生命并移除此效果。"
     ]
   },
   "expansioncontent:ChronoBoostPower": {
-    "NAME": "Chrono Boost",
+    "NAME": "时间加速",
     "DESCRIPTIONS": [
-      "After playing ",
-      " more cards, gain ",
-      " #yStrength."
+      "打出",
+      " 张牌后，获得 ",
+      " #yS力量 。"
     ]
   },
   "expansioncontent:DeEnergizedPower": {
-    "NAME": "De-Energized",
+    "NAME": "能量匮乏",
     "DESCRIPTIONS": [
-      "At the start of your next turn, lose ",
-      " [E]."
+      "你的下个回合开始时，失去",
+      " [E]。"
     ]
   }
 }
