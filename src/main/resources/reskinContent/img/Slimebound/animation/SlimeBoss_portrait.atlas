@@ -1,0 +1,223 @@
+
+SlimeBoss_portrait.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+slime2/slime2_ball
+  rotate: false
+  xy: 2166, 2801
+  size: 198, 201
+  orig: 198, 201
+  offset: 0, 0
+  index: -1
+out/shadow
+  rotate: false
+  xy: 3524, 851
+  size: 411, 121
+  orig: 411, 121
+  offset: 0, 0
+  index: -1
+out/Spoon
+  rotate: false
+  xy: 1992, 2500
+  size: 50, 55
+  orig: 50, 55
+  offset: 0, 0
+  index: -1
+out/skull
+  rotate: false
+  xy: 1931, 2449
+  size: 59, 52
+  orig: 59, 52
+  offset: 0, 0
+  index: -1
+out/foot
+  rotate: false
+  xy: 1404, 2413
+  size: 72, 33
+  orig: 72, 33
+  offset: 0, 0
+  index: -1
+out/kaka
+  rotate: false
+  xy: 1517, 2379
+  size: 113, 43
+  orig: 113, 43
+  offset: 0, 0
+  index: -1
+out/gold
+  rotate: false
+  xy: 1931, 2533
+  size: 40, 20
+  orig: 42, 21
+  offset: 1, 1
+  index: -1
+out/core
+  rotate: false
+  xy: 1664, 2324
+  size: 35, 35
+  orig: 35, 35
+  offset: 0, 0
+  index: -1
+out/body_color
+  rotate: false
+  xy: 1790, 3080
+  size: 370, 273
+  orig: 370, 273
+  offset: 0, 0
+  index: -1
+out/mouth_color
+  rotate: false
+  xy: 1517, 2324
+  size: 145, 53
+  orig: 145, 53
+  offset: 0, 0
+  index: -1
+out/body_line
+  rotate: false
+  xy: 1790, 2801
+  size: 374, 277
+  orig: 374, 277
+  offset: 0, 0
+  index: -1
+out/mouth_line
+  rotate: false
+  xy: 1790, 2739
+  size: 148, 57
+  orig: 148, 57
+  offset: 0, 0
+  index: -1
+out/eye_L
+  rotate: false
+  xy: 1931, 2557
+  size: 63, 28
+  orig: 63, 28
+  offset: 0, 0
+  index: -1
+out/eye_R
+  rotate: false
+  xy: 1931, 2503
+  size: 59, 28
+  orig: 59, 28
+  offset: 0, 0
+  index: -1
+out/eyebrow_L
+  rotate: false
+  xy: 1632, 2379
+  size: 62, 51
+  orig: 62, 51
+  offset: 0, 0
+  index: -1
+out/eyebrow_R
+  rotate: false
+  xy: 1992, 2449
+  size: 62, 49
+  orig: 62, 49
+  offset: 0, 0
+  index: -1
+out/hat
+  rotate: false
+  xy: 1404, 2324
+  size: 111, 87
+  orig: 111, 87
+  offset: 0, 0
+  index: -1
+slime2/slime2_bloom
+  rotate: false
+  xy: 1, 1
+  size: 2083, 1800
+  orig: 2083, 1800
+  offset: 0, 0
+  index: -1
+slime2/slime2_particleA1
+  rotate: false
+  xy: 891, 2801
+  size: 334, 336
+  orig: 334, 336
+  offset: 0, 0
+  index: -1
+slime2/slime2_particleA2
+  rotate: false
+  xy: 2080, 2328
+  size: 444, 471
+  orig: 444, 471
+  offset: 0, 0
+  index: -1
+slime2/slime2_particleA3
+  rotate: false
+  xy: 891, 1803
+  size: 828, 519
+  orig: 828, 519
+  offset: 0, 0
+  index: -1
+slime2/slime2_particleB2
+  rotate: false
+  xy: 1404, 2739
+  size: 384, 382
+  orig: 384, 382
+  offset: 0, 0
+  index: -1
+slime2/slime2_particleB1
+  rotate: false
+  xy: 3524, 1
+  size: 392, 848
+  orig: 392, 848
+  offset: 0, 0
+  index: -1
+slime2/slime2_particleB3
+  rotate: false
+  xy: 1721, 1803
+  size: 357, 644
+  orig: 357, 644
+  offset: 0, 0
+  index: -1
+slime2/slime2_body
+  rotate: false
+  xy: 1, 1803
+  size: 888, 1021
+  orig: 888, 1021
+  offset: 0, 0
+  index: -1
+slime2/slime2_mouth
+  rotate: false
+  xy: 2526, 2449
+  size: 402, 384
+  orig: 402, 384
+  offset: 0, 0
+  index: -1
+slime2/slime2_eyes
+  rotate: false
+  xy: 891, 2324
+  size: 511, 446
+  orig: 511, 446
+  offset: 0, 0
+  index: -1
+slime2/slime2_shock_wave1
+  rotate: false
+  xy: 1404, 2449
+  size: 525, 288
+  orig: 525, 288
+  offset: 0, 0
+  index: -1
+slime2/slime2_shock_wave2
+  rotate: false
+  xy: 2086, 1
+  size: 1436, 1092
+  orig: 1436, 1092
+  offset: 0, 0
+  index: -1
+slime2/slime2_shock_wave3
+  rotate: false
+  xy: 2086, 1095
+  size: 1017, 1231
+  orig: 1017, 1231
+  offset: 0, 0
+  index: -1
+slime2/slime2_shock_wave4
+  rotate: false
+  xy: 3105, 1095
+  size: 752, 1403
+  orig: 752, 1403
+  offset: 0, 0
+  index: -1

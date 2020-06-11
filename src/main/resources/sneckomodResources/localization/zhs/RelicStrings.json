@@ -23,42 +23,42 @@
   },
   "sneckomod:ConfusingCodex": {
     "NAME": "异蛇戒指",
-    "FLAVOR": "Illegible, unreadable, due by Thursday.",
+    "FLAVOR": "无法辨认，难以阅读，周四到期。",
     "DESCRIPTIONS": [
       "每场战斗开始时，给予所有敌人 #b0-2 层 #y虚弱 和 #y易伤 。"
     ]
   },
   "sneckomod:CrystallizedMud": {
     "NAME": "催眠吊坠",
-    "FLAVOR": "Dazzling dirt.",
+    "FLAVOR": "晃眼的土块。",
     "DESCRIPTIONS": [
       "每回合开始时获得 [E] 。 #ysneckomod:混淆 数值不为 #b0 。"
     ]
   },
   "sneckomod:LoadedDie": {
-    "NAME": "注铅骰子",
-    "FLAVOR": "Cheese-stuffed.",
+    "NAME": "注料骰子",
+    "FLAVOR": "灌了奶酪。",
     "DESCRIPTIONS": [
       "卡牌随机值下限提高1。"
     ]
   },
   "sneckomod:RareBoosterPack": {
     "NAME": "稀有增强箱",
-    "FLAVOR": "Mint condition.",
+    "FLAVOR": "一手货。",
     "DESCRIPTIONS": [
       "拾起时，获得不同类型的 #ysneckomod:未知 #y稀有 牌各一张。"
     ]
   },
   "sneckomod:SleevedAce": {
-    "NAME": "王牌袖子",
-    "FLAVOR": "We're all aces.",
+    "NAME": "袖中王牌",
+    "FLAVOR": "我也出王牌。",
     "DESCRIPTIONS": [
-      "每场战斗开始时，将一张 #yCheat 加入手牌并 #y保留 。"
+      "每场战斗开始时，将一张 #y作弊 加入手牌并 #y保留 。"
     ]
   },
   "sneckomod:UnknownEgg": {
     "NAME": "未知之蛋",
-    "FLAVOR": "What will hatch? Pay $1000 to see.",
+    "FLAVOR": "想知道孵出什么？ 交 $1000 再说。",
     "DESCRIPTIONS": [
       "卡牌奖励中的 #ysneckomod:未知 将被 #y升级 。"
     ]
@@ -79,7 +79,7 @@
   },
   "sneckomod:BlankCard": {
     "NAME": "黑色牌",
-    "FLAVOR": "Card Mimic.",
+    "FLAVOR": "拟牌妖。",
     "DESCRIPTIONS": [
       "每场战斗开始时，将牌组中的随机一张牌打出。"
     ]
