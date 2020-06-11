@@ -62,6 +62,15 @@ public class CharacterSelectScreenPatches
     private static float guardianSFX_timer = 0.0f;
     private static boolean guardianWhirl_played = false;
 
+
+//    slime var
+    private static float slime_timer = 0.0f;
+    private static boolean slimeScreen = false;
+    private static boolean slimySFX = false;
+    private static boolean slimeCrashSFX  = false;
+    private static boolean slimeHitSFX  = false;
+
+
 //    Hexaghost var
     private static ArrayList<PortraitHexaghostOrb> orbs = new ArrayList();
     private static final String ACTIVATE_STATE = "Activate";
@@ -148,7 +157,7 @@ public class CharacterSelectScreenPatches
 
 
         portraitAtlasMaps.put( 0 ,reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
-        portraitAtlasMaps.put( 1 ,reskinContent.assetPath("img/GuardianMod/animation/GuardianChan_portrait"));
+        portraitAtlasMaps.put( 1 ,reskinContent.assetPath("img/Slimebound/animation/SlimeBoss_portrait"));
         portraitAtlasMaps.put( 2 ,reskinContent.assetPath("img/HexaghostMod/animation/Hexaghost_portrait"));
         portraitAtlasMaps.put( 3 ,reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait"));
 
@@ -209,11 +218,36 @@ public class CharacterSelectScreenPatches
 
 
 
-        if(characterCount <= 1){
+        if(characterCount == 0){
             portraitState.setAnimation(1, "fade_in", false);
             portraitState.addAnimation(0, "idle", true,0.0f);
             InitializeStaticPortraitVar();
         }
+
+        if(characterCount == 1){
+            sneckoAtlas = new TextureAtlas(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.atlas")));
+            SkeletonJson sneckoJson = new SkeletonJson(sneckoAtlas);
+            sneckoJson.setScale(Settings.scale / 1.0F);
+            sneckoData = sneckoJson.readSkeletonData(Gdx.files.internal(reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait_effect.json")));
+
+
+            sneckoSkeleton = new Skeleton(sneckoData);
+            sneckoSkeleton.setColor(Color.WHITE);
+            sneckoStateData = new AnimationStateData(sneckoData);
+            sneckoState = new AnimationState(sneckoStateData);
+            sneckoStateData.setDefaultMix(0.2F);
+
+            sneckoState.setTimeScale(1.0f);
+
+
+            portraitState.addAnimation(0, "idle", true,0.0f);
+            portraitState.addAnimation(1, "layout", true,0.0f);
+
+            sneckoState.addAnimation(0, "slime_layout_effect", true,0.0f);
+            InitializeStaticPortraitVar();
+        }
+
+
 
 
         if(characterCount ==2){
@@ -256,8 +290,6 @@ public class CharacterSelectScreenPatches
 
 
                 portraitState.addAnimation(0, "layout", true,0.0f);
-
-//                sneckoState.setAnimation(1, "all_hide", false);
                 sneckoState.addAnimation(0, "layout_effect", true,0.0f);
                 InitializeStaticPortraitVar();
             }
@@ -271,6 +303,12 @@ public class CharacterSelectScreenPatches
     private static void InitializeStaticPortraitVar(){
         guardianSFX_timer = 0.0f;
         guardianWhirl_played = false;
+
+        slime_timer = 0.0f;
+        slimeScreen = false;
+        slimySFX = false;
+        slimeCrashSFX = false;
+        slimeHitSFX = false;
 
         ghostFireTimer = ghostFireTimer_time;
         giantGhostFireTimer =giantGhostFireTimer_time;
@@ -411,18 +449,24 @@ public class CharacterSelectScreenPatches
 
 
 
-                        if(i <= 1)
+                        if(i == 0)
                             portraitSkeleton.setPosition(1092.0f * Settings.scale, Settings.HEIGHT - 1032.0f * Settings.scale);   //                       立绘位置
+
+                        if(i == 1)
+                            portraitSkeleton.setPosition(942.0f * Settings.scale, Settings.HEIGHT - 1042.0f * Settings.scale);   //                       立绘位置
 
                         if(i == 2)
                             portraitSkeleton.setPosition(1266.0f * Settings.scale, Settings.HEIGHT - 597.0f * Settings.scale);
 
-                        if(i == 3){
+                        if(i == 3)
+                            portraitSkeleton.setPosition(1296.0f * Settings.scale, Settings.HEIGHT - 1276.0f * Settings.scale);
+
+
+                        if(i == 1 || i ==3){
                             sneckoState.update(Gdx.graphics.getDeltaTime());
                             sneckoState.apply(sneckoSkeleton);
                             sneckoSkeleton.updateWorldTransform();
 
-                            portraitSkeleton.setPosition(1296.0f * Settings.scale, Settings.HEIGHT - 1276.0f * Settings.scale);
                             sneckoSkeleton.setPosition(1296.0f * Settings.scale, Settings.HEIGHT - 1276.0f * Settings.scale);
 
                             sneckoSkeleton.setColor(Color.WHITE);
@@ -472,10 +516,12 @@ public class CharacterSelectScreenPatches
 
                             sr.draw(CardCrawlGame.psb, sneckoSkeleton);
                         }else {
-
                           sr.draw(CardCrawlGame.psb, portraitSkeleton);
                         }
 
+                        if(i == 1){
+                            sr.draw(CardCrawlGame.psb, sneckoSkeleton);
+                        }
 
                         CardCrawlGame.psb.end();
                     sb.begin();
@@ -646,6 +692,46 @@ public class CharacterSelectScreenPatches
                             CardCrawlGame.sound.playA("MONSTER_GUARDIAN_DESTROY", MathUtils.random(-0.1F, 0.1F));
                             guardianSFX_timer = guardianSFX_timer % 1;
                             guardianWhirl_played = false;
+
+                        }
+                    }
+
+
+//   史莱姆
+                    if(i == 1 && reskinCount == 1 && reskinContent.portraitAnimationType != 0){
+                        slime_timer += Gdx.graphics.getDeltaTime();
+                        if( slime_timer > 1.0f && !slimeScreen){
+                            char_effectsQueue.add(new SlimedScreenEffect());
+                            slimeScreen = true;
+                        }
+
+                        if(slime_timer >1.4f && !slimySFX){
+                            CardCrawlGame.sound.play("MONSTER_SLIME_ATTACK");
+                            slimySFX = true;
+                        }
+
+                        if(slime_timer > 2.5f && !slimeCrashSFX){
+                            int roll = MathUtils.random(1);
+                                if (roll == 0) {
+                                    CardCrawlGame.sound.play("VO_SLIMEBOSS_1A");
+                                     } else {
+                                    CardCrawlGame.sound.play("VO_SLIMEBOSS_1B");
+                                     }
+                                slimeCrashSFX = true;
+                        }
+
+                        if(slime_timer > 5.5f && !slimeHitSFX){
+                            CardCrawlGame.sound.playA("ATTACK_IRON_2", -0.5F);
+                            slimeHitSFX = true;
+                        }
+
+                        if( slime_timer > 7.0f){
+                            slime_timer = slime_timer % 1;
+
+                            slimeScreen = false;
+                            slimySFX = false;
+                            slimeCrashSFX = false;
+                            slimeHitSFX = false;
                         }
                     }
 
@@ -770,6 +856,7 @@ public class CharacterSelectScreenPatches
                             confuseUsed = false;
                             confuseSFXUsed = false;
                             debuffSFXUsed = false;
+
                         }
                     }
 
