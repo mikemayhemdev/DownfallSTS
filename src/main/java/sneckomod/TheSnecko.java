@@ -58,7 +58,7 @@ public class TheSnecko extends CustomPlayer {
     public TheSnecko(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "sneckomodResources/images/char/orb/vfx.png", (String)null, (String)null);
 
-        if(reskinContent.sneckoOriginalAnimation) {
+        if(!reskinContent.sneckoReskinAnimation) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
@@ -79,7 +79,7 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.sneckoOriginalAnimation){
+        if(!reskinContent.sneckoReskinAnimation){
             loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
         }else {
             loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);

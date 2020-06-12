@@ -2,6 +2,8 @@ package reskinContent.patches;
 
 
 import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import guardian.patches.GuardianEnum;
 import reskinContent.reskinContent;
 
 import reskinContent.helpers.PortraitHexaghostOrb;
@@ -29,6 +31,9 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import guardian.GuardianMod;
 
 import slimebound.SlimeboundMod;
+import slimebound.patches.SlimeboundEnum;
+import sneckomod.TheSnecko;
+import theHexaghost.TheHexaghost;
 
 
 import java.lang.reflect.Field;
@@ -144,11 +149,12 @@ public class CharacterSelectScreenPatches
 
     private static Map<Integer, String> characterOptionNames;
     private static Map<Integer, String> portraitAtlasMaps;
-
+    private static Map<Integer, Boolean> characterUnlocksMaps;
 
     static{
         characterOptionNames = new HashMap<>();
         portraitAtlasMaps = new HashMap<>();
+        characterUnlocksMaps = new HashMap<>();
 
         characterOptionNames.put( 0, CardCrawlGame.languagePack.getCharacterString("Guardian").NAMES[0]  );
         characterOptionNames.put( 1, CardCrawlGame.languagePack.getCharacterString("Slimebound").NAMES[0] );
@@ -161,6 +167,10 @@ public class CharacterSelectScreenPatches
         portraitAtlasMaps.put( 2 ,reskinContent.assetPath("img/HexaghostMod/animation/Hexaghost_portrait"));
         portraitAtlasMaps.put( 3 ,reskinContent.assetPath("img/SneckoMod/animation/Snecko_portrait"));
 
+        characterUnlocksMaps.put( 0 , reskinContent.guardianReskinUnlock);
+        characterUnlocksMaps.put( 1 , reskinContent.slimeReskinUnlock);
+        characterUnlocksMaps.put( 2 , reskinContent.hexaghostReskinUnlock);
+        characterUnlocksMaps.put( 3 , reskinContent.sneckoReskinUnlock);
     }
 
 
@@ -403,7 +413,7 @@ public class CharacterSelectScreenPatches
                     if(i == 2 && reskinCount == 1)
                         hexaghostMask.render(sb);
 
-                    if(reskinCount != 0){
+                    if(reskinCount != 0 && characterUnlocksMaps.get(i)){
                         if (portraitAnimationLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
                         sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
                         if (portraitAnimationRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
@@ -411,21 +421,25 @@ public class CharacterSelectScreenPatches
 
                     }
 
-                    if (reskinRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
-                    sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
-                    if (reskinLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
-                    sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
+                    if(characterUnlocksMaps.get(i)){
+                        if (reskinRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
+                        sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
+                        if (reskinLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
+                        sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
+                    }
 
                     FontHelper.cardTitleFont.getData().setScale(1.0F);
                     FontHelper.bannerFont.getData().setScale(0.8F);
 
-                    if(reskinCount != 0) {
+                    if(reskinCount != 0 && characterUnlocksMaps.get(i)) {
                         FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[reskinContent.portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center, 920.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                         FontHelper.renderFontCentered(sb, FontHelper.bannerFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimation")).TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 970 * Settings.scale , Settings.GOLD_COLOR);
                     }
+                    if(characterUnlocksMaps.get(i)){
+                        FontHelper.renderFontCentered(sb, FontHelper.bannerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale , Settings.GOLD_COLOR.cpy());
+                        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[(reskinCount % 2) * (i + 1) + 1], Settings.WIDTH / 2.0F - reskinX_center, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
 
-                    FontHelper.renderFontCentered(sb, FontHelper.bannerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale , Settings.GOLD_COLOR.cpy());
-                    FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[(reskinCount % 2) * (i + 1) + 1], Settings.WIDTH / 2.0F - reskinX_center, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
+                    }
 
 
 
@@ -450,7 +464,6 @@ public class CharacterSelectScreenPatches
             for (CharacterOption o : __instance.options) {
                 for(int i = 0; i <= 3; i++){
                     InitializeReskinCount(i);
-
                     if (o.name.equals(characterOptionNames.get(i)) && o.selected && reskinCount == 1 && reskinContent.portraitAnimationType != 0) {
 
                         portraitState.update(Gdx.graphics.getDeltaTime());
@@ -556,7 +569,7 @@ public class CharacterSelectScreenPatches
                                 char_effectsQueue.removeAll(char_effectsQueue_toRemove);
                         }
 
-                    } }}}}
+                    }} }}}
 
 //    立绘动画重置
 
@@ -596,7 +609,7 @@ public class CharacterSelectScreenPatches
             for (CharacterOption o : __instance.options) {
                 for(int i = 0; i <= 3; i++){
                     InitializeReskinCount(i);
-
+                if(characterUnlocksMaps.get(i)){
                 if (o.name.equals(characterOptionNames.get(i)) && o.selected) {
                     __instance.bgCharImg = updateBgImg(i);
 
@@ -888,7 +901,7 @@ public class CharacterSelectScreenPatches
 
                     hexaghostMask.update();
 
-                }}
+                }}}
             }}}
 
 
@@ -898,16 +911,16 @@ public class CharacterSelectScreenPatches
     private static void InitializeReskinCount(int characterCount){
         switch (characterCount){
             case 0 :
-                reflashReskinCount(reskinContent.guardianOriginalAnimation);
+                reflashReskinCount(reskinContent.guardianReskinAnimation);
                 break;
             case 1:
-                reflashReskinCount(reskinContent.slimeOriginalAnimation);
+                reflashReskinCount(reskinContent.slimeReskinAnimation);
                 break;
             case 2:
-                reflashReskinCount(reskinContent.hexaghostOriginalAnimation);
+                reflashReskinCount(reskinContent.hexaghostReskinAnimation);
                 break;
             case 3:
-                reflashReskinCount(reskinContent.sneckoOriginalAnimation);
+                reflashReskinCount(reskinContent.sneckoReskinAnimation);
                 break;
             default:
                 break;
@@ -919,13 +932,13 @@ public class CharacterSelectScreenPatches
 
 
 
-    public static void reflashReskinCount(boolean originalAnimation){
-        if(originalAnimation){
-            if(reskinCount != 0)
-                reskinCount = 0;
-        }else {
+    public static void reflashReskinCount(boolean reskinAnimation){
+        if(reskinAnimation){
             if(reskinCount != 1)
                 reskinCount = 1;
+        }else {
+            if(reskinCount != 0)
+                reskinCount = 0;
         }
     }
 
@@ -935,11 +948,11 @@ public class CharacterSelectScreenPatches
            case 0:
             switch (reskinCount){
                 case 0:
-                    reskinContent.guardianOriginalAnimation = true;
+                    reskinContent.guardianReskinAnimation = false;
                     reskinContent.saveSettings();
                     return GuardianOriginal;
                 case 1:
-                    reskinContent.guardianOriginalAnimation = false;
+                    reskinContent.guardianReskinAnimation = true;
                     reskinContent.saveSettings();
                     if(reskinContent.portraitAnimationType == 0){
                         return GuardianChan;
@@ -953,11 +966,11 @@ public class CharacterSelectScreenPatches
             case 1:
             switch (reskinCount ){
                 case 0:
-                    reskinContent.slimeOriginalAnimation = true;
+                    reskinContent.slimeReskinAnimation = false;
                     reskinContent.saveSettings();
                     return SlimeOriginal;
                 case 1:
-                    reskinContent.slimeOriginalAnimation = false;
+                    reskinContent.slimeReskinAnimation = true;
                     reskinContent.saveSettings();
                     if(reskinContent.portraitAnimationType == 0){
                         return SlaifuTexture;
@@ -972,11 +985,11 @@ public class CharacterSelectScreenPatches
             case 2:
             switch (reskinCount ){
                 case 0:
-                    reskinContent.hexaghostOriginalAnimation = true;
+                    reskinContent.hexaghostReskinAnimation = false;
                     reskinContent.saveSettings();
                     return hexaghostOriginal;
                 case 1:
-                    reskinContent.hexaghostOriginalAnimation = false;
+                    reskinContent.hexaghostReskinAnimation = true;
                     reskinContent.saveSettings();
                     if(reskinContent.portraitAnimationType == 0){
                         if(hexaghostMask_switch){
@@ -997,11 +1010,11 @@ public class CharacterSelectScreenPatches
             case 3:
             switch (reskinCount ){
                 case 0:
-                    reskinContent.sneckoOriginalAnimation = true;
+                    reskinContent.sneckoReskinAnimation = false;
                     reskinContent.saveSettings();
                     return sneckoOriginal;
                 case 1:
-                    reskinContent.sneckoOriginalAnimation = false;
+                    reskinContent.sneckoReskinAnimation = true;
                     reskinContent.saveSettings();
                     if(reskinContent.portraitAnimationType == 0){
                         return sneckoTexture;

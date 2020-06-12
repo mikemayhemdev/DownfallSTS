@@ -41,7 +41,7 @@ public class CultistSlime
         this.sticksLeftVFX = new SticksParticle(this);
         this.sticksRightVFX = new SticksParticleRight(this);
 
-        if(reskinContent.slimeOriginalAnimation){
+        if(!reskinContent.slimeReskinAnimation){
             AbstractDungeon.effectList.add(this.sticksLeftVFX);
             AbstractDungeon.effectList.add(this.sticksRightVFX);
         }
@@ -68,7 +68,7 @@ public class CultistSlime
     }
 
     public void cleanUpVFX() {
-        if(reskinContent.slimeOriginalAnimation){
+        if(!reskinContent.slimeReskinAnimation){
         this.sticksLeftVFX.finish();
         this.sticksRightVFX.finish();
         }
