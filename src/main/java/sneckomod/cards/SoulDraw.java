@@ -23,7 +23,8 @@ public class SoulDraw extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int x = getRandomNum(0, magicNumber, this);
-        atb(new DrawThenMuddleAction(x));
+        if (x > 0)
+            atb(new DrawThenMuddleAction(x));
     }
 
     public void upgrade() {
