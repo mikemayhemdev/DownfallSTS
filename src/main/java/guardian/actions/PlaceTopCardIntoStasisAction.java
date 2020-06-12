@@ -52,7 +52,7 @@ public class PlaceTopCardIntoStasisAction extends AbstractGameAction {
                     if (this.numCards - 1 > 0)
                         AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction(this.numCards - 1));
                 } else {
-                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.charStrings.TEXT[6], true));
                 }
             }
         }
