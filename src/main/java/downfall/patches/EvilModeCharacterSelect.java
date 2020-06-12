@@ -4,6 +4,7 @@ import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
 import basemod.patches.whatmod.WhatMod;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
@@ -12,24 +13,33 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import guardian.characters.GuardianCharacter;
+import guardian.patches.GuardianEnum;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
+import slimebound.characters.SlimeboundCharacter;
+import slimebound.patches.SlimeboundEnum;
 import sneckomod.TheSnecko;
 import theHexaghost.TheHexaghost;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class EvilModeCharacterSelect {
+    public static boolean villainsInNormalAndNormalInVillains = false; //Make this a config and give it a better name.
+
+    //When the config is changed:
+    //
+    //      CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
+    //      CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
+    //
+
+
     public static boolean evilMode = false;
 
-    private static List<CharacterOption> villains = new ArrayList<>();
+    private static final List<CharacterOption> villains = new ArrayList<>();
 
     @SpirePatch(
             clz = CustomCharacterSelectScreen.class,
@@ -41,34 +51,73 @@ public class EvilModeCharacterSelect {
         )
         public static void Insert(CustomCharacterSelectScreen __instance) {
             villains.clear();
-            Iterator<CharacterOption> iter = __instance.options.iterator();
-            while (iter.hasNext()) {
-                CharacterOption o = iter.next();
-                if (!villains.contains(o) && downfallMod.modID.equals(WhatMod.findModID(o.c.getClass()))) {
-                    iter.remove();
-                    villains.add(o);
+
+            Iterator<CharacterOption> options = __instance.options.iterator();
+
+            ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
+            CharacterOption[] villainOptions = new CharacterOption[4];
+
+            while (options.hasNext())
+            {
+                CharacterOption o = options.next();
+
+                switch (o.c.chosenClass)
+                {
+                    case IRONCLAD:
+                    case THE_SILENT:
+                    case DEFECT:
+                    case WATCHER:
+                        if (villainsInNormalAndNormalInVillains)
+                            basegameOptions.add(o);
+                        break;
+                    default:
+                        boolean isVillain = true;
+                        if (o.c.chosenClass == SlimeboundEnum.SLIMEBOUND)
+                        {
+                            villainOptions[0] = o;
+                        }
+                        else if (o.c.chosenClass == GuardianEnum.GUARDIAN)
+                        {
+                            if (UnlockTracker.isCharacterLocked("Guardian")){
+                                o.locked = true;
+                                ReflectionHacks.setPrivate(o, CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                            }
+                            villainOptions[1] = o;
+                        }
+                        else if (o.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT)
+                        {
+                            if (UnlockTracker.isCharacterLocked("Hexaghost")){
+                                o.locked = true;
+                                ReflectionHacks.setPrivate(o, CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                            }
+                            villainOptions[2] = o;
+                        }
+                        else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO)
+                        {
+                            if (UnlockTracker.isCharacterLocked("Snecko")){
+                                o.locked = true;
+                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                            }
+                            villainOptions[3] = o;
+                        }
+                        else
+                        {
+                            isVillain = false;
+                            moddedOptions.add(o);
+                        }
+
+                        if (isVillain && !villainsInNormalAndNormalInVillains)
+                            options.remove();
+
+                        break;
                 }
             }
 
-            if (villains.size() >= 2) {
-                Collections.swap(villains, 0, 2);  //Switch Guardian and Slimeboss G H S -> S H G
-                Collections.swap(villains, 1, 2);  //Switch Hexaghost and Guardian S H G -> S G H
-            }
-            
-            for (CharacterOption co : villains){
-                if (co.c instanceof GuardianCharacter && UnlockTracker.isCharacterLocked("Guardian")){
-                    co.locked = true;
-                    ReflectionHacks.setPrivate(co,CharacterOption.class,"buttonImg",ImageMaster.CHAR_SELECT_LOCKED);
-                }
-                if (co.c instanceof TheHexaghost && UnlockTracker.isCharacterLocked("Hexaghost")){
-                    co.locked = true;
-                    ReflectionHacks.setPrivate(co,CharacterOption.class,"buttonImg",ImageMaster.CHAR_SELECT_LOCKED);
-                }
-                if (co.c instanceof TheSnecko && UnlockTracker.isCharacterLocked("Snecko")){
-                    co.locked = true;
-                    ReflectionHacks.setPrivate(co,CharacterOption.class,"buttonImg",ImageMaster.CHAR_SELECT_LOCKED);
-                }
-            }
+            villains.addAll(Arrays.asList(villainOptions));
+            villains.addAll(basegameOptions); //Will be empty if disabled
+            villains.addAll(moddedOptions);
+
+            /// To note: Should villains in the normal mode also be sorted? It looks a bit awkward when they're locked out of order.
         }
 
         public static class Locator extends SpireInsertLocator {
