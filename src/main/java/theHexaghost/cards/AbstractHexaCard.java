@@ -140,8 +140,8 @@ public abstract class AbstractHexaCard extends CustomCard {
         if (AbstractDungeon.player.hasPower(CrispyPower.POWER_ID)) {
             base += AbstractDungeon.player.getPower(CrispyPower.POWER_ID).amount;
         }
-        this.magicNumber = base;
-        this.isMagicNumberModified = (this.magicNumber != this.baseMagicNumber);
+        this.burn = base;
+        this.isBurnModified = (this.burn != this.baseBurn);
     }
 
     public void burn(AbstractMonster m, int amount) {

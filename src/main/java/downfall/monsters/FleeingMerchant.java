@@ -257,7 +257,6 @@ public class FleeingMerchant extends AbstractMonster {
     @Override
     public void escape() {
         super.escape();
-
     }
 
     @Override
