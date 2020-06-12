@@ -856,7 +856,7 @@ public class downfallMod implements
             possEncounterList.add("downfall:CharBossDefect");
             possEncounterList.add("downfall:CharBossWatcher");
             FleeingMerchant.DEAD = false;
-            FleeingMerchant.CURRENT_HP = 500;
+            FleeingMerchant.CURRENT_HP = 400;
             FleeingMerchant.CURRENT_STRENGTH = 0;
             FleeingMerchant.CURRENT_SOULS = 0;
             Cleric_Evil.encountered = false;
