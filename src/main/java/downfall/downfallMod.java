@@ -9,6 +9,8 @@ Event Override patches, and other things that only appear during Evil Runs.
  */
 
 import basemod.BaseMod;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
@@ -25,6 +27,7 @@ import charbosses.cards.anticards.PeaceOut;
 import charbosses.cards.anticards.ShieldSmash;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -39,10 +42,12 @@ import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
@@ -70,6 +75,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
@@ -89,6 +95,23 @@ public class downfallMod implements
     public static boolean tempAscensionHack = false;
     public static int tempAscensionOriginalValue = 0;
 
+    //Config Menu Stuff
+    private ModPanel settingsPanel;
+    public static Properties configDefault = new Properties();
+    public static boolean contentSharing_relics = true;
+    public static boolean contentSharing_potions = true;
+    public static boolean contentSharing_events = true;
+    public static boolean contentSharing_colorlessCards = true;
+    public static boolean crossoverCharacters = true;
+    public static boolean unlockEverything = false;
+    public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
+    public static final String PROP_RELIC_SHARING = "contentSharing_relics";
+    public static final String PROP_POTION_SHARING = "contentSharing_potions";
+    public static final String PROP_EVENT_SHARING = "contentSharing_events";
+    public static final String PROP_CARD_SHARING = "contentSharing_colorlessCards";
+    public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
+    public static final String PROP_UNLOCK_ALL = "unlockEverything";
+
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
     @SpireEnum
@@ -105,6 +128,16 @@ public class downfallMod implements
 
     public downfallMod() {
         BaseMod.subscribe(this);
+
+
+        configDefault.setProperty(PROP_EVENT_SHARING, "TRUE");
+        configDefault.setProperty(PROP_RELIC_SHARING, "TRUE");
+        configDefault.setProperty(PROP_POTION_SHARING, "TRUE");
+        configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
+        configDefault.setProperty(PROP_CARD_SHARING, "TRUE");
+
+        loadConfigData();
+
     }
 
     public static void initialize() {
@@ -140,6 +173,13 @@ public class downfallMod implements
             if (bruhData == null) {
                 bruhData = new SpireConfig("downfall", "TrapSaveData");
             }
+            SpireConfig config = new SpireConfig("downfall", "downfallSaveData", configDefault);
+
+            config.setBool(PROP_EVENT_SHARING, contentSharing_events);
+            config.setBool(PROP_RELIC_SHARING, contentSharing_relics);
+            config.setBool(PROP_POTION_SHARING, contentSharing_potions);
+            config.setBool(PROP_UNLOCK_ALL, unlockEverything);
+            config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
             e.printStackTrace();
@@ -270,7 +310,87 @@ public class downfallMod implements
         this.initializeMonsters();
         this.addPotions();
         this.initializeEvents();
+        this.initializeConfig();
 
+    }
+
+    private void initializeConfig() {
+        UIStrings configStrings = CardCrawlGame.languagePack.getUIString("downfall:ConfigMenuText");
+
+        // Load the Mod Badge
+        Texture badgeTexture = new Texture(assetPath("images/badge.png"));
+        // Create the Mod Menu
+
+        settingsPanel = new ModPanel();
+
+        ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
+                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_relics, settingsPanel, (label) -> {
+        }, (button) -> {
+            contentSharing_relics = button.enabled;
+            saveData();
+        });
+
+        ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
+                350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_events, settingsPanel, (label) -> {
+        }, (button) -> {
+            contentSharing_events = button.enabled;
+            saveData();
+        });
+
+        ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
+                350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_potions, settingsPanel, (label) -> {
+        }, (button) -> {
+            contentSharing_potions = button.enabled;
+            saveData();
+        });
+
+        ModLabeledToggleButton contentSharingBtnColorless = new ModLabeledToggleButton(configStrings.TEXT[3],
+                350.0f, 500.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_colorlessCards, settingsPanel, (label) -> {
+        }, (button) -> {
+            contentSharing_colorlessCards = button.enabled;
+            saveData();
+        });
+
+        ModLabeledToggleButton characterCrossoverBtn = new ModLabeledToggleButton(configStrings.TEXT[4],
+                350.0f, 400.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                crossoverCharacters, settingsPanel, (label) -> {
+        }, (button) -> {
+            crossoverCharacters = button.enabled;
+            saveData();
+        });
+
+        settingsPanel.addUIElement(contentSharingBtnEvents);
+        settingsPanel.addUIElement(contentSharingBtnPotions);
+        settingsPanel.addUIElement(contentSharingBtnRelics);
+        settingsPanel.addUIElement(contentSharingBtnColorless);
+        settingsPanel.addUIElement(characterCrossoverBtn);
+
+        BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
+
+    }
+
+    public static void loadConfigData() {
+        try {
+            SpireConfig config = new SpireConfig("downfall", "downfallSaveData", configDefault);
+            config.load();
+            contentSharing_events = config.getBool(PROP_EVENT_SHARING);
+            contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
+            contentSharing_potions = config.getBool(PROP_POTION_SHARING);
+            contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
+            crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
+        } catch (Exception e) {
+            e.printStackTrace();
+            clearData();
+        }
+    }
+
+
+    public static void clearData() {
+        saveData();
     }
 
     private void initializeEvents() {

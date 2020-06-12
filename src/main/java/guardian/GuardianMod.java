@@ -807,7 +807,7 @@ public static void saveData() {
 
     public void receivePostInitialize() {
 
-        UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");
+        //UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");
 
         BaseMod.registerCustomReward(
                 RewardItemTypePatch.GEM,
@@ -830,13 +830,13 @@ public static void saveData() {
                 });
 
 
-        logger.info("Load Badge Image and mod options");
+        //logger.info("Load Badge Image and mod options");
         // Load the Mod Badge
-        Texture badgeTexture = new Texture(getResourcePath("badge.png"));
+        //Texture badgeTexture = new Texture(getResourcePath("badge.png"));
 
         // Create the Mod Menu
 
-        settingsPanel = new ModPanel();
+        //settingsPanel = new ModPanel();
 /*
         ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
                 350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
@@ -877,7 +877,7 @@ public static void saveData() {
         settingsPanel.addUIElement(contentSharingBtnRelics);
 */
 
-        BaseMod.registerModBadge(badgeTexture, "The Guardian", "Michael Mayhem, zwolfiez", "Adds the Guardian character to the game.", settingsPanel);
+        //BaseMod.registerModBadge(badgeTexture, "The Guardian", "Michael Mayhem, zwolfiez", "Adds the Guardian character to the game.", settingsPanel);
 
         logger.info("Done loading badge Image and mod options");
 
