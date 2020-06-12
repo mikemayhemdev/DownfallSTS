@@ -404,28 +404,28 @@ public class CharacterSelectScreenPatches
                         hexaghostMask.render(sb);
 
                     if(reskinCount != 0){
-                        if (portraitAnimationLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
+                        if (portraitAnimationLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
                         sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
-                        if (portraitAnimationRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
+                        if (portraitAnimationRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
                         sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 920.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
 
                     }
 
-                    if (reskinRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
+                    if (reskinRight.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
                     sb.draw(ImageMaster.CF_RIGHT_ARROW, Settings.WIDTH / 2.0F + reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
-                    if (reskinLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE);} else {sb.setColor(Color.LIGHT_GRAY);}
+                    if (reskinLeft.hovered || Settings.isControllerMode) {sb.setColor(Color.WHITE.cpy());} else {sb.setColor(Color.LIGHT_GRAY.cpy());}
                     sb.draw(ImageMaster.CF_LEFT_ARROW, Settings.WIDTH / 2.0F - reskin_W / 2.0F - reskinX_center - 36.0f * Settings.scale, 800.0F * Settings.scale - 36.0f * Settings.scale, 0.0f, 0.0f, 48.0f, 48.0f, Settings.scale * 1.5f, Settings.scale * 1.5f, 0.0F, 0, 0, 48, 48, false, false);
 
                     FontHelper.cardTitleFont.getData().setScale(1.0F);
                     FontHelper.bannerFont.getData().setScale(0.8F);
 
                     if(reskinCount != 0) {
-                        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[reskinContent.portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center, 920.0F * Settings.scale, Settings.GOLD_COLOR);
+                        FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[reskinContent.portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center, 920.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                         FontHelper.renderFontCentered(sb, FontHelper.bannerFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimation")).TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 970 * Settings.scale , Settings.GOLD_COLOR);
                     }
 
-                    FontHelper.renderFontCentered(sb, FontHelper.bannerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale , Settings.GOLD_COLOR);
-                    FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[(reskinCount % 2) * (i + 1) + 1], Settings.WIDTH / 2.0F - reskinX_center, 800.0F * Settings.scale, Settings.GOLD_COLOR);
+                    FontHelper.renderFontCentered(sb, FontHelper.bannerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale , Settings.GOLD_COLOR.cpy());
+                    FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[(reskinCount % 2) * (i + 1) + 1], Settings.WIDTH / 2.0F - reskinX_center, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
 
 
 
@@ -479,12 +479,12 @@ public class CharacterSelectScreenPatches
 
                             sneckoSkeleton.setPosition(1296.0f * Settings.scale, Settings.HEIGHT - 1276.0f * Settings.scale);
 
-                            sneckoSkeleton.setColor(Color.WHITE);
+                            sneckoSkeleton.setColor(Color.WHITE.cpy());
                             sneckoSkeleton.setFlip(false,false);
                         }
 
 
-                        portraitSkeleton.setColor(Color.WHITE);
+                        portraitSkeleton.setColor(Color.WHITE.cpy());
                         portraitSkeleton.setFlip(false,false);
 
                     sb.end();
@@ -506,7 +506,7 @@ public class CharacterSelectScreenPatches
                                 portraitSkeleton.updateWorldTransform();
                                 sr.draw(CardCrawlGame.psb, portraitSkeleton);
 //===========
-                                portraitSkeleton.setColor(Color.WHITE);
+                                portraitSkeleton.setColor(Color.WHITE.cpy());
                                 portraitSkeleton.findBone("Waifu1_root").setPosition(sneckoWaifuX,sneckoWaifuY);
                                 portraitSkeleton.updateWorldTransform();
                                 sr.draw(CardCrawlGame.psb, portraitSkeleton);
