@@ -28,7 +28,7 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 public class EvilModeCharacterSelect {
-    public static boolean villainsInNormalAndNormalInVillains = false; //Make this a config and give it a better name.
+    public static boolean villainsInNormalAndNormalInVillains = true; //Make this a config and give it a better name.
 
     //When the config is changed:
     //
@@ -39,18 +39,21 @@ public class EvilModeCharacterSelect {
 
     public static boolean evilMode = false;
 
+    private static int maxEvilSelectIndex = 0;
     private static final List<CharacterOption> villains = new ArrayList<>();
+    private static final List<CharacterOption> standard = new ArrayList<>();
 
     @SpirePatch(
             clz = CustomCharacterSelectScreen.class,
             method = "initialize"
     )
-    public static class RemoveEvilOptions {
+    public static class InitializeCharacterOptions {
         @SpireInsertPatch(
                 locator = Locator.class
         )
         public static void Insert(CustomCharacterSelectScreen __instance) {
             villains.clear();
+            standard.clear();
 
             Iterator<CharacterOption> options = __instance.options.iterator();
 
@@ -117,6 +120,10 @@ public class EvilModeCharacterSelect {
             villains.addAll(basegameOptions); //Will be empty if disabled
             villains.addAll(moddedOptions);
 
+            maxEvilSelectIndex = (int)Math.ceil(((float)villains.size() / 4)) - 1;
+
+            standard.addAll(__instance.options);
+
             /// To note: Should villains in the normal mode also be sorted? It looks a bit awkward when they're locked out of order.
         }
 
@@ -143,22 +150,25 @@ public class EvilModeCharacterSelect {
                 if (evilMode) {
                     GoldToSoulPatches.changeGoldToSouls(false);
                     screen.options.clear();
-                    screen.options.addAll(villains);
+                    ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>)ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
 
                     ResetOptions.saved_optionsPerIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex");
                     ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex", 4);
 
+                    ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
+                    ResetOptions.saved_maxSelectIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex");
+                    ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", maxEvilSelectIndex);
+
+                    allOptions.clear();
+                    allOptions.addAll(villains);
+
                     try {
-                        Method m = CustomCharacterSelectScreen.class.getDeclaredMethod("positionButtons");
+                        Method m = CustomCharacterSelectScreen.class.getDeclaredMethod("setCurrentOptions", boolean.class);
                         m.setAccessible(true);
-                        m.invoke(screen);
+                        m.invoke(screen, false);
                     } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                         throw new RuntimeException(e);
                     }
-
-                    ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
-                    ResetOptions.saved_maxSelectIndex = (int) ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex");
-                    ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", 0);
                 } else {
                     GoldToSoulPatches.changeGoldToSouls(true);
                 }
@@ -180,9 +190,14 @@ public class EvilModeCharacterSelect {
                 if (saved_maxSelectIndex >= 0) {
                     if (__instance.charSelectScreen instanceof CustomCharacterSelectScreen) {
                         CustomCharacterSelectScreen screen = (CustomCharacterSelectScreen) __instance.charSelectScreen;
+                        ArrayList<CharacterOption> allOptions = (ArrayList<CharacterOption>)ReflectionHacks.getPrivate(screen, CustomCharacterSelectScreen.class, "allOptions");
+
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "selectIndex", 0);
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "maxSelectIndex", saved_maxSelectIndex);
                         ReflectionHacks.setPrivate(screen, CustomCharacterSelectScreen.class, "optionsPerIndex", saved_optionsPerIndex);
+
+                        allOptions.clear();
+                        allOptions.addAll(standard);
 
                         try {
                             Method m = CustomCharacterSelectScreen.class.getDeclaredMethod("setCurrentOptions", boolean.class);
