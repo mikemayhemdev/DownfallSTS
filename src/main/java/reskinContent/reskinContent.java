@@ -115,9 +115,9 @@ public class reskinContent implements
     @Override
     public void receivePostInitialize() {
         loadSettings();
-        Texture badgeTexture = new Texture(assetPath("/img/badge.png"));
-        ModPanel settingsPanel = new ModPanel();
-        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+        //Texture badgeTexture = new Texture(assetPath("/img/badge.png"));
+        //ModPanel settingsPanel = new ModPanel();
+        //BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
     }
 
