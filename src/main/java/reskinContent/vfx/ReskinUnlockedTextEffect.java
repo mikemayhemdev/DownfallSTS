@@ -8,13 +8,14 @@ package reskinContent.vfx;
  import com.megacrit.cardcrawl.helpers.FontHelper;
  import com.megacrit.cardcrawl.localization.UIStrings;
  import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
+ import reskinContent.reskinContent;
 
 public class ReskinUnlockedTextEffect extends AbstractGameEffect {
-   private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("BetaArtUnlockEffect");
+   private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(reskinContent.makeID("BetaArtUnlockEffect"));
    public static final String[] TEXT = uiStrings.TEXT;
    private static final float TEXT_DURATION = 3.0F;
-   private static final float START_Y = Settings.HEIGHT - 410.0F * Settings.scale;
-   private static final float TARGET_Y = Settings.HEIGHT - 310.0F * Settings.scale;
+   private static final float START_Y = Settings.HEIGHT - 470.0F * Settings.scale;
+   private static final float TARGET_Y = Settings.HEIGHT - 370.0F * Settings.scale;
    private float y;
    private String msg;
    

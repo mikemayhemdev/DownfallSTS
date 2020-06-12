@@ -119,19 +119,18 @@ public class reskinContent implements
         ModPanel settingsPanel = new ModPanel();
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
-
     }
 
     public static void saveSettings() {
         try {
-            SpireConfig config = new SpireConfig(CardCrawlGame.saveSlot + "reskinContentFix", "settings",reskinContentDefaults);
+            SpireConfig config = new SpireConfig( "reskinContent", "reskinContentSaveData",reskinContentDefaults);
             config.setBool(CardCrawlGame.saveSlot + "guardianReskinAnimation", guardianReskinAnimation);
-            config.setBool(CardCrawlGame.saveSlot +"slimeReskinAnimation", slimeReskinAnimation);
+            config.setBool(CardCrawlGame.saveSlot + "slimeReskinAnimation", slimeReskinAnimation);
             config.setBool(CardCrawlGame.saveSlot + "hexaghostReskinAnimation", hexaghostReskinAnimation);
             config.setBool(CardCrawlGame.saveSlot + "sneckoReskinAnimation", sneckoReskinAnimation);
 
             config.setBool(CardCrawlGame.saveSlot + "guardianReskinUnlock", guardianReskinUnlock);
-            config.setBool(CardCrawlGame.saveSlot +"slimeReskinUnlock", slimeReskinUnlock);
+            config.setBool(CardCrawlGame.saveSlot + "slimeReskinUnlock", slimeReskinUnlock);
             config.setBool(CardCrawlGame.saveSlot + "hexaghostReskinUnlock", hexaghostReskinUnlock);
             config.setBool(CardCrawlGame.saveSlot + "sneckoReskinUnlock", sneckoReskinUnlock);
 
@@ -140,6 +139,8 @@ public class reskinContent implements
 
             config.setInt(CardCrawlGame.saveSlot + "portraitAnimationType", portraitAnimationType);
 
+
+            System.out.println("==============reskin存入数据");
             config.save();
         } catch (Exception e) {
             e.printStackTrace();
@@ -148,8 +149,11 @@ public class reskinContent implements
 
     public static void loadSettings() {
         try {
-            SpireConfig config = new SpireConfig("reskinContentFix", "settings",reskinContentDefaults);
+            SpireConfig config = new SpireConfig("reskinContent", "reskinContentSaveData",reskinContentDefaults);
             config.load();
+            System.out.println("==============reskin载入数据");
+
+
             guardianReskinAnimation = config.getBool(CardCrawlGame.saveSlot + "guardianReskinAnimation");
             slimeReskinAnimation = config.getBool(CardCrawlGame.saveSlot +"slimeReskinAnimation");
             hexaghostReskinAnimation = config.getBool(CardCrawlGame.saveSlot +"hexaghostReskinAnimation");

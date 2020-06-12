@@ -3,6 +3,7 @@ package reskinContent.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.VictoryScreen;
@@ -30,49 +31,49 @@ public class VictoryScreenPatches
             }else {
                 int unlockedReskin = -1;
 
-                if(AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN)
+                if(AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN && !reskinContent.guardianReskinUnlock)
                     unlockedReskin = 0;
 
-                if(AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND)
+                if(AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND && !reskinContent.slimeReskinUnlock)
                     unlockedReskin = 1;
 
-                if(AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT)
+                if(AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT && !reskinContent.hexaghostReskinUnlock)
                     unlockedReskin = 2;
 
-                if(AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO)
+                if(AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO && !reskinContent.sneckoReskinUnlock)
                     unlockedReskin = 3;
 
                 if(unlockedReskin != -1){
                     AbstractDungeon.topLevelEffects.add(new ReskinUnlockedTextEffect(unlockedReskin));
-                    unlockReskin(unlockedReskin);
+
+
+                    switch (unlockedReskin){
+                        case 0:
+                            reskinContent.guardianReskinUnlock = true;
+                            break;
+                        case 1:
+                            reskinContent.slimeReskinUnlock = true;
+                            break;
+                        case 2:
+                            reskinContent.hexaghostReskinUnlock = true;
+                            break;
+                        case 3:
+                            reskinContent.sneckoReskinUnlock = true;
+                            break;
+                        default:
+                            break;
+                    }
                     reskinContent.saveSettings();
+                    System.out.println("==============解锁！！！====="+unlockedReskin);
+                    System.out.println(reskinContent.guardianReskinUnlock);
+                    System.out.println(reskinContent.slimeReskinUnlock);
+                    System.out.println(reskinContent.hexaghostReskinUnlock);
+                    System.out.println(reskinContent.sneckoReskinUnlock);
+                    System.out.println(CardCrawlGame.saveSlot);
+
                 }
             }
             SpireReturn.Continue();
-        }
-    }
-
-
-    private static void unlockReskin(int unlockedReskin){
-        switch (unlockedReskin){
-            case 0:
-                reskinContent.guardianReskinUnlock = true;
-                break;
-
-            case 1:
-                reskinContent.slimeReskinUnlock = true;
-                break;
-
-            case 2:
-                reskinContent.hexaghostReskinUnlock = true;
-                break;
-
-            case 3:
-                reskinContent.sneckoReskinUnlock = true;
-                break;
-
-            default:
-                break;
         }
     }
 }
