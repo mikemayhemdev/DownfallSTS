@@ -1,11 +1,9 @@
 package theHexaghost.ghostflames;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,7 +14,6 @@ import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.util.TextureLoader;
 
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
 import static theHexaghost.HexaMod.makeUIPath;
 
 public class InfernoGhostflame extends AbstractGhostflame {
@@ -29,7 +26,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
     private String ID = "hexamod:InfernoGhostflame";
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
-
 
 
     public InfernoGhostflame(float x, float y) {
@@ -78,7 +74,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
                 chargedFlames++;
             }
         }
-        if (charged){
+        if (charged) {
             return (x + "x" + chargedFlames);
         } else {
             return (x + "x" + (chargedFlames + 1));
@@ -86,7 +82,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
     }
 
 
-    public int getEffectCount(){
+    public int getEffectCount() {
         int x = damage;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
@@ -137,7 +133,9 @@ public class InfernoGhostflame extends AbstractGhostflame {
 
 
     @Override
-    public String getName(){ return NAME;}
+    public String getName() {
+        return NAME;
+    }
 
     @Override
     public String getDescription() {
