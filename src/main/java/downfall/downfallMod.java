@@ -486,7 +486,7 @@ public class downfallMod implements
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
                 //Event ID to Override//
-                .overrideEvent(KnowingSkull.ID)
+                .overrideEvent(com.megacrit.cardcrawl.events.city.KnowingSkull.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
