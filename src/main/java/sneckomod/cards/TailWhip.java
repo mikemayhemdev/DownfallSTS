@@ -3,7 +3,6 @@ package sneckomod.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.actions.MuddleHandAction;
 
 public class TailWhip extends AbstractSneckoCard {
 
@@ -23,9 +22,13 @@ public class TailWhip extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        applyToEnemy(m, autoWeak(m, getRandomNum(0, magicNumber)));
-        applyToEnemy(m, autoVuln(m, getRandomNum(0, magicNumber)));
-       // atb(new MuddleHandAction());
+        int x = getRandomNum(0, magicNumber);
+        if (x > 0)
+            applyToEnemy(m, autoWeak(m, x));
+        int y = getRandomNum(0, magicNumber);
+        if (y > 0)
+            applyToEnemy(m, autoVuln(m, getRandomNum(0, magicNumber)));
+        // atb(new MuddleHandAction());
     }
 
     public void upgrade() {
