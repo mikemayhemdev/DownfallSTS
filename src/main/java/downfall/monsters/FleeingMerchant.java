@@ -107,7 +107,7 @@ public class FleeingMerchant extends AbstractMonster {
         halfDead = false;
 
         damage.add(new DamageInfo(this, 2));
-        setHp(500);
+        setHp(400);
         this.currentHealth = CURRENT_HP;
 
         ESCAPED = false;
