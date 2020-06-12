@@ -1,5 +1,8 @@
 package downfall.monsters;
 
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -38,8 +41,46 @@ public class FaceTrader extends AbstractMonster {
                 break;
         }
 
+        loadAnimation("downfallResources/images/monsters/facetrader/facetrader.atlas", "downfallResources/images/monsters/facetrader/facetrader.json", 1.0F);
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+
+        this.stateData.setMix("Hit", "Idle", 0.2F);
+        this.stateData.setMix("AttackGremlin", "Idle", 0.2F);
+        this.stateData.setMix("AttackNloth", "Idle", 0.2F);
+        this.stateData.setMix("AttackCleric", "Idle", 0.2F);
+        this.stateData.setMix("AttackCultist", "Idle", 0.2F);
+        this.stateData.setMix("AttackSerpent", "Idle", 0.2F);
+
         this.damage.add(new DamageInfo(this, 15));
         this.damage.add(new DamageInfo(this, 10));
+    }
+
+    @Override
+    public void changeState(String stateName) {
+        switch(stateName) {
+            case "AttackGremlin":
+                this.state.setAnimation(0, "AttackGremlin", false);
+                this.state.addAnimation(0, "Idle", true, 0.0F);
+                break;
+            case "AttackNloth":
+                this.state.setAnimation(0, "AttackNloth", false);
+                this.state.addAnimation(0, "Idle", true, 0.0F);
+                break;
+            case "AttackCleric":
+                this.state.setAnimation(0, "AttackCleric", false);
+                this.state.addAnimation(0, "Idle", true, 0.0F);
+                break;
+            case "AttackCultist":
+                this.state.setAnimation(0, "AttackCultist", false);
+                this.state.addAnimation(0, "Idle", true, 0.0F);
+                break;
+            case "AttackSerpent":
+                this.state.setAnimation(0, "AttackSerpent", false);
+                this.state.addAnimation(0, "Idle", true, 0.0F);
+                break;
+        }
+
     }
 
     public void takeTurn() {
@@ -47,22 +88,28 @@ public class FaceTrader extends AbstractMonster {
             case 1:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.FIRE));
                 addToBot(new MakeTempCardInDrawPileAction(new Doubt(), 1, true, false));
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackSerpent"));
+
                 break;
             case 2:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.FIRE));
                 addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new WeakPower(AbstractDungeon.player, 1, false), 1));
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackGremlin"));
                 break;
             case 3:
                 addToBot(new DamageAction(AbstractDungeon.player, this.damage.get(1), AbstractGameAction.AttackEffect.FIRE));
                 addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawReductionPowerPlus(AbstractDungeon.player, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackNloth"));
                 break;
             case 4:
                 addToBot(new GainBlockAction(this, 10));
                 addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackCultist"));
                 break;
             case 5:
                 addToBot(new GainBlockAction(this, 10));
                 addToBot(new HealAction(this, this, 16));
+                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "AttackCleric"));
                 break;
         }
 
@@ -106,4 +153,5 @@ public class FaceTrader extends AbstractMonster {
                 break;
         }
     }
+
 }
