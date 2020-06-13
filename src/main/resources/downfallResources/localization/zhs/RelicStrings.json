@@ -471,5 +471,19 @@
       "前 #b2 场战斗的敌人将落荒而逃。",
       "这个遗物的效果已经耗尽。"
     ]
+  },
+  "downfall:replacements": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "在商人，Boss以及精英战斗你的回合开始时，获得 [E] 。",
+      "诅咒金币",
+      "Few who still live know the true cost of this old coin...",
+      "MVB Card",
+      "Truly, you are the Heart's MVB: Most Valuable Boss.",
+      "The Heart's corruption knows no limits - not even precious pets.",
+      "Corrupted Courier",
+      "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%."
+    ]
   }
 }
