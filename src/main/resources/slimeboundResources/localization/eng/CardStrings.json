@@ -406,5 +406,10 @@
   "Slimebound:Schlurp": {
     "NAME": "Schlurp",
     "DESCRIPTION": "Add !M! *Licks to your hand."
+  },
+  "Slimebound:BronzeBeam": {
+    "NAME": "Bronze Beam",
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bronze_Slime",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bronze_Slime"
   }
 }

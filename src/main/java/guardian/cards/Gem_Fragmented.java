@@ -46,6 +46,7 @@ public class Gem_Fragmented extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = FRAGMENTED;
+        this.cardsToPreview = new CrystalShiv();
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
