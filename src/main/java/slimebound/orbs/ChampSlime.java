@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 import slimebound.actions.SlimeAutoAttack;
 import slimebound.vfx.CrownParticle;
@@ -36,8 +37,9 @@ public class ChampSlime
 
     public void postSpawnEffects() {
         this.crownVFX = new CrownParticle(this);
-
+        if(!reskinContent.slimeReskinAnimation){
         AbstractDungeon.effectList.add(this.crownVFX);
+        }
     }
 
 
@@ -60,6 +62,7 @@ public class ChampSlime
     }
 
     public void cleanUpVFX() {
+        if(!reskinContent.slimeReskinAnimation)
         this.crownVFX.finish();
     }
 
