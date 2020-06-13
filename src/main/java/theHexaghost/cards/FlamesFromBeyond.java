@@ -36,7 +36,8 @@ public class FlamesFromBeyond extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            //upgradeMagicNumber(UPG_MAGIC);
+            upgradeBurn(UPG_MAGIC);
         }
     }
 }
