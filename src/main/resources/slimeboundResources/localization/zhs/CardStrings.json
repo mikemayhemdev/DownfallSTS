@@ -408,5 +408,10 @@
   "Slimebound:Schlurp": {
     "NAME": "咀嚼",
     "DESCRIPTION": "将 !M! *舔舐 牌加入手牌。"
+  },
+  "Slimebound:BronzeBeam": {
+    "NAME": "铜球射线",
+    "DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:青铜史莱姆 。",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:分裂 slimeboundmod:青铜史莱姆 。"
   }
 }

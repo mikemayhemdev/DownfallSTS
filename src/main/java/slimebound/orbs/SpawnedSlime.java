@@ -119,11 +119,11 @@ public abstract class SpawnedSlime
         skeletonMap.put(SlimingSlime.ID,                 reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_S"));
         skeletonMap.put(TorchHeadSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
 
-        skeletonMap.put(ChampSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
-        skeletonMap.put(DarklingSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
-        skeletonMap.put(DrawingSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
+        skeletonMap.put(ChampSlime.ID,                   reskinContent.assetPath("img/Slimebound/orbs/ChampSlime"));
+        skeletonMap.put(DarklingSlime.ID,                "images/monsters/theForest/darkling/skeleton");
+        skeletonMap.put(DrawingSlime.ID,                 reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
         skeletonMap.put(ProtectorSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
-        skeletonMap.put(SlowingSlime.ID,               reskinContent.assetPath("img/Slimebound/orbs/Slime_spike_M"));
+        skeletonMap.put(SlowingSlime.ID,                 reskinContent.assetPath("img/Slimebound/orbs/TimeSlime"));
 
 
         modelColorMap.put(AttackSlime.ID,             new Color(0.8F,0.25F,0.25F,2F));

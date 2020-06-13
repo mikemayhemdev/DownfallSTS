@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import slimebound.SlimeboundMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
@@ -44,7 +43,7 @@ public abstract class AbstractGhostflame {
 
     public int triggersRequired = 0;
 
-    public Color textColor = new Color(1F,1F,1F,1F);
+    public Color textColor = new Color(1F, 1F, 1F, 1F);
 
     public float animAlphaBySlot[] = new float[3];
     private boolean useBrightTexture[] = new boolean[3];
@@ -63,17 +62,17 @@ public abstract class AbstractGhostflame {
         graphicalRender = new MyOrb(x, y, this, hitbox);
     }
 
-    public void advanceTrigger(AbstractCard c){
+    public void advanceTrigger(AbstractCard c) {
 
     }
 
-    public void advanceTriggerAnim(){
+    public void advanceTriggerAnim() {
         if (getActiveFlamesTriggerCount() <= 2) {
             animAlphaBySlot[getActiveFlamesTriggerCount()] = AbstractGhostflame.whiteOverlayTimer;
         }
     }
 
-    public int getActiveFlamesTriggerCount(){
+    public int getActiveFlamesTriggerCount() {
         return 0;
     }
 
@@ -96,7 +95,7 @@ public abstract class AbstractGhostflame {
                 ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
             }
             for (int i = 0; i < 3; i++) {
-                if (animAlphaBySlot[i] <= 0F && !useBrightTexture[i]){
+                if (animAlphaBySlot[i] <= 0F && !useBrightTexture[i]) {
                     animAlphaBySlot[i] = AbstractGhostflame.whiteOverlayTimer;
                 }
             }
@@ -113,12 +112,12 @@ public abstract class AbstractGhostflame {
         if (flashTimer > 1.0F)
             flashTimer -= Gdx.graphics.getDeltaTime();
         for (int i = 0; i < 3; i++) {
-            if (animAlphaBySlot[i] > 0F){
+            if (animAlphaBySlot[i] > 0F) {
                 animAlphaBySlot[i] -= Gdx.graphics.getDeltaTime();
-                if (animAlphaBySlot[i] < whiteOverlayTimer / 2F){
+                if (animAlphaBySlot[i] < whiteOverlayTimer / 2F) {
                     useBrightTexture[i] = true;
                 }
-                if (animAlphaBySlot[i] < 0F){
+                if (animAlphaBySlot[i] < 0F) {
                     animAlphaBySlot[i] = 0F;
                 }
             }
@@ -147,7 +146,7 @@ public abstract class AbstractGhostflame {
         AbstractDungeon.actionManager.addToTop(e);
     }
 
-    public void renderGhostflameTriggerUI(SpriteBatch sb){
+    public void renderGhostflameTriggerUI(SpriteBatch sb) {
         if (activeGhostFlame == this) {
 
             int slots = this.triggersRequired;
@@ -167,14 +166,14 @@ public abstract class AbstractGhostflame {
                 float x = 0F;
                 float y = 0F;
 
-                switch (slots){
+                switch (slots) {
                     case 1: {
                         x = triggerSlot2x;
                         y = triggerSlot2y;
                         break;
                     }
                     case 2: {
-                        switch (i){
+                        switch (i) {
                             case 0: {
                                 x = triggerSlot2x - ((triggerSlot2x - triggerSlot1x) / 2);
                                 y = triggerSlot2y;
@@ -189,7 +188,7 @@ public abstract class AbstractGhostflame {
                         break;
                     }
                     case 3: {
-                        switch (i){
+                        switch (i) {
                             case 0: {
                                 x = triggerSlot1x;
                                 y = triggerSlot1y;
@@ -211,7 +210,7 @@ public abstract class AbstractGhostflame {
                 }
 
                 Texture b;
-                if (useBrightTexture[i]){
+                if (useBrightTexture[i]) {
                     b = getHelperTextureBright();
                 } else {
                     b = getHelperTexture();
@@ -219,13 +218,13 @@ public abstract class AbstractGhostflame {
                 sb.setColor(1F, 1F, 1F, .9F);
                 sb.draw(b, x, y, 0, 0, b.getWidth(), b.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, b.getWidth(), b.getHeight(), false, false);
 
-                if (animAlphaBySlot[i] > 0F){
+                if (animAlphaBySlot[i] > 0F) {
                     //SlimeboundMod.logger.info("Anim alpha slot " + i + " animating: " + animAlphaBySlot[i]);
-                    if (animAlphaBySlot[i] < whiteOverlayTimer / 2F){
-                        float alpha = Interpolation.linear.apply(0F,.95F, animAlphaBySlot[i] / (whiteOverlayTimer / 2F));
+                    if (animAlphaBySlot[i] < whiteOverlayTimer / 2F) {
+                        float alpha = Interpolation.linear.apply(0F, .95F, animAlphaBySlot[i] / (whiteOverlayTimer / 2F));
                         sb.setColor(1F, 1F, 1F, alpha);
                     } else {
-                        float alpha = Interpolation.linear.apply(.95F,0F, (animAlphaBySlot[i] - (whiteOverlayTimer / 2F)) / (whiteOverlayTimer / 2F));
+                        float alpha = Interpolation.linear.apply(.95F, 0F, (animAlphaBySlot[i] - (whiteOverlayTimer / 2F)) / (whiteOverlayTimer / 2F));
                         sb.setColor(1F, 1F, 1F, alpha);
                     }
 
@@ -234,11 +233,9 @@ public abstract class AbstractGhostflame {
                 }
 
 
-
                 sb.setColor(1F, 1F, 1F, 1F);
 
             }
-
 
 
         }
@@ -256,12 +253,13 @@ public abstract class AbstractGhostflame {
                 if (gf.charged) x++;
             ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
         }
+        /*
         for (int i = 0; i < 3; i++) {
-
             animAlphaBySlot[i] = 0F;
             useBrightTexture[i] = false;
             update();
         }
+        */
     }
 
     public void flash() {
@@ -274,5 +272,10 @@ public abstract class AbstractGhostflame {
 
     public void activate() {
         GhostflameHelper.activeGhostFlame = this;
+        for (int i = 0; i < 3; i++) {
+            animAlphaBySlot[i] = 0F;
+            useBrightTexture[i] = false;
+            update();
+        }
     }
 }

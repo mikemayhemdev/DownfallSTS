@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
@@ -18,7 +19,7 @@ import downfall.vfx.PotionThrowEffect;
 public class LadyInBlue extends AbstractMonster {
 
     public static final String ID = downfallMod.makeID("LadyInBlue");
-    public static final String NAME = "The Woman in Blue";
+    public static final String NAME = CardCrawlGame.languagePack.getEventString("The Woman in Blue").NAME;
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 150.0F;

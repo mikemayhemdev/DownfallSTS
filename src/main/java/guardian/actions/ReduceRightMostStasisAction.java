@@ -25,7 +25,6 @@ public class ReduceRightMostStasisAction extends AbstractGameAction {
 
     public void update() {
         if (AbstractDungeon.player.orbs.size() > 0) {
-
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
                     if ((!this.fromRelic || (this.fromRelic && ((StasisOrb) o).passiveAmount > 1))) {
