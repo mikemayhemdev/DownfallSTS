@@ -178,6 +178,15 @@ public class reskinContent implements
         saveSettings();
     }
 
+    public static void unlockAllReskin()
+    {
+        guardianReskinUnlock = true;
+        slimeReskinAnimation = true;
+        hexaghostReskinAnimation = true;
+        sneckoReskinAnimation = true;
+        saveSettings();
+    }
+
     @Override
     public void receiveStartGame() {
 
