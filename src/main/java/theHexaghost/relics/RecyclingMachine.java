@@ -36,7 +36,7 @@ public class RecyclingMachine extends CustomRelic {
 
     @Override
     public void onExhaust(AbstractCard card) {
-        if (card.isEthereal) {
+        if (card.isEthereal &&!activated) {
             flash();
             activated = true;
             stopPulse();
