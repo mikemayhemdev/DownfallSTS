@@ -5,6 +5,7 @@ import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,7 +18,7 @@ import downfall.powers.TransformDrawnCardsPower;
 public class Augmenter extends AbstractMonster {
 
     public static final String ID = downfallMod.makeID("Augmenter");
-    public static final String NAME = "Augmenter";
+    public static final String NAME = CardCrawlGame.languagePack.getEventString("Drug Dealer").NAME;
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 150.0F;

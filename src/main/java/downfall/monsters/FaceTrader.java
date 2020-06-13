@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 public class FaceTrader extends AbstractMonster {
 
     public static final String ID = downfallMod.makeID("FaceTrader");
-    public static final String NAME = "Face Trader";
+    public static final String NAME = CardCrawlGame.languagePack.getEventString("FaceTrader").NAME;
     private static final float HB_X = 0.0F;
     private static final float HB_Y = 0.0F;
     private static final float HB_W = 150.0F;
