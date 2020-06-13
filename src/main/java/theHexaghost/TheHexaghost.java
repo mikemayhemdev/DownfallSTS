@@ -77,7 +77,7 @@ public class TheHexaghost extends CustomPlayer {
 
     public TheHexaghost(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "hexamodResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
-        if(reskinContent.hexaghostOriginalAnimation) {
+        if(!reskinContent.hexaghostReskinAnimation) {
             initializeClass(null,
                     SHOULDER1,
                     SHOULDER2,
@@ -109,7 +109,7 @@ public class TheHexaghost extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.hexaghostOriginalAnimation){
+        if(!reskinContent.hexaghostReskinAnimation){
             this.loadAnimation(atlasURL, this.jsonURL, renderscale);
         }else {
             this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);

@@ -33,7 +33,17 @@
   "downfall:AscensionText": {
     "TEXT": [
       "19. Bosses have an extra Relic.",
-      "20. Act 3 Boss has Lizard Tail and Magic Flower."
+      "20. Act 3 Boss has Lizard Tail and Magic Flower.",
+      "Obtain the Ruby Key. Break it later."
+    ]
+  },
+  "downfall:ConfigMenuText": {
+    "TEXT": [
+      "Allow Standard runs to encounter global relics from Downfall's characters.",
+      "Allow Standard runs to encounter global potions from Downfall.",
+      "Allow Standard runs to encounter global events from Downfall.",
+      "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
+      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs."
     ]
   }
 }

@@ -21,18 +21,12 @@
       "全特效"
     ]
   },
-  "reskinContent:Name": {
+  "reskinContent:BetaArtUnlockEffect": {
     "TEXT": [
-      "守护者",
-      "黏黏史莱姆"
-    ]
-  },
-  "reskinContent:modSettings": {
-    "TEXT": [
-      "去除六火的面具",
-      "去除六火周围的鬼魂",
-      "关闭动态立绘--蹲酱",
-      "禁用敌人皮肤"
+      "已解锁守护者皮肤！",
+      "已解锁史莱姆老大皮肤！",
+      "已解锁六火亡魂皮肤！",
+      "已解锁异蛇皮肤！"
     ]
   }
 }

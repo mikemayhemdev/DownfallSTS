@@ -72,7 +72,7 @@ public class GuardianCharacter extends CustomPlayer {
     public GuardianCharacter(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "guardianResources/GuardianImages/char/orb/vfx.png", (String)null, (String)null);
 
-        if(reskinContent.guardianOriginalAnimation){
+        if(!reskinContent.guardianReskinAnimation){
         this.initializeClass(null,
                 "guardianResources/GuardianImages/char/shoulder2.png",
                 "guardianResources/GuardianImages/char/shoulder.png",
@@ -115,7 +115,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(reskinContent.guardianOriginalAnimation){
+        if(!reskinContent.guardianReskinAnimation){
             this.loadAnimation(atlasURL, this.currentJson, renderscale);
         }else {
             this.loadAnimation(atlasURL2, this.currentJson2, renderscale2);
@@ -136,7 +136,7 @@ public class GuardianCharacter extends CustomPlayer {
     public void switchToDefensiveMode(){
         if (!inShattered) {
             if (!inDefensive) {
-                if(reskinContent.guardianOriginalAnimation){
+                if(!reskinContent.guardianReskinAnimation){
                     CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
                     this.stateData.setMix("idle", "defensive", 0.2F);
                     this.state.setTimeScale(.75F);
@@ -166,7 +166,7 @@ public class GuardianCharacter extends CustomPlayer {
     public void switchToOffensiveMode() {
         if (!inShattered) {
             if (inDefensive) {
-                if(reskinContent.guardianOriginalAnimation){
+                if(!reskinContent.guardianReskinAnimation){
                     CardCrawlGame.sound.playA("GUARDIAN_ROLL_UP", .25F);
                     this.stateData.setMix("defensive", "idle", 0.2F);
                     this.state.setTimeScale(.75F);

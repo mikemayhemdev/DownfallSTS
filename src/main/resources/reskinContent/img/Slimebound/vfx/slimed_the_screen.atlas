@@ -1,0 +1,34 @@
+
+slimed_the_screen.png
+size: 2048,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+00/slime1
+  rotate: false
+  xy: 1, 1
+  size: 1920, 1851
+  orig: 1920, 1851
+  offset: 0, 0
+  index: -1
+00/slime2
+  rotate: false
+  xy: 364, 3044
+  size: 264, 505
+  orig: 264, 506
+  offset: 0, 0
+  index: -1
+00/slime3
+  rotate: false
+  xy: 1, 3044
+  size: 361, 977
+  orig: 361, 977
+  offset: 0, 0
+  index: -1
+00/slime4
+  rotate: false
+  xy: 1, 1854
+  size: 641, 1188
+  orig: 641, 1188
+  offset: 0, 0
+  index: -1

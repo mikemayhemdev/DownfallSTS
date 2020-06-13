@@ -54,7 +54,9 @@ public class SnakeSap extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new NoApplyRandomDamageAction(m, silly, damage, 1, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, this));
-        atb(new GainEnergyAction(getRandomNum(0, magicNumber, this)));
+        int x = getRandomNum(0, magicNumber, this);
+        if (x > 0)
+            atb(new GainEnergyAction(x));
     }
 
     public void upgrade() {

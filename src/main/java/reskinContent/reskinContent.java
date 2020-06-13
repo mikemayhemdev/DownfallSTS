@@ -1,5 +1,7 @@
 package reskinContent;
 
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import reskinContent.helpers.AssetLoader;
 import basemod.BaseMod;
 import basemod.ModLabel;
@@ -46,10 +48,15 @@ public class reskinContent implements
     public static final String AUTHOR = "Rita";
     public static final String DESCRIPTION = "";
     //设置用变量
-    public static boolean guardianOriginalAnimation = true;
-    public static boolean slimeOriginalAnimation = true;
-    public static boolean hexaghostOriginalAnimation = true;
-    public static boolean sneckoOriginalAnimation = true;
+    public static boolean guardianReskinAnimation = false;
+    public static boolean slimeReskinAnimation = false;
+    public static boolean hexaghostReskinAnimation = false;
+    public static boolean sneckoReskinAnimation = false;
+
+    public static boolean guardianReskinUnlock = false;
+    public static boolean slimeReskinUnlock = false;
+    public static boolean hexaghostReskinUnlock = false;
+    public static boolean sneckoReskinUnlock = false;
 
     public static boolean hexaghostMask = false;
 
@@ -108,24 +115,32 @@ public class reskinContent implements
     @Override
     public void receivePostInitialize() {
         loadSettings();
-        Texture badgeTexture = new Texture(assetPath("/img/badge.png"));
-        ModPanel settingsPanel = new ModPanel();
-        BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
+        //Texture badgeTexture = new Texture(assetPath("/img/badge.png"));
+        //ModPanel settingsPanel = new ModPanel();
+        //BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
     }
 
     public static void saveSettings() {
         try {
-            SpireConfig config = new SpireConfig("reskinContentFix", "settings",reskinContentDefaults);
-            config.setBool("guardianOriginalAnimation", guardianOriginalAnimation);
-            config.setBool("slimeOriginalAnimation", slimeOriginalAnimation);
-            config.setBool("hexaghostOriginalAnimation", hexaghostOriginalAnimation);
-            config.setBool("sneckoOriginalAnimation", sneckoOriginalAnimation);
-            config.setBool("hexaghostMask", hexaghostMask);
+            SpireConfig config = new SpireConfig( "reskinContent", "reskinContentSaveData",reskinContentDefaults);
+            config.setBool(CardCrawlGame.saveSlot + "guardianReskinAnimation", guardianReskinAnimation);
+            config.setBool(CardCrawlGame.saveSlot + "slimeReskinAnimation", slimeReskinAnimation);
+            config.setBool(CardCrawlGame.saveSlot + "hexaghostReskinAnimation", hexaghostReskinAnimation);
+            config.setBool(CardCrawlGame.saveSlot + "sneckoReskinAnimation", sneckoReskinAnimation);
+
+            config.setBool(CardCrawlGame.saveSlot + "guardianReskinUnlock", guardianReskinUnlock);
+            config.setBool(CardCrawlGame.saveSlot + "slimeReskinUnlock", slimeReskinUnlock);
+            config.setBool(CardCrawlGame.saveSlot + "hexaghostReskinUnlock", hexaghostReskinUnlock);
+            config.setBool(CardCrawlGame.saveSlot + "sneckoReskinUnlock", sneckoReskinUnlock);
+
+            config.setBool(CardCrawlGame.saveSlot + "hexaghostMask", hexaghostMask);
 
 
-            config.setInt("portraitAnimationType", portraitAnimationType);
+            config.setInt(CardCrawlGame.saveSlot + "portraitAnimationType", portraitAnimationType);
 
+
+            System.out.println("==============reskin存入数据");
             config.save();
         } catch (Exception e) {
             e.printStackTrace();
@@ -134,15 +149,24 @@ public class reskinContent implements
 
     public static void loadSettings() {
         try {
-            SpireConfig config = new SpireConfig("reskinContentFix", "settings",reskinContentDefaults);
+            SpireConfig config = new SpireConfig("reskinContent", "reskinContentSaveData",reskinContentDefaults);
             config.load();
-            guardianOriginalAnimation = config.getBool("guardianOriginalAnimation");
-            slimeOriginalAnimation = config.getBool("slimeOriginalAnimation");
-            hexaghostOriginalAnimation = config.getBool("hexaghostOriginalAnimation");
-            sneckoOriginalAnimation = config.getBool("sneckoOriginalAnimation");
-            hexaghostMask = config.getBool("hexaghostMask");
+            System.out.println("==============reskin载入数据");
 
-            portraitAnimationType = config.getInt("portraitAnimationType");
+
+            guardianReskinAnimation = config.getBool(CardCrawlGame.saveSlot + "guardianReskinAnimation");
+            slimeReskinAnimation = config.getBool(CardCrawlGame.saveSlot +"slimeReskinAnimation");
+            hexaghostReskinAnimation = config.getBool(CardCrawlGame.saveSlot +"hexaghostReskinAnimation");
+            sneckoReskinAnimation = config.getBool(CardCrawlGame.saveSlot + "sneckoReskinAnimation");
+
+            guardianReskinUnlock = config.getBool(CardCrawlGame.saveSlot + "guardianReskinUnlock");
+            slimeReskinUnlock = config.getBool(CardCrawlGame.saveSlot +"slimeReskinUnlock");
+            hexaghostReskinUnlock = config.getBool(CardCrawlGame.saveSlot +"hexaghostReskinUnlock");
+            sneckoReskinUnlock = config.getBool(CardCrawlGame.saveSlot + "sneckoReskinUnlock");
+
+            hexaghostMask = config.getBool(CardCrawlGame.saveSlot +"hexaghostMask");
+
+            portraitAnimationType = config.getInt(CardCrawlGame.saveSlot +"portraitAnimationType");
 
         } catch (Exception e) {
             e.printStackTrace();

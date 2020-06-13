@@ -612,20 +612,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     }
 
-    public void adjustRelics() {
-        // remove all shareable relics wherever they are, then re-add them.
-        // assuming right now that there are no overheated expansion relics shared by other characters.
-        for (AbstractRelic relic : shareableRelics) {
-            BaseMod.removeRelic(relic);
-            BaseMod.removeRelicFromCustomPool(relic, AbstractCardEnum.SLIMEBOUND);
-        }
-
-        addSharedRelics();
-
-
-    }
-
-
     public void receivePostBattle(AbstractRoom r) {
 
         goopGlow = false;
@@ -675,62 +661,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     }
 
     public void receivePostInitialize() {
-        UIStrings configStrings = CardCrawlGame.languagePack.getUIString("slimeboundConfigMenuText");
-
-        logger.info("Load Badge Image and mod options");
-        // Load the Mod Badge
-        Texture badgeTexture = new Texture(getResourcePath("badge.png"));
-
-        // Create the Mod Menu
-
-        settingsPanel = new ModPanel();
-
-        ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
-                350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_relics, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_relics = button.enabled;
-            adjustRelics();
-            saveData();
-        });
-
-        ModLabeledToggleButton contentSharingBtnEvents = new ModLabeledToggleButton(configStrings.TEXT[2],
-                350.0f, 600.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_events, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_events = button.enabled;
-            saveData();
-        });
-
-        ModLabeledToggleButton contentSharingBtnPotions = new ModLabeledToggleButton(configStrings.TEXT[1],
-                350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                contentSharing_potions, settingsPanel, (label) -> {
-        }, (button) -> {
-            contentSharing_potions = button.enabled;
-            refreshPotions();
-            saveData();
-        });
-
-        ModLabeledToggleButton unlockEverythingBtn = new ModLabeledToggleButton(configStrings.TEXT[3],
-                350.0f, 450.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                unlockEverything, settingsPanel, (label) -> {
-        }, (button) -> {
-            unlockEverything = button.enabled;
-            unlockEverything();
-            saveData();
-        });
-
-
-        settingsPanel.addUIElement(unlockEverythingBtn);
-        settingsPanel.addUIElement(contentSharingBtnEvents);
-        settingsPanel.addUIElement(contentSharingBtnPotions);
-        settingsPanel.addUIElement(contentSharingBtnRelics);
-
-
-        BaseMod.registerModBadge(badgeTexture, "Slimebound", "Michael Mayhem", "Adds the Slimebound character to the game.", settingsPanel);
-
-        logger.info("Done loading badge Image and mod options");
-
         addPotions();
 
         //Dungeon patch contains the content sharing event logic

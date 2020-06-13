@@ -37,7 +37,7 @@ public class DoubleSlimeParticle extends com.megacrit.cardcrawl.vfx.AbstractGame
     private float y;
 
     public DoubleSlimeParticle(AbstractPlayer p) {
-        if(reskinContent.slimeOriginalAnimation){
+        if(!reskinContent.slimeReskinAnimation){
             this.atlas = new TextureAtlas(Gdx.files.internal("slimeboundResources/SlimeboundImages/char/skeleton.atlas"));
             SkeletonJson json = new SkeletonJson(this.atlas);
 

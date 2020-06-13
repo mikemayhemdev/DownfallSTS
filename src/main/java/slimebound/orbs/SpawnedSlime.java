@@ -148,7 +148,7 @@ public abstract class SpawnedSlime
     public SpawnedSlime(String ID, Color projectileColor, String atlasString, String skeletonString, boolean medScale, boolean alt, int passive, int initialBoost, boolean movesToAttack, Color deathColor, SlimeFlareEffect.OrbFlareColor OrbFlareColor, Texture intentImage) {
 
         this.scale = scale * .85F;
-        if(reskinContent.slimeOriginalAnimation){
+        if(!reskinContent.slimeReskinAnimation){
             this.modelColor = modelColor;
 
             this.atlas = new TextureAtlas(Gdx.files.internal(atlasString));
@@ -186,7 +186,7 @@ public abstract class SpawnedSlime
 
 
         SkeletonData skeletonData ;
-        if(reskinContent.slimeOriginalAnimation){
+        if(!reskinContent.slimeReskinAnimation){
             skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonString));
         }else {
             skeletonData = json.readSkeletonData(Gdx.files.internal(skeletonMap.get(ID)+".json"));

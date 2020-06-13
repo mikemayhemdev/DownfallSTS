@@ -21,18 +21,12 @@
       "Full Effect"
     ]
   },
-  "reskinContent:Name": {
+  "reskinContent:BetaArtUnlockEffect": {
     "TEXT": [
-      "The Guardian",
-      "The Slimebound"
+      "Guardian Beta Card Art Unlocked!",
+      "Slime Boss Beta Card Art Unlocked!",
+      "Hexaghost Beta Card Art Unlocked!",
+      "Snecko Beta Card Art Unlocked!"
     ]
-  },
-  "reskinContent:modSettings": {
-  "TEXT": [
-    "Remove mask of Hexaghost",
-    "Remove ghost Surround Hexaghost",
-    "Disable animated portrait--Guardian",
-    "Disable enemy's reskin"
-  ]
-}
+  }
 }

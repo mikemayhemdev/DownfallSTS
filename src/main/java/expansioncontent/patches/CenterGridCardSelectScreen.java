@@ -1,7 +1,9 @@
 package expansioncontent.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.select.GridCardSelectScreen;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 @SpirePatch(
         clz = GridCardSelectScreen.class,
