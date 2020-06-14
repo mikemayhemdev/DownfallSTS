@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
 import guardian.events.GemMine;
 import guardian.patches.AbstractCardEnum;
@@ -362,6 +363,8 @@ public class SneckoMod implements
         BaseMod.addEvent(new AddEventParams.Builder(SuspiciousHouse.ID, SuspiciousHouse.class) //Event ID//
                 .dungeonID(TheCity.ID)
                 .eventType(EventUtils.EventType.NORMAL)
+                //Only in Evil if content sharing is disabled
+                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
     }
 }
