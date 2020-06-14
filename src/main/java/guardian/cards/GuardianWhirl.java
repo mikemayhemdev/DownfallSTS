@@ -18,6 +18,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.stances.DefensiveMode;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class GuardianWhirl extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GuardianWhirl");
@@ -69,7 +71,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("guardianwhirl.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

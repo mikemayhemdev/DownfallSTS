@@ -1,13 +1,17 @@
 package guardian.cards;
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.GuardianMod;
 import guardian.powers.BeamBuffPower;
 
@@ -15,7 +19,7 @@ import java.util.ArrayList;
 
 
 public abstract class AbstractGuardianCard extends CustomCard {
-
+    public String betaArtPath;
     public Integer socketCount = 0;
     public ArrayList<GuardianMod.socketTypes> sockets = new ArrayList<>();
     public GuardianMod.socketTypes thisGemsType = null;
@@ -39,6 +43,32 @@ public abstract class AbstractGuardianCard extends CustomCard {
             upgradeMultihit();
         }
 
+
+    }
+
+    @Override
+    protected Texture getPortraitImage() {
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    System.out.println("Finding texture: " + newPath);
+
+                    Texture portraitTexture;
+                    try {
+                        portraitTexture = ImageMaster.loadImage(newPath);
+                    } catch (Exception var5) {
+                        portraitTexture = null;
+                    }
+
+                    return portraitTexture;
+                }
+            }
+        }
+        return super.getPortraitImage();
     }
 
     /*

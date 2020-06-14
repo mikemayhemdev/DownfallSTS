@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.FRAGMENTED;
 
 
@@ -47,6 +48,7 @@ public class Gem_Fragmented extends AbstractGuardianCard {
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = FRAGMENTED;
         this.cardsToPreview = new CrystalShiv();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Fragmented_Gem.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

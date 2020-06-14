@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.ArtifactPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.SYNTHETIC;
 
 
@@ -49,6 +50,7 @@ public class Gem_Synthetic extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = SYNTHETIC;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Onyx.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
