@@ -57,8 +57,8 @@
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
-    "NAME": "Evacuation Plans",
-    "FLAVOR": "Instructions for escaping the Spire.  Best not to let them fall into the wrong hands.",
+    "NAME": "Wander Bots",
+    "FLAVOR": "These drones find the most wonderful salvage, but require processing power to maintain.",
     "DESCRIPTIONS": [
       "On pickup, lose #b2 #yguardianmod:Stasis slots. NL Gain [E] at the start of your turn."
     ]

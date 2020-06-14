@@ -74,7 +74,7 @@
     ]
   },
   "Slimebound:MaxSlimesRelic": {
-    "NAME": "Banner of Command",
+    "NAME": "Jeremiah's Banner",
     "FLAVOR": "You and ooze army.",
     "DESCRIPTIONS": [
       "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching slime and gain #b1 Slime slot."
