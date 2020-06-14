@@ -45,7 +45,7 @@ public class SentryBeam extends AbstractGuardianCard {
 
     }
 
-    public SentryBeam() {
+    public SentryBeam(boolean noHover){
 
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
@@ -55,7 +55,11 @@ public class SentryBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        cardsToPreview = new SentryWaveNoHover();
+        if (!noHover) cardsToPreview = new SentryWave(true);
+    }
+
+    public SentryBeam(){
+        this(false);
     }
 
     @Override
@@ -77,7 +81,7 @@ public class SentryBeam extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
         if (AbstractDungeon.player.hasEmptyOrb()) {
-            AbstractGuardianCard newCard = new SentryWaveNoHover();
+            AbstractGuardianCard newCard = new SentryWave();
             newCard.sockets = this.sockets;
             if (this.upgraded) newCard.upgrade();
 

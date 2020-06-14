@@ -46,15 +46,19 @@ public class SentryWave extends AbstractGuardianCard {
         UPGRADED_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     }
 
-    public SentryWave() {
-        super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
+    public SentryWave(boolean noHover) {
+        super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
         this.baseMagicNumber = this.magicNumber = DEBUFFCOUNT;
         this.exhaust = true;
         this.socketCount = SOCKETS;
-        this.cardsToPreview = new SentryBeamNoHover();
+        if (!noHover) this.cardsToPreview = new SentryBeam(true);
         updateDescription();
         loadGemMisc();
+    }
+
+    public SentryWave(){
+        this(false);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -96,7 +100,7 @@ public class SentryWave extends AbstractGuardianCard {
             //upgradeMagicNumber(UPGRADE_DEBUFF);
             this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
-            AbstractCard q = new SentryBeamNoHover();
+            AbstractCard q = new SentryBeam();
             q.upgrade();
             cardsToPreview = q;
             this.initializeDescription();
