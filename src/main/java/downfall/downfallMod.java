@@ -57,6 +57,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.cards.KnowingSkullWish;
 import downfall.events.*;
 import downfall.monsters.*;
+import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.potions.CursedFountainPotion;
@@ -360,6 +361,9 @@ public class downfallMod implements
                 crossoverCharacters, settingsPanel, (label) -> {
         }, (button) -> {
             crossoverCharacters = button.enabled;
+            EvilModeCharacterSelect.villainsInNormalAndNormalInVillains = button.enabled;
+            CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
+            CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
             saveData();
         });
 

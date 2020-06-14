@@ -28,14 +28,7 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 public class EvilModeCharacterSelect {
-    public static boolean villainsInNormalAndNormalInVillains = true; //Make this a config and give it a better name.
-
-    //When the config is changed:
-    //
-    //      CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
-    //      CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
-    //
-
+    public static boolean villainsInNormalAndNormalInVillains = false;
 
     public static boolean evilMode = false;
 
