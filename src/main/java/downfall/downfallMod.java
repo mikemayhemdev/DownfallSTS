@@ -103,6 +103,7 @@ public class downfallMod implements
     public static boolean contentSharing_potions = true;
     public static boolean contentSharing_events = true;
     public static boolean contentSharing_colorlessCards = true;
+    public static boolean contentSharing_curses = true;
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
@@ -110,6 +111,7 @@ public class downfallMod implements
     public static final String PROP_POTION_SHARING = "contentSharing_potions";
     public static final String PROP_EVENT_SHARING = "contentSharing_events";
     public static final String PROP_CARD_SHARING = "contentSharing_colorlessCards";
+    public static final String PROP_CURSE_SHARING = "contentSharing_curses";
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
 
@@ -324,6 +326,14 @@ public class downfallMod implements
 
         settingsPanel = new ModPanel();
 
+        ModLabeledToggleButton contentSharingBtnCurses = new ModLabeledToggleButton(configStrings.TEXT[5],
+                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                contentSharing_curses, settingsPanel, (label) -> {
+        }, (button) -> {
+            contentSharing_curses = button.enabled;
+            saveData();
+        });
+
         ModLabeledToggleButton contentSharingBtnRelics = new ModLabeledToggleButton(configStrings.TEXT[0],
                 350.0f, 650.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 contentSharing_relics, settingsPanel, (label) -> {
@@ -367,6 +377,7 @@ public class downfallMod implements
             saveData();
         });
 
+        settingsPanel.addUIElement(contentSharingBtnCurses);
         settingsPanel.addUIElement(contentSharingBtnEvents);
         settingsPanel.addUIElement(contentSharingBtnPotions);
         settingsPanel.addUIElement(contentSharingBtnRelics);
@@ -385,6 +396,7 @@ public class downfallMod implements
             contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
             contentSharing_potions = config.getBool(PROP_POTION_SHARING);
             contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
+            contentSharing_curses = config.getBool(PROP_CURSE_SHARING);
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
         } catch (Exception e) {
             e.printStackTrace();
