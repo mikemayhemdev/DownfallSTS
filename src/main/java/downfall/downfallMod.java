@@ -13,6 +13,7 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import charbosses.actions.util.CharBossMonsterGroup;
@@ -33,7 +34,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -43,18 +47,26 @@ import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
+import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.screens.custom.CustomMod;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.cards.KnowingSkullWish;
+import downfall.dailymods.Hexed;
+import downfall.dailymods.Improvised;
+import downfall.dailymods.Jewelcrafting;
+import downfall.dailymods.WorldOfGoo;
 import downfall.events.*;
 import downfall.monsters.*;
 import downfall.patches.EvilModeCharacterSelect;
@@ -63,12 +75,18 @@ import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
+import downfall.util.EtherealMod;
 import downfall.util.ReplaceData;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
+import guardian.cards.ExploitGems;
+import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
+import slimebound.dailymods.AllSplit;
 import sneckomod.SneckoMod;
+import sneckomod.cards.unknowns.*;
+import sneckomod.util.FreeRetainMod;
 import theHexaghost.HexaMod;
 
 import java.io.IOException;
@@ -76,13 +94,15 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-        EditStringsSubscriber, EditKeywordsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
+       OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
     public static final String modID = "downfall";
 
 
@@ -250,6 +270,7 @@ public class downfallMod implements
         loadLocalization(language, OrbStrings.class);
         loadLocalization(language, RunModStrings.class);
         loadLocalization(language, PowerStrings.class);
+        loadLocalization(language, RunModStrings.class);
     }
 
     @Override
@@ -896,6 +917,79 @@ public class downfallMod implements
                 } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                 }
+            }
+        }
+    }
+
+
+
+    public void receiveCustomModeMods(List<CustomMod> l) {
+        l.add(new CustomMod(WorldOfGoo.ID, "r", true));
+        l.add(new CustomMod(Hexed.ID, "b", true));
+        l.add(new CustomMod(Jewelcrafting.ID, "g", true));
+        l.add(new CustomMod(Improvised.ID, "g", true));
+
+    }
+
+    @Override
+    public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo) {
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID)) {
+            SlimeboundMod.logger.info("World of goo triggered");
+            if (damageInfo.output > AbstractDungeon.player.currentBlock) {
+
+                SlimeboundMod.logger.info("World of goo succeeded");
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Slimed(), 1));
+            }
+        }
+        return i;
+    }
+
+    @Override
+    public void receivePostDungeonInitialize() {
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID)) {
+            RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
+            AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
+            AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
+        }
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) {
+            RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
+        }
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID)) {
+            ArrayList<String> cards = AbstractDungeon.player.getStartingDeck();
+            for (String s : cards) {
+                AbstractDungeon.player.masterDeck.removeCard(s);
+            }
+
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonSkill());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonAttack());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonSkill());
+            AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonPower());
+            AbstractDungeon.player.masterDeck.addToTop(new Unknown());
+
+        }
+
+        Iterator var7;
+        var7 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while(var7.hasNext()) {
+            AbstractCard c = (AbstractCard)var7.next();
+            UnlockTracker.markCardAsSeen(c.cardID);
+        }
+    }
+
+
+    @Override
+    public void receivePostDraw(AbstractCard abstractCard) {
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) {
+            if (!abstractCard.isEthereal){
+                CardModifierManager.addModifier(abstractCard, new EtherealMod());
             }
         }
     }
