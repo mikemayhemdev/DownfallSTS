@@ -424,7 +424,7 @@ public class GuardianMod implements PostDrawSubscriber,
     public void receiveEditCharacters() {
 
         guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
-        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN);
+        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN, getResourcePath("charSelect/leaderboard.png"));
 
     }
 

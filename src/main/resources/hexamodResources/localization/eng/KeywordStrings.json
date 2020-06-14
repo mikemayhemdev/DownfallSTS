@@ -29,7 +29,7 @@
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the amount of Damage, Burn, and Block applied by Ghostflames when Ignited."
+    "DESCRIPTION": "Intensity increases the amount of damage, Burn, and Block applied by Ghostflames when Ignited."
   },
   {
     "PROPER_NAME": "Burn",

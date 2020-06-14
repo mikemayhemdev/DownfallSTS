@@ -245,7 +245,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public void receiveEditCharacters() {
 
         slimeboundCharacter = new SlimeboundCharacter("TheSlimebound", SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addCharacter(slimeboundCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addCharacter(slimeboundCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), SlimeboundEnum.SLIMEBOUND, getResourcePath("charSelect/leaderboard.png"));
 
     }
 

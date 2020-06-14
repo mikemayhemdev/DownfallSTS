@@ -189,7 +189,7 @@ public class HexaMod implements
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new TheHexaghost("the Hexaghost", TheHexaghost.Enums.THE_SPIRIT),
-                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheHexaghost.Enums.THE_SPIRIT);
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheHexaghost.Enums.THE_SPIRIT, HexaMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
     @Override

@@ -158,10 +158,12 @@ public class GuardianCharacter extends CustomPlayer {
         }
     }
 
+    /*
     @Override
     public Texture getCustomModeCharacterButtonImage() {
         return ImageMaster.loadImage(GuardianMod.getResourcePath("images/charSelect/leaderboard.png"));
     }
+    */
 
     public void switchToOffensiveMode() {
         if (!inShattered) {

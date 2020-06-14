@@ -195,10 +195,12 @@ public class TheSnecko extends CustomPlayer {
                 AbstractGameAction.AttackEffect.FIRE};
     }
 
+    /*
     @Override
     public Texture getCustomModeCharacterButtonImage() {
         return ImageMaster.loadImage(SneckoMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
+    */
 
     @Override
     public String getSpireHeartText() {

@@ -119,12 +119,12 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Deal !D! Damage. NL Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Beam",
-    "DESCRIPTION": "Deal !D! Damage. NL Place a Sentry Wave into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL Place an Sentry Wave+ into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Place a Sentry Wave into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Place an Sentry Wave+ into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:SentryWave": {
     "NAME": "Sentry Wave",
@@ -322,7 +322,7 @@
   },
   "Guardian:CrystalBeam": {
     "NAME": "Crystal Beam",
-    "DESCRIPTION": "Deal !D! Damage. Damage is increased by !M! for each guardianmod:Gem in ALL of your guardianmod:Socketed cards."
+    "DESCRIPTION": "Deal !D! damage. Damage is increased by !M! for each guardianmod:Gem in ALL of your guardianmod:Socketed cards."
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
@@ -369,7 +369,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb Beam",
-    "DESCRIPTION": "Innate. NL Place a random card from your draw pile into guardianmod:Stasis. NL Deal !D! Damage. NL Gain !B! Block. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Place a random card from your draw pile into guardianmod:Stasis. NL Deal !D! damage. NL Gain !B! Block. NL Exhaust."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
