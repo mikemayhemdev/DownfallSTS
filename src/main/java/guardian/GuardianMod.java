@@ -31,6 +31,7 @@ import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import downfall.downfallMod;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
 import guardian.events.StasisEgg;
@@ -58,6 +59,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 
 @SpireInitializer
@@ -894,6 +897,8 @@ public static void saveData() {
                 .playerClass(GuardianEnum.GUARDIAN)
                 //Act
                 .dungeonID(TheBeyond.ID)
+                //Only in Evil if content sharing is disabled
+                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(CrystalForge.ID, CrystalForge.class) //Event ID//
                 //Event Character//

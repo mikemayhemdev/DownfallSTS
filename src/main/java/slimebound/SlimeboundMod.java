@@ -37,6 +37,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
+import downfall.downfallMod;
 import expansioncontent.relics.StudyCardRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -61,6 +62,8 @@ import slimebound.relics.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
@@ -373,21 +376,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addRelicToCustomPool(new SelfDamagePreventRelic(), AbstractCardEnum.SLIMEBOUND);
         BaseMod.addRelicToCustomPool(new TarBlob(), AbstractCardEnum.SLIMEBOUND);
 
-        shareableRelics.add(new StickyStick());
-        shareableRelics.add(new PreparedRelic());
 
-
-        addSharedRelics();
-
-    }
-
-    public void addSharedRelics() {
-        if (contentSharing_relics) {
-            BaseMod.addRelic(shareableRelics.get(0), RelicType.SHARED);
-
-        } else {
-            BaseMod.addRelicToCustomPool(shareableRelics.get(0), AbstractCardEnum.SLIMEBOUND);
-        }
     }
 
     public void receiveEditCards() {
@@ -681,8 +670,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
                 //Act//
                 .dungeonIDs(TheCity.ID, "TheJungle")
-                //Additional Condition//
-                .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter) || SlimeboundMod.contentSharing_events)
+                //Only in Evil if content sharing is disabled
+                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class) //Event ID//
                 //Event Character//

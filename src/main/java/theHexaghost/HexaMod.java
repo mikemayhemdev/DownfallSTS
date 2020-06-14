@@ -28,6 +28,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
+import downfall.downfallMod;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -52,6 +53,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.TheHexaghost.oscillarator;
 
@@ -204,6 +206,7 @@ public class HexaMod implements
         BaseMod.addRelicToCustomPool(new UnknownEgg(), TheHexaghost.Enums.GHOST_GREEN);
         BaseMod.addRelic(new BolsterEngine(), RelicType.SHARED);
         BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
+        BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
     }
 
     @Override
@@ -403,6 +406,8 @@ public class HexaMod implements
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
                 //Extra Requirement
                 .bonusCondition(HexaMod::canGetCurseRelic)
+                //Only in Evil if content sharing is disabled
+                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
