@@ -259,6 +259,8 @@ public class FleeingMerchant extends AbstractMonster {
         super.escape();
     }
 
+    public static boolean helpEscaped = false;
+
     @Override
     public void update() {
         super.update();
@@ -266,6 +268,7 @@ public class FleeingMerchant extends AbstractMonster {
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.combatRewardScreen.open();
             ESCAPED = true;
+            helpEscaped = true;
         }
     }
 
