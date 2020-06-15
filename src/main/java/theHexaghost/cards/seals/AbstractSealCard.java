@@ -1,18 +1,15 @@
 package theHexaghost.cards.seals;
 
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.RepairPower;
 import theHexaghost.cards.AbstractHexaCard;
 import theHexaghost.powers.RemoveMeBabey;
-import theHexaghost.relics.TheBrokenSeal;
 import theHexaghost.vfx.BrokenSealEffect;
 
 import java.util.ArrayList;
@@ -41,7 +38,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 }
             }
         }
-        if (sealList.size() == 6) {
+        if (playedAll(sealList)) {
             ArrayList<String> notToRemoveList = new ArrayList<>();
             ArrayList<AbstractCard> removeList = new ArrayList<>();
             for (AbstractCard c : abstractPlayer.masterDeck.group) {
@@ -59,6 +56,10 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
             addToTop(new VFXAction(new BrokenSealEffect()));
         }
         realUse(abstractPlayer, abstractMonster);
+    }
+
+    public static boolean playedAll(ArrayList<String> sList) {
+        return (sList.contains(FirstSeal.ID) && sList.contains(SecondSeal.ID) && sList.contains(ThirdSeal.ID) && sList.contains(FourthSeal.ID) && sList.contains(FifthSeal.ID) && sList.contains(SixthSeal.ID));
     }
 
     public abstract void realUse(AbstractPlayer p, AbstractMonster m);
