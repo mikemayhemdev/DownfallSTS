@@ -9,10 +9,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import java.util.Iterator;
 
 public class EnemyWaveOfTheHandPower extends AbstractPower {
     public static final String POWER_ID = "WaveOfTheHandPower";
@@ -33,7 +31,8 @@ public class EnemyWaveOfTheHandPower extends AbstractPower {
             AbstractCreature p = AbstractCharBoss.boss;
             AbstractCreature mo = AbstractDungeon.player;
 
-            this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.amount, true), this.amount, true, AttackEffect.NONE));
+            if (p != null)
+                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.amount, true), this.amount, true, AttackEffect.NONE));
 
         }
 

@@ -4,6 +4,7 @@ package downfall.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.CombatRewardScreen;
+import downfall.monsters.FleeingMerchant;
 import downfall.rooms.HeartShopRoom;
 
 @SpirePatch(
@@ -12,8 +13,9 @@ import downfall.rooms.HeartShopRoom;
 )
 public class CombatRewardScreenRemoveCardPatch {
     public static void Postfix(CombatRewardScreen __instance) {
-        if (AbstractDungeon.getCurrRoom() instanceof HeartShopRoom) {
+        if (AbstractDungeon.getCurrRoom() instanceof HeartShopRoom && (FleeingMerchant.helpEscaped || FleeingMerchant.DEAD)) {
             __instance.rewards.clear();
+            FleeingMerchant.helpEscaped = false;
         }
     }
 }
