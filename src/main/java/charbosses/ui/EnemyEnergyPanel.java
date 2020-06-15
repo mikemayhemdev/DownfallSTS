@@ -1,6 +1,7 @@
 package charbosses.ui;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.vfx.EnemyRefreshEnergyEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -95,7 +96,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
         if (EnemyEnergyPanel.totalCount > 999) {
             EnemyEnergyPanel.totalCount = 999;
         }
-        AbstractDungeon.effectsQueue.add(new RefreshEnergyEffect());
+        AbstractDungeon.effectsQueue.add(new EnemyRefreshEnergyEffect());
         EnemyEnergyPanel.fontScale = 2.0f;
         EnemyEnergyPanel.energyVfxTimer = 2.0f;
     }
