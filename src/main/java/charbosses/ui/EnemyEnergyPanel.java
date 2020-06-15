@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.TutorialStrings;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -24,7 +25,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
     public static final String[] LABEL;
     public static final float FONT_POP_SCALE = 2.0f;
     public static final float ENERGY_VFX_TIME = 2.0f;
-    private static final TutorialStrings tutorialStrings;
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("downfall:EnergyPanelTip");
     private static final int RAW_W = 256;
     private static final Color ENERGY_TEXT_COLOR;
     private static final float VFX_ROTATE_SPEED = -30.0f;
@@ -34,9 +35,8 @@ public class EnemyEnergyPanel extends AbstractPanel {
     private BitmapFont energyNumFont;
 
     static {
-        tutorialStrings = CardCrawlGame.languagePack.getTutorialString("Energy Panel Tip");
-        MSG = EnemyEnergyPanel.tutorialStrings.TEXT;
-        LABEL = EnemyEnergyPanel.tutorialStrings.LABEL;
+        MSG = EnemyEnergyPanel.uiStrings.TEXT;
+        LABEL = EnemyEnergyPanel.uiStrings.EXTRA_TEXT;
         ENERGY_TEXT_COLOR = new Color(1.0f, 1.0f, 0.86f, 1.0f);
         EnemyEnergyPanel.fontScale = 1.0f;
         EnemyEnergyPanel.totalCount = 0;
@@ -160,7 +160,7 @@ public class EnemyEnergyPanel extends AbstractPanel {
         FontHelper.renderFontCentered(sb, energyNumFont, energyMsg, this.current_x, this.current_y, EnemyEnergyPanel.ENERGY_TEXT_COLOR);
         this.tipHitbox.render(sb);
         if (this.tipHitbox.hovered && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.isScreenUp) {
-            TipHelper.renderGenericTip(50.0f * Settings.scale, 380.0f * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);
+            TipHelper.renderGenericTip(1550.0F * Settings.scale, 750.0F * Settings.scale, EnemyEnergyPanel.LABEL[0], EnemyEnergyPanel.MSG[0]);
         }
     }
 
