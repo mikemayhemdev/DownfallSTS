@@ -22,6 +22,7 @@ public class SuperheatedStrike extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBurn = burn = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(CardTags.STRIKE);
     }

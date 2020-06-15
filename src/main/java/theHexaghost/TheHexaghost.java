@@ -149,10 +149,12 @@ public class TheHexaghost extends CustomPlayer {
         super.render(sb);
     }
 
+    /*
     @Override
     public Texture getCustomModeCharacterButtonImage() {
         return ImageMaster.loadImage(HexaMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
+    */
 
     @Override
     public void preBattlePrep() {

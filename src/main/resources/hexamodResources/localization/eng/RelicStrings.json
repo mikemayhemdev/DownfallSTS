@@ -43,7 +43,7 @@
     ]
   },
   "hexamod:MatchstickCase": {
-    "NAME": "Quickfire Matchstick",
+    "NAME": "Sneaky Teakwood Matchstick",
     "FLAVOR": "Lights on any surface!",
     "DESCRIPTIONS": [
       "At the start of the first turn, #yhexamod:Ignite the #yhexamod:Active Ghostflame and #yhexamod:Advance."
@@ -64,7 +64,7 @@
     ]
   },
   "hexamod:JarOfFuel": {
-    "NAME": "Olexan Shield",
+    "NAME": "Olexa's Shield",
     "FLAVOR": "Protection on-demand.",
     "DESCRIPTIONS": [
       "Swap the positions of the Bolstering Ghostflame and the first Searing Ghostflame."

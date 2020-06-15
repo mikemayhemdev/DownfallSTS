@@ -62,7 +62,7 @@
   "hexamod:EnhancePower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "Increase the amount of Damage, Burn, and Block applied by Ghostflames when Ignited by #b",
+      "Increase the amount of damage, Burn, and Block applied by Ghostflames when Ignited by #b",
       "."
     ]
   },

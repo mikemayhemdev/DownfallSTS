@@ -68,7 +68,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @com.evacipated.cardcrawl.modthespire.lib.SpireInitializer
 public class SlimeboundMod implements OnCardUseSubscriber,
-        SetUnlocksSubscriber, AddCustomModeModsSubscriber,
+        SetUnlocksSubscriber,
         PostDungeonInitializeSubscriber, PostBattleSubscriber,
         PostInitializeSubscriber, PreMonsterTurnSubscriber,
         basemod.interfaces.EditCharactersSubscriber,
@@ -245,7 +245,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public void receiveEditCharacters() {
 
         slimeboundCharacter = new SlimeboundCharacter("TheSlimebound", SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addCharacter(slimeboundCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addCharacter(slimeboundCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), SlimeboundEnum.SLIMEBOUND, getResourcePath("charSelect/leaderboard.png"));
 
     }
 
@@ -264,12 +264,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 ((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss = false;
                 //SlimeboundMod.logger.info("Reset Hunted event bool.");
-            }
-            if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(AllSplit.ID)) {
-                //logger.info("Daily Mod detecthed");
-                RelicLibrary.getRelic(DailySplitModRelic.ID).makeCopy().instantObtain();
-
-
             }
         }
 
@@ -750,10 +744,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         //   this.printEnemies();
 
         return true;
-    }
-
-    public void receiveCustomModeMods(List<CustomMod> l) {
-        l.add(new CustomMod(AllSplit.ID, "r", true));
     }
 
     public void receiveOnBattleStart(AbstractRoom room) {

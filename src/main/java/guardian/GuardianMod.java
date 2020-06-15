@@ -302,7 +302,7 @@ public class GuardianMod implements PostDrawSubscriber,
         allGemCards.add("GREEN");
         if (!onlyCommon) allGemCards.add("ORANGE");
         allGemCards.add("CYAN");
-        allGemCards.add("WHITE");
+        if (!onlyCommon) allGemCards.add("WHITE");
         if (!onlyCommon) allGemCards.add("BLUE");
         if (!onlyCommon) allGemCards.add("CRIMSON");
         allGemCards.add("FRAGMENTED");
@@ -424,7 +424,7 @@ public class GuardianMod implements PostDrawSubscriber,
     public void receiveEditCharacters() {
 
         guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
-        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN);
+        BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN, getResourcePath("charSelect/leaderboard.png"));
 
     }
 

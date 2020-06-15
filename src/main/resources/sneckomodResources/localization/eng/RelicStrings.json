@@ -71,8 +71,8 @@
     ]
   },
   "sneckomod:SneckoTalon": {
-    "NAME": "Snecko Fang",
-    "FLAVOR": "3 -> 2. 2 -> 1. 1 -> 0. 0 -> X?",
+    "NAME": "Idol of Retromation",
+    "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
       "At the start of your turn, reduce the cost of the most expensive card in your hand by #b1."
     ]

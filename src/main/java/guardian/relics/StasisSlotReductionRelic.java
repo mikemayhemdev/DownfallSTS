@@ -8,8 +8,8 @@ import guardian.GuardianMod;
 
 public class StasisSlotReductionRelic extends CustomRelic {
     public static final String ID = "Guardian:StasisSlotReductionRelic";
-    public static final String IMG_PATH = "relics/blueprints.png";
-    public static final String OUTLINE_IMG_PATH = "relics/blueprintsOutline.png";
+    public static final String IMG_PATH = "relics/bots.png";
+    public static final String OUTLINE_IMG_PATH = "relics/botsOutline.png";
     private static final int HP_PER_CARD = 1;
 
     public StasisSlotReductionRelic() {

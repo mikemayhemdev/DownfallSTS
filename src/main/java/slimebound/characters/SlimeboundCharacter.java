@@ -133,10 +133,12 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     }
 
+    /*
     @Override
     public Texture getCustomModeCharacterButtonImage() {
         return ImageMaster.loadImage(SlimeboundMod.getResourcePath("images/charSelect/leaderboard.png"));
     }
+    */
 
     @Override
     public void onVictory() {
