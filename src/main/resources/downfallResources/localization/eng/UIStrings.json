@@ -46,5 +46,13 @@
       "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
       "Allow Standard runs to encounter Downfall Curse cards."
     ]
+  },
+  "downfall:EnergyPanelTip": {
+    "TEXT": [
+      "Enemy's current energy count. Cards require energy to play."
+    ],
+    "EXTRA_TEXT": [
+      "Energy"
+    ]
   }
 }

@@ -47,7 +47,6 @@ import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -83,10 +82,8 @@ import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
-import slimebound.dailymods.AllSplit;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.*;
-import sneckomod.util.FreeRetainMod;
 import theHexaghost.HexaMod;
 
 import java.io.IOException;
@@ -102,9 +99,8 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-       OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
+        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber {
     public static final String modID = "downfall";
-
 
 
     public static boolean choosingBossRelic = false;
@@ -810,7 +806,7 @@ public class downfallMod implements
         BaseMod.addMonster("downfall:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster("downfall:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
-        BaseMod.addMonster("downfall:NeowBoss", NeowBoss::new);
+        BaseMod.addMonster("downfall:NeowBoss", () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
 
 
     }
@@ -922,7 +918,6 @@ public class downfallMod implements
     }
 
 
-
     public void receiveCustomModeMods(List<CustomMod> l) {
         l.add(new CustomMod(WorldOfGoo.ID, "r", true));
         l.add(new CustomMod(Hexed.ID, "b", true));
@@ -978,8 +973,8 @@ public class downfallMod implements
         Iterator var7;
         var7 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        while(var7.hasNext()) {
-            AbstractCard c = (AbstractCard)var7.next();
+        while (var7.hasNext()) {
+            AbstractCard c = (AbstractCard) var7.next();
             UnlockTracker.markCardAsSeen(c.cardID);
         }
     }
@@ -988,7 +983,7 @@ public class downfallMod implements
     @Override
     public void receivePostDraw(AbstractCard abstractCard) {
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) {
-            if (!abstractCard.isEthereal){
+            if (!abstractCard.isEthereal) {
                 CardModifierManager.addModifier(abstractCard, new EtherealMod());
             }
         }
@@ -1003,5 +998,12 @@ public class downfallMod implements
 
         otherPackagePaths() {
         }
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.getCurrRoom().monsters instanceof CharBossMonsterGroup)
+            return 0;
+        return i;
     }
 }

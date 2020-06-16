@@ -56,7 +56,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
             if (r.tier == AbstractRelic.RelicTier.COMMON) {
                 playerCommonRelics.add(r);
             }
-            if (r.tier == AbstractRelic.RelicTier.COMMON) {
+            if (r.tier == AbstractRelic.RelicTier.UNCOMMON) {
                 playerUncommonRelics.add(r);
             }
         }
@@ -66,17 +66,17 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
 
         for (int i = 0; i < 3; i++) {
             if (playerCommonRelics.size() > 0) {
-                AbstractRelic q = playerCommonRelics.get(relicCOffers);
+                AbstractRelic q = playerCommonRelics.get(0);
                 this.relicsOffered.add(q);
-                playerCommonRelics.remove(q);
+                playerCommonRelics.remove(0);
                 this.relicOffersAvailable++;
-                this.relicCOffers++;
+//                this.relicCOffers++;
             } else if (playerUncommonRelics.size() > 0) {
-                AbstractRelic p = playerUncommonRelics.get(relicCOffers);
+                AbstractRelic p = playerUncommonRelics.get(0);
                 this.relicsOffered.add(p);
-                playerUncommonRelics.remove(p);
+                playerUncommonRelics.remove(0);
                 this.relicOffersAvailable++;
-                this.relicUOffers++;
+//                this.relicUOffers++;
             }
         }
 

@@ -39,7 +39,7 @@ public class SplitLeeching extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseBlock = 8;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
 
@@ -47,9 +47,9 @@ public class SplitLeeching extends AbstractSlimeboundCard {
         int bonus = 0;
         //AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true, 0, bonus));
-        addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
+        for (int i = 0; i < this.magicNumber; i++) {
+            addToBot(new CommandAction());
+        }
 
 
     }
@@ -61,9 +61,7 @@ public class SplitLeeching extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
 
         }
     }

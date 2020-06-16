@@ -23,15 +23,17 @@ public class EnemyGainEnergyAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (this.boss == null)
+            if (this.boss != null){
                 this.boss = AbstractCharBoss.boss;
-            if (this.boss == null) {
-                this.isDone = true;
-                return;
-            }
+
             this.boss.gainEnergy(this.energyGain);
             for (final AbstractCard c : this.boss.hand.group) {
                 c.triggerOnGainEnergy(this.energyGain, true);
+            }
+            }
+            else  {
+                this.isDone = true;
+                return;
             }
         }
         this.tickDuration();

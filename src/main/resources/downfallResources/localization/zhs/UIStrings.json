@@ -46,5 +46,13 @@
       "允许使用标准角色进行崩坠模式，允许使用恶棍进行标准模式。",
       "Allow Standard runs to encounter Downfall Curse cards."
     ]
-  }
+  },
+  "downfall:EnergyPanelTip": {
+  "TEXT": [
+    "敌人当前的能量。打出卡牌需要能量。"
+  ],
+  "EXTRA_TEXT": [
+    "能量"
+  ]
+}
 }

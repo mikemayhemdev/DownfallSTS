@@ -1,6 +1,8 @@
 package charbosses.stances;
 
 
+import charbosses.actions.common.EnemyGainEnergyAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.vfx.EnemyCalmParticleEffect;
 import charbosses.vfx.EnemyStanceAuraEffect;
 import com.badlogic.gdx.Gdx;
@@ -59,7 +61,7 @@ public class EnCalmStance extends AbstractEnemyStance {
     }
 
     public void onExitStance() {
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
+        AbstractDungeon.actionManager.addToBottom(new EnemyGainEnergyAction(2));
         this.stopIdleSfx();
     }
 

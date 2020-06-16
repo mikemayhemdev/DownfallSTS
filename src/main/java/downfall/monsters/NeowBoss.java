@@ -66,7 +66,7 @@ public class NeowBoss extends AbstractMonster {
     private int blockAmt;
 
     private boolean isRezzing;
-    private boolean offscreen;
+    public boolean offscreen;
     private boolean movingOffscreen;
     private boolean movingBack;
 
