@@ -17,11 +17,14 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
+import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class SealCommonReward extends RewardItem {
+    public static final String ID = HexaMod.makeID("SealCommonReward");
+    public static final String msgText = CardCrawlGame.languagePack.getUIString(ID).TEXT[0];
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
 
@@ -175,7 +178,7 @@ public class SealCommonReward extends RewardItem {
             color = Settings.RED_TEXT_COLOR;
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, "Add a Common card to your deck", REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
+        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, msgText, REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
         if (!this.hb.hovered) {
 
             for (AbstractGameEffect e : effects) {
