@@ -223,7 +223,7 @@
   },
   "hexamod:Toasty": {
     "NAME": "烘焙！",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予未被 格挡 伤害三倍的 hexamod:灼伤 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予未被 格挡 伤害的 hexamod:灼伤 。"
   },
   "hexamod:WildfireWeapon": {
     "NAME": "鬼火武器",
