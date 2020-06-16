@@ -19,9 +19,9 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/splitaggressive.png";
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
@@ -39,7 +39,7 @@ public class SplitBruiser extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 9;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
 
@@ -50,9 +50,9 @@ public class SplitBruiser extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.AttackSlime(), false, true, bonus, 0));
 
-        addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
+        for (int i = 0; i < this.magicNumber; i++) {
+            addToBot(new CommandAction());
+        }
 
     }
 
@@ -63,9 +63,7 @@ public class SplitBruiser extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
 
 
         }

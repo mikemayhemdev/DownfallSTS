@@ -25,7 +25,7 @@ public class SplitLicking extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/splitsludging.png";
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
     private static final int BLOCK = 5;
@@ -42,7 +42,7 @@ public class SplitLicking extends AbstractSlimeboundCard {
     public SplitLicking() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.slimed = this.baseSlimed = 8;
         this.exhaust = true;
     }
@@ -54,9 +54,10 @@ public class SplitLicking extends AbstractSlimeboundCard {
         // AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlimedPower(m, p, this.slimed), this.slimed, true, AbstractGameAction.AttackEffect.NONE));
 
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.SlimingSlime(), false, true, 0, bonus));
-        addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
+        for (int i = 0; i < this.magicNumber; i++) {
+            addToBot(new CommandAction());
+        }
+
 
     }
 
@@ -67,9 +68,7 @@ public class SplitLicking extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
 
 
         }

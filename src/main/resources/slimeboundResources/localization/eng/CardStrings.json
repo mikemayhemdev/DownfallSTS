@@ -341,22 +341,22 @@
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bruiser_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Split: Leeching",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Leeching_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Split: Guerilla",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Guerilla_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitMire": {
     "NAME": "Split: Mire",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command twice. NL Exhaust.",
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command !M! times. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Mire_Slime. NL slimeboundmod:Command three times. NL Exhaust."
   },
   "Slimebound:SplitSpecialist": {

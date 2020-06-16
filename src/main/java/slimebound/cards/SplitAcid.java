@@ -20,9 +20,9 @@ public class SplitAcid extends AbstractSlimeboundCard {
     public static final String NAME;
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/splittoxic.png";
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
     private static final int BLOCK = 5;
@@ -42,7 +42,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
 
         this.baseDamage = 7;
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.isMultiDamage = true;
     }
 
@@ -50,9 +50,9 @@ public class SplitAcid extends AbstractSlimeboundCard {
         int bonus = 0;
         //AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new slimebound.orbs.PoisonSlime(), false, true, 0, bonus));
-        addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
-        if (upgraded) addToBot(new CommandAction());
+        for (int i = 0; i < this.magicNumber; i++) {
+            addToBot(new CommandAction());
+        }
 
 
     }
@@ -64,9 +64,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(1);
 
 
         }
