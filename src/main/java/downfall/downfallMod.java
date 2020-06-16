@@ -99,7 +99,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber {
+        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber {
     public static final String modID = "downfall";
 
 
@@ -806,7 +806,7 @@ public class downfallMod implements
         BaseMod.addMonster("downfall:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
         BaseMod.addMonster("downfall:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
-        BaseMod.addMonster("downfall:NeowBoss", () ->  new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
+        BaseMod.addMonster("downfall:NeowBoss", () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
 
 
     }
@@ -998,5 +998,12 @@ public class downfallMod implements
 
         otherPackagePaths() {
         }
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.getCurrRoom().monsters instanceof CharBossMonsterGroup)
+            return 0;
+        return i;
     }
 }
