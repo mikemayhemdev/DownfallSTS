@@ -40,7 +40,7 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
                 }
             }
 
-            AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(card, this.hack)));
+            AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, this.hack)));
         } else {
             AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.charStrings.TEXT[6], true));
         }

@@ -8,6 +8,7 @@ package guardian.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.powers.AutomayhemPower;
 
@@ -25,6 +26,7 @@ public class ReduceRightMostStasisAction extends AbstractGameAction {
 
     public void update() {
         if (AbstractDungeon.player.orbs.size() > 0) {
+            GuardianMod.logger.info("ReduceRightMostStasis firing.");
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
                     if ((!this.fromRelic || (this.fromRelic && ((StasisOrb) o).passiveAmount > 1))) {
