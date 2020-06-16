@@ -1,11 +1,13 @@
 package charbosses.cards.red;
 
+import charbosses.actions.common.EnemyGainEnergyAction;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -30,9 +32,9 @@ public class EnSentinel extends AbstractBossCard {
     @Override
     public void triggerOnExhaust() {
         if (this.upgraded) {
-            this.addToTop(new GainEnergyAction(3));
+            AbstractDungeon.actionManager.addToTop(new EnemyGainEnergyAction(3));
         } else {
-            this.addToTop(new GainEnergyAction(2));
+            AbstractDungeon.actionManager.addToTop(new EnemyGainEnergyAction(2));
         }
     }
 

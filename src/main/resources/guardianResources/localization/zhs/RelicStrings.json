@@ -57,8 +57,8 @@
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
-    "NAME": "撤离计划",
-    "FLAVOR": "撤离尖塔的指令。最好不要让他们落入坏人之手。",
+    "NAME": "悬浮机器人",
+    "FLAVOR": "这些无人机找到了最美妙的救助，但需要处理能力来维持。",
     "DESCRIPTIONS": [
       "拾起时， 失去 2 个 #yguardianmod:凝滞 栏位，每回合开始时获得 [E] 。"
     ]
@@ -98,7 +98,7 @@
     ]
   },
   "Guardian:PickAxe": {
-    "NAME": "狂热公司采矿镐",
+    "NAME": "星光公司采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
 	"你能在 3 处 篝火 #g挖掘 2 颗 #yguardianmod:宝石。"

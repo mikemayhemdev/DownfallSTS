@@ -140,6 +140,7 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
             card.modifyCostForCombat(-999);
             addToBot(new MakeTempCardInHandAction(card));
             this.grayscale = true;
+            this.counter = -1;
         }
     }
 
