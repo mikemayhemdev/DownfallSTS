@@ -28,10 +28,10 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
     public void update() {
         if (GuardianMod.canSpawnStasisOrb()) {
             if (!AbstractDungeon.player.hasEmptyOrb()) {
-                GuardianMod.logger.info("passed has empty orb");
+                //GuardianMod.logger.info("passed has empty orb");
                 for (AbstractOrb o : AbstractDungeon.player.orbs) {
                     if (!(o instanceof StasisOrb)) {
-                        GuardianMod.logger.info("found non-stasis orb");
+                        //GuardianMod.logger.info("found non-stasis orb");
                         AbstractDungeon.player.orbs.remove(o);
                         AbstractDungeon.player.orbs.add(0, o);
                         AbstractDungeon.player.evokeOrb();

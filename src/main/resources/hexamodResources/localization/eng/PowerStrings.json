@@ -168,7 +168,7 @@
   "hexamod:RadiantPower": {
     "NAME": "Radiant Flame",
     "DESCRIPTIONS": [
-      "Whenever a Ghostflame becomes Charged, apply #b",
+      "Whenever a Ghostflame is #yIgnited, apply #b",
       " #yBurn to a random enemy."
     ]
   },

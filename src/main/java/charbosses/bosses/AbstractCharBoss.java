@@ -23,6 +23,7 @@ import charbosses.relics.CBR_MagicFlower;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -272,6 +273,19 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (!AbstractDungeon.player.hasPower("Barricade") && !AbstractDungeon.player.hasPower("Blur")) {// 457
+                    if (!AbstractDungeon.player.hasRelic("Calipers")) {// 459
+                        AbstractDungeon.player.loseBlock();// 460
+                    } else {
+                        AbstractDungeon.player.loseBlock(15);// 462
+                    }
+                }
+            }
+        });
     }
 
     public void startTurn() {
