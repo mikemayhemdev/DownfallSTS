@@ -316,6 +316,7 @@ public class CharacterSelectScreenPatches
         slimeCrashSFX = false;
         slimeHitSFX = false;
 
+        giantGhostFire = false;
         ghostFireTimer = ghostFireTimer_time;
         giantGhostFireTimer =giantGhostFireTimer_time;
         orbActiveCount = 0;
