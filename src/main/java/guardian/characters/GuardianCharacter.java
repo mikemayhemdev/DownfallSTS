@@ -115,10 +115,10 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(!reskinContent.guardianReskinAnimation){
-            this.loadAnimation(atlasURL, this.currentJson, renderscale);
-        }else {
+        if(reskinContent.guardianReskinAnimation && reskinContent.guardianReskinUnlock){
             this.loadAnimation(atlasURL2, this.currentJson2, renderscale2);
+        }else {
+            this.loadAnimation(atlasURL, this.currentJson, renderscale);
         }
         this.state.setAnimation(0, "idle", true);
 

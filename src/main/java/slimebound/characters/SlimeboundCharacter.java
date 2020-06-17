@@ -164,10 +164,10 @@ public class SlimeboundCharacter extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(!reskinContent.slimeReskinAnimation){
-            this.loadAnimation(atlasURL, this.currentJson, renderscale);
-        }else {
+        if(reskinContent.slimeReskinAnimation && reskinContent.slimeReskinUnlock){
             this.loadAnimation(currentAtlas2, this.currentJson2, renderscale);
+        }else {
+            this.loadAnimation(atlasURL, this.currentJson, renderscale);
         }
         TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
