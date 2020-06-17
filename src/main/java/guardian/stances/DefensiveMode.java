@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import guardian.GuardianMod;
 import guardian.characters.GuardianCharacter;
 import guardian.powers.DefensiveModeBooster;
 import guardian.powers.DontLeaveDefensiveModePower;
@@ -66,12 +67,16 @@ public class DefensiveMode extends AbstractStance {
              if (sfxId != -1L) {
                   stopIdleSfx();
              }
+
+        CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
+
         if (!(AbstractDungeon.player instanceof GuardianCharacter)) {
 //             CardCrawlGame.sound.play("STANCE_ENTER_CALM");
-            sfxId = CardCrawlGame.sound.playAndLoop("EVENT_ANCIENT");
+            sfxId = CardCrawlGame.sound.playAndLoop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"));
         }
+
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY, false), 0.05F, true));
-//        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLDENROD, true));
+        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLDENROD, true));
 
         if (AbstractDungeon.player instanceof GuardianCharacter) {
             ((GuardianCharacter) AbstractDungeon.player).switchToDefensiveMode();
@@ -101,7 +106,7 @@ public class DefensiveMode extends AbstractStance {
 
        public void stopIdleSfx() {
              if (sfxId != -1L) {
-                   CardCrawlGame.sound.stop("EVENT_ANCIENT", sfxId);
+                   CardCrawlGame.sound.stop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"), sfxId);
                    sfxId = -1L;
              }
            }
