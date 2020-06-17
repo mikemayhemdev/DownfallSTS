@@ -1,5 +1,6 @@
 package sneckomod.cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.powers.SerpentMindPower;
@@ -15,6 +16,8 @@ public class SerpentMind extends AbstractSneckoCard {
     public SerpentMind() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+
+        tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

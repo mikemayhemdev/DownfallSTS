@@ -1,7 +1,9 @@
 package theHexaghost.cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.expansionContentMod;
 import theHexaghost.powers.ParanormalFormPower;
 
 public class ParanormalForm extends AbstractHexaCard {
@@ -17,6 +19,7 @@ public class ParanormalForm extends AbstractHexaCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
+        tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
