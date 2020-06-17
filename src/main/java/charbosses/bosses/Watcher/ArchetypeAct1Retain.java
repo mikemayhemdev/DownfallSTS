@@ -81,7 +81,7 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
         /////   CARDS   /////
 
         //Turn 1
-        addToDeck(new EnEstablishment(), true);
+        addToDeck(new EnStrikePurple(), false);
         addToDeck(new EnVigilance(), false);
         addToDeck(new EnPerseverance(), true);
         addToDeck(new EnWindmillStrike(), true);
@@ -104,7 +104,7 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
 
         //Turn 5
         addToDeck(new EnBattleHymn(), false);
-        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnEstablishment(), true);
         addToDeck(new EnDefendPurple(), false);
 
 
