@@ -228,7 +228,7 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "Construction Form",
-    "DESCRIPTION": "For !M! turns, you cannot lose HP or play Attacks."
+    "DESCRIPTION": "Prevent the next !M! times you would lose HP. NL During your next 2 turns, you cannot play Attacks."
   },
   "Guardian:WeakpointTargeting": {
     "NAME": "Spot Weakpoint",

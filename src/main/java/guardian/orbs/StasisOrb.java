@@ -47,7 +47,7 @@ public class StasisOrb extends AbstractOrb {
 
     public StasisOrb(AbstractCard card, boolean costHack) {
         this.stasisCard = card;
-
+        GuardianMod.logger.info("New Stasis Orb made");
         this.stasisCard.beginGlowing();
         this.name = orbString.NAME + stasisCard.name;
 
