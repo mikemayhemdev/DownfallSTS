@@ -13,6 +13,7 @@ import guardian.orbs.StasisOrb;
 
 public class PlaceRandomCardIntoStasisAction extends AbstractGameAction {
     private int numCards;
+    private boolean talked = false;
 
     public PlaceRandomCardIntoStasisAction(int numCards) {
         this.actionType = ActionType.DAMAGE;
@@ -35,11 +36,14 @@ public class PlaceRandomCardIntoStasisAction extends AbstractGameAction {
             } else {
                 if (GuardianMod.canSpawnStasisOrb()) {
                     AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(AbstractDungeon.player.drawPile.getRandomCard(true), false)));
-                   //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+                    //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                     if (this.numCards - 1 > 0)
                         AbstractDungeon.actionManager.addToBottom(new PlaceRandomCardIntoStasisAction(this.numCards - 1));
                 } else {
-                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                    if (!talked) {
+                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                        talked = true;
+                    }
                 }
             }
         }

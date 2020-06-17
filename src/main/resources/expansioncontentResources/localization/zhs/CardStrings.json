@@ -97,7 +97,7 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "双重射线",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 你的下一回合造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 你的下一回合造成 !D! 点伤害两次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 造成 !D! 点伤害两次。 NL 消耗 。"
   },
   "expansioncontent:PrepareCrush": {

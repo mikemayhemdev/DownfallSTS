@@ -14,6 +14,7 @@ import guardian.orbs.StasisOrb;
 public class PlaceActualCardIntoStasis extends AbstractGameAction {
     private AbstractCard card;
     private boolean hack;
+    private boolean talked = false;
 
     public PlaceActualCardIntoStasis(AbstractCard card, boolean hack) {
         this(card);
@@ -42,7 +43,10 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
 
             AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, this.hack)));
         } else {
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.charStrings.TEXT[6], true));
+            if (!talked) {
+                AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                talked = true;
+            }
         }
 
         this.isDone = true;
