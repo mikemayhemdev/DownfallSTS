@@ -115,6 +115,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public static boolean bumpnextlime = false;
     public static boolean disabledStrikeVFX = false;
     public static SpawnedSlime mostRecentSlime;
+    public static boolean foughtSlimeBoss;
+
     @SpireEnum
     public static AbstractCard.CardTags LICK;
 
@@ -261,10 +263,10 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         slimeTalkedDark = 0;
         slimeTalkedCollector = false;
         if (AbstractDungeon.player != null) {
-            if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                ((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss = false;
+
+                SlimeboundMod.foughtSlimeBoss = false;
                 //SlimeboundMod.logger.info("Reset Hunted event bool.");
-            }
+
         }
 
     }
@@ -652,15 +654,18 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
         BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, TheCity.ID);*/
 
-
         BaseMod.addEvent(new AddEventParams.Builder(Hunted.ID, Hunted.class) //Event ID//
                 //Event Character//
                 .playerClass(SlimeboundEnum.SLIMEBOUND)
                 //Act//
+                //Only in Evil if content sharing is disabled
+                .spawnCondition(() -> (downfallMod.contentSharing_events && downfallMod.contentSharing_colorlessCards))
+
                 .dungeonIDs(TheCity.ID, TheBeyond.ID, "TheJungle")
                 //Additional Condition//
-                .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter) && !((SlimeboundCharacter) AbstractDungeon.player).foughtSlimeBoss || AbstractDungeon.player.hasRelic(StudyCardRelic.ID))
+                .bonusCondition(() -> (!foughtSlimeBoss || AbstractDungeon.player.hasRelic(StudyCardRelic.ID)))
                 .create());
+
         BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
                 //Act//
                 .dungeonIDs(TheCity.ID, "TheJungle")
