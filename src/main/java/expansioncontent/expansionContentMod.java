@@ -11,7 +11,10 @@ Daily/Custom Run modifiers.
 
 import basemod.BaseMod;
 import basemod.helpers.RelicType;
-import basemod.interfaces.*;
+import basemod.interfaces.EditCardsSubscriber;
+import basemod.interfaces.EditRelicsSubscriber;
+import basemod.interfaces.PostUpdateSubscriber;
+import basemod.interfaces.StartGameSubscriber;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -20,6 +23,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
+import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
@@ -197,18 +201,17 @@ public class expansionContentMod implements
             AbstractDungeon.colorlessCardPool.removeCard(SlimeTackle.ID);
             AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
         }
-        if (AbstractDungeon.player instanceof TheHexaghost) {
+        if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
             AbstractDungeon.colorlessCardPool.removeCard(GhostWheel.ID);
             AbstractDungeon.colorlessCardPool.removeCard(Sear.ID);
             AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
         }
-        if (AbstractDungeon.player instanceof GuardianCharacter) {
+        if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
             AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
             AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
             AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
         }
     }
-
 
 
     public void atb(AbstractGameAction q) {
