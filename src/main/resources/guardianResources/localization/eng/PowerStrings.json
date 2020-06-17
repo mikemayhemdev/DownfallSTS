@@ -64,9 +64,7 @@
   "Guardian:ConstructModePower": {
     "NAME": "Construction Mode",
     "DESCRIPTIONS": [
-      "You cannot lose HP or play #yAttacks this turn.",
-      "You cannot lose HP or play #yAttacks for #b",
-      " turns."
+      "You will not be able to play #yAttacks next turn."
     ]
   },
   "Guardian:MultiBoostPower": {

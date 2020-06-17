@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BufferPower;
+import com.megacrit.cardcrawl.powers.EntanglePower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.ConstructModePower;
@@ -24,7 +26,7 @@ public class ConstructionForm extends AbstractGuardianCard {
     private static final int COST = 3;
 
     //TUNING CONSTANTS
-    private static final int TURNS = 2;
+    private static final int TURNS = 3;
     private static final int UPGRADE_TURNS = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -52,8 +54,8 @@ public class ConstructionForm extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
-
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructModePower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BufferPower(p, this.magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructModePower(p, 2), 2));
 
     }
 
