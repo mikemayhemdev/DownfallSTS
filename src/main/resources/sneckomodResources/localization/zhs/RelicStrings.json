@@ -71,8 +71,8 @@
     ]
   },
   "sneckomod:SneckoTalon": {
-    "NAME": "异蛇獠牙",
-    "FLAVOR": "3变2，2变1，1变0。0变X？",
+    "NAME": "陈家挂坠",
+    "FLAVOR": "见证了异蛇之眼与符文金字塔的辉煌。",
     "DESCRIPTIONS": [
       "你的回合开始时，将手牌中耗能最高的牌的耗能减少 #b1 。"
     ]

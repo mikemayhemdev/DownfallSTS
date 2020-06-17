@@ -1,6 +1,7 @@
 package guardian.cards;
 
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -49,6 +50,7 @@ public class ConstructionForm extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
 
+        tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

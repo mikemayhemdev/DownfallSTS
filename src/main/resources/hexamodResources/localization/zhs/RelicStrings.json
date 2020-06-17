@@ -43,7 +43,7 @@
     ]
   },
   "hexamod:MatchstickCase": {
-    "NAME": "快燃火柴",
+    "NAME": "火爆火柴",
     "FLAVOR": "划在哪儿都能着！",
     "DESCRIPTIONS": [
       "每场战斗的第一回合， #yhexamod:点燃 #yhexamod:活跃 的鬼火并 #yhexamod:步进 。"
@@ -64,7 +64,7 @@
     ]
   },
   "hexamod:JarOfFuel": {
-    "NAME": "古灵盾",
+    "NAME": "谜之盾",
     "FLAVOR": "按需防护。",
     "DESCRIPTIONS": [
       "将高热鬼火与第一个灼热鬼火交换。"

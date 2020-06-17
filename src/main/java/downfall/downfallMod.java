@@ -920,7 +920,7 @@ public class downfallMod implements
         l.add(new CustomMod(Hexed.ID, "b", true));
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
-        l.add(new CustomMod(EvilRun.ID, "b", true));
+        l.add(new CustomMod(EvilRun.ID, "b", false));
     }
 
     @Override
