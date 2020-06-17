@@ -72,7 +72,8 @@ public class GuardianMod implements PostDrawSubscriber,
         EditCharactersSubscriber,
         EditRelicsSubscriber,
         EditCardsSubscriber,
-        PostBattleSubscriber
+        PostBattleSubscriber,
+        AddAudioSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -425,6 +426,13 @@ public class GuardianMod implements PostDrawSubscriber,
 
         guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
         BaseMod.addCharacter(guardianCharacter, getResourcePath("charSelect/button.png"), getResourcePath("charSelect/portrait.png"), GuardianEnum.GUARDIAN, getResourcePath("charSelect/leaderboard.png"));
+
+    }
+
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("STANCE_LOOP_Defensive_Mode"), "guardianResources/audio/sound/sfx_defensive_mode_stance.ogg");
 
     }
 

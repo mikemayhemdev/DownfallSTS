@@ -14,7 +14,7 @@
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
-    "NAME": "Bronze Armor Plate",
+    "NAME": "Baalor's Lordly Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
       "When you use a card while in #yguardianmod:Defensive_Mode, gain #b1 more Block."
