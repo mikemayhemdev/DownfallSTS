@@ -14,5 +14,9 @@
   "downfall:Jewelcrafting": {
     "NAME": "珠宝加工",
     "DESCRIPTION": "起始拥有两张宝石利用与一把星光公司采矿镐。"
+  },
+  "downfall:EvilRun": {
+    "NAME": "崩坠",
+    "DESCRIPTION": "以崩坠模式进行游戏。"
   }
 }
