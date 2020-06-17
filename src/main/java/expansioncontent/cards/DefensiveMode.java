@@ -21,7 +21,7 @@ public class DefensiveMode extends AbstractExpansionCard {
     private static final int UPGRADE_MAGIC = 1;
 
     public DefensiveMode() {
-        super(ID, 3, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
         tags.add(expansionContentMod.STUDY_GUARDIAN);
         tags.add(expansionContentMod.STUDY);
@@ -32,10 +32,10 @@ public class DefensiveMode extends AbstractExpansionCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-//        atb(new GainBlockAction(p, p, this.block));
+        atb(new GainBlockAction(p, p, this.block));
         atb(new ChangeStanceAction(guardian.stances.DefensiveMode.STANCE_ID));
 //        atb(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
-        atb(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
+//        atb(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
 
 
     }

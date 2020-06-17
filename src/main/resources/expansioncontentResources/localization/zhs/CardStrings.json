@@ -9,7 +9,7 @@
   },
   "expansioncontent:DefensiveMode": {
     "NAME": "防御模式",
-    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 进入 guardianmod:防御模式 。 NL 下回合获得 !B! 点 格挡 。"
+    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。"
   },
   "expansioncontent:Hexaburn": {
     "NAME": "幽灵地狱",
