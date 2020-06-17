@@ -109,10 +109,10 @@ public class TheHexaghost extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(!reskinContent.hexaghostReskinAnimation){
-            this.loadAnimation(atlasURL, this.jsonURL, renderscale);
-        }else {
+        if(reskinContent.hexaghostReskinAnimation && reskinContent.hexaghostReskinUnlock){
             this.loadAnimation(atlasURL2, this.jsonURL2, renderscale2);
+        }else {
+            this.loadAnimation(atlasURL, this.jsonURL, renderscale);
         }
         if(reskinContent.hexaghostMask){
             this.state.setAnimation(0, "idle2", true);

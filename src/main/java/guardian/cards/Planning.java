@@ -52,7 +52,10 @@ public class Planning extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction(this.magicNumber));
+        for (int i = 0; i < this.magicNumber; i++) {
+            AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction(1));
+        }
+
 
         super.useGems(p, m);
     }

@@ -79,10 +79,10 @@ public class TheSnecko extends CustomPlayer {
     }
 
     public void reloadAnimation() {
-        if(!reskinContent.sneckoReskinAnimation){
-            loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
-        }else {
+        if(reskinContent.sneckoReskinAnimation && reskinContent.sneckoReskinUnlock){
             loadAnimation("reskinContent/img/SneckoMod/animation/Snecko_waifu.atlas", "reskinContent/img/SneckoMod/animation/Snecko_waifu.json", renderscale);
+        }else {
+            loadAnimation("sneckomodResources/images/char/skeleton.atlas", "sneckomodResources/images/char/skeleton.json", renderscale);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
