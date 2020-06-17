@@ -432,7 +432,8 @@ public class GuardianMod implements PostDrawSubscriber,
 
     @Override
     public void receiveAddAudio() {
-        BaseMod.addAudio(makeID("STANCE_LOOP_Defensive_Mode"), "guardianResources/audio/sound/sfx_defensive_mode_stance.ogg");
+//        BaseMod.addAudio(makeID("STANCE_LOOP_Defensive_Mode"), "guardianResources/audio/sound/sfx_defensive_mode_stance.ogg");
+        BaseMod.addAudio(makeID("STANCE_LOOP_Defensive_Mode"), "guardianResources/audio/sound/sfx_defensive_mode_stance_v2.ogg");
 
     }
 
