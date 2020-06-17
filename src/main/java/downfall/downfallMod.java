@@ -62,12 +62,10 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.cards.KnowingSkullWish;
-import downfall.dailymods.Hexed;
-import downfall.dailymods.Improvised;
-import downfall.dailymods.Jewelcrafting;
-import downfall.dailymods.WorldOfGoo;
+import downfall.dailymods.*;
 import downfall.events.*;
 import downfall.monsters.*;
+import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
@@ -91,7 +89,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
@@ -923,7 +920,7 @@ public class downfallMod implements
         l.add(new CustomMod(Hexed.ID, "b", true));
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
-
+        l.add(new CustomMod(EvilRun.ID, "b", true));
     }
 
     @Override
@@ -967,15 +964,13 @@ public class downfallMod implements
             AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonSkill());
             AbstractDungeon.player.masterDeck.addToTop(new UnknownUncommonPower());
             AbstractDungeon.player.masterDeck.addToTop(new Unknown());
-
         }
 
-        Iterator var7;
-        var7 = AbstractDungeon.player.masterDeck.group.iterator();
-
-        while (var7.hasNext()) {
-            AbstractCard c = (AbstractCard) var7.next();
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
             UnlockTracker.markCardAsSeen(c.cardID);
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(EvilRun.ID)) || DailyModeEvilPatch.todaysRunIsEvil) {
+            evilMode = true;
         }
     }
 
@@ -998,6 +993,7 @@ public class downfallMod implements
 
         otherPackagePaths() {
         }
+
     }
 
     @Override
