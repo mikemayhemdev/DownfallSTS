@@ -33,7 +33,7 @@ public class ConstructPower extends AbstractGuardianPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + (this.amount / 2) + DESCRIPTIONS[2];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount  + DESCRIPTIONS[2];
 
     }
 
@@ -42,7 +42,7 @@ public class ConstructPower extends AbstractGuardianPower {
         super.atStartOfTurn();
         if (!this.owner.hasPower(ArtifactPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, this.amount), this.amount));
-            AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.amount / 2));
+            AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.amount));
         }
     }
 }
