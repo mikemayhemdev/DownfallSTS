@@ -17,6 +17,7 @@ import java.util.Map;
 
 public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
     private int numCards;
+    private boolean talked = false;
 
     public PlaceRandom1CostIntoStasis(int numCards) {
         this.actionType = ActionType.DAMAGE;
@@ -43,7 +44,10 @@ public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(cStudy.makeStatEquivalentCopy(), false)));
                 //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
             } else {
-                AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                if (!talked) {
+                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                    talked = true;
+                }
             }
 
         }

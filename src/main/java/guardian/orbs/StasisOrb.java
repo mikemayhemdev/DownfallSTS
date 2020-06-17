@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -61,9 +62,15 @@ public class StasisOrb extends AbstractOrb {
         if (card.freeToPlayOnce && !costHack) {
             this.basePassiveAmount = this.passiveAmount = 1;
         }
+
         if (this.basePassiveAmount < 1) {
             this.basePassiveAmount = this.passiveAmount = 1;
         }
+
+        if(card.cost == -1 && AbstractDungeon.player != null){
+            this.basePassiveAmount = this.passiveAmount = AbstractDungeon.player.energy.energy + 1;
+        }
+
         this.baseEvokeAmount = this.basePassiveAmount;
         this.evokeAmount = this.passiveAmount;
         card.targetAngle = 0F;

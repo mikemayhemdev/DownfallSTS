@@ -19,6 +19,7 @@ import java.util.Iterator;
 
 public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
     public static final String[] TEXT;
+    private boolean talked = false;
 
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
@@ -45,7 +46,10 @@ public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
                         AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
                         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                     } else {
-                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                        if (!talked) {
+                            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                            talked = true;
+                        }
                     }
 
                 }

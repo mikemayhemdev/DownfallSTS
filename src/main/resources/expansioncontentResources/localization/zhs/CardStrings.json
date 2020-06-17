@@ -9,7 +9,7 @@
   },
   "expansioncontent:DefensiveMode": {
     "NAME": "防御模式",
-    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 获得 !M! 层 荆棘 。 NL 获得 !B! 点 格挡 。下一回合获得 !B! 点 格挡 。"
+    "DESCRIPTION": "expansioncontent:首领 - 守护者。 NL 获得 !B! 点 格挡 。 NL 进入 guardianmod:防御模式 。"
   },
   "expansioncontent:Hexaburn": {
     "NAME": "幽灵地狱",
@@ -88,16 +88,16 @@
   "expansioncontent:DonusPower": {
     "NAME": "甜圈力量",
     "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 和 人工制品。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 和 人工制品 。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
   },
   "expansioncontent:DecasProtection": {
     "NAME": "八体保护",
     "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 。 NL 将一张随机能力牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 和 人工制品。 NL 将一张随机能力牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 和 人工制品 。 NL 将一张随机能力牌加入你的手牌。 它的耗能本回合变为0. NL 消耗 。"
   },
   "expansioncontent:PolyBeam": {
     "NAME": "双重射线",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 你的下一回合造成 !D! 点伤害。 NL 消耗 。",
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 造成 !D! 点伤害两次。 NL 你的下一回合造成 !D! 点伤害两次。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 造成 !D! 点伤害两次。 NL 消耗 。"
   },
   "expansioncontent:PrepareCrush": {
@@ -106,8 +106,8 @@
   },
   "expansioncontent:GoopSpray": {
     "NAME": "黏液喷射",
-    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 黏液 和 2 层 易伤 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 黏液 和 3 层 易伤 。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 slimeboundmod:黏液 和 2 层 易伤 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 史莱姆。 NL 给予所有敌人 !M! 层 slimeboundmod:黏液 和 3 层 易伤 。 NL 消耗 。"
   },
   "expansioncontent:SlimeTackle": {
     "NAME": "史莱姆撞击",

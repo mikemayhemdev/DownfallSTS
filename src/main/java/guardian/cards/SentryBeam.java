@@ -28,6 +28,8 @@ public class SentryBeam extends AbstractGuardianCard {
     private static final int COST = 0;
     private static final int DAMAGE = 5;
 
+    private boolean noHover = false;
+
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 0;
@@ -55,7 +57,8 @@ public class SentryBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        if (!noHover) cardsToPreview = new SentryWave(true);
+        this.noHover = noHover;
+        if (!this.noHover) cardsToPreview = new SentryWave(true);
     }
 
     public SentryBeam(){
@@ -106,9 +109,11 @@ public class SentryBeam extends AbstractGuardianCard {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = UPGRADED_DESCRIPTION;
-            AbstractCard q = new SentryWave();
-            q.upgrade();
-            cardsToPreview = q;
+            if (!this.noHover){
+                AbstractCard q = new SentryWave(true);
+                q.upgrade();
+                cardsToPreview = q;
+            }
             this.initializeDescription();
 
         }

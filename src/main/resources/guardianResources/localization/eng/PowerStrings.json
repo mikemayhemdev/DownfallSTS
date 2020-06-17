@@ -64,7 +64,9 @@
   "Guardian:ConstructModePower": {
     "NAME": "Construction Mode",
     "DESCRIPTIONS": [
-      "You will not be able to play #yAttacks next turn."
+      "You will not be able to play #yAttacks next turn.",
+      "You will not be able to play #yAttacks next  #b",
+      " turns."
     ]
   },
   "Guardian:MultiBoostPower": {

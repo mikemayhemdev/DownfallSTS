@@ -137,14 +137,13 @@ public class GuardianCharacter extends CustomPlayer {
         if (!inShattered) {
             if (!inDefensive) {
                 if(!reskinContent.guardianReskinAnimation){
-                    CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
+
                     this.stateData.setMix("idle", "defensive", 0.2F);
                     this.state.setTimeScale(.75F);
                     this.state.setAnimation(0, "defensive", true);
 
                     inDefensive = true;
                 }else {
-                    CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
                     reloadAnimation();
                     this.state.setTimeScale(2.0F);
                     this.state.setAnimation(0, "transition", false);
