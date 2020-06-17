@@ -57,7 +57,7 @@ public class TheHexaghost extends CustomPlayer {
             "hexamodResources/images/char/mainChar/orb/layer3d.png",
             "hexamodResources/images/char/mainChar/orb/layer4d.png",
             "hexamodResources/images/char/mainChar/orb/layer5d.png",};
-    private static final String ID = makeID("theHexaghost");
+    public static final String ID = makeID("theHexaghost");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
