@@ -3,7 +3,9 @@ package expansioncontent.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
@@ -14,7 +16,7 @@ public class DefensiveMode extends AbstractExpansionCard {
     public final static String ID = makeID("DefensiveMode");
 
     private static final int BLOCK = 12;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int UPGRADE_BLOCK = 8;
     private static final int MAGIC = 3;
     private static final int UPGRADE_MAGIC = 1;
 
@@ -30,8 +32,9 @@ public class DefensiveMode extends AbstractExpansionCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        atb(new GainBlockAction(p, p, this.block));
-        atb(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
+//        atb(new GainBlockAction(p, p, this.block));
+        atb(new ChangeStanceAction(guardian.stances.DefensiveMode.STANCE_ID));
+//        atb(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
         atb(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
 
 
