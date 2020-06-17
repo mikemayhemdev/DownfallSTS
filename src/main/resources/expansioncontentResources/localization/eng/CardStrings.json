@@ -9,7 +9,7 @@
   },
   "expansioncontent:DefensiveMode": {
     "NAME": "Defensive Mode",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !B! Block. NL Enter Defensive Mode, which lasts for !M! turns."
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Ghost Inferno",

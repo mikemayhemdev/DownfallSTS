@@ -30,8 +30,6 @@ public class SentryWave extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 0;
 
-    private boolean noHover = false;
-
     //TUNING CONSTANTS
     private static final int DEBUFFCOUNT = 1;
     private static final int UPGRADE_DEBUFF = 1;
@@ -54,15 +52,12 @@ public class SentryWave extends AbstractGuardianCard {
         this.baseMagicNumber = this.magicNumber = DEBUFFCOUNT;
         this.exhaust = true;
         this.socketCount = SOCKETS;
-        this.noHover = noHover;
-        if (!this.noHover) {
-            this.cardsToPreview = new SentryBeam(true);
-        }
+        if (!noHover) this.cardsToPreview = new SentryBeam(true);
         updateDescription();
         loadGemMisc();
     }
 
-    public SentryWave() {
+    public SentryWave(){
         this(false);
     }
 
@@ -85,7 +80,7 @@ public class SentryWave extends AbstractGuardianCard {
 
         if (AbstractDungeon.player.hasEmptyOrb()) {
 
-            AbstractGuardianCard newCard = new SentryBeam(this.noHover);
+            AbstractGuardianCard newCard = new SentryBeam();
             if (this.upgraded) newCard.upgrade();
             UnlockTracker.markCardAsSeen(SentryWave.ID);
 
@@ -96,7 +91,7 @@ public class SentryWave extends AbstractGuardianCard {
     }
 
     public AbstractCard makeCopy() {
-        return new SentryWave(this.noHover);
+        return new SentryWave();
     }
 
     public void upgrade() {
@@ -105,11 +100,9 @@ public class SentryWave extends AbstractGuardianCard {
             //upgradeMagicNumber(UPGRADE_DEBUFF);
             this.target = CardTarget.ALL_ENEMY;
             this.rawDescription = UPGRADED_DESCRIPTION;
-            if (!this.noHover) {
-                AbstractCard q = new SentryBeam(true);
-                q.upgrade();
-                cardsToPreview = q;
-            }
+            AbstractCard q = new SentryBeam();
+            q.upgrade();
+            cardsToPreview = q;
             this.initializeDescription();
         }
     }
