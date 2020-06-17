@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.cards.AbstractGuardianCard;
 import guardian.patches.GuardianEnum;
 import slimebound.cards.AbstractSlimeboundCard;
@@ -44,13 +45,21 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         this.oneless = oneless;
     }
 
+    public static boolean guardianLocked() {
+        return UnlockTracker.isCharacterLocked("Guardian");
+    }
+
+    public static boolean hexaLocked() {
+        return UnlockTracker.isCharacterLocked(TheHexaghost.ID);
+    }
+
     public void update() {
 
         ArrayList<String> tmp = new ArrayList<>();
 
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
-            if (c.getValue().hasTag(tag) && (!(c instanceof AbstractSlimeboundCard && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND)) && (!(c instanceof AbstractGuardianCard && AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN)) && (!(c instanceof AbstractHexaCard && AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT))) {
+            if (c.getValue().hasTag(tag) && (!(c instanceof AbstractSlimeboundCard && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND)) && (!(c instanceof AbstractGuardianCard && (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || guardianLocked()))) && (!(c instanceof AbstractHexaCard && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || hexaLocked())))) {
                 tmp.add(c.getKey());
             }
         }
