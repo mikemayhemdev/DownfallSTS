@@ -57,8 +57,8 @@
     ]
   },
   "Guardian:StasisSlotReductionRelic": {
-    "NAME": "悬浮机器人",
-    "FLAVOR": "这些无人机找到了最美妙的救助，但需要处理能力来维持。",
+    "NAME": "悬浮机",
+    "FLAVOR": "这些自动机搜寻最棒的遗宝，但需要占用处理能力来维持运转。",
     "DESCRIPTIONS": [
       "拾起时， 失去 2 个 #yguardianmod:凝滞 栏位，每回合开始时获得 [E] 。"
     ]
