@@ -28,6 +28,8 @@ public class SentryBeam extends AbstractGuardianCard {
     private static final int COST = 0;
     private static final int DAMAGE = 5;
 
+    private boolean noHover = false;
+
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 0;
@@ -55,7 +57,10 @@ public class SentryBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        if (!noHover) cardsToPreview = new SentryWave(true);
+        this.noHover = noHover;
+        if (!this.noHover) {
+            cardsToPreview = new SentryWave(true);
+        }
     }
 
     public SentryBeam(){
@@ -81,7 +86,7 @@ public class SentryBeam extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
         if (AbstractDungeon.player.hasEmptyOrb()) {
-            AbstractGuardianCard newCard = new SentryWave();
+            AbstractGuardianCard newCard = new SentryWave(this.noHover);
             newCard.sockets = this.sockets;
             if (this.upgraded) newCard.upgrade();
 
@@ -95,7 +100,7 @@ public class SentryBeam extends AbstractGuardianCard {
 
     public AbstractCard makeCopy() {
 
-        return new SentryBeam();
+        return new SentryBeam(this.noHover);
 
     }
 
@@ -106,9 +111,11 @@ public class SentryBeam extends AbstractGuardianCard {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
             this.rawDescription = UPGRADED_DESCRIPTION;
-            AbstractCard q = new SentryWave();
-            q.upgrade();
-            cardsToPreview = q;
+            if (!this.noHover) {
+                AbstractCard q = new SentryWave(true);
+                q.upgrade();
+                cardsToPreview = q;
+            }
             this.initializeDescription();
 
         }
