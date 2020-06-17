@@ -81,8 +81,8 @@
     ]
   },
   "Slimebound:MaxSlimesRelic": {
-    "NAME": "史莱姆玩偶",
-    "FLAVOR": "太可爱了。",
+    "NAME": "陆军旗",
+    "FLAVOR": "你和你的黏黏军团。",
     "DESCRIPTIONS": [
       "战斗开始时， 分裂 出1只 水蛭史莱姆 并获得1个史莱姆槽位。"
     ]
