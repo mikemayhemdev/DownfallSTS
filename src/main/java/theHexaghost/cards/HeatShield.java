@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theHexaghost.powers.BurnPower;
 
 public class HeatShield extends AbstractHexaCard {
@@ -18,16 +19,20 @@ public class HeatShield extends AbstractHexaCard {
 
     @Override
     protected void applyPowersToBlock() {
-        int realBaseBlock = this.baseBlock;
-        super.applyPowersToBlock();
-        this.magicNumber = this.baseMagicNumber = this.block;
-        for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (mo.hasPower(BurnPower.POWER_ID))
-                baseBlock += mo.getPower(BurnPower.POWER_ID).amount;
+        if (AbstractDungeon.isPlayerInDungeon()) {
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+                int realBaseBlock = this.baseBlock;
+                super.applyPowersToBlock();
+                this.magicNumber = this.baseMagicNumber = this.block;
+                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if (mo.hasPower(BurnPower.POWER_ID))
+                        baseBlock += mo.getPower(BurnPower.POWER_ID).amount;
+                }
+                super.applyPowersToBlock();
+                this.baseBlock = realBaseBlock;// 75
+                this.isBlockModified = block != baseBlock;
+            }
         }
-        super.applyPowersToBlock();
-        this.baseBlock = realBaseBlock;// 75
-        this.isBlockModified = block != baseBlock;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

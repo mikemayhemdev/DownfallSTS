@@ -15,8 +15,8 @@ public class DynamicBlow extends AbstractHexaCard {
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 3;
 
-    private static final int MAGIC = 10;
-    private static final int UPG_MAGIC = 3;
+    private static final int MAGIC = 15;
+    private static final int UPG_MAGIC = 5;
 
     public DynamicBlow() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);

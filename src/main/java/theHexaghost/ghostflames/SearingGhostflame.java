@@ -30,7 +30,7 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     public SearingGhostflame(float x, float y) {
         super(x, y);
-        magic = 3;
+        magic = 6;
 
         //this.textColor = new Color(.75F,1F,.75F,1F);
         this.triggersRequired = 2;

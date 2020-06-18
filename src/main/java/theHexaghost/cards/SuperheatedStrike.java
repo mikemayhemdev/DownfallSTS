@@ -15,8 +15,8 @@ public class SuperheatedStrike extends AbstractHexaCard {
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
 
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 3;
 
     public SuperheatedStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);

@@ -13,8 +13,8 @@ public class GhostLash extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 8;
+    private static final int UPG_DAMAGE = 3;
 
     public GhostLash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

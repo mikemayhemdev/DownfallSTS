@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
+import theHexaghost.ghostflames.SearingGhostflame;
 
 public class StepThrough extends AbstractHexaCard {
 
@@ -26,7 +27,16 @@ public class StepThrough extends AbstractHexaCard {
         if (GhostflameHelper.activeGhostFlame.charged) {
             atb(new AdvanceAction());
         } else {
-            atb(new ChargeCurrentFlameAction());
+            if (GhostflameHelper.activeGhostFlame instanceof SearingGhostflame){
+                SearingGhostflame gf = (SearingGhostflame) GhostflameHelper.activeGhostFlame;
+                if (gf.attacksPlayedThisTurn == 1){
+                    atb(new AdvanceAction());
+                } else {
+                    atb(new ChargeCurrentFlameAction());
+                }
+            } else {
+                atb(new ChargeCurrentFlameAction());
+            }
         }
     }
 

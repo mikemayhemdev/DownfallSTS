@@ -44,7 +44,7 @@ public class EmbersAction extends AbstractXAction {
                 public void update() {
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    addToTop(new ApplyPowerAction(target, p, new BurnPower(target, burn), burn));
+                    addToTop(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
                     addToTop(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.FIRE));
                 }
             });
