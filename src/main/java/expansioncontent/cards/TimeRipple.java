@@ -23,7 +23,7 @@ public class TimeRipple extends AbstractExpansionCard {
 
         tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
-
+        this.magicNumber = this.baseMagicNumber = 1;
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;
@@ -38,7 +38,7 @@ public class TimeRipple extends AbstractExpansionCard {
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if ((!monster.isDead) && (!monster.isDying)) {
 
-                    atb(new ApplyPowerAction(monster, p, new SlowPower(monster, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                    atb(new ApplyPowerAction(monster, p, new SlowPower(monster, this.magicNumber), 10 * this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
                 }
