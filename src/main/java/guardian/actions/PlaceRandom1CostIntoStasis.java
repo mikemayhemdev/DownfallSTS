@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -17,7 +18,8 @@ import java.util.Map;
 
 public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
     private int numCards;
-    private boolean talked = false;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
+
 
     public PlaceRandom1CostIntoStasis(int numCards) {
         this.actionType = ActionType.DAMAGE;
@@ -44,9 +46,9 @@ public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(cStudy.makeStatEquivalentCopy(), false)));
                 //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
             } else {
-                if (!talked) {
-                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
-                    talked = true;
+                if (!AbstractDungeon.player.hasEmptyOrb()) {
+                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
+                    this.isDone = true;
                 }
             }
 

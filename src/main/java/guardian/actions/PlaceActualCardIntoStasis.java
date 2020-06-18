@@ -3,6 +3,7 @@ package guardian.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -14,7 +15,8 @@ import guardian.orbs.StasisOrb;
 public class PlaceActualCardIntoStasis extends AbstractGameAction {
     private AbstractCard card;
     private boolean hack;
-    private boolean talked = false;
+
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
     public PlaceActualCardIntoStasis(AbstractCard card, boolean hack) {
         this(card);
@@ -43,9 +45,9 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
 
             AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, this.hack)));
         } else {
-            if (!talked) {
-                AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
-                talked = true;
+            if (!AbstractDungeon.player.hasEmptyOrb()) {
+                AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
+                this.isDone = true;
             }
         }
 

@@ -17,6 +17,8 @@ import theHexaghost.util.TextureLoader;
 
 public class AwakenedOnePower extends AbstractPower {
     public static final String POWER_ID = expansionContentMod.makeID("AwakenedOnePower");
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual84.png");
     private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/darkRitual32.png");
@@ -25,9 +27,7 @@ public class AwakenedOnePower extends AbstractPower {
 
 
     public AwakenedOnePower(AbstractCreature owner, AbstractCreature source, int amount) {
-
-
-        this.name = "Dark Ritual";
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
@@ -38,8 +38,6 @@ public class AwakenedOnePower extends AbstractPower {
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.updateDescription();
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         sourceM = (AbstractMonster) owner;
     }

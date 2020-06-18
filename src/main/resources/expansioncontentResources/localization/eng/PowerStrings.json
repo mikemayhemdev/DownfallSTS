@@ -165,11 +165,35 @@
       " #yStrength."
     ]
   },
+  "expansioncontent:ChronoBoostPlusPower": {
+    "NAME": "Chrono Boost+",
+    "DESCRIPTIONS": [
+      "After playing ",
+      " more cards, gain ",
+      " #yStrength."
+    ]
+  },
   "expansioncontent:DeEnergizedPower": {
     "NAME": "De-Energized",
     "DESCRIPTIONS": [
       "At the start of your next turn, lose ",
       " [E]."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPower": {
+    "NAME": "Potency",
+    "DESCRIPTIONS": [
+      "#yPoly #yBeam will be played at the start of your next turn. ",
+      "#yPoly #yBeam will be played at the start of your next #b",
+      " turns."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Potency",
+    "DESCRIPTIONS": [
+      "#yPoly #yBeam+ will be played at the start of your next turn. ",
+      "#yPoly #yBeam+ will be played at the start of your next #b",
+      " turns."
     ]
   }
 }

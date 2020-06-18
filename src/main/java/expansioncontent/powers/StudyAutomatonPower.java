@@ -18,12 +18,12 @@ import theHexaghost.util.TextureLoader;
 public class StudyAutomatonPower extends AbstractPower {
 
     public static final String POWER_ID = expansionContentMod.makeID("StudyAutomatonPower");
-    public static final String NAME = "Potency";
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton84.png");
     private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyAutomaton32.png");
     public static PowerType POWER_TYPE = PowerType.BUFF;
-    public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
 
@@ -45,9 +45,6 @@ public class StudyAutomatonPower extends AbstractPower {
         this.type = POWER_TYPE;
 
         this.amount = amount;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         updateDescription();
 
