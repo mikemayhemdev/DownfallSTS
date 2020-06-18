@@ -101,7 +101,7 @@
     "NAME": "星光公司采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
-	"你能在 3 处 篝火 #g挖掘 2 颗 #yguardianmod:宝石。"
+	"你能在 3 处 篝火 #g挖掘 2 颗 #yguardianmod:宝石 。"
     ]
   },
     "Guardian:GemstoneGun": {
