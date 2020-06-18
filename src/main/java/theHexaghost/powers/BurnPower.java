@@ -4,10 +4,11 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,7 +19,7 @@ import theHexaghost.HexaMod;
 import theHexaghost.relics.IceCube;
 import theHexaghost.util.TextureLoader;
 
-public class BurnPower extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
+public class BurnPower extends TwoAmountPower implements CloneablePowerInterface, HealthBarRenderPower {
 
     public static final String POWER_ID = HexaMod.makeID("BurnPower");
 
@@ -35,6 +36,8 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
+        amount2 = 3;
+        if (AbstractDungeon.player.hasRelic(IceCube.ID)) amount2 = 4;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
 
@@ -46,7 +49,9 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public int getHealthBarAmount() {
-        return amount;
+        if (amount2 == 1)
+            return amount;
+        return 0;
     }
 
     @Override
@@ -55,22 +60,29 @@ public class BurnPower extends AbstractPower implements CloneablePowerInterface,
     }
 
     public void atStartOfTurn() {
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 65 66
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead() && amount2 == 1) {// 65 66
             this.flashWithoutSound();// 67
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
-            int x = ((int) Math.ceil(this.amount / 2F));
-            if (AbstractDungeon.player.hasRelic(IceCube.ID)) x = amount;
-            addToBot(new ReducePowerAction(owner, owner, this, x));
+            addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
+        } else {
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    amount2--;
+                    updateDescription();
+                }
+            });
         }
     }// 70
 
 
     @Override
     public void updateDescription() {
-        if (AbstractDungeon.player.hasRelic(IceCube.ID)) {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
-        } else
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        if (amount2 == 1)
+            description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[2] + amount + DESCRIPTIONS[3];
+        else
+            description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1] + amount + DESCRIPTIONS[3];
     }
 
     @Override

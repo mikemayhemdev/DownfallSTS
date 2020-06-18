@@ -32,13 +32,12 @@
     "DESCRIPTION": "Intensity increases the amount of damage, Burn, and Block applied by Ghostflames when Ignited."
   },
   {
-    "PROPER_NAME": "Burn",
+    "PROPER_NAME": "Sear",
     "NAMES": [
-      "burn",
-      "burned",
-      "burning"
+      "sear",
+      "seared"
     ],
-    "DESCRIPTION": "Burning creatures lose HP at the start of their turn. Each turn, Burn is halved (rounding up)."
+    "DESCRIPTION": "After #b3 turns, a Seared enemy loses HP, removing all Seared."
   },
   {
     "PROPER_NAME": "Extinguish",

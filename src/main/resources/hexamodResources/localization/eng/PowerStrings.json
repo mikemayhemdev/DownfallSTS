@@ -30,11 +30,12 @@
     ]
   },
   "hexamod:BurnPower": {
-    "NAME": "Burn",
+    "NAME": "Sear",
     "DESCRIPTIONS": [
-      "At the start of its turn, loses #b",
-      " HP, then Burn is #rremoved.",
-      " HP, then Burn is halved."
+      "In #b",
+      " turns, loses #b",
+      " turn, loses #b",
+      " HP, then Sear is removed."
     ]
   },
   "hexamod:BurnvenomPower": {
