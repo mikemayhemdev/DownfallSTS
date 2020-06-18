@@ -30,12 +30,12 @@
     ]
   },
   "hexamod:BurnPower": {
-    "NAME": "Sear",
+    "NAME": "Soulburn",
     "DESCRIPTIONS": [
       "In #b",
       " turns, loses #b",
       " turn, loses #b",
-      " HP, then Sear is removed."
+      " HP, then Soulburn is removed."
     ]
   },
   "hexamod:BurnvenomPower": {
@@ -56,14 +56,14 @@
   "hexamod:CrispyPower": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "Burn applied is increased by #b",
+      "Soulburn applied is increased by #b",
       "."
     ]
   },
   "hexamod:EnhancePower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "Increase the amount of damage, Burn, and Block applied by Ghostflames when Ignited by #b",
+      "Increase the amount of damage, Soulburn, and Block applied by Ghostflames when Ignited by #b",
       "."
     ]
   },

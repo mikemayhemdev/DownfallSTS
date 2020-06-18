@@ -9,7 +9,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Sear",
-    "DESCRIPTION": "Apply !burny! hexamod:Sear."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn."
   },
   "hexamod:Float": {
     "NAME": "Float",
@@ -124,7 +124,7 @@
   },
   "hexamod:SpectersWail": {
     "NAME": "Specter's Wail",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Deal !D! damage to ALL enemies."
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
@@ -197,48 +197,48 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
-    "DESCRIPTION": "If the enemy has hexamod:Sear, apply !burny! hexamod:Sear. NL Apply !burny! hexamod:Sear."
+    "DESCRIPTION": "If the enemy has hexamod:Soulburn, apply !burny! hexamod:Soulburn. NL Apply !burny! hexamod:Soulburn."
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Sear to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy !M! times."
   },
   "hexamod:Firestarter": {
     "NAME": "Firestarter",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !burny! hexamod:Sear."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !burny! hexamod:Soulburn."
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
-    "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Sear."
+    "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Soulburn."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
-    "DESCRIPTION": "Cards and Ghostflames apply !M! more hexamod:Sear.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Cards and Ghostflames apply !M! more hexamod:Sear."
+    "DESCRIPTION": "Cards and Ghostflames apply !M! more hexamod:Soulburn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Cards and Ghostflames apply !M! more hexamod:Soulburn."
   },
   "hexamod:GhostflameBarrier": {
     "NAME": "Ghostflame Wall",
-    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! hexamod:Sear to the attacker."
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! hexamod:Soulburn to the attacker."
   },
   "hexamod:Toasty": {
     "NAME": "Toasty!",
-    "DESCRIPTION": "Deal !D! damage. NL Apply hexamod:Sear equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL Apply hexamod:Soulburn equal to unblocked damage dealt."
   },
   "hexamod:WildfireWeapon": {
     "NAME": "Wildfire Weapon",
-    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Sear."
+    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! hexamod:Soulburn."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "Thermal Transfer",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Sear, gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Soulburn, gain !B! Block."
   },
   "hexamod:HeatCrush": {
     "NAME": "Heat Crush",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is increased by enemy's hexamod:Sear."
+    "DESCRIPTION": "Deal !D! damage. NL Damage is increased by enemy's hexamod:Soulburn."
   },
   "hexamod:HeatShield": {
     "NAME": "Heat Shield",
-    "DESCRIPTION": "Gain !M! Block, increased by hexamod:Sear on ALL enemies. (Current: !B! Block)"
+    "DESCRIPTION": "Gain !M! Block, increased by hexamod:Soulburn on ALL enemies. (Current: !B! Block)"
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
@@ -247,32 +247,32 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy gains !M! hexamod:Sear at the start of each of its turns."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy gains !M! hexamod:Soulburn at the start of each of its turns."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Sear to a random enemy X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Sear to a random enemy X+1 times."
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X+1 times."
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, apply !M! hexamod:Sear to ALL enemies."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, apply !M! hexamod:Soulburn to ALL enemies."
   },
   "hexamod:SuperheatedStrike": {
     "NAME": "Searing Strike",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !burny! hexamod:Sear. NL If this card is Exhausted, take !M! damage."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Apply !burny! hexamod:Soulburn. NL If this card is Exhausted, take !M! damage."
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Sear to ALL enemies at the start of your next turn."
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies at the start of your next turn."
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Sear, deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Soulburn, deal !D! damage."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
-    "DESCRIPTION": "Apply !burny! hexamod:Sear. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the hexamod:Active Ghostflame is hexamod:Ignited: hexamod:Extinguish it and return this card to your hand."
   },
   "hexamod:GhostflameInferno": {
     "NAME": "Instant Inferno",
@@ -281,11 +281,11 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Charged Barrage",
-    "DESCRIPTION": "Apply !burny! hexamod:Sear. NL Repeat for each hexamod:Ignited Ghostflame."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Repeat for each hexamod:Ignited Ghostflame."
   },
   "hexamod:RadiantFlame": {
     "NAME": "Radiant Flame",
-    "DESCRIPTION": "Whenever you hexamod:Ignite a Ghostflame, apply !M! hexamod:Sear to a random enemy."
+    "DESCRIPTION": "Whenever you hexamod:Ignite a Ghostflame, apply !M! hexamod:Soulburn to a random enemy."
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apocalypse Now",
@@ -294,7 +294,7 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamic Blow",
-    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is hexamod:Ignited, apply !burny! hexamod:Sear. If not, deal !D! damage."
+    "DESCRIPTION": "Ethereal. NL If the hexamod:Active Ghostflame is hexamod:Ignited, apply !burny! hexamod:Soulburn. If not, deal !D! damage."
   },
   "hexamod:SpiritOfFire": {
     "NAME": "Spirit of Fire",

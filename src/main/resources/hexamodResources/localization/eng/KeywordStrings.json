@@ -29,15 +29,15 @@
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, Burn, and Block applied by Ghostflames when Ignited."
+    "DESCRIPTION": "Intensity increases the amount of damage, Soulburn, and Block applied by Ghostflames when Ignited."
   },
   {
-    "PROPER_NAME": "Sear",
+    "PROPER_NAME": "Soulburn",
     "NAMES": [
-      "sear",
-      "seared"
+      "soulburn",
+      "soulburned"
     ],
-    "DESCRIPTION": "After #b3 turns, a Seared enemy loses HP, removing all Seared."
+    "DESCRIPTION": "After #b3 turns, a Soulburned enemy loses HP, removing the Soulburn effect."
   },
   {
     "PROPER_NAME": "Extinguish",
