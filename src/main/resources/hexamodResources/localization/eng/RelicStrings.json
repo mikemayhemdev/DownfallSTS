@@ -25,7 +25,7 @@
     "NAME": "Xanatos's Icy Charm",
     "FLAVOR": "I feel... cold.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yhexamod:Burn is removed instead of halved each turn."
+      "Gain [E] at the start of your turn. #yhexamod:Sear takes #b4 turns to activate."
     ]
   },
   "hexamod:SoulConsumer": {
