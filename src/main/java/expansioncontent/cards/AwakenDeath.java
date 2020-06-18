@@ -11,7 +11,7 @@ import expansioncontent.powers.AwakenDeathPower;
 public class AwakenDeath extends AbstractExpansionCard {
     public final static String ID = makeID("AwakenDeath");
 
-    private static final int MAGIC = 20;
+    private static final int MAGIC = 10;
     private static final int UPGRADE_MAGIC = 10;
 
     public AwakenDeath() {

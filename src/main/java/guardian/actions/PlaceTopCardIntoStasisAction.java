@@ -14,6 +14,7 @@ import guardian.orbs.StasisOrb;
 
 public class PlaceTopCardIntoStasisAction extends AbstractGameAction {
     private int numCards;
+    private boolean talked = false;
 
     public PlaceTopCardIntoStasisAction(int numCards) {
         this.actionType = ActionType.DAMAGE;
@@ -49,8 +50,11 @@ public class PlaceTopCardIntoStasisAction extends AbstractGameAction {
                     }
                     AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(AbstractDungeon.player.drawPile.getTopCard(), false)));
                     //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                   } else {
-                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.charStrings.TEXT[6], true));
+                } else {
+                    if (!talked) {
+                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
+                        talked = true;
+                    }
                 }
             }
         }

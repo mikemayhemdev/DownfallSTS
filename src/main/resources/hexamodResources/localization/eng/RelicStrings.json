@@ -22,17 +22,17 @@
     ]
   },
   "hexamod:IceCube": {
-    "NAME": "Specter's Snowflake",
+    "NAME": "Xanatos's Icy Charm",
     "FLAVOR": "I feel... cold.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yhexamod:Burn is removed instead of halved each turn."
+      "Gain [E] at the start of your turn. #yhexamod:Soulburn takes #b4 turns to activate."
     ]
   },
   "hexamod:SoulConsumer": {
     "NAME": "Thermal Stone",
     "FLAVOR": "A fire would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you kill a #yhexamod:Burning enemy, heal #b2 HP."
+      "Whenever you kill a #yhexamod:Soulburned enemy, heal #b2 HP."
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -81,7 +81,7 @@
     "NAME": "Red Candle",
     "FLAVOR": "Fire BURNS...",
     "DESCRIPTIONS": [
-      "Whenever an #yAttack deals unblocked damage, apply #b1 #yhexamod:Burn."
+      "Whenever an #yAttack deals unblocked damage, apply #b1 #yhexamod:Soulburn."
     ]
   },
   "hexamod:Sixitude": {

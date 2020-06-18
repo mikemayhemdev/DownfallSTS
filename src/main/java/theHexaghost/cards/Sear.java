@@ -11,7 +11,7 @@ public class Sear extends AbstractHexaCard {
 
     //stupid intellij stuff SKILL, ENEMY, BASIC
 
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 9;
 
     public Sear() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
@@ -26,7 +26,7 @@ public class Sear extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(3);
+            upgradeBurn(5);
         }
     }
 }

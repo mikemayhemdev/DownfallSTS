@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -7,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.EtherealMod;
 
 public class Haunt extends AbstractHexaCard {
 
@@ -33,10 +35,7 @@ public class Haunt extends AbstractHexaCard {
                 isDone = true;
                 for (AbstractCard c : p.hand.group) {
                     if (!c.isEthereal) {
-                        c.isEthereal = true;
-                        if (!c.rawDescription.contains(EXTENDED_DESCRIPTION[0]))
-                            c.rawDescription = EXTENDED_DESCRIPTION[1] + c.rawDescription;
-                        c.initializeDescription();
+                        CardModifierManager.addModifier(c, new EtherealMod());
                         c.superFlash(Color.PURPLE.cpy());
                     }
                 }

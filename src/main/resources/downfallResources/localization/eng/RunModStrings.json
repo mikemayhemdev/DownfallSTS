@@ -14,5 +14,9 @@
   "downfall:Jewelcrafting": {
     "NAME": "Jewelcrafting",
     "DESCRIPTION": "Start with two copies of Exploit Gem and a Rhapsody Co. Mining Pick."
+  },
+  "downfall:EvilRun": {
+    "NAME": "Evil Run",
+    "DESCRIPTION": "Enables Evil Run content."
   }
 }

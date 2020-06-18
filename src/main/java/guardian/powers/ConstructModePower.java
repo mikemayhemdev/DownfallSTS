@@ -1,10 +1,13 @@
 package guardian.powers;
 
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.BufferPower;
+import com.megacrit.cardcrawl.powers.EntanglePower;
 
 
 public class ConstructModePower extends AbstractGuardianPower {
@@ -34,17 +37,6 @@ public class ConstructModePower extends AbstractGuardianPower {
         } else {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
-
-    }
-
-    //ATTACK PREVENTION IN PATCH: ConstructModeAttackPreventionPatch
-
-    public void onInitialApplication() {
-        super.onInitialApplication();
-        //  switchToConstructMode();
-        // AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, "Guardian:DefenseModePower"));
-
-
     }
 
     public void atStartOfTurn() {
@@ -53,6 +45,8 @@ public class ConstructModePower extends AbstractGuardianPower {
 
         } else {
             this.amount -= 1;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new EntanglePower(this.owner)));
+
         }
 
     }
@@ -60,11 +54,7 @@ public class ConstructModePower extends AbstractGuardianPower {
     @Override
     public void onRemove() {
         super.onRemove();
-    }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new EntanglePower(this.owner)));
 
-    @Override
-    public int onLoseHp(int damageAmount) {
-        return 0;
     }
-
 }

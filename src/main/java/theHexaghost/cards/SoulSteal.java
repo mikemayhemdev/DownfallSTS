@@ -1,12 +1,18 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.RetractAction;
 import theHexaghost.patches.NoDiscardField;
+import theHexaghost.powers.BurnPower;
+import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
 public class SoulSteal extends AbstractHexaCard {
 
@@ -14,45 +20,38 @@ public class SoulSteal extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
-
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK = 2;
 
     public SoulSteal() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseBlock = BLOCK;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseBurn = burn = 5;
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.LIGHTNING);
-        blck();
-        if (GhostflameHelper.getPreviousGhostFlame().charged) {
-            atb(new RetractAction());
-            NoDiscardField.noDiscard.set(this, true);
-            exhaust = false;
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    exhaust = true;
-                    isDone = true;
+        burn(m, burn);
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (m.hasPower(BurnPower.POWER_ID)) {
+                    AbstractPower p = m.getPower(BurnPower.POWER_ID);
+                    p.flashWithoutSound();// 67
+                    addToBot(new VFXAction(new ExplosionSmallEffectGreen(p.owner.hb.cX, p.owner.hb.cY), 0.1F));
+                    addToBot(new LoseHPAction(p.owner, p.owner, amount, AbstractGameAction.AttackEffect.FIRE));
+                    addToBot(new RemoveSpecificPowerAction(p.owner, p.owner, ID));
                 }
-            });
-        }
+            }
+        });
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = GhostflameHelper.getPreviousGhostFlame().charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;// 65
+        burnGlowCheck();
     }// 68
 
     public void upgrade() {
         if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-            upgradeBlock(UPG_BLOCK);
+            exhaust = false;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -1,176 +1,175 @@
 {
-	"Guardian:NextTurnGainStrengthPower": {
-		"NAME": "充能",
-		"DESCRIPTIONS": [
-			"在下一回合获得 ",
-			" 点力量。"
-		]
-	},
-	"Guardian:StunnedPower": {
-	"NAME": "击晕",
-	"DESCRIPTIONS": [
-		"跳过你的下回合。",
-		"跳过你下 ",
-		" 个回合。"
-	]
-},
-	"Guardian:FloatingOrbsPower": {
-		"NAME": "浮动圆球",
-		"DESCRIPTIONS": [
-			"在你的回合开始时, 增加一张 圆球撞击 在你的手牌中。",
-			"在你的回合开始时，增加 ",
-			" 张 圆球撞击 在你的手牌中。"
-		]
-	},
-	"Guardian:OrbwalkPower": {
-		"NAME": "圆球回转",
-		"DESCRIPTIONS": [
-			"每回合开始时获得 ",
-			" 点力量。"
-		]
-	},
-	"Guardian:ClonePower": {
-		"NAME": "重连",
-		"DESCRIPTIONS": [
-			"将打出的下张非消耗攻击或技能牌将凝滞。",
-			"将打出的下 ",
-			" 张非消耗攻击或技能牌将凝滞。"
-		]
-	},
-	"Guardian:GemFinderPower": {
-		"NAME": "开采宝石",
-		"DESCRIPTIONS": [
-			"在战斗结束后，选择一个普通宝石加入你的牌库。",
-			"在战斗结束后，选择 ",
-			" 个普通宝石加入你的牌库。"
-		]
-	},
-	"Guardian:FuturePlansPower": {
-		"NAME": "未来计划",
-		"DESCRIPTIONS": [
-			"在你的回合结束时，选择 #b",
-			" 张牌凝滞。",
-			" 张牌凝滞。"
-		]
-	},
-	"Guardian:DefenseModePower": {
-		"NAME": "防御模式",
-		"DESCRIPTIONS": [
-			" 防御模式会维持 ",
-			" 个回合。 NL 期间防御模式给予你 ",
-			" 层荆棘但降低 25% 的伤害。每打出一张牌获得 2 点格挡。"
-		]
-	},
-	"Guardian:ConstructModePower": {
-		"NAME": "建造模式",
-		"DESCRIPTIONS": [
-			"你不能在这个回合失去生命或打出攻击牌。",
-			"你不能在 ",
-			" 个回合失去生命或打出攻击牌。"
-		]
-	},
-	"Guardian:MultiBoostPower": {
-		"NAME": "多重促进",
-		"DESCRIPTIONS": [
-			"多次造成伤害的攻击会造成额外进行 1 次。",
-			"多次造成伤害的攻击会造成额外进行 ",
-			" 次。"
-		]
-	},
-	"Guardian:TargetedPower": {
-		"NAME": "标记",
-		"DESCRIPTIONS": [
-			"每当这个敌人受伤时, 本回合获得 ",
-			" 层临时力量。"
-		]
-	},
-	"Guardian:LoseThornsPower": {
-		"NAME": "蜕刺",
-		"DESCRIPTIONS": [
-			"下回合开始时失去 ",
-			" 层荆棘。"
-		]
-	},
-	"Guardian:BeamBuffPower": {
-		"NAME": "装填",
-		"DESCRIPTIONS": [
-			"射线牌额外获得 ",
-			" 点伤害。"
-		]
-	},
-	"Guardian:DefensiveModeBuffsPower": {
-		"NAME": "防御模式+",
-		"DESCRIPTIONS": [
-			"在防御模式的基础上, 防御模式+将获得: NL ",
-			" 层荆棘。",
-			" 点敏捷。",
-			" 点格挡于回合结束时。",
-			"消耗在每回合抽到的第一张状态或诅咒牌",
-			"消耗在每回合抽到的第 ",
-			" 张状态或诅咒牌 ",
-			"当 防御模式 结束时 ",
-			" 点 临时 力量 。"
-		]
-	},
-	"Guardian:AutomayhemPower": {
-		"NAME": "时间沙漏",
-		"DESCRIPTIONS": [
-			"你的回合结束时， 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点。 ",
-			" 次, 你的回合结束时, 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点"
-		]
-	},
-	"Guardian:ConstructPower": {
-		"NAME": "先古建造",
-		"DESCRIPTIONS": [
-			"如果回合开始时你没有 人工制品 获得 ",
-			" 层 人工制品 并失去 ",
-			" [E] 。"
-		]
-	},
-	"Guardian:ModeShiftPower": {
-		"NAME": "模式转换",
-		"DESCRIPTIONS": [
-			"当你失去 ",
-			" 点生命时，获得10点格挡，获得 3 层 防御模式。 NL 每次启用模式转换时，激活所需的量都会增加。",
-			"模式转换本回合已经激活。"
-		]
-	},
-		"Guardian:ExhaustStatusesPower": {
-			"NAME": "反冲",
-			"DESCRIPTIONS": [
-				"消耗每回合抽到的前1张状态或诅咒牌。",
-				"消耗每回合抽到的前 ",
-				" 张状态或诅咒牌。"
-			]
-		},
-	"Guardian:RevengePower": {
-		"NAME": "复仇",
-		"DESCRIPTIONS": [
-			"离开 #y防御模式 时，获得 ",
-			" 点防御模式持续回合数的 力量 。 NL 目前将获得",
-			" 点 临时 力量 。"
-		]
-	},
-	"Guardian:StasisEnginePower": {
-		"NAME": "凝滞引擎",
-		"DESCRIPTIONS": [
-			"在一回合内打出3张0费卡时，获得 ",
-			" [E] 并抽 ",
-			" 张卡 ",
-			" 张卡 ",
-			" 。"
-		]
-	},
-	"Guardian:EnergizedGuardianPower": {
-		"NAME": "通电",
-		"DESCRIPTIONS": [
-			"下回合获得 #b",
-			" 点额外 [E] 。",
-			" 点额外 [E] 。",
-			" - 翻译注意: - 如需区分单复数，则上面的是复数。"
-		]
-	},
-	
+  "Guardian:NextTurnGainStrengthPower": {
+    "NAME": "充能",
+    "DESCRIPTIONS": [
+      "在下一回合获得 ",
+      " 点力量。"
+    ]
+  },
+  "Guardian:StunnedPower": {
+    "NAME": "击晕",
+    "DESCRIPTIONS": [
+      "跳过你的下回合。",
+      "跳过你下 ",
+      " 个回合。"
+    ]
+  },
+  "Guardian:FloatingOrbsPower": {
+    "NAME": "浮动圆球",
+    "DESCRIPTIONS": [
+      "在你的回合开始时, 增加一张 圆球撞击 在你的手牌中。",
+      "在你的回合开始时，增加 ",
+      " 张 圆球撞击 在你的手牌中。"
+    ]
+  },
+  "Guardian:OrbwalkPower": {
+    "NAME": "圆球回转",
+    "DESCRIPTIONS": [
+      "每回合开始时获得 ",
+      " 点力量。"
+    ]
+  },
+  "Guardian:ClonePower": {
+    "NAME": "重连",
+    "DESCRIPTIONS": [
+      "将打出的下张非消耗攻击或技能牌将凝滞。",
+      "将打出的下 ",
+      " 张非消耗攻击或技能牌将凝滞。"
+    ]
+  },
+  "Guardian:GemFinderPower": {
+    "NAME": "开采宝石",
+    "DESCRIPTIONS": [
+      "在战斗结束后，选择一个普通宝石加入你的牌库。",
+      "在战斗结束后，选择 ",
+      " 个普通宝石加入你的牌库。"
+    ]
+  },
+  "Guardian:FuturePlansPower": {
+    "NAME": "未来计划",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，选择 #b",
+      " 张牌凝滞。",
+      " 张牌凝滞。"
+    ]
+  },
+  "Guardian:DefenseModePower": {
+    "NAME": "防御模式",
+    "DESCRIPTIONS": [
+      " 防御模式会维持 ",
+      " 个回合。 NL 期间防御模式给予你 ",
+      " 层荆棘但降低 25% 的伤害。每打出一张牌获得 2 点格挡。"
+    ]
+  },
+  "Guardian:ConstructModePower": {
+    "NAME": "建造模式",
+    "DESCRIPTIONS": [
+      "你不能在下回合打出攻击牌。",
+      "你不能在下 ",
+      " 个回合失去生命或打出攻击牌。"
+    ]
+  },
+  "Guardian:MultiBoostPower": {
+    "NAME": "多重促进",
+    "DESCRIPTIONS": [
+      "多次造成伤害的攻击会造成额外进行 1 次。",
+      "多次造成伤害的攻击会造成额外进行 ",
+      " 次。"
+    ]
+  },
+  "Guardian:TargetedPower": {
+    "NAME": "标记",
+    "DESCRIPTIONS": [
+      "每当这个敌人受伤时, 本回合获得 ",
+      " 层临时力量。"
+    ]
+  },
+  "Guardian:LoseThornsPower": {
+    "NAME": "蜕刺",
+    "DESCRIPTIONS": [
+      "下回合开始时失去 ",
+      " 层荆棘。"
+    ]
+  },
+  "Guardian:BeamBuffPower": {
+    "NAME": "装填",
+    "DESCRIPTIONS": [
+      "射线牌额外获得 ",
+      " 点伤害。"
+    ]
+  },
+  "Guardian:DefensiveModeBuffsPower": {
+    "NAME": "防御模式+",
+    "DESCRIPTIONS": [
+      "在防御模式的基础上, 防御模式+将获得: NL ",
+      " 层荆棘。",
+      " 点敏捷。",
+      " 点格挡于回合结束时。",
+      "消耗在每回合抽到的第一张状态或诅咒牌",
+      "消耗在每回合抽到的第 ",
+      " 张状态或诅咒牌 ",
+      "当 防御模式 结束时 ",
+      " 点 临时 力量 。"
+    ]
+  },
+  "Guardian:AutomayhemPower": {
+    "NAME": "时间沙漏",
+    "DESCRIPTIONS": [
+      "你的回合结束时， 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点。 ",
+      " 次, 你的回合结束时, 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点"
+    ]
+  },
+  "Guardian:ConstructPower": {
+    "NAME": "先古建造",
+    "DESCRIPTIONS": [
+      "如果回合开始时你没有 人工制品 获得 ",
+      " 层 人工制品 并失去 ",
+      " [E] 。"
+    ]
+  },
+  "Guardian:ModeShiftPower": {
+    "NAME": "模式转换",
+    "DESCRIPTIONS": [
+      "当你失去 ",
+      " 点生命时，获得10点格挡，获得 3 层 防御模式。 NL 每次启用模式转换时，激活所需的量都会增加。",
+      "模式转换本回合已经激活。"
+    ]
+  },
+  "Guardian:ExhaustStatusesPower": {
+    "NAME": "反冲",
+    "DESCRIPTIONS": [
+      "消耗每回合抽到的前1张状态或诅咒牌。",
+      "消耗每回合抽到的前 ",
+      " 张状态或诅咒牌。"
+    ]
+  },
+  "Guardian:RevengePower": {
+    "NAME": "复仇",
+    "DESCRIPTIONS": [
+      "离开 #y防御模式 时，获得 ",
+      " 点防御模式持续回合数的 力量 。 NL 目前将获得",
+      " 点 临时 力量 。"
+    ]
+  },
+  "Guardian:StasisEnginePower": {
+    "NAME": "凝滞引擎",
+    "DESCRIPTIONS": [
+      "在一回合内打出3张0费卡时，获得 ",
+      " [E] 并抽 ",
+      " 张卡 ",
+      " 张卡 ",
+      " 。"
+    ]
+  },
+  "Guardian:EnergizedGuardianPower": {
+    "NAME": "通电",
+    "DESCRIPTIONS": [
+      "下回合获得 #b",
+      " 点额外 [E] 。",
+      " 点额外 [E] 。",
+      " - 翻译注意: - 如需区分单复数，则上面的是复数。"
+    ]
+  },
   "Guardian:BlockOnCardUsePower": {
     "NAME": "抛光油",
     "DESCRIPTIONS": [
