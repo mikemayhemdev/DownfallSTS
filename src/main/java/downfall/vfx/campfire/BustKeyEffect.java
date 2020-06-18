@@ -31,7 +31,7 @@ public class BustKeyEffect extends AbstractGameEffect {
         if (this.duration < 1.0f && !this.hasBusted) {
             this.hasBusted = true;
             CardCrawlGame.sound.playA("BLOCK_BREAK", 1.5f);
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         }
         if (this.duration < 0.0f) {
             this.isDone = true;
@@ -39,7 +39,7 @@ public class BustKeyEffect extends AbstractGameEffect {
                 ((RestRoom) AbstractDungeon.getCurrRoom()).fadeIn();
             }
 
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         }
     }
 
