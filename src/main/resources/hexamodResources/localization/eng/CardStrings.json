@@ -339,7 +339,7 @@
     "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, Upgrade a random card in your deck."
   },
   "hexamod:SoulSteal": {
-    "NAME": "Soul Steal",
+    "NAME": "Living Bomb",
     "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn."
   },
