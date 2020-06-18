@@ -340,7 +340,8 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "Soul Steal",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. NL If the previous Ghostflame is hexamod:Ignited, hexamod:Retract and return this to your hand. Exhaust."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn."
   },
   "hexamod:Haunted": {
     "NAME": "Haunted",
