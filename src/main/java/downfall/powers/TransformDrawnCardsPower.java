@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
+import slimebound.SlimeboundMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -60,7 +61,13 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + Math.max(0,this.amount2) + DESCRIPTIONS[2];
+        SlimeboundMod.logger.info(this.DESCRIPTIONS[0]);
+        description = this.DESCRIPTIONS[0];
+        description += amount;
+        SlimeboundMod.logger.info(this.DESCRIPTIONS[1]);
+        description += this.DESCRIPTIONS[1];
+        description += Math.max(0,this.amount2);
+        description += this.DESCRIPTIONS[2];
     }
 
     @Override

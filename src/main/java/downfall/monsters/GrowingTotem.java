@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -42,8 +43,10 @@ public class GrowingTotem extends AbstractTotemMonster {
 
 
     public GrowingTotem() {
-        super(NAME, ID, downfallMod.assetPath("images/monsters/livingwall/Head3.png"));
-        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/Head3.atlas"), downfallMod.assetPath("images/monsters/livingwall/Head3.json"), 1.0F);
+        super(NAME, ID, downfallMod.assetPath("images/monsters/livingwall/Head1.png"));
+        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/Head1.atlas"), downfallMod.assetPath("images/monsters/livingwall/Head1.json"), 1.0F);
+
+        this.drawY = this.drawY + 500F * Settings.scale;
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
