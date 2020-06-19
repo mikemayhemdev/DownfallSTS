@@ -18,12 +18,7 @@ import guardian.characters.GuardianCharacter;
 import java.util.Iterator;
 
 public class DiscardPileToStasisAction extends AbstractGameAction {
-    public static final String[] TEXT;
-    private boolean talked = false;
-
-    static {
-        TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
-    }
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
     private AbstractPlayer p;
     private int amount;
@@ -57,9 +52,9 @@ public class DiscardPileToStasisAction extends AbstractGameAction {
 
                         AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
                     } else {
-                        if(!talked){
-                            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
-                            talked = true;
+                        if (!AbstractDungeon.player.hasEmptyOrb()) {
+                            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
+                            this.isDone = true;
                         }
                     }
                     c.lighten(false);

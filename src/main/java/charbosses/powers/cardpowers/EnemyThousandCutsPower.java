@@ -44,9 +44,9 @@ public class EnemyThousandCutsPower extends AbstractPower {
             return;
         }
         if (Settings.FAST_MODE) {// 34
-            this.addToBot(new VFXAction(new CleaveEffect()));// 35
+            this.addToBot(new VFXAction(new CleaveEffect(true)));// 35
         } else {
-            this.addToBot(new VFXAction(this.owner, new CleaveEffect(), 0.2F));// 37
+            this.addToBot(new VFXAction(this.owner, new CleaveEffect(true), 0.2F));// 37
         }
 
         this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(owner, 1, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE, true));// 39 42

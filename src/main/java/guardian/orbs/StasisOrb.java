@@ -67,9 +67,9 @@ public class StasisOrb extends AbstractOrb {
             this.basePassiveAmount = this.passiveAmount = 1;
         }
 
-        if(card.cost == -1 && AbstractDungeon.player != null){
-            this.basePassiveAmount = this.passiveAmount = AbstractDungeon.player.energy.energy + 1;
-        }
+//        if(card.cost == -1 && AbstractDungeon.player != null){
+//            this.basePassiveAmount = this.passiveAmount = AbstractDungeon.player.energy.energy + 1;
+//        }
 
         this.baseEvokeAmount = this.basePassiveAmount;
         this.evokeAmount = this.passiveAmount;

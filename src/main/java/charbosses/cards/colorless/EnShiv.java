@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnShiv extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Shiv";
     public static final int ATTACK_DMG = 4;
@@ -30,6 +32,11 @@ public class EnShiv extends AbstractBossCard {
             this.baseDamage = 4;
         }
         this.exhaust = true;
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() * 3 ;
     }
 
     @Override

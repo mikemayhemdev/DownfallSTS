@@ -9,18 +9,19 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import expansioncontent.cards.PolyBeam;
+import expansioncontent.expansionContentMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 
 
 public class PolyBeamAgainPowerUpgraded extends AbstractPower {
-    public static final String POWER_ID = "Slimebound:PolyBeamAgainPowerUpgraded";
-    public static final String NAME = "Potency";
+    public static final String POWER_ID = expansionContentMod.makeID("PolyBeamAgainPowerUpgraded");
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
     public static final String IMG = "powers/polybeampower.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
-    public static String[] DESCRIPTIONS;
     private AbstractCreature source;
     private AbstractCard card;
 
@@ -37,15 +38,11 @@ public class PolyBeamAgainPowerUpgraded extends AbstractPower {
 
         this.source = source;
 
-
         this.img = new com.badlogic.gdx.graphics.Texture(SlimeboundMod.getResourcePath(IMG));
 
         this.type = POWER_TYPE;
 
         this.amount = amount;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
 
         updateDescription();
 
