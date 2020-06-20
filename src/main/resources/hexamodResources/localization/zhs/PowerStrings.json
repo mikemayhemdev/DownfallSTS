@@ -195,9 +195,9 @@
     ]
   },
   "hexamod:LivingBombPower": {
-    "NAME": "Living Bomb",
+    "NAME": "活体炸弹",
     "DESCRIPTIONS": [
-      "The next time this creature's Soulburn is detonated, it affects ALL enemies."
+      "这个下次引爆灼魂时，对全体敌人生效。"
     ]
   }
 }

@@ -127,11 +127,11 @@
   },
   "hexamod:SpectersWail": {
     "NAME": "亡灵哀号",
-    "DESCRIPTION": "虚无 。  hexamod:阴世 。 NL 对所有敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 对所有敌人造成 !D! 点伤害。"
   },
   "hexamod:Hexaguard": {
     "NAME": "六边防守",
-    "DESCRIPTION": "虚无 。 NL 获得 !B! 点 格挡 。 NL 抽1张牌。"
+    "DESCRIPTION": "虚无 。 hexamod:阴世 。 NL 获得 !B! 点 格挡 。 NL 抽1张牌。"
   },
   "hexamod:GhostLash": {
     "NAME": "幽灵鞭击",
@@ -243,7 +243,11 @@
   },
   "hexamod:HeatShield": {
     "NAME": "高热护盾",
-    "DESCRIPTION": "获得 !M! 点 格挡 ， NL 所有敌人的 hexamod:灼魂 提高这张牌的 格挡 。（当前： !B! 点 格挡 。）"
+    "DESCRIPTION": "虚无 。 NL 获得 !M! 点 格挡 ， NL 所有敌人的 hexamod:灼魂 提高这张牌的 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 格挡 ， NL 所有敌人的 hexamod:灼魂 提高这张牌的 格挡 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （当前： !B! 点 格挡 。）"
+    ]
   },
   "hexamod:TurnItUp": {
     "NAME": "步入殿堂",
@@ -273,7 +277,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果敌人有 hexamod:灼魂 ，造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆敌人的 hexamod:灼魂 。"
   },
   "hexamod:SpectralSpark": {
     "NAME": "光谱火花",
@@ -345,8 +349,8 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "活性炸弹",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 引爆目标的 hexamod:灼魂 效果。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 引爆目标的 hexamod:灼魂 效果。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。"
   },
   "hexamod:Haunted": {
     "NAME": "闹鬼",

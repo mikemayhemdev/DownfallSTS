@@ -95,7 +95,7 @@
   "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 guardianmod:临时 荆棘 。"
  },
  "Slimebound:LeechingTouch": {
-  "NAME": "吮吸之触",
+  "NAME": "吮吸打击",
   "DESCRIPTION": " 造成 !D! 点伤害并获得等于敌人 slimeboundmod:黏液 层数的 格挡 。"
  },
  "Slimebound:Dissolve": {
