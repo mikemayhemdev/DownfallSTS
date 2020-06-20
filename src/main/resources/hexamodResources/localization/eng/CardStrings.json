@@ -209,7 +209,8 @@
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
-    "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Soulburn."
+    "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Soulburn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Soulburn."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",

@@ -210,7 +210,8 @@
   },
   "hexamod:SearingWound": {
     "NAME": "灼热伤口",
-    "DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。"
+    "DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。",
+    "UPGRADE_DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。 NL 消耗 。"
   },
   "hexamod:ExtraCrispy": {
     "NAME": "清脆",

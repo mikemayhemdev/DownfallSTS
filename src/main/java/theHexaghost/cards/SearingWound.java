@@ -15,7 +15,7 @@ public class SearingWound extends AbstractHexaCard {
 
     public SearingWound() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.exhaust = false;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

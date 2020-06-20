@@ -32,9 +32,10 @@
   "hexamod:BurnPower": {
     "NAME": "灼魂",
     "DESCRIPTIONS": [
-      "它的回合开始时，失去 #b",
-      " 点生命，然后 #r移除 灼魂。",
-      " 点生命，然后灼魂减半。"
+      "在 #b",
+      " 个回合后，失去 #b",
+      " 个回合后，失去 #b",
+      " 点生命，移除本效果。"
     ]
   },
   "hexamod:BurnvenomPower": {
