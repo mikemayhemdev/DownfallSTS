@@ -16,6 +16,7 @@ public class CombatRewardScreenRemoveCardPatch {
         if (AbstractDungeon.getCurrRoom() instanceof HeartShopRoom && (FleeingMerchant.helpEscaped || FleeingMerchant.DEAD)) {
             __instance.rewards.clear();
             FleeingMerchant.helpEscaped = false;
+            FleeingMerchant.helpDied = false;
         }
     }
 }

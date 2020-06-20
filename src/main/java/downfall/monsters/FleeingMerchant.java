@@ -252,6 +252,7 @@ public class FleeingMerchant extends AbstractMonster {
         super.die();
         this.deathTimer += ((0.01F * increaseGold) - 1F);
         DEAD = true;
+        helpDied = true;
     }
 
     @Override
@@ -260,6 +261,7 @@ public class FleeingMerchant extends AbstractMonster {
     }
 
     public static boolean helpEscaped = false;
+    public static boolean helpDied = false;
 
     @Override
     public void update() {
@@ -270,22 +272,6 @@ public class FleeingMerchant extends AbstractMonster {
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.combatRewardScreen.open();
 
-        }
-    }
-
-    @Override
-    public void dispose() {
-        super.dispose();
-        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-        //AbstractDungeon.combatRewardScreen.open();
-        if (DEAD) {
-            AbstractRoom tRoom = new HeartShopRoom(false);
-            AbstractDungeon.currMapNode.setRoom(tRoom);
-            AbstractDungeon.scene.nextRoom(tRoom);
-            CardCrawlGame.fadeIn(1.5F);
-            AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
-            tRoom.onPlayerEntry();
-            AbstractDungeon.closeCurrentScreen();
         }
     }
 }

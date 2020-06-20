@@ -39,10 +39,8 @@ public class HeartsMalice extends CustomRelic {
             }
 
             this.flash();
-            Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-            while(var1.hasNext()) {
-                AbstractMonster m = (AbstractMonster)var1.next();
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 AbstractDungeon.actionManager.addToTop(new EscapeAction(m));
             }
 
