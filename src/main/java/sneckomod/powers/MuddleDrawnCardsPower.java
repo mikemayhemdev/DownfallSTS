@@ -20,8 +20,8 @@ public class MuddleDrawnCardsPower extends TwoAmountPower implements CloneablePo
 
     public static final String POWER_ID = SneckoMod.makeID("MuddleDrawnCardsPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/MuddleDrawnCards84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/MuddleDrawnCards32.png");
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
