@@ -22,11 +22,15 @@ import static jdk.nashorn.internal.objects.NativeMath.min;
 public class TransformDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("TransformDrawnCardsPower");
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
     public TransformDrawnCardsPower(final AbstractCreature owner, final int amount) {
+
+        this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
@@ -37,8 +41,6 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.amount2 = this.amount;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
         this.updateDescription();
     }
 

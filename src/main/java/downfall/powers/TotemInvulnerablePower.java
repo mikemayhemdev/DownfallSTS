@@ -19,6 +19,8 @@ import theHexaghost.util.TextureLoader;
 public class TotemInvulnerablePower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("TotemInvulnerable");
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/totemImmunity84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/totemImmunity32.png"));
@@ -34,8 +36,7 @@ public class TotemInvulnerablePower extends AbstractPower implements CloneablePo
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        this.DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.POWER_ID).DESCRIPTIONS;
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.POWER_ID).NAME;
+        this.name = NAME;
 
         this.updateDescription();
     }

@@ -12,6 +12,8 @@ import theHexaghost.util.TextureLoader;
 public class SoulStealPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("SoulSteal");
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/SoulSteal84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/SoulSteal32.png"));
@@ -26,8 +28,7 @@ public class SoulStealPower extends AbstractPower implements CloneablePowerInter
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+        this.name = NAME;
 
         this.updateDescription();
     }

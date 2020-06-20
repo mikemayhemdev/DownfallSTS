@@ -14,19 +14,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class DrawReductionPowerPlus extends AbstractPower {
     public static final String POWER_ID = "Draw Reduction";
-    public static final String NAME;
-    public static final String[] DESCRIPTIONS;
-    private static final PowerStrings powerStrings;
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    static {
-        powerStrings = CardCrawlGame.languagePack.getPowerStrings("Draw Reduction");
-        NAME = powerStrings.NAME;
-        DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    }
+
 
     public DrawReductionPowerPlus(AbstractCreature owner, int amount) {
         this.name = NAME;
-        this.ID = "Draw Reduction";
+        this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
         this.updateDescription();
