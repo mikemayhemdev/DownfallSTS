@@ -37,7 +37,7 @@ public class SoulSteal extends AbstractHexaCard {
                     p.flashWithoutSound();// 67
                     addToBot(new VFXAction(new ExplosionSmallEffectGreen(p.owner.hb.cX, p.owner.hb.cY), 0.1F));
                     addToBot(new LoseHPAction(p.owner, p.owner, amount, AbstractGameAction.AttackEffect.FIRE));
-                    addToBot(new RemoveSpecificPowerAction(p.owner, p.owner, ID));
+                    addToBot(new RemoveSpecificPowerAction(p.owner, p.owner, BurnPower.POWER_ID));
                 }
             }
         });
