@@ -39,10 +39,11 @@ public class BustKeyOption extends AbstractCampfireOption {
         this.description = TEXT[3];
         if (AbstractDungeon.player.gold < 50) {
             this.usable = false;
+            updateImage(key);
         } else {
             this.usable = true;
+            updateImage(key);
         }
-        updateImage(key);
     }
 
 
@@ -91,6 +92,14 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public void update() {
         super.update();
+
+        if (AbstractDungeon.player.gold < 50 && this.usable) {
+            this.usable = false;
+            updateImage(key);
+        } else if (!this.usable) {
+            this.usable = true;
+            updateImage(key);
+        }
 
         CampfireUI campfire = ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI;
 

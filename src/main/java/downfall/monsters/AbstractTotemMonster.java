@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -91,6 +92,32 @@ public class AbstractTotemMonster extends AbstractMonster {
     }
 
     @Override
+    public void healthBarUpdatedEvent() {
+        if (this.currentHealth <= 0 && this.hasPower(TotemInvulnerablePower.POWER_ID))
+        {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (m != this && m.currentHealth > 1 && m instanceof AbstractTotemMonster) { //can't die yet.
+                    this.currentHealth = 1;
+                    break;
+                }
+            }
+        }
+        super.healthBarUpdatedEvent();
+    }
+
+
+    @Override
+    public void die() {
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (m != this && m.hasPower(TotemInvulnerablePower.POWER_ID))
+                addToTop(new InstantKillAction(m));
+        }
+        super.die();
+    }
+
+
+
+    @Override
     public void renderHealth(SpriteBatch sb) {
         this.hb.height = this.hb.height * 1.4F;
         super.renderHealth(sb);
@@ -106,19 +133,7 @@ public class AbstractTotemMonster extends AbstractMonster {
 
     public void update() {
 
-        Iterator var1 = this.powers.iterator();
-
-        while (var1.hasNext()) {
-            AbstractPower p = (AbstractPower) var1.next();
-            p.updateParticles();
-        }
-
-        this.updateReticle();
-       // this.healthHb.move(this.hb.cX, this.drawY - 50F * Settings.scale);
-        this.updateHealthBar();
-       // this.healthHb.move(this.hb.cX, this.drawY - 50F * Settings.scale);
-        this.updateAnimations();
-        //this.healthHb.move(this.hb.cX, this.drawY + 120F * Settings.scale);
+       super.update();
 
         try {
             this.intentHb.move(this.hb.cX - 140F * Settings.scale, this.drawY + 170F * Settings.scale);
@@ -127,7 +142,7 @@ public class AbstractTotemMonster extends AbstractMonster {
             e.printStackTrace();
         }
 
-        this.tint.update();
+
     }
 
 
