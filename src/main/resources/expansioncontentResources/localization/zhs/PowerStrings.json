@@ -174,10 +174,10 @@
     ]
   },
   "expansioncontent:DeEnergizedPower": {
-    "NAME": "失能",
+    "NAME": "能量降低",
     "DESCRIPTIONS": [
       "你的下个回合开始时，失去",
-      " [E]。"
+      " [E] 。"
     ]
   },
   "expansioncontent:PolyBeamAgainPower": {

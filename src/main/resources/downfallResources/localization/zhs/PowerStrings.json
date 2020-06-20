@@ -30,7 +30,7 @@
   "downfall:TotemInvulnerable": {
     "NAME": "活墙壁",
     "DESCRIPTIONS": [
-      "在所有墙壁生命为1前不会死亡。其他墙壁死亡时该墙壁死亡。"
+      "只有在其他头均生命为1时才会死亡。死亡时其他头同时死亡。"
     ]
   },
   "downfall:ExhaustCardsPower": {
