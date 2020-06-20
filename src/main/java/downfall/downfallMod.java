@@ -96,7 +96,9 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber, AddAudioSubscriber {
+        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber
+        //, AddAudioSubscriber
+        {
     public static final String modID = "downfall";
 
 
