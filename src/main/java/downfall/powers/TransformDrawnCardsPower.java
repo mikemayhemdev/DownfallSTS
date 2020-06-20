@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
 import slimebound.SlimeboundMod;
+import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -25,8 +26,8 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/TransformDrawnCards84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/TransformDrawnCards32.png");
 
     public TransformDrawnCardsPower(final AbstractCreature owner, final int amount) {
 

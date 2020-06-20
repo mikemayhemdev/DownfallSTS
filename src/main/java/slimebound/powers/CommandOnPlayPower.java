@@ -18,8 +18,8 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
 
     public static final String POWER_ID = "Slimebound:CommandOnPlayPower";
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SlimeboundMod.getModID() + "Resources/images/powers/Rally84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SlimeboundMod.getModID() + "Resources/images/powers/Rally32.png");
 
     public CommandOnPlayPower(final int amount) {
         this.name = "Rallying";
