@@ -15,6 +15,7 @@ public class HeatShield extends AbstractHexaCard {
     public HeatShield() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
+        this.magicNumber = this.baseMagicNumber = 5;
     }
 
     @Override
@@ -32,6 +33,10 @@ public class HeatShield extends AbstractHexaCard {
                 this.baseBlock = realBaseBlock;// 75
                 this.isBlockModified = block != baseBlock;
             }
+        } else {
+            this.baseBlock = this.block = 5;
+            this.magicNumber = 5;
+            this.isBlockModified = false;
         }
     }
 

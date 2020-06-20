@@ -193,5 +193,11 @@
       "At the start of your turn, apply #b",
       " #yBurn to all enemies."
     ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "Living Bomb",
+    "DESCRIPTIONS": [
+      "The next time this creature's Soulburn is detonated, it affects ALL enemies."
+    ]
   }
 }

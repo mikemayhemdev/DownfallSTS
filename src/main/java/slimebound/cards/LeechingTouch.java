@@ -45,6 +45,7 @@ public class LeechingTouch extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 5;
+        this.tags.add(AbstractCard.CardTags.STRIKE);
 
     }
 

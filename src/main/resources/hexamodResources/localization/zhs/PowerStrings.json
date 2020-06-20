@@ -193,5 +193,11 @@
       "你的回合开始时，给予所有敌人 #b",
       " 层 #y灼魂 。"
     ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "Living Bomb",
+    "DESCRIPTIONS": [
+      "The next time this creature's Soulburn is detonated, it affects ALL enemies."
+    ]
   }
 }

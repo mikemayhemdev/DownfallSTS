@@ -272,7 +272,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Soulburn, deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Soulburn, detonate it."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
@@ -344,8 +344,8 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "Living Bomb",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies."
   },
   "hexamod:Haunted": {
     "NAME": "Haunted",

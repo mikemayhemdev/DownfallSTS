@@ -22,7 +22,6 @@ public class CouncilsJustice extends AbstractHexaCard {
         baseMagicNumber = 3;
         exhaust = true;
         isEthereal = true;
-        tags.add(CardTags.STRIKE);
         cardsToPreview = new Apparition();
     }
 

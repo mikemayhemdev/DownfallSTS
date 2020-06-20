@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
@@ -64,10 +65,7 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
 
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead() && amount2 == 1) {// 65 66
-            this.flashWithoutSound();// 67
-            this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
-            this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
-            addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
+            explode();
         } else {
             addToBot(new AbstractGameAction() {
                 @Override
@@ -80,6 +78,22 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         }
     }// 70
 
+    public void explode(){
+        this.flashWithoutSound();
+        this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
+        if (owner.hasPower(LivingBombPower.POWER_ID)){
+            for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
+                if (!m.isDeadOrEscaped()){
+                    this.addToBot(new LoseHPAction(m, owner, amount, AbstractGameAction.AttackEffect.FIRE));
+                }
+            }
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, LivingBombPower.POWER_ID));
+        } else {
+            this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
+        }
+
+        addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
+    }
 
     @Override
     public void updateDescription() {

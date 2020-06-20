@@ -24,7 +24,7 @@ public class Incineration extends AbstractHexaCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        baseBurn = burn = 3;
+        baseBurn = burn = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
