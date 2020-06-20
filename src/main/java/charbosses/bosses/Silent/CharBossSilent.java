@@ -7,6 +7,7 @@ import charbosses.bosses.Ironclad.ArchetypeAct2Strength;
 import charbosses.bosses.Ironclad.ArchetypeAct3Block;
 import charbosses.cards.anticards.Antidote;
 import charbosses.core.EnemyEnergyManager;
+import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -63,4 +64,37 @@ public class CharBossSilent extends AbstractCharBoss {
     public AbstractCard anticard() {
         return new Antidote();
     }
+
+    @Override
+    public void onPlayAttackCardSound() {
+        switch (MathUtils.random(1)) {
+            case 0:
+                CardCrawlGame.sound.play("VO_SILENT_1A");
+                break;
+            case 1:
+                CardCrawlGame.sound.play("VO_SILENT_1B");
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    @Override
+    public void die() {
+        super.die();
+
+        switch (MathUtils.random(1)) {
+            case 0:
+                CardCrawlGame.sound.play("VO_SILENT_2A");
+                break;
+            case 1:
+                CardCrawlGame.sound.play("VO_SILENT_2B");
+                break;
+            default:
+                break;
+        }
+
+    }
+
 }
