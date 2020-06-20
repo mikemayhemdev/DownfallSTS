@@ -23,7 +23,6 @@ import downfall.actions.ForceWaitAction;
 import downfall.actions.LoseGoldAction;
 import downfall.actions.MerchantThrowGoldAction;
 import downfall.powers.SoulStealPower;
-import downfall.rooms.HeartShopRoom;
 import downfall.vfx.GainSingleSoulEffect;
 import downfall.vfx.SoulStealEffect;
 
@@ -269,9 +268,9 @@ public class FleeingMerchant extends AbstractMonster {
         if (escaped && !ESCAPED) {
             ESCAPED = true;
             helpEscaped = true;
+            AbstractDungeon.overlayMenu.hideCombatPanels();// 51
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.combatRewardScreen.open();
-
         }
     }
 }
