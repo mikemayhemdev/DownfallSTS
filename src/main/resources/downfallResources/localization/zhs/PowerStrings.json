@@ -33,7 +33,7 @@
       "在所有墙壁生命为1前不会死亡。其他墙壁死亡时该墙壁死亡。"
     ]
   },
-  "downfall:TotemExhaust": {
+  "downfall:ExhaustCardsPower": {
     "NAME": "遗忘",
     "DESCRIPTIONS": [
       "你的回合结束时，选择一张牌消耗。"
