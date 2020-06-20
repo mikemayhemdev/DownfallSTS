@@ -131,7 +131,7 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw 1 card."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL Draw 1 card."
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
@@ -242,7 +242,8 @@
   },
   "hexamod:HeatShield": {
     "NAME": "Heat Shield",
-    "DESCRIPTION": "Gain !M! Block, increased by hexamod:Soulburn on ALL enemies. (Current: !B! Block)"
+    "DESCRIPTION": "Ethereal. NL Gain !M! Block, increased by hexamod:Soulburn on ALL enemies. (Current: !B! Block)",
+    "UPGRADE_DESCRIPTION": "Gain !M! Block, increased by hexamod:Soulburn on ALL enemies. (Current: !B! Block)"
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",

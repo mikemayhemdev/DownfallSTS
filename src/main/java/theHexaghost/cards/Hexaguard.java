@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Hexaguard extends AbstractHexaCard {
@@ -22,6 +23,11 @@ public class Hexaguard extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         atb(new DrawCardAction(p, 1));
+    }
+
+    public void triggerOnExhaust() {
+        blck();
+        atb(new DrawCardAction(AbstractDungeon.player, 1));
     }
 
     public void upgrade() {

@@ -905,9 +905,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             if (NeowBoss.neowboss != null) {
-                if (NeowBoss.neowboss.minion != this) {
-                    onBossVictoryLogic();
-                }
+                onBossVictoryLogic();
             }
 
         }

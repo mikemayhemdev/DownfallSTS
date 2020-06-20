@@ -38,7 +38,6 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-
         addRelic(new CBR_DreamCatcher());
         addRelic(new CBR_Lantern());
         addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
@@ -49,11 +48,12 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         /////   CARDS   /////
 
         //Turn 1
-        addToDeck(new EnInfiniteBlades(), true);
+
         addToDeck(new EnStrikeGreen());
         addToDeck(new EnDefendGreen());
         addToDeck(new EnDefendGreen());
         addToDeck(new EnDash());
+        addToDeck(new EnNeutralize());
 
         //Turn 2
         addToDeck(new EnFlyingKnee(), true);
@@ -71,9 +71,9 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         addToDeck(new EnSuckerPunch());
 
         //Turn 5
+        addToDeck(new EnInfiniteBlades(), false);
         addToDeck(new EnDefendGreen());
         addToDeck(new EnAccuracy());
-        addToDeck(new EnNeutralize());
 
     }
 

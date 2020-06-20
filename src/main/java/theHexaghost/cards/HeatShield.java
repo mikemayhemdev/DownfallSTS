@@ -13,9 +13,10 @@ public class HeatShield extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF_AND_ENEMY, UNCOMMON
 
     public HeatShield() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
         this.magicNumber = this.baseMagicNumber = 5;
+        this.isEthereal = true;
     }
 
     @Override
@@ -47,7 +48,9 @@ public class HeatShield extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            this.isEthereal = false;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

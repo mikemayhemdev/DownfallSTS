@@ -42,7 +42,7 @@ public class JaxReward extends RewardItem {
 
         cards.add(new JAX());
 
-        this.text = TEXT[2];
+        this.text = TEXT[0];
         Iterator var2 = this.cards.iterator();
 
         while (true) {
