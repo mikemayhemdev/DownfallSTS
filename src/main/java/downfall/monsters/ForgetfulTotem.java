@@ -11,11 +11,13 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import downfall.downfallMod;
 import downfall.powers.DrawReductionPowerPlus;
+import downfall.powers.ExhaustEndOfTurnPower;
 import downfall.vfx.TotemBeamEffect;
 
 public class ForgetfulTotem extends AbstractTotemMonster {
@@ -39,8 +41,10 @@ public class ForgetfulTotem extends AbstractTotemMonster {
 
 
     public ForgetfulTotem() {
-        super(NAME, ID, downfallMod.assetPath("images/monsters/livingwall/Head2.png"));
-        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/Head2.atlas"), downfallMod.assetPath("images/monsters/livingwall/Head2.json"), 1.0F);
+        super(NAME, ID, downfallMod.assetPath("images/monsters/livingwall/Head1.png"));
+        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/Head1.atlas"), downfallMod.assetPath("images/monsters/livingwall/Head1.json"), 1.0F);
+
+        this.drawY = this.drawY + 250F * Settings.scale;
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -71,7 +75,7 @@ public class ForgetfulTotem extends AbstractTotemMonster {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new TotemBeamEffect(this.hb.cX + beamOffsetX, this.hb.cY + beamOffsetY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.GOLD.cpy(), this.hb.cX + beamOffsetX2, this.hb.cY + beamOffsetY2), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, this.damage.get(0), AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawReductionPowerPlus(AbstractDungeon.player, 1), 1));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ExhaustEndOfTurnPower(AbstractDungeon.player), 1));
 
     }
 

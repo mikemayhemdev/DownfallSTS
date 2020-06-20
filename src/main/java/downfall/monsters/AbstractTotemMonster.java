@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.powers.TotemInvulnerablePower;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -27,7 +28,7 @@ public class AbstractTotemMonster extends AbstractMonster {
     public static Float beamOffsetY = 10F * Settings.scale;
     public static Float beamOffsetX2 = -35F * Settings.scale;
     public static Float beamOffsetY2 = 10F * Settings.scale;
-    public Integer baseHP = 70;
+    public Integer baseHP = 50;
     public Integer HPAscBuffed = 10;
     public Intent intentType = Intent.BUFF;
     public Color totemLivingColor;
@@ -97,7 +98,7 @@ public class AbstractTotemMonster extends AbstractMonster {
         this.type = EnemyType.ELITE;
         this.dialogX = -100.0F * Settings.scale;
         this.dialogY = 10.0F * Settings.scale;
-        this.drawY = 1000F * Settings.scale;
+        this.drawY = AbstractDungeon.floorY - 50F * Settings.scale;
         this.drawX = Settings.WIDTH * 0.75F;
 
         this.hb.move(this.hb.cX, this.hb.cY - 90F * Settings.scale);
@@ -116,79 +117,26 @@ public class AbstractTotemMonster extends AbstractMonster {
 
     }
 
+    @Override
+    public void usePreBattleAction() {
+        super.usePreBattleAction();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TotemInvulnerablePower(this)));
+
+    }
+
     public void totemAttack() {
 
     }
 
 
     public void takeTurn() {
-        float vfxSpeed = 0.1F;
-        if (Settings.FAST_MODE) {
-            vfxSpeed = 0.0F;
-        }
-
-        switch (this.nextMove) {
-            case 0:
-                //Should only fire if they were spawned in
-                AbstractDungeon.actionManager.addToBottom(new TextAboveCreatureAction(this, TextAboveCreatureAction.TextType.STUNNED));
-                break;
-            case 1:
-                // AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
-                totemAttack();
-                break;
-        }
+        totemAttack();
 
         AbstractDungeon.actionManager.addToBottom(new RollMoveAction(this));
     }
 
 
     public void update() {
-        boolean shouldFall = false;
-        Float Y = 0F;
-        for (AbstractMonster totem : AbstractDungeon.getMonsters().monsters) {
-            if (!totem.isDead && !totem.isDying && totem != null) {
-                if (totem.drawY < this.drawY) {
-                    //this totem is above another totem
-                    if (totem.drawY > Y) {
-                        //If the new totem being checked is above the previous, set this to the new highest totem BELOW this totem
-                        Y = totem.drawY;
-                    }
-
-                }
-            }
-        }
-
-        if (Y == 100F) {
-            // TheActMod.logger.info(this.id + " drawY " + this.drawY + " vs floorY " + AbstractDungeon.floorY);
-
-            // This is the lowest totem.  If it is not at the floor, it needs to fall.
-            if (this.drawY > AbstractDungeon.floorY - (35F * Settings.scale)) {
-                shouldFall = true;
-            }
-        } else {
-            // check the totem below this one.  If any totem is greater than a difference away, this totem needs to drop.
-
-
-            // TheActMod.logger.info(this.id + " drawY " + this.drawY + " vs Y " + Y);
-
-            if (this.drawY > Y) {
-                //  TheActMod.logger.info(this.id + " difference: " + (this.drawY - Y));
-
-                if (this.drawY - Y > 250F * Settings.scale) {
-                    shouldFall = true;
-                }
-            }
-
-
-        }
-        // TheActMod.logger.info(this.owner.stopTotemFall);
-        if (shouldFall) {
-            // TheActMod.logger.info(this.id + "is falling");
-            this.drawY = this.drawY - 30 * Settings.scale;
-            this.wasFalling = true;
-        } else if (wasFalling) {
-            this.wasFalling = false;
-        }
 
         Iterator var1 = this.powers.iterator();
 
@@ -214,34 +162,10 @@ public class AbstractTotemMonster extends AbstractMonster {
 
 
     protected void getMove(int num) {
-        if (this.spawnedAfterFirst3) {
-            this.setMove((byte) 0, Intent.STUN);
-            this.spawnedAfterFirst3 = false;
-
-        } else {
-            getUniqueTotemMove();
-        }
+        getUniqueTotemMove();
     }
 
     public void getUniqueTotemMove() {
-
-    }
-
-    public void die() {
-        this.useFastShakeAnimation(1.0F);
-        CardCrawlGame.screenShake.rumble(1.0F);
-
-        ArrayList<AbstractMonster> targets = new ArrayList<>();
-        targets.addAll(AbstractDungeon.getMonsters().monsters);
-
-        for (AbstractMonster m : targets) {
-            if (m.drawY > AbstractDungeon.floorY - (35F * Settings.scale)) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new StunMonsterPower(m, 0), 1));
-            }
-
-        }
-        super.die();
-
 
     }
 
@@ -318,70 +242,6 @@ public class AbstractTotemMonster extends AbstractMonster {
 
     }
 
-
-    /*
-    public void renderHealth(SpriteBatch sb) {
-        Float thbwidth = (Float) ReflectionHacks.getPrivate(this, AbstractCreature.class, "targetHealthBarWidth");
-        Float yoffset = (Float) ReflectionHacks.getPrivate(this, AbstractCreature.class, "hbYOffset");
-        yoffset += 90F * Settings.scale;
-
-        if (!Settings.hideCombatElements) {
-            float x = this.hb.cX - this.hb.width / 2.0F;
-            float y = this.hb.cY - this.hb.height / 2.0F + yoffset;
-            try {
-                refrenderHealthBg.invoke(this, sb, x, y);
-            } catch (InvocationTargetException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
-            if (thbwidth != 0.0F) {
-                try {
-                    refrenderOrangeHealthBar.invoke(this, sb, x, y);
-                } catch (InvocationTargetException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-                if (this.hasPower("Poison")) {
-                    try {
-                        refrenderGreenHealthBar.invoke(this, sb, x, y);
-                    } catch (InvocationTargetException | IllegalAccessException e) {
-                        e.printStackTrace();
-                    }
-                }
-                try {
-                    refrenderRedHealthBar.invoke(this, sb, x, y);
-                } catch (InvocationTargetException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-            if (this.currentBlock != 0 && this.hbAlpha != 0.0F) {
-                try {
-                    refrenderBlockOutline.invoke(this, sb, x, y);
-                } catch (InvocationTargetException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-            }
-            try {
-                refrenderHealthText.invoke(this, sb, y);
-            } catch (InvocationTargetException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
-            if (this.currentBlock != 0 && this.hbAlpha != 0.0F) {
-                try {
-                    refrenderBlockIconAndValue.invoke(this, sb, x, y);
-                } catch (InvocationTargetException | IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-            }
-            try {
-                refrenderPowerIcons.invoke(this, sb, x, y);
-            } catch (InvocationTargetException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
-
-        }
-    }
-    */
 
 
 }
