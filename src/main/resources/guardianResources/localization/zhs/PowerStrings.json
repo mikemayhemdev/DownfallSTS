@@ -162,7 +162,7 @@
     ]
   },
   "Guardian:EnergizedGuardianPower": {
-    "NAME": "通电",
+    "NAME": "能量提升",
     "DESCRIPTIONS": [
       "下回合获得 #b",
       " 点额外 [E] 。",

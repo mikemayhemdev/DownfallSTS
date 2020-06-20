@@ -19,29 +19,29 @@
     "NAME": "延时火焰",
     "DESCRIPTIONS": [
       "你的下一回合开始时，给予所有敌人 #b",
-      " 层 #y灼伤 。"
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "易熔金属",
     "DESCRIPTIONS": [
       "它的回合开始时获得 #b",
-      " 层 #y灼伤 。"
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:BurnPower": {
-    "NAME": "灼伤",
+    "NAME": "灼魂",
     "DESCRIPTIONS": [
       "它的回合开始时，失去 #b",
-      " 点生命，然后 #r移除 灼伤。",
-      " 点生命，然后灼伤减半。"
+      " 点生命，然后 #r移除 灼魂。",
+      " 点生命，然后灼魂减半。"
     ]
   },
   "hexamod:BurnvenomPower": {
     "NAME": "鬼火武器",
     "DESCRIPTIONS": [
       "每当你造成了未被格挡的伤害，给予 #b",
-      " 层 #y灼伤 。"
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:CommonPostCombatPower": {
@@ -55,14 +55,14 @@
   "hexamod:CrispyPower": {
     "NAME": "清脆",
     "DESCRIPTIONS": [
-      "给予灼伤层数增加 #b",
+      "给予灼魂层数增加 #b",
       " 层。"
     ]
   },
   "hexamod:EnhancePower": {
     "NAME": "热烈",
     "DESCRIPTIONS": [
-      "提高鬼火上点燃效果提供的伤害、灼伤和格挡获得 #b",
+      "提高鬼火上点燃效果提供的伤害、灼魂和格挡获得 #b",
       " 点。"
     ]
   },
@@ -99,7 +99,7 @@
     "NAME": "鬼火屏障",
     "DESCRIPTIONS": [
       "每当受到攻击时，给予攻击者 #b",
-      " 层 #y灼伤 。"
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
@@ -169,7 +169,7 @@
     "NAME": "火焰辐射",
     "DESCRIPTIONS": [
       "每当 #y点燃 一个鬼火时，给予随机一名敌人 #b",
-      " 层 #y灼伤 。"
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -190,7 +190,7 @@
     "NAME": "火山容貌",
     "DESCRIPTIONS": [
       "你的回合开始时，给予所有敌人 #b",
-      " 层 #y灼伤 。"
+      " 层 #y灼魂 。"
     ]
   }
 }
