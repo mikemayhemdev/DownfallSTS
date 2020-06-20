@@ -10,7 +10,7 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "灵魂",
-      "TODO: Soul flavor text/explanation."
+      "这是你现在携带的灵魂。灵魂能上贡给心脏获得奖励。"
     ]
   },
   "downfall:BustKeyButton": {

@@ -8,6 +8,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -132,5 +133,37 @@ public class CharBossWatcher extends AbstractCharBoss {
     @Override
     public AbstractCard anticard() {
         return new PeaceOut();
+    }
+
+    @Override
+    public void onPlayAttackCardSound() {
+        switch (MathUtils.random(1)) {
+            case 0:
+                CardCrawlGame.sound.play("VO_GREMLINCALM_1A");
+                break;
+            case 1:
+                CardCrawlGame.sound.play("VO_GREMLINCALM_1B");
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    @Override
+    public void die() {
+        super.die();
+
+        switch (MathUtils.random(1)) {
+            case 0:
+                CardCrawlGame.sound.play("VO_GREMLINCALM_2A");
+                break;
+            case 1:
+                CardCrawlGame.sound.play("VO_GREMLINCALM_2B");
+                break;
+            default:
+                break;
+        }
+
     }
 }
