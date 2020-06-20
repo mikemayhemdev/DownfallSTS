@@ -92,7 +92,10 @@
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less."
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less.",
+    "EXTENDED_DESCRIPTION": [
+      "to Exhaust for Necessary Sacrifice."
+    ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",

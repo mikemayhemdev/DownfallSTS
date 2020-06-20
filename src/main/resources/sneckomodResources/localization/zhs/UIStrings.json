@@ -14,6 +14,16 @@
       " ",
       "你应该看不到这个的。请报告给Vex"
     ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+  "TEXT": [
+    "将一张已升级的未知牌加入牌组"
+  ]
+},
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "保留 。 NL "
+    ]
   }
 }
 

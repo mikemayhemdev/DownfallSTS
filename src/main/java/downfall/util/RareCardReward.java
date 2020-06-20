@@ -26,7 +26,7 @@ public class RareCardReward extends RewardItem {
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
     public static final String ID = downfallMod.makeID("RareCardReward");
-    public static final String TEXT[] = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
 
     public RareCardReward(AbstractCard.CardColor colorType) {

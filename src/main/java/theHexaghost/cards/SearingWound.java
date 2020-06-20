@@ -29,6 +29,8 @@ public class SearingWound extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
             this.exhaust = false;
         }
     }

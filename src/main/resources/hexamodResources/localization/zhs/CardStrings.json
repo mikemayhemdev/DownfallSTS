@@ -92,7 +92,10 @@
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
     "DESCRIPTION": "选择 消耗 一张攻击或技能牌。 NL 将一张随机相反类型的牌加入手牌。",
-    "UPGRADE_DESCRIPTION": "选择 消耗 一张攻击或技能牌。 NL 将一张随机相反类型的牌加入手牌。 NL 它的耗能减少1。"
+    "UPGRADE_DESCRIPTION": "选择 消耗 一张攻击或技能牌。 NL 将一张随机相反类型的牌加入手牌。 NL 它的耗能减少1。",
+    "EXTENDED_DESCRIPTION": [
+      "to Exhaust for Necessary Sacrifice."
+    ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "危急时刻",
@@ -210,8 +213,8 @@
   },
   "hexamod:SearingWound": {
     "NAME": "灼热伤口",
-    "DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。",
-    "UPGRADE_DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。 NL 消耗 。"
+    "DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "所有敌人失去 hexamod:灼魂 层数的生命。"
   },
   "hexamod:ExtraCrispy": {
     "NAME": "清脆",
@@ -283,7 +286,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "充能弹幕",
-    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每 hexamod:点燃 一个鬼火 重复一次。"
+    "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 每 hexamod:点燃 一个鬼火 再给予一次。"
   },
   "hexamod:RadiantFlame": {
     "NAME": "火焰辐射",

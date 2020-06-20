@@ -9,8 +9,10 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theHexaghost.cards.NecessarySacrifice;
 
 import java.util.ArrayList;
 
@@ -18,6 +20,7 @@ public class SacrificeAction2 extends AbstractGameAction {
     public boolean costify;
     private AbstractPlayer p;
     private ArrayList<AbstractCard> cannotUpgrade = new ArrayList<>();
+    public static final String[] EXTENDED_DESCRIPTIONS = CardCrawlGame.languagePack.getCardStrings(NecessarySacrifice.ID).EXTENDED_DESCRIPTION;
 
     public SacrificeAction2(boolean upgrade) {
         this.actionType = ActionType.CARD_MANIPULATION;// 22

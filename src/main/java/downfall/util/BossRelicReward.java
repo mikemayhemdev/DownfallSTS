@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class BossRelicReward extends RewardItem {
     public static final String ID = downfallMod.makeID("BossRelicReward");
-    public static final String TEXT[] = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public BossRelicReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);

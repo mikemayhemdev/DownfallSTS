@@ -27,7 +27,7 @@ public class JaxReward extends RewardItem {
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
     public static final String ID = downfallMod.makeID("JaxReward");
-    public static final String TEXT[] = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public JaxReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);

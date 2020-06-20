@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
+import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
@@ -22,6 +23,9 @@ import java.util.Iterator;
 import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class UpgradedUnknownReward extends RewardItem {
+    public static final String ID = SneckoMod.makeID("UpgradedUnknownReward");
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
 
@@ -177,7 +181,7 @@ public class UpgradedUnknownReward extends RewardItem {
             color = Settings.RED_TEXT_COLOR;
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, "Add an Upgraded Unknown card to your deck", REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
+        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, TEXT[0], REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
         if (!this.hb.hovered) {
 
             for (AbstractGameEffect e : effects) {
