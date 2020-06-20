@@ -30,11 +30,11 @@
   "downfall:TotemInvulnerable": {
     "NAME": "活墙壁",
     "DESCRIPTIONS": [
-      "只有在其他头都是 1 HP时才会死亡。死亡时其他头同时死亡。"
+      "只有在其他头均生命为1时才会死亡。死亡时其他头同时死亡。"
     ]
   },
-  "downfall:TotemExhaust": {
-    "NAME": "健忘",
+  "downfall:ExhaustCardsPower": {
+    "NAME": "遗忘",
     "DESCRIPTIONS": [
       "你的回合结束时，选择一张牌消耗。"
     ]

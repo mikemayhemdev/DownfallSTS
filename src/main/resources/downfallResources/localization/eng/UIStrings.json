@@ -54,5 +54,46 @@
     "EXTRA_TEXT": [
       "Energy"
     ]
+  },
+  "downfall:RemoveCardReward": {
+  "TEXT": [
+    "Remove a card in your deck.",
+    "Choose a Card to Remove"
+  ]
+},
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "Transform a card in your deck.",
+      "Choose a Card to Transform"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "Transform a card in your deck.",
+      "Choose a Card to Upgrade"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "Choose 1 of 3 Boss Relics to obtain.",
+      "Obtain a ",
+      ".",
+      "Choose a Relic.. sorta"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Ethereal. NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "Found some JAX!"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "Add a Rare Card to your deck"
+    ]
   }
 }

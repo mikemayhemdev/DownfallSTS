@@ -2,6 +2,7 @@ package downfall.util;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
@@ -15,6 +16,9 @@ import expansioncontent.patches.CenterGridCardSelectScreen;
 import java.util.ArrayList;
 
 public class BossRelicReward extends RewardItem {
+    public static final String ID = downfallMod.makeID("BossRelicReward");
+    public static final String TEXT[] = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+
     public BossRelicReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
         this.flashTimer = 0.0F;
@@ -22,7 +26,7 @@ public class BossRelicReward extends RewardItem {
         this.ignoreReward = false;
         this.redText = false;
 
-        this.text = "Choose 1 of 3 Boss Relics to obtain.";
+        this.text = TEXT[0];
     }
 
     @Override
@@ -43,7 +47,7 @@ public class BossRelicReward extends RewardItem {
                 d = q.replaceAll("(.)([A-Z])", "$1 $2").substring(q.indexOf(":") + 1);
                 d = d.trim();
             }
-            tmp.add(new OctoChoiceCard(q, d, expansionContentMod.makeCardPath("QuickGuardian.png"), "Obtain a " + d + "."));
+            tmp.add(new OctoChoiceCard(q, d, expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[1] + d + TEXT[2]));
         }
 
         CardGroup qqq = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
@@ -52,7 +56,7 @@ public class BossRelicReward extends RewardItem {
         }
 
         CenterGridCardSelectScreen.centerGridSelect = true;
-        AbstractDungeon.gridSelectScreen.open(qqq, 1, "Choose a Relic.. sorta", false, false, false, false);// 47 48
+        AbstractDungeon.gridSelectScreen.open(qqq, 1, TEXT[3], false, false, false, false);// 47 48
         return true;
     }
 }
