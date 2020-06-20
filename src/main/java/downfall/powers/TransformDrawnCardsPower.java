@@ -11,13 +11,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
-import slimebound.SlimeboundMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
-
-import static jdk.nashorn.internal.objects.NativeMath.min;
 
 public class TransformDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
 
@@ -26,19 +24,23 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
 
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+    public static final String NAME = powerStrings.NAME;
+    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+
     public TransformDrawnCardsPower(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
+        this.name = NAME;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         this.amount2 = this.amount;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+
         this.updateDescription();
     }
 
@@ -55,19 +57,12 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        super.atEndOfTurn(isPlayer);
-        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
     public void updateDescription() {
-        SlimeboundMod.logger.info(this.DESCRIPTIONS[0]);
-        description = this.DESCRIPTIONS[0];
-        description += amount;
-        SlimeboundMod.logger.info(this.DESCRIPTIONS[1]);
-        description += this.DESCRIPTIONS[1];
-        description += Math.max(0,this.amount2);
-        description += this.DESCRIPTIONS[2];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + Math.max(0, amount2) + DESCRIPTIONS[2];
     }
 
     @Override
