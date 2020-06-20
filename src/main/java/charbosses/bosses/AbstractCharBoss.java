@@ -687,7 +687,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();
 
-            if(MathUtils.random(2) == 0)
+            if(MathUtils.random(1) == 0)
             this.onPlayAttackCardSound();
         }
         this.cardsPlayedThisTurn++;
