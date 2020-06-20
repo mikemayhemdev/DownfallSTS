@@ -27,10 +27,10 @@ public class SocketGemGridPatchCancelAction {
                         if (GuardianMod.currSocketGemEffect != null) {
                             GuardianMod.currSocketGemEffect.gemSelect = true;
                             GuardianMod.currSocketGemEffect.socketSelect = false;
+                            GuardianMod.currSocketGemEffect.gemChosen = null;
                         }
                         GuardianMod.gridScreenForSockets = false;
                         GuardianMod.gridScreenForGems = true;
-                        GuardianMod.currSocketGemEffect.gemChosen = null;
                         GuardianMod.gridScreenForGems = true;
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
