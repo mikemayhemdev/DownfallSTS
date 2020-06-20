@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -88,6 +89,30 @@ public class AbstractTotemMonster extends AbstractMonster {
                 break;
         }
 
+    }
+
+    @Override
+    public void healthBarUpdatedEvent() {
+        if (this.currentHealth <= 0 && this.hasPower(TotemInvulnerablePower.POWER_ID))
+        {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (m != this && m.currentHealth > 1 && m instanceof AbstractTotemMonster) { //can't die yet.
+                    this.currentHealth = 1;
+                    break;
+                }
+            }
+        }
+        super.healthBarUpdatedEvent();
+    }
+
+    @Override
+    public void die(boolean triggerRelics) {
+        super.die(triggerRelics);
+
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (m != this && m.hasPower(TotemInvulnerablePower.POWER_ID))
+                addToTop(new InstantKillAction(m));
+        }
     }
 
     @Override
