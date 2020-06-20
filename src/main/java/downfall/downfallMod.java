@@ -724,7 +724,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Portal_Evil.ID, Portal_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheBeyond"))
                 //Event ID to Override//
                 .overrideEvent(SecretPortal.ID)
                 //Event Type//

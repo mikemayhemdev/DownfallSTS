@@ -22,7 +22,7 @@ public class SoulSteal extends AbstractHexaCard {
 
 
     public SoulSteal() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = 5;
         exhaust = true;
     }
