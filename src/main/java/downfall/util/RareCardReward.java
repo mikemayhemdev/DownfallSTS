@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
+import downfall.downfallMod;
 import theHexaghost.cards.seals.AbstractSealCard;
 
 import java.util.ArrayList;
@@ -24,6 +25,9 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 public class RareCardReward extends RewardItem {
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
+    public static final String ID = downfallMod.makeID("RareCardReward");
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+
 
     public RareCardReward(AbstractCard.CardColor colorType) {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
@@ -50,7 +54,7 @@ public class RareCardReward extends RewardItem {
             this.cards.add(cardToAdd);
         }
 
-        this.text = TEXT[2];
+        this.text = TEXT[0];
         Iterator var2 = this.cards.iterator();
 
         while (true) {
@@ -184,7 +188,7 @@ public class RareCardReward extends RewardItem {
             color = Settings.RED_TEXT_COLOR;
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, "Add a Rare Card to your deck", REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
+        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, TEXT[0], REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
         if (!this.hb.hovered) {
 
             for (AbstractGameEffect e : effects) {

@@ -182,7 +182,7 @@
     ]
   },
   "hexamod:TimeStopPower": {
-    "NAME": "ZA WARUDO!",
+    "NAME": "Doom's Arrival",
     "DESCRIPTIONS": [
       "At the end of your turn, immediately start another turn. NL Energy and Block are maintained."
     ]
@@ -192,6 +192,12 @@
     "DESCRIPTIONS": [
       "At the start of your turn, apply #b",
       " #yBurn to all enemies."
+    ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "Living Bomb",
+    "DESCRIPTIONS": [
+      "The next time this creature's Soulburn is detonated, it affects ALL enemies."
     ]
   }
 }

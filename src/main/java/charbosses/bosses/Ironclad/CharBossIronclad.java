@@ -4,12 +4,14 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.anticards.ShieldSmash;
 import charbosses.core.EnemyEnergyManager;
+import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -70,7 +72,38 @@ public class CharBossIronclad extends AbstractCharBoss {
         return new ShieldSmash();
     }
 
-    static {
+
+    @Override
+    public void onPlayAttackCardSound() {
+
+        switch (MathUtils.random(2)) {
+            case 0:
+                CardCrawlGame.sound.play("VO_IRONCLAD_1A");
+                break;
+            case 1:
+                CardCrawlGame.sound.play("VO_IRONCLAD_1B");
+                break;
+            case 2:
+                CardCrawlGame.sound.play("VO_IRONCLAD_1C");
+                break;
+        }
+    }
+
+    @Override
+    public void die() {
+        super.die();
+
+        switch (MathUtils.random(2)) {
+            case 0:
+                CardCrawlGame.sound.play("VO_IRONCLAD_2A");
+                break;
+            case 1:
+                CardCrawlGame.sound.play("VO_IRONCLAD_2B");
+                break;
+            case 2:
+                CardCrawlGame.sound.play("VO_IRONCLAD_2C");
+                break;
+        }
 
     }
 }

@@ -95,7 +95,7 @@
     "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns."
   },
   "Slimebound:LeechingTouch": {
-    "NAME": "Leeching Touch",
+    "NAME": "Leeching Strike",
     "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Gain Block equal to the enemy's slimeboundmod:Goop."
   },
   "Slimebound:Dissolve": {

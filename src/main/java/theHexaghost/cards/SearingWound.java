@@ -14,14 +14,14 @@ public class SearingWound extends AbstractHexaCard {
     //stupid intellij stuff ATTACK, ALL_ENEMY, UNCOMMON
 
     public SearingWound() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.exhaust = false;
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!q.isDying && q.hasPower(BurnPower.POWER_ID)) {
-                atb(new LoseHPAction(q, p, q.getPower(BurnPower.POWER_ID).amount, AbstractGameAction.AttackEffect.POISON));
+                atb(new LoseHPAction(q, p, q.getPower(BurnPower.POWER_ID).amount, AbstractGameAction.AttackEffect.FIRE));
             }
         }
     }
@@ -29,6 +29,8 @@ public class SearingWound extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
             this.exhaust = false;
         }
     }

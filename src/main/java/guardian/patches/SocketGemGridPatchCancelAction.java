@@ -24,11 +24,13 @@ public class SocketGemGridPatchCancelAction {
                     if (!AbstractDungeon.gridSelectScreen.confirmScreenUp) {
                         GuardianMod.logger.info("cancel from grid for sockets");
                         CardGroup gemCards = GuardianMod.getGemCards();
-                        GuardianMod.currSocketGemEffect.gemSelect = true;
-                        GuardianMod.currSocketGemEffect.socketSelect = false;
+                        if (GuardianMod.currSocketGemEffect != null) {
+                            GuardianMod.currSocketGemEffect.gemSelect = true;
+                            GuardianMod.currSocketGemEffect.socketSelect = false;
+                            GuardianMod.currSocketGemEffect.gemChosen = null;
+                        }
                         GuardianMod.gridScreenForSockets = false;
                         GuardianMod.gridScreenForGems = true;
-                        GuardianMod.currSocketGemEffect.gemChosen = null;
                         GuardianMod.gridScreenForGems = true;
                         AbstractDungeon.gridSelectScreen.selectedCards.clear();
 

@@ -10,7 +10,7 @@
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "灵魂",
-      "TODO: Soul flavor text/explanation."
+      "这是你现在携带的灵魂。灵魂能上贡给心脏获得奖励。"
     ]
   },
   "downfall:BustKeyButton": {
@@ -54,5 +54,46 @@
   "EXTRA_TEXT": [
     "能量"
   ]
-}
+},
+  "downfall:RemoveCardReward": {
+    "TEXT": [
+      "移除牌组中的一张牌。",
+      "选择一张牌移除"
+    ]
+  },
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "变化牌组中的一张牌。",
+      "选择一张牌变化"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "升级牌组中的一张牌。",
+      "选择一张牌升级"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "从3件boss遗物中选择1件获得。",
+      "获得一件 ",
+      "。",
+      "选择一件遗物……大概"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "虚无 。 NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "找到一些JAX！"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "将一张稀有牌加入你的牌组"
+    ]
+  }
 }

@@ -20,13 +20,11 @@ import theHexaghost.util.TextureLoader;
 public class TransformDrawnCardsPower extends TwoAmountPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("TransformDrawnCardsPower");
+    public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
+    public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Enhance32.png");
-
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    public static final String NAME = powerStrings.NAME;
-    public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public TransformDrawnCardsPower(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
