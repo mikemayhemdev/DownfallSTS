@@ -18,7 +18,7 @@ import theHexaghost.util.TextureLoader;
 
 public class TotemInvulnerablePower extends AbstractPower implements CloneablePowerInterface {
 
-    public String POWER_ID = downfallMod.makeID("TotemInvulnerable");
+    public static final String POWER_ID = downfallMod.makeID("TotemInvulnerable");
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/totemImmunity84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/totemImmunity32.png"));

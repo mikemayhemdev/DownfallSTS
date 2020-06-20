@@ -1,0 +1,13 @@
+
+livingwall.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Head1
+  rotate: false
+  xy: 1, 1
+  size: 293, 258
+  orig: 293, 258
+  offset: 0, 0
+  index: -1

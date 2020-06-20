@@ -61,13 +61,11 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
 
     @Override
     public void updateDescription() {
-        SlimeboundMod.logger.info(this.DESCRIPTIONS[0]);
-        description = this.DESCRIPTIONS[0];
+        description = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS[0];
         description += amount;
-        SlimeboundMod.logger.info(this.DESCRIPTIONS[1]);
-        description += this.DESCRIPTIONS[1];
+        description += CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS[1];
         description += Math.max(0,this.amount2);
-        description += this.DESCRIPTIONS[2];
+        description += CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS[2];
     }
 
     @Override
