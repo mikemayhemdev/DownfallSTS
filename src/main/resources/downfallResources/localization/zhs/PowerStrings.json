@@ -28,15 +28,15 @@
     ]
   },
   "downfall:TotemInvulnerable": {
-    "NAME": "Living Wall",
+    "NAME": "活墙壁",
     "DESCRIPTIONS": [
-      "Cannot die unless all other Heads are at 1 HP.  Dies if any other Head dies."
+      "在所有墙壁生命为1前不会死亡。其他墙壁死亡时该墙壁死亡。"
     ]
   },
   "downfall:TotemExhaust": {
-    "NAME": "Forgetful",
+    "NAME": "遗忘",
     "DESCRIPTIONS": [
-      "At the end of your turn, choose a card to Exhaust."
+      "你的回合结束时，选择一张牌消耗。"
     ]
   }
 }
