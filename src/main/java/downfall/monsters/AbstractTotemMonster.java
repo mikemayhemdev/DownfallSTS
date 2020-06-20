@@ -105,15 +105,17 @@ public class AbstractTotemMonster extends AbstractMonster {
         super.healthBarUpdatedEvent();
     }
 
-    @Override
-    public void die(boolean triggerRelics) {
-        super.die(triggerRelics);
 
+    @Override
+    public void die() {
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (m != this && m.hasPower(TotemInvulnerablePower.POWER_ID))
                 addToTop(new InstantKillAction(m));
         }
+        super.die();
     }
+
+
 
     @Override
     public void renderHealth(SpriteBatch sb) {
@@ -131,19 +133,7 @@ public class AbstractTotemMonster extends AbstractMonster {
 
     public void update() {
 
-        Iterator var1 = this.powers.iterator();
-
-        while (var1.hasNext()) {
-            AbstractPower p = (AbstractPower) var1.next();
-            p.updateParticles();
-        }
-
-        this.updateReticle();
-       // this.healthHb.move(this.hb.cX, this.drawY - 50F * Settings.scale);
-        this.updateHealthBar();
-       // this.healthHb.move(this.hb.cX, this.drawY - 50F * Settings.scale);
-        this.updateAnimations();
-        //this.healthHb.move(this.hb.cX, this.drawY + 120F * Settings.scale);
+       super.update();
 
         try {
             this.intentHb.move(this.hb.cX - 140F * Settings.scale, this.drawY + 170F * Settings.scale);
@@ -152,7 +142,7 @@ public class AbstractTotemMonster extends AbstractMonster {
             e.printStackTrace();
         }
 
-        this.tint.update();
+
     }
 
 
