@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.relics.SneckoEye;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
+import sneckomod.actions.MuddleRandomCardAction;
 import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
@@ -42,46 +43,8 @@ public class MuddlingPotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         if (AbstractDungeon.player.hand.size() > 0) {
-            int x = 0;
-            int truecost = 0;
-            ArrayList<AbstractCard> possCardsList = new ArrayList<>();
-            ArrayList<AbstractCard> chosenCardsList = new ArrayList<>();
 
-            for (AbstractCard c : AbstractDungeon.player.hand.group) possCardsList.add(c);
-
-            AbstractCard highest;
-
-            for (int i = 0; i < this.potency; i++) {
-                x = -1;
-                highest = null;
-                //find highest cost card
-                for (AbstractCard q : possCardsList) {
-                    if (q.isCostModifiedForTurn) {
-                        truecost = q.costForTurn;
-                    } else {
-                        truecost = q.cost;
-                    }
-                    if (truecost > x) {
-                        x = truecost;
-                        highest = q;
-                    }
-                }
-
-                //remove highest from possible, add to chosen
-                if (highest != null) {
-                    chosenCardsList.add(highest);
-                    possCardsList.remove(highest);
-                } else {
-                    break;
-                }
-            }
-
-
-            if (!chosenCardsList.isEmpty()) {
-                for (AbstractCard q : chosenCardsList) {
-                    AbstractDungeon.actionManager.addToBottom(new MuddleAction(q));
-                }
-            }
+            AbstractDungeon.actionManager.addToBottom(new MuddleRandomCardAction(2, true));
 
         }
 

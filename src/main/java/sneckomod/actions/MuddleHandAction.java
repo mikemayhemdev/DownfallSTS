@@ -31,19 +31,7 @@ public class MuddleHandAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 21
 
             for (AbstractCard card : this.p.hand.group) {
-                if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
-                    AbstractPower q = AbstractDungeon.player.getPower(MudshieldPower.POWER_ID);
-                    q.flash();
-                    addToBot(new ApplyPowerAction(q.owner, q.owner, new NextTurnBlockPower(q.owner, q.amount)));
-                }
-                if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 24
-                    int newCost = AbstractDungeon.cardRandomRng.random(3 + maxRangeModifier);// 25
-                    if (card.cost != newCost) {// 26
-                        card.cost = newCost;// 27
-                        card.costForTurn = card.cost;// 28
-                        card.isCostModified = true;// 29
-                    }
-                }
+                addToTop(new MuddleAction(card));
             }
 
             this.isDone = true;// 33

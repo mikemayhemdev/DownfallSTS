@@ -499,9 +499,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(FaceTrader_Evil.ID, FaceTrader_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("Exordium")))
                 //Event ID to Override//
                 .overrideEvent(FaceTrader.ID)
+
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -528,7 +529,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Designer_Evil.ID, Designer_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond")))
                 //Event ID to Override//
                 .overrideEvent(Designer.ID)
                 //Event Type//
@@ -636,8 +637,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(KnowingSkull_Evil.ID, KnowingSkull_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
                 //Event ID to Override//
+                //Additional Condition//
+                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12))
                 .overrideEvent(com.megacrit.cardcrawl.events.city.KnowingSkull.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -708,9 +711,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Nloth_Evil.ID, Nloth_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
                 //Event ID to Override//
                 .overrideEvent(Nloth.ID)
+
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -755,7 +759,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Joust_Evil.ID, Joust_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
                 //Event ID to Override//
                 .overrideEvent(TheJoust.ID)
                 //Event Type//
