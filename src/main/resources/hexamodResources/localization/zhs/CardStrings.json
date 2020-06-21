@@ -201,7 +201,7 @@
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
-    "DESCRIPTION": "如果敌人有 hexamod:灼魂 ，给予 !burny! 层 hexamod:灼魂 。 NL 给予 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "如果敌人有 hexamod:灼魂 ， NL 给予 !burny! 层 hexamod:灼魂 。 NL 给予 !burny! 层 hexamod:灼魂 。"
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
@@ -348,7 +348,7 @@
     "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，随机升级牌组中的一张牌。"
   },
   "hexamod:SoulSteal": {
-    "NAME": "活性炸弹",
+    "NAME": "活体炸弹",
     "DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "给予 !burny! 层 hexamod:灼魂 。 NL 下次目标的 hexamod:灼魂 引爆时，对全体敌人生效。"
   },
