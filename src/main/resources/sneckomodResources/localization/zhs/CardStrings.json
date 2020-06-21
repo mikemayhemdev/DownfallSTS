@@ -211,7 +211,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "垃圾宝",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。"
   },
   "sneckomod:DiceBlock": {
     "NAME": "骰子格挡",
