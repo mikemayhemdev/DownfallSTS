@@ -9,8 +9,8 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random cards in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
@@ -156,8 +156,8 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random cards in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the highest-cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
@@ -177,8 +177,8 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "Pure Snecko",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with cards of your class that cost 1 less.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card. NL  Exhaust all sneckomod:Offclass cards in your hand, replacing them with cards of your class that cost 1 less."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones that cost 1 less."
   },
   "sneckomod:Cheat": {
     "NAME": "Cheat",
@@ -191,7 +191,7 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Set your gold to !M! % - 120 % of its current amount. NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Set your *Gold to !M! % - 120 % of its current amount. NL Exhaust."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
@@ -211,7 +211,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Gain [E] equal to its cost."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",

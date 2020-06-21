@@ -53,7 +53,7 @@ public class UpgradedUnknownReward extends RewardItem {
             this.cards.add(cardToAdd);
         }
 
-        this.text = TEXT[2];
+        this.text = TEXT[0];
         Iterator var2 = this.cards.iterator();
 
         while (true) {
