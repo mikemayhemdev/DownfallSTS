@@ -102,6 +102,7 @@ public class HeartShopRoom extends ShopRoom {
 
     }
 
+
     public void showHeartMerchant() {
         this.heartMerchantShown = true;
         this.heartMerchant.spawnHitbox();

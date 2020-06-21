@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
@@ -45,7 +46,7 @@ public class LastStand extends AbstractExpansionCard {
         atb(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
         double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
         if (currentPct < 0.5) {
-            AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, "~DIE~ ~.~ ~.~ ~.~", true));
+            AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, Champ.DIALOG[6], true));
 
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
             atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));

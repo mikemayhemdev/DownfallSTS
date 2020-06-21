@@ -23,6 +23,7 @@ import downfall.actions.ForceWaitAction;
 import downfall.actions.LoseGoldAction;
 import downfall.actions.MerchantThrowGoldAction;
 import downfall.powers.SoulStealPower;
+import downfall.rooms.HeartShopRoom;
 import downfall.vfx.GainSingleSoulEffect;
 import downfall.vfx.SoulStealEffect;
 
