@@ -46,7 +46,7 @@ public class TransformDrawnCardsPower extends TwoAmountPower implements Cloneabl
 
     @Override
     public void onCardDraw(AbstractCard card) {
-        if (amount2 >= 0) {
+        if (amount2 > 0) {
             flash();
             this.amount2 -= 1;
             addToBot(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand));
