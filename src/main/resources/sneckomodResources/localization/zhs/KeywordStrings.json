@@ -18,13 +18,13 @@
     "NAMES": [
       "混淆"
     ],
-    "DESCRIPTION": "将一张牌的耗能在0到3之间随机。"
+    "DESCRIPTION": "将一张牌的耗能变为0到3之间。"
   },
   {
     "PROPER_NAME": "异色",
     "NAMES": [
       "异色"
     ],
-    "DESCRIPTION": "除了异蛇牌以外的所有可获得牌。"
+    "DESCRIPTION": "除了你专属的牌以外的所有可获得牌。"
   }
 ]
