@@ -36,17 +36,18 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public BustKeyOption(Keys key) {
         this.key = key;
-        this.description = TEXT[3];
         if (AbstractDungeon.player.gold < 50) {
             this.usable = false;
+            updateImage(key);
         } else {
             this.usable = true;
+            updateImage(key);
         }
-        updateImage(key);
     }
 
 
     public void updateImage(Keys key) {
+        this.description = TEXT[3];
         switch (key) {
             case SAPPHIRE:
                 this.label = TEXT[1];
@@ -91,6 +92,17 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public void update() {
         super.update();
+
+        if (!this.used) {
+            if (AbstractDungeon.player.gold < 50 && this.usable) {
+                this.usable = false;
+                updateImage(key);
+            }
+            if (AbstractDungeon.player.gold >= 50 && !this.usable) {
+                this.usable = true;
+                updateImage(key);
+            }
+        }
 
         CampfireUI campfire = ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI;
 

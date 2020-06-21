@@ -12,7 +12,7 @@ import downfall.downfallMod;
 
 public class UpgradeCardReward extends RewardItem {
     public static final String ID = downfallMod.makeID("UpgradeCardReward");
-    public static final String TEXT[] = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
     public UpgradeCardReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);

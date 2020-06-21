@@ -1,16 +1,10 @@
 package downfall.patches.vfx;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
-import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.vfx.RainingSoulsEffect;
 

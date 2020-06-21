@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
+import theHexaghost.actions.HauntingEchoAction;
 
 public class HauntingEcho extends AbstractHexaCard {
 
@@ -24,10 +25,7 @@ public class HauntingEcho extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        if (GhostflameHelper.activeGhostFlame.charged) {
-            atb(new ExtinguishCurrentFlameAction());
-            atb(new ChargeCurrentFlameAction());
-        }
+        atb(new HauntingEchoAction());
     }
 
     public void triggerOnGlowCheck() {

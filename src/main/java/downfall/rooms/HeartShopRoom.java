@@ -92,7 +92,6 @@ public class HeartShopRoom extends ShopRoom {
             this.heartMerchant.dispose();
             this.heartMerchant = null;
         }
-
     }
 
     public void update() {
@@ -102,6 +101,7 @@ public class HeartShopRoom extends ShopRoom {
         }
 
     }
+
 
     public void showHeartMerchant() {
         this.heartMerchantShown = true;

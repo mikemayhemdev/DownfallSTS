@@ -252,6 +252,7 @@ public class FleeingMerchant extends AbstractMonster {
         super.die();
         this.deathTimer += ((0.01F * increaseGold) - 1F);
         DEAD = true;
+        helpDied = true;
     }
 
     @Override
@@ -260,6 +261,7 @@ public class FleeingMerchant extends AbstractMonster {
     }
 
     public static boolean helpEscaped = false;
+    public static boolean helpDied = false;
 
     @Override
     public void update() {
@@ -267,9 +269,9 @@ public class FleeingMerchant extends AbstractMonster {
         if (escaped && !ESCAPED) {
             ESCAPED = true;
             helpEscaped = true;
+            AbstractDungeon.overlayMenu.hideCombatPanels();// 51
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.combatRewardScreen.open();
-
         }
     }
 

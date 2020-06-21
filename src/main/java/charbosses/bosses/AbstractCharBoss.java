@@ -23,6 +23,7 @@ import charbosses.relics.CBR_MagicFlower;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -685,6 +686,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (c.type == AbstractCard.CardType.ATTACK) {
             this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();
+
+            if(MathUtils.random(1) == 0)
+            this.onPlayAttackCardSound();
         }
         this.cardsPlayedThisTurn++;
         c.calculateCardDamage(monster);
@@ -729,6 +733,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             o.update();
         }
         this.stance.update();
+    }
+
+    public void onPlayAttackCardSound(){
     }
 
 
@@ -898,9 +905,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             if (NeowBoss.neowboss != null) {
-                if (NeowBoss.neowboss.minion != this) {
-                    onBossVictoryLogic();
-                }
+                onBossVictoryLogic();
             }
 
         }

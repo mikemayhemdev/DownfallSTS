@@ -16,8 +16,8 @@ public class UnknownUpgradedPostCombatPower extends AbstractPower implements Clo
 
     public static final String POWER_ID = SneckoMod.makeID("UnknownUpgradedPostCombatPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SealAfterCombat84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/SealAfterCombat32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/UnknownAfterCombat84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/UnknownAfterCombat32.png");
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;

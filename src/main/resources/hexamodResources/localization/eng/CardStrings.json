@@ -92,7 +92,10 @@
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
-    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less."
+    "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less.",
+    "EXTENDED_DESCRIPTION": [
+      "to Exhaust for Necessary Sacrifice."
+    ]
   },
   "hexamod:TimeOfNeed": {
     "NAME": "Time of Need",
@@ -128,7 +131,7 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaguard",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL Draw 1 card."
+    "DESCRIPTION": "Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL Draw 1 card."
   },
   "hexamod:GhostLash": {
     "NAME": "Ghost Lash",
@@ -209,7 +212,8 @@
   },
   "hexamod:SearingWound": {
     "NAME": "Searing Wound",
-    "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Soulburn."
+    "DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Soulburn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ALL enemies lose HP equal to their hexamod:Soulburn."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -238,7 +242,11 @@
   },
   "hexamod:HeatShield": {
     "NAME": "Heat Shield",
-    "DESCRIPTION": "Gain !M! Block, increased by hexamod:Soulburn on ALL enemies. (Current: !B! Block)"
+    "DESCRIPTION": "Ethereal. NL Gain !M! Block, increased by hexamod:Soulburn on ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Block, increased by hexamod:Soulburn on ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Current: !B! Block.)"
+    ]
   },
   "hexamod:TurnItUp": {
     "NAME": "Turn It Up",
@@ -268,7 +276,7 @@
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Soulburn, deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has hexamod:Soulburn, detonate it."
   },
   "hexamod:SpectralSpark": {
     "NAME": "Spectral Spark",
@@ -340,8 +348,8 @@
   },
   "hexamod:SoulSteal": {
     "NAME": "Living Bomb",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL Detonate the enemy's hexamod:Soulburn."
+    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies."
   },
   "hexamod:Haunted": {
     "NAME": "Haunted",

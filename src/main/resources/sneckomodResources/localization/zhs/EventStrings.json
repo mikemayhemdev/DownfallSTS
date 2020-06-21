@@ -1,1 +1,53 @@
-{}
+{
+  "sneckomod:D8": {
+    "NAME": "Mystical Octahedron",
+    "DESCRIPTIONS": [
+      "Approach the mystical octahedron.",
+      "Relic go boom.",
+      "Got relic.",
+      "Decided to leave."
+    ],
+    "OPTIONS": [
+      "[Shatter] #rLose #r",
+      " #r HP. #gGain #g5 #gUnknown #gCards",
+      "[Take] #gGain #gMystical #gOctahedron. #rCursed #r- #rPain.",
+      "[离开]",
+      "[锁定] Requires a card that uses a randomly chosen number."
+    ]
+  },
+  "sneckomod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Creativity triumphs over planning every time."
+    ],
+    "OPTIONS": [
+      "[Improvisation] #gReplace all #gStrikes and #gDefends with random #gUnknown cards.",
+      "[锁定] Requires a Strike or Defend."
+    ]
+  },
+  "sneckomod:Serpent": {
+    "NAME": "The Ssssserpent",
+    "DESCRIPTIONS": [
+      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous scaled creature, not unlike yourself, appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~snake~ ~friend!~ Let me ask you something... NL NL You hear the serpent speak words, but find yourself utterly perplexed, comprehending none of it. NL NL \"Do you agree?\"",
+      "~\"Excellent!\"~ NL NL You still have no idea what the question was, but it appears you've made the Serpent's day. NL The creature offers you a trinket to assist in your goal, then slithers back into the hole.",
+      "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
+    ],
+    "OPTIONS": [
+      "[Agree] #gGain #ga #grandom #gRelic. #rBecome #rCursed #r- #rBewildered.",
+      "[Disagree]",
+      "[离开]"
+    ]
+  },
+  "sneckomod:SuspiciousHouse": {
+    "NAME": "Suspicious House",
+    "DESCRIPTIONS": [
+      "Travelling through the city, your ears are pierced by a shrill inhuman cry coming from a nearby house. Upon investigation, you find an inhabitant of the City, trying to silence a small serpentine creature, trapped in a cage. NL NL ~\"HEY!~ What are you doing in my house?! @GET@ @OUT!\"@ NL NL The caged critter is startled, and hops back into a corner of its confinement. It clearly is not happy here.",
+      "\"You want it? @Fine!@ It's not worth the trouble\" NL NL With a frustrated ~sigh~, the captor unlocks the cage and reaches in. With a surprising swiftness, the serpent bites his finger with all the strength its tiny jaw can muster. NL NL With a quick intervention, you #rpunch the man, knocking him out cold, before he can retaliate against the critter. The creature happily crawls up to your hand when you offer it, and the two of you continue through the Spire together.",
+      "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
+    ],
+    "OPTIONS": [
+      "[Rescue] #gGain #gYoung #gSnecko. #rBecome #rCursed #r- #rBewildered.",
+      "[离开]"
+    ]
+  }
+}

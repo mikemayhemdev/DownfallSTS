@@ -4,6 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -43,26 +44,12 @@ public class TotemInvulnerablePower extends AbstractPower implements CloneablePo
 
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (damageAmount > this.owner.currentHealth) {
-            boolean timeToDie = true;
-            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (m != this.owner && m.currentHealth > 1 && m instanceof AbstractTotemMonster) {
-                    timeToDie = false;
-                }
-            }
-            if (timeToDie) {
-                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    if (m != this.owner) {
-                        m.die();
-                    }
-                }
-            } else {
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (m != this.owner && m.currentHealth > 1 && m instanceof AbstractTotemMonster) { //can't die yet.
                 this.flash();
-                return super.onAttackedToChangeDamage(info, this.owner.currentHealth - 1);
+                return super.onAttackedToChangeDamage(info, Math.min(damageAmount, this.owner.currentHealth - 1));
             }
         }
-
-
         return super.onAttackedToChangeDamage(info, damageAmount);
     }
 

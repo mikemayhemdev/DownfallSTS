@@ -18,7 +18,7 @@
   },
   "expansioncontent:Sear": {
     "NAME": "大灼热",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 hexamod:灼伤 。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 hexamod:灼魂 。 NL 消耗 。"
   },
   "expansioncontent:GhostWheel": {
     "NAME": "六火",

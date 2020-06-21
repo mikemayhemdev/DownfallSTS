@@ -16,7 +16,7 @@ public class SpectersWail extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ALL_ENEMY, COMMON
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
 
     public SpectersWail() {

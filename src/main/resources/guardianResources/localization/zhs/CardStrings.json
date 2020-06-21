@@ -228,7 +228,7 @@
   },
   "Guardian:ConstructionForm": {
     "NAME": "建造形态",
-    "DESCRIPTION": "在接下来 !M! 个回合，你不会失去生命但不能打出攻击牌。"
+    "DESCRIPTION": "获得 !M! 层 缓冲 。接下来的2个回合你不能打出攻击牌。"
   },
   "Guardian:WeakpointTargeting": {
     "NAME": "标记弱点",

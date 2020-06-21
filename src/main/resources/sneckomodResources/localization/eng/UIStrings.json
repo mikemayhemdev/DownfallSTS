@@ -14,5 +14,15 @@
       "The ",
       "You should never see this. Report to Vex"
     ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+    "TEXT": [
+      "Add an Upgraded Unknown card to your deck"
+    ]
+  },
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "Retain. NL "
+    ]
   }
 }

@@ -96,7 +96,9 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber {
+        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber
+        //, AddAudioSubscriber
+        {
     public static final String modID = "downfall";
 
 
@@ -724,7 +726,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Portal_Evil.ID, Portal_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheBeyond"))
                 //Event ID to Override//
                 .overrideEvent(SecretPortal.ID)
                 //Event Type//
@@ -1002,4 +1004,15 @@ public class downfallMod implements
             return 0;
         return i;
     }
+
+    /*
+    @Override
+    public void receiveAddAudio() {
+        addAudio(new Pair<>("soulVFX", "downfallResources/music/test.ogg"));
+    }
+
+    private void addAudio(Pair<String, String> audioData) {
+        BaseMod.addAudio(audioData.getKey(), audioData.getValue());
+    }
+    */
 }

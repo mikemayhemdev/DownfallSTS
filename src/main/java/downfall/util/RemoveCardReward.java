@@ -12,7 +12,7 @@ import downfall.downfallMod;
 
 public class RemoveCardReward extends RewardItem {
     public static final String ID = downfallMod.makeID("RemoveCardReward");
-    public static final String TEXT[] = CardCrawlGame.languagePack.getUIString(ID).TEXT;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
 
 
     public RemoveCardReward() {
