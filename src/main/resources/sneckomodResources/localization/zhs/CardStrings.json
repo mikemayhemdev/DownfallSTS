@@ -9,8 +9,8 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "异蛇噬咬",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 !M! 张随机手牌。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 !M! 张随机手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。"
   },
   "sneckomod:TailWhip": {
     "NAME": "扫尾",
@@ -147,24 +147,24 @@
     "UPGRADE_DESCRIPTION": "获得混乱。 NL 每回合开始时额外抽 !M! 张牌。"
   },
   "sneckomod:ImprovisedAttack": {
-    "NAME": "改良攻击",
+    "NAME": "即兴攻击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张随机 sneckomod:异色 攻击牌加入你的手牌并 sneckomod:混淆 。"
   },
   "sneckomod:ImprovisedGuard": {
-    "NAME": "改良防御",
+    "NAME": "即兴防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张随机 sneckomod:异色 技能牌加入你的手牌并 sneckomod:混淆 。"
   },
   "sneckomod:QuickMove": {
     "NAME": "快速移动",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张手牌 sneckomod:混淆 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将 !M! 张手牌 sneckomod:混淆 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。"
   },
   "sneckomod:QuickBite": {
     "NAME": "蛇耙",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! - 2 张牌并 sneckomod:混淆 。"
   },
   "sneckomod:Rotation": {
-    "NAME": "旋转",
+    "NAME": "轮换",
     "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌并 sneckomod:混淆 。"
   },
   "sneckomod:SerpentMind": {
@@ -177,8 +177,8 @@
   },
   "sneckomod:PureSnecko": {
     "NAME": "纯种异蛇",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 变化手牌中的 sneckomod:异色 牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌。 NL 变化手牌中的 sneckomod:异色 牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 将手牌中的 sneckomod:异色 牌 消耗 并替换为新的牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 将手牌中的 sneckomod:异色 牌 消耗 并替换为耗能低1点的新牌。"
   },
   "sneckomod:Cheat": {
     "NAME": "作弊",
@@ -191,7 +191,7 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "闪光伎俩",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 将你当前的灵魂变为当前量的 !M! % - 120 % 。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 将你拥有的 *金币 变为当前量的 !M! % - 120 % 。 NL 消耗 。"
   },
   "sneckomod:Transmogrify": {
     "NAME": "惊变",
@@ -202,7 +202,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。手牌中每有一张 sneckomod:异色 牌，获得 格挡 提高 !M! 点。"
   },
   "sneckomod:DangerNoodle": {
-    "NAME": "危险毒针",
+    "NAME": "危险长条",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中每有一张 sneckomod:异色 牌重复一次，并将这些牌 消耗 。"
   },
   "sneckomod:SerpentIdol": {
@@ -210,8 +210,8 @@
     "DESCRIPTION": "sneckomod:蛇证 。 NL 从3张随机 sneckomod:异色 牌中选择1张加入你的手牌。 NL 这张牌在本回合耗能变为0。 NL 消耗 。"
   },
   "sneckomod:TrashToTreasure": {
-    "NAME": "垃圾宝",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
+    "NAME": "变废为宝",
+	"DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张牌。 NL 获得与其耗能相等的 [E] 。"
   },
   "sneckomod:DiceBlock": {

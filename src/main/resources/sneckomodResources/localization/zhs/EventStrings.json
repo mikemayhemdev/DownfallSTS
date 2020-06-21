@@ -1,40 +1,40 @@
 {
   "sneckomod:D8": {
-    "NAME": "Mystical Octahedron",
+    "NAME": "神秘八面体",
     "DESCRIPTIONS": [
-      "Approach the mystical octahedron.",
-      "Relic go boom.",
-      "Got relic.",
-      "Decided to leave."
+      "接近神秘八面体。",
+      "遗物爆了。",
+      "获得遗物。",
+      "决定离开。"
     ],
     "OPTIONS": [
-      "[Shatter] #rLose #r",
-      " #r HP. #gGain #g5 #gUnknown #gCards",
-      "[Take] #gGain #gMystical #gOctahedron. #rCursed #r- #rPain.",
+      "[打碎] #r失去 #r",
+      " #r生命。 #g获得5张未知牌。",
+      "[取走] #g获得 #g神秘八面体 。 #r被诅咒- #r疼痛。",
       "[离开]",
-      "[锁定] Requires a card that uses a randomly chosen number."
+      "[锁定] 需要使用随机数的牌。"
     ]
   },
   "sneckomod:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Creativity triumphs over planning every time."
+      "灵感总是比汗水更有用。"
     ],
     "OPTIONS": [
-      "[Improvisation] #gReplace all #gStrikes and #gDefends with random #gUnknown cards.",
-      "[锁定] Requires a Strike or Defend."
+      "[即兴发挥] 将所有 #g打击 与 #g防御 #g替换 为随机 #g未知 牌。",
+      "[锁定] 需要打击或防御。"
     ]
   },
   "sneckomod:Serpent": {
-    "NAME": "The Ssssserpent",
+    "NAME": "蛇～",
     "DESCRIPTIONS": [
-      "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous scaled creature, not unlike yourself, appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~snake~ ~friend!~ Let me ask you something... NL NL You hear the serpent speak words, but find yourself utterly perplexed, comprehending none of it. NL NL \"Do you agree?\"",
-      "~\"Excellent!\"~ NL NL You still have no idea what the question was, but it appears you've made the Serpent's day. NL The creature offers you a trinket to assist in your goal, then slithers back into the hole.",
-      "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
+      "你走进一间房间，看见地上有一个大洞。当你靠近洞时，一条和你不太一样的巨大蛇形生物从里面钻了出来。 NL NL “~嚯嚯嚯！你好，你好啊！我的蛇朋友！~ 让我问你一个问题... ” NL NL 你听着蛇吐出的词句，陷入完全迷茫之中，那些话语根本无法理解。 NL NL “你同意吗？”",
+      "~“很好！”~ NL NL 你仍不知道当时所听问题的内容，但是你的回应似乎很合那蛇的意。 NL 这个生物送给你一个能帮你实现目标的宝物，之后爬回了洞里。",
+      "蛇非常失望地看着你，最后还是笑着祝你一路顺风。"
     ],
     "OPTIONS": [
-      "[Agree] #gGain #ga #grandom #gRelic. #rBecome #rCursed #r- #rBewildered.",
-      "[Disagree]",
+      "[同意] #g获得一个随机遗物。 #r被诅咒- #r困惑。",
+      "[反对]",
       "[离开]"
     ]
   },
