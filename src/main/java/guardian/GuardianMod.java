@@ -381,6 +381,7 @@ public class GuardianMod implements PostDrawSubscriber,
         boolean result = false;
 
         result = AbstractDungeon.player.hasEmptyOrb();
+        if (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0) result = true;
 
         if (!result) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
