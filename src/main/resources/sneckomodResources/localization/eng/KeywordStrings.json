@@ -26,6 +26,6 @@
     "NAMES": [
       "offclass"
     ],
-    "DESCRIPTION": "An Offclass card is any obtainable card from a class other than Snecko."
+    "DESCRIPTION": "An Offclass card is any obtainable card from a class other than your own."
   }
 ]
