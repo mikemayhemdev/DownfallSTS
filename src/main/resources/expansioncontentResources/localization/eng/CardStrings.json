@@ -18,7 +18,7 @@
   },
   "expansioncontent:Sear": {
     "NAME": "Greater Sear",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! Burn. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! hexamod:Soulburn. NL Exhaust."
   },
   "expansioncontent:GhostWheel": {
     "NAME": "Hex Flames",
