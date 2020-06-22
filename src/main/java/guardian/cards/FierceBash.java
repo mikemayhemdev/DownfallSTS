@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import guardian.GuardianMod;
+import guardian.actions.PlaceActualCardIntoStasis;
 import guardian.patches.AbstractCardEnum;
 
 
@@ -26,12 +27,12 @@ public class FierceBash extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 3;
-    private static final int DAMAGE = 30;
+    private static final int DAMAGE = 20;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 5;
+    private static final int UPGRADE_BONUS = 4;
     private static final int DAMAGEPERTURNINSTASIS = 3;
-    private static final int UPGRADE_DAMAGEPERTURNINSTASIS = 3;
+    private static final int UPGRADE_DAMAGEPERTURNINSTASIS = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -74,6 +75,7 @@ public class FierceBash extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this, false, true));
 
         this.useGems(p, m);
     }
