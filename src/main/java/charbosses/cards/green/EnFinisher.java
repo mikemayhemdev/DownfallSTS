@@ -53,8 +53,15 @@ public class EnFinisher extends AbstractBossCard {
                     this.magicNumber ++;
             }
 
-            if(this.magicNumber > 1)this.isMultiDamage = true;
+            if(this.magicNumber >= 0 && this.magicNumber != 1)this.isMultiDamage = true;
         }
+    }
+
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        this.magicNumber = 0;
+        this.isMultiDamage = false;
     }
 
     @Override
