@@ -56,7 +56,7 @@
   },
   "Guardian:FierceBash": {
     "NAME": "Fierce Bash",
-    "DESCRIPTION": "Deal !D! damage. NL guardianmod:Tick - Increase this card's damage by !M!."
+    "DESCRIPTION": "Deal !D! damage. NL Place this into guardianmod:Stasis. NL guardianmod:Tick - Increase this card's damage by !M!."
   },
   "Guardian:PolyBeam": {
     "NAME": "Poly Beam",
@@ -427,5 +427,10 @@
   "Guardian:Aged": {
     "NAME": "Aged",
     "DESCRIPTION": "Unplayable. NL At the end of your turn, add a Void Status to the top of your draw pile."
+  },
+  "Guardian:GemstoneGunCard": {
+    "NAME": "Gemstone Gun",
+    "DESCRIPTION": "Retain.",
+    "UPGRADE_DESCRIPTION": " NL Exhaust."
   }
 }
