@@ -1,5 +1,6 @@
 package sneckomod.powers;
 
+import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -10,8 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.util.EtherealMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.SoulRoll;
+import sneckomod.util.ExhaustMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -28,14 +31,13 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public UnlimitedRollsPower(boolean upgraded) {
+    public UnlimitedRollsPower() {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = -1;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
-        bruh = upgraded;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -48,10 +50,9 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
             this.flash();// 28
 
             AbstractCard card = new SoulRoll();
-            if (bruh) card.upgrade();
             card.exhaust = true;
-            card.rawDescription = card.rawDescription + DESCRIPTIONS[2];
-            card.initializeDescription();
+            CardModifierManager.addModifier(card, new EtherealMod());
+            CardModifierManager.addModifier(card, new ExhaustMod());
 
             this.addToBot(new MakeTempCardInHandAction(card, 1, false));// 30 32 33
         }
@@ -59,14 +60,12 @@ public class UnlimitedRollsPower extends AbstractPower implements CloneablePower
 
     @Override
     public void updateDescription() {
-        if (bruh) {
-            description = DESCRIPTIONS[0];
-        } else
-            description = DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0];
     }
+
 
     @Override
     public AbstractPower makeCopy() {
-        return new UnlimitedRollsPower(bruh);
+        return new UnlimitedRollsPower();
     }
 }

@@ -24,6 +24,11 @@
     "TEXT": [
       "保留 。 NL "
     ]
+  },
+  "sneckomod:ExhaustMod": {
+    "TEXT": [
+      " NL 消耗 。"
+    ]
   }
 }
 

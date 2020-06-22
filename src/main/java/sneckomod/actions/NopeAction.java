@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import slimebound.actions.MakeTempCardInHandActionReduceCost;
 
 public class NopeAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -34,17 +35,8 @@ public class NopeAction extends AbstractGameAction {
                 AbstractCard c = p.hand.getTopCard();
                 p.hand.moveToExhaustPile(c);
                 AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
-                if (card.cost >= 0) {// 32
-                    int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
-                    if (card.cost != newCost) {// 34
-                        card.cost = newCost;// 35
-                        card.costForTurn = card.cost;// 36
-                        card.isCostModified = true;// 37
-                    }
+                this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
 
-                    card.freeToPlayOnce = false;// 39
-                }
-                this.addToBot(new MakeTempCardInHandAction(card, true));// 34
                 this.isDone = true;// 82
             }
         }
@@ -53,17 +45,8 @@ public class NopeAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 p.hand.moveToExhaustPile(c);
                 AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
-                if (card.cost >= 0) {// 32
-                    int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
-                    if (card.cost != newCost) {// 34
-                        card.cost = newCost;// 35
-                        card.costForTurn = card.cost;// 36
-                        card.isCostModified = true;// 37
-                    }
+                this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
 
-                    card.freeToPlayOnce = false;// 39
-                }
-                this.addToBot(new MakeTempCardInHandAction(card, true));// 34
             }
 
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;// 96

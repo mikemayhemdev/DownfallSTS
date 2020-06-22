@@ -49,7 +49,6 @@ public class DiscardPileToStasisAction extends AbstractGameAction {
                 while (var1.hasNext()) {
                     c = (AbstractCard) var1.next();
                     if (GuardianMod.canSpawnStasisOrb()) {
-
                         AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
                     } else {
                         if (!AbstractDungeon.player.hasEmptyOrb()) {

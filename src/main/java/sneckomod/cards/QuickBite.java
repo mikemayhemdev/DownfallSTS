@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
+import sneckomod.actions.MuddleRandomCardAction;
 
 public class QuickBite extends AbstractSneckoCard {
 
@@ -35,42 +36,12 @@ public class QuickBite extends AbstractSneckoCard {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
         int x = getRandomNum(magicNumber, 2, this);
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.player.drawPile.size() + AbstractDungeon.player.discardPile.size() < x) {
-                } else if (p.drawPile.isEmpty() || p.drawPile.size() < x) {
-                    att(new DrawCardAction(p, x));
-                    for (int i = 0; i < x; i++) {
-                        int r = i;
-                        att(new AbstractGameAction() {
-                            @Override
-                            public void update() {
-                                isDone = true;
-                                AbstractCard q = p.drawPile.getNCardFromTop(r);
-                                att(new MuddleAction(q));
-                            }
-                        });
-                    }
-                    AbstractDungeon.actionManager.addToTop(new EmptyDeckShuffleAction());// 34
-                } else {
-                    isDone = true;
-                    att(new DrawCardAction(p, x));
-                    for (int i = 0; i < x; i++) {
-                        int r = i;
-                        att(new AbstractGameAction() {
-                            @Override
-                            public void update() {
-                                isDone = true;
-                                AbstractCard q = p.drawPile.getNCardFromTop(r);
-                                att(new MuddleAction(q));
-                            }
-                        });
-                    }
-                }
-            }
-        });
+
+        if (x > 0)
+            atb(new DrawCardAction(x));
+
+        atb(new MuddleRandomCardAction(1,true));
+
     }
 
     public void upgrade() {

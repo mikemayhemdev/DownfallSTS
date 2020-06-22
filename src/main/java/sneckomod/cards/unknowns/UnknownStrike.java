@@ -8,7 +8,7 @@ public class UnknownStrike extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownStrike");
 
     public UnknownStrike() {
-        super(ID, CardType.ATTACK, CardRarity.UNCOMMON);
+        super(ID, CardType.ATTACK, CardRarity.COMMON);
         tags.add(CardTags.STRIKE);
     }
 

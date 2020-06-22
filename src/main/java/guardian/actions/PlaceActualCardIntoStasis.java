@@ -2,6 +2,7 @@ package guardian.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,8 +16,15 @@ import guardian.orbs.StasisOrb;
 public class PlaceActualCardIntoStasis extends AbstractGameAction {
     private AbstractCard card;
     private boolean hack;
+    private boolean toBot = false;
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
+
+    public PlaceActualCardIntoStasis(AbstractCard card, boolean hack, boolean toBot) {
+        this(card);
+        this.hack = hack;
+        this.toBot = toBot;
+    }
 
     public PlaceActualCardIntoStasis(AbstractCard card, boolean hack) {
         this(card);
@@ -42,8 +50,13 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
                     }
                 }
             }
-
-            AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, this.hack)));
+            if (toBot){
+                AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(card, this.hack)));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+            } else {
+                AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
+                AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, this.hack)));
+            }
         } else {
             if (!AbstractDungeon.player.hasEmptyOrb()) {
                 AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
