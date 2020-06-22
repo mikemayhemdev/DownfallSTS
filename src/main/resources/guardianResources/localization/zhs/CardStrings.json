@@ -201,11 +201,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
-    "DESCRIPTION": " 虚无 。 NL 获得 !B! 点 格挡 。 NL 将这张牌 guardianmod:凝滞 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌的复制 guardianmod:凝滞 。 NL 消耗 。"
   },
   "Guardian:StasisStrike": {
     "NAME": "凝滞打击",
-    "DESCRIPTION": " 虚无 。 NL 造成 !D! 点伤害。 NL 将这张牌 guardianmod:凝滞 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌的复制 guardianmod:凝滞 。 NL 消耗 。"
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",

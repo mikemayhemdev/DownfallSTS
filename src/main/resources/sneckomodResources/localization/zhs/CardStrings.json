@@ -76,8 +76,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "不行",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为已 sneckomod:混淆 的同类型牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 耗 一张手牌。 NL 替换为已 sneckomod:混淆 的同类型牌。 NL 抽1张牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为已 sneckomod:混淆 且耗能低1的同类型牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为已 sneckomod:混淆 且耗能低1的同类型牌。"
   },
   "sneckomod:UnknownClass": {
     "NAME": "？？？",
@@ -130,8 +130,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为已 sneckomod:混淆 的随机同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为已 sneckomod:混淆 的随机同角色牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为随机同角色牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为随机同角色牌。"
   },
   "sneckomod:CheapStock": {
     "NAME": "廉价股票",
@@ -140,8 +140,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "无限随机",
-    "DESCRIPTION": "你的回合开始时，将一张有 消耗 的 *灵魂随机 加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "你的回合开始时，将一张有 消耗 的 *灵魂随机+ 加入你的手牌。"
+    "DESCRIPTION": "你的回合开始时，将一张有 消耗 与 虚无 的 *灵魂随机 加入你的手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。你的回合开始时，将一张有 消耗 与 虚无 的 *灵魂随机 加入你的手牌。"
   },
   "sneckomod:MasterEye": {
     "NAME": "主宰之眼",
@@ -163,11 +163,11 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "蛇耙",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! - 2 张牌并 sneckomod:混淆 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! - 2 张牌。 NL sneckomod:混淆 手中耗能最高的牌。"
   },
   "sneckomod:Rotation": {
     "NAME": "轮换",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌并 sneckomod:混淆 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃所有的 sneckomod:异色 牌。 NL 抽等量加 !M! 张牌。"
   },
   "sneckomod:SerpentMind": {
     "NAME": "异色形态",
@@ -175,10 +175,10 @@
   },
   "sneckomod:SlitherStrike": {
     "NAME": "滑动打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将手牌中的 sneckomod:异色 牌的耗能减少1。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中的 sneckomod:异色 牌本回合内耗能减少1。"
   },
   "sneckomod:PureSnecko": {
-    "NAME": "纯种异蛇",
+    "NAME": "易质",
     "DESCRIPTION": "sneckomod:蛇证 。 NL 将手牌中的 sneckomod:异色 牌 消耗 并替换为新的牌。",
     "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 将手牌中的 sneckomod:异色 牌 消耗 并替换为耗能低1点的新牌。"
   },
