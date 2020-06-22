@@ -59,7 +59,7 @@ public class ChargeUp extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this));
+        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this, false, true));
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_GUARDIAN_DESTROY"));
 

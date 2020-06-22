@@ -57,9 +57,7 @@
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "Unlimited Rolls",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a #ySoul #yRoll+ into your hand with #yExhaust.",
-      "At the start of your turn, add a #ySoul #yRoll into your hand with #yExhaust.",
-      " NL Exhaust."
+      "At the start of your turn, add a #ySoul #yRoll+ into your hand with #yEthereal and #yExhaust."
     ]
   }
 }

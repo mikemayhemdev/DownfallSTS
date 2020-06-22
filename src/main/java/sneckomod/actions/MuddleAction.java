@@ -24,13 +24,13 @@ public class MuddleAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        card.superFlash();
         if (AbstractDungeon.player.hasPower(MudshieldPower.POWER_ID)) {
             AbstractPower q = AbstractDungeon.player.getPower(MudshieldPower.POWER_ID);
             q.flash();
             addToBot(new ApplyPowerAction(q.owner, q.owner, new NextTurnBlockPower(q.owner, q.amount)));
         }
         if (card.cost >= 0 && !card.hasTag(SneckoMod.SNEKPROOF)) {// 32
+            card.superFlash();
             ArrayList<Integer> numList = new ArrayList<>();
             if (!AbstractDungeon.player.hasRelic(CrystallizedMud.ID)) {
                 if (card.cost != 0) numList.add(0);

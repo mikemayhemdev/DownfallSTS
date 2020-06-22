@@ -56,7 +56,7 @@ public class ShieldCharger extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this));
+        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this, false, true));
 
     }
 

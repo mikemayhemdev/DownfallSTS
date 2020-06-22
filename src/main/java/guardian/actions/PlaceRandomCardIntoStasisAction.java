@@ -36,8 +36,8 @@ public class PlaceRandomCardIntoStasisAction extends AbstractGameAction {
 
             } else {
                 if (GuardianMod.canSpawnStasisOrb()) {
-                    AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(AbstractDungeon.player.drawPile.getRandomCard(true), false)));
-                    //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+                    AbstractDungeon.actionManager.addToBottom(new ChannelAction(new StasisOrb(AbstractDungeon.player.drawPile.getRandomCard(true), false)));
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                     if (this.numCards - 1 > 0)
                         AbstractDungeon.actionManager.addToBottom(new PlaceRandomCardIntoStasisAction(this.numCards - 1));
                 } else {

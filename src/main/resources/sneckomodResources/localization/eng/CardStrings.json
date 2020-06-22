@@ -50,7 +50,8 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards. NL Muddle them."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
@@ -63,7 +64,8 @@
   },
   "sneckomod:SnekBeam": {
     "NAME": "Snek Beam",
-    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
@@ -74,8 +76,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost. NL Draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less."
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
@@ -128,8 +130,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class."
   },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",
@@ -138,8 +140,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand with Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a *Soul *Roll+ to your hand with Exhaust."
+    "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand. It gains Ethereal and Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *Soul *Roll to your hand. It gains Ethereal and Exhaust."
   },
   "sneckomod:MasterEye": {
     "NAME": "Master Eye",
@@ -161,11 +163,11 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards and sneckomod:Muddle them."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards. NL sneckomod:Muddle the highest-cost card in your hand."
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M! and sneckomod:Muddle them."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
@@ -173,10 +175,10 @@
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
   },
   "sneckomod:PureSnecko": {
-    "NAME": "Pure Snecko",
+    "NAME": "Shift",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones that cost 1 less."
   },

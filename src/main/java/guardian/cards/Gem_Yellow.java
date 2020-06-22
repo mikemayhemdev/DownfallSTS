@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.ForceWaitAction;
 import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
@@ -20,7 +21,7 @@ public class Gem_Yellow extends AbstractGuardianCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/gemYellow.png";
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
@@ -51,6 +52,7 @@ public class Gem_Yellow extends AbstractGuardianCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new ForceWaitAction(0.5F));
         AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction(false));
 
     }

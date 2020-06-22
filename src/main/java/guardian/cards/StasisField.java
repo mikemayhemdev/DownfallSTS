@@ -25,8 +25,8 @@ public class StasisField extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int BLOCK = 6;
-    private static final int UPGRADE_BONUS = 2;
-    private static final int SOCKETS = 1;
+    private static final int UPGRADE_BONUS = 1;
+    private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -47,7 +47,7 @@ public class StasisField extends AbstractGuardianCard {
 
         this.baseBlock = BLOCK;
 
-        this.isEthereal = true;
+        this.exhaust = true;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -57,7 +57,8 @@ public class StasisField extends AbstractGuardianCard {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this, true));
+        AbstractCard c = this.makeStatEquivalentCopy();
+        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c, true, false));
         this.useGems(p, m);
 
     }
@@ -70,6 +71,11 @@ public class StasisField extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
+            if (this.socketCount < 4) {
+                this.socketCount++;
+                this.saveGemMisc();
+            }
+            this.updateDescription();
         }
     }
 

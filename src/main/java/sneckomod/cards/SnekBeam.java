@@ -18,9 +18,10 @@ public class SnekBeam extends AbstractSneckoCard {
     private static final int DAMAGE = -1;
 
     public SnekBeam() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
+        this.exhaust = true;
     }
 
     public static int countCards() {
@@ -56,7 +57,9 @@ public class SnekBeam extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            this.exhaust = false;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

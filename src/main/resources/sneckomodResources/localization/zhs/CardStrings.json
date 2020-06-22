@@ -50,7 +50,8 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽牌",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽 0 - !M! 张牌并 sneckomod:混淆 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽 0 - !M! 张牌并 sneckomod:混淆 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽 1 - !M! 张牌并 sneckomod:混淆 。"
   },
   "sneckomod:SoulRoll": {
     "NAME": "灵魂随机",
@@ -64,6 +65,7 @@
   "sneckomod:SnekBeam": {
     "NAME": "蛇线",
     "DESCRIPTION": "对所有敌人造成牌组中 sneckomod:未知 牌数量的伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成牌组中 sneckomod:未知 牌数量的伤害。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害。）"
     ]

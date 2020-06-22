@@ -34,7 +34,7 @@ public class KnowingSkull_Evil extends AbstractImageEvent {
             takeCost *= 2;
         }
 
-        this.imageEventText.setDialogOption(OPTIONS[0] + takeCost + OPTIONS[2]);
+        this.imageEventText.setDialogOption(OPTIONS[0] + takeCost + OPTIONS[2], new KnowingSkull());
         this.imageEventText.setDialogOption(OPTIONS[1]);
     }
 

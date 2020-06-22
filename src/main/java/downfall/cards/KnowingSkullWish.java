@@ -20,8 +20,8 @@ import java.util.ArrayList;
 public class KnowingSkullWish extends AbstractExpansionCard {
 
     public final static String ID = makeID("KnowingSkullWish");
-    public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
-    public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
+    public static final String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
 
     //stupid intellij stuff SKILL, SELF, RARE
 

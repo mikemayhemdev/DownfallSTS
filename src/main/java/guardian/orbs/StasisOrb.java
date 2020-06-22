@@ -82,6 +82,7 @@ public class StasisOrb extends AbstractOrb {
         }
         this.stasisCard.tags.add(GuardianMod.STASISGLOW);
         this.updateDescription();
+
     }
 
     @Override
