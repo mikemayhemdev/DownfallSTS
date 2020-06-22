@@ -57,7 +57,7 @@
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "无限随机",
     "DESCRIPTIONS": [
-      "你的回合开始时，将一张带有 #y消耗 的 #y灵魂随机 加入你的手牌消耗。"
+      "你的回合开始时，将一张带有 #y消耗 和 #y虚无 的 #y灵魂随机 加入你的手牌。"
     ]
   }
 }
