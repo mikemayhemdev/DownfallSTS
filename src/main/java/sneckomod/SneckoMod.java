@@ -64,6 +64,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.CURSE;
@@ -108,6 +109,8 @@ public class SneckoMod implements
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
+
+    private static ArrayList<AbstractCard> statuses = new ArrayList<>();
 
     public SneckoMod() {
         BaseMod.subscribe(this);
@@ -366,5 +369,17 @@ public class SneckoMod implements
                 //Only in Evil if content sharing is disabled
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
+
+        ArrayList<AbstractCard> tmp = CardLibrary.getAllCards();
+        for (AbstractCard c:tmp){
+            if (c.type == AbstractCard.CardType.STATUS){
+                statuses.add(c);
+            }
+        }
+    }
+
+    public static AbstractCard getRandomStatus(){
+        Collections.shuffle(statuses);
+        return statuses.get(0);
     }
 }
