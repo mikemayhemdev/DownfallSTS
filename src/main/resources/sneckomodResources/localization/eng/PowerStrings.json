@@ -59,5 +59,12 @@
     "DESCRIPTIONS": [
       "At the start of your turn, add a #ySoul #yRoll+ into your hand with #yEthereal and #yExhaust."
     ]
+  },
+  "sneckomod:Transmogrifying": {
+    "NAME": "Transmogrifying",
+    "DESCRIPTIONS": [
+      " is being transformed into another ",
+      " relic."
+    ]
   }
 }
