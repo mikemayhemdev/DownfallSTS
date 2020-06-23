@@ -115,8 +115,8 @@
   "Guardian:AutomayhemPower": {
     "NAME": "Time Sifter",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yAccelerate.",
-      "At the start of your turn, #yAccelerate ",
+      "At the end of your turn, #yAccelerate.",
+      "At the end of your turn, #yAccelerate ",
       " times."
     ]
   },

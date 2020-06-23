@@ -201,11 +201,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "NL Gain !B! Block. NL Place this card into guardianmod:Stasis."
+    "DESCRIPTION": "NL Gain !B! Block. NL Place this card into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis."
+    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",

@@ -47,7 +47,6 @@ public class StasisField extends AbstractGuardianCard {
 
         this.baseBlock = BLOCK;
 
-      //  this.exhaust = true;
         this.socketCount = SOCKETS;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
