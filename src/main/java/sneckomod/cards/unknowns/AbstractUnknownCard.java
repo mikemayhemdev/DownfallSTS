@@ -43,6 +43,13 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     }
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                replaceUnknown(myNeeds());
+                isDone = true;
+            }
+        });
     }
 
     @Override
@@ -61,7 +68,6 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public void replaceUnknown(Predicate<AbstractCard> funkyPredicate) {
         AbstractPlayer p = AbstractDungeon.player;
-        p.hand.removeCard(this);
         boolean validCard;
 
         ArrayList<String> tmp = new ArrayList<>();
@@ -88,6 +94,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {
+            p.hand.removeCard(this);
             p.drawPile.removeCard(this);
             cUnknown.cardsToPreview = this;
             AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
