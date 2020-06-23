@@ -16,57 +16,32 @@ public class CloneAction extends com.megacrit.cardcrawl.actions.AbstractGameActi
         TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
     }
 
-    private AbstractPlayer p;
-    private int dupeAmount = 1;
-    private ArrayList<AbstractCard> cannotDuplicate = new ArrayList();
+    private final AbstractPlayer p;
 
     public CloneAction(AbstractCreature source) {
         setValues(AbstractDungeon.player, source);
         this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.DRAW;
         this.duration = 0.25F;
         this.p = AbstractDungeon.player;
-        this.dupeAmount = 1;
     }
 
     public void update() {
-        int i;
         if (this.duration == com.megacrit.cardcrawl.core.Settings.ACTION_DUR_FAST) {
-            for (AbstractCard c : this.p.hand.group) {
-                if (!isDualWieldable(c)) {
-                    this.cannotDuplicate.add(c);
-                }
-            }
-
-
-            if (this.cannotDuplicate.size() == this.p.hand.group.size()) {
+            if (this.p.hand.group.size() == 0) {
                 this.isDone = true;
                 return;
             }
 
-            if (this.p.hand.group.size() - this.cannotDuplicate.size() == 1) {
-                for (AbstractCard c : this.p.hand.group) {
-                    if (isDualWieldable(c)) {
-                        AbstractDungeon.actionManager.addToTop(new PlaceActualCardIntoStasis(c
-                                .makeStatEquivalentCopy()));
-                        this.isDone = true;
-                        return;
-                    }
-                }
-            }
-
-            if (this.p.hand.group.size() > 1) {
-                AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, false);
-                tickDuration();
-                return;
-            }
             if (this.p.hand.group.size() == 1) {
-                AbstractDungeon.actionManager.addToTop(new PlaceActualCardIntoStasis(this.p.hand
-                        .getTopCard().makeStatEquivalentCopy()));
-                returnCards();
+                AbstractDungeon.actionManager.addToTop(new PlaceActualCardIntoStasis(this.p.hand.getBottomCard().makeStatEquivalentCopy()));
                 this.isDone = true;
+                return;
             }
-        }
 
+            AbstractDungeon.handCardSelectScreen.open(TEXT[0], 1, false, false, false, false);
+            tickDuration();
+            return;
+        }
 
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
@@ -88,10 +63,6 @@ public class CloneAction extends com.megacrit.cardcrawl.actions.AbstractGameActi
             this.p.hand.addToTop(c);
         }
         this.p.hand.refreshHandLayout();
-    }
-
-    private boolean isDualWieldable(AbstractCard card) {
-        return true;
     }
 }
 

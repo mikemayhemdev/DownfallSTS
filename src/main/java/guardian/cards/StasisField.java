@@ -47,8 +47,9 @@ public class StasisField extends AbstractGuardianCard {
 
         this.baseBlock = BLOCK;
 
-        this.exhaust = true;
+      //  this.exhaust = true;
         this.socketCount = SOCKETS;
+        this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();
     }
@@ -57,8 +58,6 @@ public class StasisField extends AbstractGuardianCard {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
 
-        AbstractCard c = this.makeStatEquivalentCopy();
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c, true, false));
         this.useGems(p, m);
 
     }

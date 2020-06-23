@@ -115,8 +115,9 @@
   "Guardian:AutomayhemPower": {
     "NAME": "Time Sifter",
     "DESCRIPTIONS": [
-      "At the end of your turn, reduce the turn counter of the right-most card in #yStasis with a counter of #b2 or more by #b1.",
-      " times, at the end of your turn, reduce the turn counter of the right-most card in #yStasis with a counter of #b2 or more by #b1."
+      "At the start of your turn, #yAccelerate.",
+      "At the start of your turn, #yAccelerate ",
+      " times."
     ]
   },
   "Guardian:ConstructPower": {

@@ -42,7 +42,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "Charge Up",
-    "DESCRIPTION": "Place this into guardianmod:Stasis. NL guardianmod:Tick - Gain !B! Block and !M! Strength. NL guardianmod:Volatile."
+    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Gain !B! Block and !M! Strength. NL guardianmod:Volatile."
   },
   "Guardian:DonusPower": {
     "NAME": "Ancient Attack",
@@ -124,12 +124,12 @@
   "Guardian:SentryBeam": {
     "NAME": "Sentry Beam",
     "DESCRIPTION": "Deal !D! damage. NL Place a Sentry Wave into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Place an Sentry Wave+ into guardianmod:Stasis. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Place a Sentry Wave+ into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:SentryWave": {
     "NAME": "Sentry Wave",
     "DESCRIPTION": "Apply !M! Weak. NL Draw a card. NL Place a Sentry Beam into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Draw a card. NL Place an Sentry Beam+ into guardianmod:Stasis. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Draw a card. NL Place a Sentry Beam+ into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
@@ -201,11 +201,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "NL Gain !B! Block. NL Place a copy of this into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "NL Gain !B! Block. NL Place this card into guardianmod:Stasis."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place a copy of this into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",
