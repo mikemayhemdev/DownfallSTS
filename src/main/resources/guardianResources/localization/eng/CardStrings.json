@@ -218,9 +218,8 @@
     "UPGRADE_DESCRIPTION": "Draw a card. NL Place a card in your hand into guardianmod:Stasis."
   },
   "Guardian:FastForward": {
-    "NAME": "Fast Forward",
-    "DESCRIPTION": "guardianmod:Accelerate three times.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Accelerate five times."
+    "NAME": "Speed Boost",
+    "DESCRIPTION": "guardianmod:Accelerate !M! times."
   },
   "Guardian:TimeCapacitor": {
     "NAME": "Time Capacitor",

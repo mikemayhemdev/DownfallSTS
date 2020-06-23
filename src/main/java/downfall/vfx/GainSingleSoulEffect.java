@@ -99,9 +99,9 @@ public class GainSingleSoulEffect extends AbstractGameEffect {
                 this.y = MathUtils.lerp(this.y, this.targetY, Gdx.graphics.getDeltaTime() * 4.0F);
                 if (Math.abs(this.x - this.targetX) < 20.0F) {
                     this.isDone = true;
-                    if (MathUtils.randomBoolean()) {
-                        CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
-                    }
+                   // if (MathUtils.randomBoolean()) {
+                   //     CardCrawlGame.sound.play("GOLD_GAIN", 0.1F);
+                    //}
 
                     if (!this.owner.isPlayer) {
                         this.owner.gainGold(1);

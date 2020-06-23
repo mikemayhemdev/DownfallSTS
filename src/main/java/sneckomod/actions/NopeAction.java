@@ -9,12 +9,22 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.monsters.city.Snecko;
 import slimebound.actions.MakeTempCardInHandActionReduceCost;
+import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class NopeAction extends AbstractGameAction {
     private AbstractPlayer p;
+    private static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(SneckoMod.makeID("Nope")).EXTENDED_DESCRIPTION;
 
     public NopeAction() {
         this.actionType = ActionType.CARD_MANIPULATION;// 22
@@ -26,7 +36,7 @@ public class NopeAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 30
 
             if (this.p.hand.group.size() > 1) {// 74
-                AbstractDungeon.handCardSelectScreen.open("to Exhaust for Nope.", 1, false, false);// 75
+                AbstractDungeon.handCardSelectScreen.open(EXTENDED_DESCRIPTION[0], 1, false, false);// 75
                 this.tickDuration();// 76
                 return;// 77
             }
@@ -44,7 +54,15 @@ public class NopeAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {// 87
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 p.hand.moveToExhaustPile(c);
-                AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
+                AbstractCard card = null;
+                if (c.type == AbstractCard.CardType.CURSE){
+                    card = AbstractDungeon.returnRandomCurse();
+                } else  if (c.type == AbstractCard.CardType.STATUS) {
+                    card = SneckoMod.getRandomStatus().makeCopy();
+                } else {
+                    card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
+                }
+
                 this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
 
             }
@@ -55,4 +73,5 @@ public class NopeAction extends AbstractGameAction {
         }
         this.tickDuration();// 101
     }// 102
+
 }

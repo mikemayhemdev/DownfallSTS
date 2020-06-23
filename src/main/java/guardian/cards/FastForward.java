@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.GuardianMod;
+import guardian.actions.ReduceRightMostStasisAction;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
@@ -45,6 +46,7 @@ public class FastForward extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -54,12 +56,9 @@ public class FastForward extends AbstractGuardianCard {
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
         AbstractDungeon.topLevelEffectsQueue.add(new com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect());
 
-        for (AbstractOrb o : p.orbs) {
-            if (o instanceof StasisOrb) {
-                o.onStartOfTurn();
-                if (upgraded && o.passiveAmount > 0) o.onStartOfTurn();
-                ((StasisOrb) o).stasisCard.superFlash(Color.GOLDENROD);
-            }
+        for (int i = 0; i < this.magicNumber; i++) {
+            AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction(false));
+
         }
 
     }
@@ -71,9 +70,7 @@ public class FastForward extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-
-            this.initializeDescription();
+            upgradeMagicNumber(2);
         }
     }
 

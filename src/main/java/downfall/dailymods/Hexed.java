@@ -20,6 +20,6 @@ public class Hexed extends AbstractDailyMod {
 
     public Hexed() {
         super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/heartofgoo.png");
+        this.img = ImageMaster.loadImage("downfallResources/images/dailies/hexed.png");
     }
 }

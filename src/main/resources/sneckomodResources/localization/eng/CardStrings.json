@@ -77,7 +77,10 @@
   "sneckomod:Nope": {
     "NAME": "Nope",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less.",
+    "EXTENDED_DESCRIPTION": [
+      " to Exhaust for Nope."
+    ]
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
@@ -197,7 +200,7 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
-    "DESCRIPTION": "Lose a random Relic. NL Obtain a random Relic at the same rarity. NL Exhaust."
+    "DESCRIPTION": "Lose a random Relic. NL Choose to gain it back, or obtain a random Relic at the same rarity at the end of combat. NL Exhaust."
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "Defensive Flair",

@@ -499,5 +499,13 @@
       "Whenever you #yAttack an enemy who has #yGoop, gain #b",
       " #yBlock."
     ]
+  },
+  "Slimebound:CommandOnPlayPower": {
+    "NAME": "Goop Armor",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, #yCommand.",
+      "Whenever you play a card this turn, #yCommand ",
+      " times."
+    ]
   }
 }
