@@ -3,6 +3,7 @@ package downfall.patches;
 import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.daily.DailyScreen;
 import com.megacrit.cardcrawl.daily.TimeHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.integrations.DistributorFactory;
 import com.megacrit.cardcrawl.screens.mainMenu.MenuCancelButton;
 import downfall.downfallMod;
@@ -42,9 +44,7 @@ public class DailyModeEvilPatch {
                 header_x += center_mod_offset_x;
                 char_x += center_mod_offset_x;
             }
-
         }
-
     }
 
     @SpirePatch(clz = DailyScreen.class, method = "update")
