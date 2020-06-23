@@ -115,8 +115,9 @@
   "Guardian:AutomayhemPower": {
     "NAME": "时间沙漏",
     "DESCRIPTIONS": [
-      "你的回合结束时， 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点。 ",
-      " 次, 你的回合结束时, 降低最右侧的凝滞计数器大于等于两点的牌降低 1 点"
+      "At the end of your turn, #yAccelerate.",
+      "At the end of your turn, #yAccelerate ",
+      " times."
     ]
   },
   "Guardian:ConstructPower": {
