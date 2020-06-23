@@ -17,11 +17,15 @@ import java.util.HashMap;
 )
 public class ModHelperPatch {
     public static void Postfix() {
-        HashMap<String, AbstractDailyMod> myMap = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "genericMods");
-        myMap.put(Hexed.ID, new Hexed());
-        myMap.put(Improvised.ID, new Improvised());
-        myMap.put(Jewelcrafting.ID, new Jewelcrafting());
-        myMap.put(WorldOfGoo.ID, new WorldOfGoo());
-        ReflectionHacks.setPrivateStatic(ModHelper.class, "genericMods", myMap);
+        HashMap<String, AbstractDailyMod> myMapS = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "starterMods");
+        HashMap<String, AbstractDailyMod> myMapG = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "genericMods");
+        HashMap<String, AbstractDailyMod> myMapD = (HashMap) ReflectionHacks.getPrivateStatic(ModHelper.class, "difficultyMods");
+        myMapD.put(Hexed.ID, new Hexed());
+        myMapS.put(Improvised.ID, new Improvised());
+        myMapG.put(Jewelcrafting.ID, new Jewelcrafting());
+        myMapD.put(WorldOfGoo.ID, new WorldOfGoo());
+        ReflectionHacks.setPrivateStatic(ModHelper.class, "starterMods", myMapS);
+        ReflectionHacks.setPrivateStatic(ModHelper.class, "genericMods", myMapG);
+        ReflectionHacks.setPrivateStatic(ModHelper.class, "difficultyMods", myMapD);
     }
 }
