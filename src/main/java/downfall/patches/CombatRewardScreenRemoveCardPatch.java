@@ -13,7 +13,7 @@ import downfall.rooms.HeartShopRoom;
 )
 public class CombatRewardScreenRemoveCardPatch {
     public static void Postfix(CombatRewardScreen __instance) {
-        if (AbstractDungeon.getCurrRoom() instanceof HeartShopRoom && (FleeingMerchant.helpEscaped || FleeingMerchant.DEAD)) {
+        if (AbstractDungeon.getCurrRoom() instanceof HeartShopRoom && (FleeingMerchant.helpEscaped || FleeingMerchant.helpDied)) {
             __instance.rewards.clear();
             FleeingMerchant.helpEscaped = false;
             FleeingMerchant.helpDied = false;
