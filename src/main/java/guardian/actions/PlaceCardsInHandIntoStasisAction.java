@@ -20,44 +20,42 @@ import java.util.Iterator;
 public class PlaceCardsInHandIntoStasisAction extends AbstractGameAction {
     public static final String[] TEXT;
 
+    private boolean anyNumber;
+
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
     }
 
-    public PlaceCardsInHandIntoStasisAction(AbstractCreature source, int amount) {
+    public PlaceCardsInHandIntoStasisAction(AbstractCreature source, int amount, boolean anyNumber) {
         this.setValues(AbstractDungeon.player, source, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
+
+        this.anyNumber = anyNumber;
     }
 
     public void update() {
         if (this.duration == 0.5F) {
-            AbstractDungeon.handCardSelectScreen.open(TEXT[3], this.amount, false, true, false, false, true);
+            if (AbstractDungeon.player.hand.isEmpty())
+            {
+                this.isDone = true;
+                return;
+            }
+
+            AbstractDungeon.handCardSelectScreen.open(TEXT[3], this.amount, false, true, false, false, anyNumber);
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.25F));
-            this.tickDuration();
         } else {
             if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
                 AbstractCard c;
-                for (Iterator var1 = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); var1.hasNext(); AbstractDungeon.player.hand.addToTop(c)) {
-                    c = (AbstractCard) var1.next();
-                    if (GuardianMod.canSpawnStasisOrb()) {
-
-                        c.retain = true;
-                        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
-                        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                    } else {
-
-                        if (!AbstractDungeon.player.hasEmptyOrb()) {
-                            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
-                            this.isDone = true;
-                        }
-                    }
-
+                for (Iterator<AbstractCard> iterator = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator(); iterator.hasNext(); AbstractDungeon.player.hand.addToTop(c)) {
+                    c = iterator.next();
+                    AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
+                    AbstractDungeon.actionManager.addToTop(new PlaceActualCardIntoStasis(c, AbstractDungeon.player.hand));
                 }
 
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             }
-
-            this.tickDuration();
         }
+
+        this.tickDuration();
     }
 }

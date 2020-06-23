@@ -49,6 +49,7 @@ public class StasisStrike extends AbstractGuardianCard {
 
         this.exhaust = true;
         this.socketCount = SOCKETS;
+        this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();
 
@@ -57,10 +58,8 @@ public class StasisStrike extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        AbstractCard c = this.makeStatEquivalentCopy();
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c, true, false));
-        this.useGems(p, m);
 
+        this.useGems(p, m);
     }
 
     public AbstractCard makeCopy() {

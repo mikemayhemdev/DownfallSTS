@@ -1,6 +1,8 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,11 +10,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
-public class ChargeUp extends AbstractGuardianCard {
+public class ChargeUp extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("ChargeUp");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -51,6 +55,7 @@ public class ChargeUp extends AbstractGuardianCard {
         this.baseMagicNumber = this.magicNumber = STRENGTH;
         this.tags.add(GuardianMod.TICK);
         this.tags.add(GuardianMod.VOLATILE);
+        this.tags.add(GuardianMod.SELFSTASIS);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -59,7 +64,6 @@ public class ChargeUp extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this, false, true));
 
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_GUARDIAN_DESTROY"));
 
@@ -93,6 +97,17 @@ public class ChargeUp extends AbstractGuardianCard {
         this.initializeDescription();
     }
 
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.magicNumber), this.magicNumber));
+
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+
+    }
 }
 
 

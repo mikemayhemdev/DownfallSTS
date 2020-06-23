@@ -34,7 +34,7 @@ public class DiscardPileToStasisAction extends AbstractGameAction {
         if (this.p.discardPile.size() == 1) {
             AbstractCard card = this.p.discardPile.group.get(0);
             card.lighten(false);
-            AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(card));
+            AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(card, AbstractDungeon.player.discardPile));
             this.isDone = true;
         } else if (this.duration == 0.5F) {
             AbstractDungeon.gridSelectScreen.open(this.p.discardPile, this.amount, false, TEXT[0]);
@@ -43,13 +43,13 @@ public class DiscardPileToStasisAction extends AbstractGameAction {
         } else {
             if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
                 GuardianMod.logger.info("DiscardPileToStasisAction: card highlighted");
-                Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
+                Iterator<AbstractCard> cardIterator = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
                 AbstractCard c;
-                while (var1.hasNext()) {
-                    c = (AbstractCard) var1.next();
+                while (cardIterator.hasNext()) {
+                    c = cardIterator.next();
                     if (GuardianMod.canSpawnStasisOrb()) {
-                        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
+                        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c, AbstractDungeon.player.discardPile));
                     } else {
                         if (!AbstractDungeon.player.hasEmptyOrb()) {
                             AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
@@ -62,8 +62,8 @@ public class DiscardPileToStasisAction extends AbstractGameAction {
 
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
-                for (var1 = this.p.discardPile.group.iterator(); var1.hasNext(); c.target_y = 0.0F) {
-                    c = (AbstractCard) var1.next();
+                for (cardIterator = this.p.discardPile.group.iterator(); cardIterator.hasNext(); c.target_y = 0.0F) {
+                    c = cardIterator.next();
                     c.unhover();
                     c.target_x = (float) CardGroup.DISCARD_PILE_X;
                 }

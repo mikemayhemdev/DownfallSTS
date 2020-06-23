@@ -14,48 +14,41 @@ import guardian.orbs.StasisOrb;
 
 
 public class PlaceTopCardIntoStasisAction extends AbstractGameAction {
-    private int numCards;
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
-    public PlaceTopCardIntoStasisAction(int numCards) {
+    public PlaceTopCardIntoStasisAction() {
         this.actionType = ActionType.DAMAGE;
-        this.numCards = numCards;
     }
 
     public void update() {
-        if (this.numCards == 0) {
-            this.isDone = true;
-        }
-
         if (AbstractDungeon.player.drawPile.isEmpty() && AbstractDungeon.player.discardPile.isEmpty()) {
             this.isDone = true;
-        } else {
-            if (AbstractDungeon.player.drawPile.isEmpty()) {
-                AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction(this.numCards));
+            return;
+        }
 
-            } else {
-                if (GuardianMod.canSpawnStasisOrb()) {
-                    if (!AbstractDungeon.player.hasEmptyOrb()) {
-                        GuardianMod.logger.info("passed has empty orb");
-                        for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                            if (!(o instanceof StasisOrb)) {
-                                GuardianMod.logger.info("found non-stasis orb");
-                                AbstractDungeon.player.orbs.remove(o);
-                                AbstractDungeon.player.orbs.add(0, o);
-                                AbstractDungeon.player.evokeOrb();
-                                break;
-                            }
+        if (AbstractDungeon.player.drawPile.isEmpty()) {
+            AbstractDungeon.actionManager.addToTop(new PlaceTopCardIntoStasisAction());
+            AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
+            AbstractDungeon.actionManager.addToTop(new EmptyDeckShuffleAction());
+            //Changed from addToBottom as currently that would result in multiple queued copies of this action (which Planning does) queueing many extra shuffles.
+        } else {
+            if (GuardianMod.canSpawnStasisOrb()) {
+                if (!AbstractDungeon.player.hasEmptyOrb()) {
+                    //GuardianMod.logger.info("passed has empty orb");
+                    for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                        if (!(o instanceof StasisOrb)) {
+                            //GuardianMod.logger.info("found non-stasis orb");
+                            AbstractDungeon.player.orbs.remove(o);
+                            AbstractDungeon.player.orbs.add(0, o);
+                            //AbstractDungeon.player.evokeOrb();
+                            break;
                         }
                     }
-                    AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(AbstractDungeon.player.drawPile.getTopCard(), false)));
-                    //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                } else {
-                    if (!AbstractDungeon.player.hasEmptyOrb()) {
-                        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
-                        this.isDone = true;
-                    }
+                }
+                AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(AbstractDungeon.player.drawPile.getTopCard(), AbstractDungeon.player.drawPile)));
+            } else {
+                if (!AbstractDungeon.player.hasEmptyOrb()) {
+                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
                 }
             }
         }

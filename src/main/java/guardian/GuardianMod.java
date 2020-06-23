@@ -124,6 +124,10 @@ public class GuardianMod implements PostDrawSubscriber,
     @SpireEnum
     public static AbstractCard.CardTags GEM;
     @SpireEnum
+    public static AbstractCard.CardTags SELFSTASIS;
+    @SpireEnum
+    public static AbstractCard.CardTags SELFSTASISONCE;
+    @SpireEnum
     public static AbstractCard.CardTags STASISGLOW;
     @SpireEnum
     public static AbstractCard.CardTags MULTIHIT;
@@ -378,27 +382,17 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static boolean canSpawnStasisOrb() {
-        boolean result = false;
+        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0)) return true;
 
-        result = AbstractDungeon.player.hasEmptyOrb();
-        if (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0) result = true;
-
-        if (!result) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                if (!(o instanceof StasisOrb)) {
-                    result = true;
-                }
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (!(o instanceof StasisOrb)) {
+                return true;
             }
         }
+        UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
+        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
 
-
-        if (!result) {
-            UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
-
-        }
-        return result;
-
+        return false;
     }
 
     //TODO - Part of shared relics

@@ -1,6 +1,8 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,9 +11,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
-public class ShieldCharger extends AbstractGuardianCard {
+public class ShieldCharger extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("ShieldCharger");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -47,6 +50,7 @@ public class ShieldCharger extends AbstractGuardianCard {
         this.baseBlock = BLOCK;
         this.tags.add(GuardianMod.TICK);
         this.tags.add(GuardianMod.VOLATILE);
+        this.tags.add(GuardianMod.SELFSTASIS);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -55,9 +59,6 @@ public class ShieldCharger extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this, false, true));
-
     }
 
     public AbstractCard makeCopy() {
@@ -83,6 +84,16 @@ public class ShieldCharger extends AbstractGuardianCard {
         this.initializeDescription();
     }
 
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+
+    }
 }
 
 
