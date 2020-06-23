@@ -2,6 +2,7 @@ package guardian.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,6 +32,7 @@ public class StasisCodexAction extends AbstractGameAction {
 
                     if (GuardianMod.canSpawnStasisOrb()) {
                         AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(codexCard)));
+                        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                     } else {
                         AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));
                     }

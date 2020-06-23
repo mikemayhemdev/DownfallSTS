@@ -35,10 +35,6 @@ public class SoulSteal extends AbstractHexaCard {
 
     }
 
-    public void triggerOnGlowCheck() {
-        burnGlowCheck();
-    }// 68
-
     public void upgrade() {
         if (!upgraded) {
             exhaust = false;

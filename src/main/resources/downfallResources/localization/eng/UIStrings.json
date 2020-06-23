@@ -95,5 +95,12 @@
     "TEXT": [
       "Add a Rare Card to your deck"
     ]
+  },
+  "downfall:OctoChoiceAction": {
+    "TEXT": [
+      "Choose a Wish to use.",
+      "You should never see this.",
+      "Choose a Slime."
+    ]
   }
 }

@@ -24,7 +24,7 @@ public class QuickMove extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new MuddleRandomCardAction(magicNumber));
+        atb(new MuddleRandomCardAction(magicNumber, true));
     }
 
     public void upgrade() {

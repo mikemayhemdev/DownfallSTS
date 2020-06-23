@@ -48,10 +48,11 @@ public class PlaceRandomCardIntoStasisAction extends AbstractGameAction {
                             }
                         }
                     }
-
+                    
                     if (this.numCards - 1 > 0)
                         AbstractDungeon.actionManager.addToTop(new PlaceRandomCardIntoStasisAction(this.numCards - 1));
 
+                    AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
                     AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(AbstractDungeon.player.drawPile.getRandomCard(true), AbstractDungeon.player.drawPile)));
                 } else {
                     if (!AbstractDungeon.player.hasEmptyOrb()) {

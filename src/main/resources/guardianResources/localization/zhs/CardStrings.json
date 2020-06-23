@@ -201,11 +201,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
-    "DESCRIPTION": " 虚无 。 NL 获得 !B! 点 格挡 。 NL 将这张牌 guardianmod:凝滞 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌的复制 guardianmod:凝滞 。 NL 消耗 。"
   },
   "Guardian:StasisStrike": {
     "NAME": "凝滞打击",
-    "DESCRIPTION": " 虚无 。 NL 造成 !D! 点伤害。 NL 将这张牌 guardianmod:凝滞 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌的复制 guardianmod:凝滞 。 NL 消耗 。"
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
@@ -427,5 +427,10 @@
     "Guardian:Aged": {
     "NAME": "岁月",
     "DESCRIPTION": "不能被打出 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
+  },
+  "Guardian:GemstoneGunCard": {
+    "NAME": "宝石枪",
+    "DESCRIPTION": "保留 。",
+    "UPGRADE_DESCRIPTION": "NL 消耗 。"
   }
 }

@@ -21,14 +21,14 @@ public class StasisStrike extends AbstractGuardianCard {
     public static final String IMG_PATH = "cards/stasisStrike.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 9;
     private static final int UPGRADE_BONUS = 2;
-    private static final int SOCKETS = 1;
+    private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -47,7 +47,7 @@ public class StasisStrike extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
         this.tags.add(AbstractCard.CardTags.STRIKE);
 
-        this.isEthereal = true;
+        this.exhaust = true;
         this.socketCount = SOCKETS;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
@@ -60,7 +60,6 @@ public class StasisStrike extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
         this.useGems(p, m);
-
     }
 
     public AbstractCard makeCopy() {
@@ -71,6 +70,11 @@ public class StasisStrike extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            if (this.socketCount < 4) {
+                this.socketCount++;
+                this.saveGemMisc();
+            }
+            this.updateDescription();
         }
     }
 

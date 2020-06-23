@@ -19,7 +19,7 @@ public class Jewelcrafting extends AbstractDailyMod {
     }
 
     public Jewelcrafting() {
-        super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/heartofgoo.png");
+        super(ID, NAME, DESC, null, true);
+        this.img = ImageMaster.loadImage("downfallResources/images/dailies/gems.png");
     }
 }

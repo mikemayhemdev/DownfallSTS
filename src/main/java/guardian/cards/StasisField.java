@@ -19,14 +19,14 @@ public class StasisField extends AbstractGuardianCard {
     public static final String IMG_PATH = "cards/stasisField.png";
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.SKILL;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 8;
     private static final int UPGRADE_BONUS = 2;
-    private static final int SOCKETS = 1;
+    private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -47,7 +47,7 @@ public class StasisField extends AbstractGuardianCard {
 
         this.baseBlock = BLOCK;
 
-        this.isEthereal = true;
+        this.exhaust = true;
         this.socketCount = SOCKETS;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
@@ -70,6 +70,11 @@ public class StasisField extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BONUS);
+            if (this.socketCount < 4) {
+                this.socketCount++;
+                this.saveGemMisc();
+            }
+            this.updateDescription();
         }
     }
 

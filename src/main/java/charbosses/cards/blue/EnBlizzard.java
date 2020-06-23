@@ -32,7 +32,6 @@ public class EnBlizzard extends AbstractBossCard {
         this.baseDamage = 0;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

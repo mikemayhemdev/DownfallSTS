@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -18,8 +19,8 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
 
     public static final String POWER_ID = "Slimebound:CommandOnPlayPower";
 
-    private static final Texture tex84 = TextureLoader.getTexture(SlimeboundMod.getModID() + "Resources/images/powers/Rally84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(SlimeboundMod.getModID() + "Resources/images/powers/Rally32.png");
+    private static final Texture tex84 = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/powers/Rally84.png");
+    private static final Texture tex32 = TextureLoader.getTexture("slimeboundResources/SlimeboundImages/powers/Rally32.png");
 
     public CommandOnPlayPower(final int amount) {
         this.name = "Rallying";
@@ -28,6 +29,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
         this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -54,9 +56,10 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
     @Override
     public void updateDescription() {
         if (amount == 1)
-            description = "Whenever you play a card this turn, #yCommand.";
+            this.description = DESCRIPTIONS[0];
         else
-            description = "Whenever you play a card this turn, #yCommand #b" + amount + " times.";
+        this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+
     }
 
     @Override

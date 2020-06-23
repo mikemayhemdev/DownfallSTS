@@ -382,20 +382,17 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static boolean canSpawnStasisOrb() {
-        if (!AbstractDungeon.player.hasEmptyOrb()) {
-            for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                if (!(o instanceof StasisOrb)) {
-                    return true;
-                }
+        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0)) return true;
+
+        for (AbstractOrb o : AbstractDungeon.player.orbs) {
+            if (!(o instanceof StasisOrb)) {
+                return true;
             }
-            UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
-            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
-
-            return false;
         }
+        UIStrings UI_STRINGS = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions");
+        AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 2.0F, UI_STRINGS.TEXT[5], true));
 
-        return true;
-
+        return false;
     }
 
     //TODO - Part of shared relics
@@ -531,10 +528,10 @@ public static void saveData() {
         UnlockTracker.addRelic(StasisCodex.ID);
 
         unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                GemstoneGun.ID, PocketSentry.ID, BottledAnomaly.ID
+                GemstoneGunCard.ID, PocketSentry.ID, BottledAnomaly.ID
         );
 
-        UnlockTracker.addRelic(GemstoneGun.ID);
+        UnlockTracker.addRelic(GemstoneGunCard.ID);
         UnlockTracker.addRelic(PocketSentry.ID);
         UnlockTracker.addRelic(BottledAnomaly.ID);
 
@@ -1010,16 +1007,6 @@ public static void saveData() {
 
     }
 
-    public void refreshPotions() {
-        /*
-        BaseMod.removePotion(AcceleratePotion.POTION_ID);
-        BaseMod.removePotion(SlimedPotion.POTION_ID);
-        BaseMod.removePotion(SpawnSlimePotion.POTION_ID);
-        BaseMod.removePotion(SlimyTonguePotion.POTION_ID);
-
-        addPotions();
-        */
-    }
 
     public void addPotions() {
 

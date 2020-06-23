@@ -5,6 +5,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -125,6 +126,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.uuid == card.uuid) {
                 AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(c, AbstractDungeon.player.drawPile)));
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                 break;
             }
         }

@@ -35,7 +35,7 @@ public class StasisDiscoveryPotion extends CustomPotion {
         this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1] + this.potency + DESCRIPTIONS[2]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("stasis")), GameDictionary.keywords.get("stasis")));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("guardianmod:stasis")), GameDictionary.keywords.get("guardianmod:stasis")));
 
     }
 

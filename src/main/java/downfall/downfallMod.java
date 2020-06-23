@@ -11,6 +11,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
+import basemod.Pair;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -47,6 +48,7 @@ import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -97,8 +99,8 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 @SpireInitializer
 public class downfallMod implements
         OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber
-        //, AddAudioSubscriber
-        {
+        , AddAudioSubscriber
+{
     public static final String modID = "downfall";
 
 
@@ -499,9 +501,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(FaceTrader_Evil.ID, FaceTrader_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("Exordium")))
                 //Event ID to Override//
                 .overrideEvent(FaceTrader.ID)
+
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -528,7 +531,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Designer_Evil.ID, Designer_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond")))
                 //Event ID to Override//
                 .overrideEvent(Designer.ID)
                 //Event Type//
@@ -636,8 +639,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(KnowingSkull_Evil.ID, KnowingSkull_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
                 //Event ID to Override//
+                //Additional Condition//
+                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12))
                 .overrideEvent(com.megacrit.cardcrawl.events.city.KnowingSkull.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -708,9 +713,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Nloth_Evil.ID, Nloth_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
                 //Event ID to Override//
                 .overrideEvent(Nloth.ID)
+
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -755,7 +761,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Joust_Evil.ID, Joust_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
                 //Event ID to Override//
                 .overrideEvent(TheJoust.ID)
                 //Event Type//
@@ -919,7 +925,7 @@ public class downfallMod implements
 
     public void receiveCustomModeMods(List<CustomMod> l) {
         l.add(new CustomMod(WorldOfGoo.ID, "r", true));
-        l.add(new CustomMod(Hexed.ID, "b", true));
+        l.add(new CustomMod(Hexed.ID, "r", true));
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
@@ -927,7 +933,7 @@ public class downfallMod implements
 
     @Override
     public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo) {
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID)) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID))  || ModHelper.isModEnabled(WorldOfGoo.ID)) {
             SlimeboundMod.logger.info("World of goo triggered");
             if (damageInfo.output > AbstractDungeon.player.currentBlock) {
 
@@ -940,21 +946,17 @@ public class downfallMod implements
 
     @Override
     public void receivePostDungeonInitialize() {
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID)) {
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
             RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
         }
 
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
         }
 
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID)) {
-            ArrayList<String> cards = AbstractDungeon.player.getStartingDeck();
-            for (String s : cards) {
-                AbstractDungeon.player.masterDeck.removeCard(s);
-            }
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID)) {
 
             AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
             AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
@@ -979,7 +981,7 @@ public class downfallMod implements
 
     @Override
     public void receivePostDraw(AbstractCard abstractCard) {
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             if (!abstractCard.isEthereal) {
                 CardModifierManager.addModifier(abstractCard, new EtherealMod());
             }
@@ -1005,14 +1007,17 @@ public class downfallMod implements
         return i;
     }
 
-    /*
     @Override
     public void receiveAddAudio() {
-        addAudio(new Pair<>("soulVFX", "downfallResources/music/test.ogg"));
+        addAudio(new Pair<>("souls1", "downfallResources/music/souls_rr1.ogg"));
+        addAudio(new Pair<>("souls2", "downfallResources/music/souls_rr2.ogg"));
+        addAudio(new Pair<>("souls3", "downfallResources/music/souls_rr3.ogg"));
+        addAudio(new Pair<>("souls4", "downfallResources/music/souls_rr4.ogg"));
+        addAudio(new Pair<>("souls5", "downfallResources/music/souls_rr5.ogg"));
+        addAudio(new Pair<>("soulsMain", "downfallResources/music/souls.ogg"));
     }
 
     private void addAudio(Pair<String, String> audioData) {
         BaseMod.addAudio(audioData.getKey(), audioData.getValue());
     }
-    */
 }

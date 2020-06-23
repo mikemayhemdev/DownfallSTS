@@ -59,7 +59,6 @@ public class ShieldCharger extends AbstractGuardianCard implements InStasisCard 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
     }
 
     public AbstractCard makeCopy() {

@@ -2,6 +2,7 @@ package guardian.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,6 +25,7 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
     public PlaceActualCardIntoStasis(AbstractCard card) {
         this(card, null);
     }
+  
     public PlaceActualCardIntoStasis(AbstractCard card, CardGroup source) {
         this.card = card;
         this.source = source;
@@ -50,13 +52,12 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
                     }
                 }
             }
-
+            AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
             AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, source)));
         } else {
             card.retain = hadRetain;
             if (!AbstractDungeon.player.hasEmptyOrb()) {
                 AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
-                this.isDone = true;
             }
         }
 

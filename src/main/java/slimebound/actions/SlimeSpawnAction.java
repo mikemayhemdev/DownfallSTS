@@ -4,7 +4,6 @@ import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPF
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -63,7 +62,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
     public void update() {
         //SlimeboundMod.logger.info("Starting slime spawn action");
 
-        if (AbstractDungeon.player.maxOrbs > 0) {
+        if (AbstractDungeon.player.maxOrbs > 0 || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0)) {
 
             int currentHealth = AbstractDungeon.player.currentHealth;
 

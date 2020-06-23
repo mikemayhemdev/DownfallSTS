@@ -11,6 +11,15 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.monsters.city.Snecko;
+import slimebound.actions.MakeTempCardInHandActionReduceCost;
+import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class NopeAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -34,17 +43,8 @@ public class NopeAction extends AbstractGameAction {
                 AbstractCard c = p.hand.getTopCard();
                 p.hand.moveToExhaustPile(c);
                 AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
-                if (card.cost >= 0) {// 32
-                    int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
-                    if (card.cost != newCost) {// 34
-                        card.cost = newCost;// 35
-                        card.costForTurn = card.cost;// 36
-                        card.isCostModified = true;// 37
-                    }
+                this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
 
-                    card.freeToPlayOnce = false;// 39
-                }
-                this.addToBot(new MakeTempCardInHandAction(card, true));// 34
                 this.isDone = true;// 82
             }
         }
@@ -52,18 +52,17 @@ public class NopeAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {// 87
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 p.hand.moveToExhaustPile(c);
-                AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
-                if (card.cost >= 0) {// 32
-                    int newCost = AbstractDungeon.cardRandomRng.random(3);// 33
-                    if (card.cost != newCost) {// 34
-                        card.cost = newCost;// 35
-                        card.costForTurn = card.cost;// 36
-                        card.isCostModified = true;// 37
-                    }
-
-                    card.freeToPlayOnce = false;// 39
+                AbstractCard card = null;
+                if (c.type == AbstractCard.CardType.CURSE){
+                    card = AbstractDungeon.returnRandomCurse();
+                } else  if (c.type == AbstractCard.CardType.STATUS) {
+                    card = SneckoMod.getRandomStatus().makeCopy();
+                } else {
+                    card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
                 }
-                this.addToBot(new MakeTempCardInHandAction(card, true));// 34
+
+                this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
+
             }
 
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;// 96
@@ -72,4 +71,5 @@ public class NopeAction extends AbstractGameAction {
         }
         this.tickDuration();// 101
     }// 102
+
 }

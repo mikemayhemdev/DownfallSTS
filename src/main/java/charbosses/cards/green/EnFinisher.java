@@ -1,5 +1,6 @@
 package charbosses.cards.green;
 
+import charbosses.actions.unique.EnemyDamagePerAttackPlayedAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
@@ -27,12 +28,45 @@ public class EnFinisher extends AbstractBossCard {
     public EnFinisher() {
         super(ID, EnFinisher.cardStrings.NAME, "green/attack/finisher", 1, EnFinisher.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
+        this.isMultiDamage = false;
+        this.magicNumber = 0;
     }
 
+    @Override
+    public void multiDamageCardCalculate() {
+        super.multiDamageCardCalculate();
+        if(AbstractCharBoss.boss != null){
+            for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                if(c instanceof EnCloakAndDagger){
+                    if(c.upgraded){
+                        this.magicNumber += 2;
+                    }else {this.magicNumber ++;}
+                }
+
+                if(c instanceof EnBladeDance){
+                    if(c.upgraded){
+                        this.magicNumber += 3;
+                    }else {this.magicNumber += 2;}
+                }
+
+                if(c.type == CardType.ATTACK &&!(c instanceof EnFinisher))
+                    this.magicNumber ++;
+            }
+
+            if(this.magicNumber >= 0 && this.magicNumber != 1)this.isMultiDamage = true;
+        }
+    }
+
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        this.magicNumber = 0;
+        this.isMultiDamage = false;
+    }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamagePerAttackPlayedAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        this.addToBot(new EnemyDamagePerAttackPlayedAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         this.rawDescription = EnFinisher.cardStrings.DESCRIPTION;
         this.initializeDescription();
     }
@@ -46,10 +80,13 @@ public class EnFinisher extends AbstractBossCard {
         }
         this.rawDescription = EnFinisher.cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + EnFinisher.cardStrings.EXTENDED_DESCRIPTION[0] + count;
-        if (count == 1) {
+
+         if (count == 1) {
             this.rawDescription += EnFinisher.cardStrings.EXTENDED_DESCRIPTION[1];
+
         } else {
             this.rawDescription += EnFinisher.cardStrings.EXTENDED_DESCRIPTION[2];
+
         }
         this.initializeDescription();
     }

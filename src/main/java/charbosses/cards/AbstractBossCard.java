@@ -631,9 +631,14 @@ public abstract class AbstractBossCard extends AbstractCard {
         }
     }
 
+
+    public void multiDamageCardCalculate(){
+    }
+
     public void createIntent() {
         if (this.intent == null) return;
-
+        if(AbstractCharBoss.isTurnStart)
+        multiDamageCardCalculate();
         //bossLighten();
         refreshIntentHbLocation();
         this.intentParticleTimer = 0.5F;

@@ -14,6 +14,10 @@ import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
+import charbosses.cards.colorless.EnShiv;
+import charbosses.cards.green.EnBladeDance;
+import charbosses.cards.green.EnCloakAndDagger;
+import charbosses.cards.green.EnFinisher;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
@@ -92,6 +96,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public int damagedThisCombat;
     public int cardsPlayedThisTurn;
     public int attacksPlayedThisTurn;
+    public static boolean isTurnStart = true;
 
     public AbstractPlayer.PlayerClass chosenClass;
     public AbstractBossDeckArchetype chosenArchetype = null;
@@ -208,6 +213,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         attacksDrawnForAttackPhase = 0;
         setupsDrawnForSetupPhase = 0;
         this.startTurn();
+        isTurnStart = false;
         this.makePlay();
         this.onSetupTurn = !this.onSetupTurn;
     }
@@ -293,6 +299,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         //SlimeboundMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
+        this.isTurnStart = true;
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
@@ -307,8 +314,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.applyStartOfTurnPostDrawRelics();
             this.applyStartOfTurnPostDrawPowers();
             AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
+            this.cardsPlayedThisTurn = 0;
+            this.attacksPlayedThisTurn = 0;
+            isTurnStart = true;
         }
     }
+
 
     public void applyPowers() {
         super.applyPowers();
@@ -687,8 +698,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();
 
-            if(MathUtils.random(1) == 0)
-            this.onPlayAttackCardSound();
+            if(c.damage > MathUtils.random(20)){
+                this.onPlayAttackCardSound();
+            }
         }
         this.cardsPlayedThisTurn++;
         c.calculateCardDamage(monster);

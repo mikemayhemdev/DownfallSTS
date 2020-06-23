@@ -23,6 +23,7 @@ import downfall.actions.ForceWaitAction;
 import downfall.actions.LoseGoldAction;
 import downfall.actions.MerchantThrowGoldAction;
 import downfall.powers.SoulStealPower;
+import downfall.rooms.HeartShopRoom;
 import downfall.vfx.GainSingleSoulEffect;
 import downfall.vfx.SoulStealEffect;
 
@@ -245,6 +246,8 @@ public class FleeingMerchant extends AbstractMonster {
             increaseGold += FleeingMerchant.CURRENT_SOULS;
 
         AbstractDungeon.player.gainGold(increaseGold);
+        CardCrawlGame.sound.playA("GOLD_JINGLE", -0.1F);
+        CardCrawlGame.sound.playA("GOLD_JINGLE", .1F);
         for (int i = 0; i < increaseGold; i++) {
             AbstractDungeon.effectList.add(new GainSingleSoulEffect(this, this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
         }
@@ -271,6 +274,22 @@ public class FleeingMerchant extends AbstractMonster {
             AbstractDungeon.overlayMenu.hideCombatPanels();// 51
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.combatRewardScreen.open();
+        }
+    }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+        //AbstractDungeon.combatRewardScreen.open();
+        if (DEAD) {
+            AbstractRoom tRoom = new HeartShopRoom(false);
+            AbstractDungeon.currMapNode.setRoom(tRoom);
+            AbstractDungeon.scene.nextRoom(tRoom);
+            CardCrawlGame.fadeIn(1.5F);
+            AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
+            tRoom.onPlayerEntry();
+            AbstractDungeon.closeCurrentScreen();
         }
     }
 }

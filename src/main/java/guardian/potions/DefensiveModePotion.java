@@ -35,7 +35,7 @@ public class DefensiveModePotion extends CustomPotion {
         this.description = (DESCRIPTIONS[0] + this.potency * 5 + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("defensive mode")), GameDictionary.keywords.get("defensive mode")));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("guardianmod:defensive mode")), GameDictionary.keywords.get("guardianmod:defensive mode")));
 
     }
 

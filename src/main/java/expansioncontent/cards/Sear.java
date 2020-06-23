@@ -17,7 +17,7 @@ public class Sear extends AbstractExpansionCard {
 
     private static final int DAMAGE = 12;
     private static final int UPGRADE_DAMAGE = 2;
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 12;
     private static final int UPGRADE_MAGIC = 2;
 
     public Sear() {

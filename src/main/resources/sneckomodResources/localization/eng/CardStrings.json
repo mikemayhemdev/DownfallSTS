@@ -9,8 +9,8 @@
   },
   "sneckomod:SnekBite": {
     "NAME": "Snek Bite",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle !M! random cards in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
@@ -50,7 +50,8 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "Soul Draw",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards. NL Muddle them."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 0 - !M! cards.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 - !M! cards."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Soul Roll",
@@ -63,7 +64,8 @@
   },
   "sneckomod:SnekBeam": {
     "NAME": "Snek Beam",
-    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
+    "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
@@ -74,8 +76,8 @@
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type with a randomized cost. NL Draw 1 card."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less."
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
@@ -128,8 +130,8 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with sneckomod:Muddled random cards of the Exhausted card's class."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class."
   },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",
@@ -138,8 +140,8 @@
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Unlimited Rolls",
-    "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand with Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a *Soul *Roll+ to your hand with Exhaust."
+    "DESCRIPTION": "At the start of your turn, add a *Soul *Roll to your hand. It gains Ethereal and Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add a *Soul *Roll to your hand. It gains Ethereal and Exhaust."
   },
   "sneckomod:MasterEye": {
     "NAME": "Master Eye",
@@ -156,16 +158,16 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "Quick Move",
-    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle !M! random cards in your hand."
+    "DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the highest-cost card in your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL sneckomod:Muddle the !M! highest-cost cards in your hand."
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards and sneckomod:Muddle them."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! - 2 cards. NL sneckomod:Muddle the highest-cost card in your hand."
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M! and sneckomod:Muddle them."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard all sneckomod:Offclass cards. NL Draw that many cards plus !M!."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotic Form",
@@ -173,12 +175,12 @@
   },
   "sneckomod:SlitherStrike": {
     "NAME": "Slither Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of sneckomod:Offclass cards in your hand by 1 this turn."
   },
   "sneckomod:PureSnecko": {
-    "NAME": "Pure Snecko",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with cards of your class that cost 1 less.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card. NL  Exhaust all sneckomod:Offclass cards in your hand, replacing them with cards of your class that cost 1 less."
+    "NAME": "Shift",
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust all sneckomod:Offclass cards in your hand, replacing them with new ones that cost 1 less."
   },
   "sneckomod:Cheat": {
     "NAME": "Cheat",
@@ -191,11 +193,11 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Set your gold to !M! % - 120 % of its current amount. NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Set your *Gold to !M! % - 120 % of its current amount. NL Exhaust."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
-    "DESCRIPTION": "Lose a random Relic. NL Obtain a random Relic at the same rarity. NL Exhaust."
+    "DESCRIPTION": "Lose a random Relic. NL Choose to gain it back, or obtain a random Relic at the same rarity at the end of combat. NL Exhaust."
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "Defensive Flair",
@@ -211,7 +213,8 @@
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Trash to Treasure",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Gain [E] equal to its cost."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card. NL Gain [E] equal to its cost."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Dice Block",
