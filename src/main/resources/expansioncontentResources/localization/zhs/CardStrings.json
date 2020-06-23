@@ -46,7 +46,7 @@
   },
   "expansioncontent:LastStand": {
     "NAME": "最后一战",
-    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 并回复 !M! 点生命。"
+    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 。"
   },
   "expansioncontent:Collect": {
     "NAME": "收藏家",
