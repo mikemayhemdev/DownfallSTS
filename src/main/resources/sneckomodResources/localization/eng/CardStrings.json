@@ -77,7 +77,10 @@
   "sneckomod:Nope": {
     "NAME": "Nope",
     "DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Exhaust a card in your hand. NL Replace it with a random card of the same type that costs 1 less.",
+    "EXTENDED_DESCRIPTION": [
+      " to Exhaust for Nope."
+    ]
   },
   "sneckomod:UnknownClass": {
     "NAME": "???",
