@@ -20,6 +20,6 @@ public class WorldOfGoo extends AbstractDailyMod {
 
     public WorldOfGoo() {
         super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/heartofgoo.png");
+        this.img = ImageMaster.loadImage("downfallResources/images/dailies/slime.png");
     }
 }

@@ -12,8 +12,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.monsters.city.Snecko;
 import slimebound.actions.MakeTempCardInHandActionReduceCost;
 import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class NopeAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -47,7 +54,15 @@ public class NopeAction extends AbstractGameAction {
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {// 87
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
                 p.hand.moveToExhaustPile(c);
-                AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
+                AbstractCard card = null;
+                if (c.type == AbstractCard.CardType.CURSE){
+                    card = AbstractDungeon.returnRandomCurse();
+                } else  if (c.type == AbstractCard.CardType.STATUS) {
+                    card = SneckoMod.getRandomStatus().makeCopy();
+                } else {
+                    card = AbstractDungeon.returnTrulyRandomCardInCombat(c.type);
+                }
+
                 this.addToBot(new MakeTempCardInHandActionReduceCost(card));// 34
 
             }
@@ -58,4 +73,5 @@ public class NopeAction extends AbstractGameAction {
         }
         this.tickDuration();// 101
     }// 102
+
 }

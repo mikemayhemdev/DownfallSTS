@@ -19,7 +19,7 @@ public class Improvised extends AbstractDailyMod {
     }
 
     public Improvised() {
-        super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/relics/heartofgoo.png");
+        super(ID, NAME, DESC, null, true);
+        this.img = ImageMaster.loadImage("downfallResources/images/dailies/unknown.png");
     }
 }

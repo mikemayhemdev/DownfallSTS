@@ -276,7 +276,9 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         if (AbstractDungeon.player.maxOrbs > 0) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                return o;
+                if (o instanceof SpawnedSlime){
+                    oldestOrb = o;
+                }
             }
         }
         return oldestOrb;

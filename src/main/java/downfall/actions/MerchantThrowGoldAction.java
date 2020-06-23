@@ -24,7 +24,7 @@ public class MerchantThrowGoldAction extends AbstractGameAction
     public void update()
     {
         if (effect == null) {
-            CardCrawlGame.sound.play("GOLD_JINGLE");
+            //CardCrawlGame.sound.play("GOLD_JINGLE");
             float stagger = 0;
             for (int i=0; i<goldAmount; ++i) {
                 effect = new ThrowGoldEffect(source, source.hb.cX, source.hb.cY, target.hb.cX, target.hb.cY, stagger);
