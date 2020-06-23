@@ -47,7 +47,7 @@ public class StasisStrike extends AbstractGuardianCard {
         this.baseDamage = DAMAGE;
         this.tags.add(AbstractCard.CardTags.STRIKE);
 
-        this.exhaust = true;
+       // this.exhaust = true;
         this.socketCount = SOCKETS;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
