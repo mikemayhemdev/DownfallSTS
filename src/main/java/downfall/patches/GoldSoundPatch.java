@@ -12,7 +12,7 @@ public class GoldSoundPatch {
     @SpirePatch(clz = SoundMaster.class, method = "playV", paramtypez = {String.class, float.class})
     public static class GoldSoundPatchV {
         public static SpireReturn Prefix(SoundMaster __instance, String key, float volumemod) {
-            String s = findReplacement(key, true);
+            String s = findReplacement(key);
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
@@ -26,7 +26,7 @@ public class GoldSoundPatch {
     @SpirePatch(clz = SoundMaster.class, method = "playA", paramtypez = {String.class, float.class})
     public static class GoldSoundPatchA {
         public static SpireReturn Prefix(SoundMaster __instance, String key, float pitchAdjust) {
-            String s = findReplacement(key, true);
+            String s = findReplacement(key);
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
@@ -40,7 +40,7 @@ public class GoldSoundPatch {
     @SpirePatch(clz = SoundMaster.class, method = "play", paramtypez = {String.class})
     public static class GoldSoundPatchNormal {
         public static SpireReturn Prefix(SoundMaster __instance, String key) {
-            String s = findReplacement(key, true);
+            String s = findReplacement(key);
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
@@ -55,7 +55,7 @@ public class GoldSoundPatch {
     @SpirePatch(clz = SoundMaster.class, method = "play", paramtypez = {String.class, boolean.class})
     public static class GoldSoundPatchNormal2 {
         public static SpireReturn Prefix(SoundMaster __instance, String key, boolean useBgmVolume) {
-            String s = findReplacement(key, true);
+            String s = findReplacement(key);
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
@@ -70,7 +70,7 @@ public class GoldSoundPatch {
     @SpirePatch(clz = SoundMaster.class, method = "play", paramtypez = {String.class, float.class})
     public static class GoldSoundPatchNormal3 {
         public static SpireReturn Prefix(SoundMaster __instance, String key, float pitchVariation) {
-            String s = findReplacement(key, true);
+            String s = findReplacement(key);
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
@@ -85,7 +85,7 @@ public class GoldSoundPatch {
     @SpirePatch(clz = SoundMaster.class, method = "playAV", paramtypez = {String.class, float.class, float.class})
     public static class GoldSoundPatchAV {
         public static SpireReturn Prefix(SoundMaster __instance, String key, float pitchAdjust, float volumeMod) {
-            String s = findReplacement(key, true);
+            String s = findReplacement(key);
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
@@ -100,12 +100,10 @@ public class GoldSoundPatch {
         return 100;
     }
 
-    public static String findReplacement(String key, boolean check) {
+    public static String findReplacement(String key) {
         if (!EvilModeCharacterSelect.evilMode || !active) {
             return "nope";
         }
-        if (check)
-            System.out.println(findReplacement(key, false));
         if (key.equals("GOLD_GAIN")) {
             return "souls2";
         } else if (key.equals("GOLD_GAIN_2")) {
