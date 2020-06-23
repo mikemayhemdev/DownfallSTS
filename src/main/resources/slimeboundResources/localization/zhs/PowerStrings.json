@@ -506,5 +506,13 @@
       "每当你消耗 黏液 时，获得 ",
       " 点 格挡 。"
     ]
+  },
+  "Slimebound:CommandOnPlayPower": {
+    "NAME": "Goop Armor",
+    "DESCRIPTIONS": [
+      "Whenever you play a card this turn, #yCommand.",
+      "Whenever you play a card this turn, #yCommand ",
+      " times."
+    ]
   }
 }
