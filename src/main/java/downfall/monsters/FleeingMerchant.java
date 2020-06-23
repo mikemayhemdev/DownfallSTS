@@ -246,6 +246,8 @@ public class FleeingMerchant extends AbstractMonster {
             increaseGold += FleeingMerchant.CURRENT_SOULS;
 
         AbstractDungeon.player.gainGold(increaseGold);
+        CardCrawlGame.sound.playA("GOLD_JINGLE", -0.1F);
+        CardCrawlGame.sound.playA("GOLD_JINGLE", .1F);
         for (int i = 0; i < increaseGold; i++) {
             AbstractDungeon.effectList.add(new GainSingleSoulEffect(this, this.hb.cX, this.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
         }
