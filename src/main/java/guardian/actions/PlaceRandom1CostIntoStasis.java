@@ -43,7 +43,7 @@ public class PlaceRandom1CostIntoStasis extends AbstractGameAction {
         for (int i = 0; i < this.numCards; i++) {
             AbstractCard cStudy = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1)));
             if (GuardianMod.canSpawnStasisOrb()) {
-                AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(cStudy.makeStatEquivalentCopy(), false)));
+                AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(cStudy.makeStatEquivalentCopy())));
                 //AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
             } else {
                 if (!AbstractDungeon.player.hasEmptyOrb()) {

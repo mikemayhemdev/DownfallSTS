@@ -8,10 +8,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
+import guardian.actions.DestroyOrbSlotForDamageAction;
 import guardian.actions.PlaceActualCardIntoStasis;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
-public class TimeBomb extends AbstractGuardianCard {
+public class TimeBomb extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("TimeBomb");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -46,6 +48,7 @@ public class TimeBomb extends AbstractGuardianCard {
 
         this.baseMagicNumber = this.magicNumber = DAMAGE;
         this.tags.add(GuardianMod.VOLATILE);
+        this.tags.add(GuardianMod.SELFSTASIS);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -53,7 +56,6 @@ public class TimeBomb extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this));
     }
 
     public AbstractCard makeCopy() {
@@ -76,6 +78,16 @@ public class TimeBomb extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+        AbstractDungeon.actionManager.addToTop(new DestroyOrbSlotForDamageAction(this.magicNumber, orb));
     }
 }
 

@@ -1,7 +1,13 @@
 package guardian.cards;
 
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,10 +15,12 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+import guardian.vfx.SmallLaserEffectColored;
 
 
-public class GatlingBeam extends AbstractGuardianCard {
+public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("GatlingBeam");
     public static final String NAME;
     public static final String[] EXTENDED_DESCRIPTION;
@@ -42,7 +50,7 @@ public class GatlingBeam extends AbstractGuardianCard {
 
     }
 
-    public int turnsInStasis = 0;
+    private int turnsInStasis = 0;
 
     public GatlingBeam() {
 
@@ -53,6 +61,7 @@ public class GatlingBeam extends AbstractGuardianCard {
         this.tags.add(GuardianMod.BEAM);
         this.tags.add(GuardianMod.TICK);
         this.tags.add(GuardianMod.VOLATILE);
+        this.tags.add(GuardianMod.SELFSTASIS);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -71,8 +80,6 @@ public class GatlingBeam extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this));
     }
 
     public AbstractCard makeCopy() {
@@ -103,6 +110,26 @@ public class GatlingBeam extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+        turnsInStasis++;
+        for (int i = 0; i < turnsInStasis; i++) {
+            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
+
+            if (m != null)
+            {
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.BLUE), 0.1F));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+            }
+        }
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+
     }
 }
 

@@ -50,24 +50,9 @@ public class ClonePower extends AbstractGuardianPower {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         super.onUseCard(card, action);
-        if (!(card.hasTag(GuardianMod.VOLATILE)) && !(card instanceof StasisField) && !(card instanceof StasisStrike) && !card.exhaust && (card.type == AbstractCard.CardType.ATTACK || card.type == AbstractCard.CardType.SKILL)) {
-            if (this.amount == 1) {
-                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
-
-            } else {
-                this.amount -= 1;
-            }
-
-            AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(card));
-
-        }
-    }
-
-    @Override
-    public void reducePower(int reduceAmount) {
-        super.reducePower(reduceAmount);
-        if (this.amount <= 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if (!card.hasTag(GuardianMod.SELFSTASIS) && !card.exhaust && (card.type == AbstractCard.CardType.ATTACK || card.type == AbstractCard.CardType.SKILL)) {
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, this, 1));
+            card.tags.add(GuardianMod.SELFSTASISONCE);
         }
     }
 

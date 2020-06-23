@@ -124,7 +124,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         super.atBattleStartPreDraw();
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.uuid == card.uuid) {
-                AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(c, false)));
+                AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(c, AbstractDungeon.player.drawPile)));
                 break;
             }
         }

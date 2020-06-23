@@ -14,10 +14,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import guardian.GuardianMod;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
 
-public class FierceBash extends AbstractGuardianCard {
+public class FierceBash extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("FierceBash");
     public static final String NAME;
     public static final String IMG_PATH = "cards/fierceBash.png";
@@ -61,10 +62,6 @@ public class FierceBash extends AbstractGuardianCard {
 
     }
 
-    public void stasisBonus() {
-        this.upgradeDamage(this.magicNumber);
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
@@ -88,12 +85,9 @@ public class FierceBash extends AbstractGuardianCard {
             upgradeDamage(UPGRADE_BONUS);
             upgradeMagicNumber(UPGRADE_DAMAGEPERTURNINSTASIS);
         }
-
-
     }
 
     public void updateDescription() {
-
         if (this.socketCount > 0) {
             if (upgraded && UPGRADED_DESCRIPTION != null) {
                 this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
@@ -102,6 +96,16 @@ public class FierceBash extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+        this.upgradeDamage(this.magicNumber);
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+
     }
 }
 

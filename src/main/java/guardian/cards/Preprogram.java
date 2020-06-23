@@ -53,9 +53,7 @@ public class Preprogram extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
-        if (AbstractDungeon.player.drawPile.isEmpty() && AbstractDungeon.player.discardPile.isEmpty()) {
-
-        } else {
+        if (!(AbstractDungeon.player.drawPile.isEmpty() && AbstractDungeon.player.discardPile.isEmpty())) {
             if (AbstractDungeon.player.drawPile.isEmpty()) {
                 AbstractDungeon.actionManager.addToBottom(new EmptyDeckShuffleAction());
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));

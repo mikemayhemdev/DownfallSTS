@@ -3,6 +3,7 @@ package guardian.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -13,19 +14,26 @@ import guardian.orbs.StasisOrb;
 
 
 public class PlaceActualCardIntoStasis extends AbstractGameAction {
-    private AbstractCard card;
-    private boolean hack;
+    private final AbstractCard card;
+    private final CardGroup source;
+
+    private final boolean hadRetain;
 
     public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("Guardian:UIOptions").TEXT;
 
-    public PlaceActualCardIntoStasis(AbstractCard card, boolean hack) {
-        this(card);
-        this.hack = hack;
-    }
-
     public PlaceActualCardIntoStasis(AbstractCard card) {
+        this(card, null);
+    }
+    public PlaceActualCardIntoStasis(AbstractCard card, CardGroup source) {
         this.card = card;
+        this.source = source;
         this.actionType = ActionType.DAMAGE;
+
+        hadRetain = card.retain;
+        if (source != null && source.type == CardGroup.CardGroupType.HAND)
+        {
+            card.retain = true;
+        }
     }
 
     public void update() {
@@ -43,8 +51,9 @@ public class PlaceActualCardIntoStasis extends AbstractGameAction {
                 }
             }
 
-            AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, this.hack)));
+            AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, source)));
         } else {
+            card.retain = hadRetain;
             if (!AbstractDungeon.player.hasEmptyOrb()) {
                 AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
                 this.isDone = true;
