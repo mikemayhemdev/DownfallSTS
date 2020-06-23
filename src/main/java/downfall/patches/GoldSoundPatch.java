@@ -4,12 +4,10 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.audio.SoundMaster;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.SlimeboundMod;
-
-import java.util.Random;
 
 public class GoldSoundPatch {
+
+    public static boolean active = true;
 
     @SpirePatch(clz = SoundMaster.class, method = "playV", paramtypez = {String.class, float.class})
     public static class GoldSoundPatchV {
@@ -18,7 +16,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-              //  SlimeboundMod.logger.info("playing overwritten souls audio");
+                //  SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.playV(s, volumemod);
                 return SpireReturn.Return(bruh());
             }
@@ -32,7 +30,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-            //    SlimeboundMod.logger.info("playing overwritten souls audio");
+                //    SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.playA(s, pitchAdjust);
                 return SpireReturn.Return(bruh());
             }
@@ -46,7 +44,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-            //    SlimeboundMod.logger.info("playing overwritten souls audio");
+                //    SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.play(s);
                 return SpireReturn.Return(bruh());
             }
@@ -61,7 +59,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-             //  SlimeboundMod.logger.info("playing overwritten souls audio");
+                //  SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.play(s, useBgmVolume);
                 return SpireReturn.Return(bruh());
             }
@@ -76,7 +74,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-              //  SlimeboundMod.logger.info("playing overwritten souls audio");
+                //  SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.play(s, pitchVariation);
                 return SpireReturn.Return(bruh());
             }
@@ -91,7 +89,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-               // SlimeboundMod.logger.info("playing overwritten souls audio");
+                // SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.playAV(s, pitchAdjust, volumeMod);
                 return SpireReturn.Return(bruh());
             }
@@ -103,7 +101,7 @@ public class GoldSoundPatch {
     }
 
     public static String findReplacement(String key, boolean check) {
-        if (!EvilModeCharacterSelect.evilMode){
+        if (!EvilModeCharacterSelect.evilMode || !active) {
             return "nope";
         }
         if (check)
@@ -123,12 +121,22 @@ public class GoldSoundPatch {
         } else if (key.equals("SHOP_PURCHASE")) {
             int rand = MathUtils.random(1, 5);
             String result = "nope";
-            switch (rand){
-                case 1: result = "souls1"; break;
-                case 2: result = "souls2"; break;
-                case 3: result = "souls3"; break;
-                case 4: result = "souls4"; break;
-                case 5: result = "souls5"; break;
+            switch (rand) {
+                case 1:
+                    result = "souls1";
+                    break;
+                case 2:
+                    result = "souls2";
+                    break;
+                case 3:
+                    result = "souls3";
+                    break;
+                case 4:
+                    result = "souls4";
+                    break;
+                case 5:
+                    result = "souls5";
+                    break;
             }
             return result;
         }
