@@ -1013,16 +1013,6 @@ public static void saveData() {
 
     }
 
-    public void refreshPotions() {
-        /*
-        BaseMod.removePotion(AcceleratePotion.POTION_ID);
-        BaseMod.removePotion(SlimedPotion.POTION_ID);
-        BaseMod.removePotion(SpawnSlimePotion.POTION_ID);
-        BaseMod.removePotion(SlimyTonguePotion.POTION_ID);
-
-        addPotions();
-        */
-    }
 
     public void addPotions() {
 
