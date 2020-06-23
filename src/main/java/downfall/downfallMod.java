@@ -11,7 +11,6 @@ Event Override patches, and other things that only appear during Evil Runs.
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
-import basemod.Pair;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -48,6 +47,7 @@ import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -98,8 +98,8 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 @SpireInitializer
 public class downfallMod implements
         OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber
-        , AddAudioSubscriber
-        {
+        //, AddAudioSubscriber
+{
     public static final String modID = "downfall";
 
 
@@ -932,7 +932,7 @@ public class downfallMod implements
 
     @Override
     public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo) {
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID)) {
+        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID)  || ModHelper.isModEnabled(WorldOfGoo.ID))) {
             SlimeboundMod.logger.info("World of goo triggered");
             if (damageInfo.output > AbstractDungeon.player.currentBlock) {
 
@@ -945,17 +945,17 @@ public class downfallMod implements
 
     @Override
     public void receivePostDungeonInitialize() {
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID)) {
+        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID))) {
             RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
         }
 
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) {
+        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID) || ModHelper.isModEnabled(Hexed.ID))) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
         }
 
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID)) {
+        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID))) {
             ArrayList<String> cards = AbstractDungeon.player.getStartingDeck();
             for (String s : cards) {
                 AbstractDungeon.player.masterDeck.removeCard(s);
@@ -1010,19 +1010,14 @@ public class downfallMod implements
         return i;
     }
 
-
+    /*
     @Override
     public void receiveAddAudio() {
-        addAudio(new Pair<>("souls1", "downfallResources/music/souls_rr1.ogg"));
-        addAudio(new Pair<>("souls2", "downfallResources/music/souls_rr2.ogg"));
-        addAudio(new Pair<>("souls3", "downfallResources/music/souls_rr3.ogg"));
-        addAudio(new Pair<>("souls4", "downfallResources/music/souls_rr4.ogg"));
-        addAudio(new Pair<>("souls5", "downfallResources/music/souls_rr5.ogg"));
-        addAudio(new Pair<>("soulsMain", "downfallResources/music/souls.ogg"));
+        addAudio(new Pair<>("soulVFX", "downfallResources/music/test.ogg"));
     }
 
     private void addAudio(Pair<String, String> audioData) {
         BaseMod.addAudio(audioData.getKey(), audioData.getValue());
     }
-
+    */
 }
