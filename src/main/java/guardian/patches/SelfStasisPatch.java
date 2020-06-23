@@ -25,7 +25,7 @@ public class SelfStasisPatch {
     )
     public static class Fields
     {
-        public static SpireField<Boolean> stasis = new SpireField<>(()->false);
+        public static SpireField<StasisOrb> stasis = new SpireField<>(()->null);
     }
 
     @SpirePatch(
@@ -56,8 +56,9 @@ public class SelfStasisPatch {
                         }
                     }
 
-                    Fields.stasis.set(__instance, true);
-                    AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(card, AbstractDungeon.player.hand, true)));
+                    StasisOrb orb = new StasisOrb(card, AbstractDungeon.player.hand, true);
+                    Fields.stasis.set(__instance, orb);
+                    AbstractDungeon.actionManager.addToTop(new ChannelAction(orb));
                 } else {
                     if (!AbstractDungeon.player.hasEmptyOrb()) {
                         AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, TEXT[5], true));
@@ -80,12 +81,19 @@ public class SelfStasisPatch {
         )
         public static SpireReturn<?> SelfStasis(UseCardAction __instance, AbstractCard targetCard, @ByRef float[] duration)
         {
-            if (Fields.stasis.get(__instance))
+            if (Fields.stasis.get(__instance) != null)
             {
                 AbstractDungeon.player.cardInUse = null;
                 targetCard.exhaustOnUseOnce = false;
                 targetCard.dontTriggerOnUseCard = false;
                 AbstractDungeon.actionManager.addToBottom(new HandCheckAction());
+
+                //Special check: If the card has already been accelerated out of stasis again, set freeToPlayOnce back to true
+                //(it's set to false just slightly above this patch)
+                if (Fields.stasis.get(__instance).passiveAmount <= 0)
+                {
+                    targetCard.freeToPlayOnce = true;
+                }
 
                 duration[0] -= Gdx.graphics.getDeltaTime();
                 if (duration[0] < 0.0f)
