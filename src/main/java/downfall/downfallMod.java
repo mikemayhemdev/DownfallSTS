@@ -11,6 +11,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
+import basemod.Pair;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -98,7 +99,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 @SpireInitializer
 public class downfallMod implements
         OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber
-        //, AddAudioSubscriber
+        , AddAudioSubscriber
 {
     public static final String modID = "downfall";
 
@@ -1010,14 +1011,17 @@ public class downfallMod implements
         return i;
     }
 
-    /*
     @Override
     public void receiveAddAudio() {
-        addAudio(new Pair<>("soulVFX", "downfallResources/music/test.ogg"));
+        addAudio(new Pair<>("souls1", "downfallResources/music/souls_rr1.ogg"));
+        addAudio(new Pair<>("souls2", "downfallResources/music/souls_rr2.ogg"));
+        addAudio(new Pair<>("souls3", "downfallResources/music/souls_rr3.ogg"));
+        addAudio(new Pair<>("souls4", "downfallResources/music/souls_rr4.ogg"));
+        addAudio(new Pair<>("souls5", "downfallResources/music/souls_rr5.ogg"));
+        addAudio(new Pair<>("soulsMain", "downfallResources/music/souls.ogg"));
     }
 
     private void addAudio(Pair<String, String> audioData) {
         BaseMod.addAudio(audioData.getKey(), audioData.getValue());
     }
-    */
 }
