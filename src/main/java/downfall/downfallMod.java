@@ -925,7 +925,7 @@ public class downfallMod implements
 
     public void receiveCustomModeMods(List<CustomMod> l) {
         l.add(new CustomMod(WorldOfGoo.ID, "r", true));
-        l.add(new CustomMod(Hexed.ID, "b", true));
+        l.add(new CustomMod(Hexed.ID, "r", true));
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
@@ -933,7 +933,7 @@ public class downfallMod implements
 
     @Override
     public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo) {
-        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID)  || ModHelper.isModEnabled(WorldOfGoo.ID))) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID))  || ModHelper.isModEnabled(WorldOfGoo.ID)) {
             SlimeboundMod.logger.info("World of goo triggered");
             if (damageInfo.output > AbstractDungeon.player.currentBlock) {
 
@@ -946,21 +946,17 @@ public class downfallMod implements
 
     @Override
     public void receivePostDungeonInitialize() {
-        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID))) {
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
             RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
         }
 
-        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID) || ModHelper.isModEnabled(Hexed.ID))) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
         }
 
-        if (CardCrawlGame.trial != null && (CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID))) {
-            ArrayList<String> cards = AbstractDungeon.player.getStartingDeck();
-            for (String s : cards) {
-                AbstractDungeon.player.masterDeck.removeCard(s);
-            }
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID)) {
 
             AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
             AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
@@ -985,7 +981,7 @@ public class downfallMod implements
 
     @Override
     public void receivePostDraw(AbstractCard abstractCard) {
-        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             if (!abstractCard.isEthereal) {
                 CardModifierManager.addModifier(abstractCard, new EtherealMod());
             }
