@@ -100,8 +100,8 @@ public class InfernoGhostflame extends AbstractGhostflame {
             if (x > 0) {
                 for (int i = 0; i < x; i++) {
                     advanceTriggerAnim();
+                    energySpentThisTurn += 1;
                 }
-                energySpentThisTurn += x;
                 if (energySpentThisTurn >= 3) {
                     charge();
                 } else {
@@ -130,7 +130,6 @@ public class InfernoGhostflame extends AbstractGhostflame {
     public void reset() {
         energySpentThisTurn = 0;
     }
-
 
     @Override
     public String getName() {

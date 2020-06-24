@@ -6,14 +6,17 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import downfall.downfallMod;
+import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.relics.StudyCardRelic;
 import guardian.cards.Aged;
+import guardian.characters.GuardianCharacter;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
 import slimebound.cards.Icky;
+import slimebound.characters.SlimeboundCharacter;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
@@ -22,6 +25,7 @@ import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
+import theHexaghost.TheHexaghost;
 import theHexaghost.cards.Haunted;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.potions.EctoCoolerPotion;
@@ -76,6 +80,22 @@ public class BanSharedContentPatch {
                 AbstractDungeon.curseCardPool.removeCard(Icky.ID);
                 AbstractDungeon.curseCardPool.removeCard(Bewildered.ID);
                 AbstractDungeon.curseCardPool.removeCard(Haunted.ID);
+            } else {
+                if (AbstractDungeon.player instanceof SlimeboundCharacter) {
+                    AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(SlimeTackle.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
+                }
+                if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
+                    AbstractDungeon.colorlessCardPool.removeCard(GhostWheel.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(Sear.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
+                }
+                if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
+                    AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
+                }
             }
         }
     }

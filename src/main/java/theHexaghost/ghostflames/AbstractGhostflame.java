@@ -253,13 +253,11 @@ public abstract class AbstractGhostflame {
                 if (gf.charged) x++;
             ((TheHexaghost) AbstractDungeon.player).myBody.targetRotationSpeed = 100F + (20 * x);
         }
-        /*
         for (int i = 0; i < 3; i++) {
             animAlphaBySlot[i] = 0F;
             useBrightTexture[i] = false;
             update();
         }
-        */
     }
 
     public void flash() {

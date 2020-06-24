@@ -1,19 +1,15 @@
-/*
 package downfall.patches;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.TheEnding;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
-import com.megacrit.cardcrawl.map.DungeonMap;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.monsters.exordium.*;
+import com.megacrit.cardcrawl.monsters.exordium.AcidSlime_M;
+import com.megacrit.cardcrawl.monsters.exordium.LouseDefensive;
+import com.megacrit.cardcrawl.monsters.exordium.LouseNormal;
+import com.megacrit.cardcrawl.monsters.exordium.SpikeSlime_M;
 import downfall.monsters.LooterAlt;
 
 import java.util.ArrayList;
@@ -23,20 +19,18 @@ import java.util.ArrayList;
 @SpirePatch(clz = MonsterHelper.class, method = "bottomHumanoid")
 public class ExordiumThugsPatch {
 
-    @SpirePrefixPatch
-    private SpireReturn<MonsterGroup> Prefix() {
+    public static MonsterGroup Postfix(MonsterGroup p) {
         if (EvilModeCharacterSelect.evilMode) {
             AbstractMonster[] monsters = new AbstractMonster[2];
             monsters[0] = bottomGetWeakWildlife(randomXOffset(-160.0F), randomYOffset(20.0F));
             monsters[1] = new LooterAlt(randomXOffset(130.0F), randomYOffset(20.0F));
-            return SpireReturn.Return(new MonsterGroup(monsters));
-
+            return new MonsterGroup(monsters);
         }
-        return SpireReturn.Continue();
+        return p;
     }
 
     private static AbstractMonster bottomGetWeakWildlife(float x, float y) {
-        ArrayList<AbstractMonster> monsters = new ArrayList();
+        ArrayList<AbstractMonster> monsters = new ArrayList<>();
         if (AbstractDungeon.miscRng.randomBoolean()) {
             monsters.add(new LouseNormal(x, y));
         }
@@ -47,7 +41,6 @@ public class ExordiumThugsPatch {
         return (AbstractMonster) monsters.get(AbstractDungeon.miscRng.random(0, monsters.size() - 1));
     }
 
-
     private static float randomYOffset(float y) {
         return y + MathUtils.random(-20.0F, 20.0F);
     }
@@ -56,4 +49,3 @@ public class ExordiumThugsPatch {
         return x + MathUtils.random(-20.0F, 20.0F);
     }
 }
-*/
