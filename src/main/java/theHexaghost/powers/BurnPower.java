@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.relics.IceCube;
+import theHexaghost.relics.SoulConsumer;
 import theHexaghost.util.TextureLoader;
 import theHexaghost.vfx.ExplosionSmallEffectGreen;
 
@@ -82,9 +83,10 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
     public void explode(){
         this.flashWithoutSound();
         this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, LivingBombPower.POWER_ID));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 
         if (owner.hasPower(LivingBombPower.POWER_ID)){
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, LivingBombPower.POWER_ID));
             for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (!m.isDeadOrEscaped()){
                     this.addToBot(new LoseHPAction(m, owner, amount, AbstractGameAction.AttackEffect.FIRE));
@@ -93,8 +95,16 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
         } else {
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
         }
+        if (owner.hasPower(BurnPerTurnPower.POWER_ID)) {
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, BurnPerTurnPower.POWER_ID));
 
-    }
+        }
+        if (AbstractDungeon.player.hasRelic(SoulConsumer.ID)){
+            AbstractDungeon.player.getRelic(SoulConsumer.ID).onTrigger();
+        }
+
+
+        }
 
     @Override
     public void updateDescription() {

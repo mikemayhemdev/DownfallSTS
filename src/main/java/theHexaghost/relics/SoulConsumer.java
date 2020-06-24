@@ -18,18 +18,31 @@ public class SoulConsumer extends CustomRelic {
     public static final String ID = HexaMod.makeID("SoulConsumer");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SoulConsumer.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SoulConsumer.png"));
-
+private boolean activated = false;
     public SoulConsumer() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+
     }
 
-    public void onMonsterDeath(AbstractMonster m) {
-        if (m.currentHealth == 0 && m.hasPower(BurnPower.POWER_ID)) {// 42
-            this.flash();// 43
-            this.addToBot(new RelicAboveCreatureAction(m, this));// 44
-            this.addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 2));
+    @Override
+    public void onTrigger() {
+        if (!this.activated) {
+            this.img = TextureLoader.getTexture(makeRelicPath("SoulConsumerOn.png"));
+            this.flash();
+            this.activated = true;
         }
-    }// 48
+    }
+
+    @Override
+    public void onVictory() {
+        if (this.activated) {
+            this.flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));// 44
+            this.addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 2));
+            this.img = TextureLoader.getTexture(makeRelicPath("SoulConsumer.png"));
+            this.activated = false;
+        }
+    }
 
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

@@ -32,7 +32,7 @@
     "NAME": "Thermal Stone",
     "FLAVOR": "A fire would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you kill a #yhexamod:Soulburned enemy, heal #b2 HP."
+      "If #yhexamod:Soulburn detonates, heal #b2 HP at the end of combat."
     ]
   },
   "hexamod:RecyclingMachine": {
