@@ -1,5 +1,6 @@
 package downfall.ui.campfire;
 
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,6 +21,7 @@ import downfall.relics.HeartBlessingGreen;
 import downfall.relics.HeartBlessingRed;
 import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
+import guardian.ui.EnhanceBonfireOption;
 
 public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
@@ -59,7 +61,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                 if (!this.used) {
                     if (this.usable) {
                         this.description += TEXT[5];
-                    }else {
+                    } else {
                         this.description = TEXT[8];
                     }
                 } else {
@@ -76,7 +78,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                 if (!this.used) {
                     if (this.usable) {
                         this.description += TEXT[6];
-                    }else {
+                    } else {
                         this.description = TEXT[8];
                     }
                 } else {
@@ -103,6 +105,22 @@ public class BustKeyOption extends AbstractCampfireOption {
     }
 
     public void update() {
+        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+
+        if (this.hb.hovered) {
+
+            if (!this.hb.clickStarted) {
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, Settings.scale));
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, Settings.scale));
+
+            } else {
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, 0.9F * Settings.scale));
+
+            }
+        } else {
+            ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, 0.9F * Settings.scale));
+        }
+
         super.update();
 
         if (!this.used) {
