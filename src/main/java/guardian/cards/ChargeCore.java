@@ -52,6 +52,7 @@ public class ChargeCore extends AbstractGuardianCard implements InStasisCard {
 
         this.tags.add(GuardianMod.TICK);
         this.tags.add(GuardianMod.VOLATILE);
+        this.tags.add(GuardianMod.SELFSTASIS);
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();

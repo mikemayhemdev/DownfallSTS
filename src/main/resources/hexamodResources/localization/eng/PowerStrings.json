@@ -19,30 +19,30 @@
     "NAME": "Delayed Flame",
     "DESCRIPTIONS": [
       "At the start of your next turn, apply #b",
-      " #yBurn to ALL enemies."
+      " #ySoulburn to ALL enemies."
     ]
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "Melting Metal",
     "DESCRIPTIONS": [
       "Gains #b",
-      " #yBurn at the start of its turn."
+      " #ySoulburn at the start of its turn. This effect is removed when #ySoulburn is detonated."
     ]
   },
   "hexamod:BurnPower": {
-    "NAME": "Soulburn",
+    "NAME": "#ySoulburn",
     "DESCRIPTIONS": [
       "In #b",
       " turns, loses #b",
       " turn, loses #b",
-      " HP, then Soulburn is removed."
+      " HP, then #ySoulburn is removed."
     ]
   },
   "hexamod:BurnvenomPower": {
     "NAME": "Wildfire Weapon",
     "DESCRIPTIONS": [
       "Whenever you deal unblocked attack damage, apply #b",
-      " #yBurn."
+      " #ySoulburn."
     ]
   },
   "hexamod:CommonPostCombatPower": {
@@ -56,14 +56,14 @@
   "hexamod:CrispyPower": {
     "NAME": "Extra Crispy",
     "DESCRIPTIONS": [
-      "Soulburn applied is increased by #b",
+      "#ySoulburn applied is increased by #b",
       "."
     ]
   },
   "hexamod:EnhancePower": {
     "NAME": "Intensity",
     "DESCRIPTIONS": [
-      "Increase the amount of damage, Soulburn, and Block applied by Ghostflames when Ignited by #b",
+      "Increase the amount of damage, #ySoulburn, and Block applied by Ghostflames when Ignited by #b",
       "."
     ]
   },
@@ -100,7 +100,7 @@
     "NAME": "Ghostflame Barrier",
     "DESCRIPTIONS": [
       "When attacked, applies #b",
-      " #yBurn to the attacker."
+      " #ySoulburn to the attacker."
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
@@ -170,7 +170,7 @@
     "NAME": "Radiant Flame",
     "DESCRIPTIONS": [
       "Whenever a Ghostflame is #yIgnited, apply #b",
-      " #yBurn to a random enemy."
+      " #ySoulburn to a random enemy."
     ]
   },
   "hexamod:SealPostCombatPower": {
@@ -191,13 +191,13 @@
     "NAME": "Volcanic Visage",
     "DESCRIPTIONS": [
       "At the start of your turn, apply #b",
-      " #yBurn to all enemies."
+      " #ySoulburn to all enemies."
     ]
   },
   "hexamod:LivingBombPower": {
     "NAME": "Living Bomb",
     "DESCRIPTIONS": [
-      "The next time this creature's Soulburn is detonated, it affects ALL enemies."
+      "The next time this creature's #ySoulburn is detonated, it affects ALL enemies."
     ]
   }
 }
