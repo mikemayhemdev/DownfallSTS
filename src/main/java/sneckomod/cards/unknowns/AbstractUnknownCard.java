@@ -78,7 +78,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
             AbstractCard q = c.makeCopy();
-            validCard = c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
+            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
             if (this.upgraded) {
                 if (!c.canUpgrade()) validCard = false;
                 if (validCard) q.upgrade();
@@ -113,7 +113,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
             AbstractCard q = c.makeCopy();
-            validCard = c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
+            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
             if (this.upgraded) {
                 if (!c.canUpgrade()) validCard = false;
                 if (validCard) q.upgrade();
