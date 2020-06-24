@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "扫尾",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。 NL 给予 !M! 层 易伤 。 NL sneckomod:混淆 你的手牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 0- !M! 层 虚弱 。 NL 给予 0- !M! 层 易伤 。"
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "？？？",
@@ -50,8 +50,8 @@
   },
   "sneckomod:SoulDraw": {
     "NAME": "灵魂抽牌",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽 0 - !M! 张牌并 sneckomod:混淆 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽 1 - !M! 张牌并 sneckomod:混淆 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 抽 0 - !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽 1 - !M! 张牌。"
   },
   "sneckomod:SoulRoll": {
     "NAME": "灵魂随机",
@@ -64,8 +64,8 @@
   },
   "sneckomod:SnekBeam": {
     "NAME": "蛇线",
-    "DESCRIPTION": "对所有敌人造成牌组中 sneckomod:未知 牌数量的伤害。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成牌组中 sneckomod:未知 牌数量的伤害。 NL 消耗 。",
+    "DESCRIPTION": "对所有敌人造成牌组中 sneckomod:未知 牌数量的伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成牌组中 sneckomod:未知 牌数量的伤害。",
     "EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害。）"
     ]
@@ -76,10 +76,10 @@
   },
   "sneckomod:Nope": {
     "NAME": "不行",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为已 sneckomod:混淆 且耗能低1的同类型牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为已 sneckomod:混淆 且耗能低1的同类型牌。",
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为耗能低1的同类型牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为耗能低1的同类型牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      " 替换并混淆。"
+      " 被“不行”替换。"
     ]
   },
   "sneckomod:UnknownClass": {
@@ -128,8 +128,8 @@
   },
   "sneckomod:SoulCleanse": {
     "NAME": "灵魂净化",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 将手牌中随机一张耗能为3的牌的耗能变为0。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 将手牌中随机一张耗能为3的牌的耗能变为0。 NL 抽1张牌。 NL 消耗 。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 这次 sneckomod:混淆 不会出现耗能为3的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL sneckomod:混淆 你的手牌。 NL 这次 sneckomod:混淆 不会出现耗能为3的牌。"
   },
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
@@ -161,7 +161,7 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "快速移动",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的牌。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL sneckomod:混淆 手中耗能最高的 !M! 张牌。"
   },
   "sneckomod:QuickBite": {
@@ -178,7 +178,7 @@
   },
   "sneckomod:SlitherStrike": {
     "NAME": "滑动打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 手牌中的 sneckomod:异色 牌本回合内耗能减少1。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 手中的 sneckomod:异色 牌本回合内耗能减少1。"
   },
   "sneckomod:PureSnecko": {
     "NAME": "易质",
@@ -187,8 +187,8 @@
   },
   "sneckomod:Cheat": {
     "NAME": "作弊",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌随机数固定为上限。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌随机数固定为上限。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌上的随机数取上限值。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 本回合内，卡牌上的随机数取上限值。"
   },
   "sneckomod:Restock": {
     "NAME": "补充",
@@ -200,7 +200,7 @@
   },
   "sneckomod:Transmogrify": {
     "NAME": "惊变",
-    "DESCRIPTION": "变化随机一个遗物为相同稀有度的遗物。 NL 消耗 。"
+    "DESCRIPTION": "失去随机一个遗物。 NL 在战斗结束时选择将其取回，或者获得相同稀有度的另一个遗物。 NL 消耗 。"
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "防御才华",
@@ -278,10 +278,10 @@
   },
   "sneckomod:WideSting": {
     "NAME": "宽刺",
-    "DESCRIPTION": "对所有敌人造成 !M! - !D! 点伤害。 NL 升级 并 sneckomod:混淆 手牌中的 sneckomod:异色 牌。"
+    "DESCRIPTION": "对所有敌人造成 !M! - !D! 点伤害。 NL 升级  手中的 sneckomod:异色 牌。"
   },
   "sneckomod:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "不能被打出 。 NL 当你打出牌时， sneckomod:混淆 你的手牌并将这张牌丢弃。"
+    "DESCRIPTION": "当你打出其他牌时， sneckomod:混淆 你的手牌并将这张牌丢弃。 NL 消耗 。"
   }
 }

@@ -4,7 +4,7 @@
     "DESCRIPTION": [
       "回合开始时造成 #b",
       " 伤害并给予你 #b",
-      " 点格挡。"
+      " 点 #y格挡 。"
     ]
   },
   "Slimebound:AttackSlime": {
@@ -31,7 +31,7 @@
   "Slimebound:TorchHeadSlime": {
     "NAME": "火炬头史莱姆",
     "DESCRIPTION": [
-      "回合开始时造成 ",
+      "回合开始时造成 #b",
       " 点伤害。 #y潜力 对其影响加倍。"
     ]
   },
@@ -39,7 +39,7 @@
     "NAME": "邪教徒史莱姆",
     "DESCRIPTION": [
       "回合开始时造成 #b",
-      " 点伤害并提高下次造成的伤害1点。"
+      " 点伤害并提高下次造成的伤害 #b1 点。"
     ]
   },
   "Slimebound:ShieldSlime": {
@@ -47,13 +47,13 @@
     "DESCRIPTION": [
       "回合开始时造成 #b",
       " 点伤害并给予你 #b",
-      " 点格挡。"
+      " 点 #y格挡 。"
     ]
   },
   "Slimebound:PoisonSlime": {
     "NAME": "游击史莱姆",
     "DESCRIPTION": [
-      "回合开始时对所有敌人造成 ",
+      "回合开始时对所有敌人造成 #b",
       " 点伤害 "
     ]
   },
