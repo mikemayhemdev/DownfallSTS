@@ -10,8 +10,8 @@
   "sneckomod:CheatPotion": {
     "NAME": "流动幸运",
     "DESCRIPTIONS": [
-      "本回合内，卡牌随机数固定为上限。",
-      "2个回合内，卡牌随机数固定为上限。"
+      "本回合内，卡牌上的随机数取上限值。",
+      "2个回合内，卡牌上的随机数取上限值。"
     ]
   },
   "sneckomod:MuddlingPotion": {

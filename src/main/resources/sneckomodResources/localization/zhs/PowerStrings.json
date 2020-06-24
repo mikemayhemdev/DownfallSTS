@@ -1,25 +1,25 @@
 {
   "sneckomod:CheapStockPower": {
-    "NAME": "Cheap Stock",
+    "NAME": "廉价股票",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1.",
-      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b",
-      " times."
+      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 。",
+      "你的回合开始时，将手中耗能最高的 #y异色 牌耗能降低 #b1 。重复 #b",
+	  " 次。"
     ]
   },
   "sneckomod:CheatPower": {
     "NAME": "作弊",
     "DESCRIPTIONS": [
-      "本回合内，卡牌随机数固定为上限。",
+      "本回合内，卡牌上的随机数取上限值。",
       "接下来的 #b",
-      " 个回合，卡牌随机数固定为上限。"
+      " 个回合，卡牌上的随机数取上限值。"
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
     "NAME": "混淆抽牌",
     "DESCRIPTIONS": [
-      "#y混淆你本回合抽到的下一张牌。",
-      "#y混淆你本回合抽到的下 #b",
+      "#y混淆 你本回合抽到的下一张牌。",
+      "#y混淆 你本回合抽到的下 #b",
       " 张牌。（还剩 ",
       " 张)"
     ]
@@ -57,14 +57,14 @@
   "sneckomod:UnlimitedRollsPower": {
     "NAME": "无限随机",
     "DESCRIPTIONS": [
-      "你的回合开始时，将一张带有 #y消耗 和 #y虚无 的 #y灵魂随机 加入你的手牌。"
+      "你的回合开始时，将一张带有 #y消耗 和 #y虚无 的 #y灵魂随机+  加入你的手牌。"
     ]
   },
   "sneckomod:Transmogrifying": {
-    "NAME": "Transmogrifying",
+    "NAME": "惊变",
     "DESCRIPTIONS": [
-      " is being transformed into another ",
-      " relic."
+      " 将要变为另一个",
+      " 遗物。"
     ]
   }
 }
