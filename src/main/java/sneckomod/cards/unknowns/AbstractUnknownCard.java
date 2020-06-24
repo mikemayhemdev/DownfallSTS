@@ -49,7 +49,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                replaceUnknown(myNeeds());
+                replaceUnknownFromHand(myNeeds());
                 isDone = true;
             }
         });
@@ -101,6 +101,41 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             p.drawPile.removeCard(this);
             cUnknown.cardsToPreview = this;
             AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
+        }
+    }
+
+    public void replaceUnknownFromHand(Predicate<AbstractCard> funkyPredicate) {
+        AbstractPlayer p = AbstractDungeon.player;
+        boolean validCard;
+
+        ArrayList<String> tmp = new ArrayList<>();
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (!c.isSeen)
+                UnlockTracker.markCardAsSeen(c.cardID);
+            AbstractCard q = c.makeCopy();
+            validCard = c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
+            if (this.upgraded) {
+                if (!c.canUpgrade()) validCard = false;
+                if (validCard) q.upgrade();
+            }
+            if (funkyPredicate.test(q)) {
+                if (validCard) tmp.add(c.cardID);
+            }
+        }
+
+        AbstractCard cUnknown;
+        if (tmp.size() > 0) {
+            cUnknown = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeStatEquivalentCopy();
+        } else {
+            cUnknown = new com.megacrit.cardcrawl.cards.colorless.Madness();
+        }
+
+        if (this.upgraded) cUnknown.upgrade();
+        if (cUnknown != null) {
+            p.hand.removeCard(this);
+            p.drawPile.removeCard(this);
+            cUnknown.cardsToPreview = this;
+            AbstractDungeon.player.hand.addToBottom(cUnknown);
         }
     }
 }
