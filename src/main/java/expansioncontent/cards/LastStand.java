@@ -51,7 +51,7 @@ public class LastStand extends AbstractExpansionCard {
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
             atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
-            atb(new HealAction(p, p, this.magicNumber));
+//            atb(new HealAction(p, p, this.magicNumber));
         }
 
     }
