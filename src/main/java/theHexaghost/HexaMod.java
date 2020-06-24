@@ -72,7 +72,7 @@ public class HexaMod implements
         PreRoomRenderSubscriber,
         PostDeathSubscriber {
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
-    public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulder2.png";
+    public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "hexamodResources/images/char/mainChar/corpse.png";
     public static final String CARD_ENERGY_S = "hexamodResources/images/512/card_hexaghost_orb.png";
     public static final String TEXT_ENERGY = "hexamodResources/images/512/card_small_orb.png";

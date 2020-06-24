@@ -82,7 +82,7 @@ public class SneckoMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
-    public static final String SHOULDER2 = "sneckomodResources/images/char/shoulder2.png";
+    public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
     public static final String CARD_ENERGY_S = "sneckomodResources/images/512/card_snecko_orb.png";
     public static final String TEXT_ENERGY = "sneckomodResources/images/512/card_small_orb_snecko.png";
