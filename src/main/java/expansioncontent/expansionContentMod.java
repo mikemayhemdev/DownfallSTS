@@ -50,7 +50,6 @@ public class expansionContentMod implements
         EditRelicsSubscriber,
         //EditStringsSubscriber,
         //EditKeywordsSubscriber,
-        StartGameSubscriber,
         PostUpdateSubscriber {
 
     @SpireEnum
@@ -193,25 +192,6 @@ public class expansionContentMod implements
         BaseMod.loadCustomStringsFile(PowerStrings.class, getModID() + "Resources/localization/eng/Powerstrings.json");
     }
     */
-
-    @Override
-    public void receiveStartGame() {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-            AbstractDungeon.colorlessCardPool.removeCard(PrepareCrush.ID);
-            AbstractDungeon.colorlessCardPool.removeCard(SlimeTackle.ID);
-            AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
-        }
-        if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
-            AbstractDungeon.colorlessCardPool.removeCard(GhostWheel.ID);
-            AbstractDungeon.colorlessCardPool.removeCard(Sear.ID);
-            AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
-        }
-        if (AbstractDungeon.player instanceof GuardianCharacter || RandomCardWithTagAction.guardianLocked()) {
-            AbstractDungeon.colorlessCardPool.removeCard(ChargeUp.ID);
-            AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
-            AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
-        }
-    }
 
 
     public void atb(AbstractGameAction q) {
