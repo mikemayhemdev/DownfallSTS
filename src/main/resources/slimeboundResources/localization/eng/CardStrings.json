@@ -379,7 +379,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consum - Does not remove slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Does not remove slimeboundmod:Goop."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
