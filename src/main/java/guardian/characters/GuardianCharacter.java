@@ -74,8 +74,8 @@ public class GuardianCharacter extends CustomPlayer {
 
         if(!reskinContent.guardianReskinAnimation){
         this.initializeClass(null,
-                "guardianResources/GuardianImages/char/shoulder2.png",
                 "guardianResources/GuardianImages/char/shoulder.png",
+                "guardianResources/GuardianImages/char/shoulderR.png",
                 "guardianResources/GuardianImages/char/corpse.png", this.getLoadout(),
                 0.0F, -10F, 310.0F, 260.0F, new EnergyManager(3));
         }else

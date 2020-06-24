@@ -46,7 +46,7 @@
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength and heal !M! HP."
+    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength."
   },
   "expansioncontent:Collect": {
     "NAME": "Collect",

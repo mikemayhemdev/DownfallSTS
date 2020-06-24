@@ -3,6 +3,7 @@ package guardian.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,10 +13,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.PlaceActualCardIntoStasis;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
 
-public class ChargeCore extends AbstractGuardianCard {
+public class ChargeCore extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("ChargeCore");
     public static final String NAME;
     public static final String IMG_PATH = "cards/chargeCore.png";
@@ -60,7 +62,6 @@ public class ChargeCore extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(this, false, true));
 
         this.useGems(p, m);
     }
@@ -88,6 +89,16 @@ public class ChargeCore extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+
     }
 }
 

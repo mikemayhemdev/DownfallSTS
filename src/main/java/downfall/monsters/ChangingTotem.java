@@ -39,7 +39,7 @@ public class ChangingTotem extends AbstractTotemMonster {
 
     public ChangingTotem() {
         super(NAME, ID, downfallMod.assetPath("images/monsters/livingwall/livingwall.png"));
-        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/livingwall.atlas"), downfallMod.assetPath("images/monsters/livingwall/livingwall.json"), 1.0F);
+        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/livingwall1.atlas"), downfallMod.assetPath("images/monsters/livingwall/livingwall1.json"), 1.0F);
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());

@@ -84,8 +84,8 @@ public class SlimeboundCharacter extends CustomPlayer {
         super(name, setClass, orbTextures, "slimeboundResources/SlimeboundImages/char/orb/vfx.png", (String)null, (String)null);
         if(!reskinContent.slimeReskinAnimation){
         this.initializeClass(null,
-                "slimeboundResources/SlimeboundImages/char/shoulder2.png",
                 "slimeboundResources/SlimeboundImages/char/shoulder.png",
+                "slimeboundResources/SlimeboundImages/char/shoulderR.png",
                 "slimeboundResources/SlimeboundImages/char/corpse.png",
                 this.getLoadout(), 0.0F, 0.0F, 320.0F, 200.0F, new EnergyManager(3));
         }else {

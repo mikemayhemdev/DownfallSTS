@@ -20,29 +20,24 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
 
     private AbstractCard card;
     private StasisOrb o;
-    private boolean halfwayHit;
+    private float glowPoint;
     private boolean glowStartHit;
 
-    public AddCardToStasisEffect(AbstractCard srcCard, StasisOrb o, float startx, float starty, float targetx, float targety) {
-        this.card = srcCard.makeStatEquivalentCopy();
-        this.duration = 1.5F;
-        this.card.current_x = startx;
-        this.card.current_y = starty;
-        this.card.target_x = targetx;
-        this.card.target_y = targety;
-        this.o = o;
-        //AbstractDungeon.effectsQueue.add(new CardPoofEffect(this.card.target_x, this.card.target_y));
-        this.card.drawScale = 0.1F;
+    public AddCardToStasisEffect(AbstractCard srcCard, StasisOrb o, float startX, float startY, boolean instant) {
+        this.card = srcCard;
+        this.duration = this.startingDuration = instant ? 0.1F : 1.0F;
+        this.glowPoint = this.startingDuration * 0.25f;
+        this.card.target_x = startX;
+        this.card.target_y = startY;
         this.card.targetDrawScale = 0.75F;
-        //CardCrawlGame.sound.play("CARD_OBTAIN");
-        //AbstractDungeon.player.discardPile.addToTop(srcCard);
+        this.o = o;
     }
 
     public void update() {
         this.duration -= Gdx.graphics.getDeltaTime();
         this.card.update();
 
-        if (this.duration < 1.1F) {
+        if (this.duration < glowPoint) {
             if (!glowStartHit) {
                 this.card.beginGlowing();
                 this.card.tags.add(GuardianMod.STASISGLOW);
@@ -50,22 +45,9 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
                 glowStartHit = true;
             }
 
-            if (this.duration < 0.75F) {
-                //this.card.update();
-                if (!halfwayHit) {
-                    this.card.target_x = o.tX;
-                    this.card.target_y = o.tY;
-                    this.card.targetDrawScale = GuardianMod.stasisCardRenderScale;
-                    halfwayHit = true;
-                }
-
-                if (this.duration < 0.0F) {
-                    this.isDone = true;
-                    //this.card.drawScale();
-                    //AbstractDungeon.getCurrRoom().souls.discard(this.card, true);
-                }
+            if (this.duration < 0.0F) {
+                this.isDone = true;
             }
-
         }
     }
 
@@ -73,7 +55,6 @@ public class AddCardToStasisEffect extends AbstractGameEffect {
         if (!this.isDone) {
             this.card.render(sb);
         }
-
     }
 
     public void dispose() {

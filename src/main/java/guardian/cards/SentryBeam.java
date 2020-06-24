@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -81,9 +82,9 @@ public class SentryBeam extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.3F));
 
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
-        if (AbstractDungeon.player.hasEmptyOrb()) {
+        if (GuardianMod.canSpawnStasisOrb()) {
             AbstractGuardianCard newCard = new SentryWave();
             newCard.sockets = this.sockets;
             if (this.upgraded) newCard.upgrade();
@@ -91,9 +92,7 @@ public class SentryBeam extends AbstractGuardianCard {
             AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(newCard));
         }
 
-
         super.useGems(p, m);
-
     }
 
     public AbstractCard makeCopy() {

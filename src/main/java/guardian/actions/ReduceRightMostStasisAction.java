@@ -13,14 +13,13 @@ import guardian.orbs.StasisOrb;
 import guardian.powers.AutomayhemPower;
 
 public class ReduceRightMostStasisAction extends AbstractGameAction {
+    private final boolean fromAutomayhem;
 
-    private boolean fromRelic;
-
-    public ReduceRightMostStasisAction(boolean fromRelic) {
+    public ReduceRightMostStasisAction(boolean fromAutomayhem) {
         this.actionType = ActionType.DAMAGE;
         this.attackEffect = AttackEffect.SLASH_HORIZONTAL;
         this.duration = 0.01F;
-        this.fromRelic = fromRelic;
+        this.fromAutomayhem = fromAutomayhem;
 
     }
 
@@ -29,9 +28,9 @@ public class ReduceRightMostStasisAction extends AbstractGameAction {
             GuardianMod.logger.info("ReduceRightMostStasis firing.");
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
                 if (o instanceof StasisOrb) {
-                    if ((!this.fromRelic || (this.fromRelic && ((StasisOrb) o).passiveAmount > 1))) {
+                    if (!this.fromAutomayhem || ((StasisOrb) o).passiveAmount > 1) {
                         o.onStartOfTurn();
-                        if (this.fromRelic) AbstractDungeon.player.getPower(AutomayhemPower.POWER_ID).flash();
+                        if (this.fromAutomayhem && AbstractDungeon.player.hasPower(AutomayhemPower.POWER_ID)) AbstractDungeon.player.getPower(AutomayhemPower.POWER_ID).flash();
                         break;
                     }
                 }

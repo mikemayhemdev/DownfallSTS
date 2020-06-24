@@ -26,17 +26,16 @@ public class PreprogramAction extends AbstractGameAction {
         TEXT = uiStrings.TEXT;
     }
 
-    private float startingDuration;
 
     public PreprogramAction(int numCards) {
         this.amount = numCards;
         this.actionType = ActionType.CARD_MANIPULATION;
-        this.startingDuration = Settings.ACTION_DUR_FAST;
-        this.duration = this.startingDuration;
+        this.startDuration = Settings.ACTION_DUR_FAST;
+        this.duration = this.startDuration;
     }
 
     public void update() {
-        if (this.duration == this.startingDuration) {
+        if (this.duration == this.startDuration) {
             if (AbstractDungeon.player.drawPile.isEmpty()) {
                 this.isDone = true;
                 return;
@@ -50,14 +49,8 @@ public class PreprogramAction extends AbstractGameAction {
 
             AbstractDungeon.gridSelectScreen.open(tmpGroup, 1, false, TEXT[0]);
         } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            Iterator var3 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
-
-            while (var3.hasNext()) {
-                AbstractCard c = (AbstractCard) var3.next();
-                if (GuardianMod.canSpawnStasisOrb()) {
-
-                    AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c));
-                }
+            for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c, AbstractDungeon.player.drawPile));
             }
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();

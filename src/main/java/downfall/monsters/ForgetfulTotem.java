@@ -43,7 +43,7 @@ public class ForgetfulTotem extends AbstractTotemMonster {
 
     public ForgetfulTotem() {
         super(NAME, ID, downfallMod.assetPath("images/monsters/livingwall/livingwall.png"));
-        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/livingwall.atlas"), downfallMod.assetPath("images/monsters/livingwall/livingwall.json"), 1.0F);
+        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/livingwall3.atlas"), downfallMod.assetPath("images/monsters/livingwall/livingwall3.json"), 1.0F);
 
         this.drawY = this.drawY + 250F * Settings.scale;
 

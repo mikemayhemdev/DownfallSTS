@@ -3,6 +3,7 @@ package guardian.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,10 +15,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.SweepingBeamEffect;
 import guardian.GuardianMod;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+import guardian.powers.BeamBuffPower;
 
 
-public class MultiBeam extends AbstractGuardianCard {
+public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("MultiBeam");
     public static final String NAME;
     public static final String IMG_PATH = "cards/multiBeam.png";
@@ -127,6 +130,16 @@ public class MultiBeam extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BeamBuffPower(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber), this.magicNumber));
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+
     }
 }
 

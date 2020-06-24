@@ -45,7 +45,7 @@ public class GrowingTotem extends AbstractTotemMonster {
 
     public GrowingTotem() {
         super(NAME, ID, downfallMod.assetPath("images/monsters/livingwall/livingwall.png"));
-        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/livingwall.atlas"), downfallMod.assetPath("images/monsters/livingwall/livingwall.json"), 1.0F);
+        this.loadAnimation(downfallMod.assetPath("images/monsters/livingwall/livingwall2.atlas"), downfallMod.assetPath("images/monsters/livingwall/livingwall2.json"), 1.0F);
 
         this.drawY = this.drawY + 500F * Settings.scale;
 

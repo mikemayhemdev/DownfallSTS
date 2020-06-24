@@ -10,9 +10,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
+import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
 
-public class Orbwalk extends AbstractGuardianCard {
+public class Orbwalk extends AbstractGuardianCard implements InStasisCard {
     public static final String ID = GuardianMod.makeID("Orbwalk");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -79,6 +80,16 @@ public class Orbwalk extends AbstractGuardianCard {
             }
         }
         this.initializeDescription();
+    }
+
+    @Override
+    public void onStartOfTurn(StasisOrb orb) {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+    }
+
+    @Override
+    public void onEvoke(StasisOrb orb) {
+
     }
 }
 
