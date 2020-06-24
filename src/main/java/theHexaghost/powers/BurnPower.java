@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -81,18 +82,18 @@ public class BurnPower extends TwoAmountPower implements CloneablePowerInterface
     public void explode(){
         this.flashWithoutSound();
         this.addToBot(new VFXAction(new ExplosionSmallEffectGreen(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, LivingBombPower.POWER_ID));
+
         if (owner.hasPower(LivingBombPower.POWER_ID)){
             for (AbstractMonster m: AbstractDungeon.getCurrRoom().monsters.monsters){
                 if (!m.isDeadOrEscaped()){
                     this.addToBot(new LoseHPAction(m, owner, amount, AbstractGameAction.AttackEffect.FIRE));
                 }
             }
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, LivingBombPower.POWER_ID));
         } else {
             this.addToBot(new LoseHPAction(owner, owner, amount, AbstractGameAction.AttackEffect.FIRE));
         }
 
-        addToBot(new RemoveSpecificPowerAction(owner, owner, ID));
     }
 
     @Override

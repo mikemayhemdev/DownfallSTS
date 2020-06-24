@@ -19,7 +19,7 @@ public class DarklingSlime
 
     public DarklingSlime() {
 
-        super(ID, new Color(0F, 0F / 255F, 0F / 255F, 100F), atlasString, skeletonString, false, true, 4, 3, true, new Color(0F, 0F, 0F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"));
+        super(ID, new Color(0F, 0F / 255F, 0F / 255F, 100F), atlasString, skeletonString, false, true, 3, 3, true, new Color(0F, 0F, 0F, 1), SlimeFlareEffect.OrbFlareColor.AGGRESSIVE, new Texture("slimeboundResources/SlimeboundImages/orbs/3.png"));
         spawnVFX();
 
     }

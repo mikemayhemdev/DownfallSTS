@@ -88,24 +88,24 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         addToDeck(new EnWallop(), true);
 
         //Turn 2
-        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnDefendPurple(), true);
         addToDeck(new EnStrikePurple(), false);
         addToDeck(new EnRitualDagger(), true);
 
         //Turn 3
-        addToDeck(new EnReachHeaven(), true);
+        addToDeck(new EnReachHeaven(), false);
         addToDeck(new EnWaveOfTheHand(), false);
         addToDeck(new EnStrikePurple(), false);
 
         //Turn 4
-        addToDeck(new EnReachHeaven(), true);
+        addToDeck(new EnReachHeaven(), false);
         addToDeck(new EnCrushJoints(), false);
         addToDeck(new EnThroughViolence(), false);
 
         //Turn 5
         addToDeck(new EnLikeWater(), false);
         addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnSashWhip(), false);
+        addToDeck(new EnSashWhip(), true);
 
         //Turn 6
         addToDeck(new EnDevaForm(), false);
