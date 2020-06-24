@@ -353,7 +353,7 @@
   },
   "hexamod:Haunted": {
     "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL At the start of your turn, exhaust a random other card in your hand."
+    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Council's Justice",

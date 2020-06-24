@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,7 +23,7 @@ public class Icky extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
-    private static final int COST = -2;
+    private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -39,6 +40,7 @@ public class Icky extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 1;
         cardsToPreview = new Slimed();
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -46,12 +48,10 @@ public class Icky extends AbstractSlimeboundCard {
             this.useBlueCandle(p);
         } else {
             AbstractDungeon.actionManager.addToBottom(new UseCardAction(this));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Slimed(), 1));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Slimed(), 1, true, false));
+
         }
-    }
-
-    public void triggerWhenDrawn() {
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Slimed(), 1));
     }
 
     public AbstractCard makeCopy() {

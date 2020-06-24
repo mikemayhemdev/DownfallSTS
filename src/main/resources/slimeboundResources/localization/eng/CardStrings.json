@@ -311,7 +311,7 @@
   },
   "Slimebound:Icky": {
     "NAME": "Icky",
-    "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed Status to your hand."
+    "DESCRIPTION": "Add a Slimed Status to your hand and draw pile. NL Exhaust."
   },
   "Slimebound:DivideAndConquerConquer": {
     "NAME": "Conquer",

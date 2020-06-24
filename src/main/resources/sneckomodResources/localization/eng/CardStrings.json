@@ -282,6 +282,6 @@
   },
   "sneckomod:Bewildered": {
     "NAME": "Bewildered",
-    "DESCRIPTION": "Unplayable. NL When you play a card, sneckomod:Muddle your hand, then discard this."
+    "DESCRIPTION": "When you play another card, sneckomod:Muddle your hand, then discard this. NL Exhaust."
   }
 }
