@@ -2,6 +2,9 @@ package theHexaghost.cards;
 
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -15,6 +18,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.EtherealMod;
 import guardian.GuardianMod;
 import slimebound.SlimeboundMod;
 import slimebound.cards.AbstractSlimeboundCard;
@@ -59,8 +63,25 @@ public class Haunted extends CustomCard {
     }
 
     @Override
+    public void triggerWhenDrawn() {
+        super.triggerWhenDrawn();
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                    if (!c.isEthereal) {
+                        CardModifierManager.addModifier(c, new EtherealMod());
+                        c.superFlash(Color.PURPLE.cpy());
+                    }
+                }
+            }
+        });
+
+    }
+
+    @Override
     public void atTurnStart() {
-        AbstractDungeon.actionManager.addToBottom(new HauntedAction(this));
     }
 
     public AbstractCard makeCopy() {

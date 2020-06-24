@@ -61,13 +61,8 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         addToDeck(new EnSwiftStrike(), false);
 
         //Turn 5
-        addToDeck(new EnSwiftStrike(), false);
-        addToDeck(new EnGoodInstincts(), false);
-        addToDeck(new EnTheBomb(), false);
-
-        //Turn 6
         addToDeck(new EnPanacea(), false);
-        addToDeck(new EnHandOfGreed(), false);
+        addToDeck(new EnSwiftStrike(), false);
         addToDeck(new EnMagnetism(), false);
 
 

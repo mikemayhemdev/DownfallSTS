@@ -24,6 +24,7 @@ public class BossSetPatch {
                 if (s == "2 Thieves") {
                     nukeLooter2 = true;
                 }
+
             }
 
             if (nukeLooter){
@@ -37,6 +38,7 @@ public class BossSetPatch {
                 AbstractDungeon.monsterList.add("downfall:LooterAlt2");
 
             }
+
 
         }
         if (__instance instanceof TheEnding && EvilModeCharacterSelect.evilMode) {

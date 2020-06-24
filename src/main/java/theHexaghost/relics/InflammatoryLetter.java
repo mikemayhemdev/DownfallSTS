@@ -25,7 +25,7 @@ public class InflammatoryLetter extends CustomRelic {
     public void atBattleStart() {
         flash();
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
-        grayscale = true;
+        //grayscale = true;
     }
 
     @Override

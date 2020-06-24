@@ -99,8 +99,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 @SpireInitializer
 public class downfallMod implements
         OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber
-        , AddAudioSubscriber
-{
+        , AddAudioSubscriber {
     public static final String modID = "downfall";
 
 
@@ -885,7 +884,7 @@ public class downfallMod implements
     @Override
     public void receiveStartGame() {
         if (CardCrawlGame.loadingSave) {
-            GoldToSoulPatches.changeGoldToSouls(false);
+            GoldToSoulPatches.changeGoldToSouls(!evilMode);
         }
         if (!CardCrawlGame.loadingSave) {
             possEncounterList.clear();
@@ -933,7 +932,7 @@ public class downfallMod implements
 
     @Override
     public int receiveOnPlayerDamaged(int i, DamageInfo damageInfo) {
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID))  || ModHelper.isModEnabled(WorldOfGoo.ID)) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(WorldOfGoo.ID)) || ModHelper.isModEnabled(WorldOfGoo.ID)) {
             SlimeboundMod.logger.info("World of goo triggered");
             if (damageInfo.output > AbstractDungeon.player.currentBlock) {
 

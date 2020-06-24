@@ -1,5 +1,6 @@
 package downfall.ui.campfire;
 
+import basemod.ReflectionHacks;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -20,6 +21,7 @@ import downfall.relics.HeartBlessingGreen;
 import downfall.relics.HeartBlessingRed;
 import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
+import guardian.ui.EnhanceBonfireOption;
 
 public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
@@ -36,7 +38,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public BustKeyOption(Keys key) {
         this.key = key;
-        if (AbstractDungeon.player.gold < 50) {
+        if (AbstractDungeon.player.gold < 75) {
             this.usable = false;
             updateImage(key);
         } else {
@@ -57,9 +59,13 @@ public class BustKeyOption extends AbstractCampfireOption {
                     this.img = TextureLoader.getTexture(downfallMod.assetPath("images/ui/campfire/sapphireDisabled.png"));
                 }
                 if (!this.used) {
-                    this.description += TEXT[5];
+                    if (this.usable) {
+                        this.description += TEXT[5];
+                    } else {
+                        this.description = TEXT[8];
+                    }
                 } else {
-                    this.description = "";
+                    this.description = TEXT[7];
                 }
                 break;
             case EMERALD:
@@ -70,9 +76,13 @@ public class BustKeyOption extends AbstractCampfireOption {
                     this.img = TextureLoader.getTexture(downfallMod.assetPath("images/ui/campfire/emeraldDisabled.png"));
                 }
                 if (!this.used) {
-                    this.description += TEXT[6];
+                    if (this.usable) {
+                        this.description += TEXT[6];
+                    } else {
+                        this.description = TEXT[8];
+                    }
                 } else {
-                    this.description = "";
+                    this.description = TEXT[7];
                 }
                 break;
             default:
@@ -83,22 +93,42 @@ public class BustKeyOption extends AbstractCampfireOption {
                     this.img = TextureLoader.getTexture(downfallMod.assetPath("images/ui/campfire/rubyDisabled.png"));
                 }
                 if (!this.used) {
-                    this.description += TEXT[4];
+                    if (this.usable) {
+                        this.description += TEXT[4];
+                    } else {
+                        this.description = TEXT[8];
+                    }
                 } else {
-                    this.description = "";
+                    this.description = TEXT[7];
                 }
         }
     }
 
     public void update() {
+        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+
+        if (this.hb.hovered) {
+
+            if (!this.hb.clickStarted) {
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, Settings.scale));
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, Settings.scale));
+
+            } else {
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, 0.9F * Settings.scale));
+
+            }
+        } else {
+            ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, 0.9F * Settings.scale));
+        }
+
         super.update();
 
         if (!this.used) {
-            if (AbstractDungeon.player.gold < 50 && this.usable) {
+            if (AbstractDungeon.player.gold < 75 && this.usable) {
                 this.usable = false;
                 updateImage(key);
             }
-            if (AbstractDungeon.player.gold >= 50 && !this.usable) {
+            if (AbstractDungeon.player.gold >= 75 && !this.usable) {
                 this.usable = true;
                 updateImage(key);
             }
@@ -128,7 +158,7 @@ public class BustKeyOption extends AbstractCampfireOption {
         if (this.usable) {
             AbstractDungeon.effectList.add(new BustKeyEffect());
             AbstractPlayer p = AbstractDungeon.player;
-            p.loseGold(50);
+            p.loseGold(75);
             this.used = true;
             this.usable = false;
             switch (key) {

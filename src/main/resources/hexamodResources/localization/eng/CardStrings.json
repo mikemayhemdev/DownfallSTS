@@ -255,7 +255,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy gains !M! hexamod:Soulburn at the start of each of its turns."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy gains !M! hexamod:Soulburn at the start of each of its turns until hexamod:Soulburn detonates."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
@@ -353,7 +353,7 @@
   },
   "hexamod:Haunted": {
     "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL At the start of your turn, exhaust a random other card in your hand."
+    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Council's Justice",

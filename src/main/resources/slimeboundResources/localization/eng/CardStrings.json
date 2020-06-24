@@ -311,7 +311,7 @@
   },
   "Slimebound:Icky": {
     "NAME": "Icky",
-    "DESCRIPTION": "Unplayable. NL When drawn, add a Slimed Status to your hand."
+    "DESCRIPTION": "Add a Slimed Status to your hand and draw pile. NL Exhaust."
   },
   "Slimebound:DivideAndConquerConquer": {
     "NAME": "Conquer",
@@ -375,11 +375,11 @@
   },
   "Slimebound:Darklings": {
     "NAME": "Darkling Trio",
-    "DESCRIPTION": "Split into a slimeboundmod:Darkling_Slime three times. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Darkling_Slime three times. NL Exhaust."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL Does not remove slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consum - Does not remove slimeboundmod:Goop."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",

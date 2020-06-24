@@ -13,7 +13,7 @@ public class Rewind extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, COMMON
 
     public Rewind() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 

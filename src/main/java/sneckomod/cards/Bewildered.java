@@ -26,7 +26,7 @@ public class Bewildered extends CustomCard {
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
-    private static final int COST = -2;
+    private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
 
     private boolean activateThisTurn = false;
@@ -42,7 +42,7 @@ public class Bewildered extends CustomCard {
         super(ID, NAME, SneckoMod.makeCardPath("bewildered.png"), COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 1;
-
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,8 +1,11 @@
 package guardian.ui;
 
+import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.MathHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import guardian.GuardianMod;
@@ -41,5 +44,25 @@ public class FindGemsOption extends AbstractCampfireOption {
         AbstractDungeon.effectList.add(new CampfireFindGemsEffect());
         AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
 
+    }
+
+    @Override
+    public void update() {
+        float hackScale = (float) ReflectionHacks.getPrivate(this, AbstractCampfireOption.class, "scale");
+
+        if (this.hb.hovered) {
+
+            if (!this.hb.clickStarted) {
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, Settings.scale));
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, Settings.scale));
+
+            } else {
+                ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, 0.9F * Settings.scale));
+
+            }
+        } else {
+            ReflectionHacks.setPrivate(this, AbstractCampfireOption.class, "scale", MathHelper.scaleLerpSnap(hackScale, 0.9F * Settings.scale));
+        }
+        super.update();
     }
 }

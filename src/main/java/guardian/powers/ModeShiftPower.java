@@ -55,6 +55,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
 
     @Override
     public int onLoseHp(int damageAmount) {
+
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && this.active && !AbstractDungeon.player.hasPower(ConstructModePower.POWER_ID) && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
             this.amount -= damageAmount;
             if (this.amount <= 0) {
@@ -65,7 +66,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
                 AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BlurPower(AbstractDungeon.player, 1), 1));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, 1), 1));
-                this.activations++;
+               // this.activations++;
 
             }
         }

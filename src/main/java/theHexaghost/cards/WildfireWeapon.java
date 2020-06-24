@@ -10,8 +10,8 @@ public class WildfireWeapon extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, RARE
 
-    private static final int MAGIC = 4;
-    private static final int UPGRADE_MAGIC = 2;
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_MAGIC = 1;
 
     public WildfireWeapon() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
