@@ -21,16 +21,19 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity) {
         super(id, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
+        exhaust = true;
     }
 
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity, CardColor color) {
         super(id, -2, type, rarity, CardTarget.NONE, color);
         tags.add(CardTags.HEALING);
+        exhaust = true;
     }
 
     public AbstractUnknownCard(final String id, final String img, final CardType type, final CardRarity rarity) {
         super(id, img, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
+        exhaust = true;
     }
 
 
