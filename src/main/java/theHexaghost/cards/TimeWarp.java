@@ -25,8 +25,9 @@ public class TimeWarp extends AbstractHexaCard implements OnAdvanceOrRetractSubs
     }
 
     @Override
-    public void onAdvanceOrRetract() {
-        this.addToBot(new DiscardToHandAction(this));// 40
+    public void onAdvanceOrRetract(boolean endTurn) {
+        if (!endTurn)
+            this.addToBot(new DiscardToHandAction(this));// 40
     }
 
     public void upgrade() {
