@@ -13,7 +13,7 @@ public class FastForward extends AbstractHexaCard {
     //stupid intellij stuff SKILL, SELF, COMMON
 
     public FastForward() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         isEthereal = true;
     }
 
@@ -26,7 +26,11 @@ public class FastForward extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            //upgradeBaseCost(1);
+            this.isEthereal = false;
+
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

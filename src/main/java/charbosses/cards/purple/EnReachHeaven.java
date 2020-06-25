@@ -50,7 +50,7 @@ public class EnReachHeaven extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-        return autoPriority() + 5;
+        return autoPriority() + 15;
     }
 
     static {
