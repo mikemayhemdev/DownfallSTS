@@ -354,7 +354,7 @@
   },
   "hexamod:Haunted": {
     "NAME": "闹鬼",
-    "DESCRIPTION": "虚无 。 不能被打出 。 NL 你的回合开始时，随机 消耗 一张手牌。"
+    "DESCRIPTION": "虚无 。 不能被打出 。 NL 抽到时，你的手牌变为 虚无 。"
   },
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",

@@ -56,7 +56,7 @@
   },
   "Guardian:FierceBash": {
     "NAME": "猛烈痛击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL guardianmod:滴答 - 增加其伤害 !M! 点。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌 guardianmod:凝滞 。 NL guardianmod:滴答 - 增加其伤害 !M! 点。"
   },
   "Guardian:PolyBeam": {
     "NAME": "极光射线",
@@ -141,38 +141,38 @@
   },
   "Guardian:PackageShapes": {
     "NAME": "组件: 机械",
-    "DESCRIPTION": "增加一张时间炸弹，荆棘协议和反冲协议到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的时间炸弹，荆棘协议和反冲协议到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "DESCRIPTION": "增加一张 *时间炸弹 、 *荆棘协议 和 *反冲协议 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *时间炸弹 、 *荆棘协议 和 *反冲协议 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageDonuDeca": {
     "NAME": "组件: 先古",
-    "DESCRIPTION": "增加1张 先古攻击 , 先古防御 和 先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加1张已 升级 的 先古攻击 ，先古防御 和 先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "DESCRIPTION": "增加1张 *先古攻击 、 *先古防御 和 *先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加1张已 升级 的 *先古攻击 、 *先古防御 和 *先古建造 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageSphere": {
     "NAME": "组件: 圆球",
-    "DESCRIPTION": "增加一张球形护盾,硬化和浮动圆球到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的球形护盾，硬化和浮动圆球到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "DESCRIPTION": "增加一张 *球形护盾 、 *硬化 和 *浮动圆球 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *球形护盾 、 *硬化 和 *浮动圆球 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageSentry": {
     "NAME": "组件: 哨卫",
-    "DESCRIPTION": "增加一张哨兵射线和两张哨兵震荡到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的哨兵射线和两张哨兵震荡到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "DESCRIPTION": "增加一张 *哨卫射线 和两张 *哨卫震荡 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *哨卫射线 和两张 *哨卫震荡 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageWalker": {
     "NAME": "组件: 行者",
-    "DESCRIPTION": "增加一张圆球运转,行者爪击和焚烧到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的圆球运转,行者爪击和焚烧到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "DESCRIPTION": "增加一张 *圆球运转 、 *行者爪击 和 *焚烧 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *圆球运转 、 *行者爪击 和 *焚烧 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageAutomaton": {
     "NAME": "组件: 铜制",
-    "DESCRIPTION": "增加一张超能射线，铜制圆球和铜制装甲到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的超能射线，铜制圆球和铜制装甲 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "DESCRIPTION": "增加一张 *超能射线 、 *铜制圆球 和 *铜制装甲 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *超能射线 、 *铜制圆球 和 *铜制装甲 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:PackageDefect": {
     "NAME": "组件: 故障",
-    "DESCRIPTION": "增加一张重连，预编程和时间电容器到你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "增加一张已 升级 的重连，预编程和时间电容器到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
+    "DESCRIPTION": "增加一张 *重连 ， *预编程 和 *时间电容器 到你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "增加一张已 升级 的 *重连 、 *预编程 和 *时间电容器 到你的手牌。它们的费用本场战斗降低1点。 NL 消耗 。"
   },
   "Guardian:Planning": {
     "NAME": "规划",
@@ -181,11 +181,11 @@
   "Guardian:Recover": {
     "NAME": "恢复",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆中的 1 张牌 guardianmod:凝滞 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆的 !M! 张牌 guardianmod:凝滞 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将弃牌堆的最多 !M! 张牌 guardianmod:凝滞 。"
   },
   "Guardian:Emergency": {
     "NAME": "应激",
-    "DESCRIPTION": " guardianmod:加速 最右侧的 guardianmod:凝滞 到 0。 NL 消耗 。"
+    "DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滞 的牌返回手牌。 NL 消耗 。"
   },
   "Guardian:Clone": {
     "NAME": "克隆",
@@ -197,15 +197,15 @@
   },
   "Guardian:GemFinder": {
     "NAME": "宝石发现",
-    "DESCRIPTION": "战斗结束后，选择一张普通 guardianmod:宝石 加入你的牌库。"
+    "DESCRIPTION": "战斗结束后，选择一张普通 guardianmod:宝石 加入你的牌组。"
   },
   "Guardian:StasisField": {
     "NAME": "凝滞屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌的复制 guardianmod:凝滞 。 NL 消耗 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌 guardianmod:凝滞 。 NL 消耗 。"
   },
   "Guardian:StasisStrike": {
     "NAME": "凝滞打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌的复制 guardianmod:凝滞 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将这张牌 guardianmod:凝滞 。 NL 消耗 。"
   },
   "Guardian:FuturePlans": {
     "NAME": "未来计划",
@@ -219,8 +219,7 @@
   },
   "Guardian:FastForward": {
     "NAME": "快进",
-    "DESCRIPTION": "将所有 guardianmod:凝滞 中的牌 guardianmod:加速 。",
-    "UPGRADE_DESCRIPTION": "将所有 guardianmod:凝滞 中的牌 guardianmod:加速 两次。"
+    "DESCRIPTION": " guardianmod:加速 !M! 次。"
   },
   "Guardian:TimeCapacitor": {
     "NAME": "时间电容器",
@@ -248,7 +247,7 @@
   },
   "Guardian:Reroute": {
     "NAME": "重连",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 你打出的下一张非消耗攻击或技能牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL  guardianmod:凝滞 你打出的下一张非 消耗 攻击或技能牌。"
   },
   "Guardian:PiercingHide": {
   "NAME": "隐秘荆棘",
@@ -256,15 +255,15 @@
 },
   "Guardian:ShieldSpikes": {
     "NAME": "荆棘装甲",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果处于 guardianmod:防御模式 ，则再获得 !M! guardianmod:临时 荆棘 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果处于 guardianmod:防御模式 ，则再获得 !M! 点 guardianmod:临时 荆棘 。"
   },
   "Guardian:PrismaticBeam": {
     "NAME": "棱镜射线",
-    "DESCRIPTION": "造成 !D! 点伤害，每有一颗 guardianmod:宝石 重复一次。"
+    "DESCRIPTION": "每有一颗 guardianmod:宝石 造成 !D! 点伤害。"
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "棱镜屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 ，这张牌每有一颗 guardianmod:宝石 重复一次。"
+    "DESCRIPTION": "每有一颗 guardianmod:宝石 获得 !B! 点 格挡 。"
   },
   "Guardian:TemporalStrike": {
     "NAME": "质朴打击",
@@ -313,12 +312,12 @@
   },
   "Guardian:TimeSifter": {
     "NAME": "时间沙漏",
-    "DESCRIPTION": "在你的回合结束时， guardianmod:加速 最右侧的 guardianmod:凝滞 大于等于两点的牌。",
-    "UPGRADE_DESCRIPTION": "固有 。在你的回合结束时， guardianmod:加速 最右侧的 guardianmod:凝滞 大于等于两点的牌。"
+    "DESCRIPTION": "在你的回合开始时， guardianmod:加速 。",
+    "UPGRADE_DESCRIPTION": "固有 。在你的回合开始时， guardianmod:加速 。"
   },
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
-    "DESCRIPTION": "在你的回合开始时， 如果你没有 人工制品 ，获得 !M! 层人工制品并失去 [E] 。"
+    "DESCRIPTION": "在你的回合开始时， 如果你没有 人工制品 ，获得 !M! 层 人工制品 并失去 [E] 。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",
@@ -331,8 +330,8 @@
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
-    "DESCRIPTION": " guardianmod:宝石 。 NL  guardianmod:加速 最右侧的凝滞牌。",
-    "UPGRADE_DESCRIPTION": " guardianmod:加速 最右侧的凝滞牌。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL  guardianmod:加速 。",
+    "UPGRADE_DESCRIPTION": " guardianmod:加速 。"
   },
   "Guardian:Gem_Purple": {
     "NAME": "紫晶",
