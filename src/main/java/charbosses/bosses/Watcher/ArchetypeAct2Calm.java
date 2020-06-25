@@ -105,7 +105,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         //Turn 5
         addToDeck(new EnLikeWater(), false);
         addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnSashWhip(), true);
+        addToDeck(new EnSashWhip(), false);
 
         //Turn 6
         addToDeck(new EnDevaForm(), false);
