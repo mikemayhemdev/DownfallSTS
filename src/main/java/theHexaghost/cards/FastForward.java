@@ -20,7 +20,7 @@ public class FastForward extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new ExtinguishCurrentFlameAction());
         atb(new ChargeCurrentFlameAction());
-        atb(new AdvanceAction());
+        atb(new AdvanceAction(false));
     }
 
     public void upgrade() {

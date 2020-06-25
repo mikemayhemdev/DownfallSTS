@@ -26,7 +26,7 @@ public class EndTurnAdvance {
                 p.flash();
                 AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
             } else
-                AbstractDungeon.actionManager.addToBottom(new AdvanceAction());
+                AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                 gf.reset();
             }
