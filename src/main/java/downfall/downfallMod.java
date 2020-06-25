@@ -500,10 +500,11 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(FaceTrader_Evil.ID, FaceTrader_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("Exordium")))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(FaceTrader.ID)
 
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("Exordium")))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -530,10 +531,12 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Designer_Evil.ID, Designer_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond")))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Designer.ID)
                 //Event Type//
+
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond")))
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
@@ -638,10 +641,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(KnowingSkull_Evil.ID, KnowingSkull_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 //Additional Condition//
-                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12))
+                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12) && AbstractDungeon.id.equals("TheCity"))
                 .overrideEvent(com.megacrit.cardcrawl.events.city.KnowingSkull.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -712,9 +715,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Nloth_Evil.ID, Nloth_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Nloth.ID)
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity")))
 
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -731,9 +735,11 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Portal_Evil.ID, Portal_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheBeyond"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(SecretPortal.ID)
+
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheBeyond")))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -760,10 +766,11 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Joust_Evil.ID, Joust_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(TheJoust.ID)
                 //Event Type//
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity")))
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 

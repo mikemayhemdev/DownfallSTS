@@ -34,7 +34,7 @@ public class MatchstickCase extends CustomRelic {
         if (this.firstTurn) {// 49
             this.flash();// 50
             addToBot(new ChargeCurrentFlameAction());
-            addToBot(new AdvanceAction());
+            addToBot(new AdvanceAction(false));
             this.firstTurn = false;// 53
         }
     }

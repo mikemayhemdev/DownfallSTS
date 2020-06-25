@@ -48,6 +48,8 @@ public class Augmenter extends AbstractMonster {
         this.stateData.setMix("Hit", "Idle", 0.2F);
         this.stateData.setMix("Attack", "Idle", 0.2F);
         this.state.setTimeScale(0.8F);
+
+        this.type = EnemyType.ELITE;
     }
 
     @Override

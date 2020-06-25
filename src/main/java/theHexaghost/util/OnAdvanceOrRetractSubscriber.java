@@ -1,7 +1,7 @@
 package theHexaghost.util;
 
 public interface OnAdvanceOrRetractSubscriber {
-    default void onAdvanceOrRetract() {
+    default void onAdvanceOrRetract(boolean endTurn) {
 
     }
 }

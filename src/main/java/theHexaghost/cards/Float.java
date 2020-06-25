@@ -41,7 +41,7 @@ public class Float extends AbstractHexaCard {
     public void doChoiceStuff(OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoAdvance":
-                atb(new AdvanceAction());
+                atb(new AdvanceAction(false));
                 break;
             case "octo:OctoRetract":
                 atb(new RetractAction());
@@ -58,7 +58,7 @@ public class Float extends AbstractHexaCard {
         if (upgraded) {
             atb(new OctoChoiceFloat(this));
         } else {
-            atb(new AdvanceAction());
+            atb(new AdvanceAction(false));
         }
 
 

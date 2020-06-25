@@ -52,7 +52,7 @@ public class GhostflameHelper {
         return x;
     }
 
-    public static void advance() {
+    public static void advance(boolean endTurn) {
         AbstractGhostflame x = hexaGhostFlames.get((hexaGhostFlames.indexOf(activeGhostFlame) + 1) % hexaGhostFlames.size());
         if (x.charged) {
             x.extinguish();
@@ -60,10 +60,10 @@ public class GhostflameHelper {
         x.activate();
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAdvanceSubscriber) ((OnAdvanceSubscriber) p).onAdvance();
-            if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract();
+            if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract(endTurn);
         }
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract();
+            if (c instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract(endTurn);
         }
     }
 
@@ -79,10 +79,10 @@ public class GhostflameHelper {
         x.activate();
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnRetractSubscriber) ((OnRetractSubscriber) p).onRetract();
-            if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract();
+            if (p instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) p).onAdvanceOrRetract(false);
         }
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract();
+            if (c instanceof OnAdvanceOrRetractSubscriber) ((OnAdvanceOrRetractSubscriber) c).onAdvanceOrRetract(false);
         }
     }
 

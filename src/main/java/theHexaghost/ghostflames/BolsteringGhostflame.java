@@ -28,7 +28,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
 
     public BolsteringGhostflame(float x, float y) {
         super(x, y);
-        block = 6;
+        block = 4;
 
         //this.textColor = new Color(.75F,.75F,1F,1F);
         this.triggersRequired = 1;
