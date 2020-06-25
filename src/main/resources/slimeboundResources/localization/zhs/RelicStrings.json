@@ -1,23 +1,23 @@
 {
   "Slimebound:AbsorbEndCombat": {
     "NAME": "黏液之心",
-    "FLAVOR": "你不是一个人！",
+    "FLAVOR": "我可真时髦。",
     "DESCRIPTIONS": [
-      "战斗开始时， 分裂 出1只随机史莱姆。"
+      "每当你 #yslimeboundmod:消耗黏液 ，恢复2点生命。"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
     "NAME": "黏液腐心",
-    "FLAVOR": "你和你的黏黏军团。",
+    "FLAVOR": "黏浆中的秘密。",
     "DESCRIPTIONS": [
-      "替代 #g黏液之心 。每场战斗开始 分裂 出2只随机史莱姆，获得1点 潜力 ， 获得1个史莱姆槽位。"
+      "每当你攻击一个带有 #yslimeboundmod:黏液 的敌人，恢复2点生命并获得3点格挡。"
     ]
   },
   "Slimebound:SlimedTailRelic": {
     "NAME": "黏质断尾",
     "FLAVOR": "一条完全由黏液包裹的断尾，战斗时可以迷惑敌人。",
     "DESCRIPTIONS": [
-      "当你的生命值低于50%时， 分裂 出一1只 酸液史莱姆 。你下一次承受的伤害将以移除你最早 分裂 出的史莱姆代替（每场战斗最多生效一次）。",
+      "当你的生命值低于 #b50% 时， #yslimeboundmod:分裂 出一1只 #y游击史莱姆 。你下一次承受的伤害将以 #yslimeboundmod:吸收 你最早 分裂 出的史莱姆代替（每场战斗最多生效一次）。",
       "这个遗物在本场战斗中已被使用，下次战斗才能继续使用。"
     ]
   },
@@ -25,7 +25,7 @@
     "NAME": "黏黏石",
     "FLAVOR": "据说它能根据你的情绪获得力量",
     "DESCRIPTIONS": [
-      "战斗开始时， 分裂 出1只 污泥史莱姆 并获得 #b1 点 潜力 。"
+      "战斗开始时， #yslimeboundmod:分裂 出1只 #yslimeboundmod:污泥史莱姆 并获得 #b1 点 #yslimeboundmod:潜力 。"
     ]
   },
   "Slimebound:DailySplitRelic": {
@@ -39,7 +39,7 @@
     "NAME": "破烂黏液",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "战斗开始时，生成1只 破烂史莱姆 。 NL 在休息处，你可以献上一张 #g罕见牌 使它造成的的伤害+1，或献上一张 #y稀有牌 使它造成的伤害+2，或献上一张 #r诅咒牌 使它造成的伤害-2。",
+      "战斗开始时，生成1只 #y破烂史莱姆 。 NL 在休息处，你可以献上一张 #g罕见牌 使它造成的的伤害 #b+1 ，或献上一张 #y稀有牌 使它造成的伤害 #b+2 ，或献上一张 普通牌 使它造成的伤害 #b-1 ，或献上一张 #r诅咒牌 使它造成的伤害 #b-2。",
       "从牌堆中移除一张牌，改变破烂史莱姆的伤害。",
       "没有可以给破烂史莱姆的东西了。"
     ]
@@ -48,14 +48,14 @@
     "NAME": "贪婪黏液",
     "FLAVOR": "尖塔里找到的囤金子的朋友。",
     "DESCRIPTIONS": [
-      "战斗开始时，生成1只贪婪史莱姆。 NL 在休息处，贪婪史莱姆会吞食50金币并使它造成的伤害+1。"
+      "战斗开始时，生成1只 #y贪婪史莱姆 。 NL 在休息处， #y贪婪史莱姆 会吞食 #b50 金币并使它造成的伤害 #b+1 。"
     ]
   },
   "Slimebound:PreparedRelic": {
-    "NAME": "黏茶具套装",
-    "FLAVOR": "显然不是夜宵的好餐具。",
+    "NAME": "黏粥",
+    "FLAVOR": "尝起来很糟，但极其健康。",
     "DESCRIPTIONS": [
-      "在休息处后的下1场战斗开始时，将1张 #g伺机待发 加入手牌，它的耗能变为0。"
+      "在休息处后的下1场战斗开始时，将1张 #y伺机待发 加入手牌，它的耗能变为 #b0 。"
     ]
   },
   "Slimebound:StudyCardRelic": {
@@ -69,29 +69,29 @@
     "NAME": "黏液居民",
     "FLAVOR": "是它跟着我回家的。我能收养它吗？",
     "DESCRIPTIONS": [
-      "战斗开始时， 分裂 出1只 好斗史莱姆 。"
+      "战斗开始时， #yslimeboundmod:分裂 出1只 #yslimeboundmod好斗史莱姆 。"
     ]
   },
   "Slimebound:SlimedSkullRelic": {
     "NAME": "黏蛇头骨",
     "FLAVOR": "一个非常恶心的异蛇头骨，灰尘和污垢像胶一样粘在上面，又脏又黏。",
     "DESCRIPTIONS": [
-      "每当你给予敌人 #y黏液 ，额外给予 #b",
-      " 层 #y黏液."
+      "每当你给予敌人 #yslimeboundmod:黏液 ，额外给予 #b",
+      " 层 #yslimeboundmod:黏液."
     ]
   },
   "Slimebound:MaxSlimesRelic": {
     "NAME": "陆军旗",
     "FLAVOR": "你和你的黏黏军团。",
     "DESCRIPTIONS": [
-      "战斗开始时， 分裂 出1只 水蛭史莱姆 并获得1个史莱姆槽位。"
+      "战斗开始时， #yslimeboundmod:分裂 出1只 #yslimeboundmod:水蛭史莱姆 并获得 #b1 个史莱姆槽位。"
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
     "NAME": "保护齿轮",
     "FLAVOR": "进攻是最好的防守！",
     "DESCRIPTIONS": [
-      "自身受到来自 冲撞 牌的伤害降低 1 点。"
+      "自身受到来自 #yslimeboundmod:冲撞 牌的伤害降低 #b1 点。"
     ]
   },
     "Slimebound:TarBlob": {
@@ -102,7 +102,7 @@
     ]
   },
   "Slimebound:StickyStick": {
-    "NAME": "粘胶方块",
+    "NAME": "粘胶立方体",
     "FLAVOR": "嘿，它粘到你身上了。",
     "DESCRIPTIONS": [
       "每当你抽到 #r诅咒 或 #y状态 牌时，抽 #b1 张牌。"
