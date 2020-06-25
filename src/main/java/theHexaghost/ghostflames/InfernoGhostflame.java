@@ -62,7 +62,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
             }
         }
         if (GhostflameHelper.activeGhostFlame == this){
-            atb(new AdvanceAction());
+            atb(new AdvanceAction(false));
         }
 
     }

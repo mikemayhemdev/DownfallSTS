@@ -27,7 +27,7 @@ public class EndTurnAdvance {
                 AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
             } else
 
-                if (GhostflameHelper.activeGhostFlame.charged) AbstractDungeon.actionManager.addToBottom(new AdvanceAction());
+                if (GhostflameHelper.activeGhostFlame.charged) AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
 
 
        
