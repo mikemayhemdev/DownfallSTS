@@ -390,7 +390,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());
-        BaseMod.addCard(new BronzeBeam());
+     //   BaseMod.addCard(new BronzeBeam());
         BaseMod.addCard(new LevelUp());
         BaseMod.addCard(new SplitBruiser());
         BaseMod.addCard(new SplitAcid());
@@ -491,7 +491,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         UnlockTracker.unlockCard(Strike_Slimebound.ID);
         UnlockTracker.unlockCard(Defend_Slimebound.ID);
-        UnlockTracker.unlockCard(BronzeBeam.ID);
+        //UnlockTracker.unlockCard(BronzeBeam.ID);
         UnlockTracker.unlockCard(LevelUp.ID);
         UnlockTracker.unlockCard(Tackle.ID);
         UnlockTracker.unlockCard(Schlurp.ID);
