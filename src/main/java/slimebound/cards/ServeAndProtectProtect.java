@@ -39,8 +39,8 @@ public class ServeAndProtectProtect extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
 
-        this.baseBlock = 8;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.baseBlock = 6;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.exhaust = true;
     }
 
@@ -75,7 +75,7 @@ public class ServeAndProtectProtect extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            //upgradeBlock(1);
+            upgradeBlock(2);
             upgradeMagicNumber(1);
         }
     }

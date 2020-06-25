@@ -29,6 +29,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.rewards.RewardSave;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import downfall.downfallMod;
@@ -498,7 +499,7 @@ public static void saveData() {
     @Override
     public void receiveSetUnlocks() {
 
-        /*
+
         unlocks0 = new CustomUnlockBundle(
                 ShieldCharger.ID, Orbwalk.ID, FierceBash.ID
         );
@@ -544,7 +545,7 @@ public static void saveData() {
         BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
 
         BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
-*/
+
     }
 
     public void clearUnlockBundles() {
