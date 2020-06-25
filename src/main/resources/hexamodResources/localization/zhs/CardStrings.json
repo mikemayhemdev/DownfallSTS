@@ -83,7 +83,7 @@
   },
   "hexamod:CrushingStance": {
     "NAME": "撞击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为崩溃鬼火。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为碾压鬼火。 NL 消耗 。"
   },
   "hexamod:EmpoweringStance": {
     "NAME": "高热",
@@ -285,8 +285,8 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
-    "DESCRIPTION": "保留 。 NL hexamod:点燃 地狱火 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:激活 的鬼火。 NL hexamod:点燃 地狱火 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL hexamod:点燃 狱焱鬼火 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:激活 的鬼火。 NL hexamod:点燃 狱焱鬼火 。 NL 消耗 。"
   },
   "hexamod:ChargedBarrage": {
     "NAME": "充能弹幕",
@@ -298,8 +298,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "启示录",
-    "DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] 。 NL hexamod:激活 地狱火。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 地狱火。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
   "hexamod:DynamicBlow": {
     "NAME": "动态攻击",
@@ -320,8 +320,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "决战末世",
-    "DESCRIPTION": "下一次你 hexamod:点燃 地狱火 且全部的 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。",
-    "UPGRADE_DESCRIPTION": "下一次你 hexamod:点燃 地狱火 且至少 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。"
+    "DESCRIPTION": "下一次你 hexamod:点燃 狱焱鬼火 且全部的 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。",
+    "UPGRADE_DESCRIPTION": "下一次你 hexamod:点燃 狱焱鬼火 且至少 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。"
   },
   "hexamod:FirstSeal": {
     "NAME": "第一容器",

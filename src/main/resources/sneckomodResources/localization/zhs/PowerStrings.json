@@ -25,7 +25,7 @@
     ]
   },
   "sneckomod:MudshieldPower": {
-    "NAME": "泥泞护盾",
+    "NAME": "模糊护盾",
     "DESCRIPTIONS": [
       "每当你 #y混淆 一张牌，下一回合获得 #b",
       " 点 #y格挡 。"

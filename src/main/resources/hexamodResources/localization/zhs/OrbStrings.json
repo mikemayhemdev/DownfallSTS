@@ -13,7 +13,7 @@
     ]
   },
   "hexamod:CrushingGhostflame": {
-    "NAME": "崩溃鬼火",
+    "NAME": "碾压鬼火",
     "DESCRIPTION": [
       "#y已点燃 。 ",
 	  "#y激活 。 NL 本回合再打出 #b" ,
@@ -37,7 +37,7 @@
     ]
   },
     "hexamod:InfernoGhostflame": {
-    "NAME": "地狱鬼火",
+    "NAME": "狱焱鬼火",
     "DESCRIPTION": [
       "#y已点燃 。 ",
 	  "#y激活 。 NL 本回合再使用 [E] [E] [E] 将其 #y点燃 。",
