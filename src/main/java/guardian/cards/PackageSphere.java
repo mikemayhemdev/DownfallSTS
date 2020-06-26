@@ -55,6 +55,16 @@ public class PackageSphere extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+
+        prev1 = constPrev1;
+        prev2 = constPrev2;
+        prev3 = constPrev3;
+
+        if (upgraded){
+            prev1.upgrade();
+            prev2.upgrade();
+            prev3.upgrade();
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -113,67 +123,96 @@ public class PackageSphere extends AbstractGuardianCard {
     public void renderCardTip(SpriteBatch sb) {
         super.renderCardTip(sb);
 
-        //Removes the preview when the player is manipulating the card or if the card is locked
-        if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
-            return;
-        }
-
-        float drawScale = 0.5f;
-        float yPosition1 = this.current_y + this.hb.height * 0.75f;
-        float yPosition2 = this.current_y + this.hb.height * 0.25f;
-        float yPosition3 = this.current_y - this.hb.height * 0.25f;
-
-        //changes the Arcana preview to render below the Arcana in the shop so it doesn't clip out of the screen
-        if (AbstractDungeon.screen == AbstractDungeon.CurrentScreen.SHOP) {
-            yPosition1 = this.current_y - this.hb.height * 0.75f;
-            yPosition2 = this.current_y - this.hb.height * 0.25f;
-            yPosition3 = this.current_y + this.hb.height * 0.25f;
-        }
-
-        float xPosition1;
-        float xPosition2;
-        float xPosition3;
-        float xOffset1 = -this.hb.width * 0.75f;
-        float xOffset2 = -this.hb.width * 0.25f;
-        float xOffset3 = this.hb.width * 0.25f;
-
-        //inverts the x position if the card is a certain amount to the right to prevent clipping issues
-        if (this.current_x > Settings.WIDTH * 0.75F) {
-            xOffset1 = -xOffset1;
-            xOffset2 = -xOffset2;
-            xOffset3 = -xOffset3;
-        }
-
-        xPosition1 = this.current_x + xOffset1;
-        xPosition2 = this.current_x + xOffset2;
-        xPosition3 = this.current_x + xOffset3;
-
-        if (prev1 != null) {
-            AbstractCard card = prev1.makeStatEquivalentCopy();
-            if (card != null) {
-                card.drawScale = drawScale;
-                card.current_x = xPosition1;
-                card.current_y = yPosition3;
-                card.render(sb);
+        if (!flipPreviewMode) {
+            //Removes the preview when the player is manipulating the card or if the card is locked
+            if (!hb.hovered || isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
+                return;
             }
-        }
-        if (prev2 != null) {
-            AbstractCard card = prev2.makeStatEquivalentCopy();
-            if (card != null) {
-                card.drawScale = drawScale;
-                card.current_x = xPosition1;
-                card.current_y = yPosition2;
-                card.render(sb);
+
+            float drawScale = 0.5f;
+            float yPosition1 = Settings.HEIGHT * 0.2F;
+
+            float xPosition1 = Settings.WIDTH * 0.35F;
+            float xPosition2 = Settings.WIDTH * 0.5F;
+            float xPosition3 = Settings.WIDTH * 0.65F;
+
+            if (prev1 != null) {
+                AbstractCard card = prev1.makeStatEquivalentCopy();
+                if (card != null) {
+                    card.drawScale = drawScale;
+                    card.current_x = xPosition1;
+                    card.current_y = yPosition1;
+                    card.render(sb);
+                }
             }
-        }
-        if (prev3 != null) {
-            AbstractCard card = prev3.makeStatEquivalentCopy();
-            if (card != null) {
-                card.drawScale = drawScale;
-                card.current_x = xPosition1;
-                card.current_y = yPosition3;
-                card.render(sb);
+            if (prev2 != null) {
+                AbstractCard card = prev2.makeStatEquivalentCopy();
+                if (card != null) {
+                    card.drawScale = drawScale;
+                    card.current_x = xPosition2;
+                    card.current_y = yPosition1;
+                    card.render(sb);
+                }
             }
+            if (prev3 != null) {
+                AbstractCard card = prev3.makeStatEquivalentCopy();
+                if (card != null) {
+                    card.drawScale = drawScale;
+                    card.current_x = xPosition3;
+                    card.current_y = yPosition1;
+                    card.render(sb);
+                }
+            }
+        } else {
+            if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
+                return;
+            }
+            if (hb.hovered){
+
+                float drawScale = 0.5f;
+                float yPosition1 = this.current_y + this.hb.height * 1.2f;
+                float yPosition2 = this.current_y + this.hb.height * 0.7f;
+                float yPosition3 = this.current_y + this.hb.height * 0.2f;
+
+                float xPosition1;
+                float xOffset1 = -this.hb.width * 0.75f;
+
+                //inverts the x position if the card is a certain amount to the right to prevent clipping issues
+                if (this.current_x > Settings.WIDTH * 0.75F) {
+                    xOffset1 = -xOffset1;
+                }
+
+                xPosition1 = this.current_x + xOffset1;
+
+                if (prev1 != null) {
+                    AbstractCard card = prev1.makeStatEquivalentCopy();
+                    if (card != null) {
+                        card.drawScale = drawScale;
+                        card.current_x = xPosition1;
+                        card.current_y = yPosition1;
+                        card.render(sb);
+                    }
+                }
+                if (prev2 != null) {
+                    AbstractCard card = prev2.makeStatEquivalentCopy();
+                    if (card != null) {
+                        card.drawScale = drawScale;
+                        card.current_x = xPosition1;
+                        card.current_y = yPosition2;
+                        card.render(sb);
+                    }
+                }
+                if (prev3 != null) {
+                    AbstractCard card = prev3.makeStatEquivalentCopy();
+                    if (card != null) {
+                        card.drawScale = drawScale;
+                        card.current_x = xPosition1;
+                        card.current_y = yPosition3;
+                        card.render(sb);
+                    }
+                }
+            }
+
         }
     }
 }

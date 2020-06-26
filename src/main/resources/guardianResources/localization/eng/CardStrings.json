@@ -350,8 +350,8 @@
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Fragmented Gem",
-    "DESCRIPTION": "guardianmod:Gem. NL Add a Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a Shiv to your hand."
+    "DESCRIPTION": "guardianmod:Gem. NL Add a *Crystal *Shiv to your hand.",
+    "UPGRADE_DESCRIPTION": "Add a *Crystal *Shiv to your hand."
   },
   "Guardian:CrystalShiv": {
     "NAME": "Crystal Shiv",
