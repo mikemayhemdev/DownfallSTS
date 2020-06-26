@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
@@ -34,6 +35,7 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.relics.UnknownEgg;
+import theHexaghost.cards.*;
 import theHexaghost.events.CouncilOfGhosts_Hexa;
 import theHexaghost.events.HexaFalling;
 import theHexaghost.events.SealChamber;
@@ -251,7 +253,7 @@ public class HexaMod implements
 
     @Override
     public void receiveSetUnlocks() {
-/*
+
         unlocks0 = new CustomUnlockBundle(
                 GiftsFromTheDead.ID, PowerFromBeyond.ID, FlamesFromBeyond.ID
         );
@@ -296,7 +298,7 @@ public class HexaMod implements
         BaseMod.addUnlockBundle(unlocks3, TheHexaghost.Enums.THE_SPIRIT, 3);
 
         BaseMod.addUnlockBundle(unlocks4, TheHexaghost.Enums.THE_SPIRIT, 4);
-*/
+
     }
 
 

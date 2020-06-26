@@ -138,7 +138,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb - Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb - Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -146,7 +146,7 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP for each slimeboundmod:Absorbed. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP for each slimeboundmod:Absorbed. NL Exhaust."
   },
   "Slimebound:Lick": {
     "NAME": "Lick",

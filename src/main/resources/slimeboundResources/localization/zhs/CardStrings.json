@@ -138,7 +138,7 @@
  },
  "Slimebound:Repurpose": {
   "NAME": "重新考虑",
-  "DESCRIPTION": "slimeboundmod:吸收 -获得 !M! 点 slimeboundmod:潜力 ， !B! 点 格挡 并回复4点生命。 NL 消耗 。"
+  "DESCRIPTION": "slimeboundmod:吸收 -获得1点 slimeboundmod:潜力 ， !B! 点 格挡 并回复 !M! 点生命。 NL 消耗 。"
  },
  "Slimebound:RollThrough": {
   "NAME": "翻滚碾压",
@@ -146,7 +146,7 @@
  },
  "Slimebound:MassRepurpose": {
   "NAME": "回炉重造",
-  "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只史莱姆获得 !M! 点 slimeboundmod:潜力 ， !B! 点 格挡 ，并回复4点生命。 NL 消耗 。"
+  "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只史莱姆获得1点 slimeboundmod:潜力 ， !B! 点 格挡 ，并回复 !M! 点生命。 NL 消耗 。"
  },
  "Slimebound:Lick": {
   "NAME": "舔舔",

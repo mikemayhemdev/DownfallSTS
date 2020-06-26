@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.TrigggerSpecificSlimeAttackAction;
 
 
@@ -73,10 +74,10 @@ public class ComboAttackPower extends TwoAmountPower {
         super.onAfterCardPlayed(usedCard);
         if (usedCard.target == AbstractCard.CardTarget.ENEMY || usedCard.target == AbstractCard.CardTarget.ALL_ENEMY) {
             if (this.amount2 > 0) {
-                if (AbstractDungeon.player.orbs.get(0) != null) ;
+                if (SlimeboundMod.getLeadingSlime() != null)
                 {
                     flash();
-                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new TrigggerSpecificSlimeAttackAction(AbstractDungeon.player.orbs.get(0)));
+                    com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new CommandAction());
                     this.amount2--;
                     updateDescription();
                 }

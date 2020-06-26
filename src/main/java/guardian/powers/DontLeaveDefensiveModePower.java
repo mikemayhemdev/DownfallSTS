@@ -14,7 +14,7 @@ public class DontLeaveDefensiveModePower extends AbstractGuardianPower {
 
         this.ID = POWER_ID;
         this.owner = owner;
-        this.setImage("OffenseModePower84.png", "OffenseModePower32.png");
+        this.setImage("bronzeOrbProtectionPowerInactive84.png", "bronzeOrbProtectionPowerInactive32.png");
         this.type = POWER_TYPE;
         DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
 

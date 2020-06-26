@@ -45,7 +45,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     public MassRepurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseBlock = 4;
-        this.baseMagicNumber = magicNumber = 1;
+        this.baseMagicNumber = magicNumber = 4;
         this.exhaust = true;
     }
 
@@ -53,8 +53,8 @@ public class MassRepurpose extends AbstractSlimeboundCard {
         for (AbstractOrb o : p.orbs){
             if (o instanceof SpawnedSlime) {
                 AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-                addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, magicNumber), magicNumber));
-                addToBot(new HealAction(p, p, 4));
+                addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, 1), 1));
+                addToBot(new HealAction(p, p, magicNumber));
                 addToBot(new GainBlockAction(p, block));
             }
         }
@@ -63,7 +63,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
             upgradeBlock(2);
         }
     }
