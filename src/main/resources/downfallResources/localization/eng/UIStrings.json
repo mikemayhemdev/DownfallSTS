@@ -104,5 +104,10 @@
       "You should never see this.",
       "Choose a Slime."
     ]
+  },
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "Add a Boss Card to your deck"
+    ]
   }
 }

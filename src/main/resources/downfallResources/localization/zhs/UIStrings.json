@@ -104,5 +104,10 @@
     "你不应该看见这个的",
     "选择一种史莱姆。"
   ]
-}
+},
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "Add a Boss Card to your deck"
+    ]
+  }
 }

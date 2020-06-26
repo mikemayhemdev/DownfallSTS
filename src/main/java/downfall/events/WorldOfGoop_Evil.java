@@ -37,13 +37,14 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.gold = 150;
+            this.gold = 100;
         } else {
-            this.gold = 200;
+            this.gold = 150;
         }
 
-        this.imageEventText.setDialogOption(OPTIONS[0] + this.gold + OPTIONS[1], new Icky());
-        this.imageEventText.setDialogOption(OPTIONS[2], new Icky());
+        this.imageEventText.setDialogOption(OPTIONS[0] + this.gold * 3 + OPTIONS[3], new Icky());
+        this.imageEventText.setDialogOption(OPTIONS[1] + this.gold * 2 + OPTIONS[4], new Icky());
+        this.imageEventText.setDialogOption(OPTIONS[2] + this.gold + OPTIONS[5], new Icky());
     }
 
     public void onEnterRoom() {
@@ -60,20 +61,38 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
+                        this.imageEventText.setDialogOption(OPTIONS[6]);
                         this.screen = CurScreen.RESULT;
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold* 3));
                         AbstractDungeon.player.gainGold(this.gold);
                         return;
                     case 1:
-                        this.imageEventText.updateBodyText(LEAVE_DIALOG);
+                        this.imageEventText.updateBodyText(GOLD_DIALOG);
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
+                        this.imageEventText.setDialogOption(OPTIONS[6]);
+                        this.screen = CurScreen.RESULT;
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 2));
+                        AbstractDungeon.player.gainGold(this.gold);
+                        return;
+                    case 2:
+                        this.imageEventText.updateBodyText(GOLD_DIALOG);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[6]);
                         this.screen = CurScreen.RESULT;
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold));
+                        AbstractDungeon.player.gainGold(this.gold);
                         return;
+                    case 3:
+                        this.imageEventText.updateBodyText(LEAVE_DIALOG);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[6]);
+                        this.screen = CurScreen.RESULT;
                     default:
                         return;
                 }

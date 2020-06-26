@@ -35,6 +35,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import downfall.downfallMod;
@@ -286,7 +287,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     @Override
     public void receiveSetUnlocks() {
-        /*
+
         if (!unlockEverything) {
             unlocks0 = new CustomUnlockBundle(
                     DivideAndConquer.ID, ServeAndProtect.ID, CheckThePlaybook.ID
@@ -342,7 +343,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         }
 
-*/
+
     }
 
     public void clearUnlockBundles() {
