@@ -107,6 +107,7 @@ public class downfallMod implements
     public static boolean choosingRemoveCard = false;
     public static boolean choosingUpgradeCard = false;
     public static boolean choosingTransformCard = false;
+    public static boolean overrideBossDifficulty = false;
 
     public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;
