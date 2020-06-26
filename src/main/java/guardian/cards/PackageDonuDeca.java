@@ -67,6 +67,22 @@ public class PackageDonuDeca extends AbstractGuardianCard {
         }
     }
 
+    @Override
+    public void hover() {
+        prev1 = constPrev1;
+        prev2 = constPrev2;
+        prev3 = constPrev3;
+        super.hover();
+    }
+
+    @Override
+    public void unhover() {
+        super.unhover();
+        prev1 = null;
+        prev2 = null;
+        prev3 = null;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
 
