@@ -372,7 +372,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "复仇协议",
-    "DESCRIPTION": "退出 guardianmod:防御模式 时，获得 !M! 点 guardianmod:临时 力量 。进入 guardianmod:防御模式 。"
+    "DESCRIPTION": "退出 guardianmod:防御模式 时，获得 !M! 点 guardianmod:临时 力量 。 NL 进入 guardianmod:防御模式 。"
   },
   "Guardian:GatlingBeam": {
     "NAME": "加特林射线",
