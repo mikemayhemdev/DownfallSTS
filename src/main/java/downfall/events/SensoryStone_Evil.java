@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import downfall.util.BossCardReward;
 import expansioncontent.expansionContentMod;
 
 
@@ -140,7 +141,7 @@ public class SensoryStone_Evil extends AbstractImageEvent {
         AbstractDungeon.getCurrRoom().rewards.clear();
 
         for(int i = 0; i < num; ++i) {
-            AbstractDungeon.getCurrRoom().addCardReward(new RewardItem(CardColor.COLORLESS));
+            AbstractDungeon.getCurrRoom().addCardReward(new BossCardReward(CardColor.COLORLESS));
         }
 
         AbstractDungeon.getCurrRoom().phase = RoomPhase.COMPLETE;
