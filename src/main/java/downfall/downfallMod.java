@@ -538,6 +538,8 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(WeMeetAgain.ID)
                 //Event Type//
+                .bonusCondition(() -> (AbstractDungeon.player.relics.size() > 2))
+
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 

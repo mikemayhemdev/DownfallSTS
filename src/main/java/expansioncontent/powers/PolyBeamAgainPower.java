@@ -53,7 +53,7 @@ public class PolyBeamAgainPower extends AbstractPower {
     public void updateDescription() {
 
 
-        if (this.amount == 1) {
+        if (this.amount <= 1) {
             this.description = DESCRIPTIONS[0];
         } else {
             this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
@@ -70,7 +70,7 @@ public class PolyBeamAgainPower extends AbstractPower {
         AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
 
 
-        AbstractCard tmp = card.makeCopy();
+        AbstractCard tmp = card.makeStatEquivalentCopy();
         AbstractDungeon.player.limbo.addToBottom(tmp);
         tmp.current_x = card.current_x;
         tmp.current_y = card.current_y;

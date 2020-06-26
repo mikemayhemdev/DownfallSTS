@@ -29,11 +29,14 @@ import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 import downfall.relics.GremlinWheel;
+import downfall.rooms.HeartShopRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
@@ -286,12 +289,28 @@ public class GremlinWheelGame_Rest extends AbstractImageEvent {
                     this.imageEventText.setDialogOption(OPTIONS[8]);
                     this.imageEventText.updateBodyText(DESCRIPTIONS[13]);
                     this.screen = CUR_SCREEN.LEAVE;
+                    if (AbstractDungeon.player.hasRelic(GremlinWheel.ID)){
+                        GremlinWheel gw = (GremlinWheel)AbstractDungeon.player.getRelic(GremlinWheel.ID);
+                        gw.justFailed = true;
+                    }
                     break;
                 }
 
             default:
-                this.openMap();
-                break;
+                AbstractDungeon.getCurrRoom().clearEvent();
+                AbstractRoom sRoom = new RestRoom();
+                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMBAT;
+                AbstractDungeon.getCurrRoom().smoked = false;
+                AbstractDungeon.player.isEscaping = false;
+                AbstractRoom.waitTimer = 0.1F;
+                this.hasFocus = false;
+                GenericEventDialog.hide();
+                AbstractDungeon.currMapNode.setRoom(sRoom);
+                AbstractDungeon.scene.nextRoom(sRoom);
+                CardCrawlGame.fadeIn(1.5F);
+                AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
+                sRoom.onPlayerEntry();
+                return;
         }
 
     }

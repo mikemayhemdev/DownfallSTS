@@ -41,9 +41,8 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         isSlimedModified = false;
     }
 
-    public void upgradeSelfDamage(int originalAmount) {
-        baseSelfDamage += originalAmount;
-        selfDamage = baseSelfDamage;
+    public void upgradeSelfDamage(int bonus) {
+        selfDamage = baseSelfDamage + bonus;
         upgradeSelfDamage = true;
     }
 

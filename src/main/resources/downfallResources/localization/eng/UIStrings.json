@@ -29,7 +29,8 @@
   "downfall:WheelSpinButton": {
     "TEXT": [
       "Spin Wheel",
-      "Spin the Wheel."
+      "(Free Action) Spin the Wheel.",
+      "Can't Spin Again."
     ]
   },
   "downfall:AscensionText": {
@@ -71,7 +72,7 @@
   },
   "downfall:UpgradeCardReward": {
     "TEXT": [
-      "Transform a card in your deck.",
+      "Upgrade a card in your deck.",
       "Choose a Card to Upgrade"
     ]
   },

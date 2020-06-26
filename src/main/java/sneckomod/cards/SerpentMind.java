@@ -27,7 +27,7 @@ public class SerpentMind extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(2);
         }
     }
 }

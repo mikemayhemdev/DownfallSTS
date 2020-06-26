@@ -64,28 +64,28 @@ public class TackleModifyDamagePower extends AbstractPower {
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c instanceof AbstractSlimeboundCard) {
                 if (c.hasTag(SlimeboundMod.TACKLE)) {
-                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(3);
+                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(this.amount);
                 }
             }
         }
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c instanceof AbstractSlimeboundCard) {
                 if (c.hasTag(SlimeboundMod.TACKLE)) {
-                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(3);
+                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(this.amount);
                 }
             }
         }
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c instanceof AbstractSlimeboundCard) {
                 if (c.hasTag(SlimeboundMod.TACKLE)) {
-                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(3);
+                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(this.amount);
                 }
             }
         }
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c instanceof AbstractSlimeboundCard) {
                 if (c.hasTag(SlimeboundMod.TACKLE)) {
-                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(3);
+                    ((AbstractSlimeboundCard) c).upgradeSelfDamage(this.amount);
                 }
             }
         }
