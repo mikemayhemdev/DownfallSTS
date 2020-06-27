@@ -63,7 +63,7 @@ public class SacrificeAction2 extends AbstractGameAction {
 
             this.p.hand.group.removeAll(this.cannotUpgrade);// 72
             if (this.p.hand.group.size() > 1) {// 74
-                AbstractDungeon.handCardSelectScreen.open("to Exhaust for Necessary Sacrifice.", 1, false, false);// 75
+                AbstractDungeon.handCardSelectScreen.open(EXTENDED_DESCRIPTIONS[0], 1, false, false);// 75
                 this.tickDuration();// 76
                 return;// 77
             }

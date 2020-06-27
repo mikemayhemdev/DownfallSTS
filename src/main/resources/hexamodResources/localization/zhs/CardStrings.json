@@ -83,18 +83,18 @@
   },
   "hexamod:CrushingStance": {
     "NAME": "撞击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为碾压鬼火。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为 碾压鬼火 。 NL 消耗 。"
   },
   "hexamod:EmpoweringStance": {
     "NAME": "高热",
-    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火替换为高热鬼火。"
+    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火替换为 高热鬼火 。"
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
     "DESCRIPTION": "选择 消耗 一张攻击或技能牌。 NL 将一张随机相反类型的牌加入手牌。",
     "UPGRADE_DESCRIPTION": "选择 消耗 一张攻击或技能牌。 NL 将一张随机相反类型的牌加入手牌。 NL 它的耗能减少1。",
     "EXTENDED_DESCRIPTION": [
-      "to Exhaust for Necessary Sacrifice."
+      "消耗作为必要的牺牲。"
     ]
   },
   "hexamod:TimeOfNeed": {
@@ -143,8 +143,7 @@
   },
   "hexamod:Haunt": {
     "NAME": "鬼手",
-    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["虚无","虚无 。 NL "]
+    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。 NL 消耗 。"
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
@@ -205,7 +204,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 3 层 hexamod:灼魂 !burny! 次。"
+    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 !M! 次。"
   },
   "hexamod:Firestarter": {
     "NAME": "点火",
@@ -256,7 +255,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 在敌人的回合开始时给予 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 直到引爆前在敌人的回合开始时给予 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",

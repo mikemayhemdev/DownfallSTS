@@ -67,6 +67,6 @@
     "NAMES": [
       "阴世"
     ],
-    "DESCRIPTION": "被 #y消耗 时直接打出。"
+    "DESCRIPTION": "被 #y消耗 时触发效果。"
   }
 ]

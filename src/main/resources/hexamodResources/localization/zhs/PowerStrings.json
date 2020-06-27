@@ -26,7 +26,7 @@
     "NAME": "易熔金属",
     "DESCRIPTIONS": [
       "它的回合开始时获得 #b",
-      " 层 #y灼魂 。"
+      " 层 #y灼魂 。 #y灼魂 引爆时移除本效果。"
     ]
   },
   "hexamod:BurnPower": {
@@ -182,7 +182,7 @@
     ]
   },
   "hexamod:TimeStopPower": {
-    "NAME": "砸瓦鲁多！",
+    "NAME": "末日来临",
     "DESCRIPTIONS": [
       "你的回合结束时，立刻开始额外的回合。 NL 保留格挡和能量。"
     ]

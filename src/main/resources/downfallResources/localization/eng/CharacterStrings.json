@@ -190,7 +190,8 @@
 
     ],
     "TEXT": [
-      "Choose a Boss to Study."
+      "Choose a Boss to Study.",
+      "Choose Advance,Retract or Do Nothing"
     ]
   },
   "downfall:Merchant": {
