@@ -3,14 +3,17 @@ package theHexaghost.actions;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theHexaghost.cards.RecurringNightmare;
 
 import java.util.ArrayList;
 
 public class RecurringNightmareAction extends AbstractGameAction {
     private AbstractPlayer p;
     private ArrayList<AbstractCard> cannotExhume = new ArrayList<>();
+    public static final String[] EXTENDED_DESCRIPTIONS = CardCrawlGame.languagePack.getCardStrings(RecurringNightmare.ID).EXTENDED_DESCRIPTION;
 
     public RecurringNightmareAction() {
         this.p = AbstractDungeon.player;// 27
@@ -49,7 +52,7 @@ public class RecurringNightmareAction extends AbstractGameAction {
             } else {
 
                 p.exhaustPile.group.removeAll(cannotExhume);
-                AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, 1, "Choose an Ethereal card to return to your hand.", false);// 96
+                AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, 1, EXTENDED_DESCRIPTIONS[0], false);// 96
                 this.tickDuration();// 97
             }
         }

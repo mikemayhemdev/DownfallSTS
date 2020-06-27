@@ -148,7 +148,10 @@
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
     "DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。"
+    "UPGRADE_DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张虚无牌加入手牌"
+    ]
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
@@ -173,7 +176,7 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害。 NL 消耗堆中每有一张 虚无 牌，重复一次。 NL 消耗 。"
+    "DESCRIPTION": "消耗堆中每有一张 虚无 牌，对随机敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
@@ -204,7 +207,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 !M! 次。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 !M! 次。"
   },
   "hexamod:Firestarter": {
     "NAME": "点火",
@@ -259,8 +262,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。",
-    "UPGRADE_DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X+1 次。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。",
+    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X+1 次。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
