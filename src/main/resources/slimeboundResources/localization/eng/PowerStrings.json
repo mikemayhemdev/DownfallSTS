@@ -136,7 +136,7 @@
       " turns from now, #yAbsorb all of your spawned Slimes."
     ]
   },
-  "Slimebound:TackleDebuffPower": {
+  "Slimebound:TackleModifyDamagePower": {
     "NAME": "Battered",
     "DESCRIPTIONS": [
       "Receives #b",

@@ -19,7 +19,11 @@ public class AddWheelSpinButtonPatch {
             if (AbstractDungeon.player.hasRelic(GremlinWheel.ID)) {
                 boolean relicActive;
                 relicActive = AbstractDungeon.player.getRelic(GremlinWheel.ID).counter != 0;
-                ___buttons.add(new WheelSpinButton(relicActive));
+
+                GremlinWheel gw = (GremlinWheel)AbstractDungeon.player.getRelic(GremlinWheel.ID);
+                boolean justUsed = gw.justFailed;
+
+                if (relicActive) ___buttons.add(new WheelSpinButton(!justUsed));
             }
         }
     }

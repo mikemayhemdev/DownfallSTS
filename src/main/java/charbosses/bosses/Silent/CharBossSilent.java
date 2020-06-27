@@ -2,14 +2,11 @@ package charbosses.bosses.Silent;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Ironclad.ArchetypeAct1PerfectedStrike;
-import charbosses.bosses.Ironclad.ArchetypeAct2Strength;
-import charbosses.bosses.Ironclad.ArchetypeAct3Block;
+import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.cards.anticards.Antidote;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,7 +14,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
-import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
@@ -38,21 +34,40 @@ public class CharBossSilent extends AbstractCharBoss {
     @Override
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
-        switch (AbstractDungeon.actNum){
-            case 1: archetype = new ArchetypeAct1Shivs(); break;
-            case 2: archetype = new ArchetypeAct2Finisher(); break;
-            case 3: archetype = new ArchetypeAct3Poison(); break;
-            case 4: {
-                switch (NeowBoss.Rezzes) {
-                    case 1: archetype = new ArchetypeAct1Shivs(); break;
-                    case 2: archetype = new ArchetypeAct2Finisher(); break;
-                    case 3: archetype = new ArchetypeAct3Poison(); break;
-                    default: archetype = new ArchetypeAct1Shivs(); break;
+        if (downfallMod.overrideBossDifficulty) {
+            archetype = new ArchetypeAct1Streamline();
+        } else
+            switch (AbstractDungeon.actNum) {
+                case 1:
+                    archetype = new ArchetypeAct1Shivs();
+                    break;
+                case 2:
+                    archetype = new ArchetypeAct2Finisher();
+                    break;
+                case 3:
+                    archetype = new ArchetypeAct3Poison();
+                    break;
+                case 4: {
+                    switch (NeowBoss.Rezzes) {
+                        case 1:
+                            archetype = new ArchetypeAct1Shivs();
+                            break;
+                        case 2:
+                            archetype = new ArchetypeAct2Finisher();
+                            break;
+                        case 3:
+                            archetype = new ArchetypeAct3Poison();
+                            break;
+                        default:
+                            archetype = new ArchetypeAct1Shivs();
+                            break;
+                    }
+                    break;
                 }
-                break;
+                default:
+                    archetype = new ArchetypeAct1Shivs();
+                    break;
             }
-            default: archetype = new ArchetypeAct1Shivs(); break;
-        }
 
         archetype.initialize();
         if (AbstractDungeon.ascensionLevel >= 19) {

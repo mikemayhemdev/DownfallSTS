@@ -136,7 +136,7 @@
       " 回合后，吸收你 分裂 出的所有史莱姆。"
     ]
   },
-  "Slimebound:TackleDebuffPower": {
+  "Slimebound:TackleModifyDamagePower": {
     "NAME": "束缚",
     "DESCRIPTIONS": [
       "冲撞 牌对该怪物额外造成 #b",

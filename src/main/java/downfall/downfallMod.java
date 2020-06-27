@@ -107,6 +107,7 @@ public class downfallMod implements
     public static boolean choosingRemoveCard = false;
     public static boolean choosingUpgradeCard = false;
     public static boolean choosingTransformCard = false;
+    public static boolean overrideBossDifficulty = false;
 
     public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;
@@ -538,6 +539,8 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(WeMeetAgain.ID)
                 //Event Type//
+                .bonusCondition(() -> (AbstractDungeon.player.relics.size() > 2))
+
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 

@@ -29,7 +29,8 @@
   "downfall:WheelSpinButton": {
     "TEXT": [
       "转动转盘",
-      "转动转盘"
+      "转动转盘",
+      "Can't Spin Again."
     ]
   },
   "downfall:AscensionText": {

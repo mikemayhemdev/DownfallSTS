@@ -33,7 +33,11 @@ public class HeatShield extends AbstractHexaCard {
                 super.applyPowersToBlock();
                 this.baseBlock = realBaseBlock;// 75
                 this.isBlockModified = block != baseBlock;
-                this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
+                if (upgraded){
+                    this.rawDescription = UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
+                } else {
+                    this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];// 73
+                }
                 initializeDescription();
             }
         } else {
@@ -44,7 +48,11 @@ public class HeatShield extends AbstractHexaCard {
     }
 
     public void onMoveToDiscard() {
-        this.rawDescription = DESCRIPTION;// 80
+        if (upgraded){
+            this.rawDescription = UPGRADE_DESCRIPTION;// 73
+        } else {
+            this.rawDescription = DESCRIPTION;// 73
+        }
         this.initializeDescription();// 81
     }// 82
 

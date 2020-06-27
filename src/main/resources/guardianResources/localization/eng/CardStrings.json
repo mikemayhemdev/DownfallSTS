@@ -201,11 +201,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "NL Gain !B! Block. NL Place this card into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "NL Gain !B! Block. NL Place this card into guardianmod:Stasis."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",
@@ -350,8 +350,8 @@
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Fragmented Gem",
-    "DESCRIPTION": "guardianmod:Gem. NL Add a Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a Shiv to your hand."
+    "DESCRIPTION": "guardianmod:Gem. NL Add a *Crystal *Shiv to your hand.",
+    "UPGRADE_DESCRIPTION": "Add a *Crystal *Shiv to your hand."
   },
   "Guardian:CrystalShiv": {
     "NAME": "Crystal Shiv",

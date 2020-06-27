@@ -2,6 +2,7 @@ package charbosses.bosses.Watcher;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.cards.anticards.PeaceOut;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.Gdx;
@@ -91,37 +92,40 @@ public class CharBossWatcher extends AbstractCharBoss {
     @Override
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
-        switch (AbstractDungeon.actNum) {
-            case 1:
-                archetype = new ArchetypeAct1Retain();
-                break;
-            case 2:
-                archetype = new ArchetypeAct2Calm();
-                break;
-            case 3:
-                archetype = new ArchetypeAct3Divinity();
-                break;
-            case 4: {
-                switch (NeowBoss.Rezzes) {
-                    case 1:
-                        archetype = new ArchetypeAct1Retain();
-                        break;
-                    case 2:
-                        archetype = new ArchetypeAct2Calm();
-                        break;
-                    case 3:
-                        archetype = new ArchetypeAct3Divinity();
-                        break;
-                    default:
-                        archetype = new ArchetypeAct1Retain();
-                        break;
+        if (downfallMod.overrideBossDifficulty) {
+            archetype = new ArchetypeAct1Streamline();
+        } else
+            switch (AbstractDungeon.actNum) {
+                case 1:
+                    archetype = new ArchetypeAct1Retain();
+                    break;
+                case 2:
+                    archetype = new ArchetypeAct2Calm();
+                    break;
+                case 3:
+                    archetype = new ArchetypeAct3Divinity();
+                    break;
+                case 4: {
+                    switch (NeowBoss.Rezzes) {
+                        case 1:
+                            archetype = new ArchetypeAct1Retain();
+                            break;
+                        case 2:
+                            archetype = new ArchetypeAct2Calm();
+                            break;
+                        case 3:
+                            archetype = new ArchetypeAct3Divinity();
+                            break;
+                        default:
+                            archetype = new ArchetypeAct1Retain();
+                            break;
+                    }
+                    break;
                 }
-                break;
+                default:
+                    archetype = new ArchetypeAct1Retain();
+                    break;
             }
-            default:
-                archetype = new ArchetypeAct1Retain();
-                break;
-        }
 
         archetype.initialize();
         if (AbstractDungeon.ascensionLevel >= 19) {
