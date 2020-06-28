@@ -87,7 +87,7 @@
  },
   "Slimebound:OozeBath": {
   "NAME": "黏液浴",
-   "DESCRIPTION": "Apply !M! slimeboundmod:Goop to target enemy at the start of each of it's turns. NL Exhaust.",
+   "DESCRIPTION": "在敌人的回合开始时给予 !M! slimeboundmod:黏液 。 NL 消耗 。",
   "UPGRADE_DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
  },
  "Slimebound:SlimeSpikes": {
@@ -363,11 +363,11 @@
   "NAME": "分裂：专家",
   "DESCRIPTION": "从三种特殊的史莱姆中选择一种 slimeboundmod:分裂 。 NL 消耗 。",
 	"UPGRADE_DESCRIPTION": "从三种特殊的史莱姆中选择一种 slimeboundmod:分裂 。 NL slimeboundmod:命令 。 NL 消耗 。"
- }, 
+ },
  "Slimebound:MinionMaster": {
   "NAME": "从者大师",
-  "DESCRIPTION": "每当你 slimeboundmod:命令 时，再 slimeboundmod:命令 一次。",
-  "UPGRADE_DESCRIPTION": "固有 。每当你 slimeboundmod:命令 时，再 slimeboundmod:命令 一次。"
+  "DESCRIPTION": "每当你 slimeboundmod:命令 时，变为 slimeboundmod:命令 两次。",
+  "UPGRADE_DESCRIPTION": "固有 。每当你 slimeboundmod:命令 时，变为 slimeboundmod:命令 两次。"
  },
   "Slimebound:BestDefense": {
    "NAME": "鲁莽",
