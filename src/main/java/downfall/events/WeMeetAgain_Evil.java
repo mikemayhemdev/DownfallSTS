@@ -127,14 +127,14 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
 
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
                         AbstractDungeon.player.gainGold(this.goldAmt);
-                        AbstractDungeon.player.loseRelic(this.relicsOffered.get(2).relicId);
+                        AbstractDungeon.player.loseRelic(this.relicsOffered.get(1).relicId);
 
                         break;
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         AbstractCard rewardCard = AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rewardCard, Settings.WIDTH * 0.5F, Settings.HEIGHT * 0.2F));
-                        AbstractDungeon.player.loseRelic(this.relicsOffered.get(1).relicId);
+                        AbstractDungeon.player.loseRelic(this.relicsOffered.get(2).relicId);
 
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[6]);
