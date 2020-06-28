@@ -33,7 +33,7 @@ public class EnBodySlam extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.baseDamage = p.currentBlock;
+        this.baseDamage = m.currentBlock;
         this.calculateCardDamage(m);
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.rawDescription = EnBodySlam.cardStrings.DESCRIPTION;

@@ -166,6 +166,7 @@ public class NeowBoss extends AbstractMonster {
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
         AbstractDungeon.getCurrRoom().cannotLose = true;
+        Rezzes = 1;
         isRezzing = false;
         offscreen = false;
         movingOffscreen = false;
