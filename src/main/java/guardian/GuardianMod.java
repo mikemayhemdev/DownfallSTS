@@ -685,20 +685,25 @@ public static void saveData() {
         BaseMod.addCard(new Aged());
 
         //CONSTRUCT cross-mod
+        /*
         if (Loader.isModLoaded("constructmod")) {
             BaseMod.addCard(new HammerDown());
             BaseMod.addCard(new ModeShift());
             BaseMod.addCard(new OmegaCannon());
             BaseMod.addCard(new PackageConstruct());
         }
+        */
+
 
         //INFINITE cross-mod
+        /*
         if (Loader.isModLoaded("infinitespire")) {
             BaseMod.addCard(new MassTimeBomb());
             BaseMod.addCard(new MassOfThorns());
             BaseMod.addCard(new MassSlam());
             BaseMod.addCard(new PackageMass());
         }
+        */
 
 
     }
