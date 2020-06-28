@@ -25,7 +25,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int COST = 1;
+    private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
     private static int upgradedamount = 1;
 
@@ -38,7 +38,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
 
     public SlimeSlap() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
-        baseDamage = damage = 6;
+        baseDamage = damage = 8;
 
 
     }
@@ -57,7 +57,7 @@ public class SlimeSlap extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeBaseCost(1);
         }
     }
 }
