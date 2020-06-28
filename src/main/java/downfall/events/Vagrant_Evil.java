@@ -67,7 +67,8 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain(this.drawX, this.drawY, relic);// 68
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 70
                         this.imageEventText.clearRemainingOptions();// 71
-                        break;// 73
+                        this.screenNum = 1;
+                        return;// 73
                     default:
                         this.imageEventText.updateDialogOption(0, OPTIONS[5]);// 75
                         this.imageEventText.clearRemainingOptions();// 76

@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
-import theHexaghost.actions.ChargeAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
@@ -29,7 +28,7 @@ public class GhostflameInferno extends AbstractHexaCard {
                 isDone = true;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     if (gf instanceof InfernoGhostflame) {
-                        addToTop(new ChargeAction(gf));
+                        GhostflameHelper.hexaGhostFlames.get(GhostflameHelper.hexaGhostFlames.indexOf(gf)).charge();
                     }
                 }
             }

@@ -20,7 +20,7 @@ public class AdvancingGuard extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new AdvanceAction());
+        atb(new AdvanceAction(false));
     }
 
     public void upgrade() {

@@ -68,7 +68,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Must be in *Defensive *Mode, and exits the mode. NL Deal !D! damage !M! times to ALL enemies."
+    "DESCRIPTION": "Must be in *Defensive *Mode. NL Exit *Defensive *Mode. NL Deal !D! damage !M! times to ALL enemies."
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
@@ -201,11 +201,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "NL Gain !B! Block. NL Place this card into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "NL Gain !B! Block. NL Place this card into guardianmod:Stasis."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",
@@ -284,8 +284,8 @@
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat."
   },
   "Guardian:BaubleBeam": {
     "NAME": "Bauble Beam",
@@ -350,8 +350,8 @@
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Fragmented Gem",
-    "DESCRIPTION": "guardianmod:Gem. NL Add a Shiv to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a Shiv to your hand."
+    "DESCRIPTION": "guardianmod:Gem. NL Add a *Crystal *Shiv to your hand.",
+    "UPGRADE_DESCRIPTION": "Add a *Crystal *Shiv to your hand."
   },
   "Guardian:CrystalShiv": {
     "NAME": "Crystal Shiv",

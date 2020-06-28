@@ -87,7 +87,7 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "Ooze Bath",
-    "DESCRIPTION": "Double the enemy's slimeboundmod:Goop. NL Exhaust.",
+    "DESCRIPTION": "Apply !M! slimeboundmod:Goop to target enemy at the start of each of it's turns. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's slimeboundmod:Goop. NL Exhaust."
   },
   "Slimebound:SlimeSpikes": {
@@ -138,7 +138,7 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb - Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb - Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -146,7 +146,7 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Gain !M! slimeboundmod:Potency, !B! Block, and heal 4 HP for each slimeboundmod:Absorbed. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP for each slimeboundmod:Absorbed. NL Exhaust."
   },
   "Slimebound:Lick": {
     "NAME": "Lick",
@@ -366,8 +366,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command again."
+    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
@@ -379,7 +379,7 @@
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consum - Does not remove slimeboundmod:Goop."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Consume - Does not remove slimeboundmod:Goop."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",

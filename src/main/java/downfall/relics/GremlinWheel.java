@@ -10,6 +10,8 @@ public class GremlinWheel extends CustomRelic {
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/GremlinWheel.png"));
     private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/GremlinWheel.png"));
 
+    public boolean justFailed;
+
     public GremlinWheel() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
         this.counter = 1;

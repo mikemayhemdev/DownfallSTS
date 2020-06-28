@@ -3,7 +3,7 @@
     "NAME": "瓶中精灵",
     "DESCRIPTIONS": [
       "当你要被杀死时，免死并回复到最大生命值的 #b30% ,移除本效果。",
-      "Ha! Fairy Potion, jerk!"
+      "哈！瓶中精灵，没想到吧！"
     ]
   },
   "downfall:SoulSteal": {

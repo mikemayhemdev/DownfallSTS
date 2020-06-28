@@ -18,8 +18,8 @@ import expansioncontent.powers.PolyBeamAgainPowerUpgraded;
 public class PolyBeam extends AbstractExpansionCard {
     public final static String ID = makeID("PolyBeam");
 
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_DAMAGE = 2;
     public boolean isACopy = false;
 
     public PolyBeam() {
@@ -41,14 +41,8 @@ public class PolyBeam extends AbstractExpansionCard {
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         atb(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
-        if (!this.isACopy) {
-            if (upgraded) {
-                atb(new ApplyPowerAction(p, p, new PolyBeamAgainPowerUpgraded(p, p, this.magicNumber, this), this.magicNumber));
-            } else {
-                atb(new ApplyPowerAction(p, p, new PolyBeamAgainPower(p, p, this.magicNumber, this), this.magicNumber));
+        if (!this.isACopy) atb(new ApplyPowerAction(p, p, new PolyBeamAgainPower(p, p, this.magicNumber, this), this.magicNumber));
 
-            }
-        }
 
     }
 

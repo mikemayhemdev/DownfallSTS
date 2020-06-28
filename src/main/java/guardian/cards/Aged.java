@@ -41,6 +41,7 @@ public class Aged extends CustomCard {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 1;
+        this.cardsToPreview = new VoidCard();
 
     }
 

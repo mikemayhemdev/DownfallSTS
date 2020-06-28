@@ -107,6 +107,7 @@ public class downfallMod implements
     public static boolean choosingRemoveCard = false;
     public static boolean choosingUpgradeCard = false;
     public static boolean choosingTransformCard = false;
+    public static boolean overrideBossDifficulty = false;
 
     public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;
@@ -430,6 +431,8 @@ public class downfallMod implements
         BaseMod.addEvent(new AddEventParams.Builder(GremlinMatchGame_Evil.ID, GremlinMatchGame_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
                 //Event ID to Override//
                 .overrideEvent(GremlinMatchGame.ID)
                 //Event Type//
@@ -439,6 +442,8 @@ public class downfallMod implements
         BaseMod.addEvent(new AddEventParams.Builder(GremlinWheelGame_Evil.ID, GremlinWheelGame_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
                 //Event ID to Override//
                 .overrideEvent(GremlinWheelGame.ID)
                 //Event Type//
@@ -456,6 +461,9 @@ public class downfallMod implements
         BaseMod.addEvent(new AddEventParams.Builder(WomanInBlue_Evil.ID, WomanInBlue_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
+
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
                 //Event ID to Override//
                 .overrideEvent(WomanInBlue.ID)
                 //Event Type//
@@ -465,6 +473,8 @@ public class downfallMod implements
         BaseMod.addEvent(new AddEventParams.Builder(LivingWall_Evil.ID, LivingWall_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
                 //Event ID to Override//
                 .overrideEvent(LivingWall.ID)
                 //Event Type//
@@ -474,6 +484,8 @@ public class downfallMod implements
         BaseMod.addEvent(new AddEventParams.Builder(Augmenter_Evil.ID, Augmenter_Evil.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> evilMode)
+                //Prevent from appearing too early//
+                .bonusCondition(() -> (AbstractDungeon.floorNum > 4))
                 //Event ID to Override//
                 .overrideEvent(DrugDealer.ID)
                 //Event Type//
@@ -500,10 +512,12 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(FaceTrader_Evil.ID, FaceTrader_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("Exordium")))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(FaceTrader.ID)
 
+                //Prevent from appearing too early//
+                .bonusCondition(() -> AbstractDungeon.floorNum > 4 && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("Exordium")))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -525,15 +539,19 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(WeMeetAgain.ID)
                 //Event Type//
+                .bonusCondition(() -> (AbstractDungeon.player.relics.size() > 2))
+
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(Designer_Evil.ID, Designer_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond")))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Designer.ID)
                 //Event Type//
+
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity") || AbstractDungeon.id.equals("TheBeyond")))
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
@@ -638,10 +656,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(KnowingSkull_Evil.ID, KnowingSkull_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 //Additional Condition//
-                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12))
+                .bonusCondition(() -> (AbstractDungeon.player.currentHealth > 12) && AbstractDungeon.id.equals("TheCity"))
                 .overrideEvent(com.megacrit.cardcrawl.events.city.KnowingSkull.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -712,9 +730,10 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Nloth_Evil.ID, Nloth_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Nloth.ID)
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity")))
 
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -731,9 +750,11 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Portal_Evil.ID, Portal_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheBeyond"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(SecretPortal.ID)
+
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheBeyond")))
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -760,10 +781,11 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Joust_Evil.ID, Joust_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && AbstractDungeon.id.equals("TheCity"))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(TheJoust.ID)
                 //Event Type//
+                .bonusCondition(() -> (AbstractDungeon.id.equals("TheCity")))
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 

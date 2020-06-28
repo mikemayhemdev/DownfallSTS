@@ -35,6 +35,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import downfall.downfallMod;
@@ -286,7 +287,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     @Override
     public void receiveSetUnlocks() {
-        /*
+
         if (!unlockEverything) {
             unlocks0 = new CustomUnlockBundle(
                     DivideAndConquer.ID, ServeAndProtect.ID, CheckThePlaybook.ID
@@ -342,7 +343,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         }
 
-*/
+
     }
 
     public void clearUnlockBundles() {
@@ -390,7 +391,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());
-        BaseMod.addCard(new BronzeBeam());
+     //   BaseMod.addCard(new BronzeBeam());
         BaseMod.addCard(new LevelUp());
         BaseMod.addCard(new SplitBruiser());
         BaseMod.addCard(new SplitAcid());
@@ -491,7 +492,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         UnlockTracker.unlockCard(Strike_Slimebound.ID);
         UnlockTracker.unlockCard(Defend_Slimebound.ID);
-        UnlockTracker.unlockCard(BronzeBeam.ID);
+        //UnlockTracker.unlockCard(BronzeBeam.ID);
         UnlockTracker.unlockCard(LevelUp.ID);
         UnlockTracker.unlockCard(Tackle.ID);
         UnlockTracker.unlockCard(Schlurp.ID);

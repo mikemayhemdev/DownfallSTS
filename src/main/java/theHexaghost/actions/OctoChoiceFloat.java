@@ -31,7 +31,7 @@ public class OctoChoiceFloat extends AbstractGameAction {
         if (duration == Settings.ACTION_DUR_XFAST && !group.isEmpty()) {
             pickCard = true;
             CenterGridCardSelectScreen.centerGridSelect = true;
-            AbstractDungeon.gridSelectScreen.open(group, 1, TEXT[0], false);
+            AbstractDungeon.gridSelectScreen.open(group, 1, TEXT[1], false);
         } else if ((pickCard && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
             OctoChoiceCard cardChoice = new OctoChoiceCard("null", "null", expansionContentMod.makeCardPath("AwakenDeath.png"), "ERROR");
             if (pickCard && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {

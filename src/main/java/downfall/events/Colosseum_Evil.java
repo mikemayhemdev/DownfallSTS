@@ -1,14 +1,21 @@
 package downfall.events;
 
 
+import charbosses.actions.util.CharBossMonsterGroup;
+import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
+import charbosses.bosses.Silent.CharBossSilent;
+import charbosses.bosses.Watcher.CharBossWatcher;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 
 public class Colosseum_Evil extends AbstractImageEvent {
@@ -64,8 +71,26 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
                         SlimeboundMod.logger.info("fight");
-                        //TODO - Pull the character boss collection, pick one at random, and remove it from the pool
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new CharBossIronclad());
+                        downfallMod.overrideBossDifficulty = true;
+                        String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
+                        switch (s) {
+                            case "downfall:CharBossIronclad":
+                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
+                                break;
+                            case "downfall:CharBossSilent":
+                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()});
+                                break;
+                            case "downfall:CharBossDefect":
+                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()});
+                                break;
+                            case "downfall:CharBossWatcher":
+                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
+                                break;
+                            default:
+                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
+                                break;
+                        }
+                        downfallMod.overrideBossDifficulty = false;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);

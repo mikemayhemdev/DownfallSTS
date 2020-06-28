@@ -25,7 +25,7 @@ public class TackleDebuffPower extends AbstractPower {
 
         this.name = NAME;
 
-        this.ID = POWER_ID;
+        this.ID = "Slimebound:TackleDebuffPower";
         this.amount = amount;
 
         this.owner = owner;
@@ -37,9 +37,9 @@ public class TackleDebuffPower extends AbstractPower {
 
         this.type = POWER_TYPE;
 
-        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(this.ID).DESCRIPTIONS;
+        DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings("Slimebound:TackleDebuffPower").DESCRIPTIONS;
 
-        this.name = CardCrawlGame.languagePack.getPowerStrings(this.ID).NAME;
+        this.name = CardCrawlGame.languagePack.getPowerStrings("Slimebound:TackleDebuffPower").NAME;
 
         updateDescription();
 

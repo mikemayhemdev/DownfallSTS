@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.ArrayList;
+
 public class EnDefendPurple extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Defend_P";
     private static final CardStrings cardStrings;
@@ -20,6 +22,11 @@ public class EnDefendPurple extends AbstractBossCard {
         super(ID, cardStrings.NAME, "purple/skill/defend", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.BASIC, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 5;
         this.tags.add(CardTags.STARTER_DEFEND);
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 1;
     }
 
     @Override

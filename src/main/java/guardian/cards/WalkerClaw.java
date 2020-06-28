@@ -27,10 +27,10 @@ public class WalkerClaw extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 16;
+    private static final int DAMAGE = 14;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 4;
+    private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;

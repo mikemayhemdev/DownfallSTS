@@ -53,9 +53,9 @@ public class GemMine extends AbstractImageEvent {
     public GemMine() {
         super(NAME, DIALOG_START, GuardianMod.getResourcePath("/events/gemMine.jpg"));
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * .09F);
+            this.damage = 8;
         } else {
-            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * 0.06F);
+            this.damage = 6;
         }
         this.imageEventText.updateBodyText(DIALOG_START);
 

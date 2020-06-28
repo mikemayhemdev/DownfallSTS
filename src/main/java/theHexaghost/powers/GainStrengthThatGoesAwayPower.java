@@ -52,7 +52,7 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     }
 
     @Override
-    public void onAdvanceOrRetract() {
+    public void onAdvanceOrRetract(boolean endTurn) {
         if (!activated) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount));

@@ -16,7 +16,7 @@ public class HexaFalling extends AbstractImageEvent {
 
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
+        NAME = CardCrawlGame.languagePack.getEventString(Falling.ID).NAME;
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;
     }
@@ -38,7 +38,7 @@ public class HexaFalling extends AbstractImageEvent {
                 if (buttonPressed == 0) {
                     this.imageEventText.clearAllDialogs();
                     this.imageEventText.setDialogOption(OPTIONS[1]);
-                    this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                    this.imageEventText.updateBodyText(DESCRIPTIONS[0]);
                     this.screen = CurScreen.END;
                 }
             case END:

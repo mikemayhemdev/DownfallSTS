@@ -70,7 +70,7 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
         //Turn 2
         addToDeck(new EnNoxiousFumes(), true);
-        addToDeck(new EnMalaise(), true);
+        addToDeck(new EnBouncingFlask(), true);
         addToDeck(new EnDefendGreen());
 
         //Turn 3

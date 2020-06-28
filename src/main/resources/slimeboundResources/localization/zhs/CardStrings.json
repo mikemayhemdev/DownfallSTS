@@ -87,7 +87,7 @@
  },
   "Slimebound:OozeBath": {
   "NAME": "黏液浴",
-  "DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 翻倍。 NL 消耗 。",
+   "DESCRIPTION": "Apply !M! slimeboundmod:Goop to target enemy at the start of each of it's turns. NL Exhaust.",
   "UPGRADE_DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
  },
  "Slimebound:SlimeSpikes": {
@@ -138,7 +138,7 @@
  },
  "Slimebound:Repurpose": {
   "NAME": "重新考虑",
-  "DESCRIPTION": "slimeboundmod:吸收 -获得 !M! 点 slimeboundmod:潜力 ， !B! 点 格挡 并回复4点生命。 NL 消耗 。"
+  "DESCRIPTION": "slimeboundmod:吸收 -获得1点 slimeboundmod:潜力 ， !B! 点 格挡 并回复 !M! 点生命。 NL 消耗 。"
  },
  "Slimebound:RollThrough": {
   "NAME": "翻滚碾压",
@@ -146,12 +146,12 @@
  },
  "Slimebound:MassRepurpose": {
   "NAME": "回炉重造",
-  "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只史莱姆获得 !M! 点 slimeboundmod:潜力 ， !B! 点 格挡 ，并回复4点生命。 NL 消耗 。"
+  "DESCRIPTION": "slimeboundmod:吸收 所有史莱姆。 NL 每有一只史莱姆获得1点 slimeboundmod:潜力 ， !B! 点 格挡 ，并回复 !M! 点生命。 NL 消耗 。"
  },
  "Slimebound:Lick": {
   "NAME": "舔舔",
-  "DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 消耗 。",
-  "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 抽1张牌。 NL 消耗 。"
+  "DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 消耗 。",
+  "UPGRADE_DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 抽1张牌。 NL 消耗 。"
  },
  "Slimebound:HauntingLick": {
   "NAME": "缠绕之舔",
@@ -170,8 +170,8 @@
  },
  "Slimebound:Gluttony": {
   "NAME": "暴食",
-  "DESCRIPTION": "每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舐 加入手牌。",
-  "UPGRADE_DESCRIPTION": "固有 。每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舐 加入手牌。"
+  "DESCRIPTION": "每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舔 加入手牌。",
+  "UPGRADE_DESCRIPTION": "固有 。每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舔 加入手牌。"
  },
  "Slimebound:PressTheAttack": {
   "NAME": "强攻",

@@ -99,7 +99,8 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         if (cUnknown != null) {
             p.hand.removeCard(this);
             p.drawPile.removeCard(this);
-            cUnknown.cardsToPreview = this.makeStatEquivalentCopy();
+            if (cUnknown.cardsToPreview == null)
+                cUnknown.cardsToPreview = this.makeStatEquivalentCopy();
             AbstractDungeon.player.drawPile.addToRandomSpot(cUnknown);
         }
     }
@@ -135,7 +136,8 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             p.limbo.removeCard(this);
             p.hand.removeCard(this);
             p.drawPile.removeCard(this);
-            cUnknown.cardsToPreview = this.makeStatEquivalentCopy();
+            if (cUnknown.cardsToPreview == null)
+                cUnknown.cardsToPreview = this.makeStatEquivalentCopy();
             AbstractDungeon.player.hand.addToTop(cUnknown);
         }
     }

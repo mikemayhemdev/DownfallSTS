@@ -55,6 +55,7 @@ public class FaceTrader extends AbstractMonster {
 
         this.damage.add(new DamageInfo(this, 15));
         this.damage.add(new DamageInfo(this, 10));
+        this.type = EnemyType.ELITE;
     }
 
     @Override

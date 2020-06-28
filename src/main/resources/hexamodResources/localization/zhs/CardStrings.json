@@ -28,7 +28,7 @@
   "hexamod:FastForward": {
     "NAME": "快进",
     "DESCRIPTION": "虚无 。 NL hexamod:强制点燃 hexamod:激活 的 鬼火 。 NL hexamod:步进 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL hexamod:步进 。 NL hexamod:强制点燃 hexamod:激活 的 鬼火 。 NL hexamod:步进 。"
+    "UPGRADE_DESCRIPTION": "hexamod:强制点燃 hexamod:激活 的 鬼火 。 NL hexamod:步进 。"
   },
   "hexamod:Rewind": {
     "NAME": "重返",
@@ -83,18 +83,18 @@
   },
   "hexamod:CrushingStance": {
     "NAME": "撞击",
-    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为崩溃鬼火。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 将 hexamod:激活 的鬼火替换为 碾压鬼火 。 NL 消耗 。"
   },
   "hexamod:EmpoweringStance": {
     "NAME": "高热",
-    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火替换为高热鬼火。"
+    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 点 力量 。 NL 将 hexamod:激活 的鬼火替换为 高热鬼火 。"
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
     "DESCRIPTION": "选择 消耗 一张攻击或技能牌。 NL 将一张随机相反类型的牌加入手牌。",
     "UPGRADE_DESCRIPTION": "选择 消耗 一张攻击或技能牌。 NL 将一张随机相反类型的牌加入手牌。 NL 它的耗能减少1。",
     "EXTENDED_DESCRIPTION": [
-      "to Exhaust for Necessary Sacrifice."
+      "消耗作为必要的牺牲。"
     ]
   },
   "hexamod:TimeOfNeed": {
@@ -143,13 +143,15 @@
   },
   "hexamod:Haunt": {
     "NAME": "鬼手",
-    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。 NL 消耗 。",
-    "EXTENDED_DESCRIPTION": ["虚无","虚无 。 NL "]
+    "DESCRIPTION": "虚无 。 NL 抽 !M! 张牌。 NL 手牌变为 虚无 。 NL 消耗 。"
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
     "DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。"
+    "UPGRADE_DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。",
+    "EXTENDED_DESCRIPTION": [
+      "选择一张虚无牌加入手牌"
+    ]
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "深处之礼",
@@ -174,7 +176,7 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "释魂",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害。 NL 消耗堆中每有一张 虚无 牌，重复一次。 NL 消耗 。"
+    "DESCRIPTION": "消耗堆中每有一张 虚无 牌，对随机敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "hexamod:NightmareStrike": {
     "NAME": "梦魇打击",
@@ -205,7 +207,7 @@
   },
   "hexamod:Incineration": {
     "NAME": "焚化",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 3 层 hexamod:灼魂 !burny! 次。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 !M! 次。"
   },
   "hexamod:Firestarter": {
     "NAME": "点火",
@@ -256,12 +258,12 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 在敌人的回合开始时给予 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 直到引爆前在敌人的回合开始时给予 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
-    "DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。",
-    "UPGRADE_DESCRIPTION": "对随机一名敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X+1 次。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。",
+    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X+1 次。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",
@@ -285,8 +287,8 @@
   },
   "hexamod:GhostflameInferno": {
     "NAME": "此即地狱",
-    "DESCRIPTION": "保留 。 NL hexamod:点燃 地狱火 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:激活 的鬼火。 NL hexamod:点燃 地狱火 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL hexamod:点燃 狱焱鬼火 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL hexamod:点燃 hexamod:激活 的鬼火。 NL hexamod:点燃 狱焱鬼火 。 NL 消耗 。"
   },
   "hexamod:ChargedBarrage": {
     "NAME": "充能弹幕",
@@ -298,8 +300,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "启示录",
-    "DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] 。 NL hexamod:激活 地狱火。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 地狱火。 NL 消耗 。"
+    "DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "虚无 。 NL 失去 6 点生命。 NL 获得 [E] [E] [E] 。 NL hexamod:激活 狱焱鬼火。 NL 消耗 。"
   },
   "hexamod:DynamicBlow": {
     "NAME": "动态攻击",
@@ -320,8 +322,8 @@
   },
   "hexamod:ApocalypticArmor": {
     "NAME": "决战末世",
-    "DESCRIPTION": "下一次你 hexamod:点燃 地狱火 且全部的 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。",
-    "UPGRADE_DESCRIPTION": "下一次你 hexamod:点燃 地狱火 且至少 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。"
+    "DESCRIPTION": "下一次你 hexamod:点燃 狱焱鬼火 且全部的 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。",
+    "UPGRADE_DESCRIPTION": "下一次你 hexamod:点燃 狱焱鬼火 且至少 !M! 个鬼火已 hexamod:点燃 ，额外获得一回合。"
   },
   "hexamod:FirstSeal": {
     "NAME": "第一容器",
@@ -354,7 +356,7 @@
   },
   "hexamod:Haunted": {
     "NAME": "闹鬼",
-    "DESCRIPTION": "虚无 。 不能被打出 。 NL 你的回合开始时，随机 消耗 一张手牌。"
+    "DESCRIPTION": "虚无 。 不能被打出 。 NL 抽到时，你的手牌变为 虚无 。"
   },
   "hexamod:CouncilsJustice": {
     "NAME": "议会裁决",
