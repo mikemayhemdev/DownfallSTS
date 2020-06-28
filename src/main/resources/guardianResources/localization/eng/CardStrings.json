@@ -284,8 +284,8 @@
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat."
   },
   "Guardian:BaubleBeam": {
     "NAME": "Bauble Beam",
