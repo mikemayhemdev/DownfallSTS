@@ -30,6 +30,9 @@ public class OctoChoiceCard extends CustomCard {
     public OctoChoiceCard(String id, String name, String IMG, String description, AbstractCard prev1, AbstractCard prev2, AbstractCard prev3) {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
         this.IMG = IMG;
+        card1 = prev1;
+        card2 = prev2;
+        card3 = prev3;
     }
 
     @Override
@@ -74,34 +77,11 @@ public class OctoChoiceCard extends CustomCard {
         }
 
         float drawScale = 0.5f;
-        float yPosition1 = this.current_y + this.hb.height * 0.75f;
-        float yPosition2 = this.current_y + this.hb.height * 0.25f;
-        float yPosition3 = this.current_y - this.hb.height * 0.25f;
+        float yPosition1 = Settings.HEIGHT * 0.2F;
 
-        //changes the Arcana preview to render below the Arcana in the shop so it doesn't clip out of the screen
-        if (AbstractDungeon.screen == AbstractDungeon.CurrentScreen.SHOP) {
-            yPosition1 = this.current_y - this.hb.height * 0.75f;
-            yPosition2 = this.current_y - this.hb.height * 0.25f;
-            yPosition3 = this.current_y + this.hb.height * 0.25f;
-        }
-
-        float xPosition1;
-        float xPosition2;
-        float xPosition3;
-        float xOffset1 = -this.hb.width * 0.75f;
-        float xOffset2 = -this.hb.width * 0.25f;
-        float xOffset3 = this.hb.width * 0.25f;
-
-        //inverts the x position if the card is a certain amount to the right to prevent clipping issues
-        if (this.current_x > Settings.WIDTH * 0.75F) {
-            xOffset1 = -xOffset1;
-            xOffset2 = -xOffset2;
-            xOffset3 = -xOffset3;
-        }
-
-        xPosition1 = this.current_x + xOffset1;
-        xPosition2 = this.current_x + xOffset2;
-        xPosition3 = this.current_x + xOffset3;
+        float xPosition1 = Settings.WIDTH * 0.35F;
+        float xPosition2 = Settings.WIDTH * 0.5F;
+        float xPosition3 = Settings.WIDTH * 0.65F;
 
         if (prev1 != null) {
             AbstractCard card = prev1.makeStatEquivalentCopy();
@@ -117,7 +97,7 @@ public class OctoChoiceCard extends CustomCard {
             if (card != null) {
                 card.drawScale = drawScale;
                 card.current_x = xPosition2;
-                card.current_y = yPosition2;
+                card.current_y = yPosition1;
                 card.render(sb);
             }
         }
@@ -126,7 +106,7 @@ public class OctoChoiceCard extends CustomCard {
             if (card != null) {
                 card.drawScale = drawScale;
                 card.current_x = xPosition3;
-                card.current_y = yPosition3;
+                card.current_y = yPosition1;
                 card.render(sb);
             }
         }

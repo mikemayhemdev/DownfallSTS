@@ -87,7 +87,7 @@
  },
   "Slimebound:OozeBath": {
   "NAME": "黏液浴",
-  "DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 翻倍。 NL 消耗 。",
+   "DESCRIPTION": "Apply !M! slimeboundmod:Goop to target enemy at the start of each of it's turns. NL Exhaust.",
   "UPGRADE_DESCRIPTION": "将一名敌人的 slimeboundmod:黏液 变为三倍。 NL 消耗 。"
  },
  "Slimebound:SlimeSpikes": {
