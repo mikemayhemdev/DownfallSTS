@@ -40,9 +40,9 @@
     "NAME": "Inferno Ghostflame",
     "DESCRIPTION": [
       "#yIgnited. ",
-	  "#yActive. Ignites when spending [E] [E] [E].",
-	  "#yActive. Ignites when spending [E] [E].",
-	  "#yActive. Ignites when spending [E].",
+	  "#yActive. Ignites when spending [E] [E] [E] .",
+	  "#yActive. Ignites when spending [E] [E] .",
+	  "#yActive. Ignites when spending [E] .",
 	  "Error. Please report to mod dev: ",
 	  "Inactive. Ignites when spending [E] [E] [E] while #yActive.",
 	  " NL NL #yIgnition: When #yIgnited, deal #b",
