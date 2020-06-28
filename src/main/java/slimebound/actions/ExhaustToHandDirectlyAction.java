@@ -25,6 +25,8 @@ public class ExhaustToHandDirectlyAction extends AbstractGameAction {
                 this.card.targetDrawScale = 0.75F;// 27
                 this.card.applyPowers();// 28
                 AbstractDungeon.player.exhaustPile.removeCard(this.card);// 29
+                AbstractDungeon.player.discardPile.removeCard(this.card);
+                AbstractDungeon.player.drawPile.removeCard(this.card);
             }
 
             AbstractDungeon.player.hand.refreshHandLayout();// 32
