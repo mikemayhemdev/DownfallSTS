@@ -20,9 +20,9 @@
     "NAME": "Greater Sear",
     "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Deal !D! damage. NL Apply !M! hexamod:Soulburn. NL Exhaust."
   },
-  "expansioncontent:GhostWheel": {
-    "NAME": "Hex Flames",
-    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. NL Gain six expansioncontent:Ghostflames. If expansioncontent:Ghostflames are already in play, gain 2 hexamod:Intensity instead."
+  "expansioncontent:SuperHexaguard": {
+    "NAME": "Ghost Guard",
+    "DESCRIPTION": "expansioncontent:Boss - Hexaghost. Ethereal. hexamod:Afterlife. NL Gain !B! Block. NL Draw 1 card."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Beam",
