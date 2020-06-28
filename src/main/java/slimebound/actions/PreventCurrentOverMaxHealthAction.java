@@ -13,14 +13,10 @@ public class PreventCurrentOverMaxHealthAction extends AbstractGameAction {
     private AbstractPlayer p;
 
 
-    public PreventCurrentOverMaxHealthAction() {
+    public PreventCurrentOverMaxHealthAction(int amount) {
 
         this.p = AbstractDungeon.player;
-
-        setValues(this.p, AbstractDungeon.player, this.amount);
-
-        this.actionType = ActionType.CARD_MANIPULATION;
-
+        this.amount = amount;
         this.duration = Settings.ACTION_DUR_FAST;
 
     }
@@ -30,6 +26,7 @@ public class PreventCurrentOverMaxHealthAction extends AbstractGameAction {
         if (p.currentHealth > p.maxHealth - this.amount) {
 
             p.currentHealth = p.maxHealth - this.amount;
+            p.healthBarUpdatedEvent();
 
         }
 

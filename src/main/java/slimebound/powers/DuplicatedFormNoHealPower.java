@@ -88,7 +88,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
     }
 
     public void updateCurrentHealth() {
-        AbstractDungeon.actionManager.addToBottom(new PreventCurrentOverMaxHealthAction());
+        AbstractDungeon.actionManager.addToBottom(new PreventCurrentOverMaxHealthAction(this.amount));
     }
 
     public void stackPower(int stackAmount) {
@@ -97,7 +97,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
         if (stackAmount > 0){
             AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, stackAmount, DamageInfo.DamageType.HP_LOSS));
         }
-
+        updateCurrentHealth();
     }
 
     public void reducePower(int stackAmount) {
