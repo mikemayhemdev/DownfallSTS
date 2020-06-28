@@ -1,6 +1,5 @@
 package downfall.patches;
 
-import basemod.BaseMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,12 +27,9 @@ import sneckomod.relics.SuperSneckoEye;
 import theHexaghost.TheHexaghost;
 import theHexaghost.cards.Haunted;
 import theHexaghost.potions.BurningPotion;
-import theHexaghost.potions.EctoCoolerPotion;
 import theHexaghost.relics.BolsterEngine;
 import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.relics.Sixitude;
-
-import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 public class BanSharedContentPatch {
 
@@ -59,7 +55,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.colorlessCardPool.removeCard(DonusPower.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(Flail.ID);
-                AbstractDungeon.colorlessCardPool.removeCard(GhostWheel.ID);
+                AbstractDungeon.colorlessCardPool.removeCard(SuperHexaguard.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                 AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
@@ -87,7 +83,7 @@ public class BanSharedContentPatch {
                     AbstractDungeon.colorlessCardPool.removeCard(GoopSpray.ID);
                 }
                 if (AbstractDungeon.player instanceof TheHexaghost || RandomCardWithTagAction.hexaLocked()) {
-                    AbstractDungeon.colorlessCardPool.removeCard(GhostWheel.ID);
+                    AbstractDungeon.colorlessCardPool.removeCard(SuperHexaguard.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(Sear.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(Hexaburn.ID);
                 }

@@ -1,6 +1,5 @@
 package expansioncontent.cards;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,7 +37,7 @@ public class QuickStudy extends AbstractExpansionCard {
         if (AbstractDungeon.player.chosenClass != GuardianEnum.GUARDIAN)
             cardList.add(new OctoChoiceCard(expansionContentMod.makeID("0"), NAMES[3], expansionContentMod.makeCardPath("QuickGuardian.png"), TEXT[3], new DefensiveMode(), new ChargeUp(), new GuardianWhirl()));
         if (AbstractDungeon.player.chosenClass != TheHexaghost.Enums.THE_SPIRIT)
-            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("1"), NAMES[4], expansionContentMod.makeCardPath("QuickHexa.png"), TEXT[4], new Hexaburn(), new GhostWheel(), new Sear()));
+            cardList.add(new OctoChoiceCard(expansionContentMod.makeID("1"), NAMES[4], expansionContentMod.makeCardPath("QuickHexa.png"), TEXT[4], new Hexaburn(), new SuperHexaguard(), new Sear()));
         if (AbstractDungeon.player.chosenClass != SlimeboundEnum.SLIMEBOUND)
             cardList.add(new OctoChoiceCard(expansionContentMod.makeID("2"), NAMES[5], expansionContentMod.makeCardPath("QuickSlime.png"), TEXT[5], new PrepareCrush(), new SlimeTackle(), new GoopSpray()));
         cardList.add(new OctoChoiceCard(expansionContentMod.makeID("3"), NAMES[6], expansionContentMod.makeCardPath("QuickAutomaton.png"), TEXT[6], new BronzeBeam(), new HyperBeam(), new Flail()));
@@ -68,7 +67,7 @@ public class QuickStudy extends AbstractExpansionCard {
             case "expansioncontent:1": {
                 AbstractCard q = new Hexaburn();
                 atb(new MakeTempCardInHandActionReduceCost(q));
-                AbstractCard r = new GhostWheel();
+                AbstractCard r = new SuperHexaguard();
                 atb(new MakeTempCardInHandActionReduceCost(r));
                 AbstractCard z = new Sear();
                 atb(new MakeTempCardInHandActionReduceCost(z));
