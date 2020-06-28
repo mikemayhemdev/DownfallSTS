@@ -32,7 +32,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -73,7 +73,7 @@ public class DouseInSlime extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeSlimed(6);
+            upgradeBaseCost(2);
 
         }
 

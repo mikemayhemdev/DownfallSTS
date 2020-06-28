@@ -507,5 +507,12 @@
       "Whenever you play a card this turn, #yCommand ",
       " times."
     ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "Ooze Bath",
+    "DESCRIPTIONS": [
+      "Adds ",
+      " Goop at the start of this enemy's turn."
+    ]
   }
 }

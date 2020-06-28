@@ -1,17 +1,21 @@
 package slimebound.cards;
 
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
 import slimebound.actions.DoublePoisonSlimedWeakAction;
 import slimebound.patches.AbstractCardEnum;
+import slimebound.powers.GoopPerTurnPower;
 
 
 public class OozeBath extends AbstractSlimeboundCard {
@@ -43,7 +47,7 @@ public class OozeBath extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-
+        this.magicNumber = this.baseMagicNumber = 3;
         this.exhaust = true;
 
 
@@ -51,8 +55,7 @@ public class OozeBath extends AbstractSlimeboundCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-
-        AbstractDungeon.actionManager.addToBottom(new DoublePoisonSlimedWeakAction(m, p, this.upgraded));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new GoopPerTurnPower(m, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
 
     }
@@ -68,9 +71,7 @@ public class OozeBath extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeMagicNumber(2);
 
         }
 
