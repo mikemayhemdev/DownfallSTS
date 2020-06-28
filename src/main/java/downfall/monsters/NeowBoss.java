@@ -166,6 +166,7 @@ public class NeowBoss extends AbstractMonster {
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
         AbstractDungeon.getCurrRoom().cannotLose = true;
+        AbstractCharBoss.boss = null;
         Rezzes = 1;
         isRezzing = false;
         offscreen = false;
@@ -278,7 +279,7 @@ public class NeowBoss extends AbstractMonster {
         if (offscreen) {
             this.heal(this.maxHealth);
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, NeowInvulnerablePower.POWER_ID, 1));
-
+            AbstractCharBoss.boss = null;
             movingBack = true;
             moveTimer = 2F;
             isRezzing = false;
