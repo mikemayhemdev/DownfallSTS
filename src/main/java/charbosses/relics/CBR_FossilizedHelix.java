@@ -24,6 +24,10 @@ public class CBR_FossilizedHelix extends AbstractCharbossRelic {
         this.addToBot(new ApplyPowerAction(this.owner, this.owner, new BufferPower(this.owner, 1), 1));
     }
     
+    public String getUpdatedDescription() {
+        return this.DESCRIPTIONS[0];
+    }
+
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_FossilizedHelix();
