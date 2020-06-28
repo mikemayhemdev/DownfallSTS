@@ -150,8 +150,8 @@
  },
  "Slimebound:Lick": {
   "NAME": "舔舔",
-  "DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 消耗 。",
-  "UPGRADE_DESCRIPTION": "给予 !M! 层 虚弱 和 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 抽1张牌。 NL 消耗 。"
+  "DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 消耗 。",
+  "UPGRADE_DESCRIPTION": "给予 !SlimeboundSlimed! 层 slimeboundmod:黏液 。 NL 抽1张牌。 NL 消耗 。"
  },
  "Slimebound:HauntingLick": {
   "NAME": "缠绕之舔",
@@ -170,8 +170,8 @@
  },
  "Slimebound:Gluttony": {
   "NAME": "暴食",
-  "DESCRIPTION": "每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舐 加入手牌。",
-  "UPGRADE_DESCRIPTION": "固有 。每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舐 加入手牌。"
+  "DESCRIPTION": "每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舔 加入手牌。",
+  "UPGRADE_DESCRIPTION": "固有 。每回合第一次 slimeboundmod:消耗黏液 时，将 1 张 *舔舔 加入手牌。"
  },
  "Slimebound:PressTheAttack": {
   "NAME": "强攻",
