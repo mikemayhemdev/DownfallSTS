@@ -366,8 +366,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command again."
+    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",

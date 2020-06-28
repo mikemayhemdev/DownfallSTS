@@ -481,9 +481,9 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Minion Master",
     "DESCRIPTIONS": [
-      "Whenever you Command, Command again.",
+      "Whenever you Command, Command 2 times instead.",
       "Whenever you Command, Command #b",
-      " more times."
+      " times instead."
     ]
   },
   "Slimebound:TackleSelfDamagePreventPower": {
