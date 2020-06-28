@@ -529,10 +529,10 @@ public static void saveData() {
         UnlockTracker.addRelic(StasisCodex.ID);
 
         unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                GemstoneGunCard.ID, PocketSentry.ID, BottledAnomaly.ID
+                GemstoneGun.ID, PocketSentry.ID, BottledAnomaly.ID
         );
 
-        UnlockTracker.addRelic(GemstoneGunCard.ID);
+        UnlockTracker.addRelic(GemstoneGun.ID);
         UnlockTracker.addRelic(PocketSentry.ID);
         UnlockTracker.addRelic(BottledAnomaly.ID);
 

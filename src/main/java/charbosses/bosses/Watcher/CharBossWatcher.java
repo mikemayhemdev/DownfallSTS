@@ -1,10 +1,12 @@
 package charbosses.bosses.Watcher;
 
+import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.cards.anticards.PeaceOut;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.stances.AbstractEnemyStance;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -156,6 +158,7 @@ public class CharBossWatcher extends AbstractCharBoss {
 
     @Override
     public void die() {
+
         super.die();
 
         switch (MathUtils.random(1)) {

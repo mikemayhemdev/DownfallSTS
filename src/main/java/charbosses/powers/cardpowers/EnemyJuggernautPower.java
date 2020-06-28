@@ -29,7 +29,7 @@ public class EnemyJuggernautPower extends AbstractPower {
     public void onGainedBlock(float blockAmount) {
         if (blockAmount > 0.0F) {
             this.flash();
-            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(this.owner, this.amount, DamageType.THORNS), AttackEffect.SLASH_HORIZONTAL));
+            this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(this.owner, this.amount, DamageType.THORNS), AttackEffect.SLASH_HORIZONTAL));
         }
 
     }

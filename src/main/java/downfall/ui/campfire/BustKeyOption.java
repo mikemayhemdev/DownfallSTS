@@ -31,6 +31,7 @@ public class BustKeyOption extends AbstractCampfireOption {
     private boolean used;
     private boolean hacked;
     private float hackTime = 0F;
+    private int soulToCost = 75;
 
     public BustKeyOption() {
         this(Keys.RUBY);
@@ -38,7 +39,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public BustKeyOption(Keys key) {
         this.key = key;
-        if (AbstractDungeon.player.gold < 75) {
+        if (AbstractDungeon.player.gold < soulToCost) {
             this.usable = false;
             updateImage(key);
         } else {
@@ -62,7 +63,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                     if (this.usable) {
                         this.description += TEXT[5];
                     } else {
-                        this.description = TEXT[8];
+                        this.description = TEXT[8] + soulToCost + TEXT[9];
                     }
                 } else {
                     this.description = TEXT[7];
@@ -79,7 +80,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                     if (this.usable) {
                         this.description += TEXT[6];
                     } else {
-                        this.description = TEXT[8];
+                        this.description = TEXT[8] + soulToCost + TEXT[9];
                     }
                 } else {
                     this.description = TEXT[7];
@@ -96,7 +97,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                     if (this.usable) {
                         this.description += TEXT[4];
                     } else {
-                        this.description = TEXT[8];
+                        this.description = TEXT[8] + soulToCost + TEXT[9];
                     }
                 } else {
                     this.description = TEXT[7];
@@ -124,11 +125,11 @@ public class BustKeyOption extends AbstractCampfireOption {
         super.update();
 
         if (!this.used) {
-            if (AbstractDungeon.player.gold < 75 && this.usable) {
+            if (AbstractDungeon.player.gold < soulToCost && this.usable) {
                 this.usable = false;
                 updateImage(key);
             }
-            if (AbstractDungeon.player.gold >= 75 && !this.usable) {
+            if (AbstractDungeon.player.gold >= soulToCost && !this.usable) {
                 this.usable = true;
                 updateImage(key);
             }
@@ -158,7 +159,7 @@ public class BustKeyOption extends AbstractCampfireOption {
         if (this.usable) {
             AbstractDungeon.effectList.add(new BustKeyEffect());
             AbstractPlayer p = AbstractDungeon.player;
-            p.loseGold(75);
+            p.loseGold(soulToCost);
             this.used = true;
             this.usable = false;
             switch (key) {

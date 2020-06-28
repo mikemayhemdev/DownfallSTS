@@ -77,7 +77,7 @@
   "sneckomod:Nope": {
     "NAME": "不行",
     "DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为耗能低1的同类型牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为耗能低1的同类型牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 消耗 一张手牌。 NL 替换为耗能低1的同类型牌。",
     "EXTENDED_DESCRIPTION": [
       " 被“不行”替换。"
     ]

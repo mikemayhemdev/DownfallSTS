@@ -23,7 +23,8 @@
       "raise Max HP by 10.",
       "gain 1 Dexterity.",
       "Key shattered!",
-      "Requires 75 Souls."
+      "Requires ",
+      " Souls."
     ]
   },
   "downfall:WheelSpinButton": {

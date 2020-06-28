@@ -175,7 +175,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 }
             }
         }
-        if (AbstractDungeon.ascensionLevel >= 20) {
+        if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
             new CBR_LizardTail().instantObtain(this);
             new CBR_MagicFlower().instantObtain(this);
         }

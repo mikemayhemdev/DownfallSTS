@@ -41,9 +41,9 @@
   "sneckomod:SuspiciousHouse": {
     "NAME": "可疑的房子",
     "DESCRIPTIONS": [
-      "Travelling through the city, your ears are pierced by a shrill inhuman cry coming from a nearby house. Upon investigation, you find an inhabitant of the City, trying to silence a small serpentine creature, trapped in a cage. NL NL ~\"HEY!~ What are you doing in my house?! @GET@ @OUT!\"@ NL NL The caged critter is startled, and hops back into a corner of its confinement. It clearly is not happy here.",
-      "\"You want it? @Fine!@ It's not worth the trouble\" NL NL With a frustrated ~sigh,~ the captor unlocks the cage and reaches in. With a surprising swiftness, the serpent bites his finger with all the strength its tiny jaw can muster. NL NL With a quick intervention, you #rpunch the man, knocking him out cold, before he can retaliate against the critter. The creature happily crawls up to your hand when you offer it, and the two of you continue through the Spire together.",
-      "The serpent stares at you with a look of extreme disappointment, but ultimately smiles and wishes you well on your journey."
+      "在城市中穿行时，你听到附近一座房子里传来刺耳的怪异尖叫。一番调查之后，你发现是一个城市住民正试图让笼中的一只蛇形生物安静下来。 NL NL “ ~喂！~ 你在我家干什么？！ @滚吧！@ ” NL NL 被关着的小家伙吓了一跳，立即缩回笼子的角落里。显然它过得并不好。",
+      "“你想要这畜生？ @说好了！@ 它可不值得我费劲去养。”NL NL 捕蛇人懊恼地 ~叹了口气，~ 打开笼锁伸手进去。小蛇以迅雷不及掩耳之势张开小颚死死咬住他的手指。 NL NL 在他挣脱这小家伙之前，你迅速插手，突然 #r一拳过去 将他击倒。你招呼小蛇，它欢快地缠到你手上，你们俩一同在尖塔中继续旅行。",
+      "蛇非常失望地看着你，最后还是笑着祝你一路顺风。"
     ],
     "OPTIONS": [
       "[营救] #g获得年轻异蛇 。 #r被诅咒 #r- #r困惑。",
