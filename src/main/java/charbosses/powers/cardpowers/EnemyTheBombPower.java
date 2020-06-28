@@ -42,13 +42,11 @@ public class EnemyTheBombPower extends AbstractPower {
         this.loadRegion("the_bomb");
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
         if (this.amount == 1) {
             this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(this.owner, this.damage, DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
-
-
     }
 
     @Override
