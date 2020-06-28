@@ -101,8 +101,9 @@ public class NeowRezAction extends AbstractGameAction {
                 this.addToBot(new ApplyPowerAction(cB, cB, new SlowPower(cB, 0)));
             }
 
-            this.addToTop(new ApplyPowerAction(cB, cB, new MinionPower(cB)));
+            this.addToTop(new TriggerPseudoStartOfCombatAction(cB));
 
+            this.addToTop(new ApplyPowerAction(cB, cB, new MinionPower(cB)));
         }
         if (this.duration <= 0F) {
             cB.init();

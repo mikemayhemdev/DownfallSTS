@@ -182,9 +182,9 @@ public class HexaMod implements
             System.out.println(classInfo.getClassName());
             AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
             BaseMod.addCard(card);
-            if (cls.hasAnnotation(CardNoSeen.class)) {
-                UnlockTracker.hardUnlockOverride(card.cardID);
-            }
+           // if (cls.hasAnnotation(CardNoSeen.class)) {
+           //     UnlockTracker.hardUnlockOverride(card.cardID);
+           // }
         }
     }
 

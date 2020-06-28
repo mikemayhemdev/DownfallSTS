@@ -488,8 +488,8 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "从者大师",
     "DESCRIPTIONS": [
-      "当你命令时，再命令一次。",
-      "当你命令时，额外命令 #b",
+      "当你命令时，变为命令 #b2 次。",
+      "当你命令时，变为命令 #b",
 	  " 次。"
     ]
   },
@@ -516,10 +516,10 @@
     ]
   },
   "Slimebound:GoopPerTurnPower": {
-    "NAME": "Ooze Bath",
+    "NAME": "黏液浴",
     "DESCRIPTIONS": [
-      "Adds ",
-      " Goop at the start of this enemy's turn."
+      "这名敌人回合开始时给予 #b",
+      " 层 #y黏液 。"
     ]
   }
 }

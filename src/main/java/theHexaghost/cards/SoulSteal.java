@@ -38,6 +38,7 @@ public class SoulSteal extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             exhaust = false;
+            upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

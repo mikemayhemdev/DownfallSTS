@@ -53,11 +53,13 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
         ArrayList<AbstractRelic> playerUncommonRelics = new ArrayList<>();
 
         for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r.tier == AbstractRelic.RelicTier.COMMON) {
-                playerCommonRelics.add(r);
-            }
-            if (r.tier == AbstractRelic.RelicTier.UNCOMMON) {
-                playerUncommonRelics.add(r);
+            if (!r.name.contains("Bottled")) {
+                if (r.tier == AbstractRelic.RelicTier.COMMON) {
+                    playerCommonRelics.add(r);
+                }
+                if (r.tier == AbstractRelic.RelicTier.UNCOMMON) {
+                    playerUncommonRelics.add(r);
+                }
             }
         }
 

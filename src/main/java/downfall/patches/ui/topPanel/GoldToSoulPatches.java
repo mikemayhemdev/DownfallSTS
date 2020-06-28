@@ -281,7 +281,10 @@ public class GoldToSoulPatches {
                 if (data.VALUE == null) {
                     data.VALUE = "";
                 }
-                replacementString = replacementString.replaceAll(phrase, data.VALUE);
+                if (phrase != null) {
+                    replacementString = replacementString.replaceAll(phrase, data.VALUE);
+                }
+
             }
         }
 

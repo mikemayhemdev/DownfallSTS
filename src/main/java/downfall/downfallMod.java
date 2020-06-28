@@ -905,9 +905,7 @@ public class downfallMod implements
 
     @Override
     public void receiveStartGame() {
-        if (CardCrawlGame.loadingSave) {
-            GoldToSoulPatches.changeGoldToSouls(!evilMode);
-        }
+        GoldToSoulPatches.changeGoldToSouls(!evilMode);
         if (!CardCrawlGame.loadingSave) {
             possEncounterList.clear();
             possEncounterList.add("downfall:CharBossIronclad");
