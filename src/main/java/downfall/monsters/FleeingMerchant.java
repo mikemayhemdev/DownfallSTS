@@ -279,10 +279,13 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void dispose() {
-        super.dispose();
+
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         //AbstractDungeon.combatRewardScreen.open();
+
         if (DEAD) {
+            AbstractDungeon.getCurrRoom().endBattle();
+
             AbstractRoom tRoom = new HeartShopRoom(false);
             AbstractDungeon.currMapNode.setRoom(tRoom);
             AbstractDungeon.scene.nextRoom(tRoom);
@@ -290,6 +293,8 @@ public class FleeingMerchant extends AbstractMonster {
             AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
             tRoom.onPlayerEntry();
             AbstractDungeon.closeCurrentScreen();
+
         }
+        super.dispose();
     }
 }
