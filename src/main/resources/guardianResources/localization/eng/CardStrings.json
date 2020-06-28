@@ -73,7 +73,7 @@
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
     "DESCRIPTION": "Apply !M! Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable."
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable."
   },
   "Guardian:CurlUp": {
     "NAME": "Curl Up",

@@ -73,7 +73,7 @@
   "Guardian:VentSteam": {
     "NAME": "蒸汽喷射",
     "DESCRIPTION": "给与 !M! 层 易伤 。",
-	"UPGRADE_DESCRIPTION": "给与 !M! 层 虚弱 和 易伤 。"
+	"UPGRADE_DESCRIPTION": "给与 !M! 层 易伤 。"
   },
   "Guardian:CurlUp": {
     "NAME": "蜷身",
