@@ -84,10 +84,6 @@ public class PolyBeam extends AbstractGuardianCard {
             upgradeName();
             upgradeMagicNumber(UPGRADE_MULTICOUNT);
 
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
             this.updateDescription();
 
         }
