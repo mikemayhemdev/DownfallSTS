@@ -26,7 +26,7 @@ public class BaubleBeam extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
     private static final int GEMACTIVATIONS = 2;

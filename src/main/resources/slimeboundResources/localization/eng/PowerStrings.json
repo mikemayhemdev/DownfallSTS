@@ -481,9 +481,9 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Minion Master",
     "DESCRIPTIONS": [
-      "Whenever you Command, Command again.",
+      "Whenever you Command, Command 2 times instead.",
       "Whenever you Command, Command #b",
-      " more times."
+      " times instead."
     ]
   },
   "Slimebound:TackleSelfDamagePreventPower": {
@@ -506,6 +506,13 @@
       "Whenever you play a card this turn, #yCommand.",
       "Whenever you play a card this turn, #yCommand ",
       " times."
+    ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "Ooze Bath",
+    "DESCRIPTIONS": [
+      "Adds ",
+      " Goop at the start of this enemy's turn."
     ]
   }
 }

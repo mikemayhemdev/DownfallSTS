@@ -68,7 +68,7 @@
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Guardian Whirl",
-    "DESCRIPTION": "Must be in *Defensive *Mode, and exits the mode. NL Deal !D! damage !M! times to ALL enemies."
+    "DESCRIPTION": "Must be in *Defensive *Mode. NL Exit *Defensive *Mode. NL Deal !D! damage !M! times to ALL enemies."
   },
   "Guardian:VentSteam": {
     "NAME": "Vent Steam",
@@ -284,8 +284,8 @@
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 Times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X+1 times. NL guardianmod:Tick - Increase the damage dealt by Beam cards by !M! this combat."
   },
   "Guardian:BaubleBeam": {
     "NAME": "Bauble Beam",

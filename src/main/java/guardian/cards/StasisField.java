@@ -24,7 +24,7 @@ public class StasisField extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 6;
     private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -68,7 +68,7 @@ public class StasisField extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BONUS);
+         //   upgradeBlock(UPGRADE_BONUS);
             if (this.socketCount < 4) {
                 this.socketCount++;
                 this.saveGemMisc();

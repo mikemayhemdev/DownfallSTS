@@ -4,6 +4,8 @@ import basemod.ReflectionHacks;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.HandOfGreed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -248,6 +250,8 @@ public class GoldToSoulPatches {
             //System.out.println(CharacterOption.TEXT[i] + " " + hack[i]);
             CharacterOption.TEXT[i] = hack[i];
         }
+
+
     }
 
     private static void setFinalStatic(Field field, Object newValue) throws Exception {
@@ -327,6 +331,16 @@ public class GoldToSoulPatches {
                 Matcher finalMatcher = new Matcher.FieldAccessMatcher(Settings.class, "IS_FULLSCREEN");
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
+        }
+    }
+
+    //Fix Hand of Greed
+    @SpirePatch(clz = HandOfGreed.class, method = "makeCopy")
+    public static class PleaseChange {
+        @SpirePostfixPatch
+        public static AbstractCard patch(AbstractCard __result, HandOfGreed __instance) {
+            __result.rawDescription = renameC.get(HandOfGreed.ID)[EvilModeCharacterSelect.evilMode?1:0].DESCRIPTION;
+            return __result;
         }
     }
 

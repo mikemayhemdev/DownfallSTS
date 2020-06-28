@@ -514,5 +514,12 @@
       "本回合每当你打出一张牌， #y命令 ",
       " 次。"
     ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "Ooze Bath",
+    "DESCRIPTIONS": [
+      "Adds ",
+      " Goop at the start of this enemy's turn."
+    ]
   }
 }
