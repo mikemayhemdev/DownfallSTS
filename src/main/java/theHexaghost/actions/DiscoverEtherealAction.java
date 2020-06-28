@@ -73,7 +73,7 @@ public class DiscoverEtherealAction extends AbstractGameAction {
 
 
             ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-            possList.removeIf(c -> (c.isEthereal == false || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
+            possList.removeIf(c -> (!c.isEthereal || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
 
             AbstractCard tmp = possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
 

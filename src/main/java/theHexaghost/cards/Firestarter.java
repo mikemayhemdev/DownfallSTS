@@ -14,7 +14,7 @@ public class Firestarter extends AbstractHexaCard {
     private static final int UPG_DAMAGE = 2;
 
     private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 2;
+    private static final int UPG_MAGIC =2;
 
     public Firestarter() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
