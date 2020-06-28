@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
 import downfall.patches.EvilModeCharacterSelect;
+import downfall.patches.actlikeit.MapCompatiblity;
 import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
@@ -327,7 +329,13 @@ public class FlipMap {
                 {
                     ++count;
 
-                    if (count == 1 || count == 2)
+                    if (count == 1)
+                    {
+                        f.replace("{" +
+                                "$_ = " + BossStuff.class.getName() + ".compatibleGetARealY($0);" +
+                                "}");
+                    }
+                    else if (count == 2)
                     {
                         f.replace("{" +
                                 "$_ = " + BossStuff.class.getName() + ".getARealY($0);" +
@@ -335,6 +343,21 @@ public class FlipMap {
                     }
                 }
             }
+        }
+
+        public static int compatibleGetARealY(MapRoomNode mmmmmm)
+        {
+            if (Loader.isModLoaded("actlikeit"))
+            {
+                return MapCompatiblity.actLikeItCheck();
+            }
+            else if (EvilModeCharacterSelect.evilMode)
+            {
+                if (mmmmmm.y == 0)
+                    return AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14;
+                return 0;
+            }
+            return mmmmmm.y;
         }
 
         public static int getARealY(MapRoomNode mmmmmm)
