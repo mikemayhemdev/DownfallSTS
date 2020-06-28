@@ -11,10 +11,10 @@ public class Firestarter extends AbstractHexaCard {
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
     private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 7;
+    private static final int UPG_DAMAGE = 2;
 
     private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 7;
+    private static final int UPG_MAGIC =2;
 
     public Firestarter() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
