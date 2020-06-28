@@ -20,7 +20,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.actions.ForceWaitAction;
-import downfall.actions.LoseGoldAction;
 import downfall.actions.MerchantThrowGoldAction;
 import downfall.powers.SoulStealPower;
 import downfall.rooms.HeartShopRoom;
@@ -200,7 +199,8 @@ public class FleeingMerchant extends AbstractMonster {
                 this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, AbstractDungeon.player.gold), AbstractDungeon.player.gold));
                 CURRENT_SOULS += AbstractDungeon.player.gold;
             }
-            this.addToBot(new LoseGoldAction(15));
+            AbstractDungeon.player.gold -= Math.min(AbstractDungeon.player.gold, 15);
+
             int roll = MathUtils.random(2);
             if (roll == 0) {
                 CardCrawlGame.sound.play("VO_MERCHANT_3A");
