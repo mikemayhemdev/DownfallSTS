@@ -146,7 +146,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CenterGridCardSelectScreen.centerGridSelect = true;
         CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        ArrayList<AbstractCard> gems = getCharacterSafeGems(4);
+        ArrayList<AbstractCard> gems = getCharacterSafeGems(3);
         for (AbstractCard q : gems) {
             group.addToTop(q);
         }
@@ -179,7 +179,7 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
 
-            if (numPicked == 4) {
+            if (numPicked == 3) {
                 allDone = true;
                 AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                 description = getUpdatedDescription();

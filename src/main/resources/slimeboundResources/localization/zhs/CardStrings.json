@@ -125,7 +125,7 @@
  },
  "Slimebound:GrowthPunch": {
   "NAME": "成长拳",
-  "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:消耗黏液 -这张牌的伤害和格挡数值提高 !M! 。"
+  "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL slimeboundmod:消耗黏液 -这张牌本场战斗的伤害和格挡数值提高 !M! 。"
  },
  "Slimebound:CheckThePlaybook": {
   "NAME": "查找策略",

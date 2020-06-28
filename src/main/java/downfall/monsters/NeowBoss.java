@@ -69,7 +69,7 @@ public class NeowBoss extends AbstractMonster {
     private int strAmt;
     private int blockAmt;
 
-    private boolean isRezzing = false;
+    private boolean isRezzing;
     public boolean offscreen;
     private boolean movingOffscreen;
     private boolean movingBack;
@@ -172,6 +172,8 @@ public class NeowBoss extends AbstractMonster {
         movingBack = false;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
     }
+
+
 
     public void takeTurn() {
         switch (this.nextMove) {

@@ -1,6 +1,7 @@
 package charbosses.cards.red;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyMetallicizePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +30,7 @@ public class EnMetallicize extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new MetallicizePower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyMetallicizePower(m, this.magicNumber), this.magicNumber));
     }
 
     @Override
