@@ -68,7 +68,7 @@ public class StasisField extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BONUS);
+         //   upgradeBlock(UPGRADE_BONUS);
             if (this.socketCount < 4) {
                 this.socketCount++;
                 this.saveGemMisc();

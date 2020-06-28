@@ -68,7 +68,7 @@ public class StasisStrike extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+        //    upgradeDamage(UPGRADE_BONUS);
             if (this.socketCount < 4) {
                 this.socketCount++;
                 this.saveGemMisc();
