@@ -20,9 +20,9 @@
     "NAME": "大灼热",
     "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 造成 !D! 点伤害。 NL 给予 !M! 层 hexamod:灼魂 。 NL 消耗 。"
   },
-  "expansioncontent:GhostWheel": {
-    "NAME": "六火",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 NL 获得六个 expansioncontent:鬼火 。 如果已有 expansioncontent:鬼火 ，则获得 2 点 hexamod:热烈 。"
+  "expansioncontent:SuperHexaguard": {
+    "NAME": "幽灵护盾",
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。虚无 。 NL hexamod:阴世 。获得 !B! 点 格挡 。 NL 抽一张牌。"
   },
   "expansioncontent:HyperBeam": {
     "NAME": "超能射线",
