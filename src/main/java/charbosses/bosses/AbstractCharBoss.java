@@ -931,6 +931,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         discardPile.clear();
         exhaustPile.clear();
         limbo.clear();
+        orbs.clear();
         stance.onExitStance();
         stance = AbstractEnemyStance.getStanceFromName("Neutral");
         stance.onEnterStance();
