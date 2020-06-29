@@ -36,6 +36,7 @@ public class EnFinisher extends AbstractBossCard {
     public void multiDamageCardCalculate() {
         super.multiDamageCardCalculate();
         this.magicNumber = 0;
+        this.isMultiDamage = false;
         if(AbstractCharBoss.boss != null){
             for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
                 if(c instanceof EnCloakAndDagger){
@@ -54,7 +55,7 @@ public class EnFinisher extends AbstractBossCard {
                     this.magicNumber ++;
             }
 
-            if(this.magicNumber >= 0 && this.magicNumber != 1)this.isMultiDamage = true;
+            if(this.magicNumber >= 1)this.isMultiDamage = true;
         }
 
 
