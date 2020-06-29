@@ -1,10 +1,12 @@
  package charbosses.powers.cardpowers;
  
+ import charbosses.actions.common.EnemyGainEnergyAction;
  import charbosses.bosses.AbstractCharBoss;
  import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
  import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
  import com.megacrit.cardcrawl.core.AbstractCreature;
  import com.megacrit.cardcrawl.core.CardCrawlGame;
+ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
  import com.megacrit.cardcrawl.localization.LocalizedStrings;
  import com.megacrit.cardcrawl.localization.PowerStrings;
  import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -52,7 +54,7 @@
      @Override
      public void onEnergyRecharge() {
          this.flash();
-         AbstractCharBoss.boss.gainEnergy(-this.amount);
+         AbstractDungeon.actionManager.addToBottom(new EnemyGainEnergyAction(-this.amount));
      }
 
 
