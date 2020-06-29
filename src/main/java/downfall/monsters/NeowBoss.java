@@ -241,6 +241,7 @@ public class NeowBoss extends AbstractMonster {
             case 4:
                 this.halfDead = true;
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
+                AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
                 break;
             case 5:
                 break;
@@ -278,6 +279,7 @@ public class NeowBoss extends AbstractMonster {
     public void moveForRez() {
         if (offscreen) {
             this.heal(this.maxHealth);
+            AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, NeowInvulnerablePower.POWER_ID, 1));
             AbstractCharBoss.boss = null;
             movingBack = true;
