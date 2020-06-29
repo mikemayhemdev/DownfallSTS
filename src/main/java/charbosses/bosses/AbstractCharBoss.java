@@ -457,6 +457,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void gainEnergy(final int e) {
         EnemyEnergyPanel.addEnergy(e);
         this.hand.glowCheck();
+
+        int budget = energyPanel.getCurrentEnergy();
+        for (int i = 0; i < AbstractCharBoss.boss.hand.group.size(); i++) {
+            AbstractBossCard c = (AbstractBossCard) AbstractCharBoss.boss.hand.group.get(i);
+            if (c.costForTurn <= budget && c.costForTurn != -2) {
+                c.createIntent();
+                c.bossLighten();
+                budget -= c.costForTurn;
+                budget += c.energyGeneratedIfPlayed;
+                if (budget < 0) budget = 0;
+            }else {
+                c.bossDarken();
+                c.destroyIntent();
+            }
+        }
     }
 
     public void loseEnergy(final int e) {
