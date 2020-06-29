@@ -134,7 +134,10 @@
   "sneckomod:SoulExchange": {
     "NAME": "灵魂交换",
     "DESCRIPTION": "sneckomod:蛇证 。 NL 抽1张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为随机同角色牌。",
-    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为随机同角色牌。"
+    "UPGRADE_DESCRIPTION": "sneckomod:蛇证 。 NL 抽2张牌并 消耗 1张牌。 NL 消耗 你的手牌，将它们替换为随机同角色牌。",
+    "EXTENDED_DESCRIPTION": [
+      "来消耗以交换灵魂。"
+    ]
   },
   "sneckomod:CheapStock": {
     "NAME": "廉价股票",

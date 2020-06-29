@@ -10,12 +10,14 @@ import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sneckomod.SneckoMod;
 
 public class SoulExchangeAction extends AbstractGameAction {
     private AbstractPlayer p;
+    private static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(SneckoMod.makeID("SoulExchangeAction")).EXTENDED_DESCRIPTION;
 
     public SoulExchangeAction() {
         this.actionType = ActionType.CARD_MANIPULATION;// 22
@@ -27,7 +29,7 @@ public class SoulExchangeAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 30
 
             if (this.p.hand.group.size() > 1) {// 74
-                AbstractDungeon.handCardSelectScreen.open("to Exhaust for Soul Exchange.", 1, false, false);// 75
+                AbstractDungeon.handCardSelectScreen.open(EXTENDED_DESCRIPTION[0], 1, false, false);// 75
                 this.tickDuration();// 76
                 return;// 77
             }
