@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.EntanglePower;
 public class ConstructModePower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:ConstructModePower";
     private static final int THORNS = 3;
-    public static PowerType POWER_TYPE = PowerType.BUFF;
+    public static PowerType POWER_TYPE = PowerType.DEBUFF;
     public static String[] DESCRIPTIONS;
 
     public ConstructModePower(AbstractCreature owner, int amount) {
