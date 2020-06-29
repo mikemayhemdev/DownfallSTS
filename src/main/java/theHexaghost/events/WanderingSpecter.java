@@ -51,6 +51,8 @@ public class WanderingSpecter extends AbstractImageEvent {
         if (possRelicsList.size() > 0) {
             rtog = RelicLibrary.getRelic(possRelicsList.get(AbstractDungeon.cardRandomRng.random(possRelicsList.size() - 1))).makeCopy();
             this.imageEventText.setDialogOption(OPTIONS[0] + rtog.name + OPTIONS[1], new Haunted(), rtog);
+        } else {
+            imageEventText.setDialogOption(OPTIONS[3], true);
         }
 
         this.imageEventText.setDialogOption(OPTIONS[2]);

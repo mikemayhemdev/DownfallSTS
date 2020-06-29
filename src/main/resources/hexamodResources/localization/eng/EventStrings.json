@@ -10,7 +10,8 @@
       "[Accept] Obtain ",
       ". #rBecome #rCursed #r- #rHaunted.",
       "[Decline]",
-      "[Leave]"
+      "[Leave]",
+      "[Locked]"
     ]
   },
   "hexamod:SealChamber": {
