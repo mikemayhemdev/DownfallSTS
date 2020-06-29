@@ -59,7 +59,7 @@ public class CharBossSilent extends AbstractCharBoss {
                             archetype = new ArchetypeAct3Poison();
                             break;
                         default:
-                            archetype = new ArchetypeAct1Shivs();
+                            archetype = new ArchetypeAct3Poison();
                             break;
                     }
                     break;

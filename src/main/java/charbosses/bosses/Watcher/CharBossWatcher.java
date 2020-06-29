@@ -119,7 +119,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                             archetype = new ArchetypeAct3Divinity();
                             break;
                         default:
-                            archetype = new ArchetypeAct1Retain();
+                            archetype = new ArchetypeAct3Divinity();
                             break;
                     }
                     break;

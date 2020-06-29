@@ -60,7 +60,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                             archetype = new ArchetypeAct3Block();
                             break;
                         default:
-                            archetype = new ArchetypeAct1PerfectedStrike();
+                            archetype = new ArchetypeAct3Block();
                             break;
                     }
                     break;
