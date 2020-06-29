@@ -174,6 +174,7 @@ public class SlimeboundCharacter extends CustomPlayer {
         this.state.addListener(new SlimeAnimListener());
     }
 
+    /*
     public void movePosition(float x, float y) {
         super.movePosition(x, y);
         float dialogOffsetY = this.dialogY - this.drawY + mainRenderYOffset;
@@ -181,6 +182,7 @@ public class SlimeboundCharacter extends CustomPlayer {
         this.dialogY = this.drawY + dialogOffsetY;
         this.refreshHitboxLocation();
     }
+    */
 
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList();
