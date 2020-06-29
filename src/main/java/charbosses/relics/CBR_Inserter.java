@@ -15,7 +15,6 @@ public class CBR_Inserter extends AbstractCharbossRelic {
 
     public CBR_Inserter() {
         super(new Inserter());
-        this.tier = RelicTier.RARE;
     }
 
     public String getUpdatedDescription() {

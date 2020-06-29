@@ -68,7 +68,7 @@ public class CharBossDefect extends AbstractCharBoss {
                             archetype = new ArchetypeAct3Orbs();
                             break;
                         default:
-                            archetype = new ArchetypeAct1Streamline();
+                            archetype = new ArchetypeAct3Orbs();
                             break;
                     }
                     break;

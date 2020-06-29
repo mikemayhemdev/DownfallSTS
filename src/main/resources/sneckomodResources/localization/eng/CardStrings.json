@@ -134,7 +134,10 @@
   "sneckomod:SoulExchange": {
     "NAME": "Soul Exchange",
     "DESCRIPTION": "sneckomod:Snekproof. NL Draw 1 card, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class."
+    "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL Draw 2 cards, then Exhaust 1 card. NL Exhaust your hand, replacing them with random cards of the Exhausted card's class.",
+    "EXTENDED_DESCRIPTION": [
+      "to Exhaust for Soul Exchange."
+    ]
   },
   "sneckomod:CheapStock": {
     "NAME": "Cheap Stock",

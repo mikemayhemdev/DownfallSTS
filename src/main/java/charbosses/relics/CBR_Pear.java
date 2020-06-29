@@ -10,7 +10,6 @@ public class CBR_Pear extends AbstractCharbossRelic {
 
     public CBR_Pear() {
         super(new Pear());
-        this.tier = RelicTier.COMMON;
     }
 
     public String getUpdatedDescription() {

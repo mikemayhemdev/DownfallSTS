@@ -11,7 +11,6 @@ public class CBR_MaskSerpent extends AbstractCharbossRelic {
     public static final String ID = "CBRSerpentHead";
     public CBR_MaskSerpent() {
         super(new SsserpentHead());
-        this.tier = RelicTier.SPECIAL;
     }
 
     @Override

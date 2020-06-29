@@ -17,7 +17,6 @@ public class CBR_ThreadAndNeedle extends AbstractCharbossRelic {
 
     public CBR_ThreadAndNeedle() {
         super(new ThreadAndNeedle());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     public String getUpdatedDescription() {

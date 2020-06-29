@@ -24,6 +24,7 @@ import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
 import charbosses.relics.CBR_MagicFlower;
+import charbosses.stances.AbstractEnemyStance;
 import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -96,7 +97,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public int damagedThisCombat;
     public int cardsPlayedThisTurn;
     public int attacksPlayedThisTurn;
-    public static boolean isTurnStart = true;
 
     public AbstractPlayer.PlayerClass chosenClass;
     public AbstractBossDeckArchetype chosenArchetype = null;
@@ -213,7 +213,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         attacksDrawnForAttackPhase = 0;
         setupsDrawnForSetupPhase = 0;
         this.startTurn();
-        isTurnStart = false;
         this.makePlay();
         this.onSetupTurn = !this.onSetupTurn;
     }
@@ -299,7 +298,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         //SlimeboundMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
-        this.isTurnStart = true;
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
@@ -316,7 +314,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
             this.cardsPlayedThisTurn = 0;
             this.attacksPlayedThisTurn = 0;
-            isTurnStart = true;
         }
     }
 
@@ -457,6 +454,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void gainEnergy(final int e) {
         EnemyEnergyPanel.addEnergy(e);
         this.hand.glowCheck();
+
+        int budget = energyPanel.getCurrentEnergy();
+        for (int i = 0; i < AbstractCharBoss.boss.hand.group.size(); i++) {
+            AbstractBossCard c = (AbstractBossCard) AbstractCharBoss.boss.hand.group.get(i);
+            if (c.costForTurn <= budget && c.costForTurn != -2) {
+                c.createIntent();
+                c.bossLighten();
+                budget -= c.costForTurn;
+                budget += c.energyGeneratedIfPlayed;
+                if (budget < 0) budget = 0;
+            }else {
+                c.bossDarken();
+                c.destroyIntent();
+            }
+        }
     }
 
     public void loseEnergy(final int e) {
@@ -919,7 +931,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         discardPile.clear();
         exhaustPile.clear();
         limbo.clear();
+        orbs.clear();
         stance.onExitStance();
+        stance = AbstractEnemyStance.getStanceFromName("Neutral");
+        stance.onEnterStance();
 
         super.die();
 

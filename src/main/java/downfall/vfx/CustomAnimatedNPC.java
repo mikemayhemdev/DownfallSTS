@@ -85,8 +85,8 @@ public class CustomAnimatedNPC {
         if (!this.noMesh) {
             this.loadAnimation(atlasUrl, skeletonUrl, 1.0F);
             this.skeleton.setPosition(x, y - 300F * Settings.scale * this.heartScale);
-            this.state.setAnimation(0, trackName, true);
-            this.state.setTimeScale(1.0F);
+          this.state.setAnimation(0, trackName, true); // anim
+           this.state.setTimeScale(1.0F); // anim
         }
 
         this.portalRender = portalRender;
@@ -103,8 +103,8 @@ public class CustomAnimatedNPC {
 
         if (this.portalRender) {
             if (!this.noMesh) {
-                this.addListener(new HeartAnimListener());
-                this.skeleton.getRootBone().setScale(0.8F * this.heartScale);
+               this.addListener(new HeartAnimListener());// anim
+                this.skeleton.getRootBone().setScale(0.8F * this.heartScale);// anim
             }
             for (int i = 1; i <= borderEffectCount; i++) {
 

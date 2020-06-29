@@ -16,7 +16,6 @@ public class CBR_RedSkull extends AbstractCharbossRelic {
     public CBR_RedSkull() {
         super(new RedSkull());
         this.isActive = false;
-        this.tier = RelicTier.UNCOMMON;
     }
 
     @Override

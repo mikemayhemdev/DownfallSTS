@@ -12,7 +12,6 @@ public class CBR_BirdFacedUrn extends AbstractCharbossRelic {
 
     public CBR_BirdFacedUrn() {
         super(new BirdFacedUrn());
-        this.tier = RelicTier.COMMON;
     }
 
     @Override

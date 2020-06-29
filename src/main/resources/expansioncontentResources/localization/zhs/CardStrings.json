@@ -22,7 +22,7 @@
   },
   "expansioncontent:SuperHexaguard": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。虚无 。 NL hexamod:阴世 。获得 !B! 点 格挡 。 NL 抽一张牌。"
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 虚无 。 NL hexamod:阴世 。获得 !B! 点 格挡 。 NL 抽一张牌。"
   },
   "expansioncontent:HyperBeam": {
     "NAME": "超能射线",
@@ -46,7 +46,8 @@
   },
   "expansioncontent:LastStand": {
     "NAME": "最后一战",
-    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 。"
+    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，回复 !M! 点生命并获得 2 点 力量 。"
   },
   "expansioncontent:Collect": {
     "NAME": "收藏家",

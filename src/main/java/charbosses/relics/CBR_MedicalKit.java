@@ -12,7 +12,6 @@ public class CBR_MedicalKit extends AbstractCharbossRelic {
 
     public CBR_MedicalKit() {
         super(new MedicalKit());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     public String getUpdatedDescription() {

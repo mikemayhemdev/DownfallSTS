@@ -20,7 +20,6 @@ public class CBR_Pocketwatch extends AbstractCharbossRelic {
     public CBR_Pocketwatch() {
         super(new Pocketwatch());
         this.counter = 0;
-        this.tier = RelicTier.BOSS;
     }
 
     public String getUpdatedDescription() {
