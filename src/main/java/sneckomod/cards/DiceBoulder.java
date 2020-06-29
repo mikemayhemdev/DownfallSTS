@@ -56,6 +56,7 @@ public class DiceBoulder extends AbstractSneckoCard {
     public void upgrade() {
         this.upgradeDamage(4);// 49
         upgradeMagicNumber(8);
+
         ++this.timesUpgraded;// 50
         this.upgraded = true;// 51
         this.name = cardStrings.NAME + "+" + this.timesUpgraded;// 52
