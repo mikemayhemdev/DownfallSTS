@@ -1,6 +1,7 @@
 package charbosses.powers.cardpowers;
 
 
+import charbosses.actions.common.EnemyGainEnergyAction;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -41,7 +42,8 @@ public class EnemyDevaFormPower extends AbstractPower {
 
     public void onEnergyRecharge() {
         this.flash();
-        AbstractCharBoss.boss.gainEnergy(this.energyGainAmount);
+        AbstractDungeon.actionManager.addToTop(new EnemyGainEnergyAction(this.energyGainAmount));
+//        AbstractCharBoss.boss.gainEnergy(this.energyGainAmount);
         this.energyGainAmount += this.amount;
         this.updateDescription();
     }

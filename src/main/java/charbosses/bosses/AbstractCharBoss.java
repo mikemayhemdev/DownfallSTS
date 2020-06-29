@@ -96,7 +96,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public int damagedThisCombat;
     public int cardsPlayedThisTurn;
     public int attacksPlayedThisTurn;
-    public static boolean isTurnStart = true;
 
     public AbstractPlayer.PlayerClass chosenClass;
     public AbstractBossDeckArchetype chosenArchetype = null;
@@ -213,7 +212,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         attacksDrawnForAttackPhase = 0;
         setupsDrawnForSetupPhase = 0;
         this.startTurn();
-        isTurnStart = false;
         this.makePlay();
         this.onSetupTurn = !this.onSetupTurn;
     }
@@ -299,7 +297,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         //SlimeboundMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
-        this.isTurnStart = true;
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
@@ -316,7 +313,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
             this.cardsPlayedThisTurn = 0;
             this.attacksPlayedThisTurn = 0;
-            isTurnStart = true;
         }
     }
 
