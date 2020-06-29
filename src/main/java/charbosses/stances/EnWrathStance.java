@@ -12,11 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.StanceStrings;
-import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import com.megacrit.cardcrawl.vfx.stance.StanceChangeParticleGenerator;
-import com.megacrit.cardcrawl.vfx.stance.WrathParticleEffect;
 
 public class EnWrathStance extends AbstractEnemyStance {
     public static final String STANCE_ID = "Wrath";
@@ -38,18 +34,20 @@ public class EnWrathStance extends AbstractEnemyStance {
     }
 
     public void updateAnimation() {
-        if (!Settings.DISABLE_EFFECTS) {
-            this.particleTimer -= Gdx.graphics.getDeltaTime();
-            if (this.particleTimer < 0.0F) {
-                this.particleTimer = 0.05F;
-                AbstractDungeon.effectsQueue.add(new EnemyWrathParticleEffect());
+        if (AbstractCharBoss.boss != null) {
+            if (!Settings.DISABLE_EFFECTS) {
+                this.particleTimer -= Gdx.graphics.getDeltaTime();
+                if (this.particleTimer < 0.0F) {
+                    this.particleTimer = 0.05F;
+                    AbstractDungeon.effectsQueue.add(new EnemyWrathParticleEffect());
+                }
             }
-        }
 
-        this.particleTimer2 -= Gdx.graphics.getDeltaTime();
-        if (this.particleTimer2 < 0.0F) {
-            this.particleTimer2 = MathUtils.random(0.3F, 0.4F);
-            AbstractDungeon.effectsQueue.add(new EnemyStanceAuraEffect("Wrath"));
+            this.particleTimer2 -= Gdx.graphics.getDeltaTime();
+            if (this.particleTimer2 < 0.0F) {
+                this.particleTimer2 = MathUtils.random(0.3F, 0.4F);
+                AbstractDungeon.effectsQueue.add(new EnemyStanceAuraEffect("Wrath"));
+            }
         }
 
     }
