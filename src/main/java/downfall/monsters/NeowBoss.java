@@ -86,7 +86,7 @@ public class NeowBoss extends AbstractMonster {
 
 
     public NeowBoss() {
-        super(NAME, ID, 200, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
+        super(NAME, ID, 250, HB_X, HB_Y, HB_W, HB_H, "images/npcs/neow/skeleton.png");
 
         this.loadAnimation("images/npcs/neow/skeleton.atlas", "images/npcs/neow/skeleton.json", 1.0F);
 
