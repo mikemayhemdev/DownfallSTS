@@ -17,7 +17,7 @@ public class CBR_OrangePellets extends AbstractCharbossRelic {
 
     public CBR_OrangePellets() {
         super(new OrangePellets());
-        this.tier = RelicTier.COMMON;
+
     }
 
     public String getUpdatedDescription() {

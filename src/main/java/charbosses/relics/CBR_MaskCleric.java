@@ -12,7 +12,6 @@ public class CBR_MaskCleric extends AbstractCharbossRelic {
 
     public CBR_MaskCleric() {
         super(new FaceOfCleric());
-        this.tier = RelicTier.SPECIAL;
     }
 
     @Override

@@ -13,7 +13,6 @@ public class CBR_SelfFormingClay extends AbstractCharbossRelic {
 
     public CBR_SelfFormingClay() {
         super(new SelfFormingClay());
-        this.tier = RelicTier.BOSS;
     }
 
     @Override

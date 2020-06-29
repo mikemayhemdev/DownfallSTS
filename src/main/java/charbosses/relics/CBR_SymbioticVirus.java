@@ -16,7 +16,7 @@ public class CBR_SymbioticVirus extends AbstractCharbossRelic {
 
     public CBR_SymbioticVirus() {
         super(new SymbioticVirus());
-        this.tier = RelicTier.RARE;
+
     }
 
 

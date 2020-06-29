@@ -13,7 +13,6 @@ public class CBR_Orrery extends AbstractCharbossRelic {
 
     public CBR_Orrery() {
         super(new Orrery());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     public String getUpdatedDescription() {

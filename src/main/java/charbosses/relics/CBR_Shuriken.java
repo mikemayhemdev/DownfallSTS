@@ -16,7 +16,6 @@ public class CBR_Shuriken extends AbstractCharbossRelic {
     public CBR_Shuriken() {
         super(new Shuriken());
         this.counter = 0;
-        this.tier = RelicTier.UNCOMMON;
     }
 
     @Override
