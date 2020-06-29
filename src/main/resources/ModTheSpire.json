@@ -2,7 +2,7 @@
   "modid": "${project.artifactId}",
   "name": "${project.name}",
   "author_list": [
-    "MichaelMayhem, Vex, kiooeht, Alchyr, erasels, The Evil Pickle, Blank the Evil, JohnnyDevo, Freshbone, Half-GoblinHankins, AlexDrieger, Erim-Nelhah, Darkglade, AlexMdle, Rita-B, Casey Yano.  Art Use Credit: reddit u/justaschema - ending art, Bruce Brenneise - ending art, reddit u/Atrolux - snecko art, Chronometrics - snecko art, George Eracleous - merchant card art.  Music Credit: PandorasBread  Testers and Helpers: Reina, moocowgoesmoo, Jedi, Skyson, Chufmoney   Localization - borloch"
+    "The Downfall Collab Team"
   ],
   "description": "${project.description}",
   "version": "${project.version}",

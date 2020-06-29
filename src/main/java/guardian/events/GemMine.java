@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
 import guardian.relics.PickAxe;
@@ -103,6 +104,7 @@ public class GemMine extends AbstractImageEvent {
                         } else {
                             this.imageEventText.updateBodyText(DIALOG_LOOT);
                             AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new guardian.relics.PickAxe());
+                            AbstractDungeon.commonRelicPool.remove(PickAxe.ID);
                             this.imageEventText.updateDialogOption(0, OPTIONS[4], false);
 
                         }

@@ -51,7 +51,21 @@ public class NeowInvulnerablePower extends AbstractPower {
         return damageAmount;
     }
 
+    @Override
+    public int onLoseHp(int damageAmount) {
+        int currentHP = this.owner.currentHealth;
 
+        if (currentHP == 1 || damageAmount > currentHP) {
+            damageAmount = currentHP - 1;
+            this.flash();
+            if (AbstractCharBoss.boss == null) {
+                NeowBoss nb = (NeowBoss) this.owner;
+                nb.switchToRez();
+            }
+        }
+
+        return damageAmount;
+    }
 
     @Override
     public void updateDescription() {
