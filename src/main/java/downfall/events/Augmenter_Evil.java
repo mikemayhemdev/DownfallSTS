@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon.CurrentScreen;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -96,7 +97,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                     case 3:
                         SlimeboundMod.logger.info("fight");
 
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Augmenter());
+                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:Augmenter");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new MutagenicStrength());
@@ -106,6 +107,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearRemainingOptions();
                         this.enterCombatFromImage();
+                        AbstractDungeon.lastCombatMetricKey = "downfall:Augmenter";
                         break;
                     default:
                         logger.info("ERROR: Unhandled case " + buttonPressed);

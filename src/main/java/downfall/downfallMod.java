@@ -76,6 +76,7 @@ import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
 import downfall.util.EtherealMod;
+import downfall.util.LocalizeHelper;
 import downfall.util.ReplaceData;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
@@ -132,6 +133,8 @@ public class downfallMod implements
     public static final String PROP_CURSE_SHARING = "contentSharing_curses";
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
+
+
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
@@ -810,19 +813,34 @@ public class downfallMod implements
 
         BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader::new);
 
-        BaseMod.addMonster("downfall:Heads", "Living Wall Heads", () -> new MonsterGroup(
+        BaseMod.addMonster("downfall:Heads", LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new ChangingTotem(),
                         new ForgetfulTotem(),
                         new GrowingTotem(),
                 }));
 
-        BaseMod.addMonster("downfall:LooterAlt", "Looter Evil", () -> new MonsterGroup(
+        BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new Augmenter()
+                }));
+
+        BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new LadyInBlue()
+                }));
+
+        BaseMod.addMonster("downfall:FaceTrader", downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new downfall.monsters.FaceTrader()
+                }));
+
+        BaseMod.addMonster("downfall:LooterAlt", LooterAlt.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new LooterAlt(0.0F, 0.0F)
                 }));
 
-        BaseMod.addMonster("downfall:LooterAlt2", "Looter Evil x2", () -> new MonsterGroup(
+        BaseMod.addMonster("downfall:LooterAlt2", LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new LooterAlt(-200.0F, 15.0F),
                         new MuggerAlt(80.0F, 0.0F)

@@ -111,5 +111,10 @@
     "TEXT": [
       "Add a Boss Card to your deck"
     ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "Living Wall Heads"
+    ]
   }
 }

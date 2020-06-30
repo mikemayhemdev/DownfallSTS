@@ -127,9 +127,9 @@ public class LivingWall_Evil extends AbstractImageEvent {
                     case 3:
                         this.choice = Choice.FIGHT;
                         SlimeboundMod.logger.info("fight");
-                        MonsterGroup monsters =
+//                        MonsterGroup monsters =
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Heads");
-                        AbstractDungeon.getCurrRoom().monsters = monsters;
+//                        AbstractDungeon.getCurrRoom().monsters = monsters;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().rewards.add(new RemoveCardReward());
@@ -138,6 +138,7 @@ public class LivingWall_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearRemainingOptions();
                         this.enterCombatFromImage();
+                        AbstractDungeon.lastCombatMetricKey = "downfall:Heads";
                         break;
                 }
 

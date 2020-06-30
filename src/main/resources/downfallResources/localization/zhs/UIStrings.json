@@ -112,5 +112,10 @@
     "TEXT": [
       "将一张首领牌加入牌组"
     ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "活墙壁"
+    ]
   }
 }

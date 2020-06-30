@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
@@ -62,7 +63,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.screen = WomanInBlue_Evil.CurScreen.FIGHT;
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new LadyInBlue());
+                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:WomanInBlue");
                         AbstractDungeon.getCurrRoom().rewards.clear();
 
                         for (int i = 0; i < 3; i++) {
@@ -85,6 +86,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
 
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.enterCombatFromImage();
+                        AbstractDungeon.lastCombatMetricKey = "downfall:WomanInBlue";
                         break;
                     case 1:
                         this.imageEventText.clearAllDialogs();
