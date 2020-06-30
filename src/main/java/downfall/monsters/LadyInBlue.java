@@ -31,7 +31,7 @@ public class LadyInBlue extends AbstractMonster {
 
 
     public LadyInBlue() {
-        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/womaninblue/WomanInBlue.png");
+        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/womaninblue/womaninblue2.png");
 
         this.loadAnimation("downfallResources/images/monsters/womaninblue/WomanInBlue.atlas", "downfallResources/images/monsters/womaninblue/WomanInBlue.json", 1.0F);
 

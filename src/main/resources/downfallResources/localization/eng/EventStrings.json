@@ -396,10 +396,10 @@
     "NAME": "The Mausoleum",
     "DESCRIPTIONS": [
       "Venturing through a series of tombs, you are faced with a large sarcophagus ~studded~ ~with~ ~gems~ in the center of a circular room. NL You cannot make out the writing on the coffin, however, you do notice #p~black~ #p~fog~ seeping out from the sides. NL You're familiar with this fog - a clear sign of #y~spirits.~",
-      "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@cough...@"
+      "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@feel@ #r@a@ #r@chill...@"
     ],
     "OPTIONS": [
-      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rWrithe."
+      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rHaunted."
     ]
   },
   "downfall:Nest": {
