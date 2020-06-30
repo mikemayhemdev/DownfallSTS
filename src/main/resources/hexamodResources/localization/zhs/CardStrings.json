@@ -199,7 +199,8 @@
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
     "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。"
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": ["这种力量太遥远，无法直接传达。"]
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
@@ -275,7 +276,8 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 。 hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !burny! 层 hexamod:灼魂 。",
+    "EXTENDED_DESCRIPTION": ["太烫手了！"]
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",

@@ -53,10 +53,10 @@ public class EnArmaments extends AbstractBossCard {
             }
         }
         if (this.upgraded) {
-            return autoPriority() + (unupgradedCards * 5);
+            return (100 - unupgradedCards * 10);
         }
         else {
-            return autoPriority() + (unupgradedCards * 2);
+            return (100 - unupgradedCards * 15);
         }
     }
 

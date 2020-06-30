@@ -18,18 +18,23 @@ public class NoApplyRandomDamageAction extends AbstractGameAction {
     private int min;
     private int max;
     private AbstractSneckoCard source;
+    private int dmg;
 
     public NoApplyRandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx, AbstractSneckoCard source) {
-        if(min > max)
-        {
-        this.min = max;
-        this.max = min;
-        }else {
+        if (min > max) {
+            this.min = max;
+            this.max = min;
+        } else {
             this.min = min;
             this.max = max;
         }
+
+        if (this.max != this.min) {
+            dmg = AbstractDungeon.miscRng.random(min, max);
+        } else {
+            dmg = this.max;
+        }
         this.source = source;
-        int dmg = AbstractSneckoCard.getRandomNum(min, max, source);
         this.info = new DamageInfo(AbstractDungeon.player, dmg);
         this.target = target;
         this.actionType = ActionType.DAMAGE;

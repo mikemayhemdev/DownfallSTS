@@ -42,6 +42,7 @@ public class CommandOnPlayPower extends AbstractPower implements CloneablePowerI
         flash();
         AbstractOrb o = SlimeboundMod.getLeadingSlime();
         if (o != null) {
+            for(int i =0;i<this.amount;i++)
             addToBot(new TrigggerSpecificSlimeAttackAction(o));
         }
     }

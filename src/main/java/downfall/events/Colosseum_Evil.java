@@ -65,6 +65,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
+                        AbstractDungeon.lastCombatMetricKey = "Colosseum Nobs";
 
                         return;
                     case 1:
@@ -75,19 +76,29 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
                         switch (s) {
                             case "downfall:CharBossIronclad":
-                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossIronclad");
+                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
                                 break;
                             case "downfall:CharBossSilent":
-                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()});
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossSilent");
+                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossSilent";
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()});
                                 break;
                             case "downfall:CharBossDefect":
-                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()});
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossDefect");
+                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossDefect";
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()});
                                 break;
                             case "downfall:CharBossWatcher":
-                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossWatcher");
+                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossWatcher";
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
                             default:
-                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossIronclad");
+                                AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
+//                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
                                 break;
                         }
                         downfallMod.overrideBossDifficulty = false;

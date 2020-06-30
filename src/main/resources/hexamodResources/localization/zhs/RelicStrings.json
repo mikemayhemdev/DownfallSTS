@@ -32,7 +32,7 @@
     "NAME": "保暖石",
     "FLAVOR": "一点火苗就能激活这东西了！",
     "DESCRIPTIONS": [
-      "每当你杀死带有 #yhexamod:灼魂 的敌人，回复 #b2 点生命。"
+      "如果本场战斗引爆过 #yhexamod:灼魂 ，战斗结束时回复 #b2 点生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
