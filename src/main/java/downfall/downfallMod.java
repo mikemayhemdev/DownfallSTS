@@ -67,6 +67,7 @@ import downfall.cards.KnowingSkullWish;
 import downfall.dailymods.*;
 import downfall.events.*;
 import downfall.monsters.*;
+import downfall.patches.CantDoublePlayBossCardsPatch;
 import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
@@ -99,7 +100,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 @SpireInitializer
 public class downfallMod implements
         OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, OnPlayerLoseBlockSubscriber
-        , AddAudioSubscriber {
+        ,AddAudioSubscriber {
     public static final String modID = "downfall";
 
 
