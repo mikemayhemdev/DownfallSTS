@@ -4,7 +4,7 @@
     "NAMES": [
       "首领"
     ],
-    "DESCRIPTION": "您只能轮流玩1张Boss卡。"
+    "DESCRIPTION": "一回合只能打出 #1 张 #y首领 牌。"
   },
   {
     "PROPER_NAME": "鬼火",
