@@ -98,7 +98,7 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
         addToDeck(new EnStrikePurple(), false);
 
         //Turn 4
-        addToDeck(new EnEmptyBody(), false);
+        addToDeck(new EnSashWhip(), false);
         addToDeck(new EnDefendPurple(), false);
         addToDeck(new EnProtect(), true);
 
