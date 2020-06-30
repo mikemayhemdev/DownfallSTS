@@ -233,8 +233,8 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
-                AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
+             //   AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+                //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.strAmt * 3), this.strAmt * 3));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
                 break;
@@ -242,6 +242,7 @@ public class NeowBoss extends AbstractMonster {
                 this.halfDead = true;
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
                 AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
                 break;
             case 5:
                 break;
@@ -280,6 +281,7 @@ public class NeowBoss extends AbstractMonster {
         if (offscreen) {
             this.heal(this.maxHealth);
             AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, NeowInvulnerablePower.POWER_ID, 1));
             AbstractCharBoss.boss = null;
             movingBack = true;
