@@ -16,14 +16,14 @@ public class PowerFromBeyond extends AbstractHexaCard {
     private static final int UPG_MAGIC = 1;
 
     public PowerFromBeyond() {
-        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, -2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.NONE);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
     }
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        this.cantUseMessage = "This power is too distant to directly channel.";
+        this.cantUseMessage = EXTENDED_DESCRIPTION[0];
         return false;
     }
 

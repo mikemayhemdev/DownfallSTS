@@ -199,7 +199,8 @@
   "hexamod:PowerFromBeyond": {
     "NAME": "Power from Beyond",
     "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn."
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Gain [E] and draw !M! cards next turn.",
+    "EXTENDED_DESCRIPTION": ["This power is too distant to directly channel."]
   },
   "hexamod:BurningTouch": {
     "NAME": "Burning Touch",
@@ -275,7 +276,8 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies at the start of your next turn."
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies at the start of your next turn.",
+    "EXTENDED_DESCRIPTION": ["It's too hot to touch!"]
   },
   "hexamod:PhantomFireball": {
     "NAME": "Phantom Fireball",
