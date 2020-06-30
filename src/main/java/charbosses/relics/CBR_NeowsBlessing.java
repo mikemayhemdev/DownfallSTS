@@ -23,13 +23,13 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
 
     public void onEquip() {
         if (AbstractDungeon.actNum <= 3) {
-            this.HP = MathUtils.floor(100 + ((AbstractDungeon.actNum - 1) * 60));
+            this.HP = MathUtils.floor(100 + ((AbstractDungeon.actNum - 1) * 100));
             if (AbstractDungeon.ascensionLevel >= 9) {
                 this.HP += 20;
             }
             owner.increaseMaxHp(MathUtils.floor(this.HP), false);
         } else {
-            this.HP = MathUtils.floor(100 + ((1) * 60));
+            this.HP = MathUtils.floor(100 + ((1) * 100));
             if (AbstractDungeon.ascensionLevel >= 9) {
                 this.HP += 20;
             }
