@@ -4,7 +4,7 @@
     "NAMES": [
       "boss"
     ],
-    "DESCRIPTION": "After adding a Boss card to your deck, no other cards of that Boss's set can be added."
+    "DESCRIPTION": "You may only play #b1 #yBoss card in a turn."
   },
   {
     "PROPER_NAME": "Ghostflames",
