@@ -139,6 +139,16 @@ public class SlimeSpawnAction extends AbstractGameAction {
                         ((OneTwoCombo) q).onSplit();
                     }
                 }
+                for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
+                    if (q instanceof OneTwoCombo) {
+                        ((OneTwoCombo) q).onSplit();
+                    }
+                }
+                for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
+                    if (q instanceof OneTwoCombo) {
+                        ((OneTwoCombo) q).onSplit();
+                    }
+                }
             }
 
 
