@@ -3,7 +3,7 @@
     "NAME": "黏液之心",
     "FLAVOR": "我可真时髦。",
     "DESCRIPTIONS": [
-      "每当你 #yslimeboundmod:消耗黏液 ，恢复2点生命。"
+      "每当你 #yslimeboundmod:消耗黏液 ，恢复1点生命。"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {

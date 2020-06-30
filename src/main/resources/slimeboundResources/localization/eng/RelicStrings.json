@@ -3,7 +3,7 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "I feel so funky.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
+      "Whenever you #yslimeboundmod:Consume, heal 1 HP."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
