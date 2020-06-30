@@ -125,7 +125,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL slimeboundmod:Consume - Increase this card's damage and Block by !M! for this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL slimeboundmod:Consume - Increase this card's effects by !M! this combat."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
