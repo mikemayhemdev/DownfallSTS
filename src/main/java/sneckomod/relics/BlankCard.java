@@ -17,19 +17,34 @@ public class BlankCard extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("BlankCard.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("BlankCard.png"));
 
+    private boolean activated;
+
     public BlankCard() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
-    public void atBattleStart() {
-        ArrayList<AbstractCard> possCardsList = new ArrayList<>(AbstractDungeon.player.drawPile.group);
-        AbstractCard card2 = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
-        AbstractMonster m = AbstractDungeon.getRandomMonster();
+    public void start() {
 
-        card2.freeToPlayOnce = true;
-        card2.exhaust = true;
+    }
 
-        AbstractDungeon.actionManager.addToBottom(new QueueCardAction(card2, m));
+    @Override
+    public void atTurnStartPostDraw() {
+        if (!this.activated) {
+            ArrayList<AbstractCard> possCardsList = new ArrayList<>(AbstractDungeon.player.drawPile.group);
+            AbstractCard card2 = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
+            AbstractMonster m = AbstractDungeon.getRandomMonster();
+
+            card2.freeToPlayOnce = true;
+            card2.exhaust = true;
+
+            AbstractDungeon.actionManager.addToBottom(new QueueCardAction(card2, m));
+            this.activated = true;
+        }
+    }
+
+    @Override
+    public void onVictory() {
+        this.activated = false;
     }
 
     public String getUpdatedDescription() {
