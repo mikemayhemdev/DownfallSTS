@@ -54,7 +54,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
         addRelic(new CBR_Inserter());
 
         addRelic(new CBR_Colosseum());
-        addRelic(new CBR_FossilizedHelix());
+        //addRelic(new CBR_FossilizedHelix());
         addRelic(new CBR_SymbioticVirus());
 
         addRelic(new CBR_FusionHammer());

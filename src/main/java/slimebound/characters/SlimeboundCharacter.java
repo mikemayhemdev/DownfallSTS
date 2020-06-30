@@ -177,9 +177,8 @@ public class SlimeboundCharacter extends CustomPlayer {
 
     public void movePosition(float x, float y) {
         super.movePosition(x, y);
-        float dialogOffsetY = this.dialogY - this.drawY + mainRenderYOffset;
         this.drawY = this.drawY + mainRenderYOffset;
-        this.dialogY = this.drawY + dialogOffsetY;
+        this.dialogY = this.drawY + 30F*Settings.scale;
         this.refreshHitboxLocation();
     }
 
