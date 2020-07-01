@@ -67,6 +67,8 @@ public class NeowInvulnerablePower extends AbstractPower {
         return damageAmount;
     }
 
+
+
     @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];

@@ -239,7 +239,7 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
                 break;
             case 4:
-                this.halfDead = true;
+                if(this.hasPower(NeowInvulnerablePower.POWER_ID))  this.halfDead = true;
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
                 AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
