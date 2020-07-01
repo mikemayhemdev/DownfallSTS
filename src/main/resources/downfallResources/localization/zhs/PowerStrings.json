@@ -40,9 +40,9 @@
     ]
   },
   "downfall:PoisonResist": {
-    "NAME": "Poison Resistance",
+    "NAME": "抗毒",
     "DESCRIPTIONS": [
-      "Poison does not bypass your Block."
+      "中毒现在能被格挡。"
     ]
   }
 }
