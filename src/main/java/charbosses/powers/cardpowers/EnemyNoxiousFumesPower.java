@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NoxiousFumesPower;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import charbosses.powers.general.EnemyPoisonPower;
 
 public class EnemyNoxiousFumesPower extends AbstractPower {
     public static final String POWER_ID = "downfall:Enemy Noxious Fumes";
@@ -23,16 +23,16 @@ public class EnemyNoxiousFumesPower extends AbstractPower {
         this.owner = owner;
         this.amount = bladeAmt;
         this.updateDescription();
-        this.loadRegion("infiniteBlades");
+        this.loadRegion("fumes");
     }
 
-    public void atStartOfTurnPostDraw() {
+    @Override
+    public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {// 27
             this.flash();// 28
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, owner, new PoisonPower(AbstractDungeon.player, owner, amount), amount));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, owner, new EnemyPoisonPower(AbstractDungeon.player, owner, amount), amount));
         }
-
-    }// 34
+    }
 
     @Override
     public void stackPower(final int stackAmount) {

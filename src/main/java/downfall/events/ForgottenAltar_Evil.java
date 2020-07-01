@@ -42,7 +42,7 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.player.gold >= goldCost) {
-            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + this.hpLoss + OPTIONSALT[2]);
+            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + (this.hpLoss + 10) + OPTIONSALT[2]);
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldCost + OPTIONSALT[4], true);
 
@@ -59,7 +59,7 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.clearAllDialogs();
                         AbstractDungeon.player.loseGold(this.goldCost);
-                        AbstractDungeon.player.heal(5, true);
+                        AbstractDungeon.player.heal(this.hpLoss + 10, true);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         this.imageEventText.setDialogOption(OPTIONSALT[5]);
                         CardCrawlGame.sound.play("HEAL_1");

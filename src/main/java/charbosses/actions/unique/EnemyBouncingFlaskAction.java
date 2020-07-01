@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.vfx.combat.PotionBounceEffect;
 
 public class EnemyBouncingFlaskAction extends AbstractGameAction {
@@ -40,7 +40,7 @@ public class EnemyBouncingFlaskAction extends AbstractGameAction {
             }
 
             if (this.target.currentHealth > 0) {// 53
-                this.addToTop(new ApplyPowerAction(this.target, AbstractDungeon.player, new PoisonPower(this.target, source, this.amount), this.amount, true, AttackEffect.POISON));// 54
+                this.addToTop(new ApplyPowerAction(this.target, AbstractDungeon.player, new EnemyPoisonPower(this.target, source, this.amount), this.amount, true, AttackEffect.POISON));// 54
                 this.addToTop(new WaitAction(0.1F));// 62
             }
 
