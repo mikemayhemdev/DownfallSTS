@@ -5,6 +5,7 @@ import charbosses.cards.colorless.EnRitualDagger;
 import charbosses.cards.purple.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
 
@@ -81,8 +82,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         //addRelic(new CBR_PhilosopherStone());
 
         /////   CARDS   /////
-
-        //Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnLikeWater(), false);
         addToDeck(new EnDefendPurple(), false);
         addToDeck(new EnWallop(), true);
@@ -94,7 +94,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
 
         //Turn 3
         addToDeck(new EnReachHeaven(), false);
-        addToDeck(new EnWaveOfTheHand(), false);
+        addToDeck(new EnWaveOfTheHand(), extraUpgrades);
         addToDeck(new EnStrikePurple(), false);
 
         //Turn 4
@@ -103,9 +103,9 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         addToDeck(new EnThroughViolence(), false);
 
         //Turn 5
-        addToDeck(new EnLikeWater(), false);
+        addToDeck(new EnLikeWater(), extraUpgrades);
         addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnSashWhip(), false);
+        addToDeck(new EnSashWhip(), extraUpgrades);
 
         //Turn 6
         addToDeck(new EnDevaForm(), false);

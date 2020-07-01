@@ -8,6 +8,7 @@ import charbosses.cards.red.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
@@ -62,10 +63,8 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
 
         /////   CARDS   /////
-
-
-        //Turn 1
-        addToDeck(new EnMetallicize(), false);
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        addToDeck(new EnMetallicize(), extraUpgrades);
         addToDeck(new EnIronWave(), true);
         addToDeck(new EnWrithe(), true);
 
@@ -76,7 +75,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
         //Turn 3
         addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnPowerThrough(), false);
+        addToDeck(new EnPowerThrough(), extraUpgrades);
         addToDeck(new EnJuggernaut(), false);
 
         //Turn 4
@@ -95,7 +94,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         addToDeck(new EnDefendRed(), true);
 
         //Turn 7
-        addToDeck(new EnBarricade(), false);
+        addToDeck(new EnBarricade(), extraUpgrades);
         addToDeck(new EnGhostlyArmor(), false);
         addToDeck(new EnDefendRed(), true);
     }

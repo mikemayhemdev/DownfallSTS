@@ -6,6 +6,8 @@ import charbosses.cards.purple.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Transmogrifier;
 import charbosses.relics.EventRelics.CBR_UpgradeShrine;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import slimebound.SlimeboundMod;
 
 public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
 
@@ -79,13 +81,15 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
         addRelic(new CBR_IceCream());
 
         /////   CARDS   /////
+        boolean extraUpgrades = (AbstractDungeon.ascensionLevel >= 4);
+       // SlimeboundMod.logger.info("EXTRA UPGRADES: " + extraUpgrades);
 
         //Turn 1
         addToDeck(new EnStrikePurple(), true);
         addToDeck(new EnVigilance(), false);
         addToDeck(new EnPerseverance(), true);
         addToDeck(new EnWindmillStrike(), false);
-        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnStrikePurple(), extraUpgrades);
 
         //Turn 2
         addToDeck(new EnSandsOfTime(), false);
@@ -94,11 +98,11 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
 
         //Turn 3
         addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnTalkToTheHand(), false);
+        addToDeck(new EnTalkToTheHand(), extraUpgrades);
         addToDeck(new EnStrikePurple(), false);
 
         //Turn 4
-        addToDeck(new EnSashWhip(), false);
+        addToDeck(new EnSashWhip(), extraUpgrades);
         addToDeck(new EnDefendPurple(), false);
         addToDeck(new EnProtect(), true);
 

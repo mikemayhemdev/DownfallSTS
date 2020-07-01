@@ -6,6 +6,7 @@ import charbosses.cards.curses.EnPain;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Bandits;
 import charbosses.relics.EventRelics.CBR_OminousForge;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
 
@@ -49,20 +50,19 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
 
 
         /////   CARDS   /////
-
-        //Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnBootSequence(), false);
         addToDeck(new EnClaw(), true);
         addToDeck(new EnStrikeBlue(), false);
 
         //Turn 2
-        addToDeck(new EnLeap(), false);
+        addToDeck(new EnLeap(), extraUpgrades);
         addToDeck(new EnPain(), false);
         addToDeck(new EnZap(), true);
 
         //Turn 3
         addToDeck(new EnRebound(), false);
-        addToDeck(new EnClaw(), false);
+        addToDeck(new EnClaw(), extraUpgrades);
         addToDeck(new EnDefendBlue(), false);
 
         //Turn 4
@@ -78,7 +78,7 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
         //Turn 6
         addToDeck(new EnEchoForm(), false);
         addToDeck(new EnDefendBlue(), true);
-        addToDeck(new EnMachineLearning(), false);
+        addToDeck(new EnMachineLearning(), extraUpgrades);
 
 
 

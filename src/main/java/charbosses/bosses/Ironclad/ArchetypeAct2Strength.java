@@ -8,6 +8,7 @@ import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Augmenter;
 import charbosses.relics.EventRelics.CBR_BigFish;
 import charbosses.relics.EventRelics.CBR_Serpent;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
 
@@ -50,22 +51,19 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
         addRelic(new CBR_Augmenter(1));
 
         /////   CARDS   /////
-
-
-
-        //Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnInflame(), true);
         addToDeck(new EnArmaments(), true);
         addToDeck(new EnDefendRed(), false);
 
         //Turn 2
         addToDeck(new EnTwinStrike(), false);
-        addToDeck(new EnIronWave(), false);
+        addToDeck(new EnIronWave(), extraUpgrades);
         addToDeck(new EnRegret(), false);
 
         //Turn 3
         addToDeck(new EnFlameBarrier(), false);
-        addToDeck(new EnJAX(), false);
+        addToDeck(new EnJAX(), extraUpgrades);
         addToDeck(new EnStrikeRed(), false);
 
         //Turn 4
@@ -79,7 +77,7 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
         addToDeck(new EnStrikeRed(), false);
 
         //Turn 6
-        addToDeck(new EnDemonForm(), false);
+        addToDeck(new EnDemonForm(), extraUpgrades);
         addToDeck(new EnSeeingRed(), false);
         addToDeck(new EnClothesline(), true);
 

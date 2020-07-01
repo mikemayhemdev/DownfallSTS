@@ -6,6 +6,7 @@ import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Cleric;
 import charbosses.relics.EventRelics.CBR_UpgradeShrine;
 import charbosses.relics.EventRelics.CBR_WeMeetAgain;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
 
@@ -46,8 +47,7 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         addRelic(new CBR_BagOfPreparation());
 
         /////   CARDS   /////
-
-        //Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
 
         addToDeck(new EnStrikeGreen());
         addToDeck(new EnDefendGreen());
@@ -66,14 +66,14 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         addToDeck(new EnDefendGreen());
 
         //Turn 4
-        addToDeck(new EnStrikeGreen());
-        addToDeck(new EnBladeDance());
+        addToDeck(new EnStrikeGreen(), extraUpgrades);
+        addToDeck(new EnBladeDance(), extraUpgrades);
         addToDeck(new EnSuckerPunch());
 
         //Turn 5
         addToDeck(new EnInfiniteBlades(), false);
         addToDeck(new EnDefendGreen());
-        addToDeck(new EnAccuracy());
+        addToDeck(new EnAccuracy(), extraUpgrades);
 
     }
 
