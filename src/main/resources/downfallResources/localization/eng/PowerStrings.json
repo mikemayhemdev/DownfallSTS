@@ -38,5 +38,11 @@
     "DESCRIPTIONS": [
       "At the end of your turn, choose a card to Exhaust."
     ]
+  },
+  "downfall:PoisonResist": {
+    "NAME": "Poison Resistance",
+    "DESCRIPTIONS": [
+      "Poison does not bypass your Block, and triggers at the end of your turn."
+    ]
   }
 }

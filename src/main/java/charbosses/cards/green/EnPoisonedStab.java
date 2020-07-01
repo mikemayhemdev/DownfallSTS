@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import charbosses.powers.general.EnemyPoisonPower;
 
 import java.util.ArrayList;
 
@@ -33,7 +33,7 @@ public class EnPoisonedStab extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        this.addToBot(new ApplyPowerAction(p, m, new PoisonPower(p, m, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, m, new EnemyPoisonPower(p, m, this.magicNumber), this.magicNumber));
     }
 
     @Override
