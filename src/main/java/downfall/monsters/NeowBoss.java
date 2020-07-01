@@ -94,7 +94,7 @@ public class NeowBoss extends AbstractMonster {
         this.drawY += DRAWY_OFFSET;
 
         neowboss = this;
-
+        type = EnemyType.BOSS;
         this.baseDrawX = drawX;
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
