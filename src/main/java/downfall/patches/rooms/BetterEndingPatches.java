@@ -1,7 +1,6 @@
 package downfall.patches.rooms;
 
 import basemod.ReflectionHacks;
-import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.characters.AnimatedNpc;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,13 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.monsters.FleeingMerchant;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.vfx.SoulStealEffect;
 import javassist.CtBehavior;
-import slimebound.SlimeboundMod;
 
 public class BetterEndingPatches {
     //Determine and overwrite strings on room creation
@@ -48,13 +45,13 @@ public class BetterEndingPatches {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(SpireHeart __instance) {
 
-            if (EvilModeCharacterSelect.evilMode &&
-                    AbstractDungeon.actNum == 3 &&
-                    AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
-                    AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
-                    AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
-                    FleeingMerchant.DEAD
-            ) {
+            if (EvilModeCharacterSelect.evilMode) {
+                if (AbstractDungeon.actNum == 3 &&
+                        AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
+                        AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
+                        AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
+                        FleeingMerchant.DEAD
+                ) {
                 /*
                 __instance.roomEventText.clear();
                 __instance.hasFocus = false;
@@ -70,55 +67,55 @@ public class BetterEndingPatches {
                 AbstractDungeon.fadeOut();
                 AbstractDungeon.isDungeonBeaten = true;
                 */
+                    return SpireReturn.Continue();
+                } else {
+                    Settings.hasRubyKey = false;
+                    Settings.hasEmeraldKey = false;
+                    Settings.hasSapphireKey = false;
+                }
+                return SpireReturn.Continue();
+            } else {
+                return SpireReturn.Continue();
+            }
+        }
+
+        //Change effect when showing the player the score
+        @SpirePatch(clz = SpireHeart.class, method = "buttonEffect")
+        public static class BetterEffect {
+            @SpireInsertPatch(locator = Locator.class)
+            public static SpireReturn<Void> Insert(SpireHeart __instance, int buttonPressed) {
+                if (EvilModeCharacterSelect.evilMode) {
+                    AnimatedNpc heart = (AnimatedNpc) ReflectionHacks.getPrivate(__instance, SpireHeart.class, "npc");
+                    AbstractDungeon.effectsQueue.add(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, heart.skeleton.getX(), heart.skeleton.getY() + 300F * Settings.scale));
+
+                    return SpireReturn.Return(null);
+                }
 
                 return SpireReturn.Continue();
-
-            } else {
-                Settings.hasRubyKey = false;
-                Settings.hasEmeraldKey = false;
-                Settings.hasSapphireKey = false;
-            }
-            return SpireReturn.Continue();
-
-        }
-    }
-
-    //Change effect when showing the player the score
-    @SpirePatch(clz = SpireHeart.class, method = "buttonEffect")
-    public static class BetterEffect {
-        @SpireInsertPatch(locator = Locator.class)
-        public static SpireReturn<Void> Insert(SpireHeart __instance, int buttonPressed) {
-            if(EvilModeCharacterSelect.evilMode) {
-                AnimatedNpc heart = (AnimatedNpc) ReflectionHacks.getPrivate(__instance, SpireHeart.class, "npc");
-                AbstractDungeon.effectsQueue.add(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, heart.skeleton.getX(), heart.skeleton.getY() + 300F * Settings.scale));
-
-                return SpireReturn.Return(null);
             }
 
-            return SpireReturn.Continue();
-        }
-
-        //Overwrite character specific dialogue vs the heart because it doesn't fit.
-        @SpireInsertPatch(locator =  Locator2.class)
-        public static void patch(SpireHeart __instance, int buttonPressed) {
-            if(EvilModeCharacterSelect.evilMode) {
-                __instance.roomEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("downfall:BetterEnding").DESCRIPTIONS[16]);
+            //Overwrite character specific dialogue vs the heart because it doesn't fit.
+            @SpireInsertPatch(locator = Locator2.class)
+            public static void patch(SpireHeart __instance, int buttonPressed) {
+                if (EvilModeCharacterSelect.evilMode) {
+                    __instance.roomEventText.updateBodyText(CardCrawlGame.languagePack.getEventString("downfall:BetterEnding").DESCRIPTIONS[16]);
+                }
             }
-        }
 
-        public static class Locator extends SpireInsertLocator {
-            @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception {
-                Matcher matcher = new Matcher.FieldAccessMatcher(AbstractDungeon.class, "effectList");
-                return LineFinder.findInOrder(ctBehavior, matcher);
+            public static class Locator extends SpireInsertLocator {
+                @Override
+                public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                    Matcher matcher = new Matcher.FieldAccessMatcher(AbstractDungeon.class, "effectList");
+                    return LineFinder.findInOrder(ctBehavior, matcher);
+                }
             }
-        }
 
-        public static class Locator2 extends SpireInsertLocator {
-            @Override
-            public int[] Locate(CtBehavior ctBehavior) throws Exception {
-                Matcher matcher = new Matcher.MethodCallMatcher(RoomEventDialog.class, "updateDialogOption");
-                return LineFinder.findInOrder(ctBehavior, matcher);
+            public static class Locator2 extends SpireInsertLocator {
+                @Override
+                public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                    Matcher matcher = new Matcher.MethodCallMatcher(RoomEventDialog.class, "updateDialogOption");
+                    return LineFinder.findInOrder(ctBehavior, matcher);
+                }
             }
         }
     }
