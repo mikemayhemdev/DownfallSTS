@@ -54,6 +54,7 @@ public abstract class AbstractGhostflame {
 
     private Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
 
+
     public AbstractGhostflame(float x, float y) {
         lx = x;
         ly = y;
@@ -262,6 +263,16 @@ public abstract class AbstractGhostflame {
 
     public void flash() {
         if (!this.charged) flashTimer = 1.5F;
+    }
+
+    public Color getFlameColor() {
+        return Color.SKY.cpy();
+        //return Color.SKY.cpy();
+    }
+
+    public Color getActiveColor() {
+        return Color.PURPLE.cpy();
+        //return Color.PURPLE.cpy();
     }
 
     public void reset() {

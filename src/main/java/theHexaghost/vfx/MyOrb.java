@@ -75,14 +75,14 @@ public class MyOrb {
                 this.effect.update();// 88
                 this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
                 if (this.particleTimer < 0.0F) {// 90
-                    AbstractDungeon.effectList.add(new ActiveFireEffect(this.x + this.effect.y * 2.0F, this.y + this.effect.y * 2.0F));// 91
+                    AbstractDungeon.effectList.add(new ActiveFireEffect(this.x + this.effect.y * 2.0F, this.y + this.effect.y * 2.0F, myDaddy.getActiveColor()));// 91
                     this.particleTimer = 0.06F;// 93
                 }
             } else {
                 this.effect.update();// 88
                 this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
                 if (this.particleTimer < 0.0F) {// 90
-                    AbstractDungeon.effectList.add(new GhostlyWeakFireEffect(this.x + this.effect.y * 2.0F, this.y + this.effect.y * 2.0F));// 91
+                    AbstractDungeon.effectList.add(new GhostlyWeakColorableFireEffect(this.x + this.effect.y * 2.0F, this.y + this.effect.y * 2.0F, myDaddy.getFlameColor()));// 91
                     this.particleTimer = 0.06F;// 93
                 }
             }
