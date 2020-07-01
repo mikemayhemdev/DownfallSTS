@@ -54,8 +54,8 @@ public class Overexert extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 4), 4));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
-        //addToBot(new CommandAction());
-        //addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
 
     }
 
@@ -66,8 +66,8 @@ public class Overexert extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
     }

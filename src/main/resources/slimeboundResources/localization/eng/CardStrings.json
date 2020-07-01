@@ -37,7 +37,8 @@
   },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
+    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL !M! turns from now, slimeboundmod:Absorb all Slimes.",
+    "UPGRADE_DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
   },
   "Slimebound:Split": {
     "NAME": "Split",
