@@ -33,9 +33,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
  
  
  
- 
- 
- 
    
    public void stackPower(int stackAmount) {
      this.fontScale = 8.0F;

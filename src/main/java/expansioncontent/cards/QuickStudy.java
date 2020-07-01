@@ -54,116 +54,81 @@ public class QuickStudy extends AbstractExpansionCard {
     }
 
     public void doChoiceStuff(OctoChoiceCard card) {
+        AbstractCard q;
+        AbstractCard r;
+        AbstractCard z;
         switch (card.cardID) {
             case "expansioncontent:0": {
-                AbstractCard q = new ChargeUp();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new GuardianWhirl();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new DefensiveMode();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new ChargeUp();
+                r = new GuardianWhirl();
+                z = new DefensiveMode();
                 break;
             }
             case "expansioncontent:1": {
-                AbstractCard q = new Hexaburn();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new SuperHexaguard();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new Sear();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new Hexaburn();
+                r = new SuperHexaguard();
+                z = new Sear();
                 break;
             }
             case "expansioncontent:2": {
-                AbstractCard q = new PrepareCrush();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new GoopSpray();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new SlimeTackle();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new PrepareCrush();
+                r = new GoopSpray();
+                z = new SlimeTackle();
                 break;
             }
             case "expansioncontent:3": {
-                AbstractCard q = new BronzeBeam();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new HyperBeam();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new Flail();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new BronzeBeam();
+                r = new HyperBeam();
+                z = new Flail();
                 break;
             }
             case "expansioncontent:4": {
-                AbstractCard q = new DefensiveStance();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new FaceSlap();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new LastStand();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new DefensiveStance();
+                r = new FaceSlap();
+                z = new LastStand();
                 break;
             }
             case "expansioncontent:5": {
-                AbstractCard q = new Torchfire();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new Collect();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new YouAreMine();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new Torchfire();
+                r = new Collect();
+                z = new YouAreMine();
                 break;
             }
             case "expansioncontent:6": {
-                AbstractCard q = new TimeRipple();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new Chronoboost();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new ManipulateTime();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new TimeRipple();
+                r = new Chronoboost();
+                z = new ManipulateTime();
                 break;
             }
             case "expansioncontent:7": {
-                AbstractCard q = new DarkVoid();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new CaCaw();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new AwakenDeath();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new DarkVoid();
+                r = new CaCaw();
+                z = new AwakenDeath();
                 break;
             }
             case "expansioncontent:8": {
-                AbstractCard q = new DonusPower();
-                q.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(q));
-                AbstractCard r = new DecasProtection();
-                r.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(r));
-                AbstractCard z = new PolyBeam();
-                z.freeToPlayOnce = true;
-                atb(new MakeTempCardInHandAction(z));
+                q = new DonusPower();
+                r = new DecasProtection();
+                z = new PolyBeam();
                 break;
             }
+            default:{
+                q = new DonusPower();
+                r = new DecasProtection();
+                z = new PolyBeam();
+                break;
+            }
+
         }
+//        q.freeToPlayOnce = true;
+//        r.freeToPlayOnce = true;
+//        z.freeToPlayOnce = true;
+        q.updateCost(-1);
+        r.updateCost(-1);
+        z.updateCost(-1);
+        atb(new MakeTempCardInHandAction(q));
+        atb(new MakeTempCardInHandAction(r));
+        atb(new MakeTempCardInHandAction(z));
     }
 
     public void upgrade() {

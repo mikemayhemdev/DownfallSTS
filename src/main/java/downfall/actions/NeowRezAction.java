@@ -66,7 +66,6 @@ public class NeowRezAction extends AbstractGameAction {
                     break;
                 }
             }
-            owner.Rezzes++;
         }
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration <= 1.5F && !rezInit) {
@@ -105,6 +104,9 @@ public class NeowRezAction extends AbstractGameAction {
 
             this.addToTop(new ApplyPowerAction(cB, cB, new MinionPower(cB)));
         }
+
+        owner.Rezzes++;
+
         if (this.duration <= 0F) {
             cB.init();
             cB.showHealthBar();

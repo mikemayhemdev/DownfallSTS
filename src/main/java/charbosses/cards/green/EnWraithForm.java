@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.WraithFormPower;
 
@@ -29,7 +30,7 @@ public class EnWraithForm extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new IntangiblePower(m, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new IntangiblePlayerPower(m, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(m, m, new EnemyWraithFormPower(m, -1), -1));
     }
 
