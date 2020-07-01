@@ -23,6 +23,8 @@ import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
 import guardian.ui.EnhanceBonfireOption;
 
+import java.util.ArrayList;
+
 public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
     public static final String[] TEXT = uiStrings.TEXT;
@@ -136,6 +138,7 @@ public class BustKeyOption extends AbstractCampfireOption {
         }
 
         CampfireUI campfire = ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI;
+
 
         if (this.used && !this.hacked) {
             this.hacked = true;
