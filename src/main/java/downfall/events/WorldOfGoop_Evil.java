@@ -66,8 +66,8 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold* 3));
-                        AbstractDungeon.player.gainGold(this.gold);
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 3));
+                        AbstractDungeon.player.gainGold(this.gold * 3);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
@@ -77,7 +77,7 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 2));
-                        AbstractDungeon.player.gainGold(this.gold);
+                        AbstractDungeon.player.gainGold(this.gold * 2);
                         return;
                     case 2:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
