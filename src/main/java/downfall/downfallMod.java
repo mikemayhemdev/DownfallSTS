@@ -154,11 +154,14 @@ public class downfallMod implements
         BaseMod.subscribe(this);
 
 
-        configDefault.setProperty(PROP_EVENT_SHARING, "TRUE");
+        configDefault.setProperty(PROP_CURSE_SHARING, "FALSE");
         configDefault.setProperty(PROP_RELIC_SHARING, "TRUE");
+        configDefault.setProperty(PROP_EVENT_SHARING, "TRUE");
         configDefault.setProperty(PROP_POTION_SHARING, "TRUE");
-        configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
         configDefault.setProperty(PROP_CARD_SHARING, "TRUE");
+        configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
+//        configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
+
 
         loadConfigData();
 
@@ -199,9 +202,13 @@ public class downfallMod implements
             }
             SpireConfig config = new SpireConfig("downfall", "downfallSaveData", configDefault);
 
-            config.setBool(PROP_EVENT_SHARING, contentSharing_events);
+            config.setBool(PROP_CURSE_SHARING, contentSharing_curses);
             config.setBool(PROP_RELIC_SHARING, contentSharing_relics);
+            config.setBool(PROP_EVENT_SHARING, contentSharing_events);
             config.setBool(PROP_POTION_SHARING, contentSharing_potions);
+            config.setBool(PROP_CARD_SHARING, contentSharing_colorlessCards);
+            config.setBool(PROP_CHAR_CROSSOVER, crossoverCharacters);
+
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
             config.save();
             GoldenIdol_Evil.save();
@@ -414,12 +421,13 @@ public class downfallMod implements
         try {
             SpireConfig config = new SpireConfig("downfall", "downfallSaveData", configDefault);
             config.load();
-            contentSharing_events = config.getBool(PROP_EVENT_SHARING);
+            contentSharing_curses = config.getBool(PROP_CURSE_SHARING);
             contentSharing_relics = config.getBool(PROP_RELIC_SHARING);
+            contentSharing_events = config.getBool(PROP_EVENT_SHARING);
             contentSharing_potions = config.getBool(PROP_POTION_SHARING);
             contentSharing_colorlessCards = config.getBool(PROP_CARD_SHARING);
-            contentSharing_curses = config.getBool(PROP_CURSE_SHARING);
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
+//            unlockEverything = config.getBool(PROP_UNLOCK_ALL);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();

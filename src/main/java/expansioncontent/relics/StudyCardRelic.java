@@ -35,8 +35,8 @@ public class StudyCardRelic extends CustomRelic {
 
     @Override
     public void atBattleStartPreDraw() {
-        if (AbstractDungeon.player instanceof SlimeboundCharacter)
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new TinyHatParticle(AbstractDungeon.player)));
+//        if (AbstractDungeon.player instanceof SlimeboundCharacter)
+//            AbstractDungeon.actionManager.addToBottom(new VFXAction(new TinyHatParticle(AbstractDungeon.player)));
         this.flash();
 
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));

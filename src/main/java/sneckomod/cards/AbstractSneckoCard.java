@@ -36,6 +36,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
     public boolean upgradedSilly;
     public boolean isSillyModified;
 
+
     public AbstractSneckoCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
                 cost, "ERROR", type, TheSnecko.Enums.SNECKO_CYAN, rarity, target);
@@ -93,7 +94,21 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
     public static int getRandomNum(int min, int max) {
-        return getRandomNum(min,max,null);
+
+        int a,b,sum;
+        if (min > max) {
+            a = max;
+            b = min;
+        } else {
+            a = min;
+            b = max;
+        }
+        if (a != b) {
+            sum = AbstractDungeon.cardRandomRng.random(a, b);
+        } else {
+            sum = b;
+        }
+        return sum;
     }
 
 
@@ -117,7 +132,21 @@ public abstract class AbstractSneckoCard extends CustomCard {
         }
         if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
             bruh++;
-        return AbstractDungeon.cardRandomRng.random(bruh, max);
+
+        int a,b,sum;
+        if (bruh > max) {
+            a = max;
+            b = bruh;
+        } else {
+            a = bruh;
+            b = max;
+        }
+        if (a != b) {
+            sum = AbstractDungeon.cardRandomRng.random(a, b);
+        } else {
+            sum = b;
+        }
+        return sum;
     }
 
     public static String makeID(String blah) {

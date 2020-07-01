@@ -34,7 +34,7 @@ public class TinyHatParticle extends com.megacrit.cardcrawl.vfx.AbstractGameEffe
             yOffset = 0;
             this.scale = .75f;
         }else {
-            this.img = ImageMaster.loadImage("TheGuardianChan/monsters/TheSlimeBossWaifu/char/hat.png");
+            this.img = ImageMaster.loadImage("reskinContent/img/Slimebound/animation/hat.png");
             W = img.getWidth();
             H = img.getHeight();
             xOffset = -17;

@@ -28,6 +28,7 @@ public class HyperBeam extends AbstractExpansionCard {
 
         baseDamage = DAMAGE;
         this.exhaust = true;
+        this.isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
