@@ -25,7 +25,6 @@ public class Antidote extends AbstractExpansionCard {
             upgradeBaseCost(0);
         }
     }
-
 }
 
 
