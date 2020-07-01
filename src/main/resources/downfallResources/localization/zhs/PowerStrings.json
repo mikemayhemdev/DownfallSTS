@@ -38,5 +38,11 @@
     "DESCRIPTIONS": [
       "你的回合结束时，选择一张牌消耗。"
     ]
+  },
+  "downfall:PoisonResist": {
+    "NAME": "抗毒",
+    "DESCRIPTIONS": [
+      "中毒现在能被格挡。"
+    ]
   }
 }

@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import charbosses.powers.general.EnemyPoisonPower;
 import expansioncontent.cards.AbstractExpansionCard;
 
 public class Debug extends AbstractExpansionCard {

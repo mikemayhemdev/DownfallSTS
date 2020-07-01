@@ -144,7 +144,7 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "保留 。 NL 移除所有的 中毒 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 移除所有的 中毒 。 NL 中毒 将能被 格挡 ，且变为在你的回合结束时触发。 NL 消耗 。"
   },
   "expansioncontent:Debug": {
     "NAME": "核心崩损",
