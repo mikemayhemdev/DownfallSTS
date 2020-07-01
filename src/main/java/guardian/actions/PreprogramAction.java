@@ -50,7 +50,7 @@ public class PreprogramAction extends AbstractGameAction {
             AbstractDungeon.gridSelectScreen.open(tmpGroup, 1, false, TEXT[0]);
         } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
-                AbstractDungeon.actionManager.addToBottom(new PlaceActualCardIntoStasis(c, AbstractDungeon.player.drawPile));
+                AbstractDungeon.actionManager.addToTop(new PlaceActualCardIntoStasis(c, AbstractDungeon.player.drawPile));
             }
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
