@@ -8,6 +8,7 @@ import charbosses.relics.EventRelics.CBR_Cleric;
 import charbosses.relics.EventRelics.CBR_Serpent;
 import charbosses.relics.EventRelics.CBR_UpgradeShrine;
 import charbosses.relics.EventRelics.CBR_Vampires;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
 
@@ -44,14 +45,13 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
         addRelic(new CBR_Serpent());   //Money used to buy Orichalcum
 
         /////   CARDS   /////
-
-        //Turn 1
-        addToDeck(new EnBash(), false);
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        addToDeck(new EnBash(), extraUpgrades);
         addToDeck(new EnStrikeRed(), false);
         addToDeck(new EnDoubt(), false);
 
         //Turn 2
-        addToDeck(new EnMetallicize(), false);
+        addToDeck(new EnMetallicize(), extraUpgrades);
         addToDeck(new EnDefendRed(), true);
         addToDeck(new EnDefendRed(), false);
 
@@ -67,7 +67,7 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
 
         //Turn 5
         addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnInflame(), false);
+        addToDeck(new EnInflame(), extraUpgrades);
         addToDeck(new EnWildStrike(), true);
 
 

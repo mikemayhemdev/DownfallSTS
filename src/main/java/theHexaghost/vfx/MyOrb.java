@@ -63,26 +63,26 @@ public class MyOrb {
                     }
 
                     this.color.a = MathHelper.fadeLerpSnap(this.color.a, 1.0F);// 77
-                    this.effect.update();// 78
-                    this.effect.update();// 79
+                   // this.effect.update();// 78
+                   // this.effect.update();// 79
                     this.particleTimer -= Gdx.graphics.getDeltaTime();// 80
                     if (this.particleTimer < 0.0F) {// 81
-                        AbstractDungeon.effectList.add(new GhostlyFireEffect(this.x + this.effect.y * 2.0F, this.y + this.effect.y * 2.0F));// 82
+                        AbstractDungeon.effectList.add(new GhostlyFireEffect(this.x, this.y));// 82
                         this.particleTimer = 0.06F;// 84
                     }
                 }
             } else if (GhostflameHelper.activeGhostFlame == myDaddy) {
-                this.effect.update();// 88
+                //this.effect.update();// 88
                 this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
                 if (this.particleTimer < 0.0F) {// 90
-                    AbstractDungeon.effectList.add(new ActiveFireEffect(this.x + this.effect.y * 2.0F, this.y + this.effect.y * 2.0F, myDaddy.getActiveColor()));// 91
+                    AbstractDungeon.effectList.add(new ActiveFireEffect(this.x, this.y, myDaddy.getActiveColor()));// 91
                     this.particleTimer = 0.06F;// 93
                 }
             } else {
-                this.effect.update();// 88
+               // this.effect.update();// 88
                 this.particleTimer -= Gdx.graphics.getDeltaTime();// 89
                 if (this.particleTimer < 0.0F) {// 90
-                    AbstractDungeon.effectList.add(new GhostlyWeakColorableFireEffect(this.x + this.effect.y * 2.0F, this.y + this.effect.y * 2.0F, myDaddy.getFlameColor()));// 91
+                    AbstractDungeon.effectList.add(new GhostlyWeakColorableFireEffect(this.x, this.y, myDaddy.getFlameColor()));// 91
                     this.particleTimer = 0.06F;// 93
                 }
             }

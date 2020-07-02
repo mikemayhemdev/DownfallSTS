@@ -42,17 +42,6 @@ public class SealCommonReward extends RewardItem {
             this.cards = AbstractDungeon.getRewardCards();
         }
 
-        int cardsToJankReplace = this.cards.size();
-
-        this.cards.clear();
-        for (int i = 0; i < cardsToJankReplace; i++) {
-            AbstractCard cardToAdd = AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy();
-            while (cardListDuplicate(cardToAdd)) {
-                cardToAdd = AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy();
-            }
-            this.cards.add(cardToAdd);
-        }
-
         this.text = TEXT[0];
         Iterator var2 = this.cards.iterator();
 

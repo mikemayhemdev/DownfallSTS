@@ -9,6 +9,7 @@ import charbosses.relics.EventRelics.CBR_FaceTrader;
 import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
@@ -84,21 +85,20 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         addRelic(new CBR_Falling());
 
         /////   CARDS   /////
-
-        //Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnStrikePurple(), false);
         addToDeck(new EnDevotion(), false);
         addToDeck(new EnWrithe(), false);
 
         //Turn 2
-        addToDeck(new EnSashWhip(), false);
+        addToDeck(new EnSashWhip(), extraUpgrades);
         addToDeck(new EnStrikePurple(), false);
         addToDeck(new EnDefendPurple(), true);
 
         //Turn 3
         addToDeck(new EnDefendPurple(), false);
         addToDeck(new EnWaveOfTheHand(), false);
-        addToDeck(new EnWallop(), false);
+        addToDeck(new EnWallop(), extraUpgrades);
 
         //Turn 4
         addToDeck(new EnProtect(), true);
@@ -106,7 +106,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         addToDeck(new EnStrikePurple(), false);
 
         //Turn 5
-        addToDeck(new EnFasting(), false);
+        addToDeck(new EnFasting(), extraUpgrades);
         addToDeck(new EnCrushJoints(), false);
         addToDeck(new EnBrilliance(), false);
 

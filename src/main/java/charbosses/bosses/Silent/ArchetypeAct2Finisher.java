@@ -5,6 +5,7 @@ import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.green.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Serpent;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
 
@@ -58,9 +59,8 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
         addRelic(new CBR_HornCleat());
 
         /////   CARDS   /////
-
-        //Turn 1
-        addToDeck(new EnFlyingKnee());
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        addToDeck(new EnFlyingKnee(), extraUpgrades);
         addToDeck(new EnStrikeGreen());
         addToDeck(new EnSlice());
 
@@ -70,7 +70,7 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
         addToDeck(new EnOutmaneuver());
 
         //Turn 3
-        addToDeck(new EnSlice());
+        addToDeck(new EnSlice(), extraUpgrades);
         addToDeck(new EnInfiniteBlades());
         addToDeck(new EnDefendGreen());
         addToDeck(new EnDoubt());
@@ -83,7 +83,7 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
 
         //Turn 5
         addToDeck(new EnThousandCuts());
-        addToDeck(new EnLegSweep());
+        addToDeck(new EnLegSweep(), extraUpgrades);
         addToDeck(new EnEndlessAgony());
 
         //Turn 6

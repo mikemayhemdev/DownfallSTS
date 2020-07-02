@@ -49,7 +49,7 @@ public class Icky extends AbstractSlimeboundCard {
         } else {
             AbstractDungeon.actionManager.addToBottom(new UseCardAction(this));
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Slimed(), 1));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Slimed(), 1, true, false));
+            //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Slimed(), 1, true, false));
 
         }
     }

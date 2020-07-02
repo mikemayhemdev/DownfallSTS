@@ -160,21 +160,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : this.masterDeck.group) {
             ((AbstractBossCard) c).owner = this;
         }
-        if (AbstractDungeon.ascensionLevel >= 4) {
-            ArrayList<AbstractCard> newCardList = new ArrayList<>();
-            for (AbstractCard q : this.masterDeck.group) {
-                if (q.canUpgrade()) {
-                    newCardList.add(q);
-                }
-            }
-            for (int i = 0; i < 3; i++) {
-                if (!newCardList.isEmpty()) {
-                    AbstractCard q = newCardList.get(AbstractDungeon.cardRandomRng.random(newCardList.size() - 1));
-                    q.upgrade();
-                    newCardList.remove(q);
-                }
-            }
-        }
+
         if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
             new CBR_LizardTail().instantObtain(this);
             new CBR_MagicFlower().instantObtain(this);
@@ -221,11 +207,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard _c : this.hand.group) {
             AbstractBossCard c = (AbstractBossCard) _c;
             if (c.canUse(AbstractDungeon.player, this)) {
+                SlimeboundMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
                 this.useCard(c, this, EnemyEnergyPanel.totalCount);
                 this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
                 return;
             }
+
         }
+
+        //doing this here instead of end turn allows it to still be before player loses Block
+        AbstractDungeon.actionManager.addToBottom(new EnemyTriggerEndOfTurnOrbActions());
     }
 
     @Override
@@ -248,7 +239,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         this.energy.recharge();
 
-        AbstractDungeon.actionManager.addToTop(new EnemyTriggerEndOfTurnOrbActions());
 
         for (final AbstractRelic r : this.relics) {
             r.onPlayerEndTurn();
@@ -279,19 +269,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (!AbstractDungeon.player.hasPower("Barricade") && !AbstractDungeon.player.hasPower("Blur")) {// 457
-                    if (!AbstractDungeon.player.hasRelic("Calipers")) {// 459
-                        AbstractDungeon.player.loseBlock();// 460
-                    } else {
-                        AbstractDungeon.player.loseBlock(15);// 462
-                    }
-                }
-            }
-        });
+
     }
 
     public void startTurn() {
@@ -455,20 +433,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         EnemyEnergyPanel.addEnergy(e);
         this.hand.glowCheck();
 
-        int budget = energyPanel.getCurrentEnergy();
-        for (int i = 0; i < AbstractCharBoss.boss.hand.group.size(); i++) {
-            AbstractBossCard c = (AbstractBossCard) AbstractCharBoss.boss.hand.group.get(i);
-            if (c.costForTurn <= budget && c.costForTurn != -2) {
-                c.createIntent();
-                c.bossLighten();
-                budget -= c.costForTurn;
-                budget += c.energyGeneratedIfPlayed;
-                if (budget < 0) budget = 0;
-            }else {
-                c.bossDarken();
-                c.destroyIntent();
-            }
-        }
     }
 
     public void loseEnergy(final int e) {

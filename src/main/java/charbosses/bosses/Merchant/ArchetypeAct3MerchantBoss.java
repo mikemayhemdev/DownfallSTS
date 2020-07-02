@@ -9,6 +9,7 @@ import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_FaceTrader;
 import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
@@ -39,14 +40,13 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         //addRelic(new CBR_FusionHammer());
 
         /////   CARDS   /////
-
-        //Turn 1
-        addToDeck(new EnPanicButton(), false);
-        addToDeck(new EnDramaticEntrance(), false);
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        addToDeck(new EnPanicButton(), extraUpgrades);
+        addToDeck(new EnDramaticEntrance(), extraUpgrades);
         addToDeck(new EnTheBomb(), false);
 
         //Turn 2
-        addToDeck(new EnPanacea(), false);
+        addToDeck(new EnPanacea(), extraUpgrades);
         addToDeck(new EnApotheosis(), true);
         addToDeck(new EnHandOfGreed(), false);
 

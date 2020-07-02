@@ -82,21 +82,21 @@ public class TheHexaghost extends CustomPlayer {
                     SHOULDER1,
                     SHOULDER2,
                     CORPSE,
-                    getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
+                    getLoadout(), -15.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
         }else {
             if(reskinContent.hexaghostMask){
             initializeClass(null,
                     "reskinContent/img/HexaghostMod/shoulder2.png",
                     "reskinContent/img/HexaghostMod/shoulder.png",
                     CORPSE,
-                    getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
+                    getLoadout(), -15.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
 
             }else {
                 initializeClass(null,
                         "reskinContent/img/HexaghostMod/shoulderMask2.png",
                         "reskinContent/img/HexaghostMod/shoulderMask.png",
                         CORPSE,
-                        getLoadout(), 10.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
+                        getLoadout(), -15.0F, 0.0F, 450.0F, 450.0F, new EnergyManager(3));
             }
         }
 

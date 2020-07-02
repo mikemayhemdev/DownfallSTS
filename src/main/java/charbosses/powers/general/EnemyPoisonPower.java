@@ -7,6 +7,7 @@ package charbosses.powers.general;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -52,28 +53,33 @@ public class EnemyPoisonPower extends AbstractPower {
         } else {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
         }
-
     }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flashWithoutSound();
-            if (this.owner.hasPower(PoisonProtectionPower.POWER_ID)){
-                this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount), AttackEffect.POISON));
-            } else {
-               // this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+        if (isPlayer) {
+            if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+
+                if (this.owner.hasPower(PoisonProtectionPower.POWER_ID)) {
+                    this.flashWithoutSound();
+                    this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount), AttackEffect.POISON));
+                    this.addToBot(new ReducePowerAction(this.owner, this.owner, this, this.amount / 2));
+                } else {
+                    // this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+                }
             }
         }
     }
 
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flashWithoutSound();
+
             if (this.owner.hasPower(PoisonProtectionPower.POWER_ID)){
                // this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount), AttackEffect.POISON));
             } else {
+                this.flashWithoutSound();
                 this.addToBot(new PoisonLoseHpAction(this.owner, this.source, this.amount, AttackEffect.POISON));
+                this.addToBot(new ReducePowerAction(this.owner, this.owner, this, -1));
             }
         }
 

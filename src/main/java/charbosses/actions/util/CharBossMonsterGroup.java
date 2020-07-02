@@ -33,9 +33,12 @@ public class CharBossMonsterGroup extends MonsterGroup {
                         }
                     }
 
-                    if (NeowBoss.neowboss != null)
+                    if (NeowBoss.neowboss != null) {
                         if (!NeowBoss.neowboss.offscreen)
                             m.applyStartOfTurnPowers();
+                    } else {
+                        m.applyStartOfTurnPowers();
+                    }
                 }
             }
         }

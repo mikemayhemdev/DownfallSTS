@@ -8,6 +8,7 @@ import charbosses.relics.EventRelics.CBR_Colosseum;
 import charbosses.relics.EventRelics.CBR_ScrapOoze;
 import charbosses.relics.EventRelics.CBR_WheelOfChange;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
@@ -61,15 +62,16 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
 
         /////   CARDS   /////
-
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         //Turn 1
+
         addToDeck(new EnBallLightning(), false);
         addToDeck(new EnChill(), true);
         addToDeck(new EnStorm(), true);
 
         //Turn 2
         addToDeck(new EnColdSnap(), false);
-        addToDeck(new EnForceField(), false);
+        addToDeck(new EnForceField(), extraUpgrades);
         addToDeck(new EnCapacitor(), false);
 
         //Turn 3
@@ -84,7 +86,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
         //Turn 5
         addToDeck(new EnDualcast(), false);
-        addToDeck(new EnGlacier(), false);
+        addToDeck(new EnGlacier(), extraUpgrades);
         addToDeck(new EnStrikeBlue(), false);
 
         //Turn 6
@@ -94,7 +96,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
         //Turn 7
         addToDeck(new EnCoreSurge(), false);
-        addToDeck(new EnBiasedCognition(), false);
+        addToDeck(new EnBiasedCognition(), extraUpgrades);
         addToDeck(new EnDefendBlue(), false);
 
 

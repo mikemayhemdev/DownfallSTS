@@ -152,7 +152,7 @@ public abstract class AbstractGhostflame {
 
             int slots = this.triggersRequired;
 
-            float allSlotXOffset = -20F * Settings.scale;
+            float allSlotXOffset = GhostflameHelper.globalX + -20F * Settings.scale;
 
             float triggerSlot1x = AbstractDungeon.player.drawX - (100.0F * Settings.scale) + allSlotXOffset;
             float triggerSlot1y = AbstractDungeon.player.drawY + (480.0F * Settings.scale);

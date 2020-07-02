@@ -425,7 +425,7 @@
   },
     "Guardian:Aged": {
     "NAME": "岁月",
-    "DESCRIPTION": "不能被打出 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
+    "DESCRIPTION": "不能被打出 。 虚无 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
   },
   "Guardian:GemstoneGunCard": {
     "NAME": "宝石枪",

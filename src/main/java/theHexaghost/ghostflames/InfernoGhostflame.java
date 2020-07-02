@@ -1,5 +1,6 @@
 package theHexaghost.ghostflames;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -27,6 +28,9 @@ public class InfernoGhostflame extends AbstractGhostflame {
     private String ID = "hexamod:InfernoGhostflame";
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
+
+    private Color flameColor = new Color(232F/255F, 164F/255F, 249F/255F, 1F);
+    private Color activeColor = new Color(232F/255F * 0.5F, 164F/255F * 0.5F, 249F/255F * 0.5F, 1F);
 
 
     public InfernoGhostflame(float x, float y) {
@@ -171,5 +175,16 @@ public class InfernoGhostflame extends AbstractGhostflame {
       //      s = s + DESCRIPTIONS[8];
      //   }
         return s;
+    }
+
+
+    public Color getFlameColor() {
+        return activeColor.cpy();
+        //return Color.SKY.cpy();
+    }
+
+    public Color getActiveColor() {
+        //return activeColor.cpy();
+        return Color.PURPLE.cpy();
     }
 }

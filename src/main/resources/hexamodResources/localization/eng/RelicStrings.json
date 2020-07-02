@@ -3,7 +3,7 @@
     "NAME": "Spirit Brand",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "Whenever you #yhexamod:Ignite a Ghostflame, gain #b2 #yBlock."
+      "The first time you #yIgnite a Ghostflame each turn, gain #b6 #yBlock."
     ]
   },
   "hexamod:TheBrokenSeal": {
@@ -18,7 +18,7 @@
     "FLAVOR": "Let’s see if we can do... better.",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] and #b6 #yBlock."
+      ".[] NL The first time you #yIgnite a Ghostflame each turn, gain [E] and #b3 #yBlock."
     ]
   },
   "hexamod:IceCube": {

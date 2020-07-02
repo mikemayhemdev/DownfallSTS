@@ -7,6 +7,7 @@ import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_DesignerInSpire;
 import charbosses.relics.EventRelics.CBR_OldBeggar;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
@@ -62,11 +63,10 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
 
         /////   CARDS   /////
-
-        //Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnBane());
-        addToDeck(new EnDeadlyPoison());
-        addToDeck(new EnDodgeAndRoll());
+        addToDeck(new EnDeadlyPoison(), extraUpgrades);
+        addToDeck(new EnDodgeAndRoll(), extraUpgrades);
 
         //Turn 2
         addToDeck(new EnNoxiousFumes(), true);
@@ -79,7 +79,7 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
         addToDeck(new EnStrikeGreen(), true);
 
         //Turn 4
-        addToDeck(new EnBouncingFlask());
+        addToDeck(new EnBouncingFlask(), extraUpgrades);
         addToDeck(new EnDefendGreen());
         addToDeck(new EnBane(), true);
 
