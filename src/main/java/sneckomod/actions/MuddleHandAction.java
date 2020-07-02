@@ -14,13 +14,13 @@ import sneckomod.powers.MudshieldPower;
 public class MuddleHandAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    private int maxRangeModifier;
+    private boolean maxRangeModifier;
 
     public MuddleHandAction() {
-        this(0);
+        this(false);
     }
 
-    public MuddleHandAction(int maxRangeMod) {
+    public MuddleHandAction(boolean maxRangeMod) {
         this.actionType = ActionType.CARD_MANIPULATION;// 14
         this.p = AbstractDungeon.player;// 15
         this.duration = Settings.ACTION_DUR_FAST;// 16
@@ -31,7 +31,7 @@ public class MuddleHandAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 21
 
             for (AbstractCard card : this.p.hand.group) {
-                addToTop(new MuddleAction(card));
+                addToTop(new MuddleAction(card, maxRangeModifier));
             }
 
             this.isDone = true;// 33
