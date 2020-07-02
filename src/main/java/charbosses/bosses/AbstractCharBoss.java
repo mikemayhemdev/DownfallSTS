@@ -212,7 +212,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
                 return;
             }
+
         }
+
+        //doing this here instead of end turn allows it to still be before player loses Block
+        AbstractDungeon.actionManager.addToBottom(new EnemyTriggerEndOfTurnOrbActions());
     }
 
     @Override
@@ -235,7 +239,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         this.energy.recharge();
 
-        AbstractDungeon.actionManager.addToTop(new EnemyTriggerEndOfTurnOrbActions());
 
         for (final AbstractRelic r : this.relics) {
             r.onPlayerEndTurn();
@@ -266,19 +269,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (!AbstractDungeon.player.hasPower("Barricade") && !AbstractDungeon.player.hasPower("Blur")) {// 457
-                    if (!AbstractDungeon.player.hasRelic("Calipers")) {// 459
-                        AbstractDungeon.player.loseBlock();// 460
-                    } else {
-                        AbstractDungeon.player.loseBlock(15);// 462
-                    }
-                }
-            }
-        });
+
     }
 
     public void startTurn() {

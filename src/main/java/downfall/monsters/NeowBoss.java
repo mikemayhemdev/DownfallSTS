@@ -24,6 +24,7 @@ import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import downfall.actions.NeowReturnAction;
 import downfall.downfallMod;
 import downfall.actions.NeowRezAction;
 import downfall.powers.NeowInvulnerablePower;
@@ -150,10 +151,10 @@ public class NeowBoss extends AbstractMonster {
             if (moveTimer <= 0F) {
                 movingBack = false;
                 offscreen = false;
-                this.halfDead = false;
-                if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
-                    AbstractDungeon.getCurrRoom().cannotLose = false;
-                }
+              //  this.halfDead = false;
+                //if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
+               //     AbstractDungeon.getCurrRoom().cannotLose = false;
+               // }
                 this.drawX = this.baseDrawX;
                 AbstractCharBoss.boss = null;
                 getMove(0);
@@ -165,7 +166,7 @@ public class NeowBoss extends AbstractMonster {
     public void usePreBattleAction() {
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
-        AbstractDungeon.getCurrRoom().cannotLose = true;
+      //  AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractCharBoss.boss = null;
         Rezzes = 1;
         isRezzing = false;
@@ -176,10 +177,10 @@ public class NeowBoss extends AbstractMonster {
     }
 
 
-
     public void takeTurn() {
         switch (this.nextMove) {
             case 0:
+                playSfx();
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new HeartMegaDebuffEffect()));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 2, true), 2));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
@@ -191,6 +192,7 @@ public class NeowBoss extends AbstractMonster {
                 //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Regret(), 1, true, false, false, (float) Settings.WIDTH * 0.8F, (float) Settings.HEIGHT / 2.0F));
                 break;
             case 1:
+                playSfx();
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
@@ -205,6 +207,7 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new WaitAction(0.3F));
                 break;
             case 2:
+                playSfx();
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.YELLOW, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.GOLD, ShockWaveEffect.ShockWaveType.CHAOTIC), .5F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(1), AbstractGameAction.AttackEffect.SMASH));
@@ -230,6 +233,7 @@ public class NeowBoss extends AbstractMonster {
                 }
                 break;
             case 3:
+                playSfx();
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
@@ -239,12 +243,16 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
                 break;
             case 4:
-                if(this.hasPower(NeowInvulnerablePower.POWER_ID))  this.halfDead = true;
+                playSfx();
+                //if(this.hasPower(NeowInvulnerablePower.POWER_ID))  this.halfDead = true;
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
                 AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
                 break;
             case 5:
+                if (this.currentHealth < this.maxHealth){
+                    AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
+                }
                 break;
         }
 
@@ -272,6 +280,7 @@ public class NeowBoss extends AbstractMonster {
             this.setMove((byte) 4, Intent.MAGIC);
             isRezzing = true;
             createIntent();
+            this.halfDead = true;
         }
 
 
@@ -282,16 +291,25 @@ public class NeowBoss extends AbstractMonster {
             this.heal(this.maxHealth);
             AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, NeowInvulnerablePower.POWER_ID, 1));
+            AbstractDungeon.actionManager.addToBottom(new NeowReturnAction(this));
+            if (this.hasPower(NeowInvulnerablePower.POWER_ID)){
+                if (this.getPower(NeowInvulnerablePower.POWER_ID).amount > 1){
+                    AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, NeowInvulnerablePower.POWER_ID, 1));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, NeowInvulnerablePower.POWER_ID));
+                }
+            }
             AbstractCharBoss.boss = null;
             movingBack = true;
             moveTimer = 2F;
             isRezzing = false;
-            this.halfDead = false;
         } else {
-
+            //this.heal(this.maxHealth);
             movingOffscreen = true;
             moveTimer = 2F;
+
+            this.halfDead = true;
+            //this.isDying = true;
         }
 
     }
@@ -328,7 +346,7 @@ public class NeowBoss extends AbstractMonster {
 
     @Override
     public void die() {
-        if (!AbstractDungeon.getCurrRoom().cannotLose) {
+        if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
             super.die();
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
@@ -336,6 +354,14 @@ public class NeowBoss extends AbstractMonster {
             onFinalBossVictoryLogic();
             CardCrawlGame.stopClock = true;
 
+        } else {
+            this.currentHealth = 0;
+            this.halfDead = true;
+           // AbstractDungeon.getCurrRoom().cannotLose = true;
+            this.getPower(NeowInvulnerablePower.POWER_ID).flash();
+            if (AbstractCharBoss.boss == null) {
+                switchToRez();
+            }
         }
     }
 }
