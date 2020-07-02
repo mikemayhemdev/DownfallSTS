@@ -3,7 +3,7 @@ package theHexaghost.patches;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import downfall.patches.CantDoublePlayBossCardsPatch;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 import static theHexaghost.GhostflameHelper.activeGhostFlame;
@@ -16,9 +16,9 @@ import static theHexaghost.HexaMod.renderFlames;
 public class TriggerFlamesPatch {
     public static void Prefix(CardGroup __instance, AbstractCard abstractCard) {
         if (!activeGhostFlame.charged && renderFlames && activeGhostFlame.advanceOnCardUse)
-                activeGhostFlame.advanceTrigger(abstractCard);
+            activeGhostFlame.advanceTrigger(abstractCard);
         if (abstractCard.hasTag(expansionContentMod.STUDY)) {
-            CantDoublePlayBossCardsPatch.playedBossCardThisTurn = true;
+            downfallMod.playedBossCardThisTurn = true;
         }
     }
 }

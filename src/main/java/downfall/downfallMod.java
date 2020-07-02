@@ -67,7 +67,6 @@ import downfall.cards.KnowingSkullWish;
 import downfall.dailymods.*;
 import downfall.events.*;
 import downfall.monsters.*;
-import downfall.patches.CantDoublePlayBossCardsPatch;
 import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
@@ -110,6 +109,8 @@ public class downfallMod implements
     public static boolean choosingUpgradeCard = false;
     public static boolean choosingTransformCard = false;
     public static boolean overrideBossDifficulty = false;
+
+    public static boolean playedBossCardThisTurn = false;
 
     public static boolean replaceMenuColor = true;
     public static boolean tempAscensionHack = false;
