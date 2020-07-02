@@ -207,6 +207,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard _c : this.hand.group) {
             AbstractBossCard c = (AbstractBossCard) _c;
             if (c.canUse(AbstractDungeon.player, this)) {
+                SlimeboundMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
                 this.useCard(c, this, EnemyEnergyPanel.totalCount);
                 this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
                 return;
@@ -441,20 +442,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         EnemyEnergyPanel.addEnergy(e);
         this.hand.glowCheck();
 
-        int budget = energyPanel.getCurrentEnergy();
-        for (int i = 0; i < AbstractCharBoss.boss.hand.group.size(); i++) {
-            AbstractBossCard c = (AbstractBossCard) AbstractCharBoss.boss.hand.group.get(i);
-            if (c.costForTurn <= budget && c.costForTurn != -2) {
-                c.createIntent();
-                c.bossLighten();
-                budget -= c.costForTurn;
-                budget += c.energyGeneratedIfPlayed;
-                if (budget < 0) budget = 0;
-            }else {
-                c.bossDarken();
-                c.destroyIntent();
-            }
-        }
     }
 
     public void loseEnergy(final int e) {
