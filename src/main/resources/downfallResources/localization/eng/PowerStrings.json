@@ -42,7 +42,7 @@
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
-      "Poison does not bypass your Block, and triggers at the end of your turn."
+      "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
     ]
   }
 }

@@ -144,7 +144,7 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
-    "DESCRIPTION": "Retain. NL Lose all Poison. NL Poison no longer bypasses your Block, and happens at the end your turn. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Lose all Poison. NL Poison does not bypass Block, happens at END of turn, and loses half its stack. NL Exhaust."
   },
   "expansioncontent:Debug": {
     "NAME": "Corrupt Core",
