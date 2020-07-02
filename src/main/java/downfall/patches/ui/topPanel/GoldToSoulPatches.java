@@ -337,6 +337,22 @@ public class GoldToSoulPatches {
         }
     }
 
+    //Disabled this as it caused a crash with Unknown generation.  @TODO fix later.
+    /*
+    downfall.patches.ui.topPanel.GoldToSoulPatches$PleaseChange.patch(GoldToSoulPatches.java:345) ~[downfall.jar:?]
+    at com.megacrit.cardcrawl.cards.colorless.HandOfGreed.makeCopy(HandOfGreed.java:48) ~[?:?]
+    at sneckomod.cards.unknowns.AbstractUnknownCard.replaceUnknown(AbstractUnknownCard.java:80) ~[downfall.jar:?]
+    at sneckomod.cards.unknowns.AbstractUnknownCard$2.update(AbstractUnknownCard.java:63) ~[downfall.jar:?]
+    at com.megacrit.cardcrawl.actions.GameActionManager.update(GameActionManager.java:179) ~[?:?]
+    at com.megacrit.cardcrawl.rooms.AbstractRoom.update(AbstractRoom.java:325) ~[?:?]
+    at com.megacrit.cardcrawl.dungeons.AbstractDungeon.update(AbstractDungeon.java:2512) ~[?:?]
+    at com.megacrit.cardcrawl.core.CardCrawlGame.update(CardCrawlGame.java:879) ~[?:?]
+    at com.megacrit.cardcrawl.core.CardCrawlGame.render(CardCrawlGame.java:427) [?:?]
+    at com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop(LwjglApplication.java:225) [?:?]
+    at com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run(LwjglApplication.java:126) [desktop-1.0.jar:?]
+    */
+
+    /*
     //Fix Hand of Greed
     @SpirePatch(clz = HandOfGreed.class, method = "makeCopy")
     public static class PleaseChange {
@@ -346,6 +362,7 @@ public class GoldToSoulPatches {
             return __result;
         }
     }
+    */
 
     //TODO: Make work on load
 }

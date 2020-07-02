@@ -27,7 +27,8 @@ public class CrushingGhostflame extends AbstractGhostflame {
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
-
+    private Color flameColor = new Color(249F/255F, 185F/255F, 164F/255F, 1F);
+    private Color activeColor = new Color(249F/255F * 0.5F, 185F/255F * 0.5F, 164F/255F * 0.5F, 1F);
 
     public CrushingGhostflame(float x, float y) {
         super(x, y);
@@ -136,5 +137,15 @@ public class CrushingGhostflame extends AbstractGhostflame {
             s = s + DESCRIPTIONS[7];
         }
         return s;
+    }
+
+    public Color getFlameColor() {
+        return activeColor.cpy();
+        //return Color.SKY.cpy();
+    }
+
+    public Color getActiveColor() {
+        //return activeColor.cpy();
+        return Color.PURPLE.cpy();
     }
 }

@@ -71,7 +71,6 @@ public class HexaMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         SetUnlocksSubscriber,
-        PreRoomRenderSubscriber,
         PostDeathSubscriber {
     public static final String SHOULDER1 = "hexamodResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "hexamodResources/images/char/mainChar/shoulderR.png";
@@ -307,7 +306,7 @@ public class HexaMod implements
         renderFlames = false;
     }
 
-    public void receivePreRoomRender(SpriteBatch sb) {
+    public static void renderGhostflames(SpriteBatch sb) {
         if (renderFlames) {
             GhostflameHelper.render(sb);
         }
@@ -322,28 +321,28 @@ public class HexaMod implements
                     float y = 0;
                     switch (hexaGhostFlames.indexOf(gf)) {
                         case 0:
-                            x = AbstractDungeon.player.drawX - (115.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (440.0F * Settings.scale);
+                            x = GhostflameHelper.globalX + AbstractDungeon.player.drawX - (115.0F * Settings.scale);
+                            y = GhostflameHelper.globalY + AbstractDungeon.player.drawY + (440.0F * Settings.scale);
                             break;
                         case 1:
-                            x = AbstractDungeon.player.drawX + (180.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (440.0F * Settings.scale);
+                            x = GhostflameHelper.globalX + AbstractDungeon.player.drawX + (180.0F * Settings.scale);
+                            y = GhostflameHelper.globalY + AbstractDungeon.player.drawY + (440.0F * Settings.scale);
                             break;
                         case 2:
-                            x = AbstractDungeon.player.drawX + (240.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (270.0F * Settings.scale);
+                            x = GhostflameHelper.globalX + AbstractDungeon.player.drawX + (240.0F * Settings.scale);
+                            y = GhostflameHelper.globalY + AbstractDungeon.player.drawY + (270.0F * Settings.scale);
                             break;
                         case 3:
-                            x = AbstractDungeon.player.drawX + (170.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (100.0F * Settings.scale);
+                            x = GhostflameHelper.globalX + AbstractDungeon.player.drawX + (170.0F * Settings.scale);
+                            y = GhostflameHelper.globalY + AbstractDungeon.player.drawY + (100.0F * Settings.scale);
                             break;
                         case 4:
-                            x = AbstractDungeon.player.drawX - (115.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (100.0F * Settings.scale);
+                            x = GhostflameHelper.globalX + AbstractDungeon.player.drawX - (115.0F * Settings.scale);
+                            y = GhostflameHelper.globalY + AbstractDungeon.player.drawY + (100.0F * Settings.scale);
                             break;
                         case 5:
-                            x = AbstractDungeon.player.drawX - (200.0F * Settings.scale);
-                            y = AbstractDungeon.player.drawY + (270.0F * Settings.scale);
+                            x = GhostflameHelper.globalX + AbstractDungeon.player.drawX - (200.0F * Settings.scale);
+                            y = GhostflameHelper.globalY + AbstractDungeon.player.drawY + (270.0F * Settings.scale);
                             break;
                     }
                     /*

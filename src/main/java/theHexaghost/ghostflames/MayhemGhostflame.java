@@ -21,6 +21,8 @@ public class MayhemGhostflame extends AbstractGhostflame {
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
+    private Color flameColor = new Color(164F/255F, 210F/255F, 249F/255F, 1F);
+    private Color activeColor = new Color(164F/255F * 0.5F, 210F/255F * 0.5F, 249F/255F * 0.5F, 1F);
 
     public MayhemGhostflame(float x, float y) {
         super(x, y);
@@ -94,5 +96,16 @@ public class MayhemGhostflame extends AbstractGhostflame {
             s = s + DESCRIPTIONS[4];
         }
         return s;
+    }
+
+
+    public Color getFlameColor() {
+        return activeColor.cpy();
+        //return Color.SKY.cpy();
+    }
+
+    public Color getActiveColor() {
+        //return activeColor.cpy();
+        return Color.PURPLE.cpy();
     }
 }
