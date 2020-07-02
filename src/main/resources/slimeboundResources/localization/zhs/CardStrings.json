@@ -312,7 +312,7 @@
  },
  "Slimebound:Icky": {
   "NAME": "黏液缠身",
-  "DESCRIPTION": "向手牌加入1张 *粘液。 NL 消耗 。"
+  "DESCRIPTION": "将1张 *黏液 加入手牌。 NL 消耗 。"
  },
  "Slimebound:DivideAndConquerConquer": {
   "NAME": "统治",

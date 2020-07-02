@@ -337,7 +337,7 @@
   },
   "hexamod:ThirdSeal": {
     "NAME": "第三容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张牌。"
   },
   "hexamod:FourthSeal": {
     "NAME": "第四容器",
