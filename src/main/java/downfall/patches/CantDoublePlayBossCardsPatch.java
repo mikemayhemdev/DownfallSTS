@@ -12,7 +12,7 @@ public class CantDoublePlayBossCardsPatch {
     public static boolean playedBossCardThisTurn = false;
 
     public static boolean Postfix(boolean __result, AbstractCard __instance) {
-        if (!__instance.freeToPlayOnce && __instance.hasTag(expansionContentMod.STUDY) && playedBossCardThisTurn) {
+        if (!__instance.freeToPlayOnce && __instance.hasTag(expansionContentMod.STUDY) && !playedBossCardThisTurn) {
             __instance.cantUseMessage = "I have already played a Boss card this turn...";
             return false;
         }
