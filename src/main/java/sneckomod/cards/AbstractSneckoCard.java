@@ -94,7 +94,6 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
     public static int getRandomNum(int min, int max) {
-
         int a,b,sum;
         if (min > max) {
             a = max;
