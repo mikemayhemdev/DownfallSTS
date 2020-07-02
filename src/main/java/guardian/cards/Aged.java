@@ -43,6 +43,8 @@ public class Aged extends CustomCard {
         this.magicNumber = this.baseMagicNumber = 1;
         this.cardsToPreview = new VoidCard();
 
+        this.isEthereal = true;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

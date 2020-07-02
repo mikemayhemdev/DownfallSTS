@@ -337,7 +337,7 @@
   },
   "hexamod:ThirdSeal": {
     "NAME": "Third Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Common card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional card reward."
   },
   "hexamod:FourthSeal": {
     "NAME": "Fourth Seal",
