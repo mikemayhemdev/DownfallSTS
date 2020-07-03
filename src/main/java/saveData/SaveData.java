@@ -34,9 +34,9 @@ public class SaveData {
     public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
     public static final String MERCHANT_ESCAPED = "MERCHANT_ESCAPED";
     public static final String WING_GIVEN = "WING_GIVEN";
-    public static final String ACT_1_BOSS_SLAIN = "ACT1BOSSSLAIN";
-    public static final String ACT_2_BOSS_SLAIN = "ACT2BOSSSLAIN";
-    public static final String ACT_3_BOSS_SLAIN = "ACT3BOSSSLAIN";
+    public static final String ACT_1_BOSS_SLAIN = "ACT_1_BOSS_SLAIN";
+    public static final String ACT_2_BOSS_SLAIN = "ACT_2_BOSS_SLAIN";
+    public static final String ACT_3_BOSS_SLAIN = "ACT_3_BOSS_SLAIN";
 
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
@@ -97,7 +97,9 @@ public class SaveData {
             act1BossSlain = downfallMod.Act1BossFaced;
             act2BossSlain = downfallMod.Act2BossFaced;
             act3BossSlain = downfallMod.Act3BossFaced;
-
+            System.out.println(act1BossSlain);
+            System.out.println(act2BossSlain);
+            System.out.println(act3BossSlain);
 
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
@@ -228,6 +230,9 @@ public class SaveData {
             BrokenWingStatue.GIVEN = brokenWingGiven;
 
 
+            System.out.println(act1BossSlain);
+            System.out.println(act2BossSlain);
+            System.out.println(act3BossSlain);
             downfallMod.Act1BossFaced = act1BossSlain;
             downfallMod.Act2BossFaced = act2BossSlain;
             downfallMod.Act3BossFaced = act3BossSlain;
