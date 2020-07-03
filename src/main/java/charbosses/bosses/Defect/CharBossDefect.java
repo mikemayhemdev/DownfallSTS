@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import slimebound.SlimeboundMod;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
@@ -57,7 +58,9 @@ public class CharBossDefect extends AbstractCharBoss {
                     archetype = new ArchetypeAct3Orbs();
                     break;
                 case 4: {
+                    SlimeboundMod.logger.info("Defect spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
+
                         case 1:
                             archetype = new ArchetypeAct1Streamline();
                             break;
@@ -82,5 +85,11 @@ public class CharBossDefect extends AbstractCharBoss {
         if (AbstractDungeon.ascensionLevel >= 19) {
             archetype.initializeBonusRelic();
         }
+    }
+
+    @Override
+    public void die() {
+        super.die();
+        downfallMod.saveBossFight("downfall:CharBossDefect");
     }
 }

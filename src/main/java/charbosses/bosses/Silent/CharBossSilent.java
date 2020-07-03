@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import slimebound.SlimeboundMod;
 
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
@@ -48,7 +49,9 @@ public class CharBossSilent extends AbstractCharBoss {
                 case 3:
                     archetype = new ArchetypeAct3Poison();
                     break;
-                case 4: {
+                case 4:
+                    SlimeboundMod.logger.info("Silent spawned at Archetype " + NeowBoss.Rezzes);
+                    {
                     switch (NeowBoss.Rezzes) {
                         case 1:
                             archetype = new ArchetypeAct1Shivs();
@@ -111,6 +114,7 @@ public class CharBossSilent extends AbstractCharBoss {
                 break;
         }
 
+        downfallMod.saveBossFight("downfall:CharBossSilent");
     }
 
 }

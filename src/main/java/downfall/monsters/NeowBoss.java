@@ -81,7 +81,7 @@ public class NeowBoss extends AbstractMonster {
 
     public AbstractCharBoss minion;
 
-    public static int Rezzes = 1;
+    public static int Rezzes = 0;
 
     public ArrayList<String> bossesToRez = new ArrayList<>();
 
@@ -111,24 +111,26 @@ public class NeowBoss extends AbstractMonster {
 
 
         //Initialize the boss list with the four
-        Rezzes = 1;
-        bossesToRez.clear();
-        bossesToRez.add("downfall:CharBossIronclad");
-        bossesToRez.add("downfall:CharBossSilent");
-        bossesToRez.add("downfall:CharBossDefect");
-        bossesToRez.add("downfall:CharBossWatcher");
+        Rezzes = 0;
 
-        //Remove any that were not encountered (Colosseum event means you could have seen 3 or 4 in the run)
-        for (String bossName : downfallMod.possEncounterList) {
-            SlimeboundMod.logger.info("neow checking " + bossName);
-            if (bossesToRez.contains(bossName)) {
-                SlimeboundMod.logger.info("Found this boss, removing it.");
-                bossesToRez.remove(bossName);
-            }
+        if (downfallMod.Act1BossFaced != ""){
+            bossesToRez.add(downfallMod.Act1BossFaced);
+        } else {
+            bossesToRez.add("downfall:CharBossIronclad");
+            SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 1.  Will rez Ironclad instead.");
         }
-
-        Collections.shuffle(bossesToRez);
-
+        if (downfallMod.Act2BossFaced != ""){
+            bossesToRez.add(downfallMod.Act2BossFaced);
+        } else {
+            bossesToRez.add("downfall:CharBossIronclad");
+            SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 2.  Will rez Ironclad instead.");
+        }
+        if (downfallMod.Act3BossFaced != ""){
+            bossesToRez.add(downfallMod.Act3BossFaced);
+        } else {
+            bossesToRez.add("downfall:CharBossIronclad");
+            SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 3.  Will rez Ironclad instead.");
+        }
 
     }
 

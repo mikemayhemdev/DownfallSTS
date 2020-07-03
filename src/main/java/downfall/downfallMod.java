@@ -137,7 +137,9 @@ public class downfallMod implements
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
 
-
+    public static String Act1BossFaced = "downfall:CharBossIronclad";
+    public static String Act2BossFaced = "downfall:CharBossSilent";
+    public static String Act3BossFaced = "downfall:CharBossDefect";
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
@@ -1037,6 +1039,32 @@ public class downfallMod implements
                 if (c.hasTag(HexaMod.GHOSTWHEELCARD)){
                     c.tags.add(AbstractCard.CardTags.HEALING);
                 }
+            }
+        }
+
+        Act1BossFaced = "";
+        Act2BossFaced = "";
+        Act3BossFaced = "";
+    }
+
+    public static void saveBossFight(String ID){
+        if (AbstractDungeon.getCurrRoom().event == null) {
+            switch (AbstractDungeon.actNum) {
+                case 1: {
+                    Act1BossFaced = ID;
+                    break;
+                }
+                case 2: {
+                    Act2BossFaced = ID;
+                    break;
+
+                }
+                case 3: {
+                    Act3BossFaced = ID;
+                    break;
+
+                }
+                default:
             }
         }
     }

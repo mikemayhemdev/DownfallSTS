@@ -23,4 +23,8 @@ public class downfallSaveData {
     public boolean MERCHANT_ESCAPED = false;
 
     public boolean WING_GIVEN = false;
+
+    public String ACT_1_BOSS_SLAIN = "";
+    public String ACT_2_BOSS_SLAIN = "";
+    public String ACT_3_BOSS_SLAIN = "";
 }

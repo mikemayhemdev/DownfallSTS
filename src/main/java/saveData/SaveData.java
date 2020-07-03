@@ -34,6 +34,9 @@ public class SaveData {
     public static final String MERCHANT_DEAD = "MERCHANT_DEAD";
     public static final String MERCHANT_ESCAPED = "MERCHANT_ESCAPED";
     public static final String WING_GIVEN = "WING_GIVEN";
+    public static final String ACT_1_BOSS_SLAIN = "ACT1BOSSSLAIN";
+    public static final String ACT_2_BOSS_SLAIN = "ACT2BOSSSLAIN";
+    public static final String ACT_3_BOSS_SLAIN = "ACT3BOSSSLAIN";
 
     private static Logger saveLogger = LogManager.getLogger("downfallSaveData");
     //data is stored here in addition to the actual location
@@ -57,6 +60,10 @@ public class SaveData {
     private static boolean merchantEscaped;
 
     private static boolean brokenWingGiven;
+
+    private static String act1BossSlain;
+    private static String act2BossSlain;
+    private static String act3BossSlain;
 
     //Save data whenever SaveFile is constructed
     @SpirePatch(
@@ -87,6 +94,11 @@ public class SaveData {
 
             brokenWingGiven = BrokenWingStatue.GIVEN;
 
+            act1BossSlain = downfallMod.Act1BossFaced;
+            act2BossSlain = downfallMod.Act2BossFaced;
+            act3BossSlain = downfallMod.Act3BossFaced;
+
+
             saveLogger.info("Saved Evil Mode: " + evilMode);
         }
     }
@@ -115,6 +127,9 @@ public class SaveData {
             params.put(MERCHANT_DEAD, merchantDead);
             params.put(MERCHANT_ESCAPED, merchantEscaped);
             params.put(WING_GIVEN, brokenWingGiven);
+            params.put(ACT_1_BOSS_SLAIN, act1BossSlain);
+            params.put(ACT_2_BOSS_SLAIN, act2BossSlain);
+            params.put(ACT_3_BOSS_SLAIN, act3BossSlain);
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -159,6 +174,10 @@ public class SaveData {
                 merchantEscaped = data.MERCHANT_ESCAPED;
 
                 brokenWingGiven = data.WING_GIVEN;
+
+                act1BossSlain = data.ACT_1_BOSS_SLAIN;
+                act2BossSlain = data.ACT_2_BOSS_SLAIN;
+                act3BossSlain = data.ACT_3_BOSS_SLAIN;
 
                 saveLogger.info("Loaded downfall save data successfully.");
             } catch (Exception e) {
@@ -207,6 +226,11 @@ public class SaveData {
             FleeingMerchant.ESCAPED = merchantEscaped;
 
             BrokenWingStatue.GIVEN = brokenWingGiven;
+
+
+            downfallMod.Act1BossFaced = act1BossSlain;
+            downfallMod.Act2BossFaced = act2BossSlain;
+            downfallMod.Act3BossFaced = act3BossSlain;
 
             saveLogger.info("Save loaded.");
             //Anything that triggers on load goes here

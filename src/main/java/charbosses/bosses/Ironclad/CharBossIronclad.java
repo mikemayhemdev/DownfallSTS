@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import slimebound.SlimeboundMod;
 
 public class CharBossIronclad extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Ironclad");
@@ -50,6 +51,8 @@ public class CharBossIronclad extends AbstractCharBoss {
                     archetype = new ArchetypeAct3Block();
                     break;
                 case 4: {
+
+                    SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
                         case 1:
                             archetype = new ArchetypeAct1PerfectedStrike();
@@ -123,7 +126,9 @@ public class CharBossIronclad extends AbstractCharBoss {
                 break;
         }
 
+        downfallMod.saveBossFight("downfall:CharBossIronclad");
     }
+
 }
 
 
