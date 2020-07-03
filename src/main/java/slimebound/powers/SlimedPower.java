@@ -115,9 +115,9 @@ public class SlimedPower extends AbstractPower {
             }
 
             if (AbstractDungeon.player.hasRelic(AbsorbEndCombatUpgraded.ID)) {
-                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 1));
+                AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.HealAction(this.source, this.source, 2));
                 AbstractDungeon.player.getRelic(AbsorbEndCombatUpgraded.ID).flash();
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, 3));
+                //AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.source, this.source, 3));
 
             }
 

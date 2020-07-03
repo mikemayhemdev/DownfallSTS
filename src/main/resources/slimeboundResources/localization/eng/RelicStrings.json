@@ -10,7 +10,7 @@
     "NAME": "Black Heart of Goo",
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
-      "Whenever you Attack an enemy who has #yslimeboundmod:Goop, heal 2 HP and gain 3 Block."
+      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
     ]
   },
   "Slimebound:SlimedTailRelic": {
