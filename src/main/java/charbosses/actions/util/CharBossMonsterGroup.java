@@ -40,6 +40,8 @@ public class CharBossMonsterGroup extends MonsterGroup {
                         m.applyStartOfTurnPowers();
                     }
                 }
+            } else {
+                m.applyStartOfTurnPowers();
             }
         }
 
