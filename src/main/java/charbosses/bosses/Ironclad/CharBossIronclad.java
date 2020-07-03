@@ -29,6 +29,7 @@ public class CharBossIronclad extends AbstractCharBoss {
         this.flipHorizontal = true;
         e.setTimeScale(0.6f);
         this.energyString = "[R]";
+        type = EnemyType.BOSS;
     }
 
     @Override

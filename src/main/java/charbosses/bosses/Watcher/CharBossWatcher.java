@@ -42,6 +42,7 @@ public class CharBossWatcher extends AbstractCharBoss {
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.7F);
         this.energyString = "[P]";
+        type = EnemyType.BOSS;
 
         loadEyeAnimation();
         this.eyeBone = this.skeleton.findBone("eye_anchor");

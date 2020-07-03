@@ -30,7 +30,7 @@ public class CharBossDefect extends AbstractCharBoss {
 
         this.masterMaxOrbs = 3;
         this.maxOrbs = 3;
-
+        type = EnemyType.BOSS;
     }
 
     @Override

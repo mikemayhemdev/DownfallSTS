@@ -29,6 +29,7 @@ public class CharBossSilent extends AbstractCharBoss {
         this.flipHorizontal = true;
         e.setTimeScale(0.9f);
         this.energyString = "[G]";
+        type = EnemyType.BOSS;
     }
 
     @Override
