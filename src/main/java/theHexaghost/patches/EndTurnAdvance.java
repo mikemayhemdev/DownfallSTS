@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import downfall.patches.CantDoublePlayBossCardsPatch;
+import downfall.downfallMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
@@ -28,6 +28,6 @@ public class EndTurnAdvance {
             } else if (GhostflameHelper.activeGhostFlame.charged)
                 AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
         }
-        CantDoublePlayBossCardsPatch.playedBossCardThisTurn = false;
+        downfallMod.playedBossCardThisTurn = false;
     }
 }

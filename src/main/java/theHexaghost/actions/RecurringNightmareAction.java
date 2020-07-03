@@ -42,13 +42,17 @@ public class RecurringNightmareAction extends AbstractGameAction {
             }
 
             if (this.p.exhaustPile.size() - cannotExhume.size() == 1) {// 48
-                AbstractCard c = this.p.exhaustPile.getTopCard();// 56
-                c.unfadeOut();// 57
-                this.p.hand.addToHand(c);// 58
-                this.p.exhaustPile.removeCard(c);// 63
-                c.unhover();// 67
-                c.fadingOut = false;// 68
-                this.isDone = true;// 69
+                for (AbstractCard c : p.exhaustPile.group) {
+                    if (c.isEthereal) {
+                        c.unfadeOut();// 57
+                        this.p.hand.addToHand(c);// 58
+                        this.p.exhaustPile.removeCard(c);// 63
+                        c.unhover();// 67
+                        c.fadingOut = false;// 68
+                        this.isDone = true;// 69
+                        break;
+                    }
+                }
             } else {
 
                 p.exhaustPile.group.removeAll(cannotExhume);
