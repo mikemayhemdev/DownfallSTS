@@ -1,7 +1,9 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 
 public class AdvancingGuard extends AbstractHexaCard {
@@ -16,6 +18,8 @@ public class AdvancingGuard extends AbstractHexaCard {
     public AdvancingGuard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+
+        tags.add(HexaMod.GHOSTWHEELCARD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

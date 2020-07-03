@@ -3,6 +3,7 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -26,6 +27,7 @@ public class UnlimitedPower extends AbstractHexaCard {
             }
         }
         exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
     }
 
     public void upgrade() {

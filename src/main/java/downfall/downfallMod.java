@@ -47,6 +47,7 @@ import com.megacrit.cardcrawl.events.city.*;
 import com.megacrit.cardcrawl.events.exordium.*;
 import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.events.shrines.*;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
@@ -86,6 +87,7 @@ import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.*;
 import theHexaghost.HexaMod;
+import theHexaghost.TheHexaghost;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -1022,6 +1024,20 @@ public class downfallMod implements
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(EvilRun.ID)) || DailyModeEvilPatch.todaysRunIsEvil) {
             evilMode = true;
+        }
+
+        if (AbstractDungeon.player instanceof TheHexaghost){
+            for (AbstractCard c : CardLibrary.getAllCards()){
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)){
+                    c.tags.remove(AbstractCard.CardTags.HEALING);
+                }
+            }
+        } else {
+            for (AbstractCard c : CardLibrary.getAllCards()){
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD)){
+                    c.tags.add(AbstractCard.CardTags.HEALING);
+                }
+            }
         }
     }
 
