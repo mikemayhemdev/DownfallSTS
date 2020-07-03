@@ -17,7 +17,7 @@ public class MapCompatiblity {
     {
         if (EvilModeCharacterSelect.evilMode)
         {
-            return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y == 0 ? 14 : 0);
+            return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y == 0 ? (AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14) : 0);
         }
         return SpireReturn.Continue();
     }
