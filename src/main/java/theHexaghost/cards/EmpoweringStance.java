@@ -33,7 +33,7 @@ public class EmpoweringStance extends AbstractHexaCard {
             @Override
             public void update() {
               //  HexaMod.renderFlames = true;
-             //   isDone = true;
+                isDone = true;
                 AbstractGhostflame gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                 GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
                 gf.activate();

@@ -240,19 +240,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.energy.recharge();
 
 
-        for (final AbstractRelic r : this.relics) {
-            r.onPlayerEndTurn();
-            r.onEnergyRecharge();
-        }
-        for (final AbstractPower p : this.powers) {
-            if (!this.isPlayer) {
-                p.atEndOfTurnPreEndTurnCards(false);
-            }
-            p.atEndOfTurn(this.isPlayer);
-            p.onEnergyRecharge();
-        }
-
-
         for (final AbstractCard c : this.hand.group) {
             c.triggerOnEndOfTurnForPlayingCard();
         }
@@ -279,7 +266,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
-        this.applyStartOfTurnPowers();
+        //this.applyStartOfTurnPowers();
         this.applyStartOfTurnOrbs();
     }
 

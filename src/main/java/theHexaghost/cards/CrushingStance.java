@@ -35,7 +35,7 @@ public class CrushingStance extends AbstractHexaCard {
             @Override
             public void update() {
              //   HexaMod.renderFlames = true;
-            //    isDone = true;
+                isDone = true;
                 AbstractGhostflame gf = new CrushingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                 GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);
                 gf.activate();

@@ -101,7 +101,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-        OnPlayerDamagedSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber
+        OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber
         ,AddAudioSubscriber {
     public static final String modID = "downfall";
 
@@ -1045,6 +1045,8 @@ public class downfallMod implements
         Act1BossFaced = "";
         Act2BossFaced = "";
         Act3BossFaced = "";
+
+        playedBossCardThisTurn = false;
     }
 
     public static void saveBossFight(String ID){
@@ -1104,5 +1106,10 @@ public class downfallMod implements
 
     private void addAudio(Pair<String, String> audioData) {
         BaseMod.addAudio(audioData.getKey(), audioData.getValue());
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        playedBossCardThisTurn = false;
     }
 }
