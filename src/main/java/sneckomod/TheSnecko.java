@@ -27,6 +27,8 @@ import sneckomod.cards.SnekBite;
 import sneckomod.cards.Strike;
 import sneckomod.cards.TailWhip;
 import sneckomod.cards.unknowns.Unknown;
+import sneckomod.cards.unknowns.UnknownCommonAttack;
+import sneckomod.cards.unknowns.UnknownCommonSkill;
 import sneckomod.relics.SneckoSoul;
 
 import java.util.ArrayList;
@@ -106,14 +108,15 @@ public class TheSnecko extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            retVal.add(Strike.ID);
-        }
-        for (int i = 0; i < 4; i++) {
-            retVal.add(Defend.ID);
-        }
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Strike.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
         retVal.add(TailWhip.ID);
         retVal.add(SnekBite.ID);
+        retVal.add(Unknown.ID);
         retVal.add(Unknown.ID);
         return retVal;
     }
