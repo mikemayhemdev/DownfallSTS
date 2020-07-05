@@ -1,10 +1,12 @@
 package charbosses.bosses.Watcher;
 
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
+import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnRitualDagger;
 import charbosses.cards.purple.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
@@ -82,35 +84,42 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         //addRelic(new CBR_PhilosopherStone());
 
         /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+
+        //Turn 1
         addToDeck(new EnLikeWater(), false);
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnWallop(), true);
-
-        //Turn 2
-        addToDeck(new EnDefendPurple(), true);
         addToDeck(new EnStrikePurple(), false);
-        addToDeck(new EnRitualDagger(), true);
+        addToDeck(new EnStrikePurple(), false);
 
-        //Turn 3
+        //Turn 2   - NO ATTACKS!
+        addToDeck(new EnDefendPurple(), true);
+        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnRagnarok(), false);
+
+        //Turn 3   - Art of War gets triggered on this turn
         addToDeck(new EnReachHeaven(), false);
         addToDeck(new EnWaveOfTheHand(), extraUpgrades);
-        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnCrushJoints(), false);
 
         //Turn 4
         addToDeck(new EnReachHeaven(), false);
-        addToDeck(new EnCrushJoints(), false);
+        addToDeck(new EnSashWhip(), extraUpgrades);
         addToDeck(new EnThroughViolence(), false);
 
-        //Turn 5
+        //Turn 5   - NO ATTACKS!
         addToDeck(new EnLikeWater(), extraUpgrades);
         addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnSashWhip(), extraUpgrades);
+        addToDeck(new EnWallop(), true);
 
-        //Turn 6
+        //Turn 6   - Art of War gets triggered on this turn
         addToDeck(new EnDevaForm(), false);
         addToDeck(new EnThroughViolence(), false);
-        addToDeck(new EnRagnarok(), false);
+        AbstractBossCard c = new EnRitualDagger();
+        c.misc += 5;
+        c.applyPowers();
+        c.baseDamage = c.misc;
+        c.isDamageModified = false;
+        addToDeck(c, true);
 
 
     }

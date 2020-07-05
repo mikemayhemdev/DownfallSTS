@@ -31,7 +31,7 @@ public class EnemyTriggerEndOfTurnOrbActions extends AbstractGameAction {
                 p.atEndOfTurnPreEndTurnCards(false);
             }
             p.atEndOfTurn(AbstractCharBoss.boss.isPlayer);
-            p.onEnergyRecharge();
+           // p.onEnergyRecharge();
         }
 
         this.isDone = true;
