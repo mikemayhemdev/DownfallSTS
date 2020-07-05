@@ -19,7 +19,7 @@ public class ReduceRightMostStasisAction extends AbstractGameAction {
         this.actionType = ActionType.DAMAGE;
         this.attackEffect = AttackEffect.SLASH_HORIZONTAL;
         this.duration = 0.01F;
-        this.fromAutomayhem = fromAutomayhem;
+        this.fromAutomayhem = false;  //no longer actually needs to accept the input with new Time Sifter/Stasis/accelerate design from Downfall.
 
     }
 
