@@ -10,7 +10,7 @@
     "NAME": "黏液腐心",
     "FLAVOR": "黏浆中的秘密。",
     "DESCRIPTIONS": [
-      "每当你攻击一个带有 #yslimeboundmod:黏液 的敌人，恢复2点生命并获得3点格挡。"
+      "每当你 #yslimeboundmod:消耗黏液 时，回复2点生命。"
     ]
   },
   "Slimebound:SlimedTailRelic": {
