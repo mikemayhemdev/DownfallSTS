@@ -120,12 +120,9 @@ public class QuickStudy extends AbstractExpansionCard {
             }
 
         }
-//        q.freeToPlayOnce = true;
-//        r.freeToPlayOnce = true;
-//        z.freeToPlayOnce = true;
-        q.updateCost(-1);
-        r.updateCost(-1);
-        z.updateCost(-1);
+        q.freeToPlayOnce = true;
+        r.freeToPlayOnce = true;
+       z.freeToPlayOnce = true;
         atb(new MakeTempCardInHandAction(q));
         atb(new MakeTempCardInHandAction(r));
         atb(new MakeTempCardInHandAction(z));

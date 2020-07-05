@@ -121,8 +121,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
-    "DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain a copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain an Upgraded copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain a copy of each of its expansioncontent:Boss cards. NL They cost 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain an Upgraded copy of each of its expansioncontent:Boss cards. NL They cost 0 until played. NL Exhaust."
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
