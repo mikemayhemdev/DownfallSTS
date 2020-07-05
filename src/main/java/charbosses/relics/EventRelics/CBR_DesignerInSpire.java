@@ -33,7 +33,7 @@ public class CBR_DesignerInSpire extends AbstractCharbossRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0] + this.removedName + this.DESCRIPTIONS[1] + this.upgradedName + ".";
+        return this.DESCRIPTIONS[0];
     }
 
     @Override

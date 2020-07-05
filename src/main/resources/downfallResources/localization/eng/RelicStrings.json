@@ -135,8 +135,7 @@
     "NAME": "Event: Designer-In-Spire",
     "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
     "DESCRIPTIONS": [
-      "A card was removed from the deck, and another",
-      " was upgraded."
+      "A card was removed from the deck, and another was upgraded."
     ]
   },
   "downfall:DivineFountain": {
