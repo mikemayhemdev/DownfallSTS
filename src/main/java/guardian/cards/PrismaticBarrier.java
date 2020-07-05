@@ -48,6 +48,8 @@ public class PrismaticBarrier extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+
+        tags.add(AbstractCard.CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -60,6 +60,8 @@ public class PrismaticBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        
+        tags.add(AbstractCard.CardTags.HEALING);
     }
 
     @Override
