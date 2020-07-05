@@ -96,7 +96,9 @@ public class CharBossWatcher extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1Streamline();
+            archetype = new ArchetypeAct1Retain();
+            downfallMod.overrideBossDifficulty = false;
+            this.currentHealth -= 100;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:

@@ -38,7 +38,9 @@ public class CharBossIronclad extends AbstractCharBoss {
         //ArrayList<AbstractBossDeckArchetype> archetypes = new ArrayList<AbstractBossDeckArchetype>();
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1Streamline();
+            archetype = new ArchetypeAct1PerfectedStrike();
+            downfallMod.overrideBossDifficulty = false;
+            this.currentHealth -= 100;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:

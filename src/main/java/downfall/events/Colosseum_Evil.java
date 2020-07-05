@@ -101,7 +101,6 @@ public class Colosseum_Evil extends AbstractImageEvent {
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
                                 break;
                         }
-                        downfallMod.overrideBossDifficulty = false;
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);

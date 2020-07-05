@@ -46,6 +46,8 @@ public class CharBossDefect extends AbstractCharBoss {
 
         if (downfallMod.overrideBossDifficulty) {
             archetype = new ArchetypeAct1Streamline();
+            this.currentHealth -= 100;
+            downfallMod.overrideBossDifficulty = false;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
