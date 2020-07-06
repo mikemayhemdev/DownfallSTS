@@ -71,8 +71,10 @@ public class CrushingGhostflame extends AbstractGhostflame {
                     }
                     isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-                    addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                        addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                        addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                    }
                 }
             });
         }

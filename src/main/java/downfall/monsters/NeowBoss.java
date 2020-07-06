@@ -37,6 +37,7 @@ import theHexaghost.cards.Haunted;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class NeowBoss extends AbstractMonster {
 
@@ -113,19 +114,19 @@ public class NeowBoss extends AbstractMonster {
         //Initialize the boss list with the four
         Rezzes = 0;
 
-        if (downfallMod.Act1BossFaced != ""){
+        if (downfallMod.Act1BossFaced != "") {
             bossesToRez.add(downfallMod.Act1BossFaced);
         } else {
             bossesToRez.add("downfall:CharBossIronclad");
             SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 1.  Will rez Ironclad instead.");
         }
-        if (downfallMod.Act2BossFaced != ""){
+        if (downfallMod.Act2BossFaced != "") {
             bossesToRez.add(downfallMod.Act2BossFaced);
         } else {
             bossesToRez.add("downfall:CharBossIronclad");
             SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 2.  Will rez Ironclad instead.");
         }
-        if (downfallMod.Act3BossFaced != ""){
+        if (downfallMod.Act3BossFaced != "") {
             bossesToRez.add(downfallMod.Act3BossFaced);
         } else {
             bossesToRez.add("downfall:CharBossIronclad");
@@ -153,10 +154,10 @@ public class NeowBoss extends AbstractMonster {
             if (moveTimer <= 0F) {
                 movingBack = false;
                 offscreen = false;
-              //  this.halfDead = false;
+                //  this.halfDead = false;
                 //if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
-               //     AbstractDungeon.getCurrRoom().cannotLose = false;
-               // }
+                //     AbstractDungeon.getCurrRoom().cannotLose = false;
+                // }
                 this.drawX = this.baseDrawX;
                 AbstractCharBoss.boss = null;
                 getMove(0);
@@ -168,7 +169,7 @@ public class NeowBoss extends AbstractMonster {
     public void usePreBattleAction() {
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
-      //  AbstractDungeon.getCurrRoom().cannotLose = true;
+        //  AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractCharBoss.boss = null;
         Rezzes = 1;
         isRezzing = false;
@@ -176,6 +177,16 @@ public class NeowBoss extends AbstractMonster {
         movingOffscreen = false;
         movingBack = false;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
+    }
+
+    public void nukeDebuffs() {
+        for (Object s = this.powers.iterator(); ((Iterator) s).hasNext(); ) {
+            AbstractPower p = (AbstractPower) ((Iterator) s).next();
+            if ((p.type == AbstractPower.PowerType.DEBUFF) || (p.ID.equals("Curiosity")) || (p.ID.equals("Unawakened")) ||
+                    (p.ID.equals("Shackled"))) {
+                ((Iterator) s).remove();
+            }
+        }
     }
 
 
@@ -239,7 +250,7 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
-             //   AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+                //   nukeDebuffs();
                 //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, this.strAmt * 3), this.strAmt * 3));
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this.blockAmt));
@@ -248,11 +259,11 @@ public class NeowBoss extends AbstractMonster {
                 playSfx();
                 //if(this.hasPower(NeowInvulnerablePower.POWER_ID))  this.halfDead = true;
                 AbstractDungeon.actionManager.addToBottom(new NeowRezAction(this));
-                AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+                nukeDebuffs();
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
                 break;
             case 5:
-                if (this.currentHealth < this.maxHealth){
+                if (this.currentHealth < this.maxHealth) {
                     AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
                 }
                 break;
@@ -291,11 +302,11 @@ public class NeowBoss extends AbstractMonster {
     public void moveForRez() {
         if (offscreen) {
             this.heal(this.maxHealth);
-            AbstractDungeon.actionManager.addToBottom(new RemoveDebuffsAction(this));
+            nukeDebuffs();
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
             AbstractDungeon.actionManager.addToBottom(new NeowReturnAction(this));
-            if (this.hasPower(NeowInvulnerablePower.POWER_ID)){
-                if (this.getPower(NeowInvulnerablePower.POWER_ID).amount > 1){
+            if (this.hasPower(NeowInvulnerablePower.POWER_ID)) {
+                if (this.getPower(NeowInvulnerablePower.POWER_ID).amount > 1) {
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this, this, NeowInvulnerablePower.POWER_ID, 1));
                 } else {
                     AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, NeowInvulnerablePower.POWER_ID));
@@ -309,7 +320,7 @@ public class NeowBoss extends AbstractMonster {
             //this.heal(this.maxHealth);
             movingOffscreen = true;
             moveTimer = 2F;
-
+            nukeDebuffs();
             this.halfDead = true;
             //this.isDying = true;
         }
@@ -359,7 +370,8 @@ public class NeowBoss extends AbstractMonster {
         } else {
             this.currentHealth = 0;
             this.halfDead = true;
-           // AbstractDungeon.getCurrRoom().cannotLose = true;
+            nukeDebuffs();
+            // AbstractDungeon.getCurrRoom().cannotLose = true;
             this.getPower(NeowInvulnerablePower.POWER_ID).flash();
             if (AbstractCharBoss.boss == null) {
                 switchToRez();
