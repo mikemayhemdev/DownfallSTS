@@ -113,7 +113,7 @@ public class SealChamber extends AbstractImageEvent {
                         return;
                     case 1:
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldLoss));
-                        AbstractDungeon.player.gainGold(this.goldLoss);
+                        AbstractDungeon.player.loseGold(this.goldLoss);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new SecondSeal(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[8]);
