@@ -251,7 +251,7 @@ public class CustomAnimatedNPC {
                 // using the regular render function of the npc. Note that if you want any background, you'd render it right here
                 // right before this render.
 
-                sb.draw(this.portalImage, this.heartCenterX - (250F * this.heartScale * Settings.scale), this.heartCenterY - (250F * this.heartScale * Settings.scale));
+                sb.draw(this.portalImage, this.heartCenterX - (250F * Settings.scale), this.heartCenterY - (250F * Settings.scale));
                 this.standardRender(sb);
 
         /*
