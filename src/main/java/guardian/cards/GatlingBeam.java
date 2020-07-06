@@ -30,10 +30,10 @@ public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPGRADE_DAMAGE = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
@@ -114,16 +114,13 @@ public class GatlingBeam extends AbstractGuardianCard implements InStasisCard {
 
     @Override
     public void onStartOfTurn(StasisOrb orb) {
-        turnsInStasis++;
-        for (int i = 0; i < turnsInStasis; i++) {
-            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
+        AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
 
-            if (m != null)
-            {
-                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.BLUE), 0.1F));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
-            }
+        if (m != null)
+        {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, Color.BLUE), 0.1F));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
         }
     }
 

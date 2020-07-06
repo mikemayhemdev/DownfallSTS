@@ -375,8 +375,8 @@
     "DESCRIPTION": "When you leave guardianmod:Defensive_Mode, gain !M! guardianmod:Momentary Strength. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:GatlingBeam": {
-    "NAME": "Gatling Beam",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. Repeat for each time this guardianmod:Tick effect has triggered. NL guardianmod:Volatile."
+    "NAME": "Turret Beam",
+    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. NL guardianmod:Volatile."
   },
   "Guardian:ShieldCharger": {
     "NAME": "Shield Charger",
