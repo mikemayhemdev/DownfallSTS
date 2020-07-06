@@ -501,9 +501,9 @@ public static void saveData() {
 
 
         unlocks0 = new CustomUnlockBundle(
-                ShieldCharger.ID, Orbwalk.ID, FierceBash.ID
+                GatlingBeam.ID, Orbwalk.ID, FierceBash.ID
         );
-        UnlockTracker.addCard(ShieldCharger.ID);
+        UnlockTracker.addCard(GatlingBeam.ID);
         UnlockTracker.addCard(Orbwalk.ID);
         UnlockTracker.addCard(FierceBash.ID);
 
