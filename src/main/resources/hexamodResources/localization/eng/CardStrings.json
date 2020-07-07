@@ -259,7 +259,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Heat Metal",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy gains !M! hexamod:Soulburn at the start of each of its turns until hexamod:Soulburn detonates."
+    "DESCRIPTION": "Deal !D! damage. NL After hexamod:Soulburn detonates on this enemy, apply !M! hexamod:Soulburn."
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
