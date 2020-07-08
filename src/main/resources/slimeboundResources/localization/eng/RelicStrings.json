@@ -3,14 +3,14 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "I feel so funky.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 1 HP."
+      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
     "NAME": "Black Heart of Goo",
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
+      "Whenever you #yslimeboundmod:Consume, heal 4 HP."
     ]
   },
   "Slimebound:SlimedTailRelic": {

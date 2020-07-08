@@ -28,7 +28,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
     private static final String IGNORE;
 
     static {
-        eventStrings = CardCrawlGame.languagePack.getEventString("Golden Shrine");
+        eventStrings = CardCrawlGame.languagePack.getEventString("downfall:GoldenShrine");
         NAME = eventStrings.NAME;
         DESCRIPTIONS = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;

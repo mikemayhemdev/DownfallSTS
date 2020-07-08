@@ -45,6 +45,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 if (c instanceof AbstractSealCard && !notToRemoveList.contains(c.cardID)) {
                     notToRemoveList.add(c.cardID);
                     removeList.add(c);
+                    AbstractDungeon.actionManager.cardsPlayedThisCombat.remove(c);
                 }
             }
             for (AbstractPower p : AbstractDungeon.player.powers) {

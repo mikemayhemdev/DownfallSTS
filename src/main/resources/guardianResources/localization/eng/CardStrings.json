@@ -235,7 +235,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",
-    "DESCRIPTION": "Deal !D! damage. NL  If in guardianmod:Defensive_Mode, deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If in guardianmod:Defensive_Mode, affects ALL enemies."
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
@@ -267,11 +267,12 @@
   },
   "Guardian:TemporalStrike": {
     "NAME": "Temporal Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage if you have a card in guardianmod:Stasis."
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] if you have a card in guardianmod:Stasis."
   },
   "Guardian:TemporalShield": {
     "NAME": "Temporal Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block if you have a card in guardianmod:Stasis."
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card if you have a card in guardianmod:Stasis.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards if you have a card in guardianmod:Stasis."
   },
   "Guardian:ExploitGems": {
     "NAME": "Exploit Gems",

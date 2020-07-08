@@ -1,7 +1,9 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,7 +25,7 @@ public class TemporalShield extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_BLOCK = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -48,6 +50,7 @@ public class TemporalShield extends AbstractGuardianCard {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
         this.baseBlock = BLOCK;
+        this.baseMagicNumber = this.magicNumber = 1;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
@@ -58,8 +61,7 @@ public class TemporalShield extends AbstractGuardianCard {
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         if (GuardianMod.isStasisOrbInPlay()) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.magicNumber));
         }
         super.use(p, m);
         this.useGems(p, m);
@@ -74,6 +76,7 @@ public class TemporalShield extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
+            upgradeMagicNumber(1);
         }
     }
 

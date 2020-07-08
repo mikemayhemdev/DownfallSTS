@@ -12,6 +12,7 @@ import charbosses.actions.util.CharbossDoNextCardAction;
 import charbosses.actions.util.CharbossSortHandAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
+import charbosses.actions.utility.DestroyAntiCardsAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.colorless.EnShiv;
@@ -30,6 +31,7 @@ import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -58,6 +60,7 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import guardian.cards.AbstractGuardianCard;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -879,6 +882,23 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (NeowBoss.neowboss != null) {
             NeowBoss.neowboss.moveForRez();
             NeowBoss.neowboss.minion = null;
+            AbstractCard anti = anticard();
+            for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+                if (c.cardID == anti.cardID){
+                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.drawPile));
+                }
+            }
+            for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+                if (c.cardID == anti.cardID){
+                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
+                }
+            }
+            for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                if (c.cardID == anti.cardID){
+                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
+                }
+            }
+            addToBot(new DestroyAntiCardsAction(anti.cardID));
         }
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
