@@ -72,7 +72,7 @@ public class CustomAnimatedNPC {
     private float maskDuration = 0.0f;
 
     //I like the render options better when I'm using a TextureRegion.
-    private static final TextureRegion MASK_REGION = new TextureRegion(new Texture("downfallResources/images/vfx/HeartMask.png"), 5000, 5000);
+    private static final TextureRegion MASK_REGION = new TextureRegion(new Texture("downfallResources/images/vfx/HeartMask.png"), 500, 500);
 
     public CustomAnimatedNPC(float x, float y, String atlasUrl, String skeletonUrl, String trackName, boolean portalRender, int portalType) {
         this(x,y,atlasUrl,skeletonUrl,trackName,portalRender,portalType,false, 1F);
