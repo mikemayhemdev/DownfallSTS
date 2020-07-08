@@ -25,8 +25,8 @@
   "hexamod:BurnPerTurnPower": {
     "NAME": "易熔金属",
     "DESCRIPTIONS": [
-      "它的回合开始时获得 #b",
-      " 层 #y灼魂 。 #y灼魂 引爆时移除本效果。"
+      "下次 #y灼魂 引爆时，给予 #b",
+      " 层 #y灼魂 。"
     ]
   },
   "hexamod:BurnPower": {

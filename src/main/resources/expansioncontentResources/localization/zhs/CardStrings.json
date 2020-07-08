@@ -121,8 +121,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
-    "DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它的耗能减少1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它的耗能减少1。 NL 消耗 。"
+    "DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。"
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "恶灵附身",
