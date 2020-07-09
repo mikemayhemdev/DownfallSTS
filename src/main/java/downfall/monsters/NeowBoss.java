@@ -95,7 +95,6 @@ public class NeowBoss extends AbstractMonster {
         this.drawX += DRAWX_OFFSET;
         this.drawY += DRAWY_OFFSET;
 
-        neowboss = this;
         type = EnemyType.BOSS;
         this.baseDrawX = drawX;
 
@@ -167,6 +166,7 @@ public class NeowBoss extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
+        neowboss = this;
         super.usePreBattleAction();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 3)));
         //  AbstractDungeon.getCurrRoom().cannotLose = true;
@@ -377,6 +377,12 @@ public class NeowBoss extends AbstractMonster {
                 switchToRez();
             }
         }
+    }
+
+    @Override
+    public void dispose() {
+        super.dispose();
+        neowboss = null;
     }
 }
 

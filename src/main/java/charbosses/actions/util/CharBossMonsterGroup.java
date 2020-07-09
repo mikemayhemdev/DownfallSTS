@@ -34,13 +34,19 @@ public class CharBossMonsterGroup extends MonsterGroup {
                     }
 
                     if (NeowBoss.neowboss != null) {
-                        if (NeowBoss.neowboss.offscreen)
+                        if (NeowBoss.neowboss.offscreen) {
+                            SlimeboundMod.logger.info("Start of turn power: Neow is not null and is offscreen.");
                             m.applyStartOfTurnPowers();
+                        } else {
+                            SlimeboundMod.logger.info("Start of turn power: Neow is not null is offscreen.");
+                        }
                     } else {
+                        SlimeboundMod.logger.info("Start of turn power: Neow is null.");
                         m.applyStartOfTurnPowers();
                     }
                 }
             } else {
+                SlimeboundMod.logger.info("Start of turn power: This is not a charboss.");
                 m.applyStartOfTurnPowers();
             }
         }

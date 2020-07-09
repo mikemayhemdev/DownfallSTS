@@ -183,18 +183,24 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         if (NeowBoss.neowboss != null) {
             if (NeowBoss.neowboss.minion != this) {
-                CardCrawlGame.music.unsilenceBGM();
-                AbstractDungeon.scene.fadeOutAmbiance();
-
-                String musicKey;
-                if (AbstractDungeon.actNum == 0) musicKey = "BOSS_BOTTOM";
-                else if (AbstractDungeon.actNum == 1) musicKey = "BOSS_CITY";
-                else if (AbstractDungeon.actNum == 2) musicKey = "BOSS_BEYOND";
-                else musicKey = "MINDBLOOM";
-
-                AbstractDungeon.getCurrRoom().playBgmInstantly(musicKey);
+                playMusic();
             }
+        } else {
+            playMusic();
         }
+    }
+
+    public void playMusic(){
+        CardCrawlGame.music.unsilenceBGM();
+        AbstractDungeon.scene.fadeOutAmbiance();
+
+        String musicKey;
+        if (AbstractDungeon.actNum == 0) musicKey = "BOSS_BOTTOM";
+        else if (AbstractDungeon.actNum == 1) musicKey = "BOSS_CITY";
+        else if (AbstractDungeon.actNum == 2) musicKey = "BOSS_BEYOND";
+        else musicKey = "MINDBLOOM";
+
+        AbstractDungeon.getCurrRoom().playBgmInstantly(musicKey);
     }
 
     @Override
@@ -872,7 +878,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (this.currentHealth <= 0) {
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
-            if (NeowBoss.neowboss.minion == null) {
+            if (NeowBoss.neowboss != null) {
+                if (NeowBoss.neowboss.minion == null) {
+                    SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
+                    onBossVictoryLogic();
+                }
+            } else {
                 SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
                 onBossVictoryLogic();
             }
