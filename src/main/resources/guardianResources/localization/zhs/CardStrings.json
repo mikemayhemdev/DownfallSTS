@@ -271,7 +271,7 @@
   },
   "Guardian:TemporalShield": {
     "NAME": "质朴屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 再获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 抽 !M! 张牌。"
   },
   "Guardian:ExploitGems": {
     "NAME": "宝石利用",

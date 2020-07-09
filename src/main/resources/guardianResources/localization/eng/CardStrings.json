@@ -271,8 +271,7 @@
   },
   "Guardian:TemporalShield": {
     "NAME": "Temporal Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Draw a card if you have a card in guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards if you have a card in guardianmod:Stasis."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card if you have a card in guardianmod:Stasis."
   },
   "Guardian:ExploitGems": {
     "NAME": "Exploit Gems",
