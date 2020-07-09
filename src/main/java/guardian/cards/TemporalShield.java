@@ -77,6 +77,8 @@ public class TemporalShield extends AbstractGuardianCard {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
             upgradeMagicNumber(1);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
