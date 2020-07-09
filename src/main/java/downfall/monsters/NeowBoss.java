@@ -263,9 +263,9 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
                 break;
             case 5:
-                if (this.currentHealth < this.maxHealth) {
-                    AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
-                }
+               // if (this.currentHealth < this.maxHealth) {
+                //     AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
+                //}
                 break;
         }
 
