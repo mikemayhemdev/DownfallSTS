@@ -46,11 +46,11 @@
     ]
   },
   "hexamod:CommonPostCombatPower": {
-    "NAME": "战后普通",
+    "NAME": "战后卡牌",
     "DESCRIPTIONS": [
       "每场战斗结束时，获得 #b",
-      " 张额外的 #y普通 牌。",
-      " 张额外的 #y普通 牌。"
+      " 张额外的牌。",
+      " 张额外的牌。"
     ]
   },
   "hexamod:CrispyPower": {
