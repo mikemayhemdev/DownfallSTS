@@ -30,7 +30,7 @@
   },
   "expansioncontent:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage twice to ALL enemies. NL Gain 1 Artifact. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage twice to ALL enemies. NL Gain !M! Artifact. NL Exhaust."
   },
   "expansioncontent:BronzeBeam": {
     "NAME": "Orb Support",

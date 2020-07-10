@@ -30,7 +30,7 @@
   },
   "expansioncontent:Flail": {
     "NAME": "链枷",
-    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害两次。 NL 获得 1 层 人工制品。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害两次。 NL 获得 !M! 层 人工制品。 NL 消耗 。"
   },
   "expansioncontent:BronzeBeam": {
     "NAME": "铜球支援",
