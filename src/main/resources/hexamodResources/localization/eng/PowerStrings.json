@@ -46,11 +46,11 @@
     ]
   },
   "hexamod:CommonPostCombatPower": {
-    "NAME": "Post-Combat Common",
+    "NAME": "Sealed Reward: Card",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
-      " additional #yCommon cards.",
-      " additional #yCommon card."
+      " additional cards.",
+      " additional card."
     ]
   },
   "hexamod:CrispyPower": {
@@ -82,7 +82,7 @@
     ]
   },
   "hexamod:FutureUpgradePower": {
-    "NAME": "Post-Combat Experience",
+    "NAME": "Sealed Reward: Upgrade",
     "DESCRIPTIONS": [
       "At the end of combat, #yUpgrade #b",
       " random card in your deck.",
@@ -120,7 +120,7 @@
     ]
   },
   "hexamod:GoldPostCombatPower": {
-    "NAME": "Post-Combat Gold",
+    "NAME": "Sealed Reward: Gold",
     "DESCRIPTIONS": [
       "Gold reward from this combat is increased by #b",
       " ."
@@ -159,7 +159,7 @@
     ]
   },
   "hexamod:PotionPostCombatPower": {
-    "NAME": "Post-Combat Potion",
+    "NAME": "Sealed Reward: Potion",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
       " additional Potions.",
@@ -174,7 +174,7 @@
     ]
   },
   "hexamod:SealPostCombatPower": {
-    "NAME": "Post-Combat Seal",
+    "NAME": "Sealed Reward: Seal",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
       " additional #ySeal cards.",
