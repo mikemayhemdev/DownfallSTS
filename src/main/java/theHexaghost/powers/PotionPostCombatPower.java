@@ -39,7 +39,9 @@ public class PotionPostCombatPower extends AbstractPower implements CloneablePow
 
     @Override
     public void onVictory() {
-        AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
+        for (int i = 0; i < this.amount; i++) {
+            AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(PotionHelper.getRandomPotion()));
+        }
     }
 
     @Override
