@@ -267,7 +267,8 @@
   },
   "Guardian:TemporalStrike": {
     "NAME": "质朴打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 NL 再造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 NL 获得 [E] 。"
   },
   "Guardian:TemporalShield": {
     "NAME": "质朴屏障",

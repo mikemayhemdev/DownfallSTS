@@ -267,7 +267,8 @@
   },
   "Guardian:TemporalStrike": {
     "NAME": "Temporal Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain [E] if you have a card in guardianmod:Stasis."
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] if you have a card in guardianmod:Stasis.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] if you have a card in guardianmod:Stasis."
   },
   "Guardian:TemporalShield": {
     "NAME": "Temporal Shield",
