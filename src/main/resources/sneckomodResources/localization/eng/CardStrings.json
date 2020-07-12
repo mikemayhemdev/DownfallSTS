@@ -195,7 +195,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "Restock",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Discard your hand. NL Draw 5-10 cards. NL Exhaust."
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
@@ -264,7 +264,7 @@
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 0 - !M! [E] ."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Deal !qqq! - !D! damage. NL Gain 1 - !M! [E] . NL Exhaust."
   },
   "sneckomod:DiceBoulder": {
     "NAME": "Dice Boulder",

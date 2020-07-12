@@ -143,7 +143,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackle cards you play."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackle cards."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",

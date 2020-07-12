@@ -61,19 +61,19 @@
   },
   "downfall:RemoveCardReward": {
   "TEXT": [
-    "Remove a card in your deck.",
+    "Remove a card in your deck",
     "Choose a Card to Remove"
   ]
 },
   "downfall:TransformCardReward": {
     "TEXT": [
-      "Transform a card in your deck.",
+      "Transform a card in your deck",
       "Choose a Card to Transform"
     ]
   },
   "downfall:UpgradeCardReward": {
     "TEXT": [
-      "Upgrade a card in your deck.",
+      "Upgrade a card in your deck",
       "Choose a Card to Upgrade"
     ]
   },
