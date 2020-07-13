@@ -195,7 +195,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "补充",
-    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃你的手牌。 NL 抽 5-10 张牌。"
+    "DESCRIPTION": "sneckomod:蛇证 。 NL 丢弃你的手牌。 NL 抽 5-10 张牌。 NL 消耗 。"
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "闪光伎俩",
