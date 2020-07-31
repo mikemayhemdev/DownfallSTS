@@ -1,5 +1,6 @@
 package theHexaghost;
 
+import com.megacrit.cardcrawl.helpers.*;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
@@ -19,10 +20,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
@@ -180,6 +177,27 @@ public class TheHexaghost extends CustomPlayer {
         return new CharSelectInfo(NAMES[0], TEXT[0],
                 70, 70, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
+    }
+
+
+    @Override
+    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
+        if (ModHelper.isModEnabled("Red Cards")) {
+            CardLibrary.addRedCards(tmpPool);
+        }
+        if (ModHelper.isModEnabled("Green Cards")) {
+            CardLibrary.addGreenCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Blue Cards")) {
+            CardLibrary.addBlueCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Purple Cards")) {
+            CardLibrary.addPurpleCards(tmpPool);
+        }
+
+        return super.getCardPool(tmpPool);
     }
 
     @Override
