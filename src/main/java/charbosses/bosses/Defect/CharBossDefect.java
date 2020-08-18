@@ -84,9 +84,9 @@ public class CharBossDefect extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
     }
 
     @Override

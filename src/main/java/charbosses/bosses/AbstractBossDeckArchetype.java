@@ -175,7 +175,6 @@ public abstract class AbstractBossDeckArchetype {
 
     public void addToDeck(AbstractBossCard c, boolean upgraded) {
         if (upgraded) c.upgrade();
-        //SlimeboundMod.logger.info("adding to boss deck: " + c.name + " " + c.upgraded);
         AbstractCharBoss.boss.masterDeck.addToTop(c.makeStatEquivalentCopy());
     }
 

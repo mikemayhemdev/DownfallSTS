@@ -73,7 +73,7 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         //Turn 5
         addToDeck(new EnInfiniteBlades(), false);
         addToDeck(new EnDefendGreen());
-        addToDeck(new EnAccuracy(), extraUpgrades);
+        addToDeck(new EnSurvivor(), extraUpgrades);
 
     }
 

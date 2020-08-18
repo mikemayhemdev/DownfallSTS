@@ -24,14 +24,10 @@ public class EnCloakAndDagger extends AbstractBossCard {
     public EnCloakAndDagger() {
         super(ID, EnCloakAndDagger.cardStrings.NAME, "green/skill/cloak_and_dagger", 1, EnCloakAndDagger.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.ATTACK_DEFEND);
         this.baseBlock = 6;
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
+        this.magicNumber = this.baseMagicNumber = 1;
         this.cardsToPreview = new EnShiv();
         this.magicValue = 4;
-        baseDamage = 4;
-        if (upgraded) {
-            isMultiDamage = true;
-        }
+        this.baseDamage = 4;
     }
 
     @Override
@@ -44,6 +40,7 @@ public class EnCloakAndDagger extends AbstractBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            isMultiDamage = true;
             this.upgradeMagicNumber(1);
             this.rawDescription = EnCloakAndDagger.cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();

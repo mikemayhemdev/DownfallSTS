@@ -77,9 +77,9 @@ public class CharBossIronclad extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
 
         //archetypes.add(new ArchetypeIcStrike());
         //archetypes.add(new ArchetypeIcStrength());

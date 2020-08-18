@@ -164,6 +164,27 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             ((AbstractBossCard) c).owner = this;
         }
 
+        if(AbstractDungeon.ascensionLevel < 19){
+            masterDeck.shuffle();
+        }
+
+        ArrayList<AbstractCard> isInnateCard = new ArrayList<AbstractCard>();
+        for(AbstractCard c : this.masterDeck.group){
+            if(c.isInnate){
+                isInnateCard.add(c);
+            }
+        }
+
+        if(isInnateCard.size() > 0){
+            this.masterDeck.group.removeAll(isInnateCard);
+
+            for (AbstractCard c : isInnateCard){
+                this.masterDeck.addToBottom(c);
+            }
+        }
+
+
+
         if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
             new CBR_LizardTail().instantObtain(this);
             new CBR_MagicFlower().instantObtain(this);
