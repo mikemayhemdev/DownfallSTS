@@ -1289,8 +1289,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     @Override
     public void render(final SpriteBatch sb) {
         super.render(sb);
-        this.renderHand(sb);
         if (!this.isDead) {
+            this.renderHand(sb);
             this.stance.render(sb);
             for (AbstractRelic r : this.relics) {
                 r.render(sb);
