@@ -1,5 +1,5 @@
 {
-  "downfall:NeowBlessing": {
+  "downfall-rebalance:NeowBlessing": {
     "NAME": "涅奥的祝福",
     "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
@@ -7,116 +7,116 @@
 	  " 。"
     ]
   },
-  "downfall:CoffeeDripper": {
+  "downfall-rebalance:CoffeeDripper": {
     "DESCRIPTIONS": [
       " NL 不能够休息，Boss的最大生命变少。"
     ]
   },
-  "downfall:BustedCrown": {
+  "downfall-rebalance:BustedCrown": {
     "DESCRIPTIONS": [
       " NL 不能获得其他牌，Boss的牌组配合比正常时少。"
     ]
   },
-  "downfall:Girya": {
+  "downfall-rebalance:Girya": {
     "DESCRIPTIONS": [
       " NL 篝火能够选择举重，Boss的最大生命变少。"
     ]
   },
-  "downfall:Matroyshka": {
+  "downfall-rebalance:Matroyshka": {
     "DESCRIPTIONS": [
       " NL Boss额外获得了 ",
       " 件遗物。"
     ]
   },
-  "downfall:Ectoplasm": {
+  "downfall-rebalance:Ectoplasm": {
     "DESCRIPTIONS": [
       " NL 不能获得金币，Boss的牌组比正常时少移除 ",
       " 张牌。"
     ]
   },
-  "downfall:BlackStar": {
+  "downfall-rebalance:BlackStar": {
     "DESCRIPTIONS": [
       " NL Boss额外获得了 ",
       " 件遗物，但最大生命变少。"
     ]
   },
-  "downfall:MoltenEgg": {
+  "downfall-rebalance:MoltenEgg": {
     "DESCRIPTIONS": [
       " NL Boss从这件遗物中升级了 ",
       " 张攻击牌。"
     ]
   },
-  "downfall:ToxicEgg": {
+  "downfall-rebalance:ToxicEgg": {
     "DESCRIPTIONS": [
       " NL Boss从这件遗物中升级了 ",
       " 张技能牌。"
     ]
   },
-  "downfall:FrozenEgg": {
+  "downfall-rebalance:FrozenEgg": {
     "DESCRIPTIONS": [
       "Boss有很多张已升级的能力牌。"
     ]
   },
-  "downfall:Shovel": {
+  "downfall-rebalance:Shovel": {
     "DESCRIPTIONS": [
       " NL Boss额外获得了 ",
       " 件遗物，但因为缺少休息最大生命变少。"
     ]
   },
-  "downfall:CBRSerpentHead": {
+  "downfall-rebalance:CBRSerpentHead": {
     "DESCRIPTIONS": [
       " NL Boss使用这些金币移除了2张牌。"
     ]
   },
-  "downfall:CursedKey": {
+  "downfall-rebalance:CursedKey": {
     "DESCRIPTIONS": [
       " NL Boss从这件遗物中获得了 ",
       " 张诅咒。"
     ]
   },
-  "downfall:DreamCatcher": {
+  "downfall-rebalance:DreamCatcher": {
     "DESCRIPTIONS": [
       " NL Boss休息时获得了额外的牌。"
     ]
   },
-  "downfall:PrayerWheel": {
+  "downfall-rebalance:PrayerWheel": {
     "DESCRIPTIONS": [
       " NL Boss从这件遗物中额外获得了 ",
       " 张牌。"
     ]
   },
-  "downfall:PeacePipe": {
+  "downfall-rebalance:PeacePipe": {
     "DESCRIPTIONS": [
       " NL Boss移除了 ",
       " 张牌，但最大生命变少"
     ]
   },
-  "downfall:RunicDome": {
+  "downfall-rebalance:RunicDome": {
     "DESCRIPTIONS": [
       " NL Boss可能不根据习惯出牌。"
     ]
   },
-  "downfall:CentennialPuzzle": {
+  "downfall-rebalance:CentennialPuzzle": {
     "DESCRIPTIONS": [
       " NL 不能在boss的回合触发。"
     ]
   },
-  "downfall:CBRFaceOfCleric": {
+  "downfall-rebalance:CBRFaceOfCleric": {
     "DESCRIPTIONS": [
       " 这件遗物提高了最大生命。"
     ]
   },
-  "downfall:Omamori": {
+  "downfall-rebalance:Omamori": {
     "DESCRIPTIONS": [
       " NL 阻止boss获得一张 "
     ]
   },
-  "downfall:DollysMirror": {
+  "downfall-rebalance:DollysMirror": {
     "DESCRIPTIONS": [
       " NL 镜子复制了 "
     ]
   },
-  "downfall:Vampires": {
+  "downfall-rebalance:Vampires": {
     "NAME": "事件: 吸血鬼",
     "FLAVOR": "主人的血……主人的血！主 人 的 血！！",
     "DESCRIPTIONS": [
@@ -124,35 +124,35 @@
       " 最大生命。"
     ]
   },
-  "downfall:BonfireSpirits": {
+  "downfall-rebalance:BonfireSpirits": {
     "NAME": "事件: 篝火精灵",
     "FLAVOR": "精灵们将小小的骨头和不知什么碎片丢进火中，每一次都会爆发出炫目的火焰……",
     "DESCRIPTIONS": [
       "Boss从牌组中移除了一张牌并获得了10点最大生命。"
     ]
   },
-  "downfall:DesignerInSpire": {
+  "downfall-rebalance:DesignerInSpire": {
     "NAME": "事件: “尖端”设计师",
     "FLAVOR": "不行不行，这怎么能行呢。哎呀，你这算是什么风格？令人作呕！什么，你还流流、流着血？哎呀好恶心啊。",
     "DESCRIPTIONS": [
       "移除了一张牌，升级了一张牌。"
     ]
   },
-  "downfall:DivineFountain": {
+  "downfall-rebalance:DivineFountain": {
     "NAME": "事件: 神圣泉水",
     "FLAVOR": "你经过墙壁上的一处饮水池，里面流淌着源源不断闪着光的水。",
     "DESCRIPTIONS": [
       " 移除所有诅咒牌。"
     ]
   },
-  "downfall:Duplicator": {
+  "downfall-rebalance:Duplicator": {
     "NAME": "事件: 复制祭坛",
     "FLAVOR": "在你面前是一个用来崇拜某种古老存在的华丽祭坛。",
     "DESCRIPTIONS": [
       "Boss复制了一张强力牌。"
     ]
   },
-  "downfall:BigFish": {
+  "downfall-rebalance:BigFish": {
     "NAME": "事件: 大鱼",
     "FLAVOR": "当你走过一条长廊时，你看见空中漂浮着一根香蕉，一个甜甜圈，和一个盒子。",
     "DESCRIPTIONS": [
@@ -160,7 +160,7 @@
       "选择了盒子。 NL 获得了一件遗物并被 #p诅咒-悔恨 。"
     ]
   },
-  "downfall:LivingWall": {
+  "downfall-rebalance:LivingWall": {
     "NAME": "事件: 活墙壁",
     "FLAVOR": "忘记你所知道的，我就让你走。",
     "DESCRIPTIONS": [
@@ -170,7 +170,7 @@
       " 变化为 "
     ]
   },
-  "downfall:WheelOfChange": {
+  "downfall-rebalance:WheelOfChange": {
     "NAME": "事件: 变化大转盘",
     "FLAVOR": "是时候转动转盘了！你准备好了吗？你当然准备好了！",
     "DESCRIPTIONS": [
@@ -181,14 +181,14 @@
       "转盘让Boss受到了伤害。"
     ]
   },
-  "downfall:Falling": {
+  "downfall-rebalance:Falling": {
     "NAME": "事件: 坠落",
     "FLAVOR": "在摔下的途中，你开始考虑自己有什么选择……",
     "DESCRIPTIONS": [
       "打击被移除出牌组。"
     ]
   },
-  "downfall:Augmenter": {
+  "downfall-rebalance:Augmenter": {
     "NAME": "事件: 增益研究者",
     "FLAVOR": "嘿陌生人，想不想试试高端的科技？",
     "DESCRIPTIONS": [
@@ -197,84 +197,84 @@
       "Boss获得了突变之力。"
     ]
   },
-  "downfall:AncientWriting": {
+  "downfall-rebalance:AncientWriting": {
     "NAME": "事件: 古老文字",
     "FLAVOR": "突然之间，文字的意义变得清晰了……",
     "DESCRIPTIONS": [
       "Boss升级了所有的打击和防御。"
     ]
   },
-  "downfall:Bandits": {
+  "downfall-rebalance:Bandits": {
     "NAME": "事件: 蒙面强盗",
     "FLAVOR": "熊，给我上！！",
     "DESCRIPTIONS": [
       "Boss战胜了强盗，获得了红面具，但是战斗开始时失去最大生命。"
     ]
   },
-  "downfall:WingStatue": {
+  "downfall-rebalance:WingStatue": {
     "NAME": "事件: 翅膀雕像",
     "FLAVOR": "在形状不同的巨石之间，你看见一尊做工精细的翅膀形状的蓝色雕像。",
     "DESCRIPTIONS": [
       " 被移除出牌组。"
     ]
   },
-  "downfall:Serpent": {
+  "downfall-rebalance:Serpent": {
     "NAME": "事件： 蛇～",
     "FLAVOR": "最幸福的人生当然就是什么东西都能买得起的土豪生活了！你同意吗？",
     "DESCRIPTIONS": [
       "Boss因为获得了钱而被 #p诅咒-疑虑 。 NL 这些钱被用来买遗物。"
     ]
   },
-  "downfall:Cleric": {
+  "downfall-rebalance:Cleric": {
     "NAME": "事件: 牧师",
     "FLAVOR": " 你好啊朋友！我是牧师！你想不想试试我的服务呐？！",
     "DESCRIPTIONS": [
       "Boss移除了牌组中的一张牌。"
     ]
   },
-  "downfall:OldBeggar": {
+  "downfall-rebalance:OldBeggar": {
     "NAME": "事件: 老乞丐",
     "FLAVOR": "施舍点钱吧，孩子？",
     "DESCRIPTIONS": [
       " 被移除出牌组。"
     ]
   },
-  "downfall:Library": {
+  "downfall-rebalance:Library": {
     "NAME": "事件: 图书馆",
     "FLAVOR": "你经过一栋被遗弃的华美建筑物。",
     "DESCRIPTIONS": [
       "Boss获得了一张额外的配合卡。"
     ]
   },
-  "downfall:Mausoleum": {
+  "downfall-rebalance:Mausoleum": {
     "NAME": "事件: 陵墓",
     "FLAVOR": "你辨认不出石棺上的字迹，但你能注意到有黑色的雾气从石棺的两侧渗透出来。",
     "DESCRIPTIONS": [
       "Boss获得了一件额外的遗物并被 #p诅咒-苦恼 。"
     ]
   },
-  "downfall:Nest": {
+  "downfall-rebalance:Nest": {
     "NAME": "事件: 巢穴",
     "FLAVOR": "咔 咔 咔咔!",
     "DESCRIPTIONS": [
       "Boss获得了仪式匕首。"
     ]
   },
-  "downfall:Colosseum": {
+  "downfall-rebalance:Colosseum": {
     "NAME": "事件: 竞技场",
     "FLAVOR": "那么现在，就让我们开始战斗！！！！",
     "DESCRIPTIONS": [
       "Boss完成了竞技场事件，获得了两件额外的遗物。"
     ]
   },
-  "downfall:PleadingVagrant": {
+  "downfall-rebalance:PleadingVagrant": {
       "NAME": "事件: Pleading Vagrant",
     "FLAVOR": "Got anything for me friend? Please... maybe some #yCoin?",
     "DESCRIPTIONS": [
       "Boss robbed the Vagrants, gaining a Shame curse and "
     ]
   },
-  "downfall:Mushroom": {
+  "downfall-rebalance:Mushroom": {
     "NAME": "事件: 蘑菇",
     "FLAVOR": "你走进一条遍地是五彩斑斓蘑菇的走廊",
     "DESCRIPTIONS": [
@@ -282,7 +282,7 @@
       "Boss获得了奇怪蘑菇,但是战斗开始时失去最大生命。"
     ]
   },
-  "downfall:ShiningLight": {
+  "downfall-rebalance:ShiningLight": {
     "NAME": "事件: 闪耀之光",
     "FLAVOR": "你发现在房间中央围绕着一束很粗的光柱 。",
     "DESCRIPTIONS": [
@@ -291,84 +291,84 @@
       "，但战斗开始时失去了最大生命。"
     ]
   },
-  "downfall:ScrapOoze": {
+  "downfall-rebalance:ScrapOoze": {
     "NAME": "事件: 破烂软泥",
     "FLAVOR": "在你面前的是一个史莱姆状的生物，它显然是吃了太多的破铜烂铁，消化不良了。",
     "DESCRIPTIONS": [
       "Boss额外获得了一件遗物。"
     ]
   },
-  "downfall:GoldenIdolEvent": {
+  "downfall-rebalance:GoldenIdolEvent": {
     "NAME": "事件: 金神像",
     "FLAVOR": "在祭坛上方，是一尊双手伸出的精致女性雕像。她呼唤着你，要求你献上祭品。",
     "DESCRIPTIONS": [
       "Boss拿走了金神像，被 #p诅咒-受伤 并用得来的钱买了"
     ]
   },
-  "downfall:FaceTrader": {
+  "downfall-rebalance:FaceTrader": {
     "NAME": "事件: 换脸商",
     "FLAVOR": "你的脸。让我碰碰？或者，想要交易？",
     "DESCRIPTIONS": [
       "Boss获得随机一件容貌遗物。"
     ]
   },
-  "downfall:OminousForge": {
+  "downfall-rebalance:OminousForge": {
     "NAME": "事件: 邪恶熔炉",
     "FLAVOR": "铛！铛！铛！",
     "DESCRIPTIONS": [
       "Boss获得了弯曲铁钳并被 #p诅咒-疼痛 。"
     ]
   },
-  "downfall:Purifier": {
+  "downfall-rebalance:Purifier": {
     "NAME": "事件: 净化",
     "FLAVOR": "在你面前是一个被遗忘神灵的精致神龛。",
     "DESCRIPTIONS": [
       " 从牌组中移除。"
     ]
   },
-  "downfall:MatchAndKeep": {
+  "downfall-rebalance:MatchAndKeep": {
     "NAME": "事件: 对对碰",
     "FLAVOR": "十二张牌！搭对就拿走！五次机会，没有重来！",
     "DESCRIPTIONS": [
       "Boss搭对了并获得了一张强力的牌。"
     ]
   },
-  "downfall:Transmogrifier": {
+  "downfall-rebalance:Transmogrifier": {
     "NAME": "事件: 转化神龛",
     "FLAVOR": "在你面前是一个被遗忘神灵的精致神龛。",
     "DESCRIPTIONS": [
       "Boss将一张初始牌转化。"
     ]
   },
-  "downfall:TombRedMask": {
+  "downfall-rebalance:TombRedMask": {
     "NAME": "事件: 红面具大人之墓",
     "FLAVOR": "在一条悬浮道路的尽头，你可以看见一处装饰华丽的古墓。",
     "DESCRIPTIONS": [
       "Boss获得了红面具。"
     ]
   },
-  "downfall:UpgradeShrine": {
+  "downfall-rebalance:UpgradeShrine": {
     "NAME": "事件： 升级神龛",
     "FLAVOR": "在你面前是一个被遗忘神灵的精致神龛。",
     "DESCRIPTIONS": [
       "Boss在升级神龛中 #y升级 了一张牌。"
     ]
   },
-  "downfall:WeMeetAgain": {
+  "downfall-rebalance:WeMeetAgain": {
     "NAME": "事件: 我们又见面了",
     "FLAVOR": "是我，兰伟德啊！所以今天有什么好东西给我吗？和往常一样？哎呀呀，像我这样的人，独自一个可实在不好混啊，对不对？",
     "DESCRIPTIONS": [
       " 给兰伟德交换为 "
     ]
   },
-  "downfall:GoldenShrine": {
+  "downfall-rebalance:GoldenShrine": {
     "NAME": "事件: 金色神龛",
     "FLAVOR": "在你面前是一座古老神灵的精巧神龛。",
     "DESCRIPTIONS": [
       "Boss为了获得金钱被 #p诅咒-悔恨 。它用这些钱去买了 "
     ]
   },
-  "downfall:GremlinSack": {
+  "downfall-rebalance:GremlinSack": {
     "NAME": "地精战利品",
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
@@ -378,7 +378,7 @@
       "， 随机普通、罕见、稀有牌各一张还有两张诅咒牌。"
     ]
   },
-  "downfall:GremlinWheel": {
+  "downfall-rebalance:GremlinWheel": {
     "NAME": "变化大转盘",
     "FLAVOR": "“不能反悔”，他说。",
     "DESCRIPTIONS": [
@@ -386,28 +386,28 @@
       "这个遗物的效果已经耗尽。"
     ]
   },
-  "downfall:CloakOfManyFaces": {
+  "downfall-rebalance:CloakOfManyFaces": {
     "NAME": "众脸大衣",
     "FLAVOR": "这是史蒂夫、比利、伊恩、弗雷德、约翰……",
     "DESCRIPTIONS": [
       "拾起时，获得邪教徒头套、牧师的脸、恩洛斯的饥饿的脸、地精容貌、蛇的头。"
     ]
   },
-  "downfall:BrokenWingStatue": {
+  "downfall-rebalance:BrokenWingStatue": {
     "NAME": "破碎的翅膀雕像",
     "FLAVOR": "一座曾经宏伟的雕像的残缺部分。",
     "DESCRIPTIONS": [
       "崇拜觉醒者的邪教徒会对此感兴趣。"
     ]
   },
-  "downfall:ShatteredFragment": {
+  "downfall-rebalance:ShatteredFragment": {
     "NAME": "尖锐碎片",
     "FLAVOR": "曾经破碎的雕像 - 如今打造成了武器。",
     "DESCRIPTIONS": [
       "每回合开始时，将一张水晶小刀加入你的手牌。"
     ]
   },
-  "downfall:RedIOU": {
+  "downfall-rebalance:RedIOU": {
     "NAME": "强盗约定",
     "FLAVOR": "跟红面具强盗达成的约定 - 一部分是为了换取一件小饰物，但大部分是为了活命。",
     "DESCRIPTIONS": [
@@ -419,42 +419,42 @@
       "祝你好运，老大！"
     ]
   },
-  "downfall:RedIOUUpgrade": {
+  "downfall-rebalance:RedIOUUpgrade": {
     "NAME": "强盗约定+",
     "FLAVOR": "跟红面具强盗达成的约定 - 一部分是为了换取一件小饰物，但大部分是为了活命。",
     "DESCRIPTIONS": [
       "#b第三场 boss战开始时，红面具强盗将会帮助你。"
     ]
   },
-  "downfall:KnowingSkull": {
+  "downfall-rebalance:KnowingSkull": {
     "NAME": "全知头骨",
     "FLAVOR": "放我下来！",
     "DESCRIPTIONS": [
       "每场战斗开始时，你能许愿灵魂，成功或者来点喝的。"
     ]
   },
-  "downfall:HeartBlessingRed": {
+  "downfall-rebalance:HeartBlessingRed": {
     "NAME": "红宝石心脏的祝福",
     "FLAVOR": "腐化之心很强大。它很欣慰。",
     "DESCRIPTIONS": [
       "每场战斗开始时获得 #b1 点 #y力量 。 NL 在深处boss战时，获得一张特别的牌。"
     ]
   },
-  "downfall:HeartBlessingBlue": {
+  "downfall-rebalance:HeartBlessingBlue": {
     "NAME": "蓝宝石心脏的祝福",
     "FLAVOR": "心脏很欣慰。",
     "DESCRIPTIONS": [
       "拾起时，将你的最大生命值提升 #b10 。 NL 在深处boss战时，获得一张特别的牌。"
     ]
   },
-  "downfall:HeartBlessingGreen": {
+  "downfall-rebalance:HeartBlessingGreen": {
     "NAME": "绿宝石心脏的祝福",
     "FLAVOR": "心脏就是一切。",
     "DESCRIPTIONS": [
       "每场战斗开始时获得 #b1 点 #y敏捷 。 NL 在深处boss战时，获得一张特别的牌。"
     ]
   },
-  "downfall:TeleportStone": {
+  "downfall-rebalance:TeleportStone": {
     "NAME": "传送石",
     "FLAVOR": "出门必备。",
     "DESCRIPTIONS": [
@@ -463,7 +463,7 @@
       "这个遗物的效果已经耗尽。"
     ]
   },
-  "downfall:HeartsMalice": {
+  "downfall-rebalance:HeartsMalice": {
     "NAME": "心脏的怨恨",
     "FLAVOR": "腐化之心的恶意。",
     "DESCRIPTIONS": [
@@ -471,7 +471,7 @@
       "这个遗物的效果已经耗尽。"
     ]
   },
-  "downfall:replacements": {
+  "downfall-rebalance:replacements": {
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [

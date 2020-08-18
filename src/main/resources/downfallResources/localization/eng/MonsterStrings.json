@@ -1,5 +1,5 @@
 {
-  "downfall:ChangingTotem": {
+  "downfall-rebalance:ChangingTotem": {
     "MOVES": [
       "Transformative Gaze"
     ],
@@ -8,7 +8,7 @@
       ""
     ]
   },
-  "downfall:ForgetfulTotem": {
+  "downfall-rebalance:ForgetfulTotem": {
     "MOVES": [
       "Forgetful Stare"
     ],
@@ -17,7 +17,7 @@
       ""
     ]
   },
-  "downfall:GrowingTotem": {
+  "downfall-rebalance:GrowingTotem": {
     "MOVES": [
       "Growth Beam"
     ],
@@ -26,7 +26,7 @@
       ""
     ]
   },
-  "downfall:FleeingMerchant": {
+  "downfall-rebalance:FleeingMerchant": {
     "MOVES": [
       "Soul Steal"
     ],
@@ -35,7 +35,7 @@
       ""
     ]
   },
-  "downfall:LooterAlt": {
+  "downfall-rebalance:LooterAlt": {
     "MOVES": [
     ],
     "NAME": "Looter",
@@ -45,7 +45,7 @@
       "You're gonna die today, chump."
     ]
   },
-  "downfall:MuggerAlt": {
+  "downfall-rebalance:MuggerAlt": {
     "MOVES": [
     ],
     "NAME": "Mugger",

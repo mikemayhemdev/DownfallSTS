@@ -1,5 +1,5 @@
 {
-  "downfall:SolShrine": {
+  "downfall-rebalance:SolShrine": {
     "NAME": "Soul Shrine",
     "DESCRIPTIONS": [
       "Before you lies an elaborate shrine to an ancient spirit of evil. ",
@@ -8,7 +8,7 @@
       "You ignore the shrine."
     ]
   },
-  "downfall:GremlinMatchGame": {
+  "downfall-rebalance:GremlinMatchGame": {
     "NAME": "Match and Keep!",
     "DESCRIPTIONS": [
       "\" ... #bT-twelve cards! Match them to keep them! #bF-five tries... no do-overs. NL Are you ready? Let's start!\"",
@@ -25,7 +25,7 @@
       "[Punch] #rFight. #gGain #g6 #gCards."
     ]
   },
-  "downfall:WomanInBlue": {
+  "downfall-rebalance:WomanInBlue": {
     "NAME": "The Woman in Blue",
     "DESCRIPTIONS": [
       "Tucked in the darkness, you spot a small shop. Within, you see a pale woman in sharp clothes managing an inventory of potions, stacked along a wall. She is startled by your threatening appearance. NL \"Leave me and my wares alone, cretin!\" she screams.",
@@ -39,7 +39,7 @@
       "[Punch] #rFight. #gGain #ga #gPotion #gRelic #gand #g3 #gPotions."
     ]
   },
-  "downfall:GremlinWheelGame": {
+  "downfall-rebalance:GremlinWheelGame": {
     "NAME": "Wheel of Change",
     "DESCRIPTIONS": [
       "You come upon a dapper looking, cheery gremlin. Despite your menacing appearance, he seems to be unfazed, though you do catch him hesitantly glancing backstage. NL \"It's time to spin the wheel! Are you ready?\"",
@@ -74,20 +74,20 @@
       "[Pass] Try again later."
     ]
   },
-  "downfall:GremlinWheelGameRest": {
+  "downfall-rebalance:GremlinWheelGameRest": {
     "NAME": "Wheel of Change",
     "DESCRIPTIONS": [
     ],
     "OPTIONS": [
     ]
   },
-  "downfall:LivingWall": {
+  "downfall-rebalance:LivingWall": {
     "NAME": "Living Wall",
     "OPTIONS": [
       "[Punch] #rFight. #gUse #gall #g3 #gHeads."
     ]
   },
-  "downfall:Augmenter": {
+  "downfall-rebalance:Augmenter": {
     "NAME": "Augmenter",
     "DESCRIPTIONS": [
       "A man with an eyepatch and a devilish grin strides up to you. NL \"Oh my, what a terrifying subject! You may not care for science, but I promise you - I can make you stronger than any harvesting of souls. You're gonna need it if you're going after one of those \"heroes\".\" NL NL ~\"Whad'ya~ ~say?\"~"
@@ -96,7 +96,7 @@
       "[Punch] #rFight. #gTake #gEverything."
     ]
   },
-  "downfall:BonfireSpirits": {
+  "downfall-rebalance:BonfireSpirits": {
     "NAME": "Bonfire Elemental",
     "DESCRIPTIONS": [
       "The spirits hungrily consume your offering! They gorge themselves on souls, burning brighter as the fire @doubles@ in strength. NL The spirits dance around you excitedly before ~merging~ ~into~ ~your~ ~form,~ filling you with warmth and strength. NL Your Max HP increases by #b10 and you are #ghealed to full HP."
@@ -106,7 +106,7 @@
       "[Locked] Requires 150 Souls."
     ]
   },
-  "downfall:FaceTrader": {
+  "downfall-rebalance:FaceTrader": {
     "NAME": "Face Trader",
     "DESCRIPTIONS": [
       " NL NL He doesn't look like he would put up much of a fight, but he has survived in this place. Perhaps these masks hold some power..."
@@ -115,7 +115,7 @@
       "[Punch] #rFight. #g100%: #gAll #gFace."
     ]
   },
-  "downfall:CursedFountain": {
+  "downfall-rebalance:CursedFountain": {
     "NAME": "The Cursed Fountain",
     "DESCRIPTIONS": [
       "You come across a tinged #p~purple~ #p~liquid~ flowing endlessly from a fountain on a nearby wall. It is one you recognize as deadly to most creatures, but quite beneficial to those subjected to a curse.",
@@ -135,7 +135,7 @@
       "[Leave]"
     ]
   },
-  "downfall:WeMeetAgain": {
+  "downfall-rebalance:WeMeetAgain": {
     "NAME": "We Meet Again!",
     "DESCRIPTIONS": [
       "\"BOSS!\" A cheery disheveled fellow approaches you gleefully. You know this man well. NL \"It's me, #yRanwid! You wouldn't believe what I've swindled from the cursed heroes! Do you have any more junk I can give them?\" NL You appreciate his friendliness and consider your options. Surely you have something Ranwid can use in his next \"deal\"...",
@@ -155,7 +155,7 @@
       "[Locked] No Relic to give."
     ]
   },
-  "downfall:Designer": {
+  "downfall-rebalance:Designer": {
     "NAME": "Designer In-Spire",
     "DESCRIPTIONS": [
       "You discover a #g~colorful~ shop with the banner \"IN-SPIRE\". A #rBandit shouts from just inside the entryway, threatening whoever is inside. NL NL @\"Give@ @me@ @your@ @money!\"@ NL NL The Bandit doesn't notice you, distracted by his attempted looting.",
@@ -175,7 +175,7 @@
       " #gGain #ga #gReward."
     ]
   },
-  "downfall:DeadGuy": {
+  "downfall-rebalance:DeadGuy": {
     "NAME": "Fallen Adventurer",
     "DESCRIPTIONS": [
       "While channeling the ritual you are caught off guard!",
@@ -198,7 +198,7 @@
       "%: #rmonster #rreturns."
     ]
   },
-  "downfall:ShiningLight": {
+  "downfall-rebalance:ShiningLight": {
     "NAME": "Shining Light",
     "DESCRIPTIONS": [
       "You find a shimmering #ymass #yof #ylight encompassing the center of the room. NL NL Its ~warm~ ~glow~ and ~enchanting~ ~patterns~ cause your stomach to turn, but you know this light carries an immense power.",
@@ -211,7 +211,7 @@
       "[Locked] Requires: Upgradeable Cards"
     ]
   },
-  "downfall:WorldOfGoop": {
+  "downfall-rebalance:WorldOfGoop": {
     "NAME": "World of Goop",
     "DESCRIPTIONS": [
       "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL You can feel goop in your ears, goop in your nose, goop everywhere. NL NL Climbing out, you notice that stuck to your body is a unique-looking #yyellow Slime creature. It appears to have been collecting #ySouls from unfortunate adventurers who fell into the puddle. How convenient.",
@@ -228,7 +228,7 @@
       "[Leave]"
     ]
   },
-  "downfall:Serpent": {
+  "downfall-rebalance:Serpent": {
     "NAME": "The Ssssserpent",
     "DESCRIPTIONS": [
       "You walk into a room to find a large hole in the ground. As you approach the hole, an enormous serpent creature appears from within. NL NL ~\"Ho~ ~hooo!~ ~Hello~ ~hello!~ ~what~ ~have~ ~we~ ~got~ ~here?~ To you, my overlord, I ask a simple question. NL The most fulfilling of lives is that in which you can #r~punch~ #r~anything!~ NL Do you agree?\"",
@@ -243,7 +243,7 @@
       "[Leave]"
     ]
   },
-  "downfall:WingStatue": {
+  "downfall-rebalance:WingStatue": {
     "NAME": "Wing Statue",
     "DESCRIPTIONS": [
       "Among the stone and boulders, you notice an intricate large blue statue resembling a wing. NL You notice #yglittering #ycoins spilling from its cracks, but this has no value to you. The statue itself, however...",
@@ -262,7 +262,7 @@
       "[Leave]"
     ]
   },
-  "downfall:GoldenIdol": {
+  "downfall-rebalance:GoldenIdol": {
     "NAME": "Golden Idol",
     "DESCRIPTIONS": [
       "You come across an inconspicuous pedestal with a #yshining #yidol sitting peacefully atop. It looks incredibly valuable. NL NL Wandering adventurers are certain to be attracted to this object. It may be worthwhile to set up a trap.",
@@ -280,7 +280,7 @@
       "[Locked] Requires a Strike."
     ]
   },
-  "downfall:Cleric": {
+  "downfall-rebalance:Cleric": {
     "NAME": "The Cleric",
     "DESCRIPTIONS": [
       "A strange blue humanoid with a glimmering helm(?) approaches you with a huge smile. NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
@@ -295,7 +295,7 @@
       " #ySouls."
     ]
   },
-  "downfall:Ghosts": {
+  "downfall-rebalance:Ghosts": {
     "NAME": "Council of Ghosts",
     "DESCRIPTIONS": [
       "As you continue your descent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"Another~ ~puppet~ ~of~ #r~the~ #r~Heart~ ~I~ ~think.\"~ NL #r@\"AGREED!@ #r@IT@ #r@ALWAYS@ #r@SENDS@ #r@THE@ #r@WEAKEST@ #r@PAWNS!\"@ NL NL You notice an over-sized grin as the third addresses you. NL \"Ignore the others... Would you like a taste of our #y~power?\"~ ",
@@ -308,14 +308,14 @@
       " Souls."
     ]
   },
-  "downfall:CursedTome": {
+  "downfall-rebalance:CursedTome": {
     "NAME": "Cursed Tome",
     "DESCRIPTIONS": [
       "In an abandoned temple, you find a giant book, open, riddled with #p@cryptic@ #p@writings.@ NL NL You need not interpret the elaborate script, for you know the power that lies within - and the #rcost it incurs upon its owner.",
       "Understanding the cost, you decide to take the tome with you. As you reach for the pedestal, the trance of the tome speaks to you in a #rthousand #rvoices, clawing at your very soul! NL NL With the book secured, and your mind even more corrupted than it was before, you exit the temple feeling #b~drained...~"
     ]
   },
-  "downfall:ForgottenAltar": {
+  "downfall-rebalance:ForgottenAltar": {
     "NAME": "Forgotten Altar",
     "DESCRIPTIONS": [
       "You stand on the altar and channel the spiritual energy from your inner being. NL As the #bsouls spill out in an offering to the goddess, the arms of the statue reach out and emanate a soothing #p~cursed~ #p~magic.~ NL Everything goes dark. NL You wake up a short time later, your wounds and injuries from battle suddenly healed.",
@@ -330,7 +330,7 @@
       "[Leave]"
     ]
   },
-  "downfall:Bandits": {
+  "downfall-rebalance:Bandits": {
     "NAME": "Masked Bandits",
     "DESCRIPTIONS": [
       "You encounter a group of bandits wearing large #rred #rmasks. NL \"Hello, pay up t- Oh, a ~monster.~ Maybe you'd have need of our services?\"",
@@ -342,7 +342,7 @@
       "[Locked] Requires more Relics."
     ]
   },
-  "downfall:Nloth": {
+  "downfall-rebalance:Nloth": {
     "NAME": "N'loth",
     "DESCRIPTIONS": [
       "Deciding this bottom-feeder of a creature does not belong in the Spire, you deliver a swift and powerful blow directly to N'loths chest. NL NL As the creature recoils in agony, its tentacles @lash@ @out@ at you in reflex, leaving a #rpainful sting! NL NL When the creature's lifeless form hits the ground, you hear the rattling of charms and trinkets. Scouring through his body, just as it once scoured through the trash pile, you uncover a potent magical item."
@@ -351,7 +351,7 @@
       "[Punch] #gGain #gRandom #gRelic. #rBecome #rCursed #r- #rPain."
     ]
   },
-  "downfall:KnowingSkull": {
+  "downfall-rebalance:KnowingSkull": {
     "NAME": "Knowing Skull",
     "DESCRIPTIONS": [
       "You find yourself in an old, decorated chamber. In the center of the room, a large skull sits atop an ornate pedestal. As you approach, the skull #g@bursts@ #g@into@ #g@flames@ and turns to face you. NL NL \"WHAT IS IT YOU SEEK? WHAT IS IT YOU OFFER?\" NL In sync with its final words, the door behind you @slams@ @shut.@",
@@ -364,7 +364,7 @@
       " #rHP."
     ]
   },
-  "downfall:Vagrant": {
+  "downfall-rebalance:Vagrant": {
     "NAME": "Pleading Vagrant",
     "DESCRIPTIONS": [
       "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
@@ -374,7 +374,7 @@
       " #rHP."
     ]
   },
-  "downfall:Beggar": {
+  "downfall-rebalance:Beggar": {
     "NAME": "Old Beggar",
     "DESCRIPTIONS": [
       "The beggar takes off its cloak, revealing a blue humanoid form with a glimmering helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
@@ -392,7 +392,7 @@
       "[Threaten] #gRemove #g2 #gcards #gfrom #gyour #gdeck."
     ]
   },
-  "downfall:Mausoleum": {
+  "downfall-rebalance:Mausoleum": {
     "NAME": "The Mausoleum",
     "DESCRIPTIONS": [
       "Venturing through a series of tombs, you are faced with a large sarcophagus ~studded~ ~with~ ~gems~ in the center of a circular room. NL You cannot make out the writing on the coffin, however, you do notice #p~black~ #p~fog~ seeping out from the sides. NL You're familiar with this fog - a clear sign of #y~spirits.~",
@@ -402,7 +402,7 @@
       "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rHaunted."
     ]
   },
-  "downfall:Nest": {
+  "downfall-rebalance:Nest": {
     "NAME": "The Nest",
     "DESCRIPTIONS": [
       "A long line of #b~hooded~ #b~figures~ can be seen entering an #punassuming #pcathedral. NL The moment you enter the cathedral, the figures turn to you! NL NL Your ears are near-instantly filled with a cacophony of gasps, cheers, and caws. One of the cultists approaches you with an offering.",
@@ -428,7 +428,7 @@
       "[Be Praised] #gGain #grewards for returning the #gBroken #gWing #gStatue."
     ]
   },
-  "downfall:Colosseum": {
+  "downfall-rebalance:Colosseum": {
     "NAME": "The Colosseum",
     "DESCRIPTIONS": [
       "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"We await these who would assault our City - the ones you seek to destroy! We have an audience awaiting a fresh capture. The people love a #rfight to the #rdeath!\"",
@@ -446,7 +446,7 @@
       "[Continue]"
     ]
   },
-  "downfall:MindBloom": {
+  "downfall-rebalance:MindBloom": {
     "NAME": "Mind Bloom",
     "DESCRIPTIONS": [
       "While walking and traversing through the beauty of the Beyond, your thoughts suddenly begin to feel very... #p~real...~ NL NL Imaginings of #rslain #radventurers and #bhoarded #bsouls begin to manifest themselves into reality. NL The sensation is quickly fleeting. What do you do?",
@@ -461,7 +461,7 @@
       "[Leave]"
     ]
   },
-  "downfall:MoaiHead": {
+  "downfall-rebalance:MoaiHead": {
     "NAME": "The Moai Head",
     "DESCRIPTIONS": [
       "You decide to take a slight detour to one of the Beyond's greatest monuments - an enormous stony head, emerging from a large wall segment. NL NL The head's mouth is wide open, and it reveals large intimidating teeth stained red with blood. The surface of the statue is riddled with pictographs that seem to indicate people throwing themselves into the mouth of this head and being devoured.",
@@ -477,7 +477,7 @@
       " Souls."
     ]
   },
-  "downfall:SensoryStone": {
+  "downfall-rebalance:SensoryStone": {
     "NAME": "Sensory Stone",
     "DESCRIPTIONS": [
       "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for coins and bits of scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ycoins and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
@@ -497,7 +497,7 @@
       "[Recall] #gAdd #g3 #gColorless Boss #gcards #gto #gyour #gdeck. #rLose #r"
     ]
   },
-  "downfall:SecretPortal": {
+  "downfall-rebalance:SecretPortal": {
     "NAME": "Secret Portal",
     "DESCRIPTIONS": [
       "Before you is a welcome sight - in one of the living walls of the Beyond is an enclosed stone entrance filled with a #p~swirling~ #p~magical~ #p~portal.~ NL NL This portal allows for quick access to the Beyond's overlord. However, if you take the stone that powers it, your journey through the Spire would be hastened.",
@@ -507,7 +507,7 @@
       "[Take Stone] Skip to any non-Boss Room."
     ]
   },
-  "downfall:TombRedMask": {
+  "downfall-rebalance:TombRedMask": {
     "NAME": "Tomb of Lord Red Mask",
     "DESCRIPTIONS": [
       "A highly ornamented tomb can be seen on the other side of a floating path. NL NL Upon reaching the tomb, you notice a soft wall, likely holding a secret compartment. One good strike should be enough to break it down.",
@@ -525,7 +525,7 @@
       "[Leave]"
     ]
   },
-  "downfall:WindingHalls": {
+  "downfall-rebalance:WindingHalls": {
     "NAME": "Winding Halls",
     "DESCRIPTIONS": [
       "As you slowly make your way up the twisting pathways, you find yourself in the infamous shifting hallways of the Beyond. A lesser being would go mad trying to navigate these, but to you, they are as familiar as an old friend. NL NL The constant #p~whispering~ #p~voices~ ease your mind as you decide which path to take."
@@ -536,7 +536,7 @@
       "[Straight] #gHunt #gdown #gthe #gMerchant."
     ]
   },
-  "downfall:Joust": {
+  "downfall-rebalance:Joust": {
     "NAME": "The Joust",
     "DESCRIPTIONS": [
       "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic~ ~cat!~\" NL NL They won't stop bickering. You'll have to decide...",
@@ -553,7 +553,7 @@
       " #g75%: #gGain #g100 #gSouls."
     ]
   },
-  "downfall:BossTester": {
+  "downfall-rebalance:BossTester": {
     "NAME": "Debug Boss Prep",
     "DESCRIPTIONS": [
       "Choose an Act to gain the simulated rewards for that act. If you want to test an Act 3 encounter, run this event 3 times - once for Act 1, then for Act 2, then for Act 3.",
@@ -566,7 +566,7 @@
       "[Head to Shop]"
     ]
   },
-  "downfall:BetterEnding": {
+  "downfall-rebalance:BetterEnding": {
     "NAME": "Spire Heart",
     "DESCRIPTIONS": [
       "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL A comforting heartbeat can be felt throughout the room... NL Are you at the ~end~ ? Is your purpose fulfilled?",

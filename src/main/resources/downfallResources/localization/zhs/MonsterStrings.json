@@ -1,5 +1,5 @@
 {
-  "downfall:ChangingTotem": {
+  "downfall-rebalance:ChangingTotem": {
     "MOVES": [
       "改变凝视"
     ],
@@ -8,7 +8,7 @@
       ""
     ]
   },
-  "downfall:ForgetfulTotem": {
+  "downfall-rebalance:ForgetfulTotem": {
     "MOVES": [
       "忘却注视"
     ],
@@ -17,7 +17,7 @@
       ""
     ]
   },
-  "downfall:GrowingTotem": {
+  "downfall-rebalance:GrowingTotem": {
     "MOVES": [
       "成长射线"
     ],
@@ -26,7 +26,7 @@
       ""
     ]
   },
-  "downfall:FleeingMerchant": {
+  "downfall-rebalance:FleeingMerchant": {
     "MOVES": [
       "灵魂窃取"
     ],
@@ -35,7 +35,7 @@
       ""
     ]
   },
-  "downfall:LooterAlt": {
+  "downfall-rebalance:LooterAlt": {
     "MOVES": [
     ],
     "NAME": "抢劫的",
@@ -45,7 +45,7 @@
       "你今天必须死，蠢货。"
     ]
   },
-  "downfall:MuggerAlt": {
+  "downfall-rebalance:MuggerAlt": {
     "MOVES": [
     ],
     "NAME": "打劫的",

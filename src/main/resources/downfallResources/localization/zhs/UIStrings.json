@@ -1,5 +1,5 @@
 {
-  "downfall:EvilMenuPanel": {
+  "downfall-rebalance:EvilMenuPanel": {
     "TEXT": [
       "崩坠模式",
       "保卫腐化之心\n杀光入侵者",
@@ -7,13 +7,13 @@
       "战役"
     ]
   },
-  "downfall:SoulToGoldChanges": {
+  "downfall-rebalance:SoulToGoldChanges": {
     "TEXT": [
       "灵魂",
       "这是你现在携带的灵魂。灵魂能上贡给心脏获得奖励。"
     ]
   },
-  "downfall:BustKeyButton": {
+  "downfall-rebalance:BustKeyButton": {
     "TEXT": [
       "打碎红宝石",
       "打碎蓝宝石",
@@ -28,21 +28,21 @@
 
     ]
   },
-  "downfall:WheelSpinButton": {
+  "downfall-rebalance:WheelSpinButton": {
     "TEXT": [
       "转动转盘",
       "转动转盘",
       "不能再转了"
     ]
   },
-  "downfall:AscensionText": {
+  "downfall-rebalance:AscensionText": {
     "TEXT": [
       "19. Boss拥有更多遗物。",
       "20. 深处Boss拥有蜥蜴尾巴和魔法花。",
       "获得红宝石钥匙。稍后将其打碎。"
     ]
   },
-  "downfall:ConfigMenuText": {
+  "downfall-rebalance:ConfigMenuText": {
     "TEXT": [
       "允许标准模式遇到崩坠模式角色的通用遗物。",
       "允许标准模式遇到崩坠模式的药水。",
@@ -52,7 +52,7 @@
       "允许标准模式遇到崩坠模式的诅咒牌。"
     ]
   },
-  "downfall:EnergyPanelTip": {
+  "downfall-rebalance:EnergyPanelTip": {
   "TEXT": [
     "敌人当前的能量。打出卡牌需要能量。"
   ],
@@ -60,25 +60,25 @@
     "能量"
   ]
 },
-  "downfall:RemoveCardReward": {
+  "downfall-rebalance:RemoveCardReward": {
     "TEXT": [
       "移除牌组中的一张牌。",
       "选择一张牌移除"
     ]
   },
-  "downfall:TransformCardReward": {
+  "downfall-rebalance:TransformCardReward": {
     "TEXT": [
       "变化牌组中的一张牌。",
       "选择一张牌变化"
     ]
   },
-  "downfall:UpgradeCardReward": {
+  "downfall-rebalance:UpgradeCardReward": {
     "TEXT": [
       "升级牌组中的一张牌。",
       "选择一张牌升级"
     ]
   },
-  "downfall:BossRelicReward": {
+  "downfall-rebalance:BossRelicReward": {
     "TEXT": [
       "从3件boss遗物中选择1件获得。",
       "获得一件 ",
@@ -86,34 +86,34 @@
       "选择一件遗物……大概"
     ]
   },
-  "downfall:EtherealMod": {
+  "downfall-rebalance:EtherealMod": {
     "TEXT": [
       "虚无 。 NL "
     ]
   },
-  "downfall:JaxReward": {
+  "downfall-rebalance:JaxReward": {
     "TEXT": [
       "找到一些JAX！"
     ]
   },
-  "downfall:RareCardReward": {
+  "downfall-rebalance:RareCardReward": {
     "TEXT": [
       "将一张稀有牌加入你的牌组"
     ]
   },
-  "downfall:OctoChoiceAction": {
+  "downfall-rebalance:OctoChoiceAction": {
   "TEXT": [
     "许个愿",
     "你不应该看见这个的",
     "选择一种史莱姆。"
   ]
 },
-  "downfall:BossCardReward": {
+  "downfall-rebalance:BossCardReward": {
     "TEXT": [
       "将一张首领牌加入牌组"
     ]
   },
-  "downfall:RunHistoryMonsterNames": {
+  "downfall-rebalance:RunHistoryMonsterNames": {
     "TEXT": [
       "活墙壁"
     ]

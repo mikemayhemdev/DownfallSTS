@@ -1,5 +1,5 @@
 {
-  "downfall:Heart Event": {
+  "downfall-rebalance:Heart Event": {
     "NAMES": [
       "腐化之心"
     ],
@@ -32,7 +32,7 @@
       "[ #g接下来2场战斗中的敌人将落荒而逃 ]"
     ]
   },
-  "downfall:Unlock": {
+  "downfall-rebalance:Unlock": {
     "TEXT": [
       "这名角色需要用史莱姆老大打过一局游戏才能解锁。",
       "这名角色需要用第二名恶棍打过一局游戏才能解锁。",
@@ -42,7 +42,7 @@
 	  
     ]
   },
-  "downfall:HeartMerchant": {
+  "downfall-rebalance:HeartMerchant": {
   "NAMES": [
     "继续",
     "~献祭……~"
@@ -76,7 +76,7 @@
     "~摧毁……他们……~"
   ]
 },
-  "downfall:HeartProceed": {
+  "downfall-rebalance:HeartProceed": {
     "TEXT": [
       "~入侵者……~ NL ~……在~ ",
       "~需要你……~ NL ~……去~ ",
@@ -89,7 +89,7 @@
       "~深处……~"
     ]
   },
-    "downfall:NeowEnding": {
+    "downfall-rebalance:NeowEnding": {
     "TEXT": [
       "你…… 杀了…… 所有…… 人……",
       "…轮回…… 终结了……..",
@@ -99,7 +99,7 @@
       "~我~ ~把他……~ NL ~带回来……~ ~了……~"
     ]
   },
-  "downfall:HeartMerchantScreen": {
+  "downfall-rebalance:HeartMerchantScreen": {
     "NAMES": [
       "~你好~ NL ~奴仆……~",
       "~带来~ ~更多~ ~灵魂……~",
@@ -136,7 +136,7 @@
     ]
   },
 
-  "downfall:OctoChoiceCards": {
+  "downfall-rebalance:OctoChoiceCards": {
     "NAMES": [
       "灵魂",
       "成功",
@@ -186,7 +186,7 @@
       "slimeboundmod:分裂 slimeboundmod:水蛭史莱姆 。"
     ]
   },
-  "downfall:lazyStorage": {
+  "downfall-rebalance:lazyStorage": {
     "NAMES": [
 
     ],
@@ -195,14 +195,14 @@
       "选择前进，回退或什么都不做"
     ]
   },
-  "downfall:Merchant": {
+  "downfall-rebalance:Merchant": {
     "NAMES": [
       "商人"
     ],
     "TEXT": [
     ]
   },
-  "downfall:NeowBoss": {
+  "downfall-rebalance:NeowBoss": {
     "NAMES": [
       "涅奥"
     ],

@@ -103,7 +103,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 public class downfallMod implements
         OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber
         ,AddAudioSubscriber {
-    public static final String modID = "downfall";
+    public static final String modID = "downfall rebalance";
 
 
     public static boolean choosingBossRelic = false;
@@ -822,49 +822,49 @@ public class downfallMod implements
 
         BaseMod.addMonster(FleeingMerchant.ID, FleeingMerchant::new);
 
-        BaseMod.addMonster("downfall:CharBossMerchant", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
+        BaseMod.addMonster(CharBossMerchant.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
 
         BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader::new);
 
-        BaseMod.addMonster("downfall:Heads", LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(
+        BaseMod.addMonster(makeID("Heads"), LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new ChangingTotem(),
                         new ForgetfulTotem(),
                         new GrowingTotem(),
                 }));
 
-        BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster(Augmenter.ID, Augmenter.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new Augmenter()
                 }));
 
-        BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster(LadyInBlue.ID, LadyInBlue.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new LadyInBlue()
                 }));
 
-        BaseMod.addMonster("downfall:FaceTrader", downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster(FaceTrader.ID, downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new downfall.monsters.FaceTrader()
                 }));
 
-        BaseMod.addMonster("downfall:LooterAlt", LooterAlt.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster(LooterAlt.ID, LooterAlt.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new LooterAlt(0.0F, 0.0F)
                 }));
 
-        BaseMod.addMonster("downfall:LooterAlt2", LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new MonsterGroup(
+        BaseMod.addMonster(makeID("LooterAlt2"), LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new LooterAlt(-200.0F, 15.0F),
                         new MuggerAlt(80.0F, 0.0F)
                 }));
 
-        BaseMod.addMonster("downfall:CharBossIronclad", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
-        BaseMod.addMonster("downfall:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
-        BaseMod.addMonster("downfall:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
-        BaseMod.addMonster("downfall:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+        BaseMod.addMonster(CharBossIronclad.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
+        BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
+        BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
+        BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
-        BaseMod.addMonster("downfall:NeowBoss", () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
+        BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
 
 
     }
@@ -940,10 +940,10 @@ public class downfallMod implements
         GoldToSoulPatches.changeGoldToSouls(!evilMode);
         if (!CardCrawlGame.loadingSave) {
             possEncounterList.clear();
-            possEncounterList.add("downfall:CharBossIronclad");
-            possEncounterList.add("downfall:CharBossSilent");
-            possEncounterList.add("downfall:CharBossDefect");
-            possEncounterList.add("downfall:CharBossWatcher");
+            possEncounterList.add(CharBossIronclad.ID);
+            possEncounterList.add(CharBossSilent.ID);
+            possEncounterList.add(CharBossDefect.ID);
+            possEncounterList.add(CharBossWatcher.ID);
             FleeingMerchant.DEAD = false;
             FleeingMerchant.CURRENT_HP = 400;
             FleeingMerchant.CURRENT_STRENGTH = 0;

@@ -1,5 +1,5 @@
 {
-  "downfall:SolShrine": {
+  "downfall-rebalance:SolShrine": {
     "NAME": "灵魂神龛",
     "DESCRIPTIONS": [
       "在你面前是一座古老恶灵的精巧神龛。",
@@ -8,7 +8,7 @@
       "你无视了神龛。"
     ]
   },
-  "downfall:GremlinMatchGame": {
+  "downfall-rebalance:GremlinMatchGame": {
     "NAME": "对对碰！",
     "DESCRIPTIONS": [
       "“ #b十二张牌！ #b搭对就拿走！ 五次机会，没有重来！ NL 准备好了吗？开始！”",
@@ -25,7 +25,7 @@
       "[一拳过去] #r战斗 。 #g获得6张牌。"
     ]
   },
-  "downfall:WomanInBlue": {
+  "downfall-rebalance:WomanInBlue": {
     "NAME": "蓝衣女子",
     "DESCRIPTIONS": [
       "从黑暗中，一只手伸出来把你拉进了一家小店。眼睛适应了这里的亮度之后，你看见一个穿着鲜艳衣服的苍白女子正伸手展示整整一墙壁的药水。 NL “来买药水，快点！”她对你说。",
@@ -39,7 +39,7 @@
       "[一拳过去] #r战斗 。 #g获得一件药水遗物和3瓶药水。"
     ]
   },
-  "downfall:GremlinWheelGame": {
+  "downfall-rebalance:GremlinWheelGame": {
     "NAME": "变化大转盘",
     "DESCRIPTIONS": [
       "你见到一位穿着帅气、满面笑容的地精。 NL “是时候转动转盘了！ ~你准备好了吗？~ 你当然准备好了！”",
@@ -74,20 +74,20 @@
       "[跳过] 之后在来。"
     ]
   },
-  "downfall:GremlinWheelGameRest": {
+  "downfall-rebalance:GremlinWheelGameRest": {
     "NAME": "变化大转盘",
     "DESCRIPTIONS": [
     ],
     "OPTIONS": [
     ]
   },
-  "downfall:LivingWall": {
+  "downfall-rebalance:LivingWall": {
     "NAME": "活墙壁",
     "OPTIONS": [
       "[一拳过去] #r战斗。 #g使用3种效果。"
     ]
   },
-  "downfall:Augmenter": {
+  "downfall-rebalance:Augmenter": {
     "NAME": "增益研究者",
     "DESCRIPTIONS": [
       "一个戴着眼罩的邪笑着的男人大摇大摆地走到你面前： NL “嘿陌生人，想不想试试高端的科技？ 可会让你变得比任何训练和祝福都要强哦。 如果你是那种一心求死的英雄的话可不能没有它呢。 NL 你说怎么样？ 想不想试一下？” "
@@ -96,7 +96,7 @@
       "[一拳过去] #r战斗。 #g拿走全部。"
     ]
   },
-  "downfall:BonfireSpirits": {
+  "downfall-rebalance:BonfireSpirits": {
     "NAME": "篝火精灵",
     "DESCRIPTIONS": [
       "精灵们如饥似渴地享用着你献上的灵魂！他们以灵魂为食，火光亮了约有 @一倍@ 。 NL 精灵们在你身边兴奋地舞蹈着，然后 ~融入了你的躯体~ ，让你充满了温暖和力量。 NL 你的最大生命值增加了 #b10 ，你的生命 #g回复 到最大了。"
@@ -106,7 +106,7 @@
       "[锁定] 需要至少150灵魂。"
     ]
   },
-  "downfall:FaceTrader": {
+  "downfall-rebalance:FaceTrader": {
     "NAME": "换脸商",
     "DESCRIPTIONS": [
       " NL NL 他看起来不太愿意打架，但他在这里活了下来。也许这些面具里面潜藏了有力量……"
@@ -115,7 +115,7 @@
       "[一拳过去] #r战斗。 #g100%：获得全部面容。"
     ]
   },
-  "downfall:CursedFountain": {
+  "downfall-rebalance:CursedFountain": {
     "NAME": "诅咒泉水",
     "DESCRIPTIONS": [
       "你经过墙壁上的一处饮水池，里面流淌着源源不断 #p~紫色的液体~ 。 你知道它对大多数生物是致命的，只对被诅咒者有益。",
@@ -135,7 +135,7 @@
       "[离开]"
     ]
   },
-  "downfall:WeMeetAgain": {
+  "downfall-rebalance:WeMeetAgain": {
     "NAME": "我们又见面了！",
     "DESCRIPTIONS": [
       "“老板！” 一个蓬头垢面的男子欢快地出现在你面前向你问好，你对这个男人再熟悉不过了。 NL “是我， #y兰伟德 啊！你肯定想不到我被那些被诅咒的英雄敲诈了多少东西！你还有别的能给他们的垃圾吗？” NL 你称赞了他的友善并考虑你的做法。肯定有什么能给兰伟德用于他的下一次 “交易”...",
@@ -155,7 +155,7 @@
       "[锁定] 需要遗物。"
     ]
   },
-  "downfall:Designer": {
+  "downfall-rebalance:Designer": {
     "NAME": "“尖端”设计师",
     "DESCRIPTIONS": [
       "你发现一家 #g~五彩斑斓~ 的店，横幅上挂着大大的“尖端”两个字。一个 #r强盗 站在入口处向里大吼，恐吓着里面的人。 NL NL @“把钱交出来！”@ NL NL 强盗专注于他的抢劫计划，丝毫没有注意到你。",
@@ -175,7 +175,7 @@
       " #g获得一份奖励。"
     ]
   },
-  "downfall:DeadGuy": {
+  "downfall-rebalance:DeadGuy": {
     "NAME": "冒险者尸体",
     "DESCRIPTIONS": [
       "在引导仪式时你被偷袭了！",
@@ -198,7 +198,7 @@
       "%： #r遇见回来的怪物。"
     ]
   },
-  "downfall:ShiningLight": {
+  "downfall-rebalance:ShiningLight": {
     "NAME": "闪耀之光",
     "DESCRIPTIONS": [
       "你发现在房间中央围绕着 #y一束很粗的光柱 。 NL NL 光柱上 ~温暖而闪烁的美丽花纹~ 让你反胃，但你知道这光柱蕴含着巨大的能量。",
@@ -211,7 +211,7 @@
       "[锁定] 需要： 可以升级的牌"
     ]
   },
-  "downfall:WorldOfGoop": {
+  "downfall-rebalance:WorldOfGoop": {
     "NAME": "黏液世界",
     "DESCRIPTIONS": [
       "你掉进了一个水坑里。 NL 可是坑里 @全是@ #g@史莱姆黏液@ ！ NL 你感到耳朵里是黏液，鼻子里是黏液，到处都是黏液。 NL NL 爬出水坑后，你注意到一个样貌奇特的 #y黄色 史莱姆生物粘在你的身上。它看上去收集了许多不幸落入水坑的冒险者的 #y金币 。多方便啊。",
@@ -228,7 +228,7 @@
       "[离开]"
     ]
   },
-  "downfall:Serpent": {
+  "downfall-rebalance:Serpent": {
     "NAME": "蛇～",
     "DESCRIPTIONS": [
       "你走进一间房间，看见地上有一个大洞。当你靠近洞时，一条巨大的蛇形生物从里面钻了出来。 NL NL “~嚯嚯嚯！你好，你好啊！这是谁呀？~ 哎呀呀，我的领主呀，我就问一个简单的问题。 NL 最幸福的生活当然就是 #y~什么东西都能打得倒~ 的霸王生活了！　 NL 你同意吗？”",
@@ -243,7 +243,7 @@
       "[离开]"
     ]
   },
-  "downfall:WingStatue": {
+  "downfall-rebalance:WingStatue": {
     "NAME": "翅膀雕像",
     "DESCRIPTIONS": [
       "在形状不同的巨石之间，你看见一尊做工精细的翅膀形状的蓝色雕像。 NL 你注意到雕像的裂缝中有 #y闪亮 的 #y金币 掉出来，这对你毫无价值。然而，这座雕像本身……",
@@ -262,7 +262,7 @@
       "[离开]"
     ]
   },
-  "downfall:GoldenIdol": {
+  "downfall-rebalance:GoldenIdol": {
     "NAME": "金神像",
     "DESCRIPTIONS": [
       "在一个不引人注意的小高台上，你发现了一个 #y闪闪发光 的金神像 安然放置在上面，看起来非常值钱。 NL NL  途经的冒险者肯定会对这个东西有兴趣。应该值得你设一个陷阱。",
@@ -280,7 +280,7 @@
       "[锁定] 需要一张打击。"
     ]
   },
-  "downfall:Cleric": {
+  "downfall-rebalance:Cleric": {
     "NAME": "牧师",
     "DESCRIPTIONS": [
       "一个戴着发光头盔（？）的奇怪蓝色人形生物脸上带着大大的微笑走到了你面前。 NL 一认出你的样子，这个生物的灿烂笑容立刻变为纯粹的恐惧。 NL ~“怪~怪物！！”~ 这个人形生物大喊着，转身想要逃跑。",
@@ -295,7 +295,7 @@
       " #y灵魂。"
     ]
   },
-  "downfall:Ghosts": {
+  "downfall-rebalance:Ghosts": {
     "NAME": "幽灵议会",
     "DESCRIPTIONS": [
       "在你向下深入时，突然四周的墙壁和地面开始冒出 #p~浓重的黑烟~ ，逐渐聚成了三个戴着面具的形状，它们交头接耳地说起话来。 ~“看来这又是一个~ #y~心脏~ ~的玩偶。”~ NL #r@“我看也是！@ #r@它总是派来最弱的棋子！”@ NL NL 你注意到第三个存在有着巨大的嘴，它露出了一个大到夸张的微笑对你说： NL “别管那两个家伙……总之，你想不想尝试一下我们的 #y~力量~ 呢？”",
@@ -308,14 +308,14 @@
       " 灵魂。"
     ]
   },
-  "downfall:CursedTome": {
+  "downfall-rebalance:CursedTome": {
     "NAME": "诅咒书本",
     "DESCRIPTIONS": [
       "在一所被遗弃的神庙里，你找到一本翻开着的巨大书本，里面满是 #p@神秘的文字@ 。 NL NL 你不需要解读这些复杂的文本，因为你早已知道其中蕴含的力量 - 以及它会给拥有者招致的 #r代价 。",
       "明知其中的代价，你还是决定把书带上。刚触碰到高台，书本便向你传来 #r无数话音 ，撕扯着你的灵魂！ NL NL 书本被带走了，你的意志变得更为腐坏，你转身离开神庙，觉得自己 #b~精疲力尽……~"
     ]
   },
-  "downfall:ForgottenAltar": {
+  "downfall-rebalance:ForgottenAltar": {
     "NAME": "被遗忘的祭坛",
     "DESCRIPTIONS": [
       "你站在祭坛前，引导着内在的精神能量。 NL 随着献给女神的 #b灵魂 涌出，雕像的双手伸到你的面前，散发出一股 #p~诅咒的魔法~ 抚慰着你。 NL 一切坠入黑暗。 NL 你在一段时间后苏醒了过来，战斗中受的大小伤口都愈合了。",
@@ -330,7 +330,7 @@
       "[离开]"
     ]
   },
-  "downfall:Bandits": {
+  "downfall-rebalance:Bandits": {
     "NAME": "蒙面强盗",
     "DESCRIPTIONS": [
       "你遇见一群戴着巨大 #r红面具 的强盗。 NL “你好啊，留下……哦，一只 ~怪物~ 。也许你需要我们的服务？”",
@@ -342,7 +342,7 @@
       "[锁定] 需要更多的遗物。"
     ]
   },
-  "downfall:Nloth": {
+  "downfall-rebalance:Nloth": {
     "NAME": "恩洛斯",
     "DESCRIPTIONS": [
       "你觉得这个捡垃圾的生物并不属于尖塔，于是用一记迅猛的拳击招呼在它的胸口上。 NL NL 这生物因痛苦而蜷缩，但它的触手却反射般地 @鞭打@ 向你，留下了 #r剧痛 的蜇伤！ NL NL 当这生物了无生机的躯体砸向地面时，你听到了各种饰物的咔嗒作响。你就像它翻垃圾堆一样翻着它的尸体，从中发现了一个强力的魔法物品。"
@@ -351,7 +351,7 @@
       "[一拳过去] #g获得随机遗物。 #r被诅咒 #r- 疼痛。"
     ]
   },
-  "downfall:KnowingSkull": {
+  "downfall-rebalance:KnowingSkull": {
     "NAME": "全知头骨",
     "DESCRIPTIONS": [
       "你发现自己在一个古老的有装饰的房间里，在房间正中央，有一个巨大的头骨被放在精致的高台上，在你靠近时，头骨 #g@迸发出火焰@ 转向了你。“你想寻找什么？你会献出什么？” NL 它的话音刚落，你背后的门就 @砰地关上了@ 。",
@@ -364,7 +364,7 @@
       " #r生命。"
     ]
   },
-  "downfall:Vagrant": {
+  "downfall-rebalance:Vagrant": {
     "NAME": "流浪汉的恳求",
     "DESCRIPTIONS": [
       "你杀死了这个人并收割了他的灵魂。身后的人群中传来一阵 ~骚动~ 。 NL “他杀了勃艮第！” 一个人喊道。更多与那人一样的瘾君子向你逼近。NL NL 你逃脱了，身上带着一些 #r抓痕 和 #r咬痕 。"
@@ -374,7 +374,7 @@
       " #r生命。"
     ]
   },
-  "downfall:Beggar": {
+  "downfall-rebalance:Beggar": {
     "NAME": "老乞丐",
     "DESCRIPTIONS": [
       "老乞丐脱下了它的外套，露出一个戴着金头盔（？）的奇怪蓝色人形生物。 NL 一认出你的样子，这个生物的灿烂笑容立刻变为纯粹的恐惧。 NL ~“怪~怪物！！”~ 这个人形生物大喊着，转身想要逃跑。",
@@ -392,7 +392,7 @@
       "[威胁] #g移除2张牌。"
     ]
   },
-  "downfall:Mausoleum": {
+  "downfall-rebalance:Mausoleum": {
     "NAME": "陵墓",
     "DESCRIPTIONS": [
       "你在一系列坟墓间穿行，前方出现了一个圆形房间，中间是一口 ~镶嵌着许多宝石的~ 巨大石棺。 NL 你辨认不出石棺上的字迹，但你能注意到有 #p~黑色的雾气~ 从石棺的两侧渗透出来。 NL 你很熟悉这种雾气 - 有 #y~灵魂~ 存在的明确标志。",
@@ -402,7 +402,7 @@
       "[吞噬] #g获得 #g200 #g灵魂。 #r被诅咒 #r- #r闹鬼 。"
     ]
   },
-  "downfall:Nest": {
+  "downfall-rebalance:Nest": {
     "NAME": "巢穴",
     "DESCRIPTIONS": [
       "你看见一长串 #b~戴着兜帽的人们~ 正鱼贯走进一座 #p看起来没什么特别 的大教堂。 NL 你刚走进教堂，所有的人都看向了你！ NL NL 你耳中几乎立刻充满了嘈杂的呼气声，欢呼声，以及鸦叫声。 其中一个邪教徒带着献礼走上前来。",
@@ -427,7 +427,7 @@
       "[献祭] #r用 仪式匕首+ #r杀死邪教徒。"
     ]
   },
-  "downfall:Colosseum": {
+  "downfall-rebalance:Colosseum": {
     "NAME": "竞技场",
     "DESCRIPTIONS": [
       "你一路向塔底前进，突然发现一群人形生物在一个大会场附近埋伏着。这些奴隶贩子被你的接近吓了一跳，但是迅速地恢复过来并向你解释。 NL NL “我们在埋伏那些袭击城市的人 - 也是你要去毁灭的人！ 我们有一群等着要活捉他们的观众。人们喜欢 #r厮杀至死 的表演！”",
@@ -445,7 +445,7 @@
       "[继续]"
     ]
   },
-  "downfall:MindBloom": {
+  "downfall-rebalance:MindBloom": {
     "NAME": "心灵绽放",
     "DESCRIPTIONS": [
       "你在高塔的混沌深处不断下探，不知不觉间，你愕然发现自己的思绪开始变得非常…… #p~真实……~ NL NL 各种 #r冒险者 与 #y存集的灵魂开始出现了实体。 NL 这些感觉稍纵即逝，你准备怎么做？",
@@ -460,7 +460,7 @@
       "[离开]"
     ]
   },
-  "downfall:MoaiHead": {
+  "downfall-rebalance:MoaiHead": {
     "NAME": "摩艾石像",
     "DESCRIPTIONS": [
       "你决定绕道去看看深处最著名的纪念碑 - 从一段墙壁上凸出来的一个巨大的石制头像。 NL NL 石像的嘴大张着，里面有许多巨大的染着血迹的牙齿。石像表面上写着许多象形文字，似乎是说有许多人会自己跳进嘴里被石像吞噬。",
@@ -474,7 +474,7 @@
       " #g点最大生命并回满血。"
     ]
   },
-  "downfall:SensoryStone": {
+  "downfall-rebalance:SensoryStone": {
     "NAME": "感知石",
     "DESCRIPTIONS": [
       "#g~虚荣.~ NL NL 生命如此地美妙，壮丽... 对一只 #g史莱姆 也是如此。 NL NL 你早就知道你命中注定要成就伟大的事业。那些庸人安于铜钱布片，而你不是。你如苍鹰猛虎般蓄势待发，只待那独一无二，绝无仅有，~举世无双~ 之物。 NL NL 日复一日... 亦或年复一年... 尖塔内时日难辨。终有一日，你遇见了它。蛟龙得云雨，终非池中物！世人贪爱 #y金银财宝 ，而你则有鸿鹄之志... NL NL @一顶圆礼帽！@ 冲呀！",
@@ -494,7 +494,7 @@
       "[回忆] #g在你的牌组中加入 #g3 #g张首领牌。 #r失去 #r"
     ]
   },
-  "downfall:SecretPortal": {
+  "downfall-rebalance:SecretPortal": {
     "NAME": "秘密传送门",
     "DESCRIPTIONS": [
       "在你面前有一样令人愉快的东西 - 在深处地区一面活墙壁上，有一道石做的拱门，里面有一个 #p~旋转的魔法传送门~ 。 NL NL 这个传送门可以快速通向深处的领主房间。不过呢，如果你带上驱动它的石头，你在高塔内的旅程应该会被缩短。",
@@ -504,7 +504,7 @@
       "[拿走] 跳过任意房间。"
     ]
   },
-  "downfall:TombRedMask": {
+  "downfall-rebalance:TombRedMask": {
     "NAME": "红面具大人之墓",
     "DESCRIPTIONS": [
       "在一条悬浮道路的尽头，你可以看见一处装饰华丽的古墓，当你到达古墓时，你注意到一堵软墙，似乎包围着什么秘密。 用力一击足以将这面墙破坏。",
@@ -522,7 +522,7 @@
       "[离开]"
     ]
   },
-  "downfall:WindingHalls": {
+  "downfall-rebalance:WindingHalls": {
     "NAME": "蜿蜒走廊",
     "DESCRIPTIONS": [
       "你沿着弯曲的道路慢慢前进，突然发现自己身处深处著名的变幻走廊之中。那些下级的存在可能会因寻路而发狂，但对你来说，这里就像老朋友一样熟悉。 NL NL 这里的 #p~轻声低语~ 使你心情放松，悠闲地决定要去的方向。"
@@ -533,7 +533,7 @@
       "[径直前进] #g击杀商人。"
     ]
   },
-  "downfall:Joust": {
+  "downfall-rebalance:Joust": {
     "NAME": "长枪决斗",
     "DESCRIPTIONS": [
        "你在巨大的建筑物间穿行时，遇见了一条长长的窄桥，两头似乎都有一名骑士彼此对望着。你刚走上前去，他们就分开来瞪着彼此。 NL “怪物！你去干掉它，你不是说你擅长杀戮吗！” NL “不，你去干掉它，你养了只 ~恶魔猫~ ，还不了解怪物？” NL NL 他们吵得不可开交。你得做个决断...",
@@ -550,7 +550,7 @@
       " #g75%: #g获得100灵魂。"
     ]
   },
-  "downfall:BossTester": {
+  "downfall-rebalance:BossTester": {
     "NAME": "Debug Boss Prep",
     "DESCRIPTIONS": [
       "Choose an Act to gain the simulated rewards for that act. If you want to test an Act 3 encounter, run this event 3 times - once for Act 1, then for Act 2, then for Act 3.",
@@ -563,7 +563,7 @@
       "[Head to Shop]"
     ]
   },
-    "downfall:BetterEnding": {
+    "downfall-rebalance:BetterEnding": {
     "NAME": "高塔之心",
     "DESCRIPTIONS": [
       "@砰咚@ …… @砰咚@ …… @砰咚@ …… NL 整个房间里弥漫着脉动的安心…… NL 这就是你的 ~终结~ ？你的目标实现了吗？",

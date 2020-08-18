@@ -1,5 +1,5 @@
 {
-  "downfall:Heart Event": {
+  "downfall-rebalance:Heart Event": {
     "NAMES": [
       "The Heart"
     ],
@@ -32,7 +32,7 @@
       "[ #gEnemies #gin #gyour #gnext #gtwo #gcombats #gflee #gin #gterror ]"
     ]
   },
-  "downfall:Unlock": {
+  "downfall-rebalance:Unlock": {
     "TEXT": [
       "This character is unlocked by completing a run with the Slime Boss.",
       "This character is unlocked by completing a run with the 2nd Villain character.",
@@ -42,7 +42,7 @@
 
     ]
   },
-  "downfall:HeartMerchant": {
+  "downfall-rebalance:HeartMerchant": {
   "NAMES": [
     "Proceed",
     "~Sacrifice...~"
@@ -76,7 +76,7 @@
     "~Destroy...~ ~them~ ~all...~"
   ]
 },
-  "downfall:HeartProceed": {
+  "downfall-rebalance:HeartProceed": {
     "TEXT": [
       "~Intruders...~ NL ~...in~ ",
       "~You~ ~are~ ~needed...~ NL ~...in~ ",
@@ -89,7 +89,7 @@
       "~the~ ~Beyond...~"
     ]
   },
-  "downfall:NeowEnding": {
+  "downfall-rebalance:NeowEnding": {
     "TEXT": [
       "You... have... slain... everyone...",
       "...the cycle... has died.....",
@@ -99,7 +99,7 @@
       "~I~ ~brought...~ NL ~HIM...~ ~back...~"
     ]
   },
-  "downfall:HeartMerchantScreen": {
+  "downfall-rebalance:HeartMerchantScreen": {
     "NAMES": [
       "~Greetings~ NL ~minion...~",
       "~Bring~ ~more~ ~souls...~",
@@ -135,7 +135,7 @@
       "~Reap...~ ~the~ ~fallen...~"
     ]
   },
-  "downfall:OctoChoiceCards": {
+  "downfall-rebalance:OctoChoiceCards": {
     "NAMES": [
       "Souls",
       "Success",
@@ -185,7 +185,7 @@
       "Split into a slimeboundmod:Leeching_Slime."
     ]
   },
-  "downfall:lazyStorage": {
+  "downfall-rebalance:lazyStorage": {
     "NAMES": [
 
     ],
@@ -194,14 +194,14 @@
       "Choose Advance,Retract or Do Nothing"
     ]
   },
-  "downfall:Merchant": {
+  "downfall-rebalance:Merchant": {
     "NAMES": [
       "Merchant"
     ],
     "TEXT": [
     ]
   },
-  "downfall:NeowBoss": {
+  "downfall-rebalance:NeowBoss": {
     "NAMES": [
       "Neow"
     ],
