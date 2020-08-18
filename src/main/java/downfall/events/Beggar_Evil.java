@@ -14,10 +14,11 @@ import com.megacrit.cardcrawl.monsters.city.Centurion;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 
 public class Beggar_Evil extends AbstractImageEvent {
-    public static final String ID = "downfall:Beggar";
+    public static final String ID = downfallMod.makeID("Beggar");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;

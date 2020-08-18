@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
+import downfall.downfallMod;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
 import sneckomod.actions.ChangeGoldAction;
@@ -20,8 +21,8 @@ import java.util.ArrayList;
 public class KnowingSkullWish extends AbstractExpansionCard {
 
     public final static String ID = makeID("KnowingSkullWish");
-    public static final String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
-    public static final String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
+    public static final String[] NAMES = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("OctoChoiceCards")).NAMES;
+    public static final String[] TEXT = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("OctoChoiceCards")).TEXT;
 
     //stupid intellij stuff SKILL, SELF, RARE
 

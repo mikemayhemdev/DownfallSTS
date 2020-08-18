@@ -1,120 +1,49 @@
 {
-  "downfall-rebalance:EvilMenuPanel": {
+  "downfall:EvilMenuPanel": {
     "TEXT": [
-      "downfall",
+      "Downfall",
       "Defend the Heart from adventuring intruders who intend to Slay the Spire.",
       "Choose Your Villain",
       "Campaign"
     ]
   },
-  "downfall-rebalance:SoulToGoldChanges": {
+  "downfall:SoulToGoldChanges": {
     "TEXT": [
       "Souls",
       "Shows how many Souls you are carrying. Souls can be given to the Heart for rewards."
     ]
   },
-  "downfall-rebalance:BustKeyButton": {
+  "downfall:BustKeyButton": {
     "TEXT": [
       "Break Ruby",
       "Break Sapphire",
       "Break Emerald",
-      "(Free Action) Spend 75 Souls: Destroy key to ",
-      "gain 1 Strength.",
-      "raise Max HP by 10.",
-      "gain 1 Dexterity.",
-      "Key shattered!",
-      "Requires ",
-      " Souls."
+      "Destroy the key to ",
+      "gain 1 Strength at the start of combat.",
+      "raise your Max HP by 10.",
+      "gain 1 Dexterity at the start of combat."
     ]
   },
-  "downfall-rebalance:WheelSpinButton": {
+  "downfall:WheelSpinButton": {
     "TEXT": [
       "Spin Wheel",
-      "(Free Action) Spin the Wheel.",
-      "Can't Spin Again."
+      "Spin the Wheel."
     ]
   },
-  "downfall-rebalance:AscensionText": {
+  "downfall:AscensionText": {
     "TEXT": [
       "19. Bosses have an extra Relic.",
       "20. Act 3 Boss has Lizard Tail and Magic Flower.",
       "Obtain the Ruby Key. Break it later."
     ]
   },
-  "downfall-rebalance:ConfigMenuText": {
+  "downfall:ConfigMenuText": {
     "TEXT": [
-      "Allow Standard runs to encounter global relics from downfall-rebalance's characters.",
-      "Allow Standard runs to encounter global potions from downfall-rebalance.",
-      "Allow Standard runs to encounter global events from downfall-rebalance.",
-      "Allow Standard runs to encounter Colorless Boss Cards from downfall-rebalance.",
-      "Allow Standard characters to play downfall-rebalance runs, and Villains to play in Standard runs.",
-      "Allow Standard runs to encounter downfall-rebalance Curse cards."
-    ]
-  },
-  "downfall-rebalance:EnergyPanelTip": {
-    "TEXT": [
-      "Enemy's current energy count. Cards require energy to play."
-    ],
-    "EXTRA_TEXT": [
-      "Energy"
-    ]
-  },
-  "downfall-rebalance:RemoveCardReward": {
-  "TEXT": [
-    "Remove a card in your deck",
-    "Choose a Card to Remove"
-  ]
-},
-  "downfall-rebalance:TransformCardReward": {
-    "TEXT": [
-      "Transform a card in your deck",
-      "Choose a Card to Transform"
-    ]
-  },
-  "downfall-rebalance:UpgradeCardReward": {
-    "TEXT": [
-      "Upgrade a card in your deck",
-      "Choose a Card to Upgrade"
-    ]
-  },
-  "downfall-rebalance:BossRelicReward": {
-    "TEXT": [
-      "Choose 1 of 3 Boss Relics to obtain.",
-      "Obtain a ",
-      ".",
-      "Choose a Relic.. sorta"
-    ]
-  },
-  "downfall-rebalance:EtherealMod": {
-    "TEXT": [
-      "Ethereal. NL "
-    ]
-  },
-  "downfall-rebalance:JaxReward": {
-    "TEXT": [
-      "Found some JAX!"
-    ]
-  },
-  "downfall-rebalance:RareCardReward": {
-    "TEXT": [
-      "Add a Rare Card to your deck"
-    ]
-  },
-  "downfall-rebalance:OctoChoiceAction": {
-    "TEXT": [
-      "Choose a Wish to use.",
-      "You should never see this.",
-      "Choose a Slime."
-    ]
-  },
-  "downfall-rebalance:BossCardReward": {
-    "TEXT": [
-      "Add a Boss Card to your deck"
-    ]
-  },
-  "downfall-rebalance:RunHistoryMonsterNames": {
-    "TEXT": [
-      "Living Wall Heads"
+      "Allow Standard runs to encounter global relics from Downfall's characters.",
+      "Allow Standard runs to encounter global potions from Downfall.",
+      "Allow Standard runs to encounter global events from Downfall.",
+      "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
+      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs."
     ]
   }
 }

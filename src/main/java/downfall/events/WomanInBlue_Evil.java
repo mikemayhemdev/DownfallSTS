@@ -22,13 +22,14 @@ import com.megacrit.cardcrawl.relics.PotionBelt;
 import com.megacrit.cardcrawl.relics.ToyOrnithopter;
 import com.megacrit.cardcrawl.relics.WhiteBeast;
 import com.megacrit.cardcrawl.rewards.RewardItem;
+import downfall.downfallMod;
 import downfall.monsters.LadyInBlue;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class WomanInBlue_Evil extends AbstractImageEvent {
-    public static final String ID = "downfall:WomanInBlue";
+    public static final String ID = downfallMod.makeID("WomanInBlue");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;

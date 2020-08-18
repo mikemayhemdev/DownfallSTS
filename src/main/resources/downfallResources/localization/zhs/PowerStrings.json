@@ -1,48 +1,30 @@
 {
-  "downfall-rebalance:FairyPotion": {
+  "downfall:FairyPotion": {
     "NAME": "瓶中精灵",
     "DESCRIPTIONS": [
       "当你要被杀死时，免死并回复到最大生命值的 #b30% ,移除本效果。",
-      "哈！瓶中精灵，没想到吧！"
+      "Ha! Fairy Potion, jerk!"
     ]
   },
-  "downfall-rebalance:SoulSteal": {
+  "downfall:SoulSteal": {
     "NAME": "灵魂窃取",
     "DESCRIPTIONS": [
       "已经偷走了你 ",
       " 灵魂。"
     ]
   },
-  "downfall-rebalance:NeowInvulnerable": {
+  "downfall:NeowInvulnerable": {
     "NAME": "生命之神",
     "DESCRIPTIONS": [
-      "不能被击杀。当生命值降低到0时撤退休息。"
+      "不能被击杀。当生命值降低到1时撤退休息。"
     ]
   },
-  "downfall-rebalance:TransformDrawnCardsPower": {
+  "downfall:TransformDrawnCardsPower": {
     "NAME": "变化抽牌",
     "DESCRIPTIONS": [
       "将本回合抽到的前 #b",
       " 张牌 #y变化 。（还剩 ",
       " 张牌）"
-    ]
-  },
-  "downfall-rebalance:TotemInvulnerable": {
-    "NAME": "活墙壁",
-    "DESCRIPTIONS": [
-      "只有在其他头均生命为1时才会死亡。死亡时其他头同时死亡。"
-    ]
-  },
-  "downfall-rebalance:ExhaustCardsPower": {
-    "NAME": "遗忘",
-    "DESCRIPTIONS": [
-      "你的回合结束时，选择一张牌消耗。"
-    ]
-  },
-  "downfall-rebalance:PoisonResist": {
-    "NAME": "抗毒",
-    "DESCRIPTIONS": [
-      "中毒现在能被格挡，且在回合结束时触发并层数减半。"
     ]
   }
 }

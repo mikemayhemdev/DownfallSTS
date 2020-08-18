@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.actions.ForceWaitAction;
 import downfall.actions.MerchantThrowGoldAction;
+import downfall.downfallMod;
 import downfall.powers.SoulStealPower;
 import downfall.rooms.HeartShopRoom;
 import downfall.vfx.GainSingleSoulEffect;
@@ -59,7 +60,7 @@ Evil Mode villain cards
  */
 
 public class FleeingMerchant extends AbstractMonster {
-    public static final String ID = "downfall:FleeingMerchant";
+    public static final String ID = downfallMod.makeID("FleeingMerchant");
     public static final String NAME = CardCrawlGame.languagePack.getUIString("RunHistoryPathNodes").TEXT[8];
     public static final String[] DIALOG = {
 

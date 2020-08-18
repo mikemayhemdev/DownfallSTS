@@ -103,7 +103,7 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 public class downfallMod implements
         OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber
         ,AddAudioSubscriber {
-    public static final String modID = "downfall rebalance";
+    public static final String modID = "downfall";
 
 
     public static boolean choosingBossRelic = false;
@@ -176,9 +176,10 @@ public class downfallMod implements
         new downfallMod();
     }
 
-    public static String makeID(String id) {
+    public static final String makeID(String id) {
         return modID + ":" + id;
     }
+
 
     public static String assetPath(String path) {
         return "downfallResources/" + path;

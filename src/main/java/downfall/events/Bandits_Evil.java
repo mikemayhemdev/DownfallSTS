@@ -11,13 +11,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Circlet;
 import com.megacrit.cardcrawl.relics.RedMask;
+import downfall.downfallMod;
 import downfall.relics.RedIOU;
 import downfall.vfx.StealRelicEffect;
 
 import java.util.ArrayList;
 
 public class Bandits_Evil extends AbstractEvent {
-    public static final String ID = "downfall:Bandits";
+    public static final String ID = downfallMod.makeID("Bandits");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;

@@ -1,121 +1,49 @@
 {
-  "downfall-rebalance:EvilMenuPanel": {
+  "downfall:EvilMenuPanel": {
     "TEXT": [
       "崩坠模式",
-      "保卫腐化之心\n杀光入侵者",
+      "保护腐化之心不受想要杀戮尖塔的冒险入侵者的伤害。",
       "选择你的恶棍",
-      "战役"
+      "冠军"
     ]
   },
-  "downfall-rebalance:SoulToGoldChanges": {
+  "downfall:SoulToGoldChanges": {
     "TEXT": [
       "灵魂",
-      "这是你现在携带的灵魂。灵魂能上贡给心脏获得奖励。"
+      "TODO: Soul flavor text/explanation."
     ]
   },
-  "downfall-rebalance:BustKeyButton": {
+  "downfall:BustKeyButton": {
     "TEXT": [
       "打碎红宝石",
       "打碎蓝宝石",
       "打碎绿宝石",
-      "(自由行动)花费75灵魂：摧毁宝石并 ",
+      "摧毁宝石并 ",
       "在每场战斗开始时获得1点力量。",
       "获得10点最大生命。",
-      "在每场战斗开始时获得1点敏捷。",
-      "钥匙已击碎！",
-      "需要",
-      "灵魂。"
-
+      "在每场战斗开始时获得1点敏捷。"
     ]
   },
-  "downfall-rebalance:WheelSpinButton": {
+  "downfall:WheelSpinButton": {
     "TEXT": [
       "转动转盘",
-      "转动转盘",
-      "不能再转了"
+      "转动转盘"
     ]
   },
-  "downfall-rebalance:AscensionText": {
+  "downfall:AscensionText": {
     "TEXT": [
       "19. Boss拥有更多遗物。",
       "20. 深处Boss拥有蜥蜴尾巴和魔法花。",
       "获得红宝石钥匙。稍后将其打碎。"
     ]
   },
-  "downfall-rebalance:ConfigMenuText": {
+  "downfall:ConfigMenuText": {
     "TEXT": [
       "允许标准模式遇到崩坠模式角色的通用遗物。",
-      "允许标准模式遇到崩坠模式的药水。",
-      "允许标准模式遇到崩坠模式的事件。",
+      "允许标准模式遇到崩坠模式的药水",
+      "允许标准模式遇到崩坠模式的事件",
       "允许标准模式遇到崩坠模式的无色首领牌。",
-      "允许使用标准角色进行崩坠模式，允许使用恶棍进行标准模式。",
-      "允许标准模式遇到崩坠模式的诅咒牌。"
-    ]
-  },
-  "downfall-rebalance:EnergyPanelTip": {
-  "TEXT": [
-    "敌人当前的能量。打出卡牌需要能量。"
-  ],
-  "EXTRA_TEXT": [
-    "能量"
-  ]
-},
-  "downfall-rebalance:RemoveCardReward": {
-    "TEXT": [
-      "移除牌组中的一张牌。",
-      "选择一张牌移除"
-    ]
-  },
-  "downfall-rebalance:TransformCardReward": {
-    "TEXT": [
-      "变化牌组中的一张牌。",
-      "选择一张牌变化"
-    ]
-  },
-  "downfall-rebalance:UpgradeCardReward": {
-    "TEXT": [
-      "升级牌组中的一张牌。",
-      "选择一张牌升级"
-    ]
-  },
-  "downfall-rebalance:BossRelicReward": {
-    "TEXT": [
-      "从3件boss遗物中选择1件获得。",
-      "获得一件 ",
-      "。",
-      "选择一件遗物……大概"
-    ]
-  },
-  "downfall-rebalance:EtherealMod": {
-    "TEXT": [
-      "虚无 。 NL "
-    ]
-  },
-  "downfall-rebalance:JaxReward": {
-    "TEXT": [
-      "找到一些JAX！"
-    ]
-  },
-  "downfall-rebalance:RareCardReward": {
-    "TEXT": [
-      "将一张稀有牌加入你的牌组"
-    ]
-  },
-  "downfall-rebalance:OctoChoiceAction": {
-  "TEXT": [
-    "许个愿",
-    "你不应该看见这个的",
-    "选择一种史莱姆。"
-  ]
-},
-  "downfall-rebalance:BossCardReward": {
-    "TEXT": [
-      "将一张首领牌加入牌组"
-    ]
-  },
-  "downfall-rebalance:RunHistoryMonsterNames": {
-    "TEXT": [
-      "活墙壁"
+      "允许使用标准角色进行崩坠模式，允许使用恶棍进行标准模式。"
     ]
   }
 }
