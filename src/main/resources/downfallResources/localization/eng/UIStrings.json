@@ -18,16 +18,20 @@
       "Break Ruby",
       "Break Sapphire",
       "Break Emerald",
-      "Destroy the key to ",
-      "gain 1 Strength at the start of combat.",
-      "raise your Max HP by 10.",
-      "gain 1 Dexterity at the start of combat."
+      "(Free Action) Spend 75 Souls: Destroy key to ",
+      "gain 1 Strength.",
+      "raise Max HP by 10.",
+      "gain 1 Dexterity.",
+      "Key shattered!",
+      "Requires ",
+      " Souls."
     ]
   },
   "downfall:WheelSpinButton": {
     "TEXT": [
       "Spin Wheel",
-      "Spin the Wheel."
+      "(Free Action) Spin the Wheel.",
+      "Can't Spin Again."
     ]
   },
   "downfall:AscensionText": {
@@ -43,7 +47,74 @@
       "Allow Standard runs to encounter global potions from Downfall.",
       "Allow Standard runs to encounter global events from Downfall.",
       "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
-      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs."
+      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
+      "Allow Standard runs to encounter Downfall Curse cards."
+    ]
+  },
+  "downfall:EnergyPanelTip": {
+    "TEXT": [
+      "Enemy's current energy count. Cards require energy to play."
+    ],
+    "EXTRA_TEXT": [
+      "Energy"
+    ]
+  },
+  "downfall:RemoveCardReward": {
+    "TEXT": [
+      "Remove a card in your deck",
+      "Choose a Card to Remove"
+    ]
+  },
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "Transform a card in your deck",
+      "Choose a Card to Transform"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "Upgrade a card in your deck",
+      "Choose a Card to Upgrade"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "Choose 1 of 3 Boss Relics to obtain.",
+      "Obtain a ",
+      ".",
+      "Choose a Relic.. sorta"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Ethereal. NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "Found some JAX!"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "Add a Rare Card to your deck"
+    ]
+  },
+  "downfall:OctoChoiceAction": {
+    "TEXT": [
+      "Choose a Wish to use.",
+      "You should never see this.",
+      "Choose a Slime."
+    ]
+  },
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "Add a Boss Card to your deck"
+    ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "Living Wall Heads"
     ]
   }
 }
