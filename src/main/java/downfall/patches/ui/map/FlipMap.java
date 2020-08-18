@@ -9,6 +9,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.map.*;
@@ -57,36 +58,68 @@ public class FlipMap {
                     if (n.room == null || n.getRoomSymbol(true) == null || n.room instanceof MonsterRoomBoss)
                         continue; //for some reason act 4 map generates the boss room node and final victory room nodes even though they aren't used
 
+                    if (!AbstractDungeon.id.equals("TheEnding")) {
+                        n.y = map.size() - 1 - n.y;
 
-                    n.y = map.size() - n.y;
+                        for (MapEdge e : n.getEdges())
+                            if (!edgeArrayContains(edges, e)) {
+                                if (e.dstY >= 0 && e.dstY <= map.size())
 
-                    for (MapEdge e : n.getEdges())
-                        if (!edgeArrayContains(edges, e)) {
-                            if (e.dstY >= 0 && e.dstY < map.size())
+                                    edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
+                            }
+                    }else {
+                        for (MapEdge e : n.getEdges())
+                            if (!edgeArrayContains(edges, e)) {
+                                if (e.dstY >= 0 && e.dstY < map.size())
 
-                                edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
-                        }
+                                    edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
+                            }
+                    }
 
                     n.getEdges().clear();
                 }
 
             ArrayList<MapRoomNode> finalNodes = new ArrayList<>();
 
-            for (MapNodeData data : edges) {
-                if (data.start.room == null || data.start.getRoomSymbol(true) == null || data.start.room instanceof MonsterRoomBoss)
-                    continue;
+            if (!AbstractDungeon.id.equals("TheEnding")) {
+                for (MapNodeData data : edges) {
+                    if (data.start.room == null || data.start.getRoomSymbol(true) == null || data.start.room instanceof MonsterRoomBoss)
+                        continue;
 
-                if (data.start.y > startY)
-                    startY = data.start.y;
+                    if (data.start.y > startY)
+                        startY = data.start.y;
 
-                data.start.addEdge(new MapEdge(data.start.x, data.start.y, data.start.offsetX, data.start.offsetY, data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, false));
-                data.start.getEdges().sort(MapEdge::compareTo);
+                    data.start.addEdge(new MapEdge(data.start.x, data.start.y, data.start.offsetX, data.start.offsetY, data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, false));
+                    data.start.getEdges().sort(MapEdge::compareTo);
 
-                if (data.end.y == 0)
-                    finalNodes.add(data.end);
+                    if (data.end.y == 0)
+                        finalNodes.add(data.end);
+                }
+
+            } else {
+
+                for (MapNodeData data : edges)
+                {
+                    if (data.end.room == null || data.end.getRoomSymbol(true) == null || data.end.room instanceof MonsterRoomBoss)
+                        continue;
+
+                    if (data.end.y > startY)
+                        startY = data.end.y;
+
+                    data.end.addEdge(new MapEdge(data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, data.start.x, data.start.y, data.start.offsetX, data.start.offsetY,false));
+                    data.end.getEdges().sort(MapEdge::compareTo);
+
+                    if (data.start.y == 0)
+                        finalNodes.add(data.start);
+                }
+
             }
 
+
+
+
             for (MapRoomNode n : finalNodes) {
+                System.out.println("加入新节点1");
                 n.addEdge(new MapEdge(n.x, n.y, n.offsetX, n.offsetY, 3, -1, 0.0F, Settings.MAP_DST_Y * 2, true));
             }
         }

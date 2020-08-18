@@ -195,7 +195,7 @@
       "选择前进，回退或什么都不做"
     ]
   },
-  "downfall:Merchant": {
+  "downfall:CharBossMerchant": {
     "NAMES": [
       "商人"
     ],

@@ -2,6 +2,7 @@ package downfall.patches;
 
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -23,11 +24,11 @@ public class BossSetPatch {
             boolean nukeLooter2 = false;
 
             for (String s : AbstractDungeon.monsterList) {
-                if (s == "Looter") {
+                if (s.equals("Looter")) {
                     nukeLooter = true;
                 }
 
-                if (s == "2 Thieves") {
+                if (s.equals("2 Thieves")) {
                     nukeLooter2 = true;
                 }
 
@@ -51,54 +52,24 @@ public class BossSetPatch {
 
             AbstractDungeon.bossList.clear();
 
-            AbstractDungeon.bossList.add(downfallMod.makeID("NeowBoss"));
-            AbstractDungeon.bossList.add(downfallMod.makeID("NeowBoss"));
-            AbstractDungeon.bossList.add(downfallMod.makeID("NeowBoss"));
-
+            AbstractDungeon.bossList.add(NeowBoss.ID);
+            AbstractDungeon.bossList.add(NeowBoss.ID);
+            AbstractDungeon.bossList.add(NeowBoss.ID);
 
             AbstractDungeon.monsterList.clear();
             AbstractDungeon.eliteMonsterList.clear();
 
-            AbstractDungeon.monsterList.add(downfallMod.makeID("CharBossMerchant"));
-            AbstractDungeon.monsterList.add(downfallMod.makeID("CharBossMerchant"));
-            AbstractDungeon.monsterList.add(downfallMod.makeID("CharBossMerchant"));
-            AbstractDungeon.eliteMonsterList.add(downfallMod.makeID("CharBossMerchant"));
-            AbstractDungeon.eliteMonsterList.add(downfallMod.makeID("CharBossMerchant"));
-            AbstractDungeon.eliteMonsterList.add(downfallMod.makeID("CharBossMerchant"));
+            AbstractDungeon.monsterList.add(CharBossMerchant.ID);
+            AbstractDungeon.monsterList.add(CharBossMerchant.ID);
+            AbstractDungeon.monsterList.add(CharBossMerchant.ID);
+            AbstractDungeon.eliteMonsterList.add(CharBossMerchant.ID);
+            AbstractDungeon.eliteMonsterList.add(CharBossMerchant.ID);
+            AbstractDungeon.eliteMonsterList.add(CharBossMerchant.ID);
 
-            key = downfallMod.makeID("NeowBoss");
+            key = NeowBoss.ID;
 
             AbstractDungeon.bossKey = key;
         }
-//
-//        switch (key) {
-//            case CharBossIronclad.ID: {
-//                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");// 432
-//                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");// 433
-//                break;
-//            }
-//            case "downfall:CharBossSilent": {
-//                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/silent.png");// 432
-//                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/silentoutline.png");// 433
-//                break;
-//            }
-//            case "downfall:CharBossDefect": {
-//                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/defect.png");// 432
-//                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/defectoutline.png");// 433
-//                break;
-//            }
-//            case "downfall:CharBossWatcher": {
-//                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/watcher.png");// 432
-//                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/watcheroutline.png");// 433
-//                break;
-//            }
-//            case "downfall:NeowBoss": {
-//                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/neow.png");// 432
-//                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/neowoutline.png");// 433
-//                break;
-//            }
-//
-//        }
 
 
         if (key.equals(CharBossIronclad.ID)) {

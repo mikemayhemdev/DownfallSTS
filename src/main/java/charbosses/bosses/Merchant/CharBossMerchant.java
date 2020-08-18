@@ -48,7 +48,7 @@ public class CharBossMerchant extends AbstractCharBoss {
 
     private boolean neowSpoke = false;
 
-    public static final String ID = downfallMod.makeID("Merchant");
+    public static final String ID = downfallMod.makeID("CharBossMerchant");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString(ID).NAMES[0];
 
     public CharBossMerchant() {

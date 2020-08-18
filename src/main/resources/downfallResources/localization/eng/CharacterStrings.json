@@ -194,7 +194,7 @@
       "Choose Advance,Retract or Do Nothing"
     ]
   },
-  "downfall:Merchant": {
+  "downfall:CharBossMerchant": {
     "NAMES": [
       "Merchant"
     ],

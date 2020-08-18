@@ -236,7 +236,7 @@
     "NAME": "事件: 老乞丐",
     "FLAVOR": "施舍点钱吧，孩子？",
     "DESCRIPTIONS": [
-      " 被移除出牌组。"
+      "一张牌被移除出牌组。"
     ]
   },
   "downfall:Library": {
