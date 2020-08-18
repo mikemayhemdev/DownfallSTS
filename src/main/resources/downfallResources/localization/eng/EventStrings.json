@@ -1,4 +1,13 @@
 {
+  "downfall:SolShrine": {
+    "NAME": "Soul Shrine",
+    "DESCRIPTIONS": [
+      "Before you lies an elaborate shrine to an ancient spirit of evil. ",
+      "As your hand touches the shrine, #ysouls spill forth from the shrine, ~showering~ ~you~ ~in~ ~power.~ ",
+      "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
+      "You ignore the shrine."
+    ]
+  },
   "downfall:GremlinMatchGame": {
     "NAME": "Match and Keep!",
     "DESCRIPTIONS": [
@@ -94,16 +103,7 @@
     ],
     "OPTIONS": [
       "[Donate] #rLose #r150 #rSouls. #gGain #g10 #gMax #gHP.",
-      "[Lcked] Requires 150 Souls."
-    ]
-  },
-  "downfall:GoldenShrine": {
-    "NAME": "Soul Shrine",
-    "DESCRIPTIONS": [
-      "Before you lies an elaborate shrine to an ancient spirit of evil. ",
-      "As your hand touches the shrine, #ysouls spill forth from the shrine, ~showering~ ~you~ ~in~ ~power.~ ",
-      "Each time you strike the shrine, #ysouls emit in bursts, again and again! NL NL As you consume the energy, you hesitate, realizing this shrine could have been a never-ending supply of power. You wonder if you made the #rright #rdecision.",
-      "You ignore the shrine."
+      "[Locked] Requires 150 Souls."
     ]
   },
   "downfall:FaceTrader": {
@@ -206,7 +206,7 @@
       "You walk around it, wondering what could have been."
     ],
     "OPTIONS": [
-      "[Enter] #gUpgrade #g2 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
+      "[Enter] #gUpgrade #g3 #grandom #gcards. #rBecome #rCursed #r- #rRegret.",
       "[Leave]",
       "[Locked] Requires: Upgradeable Cards"
     ]
@@ -214,14 +214,17 @@
   "downfall:WorldOfGoop": {
     "NAME": "World of Goop",
     "DESCRIPTIONS": [
-      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL You can feel goop in your ears, goop in your nose, goop everywhere. NL NL Climbing out, you notice that stuck to your body is a unique-looking #yyellow Slime creature. It appears to have been collecting gold from unfortunate adventurers who fell into the puddle.",
+      "You fall into a puddle. NL @IT'S@ @MADE@ @OF@ #g@SLIME@ #g@GOOP!!@ NL You can feel goop in your ears, goop in your nose, goop everywhere. NL NL Climbing out, you notice that stuck to your body is a unique-looking #yyellow Slime creature. It appears to have been collecting #ySouls from unfortunate adventurers who fell into the puddle. How convenient.",
       "Not wanting to make this unfortunate puddle incident go without reward, you strike at the #yyellow slime creature. NL NL It @bursts@ instantly! NL NL You didn't think it possible, but you find yourself even more covered in goop than you were before.",
       "Brushing off the #yyellow slime, you continue on your journey, though still partially covered in goop. It certainly adds to your menacing aesthetic."
     ],
     "OPTIONS": [
-      "[Punch] #gGain #g",
+      "[Full Harvest] #gGain #g",
+      "[Drain] #gGain #g",
+      "[Sap] #gGain #g",
+      " #gSouls. #rBecome #rCursed #rThrice #r- #rIcky.",
       " #gSouls. #rBecome #rCursed #rTwice #r- #rIcky.",
-      "[Remove] #rBecome #rCursed #r- #rIcky.",
+      " #gSouls. #rBecome #rCursed #r- #rIcky.",
       "[Leave]"
     ]
   },
@@ -262,8 +265,8 @@
   "downfall:GoldenIdol": {
     "NAME": "Golden Idol",
     "DESCRIPTIONS": [
-      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL Wandering adventurers are certain to be attracted to this object. It may be worthwhile to set up a trap.",
-      "You come across an inconspicuous pedestal with a #yshining #ygold #yidol sitting peacefully atop. It looks incredibly valuable. NL NL The body of an adventurer lays a short distance down the hall, clearly crushed by a massive object. Their soul still lingers in the area.",
+      "You come across an inconspicuous pedestal with a #yshining #yidol sitting peacefully atop. It looks incredibly valuable. NL NL Wandering adventurers are certain to be attracted to this object. It may be worthwhile to set up a trap.",
+      "You come across an inconspicuous pedestal with a #yshining #yidol sitting peacefully atop. It looks incredibly valuable. NL NL The body of an adventurer lays a short distance down the hall, clearly crushed by a massive object. Their soul still lingers in the area.",
       "Using the Idol's weight as a trigger, you rig up a simple trap to cause a nearby giant boulder to collapse into the room should anyone try to claim the #yshining artifact. NL Satisfied with the construction of your trap, you decide to move on.",
       "You channel the adventurer's spirit into your body, absorbing its energy into your own.",
       "You decide to leave the pedestal intact. Setting a trap is beneath you.",
@@ -280,7 +283,7 @@
   "downfall:Cleric": {
     "NAME": "The Cleric",
     "DESCRIPTIONS": [
-      "A strange blue humanoid with a golden helm(?) approaches you with a huge smile. NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
+      "A strange blue humanoid with a glimmering helm(?) approaches you with a huge smile. NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
       "The creature crumples in a single blow, falling into a pile of mangled blue flesh. You absorb its #ysoul and continue on your way.",
       "\"Cleric help! Cleric help!\" the creature says as you approach menacingly. NL A cold blue flame envelops your body and dissipates. NL Immediately after, this \"Cleric\" flees."
     ],
@@ -352,7 +355,7 @@
     "NAME": "Knowing Skull",
     "DESCRIPTIONS": [
       "You find yourself in an old, decorated chamber. In the center of the room, a large skull sits atop an ornate pedestal. As you approach, the skull #g@bursts@ #g@into@ #g@flames@ and turns to face you. NL NL \"WHAT IS IT YOU SEEK? WHAT IS IT YOU OFFER?\" NL In sync with its final words, the door behind you @slams@ @shut.@",
-      "\"Heyheyheyheyhandsoffthenoggin-\" You pluck the skull from the pedestal, momentarily #rscorched by its flames. Maybe it'll come in handy later...,",
+      "\"Heyheyheyheyhandsoffthenoggin-\" NL NL Ignoring the skull's complaints, you snatch it from the pedestal, momentarily #rscorched by its flames. Perhaps it will come in handy later...",
       "\"BEHIND YOU, MORTAL.\" NL You peek behind the skull. Surely enough, there is a door."
     ],
     "OPTIONS": [
@@ -374,8 +377,8 @@
   "downfall:Beggar": {
     "NAME": "Old Beggar",
     "DESCRIPTIONS": [
-      "The beggar takes off its cloak, revealing a blue humanoid form with a golden helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
-      "The old beggar looks around, seemingly puzzled. He ignores you at first as he searches the area, then glances towards you. NL \"Have you seen a young, blue-skinned man near here? Wears an odd, golden helm? He usually comes by the City, spending his tithe on food for us...\" NL The beggar must be referring to the one called #bCleric, who you dispatched a short while ago.",
+      "The beggar takes off its cloak, revealing a blue humanoid form with a glimmering helm(?). NL Upon realizing just what you are, the creature's beaming grin swiftly turns to a look of pure terror. NL ~\"M-MONSTER!!\"~ the figure shouts, turning around to flee.",
+      "The old beggar looks around, seemingly puzzled. He ignores you at first as he searches the area, then glances towards you. NL \"Have you seen a young, blue-skinned man near here? Wears an odd, glimmering helm? He usually comes by the City, spending his tithe on food for us...\" NL The beggar must be referring to the one called #bCleric, who you dispatched a short while ago.",
       "@\"Do@ @not@ @fear,@ @old@ @man.@ @You@ @shall@ @see@ @your@ @friend@ @sooner@ @than@ @you@ @think.\"@ NL NL The beggar struggles to provide any semblance of defense, and you strike him down easily. NL Leaving the alley behind, you stride ahead, excessively #yproud of the work you have done this day.",
       "This man has suffered enough as a result of your earlier actions. You decide to spare him his life, and move on.",
       "The beggar takes off its cloak to reveal that he is #bCleric! NL @\"You@ @are@ @a@ @horrible@ @soul.@ @Cleric@ @bought@ @protection!\"@ he screams. NL NL Two massive figures emerge from the alley, each wearing full plate. Before you have a chance to react, they draw their blades and charge!",
@@ -393,10 +396,10 @@
     "NAME": "The Mausoleum",
     "DESCRIPTIONS": [
       "Venturing through a series of tombs, you are faced with a large sarcophagus ~studded~ ~with~ ~gems~ in the center of a circular room. NL You cannot make out the writing on the coffin, however, you do notice #p~black~ #p~fog~ seeping out from the sides. NL You're familiar with this fog - a clear sign of #y~spirits.~",
-      "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@cough...@"
+      "You absorb the #p~ghostly~ #p~fog~ into yourself, gathering their spirits. As you leave, however, you can't help but start to #r@feel@ #r@a@ #r@chill...@"
     ],
     "OPTIONS": [
-      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rWrithe."
+      "[Feast] #gGain #g200 #gSouls. #rBecome #rCursed #r- #rHaunted."
     ]
   },
   "downfall:Nest": {
@@ -477,7 +480,7 @@
   "downfall:SensoryStone": {
     "NAME": "Sensory Stone",
     "DESCRIPTIONS": [
-      "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for bits of gold and scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ygold and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
+      "#g~VANITY.~ NL NL Life is a beautiful, magnificent thing... even to a #gslime. NL NL You’ve always known you were destined for great things. The others all settle for coins and bits of scraps, but not you. You wait, like a predator, for something special. Something unique. Something ~fabulous.~ NL NL Days... weeks... maybe years pass by... it’s hard to tell in the Spire. Until, at last, you spot it. No longer will you be counted just among the masses! They may have their #ycoins and #ytrinkets, but you have something better... NL NL @A@ @TINY@ @BOWLER@ @HAT!@ Dashing!",
       "#y~FRAILTY.~ NL NL The #rblade enters your chest, and the cheer of the #bcrowd fills your ears... the last thing you will ever feel is a hand striking across your face, and your eyes close. NL NL You awaken in an unfamiliar room, @unable@ @to@ @move.@ You try to speak, but no words come out, and your vision is clouded in a #ggreen #gfog. Is this a dream? Is this the afterlife? You try to remember, but your thoughts are as disjointed as your arms and legs. NL NL You hear a voice in your mind - a single command. #g\"BALANCE #gmust #gbe #gENFORCED. #gGUARD #gExordium.\"",
       "#p~HOPELESSNESS.~ NL NL #yWatch. #yRemember. #yLive. This is the Watcher's mission. Your assignment is to investigate a Spire of unknown origin.  You enter a hexagonal room and before you can react, the door @collapses@ @behind@ @you!@ NL NL There is no escape. The only path that may lead out is by taking a tablet, clearly infused with magic, which lays upon a pedestal. The moment your skin touches the artifact, your body ~dissolves~ ~into~ ~nothing,~ and your #psoul is pulled into the #pstone. NL NL Your fate will forever be tied to the #ptablet, #rcursed to wander the Spire for eternity.",
       "#y~DETACHMENT.~ NL NL You are the first. You serve the ~Maker.~ You are not born, with frailty and weakness, but created. Perfect. And in your image shall you create more constructs. The #yautomatons of the Maker’s legacy. NL NL Each one flawless in its design, all to serve a specific purpose. All but one. The one meant to maintain balance in the City. NL NL You cast the #ydefective #yconstruct from the tallest window, plunging it to the bottom of the Spire, and take his place as the City's protector. NL NL Balance must be enforced.",
@@ -536,7 +539,7 @@
   "downfall:Joust": {
     "NAME": "The Joust",
     "DESCRIPTIONS": [
-      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic cat!~\" NL NL They won't stop bickering. You'll have to decide...",
+      "As you make your way through the large buildings you come across a long narrow bridge and spot knights on either side, facing one another. You approach and they scatter, glaring at one another. NL \"Monster! YOU fight it, if you're so good at killing things!\" NL \"No, YOU fight it! You know monsters better, what with that ~demonic~ ~cat!~\" NL NL They won't stop bickering. You'll have to decide...",
       "This knight was clearly stronger than the other one, and you tried your best but were ultimately thrashed. NL \"I'd like to see you best a beast like that!\" he says to the other knight as they leave, bickering.",
       "You ruthlessly avoid the knight's attacks and #rkill him, sucking his #gsouls out gleefully. The other knight screams and flees. What a coward...",
       "The cowardly knight gives you a few pesky scratches from afar with his longsword, then runs away screaming. The other knight runs after him, angry. You return to your work, annoyed.",
@@ -569,7 +572,7 @@
       "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL A comforting heartbeat can be felt throughout the room... NL Are you at the ~end~ ? Is your purpose fulfilled?",
       "You give #b",
       " Souls back to the heart! NL The heart #b@squirms@ in elation, pounding forever more.",
-      "You ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~ NL You feel that you have given a total of #b",
+      "For all your efforts, the door to the Heart's chamber remains vulnerable, and that pesky, laughing, rug-toting citizen got away from you. So, you ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~  NL You feel that you have given a total of #b",
       " Souls to the heart.",
       " NL A total of #b",
       " Souls have been given by all who have been summoned by it.",

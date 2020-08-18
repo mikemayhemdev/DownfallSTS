@@ -1,9 +1,9 @@
 {
   "downfall:NeowBlessing": {
-    "NAME": "Neow's Blsesing",
+    "NAME": "Neow's Blessing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b60 at the start of each Act. NL Draw #b2 less cards and lose ",
+      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Draw #b2 less cards and lose ",
       " at the start of your turn."
     ]
   },
@@ -135,8 +135,7 @@
     "NAME": "Event: Designer-In-Spire",
     "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
     "DESCRIPTIONS": [
-      " was removed from the deck, and ",
-      " was upgraded."
+      "A card was removed from the deck, and another was upgraded."
     ]
   },
   "downfall:DivineFountain": {
@@ -237,7 +236,7 @@
     "NAME": "Event: Old Beggar",
     "FLAVOR": "Spare some coin, child?",
     "DESCRIPTIONS": [
-      " was removed from the deck."
+      "A card was removed from the deck."
     ]
   },
   "downfall:Library": {

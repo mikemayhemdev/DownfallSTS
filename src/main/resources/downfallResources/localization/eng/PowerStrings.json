@@ -16,7 +16,7 @@
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Cannot be killed.  Retreats to recover when reduced to 1 HP."
+      "Cannot be killed.  Retreats to recover when reduced to 0 HP."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -25,6 +25,24 @@
       "#yTransform the first #b",
       " cards drawn this turn. (",
       " remaining)"
+    ]
+  },
+  "downfall:TotemInvulnerable": {
+    "NAME": "Living Wall",
+    "DESCRIPTIONS": [
+      "Cannot die unless all other Heads are at 1 HP.  Dies if any other Head dies."
+    ]
+  },
+  "downfall:ExhaustCardsPower": {
+    "NAME": "Forgetful",
+    "DESCRIPTIONS": [
+      "At the end of your turn, choose a card to Exhaust."
+    ]
+  },
+  "downfall:PoisonResist": {
+    "NAME": "Poison Resistance",
+    "DESCRIPTIONS": [
+      "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
     ]
   }
 }

@@ -13,7 +13,7 @@
       "~I~ ~brought~ ~you~ ~back...~",
       "~Choose...~",
       "~Granted...~",
-      "~Sacrifice...~ NL ~...for power....~",
+      "~Sacrifice...~ NL ~...for~ ~power....~",
       "~PROVE~ ~your~ NL ~worth...~",
       "Rewards",
       "~Continue~ ~for~ ~me...~",
@@ -111,8 +111,8 @@
       "~Yes...~",
       "~More...~ @More...!@",
       "~Grow~ ~strong...~",
-      "~I~ ~am~ ~renewed~...",
-      "~Go~ ~forth~...",
+      "~I~ ~am~ ~renewed...~",
+      "~Go~ ~forth...~",
       "Leave",
       "Select a card to remove from your deck."
     ],
@@ -190,7 +190,8 @@
 
     ],
     "TEXT": [
-      "Choose a Boss to Study."
+      "Choose a Boss to Study.",
+      "Choose Advance,Retract or Do Nothing"
     ]
   },
   "downfall:Merchant": {

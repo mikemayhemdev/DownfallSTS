@@ -53,13 +53,13 @@
     ]
   },
   "downfall:EnergyPanelTip": {
-    "TEXT": [
-      "敌人当前的能量。打出卡牌需要能量。"
-    ],
-    "EXTRA_TEXT": [
-      "能量"
-    ]
-  },
+  "TEXT": [
+    "敌人当前的能量。打出卡牌需要能量。"
+  ],
+  "EXTRA_TEXT": [
+    "能量"
+  ]
+},
   "downfall:RemoveCardReward": {
     "TEXT": [
       "移除牌组中的一张牌。",
@@ -102,12 +102,12 @@
     ]
   },
   "downfall:OctoChoiceAction": {
-    "TEXT": [
-      "许个愿",
-      "你不应该看见这个的",
-      "选择一种史莱姆。"
-    ]
-  },
+  "TEXT": [
+    "许个愿",
+    "你不应该看见这个的",
+    "选择一种史莱姆。"
+  ]
+},
   "downfall:BossCardReward": {
     "TEXT": [
       "将一张首领牌加入牌组"
