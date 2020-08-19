@@ -101,8 +101,20 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-        OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber
-        ,AddAudioSubscriber {
+        OnPlayerDamagedSubscriber,
+        OnStartBattleSubscriber,
+        PostDrawSubscriber,
+        PostDungeonInitializeSubscriber,
+        EditStringsSubscriber,
+        EditKeywordsSubscriber,
+        AddCustomModeModsSubscriber,
+        PostInitializeSubscriber,
+        EditRelicsSubscriber,
+        EditCardsSubscriber,
+        PostUpdateSubscriber,
+        StartGameSubscriber,
+        StartActSubscriber
+        , AddAudioSubscriber {
     public static final String modID = "downfall";
 
 
@@ -891,6 +903,7 @@ public class downfallMod implements
         BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
         BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
         BaseMod.addRelic(new HeartsMalice(), RelicType.SHARED);
+        BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
     }
 
     @Override
@@ -972,6 +985,13 @@ public class downfallMod implements
                 }
             }
         }
+
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.hasRelic(NeowBlessing.ID)) {
+                AbstractDungeon.player.increaseMaxHp(100, true);
+            }
+        }
+
     }
 
 
@@ -981,6 +1001,7 @@ public class downfallMod implements
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
+        l.add(new CustomMod(ExchangeController.ID, "r", true));
     }
 
     @Override
@@ -1008,6 +1029,11 @@ public class downfallMod implements
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
         }
 
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ExchangeController.ID)) || ModHelper.isModEnabled(ExchangeController.ID)) {
+            RelicLibrary.getRelic(NeowBlessing.ID).makeCopy().instantObtain();
+
+        }
+
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID)) {
 
             AbstractDungeon.player.masterDeck.addToTop(new UnknownCommonAttack());
@@ -1029,15 +1055,15 @@ public class downfallMod implements
             evilMode = true;
         }
 
-        if (AbstractDungeon.player instanceof TheHexaghost){
-            for (AbstractCard c : CardLibrary.getAllCards()){
-                if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)){
+        if (AbstractDungeon.player instanceof TheHexaghost) {
+            for (AbstractCard c : CardLibrary.getAllCards()) {
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)) {
                     c.tags.remove(AbstractCard.CardTags.HEALING);
                 }
             }
         } else {
-            for (AbstractCard c : CardLibrary.getAllCards()){
-                if (c.hasTag(HexaMod.GHOSTWHEELCARD)){
+            for (AbstractCard c : CardLibrary.getAllCards()) {
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD)) {
                     c.tags.add(AbstractCard.CardTags.HEALING);
                 }
             }
@@ -1050,7 +1076,7 @@ public class downfallMod implements
         playedBossCardThisTurn = false;
     }
 
-    public static void saveBossFight(String ID){
+    public static void saveBossFight(String ID) {
         if (AbstractDungeon.getCurrRoom().event == null) {
             switch (AbstractDungeon.actNum) {
                 case 1: {
