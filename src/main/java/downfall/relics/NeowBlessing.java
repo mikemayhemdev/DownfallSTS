@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import downfall.downfallMod;
 
 public class NeowBlessing extends CustomRelic {
@@ -22,8 +23,8 @@ public class NeowBlessing extends CustomRelic {
     public void onEquip() {
         AbstractDungeon.player.energy.energyMaster--;
         AbstractDungeon.player.masterHandSize--;
-        AbstractDungeon.player.potionSlots = 0;
-        AbstractDungeon.player.potions.clear();
+        AbstractDungeon.player.potionSlots --;
+        AbstractDungeon.player.potions.remove(AbstractDungeon.player.potions.size() -1);
         AbstractDungeon.player.increaseMaxHp(100, true);
     }
 

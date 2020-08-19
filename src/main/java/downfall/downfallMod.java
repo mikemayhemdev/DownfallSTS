@@ -149,9 +149,9 @@ public class downfallMod implements
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
 
-    public static String Act1BossFaced = "downfall:CharBossIronclad";
-    public static String Act2BossFaced = "downfall:CharBossSilent";
-    public static String Act3BossFaced = "downfall:CharBossDefect";
+    public static String Act1BossFaced = CharBossIronclad.ID;
+    public static String Act2BossFaced = CharBossSilent.ID;
+    public static String Act3BossFaced = CharBossDefect.ID;
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;

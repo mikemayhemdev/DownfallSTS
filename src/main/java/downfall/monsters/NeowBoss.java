@@ -1,6 +1,7 @@
 package downfall.monsters;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Ironclad.CharBossIronclad;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Interpolation;
@@ -118,19 +119,19 @@ public class NeowBoss extends AbstractMonster {
         if (downfallMod.Act1BossFaced != "") {
             bossesToRez.add(downfallMod.Act1BossFaced);
         } else {
-            bossesToRez.add("downfall:CharBossIronclad");
+            bossesToRez.add(CharBossIronclad.ID);
             SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 1.  Will rez Ironclad instead.");
         }
         if (downfallMod.Act2BossFaced != "") {
             bossesToRez.add(downfallMod.Act2BossFaced);
         } else {
-            bossesToRez.add("downfall:CharBossIronclad");
+            bossesToRez.add(CharBossIronclad.ID);
             SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 2.  Will rez Ironclad instead.");
         }
         if (downfallMod.Act3BossFaced != "") {
             bossesToRez.add(downfallMod.Act3BossFaced);
         } else {
-            bossesToRez.add("downfall:CharBossIronclad");
+            bossesToRez.add(CharBossIronclad.ID);
             SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 3.  Will rez Ironclad instead.");
         }
 
