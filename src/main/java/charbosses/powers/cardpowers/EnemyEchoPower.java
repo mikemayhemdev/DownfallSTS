@@ -2,6 +2,7 @@ package charbosses.powers.cardpowers;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.ui.EnemyEnergyPanel;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -18,7 +19,7 @@ public class EnemyEchoPower extends AbstractPower {
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
-    private int cardsDoubledThisTurn = 0;
+    private int cardsDoubledThisTurn = 1;
 
     public EnemyEchoPower(AbstractCreature owner, int amount) {
         this.name = NAME;
@@ -62,7 +63,10 @@ public class EnemyEchoPower extends AbstractPower {
             }
 
             tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+            tmp.isInAutoplay = true;
+            tmp.freeToPlayOnce = true;
+            AbstractCharBoss.boss.useCard(tmp,m, EnemyEnergyPanel.totalCount);
+//            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
         }
 
 

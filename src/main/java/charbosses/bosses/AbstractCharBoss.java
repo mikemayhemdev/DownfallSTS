@@ -8,10 +8,7 @@ import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.actions.orb.EnemyEvokeOrbAction;
 import charbosses.actions.orb.EnemyTriggerEndOfTurnOrbActions;
 import charbosses.actions.unique.EnemyChangeStanceAction;
-import charbosses.actions.util.CharbossDoNextCardAction;
-import charbosses.actions.util.CharbossSortHandAction;
-import charbosses.actions.util.CharbossTurnstartDrawAction;
-import charbosses.actions.util.DelayedActionAction;
+import charbosses.actions.util.*;
 import charbosses.actions.utility.DestroyAntiCardsAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
@@ -47,6 +44,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.AbstractStance;
@@ -196,7 +194,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStartPreDraw();
         }
-        AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
+        addToBot(new DelayedActionAction(new CharbossTurnstartDrawAction()));
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStart();
         }
@@ -229,14 +227,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         attacksDrawnForAttackPhase = 0;
         setupsDrawnForSetupPhase = 0;
         this.startTurn();
-        this.makePlay();
+        addToBot(new CharbossSortHandAction());
+        addToBot(new CharbossMakePlayAction());
+//        this.makePlay();
         this.onSetupTurn = !this.onSetupTurn;
     }
 
     public void makePlay() {
         for (AbstractCard _c : this.hand.group) {
             AbstractBossCard c = (AbstractBossCard) _c;
-            if (c.canUse(AbstractDungeon.player, this)) {
+            if (c.canUse(AbstractDungeon.player, this) && c.getPriority(this.hand.group) > -100) {
                 SlimeboundMod.logger.info("Enemy using card: " + c.name + " energy = " + EnemyEnergyPanel.totalCount);
                 this.useCard(c, this, EnemyEnergyPanel.totalCount);
                 this.addToBot(new DelayedActionAction(new CharbossDoNextCardAction()));
@@ -246,7 +246,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         //doing this here instead of end turn allows it to still be before player loses Block
-        AbstractDungeon.actionManager.addToBottom(new EnemyTriggerEndOfTurnOrbActions());
+        addToBot(new EnemyTriggerEndOfTurnOrbActions());
     }
 
     @Override
@@ -278,7 +278,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.stance.onEndOfTurn();
 
-        AbstractDungeon.actionManager.addToBottom(new EnemyDiscardAtEndOfTurnAction());
+        addToBot(new EnemyDiscardAtEndOfTurnAction());
         for (final AbstractCard c : this.drawPile.group) {
             c.resetAttributes();
         }
@@ -288,7 +288,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (final AbstractCard c : this.hand.group) {
             c.resetAttributes();
         }
-        AbstractDungeon.actionManager.addToBottom(new DelayedActionAction(new CharbossTurnstartDrawAction()));
+        addToBot(new DelayedActionAction(new CharbossTurnstartDrawAction()));
 
     }
 
@@ -307,11 +307,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public void endTurnStartTurn() {
         if (!AbstractDungeon.getCurrRoom().isBattleOver) {
-            AbstractDungeon.actionManager.addToBottom(new EnemyDrawCardAction(this, this.gameHandSize, true));
-            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.2f));
+            addToBot(new EnemyDrawCardAction(this, this.gameHandSize, true));
+            addToBot(new WaitAction(0.2f));
             this.applyStartOfTurnPostDrawRelics();
             this.applyStartOfTurnPostDrawPowers();
-            AbstractDungeon.actionManager.addToBottom(new CharbossSortHandAction());
+            if(!AbstractDungeon.player.hasRelic(RunicDome.ID)){
+                addToBot(new CharbossSortHandAction());
+            }
+
             this.cardsPlayedThisTurn = 0;
             this.attacksPlayedThisTurn = 0;
         }
@@ -338,7 +341,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 boolean gotem = false;
                 for (int i = 0; i < cardsByValue.size(); i++) {
                     int maxRange = 0;
-                    if (boss.hasRelic("Runic Dome")) maxRange += 4;
+                    if (boss.hasRelic(RunicDome.ID)) maxRange += 4;
                     if (cardsByValue.get(i).getPriority(this.hand.group) < c.getPriority(this.hand.group) + AbstractDungeon.aiRng.random(0, maxRange)) {
                         cardsByValue.add(i, c);
                         gotem = true;
@@ -387,7 +390,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         //SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < sortedCards.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) sortedCards.get(i);
-            if (c.costForTurn <= budget && c.costForTurn != -2) {
+            if (c.costForTurn <= budget && c.costForTurn != -2 && c.getPriority(this.hand.group) > - 100) {
                 c.createIntent();
                 c.bossLighten();
                 budget -= c.costForTurn;
@@ -709,7 +712,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.freeToPlayOnce = true;
         }
         c.use(AbstractDungeon.player, monster);
-        AbstractDungeon.actionManager.addToBottom(new EnemyUseCardAction(c, monster));
+        addToBot(new EnemyUseCardAction(c, monster));
         if (!c.dontTriggerOnUseCard) {
             this.hand.triggerOnOtherCardPlayed(c);
         }

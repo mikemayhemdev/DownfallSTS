@@ -80,7 +80,7 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
 
     public void applyFocus() {
         AbstractPower power = AbstractCharBoss.boss.getPower(FocusPower.POWER_ID);
-        if (power != null && !this.ID.equals(Plasma.ORB_ID)) {
+        if (power != null && !this.ID.equals(EnemyPlasma.ORB_ID)) {
             this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount);
             this.evokeAmount = Math.max(0, this.baseEvokeAmount + power.amount);
         } else {

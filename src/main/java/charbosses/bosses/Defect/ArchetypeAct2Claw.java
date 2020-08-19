@@ -6,6 +6,7 @@ import charbosses.cards.curses.EnPain;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Bandits;
 import charbosses.relics.EventRelics.CBR_OminousForge;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
@@ -45,7 +46,7 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
         addRelic(new CBR_WarpedTongs());
         addRelic(new CBR_Bandits());
         addRelic(new CBR_RedMask());
-        addRelic(new CBR_DollysMirror("Claw+"));
+        addRelic(new CBR_DollysMirror(CardCrawlGame.languagePack.getCardStrings("Gash").NAME));
 
 
 
@@ -76,8 +77,8 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
         addToDeck(new EnChargeBattery(), false);
 
         //Turn 6
-        addToDeck(new EnEchoForm(), false);
-        addToDeck(new EnDefendBlue(), true);
+        addToDeck(new EnEchoForm(), true);
+        addToDeck(new EnDefendBlue(), false);
         addToDeck(new EnMachineLearning(), extraUpgrades);
 
 

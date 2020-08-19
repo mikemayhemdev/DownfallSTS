@@ -54,7 +54,7 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
         addRelic(new CBR_LetterOpener());
         addRelic(new CBR_Shuriken());
         addRelic(new CBR_Serpent()); // Gold used to buy cards
-        addRelic(new CBR_Ectoplasm());
+//        addRelic(new CBR_Ectoplasm());
         addRelic(new CBR_Boot());
         addRelic(new CBR_HornCleat());
 

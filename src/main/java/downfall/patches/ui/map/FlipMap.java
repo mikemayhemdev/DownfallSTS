@@ -9,11 +9,10 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.map.*;
-import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
 import downfall.patches.EvilModeCharacterSelect;
@@ -25,6 +24,11 @@ import javassist.expr.MethodCall;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.mapRng;
 
 public class FlipMap {
     @SpirePatch(
@@ -42,84 +46,72 @@ public class FlipMap {
                 locator = Locator.class
         )
         public static void flipflipflipflipflip() {
-            if (EvilModeCharacterSelect.evilMode)
+            if (EvilModeCharacterSelect.evilMode) {
+                if (!AbstractDungeon.id.equals(TheEnding.ID)) {
+
+                    flipCampfire();
+                }
                 flip(AbstractDungeon.map);
+            }
+
         }
 
+
+        private static void flipCampfire() {
+            ArrayList<ArrayList<MapRoomNode>> map = AbstractDungeon.map;
+
+            assignRowAsRoomType(map.get(0), RestRoom.class);
+            assignRowAsRoomType(map.get(map.size() - 1), MonsterRoom.class);
+
+
+        }
+
+        public static void assignRowAsRoomType(ArrayList<MapRoomNode> row, Class<? extends AbstractRoom> c) {
+            for (MapRoomNode n : row) {
+                try {
+                    n.setRoom(c.newInstance());
+                } catch (InstantiationException | IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
 
         private static void flip(ArrayList<ArrayList<MapRoomNode>> map) {
             startY = 0;
 
             ArrayList<MapNodeData> edges = new ArrayList<>();
-            ArrayList<MapRoomNode> newMapRoomNode = new ArrayList<>();
 
             for (ArrayList<MapRoomNode> row : map)
                 for (MapRoomNode n : row) {
                     if (n.room == null || n.getRoomSymbol(true) == null || n.room instanceof MonsterRoomBoss)
-                        continue; //for some reason act 4 map generates the boss room node and final victory room nodes even though they aren't used
+                        continue;
 
-                    if (!AbstractDungeon.id.equals("TheEnding")) {
-                        n.y = map.size() - 1 - n.y;
-
-                        for (MapEdge e : n.getEdges())
-                            if (!edgeArrayContains(edges, e)) {
-                                if (e.dstY >= 0 && e.dstY <= map.size())
-
-                                    edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
-                            }
-                    }else {
-                        for (MapEdge e : n.getEdges())
-                            if (!edgeArrayContains(edges, e)) {
-                                if (e.dstY >= 0 && e.dstY < map.size())
-
-                                    edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
-                            }
-                    }
+                    for (MapEdge e : n.getEdges())
+                        if (!edgeArrayContains(edges, e)) {
+                            if (e.dstY >= 0 && e.dstY < map.size())
+                                edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
+                        }
 
                     n.getEdges().clear();
                 }
 
             ArrayList<MapRoomNode> finalNodes = new ArrayList<>();
 
-            if (!AbstractDungeon.id.equals("TheEnding")) {
-                for (MapNodeData data : edges) {
-                    if (data.start.room == null || data.start.getRoomSymbol(true) == null || data.start.room instanceof MonsterRoomBoss)
-                        continue;
+            for (MapNodeData data : edges) {
+                if (data.end.room == null || data.end.getRoomSymbol(true) == null || data.end.room instanceof MonsterRoomBoss)
+                    continue;
 
-                    if (data.start.y > startY)
-                        startY = data.start.y;
+                if (data.end.y > startY)
+                    startY = data.end.y;
 
-                    data.start.addEdge(new MapEdge(data.start.x, data.start.y, data.start.offsetX, data.start.offsetY, data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, false));
-                    data.start.getEdges().sort(MapEdge::compareTo);
+                data.end.addEdge(new MapEdge(data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, data.start.x, data.start.y, data.start.offsetX, data.start.offsetY, false));
+                data.end.getEdges().sort(MapEdge::compareTo);
 
-                    if (data.end.y == 0)
-                        finalNodes.add(data.end);
-                }
-
-            } else {
-
-                for (MapNodeData data : edges)
-                {
-                    if (data.end.room == null || data.end.getRoomSymbol(true) == null || data.end.room instanceof MonsterRoomBoss)
-                        continue;
-
-                    if (data.end.y > startY)
-                        startY = data.end.y;
-
-                    data.end.addEdge(new MapEdge(data.end.x, data.end.y, data.end.offsetX, data.end.offsetY, data.start.x, data.start.y, data.start.offsetX, data.start.offsetY,false));
-                    data.end.getEdges().sort(MapEdge::compareTo);
-
-                    if (data.start.y == 0)
-                        finalNodes.add(data.start);
-                }
-
+                if (data.start.y == 0)
+                    finalNodes.add(data.start);
             }
 
-
-
-
             for (MapRoomNode n : finalNodes) {
-                System.out.println("加入新节点1");
                 n.addEdge(new MapEdge(n.x, n.y, n.offsetX, n.offsetY, 3, -1, 0.0F, Settings.MAP_DST_Y * 2, true));
             }
         }
@@ -148,6 +140,32 @@ public class FlipMap {
                 Matcher finalMatcher = new Matcher.MethodCallMatcher(Logger.class, "info");
                 return LineFinder.findInOrder(ctBehavior, finalMatcher);
             }
+        }
+    }
+
+
+    @SpirePatch(
+            clz = RoomTypeAssigner.class,
+            method = "ruleAssignableToRow"
+    )
+    public static class EliteRoomPatch {
+        @SpirePrefixPatch
+        public static SpireReturn<Boolean> Prefix(MapRoomNode n, AbstractRoom roomToBeSet) {
+            if (EvilModeCharacterSelect.evilMode) {
+                java.util.List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
+                List<Class<RestRoom>> applicableRooms2 = Collections.singletonList(RestRoom.class);
+
+                if (n.y >= 11 && applicableRooms.contains(roomToBeSet.getClass())) {
+                    return SpireReturn.Return(false);
+                }
+
+                if (n.y <= 1 && applicableRooms2.contains(roomToBeSet.getClass())) {
+                    return SpireReturn.Return(false);
+                }
+                return SpireReturn.Return(true);
+            }
+
+            return SpireReturn.Continue();
         }
     }
 
@@ -253,11 +271,7 @@ public class FlipMap {
                     if (!AbstractDungeon.firstRoomChosen) {
                         targetOffsetY[0] = DungeonMapScreen.offsetY = ___mapScrollUpperLimit;
                     }
-                    /*else
-                    {
-                        targetOffsetY[0] += MORE_ADJUST;
-                        DungeonMapScreen.offsetY += MORE_ADJUST;
-                    }*/
+
                 }
             }
         }
@@ -320,7 +334,7 @@ public class FlipMap {
             }
         }
 
-        //i don't really need to separate this but I'm doing it anyways
+
         private static class BossVisitifier extends ExprEditor {
             private int count = 0;
 

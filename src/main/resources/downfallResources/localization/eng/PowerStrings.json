@@ -16,7 +16,7 @@
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Cannot be killed.  Retreats to recover when reduced to 0 HP."
+      "Cannot be killed.  Ends your turn and retreats to recover when reduced to 0 HP."
     ]
   },
   "downfall:TransformDrawnCardsPower": {

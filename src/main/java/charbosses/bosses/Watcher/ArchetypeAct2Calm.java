@@ -112,7 +112,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         addToDeck(new EnWallop(), true);
 
         //Turn 6   - Art of War gets triggered on this turn
-        addToDeck(new EnDevaForm(), false);
+        addToDeck(new EnDevaForm(), true);
         addToDeck(new EnThroughViolence(), false);
         AbstractBossCard c = new EnRitualDagger();
         c.misc += 5;

@@ -21,9 +21,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
 import downfall.actions.NeowReturnAction;
 import downfall.downfallMod;
 import downfall.actions.NeowRezAction;
@@ -294,6 +296,10 @@ public class NeowBoss extends AbstractMonster {
             isRezzing = true;
             createIntent();
             this.halfDead = true;
+            AbstractDungeon.actionManager.callEndTurnEarlySequence();
+            CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
+            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLD, true));
+            AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
         }
 
 
@@ -311,6 +317,7 @@ public class NeowBoss extends AbstractMonster {
                 } else {
                     AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, NeowInvulnerablePower.POWER_ID));
                 }
+
             }
             AbstractCharBoss.boss = null;
             movingBack = true;

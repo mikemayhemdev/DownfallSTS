@@ -139,17 +139,40 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int autoPriority() {
         AbstractCharBoss ownerBoss = (AbstractCharBoss) this.owner;
         boolean setupPhase = ownerBoss.onSetupTurn;
+
         float blockModifier = 1F;
         if (setupPhase) blockModifier = 1.5F;
+
         int value = 0;
         if (this.type == CardType.STATUS) {
             value += -10;
         } else if (this.type == CardType.CURSE) {
             value += -100;
         }
-        value += Math.max(this.damage, 0);
-        value += Math.max(this.block * 1.3F * blockModifier, 0);  //Block is weighted a little higher, and extra higher if in a Setup turn
+
+
+        if(this.type == CardType.ATTACK ){
+            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
+                value += Math.max(this.damage, 0);
+            }else {
+                value += Math.max(this.damage * 2.0f, 0);
+            }
+
+        }
+
+        value += Math.max(this.block * 1.3F * blockModifier, 0);
+
+        if(this.type == CardType.POWER || this.color == CardColor.COLORLESS ){
+            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
+                value *= 5 ;
+            }else {
+                value /= 2 ;
+            }
+
+        }
+
         if (isEthereal) value *= 2;
+
         return value;
     }
 
