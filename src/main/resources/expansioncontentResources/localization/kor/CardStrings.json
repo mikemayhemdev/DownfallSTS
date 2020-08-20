@@ -1,0 +1,157 @@
+{
+  "expansioncontent:ChargeUp": {
+    "NAME": "충전 중",
+    "DESCRIPTION": "expansioncontent:보스 - 수호자. NL 다음 턴에, 방어도 !B! 와 힘 !M! 얻습니다. NL 소멸."
+  },
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "회오리바람",
+    "DESCRIPTION": "expansioncontent:보스 - 수호자. NL 모든 적에게 피해 !D! 를 4 번 가합니다. NL 소멸."
+  },
+  "expansioncontent:DefensiveMode": {
+    "NAME": "수비 모드",
+    "DESCRIPTION": "expansioncontent:보스 - 수호자. NL 방어도 !B! 얻습니다. NL guardianmod:수비모드 에 들어갑니다."
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "지옥염",
+    "DESCRIPTION": "expansioncontent:보스 - 육각령. NL HP 6 잃습니다. NL 무작위 적에게 피해 !D! 을 6번 가합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 육각령. NL 무작위 적에게 피해 !D! 을 6번 가합니다. NL 소멸."
+  },
+  "expansioncontent:Sear": {
+    "NAME": "그을리기",
+    "DESCRIPTION": "expansioncontent:보스 - 육각령. NL 피해 !D! 가합니다. NL hexamod:영혼화상 !M! 적용합니다. NL 소멸."
+  },
+  "expansioncontent:SuperHexaguard": {
+    "NAME": "유령 방어",
+    "DESCRIPTION": "expansioncontent:보스 - 육각령. 휘발성. hexamod:사후세계. NL 방어도 !B! 얻습니다. NL 카드 1 장 뽑습니다."
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "파괴광선",
+    "DESCRIPTION": "expansioncontent:보스 - 자동인형. NL 모든 적에게 피해 !D! 가합니다. NL 다음 턴이 시작할 때, [E] 잃습니다. NL 소멸."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "마구 휘두르기",
+    "DESCRIPTION": "expansioncontent:보스 - 자동인형. NL 모든 적에게 피해 !D! 를 두 번 가합니다. NL 인공물 1 얻습니다. NL 소멸."
+  },
+  "expansioncontent:BronzeBeam": {
+    "NAME": "구체 지원",
+    "DESCRIPTION": "expansioncontent:보스 - 자동인형. NL 피해 !D! 가합니다. NL 방어도 !B! 얻습니다. NL 소멸."
+  },
+  "expansioncontent:DefensiveStance": {
+    "NAME": "방어 태세",
+    "DESCRIPTION": "expansioncontent:보스 - 투사. NL 방어도 !B! 얻습니다. NL 매턴이 끝날 때마다 방어도 !M! 얻습니다."
+  },
+  "expansioncontent:FaceSlap": {
+    "NAME": "따귀 때리기",
+    "DESCRIPTION": "expansioncontent:보스 - 투사. NL 방어도를 모두 제거합니다. NL 피해 !D! 가합니다. NL 취약 !M! 적용합니다.. NL 소멸."
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "최후의 저항",
+    "DESCRIPTION": "expansioncontent:보스 - 투사. NL 모든 디버프를 제거합니다. NL 힘 1 얻습니다. NL 만약 체력이 절반 이하면, 힘 2 얻습니다.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 투사. NL 모든 디버프를 제거합니다. NL 힘 1 얻습니다. NL 만약 체력이 절반 이하면, 힘 2 를 얻고 !M! 회복합니다."
+  },
+  "expansioncontent:Collect": {
+    "NAME": "수집",
+    "DESCRIPTION": "expansioncontent:보스 - 수집가. NL 방어도 !B! 얻습니다. NL 힘 1 얻습니다. NL 민첩 1 얻습니다."
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "넌 나의 것이다!",
+    "DESCRIPTION": "expansioncontent:보스 - 수집가. NL 모든 적의 방어도를 제거하고 약화 !M! 와 취약 !M! 을 부여합니다. NL 소멸."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "횃불",
+    "DESCRIPTION": "expansioncontent:보스 - 수집가. NL 피해 !D! 가합니다. 적의 디버프마다 피해가 !M! 증가합니다. NL 소멸."
+  },
+  "expansioncontent:CaCaw": {
+    "NAME": "까-까악!",
+    "DESCRIPTION": "expansioncontent:보스 - 깨어난 자. NL 매턴 시작할 때마다 힘 !M! 얻습니다."
+  },
+  "expansioncontent:DarkVoid": {
+    "NAME": "어둠의 목소리",
+    "DESCRIPTION": "expansioncontent:보스 - 깨어난 자. NL 모든 적에게 피해 !D! 가합니다. 다음 차례에 각 적마다 그들의 턴에 공격하지 많으면, 힘 1 얻습니다. NL 소멸."
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "각성",
+    "DESCRIPTION": "expansioncontent:보스 - 깨어난 자. NL 당신이 죽는 대신, HP !M! 회복합니다."
+  },
+  "expansioncontent:TimeRipple": {
+    "NAME": "시간 파동",
+    "DESCRIPTION": "expansioncontent:보스 - 시간 포식자. NL 모든 적에게 피헤 !D! 가하고 둔화 를 적용시킵니다. NL 소멸."
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "시간-가속",
+    "DESCRIPTION": "expansioncontent:보스 - 시간 포식자. NL 12 번째 카드를 사용할 떄마다 힘 2 얻습니다.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 시간 포식자. NL 9 번째 카드를 사용할 떄마다 힘 2 얻습니다."
+  },
+  "expansioncontent:ManipulateTime": {
+    "NAME": "시간 조작",
+    "DESCRIPTION": "expansioncontent:보스 - 시간 포식자. NL 방어도 !B! 얻습니다. NL 당신 턴에 시작하는 모든 효과를 발동시킵닌다. NL 소멸."
+  },
+  "expansioncontent:DonusPower": {
+    "NAME": "도누의 힘",
+    "DESCRIPTION": "expansioncontent:보스 - 오래된 것. NL 힘 1 얻습니다. NL 손에 무작위 공격카드를 추가합니다. 이번 턴에 비용이 0 입니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "힘 1 얻고 인공물 1 얻습니다.NL 손에 무작위 공격카드를 추가합니다. 이번 턴에 비용이 0 입니다. NL 소멸."
+  },
+  "expansioncontent:DecasProtection": {
+    "NAME": "데카의 보호",
+    "DESCRIPTION": "expansioncontent:보스 - 오래된 것. NL 민첩 1 얻습니다. NL 손에 무작위 파워카드를 추가합니다. 이번 턴에 비용이 0 입니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "민첩 1 얻고 인공물 1 얻습니다. NL 손에 무작위 파워카드를 추가합니다. 이번 턴에 비용이 0 입니다. NL 소멸."
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "쌍둥이 빔",
+    "DESCRIPTION": "expansioncontent:보스 - 오래된 것. NL 피해 !D! 을 두 번 줍니다. NL 다음 턴이 시작될 때 피해 !D! 을 두 번 줍니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해 !D! 을 두 번 줍니다. NL 소멸."
+  },
+  "expansioncontent:PrepareCrush": {
+    "NAME": "으깨기 준비",
+    "DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 방어도 !B! 얻습니다. NL 다음 턴에 [E] [E] [E] 과 함 !M! 얻고, 슬라임 으깬다! 카드를 얻습니다. NL 소멸."
+  },
+  "expansioncontent:GoopSpray": {
+    "NAME": "점액 흩뿌리기",
+    "DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 모든 적에게 점액 !M! 과 취약 2 부여합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 모든 적에게 점액 !M! 과 취약 3 부여합니다. NL 소멸."
+  },
+  "expansioncontent:SlimeTackle": {
+    "NAME": "슬라임 태클",
+    "DESCRIPTION": "expansioncontent:보스 - 대왕 슬라임. NL 피해 !D! 주고 피해 3을 스스로 입습니다. NL 소멸."
+  },
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "첨탑 학습",
+    "DESCRIPTION": "다음 !M! 턴 동안, 무작위 무색 expansioncontent:보스 카드를 손에 가져옵니다. 사용할 때까지 비용이 0 입니다.",
+    "UPGRADE_DESCRIPTION": "다음 !M! 턴 동안, 강화된 무작위 무색 expansioncontent:보스 카드를 손에 가져옵니다. 사용할 때까지 비용이 0 입니다."
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "빠른 학습",
+    "DESCRIPTION": "세 보스 중 하나를 선택합니다. NL 그 expansioncontent:보스 카드의 복사본을 하나씩 얻습니다. NL 비용이 1 감소합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "세 보스 중 하나를 선택합니다. NL 그 expansioncontent:보스 카드의 강화된 복사본을 하나씩 얻습니다. NL 비용이 1 감소합니다. NL 소멸."
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "내면의 악",
+    "DESCRIPTION": "피해 !D! 가합니다. NL 방어도 !B! 얻습니다. NL 무작위 무색 expansioncontent:보스 를 손으로 가져옵니다. 사용할 때까지 비용이 0 입니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해 !D! 가합니다. NL 방어도 !B! 얻습니다. NL 강화된 무작위 무색 expansioncontent:보스 를 손으로 가져옵니다. 사용할 때까지 비용이 0 입니다. NL 소멸."
+  },
+  "expansioncontent:Corrupt": {
+    "NAME": "오염",
+    "DESCRIPTION": "카드 1 장 소멸시킵니다. 비용이 1 적은 무작위 무색 expansioncontent:보스 카드로 대체됩니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드 1 장 소멸시킵니다. 비용이 1 적은 강화된 무작위 무색 expansioncontent:보스 카드로 대체됩니다. NL 소멸."
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "소망",
+    "DESCRIPTION": "휘발성. NL HP를 영혼, 성공, 기운나는 것에 사용합니다. NL 소멸."
+  },
+  "expansioncontent:ShieldSmash": {
+    "NAME": "갑옷 부수기",
+    "DESCRIPTION": "보존. NL 적의 모든 방어도 를 제거합니다. NL 소멸."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "해독제",
+    "DESCRIPTION": "보존. NL 모든 독을 해제합니다. NL 독은 방어도 건너뛸 수 없으며, 턴 종료시 스택의 절반을 잃습니다. NL 소멸."
+  },
+  "expansioncontent:Debug": {
+    "NAME": "손상된 코어",
+    "DESCRIPTION": "보존. NL 모든 구체를 제거합니다. NL 소멸."
+  },
+  "expansioncontent:PeaceOut": {
+    "NAME": "어둠의 속삭임",
+    "DESCRIPTION": "보존. NL 적을 경지에서 벗어나게 합니다. NL 적의 만트라를 모두 제거합니다. NL 소멸."
+  }
+}

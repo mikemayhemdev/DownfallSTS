@@ -150,7 +150,9 @@ public class downfallMod implements
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
             Settings.GameLanguage.ENG,
-            Settings.GameLanguage.ZHS
+            Settings.GameLanguage.ZHS,
+            Settings.GameLanguage.JPN,
+            Settings.GameLanguage.KOR
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;

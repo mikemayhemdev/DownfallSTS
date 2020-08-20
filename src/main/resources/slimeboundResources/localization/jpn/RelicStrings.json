@@ -1,0 +1,104 @@
+{
+  "Slimebound:AbsorbEndCombat": {
+    "NAME": "Heart of Goo",
+    "FLAVOR": "I feel so funky.",
+    "DESCRIPTIONS": [
+      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
+    ]
+  },
+  "Slimebound:AbsorbEndCombatUpgraded": {
+    "NAME": "Black Heart of Goo",
+    "FLAVOR": "The Secret of the Ooze.",
+    "DESCRIPTIONS": [
+      "Whenever you #yslimeboundmod:Consume, heal 4 HP."
+    ]
+  },
+  "Slimebound:SlimedTailRelic": {
+    "NAME": "Slimed Tail",
+    "FLAVOR": "A fake tail to trick enemies during combat, completely covered in slime.",
+    "DESCRIPTIONS": [
+      "When you fall below #b50% of your Maximum HP, #yslimeboundmod:Split into a #yslimeboundmod:Guerilla Slime, and the next time you take damage, your leading slime is #yslimeboundmod:Absorbed instead. (works once per combat).",
+      "This relic has been used this combat. It will become active again next combat."
+    ]
+  },
+  "Slimebound:PotencyRelic": {
+    "NAME": "Ooze Stone",
+    "FLAVOR": "It is said to gain power based on your mood.",
+    "DESCRIPTIONS": [
+      "At the start of combat, #yslimeboundmod:split into a #yslimeboundmod:Mire Slime and gain #b1 #yslimeboundmod:Potency."
+    ]
+  },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "Slime the Spire",
+    "FLAVOR": "ALWAYS Split.  Why is this a relic? Cause I can't figure out how to add the custom mod to the list of active mods UI!",
+    "DESCRIPTIONS": [
+      "#bCustom #bRun #bModifier NL All enemies form into two Slime enemies at #b50% HP."
+    ]
+  },
+  "Slimebound:ScrapOozeRelic": {
+    "NAME": "Scrap Ooze",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "At the start of combat, spawn #yScrap #yOoze. NL At Rest Sites, you can donate a card to the Scrap Ooze, modifying it's damage: NL #b+1 damage for #gUncommons NL #b+2 damage for #yRares NL #b-1 damage for Commons NL #b-2 damage for #rCurses",
+      "Remove a card from your deck and modify Scrap Ooze's damage.",
+      "Nothing to give to the Scrap Ooze."
+    ]
+  },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "Greed Ooze",
+    "FLAVOR": "A friend found in the Spire who hoards gold.",
+    "DESCRIPTIONS": [
+      "At the start of combat, spawn #yGreed #yOoze. NL At Rest Sites, #yGreed #yOoze will take #b50 of your gold, increasing its damage by #b1."
+    ]
+  },
+  "Slimebound:PreparedRelic": {
+    "NAME": "Slime Soup",
+    "FLAVOR": "Tastes awful, but incredibly healthy.",
+    "DESCRIPTIONS": [
+      "When you enter a Rest Site, begin the next combat with a #yPrepare card that costs #b0 for your first turn."
+    ]
+  },
+  "Slimebound:AggressiveSlimeRelic": {
+    "NAME": "Goop Dweller",
+    "FLAVOR": "He followed me home. Can I keep it?",
+    "DESCRIPTIONS": [
+      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Bruiser Slime."
+    ]
+  },
+  "Slimebound:SlimedSkullRelic": {
+    "NAME": "Slimy Skull",
+    "FLAVOR": "A Snecko skull in absolutely awful condition. Unclean and slimy, dirt and grime stick to it like glue.",
+    "DESCRIPTIONS": [
+      "Whenever you apply #yslimeboundmod:Goop, apply an additional #b",
+      " #yslimeboundmod:Goop."
+    ]
+  },
+  "Slimebound:MaxSlimesRelic": {
+    "NAME": "Jeremiah's Banner",
+    "FLAVOR": "You and ooze army.",
+    "DESCRIPTIONS": [
+      "At the start of combat, #yslimeboundmod:Split into a #yslimeboundmod:Leeching slime and gain #b1 Slime slot."
+    ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "Protective Gear",
+    "FLAVOR": "The best defense is a good offense.",
+    "DESCRIPTIONS": [
+      "Reduce the damage you take from #yslimeboundmod:Tackle cards by #b1."
+    ]
+  },
+  "Slimebound:TarBlob": {
+    "NAME": "Tarr Blob",
+    "FLAVOR": "The bad kind of Slime.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. #yslimeboundmod:Splitting costs #b2 more HP and Max HP."
+    ]
+  },
+  "Slimebound:StickyStick": {
+    "NAME": "Gelatinous Cube",
+    "FLAVOR": "Hey, it stuck to your body.",
+    "DESCRIPTIONS": [
+      "Whenever you draw a #rCurse or #yStatus card, draw #b1 card."
+    ]
+  }
+}

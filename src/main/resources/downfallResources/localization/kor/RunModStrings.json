@@ -1,0 +1,22 @@
+{
+  "downfall:WorldOfGoo": {
+    "NAME": "끈끈한 세계",
+    "DESCRIPTION": "막히지 않는 피해를 줄때마다, 점액투성이 상태이상을 버린 카드더미에 추가합니다."
+  },
+  "downfall:Hexed": {
+    "NAME": "주문걸림",
+    "DESCRIPTION": "벨벳 초커와 함께 시작합니다. 카드를 뽑으면, 소멸합니다."
+  },
+  "downfall:Improvised": {
+    "NAME": "변칙적임",
+    "DESCRIPTION": "알 수 없는 카드 10 장과 함께 시작합니다."
+  },
+  "downfall:Jewelcrafting": {
+    "NAME": "보석제작중",
+    "DESCRIPTION": "Start with two copies of Exploit Gem and a Rhapsody Co. Mining Pick."
+  },
+  "downfall:EvilRun": {
+    "NAME": "악의 도망",
+    "DESCRIPTION": "악의 도망 컨텐츠를 활성화합니다."
+  }
+}

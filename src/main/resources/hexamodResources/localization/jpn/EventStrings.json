@@ -1,0 +1,67 @@
+{
+  "hexamod:WanderingSpecter": {
+    "NAME": "Wandering Specter",
+    "DESCRIPTIONS": [
+      "This area of the Spire appears to be a #pgraveyard. You carefully continue through when a strange, faint ~apparition~ stops you. It reaches out with one hand, apparently offering some sort of #rdeal.",
+      "The #bghostly #bbeing touches your shoulder and you @collapse.@ NL NL You awaken later in an empty area of the Spire with a #gtrinket at your feet. As you continue, you feel ~oddly~ ~watched...~",
+      "You shake your head and the #bghost gives you one last, laborious look before continuing on in its ~endless~ ~walk.~ You continue onwards, as well. "
+    ],
+    "OPTIONS": [
+      "[Accept] Obtain ",
+      ". #rBecome #rCursed #r- #rHaunted.",
+      "[Decline]",
+      "[Leave]",
+      "[Locked]"
+    ]
+  },
+  "hexamod:SealChamber": {
+    "NAME": "Seal Chamber",
+    "DESCRIPTIONS": [
+      "A menacing structure lies before you.  Most would never dare approach it, but you know its purpose, and know it can be of great use. NL You enter the chamber, and prepare to make a #rsacrifice...",
+      "Paying a piece of your very soul, you acquire the seal - one more step in the path to your ultimate power.",
+      "Weighing your options, you decide against making a sacrifice in the Seal Chamber.  You'll need everything you have to complete your journey."
+    ],
+    "OPTIONS": [
+      "[Offer] #rLose ",
+      " HP. #gGain #gFirst #gSeal.",
+      " Gold. #gGain #gSecond #gSeal.",
+      ". #gGain #gThird #gSeal.",
+      ". #gGain #gFourth #gSeal.",
+      "[Locked] Requires more Gold.",
+      "[Locked] Requires a Common Card.",
+      "[Locked] Requires a Potion.",
+      "[Leave]"
+    ]
+  },
+  "hexamod:HexaFalling": {
+    "NAME": "HexaFalling",
+    "DESCRIPTIONS": [
+      "You, being unbound by the feeble laws of gravity, ~float~ over the pit harmlessly.",
+      "TODO..."
+    ],
+    "OPTIONS": [
+      "[Float] #rLose #rnothing...",
+      "[Leave]"
+    ]
+  },
+  "hexamod:CouncilOfGhosts": {
+    "NAME": "Council of Ghosts",
+    "DESCRIPTIONS": [
+      "As you continue your ascent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"This~ ~one~ ~is~ #r~doomed...\"~ NL \"We understand your plight, #pcursed one... Would you like to learn our #y~secrets?\"~ ",
+      "#y\"Excellent!\" NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. #p~Thick~ #p~black~ #p~smoke~ spews forth and envelops the room. You cannot see or breathe...",
+      "Still shrouded in #p~black~ #p~smoke~, your body withers, but your spirit #pburns #pbrighter than ever before. NL You understand how the corporeal and incorporeal are connected, in ways you never thought possible.",
+      "Within the darkness, you see with eyes unclouded. The spirits have shown you have to master your form, to transition between this worth and another with ease.",
+      "\"Good luck, #pcursed one...\" NL ~\"We~ ~will~ ~stay~ ~and~ ~help~ ~others...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL You aren't quite sure why the last one laughed as the Council faded, but you are grateful to have gained their knowledge.",
+      "\"How disappointing...\" NL ~\"You~ ~will~ ~never~ ~escape~ ~this~ ~place...\"~ NL #r@\"HA@ #r@HA@ #r@HA@ #r@HAHAHA!\"@ NL NL The shapes fade away, leaving only the unnerving laughter ringing in your ears."
+      ],
+    "OPTIONS": [
+      "[Accept] #rLose #r",
+      " #rMax #rHP. Unlock Study and Learn options.",
+      "[Study] #rLose #rall #rStrikes. #gGain #g3 #gCouncil's #gJustice.",
+      "[Learn] #rLose #rall #rDefends. #gGain #g3 #gApparition.",
+      "[Complete]",
+      "[Leave]",
+      "[Locked] Cannot leave yet."
+    ]
+  }
+}

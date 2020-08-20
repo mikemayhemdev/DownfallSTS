@@ -1,0 +1,29 @@
+{
+  "Guardian:EnhanceBonfireOptions": {
+    "TEXT": [
+      "Enhance",
+      "(Free Action) Place a Gem into an open Socket.",
+      "Requires a Gem and an open Socket.",
+      "Select a Gem.",
+      "Select a Card to receive the Gem."
+    ]
+  },
+  "Guardian:UIOptions": {
+    "TEXT": [
+      "Choose a Card to place into Stasis.",
+      "Pick a Gem.",
+      "Add a Common Gem to your deck",
+      "place into Stasis.",
+      "~ERROR:~ Cannot #rAttack in Construction Mode.",
+      "~ERROR:~ #rStasis in progress.",
+      "Add a Gem to your deck"
+    ]
+  },
+  "Guardian:FindGemsOption": {
+    "TEXT": [
+      "Mine",
+      "Gain 2 random Gems.",
+      "Pick broken."
+    ]
+  }
+}
