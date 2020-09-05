@@ -22,5 +22,9 @@
   "downfall:ExchangeController": {
     "NAME": "手柄互换",
     "DESCRIPTION": "起始获得涅奥的祝福。"
+  },
+  "downfall:Lament": {
+    "NAME": "悲恸",
+    "DESCRIPTION": "起始获得涅奥的悲恸。"
   }
 }

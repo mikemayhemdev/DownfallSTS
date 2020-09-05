@@ -128,7 +128,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight("downfall:CharBossIronclad");
+        downfallMod.saveBossFight(CharBossIronclad.ID);
     }
 
 }

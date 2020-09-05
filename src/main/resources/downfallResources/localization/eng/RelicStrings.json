@@ -11,7 +11,7 @@
     "NAME": "Neow's Blessing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose a Potion slots,draw #b1 less cards and lose [E] at the start of your turn."
+      "Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose all your Potion slots and cant obtain,draw #b1 less cards and lose [E] at the start of your turn."
     ]
   },
   "downfall:CoffeeDripper": {

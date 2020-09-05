@@ -64,7 +64,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.screen = WomanInBlue_Evil.CurScreen.FIGHT;
-                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:WomanInBlue");
+                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(LadyInBlue.ID);
                         AbstractDungeon.getCurrRoom().rewards.clear();
 
                         for (int i = 0; i < 3; i++) {
@@ -87,7 +87,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
 
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.enterCombatFromImage();
-                        AbstractDungeon.lastCombatMetricKey = "downfall:WomanInBlue";
+                        AbstractDungeon.lastCombatMetricKey = LadyInBlue.ID;
                         break;
                     case 1:
                         this.imageEventText.clearAllDialogs();

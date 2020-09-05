@@ -175,6 +175,6 @@ public class CharBossWatcher extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight("downfall:CharBossWatcher");
+        downfallMod.saveBossFight(CharBossWatcher.ID);
     }
 }

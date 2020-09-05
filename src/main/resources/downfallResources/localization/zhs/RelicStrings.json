@@ -3,7 +3,7 @@
     "NAME": "涅奥的祝福",
     "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
-      "替换初始遗物。拾起时，获得 #b100 最大生命。每一阶段开始时获得 #b100 点最大生命。 NL 失去所有药水栏位，每回合开始时少抽 #b2 张牌。每回合开始时失去 ",
+      "替换初始遗物。拾起时，获得 #b100 最大生命，失去所有药水栏位且无法获得。每一阶段开始时获得 #b100 点最大生命。 NL 每回合开始时少抽 #b2 张牌并失去 ",
 	  " 。"
     ]
   },
@@ -11,7 +11,7 @@
     "NAME": "涅奥的祝福",
     "FLAVOR": "放下你的怒火。像尖塔一样坚韧不屈。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b100 最大生命。每一阶段开始时获得 #b100 点最大生命。 NL 失去一个药水栏位，每回合开始时少抽 #b1 张牌。每回合开始时失去 [E] 。"
+      "拾起时，获得 #b100 最大生命，失去所有药水栏位且无法获得。每一阶段开始时获得 #b100 点最大生命。 NL 每回合开始时少抽 #b1 张牌并失去 [E] 。"
     ]
   },
   "downfall:CoffeeDripper": {
@@ -275,10 +275,10 @@
     ]
   },
   "downfall:PleadingVagrant": {
-      "NAME": "事件: Pleading Vagrant",
-    "FLAVOR": "Got anything for me friend? Please... maybe some #yCoin?",
+      "NAME": "事件: 浪汉的恳求",
+    "FLAVOR": "能给我点儿什么吗，朋友？ 求求你了……一点 #y小钱 就好？",
     "DESCRIPTIONS": [
-      "Boss robbed the Vagrants, gaining a Shame curse and "
+      "Boss抢劫了流浪汉，被 #p诅咒-羞耻 并 "
     ]
   },
   "downfall:Mushroom": {

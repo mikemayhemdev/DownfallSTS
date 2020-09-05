@@ -116,7 +116,7 @@ public class CharBossSilent extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight("downfall:CharBossSilent");
+        downfallMod.saveBossFight(CharBossSilent.ID);
     }
 
 }

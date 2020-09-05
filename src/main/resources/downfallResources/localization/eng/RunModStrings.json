@@ -22,5 +22,9 @@
   "downfall:ExchangeController": {
     "NAME": "Exchange Controller",
     "DESCRIPTION": "Start with a Neow's Blessing."
+  },
+  "downfall:Lament": {
+    "NAME": "Lament",
+    "DESCRIPTION": "Start with a Neow's Lament."
   }
 }

@@ -92,6 +92,6 @@ public class CharBossDefect extends AbstractCharBoss {
     @Override
     public void die() {
         super.die();
-        downfallMod.saveBossFight("downfall:CharBossDefect");
+        downfallMod.saveBossFight(CharBossDefect.ID);
     }
 }
