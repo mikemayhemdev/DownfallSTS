@@ -17,6 +17,7 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
@@ -198,6 +199,8 @@ public class downfallMod implements
                 return "hexamodResources/" + path;
             case PACKAGE_EXPANSION:
                 return "expansioncontentResources/" + path;
+            case PACKAGE_CHAMP:
+                return "champResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -270,6 +273,9 @@ public class downfallMod implements
 
         SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -339,6 +345,7 @@ public class downfallMod implements
         loadModKeywords(SneckoMod.getModID(), otherPackagePaths.PACKAGE_SNECKO);
         loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
+        loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
 
     }
 
@@ -1088,8 +1095,8 @@ public class downfallMod implements
         PACKAGE_GUARDIAN,
         PACKAGE_HEXAGHOST,
         PACKAGE_SNECKO,
-        PACKAGE_EXPANSION;
-
+        PACKAGE_EXPANSION,
+        PACKAGE_CHAMP;
         otherPackagePaths() {
         }
 

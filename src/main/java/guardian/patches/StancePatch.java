@@ -1,5 +1,8 @@
 package guardian.patches;
 
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -21,6 +24,15 @@ public class StancePatch {
             public static SpireReturn<AbstractStance> returnStance(String name) {
                 if (name.equals(DefensiveMode.STANCE_ID)) {
                     return SpireReturn.Return(new DefensiveMode());
+                }
+                if (name.equals(DefensiveStance.STANCE_ID)) {
+                    return SpireReturn.Return(new DefensiveStance());
+                }
+                if (name.equals(BerserkerStance.STANCE_ID)) {
+                    return SpireReturn.Return(new BerserkerStance());
+                }
+                if (name.equals(GladiatorStance.STANCE_ID)) {
+                    return SpireReturn.Return(new GladiatorStance());
                 }
                 return SpireReturn.Continue();
             }
