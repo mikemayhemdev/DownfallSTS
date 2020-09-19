@@ -1,8 +1,10 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampChar;
-import champ.ChampMod;
+import champ.actions.OpenerReduceCostAction;
+import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.GladiatorStance;
@@ -11,7 +13,6 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -115,7 +116,11 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public ArrayList<AbstractMonster> monsterList() {
-        return AbstractDungeon.getMonsters().monsters;
+        ArrayList<AbstractMonster> q = new ArrayList<>();
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (!m.isDying && !m.isDead) q.add(m);
+        }
+        return q;
     }
 
     public void applyToEnemy(AbstractMonster m, AbstractPower po) {
@@ -126,7 +131,7 @@ public abstract class AbstractChampCard extends CustomCard {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
-    public void loseHP(int amount){
+    public void loseHP(int amount) {
         atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
     }
 
@@ -138,6 +143,27 @@ public abstract class AbstractChampCard extends CustomCard {
         return new VulnerablePower(m, i, false);
     }
 
+    public void berserkerOpen() {
+        berserkerStance();
+        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+            atb(new OpenerReduceCostAction());
+        }
+    }
+
+    public void gladiatorOpen() {
+        gladiatorStance();
+        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+            atb(new OpenerReduceCostAction());
+        }
+    }
+
+    public void defensiveOpen() {
+        defensiveStance();
+        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+            atb(new OpenerReduceCostAction());
+        }
+    }
+
     public void berserkerStance() {
         SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
         atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
@@ -147,6 +173,7 @@ public abstract class AbstractChampCard extends CustomCard {
         SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
         atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
     }
+
     public void defensiveStance() {
         SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
         atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
@@ -155,5 +182,10 @@ public abstract class AbstractChampCard extends CustomCard {
     public void exitStance() {
         SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
         atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
+    }
+
+    public void techique() {
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance)
+            ((AbstractChampStance) AbstractDungeon.player.stance).technique();
     }
 }

@@ -1,11 +1,7 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
-import champ.util.BerserkerTechniqueMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.EtherealMod;
 
 public class Defend extends AbstractChampCard {
 
@@ -20,13 +16,10 @@ public class Defend extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = BLOCK;
         tags.add(CardTags.STARTER_DEFEND);
-        CardModifierManager.addModifier(this, new BerserkerTechniqueMod());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         blck();
-        berserkerStance();
     }
 
     public void upgrade() {

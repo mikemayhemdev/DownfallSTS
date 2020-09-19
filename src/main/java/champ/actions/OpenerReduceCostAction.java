@@ -17,7 +17,6 @@ import java.util.Iterator;
 import java.util.UUID;
 
 public class OpenerReduceCostAction extends AbstractGameAction {
-    UUID uuid;
     private AbstractCard card = null;
 
     public OpenerReduceCostAction() {
@@ -32,9 +31,9 @@ public class OpenerReduceCostAction extends AbstractGameAction {
 
             for (AbstractCard c : AbstractDungeon.player.hand.group){
                 if (c.costForTurn > 0){
-                    if (!c.hasTag(ChampMod.OPENER)){
+                    //if (!c.hasTag(ChampMod.OPENER)){
                         validCards.add(c);
-                    }
+                    //}
                 }
             }
 
