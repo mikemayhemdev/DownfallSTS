@@ -156,29 +156,4 @@ public abstract class AbstractChampCard extends CustomCard {
         SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
         atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
     }
-
-    @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (this.hasTag(ChampMod.BERSERKER_TECH)){
-            if (abstractPlayer.stance instanceof BerserkerStance){
-                exitStance();
-            } else {
-                this.exhaust = true;
-            }
-        }
-        if (this.hasTag(ChampMod.DEFENSIVE_TECH)){
-            if (abstractPlayer.stance instanceof DefensiveStance){
-                exitStance();
-            } else {
-                this.exhaust = true;
-            }
-        }
-        if (this.hasTag(ChampMod.GLADIATOR_TECH)){
-            if (abstractPlayer.stance instanceof GladiatorStance){
-                exitStance();
-            } else {
-                this.exhaust = true;
-            }
-        }
-    }
 }
