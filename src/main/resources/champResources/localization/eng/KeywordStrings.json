@@ -40,5 +40,26 @@
       "resolve"
     ],
     "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve."
+  },
+  {
+    "PROPER_NAME": "Gladiator",
+    "NAMES": [
+      "gladiator"
+    ],
+    "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounterstrike. #yFinisher: Gain #b12 #yBlock."
+  },
+  {
+    "PROPER_NAME": "Berserker",
+    "NAMES": [
+      "berserker"
+    ],
+    "DESCRIPTION": "#yStance. #yTechnique: Lose #b4 HP and gain #b4 #yResolve. #yFinisher: Lose all your #yResolve and gain that much HP."
+  },
+  {
+    "PROPER_NAME": "Gladiator",
+    "NAMES": [
+      "gladiator"
+    ],
+    "DESCRIPTION": "#yStance. #yTechnique: Draw #b1 card. #yFinisher: Don't end your turn."
   }
 ]
