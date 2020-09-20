@@ -63,7 +63,7 @@ public class ChampChar extends CustomPlayer {
     */
 
     public ChampChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", null, null);
+        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
 
         /*
         if(!reskinContent.hexaghostReskinAnimation) {
