@@ -47,5 +47,14 @@
   "champ:FlashCut": {
     "NAME": "Flash Cut",
     "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike."
+  },
+  "champ:Balance": {
+    "NAME": "Balance",
+    "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION:": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random upgraded champ:Combo card to your hand of the chosen Stance.",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
+      "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand."
+    ]
   }
 }
