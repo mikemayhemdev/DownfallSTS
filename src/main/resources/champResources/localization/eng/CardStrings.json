@@ -120,5 +120,9 @@
       "champ:Defensive champ:Opener. NL Add a random upgraded champ:Defensive champ:Combo to your hand.",
       "champ:Berserker champ:Opener. NL Add a random upgraded champ:Berserker champ:Combo to your hand."
     ]
+  },
+  "champ:Circumvent": {
+    "NAME": "Circumvent",
+    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike."
   }
 }
