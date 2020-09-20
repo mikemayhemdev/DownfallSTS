@@ -189,5 +189,9 @@
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL champ:Gladiator champ:Combo: Increase this card's damage and block by !M! this combat."
+  },
+  "champ:CrookedStrike": {
+    "NAME": "Crooked Strike",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in your hand."
   }
 }
