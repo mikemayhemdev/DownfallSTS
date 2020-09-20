@@ -1,6 +1,7 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.powers.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -106,6 +107,7 @@ public abstract class AbstractChampStance extends AbstractStance {
                 ((OnTechniqueSubscriber) q).onTechnique();
             }
         }
+        ChampMod.techniquesThisTurn++;
     }
 
     public abstract void technique();

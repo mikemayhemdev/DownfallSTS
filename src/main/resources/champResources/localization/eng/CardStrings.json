@@ -193,5 +193,10 @@
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
     "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in your hand."
+  },
+  "champ:RapidStrikes": {
+    "NAME": "Rapid Strikes",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL champ:Gladiator champ:Combo: Repeat twice more."
   }
 }
