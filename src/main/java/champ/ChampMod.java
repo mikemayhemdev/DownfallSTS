@@ -70,7 +70,8 @@ public class ChampMod implements
     public static AbstractCard.CardTags TECHNIQUE;
 
     private static String modID = "champ";
-    public int finishersPlayedThisTurn = 0;
+    public static int finishersThisTurn = 0;
+    public static int finishersThisCombat = 0;
     public static int techniquesThisTurn = 0;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -228,7 +229,9 @@ public class ChampMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-
+        finishersThisTurn = 0;
+        finishersThisCombat = 0;
+        techniquesThisTurn = 0;
     }
 
     @Override
@@ -284,7 +287,9 @@ public class ChampMod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        finishersPlayedThisTurn = 0;
+        finishersThisTurn = 0;
+        finishersThisCombat = 0;
+        techniquesThisTurn = 0;
     }
 
 
@@ -329,7 +334,8 @@ public class ChampMod implements
 
     @Override
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
-        finishersPlayedThisTurn = 0;
+        finishersThisTurn = 0;
+        techniquesThisTurn = 0;
         return false;
     }
 
@@ -341,9 +347,9 @@ public class ChampMod implements
             atb(new OpenerReduceCostAction());
         }
         if (abstractCard.hasTag(ChampMod.FINISHER)) {
-            finishersPlayedThisTurn++;
+            finishersThisTurn++;
             if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                if (finishersPlayedThisTurn > 1) {
+                if (finishersThisTurn > 1) {
                     atb(new com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction());
                 }
             } else {
