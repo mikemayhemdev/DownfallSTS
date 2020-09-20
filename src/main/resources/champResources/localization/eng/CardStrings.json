@@ -86,9 +86,9 @@
     "DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
     "UPGRADE_DESCRIPTION:": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Defensive champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
       "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random upgraded champ:Berserker champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random upgraded champ:Berserker champ:Combo to your hand.",
       "champ:Gladiator champ:Opener. NL Add a random upgraded champ:Gladiator champ:Combo to your hand."
     ]
   },
@@ -109,5 +109,16 @@
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
     "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat for each champ:Finisher in your hand."
+  },
+  "champ:Temperance": {
+    "NAME": "Temperance",
+    "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION:": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random upgraded champ:Combo card to your hand of the chosen Stance.",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
+      "champ:Defensive champ:Opener. NL Add a random upgraded champ:Defensive champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random upgraded champ:Berserker champ:Combo to your hand."
+    ]
   }
 }
