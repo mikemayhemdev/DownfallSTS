@@ -1,4 +1,4 @@
-package theHexaghost.actions;
+package downfall.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
