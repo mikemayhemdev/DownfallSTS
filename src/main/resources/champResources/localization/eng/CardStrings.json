@@ -132,5 +132,9 @@
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
+  },
+  "champ:EnGarde": {
+    "NAME": "En Garde",
+    "DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
   }
 }
