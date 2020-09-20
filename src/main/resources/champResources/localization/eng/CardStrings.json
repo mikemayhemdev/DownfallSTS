@@ -25,5 +25,10 @@
       "champ:Defensive champ:Opener.",
       "champ:Gladiator champ:Opener."
     ]
+  },
+  "champ:GladiatorsShout": {
+    "NAME": "Gladiator's Shout",
+    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL Draw 2 cards."
   }
 }
