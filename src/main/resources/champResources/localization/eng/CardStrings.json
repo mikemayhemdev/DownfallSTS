@@ -43,5 +43,9 @@
   "champ:FaceSlap": {
     "NAME": "Face Slap",
     "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Berserker champ:Combo: Apply !M! Vulnerable."
+  },
+  "champ:FlashCut": {
+    "NAME": "Flash Cut",
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike."
   }
 }
