@@ -61,5 +61,10 @@
     "NAME": "Defensive Shout",
     "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL Draw 1 card.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL Draw 2 cards."
+  },
+  "champ:ShieldSigil": {
+    "NAME": "Shield Sigil",
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Defensive champ:Combo: champ:Technique 3 times.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL champ:Defensive champ:Combo: champ:Technique 3 times."
   }
 }
