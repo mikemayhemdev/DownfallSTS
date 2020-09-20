@@ -211,5 +211,9 @@
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
     "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. NL You can't attack next turn. NL champ:Berserker champ:Combo: You can attack next turn."
+  },
+  "champ:MurderStrike": {
+    "NAME": "Murder Strike",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever an champ:Opener reduces this card's cost, increase its damage by 5. NL Exhaust."
   }
 }

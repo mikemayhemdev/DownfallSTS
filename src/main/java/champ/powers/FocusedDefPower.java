@@ -3,6 +3,7 @@ package champ.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import champ.stances.DefensiveStance;
+import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

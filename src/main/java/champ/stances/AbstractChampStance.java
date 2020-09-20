@@ -2,7 +2,7 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
-import champ.powers.OnTechniqueSubscriber;
+import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
