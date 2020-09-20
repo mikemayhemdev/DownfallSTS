@@ -63,6 +63,16 @@ public abstract class AbstractChampCard extends CustomCard {
         initializeDescription();
     }
 
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upp();
+        }
+    }
+
+    public abstract void upp();
+
     private static String getCorrectPlaceholderImage(String id) {
         return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }
