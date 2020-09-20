@@ -56,5 +56,10 @@
       "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
       "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand."
     ]
+  },
+  "champ:DefensiveShout": {
+    "NAME": "Defensive Shout",
+    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL Draw 2 cards."
   }
 }
