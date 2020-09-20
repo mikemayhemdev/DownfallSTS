@@ -145,12 +145,12 @@
   "champ:EnchantedShield": {
     "NAME": "Enchanted Shield",
     "DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
     "DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -207,5 +207,9 @@
   "champ:BladeFlurry": {
     "NAME": "Blade Flurry",
     "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each Attack in your hand. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+  },
+  "champ:SwordThrow": {
+    "NAME": "Sword Throw",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. NL You can't attack next turn. NL champ:Berserker champ:Combo: You can attack next turn."
   }
 }

@@ -48,5 +48,13 @@
       "After you are attacked, gain #b",
       " #yCounterstrike."
     ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "Sword Thrown",
+    "DESCRIPTIONS": [
+      "You can't play #yAttacks next turn.",
+      "You can't play #yAttacks for the next #b",
+      " turns."
+    ]
   }
 }
