@@ -2,6 +2,7 @@ package champ.patches;
 
 import champ.ChampMod;
 import champ.cards.AbstractChampCard;
+import champ.stances.BerserkerStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -10,6 +11,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 
 public class ExtraEnergyOrbPatch {
@@ -25,7 +27,14 @@ public class ExtraEnergyOrbPatch {
                     if (((AbstractChampCard) __instance).myHpLossCost > 0) {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale * 0.75F);
                         renderHelper(sb, healthBlob, __instance.current_x, __instance.current_y, __instance);
-                        FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, Integer.toString(((AbstractChampCard) __instance).myHpLossCost), __instance.current_x, __instance.current_y, -135.0F * __instance.drawScale * Settings.scale, -50 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
+                        int x = ((AbstractChampCard) __instance).myHpLossCost;
+                        if (__instance.rawDescription.contains("champ:Technique") && AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID))
+                            x += 4;
+                        FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, Integer.toString(x), __instance.current_x, __instance.current_y, -135.0F * __instance.drawScale * Settings.scale, -50 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
+                    } else if ((__instance.rawDescription.contains("champ:Technique") && AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID))) {
+                        FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale * 0.75F);
+                        renderHelper(sb, healthBlob, __instance.current_x, __instance.current_y, __instance);
+                        FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, "4", __instance.current_x, __instance.current_y, -135.0F * __instance.drawScale * Settings.scale, -50 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
                     }
                 }
             }
