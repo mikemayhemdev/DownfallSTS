@@ -136,5 +136,9 @@
   "champ:EnGarde": {
     "NAME": "En Garde",
     "DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
+  },
+  "champ:ShieldSlam": {
+    "NAME": "Shield Slam",
+    "DESCRIPTION": "Can only be played if you have at least 30 Block. NL Deal !D! damage."
   }
 }
