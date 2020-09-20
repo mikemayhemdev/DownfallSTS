@@ -7,9 +7,11 @@ import champ.relics.ChampionCrown;
 import champ.util.CardFilter;
 import champ.util.CardIgnore;
 import champ.util.CoolVariable;
+import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -57,6 +59,7 @@ public class ChampMod implements
     private static final String CHARSELECT_PORTRAIT = "champResources/images/charSelect/charBG.png";
 
     public static Color placeholderColor = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1);
+    /*
     @SpireEnum
     public static AbstractCard.CardTags OPENER;
     @SpireEnum
@@ -69,6 +72,7 @@ public class ChampMod implements
     public static AbstractCard.CardTags BERSERKER_TECH;
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
+    */
     private static String modID = "champ";
     public int finishersPlayedThisTurn = 0;
     private CustomUnlockBundle unlocks0;
@@ -77,6 +81,8 @@ public class ChampMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
+    public static final TextureAtlas UIAtlas = new TextureAtlas();
+    public static Texture heartOrb;
 
     public ChampMod() {
         BaseMod.subscribe(this);
@@ -288,7 +294,11 @@ public class ChampMod implements
 
     public void receivePostInitialize() {
         addPotions();
-/*
+
+        heartOrb = TextureLoader.getTexture("champResources/images/heartOrb.png");
+        UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
+
+        /*
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
                 //Extra Requirement
                 .bonusCondition(ChampMod::canGetCurseRelic)

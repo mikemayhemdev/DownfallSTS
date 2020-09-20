@@ -42,6 +42,8 @@ public abstract class AbstractChampCard extends CustomCard {
     public boolean upgradedCool;
     public boolean isCoolModified;
 
+    public int myHpLossCost;
+
     public void resetAttributes() {
         super.resetAttributes();
         cool = baseCool;
