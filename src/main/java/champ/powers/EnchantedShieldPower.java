@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -39,11 +40,22 @@ public class EnchantedShieldPower extends AbstractPower implements CloneablePowe
         this.updateDescription();
     }
 
+    public void atEndOfRound() {
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+    }
 
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if (damageAmount > 0) {// 41
+            this.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));// 42
+        }
+        return 0;// 44
+    }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1)
+            description = DESCRIPTIONS[0];
+        description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 
     @Override

@@ -140,5 +140,10 @@
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
     "DESCRIPTION": "Can only be played if you have at least 30 Block. NL Deal !D! damage."
+  },
+  "champ:EnchantedShield": {
+    "NAME": "Enchanted Shield",
+    "DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
   }
 }

@@ -33,5 +33,13 @@
       "Until you exit #yBerserker, #yTechniques grant #b",
       " additional #yResolve."
     ]
+  },
+  "champ:EnchantedShieldPower": {
+    "NAME": "Enchanted Shield",
+    "DESCRIPTIONS": [
+      "Prevent the next time you would lose HP this turn.",
+      "Prevent the next #b",
+      " times you would lose HP this turn."
+    ]
   }
 }
