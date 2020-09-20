@@ -215,5 +215,9 @@
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever an champ:Opener reduces this card's cost, increase its damage by 5. NL Exhaust."
+  },
+  "champ:HeavySlash": {
+    "NAME": "Heavy Slash",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Strength affects this card !M! times."
   }
 }
