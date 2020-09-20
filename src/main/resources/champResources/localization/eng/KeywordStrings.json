@@ -53,7 +53,7 @@
     "NAMES": [
       "berserker"
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: Lose #b4 HP and gain #b4 #yResolve. #yFinisher: Lose all your #yResolve and gain that much HP."
+    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y4. #yFinisher: Lose all your #yResolve and gain that much HP."
   },
   {
     "PROPER_NAME": "Gladiator",
@@ -61,5 +61,12 @@
       "gladiator"
     ],
     "DESCRIPTION": "#yStance. #yTechnique: Draw #b1 card. #yFinisher: Don't end your turn."
+  },
+  {
+    "PROPER_NAME": "Fatigue",
+    "NAMES": [
+      "fatigue"
+    ],
+    "DESCRIPTION": "Lose HP and gain an equal amount of #yResolve."
   }
 ]

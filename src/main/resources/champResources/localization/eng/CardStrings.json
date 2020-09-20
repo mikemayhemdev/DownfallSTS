@@ -14,7 +14,7 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage twice. NL Lose 4 HP. NL Gain 4 champ:Resolve."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage twice. NL champ:Fatigue 4."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
@@ -104,7 +104,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL Lose !M! HP. NL Gain !M! champ:Resolve. NL champ:Defensive champ:Combo: Gain 10 champ:Resolve."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL champ:Defensive champ:Combo: Gain 10 champ:Resolve."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
