@@ -79,7 +79,8 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Berserker champ:Combo: Gain Block equal to your champ:Resolve."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Berserker champ:Combo: Gain Block equal to your champ:Resolve.",
+    "UPGRADE_DESCRIPTION": " NL (Grants !B! Block.)"
   },
   "champ:Aggression": {
     "NAME": "Aggression",
@@ -150,5 +151,10 @@
     "NAME": "Bring It On",
     "DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
+  },
+  "champ:ShieldThrow": {
+    "NAME": "Shield Throw",
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your Block. NL You can't gain Block next turn. NL champ:Defensive champ:Combo: You can gain Block next turn.",
+    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   }
 }
