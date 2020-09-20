@@ -23,11 +23,11 @@ public class Execute extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         loseHP(this.magicNumber);
         applyToSelf(new ResolvePower(4));
+        finisher();
     }
 
     public void upgrade() {
