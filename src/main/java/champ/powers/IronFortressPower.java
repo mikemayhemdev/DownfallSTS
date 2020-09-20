@@ -2,22 +2,21 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.stances.DefensiveStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class FocusedDefPower extends AbstractPower implements CloneablePowerInterface, OnTechniqueSubscriber {
+public class IronFortressPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = ChampMod.makeID("FocusedDefPower");
+    public static final String POWER_ID = ChampMod.makeID("IronFortressPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again32.png");
@@ -25,7 +24,7 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public FocusedDefPower(final int amount) {
+    public IronFortressPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -41,14 +40,10 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!newStance.ID.equals(DefensiveStance.STANCE_ID))
-            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-    }
-
-    @Override
-    public void onTechnique() {
-        flash();
-        addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
+        if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
+            flash();
+            addToBot(new GainBlockAction(owner, amount));
+        }
     }
 
     @Override
@@ -58,6 +53,6 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public AbstractPower makeCopy() {
-        return new FocusedDefPower(amount);
+        return new IronFortressPower(amount);
     }
 }

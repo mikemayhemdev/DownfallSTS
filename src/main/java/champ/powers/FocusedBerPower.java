@@ -2,6 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.stances.BerserkerStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -40,7 +41,8 @@ public class FocusedBerPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        if (!newStance.ID.equals(BerserkerStance.STANCE_ID))
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

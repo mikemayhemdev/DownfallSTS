@@ -160,5 +160,9 @@
   "champ:FalseCounter": {
     "NAME": "False Counter",
     "DESCRIPTION": "champ:Finisher. NL Lose all champ:Counterstrike. NL Gain 1 Strength for every !M! champ:Counterstrike removed."
+  },
+  "champ:IronFortress": {
+    "NAME": "Iron Fortress",
+    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
   }
 }

@@ -2,6 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.stances.GladiatorStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -40,7 +41,8 @@ public class FocusedGladPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+        if (!newStance.ID.equals(GladiatorStance.STANCE_ID))
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override
