@@ -12,6 +12,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -64,15 +65,10 @@ public class ChampMod implements
     public static AbstractCard.CardTags OPENER;
     @SpireEnum
     public static AbstractCard.CardTags FINISHER;
-    @SpireEnum
-    public static AbstractCard.CardTags DEFENSIVE_TECH;
-    @SpireEnum
-    public static AbstractCard.CardTags GLADIATOR_TECH;
-    @SpireEnum
-    public static AbstractCard.CardTags BERSERKER_TECH;
+    */
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
-    */
+
     private static String modID = "champ";
     public int finishersPlayedThisTurn = 0;
     public static int techniquesThisTurn = 0;

@@ -219,5 +219,9 @@
   "champ:HeavySlash": {
     "NAME": "Heavy Slash",
     "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Strength affects this card !M! times."
+  },
+  "champ:CheapShot": {
+    "NAME": "Cheap Shot",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage and apply 1 Vulnerable to a random enemy. NL Repeat for each card with champ:Technique in your hand."
   }
 }
