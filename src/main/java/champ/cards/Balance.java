@@ -28,7 +28,6 @@ public class Balance extends AbstractChampCard implements OctopusCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        ;
         cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, HexaMod.makeCardPath("Float.png"), upgraded ? this.EXTENDED_DESCRIPTION[2] : this.EXTENDED_DESCRIPTION[0]));
         cardList.add(new OctoChoiceCard("octo:OctoGladiat", this.name, HexaMod.makeCardPath("Float.png"), upgraded ? this.EXTENDED_DESCRIPTION[3] : this.EXTENDED_DESCRIPTION[1]));
         return cardList;

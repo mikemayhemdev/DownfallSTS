@@ -26,5 +26,12 @@
       "Until you exit #yDefensive, #yTechniques grant #b",
       " additional #yCounterstrike."
     ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "Berserker Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yBerserker, #yTechniques grant #b",
+      " additional #yResolve."
+    ]
   }
 }

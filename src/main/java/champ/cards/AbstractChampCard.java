@@ -63,6 +63,26 @@ public abstract class AbstractChampCard extends CustomCard {
         initializeDescription();
     }
 
+    private static String getCorrectPlaceholderImage(String id) {
+        return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
+    }
+
+    public static String makeID(String blah) {
+        return getModID() + ":" + blah;
+    }
+
+    public static boolean gcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID));
+    }
+
+    public static boolean bcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID));
+    }
+
+    public static boolean dcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID));
+    }
+
     @Override
     public void upgrade() {
         if (!upgraded) {
@@ -72,14 +92,6 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public abstract void upp();
-
-    private static String getCorrectPlaceholderImage(String id) {
-        return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
-    }
-
-    public static String makeID(String blah) {
-        return getModID() + ":" + blah;
-    }
 
     protected void atb(AbstractGameAction action) {
         addToBot(action);
@@ -207,17 +219,5 @@ public abstract class AbstractChampCard extends CustomCard {
                 addToBot(new PressEndTurnButtonAction());
             }
         }
-    }
-
-    public static boolean gcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID));
-    }
-
-    public static boolean bcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID));
-    }
-
-    public static boolean dcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID));
     }
 }

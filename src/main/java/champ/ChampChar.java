@@ -9,10 +9,8 @@ import champ.relics.ChampionCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.GladiatorStance;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -21,7 +19,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ModHelper;
@@ -29,7 +26,6 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import reskinContent.reskinContent;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -37,6 +33,8 @@ import java.util.ArrayList;
 import static champ.ChampMod.*;
 
 public class ChampChar extends CustomPlayer {
+    public static final String ID = makeID("theChamp");
+    public static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] orbTextures = {
             "champResources/images/char/mainChar/orb/layer1.png",
             "champResources/images/char/mainChar/orb/layer2.png",
@@ -49,8 +47,6 @@ public class ChampChar extends CustomPlayer {
             "champResources/images/char/mainChar/orb/layer3d.png",
             "champResources/images/char/mainChar/orb/layer4d.png",
             "champResources/images/char/mainChar/orb/layer5d.png",};
-    public static final String ID = makeID("theChamp");
-    public static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
@@ -67,7 +63,7 @@ public class ChampChar extends CustomPlayer {
     */
 
     public ChampChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
+        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", null, null);
 
         /*
         if(!reskinContent.hexaghostReskinAnimation) {
@@ -121,11 +117,11 @@ public class ChampChar extends CustomPlayer {
                 getStartingDeck(), false);
     }
 
-    public void switchStanceVisual(String ID){
+    public void switchStanceVisual(String ID) {
 
-        switch (ID){
+        switch (ID) {
             case DefensiveStance
-                    .STANCE_ID:{
+                    .STANCE_ID: {
                 this.stateData.setMix(currentIdle, "IdleDefensive", 0.3F);
                 this.stateData.setMix("HitDefensive", "IdleDefensive", 0.3F);
                 this.state.setAnimation(0, "IdleDefensive", true);
@@ -133,7 +129,7 @@ public class ChampChar extends CustomPlayer {
                 break;
             }
             case GladiatorStance
-                    .STANCE_ID:{
+                    .STANCE_ID: {
                 SlimeboundMod.logger.info("Found Gladiator Stance");
                 this.stateData.setMix(currentIdle, "IdleGladiator", 0.4F);
                 this.stateData.setMix("HitGladiator", "IdleGladiator", 0.4F);
@@ -142,7 +138,7 @@ public class ChampChar extends CustomPlayer {
                 break;
             }
             case BerserkerStance
-                    .STANCE_ID:{
+                    .STANCE_ID: {
                 this.stateData.setMix(currentIdle, "IdleBerserker", 0.4F);
                 this.state.setAnimation(0, "IdleBerserker", true);
                 this.stateData.setMix("HitBerserker", "IdleBerserker", 0.4F);
@@ -150,7 +146,7 @@ public class ChampChar extends CustomPlayer {
                 break;
             }
             case NeutralStance
-                    .STANCE_ID:{
+                    .STANCE_ID: {
                 this.stateData.setMix(currentIdle, "Idle", 0.4F);
                 this.state.setAnimation(0, "Idle", true);
                 currentIdle = "Idle";

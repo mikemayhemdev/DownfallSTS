@@ -1,43 +1,20 @@
 package champ;
 
 import basemod.BaseMod;
-import basemod.ReflectionHacks;
 import basemod.abstracts.CustomUnlockBundle;
-import basemod.eventUtil.AddEventParams;
-import basemod.eventUtil.EventUtils;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.actions.OpenerReduceCostAction;
 import champ.relics.ChampionCrown;
-import champ.stances.GladiatorStance;
 import champ.util.CardFilter;
 import champ.util.CardIgnore;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Interpolation;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.events.beyond.Falling;
-import com.megacrit.cardcrawl.events.city.Ghosts;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BlueCandle;
-import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
-import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.scenes.TheBottomScene;
-import com.megacrit.cardcrawl.unlock.AbstractUnlock;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
-import downfall.downfallMod;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -79,16 +56,6 @@ public class ChampMod implements
     private static final String CHARSELECT_PORTRAIT = "champResources/images/charSelect/charBG.png";
 
     public static Color placeholderColor = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1);
-    private static String modID = "champ";
-
-    private CustomUnlockBundle unlocks0;
-    private CustomUnlockBundle unlocks1;
-    private CustomUnlockBundle unlocks2;
-    private CustomUnlockBundle unlocks3;
-    private CustomUnlockBundle unlocks4;
-
-    public int finishersPlayedThisTurn = 0;
-
     @SpireEnum
     public static AbstractCard.CardTags OPENER;
     @SpireEnum
@@ -101,6 +68,13 @@ public class ChampMod implements
     public static AbstractCard.CardTags BERSERKER_TECH;
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
+    private static String modID = "champ";
+    public int finishersPlayedThisTurn = 0;
+    private CustomUnlockBundle unlocks0;
+    private CustomUnlockBundle unlocks1;
+    private CustomUnlockBundle unlocks2;
+    private CustomUnlockBundle unlocks3;
+    private CustomUnlockBundle unlocks4;
 
 
     public ChampMod() {

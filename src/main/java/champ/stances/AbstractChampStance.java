@@ -15,8 +15,8 @@ import slimebound.SlimeboundMod;
 
 public abstract class AbstractChampStance extends AbstractStance {
 
-    public String STANCE_ID = "guardianmod:AbstractMode";
     private static long sfxId = -1L;
+    public String STANCE_ID = "guardianmod:AbstractMode";
 
     public AbstractChampStance() {
         this.ID = STANCE_ID;
