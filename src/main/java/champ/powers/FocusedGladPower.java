@@ -14,9 +14,9 @@ import com.megacrit.cardcrawl.stances.AbstractStance;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class GladPlusDrawPower extends AbstractPower implements CloneablePowerInterface, OnTechniqueSubscriber {
+public class FocusedGladPower extends AbstractPower implements CloneablePowerInterface, OnTechniqueSubscriber {
 
-    public static final String POWER_ID = ChampMod.makeID("GladPlusDrawPower");
+    public static final String POWER_ID = ChampMod.makeID("FocusedGladPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again32.png");
@@ -24,7 +24,7 @@ public class GladPlusDrawPower extends AbstractPower implements CloneablePowerIn
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public GladPlusDrawPower(final int amount) {
+    public FocusedGladPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -59,6 +59,6 @@ public class GladPlusDrawPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public AbstractPower makeCopy() {
-        return new GladPlusDrawPower(amount);
+        return new FocusedGladPower(amount);
     }
 }

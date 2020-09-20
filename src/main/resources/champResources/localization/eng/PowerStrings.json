@@ -12,12 +12,19 @@
       "You have #b1 #yStrength for every #b5 Resolve you have."
     ]
   },
-  "champ:GladPlusDrawPower": {
+  "champ:FocusedGladPower": {
     "NAME": "Gladiator Boost!",
     "DESCRIPTIONS": [
-      "Until you switch #yStances, #yTechniques draw #b",
+      "Until you exit #yGladiator, #yTechniques draw #b",
       " additional card.",
       " additional cards."
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "Defensive Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yDefensive, #yTechniques grant #b",
+      " additional #yCounterstrike."
     ]
   }
 }

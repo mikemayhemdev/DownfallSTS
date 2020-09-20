@@ -1,6 +1,6 @@
 package champ.cards;
 
-import champ.powers.GladPlusDrawPower;
+import champ.powers.FocusedGladPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -16,7 +16,7 @@ public class FocusedGladiator extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         gladOpen();
-        applyToSelf(new GladPlusDrawPower(1));
+        applyToSelf(new FocusedGladPower(1));
     }
 
     public void upp() {
