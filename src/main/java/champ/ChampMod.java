@@ -6,6 +6,7 @@ import basemod.interfaces.*;
 import champ.relics.ChampionCrown;
 import champ.util.CardFilter;
 import champ.util.CardIgnore;
+import champ.util.CoolVariable;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -199,7 +200,7 @@ public class ChampMod implements
 
     @Override
     public void receiveEditCards() {
-        // BaseMod.addDynamicVariable(new BurnVariable());
+        BaseMod.addDynamicVariable(new CoolVariable());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {

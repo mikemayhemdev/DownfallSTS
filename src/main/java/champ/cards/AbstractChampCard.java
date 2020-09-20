@@ -37,6 +37,32 @@ public abstract class AbstractChampCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
 
+    public int cool;
+    public int baseCool;
+    public boolean upgradedCool;
+    public boolean isCoolModified;
+
+    public void resetAttributes() {
+        super.resetAttributes();
+        cool = baseCool;
+        isCoolModified = false;
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedCool) {
+            cool = baseCool;
+            isCoolModified = true;
+        }
+    }
+
+    void upgradeCool(int amount) {
+        baseCool += amount;
+        cool = baseCool;
+        upgradedCool = true;
+    }
+
+
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
                 cost, "ERROR", type, ChampChar.Enums.CHAMP_GRAY, rarity, target);
