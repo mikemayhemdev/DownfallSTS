@@ -30,5 +30,10 @@
     "NAME": "Gladiator's Shout",
     "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL Draw 1 card.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL Draw 2 cards."
+  },
+  "champ:SwordSigil": {
+    "NAME": "Sword Sigil",
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL champ:Gladiator champ:Combo: champ:Technique 3 times.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL champ:Gladiator champ:Combo: champ:Technique 3 times."
   }
 }

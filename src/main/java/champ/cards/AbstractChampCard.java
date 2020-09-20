@@ -208,4 +208,16 @@ public abstract class AbstractChampCard extends CustomCard {
             }
         }
     }
+
+    public static boolean gcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID));
+    }
+
+    public static boolean bcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID));
+    }
+
+    public static boolean dcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID));
+    }
 }
