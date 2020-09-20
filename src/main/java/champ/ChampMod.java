@@ -287,7 +287,6 @@ public class ChampMod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-
         finishersPlayedThisTurn = 0;
     }
 

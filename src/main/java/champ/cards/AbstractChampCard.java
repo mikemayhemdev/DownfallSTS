@@ -1,7 +1,9 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
 import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
@@ -16,6 +18,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.KeywordStrings;
+import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -24,6 +28,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static champ.ChampMod.getModID;
 import static champ.ChampMod.makeCardPath;
@@ -89,6 +94,15 @@ public abstract class AbstractChampCard extends CustomCard {
         EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
         initializeTitle();
         initializeDescription();
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tips = new ArrayList<>();
+        if (this.rawDescription.contains("champ:Fatigue")) { //TODO: FIX THIS FOR LOCALIZATION!!!
+            tips.add(new TooltipInfo("Resolve", "You have #b1 #yStrength for every #b5 Resolve.")); //TODO: FIX
+        }
+        return tips;
     }
 
     private static String getCorrectPlaceholderImage(String id) {
