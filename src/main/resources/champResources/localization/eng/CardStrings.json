@@ -198,5 +198,10 @@
     "NAME": "Rapid Strikes",
     "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
     "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL champ:Gladiator champ:Combo: Repeat twice more."
+  },
+  "champ:EnchantSword": {
+    "NAME": "Enchant Sword",
+    "DESCRIPTION": "champ:Finisher. NL Gain 1 Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain 1 Strength. NL Exhaust. NL champ:Gladiator champ:Combo: nevermind that whole Exhaust thing"
   }
 }
