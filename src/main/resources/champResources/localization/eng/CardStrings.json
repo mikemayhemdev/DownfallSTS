@@ -164,5 +164,9 @@
   "champ:IronFortress": {
     "NAME": "Iron Fortress",
     "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
+  },
+  "champ:Lariat": {
+    "NAME": "Lariat",
+    "DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times. NL champ:Defensive champ:Combo: Increase X by 1."
   }
 }
