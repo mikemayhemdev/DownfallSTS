@@ -11,5 +11,13 @@
     "DESCRIPTIONS": [
       "You have #b1 #yStrength for every #b5 Resolve you have."
     ]
+  },
+  "champ:GladPlusDrawPower": {
+    "NAME": "Gladiator Boost!",
+    "DESCRIPTIONS": [
+      "Until you switch #yStances, #yTechniques draw #b",
+      " additional card.",
+      " additional cards."
+    ]
   }
 }

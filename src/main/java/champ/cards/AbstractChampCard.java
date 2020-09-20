@@ -196,7 +196,7 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public void techique() {
         if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-            ((AbstractChampStance) AbstractDungeon.player.stance).technique();
+            ((AbstractChampStance) AbstractDungeon.player.stance).techique();
     }
 
     public void finisher() {

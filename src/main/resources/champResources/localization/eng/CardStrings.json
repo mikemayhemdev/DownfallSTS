@@ -35,5 +35,9 @@
     "NAME": "Sword Sigil",
     "DESCRIPTION": "champ:Gladiator champ:Opener. NL champ:Gladiator champ:Combo: champ:Technique 3 times.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL champ:Gladiator champ:Combo: champ:Technique 3 times."
+  },
+  "champ:FocusedGladiator": {
+    "NAME": "Focused Gladiator",
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator, champ:Techniques draw 1 extra card."
   }
 }
