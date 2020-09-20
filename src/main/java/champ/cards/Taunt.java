@@ -40,12 +40,9 @@ public class Taunt extends AbstractChampCard {
         }
     }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            target = CardTarget.ALL_ENEMY;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-        }
+    public void upp() {
+        target = CardTarget.ALL_ENEMY;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

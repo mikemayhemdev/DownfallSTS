@@ -15,5 +15,15 @@
   "champ:Execute": {
     "NAME": "Execute",
     "DESCRIPTION": "champ:Finisher. NL Deal !D! damage twice. NL Lose 4 HP. NL Gain 4 champ:Resolve."
+  },
+  "champ:StanceDance": {
+    "NAME": "Stance Dance",
+    "DESCRIPTION": "champ:Opener - Choose a Stance.",
+    "UPGRADE_DESCRIPTION": "champ:Opener - Choose a Stance. NL Draw 1 card.",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Berserker champ:Opener.",
+      "champ:Defensive champ:Opener.",
+      "champ:Gladiator champ:Opener."
+    ]
   }
 }

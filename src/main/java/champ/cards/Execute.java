@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,10 +29,7 @@ public class Execute extends AbstractChampCard {
         finisher();
     }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-        }
+    public void upp() {
+        upgradeDamage(UPG_DAMAGE);
     }
 }

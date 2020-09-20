@@ -6,8 +6,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
-import expansioncontent.actions.OctoChoiceAction;
+import downfall.util.OctopusCard;
 import expansioncontent.expansionContentMod;
 import guardian.patches.GuardianEnum;
 import slimebound.patches.SlimeboundEnum;
@@ -15,7 +16,7 @@ import theHexaghost.TheHexaghost;
 
 import java.util.ArrayList;
 
-public class QuickStudy extends AbstractExpansionCard {
+public class QuickStudy extends AbstractExpansionCard implements OctopusCard {
 
     public final static String ID = makeID("QuickStudy");
     public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;

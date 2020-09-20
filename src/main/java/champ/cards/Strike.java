@@ -24,10 +24,7 @@ public class Strike extends AbstractChampCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
     }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-        }
+    public void upp() {
+        upgradeDamage(UPG_DAMAGE);
     }
 }

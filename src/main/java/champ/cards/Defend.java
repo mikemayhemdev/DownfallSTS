@@ -22,10 +22,7 @@ public class Defend extends AbstractChampCard {
         blck();
     }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeBlock(UPG_BLOCK);
-        }
+    public void upp() {
+        upgradeBlock(UPG_BLOCK);
     }
 }
