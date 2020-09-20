@@ -176,5 +176,9 @@
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
     "DESCRIPTION": "After you are attacked, gain !M! champ:Counterstrike."
+  },
+  "champ:Haymaker": {
+    "NAME": "Haymaker",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 1 Weak. NL champ:Gladiator champ:Combo: Weak applies to ALL enemies."
   }
 }
