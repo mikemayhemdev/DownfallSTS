@@ -145,5 +145,10 @@
     "NAME": "Enchanted Shield",
     "DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
+  },
+  "champ:BringItOn": {
+    "NAME": "Bring It On",
+    "DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
   }
 }
