@@ -172,5 +172,9 @@
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
     "DESCRIPTION": "Gain !B! Block. NL champ:Defensive champ:Combo: Block is not removed at the start of your next turn."
+  },
+  "champ:ShieldWall": {
+    "NAME": "Shield Wall",
+    "DESCRIPTION": "After you are attacked, gain !M! champ:Counterstrike."
   }
 }

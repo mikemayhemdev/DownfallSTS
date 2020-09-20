@@ -41,5 +41,12 @@
       "Prevent the next #b",
       " times you would lose HP this turn."
     ]
+  },
+  "champ:ShieldWall": {
+    "NAME": "Shield Wall",
+    "DESCRIPTIONS": [
+      "After you are attacked, gain #b",
+      " #yCounterstrike."
+    ]
   }
 }
