@@ -39,5 +39,9 @@
   "champ:FocusedGladiator": {
     "NAME": "Focused Gladiator",
     "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator, champ:Techniques draw 1 extra card."
+  },
+  "champ:FaceSlap": {
+    "NAME": "Face Slap",
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Berserker champ:Combo: Apply !M! Vulnerable."
   }
 }

@@ -38,13 +38,13 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public void doChoiceStuff(OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
-                berserkerOpen();
+                berserkOpen();
                 break;
             case "octo:OctoDefense":
-                defensiveOpen();
+                defenseOpen();
                 break;
             case "octo:OctoGladiat":
-                gladiatorOpen();
+                gladOpen();
                 break;
         }
 

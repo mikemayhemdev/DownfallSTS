@@ -15,7 +15,7 @@ public class FocusedGladiator extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gladiatorOpen();
+        gladOpen();
         applyToSelf(new GladPlusDrawPower(1));
     }
 

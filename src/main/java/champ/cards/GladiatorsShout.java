@@ -17,7 +17,7 @@ public class GladiatorsShout extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
-        gladiatorOpen();
+        gladOpen();
         atb(new DrawCardAction(magicNumber));
     }
 

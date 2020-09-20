@@ -15,7 +15,7 @@ public class SwordSigil extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) techique();
-        gladiatorOpen();
+        gladOpen();
         if (gcombo()) {
             techique();
             techique();

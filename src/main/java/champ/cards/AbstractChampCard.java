@@ -97,7 +97,7 @@ public abstract class AbstractChampCard extends CustomCard {
         return new DamageInfo(AbstractDungeon.player, damage, type);
     }
 
-    public void dmg(AbstractMonster m, DamageInfo info, AbstractGameAction.AttackEffect fx) {
+    public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
         atb(new DamageAction(m, makeInfo(), fx));
     }
 
@@ -153,21 +153,21 @@ public abstract class AbstractChampCard extends CustomCard {
         return new VulnerablePower(m, i, false);
     }
 
-    public void berserkerOpen() {
+    public void berserkOpen() {
         berserkerStance();
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             atb(new OpenerReduceCostAction());
         }
     }
 
-    public void gladiatorOpen() {
+    public void gladOpen() {
         gladiatorStance();
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             atb(new OpenerReduceCostAction());
         }
     }
 
-    public void defensiveOpen() {
+    public void defenseOpen() {
         defensiveStance();
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             atb(new OpenerReduceCostAction());
