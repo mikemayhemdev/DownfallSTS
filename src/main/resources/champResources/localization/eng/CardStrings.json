@@ -81,8 +81,8 @@
     "NAME": "Backstep",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Berserker champ:Combo: Gain Block equal to your champ:Resolve."
   },
-  "champ:Balance": {
-    "NAME": "Balance",
+  "champ:Aggression": {
+    "NAME": "Aggression",
     "DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
     "UPGRADE_DESCRIPTION:": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
@@ -91,5 +91,10 @@
       "champ:Defensive champ:Opener. NL Add a random upgraded champ:Berserker champ:Combo to your hand.",
       "champ:Gladiator champ:Opener. NL Add a random upgraded champ:Gladiator champ:Combo to your hand."
     ]
+  },
+  "champ:BerserkersShout": {
+    "NAME": "Berserker's Shout",
+    "DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL Draw 2 cards."
   }
 }
