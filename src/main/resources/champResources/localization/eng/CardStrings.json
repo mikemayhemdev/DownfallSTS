@@ -101,5 +101,9 @@
     "NAME": "Rage Sigil",
     "DESCRIPTION": "champ:Berserker champ:Opener. NL champ:Berserker champ:Combo: champ:Technique 3 times.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL champ:Berserker champ:Combo: champ:Technique 3 times."
+  },
+  "champ:GutPunch": {
+    "NAME": "Gut Punch",
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL Lose !M! HP. NL Gain !M! champ:Resolve. NL champ:Defensive champ:Combo: Gain 10 champ:Resolve."
   }
 }
