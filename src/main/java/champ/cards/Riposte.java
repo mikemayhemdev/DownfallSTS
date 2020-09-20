@@ -1,0 +1,45 @@
+package champ.cards;
+
+import champ.powers.CounterPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+public class Riposte extends AbstractChampCard {
+
+    public final static String ID = makeID("Riposte");
+
+    //stupid intellij stuff skill, self, uncommon
+
+    private static final int MAGIC = 5;
+    private static final int UPG_MAGIC = 3;
+
+    public Riposte() {
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = MAGIC;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        defenseOpen();
+        if (gcombo())
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    for (AbstractCard q : p.hand.group) {
+                        if (q.type == CardType.ATTACK) {
+                            addToTop(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+                            addToTop(new DiscardSpecificCardAction(q, p.hand));
+                        }
+                    }
+                }
+            });
+    }
+
+    public void upp() {
+        upgradeMagicNumber(UPG_MAGIC);
+    }
+}

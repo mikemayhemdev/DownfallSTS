@@ -1,31 +1,22 @@
 package champ.stances;
 
 import champ.ChampChar;
-import com.badlogic.gdx.Gdx;
+import champ.powers.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.ThornsPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
-import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import slimebound.SlimeboundMod;
 
 public abstract class AbstractChampStance extends AbstractStance {
 
-    public String STANCE_ID = "guardianmod:AbstractMode";
     private static long sfxId = -1L;
+    public String STANCE_ID = "guardianmod:AbstractMode";
 
     public AbstractChampStance() {
         this.ID = STANCE_ID;
@@ -57,7 +48,6 @@ public abstract class AbstractChampStance extends AbstractStance {
     }
 
 
-
     @Override
     public void onEnterStance() {
         /*
@@ -75,7 +65,7 @@ public abstract class AbstractChampStance extends AbstractStance {
         }
         */
 
-        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY, false), 0.05F, true));
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.DARK_GRAY, true));
 
         if (AbstractDungeon.player instanceof ChampChar) {
@@ -88,25 +78,34 @@ public abstract class AbstractChampStance extends AbstractStance {
     @Override
     public void onExitStance() {
         stopIdleSfx();
-        if (AbstractDungeon.player.stance instanceof NeutralStance){
+        if (AbstractDungeon.player.stance instanceof NeutralStance) {
             if (AbstractDungeon.player instanceof ChampChar) {
                 ((ChampChar) AbstractDungeon.player).switchStanceVisual("Neutral");
             }
         }
     }
 
-       public void stopIdleSfx() {
+    public void stopIdleSfx() {
         /*
              if (sfxId != -1L) {
                    CardCrawlGame.sound.stop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"), sfxId);
                    sfxId = -1L;
              }
              */
-           }
+    }
 
     @Override
     public void updateDescription() {
-       this.description = ChampChar.characterStrings.TEXT[6];
+        this.description = ChampChar.characterStrings.TEXT[6];
+    }
+
+    public void techique() {
+        technique();
+        for (AbstractPower q : AbstractDungeon.player.powers) {
+            if (q instanceof OnTechniqueSubscriber) {
+                ((OnTechniqueSubscriber) q).onTechnique();
+            }
+        }
     }
 
     public abstract void technique();

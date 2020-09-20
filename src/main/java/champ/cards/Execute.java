@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,17 +22,14 @@ public class Execute extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         loseHP(this.magicNumber);
         applyToSelf(new ResolvePower(4));
         finisher();
     }
 
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPG_DAMAGE);
-        }
+    public void upp() {
+        upgradeDamage(UPG_DAMAGE);
     }
 }

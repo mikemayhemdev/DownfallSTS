@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.actions.EmbersAction;
-import theHexaghost.actions.PerformXAction;
+import downfall.actions.PerformXAction;
 
 public class RainOfEmbers extends AbstractHexaCard {
 

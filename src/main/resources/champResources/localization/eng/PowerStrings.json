@@ -11,5 +11,35 @@
     "DESCRIPTIONS": [
       "You have #b1 #yStrength for every #b5 Resolve you have."
     ]
+  },
+  "champ:FocusedGladPower": {
+    "NAME": "Gladiator Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yGladiator, #yTechniques draw #b",
+      " additional card.",
+      " additional cards."
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "Defensive Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yDefensive, #yTechniques grant #b",
+      " additional #yCounterstrike."
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "Berserker Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yBerserker, #yTechniques grant #b",
+      " additional #yResolve."
+    ]
+  },
+  "champ:EnchantedShieldPower": {
+    "NAME": "Enchanted Shield",
+    "DESCRIPTIONS": [
+      "Prevent the next time you would lose HP this turn.",
+      "Prevent the next #b",
+      " times you would lose HP this turn."
+    ]
   }
 }

@@ -1,7 +1,9 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
 import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
@@ -16,6 +18,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.KeywordStrings;
+import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -24,6 +28,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static champ.ChampMod.getModID;
 import static champ.ChampMod.makeCardPath;
@@ -36,6 +41,34 @@ public abstract class AbstractChampCard extends CustomCard {
     protected String DESCRIPTION;
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
+
+    public int cool;
+    public int baseCool;
+    public boolean upgradedCool;
+    public boolean isCoolModified;
+
+    public int myHpLossCost;
+
+    public void resetAttributes() {
+        super.resetAttributes();
+        cool = baseCool;
+        isCoolModified = false;
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedCool) {
+            cool = baseCool;
+            isCoolModified = true;
+        }
+    }
+
+    void upgradeCool(int amount) {
+        baseCool += amount;
+        cool = baseCool;
+        upgradedCool = true;
+    }
+
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
@@ -63,6 +96,15 @@ public abstract class AbstractChampCard extends CustomCard {
         initializeDescription();
     }
 
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tips = new ArrayList<>();
+        if (this.rawDescription.contains("champ:Fatigue")) { //TODO: FIX THIS FOR LOCALIZATION!!!
+            tips.add(new TooltipInfo("Resolve", "You have #b1 #yStrength for every #b5 Resolve.")); //TODO: FIX
+        }
+        return tips;
+    }
+
     private static String getCorrectPlaceholderImage(String id) {
         return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
     }
@@ -70,6 +112,28 @@ public abstract class AbstractChampCard extends CustomCard {
     public static String makeID(String blah) {
         return getModID() + ":" + blah;
     }
+
+    public static boolean gcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID));
+    }
+
+    public static boolean bcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID));
+    }
+
+    public static boolean dcombo() {
+        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID));
+    }
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upp();
+        }
+    }
+
+    public abstract void upp();
 
     protected void atb(AbstractGameAction action) {
         addToBot(action);
@@ -87,7 +151,7 @@ public abstract class AbstractChampCard extends CustomCard {
         return new DamageInfo(AbstractDungeon.player, damage, type);
     }
 
-    public void dmg(AbstractMonster m, DamageInfo info, AbstractGameAction.AttackEffect fx) {
+    public void dmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
         atb(new DamageAction(m, makeInfo(), fx));
     }
 
@@ -143,38 +207,38 @@ public abstract class AbstractChampCard extends CustomCard {
         return new VulnerablePower(m, i, false);
     }
 
-    public void berserkerOpen() {
+    public void berserkOpen() {
         berserkerStance();
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             atb(new OpenerReduceCostAction());
         }
     }
 
-    public void gladiatorOpen() {
+    public void gladOpen() {
         gladiatorStance();
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             atb(new OpenerReduceCostAction());
         }
     }
 
-    public void defensiveOpen() {
+    public void defenseOpen() {
         defensiveStance();
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             atb(new OpenerReduceCostAction());
         }
     }
 
-    public void berserkerStance() {
+    private void berserkerStance() {
         SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
         atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
-    public void gladiatorStance() {
+    private void gladiatorStance() {
         SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
         atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
     }
 
-    public void defensiveStance() {
+    private void defensiveStance() {
         SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
         atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
     }
@@ -186,7 +250,7 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public void techique() {
         if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-            ((AbstractChampStance) AbstractDungeon.player.stance).technique();
+            ((AbstractChampStance) AbstractDungeon.player.stance).techique();
     }
 
     public void finisher() {
