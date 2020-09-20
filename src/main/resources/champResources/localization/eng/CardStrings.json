@@ -180,5 +180,10 @@
   "champ:Haymaker": {
     "NAME": "Haymaker",
     "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 1 Weak. NL champ:Gladiator champ:Combo: Weak applies to ALL enemies."
+  },
+  "champ:ViciousMockery": {
+    "NAME": "Vicious Mockery",
+    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity."
   }
 }
