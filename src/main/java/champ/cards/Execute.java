@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,22 +13,21 @@ public class Execute extends AbstractChampCard {
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
     private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 3;
-    private static final int HP_LOSS = 5;
+    private static final int UPG_DAMAGE = 2;
+    private static final int HP_LOSS = 4;
 
     public Execute() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HP_LOSS;
-        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         loseHP(this.magicNumber);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        defensiveStance();
+        applyToSelf(new ResolvePower(4));
+        finisher();
     }
 
     public void upgrade() {

@@ -1,79 +1,44 @@
 [
   {
-    "PROPER_NAME": "Active",
+    "PROPER_NAME": "Technique",
     "NAMES": [
-      "active"
+      "technique"
     ],
-    "DESCRIPTION": "The #yActive Ghostflame can be Ignited by meeting its listed Ignition requirements."
+    "DESCRIPTION": "If you are in a #yStance, trigger its Technique bonus."
   },
   {
-    "PROPER_NAME": "Advance",
+    "PROPER_NAME": "Opener",
     "NAMES": [
-      "advance",
-      "advanced",
-      "advancing"
+      "opener"
     ],
-    "DESCRIPTION": "#yActivate the next Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "Switch #yStances. If you weren't in a #yStance, reduce the cost of a random card in your hand by #b1 this turn."
   },
   {
-    "PROPER_NAME": "Retract",
+    "PROPER_NAME": "Combo",
     "NAMES": [
-      "retract",
-      "retracted",
-      "retracting"
+      "combo"
     ],
-    "DESCRIPTION": "#yActivate the previous Ghostflame. If it's Ignited, #yExtinguish it."
+    "DESCRIPTION": "Extra effect when played in the listed #yStance."
   },
   {
-    "PROPER_NAME": "Intensity",
+    "PROPER_NAME": "Finisher",
     "NAMES": [
-      "intensity"
+      "finisher"
     ],
-    "DESCRIPTION": "Intensity increases the amount of damage, Soulburn, and Block applied by Ghostflames when Ignited."
+    "DESCRIPTION": "After playing a Finisher, if you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn."
   },
   {
-    "PROPER_NAME": "Soulburn",
+    "PROPER_NAME": "Counterstrike",
     "NAMES": [
-      "soulburn",
-      "soulburned"
+      "counterstrike"
     ],
-    "DESCRIPTION": "After #b3 turns, a Soulburned enemy loses HP, removing the Soulburn effect."
+    "DESCRIPTION": "The next time you take #yAtack damage, deal damage back."
   },
   {
-    "PROPER_NAME": "Extinguish",
+    "PROPER_NAME": "Resolve",
     "NAMES": [
-      "extinguish",
-      "extinguished"
+      "resolve"
     ],
-    "DESCRIPTION": "Allows Ghostflame to become Ignited again, resetting its Ignition requirements."
-  },
-  {
-    "PROPER_NAME": "Ignite",
-    "NAMES": [
-      "ignite",
-      "ignited"
-    ],
-    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame."
-  },
-  {
-    "PROPER_NAME": "Force-Ignite",
-    "NAMES": [
-      "force-ignite"
-    ],
-    "DESCRIPTION": "Triggers the Ignition effect described on a Ghostflame, even if it was already Ignited."
-  },
-  {
-    "PROPER_NAME": "Seal",
-    "NAMES": [
-      "seal"
-    ],
-    "DESCRIPTION": "Can't be upgraded. If all #b6 Seals have been played this combat, obtain #pThe #pBroken #pSeal and remove the Seals from your deck."
-  },
-  {
-    "PROPER_NAME": "Afterlife",
-    "NAMES": [
-      "afterlife"
-    ],
-    "DESCRIPTION": "If this card is Exhausted, its effects activate."
+    "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve."
   }
 ]

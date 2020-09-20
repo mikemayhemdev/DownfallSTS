@@ -2,6 +2,7 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.powers.CounterPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -52,5 +53,15 @@ public class BerserkerStance extends AbstractChampStance {
     @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[6];
+    }
+
+    @Override
+    public void technique() {
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(6), 6));
+    }
+
+    @Override
+    public void finisher() {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 12));
     }
 }

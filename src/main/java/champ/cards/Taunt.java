@@ -1,12 +1,9 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
-import champ.util.BerserkerTechniqueMod;
-import champ.util.GladiatorTechniqueMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class Taunt extends AbstractChampCard {
 
@@ -14,26 +11,41 @@ public class Taunt extends AbstractChampCard {
 
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
-
     public Taunt() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        tags.add(CardTags.STRIKE);
-        tags.add(CardTags.STARTER_STRIKE);
-        CardModifierManager.addModifier(this, new GladiatorTechniqueMod());
+        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        techique();
+        if (upgraded) {
+            for (AbstractMonster q : monsterList()) {
+                applyToEnemy(q, autoWeak(q, 2));
+            }
+        } else {
+            applyToEnemy(m, autoWeak(m, 2));
+        }
+        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+            int x = AbstractDungeon.cardRandomRng.random(2);
+            switch (x) {
+                case 0:
+                    berserkerStance();
+                    break;
+                case 1:
+                    gladiatorStance();
+                    break;
+                case 2:
+                    defensiveStance();
+                    break;
+            }
+        }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPG_DAMAGE);
+            target = CardTarget.ALL_ENEMY;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import slimebound.SlimeboundMod;
 
-public class AbstractChampStance extends AbstractStance {
+public abstract class AbstractChampStance extends AbstractStance {
 
     public String STANCE_ID = "guardianmod:AbstractMode";
     private static long sfxId = -1L;
@@ -108,4 +108,8 @@ public class AbstractChampStance extends AbstractStance {
     public void updateDescription() {
        this.description = ChampChar.characterStrings.TEXT[6];
     }
+
+    public abstract void technique();
+
+    public abstract void finisher();
 }

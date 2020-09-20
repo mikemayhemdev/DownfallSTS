@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.stances.BerserkerStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,9 +21,7 @@ public class Strike extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        super.use(p,m);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        gladiatorStance();
     }
 
     public void upgrade() {
