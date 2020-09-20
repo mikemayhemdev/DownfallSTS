@@ -75,6 +75,7 @@ public class ChampMod implements
     */
     private static String modID = "champ";
     public int finishersPlayedThisTurn = 0;
+    public static int techniquesThisTurn = 0;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
@@ -338,6 +339,7 @@ public class ChampMod implements
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
+
         /*
         if (abstractCard.hasTag(ChampMod.OPENER)) {
             atb(new OpenerReduceCostAction());

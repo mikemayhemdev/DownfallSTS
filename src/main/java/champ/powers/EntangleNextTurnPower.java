@@ -2,8 +2,6 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.stances.DefensiveStance;
-import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,13 +10,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.powers.EntanglePower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class FocusedDefPower extends AbstractPower implements CloneablePowerInterface, OnTechniqueSubscriber {
+public class EntangleNextTurnPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = ChampMod.makeID("FocusedDefPower");
+    public static final String POWER_ID = ChampMod.makeID("EntangleNextTurnPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again32.png");
@@ -26,7 +24,7 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public FocusedDefPower(final int amount) {
+    public EntangleNextTurnPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -40,25 +38,21 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
         this.updateDescription();
     }
 
-    @Override
-    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!newStance.ID.equals(DefensiveStance.STANCE_ID))
-            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-    }
-
-    @Override
-    public void onTechnique() {
-        flash();
-        addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
+    public void atStartOfTurn() {
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new EntanglePower(owner), 1));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1) description = DESCRIPTIONS[0];
+        else
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new FocusedDefPower(amount);
+        return new EntangleNextTurnPower(amount);
     }
 }

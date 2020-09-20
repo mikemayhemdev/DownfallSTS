@@ -145,12 +145,12 @@
   "champ:EnchantedShield": {
     "NAME": "Enchanted Shield",
     "DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
     "DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike NL Exhaust. NL champ:Defensive champ:Combo: Ignore that bit about exhausting"
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -164,5 +164,56 @@
   "champ:IronFortress": {
     "NAME": "Iron Fortress",
     "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
+  },
+  "champ:Lariat": {
+    "NAME": "Lariat",
+    "DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times. NL champ:Defensive champ:Combo: Increase X by 1."
+  },
+  "champ:HoldFirm": {
+    "NAME": "Hold Firm",
+    "DESCRIPTION": "Gain !B! Block. NL champ:Defensive champ:Combo: Block is not removed at the start of your next turn."
+  },
+  "champ:ShieldWall": {
+    "NAME": "Shield Wall",
+    "DESCRIPTION": "After you are attacked, gain !M! champ:Counterstrike."
+  },
+  "champ:Haymaker": {
+    "NAME": "Haymaker",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 1 Weak. NL champ:Gladiator champ:Combo: Weak applies to ALL enemies."
+  },
+  "champ:ViciousMockery": {
+    "NAME": "Vicious Mockery",
+    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity."
+  },
+  "champ:PreciseThrust": {
+    "NAME": "Precise Thrust",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL champ:Gladiator champ:Combo: Increase this card's damage and block by !M! this combat."
+  },
+  "champ:CrookedStrike": {
+    "NAME": "Crooked Strike",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in your hand."
+  },
+  "champ:RapidStrikes": {
+    "NAME": "Rapid Strikes",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL champ:Gladiator champ:Combo: Repeat twice more."
+  },
+  "champ:EnchantSword": {
+    "NAME": "Enchant Sword",
+    "DESCRIPTION": "champ:Finisher. NL Gain 1 Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain 1 Strength. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+  },
+  "champ:BladeFlurry": {
+    "NAME": "Blade Flurry",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each Attack in your hand. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+  },
+  "champ:SwordThrow": {
+    "NAME": "Sword Throw",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. NL You can't attack next turn. NL champ:Berserker champ:Combo: You can attack next turn."
+  },
+  "champ:MurderStrike": {
+    "NAME": "Murder Strike",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever an champ:Opener reduces this card's cost, increase its damage by 5. NL Exhaust."
   }
 }
