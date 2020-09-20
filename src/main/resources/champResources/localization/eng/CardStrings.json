@@ -168,5 +168,9 @@
   "champ:Lariat": {
     "NAME": "Lariat",
     "DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times. NL champ:Defensive champ:Combo: Increase X by 1."
+  },
+  "champ:HoldFirm": {
+    "NAME": "Hold Firm",
+    "DESCRIPTION": "Gain !B! Block. NL champ:Defensive champ:Combo: Block is not removed at the start of your next turn."
   }
 }
