@@ -354,6 +354,7 @@ public class ChampMod implements
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
+        /*
         if (abstractCard.hasTag(ChampMod.OPENER)) {
             atb(new OpenerReduceCostAction());
         }
@@ -367,6 +368,7 @@ public class ChampMod implements
                 atb(new com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction());
             }
         }
+        */
     }
 
 }

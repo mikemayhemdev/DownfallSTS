@@ -1,7 +1,6 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampChar;
 import champ.actions.OpenerReduceCostAction;
 import champ.stances.AbstractChampStance;
@@ -11,6 +10,7 @@ import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -187,5 +187,15 @@ public abstract class AbstractChampCard extends CustomCard {
     public void techique() {
         if (AbstractDungeon.player.stance instanceof AbstractChampStance)
             ((AbstractChampStance) AbstractDungeon.player.stance).technique();
+    }
+
+    public void finisher() {
+        if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+            exitStance();
+            ((AbstractChampStance) AbstractDungeon.player.stance).finisher();
+            if (!(AbstractDungeon.player.stance instanceof GladiatorStance)) {
+                addToBot(new PressEndTurnButtonAction());
+            }
+        }
     }
 }

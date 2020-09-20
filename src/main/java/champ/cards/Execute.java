@@ -20,10 +20,10 @@ public class Execute extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HP_LOSS;
-        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        finisher();
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         loseHP(this.magicNumber);
