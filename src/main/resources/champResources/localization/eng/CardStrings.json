@@ -96,5 +96,10 @@
     "NAME": "Berserker's Shout",
     "DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL Draw 1 card.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL Draw 2 cards."
+  },
+  "champ:RageSigil": {
+    "NAME": "Rage Sigil",
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL champ:Berserker champ:Combo: champ:Technique 3 times.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL champ:Berserker champ:Combo: champ:Technique 3 times."
   }
 }

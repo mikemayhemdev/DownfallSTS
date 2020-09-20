@@ -174,17 +174,17 @@ public abstract class AbstractChampCard extends CustomCard {
         }
     }
 
-    public void berserkerStance() {
+    private void berserkerStance() {
         SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
         atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
-    public void gladiatorStance() {
+    private void gladiatorStance() {
         SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
         atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
     }
 
-    public void defensiveStance() {
+    private void defensiveStance() {
         SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
         atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
     }
