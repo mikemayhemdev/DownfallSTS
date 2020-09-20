@@ -12,13 +12,13 @@ import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
 
-public class Balance extends AbstractChampCard implements OctopusCard {
+public class Aggression extends AbstractChampCard implements OctopusCard {
 
-    public final static String ID = makeID("Balance");
+    public final static String ID = makeID("Aggression");
 
     //stupid intellij stuff skill, self, common
 
-    public Balance() {
+    public Aggression() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
     }
 
@@ -28,19 +28,18 @@ public class Balance extends AbstractChampCard implements OctopusCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        ;
-        cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, HexaMod.makeCardPath("Float.png"), upgraded ? this.EXTENDED_DESCRIPTION[2] : this.EXTENDED_DESCRIPTION[0]));
+        cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, HexaMod.makeCardPath("Float.png"), upgraded ? this.EXTENDED_DESCRIPTION[2] : this.EXTENDED_DESCRIPTION[0]));
         cardList.add(new OctoChoiceCard("octo:OctoGladiat", this.name, HexaMod.makeCardPath("Float.png"), upgraded ? this.EXTENDED_DESCRIPTION[3] : this.EXTENDED_DESCRIPTION[1]));
         return cardList;
     }
 
     public void doChoiceStuff(OctoChoiceCard card) {
         switch (card.cardID) {
-            case "octo:OctoDefense":
-                defenseOpen();
+            case "octo:OctoBerserk":
+                berserkOpen();
                 ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
                 for (AbstractCard t : CardLibrary.getAllCards()) {
-                    if (t.rawDescription.contains("champ:Defensive champ:Combo")) qCardList.add(t);
+                    if (t.rawDescription.contains("champ:Berserker champ:Combo")) qCardList.add(t);
                 }
                 AbstractCard q = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
                 if (upgraded) q.upgrade();
