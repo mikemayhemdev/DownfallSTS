@@ -185,5 +185,9 @@
     "NAME": "Vicious Mockery",
     "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity."
+  },
+  "champ:PreciseThrust": {
+    "NAME": "Precise Thrust",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL champ:Gladiator champ:Combo: Increase this card's damage and block by !M! this combat."
   }
 }
