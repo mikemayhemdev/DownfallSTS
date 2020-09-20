@@ -74,5 +74,9 @@
   "champ:Riposte": {
     "NAME": "Riposte",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in your hand and gain !M! champ:Counterstrike for each."
+  },
+  "champ:Backstep": {
+    "NAME": "Backstep",
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Berserker champ:Combo: Gain Block equal to your champ:Resolve."
   }
 }
