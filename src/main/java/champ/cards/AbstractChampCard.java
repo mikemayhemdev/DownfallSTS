@@ -6,6 +6,7 @@ import champ.ChampChar;
 import champ.actions.OpenerReduceCostAction;
 import champ.powers.CalledShotPower;
 import champ.stances.*;
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -66,7 +67,7 @@ public abstract class AbstractChampCard extends CustomCard {
 
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        super(id, "ERROR", getCorrectPlaceholderImage(id),
+        super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, ChampChar.Enums.CHAMP_GRAY, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
@@ -79,7 +80,7 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public AbstractChampCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
-        super(id, "ERROR", getCorrectPlaceholderImage(id),
+        super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
@@ -100,8 +101,19 @@ public abstract class AbstractChampCard extends CustomCard {
         return tips;
     }
 
-    private static String getCorrectPlaceholderImage(String id) {
-        return makeCardPath(id.replaceAll((getModID() + ":"), "")) + ".png";
+
+    public static String getCorrectPlaceholderImage(CardType type, String id) {
+        String img = makeCardPath(id.replaceAll((getModID() + ":"), "") + ".png");
+        if ((!Gdx.files.internal(img).exists()))
+            switch (type) {
+                case ATTACK:
+                    return makeCardPath("Attack.png");
+                case SKILL:
+                    return makeCardPath("Skill.png");
+                case POWER:
+                    return makeCardPath("Power.png");
+            }
+        return img;
     }
 
     public static String makeID(String blah) {
