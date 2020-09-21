@@ -17,7 +17,9 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
 import champ.ChampMod;
+import champ.monsters.BlackKnight;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
@@ -729,7 +731,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof ChampChar))
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//
@@ -845,6 +847,12 @@ public class downfallMod implements
         BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new Augmenter()
+                }));
+
+
+        BaseMod.addMonster("champ:BlackKnight", BlackKnight.NAME, () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new BlackKnight()
                 }));
 
         BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(
