@@ -4,13 +4,13 @@ import champ.powers.WorseRupturePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class EndlessRagePower extends AbstractChampCard {
+public class EndlessRage extends AbstractChampCard {
 
-    public final static String ID = makeID("EndlessRagePower");
+    public final static String ID = makeID("EndlessRage");
 
     //stupid intellij stuff power, self, uncommon
 
-    public EndlessRagePower() {
+    public EndlessRage() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 

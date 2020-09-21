@@ -2,7 +2,8 @@
   {
     "PROPER_NAME": "Technique",
     "NAMES": [
-      "technique"
+      "technique",
+      "techniques"
     ],
     "DESCRIPTION": "If you are in a #yStance, trigger its Technique bonus."
   },
