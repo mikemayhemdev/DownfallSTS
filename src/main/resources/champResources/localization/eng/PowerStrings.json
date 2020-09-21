@@ -72,5 +72,12 @@
       "You cannot go below #b1 HP this and the next #b",
       " turns."
     ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "Endless Rage",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP on your turn, gain #b",
+      " #yResolve."
+    ]
   }
 }
