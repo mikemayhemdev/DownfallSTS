@@ -37,7 +37,7 @@ public class FanOfKnives extends AbstractChampCard {
                 public void update() {
                     isDone = true;
                     for (AbstractCard q : p.hand.group) {
-                        if (q.rawDescription.contains("champ:Finisher")) { //TODO: yep, these need tags too, actually. rip
+                        if (q.hasTag(ChampMod.FINISHER)) {
                             att(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AttackEffect.NONE));
                             att(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
                             att(new AbstractGameAction() {

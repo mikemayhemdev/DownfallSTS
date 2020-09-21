@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,6 +17,7 @@ public class FinalRevenge extends AbstractChampCard {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

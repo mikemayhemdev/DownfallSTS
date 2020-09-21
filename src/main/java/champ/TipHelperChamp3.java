@@ -67,11 +67,8 @@ public class TipHelperChamp3 {
         if (!Settings.hidePopupDetails) {
             currentColor = Settings.TOP_PANEL_SHADOW_COLOR;
 
-
-
-
             if (isCard && card != null) {
-                if (card.current_x > (float)Settings.WIDTH * 0.75F) {
+                if (card.current_x > (float) Settings.WIDTH * 0.75F) {
                     renderKeywords(card.current_x - AbstractCard.IMG_WIDTH / 2.0F - CARD_TIP_PAD - BOX_W, card.current_y + AbstractCard.IMG_HEIGHT / 2.0F - BOX_EDGE_H, sb, KEYWORDS);
                 } else {
                     renderKeywords(card.current_x + AbstractCard.IMG_WIDTH / 2.0F + CARD_TIP_PAD, card.current_y + AbstractCard.IMG_HEIGHT / 2.0F - BOX_EDGE_H, sb, KEYWORDS);
@@ -104,18 +101,18 @@ public class TipHelperChamp3 {
     private static void renderPowerTips(float x, float y, SpriteBatch sb, ArrayList<PowerTip> powerTips) {
         float originalY = y;
         boolean offsetLeft = false;
-        if (x > (float)Settings.WIDTH / 2.0F) {
+        if (x > (float) Settings.WIDTH / 2.0F) {
             offsetLeft = true;
         }
 
         float offset = 0.0F;
 
         float offsetChange;
-        for(Iterator var7 = powerTips.iterator(); var7.hasNext(); offset += offsetChange) {
-            PowerTip tip = (PowerTip)var7.next();
+        for (Iterator var7 = powerTips.iterator(); var7.hasNext(); offset += offsetChange) {
+            PowerTip tip = (PowerTip) var7.next();
             textHeight = getPowerTipHeight(tip);
             offsetChange = textHeight + BOX_EDGE_H * 3.15F;
-            if (offset + offsetChange >= (float)Settings.HEIGHT * 0.7F) {
+            if (offset + offsetChange >= (float) Settings.HEIGHT * 0.7F) {
                 y = originalY;
                 offset = 0.0F;
                 if (offsetLeft) {
@@ -132,7 +129,7 @@ public class TipHelperChamp3 {
                 sb.draw(tip.img, x + TEXT_OFFSET_X + gl.width + 5.0F * Settings.scale, y - 10.0F * Settings.scale, 32.0F * Settings.scale, 32.0F * Settings.scale);
             } else if (tip.imgRegion != null) {
                 sb.setColor(Color.WHITE);
-                sb.draw(tip.imgRegion, x + gl.width + POWER_ICON_OFFSET_X - (float)tip.imgRegion.packedWidth / 2.0F, y + 5.0F * Settings.scale - (float)tip.imgRegion.packedHeight / 2.0F, (float)tip.imgRegion.packedWidth / 2.0F, (float)tip.imgRegion.packedHeight / 2.0F, (float)tip.imgRegion.packedWidth, (float)tip.imgRegion.packedHeight, Settings.scale * 0.75F, Settings.scale * 0.75F, 0.0F);
+                sb.draw(tip.imgRegion, x + gl.width + POWER_ICON_OFFSET_X - (float) tip.imgRegion.packedWidth / 2.0F, y + 5.0F * Settings.scale - (float) tip.imgRegion.packedHeight / 2.0F, (float) tip.imgRegion.packedWidth / 2.0F, (float) tip.imgRegion.packedHeight / 2.0F, (float) tip.imgRegion.packedWidth, (float) tip.imgRegion.packedHeight, Settings.scale * 0.75F, Settings.scale * 0.75F, 0.0F);
             }
 
             y -= offsetChange;
@@ -145,7 +142,7 @@ public class TipHelperChamp3 {
     }
 
     public static float calculateAdditionalOffset(ArrayList<PowerTip> powerTips, float hBcY) {
-        return powerTips.isEmpty() ? 0.0F : (1.0F - hBcY / (float)Settings.HEIGHT) * getTallestOffset(powerTips) - (getPowerTipHeight((PowerTip)powerTips.get(0)) + BOX_EDGE_H * 3.15F) / 2.0F;
+        return powerTips.isEmpty() ? 0.0F : (1.0F - hBcY / (float) Settings.HEIGHT) * getTallestOffset(powerTips) - (getPowerTipHeight((PowerTip) powerTips.get(0)) + BOX_EDGE_H * 3.15F) / 2.0F;
     }
 
     public static float calculateToAvoidOffscreen(ArrayList<PowerTip> powerTips, float hBcY) {
@@ -155,12 +152,10 @@ public class TipHelperChamp3 {
     private static float getTallestOffset(ArrayList<PowerTip> powerTips) {
         float currentOffset = 0.0F;
         float maxOffset = 0.0F;
-        Iterator var3 = powerTips.iterator();
 
-        while(var3.hasNext()) {
-            PowerTip p = (PowerTip)var3.next();
+        for (PowerTip p : powerTips) {
             float offsetChange = getPowerTipHeight(p) + BOX_EDGE_H * 3.15F;
-            if (currentOffset + offsetChange >= (float)Settings.HEIGHT * 0.7F) {
+            if (currentOffset + offsetChange >= (float) Settings.HEIGHT * 0.7F) {
                 currentOffset = 0.0F;
             }
 
@@ -175,17 +170,14 @@ public class TipHelperChamp3 {
 
     private static void renderKeywords(float x, float y, SpriteBatch sb, ArrayList<String> keywords) {
         if (keywords.size() >= 4) {
-            y += (float)(keywords.size() - 1) * 62.0F * Settings.scale;
+            y += (float) (keywords.size() - 1) * 62.0F * Settings.scale;
         }
 
-        Iterator var4 = keywords.iterator();
-
-        while(var4.hasNext()) {
-            String s = (String)var4.next();
+        for (String s : keywords) {
             if (!GameDictionary.keywords.containsKey(s)) {
                 logger.info("MISSING: " + s + " in Dictionary!");
             } else {
-                textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, (String)GameDictionary.keywords.get(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
+                textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, (String) GameDictionary.keywords.get(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
                 renderBox(sb, s, x, y);
                 y -= textHeight + BOX_EDGE_H * 3.15F;
             }
@@ -209,7 +201,7 @@ public class TipHelperChamp3 {
 
     public static void renderTipEnergy(SpriteBatch sb, AtlasRegion region, float x, float y) {
         sb.setColor(Color.WHITE);
-        sb.draw(region.getTexture(), x + region.offsetX * Settings.scale, y + region.offsetY * Settings.scale, 0.0F, 0.0F, (float)region.packedWidth, (float)region.packedHeight, Settings.scale, Settings.scale, 0.0F, region.getRegionX(), region.getRegionY(), region.getRegionWidth(), region.getRegionHeight(), false, false);
+        sb.draw(region.getTexture(), x + region.offsetX * Settings.scale, y + region.offsetY * Settings.scale, 0.0F, 0.0F, (float) region.packedWidth, (float) region.packedHeight, Settings.scale, Settings.scale, 0.0F, region.getRegionX(), region.getRegionY(), region.getRegionWidth(), region.getRegionHeight(), false, false);
     }
 
     private static void renderBox(SpriteBatch sb, String word, float x, float y) {
@@ -241,13 +233,13 @@ public class TipHelperChamp3 {
             FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, capitalize(TEXT[0]), x + TEXT_OFFSET_X * 2.5F, y + HEADER_OFFSET_Y, Settings.GOLD_COLOR);
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.tipBodyFont, (String)GameDictionary.keywords.get(word), x + TEXT_OFFSET_X, y + BODY_OFFSET_Y, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING, BASE_COLOR);
+        FontHelper.renderSmartText(sb, FontHelper.tipBodyFont, (String) GameDictionary.keywords.get(word), x + TEXT_OFFSET_X, y + BODY_OFFSET_Y, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING, BASE_COLOR);
     }
 
     public static String capitalize(String input) {
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i < input.length(); ++i) {
+        for (int i = 0; i < input.length(); ++i) {
             char tmp = input.charAt(i);
             if (i == 0) {
                 tmp = Character.toUpperCase(tmp);

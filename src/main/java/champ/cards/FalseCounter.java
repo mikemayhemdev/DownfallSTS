@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,6 +19,7 @@ public class FalseCounter extends AbstractChampCard {
     public FalseCounter() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

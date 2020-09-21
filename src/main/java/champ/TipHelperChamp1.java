@@ -153,12 +153,10 @@ public class TipHelperChamp1 {
     private static float getTallestOffset(ArrayList<PowerTip> powerTips) {
         float currentOffset = 0.0F;
         float maxOffset = 0.0F;
-        Iterator var3 = powerTips.iterator();
 
-        while(var3.hasNext()) {
-            PowerTip p = (PowerTip)var3.next();
+        for (PowerTip p : powerTips) {
             float offsetChange = getPowerTipHeight(p) + BOX_EDGE_H * 3.15F;
-            if (currentOffset + offsetChange >= (float)Settings.HEIGHT * 0.7F) {
+            if (currentOffset + offsetChange >= (float) Settings.HEIGHT * 0.7F) {
                 currentOffset = 0.0F;
             }
 
@@ -176,14 +174,11 @@ public class TipHelperChamp1 {
             y += (float)(keywords.size() - 1) * 62.0F * Settings.scale;
         }
 
-        Iterator var4 = keywords.iterator();
-
-        while(var4.hasNext()) {
-            String s = (String)var4.next();
+        for (String s : keywords) {
             if (!GameDictionary.keywords.containsKey(s)) {
                 logger.info("MISSING: " + s + " in Dictionary!");
             } else {
-                textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, (String)GameDictionary.keywords.get(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
+                textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, (String) GameDictionary.keywords.get(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
                 renderBox(sb, s, x, y);
                 y -= textHeight + BOX_EDGE_H * 3.15F;
             }

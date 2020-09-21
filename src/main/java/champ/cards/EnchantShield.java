@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.EnchantedShieldPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,6 +14,7 @@ public class EnchantShield extends AbstractChampCard {
     public EnchantShield() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

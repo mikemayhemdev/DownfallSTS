@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,6 +21,7 @@ public class Execute extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HP_LOSS;
         myHpLossCost = 4;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

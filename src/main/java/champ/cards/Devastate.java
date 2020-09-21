@@ -17,6 +17,7 @@ public class Devastate extends AbstractChampCard {
     public Devastate() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

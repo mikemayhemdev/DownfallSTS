@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,6 +17,7 @@ public class BringItOn extends AbstractChampCard {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

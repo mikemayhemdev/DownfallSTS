@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,6 +14,7 @@ public class LastStand extends AbstractChampCard {
 
     public LastStand() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

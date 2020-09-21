@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -19,6 +20,7 @@ public class HeartStrike extends AbstractChampCard {
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(CardTags.STRIKE);
+        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
