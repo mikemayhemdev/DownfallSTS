@@ -210,6 +210,11 @@ public class ChampChar extends CustomPlayer {
     }
 
     @Override
+    public void onStanceChange(String id) {
+        switchStanceVisual(id);
+    }
+
+    @Override
     public String getCustomModeCharacterButtonSoundKey() {
         if (MathUtils.randomBoolean()) {// 71
             return "VO_CHAMP_3A";// 72

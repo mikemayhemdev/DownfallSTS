@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import slimebound.SlimeboundMod;
@@ -71,7 +70,7 @@ public abstract class AbstractChampStance extends AbstractStance {
 
         if (AbstractDungeon.player instanceof ChampChar) {
             SlimeboundMod.logger.info("Switchin stances to: " + this.ID);
-            ((ChampChar) AbstractDungeon.player).switchStanceVisual(this.ID);
+            //((ChampChar) AbstractDungeon.player).switchStanceVisual(this.ID);
         }
 
     }
@@ -79,11 +78,12 @@ public abstract class AbstractChampStance extends AbstractStance {
     @Override
     public void onExitStance() {
         stopIdleSfx();
-        if (AbstractDungeon.player.stance instanceof NeutralStance) {
+        /*if (AbstractDungeon.player.stance instanceof NeutralStance) {
             if (AbstractDungeon.player instanceof ChampChar) {
-                ((ChampChar) AbstractDungeon.player).switchStanceVisual("Neutral");
+                ((ChampChar) AbstractDungeon.player).switchStanceVisual(NeutralStance.STANCE_ID);
             }
         }
+        */
     }
 
     public void stopIdleSfx() {
