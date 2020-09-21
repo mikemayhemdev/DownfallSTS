@@ -42,7 +42,7 @@ public class StanceHelper {
         } else if (AbstractDungeon.player.stance instanceof UltimateStance){
             return ChampChar.characterStrings.TEXT[7];
         } else if (AbstractDungeon.player instanceof ChampChar){
-            return ChampChar.characterStrings.TEXT[27];
+            return ChampChar.characterStrings.TEXT[6];
         }
         return null;
     }

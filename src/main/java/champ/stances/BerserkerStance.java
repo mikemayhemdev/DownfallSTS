@@ -3,10 +3,7 @@ package champ.stances;
 import champ.ChampChar;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class BerserkerStance extends AbstractChampStance {
@@ -39,6 +36,7 @@ public class BerserkerStance extends AbstractChampStance {
     public void technique() {
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 4));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(4), 4));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
     }
 
     @Override

@@ -5,7 +5,6 @@ import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -38,6 +37,8 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
         this.updateDescription();
     }
 
+    private int strengthGrantedByResolve = 0;
+
     @Override
     public void onRemove() {
         amount = 0;
@@ -51,19 +52,20 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
         equivStrCheck();
     }
 
     public void equivStrCheck() {
         int x = amount / 5; //TODO: Resolve needs to work with actual strength gained by other effects as well - how to do this?
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            AbstractPower p = AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
-            if (p.amount != x && !(x < 0)) p.amount = x;
-            if (p.amount == 0) addToTop(new RemoveSpecificPowerAction(owner, owner, StrengthPower.POWER_ID));
+            owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
         } else {
-            if (x > 0)
+            if (x > 0) {
                 addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, x), x));
+            }
         }
+        if (strengthGrantedByResolve != x) strengthGrantedByResolve = x;
     }
 
     @Override
