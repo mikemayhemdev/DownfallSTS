@@ -23,7 +23,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import downfall.events.Colosseum_Evil;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -67,12 +66,13 @@ public class ChampMod implements
     private static final String CHARSELECT_PORTRAIT = "champResources/images/charSelect/charBG.png";
 
     public static Color placeholderColor = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1);
-    /*
+
     @SpireEnum
     public static AbstractCard.CardTags OPENER;
-    @SpireEnum
-    public static AbstractCard.CardTags FINISHER;
-    */
+    /*
+@SpireEnum
+public static AbstractCard.CardTags FINISHER;
+*/
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
 

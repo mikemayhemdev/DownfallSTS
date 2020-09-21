@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +14,7 @@ public class Backstep extends AbstractChampCard {
 
     public Backstep() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        tags.add(ChampMod.OPENER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

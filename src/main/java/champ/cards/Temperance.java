@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,6 +21,7 @@ public class Temperance extends AbstractChampCard implements OctopusCard {
 
     public Temperance() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        tags.add(ChampMod.OPENER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

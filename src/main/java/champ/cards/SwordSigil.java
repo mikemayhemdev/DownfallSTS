@@ -13,6 +13,7 @@ public class SwordSigil extends AbstractChampCard {
     public SwordSigil() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.OPENER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

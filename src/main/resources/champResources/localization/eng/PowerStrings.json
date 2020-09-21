@@ -103,5 +103,21 @@
       "Whenever you enter three unique stances in one turn, gain #b",
       " [E] and draw #b2 cards. Unique stances entered this turn: "
     ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "Strike of Genius",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random #yOpener to your hand. It costs #b0 until played.",
+      "At the start of your turn, add #b",
+      " random #yOpeners to your hand. They cost #b0 until played."
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "Strike of Genius+",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random #yupgraded #yOpener to your hand. It costs #b0 until played.",
+      "At the start of your turn, add #b",
+      " random #yupgraded #yOpeners to your hand. They cost #b0 until played."
+    ]
   }
 }

@@ -319,5 +319,10 @@
     "NAME": "Dancing Master",
     "DESCRIPTION": "Whenever you enter three unique Stances in one turn, gain [E] and draw 2 cards.",
     "UPGRADE_DESCRIPTION": "Whenever you enter three unique Stances in one turn, gain [E] [E] and draw 2 cards."
+  },
+  "champ:StrikeOfGenius": {
+    "NAME": "Strike of Genius",
+    "DESCRIPTION": "At the start of your turn, add a random champ:Opener to your hand. NL It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random upgraded champ:Opener to your hand. NL It costs 0 until played."
   }
 }

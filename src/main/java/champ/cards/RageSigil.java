@@ -13,6 +13,7 @@ public class RageSigil extends AbstractChampCard {
     public RageSigil() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.OPENER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

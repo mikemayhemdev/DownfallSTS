@@ -13,6 +13,7 @@ public class ShieldSigil extends AbstractChampCard {
     public ShieldSigil() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.OPENER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

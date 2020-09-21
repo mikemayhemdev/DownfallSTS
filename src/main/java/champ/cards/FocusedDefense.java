@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.FocusedDefPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,6 +13,7 @@ public class FocusedDefense extends AbstractChampCard {
 
     public FocusedDefense() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        tags.add(ChampMod.OPENER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
