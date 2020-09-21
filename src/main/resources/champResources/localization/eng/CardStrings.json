@@ -276,5 +276,9 @@
   "champ:RecklessLeap": {
     "NAME": "Reckless Leap",
     "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 7. NL Gain !M! Strength. NL Exhaust."
+  },
+  "champ:IgnorePain": {
+    "NAME": "Ignore Pain",
+    "DESCRIPTION": "champ:Technique. NL Your HP cannot be reduced below 1 until your next turn. NL Exhaust."
   }
 }
