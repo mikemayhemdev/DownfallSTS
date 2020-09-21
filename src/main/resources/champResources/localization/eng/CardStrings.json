@@ -227,5 +227,10 @@
   "champ:RisingSlash": {
     "NAME": "Rising Slash",
     "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Play this twice if the last played card was a champ:Technique."
+  },
+  "champ:Feint": {
+    "NAME": "Feint",
+    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to your Strength.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to twice your Strength."
   }
 }
