@@ -1,8 +1,6 @@
 package champ.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,7 +20,7 @@ public class ShieldThrow extends AbstractChampCard {
         finisher();
         this.baseDamage = p.currentBlock;
         this.calculateCardDamage(m);
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));// 37
+        dmg(m, AbstractGameAction.AttackEffect.SMASH);
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
         if (!dcombo()) {

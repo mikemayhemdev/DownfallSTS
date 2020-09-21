@@ -246,5 +246,10 @@
     "NAME": "Adrenal Armor",
     "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 3 times."
+  },
+  "champ:HeartStrike": {
+    "NAME": "Heart Strike",
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't lose your champ:Resolve."
   }
 }
