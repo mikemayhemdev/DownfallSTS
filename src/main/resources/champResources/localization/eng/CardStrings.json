@@ -264,5 +264,9 @@
   "champ:FightOn": {
     "NAME": "Fight On",
     "DESCRIPTION": "Fleeting. NL Can't be upgraded. NL Can only be played if you have at least 30 champ:Resolve. NL Gain 5 Max HP."
+  },
+  "champ:Encircle": {
+    "NAME": "Encircle",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy and champ:Fatigue 1. NL Repeat !M! times."
   }
 }
