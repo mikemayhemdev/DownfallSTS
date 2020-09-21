@@ -251,5 +251,10 @@
     "NAME": "Heart Strike",
     "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't lose your champ:Resolve."
+  },
+  "champ:FinalRevenge": {
+    "NAME": "Final Revenge",
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
   }
 }

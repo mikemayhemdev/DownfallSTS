@@ -48,7 +48,6 @@ public class ShieldThrow extends AbstractChampCard {
         this.initializeDescription();
     }
 
-
     public void upp() {
         upgradeBaseCost(2);
     }
