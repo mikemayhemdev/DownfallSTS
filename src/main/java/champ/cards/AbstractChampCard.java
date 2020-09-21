@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.actions.OpenerReduceCostAction;
+import champ.powers.CalledShotPower;
 import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
@@ -254,8 +255,11 @@ public abstract class AbstractChampCard extends CustomCard {
         if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
             exitStance();
             ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
-            if (!(AbstractDungeon.player.stance instanceof GladiatorStance)) {
-                addToBot(new PressEndTurnButtonAction());
+            if (!gcombo()) {
+                if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
+                    AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
+                } else
+                    addToBot(new PressEndTurnButtonAction());
             }
         }
     }

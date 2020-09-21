@@ -314,5 +314,10 @@
   "champ:Duel": {
     "NAME": "Duel",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
+  },
+  "champ:DancingMaster": {
+    "NAME": "Dancing Master",
+    "DESCRIPTION": "Whenever you enter three unique Stances in one turn, gain [E] and draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Whenever you enter three unique Stances in one turn, gain [E] [E] and draw 2 cards."
   }
 }

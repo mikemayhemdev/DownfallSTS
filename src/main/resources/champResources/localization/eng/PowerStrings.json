@@ -96,5 +96,12 @@
       "The next #b",
       " times you play a #yFinisher while not in #yGladiator #yStance, your turn does not end."
     ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "Dancing Master",
+    "DESCRIPTIONS": [
+      "Whenever you enter three unique stances in one turn, gain #b",
+      " [E] and draw #b2 cards. Unique stances entered this turn: "
+    ]
   }
 }
