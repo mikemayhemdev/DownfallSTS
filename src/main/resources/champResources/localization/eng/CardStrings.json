@@ -283,6 +283,11 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "Lose !M! HP. NL This cannot kill you. NL Gain 30 champ:Resolve. NL Deal damage to ALL enemies equal to the amount of HP lost."
+    "DESCRIPTION": "champ:Fatigue 30. NL Deal damage to ALL enemies equal to the amount of HP lost."
+  },
+  "champ:ArenaPreparation": {
+    "NAME": "Arena Preparation",
+    "DESCRIPTION": "champ:Fatigue 8. NL Add 2 random Attacks into your hand. NL They cost 0 until played.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Fatigue 8. NL Add 2 random Attacks into your hand. NL They cost 0 until played."
   }
 }
