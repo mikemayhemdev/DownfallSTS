@@ -324,5 +324,10 @@
     "NAME": "Strike of Genius",
     "DESCRIPTION": "At the start of your turn, add a random champ:Opener to your hand. NL It costs 0 until played.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, add a random upgraded champ:Opener to your hand. NL It costs 0 until played."
+  },
+  "champ:DefensiveStyle": {
+    "NAME": "Defensive Style",
+    "DESCRIPTION": "If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter."
   }
 }

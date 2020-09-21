@@ -119,5 +119,13 @@
       "At the start of your turn, add #b",
       " random #yupgraded #yOpeners to your hand. They cost #b0 until played."
     ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "Defensive Style",
+    "DESCRIPTIONS": [
+      "If you start your turn in #yGladiator #yStance, gain #b",
+      " #yBlock and #b",
+      " #yCounter."
+    ]
   }
 }
