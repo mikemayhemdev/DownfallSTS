@@ -302,5 +302,9 @@
   "champ:Improvising": {
     "NAME": "Improvising",
     "DESCRIPTION": "The first time each turn you use a champ:Combo while not in the correct Stance, return it to your hand. NL It costs 0 until played."
+  },
+  "champ:CalledShot": {
+    "NAME": "CalledShot",
+    "DESCRIPTION": "The next champ:Finisher you play while not in champ:Gladiator does not cause your turn to end."
   }
 }

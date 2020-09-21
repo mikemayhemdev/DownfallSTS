@@ -88,5 +88,13 @@
       "The first #b",
       " times each turn you use a #yCombo while not in the correct #yStance, return it to your hand and it costs #b0 until played. #b"
     ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "Called Shot",
+    "DESCRIPTIONS": [
+      "The next time you play a #yFinisher while not in #yGladiator #yStance, your turn does not end.",
+      "The next #b",
+      " times you play a #yFinisher while not in #yGladiator #yStance, your turn does not end."
+    ]
   }
 }
