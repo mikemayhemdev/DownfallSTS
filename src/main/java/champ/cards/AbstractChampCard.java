@@ -3,7 +3,6 @@ package champ.cards;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
-import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
 import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
@@ -18,8 +17,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.KeywordStrings;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -228,17 +225,17 @@ public abstract class AbstractChampCard extends CustomCard {
         }
     }
 
-    public void berserkerStance() {
+    protected void berserkerStance() {
         SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
         atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
-    public void gladiatorStance() {
+    protected void gladiatorStance() {
         SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
         atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
     }
 
-    public void defensiveStance() {
+    protected void defensiveStance() {
         SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
         atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
     }
@@ -256,7 +253,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public void finisher() {
         if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
             exitStance();
-            ((AbstractChampStance) AbstractDungeon.player.stance).finisher();
+            ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
             if (!(AbstractDungeon.player.stance instanceof GladiatorStance)) {
                 addToBot(new PressEndTurnButtonAction());
             }

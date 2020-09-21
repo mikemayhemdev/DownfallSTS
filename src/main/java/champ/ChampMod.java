@@ -15,6 +15,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -71,17 +72,13 @@ public class ChampMod implements
     public static AbstractCard.CardTags OPENER;
     @SpireEnum
     public static AbstractCard.CardTags FINISHER;
-    @SpireEnum
-    public static AbstractCard.CardTags DEFENSIVE_TECH;
-    @SpireEnum
-    public static AbstractCard.CardTags GLADIATOR_TECH;
-    @SpireEnum
-    public static AbstractCard.CardTags BERSERKER_TECH;
+    */
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
-    */
+
     private static String modID = "champ";
-    public int finishersPlayedThisTurn = 0;
+    public static int finishersThisTurn = 0;
+    public static int finishersThisCombat = 0;
     public static int techniquesThisTurn = 0;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -239,7 +236,9 @@ public class ChampMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-
+        finishersThisTurn = 0;
+        finishersThisCombat = 0;
+        techniquesThisTurn = 0;
     }
 
     @Override
@@ -295,7 +294,9 @@ public class ChampMod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
-        finishersPlayedThisTurn = 0;
+        finishersThisTurn = 0;
+        finishersThisCombat = 0;
+        techniquesThisTurn = 0;
     }
 
 
@@ -349,7 +350,8 @@ public class ChampMod implements
 
     @Override
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
-        finishersPlayedThisTurn = 0;
+        finishersThisTurn = 0;
+        techniquesThisTurn = 0;
         return false;
     }
 
@@ -361,9 +363,9 @@ public class ChampMod implements
             atb(new OpenerReduceCostAction());
         }
         if (abstractCard.hasTag(ChampMod.FINISHER)) {
-            finishersPlayedThisTurn++;
+            finishersThisTurn++;
             if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                if (finishersPlayedThisTurn > 1) {
+                if (finishersThisTurn > 1) {
                     atb(new com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction());
                 }
             } else {

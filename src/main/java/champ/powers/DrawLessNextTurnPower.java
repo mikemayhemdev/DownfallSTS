@@ -4,19 +4,17 @@ import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class ResolvePower extends AbstractPower implements CloneablePowerInterface {
+public class DrawLessNextTurnPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = ChampMod.makeID("ResolvePower");
+    public static final String POWER_ID = ChampMod.makeID("DrawLessNextTurnPower");
 
     private static final Texture tex84 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again84.png");
     private static final Texture tex32 = TextureLoader.getTexture(HexaMod.getModID() + "Resources/images/powers/Again32.png");
@@ -24,7 +22,7 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public ResolvePower(final int amount) {
+    public DrawLessNextTurnPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -39,40 +37,26 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     }
 
     @Override
-    public void onRemove() {
-        amount = 0;
-        equivStrCheck();
-    }
-
-    @Override
     public void onInitialApplication() {
-        equivStrCheck();
+        AbstractDungeon.player.gameHandSize -= amount;
     }
 
     @Override
-    public void stackPower(int stackAmount) {
-        equivStrCheck();
+    public void onRemove() {
+        AbstractDungeon.player.gameHandSize += amount;
     }
 
-    public void equivStrCheck() {
-        int x = amount / 5;
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            AbstractPower p = AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
-            if (p.amount != x && !(x < 0)) p.amount = x;
-            if (p.amount == 0) addToTop(new RemoveSpecificPowerAction(owner, owner, StrengthPower.POWER_ID));
-        } else {
-            if (x > 0)
-                addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, x), x));
-        }
+    public void atEndOfRound() {
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, ID));
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        description = DESCRIPTIONS[0] + amount + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2]);
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new ResolvePower(amount);
+        return new DrawLessNextTurnPower(amount);
     }
 }

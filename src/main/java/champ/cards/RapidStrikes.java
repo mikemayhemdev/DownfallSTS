@@ -24,7 +24,7 @@ public class RapidStrikes extends AbstractChampCard {
         int x = AbstractDungeon.cardRandomRng.random(0, 2);
         int q = ChampMod.techniquesThisTurn + 1;
         if (gcombo() && upgraded) q += 2;
-        for (int i = 0; i < q; i++) {
+        for (int i = 0; i < q; i++) { // TODO: add info about how many times it will hit in EXTENDED_DESCRIPTION display
             AbstractGameAction.AttackEffect r = null;
             switch (x) {
                 case 0:

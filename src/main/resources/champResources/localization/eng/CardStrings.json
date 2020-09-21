@@ -215,5 +215,50 @@
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever an champ:Opener reduces this card's cost, increase its damage by 5. NL Exhaust."
+  },
+  "champ:HeavySlash": {
+    "NAME": "Heavy Slash",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Strength affects this card !M! times."
+  },
+  "champ:CheapShot": {
+    "NAME": "Cheap Shot",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage and apply 1 Vulnerable to a random enemy. NL Repeat for each card with champ:Technique in your hand."
+  },
+  "champ:RisingSlash": {
+    "NAME": "Rising Slash",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Play this twice if the last played card was a champ:Technique."
+  },
+  "champ:Feint": {
+    "NAME": "Feint",
+    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to your Strength.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to twice your Strength."
+  },
+  "champ:EnragedBash": {
+    "NAME": "Enraged Bash",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! champ:Resolve. NL champ:Berserker champ:Combo: Increase this card's damage and champ:Resolve by !cool! this combat."
+  },
+  "champ:VampiricStrike": {
+    "NAME": "Vampiric Strike",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. NL Exhaust. NL champ:Berserker champ:Combo: Heal HP equal to unblocked damage.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. Heal HP equal to unblocked damage. NL Exhaust."
+  },
+  "champ:AdrenalArmor": {
+    "NAME": "Adrenal Armor",
+    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 3 times."
+  },
+  "champ:HeartStrike": {
+    "NAME": "Heart Strike",
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't lose your champ:Resolve."
+  },
+  "champ:FinalRevenge": {
+    "NAME": "Final Revenge",
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
+  },
+  "champ:CrownThrow": {
+    "NAME": "Crown Throw",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Draw !M! less cards next turn. NL champ:Gladiator champ:Combo: Don't draw less cards."
   }
 }
