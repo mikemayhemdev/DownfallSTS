@@ -352,7 +352,7 @@ public static AbstractCard.CardTags FINISHER;
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         finishersThisTurn = 0;
         techniquesThisTurn = 0;
-        return false;
+        return true;
     }
 
     @Override
