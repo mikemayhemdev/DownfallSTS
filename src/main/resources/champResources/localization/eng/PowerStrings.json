@@ -123,9 +123,16 @@
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yGladiator #yStance, gain #b",
+      "If you start your turn in #yDefensive, gain #b",
       " #yBlock and #b",
       " #yCounter."
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "Gladiator Style",
+    "DESCRIPTIONS": [
+      "If you start your turn in #yGladiator, gain #b",
+      " #yMomentary #yStrength and #yDexterity."
     ]
   }
 }

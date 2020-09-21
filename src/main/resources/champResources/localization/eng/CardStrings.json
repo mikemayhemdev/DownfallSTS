@@ -329,5 +329,10 @@
     "NAME": "Defensive Style",
     "DESCRIPTION": "If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter.",
     "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter."
+  },
+  "champ:GladiatorStyle": {
+    "NAME": "Gladiator Style",
+    "DESCRIPTION": "If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
   }
 }
