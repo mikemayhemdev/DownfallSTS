@@ -239,6 +239,7 @@ public static AbstractCard.CardTags FINISHER;
         finishersThisTurn = 0;
         finishersThisCombat = 0;
         techniquesThisTurn = 0;
+        StanceHelper.init();
     }
 
     @Override

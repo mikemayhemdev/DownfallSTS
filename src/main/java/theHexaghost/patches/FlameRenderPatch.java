@@ -1,5 +1,7 @@
 package theHexaghost.patches;
 
+import champ.ChampMod;
+import champ.StanceHelper;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -20,5 +22,6 @@ public class FlameRenderPatch {
         if (HexaMod.renderFlames) {
             HexaMod.renderGhostflames(sb);
         }
+        StanceHelper.render(sb);
     }
 }

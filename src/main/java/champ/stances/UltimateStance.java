@@ -15,7 +15,7 @@ public class UltimateStance extends AbstractChampStance {
 
     public UltimateStance() {
         this.ID = STANCE_ID;// 21
-        this.name = ChampChar.characterStrings.TEXT[12];
+        this.name = ChampChar.characterStrings.TEXT[7];
         this.updateDescription();// 23
     }// 24
 
@@ -42,7 +42,7 @@ public class UltimateStance extends AbstractChampStance {
 
     @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[13] + timeLeft + ChampChar.characterStrings.TEXT[14];
+        this.description = ChampChar.characterStrings.TEXT[21] + timeLeft + ChampChar.characterStrings.TEXT[22] + " NL " + ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[19] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[20];
     }
 
     @Override

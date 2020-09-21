@@ -29,7 +29,7 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[7];
+        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[11] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[13];
     }
 
     @Override
