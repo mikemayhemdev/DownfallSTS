@@ -26,7 +26,7 @@ public class AdrenalArmor extends AbstractChampCard {
         blck();
         loseHP(magicNumber);
         applyToSelf(new ResolvePower(magicNumber));
-        if (bcombo()) {
+        if (bcombo() && !this.purgeOnUse) {
             AbstractCard r = this;
             atb(new AbstractGameAction() {
                 @Override

@@ -310,5 +310,9 @@
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
+  },
+  "champ:Duel": {
+    "NAME": "Duel",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
   }
 }

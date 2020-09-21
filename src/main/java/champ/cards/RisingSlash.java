@@ -26,7 +26,7 @@ public class RisingSlash extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).uuid != this.uuid) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) {
             AbstractCard r = this;
             atb(new AbstractGameAction() {
                 @Override
@@ -40,7 +40,7 @@ public class RisingSlash extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).uuid != this.uuid) ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
     }
 
     public void upp() {
