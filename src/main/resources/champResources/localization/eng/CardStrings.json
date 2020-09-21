@@ -306,5 +306,9 @@
   "champ:CalledShot": {
     "NAME": "CalledShot",
     "DESCRIPTION": "The next champ:Finisher you play while not in champ:Gladiator does not cause your turn to end."
+  },
+  "champ:PerfectedStrike": {
+    "NAME": "Perfected Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
   }
 }

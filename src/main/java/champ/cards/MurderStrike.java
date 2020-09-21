@@ -19,6 +19,7 @@ public class MurderStrike extends AbstractChampCard implements OnReducedByOpener
         baseDamage = DAMAGE;
         selfRetain = true;
         exhaust = true;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
