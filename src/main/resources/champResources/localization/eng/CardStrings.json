@@ -241,5 +241,10 @@
     "NAME": "Vampiric Strike",
     "DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. NL Exhaust. NL champ:Berserker champ:Combo: Heal HP equal to unblocked damage.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. Heal HP equal to unblocked damage. NL Exhaust."
+  },
+  "champ:AdrenalArmor": {
+    "NAME": "Adrenal Armor",
+    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 3 times."
   }
 }
