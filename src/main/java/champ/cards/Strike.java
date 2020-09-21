@@ -21,7 +21,7 @@ public class Strike extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void upp() {

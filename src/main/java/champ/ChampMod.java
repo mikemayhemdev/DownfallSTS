@@ -2,7 +2,10 @@ package champ;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
+import champ.events.Colosseum_Evil_Champ;
 import champ.relics.ChampionCrown;
 import champ.util.CardFilter;
 import champ.util.CardIgnore;
@@ -17,8 +20,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.events.Colosseum_Evil;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -29,6 +34,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
+
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -49,13 +56,13 @@ public class ChampMod implements
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
     public static final String CARD_ENERGY_S = "champResources/images/512/card_hexaghost_orb.png";
     public static final String TEXT_ENERGY = "champResources/images/512/card_small_orb.png";
-    private static final String ATTACK_S_ART = "champResources/images/512/bg_attack_hexaghost.png";
-    private static final String SKILL_S_ART = "champResources/images/512/bg_skill_hexaghost.png";
-    private static final String POWER_S_ART = "champResources/images/512/bg_power_hexaghost.png";
-    private static final String ATTACK_L_ART = "champResources/images/1024/bg_attack_hexaghost.png";
-    private static final String SKILL_L_ART = "champResources/images/1024/bg_skill_hexaghost.png";
-    private static final String POWER_L_ART = "champResources/images/1024/bg_power_hexaghost.png";
-    private static final String CARD_ENERGY_L = "champResources/images/1024/card_hexaghost_orb.png";
+    private static final String ATTACK_S_ART = "champResources/images/512/bg_attack_colorless.png";
+    private static final String SKILL_S_ART = "champResources/images/512/bg_skill_colorless.png";
+    private static final String POWER_S_ART = "champResources/images/512/bg_power_colorless.png";
+    private static final String ATTACK_L_ART = "champResources/images/1024/bg_attack_colorless.png";
+    private static final String SKILL_L_ART = "champResources/images/1024/bg_skill_colorless.png";
+    private static final String POWER_L_ART = "champResources/images/1024/bg_power_colorless.png";
+    private static final String CARD_ENERGY_L = "champResources/images/1024/card_champ_orb.png";
     private static final String CHARSELECT_BUTTON = "champResources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = "champResources/images/charSelect/charBG.png";
 
@@ -298,6 +305,15 @@ public class ChampMod implements
 
         heartOrb = TextureLoader.getTexture("champResources/images/heartOrb.png");
         UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
+
+        BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil_Champ.ID, Colosseum_Evil_Champ.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> evilMode && AbstractDungeon.player instanceof ChampChar)
+                //Event ID to Override//
+                .overrideEvent(Colosseum.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
 
         /*
         BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//

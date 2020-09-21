@@ -1,25 +1,18 @@
-package downfall.events;
+package champ.events;
 
 
-import charbosses.actions.util.CharBossMonsterGroup;
-import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.bosses.Ironclad.CharBossIronclad;
-import charbosses.bosses.Merchant.CharBossMerchant;
-import charbosses.bosses.Silent.CharBossSilent;
-import charbosses.bosses.Watcher.CharBossWatcher;
+import champ.relics.BlackKnightsHelmet;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import slimebound.SlimeboundMod;
 
-public class Colosseum_Evil extends AbstractImageEvent {
-    public static final String ID = "downfall:Colosseum";
+public class Colosseum_Evil_Champ extends AbstractImageEvent {
+    public static final String ID = "champ:Colosseum";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
@@ -34,7 +27,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
 
     private CurScreen screen;
 
-    public Colosseum_Evil() {
+    public Colosseum_Evil_Champ() {
         super(NAME, DESCRIPTIONS[0], "images/events/colosseum.jpg");
         this.screen = CurScreen.PRE;
 
@@ -47,7 +40,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                 this.screen = CurScreen.INTRO;
                 this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                 this.imageEventText.clearAllDialogs();
-                this.imageEventText.setDialogOption(OPTIONS[0]);
+                this.imageEventText.setDialogOption(OPTIONS[0], new BlackKnightsHelmet());
                 this.imageEventText.setDialogOption(OPTIONS[1]);
                 this.imageEventText.setDialogOption(OPTIONS[2]);
                 return;
@@ -57,15 +50,14 @@ public class Colosseum_Evil extends AbstractImageEvent {
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
                         SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Nobs");
+                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("champ:BlackKnight");
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.RARE);
+                        AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackKnightsHelmet());
                         AbstractDungeon.getCurrRoom().addRelicToRewards(AbstractRelic.RelicTier.UNCOMMON);
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
-                        AbstractDungeon.lastCombatMetricKey = "Colosseum Nobs";
 
                         return;
                     case 1:
