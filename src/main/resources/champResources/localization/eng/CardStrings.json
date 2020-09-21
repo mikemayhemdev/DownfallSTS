@@ -232,5 +232,9 @@
     "NAME": "Feint",
     "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to your Strength.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to twice your Strength."
+  },
+  "champ:EnragedBash": {
+    "NAME": "Enraged Bash",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! champ:Resolve. NL champ:Berserker champ:Combo: Increase this card's damage and champ:Resolve by !cool! this combat."
   }
 }
