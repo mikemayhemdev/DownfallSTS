@@ -256,5 +256,9 @@
     "NAME": "Final Revenge",
     "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
+  },
+  "champ:CrownThrow": {
+    "NAME": "Crown Throw",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Draw !M! less cards next turn. NL champ:Gladiator champ:Combo: Don't draw less cards."
   }
 }

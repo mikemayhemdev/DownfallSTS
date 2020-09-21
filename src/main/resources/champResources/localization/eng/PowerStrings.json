@@ -56,5 +56,13 @@
       "You can't play #yAttacks for the next #b",
       " turns."
     ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "Crown Thrown",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less card next turn.",
+      " less cards next turn."
+    ]
   }
 }
