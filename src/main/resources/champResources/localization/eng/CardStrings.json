@@ -236,5 +236,10 @@
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
     "DESCRIPTION": "Deal !D! damage. NL Gain !M! champ:Resolve. NL champ:Berserker champ:Combo: Increase this card's damage and champ:Resolve by !cool! this combat."
+  },
+  "champ:VampiricStrike": {
+    "NAME": "Vampiric Strike",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. NL Exhaust. NL champ:Berserker champ:Combo: Heal HP equal to unblocked damage.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. Heal HP equal to unblocked damage. NL Exhaust."
   }
 }
