@@ -32,6 +32,11 @@ public class Lariat extends AbstractChampCard {
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeBlock(UPG_BLOCK);
         upgradeMagicNumber(UPG_MAGIC);

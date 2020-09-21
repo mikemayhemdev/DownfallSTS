@@ -31,6 +31,11 @@ public class FlashCut extends AbstractChampCard {
         if (dcombo()) applyToSelf(new CounterPower(9));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);

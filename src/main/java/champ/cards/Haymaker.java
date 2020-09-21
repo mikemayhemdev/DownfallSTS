@@ -28,6 +28,11 @@ public class Haymaker extends AbstractChampCard {
         } else applyToEnemy(m, autoWeak(m, 1));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
     }

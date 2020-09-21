@@ -40,6 +40,11 @@ public class CrookedStrike extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
     }

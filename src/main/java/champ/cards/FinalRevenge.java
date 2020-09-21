@@ -26,6 +26,11 @@ public class FinalRevenge extends AbstractChampCard {
         if (upgraded && bcombo()) exhaust = false;
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (bcombo() && upgraded) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     //TODO: sooo. many. custom damage displays
 
     public void upp() {

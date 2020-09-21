@@ -42,6 +42,11 @@ public class RapidStrikes extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (upgraded && gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();

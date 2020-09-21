@@ -24,6 +24,11 @@ public class ViciousMockery extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;

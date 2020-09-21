@@ -33,6 +33,11 @@ public class HeartStrike extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     //TODO: you know the drill, same old damage display deal. one of the most annoying things to do - find some way to abstract it so it's only needed to be done once and copied to all other cards maybe?
 
     public void upp() {

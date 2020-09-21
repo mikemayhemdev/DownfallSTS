@@ -37,6 +37,11 @@ public class EnGarde extends AbstractChampCard {
         });
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
     }

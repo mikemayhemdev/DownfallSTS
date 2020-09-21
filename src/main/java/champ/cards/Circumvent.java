@@ -30,6 +30,11 @@ public class Circumvent extends AbstractChampCard {
         if (dcombo()) applyToSelf(new CounterPower(magicNumber));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeBlock(UPG_BLOCK);
         upgradeMagicNumber(UPG_MAGIC);

@@ -33,6 +33,11 @@ public class VampiricStrike extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (!upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();

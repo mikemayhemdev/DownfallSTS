@@ -29,6 +29,11 @@ public class EnragedBash extends AbstractChampCard {
             atb(new ModifyDamageAndMagicAction(uuid, cool));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeCool(2);
     }

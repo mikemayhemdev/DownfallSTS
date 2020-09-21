@@ -30,6 +30,11 @@ public class FaceSlap extends AbstractChampCard {
         if (bcombo()) applyToEnemy(m, autoVuln(m, magicNumber));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);

@@ -37,7 +37,7 @@ public class FanOfKnives extends AbstractChampCard {
                 public void update() {
                     isDone = true;
                     for (AbstractCard q : p.hand.group) {
-                        if (q.rawDescription.contains("champ:Finisher")) {
+                        if (q.rawDescription.contains("champ:Finisher")) { //TODO: yep, these need tags too, actually. rip
                             att(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AttackEffect.NONE));
                             att(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
                             att(new AbstractGameAction() {
@@ -52,6 +52,11 @@ public class FanOfKnives extends AbstractChampCard {
                 }
             });
         }
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

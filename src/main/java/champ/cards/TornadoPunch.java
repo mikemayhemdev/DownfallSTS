@@ -45,6 +45,11 @@ public class TornadoPunch extends AbstractChampCard {
         });
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);

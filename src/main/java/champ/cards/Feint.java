@@ -38,6 +38,11 @@ public class Feint extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     //TODO: Do the same thing with the extended description to show block gained from str after modifiers
 
     public void upp() {

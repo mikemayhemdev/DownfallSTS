@@ -32,6 +32,11 @@ public class Backstep extends AbstractChampCard {
     }
 
     @Override
+    public void triggerOnGlowCheck() {
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
+    @Override
     public void applyPowers() {
         int x = 0;
         if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
