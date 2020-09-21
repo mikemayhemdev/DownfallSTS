@@ -92,6 +92,7 @@ public abstract class AbstractChampCard extends CustomCard {
         initializeDescription();
     }
 
+    /*
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
@@ -100,6 +101,7 @@ public abstract class AbstractChampCard extends CustomCard {
         }
         return tips;
     }
+    */ //TODO: note that this method doubles up the Resolve keyword sometimes and is generally not the best solution. either manually check if resolve is also used in the card and don't do it then or find a different way - can be handled later
 
 
     public static String getCorrectPlaceholderImage(CardType type, String id) {

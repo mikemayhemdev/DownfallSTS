@@ -5,10 +5,6 @@
 
 package champ;
 
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
-import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
