@@ -42,9 +42,9 @@
     "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve."
   },
   {
-    "PROPER_NAME": "Gladiator",
+    "PROPER_NAME": "Defensive",
     "NAMES": [
-      "gladiator"
+      "defensive"
     ],
     "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounterstrike. #yFinisher: Gain #b12 #yBlock."
   },

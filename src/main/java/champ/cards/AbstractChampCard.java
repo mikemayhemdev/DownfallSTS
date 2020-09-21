@@ -5,10 +5,7 @@ import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.actions.OpenerReduceCostAction;
 import champ.powers.CalledShotPower;
-import champ.stances.AbstractChampStance;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
+import champ.stances.*;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -112,15 +109,15 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public static boolean gcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID));
+        return (AbstractDungeon.player.stance.ID.equals(GladiatorStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
     }
 
     public static boolean bcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID));
+        return (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
     }
 
     public static boolean dcombo() {
-        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID));
+        return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
     }
 
     @Override
@@ -228,17 +225,25 @@ public abstract class AbstractChampCard extends CustomCard {
 
     protected void berserkerStance() {
         SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
-        atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
+            atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
     protected void gladiatorStance() {
         SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
-        atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
+        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
+            atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
     }
 
     protected void defensiveStance() {
         SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
-        atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+        if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
+            atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+    }
+
+    protected void ultimateStance() {
+        SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
+        atb(new ChangeStanceAction(UltimateStance.STANCE_ID));
     }
 
     public void exitStance() {

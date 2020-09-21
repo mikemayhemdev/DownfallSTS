@@ -11,12 +11,15 @@
       "Berserker Stance",
       "Defensive Stance",
       "Gladiator Stance",
-      "Gain Block and Counterstrike each turn",
-      "Gain Resolve when you lose HP on your turn",
-      "The first Finisher played each turn does not end your turn.",
+      "Technique: Gain 6 #yCounterstrike. Finisher: Gain 12 Block.",
+      "Technique: Fatigue #y4. Finisher: Lose all your Resolve and gain that much HP.",
+      "Technique: Draw #b1 card. Finisher: Don't end your turn.",
       "Berserker Technique",
       "Defensive Technique",
-      "Gladiator Technique"
+      "Gladiator Technique",
+      "ULTIMATE Stance",
+      "Technique: Fatigue 4, gain 6 Resolve and draw 1 card. Finisher: Lose all your #yResolve and gain that much HP, gain 12 Block, and don't end your turn. Counts as Berserker, Defensive and Gladiator for all purposes. You cannot switch Stances. Exit ULTIMATE Stance in ",
+      " turns."
     ]
   }
 }
