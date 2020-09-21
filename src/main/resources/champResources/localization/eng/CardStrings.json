@@ -298,5 +298,9 @@
     "NAME": "Steel Edge",
     "DESCRIPTION": "champ:Berserker champ:Combo: Deal !D! damage X times. NL champ:Defensive champ:Combo: Gain !B! Block X times. NL champ:Gladiator champ:Combo: Draw X cards and gain X [E] .",
     "UPGRADE_DESCRIPTION": "champ:Berserker champ:Combo: Deal !D! damage X+1 times. NL champ:Defensive champ:Combo: Gain !B! Block X+1 times. NL champ:Gladiator champ:Combo: Draw X+1 cards and gain X+1 [E] ."
+  },
+  "champ:Improvising": {
+    "NAME": "Improvising",
+    "DESCRIPTION": "The first time each turn you use a champ:Combo while not in the correct Stance, return it to your hand. NL It costs 0 until played."
   }
 }

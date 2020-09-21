@@ -1,4 +1,4 @@
-package theHexaghost.patches;
+package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
