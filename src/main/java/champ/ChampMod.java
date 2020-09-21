@@ -53,7 +53,7 @@ public class ChampMod implements
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
-    public static final String CARD_ENERGY_S = "champResources/images/512/card_hexaghost_orb.png";
+    public static final String CARD_ENERGY_S = "champResources/images/512/card_champ_orb.png";
     public static final String TEXT_ENERGY = "champResources/images/512/card_small_orb.png";
     private static final String ATTACK_S_ART = "champResources/images/512/bg_attack_colorless.png";
     private static final String SKILL_S_ART = "champResources/images/512/bg_skill_colorless.png";

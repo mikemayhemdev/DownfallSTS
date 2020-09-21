@@ -23,6 +23,7 @@ public class GutPunch extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
+        myHpLossCost = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,5 +38,6 @@ public class GutPunch extends AbstractChampCard {
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);
+        myHpLossCost++;
     }
 }

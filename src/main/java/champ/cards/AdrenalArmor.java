@@ -20,6 +20,7 @@ public class AdrenalArmor extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        myHpLossCost = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

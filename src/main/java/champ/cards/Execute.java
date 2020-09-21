@@ -19,6 +19,7 @@ public class Execute extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HP_LOSS;
+        myHpLossCost = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

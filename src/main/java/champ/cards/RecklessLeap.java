@@ -23,6 +23,7 @@ public class RecklessLeap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
+        myHpLossCost = 7;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

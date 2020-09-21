@@ -21,6 +21,7 @@ public class Encircle extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
+        myHpLossCost = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,5 +37,6 @@ public class Encircle extends AbstractChampCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+        myHpLossCost++;
     }
 }

@@ -32,7 +32,7 @@ public class DeathBlow extends AbstractChampCard {
         allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }
 
-    //TODO: same thing, damage displayer here
+    //TODO: same thing, damage displayer here (additionally, hp cost display also needs dynamic updating at the same time as the damage one)
 
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);

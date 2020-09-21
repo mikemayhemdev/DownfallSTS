@@ -15,6 +15,7 @@ public class ArenaPreparation extends AbstractChampCard {
 
     public ArenaPreparation() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        myHpLossCost = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

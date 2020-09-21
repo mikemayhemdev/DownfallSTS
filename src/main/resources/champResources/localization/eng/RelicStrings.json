@@ -1,9 +1,9 @@
 {
   "champ:ChampionCrown": {
-    "NAME": "Spirit Brand",
-    "FLAVOR": "A bound protector.",
+    "NAME": "Champion's Crown",
+    "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite a Ghostflame each turn, gain #b6 #yBlock."
+      "At the start of each combat, enter a random #yStance."
     ]
   },
   "champ:BlackKnightHelmet": {
