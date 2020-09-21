@@ -57,7 +57,7 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     }
 
     public void equivStrCheck() {
-        int x = amount / 5; //TODO: Resolve needs to work with actual strength gained by other effects as well - how to do this?
+        int x = amount / 5;
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
         } else {
