@@ -280,5 +280,9 @@
   "champ:IgnorePain": {
     "NAME": "Ignore Pain",
     "DESCRIPTION": "champ:Technique. NL Your HP cannot be reduced below 1 until your next turn. NL Exhaust."
+  },
+  "champ:DeathBlow": {
+    "NAME": "Death Blow",
+    "DESCRIPTION": "Lose !M! HP. NL This cannot kill you. NL Gain 30 champ:Resolve. NL Deal damage to ALL enemies equal to the amount of HP lost."
   }
 }

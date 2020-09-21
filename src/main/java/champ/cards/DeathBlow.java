@@ -1,0 +1,40 @@
+package champ.cards;
+
+import champ.powers.ResolvePower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+public class DeathBlow extends AbstractChampCard {
+
+    public final static String ID = makeID("DeathBlow");
+
+    //stupid intellij stuff attack, enemy, uncommon
+
+    private static final int DAMAGE = -1;
+    private static final int MAGIC = 30;
+    private static final int UPG_MAGIC = 10;
+
+    public DeathBlow() {
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = MAGIC;
+        isMultiDamage = true;
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        int x = magicNumber;
+        if (x >= p.currentHealth) x = p.currentHealth - 1;
+        loseHP(x);
+        applyToSelf(new ResolvePower(30));
+        baseDamage = x;
+        calculateCardDamage(null);
+        allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
+    }
+
+    //TODO: same thing, damage displayer here
+
+    public void upp() {
+        upgradeMagicNumber(UPG_MAGIC);
+    }
+}
