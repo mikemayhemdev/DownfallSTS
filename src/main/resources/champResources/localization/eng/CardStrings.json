@@ -272,5 +272,9 @@
   "champ:LastStand": {
     "NAME": "Last Stand",
     "DESCRIPTION": "champ:Finisher. NL Can only be played if you're under 50% HP. NL Remove all debuffs. NL Gain 6 Strength."
+  },
+  "champ:RecklessLeap": {
+    "NAME": "Reckless Leap",
+    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 7. NL Gain !M! Strength. NL Exhaust."
   }
 }
