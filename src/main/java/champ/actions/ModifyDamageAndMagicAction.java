@@ -19,6 +19,7 @@ public class ModifyDamageAndMagicAction extends AbstractGameAction {
         for (AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
             c.baseMagicNumber += this.amount;
             c.baseDamage += this.amount;
+            c.superFlash();
         }
         this.isDone = true;
     }

@@ -19,6 +19,7 @@ public class ModifyBlockAndMagicAction extends AbstractGameAction {
         for (AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
             c.baseBlock += this.amount;
             c.baseMagicNumber += this.amount;
+            c.superFlash();
         }
         this.isDone = true;
     }

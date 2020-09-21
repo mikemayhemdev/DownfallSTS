@@ -19,6 +19,7 @@ public class ModifyDamageAndBlockAction extends AbstractGameAction {
         for (AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
             c.baseBlock += this.amount;
             c.baseDamage += this.amount;
+            c.superFlash();
         }
         this.isDone = true;
     }
