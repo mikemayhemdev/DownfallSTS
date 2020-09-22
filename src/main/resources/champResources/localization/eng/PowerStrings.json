@@ -42,7 +42,7 @@
       " times you would lose HP this turn."
     ]
   },
-  "champ:ShieldWall": {
+  "champ:ShieldWallPower": {
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "After you are attacked, gain #b",
