@@ -15,7 +15,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class ResolvePower extends AbstractPower implements CloneablePowerInterface, HealthBarRenderPower {
+public class ResolvePower extends AbstractPower implements CloneablePowerInterface
+        //, HealthBarRenderPower
+        {
 
     public static final String POWER_ID = ChampMod.makeID("ResolvePower");
 
@@ -41,6 +43,7 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
 
     private int strengthGrantedByResolve = 0;
 
+    /*
     @Override
     public int getHealthBarAmount() {
         return Math.min(owner.maxHealth, owner.currentHealth + amount);
@@ -50,6 +53,7 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     public Color getColor() {
         return Color.WHITE.cpy();
     }
+    */
 
     @Override
     public void onRemove() {
