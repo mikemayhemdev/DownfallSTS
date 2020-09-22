@@ -24,6 +24,7 @@ public class EnragedBash extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        loseHP(magicNumber);
         applyToSelf(new ResolvePower(magicNumber));
         if (bcombo())
             atb(new ModifyDamageAndMagicAction(uuid, cool));

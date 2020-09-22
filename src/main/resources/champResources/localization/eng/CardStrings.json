@@ -105,7 +105,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL champ:Defensive champ:Combo: Gain 10 champ:Resolve."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL champ:Defensive champ:Combo: Gain 10 champ:Resolve and Exhaust."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -235,7 +235,7 @@
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! champ:Resolve. NL champ:Berserker champ:Combo: Increase this card's damage and champ:Resolve by !cool! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Increase this card's damage and champ:Fatigue by !cool! this combat."
   },
   "champ:VampiricStrike": {
     "NAME": "Vampiric Strike",

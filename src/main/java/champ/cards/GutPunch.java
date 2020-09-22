@@ -32,7 +32,10 @@ public class GutPunch extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         loseHP(magicNumber);
         applyToSelf(new ResolvePower(magicNumber));
-        if (dcombo()) applyToSelf(new ResolvePower(10));
+        if (dcombo()) {
+            exhaust = true;
+            applyToSelf(new ResolvePower(10));
+        }
     }
 
     public void upp() {
