@@ -1,12 +1,12 @@
 package champ.cards;
 
-import champ.util.OnOpenerSubscriber;
+import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class MurderStrike extends AbstractChampCard {
+public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscriber {
 
     public final static String ID = makeID("MurderStrike");
 
@@ -22,11 +22,26 @@ public class MurderStrike extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
     }
 
+    @Override
+    public void onTechnique() {
+        updateCost(-1);
+        baseDamage += 5;
+        applyPowers();
+        superFlash(Color.RED.cpy());
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
     }
 
     public void upp() {
-        upgradeBaseCost(8);
+        if (this.cost < 10) {
+            this.upgradeBaseCost(this.cost - 2);
+            if (this.cost < 0) {
+                this.cost = 0;
+            }
+        } else {
+            this.upgradeBaseCost(8);
+        }
     }
 }

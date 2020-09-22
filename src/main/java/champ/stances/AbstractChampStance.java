@@ -5,6 +5,7 @@ import champ.ChampMod;
 import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -105,6 +106,11 @@ public abstract class AbstractChampStance extends AbstractStance {
         for (AbstractPower q : AbstractDungeon.player.powers) {
             if (q instanceof OnTechniqueSubscriber) {
                 ((OnTechniqueSubscriber) q).onTechnique();
+            }
+        }
+        for (AbstractCard r : AbstractDungeon.player.hand.group) {
+            if (r instanceof OnTechniqueSubscriber) {
+                ((OnTechniqueSubscriber) r).onTechnique();
             }
         }
         ChampMod.techniquesThisTurn++;

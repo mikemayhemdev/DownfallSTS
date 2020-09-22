@@ -214,7 +214,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever an champ:Opener reduces this card's cost, increase its damage by 5. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique while in your hand, reduce this card's cost by 1 and increase its damage by 5 this combat. NL Exhaust."
   },
   "champ:HeavySlash": {
     "NAME": "Heavy Slash",
