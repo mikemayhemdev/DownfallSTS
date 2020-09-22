@@ -102,7 +102,8 @@
   },
   "downfall:OctoChoiceAction": {
     "TEXT": [
-      "Choose an option."
+      "Choose an option.",
+      "You should never see this. Oops"
     ]
   },
   "downfall:BossCardReward": {
