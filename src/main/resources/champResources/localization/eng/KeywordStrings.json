@@ -12,7 +12,7 @@
     "NAMES": [
       "opener"
     ],
-    "DESCRIPTION": "Switch #yStances. If you weren't in a #yStance, reduce the cost of a random card in your hand by #b1 this turn."
+    "DESCRIPTION": "Switch #yStances."
   },
   {
     "PROPER_NAME": "Combo",

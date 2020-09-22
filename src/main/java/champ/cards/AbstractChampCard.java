@@ -1,11 +1,11 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.actions.OpenerReduceCostAction;
 import champ.powers.CalledShotPower;
 import champ.stances.*;
+import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -20,11 +20,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static champ.ChampMod.getModID;
 import static champ.ChampMod.makeCardPath;
@@ -216,25 +216,25 @@ public abstract class AbstractChampCard extends CustomCard {
         return new VulnerablePower(m, i, false);
     }
 
+    public void triggerOpenerRelics(boolean fromNeutral) {
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnOpenerSubscriber) ((OnOpenerSubscriber) r).onOpener(fromNeutral);
+        }
+    }
+
     public void berserkOpen() {
         berserkerStance();
-        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            atb(new OpenerReduceCostAction());
-        }
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     public void gladOpen() {
         gladiatorStance();
-        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            atb(new OpenerReduceCostAction());
-        }
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     public void defenseOpen() {
         defensiveStance();
-        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            atb(new OpenerReduceCostAction());
-        }
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
     }
 
     protected void berserkerStance() {

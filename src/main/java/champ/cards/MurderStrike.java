@@ -1,12 +1,12 @@
 package champ.cards;
 
-import champ.util.OnReducedByOpenerSubscriber;
+import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class MurderStrike extends AbstractChampCard implements OnReducedByOpenerSubscriber {
+public class MurderStrike extends AbstractChampCard {
 
     public final static String ID = makeID("MurderStrike");
 
@@ -24,12 +24,6 @@ public class MurderStrike extends AbstractChampCard implements OnReducedByOpener
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-    }
-
-    @Override
-    public Color onReducedByOpener(Color c) {
-        baseDamage += 5;
-        return Color.RED.cpy();
     }
 
     public void upp() {

@@ -5,8 +5,6 @@
 
 package champ.actions;
 
-import champ.util.OnReducedByOpenerSubscriber;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -35,9 +33,7 @@ public class OpenerReduceCostAction extends AbstractGameAction {
         if (card != null) {
             card.costForTurn = card.costForTurn - 1;
             card.isCostModifiedForTurn = true;
-            Color c = new Color(1.0F, 0.8F, 0.2F, 0.0F);
-            if (card instanceof OnReducedByOpenerSubscriber) c = ((OnReducedByOpenerSubscriber) card).onReducedByOpener(c);
-            card.superFlash(c);
+            card.superFlash();
         }
         this.isDone = true;
     }
