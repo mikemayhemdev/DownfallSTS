@@ -41,7 +41,8 @@ public class ExtraEnergyOrbPatch {
         }
 
         private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY, AbstractCard C) {
-            sb.setColor(Color.WHITE);
+            Color color = Color.WHITE.cpy();
+            color.a = C.transparency; // i wish i'd come up with this earlier. makes things so much less ugly
             sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, C.drawScale * Settings.scale, C.drawScale * Settings.scale, C.angle);
         }
     }
