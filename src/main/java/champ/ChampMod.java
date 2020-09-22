@@ -357,6 +357,8 @@ public class ChampMod implements
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
 
+        TipHelperChamp2.rememberedCard = null;
+        TipHelperChamp3.rememberedCard = null;
         /*
         if (abstractCard.hasTag(ChampMod.OPENER)) {
             atb(new OpenerReduceCostAction());

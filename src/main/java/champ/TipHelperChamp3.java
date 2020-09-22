@@ -5,7 +5,13 @@
 
 package champ;
 
+import champ.powers.CalledShotPower;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
+import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
@@ -56,15 +62,51 @@ public class TipHelperChamp3 {
 
     private static Color currentColor;
 
+    public static AbstractCard rememberedCard = null;
+
+    public static Texture KEYWORD_TOP;
+    public static Texture KEYWORD_BODY;
+    public static Texture KEYWORD_BOT;
+
     public TipHelperChamp3() {
     }
 
+    private static void initalize(){
+        /*
+        KEYWORD_TOP = ImageMaster.loadImage("champResources/images/ui/tipTop.png");
+        KEYWORD_BODY = ImageMaster.loadImage("champResources/images/ui/tipMid.png");
+        KEYWORD_BOT = ImageMaster.loadImage("champResources/images/ui/tipBot.png");
+        */
+    }
+
     public static void render(SpriteBatch sb) {
+
         if (!Settings.hidePopupDetails) {
-            currentColor = Settings.TOP_PANEL_SHADOW_COLOR;
+            currentColor = Color.WHITE;
+            if (rememberedCard == null){
+                if (AbstractDungeon.player != null && AbstractDungeon.player.isDraggingCard) {
+                    rememberedCard = AbstractDungeon.player.hoveredCard;
+                }
+            } else if (AbstractDungeon.player.hoveredCard == null){
+                rememberedCard = null;
+            }
+
+            if (rememberedCard != null) {
+                if (rememberedCard.hasTag(ChampMod.FINISHER)){
+                    if (    (AbstractDungeon.player.stance instanceof BerserkerStance ||
+                            AbstractDungeon.player.stance instanceof DefensiveStance) &&
+                            !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)
+                    ){
+                        currentColor = new Color(0.5F,TipHelperChamp2.greenValue,0.5F,1F);
+                        AbstractDungeon.overlayMenu.endTurnButton.isWarning = true;
+                        AbstractDungeon.overlayMenu.endTurnButton.isGlowing = true;
+                    }
+                }
+            }
+
 
             if (isCard && card != null) {
-                if (card.current_x > (float) Settings.WIDTH * 0.75F) {
+                if (card.current_x > (float)Settings.WIDTH * 0.75F) {
                     renderKeywords(card.current_x - AbstractCard.IMG_WIDTH / 2.0F - CARD_TIP_PAD - BOX_W, card.current_y + AbstractCard.IMG_HEIGHT / 2.0F - BOX_EDGE_H, sb, KEYWORDS);
                 } else {
                     renderKeywords(card.current_x + AbstractCard.IMG_WIDTH / 2.0F + CARD_TIP_PAD, card.current_y + AbstractCard.IMG_HEIGHT / 2.0F - BOX_EDGE_H, sb, KEYWORDS);
@@ -183,14 +225,22 @@ public class TipHelperChamp3 {
 
     private static void renderTipBox(float x, float y, SpriteBatch sb, String title, String description) {
         float h = textHeight;
-        sb.setColor(currentColor);
+        sb.setColor(Settings.TOP_PANEL_SHADOW_COLOR);
         sb.draw(ImageMaster.KEYWORD_TOP, x + SHADOW_DIST_X, y - SHADOW_DIST_Y, BOX_W, BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BODY, x + SHADOW_DIST_X, y - h - BOX_EDGE_H - SHADOW_DIST_Y, BOX_W, h + BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BOT, x + SHADOW_DIST_X, y - h - BOX_BODY_H - SHADOW_DIST_Y, BOX_W, BOX_EDGE_H);
-        sb.setColor(Color.WHITE);
+        sb.setColor(currentColor);
         sb.draw(ImageMaster.KEYWORD_TOP, x, y, BOX_W, BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BODY, x, y - h - BOX_EDGE_H, BOX_W, h + BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BOT, x, y - h - BOX_BODY_H, BOX_W, BOX_EDGE_H);
+        /*
+        if (rememberedCard == null){
+        else {
+            sb.draw(KEYWORD_TOP, x, y, BOX_W, BOX_EDGE_H);
+            sb.draw(KEYWORD_BODY, x, y - h - BOX_EDGE_H, BOX_W, h + BOX_EDGE_H);
+            sb.draw(KEYWORD_BOT, x, y - h - BOX_BODY_H, BOX_W, BOX_EDGE_H);}
+            */
+
         FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, title, x + TEXT_OFFSET_X, y + HEADER_OFFSET_Y, Settings.GOLD_COLOR);
         FontHelper.renderSmartText(sb, FontHelper.tipBodyFont, description, x + TEXT_OFFSET_X, y + BODY_OFFSET_Y, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING, BASE_COLOR);
     }
@@ -202,11 +252,11 @@ public class TipHelperChamp3 {
 
     private static void renderBox(SpriteBatch sb, String word, float x, float y) {
         float h = textHeight;
-        sb.setColor(currentColor);
+        sb.setColor(Settings.TOP_PANEL_SHADOW_COLOR);
         sb.draw(ImageMaster.KEYWORD_TOP, x + SHADOW_DIST_X, y - SHADOW_DIST_Y, BOX_W, BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BODY, x + SHADOW_DIST_X, y - h - BOX_EDGE_H - SHADOW_DIST_Y, BOX_W, h + BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BOT, x + SHADOW_DIST_X, y - h - BOX_BODY_H - SHADOW_DIST_Y, BOX_W, BOX_EDGE_H);
-        sb.setColor(Color.WHITE);
+        sb.setColor(currentColor);
         sb.draw(ImageMaster.KEYWORD_TOP, x, y, BOX_W, BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BODY, x, y - h - BOX_EDGE_H, BOX_W, h + BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BOT, x, y - h - BOX_BODY_H, BOX_W, BOX_EDGE_H);

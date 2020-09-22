@@ -9,7 +9,9 @@ import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.GladiatorStance;
 import champ.stances.UltimateStance;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
@@ -57,24 +59,64 @@ public class TipHelperChamp2 {
     private static final float BODY_TEXT_WIDTH;
     private static final float TIP_DESC_LINE_SPACING;
     private static final float POWER_ICON_OFFSET_X;
+    public static float greenValue = 1F;
 
     private static Color currentColor;
+    private static boolean lerpdown = true;
+
+    public static AbstractCard rememberedCard = null;
+
+    public static Texture KEYWORD_TOP;
+    public static Texture KEYWORD_BODY;
+    public static Texture KEYWORD_BOT;
 
     public TipHelperChamp2() {
+
+    }
+
+
+    private static void initalize(){
+        KEYWORD_TOP = ImageMaster.loadImage("champResources/images/ui/tipTop.png");
+        KEYWORD_BODY = ImageMaster.loadImage("champResources/images/ui/tipMid.png");
+        KEYWORD_BOT = ImageMaster.loadImage("champResources/images/ui/tipBot.png");
     }
 
     public static void render(SpriteBatch sb) {
+        /*
+        if (KEYWORD_TOP == null){
+            initalize();
+        }
+        */
+        if (lerpdown){
+            greenValue -= Gdx.graphics.getDeltaTime() * 2.0F;
+            if (greenValue < 0.75F) {
+                lerpdown = false;
+            }
+        } else {
+            greenValue += Gdx.graphics.getDeltaTime() * 2.0F;
+            if (greenValue > 1F) {
+                lerpdown = true;
+            }
+        }
+
         if (!Settings.hidePopupDetails) {
             currentColor = Color.WHITE;
+            if (rememberedCard == null){
+                if (AbstractDungeon.player != null && AbstractDungeon.player.isDraggingCard) {
+                    rememberedCard = AbstractDungeon.player.hoveredCard;
+                }
+            } else if (AbstractDungeon.player.hoveredCard == null){
+                rememberedCard = null;
+            }
 
-            if (AbstractDungeon.player != null && AbstractDungeon.player.isDraggingCard) {
-                if (AbstractDungeon.player.hoveredCard.hasTag(ChampMod.TECHNIQUE)){
+            if (rememberedCard != null) {
+                if (rememberedCard.hasTag(ChampMod.TECHNIQUE)){
                     if (AbstractDungeon.player.stance instanceof UltimateStance ||
                             AbstractDungeon.player.stance instanceof GladiatorStance ||
                             AbstractDungeon.player.stance instanceof BerserkerStance ||
                             AbstractDungeon.player.stance instanceof DefensiveStance
                     ){
-                        currentColor = new Color(0.25F,1F,0.25F,1F);
+                        currentColor = new Color(0.5F,greenValue,0.5F,1F);
                     }
                 }
             }
@@ -227,6 +269,16 @@ public class TipHelperChamp2 {
         sb.draw(ImageMaster.KEYWORD_TOP, x, y, BOX_W, BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BODY, x, y - h - BOX_EDGE_H, BOX_W, h + BOX_EDGE_H);
         sb.draw(ImageMaster.KEYWORD_BOT, x, y - h - BOX_BODY_H, BOX_W, BOX_EDGE_H);
+        /*
+        if (rememberedCard == null){
+        } else {
+            sb.draw(KEYWORD_TOP, x, y, BOX_W, BOX_EDGE_H);
+            sb.draw(KEYWORD_BODY, x, y - h - BOX_EDGE_H, BOX_W, h + BOX_EDGE_H);
+            sb.draw(KEYWORD_BOT, x, y - h - BOX_BODY_H, BOX_W, BOX_EDGE_H);
+        }
+        */
+
+
         AtlasRegion currentOrb = AbstractDungeon.player != null ? AbstractDungeon.player.getOrb() : AbstractCard.orb_red;
         if (!word.equals("[R]") && !word.equals("[G]") && !word.equals("[B]") && !word.equals("[W]") && !word.equals("[E]")) {
             FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, capitalize(word), x + TEXT_OFFSET_X, y + HEADER_OFFSET_Y, Settings.GOLD_COLOR);
