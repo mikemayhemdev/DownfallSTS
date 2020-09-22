@@ -13,13 +13,13 @@ import theHexaghost.HexaMod;
 
 import java.util.ArrayList;
 
-public class Temperance extends AbstractChampCard implements OctopusCard {
+public class Control extends AbstractChampCard implements OctopusCard {
 
-    public final static String ID = makeID("Temperance");
+    public final static String ID = makeID("Control");
 
     //stupid intellij stuff skill, self, common
 
-    public Temperance() {
+    public Control() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
     }
