@@ -96,10 +96,7 @@ public abstract class AbstractChampStance extends AbstractStance {
              */
     }
 
-    @Override
-    public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[6];
-    }
+    public abstract void updateDescription();
 
     public void techique() {
         technique();
