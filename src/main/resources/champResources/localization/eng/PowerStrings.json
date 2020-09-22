@@ -9,7 +9,7 @@
   "champ:ResolvePower": {
     "NAME": "Resolve",
     "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b5 Resolve you have."
+      "You have #b1 #yStrength for every #b5 Resolve you have. At the end of combat, heal HP equal to your Resolve."
     ]
   },
   "champ:FocusedGladPower": {

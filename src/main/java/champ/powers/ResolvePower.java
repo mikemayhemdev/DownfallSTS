@@ -64,6 +64,15 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
             addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, x), x)); //TODO: this also should be unable to be artifact cheesed later on
         }
         if (strengthGrantedByResolve != x) strengthGrantedByResolve = x;
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
+            AbstractDungeon.player.getPower(StrengthPower.POWER_ID).updateDescription();
+    }
+
+    @Override
+    public void onVictory() {
+        if (owner.currentHealth > 0) {
+            owner.heal(amount);
+        }
     }
 
     @Override

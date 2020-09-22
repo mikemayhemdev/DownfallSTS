@@ -40,7 +40,7 @@
     "NAMES": [
       "resolve"
     ],
-    "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve."
+    "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve. At the end of combat, heal HP equal to your Resolve."
   },
   {
     "PROPER_NAME": "Defensive",
