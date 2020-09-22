@@ -26,7 +26,7 @@
     "NAMES": [
       "finisher"
     ],
-    "DESCRIPTION": "If you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn after that card."
+    "DESCRIPTION": "If you are in a #yStance, exit it and trigger its Finisher bonus"
   },
   {
     "PROPER_NAME": "Counterstrike",
@@ -47,14 +47,14 @@
     "NAMES": [
       "defensive"
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounterstrike. #yFinisher: Gain #b12 #yBlock."
+    "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounterstrike. #yFinisher: Gain #b12 #yBlock. End your turn."
   },
   {
     "PROPER_NAME": "Berserker",
     "NAMES": [
       "berserker"
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y4. #yFinisher: Lose all your #yResolve and gain that much HP."
+    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y4. #yFinisher: Lose all your #yResolve and gain that much HP. End your turn."
   },
   {
     "PROPER_NAME": "Gladiator",

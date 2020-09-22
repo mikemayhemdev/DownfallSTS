@@ -98,8 +98,7 @@ public class TipHelperChamp3 {
                             !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)
                     ){
                         currentColor = new Color(0.5F,TipHelperChamp2.greenValue,0.5F,1F);
-                        AbstractDungeon.overlayMenu.endTurnButton.isWarning = true;
-                        AbstractDungeon.overlayMenu.endTurnButton.isGlowing = true;
+                        //TODO: End Turn Button flashing
                     }
                 }
             }
