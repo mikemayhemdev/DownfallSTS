@@ -20,12 +20,13 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
         selfRetain = true;
         exhaust = true;
         tags.add(CardTags.STRIKE);
+        baseMagicNumber = magicNumber = 3;
     }
 
     @Override
     public void onTechnique() {
         updateCost(-1);
-        baseDamage += 3;
+        baseDamage += magicNumber;
         applyPowers();
         superFlash(Color.RED.cpy());
     }
@@ -42,7 +43,7 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
             }
         } else {
             this.upgradeBaseCost(8);
-            this.upgradeDamage(10);
         }
+        this.upgradeDamage(6);
     }
 }
