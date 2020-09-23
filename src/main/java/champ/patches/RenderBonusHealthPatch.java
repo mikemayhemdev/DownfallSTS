@@ -35,10 +35,10 @@ public class RenderBonusHealthPatch {
                     if (r + AbstractDungeon.player.currentHealth > AbstractDungeon.player.maxHealth)
                         r = (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
                     sb.setColor(Color.WHITE.cpy());
-                    int amt = r / AbstractDungeon.player.maxHealth;
+                    float amt = (float) r / AbstractDungeon.player.maxHealth;
                     float w = amt * __instance.hb.width;
                     sb.draw(ImageMaster.HEALTH_BAR_L, x - HEALTH_BAR_HEIGHT, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);// 56
-                    sb.draw(ImageMaster.HEALTH_BAR_B, x + w, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);// 58
+                    sb.draw(ImageMaster.HEALTH_BAR_B, x + targetHealthBarWidth, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);// 58
                     sb.draw(ImageMaster.HEALTH_BAR_R, x + targetHealthBarWidth + w, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);// 59
                 }
             }
