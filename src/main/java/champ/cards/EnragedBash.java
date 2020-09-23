@@ -20,6 +20,7 @@ public class EnragedBash extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         baseCool = cool = 2;
+        myHpLossCost = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

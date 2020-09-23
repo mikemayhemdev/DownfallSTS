@@ -71,7 +71,7 @@
     "NAME": "Focused Defense",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL Until you exit champ:Defensive, champ:Techniques grant 3 extra champ:Counterstrike."
   },
-  "champ:FocusedBerserker": {
+  "champ:FocusedBerserking": {
     "NAME": "Focused Berserking",
     "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker, champ:Techniques grant 2 extra champ:Resolve."
   },
