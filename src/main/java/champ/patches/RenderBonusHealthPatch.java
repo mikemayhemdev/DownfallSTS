@@ -31,15 +31,17 @@ public class RenderBonusHealthPatch {
         public static void Insert(AbstractCreature __instance, SpriteBatch sb, float x, float y, float targetHealthBarWidth, float HEALTH_BAR_HEIGHT, float HEALTH_BAR_OFFSET_Y) {
             for (AbstractPower power : __instance.powers) {
                 if (power instanceof ResolvePower) {
-                    int r = power.amount;
-                    if (r + AbstractDungeon.player.currentHealth > AbstractDungeon.player.maxHealth)
-                        r = (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
-                    sb.setColor(Color.WHITE.cpy());
-                    float amt = (float) r / AbstractDungeon.player.maxHealth;
-                    float w = amt * __instance.hb.width;
-                    sb.draw(ImageMaster.HEALTH_BAR_L, x - HEALTH_BAR_HEIGHT, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);
-                    sb.draw(ImageMaster.HEALTH_BAR_B, x + targetHealthBarWidth, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);
-                    sb.draw(ImageMaster.HEALTH_BAR_R, x + targetHealthBarWidth + w, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);
+                    if (((ResolvePower) power).renderOnHpBar) {
+                        int r = power.amount;
+                        if (r + AbstractDungeon.player.currentHealth > AbstractDungeon.player.maxHealth)
+                            r = (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth);
+                        sb.setColor(Color.WHITE.cpy());
+                        float amt = (float) r / AbstractDungeon.player.maxHealth;
+                        float w = amt * __instance.hb.width;
+                        sb.draw(ImageMaster.HEALTH_BAR_L, x - HEALTH_BAR_HEIGHT, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);
+                        sb.draw(ImageMaster.HEALTH_BAR_B, x + targetHealthBarWidth, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);
+                        sb.draw(ImageMaster.HEALTH_BAR_R, x + targetHealthBarWidth + w, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);
+                    }
                 }
             }
 

@@ -24,7 +24,13 @@ public class SkillfulDodge extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         applyToSelf(new CounterPower(magicNumber));
-        atb(new ModifyBlockAndMagicAction(uuid, cool));
+        if (dcombo())
+            atb(new ModifyBlockAndMagicAction(uuid, cool));
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

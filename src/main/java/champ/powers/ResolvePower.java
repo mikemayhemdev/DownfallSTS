@@ -86,11 +86,13 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
             AbstractDungeon.player.getPower(StrengthPower.POWER_ID).updateDescription();
     }
 
+    public boolean renderOnHpBar = true;
+
     @Override
     public void onVictory() {
         if (owner.currentHealth > 0) {
             owner.heal(amount);
-            owner.powers.remove(this);
+            renderOnHpBar = false;
         }
     }
 
