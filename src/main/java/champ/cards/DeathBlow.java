@@ -23,11 +23,9 @@ public class DeathBlow extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int x = magicNumber;
-        if (x >= p.currentHealth) x = p.currentHealth - 1;
-        loseHP(x);
+        fatigue(magicNumber);
         applyToSelf(new ResolvePower(magicNumber));
-        baseDamage = x;
+        baseDamage = magicNumber;
         calculateCardDamage(null);
         allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }

@@ -28,8 +28,7 @@ public class RecklessLeap extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        loseHP(7);
-        applyToSelf(new ResolvePower(7));
+        fatigue(7);
         applyToSelf(new StrengthPower(p, magicNumber));
     }
 

@@ -30,6 +30,7 @@ public class TornadoPunch extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) techique();
         atb(new SFXAction("ATTACK_WHIRLWIND"));
         atb(new VFXAction(new WhirlwindEffect(), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);

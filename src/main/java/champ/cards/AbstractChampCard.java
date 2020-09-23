@@ -2,7 +2,7 @@ package champ.cards;
 
 import basemod.abstracts.CustomCard;
 import champ.ChampChar;
-import champ.actions.OpenerReduceCostAction;
+import champ.actions.FatigueHpLossAction;
 import champ.powers.CalledShotPower;
 import champ.powers.ResolvePower;
 import champ.stances.*;
@@ -135,8 +135,8 @@ public abstract class AbstractChampCard extends CustomCard {
         return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
     }
 
-    public void fatigue(int amount){
-        loseHP(amount);
+    public void fatigue(int amount) {
+        atb(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, amount));
         applyToSelf(new ResolvePower(amount));
     }
 
@@ -208,10 +208,6 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public void applyToSelf(AbstractPower po) {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
-    }
-
-    public void loseHP(int amount) {
-        atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, amount));
     }
 
     WeakPower autoWeak(AbstractMonster m, int i) {

@@ -30,8 +30,7 @@ public class GutPunch extends AbstractChampCard {
         berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        loseHP(magicNumber);
-        applyToSelf(new ResolvePower(magicNumber));
+        fatigue(magicNumber);
         if (dcombo()) {
             exhaust = true;
             applyToSelf(new ResolvePower(10));

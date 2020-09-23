@@ -28,8 +28,7 @@ public class Execute extends AbstractChampCard {
         //finisher();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        loseHP(this.magicNumber);
-        applyToSelf(new ResolvePower(magicNumber));
+        fatigue(magicNumber);
         finisher();
     }
 

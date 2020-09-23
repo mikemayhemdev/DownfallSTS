@@ -1,7 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,8 +25,7 @@ public class AdrenalArmor extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        loseHP(magicNumber);
-        applyToSelf(new ResolvePower(magicNumber));
+        fatigue(magicNumber);
         if (bcombo() && !this.purgeOnUse) {
             AbstractCard r = this;
             atb(new AbstractGameAction() {
