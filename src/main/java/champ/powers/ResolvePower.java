@@ -5,6 +5,7 @@ import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -73,7 +74,9 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     public void equivStrCheck() {
         int x = amount / 5;
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
+            if (x == 0) addToTop(new RemoveSpecificPowerAction(owner, owner, StrengthPower.POWER_ID)); // to not look ugly. same TODO: make it not artifact
+            else
+                owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
         } else {
             if (x != 0)
                 addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, x), x)); //TODO: this also should be unable to be artifact cheesed later on
