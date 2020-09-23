@@ -1,12 +1,9 @@
 package champ.cards;
 
 import champ.ChampMod;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class CheapShot extends AbstractChampCard {
@@ -16,36 +13,23 @@ public class CheapShot extends AbstractChampCard {
     //stupid intellij stuff attack, all_enemy, common
 
     private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 2;
 
     public CheapShot() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
-        AbstractMonster q = AbstractDungeon.getRandomMonster();
-        dmg(q, AbstractGameAction.AttackEffect.FIRE);
-        applyToEnemy(q, autoVuln(q, 1));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = 0;
-                for (AbstractCard q : p.hand.group) if (q.hasTag(ChampMod.TECHNIQUE)) x++;
-                for (int i = 0; i < x; i++) {
-                    AbstractMonster q = AbstractDungeon.getRandomMonster();
-                    att(new ApplyPowerAction(q, p, autoVuln(q, 1), 1));
-                    att(new DamageAction(q, makeInfo(), AttackEffect.FIRE));
-                }
-            }
-        });
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        if (m.intent == AbstractMonster.Intent.DEBUFF || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m.intent == AbstractMonster.Intent.STRONG_DEBUFF || m.intent == AbstractMonster.Intent.ATTACK_BUFF || m.intent == AbstractMonster.Intent.BUFF || m.intent == AbstractMonster.Intent.DEFEND_DEBUFF || m.intent == AbstractMonster.Intent.DEFEND_BUFF) {
+            exhaust = true;
+            atb(new StunMonsterAction(m, p));
+        }
         finisher();
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        upgradeBaseCost(1);
     }
 }
