@@ -229,8 +229,8 @@
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, reduce this card's cost by 1 and increase its damage by !M! this combat. NL Exhaust."
   },
   "champ:HeavySlash": {
-    "NAME": "Heavy Slash",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Strength affects this card !M! times."
+    "NAME": "Masterful Slash",
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Deals !M! additional damage for each Upgraded card in your deck."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",

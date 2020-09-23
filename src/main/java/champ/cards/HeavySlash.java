@@ -2,10 +2,10 @@ package champ.cards;
 
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class HeavySlash extends AbstractChampCard {
 
@@ -14,11 +14,11 @@ public class HeavySlash extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, rare
 
     private static final int DAMAGE = 20;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 2;
 
     public HeavySlash() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 5, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.FINISHER);
@@ -30,26 +30,28 @@ public class HeavySlash extends AbstractChampCard {
         finisher();
     }
 
-    public void applyPowers() {
-        AbstractPower strength = AbstractDungeon.player.getPower("Strength");
-        if (strength != null) {
-            strength.amount *= this.magicNumber;
+    public int upgradeAmount() {
+        int x = 0;
+        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+            if (q.upgraded) x++;
         }
-        super.applyPowers();
-        if (strength != null) {
-            strength.amount /= this.magicNumber;
-        }
+        return x;
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        AbstractPower strength = AbstractDungeon.player.getPower("Strength");
-        if (strength != null) {
-            strength.amount *= this.magicNumber;
-        }
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * upgradeAmount();
         super.calculateCardDamage(mo);
-        if (strength != null) {
-            strength.amount /= this.magicNumber;
-        }
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * upgradeAmount();
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
     public void upp() {
