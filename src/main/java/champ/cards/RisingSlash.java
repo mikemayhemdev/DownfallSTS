@@ -26,16 +26,17 @@ public class RisingSlash extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) {
-            AbstractCard r = this;
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    GameActionManager.queueExtraCard(r, m);
-                }
-            });
-        }
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() > 1)
+            if (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 2).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) {
+                AbstractCard r = this;
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        GameActionManager.queueExtraCard(r, m);
+                    }
+                });
+            }
     }
 
     @Override
