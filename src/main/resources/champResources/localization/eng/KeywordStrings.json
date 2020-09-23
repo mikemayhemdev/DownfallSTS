@@ -64,6 +64,14 @@
     "DESCRIPTION": "#yStance. #yTechnique: Draw #b1 card. #yFinisher: Don't end your turn."
   },
   {
+    "PROPER_NAME": "Ultimate Stance",
+    "NAMES": [
+      "ultimate stance",
+      "ultimate_stance"
+    ],
+    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue 4, gain 6 #yCounterstrike and draw #b1 card. #yFinisher: Lose all #yResolve and gain that much HP. Gain 12 Block. Counts as all #b3 #yStances. You can't change #yStance from this. Lasts 2 turns."
+  },
+  {
     "PROPER_NAME": "Fatigue",
     "NAMES": [
       "fatigue"
