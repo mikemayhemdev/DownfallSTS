@@ -25,10 +25,12 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
 
     @Override
     public void onTechnique() {
-        updateCost(-1);
-        baseDamage += magicNumber;
-        applyPowers();
-        superFlash(Color.RED.cpy());
+        if (cost > 0) {
+            updateCost(-1);
+            baseDamage += magicNumber;
+            applyPowers();
+            superFlash(Color.RED.cpy());
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
