@@ -33,8 +33,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sword Sigil",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL champ:Gladiator champ:Combo: champ:Technique 3 times.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL champ:Gladiator champ:Combo: champ:Technique 3 times."
+    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:FocusedGladiator": {
     "NAME": "Focused Gladiator",
@@ -66,8 +65,7 @@
   },
   "champ:ShieldSigil": {
     "NAME": "Shield Sigil",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Defensive champ:Combo: champ:Technique 3 times.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL champ:Defensive champ:Combo: champ:Technique 3 times."
+    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:FocusedDefense": {
     "NAME": "Focused Defense",
@@ -80,7 +78,7 @@
   "champ:Backstep": {
     "NAME": "Backstep",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Berserker champ:Combo: Gain Block equal to your champ:Resolve.",
-    "UPGRADE_DESCRIPTION": " NL (Grants !B! Block.)"
+    "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
   },
   "champ:Aggression": {
     "NAME": "Aggression",
@@ -100,8 +98,7 @@
   },
   "champ:RageSigil": {
     "NAME": "Rage Sigil",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL champ:Berserker champ:Combo: champ:Technique 3 times.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL champ:Berserker champ:Combo: champ:Technique 3 times."
+    "DESCRIPTION": "champ:Technique NL champ:Berserker champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
