@@ -43,9 +43,9 @@ public class GladiatorStylePower extends AbstractPower implements CloneablePower
         if (AbstractChampCard.gcombo()) {
             flash();
             addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
-            addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, -amount), -amount));
+            addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
             addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount), amount));
-            addToBot(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, -amount), -amount));
+            addToBot(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, amount), amount));
         }
     }
 
