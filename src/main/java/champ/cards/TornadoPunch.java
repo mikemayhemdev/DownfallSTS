@@ -22,7 +22,7 @@ public class TornadoPunch extends AbstractChampCard {
     private static final int UPG_MAGIC = 3;
 
     public TornadoPunch() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;

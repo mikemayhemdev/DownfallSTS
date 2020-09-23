@@ -1,5 +1,6 @@
 package champ.actions;
 
+import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,7 +32,7 @@ public class LariatAction extends AbstractXAction {
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;
         for (int i = 0; i < amount; i++) {
-            addToTop(new ApplyPowerAction(p, p, new EnhancePower(boom), boom));
+            addToTop(new ApplyPowerAction(p, p, new CounterPower(boom), boom));
             addToTop(new GainBlockAction(p, boom2));
         }
         this.isDone = true;

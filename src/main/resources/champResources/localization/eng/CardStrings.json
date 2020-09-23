@@ -37,7 +37,7 @@
   },
   "champ:FocusedGladiator": {
     "NAME": "Focused Gladiator",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator, champ:Techniques draw 1 extra card."
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -69,15 +69,15 @@
   },
   "champ:FocusedDefense": {
     "NAME": "Focused Defense",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Until you exit champ:Defensive, champ:Techniques grant 3 extra champ:Counterstrike."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL Until you exit champ:Defensive Stance, champ:Techniques grant 3 extra champ:Counterstrike."
   },
   "champ:FocusedBerserking": {
     "NAME": "Focused Berserking",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker, champ:Techniques grant 2 extra champ:Resolve."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 extra champ:Resolve."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in your hand and gain !M! champ:Counterstrike for each."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -110,7 +110,7 @@
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat for each champ:Finisher in your hand."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat for each champ:Finisher in hand."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
@@ -197,7 +197,7 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in your hand."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in hand."
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
@@ -211,7 +211,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Blade Flurry",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each Attack in your hand. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each Attack in hand. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
@@ -219,7 +219,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique while in your hand, reduce this card's cost by 1 and increase its damage by 5 this combat. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, reduce this card's cost by 1 and increase its damage by 5 this combat. NL Exhaust."
   },
   "champ:HeavySlash": {
     "NAME": "Heavy Slash",
@@ -227,7 +227,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage and apply 1 Vulnerable to a random enemy. NL Repeat for each card with champ:Technique in your hand."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage and apply 1 Vulnerable to a random enemy. NL Repeat for each card with champ:Technique in hand."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Slash",
@@ -254,8 +254,8 @@
   },
   "champ:HeartStrike": {
     "NAME": "Heart Strike",
-    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't lose your champ:Resolve."
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve, then lose it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve, then lose it. NL Exhaust. NL champ:Berserker champ:Combo: Don't lose your champ:Resolve."
   },
   "champ:FinalRevenge": {
     "NAME": "Final Revenge",
@@ -336,17 +336,17 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter.",
+    "DESCRIPTION": "If you start your turn in champ:Defensive Stance, gain 5 Block and 5 champ:Counterstrike.",
     "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Gladiator Style",
-    "DESCRIPTION": "If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
+    "DESCRIPTION": "If you start your turn in champ:Gladiator Stance, gain 3 guardianmod:Momentary Strength and Dexterity.",
     "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
+    "DESCRIPTION": "If you start your turn in champ:Berserker Stance, champ:Fatigue 2 and gain [E] .",
     "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
   }
 }
