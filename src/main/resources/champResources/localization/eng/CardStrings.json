@@ -233,10 +233,9 @@
     "NAME": "Rising Slash",
     "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Play this twice if the last played card was a champ:Technique."
   },
-  "champ:Feint": {
-    "NAME": "Feint",
-    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to your Strength.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Berserker champ:Combo: Gain Block equal to twice your Strength."
+  "champ:Shatter": {
+    "NAME": "Shatter",
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block and Artifact before dealing damage."
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
