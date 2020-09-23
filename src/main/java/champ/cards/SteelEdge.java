@@ -30,6 +30,11 @@ public class SteelEdge extends AbstractChampCard {
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (bcombo() || dcombo() || gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;
