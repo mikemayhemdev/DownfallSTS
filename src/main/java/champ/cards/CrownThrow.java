@@ -12,14 +12,14 @@ public class CrownThrow extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 20;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 14;
+    private static final int UPG_DAMAGE = 2;
 
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = -1;
 
     public CrownThrow() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.FINISHER);

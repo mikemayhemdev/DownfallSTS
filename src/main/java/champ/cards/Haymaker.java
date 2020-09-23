@@ -17,15 +17,16 @@ public class Haymaker extends AbstractChampCard {
     public Haymaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (gcombo()) {
-            for (AbstractMonster q : monsterList()) applyToEnemy(q, autoWeak(q, 1));
-        } else applyToEnemy(m, autoWeak(m, 1));
+            applyToEnemy(m, autoVuln(m, 2));
+        }
+        applyToEnemy(m, autoWeak(m, 2));
     }
 
     @Override
@@ -34,6 +35,9 @@ public class Haymaker extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+
+        tags.add(ChampMod.TECHNIQUE);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

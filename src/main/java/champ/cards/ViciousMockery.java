@@ -13,14 +13,16 @@ public class ViciousMockery extends AbstractChampCard {
 
     public ViciousMockery() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        exhaust = true;
         tags.add(ChampMod.TECHNIQUE);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         if (gcombo()) {
-            if (m.getIntentBaseDmg() > -1) applyToSelf(new DexterityPower(p, 1));
+
+            if (m.getIntentBaseDmg() > -1) applyToSelf(new DexterityPower(p, magicNumber));
+
         }
     }
 
@@ -30,8 +32,7 @@ public class ViciousMockery extends AbstractChampCard {
     }
 
     public void upp() {
-        exhaust = false;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        //exhaust = false;
+        upgradeMagicNumber(1);
     }
 }

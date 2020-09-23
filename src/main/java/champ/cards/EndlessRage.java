@@ -11,7 +11,7 @@ public class EndlessRage extends AbstractChampCard {
     //stupid intellij stuff power, self, uncommon
 
     public EndlessRage() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -19,6 +19,8 @@ public class EndlessRage extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        isInnate = true;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

@@ -18,13 +18,13 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     //stupid intellij stuff SKILL, SELF, UNCOMMON
 
     public StanceDance() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new OctoChoiceAction(this));
         if (upgraded) atb(new DrawCardAction(1));
+        atb(new OctoChoiceAction(this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {

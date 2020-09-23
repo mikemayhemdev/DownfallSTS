@@ -17,7 +17,7 @@ public class EnGarde extends AbstractChampCard {
     private static final int UPG_MAGIC = 3;
 
     public EnGarde() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
     }

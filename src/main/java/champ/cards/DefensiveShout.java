@@ -15,7 +15,7 @@ public class DefensiveShout extends AbstractChampCard {
     private static final int UPG_MAGIC = 1;
 
     public DefensiveShout() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);

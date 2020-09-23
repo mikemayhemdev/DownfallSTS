@@ -14,11 +14,11 @@ public class CrookedStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 3;
 
     public CrookedStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.TECHNIQUE);

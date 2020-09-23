@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
@@ -36,15 +37,6 @@ public class AdrenalArmor extends AbstractChampCard {
                     GameActionManager.queueExtraCard(r, m);
                 }
             });
-            if (upgraded) {
-                atb(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        isDone = true;
-                        GameActionManager.queueExtraCard(r, m);
-                    }
-                });
-            }
         }
     }
 
@@ -56,5 +48,6 @@ public class AdrenalArmor extends AbstractChampCard {
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
+        tags.add(ChampMod.TECHNIQUE);
     }
 }

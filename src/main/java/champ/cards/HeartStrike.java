@@ -16,7 +16,7 @@ public class HeartStrike extends AbstractChampCard {
     private static final int DAMAGE = -1;
 
     public HeartStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(CardTags.STRIKE);
@@ -30,8 +30,8 @@ public class HeartStrike extends AbstractChampCard {
             this.calculateCardDamage(m);
             dmg(m, AbstractGameAction.AttackEffect.SMASH);
         }
-        if (!upgraded || !bcombo()) {
-            atb(new RemoveSpecificPowerAction(p, p, ResolvePower.POWER_ID));
+        if (!upgraded && bcombo()) {
+           exhaust = false;
         }
         finisher();
     }

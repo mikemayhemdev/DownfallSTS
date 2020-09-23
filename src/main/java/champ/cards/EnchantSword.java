@@ -12,14 +12,14 @@ public class EnchantSword extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public EnchantSword() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
-        applyToSelf(new StrengthPower(p, 1));
+        applyToSelf(new StrengthPower(p, 2));
         if (upgraded && gcombo()) exhaust = false;
         finisher();
     }

@@ -12,7 +12,7 @@ public class GladiatorsShout extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public GladiatorsShout() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);

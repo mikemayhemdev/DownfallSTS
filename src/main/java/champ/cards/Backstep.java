@@ -13,7 +13,7 @@ public class Backstep extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Backstep() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
     }
 

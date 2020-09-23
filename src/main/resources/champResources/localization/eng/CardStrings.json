@@ -19,7 +19,7 @@
   "champ:StanceDance": {
     "NAME": "Stance Dance",
     "DESCRIPTION": "champ:Opener - Choose a Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - Choose a Stance. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL champ:Opener - Choose a Stance.",
     "EXTENDED_DESCRIPTION": [
       "champ:Berserker champ:Opener.",
       "champ:Defensive champ:Opener.",
@@ -36,8 +36,8 @@
     "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:FocusedGladiator": {
-    "NAME": "Focused Gladiator",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator, champ:Techniques draw 1 extra card."
+    "NAME": "Focus: Gladiator",
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -68,16 +68,16 @@
     "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:FocusedDefense": {
-    "NAME": "Focused Defense",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Until you exit champ:Defensive, champ:Techniques grant 3 extra champ:Counterstrike."
+    "NAME": "Focus: Defensive",
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL Until you exit champ:Defensive Stance, champ:Techniques grant 3 extra champ:Counterstrike."
   },
   "champ:FocusedBerserking": {
-    "NAME": "Focused Berserking",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker, champ:Techniques grant 2 extra champ:Resolve."
+    "NAME": "Focus: Berserker",
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 extra champ:Resolve."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in your hand and gain !M! champ:Counterstrike for each."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -110,11 +110,14 @@
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat for each champ:Finisher in your hand."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat if you have a champ:Technique in hand.",
+    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat 2 times if you have a champ:Technique in hand."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage for each champ:Finisher played this combat."
+    "DESCRIPTION": "Must be in champ:Gladiator Stance. NL champ:Finisher. NL Deal !D! damage for each champ:Finisher played this combat.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage for each champ:Finisher played this combat."
+
   },
   "champ:Control": {
     "NAME": "Control",
@@ -137,7 +140,9 @@
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
+
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
@@ -176,7 +181,8 @@
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
-    "DESCRIPTION": "Gain !B! Block. NL champ:Defensive champ:Combo: Block is not removed at the start of your next turn."
+    "DESCRIPTION": "Must be in champ:Defensive Stance. NL Gain !B! Block. NL Block is not removed at the start of your next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn."
   },
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
@@ -184,12 +190,12 @@
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 1 Weak. NL champ:Gladiator champ:Combo: Weak applies to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak. NL champ:Gladiator champ:Combo: Apply 2 Vulnerable.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 2 Weak. NL champ:Gladiator champ:Combo: Apply 2 Vulnerable."
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain 1 Dexterity."
+    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain !M! Dexterity."
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
@@ -197,7 +203,7 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in your hand."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in hand."
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
@@ -206,12 +212,13 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "champ:Finisher. NL Gain 1 Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain 1 Strength. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "champ:Finisher. NL Gain 2 Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain 2 Strength. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
   },
   "champ:BladeFlurry": {
     "NAME": "Blade Flurry",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each Attack in your hand. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
@@ -219,7 +226,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique while in your hand, reduce this card's cost by 1 and increase its damage by 5 this combat. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, reduce this card's cost by 1 and increase its damage by 3 this combat. NL Exhaust."
   },
   "champ:HeavySlash": {
     "NAME": "Heavy Slash",
@@ -227,7 +234,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage and apply 1 Vulnerable to a random enemy. NL Repeat for each card with champ:Technique in your hand."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage and apply 1 Vulnerable to a random enemy. NL Repeat for each card with champ:Technique in hand."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Slash",
@@ -243,18 +250,18 @@
   },
   "champ:VampiricStrike": {
     "NAME": "Vampiric Strike",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. NL Exhaust. NL champ:Berserker champ:Combo: Heal HP equal to unblocked damage.",
+    "DESCRIPTION": "Must be in champ:Berserker Stance. NL champ:Technique. NL Deal !D! damage twice. Heal HP equal to unblocked damage. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. Heal HP equal to unblocked damage. NL Exhaust."
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
-    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 3 times."
+    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 2 times.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 2 times."
   },
   "champ:HeartStrike": {
     "NAME": "Heart Strike",
-    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Lose all your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't lose your champ:Resolve."
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
   },
   "champ:FinalRevenge": {
     "NAME": "Final Revenge",
@@ -271,7 +278,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy and champ:Fatigue 1. NL Repeat !M! times."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy 2 times. NL champ:Berserker champ:Combo: champ:Fatigue 4. NL Hits !M! more times."
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -292,12 +299,12 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
-    "DESCRIPTION": "champ:Fatigue 8. NL Add 2 random Attacks into your hand. NL They cost 0 until played.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Fatigue 8. NL Add 2 random Attacks into your hand. NL They cost 0 until played."
+    "DESCRIPTION": "champ:Technique. NL champ:Fatigue 8. NL Add !M! random Attacks into your hand. They cost 0 until played. NL Exhaust."
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
-    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 champ:Resolve."
+    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 champ:Resolve.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you lose HP on your turn, gain 1 champ:Resolve."
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
@@ -309,7 +316,7 @@
     "DESCRIPTION": "The first time each turn you use a champ:Combo while not in the correct Stance, return it to your hand. NL It costs 0 until played."
   },
   "champ:CalledShot": {
-    "NAME": "CalledShot",
+    "NAME": "Called Shot",
     "DESCRIPTION": "The next champ:Finisher you play while not in champ:Gladiator does not cause your turn to end."
   },
   "champ:PerfectedStrike": {

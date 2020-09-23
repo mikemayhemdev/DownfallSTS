@@ -12,10 +12,10 @@ public class FlashCut extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
 
-    private static final int MAGIC = 9;
+    private static final int MAGIC = 8;
     private static final int UPG_MAGIC = 3;
 
     public FlashCut() {
