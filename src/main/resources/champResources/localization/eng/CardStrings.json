@@ -50,12 +50,12 @@
   "champ:Balance": {
     "NAME": "Balance",
     "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random upgraded champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
       "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
       "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random upgraded champ:Defensive champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random upgraded champ:Gladiator champ:Combo to your hand."
+      "champ:Defensive champ:Opener. NL Add a random Upgraded champ:Defensive champ:Combo to your hand.",
+      "champ:Gladiator champ:Opener. NL Add a random Upgraded champ:Gladiator champ:Combo to your hand."
     ]
   },
   "champ:DefensiveShout": {
@@ -87,12 +87,12 @@
   "champ:Aggression": {
     "NAME": "Aggression",
     "DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random upgraded champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
       "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
       "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random upgraded champ:Berserker champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random upgraded champ:Gladiator champ:Combo to your hand."
+      "champ:Berserker champ:Opener. NL Add a random Upgraded champ:Berserker champ:Combo to your hand.",
+      "champ:Gladiator champ:Opener. NL Add a random Upgraded champ:Gladiator champ:Combo to your hand."
     ]
   },
   "champ:BerserkersShout": {
@@ -119,12 +119,12 @@
   "champ:Control": {
     "NAME": "Control",
     "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random upgraded champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
       "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
       "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random upgraded champ:Defensive champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random upgraded champ:Berserker champ:Combo to your hand."
+      "champ:Defensive champ:Opener. NL Add a random Upgraded champ:Defensive champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random Upgraded champ:Berserker champ:Combo to your hand."
     ]
   },
   "champ:Circumvent": {
@@ -268,7 +268,7 @@
   },
   "champ:FightOn": {
     "NAME": "Fight On",
-    "DESCRIPTION": "Fleeting. NL Can't be upgraded. NL Can only be played if you have at least 30 champ:Resolve. NL Gain 5 Max HP."
+    "DESCRIPTION": "Fleeting. NL Can't be Upgraded. NL Can only be played if you have at least 30 champ:Resolve. NL Gain 5 Max HP."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -332,12 +332,12 @@
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
     "DESCRIPTION": "At the start of your turn, add a random champ:Opener to your hand. NL It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random upgraded champ:Opener to your hand. NL It costs 0 until played."
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded champ:Opener to your hand. NL It costs 0 until played."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter."
+    "DESCRIPTION": "If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike."
   },
   "champ:GladiatorStyle": {
     "NAME": "Gladiator Style",
