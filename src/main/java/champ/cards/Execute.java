@@ -14,7 +14,7 @@ public class Execute extends AbstractChampCard {
 
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 2;
-    private static final int HP_LOSS = 6;
+    private static final int HP_LOSS = 4;
 
     public Execute() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
@@ -29,7 +29,7 @@ public class Execute extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         loseHP(this.magicNumber);
-        applyToSelf(new ResolvePower(4));
+        applyToSelf(new ResolvePower(magicNumber));
         finisher();
     }
 

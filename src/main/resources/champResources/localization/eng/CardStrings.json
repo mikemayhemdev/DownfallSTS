@@ -14,7 +14,7 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage twice. NL champ:Fatigue 4."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage twice. NL champ:Fatigue !M!."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
