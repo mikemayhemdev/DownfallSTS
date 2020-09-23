@@ -15,7 +15,7 @@ public class Shatter extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Shatter() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 5;
         tags.add(ChampMod.TECHNIQUE);
     }

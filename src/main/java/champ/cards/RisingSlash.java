@@ -27,7 +27,7 @@ public class RisingSlash extends AbstractChampCard {
         techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() > 1)
-            if (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 2).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) {
+            if (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 2).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) { //TODO: This is actually not a very good way of doing this, find a better one
                 AbstractCard r = this;
                 atb(new AbstractGameAction() {
                     @Override
