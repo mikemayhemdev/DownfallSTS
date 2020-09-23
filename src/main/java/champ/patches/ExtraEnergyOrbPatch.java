@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class ExtraEnergyOrbPatch {
 
@@ -31,7 +32,7 @@ public class ExtraEnergyOrbPatch {
                         if (__instance.rawDescription.contains("champ:Technique") && AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID))
                             x += 4;
                         FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, Integer.toString(x), __instance.current_x, __instance.current_y, -133.0F * __instance.drawScale * Settings.scale, 133 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
-                    } else if ((__instance.rawDescription.contains("champ:Technique") && AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID))) {
+                    } else if ((__instance.rawDescription.contains("champ:Technique") && AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                         renderHelper(sb, healthBlob, __instance.current_x, __instance.current_y, __instance);
                         FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, "4", __instance.current_x, __instance.current_y, -133.0F * __instance.drawScale * Settings.scale, 133 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
