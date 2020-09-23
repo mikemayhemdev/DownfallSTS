@@ -1,34 +1,32 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.EnchantedShieldPower;
+import champ.powers.EnergizedDurationPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class EnchantShield extends AbstractChampCard {
+public class EnchantCrown extends AbstractChampCard {
 
-    public final static String ID = makeID("EnchantShield");
+    public final static String ID = makeID("EnchantCrown");
 
     //stupid intellij stuff skill, self, rare
 
-    public EnchantShield() {
+    public EnchantCrown() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        exhaust = true;
         tags.add(ChampMod.FINISHER);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
-        applyToSelf(new EnchantedShieldPower(1));
-        if (upgraded) {
-            if (dcombo()) exhaust = false;
-        }
+        applyToSelf(new EnergizedDurationPower(3));
+        if (upgraded)
+            if (gcombo()) exhaust = false;
         finisher();
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (upgraded && dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (upgraded && gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

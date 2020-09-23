@@ -355,5 +355,10 @@
     "NAME": "Berserker Style",
     "DESCRIPTION": "If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
     "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
+  },
+  "champ:EnchantCrown": {
+    "NAME": "Enchant Crown",
+    "DESCRIPTION": "champ:Finisher. NL Gain [E] at the start of your next 3 turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain [E] at the start of your next 3 turns. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
   }
 }

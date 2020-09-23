@@ -149,5 +149,13 @@
       "The next #b",
       " times #yCounterstrike activates, only lose half your #yCounterstrike."
     ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "Enchanted Crown",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your next turn.",
+      "Gain [E] at the start of your next #b",
+      " turns."
+    ]
   }
 }
