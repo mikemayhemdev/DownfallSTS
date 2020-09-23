@@ -40,7 +40,8 @@ public class RisingSlash extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
+        if (!AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty())
+            glowColor = (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
     }
 
     public void upp() {
