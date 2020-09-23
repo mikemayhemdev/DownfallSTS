@@ -2,10 +2,8 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +15,7 @@ import theHexaghost.util.TextureLoader;
 
 public class ResolvePower extends AbstractPower implements CloneablePowerInterface
         //, HealthBarRenderPower
-        {
+{
 
     public static final String POWER_ID = ChampMod.makeID("ResolvePower");
 
@@ -89,6 +87,7 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     public void onVictory() {
         if (owner.currentHealth > 0) {
             owner.heal(amount);
+            owner.powers.remove(this);
         }
     }
 
