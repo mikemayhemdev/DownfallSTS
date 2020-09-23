@@ -177,7 +177,8 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times. NL champ:Defensive champ:Combo: Increase X by 1."
+    "DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times. NL Gain [E] ."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",

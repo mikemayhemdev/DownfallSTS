@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.actions.LariatAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -28,17 +29,15 @@ public class Lariat extends AbstractChampCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
-        LariatAction r = new LariatAction(magicNumber, block, dcombo() ? 1 : 0);
+        LariatAction r = new LariatAction(magicNumber, block);
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        if (upgraded) {
+            atb(new GainEnergyAction(1));
+        }
     }
 
     public void upp() {
-        upgradeBlock(UPG_BLOCK);
-        upgradeMagicNumber(UPG_MAGIC);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
