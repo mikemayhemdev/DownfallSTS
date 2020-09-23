@@ -39,6 +39,11 @@ public class Duel extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (monsterList().size() == 1) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeBlock(UPG_BLOCK);
