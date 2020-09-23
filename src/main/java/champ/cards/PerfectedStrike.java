@@ -41,6 +41,7 @@ public class PerfectedStrike extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+        finisher();
     }
 
     public void upp() {

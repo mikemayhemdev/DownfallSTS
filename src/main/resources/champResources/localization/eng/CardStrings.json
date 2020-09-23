@@ -321,7 +321,7 @@
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
   },
   "champ:PerfectForm": {
     "NAME": "Perfect Form",
