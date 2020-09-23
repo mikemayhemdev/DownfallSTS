@@ -13,7 +13,7 @@ public class LastStand extends AbstractChampCard {
     //stupid intellij stuff skill, self, rare
 
     public LastStand() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(ChampMod.FINISHER);
     }
 
@@ -34,6 +34,6 @@ public class LastStand extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(0);
     }
 }

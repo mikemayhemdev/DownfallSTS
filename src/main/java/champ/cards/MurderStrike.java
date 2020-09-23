@@ -25,7 +25,7 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
     @Override
     public void onTechnique() {
         updateCost(-1);
-        baseDamage += 5;
+        baseDamage += 3;
         applyPowers();
         superFlash(Color.RED.cpy());
     }
@@ -42,6 +42,7 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
             }
         } else {
             this.upgradeBaseCost(8);
+            this.upgradeDamage(10);
         }
     }
 }

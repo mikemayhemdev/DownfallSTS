@@ -31,11 +31,13 @@ public class BladeFlurry extends AbstractChampCard {
             public void update() {
                 isDone = true;
                 int x = 0;
-                for (AbstractCard q : p.hand.group) if (q.type == CardType.ATTACK) x++;
+                for (AbstractCard q : p.hand.group) if (q.hasTag(ChampMod.TECHNIQUE)) x++;
                 for (int i = 0; i < x; i++) att(new DamageAction(m, makeInfo(), AttackEffect.SLASH_DIAGONAL));
             }
         });
-        if (gcombo()) exhaust = false;
+        if (upgraded) {
+            if (gcombo()) exhaust = false;
+        }
         finisher();
     }
 
@@ -45,6 +47,8 @@ public class BladeFlurry extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

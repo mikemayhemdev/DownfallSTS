@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -51,7 +52,8 @@ public class TornadoPunch extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
+        tags.add(ChampMod.TECHNIQUE);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

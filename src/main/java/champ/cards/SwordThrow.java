@@ -13,11 +13,11 @@ public class SwordThrow extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, uncommon
 
     private static final int DAMAGE = 10;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
     public SwordThrow() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);

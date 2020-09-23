@@ -16,13 +16,15 @@ public class ArenaPreparation extends AbstractChampCard {
     public ArenaPreparation() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         myHpLossCost = 8;
+        baseMagicNumber = magicNumber = 2;
+        exhaust = true;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) techique();
-        loseHP(8);
-        applyToSelf(new ResolvePower(8));
-        for (int i = 0; i < 2; i++) {
+        fatigue(8);
+        for (int i = 0; i < magicNumber; i++) {
             AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
             c.freeToPlayOnce = true;
             makeInHand(c);
@@ -30,8 +32,6 @@ public class ArenaPreparation extends AbstractChampCard {
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

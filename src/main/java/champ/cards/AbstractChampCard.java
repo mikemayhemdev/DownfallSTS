@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import champ.ChampChar;
 import champ.actions.OpenerReduceCostAction;
 import champ.powers.CalledShotPower;
+import champ.powers.ResolvePower;
 import champ.stances.*;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
@@ -132,6 +133,11 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public static boolean dcombo() {
         return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
+    }
+
+    public void fatigue(int amount){
+        loseHP(amount);
+        applyToSelf(new ResolvePower(amount));
     }
 
     @Override

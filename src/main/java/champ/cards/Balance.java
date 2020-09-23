@@ -20,7 +20,7 @@ public class Balance extends AbstractChampCard implements OctopusCard {
     //stupid intellij stuff skill, self, common
 
     public Balance() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
     }
 

@@ -43,8 +43,8 @@ public class BerserkerStylePower extends AbstractPower implements CloneablePower
     public void atStartOfTurn() {
         if (AbstractChampCard.gcombo()) {
             flash();
-            addToBot(new LoseHPAction(owner, owner, amount));
-            addToBot(new ApplyPowerAction(owner, owner, new ResolvePower(amount), amount));
+            addToBot(new LoseHPAction(owner, owner, amount * 4));
+            addToBot(new ApplyPowerAction(owner, owner, new ResolvePower(amount), amount * 4));
             addToBot(new GainEnergyAction(1));
         }
     }

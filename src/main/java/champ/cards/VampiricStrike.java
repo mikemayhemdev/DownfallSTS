@@ -1,6 +1,8 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.stances.BerserkerStance;
+import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,15 +24,21 @@ public class VampiricStrike extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded || p.stance instanceof BerserkerStance) {
+            return super.canUse(p, m);
+        }
+        cantUseMessage = "I'm not in that Stance.";
+        return false;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
-        if (upgraded || bcombo()) {
-            atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-            atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        } else {
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        }
+
+        atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+
     }
 
     @Override
@@ -41,5 +49,6 @@ public class VampiricStrike extends AbstractChampCard {
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
+        upgradeDamage(2);
     }
 }
