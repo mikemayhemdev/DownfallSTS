@@ -13,16 +13,19 @@ public class SwordSigil extends AbstractChampCard {
     public SwordSigil() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.TECHNIQUE);
-        tags.add(ChampMod.OPENER);
+      //  tags.add(ChampMod.OPENER);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
-        gladOpen();
+        techique();
+        //gladOpen();
         if (gcombo()) {
-            techique();
-            techique();
-            techique();
+            this.exhaust = true;
+            for (int i = 0; i < magicNumber; i++) {
+                techique();
+            }
+
         }
     }
 
@@ -32,7 +35,8 @@ public class SwordSigil extends AbstractChampCard {
     }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+       // rawDescription = UPGRADE_DESCRIPTION;
+       // initializeDescription();
+        upgradeMagicNumber(2);
     }
 }
