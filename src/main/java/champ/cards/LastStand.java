@@ -18,7 +18,6 @@ public class LastStand extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //
         atb(new RemoveDebuffsAction(p));
         applyToSelf(new StrengthPower(p, 6));
         finisher();

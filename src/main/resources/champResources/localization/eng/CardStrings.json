@@ -279,7 +279,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy 2 times. NL champ:Berserker champ:Combo: champ:Fatigue 4. NL Hits !M! more times."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy 2 times. NL champ:Berserker champ:Combo: Hits !M! more times. NL champ:Fatigue 4."
   },
   "champ:LastStand": {
     "NAME": "Last Stand",

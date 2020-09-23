@@ -13,7 +13,7 @@ public class Encircle extends AbstractChampCard {
 
     //stupid intellij stuff attack, all_enemy, uncommon
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 3;
     private static final int MAGIC = 2;
 
     public Encircle() {
@@ -21,7 +21,6 @@ public class Encircle extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
-        myHpLossCost = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,11 +29,10 @@ public class Encircle extends AbstractChampCard {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
         if (bcombo()){
-            fatigue(4);
             for (int i = 0; i < magicNumber; i++) {
                 atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-
             }
+            fatigue(4);
         }
     }
 
