@@ -20,13 +20,13 @@ public class EnchantSword extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
         applyToSelf(new StrengthPower(p, 2));
-        if (upgraded && gcombo()) exhaust = false;
+        if (upgraded && bcombo()) exhaust = false;
         finisher();
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (upgraded && gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
