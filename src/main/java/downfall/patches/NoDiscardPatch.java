@@ -31,6 +31,10 @@ public class NoDiscardPatch {
     @SuppressWarnings("unused")
     public static boolean Do(AbstractCard card) {
         if (NoDiscardField.noDiscard.get(card)) {
+            if (NoDiscardField.freeCard) {
+                card.freeToPlayOnce = true;
+                NoDiscardField.freeCard = false;
+            }
             NoDiscardField.noDiscard.set(card, false);
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new LimboToHandAction(card));

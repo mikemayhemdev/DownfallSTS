@@ -10,4 +10,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 )
 public class NoDiscardField {
     public static SpireField<Boolean> noDiscard = new SpireField<>(() -> false);
+
+    public static boolean freeCard = false;
 }

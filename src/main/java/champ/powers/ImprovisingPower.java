@@ -63,8 +63,9 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
         if (returnCard) {
             flash();
             NoDiscardField.noDiscard.set(card, true);
-            card.freeToPlayOnce = true;
+            NoDiscardField.freeCard = true;
             timesUsed++;
+            updateDescription();
         }
     }
 
