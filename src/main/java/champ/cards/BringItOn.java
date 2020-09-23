@@ -21,11 +21,12 @@ public class BringItOn extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         applyToSelf(new CounterPower(magicNumber));
         if (upgraded) {
             if (dcombo()) exhaust = false;
         }
+        finisher();
     }
 
     @Override

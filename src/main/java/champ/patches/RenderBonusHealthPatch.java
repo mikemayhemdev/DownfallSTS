@@ -14,7 +14,7 @@ import javassist.CtBehavior;
 public class RenderBonusHealthPatch {
 
     public RenderBonusHealthPatch() {
-    }// 15
+    }
 
     @SpirePatch(
             clz = AbstractCreature.class,
@@ -22,7 +22,7 @@ public class RenderBonusHealthPatch {
     )
     public static class RenderPowerHealthBar {
         public RenderPowerHealthBar() {
-        }// 24
+        }
 
         @SpireInsertPatch(
                 locator = RenderBonusHealthPatch.RenderPowerHealthBar.Locator.class,
@@ -37,21 +37,21 @@ public class RenderBonusHealthPatch {
                     sb.setColor(Color.WHITE.cpy());
                     float amt = (float) r / AbstractDungeon.player.maxHealth;
                     float w = amt * __instance.hb.width;
-                    sb.draw(ImageMaster.HEALTH_BAR_L, x - HEALTH_BAR_HEIGHT, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);// 56
-                    sb.draw(ImageMaster.HEALTH_BAR_B, x + targetHealthBarWidth, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);// 58
-                    sb.draw(ImageMaster.HEALTH_BAR_R, x + targetHealthBarWidth + w, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);// 59
+                    sb.draw(ImageMaster.HEALTH_BAR_L, x - HEALTH_BAR_HEIGHT, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);
+                    sb.draw(ImageMaster.HEALTH_BAR_B, x + targetHealthBarWidth, y + HEALTH_BAR_OFFSET_Y, w, HEALTH_BAR_HEIGHT);
+                    sb.draw(ImageMaster.HEALTH_BAR_R, x + targetHealthBarWidth + w, y + HEALTH_BAR_OFFSET_Y, HEALTH_BAR_HEIGHT, HEALTH_BAR_HEIGHT);
                 }
             }
 
-        }// 70
+        }
 
         private static class Locator extends SpireInsertLocator {
             private Locator() {
-            }// 72
+            }
 
             public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
-                Matcher finalMatcher = new MethodCallMatcher(AbstractCreature.class, "renderRedHealthBar");// 77
-                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);// 78
+                Matcher finalMatcher = new MethodCallMatcher(AbstractCreature.class, "renderRedHealthBar");
+                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
         }
     }

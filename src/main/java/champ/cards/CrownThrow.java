@@ -26,9 +26,10 @@ public class CrownThrow extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (!gcombo()) applyToSelf(new DrawLessNextTurnPower(magicNumber));
+        finisher();
     }
 
     @Override

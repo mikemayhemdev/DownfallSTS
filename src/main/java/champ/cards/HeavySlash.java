@@ -25,8 +25,9 @@ public class HeavySlash extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        finisher();
     }
 
     public void applyPowers() {

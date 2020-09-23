@@ -23,12 +23,13 @@ public class FalseCounter extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         if (p.hasPower(CounterPower.POWER_ID)) {
             int x = p.getPower(CounterPower.POWER_ID).amount / magicNumber;
             applyToSelf(new StrengthPower(p, x));
             atb(new RemoveSpecificPowerAction(p, p, CounterPower.POWER_ID));
         }
+        finisher();
     }
 
     public void upp() {

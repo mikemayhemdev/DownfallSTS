@@ -24,7 +24,7 @@ public class BladeFlurry extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new AbstractGameAction() {
             @Override
@@ -36,6 +36,7 @@ public class BladeFlurry extends AbstractChampCard {
             }
         });
         if (gcombo()) exhaust = false;
+        finisher();
     }
 
     @Override

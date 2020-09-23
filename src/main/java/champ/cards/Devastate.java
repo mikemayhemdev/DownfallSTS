@@ -22,8 +22,9 @@ public class Devastate extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int x = ChampMod.finishersThisCombat;
-        finisher();
+        //finisher();
         for (int i = 0; i < x; ) dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        finisher();
     }
 
     //TODO: add the damage predictor display like Finisher (silent card) etc to make effects clear

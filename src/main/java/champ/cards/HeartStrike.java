@@ -24,7 +24,7 @@ public class HeartStrike extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         if (p.hasPower(ResolvePower.POWER_ID)) {
             this.baseDamage = p.getPower(ResolvePower.POWER_ID).amount;
             this.calculateCardDamage(m);
@@ -33,6 +33,7 @@ public class HeartStrike extends AbstractChampCard {
         if (!upgraded || !bcombo()) {
             atb(new RemoveSpecificPowerAction(p, p, ResolvePower.POWER_ID));
         }
+        finisher();
     }
 
     @Override

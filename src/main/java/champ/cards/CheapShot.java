@@ -25,7 +25,7 @@ public class CheapShot extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         AbstractMonster q = AbstractDungeon.getRandomMonster();
         dmg(q, AbstractGameAction.AttackEffect.FIRE);
         applyToEnemy(q, autoVuln(q, 1));
@@ -42,6 +42,7 @@ public class CheapShot extends AbstractChampCard {
                 }
             }
         });
+        finisher();
     }
 
     public void upp() {

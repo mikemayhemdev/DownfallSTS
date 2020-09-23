@@ -19,7 +19,7 @@ public class ShieldThrow extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         this.baseDamage = p.currentBlock;
         this.calculateCardDamage(m);
         dmg(m, AbstractGameAction.AttackEffect.SMASH);
@@ -28,6 +28,7 @@ public class ShieldThrow extends AbstractChampCard {
         if (!dcombo()) {
             applyToSelf(new NoBlockPower(p, 1, false));
         }
+        finisher();
     }
 
     @Override

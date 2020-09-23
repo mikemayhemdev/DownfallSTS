@@ -18,11 +18,12 @@ public class EnchantShield extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         applyToSelf(new EnchantedShieldPower(1));
         if (upgraded) {
             if (dcombo()) exhaust = false;
         }
+        finisher();
     }
 
     @Override

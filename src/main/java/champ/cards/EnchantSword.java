@@ -18,9 +18,10 @@ public class EnchantSword extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         applyToSelf(new StrengthPower(p, 1));
         if (upgraded && gcombo()) exhaust = false;
+        finisher();
     }
 
     @Override

@@ -26,7 +26,7 @@
     "NAMES": [
       "finisher"
     ],
-    "DESCRIPTION": "If you are in a #yStance, exit it and trigger its Finisher bonus"
+    "DESCRIPTION": "After playing a Finisher, if you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn."
   },
   {
     "PROPER_NAME": "Counterstrike",

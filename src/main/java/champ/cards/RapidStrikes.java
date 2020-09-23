@@ -22,7 +22,7 @@ public class RapidStrikes extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         int x = AbstractDungeon.cardRandomRng.random(0, 2);
         int q = ChampMod.techniquesThisTurn + 1;
         if (gcombo() && upgraded) q += 2;
@@ -41,6 +41,7 @@ public class RapidStrikes extends AbstractChampCard {
             }
             dmg(m, r);
         }
+        finisher();
     }
 
     @Override

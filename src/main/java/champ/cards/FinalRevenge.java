@@ -21,11 +21,12 @@ public class FinalRevenge extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        finisher();
+        //finisher();
         this.baseDamage = (p.maxHealth - p.currentHealth);
         this.calculateCardDamage(m);
         dmg(m, AbstractGameAction.AttackEffect.SMASH);
         if (upgraded && bcombo()) exhaust = false;
+        finisher();
     }
 
     @Override
