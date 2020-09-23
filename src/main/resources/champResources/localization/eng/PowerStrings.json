@@ -141,5 +141,13 @@
       "If you start your turn in #yBerserker, #yFatigue #b",
       " and gain [E] ."
     ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "False Counter",
+    "DESCRIPTIONS": [
+      "Next time #yCounterstrike activates, only lose half your #yCounterstrike.",
+      "The next #b",
+      " times #yCounterstrike activates, only lose half your #yCounterstrike."
+    ]
   }
 }

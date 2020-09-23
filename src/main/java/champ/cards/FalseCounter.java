@@ -1,11 +1,9 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.CounterPower;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import champ.powers.FalseCounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class FalseCounter extends AbstractChampCard {
 
@@ -13,23 +11,17 @@ public class FalseCounter extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = -1;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 4;
 
     public FalseCounter() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
-        if (p.hasPower(CounterPower.POWER_ID)) {
-            int x = p.getPower(CounterPower.POWER_ID).amount / magicNumber;
-            applyToSelf(new StrengthPower(p, x));
-            atb(new RemoveSpecificPowerAction(p, p, CounterPower.POWER_ID));
-        }
-        finisher();
+        applyToSelf(new CounterPower(magicNumber));
+        applyToSelf(new FalseCounterPower(1));
     }
 
     public void upp() {

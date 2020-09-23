@@ -160,7 +160,7 @@
   "champ:BringItOn": {
     "NAME": "Bring It On",
     "DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -169,7 +169,7 @@
   },
   "champ:FalseCounter": {
     "NAME": "False Counter",
-    "DESCRIPTION": "champ:Finisher. NL Lose all champ:Counterstrike. NL Gain 1 Strength for every !M! champ:Counterstrike removed."
+    "DESCRIPTION": "Gain !M! champ:Counterstrike. NL The next time champ:Counterstrike activates, lose half your champ:Counterstrike instead of removing it."
   },
   "champ:IronFortress": {
     "NAME": "Iron Fortress",
