@@ -301,7 +301,7 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
-    "DESCRIPTION": "champ:Technique. NL champ:Fatigue 8. NL Add !M! random Attacks into your hand. They cost 0 until played. NL Exhaust."
+    "DESCRIPTION": "champ:Technique. NL champ:Fatigue 8. NL Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",

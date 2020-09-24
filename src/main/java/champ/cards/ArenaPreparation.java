@@ -1,11 +1,15 @@
 package champ.cards;
 
+import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
-import champ.powers.ResolvePower;
+import champ.util.RetainCardMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
 
 public class ArenaPreparation extends AbstractChampCard {
 
@@ -14,7 +18,7 @@ public class ArenaPreparation extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ArenaPreparation() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         myHpLossCost = 8;
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
@@ -22,11 +26,15 @@ public class ArenaPreparation extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+        techique();
         fatigue(8);
         for (int i = 0; i < magicNumber; i++) {
-            AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-            c.freeToPlayOnce = true;
+            ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
+            for (AbstractCard t : CardLibrary.getAllCards()) {
+                if (t.hasTag(ChampMod.TECHNIQUE)) qCardList.add(t);
+            }
+            AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
+            CardModifierManager.addModifier(c, new RetainCardMod());
             makeInHand(c);
         }
     }
