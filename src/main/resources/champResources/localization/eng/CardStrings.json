@@ -151,7 +151,7 @@
   },
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
-    "DESCRIPTION": "Can only be played if you have at least 30 Block. NL Deal !D! damage."
+    "DESCRIPTION": "Can only be played if you have at least 20 Block. NL Deal !D! damage."
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",

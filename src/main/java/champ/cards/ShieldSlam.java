@@ -25,7 +25,7 @@ public class ShieldSlam extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.currentBlock >= 30) {
+        if (p.currentBlock >= 20) {
             return super.canUse(p, m);
         }
         cantUseMessage = "I do not have enough Block.";
