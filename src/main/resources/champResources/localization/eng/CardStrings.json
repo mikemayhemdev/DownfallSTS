@@ -345,18 +345,18 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike.",
-    "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "Innate. NL champ:Defensive champ:Opener. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike."
   },
   "champ:GladiatorStyle": {
     "NAME": "Gladiator Style",
-    "DESCRIPTION": "If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL champ:Gladiator champ:Opener. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
-    "UPGRADE_DESCRIPTION": "Innate. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
+    "UPGRADE_DESCRIPTION": "Innate. NL champ:Berserker champ:Opener. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",

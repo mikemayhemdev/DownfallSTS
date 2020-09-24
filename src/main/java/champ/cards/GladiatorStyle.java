@@ -15,6 +15,7 @@ public class GladiatorStyle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        gladOpen();
         applyToSelf(new GladiatorStylePower(3));
     }
 

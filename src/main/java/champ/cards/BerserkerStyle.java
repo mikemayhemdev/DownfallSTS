@@ -15,6 +15,7 @@ public class BerserkerStyle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        berserkOpen();
         applyToSelf(new BerserkerStylePower(2));
     }
 
