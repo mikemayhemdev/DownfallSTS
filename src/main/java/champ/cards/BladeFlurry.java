@@ -13,7 +13,7 @@ public class BladeFlurry extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
 
     public BladeFlurry() {

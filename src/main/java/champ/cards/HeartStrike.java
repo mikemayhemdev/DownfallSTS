@@ -19,7 +19,6 @@ public class HeartStrike extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
-        tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
     }
 
