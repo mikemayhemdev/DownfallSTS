@@ -30,7 +30,7 @@ public class SkillfulDodge extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
