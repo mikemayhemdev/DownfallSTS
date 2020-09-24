@@ -2,7 +2,9 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Circumvent extends AbstractChampCard {
@@ -27,7 +29,7 @@ public class Circumvent extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         blck();
-        if (dcombo()) applyToSelf(new CounterPower(magicNumber));
+        if (dcombo()) addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount));
     }
 
     @Override
