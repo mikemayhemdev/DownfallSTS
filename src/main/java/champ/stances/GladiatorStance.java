@@ -19,16 +19,6 @@ public class GladiatorStance extends AbstractChampStance {
     }// 24
 
     @Override
-    public void onEnterStance() {
-        super.onEnterStance();
-    }
-
-    @Override
-    public void onExitStance() {
-        super.onExitStance();
-    }
-
-    @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[14] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[15];
     }
