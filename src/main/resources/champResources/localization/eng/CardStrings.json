@@ -45,7 +45,7 @@
     "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
-    "NAME": "Flash Cut",
+    "NAME": "Flash Strike",
     "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike."
   },
   "champ:Balance": {
@@ -239,7 +239,7 @@
     "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL If the enemy intends to buff or debuff, Stun the enemy for 1 turn."
   },
   "champ:RisingSlash": {
-    "NAME": "Rising Slash",
+    "NAME": "Rising Strike",
     "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Play this twice if the last played card was a champ:Technique."
   },
   "champ:Shatter": {
@@ -261,7 +261,7 @@
     "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 2 times."
   },
   "champ:HeartStrike": {
-    "NAME": "Heart Strike",
+    "NAME": "Finish Him",
     "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
   },
@@ -280,7 +280,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy 2 times. NL champ:Berserker champ:Combo: NL Hits !M! more times. NL champ:Fatigue 4."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy 2 times. NL champ:Fatigue 4. NL champ:Berserker champ:Combo: Play this twice. "
   },
   "champ:LastStand": {
     "NAME": "Last Stand",

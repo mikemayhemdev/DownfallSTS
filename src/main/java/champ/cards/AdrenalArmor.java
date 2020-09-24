@@ -13,7 +13,7 @@ public class AdrenalArmor extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 7;
     private static final int MAGIC = 2;
 
     public AdrenalArmor() {
