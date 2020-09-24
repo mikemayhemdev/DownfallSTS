@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 
 public class UltimateStance extends AbstractChampStance {
 
@@ -69,5 +71,7 @@ public class UltimateStance extends AbstractChampStance {
             }
         });
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 12));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player, 1), 1));
     }
 }
