@@ -78,7 +78,9 @@
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each.",
+    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Gain !M! champ:Counterstrike. NL Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
+
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -208,8 +210,8 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL champ:Gladiator champ:Combo: Repeat twice more."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL champ:Gladiator champ:Combo: Repeat twice more."
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
@@ -243,7 +245,8 @@
   },
   "champ:Shatter": {
     "NAME": "Shatter",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block and Artifact before dealing damage."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block before dealing damage.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block and Artifact before dealing damage."
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",

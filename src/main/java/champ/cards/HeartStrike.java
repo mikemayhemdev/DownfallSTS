@@ -29,7 +29,7 @@ public class HeartStrike extends AbstractChampCard {
             this.calculateCardDamage(m);
             dmg(m, AbstractGameAction.AttackEffect.SMASH);
         }
-        if (!upgraded && bcombo()) {
+        if (upgraded && bcombo()) {
            exhaust = false;
         }
         finisher();

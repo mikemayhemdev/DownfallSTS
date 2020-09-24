@@ -16,7 +16,7 @@ public class Shatter extends AbstractChampCard {
 
     public Shatter() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 8;
         tags.add(ChampMod.TECHNIQUE);
     }
 
@@ -24,7 +24,7 @@ public class Shatter extends AbstractChampCard {
         techique();
         if (bcombo()) {
             atb(new RemoveAllBlockAction(m, p));
-            atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));
+            if (upgraded) atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));
         }
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }
@@ -35,6 +35,8 @@ public class Shatter extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
