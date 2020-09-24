@@ -92,9 +92,9 @@
   "champ:CalledShotPower": {
     "NAME": "Called Shot",
     "DESCRIPTIONS": [
-      "The next time you play a #yFinisher while not in #yGladiator #yStance, do not leave #yStance and your turn does not end.",
+      "The next time you play a #yFinisher, do not leave your #yStance or end your turn.",
       "The next #b",
-      " times you play a #yFinisher while not in #yGladiator #yStance, do not leave #yStance and your turn does not end."
+      " times you play a #yFinisher, do not leave your #yStance or end your turn."
     ]
   },
   "champ:DancingMasterPower": {

@@ -22,15 +22,7 @@ public class VampiricStrike extends AbstractChampCard {
         exhaust = true;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.TECHNIQUE);
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded || p.stance instanceof BerserkerStance) {
-            return super.canUse(p, m);
-        }
-        cantUseMessage = "I'm not in that Stance.";
-        return false;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -38,17 +30,17 @@ public class VampiricStrike extends AbstractChampCard {
 
         atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        if (magicNumber - 2 > 0) {
+            for (int i = 0; i < magicNumber - 2; i++) {
+                if (upgraded)
+                    atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+            }
+        }
 
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = (!upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
-        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -116,8 +116,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Must be in champ:Gladiator Stance. NL champ:Finisher. NL Deal !D! damage for each champ:Finisher played this combat.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage for each champ:Finisher played this combat."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage for each champ:Finisher played this combat."
 
   },
   "champ:Control": {
@@ -155,8 +154,8 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Ignore the first time you would lose HP this turn. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "champ:Finisher. NL Gain 2 Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain 2 Dexterity. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -183,8 +182,8 @@
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
-    "DESCRIPTION": "Must be in champ:Defensive Stance. NL Gain !B! Block. NL Block is not removed at the start of your next turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn."
+    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL Block is not removed for !M! turn.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL Block is not removed for !M! turns."
   },
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
@@ -252,8 +251,7 @@
   },
   "champ:VampiricStrike": {
     "NAME": "Vampiric Strike",
-    "DESCRIPTION": "Must be in champ:Berserker Stance. NL champ:Technique. NL Deal !D! damage twice. Heal HP equal to unblocked damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage twice. Heal HP equal to unblocked damage. NL Exhaust."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. Heal HP equal to unblocked damage. NL Exhaust."
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
@@ -280,7 +278,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy 2 times. NL champ:Fatigue 4. NL champ:Berserker champ:Combo: Play this twice. "
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 4. NL champ:Berserker champ:Combo: Play this twice. "
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -319,7 +317,7 @@
   },
   "champ:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "The next champ:Finisher you play while not in champ:Gladiator does not exit Stance or cause your turn to end."
+    "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end."
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",

@@ -26,8 +26,8 @@ public class Encircle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        for (int i = 0; i < 2; i++) {
+       // atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        for (int i = 0; i < magicNumber; i++) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
@@ -44,7 +44,13 @@ public class Encircle extends AbstractChampCard {
         }
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
+
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

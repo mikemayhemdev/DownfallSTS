@@ -16,18 +16,9 @@ public class Devastate extends AbstractChampCard {
     private static final int UPG_DAMAGE = 3;
 
     public Devastate() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.FINISHER);
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded || p.stance instanceof GladiatorStance) {
-            return super.canUse(p, m);
-        }
-        cantUseMessage = "I'm not in that Stance.";
-        return false;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -40,8 +31,6 @@ public class Devastate extends AbstractChampCard {
     //TODO: add the damage predictor display like Finisher (silent card) etc to make effects clear
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
-        upgradeDamage(UPG_DAMAGE);
+        upgradeBaseCost(1);
     }
 }
