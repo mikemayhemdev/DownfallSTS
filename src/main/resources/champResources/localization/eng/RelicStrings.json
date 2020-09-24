@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance via #yOpener, if you weren't in a #yStance, reduce the cost of a random card in your hand by #b1 this turn."
+      "Whenever you enter a #yStance via #ychamp:Opener, if you weren't in a #yStance, reduce the cost of a random card in your hand by #b1 this turn."
     ]
   },
   "champ:BlackKnightHelmet": {
