@@ -18,7 +18,7 @@ public class HeavySlash extends AbstractChampCard {
     private static final int UPG_MAGIC = 2;
 
     public HeavySlash() {
-        super(ID, 5, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 4, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.FINISHER);
