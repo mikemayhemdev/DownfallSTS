@@ -1,6 +1,8 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.actions.FatigueHpLossAction;
+import champ.cards.AbstractChampCard;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -24,9 +26,10 @@ public class BerserkerStance extends AbstractChampStance {
 
     @Override
     public void technique() {
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 4));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(4), 4));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        int x = Math.min(4, AbstractDungeon.player.currentHealth - 1);
+        AbstractDungeon.actionManager.addToBottom(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
+        //AbstractDungeon.actionManager.addToBottom(new GainEnergAction(1));
     }
 
     @Override
