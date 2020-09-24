@@ -3,6 +3,7 @@ package guardian.patches;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.GladiatorStance;
+import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -33,6 +34,9 @@ public class StancePatch {
                 }
                 if (name.equals(GladiatorStance.STANCE_ID)) {
                     return SpireReturn.Return(new GladiatorStance());
+                }
+                if (name.equals(UltimateStance.STANCE_ID)) {
+                    return SpireReturn.Return(new UltimateStance());
                 }
                 return SpireReturn.Continue();
             }

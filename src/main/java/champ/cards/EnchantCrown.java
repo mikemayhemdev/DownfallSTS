@@ -12,7 +12,7 @@ public class EnchantCrown extends AbstractChampCard {
     //stupid intellij stuff skill, self, rare
 
     public EnchantCrown() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(ChampMod.FINISHER);
         exhaust = true;
     }

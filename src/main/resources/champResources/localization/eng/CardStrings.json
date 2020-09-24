@@ -160,8 +160,8 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !M! champ:Counterstrike. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 10. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 10. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
