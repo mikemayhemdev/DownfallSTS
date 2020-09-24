@@ -15,8 +15,8 @@ public class Riposte extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 3;
+    private static final int MAGIC = 6;
+   // private static final int UPG_MAGIC = 3;
 
     public Riposte() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -27,6 +27,7 @@ public class Riposte extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
         if (gcombo())
+            if (upgraded) atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
@@ -47,6 +48,7 @@ public class Riposte extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
