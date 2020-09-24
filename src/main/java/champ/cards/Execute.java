@@ -12,8 +12,8 @@ public class Execute extends AbstractChampCard {
 
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 7;
+    //private static final int UPG_DAMAGE = 2;
     private static final int HP_LOSS = 4;
 
     public Execute() {
@@ -28,11 +28,13 @@ public class Execute extends AbstractChampCard {
         //finisher();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        if (upgraded) dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         fatigue(magicNumber);
         finisher();
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
