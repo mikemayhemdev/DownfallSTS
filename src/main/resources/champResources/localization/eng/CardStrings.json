@@ -14,8 +14,8 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage 2 times. NL champ:Fatigue !M!.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage 3 times. NL champ:Fatigue !M!."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage !cool! times. NL champ:Fatigue !M!.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage !cool! times. NL champ:Fatigue !M!."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
