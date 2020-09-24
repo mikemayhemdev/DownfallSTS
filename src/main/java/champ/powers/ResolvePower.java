@@ -74,9 +74,8 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     public void equivStrCheck() {
         int x = amount / 5;
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            if (x == 0) addToTop(new RemoveSpecificPowerAction(owner, owner, StrengthPower.POWER_ID)); // to not look ugly. same TODO: make it not artifact
-            else
-                owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
+            owner.getPower(StrengthPower.POWER_ID).amount += x - strengthGrantedByResolve;
+            if (owner.getPower(StrengthPower.POWER_ID).amount == 0) addToTop(new RemoveSpecificPowerAction(owner, owner, StrengthPower.POWER_ID));
         } else {
             if (x != 0)
                 addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, x), x)); //TODO: this also should be unable to be artifact cheesed later on
