@@ -14,8 +14,8 @@
   },
   "champ:Execute": {
     "NAME": "Execute",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage 2 times. NL champ:Fatigue !M!.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage 3 times. NL champ:Fatigue !M!."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage !cool! times. NL champ:Fatigue !M!.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage !cool! times. NL champ:Fatigue !M!."
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
@@ -258,8 +258,8 @@
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
-    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 2 times.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this 2 times."
+    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice."
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",

@@ -29,7 +29,7 @@ public class EntangleNextTurnPower extends AbstractPower implements CloneablePow
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
         this.amount = amount;
-        this.type = PowerType.BUFF;
+        this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

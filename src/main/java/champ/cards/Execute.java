@@ -20,6 +20,7 @@ public class Execute extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HP_LOSS;
+        baseCool = cool = 2;
         myHpLossCost = 4;
         tags.add(ChampMod.FINISHER);
     }
@@ -34,6 +35,7 @@ public class Execute extends AbstractChampCard {
     }
 
     public void upp() {
+        upgradeCool(1);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

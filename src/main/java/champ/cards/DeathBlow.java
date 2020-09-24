@@ -12,11 +12,11 @@ public class DeathBlow extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, uncommon
 
     private static final int DAMAGE = -1;
-    private static final int MAGIC = 30;
-    private static final int UPG_MAGIC = 10;
+    private static final int MAGIC = 20;
+    private static final int UPG_MAGIC = 5;
 
     public DeathBlow() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
