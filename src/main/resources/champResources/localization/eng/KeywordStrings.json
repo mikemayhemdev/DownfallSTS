@@ -54,7 +54,7 @@
     "NAMES": [
       "berserker"
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y4. #yFinisher: Lose all your #yResolve and gain that much HP. End your turn."
+    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y4. #yFinisher: Lose all your #yResolve and gain that much HP, preserving #yStrength. End your turn."
   },
   {
     "PROPER_NAME": "Gladiator",

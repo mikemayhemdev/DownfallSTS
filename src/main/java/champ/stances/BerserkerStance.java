@@ -2,11 +2,13 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.actions.FatigueHpLossAction;
-import champ.cards.AbstractChampCard;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class BerserkerStance extends AbstractChampStance {
 
@@ -39,10 +41,14 @@ public class BerserkerStance extends AbstractChampStance {
             public void update() {
                 isDone = true;
                 if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-                    int x = AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
-                    if (x > 0) {
-                        addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, x));
-                        addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(ResolvePower.POWER_ID)));
+                    AbstractPower q = AbstractDungeon.player.getPower(ResolvePower.POWER_ID);
+                    if (q instanceof ResolvePower) {
+                        ((ResolvePower) q).adjustStrength = false;
+                        int x = AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
+                        if (x > 0) {
+                            addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, x));
+                            addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.getPower(ResolvePower.POWER_ID)));
+                        }
                     }
                 }
             }
