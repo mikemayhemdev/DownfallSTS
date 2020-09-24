@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class BerserkerStyle extends AbstractChampCard {
 
-    public final static String ID = makeID("DefensiveStyle");
+    public final static String ID = makeID("BerserkerStyle");
 
     //stupid intellij stuff power, self, uncommon
 
