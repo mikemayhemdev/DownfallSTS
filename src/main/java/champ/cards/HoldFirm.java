@@ -18,20 +18,13 @@ public class HoldFirm extends AbstractChampCard {
     public HoldFirm() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = BLOCK;
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded || p.stance instanceof DefensiveStance) {
-            return super.canUse(p, m);
-        }
-        cantUseMessage = "I'm not in that Stance.";
-        return false;
+        magicNumber = baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
         blck();
-        applyToSelf(new BlurPower(p, 1));
+        applyToSelf(new BlurPower(p, magicNumber));
     }
 
     @Override
@@ -40,8 +33,9 @@ public class HoldFirm extends AbstractChampCard {
     }
 
     public void upp() {
+        upgradeMagicNumber(1);
+        upgradeBlock(UPG_BLOCK);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
-        upgradeBlock(UPG_BLOCK);
     }
 }
