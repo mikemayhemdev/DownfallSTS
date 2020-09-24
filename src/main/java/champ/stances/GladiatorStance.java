@@ -1,8 +1,11 @@
 package champ.stances;
 
 import champ.ChampChar;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 
 public class GladiatorStance extends AbstractChampStance {
 
@@ -37,6 +40,7 @@ public class GladiatorStance extends AbstractChampStance {
 
     @Override
     public void finisher() {
-
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player, 1), 1));
     }
 }

@@ -274,14 +274,14 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public void finisher() {
         if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
-            exitStance();
-            ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
-            if (!gcombo()) {
-                if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                    AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
-                } else
-                    addToBot(new PressEndTurnButtonAction());
+            if (!AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
+                exitStance();
             }
+            ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
+            if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
+                AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
+            } else
+                addToBot(new PressEndTurnButtonAction());
         }
     }
 }
