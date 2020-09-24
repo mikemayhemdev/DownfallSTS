@@ -1,7 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
@@ -26,7 +25,7 @@ public class Encircle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        techique();
         for (int i = 0; i < magicNumber; i++) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
