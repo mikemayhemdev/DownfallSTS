@@ -30,7 +30,7 @@ public class UltimateStance extends AbstractChampStance {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void onEndOfTurn() {
         timeLeft--;
         if (timeLeft == 0) {
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction("Neutral"));
