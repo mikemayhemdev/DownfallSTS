@@ -1,3 +1,4 @@
+/*
 package champ.cards;
 
 import champ.ChampMod;
@@ -41,3 +42,4 @@ public class FinalRevenge extends AbstractChampCard {
         initializeDescription();
     }
 }
+*/
