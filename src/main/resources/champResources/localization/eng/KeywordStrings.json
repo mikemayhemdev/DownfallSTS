@@ -76,6 +76,6 @@
     "NAMES": [
       "fatigue"
     ],
-    "DESCRIPTION": "Lose HP and gain an equal amount of #yResolve."
+    "DESCRIPTION": "Lose HP and gain an equal amount of #yResolve. Will only work up to 1 HP."
   }
 ]

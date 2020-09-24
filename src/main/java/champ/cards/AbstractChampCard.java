@@ -135,9 +135,11 @@ public abstract class AbstractChampCard extends CustomCard {
         return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
     }
 
-    public void fatigue(int amount) {
-        atb(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, amount));
-        applyToSelf(new ResolvePower(amount));
+    public int fatigue(int amount) {
+        int x = Math.min(amount, AbstractDungeon.player.currentHealth - 1);
+        atb(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+        applyToSelf(new ResolvePower(x));
+        return x;
     }
 
     @Override
