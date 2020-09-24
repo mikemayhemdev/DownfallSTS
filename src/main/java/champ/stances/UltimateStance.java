@@ -38,11 +38,6 @@ public class UltimateStance extends AbstractChampStance {
     }
 
     @Override
-    public void onExitStance() {
-        super.onExitStance();
-    }
-
-    @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[21] + timeLeft + ChampChar.characterStrings.TEXT[22] + " NL " + ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[19] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[20];
     }
