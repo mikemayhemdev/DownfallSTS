@@ -28,7 +28,7 @@ public class BerserkerStance extends AbstractChampStance {
 
     @Override
     public void technique() {
-        int x = Math.min(4, AbstractDungeon.player.currentHealth - 1);
+        int x = Math.min(5, AbstractDungeon.player.currentHealth - 1);
         AbstractDungeon.actionManager.addToBottom(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
         //AbstractDungeon.actionManager.addToBottom(new GainEnergAction(1));

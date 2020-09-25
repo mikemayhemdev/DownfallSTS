@@ -30,7 +30,7 @@ public class Encircle extends AbstractChampCard {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
-        fatigue(4);
+        fatigue(2);
         if (bcombo() && !this.purgeOnUse) {
             AbstractCard r = this;
             atb(new AbstractGameAction() {

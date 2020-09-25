@@ -33,5 +33,6 @@ public class EnchantSword extends AbstractChampCard {
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
+        tags.add(ChampMod.TECHNIQUE);
     }
 }

@@ -19,7 +19,7 @@ public class ArenaPreparation extends AbstractChampCard {
 
     public ArenaPreparation() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        myHpLossCost = 8;
+        myHpLossCost = 10;
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         tags.add(ChampMod.TECHNIQUE);

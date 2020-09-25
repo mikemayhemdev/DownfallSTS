@@ -15,8 +15,8 @@ public class GutPunch extends AbstractChampCard {
     private static final int DAMAGE = 2;
     private static final int UPG_DAMAGE = 1;
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 10;
+    private static final int UPG_MAGIC = 10;
 
     public GutPunch() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -33,14 +33,14 @@ public class GutPunch extends AbstractChampCard {
         fatigue(magicNumber);
         if (dcombo()) {
             exhaust = true;
-            applyToSelf(new ResolvePower(10));
+            applyToSelf(new ResolvePower(magicNumber));
         }
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+       // upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);
-        myHpLossCost++;
+       // myHpLossCost++;
     }
 
 
