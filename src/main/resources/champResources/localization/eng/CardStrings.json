@@ -156,13 +156,13 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Gain 2 Dexterity. NL Exhaust. NL Exhaust unless in champ:Defensive.",
+    "DESCRIPTION": "Gain 2 Dexterity. NL Exhaust unless in champ:Defensive.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 2 Dexterity. NL Exhaust unless in champ:Defensive."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 10. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 10. NL Exhaust unless in champ:Defensive."
+    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 5. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 5. NL Exhaust unless in champ:Defensive."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -237,7 +237,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL If the enemy intends to buff or debuff, Stun the enemy for 1 turn."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL If the enemy intends to buff or debuff, Stun it."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
@@ -281,7 +281,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 4. NL champ:Berserker champ:Combo: Play this twice. "
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL champ:Berserker champ:Combo: Play this twice. "
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -302,7 +302,7 @@
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
-    "DESCRIPTION": "champ:Technique. NL champ:Fatigue 8. NL Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
+    "DESCRIPTION": "champ:Technique. NL champ:Fatigue 5. NL Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",

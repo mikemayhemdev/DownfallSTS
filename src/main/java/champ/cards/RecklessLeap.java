@@ -23,12 +23,12 @@ public class RecklessLeap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
-        myHpLossCost = 7;
+        myHpLossCost = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        fatigue(7);
+        fatigue(myHpLossCost);
         applyToSelf(new StrengthPower(p, magicNumber));
     }
 

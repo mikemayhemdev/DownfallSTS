@@ -25,7 +25,7 @@ public class BringItOn extends AbstractChampCard {
         //finisher();
         applyToSelf(new CounterPower(magicNumber));
         blck();
-        fatigue(10);
+        fatigue(5);
         if (upgraded) {
             if (dcombo()) exhaust = false;
         }
