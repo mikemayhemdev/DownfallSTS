@@ -16,18 +16,24 @@ public class EnchantShield extends AbstractChampCard {
     public EnchantShield() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        tags.add(ChampMod.FINISHER);
+    //    tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) techique();
         //finisher();
         applyToSelf(new DexterityPower(p, 2));
-        if (upgraded) {
+
             if (dcombo()) exhaust = false;
-        }
-        finisher();
+
+     //   finisher();
     }
 
+
+    @Override
+    public void triggerOnGlowCheck() {
+        glowColor = (dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
 
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;

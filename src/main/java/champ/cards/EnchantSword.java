@@ -14,19 +14,20 @@ public class EnchantSword extends AbstractChampCard {
     public EnchantSword() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        tags.add(ChampMod.FINISHER);
+      //  tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) techique();
         //finisher();
         applyToSelf(new StrengthPower(p, 2));
-        if (upgraded && bcombo()) exhaust = false;
-        finisher();
+        if (bcombo()) exhaust = false;
+      //  finisher();
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

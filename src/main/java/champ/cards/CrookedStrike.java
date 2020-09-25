@@ -21,11 +21,12 @@ public class CrookedStrike extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
-        tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.FINISHER);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+        //techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         if (gcombo()) {
             atb(new AbstractGameAction() {
@@ -38,6 +39,10 @@ public class CrookedStrike extends AbstractChampCard {
                 }
             });
         }
+        if (upgraded) {
+            if (gcombo()) exhaust = false;
+        }
+        finisher();
     }
 
     @Override
@@ -46,6 +51,8 @@ public class CrookedStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        //upgradeDamage(UPG_DAMAGE);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
