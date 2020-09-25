@@ -24,7 +24,7 @@ public class Devastate extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int x = ChampMod.finishersThisCombat;
         //finisher();
-        for (int i = 0; i < x; ) dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        for (int i = 0; i < x; i++) dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         finisher();
     }
 
