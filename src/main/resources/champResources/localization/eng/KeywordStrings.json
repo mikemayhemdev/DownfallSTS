@@ -33,7 +33,7 @@
     "NAMES": [
       "counterstrike"
     ],
-    "DESCRIPTION": "The next time you take #yAtack damage, deal damage back."
+    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
   },
   {
     "PROPER_NAME": "Resolve",
