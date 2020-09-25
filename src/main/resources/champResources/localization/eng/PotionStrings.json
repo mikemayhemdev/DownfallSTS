@@ -19,5 +19,12 @@
       "Enter #yUltimate #yStance for #b",
       " turns."
     ]
+  },
+  "champ:CounterstrikePotion": {
+    "NAME": "Brew of Sharpness",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yCounterstrike."
+    ]
   }
 }
