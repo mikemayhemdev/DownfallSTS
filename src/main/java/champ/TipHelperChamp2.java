@@ -102,7 +102,7 @@ public class TipHelperChamp2 {
         if (!Settings.hidePopupDetails) {
             currentColor = Color.WHITE;
             if (rememberedCard == null){
-                if (AbstractDungeon.player != null && AbstractDungeon.player.isDraggingCard) {
+                if (AbstractDungeon.player != null) {
                     rememberedCard = AbstractDungeon.player.hoveredCard;
                 }
             } else if (AbstractDungeon.player.hoveredCard == null){

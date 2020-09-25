@@ -71,7 +71,7 @@ public class TipHelperChamp3 {
     public TipHelperChamp3() {
     }
 
-    private static void initalize(){
+    private static void initalize() {
         /*
         KEYWORD_TOP = ImageMaster.loadImage("champResources/images/ui/tipTop.png");
         KEYWORD_BODY = ImageMaster.loadImage("champResources/images/ui/tipMid.png");
@@ -83,21 +83,21 @@ public class TipHelperChamp3 {
 
         if (!Settings.hidePopupDetails) {
             currentColor = Color.WHITE;
-            if (rememberedCard == null){
-                if (AbstractDungeon.player != null && AbstractDungeon.player.isDraggingCard) {
+            if (rememberedCard == null) {
+                if (AbstractDungeon.player != null) {
                     rememberedCard = AbstractDungeon.player.hoveredCard;
                 }
-            } else if (AbstractDungeon.player.hoveredCard == null){
+            } else if (AbstractDungeon.player.hoveredCard == null) {
                 rememberedCard = null;
             }
 
             if (rememberedCard != null) {
-                if (rememberedCard.hasTag(ChampMod.FINISHER)){
-                    if (    (AbstractDungeon.player.stance instanceof BerserkerStance ||
-                            AbstractDungeon.player.stance instanceof DefensiveStance) &&
+                if (rememberedCard.hasTag(ChampMod.FINISHER)) {
+                    if ((AbstractDungeon.player.stance instanceof BerserkerStance ||
+                            AbstractDungeon.player.stance instanceof DefensiveStance || AbstractDungeon.player.stance instanceof GladiatorStance || AbstractDungeon.player.stance instanceof UltimateStance) &&
                             !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)
-                    ){
-                        currentColor = new Color(0.5F,TipHelperChamp2.greenValue,0.5F,1F);
+                    ) {
+                        currentColor = new Color(0.5F, TipHelperChamp2.greenValue, 0.5F, 1F);
                         //TODO: End Turn Button flashing
                     }
                 }
@@ -105,7 +105,7 @@ public class TipHelperChamp3 {
 
 
             if (isCard && card != null) {
-                if (card.current_x > (float)Settings.WIDTH * 0.75F) {
+                if (card.current_x > (float) Settings.WIDTH * 0.75F) {
                     renderKeywords(card.current_x - AbstractCard.IMG_WIDTH / 2.0F - CARD_TIP_PAD - BOX_W, card.current_y + AbstractCard.IMG_HEIGHT / 2.0F - BOX_EDGE_H, sb, KEYWORDS);
                 } else {
                     renderKeywords(card.current_x + AbstractCard.IMG_WIDTH / 2.0F + CARD_TIP_PAD, card.current_y + AbstractCard.IMG_HEIGHT / 2.0F - BOX_EDGE_H, sb, KEYWORDS);
