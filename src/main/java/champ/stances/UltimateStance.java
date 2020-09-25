@@ -22,7 +22,7 @@ public class UltimateStance extends AbstractChampStance {
         this.updateDescription();// 23
     }// 24
 
-    int timeLeft = 2;
+    public int timeLeft = 2;
 
     @Override
     public void onEnterStance() {

@@ -6,11 +6,18 @@
       "Choose #b1 of #b3 #yUpgraded #yOpeners to add to your hand, one of each #yStance. It costs #b0 this turn."
     ]
   },
-  "champ:DoubleChargePotion": {
-    "NAME": "Combustive Fluid",
+  "champ:TechniquePotion": {
+    "NAME": "Bottled Technique",
     "DESCRIPTIONS": [
       "#yTechnique #b",
       " times."
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "Substance Of Questionable Legality",
+    "DESCRIPTIONS": [
+      "Enter #yUltimate #yStance for #b",
+      " turns."
     ]
   }
 }

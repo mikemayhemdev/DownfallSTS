@@ -3,8 +3,9 @@ package champ.potions;
 
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
-import champ.actions.DiscoverOpenerAction;
-import champ.stances.AbstractChampStance;
+import champ.stances.UltimateStance;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,14 +14,14 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.relics.SacredBark;
 
 
-public class TechPotion extends CustomPotion {
-    public static final String POTION_ID = "champ:TechniquePotion";
+public class UltimateStancePotion extends CustomPotion {
+    public static final String POTION_ID = "champ:UltimateStancePotion";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
-    public TechPotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.SMOKE);
+    public UltimateStancePotion() {
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.H, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = ChampMod.placeholderColor;
@@ -34,20 +35,26 @@ public class TechPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        for (int i = 0; i < potency; i++) {
-            if (AbstractDungeon.player.stance instanceof AbstractChampStance)
-                ((AbstractChampStance) AbstractDungeon.player.stance).techique();
-        }
+        addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.player.stance instanceof UltimateStance) {
+                    ((UltimateStance) AbstractDungeon.player.stance).timeLeft = potency;
+                }
+            }
+        });
     }
 
     public CustomPotion makeCopy() {
-        return new TechPotion();
+        return new UltimateStancePotion();
     }
 
     public int getPotency(int ascensionLevel) {
         if (AbstractDungeon.player.hasRelic(SacredBark.ID))
-            return 6;
-        return 3;
+            return 2;
+        return 1;
     }
 }
 
