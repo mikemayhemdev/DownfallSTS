@@ -7,6 +7,10 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.events.Colosseum_Evil_Champ;
+import champ.potions.CounterstrikePotion;
+import champ.potions.OpenerPotion;
+import champ.potions.TechPotion;
+import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.relics.*;
 import champ.util.CardFilter;
@@ -225,12 +229,12 @@ public class ChampMod implements
 
 
     public void addPotions() {
-/*
-        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID);
-        BaseMod.addPotion(BurningPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, BurningPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-        BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-        BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-*/
+
+        BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
+        BaseMod.addPotion(OpenerPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, OpenerPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+        BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+        BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+
     }
 
     @Override
