@@ -12,7 +12,7 @@ public class RapidStrikes extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 5;
 
     public RapidStrikes() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -41,7 +41,7 @@ public class RapidStrikes extends AbstractChampCard {
             }
             dmg(m, r);
         }
-        finisher();
+       // finisher();
     }
 
     @Override
