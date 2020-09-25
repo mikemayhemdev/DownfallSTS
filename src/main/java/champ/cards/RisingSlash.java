@@ -27,8 +27,8 @@ public class RisingSlash extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() > 1)
-            if (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 2).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) { //TODO: This is actually not a very good way of doing this, find a better one
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1)
+            if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse) { //TODO: This is actually not a very good way of doing this, find a better one
                 AbstractCard r = this;
                 atb(new AbstractGameAction() {
                     @Override
@@ -42,8 +42,8 @@ public class RisingSlash extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisTurn.isEmpty())
-            glowColor = (AbstractDungeon.actionManager.cardsPlayedThisTurn.get(AbstractDungeon.actionManager.cardsPlayedThisTurn.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty())
+            glowColor = (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ChampMod.TECHNIQUE) && !this.purgeOnUse ? AbstractCard.GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR);
     }
 
     public void upp() {
