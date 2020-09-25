@@ -13,18 +13,20 @@ public class BladeFlurry extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 2;
 
     public BladeFlurry() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        exhaust = true;
-        tags.add(ChampMod.FINISHER);
+       // exhaust = true;
+        magicNumber = baseMagicNumber = 2;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
+        techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new AbstractGameAction() {
             @Override
@@ -32,13 +34,14 @@ public class BladeFlurry extends AbstractChampCard {
                 isDone = true;
                 int x = 0;
                 for (AbstractCard q : p.hand.group) if (q.hasTag(ChampMod.TECHNIQUE)) x++;
+                if (gcombo()){
+                    x = x + magicNumber;
+                }
                 for (int i = 0; i < x; i++) att(new DamageAction(m, makeInfo(), AttackEffect.SLASH_DIAGONAL));
+
             }
         });
-        if (upgraded) {
-            if (gcombo()) exhaust = false;
-        }
-        finisher();
+        //finisher();
     }
 
     @Override
@@ -47,8 +50,6 @@ public class BladeFlurry extends AbstractChampCard {
     }
 
     public void upp() {
-
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+    upgradeMagicNumber(1);
     }
 }

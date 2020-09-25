@@ -12,7 +12,7 @@ public class RapidStrikes extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 3;
 
     public RapidStrikes() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -25,7 +25,7 @@ public class RapidStrikes extends AbstractChampCard {
         //finisher();
         int x = AbstractDungeon.cardRandomRng.random(0, 2);
         int q = ChampMod.techniquesThisTurn + 1;
-        if (gcombo() && upgraded) q += 2;
+        if (upgraded) q += 2;
         for (int i = 0; i < q; i++) { // TODO: add info about how many times it will hit in EXTENDED_DESCRIPTION display
             AbstractGameAction.AttackEffect r = null;
             switch (x) {
@@ -42,11 +42,6 @@ public class RapidStrikes extends AbstractChampCard {
             dmg(m, r);
         }
        // finisher();
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = (upgraded && gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

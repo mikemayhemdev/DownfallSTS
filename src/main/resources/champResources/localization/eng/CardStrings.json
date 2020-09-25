@@ -156,13 +156,13 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "champ:Finisher. NL Gain 2 Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain 2 Dexterity. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "Gain 2 Dexterity. NL Exhaust. NL Exhaust unless in champ:Defensive.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 2 Dexterity. NL Exhaust unless in champ:Defensive."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
     "DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 10. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 10. NL Exhaust. NL champ:Defensive champ:Combo: Don't Exhaust."
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 10. NL Exhaust unless in champ:Defensive."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -206,22 +206,22 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Gladiator champ:Combo: Enemy loses 1 Strength this turn for each card in hand."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand. NL Exhaust unless in champ:Gladiator."
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
     "DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL champ:Gladiator champ:Combo: Repeat twice more."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL Repeat twice more."
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "champ:Finisher. NL Gain 2 Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain 2 Strength. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "Gain 2 Strength. NL Exhaust unless in champ:Berserker.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 2 Strength. NL Exhaust unless in champ:Berserker."
   },
   "champ:BladeFlurry": {
     "NAME": "Blade Flurry",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL champ:Gladiator champ:Combo: Repeat !M! more times."
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
@@ -264,16 +264,16 @@
   "champ:HeartStrike": {
     "NAME": "Finish Him",
     "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust unless in champ:Berserker."
   },
   "champ:FinalRevenge": {
     "NAME": "Final Revenge",
     "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust. NL champ:Berserker champ:Combo: Don't Exhaust."
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust unless in champ:Berserker."
   },
   "champ:CrownThrow": {
     "NAME": "Crown Throw",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Draw !M! less cards next turn. NL champ:Gladiator champ:Combo: Don't draw less cards."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Draw !M! fewer cards next turn. NL champ:Gladiator champ:Combo: Don't draw fewer cards."
   },
   "champ:FightOn": {
     "NAME": "Fight On",
@@ -361,7 +361,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "champ:Finisher. NL Gain [E] at the start of your next 3 turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain [E] at the start of your next 3 turns. NL Exhaust. NL champ:Gladiator champ:Combo: Don't Exhaust."
+    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator."
   }
 }

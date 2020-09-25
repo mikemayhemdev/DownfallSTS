@@ -13,20 +13,20 @@ public class EnchantCrown extends AbstractChampCard {
 
     public EnchantCrown() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        tags.add(ChampMod.FINISHER);
+    //    tags.add(ChampMod.FINISHER);
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) techique();
         applyToSelf(new EnergizedDurationPower(3));
-        if (upgraded)
             if (gcombo()) exhaust = false;
-        finisher();
+     //   finisher();
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (upgraded && gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
