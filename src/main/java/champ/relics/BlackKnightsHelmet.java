@@ -27,6 +27,10 @@ public class BlackKnightsHelmet extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
+    //TODO: Implement The first time you enter each Stance each combat:
+    //Defensive: Gain 2 Dexterity and lose 1 Strength.
+    //Gladiator: gain 1 Dexterity and 1 Strength.
+    //Berserker: gain 2 Strength and lose 1 Dexterity.
 
     @Override
     public String getUpdatedDescription() {

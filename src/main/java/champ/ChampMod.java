@@ -4,9 +4,10 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.events.Colosseum_Evil_Champ;
-import champ.relics.ChampionCrown;
+import champ.relics.*;
 import champ.util.CardFilter;
 import champ.util.CardIgnore;
 import champ.util.CoolVariable;
@@ -186,24 +187,21 @@ public class ChampMod implements
 
     @Override
     public void receiveEditRelics() {
+        BaseMod.addRelicToCustomPool(new BerserkersGuideToSlaughter(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new BlackKnightsHelmet(), ChampChar.Enums.CHAMP_GRAY);
         BaseMod.addRelicToCustomPool(new ChampionCrown(), ChampChar.Enums.CHAMP_GRAY);
-        /*
-        BaseMod.addRelicToCustomPool(new SpiritBrand(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new InflammatoryLetter(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new IceCube(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new JarOfFuel(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new MatchstickCase(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new RecyclingMachine(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new SoulConsumer(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new SoulOfChaos(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new TheBrokenSeal(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new CandleOfCauterizing(), ChampChar.Enums.GHOST_GREEN);
-        BaseMod.addRelicToCustomPool(new Sixitude(), ChampChar.Enums.GHOST_GREEN);
-        */
+        BaseMod.addRelicToCustomPool(new ChampionCrownUpgraded(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new DefensiveTrainingManual(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new FightingForDummies(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new GladiatorsBookOfMartialProwess(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new SignatureFinisher(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new PowerArmor(), ChampChar.Enums.CHAMP_GRAY);
+        BaseMod.addRelicToCustomPool(new SpectersHand(), ChampChar.Enums.CHAMP_GRAY);
 
-//        BaseMod.addRelic(new CandleOfCauterizing(), RelicType.SHARED);
-//        BaseMod.addRelic(new Sixitude(), RelicType.SHARED);
-        //BaseMod.addRelic(new BolsterEngine(), RelicType.SHARED);
+        BaseMod.addRelic(new Barbells(), RelicType.SHARED);
+        BaseMod.addRelic(new DeflectingBracers(), RelicType.SHARED);
+        BaseMod.addRelic(new DuelingGlove(), RelicType.SHARED);
+
     }
 
 

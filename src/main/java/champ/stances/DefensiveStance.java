@@ -2,6 +2,7 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.powers.CounterPower;
+import champ.relics.DefensiveTrainingManual;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,7 +25,13 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void technique() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(6), 6));
+        if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID)){
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(9), 9));
+
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(6), 6));
+
+        }
     }
 
     @Override
