@@ -19,7 +19,7 @@ public class ArenaPreparation extends AbstractChampCard {
 
     public ArenaPreparation() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        myHpLossCost = 10;
+        myHpLossCost = 5;
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
         tags.add(ChampMod.TECHNIQUE);
@@ -27,7 +27,7 @@ public class ArenaPreparation extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
-        fatigue(8);
+        fatigue(myHpLossCost);
         for (int i = 0; i < magicNumber; i++) {
             ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
             for (AbstractCard t : CardLibrary.getAllCards()) {

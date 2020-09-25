@@ -14,14 +14,14 @@ public class Execute extends AbstractChampCard {
 
     private static final int DAMAGE = 7;
     //private static final int UPG_DAMAGE = 2;
-    private static final int HP_LOSS = 4;
+    private static final int HP_LOSS = 5;
 
     public Execute() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HP_LOSS;
         baseCool = cool = 2;
-        myHpLossCost = 4;
+        myHpLossCost = 5;
         tags.add(ChampMod.FINISHER);
     }
 
