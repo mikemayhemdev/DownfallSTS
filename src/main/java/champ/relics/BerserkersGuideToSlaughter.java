@@ -30,7 +30,6 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
 
     @Override
     public int onLoseHpLast(int damageAmount) {
-
         if (!isActive){
             return damageAmount;
         }

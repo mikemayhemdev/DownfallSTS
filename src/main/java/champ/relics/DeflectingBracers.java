@@ -21,8 +21,6 @@ public class DeflectingBracers extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
-   //TODO: How to make a trigger at end of round but before Block is lost...
-
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

@@ -80,7 +80,7 @@
     "NAME": "Signature Finisher",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card. Whenever you use a Finisher while in no Stance, also play a copy of the chosen card, then end your turn.",
+      "Upon pickup, choose a Finisher. Whenever you use a Finisher while in no Stance, also play a copy of the chosen card, then end your turn.",
       "Choose a card for ",
       "Whenever you use a Finisher while in no Stance, also play a copy of ",
       ", then end your turn."

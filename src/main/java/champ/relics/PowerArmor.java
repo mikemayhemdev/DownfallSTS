@@ -1,5 +1,6 @@
 package champ.relics;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.util.TextureLoader;
@@ -22,10 +23,11 @@ public class PowerArmor extends CustomRelic {
 
     public void onEquip() {
         ++AbstractDungeon.player.energy.energyMaster;
-        //TODO: Cap Counterstrike and Resolve and Hand Size
+        BaseMod.MAX_HAND_SIZE -= 2;
     }
 
     public void onUnequip() {
+        BaseMod.MAX_HAND_SIZE += 2;
         --AbstractDungeon.player.energy.energyMaster;
     }
 

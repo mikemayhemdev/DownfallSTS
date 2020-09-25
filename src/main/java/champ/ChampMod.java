@@ -7,6 +7,7 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.events.Colosseum_Evil_Champ;
+import champ.powers.CounterPower;
 import champ.relics.*;
 import champ.util.CardFilter;
 import champ.util.CardIgnore;
@@ -19,6 +20,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Colosseum;
@@ -50,7 +52,8 @@ public class ChampMod implements
         PostBattleSubscriber,
         SetUnlocksSubscriber,
         OnCardUseSubscriber,
-        PreMonsterTurnSubscriber {
+        PreMonsterTurnSubscriber,
+        OnPlayerLoseBlockSubscriber {
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -374,4 +377,12 @@ public class ChampMod implements
         */
     }
 
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.player.hasRelic(DeflectingBracers.ID)) {
+            AbstractDungeon.player.getRelic(DeflectingBracers.ID).flash();
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(i), i));
+        }
+        return i;
+    }
 }

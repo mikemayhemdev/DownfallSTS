@@ -2,6 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.relics.PowerArmor;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -52,6 +53,14 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
         }
 
         return damageAmount;
+    }
+
+    @Override
+    public void stackPower(int stackAmount) {
+        if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
+            if (amount + stackAmount > 8)
+                stackAmount = (8 - amount);
+        super.stackPower(stackAmount);
     }
 
     @Override
