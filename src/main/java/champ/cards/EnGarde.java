@@ -14,7 +14,6 @@ public class EnGarde extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 3;
 
     public EnGarde() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -24,7 +23,7 @@ public class EnGarde extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
-        applyToSelf(new CounterPower(magicNumber));
+        if (upgraded) applyToSelf(new CounterPower(magicNumber));
         if (dcombo()) atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -43,6 +42,8 @@ public class EnGarde extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

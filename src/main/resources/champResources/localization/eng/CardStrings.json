@@ -134,7 +134,8 @@
   },
   "champ:Circumvent": {
     "NAME": "Circumvent",
-    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike."
+    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 3 champ:Counterstrike. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike."
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
@@ -148,7 +149,8 @@
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
-    "DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
+    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Double your champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
   },
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
@@ -175,7 +177,7 @@
   },
   "champ:IronFortress": {
     "NAME": "Iron Fortress",
-    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
+    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block and !M! champ:Counterstrike."
   },
   "champ:Lariat": {
     "NAME": "Lariat",
@@ -189,7 +191,7 @@
   },
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
-    "DESCRIPTION": "After you are attacked, gain !M! champ:Counterstrike."
+    "DESCRIPTION": "At the end of your turn, gain !M! champ:Counterstrike for each card in hand."
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
@@ -332,7 +334,8 @@
   },
   "champ:Duel": {
     "NAME": "Duel",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",

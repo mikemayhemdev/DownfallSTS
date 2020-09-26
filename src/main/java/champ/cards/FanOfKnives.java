@@ -71,7 +71,7 @@ public class FanOfKnives extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+       // upgradeDamage(UPG_DAMAGE);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

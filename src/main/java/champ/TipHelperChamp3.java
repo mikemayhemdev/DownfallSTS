@@ -313,7 +313,7 @@ public class TipHelperChamp3 {
         SHADOW_DIST_X = 9.0F * Settings.scale;
         BOX_EDGE_H = 32.0F * Settings.scale;
         BOX_BODY_H = 64.0F * Settings.scale;
-        BOX_W = 240.0F * Settings.scale;
+        BOX_W = 250.0F * Settings.scale;
         gl = new GlyphLayout();
         TEXT_OFFSET_X = 22.0F * Settings.scale;
         HEADER_OFFSET_Y = 12.0F * Settings.scale;

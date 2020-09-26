@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,6 +26,7 @@ public class Duel extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) techique();
         blck();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (monsterList().size() == 1 && !this.purgeOnUse) {
@@ -45,7 +47,8 @@ public class Duel extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
-        upgradeBlock(UPG_BLOCK);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
+        tags.add(ChampMod.TECHNIQUE);
     }
 }

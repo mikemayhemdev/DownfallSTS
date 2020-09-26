@@ -37,13 +37,17 @@ public class ShieldWallPower extends AbstractPower implements CloneablePowerInte
         this.updateDescription();
     }
 
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {// 42
-            this.flash();// 44
-            this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
-        }
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer){
+            this.addToTop(new ApplyPowerAction(owner, owner, new CounterPower(amount * AbstractDungeon.player.hand.size()), AbstractDungeon.player.hand.size()));
 
-        return damageAmount;// 52
+        }
+    }
+
+    @Override
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+
     }
 
     @Override

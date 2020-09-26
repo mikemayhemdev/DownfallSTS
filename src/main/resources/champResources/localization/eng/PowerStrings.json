@@ -45,8 +45,8 @@
   "champ:ShieldWallPower": {
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
-      "After you are attacked, gain #b",
-      " #yCounterstrike."
+      "At the end of your turn, gain #b",
+      " #yCounterstrike for each card in hand."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -156,6 +156,13 @@
       "Gain [E] at the start of your next turn.",
       "Gain [E] at the start of your next #b",
       " turns."
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "Iron Fortress",
+    "DESCRIPTIONS": [
+      "Whenever you enter a Stance, gain #b",
+      " Block and #yCounterstrike."
     ]
   }
 }
