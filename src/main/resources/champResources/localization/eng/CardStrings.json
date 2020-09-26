@@ -177,7 +177,7 @@
   },
   "champ:IronFortress": {
     "NAME": "Iron Fortress",
-    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block."
+    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block and !M! champ:Counterstrike."
   },
   "champ:Lariat": {
     "NAME": "Lariat",
@@ -191,7 +191,7 @@
   },
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
-    "DESCRIPTION": "After you are attacked, gain !M! champ:Counterstrike."
+    "DESCRIPTION": "At the end of your turn, gain !M! champ:Counterstrike for each card in hand."
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",

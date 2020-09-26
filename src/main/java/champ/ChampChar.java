@@ -122,8 +122,8 @@ public class ChampChar extends CustomPlayer {
         switch (ID) {
             case DefensiveStance
                     .STANCE_ID: {
-                this.stateData.setMix(currentIdle, "IdleDefensive", 0.3F);
-                this.stateData.setMix("HitDefensive", "IdleDefensive", 0.3F);
+                this.stateData.setMix(currentIdle, "IdleDefensive", 0.5F);
+                this.stateData.setMix("HitDefensive", "IdleDefensive", 0.5F);
                 this.state.setAnimation(0, "IdleDefensive", true);
                 currentIdle = "IdleDefensive";
                 break;
@@ -131,23 +131,23 @@ public class ChampChar extends CustomPlayer {
             case GladiatorStance
                     .STANCE_ID: {
                 SlimeboundMod.logger.info("Found Gladiator Stance");
-                this.stateData.setMix(currentIdle, "IdleGladiator", 0.4F);
-                this.stateData.setMix("HitGladiator", "IdleGladiator", 0.4F);
+                this.stateData.setMix(currentIdle, "IdleGladiator", 0.5F);
+                this.stateData.setMix("HitGladiator", "IdleGladiator", 0.5F);
                 this.state.setAnimation(0, "IdleGladiator", true);
                 currentIdle = "IdleGladiator";
                 break;
             }
             case BerserkerStance
                     .STANCE_ID: {
-                this.stateData.setMix(currentIdle, "IdleBerserker", 0.4F);
+                this.stateData.setMix(currentIdle, "IdleBerserker", 0.5F);
                 this.state.setAnimation(0, "IdleBerserker", true);
-                this.stateData.setMix("HitBerserker", "IdleBerserker", 0.4F);
+                this.stateData.setMix("HitBerserker", "IdleBerserker", 0.5F);
                 currentIdle = "IdleBerserker";
                 break;
             }
             case NeutralStance
                     .STANCE_ID: {
-                this.stateData.setMix(currentIdle, "Idle", 0.4F);
+                this.stateData.setMix(currentIdle, "Idle", 0.5F);
                 this.state.setAnimation(0, "Idle", true);
                 currentIdle = "Idle";
                 break;
