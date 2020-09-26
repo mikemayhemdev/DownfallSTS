@@ -289,7 +289,7 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Leap",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 7. NL Gain !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 5. NL Gain !M! Strength. NL Exhaust."
   },
   "champ:IgnorePain": {
     "NAME": "Ignore Pain",

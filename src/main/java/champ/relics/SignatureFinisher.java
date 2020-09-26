@@ -153,7 +153,7 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
                                 isDone = true;
                                 if (m == null){
                                     if (c.target == AbstractCard.CardTarget.SELF){
-                                        AbstractMonster m2 = AbstractDungeon.getRandomMonster();
+                                        AbstractMonster m2 = AbstractDungeon.getMonsters().getRandomMonster(true);
                                         GameActionManager.queueExtraCard(r, m2);
                                     } else {
                                         GameActionManager.queueExtraCard(r, m);
