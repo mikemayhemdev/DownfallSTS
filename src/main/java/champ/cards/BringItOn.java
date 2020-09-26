@@ -23,8 +23,8 @@ public class BringItOn extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
-        applyToSelf(new CounterPower(magicNumber));
         blck();
+        applyToSelf(new CounterPower(magicNumber));
         if (upgraded) {
             if (dcombo()) exhaust = false;
         }

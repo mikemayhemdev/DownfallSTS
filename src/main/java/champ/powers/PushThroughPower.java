@@ -4,6 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,12 +37,13 @@ public class PushThroughPower extends AbstractPower implements CloneablePowerInt
         this.updateDescription();
     }
 
+    @Override
+    public void atEndOfRound() {
+        addToBot(new ReducePowerAction(owner, owner, this, 1));
+    }
+
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (damageAmount >= owner.currentHealth) {
-            int x = owner.currentHealth - 1;
-            return x;
-        }
-        return damageAmount;
+        return 0;
     }
 
     @Override

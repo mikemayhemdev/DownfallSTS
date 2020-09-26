@@ -68,8 +68,8 @@
   "champ:PushThroughPower": {
     "NAME": "Ignoring Pain",
     "DESCRIPTIONS": [
-      "You cannot go below #b1 HP this turn.",
-      "You cannot go below #b1 HP this and the next #b",
+      "You cannot lose HP this turn.",
+      "You cannot lose HP this and the next #b",
       " turns."
     ]
   },
