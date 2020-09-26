@@ -25,6 +25,6 @@ public class FalseCounter extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeBaseCost(1);
     }
 }
