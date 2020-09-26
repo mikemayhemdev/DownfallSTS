@@ -12,7 +12,7 @@ public class Execute extends AbstractChampCard {
 
     //stupid intellij stuff ATTACK, ENEMY, STARTER
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 6;
     //private static final int UPG_DAMAGE = 2;
     private static final int HP_LOSS = 5;
 

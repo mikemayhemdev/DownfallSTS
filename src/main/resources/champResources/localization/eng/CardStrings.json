@@ -109,7 +109,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL champ:Defensive champ:Combo: Gain 10 champ:Resolve and Exhaust."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL champ:Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -161,8 +161,8 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 5. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block and !M! champ:Counterstrike. NL champ:Fatigue 5. NL Exhaust unless in champ:Defensive."
+    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block. NL Gain !M! champ:Counterstrike. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block. NL Gain !M! champ:Counterstrike. NL Exhaust unless in champ:Defensive."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -293,8 +293,8 @@
   },
   "champ:IgnorePain": {
     "NAME": "Ignore Pain",
-    "DESCRIPTION": "champ:Technique. NL Your HP cannot be reduced below 1 until your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL champ:Technique. NL Your HP cannot be reduced below 1 until your next turn. NL Exhaust."
+    "DESCRIPTION": "champ:Technique. NL Your HP cannot be reduced until your next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL champ:Technique. NL Your HP cannot be reduced until your next turn. NL Exhaust."
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
