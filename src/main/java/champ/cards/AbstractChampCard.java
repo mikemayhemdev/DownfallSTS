@@ -139,7 +139,7 @@ public abstract class AbstractChampCard extends CustomCard {
         int x = Math.min(amount, AbstractDungeon.player.currentHealth - 1);
         int y = AbstractDungeon.player.currentHealth;
         atb(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-        atb(new AbstractGameAction() {
+        /*atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
@@ -148,7 +148,8 @@ public abstract class AbstractChampCard extends CustomCard {
                 }
             }
         });
-        //applyToSelf(new ResolvePower(x));
+        */ //TODO: This breaks things worse - players-first, so here they get the heal if HP loss is reduced. Maybe worth fixing, maybe not
+        applyToSelf(new ResolvePower(x));
         return x;
     }
 
