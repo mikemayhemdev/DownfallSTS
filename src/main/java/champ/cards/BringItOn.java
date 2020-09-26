@@ -16,7 +16,7 @@ public class BringItOn extends AbstractChampCard {
     public BringItOn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        baseBlock = 15;
+        baseBlock = 3;
         exhaust = true;
         tags.add(ChampMod.FINISHER);
     }
@@ -25,7 +25,6 @@ public class BringItOn extends AbstractChampCard {
         //finisher();
         applyToSelf(new CounterPower(magicNumber));
         blck();
-        fatigue(5);
         if (upgraded) {
             if (dcombo()) exhaust = false;
         }
@@ -34,7 +33,7 @@ public class BringItOn extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = (upgraded && dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
