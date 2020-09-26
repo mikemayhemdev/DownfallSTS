@@ -332,7 +332,8 @@
   },
   "champ:Duel": {
     "NAME": "Duel",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice.",
+    "UPGRADE_DESCRIPTION": "champ: Technique. Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",
