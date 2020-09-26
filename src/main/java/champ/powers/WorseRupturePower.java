@@ -40,7 +40,7 @@ public class WorseRupturePower extends AbstractPower implements CloneablePowerIn
     public int onLoseHp(int damageAmount) {
         if (!AbstractDungeon.actionManager.turnHasEnded) {
             flash();
-            addToBot(new ApplyPowerAction(owner, owner, new ResolvePower(amount), amount));
+            addToTop(new ApplyPowerAction(owner, owner, new ResolvePower(amount), amount));
         }
         return damageAmount;
     }

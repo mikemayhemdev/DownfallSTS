@@ -25,6 +25,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Colosseum;
@@ -57,7 +58,8 @@ public class ChampMod implements
         SetUnlocksSubscriber,
         OnCardUseSubscriber,
         PreMonsterTurnSubscriber,
-        OnPlayerLoseBlockSubscriber {
+        OnPlayerLoseBlockSubscriber,
+        PostUpdateSubscriber {
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -388,5 +390,15 @@ public class ChampMod implements
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(i), i));
         }
         return i;
+    }
+
+    public static boolean endTurnIncoming = false;
+
+    @Override
+    public void receivePostUpdate() {
+        if (endTurnIncoming && AbstractDungeon.actionManager.cardQueue.isEmpty()) {
+            AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
+            endTurnIncoming = false;
+        }
     }
 }

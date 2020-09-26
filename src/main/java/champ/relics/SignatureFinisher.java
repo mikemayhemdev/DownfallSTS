@@ -3,21 +3,12 @@ package champ.relics;
 import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
-import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
-import champ.cards.Defend;
-import champ.cards.Strike;
 import champ.patches.SignatureMovePatch;
-import champ.powers.CalledShotPower;
-import champ.stances.AbstractChampStance;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.defect.ChannelAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,10 +18,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import guardian.orbs.StasisOrb;
-import guardian.patches.BottledStasisPatch;
-import guardian.relics.BottledStasis;
-import sneckomod.util.ExhaustMod;
 
 import java.util.function.Predicate;
 
@@ -44,14 +31,13 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
 
     public AbstractCard card = null;
     private boolean cardSelected = true;
-    
+
     public SignatureFinisher() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
     @Override
     public Predicate<AbstractCard> isOnCard() {
-
         return SignatureMovePatch.inSignatureMove::get;
     }
 
@@ -139,20 +125,18 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
 
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.hasTag(ChampMod.FINISHER)){
-            if (AbstractDungeon.player.stance instanceof NeutralStance){
-                if (card != null){
+        if (c.hasTag(ChampMod.FINISHER)) {
+            if (AbstractDungeon.player.stance instanceof NeutralStance) {
+                if (card != null) {
                     if (!c.purgeOnUse) {
                         AbstractCard r = card.makeStatEquivalentCopy();
                         r.purgeOnUse = true;
                         addToBot(new AbstractGameAction() {
-                            @Override
-
                             //TODO: Still can't quite get this working if you bottle a targeted Finisher, but cast Bring It ON or anything else self-targeted.  The queued extra card doesn't target an enemy.
                             public void update() {
                                 isDone = true;
-                                if (m == null){
-                                    if (c.target == AbstractCard.CardTarget.SELF){
+                                if (m == null) {
+                                    if (c.target == AbstractCard.CardTarget.SELF) {
                                         AbstractMonster m2 = AbstractDungeon.getMonsters().getRandomMonster(true);
                                         GameActionManager.queueExtraCard(r, m2);
                                     } else {
@@ -163,11 +147,20 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
                                 }
                             }
                         });
+                        addToBot(new AbstractGameAction() {
+                            @Override
+                            public void update() {
+                                isDone = true;
+                                endTurnIncoming = true;
+                            }
+                        });
+                        /*
                         if (!AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
                             addToBot(new PressEndTurnButtonAction());
                         } else {
                             AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
                         }
+                        */
                     }
                 }
             }
