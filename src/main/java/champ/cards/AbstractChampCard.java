@@ -137,8 +137,18 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public int fatigue(int amount) {
         int x = Math.min(amount, AbstractDungeon.player.currentHealth - 1);
+        int y = AbstractDungeon.player.currentHealth;
         atb(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-        applyToSelf(new ResolvePower(x));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (y - AbstractDungeon.player.currentHealth > 0) {
+                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
+                }
+            }
+        });
+        //applyToSelf(new ResolvePower(x));
         return x;
     }
 
