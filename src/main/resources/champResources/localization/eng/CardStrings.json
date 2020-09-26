@@ -134,7 +134,8 @@
   },
   "champ:Circumvent": {
     "NAME": "Circumvent",
-    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike."
+    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 3 champ:Counterstrike. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike."
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
@@ -148,7 +149,8 @@
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
-    "DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
+    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Double your champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
   },
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
