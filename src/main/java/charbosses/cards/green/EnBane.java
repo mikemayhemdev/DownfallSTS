@@ -2,6 +2,7 @@ package charbosses.cards.green;
 
 import charbosses.actions.unique.EnemyBaneAction;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,7 +13,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import charbosses.powers.general.EnemyPoisonPower;
 
 import java.util.ArrayList;
 
@@ -30,9 +30,17 @@ public class EnBane extends AbstractBossCard {
     }
 
     @Override
+    public String overrideIntentText() {
+        if (AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)) {
+            return intentDmg + "x2";
+        }
+        return super.overrideIntentText();
+    }
+
+    @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-        if (AbstractDungeon.player != null){
-            if (AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)){
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)) {
                 return autoPriority() * 2;
             }
         }
