@@ -19,7 +19,7 @@ public class FocusedBerserking extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         berserkOpen();
-        applyToSelf(new FocusedBerPower(3));
+        applyToSelf(new FocusedBerPower(2));
     }
 
     public void upp() {

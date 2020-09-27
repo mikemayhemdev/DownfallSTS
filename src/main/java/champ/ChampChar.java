@@ -9,6 +9,7 @@ import champ.relics.ChampionCrown;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.GladiatorStance;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -53,6 +54,10 @@ public class ChampChar extends CustomPlayer {
     private static String currentIdle = "Idle";
 
     public float renderscale = 1.0F;
+
+    public float stanceSwitchAnimTimer = 0.0F;
+    private ArrayList<String> stanceSwitchQueue = new ArrayList<>();
+
 
     private String atlasURL = "champResources/images/char/mainChar/champ.atlas";
     private String jsonURL = "champResources/images/char/mainChar/champ.json";
@@ -117,7 +122,38 @@ public class ChampChar extends CustomPlayer {
                 getStartingDeck(), false);
     }
 
+    @Override
+    public void update() {
+        super.update();
+        tickStanceVisualTimer();
+    }
+
     public void switchStanceVisual(String ID) {
+
+        if (currentIdle == "Idle"){
+            stanceSwitchQueue.add(ID);
+        } else {
+            stanceSwitchQueue.add(NeutralStance.STANCE_ID);
+            stanceSwitchQueue.add(ID);
+        }
+    }
+
+    private void tickStanceVisualTimer(){
+        if (stanceSwitchQueue.size() > 0) {
+            SlimeboundMod.logger.info("stance queue is ticking");
+            stanceSwitchAnimTimer = stanceSwitchAnimTimer - Gdx.graphics.getDeltaTime();
+            if (stanceSwitchAnimTimer <= 0F) {
+                switchStanceVisualGo(stanceSwitchQueue.get(0));
+                stanceSwitchQueue.remove(0);
+                if (stanceSwitchQueue.size() > 0) {
+                    stanceSwitchAnimTimer = 0.6F;
+                }
+            }
+        }
+    }
+
+    public void switchStanceVisualGo(String ID) {
+        SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
 
         switch (ID) {
             case DefensiveStance
@@ -156,7 +192,6 @@ public class ChampChar extends CustomPlayer {
 
 
     }
-
 
     @Override
     public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
