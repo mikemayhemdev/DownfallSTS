@@ -69,7 +69,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     private PowerTip intentTip = new PowerTip();
     public int intentDmg;
     public int intentBaseDmg;
-    private int intentMultiAmt;
+    protected int intentMultiAmt;
     private Color intentColor = Color.WHITE.cpy();
     private float intentParticleTimer;
     private float intentAngle;
