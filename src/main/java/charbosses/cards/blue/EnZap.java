@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.orbs.Lightning;
 
 import java.util.ArrayList;
 
@@ -26,6 +25,12 @@ public class EnZap extends AbstractBossCard {
         this.showEvokeOrbCount = 1;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        alwaysDisplayText = true;
+    }
+
+    @Override
+    public String overrideIntentText() {
+        return "(3)";
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

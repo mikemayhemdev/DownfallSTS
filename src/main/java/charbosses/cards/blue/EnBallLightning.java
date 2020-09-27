@@ -32,6 +32,11 @@ public class EnBallLightning extends AbstractBossCard {
     }
 
     @Override
+    public String overrideIntentText() {
+        return intentDmg + "+ (3)";
+    }
+
+    @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
         return autoPriority() + 8;
     }
