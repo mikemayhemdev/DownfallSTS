@@ -25,7 +25,6 @@ public class Gem_Synthetic extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int HPLOSS = 2;  //HARDCODED IN DESCRIPTION
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
@@ -53,7 +52,6 @@ public class Gem_Synthetic extends AbstractGuardianCard {
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 2));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

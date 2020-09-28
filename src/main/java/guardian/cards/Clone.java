@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.CloneAction;
+import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
 
 public class Clone extends AbstractGuardianCard {
@@ -25,7 +26,6 @@ public class Clone extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int COUNT = 1;
-    private static final int UPGRADECOST = 0;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -56,6 +56,8 @@ public class Clone extends AbstractGuardianCard {
 
 
         AbstractDungeon.actionManager.addToBottom(new CloneAction(p));
+        if (upgraded) AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new ReduceRightMostStasisAction(false));
         super.useGems(p, m);
     }
 
@@ -66,7 +68,9 @@ public class Clone extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.upgradeBaseCost(UPGRADECOST);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+
+            this.initializeDescription();
         }
     }
 
