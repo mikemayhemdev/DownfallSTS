@@ -1,14 +1,15 @@
 package champ;
 
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
-import champ.stances.UltimateStance;
+import basemod.BaseMod;
+import champ.stances.*;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class StanceHelper {
 
@@ -87,6 +88,18 @@ public class StanceHelper {
                             getStanceName());
 
                     TipHelperChamp1.render(sb);
+                    if (hitboxStance.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                        if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
+                            TipHelper.renderGenericTip(
+                                    (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                    BaseMod.getKeywordTitle(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()),
+                                    BaseMod.getKeywordDescription(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()));
+                        } else {
+                            TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                    BaseMod.getKeywordTitle(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()),
+                                    BaseMod.getKeywordDescription(((AbstractChampStance) AbstractDungeon.player.stance).getKeywordString()));
+                        }
+                    }
 
                     TipHelperChamp2.renderGenericTip(hitboxTechnique.x, hitboxTechnique.y,
                             ChampChar.characterStrings.TEXT[8],

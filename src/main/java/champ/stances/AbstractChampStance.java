@@ -25,6 +25,8 @@ public abstract class AbstractChampStance extends AbstractStance {
         this.updateDescription();// 23
     }
 
+    public abstract String getKeywordString();
+
     @Override
     public void updateAnimation() {
         /*

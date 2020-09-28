@@ -13,10 +13,15 @@ public class DefensiveStance extends AbstractChampStance {
     private static long sfxId = -1L;
 
     public DefensiveStance() {
-        this.ID = STANCE_ID;// 21
+        this.ID = STANCE_ID;
         this.name = ChampChar.characterStrings.TEXT[4];
-        this.updateDescription();// 23
-    }// 24
+        this.updateDescription();
+    }
+
+    @Override
+    public String getKeywordString() {
+        return "champ:Defensive";
+    }
 
     @Override
     public void updateDescription() {

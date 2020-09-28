@@ -22,6 +22,11 @@ public class UltimateStance extends AbstractChampStance {
         this.updateDescription();// 23
     }// 24
 
+    @Override
+    public String getKeywordString() {
+        return "champ:Ultimate";
+    }
+
     public int timeLeft = 2;
 
     @Override

@@ -19,6 +19,11 @@ public class GladiatorStance extends AbstractChampStance {
     }// 24
 
     @Override
+    public String getKeywordString() {
+        return "champ:Gladiator";
+    }
+
+    @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[14] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[15];
     }

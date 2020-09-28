@@ -22,6 +22,11 @@ public class BerserkerStance extends AbstractChampStance {
     }// 24
 
     @Override
+    public String getKeywordString() {
+        return "champ:Berserker";
+    }
+
+    @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[10] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[11];
     }

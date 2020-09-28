@@ -138,9 +138,7 @@ public class TipHelperChamp2 {
             } else {
                 renderPowerTips(drawX, drawY, sb, POWER_TIPS);
             }
-
         }
-
     }
 
     public static void renderGenericTip(float x, float y, String header, String body) {

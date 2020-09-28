@@ -330,7 +330,7 @@
   },
   "champ:PerfectForm": {
     "NAME": "Perfect Form",
-    "DESCRIPTION": "For !M! turns, enter champ:Ultimate_Stance."
+    "DESCRIPTION": "For !M! turns, enter champ:Ultimate."
   },
   "champ:Duel": {
     "NAME": "Duel",
