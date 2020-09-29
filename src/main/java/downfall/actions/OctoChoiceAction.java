@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.cards.OctoChoiceCard;
-import downfall.downfallMod;
 import downfall.util.OctopusCard;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
@@ -14,8 +13,6 @@ import expansioncontent.patches.CenterGridCardSelectScreen;
 public class OctoChoiceAction extends AbstractGameAction {
     private boolean pickCard = false;
     private CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-    private KnowingSkullWish funCard;
-    public String[] TEXT = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("OctoChoiceAction")).TEXT;
     private OctopusCard funCard;
     public String[] TEXT = CardCrawlGame.languagePack.getUIString("downfall:OctoChoiceAction").TEXT;
 
