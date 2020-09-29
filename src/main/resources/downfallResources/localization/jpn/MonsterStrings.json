@@ -1,0 +1,57 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "Transformative Gaze"
+    ],
+    "NAME": "Head of Change",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "Forgetful Stare"
+    ],
+    "NAME": "Forgetful Head",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "Growth Beam"
+    ],
+    "NAME": "Head of Growth",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "Soul Steal"
+    ],
+    "NAME": "Head of Growth",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Looter",
+    "DIALOG": [
+      "~Hey,~ you don't have any money!",
+      "@NOOOoooo!@",
+      "You're gonna die today, chump."
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Mugger",
+    "DIALOG": [
+      "Let's teach 'em a lesson.",
+      "Teach 'em all the way!"
+    ]
+  }
+}

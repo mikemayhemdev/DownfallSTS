@@ -102,9 +102,8 @@
   },
   "downfall:OctoChoiceAction": {
     "TEXT": [
-      "Choose a Wish to use.",
-      "You should never see this.",
-      "Choose a Slime."
+      "Choose an option.",
+      "You should never see this. Oops"
     ]
   },
   "downfall:BossCardReward": {

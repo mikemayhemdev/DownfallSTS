@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.HexaMod;
-import theHexaghost.actions.PerformXAction;
+import downfall.actions.PerformXAction;
 import theHexaghost.actions.TurnItUpAction;
 
 public class TurnItUp extends AbstractHexaCard {

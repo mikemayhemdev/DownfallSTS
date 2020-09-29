@@ -1,0 +1,12 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "Add a Common card to your deck"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "Add a Seal to your deck"
+    ]
+  }
+}

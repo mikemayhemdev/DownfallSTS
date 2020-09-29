@@ -1,0 +1,210 @@
+{
+  "Guardian:NextTurnGainStrengthPower": {
+    "NAME": "Charging Up",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength on your next turn."
+    ]
+  },
+  "Guardian:StunnedPower": {
+    "NAME": "Stunned",
+    "DESCRIPTIONS": [
+      "Skip your next turn.",
+      "Skip your next #b",
+      " turns."
+    ]
+  },
+  "Guardian:FloatingOrbsPower": {
+    "NAME": "Floating Orbs",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add an #yOrb #ySlam to your hand.",
+      "At the start of your turn, add #b",
+      " #yOrb #ySlams to your hand."
+    ]
+  },
+  "Guardian:OrbwalkPower": {
+    "NAME": "Orbwalk",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength at the start of each turn."
+    ]
+  },
+  "Guardian:ClonePower": {
+    "NAME": "Reroute",
+    "DESCRIPTIONS": [
+      "Place the next non-Exhausting #yAttack or #ySkill you play this turn into #yStasis.",
+      "Place the next #b",
+      " non-Exhausting #yAttacks or #ySkills you play this turn into #yStasis."
+    ]
+  },
+  "Guardian:GemFinderPower": {
+    "NAME": "Gem Finder",
+    "DESCRIPTIONS": [
+      "At the end of combat, choose a Common #yGem to add to your deck.",
+      "At the end of combat, choose #b",
+      " Common #yGems to add to your deck."
+    ]
+  },
+  "Guardian:FuturePlansPower": {
+    "NAME": "Future Plans",
+    "DESCRIPTIONS": [
+      "At the end of your turn, you may place #b",
+      " card into #yStasis.",
+      " cards into #yStasis."
+    ]
+  },
+  "Guardian:DefenseModePower": {
+    "NAME": "Defensive Mode",
+    "DESCRIPTIONS": [
+      "#yDefensive #yMode will remain active for #b",
+      " turns. #yDefensive #yMode grants #b",
+      " #yThorns, reduces damage dealt by #b25%, and grants #b2 #yBlock when you play a card."
+    ]
+  },
+  "Guardian:ConstructModePower": {
+    "NAME": "Construction Mode",
+    "DESCRIPTIONS": [
+      "You will not be able to play #yAttacks next turn.",
+      "You will not be able to play #yAttacks next  #b",
+      " turns."
+    ]
+  },
+  "Guardian:MultiBoostPower": {
+    "NAME": "MultiBoost",
+    "DESCRIPTIONS": [
+      "#yAttacks that deal damage multiple times do so an additional time.",
+      "#yAttacks that deal damage multiple times do so #b",
+      " additional times."
+    ]
+  },
+  "Guardian:TargetedPower": {
+    "NAME": "Targeted",
+    "DESCRIPTIONS": [
+      "Each time this enemy takes damage, gain #b",
+      " #yStrength for this turn."
+    ]
+  },
+  "Guardian:LoseThornsPower": {
+    "NAME": "Thorns Down",
+    "DESCRIPTIONS": [
+      "Lose #b",
+      " #yThorns at the start of your next turn."
+    ]
+  },
+  "Guardian:BeamBuffPower": {
+    "NAME": "Primed",
+    "DESCRIPTIONS": [
+      "Beam cards deal #b",
+      " more damage."
+    ]
+  },
+  "Guardian:DefensiveModeBuffsPower": {
+    "NAME": "Defensive Mode+",
+    "DESCRIPTIONS": [
+      "In addition to its normal effects, #yDefensive #yMode will apply: NL #b",
+      " #yThorns.",
+      " #yDexterity.",
+      " #yBlock at the end of each turn.",
+      "#yExhaust the first #yStatus or #yCurse drawn each turn.",
+      "#yExhaust the first #b",
+      " #yStatus or #yCurse cards drawn each turn.",
+      "Gain #b",
+      " #yStrength for each turn #yDefensive #yMode was active when it ends."
+    ]
+  },
+  "Guardian:AutomayhemPower": {
+    "NAME": "Time Sifter",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yAccelerate.",
+      "At the end of your turn, #yAccelerate ",
+      " times."
+    ]
+  },
+  "Guardian:ConstructPower": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yArtifact and lose #b",
+      " [E] at the start of your turn if you have no #yArtifact."
+    ]
+  },
+  "Guardian:ModeShiftPower": {
+    "NAME": "Mode Shift",
+    "DESCRIPTIONS": [
+      "When you lose #b",
+      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode. NL The amount required to activate increases each time #yMode #yShift is activated.",
+      "#yMode #yShift already activated this turn."
+    ]
+  },
+  "Guardian:ExhaustStatusesPower": {
+    "NAME": "Repulse",
+    "DESCRIPTIONS": [
+      "#yExhaust the first #yStatus or #yCurse card drawn each turn.",
+      "#yExhaust the first #b",
+      " #yStatus or #yCurse cards drawn each turn."
+    ]
+  },
+  "Guardian:RevengePower": {
+    "NAME": "Revenge",
+    "DESCRIPTIONS": [
+      "When #yDefensive #yMode is removed, gain ",
+      " #yStrength for each turn it was active. NL Currently will grant #b",
+      " #yStrength."
+    ]
+  },
+  "Guardian:StasisEnginePower": {
+    "NAME": "Stasis Engine",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " [E] and draw #b",
+      " card",
+      " cards",
+      " whenever you play 3 0-cost cards in a single turn."
+    ]
+  },
+  "Guardian:EnergizedGuardianPower": {
+    "NAME": "Energized",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " additional [E] next turn.",
+      " additional [E] next turn.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "Guardian:BlockOnCardUsePower": {
+    "NAME": "Armorer's Oil",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock whenever you play a card this turn."
+    ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "Evasive Protocol",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yDexterity while in #yDefensive #yMode."
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "Spiker Protocol",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yThorns while in #yDefensive #yMode."
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "Armored Protocol",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock when you end your turn while in #yDefensive #yMode."
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "Entrenched",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, don't leave #yDefensive #yMode.",
+      "At the start of your next #b",
+      " turns, don't leave #yDefensive #yMode."
+    ]
+  }
+}

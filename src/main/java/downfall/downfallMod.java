@@ -17,6 +17,9 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.ChampMod;
+import champ.monsters.BlackKnight;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
@@ -163,7 +166,9 @@ public class downfallMod implements
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
             Settings.GameLanguage.ENG,
-            Settings.GameLanguage.ZHS
+            Settings.GameLanguage.ZHS,
+            Settings.GameLanguage.JPN,
+            Settings.GameLanguage.KOR
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
@@ -210,6 +215,8 @@ public class downfallMod implements
                 return "hexamodResources/" + path;
             case PACKAGE_EXPANSION:
                 return "expansioncontentResources/" + path;
+            case PACKAGE_CHAMP:
+                return "champResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -282,6 +289,9 @@ public class downfallMod implements
 
         SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -351,6 +361,7 @@ public class downfallMod implements
         loadModKeywords(SneckoMod.getModID(), otherPackagePaths.PACKAGE_SNECKO);
         loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
+        loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
 
     }
 
@@ -734,7 +745,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof ChampChar))
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//
@@ -836,28 +847,28 @@ public class downfallMod implements
 
         BaseMod.addMonster(FleeingMerchant.ID, FleeingMerchant::new);
 
-        BaseMod.addMonster(CharBossMerchant.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
+        BaseMod.addMonster("downfall:CharBossMerchant", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossMerchant()}));
 
         BaseMod.addMonster(downfall.monsters.FaceTrader.ID, downfall.monsters.FaceTrader::new);
 
-        BaseMod.addMonster(makeID("Heads"), LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(
+        BaseMod.addMonster("downfall:Heads", LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[0], () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new ChangingTotem(),
                         new ForgetfulTotem(),
                         new GrowingTotem(),
                 }));
 
-        BaseMod.addMonster(Augmenter.ID, Augmenter.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster("downfall:Augmenter", Augmenter.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
-                        new downfall.monsters.Augmenter()
+                        new Augmenter()
                 }));
 
-        BaseMod.addMonster(LadyInBlue.ID, LadyInBlue.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster("downfall:WomanInBlue", LadyInBlue.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
-                        new downfall.monsters.LadyInBlue()
+                        new LadyInBlue()
                 }));
 
-        BaseMod.addMonster(FaceTrader.ID, downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster("downfall:FaceTrader", downfall.monsters.FaceTrader.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new downfall.monsters.FaceTrader()
                 }));
@@ -1120,8 +1131,8 @@ public class downfallMod implements
         PACKAGE_GUARDIAN,
         PACKAGE_HEXAGHOST,
         PACKAGE_SNECKO,
-        PACKAGE_EXPANSION;
-
+        PACKAGE_EXPANSION,
+        PACKAGE_CHAMP;
         otherPackagePaths() {
         }
 

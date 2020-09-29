@@ -3,6 +3,7 @@ package downfall.patches;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
 import basemod.patches.whatmod.WhatMod;
+import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -51,7 +52,7 @@ public class EvilModeCharacterSelect {
             Iterator<CharacterOption> options = __instance.options.iterator();
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
-            CharacterOption[] villainOptions = new CharacterOption[4];
+            CharacterOption[] villainOptions = new CharacterOption[5];
 
             while (options.hasNext())
             {
@@ -88,14 +89,19 @@ public class EvilModeCharacterSelect {
                             }
                             villainOptions[2] = o;
                         }
+                        else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP)
+                        {
+                            villainOptions[3] = o;
+                        }
                         else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO)
                         {
                             if (UnlockTracker.isCharacterLocked("Snecko")){
                                 o.locked = true;
                                 ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                             }
-                            villainOptions[3] = o;
+                            villainOptions[4] = o;
                         }
+
                         else
                         {
                             isVillain = false;

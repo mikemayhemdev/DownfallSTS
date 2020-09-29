@@ -1,0 +1,203 @@
+{
+  "hexamod:AgainPower": {
+    "NAME": "Again!",
+    "DESCRIPTIONS": [
+      "Do not #yAdvance at the end of the next turn.",
+      "Do not #yAdvance at the end of the next #b",
+      " turns."
+    ]
+  },
+  "hexamod:ApocalypticArmorPower": {
+    "NAME": "Doomsday",
+    "DESCRIPTIONS": [
+      "The next time you #yIgnite the Inferno Ghostflame and all #b",
+      " Ghostflames are #yIgnited, end your turn and take an additional turn.",
+      "Whenever you #yIgnite the Inferno Ghostflame and at least #b"
+    ]
+  },
+  "hexamod:ApplyBurnAtTurnStartOncePower": {
+    "NAME": "Delayed Flame",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, apply #b",
+      " #ySoulburn to ALL enemies."
+    ]
+  },
+  "hexamod:BurnPerTurnPower": {
+    "NAME": "Melting Metal",
+    "DESCRIPTIONS": [
+      "Applies #b",
+      " #ySoulburn after the next time #ySoulburn is detonated on this enemy."
+    ]
+  },
+  "hexamod:BurnPower": {
+    "NAME": "Soulburn",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turns, loses #b",
+      " turn, loses #b",
+      " HP, then #ySoulburn is removed."
+    ]
+  },
+  "hexamod:BurnvenomPower": {
+    "NAME": "Wildfire Weapon",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, apply #b",
+      " #ySoulburn."
+    ]
+  },
+  "hexamod:CommonPostCombatPower": {
+    "NAME": "Sealed Reward: Card",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional cards.",
+      " additional card."
+    ]
+  },
+  "hexamod:CrispyPower": {
+    "NAME": "Extra Crispy",
+    "DESCRIPTIONS": [
+      "#ySoulburn applied is increased by #b",
+      "."
+    ]
+  },
+  "hexamod:EnhancePower": {
+    "NAME": "Intensity",
+    "DESCRIPTIONS": [
+      "Increase the amount of damage, #ySoulburn, and Block applied by Ghostflames when Ignited by #b",
+      "."
+    ]
+  },
+  "hexamod:EtherealRefundPower": {
+    "NAME": "Ethereal Refund",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yEthereal card this turn, gain ",
+      " ."
+    ]
+  },
+  "hexamod:FuturePower": {
+    "NAME": "Speedrun",
+    "DESCRIPTIONS": [
+      "Whenever you #yAdvance, gain #b",
+      " #yBlock."
+    ]
+  },
+  "hexamod:FutureUpgradePower": {
+    "NAME": "Sealed Reward: Upgrade",
+    "DESCRIPTIONS": [
+      "At the end of combat, #yUpgrade #b",
+      " random card in your deck.",
+      " random cards in your deck."
+    ]
+  },
+  "hexamod:GainStrengthThatGoesAwayPower": {
+    "NAME": "Here and Now",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract."
+    ]
+  },
+  "hexamod:GhostFlameBarrierPower": {
+    "NAME": "Ghostflame Barrier",
+    "DESCRIPTIONS": [
+      "When attacked, applies #b",
+      " #ySoulburn to the attacker."
+    ]
+  },
+  "hexamod:GiftsFromTheDeadPower": {
+    "NAME": "Ghostly Gifts",
+    "DESCRIPTIONS": [
+      "Whenever an #yEthereal card is #yExhausted, gain ",
+      " next turn."
+    ]
+  },
+  "hexamod:GiftsFromTheDeadPowerPlus": {
+    "NAME": "Ghostly Gifts+",
+    "DESCRIPTIONS": [
+      "Whenever an #yEthereal card is #yExhausted, draw ",
+      " cards",
+      " card",
+      " next turn."
+    ]
+  },
+  "hexamod:GoldPostCombatPower": {
+    "NAME": "Sealed Reward: Gold",
+    "DESCRIPTIONS": [
+      "Gold reward from this combat is increased by #b",
+      " ."
+    ]
+  },
+  "hexamod:HexalevelPower": {
+    "NAME": "Hexalevel",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yEnhance."
+    ]
+  },
+  "hexamod:LoseEnhanceInTurnsPower": {
+    "NAME": "Heated Up",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b",
+      "In #b",
+      " turns, lose #b",
+      " #yEnhance."
+    ]
+  },
+  "hexamod:ParanormalFormPower": {
+    "NAME": "Paranormal Form",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yEthereal card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "hexamod:PastPower": {
+    "NAME": "Devil's Dance",
+    "DESCRIPTIONS": [
+      "The first time you #yRetract each turn, gain ",
+      " and draw #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "hexamod:PotionPostCombatPower": {
+    "NAME": "Sealed Reward: Potion",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional Potions.",
+      " additional Potion."
+    ]
+  },
+  "hexamod:RadiantPower": {
+    "NAME": "Radiant Flame",
+    "DESCRIPTIONS": [
+      "Whenever a Ghostflame is #yIgnited, apply #b",
+      " #ySoulburn to a random enemy."
+    ]
+  },
+  "hexamod:SealPostCombatPower": {
+    "NAME": "Sealed Reward: Seal",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional #ySeal cards.",
+      " additional #ySeal card."
+    ]
+  },
+  "hexamod:TimeStopPower": {
+    "NAME": "Doom's Arrival",
+    "DESCRIPTIONS": [
+      "At the end of your turn, immediately start another turn. NL Energy and Block are maintained."
+    ]
+  },
+  "hexamod:VolcanoVisagePower": {
+    "NAME": "Volcanic Visage",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #ySoulburn to all enemies."
+    ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "Living Bomb",
+    "DESCRIPTIONS": [
+      "The next time this creature's #ySoulburn is detonated, it affects ALL enemies."
+    ]
+  }
+}

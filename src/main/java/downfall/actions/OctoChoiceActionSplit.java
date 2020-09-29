@@ -23,30 +23,3 @@ public class OctoChoiceActionSplit extends AbstractGameAction {
         actionType = ActionType.WAIT;
         funCard = card;
     }
-
-    @Override
-    public void update() {
-        for (OctoChoiceCard q : funCard.choiceList()) {
-            group.addToTop(q);
-        }
-        if (duration == Settings.ACTION_DUR_XFAST && !group.isEmpty()) {
-            pickCard = true;
-            CenterGridCardSelectScreen.centerGridSelect = true;
-            AbstractDungeon.gridSelectScreen.open(group, 1, (TEXT[2]), false);
-        } else if ((pickCard && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
-            OctoChoiceCard cardChoice = new OctoChoiceCard("null", "null", expansionContentMod.makeCardPath("AwakenDeath.png"), TEXT[1]);
-            if (pickCard && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                pickCard = false;
-                cardChoice = (OctoChoiceCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-                AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                CenterGridCardSelectScreen.centerGridSelect = false;
-            }
-            funCard.doChoiceStuff(cardChoice);
-
-            isDone = true;
-        } else if (group.isEmpty()) {
-            isDone = true;
-        }
-        tickDuration();
-    }
-}

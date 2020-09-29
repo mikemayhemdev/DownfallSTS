@@ -6,11 +6,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
+import downfall.util.OctopusCard;
 import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 import slimebound.actions.CommandAction;
-import slimebound.actions.OctoChoiceAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
@@ -18,7 +19,7 @@ import slimebound.patches.AbstractCardEnum;
 import java.util.ArrayList;
 
 
-public class SplitSpecialist extends AbstractSlimeboundCard {
+public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCard {
     public static String ID = "Slimebound:SplitSpecialist";
     public static String NAME;
     public static String DESCRIPTION;

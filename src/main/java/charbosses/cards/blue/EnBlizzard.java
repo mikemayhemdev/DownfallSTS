@@ -64,6 +64,7 @@ public class EnBlizzard extends AbstractBossCard {
         }
 
         if (frostCount > 0) {
+            intentMultiAmt = frostCount;
             this.baseDamage = frostCount * this.magicNumber;
             super.applyPowers();
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];

@@ -48,7 +48,7 @@ public class Colosseum_Evil extends AbstractImageEvent {
                 this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                 this.imageEventText.clearAllDialogs();
                 this.imageEventText.setDialogOption(OPTIONS[0]);
-                this.imageEventText.setDialogOption(OPTIONS[1]);  //TODO - re enable this when boss death is fixed // FIXED! and enabled
+                this.imageEventText.setDialogOption(OPTIONS[1]);
                 this.imageEventText.setDialogOption(OPTIONS[2]);
                 return;
             case INTRO:

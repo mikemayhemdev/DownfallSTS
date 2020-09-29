@@ -147,7 +147,6 @@ public abstract class AbstractBossDeckArchetype {
         //No Cursed Book - Nilry's Codex is probably bad for the boss, Necronomicon too powerful, so it'd have to be Enchridon every time
         //No Forgotten Altar, Bloody Altar doesn't do much
         //No Knowing Skull until a suite of colorless cards is made (maybe never)
-        //TODO - Nloth
         this.globalEventPoolAct2.add(new CBR_OldBeggar());
         this.globalEventPoolAct2.add(new CBR_PleadingVagrant());
         this.globalEventPoolAct2.add(new CBR_Colosseum());

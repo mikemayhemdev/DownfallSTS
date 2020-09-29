@@ -1,0 +1,70 @@
+{
+  "sneckomod:CheapStockPower": {
+    "NAME": "값싼 재고품",
+    "DESCRIPTIONS": [
+      "매턴 시작시, 손 안에 있는 가장 높은 비용의 #y다른 #y캐릭터 카드의 비용을 #b1 감소합니다.",
+      "매턴 시작시, 손 안에 있는 가장 높은 비용의 #y다른 #y캐릭터 카드의 비용을 #b1 #b",
+      " 번 감소합니다."
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "속이는 중",
+    "DESCRIPTIONS": [
+      "이번 턴, 효과에 무작위 숫자 효과가 있는 카드 한 장 선택하여 최대 효과를 발휘하게 합니다.",
+      "다음 #b",
+      " 차례, 효과에 무작위 숫자 효과가 있는 카드 한 장 선택하여 최대 효과를 발휘하게 합니다."
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "뒤죽박죽 카드 뽑기",
+    "DESCRIPTIONS": [
+      "다음에 뽑을 카드가 #y뒤엉키게 됩니다.",
+      "이번 턴에 처음 뽑을 카드 #b",
+      " 장 #y뒤엉키게 됩니다. (",
+      " 남음)"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "진흙방패",
+    "DESCRIPTIONS": [
+      "카드 한 장 #y뒤엉키게 하면, 다음 턴에 #y방어도 #b",
+      " 얻습니다."
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "구렁이 정신",
+    "DESCRIPTIONS": [
+      "#y다른 #y캐릭터 카드를 사용한다면, 카드 #b",
+      " 장 뽑습니다.",
+      " 장 뽑습니다."
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "끝없는 보급",
+    "DESCRIPTIONS": [
+      "매턴 시작시, 손에 무작위 #y다른 #y캐릭터 카드 #b",
+      " 장 추가하고 그 카드들을 #y뒤엉키게 합니다."
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "수수께끼 강화",
+    "DESCRIPTIONS": [
+      "전투가 끝난 뒤, #y강화된 #y수수께끼 카드 #b",
+      " 장 추가합니다.",
+      " 장 추가합니다."
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "무제한 도박",
+    "DESCRIPTIONS": [
+      "매턴 시작시, 휘발성과 소멸이 붙은 #y영혼의 #y도박+ 를 손 안으로 가져옵니다."
+    ]
+  },
+  "sneckomod:Transmogrifying": {
+    "NAME": "탈바꿈",
+    "DESCRIPTIONS": [
+      " 이 다른 유물 ",
+      " 로 탈바꿈 중입니다."
+    ]
+  }
+}

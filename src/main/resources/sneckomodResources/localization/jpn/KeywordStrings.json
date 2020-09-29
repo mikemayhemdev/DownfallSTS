@@ -1,0 +1,31 @@
+[
+  {
+    "PROPER_NAME": "Snekproof",
+    "NAMES": [
+      "snekproof"
+    ],
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled."
+  },
+  {
+    "PROPER_NAME": "Unknown",
+    "NAMES": [
+      "unknown"
+    ],
+    "DESCRIPTION": "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints."
+  },
+  {
+    "PROPER_NAME": "Muddle",
+    "NAMES": [
+      "muddle",
+      "muddled"
+    ],
+    "DESCRIPTION": "Muddling a card changes its cost to between 0 and 3."
+  },
+  {
+    "PROPER_NAME": "Offclass",
+    "NAMES": [
+      "offclass"
+    ],
+    "DESCRIPTION": "An Offclass card is any obtainable card from a class other than your own."
+  }
+]

@@ -3,7 +3,6 @@ package downfall.cards;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
-import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
+import downfall.util.OctopusCard;
 import downfall.downfallMod;
 import expansioncontent.cards.AbstractExpansionCard;
 import expansioncontent.expansionContentMod;
@@ -18,7 +18,7 @@ import sneckomod.actions.ChangeGoldAction;
 
 import java.util.ArrayList;
 
-public class KnowingSkullWish extends AbstractExpansionCard {
+public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCard {
 
     public final static String ID = makeID("KnowingSkullWish");
     public static final String[] NAMES = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("OctoChoiceCards")).NAMES;
