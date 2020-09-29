@@ -9,14 +9,13 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class StanceHelper {
 
     public static float globalX = 25F * Settings.scale;
     public static float globalY = 900F * Settings.scale;
 
-    private static Hitbox hitboxStance;
+    public static Hitbox hitboxStance;
     private static Hitbox hitboxTechnique;
     private static Hitbox hitboxFinisher;
 
@@ -25,7 +24,6 @@ public class StanceHelper {
         hitboxTechnique = new Hitbox(globalX, globalY - (100F * Settings.scale), 80 * Settings.scale, 80 * Settings.scale);
         hitboxFinisher = new Hitbox(globalX, globalY - (200F * Settings.scale), 80 * Settings.scale, 80 * Settings.scale);
     }
-
 
     public static void update() {
         hitboxStance.update();

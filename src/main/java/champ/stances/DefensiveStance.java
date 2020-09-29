@@ -20,7 +20,7 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public String getKeywordString() {
-        return "champ:Defensive";
+        return "champ:defensive";
     }
 
     @Override

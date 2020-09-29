@@ -24,7 +24,7 @@ public class UltimateStance extends AbstractChampStance {
 
     @Override
     public String getKeywordString() {
-        return "champ:Ultimate";
+        return "champ:ultimate";
     }
 
     public int timeLeft = 2;

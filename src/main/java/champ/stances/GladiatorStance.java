@@ -20,7 +20,7 @@ public class GladiatorStance extends AbstractChampStance {
 
     @Override
     public String getKeywordString() {
-        return "champ:Gladiator";
+        return "champ:gladiator";
     }
 
     @Override

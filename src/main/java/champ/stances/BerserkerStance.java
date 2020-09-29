@@ -23,7 +23,7 @@ public class BerserkerStance extends AbstractChampStance {
 
     @Override
     public String getKeywordString() {
-        return "champ:Berserker";
+        return "champ:berserker";
     }
 
     @Override
