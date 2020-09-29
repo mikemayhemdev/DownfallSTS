@@ -104,12 +104,53 @@ public class StanceHelper {
                             getStanceTechnique());
 
                     TipHelperChamp2.render(sb);
+                    if (hitboxTechnique.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                        String t = "ERROR";
+                        String d = "ERROR2";
+                        if (AbstractDungeon.player.stance instanceof DefensiveStance) {
+                            t = BaseMod.getKeywordTitle("champ:counterstrike");
+                            d = BaseMod.getKeywordDescription("champ:counterstrike");
+                        } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
+                            t = BaseMod.getKeywordTitle("champ:resolve");
+                            d = BaseMod.getKeywordDescription("champ:resolve");
+                        }
+                        if (!t.equals("ERROR")) {
+                            if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
+                                TipHelper.renderGenericTip(
+                                        (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                        t,
+                                        d);
+                            } else {
+                                TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                        t, d);
+                            }
+                        }
+                    }
 
                     TipHelperChamp3.renderGenericTip(hitboxFinisher.x, hitboxFinisher.y,
                             ChampChar.characterStrings.TEXT[9],
                             getStanceFinisher());
 
                     TipHelperChamp3.render(sb);
+                    if (hitboxFinisher.hovered && AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                        String t = "ERROR";
+                        String d = "ERROR2";
+                        if (AbstractDungeon.player.stance instanceof BerserkerStance) {
+                            t = BaseMod.getKeywordTitle("champ:resolve");
+                            d = BaseMod.getKeywordDescription("champ:resolve");
+                        }
+                        if (!t.equals("ERROR")) {
+                            if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
+                                TipHelper.renderGenericTip(
+                                        (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                        t,
+                                        d);
+                            } else {
+                                TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                        t, d);
+                            }
+                        }
+                    }
                 }
             }
     }
