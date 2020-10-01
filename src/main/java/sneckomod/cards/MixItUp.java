@@ -23,7 +23,7 @@ public class MixItUp extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(CardTags.HEALING);
-        tags.add(SneckoMod.RNG);
+       // tags.add(SneckoMod.RNG);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
