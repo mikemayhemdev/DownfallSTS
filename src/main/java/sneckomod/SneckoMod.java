@@ -329,7 +329,7 @@ public class SneckoMod implements
         BaseMod.addEvent(new AddEventParams.Builder(D8.ID, sneckomod.events.D8.class) //Event ID//
                 //Event Character//
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
-                .eventType(EventUtils.EventType.SHRINE)
+                .eventType(EventUtils.EventType.ONE_TIME)
                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSnecko.ID, BackToBasicsSnecko.class) //Event ID//
