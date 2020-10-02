@@ -79,7 +79,17 @@ public abstract class AbstractBossDeckArchetype {
 
     public abstract void initializeBonusRelic();
 
+    public boolean looped = false;
+    public int turn = 0;
 
+    public ArrayList<AbstractCard> getThisTurnCards(){
+        return new ArrayList<>();
+    }
+
+    public void addToList(ArrayList<AbstractCard> c, AbstractCard q, boolean upgraded) {
+        if (upgraded) q.upgrade();
+        c.add(q);
+    }
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
         this.ID = id;
