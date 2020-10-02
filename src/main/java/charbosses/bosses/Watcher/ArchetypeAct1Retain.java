@@ -74,11 +74,11 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_CloakClasp());
-        addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_Lantern());
-        addRelic(new CBR_UpgradeShrine());
         addRelic(new CBR_IceCream());
+        addRelic(new CBR_CloakClasp());
+        addRelic(new CBR_Lantern());
+        //addRelic(new CBR_BagOfPreparation());
+        //addRelic(new CBR_UpgradeShrine());
 
         /////   CARDS   /////
         boolean extraUpgrades = (AbstractDungeon.ascensionLevel >= 4);
