@@ -39,41 +39,60 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_DreamCatcher());
-        addRelic(new CBR_Lantern());
-        addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
-        addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
-        addRelic(new CBR_WeMeetAgain());
         addRelic(new CBR_BagOfPreparation());
+        addRelic(new CBR_Lantern());
+       // addRelic(new CBR_DreamCatcher());
+       // addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
+       // addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
+       // addRelic(new CBR_WeMeetAgain());
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
 
-        addToDeck(new EnStrikeGreen());
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnDefendGreen());
+        //Turn 1
         addToDeck(new EnDash());
         addToDeck(new EnNeutralize());
+        addToDeck(new EnAccuracy());  //Removed
 
         //Turn 2
         addToDeck(new EnFlyingKnee(), true);
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnAccuracy());
+        addToDeck(new EnCloakAndDagger(), true);
+        addToDeck(new EnDefendGreen());  //Not played here
 
         //Turn 3
-        addToDeck(new EnCloakAndDagger(), true);
         addToDeck(new EnStrikeGreen());
         addToDeck(new EnDefendGreen());
+        addToDeck(new EnSurvivor(), extraUpgrades);
 
         //Turn 4
-        addToDeck(new EnStrikeGreen(), extraUpgrades);
         addToDeck(new EnBladeDance(), extraUpgrades);
         addToDeck(new EnSuckerPunch());
+        addToDeck(new EnStrikeGreen(), extraUpgrades);  //Not played here
 
         //Turn 5
-        addToDeck(new EnInfiniteBlades());
-        addToDeck(new EnDefendGreen());
+        addToDeck(new EnInfiniteBlades());  //Removed
+        addToDeck(new EnAfterImage());  //Removed
+        addToDeck(new EnDefendGreen());  //Not played here
+
+        //INFINITE LOOP
+        addToDeck(new EnNeutralize());
+        addToDeck(new EnBladeDance(), extraUpgrades);
         addToDeck(new EnSurvivor(), extraUpgrades);
+
+        addToDeck(new EnDash());
+        addToDeck(new EnStrikeGreen());  //Not played here
+        addToDeck(new EnDefendGreen());  //Not played here
+
+        addToDeck(new EnFlyingKnee(), true);
+        addToDeck(new EnCloakAndDagger(), true);
+        addToDeck(new EnDefendGreen());  //Not played here
+
+        addToDeck(new EnSuckerPunch());
+        addToDeck(new EnStrikeGreen(), extraUpgrades);
+        addToDeck(new EnDefendGreen());
+
+
+
 
     }
 
