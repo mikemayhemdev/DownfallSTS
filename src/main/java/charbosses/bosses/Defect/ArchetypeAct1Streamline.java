@@ -47,28 +47,62 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnZap(), false);
         addToDeck(new EnDefendBlue(), false);
-        addToDeck(new EnDualcast(), false);
+        addToDeck(new EnDualcast(), false); //not used
+        //1 Lightning
 
         //Turn 2
         addToDeck(new EnColdSnap(), extraUpgrades);
         addToDeck(new EnLeap(), true);
-        addToDeck(new EnStrikeBlue(), false);
+        addToDeck(new EnStrikeBlue(), false); //not used
+        //1 Lightning 1 Frost
 
         //Turn 3
         addToDeck(new EnBallLightning(), true);
-        addToDeck(new EnDefendBlue(), false);
-        addToDeck(new EnDefendBlue(), extraUpgrades);
+        addToDeck(new EnChargeBattery(), extraUpgrades);
+        addToDeck(new EnStrikeBlue(), false);
+        //Lightning Frost Lightning
 
         //Turn 4
-        addToDeck(new EnChargeBattery(), extraUpgrades);
-        addToDeck(new EnRipAndTear(), false);
-        addToDeck(new EnStrikeBlue(), false);
-
-        //Turn 5
         addToDeck(new EnRebound(), false);
         addToDeck(new EnStreamline(), true);
-        addToDeck(new EnStrikeBlue(), false);
+        addToDeck(new EnDefendBlue(), extraUpgrades);
 
+        //Turn 5
+        addToDeck(new EnStreamline(), true);  //1-cost
+        addToDeck(new EnStrikeBlue(), false);
+        addToDeck(new EnRipAndTear(), false);
+        //Lightning Frost Lightning
+
+        //INFINITE LOOP
+
+        addToDeck(new EnDualcast(), false);  //Evokes Lightning twice
+        addToDeck(new EnBallLightning(), true);
+        addToDeck(new EnDefendBlue(), false);
+        //Frost Lightning Lightning
+
+        //Turn 2
+        addToDeck(new EnDefendBlue(), extraUpgrades);
+        addToDeck(new EnColdSnap(), extraUpgrades);  //Evokes Frost
+        addToDeck(new EnStrikeBlue(), false); //not used
+        //Lightning Lightning Frost
+
+        //Turn 3
+        addToDeck(new EnStreamline(), true);
+        addToDeck(new EnChargeBattery(), extraUpgrades);
+        addToDeck(new EnStrikeBlue(), false);
+        //Lightning Frost Lightning
+
+        //Turn 4
+        addToDeck(new EnRebound(), false);
+        addToDeck(new EnLeap(), true);
+        addToDeck(new EnZap(), false); //not used
+        //Lightning Frost Lightning
+
+        //Turn 5
+        addToDeck(new EnLeap(), true);
+        addToDeck(new EnRipAndTear(), false);
+        addToDeck(new EnStrikeBlue(), false); //not used
+        //Lightning Frost Lightning
 
     }
 

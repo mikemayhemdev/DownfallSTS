@@ -74,9 +74,9 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_IceCream());
         addRelic(new CBR_CloakClasp());
-        addRelic(new CBR_Lantern());
+        //addRelic(new CBR_IceCream());
+        //addRelic(new CBR_Lantern());
         //addRelic(new CBR_BagOfPreparation());
         //addRelic(new CBR_UpgradeShrine());
 
@@ -84,36 +84,64 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
         boolean extraUpgrades = (AbstractDungeon.ascensionLevel >= 4);
        // SlimeboundMod.logger.info("EXTRA UPGRADES: " + extraUpgrades);
 
+
         //Turn 1
-        addToDeck(new EnStrikePurple(), true);
-        addToDeck(new EnVigilance(), false);
-        addToDeck(new EnPerseverance(), true);
-        addToDeck(new EnWindmillStrike(), false);
-        addToDeck(new EnStrikePurple(), extraUpgrades);
+        addToDeck(new EnEstablishment(), true);  //removed
+        addToDeck(new EnTalkToTheHand(), extraUpgrades); //removed
+        addToDeck(new EnProtect(), true);
 
         //Turn 2
-        addToDeck(new EnSandsOfTime(), false);
-        addToDeck(new EnFlyingSleeves(), false);
+        //Protect Retained - 1 cost
         addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnSashWhip(), extraUpgrades);
+        addToDeck(new EnWindmillStrike(), false);  //not used
 
         //Turn 3
+        //Protect Retained 0 cost - use this turn
+        //Windmill Retainde 1 cost
+        addToDeck(new EnVigilance(), false);
+        addToDeck(new EnSandsOfTime(), false);  //not used
+        //TODO - Clumsy  //not used  //removed
+
+        //Turn 4
+        //Sands Retained 2-cost
+        //Windmill Retained 0-cost - use this turn
+        addToDeck(new EnDefendPurple(), true);
         addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnTalkToTheHand(), extraUpgrades);
+        addToDeck(new EnFlyingSleeves(), extraUpgrades);  //not used
+
+
+        //Turn 5
+        //Sands Retained 0-cost - use this turn
+        //Flying Sleeves Retained 0-cost - use this turn
+        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnStrikePurple(), false);  //not used
+
+       //INFINITE LOOP
+
+        //Turn 1
+        addToDeck(new EnProtect(), true);
+        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnSashWhip(), extraUpgrades);
+
+        //Turn 2
+        addToDeck(new EnWindmillStrike(), false);
+        addToDeck(new EnDefendPurple(), false);
+        addToDeck(new EnDefendPurple(), false);
+
+        //Turn 3
+        addToDeck(new EnVigilance(), false);
+        addToDeck(new EnSandsOfTime(), false);
         addToDeck(new EnStrikePurple(), false);
 
         //Turn 4
-        addToDeck(new EnSashWhip(), extraUpgrades);
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnProtect(), true);
+        addToDeck(new EnDefendPurple(), true);
+        addToDeck(new EnStrikePurple(), false);
+        addToDeck(new EnFlyingSleeves(), extraUpgrades);
+
 
         //Turn 5
-        addToDeck(new EnFlyingSleeves(), false);
-        addToDeck(new EnEstablishment(), true);
-        addToDeck(new EnDefendPurple(), false);
-
-
-
-
     }
 
     @Override
