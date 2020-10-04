@@ -5,7 +5,10 @@ import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.green.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Serpent;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
 
@@ -59,60 +62,85 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
         //addRelic(new CBR_Boot());
         addRelic(new CBR_HornCleat());
         addRelic(new CBR_Orichalcum());
+    }
 
-        /////   CARDS   /////
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
-
-        //Turn 1
-        addToDeck(new EnFlyingKnee(), extraUpgrades);
-        addToDeck(new EnStrikeGreen());
-        addToDeck(new EnSlice());  //Shuriken Proc
-
-        //Turn 2
-        addToDeck(new EnNeutralize(), true);
-        addToDeck(new EnPredator());
-        addToDeck(new EnStrikeGreen(), true);    //Shuriken Proc
-
-        //Turn 3
-        addToDeck(new EnSlice(), extraUpgrades);
-        addToDeck(new EnInfiniteBlades());  //removed
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnDoubt());
-        addToDeck(new EnEndlessAgony());  //removed    //Shuriken Proc
-
-        //Turn 4
-        addToDeck(new EnAfterImage());  //removed
-        addToDeck(new EnCloakAndDagger(), true);
-        addToDeck(new EnFinisher(), true);     //Shuriken Proc   x4 hits
-
-        //Turn 5
-        addToDeck(new EnThousandCuts());  //removed
-        addToDeck(new EnLegSweep(), extraUpgrades);
-        addToDeck(new EnEndlessAgony());  //removed     //Shuriken Proc
-
-        //Turn 6
-        addToDeck(new EnEndlessAgony());  //removed
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnBladeDance(), true);     //Shuriken Proc x2
-
-        //INFINITE LOOP
-        addToDeck(new EnNeutralize(), true);
-        addToDeck(new EnPredator());
-        addToDeck(new EnSlice());          //Shuriken Proc
-
-        addToDeck(new EnFlyingKnee(), extraUpgrades);
-        addToDeck(new EnCloakAndDagger(), true);
-        addToDeck(new EnDoubt());
-        addToDeck(new EnSlice(), extraUpgrades);
-        addToDeck(new EnDefendGreen());   //Shuriken Proc x2
-
-        addToDeck(new EnBladeDance(), true);     //Shuriken Proc
-        addToDeck(new EnStrikeGreen());
-        addToDeck(new EnFinisher(), true);   //x5, Shuriken Proc x2
-
-        addToDeck(new EnLegSweep(), extraUpgrades);
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnStrikeGreen(), true);
+        if (looped) {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnNeutralize(), true);
+                    addToList(cardsList, new EnPredator());
+                    addToList(cardsList, new EnSlice());          //Shuriken Proc
+                    break;
+                case 1:
+                    addToList(cardsList, new EnFlyingKnee(), extraUpgrades);
+                    addToList(cardsList, new EnCloakAndDagger(), true);
+                    addToList(cardsList, new EnDoubt());
+                    addToList(cardsList, new EnSlice(), extraUpgrades);
+                    addToList(cardsList, new EnDefendGreen());   //Shuriken Proc x2
+                    break;
+                case 2:
+                    addToList(cardsList, new EnBladeDance(), true);     //Shuriken Proc
+                    addToList(cardsList, new EnStrikeGreen());
+                    addToList(cardsList, new EnFinisher(), true);   //x5, Shuriken Proc x2
+                    break;
+                case 3:
+                    addToList(cardsList, new EnLegSweep(), extraUpgrades);
+                    addToList(cardsList, new EnDefendGreen());
+                    addToList(cardsList, new EnStrikeGreen(), true);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    //Turn 1
+                    addToList(cardsList, new EnFlyingKnee(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeGreen());
+                    addToList(cardsList, new EnSlice());  //Shuriken Proc
+                    break;
+                case 1:
+                    //Turn 2
+                    addToList(cardsList, new EnNeutralize(), true);
+                    addToList(cardsList, new EnPredator());
+                    addToList(cardsList, new EnStrikeGreen(), true);    //Shuriken Proc
+                    break;
+                case 2:
+                    //Turn 3
+                    addToList(cardsList, new EnSlice(), extraUpgrades);
+                    addToList(cardsList, new EnInfiniteBlades());  //removed
+                    addToList(cardsList, new EnDefendGreen());
+                    addToList(cardsList, new EnDoubt());
+                    addToList(cardsList, new EnEndlessAgony());  //removed    //Shuriken Proc
+                    break;
+                case 3:
+                    //Turn 4
+                    addToList(cardsList, new EnAfterImage());  //removed
+                    addToList(cardsList, new EnCloakAndDagger(), true);
+                    addToList(cardsList, new EnFinisher(), true);     //Shuriken Proc   x4 hits
+                    break;
+                case 4:
+                    //Turn 5
+                    addToList(cardsList, new EnThousandCuts());  //removed
+                    addToList(cardsList, new EnLegSweep(), extraUpgrades);
+                    addToList(cardsList, new EnEndlessAgony());  //removed     //Shuriken Proc
+                    break;
+                case 5:
+                    //Turn 6
+                    addToList(cardsList, new EnEndlessAgony());  //removed
+                    addToList(cardsList, new EnDefendGreen());
+                    addToList(cardsList, new EnBladeDance(), true);     //Shuriken Proc x2
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) looped = true;
+        else if (turn > 3 && looped) {
+            turn = 0;
+        }
+        return cardsList;
     }
 
     @Override

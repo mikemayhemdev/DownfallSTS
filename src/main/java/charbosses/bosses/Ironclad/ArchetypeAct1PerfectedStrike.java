@@ -44,52 +44,6 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
         // addRelic(new CBR_WarPaint());   //Upgrade 2 Defends
         // addRelic(new CBR_Orichalcum());
         // addRelic(new CBR_Serpent());   //Money used to buy Orichalcum
-
-        /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnBash(), extraUpgrades);
-        addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnDoubt(), false);
-
-        //Turn 2
-        addToDeck(new EnMetallicize(), extraUpgrades); //Removed
-        addToDeck(new EnWildStrike(), true);  //TODO - Don't add the Wound
-        addToDeck(new EnStrikeRed(), false);
-        //addToDeck(new EnDefendRed(), false);
-
-        //Turn 3
-        addToDeck(new EnPerfectedStrike(), true);  //6 strikes in deck
-        addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnTwinStrike(), false);  //Not before Loop
-
-        //Turn 4
-        //TODO - True Grit to Exhaust the Wound from Wild Strike
-        addToDeck(new EnGhostlyArmor(), true);
-        addToDeck(new EnWound(), false);
-
-        //Turn 5
-        addToDeck(new EnInflame(), extraUpgrades); //Removed
-        //TODO - Pummel  //Removed
-        addToDeck(new EnStrikeRed(), false); //Not before Loop
-
-        //INFINITE LOOP
-        addToDeck(new EnWildStrike(), true);  //TODO - Don't add the Wound
-        addToDeck(new EnGhostlyArmor(), true);
-        addToDeck(new EnDoubt(), false);
-
-        addToDeck(new EnTwinStrike(), false);
-        //TODO - True Grit to Exhaust the Wound from Wild Strike
-        addToDeck(new EnWound(), false);
-
-        addToDeck(new EnBash(), extraUpgrades);  //Never uses during loop
-        addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnDefendRed(), true);  //Never uses during loop
-
-        addToDeck(new EnPerfectedStrike(), true);
-        addToDeck(new EnStrikeRed(), false);  //Never uses during loop
-        addToDeck(new EnStrikeRed(), false);  //Never uses during loop
-
-
     }
 
     @Override
@@ -149,7 +103,10 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
             }
         }
         turn++;
-        if (turn > 3 && !looped) looped = true;
+        if (turn > 4 && !looped) looped = true;
+        else if (turn > 3 && looped) {
+            turn = 0;
+        }
         return cardsList;
     }
 

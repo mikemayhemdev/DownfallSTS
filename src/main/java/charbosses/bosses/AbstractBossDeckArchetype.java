@@ -7,7 +7,6 @@ import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
@@ -82,13 +81,17 @@ public abstract class AbstractBossDeckArchetype {
     public boolean looped = false;
     public int turn = 0;
 
-    public ArrayList<AbstractCard> getThisTurnCards(){
+    public ArrayList<AbstractCard> getThisTurnCards() {
         return new ArrayList<>();
     }
 
     public void addToList(ArrayList<AbstractCard> c, AbstractCard q, boolean upgraded) {
         if (upgraded) q.upgrade();
         c.add(q);
+    }
+
+    public void addToList(ArrayList<AbstractCard> c, AbstractCard q) {
+        addToList(c, q, false);
     }
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {

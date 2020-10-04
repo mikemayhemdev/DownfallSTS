@@ -1,12 +1,18 @@
 package charbosses.bosses.Silent;
 
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.green.*;
+import charbosses.cards.red.*;
+import charbosses.cards.status.EnWound;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Cleric;
 import charbosses.relics.EventRelics.CBR_UpgradeShrine;
 import charbosses.relics.EventRelics.CBR_WeMeetAgain;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
 
@@ -49,52 +55,95 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
 
-        //Turn 1
-        addToDeck(new EnDash());
-        addToDeck(new EnNeutralize());
-        addToDeck(new EnAccuracy());  //Removed
 
-        //Turn 2
-        addToDeck(new EnFlyingKnee(), true);
-        addToDeck(new EnCloakAndDagger(), true);
-        addToDeck(new EnDefendGreen());  //Not played here
 
-        //Turn 3
-        addToDeck(new EnStrikeGreen());
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnSurvivor(), extraUpgrades);
 
-        //Turn 4
-        addToDeck(new EnBladeDance(), extraUpgrades);
-        addToDeck(new EnSuckerPunch());
-        addToDeck(new EnStrikeGreen(), extraUpgrades);  //Not played here
 
-        //Turn 5
-        addToDeck(new EnInfiniteBlades());  //Removed
-        addToDeck(new EnAfterImage());  //Removed
-        addToDeck(new EnDefendGreen());  //Not played here
+
+
+
+
+
 
         //INFINITE LOOP
-        addToDeck(new EnNeutralize());
-        addToDeck(new EnBladeDance(), extraUpgrades);
-        addToDeck(new EnSurvivor(), extraUpgrades);
 
-        addToDeck(new EnDash());
-        addToDeck(new EnStrikeGreen());  //Not played here
-        addToDeck(new EnDefendGreen());  //Not played here
 
-        addToDeck(new EnFlyingKnee(), true);
-        addToDeck(new EnCloakAndDagger(), true);
-        addToDeck(new EnDefendGreen());  //Not played here
 
-        addToDeck(new EnSuckerPunch());
-        addToDeck(new EnStrikeGreen(), extraUpgrades);
-        addToDeck(new EnDefendGreen());
 
 
 
 
     }
+
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnNeutralize());
+                    addToList(cardsList, new EnBladeDance(), extraUpgrades);
+                    addToList(cardsList, new EnSurvivor(), extraUpgrades);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnDash());
+                    addToList(cardsList, new EnStrikeGreen());  //Not played here
+                    addToList(cardsList, new EnDefendGreen());  //Not played here
+                    break;
+                case 2:
+                    addToList(cardsList, new EnFlyingKnee(), true);
+                    addToList(cardsList, new EnCloakAndDagger(), true);
+                    addToList(cardsList, new EnDefendGreen());  //Not played here
+                    break;
+                case 3:
+                    addToList(cardsList, new EnSuckerPunch());
+                    addToList(cardsList, new EnStrikeGreen(), extraUpgrades);
+                    addToList(cardsList, new EnDefendGreen());
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    //Turn 1
+                    addToList(cardsList, new EnDash());
+                    addToList(cardsList, new EnNeutralize());
+                    addToList(cardsList, new EnAccuracy());  //Removed
+                    break;
+                case 1:
+                    //Turn 2
+                    addToList(cardsList, new EnFlyingKnee(), true);
+                    addToList(cardsList, new EnCloakAndDagger(), true);
+                    addToList(cardsList, new EnDefendGreen());  //Not played here
+                    break;
+                case 2:
+                    //Turn 3
+                    addToList(cardsList, new EnStrikeGreen());
+                    addToList(cardsList, new EnDefendGreen());
+                    addToList(cardsList, new EnSurvivor(), extraUpgrades);
+                    break;
+                case 3:
+                    //Turn 4
+                    addToList(cardsList, new EnBladeDance(), extraUpgrades);
+                    addToList(cardsList, new EnSuckerPunch());
+                    addToList(cardsList, new EnStrikeGreen(), extraUpgrades);  //Not played here
+                    break;
+                case 4:
+                    //Turn 5
+                    addToList(cardsList, new EnInfiniteBlades());  //Removed
+                    addToList(cardsList, new EnAfterImage());  //Removed
+                    addToList(cardsList, new EnDefendGreen());  //Not played here
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 4 && !looped) looped = true;
+        else if (turn > 3 && looped) {
+            turn = 0;
+        }
+        return cardsList;
+    }
+
 
     @Override
     public void initializeBonusRelic() {
