@@ -51,49 +51,72 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
 
         addRelic(new CBR_NeowsBlessing());
 
-        addRelic(new CBR_LetterOpener());
+        //addRelic(new CBR_LetterOpener());
         addRelic(new CBR_Shuriken());
-        addRelic(new CBR_Serpent()); // Gold used to buy cards
+        addRelic(new CBR_Kunai());
+        //addRelic(new CBR_Serpent()); // Gold used to buy cards
 //        addRelic(new CBR_Ectoplasm());
-        addRelic(new CBR_Boot());
+        //addRelic(new CBR_Boot());
         addRelic(new CBR_HornCleat());
+        addRelic(new CBR_Orichalcum());
 
         /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+
+        //Turn 1
         addToDeck(new EnFlyingKnee(), extraUpgrades);
         addToDeck(new EnStrikeGreen());
-        addToDeck(new EnSlice());
+        addToDeck(new EnSlice());  //Shuriken Proc
 
         //Turn 2
         addToDeck(new EnNeutralize(), true);
         addToDeck(new EnPredator());
-        addToDeck(new EnOutmaneuver());
+        addToDeck(new EnStrikeGreen(), true);    //Shuriken Proc
 
         //Turn 3
         addToDeck(new EnSlice(), extraUpgrades);
-        addToDeck(new EnInfiniteBlades());
+        addToDeck(new EnInfiniteBlades());  //removed
         addToDeck(new EnDefendGreen());
         addToDeck(new EnDoubt());
-        addToDeck(new EnDefendGreen());
+        addToDeck(new EnEndlessAgony());  //removed    //Shuriken Proc
 
         //Turn 4
-        addToDeck(new EnAfterImage());
+        addToDeck(new EnAfterImage());  //removed
         addToDeck(new EnCloakAndDagger(), true);
-        addToDeck(new EnFinisher(), true);
+        addToDeck(new EnFinisher(), true);     //Shuriken Proc   x4 hits
 
         //Turn 5
-        addToDeck(new EnThousandCuts());
+        addToDeck(new EnThousandCuts());  //removed
         addToDeck(new EnLegSweep(), extraUpgrades);
-        addToDeck(new EnEndlessAgony());
+        addToDeck(new EnEndlessAgony());  //removed     //Shuriken Proc
 
         //Turn 6
-        addToDeck(new EnDefendGreen(), true);
+        addToDeck(new EnEndlessAgony());  //removed
         addToDeck(new EnDefendGreen());
-        addToDeck(new EnBladeDance(), true);
+        addToDeck(new EnBladeDance(), true);     //Shuriken Proc x2
+
+        //INFINITE LOOP
+        addToDeck(new EnNeutralize(), true);
+        addToDeck(new EnPredator());
+        addToDeck(new EnSlice());          //Shuriken Proc
+
+        addToDeck(new EnFlyingKnee(), extraUpgrades);
+        addToDeck(new EnCloakAndDagger(), true);
+        addToDeck(new EnDoubt());
+        addToDeck(new EnSlice(), extraUpgrades);
+        addToDeck(new EnDefendGreen());   //Shuriken Proc x2
+
+        addToDeck(new EnBladeDance(), true);     //Shuriken Proc
+        addToDeck(new EnStrikeGreen());
+        addToDeck(new EnFinisher(), true);   //x5, Shuriken Proc x2
+
+        addToDeck(new EnLegSweep(), extraUpgrades);
+        addToDeck(new EnDefendGreen());
+        addToDeck(new EnStrikeGreen(), true);
     }
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_BlueCandle());
+        addRelic(new CBR_CaptainsWheel());
     }
 }

@@ -1,5 +1,6 @@
 package charbosses.bosses.Ironclad;
 
+import charbosses.cards.colorless.EnBite;
 import charbosses.cards.colorless.EnJAX;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnRegret;
@@ -43,18 +44,18 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
 
         addRelic(new CBR_Girya(2));
-        addRelic(new CBR_Ginger());
-        addRelic(new CBR_BigFish());
-        addRelic(new CBR_CaptainsWheel());  //Extra relic from Big Fish
+        addRelic(new CBR_CaptainsWheel());
         addRelic(new CBR_RedSkull());
         addRelic(new CBR_Torii());
-        addRelic(new CBR_Augmenter(1));
+        addRelic(new CBR_Lantern());
 
         /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnInflame(), true);
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+
+        //Turn 1
+        addToDeck(new EnInflame(), true); // removed
         addToDeck(new EnArmaments(), true);
-        addToDeck(new EnDefendRed(), false);
+        addToDeck(new EnDefendRed(), false); // now upgraded
 
         //Turn 2
         addToDeck(new EnTwinStrike(), false);
@@ -64,7 +65,7 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
         //Turn 3
         addToDeck(new EnFlameBarrier(), false);
         addToDeck(new EnJAX(), extraUpgrades);
-        addToDeck(new EnStrikeRed(), false);
+        addToDeck(new EnBite(), false);
 
         //Turn 4
         addToDeck(new EnHeavyBlade(), false);
@@ -73,19 +74,43 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
 
         //Turn 5
         addToDeck(new EnBash(), false);
-        addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnStrikeRed(), false);
+        addToDeck(new EnBite(), false);
+        addToDeck(new EnBite(), false);
 
         //Turn 6
-        addToDeck(new EnDemonForm(), extraUpgrades);
-        addToDeck(new EnSeeingRed(), false);
+        addToDeck(new EnDemonForm(), extraUpgrades); // removed
+        addToDeck(new EnSeeingRed(), false); // removed
         addToDeck(new EnClothesline(), true);
+
+        //INFINITE LOOP
+
+        addToDeck(new EnJAX(), extraUpgrades);
+        addToDeck(new EnClothesline(), true);
+        addToDeck(new EnDefendRed(), false);
+
+        addToDeck(new EnFlameBarrier(), false);
+        addToDeck(new EnArmaments(), true);
+        addToDeck(new EnRegret(), false);
+
+        addToDeck(new EnIronWave(), extraUpgrades);
+        addToDeck(new EnBite(), false);
+        addToDeck(new EnBash(), false);
+
+        addToDeck(new EnTwinStrike(), false);
+        addToDeck(new EnIronWave(), true);
+        addToDeck(new EnBite(), false);
+
+        addToDeck(new EnHeavyBlade(), false);
+        addToDeck(new EnDefendRed(), false); // upgraded from armaments
+        addToDeck(new EnBite(), false);
+
+
 
 
     }
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Shuriken());
+        addRelic(new CBR_Ginger());
     }
 }
