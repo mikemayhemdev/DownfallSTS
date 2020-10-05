@@ -57,8 +57,8 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                 abstractPlayer.masterDeck.group.removeIf(removeList::contains);
                 addToTop(new VFXAction(new BrokenSealEffect()));
             }
-            realUse(abstractPlayer, abstractMonster);
         }
+        realUse(abstractPlayer, abstractMonster);
     }
 
     public static boolean playedAll(ArrayList<String> sList) {
