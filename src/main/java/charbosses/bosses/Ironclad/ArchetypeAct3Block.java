@@ -64,6 +64,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        /*
         addToDeck(new EnMetallicize(), extraUpgrades);
         addToDeck(new EnIronWave(), true);
         addToDeck(new EnWrithe(), true);
@@ -97,6 +98,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         addToDeck(new EnBarricade(), extraUpgrades);
         addToDeck(new EnGhostlyArmor(), false);
         addToDeck(new EnDefendRed(), true);
+        */
     }
 
 

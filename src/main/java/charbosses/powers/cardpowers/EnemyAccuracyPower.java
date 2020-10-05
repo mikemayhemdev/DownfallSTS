@@ -57,6 +57,7 @@ public class EnemyAccuracyPower extends AbstractPower {
                 c.baseDamage = 4 + this.amount;
             }
         }
+        /*
         for (AbstractCard c : AbstractCharBoss.boss.drawPile.group) {
             if (c instanceof EnShiv) {
                 if (!c.upgraded) {
@@ -93,6 +94,7 @@ public class EnemyAccuracyPower extends AbstractPower {
                 c.baseDamage = 4 + this.amount;
             }
         }
+        */
     }
 
     @Override

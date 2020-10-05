@@ -1,13 +1,8 @@
 package charbosses.bosses.Defect;
 
-import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
-import charbosses.cards.anticards.Debug;
-import charbosses.cards.blue.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Colosseum;
 import charbosses.relics.EventRelics.CBR_ScrapOoze;
-import charbosses.relics.EventRelics.CBR_WheelOfChange;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
@@ -64,6 +59,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         //Turn 1
+        /*
 
         addToDeck(new EnBallLightning(), false);
         addToDeck(new EnChill(), true);
@@ -98,8 +94,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
         addToDeck(new EnCoreSurge(), false);
         addToDeck(new EnBiasedCognition(), extraUpgrades);
         addToDeck(new EnDefendBlue(), false);
-
-
+    */
 
 
     }

@@ -86,6 +86,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
+        /*
         //Turn 1
         addToDeck(new EnLikeWater(), false);
         addToDeck(new EnStrikePurple(), false);
@@ -121,7 +122,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         c.isDamageModified = false;
         addToDeck(c, true);
 
-
+        */
     }
 
     @Override

@@ -53,72 +53,72 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         if (looped) {
             switch (turn) {
                 case 0:
-                    addToDeck(new EnDualcast(), false);  //Evokes Lightning twice
-                    addToDeck(new EnBallLightning(), true);
-                    addToDeck(new EnDefendBlue(), false);
+                    addToList(cardsList, new EnDualcast(), false);  //Evokes Lightning twice
+                    addToList(cardsList, new EnBallLightning(), true);
+                    addToList(cardsList, new EnDefendBlue(), false);
                     //Frost Lightning Lightning
                     break;
                 case 1:
                     //Turn 2
-                    addToDeck(new EnDefendBlue(), extraUpgrades);
-                    addToDeck(new EnColdSnap(), extraUpgrades);  //Evokes Frost
-                    addToDeck(new EnStrikeBlue(), false); //not used
+                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
+                    addToList(cardsList, new EnColdSnap(), extraUpgrades);  //Evokes Frost
+                    addToList(cardsList, new EnStrikeBlue(), false); //not used
                     //Lightning Lightning Frost
                     break;
                 case 2:
                     //Turn 3
-                    addToDeck(new EnStreamline(), true);
-                    addToDeck(new EnChargeBattery(), extraUpgrades);
-                    addToDeck(new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnStreamline(), true);
+                    addToList(cardsList, new EnChargeBattery(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeBlue(), false);
                     //Lightning Frost Lightning
                     break;
                 case 3:
                     //Turn 4
-                    addToDeck(new EnRebound(), false);
-                    addToDeck(new EnLeap(), true);
-                    addToDeck(new EnZap(), false); //not used
+                    addToList(cardsList, new EnRebound(), false);
+                    addToList(cardsList, new EnLeap(), true);
+                    addToList(cardsList, new EnZap(), false); //not used
                     //Lightning Frost Lightning
                     break;
                 case 4:
                     //Turn 5
-                    addToDeck(new EnLeap(), true);
-                    addToDeck(new EnRipAndTear(), false);
-                    addToDeck(new EnStrikeBlue(), false); //not used
+                    addToList(cardsList, new EnLeap(), true);
+                    addToList(cardsList, new EnRipAndTear(), false);
+                    addToList(cardsList, new EnStrikeBlue(), false); //not used
                     //Lightning Frost Lightning
                     break;
             }
         } else {
             switch (turn) {
                 case 0:
-                    addToDeck(new EnZap(), false);
-                    addToDeck(new EnDefendBlue(), false);
-                    addToDeck(new EnDualcast(), false); //not used
+                    addToList(cardsList, new EnZap(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    addToList(cardsList, new EnDualcast(), false); //not used
                     break;
                 case 1:
                     //Turn 2
-                    addToDeck(new EnColdSnap(), extraUpgrades);
-                    addToDeck(new EnLeap(), true);
-                    addToDeck(new EnStrikeBlue(), false); //not used
+                    addToList(cardsList, new EnColdSnap(), extraUpgrades);
+                    addToList(cardsList, new EnLeap(), true);
+                    addToList(cardsList, new EnStrikeBlue(), false); //not used
                     //1 Lightning 1 Frost
                     break;
                 case 2:
                     //Turn 3
-                    addToDeck(new EnBallLightning(), true);
-                    addToDeck(new EnChargeBattery(), extraUpgrades);
-                    addToDeck(new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnBallLightning(), true);
+                    addToList(cardsList, new EnChargeBattery(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeBlue(), false);
                     //Lightning Frost Lightning
                     break;
                 case 3:
                     //Turn 4
-                    addToDeck(new EnRebound(), false);
-                    addToDeck(new EnStreamline(), true);
-                    addToDeck(new EnDefendBlue(), extraUpgrades);
+                    addToList(cardsList, new EnRebound(), false);
+                    addToList(cardsList, new EnStreamline(), true);
+                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
                     break;
                 case 4:
                     //Turn 5
-                    addToDeck(new EnStreamline(), true);  //1-cost
-                    addToDeck(new EnStrikeBlue(), false);
-                    addToDeck(new EnRipAndTear(), false);
+                    addToList(cardsList, new EnStreamline(), true);  //1-cost
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnRipAndTear(), false);
                     //Lightning Frost Lightning
                     break;
             }

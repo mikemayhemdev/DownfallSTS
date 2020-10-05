@@ -51,6 +51,7 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
 
 
         /////   CARDS   /////
+        /*
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnBootSequence(), false);
         addToDeck(new EnClaw(), true);
@@ -81,7 +82,7 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
         addToDeck(new EnDefendBlue(), false);
         addToDeck(new EnMachineLearning(), extraUpgrades);
 
-
+        */
 
 
 

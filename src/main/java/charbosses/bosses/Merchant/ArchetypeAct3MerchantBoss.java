@@ -1,15 +1,6 @@
 package charbosses.bosses.Merchant;
 
-import charbosses.bosses.Defect.ArchetypeBaseDefect;
-import charbosses.cards.colorless.*;
-import charbosses.cards.curses.EnWrithe;
-import charbosses.cards.purple.*;
-import charbosses.cards.red.EnInflame;
 import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_FaceTrader;
-import charbosses.relics.EventRelics.CBR_Falling;
-import charbosses.relics.EventRelics.CBR_Mausoleum;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
@@ -18,7 +9,6 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
     }
 
     public void initialize() {
-
 
 
         /////   RELICS   /////
@@ -40,6 +30,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         //addRelic(new CBR_FusionHammer());
 
         /////   CARDS   /////
+        /*
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnPanicButton(), extraUpgrades);
         addToDeck(new EnDramaticEntrance(), extraUpgrades);
@@ -64,6 +55,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         addToDeck(new EnPanacea(), false);
         addToDeck(new EnSwiftStrike(), false);
         addToDeck(new EnMagnetism(), false);
+        */
 
 
     }

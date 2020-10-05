@@ -86,6 +86,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
+        /*
         addToDeck(new EnStrikePurple(), false);
         addToDeck(new EnDevotion(), false);
         addToDeck(new EnWrithe(), false);
@@ -119,6 +120,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         addToDeck(new EnBattleHymn(), false);
         addToDeck(new EnFasting(), true);
         addToDeck(new EnDevotion(), false);
+        */
     }
 
 

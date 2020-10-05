@@ -1,6 +1,5 @@
 package charbosses.cards.blue;
 
-import charbosses.actions.unique.EnemyGashAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.Color;
@@ -39,7 +38,7 @@ public class EnClaw extends AbstractBossCard {
         }
 
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));// 44
-        this.addToBot(new EnemyGashAction((AbstractCharBoss) m, this, this.magicNumber));// 45
+        //this.addToBot(new EnemyGashAction((AbstractCharBoss) m, this, this.magicNumber));// 45
     }
 
     @Override

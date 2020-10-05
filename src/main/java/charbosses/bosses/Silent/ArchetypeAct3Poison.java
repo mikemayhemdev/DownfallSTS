@@ -63,6 +63,7 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
 
         /////   CARDS   /////
+        /*
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
         addToDeck(new EnBane());
         addToDeck(new EnDeadlyPoison(), extraUpgrades);
@@ -92,6 +93,7 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
         addToDeck(new EnNeutralize(), true);
         addToDeck(new EnCripplingCloud());
         addToDeck(new EnDefendGreen());
+        */
     }
 
 
