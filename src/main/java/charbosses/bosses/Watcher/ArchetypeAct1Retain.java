@@ -1,13 +1,14 @@
 package charbosses.bosses.Watcher;
 
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
-import charbosses.cards.blue.*;
 import charbosses.cards.purple.*;
-import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_Transmogrifier;
-import charbosses.relics.EventRelics.CBR_UpgradeShrine;
+import charbosses.relics.CBR_CloakClasp;
+import charbosses.relics.CBR_NeowsBlessing;
+import charbosses.relics.CBR_TungstenRod;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.SlimeboundMod;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
 
@@ -69,51 +70,93 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
         //Mantra build, devotion as main source
 
 
-
-
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_CloakClasp());
-        addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_Lantern());
-        addRelic(new CBR_UpgradeShrine());
-        addRelic(new CBR_IceCream());
+        //addRelic(new CBR_IceCream());
+        //addRelic(new CBR_Lantern());
+        //addRelic(new CBR_BagOfPreparation());
+        //addRelic(new CBR_UpgradeShrine());
+    }
 
-        /////   CARDS   /////
-        boolean extraUpgrades = (AbstractDungeon.ascensionLevel >= 4);
-       // SlimeboundMod.logger.info("EXTRA UPGRADES: " + extraUpgrades);
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+            switch (turn) {
+                case 0:
 
-        //Turn 1
-        addToDeck(new EnStrikePurple(), true);
-        addToDeck(new EnVigilance(), false);
-        addToDeck(new EnPerseverance(), true);
-        addToDeck(new EnWindmillStrike(), false);
-        addToDeck(new EnStrikePurple(), extraUpgrades);
-
-        //Turn 2
-        addToDeck(new EnSandsOfTime(), false);
-        addToDeck(new EnFlyingSleeves(), false);
-        addToDeck(new EnStrikePurple(), false);
-
-        //Turn 3
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnTalkToTheHand(), extraUpgrades);
-        addToDeck(new EnStrikePurple(), false);
-
-        //Turn 4
-        addToDeck(new EnSashWhip(), extraUpgrades);
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnProtect(), true);
-
-        //Turn 5
-        addToDeck(new EnFlyingSleeves(), false);
-        addToDeck(new EnEstablishment(), true);
-        addToDeck(new EnDefendPurple(), false);
-
-
-
-
+                    //Turn 1
+                    addToList(cardsList, new EnProtect(), true);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);
+                    break;
+                case 1:
+                    //Turn 2
+                    addToList(cardsList, new EnWindmillStrike(), false);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    break;
+                case 2:
+                    //Turn 3
+                    addToList(cardsList, new EnVigilance(), false);
+                    addToList(cardsList, new EnSandsOfTime(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    break;
+                case 3:
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnFlyingSleeves(), extraUpgrades);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    //Turn 1
+                    addToList(cardsList, new EnEstablishment(), true);  //removed
+                    addToList(cardsList, new EnTalkToTheHand(), extraUpgrades); //removed
+                    addToList(cardsList, new EnProtect(), true);
+                    break;
+                case 1:
+                    //Turn 2
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);
+                    addToList(cardsList, new EnWindmillStrike(), false);  //not used
+                    break;
+                case 2:
+                    //Turn 3
+                    //Protect Retained 0 cost - use this turn
+                    //Windmill Retainde 1 cost
+                    addToList(cardsList, new EnVigilance(), false);
+                    addToList(cardsList, new EnSandsOfTime(), false);  //not used
+                    //TODO - Clumsy  //not used  //removed
+                    break;
+                case 3:
+                    //Turn 4
+                    //Sands Retained 2-cost
+                    //Windmill Retained 0-cost - use this turn
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnFlyingSleeves(), extraUpgrades);  //not used
+                    break;
+                case 4:
+                    //Turn 5
+                    //Sands Retained 0-cost - use this turn
+                    //Flying Sleeves Retained 0-cost - use this turn
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);  //not used
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 4 && !looped) looped = true;
+        else if (turn > 3 && looped) {
+            turn = 0;
+        }
+        return cardsList;
     }
 
     @Override

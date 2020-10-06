@@ -1,14 +1,14 @@
 package charbosses.bosses.Ironclad;
 
+import charbosses.cards.colorless.EnBite;
 import charbosses.cards.colorless.EnJAX;
-import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.red.*;
 import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_Augmenter;
-import charbosses.relics.EventRelics.CBR_BigFish;
-import charbosses.relics.EventRelics.CBR_Serpent;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
 
@@ -43,49 +43,88 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
 
         addRelic(new CBR_Girya(2));
-        addRelic(new CBR_Ginger());
-        addRelic(new CBR_BigFish());
-        addRelic(new CBR_CaptainsWheel());  //Extra relic from Big Fish
+        addRelic(new CBR_CaptainsWheel());
         addRelic(new CBR_RedSkull());
         addRelic(new CBR_Torii());
-        addRelic(new CBR_Augmenter(1));
+        addRelic(new CBR_Lantern());
+    }
 
-        /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnInflame(), true);
-        addToDeck(new EnArmaments(), true);
-        addToDeck(new EnDefendRed(), false);
-
-        //Turn 2
-        addToDeck(new EnTwinStrike(), false);
-        addToDeck(new EnIronWave(), extraUpgrades);
-        addToDeck(new EnRegret(), false);
-
-        //Turn 3
-        addToDeck(new EnFlameBarrier(), false);
-        addToDeck(new EnJAX(), extraUpgrades);
-        addToDeck(new EnStrikeRed(), false);
-
-        //Turn 4
-        addToDeck(new EnHeavyBlade(), false);
-        addToDeck(new EnDefendRed(), false);
-        addToDeck(new EnIronWave(), true);
-
-        //Turn 5
-        addToDeck(new EnBash(), false);
-        addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnStrikeRed(), false);
-
-        //Turn 6
-        addToDeck(new EnDemonForm(), extraUpgrades);
-        addToDeck(new EnSeeingRed(), false);
-        addToDeck(new EnClothesline(), true);
-
-
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnJAX(), extraUpgrades);
+                    addToList(cardsList, new EnClothesline(), true);
+                    addToList(cardsList, new EnDefendRed(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnFlameBarrier(), false);
+                    addToList(cardsList, new EnArmaments(), true);
+                    addToList(cardsList, new EnRegret(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnIronWave(), extraUpgrades);
+                    addToList(cardsList, new EnBite(), false);
+                    addToList(cardsList, new EnBash(), false);
+                    break;
+                case 3:
+                    addToList(cardsList, new EnTwinStrike(), false);
+                    addToList(cardsList, new EnIronWave(), true);
+                    addToList(cardsList, new EnBite(), false);
+                    break;
+                case 4:
+                    addToList(cardsList, new EnHeavyBlade(), false);
+                    addToList(cardsList, new EnDefendRed(), false); // upgraded from armaments
+                    addToList(cardsList, new EnBite(), false);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnInflame(), true); // removed
+                    addToList(cardsList, new EnArmaments(), true);
+                    addToList(cardsList, new EnDefendRed(), false); // now upgraded
+                    break;
+                case 1:
+                    addToList(cardsList, new EnTwinStrike(), false);
+                    addToList(cardsList, new EnIronWave(), extraUpgrades);
+                    addToList(cardsList, new EnRegret(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnFlameBarrier(), false);
+                    addToList(cardsList, new EnJAX(), extraUpgrades);
+                    addToList(cardsList, new EnBite(), false);
+                    break;
+                case 3:
+                    addToList(cardsList, new EnHeavyBlade(), false);
+                    addToList(cardsList, new EnDefendRed(), false);
+                    addToList(cardsList, new EnIronWave(), true);
+                    break;
+                case 4:
+                    addToList(cardsList, new EnBash(), false);
+                    addToList(cardsList, new EnBite(), false);
+                    addToList(cardsList, new EnBite(), false);
+                    break;
+                case 5:
+                    addToList(cardsList, new EnDemonForm(), extraUpgrades); // removed
+                    addToList(cardsList, new EnSeeingRed(), false); // removed
+                    addToList(cardsList, new EnClothesline(), true);
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) looped = true;
+        else if (turn > 4 && looped) {
+            turn = 0;
+        }
+        return cardsList;
     }
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Shuriken());
+        addRelic(new CBR_Ginger());
     }
 }

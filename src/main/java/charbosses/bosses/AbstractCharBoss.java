@@ -7,15 +7,10 @@ import charbosses.actions.orb.EnemyAnimateOrbAction;
 import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.actions.orb.EnemyEvokeOrbAction;
 import charbosses.actions.orb.EnemyTriggerEndOfTurnOrbActions;
-import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.actions.util.*;
 import charbosses.actions.utility.DestroyAntiCardsAction;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
-import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.green.EnBladeDance;
-import charbosses.cards.green.EnCloakAndDagger;
-import charbosses.cards.green.EnFinisher;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
@@ -27,7 +22,6 @@ import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -58,7 +52,6 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
-import guardian.cards.AbstractGuardianCard;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -162,25 +155,24 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             ((AbstractBossCard) c).owner = this;
         }
 
-        if(AbstractDungeon.ascensionLevel < 19){
+        if (AbstractDungeon.ascensionLevel < 19) {
             masterDeck.shuffle();
         }
 
         ArrayList<AbstractCard> isInnateCard = new ArrayList<AbstractCard>();
-        for(AbstractCard c : this.masterDeck.group){
-            if(c.isInnate){
+        for (AbstractCard c : this.masterDeck.group) {
+            if (c.isInnate) {
                 isInnateCard.add(c);
             }
         }
 
-        if(isInnateCard.size() > 0){
+        if (isInnateCard.size() > 0) {
             this.masterDeck.group.removeAll(isInnateCard);
 
-            for (AbstractCard c : isInnateCard){
+            for (AbstractCard c : isInnateCard) {
                 this.masterDeck.addToBottom(c);
             }
         }
-
 
 
         if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
@@ -209,7 +201,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
     }
 
-    public void playMusic(){
+    public void playMusic() {
         CardCrawlGame.music.unsilenceBGM();
         AbstractDungeon.scene.fadeOutAmbiance();
 
@@ -305,13 +297,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     }
 
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        return chosenArchetype.getThisTurnCards();
+    }
+
     public void endTurnStartTurn() {
         if (!AbstractDungeon.getCurrRoom().isBattleOver) {
             addToBot(new EnemyDrawCardAction(this, this.gameHandSize, true));
             addToBot(new WaitAction(0.2f));
             this.applyStartOfTurnPostDrawRelics();
             this.applyStartOfTurnPostDrawPowers();
-            if(!AbstractDungeon.player.hasRelic(RunicDome.ID)){
+            if (!AbstractDungeon.player.hasRelic(RunicDome.ID)) {
                 addToBot(new CharbossSortHandAction());
             }
 
@@ -390,7 +386,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         //SlimeboundMod.logger.info("Hand budget being calculated for the turn." + budget);
         for (int i = 0; i < sortedCards.size(); i++) {
             AbstractBossCard c = (AbstractBossCard) sortedCards.get(i);
-            if (c.costForTurn <= budget && c.costForTurn != -2 && c.getPriority(this.hand.group) > - 100) {
+            if (c.costForTurn <= budget && c.costForTurn != -2 && c.getPriority(this.hand.group) > -100) {
                 c.createIntent();
                 c.bossLighten();
                 budget -= c.costForTurn;
@@ -699,7 +695,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.attacksPlayedThisTurn++;
             this.useFastAttackAnimation();
 
-            if(c.damage > MathUtils.random(20)){
+            if (c.damage > MathUtils.random(20)) {
                 this.onPlayAttackCardSound();
             }
         }
@@ -748,7 +744,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         this.stance.update();
     }
 
-    public void onPlayAttackCardSound(){
+    public void onPlayAttackCardSound() {
     }
 
 
@@ -919,17 +915,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             NeowBoss.neowboss.minion = null;
             AbstractCard anti = anticard();
             for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-                if (c.cardID == anti.cardID){
+                if (c.cardID == anti.cardID) {
                     addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.drawPile));
                 }
             }
             for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-                if (c.cardID == anti.cardID){
+                if (c.cardID == anti.cardID) {
                     addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
                 }
             }
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                if (c.cardID == anti.cardID){
+                if (c.cardID == anti.cardID) {
                     addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
                 }
             }
@@ -948,7 +944,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         stance.onEnterStance();
 
         super.die();
-
 
 
     }
