@@ -1,30 +1,30 @@
 {
   "champ:OpenerPotion": {
-    "NAME": "Strategy Potion",
+    "NAME": "策略药水",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 #yOpeners to add to your hand, one of each #yStance. It costs #b0 this turn.",
-      "Choose #b1 of #b3 #yUpgraded #yOpeners to add to your hand, one of each #yStance. It costs #b0 this turn."
+      "从 #b3 张 #y起手牌 中选择 #b1 张加入手牌（每种 #y姿态 各一张）。它的耗能本回合为 #b0 。",
+      "从 #b3 张已 #y升级 的 #y起手牌 中选择 #b1 张加入手牌（每种 #y姿态 各一张）。 它的耗能本回合为 #b0 。"
     ]
   },
   "champ:TechniquePotion": {
-    "NAME": "Bottled Technique",
+    "NAME": "瓶装技术",
     "DESCRIPTIONS": [
-      "#yTechnique #b",
-      " times."
+      "#y技术 #b",
+      " 次。"
     ]
   },
   "champ:UltimateStancePotion": {
-    "NAME": "Substance Of Questionable Legality",
+    "NAME": "奇异精炼",
     "DESCRIPTIONS": [
-      "Enter #yUltimate #yStance for #b",
-      " turns."
+      "进入 #y终极姿态 #b",
+      " 回合。"
     ]
   },
   "champ:CounterstrikePotion": {
-    "NAME": "Brew of Sharpness",
+    "NAME": "锐利特酿",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yCounterstrike."
+      "获得 #b",
+      " 层 #y反击 。"
     ]
   }
 }

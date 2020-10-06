@@ -1,370 +1,370 @@
 {
   "champ:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "champ:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "champ:Taunt": {
-    "NAME": "Taunt",
-    "DESCRIPTION": "champ:Technique. NL Apply 2 Weak. NL If you are not in a Stance, enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Apply 2 Weak to ALL enemies. NL If you are not in a Stance, enter a random Stance."
+    "NAME": "激将",
+    "DESCRIPTION": "champ:战术 。 NL 给予 2 层 虚弱 。 NL 如果不处于 姿态 ，随机进入一种 姿态 。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 给予所有敌人 2 层 虚弱 。 NL 如果不处于 姿态 ，随机进入一种 姿态 。"
   },
   "champ:Execute": {
-    "NAME": "Execute",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage !cool! times. NL champ:Fatigue !M!.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage !cool! times. NL champ:Fatigue !M!."
+    "NAME": "处决",
+    "DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害 !cool! 次。 NL champ:疲劳 !M! 。",
+    "UPGRADE_DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害 !cool! 次。 NL champ:疲劳 !M! 。"
   },
   "champ:StanceDance": {
-    "NAME": "Stance Dance",
-    "DESCRIPTION": "champ:Opener - Choose a Stance.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card. NL champ:Opener - Choose a Stance.",
+    "NAME": "姿态之舞",
+    "DESCRIPTION": "选择进入一种 姿态 。",
+    "UPGRADE_DESCRIPTION": "抽 1 张牌。 NL 选择进入一种 姿态 。",
     "EXTENDED_DESCRIPTION": [
-      "champ:Berserker champ:Opener.",
-      "champ:Defensive champ:Opener.",
-      "champ:Gladiator champ:Opener."
+      "champ:狂战 。",
+      "champ:防守 。",
+      "champ:角斗 。"
     ]
   },
   "champ:GladiatorsShout": {
-    "NAME": "Gladiator's Shout",
-    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Opener. NL Draw 2 cards."
+    "NAME": "角斗怒吼",
+    "DESCRIPTION": "champ:战术 。 NL 进入 champ:角斗 。 NL 抽 1 张牌。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 进入 champ:角斗。 NL 抽 2 张牌。"
   },
   "champ:SwordSigil": {
-    "NAME": "Sword Sigil",
-    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "剑纹",
+    "DESCRIPTION": "champ:战术 。 NL champ:角斗 ：重复 !M! 次并 消耗 。"
   },
   "champ:FocusedGladiator": {
-    "NAME": "Focus: Gladiator",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
+    "NAME": "角斗士",
+    "DESCRIPTION": "进入 champ:角斗 。 NL 直到你退出 champ:角斗 前， champ:战术 将额外抽一张牌。"
   },
   "champ:FaceSlap": {
-    "NAME": "Face Slap",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Berserker champ:Combo: Apply !M! Vulnerable."
+    "NAME": "打脸",
+    "DESCRIPTION": "进入 champ:角斗 。 NL 造成 !D! 点伤害。 NL champ:狂战 ：给予 !M! 层 易伤 。"
   },
   "champ:FlashCut": {
-    "NAME": "Flash Strike",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike."
+    "NAME": "拔刀打击",
+    "DESCRIPTION": "进入 champ:角斗 。 NL 造成 !D! 点伤害。 NL champ:防守 ：获得 !M! 层 champ:反击 。"
   },
   "champ:Balance": {
-    "NAME": "Balance",
-    "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "NAME": "平衡",
+    "DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 对应随机的 姿态 牌加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:角斗 。 NL 对应随机已 升级 的 姿态 牌加入你的手牌。",
     "EXTENDED_DESCRIPTION": [
-      "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random Upgraded champ:Defensive champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random Upgraded champ:Gladiator champ:Combo to your hand."
+      "进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
+      "进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
+      "进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
+      "进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
     ]
   },
   "champ:DefensiveShout": {
-    "NAME": "Defensive Shout",
-    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Opener. NL Draw 2 cards."
+    "NAME": "防卫嘲讽",
+    "DESCRIPTION": "champ:战术 。 NL 进入 champ:防守 。 NL 抽1张牌。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 进入 champ:防守 。 NL 抽2张牌。"
   },
   "champ:ShieldSigil": {
-    "NAME": "Shield Sigil",
-    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "防守印记",
+    "DESCRIPTION": "champ:战术 。 NL champ:防守 ：重复 !M! 次并 消耗 。"
   },
   "champ:FocusedDefense": {
-    "NAME": "Focus: Defensive",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Until you exit champ:Defensive Stance, champ:Techniques grant 3 extra champ:Counterstrike."
+    "NAME": "防反家",
+    "DESCRIPTION": "进入 champ:防守 。 NL 直到你退出 champ:防守 前， champ:战术 将额外获得3层 champ:反击 。"
   },
   "champ:FocusedBerserking": {
-    "NAME": "Focus: Berserker",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 extra champ:Resolve."
+    "NAME": "狂战士",
+    "DESCRIPTION": "进入 champ:狂战 。 NL 直到你退出 champ:狂战 前， champ:战术 将额外获得2点 champ:决心 。"
   },
   "champ:Riposte": {
-    "NAME": "Riposte",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Gain !M! champ:Counterstrike. NL Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
+    "NAME": "弹反",
+    "DESCRIPTION": "进入 champ:防守 。 NL champ:角斗 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。",
+    "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL champ:角斗 ：获得 !M! 层 champ:反击 。 NL 丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。"
 
   },
   "champ:Backstep": {
-    "NAME": "Backstep",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Berserker champ:Combo: Gain Block equal to your champ:Resolve.",
-    "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
+    "NAME": "后撤",
+    "DESCRIPTION": "进入 champ:防守 。 NL champ:狂战 ：获得 champ:决心 层数的 格挡 。",
+    "EXTENDED_DESCRIPTION": [" NL （获得 !B! 点 格挡 。）"]
   },
   "champ:Aggression": {
-    "NAME": "Aggression",
-    "DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "NAME": "侵略",
+    "DESCRIPTION": "进入 champ:狂战 或 champ:角斗 。 NL 对应随机的 姿态 牌加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:狂战 或 champ:角斗 。 NL 对应随机已 升级 的 姿态 牌加入你的手牌。",
     "EXTENDED_DESCRIPTION": [
-      "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random Upgraded champ:Berserker champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random Upgraded champ:Gladiator champ:Combo to your hand."
+      "进入 champ:狂战 。 NL 将一张随机 champ:狂战 牌加入手牌。",
+      "进入 champ:角斗 。 NL 将一张随机 champ:角斗 牌加入手牌。",
+      "进入 champ:狂战 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。",
+      "进入 champ:角斗 。 NL 将一张随机已 升级 的 champ:角斗 牌加入手牌。"
     ]
   },
   "champ:BerserkersShout": {
-    "NAME": "Berserker's Shout",
-    "DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL champ:Berserker champ:Opener. NL Draw 2 cards."
+    "NAME": "怒吼",
+    "DESCRIPTION": "champ:战术 。 NL 进入 champ:狂战 。 NL 抽1张牌。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 进入 champ:狂战 。 NL 抽2张牌。"
   },
   "champ:RageSigil": {
-    "NAME": "Rage Sigil",
-    "DESCRIPTION": "champ:Technique NL champ:Berserker champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "愤怒印记",
+    "DESCRIPTION": "champ:战术 。 NL champ:狂战 ：重复 !M! 次并 消耗 。"
   },
   "champ:GutPunch": {
-    "NAME": "Gut Punch",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL champ:Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
+    "NAME": "腹拳",
+    "DESCRIPTION": "进入 champ:狂战 。 NL 造成 !D! 点伤害两次。 NL champ:疲劳 2。 NL champ:防守 ：获得 !M! 点 champ:决心 并 消耗 。"
   },
   "champ:FanOfKnives": {
-    "NAME": "Fan of Knives",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat if you have a champ:Technique in hand.",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat 2 times if you have a champ:Technique in hand."
+    "NAME": "刀阵",
+    "DESCRIPTION": "进入 champ:狂战 。 NL 对所有敌人造成 !D! 点伤害。 NL champ:角斗 ：手牌中如果有 champ:战术 牌，重复一次。",
+    "UPGRADE_DESCRIPTION": "进入 champ:狂战 。 NL 对所有敌人造成 !D! 点伤害。 NL champ:角斗 ：手牌中如果有 champ:战术 牌，重复两次。"
   },
   "champ:Devastate": {
-    "NAME": "Devastate",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage for each champ:Finisher played this combat."
+    "NAME": "坏灭",
+    "DESCRIPTION": "champ:战术 。 NL 本场战斗每打出过一张 champ:终结技 牌，造成 !D! 点伤害。"
 
   },
   "champ:Control": {
-    "NAME": "Control",
-    "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "NAME": "控制",
+    "DESCRIPTION": "进入 champ:防守 或 champ:狂战 。 NL 对应随机的 姿态 牌加入你的手牌。",
+    "UPGRADE_DESCRIPTION": "进入 champ:防守 或 champ:狂战 。 NL 对应随机已 升级 的 姿态 牌加入你的手牌。",
     "EXTENDED_DESCRIPTION": [
-      "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random Upgraded champ:Defensive champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random Upgraded champ:Berserker champ:Combo to your hand."
+      "进入 champ:防守 。 NL 将一张随机 champ:防守 牌加入手牌。",
+      "进入 champ:狂战 。 NL 将一张随机 champ:狂战 牌加入手牌。",
+      "进入 champ:防守 。 NL 将一张随机已 升级 的 champ:防守 牌加入手牌。",
+      "进入 champ:狂战 。 NL 将一张随机已 升级 的 champ:狂战 牌加入手牌。"
     ]
   },
   "champ:Circumvent": {
-    "NAME": "Circumvent",
-    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 3 champ:Counterstrike. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike."
+    "NAME": "规避",
+    "DESCRIPTION": "champ:战术 。 NL 获得 !B! 点 格挡 。 NL champ:防守 ：获得 champ:反击 层数的 格挡 。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 获得3层 champ:反击 。 NL 获得 !B! 点 格挡 。 NL champ:防守 ：获得 champ:反击 层数的 格挡 。"
   },
   "champ:SkillfulDodge": {
-    "NAME": "Skillful Dodge",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Increase this card's Block and champ:Counterstrike by !cool! this combat."
+    "NAME": "精巧闪避",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 ：本场战斗这张牌的 格挡 和 champ:反击 获得提高 !cool! 。"
   },
   "champ:TornadoPunch": {
-    "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
+    "NAME": "飓风拳",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 ：每有一名敌人的意图为攻击，获得 !M! 层 champ:反击 。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 对所有敌人造成 !D! 点伤害。 NL champ:防守 ：每有一名敌人的意图为攻击，获得 !M! 层 champ:反击 。"
 
   },
   "champ:EnGarde": {
-    "NAME": "En Garde",
-    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Double your champ:Counterstrike.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
+    "NAME": "待命",
+    "DESCRIPTION": "champ:战术 。 NL champ:防守 ：翻倍你的 champ:反击 。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 获得 !M! 层 champ:反击 。 NL champ:防守 ：翻倍你的 champ:反击 。"
   },
   "champ:ShieldSlam": {
-    "NAME": "Shield Slam",
-    "DESCRIPTION": "Can only be played if you have at least 20 Block. NL Deal !D! damage."
+    "NAME": "盾牌猛击",
+    "DESCRIPTION": "有至少20点 格挡 时才能被打出。 NL 造成 !D! 点伤害。"
   },
   "champ:EnchantShield": {
-    "NAME": "Enchant Shield",
-    "DESCRIPTION": "Gain 2 Dexterity. NL Exhaust unless in champ:Defensive.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 2 Dexterity. NL Exhaust unless in champ:Defensive."
+    "NAME": "整备装甲",
+    "DESCRIPTION": "获得2点 敏捷 。 NL 不处于 champ:防守 时 消耗。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 获得2点 敏捷 。 NL 不处于 champ:防守 时 消耗。"
   },
   "champ:BringItOn": {
-    "NAME": "Bring It On",
-    "DESCRIPTION": "champ:Finisher. NL Gain !B! Block. NL Gain !M! champ:Counterstrike. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Gain !B! Block. NL Gain !M! champ:Counterstrike. NL Exhaust unless in champ:Defensive."
+    "NAME": "全力以赴",
+    "DESCRIPTION": "champ:终结技 。 NL 获得 !B! 点格挡。 NL 获得 !M! 层 champ:反击 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "champ:终结技 。 NL 获得 !B! 点格挡。 NL 获得 !M! 层 champ:反击 。 NL 不处于 champ:防守 时 消耗。"
   },
   "champ:ShieldThrow": {
-    "NAME": "Shield Throw",
-    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your Block. NL You can't gain Block next turn. NL champ:Defensive champ:Combo: You can gain Block next turn.",
-    "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
+    "NAME": "爆甲",
+    "DESCRIPTION": "champ:终结技 。 NL 造成你当前 格挡 值的伤害。 NL 下回合不能获得 格挡 。 NL champ:防守 ：不因这张牌不能获得 格挡 。",
+    "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
   },
   "champ:FalseCounter": {
-    "NAME": "False Counter",
-    "DESCRIPTION": "Gain !M! champ:Counterstrike. NL The next time champ:Counterstrike activates, lose half your champ:Counterstrike instead of removing it."
+    "NAME": "伪反",
+    "DESCRIPTION": "获得 !M! 层 champ:反击 。 NL 下次触发 champ:反击 时，失去一半 champ:反击 而不是移除。"
   },
   "champ:IronFortress": {
-    "NAME": "Iron Fortress",
-    "DESCRIPTION": "Whenever you enter a Stance, gain !M! Block and !M! champ:Counterstrike."
+    "NAME": "钢铁要塞",
+    "DESCRIPTION": "每当你进入 姿态 时，获得 !M! 点 格挡 和 !M! 层 champ:反击 。"
   },
   "champ:Lariat": {
-    "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block and !M! champ:Counterstrike X times. NL Gain [E] ."
+    "NAME": "套索",
+    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 champ:反击 X次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 champ:反击 X次。 NL 获得 [E] 。"
   },
   "champ:HoldFirm": {
-    "NAME": "Hold Firm",
-    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL Block is not removed for !M! turn.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL Block is not removed for !M! turns."
+    "NAME": "固守",
+    "DESCRIPTION": "champ:战术 。 NL 获得 !B! 点 格挡 。 NL 格挡 在 !M! 个回合开始时不会移除。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 获得 !B! 点 格挡 。 NL 格挡 在 !M! 个回合开始时不会移除。"
   },
   "champ:ShieldWall": {
-    "NAME": "Shield Wall",
-    "DESCRIPTION": "At the end of your turn, gain !M! champ:Counterstrike for each card in hand."
+    "NAME": "盾墙",
+    "DESCRIPTION": "你的回合结束时每有一张牌，获得 !M! 层 champ:反击 。"
   },
   "champ:Haymaker": {
-    "NAME": "Haymaker",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak. NL champ:Gladiator champ:Combo: Apply 2 Vulnerable.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 2 Weak. NL champ:Gladiator champ:Combo: Apply 2 Vulnerable."
+    "NAME": "刺拳",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予2层 虚弱 。 NL champ:角斗 ：给予2层 易伤 。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 造成 !D! 点伤害。 NL 给予2层 虚弱 。 NL champ:角斗 ：给予2层 易伤 。"
   },
   "champ:ViciousMockery": {
-    "NAME": "Vicious Mockery",
-    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain !M! Dexterity."
+    "NAME": "毒舌",
+    "DESCRIPTION": "champ:战术 。 NL champ:角斗 ：如果敌人的意图是攻击，获得 !M! 点 敏捷 。"
   },
   "champ:PreciseThrust": {
-    "NAME": "Precise Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL champ:Gladiator champ:Combo: Increase this card's damage and Block by !M! this combat."
+    "NAME": "精准冲撞",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL champ:角斗 ：本场战斗其伤害和 格挡 获得提高 !M! 。"
   },
   "champ:CrookedStrike": {
-    "NAME": "Crooked Strike",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand. NL Exhaust unless in champ:Gladiator."
+    "NAME": "蛇形打击",
+    "DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害。 NL 手牌中每有一张牌，敌人本回合失去1点 力量 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害。 NL 手牌中每有一张牌，敌人本回合失去1点 力量 。 NL 消耗 。 NL 不处于 champ:角斗 时 消耗 。"
   },
   "champ:RapidStrikes": {
-    "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL Repeat twice more."
+    "NAME": "连续打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一张 champ:战术 牌重复一次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一张 champ:战术 牌重复一次。 NL 再重复两次。"
   },
   "champ:EnchantSword": {
-    "NAME": "Enchant Sword",
-    "DESCRIPTION": "Gain 2 Strength. NL Exhaust unless in champ:Berserker.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 2 Strength. NL Exhaust unless in champ:Berserker."
+    "NAME": "强化剑刃",
+    "DESCRIPTION": "获得2点 力量 。 NL 不处于 champ:狂战 时 消耗 。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 获得2点 力量 。 NL 不处于 champ:狂战 时 消耗 。"
   },
   "champ:BladeFlurry": {
-    "NAME": "Blade Flurry",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL champ:Gladiator champ:Combo: Repeat !M! more times."
+    "NAME": "剑刃乱舞",
+    "DESCRIPTION": "champ:战术 。 NL 造成 !D! 点伤害。 NL 手牌中每有一张 champ:战术 牌重复一次。 NL champ:角斗 ：再重复 !M! 次。"
   },
   "champ:SwordThrow": {
-    "NAME": "Sword Throw",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. NL You can't attack next turn. NL champ:Berserker champ:Combo: You can attack next turn."
+    "NAME": "投掷剑刃",
+    "DESCRIPTION": "champ:战术 。 NL 造成 !D! 点伤害 !M! 次。 NL 下回合不能打出攻击牌。 NL champ:狂战 ：不因这张牌不能打出攻击牌。"
   },
   "champ:MurderStrike": {
-    "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, reduce this card's cost by 1 and increase its damage by !M! this combat. NL Exhaust."
+    "NAME": "刽子打击",
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本场战斗每打出过一张 champ:战术 牌，这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
   },
   "champ:HeavySlash": {
-    "NAME": "Masterful Slash",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Deals !M! additional damage for each Upgraded card in your deck."
+    "NAME": "大师斩击",
+    "DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害。 NL 你的牌组每有一张已 升级 的牌伤害提高 !M! 。"
   },
   "champ:CheapShot": {
-    "NAME": "Cheap Shot",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL If the enemy intends to buff or debuff, Stun it."
+    "NAME": "偷袭",
+    "DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害。 NL 如果敌人的意图是强化或负面效果， 击晕 敌人。"
   },
   "champ:RisingSlash": {
-    "NAME": "Rising Strike",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Play this twice if the last played card was a champ:Technique."
+    "NAME": "狂烈打击",
+    "DESCRIPTION": "champ:战术 。 NL 造成 !D! 点伤害。 NL 如果本场战斗中打出的上一张牌是 champ:战术 牌，打出两次"
   },
   "champ:Shatter": {
-    "NAME": "Shatter",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block before dealing damage.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block and Artifact before dealing damage."
+    "NAME": "粉碎",
+    "DESCRIPTION": "champ:战术 。 NL 造成 !D! 点伤害。 NL champ:狂战 ：移除敌人的 格挡 再造成伤害。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 造成 !D! 点伤害。 NL champ:狂战 ：移除敌人的 格挡 和 人工制品 再造成伤害。"
   },
   "champ:EnragedBash": {
-    "NAME": "Enraged Bash",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Increase this card's damage and champ:Fatigue by !cool! this combat."
+    "NAME": "怒斩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 !M! 。 NL champ:狂战 ：本场战斗中其伤害和 champ:疲劳 提高 !cool! 。"
   },
   "champ:VampiricStrike": {
-    "NAME": "Vampiric Strike",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. Heal HP equal to unblocked damage. NL Exhaust."
+    "NAME": "饮血打击",
+    "DESCRIPTION": "champ:战术 。 NL 造成 !D! 点伤害 !M! 次。 回复未被 格挡 伤害 的生命。 NL 消耗 。"
   },
   "champ:AdrenalArmor": {
-    "NAME": "Adrenal Armor",
-    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice."
+    "NAME": "振奋装甲",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL champ:疲劳 !M! 。 NL champ:狂战 ：打出两次。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 获得 !B! 点 格挡 。 NL champ:疲劳 !M! 。 NL champ:狂战 ：打出两次。"
   },
   "champ:HeartStrike": {
-    "NAME": "Finish Him",
-    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust unless in champ:Berserker."
+    "NAME": "穿心攻击",
+    "DESCRIPTION": "champ:终结技 。 NL 造成你当前 champ:决心 层数的伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "champ:终结技 。 NL 造成你当前 champ:决心 层数的伤害。 NL 不处于 champ:狂战 时 消耗 。"
   },
   "champ:FinalRevenge": {
-    "NAME": "Final Revenge",
-    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your missing HP. NL Exhaust unless in champ:Berserker."
+    "NAME": "复仇",
+    "DESCRIPTION": "champ:终结技 。 NL 造成你已失去生命的伤害。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "champ:终结技 。 NL 造成你已失去生命的伤害。 NL 不处于 champ:狂战 时 消耗 。"
   },
   "champ:CrownThrow": {
-    "NAME": "Crown Throw",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Draw !M! fewer cards next turn. NL champ:Gladiator champ:Combo: Don't draw fewer cards."
+    "NAME": "投掷王冠",
+    "DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害。 NL 下回合少抽 !M! 张牌。 NL champ:角斗 ：不因这张牌少抽牌。"
   },
   "champ:FightOn": {
-    "NAME": "Fight On",
-    "DESCRIPTION": "Fleeting. NL Can't be Upgraded. NL Can only be played if you have at least 30 champ:Resolve. NL Gain 5 Max HP."
+    "NAME": "越战越勇",
+    "DESCRIPTION": "即逝 。 NL 不能被 升级 。 NL 只能在你拥有至少30点 champ:决心 时才能被打出。 NL 获得5点最大生命。"
   },
   "champ:Encircle": {
-    "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL champ:Berserker champ:Combo: Play this twice. "
+    "NAME": "包围",
+    "DESCRIPTION": "champ:战术 。 NL 对随机一名敌人造成 !D! 点伤害 !M! 次。 NL champ:疲劳 2。 NL champ:狂战 ： 打出两次。"
   },
   "champ:LastStand": {
-    "NAME": "Last Stand",
-    "DESCRIPTION": "champ:Finisher. NL Can only be played if you're under 50% HP. NL Remove all debuffs. NL Gain 6 Strength."
+    "NAME": "最后一战",
+    "DESCRIPTION": "champ:终结技 。 NL 只能在半血以下才能被打出。 NL 移除所有负面效果。 NL 获得6点 力量 。"
   },
   "champ:RecklessLeap": {
-    "NAME": "Reckless Leap",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 5. NL Gain !M! Strength. NL Exhaust."
+    "NAME": "无谋跃斩",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 5。 NL 获得 !M! 点 力量 。 NL 消耗 。"
   },
   "champ:IgnorePain": {
-    "NAME": "Ignore Pain",
-    "DESCRIPTION": "champ:Technique. NL Your HP cannot be reduced until your next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL champ:Technique. NL Your HP cannot be reduced until your next turn. NL Exhaust."
+    "NAME": "无视伤痛",
+    "DESCRIPTION": "champ:战术 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留。 NL champ:战术 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。"
   },
   "champ:DeathBlow": {
-    "NAME": "Death Blow",
-    "DESCRIPTION": "champ:Fatigue !M!. NL Deal damage to ALL enemies equal to the amount of HP lost."
+    "NAME": "绝地反击",
+    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命的伤害。"
   },
   "champ:ArenaPreparation": {
-    "NAME": "Arena Preparation",
-    "DESCRIPTION": "champ:Technique. NL champ:Fatigue 5. NL Add !M! random champ:Techniques into your hand. NL They gain Retain. NL Exhaust."
+    "NAME": "重整战场",
+    "DESCRIPTION": "champ:战术 。 NL champ:疲劳 5。 NL 将 !M! 张带有 保留 的随机 champ:战术 牌加入你的手牌。 NL 消耗 。"
   },
   "champ:EndlessRage": {
-    "NAME": "Endless Rage",
-    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 champ:Resolve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you lose HP on your turn, gain 1 champ:Resolve."
+    "NAME": "无穷愤火",
+    "DESCRIPTION": "每当你在你的回合失去生命时，获得1点 champ:决心 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你在你的回合失去生命时，获得1点 champ:决心 。"
   },
   "champ:SteelEdge": {
-    "NAME": "Steel Edge",
-    "DESCRIPTION": "champ:Berserker champ:Combo: Deal !D! damage X times. NL champ:Defensive champ:Combo: Gain !B! Block X times. NL champ:Gladiator champ:Combo: Draw X cards and gain X [E] .",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Combo: Deal !D! damage X+1 times. NL champ:Defensive champ:Combo: Gain !B! Block X+1 times. NL champ:Gladiator champ:Combo: Draw X+1 cards and gain X+1 [E] ."
+    "NAME": "剑锋",
+    "DESCRIPTION": "champ:狂战 ： 造成 !D! 点伤害X次。 NL champ:防守 ： 获得 !B! 点 格挡 X次。 NL champ:角斗 ： 抽X张牌并获得X [E] 。",
+    "UPGRADE_DESCRIPTION": "champ:狂战 ： 造成 !D! 点伤害X+1次。 NL champ:防守 ： 获得 !B! 点 格挡 X+1次。 NL champ:角斗 ： 抽X+1张牌并获得X+1 [E] 。"
   },
   "champ:Improvising": {
-    "NAME": "Improvising",
-    "DESCRIPTION": "The first time each turn you use a champ:Combo while not in the correct Stance, return it to your hand. NL It costs 0 until played."
+    "NAME": "触类旁通",
+    "DESCRIPTION": "每回合第一次打出 牌时如果不处于对应的 姿态 ，返回手牌。 NL 它直到打出前费用为0。"
   },
   "champ:CalledShot": {
-    "NAME": "Called Shot",
-    "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end."
+    "NAME": "宣告",
+    "DESCRIPTION": "你打出的下一张 champ:终结技 将不会退出 姿态 或结束你的回合。"
   },
   "champ:PerfectedStrike": {
-    "NAME": "Perfected Strike",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
+    "NAME": "完美打击",
+    "DESCRIPTION": "champ:终结技 。 NL 造成 !D! 点伤害。 NL 你每有一张名字中有 打击 的牌，伤害+ !M! 。"
   },
   "champ:PerfectForm": {
-    "NAME": "Perfect Form",
-    "DESCRIPTION": "For !M! turns, enter champ:Ultimate."
+    "NAME": "完美形态",
+    "DESCRIPTION": "接下来的 !M! 个回合，进入 champ:终极 。"
   },
   "champ:Duel": {
-    "NAME": "Duel",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
+    "NAME": "决斗",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。"
   },
   "champ:DancingMaster": {
-    "NAME": "Dancing Master",
-    "DESCRIPTION": "Whenever you enter three unique Stances in one turn, gain [E] and draw 2 cards.",
-    "UPGRADE_DESCRIPTION": "Whenever you enter three unique Stances in one turn, gain [E] [E] and draw 2 cards."
+    "NAME": "战技大师",
+    "DESCRIPTION": "如果你在一回合内进入了三种不同的姿态，获得 [E] 并抽2张牌。",
+    "UPGRADE_DESCRIPTION": "如果你在一回合内进入了三种不同的姿态，获得 [E] [E] 并抽2张牌。"
   },
   "champ:StrikeOfGenius": {
-    "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, add a random champ:Opener to your hand. NL It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded champ:Opener to your hand. NL It costs 0 until played."
+    "NAME": "打击天才",
+    "DESCRIPTION": "在你的回合开始时，将随机一张 champ:起手 牌加入你的手牌。 NL 它直到打出前的耗能为0。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的 champ:起手 牌加入你的手牌。 NL 它直到打出前的耗能为0。"
   },
   "champ:DefensiveStyle": {
-    "NAME": "Defensive Style",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike.",
-    "UPGRADE_DESCRIPTION": "Innate. NL champ:Defensive champ:Opener. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counterstrike."
+    "NAME": "防守战法",
+    "DESCRIPTION": "进入 champ:防守 。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:防守 。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。"
   },
   "champ:GladiatorStyle": {
-    "NAME": "Gladiator Style",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL champ:Gladiator champ:Opener. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
+    "NAME": "角斗战法",
+    "DESCRIPTION": "进入 champ:角斗 。 NL 如果你的回合开始时处于 champ:角斗 ，获得3点 guardianmod:临时 力量 和 敏捷 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:角斗 。 NL 如果你的回合开始时处于 champ:角斗 ，获得3点 guardianmod:临时 力量 和 敏捷 。"
   },
   "champ:BerserkerStyle": {
-    "NAME": "Berserker Style",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
-    "UPGRADE_DESCRIPTION": "Innate. NL champ:Berserker champ:Opener. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
+    "NAME": "狂暴战法",
+    "DESCRIPTION": "进入 champ:狂战 。 NL 如果你的回合开始时处于 champ:狂战 ， champ:疲劳 2 并获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 进入 champ:狂战 。 NL 如果你的回合开始时处于 champ:狂战 ， champ:疲劳 2 并获得 [E] 。"
   },
   "champ:EnchantCrown": {
-    "NAME": "Enchant Crown",
-    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator."
+    "NAME": "附魔金冠",
+    "DESCRIPTION": "接下来的3个回合开始时获得 [E] 。 NL 不处于 champ:角斗 时 消耗 。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 接下来的3个回合开始时获得 [E] 。 NL 不处于 champ:角斗 时 消耗 。"
   }
 }

@@ -1,6 +1,6 @@
 {
   "champ:Colosseum": {
-    "NAME": "The Colosseum",
+    "NAME": "竞技场",
     "DESCRIPTIONS": [
       "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"CHAMPION! You grave us with your presence! Are you here to take on the new challenger?\"",
       "A new challenger? How delightful! NL NL However, the challenge may have to wait. The audience always likes seeing the Champion slaughter the latest capture...",
@@ -10,11 +10,11 @@
       "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush."
     ],
     "OPTIONS": [
-      "[Defend Title] #rFight Black Knight. #gGain #gmany #grewards.",
-      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
-      "[Leave]",
-      "[FIGHT!]",
-      "[Continue]"
+      "[卫冕] #r与黑色骑士战斗。 #g获得许多奖赏。",
+      "[参与] #r与被捕获的英雄战斗。 #g获得许多奖赏。",
+      "[离开]",
+      "[开战！]",
+      "[继续]"
     ]
   }
 }

@@ -1,81 +1,72 @@
 [
   {
-    "PROPER_NAME": "Technique",
+    "PROPER_NAME": "战术",
     "NAMES": [
-      "technique",
-      "techniques"
+      "战术"
     ],
-    "DESCRIPTION": "If you are in a #yStance, trigger its Technique bonus."
+    "DESCRIPTION": "如果你处于某个 #y姿态 ，触发该 #y姿态 的 #y战术奖励 。"
   },
   {
-    "PROPER_NAME": "Opener",
+    "PROPER_NAME": "配合",
     "NAMES": [
-      "opener"
+      "配合"
     ],
-    "DESCRIPTION": "Switch #yStances."
+    "DESCRIPTION": "处于特定 #y姿态 时打出后获得额外效果。"
   },
   {
-    "PROPER_NAME": "Combo",
+    "PROPER_NAME": "终结技",
     "NAMES": [
-      "combo"
+      "终结技"
     ],
-    "DESCRIPTION": "Extra effect when played in the listed #yStance."
+    "DESCRIPTION": "打出终结技后如果处于 #y姿态 ，退出姿态并触发 #y终结技奖励 。 #r结束你的回合 。"
   },
   {
-    "PROPER_NAME": "Finisher",
+    "PROPER_NAME": "反击",
     "NAMES": [
-      "finisher"
+      "反击"
     ],
-    "DESCRIPTION": "After playing a Finisher, if you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn."
+    "DESCRIPTION": "下次你受到 #y攻击 伤害时，对攻击者造成层数的伤害并移除。"
   },
   {
-    "PROPER_NAME": "Counterstrike",
+    "PROPER_NAME": "决心",
     "NAMES": [
-      "counterstrike"
+      "决心"
     ],
-    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+    "DESCRIPTION": "每有 #b5 层 #y决心 拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数等量的生命。"
   },
   {
-    "PROPER_NAME": "Resolve",
+    "PROPER_NAME": "防守",
     "NAMES": [
-      "resolve"
+      "防守"
     ],
-    "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve. At the end of combat, heal HP equal to your Resolve."
+    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b6 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
   },
   {
-    "PROPER_NAME": "Defensive",
+    "PROPER_NAME": "狂战",
     "NAMES": [
-      "defensive"
+      "狂战"
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounterstrike. #yFinisher: Gain #b12 #yBlock. End your turn."
+    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b2 。 NL #y终结技 -失去所有 #y决心 并回复等量生命（保留 #y力量 ）。"
   },
   {
-    "PROPER_NAME": "Berserker",
+    "PROPER_NAME": "角斗",
     "NAMES": [
-      "berserker"
+      "角斗"
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y2. #yFinisher: Lose all your #yResolve and gain that much HP, preserving #yStrength. End your turn."
+    "DESCRIPTION": "#y姿态 ： #y战术 -抽 #b1 张牌。 NL #y终结技 -下回合抽 #b1 张牌并获得 [E] 。"
   },
   {
-    "PROPER_NAME": "Gladiator",
+    "PROPER_NAME": "终极姿态",
     "NAMES": [
-      "gladiator"
+      "终极"
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: Draw #b1 card. #yFinisher: Next turn, draw #b1 card and gain [E] . End your turn."
+    "DESCRIPTION": "#y姿态 。视为同时拥有 #r狂战 、 #b防守 和 #y角斗 。不能切换 #y姿态 。"
   },
   {
-    "PROPER_NAME": "Ultimate Stance",
+    "PROPER_NAME": "疲劳",
     "NAMES": [
-      "ultimate",
-      "ultimate"
+      "疲劳"
     ],
-    "DESCRIPTION": "#yStance. Counts as all #b3 #yStances. You can't change #yStance from this."
-  },
-  {
-    "PROPER_NAME": "Fatigue",
-    "NAMES": [
-      "fatigue"
-    ],
-    "DESCRIPTION": "Lose HP and gain an equal amount of #yResolve. Will only work up to 1 HP."
+    "DESCRIPTION": "失去生命并获得等量的 #y决心 。(有足量生命时才会生效)"
   }
 ]
