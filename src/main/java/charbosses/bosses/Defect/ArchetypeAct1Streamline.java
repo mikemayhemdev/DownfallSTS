@@ -6,6 +6,7 @@ import charbosses.relics.CBR_NeowsBlessing;
 import charbosses.relics.CBR_SmoothStone;
 import charbosses.relics.EventRelics.CBR_Transmogrifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Streamline;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
     }
 
     public void initialize() {
+        theVeryImportantStreamline.upgrade();
         //Tuning Recommendation per Act (CARDS): 1 Card Removal, 2 Upgrades, ~6-8 cards added to deck
         //Tuning Recommendation per Act (RELICS): 2 relics and an Event relic (simulate what the Event did)
         //Tuning Recommendation for Act 2-3: At least 1 Rare and 1 Boss Relic in addition to above 2
@@ -46,6 +48,8 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         addRelic(new CBR_Transmogrifier());  //Could be something else, no strong lean in any direction
     }
 
+    private AbstractCard theVeryImportantStreamline = new EnStreamline();
+
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
@@ -67,7 +71,7 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
                     break;
                 case 2:
                     //Turn 3
-                    addToList(cardsList, new EnStreamline(), true);
+                    addToList(cardsList, theVeryImportantStreamline);
                     addToList(cardsList, new EnChargeBattery(), extraUpgrades);
                     addToList(cardsList, new EnStrikeBlue(), false);
                     //Lightning Frost Lightning
@@ -111,12 +115,12 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
                 case 3:
                     //Turn 4
                     addToList(cardsList, new EnRebound(), false);
-                    addToList(cardsList, new EnStreamline(), true);
+                    addToList(cardsList, theVeryImportantStreamline);
                     addToList(cardsList, new EnDefendBlue(), extraUpgrades);
                     break;
                 case 4:
                     //Turn 5
-                    addToList(cardsList, new EnStreamline(), true);  //1-cost
+                    addToList(cardsList, theVeryImportantStreamline);  //1-cost
                     addToList(cardsList, new EnStrikeBlue(), false);
                     addToList(cardsList, new EnRipAndTear(), false);
                     //Lightning Frost Lightning

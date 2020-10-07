@@ -325,6 +325,26 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             this.applyStartOfTurnPostDrawPowers();
             if (!AbstractDungeon.player.hasRelic(RunicDome.ID)) {
                 //addToBot(new CharbossSortHandAction());
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        int budget = energyPanel.getCurrentEnergy();
+                        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                            if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
+                                ((AbstractBossCard) c).createIntent();
+                                ((AbstractBossCard) c).bossLighten();
+                                budget -= c.costForTurn;
+                                budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
+                                if (budget < 0) budget = 0;
+                            }
+                        }
+                        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                            AbstractBossCard cB = (AbstractBossCard) c;
+                            cB.refreshIntentHbLocation();
+                        }
+                    }
+                });
             }
 
             this.cardsPlayedThisTurn = 0;
