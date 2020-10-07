@@ -24,6 +24,7 @@ import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -303,18 +304,22 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public ArrayList<AbstractCard> getThisTurnCards() {
-        if (chosenArchetype == null) generateDeck();
-        System.out.println(chosenArchetype.toString());
-        System.out.println(chosenArchetype.getThisTurnCards());
         return chosenArchetype.getThisTurnCards();
     }
 
     public void endTurnStartTurn() {
         if (!AbstractDungeon.getCurrRoom().isBattleOver) {
             //addToBot(new EnemyDrawCardAction(this, this.gameHandSize, true));
-            for (AbstractCard q : getThisTurnCards()) {
-                this.hand.addToBottom(q);
-            }
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    for (AbstractCard q : getThisTurnCards()) {
+                        AbstractCharBoss.boss.hand.addToTop(q);
+                    }
+                    AbstractCharBoss.boss.hand.refreshHandLayout();
+                }
+            });
             addToBot(new WaitAction(0.2f));
             this.applyStartOfTurnPostDrawRelics();
             this.applyStartOfTurnPostDrawPowers();

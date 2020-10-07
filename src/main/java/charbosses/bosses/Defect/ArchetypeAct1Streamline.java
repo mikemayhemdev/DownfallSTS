@@ -126,7 +126,7 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         turn++;
         if (turn > 4) {
             if (!looped) looped = true;
-            else turn = 0;
+            turn = 0;
         }
         return cardsList;
     }

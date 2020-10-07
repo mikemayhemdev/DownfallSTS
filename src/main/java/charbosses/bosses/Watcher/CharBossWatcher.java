@@ -133,6 +133,7 @@ public class CharBossWatcher extends AbstractCharBoss {
             }
 
         archetype.initialize();
+        chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            archetype.initializeBonusRelic();
 //        }

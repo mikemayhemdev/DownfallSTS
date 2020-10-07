@@ -136,7 +136,9 @@ public class ArchetypeAct2Finisher extends ArchetypeBaseIronclad {
             }
         }
         turn++;
-        if (turn > 5 && !looped) looped = true;
+        if (turn > 5 && !looped) { looped = true;
+            turn = 0;
+        }
         else if (turn > 3 && looped) {
             turn = 0;
         }

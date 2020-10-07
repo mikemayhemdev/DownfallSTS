@@ -152,8 +152,10 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
             }
         }
         turn++;
-        if (turn > 4 && !looped) looped = true;
-        else if (turn > 3 && looped) {
+        if (turn > 4 && !looped) {
+            looped = true;
+            turn = 0;
+        } else if (turn > 3 && looped) {
             turn = 0;
         }
         return cardsList;
