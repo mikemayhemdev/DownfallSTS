@@ -451,7 +451,7 @@
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card."
+      "Increase your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card."
     ]
   },
   "downfall:HeartBlessingGreen": {

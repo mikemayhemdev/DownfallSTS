@@ -51,9 +51,14 @@ public class LastStand extends AbstractExpansionCard {
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
             atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
-           if(upgraded) atb(new HealAction(p, p, this.magicNumber));
+            if (upgraded) atb(new HealAction(p, p, this.magicNumber));
         }
 
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.currentHealth < AbstractDungeon.player.maxHealth / 2 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upgrade() {
