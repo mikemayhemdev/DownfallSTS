@@ -43,7 +43,7 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         //data disk
         addRelic(new CBR_SmoothStone());
         addRelic(new CBR_Abacus());
-        addRelic(new CBR_Transmogrifier());  //Could be something else, no strong lean in any direction
+       // addRelic(new CBR_Transmogrifier());  //Could be something else, no strong lean in any direction
     }
 
     @Override
