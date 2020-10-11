@@ -3,13 +3,17 @@ package charbosses.bosses.Merchant;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.colorless.*;
 import charbosses.cards.curses.EnWrithe;
+import charbosses.cards.green.*;
 import charbosses.cards.purple.*;
 import charbosses.cards.red.EnInflame;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_FaceTrader;
 import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
@@ -41,31 +45,69 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToList(cardsList, new EnPanicButton(), extraUpgrades);
-        addToList(cardsList, new EnDramaticEntrance(), extraUpgrades);
-        addToList(cardsList, new EnTheBomb(), false);
-
-        //Turn 2
-        addToList(cardsList, new EnPanacea(), extraUpgrades);
-        addToList(cardsList, new EnApotheosis(), true);
-        addToList(cardsList, new EnHandOfGreed(), false);
-
-        //Turn 3
-        addToList(cardsList, new EnSadisticNature(), false);
-        addToList(cardsList, new EnTrip(), false);
-        addToList(cardsList, new EnGoodInstincts(), false);
-
-        //Turn 4
-        addToList(cardsList, new EnGoodInstincts(), false);
-        addToList(cardsList, new EnBlind(), false);
-        addToList(cardsList, new EnSwiftStrike(), false);
-
-        //Turn 5
-        addToList(cardsList, new EnPanacea(), false);
-        addToList(cardsList, new EnSwiftStrike(), false);
-        addToList(cardsList, new EnMagnetism(), false);
 
 
+    }
+
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnTheBomb(), false);
+                    addToList(cardsList, new EnTrip(), false);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnHandOfGreed(), false);
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    addToList(cardsList, new EnBlind(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnTheBomb(), false);
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+
+                    addToList(cardsList, new EnPanicButton(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnDramaticEntrance(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnTheBomb(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnPanacea(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnApotheosis(), true);  //removed
+                    addToList(cardsList, new EnHandOfGreed(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnSadisticNature(), false);  //removed
+                    addToList(cardsList, new EnTrip(), false);
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    break;
+                case 3:
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    addToList(cardsList, new EnBlind(), false);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    break;
+                case 4:
+                    addToList(cardsList, new EnPanacea(), false);  //removed
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    addToList(cardsList, new EnTheBomb(), false);
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) looped = true;
+        else if (turn > 4 && looped) {
+            turn = 0;
+        }
+        return cardsList;
     }
 
     @Override

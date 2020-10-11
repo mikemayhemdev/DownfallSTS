@@ -3,6 +3,7 @@ package charbosses.bosses.Watcher;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.anticards.PeaceOut;
 import charbosses.cards.curses.EnWrithe;
+import charbosses.cards.green.*;
 import charbosses.cards.purple.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_FaceTrader;
@@ -10,6 +11,8 @@ import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
@@ -86,41 +89,100 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToList(cardsList, new EnStrikePurple(), false);
-        addToList(cardsList, new EnDevotion(), false);
-        addToList(cardsList, new EnWrithe(), false);
 
-        //Turn 2
-        addToList(cardsList, new EnSashWhip(), extraUpgrades);
-        addToList(cardsList, new EnStrikePurple(), false);
-        addToList(cardsList, new EnDefendPurple(), true);
-
-        //Turn 3
-        addToList(cardsList, new EnDefendPurple(), false);
-        addToList(cardsList, new EnWaveOfTheHand(), false);
-        addToList(cardsList, new EnWallop(), extraUpgrades);
-
-        //Turn 4
-        addToList(cardsList, new EnProtect(), true);
-        addToList(cardsList, new EnStrikePurple(), false);
-        addToList(cardsList, new EnStrikePurple(), false);
-
-        //Turn 5
-        addToList(cardsList, new EnFasting(), extraUpgrades);
-        addToList(cardsList, new EnCrushJoints(), false);
-        addToList(cardsList, new EnBrilliance(), false);
-
-        //Turn 6
-        addToList(cardsList, new EnProtect(), true);
-        addToList(cardsList, new EnWallop(), false);
-        addToList(cardsList, new EnDefendPurple(), false);
-
-        //Turn 7
-        addToList(cardsList, new EnBattleHymn(), false);
-        addToList(cardsList, new EnFasting(), true);
-        addToList(cardsList, new EnDevotion(), false);
     }
 
+
+
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+
+            switch (turn) {
+                case 0:
+
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnDevotion(), false);
+                    addToList(cardsList, new EnWrithe(), false);
+                    break;
+                case 1:
+
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    break;
+                case 2:
+
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnWallop(), extraUpgrades);
+                    break;
+                case 3:
+
+                    addToList(cardsList, new EnProtect(), true);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    break;
+                case 4:
+
+                    addToList(cardsList, new EnFasting(), extraUpgrades);
+                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnBrilliance(), false);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnDevotion(), false);
+                    addToList(cardsList, new EnWrithe(), false);
+                    break;
+                case 1:
+
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    break;
+                case 2:
+
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnWallop(), extraUpgrades);
+                    break;
+                case 3:
+
+                    addToList(cardsList, new EnProtect(), true);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    break;
+                case 4:
+
+                    addToList(cardsList, new EnFasting(), extraUpgrades);
+                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnBrilliance(), false);
+                case 5:
+
+                    addToList(cardsList, new EnProtect(), true);
+                    addToList(cardsList, new EnWallop(), false);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    break;
+                case 6:
+                    addToList(cardsList, new EnBattleHymn(), false);
+                    addToList(cardsList, new EnFasting(), true);
+                    addToList(cardsList, new EnDevotion(), false);
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) looped = true;
+        else if (turn > 4 && looped) {
+            turn = 0;
+        }
+        return cardsList;
+    }
 
     @Override
     public void initializeBonusRelic() {
