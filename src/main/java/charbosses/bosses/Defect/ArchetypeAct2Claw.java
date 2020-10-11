@@ -63,70 +63,70 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
         if (looped) {
             switch (turn) {
                 case 0:
-                    addToDeck(new EnBootSequence(), false);  // removed
-                    addToDeck(new EnClaw(), true);
-                    addToDeck(new EnMachineLearning(), extraUpgrades);  // removed
+                    addToList(cardsList, new EnBootSequence(), false);  // removed
+                    addToList(cardsList, new EnClaw(), true);
+                    addToList(cardsList, new EnMachineLearning(), extraUpgrades);  // removed
                     break;
                 case 1:
                     //Turn 2
-                    addToDeck(new EnLeap(), extraUpgrades);
-                    addToDeck(new EnPain(), false);  //removed
-                    addToDeck(new EnStrikeBlue(), true);
-                    addToDeck(new EnClaw(), true);
+                    addToList(cardsList, new EnLeap(), extraUpgrades);
+                    addToList(cardsList, new EnPain(), false);  //removed
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    addToList(cardsList, new EnClaw(), true);
                     break;
                 case 2:
                     //Turn 3
-                    addToDeck(new EnBeamCell(), false);
-                    addToDeck(new EnRebound(), false);
-                    addToDeck(new EnClaw(), extraUpgrades);
+                    addToList(cardsList, new EnBeamCell(), false);
+                    addToList(cardsList, new EnRebound(), false);
+                    addToList(cardsList, new EnClaw(), extraUpgrades);
                     //TODO: Reprogram
                     //Kunai Proc
                     break;
                 case 3:
                     //Turn 4
-                    addToDeck(new EnClaw(), extraUpgrades);  //Rebounded
-                    addToDeck(new EnChargeBattery(), false);
-                    addToDeck(new EnStrikeBlue(), false);
-                    addToDeck(new EnShame(), false);  //removed
+                    addToList(cardsList, new EnClaw(), extraUpgrades);  //Rebounded
+                    addToList(cardsList, new EnChargeBattery(), false);
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnShame(), false);  //removed
                     break;
                 case 4:
                     //Turn 5
-                    addToDeck(new EnEchoForm(), true);  // removed
-                    addToDeck(new EnStrikeBlue(), false);
-                    addToDeck(new EnDefendBlue(), false);
-                    addToDeck(new EnDefendBlue(), false);
+                    addToList(cardsList, new EnEchoForm(), true);  // removed
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
                     break;
             }
         } else {
             switch (turn) {
                 case 0:
-                    addToDeck(new EnClaw(), true);
-                    addToDeck(new EnLeap(), extraUpgrades);
-                    addToDeck(new EnStrikeBlue(), true);
-                    addToDeck(new EnDefendBlue(), false);
+                    addToList(cardsList, new EnClaw(), true);
+                    addToList(cardsList, new EnLeap(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    addToList(cardsList, new EnDefendBlue(), false);
                     //Kunai Proc
                     break;
                 case 1:
                     //Turn 2
-                    addToDeck(new EnClaw(), extraUpgrades);
-                    addToDeck(new EnChargeBattery(), false);
-                    addToDeck(new EnStrikeBlue(), extraUpgrades);
-                    addToDeck(new EnDefendBlue(), false);
+                    addToList(cardsList, new EnClaw(), extraUpgrades);
+                    addToList(cardsList, new EnChargeBattery(), false);
+                    addToList(cardsList, new EnStrikeBlue(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), false);
                     //Kunai Proc
                     break;
                 case 2:
                     //Turn 3
                     //TODO: Reprogram
-                    addToDeck(new EnRebound(), false);
-                    addToDeck(new EnBeamCell(), false);
-                    addToDeck(new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnRebound(), false);
+                    addToList(cardsList, new EnBeamCell(), false);
+                    addToList(cardsList, new EnStrikeBlue(), false);
                     break;
                 case 3:
                     //Turn 4
-                    addToDeck(new EnBeamCell(), false);
-                    addToDeck(new EnClaw(), extraUpgrades);
-                    addToDeck(new EnDefendBlue(), true);
-                    addToDeck(new EnDefendBlue(), false);
+                    addToList(cardsList, new EnBeamCell(), false);
+                    addToList(cardsList, new EnClaw(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), true);
+                    addToList(cardsList, new EnDefendBlue(), false);
                     //Kunai Proc
                     break;
             }

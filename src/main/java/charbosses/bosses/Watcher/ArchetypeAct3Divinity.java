@@ -86,39 +86,39 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnStrikePurple(), false);
-        addToDeck(new EnDevotion(), false);
-        addToDeck(new EnWrithe(), false);
+        addToList(cardsList, new EnStrikePurple(), false);
+        addToList(cardsList, new EnDevotion(), false);
+        addToList(cardsList, new EnWrithe(), false);
 
         //Turn 2
-        addToDeck(new EnSashWhip(), extraUpgrades);
-        addToDeck(new EnStrikePurple(), false);
-        addToDeck(new EnDefendPurple(), true);
+        addToList(cardsList, new EnSashWhip(), extraUpgrades);
+        addToList(cardsList, new EnStrikePurple(), false);
+        addToList(cardsList, new EnDefendPurple(), true);
 
         //Turn 3
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnWaveOfTheHand(), false);
-        addToDeck(new EnWallop(), extraUpgrades);
+        addToList(cardsList, new EnDefendPurple(), false);
+        addToList(cardsList, new EnWaveOfTheHand(), false);
+        addToList(cardsList, new EnWallop(), extraUpgrades);
 
         //Turn 4
-        addToDeck(new EnProtect(), true);
-        addToDeck(new EnStrikePurple(), false);
-        addToDeck(new EnStrikePurple(), false);
+        addToList(cardsList, new EnProtect(), true);
+        addToList(cardsList, new EnStrikePurple(), false);
+        addToList(cardsList, new EnStrikePurple(), false);
 
         //Turn 5
-        addToDeck(new EnFasting(), extraUpgrades);
-        addToDeck(new EnCrushJoints(), false);
-        addToDeck(new EnBrilliance(), false);
+        addToList(cardsList, new EnFasting(), extraUpgrades);
+        addToList(cardsList, new EnCrushJoints(), false);
+        addToList(cardsList, new EnBrilliance(), false);
 
         //Turn 6
-        addToDeck(new EnProtect(), true);
-        addToDeck(new EnWallop(), false);
-        addToDeck(new EnDefendPurple(), false);
+        addToList(cardsList, new EnProtect(), true);
+        addToList(cardsList, new EnWallop(), false);
+        addToList(cardsList, new EnDefendPurple(), false);
 
         //Turn 7
-        addToDeck(new EnBattleHymn(), false);
-        addToDeck(new EnFasting(), true);
-        addToDeck(new EnDevotion(), false);
+        addToList(cardsList, new EnBattleHymn(), false);
+        addToList(cardsList, new EnFasting(), true);
+        addToList(cardsList, new EnDevotion(), false);
     }
 
 

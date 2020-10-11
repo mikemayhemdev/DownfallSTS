@@ -64,34 +64,34 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnBane());
-        addToDeck(new EnDeadlyPoison(), extraUpgrades);
-        addToDeck(new EnDodgeAndRoll(), extraUpgrades);
+        addToList(cardsList, new EnBane());
+        addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
+        addToList(cardsList, new EnDodgeAndRoll(), extraUpgrades);
 
         //Turn 2
-        addToDeck(new EnNoxiousFumes(), true);
-        addToDeck(new EnBouncingFlask(), true);
-        addToDeck(new EnDefendGreen());
+        addToList(cardsList, new EnNoxiousFumes(), true);
+        addToList(cardsList, new EnBouncingFlask(), true);
+        addToList(cardsList, new EnDefendGreen());
 
         //Turn 3
-        addToDeck(new EnFootwork(), true);
-        addToDeck(new EnDeadlyPoison(), true);
-        addToDeck(new EnStrikeGreen(), true);
+        addToList(cardsList, new EnFootwork(), true);
+        addToList(cardsList, new EnDeadlyPoison(), true);
+        addToList(cardsList, new EnStrikeGreen(), true);
 
         //Turn 4
-        addToDeck(new EnBouncingFlask(), extraUpgrades);
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnBane(), true);
+        addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
+        addToList(cardsList, new EnDefendGreen());
+        addToList(cardsList, new EnBane(), true);
 
         //Turn 5
-        addToDeck(new EnWraithForm(), true);
-        addToDeck(new EnCatalyst(), true);
-        addToDeck(new EnDefendGreen(), true);
+        addToList(cardsList, new EnWraithForm(), true);
+        addToList(cardsList, new EnCatalyst(), true);
+        addToList(cardsList, new EnDefendGreen(), true);
 
         //Turn 6
-        addToDeck(new EnNeutralize(), true);
-        addToDeck(new EnCripplingCloud());
-        addToDeck(new EnDefendGreen());
+        addToList(cardsList, new EnNeutralize(), true);
+        addToList(cardsList, new EnCripplingCloud());
+        addToList(cardsList, new EnDefendGreen());
     }
 
 

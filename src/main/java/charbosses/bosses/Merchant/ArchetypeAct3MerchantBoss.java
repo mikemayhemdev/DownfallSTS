@@ -41,29 +41,29 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnPanicButton(), extraUpgrades);
-        addToDeck(new EnDramaticEntrance(), extraUpgrades);
-        addToDeck(new EnTheBomb(), false);
+        addToList(cardsList, new EnPanicButton(), extraUpgrades);
+        addToList(cardsList, new EnDramaticEntrance(), extraUpgrades);
+        addToList(cardsList, new EnTheBomb(), false);
 
         //Turn 2
-        addToDeck(new EnPanacea(), extraUpgrades);
-        addToDeck(new EnApotheosis(), true);
-        addToDeck(new EnHandOfGreed(), false);
+        addToList(cardsList, new EnPanacea(), extraUpgrades);
+        addToList(cardsList, new EnApotheosis(), true);
+        addToList(cardsList, new EnHandOfGreed(), false);
 
         //Turn 3
-        addToDeck(new EnSadisticNature(), false);
-        addToDeck(new EnTrip(), false);
-        addToDeck(new EnGoodInstincts(), false);
+        addToList(cardsList, new EnSadisticNature(), false);
+        addToList(cardsList, new EnTrip(), false);
+        addToList(cardsList, new EnGoodInstincts(), false);
 
         //Turn 4
-        addToDeck(new EnGoodInstincts(), false);
-        addToDeck(new EnBlind(), false);
-        addToDeck(new EnSwiftStrike(), false);
+        addToList(cardsList, new EnGoodInstincts(), false);
+        addToList(cardsList, new EnBlind(), false);
+        addToList(cardsList, new EnSwiftStrike(), false);
 
         //Turn 5
-        addToDeck(new EnPanacea(), false);
-        addToDeck(new EnSwiftStrike(), false);
-        addToDeck(new EnMagnetism(), false);
+        addToList(cardsList, new EnPanacea(), false);
+        addToList(cardsList, new EnSwiftStrike(), false);
+        addToList(cardsList, new EnMagnetism(), false);
 
 
     }

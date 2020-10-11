@@ -107,72 +107,72 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     //4 Energy
-                    addToDeck(new EnCrushJoints(), false);
-                    addToDeck(new EnDefendPurple(), true);
-                    addToDeck(new EnReachHeaven(), false);
+                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnReachHeaven(), false);
                     break;
                 case 1:
                     //5 Energy
-                    addToDeck(new EnSashWhip(), extraUpgrades);
-                    addToDeck(new EnDefendPurple(), true);
-                    addToDeck(new EnThroughViolence(), false);
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnThroughViolence(), false);
                     break;
                 case 2:
                     //6 Energy
-                    addToDeck(new EnWaveOfTheHand(), extraUpgrades);
-                    addToDeck(new EnDefendPurple(), false);
-                    addToDeck(new EnWallop(), true);
+                    addToList(cardsList, new EnWaveOfTheHand(), extraUpgrades);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnWallop(), true);
                     break;
                 case 3:
                     //7 Energy
-                    addToDeck(new EnRagnarok(), false);
-                    addToDeck(new EnReachHeaven(), false);
-                    addToDeck(new EnDefendPurple(), true);
+                    addToList(cardsList, new EnRagnarok(), false);
+                    addToList(cardsList, new EnReachHeaven(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);
                     break;
                 case 4:
                     //8 Energy
-                    addToDeck(new EnStrikePurple(), false);
-                    addToDeck(new EnStrikePurple(), false);
-                    addToDeck(new EnThroughViolence(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnThroughViolence(), false);
                     break;
             }
         } else {
             switch (turn) {
                 case 0:
                     //Turn 1  - NO ATTACKS!
-                    addToDeck(new EnLikeWater(), false);  //removed
-                    addToDeck(new EnDefendPurple(), false);
-                    addToDeck(new EnStrikePurple(), false);  //not used
+                    addToList(cardsList, new EnLikeWater(), false);  //removed
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);  //not used
                     break;
                 case 1:
                     //Turn 2   - NO ATTACKS!  3 Energy (Art of War)
-                    addToDeck(new EnWaveOfTheHand(), extraUpgrades);
-                    addToDeck(new EnDefendPurple(), true);
-                    addToDeck(new EnDefendPurple(), false);  //not used
+                    addToList(cardsList, new EnWaveOfTheHand(), extraUpgrades);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnDefendPurple(), false);  //not used
                     break;
                 case 2:
                     //Turn 2   - 3 Energy (Art of War)
-                    addToDeck(new EnCrushJoints(), false);
-                    addToDeck(new EnReachHeaven(), false);
-                    addToDeck(new EnRagnarok(), false);  //not used
+                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnReachHeaven(), false);
+                    addToList(cardsList, new EnRagnarok(), false);  //not used
                     break;
                 case 3:
                     //Turn 4
-                    addToDeck(new EnReachHeaven(), false);
-                    addToDeck(new EnSashWhip(), extraUpgrades);  //not used
-                    addToDeck(new EnThroughViolence(), false);  //not used
+                    addToList(cardsList, new EnReachHeaven(), false);
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);  //not used
+                    addToList(cardsList, new EnThroughViolence(), false);  //not used
                     break;
                 case 4:
                     //Turn 5   NO ATTACKS!
-                    addToDeck(new EnLikeWater(), extraUpgrades);  //removed
-                    addToDeck(new EnDefendPurple(), true);
-                    addToDeck(new EnWallop(), true);  //not used
+                    addToList(cardsList, new EnLikeWater(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnWallop(), true);  //not used
                     break;
                 case 5:
                     //Turn 6  3 energy (Art of War)
-                    addToDeck(new EnDevaForm(), true);  //removed
-                    addToDeck(new EnThroughViolence(), false);
-                    addToDeck(new EnStrikePurple(), false);  //not used
+                    addToList(cardsList, new EnDevaForm(), true);  //removed
+                    addToList(cardsList, new EnThroughViolence(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);  //not used
                     break;
             }
         }
