@@ -53,9 +53,6 @@ public class EnemyAccuracyPower extends AbstractPower {
                     c.baseDamage = 6 + this.amount;
                 }
             }
-            if (c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
-                c.baseDamage = 4 + this.amount;
-            }
         }
         /*
         for (AbstractCard c : AbstractCharBoss.boss.drawPile.group) {
@@ -106,9 +103,6 @@ public class EnemyAccuracyPower extends AbstractPower {
                 } else {
                     c.baseDamage = 6 + this.amount;
                 }
-            }
-            if (c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
-                c.baseDamage = 4 + this.amount;
             }
         }
     }

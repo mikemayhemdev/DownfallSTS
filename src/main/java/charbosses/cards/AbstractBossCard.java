@@ -319,7 +319,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (m instanceof AbstractCharBoss) {
-            /*
+
             AbstractCharBoss cB = (AbstractCharBoss) m;
 
             if ((this.type == CardType.STATUS) && (this.costForTurn < -1) &&
@@ -331,7 +331,7 @@ public abstract class AbstractBossCard extends AbstractCard {
                     (cB.hasRelic("Blue Candle"))) {
                 return true;
             }
-            */
+
             if (this.type == CardType.CURSE) return false;
             if (this.type == CardType.STATUS) return false;
 
@@ -443,7 +443,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     private void updateIntent() {
         this.bobEffect.update();
-        this.intentDmg = this.damage;
+        //this.intentDmg = this.damage;
         if (this.intentAlpha != this.intentAlphaTarget && this.intentAlphaTarget == 1.0F) {
             this.intentAlpha += Gdx.graphics.getDeltaTime();
             if (this.intentAlpha > this.intentAlphaTarget) {
@@ -631,7 +631,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     private Texture getAttackIntentTip() {
         int tmp;
-        if (this.isMultiDamage) {
+        if (this.isMultiDamage || this.intentMultiAmt > 0) {
             tmp = this.intentDmg * this.intentMultiAmt;
         } else {
             tmp = this.intentDmg;
@@ -663,7 +663,12 @@ public abstract class AbstractBossCard extends AbstractCard {
         //bossLighten();
         refreshIntentHbLocation();
         this.intentParticleTimer = 0.5F;
-        this.intentBaseDmg = this.damage;
+        calculateCardDamage(null);
+        this.intentBaseDmg = this.intentDmg = (this.damage + customIntentModifiedDamage());
+        SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
+
+        SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
+
         if (this.damage > -1) {
             this.calculateCardDamage(null);
             if (this.isMultiDamage) {
@@ -682,6 +687,10 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.showIntent = true;
 
         //SlimeboundMod.logger.info(this.name + " intent made.");
+    }
+
+    public int customIntentModifiedDamage(){
+        return 0;
     }
 
     public void destroyIntent() {
@@ -766,7 +775,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     protected Texture getAttackIntent() {
         int tmp;
-        if (this.isMultiDamage) {
+        if (this.isMultiDamage || this.intentMultiAmt > 0) {
             tmp = this.intentDmg * this.intentMultiAmt;
         } else {
             tmp = this.intentDmg;
