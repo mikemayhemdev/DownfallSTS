@@ -30,7 +30,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
     }
 
     public static int countCards() {
-        int count = 0;
+        int count = 6;
         /*
         for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
             if (isStrike(c)) {
