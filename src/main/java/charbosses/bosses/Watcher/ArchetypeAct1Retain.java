@@ -1,16 +1,25 @@
 package charbosses.bosses.Watcher;
 
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
+import charbosses.cards.blue.EnStreamline;
+import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.purple.*;
 import charbosses.relics.CBR_CloakClasp;
 import charbosses.relics.CBR_NeowsBlessing;
 import charbosses.relics.CBR_TungstenRod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.Clumsy;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
 public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
+
+
+    private AbstractCard retainedcardsWindmillStrike = new EnWindmillStrike();
+    private AbstractCard retainedcardsProtect = new EnProtect();
+    private AbstractCard retainedcardsFlyingSleeves = new EnFlyingSleeves();
+    private AbstractCard retainedcardsSandsOfTime = new EnSandsOfTime();
 
     public ArchetypeAct1Retain() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
@@ -72,6 +81,7 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
 
         /////   RELICS   /////
 
+
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_CloakClasp());
         //addRelic(new CBR_IceCream());
@@ -89,26 +99,26 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
                 case 0:
 
                     //Turn 1
-                    addToList(cardsList, new EnProtect(), true);
+                    addToList(cardsList, retainedcardsProtect, true);
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnSashWhip(), extraUpgrades);
                     break;
                 case 1:
                     //Turn 2
-                    addToList(cardsList, new EnWindmillStrike(), false);
+                    addToList(cardsList, retainedcardsWindmillStrike, false);
                     addToList(cardsList, new EnDefendPurple(), false);
                     addToList(cardsList, new EnDefendPurple(), false);
                     break;
                 case 2:
                     //Turn 3
                     addToList(cardsList, new EnVigilance(), false);
-                    addToList(cardsList, new EnSandsOfTime(), false);
+                    addToList(cardsList, retainedcardsSandsOfTime, false);
                     addToList(cardsList, new EnStrikePurple(), false);
                     break;
                 case 3:
                     addToList(cardsList, new EnDefendPurple(), true);
                     addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnFlyingSleeves(), extraUpgrades);
+                    addToList(cardsList, retainedcardsFlyingSleeves, extraUpgrades);
                     break;
             }
         } else {
@@ -117,21 +127,21 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
                     //Turn 1
                     addToList(cardsList, new EnEstablishment(), true);  //removed
                     addToList(cardsList, new EnTalkToTheHand(), extraUpgrades); //removed
-                    addToList(cardsList, new EnProtect(), true);
+                    addToList(cardsList, retainedcardsProtect, true);
                     break;
                 case 1:
                     //Turn 2
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnSashWhip(), extraUpgrades);
-                    addToList(cardsList, new EnWindmillStrike(), false);  //not used
+                    addToList(cardsList, retainedcardsWindmillStrike, false);  //not used
                     break;
                 case 2:
                     //Turn 3
                     //Protect Retained 0 cost - use this turn
                     //Windmill Retainde 1 cost
                     addToList(cardsList, new EnVigilance(), false);
-                    addToList(cardsList, new EnSandsOfTime(), false);  //not used
-                    //TODO - Clumsy  //not used  //removed
+                    addToList(cardsList, retainedcardsSandsOfTime, false);  //not used
+                    addToList(cardsList, new EnClumsy(), false);
                     break;
                 case 3:
                     //Turn 4
@@ -139,7 +149,7 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
                     //Windmill Retained 0-cost - use this turn
                     addToList(cardsList, new EnDefendPurple(), true);
                     addToList(cardsList, new EnDefendPurple(), false);
-                    addToList(cardsList, new EnFlyingSleeves(), extraUpgrades);  //not used
+                    addToList(cardsList, retainedcardsFlyingSleeves, extraUpgrades);  //not used
                     break;
                 case 4:
                     //Turn 5

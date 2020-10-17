@@ -57,15 +57,15 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
         addRelic(new CBR_PhilosopherStone());
         addRelic(new CBR_ClockworkSouvenir());
         addRelic(new CBR_TungstenRod());
-       // addRelic(new CBR_Pocketwatch());
-       // addRelic(new CBR_SmilingMask());
-       // addRelic(new CBR_DesignerInSpire());
-       // addRelic(new CBR_FrozenEgg());
-       // addRelic(new CBR_PenNib());
+        // addRelic(new CBR_Pocketwatch());
+        // addRelic(new CBR_SmilingMask());
+        // addRelic(new CBR_DesignerInSpire());
+        // addRelic(new CBR_FrozenEgg());
+        // addRelic(new CBR_PenNib());
         //addRelic(new CBR_OldBeggar());
 
 
-
+    }
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
