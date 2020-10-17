@@ -54,6 +54,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int energyGeneratedIfPlayed = 0;
     public static final String[] TEXT;
 
+    public int manualCustomDamageModifier = 0;
+
 
     private static final float INTENT_HB_W = 64.0F * Settings.scale;
     public Hitbox intentHb = new Hitbox(INTENT_HB_W, INTENT_HB_W);
@@ -664,10 +666,11 @@ public abstract class AbstractBossCard extends AbstractCard {
         refreshIntentHbLocation();
         this.intentParticleTimer = 0.5F;
         calculateCardDamage(null);
-        this.intentBaseDmg = this.intentDmg = (this.damage + customIntentModifiedDamage());
+        this.intentBaseDmg = this.intentDmg = (this.damage + customIntentModifiedDamage() + manualCustomDamageModifier);
         SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
 
         SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
+        SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier);
 
         if (this.damage > -1) {
             this.calculateCardDamage(null);
