@@ -2,12 +2,15 @@ package charbosses.bosses.Silent;
 
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.anticards.Antidote;
+import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.green.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_DesignerInSpire;
 import charbosses.relics.EventRelics.CBR_OldBeggar;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
@@ -51,54 +54,97 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_Orichalcum());
-        addRelic(new CBR_SmilingMask());
-        addRelic(new CBR_DesignerInSpire());
         addRelic(new CBR_PhilosopherStone());
         addRelic(new CBR_ClockworkSouvenir());
-        addRelic(new CBR_FrozenEgg());
-        addRelic(new CBR_PenNib());
-        addRelic(new CBR_OldBeggar());
-        addRelic(new CBR_Pocketwatch());
         addRelic(new CBR_TungstenRod());
+       // addRelic(new CBR_Pocketwatch());
+       // addRelic(new CBR_SmilingMask());
+       // addRelic(new CBR_DesignerInSpire());
+       // addRelic(new CBR_FrozenEgg());
+       // addRelic(new CBR_PenNib());
+        //addRelic(new CBR_OldBeggar());
 
-
-        /////   CARDS   /////
-        /*
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnBane());
-        addToDeck(new EnDeadlyPoison(), extraUpgrades);
-        addToDeck(new EnDodgeAndRoll(), extraUpgrades);
-
-        //Turn 2
-        addToDeck(new EnNoxiousFumes(), true);
-        addToDeck(new EnBouncingFlask(), true);
-        addToDeck(new EnDefendGreen());
-
-        //Turn 3
-        addToDeck(new EnFootwork(), true);
-        addToDeck(new EnDeadlyPoison(), true);
-        addToDeck(new EnStrikeGreen(), true);
-
-        //Turn 4
-        addToDeck(new EnBouncingFlask(), extraUpgrades);
-        addToDeck(new EnDefendGreen());
-        addToDeck(new EnBane(), true);
-
-        //Turn 5
-        addToDeck(new EnWraithForm(), true);
-        addToDeck(new EnCatalyst(), true);
-        addToDeck(new EnDefendGreen(), true);
-
-        //Turn 6
-        addToDeck(new EnNeutralize(), true);
-        addToDeck(new EnCripplingCloud());
-        addToDeck(new EnDefendGreen());
-        */
-    }
 
 
 
     @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnNeutralize(), true);
+                    addToList(cardsList, new EnBouncingFlask(), true);
+                    addToList(cardsList, new EnBane());
+                    break;
+                case 1:
+                    addToList(cardsList, new EnBouncingFlask(), true);
+                    addToList(cardsList, new EnDodgeAndRoll(), extraUpgrades);
+                    addToList(cardsList, new EnDefendGreen());
+                    break;
+                case 2:
+                    addToList(cardsList, new EnBane(), true);
+                    addToList(cardsList, new EnStrikeGreen(), true);
+                    addToList(cardsList, new EnDeadlyPoison(), true);
+                    break;
+                case 3:
+                    addToList(cardsList, new EnCripplingCloud());
+                    addToList(cardsList, new EnDefendGreen(), true);
+                    addToList(cardsList, new EnDefendGreen());  //not played
+                    break;
+                case 4:
+                    addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeGreen(), true);
+                    addToList(cardsList, new EnDefendGreen());
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
+                    addToList(cardsList, new EnDodgeAndRoll(), extraUpgrades);
+                    addToList(cardsList, new EnBane());
+                    break;
+                case 1:
+                    addToList(cardsList, new EnNoxiousFumes(), true);  //removed
+                    addToList(cardsList, new EnBouncingFlask(), true);
+                    addToList(cardsList, new EnDefendGreen()); //not played
+                    break;
+                case 2:
+                    addToList(cardsList, new EnFootwork(), true);  //removed
+                    addToList(cardsList, new EnDeadlyPoison(), true);
+                    addToList(cardsList, new EnStrikeGreen(), true);
+                    break;
+                case 3:
+                    addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
+                    addToList(cardsList, new EnBane(), true);
+                    addToList(cardsList, new EnDefendGreen());  //not played
+                    break;
+                case 4:
+                    addToList(cardsList, new EnWraithForm(), true);  //removed
+                    addToList(cardsList, new EnStrikeGreen(), true); //not played
+                    addToList(cardsList, new EnDefendGreen(), true); //not played
+                    break;
+                case 5:
+                    addToList(cardsList, new EnNeutralize(), true);
+                    addToList(cardsList, new EnCripplingCloud());
+                    addToList(cardsList, new EnDefendGreen());
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) looped = true;
+        else if (turn > 4 && looped) {
+            turn = 0;
+        }
+        return cardsList;
+    }
+
+
+    @Override
+    //TODO - Switch this to poison skull relic
     public void initializeBonusRelic() {
         addRelic(new CBR_HappyFlower());
     }

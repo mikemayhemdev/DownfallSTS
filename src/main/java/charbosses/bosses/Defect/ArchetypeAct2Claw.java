@@ -3,11 +3,15 @@ package charbosses.bosses.Defect;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnPain;
+import charbosses.cards.curses.EnShame;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Bandits;
 import charbosses.relics.EventRelics.CBR_OminousForge;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
 
@@ -41,55 +45,98 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_Kunai());
-        addRelic(new CBR_WarPaint());
-        addRelic(new CBR_OminousForge());
-        addRelic(new CBR_WarpedTongs());
-        addRelic(new CBR_Bandits());
+        addRelic(new CBR_BlueCandle());
         addRelic(new CBR_RedMask());
-        addRelic(new CBR_DollysMirror(CardCrawlGame.languagePack.getCardStrings("Gash").NAME));
-
-
-
-        /////   CARDS   /////
-        /*
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnBootSequence(), false);
-        addToDeck(new EnClaw(), true);
-        addToDeck(new EnStrikeBlue(), false);
-
-        //Turn 2
-        addToDeck(new EnLeap(), extraUpgrades);
-        addToDeck(new EnPain(), false);
-        addToDeck(new EnZap(), true);
-
-        //Turn 3
-        addToDeck(new EnRebound(), false);
-        addToDeck(new EnClaw(), extraUpgrades);
-        addToDeck(new EnDefendBlue(), false);
-
-        //Turn 4
-        //Top Deck Claw
-        addToDeck(new EnStrikeBlue(), true);
-        addToDeck(new EnDualcast(), false);
-
-        //Turn 5
-        addToDeck(new EnAutoShields(), true);
-        addToDeck(new EnClaw(), true);
-        addToDeck(new EnChargeBattery(), false);
-
-        //Turn 6
-        addToDeck(new EnEchoForm(), true);
-        addToDeck(new EnDefendBlue(), false);
-        addToDeck(new EnMachineLearning(), extraUpgrades);
-
-        */
-
 
 
     }
 
+
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnBootSequence(), false);  // removed
+                    addToList(cardsList, new EnClaw(), true);
+                    addToList(cardsList, new EnMachineLearning(), extraUpgrades);  // removed
+                    break;
+                case 1:
+                    //Turn 2
+                    addToList(cardsList, new EnLeap(), extraUpgrades);
+                    addToList(cardsList, new EnPain(), false);  //removed
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    addToList(cardsList, new EnClaw(), true);
+                    break;
+                case 2:
+                    //Turn 3
+                    addToList(cardsList, new EnBeamCell(), false);
+                    addToList(cardsList, new EnRebound(), false);
+                    addToList(cardsList, new EnClaw(), extraUpgrades);
+                    //TODO: Reprogram
+                    //Kunai Proc
+                    break;
+                case 3:
+                    //Turn 4
+                    addToList(cardsList, new EnClaw(), extraUpgrades);  //Rebounded
+                    addToList(cardsList, new EnChargeBattery(), false);
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnShame(), false);  //removed
+                    break;
+                case 4:
+                    //Turn 5
+                    addToList(cardsList, new EnEchoForm(), true);  // removed
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnClaw(), true);
+                    addToList(cardsList, new EnLeap(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    //Kunai Proc
+                    break;
+                case 1:
+                    //Turn 2
+                    addToList(cardsList, new EnClaw(), extraUpgrades);
+                    addToList(cardsList, new EnChargeBattery(), false);
+                    addToList(cardsList, new EnStrikeBlue(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    //Kunai Proc
+                    break;
+                case 2:
+                    //Turn 3
+                    //TODO: Reprogram
+                    addToList(cardsList, new EnRebound(), false);
+                    addToList(cardsList, new EnBeamCell(), false);
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    break;
+                case 3:
+                    //Turn 4
+                    addToList(cardsList, new EnBeamCell(), false);
+                    addToList(cardsList, new EnClaw(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), true);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    //Kunai Proc
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 4) {
+            if (!looped) looped = true;
+            else turn = 0;
+        }
+        return cardsList;
+    }
+
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_IceCream());
+        addRelic(new CBR_Anchor());
     }
 }

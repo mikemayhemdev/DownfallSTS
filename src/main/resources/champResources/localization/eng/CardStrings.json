@@ -34,7 +34,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sword Sigil",
-    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: Repeat !M! times, then Exhaust."
+    "DESCRIPTION": "champ:Technique. NL *Gladiator champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:FocusedGladiator": {
     "NAME": "Focus: Gladiator",
@@ -42,21 +42,21 @@
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike."
+    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike."
   },
   "champ:Balance": {
     "NAME": "Balance",
     "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
     "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random Upgraded champ:Defensive champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random Upgraded champ:Gladiator champ:Combo to your hand."
+      "champ:Defensive champ:Opener. NL Add a random *Defensive champ:Combo to your hand.",
+      "champ:Gladiator champ:Opener. NL Add a random *Gladiator champ:Combo to your hand.",
+      "champ:Defensive champ:Opener. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
+      "champ:Gladiator champ:Opener. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
     ]
   },
   "champ:DefensiveShout": {
@@ -66,7 +66,7 @@
   },
   "champ:ShieldSigil": {
     "NAME": "Shield Sigil",
-    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Repeat !M! times, then Exhaust."
+    "DESCRIPTION": "champ:Technique. NL *Defensive champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
@@ -78,13 +78,13 @@
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Gladiator champ:Combo: Gain !M! champ:Counterstrike. NL Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each.",
+    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Gain !M! champ:Counterstrike. NL Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
 
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL champ:Berserker champ:Combo: Gain Block equal to your champ:Resolve.",
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL *Berserker champ:Combo: Gain Block equal to your champ:Resolve.",
     "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
   },
   "champ:Aggression": {
@@ -92,10 +92,10 @@
     "DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
     "UPGRADE_DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random champ:Gladiator champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random Upgraded champ:Berserker champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random Upgraded champ:Gladiator champ:Combo to your hand."
+      "champ:Berserker champ:Opener. NL Add a random *Berserker champ:Combo to your hand.",
+      "champ:Gladiator champ:Opener. NL Add a random *Gladiator champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random Upgraded *Berserker champ:Combo to your hand.",
+      "champ:Gladiator champ:Opener. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
     ]
   },
   "champ:BerserkersShout": {
@@ -105,16 +105,16 @@
   },
   "champ:RageSigil": {
     "NAME": "Rage Sigil",
-    "DESCRIPTION": "champ:Technique NL champ:Berserker champ:Combo: Repeat !M! times, then Exhaust."
+    "DESCRIPTION": "champ:Technique NL *Berserker champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL champ:Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL *Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat if you have a champ:Technique in hand.",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL champ:Gladiator champ:Combo: Repeat 2 times if you have a champ:Technique in hand."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Repeat if you have a champ:Technique in hand.",
+    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Repeat 2 times if you have a champ:Technique in hand."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
@@ -126,31 +126,31 @@
     "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random champ:Combo card to your hand of the chosen Stance.",
     "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Defensive champ:Opener. NL Add a random champ:Defensive champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random champ:Berserker champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random Upgraded champ:Defensive champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random Upgraded champ:Berserker champ:Combo to your hand."
+      "champ:Defensive champ:Opener. NL Add a random *Defensive champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random *Berserker champ:Combo to your hand.",
+      "champ:Defensive champ:Opener. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
+      "champ:Berserker champ:Opener. NL Add a random Upgraded *Berserker champ:Combo to your hand."
     ]
   },
   "champ:Circumvent": {
     "NAME": "Circumvent",
-    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 3 champ:Counterstrike. NL Gain !B! Block. NL champ:Defensive champ:Combo: Gain Block equal to your champ:Counterstrike."
+    "DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain 3 champ:Counterstrike. NL Gain !B! Block. NL *Defensive champ:Combo: Gain Block equal to your champ:Counterstrike."
   },
   "champ:SkillfulDodge": {
     "NAME": "Skillful Dodge",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Increase this card's Block and champ:Counterstrike by !cool! this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counterstrike. NL *Defensive champ:Combo: Increase this card's Block and champ:Counterstrike by !cool! this combat."
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL champ:Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
 
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
-    "DESCRIPTION": "champ:Technique. NL champ:Defensive champ:Combo: Double your champ:Counterstrike.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL champ:Defensive champ:Combo: Double your champ:Counterstrike."
+    "DESCRIPTION": "champ:Technique. NL *Defensive champ:Combo: Double your champ:Counterstrike.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !M! champ:Counterstrike. NL *Defensive champ:Combo: Double your champ:Counterstrike."
   },
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
@@ -168,7 +168,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your Block. NL You can't gain Block next turn. NL champ:Defensive champ:Combo: You can gain Block next turn.",
+    "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your Block. NL You can't gain Block next turn. NL *Defensive champ:Combo: You can gain Block next turn.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "champ:FalseCounter": {
@@ -195,16 +195,16 @@
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak. NL champ:Gladiator champ:Combo: Apply 2 Vulnerable.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 2 Weak. NL champ:Gladiator champ:Combo: Apply 2 Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable."
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "champ:Technique. NL champ:Gladiator champ:Combo: If the enemy intends to attack, gain !M! Dexterity."
+    "DESCRIPTION": "champ:Technique. NL *Gladiator champ:Combo: If the enemy intends to attack, gain !M! Dexterity."
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL champ:Gladiator champ:Combo: Increase this card's damage and Block by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL *Gladiator champ:Combo: Increase this card's damage and Block by !M! this combat."
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
@@ -223,11 +223,11 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Blade Flurry",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL champ:Gladiator champ:Combo: Repeat !M! more times."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL Repeat for each champ:Technique in hand. NL *Gladiator champ:Combo: Repeat !M! more times."
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. NL You can't attack next turn. NL champ:Berserker champ:Combo: You can attack next turn."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage !M! times. NL You can't attack next turn. NL *Berserker champ:Combo: You can attack next turn."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
@@ -247,12 +247,12 @@
   },
   "champ:Shatter": {
     "NAME": "Shatter",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block before dealing damage.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL champ:Berserker champ:Combo: Remove the enemy's Block and Artifact before dealing damage."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL *Berserker champ:Combo: Remove the enemy's Block before dealing damage.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage. NL *Berserker champ:Combo: Remove the enemy's Block and Artifact before dealing damage."
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Increase this card's damage and champ:Fatigue by !cool! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Increase this card's damage and champ:Fatigue by !cool! this combat."
   },
   "champ:VampiricStrike": {
     "NAME": "Vampiric Strike",
@@ -260,8 +260,8 @@
   },
   "champ:AdrenalArmor": {
     "NAME": "Adrenal Armor",
-    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Fatigue !M!. NL champ:Berserker champ:Combo: Play this twice."
+    "DESCRIPTION": "Gain !B! Block. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Play this twice.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Play this twice."
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
@@ -275,7 +275,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "Crown Throw",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Draw !M! fewer cards next turn. NL champ:Gladiator champ:Combo: Don't draw fewer cards."
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL Draw !M! fewer cards next turn. NL *Gladiator champ:Combo: Don't draw fewer cards."
   },
   "champ:FightOn": {
     "NAME": "Fight On",
@@ -283,7 +283,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL champ:Berserker champ:Combo: Play this twice. "
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL *Berserker champ:Combo: Play this twice. "
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -313,8 +313,8 @@
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "champ:Berserker champ:Combo: Deal !D! damage X times. NL champ:Defensive champ:Combo: Gain !B! Block X times. NL champ:Gladiator champ:Combo: Draw X cards and gain X [E] .",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Combo: Deal !D! damage X+1 times. NL champ:Defensive champ:Combo: Gain !B! Block X+1 times. NL champ:Gladiator champ:Combo: Draw X+1 cards and gain X+1 [E] ."
+    "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times. NL *Gladiator champ:Combo: Draw X cards and gain X [E] .",
+    "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X+1 times. NL *Defensive champ:Combo: Gain !B! Block X+1 times. NL *Gladiator champ:Combo: Draw X+1 cards and gain X+1 [E] ."
   },
   "champ:Improvising": {
     "NAME": "Improvising",
@@ -335,7 +335,7 @@
   "champ:Duel": {
     "NAME": "Duel",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain !B! Block. NL Deal !D! damage. NL If there's only one enemy, play this twice."
   },
   "champ:DancingMaster": {
     "NAME": "Dancing Master",

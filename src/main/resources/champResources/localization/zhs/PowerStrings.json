@@ -1,168 +1,168 @@
 {
   "champ:CounterPower": {
-    "NAME": "Counterstrike",
+    "NAME": "反击",
     "DESCRIPTIONS": [
-      "The next time you receive #yAttack damage, deal #b",
-      " damage back."
+      "下次你受到 #y攻击 伤害时，反击 #b",
+      " 点伤害。"
     ]
   },
   "champ:ResolvePower": {
-    "NAME": "Resolve",
+    "NAME": "决心",
     "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b5 Resolve you have. At the end of combat, heal HP equal to your Resolve."
+      "每有 #b5 层时你拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数的生命。"
     ]
   },
   "champ:FocusedGladPower": {
-    "NAME": "Gladiator Boost!",
+    "NAME": "角斗士",
     "DESCRIPTIONS": [
-      "Until you exit #yGladiator, #yTechniques draw #b",
-      " additional card.",
-      " additional cards."
+      "直到你退出 #y角斗 前， #y技术 将额外抽 #b",
+      " 张牌。",
+      " 张牌。"
     ]
   },
   "champ:FocusedDefPower": {
-    "NAME": "Defensive Boost!",
+    "NAME": "防反家",
     "DESCRIPTIONS": [
-      "Until you exit #yDefensive, #yTechniques grant #b",
-      " additional #yCounterstrike."
+      "直到你退出 #y防卫 前， #y技术 将额外获得 #b",
+      " 层 #y反击 。"
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "Berserker Boost!",
+    "NAME": "狂战士",
     "DESCRIPTIONS": [
-      "Until you exit #yBerserker, #yTechniques grant #b",
-      " additional #yResolve."
+      "直到你退出 #y狂战 前， #y技术 将额外获得 #b",
+      " 点 #y决心 。"
     ]
   },
   "champ:EnchantedShieldPower": {
     "NAME": "Enchanted Shield",
     "DESCRIPTIONS": [
-      "Prevent the next time you would lose HP this turn.",
-      "Prevent the next #b",
-      " times you would lose HP this turn."
+      "阻止本回合下一次生命损失。",
+      "阻止本回合下 #b",
+      " 次生命损失。"
     ]
   },
   "champ:ShieldWallPower": {
-    "NAME": "Shield Wall",
+    "NAME": "盾墙",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b",
-      " #yCounterstrike for each card in hand."
+      "在你的回合结束时，每有一张手牌获得 #b",
+      " 层 #y反击 。"
     ]
   },
   "champ:EntangleNextTurnPower": {
-    "NAME": "Sword Thrown",
+    "NAME": "投掷剑刃",
     "DESCRIPTIONS": [
-      "You can't play #yAttacks next turn.",
-      "You can't play #yAttacks for the next #b",
-      " turns."
+      "下回合你不能打出 #y攻击牌 。",
+      "下 #b",
+      " 个回合你不能打出 #y攻击牌 。"
     ]
   },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "Crown Thrown",
+    "NAME": "投掷王冠",
     "DESCRIPTIONS": [
-      "Draw #b",
-      " less card next turn.",
-      " less cards next turn."
+      "下回合少抽 #b",
+      " 张牌。",
+      " 张牌。"
     ]
   },
   "champ:PushThroughPower": {
-    "NAME": "Ignoring Pain",
+    "NAME": "无视伤痛",
     "DESCRIPTIONS": [
-      "You cannot lose HP this turn.",
-      "You cannot lose HP this and the next #b",
-      " turns."
+      "本回合你不会失去生命。",
+      "接下俩的 #b",
+      " 回合内你不会失去生命。"
     ]
   },
   "champ:WorseRupturePower": {
-    "NAME": "Endless Rage",
+    "NAME": "无穷愤火",
     "DESCRIPTIONS": [
-      "Whenever you lose HP on your turn, gain #b",
-      " #yResolve."
+      "每当你在你的回合失去生命时，获得 #b",
+      " 点 #y决心 。"
     ]
   },
   "champ:ImprovisingPower": {
-    "NAME": "Improvising",
+    "NAME": "触类旁通",
     "DESCRIPTIONS": [
-      "The first time each turn you use a #yCombo while not in the correct #yStance, return it to your hand and it costs #b0 until played. #b",
-      " uses left.",
-      "The first #b",
-      " times each turn you use a #yCombo while not in the correct #yStance, return it to your hand and it costs #b0 until played. #b"
+      "每回合第一次打出 #y连段 牌时如果不处于对应的 #y姿态 ，返回手牌且直到打出前耗能为0。还有 #b",
+      " 次。",
+      "每回合第 #b",
+      " 次打出 #y连段 牌时如果不处于对应的 #y姿态 ，返回手牌且直到打出前耗能为0。还有 #b"
     ]
   },
   "champ:CalledShotPower": {
-    "NAME": "Called Shot",
+    "NAME": "宣告",
     "DESCRIPTIONS": [
-      "The next time you play a #yFinisher, do not leave your #yStance or end your turn.",
-      "The next #b",
-      " times you play a #yFinisher, do not leave your #yStance or end your turn."
+      "你打出的下一张 #y终结技 将不会退出 #y姿态 或结束你的回合。",
+      "你打出的下 #b",
+      " 张 #y终结技 将不会退出 #y姿态 或结束你的回合。"
     ]
   },
   "champ:DancingMasterPower": {
-    "NAME": "Dancing Master",
+    "NAME": "战技大师",
     "DESCRIPTIONS": [
-      "Whenever you enter three unique stances in one turn, gain #b",
-      " [E] and draw #b2 cards. Unique stances entered this turn: "
+      "每当你在一回合内进入过三张不同的姿态，获得 #b",
+      " [E] 并抽 #b2 张牌。本回合进入过："
     ]
   },
   "champ:StrikeOfGeniusPower": {
-    "NAME": "Strike of Genius",
+    "NAME": "打击天才",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random #yOpener to your hand. It costs #b0 until played.",
-      "At the start of your turn, add #b",
-      " random #yOpeners to your hand. They cost #b0 until played."
+      "在你的回合开始时，将随机一张 #y起手牌 加入你的手牌。它直到打出前的耗能为0。",
+      "在你的回合开始时，将随机 #b",
+      " 张 #y起手牌 加入你的手牌。它直到打出前的耗能为0。"
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
-    "NAME": "Strike of Genius+",
+    "NAME": "打击天才+",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random #yupgraded #yOpener to your hand. It costs #b0 until played.",
-      "At the start of your turn, add #b",
-      " random #yupgraded #yOpeners to your hand. They cost #b0 until played."
+      "在你的回合开始时，将随机一张已 #y升级 的 #y起手牌 加入你的手牌。它直到打出前的耗能为0。",
+      "在你的回合开始时，将随机 #b",
+      " 张已 #y升级 的 #y起手牌 加入你的手牌。它直到打出前的耗能为0。"
     ]
   },
   "champ:DefensiveStylePower": {
-    "NAME": "Defensive Style",
+    "NAME": "防守战法",
     "DESCRIPTIONS": [
-      "If you start your turn in #yDefensive, gain #b",
-      " #yBlock and #b",
-      " #yCounter."
+      "如果你的回合开始时处于 #y防守 ，获得 #b",
+      " 点 #y格挡 和 #b",
+      " 层 #y反击 。"
     ]
   },
   "champ:GladiatorStylePower": {
-    "NAME": "Gladiator Style",
+    "NAME": "角斗战法",
     "DESCRIPTIONS": [
-      "If you start your turn in #yGladiator, gain #b",
-      " #yMomentary #yStrength and #yDexterity."
+      "如果你的回合开始时处于 #y角斗 ，获得 #b",
+      " 点 #y临时力量 和 #y敏捷 。"
     ]
   },
   "champ:BerserkerStylePower": {
-    "NAME": "Berserker Style",
+    "NAME": "狂暴战法",
     "DESCRIPTIONS": [
-      "If you start your turn in #yBerserker, #yFatigue #b",
-      " and gain [E] ."
+      "如果你的回合开始时处于 #y狂战 ， #y疲劳 #b",
+      " 并获得 [E] 。"
     ]
   },
   "champ:FalseCounterPower": {
-    "NAME": "False Counter",
+    "NAME": "伪反",
     "DESCRIPTIONS": [
-      "Next time #yCounterstrike activates, only lose half your #yCounterstrike.",
-      "The next #b",
-      " times #yCounterstrike activates, only lose half your #yCounterstrike."
+      "下次触发 #y反击 时，失去一半 #y反击 而不是移除。",
+      "下 #b",
+      " 次触发 #y反击 时，失去一半 #y反击 而不是移除。"
     ]
   },
   "champ:EnergizedDurationPower": {
-    "NAME": "Enchanted Crown",
+    "NAME": "附魔金冠",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your next turn.",
-      "Gain [E] at the start of your next #b",
-      " turns."
+      "下一回合开始时获得 [E] 。",
+      "下 #b",
+      " 个回合开始时获得 [E] 。"
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Iron Fortress",
+    "NAME": "钢铁要塞",
     "DESCRIPTIONS": [
-      "Whenever you enter a Stance, gain #b",
-      " Block and #yCounterstrike."
+      "每当你进入 #y姿态 时，获得 #b",
+      " 点 #y格挡 和 #y反击 。"
     ]
   }
 }

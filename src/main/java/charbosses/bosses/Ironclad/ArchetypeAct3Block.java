@@ -1,14 +1,18 @@
 package charbosses.bosses.Ironclad;
 
 import charbosses.cards.anticards.ShieldSmash;
-import charbosses.cards.curses.EnDoubt;
-import charbosses.cards.curses.EnPain;
-import charbosses.cards.curses.EnWrithe;
+import charbosses.cards.colorless.EnBite;
+import charbosses.cards.colorless.EnJAX;
+import charbosses.cards.curses.*;
 import charbosses.cards.red.*;
+import charbosses.cards.status.EnWound;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import theHexaghost.cards.ShadowGuise;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
@@ -52,56 +56,107 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
 
         addRelic(new CBR_ThreadAndNeedle());
         addRelic(new CBR_HornCleat());
-        addRelic(new CBR_MatchAndKeep());   //excuse for having both jug and barricade
         addRelic(new CBR_IncenseBurner());
-        addRelic(new CBR_AncientWriting());   //upgraded all defends
         addRelic(new CBR_CursedKey());  //2 curse remaining in the deck
         addRelic(new CBR_Calipers());
         addRelic(new CBR_OrnamentalFan());
-        addRelic(new CBR_TombOfRedMask());  // gain mask
         addRelic(new CBR_RedMask());  // gremlin mask
+       // addRelic(new CBR_MatchAndKeep());   //excuse for having both jug and barricade
+        //addRelic(new CBR_AncientWriting());   //upgraded all defends
+        //addRelic(new CBR_TombOfRedMask());  // gain mask
 
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        /*
-        addToDeck(new EnMetallicize(), extraUpgrades);
-        addToDeck(new EnIronWave(), true);
-        addToDeck(new EnWrithe(), true);
 
-        //Turn 2
-        addToDeck(new EnIronWave(), false);
-        addToDeck(new EnArmaments(), false);
-        addToDeck(new EnBodySlam(), true);
 
-        //Turn 3
-        addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnPowerThrough(), extraUpgrades);
-        addToDeck(new EnJuggernaut(), false);
-
-        //Turn 4
-        addToDeck(new EnImpervious(), false);
-        addToDeck(new EnBodySlam(), true);
-        addToDeck(new EnMetallicize(), true);
-
-        //Turn 5
-        addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnFlameBarrier(), false);
-        addToDeck(new EnBash(), false);
-
-        //turn 6
-        addToDeck(new EnGhostlyArmor(), true);
-        addToDeck(new EnJuggernaut(), false);
-        addToDeck(new EnDefendRed(), true);
-
-        //Turn 7
-        addToDeck(new EnBarricade(), extraUpgrades);
-        addToDeck(new EnGhostlyArmor(), false);
-        addToDeck(new EnDefendRed(), true);
-        */
     }
 
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
+
+
+        if (looped) {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnPowerThrough(), extraUpgrades);
+                    addToList(cardsList, new EnTrueGrit(), false);
+                    addToList(cardsList, new EnIronWave(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnFlameBarrier(), false);
+                    addToList(cardsList, new EnDefendRed(), true);
+                    addToList(cardsList, new EnBodySlam(), true);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnTrueGrit(), false);
+                    addToList(cardsList, new EnGhostlyArmor(), false);
+                    addToList(cardsList, new EnWound(), false);
+                    //Remaining wound from previous turn, in either loop or nonloop case
+                    break;
+                case 3:
+                    addToList(cardsList, new EnDefendRed(), true);
+                    addToList(cardsList, new EnGhostlyArmor(), true);
+                    addToList(cardsList, new EnBodySlam(), true);
+                    break;
+                case 4:
+                    addToList(cardsList, new EnIronWave(), true);
+                    addToList(cardsList, new EnArmaments(), false);
+                    addToList(cardsList, new EnDecay(), false);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnMetallicize(), extraUpgrades); //removed
+                    addToList(cardsList, new EnIronWave(), true);
+                    addToList(cardsList, new EnDecay(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnIronWave(), false);
+                    addToList(cardsList, new EnArmaments(), false);
+                    addToList(cardsList, new EnBodySlam(), true);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnDefendRed(), true);
+                    addToList(cardsList, new EnGhostlyArmor(), true);
+                    addToList(cardsList, new EnJuggernaut(), false);  //removed
+                    break;
+                case 3:
+                    addToList(cardsList, new EnImpervious(), false);  //removed
+                    addToList(cardsList, new EnBodySlam(), true);
+                    addToList(cardsList, new EnMetallicize(), true);  //removed
+                break;
+                case 4:
+                    addToList(cardsList, new EnPowerThrough(), extraUpgrades);
+                    addToList(cardsList, new EnFlameBarrier(), false);
+                    addToList(cardsList, new EnTrueGrit(), false);
+                    //1 wound auto-removed
+                    break;
+                case 5:
+                    addToList(cardsList, new EnJuggernaut(), false);  //removed
+                    addToList(cardsList, new EnTrueGrit(), false);
+                    addToList(cardsList, new EnShame(), false);  //removed
+                    //Shame gets hit by True Grit
+                    break;
+                case 6:
+                    addToList(cardsList, new EnBarricade(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnGhostlyArmor(), false);
+                    addToList(cardsList, new EnDefendRed(), true);
+                    //1 Wound gets "shuffled in"
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) looped = true;
+        else if (turn > 4 && looped) {
+            turn = 0;
+        }
+        return cardsList;
+    }
 
     @Override
     public void initializeBonusRelic() {

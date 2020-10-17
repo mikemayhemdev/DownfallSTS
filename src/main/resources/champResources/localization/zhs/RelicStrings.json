@@ -1,96 +1,96 @@
 {
   "champ:ChampionCrown": {
-    "NAME": "Champion's Crown",
-    "FLAVOR": "A WINNER IS YOU!",
+    "NAME": "冠军金冠",
+    "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance via #ychamp:Opener, if you weren't in a #yStance, reduce the cost of a random card in your hand by #b1 this turn."
+      "如果你进入 #y姿态 时不处于 #y姿态 中，将随机一张手牌本回合的耗能降低 #b1 。"
     ]
   },
   "champ:BlackKnightHelmet": {
-    "NAME": "Black Knight's Helm",
-    "FLAVOR": "Only a flesh wound.",
+    "NAME": "黑骑头盔",
+    "FLAVOR": "只受到一点擦伤。",
     "DESCRIPTIONS": [
-      "The first time you enter each Stance each combat: NL #bDefensive: Gain 2 Dexterity and lose 1 Strength. NL #yGladiator: gain 1 Dexterity and 1 Strength. NL #rBerserker: gain 2 Strength and lose 1 Dexterity."
+      "每场战斗第一次进入每种 #y姿态 时： NL #b防卫 -获得2点敏捷并失去1点力量。 NL #y角斗 -获得1点敏捷和力量。 NL #r狂战 -获得2点力量并失去1点敏捷。"
     ]
   },
   "champ:Barbells": {
-    "NAME": "Barbell",
+    "NAME": "哑铃",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Whenever you enter a Rest Site, #yUpgrade a random card in your deck."
+      "每当你进入 #y休息处 ，随机 #y升级 牌组中的一张牌。"
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
-    "NAME": "Berserker's Guide to Slaughter",
+    "NAME": "狂战指南",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Prevent the first 10 HP you lose on your turn each combat."
+      "阻止每场战斗前10点生命损失。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
-    "NAME": "Ultimate Champion's Crown",
+    "NAME": "终极王冠",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "The first #yOpener used each combat causes you to enter Ultimate Stance for 2 turns instead of its normal Stance."
+      "每场战斗第一张 #y进入姿态 牌将进入 #y终极 而不是普通 #y姿态 。"
     ]
   },
   "champ:DefensiveTrainingManual": {
-    "NAME": "Defensive Training Manual",
+    "NAME": "防御训练手册",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "#yTechniques used in Defensive Mode generate 3 more #yCounterstrike."
+      " #y防卫 中的 #y技术 将额外获得 #b3 层 #y反击 。"
     ]
   },
   "champ:DeflectingBracers": {
-    "NAME": "Deflecting Bracers",
+    "NAME": "偏折护腕",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "At the end of the enemy round, gain #yCounterstrike equal to your remaining Block."
+      "敌人的回合结束是，你获得你剩余格挡数的 #y反击 。"
     ]
   },
   "champ:DuelingGlove": {
-    "NAME": "Dueling Glove",
+    "NAME": "决斗手套",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "After using a single-target Attack, if the target has no #yVulnerable, apply 1 #yVulnerable."
+      "打出单体攻击牌后，如果敌人没有 #y易伤 ，给予 #b1 层 #y易伤 。"
     ]
   },
   "champ:FightingForDummies": {
-    "NAME": "Fighting for Dummies",
+    "NAME": "格斗假人",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "If you end your turn while in no Stance, gain 6 Block."
+      "你的回合结束时没有处于 #y姿态 ，获得 #b6 点 #y格挡 。"
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
-    "NAME": "Gladiators Book of Martial Prowess",
+    "NAME": "角斗技法",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Whenever you play an Opener, a Technique, a Combo, and a Finisher in the same turn, gain 1 Strength or Dexterity (chosen at random)."
+      "每当你一回合内打出 #y起手 、 #y技术 、 #y连段 和 #y终结技 ，随机获得 #b1 点 #y力量 或 #y敏捷 。"
     ]
   },
   "champ:PowerArmor": {
-    "NAME": "Power Armor",
+    "NAME": "力量铠甲",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E]. NL Your maximum Resolve, Counterstrike and Hand Size is 8."
+      "每回合开始时获得 [E] 。 NL 你的最大 #y决心 、 #y反击 和 #y手牌上限 为 #b8 。"
     ]
   },
   "champ:SignatureFinisher": {
-    "NAME": "Signature Finisher",
+    "NAME": "终结者",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a Finisher. Whenever you use a Finisher while in no Stance, also play a copy of the chosen card, then end your turn.",
-      "Choose a card for ",
-      "Whenever you use a Finisher while in no Stance, also play a copy of ",
-      ", then end your turn."
+      "拾起时，选择一张 #y终结技 。每当你不处于 #y姿态 时打出一张 #y终结技 ，打出被选择的 #y终结技 并结束你的回合。",
+      "选一张牌 ",
+      "每当你不处于姿态时打出终结技，打出 ",
+      " 并结束你的回合。"
     ]
   },
   "champ:SpectersHand": {
-    "NAME": "Spectre's Hand",
+    "NAME": "幽灵之手",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Whenever you play a Technique while not in a Stance, add a Strike or Defend to your hand. It costs 0 and has Exhaust."
+      "每当你不处于 #y姿态 打出一张 #y技术 ，将一张0耗能带 #y消耗 的打击或防御加入你的手牌。"
     ]
   }
 }
