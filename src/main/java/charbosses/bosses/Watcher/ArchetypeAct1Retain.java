@@ -111,8 +111,8 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
                     break;
                 case 2:
                     //Turn 3
-                    addToList(cardsList, new EnVigilance(), false);
                     addToList(cardsList, retainedcardsSandsOfTime, false);
+                    addToList(cardsList, new EnVigilance(), false);
                     addToList(cardsList, new EnStrikePurple(), false);
                     break;
                 case 3:
@@ -139,7 +139,7 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
                     //Turn 3
                     //Protect Retained 0 cost - use this turn
                     //Windmill Retainde 1 cost
-                    addToList(cardsList, new EnVigilance(), false);
+                    addToList(cardsList, new EnDefendPurple(), false);
                     addToList(cardsList, retainedcardsSandsOfTime, false);  //not used
                     addToList(cardsList, new EnClumsy(), false);
                     break;
@@ -156,8 +156,8 @@ public class ArchetypeAct1Retain extends ArchetypeBaseDefect {
                     //Sands Retained 0-cost - use this turn
                     //Flying Sleeves Retained 0-cost - use this turn
                     addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnDefendPurple(), false);
                     addToList(cardsList, new EnStrikePurple(), false);  //not used
+                    addToList(cardsList, new EnVigilance(), false);  //not used
                     break;
             }
         }
