@@ -12,6 +12,7 @@ import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import charbosses.relics.*;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,6 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
     }
 
     public void initialize() {
-
 
 
         /////   RELICS   /////
@@ -42,9 +42,6 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
         //addRelic(new CBR_FusionHammer());
-
-        /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
 
 
     }

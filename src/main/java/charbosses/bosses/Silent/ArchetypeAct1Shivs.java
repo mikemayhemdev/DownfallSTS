@@ -137,7 +137,9 @@ public class ArchetypeAct1Shivs extends ArchetypeBaseIronclad {
             }
         }
         turn++;
-        if (turn > 4 && !looped) looped = true;
+        if (turn > 4 && !looped) { looped = true;
+        turn = 0;
+    }
         else if (turn > 3 && looped) {
             turn = 0;
         }

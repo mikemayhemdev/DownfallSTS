@@ -90,6 +90,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
+
     }
 
     @Override
@@ -182,6 +183,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
             turn = 0;
         }
         return cardsList;
+
     }
 
     @Override

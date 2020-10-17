@@ -1,24 +1,16 @@
 package charbosses.bosses;
 
-import charbosses.cards.AbstractBossCard;
-import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.curses.*;
-import charbosses.relics.*;
-import charbosses.relics.EventRelics.*;
+import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public abstract class AbstractBossDeckArchetype {
     public static final Logger logger = LogManager.getLogger(downfallMod.class.getName());
+    /*
 
     /// WEIGHT CONSTANTS ///
 
@@ -69,12 +61,15 @@ public abstract class AbstractBossDeckArchetype {
     private AbstractCharbossRelic[] signatureRelicPerAct;
     private ArrayList<String> blacklistedRelics;
     private ArrayList<String> blacklistedCards;
+    */
 
     private AbstractCharBoss currentBoss;
 
+    /*
     public boolean upgradeAllPowers = false;
     public boolean upgradeAllSkills = false;
     public boolean upgradeAllAttacks = false;
+    */
 
     public abstract void initializeBonusRelic();
 
@@ -95,6 +90,7 @@ public abstract class AbstractBossDeckArchetype {
     }
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
+        /*
         this.ID = id;
         this.allCards = new ArrayList<AbstractBossCard>();
         this.starterCards = new ArrayList<AbstractBossCard>();
@@ -115,10 +111,12 @@ public abstract class AbstractBossDeckArchetype {
         this.energyRelicPool = new ArrayList<AbstractCharbossRelic>();
         this.bossNonEnergyRelicPool = new ArrayList<AbstractCharbossRelic>();
         this.cards = new ArrayList<AbstractBossCard>();
+        */
 
 
     }
 
+    /*
     private void initializeGlobalEventRelics() {
         //Global Events
 
@@ -190,10 +188,12 @@ public abstract class AbstractBossDeckArchetype {
         AbstractCharBoss.boss.masterDeck.addToTop(c.makeStatEquivalentCopy());
     }
 
+*/
     public void addRelic(AbstractCharbossRelic r) {
         r.instantObtain(AbstractCharBoss.boss);
 
     }
+    /*
 
     private void initializeRelics() {
 
@@ -302,11 +302,14 @@ public abstract class AbstractBossDeckArchetype {
         this.curseCards.add(new EnShame());
         this.curseCards.add(new EnPain());
     }
+    */
 
     public void initialize() {
         //Overwritten in each Archetype Base
     }
 
+
+    /*
     protected void blacklistCard(String id) {
         this.blacklistedCards.add(id);
     }
@@ -335,6 +338,7 @@ public abstract class AbstractBossDeckArchetype {
 
     }
 
+
     protected void addCardToList(AbstractBossCard c, CardBenefitType type) {
         switch (type) {
             case SIGNATUREACT1:
@@ -355,6 +359,7 @@ public abstract class AbstractBossDeckArchetype {
             default:
         }
     }
+
 
     protected void addRelicToList(AbstractCharbossRelic r, CardBenefitType type) {
         switch (type) {
@@ -379,6 +384,7 @@ public abstract class AbstractBossDeckArchetype {
             default:
         }
     }
+
 
     protected void addToStarterDeck(AbstractBossCard c) {
         this.starterCards.add(c);
@@ -1057,4 +1063,5 @@ public abstract class AbstractBossDeckArchetype {
         CardBenefitType() {
         }
     }
+    */
 }

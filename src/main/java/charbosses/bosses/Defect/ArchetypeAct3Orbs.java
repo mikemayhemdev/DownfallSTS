@@ -9,8 +9,6 @@ import charbosses.cards.purple.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Colosseum;
 import charbosses.relics.EventRelics.CBR_ScrapOoze;
-import charbosses.relics.EventRelics.CBR_WheelOfChange;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -61,18 +59,6 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
         //addRelic(new CBR_ScrapOoze());
 
-       // addRelic(new CBR_Colosseum());
-        //addRelic(new CBR_FossilizedHelix());
-
-
-        /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
-
-
-
-
-
-    }
 
 
     @Override

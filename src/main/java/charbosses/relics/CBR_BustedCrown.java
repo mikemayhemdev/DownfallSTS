@@ -1,7 +1,6 @@
 package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,8 +10,6 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.BustedCrown;
 import downfall.downfallMod;
-
-import java.util.ArrayList;
 
 public class CBR_BustedCrown extends AbstractCharbossRelic {
     public static final String ID = "BustedCrown";
@@ -52,18 +49,6 @@ public class CBR_BustedCrown extends AbstractCharbossRelic {
     public void onUnequip() {
         final EnergyManager energy = AbstractCharBoss.boss.energy;
         --energy.energyMaster;
-    }
-
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
-        for (int i = 0; i <= 2; i++) {
-            if (this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] > 0) {
-                this.owner.chosenArchetype.logger.info("Busted Crown is removing " + this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] + " synergy card picks and replacing them with global picks in Act " + (i + 1));
-                this.owner.chosenArchetype.globalCardAcquisitionsPerAct[i] += this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i];
-                this.owner.chosenArchetype.synergyCardAcquisitionsPerAct[i] = 0;
-            }
-        }
-
     }
 
 

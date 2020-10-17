@@ -89,7 +89,6 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-
     }
 
 

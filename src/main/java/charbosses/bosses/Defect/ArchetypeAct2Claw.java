@@ -47,11 +47,7 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
         addRelic(new CBR_Kunai());
         addRelic(new CBR_BlueCandle());
         addRelic(new CBR_RedMask());
-        //addRelic(new CBR_WarPaint());
-        //addRelic(new CBR_OminousForge());
-        //addRelic(new CBR_WarpedTongs());
-        //addRelic(new CBR_Bandits());
-        //addRelic(new CBR_DollysMirror(CardCrawlGame.languagePack.getCardStrings("Gash").NAME));
+
 
     }
 

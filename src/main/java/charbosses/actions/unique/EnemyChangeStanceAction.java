@@ -66,12 +66,14 @@ public class EnemyChangeStanceAction extends AbstractGameAction {
                 }*/
 
                 AbstractCharBoss.boss.switchedStance();
+                /*
                 var2 = AbstractCharBoss.boss.discardPile.group.iterator();
 
                 while(var2.hasNext()) {
                     AbstractCard c = (AbstractCard)var2.next();
                     c.triggerExhaustedCardsOnStanceChange(this.newStance);
                 }
+                */
 
                 AbstractCharBoss.boss.onStanceChange(this.id);
             }

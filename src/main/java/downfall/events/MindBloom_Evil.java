@@ -118,15 +118,13 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         int effectCount = 0;
                         List<String> upgradedCards = new ArrayList();
                         List<String> obtainedRelic = new ArrayList();
-                        Iterator var11 = AbstractDungeon.player.masterDeck.group.iterator();
 
-                        while(var11.hasNext()) {
-                            AbstractCard c = (AbstractCard)var11.next();
+                        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                             if (c.canUpgrade()) {
                                 ++effectCount;
                                 if (effectCount <= 20) {
-                                    float x = MathUtils.random(0.1F, 0.9F) * (float)Settings.WIDTH;
-                                    float y = MathUtils.random(0.2F, 0.8F) * (float)Settings.HEIGHT;
+                                    float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
+                                    float y = MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT;
                                     AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
                                     AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
                                 }

@@ -69,6 +69,7 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
 
+
     }
 
     @Override

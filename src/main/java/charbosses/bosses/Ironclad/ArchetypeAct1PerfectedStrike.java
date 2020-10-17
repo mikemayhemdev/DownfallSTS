@@ -1,5 +1,6 @@
 package charbosses.bosses.Ironclad;
 
+import charbosses.cards.AbstractBossCard;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.red.*;
 import charbosses.cards.status.EnWound;
@@ -53,13 +54,13 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
         if (looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnWildStrike(), true);  //TODO - Don't add the Wound
+                    addToList(cardsList, new EnWildStrike(), true);
                     addToList(cardsList, new EnGhostlyArmor(), true);
                     addToList(cardsList, new EnDoubt(), false);
                     break;
                 case 1:
                     addToList(cardsList, new EnTwinStrike(), false);
-                    //TODO - True Grit to Exhaust the Wound from Wild Strike
+                    addToList(cardsList, new EnTrueGrit(), false);
                     addToList(cardsList, new EnWound(), false);
                     break;
                 case 2:
@@ -82,7 +83,7 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
                     break;
                 case 1:
                     addToList(cardsList, new EnMetallicize(), extraUpgrades); //Removed
-                    addToList(cardsList, new EnWildStrike(), true);  //TODO - Don't add the Wound
+                    addToList(cardsList, new EnWildStrike(), true);
                     addToList(cardsList, new EnStrikeRed(), false);
                     break;
                 case 2:
@@ -91,20 +92,24 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnTwinStrike(), false);  //Not before Loop
                     break;
                 case 3:
-                    //TODO - True Grit to Exhaust the Wound from Wild Strike
                     addToList(cardsList, new EnGhostlyArmor(), true);
+                    addToList(cardsList, new EnTrueGrit(), false);
                     addToList(cardsList, new EnWound(), false);
                     break;
                 case 4:
                     addToList(cardsList, new EnInflame(), extraUpgrades); //Removed
-                    //TODO - Pummel  //Removed
+                    AbstractBossCard c = new EnPummel();
+                    c.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c, false);
                     addToList(cardsList, new EnStrikeRed(), false); //Not before Loop
                     break;
             }
         }
         turn++;
-        if (turn > 4 && !looped) looped = true;
-        else if (turn > 3 && looped) {
+        if (turn > 4 && !looped) {
+            looped = true;
+            turn = 0;
+        } else if (turn > 3 && looped) {
             turn = 0;
         }
         return cardsList;
