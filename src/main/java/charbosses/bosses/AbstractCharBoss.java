@@ -316,6 +316,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     isDone = true;
                     for (AbstractCard q : getThisTurnCards()) {
                         AbstractCharBoss.boss.hand.addToTop(q);
+                        if (q instanceof AbstractBossCard) ((AbstractBossCard) q).bossDarken();
                     }
                     AbstractCharBoss.boss.hand.refreshHandLayout();
                 }
