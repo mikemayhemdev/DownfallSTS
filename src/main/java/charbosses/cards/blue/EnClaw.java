@@ -1,6 +1,7 @@
 package charbosses.cards.blue;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -38,7 +39,8 @@ public class EnClaw extends AbstractBossCard {
         }
 
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));// 44
-        //this.addToBot(new EnemyGashAction((AbstractCharBoss) m, this, this.magicNumber));// 45
+        CharBossDefect cB = (CharBossDefect) AbstractCharBoss.boss;
+        cB.clawsPlayed++;
     }
 
     @Override

@@ -55,6 +55,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public static final String[] TEXT;
 
     public int manualCustomDamageModifier = 0;
+    public boolean manualCustomVulnModifier = false;
 
 
     private static final float INTENT_HB_W = 64.0F * Settings.scale;
@@ -667,6 +668,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.intentParticleTimer = 0.5F;
         calculateCardDamage(null);
         this.intentBaseDmg = this.intentDmg = (this.damage + customIntentModifiedDamage() + manualCustomDamageModifier);
+
         SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
 
         SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());

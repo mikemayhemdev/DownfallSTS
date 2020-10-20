@@ -39,6 +39,7 @@ public class EnemyEchoPower extends AbstractPower {
 
     }
 
+    /*
     public void atStartOfTurn() {
         this.cardsDoubledThisTurn = 0;
     }
@@ -71,6 +72,7 @@ public class EnemyEchoPower extends AbstractPower {
 
 
     }
+    */
 
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings("Echo Form");
