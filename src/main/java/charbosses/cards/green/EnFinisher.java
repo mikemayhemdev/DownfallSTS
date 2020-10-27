@@ -28,44 +28,8 @@ public class EnFinisher extends AbstractBossCard {
     public EnFinisher() {
         super(ID, EnFinisher.cardStrings.NAME, "green/attack/finisher", 1, EnFinisher.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 6;
-        this.isMultiDamage = false;
+        this.isMultiDamage = true;
         this.magicNumber = 0;
-    }
-
-    @Override
-    public void multiDamageCardCalculate() {
-        super.multiDamageCardCalculate();
-        this.magicNumber = 0;
-        this.isMultiDamage = false;
-        if(AbstractCharBoss.boss != null){
-            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                if(c instanceof EnCloakAndDagger){
-                    if(c.upgraded){
-                        this.magicNumber += 2;
-                    }else {this.magicNumber ++;}
-                }
-
-                if(c instanceof EnBladeDance){
-                    if(c.upgraded){
-                        this.magicNumber += 3;
-                    }else {this.magicNumber += 2;}
-                }
-
-                if(c.type == CardType.ATTACK &&!(c instanceof EnFinisher))
-                    this.magicNumber ++;
-            }
-
-            if(this.magicNumber >= 1)this.isMultiDamage = true;
-        }
-
-
-    }
-
-    @Override
-    public void atTurnStart() {
-        super.atTurnStart();
-        this.magicNumber = 0;
-        this.isMultiDamage = false;
     }
 
     @Override
@@ -78,10 +42,8 @@ public class EnFinisher extends AbstractBossCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        int count = 0;
-        if (AbstractCharBoss.boss != null && AbstractCharBoss.finishedSetup) {
-            count = AbstractCharBoss.boss.attacksPlayedThisTurn;
-        }
+        int count = this.magicNumber;
+
         this.rawDescription = EnFinisher.cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + EnFinisher.cardStrings.EXTENDED_DESCRIPTION[0] + count;
 

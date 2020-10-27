@@ -98,7 +98,7 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Twin Beam",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice to a random enemy at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },
   "expansioncontent:PrepareCrush": {

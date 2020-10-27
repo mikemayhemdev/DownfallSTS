@@ -42,7 +42,7 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
 
         addRelic(new CBR_NeowsBlessing());
 
-        addRelic(new CBR_Girya(2));
+        //addRelic(new CBR_Girya(2));
         addRelic(new CBR_CaptainsWheel());
         addRelic(new CBR_RedSkull());
         addRelic(new CBR_Torii());
@@ -104,13 +104,13 @@ public class ArchetypeAct2Strength extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnIronWave(), true);
                     break;
                 case 4:
+                    addToList(cardsList, new EnBite(), false);
+                    addToList(cardsList, new EnBite(), false);
                     addToList(cardsList, new EnBash(), false);
-                    addToList(cardsList, new EnBite(), false);
-                    addToList(cardsList, new EnBite(), false);
                     break;
                 case 5:
+                    addToList(cardsList, new EnSeeingRed(), false);
                     addToList(cardsList, new EnDemonForm(), extraUpgrades); // removed
-                    addToList(cardsList, new EnSeeingRed(), false); // removed
                     addToList(cardsList, new EnClothesline(), true);
                     break;
             }
