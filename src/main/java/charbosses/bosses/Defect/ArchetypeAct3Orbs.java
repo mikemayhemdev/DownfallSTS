@@ -1,11 +1,13 @@
 package charbosses.bosses.Defect;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.anticards.Debug;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.purple.*;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Colosseum;
 import charbosses.relics.EventRelics.CBR_ScrapOoze;
@@ -71,7 +73,11 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
                     case 0:
                         //Frost Lightning Dark Lightning Frost Frost Lightning Lightning
                         //Turn 8 - 9 Slots
-                        addToList(cardsList, new EnDualcast(), false);
+                        addToList(cardsList, new EnDualcast(), false); //Evokes Frost Twice
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true; // Evokes Lightning
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeMult = 2; // Twice!
                         addToList(cardsList, new EnColdSnap(), false);
                         addToList(cardsList, new EnCoreSurge(), false);
                         //Lightning Dark Lightning Frost Frost Lightning Lightning Frost Lightning
@@ -84,20 +90,28 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
                         break;
                     case 2:
                         //Turn 10 - 10 Slots
-                        addToList(cardsList, new EnGlacier(), extraUpgrades);
+                        addToList(cardsList, new EnGlacier(), extraUpgrades); // Evokes Lightning
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
                         addToList(cardsList, new EnStrikeBlue(), false);
-                        addToList(cardsList, new EnZap(), true);
+                        addToList(cardsList, new EnZap(), true); // Evokes Dark
+                        if (AbstractCharBoss.boss.orbs.get(1) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(1)).evokeOverride = true; // Evokes
                         //Dark Lightning Frost Frost Lightning Lightning Frost Lightning Dark Frost Frost
                         break;
                     case 3:
                         addToList(cardsList, new EnStrikeBlue(), false);
                         addToList(cardsList, new EnRegret(), false);
-                        addToList(cardsList, new EnBallLightning(), false);
+                        addToList(cardsList, new EnBallLightning(), false); // Evokes Lightning
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
                         //Dark Lightning Frost Frost Lightning Lightning Frost Lightning Dark Frost Frost
                         break;
                     case 4:
                         addToList(cardsList, new EnForceField(), extraUpgrades);
-                        addToList(cardsList, new EnBallLightning(), false);
+                        addToList(cardsList, new EnBallLightning(), false); // Evokes Frost
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
                         addToList(cardsList, new EnDefendBlue(), false);
                         //Dark Lightning Frost Frost Lightning Lightning Frost Lightning Dark Frost Frost
                         break;
@@ -106,6 +120,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
                 switch (turn) {
                     case 0:
                         //Turn 1
+                        //Starts with Dark
                         addToList(cardsList, new EnBallLightning(), false);
                         addToList(cardsList, new EnChill(), true);  //removed
                         addToList(cardsList, new EnStorm(), true);  //removed
@@ -120,12 +135,14 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
                     case 2:
                         //Turn 3 - 6 Slots
                         addToList(cardsList, new EnBallLightning(), false);
-                        addToList(cardsList, new EnDarkness(), false);
+                        addToList(cardsList, new EnDarkness(), false); // Evokes Dark
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true; // Evokes dark!
                         addToList(cardsList, new EnStrikeBlue(), false);
                         //Frost Frost Lightning Frost Lightning Dark
                         break;
                     case 3:        //Turn 4 - 7 Slots
-                        addToList(cardsList, new EnDefragment(), false);  //removed
+                        addToList(cardsList, new EnDefragment(), false);  //removed - Does NOT Evoke Lightning
                         //TODO - Big Genetic Algorithm
                  /*
                  AbstractBossCard c = new EnRitualDagger();  //removed
@@ -140,30 +157,41 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
                         break;
                     case 4:
                         //Turn 5 - 7 Slots
-                        addToList(cardsList, new EnDualcast(), false);
-                        addToList(cardsList, new EnGlacier(), extraUpgrades);
+                        addToList(cardsList, new EnDualcast(), false); // Evokes Lightning
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true; // Evokes Lightning
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeMult = 2; // Twice!
+                        addToList(cardsList, new EnGlacier(), extraUpgrades); // Evokes Frost
+                        if (AbstractCharBoss.boss.orbs.get(1) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(1)).evokeOverride = true; // Evokes frost!
                         addToList(cardsList, new EnStrikeBlue(), false);
                         //Lightning Frost Lightning Dark Lightning Frost Frost
                         break;
                     case 5:
                         //Turn 6 - 8 Slots
-                        addToList(cardsList, new EnBlizzard(), false);
+                        addToList(cardsList, new EnBlizzard(), false); // Does 0 damage currently :(
                         addToList(cardsList, new EnLeap(), false);
-                        addToList(cardsList, new EnZap(), true);
+                        addToList(cardsList, new EnZap(), true); // No evoke
                         //Lightning Frost Lightning Frost Lightning Frost Frost Lightning
                         break;
                     case 6:
                         //Turn 7 - 8 Slots
-                        addToList(cardsList, new EnCoreSurge(), false);
-                        addToList(cardsList, new EnBiasedCognition(), extraUpgrades);  //removed
+                        addToList(cardsList, new EnCoreSurge(), false); // removed
+                        addToList(cardsList, new EnBiasedCognition(), extraUpgrades);  //removed - Evokes Lightning
+                        if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                            ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true; // Evokes Lightning
                         addToList(cardsList, new EnDefendBlue(), false);
                         //Frost Lightning Dark Lightning Frost Frost Lightning Lightning
                         break;
                 }
             }
             turn++;
-            if (turn > 4 && !looped) looped = true;
-            else if (turn > 3 && looped) {
+            if (turn > 6 && !looped) {
+                looped = true;
+                turn = 0;
+            }
+            else if (turn > 4 && looped) {
                 turn = 0;
             }
             return cardsList;
