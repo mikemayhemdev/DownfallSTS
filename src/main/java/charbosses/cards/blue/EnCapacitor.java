@@ -1,7 +1,9 @@
 package charbosses.cards.blue;
 
 import charbosses.actions.orb.EnemyIncreaseMaxOrbAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyStormPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -26,6 +28,7 @@ public class EnCapacitor extends AbstractBossCard {
         super(ID, cardStrings.NAME, "blue/power/capacitor", 1, cardStrings.DESCRIPTION, CardType.POWER, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        alwaysDisplayText = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

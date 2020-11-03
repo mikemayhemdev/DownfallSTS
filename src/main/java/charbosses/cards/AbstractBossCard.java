@@ -2,6 +2,7 @@ package charbosses.cards;
 
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -810,6 +811,9 @@ public abstract class AbstractBossCard extends AbstractCard {
     public boolean alwaysDisplayText = false;
 
     public String overrideIntentText() {
+        if (this.type == CardType.POWER && owner.hasPower(EnemyStormPower.POWER_ID)) {
+            return "(3)";
+        }
         if (this.isMultiDamage) {
             return intentDmg + "x" + intentMultiAmt;
         } else {

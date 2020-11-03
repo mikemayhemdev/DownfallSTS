@@ -25,6 +25,7 @@ public class EnDefragment extends AbstractBossCard {
         super(ID, cardStrings.NAME, "blue/power/defragment", 1, cardStrings.DESCRIPTION, CardType.POWER, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        alwaysDisplayText = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
