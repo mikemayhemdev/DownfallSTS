@@ -38,7 +38,7 @@ public class EnBlizzard extends AbstractBossCard {
         int frostCount = 0;
 
         for (AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
-            if (o instanceof Frost) {
+            if (o instanceof EnemyFrost) {
                 ++frostCount;
             }
         }
