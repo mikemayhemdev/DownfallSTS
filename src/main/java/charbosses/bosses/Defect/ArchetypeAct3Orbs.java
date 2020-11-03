@@ -13,6 +13,7 @@ import charbosses.relics.EventRelics.CBR_Colosseum;
 import charbosses.relics.EventRelics.CBR_ScrapOoze;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
 import java.util.ArrayList;
 
@@ -20,6 +21,24 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
 
     public ArchetypeAct3Orbs() {
         super("DF_ARCHETYPE_", "Strike");
+    }
+
+    private void increasePretendFocus(int amount) {
+        for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
+            if (o instanceof AbstractEnemyOrb) {
+                ((AbstractEnemyOrb) o).pretendFocus += amount;
+                o.applyFocus();
+            }
+        }
+    }
+
+    public static void resetPretendFocus() {
+        for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
+            if (o instanceof AbstractEnemyOrb) {
+                ((AbstractEnemyOrb) o).pretendFocus = 0;
+                o.applyFocus();
+            }
+        }
     }
 
     public void initialize() {
@@ -143,6 +162,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
                         break;
                     case 3:        //Turn 4 - 7 Slots
                         addToList(cardsList, new EnDefragment(), false);  //removed - Does NOT Evoke Lightning
+                        increasePretendFocus(1);
                         //TODO - Big Genetic Algorithm
                  /*
                  AbstractBossCard c = new EnRitualDagger();  //removed
@@ -179,6 +199,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
                         //Turn 7 - 8 Slots
                         addToList(cardsList, new EnCoreSurge(), false); // removed
                         addToList(cardsList, new EnBiasedCognition(), extraUpgrades);  //removed - Evokes Lightning
+                        increasePretendFocus(extraUpgrades ? 5 : 4);
                         if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
                             ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true; // Evokes Lightning
                         addToList(cardsList, new EnDefendBlue(), false);
