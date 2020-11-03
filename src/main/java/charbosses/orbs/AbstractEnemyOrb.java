@@ -22,6 +22,10 @@ import java.util.ArrayList;
 
 public abstract class AbstractEnemyOrb extends AbstractOrb {
 
+    public boolean showValues = true;
+    public boolean evokeOverride = false;
+    public int evokeMult = 0;
+
     public static AbstractOrb getRandomOrb(boolean useCardRng) {
         ArrayList<AbstractOrb> orbs = new ArrayList<>();
         orbs.add(new EnemyDark());
@@ -91,9 +95,9 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
 
     @Override
     protected void renderText(SpriteBatch sb) {
-        if (!(this instanceof EnemyEmptyOrbSlot)) {
-            if (this.showEvokeValue) {
-                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
+        if (!(this instanceof EnemyEmptyOrbSlot) && showValues) {
+            if (this.showEvokeValue || evokeOverride) {
+                FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L,  evokeMult > 0 ? (Integer.toString(this.evokeAmount) + "x" + Integer.toString(evokeMult)) : Integer.toString(this.evokeAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, new Color(0.2F, 1.0F, 1.0F, this.c.a), this.fontScale);
             } else {
                 FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0F + NUM_Y_OFFSET, this.c, this.fontScale);
             }

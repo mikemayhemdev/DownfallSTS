@@ -1,12 +1,12 @@
 package charbosses.bosses.Defect;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.blue.*;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.relics.CBR_Abacus;
 import charbosses.relics.CBR_NeowsBlessing;
 import charbosses.relics.CBR_SmoothStone;
-import charbosses.relics.EventRelics.CBR_Transmogrifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Streamline;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
     }
 
     public void initialize() {
-        theVeryImportantStreamline.upgrade();
+        theVeryImportantStreamline.upgrade(); // this seems a little strong
         //Tuning Recommendation per Act (CARDS): 1 Card Removal, 2 Upgrades, ~6-8 cards added to deck
         //Tuning Recommendation per Act (RELICS): 2 relics and an Event relic (simulate what the Event did)
         //Tuning Recommendation for Act 2-3: At least 1 Rare and 1 Boss Relic in addition to above 2
@@ -45,7 +45,7 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
         //data disk
         addRelic(new CBR_SmoothStone());
         addRelic(new CBR_Abacus());
-       // addRelic(new CBR_Transmogrifier());  //Could be something else, no strong lean in any direction
+        // addRelic(new CBR_Transmogrifier());  //Could be something else, no strong lean in any direction
     }
 
     private AbstractCard theVeryImportantStreamline = new EnStreamline();
@@ -58,6 +58,10 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnDualcast(), false);  //Evokes Lightning twice
+                    if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                        ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true;
+                    if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                        ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeMult = 2;
                     addToList(cardsList, new EnBallLightning(), true);
                     addToList(cardsList, new EnDefendBlue(), false);
                     //Frost Lightning Lightning
@@ -66,6 +70,8 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
                     //Turn 2
                     addToList(cardsList, new EnDefendBlue(), extraUpgrades);
                     addToList(cardsList, new EnColdSnap(), extraUpgrades);  //Evokes Frost
+                    if (AbstractCharBoss.boss.orbs.get(0) instanceof AbstractEnemyOrb)
+                        ((AbstractEnemyOrb) AbstractCharBoss.boss.orbs.get(0)).evokeOverride = true; // Evokes frost!
                     addToList(cardsList, new EnStrikeBlue(), false); //not used
                     //Lightning Lightning Frost
                     break;
@@ -97,6 +103,7 @@ public class ArchetypeAct1Streamline extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnZap(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
                     addToList(cardsList, new EnDualcast(), false); //not used
+                    //1 Lightning
                     break;
                 case 1:
                     //Turn 2
