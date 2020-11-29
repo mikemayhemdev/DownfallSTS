@@ -1,6 +1,7 @@
 package expansioncontent.actions;
 
 
+import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -52,6 +53,10 @@ public class RandomCardWithTagAction extends AbstractGameAction {
 
     public static boolean hexaLocked() {
         return UnlockTracker.isCharacterLocked(TheHexaghost.ID);
+    }
+
+    public static boolean champLocked() {
+        return UnlockTracker.isCharacterLocked(ChampChar.ID);
     }
 
     public void update() {

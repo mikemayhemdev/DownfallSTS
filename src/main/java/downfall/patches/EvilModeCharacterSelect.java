@@ -91,6 +91,10 @@ public class EvilModeCharacterSelect {
                         }
                         else if (o.c.chosenClass == ChampChar.Enums.THE_CHAMP)
                         {
+                            if (UnlockTracker.isCharacterLocked("Champ")){
+                                o.locked = true;
+                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                            }
                             villainOptions[3] = o;
                         }
                         else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO)

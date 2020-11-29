@@ -19,6 +19,7 @@ public class LockVillainsPatch {
     public static void Postfix() {
         UnlockTracker.addCharacter("Guardian");
         UnlockTracker.addCharacter("Hexaghost");
+        UnlockTracker.addCharacter("Champ");
         UnlockTracker.addCharacter("Snecko");
     }
 }
