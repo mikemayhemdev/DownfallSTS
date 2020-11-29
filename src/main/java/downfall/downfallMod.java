@@ -144,6 +144,8 @@ public class downfallMod implements
     public static boolean contentSharing_curses = true;
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
+    public static boolean normalMapLayout = false;
+
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
     public static final String PROP_POTION_SHARING = "contentSharing_potions";
@@ -152,6 +154,7 @@ public class downfallMod implements
     public static final String PROP_CURSE_SHARING = "contentSharing_curses";
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
+    public static final String PROP_NORMAL_MAP = "normalMapLayout";
 
     public static String Act1BossFaced = downfallMod.makeID("Ironclad");
     public static String Act2BossFaced = downfallMod.makeID("Silent");
@@ -183,6 +186,7 @@ public class downfallMod implements
         configDefault.setProperty(PROP_POTION_SHARING, "TRUE");
         configDefault.setProperty(PROP_CARD_SHARING, "TRUE");
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
+        configDefault.setProperty(PROP_NORMAL_MAP, "FALSE");
 //        configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
 
 
@@ -234,6 +238,7 @@ public class downfallMod implements
             config.setBool(PROP_POTION_SHARING, contentSharing_potions);
             config.setBool(PROP_CARD_SHARING, contentSharing_colorlessCards);
             config.setBool(PROP_CHAR_CROSSOVER, crossoverCharacters);
+            config.setBool(PROP_NORMAL_MAP, normalMapLayout);
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
             config.save();
@@ -436,12 +441,21 @@ public class downfallMod implements
             saveData();
         });
 
+        ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[6],
+                350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                normalMapLayout, settingsPanel, (label) -> {
+        }, (button) -> {
+            normalMapLayout = button.enabled;
+            saveData();
+        });
+
         settingsPanel.addUIElement(contentSharingBtnCurses);
         settingsPanel.addUIElement(contentSharingBtnEvents);
         settingsPanel.addUIElement(contentSharingBtnPotions);
         settingsPanel.addUIElement(contentSharingBtnRelics);
         settingsPanel.addUIElement(contentSharingBtnColorless);
         settingsPanel.addUIElement(characterCrossoverBtn);
+        settingsPanel.addUIElement(normalMapBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.map.*;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
+import downfall.downfallMod;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.actlikeit.MapCompatiblity;
 import javassist.*;
@@ -27,8 +28,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.mapRng;
 
 public class FlipMap {
     @SpirePatch(
@@ -46,16 +45,19 @@ public class FlipMap {
                 locator = Locator.class
         )
         public static void flipflipflipflipflip() {
-            if (EvilModeCharacterSelect.evilMode) {
-                if (!AbstractDungeon.id.equals(TheEnding.ID)) {
+            if (downfallMod.normalMapLayout) {
+                if (EvilModeCharacterSelect.evilMode) {
+                    if (!AbstractDungeon.id.equals(TheEnding.ID)) {
 
-                    flipCampfire();
+                        flipCampfire();
+                    }
+                    flip(AbstractDungeon.map);
                 }
-                flip(AbstractDungeon.map);
+            } else {
+                if (EvilModeCharacterSelect.evilMode)
+                    flip(AbstractDungeon.map);
             }
-
         }
-
 
         private static void flipCampfire() {
             ArrayList<ArrayList<MapRoomNode>> map = AbstractDungeon.map;
@@ -89,6 +91,7 @@ public class FlipMap {
                     for (MapEdge e : n.getEdges())
                         if (!edgeArrayContains(edges, e)) {
                             if (e.dstY >= 0 && e.dstY < map.size())
+
                                 edges.add(new MapNodeData(e, n, map.get(e.dstY).get(e.dstX)));
                         }
 
@@ -151,8 +154,8 @@ public class FlipMap {
     public static class EliteRoomPatch {
         @SpirePrefixPatch
         public static SpireReturn<Boolean> Prefix(MapRoomNode n, AbstractRoom roomToBeSet) {
-            if (EvilModeCharacterSelect.evilMode) {
-                java.util.List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
+            if (EvilModeCharacterSelect.evilMode && downfallMod.normalMapLayout) {
+                List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
                 List<Class<RestRoom>> applicableRooms2 = Collections.singletonList(RestRoom.class);
 
                 if (n.y >= 11 && applicableRooms.contains(roomToBeSet.getClass())) {
@@ -271,7 +274,11 @@ public class FlipMap {
                     if (!AbstractDungeon.firstRoomChosen) {
                         targetOffsetY[0] = DungeonMapScreen.offsetY = ___mapScrollUpperLimit;
                     }
-
+                    /*else
+                    {
+                        targetOffsetY[0] += MORE_ADJUST;
+                        DungeonMapScreen.offsetY += MORE_ADJUST;
+                    }*/
                 }
             }
         }
@@ -334,7 +341,7 @@ public class FlipMap {
             }
         }
 
-
+        //i don't really need to separate this but I'm doing it anyways
         private static class BossVisitifier extends ExprEditor {
             private int count = 0;
 
