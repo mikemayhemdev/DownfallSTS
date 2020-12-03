@@ -48,7 +48,7 @@ public class CustomSpeechTextEffect extends AbstractGameEffect {
         this.duration = duration;
         this.x = x;
         this.y = y;
-        this.font = FontHelper.speech_font;
+        this.font = FontHelper.turnNumFont;
         this.a_effect = a_effect;
         this.s = new Scanner(msg);
     }
