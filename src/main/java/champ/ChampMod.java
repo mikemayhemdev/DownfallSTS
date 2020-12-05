@@ -102,6 +102,9 @@ public class ChampMod implements
 
     public static final TextureAtlas UIAtlas = new TextureAtlas();
     public static Texture heartOrb;
+    public static Texture crown;
+    public static Texture finisher;
+    public static Texture openerAll;
 
     public ChampMod() {
         BaseMod.subscribe(this);
@@ -316,7 +319,13 @@ public class ChampMod implements
         addPotions();
 
         heartOrb = TextureLoader.getTexture("champResources/images/heartOrb.png");
+        crown = TextureLoader.getTexture("champResources/images/cardicons/crown.png");
+        finisher = TextureLoader.getTexture("champResources/images/cardicons/finisher.png");
+        openerAll = TextureLoader.getTexture("champResources/images/cardicons/openerall.png");
         UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
+        UIAtlas.addRegion("openerAll", openerAll, 0, 0, openerAll.getWidth(), openerAll.getHeight());
+        UIAtlas.addRegion("crown", crown, 0, 0, crown.getWidth(), crown.getHeight());
+        UIAtlas.addRegion("finisher", finisher, 0, 0, finisher.getWidth(), finisher.getHeight());
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil_Champ.ID, Colosseum_Evil_Champ.class) //Event ID//
                 //Event Spawn Condition//

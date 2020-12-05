@@ -15,9 +15,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-public class ExtraEnergyOrbPatch {
+public class CardExtraUiPatch {
 
     private static TextureAtlas.AtlasRegion healthBlob = ChampMod.UIAtlas.findRegion("heartOrb");
+    private static TextureAtlas.AtlasRegion crown = ChampMod.UIAtlas.findRegion("crown");
+    private static TextureAtlas.AtlasRegion openerall = ChampMod.UIAtlas.findRegion("openerAll");
+    private static TextureAtlas.AtlasRegion finisher = ChampMod.UIAtlas.findRegion("finisher");
 
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class SecondEnergyRenderPatch {
@@ -25,7 +28,7 @@ public class ExtraEnergyOrbPatch {
         public static void patch(AbstractCard __instance, SpriteBatch sb) {
             if (__instance instanceof AbstractChampCard) {
                 if (CardCrawlGame.isInARun()) {
-                    if (((AbstractChampCard) __instance).myHpLossCost > 0) {
+                    if (((AbstractChampCard) __instance).myHpLossCost > 0) { // Berserker draw stuff.
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                         renderHelper(sb, healthBlob, __instance.current_x, __instance.current_y, __instance);
                         int x = ((AbstractChampCard) __instance).myHpLossCost;
@@ -36,6 +39,19 @@ public class ExtraEnergyOrbPatch {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                         renderHelper(sb, healthBlob, __instance.current_x, __instance.current_y, __instance);
                         FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, "3", __instance.current_x, __instance.current_y, -133.0F * __instance.drawScale * Settings.scale, 133 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
+                    }
+                    //Opener / Technique / Finisher draws
+                    if (__instance.hasTag(ChampMod.OPENER)) {
+                        FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                        renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
+                    }
+                    if (__instance.hasTag(ChampMod.TECHNIQUE)) {
+                        FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                        renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
+                    }
+                    if (__instance.hasTag(ChampMod.FINISHER)) {
+                        FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
+                        renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
                     }
                 }
             }
