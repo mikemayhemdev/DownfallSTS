@@ -1,6 +1,7 @@
 package downfall.events;
 
 
+import champ.ChampChar;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
@@ -86,6 +87,10 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         if (AbstractDungeon.player instanceof TheHexaghost){
 
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Hexaghost");
+                        } else
+                        if (AbstractDungeon.player instanceof ChampChar){
+
+                            AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Champ");
                         } else
                         if (AbstractDungeon.player instanceof TheSnecko){
 
