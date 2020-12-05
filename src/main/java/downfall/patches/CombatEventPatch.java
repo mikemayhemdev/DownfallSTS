@@ -27,6 +27,8 @@ public class CombatEventPatch {
                                 "currentRoom.event instanceof downfall.events.FaceTrader_Evil || " +
                                 "currentRoom.event instanceof downfall.events.Beggar_Evil || " +
                                 "currentRoom.event instanceof downfall.events.Colosseum_Evil || " +
+                                "currentRoom.event instanceof champ.events.Colosseum_Evil_Champ || " +
+                                "currentRoom.event instanceof champ.events.MinorLeagueArena || " +
                                 "currentRoom.event instanceof downfall.events.MindBloom_Evil;");
                     }
                 } catch (NotFoundException e) {

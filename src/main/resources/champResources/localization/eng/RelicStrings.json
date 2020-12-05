@@ -92,5 +92,13 @@
     "DESCRIPTIONS": [
       "Whenever you play a Technique while not in a Stance, add a Strike or Defend to your hand. It costs 0 and has Exhaust."
     ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "Inner Strength",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b",
+      " #yStrength."
+    ]
   }
 }

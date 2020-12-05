@@ -6,7 +6,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.events.Colosseum_Evil_Champ;
+import champ.events.*;
 import champ.potions.CounterstrikePotion;
 import champ.potions.OpenerPotion;
 import champ.potions.TechPotion;
@@ -28,9 +28,12 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.events.city.Colosseum;
+import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -321,37 +324,42 @@ public class ChampMod implements
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
-        /*
-        BaseMod.addEvent(new AddEventParams.Builder(WanderingSpecter.ID, WanderingSpecter.class) //Event ID//
-                //Extra Requirement
-                .bonusCondition(ChampMod::canGetCurseRelic)
-                //Only in Evil if content sharing is disabled
+        BaseMod.addEvent(new AddEventParams.Builder(Library_Champ.ID, Library_Champ.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof ChampChar)
+                //Event ID to Override//
+                .overrideEvent(TheLibrary.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(TechniqueTome.ID, TechniqueTome.class) //Event ID//
+                //Event Character//
+                .playerClass(ChampChar.Enums.THE_CHAMP)
+                .eventType(EventUtils.EventType.SHRINE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(Gym.ID, Gym.class) //Event ID//
+                //Event Character//
+                .playerClass(ChampChar.Enums.THE_CHAMP)
+                .dungeonID(Exordium.ID)
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(MinorLeagueArena.ID, MinorLeagueArena.class) //Event ID//
+                //Event Spawn Condition//
+
+                .playerClass(ChampChar.Enums.THE_CHAMP)
+                .dungeonID(Exordium.ID)
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
+                /*
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
-                .create());
-
-        BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
-                //Event Character//
-                .playerClass(ChampChar.Enums.THE_CHAMP)
-                .create());
-
-        BaseMod.addEvent(new AddEventParams.Builder(HexaFalling.ID, HexaFalling.class) //Event ID//
-                //Event Character//
-                .playerClass(ChampChar.Enums.THE_CHAMP)
-                //Existing Event to Override//
-                .overrideEvent(Falling.ID)
-                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
-
-        BaseMod.addEvent(new AddEventParams.Builder(CouncilOfGhosts_Hexa.ID, CouncilOfGhosts_Hexa.class) //Event ID//
-                //Event Character//
-                .playerClass(ChampChar.Enums.THE_CHAMP)
-                //Existing Event to Override//
-                .overrideEvent(Ghosts.ID)
-                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .dungeonID(Exordium.ID)
+                .eventType(EventUtils.EventType.NORMAL)
                 .create());
                 */
+
     }
 
     @Override

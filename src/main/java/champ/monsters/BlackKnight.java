@@ -143,7 +143,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
              switch (this.nextMove) {
                  case 7:
                        AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_CHAMP_CHARGE"));
-                       AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, getLimitBreak(), 2.0F, 3.0F));
                        AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                        AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
                        AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new InflameEffect(this), 0.25F));
@@ -220,7 +219,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
                        break;
                  case 6:
                        AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CHAMP_2A", 0.3F, true));
-                       AbstractDungeon.actionManager.addToBottom(new TalkAction(this, getTaunt()));
                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 
                 
@@ -259,29 +257,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
                  }
            }
     
-       private String getTaunt() {
-             ArrayList<String> derp = new ArrayList();
-             derp.add(DIALOG[0]);
-             derp.add(DIALOG[1]);
-             derp.add(DIALOG[2]);
-             derp.add(DIALOG[3]);
-             return (String)derp.get(MathUtils.random(derp.size() - 1));
-           }
+
     
-       private String getLimitBreak() {
-             ArrayList<String> derp = new ArrayList();
-             derp.add(DIALOG[4]);
-             derp.add(DIALOG[5]);
-             return (String)derp.get(MathUtils.random(derp.size() - 1));
-           }
-    
-       private String getDeathQuote() {
-             ArrayList<String> derp = new ArrayList();
-             derp.add(DIALOG[6]);
-             derp.add(DIALOG[7]);
-             return (String)derp.get(MathUtils.random(derp.size() - 1));
-           }
-    
+
     
        protected void getMove(int num)
        {
@@ -294,7 +272,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
                  }
         
              if ((!lastMove((byte)3)) && (!lastMoveBefore((byte)3)) && (this.thresholdReached)) {
-                   AbstractDungeon.actionManager.addToTop(new TalkAction(this, getDeathQuote(), 2.0F, 2.0F));
                    setMove(EXECUTE_NAME, (byte)3, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(1)).base, 2, true);
                    return;
                  }
