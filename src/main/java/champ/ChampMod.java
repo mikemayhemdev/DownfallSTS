@@ -6,6 +6,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.cards.*;
 import champ.events.*;
 import champ.potions.CounterstrikePotion;
 import champ.potions.OpenerPotion;
@@ -33,6 +34,8 @@ import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -252,41 +255,41 @@ public class ChampMod implements
 
     @Override
     public void receiveSetUnlocks() {
-/*
+
         unlocks0 = new CustomUnlockBundle(
-                GiftsFromTheDead.ID, PowerFromBeyond.ID, FlamesFromBeyond.ID
+                Aggression.ID, Balance.ID, Control.ID
         );
-        UnlockTracker.addCard(GiftsFromTheDead.ID);
-        UnlockTracker.addCard(PowerFromBeyond.ID);
-        UnlockTracker.addCard(FlamesFromBeyond.ID);
+        UnlockTracker.addCard(Aggression.ID);
+        UnlockTracker.addCard(Balance.ID);
+        UnlockTracker.addCard(Control.ID);
 
         unlocks1 = new CustomUnlockBundle(
-                Toasty.ID, SpectralSpark.ID, SuperheatedStrike.ID
+                RageSigil.ID, ShieldSigil.ID, SwordSigil.ID
         );
-        UnlockTracker.addCard(Toasty.ID);
-        UnlockTracker.addCard(SpectralSpark.ID);
-        UnlockTracker.addCard(SuperheatedStrike.ID);
+        UnlockTracker.addCard(RageSigil.ID);
+        UnlockTracker.addCard(ShieldSigil.ID);
+        UnlockTracker.addCard(SwordSigil.ID);
 
         unlocks2 = new CustomUnlockBundle(
-                ApocalypticArmor.ID, ApocalypseNow.ID, UnlimitedPower.ID
+                EnchantShield.ID, EnchantSword.ID, EnchantCrown.ID
         );
-        UnlockTracker.addCard(ApocalypticArmor.ID);
-        UnlockTracker.addCard(ApocalypseNow.ID);
-        UnlockTracker.addCard(UnlimitedPower.ID);
+        UnlockTracker.addCard(EnchantShield.ID);
+        UnlockTracker.addCard(EnchantSword.ID);
+        UnlockTracker.addCard(EnchantCrown.ID);
 
         unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                RecyclingMachine.ID, SoulOfChaos.ID, JarOfFuel.ID
+                SignatureFinisher.ID, PowerArmor.ID, SpectersHand.ID
         );
-        UnlockTracker.addRelic(RecyclingMachine.ID);
-        UnlockTracker.addRelic(SoulOfChaos.ID);
-        UnlockTracker.addRelic(JarOfFuel.ID);
+        UnlockTracker.addRelic(SignatureFinisher.ID);
+        UnlockTracker.addRelic(PowerArmor.ID);
+        UnlockTracker.addRelic(SpectersHand.ID);
 
         unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                BolsterEngine.ID, CandleOfCauterizing.ID, Sixitude.ID
+                DuelingGlove.ID, Barbells.ID, DeflectingBracers.ID
         );
-        UnlockTracker.addRelic(BolsterEngine.ID);
-        UnlockTracker.addRelic(CandleOfCauterizing.ID);
-        UnlockTracker.addRelic(Sixitude.ID);
+        UnlockTracker.addRelic(DuelingGlove.ID);
+        UnlockTracker.addRelic(Barbells.ID);
+        UnlockTracker.addRelic(DeflectingBracers.ID);
 
         BaseMod.addUnlockBundle(unlocks0, ChampChar.Enums.THE_CHAMP, 0);
 
@@ -297,7 +300,7 @@ public class ChampMod implements
         BaseMod.addUnlockBundle(unlocks3, ChampChar.Enums.THE_CHAMP, 3);
 
         BaseMod.addUnlockBundle(unlocks4, ChampChar.Enums.THE_CHAMP, 4);
-*/
+
     }
 
 
