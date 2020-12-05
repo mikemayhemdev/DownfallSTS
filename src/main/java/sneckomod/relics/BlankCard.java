@@ -39,6 +39,7 @@ public class BlankCard extends CustomRelic {
             card2.freeToPlayOnce = true;
             card2.exhaust = true;
 
+            flash();
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card2.makeStatEquivalentCopy()));
             AbstractDungeon.actionManager.addToBottom(new NewQueueCardAction(card2, m));
             this.activated = true;
