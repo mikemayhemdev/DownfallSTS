@@ -43,15 +43,15 @@ public class CardExtraUiPatch {
                     //Opener / Technique / Finisher draws
                     if (__instance.hasTag(ChampMod.OPENER)) {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                        renderHelper(sb, openerall, __instance.current_x+ (60 * __instance.drawScale), __instance.current_y + (60 * __instance.drawScale), __instance);
+                        renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
                     }
                     if (__instance.hasTag(ChampMod.TECHNIQUE)) {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                        renderHelper(sb, crown, __instance.current_x + (120 * __instance.drawScale), __instance.current_y + (60 * __instance.drawScale), __instance);
+                        renderHelper(sb, crown, __instance.current_x, __instance.current_y, __instance);
                     }
                     if (__instance.hasTag(ChampMod.FINISHER)) {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                        renderHelper(sb, finisher, __instance.current_x + (180 * __instance.drawScale), __instance.current_y + (60 * __instance.drawScale), __instance);
+                        renderHelper(sb, finisher, __instance.current_x, __instance.current_y, __instance);
                     }
                 }
             }
