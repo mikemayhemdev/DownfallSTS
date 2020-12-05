@@ -43,6 +43,11 @@ public class FanOfKnives extends AbstractChampCard {
                         if (q.hasTag(ChampMod.TECHNIQUE)) {
                             att(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AttackEffect.NONE));
                             att(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+                            if (upgraded){
+                                att(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AttackEffect.NONE));
+                                att(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+
+                            }
                             att(new AbstractGameAction() {
                                 @Override
                                 public void update() {
@@ -50,19 +55,15 @@ public class FanOfKnives extends AbstractChampCard {
                                     isDone = true;
                                 }
                             });
-                            if (!upgraded) break;
-                            else if (!found){
-                                found = true;
-                            } else {
-                                found = false;
-                                break;
-                            }
+
+                            break;
+
                         }
                     }
                 }
             });
         }
-        found = false;
+
     }
 
     @Override
