@@ -12,7 +12,7 @@ public class PerfectedStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 8;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 

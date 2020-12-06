@@ -11,7 +11,7 @@ public class FaceSlap extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 2;
 
     private static final int MAGIC = 3;

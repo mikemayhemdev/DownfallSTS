@@ -79,12 +79,12 @@
   "champ:Riposte": {
     "NAME": "Riposte",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Gain !M! champ:Counterstrike. NL Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
+    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. Gain !M! champ:Counterstrike. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
 
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL *Berserker champ:Combo: Gain Block equal to your champ:Resolve.",
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to twice your champ:Resolve.",
     "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
   },
   "champ:Aggression": {
@@ -283,7 +283,7 @@
   },
   "champ:Encircle": {
     "NAME": "Encircle",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL *Berserker champ:Combo: Play this twice. "
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL champ:Fatigue 2. NL *Berserker champ:Combo: Play this twice. "
   },
   "champ:LastStand": {
     "NAME": "Last Stand",
@@ -291,7 +291,7 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Leap",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue 5. NL Gain !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL Exhaust."
   },
   "champ:IgnorePain": {
     "NAME": "Ignore Pain",

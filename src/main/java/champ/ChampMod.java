@@ -8,6 +8,7 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.cards.*;
 import champ.events.*;
+import champ.monsters.BlackKnight;
 import champ.potions.CounterstrikePotion;
 import champ.potions.OpenerPotion;
 import champ.potions.TechPotion;
@@ -33,10 +34,12 @@ import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
+import downfall.monsters.Augmenter;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -317,6 +320,11 @@ public class ChampMod implements
 
     public void receivePostInitialize() {
         addPotions();
+
+        BaseMod.addMonster("champ:BlackKnight", BlackKnight.NAME, () -> new MonsterGroup(
+                new AbstractMonster[]{
+                        new BlackKnight()
+                }));
 
         heartOrb = TextureLoader.getTexture("champResources/images/heartOrb.png");
         crown = TextureLoader.getTexture("champResources/images/cardicons/crown.png");

@@ -26,8 +26,8 @@ public class Riposte extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
+        if (upgraded) atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
         if (gcombo()) {
-            if (upgraded) atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {

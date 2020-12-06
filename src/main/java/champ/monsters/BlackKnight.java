@@ -41,7 +41,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
          {
        public static final String ID = "BlackKnight";
        private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("Champ");
-       public static final String NAME = monsterStrings.NAME;
+       public static final String NAME = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS[5];
        public static final String[] MOVES = monsterStrings.MOVES;
        public static final String[] DIALOG = monsterStrings.DIALOG;
        public static final int HP = 420;
@@ -70,7 +70,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
        private boolean thresholdReached = false; private boolean firstTurn = true;
     
        public BlackKnight() {
-             super(NAME, "BlackKnight", 240, 0.0F, -15.0F, 400.0F, 410.0F, null, -90.0F, 0.0F);
+             super(NAME, "BlackKnight", 240, 0.0F, -15.0F, 400.0F, 350.0F, null, -90.0F, 0.0F);
              this.type = EnemyType.ELITE;
              this.dialogX = (-100.0F * Settings.scale);
              this.dialogY = (10.0F * Settings.scale);

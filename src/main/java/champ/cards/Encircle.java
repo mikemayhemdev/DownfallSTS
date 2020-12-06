@@ -1,6 +1,8 @@
 package champ.cards;
 
+import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
+import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
@@ -14,7 +16,7 @@ public class Encircle extends AbstractChampCard {
 
     //stupid intellij stuff attack, all_enemy, uncommon
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
     private static final int MAGIC = 2;
 
     public Encircle() {
@@ -25,7 +27,7 @@ public class Encircle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+
         for (int i = 0; i < magicNumber; i++) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
@@ -50,6 +52,6 @@ public class Encircle extends AbstractChampCard {
 
 
     public void upp() {
-        upgradeMagicNumber(1);
+        CardModifierManager.addModifier(this, new TechniqueMod());
     }
 }

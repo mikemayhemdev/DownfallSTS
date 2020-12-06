@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.ResolvePower;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,20 +16,20 @@ public class Backstep extends AbstractChampCard {
     public Backstep() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
+
+        baseBlock = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
+        blck();
         if (bcombo()) {
             if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
                 int x = AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
-                baseBlock = x;
-                applyPowers();
-                blck();
+                atb(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, x * 2));
             }
         }
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
+
     }
 
     @Override
@@ -36,24 +37,6 @@ public class Backstep extends AbstractChampCard {
         glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
-    @Override
-    public void applyPowers() {
-        int x = 0;
-        if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
-            x = AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
-        }
-        baseBlock = x;
-        super.applyPowers();
-        rawDescription = DESCRIPTION;
-        rawDescription = rawDescription + EXTENDED_DESCRIPTION[0];
-        initializeDescription();
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
-    }
 
     public void upp() {
         upgradeBaseCost(0);
