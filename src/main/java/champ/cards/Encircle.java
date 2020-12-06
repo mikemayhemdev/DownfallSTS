@@ -52,6 +52,7 @@ public class Encircle extends AbstractChampCard {
 
 
     public void upp() {
+        if (!this.hasTag(ChampMod.TECHNIQUE))
         CardModifierManager.addModifier(this, new TechniqueMod());
     }
 }

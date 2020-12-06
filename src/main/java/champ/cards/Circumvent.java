@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.actions.CircumventAction;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -27,7 +28,10 @@ public class Circumvent extends AbstractChampCard {
         techique();
         blck();
         if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(3), 3));
-        if (dcombo()) addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player.getPower(CounterPower.POWER_ID).amount));
+        if (dcombo()) {
+            addToBot(new CircumventAction());
+
+        }
     }
 
     @Override
