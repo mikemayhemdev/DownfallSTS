@@ -959,8 +959,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (NeowBoss.neowboss != null) {
-            NeowBoss.neowboss.moveForRez();
-            NeowBoss.neowboss.minion = null;
+            NeowBoss.neowboss.switchIntentToSelfRez();
             AbstractCard anti = anticard();
             for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
                 if (c.cardID == anti.cardID) {
