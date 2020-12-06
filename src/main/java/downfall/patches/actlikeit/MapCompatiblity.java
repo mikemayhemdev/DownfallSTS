@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheEnding;
 import downfall.patches.EvilModeCharacterSelect;
 
 @SpirePatch(
@@ -17,7 +18,7 @@ public class MapCompatiblity {
     {
         if (EvilModeCharacterSelect.evilMode)
         {
-            return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y == 0 ? 14 : 0);
+            return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y == 0 ? (AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14) : 0);
         }
         return SpireReturn.Continue();
     }
