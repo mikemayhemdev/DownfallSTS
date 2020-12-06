@@ -3,12 +3,12 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
-import theHexaghost.actions.HauntingEchoAction;
 
 public class HauntingEcho extends AbstractHexaCard {
 
@@ -27,7 +27,10 @@ public class HauntingEcho extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
-        atb(new HauntingEchoAction());
+        if (GhostflameHelper.activeGhostFlame.charged) {
+            AbstractDungeon.actionManager.addToBottom(new ExtinguishCurrentFlameAction());
+            AbstractDungeon.actionManager.addToBottom(new ChargeCurrentFlameAction());
+        }
     }
 
     public void triggerOnGlowCheck() {

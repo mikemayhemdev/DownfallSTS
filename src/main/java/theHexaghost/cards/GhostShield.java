@@ -1,6 +1,5 @@
 package theHexaghost.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,14 +23,8 @@ public class GhostShield extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (hasEthereal())
-                    addToTop(new GainBlockAction(p, block));
-            }
-        });
+        if (hasEthereal())
+            addToTop(new GainBlockAction(p, block));
     }
 
     private boolean hasEthereal() {

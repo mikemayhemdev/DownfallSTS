@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
@@ -17,17 +18,22 @@ public class UnlimitedPower extends AbstractHexaCard {
 
     public UnlimitedPower() {
         super(ID, 5, CardType.SKILL, CardRarity.RARE, CardTarget.ALL);
+        exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-            if (!gf.charged) {
-                atb(new ExtinguishAction(gf));
-                atb(new ChargeAction(gf));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                    if (!gf.charged) {
+                        att(new ChargeAction(gf));
+                        att(new ExtinguishAction(gf));
+                    }
+                }
             }
-        }
-        exhaust = true;
-        tags.add(HexaMod.GHOSTWHEELCARD);
+        });
     }
 
     public void upgrade() {

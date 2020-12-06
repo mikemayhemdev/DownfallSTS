@@ -23,7 +23,6 @@ public class GiftsFromTheDead extends AbstractHexaCard {
 
     }
 
-
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         cantUseMessage = "It's too hot to touch!";

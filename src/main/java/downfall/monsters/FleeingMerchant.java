@@ -240,8 +240,10 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void die() {
+        /*
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();
+        */
         int increaseGold = 300;
         if (FleeingMerchant.CURRENT_SOULS > 0)
             increaseGold += FleeingMerchant.CURRENT_SOULS;
