@@ -44,6 +44,7 @@ public class GemFire extends AbstractGuardianCard {
     public GemFire() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
+        this.exhaust = true;
         this.baseDamage = DAMAGE;
         this.socketCount = SOCKETS;
         updateDescription();
@@ -66,6 +67,9 @@ public class GemFire extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
+            exhaust = false;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
 
 

@@ -32,6 +32,7 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
     private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
+    private static final int UPGRADE_DAMAGE = 3;
     private static final int BEAMBUFF = 1;
     private static final int UPGRADE_BEAMBUFF = 1;
     private static final int SOCKETS = 0;
@@ -83,7 +84,6 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
             this.energyOnUse += 2;
             p.getRelic("Chemical X").flash();
         }
-        if (upgraded) this.energyOnUse++;
 
         for (int i = 0; i < this.energyOnUse; i++) {
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
@@ -111,9 +111,7 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
         if (!this.upgraded) {
 
             upgradeName();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-
-            this.initializeDescription();
+            upgradeDamage(UPGRADE_DAMAGE);
             upgradeMagicNumber(UPGRADE_BEAMBUFF);
 
         }
