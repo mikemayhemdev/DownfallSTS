@@ -27,6 +27,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
         for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
             if (o instanceof AbstractEnemyOrb) {
                 ((AbstractEnemyOrb) o).pretendFocus += amount;
+                AbstractEnemyOrb.masterPretendFocus += amount;
                 o.applyFocus();
             }
         }
@@ -36,6 +37,7 @@ public class ArchetypeAct3Orbs extends ArchetypeBaseDefect {
         for (AbstractOrb o : AbstractCharBoss.boss.orbs) {
             if (o instanceof AbstractEnemyOrb) {
                 ((AbstractEnemyOrb) o).pretendFocus = 0;
+                AbstractEnemyOrb.masterPretendFocus = 0;
                 o.applyFocus();
             }
         }

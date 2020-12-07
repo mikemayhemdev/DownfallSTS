@@ -2,6 +2,7 @@ package charbosses.cards.blue;
 
 import charbosses.actions.orb.EnemyChannelAction;
 import charbosses.cards.AbstractBossCard;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.orbs.EnemyLightning;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -33,7 +34,7 @@ public class EnBallLightning extends AbstractBossCard {
 
     @Override
     public String overrideIntentText() {
-        return intentDmg + "+ (3)";
+        return intentDmg + "+ ("  + ( 3 + AbstractEnemyOrb.masterPretendFocus + EnZap.getFocusAmountSafe()) + ")";
     }
 
     @Override

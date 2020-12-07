@@ -26,6 +26,7 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     public boolean evokeOverride = false;
     public int evokeMult = 0;
     public int pretendFocus = 0;
+    public static int masterPretendFocus = 0;
 
     public static AbstractOrb getRandomOrb(boolean useCardRng) {
         ArrayList<AbstractOrb> orbs = new ArrayList<>();
@@ -84,13 +85,14 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     }
 
     public void applyFocus() {
-        AbstractPower power = AbstractCharBoss.boss.getPower(FocusPower.POWER_ID);
-        if (power != null && !this.ID.equals(EnemyPlasma.ORB_ID)) {
+        if (AbstractCharBoss.boss.hasPower(FocusPower.POWER_ID)){
+            AbstractPower power = AbstractCharBoss.boss.getPower(FocusPower.POWER_ID);
             this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount + pretendFocus);
             this.evokeAmount = Math.max(0, this.baseEvokeAmount + power.amount + pretendFocus);
-        } else {
-            this.passiveAmount = this.basePassiveAmount + pretendFocus;
-            this.evokeAmount = this.baseEvokeAmount + pretendFocus;
+        }
+        else {
+            this.passiveAmount = Math.max(0, this.basePassiveAmount + pretendFocus);
+            this.evokeAmount = Math.max(0, this.baseEvokeAmount + pretendFocus);
         }
     }
 
