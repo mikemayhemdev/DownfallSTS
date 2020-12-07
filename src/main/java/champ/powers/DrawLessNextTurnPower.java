@@ -16,9 +16,7 @@ public class DrawLessNextTurnPower extends AbstractPower implements CloneablePow
 
     public static final String POWER_ID = ChampMod.makeID("DrawLessNextTurnPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/Again84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/Again32.png");
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
+ private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
@@ -29,9 +27,7 @@ public class DrawLessNextTurnPower extends AbstractPower implements CloneablePow
         this.amount = amount;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = true;
-
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        this.loadRegion("lessdraw");
 
         this.updateDescription();
     }
