@@ -24,6 +24,7 @@ public class FloatingOrbs extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
+    private static final int UPGRADE_COST = 0;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -58,10 +59,7 @@ public class FloatingOrbs extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.isInnate = true;
-            this.rawDescription = UPGRADED_DESCRIPTION;
-
-            this.initializeDescription();
+            upgradeBaseCost(UPGRADE_COST);
         }
     }
 

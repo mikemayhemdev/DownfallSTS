@@ -29,7 +29,7 @@ public class Reroute extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 3;
-    private static final int SOCKETS = 0;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -63,7 +63,7 @@ public class Reroute extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p, p, new ClonePower(p, this.magicNumber), this.magicNumber));
 
-        this.useGems(p, m);
+        super.useGems(p, m);
     }
 
     public AbstractCard makeCopy() {
@@ -76,12 +76,17 @@ public class Reroute extends AbstractGuardianCard {
             upgradeDamage(UPGRADE_BONUS);
         }
 
-
     }
 
     public void updateDescription() {
 
-
+        if (this.socketCount > 0) {
+            if (upgraded && UPGRADED_DESCRIPTION != null) {
+                this.rawDescription = this.updateGemDescription(UPGRADED_DESCRIPTION, true);
+            } else {
+                this.rawDescription = this.updateGemDescription(DESCRIPTION, true);
+            }
+        }
         this.initializeDescription();
     }
 }

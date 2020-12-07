@@ -26,8 +26,8 @@ public class TimeBomb extends AbstractGuardianCard implements InStasisCard {
     private static final int COST = 2;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 20;
-    private static final int UPGRADE_DAMAGE = 10;
+    private static final int DAMAGE = 22;
+    private static final int UPGRADE_DAMAGE = 8;
     private static final int TURNS = 3;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;

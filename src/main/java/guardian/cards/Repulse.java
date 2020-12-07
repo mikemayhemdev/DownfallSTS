@@ -25,7 +25,6 @@ public class Repulse extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int STATUSNEGATION = 1;
-    private static final int UPGRADE_STATUSNEGATION = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -64,10 +63,10 @@ public class Repulse extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_STATUSNEGATION);
+            this.isInnate = true;
             this.rawDescription = UPGRADED_DESCRIPTION;
 
-            this.initializeDescription();
+            this.updateDescription();
         }
     }
 
