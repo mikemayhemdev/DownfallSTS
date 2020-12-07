@@ -44,5 +44,11 @@
     "DESCRIPTIONS": [
       "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
     ]
+  },
+  "downfall:InverseBias": {
+    "NAME": "Recovering",
+    "DESCRIPTIONS": [
+      "Gains 2 Focus at the end of each turn."
+    ]
   }
 }

@@ -2,13 +2,16 @@ package charbosses.cards.anticards;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.powers.InverseBiasPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import charbosses.powers.general.EnemyPoisonPower;
+import com.megacrit.cardcrawl.powers.FocusPower;
 import expansioncontent.cards.AbstractExpansionCard;
 
 public class Debug extends AbstractExpansionCard {
@@ -25,9 +28,8 @@ public class Debug extends AbstractExpansionCard {
             @Override
             public void update() {
                 if (m instanceof CharBossDefect) {
-                    while(AbstractCharBoss.boss.filledOrbCount() > 0) {// 14
-                        AbstractCharBoss.boss.removeNextOrb();// 15
-                    }
+                    this.addToBot(new ApplyPowerAction(m, m, new FocusPower(m, -10), -10));
+                    this.addToBot(new ApplyPowerAction(m, m, new InverseBiasPower(m, 5), 5));
 
                     this.isDone = true;// 18
                 }

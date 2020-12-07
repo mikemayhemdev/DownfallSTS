@@ -140,7 +140,7 @@
   },
   "expansioncontent:ShieldSmash": {
     "NAME": "Armor Break",
-    "DESCRIPTION": "Retain. NL Remove all Block from the enemy. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Remove all Block from the enemy, then reduce their Dexterity by 2. NL Exhaust."
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
@@ -148,7 +148,7 @@
   },
   "expansioncontent:Debug": {
     "NAME": "Corrupt Core",
-    "DESCRIPTION": "Retain. NL Remove all enemy Orbs. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Enemy loses 10 Focus. They regain 2 of it per turn for 5 turns. NL Exhaust."
   },
   "expansioncontent:PeaceOut": {
     "NAME": "Dark Whisper",

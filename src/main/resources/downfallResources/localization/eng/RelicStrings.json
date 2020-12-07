@@ -444,21 +444,21 @@
     "NAME": "Ruby Heart Blessing",
     "FLAVOR": "The heart is strong. The heart is pleased.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yStrength. NL At the start of combat with the Beyond's boss, gain a special card."
+      "Start each combat with #b1 #yStrength. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card."
+      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "Emerald Heart Blessing",
     "FLAVOR": "The heart is everything.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yDexterity. NL At the start of combat with the Beyond's boss, gain a special card."
+      "Start each combat with #b1 #yDexterity. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
     ]
   },
   "downfall:TeleportStone": {
