@@ -282,7 +282,7 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void dispose() {
-
+        AbstractDungeon.player.releaseCard();
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         //AbstractDungeon.combatRewardScreen.open();
 
@@ -295,6 +295,7 @@ public class FleeingMerchant extends AbstractMonster {
             CardCrawlGame.fadeIn(1.5F);
             AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
             tRoom.onPlayerEntry();
+            AbstractDungeon.player.hand.clear();
             AbstractDungeon.closeCurrentScreen();
 
         }
