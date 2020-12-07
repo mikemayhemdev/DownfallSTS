@@ -2,6 +2,7 @@ package charbosses.cards;
 
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
@@ -37,6 +38,8 @@ import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import static charbosses.cards.blue.EnZap.getFocusAmountSafe;
 
 public abstract class AbstractBossCard extends AbstractCard {
 
@@ -812,7 +815,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public String overrideIntentText() {
         if (this.type == CardType.POWER && owner.hasPower(EnemyStormPower.POWER_ID)) {
-            return "(3)";
+            return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
         }
         if (this.isMultiDamage) {
             return intentDmg + "x" + intentMultiAmt;
