@@ -119,8 +119,8 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Gain !B! Block and 1 Thorns. NL Enter  guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block and 1 Thorns. NL Enter  guardianmod:Defensive_Mode, which persists for 1 turn."
+    "DESCRIPTION": "Gain !B! Block and 1 Thorns. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block and 1 Thorns. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Beam",

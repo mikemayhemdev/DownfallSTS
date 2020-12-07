@@ -16,15 +16,17 @@ public class StasisUpgradeRelic extends CustomRelic {
 
     public StasisUpgradeRelic() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.RARE, LandingSound.FLAT);
+                RelicTier.SHOP, LandingSound.FLAT);
         this.largeImg = ImageMaster.loadImage(GuardianMod.getResourcePath(LARGE_IMG_PATH));
     }
 
     public void onEquip() {
         ++AbstractDungeon.player.masterMaxOrbs;
+        ++AbstractDungeon.player.masterMaxOrbs;
     }
 
     public void onUnequip() {
+        --AbstractDungeon.player.masterMaxOrbs;
         --AbstractDungeon.player.masterMaxOrbs;
     }
 
