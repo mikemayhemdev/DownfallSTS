@@ -28,10 +28,11 @@ public class UnlimitedPower extends AbstractHexaCard {
             public void update() {
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     if (!gf.charged) {
-                        att(new ChargeAction(gf));
-                        att(new ExtinguishAction(gf));
+                        atb(new ChargeAction(gf));
+                        atb(new ExtinguishAction(gf));
                     }
                 }
+                isDone = true;
             }
         });
     }
