@@ -27,6 +27,8 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
     public int evokeMult = 0;
     public int pretendFocus = 0;
 
+    public static int masterPretendFocus = 0;
+
     public static AbstractOrb getRandomOrb(boolean useCardRng) {
         ArrayList<AbstractOrb> orbs = new ArrayList<>();
         orbs.add(new EnemyDark());
