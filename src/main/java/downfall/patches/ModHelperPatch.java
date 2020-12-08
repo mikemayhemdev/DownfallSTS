@@ -23,6 +23,8 @@ public class ModHelperPatch {
         myMapG.put(Lament.ID, new Lament());
         myMapD.put(WorldOfGoo.ID, new WorldOfGoo());
         myMapD.put(ExchangeController.ID, new ExchangeController());
+        myMapS.put(ChampStances.ID, new ChampStances());
+        myMapD.put(Enraging.ID, new Enraging());
         ReflectionHacks.setPrivateStatic(ModHelper.class, "starterMods", myMapS);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "genericMods", myMapG);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "difficultyMods", myMapD);

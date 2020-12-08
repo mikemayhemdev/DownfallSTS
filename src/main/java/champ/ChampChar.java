@@ -11,6 +11,7 @@ import champ.stances.DefensiveStance;
 import champ.stances.GladiatorStance;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -20,10 +21,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ModHelper;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
+import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.stances.NeutralStance;
@@ -109,12 +107,12 @@ public class ChampChar extends CustomPlayer {
     }
 
 
-    /*
+
     @Override
     public Texture getCustomModeCharacterButtonImage() {
-        return ImageMaster.loadImage(HexaMod.getModID() + "Resources/images/charSelect/leaderboard.png");
+        return ImageMaster.loadImage(ChampMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
-    */
+
 
     @Override
     public CharSelectInfo getLoadout() {

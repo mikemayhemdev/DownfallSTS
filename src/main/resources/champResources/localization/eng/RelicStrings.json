@@ -100,5 +100,12 @@
       "Start each combat with #b",
       " #yStrength."
     ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "New Challenger",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "Start each combat in a random Champ stance."
+    ]
   }
 }

@@ -3,12 +3,19 @@ package champ.stances;
 import champ.ChampChar;
 import champ.actions.FatigueHpLossAction;
 import champ.powers.ResolvePower;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import guardian.characters.GuardianCharacter;
+import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class BerserkerStance extends AbstractChampStance {
 
@@ -59,4 +66,26 @@ public class BerserkerStance extends AbstractChampStance {
             }
         });
     }
+
+    @Override
+    public void updateAnimation() {
+        if (!(AbstractDungeon.player instanceof ChampChar)) {
+            if (!Settings.DISABLE_EFFECTS) {
+
+                this.particleTimer -= Gdx.graphics.getDeltaTime();
+                if (this.particleTimer < 0.0F) {
+                    this.particleTimer = 0.04F;
+                    AbstractDungeon.effectsQueue.add(new DefensiveModeStanceParticleEffect(new Color(1.0F, 0.2F, 0.2F, 0.0F)));
+                }
+            }
+
+
+            this.particleTimer2 -= Gdx.graphics.getDeltaTime();
+            if (this.particleTimer2 < 0.0F) {
+                this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
+                AbstractDungeon.effectsQueue.add(new StanceAuraEffect(this.STANCE_ID));
+            }
+        }
+    }
+
 }

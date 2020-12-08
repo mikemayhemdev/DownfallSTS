@@ -20,11 +20,19 @@
     "DESCRIPTION": "Enables Evil Run content."
   },
   "downfall:ExchangeController": {
-    "NAME": "Exchange Controller",
+    "NAME": "Blessed Be",
     "DESCRIPTION": "Start with a Neow's Blessing."
   },
   "downfall:Lament": {
     "NAME": "Lament",
     "DESCRIPTION": "Start with a Neow's Lament."
+  },
+  "downfall:ChampStances": {
+    "NAME": "New Challenger",
+    "DESCRIPTION": "Start each combat in a random Champ stance, and gain a Finishing Strike. All starter cards gain Technique."
+  },
+  "downfall:Enraging": {
+    "NAME": "Last Stand",
+    "DESCRIPTION": "All enemies gain Strength and cleanse debuffs on their next turn when reduced to 50% HP."
   }
 }

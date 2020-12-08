@@ -366,5 +366,9 @@
     "NAME": "Enchant Crown",
     "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator.",
     "UPGRADE_DESCRIPTION": "champ:Technique. NL Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator."
+  },
+  "champ:ModFinisherStrike": {
+    "NAME": "Finishing Strike",
+    "DESCRIPTION": "Retain. NL champ:Finisher. NL Deal !D! damage."
   }
 }

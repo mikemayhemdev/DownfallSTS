@@ -19,7 +19,11 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.cards.ModFinisher;
 import champ.monsters.BlackKnight;
+import champ.powers.LastStandModPower;
+import champ.relics.ChampStancesModRelic;
+import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
@@ -38,7 +42,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Slimed;
@@ -57,6 +63,7 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.NeowsLament;
@@ -1025,6 +1032,8 @@ public class downfallMod implements
         l.add(new CustomMod(WorldOfGoo.ID, "r", true));
         l.add(new CustomMod(Hexed.ID, "r", true));
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
+        l.add(new CustomMod(ChampStances.ID, "g", true));
+        l.add(new CustomMod(Enraging.ID, "r", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
         l.add(new CustomMod(ExchangeController.ID, "r", true));
@@ -1050,6 +1059,14 @@ public class downfallMod implements
             RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
+        }
+
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
+            RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
+            for (AbstractCard c:AbstractDungeon.player.masterDeck.group){
+                if (!c.hasTag(ChampMod.TECHNIQUE))
+                CardModifierManager.addModifier(c, new TechniqueMod());
+            }
         }
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
@@ -1170,5 +1187,12 @@ public class downfallMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         playedBossCardThisTurn = false;
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
+            for (AbstractMonster m : abstractRoom.monsters.monsters)
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
+        }
+
     }
 }
