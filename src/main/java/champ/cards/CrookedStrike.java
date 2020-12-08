@@ -28,17 +28,15 @@ public class CrookedStrike extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        if (gcombo()) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    int x = p.hand.size();
-                    att(new ApplyPowerAction(m, p, new GainStrengthPower(m, x), x));
-                    att(new ApplyPowerAction(m, p, new StrengthPower(m, -x), -x));
-                }
-            });
-        }
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = p.hand.size();
+                att(new ApplyPowerAction(m, p, new GainStrengthPower(m, x), x));
+                att(new ApplyPowerAction(m, p, new StrengthPower(m, -x), -x));
+            }
+        });
         if (upgraded) {
             if (gcombo()) exhaust = false;
         }
