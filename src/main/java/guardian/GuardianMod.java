@@ -325,12 +325,13 @@ public class GuardianMod implements PostDrawSubscriber,
 
         allGemCards.add("RED");
         allGemCards.add("GREEN");
+        allGemCards.add("LIGHTBLUE");
         if (!onlyCommon) allGemCards.add("ORANGE");
         allGemCards.add("CYAN");
         if (!onlyCommon) allGemCards.add("WHITE");
         if (!onlyCommon) allGemCards.add("BLUE");
         if (!onlyCommon) allGemCards.add("CRIMSON");
-        allGemCards.add("FRAGMENTED");
+        if (!onlyCommon) allGemCards.add("FRAGMENTED");
         if (!onlyCommon) allGemCards.add("PURPLE");
         if (!onlyCommon) allGemCards.add("SYNTHETIC");
         if (!UnlockTracker.isCardLocked(Gem_Yellow.ID)) {
@@ -348,6 +349,9 @@ public class GuardianMod implements PostDrawSubscriber,
                     break;
                 case "GREEN":
                     rewardGemCards.add(new Gem_Green());
+                    break;
+                case "LIGHTBLUE":
+                    rewardGemCards.add(new Gem_Lightblue());
                     break;
                 case "ORANGE":
                     rewardGemCards.add(new Gem_Orange());
@@ -651,6 +655,7 @@ public static void saveData() {
         BaseMod.addCard(new PackageDefect());
         BaseMod.addCard(new Gem_Red());
         BaseMod.addCard(new Gem_Green());
+        BaseMod.addCard(new Gem_Lightblue());
         BaseMod.addCard(new Gem_Cyan());
         BaseMod.addCard(new Gem_Orange());
         BaseMod.addCard(new Gem_White());
@@ -984,6 +989,7 @@ public static void saveData() {
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket.png")));
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem.png")));
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem.png")));
+        socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem.png")));
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem.png")));
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem.png")));
         socketTextures.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem.png")));
@@ -996,6 +1002,7 @@ public static void saveData() {
         socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket2.png")));
         socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem2.png")));
         socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem2.png")));
+        socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem2.png")));
         socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem2.png")));
         socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem2.png")));
         socketTextures2.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem2.png")));
@@ -1008,6 +1015,7 @@ public static void saveData() {
         socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket3.png")));
         socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem3.png")));
         socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem3.png")));
+        socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem3.png")));
         socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem3.png")));
         socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem3.png")));
         socketTextures3.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem3.png")));
@@ -1020,6 +1028,7 @@ public static void saveData() {
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/emptysocket4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/redgem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/greengem4.png")));
+        socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/lightbluegem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/orangegem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/whitegem4.png")));
         socketTextures4.add(ImageMaster.loadImage(getResourcePath("/cardIcons/templated/512/cyangem4.png")));
@@ -1073,6 +1082,7 @@ public static void saveData() {
         RED,
         BLUE,
         GREEN,
+        LIGHTBLUE,
         WHITE,
         CYAN,
         ORANGE,

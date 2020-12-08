@@ -23,7 +23,7 @@ public class DecasProtection extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
     public static String UPGRADED_DESCRIPTION;

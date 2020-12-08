@@ -25,6 +25,11 @@
     "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Dexterity.",
     "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Dexterity."
   },
+  "Guardian:Gem_Lightblue": {
+    "NAME": "Tourmaline",
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Thorns."
+  },
   "Guardian:Gem_White": {
     "NAME": "Quartz",
     "DESCRIPTION": "guardianmod:Gem. NL Draw a card.",
@@ -304,16 +309,16 @@
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
     "DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
+    "UPGRADE_DESCRIPTION": "Gain 3 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
     "DESCRIPTION": "Gain 3 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain 5 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
+    "UPGRADE_DESCRIPTION": "Gain 4 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
+    "DESCRIPTION": "Gain 3 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
     "UPGRADE_DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:TimeSifter": {

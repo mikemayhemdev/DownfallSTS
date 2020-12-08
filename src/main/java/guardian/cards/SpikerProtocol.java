@@ -29,7 +29,7 @@ public class SpikerProtocol extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int THORNS = 3;
-    private static final int UPGRADE_THORNS = 2;
+    private static final int UPGRADE_THORNS = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
