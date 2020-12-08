@@ -268,11 +268,11 @@
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Beam",
-    "DESCRIPTION": "Deal !D! plus !D! damage for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Deal !D! damage, plus an additional !D! damage for each guardianmod:Gem in this card."
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
-    "DESCRIPTION": "Gain !B! plus !B! Block for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Gain !B! Block, plus an additional !B! Block for each guardianmod:Gem in this card."
   },
   "Guardian:TemporalStrike": {
     "NAME": "Temporal Strike",
@@ -291,7 +291,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Refracted Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Can be upgraded any number of times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Decrease the number of times this card hits by 1 this combat. NL Can be upgraded any number of times."
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
@@ -322,14 +322,14 @@
     "UPGRADE_DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:TimeSifter": {
-    "NAME": "Time Shifter",
+    "NAME": "Time Sifter",
     "DESCRIPTION": "At the start of your turn, guardianmod:Accelerate.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, guardianmod:Accelerate."
   },
   "Guardian:AncientConstruct": {
     "NAME": "Ancient Construct",
     "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact and lose [E].",
-    "UPGRADE_DESCRIPTION": "Gain 1 Artifact. At the start of your turn, if you have no Artifact, gain !M! Artifact and lose [E]."
+    "UPGRADE_DESCRIPTION": "Gain 1 Artifact. NL At the start of your turn, if you have no Artifact, gain !M! Artifact and lose [E]."
   },
   "Guardian:CrystalBeam": {
     "NAME": "Crystal Beam",

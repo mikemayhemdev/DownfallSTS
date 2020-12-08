@@ -58,7 +58,10 @@ public class TimeSifter extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            this.isInnate = true;
+            this.rawDescription = UPGRADED_DESCRIPTION;
+
+            this.updateDescription();
         }
     }
 

@@ -18,6 +18,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import com.megacrit.cardcrawl.vfx.BobEffect;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
@@ -94,6 +96,8 @@ public class CharBossMerchant extends AbstractCharBoss {
         super.usePreBattleAction();
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
         this.rezTimer = 5F;
+        AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.SHOP)));
+
     }
 
     public void initGlowMesh(float time) {
@@ -120,6 +124,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         AnimationState.TrackEntry e = stateGlow.setAnimation(0, "idle", true);
         e.setTime(time);
         e.setTimeScale(1.0F);
+
     }
 
     @Override
@@ -128,6 +133,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         AbstractBossDeckArchetype archetype = new ArchetypeAct3MerchantBoss();
 
         archetype.initialize();
+        chosenArchetype = archetype;
 
     }
 
