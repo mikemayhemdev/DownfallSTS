@@ -81,7 +81,7 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         super.applyPowers();
         int base = baseSelfDamage;
         if (AbstractDungeon.player.hasRelic(SelfDamagePreventRelic.ID)) {
-            base -= 1;
+            base -= 3;
         }
         if (AbstractDungeon.player.hasPower(TackleModifyDamagePower.POWER_ID)) {
             base += AbstractDungeon.player.getPower(TackleModifyDamagePower.POWER_ID).amount;

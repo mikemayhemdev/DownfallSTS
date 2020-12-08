@@ -84,7 +84,7 @@
     "NAME": "Protective Gear",
     "FLAVOR": "The best defense is a good offense.",
     "DESCRIPTIONS": [
-      "Reduce the damage you take from #yslimeboundmod:Tackle cards by #b1."
+      "You take no damage from #yslimeboundmod:Tackle cards."
     ]
   },
   "Slimebound:TarBlob": {
