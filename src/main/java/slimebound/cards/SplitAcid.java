@@ -54,6 +54,7 @@ public class SplitAcid extends AbstractSlimeboundCard {
             addToBot(new CommandAction());
         }
 
+        checkMinionMaster();
 
     }
 

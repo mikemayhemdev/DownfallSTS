@@ -24,21 +24,7 @@ public class CBR_Whetstone extends AbstractCharbossRelic {
 
     @Override
     public void onEquip() {
-        final ArrayList<AbstractCard> upgradableCards = new ArrayList<AbstractCard>();
-        for (final AbstractCard c : AbstractCharBoss.boss.masterDeck.group) {
-            if (c.canUpgrade() && c.type == AbstractCard.CardType.ATTACK) {
-                upgradableCards.add(c);
-            }
-        }
-        Collections.shuffle(upgradableCards, new Random(AbstractDungeon.monsterRng.randomLong()));
-        if (!upgradableCards.isEmpty()) {
-            if (upgradableCards.size() == 1) {
-                upgradableCards.get(0).upgrade();
-            } else {
-                upgradableCards.get(0).upgrade();
-                upgradableCards.get(1).upgrade();
-            }
-        }
+
     }
 
     @Override

@@ -1,0 +1,38 @@
+{
+  "champ:theChamp": {
+    "NAMES": [
+      "The Champ",
+      "the Champ"
+    ],
+    "TEXT": [
+      "The undisputed King of the Arena. NL Has never lost a match.",
+      "NL You ready your blade...",
+      "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~ghastly~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~",
+      "#rBerserker Stance",
+      "#bDefensive Stance",
+      "#yGladiator Stance",
+      "None",
+      "ULTIMATE Stance",
+      "Technique Bonus",
+      "Finisher Bonus",
+      "#yFatigue #b3.",
+      "Lose all #yResolve and gain that much HP, preserving #yStrength. End your turn.",
+      "Gain #b6 #yCounterstrike.",
+      "Gain #b12 #yBlock. End your turn.",
+      "Draw #b1 card.",
+      "Next turn, draw #b1 card and gain [E] .",
+      "Berserker Technique",
+      "Defensive Technique",
+      "Gladiator Technique",
+      "#yFatigue #b3, gain #b6 #yCounterstrike and draw #b1 card.",
+      "Lose all #yResolve and gain that much HP, preserving #yStrength. Gain 12 Block. Next turn, draw #b1 card and gain [E] .",
+      "Counts as #rBerserker, #bDefensive and #yGladiator for all purposes. You cannot switch Stances. Exit ULTIMATE Stance in ",
+      " turns.",
+      "Current Stance",
+      "#rBerserker",
+      "#bDefensive",
+      "#yGladiator",
+      "None"
+    ]
+  }
+}

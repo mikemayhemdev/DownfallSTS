@@ -56,12 +56,17 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         addToBot(new TackleSelfDamageAction(new DamageInfo(p, selfDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
         addToBot(new CommandAction());
         addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
+
+
+        checkMinionMaster();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

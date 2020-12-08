@@ -27,8 +27,8 @@ public class TemporalStrike extends AbstractGuardianCard {
     private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_DAMAGE = 1;
-    private static final int SOCKETS = 0;
+    private static final int UPGRADE_DAMAGE = 3;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -80,12 +80,7 @@ public class TemporalStrike extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
             upgradeDamage(UPGRADE_DAMAGE);
-            this.updateDescription();
         }
 
 

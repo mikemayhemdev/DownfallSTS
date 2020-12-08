@@ -1,12 +1,9 @@
 package charbosses.relics.EventRelics;
 
-import charbosses.cards.AbstractBossCard;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
-
-import java.util.ArrayList;
 
 
 public class CBR_TombOfRedMask extends AbstractCharbossRelic {
@@ -18,11 +15,6 @@ public class CBR_TombOfRedMask extends AbstractCharbossRelic {
     public CBR_TombOfRedMask() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/redmasktomb.png")));
         this.largeImg = null;
-    }
-
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-
     }
 
     @Override

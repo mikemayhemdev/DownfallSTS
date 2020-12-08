@@ -47,7 +47,7 @@ public class DefensiveMode extends AbstractStance {
                 this.particleTimer -= Gdx.graphics.getDeltaTime();
                 if (this.particleTimer < 0.0F) {
                     this.particleTimer = 0.04F;
-                    AbstractDungeon.effectsQueue.add(new DefensiveModeStanceParticleEffect());
+                    AbstractDungeon.effectsQueue.add(new DefensiveModeStanceParticleEffect(new Color(1.0F, 0.9F, 0.7F, 0.0F)));
                 }
             }
 

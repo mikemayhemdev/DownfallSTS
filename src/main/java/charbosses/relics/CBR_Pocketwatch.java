@@ -1,16 +1,8 @@
 package charbosses.relics;
 
-import charbosses.actions.common.EnemyDrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PenNibPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.PenNib;
 import com.megacrit.cardcrawl.relics.Pocketwatch;
 
 public class CBR_Pocketwatch extends AbstractCharbossRelic {
@@ -37,7 +29,7 @@ public class CBR_Pocketwatch extends AbstractCharbossRelic {
     @Override
     public void atTurnStartPostDraw() {
         if (this.counter <= 3 && !this.firstTurn) {
-            this.addToBot(new EnemyDrawCardAction(this.owner, 3));
+            //this.addToBot(new EnemyDrawCardAction(this.owner, 3));
         } else {
             this.firstTurn = false;
         }

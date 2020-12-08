@@ -16,7 +16,7 @@
   "downfall:NeowInvulnerable": {
     "NAME": "生命之神",
     "DESCRIPTIONS": [
-      "不能被击杀。当生命值降低到0时撤退休息。"
+      "不能被击杀。当生命值降低到0时结束你的回合并撤退休息。"
     ]
   },
   "downfall:TransformDrawnCardsPower": {

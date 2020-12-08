@@ -38,7 +38,9 @@
       "두번쨰 악당 캐릭터로 등반에 성공한다면 이 캐릭터가 해제됩니다.",
       "수호자로 등반에 성공한다면 이 캐릭터가 해제됩니다.",
       "세번쨰 악당 캐릭터로 등반에 성공한다면 이 캐릭터가 해제됩니다.",
-      "육각령으로 등반에 성공한다면 이 캐릭터가 해제됩니다."
+      "육각령으로 등반에 성공한다면 이 캐릭터가 해제됩니다.",
+      "This character is unlocked by completing a run with the 4th Villain character.",
+      "This character is unlocked by completing a run with the Champ."
 
     ]
   },

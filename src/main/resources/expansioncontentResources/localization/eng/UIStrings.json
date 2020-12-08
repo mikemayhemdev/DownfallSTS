@@ -1,1 +1,7 @@
-{}
+{
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "I've already played a Boss card this turn!"
+    ]
+  }
+}

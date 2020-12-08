@@ -27,6 +27,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
     protected final String NAME;
     protected final String DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
+    public static final String CannotUseBossCardMessage = CardCrawlGame.languagePack.getUIString(makeID("CannotUseBossCardMessage")).TEXT[0];
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
@@ -141,7 +142,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
             if (!downfallMod.playedBossCardThisTurn)
                 return super.canUse(p, m);
             else {
-                cantUseMessage = "I've already played a Boss card this turn!";
+                cantUseMessage = CannotUseBossCardMessage;
                 return false;
             }
         }

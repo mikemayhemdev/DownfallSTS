@@ -1,0 +1,168 @@
+{
+  "champ:CounterPower": {
+    "NAME": "反击",
+    "DESCRIPTIONS": [
+      "下次你受到 #y攻击 伤害时，反击 #b",
+      " 点伤害。"
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "决心",
+    "DESCRIPTIONS": [
+      "每有 #b5 层时你拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数的生命。"
+    ]
+  },
+  "champ:FocusedGladPower": {
+    "NAME": "角斗士",
+    "DESCRIPTIONS": [
+      "直到你退出 #y角斗 前， #y技术 将额外抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "防反家",
+    "DESCRIPTIONS": [
+      "直到你退出 #y防卫 前， #y技术 将额外获得 #b",
+      " 层 #y反击 。"
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "狂战士",
+    "DESCRIPTIONS": [
+      "直到你退出 #y狂战 前， #y技术 将额外获得 #b",
+      " 点 #y决心 。"
+    ]
+  },
+  "champ:EnchantedShieldPower": {
+    "NAME": "Enchanted Shield",
+    "DESCRIPTIONS": [
+      "阻止本回合下一次生命损失。",
+      "阻止本回合下 #b",
+      " 次生命损失。"
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "盾墙",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，每有一张手牌获得 #b",
+      " 层 #y反击 。"
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "投掷剑刃",
+    "DESCRIPTIONS": [
+      "下回合你不能打出 #y攻击牌 。",
+      "下 #b",
+      " 个回合你不能打出 #y攻击牌 。"
+    ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "投掷王冠",
+    "DESCRIPTIONS": [
+      "下回合少抽 #b",
+      " 张牌。",
+      " 张牌。"
+    ]
+  },
+  "champ:PushThroughPower": {
+    "NAME": "无视伤痛",
+    "DESCRIPTIONS": [
+      "本回合你不会失去生命。",
+      "接下俩的 #b",
+      " 回合内你不会失去生命。"
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "无穷愤火",
+    "DESCRIPTIONS": [
+      "每当你在你的回合失去生命时，获得 #b",
+      " 点 #y决心 。"
+    ]
+  },
+  "champ:ImprovisingPower": {
+    "NAME": "触类旁通",
+    "DESCRIPTIONS": [
+      "每回合第一次打出 #y连段 牌时如果不处于对应的 #y姿态 ，返回手牌且直到打出前耗能为0。还有 #b",
+      " 次。",
+      "每回合第 #b",
+      " 次打出 #y连段 牌时如果不处于对应的 #y姿态 ，返回手牌且直到打出前耗能为0。还有 #b"
+    ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "宣告",
+    "DESCRIPTIONS": [
+      "你打出的下一张 #y终结技 将不会退出 #y姿态 或结束你的回合。",
+      "你打出的下 #b",
+      " 张 #y终结技 将不会退出 #y姿态 或结束你的回合。"
+    ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "战技大师",
+    "DESCRIPTIONS": [
+      "每当你在一回合内进入过三张不同的姿态，获得 #b",
+      " [E] 并抽 #b2 张牌。本回合进入过："
+    ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "打击天才",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将随机一张 #y起手牌 加入你的手牌。它直到打出前的耗能为0。",
+      "在你的回合开始时，将随机 #b",
+      " 张 #y起手牌 加入你的手牌。它直到打出前的耗能为0。"
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "打击天才+",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将随机一张已 #y升级 的 #y起手牌 加入你的手牌。它直到打出前的耗能为0。",
+      "在你的回合开始时，将随机 #b",
+      " 张已 #y升级 的 #y起手牌 加入你的手牌。它直到打出前的耗能为0。"
+    ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "防守战法",
+    "DESCRIPTIONS": [
+      "如果你的回合开始时处于 #y防守 ，获得 #b",
+      " 点 #y格挡 和 #b",
+      " 层 #y反击 。"
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "角斗战法",
+    "DESCRIPTIONS": [
+      "如果你的回合开始时处于 #y角斗 ，获得 #b",
+      " 点 #y临时力量 和 #y敏捷 。"
+    ]
+  },
+  "champ:BerserkerStylePower": {
+    "NAME": "狂暴战法",
+    "DESCRIPTIONS": [
+      "如果你的回合开始时处于 #y狂战 ， #y疲劳 #b",
+      " 并获得 [E] 。"
+    ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "伪反",
+    "DESCRIPTIONS": [
+      "下次触发 #y反击 时，失去一半 #y反击 而不是移除。",
+      "下 #b",
+      " 次触发 #y反击 时，失去一半 #y反击 而不是移除。"
+    ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "附魔金冠",
+    "DESCRIPTIONS": [
+      "下一回合开始时获得 [E] 。",
+      "下 #b",
+      " 个回合开始时获得 [E] 。"
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "钢铁要塞",
+    "DESCRIPTIONS": [
+      "每当你进入 #y姿态 时，获得 #b",
+      " 点 #y格挡 和 #y反击 。"
+    ]
+  }
+}

@@ -16,9 +16,9 @@ import expansioncontent.expansionContentMod;
 public class DashGenerateEvil extends AbstractExpansionCard {
     public final static String ID = makeID("DashGenerateEvil");
 
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 10;
     private static final int UPGRADE_BLOCK = 2;
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 2;
 
     public DashGenerateEvil() {

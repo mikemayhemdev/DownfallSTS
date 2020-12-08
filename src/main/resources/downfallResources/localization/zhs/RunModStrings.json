@@ -18,5 +18,13 @@
   "downfall:EvilRun": {
     "NAME": "崩坠",
     "DESCRIPTION": "以崩坠模式进行游戏。"
+  },
+  "downfall:ExchangeController": {
+    "NAME": "手柄互换",
+    "DESCRIPTION": "起始获得涅奥的祝福。"
+  },
+  "downfall:Lament": {
+    "NAME": "悲恸",
+    "DESCRIPTION": "起始获得涅奥的悲恸。"
   }
 }

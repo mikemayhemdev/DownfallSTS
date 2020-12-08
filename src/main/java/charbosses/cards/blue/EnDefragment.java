@@ -1,5 +1,6 @@
 package charbosses.cards.blue;
 
+import charbosses.bosses.Defect.ArchetypeAct3Orbs;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -25,9 +26,17 @@ public class EnDefragment extends AbstractBossCard {
         super(ID, cardStrings.NAME, "blue/power/defragment", 1, cardStrings.DESCRIPTION, CardType.POWER, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        alwaysDisplayText = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                ArchetypeAct3Orbs.resetPretendFocus();
+                isDone = true;
+            }
+        });
         this.addToBot(new ApplyPowerAction(m, m, new FocusPower(m, this.magicNumber), this.magicNumber));
     }
 

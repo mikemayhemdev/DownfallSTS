@@ -15,6 +15,8 @@ import guardian.GuardianMod;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class RollAttack extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("RollAttack");
@@ -54,6 +56,7 @@ public class RollAttack extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         this.isMultiDamage = true;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("RollAttack.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

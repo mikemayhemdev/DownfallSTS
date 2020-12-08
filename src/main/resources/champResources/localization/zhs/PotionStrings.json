@@ -1,0 +1,30 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "策略药水",
+    "DESCRIPTIONS": [
+      "从 #b3 张 #y起手牌 中选择 #b1 张加入手牌（每种 #y姿态 各一张）。它的耗能本回合为 #b0 。",
+      "从 #b3 张已 #y升级 的 #y起手牌 中选择 #b1 张加入手牌（每种 #y姿态 各一张）。 它的耗能本回合为 #b0 。"
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "瓶装技术",
+    "DESCRIPTIONS": [
+      "#y技术 #b",
+      " 次。"
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "奇异精炼",
+    "DESCRIPTIONS": [
+      "进入 #y终极姿态 #b",
+      " 回合。"
+    ]
+  },
+  "champ:CounterstrikePotion": {
+    "NAME": "锐利特酿",
+    "DESCRIPTIONS": [
+      "获得 #b",
+      " 层 #y反击 。"
+    ]
+  }
+}

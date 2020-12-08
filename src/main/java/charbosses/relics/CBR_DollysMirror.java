@@ -1,13 +1,7 @@
 package charbosses.relics;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.DollysMirror;
-import downfall.downfallMod;
-
-import java.util.ArrayList;
 
 public class CBR_DollysMirror extends AbstractCharbossRelic {
     public static final String ID = "DollysMirror";
@@ -32,21 +26,6 @@ public class CBR_DollysMirror extends AbstractCharbossRelic {
         return this.DESCRIPTIONS[0] + this.addedDesc;
     }
 
-
-
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
-        AbstractCharBoss.boss.chosenArchetype.logger.info("Dolly's Mirror is trying to duplicate " + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex].name);
-
-        if (AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex] != null) {
-            groupToModify.add(AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex]);
-            AbstractCharBoss.boss.chosenArchetype.logger.info("Dolly's Mirror duplicated " + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex].name);
-            addedDesc += CardCrawlGame.languagePack.getRelicStrings(downfallMod.makeID(ID)).DESCRIPTIONS[0] + AbstractCharBoss.boss.chosenArchetype.signatureCardPerAct[actIndex].name + ".";
-        }
-
-        this.description = getUpdatedDescription();
-        this.refreshDescription();
-    }
 
     @Override
     public void onEquip() {

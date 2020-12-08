@@ -26,9 +26,9 @@ public class TwinSlam extends AbstractGuardianCard {
     private static final int DAMAGE = 4;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 1;
+    private static final int UPGRADE_BONUS = 2;
     private static final int MULTICOUNT = 2;
-    private static final int SOCKETS = 1;
+    private static final int SOCKETS = 2;
     private static final boolean SOCKETSAREAFTER = true;
     public static String DESCRIPTION;
     public static String UPGRADED_DESCRIPTION;
@@ -73,15 +73,7 @@ public class TwinSlam extends AbstractGuardianCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_BONUS);
-
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
-            this.updateDescription();
         }
-
-
     }
 
     public void updateDescription() {

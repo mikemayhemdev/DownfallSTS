@@ -13,6 +13,7 @@ import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.YELLOW;
 
 
@@ -49,6 +50,7 @@ public class Gem_Yellow extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = YELLOW;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Amber.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

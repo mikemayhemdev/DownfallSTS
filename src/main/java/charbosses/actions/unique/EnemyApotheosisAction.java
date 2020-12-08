@@ -21,9 +21,11 @@ public class EnemyApotheosisAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_MED) {
             AbstractCharBoss p = AbstractCharBoss.boss;
             this.upgradeAllCardsInGroup(p.hand);
+            /*
             this.upgradeAllCardsInGroup(p.drawPile);
             this.upgradeAllCardsInGroup(p.discardPile);
             this.upgradeAllCardsInGroup(p.exhaustPile);
+            */
             this.isDone = true;
         }
 

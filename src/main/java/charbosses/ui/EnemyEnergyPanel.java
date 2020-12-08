@@ -19,13 +19,14 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.AbstractPanel;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.RefreshEnergyEffect;
+import downfall.downfallMod;
 
 public class EnemyEnergyPanel extends AbstractPanel {
     public static final String[] MSG;
     public static final String[] LABEL;
     public static final float FONT_POP_SCALE = 2.0f;
     public static final float ENERGY_VFX_TIME = 2.0f;
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("downfall:EnergyPanelTip");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("EnergyPanelTip"));
     private static final int RAW_W = 256;
     private static final Color ENERGY_TEXT_COLOR;
     private static final float VFX_ROTATE_SPEED = -30.0f;

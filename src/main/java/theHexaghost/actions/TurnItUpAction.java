@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.actions.AbstractXAction;
 import theHexaghost.powers.EnhancePower;
 import theHexaghost.powers.LoseEnhanceInTurnsPower;
 

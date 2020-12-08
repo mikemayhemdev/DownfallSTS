@@ -46,8 +46,10 @@ public class EnWindmillStrike extends AbstractBossCard {
 
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
-       if (this.cost > 0) return 0;
-       return autoPriority();
+       if (this.cost > 0){
+           return 0;
+       }
+       return autoPriority() * 5;
     }
 
     public AbstractCard makeCopy() {

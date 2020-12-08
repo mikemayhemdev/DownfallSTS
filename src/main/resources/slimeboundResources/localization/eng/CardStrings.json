@@ -367,8 +367,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead."
+    "DESCRIPTION": "Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
@@ -388,7 +388,8 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command three times."
   },
   "Slimebound:TagTeam": {
     "NAME": "Tag Team",
@@ -396,8 +397,7 @@
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
+    "DESCRIPTION": "Deal !D! damage. NL The next !M! cards played this turn trigger a slimeboundmod:Command."
   },
   "Slimebound:Nibble": {
     "NAME": "Nibble",

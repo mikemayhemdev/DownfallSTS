@@ -18,6 +18,8 @@ public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Defect").NAMES[0];
 
+    public int clawsPlayed = 0;
+
     public CharBossDefect() {
         super(NAME, ID, 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, -20.0f, AbstractPlayer.PlayerClass.DEFECT);
         this.energyOrb = new EnergyOrbBlue();
@@ -84,14 +86,15 @@ public class CharBossDefect extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+        chosenArchetype = archetype;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
     }
 
     @Override
     public void die() {
         super.die();
-        downfallMod.saveBossFight("downfall:CharBossDefect");
+        downfallMod.saveBossFight(CharBossDefect.ID);
     }
 }

@@ -33,7 +33,7 @@ public class EnWildStrike extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        this.addToBot(new EnemyMakeTempCardInDrawPileAction(new EnWound(), 1, true, true));
+     //   this.addToBot(new EnemyMakeTempCardInDrawPileAction(new EnWound(), 1, true, true));
     }
 
     @Override

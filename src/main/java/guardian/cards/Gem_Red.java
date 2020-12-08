@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.RED;
 
 
@@ -50,6 +51,7 @@ public class Gem_Red extends AbstractGuardianCard {
         this.baseMagicNumber = this.magicNumber = DAMAGEBUFF;
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = RED;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Ruby.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

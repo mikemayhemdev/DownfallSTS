@@ -56,7 +56,7 @@ public class Overexert extends AbstractSlimeboundCard {
 
         if (upgraded) addToBot(new CommandAction());
         if (upgraded) addToBot(new CommandAction());
-
+        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {

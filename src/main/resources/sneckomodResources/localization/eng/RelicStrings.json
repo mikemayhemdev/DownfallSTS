@@ -81,7 +81,7 @@
     "NAME": "Blank Card",
     "FLAVOR": "Card Mimic.",
     "DESCRIPTIONS": [
-      "At the start of each combat, play a random card from your deck."
+      "At the start of each combat, play a copy of a random card from your deck."
     ]
   },
   "sneckomod:D8": {

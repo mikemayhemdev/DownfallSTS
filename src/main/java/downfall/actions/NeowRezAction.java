@@ -74,7 +74,7 @@ public class NeowRezAction extends AbstractGameAction {
             this.rezInit = true;
             String name;
             if (owner.bossesToRez.size() == 0) {
-                name = "downfall:CharBossIronclad";
+                name = "downfall:Ironclad";
                 SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
             } else {
                 //Collections.shuffle(owner.bossesToRez);
@@ -108,11 +108,10 @@ public class NeowRezAction extends AbstractGameAction {
         }
 
 
-
         if (this.duration <= 0F) {
             cB.init();
             owner.Rezzes++;
-            if (owner.Rezzes == 4){
+            if (owner.Rezzes == 4) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
@@ -125,28 +124,16 @@ public class NeowRezAction extends AbstractGameAction {
     }
 
     public void rezBoss(String name) {
-        //Separated here for patching in case of modded characters being made into bosses
-        switch (name) {
-            case "downfall:CharBossIronclad": {
-                cB = new CharBossIronclad();
-                break;
-            }
-            case "downfall:CharBossSilent": {
-                cB = new CharBossSilent();
-                break;
-            }
-            case "downfall:CharBossDefect": {
-                cB = new CharBossDefect();
-                break;
-            }
-            case "downfall:CharBossWatcher": {
-                cB = new CharBossWatcher();
-                break;
-            }
-            default: {
-                cB = new CharBossIronclad();
-                break;
-            }
+        if (name.equals(CharBossIronclad.ID)) {
+            cB = new CharBossIronclad();
+        } else if (name.equals(CharBossSilent.ID)) {
+            cB = new CharBossSilent();
+        } else if (name.equals(CharBossDefect.ID)) {
+            cB = new CharBossDefect();
+        } else if (name.equals(CharBossWatcher.ID)) {
+            cB = new CharBossWatcher();
+        } else {
+            cB = new CharBossIronclad();
         }
     }
 }

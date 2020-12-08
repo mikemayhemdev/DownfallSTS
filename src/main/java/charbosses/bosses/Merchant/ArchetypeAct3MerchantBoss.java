@@ -3,13 +3,18 @@ package charbosses.bosses.Merchant;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.colorless.*;
 import charbosses.cards.curses.EnWrithe;
+import charbosses.cards.green.*;
 import charbosses.cards.purple.*;
 import charbosses.cards.red.EnInflame;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_FaceTrader;
 import charbosses.relics.EventRelics.CBR_Falling;
 import charbosses.relics.EventRelics.CBR_Mausoleum;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import charbosses.relics.*;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
@@ -20,52 +25,86 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
     public void initialize() {
 
 
-
         /////   RELICS   /////
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_MercuryHourglass());
-        //addRelic(new CBR_Torii());
+        addRelic(new CBR_Torii());
         //addRelic(new CBR_SelfFormingClay());
-        //addRelic(new CBR_IncenseBurner());
+        addRelic(new CBR_IncenseBurner());
         addRelic(new CBR_Calipers());
-        //addRelic(new CBR_Girya(3));
-        //addRelic(new CBR_Vajra());
+        addRelic(new CBR_Girya(3));
+        addRelic(new CBR_Vajra());
         addRelic(new CBR_SmoothStone());
         addRelic(new CBR_FossilizedHelix());
         //addRelic(new CBR_BagOfPreparation());
-        //addRelic(new CBR_ClockworkSouvenir());
-        //addRelic(new CBR_TungstenRod());
+        addRelic(new CBR_ClockworkSouvenir());
+        addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
         //addRelic(new CBR_FusionHammer());
 
-        /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnPanicButton(), extraUpgrades);
-        addToDeck(new EnDramaticEntrance(), extraUpgrades);
-        addToDeck(new EnTheBomb(), false);
 
-        //Turn 2
-        addToDeck(new EnPanacea(), extraUpgrades);
-        addToDeck(new EnApotheosis(), true);
-        addToDeck(new EnHandOfGreed(), false);
+    }
 
-        //Turn 3
-        addToDeck(new EnSadisticNature(), false);
-        addToDeck(new EnTrip(), false);
-        addToDeck(new EnGoodInstincts(), false);
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
 
-        //Turn 4
-        addToDeck(new EnGoodInstincts(), false);
-        addToDeck(new EnBlind(), false);
-        addToDeck(new EnSwiftStrike(), false);
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnTheBomb(), false);
+                    addToList(cardsList, new EnTrip(), false);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnHandOfGreed(), false);
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    addToList(cardsList, new EnBlind(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnTheBomb(), false);
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
 
-        //Turn 5
-        addToDeck(new EnPanacea(), false);
-        addToDeck(new EnSwiftStrike(), false);
-        addToDeck(new EnMagnetism(), false);
-
-
+                    addToList(cardsList, new EnPanicButton(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnDramaticEntrance(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnTheBomb(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnPanacea(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnApotheosis(), true);  //removed
+                    addToList(cardsList, new EnHandOfGreed(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnSadisticNature(), false);  //removed
+                    addToList(cardsList, new EnTrip(), false);
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    break;
+                case 3:
+                    addToList(cardsList, new EnGoodInstincts(), false);
+                    addToList(cardsList, new EnBlind(), false);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    break;
+                case 4:
+                    addToList(cardsList, new EnPanacea(), false);  //removed
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    addToList(cardsList, new EnTheBomb(), false);
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) looped = true;
+        else if (turn > 4 && looped) {
+            turn = 0;
+        }
+        return cardsList;
     }
 
     @Override
