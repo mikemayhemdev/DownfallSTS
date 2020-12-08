@@ -25,7 +25,7 @@ public class Incinerate extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 3;
