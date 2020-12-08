@@ -115,6 +115,10 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
                 break;
             }
         }
+
+        if (upgraded){
+            checkMinionMaster();
+        }
     }
 
     public void upgrade() {

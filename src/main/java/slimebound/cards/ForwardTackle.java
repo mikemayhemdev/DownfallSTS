@@ -57,6 +57,9 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         addToBot(new CommandAction());
         addToBot(new CommandAction());
         if (upgraded) addToBot(new CommandAction());
+
+
+        checkMinionMaster();
     }
 
     public void upgrade() {
