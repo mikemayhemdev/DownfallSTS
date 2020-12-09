@@ -1,5 +1,6 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,13 +23,19 @@ public class SpectralAdrenaline extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-            if (gf.charged) {
-                atb(new ExtinguishAction(gf));
-                atb(new GainEnergyAction(1));
-                atb(new DrawCardAction(1));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                    if (gf.charged) {
+                        att(new GainEnergyAction(1));
+                        att(new DrawCardAction(1));
+                        att(new ExtinguishAction(gf));
+                    }
+                }
             }
-        }
+        });
     }
 
     public void upgrade() {
