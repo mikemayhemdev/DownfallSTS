@@ -1,10 +1,12 @@
 package champ.cards;
 
 import champ.actions.SteelEdgeAction;
+import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
+import downfall.dailymods.ChampStances;
 
 public class SteelEdge extends AbstractChampCard {
 
@@ -20,6 +22,14 @@ public class SteelEdge extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 0;
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (!(p.stance instanceof AbstractChampStance)){
+            return false;
+        }
+        return super.canUse(p, m);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
