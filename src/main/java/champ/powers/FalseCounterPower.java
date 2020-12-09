@@ -39,7 +39,7 @@ public class FalseCounterPower extends AbstractPower implements CloneablePowerIn
     @Override
     public void onSpecificTrigger() {
         flash();
-        addToBot(new ReducePowerAction(owner, owner, this, 1));
+        addToTop(new ReducePowerAction(owner, owner, this, 1));
     }
 
     @Override
