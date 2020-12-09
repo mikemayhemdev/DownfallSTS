@@ -296,6 +296,10 @@ public class FleeingMerchant extends AbstractMonster {
             AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
             tRoom.onPlayerEntry();
             AbstractDungeon.player.hand.clear();
+            AbstractDungeon.player.drawPile.clear();
+            AbstractDungeon.player.limbo.clear();
+            AbstractDungeon.player.discardPile.clear();
+            AbstractDungeon.player.exhaustPile.clear();
             AbstractDungeon.closeCurrentScreen();
 
         }

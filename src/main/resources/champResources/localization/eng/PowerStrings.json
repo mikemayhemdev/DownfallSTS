@@ -171,5 +171,13 @@
       "At the start of turn, if HP is at or below 50%, cleanse all debuffs and gain ",
       " Strength."
     ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "Shield Thrown",
+    "DESCRIPTIONS": [
+      "You can't gain Block next turn.",
+      "You can't gain Block for the next #b",
+      " turns."
+    ]
   }
 }
