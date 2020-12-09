@@ -26,6 +26,7 @@ public class BolsteringGhostflame extends AbstractGhostflame {
     private String NAME = CardCrawlGame.languagePack.getOrbString(ID).NAME;
     private String[] DESCRIPTIONS = CardCrawlGame.languagePack.getOrbString(ID).DESCRIPTION;
 
+
     public BolsteringGhostflame(float x, float y) {
         super(x, y);
         block = 4;
@@ -117,5 +118,15 @@ public class BolsteringGhostflame extends AbstractGhostflame {
             s = s + DESCRIPTIONS[5];
         }
         return s;
+    }
+
+    public Color getFlameColor() {
+        return Color.SKY.cpy();
+        //return Color.SKY.cpy();
+    }
+
+    public Color getActiveColor() {
+        return Color.PURPLE.cpy();
+        //return Color.PURPLE.cpy();
     }
 }

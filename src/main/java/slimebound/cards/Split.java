@@ -3,15 +3,12 @@ package slimebound.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.actions.OctoChoiceActionSplit;
+import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
-import expansioncontent.expansionContentMod;
+import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
-import slimebound.actions.CommandAction;
-import slimebound.actions.OctoChoiceAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
@@ -19,7 +16,7 @@ import slimebound.patches.AbstractCardEnum;
 import java.util.ArrayList;
 
 
-public class Split extends AbstractSlimeboundCard {
+public class Split extends AbstractSlimeboundCard implements OctopusCard {
     public static final String ID = "Slimebound:Split";
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -74,8 +71,8 @@ public class Split extends AbstractSlimeboundCard {
     }
 
     public void choice() {
-        addToBot(new OctoChoiceActionSplit(this));
-        if (upgraded) addToBot(new OctoChoiceActionSplit(this));
+        addToBot(new OctoChoiceAction(this));
+        if (upgraded) addToBot(new OctoChoiceAction(this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {

@@ -1,0 +1,31 @@
+{
+  "Guardian:AcceleratePotion": {
+    "NAME": "시간단층 포션",
+    "DESCRIPTIONS": [
+      "#y정지장 에 있는 모든 카드들을 2 차례 가속 합니다.",
+      "#y정지장 에 있는 모든 카드들을 4 차례 가속 합니다."
+    ]
+  },
+  "Guardian:DefensiveModePotion": {
+    "NAME": "광택제",
+    "DESCRIPTIONS": [
+      "#y방어도 #b",
+      " 얻고 #y수비 #y모드로 들어갑니다."
+    ]
+  },
+  "Guardian:BlockOnCardUsePotion": {
+    "NAME": "병기공의 윤활유",
+    "DESCRIPTIONS": [
+      "이번 턴에 카드를 사용할 떄마다 #y방어도 #b",
+      "  얻습니다."
+    ]
+  },
+  "Guardian:StasisDiscoveryPotion": {
+    "NAME": "양자 엘릭서",
+    "DESCRIPTIONS": [
+      "#y정지장 슬롯을 #b",
+      " 얻습니다. NL ",
+      " 회, #y정지장 안에 들어갈 세 장의 카드 중 한 장을 선택합니다."
+    ]
+  }
+}

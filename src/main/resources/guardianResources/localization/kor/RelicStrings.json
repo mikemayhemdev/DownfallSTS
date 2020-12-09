@@ -1,0 +1,124 @@
+{
+  "Guardian:ModeShifter": {
+    "NAME": "모드 변환기",
+    "FLAVOR": "당신에게 가장 필요한 건 보호죠.",
+    "DESCRIPTIONS": [
+      "HP #b10 잃으면, 방어도 #b15 를 얻고 #yguardianmod:수비모드 로 들어갑니다. 다음 턴이 시작되어도 수비모드를 해제하지 않습니다."
+    ]
+  },
+  "Guardian:ModeShifterPlus": {
+    "NAME": "수호자 톱니바퀴",
+    "FLAVOR": "3,000층마다 갈아 끼워주세요.",
+    "DESCRIPTIONS": [
+      "#r모드 #r변환기 를 대체합니다. 매전투사 #yguardianmod:수비모드 로 시작하며, #b5 턴 동안 지속됩니다."
+    ]
+  },
+  "Guardian:DefensiveModeMoreBlock": {
+    "NAME": "바울러의 위풍당당한 갑옷",
+    "FLAVOR": "갑옷 하나로는 절대로 충분하지 않죠.",
+    "DESCRIPTIONS": [
+      "#yguardianmod:수비모드 에서 카드를 사용하면, #y방어도 #b1 추가로 얻습니다."
+    ]
+  },
+  "Guardian:guardianmod:GemCopier": {
+    "NAME": "보석 텀블러",
+    "FLAVOR": "가장 꺠끗한 사람만 쓸 수 있다구요.",
+    "DESCRIPTIONS": [
+      "#yguardianmod:보석 카드를 사용하면, 그 카드를 복사해서 사용합니다."
+    ]
+  },
+  "Guardian:PocketSentry": {
+    "NAME": "휴대용 보초기",
+    "FLAVOR": "경계 모드 발동. 타겟 발견. 악감정 없음.",
+    "DESCRIPTIONS": [
+      "매턴 시작시 다음 효과를 번갈아가며 발동합니다: NL 무작위 적에게 피해 #b",
+      " 가합니다. NL 모든 적에게 #y약화 #b1 적용합니다."
+    ]
+  },
+  "Guardian:SackOfGems": {
+    "NAME": "보석 자루",
+    "FLAVOR": "오... 반짝이다!",
+    "DESCRIPTIONS": [
+      "획득 시, 덱에 무작위 #yguardianmod:보석 카드 #b5 장 넣습니다 deck."
+    ]
+  },
+  "Guardian:StasisCodex": {
+    "NAME": "건축도면 사본",
+    "FLAVOR": "첨탑 초기 프로토타입의 디자인과 도표.",
+    "DESCRIPTIONS": [
+      "턴종료시 #yguardianmod:정지장 에 어떤 카드도 없다면, 카드 #b3 장 중 #b1 장 골라 #yguardianmod:정지장 에 넣습니다."
+    ]
+  },
+  "Guardian:StasisSlotIncreaseRelic": {
+    "NAME": "작은 파출소",
+    "FLAVOR": "안쪽은 더 크답니다...",
+    "DESCRIPTIONS": [
+      "전투 시작시, #yguardianmod:정지장 슬롯을 #b2 개 추가합니다."
+    ]
+  },
+  "Guardian:StasisSlotReductionRelic": {
+    "NAME": "산만한 로봇",
+    "FLAVOR": "이 드론들은 정말 멋진 장소에서 찾아냈지만, 유지할려면 연산 능력이 필요합니다.",
+    "DESCRIPTIONS": [
+      "획득시, #yguardianmod:정지장 슬롯 #b2 개 잃습니다. NL 매턴 시작시 [E] 를 얻습니다."
+    ]
+  },
+  "Guardian:StasisUpgradeRelic": {
+    "NAME": "극저온용기",
+    "FLAVOR": "모든 것은 항상 들어갈 때보다 나올 때 더 좋아보입니다.",
+    "DESCRIPTIONS": [
+      "#yguardianmod:정지장 슬롯 #b1 개 얻습니다. 카드를 #yguardianmod:정지장 에 넣으면, 카드를 #y강화 합니다."
+    ]
+  },
+  "Guardian:BottledStasis": {
+    "NAME": "병 속의 블랙홀",
+    "FLAVOR": "어딘가에서 무언가 엄청난게 알려지길 기다리고 있습니다.",
+    "DESCRIPTIONS": [
+      "획득 시 #y카드 를 고릅니다. 선택한 카드를 #yguardianmod:정지장 에 넣은 채로 시작합니다.",
+      "전투 시작시 ",
+      "#yguardianmod:정지장 에 ",
+      " 를 넣습니다."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "양자 알",
+    "FLAVOR": "닭은 달걀을 부화시켜서 얻는 것이지, 달걀을 부숴서 얻는 것이 아닙니다.",
+    "DESCRIPTIONS": [
+      "획득 시, #y카드 를 고릅니다. 선택한 카드를 덱에서 제거한 채로 전투를 시작합니다. #b4번째 턴 시작시, 해당 카드의 복사본을 #b2 장 돌려받습니다.",
+      "카드를 선택하세요 ",
+      "매전투 시작시 덱에서 ",
+      " 제거합니다. #b4번째 턴 시작시, 해당 카드의 복사본을 #b2 장 돌려받습니다."
+    ]
+  },
+  "Guardian:TickHelperRelic": {
+    "NAME": "냉각 유체",
+    "FLAVOR": "위험. 먹지 마시오.",
+    "DESCRIPTIONS": [
+      "#yguardianmod:째깍째깍 효과가 있는 카드가 #yguardianmod:정지장 에 들어갈때, 카운터를 #b2 증가시킵니다."
+    ]
+  },
+  "Guardian:PickAxe": {
+    "NAME": "랩소디 회사의 채굴용 곡갱이",
+    "FLAVOR": "첨탑에는 많은 원석들이 어지럽게 널려 있어서, 그를 돕기 위해 이 곡갱이가 필요하다는 불운한 사람을 상상하긴 어렵군요.",
+    "DESCRIPTIONS": [
+      "이제 당신은 휴식 장소에서 #yguardianmod:보석 #b2 개를 #g채굴 할 수 있습니다. (최대 #b3 번)."
+    ]
+  },
+  "Guardian:GemstoneGun": {
+    "NAME": "원석 총",
+    "FLAVOR": "빵! 빵! 빵! 야, 나 세 번 맞췄어!",
+    "DESCRIPTIONS": [
+      "획득시, #yguardianmod:보석 #b3 개 선택합니다. 매전투 시작시, 보석 소켓에 각각 보존, 소멸이 선택된 카드 한 장 얻습니다."
+    ]
+  },
+  "Guardian:BottledAnomaly": {
+    "NAME": "병 속의 이상현상",
+    "FLAVOR": "소용돌이치고 또 소용돌이치며 마침내 부서집니다.",
+    "DESCRIPTIONS": [
+      "획득시, 카드 한 장 선택합니다. 매전투 시작시, 뽑을 카드 더미에서 그 카드를 제거합니다. #b3 번째 턴 시작시, 손 안에 가져옵니다. 카드의 비용은 #b0 입니다.",
+      "카드를 선택하세요 ",
+      "매전투 시작시 뽑을 카드 더미에서 ",
+      " 제거합니다. #b3 번째 턴 시작시, 손 안에 가져옵니다. NL 카드의 비용은 #b0 입니다."
+    ]
+  }
+}

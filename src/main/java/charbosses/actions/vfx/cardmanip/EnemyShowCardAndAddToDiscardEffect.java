@@ -33,7 +33,6 @@ public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect {
         if (this.card.type != AbstractCard.CardType.CURSE && this.card.type != AbstractCard.CardType.STATUS && AbstractCharBoss.boss.hasPower("MasterRealityPower")) {
             this.card.upgrade();
         }
-        AbstractCharBoss.boss.discardPile.addToTop(srcCard);
     }
 
     public EnemyShowCardAndAddToDiscardEffect(final AbstractCard card) {
@@ -46,7 +45,6 @@ public class EnemyShowCardAndAddToDiscardEffect extends AbstractGameEffect {
         if (card.type != AbstractCard.CardType.CURSE && card.type != AbstractCard.CardType.STATUS && AbstractCharBoss.boss.hasPower("MasterRealityPower")) {
             card.upgrade();
         }
-        AbstractCharBoss.boss.discardPile.addToTop(card);
     }
 
     private void identifySpawnLocation(final float x, final float y) {

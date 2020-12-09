@@ -45,12 +45,13 @@ public class PocketSentry extends CustomRelic {
         this.flash();
         if (beaming) {
             beaming = false;
-            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
+            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null,true,AbstractDungeon.relicRng);
+            if(m != null){
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(this.hb.cX - (5F * Settings.scale), this.hb.cY + (10F * Settings.scale), m.hb.cX, m.hb.cY), 0.3F));
 
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(this.hb.cX - (5F * Settings.scale), this.hb.cY + (10F * Settings.scale), m.hb.cX, m.hb.cY), 0.3F));
-
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            }
 
         } else {
             beaming = true;

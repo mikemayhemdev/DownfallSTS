@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.downfallMod;
 
+import java.util.ArrayList;
+
 public class EnJAX extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Jax";
     private static final CardStrings cardStrings;
@@ -42,6 +44,10 @@ public class EnJAX extends AbstractBossCard {
 
     }
 
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return  Integer.MAX_VALUE;
+    }
 
     @Override
     public AbstractCard makeCopy() {

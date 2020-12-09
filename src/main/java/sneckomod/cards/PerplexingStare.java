@@ -31,7 +31,8 @@ public class PerplexingStare extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC);
+            if (baseMagicNumber > -3)
+                upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "downfall:CursedFountainPotion": {
+    "NAME": "저주받은 샘의 액체",
+    "DESCRIPTIONS": [
+      "#y약화 #b",
+      " #y취약 #b",
+      " 을 부여하고, #y힘 ",
+      " 을 감소시킵니다."
+    ]
+  }
+}

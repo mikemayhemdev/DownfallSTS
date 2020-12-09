@@ -14,13 +14,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import slimebound.SlimeboundMod;
 
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];
 
     public CharBossSilent() {
-        super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.THE_SILENT);
+        super(NAME, ID, 80, -4.0f, -16.0f, 240.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.THE_SILENT);
         this.energyOrb = new EnergyOrbGreen();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);
@@ -29,13 +30,16 @@ public class CharBossSilent extends AbstractCharBoss {
         this.flipHorizontal = true;
         e.setTimeScale(0.9f);
         this.energyString = "[G]";
+        type = EnemyType.BOSS;
     }
 
     @Override
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1Streamline();
+            archetype = new ArchetypeAct1Shivs();
+            downfallMod.overrideBossDifficulty = false;
+            this.currentHealth -= 100;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
@@ -47,7 +51,9 @@ public class CharBossSilent extends AbstractCharBoss {
                 case 3:
                     archetype = new ArchetypeAct3Poison();
                     break;
-                case 4: {
+                case 4:
+                    SlimeboundMod.logger.info("Silent spawned at Archetype " + NeowBoss.Rezzes);
+                    {
                     switch (NeowBoss.Rezzes) {
                         case 1:
                             archetype = new ArchetypeAct1Shivs();
@@ -59,7 +65,7 @@ public class CharBossSilent extends AbstractCharBoss {
                             archetype = new ArchetypeAct3Poison();
                             break;
                         default:
-                            archetype = new ArchetypeAct1Shivs();
+                            archetype = new ArchetypeAct3Poison();
                             break;
                     }
                     break;
@@ -70,9 +76,10 @@ public class CharBossSilent extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+        chosenArchetype = archetype;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
     }
 
     @Override
@@ -110,6 +117,7 @@ public class CharBossSilent extends AbstractCharBoss {
                 break;
         }
 
+        downfallMod.saveBossFight(CharBossSilent.ID);
     }
 
 }

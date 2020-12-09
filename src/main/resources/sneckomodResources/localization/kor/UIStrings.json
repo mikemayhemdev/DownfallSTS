@@ -1,0 +1,33 @@
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "수수께끼",
+      " 강화된 "
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "???",
+      "sneckomod:수수께끼 ",
+      " 카드.",
+      "캐릭터",
+      " ",
+      "You should never see this. Report to Vex"
+    ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+    "TEXT": [
+      "덱에 수수께끼+ 카드 한 장 추가합니다"
+    ]
+  },
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "보존. NL "
+    ]
+  },
+  "sneckomod:ExhaustMod": {
+    "TEXT": [
+      " NL 소멸."
+    ]
+  }
+}

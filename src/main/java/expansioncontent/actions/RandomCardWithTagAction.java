@@ -1,12 +1,14 @@
 package expansioncontent.actions;
 
 
+import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import expansioncontent.expansionContentMod;
 import guardian.cards.AbstractGuardianCard;
 import guardian.patches.GuardianEnum;
 import slimebound.cards.AbstractSlimeboundCard;
@@ -53,13 +55,23 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         return UnlockTracker.isCharacterLocked(TheHexaghost.ID);
     }
 
+    public static boolean champLocked() {
+        return UnlockTracker.isCharacterLocked(ChampChar.ID);
+    }
+
     public void update() {
 
         ArrayList<String> tmp = new ArrayList<>();
 
         for (Map.Entry<String, AbstractCard> stringAbstractCardEntry : CardLibrary.cards.entrySet()) {
             Map.Entry<String, AbstractCard> c = (Map.Entry) stringAbstractCardEntry;
-            if (c.getValue().hasTag(tag) && (!(c instanceof AbstractSlimeboundCard && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND)) && (!(c instanceof AbstractGuardianCard && (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || guardianLocked()))) && (!(c instanceof AbstractHexaCard && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || hexaLocked())))) {
+            if (c.getValue().hasTag(tag)
+                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_SLIMEBOSS)
+                    && AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND))
+                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_GUARDIAN)
+                    && (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || guardianLocked())))
+                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_HEXAGHOST)
+                    && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || hexaLocked())))) {
                 tmp.add(c.getKey());
             }
         }

@@ -35,7 +35,7 @@ public class SlimeWaterDropEffectPurple extends com.megacrit.cardcrawl.vfx.Abstr
         this.frame = 0;
         this.scale = (MathUtils.random(2.5F, 3.0F) * Settings.scale);
         this.rotation = 0.0F;
-        this.scale *= Settings.scale;
+       // this.scale *= Settings.scale;
         this.color = new Color(0.65F, 0.2F, 0.65F, 1F);
     }
 

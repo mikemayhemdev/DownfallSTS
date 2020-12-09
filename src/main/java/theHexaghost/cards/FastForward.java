@@ -2,6 +2,7 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
@@ -15,6 +16,7 @@ public class FastForward extends AbstractHexaCard {
     public FastForward() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         isEthereal = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

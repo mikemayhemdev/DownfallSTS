@@ -55,6 +55,9 @@ public class TagTeam extends AbstractSlimeboundCard {
         for (int i = 0; i < this.magicNumber; i++) {
             addToBot(new CommandAction());
         }
+
+
+        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {

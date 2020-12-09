@@ -29,7 +29,7 @@
       "[跳过]",
       "[离开]",
       "选择10张牌加入你的牌组。",
-      "[ #g接下来2场战斗中的敌人将落荒而逃 ]"
+      "[ #g接下来3场战斗中的敌人将落荒而逃 ]"
     ]
   },
   "downfall:Unlock": {
@@ -38,7 +38,9 @@
       "这名角色需要用第二名恶棍打过一局游戏才能解锁。",
       "这名角色需要用守护者打过一局游戏才能解锁。",
       "这名角色需要用第三名恶棍打过一局游戏才能解锁。",
-      "这名角色需要用六火亡魂打过一局游戏才能解锁。"
+      "这名角色需要用六火亡魂打过一局游戏才能解锁。",
+      "This character is unlocked by completing a run with the 4th Villain character.",
+      "This character is unlocked by completing a run with the Champ."
 	  
     ]
   },
@@ -160,9 +162,9 @@
       "分裂：时间"
     ],
     "TEXT": [
-      "失去 6 点生命。 NL 获得 40 灵魂。",
-      "失去 3 点生命。 NL 获得一张无色牌。",
-      "失去 9 点生命。 NL 获得一瓶药水。",
+      "失去 3 点生命。 NL 获得 40 灵魂。",
+      "失去 1 点生命。 NL 获得一张无色牌。",
+      "失去 5 点生命。 NL 获得一瓶药水。",
       "获得守护者 expansioncontent:首领 牌。",
       "获得六火亡魂 expansioncontent:首领 牌。",
       "获得史莱姆老大 expansioncontent:首领 牌。",
@@ -195,7 +197,7 @@
       "选择前进，回退或什么都不做"
     ]
   },
-  "downfall:Merchant": {
+  "downfall:CharBossMerchant": {
     "NAMES": [
       "商人"
     ],

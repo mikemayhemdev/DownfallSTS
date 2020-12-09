@@ -12,7 +12,6 @@ public class CBR_Abacus extends AbstractCharbossRelic {
 
     public CBR_Abacus() {
         super(new Abacus());
-        this.tier = RelicTier.COMMON;
     }
 
     public String getUpdatedDescription() {

@@ -1,8 +1,6 @@
 package charbosses.powers.general;
 
-import charbosses.actions.common.EnemyDrawCardAction;
 import charbosses.bosses.AbstractCharBoss;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -55,6 +53,6 @@ public class EnemyDrawPower extends AbstractPower {
     @Override
     public void atStartOfTurnPostDraw() {
         this.flash();
-        this.addToBot(new EnemyDrawCardAction((AbstractCharBoss) this.owner, this.amount));
+        //this.addToBot(new EnemyDrawCardAction((AbstractCharBoss) this.owner, this.amount));
     }
 }

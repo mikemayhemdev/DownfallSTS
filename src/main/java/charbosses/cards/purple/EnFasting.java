@@ -3,6 +3,7 @@ package charbosses.cards.purple;
 import charbosses.actions.unique.EnemyHeadStompAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyEnergyDownPower;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -34,15 +35,16 @@ public class EnFasting extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p != null) {
+        if (m != null) {
             this.addToBot(new VFXAction(new FastingEffect(m.hb.cX, m.hb.cY, Color.CHARTREUSE)));
         }
 
         this.addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyEnergyDownPower(m, 1,true), 1));
 
-        final EnergyManager energy = AbstractCharBoss.boss.energy;
-        --energy.energyMaster;
+//        final EnergyManager energy = AbstractCharBoss.boss.energy;
+//        --energy.energyMaster;
     }
 
     public AbstractCard makeCopy() {

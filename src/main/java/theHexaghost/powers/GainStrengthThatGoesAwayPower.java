@@ -26,6 +26,8 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private int strengthGranted = 0;
+
     public GainStrengthThatGoesAwayPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -48,6 +50,7 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     public void atStartOfTurnPostDraw() {
         this.flash();// 28
         this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, this.amount), this.amount));// 29
+        strengthGranted += this.amount;
         activated = false;
     }
 
@@ -55,7 +58,8 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     public void onAdvanceOrRetract(boolean endTurn) {
         if (!activated) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, this.amount));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, StrengthPower.POWER_ID, strengthGranted));
+            strengthGranted = 0;
             activated = true;
         }
     }

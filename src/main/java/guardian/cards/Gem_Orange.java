@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.ORANGE;
 
 
@@ -46,6 +47,7 @@ public class Gem_Orange extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = ORANGE;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Citrine.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

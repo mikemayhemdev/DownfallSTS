@@ -38,7 +38,7 @@ public class EnBlizzard extends AbstractBossCard {
         int frostCount = 0;
 
         for (AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
-            if (o instanceof Frost) {
+            if (o instanceof EnemyFrost) {
                 ++frostCount;
             }
         }
@@ -64,6 +64,7 @@ public class EnBlizzard extends AbstractBossCard {
         }
 
         if (frostCount > 0) {
+            intentMultiAmt = frostCount;
             this.baseDamage = frostCount * this.magicNumber;
             super.applyPowers();
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
@@ -78,10 +79,21 @@ public class EnBlizzard extends AbstractBossCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
+        int frostCount = 0;
+
+        for (AbstractOrb o : AbstractDungeon.actionManager.orbsChanneledThisCombat) {
+            if (o instanceof EnemyFrost) {
+                ++frostCount;
+            }
+        }
+
+        if (frostCount > 0) {
+            intentMultiAmt = frostCount;
+            this.baseDamage = frostCount * this.magicNumber;
+            super.calculateCardDamage(mo);
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
     }
 
     public void upgrade() {

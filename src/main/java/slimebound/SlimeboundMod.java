@@ -656,6 +656,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addEvent(Hunted.ID, Hunted.class, TheBeyond.ID);
         BaseMod.addEvent(ArtOfSlimeWar.ID, ArtOfSlimeWar.class, TheCity.ID);*/
 
+        /*
         BaseMod.addEvent(new AddEventParams.Builder(Hunted.ID, Hunted.class) //Event ID//
                 //Event Character//
                 .playerClass(SlimeboundEnum.SLIMEBOUND)
@@ -667,6 +668,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 //Additional Condition//
                 .bonusCondition(() -> (!foughtSlimeBoss || AbstractDungeon.player.hasRelic(StudyCardRelic.ID)))
                 .create());
+                */
 
         BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
                 //Act//

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
-import theHexaghost.patches.NoDiscardField;
+import downfall.patches.NoDiscardField;
 
 public class SpectralSpark extends AbstractHexaCard {
 

@@ -12,10 +12,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import slimebound.SlimeboundMod;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Defect").NAMES[0];
+
+    public int clawsPlayed = 0;
 
     public CharBossDefect() {
         super(NAME, ID, 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, -20.0f, AbstractPlayer.PlayerClass.DEFECT);
@@ -30,7 +33,7 @@ public class CharBossDefect extends AbstractCharBoss {
 
         this.masterMaxOrbs = 3;
         this.maxOrbs = 3;
-
+        type = EnemyType.BOSS;
     }
 
     @Override
@@ -45,6 +48,8 @@ public class CharBossDefect extends AbstractCharBoss {
 
         if (downfallMod.overrideBossDifficulty) {
             archetype = new ArchetypeAct1Streamline();
+            this.currentHealth -= 100;
+            downfallMod.overrideBossDifficulty = false;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
@@ -57,7 +62,9 @@ public class CharBossDefect extends AbstractCharBoss {
                     archetype = new ArchetypeAct3Orbs();
                     break;
                 case 4: {
+                    SlimeboundMod.logger.info("Defect spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
+
                         case 1:
                             archetype = new ArchetypeAct1Streamline();
                             break;
@@ -68,7 +75,7 @@ public class CharBossDefect extends AbstractCharBoss {
                             archetype = new ArchetypeAct3Orbs();
                             break;
                         default:
-                            archetype = new ArchetypeAct1Streamline();
+                            archetype = new ArchetypeAct3Orbs();
                             break;
                     }
                     break;
@@ -79,8 +86,15 @@ public class CharBossDefect extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+        chosenArchetype = archetype;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
+    }
+
+    @Override
+    public void die() {
+        super.die();
+        downfallMod.saveBossFight(CharBossDefect.ID);
     }
 }

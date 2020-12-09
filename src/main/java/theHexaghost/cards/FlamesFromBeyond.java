@@ -21,7 +21,7 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = "It's too hot to touch!";
+        cantUseMessage = EXTENDED_DESCRIPTION[0];
         return false;
     }
 

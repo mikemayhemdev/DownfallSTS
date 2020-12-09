@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.ArtifactPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.SYNTHETIC;
 
 
@@ -25,7 +26,6 @@ public class Gem_Synthetic extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int HPLOSS = 2;  //HARDCODED IN DESCRIPTION
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;
@@ -49,11 +49,11 @@ public class Gem_Synthetic extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = SYNTHETIC;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Onyx.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, 2));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

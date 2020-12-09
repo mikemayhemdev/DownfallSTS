@@ -3,7 +3,7 @@
     "NAME": "Mode Shifter",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "When you lose #b10 HP, enter #yguardianmod:Defensive_Mode and gain #b15 #yBlock, which will not be removed at the start of your next turn."
+      "When you lose #b10 HP, enter #yguardianmod:Defensive_Mode and gain #b10 #yBlock, which will not be removed at the start of your next turn."
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -94,7 +94,7 @@
     "NAME": "Cooling Fluid",
     "FLAVOR": "Hazardous. Do not consume.",
     "DESCRIPTIONS": [
-      "When a card with a #yguardianmod:Tick effect enters #yguardianmod:Stasis, increase its turn counter by #b2."
+      "Start each combat with #b2 additional #yguardianmod:Stasis slots. NL When a card enters #yguardianmod:Stasis, increase its turn counter by #b2."
     ]
   },
   "Guardian:PickAxe": {

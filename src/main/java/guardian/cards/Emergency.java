@@ -21,10 +21,9 @@ public class Emergency extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     //TUNING CONSTANTS
-    private static final int UPGRADECOST = 0;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -71,8 +70,9 @@ public class Emergency extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            this.upgradeBaseCost(UPGRADECOST);
+            exhaust = false;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 

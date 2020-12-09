@@ -12,24 +12,7 @@ public class EnemyGetAllInBattleInstances {
         if (AbstractCharBoss.boss.cardInUse.uuid.equals(uuid)) {
             cards.add(AbstractCharBoss.boss.cardInUse);
         }
-        for (final AbstractCard c : AbstractCharBoss.boss.drawPile.group) {
-            if (!c.uuid.equals(uuid)) {
-                continue;
-            }
-            cards.add(c);
-        }
-        for (final AbstractCard c : AbstractCharBoss.boss.discardPile.group) {
-            if (!c.uuid.equals(uuid)) {
-                continue;
-            }
-            cards.add(c);
-        }
-        for (final AbstractCard c : AbstractCharBoss.boss.exhaustPile.group) {
-            if (!c.uuid.equals(uuid)) {
-                continue;
-            }
-            cards.add(c);
-        }
+
         for (final AbstractCard c : AbstractCharBoss.boss.limbo.group) {
             if (!c.uuid.equals(uuid)) {
                 continue;

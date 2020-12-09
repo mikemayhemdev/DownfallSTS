@@ -10,7 +10,6 @@ public class CBR_LeesWaffle extends AbstractCharbossRelic {
 
     public CBR_LeesWaffle() {
         super(new Waffle());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     public String getUpdatedDescription() {

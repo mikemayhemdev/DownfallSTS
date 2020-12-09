@@ -1,6 +1,5 @@
 package charbosses.cards.blue;
 
-import charbosses.actions.common.EnemyDrawCardAction;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,7 +23,7 @@ public class EnSkim extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new EnemyDrawCardAction((AbstractCharBoss) m, magicNumber));
+        //atb(new EnemyDrawCardAction((AbstractCharBoss) m, magicNumber));
     }
 
     public void upgrade() {

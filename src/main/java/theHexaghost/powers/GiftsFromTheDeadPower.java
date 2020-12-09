@@ -3,7 +3,6 @@ package theHexaghost.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -11,12 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import theHexaghost.HexaMod;
-import theHexaghost.cards.GiftsFromTheDead;
 import theHexaghost.util.TextureLoader;
 
-public class GiftsFromTheDeadPower extends TwoAmountPower implements CloneablePowerInterface {
+public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = HexaMod.makeID("GiftsFromTheDeadPower");
 
@@ -45,27 +42,17 @@ public class GiftsFromTheDeadPower extends TwoAmountPower implements CloneablePo
     @Override
     public void onExhaust(AbstractCard card) {
         if (card.isEthereal) {
-            addToBot(new ApplyPowerAction(owner, owner, new EnergizedBluePower(owner, amount), amount));
-            if (this.amount2 > 0){
-                addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
-
-            }
+            addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
         }
     }
 
     @Override
     public void updateDescription() {
-        StringBuilder sb = new StringBuilder();
-        if (this.amount2 <=0) {
-            sb.append(DESCRIPTIONS[0]);
-
-            for (int i = 0; i < this.amount; ++i) {
-                sb.append("[E] ");
-            }
-            sb.append(DESCRIPTIONS[1]);
+        if (amount == 1) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3];
         }
-
-        this.description = sb.toString();
     }
 
     @Override

@@ -16,6 +16,7 @@ public class Restock extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         tags.add(SneckoMod.SNEKPROOF);
         tags.add(SneckoMod.RNG);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

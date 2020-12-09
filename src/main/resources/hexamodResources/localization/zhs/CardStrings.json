@@ -199,7 +199,8 @@
   "hexamod:PowerFromBeyond": {
     "NAME": "深处之力",
     "DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。",
-    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。"
+    "UPGRADE_DESCRIPTION": "不能被打出 。 NL 虚无 。 NL hexamod:阴世 。下回合获得 [E] 并抽 !M! 张牌。",
+    "EXTENDED_DESCRIPTION": ["这种力量太遥远，无法直接传达。"]
   },
   "hexamod:BurningTouch": {
     "NAME": "灼烧之触",
@@ -258,7 +259,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "高热金属",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 直到引爆前在敌人的回合开始时给予 !M! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 引爆后给予敌人 !M! 层 hexamod:灼魂 。"
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
@@ -275,7 +276,8 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "深处之焰",
-    "DESCRIPTION": "不能被打出 。 NL 虚无 。 hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !burny! 层 hexamod:灼魂 。"
+    "DESCRIPTION": "不能被打出 。 NL 虚无 。 hexamod:阴世 。 NL 下一回合开始时给予所有敌人 !burny! 层 hexamod:灼魂 。",
+    "EXTENDED_DESCRIPTION": ["太烫手了！"]
   },
   "hexamod:PhantomFireball": {
     "NAME": "幻影火球",
@@ -335,7 +337,7 @@
   },
   "hexamod:ThirdSeal": {
     "NAME": "第三容器",
-    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张普通牌。"
+    "DESCRIPTION": "虚无 hexamod:容器 。 NL 战斗结束时，卡牌奖励中加入一张牌。"
   },
   "hexamod:FourthSeal": {
     "NAME": "第四容器",

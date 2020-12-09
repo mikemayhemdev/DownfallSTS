@@ -1,0 +1,82 @@
+{
+  "champ:Colosseum": {
+    "NAME": "The Colosseum",
+    "DESCRIPTIONS": [
+      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"CHAMPION! You grave us with your presence! Are you here to take on the new challenger?\"",
+      "A new challenger? How delightful! NL NL However, the challenge may have to wait. The audience always likes seeing the Champion slaughter the latest capture...",
+      "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
+      "@\"WHO@ @DARES@ @CHALLENGE@ @ME?!\"@ you boom into the crowd, beckoning this new 'challenger'. NL A knight approaches, clad in strikingly similar armor to your own, only drenched in black ink. The crowd cheers more than this pretender deserves. NL NL There can only be one Champion!",
+      "@\"THE@ @NEXT@ @ONE@ @IS@ @MINE!\"@ you boom into the crowd, who replies with a deafening applause. NL NL It does not take long for the slavers to drag in their latest catch. The unwitting challenger awakens, ~groggy~ from the ambush, but readies themselves. NL NL This should be fun.",
+      "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush.",
+      "Black Knight"
+    ],
+    "OPTIONS": [
+      "[Defend Title] #rFight Black Knight. #gGain #gmany #grewards.",
+      "[Participate] #rFight Captive Hero. #gGain #gmany #grewards.",
+      "[Leave]",
+      "[FIGHT!]",
+      "[Continue]"
+    ]
+  },
+  "champ:Library": {
+    "NAME": "The Library",
+    "DESCRIPTIONS": [
+      "You come across the heart of knowledge within the City - the old Library. NL Inside, you find countless rows of scrolls, manuscripts, and books. NL You could pick one and cozy yourself into a chair for some quiet time, or spend this time to look for a manual more specific to fighting techniques.",
+      "You spend much time searching through the halls of tomes and guides, until finally finding the book you seek. NL NL Settling into the comfy chair, you take some time to brush up on forgotten stances and styles. Even a perfect fighting specimen such as yourself knows that the mind is just as important as the body, and must also be exercised."
+    ],
+    "OPTIONS": [
+      "[Seek] Locate a #gBook on Fighting.",
+      "[Locked] Already have all Fighting tomes."
+    ]
+  },
+  "champ:TechniqueTome": {
+    "NAME": "Tome of Technique",
+    "DESCRIPTIONS": [
+      "Wandering down a side path, you feel an immense, invisible force guiding your footsteps towards a new destination.  Before long you see a pedestal with a massive tome, warped in some eerie glowing energy. NL NL As you approach, the pages which were clearly blank before spring to life, etching into itself new carvings and drawings of attack combinations, martial stances, enemy weakpoints - everything you could ever need to know about fighting. NL NL It seems almost too good to be true, but this gift, this opportunity, this knowledge simply must not go to waste!",
+      "Unbelievable! The teachings this tome has to offer are breathtaking. Every word and diagram leaps off of the page into your mind, granting you new methods of slaughtering your opponents. NL NL Unfortunately, such knowledge never comes without a cost, and it takes a toll on your psyche. But there is so much more to learn...",
+      "Yes. So much more. You can't stop now. With little hesitation, you let yourself be overcome by the wealth of information the tome has to offer, finding even more new combat advantages. NL NL With the cost now fully understood, you voluntarily give more of your life energy to the book in exchange for its wisdom. But there is so much more to learn...",
+      "Mustering every ounce of willpower you have, you resist the urge to read the cursed tome. Perhaps one day you will return, but for now - there is work to be done.",
+      "Whatever price had to be paid was worth it to gain this precious knowledge. It takes much effort to peel yourself away from the book's hold over you, but you manage to do so. NL NL With the tome's teachings fresh in your mind, you set out to find a new victim to test them out on."
+    ],
+    "OPTIONS": [
+      "[Read] Choose a card to gain #gTechnique. #rLose #r",
+      " #rHP.",
+      "[Leave]",
+      "[Locked] Requires a non-Technique Card.",
+      "Choose a card to gain Technique."
+    ]
+  },
+  "champ:Gym": {
+    "NAME": "Gymnasium",
+    "DESCRIPTIONS": [
+      "Along the path down the Spire, you find yourself at the Exordium's Gymnasium - a place you frequently visit to stay in shape and hone your body. NL NL It'd be a wasted opportunity to not take a moment's rest and spend some time here. To stay at the top, you need every advantage you can get.",
+      "Today's focus shall be on stamina. Keeping the full armor on, you hit the sprinting track set up in the Gymnasium's center, running a full series of several laps. NL NL With a rush of adrenaline and energy, you depart the Gym, ready to take on the threat to the Spire.",
+      "Today's focus shall be on combat. You quickly seek out someone who looks like they could take a blow, and with little regard for what they had planned to do, you drag them by the shoulder into the sparring ring. They do not last long before tapping out and ending the match. NL NL Although this fight didn't present any challenge, you did realize a new method for opening a combat, which surely will come in handy for the battles ahead.",
+      "Today's focus shall be on muscle tone and upper body strength. You locate the heaviest weights and tension systems, using them to complete several cycles of tone-building exercises. By the end of the workout, you can already feel yourself lifting and pulling with just a little more ease than when you began. NL NL As you depart the Gym, you make a mental note to focus on lower body strength the next time you visit. It can't be skipped."
+    ],
+    "OPTIONS": [
+      "[Cardio] #gGain #g",
+      " #gMax #gHP.",
+      "[Spar] Choose a card to gain your choice of #gOpener.",
+      "[Lift] #gGain #g1 #gStrength #gPermanently.",
+      "[Leave]",
+      "Choose a card to give Defensive Opener.",
+      "Choose a card to give Berserker Opener.",
+      "Choose a card to give Gladiator Opener.",
+      "[Locked] Requires a non-Opener Card."
+    ]
+  },
+  "champ:MinorLeagueArena": {
+    "NAME": "Minor League Arena",
+    "DESCRIPTIONS": [
+      "Pathing through the Exordium, you find yourself at a well-known attraction - the former site of the brutal games which now take place in the City's Colosseum. This smaller, less attractive Arena now serves as a training ground and battle stage for lesser challengers. NL NL This type of contest is normally beneath you, but it could be an entertaining distraction.",
+      "Deciding your time is better spent elsewhere, you leave the Arena. You can hear a sigh of relief from the fighters as you depart - clearly, nobody was looking forward to dying at your hand today."
+   ],
+    "OPTIONS": [
+      "[Fight Centurion & Mystic] #gGain #gCloak #gClasp",
+      "[Fight Gremlin Nob] #gGain #gChampion's #gBelt",
+      "[Fight Slaver Duo] #gGain #gWrist #gBlade",
+      "[Leave]"
+    ]
+  }
+}

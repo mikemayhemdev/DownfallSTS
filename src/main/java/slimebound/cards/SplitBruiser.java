@@ -54,6 +54,7 @@ public class SplitBruiser extends AbstractSlimeboundCard {
             addToBot(new CommandAction());
         }
 
+        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {

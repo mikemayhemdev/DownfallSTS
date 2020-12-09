@@ -1,20 +1,15 @@
 package charbosses.cards.blue;
 
 import charbosses.actions.unique.EnemyBarrageAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.defect.BarrageAction;
+import charbosses.orbs.EnemyEmptyOrbSlot;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.blue.Barrage;
-import com.megacrit.cardcrawl.cards.blue.BeamCell;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import java.util.ArrayList;
 
@@ -25,6 +20,17 @@ public class EnBarrage extends AbstractBossCard {
     public EnBarrage() {
         super(ID, cardStrings.NAME, "blue/attack/barrage", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.BLUE, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 4;
+    }
+
+    @Override
+    public void applyPowers() {
+        int x = 0;
+        for (int i = 0; i < AbstractCharBoss.boss.orbs.size(); ++i) {
+            if (!(AbstractCharBoss.boss.orbs.get(i) instanceof EnemyEmptyOrbSlot)) {
+                x++;
+            }
+        }
+        intentMultiAmt = x;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

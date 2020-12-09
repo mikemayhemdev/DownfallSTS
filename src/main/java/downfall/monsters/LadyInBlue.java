@@ -31,19 +31,19 @@ public class LadyInBlue extends AbstractMonster {
 
 
     public LadyInBlue() {
-        super(NAME, ID, 100, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/womaninblue/WomanInBlue.png");
+        super(NAME, ID, 120, HB_X, HB_Y, HB_W, HB_H, "downfallResources/images/monsters/womaninblue/womaninblue2.png");
 
         this.loadAnimation("downfallResources/images/monsters/womaninblue/WomanInBlue.atlas", "downfallResources/images/monsters/womaninblue/WomanInBlue.json", 1.0F);
 
         switch (AbstractDungeon.actNum) {
             case 1:
-                setHp(100);
-                break;
-            case 2:
                 setHp(125);
                 break;
-            case 3:
+            case 2:
                 setHp(150);
+                break;
+            case 3:
+                setHp(175);
                 break;
         }
 
@@ -130,7 +130,7 @@ public class LadyInBlue extends AbstractMonster {
     }
 
     protected void getMove(int num) {
-        if (currentHealth <= 0.3F * maxHealth && !usedEmergency) {
+        if (currentHealth <= 0.5F * maxHealth && !usedEmergency) {
             setMove((byte) 5, Intent.BUFF);
         } else {
             switch (turnNum) {

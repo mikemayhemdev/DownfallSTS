@@ -15,9 +15,9 @@ public class RecurringNightmareAction extends AbstractGameAction {
     private ArrayList<AbstractCard> cannotExhume = new ArrayList<>();
     public static final String[] EXTENDED_DESCRIPTIONS = CardCrawlGame.languagePack.getCardStrings(RecurringNightmare.ID).EXTENDED_DESCRIPTION;
 
-    public RecurringNightmareAction() {
+    public RecurringNightmareAction(int amount) {
         this.p = AbstractDungeon.player;// 27
-        this.setValues(this.p, AbstractDungeon.player, this.amount);// 28
+        this.setValues(this.p, AbstractDungeon.player, amount);// 28
         this.actionType = ActionType.CARD_MANIPULATION;// 29
         this.duration = Settings.ACTION_DUR_FAST;// 30
     }// 31
@@ -41,18 +41,22 @@ public class RecurringNightmareAction extends AbstractGameAction {
                 return;
             }
 
-            if (this.p.exhaustPile.size() - cannotExhume.size() == 1) {// 48
-                AbstractCard c = this.p.exhaustPile.getTopCard();// 56
-                c.unfadeOut();// 57
-                this.p.hand.addToHand(c);// 58
-                this.p.exhaustPile.removeCard(c);// 63
-                c.unhover();// 67
-                c.fadingOut = false;// 68
-                this.isDone = true;// 69
+            if (this.p.exhaustPile.size() - cannotExhume.size() == amount) {// 48
+                for (AbstractCard c : p.exhaustPile.group) {
+                    if (c.isEthereal) {
+                        c.unfadeOut();// 57
+                        this.p.hand.addToHand(c);// 58
+                        this.p.exhaustPile.removeCard(c);// 63
+                        c.unhover();// 67
+                        c.fadingOut = false;// 68
+                        this.isDone = true;// 69
+                        break;
+                    }
+                }
             } else {
 
                 p.exhaustPile.group.removeAll(cannotExhume);
-                AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, 1, EXTENDED_DESCRIPTIONS[0], false);// 96
+                AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, amount, amount == 1 ? EXTENDED_DESCRIPTIONS[0] : (EXTENDED_DESCRIPTIONS[1] + amount + EXTENDED_DESCRIPTIONS[2]), false);// 96
                 this.tickDuration();// 97
             }
         }

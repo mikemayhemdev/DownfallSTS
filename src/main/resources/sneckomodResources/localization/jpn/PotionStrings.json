@@ -1,0 +1,31 @@
+{
+  "sneckomod:DiceRollPotion": {
+    "NAME": "Potentially Potent Potion",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      "-",
+      " damage."
+    ]
+  },
+  "sneckomod:CheatPotion": {
+    "NAME": "Liquid Luck",
+    "DESCRIPTIONS": [
+      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
+      "For 2 turns, cards that choose a random number for their effect choose the maximum possible number."
+    ]
+  },
+  "sneckomod:MuddlingPotion": {
+    "NAME": "Spiked Energy Drink",
+    "DESCRIPTIONS": [
+      "#yMuddle the #b",
+      " highest-cost cards in your hand."
+    ]
+  },
+  "sneckomod:OffclassReductionPotion": {
+    "NAME": "Exotic Beverage",
+    "DESCRIPTIONS": [
+      "Reduce the cost of #yOffclass cards in your hand by #b",
+      "."
+    ]
+  }
+}

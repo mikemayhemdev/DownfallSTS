@@ -1,0 +1,33 @@
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "Unknown",
+      " Upgraded "
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "???",
+      "sneckomod:Unknown ",
+      " Card.",
+      "Character",
+      "The ",
+      "You should never see this. Report to Vex"
+    ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+    "TEXT": [
+      "Add an Unknown+ card to your deck"
+    ]
+  },
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "Retain. NL "
+    ]
+  },
+  "sneckomod:ExhaustMod": {
+    "TEXT": [
+      " NL Exhaust."
+    ]
+  }
+}

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeDur;
 import com.megacrit.cardcrawl.helpers.ScreenShake.ShakeIntensity;
@@ -21,13 +22,14 @@ import com.megacrit.cardcrawl.relics.PotionBelt;
 import com.megacrit.cardcrawl.relics.ToyOrnithopter;
 import com.megacrit.cardcrawl.relics.WhiteBeast;
 import com.megacrit.cardcrawl.rewards.RewardItem;
+import downfall.downfallMod;
 import downfall.monsters.LadyInBlue;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class WomanInBlue_Evil extends AbstractImageEvent {
-    public static final String ID = "downfall:WomanInBlue";
+    public static final String ID = downfallMod.makeID("WomanInBlue");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
@@ -62,7 +64,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.screen = WomanInBlue_Evil.CurScreen.FIGHT;
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new LadyInBlue());
+                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(LadyInBlue.ID);
                         AbstractDungeon.getCurrRoom().rewards.clear();
 
                         for (int i = 0; i < 3; i++) {
@@ -85,6 +87,7 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
 
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.enterCombatFromImage();
+                        AbstractDungeon.lastCombatMetricKey = LadyInBlue.ID;
                         break;
                     case 1:
                         this.imageEventText.clearAllDialogs();

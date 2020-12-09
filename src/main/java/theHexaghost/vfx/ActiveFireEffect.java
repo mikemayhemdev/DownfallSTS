@@ -17,13 +17,13 @@ public class ActiveFireEffect extends AbstractGameEffect {
     private float vX;
     private float vY;
 
-    public ActiveFireEffect(float x, float y) {
+    public ActiveFireEffect(float x, float y, Color color) {
         this.x = x + MathUtils.random(-2.0F, 2.0F) * Settings.scale - (float) this.img.packedWidth / 2.0F;// 19
         this.y = y + MathUtils.random(-2.0F, 2.0F) * Settings.scale - (float) this.img.packedHeight / 2.0F;// 20
         this.vX = MathUtils.random(-2.0F, 2.0F) * Settings.scale;// 21
         this.vY = MathUtils.random(0.0F, 80.0F) * Settings.scale;// 22
         this.duration = 1.0F;// 23
-        this.color = Color.PURPLE.cpy();// 24
+        this.color = color.cpy();// 24
         this.color.a = 0.0F;// 25
         this.scale = Settings.scale * MathUtils.random(2.0F, 3.0F);// 26
     }// 27

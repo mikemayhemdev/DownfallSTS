@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import theHexaghost.cards.Haunted;
 
 public class Mausoleum_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:Mausoleum";
@@ -27,14 +28,16 @@ public class Mausoleum_Evil extends AbstractImageEvent {
     private static final String NORMAL_RESULT;
     private static final String NOPE_RESULT;
 
+    private int percent;
+
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString(TheMausoleum.ID);
         NAME = eventStrings.NAME;
         DESCRIPTIONS = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;
-        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
-        OPTIONSALT = CardCrawlGame.languagePack.getEventString(ID).OPTIONS;
-        DIALOG_1 = DESCRIPTIONS[0];
+        DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:Mausoleum").DESCRIPTIONS;
+        OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:Mausoleum").OPTIONS;
+        DIALOG_1 = DESCRIPTIONSALT[0];
         CURSED_RESULT = DESCRIPTIONS[1];
         NORMAL_RESULT = DESCRIPTIONS[2];
         NOPE_RESULT = DESCRIPTIONS[3];
@@ -44,10 +47,18 @@ public class Mausoleum_Evil extends AbstractImageEvent {
     private CurScreen screen;
 
     public Mausoleum_Evil() {
-        super(NAME, DESCRIPTIONSALT[0], "images/events/mausoleum.jpg");
-        this.imageEventText.setDialogOption(OPTIONSALT[0], CardLibrary.getCopy(Writhe.ID));
-        this.imageEventText.setDialogOption(OPTIONS[4], CardLibrary.getCopy(Writhe.ID));
-        this.imageEventText.setDialogOption(OPTIONS[5]);
+        super(NAME, DIALOG_1, "images/events/mausoleum.jpg");
+
+        this.screen = CurScreen.INTRO;
+        if (AbstractDungeon.ascensionLevel >= 15) {
+            this.percent = 100;
+        } else {
+            this.percent = 50;
+        }
+
+        this.imageEventText.setDialogOption(OPTIONSALT[0], CardLibrary.getCopy(Haunted.ID));
+        this.imageEventText.setDialogOption(OPTIONS[0] + this.percent + OPTIONS[1], CardLibrary.getCopy("Writhe"));
+        this.imageEventText.setDialogOption(OPTIONS[2]);
     }
 
     public void onEnterRoom() {
@@ -62,10 +73,11 @@ public class Mausoleum_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Writhe(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Haunted(), (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(200));
                         AbstractDungeon.player.gainGold(200);
-                        CardCrawlGame.sound.play("BLUNT_HEAVY");
+                        this.imageEventText.loadImage(downfallMod.assetPath("images/events/mausoleumNoSpirit.png"));
+                        break;
                     case 1:
                         boolean result = AbstractDungeon.miscRng.randomBoolean();
                         if (AbstractDungeon.ascensionLevel >= 15) {
@@ -80,7 +92,6 @@ public class Mausoleum_Evil extends AbstractImageEvent {
                         }
 
                         CardCrawlGame.sound.play("BLUNT_HEAVY");
-                        this.imageEventText.loadImage(downfallMod.assetPath("images/events/mausoleumNoSpirit.png"));
                         CardCrawlGame.screenShake.rumble(2.0F);
                         AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);

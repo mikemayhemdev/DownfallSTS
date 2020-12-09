@@ -23,7 +23,7 @@ public class BronzeArmor extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     //TUNING CONSTANTS
     private static final int ARTIFACT = 1;

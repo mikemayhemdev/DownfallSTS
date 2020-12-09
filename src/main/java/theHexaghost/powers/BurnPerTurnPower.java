@@ -4,6 +4,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -38,10 +39,11 @@ public class BurnPerTurnPower extends AbstractPower implements CloneablePowerInt
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void onSpecificTrigger() {
         if (owner instanceof AbstractMonster) {
             flash();
             addToBot(new ApplyPowerAction(owner, owner, new BurnPower(owner, amount), amount));
+            addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
 

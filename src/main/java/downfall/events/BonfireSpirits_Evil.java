@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.events.shrines.Bonfire;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.Circlet;
@@ -46,11 +47,7 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
         this.offeredCard = null;
         this.cardSelect = false;
         this.imageEventText.setDialogOption(OPTIONS[0]);
-        if (AbstractDungeon.player.gold >= 150) {
-            this.imageEventText.setDialogOption(OPTIONSALT[0]);
-        } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[1], true);
-        }
+
     }
 
     public void onEnterRoom() {
@@ -88,7 +85,8 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
             this.setReward(this.offeredCard.rarity);
             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(this.offeredCard, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
             AbstractDungeon.player.masterDeck.removeCard(this.offeredCard);
-            this.imageEventText.updateDialogOption(0, OPTIONS[1]);
+            this.imageEventText.clearAllDialogs();
+            this.imageEventText.setDialogOption(OPTIONS[1]);
             this.screen = CUR_SCREEN.COMPLETE;
             this.cardSelect = false;
         }
@@ -103,29 +101,44 @@ public class BonfireSpirits_Evil extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DIALOG_2);
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
                         this.imageEventText.removeDialogOption(1);
+                        if (AbstractDungeon.player.gold >= 150) {
+                            this.imageEventText.setDialogOption(OPTIONSALT[0]);
+                        } else {
+                            this.imageEventText.setDialogOption(OPTIONSALT[1], true);
+                        }
                         this.screen = CUR_SCREEN.CHOOSE;
                         break;
-                    case 1:
+                }
+                break;
+            case CHOOSE:
+                switch (buttonPressed){
+                    case 0: {
+                        if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
+                            AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
+                            this.cardSelect = true;
+                        } else {
+                            this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                            this.imageEventText.clearAllDialogs();
+                            this.imageEventText.setDialogOption(OPTIONS[1]);
+                        }
+                        break;
+                    }
+                    case 1: {
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-                        this.imageEventText.removeDialogOption(1);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[1]);
                         AbstractDungeon.player.loseGold(150);
                         AbstractDungeon.player.increaseMaxHp(10, false);
                         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
                         this.screen = CUR_SCREEN.COMPLETE;
                         break;
+                    }
                 }
                 break;
-            case CHOOSE:
-                if (CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()).size() > 0) {
-                    AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[3], false, false, false, true);
-                    this.cardSelect = true;
-                } else {
-                    this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
-                    this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-                    this.screen = CUR_SCREEN.COMPLETE;
-                }
-                break;
+
+
+
+
             case COMPLETE:
                 this.openMap();
         }

@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 
@@ -17,6 +18,7 @@ public class SpectralAdrenaline extends AbstractHexaCard {
     public SpectralAdrenaline() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

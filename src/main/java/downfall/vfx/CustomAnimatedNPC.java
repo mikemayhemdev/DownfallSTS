@@ -72,7 +72,7 @@ public class CustomAnimatedNPC {
     private float maskDuration = 0.0f;
 
     //I like the render options better when I'm using a TextureRegion.
-    private static final TextureRegion MASK_REGION = new TextureRegion(new Texture("downfallResources/images/vfx/HeartMask.png"), 5000, 5000);
+    private static final TextureRegion MASK_REGION = new TextureRegion(new Texture("downfallResources/images/vfx/HeartMask.png"), 500, 500);
 
     public CustomAnimatedNPC(float x, float y, String atlasUrl, String skeletonUrl, String trackName, boolean portalRender, int portalType) {
         this(x,y,atlasUrl,skeletonUrl,trackName,portalRender,portalType,false, 1F);
@@ -85,8 +85,8 @@ public class CustomAnimatedNPC {
         if (!this.noMesh) {
             this.loadAnimation(atlasUrl, skeletonUrl, 1.0F);
             this.skeleton.setPosition(x, y - 300F * Settings.scale * this.heartScale);
-            this.state.setAnimation(0, trackName, true);
-            this.state.setTimeScale(1.0F);
+          this.state.setAnimation(0, trackName, true); // anim
+           this.state.setTimeScale(1.0F); // anim
         }
 
         this.portalRender = portalRender;
@@ -103,8 +103,8 @@ public class CustomAnimatedNPC {
 
         if (this.portalRender) {
             if (!this.noMesh) {
-                this.addListener(new HeartAnimListener());
-                this.skeleton.getRootBone().setScale(0.8F * this.heartScale);
+               this.addListener(new HeartAnimListener());// anim
+                this.skeleton.getRootBone().setScale(0.8F * this.heartScale);// anim
             }
             for (int i = 1; i <= borderEffectCount; i++) {
 
@@ -251,7 +251,9 @@ public class CustomAnimatedNPC {
                 // using the regular render function of the npc. Note that if you want any background, you'd render it right here
                 // right before this render.
 
-                sb.draw(this.portalImage, this.heartCenterX - (250F * this.heartScale * Settings.scale), this.heartCenterY - (250F * this.heartScale * Settings.scale));
+                sb.draw(this.portalImage, this.heartCenterX - (250F * Settings.scale), this.heartCenterY - (250F * Settings.scale), 500 * Settings.scale, 500 * Settings.scale);
+
+                //sb.draw(this.portalImage, this.heartCenterX - (this.portalImage.getWidth() / 2F ) * Settings.scale, this.heartCenterY - (this.portalImage.getHeight() / 2F) * Settings.scale, settings);
                 this.standardRender(sb);
 
         /*
