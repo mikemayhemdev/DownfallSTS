@@ -80,7 +80,6 @@
     "NAME": "弹反",
     "DESCRIPTION": "进入 champ:防守 。 NL champ:角斗 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。",
     "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !M! 层 champ:反击 。 NL champ:角斗 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。"
-
   },
   "champ:Backstep": {
     "NAME": "后撤",

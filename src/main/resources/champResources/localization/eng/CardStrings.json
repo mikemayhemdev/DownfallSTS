@@ -80,7 +80,6 @@
     "NAME": "Riposte",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counterstrike for each.",
     "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. Gain !M! champ:Counterstrike. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counterstrike for each."
-
   },
   "champ:Backstep": {
     "NAME": "Backstep",

@@ -458,7 +458,7 @@ public class CharacterSelectScreenPatches {
     //                动态立绘
     @SpirePatch(clz = CharacterSelectScreen.class, method = "render")
     public static class CharacterSelectScreenPatch_portraitSkeleton {
-        @SpireInsertPatch(rloc = 45)
+        @SpireInsertPatch(rloc = 220 )
         public static void Insert(CharacterSelectScreen __instance, SpriteBatch sb) {
             // Render your buttons/images by passing SpriteBatch
 
