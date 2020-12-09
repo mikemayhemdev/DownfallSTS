@@ -328,8 +328,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "Ancient Construct",
-    "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact and lose [E].",
-    "UPGRADE_DESCRIPTION": "Gain 1 Artifact. NL At the start of your turn, if you have no Artifact, gain !M! Artifact and lose [E]."
+    "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Artifact. NL At the start of your turn, if you have no Artifact, gain !M! Artifact]."
   },
   "Guardian:CrystalBeam": {
     "NAME": "Crystal Beam",
