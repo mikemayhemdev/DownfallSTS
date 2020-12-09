@@ -23,6 +23,7 @@ public class Encircle extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        myHpLossCost = 2;
       //  tags.add(ChampMod.TECHNIQUE);
     }
 
