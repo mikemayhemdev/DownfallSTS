@@ -247,8 +247,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
-    "DESCRIPTION": "Exhaust all guardianmod:Gems and cards with guardianmod:Gems in them in your hand. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust all guardianmod:Gems and cards with guardianmod:Gems in them in your hand. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards."
+    "DESCRIPTION": "Exhaust all guardianmod:Gems and all Socketed cards. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all guardianmod:Gems and all Socketed cards. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards. NL Exhaust."
   },
   "Guardian:ChargeCore": {
     "NAME": "Charge Core",

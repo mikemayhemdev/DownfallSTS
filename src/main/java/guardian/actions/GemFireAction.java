@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 import guardian.GuardianMod;
 import guardian.cards.AbstractGuardianCard;
 
+import java.util.ArrayList;
+
 public class GemFireAction extends AbstractGameAction {
     private DamageInfo info;
     private float startingDuration;
@@ -46,6 +48,40 @@ public class GemFireAction extends AbstractGameAction {
                         if (c.hasTag(GuardianMod.GEM)) {
                             hitCount++;
                             AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
+
+                        }
+                    }
+                }
+            }
+
+            for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+                if (c instanceof AbstractGuardianCard) {
+                    if (((AbstractGuardianCard) c).socketCount > 0 || c.hasTag(GuardianMod.GEM)) {
+                        if (((AbstractGuardianCard) c).sockets.size() > 0) {
+                            hitCount += ((AbstractGuardianCard) c).sockets.size();
+                            AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.drawPile, true));
+
+                        }
+                        if (c.hasTag(GuardianMod.GEM)) {
+                            hitCount++;
+                            AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.drawPile, true));
+
+                        }
+                    }
+                }
+            }
+
+            for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+                if (c instanceof AbstractGuardianCard) {
+                    if (((AbstractGuardianCard) c).socketCount > 0 || c.hasTag(GuardianMod.GEM)) {
+                        if (((AbstractGuardianCard) c).sockets.size() > 0) {
+                            hitCount += ((AbstractGuardianCard) c).sockets.size();
+                            AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, true));
+
+                        }
+                        if (c.hasTag(GuardianMod.GEM)) {
+                            hitCount++;
+                            AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, true));
 
                         }
                     }
