@@ -7,7 +7,9 @@ import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
@@ -26,7 +28,15 @@ public class ChampionCrownUpgraded extends CustomRelic {
     @Override
     public void atBattleStart() {
         addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.player.stance instanceof UltimateStance) {
+                    ((UltimateStance) AbstractDungeon.player.stance).timeLeft = 2;
+                }
+            }
+        });
     }
 
 
