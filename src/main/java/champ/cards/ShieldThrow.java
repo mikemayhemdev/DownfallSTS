@@ -16,7 +16,7 @@ public class ShieldThrow extends AbstractChampCard {
 
     public ShieldThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        tags.add(ChampMod.FINISHER);
+      //  tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -29,7 +29,7 @@ public class ShieldThrow extends AbstractChampCard {
         if (!dcombo()) {
             applyToSelf(new NoBlockNextTurnPower(1));
         }
-        finisher();
+      //  finisher();
     }
 
     @Override

@@ -24,8 +24,8 @@ public class RapidStrikes extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
         int x = AbstractDungeon.cardRandomRng.random(0, 2);
-        int q = ChampMod.techniquesThisTurn + 1;
-        if (upgraded) q += 2;
+        int q = ChampMod.techniquesThisTurn + 2;
+        if (upgraded) q += 1;
         for (int i = 0; i < q; i++) {
             AbstractGameAction.AttackEffect r = null;
             switch (x) {

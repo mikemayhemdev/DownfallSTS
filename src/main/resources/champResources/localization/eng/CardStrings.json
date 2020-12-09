@@ -217,8 +217,8 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL Repeat twice more.",
+    "DESCRIPTION": "Deal !D! damage two times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " champ:Technique played.)",
