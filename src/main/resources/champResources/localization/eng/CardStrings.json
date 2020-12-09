@@ -270,7 +270,10 @@
   "champ:HeartStrike": {
     "NAME": "Finish Him",
     "DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust unless in champ:Berserker."
+    "UPGRADE_DESCRIPTION": "champ:Finisher. NL Deal damage equal to your champ:Resolve. NL Exhaust unless in champ:Berserker.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
   },
   "champ:FinalRevenge": {
     "NAME": "Final Revenge",

@@ -5,6 +5,7 @@ import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class HeartStrike extends AbstractChampCard {
@@ -40,7 +41,33 @@ public class HeartStrike extends AbstractChampCard {
         glowColor = (upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
-    //TODO: you know the drill, same old damage display deal. one of the most annoying things to do - find some way to abstract it so it's only needed to be done once and copied to all other cards maybe?
+    @Override
+    public void applyPowers() {
+        if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+            baseDamage = Math.min(AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount, AbstractDungeon.player.currentHealth - 1);
+        }
+        super.applyPowers();
+        if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+            this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
+    }
+
+    @Override
+    public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        if (AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+            this.rawDescription = cardStrings.DESCRIPTION;
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
+    }
 
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
