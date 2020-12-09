@@ -291,12 +291,12 @@
   },
   "champ:RecklessLeap": {
     "NAME": "无谋跃斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 5。 NL 获得 !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 5。 NL 获得 !M! 点 champ:决心 。 NL 消耗 。"
   },
   "champ:IgnorePain": {
     "NAME": "无视伤痛",
     "DESCRIPTION": "champ:战术 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留。 NL champ:战术 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": "保留 。 champ:战术 。 NL 下回合开始前你的生命将不会减少。 NL 消耗 。"
   },
   "champ:DeathBlow": {
     "NAME": "绝地反击",
@@ -344,8 +344,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "在你的回合开始时，将随机一张 champ:起手 牌加入你的手牌。 NL 它直到打出前的耗能为0。",
-    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的 champ:起手 牌加入你的手牌。 NL 它直到打出前的耗能为0。"
+    "DESCRIPTION": "在你的回合开始时，将随机一张进入姿态牌加入你的手牌。 NL 它直到打出前的耗能为0。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的进入姿态牌加入你的手牌。 NL 它直到打出前的耗能为0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",

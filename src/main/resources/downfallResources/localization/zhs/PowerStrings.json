@@ -46,9 +46,9 @@
     ]
   },
   "downfall:InverseBias": {
-    "NAME": "Recovering",
+    "NAME": "恢复",
     "DESCRIPTIONS": [
-      "Gains 2 Focus at the end of each turn."
+      "每回合结束时获得2点 #y集中 。"
     ]
   }
 }

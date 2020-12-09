@@ -11,14 +11,14 @@
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      "champ:Technique. NL "
+      "champ:技术 。 NL "
     ]
   },
   "champ:OpenerMod": {
     "TEXT": [
-      "champ:Berserker champ:Opener. NL ",
-      "champ:Defensive champ:Opener. NL ",
-      "champ:Gladiator champ:Opener. NL "
+      "进入 champ:狂战 。 NL ",
+      "进入 champ:防守 。 NL ",
+      "进入 champ:角斗 。 NL "
     ]
   }
 }

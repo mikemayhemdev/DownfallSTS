@@ -125,7 +125,7 @@
   "Guardian:Harden": {
     "NAME": "硬化",
     "DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL 进入 guardianmod:防御模式 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL NL 进入 guardianmod:防御模式 并持续一回合。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",
@@ -191,7 +191,8 @@
   },
   "Guardian:Emergency": {
     "NAME": "应激",
-    "DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滞 的牌返回手牌。 NL 消耗 。"
+    "DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滞 的牌返回手牌。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滞 的牌返回手牌。"
   },
   "Guardian:Clone": {
     "NAME": "克隆",
@@ -245,7 +246,8 @@
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
-    "DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
@@ -311,7 +313,7 @@
   "Guardian:SpikerProtocol": {
     "NAME": "荆棘协议",
     "DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 并持续一回合。"
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 4 层 荆棘 。 NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "装甲协议",
@@ -325,7 +327,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
-    "DESCRIPTION": "在你的回合开始时， 如果你没有 人工制品 ，获得 !M! 层 人工制品 并失去 [E] 。"
+    "DESCRIPTION": "在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 并失去 [E] 。",
+	"UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 并失去 [E] 。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",
@@ -333,8 +336,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "玛瑙",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 层 人工制品 。 NL 失去 2 点生命。",
-    "UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 失去 2 点生命。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 层 人工制品 。",
+    "UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。"
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
@@ -372,7 +375,7 @@
   "Guardian:Repulse": {
     "NAME": "反冲协议",
     "DESCRIPTION": "消耗每回合抽到的前 1 张状态或诅咒牌。",
-    "UPGRADE_DESCRIPTION": "消耗每回合抽到的前 2 张状态或诅咒牌。"
+    "UPGRADE_DESCRIPTION": "固有 NL 消耗每回合抽到的前 1 张状态或诅咒牌。"
   },
   "Guardian:BronzeOrb": {
     "NAME": "铜制圆球",
