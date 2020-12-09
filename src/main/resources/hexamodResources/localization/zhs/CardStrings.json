@@ -147,10 +147,12 @@
   },
   "hexamod:RecurringNightmare": {
     "NAME": "梦魇幻象",
-    "DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将消耗堆中的一张 虚无 牌加入手牌。",
+    "DESCRIPTION": "将消耗堆中的1张 虚无 牌加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将消耗堆中的2张 虚无 牌加入手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
-      "选择一张虚无牌加入手牌"
+      "选择一张虚无牌加入手牌",
+	  "选择",
+	  "张虚无牌加入手牌"
     ]
   },
   "hexamod:GiftsFromTheDead": {
@@ -263,8 +265,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "焰烬雨",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。",
-    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X+1 次。"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予所有敌人1层 虚弱 和 易伤 。",
+    "UPGRADE_DESCRIPTION": "对随机敌人造成 !D! 点伤害并给予 !burny! 层 hexamod:灼魂 X 次。次数不少于3时，给予所有敌人2层 虚弱 和 易伤 。"
   },
   "hexamod:VolcanoVisage": {
     "NAME": "火山面貌",

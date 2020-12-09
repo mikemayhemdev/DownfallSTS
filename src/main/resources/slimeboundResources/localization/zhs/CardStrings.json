@@ -367,8 +367,8 @@
  },
  "Slimebound:MinionMaster": {
   "NAME": "从者大师",
-  "DESCRIPTION": "每当你 slimeboundmod:命令 时，变为 slimeboundmod:命令 两次。",
-  "UPGRADE_DESCRIPTION": "固有 。每当你 slimeboundmod:命令 时，变为 slimeboundmod:命令 两次。"
+  "DESCRIPTION": "每当你打出 slimeboundmod:命令 牌时，再 slimeboundmod:命令 一次。",
+  "UPGRADE_DESCRIPTION": "固有 。每当你打出 slimeboundmod:命令 牌时，再 slimeboundmod:命令 一次。"
  },
   "Slimebound:BestDefense": {
    "NAME": "鲁莽",
@@ -388,7 +388,7 @@
   },
    "Slimebound:ForwardTackle": {
    "NAME": "进军冲撞",
-   "DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 两次。"
+   "DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 三次。"
   },
     "Slimebound:TagTeam": {
     "NAME": "搭档",

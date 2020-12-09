@@ -8,5 +8,17 @@
     "TEXT": [
       "Add a Seal to your deck"
     ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      "champ:技术 。 NL "
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      "进入 champ:狂战 。 NL ",
+      "进入 champ:防守 。 NL ",
+      "进入 champ:角斗 。 NL "
+    ]
   }
 }

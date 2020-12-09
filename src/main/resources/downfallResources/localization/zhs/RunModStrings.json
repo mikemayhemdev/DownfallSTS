@@ -26,5 +26,13 @@
   "downfall:Lament": {
     "NAME": "悲恸",
     "DESCRIPTION": "起始获得涅奥的悲恸。"
+  },
+  "downfall:ChampStances": {
+    "NAME": "新晋者",
+    "DESCRIPTION": "每场战斗开始时，进入随机一种第一勇士姿态并获得一张终结打击。所有初始牌获得战术。"
+  },
+  "downfall:Enraging": {
+    "NAME": "最后一战",
+    "DESCRIPTION": "所有敌人如果在回合开始时半血以下，清除所有负面效果并获得力量。"
   }
 }

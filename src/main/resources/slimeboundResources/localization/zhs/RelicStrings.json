@@ -91,7 +91,7 @@
     "NAME": "保护齿轮",
     "FLAVOR": "进攻是最好的防守！",
     "DESCRIPTIONS": [
-      "自身受到来自 #yslimeboundmod:冲撞 牌的伤害降低 #b1 点。"
+      "自身受到来自 #yslimeboundmod:冲撞 牌的伤害降低 #b3 点。"
     ]
   },
     "Slimebound:TarBlob": {

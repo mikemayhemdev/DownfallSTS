@@ -44,5 +44,11 @@
     "DESCRIPTIONS": [
       "中毒现在能被格挡，且在回合结束时触发并层数减半。"
     ]
+  },
+  "downfall:InverseBias": {
+    "NAME": "恢复",
+    "DESCRIPTIONS": [
+      "每回合结束时获得2点 #y集中 。"
+    ]
   }
 }
