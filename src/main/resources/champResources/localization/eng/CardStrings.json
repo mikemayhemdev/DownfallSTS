@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "champ:Technique. NL Apply 2 Weak. NL If you are not in a Stance, enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Apply 2 Weak to ALL enemies. NL If you are not in a Stance, enter a random Stance."
+    "DESCRIPTION": "champ:Technique. NL Apply 2 Weak. NL If you are not in a Stance, add a Stance Dance to your hand.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Apply 2 Weak to ALL enemies. NL If you are not in a Stance, add a Stance Dance to your hand."
   },
   "champ:Execute": {
     "NAME": "Execute",
