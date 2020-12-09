@@ -120,7 +120,7 @@ public abstract class AbstractChampStance extends AbstractStance {
     public void fisher() {
         finisher();
         ChampMod.finishersThisTurn++;
-        ChampMod.finishersThisCombat++; //TODO: This might need to be put in a bottomed action possibly. Depends on how timing works out - action queue is frustrating!
+        ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
     }
 
     public abstract void finisher();
