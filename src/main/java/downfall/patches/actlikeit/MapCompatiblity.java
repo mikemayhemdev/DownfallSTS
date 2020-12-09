@@ -7,6 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import downfall.patches.EvilModeCharacterSelect;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 @SpirePatch(
         optional = true,
         cls = "actlikeit.patches.DungeonMapPatches",
@@ -25,6 +28,12 @@ public class MapCompatiblity {
 
     public static int actLikeItCheck()
     {
-        return actlikeit.patches.DungeonMapPatches.atMapEnd();
+        try {
+            Method method = Class.forName("actlikeit.patches.DungeonMapPatches").getDeclaredMethod("atMapEnd");
+            return (int) method.invoke(null);
+        } catch (NoSuchMethodException | ClassNotFoundException | IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+            return -1;
+        }
     }
 }
