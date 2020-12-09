@@ -30,7 +30,7 @@ public class GhostflameInferno extends AbstractHexaCard {
                 isDone = true;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     if (gf instanceof InfernoGhostflame) {
-                        GhostflameHelper.hexaGhostFlames.get(GhostflameHelper.hexaGhostFlames.indexOf(gf)).charge();
+                        gf.charge();
                     }
                 }
             }

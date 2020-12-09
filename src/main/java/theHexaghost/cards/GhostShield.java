@@ -24,7 +24,7 @@ public class GhostShield extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         if (hasEthereal())
-            addToTop(new GainBlockAction(p, block));
+            addToBot(new GainBlockAction(p, block));
     }
 
     private boolean hasEthereal() {

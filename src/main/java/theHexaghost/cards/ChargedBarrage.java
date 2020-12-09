@@ -1,9 +1,12 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
+import theHexaghost.powers.BurnPower;
 
 public class ChargedBarrage extends AbstractHexaCard {
 
@@ -22,11 +25,17 @@ public class ChargedBarrage extends AbstractHexaCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         burn(m, burn);
-        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-            if (gf.charged) {
-                burn(m, burn);
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                    if (gf.charged) {
+                        addToTop(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
+                    }
+                }
             }
-        }
+        });
     }
 
     public void upgrade() {

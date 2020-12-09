@@ -93,18 +93,6 @@ public abstract class AbstractChampCard extends CustomCard {
         initializeDescription();
     }
 
-    /*
-    @Override
-    public List<TooltipInfo> getCustomTooltips() {
-        List<TooltipInfo> tips = new ArrayList<>();
-        if (this.rawDescription.contains("champ:Fatigue")) { //TODO: FIX THIS FOR LOCALIZATION!!!
-            tips.add(new TooltipInfo("Resolve", "You have #b1 #yStrength for every #b5 Resolve.")); //TODO: FIX
-        }
-        return tips;
-    }
-    */ //TODO: note that this method doubles up the Resolve keyword sometimes and is generally not the best solution. either manually check if resolve is also used in the card and don't do it then or find a different way - can be handled later
-
-
     public static String getCorrectPlaceholderImage(CardType type, String id) {
         String img = makeCardPath(id.replaceAll((getModID() + ":"), "") + ".png");
         if ((!Gdx.files.internal(img).exists()))
@@ -148,7 +136,7 @@ public abstract class AbstractChampCard extends CustomCard {
                 }
             }
         });
-        */ //TODO: This breaks things worse - players-first, so here they get the heal if HP loss is reduced. Maybe worth fixing, maybe not
+        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
         applyToSelf(new ResolvePower(x));
         return x;
     }

@@ -1,10 +1,13 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.powers.BurnPower;
 
 public class DynamicBlow extends AbstractHexaCard {
 
@@ -26,11 +29,17 @@ public class DynamicBlow extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (GhostflameHelper.activeGhostFlame.charged) {
-            burn(m, burn);
-        } else {
-            dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        }
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (GhostflameHelper.activeGhostFlame.charged) {
+                    addToTop(new ApplyPowerAction(m, p, new BurnPower(m, burn), burn));
+                } else {
+                    addToTop(new DamageAction(m, makeInfo(), AttackEffect.BLUNT_HEAVY));
+                }
+            }
+        });
     }
 
     public void triggerOnGlowCheck() {

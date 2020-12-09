@@ -19,10 +19,16 @@ public class StanceHelper {
     private static Hitbox hitboxTechnique;
     private static Hitbox hitboxFinisher;
 
+    /*
+            hitboxStance = new Hitbox(globalX, globalY, 200 * Settings.scale, 100 * Settings.scale);
+        hitboxTechnique = new Hitbox(globalX, globalY - (100F * Settings.scale), 200 * Settings.scale, 100 * Settings.scale);
+        hitboxFinisher = new Hitbox(globalX, globalY - (200F * Settings.scale), 200 * Settings.scale, 100 * Settings.scale);
+     */
+
     public static void init() {
-        hitboxStance = new Hitbox(globalX, globalY, 80 * Settings.scale, 80 * Settings.scale);
-        hitboxTechnique = new Hitbox(globalX, globalY - (100F * Settings.scale), 80 * Settings.scale, 80 * Settings.scale);
-        hitboxFinisher = new Hitbox(globalX, globalY - (200F * Settings.scale), 80 * Settings.scale, 80 * Settings.scale);
+        hitboxStance = new Hitbox(globalX, globalY, 200 * Settings.scale, 100 * Settings.scale);
+        hitboxTechnique = new Hitbox(globalX, globalY - (100F * Settings.scale), 200 * Settings.scale, 100 * Settings.scale);
+        hitboxFinisher = new Hitbox(globalX, globalY - (200F * Settings.scale), 200 * Settings.scale, 100 * Settings.scale);
     }
 
     public static void update() {

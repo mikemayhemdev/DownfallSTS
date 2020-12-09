@@ -86,9 +86,6 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         addRelic(new CBR_WarPaint());
         addRelic(new CBR_PhilosopherStone());
         addRelic(new CBR_Falling());
-
-        /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
     }
 
 
