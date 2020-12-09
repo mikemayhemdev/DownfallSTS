@@ -33,24 +33,23 @@ public class DeathBlow extends AbstractChampCard {
     public void applyPowers() {
         baseDamage = Math.min(magicNumber, AbstractDungeon.player.currentHealth - 1);
         super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];// 73
-        this.initializeDescription();// 74
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);// 86
-        this.rawDescription = cardStrings.DESCRIPTION;// 87
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];// 88
-        this.initializeDescription();// 89
+        super.calculateCardDamage(mo);
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
     }
 
     @Override
     public void onMoveToDiscard() {
-
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
     }
-
-    //TODO: same thing, damage displayer here (additionally, hp cost display also needs dynamic updating at the same time as the damage one)
 
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
