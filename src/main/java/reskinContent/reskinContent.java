@@ -167,6 +167,9 @@ public class reskinContent implements
             hexaghostMask = config.getBool(CardCrawlGame.saveSlot +"hexaghostMask");
 
             portraitAnimationType = config.getInt(CardCrawlGame.saveSlot +"portraitAnimationType");
+			
+			if (portraitAnimationType > 2 || portraitAnimationType < 0)
+				portraitAnimationType = 2;
 
         } catch (Exception e) {
             e.printStackTrace();

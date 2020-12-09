@@ -124,7 +124,7 @@
   },
   "Guardian:Harden": {
     "NAME": "硬化",
-    "DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL 进入 guardianmod:防御模式 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL 进入 guardianmod:防御模式 。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:SentryBeam": {
