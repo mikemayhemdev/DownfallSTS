@@ -93,4 +93,20 @@
       "每当你不处于 #y姿态 打出一张 #y技术 ，将一张0耗能带 #y消耗 的打击或防御加入你的手牌。"
     ]
   }
+  },
+  "champ:LiftRelic": {
+    "NAME": "内在力量",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每场战斗开始时获得 #b",
+      " 点 #y力量 。"
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "新晋者",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，进入随机一种第一勇士姿态。"
+    ]
+  }
 }

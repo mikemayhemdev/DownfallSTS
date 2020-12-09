@@ -25,6 +25,11 @@
     "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 敏捷 。",
     "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 敏捷 。"
   },
+  "Guardian:Gem_Lightblue": {
+    "NAME": "碧玺",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 荆棘 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 荆棘 。"
+  },
   "Guardian:Gem_White": {
     "NAME": "石英",
     "DESCRIPTION": " guardianmod:宝石 。 NL 抽 1 张牌。",
@@ -119,7 +124,8 @@
   },
   "Guardian:Harden": {
     "NAME": "硬化",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL 进入 guardianmod:防御模式 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",
@@ -259,11 +265,11 @@
   },
   "Guardian:PrismaticBeam": {
     "NAME": "棱镜射线",
-    "DESCRIPTION": "每有一颗 guardianmod:宝石 造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一颗 guardianmod:宝石 造成 !D! 点伤害。"
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "棱镜屏障",
-    "DESCRIPTION": "每有一颗 guardianmod:宝石 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一颗 guardianmod:宝石 获得 !B! 点 格挡 。"
   },
   "Guardian:TemporalStrike": {
     "NAME": "质朴打击",
@@ -272,7 +278,8 @@
   },
   "Guardian:TemporalShield": {
     "NAME": "质朴屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 抽 !M! 张牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 抽 !M! 张牌。",
+	"UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 抽 !M! 张牌。"
   },
   "Guardian:ExploitGems": {
     "NAME": "宝石利用",

@@ -9,4 +9,17 @@
       "Add a Seal to your deck"
     ]
   }
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      "champ:Technique. NL "
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      "champ:Berserker champ:Opener. NL ",
+      "champ:Defensive champ:Opener. NL ",
+      "champ:Gladiator champ:Opener. NL "
+    ]
+  }
 }
