@@ -16,7 +16,7 @@ public class SteelEdge extends AbstractChampCard {
     private static final int BLOCK = 8;
 
     public SteelEdge() {
-        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 0;
