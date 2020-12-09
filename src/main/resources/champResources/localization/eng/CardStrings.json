@@ -218,7 +218,12 @@
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
     "DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL Repeat twice more."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL Repeat twice more.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " champ:Technique played.)",
+      " champ:Techniques played.)"
+    ]
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",

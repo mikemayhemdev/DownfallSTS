@@ -26,7 +26,7 @@ public class RapidStrikes extends AbstractChampCard {
         int x = AbstractDungeon.cardRandomRng.random(0, 2);
         int q = ChampMod.techniquesThisTurn + 1;
         if (upgraded) q += 2;
-        for (int i = 0; i < q; i++) { // TODO: add info about how many times it will hit in EXTENDED_DESCRIPTION display
+        for (int i = 0; i < q; i++) {
             AbstractGameAction.AttackEffect r = null;
             switch (x) {
                 case 0:
@@ -42,6 +42,25 @@ public class RapidStrikes extends AbstractChampCard {
             dmg(m, r);
         }
        // finisher();
+    }
+
+    public void applyPowers() {
+        super.applyPowers();
+
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + ChampMod.techniquesThisTurn + 1;
+        if (ChampMod.techniquesThisTurn == 0) {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+        } else {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
+        }
+
+        this.initializeDescription();
+    }
+
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
     }
 
     public void upp() {
