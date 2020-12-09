@@ -118,7 +118,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "champ:Technique. NL Deal !D! damage for each champ:Finisher played this combat."
+    "DESCRIPTION": "champ:Technique. NL Deal !D! damage for each champ:Finisher played this combat.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " champ:Finisher played.)",
