@@ -35,8 +35,6 @@ public class FinalRevenge extends AbstractChampCard {
         glowColor = (bcombo() && upgraded) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
-    //TODO: sooo. many. custom damage displays
-
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();

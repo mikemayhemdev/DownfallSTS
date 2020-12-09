@@ -51,8 +51,6 @@ public class Devastate extends AbstractChampCard {
         this.initializeDescription();
     }
 
-    //TODO: add the damage predictor display like Finisher (silent card) etc to make effects clear
-
     public void upp() {
         upgradeBaseCost(1);
     }
