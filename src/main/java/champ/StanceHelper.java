@@ -3,6 +3,7 @@ package champ;
 import basemod.BaseMod;
 import champ.stances.*;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
@@ -19,10 +20,20 @@ public class StanceHelper {
     private static Hitbox hitboxTechnique;
     private static Hitbox hitboxFinisher;
 
+    /*
+            hitboxStance = new Hitbox(globalX, globalY, 200 * Settings.scale, 100 * Settings.scale);
+        hitboxTechnique = new Hitbox(globalX, globalY - (100F * Settings.scale), 200 * Settings.scale, 100 * Settings.scale);
+        hitboxFinisher = new Hitbox(globalX, globalY - (200F * Settings.scale), 200 * Settings.scale, 100 * Settings.scale);
+     */
+
+    public static Vector2 dx1 = new Vector2(globalX, globalY);
+    public static Vector2 dx2 = new Vector2(globalX, globalY - (100F * Settings.scale));
+    public static Vector2 dx3 = new Vector2(globalX, globalY - (200F * Settings.scale));
+
     public static void init() {
-        hitboxStance = new Hitbox(globalX, globalY, 80 * Settings.scale, 80 * Settings.scale);
-        hitboxTechnique = new Hitbox(globalX, globalY - (100F * Settings.scale), 80 * Settings.scale, 80 * Settings.scale);
-        hitboxFinisher = new Hitbox(globalX, globalY - (200F * Settings.scale), 80 * Settings.scale, 80 * Settings.scale);
+        hitboxStance = new Hitbox(globalX, globalY - (50F * Settings.scale), 250 * Settings.scale, 100 * Settings.scale);
+        hitboxTechnique = new Hitbox(globalX, globalY - (150F * Settings.scale), 250 * Settings.scale, 100 * Settings.scale);
+        hitboxFinisher = new Hitbox(globalX, globalY - (250F * Settings.scale), 250 * Settings.scale, 100 * Settings.scale);
     }
 
     public static void update() {
@@ -81,7 +92,7 @@ public class StanceHelper {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
             if (hitboxStance != null) {
                 if (getStanceName() != null) {
-                    TipHelperChamp1.renderGenericTip(hitboxStance.x, hitboxStance.y,
+                    TipHelperChamp1.renderGenericTip(dx1.x, dx1.y,
                             ChampChar.characterStrings.TEXT[23],
                             getStanceName());
 
@@ -99,7 +110,7 @@ public class StanceHelper {
                         }
                     }
 
-                    TipHelperChamp2.renderGenericTip(hitboxTechnique.x, hitboxTechnique.y,
+                    TipHelperChamp2.renderGenericTip(dx2.x, dx2.y,
                             ChampChar.characterStrings.TEXT[8],
                             getStanceTechnique());
 
@@ -127,7 +138,7 @@ public class StanceHelper {
                         }
                     }
 
-                    TipHelperChamp3.renderGenericTip(hitboxFinisher.x, hitboxFinisher.y,
+                    TipHelperChamp3.renderGenericTip(dx3.x, dx3.y,
                             ChampChar.characterStrings.TEXT[9],
                             getStanceFinisher());
 

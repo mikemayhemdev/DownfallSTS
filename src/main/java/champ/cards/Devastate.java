@@ -3,8 +3,12 @@ package champ.cards;
 import champ.ChampMod;
 import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.Iterator;
 
 public class Devastate extends AbstractChampCard {
 
@@ -28,7 +32,24 @@ public class Devastate extends AbstractChampCard {
         finisher();
     }
 
-    //TODO: add the damage predictor display like Finisher (silent card) etc to make effects clear
+    public void applyPowers() {
+        super.applyPowers();
+
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + ChampMod.finishersThisCombat;
+        if (ChampMod.finishersThisCombat == 1) {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+        } else {
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
+        }
+
+        this.initializeDescription();
+    }
+
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
+    }
 
     public void upp() {
         upgradeBaseCost(1);

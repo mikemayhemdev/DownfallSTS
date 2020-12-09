@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampChar;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,7 +29,7 @@ public class LastStand extends AbstractChampCard {
         if (p.currentHealth < p.maxHealth /2) {
             return super.canUse(p, m);
         }
-        cantUseMessage = "Pfh. This fight is too easy to bother."; //TODO: Just realized I did these all outside of loc. Fix that later - not necessary for play
+        cantUseMessage = ChampChar.characterStrings.TEXT[28];
         return false;
     }
 

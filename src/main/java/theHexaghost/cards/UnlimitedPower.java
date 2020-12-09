@@ -23,18 +23,10 @@ public class UnlimitedPower extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-                    if (!gf.charged) {
-                        atb(new ChargeAction(gf));
-                        atb(new ExtinguishAction(gf));
-                    }
-                }
-                isDone = true;
-            }
-        });
+        for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+            atb(new ExtinguishAction(gf));
+            atb(new ChargeAction(gf));
+        }
     }
 
     public void upgrade() {
