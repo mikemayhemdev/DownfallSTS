@@ -300,7 +300,10 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "champ:Fatigue !M!. NL Deal damage to ALL enemies equal to the amount of HP lost."
+    "DESCRIPTION": "champ:Fatigue !M!. NL Deal damage to ALL enemies equal to the amount of HP lost.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage.)"
+    ]
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
