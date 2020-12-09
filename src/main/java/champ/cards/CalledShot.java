@@ -11,14 +11,15 @@ public class CalledShot extends AbstractChampCard {
     //stupid intellij stuff power, self, uncommon
 
     public CalledShot() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CalledShotPower(1));
+        applyToSelf(new CalledShotPower(2));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

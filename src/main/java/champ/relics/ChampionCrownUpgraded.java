@@ -12,13 +12,12 @@ import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
 
-public class ChampionCrownUpgraded extends CustomRelic implements OnOpenerSubscriber {
+public class ChampionCrownUpgraded extends CustomRelic {
 
     public static final String ID = ChampMod.makeID("ChampionCrownUpgraded");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("UltimateChampionCrown.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ChampionCrown.png"));
 
-    private boolean usedThisCombat;
 
     public ChampionCrownUpgraded() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
@@ -26,21 +25,10 @@ public class ChampionCrownUpgraded extends CustomRelic implements OnOpenerSubscr
 
     @Override
     public void atBattleStart() {
-        usedThisCombat = false;
+        addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
+
     }
 
-    @Override
-    public void onOpener(boolean fromNeutral) {
-        if (usedThisCombat = false){
-            usedThisCombat = true;
-            addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        }
-    }
-
-    @Override
-    public void onVictory() {
-        usedThisCombat = false;
-    }
 
     @Override
     public String getUpdatedDescription() {

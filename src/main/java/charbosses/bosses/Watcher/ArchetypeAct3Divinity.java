@@ -78,14 +78,14 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_HandDrill());
-        addRelic(new CBR_FaceTrader());
+       // addRelic(new CBR_FaceTrader());
         addRelic(new CBR_MaskGremlin());
         addRelic(new CBR_Abacus());
-        addRelic(new CBR_Mausoleum());
+        //addRelic(new CBR_Mausoleum());
         addRelic(new CBR_IceCream());
-        addRelic(new CBR_WarPaint());
+       // addRelic(new CBR_WarPaint());
         addRelic(new CBR_PhilosopherStone());
-        addRelic(new CBR_Falling());
+       // addRelic(new CBR_Falling());
     }
 
 

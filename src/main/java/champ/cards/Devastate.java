@@ -20,7 +20,7 @@ public class Devastate extends AbstractChampCard {
     private static final int UPG_DAMAGE = 3;
 
     public Devastate() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(ChampMod.TECHNIQUE);
     }
@@ -29,7 +29,7 @@ public class Devastate extends AbstractChampCard {
         int x = ChampMod.finishersThisCombat;
         //finisher();
         for (int i = 0; i < x; i++) dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        finisher();
+        //finisher();
     }
 
     public void applyPowers() {

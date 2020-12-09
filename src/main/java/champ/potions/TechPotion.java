@@ -45,8 +45,6 @@ public class TechPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        if (AbstractDungeon.player.hasRelic(SacredBark.ID))
-            return 6;
         return 3;
     }
 }

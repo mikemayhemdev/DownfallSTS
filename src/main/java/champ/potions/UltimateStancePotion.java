@@ -52,8 +52,6 @@ public class UltimateStancePotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        if (AbstractDungeon.player.hasRelic(SacredBark.ID))
-            return 2;
         return 1;
     }
 }

@@ -113,8 +113,8 @@ public class NeowRezAction extends AbstractGameAction {
             owner.Rezzes++;
             if (owner.Rezzes == 4) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
+                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
+                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
             }
             cB.showHealthBar();
 
