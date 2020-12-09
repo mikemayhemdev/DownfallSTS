@@ -14,7 +14,7 @@ public class DancingMaster extends AbstractChampCard {
     private static final int UPG_MAGIC = 1;
 
     public DancingMaster() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
