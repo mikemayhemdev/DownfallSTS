@@ -44,7 +44,7 @@ public class ForwardTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = 14;
+        this.baseDamage = 15;
         baseSelfDamage = this.selfDamage = 3;
 
         //this.exhaust = true;
