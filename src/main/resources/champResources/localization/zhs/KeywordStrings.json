@@ -15,9 +15,9 @@
     "DESCRIPTION": "切换 #y姿态 。"
   },
   {
-    "PROPER_NAME": "配合",
+    "PROPER_NAME": "连段",
     "NAMES": [
-      "配合"
+      "连段"
     ],
     "DESCRIPTION": "处于特定 #y姿态 时打出后获得额外效果。"
   },
