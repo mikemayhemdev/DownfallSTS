@@ -251,7 +251,7 @@
   },
   "champ:EnragedBash": {
     "NAME": "怒斩",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 !M! 。 NL champ:狂战 champ:连段 ：本场战斗中其伤害和 champ:疲劳 提高 !cool! 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL champ:疲劳 !M! 。 NL champ:狂战 champ:连段 ：本场战斗中这张牌的伤害和 champ:疲劳 提高 !cool! 点。"
   },
   "champ:VampiricStrike": {
     "NAME": "饮血打击",
