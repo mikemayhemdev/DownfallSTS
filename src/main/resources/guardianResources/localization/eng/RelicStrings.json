@@ -28,7 +28,7 @@
     ]
   },
   "Guardian:PocketSentry": {
-    "NAME": "Pocket Sentry",
+    "NAME": "Arumba's Pocket Sentry",
     "FLAVOR": "Sentry Mode active. Target acquired. No hard feelings.",
     "DESCRIPTIONS": [
       "At the start of each turn, alternates between: NL Deal #b",

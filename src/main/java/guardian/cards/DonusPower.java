@@ -23,7 +23,7 @@ public class DonusPower extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     //TUNING CONSTANTS
     public static String UPGRADED_DESCRIPTION;
@@ -50,7 +50,7 @@ public class DonusPower extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-        if (upgraded) c.modifyCostForCombat(-1);
+        c.modifyCostForCombat(-1);
         AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction(c, true));
 
 
@@ -63,10 +63,7 @@ public class DonusPower extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-
-            this.rawDescription = UPGRADED_DESCRIPTION;
-
-            this.initializeDescription();
+            upgradeBaseCost(1);
         }
     }
 
