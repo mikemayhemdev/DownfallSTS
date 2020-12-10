@@ -24,6 +24,7 @@ public class FlashCut extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
         tags.add(CardTags.STRIKE);
+        this.tags.add(ChampMod.OPENERGLADIATOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

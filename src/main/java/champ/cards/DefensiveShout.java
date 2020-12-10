@@ -19,6 +19,7 @@ public class DefensiveShout extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
+        this.tags.add(ChampMod.OPENERDEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

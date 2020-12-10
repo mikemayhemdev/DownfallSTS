@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.DefensiveStylePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,6 +13,8 @@ public class DefensiveStyle extends AbstractChampCard {
 
     public DefensiveStyle() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.tags.add(ChampMod.OPENER);
+        this.tags.add(ChampMod.OPENERDEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

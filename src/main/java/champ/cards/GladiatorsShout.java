@@ -16,6 +16,7 @@ public class GladiatorsShout extends AbstractChampCard {
         baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
+        this.tags.add(ChampMod.OPENERGLADIATOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

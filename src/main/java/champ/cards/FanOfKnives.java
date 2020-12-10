@@ -27,6 +27,7 @@ public class FanOfKnives extends AbstractChampCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         tags.add(ChampMod.OPENER);
+        this.tags.add(ChampMod.OPENERBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

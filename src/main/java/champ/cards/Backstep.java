@@ -18,6 +18,7 @@ public class Backstep extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
 
         baseBlock = 6;
+        this.tags.add(ChampMod.OPENERDEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

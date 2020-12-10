@@ -16,6 +16,7 @@ public class FocusedDefense extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(ChampMod.OPENER);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(ChampMod.OPENERDEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
