@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply 1 Weak. NL Add a Stance Dance to your hand with Ethereal and Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Weak to ALL enemies. NL Add a Stance Dance to your hand with Ethereal and Exhaust."
+    "DESCRIPTION": "Apply 1 Weak. NL Add a πStance Dance to your hand with Ethereal and Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak to ALL enemies. NL Add a πStance Dance to your hand with Ethereal and Exhaust."
   },
   "champ:Execute": {
     "NAME": "Execute",
