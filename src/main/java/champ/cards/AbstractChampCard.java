@@ -170,7 +170,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
         if (this.rawDescription.contains("champ:Fatigue") && !this.rawDescription.contains("champ:Resolve")) {
-            tips.add(new TooltipInfo(ResolvePower.NAME, ChampChar.characterStrings.TEXT[29]));
+            tips.add(new TooltipInfo(ResolvePower.NAME, ChampChar.characterStrings.TEXT[39]));
         }
         return tips;
     }
