@@ -10,7 +10,8 @@
   {
     "PROPER_NAME": "Opener",
     "NAMES": [
-      "opener"
+      "opener",
+      "openers"
     ],
     "DESCRIPTION": "Switch #yStances."
   },
