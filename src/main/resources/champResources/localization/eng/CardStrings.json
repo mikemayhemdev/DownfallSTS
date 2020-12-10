@@ -146,8 +146,8 @@
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy hit.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy hit."
 
   },
   "champ:EnGarde": {

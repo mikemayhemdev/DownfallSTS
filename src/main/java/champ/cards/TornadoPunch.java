@@ -39,9 +39,8 @@ public class TornadoPunch extends AbstractChampCard {
             public void update() {
                 isDone = true;
                 for (AbstractMonster q : monsterList()) {
-                    if (q.getIntentBaseDmg() > -1) {
-                        att(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
-                    }
+                    att(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+
                 }
             }
         });
