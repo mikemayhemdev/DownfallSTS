@@ -146,8 +146,8 @@
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy that intends to attack."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy hit.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counterstrike for each enemy hit."
 
   },
   "champ:EnGarde": {
@@ -337,7 +337,7 @@
   "champ:CalledShot": {
     "NAME": "Called Shot",
     "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end.",
-    "UPGRADE_DESCRIPTION": "The next 2 champ:Finishers you play does not exit Stance or cause your turn to end."
+    "UPGRADE_DESCRIPTION": "The next 2 champ:Finishers you play do not exit Stance or cause your turn to end."
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",

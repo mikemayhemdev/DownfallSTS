@@ -1,7 +1,7 @@
 package champ.patches;
 
 import champ.ChampMod;
-import champ.cards.AbstractChampCard;
+import champ.cards.*;
 import champ.stances.BerserkerStance;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -21,6 +21,12 @@ public class CardExtraUiPatch {
     private static TextureAtlas.AtlasRegion crown = ChampMod.UIAtlas.findRegion("crown");
     private static TextureAtlas.AtlasRegion openerall = ChampMod.UIAtlas.findRegion("openerAll");
     private static TextureAtlas.AtlasRegion finisher = ChampMod.UIAtlas.findRegion("finisher");
+    private static TextureAtlas.AtlasRegion openerR = ChampMod.UIAtlas.findRegion("openerR");
+    private static TextureAtlas.AtlasRegion openerB = ChampMod.UIAtlas.findRegion("openerB");
+    private static TextureAtlas.AtlasRegion openerY = ChampMod.UIAtlas.findRegion("openerY");
+    private static TextureAtlas.AtlasRegion openerYR = ChampMod.UIAtlas.findRegion("openerYR");
+    private static TextureAtlas.AtlasRegion openerYB = ChampMod.UIAtlas.findRegion("openerYB");
+    private static TextureAtlas.AtlasRegion openerRB = ChampMod.UIAtlas.findRegion("openerRB");
 
     @SpirePatch(clz = AbstractCard.class, method = "renderEnergy")
     public static class SecondEnergyRenderPatch {
@@ -42,8 +48,29 @@ public class CardExtraUiPatch {
                     }
                     //Opener / Technique / Finisher draws
                     if (__instance.hasTag(ChampMod.OPENER)) {
+                        if (__instance instanceof Aggression){
+                            renderHelper(sb, openerYR, __instance.current_x, __instance.current_y, __instance);
+                        }
+                        else if (__instance instanceof Balance){
+                            renderHelper(sb, openerYB, __instance.current_x, __instance.current_y, __instance);
+                        }
+                        else if (__instance instanceof Control){
+                            renderHelper(sb, openerRB, __instance.current_x, __instance.current_y, __instance);
+                        }
+                        else if (__instance instanceof StanceDance){
+                            renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
+                        }
+                        else if (__instance.hasTag(ChampMod.OPENERBERSERKER)){
+                            renderHelper(sb, openerR, __instance.current_x, __instance.current_y, __instance);
+                        }
+                        else if (__instance.hasTag(ChampMod.OPENERDEFENSIVE)){
+                            renderHelper(sb, openerY, __instance.current_x, __instance.current_y, __instance);
+                        }
+                        else {
+                            renderHelper(sb, openerB, __instance.current_x, __instance.current_y, __instance);
+                        }
+
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
-                        renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
                     }
                     if (__instance.hasTag(ChampMod.TECHNIQUE)) {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);

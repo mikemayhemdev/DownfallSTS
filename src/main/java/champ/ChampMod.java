@@ -89,6 +89,12 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags OPENER;
     @SpireEnum
+    public static AbstractCard.CardTags OPENERDEFENSIVE;
+    @SpireEnum
+    public static AbstractCard.CardTags OPENERGLADIATOR;
+    @SpireEnum
+    public static AbstractCard.CardTags OPENERBERSERKER;
+    @SpireEnum
     public static AbstractCard.CardTags FINISHER;
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
@@ -108,6 +114,12 @@ public class ChampMod implements
     public static Texture crown;
     public static Texture finisher;
     public static Texture openerAll;
+    public static Texture openerR;
+    public static Texture openerY;
+    public static Texture openerB;
+    public static Texture openerRB;
+    public static Texture openerYR;
+    public static Texture openerYB;
 
     public ChampMod() {
         BaseMod.subscribe(this);
@@ -333,10 +345,23 @@ public class ChampMod implements
         crown = TextureLoader.getTexture("champResources/images/cardicons/crown.png");
         finisher = TextureLoader.getTexture("champResources/images/cardicons/finisher.png");
         openerAll = TextureLoader.getTexture("champResources/images/cardicons/openerall.png");
+        openerB = TextureLoader.getTexture("champResources/images/cardicons/openerblue.png");
+        openerR = TextureLoader.getTexture("champResources/images/cardicons/openerred.png");
+        openerY = TextureLoader.getTexture("champResources/images/cardicons/openeryellow.png");
+        openerYR = TextureLoader.getTexture("champResources/images/cardicons/openeryellowred.png");
+        openerYB = TextureLoader.getTexture("champResources/images/cardicons/openerblueyellow.png");
+        openerRB = TextureLoader.getTexture("champResources/images/cardicons/openerredblue.png");
+
         UIAtlas.addRegion("heartOrb", heartOrb, 0, 0, heartOrb.getWidth(), heartOrb.getHeight());
         UIAtlas.addRegion("openerAll", openerAll, 0, 0, openerAll.getWidth(), openerAll.getHeight());
         UIAtlas.addRegion("crown", crown, 0, 0, crown.getWidth(), crown.getHeight());
         UIAtlas.addRegion("finisher", finisher, 0, 0, finisher.getWidth(), finisher.getHeight());
+        UIAtlas.addRegion("openerB", openerB, 0, 0, openerB.getWidth(), openerB.getHeight());
+        UIAtlas.addRegion("openerR", openerR, 0, 0, openerR.getWidth(), openerR.getHeight());
+        UIAtlas.addRegion("openerY", openerY, 0, 0, openerY.getWidth(), openerY.getHeight());
+        UIAtlas.addRegion("openerYR", openerYR, 0, 0, openerYR.getWidth(), openerYR.getHeight());
+        UIAtlas.addRegion("openerYB", openerYB, 0, 0, openerYB.getWidth(), openerYB.getHeight());
+        UIAtlas.addRegion("openerRB", openerRB, 0, 0, openerRB.getWidth(), openerRB.getHeight());
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil_Champ.ID, Colosseum_Evil_Champ.class) //Event ID//
                 //Event Spawn Condition//

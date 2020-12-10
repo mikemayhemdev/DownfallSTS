@@ -24,6 +24,7 @@ public class GutPunch extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
         myHpLossCost = 2;
+        this.tags.add(ChampMod.OPENERBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

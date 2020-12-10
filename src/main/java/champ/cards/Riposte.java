@@ -24,6 +24,7 @@ public class Riposte extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(ChampMod.OPENERDEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
