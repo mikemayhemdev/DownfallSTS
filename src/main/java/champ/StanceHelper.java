@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class StanceHelper {
 
-    public static float globalX = 25F * Settings.scale;
+    public static float globalX = 15F * Settings.scale;
     public static float globalY = 900F * Settings.scale;
 
     public static Hitbox hitboxStance;
@@ -31,9 +31,9 @@ public class StanceHelper {
     public static Vector2 dx3 = new Vector2(globalX, globalY - (200F * Settings.scale));
 
     public static void init() {
-        hitboxStance = new Hitbox(globalX, globalY - (50F * Settings.scale), 250 * Settings.scale, 100 * Settings.scale);
-        hitboxTechnique = new Hitbox(globalX, globalY - (150F * Settings.scale), 250 * Settings.scale, 100 * Settings.scale);
-        hitboxFinisher = new Hitbox(globalX, globalY - (250F * Settings.scale), 250 * Settings.scale, 100 * Settings.scale);
+        hitboxStance = new Hitbox(globalX, globalY - (50F * Settings.scale), 300 * Settings.scale, 100 * Settings.scale);
+        hitboxTechnique = new Hitbox(globalX, globalY - (150F * Settings.scale), 300 * Settings.scale, 100 * Settings.scale);
+        hitboxFinisher = new Hitbox(globalX, globalY - (250F * Settings.scale), 300 * Settings.scale, 100 * Settings.scale);
     }
 
     public static void update() {

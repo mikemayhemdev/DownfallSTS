@@ -119,8 +119,6 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     public void fisher() {
         finisher();
-        ChampMod.finishersThisTurn++;
-        ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
     }
 
     public abstract void finisher();
