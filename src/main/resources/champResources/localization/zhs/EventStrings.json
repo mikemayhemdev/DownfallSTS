@@ -2,13 +2,13 @@
   "champ:Colosseum": {
     "NAME": "竞技场",
     "DESCRIPTIONS": [
-      "As you continue down the spire, you notice a group of humanoids waiting in ambush nearby a large auditorium. When approached, the Slavers are startled, but quickly explain themselves. NL NL \"CHAMPION! You grave us with your presence! Are you here to take on the new challenger?\"",
-      "A new challenger? How delightful! NL NL However, the challenge may have to wait. The audience always likes seeing the Champion slaughter the latest capture...",
-      "You enter the massive stadium to find an overflowing audience of #bSlavers, #pCultists, and other denizens of the City. NL NL ",
-      "@\"WHO@ @DARES@ @CHALLENGE@ @ME?!\"@ you boom into the crowd, beckoning this new 'challenger'. NL A knight approaches, clad in strikingly similar armor to your own, only drenched in black ink. The crowd cheers more than this pretender deserves. NL NL There can only be one Champion!",
-      "@\"THE@ @NEXT@ @ONE@ @IS@ @MINE!\"@ you boom into the crowd, who replies with a deafening applause. NL NL It does not take long for the slavers to drag in their latest catch. The unwitting challenger awakens, ~groggy~ from the ambush, but readies themselves. NL NL This should be fun.",
-      "You deciding that, though it is tempting, fighting here would be an unnecessary distraction. Your journey continues on, and you leave the slavers to resume their ambush.",
-      "Black Knight"
+      "当你继续沿着高塔继续前进时，你注意到一群人形生物在一个大礼堂附近埋伏。你走进埋伏，在阴影中的奴隶头子吓得跳了出来。但很快就发现是自己人。 NL NL “冠军！你把我们都暴露了！你是过来迎战新的挑战者的吗？”",
+      "新挑战者？多令人愉快啊！ NL NL 然而，挑战可能还需要耐心等待。观众总是喜欢看冠军屠杀最新的俘虏……",
+      "你进入了这座庞大的竞技场。放眼望去，四周坐满了 #b奴隶贩子 、 #p邪教徒 还有各式各样的城市居民。 NL NL ",
+      "@“谁胆敢挑战我？！”@ 你冲进人群之中，“招呼”这个“新来的”. NL 一名身着与你相仿的骑士走了出来，但他的身上的盔甲却犹如墨水一样的漆黑。观众的呼声似乎因此变得更加高涨了。 NL NL 一山不容二虎，冠军只能有一个！",
+      "@“下一个是我的！”@ 你冲进人群之中，群众的呼声震耳欲聋。 NL NL 奴隶贩子很快就把刚捞到的“大鱼”摆了上来。 不一会，挑战者从昏迷中醒来， ~头晕目眩~ ，但似乎已经做好了准备。 NL NL 这次应该很有趣。",
+      "你觉得，虽然很有趣，但是在这里打斗纯属浪费时间。你继续踏上旅途。而奴隶贩子也继续埋伏，等着下一个“大鱼”上钩。",
+      "黑色骑士"
 	],
     "OPTIONS": [
       "[卫冕] #r与黑色骑士战斗。 #g获得许多奖赏。",
@@ -19,14 +19,14 @@
     ]
   },
   "champ:Library": {
-    "NAME": "The Library",
+    "NAME": "大图书馆",
     "DESCRIPTIONS": [
-      "You come across the heart of knowledge within the City - the old Library. NL Inside, you find countless rows of scrolls, manuscripts, and books. NL You could pick one and cozy yourself into a chair for some quiet time, or spend this time to look for a manual more specific to fighting techniques.",
-      "You spend much time searching through the halls of tomes and guides, until finally finding the book you seek. NL NL Settling into the comfy chair, you take some time to brush up on forgotten stances and styles. Even a perfect fighting specimen such as yourself knows that the mind is just as important as the body, and must also be exercised."
+      "你走进城市的知识中心 - 大图书馆 。 NL 你走进建筑物中，看见了无数卷轴、手稿和书籍。 NL 你可以随便拿一本看看，让自己舒服地坐在椅子上安静一会儿，或者把这段时间去用来去找一本更具体的格斗技巧手册。",
+      "你花了很多时间翻阅书籍和指南，直到最终找到你要找的书。 NL NL 你坐在舒适的椅子上，仔细熟读已被岁月遗忘了的姿势和流派。即使是像你这样的战斗天才，也知道头脑和身体一样重要。必须饱经锻炼。"
     ],
     "OPTIONS": [
-      "[Seek] Locate a #gBook on Fighting.",
-      "[Locked] Already have all Fighting tomes."
+      "[寻找] 查阅有关战斗的 #g书籍 。",
+      "[锁定] 已经集齐所有的战斗书籍。"
     ]
   },
   "champ:TechniqueTome": {
@@ -39,11 +39,11 @@
       "Whatever price had to be paid was worth it to gain this precious knowledge. It takes much effort to peel yourself away from the book's hold over you, but you manage to do so. NL NL With the tome's teachings fresh in your mind, you set out to find a new victim to test them out on."
     ],
     "OPTIONS": [
-      "[Read] Choose a card to gain #gTechnique. #rLose #r",
-      " #rHP.",
-      "[Leave]",
-      "[Locked] Requires a non-Technique Card.",
-      "Choose a card to gain Technique."
+      "[阅读] 选择一张牌获得 #g战术 。 #r失去 #r",
+      " #r点生命。",
+      "[离开]",
+      "[锁定] 需要非战术牌。",
+      "选择一张牌获得战术。"
     ]
   },
   "champ:Gym": {
@@ -55,15 +55,15 @@
       "Today's focus shall be on muscle tone and upper body strength. You locate the heaviest weights and tension systems, using them to complete several cycles of tone-building exercises. By the end of the workout, you can already feel yourself lifting and pulling with just a little more ease than when you began. NL NL As you depart the Gym, you make a mental note to focus on lower body strength the next time you visit. It can't be skipped."
     ],
     "OPTIONS": [
-      "[Cardio] #gGain #g",
-      " #gMax #gHP.",
-      "[Spar] Choose a card to gain your choice of #gOpener.",
-      "[Lift] #gGain #g1 #gStrength #gPermanently.",
-      "[Leave]",
-      "Choose a card to give Defensive Opener.",
-      "Choose a card to give Berserker Opener.",
-      "Choose a card to give Gladiator Opener.",
-      "[Locked] Requires a non-Opener Card."
+      "[Cardio] #g获得 #g",
+      " #g点最大生命。",
+      "[Spar] 选择一张牌获得 #g起手式 。",
+      "[Lift] #g永久获得1点力量。",
+      "[离开]",
+      "选择一张牌获得防守起手。",
+      "选择一张牌获得狂战起手。",
+      "选择一张牌获得角斗起手。",
+      "[锁定] 需要一张进入起手式牌。"
     ]
   },
   "champ:MinorLeagueArena": {
@@ -73,10 +73,10 @@
       "Deciding your time is better spent elsewhere, you leave the Arena. You can hear a sigh of relief from the fighters as you depart - clearly, nobody was looking forward to dying at your hand today."
    ],
     "OPTIONS": [
-      "[Fight Centurion & Mystic] #gGain #gCloak #gClasp",
-      "[Fight Gremlin Nob] #gGain #gChampion's #gBelt",
-      "[Fight Slaver Duo] #gGain #gWrist #gBlade",
-      "[Leave]"
+      "[与百夫长和神秘术士战斗] #g获得斗篷扣",
+      "[与地精大块头战斗] #g获得冠军腰带",
+      "[与奴隶二人组战斗] #g获得袖剑",
+      "[离开]"
     ]
   }
 }

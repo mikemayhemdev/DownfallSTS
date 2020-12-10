@@ -6,6 +6,14 @@
     ],
     "DESCRIPTION": "如果你处于某个 #y姿态 ，触发该 #y姿态 的 #y战术奖励 。"
   },
+    {
+    "PROPER_NAME": "起手式",
+    "NAMES": [
+      "起手式",
+	  "起手"
+    ],
+    "DESCRIPTION": "切换 #y姿态 。"
+  },
   {
     "PROPER_NAME": "配合",
     "NAMES": [
