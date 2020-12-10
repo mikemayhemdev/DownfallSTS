@@ -1,6 +1,6 @@
 {
   "champ:CounterPower": {
-    "NAME": "Counterstrike",
+    "NAME": "Counter",
     "DESCRIPTIONS": [
       "The next time you receive #yAttack damage, deal #b",
       " damage back."
@@ -24,7 +24,7 @@
     "NAME": "Defensive Boost!",
     "DESCRIPTIONS": [
       "Until you exit #yDefensive, #yTechniques grant #b",
-      " additional #yCounterstrike."
+      " additional #yCounter."
     ]
   },
   "champ:FocusedBerPower": {
@@ -46,7 +46,7 @@
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b",
-      " #yCounterstrike for each card in hand."
+      " #yCounter for each card in hand."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -145,9 +145,9 @@
   "champ:FalseCounterPower": {
     "NAME": "False Counter",
     "DESCRIPTIONS": [
-      "Next time #yCounterstrike activates, only lose half your #yCounterstrike.",
+      "Next time #yCounter activates, only lose half your #yCounter.",
       "The next #b",
-      " times #yCounterstrike activates, only lose half your #yCounterstrike."
+      " times #yCounter activates, only lose half your #yCounter."
     ]
   },
   "champ:EnergizedDurationPower": {
@@ -162,7 +162,7 @@
     "NAME": "Iron Fortress",
     "DESCRIPTIONS": [
       "Whenever you enter a Stance, gain #b",
-      " Block and #yCounterstrike."
+      " Block and #yCounter."
     ]
   },
   "champ:LastStandMod": {

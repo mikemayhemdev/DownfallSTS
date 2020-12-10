@@ -20,11 +20,11 @@
       " turns."
     ]
   },
-  "champ:CounterstrikePotion": {
+  "champ:CounterPotion": {
     "NAME": "Brew of Sharpness",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yCounterstrike."
+      " #yCounter."
     ]
   }
 }

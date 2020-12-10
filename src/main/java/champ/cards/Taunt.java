@@ -1,11 +1,15 @@
 package champ.cards;
 
+import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.util.EtherealMod;
+import sneckomod.util.ExhaustMod;
 
 public class Taunt extends AbstractChampCard {
 
@@ -16,21 +20,25 @@ public class Taunt extends AbstractChampCard {
     public Taunt() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         tags.add(ChampMod.TECHNIQUE);
-        cardsToPreview = new StanceDance();
+        AbstractCard c = new StanceDance();
+        CardModifierManager.addModifier(c, new EtherealMod());
+        CardModifierManager.addModifier(c, new ExhaustMod());
+        cardsToPreview = c;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         if (upgraded) {
             for (AbstractMonster q : monsterList()) {
-                applyToEnemy(q, autoWeak(q, 2));
+                applyToEnemy(q, autoWeak(q, 1));
             }
         } else {
-            applyToEnemy(m, autoWeak(m, 2));
+            applyToEnemy(m, autoWeak(m, 1));
         }
-        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-           atb(new MakeTempCardInHandAction(new StanceDance()));
-        }
+        AbstractCard c = new StanceDance();
+        CardModifierManager.addModifier(c, new EtherealMod());
+        CardModifierManager.addModifier(c, new ExhaustMod());
+        atb(new MakeTempCardInHandAction(c));
     }
 
     public void upp() {

@@ -17,14 +17,14 @@
       "Finisher Bonus",
       "#yFatigue #b3.",
       "Lose all #yResolve and gain that much HP, preserving #yStrength. End your turn.",
-      "Gain #b6 #yCounterstrike.",
+      "Gain #b6 #yCounter.",
       "Gain #b12 #yBlock. End your turn.",
       "Draw #b1 card.",
       "Next turn, draw #b1 card and gain [E] .",
       "Berserker Technique",
       "Defensive Technique",
       "Gladiator Technique",
-      "#yFatigue #b3, gain #b6 #yCounterstrike and draw #b1 card.",
+      "#yFatigue #b3, gain #b6 #yCounter and draw #b1 card.",
       "Lose all #yResolve and gain that much HP, preserving #yStrength. Gain 12 Block. Next turn, draw #b1 card and gain [E] .",
       "Counts as #rBerserker, #bDefensive and #yGladiator for all purposes. You cannot switch Stances.",
       " turns.",
@@ -33,7 +33,18 @@
       "#bDefensive",
       "#yGladiator",
       "None",
-      "Pfh. This fight is too easy to bother."
+      "Pfh. This fight is too easy to bother.",
+      "[crown_icon]   champ:Technique NL ",
+      "[crown_icon] : Draw a card. NL ",
+      "[crown_icon] : Gain 6 champ:Counter. NL ",
+      "[crown_icon] : champ:Fatigue 3. NL ",
+      "[crown_icon] : All Bonuses. NL ",
+      "[fist_icon]   champ:Finisher NL ",
+      "[fist_icon] : [E] & [card_icon] next turn. NL ",
+      "[fist_icon] : Gain 12 Block. NL ",
+      "[fist_icon] : Clear champ:Resolve. NL ",
+      "[fist_icon] : All Bonuses. NL "
+
     ]
   }
 }

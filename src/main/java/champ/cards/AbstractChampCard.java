@@ -24,12 +24,12 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.dailymods.ChampStances;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
-import static champ.ChampMod.getModID;
-import static champ.ChampMod.makeCardPath;
+import static champ.ChampMod.*;
 
 
 public abstract class AbstractChampCard extends CustomCard {
@@ -46,6 +46,8 @@ public abstract class AbstractChampCard extends CustomCard {
     public boolean isCoolModified;
 
     public int myHpLossCost;
+
+    private boolean reInitDescription = true;
 
     public void resetAttributes() {
         super.resetAttributes();
@@ -235,6 +237,12 @@ public abstract class AbstractChampCard extends CustomCard {
         }
     }
 
+    @Override
+    public void switchedStance() {
+        initializeDescription();
+        super.switchedStance();
+    }
+
     public void berserkOpen() {
         berserkerStance();
         triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
@@ -300,5 +308,68 @@ public abstract class AbstractChampCard extends CustomCard {
             } else
                 addToBot(new PressEndTurnButtonAction());
         }
+    }
+
+    @Override
+    public void initializeDescription() {
+        String prefixTech = "";
+        String prefixFin = "";
+        if (this.hasTag(TECHNIQUE)){
+            prefixTech = ChampChar.characterStrings.TEXT[29];
+            if (AbstractDungeon.player != null){
+                if (AbstractDungeon.player.stance instanceof DefensiveStance){
+                    prefixTech = ChampChar.characterStrings.TEXT[31];
+                }
+                else if (AbstractDungeon.player.stance instanceof GladiatorStance){
+                    prefixTech = ChampChar.characterStrings.TEXT[30];
+                }
+                else if (AbstractDungeon.player.stance instanceof BerserkerStance){
+                    prefixTech = ChampChar.characterStrings.TEXT[32];
+
+                }
+                else if (AbstractDungeon.player.stance instanceof UltimateStance){
+                    prefixTech = ChampChar.characterStrings.TEXT[33];
+                }
+            }
+            if (upgraded && this.UPGRADE_DESCRIPTION != null){
+                this.rawDescription = prefixTech + UPGRADE_DESCRIPTION;
+            } else {
+                this.rawDescription = prefixTech + DESCRIPTION;
+            }
+        }
+        if (this.hasTag(FINISHER)){
+            prefixFin = ChampChar.characterStrings.TEXT[34];
+            if (AbstractDungeon.player != null){
+                if (AbstractDungeon.player.stance instanceof DefensiveStance){
+                    prefixFin = ChampChar.characterStrings.TEXT[36];
+                }
+                else if (AbstractDungeon.player.stance instanceof GladiatorStance){
+                    prefixFin = ChampChar.characterStrings.TEXT[35];
+                }
+                else if (AbstractDungeon.player.stance instanceof BerserkerStance){
+                    prefixFin = ChampChar.characterStrings.TEXT[37];
+
+                }
+                else if (AbstractDungeon.player.stance instanceof UltimateStance){
+                    prefixFin = ChampChar.characterStrings.TEXT[38];
+                }
+            }
+            if (upgraded && this.UPGRADE_DESCRIPTION != null){
+                this.rawDescription = prefixTech + prefixFin + UPGRADE_DESCRIPTION;
+            } else {
+                this.rawDescription = prefixTech + prefixFin + DESCRIPTION;
+            }
+        }
+        super.initializeDescription();
+
+    }
+
+    @Override
+    public void update() {
+        if (this.reInitDescription){
+            initializeDescription();
+            this.reInitDescription = false;
+        }
+        super.update();
     }
 }

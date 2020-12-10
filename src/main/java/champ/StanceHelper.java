@@ -119,8 +119,8 @@ public class StanceHelper {
                         String t = "ERROR";
                         String d = "ERROR2";
                         if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                            t = BaseMod.getKeywordTitle("champ:counterstrike");
-                            d = BaseMod.getKeywordDescription("champ:counterstrike");
+                            t = BaseMod.getKeywordTitle("champ:counter");
+                            d = BaseMod.getKeywordDescription("champ:counter");
                         } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
                             t = BaseMod.getKeywordTitle("champ:resolve");
                             d = BaseMod.getKeywordDescription("champ:resolve");

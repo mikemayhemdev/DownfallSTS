@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "Whenever you enter a #yStance via #ychamp:Opener, if you weren't in a #yStance, reduce the cost of a random card in your hand by #b1 this turn."
+      "#ychamp:Openers used while not in a Stance reduce the cost of a random card in your hand by #b1 this turn."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -38,14 +38,14 @@
     "NAME": "Defensive Training Manual",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "#yTechniques used in Defensive Mode generate 3 more #yCounterstrike."
+      "#yTechniques used in Defensive Mode generate 3 more #yCounter."
     ]
   },
   "champ:DeflectingBracers": {
     "NAME": "Deflecting Bracers",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "At the end of the enemy round, gain #yCounterstrike equal to your remaining Block."
+      "At the end of the enemy round, gain #yCounter equal to your remaining Block."
     ]
   },
   "champ:DuelingGlove": {
@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E]. NL Your maximum Resolve, Counterstrike and Hand Size is 8."
+      "At the start of your turn, gain [E]. NL Your maximum Resolve, Counter and Hand Size is 8."
     ]
   },
   "champ:SignatureFinisher": {
