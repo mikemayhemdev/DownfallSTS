@@ -223,7 +223,10 @@ public abstract class AbstractBossCard extends AbstractCard {
 
         multiDamageCardCalculate();
         this.initializeDescription();
-        if (this.intent != null) this.updateIntentTip();
+        if (this.intent != null) {
+            //destroyIntent();
+            createIntent();
+        }
     }
 
     protected void applyPowersToBlock() {

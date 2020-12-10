@@ -2,6 +2,7 @@ package champ.cards;
 
 import basemod.abstracts.CustomCard;
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.actions.FatigueHpLossAction;
 import champ.powers.CalledShotPower;
 import champ.powers.ResolvePower;
@@ -283,6 +284,9 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public void finisher() {
+
+        ChampMod.finishersThisTurn++;
+        ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
         if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
             if (!AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID) && !(AbstractDungeon.player.stance instanceof UltimateStance)) {
                 exitStance();
