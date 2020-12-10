@@ -33,7 +33,8 @@
       "#bDefensive",
       "#yGladiator",
       "None",
-      "Pfh. This fight is too easy to bother."
+      "Pfh. This fight is too easy to bother.",
+      "You have #b1 #yStrength for every #b5 Resolve. At the end of combat, heal HP equal to your Resolve."
     ]
   }
 }

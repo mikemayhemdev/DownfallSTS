@@ -1,6 +1,7 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.actions.FatigueHpLossAction;
@@ -9,6 +10,7 @@ import champ.powers.ResolvePower;
 import champ.stances.*;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -18,6 +20,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -27,6 +30,7 @@ import com.megacrit.cardcrawl.stances.NeutralStance;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static champ.ChampMod.getModID;
 import static champ.ChampMod.makeCardPath;
@@ -158,6 +162,17 @@ public abstract class AbstractChampCard extends CustomCard {
             upp();
         }
     }
+
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tips = new ArrayList<>();
+        if (this.rawDescription.contains("champ:Fatigue") && !this.rawDescription.contains("champ:Resolve")) {
+            tips.add(new TooltipInfo(ResolvePower.NAME, ChampChar.characterStrings.TEXT[29]));
+        }
+        return tips;
+    }
+
 
     public abstract void upp();
 
