@@ -247,7 +247,7 @@
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
     "DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。 NL 消耗 。",
-	"UPGRADE_DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。"
+	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
@@ -327,8 +327,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
-    "DESCRIPTION": "在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 并失去 [E] 。",
-	"UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 并失去 [E] 。"
+    "DESCRIPTION": "在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 。",
+	"UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",

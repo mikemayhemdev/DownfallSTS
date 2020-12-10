@@ -31,7 +31,7 @@
     "NAME": "终极王冠",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "每场战斗第一张 #y进入姿态 牌将进入 #y终极 而不是普通 #y姿态 。"
+      "每场战斗开始时进入 #y终极 并持续 #b2 回合 。"
     ]
   },
   "champ:DefensiveTrainingManual": {

@@ -116,8 +116,8 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "研究尖塔",
-    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机无色 expansioncontent:首领 牌。它直到打出前耗能为0。",
-    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机无色 expansioncontent:首领 牌。它直到打出前耗能为0。"
+    "DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张随机无色 expansioncontent:首领 牌。他们直到打出前耗能为0。",
+    "UPGRADE_DESCRIPTION": "接下来 !M! 回合，每回合开始时获得1张已 升级 的随机无色 expansioncontent:首领 牌。他们直到打出前耗能为0。"
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",

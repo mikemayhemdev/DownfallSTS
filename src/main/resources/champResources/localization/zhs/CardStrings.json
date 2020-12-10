@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "激将",
-    "DESCRIPTION": "champ:战术 。 NL 给予 2 层 虚弱 。 NL 如果不处于 姿态 ，随机进入一种 姿态 。",
-    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 给予所有敌人 2 层 虚弱 。 NL 如果不处于 姿态 ，随机进入一种 姿态 。"
+    "DESCRIPTION": "champ:战术 。 NL 给予 2 层 虚弱 。 NL 将一张 *姿态之舞 加入手牌。",
+    "UPGRADE_DESCRIPTION": "champ:战术 。 NL 给予所有敌人 2 层 虚弱 。 NL 将一张 *姿态之舞 加入手牌。"
   },
   "champ:Execute": {
     "NAME": "处决",
@@ -212,8 +212,8 @@
   },
   "champ:RapidStrikes": {
     "NAME": "连续打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一张 champ:战术 牌重复一次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 本回合每打出过一张 champ:战术 牌重复一次。 NL 再重复两次。"
+    "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。"
   },
   "champ:EnchantSword": {
     "NAME": "强化剑刃",
@@ -321,7 +321,8 @@
   },
   "champ:CalledShot": {
     "NAME": "宣告",
-    "DESCRIPTION": "你打出的下一张 champ:终结技 将不会退出 姿态 或结束你的回合。"
+    "DESCRIPTION": "你打出的下1张 champ:终结技 将不会退出 姿态 或结束你的回合。",
+	"UPGRADE_DESCRIPTION": "你打出的下2张 champ:终结技 将不会退出 姿态 或结束你的回合。"
   },
   "champ:PerfectedStrike": {
     "NAME": "完美打击",

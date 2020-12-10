@@ -171,5 +171,21 @@
       "每回合开始时，如果生命低于一半，清除所有负面效果并获得 ",
       " 点力量。"
     ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "爆甲",
+    "DESCRIPTIONS": [
+      "你的下个回合不能获得格挡。",
+      "你的下 #b",
+      " 个回合不能获得格挡。"
+    ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "终结",
+    "DESCRIPTIONS": [
+      "终极姿态将在本回合结束。",
+      "终极姿态将再持续 ",
+      " 个回合。"
+    ]
   }
 }
