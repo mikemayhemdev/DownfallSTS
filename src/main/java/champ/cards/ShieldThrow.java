@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.NoBlockNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,7 +16,7 @@ public class ShieldThrow extends AbstractChampCard {
 
     public ShieldThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        tags.add(ChampMod.FINISHER);
+      //  tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -26,9 +27,9 @@ public class ShieldThrow extends AbstractChampCard {
         this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
         if (!dcombo()) {
-            applyToSelf(new NoBlockPower(p, 1, false));
+            applyToSelf(new NoBlockNextTurnPower(1));
         }
-        finisher();
+      //  finisher();
     }
 
     @Override

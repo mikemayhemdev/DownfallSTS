@@ -23,6 +23,7 @@ public class VampiricStrike extends AbstractChampCard {
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.TECHNIQUE);
         magicNumber = baseMagicNumber = 2;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

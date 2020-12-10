@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "champ:Technique. NL Apply 2 Weak. NL If you are not in a Stance, enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Technique. NL Apply 2 Weak to ALL enemies. NL If you are not in a Stance, enter a random Stance."
+    "DESCRIPTION": "champ:Technique. NL Apply 2 Weak. NL If you are not in a Stance, add a Stance Dance to your hand.",
+    "UPGRADE_DESCRIPTION": "champ:Technique. NL Apply 2 Weak to ALL enemies. NL If you are not in a Stance, add a Stance Dance to your hand."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -216,8 +216,8 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique used this turn. NL Repeat twice more.",
+    "DESCRIPTION": "Deal !D! damage two times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " champ:Technique played.)",
@@ -336,7 +336,8 @@
   },
   "champ:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end."
+    "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end.",
+    "DESCRIPTION": "The next 2 champ:Finishers you play does not exit Stance or cause your turn to end."
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
@@ -344,7 +345,7 @@
   },
   "champ:PerfectForm": {
     "NAME": "Perfect Form",
-    "DESCRIPTION": "For !M! turns, enter champ:Ultimate."
+    "DESCRIPTION": "For !M! turns, enter champ:Ultimate Stance."
   },
   "champ:Duel": {
     "NAME": "Duel",

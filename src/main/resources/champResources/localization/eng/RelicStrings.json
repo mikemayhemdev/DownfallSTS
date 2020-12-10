@@ -31,7 +31,7 @@
     "NAME": "Ultimate Champion's Crown",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "The first #yOpener used each combat causes you to enter Ultimate Stance for 2 turns instead of its normal Stance."
+      "Start each combat in Ultimate Stance, which lasts for 2 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {

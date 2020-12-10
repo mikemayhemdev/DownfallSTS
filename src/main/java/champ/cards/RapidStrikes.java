@@ -24,8 +24,8 @@ public class RapidStrikes extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
         int x = AbstractDungeon.cardRandomRng.random(0, 2);
-        int q = ChampMod.techniquesThisTurn + 1;
-        if (upgraded) q += 2;
+        int q = ChampMod.techniquesThisTurn + 2;
+        if (upgraded) q += 1;
         for (int i = 0; i < q; i++) {
             AbstractGameAction.AttackEffect r = null;
             switch (x) {
@@ -48,12 +48,8 @@ public class RapidStrikes extends AbstractChampCard {
         super.applyPowers();
 
         this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + ChampMod.techniquesThisTurn + 1;
-        if (ChampMod.techniquesThisTurn == 0) {
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
-        } else {
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
-        }
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + String.valueOf(ChampMod.techniquesThisTurn + 2 + (upgraded ? 1 : 0));
+        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
 
         this.initializeDescription();
     }

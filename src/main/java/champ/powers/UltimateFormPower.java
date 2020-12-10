@@ -5,24 +5,24 @@ import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class FalseCounterPower extends AbstractPower implements CloneablePowerInterface {
+public class UltimateFormPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = ChampMod.makeID("FalseCounterPower");
+    public static final String POWER_ID = ChampMod.makeID("UltimateStancePower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/FalseCounter84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/FalseCounter32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/UltimateStance84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/UltimateStance32.png");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public FalseCounterPower(final int amount) {
+    public UltimateFormPower(final int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
@@ -33,22 +33,21 @@ public class FalseCounterPower extends AbstractPower implements CloneablePowerIn
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
+
         this.updateDescription();
     }
 
-    @Override
-    public void onSpecificTrigger() {
-        flash();
-        addToTop(new ReducePowerAction(owner, owner, this, 1));
+    public void atEndOfRound() {
+        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, ID, 1));
     }
 
     @Override
     public void updateDescription() {
-        description = amount == 1 ? DESCRIPTIONS[0] : (DESCRIPTIONS[1] + amount + DESCRIPTIONS[2]);
+        description = DESCRIPTIONS[0] + amount + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2]);
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new FalseCounterPower(amount);
+        return new UltimateFormPower(amount);
     }
 }

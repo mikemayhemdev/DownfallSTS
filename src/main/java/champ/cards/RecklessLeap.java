@@ -13,7 +13,7 @@ public class RecklessLeap extends AbstractChampCard {
     private static final int DAMAGE = 18;
     private static final int UPG_DAMAGE = 4;
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 20;
     private static final int UPG_MAGIC = 5;
 
     public RecklessLeap() {

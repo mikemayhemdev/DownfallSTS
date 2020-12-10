@@ -33,6 +33,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
 
+        realUse(abstractPlayer, abstractMonster);
         ArrayList<String> sealList = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
             if (c instanceof AbstractSealCard) {
@@ -57,7 +58,6 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
             }
 
             abstractPlayer.masterDeck.group.removeIf(removeList::contains);
-            realUse(abstractPlayer, abstractMonster);
             addToTop(new VFXAction(new BrokenSealEffect()));
         }
     }

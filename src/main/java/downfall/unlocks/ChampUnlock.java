@@ -19,6 +19,6 @@ public class ChampUnlock extends com.megacrit.cardcrawl.unlock.AbstractUnlock
        {
              this.player = com.megacrit.cardcrawl.core.CardCrawlGame.characterManager.getCharacter(ChampChar.Enums.THE_CHAMP);
              this.player.drawX = (Settings.WIDTH / 2.0F - 20.0F * Settings.scale);
-             this.player.drawY = (Settings.HEIGHT / 2.0F - 50.0F * Settings.scale);
+             this.player.drawY = (Settings.HEIGHT / 2.0F + 50.0F * Settings.scale);
            }
      }

@@ -22,14 +22,14 @@ public class CrownThrow extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.FINISHER);
+        //tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (!gcombo()) applyToSelf(new DrawLessNextTurnPower(magicNumber));
-        finisher();
+       // finisher();
     }
 
     @Override

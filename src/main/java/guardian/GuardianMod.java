@@ -672,7 +672,7 @@ public static void saveData() {
         BaseMod.addCard(new StasisField());
         BaseMod.addCard(new StasisStrike());
         BaseMod.addCard(new ConstructionForm());
-        BaseMod.addCard(new WeakpointTargeting());
+       // BaseMod.addCard(new WeakpointTargeting());
         BaseMod.addCard(new GemFire());
         BaseMod.addCard(new RollAttack());
         BaseMod.addCard(new Reroute());

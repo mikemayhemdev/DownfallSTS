@@ -22,7 +22,7 @@ public class GemFire extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 5;
@@ -49,7 +49,7 @@ public class GemFire extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-
+        this.selfRetain = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }
 
@@ -66,8 +66,9 @@ public class GemFire extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
-            exhaust = false;
+          //  upgradeDamage(UPGRADE_BONUS);
+            selfRetain = true;
+          //  exhaust = false;
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }

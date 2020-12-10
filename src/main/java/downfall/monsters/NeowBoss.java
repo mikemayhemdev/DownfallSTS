@@ -272,7 +272,7 @@ public class NeowBoss extends AbstractMonster {
                 //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new StrengthPower(this, this.getPower(NeowInvulnerablePower.POWER_ID).amount), this.getPower(NeowInvulnerablePower.POWER_ID).amount));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new DexterityPower(this, this.getPower(NeowInvulnerablePower.POWER_ID).amount), this.getPower(NeowInvulnerablePower.POWER_ID).amount));
-                AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 30));
+                AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 20));
                 break;
             case 6:
                 playSfx();

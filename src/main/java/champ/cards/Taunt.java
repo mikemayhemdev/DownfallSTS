@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,6 +16,7 @@ public class Taunt extends AbstractChampCard {
     public Taunt() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         tags.add(ChampMod.TECHNIQUE);
+        cardsToPreview = new StanceDance();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -27,18 +29,7 @@ public class Taunt extends AbstractChampCard {
             applyToEnemy(m, autoWeak(m, 2));
         }
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            int x = AbstractDungeon.cardRandomRng.random(2);
-            switch (x) {
-                case 0:
-                    berserkerStance();
-                    break;
-                case 1:
-                    gladiatorStance();
-                    break;
-                case 2:
-                    defensiveStance();
-                    break;
-            }
+           atb(new MakeTempCardInHandAction(new StanceDance()));
         }
     }
 

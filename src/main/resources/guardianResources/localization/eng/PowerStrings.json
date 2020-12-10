@@ -132,7 +132,7 @@
     "NAME": "Mode Shift",
     "DESCRIPTIONS": [
       "When you lose #b",
-      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode. NL The amount required to activate increases each time #yMode #yShift is activated.",
+      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode.",
       "#yMode #yShift already activated this turn."
     ]
   },
@@ -148,7 +148,6 @@
     "NAME": "Revenge",
     "DESCRIPTIONS": [
       "When #yDefensive #yMode is removed, gain ",
-      " #yStrength for each turn it was active. NL Currently will grant #b",
       " #yStrength."
     ]
   },
