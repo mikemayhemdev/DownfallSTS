@@ -268,6 +268,8 @@ public class FleeingMerchant extends AbstractMonster {
     public static boolean helpEscaped = false;
     public static boolean helpDied = false;
 
+    public static boolean DID_THE_DEATH_THING = false;
+
     @Override
     public void update() {
         super.update();
@@ -278,8 +280,15 @@ public class FleeingMerchant extends AbstractMonster {
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.combatRewardScreen.open();
         }
+        if (DEAD && !DID_THE_DEATH_THING) {
+            DID_THE_DEATH_THING = true;
+            AbstractDungeon.overlayMenu.hideCombatPanels();// 51
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            AbstractDungeon.combatRewardScreen.open();
+        }
     }
 
+    /*
     @Override
     public void dispose() {
         AbstractDungeon.player.releaseCard();
@@ -305,4 +314,5 @@ public class FleeingMerchant extends AbstractMonster {
         }
         super.dispose();
     }
+    */
 }
