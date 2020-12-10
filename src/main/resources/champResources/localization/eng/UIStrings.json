@@ -20,5 +20,10 @@
       "champ:Defensive champ:Opener. NL ",
       "champ:Gladiator champ:Opener. NL "
     ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "Retain. NL "
+    ]
   }
 }

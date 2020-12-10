@@ -11,14 +11,19 @@
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      "champ:技术 。 NL "
+      " champ:技术 。 NL "
     ]
   },
   "champ:OpenerMod": {
     "TEXT": [
-      "进入 champ:狂战 。 NL ",
-      "进入 champ:防守 。 NL ",
-      "进入 champ:角斗 。 NL "
+      " champ:狂战 champ:起手 。 NL ",
+      " champ:防守 champ:起手 。 NL ",
+      " champ:角斗 champ:起手 。 NL "
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "保留 。 NL "
     ]
   }
 }

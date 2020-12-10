@@ -1,7 +1,9 @@
 package champ.util;
 
 import basemod.abstracts.AbstractCardModifier;
+import champ.ChampMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class RetainCardMod extends AbstractCardModifier {
 
@@ -12,16 +14,18 @@ public class RetainCardMod extends AbstractCardModifier {
         if (!card.selfRetain) {
             grantedRetain = true;
             card.selfRetain = true;
-            card.rawDescription = "Retain. NL " + card.rawDescription;
+            card.rawDescription = CardCrawlGame.languagePack.getUIString(ChampMod.makeID("RetainCardMod")).TEXT[0] + card.rawDescription;
             card.initializeDescription();
         }
     }
+
+
 
     @Override
     public void onRemove(AbstractCard card) {
         if (grantedRetain) {
             card.selfRetain = false;
-            card.rawDescription = card.rawDescription.replaceAll("Retain. NL ", "");
+            card.rawDescription = card.rawDescription.replaceAll(CardCrawlGame.languagePack.getUIString(ChampMod.makeID("RetainCardMod")).TEXT[0], "");
             card.initializeDescription();
         }
     }
