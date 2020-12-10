@@ -22,6 +22,7 @@ public class EnchantShield extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) techique();
         //finisher();
+        exhaust = true;
         applyToSelf(new DexterityPower(p, 2));
 
             if (dcombo()) exhaust = false;

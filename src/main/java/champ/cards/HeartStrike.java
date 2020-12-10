@@ -18,7 +18,7 @@ public class HeartStrike extends AbstractChampCard {
     private static final int DAMAGE = -1;
 
     public HeartStrike() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(ChampMod.FINISHER);
@@ -31,9 +31,6 @@ public class HeartStrike extends AbstractChampCard {
             this.baseDamage = p.getPower(ResolvePower.POWER_ID).amount;
             this.calculateCardDamage(m);
             dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        }
-        if (upgraded && bcombo()) {
-           exhaust = false;
         }
         finisher();
     }
@@ -72,7 +69,6 @@ public class HeartStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(0);
     }
 }

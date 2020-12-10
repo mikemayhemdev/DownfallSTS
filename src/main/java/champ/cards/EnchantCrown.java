@@ -19,6 +19,7 @@ public class EnchantCrown extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) techique();
+        exhaust = true;
         applyToSelf(new EnergizedDurationPower(3));
             if (gcombo()) exhaust = false;
      //   finisher();

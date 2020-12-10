@@ -166,8 +166,7 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Exhaust unless in champ:Defensive."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Exhaust."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -212,7 +211,7 @@
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
     "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand. NL Exhaust unless in champ:Gladiator."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand."
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
@@ -274,7 +273,6 @@
   "champ:HeartStrike": {
     "NAME": "Finish Him",
     "DESCRIPTION": "Deal damage equal to your champ:Resolve. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to your champ:Resolve. NL Exhaust unless in champ:Berserker.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]

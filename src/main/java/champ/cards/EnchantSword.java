@@ -20,6 +20,7 @@ public class EnchantSword extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) techique();
         //finisher();
+        exhaust = true;
         applyToSelf(new StrengthPower(p, 2));
         if (bcombo()) exhaust = false;
       //  finisher();

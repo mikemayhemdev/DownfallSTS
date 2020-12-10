@@ -37,9 +37,6 @@ public class CrookedStrike extends AbstractChampCard {
                 att(new ApplyPowerAction(m, p, new StrengthPower(m, -x), -x));
             }
         });
-        if (upgraded) {
-            if (gcombo()) exhaust = false;
-        }
         finisher();
     }
 
@@ -50,6 +47,7 @@ public class CrookedStrike extends AbstractChampCard {
 
     public void upp() {
         //upgradeDamage(UPG_DAMAGE);
+        this.exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

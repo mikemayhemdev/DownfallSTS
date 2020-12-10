@@ -11,12 +11,12 @@ public class BringItOn extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int MAGIC = 10;
+    private static final int MAGIC = 9;
 
     public BringItOn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        baseBlock = 10;
+        baseBlock = 9;
         exhaust = true;
         tags.add(ChampMod.FINISHER);
     }
@@ -25,9 +25,7 @@ public class BringItOn extends AbstractChampCard {
         //finisher();
         blck();
         applyToSelf(new CounterPower(magicNumber));
-        if (upgraded) {
-            if (dcombo()) exhaust = false;
-        }
+
         finisher();
     }
 
@@ -37,7 +35,7 @@ public class BringItOn extends AbstractChampCard {
     }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBlock(3);
+        upgradeMagicNumber(3);
     }
 }
