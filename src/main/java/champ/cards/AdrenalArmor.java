@@ -45,8 +45,8 @@ public class AdrenalArmor extends AbstractChampCard {
     }
 
     public void upp() {
+        tags.add(ChampMod.TECHNIQUE);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
-        tags.add(ChampMod.TECHNIQUE);
     }
 }
