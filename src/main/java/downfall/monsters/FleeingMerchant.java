@@ -127,7 +127,7 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.getCurrRoom().cannotLose = true;
+        //AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
 
         //AbstractDungeon.actionManager.addToTop(new TalkAction(this, (abuse >= 3 ? DIALOG[2] : DIALOG[0]), 0.5F, 3.0F));
@@ -147,7 +147,7 @@ public class FleeingMerchant extends AbstractMonster {
             if (hasPower(StrengthPower.POWER_ID)) {
                 CURRENT_STRENGTH = getPower(StrengthPower.POWER_ID).amount;
             }
-            AbstractDungeon.getCurrRoom().smoked = true;
+            AbstractDungeon.getCurrRoom().mugged = true;
             this.addToBot(new CanLoseAction());
             this.addToBot(new VFXAction(new SmokeBombEffect(hb.cX, hb.cY)));
             this.addToBot(new EscapeAction(this));
@@ -268,7 +268,6 @@ public class FleeingMerchant extends AbstractMonster {
     public static boolean helpEscaped = false;
     public static boolean helpDied = false;
 
-    public static boolean DID_THE_DEATH_THING = false;
 
     @Override
     public void update() {
@@ -276,15 +275,6 @@ public class FleeingMerchant extends AbstractMonster {
         if (escaped && !ESCAPED) {
             ESCAPED = true;
             helpEscaped = true;
-            AbstractDungeon.overlayMenu.hideCombatPanels();// 51
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-            AbstractDungeon.combatRewardScreen.open();
-        }
-        if (DEAD && !DID_THE_DEATH_THING) {
-            DID_THE_DEATH_THING = true;
-            AbstractDungeon.overlayMenu.hideCombatPanels();// 51
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-            AbstractDungeon.combatRewardScreen.open();
         }
     }
 
