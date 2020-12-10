@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.powers.BurnPower;
@@ -21,6 +22,7 @@ public class ChargedBarrage extends AbstractHexaCard {
     public ChargedBarrage() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseBurn = burn = MAGIC;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

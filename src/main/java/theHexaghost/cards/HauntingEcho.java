@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
@@ -23,6 +24,7 @@ public class HauntingEcho extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

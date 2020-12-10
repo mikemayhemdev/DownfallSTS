@@ -15,7 +15,7 @@ public class ShieldThrow extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, rare
 
     public ShieldThrow() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
       //  tags.add(ChampMod.FINISHER);
     }
 

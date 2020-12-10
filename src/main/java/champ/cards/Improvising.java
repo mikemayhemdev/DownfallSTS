@@ -3,6 +3,7 @@ package champ.cards;
 import champ.powers.ImprovisingPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class Improvising extends AbstractChampCard {
 
@@ -12,6 +13,8 @@ public class Improvising extends AbstractChampCard {
 
     public Improvising() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

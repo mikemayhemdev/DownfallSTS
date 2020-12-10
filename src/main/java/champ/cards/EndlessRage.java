@@ -3,6 +3,7 @@ package champ.cards;
 import champ.powers.WorseRupturePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class EndlessRage extends AbstractChampCard {
 
@@ -12,6 +13,8 @@ public class EndlessRage extends AbstractChampCard {
 
     public EndlessRage() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

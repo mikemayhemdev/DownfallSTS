@@ -16,6 +16,7 @@ import slimebound.actions.CommandAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.LoseSlimesPower;
 import slimebound.powers.PotencyPower;
+import sneckomod.SneckoMod;
 
 
 public class Overexert extends AbstractSlimeboundCard {
@@ -43,6 +44,8 @@ public class Overexert extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 2;
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

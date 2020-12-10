@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.GemFireAction;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 
 public class GemFire extends AbstractGuardianCard {
@@ -51,6 +52,7 @@ public class GemFire extends AbstractGuardianCard {
         loadGemMisc();
         this.selfRetain = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

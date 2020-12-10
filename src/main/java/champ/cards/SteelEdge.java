@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
 import downfall.dailymods.ChampStances;
+import sneckomod.SneckoMod;
 
 public class SteelEdge extends AbstractChampCard {
 
@@ -22,6 +23,7 @@ public class SteelEdge extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = 0;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     @Override

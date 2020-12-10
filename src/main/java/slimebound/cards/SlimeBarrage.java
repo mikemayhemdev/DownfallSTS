@@ -13,6 +13,7 @@ import slimebound.SlimeboundMod;
 import slimebound.actions.TriggerSlimeAttacksAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.BuffSecondarySlimeEffectsPower;
+import sneckomod.SneckoMod;
 
 
 public class SlimeBarrage extends AbstractSlimeboundCard {
@@ -47,6 +48,8 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 2;
 
         //this.exhaust = true;
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

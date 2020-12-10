@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 
 public class BaubleBeam extends AbstractGuardianCard {
@@ -59,6 +60,7 @@ public class BaubleBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

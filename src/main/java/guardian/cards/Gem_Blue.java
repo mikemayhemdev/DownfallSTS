@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.stances.DefensiveMode;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.BLUE;
@@ -48,6 +49,7 @@ public class Gem_Blue extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = BLUE;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Sapphire.png"));
     }
 

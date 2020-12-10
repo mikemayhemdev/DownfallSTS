@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class Riposte extends AbstractChampCard {
 
@@ -22,6 +23,7 @@ public class Riposte extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

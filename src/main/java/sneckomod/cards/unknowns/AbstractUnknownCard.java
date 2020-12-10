@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
 
 import java.util.ArrayList;
@@ -78,7 +79,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
             AbstractCard q = c.makeCopy();
-            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
+            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor() && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
             if (this.upgraded) {
                 if (!c.canUpgrade()) validCard = false;
                 if (validCard) q.upgrade();
@@ -114,7 +115,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
             AbstractCard q = c.makeCopy();
-            validCard = !c.hasTag(CardTags.HEALING) && !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
+            validCard = !c.hasTag(SneckoMod.BANNEDFORSNECKO) && !c.hasTag(CardTags.HEALING) && !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
             if (this.upgraded) {
                 if (!c.canUpgrade()) validCard = false;
                 if (validCard) q.upgrade();

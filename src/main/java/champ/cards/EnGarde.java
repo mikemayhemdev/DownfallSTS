@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class EnGarde extends AbstractChampCard {
 
@@ -19,6 +20,7 @@ public class EnGarde extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

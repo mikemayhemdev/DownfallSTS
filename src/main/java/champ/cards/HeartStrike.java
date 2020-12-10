@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class HeartStrike extends AbstractChampCard {
 
@@ -21,6 +22,7 @@ public class HeartStrike extends AbstractChampCard {
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(ChampMod.FINISHER);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

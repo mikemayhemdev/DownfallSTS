@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.AcidTonguePowerUpgraded;
+import sneckomod.SneckoMod;
 
 
 public class AcidTongue extends AbstractSlimeboundCard {
@@ -38,6 +39,7 @@ public class AcidTongue extends AbstractSlimeboundCard {
         this.magicNumber = this.baseMagicNumber = 1;
 
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

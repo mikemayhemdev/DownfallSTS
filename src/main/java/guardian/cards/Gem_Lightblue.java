@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.ThornsPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.LoseThornsPower;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.socketTypes.LIGHTBLUE;
 import static guardian.GuardianMod.socketTypes.LIGHTBLUE;
@@ -53,6 +54,7 @@ public class Gem_Lightblue extends AbstractGuardianCard {
         this.baseMagicNumber = this.magicNumber = Thorns;
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = LIGHTBLUE;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

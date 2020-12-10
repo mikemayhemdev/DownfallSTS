@@ -4,6 +4,7 @@ import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
+import sneckomod.SneckoMod;
 
 public class ViciousMockery extends AbstractChampCard {
 
@@ -15,6 +16,7 @@ public class ViciousMockery extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         tags.add(ChampMod.TECHNIQUE);
         baseMagicNumber = magicNumber = 1;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.FRAGMENTED;
@@ -47,6 +48,7 @@ public class Gem_Fragmented extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = FRAGMENTED;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.cardsToPreview = new CrystalShiv();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Fragmented_Gem.png"));
     }

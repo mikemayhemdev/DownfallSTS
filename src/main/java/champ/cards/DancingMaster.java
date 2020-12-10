@@ -3,6 +3,7 @@ package champ.cards;
 import champ.powers.DancingMasterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class DancingMaster extends AbstractChampCard {
 
@@ -16,6 +17,7 @@ public class DancingMaster extends AbstractChampCard {
     public DancingMaster() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

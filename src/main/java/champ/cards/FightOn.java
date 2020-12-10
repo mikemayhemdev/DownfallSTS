@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingFie
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class FightOn extends AbstractChampCard {
 
@@ -15,6 +16,8 @@ public class FightOn extends AbstractChampCard {
     public FightOn() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         FleetingField.fleeting.set(this, true);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

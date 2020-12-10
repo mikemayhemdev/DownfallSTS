@@ -4,6 +4,7 @@ import champ.powers.StrikeOfGeniusPower;
 import champ.powers.StrikeOfGeniusUpgradedPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class StrikeOfGenius extends AbstractChampCard {
 
@@ -13,6 +14,8 @@ public class StrikeOfGenius extends AbstractChampCard {
 
     public StrikeOfGenius() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

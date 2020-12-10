@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.stances.DefensiveMode;
+import sneckomod.SneckoMod;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -65,6 +66,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
 
         //this.sockets.add(GuardianMod.socketTypes.RED);
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.magicNumber = this.baseMagicNumber = MULTICOUNT;
         this.isMultiDamage = true;
         this.socketCount = SOCKETS;

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
+import sneckomod.SneckoMod;
 
 
 public class CrystalBeam extends AbstractGuardianCard {
@@ -57,6 +58,7 @@ public class CrystalBeam extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

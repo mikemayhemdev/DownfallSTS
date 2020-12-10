@@ -124,8 +124,8 @@
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yArtifact and lose #b",
-      " [E] at the start of your turn if you have no #yArtifact."
+      " #yArtifact ",
+      " at the start of your turn if you have no #yArtifact."
     ]
   },
   "Guardian:ModeShiftPower": {

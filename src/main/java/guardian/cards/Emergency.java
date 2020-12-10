@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 public class Emergency extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("Emergency");
@@ -44,6 +45,7 @@ public class Emergency extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
