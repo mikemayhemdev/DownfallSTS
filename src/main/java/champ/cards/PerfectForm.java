@@ -1,10 +1,12 @@
 package champ.cards;
 
+import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class PerfectForm extends AbstractChampCard {
 
@@ -28,6 +30,7 @@ public class PerfectForm extends AbstractChampCard {
                 }
             }
         });
+        applyToSelf(new UltimateFormPower(2));
     }
 
     public void upp() {

@@ -179,5 +179,13 @@
       "You can't gain Block for the next #b",
       " turns."
     ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "Ultimate Drain",
+    "DESCRIPTIONS": [
+      "Ultimate Stance will expire this turn.",
+      "Ultimate Stance will last ",
+      " more turns."
+    ]
   }
 }

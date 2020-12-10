@@ -3,11 +3,13 @@ package champ.relics;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
+import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import champ.util.OnOpenerSubscriber;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -37,6 +39,7 @@ public class ChampionCrownUpgraded extends CustomRelic {
                 }
             }
         });
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(2), 2));
     }
 
 
