@@ -2,9 +2,13 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.actions.FatigueHpLossAction;
+import champ.powers.ResolvePower;
 import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -48,6 +52,33 @@ public abstract class AbstractChampStance extends AbstractStance {
             }
         }
         */
+    }
+
+    public int fatigue(int begone) {
+
+        int y = AbstractDungeon.player.currentHealth;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
+                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+            }
+        });
+
+        /*atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (y - AbstractDungeon.player.currentHealth > 0) {
+                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
+                }
+            }
+        });
+        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
+
+        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
     }
 
 
