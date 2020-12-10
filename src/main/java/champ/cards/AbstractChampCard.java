@@ -124,9 +124,18 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     public int fatigue(int amount) {
-        int x = Math.min(amount, AbstractDungeon.player.currentHealth - 1);
+
         int y = AbstractDungeon.player.currentHealth;
-        atb(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = Math.min(amount, AbstractDungeon.player.currentHealth - 1);
+                att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
+                att(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+            }
+        });
+
         /*atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -137,8 +146,8 @@ public abstract class AbstractChampCard extends CustomCard {
             }
         });
         */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
-        applyToSelf(new ResolvePower(x));
-        return x;
+
+        return Math.min(amount, AbstractDungeon.player.currentHealth - 1);
     }
 
     @Override
