@@ -328,10 +328,7 @@ public abstract class AbstractChampCard extends CustomCard {
                 exitStance();
             }
             ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
-            if (AbstractDungeon.player.stance instanceof UltimateStance){
-
-            }
-            else if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
+            if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
                 AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
             } else
                 addToBot(new PressEndTurnButtonAction());
