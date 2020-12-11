@@ -356,8 +356,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "在你的回合开始时，将随机一张进入姿态牌加入你的手牌。 NL 它直到打出前的耗能为0。",
-    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的进入姿态牌加入你的手牌。 NL 它直到打出前的耗能为0。"
+    "DESCRIPTION": "在你的回合开始时，将随机一张 champ:起手式 牌加入你的手牌。 NL 它直到打出前的耗能为0。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的 champ:起手式 加入你的手牌。 NL 它直到打出前的耗能为0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",
