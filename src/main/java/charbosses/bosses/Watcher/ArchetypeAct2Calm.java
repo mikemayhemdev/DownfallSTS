@@ -98,13 +98,6 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         if (looped) {
-
-
-
-
-
-
-
             switch (turn) {
                 case 0:
                     //4 Energy
@@ -179,7 +172,7 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         }
         turn++;
         if (turn > 5 && !looped) looped = true;
-        else if (turn > 3 && looped) {
+        else if (turn > 4 && looped) {
             turn = 0;
         }
         return cardsList;
