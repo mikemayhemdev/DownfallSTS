@@ -49,7 +49,7 @@ public class RapidStrikes extends AbstractChampCard {
     public void applyPowers() {
         super.applyPowers();
 
-        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
         this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + String.valueOf(ChampMod.techniquesThisTurn + 2 + (upgraded ? 1 : 0));
         this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
 
