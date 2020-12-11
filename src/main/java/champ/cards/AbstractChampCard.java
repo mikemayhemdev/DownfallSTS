@@ -173,6 +173,12 @@ public abstract class AbstractChampCard extends CustomCard {
         if (this.rawDescription.contains("champ:Fatigue") && !this.rawDescription.contains("champ:Resolve")) {
             tips.add(new TooltipInfo(ResolvePower.NAME, ChampChar.characterStrings.TEXT[39]));
         }
+        if (this.rawDescription.contains("[crown_icon]") && !this.rawDescription.contains("champ:Technique")) {
+            tips.add(new TooltipInfo(ChampChar.characterStrings.TEXT[40], ChampChar.characterStrings.TEXT[41]));
+        }
+        if (this.rawDescription.contains("[fist_icon]") && !this.rawDescription.contains("champ:Finisher")) {
+            tips.add(new TooltipInfo(ChampChar.characterStrings.TEXT[42], ChampChar.characterStrings.TEXT[43]));
+        }
         return tips;
     }
 
