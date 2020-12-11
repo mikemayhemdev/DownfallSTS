@@ -43,7 +43,13 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2]);
+        if (amount == 1) {
+            description = DESCRIPTIONS[0];
+        }
+        else {
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        }
+
     }
 
     @Override

@@ -184,7 +184,7 @@
     "NAME": "Ultimate Drain",
     "DESCRIPTIONS": [
       "Ultimate Stance will expire this turn.",
-      "Ultimate Stance will last ",
+      "Ultimate Stance will last #b",
       " more turns."
     ]
   }
