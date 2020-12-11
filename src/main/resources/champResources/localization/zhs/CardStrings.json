@@ -79,11 +79,11 @@
   "champ:Riposte": {
     "NAME": "弹反",
     "DESCRIPTION": "champ:防守 champ:起手 。 NL champ:角斗 champ:连段 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "champ:防守 champ:起手  。 NL 获得 !M! 层 champ:反击 。 NL champ:角斗 champ:连段 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。"
+    "UPGRADE_DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !M! 层 champ:反击 。 NL champ:角斗 champ:连段 ：丢弃所有攻击牌。每丢弃一张，获得 !M! 层 champ:反击 。"
   },
   "champ:Backstep": {
     "NAME": "后撤",
-    "DESCRIPTION": "champ:防守 champ:起手  。 NL 获得 !B! 点 格挡 。 NL champ:狂战 champ:连段 ：获得 champ:决心 层数两倍的 格挡 。",
+    "DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !B! 点 格挡 。 NL champ:狂战 champ:连段 ：获得 champ:决心 层数两倍的 格挡 。",
     "EXTENDED_DESCRIPTION": [" NL （获得 !B! 点 格挡 。）"]
   },
   "champ:Aggression": {
@@ -298,7 +298,10 @@
   },
   "champ:DeathBlow": {
     "NAME": "绝地反击",
-    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命的伤害。"
+    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命的伤害。",
+	"EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点伤害）"
+    ]
   },
   "champ:ArenaPreparation": {
     "NAME": "重整战场",
@@ -334,7 +337,7 @@
   "champ:Duel": {
     "NAME": "决斗",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。",
-    "UPGRADE_DESCRIPTION": "champ:战术 。 获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 造成 !D! 点伤害。 NL 如果只有一名敌人，打出两次。"
   },
   "champ:DancingMaster": {
     "NAME": "战技大师",
@@ -348,8 +351,8 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",
-    "DESCRIPTION": "champ:防守 champ:起手  。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL champ:防守 champ:起手  。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。"
+    "DESCRIPTION": "champ:防守 champ:起手 。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。",
+    "UPGRADE_DESCRIPTION": "固有 。 NL champ:防守 champ:起手 。 NL 如果你的回合开始时处于 champ:防守 ，获得5点 格挡 和 champ:反击 。"
   },
   "champ:GladiatorStyle": {
     "NAME": "角斗战法",
