@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "激将",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL champ:起手 - 选择一种 姿态 。",
-    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL champ:起手 - 选择一种 姿态 。"
+    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL champ:起手 - 进入 随机一种 姿态 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL champ:起手 - 进入 随机一种 姿态 。"
   },
   "champ:Execute": {
     "NAME": "处决",
