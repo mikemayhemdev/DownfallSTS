@@ -37,7 +37,7 @@ public class BlankCard extends CustomRelic {
             AbstractMonster m = AbstractDungeon.getRandomMonster();
 
             card2.freeToPlayOnce = true;
-            card2.exhaust = true;
+            card2.purgeOnUse = true;
 
             flash();
             AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card2.makeStatEquivalentCopy()));
