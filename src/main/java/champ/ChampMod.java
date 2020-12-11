@@ -233,7 +233,6 @@ public class ChampMod implements
         BaseMod.addRelicToCustomPool(new PowerArmor(), ChampChar.Enums.CHAMP_GRAY);
         BaseMod.addRelicToCustomPool(new SpectersHand(), ChampChar.Enums.CHAMP_GRAY);
         BaseMod.addRelicToCustomPool(new LiftRelic(), ChampChar.Enums.CHAMP_GRAY);
-        BaseMod.addRelicToCustomPool(new ChampStancesModRelic(), ChampChar.Enums.CHAMP_GRAY);
 
         BaseMod.addRelic(new Barbells(), RelicType.SHARED);
         BaseMod.addRelic(new DeflectingBracers(), RelicType.SHARED);
