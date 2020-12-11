@@ -26,16 +26,17 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ENEMY);
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         if (upgraded) {
             for (AbstractMonster q : monsterList()) {
-                applyToEnemy(q, autoWeak(q, 1));
+                applyToEnemy(q, autoWeak(q, this.magicNumber));
             }
         } else {
-            applyToEnemy(m, autoWeak(m, 1));
+            applyToEnemy(m, autoWeak(m, this.magicNumber));
         }
 
         atb(new OctoChoiceAction(this));

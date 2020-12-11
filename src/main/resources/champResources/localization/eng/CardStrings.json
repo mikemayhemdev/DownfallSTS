@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply 1 Weak. NL champ:Opener - Choose a Stance.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Weak to ALL enemies. NL champ:Opener - Choose a Stance."
+    "DESCRIPTION": "Apply !M! Weak. NL champ:Opener - Choose a Stance.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL champ:Opener - Choose a Stance."
   },
   "champ:Execute": {
     "NAME": "Execute",
