@@ -14,6 +14,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -82,7 +83,12 @@ public class TipHelperChamp3 {
     public static void render(SpriteBatch sb) {
 
         if (!Settings.hidePopupDetails) {
-            currentColor = Color.WHITE;
+
+            sb.setColor(Color.WHITE.cpy());
+            renderHelper(sb, ChampMod.UIAtlas.findRegion("finisher"), Settings.scale * 250F, Settings.scale * 500F);
+
+
+            currentColor = Color.WHITE.cpy();
             if (rememberedCard == null) {
                 if (AbstractDungeon.player != null) {
                     rememberedCard = AbstractDungeon.player.hoveredCard;
@@ -322,5 +328,9 @@ public class TipHelperChamp3 {
         BODY_TEXT_WIDTH = 280F * Settings.scale;
         TIP_DESC_LINE_SPACING = 26.0F * Settings.scale;
         POWER_ICON_OFFSET_X = 40.0F * Settings.scale;
+    }
+
+    private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY) {
+        sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, Settings.scale, Settings.scale, 0F);
     }
 }

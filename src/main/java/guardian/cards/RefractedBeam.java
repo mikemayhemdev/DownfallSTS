@@ -87,7 +87,7 @@ public class RefractedBeam extends AbstractGuardianCard {
 
         }
 
-        addToBot(new ModifyMagicNumberAction(this.uuid, -1));
+        addToBot(new ModifyMagicNumberAction(this.uuid, -2));
     }
 
     public AbstractCard makeCopy() {
