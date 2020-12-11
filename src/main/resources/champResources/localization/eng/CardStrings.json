@@ -148,7 +148,6 @@
     "NAME": "Tornado Punch",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter for each enemy hit.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter for each enemy hit."
-
   },
   "champ:EnGarde": {
     "NAME": "En Garde",

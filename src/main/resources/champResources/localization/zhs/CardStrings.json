@@ -117,8 +117,12 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "本场战斗每打出过一张 champ:终结技 牌，造成 !D! 点伤害。"
-
+    "DESCRIPTION": "本场战斗每打出过一张 champ:终结技 牌，造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （已打出 ",
+      " 张 champ:终结技 ）",
+      " 张 champ:终结技 ）"
+    ]
   },
   "champ:Control": {
     "NAME": "控制",
@@ -144,7 +148,6 @@
     "NAME": "飓风拳",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 。",
     "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL champ:防守 champ:连段 ：每打中一名敌人，获得 !M! 层 champ:反击 。"
-
   },
   "champ:EnGarde": {
     "NAME": "待命",
@@ -212,7 +215,12 @@
   "champ:RapidStrikes": {
     "NAME": "连续打击",
     "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
+	"EXTENDED_DESCRIPTION": [
+      " NL （打出了",
+      " 张 champ:战术 牌）",
+      " 张 champ:战术 牌）"
+    ]
   },
   "champ:EnchantSword": {
     "NAME": "强化剑刃",
@@ -264,7 +272,9 @@
   "champ:HeartStrike": {
     "NAME": "穿心攻击",
     "DESCRIPTION": " 造成你当前 champ:决心 层数的伤害。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 造成你当前 champ:决心 层数的伤害。 NL 不处于 champ:狂战 时 消耗 。"
+	"EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 点 伤害。）"
+    ]
   },
   "champ:FinalRevenge": {
     "NAME": "复仇",
