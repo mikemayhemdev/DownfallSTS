@@ -2,7 +2,9 @@
   {
     "PROPER_NAME": "战术",
     "NAMES": [
-      "战术"
+      "战术",
+	  "champ:[crown_icon]",
+      "[crown_icon]"
     ],
     "DESCRIPTION": "如果你处于某个 #y姿态 ，触发该 #y姿态 的 #y战术奖励 。"
   },
@@ -24,7 +26,9 @@
   {
     "PROPER_NAME": "终结技",
     "NAMES": [
-      "终结技"
+      "终结技",
+	  "[fist_icon]",
+      "champ:[fist_icon]"
     ],
     "DESCRIPTION": "打出终结技后如果处于 #y姿态 ，退出姿态并触发 #y终结技奖励 。 #r结束你的回合 。"
   },
