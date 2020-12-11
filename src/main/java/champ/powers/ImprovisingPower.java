@@ -5,6 +5,7 @@ import champ.ChampMod;
 import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -50,20 +51,26 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
     public void onUseCard(AbstractCard card, UseCardAction action) {
         boolean returnCard = false;
         if (card.rawDescription.contains("champ:Combo") && timesUsed < amount) {
-            if (card.rawDescription.contains("champ:Gladiator champ:Combo") && !(AbstractChampCard.gcombo())) {
+            if (card.rawDescription.contains("champ:Gladiator champ:Combo")) {
                 returnCard = true;
             }
-            if (card.rawDescription.contains("champ:Defensive champ:Combo") && !(AbstractChampCard.dcombo())) {
+            if (card.rawDescription.contains("champ:Defensive champ:Combo")) {
                 returnCard = true;
             }
-            if (card.rawDescription.contains("champ:Berserker champ:Combo") && !(AbstractChampCard.bcombo())) {
+            if (card.rawDescription.contains("champ:Berserker champ:Combo")) {
                 returnCard = true;
             }
         }
         if (returnCard) {
             flash();
-            NoDiscardField.noDiscard.set(card, true);
-            NoDiscardField.freeCard = true;
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    NoDiscardField.noDiscard.set(card, true);
+                    NoDiscardField.freeCard = true;
+                }
+            });
             timesUsed++;
             updateDescription();
         }
