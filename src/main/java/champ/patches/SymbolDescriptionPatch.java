@@ -197,6 +197,7 @@ public class SymbolDescriptionPatch {
         }
     }
 
+    /*
     private static final String ICON_KEYWORD_CROWN = "champ:[crown_icon]";
     private static final String ICON_KEYWORD_FIST = "champ:[fist_icon]";
     private static final String ICON_KEYWORD_CARD = "champ:[card_icon]";
@@ -211,9 +212,6 @@ public class SymbolDescriptionPatch {
             if (c.rawDescription.toLowerCase().contains("[fist_icon]") && (keywords.isEmpty() || !keywords.get(0).equals(ICON_KEYWORD_FIST))) {
                 keywords.add(0, ICON_KEYWORD_FIST);
             }
-            if (c.rawDescription.toLowerCase().contains("[card_icon]") && (keywords.isEmpty() || !keywords.get(0).equals(ICON_KEYWORD_CARD))) {
-                keywords.add(0, ICON_KEYWORD_CARD);
-            }
         }
 
         private static class Locator extends SpireInsertLocator {
@@ -224,6 +222,7 @@ public class SymbolDescriptionPatch {
             }
         }
     }
+    */
 
     public static TextureAtlas.AtlasRegion workaround() {
         return ICONCROWN;
