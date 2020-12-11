@@ -117,12 +117,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage for each champ:Finisher played this combat.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " champ:Finisher played.)",
-      " champ:Finishers played.)"
-    ]
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL If you are in a stance, increase the damage this card deals by !M! permanently, then Exhaust it."
   },
   "champ:Control": {
     "NAME": "Control",
