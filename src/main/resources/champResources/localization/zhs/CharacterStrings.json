@@ -45,10 +45,10 @@
       "[fist_icon] : 清除 champ:决心 。 NL ",
       "[fist_icon] : 全部奖励。 NL ",
       "你每有 #b5 层 #y决心 拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数等量的生命。",
-      "Technique",
-      "If you are in a #yStance, trigger its Technique bonus.",
-      "Finisher",
-      "After playing a Finisher, if you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn."
+      "战术",
+      "如果你处于 #y姿态 ，触发它的战术奖励。",
+      "终结技",
+      "打出终结技后，如果你处于 #y姿态 ，退出这个姿态并触发终结技奖励。结束你的回合。"
     ]
   }
 }
