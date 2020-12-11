@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,7 +29,7 @@ public class ShieldSlam extends AbstractChampCard {
         if (p.currentBlock >= 20) {
             return super.canUse(p, m);
         }
-        cantUseMessage = "I do not have enough Block.";
+        cantUseMessage = ChampChar.characterStrings.TEXT[44];
         return false;
     }
 
