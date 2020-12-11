@@ -132,14 +132,14 @@ public class ChampChar extends CustomPlayer {
         if (currentIdle == "Idle"){
             stanceSwitchQueue.add(ID);
         } else {
-            stanceSwitchQueue.add(NeutralStance.STANCE_ID);
+          //  stanceSwitchQueue.add(NeutralStance.STANCE_ID);
             stanceSwitchQueue.add(ID);
         }
     }
 
     private void tickStanceVisualTimer(){
         if (stanceSwitchQueue.size() > 0) {
-            SlimeboundMod.logger.info("stance queue is ticking");
+           // SlimeboundMod.logger.info("stance queue is ticking");
             stanceSwitchAnimTimer = stanceSwitchAnimTimer - Gdx.graphics.getDeltaTime();
             if (stanceSwitchAnimTimer <= 0F) {
                 switchStanceVisualGo(stanceSwitchQueue.get(0));
@@ -152,7 +152,7 @@ public class ChampChar extends CustomPlayer {
     }
 
     public void switchStanceVisualGo(String ID) {
-        SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
+     //   SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
 
         switch (ID) {
             case DefensiveStance
