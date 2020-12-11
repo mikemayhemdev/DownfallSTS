@@ -85,9 +85,6 @@ public class TipHelperChamp3 {
         if (!Settings.hidePopupDetails) {
 
             sb.setColor(Color.WHITE.cpy());
-            renderHelper(sb, ChampMod.UIAtlas.findRegion("finisher"), Settings.scale * 250F, Settings.scale * 500F);
-
-
             currentColor = Color.WHITE.cpy();
             if (rememberedCard == null) {
                 if (AbstractDungeon.player != null) {

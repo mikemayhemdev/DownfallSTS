@@ -105,8 +105,6 @@ public class TipHelperChamp2 {
         if (!Settings.hidePopupDetails) {
 
             sb.setColor(Color.WHITE.cpy());
-            renderHelper(sb, ChampMod.UIAtlas.findRegion("crown"), Settings.scale * 250F, Settings.scale * 700F);
-
             currentColor = Color.WHITE.cpy();
             if (rememberedCard == null) {
                 if (AbstractDungeon.player != null) {

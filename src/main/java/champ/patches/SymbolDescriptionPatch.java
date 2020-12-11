@@ -26,9 +26,9 @@ import java.util.ArrayList;
 
 public class SymbolDescriptionPatch {
     private static final String crown_icon_NAME = "crown_icon";
-    private static final TextureAtlas.AtlasRegion ICONCROWN = TextureLoader.getTextureAsAtlasRegion(ChampMod.makeUIPath("crowntext.png"));
+    public static final TextureAtlas.AtlasRegion ICONCROWN = TextureLoader.getTextureAsAtlasRegion(ChampMod.makeUIPath("crowntext.png"));
     private static final String fist_icon_NAME = "fist_icon";
-    private static final TextureAtlas.AtlasRegion ICONFIST = TextureLoader.getTextureAsAtlasRegion(ChampMod.makeUIPath("fisttext.png"));
+    public static final TextureAtlas.AtlasRegion ICONFIST = TextureLoader.getTextureAsAtlasRegion(ChampMod.makeUIPath("fisttext.png"));
     private static final String card_icon_NAME = "card_icon";
     private static final TextureAtlas.AtlasRegion ICONCARD = TextureLoader.getTextureAsAtlasRegion(ChampMod.makeUIPath("cardtext.png"));
 

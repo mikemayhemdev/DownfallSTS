@@ -1,8 +1,11 @@
 package champ;
 
 import basemod.BaseMod;
+import champ.patches.SymbolDescriptionPatch;
 import champ.stances.*;
+import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -162,7 +165,13 @@ public class StanceHelper {
                             }
                         }
                     }
+                    renderHelper(sb, SymbolDescriptionPatch.ICONCROWN, Settings.scale * 250F, Settings.scale * 500F);
+                    renderHelper(sb, SymbolDescriptionPatch.ICONFIST, Settings.scale * 250F, Settings.scale * 300F);
                 }
             }
     }
+    private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY) {
+        sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, Settings.scale, Settings.scale, 0F);
+    }
 }
+
