@@ -61,8 +61,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "防卫嘲讽",
-    "DESCRIPTION": "champ:防守 champ:起手 。 NL 抽1张牌。",
-    "UPGRADE_DESCRIPTION": "champ:防守 champ:起手 。 NL 抽2张牌。"
+    "DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !M! 层 champ:反击 。"
   },
   "champ:ShieldSigil": {
     "NAME": "防守印记",
@@ -99,8 +98,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "怒吼",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL 抽1张牌。",
-    "UPGRADE_DESCRIPTION": "champ:狂战 champ:起手 。 NL 抽2张牌。"
+    "DESCRIPTION": "champ:狂战 champ:起手 。 NL champ:疲劳 !M! 。"
   },
   "champ:RageSigil": {
     "NAME": "愤怒印记",
@@ -303,7 +301,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "绝地反击",
-    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命的伤害。",
+    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命一半的伤害。",
 	"EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害）"
     ]
