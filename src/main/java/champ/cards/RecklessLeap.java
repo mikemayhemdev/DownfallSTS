@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,9 +23,11 @@ public class RecklessLeap extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
         myHpLossCost = MAGIC;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         fatigue(magicNumber);
     }
