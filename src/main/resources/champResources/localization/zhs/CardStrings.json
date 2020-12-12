@@ -162,7 +162,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "爆甲",
-    "DESCRIPTION": " 造成你当前 格挡 值的伤害。 NL 下回合不能获得 格挡 。 NL champ:防守 champ:连段 ：不因这张牌不能获得 格挡 。",
+    "DESCRIPTION": " 获得 !B! 点 格挡 。 NL 造成你当前 格挡 值的伤害。 NL 除非 champ:防守 champ:连段 ：下回合不能获得 格挡 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
   },
   "champ:FalseCounter": {
@@ -175,8 +175,8 @@
   },
   "champ:Lariat": {
     "NAME": "套索",
-    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 champ:反击 X次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 champ:反击 X次。 NL 获得 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。重复X次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。重复X次。 NL 获得 [E] 。"
   },
   "champ:HoldFirm": {
     "NAME": "固守",
@@ -226,11 +226,11 @@
   },
   "champ:SwordThrow": {
     "NAME": "投掷剑刃",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 下回合不能打出攻击牌。 NL champ:狂战 champ:连段 ：不因这张牌不能打出攻击牌。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 除非 champ:狂战 champ:连段 ：下回合不能打出攻击牌。"
   },
   "champ:MurderStrike": {
     "NAME": "刽子打击",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 champ:战术 牌时，本场战斗这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 champ:战术 牌时如果这张牌耗能不为0，本场战斗这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
@@ -276,7 +276,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 下回合少抽 !M! 张牌。 NL champ:角斗 champ:连段 ：不因这张牌少抽牌。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 抽 !M! 张牌 。 NL 除非 champ:角斗 champ:连段 ：下回合少抽 3 张牌。"
   },
   "champ:FightOn": {
     "NAME": "越战越勇",
