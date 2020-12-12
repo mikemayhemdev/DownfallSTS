@@ -101,7 +101,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         }
         turn++;
         if (turn > 5 && !looped) looped = true;
-        else if (turn > 4 && looped) {
+        else if (turn > 2 && looped) {
             turn = 0;
         }
         return cardsList;

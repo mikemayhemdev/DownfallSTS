@@ -21,7 +21,7 @@ public class OpenerPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.H, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = ChampMod.placeholderColor;
+        this.labOutlineColor = ChampMod.potionLabColor;
     }
 
 

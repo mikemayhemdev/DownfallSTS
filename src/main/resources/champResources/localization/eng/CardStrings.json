@@ -230,7 +230,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, reduce this card's cost by 1 and increase its damage by !M! this combat. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, if this does not cost 0, reduce this card's cost by 1 and raise its damage by !M!. NL Exhaust."
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",

@@ -23,7 +23,7 @@ public class TechPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.H, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = ChampMod.placeholderColor;
+        this.labOutlineColor = ChampMod.potionLabColor;
     }
 
     public void initializeData() {

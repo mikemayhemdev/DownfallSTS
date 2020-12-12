@@ -24,7 +24,7 @@ public class UltimateStancePotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.H, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = ChampMod.placeholderColor;
+        this.labOutlineColor = ChampMod.potionLabColor;
     }
 
     public void initializeData() {

@@ -88,6 +88,7 @@ public class ChampMod implements
     private static final String CHARSELECT_PORTRAIT = "champResources/images/charSelect/charBG.png";
 
     public static Color placeholderColor = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1);
+    public static Color potionLabColor = new Color(200F / 255F, 200F / 255F, 200F / 255F, 1);
 
     @SpireEnum
     public static AbstractCard.CardTags OPENER;
