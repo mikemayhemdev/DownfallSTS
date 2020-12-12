@@ -333,8 +333,8 @@
   },
   "champ:CalledShot": {
     "NAME": "宣告",
-    "DESCRIPTION": "你打出的下1张 champ:终结技 将不会退出 姿态 或结束你的回合。",
-	"UPGRADE_DESCRIPTION": "你打出的下2张 champ:终结技 将不会退出 姿态 或结束你的回合。"
+    "DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。",
+	"UPGRADE_DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。"
   },
   "champ:PerfectedStrike": {
     "NAME": "完美打击",

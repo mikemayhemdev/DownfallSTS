@@ -329,7 +329,7 @@
   "champ:CalledShot": {
     "NAME": "Called Shot",
     "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end.",
-    "UPGRADE_DESCRIPTION": "The next 2 champ:Finishers you play do not exit Stance or cause your turn to end."
+    "UPGRADE_DESCRIPTION": "The next !M! champ:Finishers you play do not exit Stance or cause your turn to end."
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
