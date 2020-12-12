@@ -24,6 +24,7 @@ public class OpenerModBerserker extends AbstractCardModifier {
     public void onInitialApplication(AbstractCard card) {
 
         card.tags.add(ChampMod.OPENER);
+        card.tags.add(ChampMod.OPENERBERSERKER);
     }
 
     @Override

@@ -19,14 +19,18 @@ public class Devastate extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 28;
+    private static final int DAMAGE = 24;
 
     public Devastate() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 2;
+
+
+        this.misc = DAMAGE;
+        this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber;
+        this.baseDamage = this.misc;
         tags.add(ChampMod.FINISHER);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -35,11 +39,13 @@ public class Devastate extends AbstractChampCard {
             atb(new IncreaseMiscAction(this.uuid, this.misc, this.magicNumber));
             exhaust = true;
         }
+        finisher();
     }
 
     public void applyPowers() {
         baseDamage = misc;
-        applyPowers();
+        super.applyPowers();
+        //applyPowers();
         initializeDescription();
     }
 
