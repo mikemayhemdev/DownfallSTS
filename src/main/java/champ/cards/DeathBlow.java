@@ -25,6 +25,7 @@ public class DeathBlow extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         baseDamage = fatigue(magicNumber);
+        baseDamage = baseDamage / 2;
         calculateCardDamage(null);
         allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }
@@ -32,6 +33,7 @@ public class DeathBlow extends AbstractChampCard {
     @Override
     public void applyPowers() {
         baseDamage = Math.min(magicNumber, AbstractDungeon.player.currentHealth - 1);
+        baseDamage = baseDamage / 2;
         super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();

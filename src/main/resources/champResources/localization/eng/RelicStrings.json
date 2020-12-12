@@ -80,10 +80,9 @@
     "NAME": "Signature Finisher",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a Finisher. Whenever you use a Finisher while in no Stance, also play a copy of the chosen card, then end your turn.",
+      "Upon pickup, choose a Finisher. This Finisher never causes your turn to end or your stance to be exited.",
       "Choose a card for ",
-      "Whenever you use a Finisher while in no Stance, also play a copy of ",
-      ", then end your turn."
+      " never causes your turn to end or your stance to be exited."
     ]
   },
   "champ:SpectersHand": {

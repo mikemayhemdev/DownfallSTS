@@ -15,6 +15,7 @@ import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
 import champ.relics.*;
+import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
 import champ.util.CardIgnore;
 import champ.util.CoolVariable;
@@ -35,7 +36,9 @@ import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
@@ -85,6 +88,7 @@ public class ChampMod implements
     private static final String CHARSELECT_PORTRAIT = "champResources/images/charSelect/charBG.png";
 
     public static Color placeholderColor = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1);
+    public static Color potionLabColor = new Color(200F / 255F, 200F / 255F, 200F / 255F, 1);
 
     @SpireEnum
     public static AbstractCard.CardTags OPENER;
@@ -328,6 +332,13 @@ public class ChampMod implements
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
+        if (AbstractDungeon.player instanceof ChampChar) {
+            if (AbstractDungeon.player.stance instanceof AbstractChampStance) {
+                AbstractDungeon.player.stance = new NeutralStance();
+                ChampChar c = (ChampChar) AbstractDungeon.player;
+                c.switchStanceVisual(NeutralStance.STANCE_ID);
+            }
+        }
         finishersThisTurn = 0;
         finishersThisCombat = 0;
         techniquesThisTurn = 0;

@@ -5,6 +5,7 @@ import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import champ.ChampMod;
 import champ.patches.SignatureMovePatch;
+import champ.stances.AbstractChampStance;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
+import downfall.dailymods.ChampStances;
 
 import java.util.function.Predicate;
 
@@ -112,7 +114,7 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     }
 
     private void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
+        this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();
@@ -122,51 +124,6 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     public AbstractRelic makeCopy() {
         return new SignatureFinisher();
     }
-
-    @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        if (c.hasTag(ChampMod.FINISHER)) {
-            if (AbstractDungeon.player.stance instanceof NeutralStance) {
-                if (card != null) {
-                    if (!c.purgeOnUse) {
-                        AbstractCard r = card.makeStatEquivalentCopy();
-                        r.purgeOnUse = true;
-                        addToBot(new AbstractGameAction() {
-                            //TODO: Still can't quite get this working if you bottle a targeted Finisher, but cast Bring It ON or anything else self-targeted.  The queued extra card doesn't target an enemy.
-                            public void update() {
-                                isDone = true;
-                                if (m == null) {
-                                    if (c.target == AbstractCard.CardTarget.SELF) {
-                                        AbstractMonster m2 = AbstractDungeon.getMonsters().getRandomMonster(true);
-                                        GameActionManager.queueExtraCard(r, m2);
-                                    } else {
-                                        GameActionManager.queueExtraCard(r, m);
-                                    }
-                                } else {
-                                    GameActionManager.queueExtraCard(r, m);
-                                }
-                            }
-                        });
-                        addToBot(new AbstractGameAction() {
-                            @Override
-                            public void update() {
-                                isDone = true;
-                                endTurnIncoming = true;
-                            }
-                        });
-                        /*
-                        if (!AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                            addToBot(new PressEndTurnButtonAction());
-                        } else {
-                            AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
-                        }
-                        */
-                    }
-                }
-            }
-        }
-    }
-
 
     @Override
     public String getUpdatedDescription() {

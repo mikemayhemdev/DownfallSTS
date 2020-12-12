@@ -11,8 +11,8 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 3;
 
     public BerserkersShout() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -25,12 +25,10 @@ public class BerserkersShout extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         berserkOpen();
-        atb(new DrawCardAction(magicNumber));
+        fatigue(magicNumber);
     }
 
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

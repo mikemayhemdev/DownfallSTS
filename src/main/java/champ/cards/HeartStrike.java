@@ -35,10 +35,6 @@ public class HeartStrike extends AbstractChampCard {
         finisher();
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = (upgraded && bcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
 
     @Override
     public void applyPowers() {

@@ -175,8 +175,8 @@ public class StanceHelper {
                     }
 
                     // Icons in front of the thing are here.
-                    renderHelper(sb, SymbolDescriptionPatch.ICONCROWN, Settings.scale * 250F, Settings.scale * 900F);
-                    renderHelper(sb, SymbolDescriptionPatch.ICONFIST, Settings.scale * 250F, Settings.scale * 700F);
+                    renderHelper(sb, SymbolDescriptionPatch.ICONCROWN, Settings.scale * 310F, Settings.scale * 810F);
+                    renderHelper(sb, SymbolDescriptionPatch.ICONFIST, Settings.scale * 310F, Settings.scale * 710F);
                 }
             }
     }
