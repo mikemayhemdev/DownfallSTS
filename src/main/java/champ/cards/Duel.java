@@ -48,6 +48,8 @@ public class Duel extends AbstractChampCard {
 
     public void upp() {
         tags.add(ChampMod.TECHNIQUE);
+        upgradeDamage(1);
+        upgradeBlock(1);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
