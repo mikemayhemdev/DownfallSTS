@@ -61,8 +61,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL Draw 2 cards."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !M! champ:Counter."
   },
   "champ:ShieldSigil": {
     "NAME": "Shield Sigil",
@@ -99,8 +98,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Draw 2 cards."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL champ:Fatigue !M!."
   },
   "champ:RageSigil": {
     "NAME": "Rage Sigil",
@@ -117,7 +115,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL If you are in a stance, increase the damage this card deals by !M! permanently, then Exhaust it."
+    "DESCRIPTION": "Deal !D! damage. NL If you are in a Stance, increase the damage this card deals by !M! permanently, then Exhaust it."
   },
   "champ:Control": {
     "NAME": "Control",
@@ -224,7 +222,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Blade Flurry",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each champ:Technique in hand. NL *Gladiator champ:Combo: Repeat !M! more times."
+    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: Deal !D! damage !M! more times."
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
@@ -303,7 +301,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "champ:Fatigue !M!. NL Deal damage to ALL enemies equal to the amount of HP lost.",
+    "DESCRIPTION": "champ:Fatigue !M!. NL Deal damage to ALL enemies equal to the half the amount of HP lost.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]

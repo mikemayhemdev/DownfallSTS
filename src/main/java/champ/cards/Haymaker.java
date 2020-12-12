@@ -21,7 +21,7 @@ public class Haymaker extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+        if (upgraded) techique();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (gcombo()) {
             applyToEnemy(m, autoVuln(m, 2));

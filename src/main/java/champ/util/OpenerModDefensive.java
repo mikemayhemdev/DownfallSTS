@@ -25,6 +25,7 @@ public class OpenerModDefensive extends AbstractCardModifier {
     public void onInitialApplication(AbstractCard card) {
 
         card.tags.add(ChampMod.OPENER);
+        card.tags.add(ChampMod.OPENERDEFENSIVE);
     }
 
     @Override

@@ -2,33 +2,26 @@ package champ.util;
 
 import basemod.abstracts.AbstractCardModifier;
 import champ.ChampMod;
+import champ.stances.AbstractChampStance;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class RetainCardMod extends AbstractCardModifier {
 
-    private boolean grantedRetain;
+    @Override
+    public String modifyDescription(String rawDescription, AbstractCard card) {
+        return CardCrawlGame.languagePack.getUIString(ChampMod.makeID("RetainCardMod")).TEXT[0] + rawDescription;
+    }
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        if (!card.selfRetain) {
-            grantedRetain = true;
-            card.selfRetain = true;
-            card.rawDescription = CardCrawlGame.languagePack.getUIString(ChampMod.makeID("RetainCardMod")).TEXT[0] + card.rawDescription;
-            card.initializeDescription();
-        }
+
+        card.selfRetain = true;
     }
 
-
-
-    @Override
-    public void onRemove(AbstractCard card) {
-        if (grantedRetain) {
-            card.selfRetain = false;
-            card.rawDescription = card.rawDescription.replaceAll(CardCrawlGame.languagePack.getUIString(ChampMod.makeID("RetainCardMod")).TEXT[0], "");
-            card.initializeDescription();
-        }
-    }
 
     @Override
     public AbstractCardModifier makeCopy() {

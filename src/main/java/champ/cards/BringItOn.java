@@ -11,12 +11,12 @@ public class BringItOn extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int MAGIC = 9;
+    private static final int MAGIC = 10;
 
     public BringItOn() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        baseBlock = 9;
+        baseBlock = 10;
         exhaust = true;
         tags.add(ChampMod.FINISHER);
     }

@@ -27,6 +27,7 @@ public class OpenerModGladiator extends AbstractCardModifier {
     public void onInitialApplication(AbstractCard card) {
 
         card.tags.add(ChampMod.OPENER);
+        card.tags.add(ChampMod.OPENERGLADIATOR);
     }
 
     @Override
