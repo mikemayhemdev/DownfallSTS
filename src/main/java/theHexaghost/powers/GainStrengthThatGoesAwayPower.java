@@ -56,9 +56,17 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
     public void update(int slot) {
         super.update(slot);
         if (AbstractDungeon.player instanceof TheHexaghost)
-            if (TheHexaghost.startingFlame == GhostflameHelper.activeGhostFlame) {
-                if (!GhostflameHelper.activeGhostFlame.charged || AbstractDungeon.player.hasPower(AgainPower.POWER_ID))
-                    if (this.timer <= 0F) {
+            if (
+                    (TheHexaghost.startingFlame == GhostflameHelper.activeGhostFlame &&
+                            (!GhostflameHelper.activeGhostFlame.charged || AbstractDungeon.player.hasPower(AgainPower.POWER_ID)))
+                            ||
+                            //If you are on an ignited one and the NEXT flame is the one you started at, also ping this.
+                            (TheHexaghost.startingFlame == GhostflameHelper.getNextGhostFlame() &&
+                                    GhostflameHelper.activeGhostFlame.charged &&
+                                    !AbstractDungeon.player.hasPower(AgainPower.POWER_ID))
+            ) {
+
+                if (this.timer <= 0F) {
                     ArrayList<AbstractGameEffect> effect2 = (ArrayList<AbstractGameEffect>) ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
                     effect2.add(new GainPowerEffect(this));
                     this.timer = 1F;
