@@ -11,9 +11,9 @@ public class RecklessLeap extends AbstractChampCard {
     //stupid intellij stuff attack, self_and_enemy, uncommon
 
     private static final int DAMAGE = 18;
-    private static final int UPG_DAMAGE = 4;
+    private static final int UPG_DAMAGE = 2;
 
-    private static final int MAGIC = 20;
+    private static final int MAGIC = 15;
     private static final int UPG_MAGIC = 5;
 
     public RecklessLeap() {
