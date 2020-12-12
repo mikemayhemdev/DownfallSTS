@@ -75,7 +75,7 @@ public class StanceHelper {
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
             return ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
         } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-            return ChampChar.characterStrings.TEXT[14] + (AbstractDungeon.player.hasPower(FocusedGladPower.POWER_ID) ? ChampChar.characterStrings.TEXT[49] : ChampChar.characterStrings.TEXT[48]);
+            return ChampChar.characterStrings.TEXT[14] + GladiatorStance.amount() + (AbstractDungeon.player.hasPower(FocusedGladPower.POWER_ID) ? ChampChar.characterStrings.TEXT[49] : ChampChar.characterStrings.TEXT[48]);
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
             return ChampChar.characterStrings.TEXT[19];
         } else if (AbstractDungeon.player instanceof ChampChar) {
