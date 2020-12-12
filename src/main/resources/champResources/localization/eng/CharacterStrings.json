@@ -17,9 +17,9 @@
       "Finisher Bonus",
       "#yFatigue #b3.",
       "Lose all #yResolve and gain that much HP, preserving #yStrength. End your turn.",
-      "Gain #b6 #yCounter.",
+      "Gain #b",
       "Gain #b12 #yBlock. End your turn.",
-      "Draw #b1 card.",
+      "Draw #b",
       "Next turn, draw #b1 card and gain [E] . End your turn.",
       "Berserker Technique",
       "Defensive Technique",
@@ -49,7 +49,12 @@
       "If you are in a #yStance, trigger its Technique bonus.",
       "Finisher",
       "After playing a Finisher, if you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn.",
-	  "I do not have enough Block."
+	  "I do not have enough Block.",
+      "#yFatigue #b3 and gain #b",
+      " #yResolve.",
+      " #yCounter.",
+      " card.",
+      " cards."
     ]
   }
 }

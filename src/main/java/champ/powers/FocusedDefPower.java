@@ -49,7 +49,6 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void onTechnique() {
         flash();
-        addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
     }
 
     @Override
