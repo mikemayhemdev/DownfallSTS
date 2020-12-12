@@ -92,8 +92,8 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract."
+      "If you start and end your turn with the same Ghostflame active, gain ",
+      " #yStrength."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
