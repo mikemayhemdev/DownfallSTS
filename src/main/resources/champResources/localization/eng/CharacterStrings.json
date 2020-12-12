@@ -36,8 +36,8 @@
       "Pfh. This fight is too easy to bother.",
       "[crown_icon]   champ:Technique NL ",
       "[crown_icon] : Draw a card. NL ",
-      "[crown_icon] : Gain 6 champ:Counter. NL ",
-      "[crown_icon] : champ:Fatigue 3. NL ",
+      "[crown_icon] : Gain ",
+      "[crown_icon] : champ:Fatigue ",
       "[crown_icon] : All Bonuses. NL ",
       "[fist_icon]   champ:Finisher NL ",
       "[fist_icon] : [E] & [card_icon] next turn. NL ",
@@ -53,8 +53,13 @@
       "#yFatigue #b3 and gain #b",
       " #yResolve.",
       " #yCounter.",
-      " card.",
-      " cards."
+      "1 card.",
+      " cards.",
+      "[crown_icon] : Draw ",
+      " cards. NL ",
+      ". NL ",
+      " champ:Counter. NL ",
+      ", Resolve "
     ]
   }
 }

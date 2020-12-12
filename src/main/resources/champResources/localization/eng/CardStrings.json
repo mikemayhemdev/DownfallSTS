@@ -73,12 +73,12 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 extra champ:Resolve."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 champ:Resolve."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counter for each.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. Gain !M! champ:Counter. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counter for each."
+    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !M! champ:Counter. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counter for each."
   },
   "champ:Backstep": {
     "NAME": "Backstep",

@@ -469,4 +469,22 @@ public class ChampMod implements
             endTurnIncoming = false;
         }
     }
+
+    public static void updateTechniquesInCombat(){
+        for (AbstractCard c: AbstractDungeon.player.drawPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.discardPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.hand.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.exhaustPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.limbo.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+    }
 }
