@@ -17,7 +17,7 @@ public class ShieldThrow extends AbstractChampCard {
     public ShieldThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
       //  tags.add(ChampMod.FINISHER);
-        baseBlock = block = 8;
+        baseBlock = block = 9;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
