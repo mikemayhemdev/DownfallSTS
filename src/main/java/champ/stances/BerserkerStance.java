@@ -2,6 +2,7 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.actions.FatigueHpLossAction;
+import champ.powers.FocusedBerPower;
 import champ.powers.ResolvePower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;

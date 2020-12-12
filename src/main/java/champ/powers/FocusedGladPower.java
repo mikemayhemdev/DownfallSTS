@@ -49,7 +49,6 @@ public class FocusedGladPower extends AbstractPower implements CloneablePowerInt
     @Override
     public void onTechnique() {
         flash();
-        addToBot(new DrawCardAction(amount));
     }
 
     @Override
