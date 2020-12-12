@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -11,8 +12,8 @@ public class DefensiveShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 6;
 
     public DefensiveShout() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
@@ -25,7 +26,7 @@ public class DefensiveShout extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         defenseOpen();
-        atb(new DrawCardAction(magicNumber));
+        applyToSelf(new CounterPower(magicNumber));
     }
 
     public void upp() {

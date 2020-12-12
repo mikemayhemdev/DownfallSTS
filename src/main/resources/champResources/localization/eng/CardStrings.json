@@ -61,8 +61,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL Draw 2 cards."
+    "DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !M! champ:Counter."
   },
   "champ:ShieldSigil": {
     "NAME": "Shield Sigil",
@@ -99,8 +98,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Draw 2 cards."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL champ:Fatigue !M!."
   },
   "champ:RageSigil": {
     "NAME": "Rage Sigil",
