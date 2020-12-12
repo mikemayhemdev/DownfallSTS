@@ -23,6 +23,8 @@ public class FaceSlap extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERGLADIATOR);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

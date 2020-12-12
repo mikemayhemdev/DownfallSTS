@@ -21,6 +21,8 @@ public class AdrenalArmor extends AbstractChampCard {
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         myHpLossCost = 2;
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

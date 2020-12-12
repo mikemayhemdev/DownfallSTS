@@ -23,6 +23,8 @@ public class EnchantCrown extends AbstractChampCard {
         applyToSelf(new EnergizedDurationPower(3));
             if (gcombo()) exhaust = false;
      //   finisher();
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOGLADIATOR);
     }
 
     @Override

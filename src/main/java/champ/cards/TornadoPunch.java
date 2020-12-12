@@ -27,6 +27,8 @@ public class TornadoPunch extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

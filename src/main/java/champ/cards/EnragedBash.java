@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.actions.ModifyDamageAndMagicAction;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -21,6 +22,8 @@ public class EnragedBash extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseCool = cool = 2;
         myHpLossCost = magicNumber;
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

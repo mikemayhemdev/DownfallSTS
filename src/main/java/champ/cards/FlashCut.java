@@ -25,6 +25,8 @@ public class FlashCut extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         tags.add(CardTags.STRIKE);
         this.tags.add(ChampMod.OPENERGLADIATOR);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

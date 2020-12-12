@@ -22,6 +22,8 @@ public class Circumvent extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

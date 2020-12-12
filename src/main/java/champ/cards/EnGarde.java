@@ -21,6 +21,8 @@ public class EnGarde extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -102,6 +102,14 @@ public class ChampMod implements
     public static AbstractCard.CardTags FINISHER;
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBO;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBODEFENSIVE;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBOGLADIATOR;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBOBERSERKER;
 
     private static String modID = "champ";
     public static int finishersThisTurn = 0;

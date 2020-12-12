@@ -25,6 +25,8 @@ public class GutPunch extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         myHpLossCost = 2;
         this.tags.add(ChampMod.OPENERBERSERKER);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

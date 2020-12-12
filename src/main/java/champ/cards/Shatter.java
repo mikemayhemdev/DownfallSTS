@@ -18,6 +18,8 @@ public class Shatter extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
         tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
