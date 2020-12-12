@@ -1,5 +1,6 @@
 package champ.actions;
 
+import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -78,9 +79,9 @@ public class DiscoverOpenerAction extends AbstractGameAction {
         ArrayList<AbstractCard> gladOpenersList = new ArrayList<>();
         ArrayList<AbstractCard> defOpenersList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.rawDescription.contains("champ:Berserker champ:Opener")) bersOpenersList.add(q);
-            if (q.rawDescription.contains("champ:Gladiator champ:Opener")) gladOpenersList.add(q);
-            if (q.rawDescription.contains("champ:Defensive champ:Opener")) defOpenersList.add(q);
+            if (q.hasTag(ChampMod.COMBOBERSERKER)) bersOpenersList.add(q);
+            if (q.hasTag(ChampMod.COMBOGLADIATOR)) gladOpenersList.add(q);
+            if (q.hasTag(ChampMod.COMBODEFENSIVE)) defOpenersList.add(q);
         }
         choiceList.add(bersOpenersList.get(AbstractDungeon.cardRandomRng.random(bersOpenersList.size() - 1)));
         choiceList.add(gladOpenersList.get(AbstractDungeon.cardRandomRng.random(gladOpenersList.size() - 1)));

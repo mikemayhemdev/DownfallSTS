@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.actions.ModifyDamageAndBlockAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,6 +22,8 @@ public class PreciseThrust extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOGLADIATOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

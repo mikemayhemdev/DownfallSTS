@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.patches.NoDiscardField;
@@ -50,16 +51,17 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         boolean returnCard = false;
-        if (card.rawDescription.contains("champ:Combo") && timesUsed < amount) {
-            if (card.rawDescription.contains("champ:Gladiator champ:Combo")) {
+        if (card.hasTag(ChampMod.COMBO) && timesUsed < amount) {
+            if (card.hasTag(ChampMod.COMBOBERSERKER)) {
                 returnCard = true;
             }
-            if (card.rawDescription.contains("champ:Defensive champ:Combo")) {
+            if (card.hasTag(ChampMod.COMBOGLADIATOR)) {
                 returnCard = true;
             }
-            if (card.rawDescription.contains("champ:Berserker champ:Combo")) {
+            if (card.hasTag(ChampMod.COMBODEFENSIVE)) {
                 returnCard = true;
             }
+
         }
         if (returnCard) {
             flash();

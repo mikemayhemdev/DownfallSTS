@@ -15,6 +15,8 @@ public class RageSigil extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
        // tags.add(ChampMod.OPENER);
         baseMagicNumber = magicNumber = 2;
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
