@@ -12,13 +12,15 @@ public class CalledShot extends AbstractChampCard {
 
     public CalledShot() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new CalledShotPower(2));
+        applyToSelf(new CalledShotPower(magicNumber));
     }
 
     public void upp() {
+        upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
