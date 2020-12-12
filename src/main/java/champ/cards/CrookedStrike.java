@@ -14,7 +14,7 @@ public class CrookedStrike extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 3;
 
     public CrookedStrike() {
