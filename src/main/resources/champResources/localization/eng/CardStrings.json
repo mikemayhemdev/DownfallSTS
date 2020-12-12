@@ -117,12 +117,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage for each champ:Finisher played this combat.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " champ:Finisher played.)",
-      " champ:Finishers played.)"
-    ]
+    "DESCRIPTION": "champ:Finisher. NL Deal !D! damage. NL If you are in a stance, increase the damage this card deals by !M! permanently, then Exhaust it."
   },
   "champ:Control": {
     "NAME": "Control",
@@ -217,9 +212,9 @@
     "DESCRIPTION": "Deal !D! damage two times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage three times. NL Deal !D! damage an additional time for each champ:Technique used this turn.",
     "EXTENDED_DESCRIPTION": [
-      " NL (",
-      " champ:Technique played.)",
-      " champ:Techniques played.)"
+      " NL (Hits ",
+      " time.)",
+      " times.)"
     ]
   },
   "champ:EnchantSword": {
@@ -329,7 +324,7 @@
   },
   "champ:Improvising": {
     "NAME": "Improvising",
-    "DESCRIPTION": "The first time each turn you use a champ:Combo while not in the correct Stance, return it to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "The first time you use a champ:Combo each turn, return it to your hand. NL It costs 0 until played."
   },
   "champ:CalledShot": {
     "NAME": "Called Shot",

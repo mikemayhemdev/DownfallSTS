@@ -30,7 +30,7 @@ public class FlashCut extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         gladOpen();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        if (dcombo()) applyToSelf(new CounterPower(9));
+        if (dcombo()) applyToSelf(new CounterPower(magicNumber));
     }
 
     @Override

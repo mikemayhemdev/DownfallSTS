@@ -291,7 +291,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Refracted Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Decrease the number of times this card hits by 1 this combat. NL Can be upgraded any number of times."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Decrease the number of times this card hits by 2 this combat. NL Can be upgraded any number of times."
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
