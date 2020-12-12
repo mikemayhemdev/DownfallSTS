@@ -49,7 +49,6 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
     @Override
     public void onTechnique() {
         flash();
-        addToBot(new ApplyPowerAction(owner, owner, new CounterPower(amount), amount));
     }
 
     @Override
@@ -57,6 +56,18 @@ public class FocusedDefPower extends AbstractPower implements CloneablePowerInte
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        ChampMod.updateTechniquesInCombat();
+    }
+
+    @Override
+    public void onInitialApplication() {
+        super.onInitialApplication();
+        ChampMod.updateTechniquesInCombat();
+    }
     @Override
     public AbstractPower makeCopy() {
         return new FocusedDefPower(amount);

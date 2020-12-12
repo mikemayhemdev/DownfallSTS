@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
 import downfall.actions.NeowReturnAction;
 import downfall.downfallMod;
 import downfall.actions.NeowRezAction;
+import downfall.powers.EndOfTurnStrengthDex;
 import downfall.powers.NeowInvulnerablePower;
 import guardian.cards.Aged;
 import guardian.vfx.SmallLaserEffectColored;
@@ -270,8 +271,8 @@ public class NeowBoss extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(minion.hb.cX, minion.hb.cY, this.hb.cX + EYE1_X, this.hb.cY + EYE1_Y, Color.GOLD), 0.25F));
                 //AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.FIRE, false, true));
                 //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new StrengthPower(this, this.getPower(NeowInvulnerablePower.POWER_ID).amount), this.getPower(NeowInvulnerablePower.POWER_ID).amount));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new DexterityPower(this, this.getPower(NeowInvulnerablePower.POWER_ID).amount), this.getPower(NeowInvulnerablePower.POWER_ID).amount));
+
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, minion, new EndOfTurnStrengthDex(minion, this.getPower(NeowInvulnerablePower.POWER_ID).amount), this.getPower(NeowInvulnerablePower.POWER_ID).amount));
                 AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 20));
                 break;
             case 6:

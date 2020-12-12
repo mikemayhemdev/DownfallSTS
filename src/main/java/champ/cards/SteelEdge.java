@@ -16,7 +16,7 @@ public class SteelEdge extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, uncommon
 
     private static final int DAMAGE = 10;
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 10;
 
     public SteelEdge() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);

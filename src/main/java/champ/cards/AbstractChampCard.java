@@ -7,7 +7,10 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.actions.FatigueHpLossAction;
 import champ.powers.CalledShotPower;
+import champ.powers.FocusedBerPower;
+import champ.powers.FocusedDefPower;
 import champ.powers.ResolvePower;
+import champ.relics.DefensiveTrainingManual;
 import champ.relics.SignatureFinisher;
 import champ.stances.*;
 import champ.util.OnOpenerSubscriber;
@@ -29,7 +32,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import downfall.dailymods.ChampStances;
 import slimebound.SlimeboundMod;
 
 import java.security.Signature;
@@ -379,10 +381,27 @@ public abstract class AbstractChampCard extends CustomCard {
             if (AbstractDungeon.player != null) {
                 if (AbstractDungeon.player.stance instanceof DefensiveStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[31];
+                    prefixTech = prefixTech + DefensiveStance.amount();
+                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[53];
                 } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[30];
+                    if (GladiatorStance.amount() == 1){
+                        prefixTech = ChampChar.characterStrings.TEXT[30];
+                    } else {
+                        prefixTech = ChampChar.characterStrings.TEXT[50];
+                        prefixTech = prefixTech + GladiatorStance.amount();
+                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[51];
+                    }
                 } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[32];
+                    prefixTech = prefixTech + 3;
+                    if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)){
+
+                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[54];
+                        prefixTech = prefixTech + AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount;
+                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
+                    } else {
+                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
+                    }
 
                 } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[33];

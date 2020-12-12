@@ -1063,9 +1063,9 @@ public class downfallMod implements
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
             RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
-            for (AbstractCard c:AbstractDungeon.player.masterDeck.group){
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                 if (!c.hasTag(ChampMod.TECHNIQUE))
-                CardModifierManager.addModifier(c, new TechniqueMod());
+                    CardModifierManager.addModifier(c, new TechniqueMod());
             }
         }
 
@@ -1164,6 +1164,7 @@ public class downfallMod implements
         PACKAGE_SNECKO,
         PACKAGE_EXPANSION,
         PACKAGE_CHAMP;
+
         otherPackagePaths() {
         }
 
@@ -1188,8 +1189,11 @@ public class downfallMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         playedBossCardThisTurn = false;
 
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
             for (AbstractMonster m : abstractRoom.monsters.monsters)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
         }

@@ -2,6 +2,9 @@ package champ;
 
 import basemod.BaseMod;
 import champ.patches.SymbolDescriptionPatch;
+import champ.powers.FocusedBerPower;
+import champ.powers.FocusedDefPower;
+import champ.powers.FocusedGladPower;
 import champ.stances.*;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -63,11 +66,16 @@ public class StanceHelper {
 
     public static String getStanceTechnique() {
         if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-            return ChampChar.characterStrings.TEXT[10];
+            if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)) {
+                return ChampChar.characterStrings.TEXT[45] + AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount + ChampChar.characterStrings.TEXT[46];
+            }
+            else {
+                return ChampChar.characterStrings.TEXT[10];
+            }
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-            return ChampChar.characterStrings.TEXT[12];
+            return ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
         } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-            return ChampChar.characterStrings.TEXT[14];
+            return ChampChar.characterStrings.TEXT[14] + (AbstractDungeon.player.hasPower(FocusedGladPower.POWER_ID) ? ChampChar.characterStrings.TEXT[49] : ChampChar.characterStrings.TEXT[48]);
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
             return ChampChar.characterStrings.TEXT[19];
         } else if (AbstractDungeon.player instanceof ChampChar) {

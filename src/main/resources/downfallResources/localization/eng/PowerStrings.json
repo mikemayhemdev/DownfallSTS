@@ -50,5 +50,11 @@
     "DESCRIPTIONS": [
       "Gains 2 Focus at the end of each turn."
     ]
+  },
+  "downfall:NeowBuff": {
+    "NAME": "Neow's Vigor",
+    "DESCRIPTIONS": [
+      "Gains Strength and Dexterity at the end of the round."
+    ]
   }
 }

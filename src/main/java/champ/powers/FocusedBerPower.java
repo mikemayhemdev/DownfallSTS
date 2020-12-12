@@ -53,6 +53,18 @@ public class FocusedBerPower extends AbstractPower implements CloneablePowerInte
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        ChampMod.updateTechniquesInCombat();
+    }
+
+    @Override
+    public void onInitialApplication() {
+        super.onInitialApplication();
+        ChampMod.updateTechniquesInCombat();
+    }
+
+    @Override
     public void updateDescription() {
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }

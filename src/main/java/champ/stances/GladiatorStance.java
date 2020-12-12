@@ -1,6 +1,7 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.powers.FocusedGladPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -34,9 +35,21 @@ public class GladiatorStance extends AbstractChampStance {
         this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[14] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[15];
     }
 
+    public static int amount() {
+        int x = 1;
+        if (AbstractDungeon.player.hasPower(FocusedGladPower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(FocusedGladPower.POWER_ID).amount;
+        }
+        return x;
+    }
+
     @Override
     public void technique() {
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
+        int x = 1;
+        if (AbstractDungeon.player.hasPower(FocusedGladPower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(FocusedGladPower.POWER_ID).amount;
+        }
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(x));
     }
 
     @Override

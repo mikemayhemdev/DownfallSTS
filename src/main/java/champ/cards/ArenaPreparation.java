@@ -31,9 +31,9 @@ public class ArenaPreparation extends AbstractChampCard {
         for (int i = 0; i < magicNumber; i++) {
             ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
             for (AbstractCard t : CardLibrary.getAllCards()) {
-                if (t.hasTag(ChampMod.TECHNIQUE)) qCardList.add(t);
+                if (t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING))) qCardList.add(t);
             }
-            AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
+            AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
             CardModifierManager.addModifier(c, new RetainCardMod());
             makeInHand(c);
         }

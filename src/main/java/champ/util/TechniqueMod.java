@@ -16,7 +16,10 @@ public class TechniqueMod extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return CardCrawlGame.languagePack.getUIString(ChampMod.makeID("TechniqueMod")).TEXT[0] + rawDescription;
+        if (card instanceof AbstractChampCard){
+            return rawDescription;
+        }
+        else return CardCrawlGame.languagePack.getUIString(ChampMod.makeID("TechniqueMod")).TEXT[0] + rawDescription;
     }
 
     @Override

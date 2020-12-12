@@ -88,6 +88,7 @@ public class ChampMod implements
     private static final String CHARSELECT_PORTRAIT = "champResources/images/charSelect/charBG.png";
 
     public static Color placeholderColor = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1);
+    public static Color potionLabColor = new Color(200F / 255F, 200F / 255F, 200F / 255F, 1);
 
     @SpireEnum
     public static AbstractCard.CardTags OPENER;
@@ -466,6 +467,24 @@ public class ChampMod implements
         if (endTurnIncoming && AbstractDungeon.actionManager.cardQueue.isEmpty()) {
             AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
             endTurnIncoming = false;
+        }
+    }
+
+    public static void updateTechniquesInCombat(){
+        for (AbstractCard c: AbstractDungeon.player.drawPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.discardPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.hand.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.exhaustPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.limbo.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
     }
 }
