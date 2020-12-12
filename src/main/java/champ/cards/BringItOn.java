@@ -29,11 +29,6 @@ public class BringItOn extends AbstractChampCard {
         finisher();
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = (upgraded && dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
     public void upp() {
         upgradeBlock(3);
         upgradeMagicNumber(3);
