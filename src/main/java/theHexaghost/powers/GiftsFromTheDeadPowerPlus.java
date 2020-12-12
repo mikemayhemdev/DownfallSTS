@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -46,7 +47,8 @@ public class GiftsFromTheDeadPowerPlus extends AbstractPower implements Cloneabl
     public void onExhaust(AbstractCard card) {
         if (card.isEthereal) {
             addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
-            addToBot(new GainEnergyAction(amount));
+//            addToBot(new GainEnergyAction(amount));
+            addToBot(new ApplyPowerAction(owner, owner, new EnergizedPower(owner, amount), amount));
         }
     }
 

@@ -196,7 +196,8 @@
   },
   "Guardian:Clone": {
     "NAME": "克隆",
-    "DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL 消耗 。"
+    "DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL guardianmod:加速 。 NL 消耗 。"
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
