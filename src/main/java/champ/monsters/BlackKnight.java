@@ -42,7 +42,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
          {
        public static final String ID = "BlackKnight";
        private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("Champ");
-       public static final String NAME = CardCrawlGame.languagePack.getEventString(Colosseum_Evil_Champ.ID).DESCRIPTIONS[5];
+       public static final String NAME = CardCrawlGame.languagePack.getEventString(Colosseum_Evil_Champ.ID).DESCRIPTIONS[6];
        public static final String[] MOVES = monsterStrings.MOVES;
        public static final String[] DIALOG = monsterStrings.DIALOG;
        public static final int HP = 420;
