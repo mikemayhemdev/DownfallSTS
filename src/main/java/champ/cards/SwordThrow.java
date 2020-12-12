@@ -12,7 +12,7 @@ public class SwordThrow extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 8;
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 

@@ -162,7 +162,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block. NL You can't gain Block next turn. NL *Defensive champ:Combo: You can gain Block next turn.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Unless *Defensive champ:Combo: You can't gain Block next turn.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "champ:FalseCounter": {
@@ -226,7 +226,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL You can't attack next turn. NL *Berserker champ:Combo: You can attack next turn."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Unless *Berserker champ:Combo: You can't attack next turn."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
@@ -276,7 +276,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "Crown Throw",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! fewer cards next turn. NL *Gladiator champ:Combo: Don't draw fewer cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL  Unless *Gladiator champ:Combo: Draw 3 fewer cards next turn."
   },
   "champ:FightOn": {
     "NAME": "Fight On",
