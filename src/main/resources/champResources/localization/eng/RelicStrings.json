@@ -17,7 +17,7 @@
     "NAME": "Barbell",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "Whenever you enter a Rest Site, #yUpgrade a random card in your deck."
+      "Whenever you enter a Rest Site, if you have at least 3 non-Upgraded cards in your deck, #yUpgrade one at random."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E]. NL Your maximum Resolve, Counter and Hand Size is 8."
+      "At the start of your turn, gain [E]. NL Your maximum Resolve and Counter is 15, and your maximum Hand Size is 8."
     ]
   },
   "champ:SignatureFinisher": {

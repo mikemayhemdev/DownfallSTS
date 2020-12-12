@@ -238,7 +238,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to buff or debuff, Stun it."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to buff or debuff and is not a Boss, Stun it."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
