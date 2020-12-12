@@ -102,6 +102,14 @@ public class ChampMod implements
     public static AbstractCard.CardTags FINISHER;
     @SpireEnum
     public static AbstractCard.CardTags TECHNIQUE;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBO;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBODEFENSIVE;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBOGLADIATOR;
+    @SpireEnum
+    public static AbstractCard.CardTags COMBOBERSERKER;
 
     private static String modID = "champ";
     public static int finishersThisTurn = 0;
@@ -467,6 +475,24 @@ public class ChampMod implements
         if (endTurnIncoming && AbstractDungeon.actionManager.cardQueue.isEmpty()) {
             AbstractDungeon.actionManager.addToBottom(new PressEndTurnButtonAction());
             endTurnIncoming = false;
+        }
+    }
+
+    public static void updateTechniquesInCombat(){
+        for (AbstractCard c: AbstractDungeon.player.drawPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.discardPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.hand.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.exhaustPile.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
+        }
+        for (AbstractCard c: AbstractDungeon.player.limbo.group){
+            if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
     }
 }

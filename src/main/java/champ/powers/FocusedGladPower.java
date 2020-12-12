@@ -59,6 +59,18 @@ public class FocusedGladPower extends AbstractPower implements CloneablePowerInt
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
     }
 
+
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        ChampMod.updateTechniquesInCombat();
+    }
+
+    @Override
+    public void onInitialApplication() {
+        super.onInitialApplication();
+        ChampMod.updateTechniquesInCombat();
+    }
     @Override
     public AbstractPower makeCopy() {
         return new FocusedGladPower(amount);

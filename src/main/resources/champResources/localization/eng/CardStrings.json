@@ -73,12 +73,12 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 extra champ:Resolve."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 champ:Resolve."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
     "DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counter for each.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. Gain !M! champ:Counter. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counter for each."
+    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !M! champ:Counter. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counter for each."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -162,7 +162,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block. NL You can't gain Block next turn. NL *Defensive champ:Combo: You can gain Block next turn.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Unless *Defensive champ:Combo: You can't gain Block next turn.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "champ:FalseCounter": {
@@ -175,8 +175,8 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block and !M! champ:Counter X times.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block and !M! champ:Counter X times. NL Gain [E] ."
+    "DESCRIPTION": "Gain !B! Block. NL Repeat these effects X times.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Repeat these effects X times. NL Gain [E] ."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
@@ -226,7 +226,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL You can't attack next turn. NL *Berserker champ:Combo: You can attack next turn."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Unless *Berserker champ:Combo: You can't attack next turn."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
@@ -276,7 +276,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "Crown Throw",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! fewer cards next turn. NL *Gladiator champ:Combo: Don't draw fewer cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL  Unless *Gladiator champ:Combo: Draw 3 fewer cards next turn."
   },
   "champ:FightOn": {
     "NAME": "Fight On",
@@ -327,7 +327,7 @@
   "champ:CalledShot": {
     "NAME": "Called Shot",
     "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end.",
-    "UPGRADE_DESCRIPTION": "The next 2 champ:Finishers you play do not exit Stance or cause your turn to end."
+    "UPGRADE_DESCRIPTION": "The next !M! champ:Finishers you play do not exit Stance or cause your turn to end."
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",

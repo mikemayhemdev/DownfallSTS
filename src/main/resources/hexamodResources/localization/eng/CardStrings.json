@@ -73,8 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Here and Now",
-    "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
+    "DESCRIPTION": "If you start and end your turn with the same Ghostflame active, gain !M! Strength."
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",

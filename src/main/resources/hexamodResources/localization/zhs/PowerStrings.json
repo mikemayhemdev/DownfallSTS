@@ -92,8 +92,8 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "此刻",
     "DESCRIPTIONS": [
-      "在你的回合开始时，获得 #b",
-      " 点 #y力量 。当你 #y步进 或 #y回退 时，失去这些力量。"
+      "如果你开始与结束回合时 #y激活 的 #y鬼火 相同，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "hexamod:GhostFlameBarrierPower": {

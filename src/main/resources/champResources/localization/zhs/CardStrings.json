@@ -50,8 +50,8 @@
   },
   "champ:Balance": {
     "NAME": "平衡",
-    "DESCRIPTION": "champ:防守 或 champ:角斗 champ:起手 。 NL 对应随机的 姿态 牌加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "champ:防守 或 champ:角斗 champ:起手。 NL 对应随机已 升级 的 姿态 牌加入你的手牌。",
+    "DESCRIPTION": "champ:防守 或 champ:角斗 champ:起手 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "champ:防守 或 champ:角斗 champ:起手。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       "champ:防守 champ:起手 。 NL 将一张随机 champ:防守 牌加入手牌。",
       "champ:角斗 champ:起手 。 NL 将一张随机 champ:角斗 牌加入手牌。",
@@ -61,8 +61,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "防卫嘲讽",
-    "DESCRIPTION": "champ:防守 champ:起手 。 NL 抽1张牌。",
-    "UPGRADE_DESCRIPTION": "champ:防守 champ:起手 。 NL 抽2张牌。"
+    "DESCRIPTION": "champ:防守 champ:起手 。 NL 获得 !M! 层 champ:反击 。"
   },
   "champ:ShieldSigil": {
     "NAME": "防守印记",
@@ -88,8 +87,8 @@
   },
   "champ:Aggression": {
     "NAME": "侵略",
-    "DESCRIPTION": "champ:狂战 或 champ:角斗 champ:起手 。 NL 对应随机的 姿态 牌加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "champ:狂战 或 champ:角斗 champ:起手 。 NL 对应随机已 升级 的 姿态 牌加入你的手牌。",
+    "DESCRIPTION": "champ:狂战 或 champ:角斗 champ:起手 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "champ:狂战 或 champ:角斗 champ:起手 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       "champ:狂战 champ:起手 。 NL 将一张随机 champ:狂战 牌加入手牌。",
       "champ:角斗 champ:起手 。 NL 将一张随机 champ:角斗 牌加入手牌。",
@@ -99,8 +98,7 @@
   },
   "champ:BerserkersShout": {
     "NAME": "怒吼",
-    "DESCRIPTION": "champ:狂战 champ:起手 。 NL 抽1张牌。",
-    "UPGRADE_DESCRIPTION": "champ:狂战 champ:起手 。 NL 抽2张牌。"
+    "DESCRIPTION": "champ:狂战 champ:起手 。 NL champ:疲劳 !M! 。"
   },
   "champ:RageSigil": {
     "NAME": "愤怒印记",
@@ -117,17 +115,12 @@
   },
   "champ:Devastate": {
     "NAME": "坏灭",
-    "DESCRIPTION": "本场战斗每打出过一张 champ:终结技 牌，造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [
-      " NL （已打出 ",
-      " 张 champ:终结技 ）",
-      " 张 champ:终结技 ）"
-    ]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果处于 姿态 ，本局这张牌的伤害提高 !M! 点并 消耗 。"
   },
   "champ:Control": {
     "NAME": "控制",
-    "DESCRIPTION": "champ:防守 或 champ:狂战 champ:起手 。 NL 对应随机的 姿态 牌加入你的手牌。",
-    "UPGRADE_DESCRIPTION": "champ:防守 或 champ:狂战 champ:起手 。 NL 对应随机已 升级 的 姿态 牌加入你的手牌。",
+    "DESCRIPTION": "champ:防守 或 champ:狂战 champ:起手 。 NL 将一张所选 姿态 的 champ:连段 牌加入手牌。",
+    "UPGRADE_DESCRIPTION": "champ:防守 或 champ:狂战 champ:起手 。 NL 将一张已 升级 的所选 姿态 的 champ:连段 牌加入手牌。",
     "EXTENDED_DESCRIPTION": [
       "champ:防守 champ:起手 。 NL 将一张随机 champ:防守 牌加入手牌。",
       "champ:狂战 champ:起手 。 NL 将一张随机 champ:狂战 牌加入手牌。",
@@ -169,7 +162,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "爆甲",
-    "DESCRIPTION": " 造成你当前 格挡 值的伤害。 NL 下回合不能获得 格挡 。 NL champ:防守 champ:连段 ：不因这张牌不能获得 格挡 。",
+    "DESCRIPTION": " 获得 !B! 点 格挡 。 NL 造成你当前 格挡 值的伤害。 NL 除非 champ:防守 champ:连段 ：下回合不能获得 格挡 。",
     "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
   },
   "champ:FalseCounter": {
@@ -182,8 +175,8 @@
   },
   "champ:Lariat": {
     "NAME": "套索",
-    "DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 champ:反击 X次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和 !M! 层 champ:反击 X次。 NL 获得 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。重复X次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。重复X次。 NL 获得 [E] 。"
   },
   "champ:HoldFirm": {
     "NAME": "固守",
@@ -217,9 +210,9 @@
     "DESCRIPTION": "造成 !D! 点伤害两次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害三次。 NL 本回合每打出过一张 champ:战术 牌再重复一次。",
 	"EXTENDED_DESCRIPTION": [
-      " NL （打出了",
-      " 张 champ:战术 牌）",
-      " 张 champ:战术 牌）"
+      " NL （攻击 ",
+      " 次）",
+      " 次）"
     ]
   },
   "champ:EnchantSword": {
@@ -233,11 +226,11 @@
   },
   "champ:SwordThrow": {
     "NAME": "投掷剑刃",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 下回合不能打出攻击牌。 NL champ:狂战 champ:连段 ：不因这张牌不能打出攻击牌。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 除非 champ:狂战 champ:连段 ：下回合不能打出攻击牌。"
   },
   "champ:MurderStrike": {
     "NAME": "刽子打击",
-    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 本场战斗每打出过一张 champ:战术 牌，这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 打出 champ:战术 牌时如果这张牌耗能不为0，本场战斗这张牌的耗能减少1并提高 !M! 点伤害。 NL 消耗 。"
   },
   "champ:HeavySlash": {
     "NAME": "大师斩击",
@@ -283,7 +276,7 @@
   },
   "champ:CrownThrow": {
     "NAME": "投掷王冠",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 下回合少抽 !M! 张牌。 NL champ:角斗 champ:连段 ：不因这张牌少抽牌。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 抽 !M! 张牌 。 NL 除非 champ:角斗 champ:连段 ：下回合少抽 3 张牌。"
   },
   "champ:FightOn": {
     "NAME": "越战越勇",
@@ -308,7 +301,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "绝地反击",
-    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命的伤害。",
+    "DESCRIPTION": "champ:疲劳 !M! 。 NL 对所有敌人造成已失去生命一半的伤害。",
 	"EXTENDED_DESCRIPTION": [
       " NL （造成 !D! 点伤害）"
     ]
@@ -329,12 +322,12 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "每回合第一次打出 牌时如果不处于对应的 姿态 ，返回手牌。 NL 它直到打出前费用为0。"
+    "DESCRIPTION": "每回合第一次打出 champ:连段 牌时，返回手牌。 NL 它直到打出前费用为0。"
   },
   "champ:CalledShot": {
     "NAME": "宣告",
-    "DESCRIPTION": "你打出的下1张 champ:终结技 将不会退出 姿态 或结束你的回合。",
-	"UPGRADE_DESCRIPTION": "你打出的下2张 champ:终结技 将不会退出 姿态 或结束你的回合。"
+    "DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。",
+	"UPGRADE_DESCRIPTION": "你打出的下 !M! 张 champ:终结技 将不会退出 姿态 或结束你的回合。"
   },
   "champ:PerfectedStrike": {
     "NAME": "完美打击",
@@ -356,8 +349,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "打击天才",
-    "DESCRIPTION": "在你的回合开始时，将随机一张进入姿态牌加入你的手牌。 NL 它直到打出前的耗能为0。",
-    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的进入姿态牌加入你的手牌。 NL 它直到打出前的耗能为0。"
+    "DESCRIPTION": "在你的回合开始时，将随机一张 champ:起手式 牌加入你的手牌。 NL 它直到打出前的耗能为0。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时，将随机一张已 升级 的 champ:起手式 加入你的手牌。 NL 它直到打出前的耗能为0。"
   },
   "champ:DefensiveStyle": {
     "NAME": "防守战法",

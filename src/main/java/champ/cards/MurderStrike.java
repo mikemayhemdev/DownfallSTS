@@ -44,8 +44,8 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
                 this.cost = 0;
             }
         } else {
-            this.upgradeBaseCost(8);
+            this.upgradeBaseCost(7);
         }
-        this.upgradeDamage(6);
+        this.upgradeDamage(9);
     }
 }

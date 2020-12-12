@@ -50,5 +50,11 @@
     "DESCRIPTIONS": [
       "每回合结束时获得2点 #y集中 。"
     ]
+  },
+  "downfall:NeowBuff": {
+    "NAME": "涅奥的伟力",
+    "DESCRIPTIONS": [
+      "回合结束是获得 #y力量 和 #y敏捷 。"
+    ]
   }
 }

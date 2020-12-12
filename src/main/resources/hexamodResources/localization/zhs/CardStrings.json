@@ -73,8 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "此刻",
-    "DESCRIPTION": "每回合开始时，获得 !M! 点 力量 。 NL 当你 hexamod:步进 或 hexamod:回退 时失去这些 力量 。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合开始时，获得 !M! 点 力量 。 NL 当你 hexamod:步进 或 hexamod:回退 时失去这些 力量 。"
+    "DESCRIPTION": "如果你开始与结束回合时 hexamod:激活 的 hexamod:鬼火 相同，获得 !M! 点 力量 。"
   },
   "hexamod:HauntingEcho": {
     "NAME": "萦绕回声",

@@ -41,7 +41,7 @@ public class Balance extends AbstractChampCard implements OctopusCard {
                 defenseOpen();
                 ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
                 for (AbstractCard t : CardLibrary.getAllCards()) {
-                    if (t.rawDescription.contains("Defensive champ:Combo")) qCardList.add(t);
+                    if (t.hasTag(ChampMod.COMBODEFENSIVE)) qCardList.add(t);
                 }
                 AbstractCard q = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
                 if (upgraded) q.upgrade();
@@ -51,7 +51,7 @@ public class Balance extends AbstractChampCard implements OctopusCard {
                 gladOpen();
                 ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                 for (AbstractCard t : CardLibrary.getAllCards()) {
-                    if (t.rawDescription.contains("Gladiator champ:Combo")) rCardList.add(t);
+                    if (t.hasTag(ChampMod.COMBOGLADIATOR)) rCardList.add(t);
                 }
                 AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                 if (upgraded) r.upgrade();

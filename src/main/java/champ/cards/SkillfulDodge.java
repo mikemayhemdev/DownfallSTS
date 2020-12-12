@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.actions.ModifyBlockAndMagicAction;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,6 +20,8 @@ public class SkillfulDodge extends AbstractChampCard {
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         baseCool = cool = 2;
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

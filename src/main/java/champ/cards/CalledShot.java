@@ -22,6 +22,8 @@ public class CalledShot extends AbstractChampCard {
     public void upp() {
         upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;
+        upgradeMagicNumber(1);
         initializeDescription();
+
     }
 }

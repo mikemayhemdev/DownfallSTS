@@ -22,6 +22,8 @@ public class BladeFlurry extends AbstractChampCard {
        // exhaust = true;
         magicNumber = baseMagicNumber = 2;
         tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOGLADIATOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
