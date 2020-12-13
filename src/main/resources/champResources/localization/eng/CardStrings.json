@@ -350,7 +350,7 @@
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
     "DESCRIPTION": "At the start of your turn, add a random card that Enters a Stance to your hand. NL It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random card that Enters a Stance to your hand. NL It costs 0 until played."
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded card that Enters a Stance to your hand. NL It costs 0 until played."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
