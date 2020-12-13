@@ -1,5 +1,6 @@
 package champ.cards;
 
+import basemod.devcommands.unlock.Unlock;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.util.RetainCardMod;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
 
@@ -31,7 +33,7 @@ public class ArenaPreparation extends AbstractChampCard {
         for (int i = 0; i < magicNumber; i++) {
             ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
             for (AbstractCard t : CardLibrary.getAllCards()) {
-                if (t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING))) qCardList.add(t);
+                if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.TECHNIQUE) && !(t.hasTag(CardTags.HEALING))) qCardList.add(t);
             }
             AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
             CardModifierManager.addModifier(c, new RetainCardMod());
