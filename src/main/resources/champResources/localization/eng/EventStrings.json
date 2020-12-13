@@ -57,13 +57,13 @@
     "OPTIONS": [
       "[Cardio] #gGain #g",
       " #gMax #gHP.",
-      "[Spar] Choose a card to gain your choice of #gOpener.",
+      "[Spar] Choose a card to gain 'Enter Chosen Stance'.",
       "[Lift] #gGain #g1 #gStrength #gPermanently.",
       "[Leave]",
-      "Choose a card to give Defensive Opener.",
-      "Choose a card to give Gladiator Opener.",
-      "Choose a card to give Berserker Opener.",
-      "[Locked] Requires a non-Opener Card."
+      "Choose a card to give 'Enter Defensive'.",
+      "Choose a card to give 'Enter Gladiator'.",
+      "Choose a card to give 'Enter Berserker'.",
+      "[Locked] Requires a Card that does not Enter a Stance."
     ]
   },
   "champ:MinorLeagueArena": {

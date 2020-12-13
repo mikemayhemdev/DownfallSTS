@@ -10,14 +10,6 @@
     "DESCRIPTION": "If you are in a #yStance, trigger its Technique bonus."
   },
   {
-    "PROPER_NAME": "Opener",
-    "NAMES": [
-      "opener",
-      "openers"
-    ],
-    "DESCRIPTION": "Switch #yStances."
-  },
-  {
     "PROPER_NAME": "Combo",
     "NAMES": [
       "combo"
@@ -51,21 +43,24 @@
   {
     "PROPER_NAME": "Defensive",
     "NAMES": [
-      "defensive"
+      "defensive",
+      "defensive."
     ],
     "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounter. #yFinisher: Gain #b12 #yBlock. End your turn."
   },
   {
     "PROPER_NAME": "Berserker",
     "NAMES": [
-      "berserker"
+      "berserker",
+      "berserker."
     ],
     "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y3. #yFinisher: Lose all your #yResolve and gain that much HP, preserving #yStrength. End your turn."
   },
   {
     "PROPER_NAME": "Gladiator",
     "NAMES": [
-      "gladiator"
+      "gladiator",
+      "gladiator."
     ],
     "DESCRIPTION": "#yStance. #yTechnique: Draw #b1 card. #yFinisher: Next turn, draw #b1 card and gain [E] . End your turn."
   },
@@ -73,7 +68,7 @@
     "PROPER_NAME": "Ultimate Stance",
     "NAMES": [
       "ultimate",
-      "ultimate"
+      "ultimate."
     ],
     "DESCRIPTION": "#yStance. Counts as all #b3 #yStances. Finishers do not end your turn or exit the Stance. You can't change to any other #yStance."
   },

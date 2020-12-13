@@ -27,7 +27,13 @@ public class ImprovisedAttack extends AbstractSneckoCard {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         AbstractCard q = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == CardType.ATTACK);
         makeInHand(q);
-        atb(new MuddleAction(storage));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                addToTop(new MuddleAction(storage));
+            }
+        });
     }
 
     public void upgrade() {

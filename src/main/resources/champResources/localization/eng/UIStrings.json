@@ -16,9 +16,9 @@
   },
   "champ:OpenerMod": {
     "TEXT": [
-      "champ:Berserker champ:Opener. NL ",
-      "champ:Defensive champ:Opener. NL ",
-      "champ:Gladiator champ:Opener. NL "
+      "Enter champ:Berserker NL ",
+      "Enter champ:Defensive NL ",
+      "Enter champ:Gladiator NL "
     ]
   },
   "champ:RetainCardMod": {
