@@ -110,8 +110,8 @@
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Repeat if you have a champ:Technique in hand.",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Repeat 2 times if you have a champ:Technique in hand."
+    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage twice.",
+    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage three times."
   },
   "champ:Devastate": {
     "NAME": "Devastate",

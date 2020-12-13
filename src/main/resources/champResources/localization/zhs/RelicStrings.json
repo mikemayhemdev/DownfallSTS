@@ -17,7 +17,7 @@
     "NAME": "哑铃",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "每当你进入 #y休息处 ，随机 #y升级 牌组中的一张牌。"
+      "每当你进入 #y休息处 ，如果你至少有 #b3 张未 #y升级 的牌，随机 #y升级 牌组中的一张牌。"
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
@@ -73,7 +73,7 @@
     "NAME": "力量铠甲",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "每回合开始时获得 [E] 。 NL 你的最大 #y决心 、 #y反击 和 #y手牌上限 为 #b8 。"
+      "每回合开始时获得 [E] 。 NL 你的最大 #y决心 、 #y反击 为 #b15 ， #y手牌上限 为 #b8 。"
     ]
   },
   "champ:SignatureFinisher": {

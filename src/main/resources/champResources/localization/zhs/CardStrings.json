@@ -238,7 +238,7 @@
   },
   "champ:CheapShot": {
     "NAME": "偷袭",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人的意图是强化或负面效果， 击晕 敌人。"
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 如果敌人的意图是强化或负面效果且不是首领， 击晕 敌人。"
   },
   "champ:RisingSlash": {
     "NAME": "狂烈打击",

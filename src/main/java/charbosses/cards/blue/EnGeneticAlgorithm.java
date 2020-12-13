@@ -16,22 +16,15 @@ public class EnGeneticAlgorithm extends AbstractBossCard {
 
     public EnGeneticAlgorithm() {
         super("Genetic Algorithm", cardStrings.NAME, "blue/skill/genetic_algorithm", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
-        this.misc = 1;
-        this.baseMagicNumber = 13;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        this.baseBlock = this.misc;
+        this.baseBlock = 14;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
       //  this.addToBot(new IncreaseMiscBuglessAction(this.uuid, this.misc, this.magicNumber));
         this.addToBot(new GainBlockAction(m, m, this.block));
-    }
-
-    public void applyPowers() {
-        this.baseBlock = this.misc;
-        super.applyPowers();
-        this.initializeDescription();
     }
 
     public void upgrade() {
