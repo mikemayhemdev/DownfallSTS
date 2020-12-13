@@ -224,9 +224,10 @@ public abstract class AbstractBossCard extends AbstractCard {
         multiDamageCardCalculate();
         this.initializeDescription();
         if (this.intent != null) {
-            if (!this.bossDarkened)
+            if (!this.bossDarkened) {
+                createIntent();
+            }
             //destroyIntent();
-            createIntent();
         }
     }
 
