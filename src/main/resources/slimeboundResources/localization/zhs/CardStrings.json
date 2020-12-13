@@ -388,7 +388,8 @@
   },
    "Slimebound:ForwardTackle": {
    "NAME": "进军冲撞",
-   "DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 三次。"
+   "DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 两次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 三次。"
   },
     "Slimebound:TagTeam": {
     "NAME": "搭档",
