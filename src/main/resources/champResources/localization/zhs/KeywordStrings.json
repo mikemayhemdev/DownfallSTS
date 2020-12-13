@@ -19,7 +19,8 @@
   {
     "PROPER_NAME": "连段",
     "NAMES": [
-      "连段"
+      "连段",
+      "combo"
     ],
     "DESCRIPTION": "处于特定 #y姿态 时打出后获得额外效果。"
   },
@@ -42,7 +43,8 @@
   {
     "PROPER_NAME": "决心",
     "NAMES": [
-      "决心"
+      "决心",
+      "resolve"
     ],
     "DESCRIPTION": "每有 #b5 层 #y决心 拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数等量的生命。"
   },
