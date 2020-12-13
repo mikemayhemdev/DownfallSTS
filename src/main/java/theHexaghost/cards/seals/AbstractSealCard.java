@@ -51,6 +51,7 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
                     removeList.add(c);
                 }
             }
+           AbstractDungeon.actionManager.cardsPlayedThisCombat.removeIf(c->c instanceof AbstractSealCard);
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof RemoveMeBabey || p instanceof RepairPower) {
                     addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, p, 1));
