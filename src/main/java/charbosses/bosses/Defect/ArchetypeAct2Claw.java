@@ -155,7 +155,9 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
                     c.baseDamage += cB.clawsPlayed * 2;
                     addToList(cardsList, c, extraUpgrades);
                     addToList(cardsList, new EnChargeBattery(), false);
-                    addToList(cardsList, new EnGeneticAlgorithm(), false);  //removed
+                    AbstractCard c2 = new EnGeneticAlgorithm();
+                    c2.misc = 14;
+                    addToList(cardsList, c2, false);  //removed
                     addToList(cardsList, new EnShame(), false);  //removed
                     addToList(cardsList, new EnStrikeBlue(), false);
                     break;
