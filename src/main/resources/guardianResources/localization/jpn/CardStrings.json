@@ -17,13 +17,13 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "Ruby",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Strength.",
-    "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Strength."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Strength.",
+    "UPGRADE_DESCRIPTION": "Gain 1 temporary Strength."
   },
   "Guardian:Gem_Green": {
     "NAME": "Emerald",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Dexterity."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain 1 temporary Dexterity."
   },
   "Guardian:Gem_White": {
     "NAME": "Quartz",
@@ -231,7 +231,7 @@
   },
   "Guardian:WeakpointTargeting": {
     "NAME": "Spot Weakpoint",
-    "DESCRIPTION": "Whenever targeted enemy takes damage, gain 1 guardianmod:Momentary Strength. NL Exhaust."
+    "DESCRIPTION": "Whenever targeted enemy takes damage, gain 1 temporary Strength. NL Exhaust."
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",
@@ -251,11 +251,11 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Piercing Hide",
-    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Shield Spikes",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! guardianmod:Momentary Thorns if you are in guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if you are in guardianmod:Defensive_Mode."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Beam",
@@ -373,7 +373,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
-    "DESCRIPTION": "When you leave guardianmod:Defensive_Mode, gain !M! guardianmod:Momentary Strength. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "When you leave guardianmod:Defensive_Mode, gain !M! temporary Strength. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Turret Beam",
@@ -413,7 +413,7 @@
   },
   "Guardian:MassOfThorns": {
     "NAME": "Mass Of Spikes",
-    "DESCRIPTION": "Gain !M! guardianmod:Momentary Thorns. NL Exhaust if you have Artifact."
+    "DESCRIPTION": "Gain !M! temporary Thorns. NL Exhaust if you have Artifact."
   },
   "Guardian:MassTimeBomb": {
     "NAME": "Mass Of Bombs",

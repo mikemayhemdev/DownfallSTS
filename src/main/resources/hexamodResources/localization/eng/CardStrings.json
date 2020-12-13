@@ -110,7 +110,7 @@
   },
   "hexamod:GhostlyFlex": {
     "NAME": "Ghostly Flex",
-    "DESCRIPTION": "Gain 2 guardianmod:Momentary Strength and 2 guardianmod:Momentary Dexterity for each hexamod:Ignited Ghostflame."
+    "DESCRIPTION": "Gain 2 temporary Strength and 2 temporary Dexterity for each hexamod:Ignited Ghostflame."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Bright Ritual",

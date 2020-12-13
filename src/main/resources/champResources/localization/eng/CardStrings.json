@@ -359,8 +359,8 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Gladiator Style",
-    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
+    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 temporary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 temporary Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
