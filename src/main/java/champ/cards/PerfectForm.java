@@ -21,15 +21,6 @@ public class PerfectForm extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ultimateStance();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    ((UltimateStance) AbstractDungeon.player.stance).timeLeft = magicNumber;
-                }
-            }
-        });
         applyToSelf(new UltimateFormPower(2));
     }
 
