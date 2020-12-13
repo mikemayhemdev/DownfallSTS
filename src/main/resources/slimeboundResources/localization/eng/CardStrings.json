@@ -93,7 +93,7 @@
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns."
+    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Strike",
@@ -320,7 +320,7 @@
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "Retain. NL Gain !M! guardianmod:Momentary Strength for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
@@ -334,7 +334,7 @@
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
-    "DESCRIPTION": "Retain. NL Gain !M! guardianmod:Momentary Dexterity for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",

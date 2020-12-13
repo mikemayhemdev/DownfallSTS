@@ -89,12 +89,12 @@
   "expansioncontent:DonusPower": {
     "NAME": "Donu's Power",
     "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Strength. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 0 this turn. NL Exhaust."
   },
   "expansioncontent:DecasProtection": {
     "NAME": "Deca's Protection",
     "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Ancients. NL Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 0 this turn. NL Exhaust."
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Twin Beam",
