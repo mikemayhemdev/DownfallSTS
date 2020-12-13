@@ -11,6 +11,7 @@ import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
 import charbosses.actions.utility.DestroyAntiCardsAction;
+import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.core.EnemyEnergyManager;
@@ -946,14 +947,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (this.currentHealth <= 0) {
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
-            if (NeowBoss.neowboss != null) {
-                if (NeowBoss.neowboss.minion == null) {
+            if (!(this instanceof CharBossMerchant)) {
+                if (NeowBoss.neowboss != null) {
+                    if (NeowBoss.neowboss.minion == null) {
+                        SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
+                        onBossVictoryLogic();
+                    }
+                } else {
                     SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
                     onBossVictoryLogic();
                 }
-            } else {
-                SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
-                onBossVictoryLogic();
             }
 
         }
