@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -44,7 +45,7 @@ public class StrikeOfGeniusPower extends AbstractPower implements CloneablePower
         for (int i = 0; i < this.amount; ++i) {
             ArrayList<AbstractCard> qCardList = new ArrayList<>();
             for (AbstractCard r : CardLibrary.getAllCards())
-                if (r.hasTag(ChampMod.OPENER)) qCardList.add(r);
+                if (!UnlockTracker.isCardLocked(r.cardID) && r.hasTag(ChampMod.OPENER)) qCardList.add(r);
             AbstractCard l = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
             l.freeToPlayOnce = true;
             this.addToBot(new MakeTempCardInHandAction(l));
