@@ -39,7 +39,9 @@ public class SneckoTalon extends CustomRelic {
                 if (!possCardsList.isEmpty()) {
                     flash();
                     AbstractCard q = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1));
-                    q.modifyCostForCombat(-1);
+                    q.costForTurn = q.cost - 1;
+                    q.isCostModifiedForTurn = true;
+                  //  q.isCostModified = true;
                     q.superFlash();
                 }
             }

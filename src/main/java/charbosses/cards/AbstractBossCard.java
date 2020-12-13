@@ -2,8 +2,8 @@ package charbosses.cards;
 
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.relics.CBR_BlueCandle;
-import charbosses.relics.CBR_MedicalKit;
+import charbosses.orbs.AbstractEnemyOrb;
+import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -14,18 +14,18 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.*;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EvolvePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BlueCandle;
-import com.megacrit.cardcrawl.relics.MedicalKit;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.BobEffect;
@@ -38,6 +38,8 @@ import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import static charbosses.cards.blue.EnZap.getFocusAmountSafe;
 
 public abstract class AbstractBossCard extends AbstractCard {
 
@@ -56,6 +58,9 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int energyGeneratedIfPlayed = 0;
     public static final String[] TEXT;
 
+    public int manualCustomDamageModifier = 0;
+    public boolean manualCustomVulnModifier = false;
+
 
     private static final float INTENT_HB_W = 64.0F * Settings.scale;
     public Hitbox intentHb = new Hitbox(INTENT_HB_W, INTENT_HB_W);
@@ -71,7 +76,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     private PowerTip intentTip = new PowerTip();
     public int intentDmg;
     public int intentBaseDmg;
-    private int intentMultiAmt;
+    protected int intentMultiAmt;
     private Color intentColor = Color.WHITE.cpy();
     private float intentParticleTimer;
     private float intentAngle;
@@ -118,9 +123,9 @@ public abstract class AbstractBossCard extends AbstractCard {
         return value;
     }
 
-    public int getPriority(ArrayList<AbstractCard> hand){
+    public int getPriority(ArrayList<AbstractCard> hand) {
         //Overwritten in each card as needed
-        if (this.type == CardType.STATUS){
+        if (this.type == CardType.STATUS) {
             return statusValue();
         } else {
             return autoPriority();
@@ -128,28 +133,51 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     }
 
-    public int getValue(){  //DEPRECATED
+    public int getValue() {  //DEPRECATED
         return 0;
     }
 
-    public int getUpgradeValue(){  //DEPRECATED
+    public int getUpgradeValue() {  //DEPRECATED
         return 0;
     }
 
     public int autoPriority() {
         AbstractCharBoss ownerBoss = (AbstractCharBoss) this.owner;
         boolean setupPhase = ownerBoss.onSetupTurn;
+
         float blockModifier = 1F;
         if (setupPhase) blockModifier = 1.5F;
+
         int value = 0;
         if (this.type == CardType.STATUS) {
             value += -10;
         } else if (this.type == CardType.CURSE) {
             value += -100;
         }
-        value += Math.max(this.damage, 0);
-        value += Math.max(this.block * 1.3F * blockModifier, 0);  //Block is weighted a little higher, and extra higher if in a Setup turn
+
+
+        if(this.type == CardType.ATTACK ){
+            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
+                value += Math.max(this.damage, 0);
+            }else {
+                value += Math.max(this.damage * 2.0f, 0);
+            }
+
+        }
+
+        value += Math.max(this.block * 1.3F * blockModifier, 0);
+
+        if(this.type == CardType.POWER || this.color == CardColor.COLORLESS ){
+            if ( ownerBoss.currentHealth > ownerBoss.maxHealth / 2){
+                value *= 5 ;
+            }else {
+                value /= 2 ;
+            }
+
+        }
+
         if (isEthereal) value *= 2;
+
         return value;
     }
 
@@ -195,7 +223,11 @@ public abstract class AbstractBossCard extends AbstractCard {
 
         multiDamageCardCalculate();
         this.initializeDescription();
-        if (this.intent != null) this.updateIntentTip();
+        if (this.intent != null) {
+            if (!this.bossDarkened)
+            //destroyIntent();
+            createIntent();
+        }
     }
 
     protected void applyPowersToBlock() {
@@ -298,7 +330,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     public boolean canUse(final AbstractPlayer p, final AbstractMonster m) {
         if (m instanceof AbstractCharBoss) {
-            /*
+
             AbstractCharBoss cB = (AbstractCharBoss) m;
 
             if ((this.type == CardType.STATUS) && (this.costForTurn < -1) &&
@@ -310,7 +342,7 @@ public abstract class AbstractBossCard extends AbstractCard {
                     (cB.hasRelic("Blue Candle"))) {
                 return true;
             }
-            */
+
             if (this.type == CardType.CURSE) return false;
             if (this.type == CardType.STATUS) return false;
 
@@ -338,7 +370,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         super.hover();
         if (!this.hov2) {
             this.hov2 = true;
-			EnemyCardGroup.hov2holder = this;
+            EnemyCardGroup.hov2holder = this;
             AbstractCharBoss.boss.hand.refreshHandLayout();
             this.targetDrawScale = AbstractBossCard.HOVER_SCALE;
             this.drawScale = AbstractBossCard.HOVER_SCALE;
@@ -349,9 +381,9 @@ public abstract class AbstractBossCard extends AbstractCard {
         super.unhover();
         if (this.hov2) {
             this.hov2 = false;
-			if (EnemyCardGroup.hov2holder == this) {
-				EnemyCardGroup.hov2holder = null;
-			}
+            if (EnemyCardGroup.hov2holder == this) {
+                EnemyCardGroup.hov2holder = null;
+            }
             AbstractCharBoss.boss.hand.refreshHandLayout();
             this.targetDrawScale = AbstractBossCard.HAND_SCALE;
         }
@@ -359,29 +391,29 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     ///////////// DARKEN IF IS NOT BEING USED IN A GIVEN TURN ////////////////
 
-        public void bossDarken(){
+    public void bossDarken() {
         if (!this.bossDarkened) {
             this.bossDarkened = true;
             SlimeboundMod.logger.info(this.name + " darkened.");
         }
-        }
+    }
 
-    public void bossLighten(){
+    public void bossLighten() {
         if (this.bossDarkened) {
             this.bossDarkened = false;
             SlimeboundMod.logger.info(this.name + " lightened.");
         }
-        }
+    }
 
 
     public void renderHelperB(SpriteBatch sb, Color color, TextureAtlas.AtlasRegion img, float drawX, float drawY) {
         sb.setColor(color);
-        sb.draw(img, drawX + img.offsetX - (float)img.originalWidth / 2.0F, drawY + img.offsetY - (float)img.originalHeight / 2.0F, (float)img.originalWidth / 2.0F - img.offsetX, (float)img.originalHeight / 2.0F - img.offsetY, (float)img.packedWidth, (float)img.packedHeight, this.drawScale * Settings.scale, this.drawScale * Settings.scale, this.angle);
+        sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, this.drawScale * Settings.scale, this.drawScale * Settings.scale, this.angle);
     }
 
     public void renderHelperB(SpriteBatch sb, Color color, TextureAtlas.AtlasRegion img, float drawX, float drawY, float scale) {
         sb.setColor(color);
-        sb.draw(img, drawX + img.offsetX - (float)img.originalWidth / 2.0F, drawY + img.offsetY - (float)img.originalHeight / 2.0F, (float)img.originalWidth / 2.0F - img.offsetX, (float)img.originalHeight / 2.0F - img.offsetY, (float)img.packedWidth, (float)img.packedHeight, this.drawScale * Settings.scale * scale, this.drawScale * Settings.scale * scale, this.angle);
+        sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, this.drawScale * Settings.scale * scale, this.drawScale * Settings.scale * scale, this.angle);
     }
 
     public void renderHelperB(SpriteBatch sb, Color color, Texture img, float drawX, float drawY) {
@@ -410,10 +442,8 @@ public abstract class AbstractBossCard extends AbstractCard {
             super.update();
             if (this.intent != null) updateIntent();
         }
-        if (this.bossDarkened){
-
+        if (this.bossDarkened) {
             ReflectionHacks.setPrivate(this, AbstractCard.class, "tintColor", new Color(255F * .43F, 255F * .37F, 255F * .65F, 0F));
-
         }
     }
 
@@ -424,7 +454,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     private void updateIntent() {
         this.bobEffect.update();
-        this.intentDmg = this.damage;
+        //this.intentDmg = this.damage;
         if (this.intentAlpha != this.intentAlphaTarget && this.intentAlphaTarget == 1.0F) {
             this.intentAlpha += Gdx.graphics.getDeltaTime();
             if (this.intentAlpha > this.intentAlphaTarget) {
@@ -444,8 +474,8 @@ public abstract class AbstractBossCard extends AbstractCard {
         Iterator i = this.intentVfx.iterator();
 
         AbstractGameEffect e;
-        while(i.hasNext()) {
-            e = (AbstractGameEffect)i.next();
+        while (i.hasNext()) {
+            e = (AbstractGameEffect) i.next();
             e.update();
             if (e.isDone) {
                 i.remove();
@@ -454,8 +484,8 @@ public abstract class AbstractBossCard extends AbstractCard {
 
         i = this.intentFlash.iterator();
 
-        while(i.hasNext()) {
-            e = (AbstractGameEffect)i.next();
+        while (i.hasNext()) {
+            e = (AbstractGameEffect) i.next();
             e.update();
             if (e.isDone) {
                 i.remove();
@@ -506,7 +536,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     private void updateIntentTip() {
-        switch(this.intent) {
+        switch (this.intent) {
             case ATTACK:
                 this.intentTip.header = TEXT[0];
                 if (this.isMultiDamage) {
@@ -612,7 +642,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     private Texture getAttackIntentTip() {
         int tmp;
-        if (this.isMultiDamage) {
+        if (this.isMultiDamage || this.intentMultiAmt > 0) {
             tmp = this.intentDmg * this.intentMultiAmt;
         } else {
             tmp = this.intentDmg;
@@ -634,7 +664,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
 
-    public void multiDamageCardCalculate(){
+    public void multiDamageCardCalculate() {
     }
 
     public void createIntent() {
@@ -644,7 +674,14 @@ public abstract class AbstractBossCard extends AbstractCard {
         //bossLighten();
         refreshIntentHbLocation();
         this.intentParticleTimer = 0.5F;
-        this.intentBaseDmg = this.damage;
+        calculateCardDamage(null);
+        this.intentBaseDmg = this.intentDmg = (this.damage + customIntentModifiedDamage() + manualCustomDamageModifier);
+
+        SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
+
+        SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
+        SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier);
+
         if (this.damage > -1) {
             this.calculateCardDamage(null);
             if (this.isMultiDamage) {
@@ -665,8 +702,12 @@ public abstract class AbstractBossCard extends AbstractCard {
         //SlimeboundMod.logger.info(this.name + " intent made.");
     }
 
+    public int customIntentModifiedDamage(){
+        return 0;
+    }
+
     public void destroyIntent() {
-        if (this.intent != null){
+        if (this.intent != null) {
             this.intentImg = null;
             this.intentBg = null;
             this.intentAlpha = 0F;
@@ -700,7 +741,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     private Texture getIntentImg() {
-        switch(this.intent) {
+        switch (this.intent) {
             case ATTACK:
                 return this.getAttackIntent();
             case ATTACK_BUFF:
@@ -737,7 +778,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     private Texture getIntentBg() {
-        switch(this.intent) {
+        switch (this.intent) {
             case ATTACK_DEFEND:
                 return null;
             default:
@@ -747,7 +788,7 @@ public abstract class AbstractBossCard extends AbstractCard {
 
     protected Texture getAttackIntent() {
         int tmp;
-        if (this.isMultiDamage) {
+        if (this.isMultiDamage || this.intentMultiAmt > 0) {
             tmp = this.intentDmg * this.intentMultiAmt;
         } else {
             tmp = this.intentDmg;
@@ -769,22 +810,29 @@ public abstract class AbstractBossCard extends AbstractCard {
     }
 
     private void renderDamageRange(SpriteBatch sb) {
-        //SlimeboundMod.logger.info(this.name + " " + this.isMultiDamage);
-        if (this.intent.name().contains("ATTACK")) {
-            if (this.isMultiDamage) {
-                FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, this.intentDmg + "x" + this.intentMultiAmt, this.intentHb.cX - 30.0F * Settings.scale, this.intentHb.cY + this.bobEffect.y - 12.0F * Settings.scale, this.intentColor);
-            } else {
-                FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(this.intentDmg), this.intentHb.cX - 30.0F * Settings.scale, this.intentHb.cY + this.bobEffect.y - 12.0F * Settings.scale, this.intentColor);
-            }
+        if (this.intent.name().contains("ATTACK") || alwaysDisplayText) {
+            FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, overrideIntentText(), this.intentHb.cX - 30.0F * Settings.scale, this.intentHb.cY + this.bobEffect.y - 12.0F * Settings.scale, this.intentColor);
         }
+    }
 
+    public boolean alwaysDisplayText = false;
+
+    public String overrideIntentText() {
+        if (this.type == CardType.POWER && owner.hasPower(EnemyStormPower.POWER_ID)) {
+            return "(" + ( 3 + AbstractEnemyOrb.masterPretendFocus + getFocusAmountSafe()) + ")";
+        }
+        if (this.isMultiDamage) {
+            return intentDmg + "x" + intentMultiAmt;
+        } else {
+            return Integer.toString(intentDmg);
+        }
     }
 
     private void renderIntentVfxBehind(SpriteBatch sb) {
         Iterator var2 = this.intentVfx.iterator();
 
-        while(var2.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect)var2.next();
+        while (var2.hasNext()) {
+            AbstractGameEffect e = (AbstractGameEffect) var2.next();
             if (e.renderBehind) {
                 e.render(sb);
             }
@@ -795,8 +843,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     private void renderIntentVfxAfter(SpriteBatch sb) {
         Iterator var2 = this.intentVfx.iterator();
 
-        while(var2.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect)var2.next();
+        while (var2.hasNext()) {
+            AbstractGameEffect e = (AbstractGameEffect) var2.next();
             if (!e.renderBehind) {
                 e.render(sb);
             }
@@ -826,13 +874,12 @@ public abstract class AbstractBossCard extends AbstractCard {
 
         Iterator var2 = this.intentFlash.iterator();
 
-        while(var2.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect)var2.next();
+        while (var2.hasNext()) {
+            AbstractGameEffect e = (AbstractGameEffect) var2.next();
             e.render(sb, this.intentHb.cX - 64.0F, this.intentHb.cY - 64.0F);
         }
 
     }
-
 
 
     static {

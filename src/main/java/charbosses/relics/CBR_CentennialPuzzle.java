@@ -1,7 +1,5 @@
 package charbosses.relics;
 
-import charbosses.actions.common.EnemyDrawCardAction;
-import charbosses.actions.util.CharbossSortHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -34,9 +32,9 @@ public class CBR_CentennialPuzzle extends AbstractCharbossRelic {
             if (damageAmount > 0 && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !usedThisCombat) {
                 this.flash();
                 this.pulse = false;
-                this.addToTop(new EnemyDrawCardAction(this.owner, 3));
+                //this.addToTop(new EnemyDrawCardAction(this.owner, 3));
                 this.addToTop(new RelicAboveCreatureAction(this.owner, this));
-                this.addToBot(new CharbossSortHandAction());
+                //this.addToBot(new CharbossSortHandAction());
                 usedThisCombat = true;
                 this.grayscale = true;
             }

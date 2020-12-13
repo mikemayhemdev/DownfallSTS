@@ -25,6 +25,7 @@ public class VentSteam extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
+    private static final int UPGRADE_COST = 0;
     private static final int DEBUFFCOUNT = 2;
     private static final int UPGRADE_DEBUFF = 1;
     private static final int SOCKETS = 2;

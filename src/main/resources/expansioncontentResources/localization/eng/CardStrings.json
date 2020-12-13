@@ -98,7 +98,7 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Twin Beam",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice to a random enemy at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },
   "expansioncontent:PrepareCrush": {
@@ -116,8 +116,8 @@
   },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Study the Spire",
-    "DESCRIPTION": "Add a random Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "Add a random Upgraded Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. It costs 0 until played."
+    "DESCRIPTION": "Add a random Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. They costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Add a random Upgraded Colorless expansioncontent:Boss card to your hand at the start of your next !M! turns. They costs 0 until played."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
@@ -126,8 +126,8 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded Colorless expansioncontent:Boss to your hand. It costs 0 until played. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Colorless expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add a random Upgraded Colorless expansioncontent:Boss card to your hand. It costs 0 until played. NL Exhaust."
   },
   "expansioncontent:Corrupt": {
     "NAME": "Corrupt",
@@ -140,7 +140,7 @@
   },
   "expansioncontent:ShieldSmash": {
     "NAME": "Armor Break",
-    "DESCRIPTION": "Retain. NL Remove all Block from the enemy. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Remove all Block from the enemy, then reduce their Dexterity by 2. NL Exhaust."
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
@@ -148,7 +148,7 @@
   },
   "expansioncontent:Debug": {
     "NAME": "Corrupt Core",
-    "DESCRIPTION": "Retain. NL Remove all enemy Orbs. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Enemy loses 10 Focus. They regain 2 of it per turn for 5 turns. NL Exhaust."
   },
   "expansioncontent:PeaceOut": {
     "NAME": "Dark Whisper",

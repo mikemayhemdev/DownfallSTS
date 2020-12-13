@@ -133,9 +133,10 @@ public class CharBossWatcher extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+        chosenArchetype = archetype;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
 
     }
 
@@ -175,6 +176,6 @@ public class CharBossWatcher extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight("downfall:CharBossWatcher");
+        downfallMod.saveBossFight(CharBossWatcher.ID);
     }
 }

@@ -58,6 +58,7 @@ public class SplitLicking extends AbstractSlimeboundCard {
             addToBot(new CommandAction());
         }
 
+        checkMinionMaster();
 
     }
 

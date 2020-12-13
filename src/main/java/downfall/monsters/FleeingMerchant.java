@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.actions.ForceWaitAction;
 import downfall.actions.MerchantThrowGoldAction;
+import downfall.downfallMod;
 import downfall.powers.SoulStealPower;
 import downfall.rooms.HeartShopRoom;
 import downfall.vfx.GainSingleSoulEffect;
@@ -59,7 +60,7 @@ Evil Mode villain cards
  */
 
 public class FleeingMerchant extends AbstractMonster {
-    public static final String ID = "downfall:FleeingMerchant";
+    public static final String ID = downfallMod.makeID("FleeingMerchant");
     public static final String NAME = CardCrawlGame.languagePack.getUIString("RunHistoryPathNodes").TEXT[8];
     public static final String[] DIALOG = {
 
@@ -109,6 +110,7 @@ public class FleeingMerchant extends AbstractMonster {
         setHp(400);
         this.currentHealth = CURRENT_HP;
 
+
         ESCAPED = false;
     }
 
@@ -126,7 +128,8 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.getCurrRoom().cannotLose = true;
+        AbstractDungeon.getCurrRoom().eliteTrigger = true;
+        //AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
 
         //AbstractDungeon.actionManager.addToTop(new TalkAction(this, (abuse >= 3 ? DIALOG[2] : DIALOG[0]), 0.5F, 3.0F));
@@ -146,7 +149,7 @@ public class FleeingMerchant extends AbstractMonster {
             if (hasPower(StrengthPower.POWER_ID)) {
                 CURRENT_STRENGTH = getPower(StrengthPower.POWER_ID).amount;
             }
-            AbstractDungeon.getCurrRoom().smoked = true;
+            AbstractDungeon.getCurrRoom().mugged = true;
             this.addToBot(new CanLoseAction());
             this.addToBot(new VFXAction(new SmokeBombEffect(hb.cX, hb.cY)));
             this.addToBot(new EscapeAction(this));
@@ -239,8 +242,10 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void die() {
+        /*
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();
+        */
         int increaseGold = 300;
         if (FleeingMerchant.CURRENT_SOULS > 0)
             increaseGold += FleeingMerchant.CURRENT_SOULS;
@@ -265,21 +270,20 @@ public class FleeingMerchant extends AbstractMonster {
     public static boolean helpEscaped = false;
     public static boolean helpDied = false;
 
+
     @Override
     public void update() {
         super.update();
         if (escaped && !ESCAPED) {
             ESCAPED = true;
             helpEscaped = true;
-            AbstractDungeon.overlayMenu.hideCombatPanels();// 51
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-            AbstractDungeon.combatRewardScreen.open();
         }
     }
 
+    /*
     @Override
     public void dispose() {
-
+        AbstractDungeon.player.releaseCard();
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         //AbstractDungeon.combatRewardScreen.open();
 
@@ -292,9 +296,15 @@ public class FleeingMerchant extends AbstractMonster {
             CardCrawlGame.fadeIn(1.5F);
             AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
             tRoom.onPlayerEntry();
+            AbstractDungeon.player.hand.clear();
+            AbstractDungeon.player.drawPile.clear();
+            AbstractDungeon.player.limbo.clear();
+            AbstractDungeon.player.discardPile.clear();
+            AbstractDungeon.player.exhaustPile.clear();
             AbstractDungeon.closeCurrentScreen();
 
         }
         super.dispose();
     }
+    */
 }

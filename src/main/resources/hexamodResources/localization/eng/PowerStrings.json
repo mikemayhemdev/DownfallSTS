@@ -92,8 +92,8 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract."
+      "If you start and end your turn with the same Ghostflame active, gain ",
+      " #yStrength."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -106,14 +106,17 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Ghostly Gifts",
     "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, gain ",
+      "Whenever an #yEthereal card is #yExhausted, draw ",
+      " cards",
+      " card",
       " next turn."
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {
     "NAME": "Ghostly Gifts+",
     "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, draw ",
+      "Whenever an #yEthereal card is #yExhausted, gain ",
+      " and draw ",
       " cards",
       " card",
       " next turn."

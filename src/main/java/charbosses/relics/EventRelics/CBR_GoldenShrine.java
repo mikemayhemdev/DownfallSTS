@@ -1,14 +1,9 @@
 package charbosses.relics.EventRelics;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
-import charbosses.cards.curses.EnRegret;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
-
-import java.util.ArrayList;
 
 
 public class CBR_GoldenShrine extends AbstractCharbossRelic {
@@ -21,15 +16,6 @@ public class CBR_GoldenShrine extends AbstractCharbossRelic {
     public CBR_GoldenShrine() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/goldenshrine.png")));
         this.largeImg = null;
-    }
-
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        relicName = AbstractCharBoss.boss.chosenArchetype.addRandomGlobalRelic(actIndex,this.owner,"Golden Shrine", list);
-        AbstractCharBoss.boss.chosenArchetype.addSpecificCard("Golden Shrine",new EnRegret());
-
-        this.description = getUpdatedDescription();
-        refreshDescription();
     }
 
     @Override

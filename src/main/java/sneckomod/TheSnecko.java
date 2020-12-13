@@ -1,5 +1,6 @@
 package sneckomod;
 
+import com.megacrit.cardcrawl.helpers.*;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -15,10 +16,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import slimebound.SlimeboundMod;
@@ -104,6 +101,28 @@ public class TheSnecko extends CustomPlayer {
                 90, 90, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
+
+
+    @Override
+    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
+        if (ModHelper.isModEnabled("Red Cards")) {
+            CardLibrary.addRedCards(tmpPool);
+        }
+        if (ModHelper.isModEnabled("Green Cards")) {
+            CardLibrary.addGreenCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Blue Cards")) {
+            CardLibrary.addBlueCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Purple Cards")) {
+            CardLibrary.addPurpleCards(tmpPool);
+        }
+
+        return super.getCardPool(tmpPool);
+    }
+
 
     @Override
     public ArrayList<String> getStartingDeck() {

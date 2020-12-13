@@ -77,9 +77,10 @@ public class CharBossIronclad extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+        chosenArchetype = archetype;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
 
         //archetypes.add(new ArchetypeIcStrike());
         //archetypes.add(new ArchetypeIcStrength());
@@ -128,7 +129,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                 break;
         }
 
-        downfallMod.saveBossFight("downfall:CharBossIronclad");
+        downfallMod.saveBossFight(CharBossIronclad.ID);
     }
 
 }

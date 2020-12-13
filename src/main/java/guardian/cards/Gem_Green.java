@@ -12,7 +12,9 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.GREEN;
 
 
@@ -50,6 +52,8 @@ public class Gem_Green extends AbstractGuardianCard {
         this.baseMagicNumber = this.magicNumber = DAMAGEBUFF;
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = GREEN;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Emerald.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

@@ -24,7 +24,7 @@ public class EnBite extends AbstractBossCard {
     }
 
     public EnBite() {
-        super(ID, EnBite.cardStrings.NAME, "colorless/attack/bite", 1, EnBite.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, EnBite.cardStrings.NAME, "colorless/attack/bite", 1, EnBite.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         this.baseDamage = 7;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;

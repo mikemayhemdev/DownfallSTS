@@ -435,14 +435,14 @@ public class CharacterSelectScreenPatches {
                         }
 
                         FontHelper.cardTitleFont.getData().setScale(1.0F);
-                        FontHelper.bannerFont.getData().setScale(0.8F);
+                        FontHelper.losePowerFont.getData().setScale(0.8F);
 
                         if (reskinCount != 0 && reskinUnlockChecker(i)) {
                             FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimationType")).TEXT[reskinContent.portraitAnimationType], Settings.WIDTH / 2.0F - reskinX_center, 920.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
-                            FontHelper.renderFontCentered(sb, FontHelper.bannerFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimation")).TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 970 * Settings.scale, Settings.GOLD_COLOR);
+                            FontHelper.renderFontCentered(sb, FontHelper.losePowerFont, CardCrawlGame.languagePack.getUIString(reskinContent.makeID("PortraitAnimation")).TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 970 * Settings.scale, Settings.GOLD_COLOR);
                         }
                         if (reskinUnlockChecker(i)) {
-                            FontHelper.renderFontCentered(sb, FontHelper.bannerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
+                            FontHelper.renderFontCentered(sb, FontHelper.losePowerFont, TEXT[0], Settings.WIDTH / 2.0F - reskinX_center, 850.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
                             FontHelper.renderFontCentered(sb, FontHelper.cardTitleFont, TEXT[(reskinCount % 2) * (i + 1) + 1], Settings.WIDTH / 2.0F - reskinX_center, 800.0F * Settings.scale, Settings.GOLD_COLOR.cpy());
 
                         }
@@ -458,7 +458,7 @@ public class CharacterSelectScreenPatches {
     //                动态立绘
     @SpirePatch(clz = CharacterSelectScreen.class, method = "render")
     public static class CharacterSelectScreenPatch_portraitSkeleton {
-        @SpireInsertPatch(rloc = 45)
+        @SpireInsertPatch(rloc = 62)
         public static void Insert(CharacterSelectScreen __instance, SpriteBatch sb) {
             // Render your buttons/images by passing SpriteBatch
 

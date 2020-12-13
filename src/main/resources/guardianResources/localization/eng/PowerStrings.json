@@ -115,8 +115,8 @@
   "Guardian:AutomayhemPower": {
     "NAME": "Time Sifter",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yAccelerate.",
-      "At the end of your turn, #yAccelerate ",
+      "At the start of your turn, #yAccelerate.",
+      "At the start of your turn, #yAccelerate ",
       " times."
     ]
   },
@@ -124,15 +124,15 @@
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yArtifact and lose #b",
-      " [E] at the start of your turn if you have no #yArtifact."
+      " #yArtifact ",
+      " at the start of your turn if you have no #yArtifact."
     ]
   },
   "Guardian:ModeShiftPower": {
     "NAME": "Mode Shift",
     "DESCRIPTIONS": [
       "When you lose #b",
-      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode. NL The amount required to activate increases each time #yMode #yShift is activated.",
+      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode.",
       "#yMode #yShift already activated this turn."
     ]
   },
@@ -148,7 +148,6 @@
     "NAME": "Revenge",
     "DESCRIPTIONS": [
       "When #yDefensive #yMode is removed, gain ",
-      " #yStrength for each turn it was active. NL Currently will grant #b",
       " #yStrength."
     ]
   },

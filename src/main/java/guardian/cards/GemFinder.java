@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.powers.GemFinderPower;
+import sneckomod.SneckoMod;
 
 public class GemFinder extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GemFinder");
@@ -45,6 +46,8 @@ public class GemFinder extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

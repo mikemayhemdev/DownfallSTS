@@ -1,5 +1,6 @@
 package theHexaghost;
 
+import com.megacrit.cardcrawl.helpers.*;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
@@ -19,10 +20,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.RestRoom;
@@ -68,6 +65,8 @@ public class TheHexaghost extends CustomPlayer {
 
     public float renderscale = 1.0F;
     public float renderscale2 = 1.0F;
+
+    public static AbstractGhostflame startingFlame;
 
     private String atlasURL = "reskinContent/img/HexaghostMod/animation/Hexaghost_original.atlas";
     private String jsonURL = "reskinContent/img/HexaghostMod/animation/Hexaghost_original.json";
@@ -123,6 +122,7 @@ public class TheHexaghost extends CustomPlayer {
 
 
     }
+
 
     public static Color oscillarator() {
         oscillatingFader += Gdx.graphics.getRawDeltaTime() / 2;
@@ -180,6 +180,27 @@ public class TheHexaghost extends CustomPlayer {
         return new CharSelectInfo(NAMES[0], TEXT[0],
                 70, 70, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
+    }
+
+
+    @Override
+    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
+        if (ModHelper.isModEnabled("Red Cards")) {
+            CardLibrary.addRedCards(tmpPool);
+        }
+        if (ModHelper.isModEnabled("Green Cards")) {
+            CardLibrary.addGreenCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Blue Cards")) {
+            CardLibrary.addBlueCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Purple Cards")) {
+            CardLibrary.addPurpleCards(tmpPool);
+        }
+
+        return super.getCardPool(tmpPool);
     }
 
     @Override
@@ -298,5 +319,12 @@ public class TheHexaghost extends CustomPlayer {
         @SpireEnum(name = "HEXA_GHOST_PURPLE")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
+    }
+
+    @Override
+    public void applyStartOfTurnPowers() {
+        startingFlame = activeGhostFlame;
+        super.applyStartOfTurnPowers();
+
     }
 }

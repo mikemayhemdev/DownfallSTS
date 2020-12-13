@@ -1,6 +1,7 @@
 package theHexaghost.cards.seals;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,35 +32,36 @@ public abstract class AbstractSealCard extends AbstractHexaCard {
 
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-        if (!AbstractDungeon.player.hasRelic(TheBrokenSeal.ID)) {
-            ArrayList<String> sealList = new ArrayList<>();
-            for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
-                if (c instanceof AbstractSealCard) {
-                    if (!(sealList.contains(c.cardID))) {
-                        sealList.add(c.cardID);
-                    }
+
+        realUse(abstractPlayer, abstractMonster);
+        ArrayList<String> sealList = new ArrayList<>();
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (c instanceof AbstractSealCard) {
+                if (!(sealList.contains(c.cardID))) {
+                    sealList.add(c.cardID);
                 }
             }
-            if (playedAll(sealList)) {
-                ArrayList<String> notToRemoveList = new ArrayList<>();
-                ArrayList<AbstractCard> removeList = new ArrayList<>();
-                for (AbstractCard c : abstractPlayer.masterDeck.group) {
-                    if (c instanceof AbstractSealCard && !notToRemoveList.contains(c.cardID)) {
-                        notToRemoveList.add(c.cardID);
-                        removeList.add(c);
-                    }
+        }
+        if (playedAll(sealList)) {
+            ArrayList<String> notToRemoveList = new ArrayList<>();
+            ArrayList<AbstractCard> removeList = new ArrayList<>();
+            for (AbstractCard c : abstractPlayer.masterDeck.group) {
+                if (c instanceof AbstractSealCard && !notToRemoveList.contains(c.cardID)) {
+                    notToRemoveList.add(c.cardID);
+                    removeList.add(c);
                 }
-                for (AbstractPower p : AbstractDungeon.player.powers) {
-                    if (p instanceof RemoveMeBabey || p instanceof RepairPower) {
-                        addToTop(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, p));
-                    }
-                }
-                abstractPlayer.masterDeck.group.removeIf(removeList::contains);
-                addToTop(new VFXAction(new BrokenSealEffect()));
             }
-            realUse(abstractPlayer, abstractMonster);
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof RemoveMeBabey || p instanceof RepairPower) {
+                    addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, p, 1));
+                }
+            }
+
+            abstractPlayer.masterDeck.group.removeIf(removeList::contains);
+            addToTop(new VFXAction(new BrokenSealEffect()));
         }
     }
+
 
     public static boolean playedAll(ArrayList<String> sList) {
         return (sList.contains(FirstSeal.ID) && sList.contains(SecondSeal.ID) && sList.contains(ThirdSeal.ID) && sList.contains(FourthSeal.ID) && sList.contains(FifthSeal.ID) && sList.contains(SixthSeal.ID));

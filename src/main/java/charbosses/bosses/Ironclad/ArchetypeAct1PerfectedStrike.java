@@ -3,12 +3,14 @@ package charbosses.bosses.Ironclad;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.curses.EnDoubt;
 import charbosses.cards.red.*;
-import charbosses.relics.*;
-import charbosses.relics.EventRelics.CBR_Cleric;
-import charbosses.relics.EventRelics.CBR_Serpent;
-import charbosses.relics.EventRelics.CBR_UpgradeShrine;
-import charbosses.relics.EventRelics.CBR_Vampires;
+import charbosses.cards.status.EnWound;
+import charbosses.relics.CBR_MercuryHourglass;
+import charbosses.relics.CBR_NeowsBlessing;
+import charbosses.relics.CBR_Vajra;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
 
@@ -40,40 +42,79 @@ public class ArchetypeAct1PerfectedStrike extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
 
         addRelic(new CBR_Vajra());
-        addRelic(new CBR_WarPaint());   //Upgrade 2 Defends
-        addRelic(new CBR_Orichalcum());
-        addRelic(new CBR_Serpent());   //Money used to buy Orichalcum
-
-        /////   CARDS   /////
-        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;//Turn 1
-        addToDeck(new EnBash(), extraUpgrades);
-        addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnDoubt(), false);
-
-        //Turn 2
-        addToDeck(new EnMetallicize(), extraUpgrades);
-        addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnDefendRed(), false);
-
-        //Turn 3
-        addToDeck(new EnPerfectedStrike(), true);
-        addToDeck(new EnDefendRed(), true);
-        addToDeck(new EnStrikeRed(), false);
-
-        //Turn 4
-        addToDeck(new EnTwinStrike(), false);
-        addToDeck(new EnGhostlyArmor(), true);
-        addToDeck(new EnStrikeRed(), false);
-
-        //Turn 5
-        addToDeck(new EnStrikeRed(), false);
-        addToDeck(new EnInflame(), extraUpgrades);
-        addToDeck(new EnWildStrike(), true);
-
-
-
-
+        // addRelic(new CBR_WarPaint());   //Upgrade 2 Defends
+        // addRelic(new CBR_Orichalcum());
+        // addRelic(new CBR_Serpent());   //Money used to buy Orichalcum
     }
+
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnWildStrike(), true);
+                    addToList(cardsList, new EnGhostlyArmor(), true);
+                    addToList(cardsList, new EnDoubt(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnTwinStrike(), false);
+                    addToList(cardsList, new EnTrueGrit(), false);
+                    addToList(cardsList, new EnWound(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnBash(), extraUpgrades);  //Never uses during loop
+                    addToList(cardsList, new EnStrikeRed(), false);
+                    addToList(cardsList, new EnDefendRed(), true);  //Never uses during loop
+                    break;
+                case 3:
+                    addToList(cardsList, new EnPerfectedStrike(), true);
+                    addToList(cardsList, new EnStrikeRed(), false);  //Never uses during loop
+                    addToList(cardsList, new EnStrikeRed(), false);  //Never uses during loop
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnBash(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeRed(), false);
+                    addToList(cardsList, new EnDoubt(), false);
+                    break;
+                case 1:
+                    addToList(cardsList, new EnMetallicize(), extraUpgrades); //Removed
+                    addToList(cardsList, new EnWildStrike(), true);
+                    addToList(cardsList, new EnStrikeRed(), false);
+                    break;
+                case 2:
+                    addToList(cardsList, new EnPerfectedStrike(), true);  //6 strikes in deck
+                    addToList(cardsList, new EnDefendRed(), true);
+                    addToList(cardsList, new EnTwinStrike(), false);  //Not before Loop
+                    break;
+                case 3:
+                    addToList(cardsList, new EnGhostlyArmor(), true);
+                    addToList(cardsList, new EnTrueGrit(), false);
+                    addToList(cardsList, new EnWound(), false);
+                    break;
+                case 4:
+                    addToList(cardsList, new EnInflame(), extraUpgrades); //Removed
+                    AbstractBossCard c = new EnPummel();
+                    c.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c, false);
+                    addToList(cardsList, new EnStrikeRed(), false); //Not before Loop
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 4 && !looped) {
+            looped = true;
+            turn = 0;
+        } else if (turn > 3 && looped) {
+            turn = 0;
+        }
+        return cardsList;
+    }
+
 
     @Override
     public void initializeBonusRelic() {

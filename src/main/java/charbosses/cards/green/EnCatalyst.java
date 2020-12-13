@@ -31,10 +31,11 @@ public class EnCatalyst extends AbstractBossCard {
     public int getPriority(ArrayList<AbstractCard> hand) {
         if (AbstractDungeon.player != null){
             if (AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)){
-                return 10;
+                if(AbstractDungeon.player.getPower(EnemyPoisonPower.POWER_ID).amount > 20)
+                return 100;
             }
         }
-        return -10;
+        return -100;
     }
 
     @Override

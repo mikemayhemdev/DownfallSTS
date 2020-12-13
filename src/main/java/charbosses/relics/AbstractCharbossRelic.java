@@ -268,10 +268,6 @@ public abstract class AbstractCharbossRelic extends AbstractRelic {
         return false;
     }
 
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> groupToModify, int actIndex) {
-
-    }
-
     @Override
     public void onEnergyRecharge() {
 

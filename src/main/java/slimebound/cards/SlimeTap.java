@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 
 public class SlimeTap extends AbstractSlimeboundCard {
@@ -48,6 +49,7 @@ public class SlimeTap extends AbstractSlimeboundCard {
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

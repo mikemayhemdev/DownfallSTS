@@ -17,6 +17,7 @@ import slimebound.SlimeboundMod;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
+import sneckomod.SneckoMod;
 
 
 public class Repurpose extends AbstractSlimeboundCard {
@@ -45,6 +46,11 @@ public class Repurpose extends AbstractSlimeboundCard {
         this.baseMagicNumber = magicNumber = 4;
         exhaust = true;
         baseBlock = 4;
+
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+
+        this.tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

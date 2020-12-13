@@ -13,6 +13,7 @@ import guardian.GuardianMod;
 import guardian.actions.ReduceRightMostStasisAction;
 import guardian.orbs.StasisOrb;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 public class FastForward extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("FastForward");
@@ -23,10 +24,10 @@ public class FastForward extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_COST = 0;
+    private static final int UPGRADECOST = 0;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -47,6 +48,7 @@ public class FastForward extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         this.magicNumber = this.baseMagicNumber = 3;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -70,7 +72,7 @@ public class FastForward extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            this.upgradeBaseCost(UPGRADECOST);
         }
     }
 

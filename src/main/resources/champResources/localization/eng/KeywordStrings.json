@@ -1,0 +1,87 @@
+[
+  {
+    "PROPER_NAME": "Technique",
+    "NAMES": [
+      "technique",
+      "techniques",
+      "champ:[crown_icon]",
+      "[crown_icon]"
+    ],
+    "DESCRIPTION": "If you are in a #yStance, trigger its Technique bonus."
+  },
+  {
+    "PROPER_NAME": "Opener",
+    "NAMES": [
+      "opener",
+      "openers"
+    ],
+    "DESCRIPTION": "Switch #yStances."
+  },
+  {
+    "PROPER_NAME": "Combo",
+    "NAMES": [
+      "combo"
+    ],
+    "DESCRIPTION": "Extra effect when played in the listed #yStance."
+  },
+  {
+    "PROPER_NAME": "Finisher",
+    "NAMES": [
+      "finisher",
+      "finishers",
+      "[fist_icon]",
+      "champ:[fist_icon]"
+    ],
+    "DESCRIPTION": "After playing a Finisher, if you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn."
+  },
+  {
+    "PROPER_NAME": "Counter",
+    "NAMES": [
+      "counter"
+    ],
+    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+  },
+  {
+    "PROPER_NAME": "Resolve",
+    "NAMES": [
+      "resolve"
+    ],
+    "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve. At the end of combat, heal HP equal to your Resolve."
+  },
+  {
+    "PROPER_NAME": "Defensive",
+    "NAMES": [
+      "defensive"
+    ],
+    "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounter. #yFinisher: Gain #b12 #yBlock. End your turn."
+  },
+  {
+    "PROPER_NAME": "Berserker",
+    "NAMES": [
+      "berserker"
+    ],
+    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y3. #yFinisher: Lose all your #yResolve and gain that much HP, preserving #yStrength. End your turn."
+  },
+  {
+    "PROPER_NAME": "Gladiator",
+    "NAMES": [
+      "gladiator"
+    ],
+    "DESCRIPTION": "#yStance. #yTechnique: Draw #b1 card. #yFinisher: Next turn, draw #b1 card and gain [E] . End your turn."
+  },
+  {
+    "PROPER_NAME": "Ultimate Stance",
+    "NAMES": [
+      "ultimate",
+      "ultimate"
+    ],
+    "DESCRIPTION": "#yStance. Counts as all #b3 #yStances. Finishers do not end your turn or exit the Stance. You can't change to any other #yStance."
+  },
+  {
+    "PROPER_NAME": "Fatigue",
+    "NAMES": [
+      "fatigue"
+    ],
+    "DESCRIPTION": "Lose HP and gain an equal amount of #yResolve."
+  }
+]

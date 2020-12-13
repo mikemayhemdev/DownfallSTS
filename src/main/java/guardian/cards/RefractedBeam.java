@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
+import guardian.actions.ModifyMagicNumberAction;
 import guardian.patches.AbstractCardEnum;
 import guardian.vfx.SmallLaserEffectColored;
 
@@ -59,7 +60,7 @@ public class RefractedBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        exhaust = true;
+       // exhaust = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
     }
 
@@ -86,6 +87,7 @@ public class RefractedBeam extends AbstractGuardianCard {
 
         }
 
+        addToBot(new ModifyMagicNumberAction(this.uuid, -2));
     }
 
     public AbstractCard makeCopy() {

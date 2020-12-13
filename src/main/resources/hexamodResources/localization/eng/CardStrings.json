@@ -73,8 +73,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Here and Now",
-    "DESCRIPTION": "At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain !M! Strength. NL Lose this Strength when you hexamod:Advance or hexamod:Retract."
+    "DESCRIPTION": "If you start and end your turn with the same Ghostflame active, gain !M! Strength."
   },
   "hexamod:HauntingEcho": {
     "NAME": "Haunting Echo",
@@ -94,7 +93,7 @@
     "DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand.",
     "UPGRADE_DESCRIPTION": "Choose an Attack or Skill to Exhaust. NL Add a random card of the opposite type into your hand. NL It costs 1 less.",
     "EXTENDED_DESCRIPTION": [
-      "to Exhaust for Necessary Sacrifice."
+      "to Exhaust for Worthy Sacrifice."
     ]
   },
   "hexamod:TimeOfNeed": {
@@ -148,9 +147,11 @@
   "hexamod:RecurringNightmare": {
     "NAME": "Nightmare Vision",
     "DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put an Ethereal card from your exhaust pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Put 2 Ethereal cards from your exhaust pile into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Choose an Ethereal card to return to your hand."
+      "Choose an Ethereal card to return to your hand.",
+      "Choose ",
+      " Ethereal cards to return to your hand."
     ]
   },
   "hexamod:GiftsFromTheDead": {
@@ -263,8 +264,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X+1 times."
+    "DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times. NL If X is 3 or more, apply 1 Weak and Vulnerable to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !burny! hexamod:Soulburn to a random enemy X times. NL If X is 3 or more, apply 2 Weak and Vulnerable to ALL enemies."
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",

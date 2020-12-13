@@ -62,7 +62,7 @@ public class ChronoBoostPower extends TwoAmountPower implements CloneablePowerIn
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1] +amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + (amount2 + 1) + DESCRIPTIONS[1] +amount + DESCRIPTIONS[2];
     }
 
 }

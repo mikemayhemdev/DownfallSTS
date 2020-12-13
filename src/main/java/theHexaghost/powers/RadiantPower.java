@@ -45,10 +45,12 @@ public class RadiantPower extends AbstractPower implements CloneablePowerInterfa
     public void onCharge(AbstractGhostflame g) {
         flash();
         if (!AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
-            AbstractMonster m = AbstractDungeon.getRandomMonster();
-            if (!m.isDead && !m.isDying) {
-                addToBot(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
-                addToBot(new ApplyPowerAction(m, owner, new BurnPower(m, amount), amount));
+            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+            if (m!=null) {
+                if (!m.isDead && !m.isDying) {
+                    addToBot(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.5F));// 173
+                    addToBot(new ApplyPowerAction(m, owner, new BurnPower(m, amount), amount));
+                }
             }
         }
     }

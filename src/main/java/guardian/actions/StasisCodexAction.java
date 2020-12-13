@@ -31,7 +31,7 @@ public class StasisCodexAction extends AbstractGameAction {
                     codexCard.current_x = -1000.0F * Settings.scale;
 
                     if (GuardianMod.canSpawnStasisOrb()) {
-                        AbstractDungeon.actionManager.addToTop(new ChannelAction(new StasisOrb(codexCard)));
+                        AbstractDungeon.actionManager.addToTop(new PlaceActualCardIntoStasis(codexCard));
                         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                     } else {
                         AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, GuardianCharacter.TEXT[6], true));

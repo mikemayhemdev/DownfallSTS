@@ -36,7 +36,7 @@
   },
   "downfall:AscensionText": {
     "TEXT": [
-      "19. Bosses have an extra Relic.",
+      "19. Bosses have better card draw.",
       "20. Act 3 Boss has Lizard Tail and Magic Flower.",
       "Obtain the Ruby Key. Break it later."
     ]
@@ -48,7 +48,8 @@
       "Allow Standard runs to encounter global events from Downfall.",
       "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
       "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
-      "Allow Standard runs to encounter Downfall Curse cards."
+      "Allow Standard runs to encounter Downfall Curse cards.",
+      "Downfall runs use traditional Map layout - fire before boss, not at start."
     ]
   },
   "downfall:EnergyPanelTip": {
@@ -102,9 +103,8 @@
   },
   "downfall:OctoChoiceAction": {
     "TEXT": [
-      "Choose a Wish to use.",
-      "You should never see this.",
-      "Choose a Slime."
+      "Choose an option.",
+      "You should never see this. Oops"
     ]
   },
   "downfall:BossCardReward": {

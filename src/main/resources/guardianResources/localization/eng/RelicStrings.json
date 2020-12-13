@@ -28,7 +28,7 @@
     ]
   },
   "Guardian:PocketSentry": {
-    "NAME": "Pocket Sentry",
+    "NAME": "Arumba's Pocket Sentry",
     "FLAVOR": "Sentry Mode active. Target acquired. No hard feelings.",
     "DESCRIPTIONS": [
       "At the start of each turn, alternates between: NL Deal #b",
@@ -94,7 +94,7 @@
     "NAME": "Cooling Fluid",
     "FLAVOR": "Hazardous. Do not consume.",
     "DESCRIPTIONS": [
-      "When a card with a #yguardianmod:Tick effect enters #yguardianmod:Stasis, increase its turn counter by #b2."
+      "Start each combat with #b2 additional #yguardianmod:Stasis slots. NL When a card enters #yguardianmod:Stasis, increase its turn counter by #b2."
     ]
   },
   "Guardian:PickAxe": {

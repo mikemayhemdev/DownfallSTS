@@ -4,10 +4,7 @@ import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.daily.mods.AbstractDailyMod;
 import com.megacrit.cardcrawl.helpers.ModHelper;
-import downfall.dailymods.Hexed;
-import downfall.dailymods.Improvised;
-import downfall.dailymods.Jewelcrafting;
-import downfall.dailymods.WorldOfGoo;
+import downfall.dailymods.*;
 
 import java.util.HashMap;
 
@@ -23,7 +20,11 @@ public class ModHelperPatch {
         myMapD.put(Hexed.ID, new Hexed());
         myMapS.put(Improvised.ID, new Improvised());
         myMapG.put(Jewelcrafting.ID, new Jewelcrafting());
+        myMapG.put(Lament.ID, new Lament());
         myMapD.put(WorldOfGoo.ID, new WorldOfGoo());
+        myMapD.put(ExchangeController.ID, new ExchangeController());
+        myMapS.put(ChampStances.ID, new ChampStances());
+        myMapD.put(Enraging.ID, new Enraging());
         ReflectionHacks.setPrivateStatic(ModHelper.class, "starterMods", myMapS);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "genericMods", myMapG);
         ReflectionHacks.setPrivateStatic(ModHelper.class, "difficultyMods", myMapD);

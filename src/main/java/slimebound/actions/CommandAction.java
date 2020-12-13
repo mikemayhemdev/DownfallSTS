@@ -14,11 +14,7 @@ public class CommandAction extends AbstractGameAction {
         AbstractOrb oldestOrb = SlimeboundMod.getLeadingSlime();
         if (oldestOrb != null) {
             addToTop(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-            if (AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID)) {
-                for (int i = 0; i < AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount; i++) {
-                    addToTop(new TrigggerSpecificSlimeAttackAction(oldestOrb));
-                }
-            }
+
         }
     }
 }

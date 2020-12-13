@@ -1,0 +1,94 @@
+{
+  "hexamod:SpiritBrand": {
+    "NAME": "영혼 낙인",
+    "FLAVOR": "얽매인 수호자.",
+    "DESCRIPTIONS": [
+      "매턴 처음 영혼불꽃을 #y점화시, #y방어도 #b6 얻습니다."
+    ]
+  },
+  "hexamod:TheBrokenSeal": {
+    "NAME": "파괴된 봉인",
+    "FLAVOR": "무한한, 억제할 수 없는, 채워지지 않는 힘.",
+    "DESCRIPTIONS": [
+      "획득시, 최대 체력 #b10 상승합니다. 매전투 시작시 #b2 #y힘, #b2 #y민첩, 그리고 #b2 #yhexamod:작열 과 함께 합니다."
+    ]
+  },
+  "hexamod:UnbrokenSoul": {
+    "NAME": "에테르 낙인",
+    "FLAVOR": "우리가 더 잘할 수 있는지... 지켜보지.",
+    "DESCRIPTIONS": [
+      " ",
+      " 대체합니다. NL 매턴 처음 영혼불꽃을 #y점화시, [E] 와 #y방어도 #b3 얻습니다."
+    ]
+  },
+  "hexamod:IceCube": {
+    "NAME": "자타노스의 얼음 부적",
+    "FLAVOR": "난 차가움을... 느낀다.",
+    "DESCRIPTIONS": [
+      "매턴 시작시 [E] 얻습니다. #b4 턴 후 #yhexamod:영혼화상을 활성화시킵니다."
+    ]
+  },
+  "hexamod:SoulConsumer": {
+    "NAME": "보온석",
+    "FLAVOR": "불은 이걸 살아있는 것처럼 만들주지!",
+    "DESCRIPTIONS": [
+      "만약 #yhexamod:영혼화상이 폭발하면, 전투 후 HP #b2 회복합니다."
+    ]
+  },
+  "hexamod:RecyclingMachine": {
+    "NAME": "재활용기",
+    "FLAVOR": "언젠가, 이것도 재활용되겠지.",
+    "DESCRIPTIONS": [
+      "매전투시 처음 소멸하는 #y휘발성 카드 한 장, 손에 복사본을 추가합니다. 사용하기 전까지 비용은 #b0 입니다."
+    ]
+  },
+  "hexamod:MatchstickCase": {
+    "NAME": "교활한 티크재 성냥개비",
+    "FLAVOR": "모든 부분에서 빛이 난다고!",
+    "DESCRIPTIONS": [
+      "첫 턴 시작시, #yhexamod:활성화된 유령불꽃을 #yhexamod:점화하고 #yhexamod:확장 합니다."
+    ]
+  },
+  "hexamod:InflammatoryLetter": {
+    "NAME": "불쏘시개",
+    "FLAVOR": "불은 모든 걸 더 괜찮게 만들지.",
+    "DESCRIPTIONS": [
+      "매전투 시작시 #yhexamod:작열 #b1 개와 함께 시작합니다."
+    ]
+  },
+  "hexamod:SoulOfChaos": {
+    "NAME": "혼돈의 영혼",
+    "FLAVOR": "혼란은, 명백해졌다.",
+    "DESCRIPTIONS": [
+      "두번째 이글거리는 유령불꽃을 대혼란 유령불꽃이 됩니다. NL 대혼란 유령불꽃은 활성화된 상태에서 턴이 종료되면 활동합니다. NL 점화: 뽑을 카드 더미 가장 위에 있는 카드를 사용합니다."
+    ]
+  },
+  "hexamod:JarOfFuel": {
+    "NAME": "올렉사의 방패",
+    "FLAVOR": "요청만 있다면 언제든지 지키지.",
+    "DESCRIPTIONS": [
+      "첫번째 이글거리는 유령불꽃과 타오르는 유령불꽃의 위치를 바꿉니다."
+    ]
+  },
+  "hexamod:BolsterEngine": {
+    "NAME": "타오르는 불꽃 막대",
+    "FLAVOR": "불의 방패! 불꽃 강화.",
+    "DESCRIPTIONS": [
+      "매전투시 처음 사용하는 파워 카드가 #y방어도 #b6 과 #b1 #y힘 얻습니다."
+    ]
+  },
+  "hexamod:CandleOfCauterizing": {
+    "NAME": "붉은 양초",
+    "FLAVOR": "불은 타오른다...",
+    "DESCRIPTIONS": [
+      "공격카드로 막히지 않는 피해를 가할 때마다, #b1 #yhexamod:영혼화상 부여합니다."
+    ]
+  },
+  "hexamod:Sixitude": {
+    "NAME": "육각형 낙인",
+    "FLAVOR": "불, 불, 불, 불, 불, 더 많은 부우울!",
+    "DESCRIPTIONS": [
+      "카드 #b6 장 사용할 때마다, 무작위 적에게 피해 #b6 가합니다."
+    ]
+  }
+}

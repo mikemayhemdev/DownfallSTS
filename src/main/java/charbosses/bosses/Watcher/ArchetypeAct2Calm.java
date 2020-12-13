@@ -3,11 +3,15 @@ package charbosses.bosses.Watcher;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnRitualDagger;
+import charbosses.cards.curses.EnDoubt;
+import charbosses.cards.green.*;
 import charbosses.cards.purple.*;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
 
@@ -77,55 +81,118 @@ public class ArchetypeAct2Calm extends ArchetypeBaseDefect {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_SmoothStone());
         addRelic(new CBR_TeardropLocket());
-        addRelic(new CBR_Duplicator());
         addRelic(new CBR_MercuryHourglass());
         addRelic(new CBR_ArtOfWar());
-        addRelic(new CBR_Nest());
+        //addRelic(new CBR_Duplicator());
+       // addRelic(new CBR_Nest());
         //addRelic(new CBR_PhilosopherStone());
 
         /////   CARDS   /////
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
-        //Turn 1
-        addToDeck(new EnLikeWater(), false);
-        addToDeck(new EnStrikePurple(), false);
-        addToDeck(new EnStrikePurple(), false);
 
-        //Turn 2   - NO ATTACKS!
-        addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnDefendPurple(), false);
-        addToDeck(new EnRagnarok(), false);
+    }
 
-        //Turn 3   - Art of War gets triggered on this turn
-        addToDeck(new EnReachHeaven(), false);
-        addToDeck(new EnWaveOfTheHand(), extraUpgrades);
-        addToDeck(new EnCrushJoints(), false);
-
-        //Turn 4
-        addToDeck(new EnReachHeaven(), false);
-        addToDeck(new EnSashWhip(), extraUpgrades);
-        addToDeck(new EnThroughViolence(), false);
-
-        //Turn 5   - NO ATTACKS!
-        addToDeck(new EnLikeWater(), extraUpgrades);
-        addToDeck(new EnDefendPurple(), true);
-        addToDeck(new EnWallop(), true);
-
-        //Turn 6   - Art of War gets triggered on this turn
-        addToDeck(new EnDevaForm(), false);
-        addToDeck(new EnThroughViolence(), false);
-        AbstractBossCard c = new EnRitualDagger();
-        c.misc += 5;
-        c.applyPowers();
-        c.baseDamage = c.misc;
-        c.isDamageModified = false;
-        addToDeck(c, true);
-
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+            switch (turn) {
+                case 0:
+                    //4 Energy
+                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnReachHeaven(), false);
+                    break;
+                case 1:
+                    //5 Energy
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnThroughViolence(), false);
+                    break;
+                case 2:
+                    //6 Energy
+                    addToList(cardsList, new EnWaveOfTheHand(), extraUpgrades);
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnWallop(), true);
+                    break;
+                case 3:
+                    //7 Energy
+                    addToList(cardsList, new EnRagnarok(), false);
+                    addToList(cardsList, new EnReachHeaven(), false);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    break;
+                case 4:
+                    //8 Energy
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnThroughViolence(), false);
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    //Turn 1  - NO ATTACKS!
+                    addToList(cardsList, new EnLikeWater(), false);  //removed
+                    addToList(cardsList, new EnDefendPurple(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);  //not used
+                    break;
+                case 1:
+                    //Turn 2   - NO ATTACKS!  3 Energy (Art of War)
+                    addToList(cardsList, new EnWaveOfTheHand(), extraUpgrades);
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnDefendPurple(), false);  //not used
+                    break;
+                case 2:
+                    //Turn 2   - 3 Energy (Art of War)
+                    addToList(cardsList, new EnCrushJoints(), false);
+                    addToList(cardsList, new EnReachHeaven(), false);
+                    addToList(cardsList, new EnRagnarok(), false);  //not used
+                    break;
+                case 3:
+                    //Turn 4
+                    addToList(cardsList, new EnReachHeaven(), false);
+                    addToList(cardsList, new EnSashWhip(), extraUpgrades);  //not used
+                    addToList(cardsList, new EnThroughViolence(), false);  //not used
+                    break;
+                case 4:
+                    //Turn 5   NO ATTACKS!
+                    addToList(cardsList, new EnLikeWater(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnDefendPurple(), true);
+                    addToList(cardsList, new EnWallop(), true);  //not used
+                    break;
+                case 5:
+                    //Turn 6  3 energy (Art of War)
+                    addToList(cardsList, new EnDevaForm(), true);  //removed
+                    addToList(cardsList, new EnThroughViolence(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);  //not used
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 5 && !looped) {
+            looped = true;
+            turn = 0;
+        }
+        else if (turn > 4 && looped) {
+            turn = 0;
+        }
+        return cardsList;
 
     }
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_StrikeDummy());
+        addRelic(new CBR_CloakClasp());
     }
+
+    /*
+    AbstractBossCard c = new EnRitualDagger();  //removed
+                    c.misc += 5;
+                    c.applyPowers();
+                    c.baseDamage = c.misc;
+                    c.isDamageModified = false;
+                    addToDeck(c, true);
+     */
 }

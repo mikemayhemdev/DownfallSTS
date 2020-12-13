@@ -1,0 +1,121 @@
+{
+  "downfall:EvilMenuPanel": {
+    "TEXT": [
+      "몰락",
+      "첨탑을 오르려는 침입자들로부터 심장을 보호하십시오.",
+      "당신은 악당을 선택하세요",
+      "캠페인"
+    ]
+  },
+  "downfall:SoulToGoldChanges": {
+    "TEXT": [
+      "영혼",
+      "영혼이 얼마나 많은지 보여줍니다. 영혼은 심장의 보상으로 주어질 수 있습니다."
+    ]
+  },
+  "downfall:BustKeyButton": {
+    "TEXT": [
+      "루비를 파괴한다",
+      "사파이어를 파괴한다",
+      "에메랄드를 파괴한다",
+      "(자유 행동) 영혼 75 개를 사용: 키를 파괴한다 ",
+      "힘 1 얻는다.",
+      "최대체력이 10 증가한다.",
+      "민첩 1 얻는다.",
+      "키를 깨트린다!",
+      "요구 ",
+      " 영혼."
+    ]
+  },
+  "downfall:WheelSpinButton": {
+    "TEXT": [
+      "돌림판을 돌린다",
+      "(자유 행동) 돌림판을 돌린다.",
+      "다시 돌릴 수 없습니다."
+    ]
+  },
+  "downfall:AscensionText": {
+    "TEXT": [
+      "19. 보스는 추가 유물을 획득합니다.",
+      "20. 액트 3 보스는 도마뱀 꼬리와 마법의 꽃을 가지고 있습니다.",
+      "루비 키를 획득합니다. 부수는 것은 나중에 합니다."
+    ]
+  },
+  "downfall:ConfigMenuText": {
+    "TEXT": [
+      "Allow Standard runs to encounter global relics from Downfall's characters.",
+      "Allow Standard runs to encounter global potions from Downfall.",
+      "Allow Standard runs to encounter global events from Downfall.",
+      "Allow Standard runs to encounter Colorless Boss Cards from Downfall.",
+      "Allow Standard characters to play Downfall runs, and Villains to play in Standard runs.",
+      "Allow Standard runs to encounter Downfall Curse cards.",
+      "Downfall runs use traditional Map layout - fire before boss, not at start."
+    ]
+  },
+  "downfall:EnergyPanelTip": {
+    "TEXT": [
+      "적의 현재 에너지 숫자입니다. 카드를 사용하려면 에너지가 필요합니다."
+    ],
+    "EXTRA_TEXT": [
+      "에너지"
+    ]
+  },
+  "downfall:RemoveCardReward": {
+  "TEXT": [
+    "덱에서 카드 한 장 제거합니다.",
+    "제거할 카드를 선택하세요"
+  ]
+},
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "덱에서 카드 한 장 변화합니다.",
+      "변화할 카드를 선택하세요"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "덱에서 카드 한 장 강화합니다.",
+      "강화할 카드를 선택하세요"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "3개의 보스 유물 중 1개를 고르세요.",
+      "얻습니다 ",
+      ".",
+      "유물을 선택하세요.. 아무거나요"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "휘발성. NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "JAX 좀 찾아보자!"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "덱에 희귀 카드를 추가하세요"
+    ]
+  },
+  "downfall:OctoChoiceAction": {
+    "TEXT": [
+      "사용할 소망을 선택하세요.",
+      "당신은 이걸 절대 보면 안됩니다.",
+      "슬라임을 선택하세요."
+    ]
+  },
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "덱에 보스 카드를 추가하세요"
+    ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "살아있는 벽 머리들"
+    ]
+  }
+}

@@ -17,6 +17,13 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.ChampMod;
+import champ.cards.ModFinisher;
+import champ.monsters.BlackKnight;
+import champ.powers.LastStandModPower;
+import champ.relics.ChampStancesModRelic;
+import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
@@ -35,7 +42,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Slimed;
@@ -54,8 +63,10 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
+import com.megacrit.cardcrawl.relics.NeowsLament;
 import com.megacrit.cardcrawl.relics.VelvetChoker;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
@@ -101,8 +112,20 @@ import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SpireInitializer
 public class downfallMod implements
-        OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber
-        ,AddAudioSubscriber {
+        OnPlayerDamagedSubscriber,
+        OnStartBattleSubscriber,
+        PostDrawSubscriber,
+        PostDungeonInitializeSubscriber,
+        EditStringsSubscriber,
+        EditKeywordsSubscriber,
+        AddCustomModeModsSubscriber,
+        PostInitializeSubscriber,
+        EditRelicsSubscriber,
+        EditCardsSubscriber,
+        PostUpdateSubscriber,
+        StartGameSubscriber,
+        StartActSubscriber
+        , AddAudioSubscriber {
     public static final String modID = "downfall";
 
 
@@ -128,6 +151,8 @@ public class downfallMod implements
     public static boolean contentSharing_curses = true;
     public static boolean crossoverCharacters = true;
     public static boolean unlockEverything = false;
+    public static boolean normalMapLayout = false;
+
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
     public static final String PROP_POTION_SHARING = "contentSharing_potions";
@@ -136,10 +161,11 @@ public class downfallMod implements
     public static final String PROP_CURSE_SHARING = "contentSharing_curses";
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
+    public static final String PROP_NORMAL_MAP = "normalMapLayout";
 
-    public static String Act1BossFaced = "downfall:CharBossIronclad";
-    public static String Act2BossFaced = "downfall:CharBossSilent";
-    public static String Act3BossFaced = "downfall:CharBossDefect";
+    public static String Act1BossFaced = downfallMod.makeID("Ironclad");
+    public static String Act2BossFaced = downfallMod.makeID("Silent");
+    public static String Act3BossFaced = downfallMod.makeID("Defect");
 
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
@@ -150,7 +176,9 @@ public class downfallMod implements
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
             Settings.GameLanguage.ENG,
-            Settings.GameLanguage.ZHS
+            Settings.GameLanguage.ZHS,
+            Settings.GameLanguage.JPN,
+            Settings.GameLanguage.KOR
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
@@ -165,6 +193,7 @@ public class downfallMod implements
         configDefault.setProperty(PROP_POTION_SHARING, "TRUE");
         configDefault.setProperty(PROP_CARD_SHARING, "TRUE");
         configDefault.setProperty(PROP_CHAR_CROSSOVER, "FALSE");
+        configDefault.setProperty(PROP_NORMAL_MAP, "FALSE");
 //        configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
 
 
@@ -176,9 +205,10 @@ public class downfallMod implements
         new downfallMod();
     }
 
-    public static String makeID(String id) {
+    public static final String makeID(String id) {
         return modID + ":" + id;
     }
+
 
     public static String assetPath(String path) {
         return "downfallResources/" + path;
@@ -196,6 +226,8 @@ public class downfallMod implements
                 return "hexamodResources/" + path;
             case PACKAGE_EXPANSION:
                 return "expansioncontentResources/" + path;
+            case PACKAGE_CHAMP:
+                return "champResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -213,6 +245,7 @@ public class downfallMod implements
             config.setBool(PROP_POTION_SHARING, contentSharing_potions);
             config.setBool(PROP_CARD_SHARING, contentSharing_colorlessCards);
             config.setBool(PROP_CHAR_CROSSOVER, crossoverCharacters);
+            config.setBool(PROP_NORMAL_MAP, normalMapLayout);
 
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
             config.save();
@@ -268,6 +301,9 @@ public class downfallMod implements
 
         SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_SNECKO" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_SNECKO));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -337,6 +373,7 @@ public class downfallMod implements
         loadModKeywords(SneckoMod.getModID(), otherPackagePaths.PACKAGE_SNECKO);
         loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
+        loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
 
     }
 
@@ -411,12 +448,21 @@ public class downfallMod implements
             saveData();
         });
 
+        ModLabeledToggleButton normalMapBtn = new ModLabeledToggleButton(configStrings.TEXT[6],
+                350.0f, 350, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                normalMapLayout, settingsPanel, (label) -> {
+        }, (button) -> {
+            normalMapLayout = button.enabled;
+            saveData();
+        });
+
         settingsPanel.addUIElement(contentSharingBtnCurses);
         settingsPanel.addUIElement(contentSharingBtnEvents);
         settingsPanel.addUIElement(contentSharingBtnPotions);
         settingsPanel.addUIElement(contentSharingBtnRelics);
         settingsPanel.addUIElement(contentSharingBtnColorless);
         settingsPanel.addUIElement(characterCrossoverBtn);
+        settingsPanel.addUIElement(normalMapBtn);
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
 
@@ -720,7 +766,7 @@ public class downfallMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(Colosseum_Evil.ID, Colosseum_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof ChampChar))
                 //Event ID to Override//
                 .overrideEvent(Colosseum.ID)
                 //Event Type//
@@ -848,23 +894,23 @@ public class downfallMod implements
                         new downfall.monsters.FaceTrader()
                 }));
 
-        BaseMod.addMonster("downfall:LooterAlt", LooterAlt.NAME, () -> new MonsterGroup(
+        BaseMod.addMonster(LooterAlt.ID, LooterAlt.NAME, () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new LooterAlt(0.0F, 0.0F)
                 }));
 
-        BaseMod.addMonster("downfall:LooterAlt2", LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new MonsterGroup(
+        BaseMod.addMonster(makeID("LooterAlt2"), LocalizeHelper.RunHistoryMonsterNames.TEXT[6], () -> new MonsterGroup(
                 new AbstractMonster[]{
                         new LooterAlt(-200.0F, 15.0F),
                         new MuggerAlt(80.0F, 0.0F)
                 }));
 
-        BaseMod.addMonster("downfall:CharBossIronclad", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
-        BaseMod.addMonster("downfall:CharBossSilent", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
-        BaseMod.addMonster("downfall:CharBossDefect", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
-        BaseMod.addMonster("downfall:CharBossWatcher", () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
+        BaseMod.addMonster(CharBossIronclad.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()}));
+        BaseMod.addMonster(CharBossSilent.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()}));
+        BaseMod.addMonster(CharBossDefect.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()}));
+        BaseMod.addMonster(CharBossWatcher.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()}));
 
-        BaseMod.addMonster("downfall:NeowBoss", () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
+        BaseMod.addMonster(NeowBoss.ID, () -> new CharBossMonsterGroup(new AbstractMonster[]{new NeowBoss()}));
 
 
     }
@@ -890,6 +936,7 @@ public class downfallMod implements
         BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
         BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
         BaseMod.addRelic(new HeartsMalice(), RelicType.SHARED);
+        BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
     }
 
     @Override
@@ -940,10 +987,10 @@ public class downfallMod implements
         GoldToSoulPatches.changeGoldToSouls(!evilMode);
         if (!CardCrawlGame.loadingSave) {
             possEncounterList.clear();
-            possEncounterList.add("downfall:CharBossIronclad");
-            possEncounterList.add("downfall:CharBossSilent");
-            possEncounterList.add("downfall:CharBossDefect");
-            possEncounterList.add("downfall:CharBossWatcher");
+            possEncounterList.add(CharBossIronclad.ID);
+            possEncounterList.add(CharBossSilent.ID);
+            possEncounterList.add(CharBossDefect.ID);
+            possEncounterList.add(CharBossWatcher.ID);
             FleeingMerchant.DEAD = false;
             FleeingMerchant.CURRENT_HP = 400;
             FleeingMerchant.CURRENT_STRENGTH = 0;
@@ -971,6 +1018,13 @@ public class downfallMod implements
                 }
             }
         }
+
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.hasRelic(NeowBlessing.ID)) {
+                AbstractDungeon.player.increaseMaxHp(100, true);
+            }
+        }
+
     }
 
 
@@ -978,8 +1032,12 @@ public class downfallMod implements
         l.add(new CustomMod(WorldOfGoo.ID, "r", true));
         l.add(new CustomMod(Hexed.ID, "r", true));
         l.add(new CustomMod(Jewelcrafting.ID, "g", true));
+        l.add(new CustomMod(ChampStances.ID, "g", true));
+        l.add(new CustomMod(Enraging.ID, "r", true));
         l.add(new CustomMod(Improvised.ID, "g", true));
         l.add(new CustomMod(EvilRun.ID, "b", false));
+        l.add(new CustomMod(ExchangeController.ID, "r", true));
+        l.add(new CustomMod(Lament.ID, "g", true));
     }
 
     @Override
@@ -1003,8 +1061,26 @@ public class downfallMod implements
             AbstractDungeon.player.masterDeck.addToTop(new ExploitGems());
         }
 
+        if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID) || ModHelper.isModEnabled(ChampStances.ID)) {
+            RelicLibrary.getRelic(ChampStancesModRelic.ID).makeCopy().instantObtain();
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (!c.hasTag(ChampMod.TECHNIQUE))
+                    CardModifierManager.addModifier(c, new TechniqueMod());
+            }
+        }
+
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Hexed.ID)) || ModHelper.isModEnabled(Hexed.ID)) {
             RelicLibrary.getRelic(VelvetChoker.ID).makeCopy().instantObtain();
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ExchangeController.ID)) || ModHelper.isModEnabled(ExchangeController.ID)) {
+            RelicLibrary.getRelic(NeowBlessing.ID).makeCopy().instantObtain();
+
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Lament.ID)) || ModHelper.isModEnabled(Lament.ID)) {
+            RelicLibrary.getRelic(NeowsLament.ID).makeCopy().instantObtain();
+
         }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID)) {
@@ -1028,15 +1104,15 @@ public class downfallMod implements
             evilMode = true;
         }
 
-        if (AbstractDungeon.player instanceof TheHexaghost){
-            for (AbstractCard c : CardLibrary.getAllCards()){
-                if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)){
+        if (AbstractDungeon.player instanceof TheHexaghost) {
+            for (AbstractCard c : CardLibrary.getAllCards()) {
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD) && c.hasTag(AbstractCard.CardTags.HEALING)) {
                     c.tags.remove(AbstractCard.CardTags.HEALING);
                 }
             }
         } else {
-            for (AbstractCard c : CardLibrary.getAllCards()){
-                if (c.hasTag(HexaMod.GHOSTWHEELCARD)){
+            for (AbstractCard c : CardLibrary.getAllCards()) {
+                if (c.hasTag(HexaMod.GHOSTWHEELCARD)) {
                     c.tags.add(AbstractCard.CardTags.HEALING);
                 }
             }
@@ -1049,7 +1125,7 @@ public class downfallMod implements
         playedBossCardThisTurn = false;
     }
 
-    public static void saveBossFight(String ID){
+    public static void saveBossFight(String ID) {
         if (AbstractDungeon.getCurrRoom().event == null) {
             switch (AbstractDungeon.actNum) {
                 case 1: {
@@ -1086,7 +1162,8 @@ public class downfallMod implements
         PACKAGE_GUARDIAN,
         PACKAGE_HEXAGHOST,
         PACKAGE_SNECKO,
-        PACKAGE_EXPANSION;
+        PACKAGE_EXPANSION,
+        PACKAGE_CHAMP;
 
         otherPackagePaths() {
         }
@@ -1111,5 +1188,15 @@ public class downfallMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         playedBossCardThisTurn = false;
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
+            for (AbstractMonster m : abstractRoom.monsters.monsters)
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
+        }
+
     }
 }

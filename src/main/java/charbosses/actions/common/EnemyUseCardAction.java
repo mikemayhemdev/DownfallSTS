@@ -50,16 +50,6 @@ public class EnemyUseCardAction extends AbstractGameAction {
                 c.triggerOnCardPlayed(card);
             }
         }
-        for (final AbstractCard c : AbstractCharBoss.boss.discardPile.group) {
-            if (!card.dontTriggerOnUseCard) {
-                c.triggerOnCardPlayed(card);
-            }
-        }
-        for (final AbstractCard c : AbstractCharBoss.boss.drawPile.group) {
-            if (!card.dontTriggerOnUseCard) {
-                c.triggerOnCardPlayed(card);
-            }
-        }
         if (this.exhaustCard) {
             this.actionType = ActionType.EXHAUST;
         } else {

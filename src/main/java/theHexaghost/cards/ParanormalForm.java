@@ -12,8 +12,8 @@ public class ParanormalForm extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, RARE
 
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 3;
 
     public ParanormalForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);

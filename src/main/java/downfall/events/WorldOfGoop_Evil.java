@@ -7,10 +7,11 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import slimebound.cards.Icky;
 
 public class WorldOfGoop_Evil extends AbstractImageEvent {
-    public static final String ID = "downfall:WorldOfGoop";
+    public static final String ID = downfallMod.makeID("WorldOfGoop");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;

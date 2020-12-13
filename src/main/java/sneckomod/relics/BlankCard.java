@@ -2,10 +2,12 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.QueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import sneckomod.SneckoMod;
 import theHexaghost.util.TextureLoader;
 
@@ -35,9 +37,11 @@ public class BlankCard extends CustomRelic {
             AbstractMonster m = AbstractDungeon.getRandomMonster();
 
             card2.freeToPlayOnce = true;
-            card2.exhaust = true;
+            card2.purgeOnUse = true;
 
-            AbstractDungeon.actionManager.addToBottom(new QueueCardAction(card2, m));
+            flash();
+            AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(card2.makeStatEquivalentCopy()));
+            AbstractDungeon.actionManager.addToBottom(new NewQueueCardAction(card2, m));
             this.activated = true;
         }
     }

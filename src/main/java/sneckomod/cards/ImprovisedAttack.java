@@ -21,11 +21,13 @@ public class ImprovisedAttack extends AbstractSneckoCard {
         baseDamage = DAMAGE;
     }
 
+    public static AbstractCard storage;
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         AbstractCard q = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == CardType.ATTACK);
         makeInHand(q);
-        atb(new MuddleAction(q));
+        atb(new MuddleAction(storage));
     }
 
     public void upgrade() {

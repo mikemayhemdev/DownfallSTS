@@ -1,6 +1,7 @@
 
 package downfall.patches;
 
+import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -34,10 +35,16 @@ public class DeathScreenCharUnlockPatch {
               //  SlimeboundMod.logger.info("second if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
+            } else if (UnlockTracker.isCharacterLocked("Champ") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
+                //  SlimeboundMod.logger.info("second if");
+                __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
+                __instance.label = TEXT[40];
             } else if ((UnlockTracker.isCharacterLocked("Snecko")) &&
                     !(UnlockTracker.isCharacterLocked("SlimeBoss")) &&
                     !(UnlockTracker.isCharacterLocked("Guardian")) &&
-                    !(UnlockTracker.isCharacterLocked("Hexaghost")) && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT){
+                    !(UnlockTracker.isCharacterLocked("Hexaghost")) &&
+                    !(UnlockTracker.isCharacterLocked("Champ")) &&
+                    EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP){
              //   SlimeboundMod.logger.info("third if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
