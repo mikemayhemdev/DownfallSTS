@@ -458,10 +458,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     */
 
     public int getIntentDmg() {
-        int totalIntentDmg = 0;
+        int totalIntentDmg = -1;
         for (AbstractCard c : this.hand.group) {
             AbstractBossCard cB = (AbstractBossCard) c;
-            if (cB.intentDmg > 0) {
+            if (cB.intentDmg > 0 && !cB.bossDarkened) {
+                if (totalIntentDmg == -1) {
+                    totalIntentDmg = 0;
+                }
                 totalIntentDmg += cB.intentDmg;
             }
         }

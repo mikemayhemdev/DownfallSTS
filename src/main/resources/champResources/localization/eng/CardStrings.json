@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak. NL champ:Opener - Enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL champ:Opener - Enter a random Stance."
+    "DESCRIPTION": "Apply !M! Weak. NL Enter a random Stance.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Enter a random Stance."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -19,18 +19,18 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "champ:Opener - Choose a Stance.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card. NL champ:Opener - Choose a Stance.",
+    "DESCRIPTION": "Choose a Stance to Enter.",
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Choose a Stance to Enter.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Berserker champ:Opener.",
-      "champ:Defensive champ:Opener.",
-      "champ:Gladiator champ:Opener."
+      "Enter champ:Berserker.",
+      "Enter champ:Defensive.",
+      "Enter champ:Gladiator."
     ]
   },
   "champ:GladiatorsShout": {
     "NAME": "Gladiator's Shout",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "champ:Gladiator champ:Opener. NL Draw 2 cards."
+    "DESCRIPTION": "Enter champ:Gladiator. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Gladiator. NL Draw 2 cards."
   },
   "champ:SwordSigil": {
     "NAME": "Sword Sigil",
@@ -38,30 +38,30 @@
   },
   "champ:FocusedGladiator": {
     "NAME": "Focus: Gladiator",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
+    "DESCRIPTION": "Enter champ:Gladiator. NL Until you exit champ:Gladiator Stance, champ:Techniques draw 1 extra card."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter."
+    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter."
   },
   "champ:Balance": {
     "NAME": "Balance",
-    "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Defensive champ:Opener. NL Add a random *Defensive champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random *Gladiator champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
+      "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
+      "Enter champ:Defensive. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
     ]
   },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !M! champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter."
   },
   "champ:ShieldSigil": {
     "NAME": "Shield Sigil",
@@ -69,36 +69,36 @@
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Until you exit champ:Defensive Stance, champ:Techniques grant 3 extra champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL Until you exit champ:Defensive Stance, champ:Techniques grant 3 extra champ:Counter."
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 champ:Resolve."
+    "DESCRIPTION": "Enter champ:Berserker. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 champ:Resolve."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counter for each.",
-    "UPGRADE_DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !M! champ:Counter. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counter for each."
+    "DESCRIPTION": "Enter champ:Defensive. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counter for each.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counter for each."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to twice your champ:Resolve.",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to twice your champ:Resolve.",
     "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
   },
   "champ:Aggression": {
     "NAME": "Aggression",
-    "DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Berserker or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "DESCRIPTION": "Enter champ:Berserker or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Berserker or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Berserker champ:Opener. NL Add a random *Berserker champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random *Gladiator champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random Upgraded *Berserker champ:Combo to your hand.",
-      "champ:Gladiator champ:Opener. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
+      "Enter champ:Berserker. NL Add a random *Berserker champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
+      "Enter champ:Berserker. NL Add a random Upgraded *Berserker champ:Combo to your hand.",
+      "Enter champ:Gladiator. NL Add a random Upgraded *Gladiator champ:Combo to your hand."
     ]
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL champ:Fatigue !M!."
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!."
   },
   "champ:RageSigil": {
     "NAME": "Rage Sigil",
@@ -106,12 +106,12 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage twice. NL champ:Fatigue 2. NL *Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL champ:Fatigue 2. NL *Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage twice.",
-    "UPGRADE_DESCRIPTION": "champ:Berserker champ:Opener. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage three times."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage twice.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage three times."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
@@ -119,13 +119,13 @@
   },
   "champ:Control": {
     "NAME": "Control",
-    "DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "champ:Opener - champ:Defensive or champ:Berserker. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "DESCRIPTION": "Enter champ:Defensive or champ:Berserker. NL Add a random champ:Combo card to your hand of the chosen Stance.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Berserker. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Defensive champ:Opener. NL Add a random *Defensive champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random *Berserker champ:Combo to your hand.",
-      "champ:Defensive champ:Opener. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
-      "champ:Berserker champ:Opener. NL Add a random Upgraded *Berserker champ:Combo to your hand."
+      "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
+      "Enter champ:Berserker. NL Add a random *Berserker champ:Combo to your hand.",
+      "Enter champ:Defensive. NL Add a random Upgraded *Defensive champ:Combo to your hand.",
+      "Enter champ:Berserker. NL Add a random Upgraded *Berserker champ:Combo to your hand."
     ]
   },
   "champ:Circumvent": {
@@ -238,7 +238,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to buff or debuff and is not a Boss, Stun it."
+    "DESCRIPTION": "Deal !D! damage. NL If you are in a Stance, Stun the enemy, then Exhaust this."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
@@ -349,23 +349,23 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, add a random champ:Opener to your hand. NL It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded champ:Opener to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "At the start of your turn, add a random card that Enters a Stance to your hand. NL It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded card that Enters a Stance to your hand. NL It costs 0 until played."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "champ:Defensive champ:Opener. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL champ:Defensive champ:Opener. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter."
   },
   "champ:GladiatorStyle": {
     "NAME": "Gladiator Style",
-    "DESCRIPTION": "champ:Gladiator champ:Opener. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL champ:Gladiator champ:Opener. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
+    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "champ:Berserker champ:Opener. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
-    "UPGRADE_DESCRIPTION": "Innate. NL champ:Berserker champ:Opener. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
+    "DESCRIPTION": "Enter champ:Berserker. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
