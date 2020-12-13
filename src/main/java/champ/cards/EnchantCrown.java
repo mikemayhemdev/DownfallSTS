@@ -15,6 +15,8 @@ public class EnchantCrown extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
     //    tags.add(ChampMod.FINISHER);
         exhaust = true;
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBOGLADIATOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,9 +24,6 @@ public class EnchantCrown extends AbstractChampCard {
         exhaust = true;
         applyToSelf(new EnergizedDurationPower(3));
             if (gcombo()) exhaust = false;
-     //   finisher();
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
     }
 
     @Override

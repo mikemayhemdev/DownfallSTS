@@ -153,8 +153,8 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Gain 2 Dexterity. NL Exhaust unless in champ:Defensive.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL Exhaust unless in champ:Defensive."
+    "DESCRIPTION": "Gain 2 Dexterity. NL Unless champ:Defensive champ:Combo: Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL Unless champ:Defensive champ:Combo: Exhaust."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -162,7 +162,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Unless *Defensive champ:Combo: You can't gain Block next turn.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block. NL Unless champ:Defensive champ:Combo: You can't gain Block next turn.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "champ:FalseCounter": {
@@ -217,8 +217,8 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "Gain 2 Strength. NL Exhaust unless in champ:Berserker.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Exhaust unless in champ:Berserker."
+    "DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust."
   },
   "champ:BladeFlurry": {
     "NAME": "Blade Flurry",
@@ -369,8 +369,8 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator.",
-    "UPGRADE_DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator."
+    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust."
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",
