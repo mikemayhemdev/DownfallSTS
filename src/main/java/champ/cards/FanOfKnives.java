@@ -38,33 +38,13 @@ public class FanOfKnives extends AbstractChampCard {
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
         if (gcombo()) {
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    for (AbstractCard q : p.hand.group) {
-                        if (q.hasTag(ChampMod.TECHNIQUE)) {
-                            att(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AttackEffect.NONE));
-                            att(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
-                            if (upgraded){
-                                att(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AttackEffect.NONE));
-                                att(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+            atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+            allDmg(AbstractGameAction.AttackEffect.NONE);
+            if (upgraded) {
 
-                            }
-                            att(new AbstractGameAction() {
-                                @Override
-                                public void update() {
-                                    q.superFlash();
-                                    isDone = true;
-                                }
-                            });
-
-                            break;
-
-                        }
-                    }
-                }
-            });
+                atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+                allDmg(AbstractGameAction.AttackEffect.NONE);
+            }
         }
 
     }
@@ -75,7 +55,7 @@ public class FanOfKnives extends AbstractChampCard {
     }
 
     public void upp() {
-       // upgradeDamage(UPG_DAMAGE);
+        // upgradeDamage(UPG_DAMAGE);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
