@@ -19,6 +19,7 @@ public class MapCompatiblity {
         if (EvilModeCharacterSelect.evilMode)
         {
             return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y == 0 ? (AbstractDungeon.id.equals(TheEnding.ID) ? 2 : 14) : 13);
+
         }
 
         //There's a high possibility that this is the second y check, which the actlikeit patch isn't normally intended to change.
@@ -28,6 +29,7 @@ public class MapCompatiblity {
         if (AbstractDungeon.id.equals(TheEnding.ID))
         {
             return SpireReturn.Return(AbstractDungeon.getCurrMapNode().y);
+
         }
         return SpireReturn.Continue();
     }

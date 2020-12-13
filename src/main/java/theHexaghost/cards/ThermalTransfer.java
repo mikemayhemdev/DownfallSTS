@@ -30,8 +30,8 @@ public class ThermalTransfer extends AbstractHexaCard {
         atb(new VFXAction(new FireballEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         if (m.hasPower(BurnPower.POWER_ID)) {
-            addToTop(new GainBlockAction(p, block));
-            addToTop(new VFXAction(new FireballEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.5F));
+            atb(new GainBlockAction(p, block));
+            atb(new VFXAction(new FireballEffect(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY), 0.5F));
         }
     }
 

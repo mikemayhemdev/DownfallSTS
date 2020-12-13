@@ -28,7 +28,7 @@ public class ArmoredProtocol extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int METALLICIZE = 4;
+    private static final int METALLICIZE = 3;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -71,6 +71,7 @@ public class ArmoredProtocol extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }

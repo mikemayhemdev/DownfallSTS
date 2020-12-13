@@ -8,15 +8,11 @@ import charbosses.vfx.EnemyStanceAuraEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.StanceStrings;
-import com.megacrit.cardcrawl.stances.AbstractStance;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.stance.CalmParticleEffect;
-import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 
 public class EnCalmStance extends AbstractEnemyStance {
     public static final String STANCE_ID = "Calm";
@@ -34,20 +30,21 @@ public class EnCalmStance extends AbstractEnemyStance {
     }
 
     public void updateAnimation() {
-        if (!Settings.DISABLE_EFFECTS) {
-            this.particleTimer -= Gdx.graphics.getDeltaTime();
-            if (this.particleTimer < 0.0F) {
-                this.particleTimer = 0.04F;
-                AbstractDungeon.effectsQueue.add(new EnemyCalmParticleEffect());
+        if (AbstractCharBoss.boss != null) {
+            if (!Settings.DISABLE_EFFECTS) {
+                this.particleTimer -= Gdx.graphics.getDeltaTime();
+                if (this.particleTimer < 0.0F) {
+                    this.particleTimer = 0.04F;
+                    AbstractDungeon.effectsQueue.add(new EnemyCalmParticleEffect());
+                }
+            }
+
+            this.particleTimer2 -= Gdx.graphics.getDeltaTime();
+            if (this.particleTimer2 < 0.0F) {
+                this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
+                AbstractDungeon.effectsQueue.add(new EnemyStanceAuraEffect("Calm"));
             }
         }
-
-        this.particleTimer2 -= Gdx.graphics.getDeltaTime();
-        if (this.particleTimer2 < 0.0F) {
-            this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
-            AbstractDungeon.effectsQueue.add(new EnemyStanceAuraEffect("Calm"));
-        }
-
     }
 
     public void onEnterStance() {

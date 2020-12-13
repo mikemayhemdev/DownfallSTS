@@ -1,5 +1,7 @@
 package downfall.patches;
 
+import champ.ChampChar;
+import champ.ChampMod;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,18 +33,22 @@ public class EvilModeCharacterOption {
 
             } else if (__instance.c.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
 
-                if (UnlockTracker.isCharacterLocked("Guardian"))
-                {
+                if (UnlockTracker.isCharacterLocked("Guardian")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[1]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[2]);
                 }
-            } else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
-                if (UnlockTracker.isCharacterLocked("Hexaghost"))
-                {
+            } else if (__instance.c.chosenClass == ChampChar.Enums.THE_CHAMP) {
+                if (UnlockTracker.isCharacterLocked("Hexaghost")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[3]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[4]);
+                }
+            } else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+                if (UnlockTracker.isCharacterLocked("Champ")) {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[5]);
+                } else {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[6]);
                 }
             }
         }

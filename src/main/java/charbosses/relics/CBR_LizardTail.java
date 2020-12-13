@@ -12,7 +12,6 @@ public class CBR_LizardTail extends AbstractCharbossRelic {
 
     public CBR_LizardTail() {
         super(new LizardTail());
-        this.tier = RelicTier.BOSS;
     }
 
     @Override

@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 
 public class GoldenShrine_Evil extends AbstractImageEvent {
-    public static final String ID = "downfall:GoldenShrine";
+    public static final String ID = "downfall:SolShrine";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
@@ -29,8 +29,8 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
 
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString("Golden Shrine");
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = CardCrawlGame.languagePack.getEventString(ID).DESCRIPTIONS;
+        NAME = CardCrawlGame.languagePack.getEventString(ID).NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
         OPTIONS = eventStrings.OPTIONS;
         DIALOG_1 = DESCRIPTIONS[0];
         DIALOG_2 = DESCRIPTIONS[1];
@@ -38,7 +38,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
         IGNORE = DESCRIPTIONS[3];
     }
 
-    private int goldAmt;
+    private int goldAmt = 0;
     private CUR_SCREEN screen;
 
     public GoldenShrine_Evil() {
@@ -73,7 +73,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.screen = CUR_SCREEN.COMPLETE;
-                        logMetricGainGold("Golden Shrine", "Pray", this.goldAmt);
+                        //logMetricGainGold("Golden Shrine", "Pray", this.goldAmt);
                         this.imageEventText.updateBodyText(DIALOG_2);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
@@ -83,7 +83,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
                     case 1:
                         this.screen = CUR_SCREEN.COMPLETE;
                         AbstractCard curse = new Regret();
-                        logMetricGainGoldAndCard("Golden Shrine", "Desecrate", curse, 275);
+                       // logMetricGainGoldAndCard("Golden Shrine", "Desecrate", curse, 275);
                         AbstractDungeon.effectList.add(new RainingGoldEffect(275));
                         AbstractDungeon.player.gainGold(275);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
@@ -93,7 +93,7 @@ public class GoldenShrine_Evil extends AbstractImageEvent {
                         return;
                     case 2:
                         this.screen = CUR_SCREEN.COMPLETE;
-                        logMetricIgnored("Golden Shrine");
+                      //  logMetricIgnored("Golden Shrine");
                         this.imageEventText.updateBodyText(IGNORE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                         this.imageEventText.clearRemainingOptions();

@@ -18,8 +18,8 @@ public class ChargeAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (!HexaMod.renderFlames)
-            HexaMod.renderFlames = true;
+      //  if (!HexaMod.renderFlames)
+     //       HexaMod.renderFlames = true;
         isDone = true;
         if (bruh != 0) {
             int i = GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame);

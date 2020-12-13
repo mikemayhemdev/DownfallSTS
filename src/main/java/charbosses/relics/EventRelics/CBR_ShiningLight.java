@@ -1,15 +1,9 @@
 package charbosses.relics.EventRelics;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.cards.AbstractBossCard;
 import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
-
-import java.util.ArrayList;
 
 
 public class CBR_ShiningLight extends AbstractCharbossRelic {
@@ -22,16 +16,6 @@ public class CBR_ShiningLight extends AbstractCharbossRelic {
     public CBR_ShiningLight() {
         super(ID, tier, sound, new Texture(downfallMod.assetPath("images/relics/shininglight.png")));
         this.largeImg = null;
-    }
-
-    @Override
-    public void modifyCardsOnCollect(ArrayList<AbstractBossCard> list, int actIndex) {
-        cardName = AbstractCharBoss.boss.chosenArchetype.upgradeRandomCard("Shining Light");
-        cardName2 = AbstractCharBoss.boss.chosenArchetype.upgradeRandomCard("Shining Light");
-        this.owner.damage(new DamageInfo(this.owner, MathUtils.floor(this.owner.maxHealth * 0.08F), DamageInfo.DamageType.HP_LOSS));
-
-        this.description = getUpdatedDescription();
-        refreshDescription();
     }
 
     @Override

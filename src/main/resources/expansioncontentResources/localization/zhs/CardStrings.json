@@ -22,7 +22,7 @@
   },
   "expansioncontent:SuperHexaguard": {
     "NAME": "幽灵护盾",
-    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。虚无 。 NL hexamod:阴世 。获得 !B! 点 格挡 。 NL 抽一张牌。"
+    "DESCRIPTION": "expansioncontent:首领 - 六火亡魂。 虚无 。 NL hexamod:阴世 。获得 !B! 点 格挡 。 NL 抽一张牌。"
   },
   "expansioncontent:HyperBeam": {
     "NAME": "超能射线",
@@ -30,7 +30,7 @@
   },
   "expansioncontent:Flail": {
     "NAME": "链枷",
-    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害两次。 NL 获得 1 层 人工制品。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 机械人偶。 NL 对所有敌人造成 !D! 点伤害两次。 NL 获得 !M! 层 人工制品。 NL 消耗 。"
   },
   "expansioncontent:BronzeBeam": {
     "NAME": "铜球支援",
@@ -46,7 +46,8 @@
   },
   "expansioncontent:LastStand": {
     "NAME": "最后一战",
-    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 。"
+    "DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，获得 2 点 力量 。",
+    "UPGRADE_DESCRIPTION": "expansioncontent:首领 - 第一勇士。 NL 移除所有负面效果。 NL 获得 1 点 力量 。 NL 如果你半血以下，回复 !M! 点生命并获得 2 点 力量 。"
   },
   "expansioncontent:Collect": {
     "NAME": "收藏家",
@@ -120,8 +121,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "快速学习",
-    "DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它的耗能减少1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它的耗能减少1。 NL 消耗 。"
+    "DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "从3名boss中选择1名。 NL 获得对应的已 升级 的 expansioncontent:首领 牌。 NL 它们在打出前耗能为0。 NL 消耗 。"
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "恶灵附身",
@@ -143,7 +144,7 @@
   },
   "expansioncontent:Antidote": {
     "NAME": "解毒剂",
-    "DESCRIPTION": "保留 。 NL 移除所有的 中毒 。 NL 消耗 。"
+    "DESCRIPTION": "保留 。 NL 移除所有的 中毒 。 NL 中毒 将能被 格挡 ，且变为在你的回合结束时触发并层数减半。 NL 消耗 。"
   },
   "expansioncontent:Debug": {
     "NAME": "核心崩损",

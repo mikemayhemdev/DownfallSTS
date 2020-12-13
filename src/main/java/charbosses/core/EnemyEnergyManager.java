@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class EnemyEnergyManager extends EnergyManager {
 
@@ -38,6 +39,8 @@ public class EnemyEnergyManager extends EnergyManager {
         } else {
             EnemyEnergyPanel.setEnergy(this.energy);
         }
+
+
     }
 
     public void use(final int e) {

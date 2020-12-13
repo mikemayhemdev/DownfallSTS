@@ -37,7 +37,8 @@
  },
  "Slimebound:Overexert": {
   "NAME": "超负荷",
-  "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 回合后， slimeboundmod:吸收 所有史莱姆。"
+  "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL !M! 回合后， slimeboundmod:吸收 所有史莱姆。",
+  "UPGRADE_DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 回合后， slimeboundmod:吸收 所有史莱姆。"
  },
  "Slimebound:Split": {
   "NAME": "分裂",
@@ -311,7 +312,7 @@
  },
  "Slimebound:Icky": {
   "NAME": "黏液缠身",
-  "DESCRIPTION": "向手牌和抽牌堆各加入1张 *粘液 。 NL 消耗 。"
+  "DESCRIPTION": "将1张 *黏液 加入手牌。 NL 消耗 。"
  },
  "Slimebound:DivideAndConquerConquer": {
   "NAME": "统治",

@@ -30,7 +30,7 @@
   },
   "expansioncontent:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage twice to ALL enemies. NL Gain 1 Artifact. NL Exhaust."
+    "DESCRIPTION": "expansioncontent:Boss - Automaton. NL Deal !D! damage twice to ALL enemies. NL Gain !M! Artifact. NL Exhaust."
   },
   "expansioncontent:BronzeBeam": {
     "NAME": "Orb Support",
@@ -46,7 +46,8 @@
   },
   "expansioncontent:LastStand": {
     "NAME": "Last Stand",
-    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength."
+    "DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Gain 2 Strength.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Champ. NL Remove all Debuffs. NL Gain 1 Strength. NL If you are below half HP, Heal !M! and gain 2 Strength."
   },
   "expansioncontent:Collect": {
     "NAME": "Collect",
@@ -97,7 +98,7 @@
   },
   "expansioncontent:PolyBeam": {
     "NAME": "Twin Beam",
-    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice at the start of your next turn. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Ancients. NL Deal !D! damage twice. NL Deal !D! damage twice to a random enemy at the start of your next turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Exhaust."
   },
   "expansioncontent:PrepareCrush": {
@@ -106,7 +107,7 @@
   },
   "expansioncontent:GoopSpray": {
     "NAME": "Goop Spray",
-    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and 2 Vulnerable to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! slimeboundmod:Goop and 2 Vulnerable to ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Slime. NL Apply !M! Goop and 3 Vulnerable to ALL enemies. NL Exhaust."
   },
   "expansioncontent:SlimeTackle": {
@@ -120,8 +121,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Quick Study",
-    "DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain a copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain an Upgraded copy of each of its expansioncontent:Boss cards. NL They cost 1 less. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain a copy of each of its expansioncontent:Boss cards. NL They cost 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 Bosses. NL Gain an Upgraded copy of each of its expansioncontent:Boss cards. NL They cost 0 until played. NL Exhaust."
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "The Evil Within",
@@ -139,15 +140,15 @@
   },
   "expansioncontent:ShieldSmash": {
     "NAME": "Armor Break",
-    "DESCRIPTION": "Retain. NL Remove all Block from the enemy. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Remove all Block from the enemy, then reduce their Dexterity by 2. NL Exhaust."
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
-    "DESCRIPTION": "Retain. NL Lose all Poison. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Lose all Poison. NL Poison does not bypass Block, happens at END of turn, and loses half its stack. NL Exhaust."
   },
   "expansioncontent:Debug": {
     "NAME": "Corrupt Core",
-    "DESCRIPTION": "Retain. NL Remove all enemy Orbs. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Enemy loses 10 Focus. They regain 2 of it per turn for 5 turns. NL Exhaust."
   },
   "expansioncontent:PeaceOut": {
     "NAME": "Dark Whisper",

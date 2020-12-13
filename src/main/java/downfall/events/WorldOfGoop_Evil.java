@@ -7,10 +7,11 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.downfallMod;
 import slimebound.cards.Icky;
 
 public class WorldOfGoop_Evil extends AbstractImageEvent {
-    public static final String ID = "downfall:WorldOfGoop";
+    public static final String ID = downfallMod.makeID("WorldOfGoop");
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
@@ -66,8 +67,8 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .5F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold* 3));
-                        AbstractDungeon.player.gainGold(this.gold);
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 3));
+                        AbstractDungeon.player.gainGold(this.gold * 3);
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);
@@ -77,7 +78,7 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .75F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Icky(), (float) Settings.WIDTH * .25F + 10.0F * Settings.scale, (float) Settings.HEIGHT / 2.0F));
                         AbstractDungeon.effectList.add(new RainingGoldEffect(this.gold * 2));
-                        AbstractDungeon.player.gainGold(this.gold);
+                        AbstractDungeon.player.gainGold(this.gold * 2);
                         return;
                     case 2:
                         this.imageEventText.updateBodyText(GOLD_DIALOG);

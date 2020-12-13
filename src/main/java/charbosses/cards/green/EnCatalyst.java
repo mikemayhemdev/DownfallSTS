@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import charbosses.powers.general.EnemyPoisonPower;
 
 import java.util.ArrayList;
 
@@ -30,11 +30,12 @@ public class EnCatalyst extends AbstractBossCard {
     @Override
     public int getPriority(ArrayList<AbstractCard> hand) {
         if (AbstractDungeon.player != null){
-            if (AbstractDungeon.player.hasPower(PoisonPower.POWER_ID)){
-                return 10;
+            if (AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)){
+                if(AbstractDungeon.player.getPower(EnemyPoisonPower.POWER_ID).amount > 20)
+                return 100;
             }
         }
-        return -10;
+        return -100;
     }
 
     @Override

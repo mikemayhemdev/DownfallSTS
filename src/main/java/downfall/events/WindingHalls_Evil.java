@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 import com.megacrit.cardcrawl.rooms.TreasureRoom;
 import downfall.rooms.HeartShopRoom;
+import slimebound.SlimeboundMod;
+import slimebound.events.DarklingsSlimebound;
 
 public class WindingHalls_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:WindingHalls";
@@ -35,12 +37,21 @@ public class WindingHalls_Evil extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screenNum) {
+        switch (this.screenNum) {
             case 0:
-                switch(buttonPressed) {
+                switch (buttonPressed) {
                     case 0:
                         this.imageEventText.clearAllDialogs();
+                        boolean hackery = false;
+                        if (AbstractDungeon.eventList.contains(DarklingsSlimebound.ID)) {
+                            AbstractDungeon.eventList.remove(DarklingsSlimebound.ID);
+                            hackery = true;
+                            SlimeboundMod.logger.info("Hacked away darklings");
+                        }
                         AbstractDungeon.getCurrRoom().onPlayerEntry();
+                        if (hackery){
+                            AbstractDungeon.eventList.add(DarklingsSlimebound.ID);
+                        }
                         return;
                     case 1:
                         AbstractDungeon.getCurrRoom().clearEvent();

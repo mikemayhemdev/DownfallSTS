@@ -13,7 +13,6 @@ public class CBR_Vajra extends AbstractCharbossRelic {
 
     public CBR_Vajra() {
         super(new Vajra());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     @Override

@@ -1,0 +1,22 @@
+{
+  "downfall:WorldOfGoo": {
+    "NAME": "World of Goo",
+    "DESCRIPTION": "Whenever you take unblocked damage, add a Slimed Status to your discard pile."
+  },
+  "downfall:Hexed": {
+    "NAME": "Hexed",
+    "DESCRIPTION": "Start with a Velvet Choker. When you draw a card, it becomes Ethereal."
+  },
+  "downfall:Improvised": {
+    "NAME": "Improvised",
+    "DESCRIPTION": "Start with 10 Unknown cards."
+  },
+  "downfall:Jewelcrafting": {
+    "NAME": "Jewelcrafting",
+    "DESCRIPTION": "Start with two copies of Exploit Gem and a Rhapsody Co. Mining Pick."
+  },
+  "downfall:EvilRun": {
+    "NAME": "Evil Run",
+    "DESCRIPTION": "Enables Evil Run content."
+  }
+}

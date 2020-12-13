@@ -4,6 +4,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import downfall.actions.BanditIOUAction;
 import downfall.downfallMod;
 
 public class RedIOUUpgrade extends CustomRelic {
@@ -23,8 +24,13 @@ public class RedIOUUpgrade extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
-            flash();
+        if (!usedUp) {
+            if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
+                flash();
+
+                this.addToBot(new BanditIOUAction(AbstractDungeon.player, AbstractDungeon.getMonsters().getRandomMonster(true)));
+                this.usedUp();
+            }
         }
     }
 

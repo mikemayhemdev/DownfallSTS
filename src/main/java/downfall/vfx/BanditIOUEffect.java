@@ -70,17 +70,17 @@ public class BanditIOUEffect extends AbstractGameEffect {
     public float bearLandX;
     public float bearLandY;
 
-    private int pointyDamage = 10;
-    private int pointyDamageUpgraded = 15;
+    private int pointyDamage = 15;
+    private int pointyDamageUpgraded = 25;
 
-    private int bearDamage = 10;
-    private int bearDamageUpgraded = 12;
+    private int bearDamage = 25;
+    private int bearDamageUpgraded = 35;
 
     private int bearDexDown = -2;
     private int bearDexDownUpgraded = -3;
 
-    private int romeoDamage = 15;
-    private int romeoDamageUpgraded = 20;
+    private int romeoDamage = 25;
+    private int romeoDamageUpgraded = 35;
 
     private int romeoWeak = 2;
     private int romeoWeakUpgraded = 3;
@@ -116,6 +116,9 @@ public class BanditIOUEffect extends AbstractGameEffect {
 
         this.romeo.customFlipX = true;
         this.pointy.customFlipX = true;
+
+        this.romeo.skeleton.setX(0F);
+        this.romeo.skeleton.setY(this.pointyStartY);
 
         SlimeboundMod.logger.info(IntroDialog);
         SlimeboundMod.logger.info(BearDialog);
@@ -302,9 +305,10 @@ public class BanditIOUEffect extends AbstractGameEffect {
         romeo.state.apply(romeo.skeleton);
         if (animRomeoTimer > 0F) {
             if (this.animTypeRomeo == BanditAnimType.ENTER) {
-
+                float Y = Interpolation.linear.apply(pointyJumpOutY + 90F * Settings.scale, AbstractDungeon.floorY - 60.0F * Settings.scale, animRomeoTimer / .5F);
                 float X = Interpolation.linear.apply(800F * Settings.scale, -100F, animRomeoTimer / 1F);
                 this.romeo.skeleton.setX(X);
+                this.romeo.skeleton.setY(Y);
                 animRomeoTimer -= Gdx.graphics.getDeltaTime();
                 if (animRomeoTimer < 0F) {
                     animRomeoTimer = 1F;

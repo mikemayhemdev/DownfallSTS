@@ -13,7 +13,6 @@ public class CBR_DuvuDoll extends AbstractCharbossRelic {
 
     public CBR_DuvuDoll() {
         super(new DuVuDoll());
-        this.tier = RelicTier.COMMON;
     }
 
     @Override
@@ -42,11 +41,13 @@ public class CBR_DuvuDoll extends AbstractCharbossRelic {
     @Override
     public void onEquip() {
         this.counter = 0;
+        /*
         for (final AbstractCard c : this.owner.masterDeck.group) {
             if (c.type == AbstractCard.CardType.CURSE) {
                 ++this.counter;
             }
         }
+        */
         if (this.counter == 0) {
             this.description = this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
         } else {

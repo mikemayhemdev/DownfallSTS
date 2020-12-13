@@ -10,7 +10,6 @@ public class CBR_MaskCultist extends AbstractCharbossRelic {
     public static final String ID = "CBRCultistMask";
     public CBR_MaskCultist() {
         super(new CultistMask());
-        this.tier = RelicTier.SPECIAL;
     }
 
     @Override

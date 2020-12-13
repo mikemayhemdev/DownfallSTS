@@ -10,8 +10,8 @@ public class ChargeCurrentFlameAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (!HexaMod.renderFlames)
-            HexaMod.renderFlames = true;
+    //    if (!HexaMod.renderFlames)
+     //       HexaMod.renderFlames = true;
         isDone = true;
         GhostflameHelper.activeGhostFlame.charge();
     }

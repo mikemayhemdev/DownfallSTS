@@ -22,7 +22,7 @@ public class UnknownClass extends AbstractUnknownCard {
         if (CardCrawlGame.isInARun() || CardCrawlGame.loadingSave) {
             rawDescription = unknownClass[1] + getCharName(myColor)
                     + unknownClass[2];
-        }else {
+        } else {
             rawDescription = unknownClass[1] + unknownClass[3]
                     + unknownClass[2];
         }
@@ -57,7 +57,7 @@ public class UnknownClass extends AbstractUnknownCard {
             if (p.getCardColor() == myColor)
                 return p.getLocalizedCharacterName().replace(unknownClass[4], "");
         }
-        return unknownClass[5];
+        return myColor.name();
     }
 
     @Override

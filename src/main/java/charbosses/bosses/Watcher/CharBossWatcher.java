@@ -42,6 +42,7 @@ public class CharBossWatcher extends AbstractCharBoss {
         this.stateData.setMix("Hit", "Idle", 0.1F);
         e.setTimeScale(0.7F);
         this.energyString = "[P]";
+        type = EnemyType.BOSS;
 
         loadEyeAnimation();
         this.eyeBone = this.skeleton.findBone("eye_anchor");
@@ -95,7 +96,9 @@ public class CharBossWatcher extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1Streamline();
+            archetype = new ArchetypeAct1Retain();
+            downfallMod.overrideBossDifficulty = false;
+            this.currentHealth -= 100;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
@@ -119,7 +122,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                             archetype = new ArchetypeAct3Divinity();
                             break;
                         default:
-                            archetype = new ArchetypeAct1Retain();
+                            archetype = new ArchetypeAct3Divinity();
                             break;
                     }
                     break;
@@ -130,9 +133,10 @@ public class CharBossWatcher extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            archetype.initializeBonusRelic();
-        }
+        chosenArchetype = archetype;
+//        if (AbstractDungeon.ascensionLevel >= 19) {
+//            archetype.initializeBonusRelic();
+//        }
 
     }
 
@@ -172,5 +176,6 @@ public class CharBossWatcher extends AbstractCharBoss {
                 break;
         }
 
+        downfallMod.saveBossFight(CharBossWatcher.ID);
     }
 }

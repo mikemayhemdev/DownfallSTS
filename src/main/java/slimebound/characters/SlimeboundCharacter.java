@@ -1,5 +1,6 @@
 package slimebound.characters;
 
+import com.megacrit.cardcrawl.helpers.*;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -14,10 +15,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
-import com.megacrit.cardcrawl.helpers.SlimeAnimListener;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -174,12 +171,33 @@ public class SlimeboundCharacter extends CustomPlayer {
         this.state.addListener(new SlimeAnimListener());
     }
 
+
     public void movePosition(float x, float y) {
         super.movePosition(x, y);
-        float dialogOffsetY = this.dialogY - this.drawY + mainRenderYOffset;
         this.drawY = this.drawY + mainRenderYOffset;
-        this.dialogY = this.drawY + dialogOffsetY;
+        this.dialogY = this.drawY + 30F*Settings.scale;
         this.refreshHitboxLocation();
+    }
+
+
+    @Override
+    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
+        if (ModHelper.isModEnabled("Red Cards")) {
+            CardLibrary.addRedCards(tmpPool);
+        }
+        if (ModHelper.isModEnabled("Green Cards")) {
+            CardLibrary.addGreenCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Blue Cards")) {
+            CardLibrary.addBlueCards(tmpPool);
+        }
+
+        if (ModHelper.isModEnabled("Purple Cards")) {
+            CardLibrary.addPurpleCards(tmpPool);
+        }
+
+        return super.getCardPool(tmpPool);
     }
 
     public ArrayList<String> getStartingDeck() {

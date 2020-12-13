@@ -1,0 +1,70 @@
+{
+  "sneckomod:CheapStockPower": {
+    "NAME": "Cheap Stock",
+    "DESCRIPTIONS": [
+      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1.",
+      "At the start of your turn, reduce the cost of the highest cost #yOffclass card in your hand by #b1 #b",
+      " times."
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "Cheating",
+    "DESCRIPTIONS": [
+      "This turn, cards that choose a random number for their effect choose the maximum possible number.",
+      "For the next #b",
+      " turns, cards that choose a random number for their effect choose the maximum possible number."
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "Muddle Drawn Cards",
+    "DESCRIPTIONS": [
+      "#yMuddle the next card you draw.",
+      "#yMuddle the first #b",
+      " cards drawn this turn. (",
+      " remaining)"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "Mudshield",
+    "DESCRIPTIONS": [
+      "Whenever you #yMuddle a card, gain #b",
+      " #yBlock next turn."
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "Serpent Mind",
+    "DESCRIPTIONS": [
+      "Whenever you play an #yOffclass card, draw #b",
+      " card.",
+      " cards."
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "Unending Supply",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      "random #yOffclass cards into your hand and #yMuddle them."
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "Post-Combat Upgraded Unknown",
+    "DESCRIPTIONS": [
+      "At the end of combat, obtain #b",
+      " additional #yUpgraded #yUnknown cards.",
+      " additional #yUpgraded #yUnknown card."
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "Unlimited Rolls",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a #ySoul #yRoll+ into your hand with #yEthereal and #yExhaust."
+    ]
+  },
+  "sneckomod:Transmogrifying": {
+    "NAME": "Transmogrifying",
+    "DESCRIPTIONS": [
+      " is being transformed into another ",
+      " relic."
+    ]
+  }
+}

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,7 +16,7 @@ import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class GiftsFromTheDeadPowerPlus extends TwoAmountPower implements CloneablePowerInterface {
+public class GiftsFromTheDeadPowerPlus extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = HexaMod.makeID("GiftsFromTheDeadPowerPlus");
 
@@ -45,6 +46,7 @@ public class GiftsFromTheDeadPowerPlus extends TwoAmountPower implements Cloneab
     public void onExhaust(AbstractCard card) {
         if (card.isEthereal) {
             addToBot(new ApplyPowerAction(owner, owner, new DrawCardNextTurnPower(owner, amount), amount));
+            addToBot(new GainEnergyAction(amount));
         }
     }
 
@@ -53,13 +55,17 @@ public class GiftsFromTheDeadPowerPlus extends TwoAmountPower implements Cloneab
         StringBuilder sb = new StringBuilder();
 
             sb.append(DESCRIPTIONS[0]);
-            sb.append(this.amount2);
-            if (this.amount2 == 1){
-                sb.append(DESCRIPTIONS[1]);
+            for (int i = 0; i <amount; i++) {
+                sb.append("[E] ");
+            }
+            sb.append(DESCRIPTIONS[1]);
+            sb.append(amount);
+            if (amount == 1){
+                sb.append(DESCRIPTIONS[3]);
             } else {
                 sb.append(DESCRIPTIONS[2]);
             }
-            sb.append(DESCRIPTIONS[3]);
+            sb.append(DESCRIPTIONS[4]);
 
 
         this.description = sb.toString();

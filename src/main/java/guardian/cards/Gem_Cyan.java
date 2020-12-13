@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.CYAN;
 
 
@@ -48,6 +49,7 @@ public class Gem_Cyan extends AbstractGuardianCard {
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = CYAN;
         this.cardsToPreview = new CrystalWard();
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Aquamarine.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

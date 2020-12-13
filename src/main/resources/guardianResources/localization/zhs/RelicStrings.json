@@ -3,7 +3,7 @@
     "NAME": "形态转换器",
     "FLAVOR": "在你最需要的时候保护你。",
     "DESCRIPTIONS": [
-      "当你失去 #b10 点生命, 进入 #yguardianmod:防御模式 并获得 #b15 点 #y格挡 。 NL 触发时，获得一层 #y残影 。"
+      "当你失去 #b10 点生命, 进入 #yguardianmod:防御模式 并获得下一回合开始时不会消失的 #b10 点 #y格挡 。"
     ]
   },
   "Guardian:ModeShifterPlus": {

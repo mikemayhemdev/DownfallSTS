@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.CRIMSON;
 
 
@@ -48,6 +49,7 @@ public class Gem_Crimson extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = CRIMSON;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Garnet.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

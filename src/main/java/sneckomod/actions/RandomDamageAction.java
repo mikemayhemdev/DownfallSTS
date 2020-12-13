@@ -16,11 +16,22 @@ public class RandomDamageAction extends AbstractGameAction {
     private int numTimes;
     private int min;
     private int max;
+    private int dmg;
 
     public RandomDamageAction(AbstractCreature target, int min, int max, int numTimes, AttackEffect fx) {
-        this.min = min;
-        this.max = max;
-        int dmg = AbstractDungeon.miscRng.random(min, max);
+        if (min > max) {
+            this.min = max;
+            this.max = min;
+        } else {
+            this.min = min;
+            this.max = max;
+        }
+
+        if (this.max != this.min) {
+            dmg = AbstractDungeon.miscRng.random(min, max);
+        } else {
+            dmg = this.max;
+        }
         this.info = new DamageInfo(AbstractDungeon.player, dmg);
         this.target = target;
         this.actionType = AbstractGameAction.ActionType.DAMAGE;

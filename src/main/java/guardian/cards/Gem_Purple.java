@@ -16,6 +16,7 @@ import guardian.patches.AbstractCardEnum;
 
 import java.util.Iterator;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.PURPLE;
 
 
@@ -52,6 +53,7 @@ public class Gem_Purple extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = PURPLE;
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Amethyst.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

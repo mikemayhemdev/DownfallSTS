@@ -19,7 +19,7 @@ public class SuperSneckoEye extends CustomRelic {
     public boolean activated = false;
 
     public SuperSneckoEye() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
@@ -55,13 +55,11 @@ public class SuperSneckoEye extends CustomRelic {
     }
 
     public void onEquip() {
-        AbstractPlayer var10000 = AbstractDungeon.player;
-        var10000.masterHandSize += 2;
+        AbstractDungeon.player.masterHandSize += 2;
     }
 
     public void onUnequip() {
-        AbstractPlayer var10000 = AbstractDungeon.player;
-        var10000.masterHandSize -= 2;
+        AbstractDungeon.player.masterHandSize -= 2;
     }
 
     public void atPreBattle() {

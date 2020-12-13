@@ -310,7 +310,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                     case 0:
                         SlimeboundMod.logger.info("case default opening map");
                         this.openMap();
-                        break;
+                        return;
 
                 }
             case INTRO:
@@ -335,7 +335,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                         this.threatened = false;
                         SlimeboundMod.logger.info("case rule explanation opening cards");
                         this.placeCards();
-                        break;
+                        return;
                     case 1:
                         if (!this.threatened) {
                             this.screen = CUR_SCREEN.RULE_EXPLANATION;
@@ -343,6 +343,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             SlimeboundMod.logger.info("threatened");
                             this.imageEventText.updateDialogOption(1, OPTIONS[5]);
                             this.threatened = true;
+                            return;
                         } else {
                             this.screen = CUR_SCREEN.FIGHT;
                             SlimeboundMod.logger.info("fight");
@@ -356,7 +357,7 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().eliteTrigger = true;
                             this.imageEventText.clearRemainingOptions();
                             this.enterCombatFromImage();
-                            break;
+                            return;
                         }
                 }
 

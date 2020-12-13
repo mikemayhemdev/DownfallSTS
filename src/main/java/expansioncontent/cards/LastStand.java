@@ -20,7 +20,7 @@ import expansioncontent.expansionContentMod;
 public class LastStand extends AbstractExpansionCard {
     public final static String ID = makeID("LastStand");
 
-    private static final int MAGIC = 20;
+    private static final int MAGIC = 10;
     private static final int UPGRADE_MAGIC = 10;
 
     public LastStand() {
@@ -51,15 +51,21 @@ public class LastStand extends AbstractExpansionCard {
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
             atb(new ApplyPowerAction(p, p, new StrengthPower(p, 2), 2));
             atb(new VFXAction(p, new InflameEffect(p), 0.1F));
-//            atb(new HealAction(p, p, this.magicNumber));
+            if (upgraded) atb(new HealAction(p, p, this.magicNumber));
         }
 
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.currentHealth < AbstractDungeon.player.maxHealth / 2 ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

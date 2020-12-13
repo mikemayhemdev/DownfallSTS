@@ -25,7 +25,7 @@ public class SoulCleanse extends AbstractSneckoCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new MuddleHandAction(-1));
+        atb(new MuddleHandAction(true));
     }
 
     public void upgrade() {

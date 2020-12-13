@@ -17,9 +17,15 @@ import java.util.ArrayList;
 public class MuddleAction extends AbstractGameAction {
 
     private AbstractCard card;
+    private boolean no3;
+
+    public MuddleAction(AbstractCard bruhCard, boolean modified) {
+        card = bruhCard;
+        this.no3 = modified;
+    }
 
     public MuddleAction(AbstractCard bruhCard) {
-        card = bruhCard;
+        this(bruhCard,false);
     }
 
     public void update() {
@@ -38,7 +44,9 @@ public class MuddleAction extends AbstractGameAction {
             if (card.cost != 1) numList.add(1);
             if (card.cost != 2) numList.add(2);
             if (!AbstractDungeon.player.hasRelic(CleanMud.ID)) {
-                if (card.cost != 3) numList.add(3);
+                if (!this.no3){
+                    if (card.cost != 3) numList.add(3);
+                }
             }
             int newCost = numList.get(AbstractDungeon.cardRandomRng.random(numList.size() - 1));// 33
             SlimeboundMod.logger.info("muddling " + card.name + " base " + card.cost + " new " + newCost);

@@ -25,7 +25,7 @@ package guardian.vfx;
    private TextureAtlas.AtlasRegion img;
    private float dur_div2 = this.duration / 2.0F;
 
-   public DefensiveModeStanceParticleEffect() {
+   public DefensiveModeStanceParticleEffect(Color color) {
      this.img = ImageMaster.GLOW_SPARK;
      this.rotation = MathUtils.random(360.0F);
      this.scale = MathUtils.random(1.4F, 1.8F);
@@ -33,7 +33,7 @@ package guardian.vfx;
      this.x = AbstractDungeon.player.hb.cX - this.img.packedWidth / 2.0F;
      this.y = AbstractDungeon.player.hb.cY - this.img.packedHeight / 2.0F;
      this.duration = 1.0F;
-     this.color = new Color(1.0F, 0.9F, 0.7F, 0.0F);
+     this.color = color;
      this.renderBehind = MathUtils.randomBoolean();
      this.speedStart = MathUtils.random(80.0F, 160.0F) * Settings.scale;
      this.speedTarget = 200.0F * Settings.scale;

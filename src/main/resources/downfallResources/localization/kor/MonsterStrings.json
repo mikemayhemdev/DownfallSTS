@@ -1,0 +1,57 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "변형의 시선"
+    ],
+    "NAME": "변화의 머리",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "건망증 시선"
+    ],
+    "NAME": "망각의 머리",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "성장 빔"
+    ],
+    "NAME": "성장의 머리",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "영혼 훔치기"
+    ],
+    "NAME": "성장의 머리",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "도적",
+    "DIALOG": [
+      "~이봐,~ 넌 돈이 없다고오!",
+      "@안돼애애애애!@",
+      "넌 오늘 죽을 거라고, 멍청아."
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+    ],
+    "NAME": "강도",
+    "DIALOG": [
+      "놈에게 한 수 가르쳐 주지.",
+      "제대로 혼내주마!"
+    ]
+  }
+}

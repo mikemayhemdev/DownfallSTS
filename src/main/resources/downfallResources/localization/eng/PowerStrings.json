@@ -16,7 +16,7 @@
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Cannot be killed.  Retreats to recover when reduced to 1 HP."
+      "Cannot be killed.  Ends your turn and retreats to recover when reduced to 0 HP."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -37,6 +37,18 @@
     "NAME": "Forgetful",
     "DESCRIPTIONS": [
       "At the end of your turn, choose a card to Exhaust."
+    ]
+  },
+  "downfall:PoisonResist": {
+    "NAME": "Poison Resistance",
+    "DESCRIPTIONS": [
+      "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
+    ]
+  },
+  "downfall:InverseBias": {
+    "NAME": "Recovering",
+    "DESCRIPTIONS": [
+      "Gains 2 Focus at the end of each turn."
     ]
   }
 }

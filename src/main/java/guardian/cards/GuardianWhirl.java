@@ -18,6 +18,8 @@ import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
 import guardian.stances.DefensiveMode;
 
+import static guardian.GuardianMod.makeBetaCardPath;
+
 
 public class GuardianWhirl extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("GuardianWhirl");
@@ -31,7 +33,6 @@ public class GuardianWhirl extends AbstractGuardianCard {
     private static final int DAMAGE = 4;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 1;
     private static final int MULTICOUNT = 4;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -69,7 +70,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("guardianwhirl.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -95,7 +96,6 @@ public class GuardianWhirl extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(1);
             upgradeMagicNumber(1);
 
             this.updateDescription();

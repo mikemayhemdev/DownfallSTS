@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -12,12 +13,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 
-import static expansioncontent.expansionContentMod.getModID;
-import static expansioncontent.expansionContentMod.makeCardPath;
+import static expansioncontent.expansionContentMod.*;
 
 public abstract class AbstractExpansionCard extends CustomCard {
 
@@ -26,6 +27,7 @@ public abstract class AbstractExpansionCard extends CustomCard {
     protected final String NAME;
     protected final String DESCRIPTION;
     protected final String[] EXTENDED_DESCRIPTION;
+    public static final String CannotUseBossCardMessage = CardCrawlGame.languagePack.getUIString(makeID("CannotUseBossCardMessage")).TEXT[0];
 
     public AbstractExpansionCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(id),
@@ -132,5 +134,18 @@ public abstract class AbstractExpansionCard extends CustomCard {
 
     VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (hasTag(STUDY)) {
+            if (!downfallMod.playedBossCardThisTurn)
+                return super.canUse(p, m);
+            else {
+                cantUseMessage = CannotUseBossCardMessage;
+                return false;
+            }
+        }
+        return super.canUse(p, m);
     }
 }

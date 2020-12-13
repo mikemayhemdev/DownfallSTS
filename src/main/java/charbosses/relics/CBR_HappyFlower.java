@@ -12,7 +12,6 @@ public class CBR_HappyFlower extends AbstractCharbossRelic {
 
     public CBR_HappyFlower() {
         super(new HappyFlower());
-        this.tier = RelicTier.UNCOMMON;
     }
 
     @Override

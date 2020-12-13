@@ -20,8 +20,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.actions.ForceWaitAction;
-import downfall.actions.LoseGoldAction;
 import downfall.actions.MerchantThrowGoldAction;
+import downfall.downfallMod;
 import downfall.powers.SoulStealPower;
 import downfall.rooms.HeartShopRoom;
 import downfall.vfx.GainSingleSoulEffect;
@@ -60,7 +60,7 @@ Evil Mode villain cards
  */
 
 public class FleeingMerchant extends AbstractMonster {
-    public static final String ID = "downfall:FleeingMerchant";
+    public static final String ID = downfallMod.makeID("FleeingMerchant");
     public static final String NAME = CardCrawlGame.languagePack.getUIString("RunHistoryPathNodes").TEXT[8];
     public static final String[] DIALOG = {
 
@@ -200,7 +200,8 @@ public class FleeingMerchant extends AbstractMonster {
                 this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, AbstractDungeon.player.gold), AbstractDungeon.player.gold));
                 CURRENT_SOULS += AbstractDungeon.player.gold;
             }
-            this.addToBot(new LoseGoldAction(15));
+            AbstractDungeon.player.gold -= Math.min(AbstractDungeon.player.gold, 15);
+
             int roll = MathUtils.random(2);
             if (roll == 0) {
                 CardCrawlGame.sound.play("VO_MERCHANT_3A");
@@ -239,8 +240,10 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void die() {
+        /*
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();
+        */
         int increaseGold = 300;
         if (FleeingMerchant.CURRENT_SOULS > 0)
             increaseGold += FleeingMerchant.CURRENT_SOULS;
@@ -279,7 +282,7 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void dispose() {
-
+        AbstractDungeon.player.releaseCard();
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
         //AbstractDungeon.combatRewardScreen.open();
 
@@ -292,6 +295,7 @@ public class FleeingMerchant extends AbstractMonster {
             CardCrawlGame.fadeIn(1.5F);
             AbstractDungeon.rs = AbstractDungeon.RenderScene.NORMAL;
             tRoom.onPlayerEntry();
+            AbstractDungeon.player.hand.clear();
             AbstractDungeon.closeCurrentScreen();
 
         }

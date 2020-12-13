@@ -115,9 +115,9 @@
   "Guardian:AutomayhemPower": {
     "NAME": "时间沙漏",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yAccelerate.",
-      "At the end of your turn, #yAccelerate ",
-      " times."
+      "在你的回合结束时， #y加速 。",
+      "在你的回合结束时， #y加速 #b",
+      " 次。"
     ]
   },
   "Guardian:ConstructPower": {

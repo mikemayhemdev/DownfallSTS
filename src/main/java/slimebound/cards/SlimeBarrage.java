@@ -58,6 +58,7 @@ public class SlimeBarrage extends AbstractSlimeboundCard {
         if (upgraded)
             AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
 
+        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {
