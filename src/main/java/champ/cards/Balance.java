@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
@@ -41,7 +42,7 @@ public class Balance extends AbstractChampCard implements OctopusCard {
                 defenseOpen();
                 ArrayList<AbstractCard> qCardList = new ArrayList<AbstractCard>();
                 for (AbstractCard t : CardLibrary.getAllCards()) {
-                    if (t.hasTag(ChampMod.COMBODEFENSIVE)) qCardList.add(t);
+                    if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE)) qCardList.add(t);
                 }
                 AbstractCard q = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
                 if (upgraded) q.upgrade();
@@ -51,7 +52,7 @@ public class Balance extends AbstractChampCard implements OctopusCard {
                 gladOpen();
                 ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                 for (AbstractCard t : CardLibrary.getAllCards()) {
-                    if (t.hasTag(ChampMod.COMBOGLADIATOR)) rCardList.add(t);
+                    if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOGLADIATOR)) rCardList.add(t);
                 }
                 AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                 if (upgraded) r.upgrade();
