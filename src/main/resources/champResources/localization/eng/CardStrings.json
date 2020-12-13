@@ -102,7 +102,7 @@
   },
   "champ:RageSigil": {
     "NAME": "Rage Sigil",
-    "DESCRIPTION": "champ:Technique NL *Berserker champ:Combo: Repeat !M! times, then Exhaust."
+    "DESCRIPTION": "*Berserker champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
