@@ -44,7 +44,7 @@
   },
   "Guardian:StasisCodex": {
     "NAME": "Construct Pilot's Codex",
-    "FLAVOR": "Designs and diagrams of the Spire's earliest prototypes, by Master Engineer David.",
+    "FLAVOR": "Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David.",
     "DESCRIPTIONS": [
       "If you end your turn with no cards in #yguardianmod:Stasis, choose #b1 of #b3 cards to place into #yguardianmod:Stasis."
     ]
