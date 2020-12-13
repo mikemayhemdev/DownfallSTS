@@ -28,22 +28,6 @@ public class UltimateStance extends AbstractChampStance {
         return "champ:ultimate";
     }
 
-    public int timeLeft = 2;
-
-    @Override
-    public void onEnterStance() {
-        super.onEnterStance();
-        timeLeft = 2;
-    }
-
-    @Override
-    public void onEndOfTurn() {
-        timeLeft--;
-        if (timeLeft == 0) {
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction("Neutral"));
-        }
-    }
-
     @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[21];
