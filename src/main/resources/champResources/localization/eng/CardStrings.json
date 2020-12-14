@@ -234,11 +234,11 @@
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Upgraded card in your deck."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your Upgraded cards."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL If you are in a Stance, Stun the enemy, then Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo, Stun the enemy, then Exhaust this."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
