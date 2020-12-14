@@ -372,27 +372,27 @@ public abstract class AbstractChampCard extends CustomCard {
         }
     }
 
-    @Override
-    public void initializeDescription() {
-        String prefixTech = "";
-        String prefixFin = "";
+    public void initializeDescription(String techString, String finString){
+        String prefixTech = techString;
+        String prefixFin = finString;
+        SlimeboundMod.logger.info(techString);
         if (this.hasTag(TECHNIQUE)) {
-            prefixTech = ChampChar.characterStrings.TEXT[29];
+            prefixTech = prefixTech + ChampChar.characterStrings.TEXT[29];
             if (AbstractDungeon.player != null) {
                 if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[31];
+                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[31];
                     prefixTech = prefixTech + DefensiveStance.amount();
                     prefixTech = prefixTech + ChampChar.characterStrings.TEXT[53];
                 } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
                     if (GladiatorStance.amount() == 1){
-                        prefixTech = ChampChar.characterStrings.TEXT[30];
+                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[30];
                     } else {
-                        prefixTech = ChampChar.characterStrings.TEXT[50];
+                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[50];
                         prefixTech = prefixTech + GladiatorStance.amount();
                         prefixTech = prefixTech + ChampChar.characterStrings.TEXT[51];
                     }
                 } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[32];
+                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[32];
                     prefixTech = prefixTech + 3;
                     if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)){
 
@@ -404,7 +404,7 @@ public abstract class AbstractChampCard extends CustomCard {
                     }
 
                 } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixTech = ChampChar.characterStrings.TEXT[33];
+                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[33];
                 }
             }
             if (upgraded && this.UPGRADE_DESCRIPTION != null) {
@@ -414,17 +414,17 @@ public abstract class AbstractChampCard extends CustomCard {
             }
         }
         if (this.hasTag(FINISHER)) {
-            prefixFin = ChampChar.characterStrings.TEXT[34];
+            prefixFin = prefixFin + ChampChar.characterStrings.TEXT[34];
             if (AbstractDungeon.player != null) {
                 if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[36];
+                    prefixFin = prefixFin + ChampChar.characterStrings.TEXT[36];
                 } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[35];
+                    prefixFin = prefixFin + ChampChar.characterStrings.TEXT[35];
                 } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[37];
+                    prefixFin = prefixFin + ChampChar.characterStrings.TEXT[37];
 
                 } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[38];
+                    prefixFin = prefixFin + ChampChar.characterStrings.TEXT[38];
                 }
             }
             if (upgraded && this.UPGRADE_DESCRIPTION != null) {
@@ -434,7 +434,11 @@ public abstract class AbstractChampCard extends CustomCard {
             }
         }
         super.initializeDescription();
+    }
 
+    @Override
+    public void initializeDescription() {
+      initializeDescription("", "");
     }
 
     @Override

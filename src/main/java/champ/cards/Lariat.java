@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
+import slimebound.SlimeboundMod;
 
 public class Lariat extends AbstractChampCard {
 
@@ -33,15 +34,31 @@ public class Lariat extends AbstractChampCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
-        LariatAction r = new LariatAction(magicNumber, block);
-        atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
         if (upgraded) {
             atb(new GainEnergyAction(1));
         }
+        LariatAction r = new LariatAction(magicNumber, block);
+        atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
+
     }
 
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
+    }
+
+    @Override
+    public void initializeDescription() {
+        if (EXTENDED_DESCRIPTION != null) {
+            String newDesc = "";
+            if (upgraded) {
+                newDesc = EXTENDED_DESCRIPTION[1];
+            } else {
+                newDesc = EXTENDED_DESCRIPTION[0];
+            }
+            initializeDescription(newDesc, "");
+        } else {
+            super.initializeDescription();
+        }
     }
 }

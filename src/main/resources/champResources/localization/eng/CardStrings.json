@@ -175,8 +175,11 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block. NL Repeat these effects X times.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Repeat these effects X times. NL Gain [E] ."
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "Perform X times: NL ",
+      "Gain [E] . NL Perform X times: NL "
+    ]
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
