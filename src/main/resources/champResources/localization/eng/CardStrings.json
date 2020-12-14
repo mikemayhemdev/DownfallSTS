@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak. NL Enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Enter a random Stance."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Enter a random Stance.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Choose a Stance to Enter."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -175,11 +175,8 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block.",
-    "EXTENDED_DESCRIPTION": [
-      "Perform X times: NL ",
-      "Gain [E] (does not apply to X). NL Perform X times: NL "
-    ]
+    "DESCRIPTION": "Perform X times: NL Gain !B! Block. NL Trigger champ:Technique.",
+    "UPGRADE_DESCRIPTION": "Perform X times, then gain [E] : NL Gain !B! Block. NL Trigger champ:Technique."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",

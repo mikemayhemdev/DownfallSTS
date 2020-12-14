@@ -26,7 +26,7 @@ public class Lariat extends AbstractChampCard {
     public Lariat() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
         //baseMagicNumber = magicNumber = MAGIC;
     }
 
@@ -45,20 +45,5 @@ public class Lariat extends AbstractChampCard {
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
-    }
-
-    @Override
-    public void initializeDescription() {
-        if (EXTENDED_DESCRIPTION != null) {
-            String newDesc = "";
-            if (upgraded) {
-                newDesc = EXTENDED_DESCRIPTION[1];
-            } else {
-                newDesc = EXTENDED_DESCRIPTION[0];
-            }
-            initializeDescription(newDesc, "");
-        } else {
-            super.initializeDescription();
-        }
     }
 }
