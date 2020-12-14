@@ -175,8 +175,12 @@
   },
   "champ:Lariat": {
     "NAME": "套索",
-    "DESCRIPTION": "获得 !B! 点 格挡 。重复X次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。重复X次。 NL 获得 [E] 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。重复X次。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "重复X次 NL ",
+      "获得 [E] 。NL 重复X次 NL "
+      ]
   },
   "champ:HoldFirm": {
     "NAME": "固守",
