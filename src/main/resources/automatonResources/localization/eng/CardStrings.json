@@ -1,0 +1,14 @@
+{
+  "bronze:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "bronze:Peashooter": {
+    "NAME": "Peashooter",
+    "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage."
+  }
+}
