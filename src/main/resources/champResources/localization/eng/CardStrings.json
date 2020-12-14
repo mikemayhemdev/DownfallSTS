@@ -115,7 +115,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo:, increase the damage this card deals by !M! permanently, then Exhaust it."
+    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo: Increase the damage this card deals by !M! permanently, then Exhaust it."
   },
   "champ:Control": {
     "NAME": "Control",
@@ -238,7 +238,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo, Stun the enemy, then Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo: Stun the enemy, then Exhaust this."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
