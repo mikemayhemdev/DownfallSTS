@@ -2,9 +2,11 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.actions.FatigueHpLossAction;
 import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -43,11 +45,27 @@ public class BerserkerStylePower extends AbstractPower implements CloneablePower
     public void atStartOfTurn() {
         if (AbstractChampCard.bcombo()) {
             flash();
-            addToBot(new LoseHPAction(owner, owner, amount));
-            addToBot(new ApplyPowerAction(owner, owner, new ResolvePower(amount), amount));
+            fatigue(amount);
             addToBot(new GainEnergyAction(1));
         }
     }
+
+    public int fatigue(int begone) {
+
+        int y = AbstractDungeon.player.currentHealth;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
+                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+            }
+        });
+
+        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+    }
+
 
     @Override
     public void updateDescription() {
