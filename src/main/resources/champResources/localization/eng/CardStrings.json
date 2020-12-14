@@ -178,7 +178,7 @@
     "DESCRIPTION": "Gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "Perform X times: NL ",
-      "Gain [E] . NL Perform X times: NL "
+      "Gain [E] (does not apply to X). NL Perform X times: NL "
     ]
   },
   "champ:HoldFirm": {
