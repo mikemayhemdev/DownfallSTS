@@ -55,6 +55,8 @@ public class TornadoPunch extends AbstractChampCard {
 
     public void upp() {
         tags.add(ChampMod.TECHNIQUE);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
