@@ -57,12 +57,12 @@
     "OPTIONS": [
       "[Cardio] #gGain #g",
       " #gMax #gHP.",
-      "[Spar] Choose a card to gain 'Enter Chosen Stance'.",
+      "[Spar] Choose a non-Finisher card to gain 'Enter (Chosen) Stance'.",
       "[Lift] #gGain #g1 #gStrength #gPermanently.",
       "[Leave]",
-      "Choose a card to give 'Enter Defensive'.",
-      "Choose a card to give 'Enter Gladiator'.",
-      "Choose a card to give 'Enter Berserker'.",
+      "Choose a non-Finisher card to give 'Enter Defensive'.",
+      "Choose a non-Finisher card to give 'Enter Gladiator'.",
+      "Choose a non-Finisher card to give 'Enter Berserker'.",
       "[Locked] Requires a Card that does not Enter a Stance."
     ]
   },
