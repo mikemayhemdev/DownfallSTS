@@ -6,5 +6,12 @@
       "blasters"
     ],
     "DESCRIPTION": "After play, moves to the Blaster pile."
+  },
+  {
+    "PROPER_NAME": "Fire",
+    "NAMES": [
+      "fire"
+    ],
+    "DESCRIPTION": "Play for no cost on a random enemy."
   }
 ]

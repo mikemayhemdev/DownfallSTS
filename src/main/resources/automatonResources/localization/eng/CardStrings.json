@@ -10,5 +10,9 @@
   "bronze:Peashooter": {
     "NAME": "Peashooter",
     "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage."
+  },
+  "bronze:OpenFire": {
+    "NAME": "Open Fire",
+    "DESCRIPTIONS": "bronze:Fire a bronze:Blaster."
   }
 }
