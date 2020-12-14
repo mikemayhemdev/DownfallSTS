@@ -34,11 +34,11 @@ public class Lariat extends AbstractChampCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
+        LariatAction r = new LariatAction(magicNumber, block);
+        atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
         if (upgraded) {
             atb(new GainEnergyAction(1));
         }
-        LariatAction r = new LariatAction(magicNumber, block);
-        atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
 
     }
 
