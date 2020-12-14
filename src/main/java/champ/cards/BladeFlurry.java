@@ -24,6 +24,7 @@ public class BladeFlurry extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

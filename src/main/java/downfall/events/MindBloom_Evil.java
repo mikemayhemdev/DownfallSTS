@@ -49,7 +49,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
         super(NAME, DESCRIPTIONSALT[0], "images/events/mindBloom.jpg");
         this.screen = CurScreen.INTRO;
 
-        if (AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof TheSnecko){
+        if (AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof ChampChar){
             this.imageEventText.setDialogOption(OPTIONSALT[0]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[0]);   //original Mind Bloom if you are not a villain

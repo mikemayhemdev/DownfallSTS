@@ -21,7 +21,7 @@ public class PerfectForm extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ultimateStance();
-        applyToSelf(new UltimateFormPower(2));
+        applyToSelf(new UltimateFormPower(magicNumber));
     }
 
     public void upp() {

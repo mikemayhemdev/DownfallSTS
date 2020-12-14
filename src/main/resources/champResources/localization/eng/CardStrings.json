@@ -46,7 +46,7 @@
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter."
+    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block ."
   },
   "champ:Balance": {
     "NAME": "Balance",
@@ -139,8 +139,8 @@
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter for each enemy hit.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter for each enemy hit."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block for each enemy hit.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block for each enemy hit."
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
@@ -158,7 +158,7 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -221,7 +221,7 @@
     "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust."
   },
   "champ:BladeFlurry": {
-    "NAME": "Blade Flurry",
+    "NAME": "Flurry of Strikes",
     "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: Deal !D! damage !M! more times."
   },
   "champ:SwordThrow": {

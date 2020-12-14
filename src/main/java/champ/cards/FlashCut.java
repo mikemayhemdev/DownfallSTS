@@ -12,15 +12,19 @@ public class FlashCut extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 2;
 
-    private static final int MAGIC = 8;
-    private static final int UPG_MAGIC = 3;
+    private static final int BLOCK = 6;
+    private static final int UPG_BLOCK = 2;
+
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 2;
 
     public FlashCut() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
         tags.add(CardTags.STRIKE);
@@ -33,6 +37,7 @@ public class FlashCut extends AbstractChampCard {
         gladOpen();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (dcombo()) applyToSelf(new CounterPower(magicNumber));
+        if (dcombo()) blck();
     }
 
     @Override
@@ -43,5 +48,6 @@ public class FlashCut extends AbstractChampCard {
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);
+        upgradeBlock(UPG_BLOCK);
     }
 }
