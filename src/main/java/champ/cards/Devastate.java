@@ -30,6 +30,10 @@ public class Devastate extends AbstractChampCard {
         this.magicNumber = this.baseMagicNumber;
         this.baseDamage = this.misc;
         tags.add(ChampMod.FINISHER);
+        tags.add(ChampMod.COMBO);
+        tags.add(ChampMod.COMBODEFENSIVE);
+        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBODEFENSIVE);
 
     }
 

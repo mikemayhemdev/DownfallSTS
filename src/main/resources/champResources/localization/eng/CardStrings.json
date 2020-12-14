@@ -115,7 +115,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage. NL If you are in a Stance, increase the damage this card deals by !M! permanently, then Exhaust it."
+    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo:, increase the damage this card deals by !M! permanently, then Exhaust it."
   },
   "champ:Control": {
     "NAME": "Control",
