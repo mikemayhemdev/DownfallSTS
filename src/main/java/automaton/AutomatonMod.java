@@ -4,6 +4,8 @@ import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.util.CardIgnore;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -29,7 +31,8 @@ public class AutomatonMod implements
         //EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        SetUnlocksSubscriber {
+        SetUnlocksSubscriber,
+        OnCardUseSubscriber {
     public static final String SHOULDER1 = "automatonResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "automatonResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "automatonResources/images/char/mainChar/corpse.png";
@@ -49,6 +52,13 @@ public class AutomatonMod implements
     public static Color potionLabColor = new Color(200F / 255F, 200F / 255F, 200F / 255F, 1); // TODO: CHANGE
 
     private static String modID = "bronze";
+
+    @SpireEnum
+    public static AbstractCard.CardTags BLASTER;
+    @SpireEnum
+    public static AbstractCard.CardTags SHIELD;
+    @SpireEnum
+    public static AbstractCard.CardTags CORE;
 
     private CustomUnlockBundle unlocks0; // TODO: Figure this out
     private CustomUnlockBundle unlocks1;
@@ -181,4 +191,19 @@ public class AutomatonMod implements
         //TODO: This
     }
 
+    @Override
+    public void receiveCardUsed(AbstractCard abstractCard) {
+        if (abstractCard.hasTag(BLASTER)) {
+            AbstractDungeon.player.limbo.removeCard(abstractCard);
+            MechaHelper.blasters.addToTop(abstractCard);
+        }
+        if (abstractCard.hasTag(SHIELD)) {
+            AbstractDungeon.player.limbo.removeCard(abstractCard);
+            MechaHelper.shields.addToTop(abstractCard);
+        }
+        if (abstractCard.hasTag(CORE)) {
+            AbstractDungeon.player.limbo.removeCard(abstractCard);
+            MechaHelper.cores.addToTop(abstractCard);
+        }
+    }
 }
