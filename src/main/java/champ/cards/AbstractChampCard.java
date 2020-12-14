@@ -375,7 +375,7 @@ public abstract class AbstractChampCard extends CustomCard {
     public void initializeDescription(String techString, String finString){
         String prefixTech = techString;
         String prefixFin = finString;
-        SlimeboundMod.logger.info(techString);
+       // SlimeboundMod.logger.info(techString);
         if (this.hasTag(TECHNIQUE)) {
             prefixTech = prefixTech + ChampChar.characterStrings.TEXT[29];
             if (AbstractDungeon.player != null) {
