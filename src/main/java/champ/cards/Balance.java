@@ -46,6 +46,7 @@ public class Balance extends AbstractChampCard implements OctopusCard {
                 }
                 AbstractCard q = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
                 if (upgraded) q.upgrade();
+                UnlockTracker.markCardAsSeen(q.cardID);
                 makeInHand(q);
                 break;
             case "octo:OctoGladiat":
@@ -56,6 +57,7 @@ public class Balance extends AbstractChampCard implements OctopusCard {
                 }
                 AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                 if (upgraded) r.upgrade();
+                UnlockTracker.markCardAsSeen(r.cardID);
                 makeInHand(r);
                 break;
         }

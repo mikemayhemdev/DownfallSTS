@@ -46,6 +46,7 @@ public class Control extends AbstractChampCard implements OctopusCard {
                 }
                 AbstractCard q = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
                 if (upgraded) q.upgrade();
+                UnlockTracker.markCardAsSeen(q.cardID);
                 makeInHand(q);
                 break;
             case "octo:OctoBerserk":
@@ -56,6 +57,7 @@ public class Control extends AbstractChampCard implements OctopusCard {
                 }
                 AbstractCard x = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                 if (upgraded) x.upgrade();
+                UnlockTracker.markCardAsSeen(x.cardID);
                 makeInHand(x);
                 break;
         }
