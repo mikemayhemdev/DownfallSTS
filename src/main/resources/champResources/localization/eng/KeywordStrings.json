@@ -46,7 +46,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: Gain #b6 #yCounter. #yFinisher: Gain #b12 #yBlock. End your turn."
+    "DESCRIPTION": "#yStance. NL #yTechnique Bonus: Gain #b6 #yCounter. NL #yFinisher Bonus: Gain #b12 #yBlock. End your turn."
   },
   {
     "PROPER_NAME": "Berserker",
@@ -54,7 +54,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: #yFatigue #y3. #yFinisher: Lose all your #yResolve and gain that much HP, preserving #yStrength. End your turn."
+    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: #yFatigue #y3. NL #yFinisher Bonus: Lose all #yResolve and gain that much HP, preserving #yStrength. End your turn."
   },
   {
     "PROPER_NAME": "Gladiator",
@@ -62,7 +62,7 @@
       "gladiator",
       "gladiator."
     ],
-    "DESCRIPTION": "#yStance. #yTechnique: Draw #b1 card. #yFinisher: Next turn, draw #b1 card and gain [E] . End your turn."
+    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: Draw #b1 card. NL #yFinisher Bonus: Next turn, draw #b1 card and gain [E] . End your turn."
   },
   {
     "PROPER_NAME": "Ultimate Stance",
@@ -70,7 +70,7 @@
       "ultimate",
       "ultimate."
     ],
-    "DESCRIPTION": "#yStance. Counts as all #b3 #yStances. Finishers do not end your turn or exit the Stance. You can't change to any other #yStance."
+    "DESCRIPTION": "#yStance. Counts as all #b3 #yStances. NL Finishers do not end your turn or exit the Stance. NL You can't change to any other #yStance."
   },
   {
     "PROPER_NAME": "Fatigue",
