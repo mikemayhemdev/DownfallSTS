@@ -1,9 +1,11 @@
 package automaton;
 
+import automaton.cards.Defend;
+import automaton.cards.OpenFire;
+import automaton.cards.Peashooter;
+import automaton.cards.Strike;
 import automaton.relics.BronzeBoon;
 import basemod.abstracts.CustomPlayer;
-import champ.ChampMod;
-import champ.cards.Taunt;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -21,33 +23,33 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
 
-import static champ.ChampMod.*;
+import static automaton.AutomatonMod.*;
 
 public class AutomatonChar extends CustomPlayer {
     public static final String ID = makeID("theAutomaton");
     public static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] orbTextures = {
-            "automatonResources/images/char/mainChar/orb/layer1.png",
-            "automatonResources/images/char/mainChar/orb/layer2.png",
-            "automatonResources/images/char/mainChar/orb/layer3.png",
-            "automatonResources/images/char/mainChar/orb/layer4.png",
-            "automatonResources/images/char/mainChar/orb/layer5.png",
-            "automatonResources/images/char/mainChar/orb/layer6.png",
-            "automatonResources/images/char/mainChar/orb/layer1d.png",
-            "automatonResources/images/char/mainChar/orb/layer2d.png",
-            "automatonResources/images/char/mainChar/orb/layer3d.png",
-            "automatonResources/images/char/mainChar/orb/layer4d.png",
-            "automatonResources/images/char/mainChar/orb/layer5d.png",};
+            "bronzeResources/images/char/mainChar/orb/layer1.png",
+            "bronzeResources/images/char/mainChar/orb/layer2.png",
+            "bronzeResources/images/char/mainChar/orb/layer3.png",
+            "bronzeResources/images/char/mainChar/orb/layer4.png",
+            "bronzeResources/images/char/mainChar/orb/layer5.png",
+            "bronzeResources/images/char/mainChar/orb/layer6.png",
+            "bronzeResources/images/char/mainChar/orb/layer1d.png",
+            "bronzeResources/images/char/mainChar/orb/layer2d.png",
+            "bronzeResources/images/char/mainChar/orb/layer3d.png",
+            "bronzeResources/images/char/mainChar/orb/layer4d.png",
+            "bronzeResources/images/char/mainChar/orb/layer5d.png",};
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
     public float renderscale = 1.0F;
 
-    private String atlasURL = "automatonResources/images/char/mainChar/champ.atlas";
-    private String jsonURL = "automatonResources/images/char/mainChar/champ.json";
+    private String atlasURL = "bronzeResources/images/char/mainChar/champ.atlas";
+    private String jsonURL = "bronzeResources/images/char/mainChar/champ.json";
 
     public AutomatonChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "automatonResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
+        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -73,7 +75,7 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public Texture getCustomModeCharacterButtonImage() {
-        return ImageMaster.loadImage(ChampMod.getModID() + "Resources/images/charSelect/leaderboard.png");
+        return ImageMaster.loadImage(AutomatonMod.getModID() + "Resources/images/charSelect/leaderboard.png");
     }
 
 
@@ -107,7 +109,14 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Strike.ID);
+        }
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(Peashooter.ID);
+        retVal.add(OpenFire.ID);
         return retVal;
     }
 
@@ -167,7 +176,7 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Taunt();
+        return new OpenFire();
     }
 
     @Override

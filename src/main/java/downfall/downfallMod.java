@@ -21,7 +21,6 @@ import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
-import champ.monsters.BlackKnight;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
@@ -64,7 +63,6 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.NeowsLament;
@@ -230,7 +228,7 @@ public class downfallMod implements
             case PACKAGE_CHAMP:
                 return "champResources/" + path;
             case PACKAGE_AUTOMATON:
-                return "automatonResources/" + path;
+                return "bronzeResources/" + path;
         }
         return "downfallResources/" + path;
     }

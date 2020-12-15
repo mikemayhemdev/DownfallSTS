@@ -1,9 +1,9 @@
 package automaton.cards;
 
+import automaton.AutomatonChar;
 import automaton.MechaHelper;
 import automaton.actions.FireFromPileAction;
 import basemod.abstracts.CustomCard;
-import champ.ChampChar;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -19,9 +19,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
 
-import static champ.ChampMod.getModID;
-import static champ.ChampMod.makeCardPath;
-
+import static automaton.AutomatonMod.getModID;
+import static automaton.AutomatonMod.makeCardPath;
 
 public abstract class AbstractBronzeCard extends CustomCard {
 
@@ -35,7 +34,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
-                cost, "ERROR", type, ChampChar.Enums.CHAMP_GRAY, rarity, target);
+                cost, "ERROR", type, AutomatonChar.Enums.BRONZE_AUTOMATON, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;

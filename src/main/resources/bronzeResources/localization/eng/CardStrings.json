@@ -13,7 +13,7 @@
   },
   "bronze:OpenFire": {
     "NAME": "Open Fire",
-    "DESCRIPTIONS": "Deal !D! damage. NL bronze:Fire 1 bronze:Blaster."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Fire 1 bronze:Blaster."
   },
   "bronze:ShieldsUp": {
     "NAME": "Shields Up",
@@ -168,5 +168,9 @@
   "bronze:ArrayShot": {
     "NAME": "Array Shot",
     "DESCRIPTION": "bronze:Blaster. NL bronze:Burnout. NL Deal !D! damage. NL Deals !M! additional damage for each stored bronze:Blaster."
+  },
+  "bronze:Bug": {
+    "NAME": "Bug",
+    "DESCRIPTION": "Autoplay. NL Gain [E]. NL bronze:Fire 1 random bronze:Blaster, bronze:Shield or bronze:Core."
   }
 }
