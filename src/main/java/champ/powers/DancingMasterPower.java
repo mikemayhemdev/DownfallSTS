@@ -2,6 +2,10 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import champ.stances.GladiatorStance;
+import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -10,7 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.stances.AbstractStance;
+import com.megacrit.cardcrawl.stances.*;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -51,19 +55,47 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
-        if (!stancesEnteredThisTurn.contains(newStance.ID))
-            stancesEnteredThisTurn.add(newStance.ID);
-        if (stancesEnteredThisTurn.size() == 3 && !usedYet) {
-            flash();
-            addToBot(new GainEnergyAction(amount));
-            addToBot(new DrawCardAction(2));
-            usedYet = true;
+        if (!newStance.ID.equals(NeutralStance.STANCE_ID)) {
+            if (!stancesEnteredThisTurn.contains(newStance.ID))
+                stancesEnteredThisTurn.add(newStance.ID);
+            if (stancesEnteredThisTurn.size() == 3 && !usedYet) {
+                flash();
+                addToBot(new GainEnergyAction(amount));
+                addToBot(new DrawCardAction(2));
+                usedYet = true;
+            }
         }
+    }
+
+    String getStancesCorrectly() {
+        String s = "";
+        if (stancesEnteredThisTurn.contains(DefensiveStance.STANCE_ID)) {
+            s += " #bDefensive ";
+        }
+        if (stancesEnteredThisTurn.contains(GladiatorStance.STANCE_ID)) {
+            s += " #yGladiator ";
+        }
+        if (stancesEnteredThisTurn.contains(BerserkerStance.STANCE_ID)) {
+            s += " #rBerserker ";
+        }
+        if (stancesEnteredThisTurn.contains(UltimateStance.STANCE_ID)) {
+            s += " #gUltimate ";
+        }
+        if (stancesEnteredThisTurn.contains(WrathStance.STANCE_ID)) {
+            s += " #rWrath ";
+        }
+        if (stancesEnteredThisTurn.contains(CalmStance.STANCE_ID)) {
+            s += " #bCalm ";
+        }
+        if (stancesEnteredThisTurn.contains(DivinityStance.STANCE_ID)) {
+            s += " #pDivinity ";
+        }
+        return s;
     }
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + stancesEnteredThisTurn.toString();
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + getStancesCorrectly();
     }
 
     @Override
