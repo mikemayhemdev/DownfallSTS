@@ -31,15 +31,17 @@ public class Bug extends AbstractBronzeCard {
         allStoredCards.addAll(MechaHelper.blasters.group);
         allStoredCards.addAll(MechaHelper.shields.group);
         allStoredCards.addAll(MechaHelper.cores.group);
-        AbstractCard q = allStoredCards.get(AbstractDungeon.cardRandomRng.random(0, allStoredCards.size()-1));
-        if (q.hasTag(AutomatonMod.BLASTER)) {
-            atb(new FireCardAction(q, MechaHelper.blasters));
-        }
-        else if (q.hasTag(AutomatonMod.SHIELD)) {
-            atb(new FireCardAction(q, MechaHelper.shields));
-        }
-        else if (q.hasTag(AutomatonMod.CORE)) {
-            atb(new FireCardAction(q, MechaHelper.cores));
+        if (!allStoredCards.isEmpty()) {
+            AbstractCard q = allStoredCards.get(AbstractDungeon.cardRandomRng.random(0, allStoredCards.size()-1));
+            if (q.hasTag(AutomatonMod.BLASTER)) {
+                atb(new FireCardAction(q, MechaHelper.blasters));
+            }
+            else if (q.hasTag(AutomatonMod.SHIELD)) {
+                atb(new FireCardAction(q, MechaHelper.shields));
+            }
+            else if (q.hasTag(AutomatonMod.CORE)) {
+                atb(new FireCardAction(q, MechaHelper.cores));
+            }
         }
         if (upgraded) {
             blck();

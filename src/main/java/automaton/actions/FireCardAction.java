@@ -53,7 +53,7 @@ public class FireCardAction extends AbstractGameAction {
             myCard.calculateCardDamage((AbstractMonster) target);
         }
 
-        this.addToTop(new NewQueueCardAction(myCard, this.target, false, true));// 53
+        this.addToTop(new NewQueueCardAction(myCard, this.target, false, false));// 53
         this.addToTop(new UnlimboAction(myCard));// 54
         isDone = true;
     }
