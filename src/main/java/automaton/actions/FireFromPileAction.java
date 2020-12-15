@@ -12,16 +12,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FireFromPileAction extends AbstractGameAction {
     private CardGroup g;
-    private int repetitions;
 
-    public FireFromPileAction(CardGroup t, int amount, int repetitions) { //TODO: Can only choose playable cards. End immediately and quote if all cards can't be played.
+    public FireFromPileAction(CardGroup t, int amount) { //TODO: Can only choose playable cards. End immediately and quote if all cards can't be played.
         this.g = t;
         this.amount = amount;
-        this.repetitions = repetitions;
-    }
-
-    public FireFromPileAction(CardGroup t, int amount) {
-        this(t, amount, 0);
     }
 
     @Override
@@ -37,23 +31,7 @@ public class FireFromPileAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    if (c instanceof AbstractBronzeCard) {
-                        ((AbstractBronzeCard) c).inFire = true;
-                    }
-                    if (c.hasTag(AutomatonMod.BURNOUT)) {
-                        c.exhaust = true;
-                    }
-                    for (AbstractPower p : AbstractDungeon.player.powers) {
-                        if (p instanceof OnFireSubscriber) {
-                            repetitions = ((OnFireSubscriber) p).onFire(c, repetitions);
-                        }
-                    }
-                    if (repetitions > 0) {
-                        for(int i = 0; i < repetitions; i++) {
-                            addToTop(new RepeatCardAction(c));
-                        }
-                    }
-                    addToTop(new NewQueueCardAction(c, true));
+                    addToTop(new FireCardAction(c, g));
                 }
                 isDone = true;
             }
