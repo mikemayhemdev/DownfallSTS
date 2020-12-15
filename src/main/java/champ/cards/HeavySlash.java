@@ -14,7 +14,7 @@ public class HeavySlash extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, rare
 
     private static final int DAMAGE = 18;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public HeavySlash() {
