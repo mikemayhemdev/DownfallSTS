@@ -22,7 +22,7 @@ public class ShockCore extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        allDmg(AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        allDmg(AbstractGameAction.AttackEffect.LIGHTNING);
         atb(new GainEnergyAction(1));
     }
 
