@@ -150,5 +150,9 @@
   "bronze:SuperDuperBeam": {
     "NAME": "Super Duper Beam",
     "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage to ALL enemies. NL Put !M! *Void on top of your draw pile."
+  },
+  "bronze:ForwardsDeclaration": {
+    "NAME": "Forwards Declaration",
+    "DESCRIPTION": "Gain !B! Block. NL Scry 1. NL Shuffle this card into your draw pile."
   }
 }
