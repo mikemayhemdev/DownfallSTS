@@ -27,8 +27,13 @@ public class FireFromPileAction extends AbstractGameAction {
     @Override
     public void update() {
         if (duration == startDuration) {
-            AbstractDungeon.gridSelectScreen.open(g, amount, false, "Choose."); //TODO: Localize
-            tickDuration();
+            if (g.isEmpty() || amount < 1) {
+                isDone = true;
+            }
+            else {
+                AbstractDungeon.gridSelectScreen.open(g, amount, false, "Choose."); //TODO: Localize
+                tickDuration();
+            }
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
