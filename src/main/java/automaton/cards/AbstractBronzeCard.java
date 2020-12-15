@@ -77,7 +77,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
         return getModID() + ":" + blah;
     }
 
-    @Override
+    @java.lang.Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
@@ -175,7 +175,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
         atb(new FireFromPileAction(MechaHelper.cores, amount));
     }
 
-    @Override
+    @java.lang.Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard q = super.makeStatEquivalentCopy();
         if (q instanceof AbstractBronzeCard) {

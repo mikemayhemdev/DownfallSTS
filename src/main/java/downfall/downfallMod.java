@@ -8,6 +8,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 
  */
 
+import automaton.AutomatonMod;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -228,6 +229,8 @@ public class downfallMod implements
                 return "expansioncontentResources/" + path;
             case PACKAGE_CHAMP:
                 return "champResources/" + path;
+            case PACKAGE_AUTOMATON:
+                return "automatonResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -304,6 +307,9 @@ public class downfallMod implements
 
         SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_CHAMP" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_CHAMP));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -374,7 +380,7 @@ public class downfallMod implements
         loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
-
+        loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
     }
 
     public void receivePostInitialize() {
@@ -1163,7 +1169,8 @@ public class downfallMod implements
         PACKAGE_HEXAGHOST,
         PACKAGE_SNECKO,
         PACKAGE_EXPANSION,
-        PACKAGE_CHAMP;
+        PACKAGE_CHAMP,
+        PACKAGE_AUTOMATON;
 
         otherPackagePaths() {
         }

@@ -28,6 +28,7 @@ import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
+import downfall.util.CardIgnore;
 import guardian.events.GemMine;
 import guardian.patches.AbstractCardEnum;
 import guardian.patches.BottledStasisPatch;

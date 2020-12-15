@@ -47,7 +47,7 @@ public class AutomatonChar extends CustomPlayer {
     private String jsonURL = "automatonResources/images/char/mainChar/champ.json";
 
     public AutomatonChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "automatonResources/images/char/mainChar/orb/vfx.png", null, null);
+        super(name, setClass, orbTextures, "automatonResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,

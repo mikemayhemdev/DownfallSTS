@@ -33,6 +33,7 @@ public class AutomatonMod implements
         //EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
+        PostDungeonInitializeSubscriber,
         SetUnlocksSubscriber,
         OnCardUseSubscriber {
     public static final String SHOULDER1 = "automatonResources/images/char/mainChar/shoulder.png";
@@ -209,5 +210,10 @@ public class AutomatonMod implements
         if (abstractCard instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) abstractCard).inFire = false;
         }
+    }
+
+    @Override
+    public void receivePostDungeonInitialize() {
+        MechaHelper.init();
     }
 }
