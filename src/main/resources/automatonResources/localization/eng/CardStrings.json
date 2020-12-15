@@ -134,5 +134,9 @@
   "bronze:MentalMap": {
     "NAME": "Mental Map",
     "DESCRIPTION": "bronze:Shield. NL Gain !B! Block. NL Scry !M!. NL Return 1 card from your discard pile to your hand."
+  },
+  "bronze:Blockblast": {
+    "NAME": "Blockblast",
+    "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage. NL bronze:Fire 1 bronze:Shield."
   }
 }

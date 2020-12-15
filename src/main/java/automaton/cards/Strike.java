@@ -19,7 +19,7 @@ public class Strike extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE); //TODO: Maybe cooler vfx?
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void upp() {
