@@ -1,1 +1,10 @@
-{}
+{
+  "bronze:BarragePower": {
+    "NAME": "Barrage",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yFire #b1 #yBlaster.",
+      "At the end of your turn, #yFire #b",
+      " #yBlasters."
+    ]
+  }
+}
