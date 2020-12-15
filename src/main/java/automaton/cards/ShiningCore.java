@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,6 +14,8 @@ public class ShiningCore extends AbstractBronzeCard {
 
     public ShiningCore() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        tags.add(AutomatonMod.CORE);
+        tags.add(AutomatonMod.BURNOUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

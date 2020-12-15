@@ -84,15 +84,23 @@
   },
   "bronze:ShiningCore": {
     "NAME": "Shining Core",
-    "DESCRIPTION": "bronze:Core. NL Gain [E]. NL If champ:Fired: Stun the enemy for 1 turn."
+    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL If champ:Fired: Stun the enemy for 1 turn."
   },
   "bronze:QuadCore": {
     "NAME": "Quad Core",
-    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL At the start of your turn, draw 1 additional card.",
-    "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL At the start of your turn, draw 1 additional card."
+    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL At the start of your turn, gain [E].",
+    "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL At the start of your turn, gain [E]."
   },
   "bronze:Subroutine": {
     "NAME": "Subroutine",
     "DESCRIPTION": "Deal !D! damage. NL The next card you bronze:Fire costs 0."
+  },
+  "bronze:PrepDefense": {
+    "NAME": "Prep Defense",
+    "DESCRIPTION": "bronze:Shield. NL Gain !B! Block. NL Add 1 *Reserve *Guard into your hand."
+  },
+  "bronze:ReserveGuard": {
+    "NAME": "Reserve Guard",
+    "DESCRIPTION": "Retain. NL bronze:Fire 1 bronze:Shield. NL Exhaust."
   }
 }

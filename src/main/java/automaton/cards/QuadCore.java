@@ -4,6 +4,7 @@ import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BerserkPower;
 import com.megacrit.cardcrawl.powers.DrawPower;
 
 public class QuadCore extends AbstractBronzeCard {
@@ -13,13 +14,13 @@ public class QuadCore extends AbstractBronzeCard {
     //stupid intellij stuff power, self, rare
 
     public QuadCore() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         tags.add(AutomatonMod.BURNOUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new GainEnergyAction(1));
-        applyToSelf(new DrawPower(p, 1));
+        applyToSelf(new BerserkPower(p, 1));
     }
 
     public void upp() {
