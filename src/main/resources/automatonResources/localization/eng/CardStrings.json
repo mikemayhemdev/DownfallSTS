@@ -138,5 +138,9 @@
   "bronze:Blockblast": {
     "NAME": "Blockblast",
     "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage. NL bronze:Fire 1 bronze:Shield."
+  },
+  "bronze:ChargeUp": {
+    "NAME": "Charge Up",
+    "DESCRIPTION": "bronze:Shield. NL bronze:Burnout. NL Gain !B! Block. NL Gain !M! Strength."
   }
 }
