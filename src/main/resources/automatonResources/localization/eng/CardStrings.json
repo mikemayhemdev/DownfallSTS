@@ -84,6 +84,11 @@
   },
   "bronze:ShiningCore": {
     "NAME": "Shining Core",
-    "DESCRIPTION": "Gain [E]. NL If champ:Fired: Stun the enemy for 1 turn."
+    "DESCRIPTION": "bronze:Core. NL Gain [E]. NL If champ:Fired: Stun the enemy for 1 turn."
+  },
+  "bronze:QuadCore": {
+    "NAME": "Quad Core",
+    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL At the start of your turn, draw 1 additional card.",
+    "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL At the start of your turn, draw 1 additional card."
   }
 }

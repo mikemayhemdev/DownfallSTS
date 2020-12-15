@@ -58,6 +58,8 @@ public class AutomatonMod implements
     public static AbstractCard.CardTags SHIELD;
     @SpireEnum
     public static AbstractCard.CardTags CORE;
+    @SpireEnum
+    public static AbstractCard.CardTags BURNOUT;
     private static String modID = "bronze";
     private CustomUnlockBundle unlocks0; // TODO: Figure this out
     private CustomUnlockBundle unlocks1;

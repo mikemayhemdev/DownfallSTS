@@ -1,5 +1,6 @@
 package automaton.actions;
 
+import automaton.AutomatonMod;
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
@@ -31,6 +32,9 @@ public class FireFromPileAction extends AbstractGameAction {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                     if (c instanceof AbstractBronzeCard) {
                         ((AbstractBronzeCard) c).inFire = true;
+                    }
+                    if (c.hasTag(AutomatonMod.BURNOUT)) {
+                        c.exhaust = true;
                     }
                     if (repetitions > 0) {
                         for(int i = 0; i < repetitions; i++) {

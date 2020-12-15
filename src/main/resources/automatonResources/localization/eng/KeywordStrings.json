@@ -30,5 +30,12 @@
       "fired"
     ],
     "DESCRIPTION": "Play card, including costs. If targeted, targets a random enemy. You can't Fire a card you can't afford."
+  },
+  {
+    "PROPER_NAME": "Burnout",
+    "NAMES": [
+      "burnout"
+    ],
+    "DESCRIPTION": "A card with Burnout is Exhausted after being #yFired."
   }
 ]
