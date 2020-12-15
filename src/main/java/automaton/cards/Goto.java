@@ -1,8 +1,10 @@
 package automaton.cards;
 
+import automaton.actions.FireCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Goto extends AbstractBronzeCard {
@@ -26,7 +28,13 @@ public class Goto extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new ScryAction(magicNumber));
-        //TODO: Fire top card of draw pile
+        atb(new AbstractGameAction() {
+            @java.lang.Override
+            public void update() {
+                isDone = true;
+                att(new FireCardAction(AbstractDungeon.player.drawPile.getTopCard(), AbstractDungeon.player.drawPile));
+            }
+        });
     }
 
     public void upp() {
