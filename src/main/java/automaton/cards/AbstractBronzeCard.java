@@ -1,5 +1,7 @@
 package automaton.cards;
 
+import automaton.MechaHelper;
+import automaton.actions.FireFromPileAction;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
@@ -164,5 +166,17 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
+    }
+
+    void fireBlaster(int amount) {
+        atb(new FireFromPileAction(MechaHelper.blasters, amount));
+    }
+
+    void fireShields(int amount) {
+        atb(new FireFromPileAction(MechaHelper.shields, amount));
+    }
+
+    void fireCores(int amount) {
+        atb(new FireFromPileAction(MechaHelper.cores, amount));
     }
 }

@@ -16,7 +16,7 @@ public class OpenFire extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new FireFromPileAction(MechaHelper.blasters, 1));
+        fireBlaster(1);
     }
 
     public void upp() {

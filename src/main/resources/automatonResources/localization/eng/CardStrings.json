@@ -13,7 +13,7 @@
   },
   "bronze:OpenFire": {
     "NAME": "Open Fire",
-    "DESCRIPTIONS": "bronze:Fire a bronze:Blaster."
+    "DESCRIPTIONS": "bronze:Fire 1 bronze:Blaster."
   },
   "bronze:ShieldsUp": {
     "NAME": "Shields Up",
@@ -22,5 +22,9 @@
   "bronze:SpreadShot": {
     "NAME": "Spread Shot",
     "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage to ALL enemies."
+  },
+  "bronze:ParallelProcess": {
+    "NAME": "Parallel Process",
+    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. NL bronze:Fire 1 bronze:Shield."
   }
 }
