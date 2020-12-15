@@ -16,7 +16,7 @@ public class BoomerangBolt extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, rare
 
     private static final int DAMAGE = 18;
-    private static final int UPG_DAMAGE = 6;
+    private static final int UPG_DAMAGE = 4;
 
     public BoomerangBolt() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
