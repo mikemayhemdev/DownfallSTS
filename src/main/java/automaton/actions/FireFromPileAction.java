@@ -2,11 +2,14 @@ package automaton.actions;
 
 import automaton.AutomatonMod;
 import automaton.cards.AbstractBronzeCard;
+import automaton.powers.FreeFirePower;
+import automaton.powers.OnFireSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FireFromPileAction extends AbstractGameAction {
     private CardGroup g;
@@ -35,6 +38,11 @@ public class FireFromPileAction extends AbstractGameAction {
                     }
                     if (c.hasTag(AutomatonMod.BURNOUT)) {
                         c.exhaust = true;
+                    }
+                    for (AbstractPower p : AbstractDungeon.player.powers) {
+                        if (p instanceof OnFireSubscriber) {
+                            repetitions = ((OnFireSubscriber) p).onFire(c, repetitions);
+                        }
                     }
                     if (repetitions > 0) {
                         for(int i = 0; i < repetitions; i++) {

@@ -37,5 +37,13 @@
       "burnout"
     ],
     "DESCRIPTION": "A card with Burnout is Exhausted after being #yFired."
+  },
+  {
+    "PROPER_NAME": "Repeat",
+    "NAMES": [
+      "repeat",
+      "repeated"
+    ],
+    "DESCRIPTION": "Play a free copy of a card that Purges."
   }
 ]

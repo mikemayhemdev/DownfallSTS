@@ -7,21 +7,20 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static automaton.AutomatonMod.makeID;
 
-public class FreeFirePower extends AbstractAutomatonPower implements OnFireSubscriber {
-    public static final String NAME = "FreeFire";
+public class FireBonusPower extends AbstractAutomatonPower implements OnFireSubscriber {
+    public static final String NAME = "FireBonus";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
 
-    public FreeFirePower(int amount) {
+    public FireBonusPower(int amount) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
     }
 
     @Override
     public int onFire(AbstractCard toFire, int reps) {
         flash();
-        toFire.freeToPlayOnce = true;
         addToTop(new ReducePowerAction(owner, owner, this, 1));
-        return reps;
+        return reps + 1;
     }
 }

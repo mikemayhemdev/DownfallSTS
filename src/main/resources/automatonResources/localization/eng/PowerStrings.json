@@ -14,5 +14,13 @@
       "The next #b",
       " cards you #yFire cost #b0."
     ]
+  },
+  "bronze:FireBonusPower": {
+    "NAME": "Fire Bonus",
+    "DESCRIPTIONS": [
+      "The next card you #yFire is #yRepeated.",
+      "The next #b",
+      " cards you #yFire are #yRepeated."
+    ]
   }
 }
