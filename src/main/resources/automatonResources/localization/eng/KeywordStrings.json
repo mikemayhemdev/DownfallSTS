@@ -5,7 +5,23 @@
       "blaster",
       "blasters"
     ],
-    "DESCRIPTION": "After play, moves to the Blaster pile."
+    "DESCRIPTION": "After play, moves to the Blasters pile."
+  },
+  {
+    "PROPER_NAME": "Shield",
+    "NAMES": [
+      "shield",
+      "shields"
+    ],
+    "DESCRIPTION": "After play, moves to the Shields pile."
+  },
+  {
+    "PROPER_NAME": "Core",
+    "NAMES": [
+      "core",
+      "cores"
+    ],
+    "DESCRIPTION": "After play, moves to the Cores pile."
   },
   {
     "PROPER_NAME": "Fire",
