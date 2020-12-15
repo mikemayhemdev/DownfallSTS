@@ -73,5 +73,13 @@
   "bronze:WideGuard": {
     "NAME": "Wide Guard",
     "DESCRIPTION": "bronze:Shield. NL Gain !B! Block."
+  },
+  "bronze:Barrage": {
+    "NAME": "Barrage",
+    "DESCRIPTION": "At the end of your turn, bronze:Fire 1 bronze:Blaster."
+  },
+  "bronze:PrepareGuns": {
+    "NAME": "Prepare Guns",
+    "DESCRIPTION": "Gain [E] for each bronze:Blaster stored."
   }
 }

@@ -23,9 +23,7 @@ public abstract class AbstractAutomatonPower extends AbstractPower {
 
     protected static Map<String, PowerStrings> powerStrings = new HashMap<>();
 
-    protected String[] descriptions() {
-        return powerStrings.get(this.ID).DESCRIPTIONS;
-    }
+    protected String[] DESCRIPTIONS;
 
     public AbstractAutomatonPower(String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, AbstractCreature source, int amount) {
         this(NAME, powerType, isTurnBased, owner, source, amount, "");
@@ -38,6 +36,7 @@ public abstract class AbstractAutomatonPower extends AbstractPower {
         if (!powerStrings.containsKey(this.ID))
             powerStrings.put(this.ID, getPowerStrings(this.ID));
         this.name = powerStrings.get(this.ID).NAME;
+        this.DESCRIPTIONS = powerStrings.get(this.ID).DESCRIPTIONS;
 
         this.owner = owner;
         this.source = source;
@@ -90,13 +89,10 @@ public abstract class AbstractAutomatonPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        if (this.amount == 1)
-        {
-            this.description = descriptions()[0];
-        }
-        else
-        {
-            this.description = descriptions()[1] + amount + descriptions()[2];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         }
     }
 }
