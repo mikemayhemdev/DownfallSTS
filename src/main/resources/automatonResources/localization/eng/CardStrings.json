@@ -43,5 +43,9 @@
   "bronze:Infusion": {
     "NAME": "Infusion",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Fire 1 bronze:Core."
+  },
+  "bronze:MachineFire": {
+    "NAME": "Machine Fire",
+    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. Repeat its effects X times."
   }
 }
