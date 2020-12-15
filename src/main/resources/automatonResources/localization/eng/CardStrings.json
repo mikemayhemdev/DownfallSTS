@@ -126,5 +126,9 @@
     "NAME": "Auto-Turret",
     "DESCRIPTION": "At the start of your turn, bronze:Repeat X *Peashooters.",
     "UPGRADE_DESCRIPTION": "Refund 1. NL At the start of your turn, bronze:Repeat X *Peashooters."
+  },
+  "bronze:TriBeam": {
+    "NAME": "Tri-Beam",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Fire 2 bronze:Blasters."
   }
 }
