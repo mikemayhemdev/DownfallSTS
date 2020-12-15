@@ -68,7 +68,7 @@
   "bronze:HeldProtector": {
     "NAME": "Held Protector",
     "DESCRIPTION": "bronze:Shield. NL If Fired: Gain 1 Artifact.",
-    "UPGRADE_DESCRIPTION": "bronze:Shield. NL Reduce this card's cost by 1. NL If Fired: Gain 1 Artifact."
+    "UPGRADE_DESCRIPTION": "bronze:Shield. NL Reduce this card's cost by 1. NL If champ:Fired: Gain 1 Artifact."
   },
   "bronze:WideGuard": {
     "NAME": "Wide Guard",
@@ -81,5 +81,9 @@
   "bronze:PrepareGuns": {
     "NAME": "Prepare Guns",
     "DESCRIPTION": "Gain [E] for each bronze:Blaster stored."
+  },
+  "bronze:ShiningCore": {
+    "NAME": "Shining Core",
+    "DESCRIPTION": "Gain [E]. NL If champ:Fired: Stun the enemy for 1 turn."
   }
 }

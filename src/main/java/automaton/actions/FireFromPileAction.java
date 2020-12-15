@@ -11,7 +11,7 @@ public class FireFromPileAction extends AbstractGameAction {
     private CardGroup g;
     private int repetitions;
 
-    public FireFromPileAction(CardGroup t, int amount, int repetitions) {
+    public FireFromPileAction(CardGroup t, int amount, int repetitions) { //TODO: Can only choose playable cards. End immediately and quote if all cards can't be played.
         this.g = t;
         this.amount = amount;
         this.repetitions = repetitions;
