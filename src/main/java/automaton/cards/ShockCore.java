@@ -15,7 +15,7 @@ public class ShockCore extends AbstractBronzeCard {
     private static final int DAMAGE = 1;
 
     public ShockCore() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         tags.add(AutomatonMod.CORE);
