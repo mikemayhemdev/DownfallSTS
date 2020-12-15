@@ -116,5 +116,10 @@
     "NAME": "Dupe Core",
     "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL The next card you bronze:Fire is bronze:Repeated.",
     "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL The next card you bronze:Fire is bronze:Repeated."
+  },
+  "bronze:SuppressiveFire": {
+    "NAME": "Suppressive Fire",
+    "DESCRIPTION": "bronze:Blaster. NL If bronze:Fired: Apply 1 Weak and Vulnerable to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "bronze:Blaster. NL Apply 1 Weak and Vulnerable to ALL enemies."
   }
 }
