@@ -1,14 +1,11 @@
 package champ.actions;
 
-import champ.powers.CounterPower;
 import champ.stances.AbstractChampStance;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.actions.AbstractXAction;
-import theHexaghost.powers.EnhancePower;
 
 public class LariatAction extends AbstractXAction {
     private int boom;

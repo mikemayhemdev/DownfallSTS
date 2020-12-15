@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
 
-public class BronzeCore extends CustomRelic {
+public class BronzeBoon extends CustomRelic {
 
-    public static final String ID = AutomatonMod.makeID("BronzeCore");
+    public static final String ID = AutomatonMod.makeID("BronzeBoon");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Barbell.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Barbell.png"));
 
-    public BronzeCore() {
+    public BronzeBoon() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 

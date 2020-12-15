@@ -35,5 +35,9 @@
     "NAME": "Cascade Blast",
     "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage. NL bronze:Fire !M! bronze:Core.",
     "UPGRADE_DESCRIPTION": "bronze:Blaster. NL Deal !D! damage. NL bronze:Fire !M! bronze:Cores."
+  },
+  "bronze:ShockCore": {
+    "NAME": "Shock Core",
+    "DESCRIPTION": "bronze:Core. NL Deal !D! damage to ALL enemies. NL Gain [E] ."
   }
 }

@@ -1,6 +1,6 @@
 package automaton;
 
-import automaton.relics.BronzeCore;
+import automaton.relics.BronzeBoon;
 import basemod.abstracts.CustomPlayer;
 import champ.ChampMod;
 import champ.cards.Taunt;
@@ -113,7 +113,7 @@ public class AutomatonChar extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(BronzeCore.ID);
+        retVal.add(BronzeBoon.ID);
         return retVal;
     }
 

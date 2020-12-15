@@ -1,6 +1,6 @@
 {
-  "bronze:BronzeCore": {
-    "NAME": "Bronze Core",
+  "bronze:BronzeBoon": {
+    "NAME": "Bronze Generator",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
       "Gain [E] at the start of turn #b2."
