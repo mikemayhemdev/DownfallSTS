@@ -83,10 +83,10 @@
   "champ:ImprovisingPower": {
     "NAME": "Improvising",
     "DESCRIPTIONS": [
-      "The first time each turn you use a #yCombo while not in the correct #yStance, return it to your hand and it costs #b0 until played. #b",
+      "The first time each turn you use a #yCombo, return it to your hand and it costs #b0 until played. #b",
       " uses left.",
       "The first #b",
-      " times each turn you use a #yCombo while not in the correct #yStance, return it to your hand and it costs #b0 until played. #b"
+      " times each turn you use a #yCombo, return it to your hand and it costs #b0 until played. #b"
     ]
   },
   "champ:CalledShotPower": {
