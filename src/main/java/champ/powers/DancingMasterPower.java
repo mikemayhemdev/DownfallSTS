@@ -51,6 +51,7 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
     public void atStartOfTurn() {
         stanceChangesThisTurn = 0;
         usedYet = false;
+        updateDescription();
     }
 
     @Override
@@ -64,6 +65,7 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
                 usedYet = true;
             }
         }
+        updateDescription();
     }
 
     @Override
