@@ -55,5 +55,9 @@
   "bronze:BoomerangBolt": {
     "NAME": "Boomerang Bolt",
     "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage to ALL enemies. NL Reduce this card's cost by 1."
+  },
+  "bronze:DeferProcess": {
+    "NAME": "Defer Process",
+    "DESCRIPTION": "Apply !M! Weak. NL Next turn, gain [E]."
   }
 }
