@@ -24,7 +24,7 @@ public class MachineFire extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new EasyXCostAction(this, (effect, params) -> {
-            atb(new FireFromPileAction(MechaHelper.blasters, 1, effect+params[0]));
+            att(new FireFromPileAction(MechaHelper.blasters, 1, effect+params[0]));
             return true;
         }, magicNumber));
     }

@@ -22,5 +22,13 @@
       "The next #b",
       " cards you #yFire are #yRepeated."
     ]
+  },
+  "bronze:AutoTurretPower": {
+    "NAME": "Auto-Turret",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yFire #b1 #yPeashooter.",
+      "At the start of your turn, #yFire #b",
+      " #yPeashooters."
+    ]
   }
 }

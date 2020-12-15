@@ -121,5 +121,10 @@
     "NAME": "Suppressive Fire",
     "DESCRIPTION": "bronze:Blaster. NL If bronze:Fired: Apply 1 Weak and Vulnerable to ALL enemies.",
     "UPGRADE_DESCRIPTION": "bronze:Blaster. NL Apply 1 Weak and Vulnerable to ALL enemies."
+  },
+  "bronze:AutoTurret": {
+    "NAME": "Auto-Turret",
+    "DESCRIPTION": "At the start of your turn, bronze:Repeat X *Peashooters.",
+    "UPGRADE_DESCRIPTION": "Refund 1. NL At the start of your turn, bronze:Repeat X *Peashooters."
   }
 }

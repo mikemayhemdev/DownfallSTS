@@ -143,8 +143,16 @@ public abstract class AbstractBronzeCard extends CustomCard {
         atb(new ApplyPowerAction(m, AbstractDungeon.player, po, po.amount));
     }
 
+    public void applyToEnemyTop(AbstractMonster m, AbstractPower po) {
+        att(new ApplyPowerAction(m, AbstractDungeon.player, po, po.amount));
+    }
+
     public void applyToSelf(AbstractPower po) {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
+    }
+
+    public void applyToSelfTop(AbstractPower po) {
+        att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
     WeakPower autoWeak(AbstractMonster m, int i) {

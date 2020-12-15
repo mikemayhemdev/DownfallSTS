@@ -2,7 +2,6 @@ package automaton.actions;
 
 import automaton.AutomatonMod;
 import automaton.cards.AbstractBronzeCard;
-import automaton.powers.FreeFirePower;
 import automaton.powers.OnFireSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
@@ -46,7 +45,7 @@ public class FireFromPileAction extends AbstractGameAction {
                     }
                     if (repetitions > 0) {
                         for(int i = 0; i < repetitions; i++) {
-                            addToTop(new EasyAutoplayAction(c));
+                            addToTop(new RepeatCardAction(c));
                         }
                     }
                     addToTop(new NewQueueCardAction(c, true));

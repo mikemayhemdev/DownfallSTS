@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class EasyAutoplayAction extends AbstractGameAction { // TODO: Make sure this is good
+public class RepeatCardAction extends AbstractGameAction { // TODO: Make sure this is good
     private AbstractCard funCard;
 
-    public EasyAutoplayAction(AbstractCreature target, AbstractCard card) {
+    public RepeatCardAction(AbstractCreature target, AbstractCard card) {
         this.duration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.WAIT;
         this.source = AbstractDungeon.player;
@@ -19,7 +19,7 @@ public class EasyAutoplayAction extends AbstractGameAction { // TODO: Make sure 
         this.funCard = card;
     }
 
-    public EasyAutoplayAction(AbstractCard card) {
+    public RepeatCardAction(AbstractCard card) {
         this(null, card);
     }
 
