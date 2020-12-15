@@ -154,5 +154,9 @@
   "bronze:ForwardsDeclaration": {
     "NAME": "Forwards Declaration",
     "DESCRIPTION": "Gain !B! Block. NL Scry 1. NL Shuffle this card into your draw pile."
+  },
+  "bronze:Override": {
+    "NAME": "Override",
+    "DESCRIPTION": "bronze:Repeat 1 card in your hand."
   }
 }
