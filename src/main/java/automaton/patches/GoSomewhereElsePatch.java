@@ -52,7 +52,7 @@ public class GoSomewhereElsePatch {
                 public void update() {
                     isDone = true;
                     AbstractDungeon.player.limbo.removeCard(card);
-                    MechaHelper.blasters.addToTop(card);
+                    MechaHelper.shields.addToTop(card);
                 }
             });
             return false;
@@ -64,7 +64,7 @@ public class GoSomewhereElsePatch {
                 public void update() {
                     isDone = true;
                     AbstractDungeon.player.limbo.removeCard(card);
-                    MechaHelper.blasters.addToTop(card);
+                    MechaHelper.cores.addToTop(card);
                 }
             });
             return false;
