@@ -12,6 +12,6 @@
     "NAMES": [
       "fire"
     ],
-    "DESCRIPTION": "Play for no cost. If targeted, targets a random enemy."
+    "DESCRIPTION": "Play card, including costs. If targeted, targets a random enemy."
   }
 ]
