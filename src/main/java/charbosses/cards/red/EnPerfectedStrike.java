@@ -69,6 +69,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
         this.isDamageModified = (this.damage != this.baseDamage);
     }
 
+    /*
     @Override
     public void applyPowers() {
         final int realBaseDamage = this.baseDamage;
@@ -77,6 +78,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
         this.baseDamage = realBaseDamage;
         this.isDamageModified = (this.damage != this.baseDamage);
     }
+    */
 
     @Override
     public AbstractCard makeCopy() {
