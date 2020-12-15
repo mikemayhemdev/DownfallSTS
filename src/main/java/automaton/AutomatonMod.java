@@ -196,18 +196,6 @@ public class AutomatonMod implements
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
-        if (abstractCard.hasTag(BLASTER)) {
-            AbstractDungeon.player.limbo.removeCard(abstractCard);
-            MechaHelper.blasters.addToTop(abstractCard);
-        }
-        if (abstractCard.hasTag(SHIELD)) {
-            AbstractDungeon.player.limbo.removeCard(abstractCard);
-            MechaHelper.shields.addToTop(abstractCard);
-        }
-        if (abstractCard.hasTag(CORE)) {
-            AbstractDungeon.player.limbo.removeCard(abstractCard);
-            MechaHelper.cores.addToTop(abstractCard);
-        }
         if (abstractCard instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) abstractCard).inFire = false;
         }
