@@ -18,5 +18,9 @@
   "bronze:ShieldsUp": {
     "NAME": "Shields Up",
     "DESCRIPTION": "bronze:Shield. NL Gain !B! Block."
+  },
+  "bronze:SpreadShot": {
+    "NAME": "Spread Shot",
+    "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage to ALL enemies."
   }
 }
