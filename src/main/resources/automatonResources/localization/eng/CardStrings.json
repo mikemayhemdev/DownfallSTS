@@ -39,5 +39,9 @@
   "bronze:ShockCore": {
     "NAME": "Shock Core",
     "DESCRIPTION": "bronze:Core. NL Deal !D! damage to ALL enemies. NL Gain [E] ."
+  },
+  "bronze:Infusion": {
+    "NAME": "Infusion",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Fire 1 bronze:Core."
   }
 }
