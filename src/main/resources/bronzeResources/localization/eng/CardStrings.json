@@ -171,6 +171,7 @@
   },
   "bronze:Bug": {
     "NAME": "Bug",
-    "DESCRIPTION": "Autoplay. NL Gain [E]. NL bronze:Fire 1 random bronze:Blaster, bronze:Shield or bronze:Core."
+    "DESCRIPTION": "Autoplay. NL Gain [E]. NL bronze:Fire 1 random bronze:Blaster, bronze:Shield or bronze:Core.",
+    "UPGRADE_DESCRIPTION": "Autoplay. NL Gain [E]. NL bronze:Fire 1 random bronze:Blaster, bronze:Shield or bronze:Core. NL Gain !B! Block."
   }
 }
