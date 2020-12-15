@@ -20,7 +20,7 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
         selfRetain = true;
         exhaust = true;
         tags.add(CardTags.STRIKE);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
     }
 
     @Override
