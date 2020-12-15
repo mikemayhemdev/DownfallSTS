@@ -130,5 +130,9 @@
   "bronze:TriBeam": {
     "NAME": "Tri-Beam",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Fire 2 bronze:Blasters."
+  },
+  "bronze:MentalMap": {
+    "NAME": "Mental Map",
+    "DESCRIPTION": "bronze:Shield. NL Gain !B! Block. NL Scry !M!. NL Return 1 card from your discard pile to your hand."
   }
 }
