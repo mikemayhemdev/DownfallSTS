@@ -164,5 +164,9 @@
     "NAME": "Overcharge",
     "DESCRIPTION": "Gain X Strength. NL Gain X Dexterity.",
     "UPGRADE_DESCRIPTION": "Gain X+1 Strength. NL Gain X+1 Dexterity."
+  },
+  "bronze:ArrayShot": {
+    "NAME": "Array Shot",
+    "DESCRIPTION": "bronze:Blaster. NL bronze:Burnout. NL Deal !D! damage. NL Deals !M! additional damage for each stored bronze:Blaster."
   }
 }
