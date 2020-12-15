@@ -1,7 +1,5 @@
 package automaton.cards;
 
-import automaton.MechaHelper;
-import automaton.actions.FireFromPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 

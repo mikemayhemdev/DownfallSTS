@@ -3,15 +3,7 @@ package automaton;
 import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomPlayer;
 import champ.ChampMod;
-import champ.cards.Defend;
-import champ.cards.Execute;
-import champ.cards.Strike;
 import champ.cards.Taunt;
-import champ.relics.ChampionCrown;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -26,8 +18,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -52,12 +42,12 @@ public class AutomatonChar extends CustomPlayer {
     private static final String[] TEXT = characterStrings.TEXT;
 
     public float renderscale = 1.0F;
-    
+
     private String atlasURL = "automatonResources/images/char/mainChar/champ.atlas";
     private String jsonURL = "automatonResources/images/char/mainChar/champ.json";
 
     public AutomatonChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "automatonResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
+        super(name, setClass, orbTextures, "automatonResources/images/char/mainChar/orb/vfx.png", null, null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -79,7 +69,6 @@ public class AutomatonChar extends CustomPlayer {
 
 
     }
-
 
 
     @Override

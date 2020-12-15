@@ -5,13 +5,13 @@ import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
-import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.util.CardIgnore;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -51,16 +51,13 @@ public class AutomatonMod implements
 
     public static Color placeholderColor = new Color(100F / 255F, 100F / 255F, 100F / 255F, 1); // TODO: CHANGE
     public static Color potionLabColor = new Color(200F / 255F, 200F / 255F, 200F / 255F, 1); // TODO: CHANGE
-
-    private static String modID = "bronze";
-
     @SpireEnum
     public static AbstractCard.CardTags BLASTER;
     @SpireEnum
     public static AbstractCard.CardTags SHIELD;
     @SpireEnum
     public static AbstractCard.CardTags CORE;
-
+    private static String modID = "bronze";
     private CustomUnlockBundle unlocks0; // TODO: Figure this out
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;

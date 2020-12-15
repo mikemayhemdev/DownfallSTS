@@ -3,21 +3,10 @@ package automaton.cards;
 import automaton.MechaHelper;
 import automaton.actions.FireFromPileAction;
 import basemod.abstracts.CustomCard;
-import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
-import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
-import champ.powers.CalledShotPower;
-import champ.powers.FocusedBerPower;
-import champ.powers.ResolvePower;
-import champ.relics.SignatureFinisher;
-import champ.stances.*;
-import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,15 +16,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import static champ.ChampMod.*;
-import static com.badlogic.gdx.graphics.Color.RED;
+import static champ.ChampMod.getModID;
+import static champ.ChampMod.makeCardPath;
 
 
 public abstract class AbstractBronzeCard extends CustomCard {

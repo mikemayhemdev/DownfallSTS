@@ -22,7 +22,7 @@ public class SpreadShot extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-         allDmg(AbstractGameAction.AttackEffect.FIRE);
+        allDmg(AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void upp() {
