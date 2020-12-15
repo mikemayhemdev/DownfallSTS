@@ -38,7 +38,7 @@
   },
   "bronze:ShockCore": {
     "NAME": "Shock Core",
-    "DESCRIPTION": "bronze:Core. NL Deal !D! damage to ALL enemies. NL Gain [E] ."
+    "DESCRIPTION": "bronze:Core. NL Deal !D! damage to ALL enemies. NL Gain [E]."
   },
   "bronze:Infusion": {
     "NAME": "Infusion",
@@ -47,5 +47,9 @@
   "bronze:MachineFire": {
     "NAME": "Machine Fire",
     "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. Repeat its effects X times."
+  },
+  "bronze:SeerCore": {
+    "NAME": "Seer Core",
+    "DESCRIPTION": "bronze:Core. NL Scry !M!. NL Gain [E]. NL Draw 1 card."
   }
 }
