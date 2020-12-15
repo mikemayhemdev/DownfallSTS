@@ -26,5 +26,9 @@
   "bronze:ParallelProcess": {
     "NAME": "Parallel Process",
     "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. NL bronze:Fire 1 bronze:Shield."
+  },
+  "bronze:FullForce": {
+    "NAME": "Full Force",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Fire ALL bronze:Blasters."
   }
 }
