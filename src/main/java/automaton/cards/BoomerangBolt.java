@@ -28,7 +28,7 @@ public class BoomerangBolt extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(p, new CleaveEffect(), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
-        atb(new ReduceCostAction(uuid, 1));
+        atb(new ReduceCostAction(this));
     }
 
     public void upp() {

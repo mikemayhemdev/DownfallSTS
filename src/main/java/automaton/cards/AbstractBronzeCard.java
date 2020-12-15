@@ -31,6 +31,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
 
+    public boolean inFire = false;
+
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, ChampChar.Enums.CHAMP_GRAY, rarity, target);
@@ -163,5 +165,14 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     void fireCores(int amount) {
         atb(new FireFromPileAction(MechaHelper.cores, amount));
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard q = super.makeStatEquivalentCopy();
+        if (q instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) q).inFire = this.inFire;
+        }
+        return q;
     }
 }

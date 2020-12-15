@@ -62,6 +62,12 @@
   },
   "bronze:StackOverflow": {
     "NAME": "Stack Overflow",
-    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. NL bronze:Fire 1 bronze:Shield. NL bronze:Fire 1 bronze:Core. NL bronze:Fire 1 card from your discard and draw piles."
+    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. bronze:Fire 1 card from your discard and draw piles.",
+    "UPGRADE_DESCRIPTION": "Gain [E]. NL bronze:Fire 1 bronze:Blaster. bronze:Fire 1 card from your discard and draw piles."
+  },
+  "bronze:HeldProtector": {
+    "NAME": "Held Protector",
+    "DESCRIPTION": "bronze:Shield. NL If Fired: Gain 1 Artifact.",
+    "UPGRADE_DESCRIPTION": "bronze:Shield. NL Reduce this card's cost by 1. NL If Fired: Gain 1 Artifact."
   }
 }

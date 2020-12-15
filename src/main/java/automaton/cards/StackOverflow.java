@@ -20,8 +20,6 @@ public class StackOverflow extends AbstractBronzeCard {
             atb(new GainEnergyAction(1));
         }
         fireBlaster(1);
-        fireShields(1);
-        fireCores(1);
         atb(new FireFromPileAction(p.drawPile, 1));
         atb(new FireFromPileAction(p.discardPile, 1));
     }

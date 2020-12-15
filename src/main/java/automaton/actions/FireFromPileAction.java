@@ -1,5 +1,6 @@
 package automaton.actions;
 
+import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -28,6 +29,9 @@ public class FireFromPileAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                    if (c instanceof AbstractBronzeCard) {
+                        ((AbstractBronzeCard) c).inFire = true;
+                    }
                     if (repetitions > 0) {
                         for(int i = 0; i < repetitions; i++) {
                             addToTop(new EasyAutoplayAction(c));

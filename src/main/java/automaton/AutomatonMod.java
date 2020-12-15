@@ -1,5 +1,6 @@
 package automaton;
 
+import automaton.cards.AbstractBronzeCard;
 import automaton.relics.BronzeBoon;
 import automaton.util.CardFilter;
 import basemod.BaseMod;
@@ -202,6 +203,9 @@ public class AutomatonMod implements
         if (abstractCard.hasTag(CORE)) {
             AbstractDungeon.player.limbo.removeCard(abstractCard);
             MechaHelper.cores.addToTop(abstractCard);
+        }
+        if (abstractCard instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) abstractCard).inFire = false;
         }
     }
 }
