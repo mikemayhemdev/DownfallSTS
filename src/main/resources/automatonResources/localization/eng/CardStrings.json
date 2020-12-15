@@ -46,7 +46,8 @@
   },
   "bronze:MachineFire": {
     "NAME": "Machine Fire",
-    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. Repeat its effects X times."
+    "DESCRIPTION": "bronze:Repeat 1 bronze:Blaster X times.",
+    "UPGRADE_DESCRIPTION": "bronze:repeat 1 bronze:Blaster X+1 times."
   },
   "bronze:SeerCore": {
     "NAME": "Seer Core",
@@ -158,5 +159,10 @@
   "bronze:Override": {
     "NAME": "Override",
     "DESCRIPTION": "bronze:Repeat 1 card in your hand."
+  },
+  "bronze:Overcharge": {
+    "NAME": "Overcharge",
+    "DESCRIPTION": "Gain X Strength. NL Gain X Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Strength. NL Gain X+1 Dexterity."
   }
 }

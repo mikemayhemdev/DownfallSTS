@@ -1,30 +1,29 @@
 package automaton.cards;
 
-import automaton.MechaHelper;
 import automaton.actions.EasyXCostAction;
-import automaton.actions.FireFromPileAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.MarkPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class MachineFire extends AbstractBronzeCard {
+public class Overcharge extends AbstractBronzeCard {
 
-    public final static String ID = makeID("MachineFire");
+    public final static String ID = makeID("Overcharge");
 
-    //stupid intellij stuff skill, enemy, uncommon
+    //stupid intellij stuff power, self, rare
 
     private static final int MAGIC = 0;
     private static final int UPG_MAGIC = 1;
 
-    public MachineFire() {
-        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+    public Overcharge() {
+        super(ID, -1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new EasyXCostAction(this, (effect, params) -> {
-            //TODO: Repeat 1 Blaster effect+params[0] times
+            applyToSelfTop(new StrengthPower(p, effect + params[0]));
+            applyToSelfTop(new DexterityPower(p, effect + params[0]));
             return true;
         }, magicNumber));
     }
