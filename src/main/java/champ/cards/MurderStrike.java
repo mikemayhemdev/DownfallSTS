@@ -12,7 +12,7 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 18;
+    private static final int DAMAGE = 15;
 
     public MurderStrike() {
         super(ID, 8, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -46,6 +46,6 @@ public class MurderStrike extends AbstractChampCard implements OnTechniqueSubscr
         } else {
             this.upgradeBaseCost(5);
         }
-        this.upgradeDamage(12);
+        this.upgradeDamage(9);
     }
 }
