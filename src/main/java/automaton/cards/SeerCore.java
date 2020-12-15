@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
@@ -17,6 +18,7 @@ public class SeerCore extends AbstractBronzeCard {
     public SeerCore() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(AutomatonMod.CORE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

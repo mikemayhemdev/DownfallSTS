@@ -51,5 +51,9 @@
   "bronze:SeerCore": {
     "NAME": "Seer Core",
     "DESCRIPTION": "bronze:Core. NL Scry !M!. NL Gain [E]. NL Draw 1 card."
+  },
+  "bronze:BoomerangBolt": {
+    "NAME": "Boomerang Bolt",
+    "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage to ALL enemies. NL Reduce this card's cost by 1."
   }
 }
