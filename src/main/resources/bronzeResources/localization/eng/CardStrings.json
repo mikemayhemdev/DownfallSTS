@@ -97,7 +97,7 @@
     "DESCRIPTION": "Deal !D! damage. NL The next card you bronze:Fire costs 0."
   },
   "bronze:PrepDefense": {
-    "NAME": "Prep Defense",
+    "NAME": "Prepare Defense",
     "DESCRIPTION": "bronze:Shield. NL Gain !B! Block. NL Add 1 *Reserve *Guard into your hand."
   },
   "bronze:ReserveGuard": {

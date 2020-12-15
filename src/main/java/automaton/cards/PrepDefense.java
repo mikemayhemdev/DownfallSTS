@@ -10,10 +10,10 @@ public class PrepDefense extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 5;
 
     public PrepDefense() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = BLOCK;
         cardsToPreview = new ReserveGuard();
         tags.add(AutomatonMod.SHIELD);
@@ -25,6 +25,6 @@ public class PrepDefense extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(1);
     }
 }
