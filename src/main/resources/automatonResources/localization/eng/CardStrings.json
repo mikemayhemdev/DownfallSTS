@@ -142,5 +142,9 @@
   "bronze:ChargeUp": {
     "NAME": "Charge Up",
     "DESCRIPTION": "bronze:Shield. NL bronze:Burnout. NL Gain !B! Block. NL Gain !M! Strength."
+  },
+  "bronze:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage twice. NL Next turn, draw 1 additional card."
   }
 }
