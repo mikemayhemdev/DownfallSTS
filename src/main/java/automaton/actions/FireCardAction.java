@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,6 +29,11 @@ public class FireCardAction extends AbstractGameAction {
     }
 
     public void update() {
+        if (target == null) {
+            target = AbstractDungeon.getRandomMonster();
+        }
+
+
         if (myCard instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) myCard).inFire = true;
         }
