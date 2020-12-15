@@ -14,5 +14,9 @@
   "bronze:OpenFire": {
     "NAME": "Open Fire",
     "DESCRIPTIONS": "bronze:Fire a bronze:Blaster."
+  },
+  "bronze:ShieldsUp": {
+    "NAME": "Shields Up",
+    "DESCRIPTION": "bronze:Shield. NL Gain !B! Block."
   }
 }
