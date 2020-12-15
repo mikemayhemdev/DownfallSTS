@@ -29,6 +29,6 @@
       "fire",
       "fired"
     ],
-    "DESCRIPTION": "Play card, including costs. If targeted, targets a random enemy."
+    "DESCRIPTION": "Play card, including costs. If targeted, targets a random enemy. You can't Fire a card you can't afford."
   }
 ]
