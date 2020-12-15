@@ -1,1 +1,9 @@
-{}
+{
+  "bronze:BronzeCore": {
+    "NAME": "Bronze Core",
+    "FLAVOR": "Replace once every 50,000 years.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of turn #b2."
+    ]
+  }
+}

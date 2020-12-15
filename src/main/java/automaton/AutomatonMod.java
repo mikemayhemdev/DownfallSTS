@@ -1,5 +1,6 @@
 package automaton;
 
+import automaton.relics.BronzeCore;
 import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
@@ -163,7 +164,7 @@ public class AutomatonMod implements
     @Override
     public void receiveEditRelics() {
         //TODO: This
-
+        BaseMod.addRelicToCustomPool(new BronzeCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
     }
 
 

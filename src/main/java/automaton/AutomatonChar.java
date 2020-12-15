@@ -1,5 +1,6 @@
 package automaton;
 
+import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomPlayer;
 import champ.ChampMod;
 import champ.cards.Defend;
@@ -50,8 +51,6 @@ public class AutomatonChar extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    private static String currentIdle = "Idle";
-
     public float renderscale = 1.0F;
     
     private String atlasURL = "automatonResources/images/char/mainChar/champ.atlas";
@@ -92,7 +91,7 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                90, 90, 0, 99, 5, this, getStartingRelics(),
+                70, 70, 0, 101, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -125,7 +124,7 @@ public class AutomatonChar extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        retVal.add(BronzeCore.ID);
         return retVal;
     }
 
