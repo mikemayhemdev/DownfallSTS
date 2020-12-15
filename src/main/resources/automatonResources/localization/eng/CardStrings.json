@@ -102,5 +102,9 @@
   "bronze:ReserveGuard": {
     "NAME": "Reserve Guard",
     "DESCRIPTION": "Retain. NL bronze:Fire 1 bronze:Shield. NL Exhaust."
+  },
+  "bronze:Goto": {
+    "NAME": "Goto",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Fire the top card of your draw pile."
   }
 }
