@@ -1,6 +1,7 @@
 package automaton.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,7 +23,7 @@ public class FireFromPileAction extends AbstractGameAction {
         else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    addToTop(new EasyAutoplayAction(c));
+                    addToTop(new NewQueueCardAction(c, true));
                 }
                 isDone = true;
             }
