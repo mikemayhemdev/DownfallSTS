@@ -100,8 +100,10 @@
   "champ:DancingMasterPower": {
     "NAME": "Dancing Master",
     "DESCRIPTIONS": [
-      "Whenever you enter three unique stances in one turn, gain #b",
-      " [E] and draw #b2 cards. Unique stances entered this turn: "
+      "The third time you enter a #yStance each turn, gain #b",
+      " [E] and draw #b2 cards. ",
+      " remaining.",
+      "Used this turn."
     ]
   },
   "champ:StrikeOfGeniusPower": {

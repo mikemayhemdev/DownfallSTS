@@ -44,21 +44,20 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
         this.updateDescription();
     }
 
-    private ArrayList<String> stancesEnteredThisTurn = new ArrayList<>();
+    private int stanceChangesThisTurn = 0;
     private boolean usedYet = false;
 
     @Override
     public void atStartOfTurn() {
-        stancesEnteredThisTurn.clear();
+        stanceChangesThisTurn = 0;
         usedYet = false;
     }
 
     @Override
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!newStance.ID.equals(NeutralStance.STANCE_ID)) {
-            if (!stancesEnteredThisTurn.contains(newStance.ID))
-                stancesEnteredThisTurn.add(newStance.ID);
-            if (stancesEnteredThisTurn.size() == 3 && !usedYet) {
+            stanceChangesThisTurn++;
+            if (stanceChangesThisTurn == 3 && !usedYet) {
                 flash();
                 addToBot(new GainEnergyAction(amount));
                 addToBot(new DrawCardAction(2));
@@ -67,35 +66,10 @@ public class DancingMasterPower extends AbstractPower implements CloneablePowerI
         }
     }
 
-    String getStancesCorrectly() {
-        String s = "";
-        if (stancesEnteredThisTurn.contains(DefensiveStance.STANCE_ID)) {
-            s += " #bDefensive ";
-        }
-        if (stancesEnteredThisTurn.contains(GladiatorStance.STANCE_ID)) {
-            s += " #yGladiator ";
-        }
-        if (stancesEnteredThisTurn.contains(BerserkerStance.STANCE_ID)) {
-            s += " #rBerserker ";
-        }
-        if (stancesEnteredThisTurn.contains(UltimateStance.STANCE_ID)) {
-            s += " #gUltimate ";
-        }
-        if (stancesEnteredThisTurn.contains(WrathStance.STANCE_ID)) {
-            s += " #rWrath ";
-        }
-        if (stancesEnteredThisTurn.contains(CalmStance.STANCE_ID)) {
-            s += " #bCalm ";
-        }
-        if (stancesEnteredThisTurn.contains(DivinityStance.STANCE_ID)) {
-            s += " #pDivinity ";
-        }
-        return s;
-    }
-
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + getStancesCorrectly();
+        int x = 3 - stanceChangesThisTurn;
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + (x == 0 ? DESCRIPTIONS[3] :  x + DESCRIPTIONS[2]);
     }
 
     @Override
