@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import downfall.actions.PerformXAction;
+import slimebound.SlimeboundMod;
 
 public class Lariat extends AbstractChampCard {
 
@@ -25,7 +26,7 @@ public class Lariat extends AbstractChampCard {
     public Lariat() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
         //baseMagicNumber = magicNumber = MAGIC;
     }
 
@@ -38,6 +39,7 @@ public class Lariat extends AbstractChampCard {
         if (upgraded) {
             atb(new GainEnergyAction(1));
         }
+
     }
 
     public void upp() {

@@ -88,11 +88,13 @@
   },
   "expansioncontent:DonusPower": {
     "NAME": "甜圈力量",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 。 NL 将一张随机攻击牌加入你的手牌。 它的耗能本场战斗降低1。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 。 NL 将一张随机攻击牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 力量 和 人工制品 。 NL 将一张随机攻击牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。"
   },
   "expansioncontent:DecasProtection": {
     "NAME": "八体保护",
-    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 。 NL 将一张随机能力牌加入你的手牌。 它的耗能本场战斗降低1。 NL 消耗 。"
+    "DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 。 NL 将一张随机能力牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "expansioncontent:首领 - 先古造物。 NL 获得 1 点 敏捷 和 人工制品 。 NL 将一张随机能力牌加入你的手牌。 NL 它的耗能本回合为0。 NL 消耗 。"
   },
   "expansioncontent:PolyBeam": {
     "NAME": "双重射线",

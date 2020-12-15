@@ -15,6 +15,7 @@ import champ.relics.SignatureFinisher;
 import champ.stances.*;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -39,7 +40,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static champ.ChampMod.*;
-import static com.badlogic.gdx.graphics.Color.RED;
 
 
 public abstract class AbstractChampCard extends CustomCard {
@@ -190,7 +190,7 @@ public abstract class AbstractChampCard extends CustomCard {
     @Override
     public void triggerOnGlowCheck() {
         if (this.hasTag(FINISHER)) {
-            this.glowColor = AbstractDungeon.player.stance instanceof AbstractChampStance ? RED : BLUE_BORDER_GLOW_COLOR;
+            this.glowColor = AbstractDungeon.player.stance instanceof AbstractChampStance ? Color.RED.cpy() : BLUE_BORDER_GLOW_COLOR;
         }
     }
 

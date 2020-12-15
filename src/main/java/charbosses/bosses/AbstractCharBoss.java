@@ -25,6 +25,7 @@ import charbosses.stances.EnNeutralStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -263,6 +264,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     @Override
     public void applyEndOfTurnTriggers() {
+        if (hasPower(StunMonsterPower.POWER_ID)) chosenArchetype.turn--;
 
         this.energy.recharge();
 

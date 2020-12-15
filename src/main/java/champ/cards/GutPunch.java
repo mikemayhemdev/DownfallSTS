@@ -12,10 +12,10 @@ public class GutPunch extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 1;
 
-    private static final int MAGIC = 10;
+    private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 5;
 
     public GutPunch() {
@@ -33,7 +33,7 @@ public class GutPunch extends AbstractChampCard {
         berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        fatigue(2);
+      //  fatigue(2);
         if (dcombo()) {
             exhaust = true;
             applyToSelf(new ResolvePower(magicNumber));

@@ -4,6 +4,7 @@ import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.cardpowers.EnemyStormPower;
+import charbosses.relics.AbstractCharbossRelic;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -11,6 +12,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -228,6 +230,10 @@ public abstract class AbstractBossCard extends AbstractCard {
                 createIntent();
             }
             //destroyIntent();
+        }
+        if (AbstractCharBoss.boss.hasPower(StunMonsterPower.POWER_ID)){
+            bossDarken();
+            destroyIntent();
         }
     }
 

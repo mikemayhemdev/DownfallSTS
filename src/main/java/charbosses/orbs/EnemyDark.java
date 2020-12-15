@@ -115,7 +115,7 @@ public class EnemyDark extends AbstractEnemyOrb {
     protected void renderText(final SpriteBatch sb) {
         Color niceCalmBlue = new Color(0.2f, 1.0f, 1.0f, this.c.a);
         if (evokeOverride) {
-            niceCalmBlue = Color.RED; //MEAN ANGRY DARK ORB IS ABOUT TO GO BOOM!
+            niceCalmBlue = Color.RED.cpy();; //MEAN ANGRY DARK ORB IS ABOUT TO GO BOOM!
         }
         FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.evokeAmount), this.cX + EnemyDark.NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0f + EnemyDark.NUM_Y_OFFSET - 4.0f * Settings.scale, niceCalmBlue, this.fontScale);
         FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + EnemyDark.NUM_X_OFFSET, this.cY + this.bobEffect.y / 2.0f + EnemyDark.NUM_Y_OFFSET + 20.0f * Settings.scale, this.c, this.fontScale);

@@ -14,10 +14,10 @@ public class EnGarde extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 8;
 
     public EnGarde() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

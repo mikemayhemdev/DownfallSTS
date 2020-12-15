@@ -32,7 +32,13 @@ public class HeavySlash extends AbstractChampCard {
 
     public int upgradeAmount() {
         int x = 0;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+        for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
+            if (q.upgraded) x++;
+        }
+        for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
+            if (q.upgraded) x++;
+        }
+        for (AbstractCard q : AbstractDungeon.player.hand.group) {
             if (q.upgraded) x++;
         }
         return x;

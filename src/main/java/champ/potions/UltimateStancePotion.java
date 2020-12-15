@@ -3,8 +3,10 @@ package champ.potions;
 
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
+import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -36,15 +38,7 @@ public class UltimateStancePotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    ((UltimateStance) AbstractDungeon.player.stance).timeLeft = potency;
-                }
-            }
-        });
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(potency), potency));
     }
 
     public CustomPotion makeCopy() {

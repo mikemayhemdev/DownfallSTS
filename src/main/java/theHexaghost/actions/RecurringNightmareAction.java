@@ -10,6 +10,8 @@ import theHexaghost.cards.RecurringNightmare;
 
 import java.util.ArrayList;
 
+import static java.lang.Math.min;
+
 public class RecurringNightmareAction extends AbstractGameAction {
     private AbstractPlayer p;
     private ArrayList<AbstractCard> cannotExhume = new ArrayList<>();
@@ -56,7 +58,7 @@ public class RecurringNightmareAction extends AbstractGameAction {
             } else {
 
                 p.exhaustPile.group.removeAll(cannotExhume);
-                AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, amount, amount == 1 ? EXTENDED_DESCRIPTIONS[0] : (EXTENDED_DESCRIPTIONS[1] + amount + EXTENDED_DESCRIPTIONS[2]), false);// 96
+                AbstractDungeon.gridSelectScreen.open(this.p.exhaustPile, min(amount, p.exhaustPile.size()), amount == 1 ? EXTENDED_DESCRIPTIONS[0] : (EXTENDED_DESCRIPTIONS[1] + amount + EXTENDED_DESCRIPTIONS[2]), false);// 96
                 this.tickDuration();// 97
             }
         }

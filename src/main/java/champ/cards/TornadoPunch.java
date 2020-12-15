@@ -5,6 +5,7 @@ import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,12 +20,16 @@ public class TornadoPunch extends AbstractChampCard {
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 2;
 
+    private static final int BLOCK = 5;
+    private static final int UPG_BLOCK = 2;
+
     private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 3;
+    private static final int UPG_MAGIC = 2;
 
     public TornadoPunch() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
+        baseBlock = block = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
         tags.add(ChampMod.COMBO);
@@ -42,6 +47,7 @@ public class TornadoPunch extends AbstractChampCard {
                 isDone = true;
                 for (AbstractMonster q : monsterList()) {
                     att(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+                    att(new GainBlockAction(p, block));
 
                 }
             }
@@ -55,6 +61,10 @@ public class TornadoPunch extends AbstractChampCard {
 
     public void upp() {
         tags.add(ChampMod.TECHNIQUE);
+        upgradeDamage(2);
+        upgradeMagicNumber(UPG_MAGIC);
+        upgradeMagicNumber(UPG_DAMAGE);
+        upgradeBlock(UPG_BLOCK);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

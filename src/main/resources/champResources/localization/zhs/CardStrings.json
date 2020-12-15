@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "激将",
-    "DESCRIPTION": "给予 !M! 层 虚弱 。 NL champ:起手 - 进入 随机一种 姿态 。",
-    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL champ:起手 - 进入 随机一种 姿态 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL champ:起手 - 进入 随机一种 姿态 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL champ:起手式 - 选择一种 姿态 。"
   },
   "champ:Execute": {
     "NAME": "处决",
@@ -175,8 +175,8 @@
   },
   "champ:Lariat": {
     "NAME": "套索",
-    "DESCRIPTION": "获得 !B! 点 格挡 。重复X次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。重复X次。 NL 获得 [E] 。"
+    "DESCRIPTION": "重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique",
+    "UPGRADE_DESCRIPTION": "获得 [E] 。NL 重复X次。 NL 获得 !B! 点 格挡 。 champ:Technique"
   },
   "champ:HoldFirm": {
     "NAME": "固守",

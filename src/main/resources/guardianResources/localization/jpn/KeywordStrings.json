@@ -48,13 +48,6 @@
   },
   {
     "NAMES": [
-      "momentary"
-    ],
-    "PROPER_NAME": "Momentary",
-    "DESCRIPTION": "A #yMomentary buff effect also adds a debuff effect which causes you to lose the buff's effect at the end of your turn."
-  },
-  {
-    "NAMES": [
       "volatile"
     ],
     "PROPER_NAME": "Volatile",

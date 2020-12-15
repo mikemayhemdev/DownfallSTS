@@ -37,6 +37,7 @@ public class ArenaPreparation extends AbstractChampCard {
             }
             AbstractCard c = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1)).makeStatEquivalentCopy();
             CardModifierManager.addModifier(c, new RetainCardMod());
+            UnlockTracker.markCardAsSeen(c.cardID);
             makeInHand(c);
         }
     }

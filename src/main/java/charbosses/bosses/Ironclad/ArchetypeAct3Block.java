@@ -151,7 +151,10 @@ public class ArchetypeAct3Block extends ArchetypeBaseIronclad {
             }
         }
         turn++;
-        if (turn > 6 && !looped) looped = true;
+        if (turn > 6 && !looped) {
+            looped = true;
+            turn = 0;
+        }
         else if (turn > 4 && looped) {
             turn = 0;
         }

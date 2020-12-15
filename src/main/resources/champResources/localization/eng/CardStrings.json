@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak. NL Enter a random Stance.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Enter a random Stance."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Enter a random Stance.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak to ALL enemies. NL Choose a Stance to Enter."
   },
   "champ:Execute": {
     "NAME": "Execute",
@@ -46,7 +46,7 @@
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter."
+    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block ."
   },
   "champ:Balance": {
     "NAME": "Balance",
@@ -102,11 +102,11 @@
   },
   "champ:RageSigil": {
     "NAME": "Rage Sigil",
-    "DESCRIPTION": "champ:Technique NL *Berserker champ:Combo: Repeat !M! times, then Exhaust."
+    "DESCRIPTION": "*Berserker champ:Combo: Repeat !M! times, then Exhaust."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL champ:Fatigue 2. NL *Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL *Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -115,7 +115,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage. NL If you are in a Stance, increase the damage this card deals by !M! permanently, then Exhaust it."
+    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo: Increase the damage this card deals by !M! permanently, then Exhaust it."
   },
   "champ:Control": {
     "NAME": "Control",
@@ -139,8 +139,8 @@
   },
   "champ:TornadoPunch": {
     "NAME": "Tornado Punch",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter for each enemy hit.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter for each enemy hit."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block for each enemy hit.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block for each enemy hit."
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
@@ -153,12 +153,12 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Gain 2 Dexterity. NL Exhaust unless in champ:Defensive.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL Exhaust unless in champ:Defensive."
+    "DESCRIPTION": "Gain 2 Dexterity. NL Unless *Defensive champ:Combo: Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL Unless *Defensive champ:Combo: Exhaust."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -175,8 +175,8 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block. NL Repeat these effects X times.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Repeat these effects X times. NL Gain [E] ."
+    "DESCRIPTION": "Perform X times: NL Gain !B! Block. NL Trigger champ:Technique.",
+    "UPGRADE_DESCRIPTION": "Perform X times, then gain [E] : NL Gain !B! Block. NL Trigger champ:Technique."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
@@ -217,11 +217,11 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "Gain 2 Strength. NL Exhaust unless in champ:Berserker.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Exhaust unless in champ:Berserker."
+    "DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust."
   },
   "champ:BladeFlurry": {
-    "NAME": "Blade Flurry",
+    "NAME": "Flurry of Strikes",
     "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: Deal !D! damage !M! more times."
   },
   "champ:SwordThrow": {
@@ -234,11 +234,11 @@
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Upgraded card in your deck."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your Upgraded cards."
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL If you are in a Stance, Stun the enemy, then Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo: Stun the enemy, then Exhaust this."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
@@ -359,8 +359,8 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Gladiator Style",
-    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 guardianmod:Momentary Strength and Dexterity."
+    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 temporary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 temporary Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
@@ -369,8 +369,8 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator.",
-    "UPGRADE_DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Exhaust unless in champ:Gladiator."
+    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust."
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",

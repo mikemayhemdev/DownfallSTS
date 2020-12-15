@@ -96,7 +96,7 @@ public class CharBossMerchant extends AbstractCharBoss {
         super.usePreBattleAction();
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
         this.rezTimer = 5F;
-        AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.SHOP)));
+      //  AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.SHOP)));
 
     }
 

@@ -135,7 +135,10 @@ public class ArchetypeAct3Poison extends ArchetypeBaseIronclad {
             }
         }
         turn++;
-        if (turn > 5 && !looped) looped = true;
+        if (turn > 5 && !looped) {
+            looped = true;
+            turn = 0;
+        }
         else if (turn > 4 && looped) {
             turn = 0;
         }

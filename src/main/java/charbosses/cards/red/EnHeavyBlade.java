@@ -36,6 +36,7 @@ public class EnHeavyBlade extends AbstractBossCard {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
+    /*
     public void applyPowers() {
         AbstractPower strength = this.owner.getPower("Strength");
         if (strength != null) {
@@ -48,6 +49,7 @@ public class EnHeavyBlade extends AbstractBossCard {
         }
 
     }
+    */
 
     public void calculateCardDamage(AbstractMonster mo) {
         AbstractPower strength = this.owner.getPower("Strength");

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class PerfectForm extends AbstractChampCard {
 
@@ -20,17 +21,9 @@ public class PerfectForm extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        triggerOpenerRelics(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
         ultimateStance();
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                    ((UltimateStance) AbstractDungeon.player.stance).timeLeft = magicNumber;
-                }
-            }
-        });
-        applyToSelf(new UltimateFormPower(2));
+        applyToSelf(new UltimateFormPower(magicNumber));
     }
 
     public void upp() {
