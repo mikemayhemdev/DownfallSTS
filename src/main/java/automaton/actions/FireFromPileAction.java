@@ -8,10 +8,16 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class FireFromPileAction extends AbstractGameAction {
     private CardGroup g;
+    private int repetitions;
 
-    public FireFromPileAction(CardGroup t, int amount) {
+    public FireFromPileAction(CardGroup t, int amount, int repetitions) {
         this.g = t;
         this.amount = amount;
+        this.repetitions = repetitions;
+    }
+
+    public FireFromPileAction(CardGroup t, int amount) {
+        this(t, amount, 0);
     }
 
     @Override
@@ -22,6 +28,11 @@ public class FireFromPileAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
+                    if (repetitions > 0) {
+                        for(int i = 0; i < repetitions; i++) {
+                            addToTop(new EasyAutoplayAction(c));
+                        }
+                    }
                     addToTop(new NewQueueCardAction(c, true));
                 }
                 isDone = true;
