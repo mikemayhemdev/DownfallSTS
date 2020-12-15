@@ -29,7 +29,7 @@
   },
   "bronze:FullForce": {
     "NAME": "Full Force",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Fire ALL bronze:Blasters."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Repeat ALL bronze:Blasters."
   },
   "bronze:CascadeBlast": {
     "NAME": "Cascade Blast",

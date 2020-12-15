@@ -2,7 +2,9 @@ package automaton.cards;
 
 import automaton.MechaHelper;
 import automaton.actions.FireFromPileAction;
+import automaton.actions.RepeatCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -22,7 +24,9 @@ public class FullForce extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        fireBlaster(MechaHelper.blasters.size());
+        for (AbstractCard c : MechaHelper.blasters.group) {
+            atb(new RepeatCardAction(c));
+        }
     }
 
     public void upp() {
