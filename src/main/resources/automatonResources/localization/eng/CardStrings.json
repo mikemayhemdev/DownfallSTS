@@ -106,5 +106,10 @@
   "bronze:Goto": {
     "NAME": "Goto",
     "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Fire the top card of your draw pile."
+  },
+  "bronze:LockOn": {
+    "NAME": "Lock-On",
+    "DESCRIPTION": "Apply 1 Vulnerable. NL bronze:Fire 1 bronze:Blaster.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Vulnerable to ALL enemies. NL bronze:Fire 1 bronze:Blaster."
   }
 }
