@@ -11,7 +11,7 @@ public class SpreadShot extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 2;
 
     public SpreadShot() {
