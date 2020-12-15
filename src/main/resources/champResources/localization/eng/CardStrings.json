@@ -318,7 +318,7 @@
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
     "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times. NL *Gladiator champ:Combo: Draw X cards and gain X [E] .",
-    "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X+1 times. NL *Defensive champ:Combo: Gain !B! Block X+1 times. NL *Gladiator champ:Combo: Draw X+1 cards and gain X+1 [E] ."
+    "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times. NL *Gladiator champ:Combo: Draw X+1 cards and gain X [E] ."
   },
   "champ:Improvising": {
     "NAME": "Improvising",

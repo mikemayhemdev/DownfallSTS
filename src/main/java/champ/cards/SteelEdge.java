@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.actions.SteelEdgeAction;
 import champ.stances.AbstractChampStance;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
@@ -15,8 +16,8 @@ public class SteelEdge extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 10;
-    private static final int BLOCK = 10;
+    private static final int DAMAGE = 8;
+    private static final int BLOCK = 8;
 
     public SteelEdge() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -40,6 +41,9 @@ public class SteelEdge extends AbstractChampCard {
         }
         SteelEdgeAction r = new SteelEdgeAction(damage, block, magicNumber, m);
         atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
+        if (upgraded && gcombo()){
+            atb(new DrawCardAction(1));
+        }
     }
 
     @Override
@@ -48,7 +52,8 @@ public class SteelEdge extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
+        upgradeBlock(3);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
