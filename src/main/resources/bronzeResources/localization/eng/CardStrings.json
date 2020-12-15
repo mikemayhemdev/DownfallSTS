@@ -68,7 +68,7 @@
   },
   "bronze:HeldProtector": {
     "NAME": "Held Protector",
-    "DESCRIPTION": "bronze:Shield. NL If Fired: Gain 1 Artifact.",
+    "DESCRIPTION": "bronze:Shield. NL If champ:Fired: Gain 1 Artifact.",
     "UPGRADE_DESCRIPTION": "bronze:Shield. NL Reduce this card's cost by 1. NL If champ:Fired: Gain 1 Artifact."
   },
   "bronze:WideGuard": {
