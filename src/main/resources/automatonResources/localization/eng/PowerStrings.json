@@ -6,5 +6,13 @@
       "At the end of your turn, #yFire #b",
       " #yBlasters."
     ]
+  },
+  "bronze:FreeFirePower": {
+    "NAME": "Free Fire",
+    "DESCRIPTIONS": [
+      "The next card you #yFire costs #b0.",
+      "The next #b",
+      " cards you #yFire cost #b0."
+    ]
   }
 }

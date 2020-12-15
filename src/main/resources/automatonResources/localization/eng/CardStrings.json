@@ -90,5 +90,9 @@
     "NAME": "Quad Core",
     "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL At the start of your turn, draw 1 additional card.",
     "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL At the start of your turn, draw 1 additional card."
+  },
+  "bronze:Subroutine": {
+    "NAME": "Subroutine",
+    "DESCRIPTION": "Deal !D! damage. NL The next card you bronze:Fire costs 0."
   }
 }
