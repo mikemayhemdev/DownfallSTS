@@ -62,8 +62,8 @@
   },
   "bronze:StackOverflow": {
     "NAME": "Stack Overflow",
-    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. bronze:Fire 1 card from your discard and draw piles.",
-    "UPGRADE_DESCRIPTION": "Gain [E]. NL bronze:Fire 1 bronze:Blaster. bronze:Fire 1 card from your discard and draw piles."
+    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster. NL bronze:Fire 1 bronze:Shield. NL bronze:Fire 1 bronze:Core.",
+    "UPGRADE_DESCRIPTION": "Gain [E]. NL bronze:Fire 1 bronze:Blaster. NL bronze:Fire 1 bronze:Shield. NL bronze:Fire 1 bronze:Core."
   },
   "bronze:HeldProtector": {
     "NAME": "Held Protector",
