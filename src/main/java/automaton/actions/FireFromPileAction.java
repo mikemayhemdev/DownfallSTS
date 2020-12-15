@@ -1,15 +1,10 @@
 package automaton.actions;
 
-import automaton.AutomatonMod;
-import automaton.cards.AbstractBronzeCard;
-import automaton.powers.OnFireSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FireFromPileAction extends AbstractGameAction {
     private CardGroup g;
@@ -25,8 +20,7 @@ public class FireFromPileAction extends AbstractGameAction {
         if (duration == startDuration) {
             if (g.isEmpty() || amount < 1) {
                 isDone = true;
-            }
-            else {
+            } else {
                 AbstractDungeon.gridSelectScreen.open(g, amount, false, "Choose."); //TODO: Localize
                 tickDuration();
             }
