@@ -146,5 +146,9 @@
   "bronze:Flail": {
     "NAME": "Flail",
     "DESCRIPTION": "Deal !D! damage twice. NL Next turn, draw 1 additional card."
+  },
+  "bronze:SuperDuperBeam": {
+    "NAME": "Super Duper Beam",
+    "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage to ALL enemies. NL Put !M! *Void on top of your draw pile."
   }
 }
