@@ -34,7 +34,7 @@ public class EnRipAndTear extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; ++i) {
-                this.addToBot(new VFXAction(new RipAndTearEffect(p.hb.cX, p.hb.cY, Color.RED, Color.GOLD)));
+                this.addToBot(new VFXAction(new RipAndTearEffect(p.hb.cX, p.hb.cY, Color.RED.cpy(), Color.GOLD)));
                 this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
 
         }
