@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
+import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -27,8 +28,6 @@ public abstract class AbstractAutomatonCard extends CustomCard {
     protected String DESCRIPTION;
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
-
-    public boolean inFire = false;
 
     public AbstractAutomatonCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -80,6 +79,10 @@ public abstract class AbstractAutomatonCard extends CustomCard {
             upgradeName();
             upp();
         }
+    }
+
+    public void onCompile(ArrayList<AbstractCardModifier> cardMods) {
+
     }
 
     public abstract void upp();
