@@ -176,7 +176,6 @@
   },
   "bronze:DrainingPulse": {
     "NAME": "Draining Pulse",
-    "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage and apply 1 Weak to ALL enemies. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "bronze:Blaster. NL Deal !D! damage and apply 1 Weak to ALL enemies. NL Draw !M! cards."
+    "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage and apply 1 Weak to ALL enemies."
   }
 }

@@ -17,7 +17,7 @@ public class DrainingPulse extends AbstractBronzeCard {
 
     public DrainingPulse() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ALL_ENEMY);
-        baseDamage = 3;
+        baseDamage = 2;
         isMultiDamage = true;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(AutomatonMod.BLASTER);
