@@ -30,5 +30,12 @@
       "At the start of your turn, #yFire #b",
       " #yPeashooters."
     ]
+  },
+  "bronze:Gatling": {
+    "NAME": "Gatling",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yBlaster, gain #b",
+      " #yStrength."
+    ]
   }
 }

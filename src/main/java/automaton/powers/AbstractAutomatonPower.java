@@ -3,8 +3,10 @@ package automaton.powers;
 import automaton.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -94,5 +96,9 @@ public abstract class AbstractAutomatonPower extends AbstractPower {
         } else {
             this.description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         }
+    }
+
+    public void applyToSelf(AbstractPower po) {
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 }

@@ -178,5 +178,9 @@
   "bronze:DrainingPulse": {
     "NAME": "Draining Pulse",
     "DESCRIPTION": "bronze:Blaster. NL Deal !D! damage and apply 1 Weak to ALL enemies."
+  },
+  "bronze:Gatling": {
+    "NAME": "Gatling",
+    "DESCRIPTION": "Whenever you play a bronze:Blaster, gain 1 temporary Strength."
   }
 }
