@@ -366,16 +366,18 @@ public class NeowBoss extends AbstractMonster {
                 switch (turnNum) {
                     case 1:
                         this.setMove((byte) 1, Intent.ATTACK, this.damage.get(0).base, 3, true);
+                        this.turnNum++;
                         break;
                     case 2:
                         this.setMove((byte) 2, Intent.ATTACK_DEBUFF, this.damage.get(1).base);
+                        this.turnNum++;
                         break;
                     case 3:
                         this.setMove((byte) 3, Intent.DEFEND_BUFF);
+                        this.turnNum++;
                         break;
                 }
 
-                this.turnNum++;
                 if (this.turnNum == (4)) {
                     this.turnNum = 1;
                 }
