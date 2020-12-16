@@ -11,6 +11,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -33,7 +34,8 @@ public class AutomatonMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         SetUnlocksSubscriber,
-        OnStartBattleSubscriber {
+        OnStartBattleSubscriber,
+        PostBattleSubscriber {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -185,6 +187,12 @@ public class AutomatonMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        if (AbstractDungeon.player instanceof AutomatonChar)
         FunctionHelper.init();
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        FunctionHelper.doStuff = false;
     }
 }

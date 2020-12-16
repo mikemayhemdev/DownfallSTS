@@ -1,13 +1,8 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
-import automaton.actions.AddToFuncAction;
 import automaton.cardmods.EncodeAndShuffleMod;
-import automaton.cardmods.EncodeMod;
-import automaton.cardmods.ReducedCostMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 

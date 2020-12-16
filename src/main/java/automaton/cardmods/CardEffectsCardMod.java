@@ -25,6 +25,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
     @Override
     public void onApplyPowers(AbstractCard card) {
         stored.applyPowers();
+        card.initializeDescription();
     }
 
     @Override
@@ -34,7 +35,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
     }
 
     public static String getRealDesc(AbstractCard card) {
-        return card.rawDescription.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block).replaceAll("!M!", String.valueOf(card.magicNumber)));
+        return card.rawDescription.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
     }
 
     @Override

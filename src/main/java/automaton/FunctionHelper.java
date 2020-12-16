@@ -5,10 +5,13 @@ import automaton.cardmods.ExhaustCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import guardian.GuardianMod;
 
 import java.util.ArrayList;
 
@@ -16,16 +19,24 @@ public class FunctionHelper {
     public static CardGroup held;
     public static int max = 4;
 
+    public static boolean doStuff = false;
+
     public static void init() {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        secretStorage = makeFunction();
+        doStuff = true;
     }
 
     public static void addToSequence(AbstractCard c) {
         held.addToTop(c);
         if (held.size() == max) {
             AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(makeFunction()));
+            held.clear();
         }
+        secretStorage = makeFunction();
     }
+
+    public static AbstractCard secretStorage = null;
 
     public static AbstractCard makeFunction() {
         AbstractCard q = new FunctionCard();
@@ -39,6 +50,40 @@ public class FunctionHelper {
         q.modifyCostForCombat(-1);
         System.out.println(q.rawDescription);
         return q;
+    }
+
+    public static void render(SpriteBatch sb) {
+        float pos_x =  400;
+        float pos_y =  800;
+        for (AbstractCard c : held.group) {
+            float x = pos_x * Settings.scale;
+            float y = pos_y * Settings.scale;
+            c.render(sb);
+            pos_x += 200;
+        }
+        if (secretStorage != null) {
+            float x = (400 + (200 * (max + 1))) * Settings.scale;
+            float y = 800 * Settings.scale;
+            secretStorage.current_x = x;
+            secretStorage.current_y = y;
+            secretStorage.render(sb);
+        }
+    }
+
+    public static void update() {
+        for (AbstractCard c : held.group) {
+            c.update();
+            /*
+            if (c.hb.hovered) { // Guardian orbs check against hovering the orb. Hovering the card might be weird, so we'd need static hitboxes, which I'm lazy to set up now
+                c.targetDrawScale = 1F;
+            } else {
+                c.targetDrawScale = GuardianMod.stasisCardRenderScale;
+            }
+            */
+        }
+        if (secretStorage != null) {
+            secretStorage.update();
+        }
     }
 
     //If everything is a cardmod, things can be done mostly dynamically.
