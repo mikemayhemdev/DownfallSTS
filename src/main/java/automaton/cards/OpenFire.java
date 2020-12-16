@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -11,16 +10,14 @@ public class OpenFire extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, basic
 
     public OpenFire() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 4;
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.NONE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         fireBlaster(1);
     }
 
     public void upp() {
-        upgradeDamage(3);
+        //TODO: Is choosing between Blaster or Shields too strong? Think on this
     }
 }

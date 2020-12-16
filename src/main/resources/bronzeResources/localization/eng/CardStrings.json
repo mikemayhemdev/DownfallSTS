@@ -13,7 +13,7 @@
   },
   "bronze:OpenFire": {
     "NAME": "Open Fire",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Fire 1 bronze:Blaster."
+    "DESCRIPTION": "bronze:Fire 1 bronze:Blaster."
   },
   "bronze:ShieldsUp": {
     "NAME": "Shields Up",
