@@ -40,8 +40,10 @@ public class Devastate extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       addToBot(new DevastateAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber, this.uuid));
-
+        addToBot(new DevastateAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber, this.uuid));
+        if (dcombo() || gcombo() || bcombo()) {
+            exhaust = true;
+        }
         finisher();
     }
 
