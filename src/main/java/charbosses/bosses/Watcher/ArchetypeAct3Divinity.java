@@ -98,7 +98,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnDevotion(), false);
+                    addToList(cardsList, new EnCrushJoints(), false);
                     addToList(cardsList, new EnWrithe(), false);
                     break;
                 case 1:
@@ -109,7 +109,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                 case 2:
 
                     addToList(cardsList, new EnDefendPurple(), false);
-                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnProtect(), false);
                     addToList(cardsList, new EnWallop(), extraUpgrades);
                     break;
                 case 3:
@@ -120,7 +120,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                     break;
                 case 4:
 
-                    addToList(cardsList, new EnFasting(), extraUpgrades);
+                    addToList(cardsList, new EnWallop(), extraUpgrades);
                     addToList(cardsList, new EnCrushJoints(), false);
                     addToList(cardsList, new EnBrilliance(), false);
                     break;
