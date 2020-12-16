@@ -38,7 +38,7 @@ public class GoSomewhereElsePatch {
             return true;
         }
         if (CardModifierManager.hasModifier(card, EncodeMod.ID) && FunctionHelper.held.size() < FunctionHelper.max) {
-            card.target_x = (800 + (200 * FunctionHelper.held.size()) * Settings.scale);
+            card.target_x = (400 + (200 * FunctionHelper.held.size()) * Settings.scale);
             card.target_y = 800 * Settings.scale;
             CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
             AbstractDungeon.player.limbo.addToTop(card);

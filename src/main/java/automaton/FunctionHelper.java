@@ -53,19 +53,10 @@ public class FunctionHelper {
     }
 
     public static void render(SpriteBatch sb) {
-        float pos_x =  400;
-        float pos_y =  800;
         for (AbstractCard c : held.group) {
-            float x = pos_x * Settings.scale;
-            float y = pos_y * Settings.scale;
             c.render(sb);
-            pos_x += 200;
         }
         if (secretStorage != null) {
-            float x = (400 + (200 * (max + 1))) * Settings.scale;
-            float y = 800 * Settings.scale;
-            secretStorage.current_x = x;
-            secretStorage.current_y = y;
             secretStorage.render(sb);
         }
     }
@@ -83,6 +74,10 @@ public class FunctionHelper {
         }
         if (secretStorage != null) {
             secretStorage.update();
+            float x = (400 + (200 * (max + 1))) * Settings.scale;
+            float y = 800 * Settings.scale;
+            secretStorage.current_x = x;
+            secretStorage.current_y = y;
         }
     }
 
