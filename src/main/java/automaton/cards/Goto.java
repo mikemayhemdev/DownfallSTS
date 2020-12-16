@@ -3,6 +3,8 @@ package automaton.cards;
 import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
+import automaton.cardmods.EncodeMod;
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -19,7 +21,7 @@ public class Goto extends AbstractBronzeCard {
     public Goto() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        tags.add(AutomatonMod.ENCODE);
+        CardModifierManager.addModifier(this, new EncodeMod());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

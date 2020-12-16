@@ -1,6 +1,5 @@
 package automaton.cardmods;
 
-import automaton.actions.RepeatCardAction;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,6 +17,8 @@ public class CardEffectsCardMod extends BronzeCardMod {
     @Override
     public void onInitialApplication(AbstractCard card) {
         card.modifyCostForCombat(stored.cost);
+
+        //Bake in stats?
     }
 
     @Override
@@ -27,7 +28,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        stored.use(AbstractDungeon.player, target instanceof AbstractMonster ? (AbstractMonster)target : null);
+        stored.use(AbstractDungeon.player, target instanceof AbstractMonster ? (AbstractMonster) target : null);
     }
 
     @Override

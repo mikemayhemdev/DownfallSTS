@@ -2,6 +2,8 @@ package automaton.patches;
 
 import automaton.AutomatonMod;
 import automaton.FunctionHelper;
+import automaton.cardmods.EncodeMod;
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -35,15 +37,15 @@ public class GoSomewhereElsePatch {
         if (card.purgeOnUse) {
             return true;
         }
-        if (card.hasTag(AutomatonMod.ENCODE) && FunctionHelper.held.size() < FunctionHelper.max) {
-            card.tags.remove(AutomatonMod.ENCODE);
+        if (CardModifierManager.hasModifier(card, EncodeMod.ID) && FunctionHelper.held.size() < FunctionHelper.max) {
+            CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
                     AbstractDungeon.player.limbo.removeCard(card);
-                    FunctionHelper.held.addToTop(card);
+                    FunctionHelper.addToSequence(card);
                 }
             });
             return false;

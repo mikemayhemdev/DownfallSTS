@@ -58,9 +58,6 @@ public class AutomatonMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
-    @SpireEnum
-    public static AbstractCard.CardTags ENCODE;
-
     public AutomatonMod() {
         BaseMod.subscribe(this);
 

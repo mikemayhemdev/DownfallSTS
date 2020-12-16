@@ -2,6 +2,8 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
+import automaton.cardmods.EncodeAndShuffleMod;
+import automaton.cardmods.EncodeMod;
 import automaton.cardmods.ReducedCostMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Replicate extends AbstractBronzeCard {
 
-    public final static String ID = makeID("ClockOut");
+    public final static String ID = makeID("Replicate");
 
     //stupid intellij stuff attack, enemy, basic
 
@@ -21,12 +23,11 @@ public class Replicate extends AbstractBronzeCard {
     public Replicate() {
         super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(AutomatonMod.ENCODE);
+        CardModifierManager.addModifier(this, new EncodeAndShuffleMod());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        shuffleIn(this.makeStatEquivalentCopy()); // does this keep Encode?
     }
 
     public void upp() {

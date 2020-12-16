@@ -12,11 +12,11 @@
     "DESCRIPTION": ""
   },
   "bronze:Goto": {
-    "NAME": "Immortalize",
-    "DESCRIPTION": "bronze:Input 1 card. NL If the Function is full, output it into your hand."
+    "NAME": "Goto",
+    "DESCRIPTION": "Draw !M! cards. NL bronze:Encode."
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile: Function costs 1 less."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Encode. NL Add a copy of this card into your draw pile."
   }
 }

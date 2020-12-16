@@ -5,8 +5,10 @@ import automaton.cardmods.ExhaustCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
@@ -16,6 +18,13 @@ public class FunctionHelper {
 
     public static void init() {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+    }
+
+    public static void addToSequence(AbstractCard c) {
+        held.addToTop(c);
+        if (held.size() == max) {
+            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(makeFunction()));
+        }
     }
 
     public static AbstractCard makeFunction() {
