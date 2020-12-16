@@ -153,6 +153,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnFasting(), extraUpgrades); // removed
                     addToList(cardsList, new EnCrushJoints(), false);
                     addToList(cardsList, new EnBrilliance(), false);
+                    break;
                 case 5:
 
                     addToList(cardsList, new EnProtect(), true);
