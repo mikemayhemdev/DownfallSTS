@@ -24,6 +24,9 @@ import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.relics.HeartBlessingBlue;
+import downfall.relics.HeartBlessingGreen;
+import downfall.relics.HeartBlessingRed;
 import downfall.vfx.NeowBossRezEffect;
 import slimebound.SlimeboundMod;
 
@@ -110,11 +113,9 @@ public class NeowRezAction extends AbstractGameAction {
 
         if (this.duration <= 0F) {
             cB.init();
-            owner.Rezzes++;
-            if (owner.Rezzes == 4) {
+            NeowBoss.Rezzes++;
+            if (NeowBoss.Rezzes == 4 && (AbstractDungeon.player.hasRelic(HeartBlessingBlue.ID) || AbstractDungeon.player.hasRelic(HeartBlessingGreen.ID) || AbstractDungeon.player.hasRelic(HeartBlessingRed.ID))) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
             }
             cB.showHealthBar();
 
