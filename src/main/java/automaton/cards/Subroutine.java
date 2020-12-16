@@ -15,7 +15,7 @@ public class Subroutine extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 3;
 
     public Subroutine() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
 

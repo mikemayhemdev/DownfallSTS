@@ -15,7 +15,7 @@ public class Blockblast extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 2;
 
     public Blockblast() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(AutomatonMod.BLASTER);
     }

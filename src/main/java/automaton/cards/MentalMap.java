@@ -22,7 +22,6 @@ public class MentalMap extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(AutomatonMod.SHIELD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

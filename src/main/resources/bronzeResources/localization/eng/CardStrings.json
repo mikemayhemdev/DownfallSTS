@@ -81,7 +81,8 @@
   },
   "bronze:PrepareGuns": {
     "NAME": "Prepare Guns",
-    "DESCRIPTION": "Gain [E] for each bronze:Blaster stored."
+    "DESCRIPTION": "Gain [E] for each bronze:Blaster stored. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] for each bronze:Blaster stored."
   },
   "bronze:ShiningCore": {
     "NAME": "Shining Core",
@@ -134,7 +135,7 @@
   },
   "bronze:MentalMap": {
     "NAME": "Mental Map",
-    "DESCRIPTION": "bronze:Shield. NL Gain !B! Block. NL Scry !M!. NL Return 1 card from your discard pile to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Scry !M!. NL Return 1 card from your discard pile to your hand."
   },
   "bronze:Blockblast": {
     "NAME": "Blockblast",
