@@ -1,9 +1,6 @@
 package automaton;
 
-import automaton.cards.Defend;
-import automaton.cards.OpenFire;
-import automaton.cards.Peashooter;
-import automaton.cards.Strike;
+import automaton.cards.*;
 import automaton.relics.BronzeBoon;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -21,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
+import java.lang.Override;
 import java.util.ArrayList;
 
 import static automaton.AutomatonMod.*;
@@ -115,7 +113,7 @@ public class AutomatonChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-
+        retVal.add(DrainingPulse.ID);
         retVal.add(OpenFire.ID);
         return retVal;
     }

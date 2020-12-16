@@ -33,6 +33,9 @@ public class GoSomewhereElsePatch {
 
     @SuppressWarnings("unused")
     public static boolean Do(AbstractCard card) {
+        if (card.purgeOnUse) {
+            return true;
+        }
         if (card.hasTag(AutomatonMod.BLASTER)) {
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {

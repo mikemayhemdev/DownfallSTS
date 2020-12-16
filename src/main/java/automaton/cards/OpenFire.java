@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import automaton.actions.FireFromPileAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,6 +21,6 @@ public class OpenFire extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeDamage(3);
     }
 }
