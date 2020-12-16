@@ -39,7 +39,6 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        stored.applyPowers();
         return rawDescription + getRealDesc(stored) + " NL ";
     }
 
@@ -48,9 +47,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
         card.baseDamage = stored.baseDamage;
         ReflectionHacks.setPrivate(card, AbstractCard.class, "isMultiDamage", ReflectionHacks.getPrivate(stored, AbstractCard.class, "isMultiDamage"));
         card.baseBlock = stored.baseBlock;
-        System.out.print(stored.baseMagicNumber);
         card.baseMagicNumber = card.magicNumber = stored.baseMagicNumber;
-        System.out.print(card.baseMagicNumber + " , " + card.magicNumber);
         card.applyPowers();
         card.calculateCardDamage(target instanceof AbstractMonster ? (AbstractMonster)target : null);
         stored.use(AbstractDungeon.player, target instanceof AbstractMonster ? (AbstractMonster) target : null);
