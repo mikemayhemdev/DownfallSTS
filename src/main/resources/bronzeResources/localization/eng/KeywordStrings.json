@@ -1,10 +1,10 @@
 [
   {
-    "PROPER_NAME": "Input",
+    "PROPER_NAME": "Encode",
     "NAMES": [
-      "input"
+      "encode"
     ],
-    "DESCRIPTION": "Add a card to the Function."
+    "DESCRIPTION": "Add a card to the Sequence and remove Encode from it."
   },
   {
     "PROPER_NAME": "Compile",

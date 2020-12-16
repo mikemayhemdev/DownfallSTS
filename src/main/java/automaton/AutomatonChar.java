@@ -1,8 +1,8 @@
 package automaton;
 
-import automaton.cards.ClockOut;
+import automaton.cards.Goto;
+import automaton.cards.Replicate;
 import automaton.cards.Defend;
-import automaton.cards.Immortalize;
 import automaton.cards.Strike;
 import automaton.relics.BronzeBoon;
 import basemod.abstracts.CustomPlayer;
@@ -115,8 +115,8 @@ public class AutomatonChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(Immortalize.ID);
-        retVal.add(ClockOut.ID);
+        retVal.add(Goto.ID);
+        retVal.add(Replicate.ID);
         return retVal;
     }
 

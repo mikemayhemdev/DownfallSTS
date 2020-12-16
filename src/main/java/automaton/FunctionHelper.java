@@ -27,6 +27,7 @@ public class FunctionHelper {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }
         }
+        q.modifyCostForCombat(-1);
         System.out.println(q.rawDescription);
         return q;
     }

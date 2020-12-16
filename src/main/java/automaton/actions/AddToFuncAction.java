@@ -8,18 +8,18 @@ import downfall.actions.SpeechBubbleAction;
 
 public class AddToFuncAction extends AbstractGameAction {
     private AbstractCard myCard;
-    //private CardGroup container;
+    private CardGroup container;
 
-    public AddToFuncAction(AbstractCard card) {
+    public AddToFuncAction(AbstractCard card, CardGroup c) {
         myCard = card;
-        //container = c;
+        container = c;
     }
 
     @Override
     public void update() {
         isDone = true;
         if (FunctionHelper.held.size() < FunctionHelper.max) {
-            //container.removeCard(myCard);
+            container.removeCard(myCard);
             FunctionHelper.held.add(myCard);
         }
         else {

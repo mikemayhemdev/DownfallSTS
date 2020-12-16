@@ -5,35 +5,27 @@ import automaton.actions.AddToFuncAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Immortalize extends AbstractBronzeCard {
+public class Goto extends AbstractBronzeCard {
 
-    public final static String ID = makeID("Immortalize");
+    public final static String ID = makeID("Goto");
 
     //stupid intellij stuff skill, self, basic
 
-    public Immortalize() {
+    public Goto() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction( 1, "Choose.", (cards)-> {
-            addToTop(new AddToFuncAction(cards.get(0)));
-        }));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (FunctionHelper.held.size() == FunctionHelper.max) {
-                    makeInHand(FunctionHelper.makeFunction());
-                }
-            }
-        });
+        atb(new DrawCardAction(magicNumber));
+        atb(new AddToFuncAction(this, p.hand));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 }
