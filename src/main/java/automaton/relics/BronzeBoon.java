@@ -1,7 +1,7 @@
 package automaton.relics;
 
-import twins.DonuDecaMod;
-import twins.util.TextureLoader;
+import automaton.AutomatonMod;
+import automaton.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -12,7 +12,7 @@ import static champ.ChampMod.makeRelicPath;
 
 public class BronzeBoon extends CustomRelic {
 
-    public static final String ID = DonuDecaMod.makeID("BronzeBoon");
+    public static final String ID = AutomatonMod.makeID("BronzeBoon");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Barbell.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Barbell.png"));
 

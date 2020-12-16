@@ -5,7 +5,7 @@ import org.clapper.util.classutil.ClassFinder;
 import org.clapper.util.classutil.ClassInfo;
 
 public class CardFilter implements ClassFilter {
-    private static final String PACKAGE = "twins.cards";
+    private static final String PACKAGE = "automaton.cards";
 
     @Override
     public boolean accept(ClassInfo classInfo, ClassFinder classFinder) {

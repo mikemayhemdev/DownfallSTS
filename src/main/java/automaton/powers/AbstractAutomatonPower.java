@@ -1,6 +1,6 @@
 package automaton.powers;
 
-import twins.util.TextureLoader;
+import automaton.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.HashMap;
 import java.util.Map;
 
-import static twins.DonuDecaMod.makeID;
+import static automaton.AutomatonMod.makeID;
 
 
 public abstract class AbstractAutomatonPower extends AbstractPower {
