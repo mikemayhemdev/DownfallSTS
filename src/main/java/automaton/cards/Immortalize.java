@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,7 +19,7 @@ public class Immortalize extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsAction(p.hand.group, 1, "Choose.", (cards)-> {
+        atb(new SelectCardsInHandAction( 1, "Choose.", (cards)-> {
             addToTop(new AddToFuncAction(cards.get(0)));
         }));
         atb(new AbstractGameAction() {

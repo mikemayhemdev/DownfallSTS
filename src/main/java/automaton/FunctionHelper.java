@@ -11,7 +11,11 @@ import java.util.ArrayList;
 
 public class FunctionHelper {
     public static ArrayList<AbstractCard> held;
-    public static int max;
+    public static int max = 4;
+
+    public static void init() {
+        held = new ArrayList<>();
+    }
 
     public static AbstractCard makeFunction() {
         AbstractCard q = new FunctionCard();
