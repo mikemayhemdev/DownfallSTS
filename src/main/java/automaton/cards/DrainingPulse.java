@@ -28,13 +28,9 @@ public class DrainingPulse extends AbstractBronzeCard {
         for(AbstractMonster q : monsterList()) {
             applyToEnemy(q, autoWeak(q, 1));
         }
-        atb(new DrawCardAction(magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(UPG_MAGIC);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(2);
     }
 }

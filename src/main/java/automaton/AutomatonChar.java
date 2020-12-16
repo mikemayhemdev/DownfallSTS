@@ -107,12 +107,13 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             retVal.add(Strike.ID);
         }
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(Peashooter.ID);
         retVal.add(DrainingPulse.ID);
         retVal.add(OpenFire.ID);
         return retVal;

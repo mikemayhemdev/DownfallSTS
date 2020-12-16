@@ -15,7 +15,7 @@ public class Peashooter extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 2;
 
     public Peashooter() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         tags.add(AutomatonMod.BLASTER);
     }
