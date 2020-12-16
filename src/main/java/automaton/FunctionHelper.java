@@ -1,5 +1,6 @@
 package automaton;
 
+import automaton.cards.FunctionCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 
@@ -9,7 +10,7 @@ public class FunctionHelper {
     public static ArrayList<AbstractCard> held;
 
     public AbstractCard makeFunction() {
-        return new Shiv(); //TODO: Make this do the thing
+        return new FunctionCard(); //TODO: Make this do the thing
     }
 
     //If everything is a cardmod, things can be done mostly dynamically.
