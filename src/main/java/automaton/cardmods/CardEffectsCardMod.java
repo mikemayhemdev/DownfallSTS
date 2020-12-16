@@ -17,8 +17,6 @@ public class CardEffectsCardMod extends BronzeCardMod {
     @Override
     public void onInitialApplication(AbstractCard card) {
         card.modifyCostForCombat(stored.cost);
-
-        //Bake in stats?
     }
 
     @Override
