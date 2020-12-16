@@ -20,7 +20,7 @@ public class AddToFuncAction extends AbstractGameAction {
         isDone = true;
         if (FunctionHelper.held.size() < FunctionHelper.max) {
             container.removeCard(myCard);
-            FunctionHelper.held.add(myCard);
+            FunctionHelper.held.addToTop(myCard);
         }
         else {
             //TODO: "CARD_CANNOT_INPUT" dialog

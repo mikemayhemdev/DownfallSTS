@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import automaton.cardmods.ReducedCostMod;
 import basemod.helpers.CardModifierManager;
@@ -20,12 +21,12 @@ public class Replicate extends AbstractBronzeCard {
     public Replicate() {
         super(ID, 0, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        tags.add(AutomatonMod.ENCODE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        atb(new AddToFuncAction(this, p.hand)); // change to a better EncodeAction later
-        shuffleIn(this.makeStatEquivalentCopy());
+        shuffleIn(this.makeStatEquivalentCopy()); // does this keep Encode?
     }
 
     public void upp() {

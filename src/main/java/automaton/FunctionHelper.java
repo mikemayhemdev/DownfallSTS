@@ -6,21 +6,22 @@ import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 
 import java.util.ArrayList;
 
 public class FunctionHelper {
-    public static ArrayList<AbstractCard> held;
+    public static CardGroup held;
     public static int max = 4;
 
     public static void init() {
-        held = new ArrayList<>();
+        held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
     }
 
     public static AbstractCard makeFunction() {
         AbstractCard q = new FunctionCard();
         CardModifierManager.addModifier(q, new ExhaustCardMod());
-        for (AbstractCard c : held) {
+        for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) c).onCompile(q);
             } else {

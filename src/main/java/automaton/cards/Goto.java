@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
@@ -18,11 +19,11 @@ public class Goto extends AbstractBronzeCard {
     public Goto() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        tags.add(AutomatonMod.ENCODE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(magicNumber));
-        atb(new AddToFuncAction(this, p.hand));
     }
 
     public void upp() {
