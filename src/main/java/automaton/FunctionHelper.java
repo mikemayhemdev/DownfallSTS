@@ -1,7 +1,8 @@
 package automaton;
 
 import automaton.cardmods.CardEffectsCardMod;
-import automaton.cards.AbstractAutomatonCard;
+import automaton.cardmods.ExhaustCardMod;
+import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,12 +11,14 @@ import java.util.ArrayList;
 
 public class FunctionHelper {
     public static ArrayList<AbstractCard> held;
+    public static int max;
 
-    public AbstractCard makeFunction() {
+    public static AbstractCard makeFunction() {
         AbstractCard q = new FunctionCard();
+        CardModifierManager.addModifier(q, new ExhaustCardMod());
         for (AbstractCard c : held) {
-            if (c instanceof AbstractAutomatonCard) {
-                ((AbstractAutomatonCard) c).onCompile(q);
+            if (c instanceof AbstractBronzeCard) {
+                ((AbstractBronzeCard) c).onCompile(q);
             } else {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }

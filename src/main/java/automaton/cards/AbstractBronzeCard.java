@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import static automaton.AutomatonMod.getModID;
 import static automaton.AutomatonMod.makeCardPath;
 
-public abstract class AbstractAutomatonCard extends CustomCard {
+public abstract class AbstractBronzeCard extends CustomCard {
 
     protected final CardStrings cardStrings;
     protected final String NAME;
@@ -31,7 +31,7 @@ public abstract class AbstractAutomatonCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
 
-    public AbstractAutomatonCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
+    public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, AutomatonChar.Enums.BRONZE_AUTOMATON, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
@@ -44,7 +44,7 @@ public abstract class AbstractAutomatonCard extends CustomCard {
         initializeDescription();
     }
 
-    public AbstractAutomatonCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
+    public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);

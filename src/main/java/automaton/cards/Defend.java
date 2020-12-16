@@ -1,10 +1,9 @@
 package automaton.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Defend extends AbstractAutomatonCard {
+public class Defend extends AbstractBronzeCard {
     public final static String ID = makeID("Strike");
 
     public Defend() {

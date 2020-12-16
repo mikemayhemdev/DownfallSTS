@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Strike extends AbstractAutomatonCard {
+public class Strike extends AbstractBronzeCard {
     public final static String ID = makeID("Strike");
 
     public Strike() {

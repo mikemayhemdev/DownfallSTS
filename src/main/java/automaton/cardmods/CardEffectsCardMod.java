@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class CardEffectsCardMod extends AbstractAutomatonMod {
+public class CardEffectsCardMod extends BronzeCardMod {
     private AbstractCard stored;
 
     public CardEffectsCardMod(AbstractCard q) {

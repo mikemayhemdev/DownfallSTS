@@ -4,7 +4,7 @@ import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public abstract class AbstractAutomatonMod extends AbstractCardModifier {
+public abstract class BronzeCardMod extends AbstractCardModifier {
 
     protected void atb(AbstractGameAction action) {
         AbstractDungeon.actionManager.addToBottom(action);

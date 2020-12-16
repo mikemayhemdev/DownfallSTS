@@ -1,0 +1,18 @@
+{
+  "bronze:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "bronze:FunctionCard": {
+    "NAME": "FUNCTION",
+    "DESCRIPTION": ""
+  },
+  "bronze:Immortalize": {
+    "NAME": "Immortalize",
+    "DESCRIPTION": "bronze:Input 1 card. NL If the Function is full, output it into your hand."
+  }
+}

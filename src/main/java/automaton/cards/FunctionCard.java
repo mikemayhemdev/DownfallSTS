@@ -3,7 +3,7 @@ package automaton.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class FunctionCard extends AbstractAutomatonCard {
+public class FunctionCard extends AbstractBronzeCard {
     public final static String ID = makeID("FunctionCard");
 
     public FunctionCard() {
