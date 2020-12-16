@@ -15,7 +15,7 @@ public class SpreadShot extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 2;
 
     public SpreadShot() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         tags.add(AutomatonMod.BLASTER);

@@ -16,7 +16,7 @@ public class DrainingPulse extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public DrainingPulse() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ALL_ENEMY);
         baseDamage = 4;
         isMultiDamage = true;
         baseMagicNumber = magicNumber = MAGIC;
