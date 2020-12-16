@@ -7,7 +7,7 @@ public class FunctionCard extends AbstractAutomatonCard {
     public final static String ID = makeID("FunctionCard");
 
     public FunctionCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.NONE);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF_AND_ENEMY);
     }
 
     @Override
