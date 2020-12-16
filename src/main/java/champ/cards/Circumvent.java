@@ -32,7 +32,6 @@ public class Circumvent extends AbstractChampCard {
         if (upgraded) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(3), 3));
         if (dcombo()) {
             addToBot(new CircumventAction());
-
         }
     }
 
