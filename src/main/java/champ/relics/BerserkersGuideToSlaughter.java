@@ -30,7 +30,7 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
 
     @Override
     public int onLoseHpLast(int damageAmount) {
-        System.out.println("Yes, this is active. Status: " + isActive);
+        System.out.println("Yes, this is active. Status: " + isActive); // this is always false
         if (!isActive){
             return damageAmount;
         }
