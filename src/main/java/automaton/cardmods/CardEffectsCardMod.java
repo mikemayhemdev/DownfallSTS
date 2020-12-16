@@ -15,6 +15,11 @@ public class CardEffectsCardMod extends BronzeCardMod {
     }
 
     @Override
+    public void onInitialApplication(AbstractCard card) {
+        card.modifyCostForCombat(stored.cost);
+    }
+
+    @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (rawDescription.equals("")) {
             return "Activate " + stored.name;

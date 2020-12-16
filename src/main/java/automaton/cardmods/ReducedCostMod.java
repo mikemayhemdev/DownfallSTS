@@ -3,27 +3,23 @@ package automaton.cardmods;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class ExhaustCardMod extends BronzeCardMod {
-
-    public ExhaustCardMod() {
-        this.priority = -99;
-    }
+public class ReducedCostMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        card.exhaust = true;
+        card.modifyCostForCombat(-1);
     }
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (rawDescription.equals("")) {
-            return "Exhaust.";
+            return "Costs 1 less.";
         }
-        return rawDescription + " NL Exhaust.";
+        return rawDescription + " NL Costs 1 less.";
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new ExhaustCardMod();
+        return new ReducedCostMod();
     }
 }

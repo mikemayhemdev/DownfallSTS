@@ -5,5 +5,12 @@
       "input"
     ],
     "DESCRIPTION": "Add a card to the Function."
+  },
+  {
+    "PROPER_NAME": "Compile",
+    "NAMES": [
+      "compile"
+    ],
+    "DESCRIPTION": "Card has an additional effect on the Function."
   }
 ]

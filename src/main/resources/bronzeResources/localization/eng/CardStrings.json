@@ -14,5 +14,9 @@
   "bronze:Immortalize": {
     "NAME": "Immortalize",
     "DESCRIPTION": "bronze:Input 1 card. NL If the Function is full, output it into your hand."
+  },
+  "bronze:ClockOut": {
+    "NAME": "Clock Out",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile: Function costs 1 less."
   }
 }
