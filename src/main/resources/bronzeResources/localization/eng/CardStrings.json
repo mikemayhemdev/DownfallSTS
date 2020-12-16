@@ -184,7 +184,8 @@
   },
   "bronze:MechanicalMonster": {
     "NAME": "Mechanical Monster",
-    "DESCRIPTION": "Deal !D! damage. NL Double this card's damage this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Double this card's damage this turn.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL Double this card's damage this turn."
   },
   "bronze:ReflectionHacks": {
     "NAME": "Reflection Hacks",
