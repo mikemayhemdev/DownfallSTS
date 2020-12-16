@@ -26,8 +26,6 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         counter = 10;
     }
 
-    //TODO: Doesn't work... seems to be the same setup as Tungesten Rod
-
     @Override
     public int onLoseHpLast(int damageAmount) {
         System.out.println("Yes, this is active. Status: " + isActive); // this is always false
