@@ -109,9 +109,9 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card that Enters a Stance to your hand. It costs #b0 until played.",
+      "At the start of your turn, add a random card that Enters a Stance to your hand. It costs #b0 until played and Exhausts.",
       "At the start of your turn, add #b",
-      " random cards that Enter a Stance to your hand. They cost #b0 until played."
+      " random cards that Enter a Stance to your hand. They cost #b0 until played and Exhausts."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
