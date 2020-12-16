@@ -7,14 +7,10 @@ public class EncodeMod extends BronzeCardMod {
 
     public static String ID = "bronze:EncodeModifier";
 
-    @Override
-    public boolean removeOnCardPlayed(AbstractCard card) {
-        return true;
-    }
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return "bronze:Encode. NL " + rawDescription;
+        return rawDescription + " NL bronze:Encode.";
     }
 
     @Override

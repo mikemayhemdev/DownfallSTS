@@ -1,6 +1,5 @@
 package automaton.patches;
 
-import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
 import basemod.helpers.CardModifierManager;

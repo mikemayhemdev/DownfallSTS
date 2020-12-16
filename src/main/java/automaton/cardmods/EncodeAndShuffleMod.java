@@ -10,14 +10,10 @@ public class EncodeAndShuffleMod extends BronzeCardMod {
 
     public static String ID = "bronze:EncodeModifier";
 
-    @Override
-    public boolean removeOnCardPlayed(AbstractCard card) {
-        return true;
-    }
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return "bronze:Encode, then add a copy of this into your draw pile. NL " + rawDescription;
+        return rawDescription + " NL bronze:Encode, then add a copy of this into your draw pile.";
     }
 
     @Override

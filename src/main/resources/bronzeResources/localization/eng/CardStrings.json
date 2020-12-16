@@ -13,10 +13,10 @@
   },
   "bronze:Goto": {
     "NAME": "Goto",
-    "DESCRIPTION": "Draw !M! cards. NL bronze:Encode."
+    "DESCRIPTION": "Draw !M! cards."
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Encode. NL Add a copy of this card into your draw pile."
+    "DESCRIPTION": "Deal !D! damage."
   }
 }

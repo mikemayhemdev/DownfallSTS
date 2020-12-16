@@ -29,7 +29,6 @@ public class FunctionHelper {
 
     public static AbstractCard makeFunction() {
         AbstractCard q = new FunctionCard();
-        CardModifierManager.addModifier(q, new ExhaustCardMod());
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) c).onCompile(q);
