@@ -37,5 +37,13 @@
       "Whenever you play a #yBlaster, gain #b",
       " #yStrength."
     ]
+  },
+  "bronze:RepeatCard": {
+    "NAME": "Repeat Drawn Cards",
+    "DESCRIPTIONS": [
+      "#yRepeat the next card you draw.",
+      "#yRepeat the next #b",
+      " cards you draw."
+    ]
   }
 }

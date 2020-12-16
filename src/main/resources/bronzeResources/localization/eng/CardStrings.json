@@ -193,5 +193,10 @@
   "bronze:Exception": {
     "NAME": "Exception",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "bronze:Macro": {
+    "NAME": "Macro",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, bronze:Repeat the next card you draw.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw or discard this card, bronze:Repeat the next card you draw."
   }
 }
