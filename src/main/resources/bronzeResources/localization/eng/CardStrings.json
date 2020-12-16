@@ -206,6 +206,7 @@
   },
   "bronze:Capacitor": {
     "NAME": "Capacitor",
-    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Reduce this card's cost by 1 this combat. NL Gain [E]."
+    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Reduce this card's cost by 1 this combat. NL Gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL bronze:Core. NL bronze:Burnout. NL Reduce this card's cost by 1 this combat. NL Gain [E]."
   }
 }
