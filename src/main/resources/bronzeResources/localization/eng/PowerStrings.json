@@ -1,5 +1,5 @@
 {
-  "bronze:BarragePower": {
+  "bronze:Barrage": {
     "NAME": "Barrage",
     "DESCRIPTIONS": [
       "At the end of your turn, #yFire #b1 #yBlaster.",
@@ -7,7 +7,7 @@
       " #yBlasters."
     ]
   },
-  "bronze:FreeFirePower": {
+  "bronze:FreeFire": {
     "NAME": "Free Fire",
     "DESCRIPTIONS": [
       "The next card you #yFire costs #b0.",
@@ -15,7 +15,7 @@
       " cards you #yFire cost #b0."
     ]
   },
-  "bronze:FireBonusPower": {
+  "bronze:FireBonus": {
     "NAME": "Fire Bonus",
     "DESCRIPTIONS": [
       "The next card you #yFire is #yRepeated.",
@@ -23,7 +23,7 @@
       " cards you #yFire are #yRepeated."
     ]
   },
-  "bronze:AutoTurretPower": {
+  "bronze:AutoTurret": {
     "NAME": "Auto-Turret",
     "DESCRIPTIONS": [
       "At the start of your turn, #yFire #b1 #yPeashooter.",
