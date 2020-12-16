@@ -19,7 +19,7 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
-    private boolean isActive;
+    private boolean isActive = false;
 
     @Override
     public void atBattleStart() {
@@ -48,11 +48,14 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         return damageAmount;
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
+    @Override
+    public void onPlayerEndTurn() {
+        System.out.println("Zerker status set to FALSE");
         this.isActive = false;
     }
 
-    public void atStartOfTurnPostDraw() {
+    public void atTurnStart() {
+        System.out.println("Zerker status set to TRUE");
         this.isActive = true;
     }
 
