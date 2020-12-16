@@ -46,7 +46,7 @@ public class MassRepurpose extends AbstractSlimeboundCard {
     public MassRepurpose() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         baseBlock = 4;
-        this.baseMagicNumber = magicNumber = 4;
+        this.baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
 
 
