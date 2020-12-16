@@ -33,7 +33,8 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         if (!isActive){
             return damageAmount;
         }
-        if (counter > 0){
+        else if (counter > 0){
+            this.flash();
             if (counter > damageAmount){
                 counter = counter - damageAmount;
                 return 0;
@@ -56,7 +57,7 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
 
     @Override
     public void onVictory() {
-        counter = 0;
+        counter = -1;
     }
 
     @Override
