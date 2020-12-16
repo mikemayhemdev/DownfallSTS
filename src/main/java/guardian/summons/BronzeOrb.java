@@ -35,7 +35,7 @@ public class BronzeOrb extends AbstractFriendlyMonster {
     private Float targetX;
 
     public BronzeOrb(int offsetX, int offsetY) {
-        super(NAME, ID, HP, 0F, 20F, 120.0F, 120.0F, "images/monsters/theCity/automaton/orb.png", offsetX, offsetY);
+        super(NAME, ID, HP, 0F, 20F, 120.0F, 120.0F, "images/monsters/theCity/twins/orb.png", offsetX, offsetY);
 
         addMoves();
 

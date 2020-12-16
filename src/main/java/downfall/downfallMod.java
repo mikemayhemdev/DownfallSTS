@@ -8,7 +8,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 
  */
 
-import automaton.AutomatonMod;
+import twins.DonuDecaMod;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -378,7 +378,7 @@ public class downfallMod implements
         loadModKeywords(SlimeboundMod.getModID(), otherPackagePaths.PACKAGE_SLIME);
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
-        loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
+        loadModKeywords(DonuDecaMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
     }
 
     public void receivePostInitialize() {
