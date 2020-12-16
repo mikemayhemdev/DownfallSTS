@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -11,7 +12,7 @@ public class SuppressiveFire extends AbstractBronzeCard {
     //stupid intellij stuff skill, all_enemy, uncommon
 
     public SuppressiveFire() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         tags.add(AutomatonMod.BLASTER);
     }
 
@@ -25,7 +26,6 @@ public class SuppressiveFire extends AbstractBronzeCard {
     }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        //TODO: think about this upgrade
     }
 }

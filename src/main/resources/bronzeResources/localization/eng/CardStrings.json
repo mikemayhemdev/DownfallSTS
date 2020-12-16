@@ -121,8 +121,7 @@
   },
   "bronze:SuppressiveFire": {
     "NAME": "Suppressive Fire",
-    "DESCRIPTION": "bronze:Blaster. NL If bronze:Fired: Apply 1 Weak and Vulnerable to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "bronze:Blaster. NL Apply 1 Weak and Vulnerable to ALL enemies."
+    "DESCRIPTION": "bronze:Blaster. NL If bronze:Fired: Apply 1 Weak and Vulnerable to ALL enemies."
   },
   "bronze:AutoTurret": {
     "NAME": "Auto-Turret",

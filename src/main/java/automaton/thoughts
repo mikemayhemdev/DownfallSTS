@@ -1,0 +1,36 @@
+-Keywords:
+Blaster, Shield, Core - keywords and piles. Cards with the keyword move into the pile instead of discard when played.
+Fire - play a card from a specified pile, paying all costs. Blasters/Shields/Cores will typically leave into play, then come back to their piles.
+Burnout - Blasters/Shields/Cores with Burnout will instead move to Exhaust when casted from their piles.
+Repeat - Repeating a card plays a free copy with Purge.
+
+Main effects of these keywords:
+-0-cost plain Firing cards are basically "wildcards" that can transform into any card from their respective pile.
+-If a card has its own effects, then Fires, you can kind of play build-a-card by stacking different effects.
+IE:
+Open Fire (1 cost, deal 4 damage, Fire Blaster)
+-> Peashooter (0 cost, Blaster, deal 3 damage) = 1 cost, deal 7
+-> Draining Pulse (1 cost, Blaster, 4 damage + 1 Weak to ALL) = 2 cost, deal 4, deal 4 + 1 Weak to ALL
+-> Suppressive Fire (1 cost, Blaster, 1 Weak + 1 Vuln to ALL when Fired) = 2 cost, deal 4, 1 weak + vuln to ALL
+-> Blockblast (1 cost, Blaster, deal 6 damage + Fire 1 Shield) -> Shields Up (1 cost, gain 7 Block) = 3 cost, deal 10 damage, gain 7 block
+
+Numbers are a little weak due to the versatility of the option, and totally working stuff
+
+Identities of the 3 keywords:
+-Blasters typically deal damage or debuff.
+-Shields grant block or other evasive maneuvers.
+-Cores always grant energy and have stranger effects.
+
+Pillars/Archetypes:
+-Energy Management (setups: cores/core spam, Energy Next Turn cards, etc. payoffs: x-cost cards, Super Duper Beam, powers)
+-Master Blaster (setups: blasters, 0-cost cards, card generation. payoffs: Full Force, Array Shot, any major blaster-spam stuff, Super Duper Beam)
+-Greater AI (setups: shields, Scries, card manip, Energy Next turn. payoffs: make cards that are better when specifically used at different times, planning ahead-style stuff, especially useful when paired with the number of options Mecha gives you. also Super Duper Beam (scry off those Voids!)
+
+Starting Relic: ??? (Currently [E] on turn 2, but not sure)
+Starting deck GUARANTEES:
+-3-4 Strikes
+-4 Defends
+-2 Blasters
+-1 Blaster Firing card
+
+TODO: Add ability to view piles
