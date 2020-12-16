@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import automaton.actions.RepeatCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,9 +19,9 @@ public class FireBonusPower extends AbstractAutomatonPower implements OnFireSubs
     }
 
     @Override
-    public int onFire(AbstractCard toFire, int reps) {
+    public void onFire(AbstractCard toFire) {
         flash();
         addToTop(new ReducePowerAction(owner, owner, this, 1));
-        return reps + 1;
+        addToTop(new RepeatCardAction(toFire));
     }
 }

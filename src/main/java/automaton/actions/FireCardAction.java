@@ -2,6 +2,7 @@ package automaton.actions;
 
 import automaton.AutomatonMod;
 import automaton.cards.AbstractBronzeCard;
+import automaton.powers.OnFireSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FireCardAction extends AbstractGameAction {
     //This is gonna be the best, greatest "play-a-card" action ever created in Slay the Spire history, watch me
@@ -33,7 +35,6 @@ public class FireCardAction extends AbstractGameAction {
             target = AbstractDungeon.getRandomMonster();
         }
 
-
         if (myCard instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) myCard).inFire = true;
         }
@@ -51,6 +52,12 @@ public class FireCardAction extends AbstractGameAction {
 
         if (target != null) {
             myCard.calculateCardDamage((AbstractMonster) target);
+        }
+
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnFireSubscriber) {
+                ((OnFireSubscriber) p).onFire(myCard);
+            }
         }
 
         this.addToTop(new NewQueueCardAction(myCard, this.target, false, false));// 53

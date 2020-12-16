@@ -18,10 +18,9 @@ public class FreeFirePower extends AbstractAutomatonPower implements OnFireSubsc
     }
 
     @Override
-    public int onFire(AbstractCard toFire, int reps) {
+    public void onFire(AbstractCard toFire) {
         flash();
         toFire.freeToPlayOnce = true;
         addToTop(new ReducePowerAction(owner, owner, this, 1));
-        return reps;
     }
 }
