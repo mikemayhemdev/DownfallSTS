@@ -116,8 +116,8 @@
   },
   "bronze:DupeCore": {
     "NAME": "Dupe Core",
-    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL The next card you bronze:Fire is bronze:Repeated.",
-    "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL The next card you bronze:Fire is bronze:Repeated."
+    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL bronze:Repeat the next card you bronze:Fire.",
+    "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL bronze:Repeat the next card you bronze:Fire."
   },
   "bronze:SuppressiveFire": {
     "NAME": "Suppressive Fire",
