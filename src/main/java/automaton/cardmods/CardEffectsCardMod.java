@@ -22,9 +22,9 @@ public class CardEffectsCardMod extends BronzeCardMod {
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (rawDescription.equals("")) {
-            return "Activate " + stored.name;
+            return rawDescription + "Activate " + stored.name;
         }
-        return " NL Activate " + stored.name;
+        return rawDescription + " NL Activate " + stored.name;
     }
 
     @Override

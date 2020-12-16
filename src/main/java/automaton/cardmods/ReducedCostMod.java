@@ -13,7 +13,7 @@ public class ReducedCostMod extends BronzeCardMod {
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (rawDescription.equals("")) {
-            return "Costs 1 less.";
+            return rawDescription + "Costs 1 less.";
         }
         return rawDescription + " NL Costs 1 less.";
     }

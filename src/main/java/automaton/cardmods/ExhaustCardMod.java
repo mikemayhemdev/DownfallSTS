@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 public class ExhaustCardMod extends BronzeCardMod {
 
     public ExhaustCardMod() {
-        this.priority = -99;
+        this.priority = 99;
     }
 
     @Override
@@ -17,7 +17,7 @@ public class ExhaustCardMod extends BronzeCardMod {
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         if (rawDescription.equals("")) {
-            return "Exhaust.";
+            return rawDescription + "Exhaust.";
         }
         return rawDescription + " NL Exhaust.";
     }

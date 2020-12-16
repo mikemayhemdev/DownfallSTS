@@ -28,7 +28,7 @@ public class FunctionHelper {
             }
         }
         System.out.println(q.rawDescription);
-        return q; // Only issue - only the description changes for the most recent cardmod can be viewed. Why?
+        return q;
     }
 
     //If everything is a cardmod, things can be done mostly dynamically.
