@@ -30,7 +30,7 @@ public abstract class AbstractAutomatonPower extends AbstractPower {
     }
 
     public AbstractAutomatonPower(String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, AbstractCreature source, int amount, String IDModifier) {
-        this.ID = makeID(NAME).trim();
+        this.ID = makeID(NAME);
         this.isTurnBased = isTurnBased;
 
         if (!powerStrings.containsKey(this.ID))

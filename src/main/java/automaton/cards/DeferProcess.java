@@ -14,7 +14,7 @@ public class DeferProcess extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public DeferProcess() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
     }
 

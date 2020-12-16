@@ -24,7 +24,7 @@ public class FireFromPileAction extends AbstractGameAction {
                 for (AbstractCard q : g.group) {
                     q.applyPowers(); // hopefully this will make things display right
                 }
-                AbstractDungeon.gridSelectScreen.open(g, amount, false, "Choose."); //TODO: Localize
+                AbstractDungeon.gridSelectScreen.open(g, amount, true, "Choose."); //TODO: Localize
                 tickDuration();
             }
         } else {

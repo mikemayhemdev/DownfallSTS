@@ -2,7 +2,9 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
+@CardIgnore
 public class LockOn extends AbstractBronzeCard {
 
     public final static String ID = makeID("LockOn");
