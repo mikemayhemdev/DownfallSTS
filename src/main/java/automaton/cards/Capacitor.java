@@ -2,29 +2,29 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BerserkPower;
-import com.megacrit.cardcrawl.powers.DrawPower;
 
-public class QuadCore extends AbstractBronzeCard {
+public class Capacitor extends AbstractBronzeCard {
 
-    public final static String ID = makeID("QuadCore");
+    public final static String ID = makeID("Capacitor");
 
-    //stupid intellij stuff power, self, rare
+    //stupid intellij stuff skill, self, uncommon
 
-    public QuadCore() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+    public Capacitor() {
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(AutomatonMod.CORE);
         tags.add(AutomatonMod.BURNOUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BerserkPower(p, 1));
+        atb(new ReduceCostAction(this));
+        atb(new GainEnergyAction(1));
     }
 
     public void upp() {
-        tags.remove(AutomatonMod.BURNOUT);
+        isInnate = true;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

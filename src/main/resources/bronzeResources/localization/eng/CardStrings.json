@@ -90,8 +90,8 @@
   },
   "bronze:QuadCore": {
     "NAME": "Quad Core",
-    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Gain [E]. NL At the start of your turn, gain [E].",
-    "UPGRADE_DESCRIPTION": "bronze:Core. NL Gain [E]. NL At the start of your turn, gain [E]."
+    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL At the start of your turn, gain [E].",
+    "UPGRADE_DESCRIPTION": "bronze:Core. NL At the start of your turn, gain [E]."
   },
   "bronze:Subroutine": {
     "NAME": "Subroutine",
@@ -203,5 +203,9 @@
   "bronze:Twinshot": {
     "NAME": "Twinshot",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Fire 1 bronze:Blaster."
+  },
+  "bronze:Capacitor": {
+    "NAME": "Capacitor",
+    "DESCRIPTION": "bronze:Core. NL bronze:Burnout. NL Reduce this card's cost by 1 this combat. NL Gain [E]."
   }
 }
