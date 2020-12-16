@@ -185,5 +185,9 @@
   "bronze:MechanicalMonster": {
     "NAME": "Mechanical Monster",
     "DESCRIPTION": "Deal !D! damage. NL Double this card's damage this turn."
+  },
+  "bronze:ReflectionHacks": {
+    "NAME": "Reflection Hacks",
+    "DESCRIPTION": "bronze:Shield. NL bronze:Burnout. NL Put a card from your discard pile into your hand."
   }
 }
