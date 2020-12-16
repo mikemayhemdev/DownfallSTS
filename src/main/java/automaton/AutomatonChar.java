@@ -1,5 +1,10 @@
 package automaton;
 
+import automaton.cards.ClockOut;
+import automaton.cards.Defend;
+import automaton.cards.Immortalize;
+import automaton.cards.Strike;
+import automaton.relics.BronzeBoon;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -104,13 +109,20 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Strike.ID);
+        }
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(Immortalize.ID);
+        retVal.add(ClockOut.ID);
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-
+        retVal.add(BronzeBoon.ID);
         return retVal;
     }
 
