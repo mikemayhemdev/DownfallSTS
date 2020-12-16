@@ -12,7 +12,7 @@ public class ShockCore extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
-    private static final int DAMAGE = 1;
+    private static final int DAMAGE = 2;
 
     public ShockCore() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL);
@@ -27,6 +27,6 @@ public class ShockCore extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }
