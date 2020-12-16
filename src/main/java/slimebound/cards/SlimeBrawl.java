@@ -22,7 +22,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -76,7 +76,7 @@ public class SlimeBrawl extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeBaseCost(1);
+            upgradeBaseCost(2);
 
         }
 
