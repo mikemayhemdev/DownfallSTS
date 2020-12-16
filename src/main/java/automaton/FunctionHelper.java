@@ -1,8 +1,10 @@
 package automaton;
 
+import automaton.cardmods.CardEffectsCardMod;
+import automaton.cards.AbstractAutomatonCard;
 import automaton.cards.FunctionCard;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 
 import java.util.ArrayList;
 
@@ -10,7 +12,15 @@ public class FunctionHelper {
     public static ArrayList<AbstractCard> held;
 
     public AbstractCard makeFunction() {
-        return new FunctionCard(); //TODO: Make this do the thing
+        AbstractCard q = new FunctionCard();
+        for (AbstractCard c : held) {
+            if (c instanceof AbstractAutomatonCard) {
+                ((AbstractAutomatonCard) c).onCompile(q);
+            } else {
+                CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
+            }
+        }
+        return q;
     }
 
     //If everything is a cardmod, things can be done mostly dynamically.

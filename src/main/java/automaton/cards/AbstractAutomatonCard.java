@@ -1,8 +1,10 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
+import automaton.cardmods.CardEffectsCardMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -81,8 +83,8 @@ public abstract class AbstractAutomatonCard extends CustomCard {
         }
     }
 
-    public void onCompile(ArrayList<AbstractCardModifier> cardMods) {
-
+    public void onCompile(AbstractCard function) {
+        CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }
 
     public abstract void upp();
