@@ -181,5 +181,9 @@
   "bronze:Gatling": {
     "NAME": "Gatling",
     "DESCRIPTION": "Whenever you play a bronze:Blaster, gain 1 temporary Strength."
+  },
+  "bronze:MechanicalMonster": {
+    "NAME": "Mechanical Monster",
+    "DESCRIPTION": "Deal !D! damage. NL Double this card's damage this turn."
   }
 }
