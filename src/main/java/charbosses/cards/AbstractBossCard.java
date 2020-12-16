@@ -2,9 +2,12 @@ package charbosses.cards;
 
 import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Watcher.CharBossWatcher;
+import charbosses.cards.purple.EnDevotion;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.cardpowers.EnemyStormPower;
 import charbosses.relics.AbstractCharbossRelic;
+import charbosses.stances.EnDivinityStance;
 import charbosses.ui.EnemyEnergyPanel;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -164,7 +167,9 @@ public abstract class AbstractBossCard extends AbstractCard {
             }else {
                 value += Math.max(this.damage * 2.0f, 0);
             }
-
+            if (ownerBoss instanceof CharBossWatcher && ownerBoss.stance instanceof EnDivinityStance) {
+                value *= 2; //Heavy-handed fix for Watcher not attacking on her Divinity turn. TODO: Someone who knows more about bosses check a look?
+            }
         }
 
         value += Math.max(this.block * 1.3F * blockModifier, 0);

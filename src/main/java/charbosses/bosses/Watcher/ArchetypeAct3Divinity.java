@@ -95,10 +95,8 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         if (looped) {
-
             switch (turn) {
                 case 0:
-
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnDevotion(), false);
                     addToList(cardsList, new EnWrithe(), false);
@@ -131,7 +129,6 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
-
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnDevotion(), false);
                     addToList(cardsList, new EnWrithe(), false);
@@ -149,13 +146,11 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnWallop(), extraUpgrades);
                     break;
                 case 3:
-
                     addToList(cardsList, new EnProtect(), true);
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnStrikePurple(), false);
                     break;
                 case 4:
-
                     addToList(cardsList, new EnFasting(), extraUpgrades);
                     addToList(cardsList, new EnCrushJoints(), false);
                     addToList(cardsList, new EnBrilliance(), false);
