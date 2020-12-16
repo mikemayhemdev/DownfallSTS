@@ -44,14 +44,7 @@ public class Icky extends AbstractSlimeboundCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!this.dontTriggerOnUseCard && p.hasRelic("Blue Candle")) {
-            this.useBlueCandle(p);
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new UseCardAction(this));
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Slimed(), 1));
-            //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Slimed(), 1, true, false));
-
-        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Slimed(), 1));
     }
 
     public AbstractCard makeCopy() {
