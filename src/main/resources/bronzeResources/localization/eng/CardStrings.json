@@ -199,5 +199,9 @@
     "NAME": "Macro",
     "DESCRIPTION": "Unplayable. NL When you draw this card, bronze:Repeat the next card you draw.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw or discard this card, bronze:Repeat the next card you draw."
+  },
+  "bronze:Twinshot": {
+    "NAME": "Twinshot",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Fire 1 bronze:Blaster."
   }
 }
