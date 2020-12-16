@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,7 +15,7 @@ public class Override extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: Repeat a card in your hand
+        //atb(new SelectCardsAction(p.hand.group, 1, "Choose.", ));
     }
 
     public void upp() {
