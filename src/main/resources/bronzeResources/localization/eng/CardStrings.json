@@ -188,6 +188,10 @@
   },
   "bronze:ReflectionHacks": {
     "NAME": "Reflection Hacks",
-    "DESCRIPTION": "bronze:Shield. NL bronze:Burnout. NL Put a card from your discard pile into your hand."
+    "DESCRIPTION": "bronze:Shield. NL bronze:Burnout. NL bronze:Fire 1 card in your discard pile."
+  },
+  "bronze:Exception": {
+    "NAME": "Exception",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
   }
 }

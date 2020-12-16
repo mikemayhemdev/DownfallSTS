@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.actions.FireFromPileAction;
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,7 +19,7 @@ public class ReflectionHacks extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new BetterDiscardPileToHandAction(1));
+        atb(new FireFromPileAction(p.discardPile, 1));
     }
 
     public void upp() {
