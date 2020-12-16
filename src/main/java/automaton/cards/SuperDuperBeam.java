@@ -34,6 +34,7 @@ public class SuperDuperBeam extends AbstractBronzeCard {
     }
 
     public void upp() {
+        upgradeDamage(5);
         upgradeMagicNumber(UPG_MAGIC);
     }
 }
