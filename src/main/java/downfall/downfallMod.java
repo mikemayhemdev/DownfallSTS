@@ -228,6 +228,8 @@ public class downfallMod implements
                 return "expansioncontentResources/" + path;
             case PACKAGE_CHAMP:
                 return "champResources/" + path;
+            case PACKAGE_AUTOMATON:
+                return "automatonResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -1163,7 +1165,8 @@ public class downfallMod implements
         PACKAGE_HEXAGHOST,
         PACKAGE_SNECKO,
         PACKAGE_EXPANSION,
-        PACKAGE_CHAMP;
+        PACKAGE_CHAMP,
+        PACKAGE_AUTOMATON;
 
         otherPackagePaths() {
         }
