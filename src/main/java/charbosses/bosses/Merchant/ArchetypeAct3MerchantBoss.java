@@ -54,19 +54,19 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnTheBomb(), false);
-                    addToList(cardsList, new EnTrip(), false);
-                    addToList(cardsList, new EnSwiftStrike(), false);
+                    addToList(cardsList, new EnTheBomb(), true);
+                    addToList(cardsList, new EnTrip(), true);
+                    addToList(cardsList, new EnSwiftStrike(), true);
                     break;
                 case 1:
-                    addToList(cardsList, new EnHandOfGreed(), false);
-                    addToList(cardsList, new EnGoodInstincts(), false);
-                    addToList(cardsList, new EnBlind(), false);
+                    addToList(cardsList, new EnHandOfGreed(), true);
+                    addToList(cardsList, new EnGoodInstincts(), true);
+                    addToList(cardsList, new EnBlind(), true);
                     break;
                 case 2:
-                    addToList(cardsList, new EnTheBomb(), false);
-                    addToList(cardsList, new EnGoodInstincts(), false);
-                    addToList(cardsList, new EnSwiftStrike(), false);
+                    addToList(cardsList, new EnTheBomb(), true);
+                    addToList(cardsList, new EnGoodInstincts(), true);
+                    addToList(cardsList, new EnSwiftStrike(), true);
                     break;
             }
         } else {
@@ -78,24 +78,24 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     addToList(cardsList, new EnTheBomb(), false);
                     break;
                 case 1:
-                    addToList(cardsList, new EnPanacea(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnPanacea(), true);  //removed
                     addToList(cardsList, new EnApotheosis(), true);  //removed
                     addToList(cardsList, new EnHandOfGreed(), false);
                     break;
                 case 2:
-                    addToList(cardsList, new EnSadisticNature(), false);  //removed
-                    addToList(cardsList, new EnTrip(), false);
-                    addToList(cardsList, new EnGoodInstincts(), false);
+                    addToList(cardsList, new EnSadisticNature(), true);  //removed
+                    addToList(cardsList, new EnTrip(), true);
+                    addToList(cardsList, new EnGoodInstincts(), true);
                     break;
                 case 3:
-                    addToList(cardsList, new EnGoodInstincts(), false);
-                    addToList(cardsList, new EnBlind(), false);
-                    addToList(cardsList, new EnSwiftStrike(), false);
+                    addToList(cardsList, new EnGoodInstincts(), true);
+                    addToList(cardsList, new EnBlind(), true);
+                    addToList(cardsList, new EnSwiftStrike(), true);
                     break;
                 case 4:
-                    addToList(cardsList, new EnPanacea(), false);  //removed
-                    addToList(cardsList, new EnSwiftStrike(), false);
-                    addToList(cardsList, new EnTheBomb(), false);
+                    addToList(cardsList, new EnPanacea(), true);  //removed
+                    addToList(cardsList, new EnSwiftStrike(), true);
+                    addToList(cardsList, new EnTheBomb(), true);
                     break;
             }
         }
