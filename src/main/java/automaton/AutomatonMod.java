@@ -50,14 +50,6 @@ public class AutomatonMod implements
 
     public static Color placeholderColor = new Color(150F / 255F, 50F / 255F, 200F / 255F, 1); // TODO: CHANGE
     public static Color potionLabColor = new Color(250F / 255F, 100F / 255F, 200F / 255F, 1); // TODO: CHANGE
-    @SpireEnum
-    public static AbstractCard.CardTags BLASTER;
-    @SpireEnum
-    public static AbstractCard.CardTags SHIELD;
-    @SpireEnum
-    public static AbstractCard.CardTags CORE;
-    @SpireEnum
-    public static AbstractCard.CardTags BURNOUT;
     private static String modID = "bronze";
     private CustomUnlockBundle unlocks0; // TODO: Figure this out
     private CustomUnlockBundle unlocks1;
