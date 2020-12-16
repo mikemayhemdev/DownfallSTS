@@ -35,8 +35,7 @@ public class AutomatonMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
-        SetUnlocksSubscriber,
-        OnCardUseSubscriber {
+        SetUnlocksSubscriber {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -192,13 +191,6 @@ public class AutomatonMod implements
     public void receivePostInitialize() {
         addPotions();
         //TODO: This
-    }
-
-    @Override
-    public void receiveCardUsed(AbstractCard abstractCard) {
-        if (abstractCard instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) abstractCard).inFire = false;
-        }
     }
 
     @Override

@@ -11,7 +11,7 @@ public class SuppressiveFire extends AbstractBronzeCard {
     //stupid intellij stuff skill, all_enemy, uncommon
 
     public SuppressiveFire() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         tags.add(AutomatonMod.BLASTER);
     }
 

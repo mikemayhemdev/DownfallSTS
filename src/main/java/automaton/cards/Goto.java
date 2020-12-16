@@ -32,7 +32,9 @@ public class Goto extends AbstractBronzeCard {
             @java.lang.Override
             public void update() {
                 isDone = true;
-                att(new FireCardAction(AbstractDungeon.player.drawPile.getTopCard(), AbstractDungeon.player.drawPile));
+                if (!AbstractDungeon.player.drawPile.isEmpty()) {
+                    att(new FireCardAction(AbstractDungeon.player.drawPile.getTopCard(), AbstractDungeon.player.drawPile)); //TODO: Reshuffle if empty instead
+                }
             }
         });
     }

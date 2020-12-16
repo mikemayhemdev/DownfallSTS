@@ -1,5 +1,6 @@
 package theHexaghost.patches;
 
+import automaton.cards.AbstractBronzeCard;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -19,6 +20,9 @@ public class TriggerFlamesPatch {
             activeGhostFlame.advanceTrigger(abstractCard);
         if (abstractCard.hasTag(expansionContentMod.STUDY)) {
             downfallMod.playedBossCardThisTurn = true;
+        }
+        if (abstractCard instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) abstractCard).inFire = false;
         }
     }
 }

@@ -22,7 +22,7 @@ public class FireFromPileAction extends AbstractGameAction {
                 isDone = true;
             } else {
                 for (AbstractCard q : g.group) {
-                    //q.applyPowers(); // hopefully this will make things display right
+                    q.applyPowers(); // hopefully this will make things display right
                     q.stopGlowing();
                 }
                 AbstractDungeon.gridSelectScreen.open(g, amount, true, "Choose."); //TODO: Localize
