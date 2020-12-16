@@ -27,7 +27,8 @@ public class FunctionHelper {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }
         }
-        return q;
+        System.out.println(q.rawDescription);
+        return q; // Only issue - only the description changes for the most recent cardmod can be viewed. Why?
     }
 
     //If everything is a cardmod, things can be done mostly dynamically.
