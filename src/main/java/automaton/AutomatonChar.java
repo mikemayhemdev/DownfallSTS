@@ -45,8 +45,8 @@ public class AutomatonChar extends CustomPlayer {
 
     public float renderscale = 1.0F;
 
-    private String atlasURL = "bronzeResources/images/char/mainChar/champ.atlas";
-    private String jsonURL = "bronzeResources/images/char/mainChar/champ.json";
+    private String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
+    private String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";
 
     public AutomatonChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
@@ -54,20 +54,16 @@ public class AutomatonChar extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), -15.0F, -30.0F, 450.0F, 450.0F, new EnergyManager(3));
+                getLoadout(), 0.0F, -30.0F, 270.0F, 400.0F, new EnergyManager(3));
 
         this.reloadAnimation();
-
-        this.drawY = this.drawY + 25F * Settings.scale;
-        dialogX = (drawX + 0.0F * Settings.scale);
-        dialogY = (drawY + 240.0F * Settings.scale);
 
     }
 
     public void reloadAnimation() {
 
         this.loadAnimation(atlasURL, this.jsonURL, renderscale);
-        this.state.setAnimation(0, "Idle", true);
+        this.state.setAnimation(0, "idle", true);
 
 
     }
@@ -128,11 +124,11 @@ public class AutomatonChar extends CustomPlayer {
 
     @Override
     public void doCharSelectScreenSelectEffect() {
-        //TODO: Change
+
         if (MathUtils.randomBoolean()) {
-            CardCrawlGame.sound.play("VO_CHAMP_3A", 0.1F);
+            CardCrawlGame.sound.play("MONSTER_AUTOMATON_SUMMON", 0.1F);
         } else {
-            CardCrawlGame.sound.play("VO_CHAMP_3B", 0.1F);
+            CardCrawlGame.sound.play("AUTOMATON_ORB_SPAWN", 0.1F);
         }
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false);
@@ -141,11 +137,10 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
 
-        //TODO: Change
         if (MathUtils.randomBoolean()) {
-            return "VO_CHAMP_3A";
+            return "MONSTER_AUTOMATON_SUMMON";
         } else {
-            return "VO_CHAMP_3B";
+            return "AUTOMATON_ORB_SPAWN";
         }
     }
 
@@ -202,7 +197,7 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
         return new AbstractGameAction.AttackEffect[]{
-                AbstractGameAction.AttackEffect.SLASH_HEAVY,
+                AbstractGameAction.AttackEffect.FIRE,
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL,
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL};
     }

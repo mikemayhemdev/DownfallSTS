@@ -39,20 +39,20 @@ public class AutomatonMod implements
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
-    public static final String CARD_ENERGY_S = "bronzeResources/images/512/card_champ_orb.png";
+    public static final String CARD_ENERGY_S = "bronzeResources/images/512/card_bronze_orb.png";
     public static final String TEXT_ENERGY = "bronzeResources/images/512/card_small_orb.png";
-    private static final String ATTACK_S_ART = "bronzeResources/images/512/bg_attack_colorless.png";
-    private static final String SKILL_S_ART = "bronzeResources/images/512/bg_skill_colorless.png";
-    private static final String POWER_S_ART = "bronzeResources/images/512/bg_power_colorless.png";
-    private static final String ATTACK_L_ART = "bronzeResources/images/1024/bg_attack_colorless.png";
-    private static final String SKILL_L_ART = "bronzeResources/images/1024/bg_skill_colorless.png";
-    private static final String POWER_L_ART = "bronzeResources/images/1024/bg_power_colorless.png";
-    private static final String CARD_ENERGY_L = "bronzeResources/images/1024/card_champ_orb.png";
+    private static final String ATTACK_S_ART = "bronzeResources/images/512/bg_attack_bronze.png";
+    private static final String SKILL_S_ART = "bronzeResources/images/512/bg_skill_bronze.png";
+    private static final String POWER_S_ART = "bronzeResources/images/512/bg_power_bronze.png";
+    private static final String ATTACK_L_ART = "bronzeResources/images/1024/bg_attack_bronze.png";
+    private static final String SKILL_L_ART = "bronzeResources/images/1024/bg_skill_bronze.png";
+    private static final String POWER_L_ART = "bronzeResources/images/1024/bg_power_bronze.png";
+    private static final String CARD_ENERGY_L = "bronzeResources/images/1024/card_bronze_orb.png";
     private static final String CHARSELECT_BUTTON = "bronzeResources/images/charSelect/charButton.png";
     private static final String CHARSELECT_PORTRAIT = "bronzeResources/images/charSelect/charBG.png";
 
-    public static Color placeholderColor = new Color(150F / 255F, 50F / 255F, 200F / 255F, 1); // TODO: CHANGE
-    public static Color potionLabColor = new Color(250F / 255F, 100F / 255F, 200F / 255F, 1); // TODO: CHANGE
+    public static Color placeholderColor = new Color(214F / 255F, 202F / 255F, 158F / 255F, 1);
+    public static Color potionLabColor = new Color(214F / 255F, 202F / 255F, 158F / 255F, 1);
     private static String modID = "bronze";
     private CustomUnlockBundle unlocks0; // TODO: Figure this out
     private CustomUnlockBundle unlocks1;
