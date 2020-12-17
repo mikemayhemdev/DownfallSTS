@@ -207,5 +207,10 @@
   "bronze:Allocate": {
     "NAME": "Allocate",
     "DESCRIPTION": "Gain [E]."
+  },
+  "bronze:Decompile": {
+    "NAME": "Decompile",
+    "DESCRIPTION": "Choose a Function. NL Exhaust it to draw cards and gain [E] equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a Function. NL Exhaust it to draw cards and gain [E] equal to its cost. NL Exhaust."
   }
 }

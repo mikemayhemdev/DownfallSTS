@@ -25,7 +25,7 @@ public class Mutator extends AbstractBronzeCard {
             applyToSelf(new DexterityPower(p, 1));
         }
         AbstractCard q = this;
-        atb(new SelectCardsInHandAction(1, "Choose a Status.", c->c.type == CardType.STATUS, (cards) -> {
+        atb(new SelectCardsInHandAction(1, "Choose a Status.", c->c.type == CardType.STATUS, (cards) -> { // TODO: Localize
             att(new MakeTempCardInHandAction(q.makeStatEquivalentCopy(), true));
             att(new ExhaustSpecificCardAction(cards.get(0), p.hand, true));
         }));
