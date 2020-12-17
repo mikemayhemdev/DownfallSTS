@@ -194,5 +194,9 @@
   "bronze:Optimize": {
     "NAME": "Optimize",
     "DESCRIPTION": "The next !M! Functions you bronze:Compile cost 1 less."
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Max Output",
+    "DESCRIPTION": "Draw 1 additional card and add 1 *Dazed into your draw pile each turn."
   }
 }
