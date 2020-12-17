@@ -290,5 +290,10 @@
     "NAME": "Break",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 3 random Status cards into your draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 3 random Status cards into your discard pile."
+  },
+  "bronze:Infinite Loop": {
+    "NAME": "Infinite Loop",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand."
   }
 }
