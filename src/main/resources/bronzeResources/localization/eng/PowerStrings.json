@@ -67,5 +67,13 @@
       "At the start of your turn, add #b",
       " random cards with #yEncode to your hand. NL They cost #b0 until played."
     ]
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Bronze Heatsink",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yFunction, draw #b1 card.",
+      "Whenever you play a #yFunction, draw #b",
+      " cards."
+    ]
   }
 }

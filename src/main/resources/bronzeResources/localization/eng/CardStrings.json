@@ -304,5 +304,10 @@
     "NAME": "Verify",
     "DESCRIPTION": "The first time you Output a Function each turn, gain [E].",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time you Output a Function each turn, gain [E]."
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Bronze Heatsink",
+    "DESCRIPTION": "Whenever you play a Function, draw a card.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Function, draw 2 cards."
   }
 }
