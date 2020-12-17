@@ -138,5 +138,9 @@
   "bronze:DigitalCarnage": {
     "NAME": "Digital Carnage",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL bronze:Compile - Function gains Ethereal."
+  },
+  "bronze:NullPointer": {
+    "NAME": "Null Pointer",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function is not created."
   }
 }
