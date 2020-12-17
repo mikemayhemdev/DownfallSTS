@@ -53,5 +53,9 @@
   "bronze:CutThrough": {
     "NAME": "Cut Through",
     "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw 1 card."
+  },
+  "bronze:RecursiveStrike": {
+    "NAME": "Recursive Strike",
+    "DESCRIPTION": "Deal !D! damage twice. NL At the start of your turn, if this is in the Sequence, increase its damage by 1."
   }
 }
