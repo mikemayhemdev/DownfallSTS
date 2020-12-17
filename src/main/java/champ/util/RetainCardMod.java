@@ -18,7 +18,6 @@ public class RetainCardMod extends AbstractCardModifier {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-
         card.selfRetain = true;
     }
 

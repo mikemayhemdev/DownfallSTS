@@ -72,5 +72,9 @@
     "NAME": "Wild Beam",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Wound into your draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Wound into your discard pile."
+  },
+  "bronze:Frontload": {
+    "NAME": "Frontload",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function gains Retain."
   }
 }
