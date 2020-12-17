@@ -62,5 +62,10 @@
     "NAME": "Dark Dash",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add 1 *Void into your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add 1 *Void into your discard pile."
+  },
+  "bronze:OilSpill": {
+    "NAME": "Oil Spill",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add 1 *Slimed into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add 1 *Slimed into your discard pile."
   }
 }
