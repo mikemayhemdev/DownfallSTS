@@ -150,5 +150,9 @@
   "bronze:BronzeOrb": {
     "NAME": "Bronze Orb",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
+  },
+  "bronze:SearingBeam": {
+    "NAME": "Searing Beam",
+    "DESCRIPTION": "Deal !D! damage. NL Can be Upgraded any number of times."
   }
 }
