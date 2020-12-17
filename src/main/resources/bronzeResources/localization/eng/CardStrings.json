@@ -146,5 +146,9 @@
   "bronze:Fortify": {
     "NAME": "Fortify",
     "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain 2 Dexterity."
+  },
+  "bronze:BronzeOrb": {
+    "NAME": "Bronze Orb",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
   }
 }

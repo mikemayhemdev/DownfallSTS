@@ -18,6 +18,7 @@ public class Fortify extends AbstractBronzeCard {
     public Fortify() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
