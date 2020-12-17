@@ -118,5 +118,9 @@
   "bronze:Update": {
     "NAME": "Update",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Upgrade all cards before this in the Sequence."
+  },
+  "bronze:Overload": {
+    "NAME": "Overload",
+    "DESCRIPTION": "Gain [E] [E]. NL bronze:Compile - Function is placed into your discard pile instead of your hand."
   }
 }

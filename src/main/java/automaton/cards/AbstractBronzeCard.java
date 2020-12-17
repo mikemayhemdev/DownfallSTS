@@ -90,11 +90,18 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public void onCompile(AbstractCard function) {
+        // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
         CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }
 
     public void onInput() {
         // Called when the card is about to enter the Sequence.
+    }
+
+    public boolean onOutput() {
+        // Called when the function is about to be added to the hand.
+        // Return true to continue adding to hand. Return false to stop that.
+        return true;
     }
 
     public abstract void upp();

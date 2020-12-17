@@ -17,6 +17,7 @@ public class Update extends AbstractBronzeCard {
     public Update() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

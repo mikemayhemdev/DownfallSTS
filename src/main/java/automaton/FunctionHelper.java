@@ -5,6 +5,7 @@ import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -37,8 +38,7 @@ public class FunctionHelper {
             }
         }
         if (held.size() == max) {
-            AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(makeFunction()));
-            held.clear();
+            output();
         }
         secretStorage = makeFunction();
     }
@@ -57,6 +57,25 @@ public class FunctionHelper {
         q.modifyCostForCombat(-1);
         System.out.println(q.rawDescription);
         return q;
+    }
+
+    public static void output() {
+        boolean regularOutput = true;
+        for (AbstractCard c : held.group) {
+            if (c instanceof AbstractBronzeCard) {
+                regularOutput = ((AbstractBronzeCard) c).onOutput();
+            }
+        }
+        if (regularOutput) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction()));
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    held.clear();
+                    isDone = true;
+                }
+            });
+        }
     }
 
     public static void render(SpriteBatch sb) {
