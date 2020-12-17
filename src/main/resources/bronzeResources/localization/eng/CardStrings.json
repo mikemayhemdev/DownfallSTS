@@ -57,5 +57,10 @@
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
     "DESCRIPTION": "Deal !D! damage twice. NL At the start of your turn, if this is in the Sequence, increase its damage by 1."
+  },
+  "bronze:DarkDash": {
+    "NAME": "Dark Dash",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add 1 *Void into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add 1 *Void into your discard pile."
   }
 }
