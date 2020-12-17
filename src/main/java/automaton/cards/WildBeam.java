@@ -30,6 +30,7 @@ public class WildBeam extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
         if (forGameplay) {
             if (upgraded) {
                 atb(new MakeTempCardInDiscardAction(new Wound(), 1));

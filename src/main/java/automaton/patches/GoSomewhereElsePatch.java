@@ -43,7 +43,6 @@ public class GoSomewhereElsePatch {
             card.target_y = 800 * Settings.scale;
             CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
             if (card instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) card).inFunc = true;
                 ((AbstractBronzeCard) card).position = ((AbstractBronzeCard) card).getSequencePosition();
             }
             AbstractDungeon.player.limbo.addToTop(card);
