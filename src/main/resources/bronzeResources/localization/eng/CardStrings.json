@@ -28,5 +28,9 @@
       "block()",
       "Gain !B! Block."
     ]
+  },
+  "bronze:DelayedSlice": {
+    "NAME": "Delayed Slice",
+    "DESCRIPTION": "bronze:Compile - Deal !D! damage to ALL enemies."
   }
 }

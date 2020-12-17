@@ -2,6 +2,7 @@ package automaton.patches;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
+import automaton.cards.AbstractBronzeCard;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -41,6 +42,9 @@ public class GoSomewhereElsePatch {
             card.target_x = (400 + (200 * FunctionHelper.held.size()) * Settings.scale);
             card.target_y = 800 * Settings.scale;
             CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
+            if (card instanceof AbstractBronzeCard) {
+                ((AbstractBronzeCard) card).inFunc = true;
+            }
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override

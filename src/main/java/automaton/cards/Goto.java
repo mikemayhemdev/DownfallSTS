@@ -15,7 +15,7 @@ public class Goto extends AbstractBronzeCard {
     public Goto() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        CardModifierManager.addModifier(this, new EncodeMod());
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -2,6 +2,7 @@ package automaton.cards;
 
 import automaton.AutomatonChar;
 import automaton.cardmods.CardEffectsCardMod;
+import automaton.cardmods.EncodeMod;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
@@ -30,6 +31,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String DESCRIPTION;
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
+
+    public boolean inFunc = false;
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -163,5 +166,9 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
+    }
+
+    void thisEncodes() {
+        CardModifierManager.addModifier(this, new EncodeMod());
     }
 }
