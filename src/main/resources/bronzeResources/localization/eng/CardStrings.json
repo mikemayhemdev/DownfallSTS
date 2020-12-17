@@ -299,5 +299,10 @@
   "bronze:Library": {
     "NAME": "Library",
     "DESCRIPTION": "At the start of your turn, add a random card with Encode to your hand. NL It costs 0 until played."
+  },
+  "bronze:Verify": {
+    "NAME": "Verify",
+    "DESCRIPTION": "The first time you Output a Function each turn, gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you Output a Function each turn, gain [E]."
   }
 }
