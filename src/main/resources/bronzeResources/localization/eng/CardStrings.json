@@ -281,5 +281,9 @@
     "NAME": "Burn Out",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Compile - Add a Burn+ to your draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Compile - Add a Burn+ to your discard pile."
+  },
+  "bronze:ShipIt": {
+    "NAME": "Ship It",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! for ALL of your status cards."
   }
 }
