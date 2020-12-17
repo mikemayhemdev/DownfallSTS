@@ -84,5 +84,13 @@
   "bronze:Shield": {
     "NAME": "Shield",
     "DESCRIPTION": "Gain !B! Block."
+  },
+  "bronze:Deprecate": {
+    "NAME": "Deprecate",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies."
+  },
+  "bronze:Invalidate": {
+    "NAME": "Invalidate",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
   }
 }

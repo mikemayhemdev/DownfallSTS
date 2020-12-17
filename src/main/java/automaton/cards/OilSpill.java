@@ -21,7 +21,7 @@ public class OilSpill extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 2;
 
     public OilSpill() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
