@@ -36,5 +36,9 @@
   "bronze:WhirlingStrike": {
     "NAME": "Whirling Strike",
     "DESCRIPTION": "Deal !D! damage to ALL enemies."
+  },
+  "bronze:Iterate": {
+    "NAME": "Iterate",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   }
 }
