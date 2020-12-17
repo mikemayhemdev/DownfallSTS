@@ -21,10 +21,10 @@ public class Constructor extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
         if (firstCard()) {
             baseBlock *= 2;
         }
+        super.onCompile(function, forGameplay);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

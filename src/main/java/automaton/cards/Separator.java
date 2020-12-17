@@ -27,8 +27,10 @@ public class Separator extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
-        if (!firstCard() && !lastCard()) {
-            atb(new GainEnergyAction(2));
+        if (forGameplay) {
+            if (!firstCard() && !lastCard()) {
+                atb(new GainEnergyAction(2));
+            }
         }
     }
 
