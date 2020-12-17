@@ -134,5 +134,9 @@
   "bronze:Flail": {
     "NAME": "Flail",
     "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL bronze:Compile - Gain !M! Artifact."
+  },
+  "bronze:DigitalCarnage": {
+    "NAME": "Digital Carnage",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL bronze:Compile - Function gains Ethereal."
   }
 }
