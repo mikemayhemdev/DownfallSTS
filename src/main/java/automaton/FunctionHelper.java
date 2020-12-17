@@ -4,6 +4,7 @@ import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import automaton.powers.CloningPower;
+import automaton.relics.BronzeBoon;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -65,7 +66,7 @@ public class FunctionHelper {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }
         }
-        if (q.cost > 0) {
+        if (q.cost > 0 && AbstractDungeon.player.hasRelic(BronzeBoon.ID)) {
             q.cost -= 1;
             q.costForTurn -= 1;
         }

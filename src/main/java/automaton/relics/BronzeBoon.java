@@ -21,28 +21,6 @@ public class BronzeBoon extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        counter = 0;
-        grayscale = false;
-    }
-
-    @Override
-    public void atTurnStart() {
-        counter++;
-        if (counter == 2) {
-            flash();
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-            grayscale = true;
-        }
-    }
-
-    @Override
-    public void onVictory() {
-        grayscale = false;
-        counter = -1;
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

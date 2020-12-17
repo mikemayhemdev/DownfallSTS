@@ -3,7 +3,7 @@
     "NAME": "Bronze Generator",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of turn #b2."
+      "Functions cost #b1 less."
     ]
   }
 }
