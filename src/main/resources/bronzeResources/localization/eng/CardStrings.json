@@ -225,5 +225,10 @@
   "bronze:Boost": {
     "NAME": "Boost",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength."
+  },
+  "bronze:Safeguard": {
+    "NAME": "Safeguard",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function costs [E] [E] more.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function costs [E] more."
   }
 }
