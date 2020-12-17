@@ -185,5 +185,10 @@
   "bronze:MinorBeam": {
     "NAME": "Minor Beam",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Infinite Beams",
+    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand."
   }
 }

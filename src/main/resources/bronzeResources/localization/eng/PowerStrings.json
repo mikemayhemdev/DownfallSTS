@@ -1,5 +1,5 @@
 {
-  "bronze:CloningPower": {
+  "bronze:Cloning": {
     "NAME": "Cloning Beam",
     "DESCRIPTIONS": [
       "The next time you add a card to the Sequence, add a copy of it.",
@@ -7,7 +7,7 @@
       " times you add a card to the Sequence, add a copy of it."
     ]
   },
-  "bronze:DefaultPower": {
+  "bronze:Default": {
     "NAME": "Class Default",
     "DESCRIPTIONS": [
       "Add a copy of ",
@@ -16,12 +16,23 @@
       " Sequences."
     ]
   },
-  "bronze:FeaturePower": {
+  "bronze:Feature": {
     "NAME": "It's A Feature",
     "DESCRIPTIONS": [
       "Whenever you draw a #rCurse or #yStatus card, gain #b",
       " temporary #yStrength and #b",
       " temporary #yDexterity."
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Infinite Beams",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b1 #yMinor #yBeam into your hand.",
+      "At the start of your turn, add #b1 #yMinor #yBeam+ into your hand.",
+      "At the start of your turn, add #b",
+      " #yMinor #yBeams into your hand.",
+      "At the start of your turn, add #b",
+      " #yMinor #yBeam+s into your hand."
     ]
   }
 }
