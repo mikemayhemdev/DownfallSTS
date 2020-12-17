@@ -106,5 +106,9 @@
     "NAME": "Batch",
     "DESCRIPTION": "Create a Function immediately out of the cards in the Sequence. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Create a Function immediately out of the cards in the Sequence."
+  },
+  "bronze:Constructor": {
+    "NAME": "Constructor",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the sequence, double its Block."
   }
 }
