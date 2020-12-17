@@ -25,7 +25,7 @@ public class Overload extends AbstractBronzeCard {
 
     @Override
     public boolean onOutput() {
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(FunctionHelper.makeFunction(), 1));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(FunctionHelper.makeFunction(true), 1));
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {

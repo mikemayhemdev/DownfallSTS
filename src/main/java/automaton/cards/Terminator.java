@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -20,29 +21,11 @@ public class Terminator extends AbstractBronzeCard {
     }
 
     @Override
-    public void applyPowers() {
-        int realBaseDamage = baseDamage;
-        if (inFunc) {
-            if (lastCard()) {
-                baseDamage *= 2;
-            }
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
+        if (lastCard()) {
+            baseDamage *= 2;
         }
-        super.applyPowers();
-        baseDamage = realBaseDamage;
-        this.isDamageModified = damage != baseDamage;
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = baseDamage;
-        if (inFunc) {
-            if (lastCard()) {
-                baseDamage *= 2;
-            }
-        }
-        super.calculateCardDamage(mo);
-        baseDamage = realBaseDamage;
-        this.isDamageModified = damage != baseDamage;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

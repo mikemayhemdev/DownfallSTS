@@ -2,6 +2,7 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -24,11 +25,15 @@ public class Overheat extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        if (inFunc) {
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
+        if (forGameplay) {
             if (upgraded) {
                 addToBot(new MakeTempCardInDiscardAction(new Burn(), 1));
-            }
-            else {
+            } else {
                 shuffleIn(new Burn());
             }
         }

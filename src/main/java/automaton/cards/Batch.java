@@ -18,12 +18,11 @@ public class Batch extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new MakeTempCardInHandAction(FunctionHelper.makeFunction()));
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                FunctionHelper.held.clear();
+                FunctionHelper.output();
             }
         });
     }

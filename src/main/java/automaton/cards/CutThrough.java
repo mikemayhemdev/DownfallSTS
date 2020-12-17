@@ -3,6 +3,7 @@ package automaton.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -28,7 +29,12 @@ public class CutThrough extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new ScryAction(magicNumber));
-        if (inFunc) {
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
+        if (forGameplay) {
             atb(new DrawCardAction(1));
         }
     }

@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
@@ -21,7 +22,12 @@ public class Shell extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new BlurPower(p, 1));
-        if (inFunc) {
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
+        if (forGameplay) {
             blck();
         }
     }

@@ -20,7 +20,7 @@ public class FunctionHelper {
 
     public static void init() {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        secretStorage = makeFunction();
+        secretStorage = makeFunction(false);
         doStuff = true;
     }
 
@@ -40,16 +40,16 @@ public class FunctionHelper {
         if (held.size() == max) {
             output();
         }
-        secretStorage = makeFunction();
+        secretStorage = makeFunction(false);
     }
 
     public static AbstractCard secretStorage = null;
 
-    public static AbstractCard makeFunction() {
+    public static AbstractCard makeFunction(boolean forGameplay) {
         AbstractCard q = new FunctionCard();
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) c).onCompile(q);
+                ((AbstractBronzeCard) c).onCompile(q, forGameplay);
             } else {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }
@@ -70,7 +70,7 @@ public class FunctionHelper {
             }
         }
         if (regularOutput) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction()));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
             AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
                 @Override
                 public void update() {

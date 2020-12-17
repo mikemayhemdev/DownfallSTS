@@ -2,6 +2,7 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,7 +26,11 @@ public class WildBeam extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.LIGHTNING); //TODO: Beam effect
-        if (inFunc) {
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        if (forGameplay) {
             if (upgraded) {
                 atb(new MakeTempCardInDiscardAction(new Wound(), 1));
             }

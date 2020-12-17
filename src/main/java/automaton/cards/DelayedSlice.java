@@ -1,8 +1,7 @@
 package automaton.cards;
 
-import automaton.cardmods.EncodeMod;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,7 +22,12 @@ public class DelayedSlice extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (inFunc) {
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
+        if (forGameplay) {
             allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
     }

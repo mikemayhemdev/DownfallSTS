@@ -117,7 +117,7 @@
   },
   "bronze:Update": {
     "NAME": "Update",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Upgrade all cards before this in the Sequence."
+    "DESCRIPTION": "Gain !B! Block. NL When bronze:Encoded, Upgrade all cards before this in the Sequence."
   },
   "bronze:Overload": {
     "NAME": "Overload",

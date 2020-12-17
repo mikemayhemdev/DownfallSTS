@@ -33,7 +33,6 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
 
-    public boolean inFunc = false;
     public int position = -1;
     public int fullLen = -1;
 
@@ -89,7 +88,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
-    public void onCompile(AbstractCard function) { // TODO: Add boolean to see if this is the real thing or if it's just for display.
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
         CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }

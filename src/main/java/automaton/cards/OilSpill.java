@@ -2,6 +2,7 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,7 +35,12 @@ public class OilSpill extends AbstractBronzeCard {
         for (AbstractMonster q : monsterList()) {
             applyToEnemy(q, new PoisonPower(q, p, magicNumber));
         }
-        if (inFunc) {
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
+        if (forGameplay) {
             if (upgraded) {
                 atb(new MakeTempCardInDiscardAction(new Slimed(), 1));
             }
