@@ -234,5 +234,9 @@
   "bronze:BronzeArmor": {
     "NAME": "Bronze Armor",
     "DESCRIPTION": "Gain 1 Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact."
+  },
+  "bronze:ForLoop": {
+    "NAME": "For Loop",
+    "DESCRIPTION": "bronze:Compile - The next card in the Sequence is added to the Function twice."
   }
 }
