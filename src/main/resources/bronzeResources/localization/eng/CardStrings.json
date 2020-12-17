@@ -313,5 +313,10 @@
   "bronze:HardenedForm": {
     "NAME": "Hardened Form",
     "DESCRIPTION": "Whenever you bronze:Compile, gain !M! Block."
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copy Paste",
+    "DESCRIPTION": "Choose a Function in your hand. NL Add a copy of it to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose a Function in your hand. NL Add a copy of it to your hand. NL Exhaust."
   }
 }
