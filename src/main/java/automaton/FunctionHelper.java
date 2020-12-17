@@ -2,6 +2,7 @@ package automaton;
 
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.AbstractBronzeCard;
+import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
 import automaton.powers.AfterOutputFunctionPower;
 import automaton.powers.CloningPower;
@@ -21,12 +22,15 @@ public class FunctionHelper {
     public static CardGroup held;
     public static int max = 4;
 
+    public static int funcsThisCombat = 0;
+
     public static boolean doStuff = false;
 
     public static void init() {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         secretStorage = makeFunction(false);
         doStuff = true;
+        funcsThisCombat = 0;
     }
 
     public static void addToSequence(AbstractCard c) {
@@ -83,6 +87,21 @@ public class FunctionHelper {
     }
 
     public static void output() {
+        for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
+            if (q instanceof ForceShield) {
+                q.updateCost(-1);
+            }
+        }
+        for (AbstractCard q : AbstractDungeon.player.hand.group) {
+            if (q instanceof ForceShield) {
+                q.updateCost(-1);
+            }
+        }
+        for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
+            if (q instanceof ForceShield) {
+                q.updateCost(-1);
+            }
+        }
         boolean regularOutput = true;
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
