@@ -4,7 +4,6 @@ import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import downfall.actions.SpeechBubbleAction;
 
 public class AddToFuncAction extends AbstractGameAction {
     private AbstractCard myCard;
@@ -19,11 +18,11 @@ public class AddToFuncAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         if (FunctionHelper.held.size() < FunctionHelper.max) {
-            container.removeCard(myCard);
+            if (container != null)
+                container.removeCard(myCard);
             FunctionHelper.addToSequence(myCard);
-        }
-        else {
-            //TODO: "CARD_CANNOT_INPUT" dialog
+        } else {
+            //TODO: "CARD_CANNOT_INPUT" dialog - also need this in non-action variations
         }
     }
 }

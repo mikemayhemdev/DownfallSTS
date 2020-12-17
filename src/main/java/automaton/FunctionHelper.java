@@ -3,6 +3,7 @@ package automaton;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
+import automaton.powers.AfterOutputFunctionPower;
 import automaton.powers.CloningPower;
 import automaton.relics.BronzeBoon;
 import basemod.helpers.CardModifierManager;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class FunctionHelper {
     public static CardGroup held;
@@ -90,6 +92,11 @@ public class FunctionHelper {
                     isDone = true;
                 }
             });
+        }
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof AfterOutputFunctionPower) {
+                ((AfterOutputFunctionPower) p).receiveAfterOutputFunction();
+            }
         }
     }
 
