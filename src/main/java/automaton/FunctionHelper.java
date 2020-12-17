@@ -123,6 +123,7 @@ public class FunctionHelper {
                 ((AfterOutputFunctionPower) p).receiveAfterOutputFunction();
             }
         }
+        secretStorage = makeFunction(false);
     }
 
     public static void render(SpriteBatch sb) {
