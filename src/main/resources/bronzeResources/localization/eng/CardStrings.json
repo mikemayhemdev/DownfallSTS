@@ -172,5 +172,14 @@
     "NAME": "Chosen Strike",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by 1 and add 2 Dazed to your draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by 1 and add 2 Dazed to your discard pile."
+  },
+  "bronze:ClassDefault": {
+    "NAME": "Class Default",
+    "DESCRIPTION": "Add a copy of the first card in the current Sequence to the next !M! Sequences automatically."
+  },
+  "bronze:ItsAFeature": {
+    "NAME": "It's a Feature",
+    "DESCRIPTION": "Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity."
   }
 }

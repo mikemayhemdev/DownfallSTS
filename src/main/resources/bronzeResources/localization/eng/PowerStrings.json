@@ -1,49 +1,27 @@
 {
-  "bronze:Barrage": {
-    "NAME": "Barrage",
+  "bronze:CloningPower": {
+    "NAME": "Cloning Beam",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yFire #b1 #yBlaster.",
-      "At the end of your turn, #yFire #b",
-      " #yBlasters."
-    ]
-  },
-  "bronze:FreeFire": {
-    "NAME": "Free Fire",
-    "DESCRIPTIONS": [
-      "The next card you #yFire costs #b0.",
+      "The next time you add a card to the Sequence, add a copy of it.",
       "The next #b",
-      " cards you #yFire cost #b0."
+      " times you add a card to the Sequence, add a copy of it."
     ]
   },
-  "bronze:FireBonus": {
-    "NAME": "Fire Bonus",
+  "bronze:DefaultPower": {
+    "NAME": "Class Default",
     "DESCRIPTIONS": [
-      "The next card you #yFire is #yRepeated.",
-      "The next #b",
-      " cards you #yFire are #yRepeated."
+      "Add a copy of ",
+      " to the next Sequence.",
+      " to the next #b",
+      " Sequences."
     ]
   },
-  "bronze:AutoTurret": {
-    "NAME": "Auto-Turret",
+  "bronze:FeaturePower": {
+    "NAME": "It's A Feature",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yFire #b1 #yPeashooter.",
-      "At the start of your turn, #yFire #b",
-      " #yPeashooters."
-    ]
-  },
-  "bronze:Gatling": {
-    "NAME": "Gatling",
-    "DESCRIPTIONS": [
-      "Whenever you play a #yBlaster, gain #b",
-      " #yStrength."
-    ]
-  },
-  "bronze:RepeatCard": {
-    "NAME": "Repeat Drawn Cards",
-    "DESCRIPTIONS": [
-      "#yRepeat the next card you draw.",
-      "#yRepeat the next #b",
-      " cards you draw."
+      "Whenever you draw a #rCurse or #yStatus card, gain #b",
+      " temporary #yStrength and #b",
+      " temporary #yDexterity."
     ]
   }
 }

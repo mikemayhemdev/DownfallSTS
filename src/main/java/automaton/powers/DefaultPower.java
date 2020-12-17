@@ -27,4 +27,8 @@ public class DefaultPower extends AbstractAutomatonPower implements NonStackable
         addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + stored.name + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2] + amount + DESCRIPTIONS[3]);
+    }
 }
