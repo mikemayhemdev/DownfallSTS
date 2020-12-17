@@ -1,4 +1,24 @@
 {
+  "bronze:DazingPulse": {
+    "NAME": "Dazing Pulse",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:Spike": {
+    "NAME": "Spike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:Explode": {
+    "NAME": "Explode",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:DonuBeam": {
+    "NAME": "Donu Beam",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:DecaBeam": {
+    "NAME": "Deca Beam",
+    "DESCRIPTION": "Deal !D! damage."
+  },
   "bronze:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."

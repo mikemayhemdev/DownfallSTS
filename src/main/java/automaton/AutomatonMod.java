@@ -1,22 +1,36 @@
 package automaton;
 
+import automaton.events.*;
 import automaton.relics.BronzeBoon;
 import automaton.util.CardFilter;
 import automaton.util.CardIgnore;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.events.Gym;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
+import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import guardian.events.AccursedBlacksmithGuardian;
+import guardian.events.CrystalForge;
+import guardian.patches.GuardianEnum;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.TheSnecko;
+import sneckomod.events.BackToBasicsSnecko;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -186,6 +200,43 @@ public class AutomatonMod implements
     public void receivePostInitialize() {
         addPotions();
         //TODO: This
+
+        BaseMod.addEvent(new AddEventParams.Builder(ShapeFactory.ID, ShapeFactory.class) //Event ID//
+                //Event Character//
+                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .dungeonID(Exordium.ID)
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(AncientFactory.ID, AncientFactory.class) //Event ID//
+                //Event Character//
+                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .dungeonID(TheCity.ID)
+                .eventType(EventUtils.EventType.NORMAL)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsAutomaton.ID, BackToBasicsAutomaton.class) //Event ID//
+                //Event Character//
+                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(CrystalForgeAutomaton.ID, CrystalForgeAutomaton.class) //Event ID//
+                //Event Character//
+                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(AccursedBlacksmithAutomaton.ID, AccursedBlacksmithAutomaton.class) //Event ID//
+                //Event Character//
+                .playerClass(AutomatonChar.Enums.THE_AUTOMATON)
+                //Existing Event to Override//
+                .overrideEvent(AccursedBlacksmith.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
     }
 
     @Override
