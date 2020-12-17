@@ -18,5 +18,15 @@
   "bronze:Replicate": {
     "NAME": "Replicate",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "bronze:Branch": {
+    "NAME": "Branch",
+    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "damage()",
+      "Deal !D! damage.",
+      "block()",
+      "Gain !B! Block."
+    ]
   }
 }

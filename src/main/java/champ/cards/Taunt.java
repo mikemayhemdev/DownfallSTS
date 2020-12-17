@@ -60,7 +60,7 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
                     break;
             }
         } else {
-            atb(new OctoChoiceAction(this));
+            atb(new OctoChoiceAction(m, this));
         }
 
     }
@@ -74,7 +74,7 @@ public class Taunt extends AbstractChampCard implements OctopusCard {
         return cardList;
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
                 berserkOpen();

@@ -24,7 +24,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (upgraded) atb(new DrawCardAction(1));
-        atb(new OctoChoiceAction(this));
+        atb(new OctoChoiceAction(m, this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -35,7 +35,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
         return cardList;
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
                 berserkOpen();

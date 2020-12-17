@@ -47,11 +47,11 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        choice();
+        choice(m);
     }
 
-    public void choice() {
-        addToBot(new OctoChoiceAction(this));
+    public void choice(AbstractMonster m) {
+        addToBot(new OctoChoiceAction(m, this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -72,7 +72,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
 
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "Slimebound:SplotBronze": {
                 addToBot(new SlimeSpawnAction(new BronzeSlime(), false, true));
@@ -116,7 +116,7 @@ public class SplitSpecialist extends AbstractSlimeboundCard implements OctopusCa
             }
         }
 
-        if (upgraded){
+        if (upgraded) {
             checkMinionMaster();
         }
     }

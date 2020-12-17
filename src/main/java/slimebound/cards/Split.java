@@ -44,7 +44,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        choice();
+        choice(m);
 
         /*        for (int i = 0; i < magicNumber; i++) {
             ArrayList<Integer> orbs = new ArrayList<>();
@@ -70,9 +70,9 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
          */
     }
 
-    public void choice() {
-        addToBot(new OctoChoiceAction(this));
-        if (upgraded) addToBot(new OctoChoiceAction(this));
+    public void choice(AbstractMonster m) {
+        addToBot(new OctoChoiceAction(m,this));
+        if (upgraded) addToBot(new OctoChoiceAction(m,this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -101,7 +101,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
         }
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "Slimebound:SplotBruiser": {
                 addToBot(new SlimeSpawnAction(new AttackSlime(), false, true));

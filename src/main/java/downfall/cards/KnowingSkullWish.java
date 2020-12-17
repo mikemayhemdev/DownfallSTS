@@ -33,7 +33,7 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new OctoChoiceAction(this));
+        atb(new OctoChoiceAction(m, this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -44,7 +44,7 @@ public class KnowingSkullWish extends AbstractExpansionCard implements OctopusCa
         return cardList;
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "ks:0": {
                 atb(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 3));
