@@ -198,5 +198,10 @@
   "bronze:MaxOutput": {
     "NAME": "Max Output",
     "DESCRIPTION": "Draw 1 additional card and add 1 *Dazed into your draw pile each turn."
+  },
+  "bronze:Mutator": {
+    "NAME": "Mutator",
+    "DESCRIPTION": "Gain 1 Strength. NL Transform a Status in your hand into a copy of this.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Dexterity. NL Transform a Status in your hand into a copy of this."
   }
 }
