@@ -27,6 +27,8 @@ import static automaton.AutomatonMod.makeCardPath;
 
 public abstract class AbstractBronzeCard extends CustomCard {
 
+    static public final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
+
     protected final CardStrings cardStrings;
     protected final String NAME;
     protected String DESCRIPTION;
@@ -90,6 +92,11 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public void onCompile(AbstractCard function, boolean forGameplay) {
         // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
+        if (this.rawDescription.contains(" NL bronze:Compile")) {
+            String[] splitText = rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+            String compileText = splitText[1] + splitText[2];
+            this.rawDescription = this.rawDescription.replaceAll(compileText, "");
+        } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
         CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }
 
