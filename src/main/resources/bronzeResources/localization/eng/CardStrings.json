@@ -154,5 +154,9 @@
   "bronze:SearingBeam": {
     "NAME": "Searing Beam",
     "DESCRIPTION": "Deal !D! damage. NL Can be Upgraded any number of times."
+  },
+  "bronze:Backtrace": {
+    "NAME": "Backtrace",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Compile - Function gains Exhaust."
   }
 }
