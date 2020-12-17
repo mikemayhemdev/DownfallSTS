@@ -101,5 +101,10 @@
     "NAME": "Bit Shift",
     "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs 1 less this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs 1 less this turn."
+  },
+  "bronze:Batch": {
+    "NAME": "Batch",
+    "DESCRIPTION": "Create a Function immediately out of the cards in the Sequence. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Create a Function immediately out of the cards in the Sequence."
   }
 }
