@@ -1,5 +1,7 @@
 package automaton.cards;
 
+import automaton.cardmods.EncodeMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import expansioncontent.expansionContentMod;
@@ -25,13 +28,14 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
     private static final int BLOCK = 9;
 
     public Branch() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
+        CardModifierManager.addModifier(this, new EncodeMod());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        atb(new OctoChoiceAction(m, this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -54,5 +58,7 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
     }
 
     public void upp() {
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }
