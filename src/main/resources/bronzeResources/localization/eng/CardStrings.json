@@ -92,5 +92,9 @@
   "bronze:Invalidate": {
     "NAME": "Invalidate",
     "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
+  },
+  "bronze:Shell": {
+    "NAME": "Shell",
+    "DESCRIPTION": "Block is not removed at the start of your next turn. NL bronze:Compile - Gain !B! Block."
   }
 }
