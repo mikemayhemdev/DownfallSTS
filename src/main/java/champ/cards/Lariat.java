@@ -26,11 +26,12 @@ public class Lariat extends AbstractChampCard {
     public Lariat() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
-       // tags.add(ChampMod.TECHNIQUE);
+        tags.add(ChampMod.TECHNIQUE);
         //baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
