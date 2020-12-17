@@ -212,5 +212,10 @@
     "NAME": "Decompile",
     "DESCRIPTION": "Choose a Function. NL Exhaust it to draw cards and gain [E] equal to its cost. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a Function. NL Exhaust it to draw cards and gain [E] equal to its cost. NL Exhaust."
+  },
+  "bronze:ChildClass": {
+    "NAME": "Child Class",
+    "DESCRIPTION": "bronze:Compile - Gain a second copy of the Function.",
+    "UPGRADE_DESCRIPTION": "Retain. NL bronze:Compile - Gain a second copy of the Function."
   }
 }
