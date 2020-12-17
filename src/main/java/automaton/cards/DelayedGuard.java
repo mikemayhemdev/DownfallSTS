@@ -16,6 +16,7 @@ public class DelayedGuard extends AbstractBronzeCard {
     public DelayedGuard() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

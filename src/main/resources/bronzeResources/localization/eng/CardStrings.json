@@ -80,5 +80,9 @@
   "bronze:DelayedGuard": {
     "NAME": "Delayed Guard",
     "DESCRIPTION": "Next turn, gain !B! Block. NL bronze:Compile - Gain !B! Block."
+  },
+  "bronze:Shield": {
+    "NAME": "Shield",
+    "DESCRIPTION": "Gain !B! Block."
   }
 }
