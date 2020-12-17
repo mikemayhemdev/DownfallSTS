@@ -59,5 +59,13 @@
       "At the start of your next #b",
       " turns, gain [E] and draw #b1 card."
     ]
+  },
+  "bronze:Library": {
+    "NAME": "Library",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random card with #yEncode to your hand. NL It costs #b0 until played.",
+      "At the start of your turn, add #b",
+      " random cards with #yEncode to your hand. NL They cost #b0 until played."
+    ]
   }
 }
