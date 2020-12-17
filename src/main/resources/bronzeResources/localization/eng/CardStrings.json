@@ -285,5 +285,10 @@
   "bronze:ShipIt": {
     "NAME": "Ship It",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! for ALL of your status cards."
+  },
+  "bronze:Break": {
+    "NAME": "Break",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 3 random Status cards into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 3 random Status cards into your discard pile."
   }
 }
