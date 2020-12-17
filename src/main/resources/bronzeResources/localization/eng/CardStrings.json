@@ -318,5 +318,10 @@
     "NAME": "Copy Paste",
     "DESCRIPTION": "Choose a Function in your hand. NL Add a copy of it to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose a Function in your hand. NL Add a copy of it to your hand. NL Exhaust."
+  },
+  "bronze:Seek": {
+    "NAME": "Seek",
+    "DESCRIPTION": "Put !M! card from your draw pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Exhaust."
   }
 }
