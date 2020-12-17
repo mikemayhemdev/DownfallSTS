@@ -238,5 +238,9 @@
   "bronze:ForLoop": {
     "NAME": "For Loop",
     "DESCRIPTION": "bronze:Compile - The next card in the Sequence is added to the Function twice."
+  },
+  "bronze:Philosophize": {
+    "NAME": "Philosophize",
+    "DESCRIPTION": "Gain 1 Strength. NL bronze:Compile - ALL enemies gain !M! Strength."
   }
 }
