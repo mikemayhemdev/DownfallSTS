@@ -4,7 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class VerifyPower extends AbstractAutomatonPower implements NonStackablePower, AfterOutputFunctionPower {
+public class VerifyPower extends AbstractAutomatonPower implements AfterOutputFunctionPower {
     public static final String NAME = "Verify";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
