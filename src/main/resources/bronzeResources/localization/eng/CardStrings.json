@@ -43,6 +43,11 @@
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile: If this is the last card in the Sequence, double its damage."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - If this is the last card in the Sequence, double its damage."
+  },
+  "bronze:Overheat": {
+    "NAME": "Overheat",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Burn into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Burn into your discard pile."
   }
 }
