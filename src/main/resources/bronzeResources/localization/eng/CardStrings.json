@@ -142,5 +142,9 @@
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function is not created."
+  },
+  "bronze:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain 2 Dexterity."
   }
 }
