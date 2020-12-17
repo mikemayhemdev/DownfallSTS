@@ -19,7 +19,8 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        card.modifyCostForCombat(stored.cost);
+        card.cost += stored.cost;
+        card.costForTurn += stored.cost;
     }
 
     @Override

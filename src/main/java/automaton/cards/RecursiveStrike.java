@@ -26,9 +26,11 @@ public class RecursiveStrike extends AbstractBronzeCard {
 
     @Override
     public void atTurnStart() {
-        if (FunctionHelper.held.contains(this)) {
-            baseDamage += 1;
-            superFlash();
+        if (FunctionHelper.held != null) {
+            if (FunctionHelper.held.contains(this)) {
+                baseDamage += 1;
+                superFlash();
+            }
         }
     }
 

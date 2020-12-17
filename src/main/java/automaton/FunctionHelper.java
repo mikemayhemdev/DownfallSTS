@@ -54,7 +54,10 @@ public class FunctionHelper {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }
         }
-        q.modifyCostForCombat(-1);
+        if (q.cost > 0) {
+            q.cost -= 1;
+            q.costForTurn -= 1;
+        }
         System.out.println(q.rawDescription);
         return q;
     }

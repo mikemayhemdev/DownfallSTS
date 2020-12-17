@@ -187,7 +187,7 @@ public class AutomatonMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof AutomatonChar)
+        //if (AbstractDungeon.player instanceof AutomatonChar)
         FunctionHelper.init();
     }
 

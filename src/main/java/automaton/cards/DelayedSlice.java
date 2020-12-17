@@ -16,7 +16,7 @@ public class DelayedSlice extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 5;
 
     public DelayedSlice() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         thisEncodes();
