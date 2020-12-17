@@ -17,7 +17,7 @@ public class Lariat extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 5;
     private static final int UPG_BLOCK = 1;
 
     private static final int MAGIC = 4;
