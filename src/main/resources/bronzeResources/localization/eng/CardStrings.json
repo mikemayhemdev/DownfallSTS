@@ -32,5 +32,9 @@
   "bronze:DelayedSlice": {
     "NAME": "Delayed Slice",
     "DESCRIPTION": "bronze:Compile - Deal !D! damage to ALL enemies."
+  },
+  "bronze:WhirlingStrike": {
+    "NAME": "Whirling Strike",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
   }
 }
