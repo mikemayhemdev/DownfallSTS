@@ -22,6 +22,13 @@ public class OctoChoiceCard extends CustomCard {
     private AbstractCard prev2;
     private AbstractCard prev3;
 
+    public OctoChoiceCard(String id, String name, String IMG, String description, int dmg, int blk) {
+        super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+        baseDamage = dmg;
+        baseBlock = blk;
+    }
+
     public OctoChoiceCard(String id, String name, String IMG, String description) {
         super(id, name, IMG, COST, description, CardType.SKILL, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.NONE);
         this.IMG = IMG;
