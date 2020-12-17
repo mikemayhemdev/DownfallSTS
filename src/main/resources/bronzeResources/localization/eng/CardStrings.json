@@ -130,5 +130,9 @@
   "bronze:GetLatest": {
     "NAME": "Get Latest",
     "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0 this turn. NL Exhaust."
+  },
+  "bronze:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL bronze:Compile - Gain !M! Artifact."
   }
 }
