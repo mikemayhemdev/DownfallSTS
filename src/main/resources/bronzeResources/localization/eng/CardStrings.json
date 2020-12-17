@@ -122,5 +122,41 @@
   "bronze:Overload": {
     "NAME": "Overload",
     "DESCRIPTION": "Gain [E] [E]. NL bronze:Compile - Function is placed into your discard pile instead of your hand."
+  },
+  "bronze:ReverseEngineer": {
+    "NAME": "Reverse Engineer",
+    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity. NL Otherwise, deal !D! damage."
+  },
+  "bronze:GetLatest": {
+    "NAME": "Get Latest",
+    "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0 this turn. NL Exhaust."
+  },
+  "bronze:Flail": {
+    "NAME": "Flail",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL bronze:Compile - Gain !M! Artifact."
+  },
+  "bronze:DigitalCarnage": {
+    "NAME": "Digital Carnage",
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL bronze:Compile - Function gains Ethereal."
+  },
+  "bronze:NullPointer": {
+    "NAME": "Null Pointer",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function is not created."
+  },
+  "bronze:Fortify": {
+    "NAME": "Fortify",
+    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain 2 Dexterity."
+  },
+  "bronze:BronzeOrb": {
+    "NAME": "Bronze Orb",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL Gain !B! Block. NL bronze:Encode a random card with bronze:Encode in your draw pile. NL Exhaust."
+  },
+  "bronze:SearingBeam": {
+    "NAME": "Searing Beam",
+    "DESCRIPTION": "Deal !D! damage. NL Can be Upgraded any number of times."
+  },
+  "bronze:Backtrace": {
+    "NAME": "Backtrace",
+    "DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Compile - Function gains Exhaust."
   }
 }
