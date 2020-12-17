@@ -28,6 +28,7 @@ public class FunctionHelper {
     }
 
     public static void addToSequence(AbstractCard c) {
+        c.stopGlowing();
         held.addToTop(c);
         if (held.size() == max) {
             AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(makeFunction()));
