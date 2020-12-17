@@ -242,5 +242,10 @@
   "bronze:Philosophize": {
     "NAME": "Philosophize",
     "DESCRIPTION": "Gain 1 Strength. NL bronze:Compile - ALL enemies gain !M! Strength."
+  },
+  "bronze:Return": {
+    "NAME": "Return",
+    "DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E].",
+    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X+1 turns. NL Gain [E]."
   }
 }
