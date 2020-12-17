@@ -89,7 +89,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
-    public void onCompile(AbstractCard function) {
+    public void onCompile(AbstractCard function) { // TODO: Add boolean to see if this is the real thing or if it's just for display.
         // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
         CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }
