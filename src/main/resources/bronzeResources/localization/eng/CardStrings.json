@@ -221,5 +221,9 @@
   "bronze:Repair": {
     "NAME": "Repair",
     "DESCRIPTION": "Heal !M! HP. NL bronze:Compile - Function gains Exhaust."
+  },
+  "bronze:Boost": {
+    "NAME": "Boost",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength."
   }
 }
