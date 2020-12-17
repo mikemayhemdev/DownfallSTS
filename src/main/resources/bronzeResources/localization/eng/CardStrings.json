@@ -167,5 +167,10 @@
   "bronze:FollowUp": {
     "NAME": "Follow Up",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL If the last played card was a Function, play this again."
+  },
+  "bronze:ChosenStrike": {
+    "NAME": "Chosen Strike",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by 1 and add 2 Dazed to your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by 1 and add 2 Dazed to your discard pile."
   }
 }
