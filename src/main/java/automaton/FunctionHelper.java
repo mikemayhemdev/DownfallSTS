@@ -5,6 +5,7 @@ import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import automaton.powers.AfterOutputFunctionPower;
 import automaton.powers.CloningPower;
+import automaton.powers.OnCompilePower;
 import automaton.relics.BronzeBoon;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -66,6 +67,11 @@ public class FunctionHelper {
                 ((AbstractBronzeCard) c).onCompile(q, forGameplay);
             } else {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
+            }
+        }
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnCompilePower) {
+                ((OnCompilePower) p).receiveCompile(q, forGameplay);
             }
         }
         if (q.cost > 0 && AbstractDungeon.player.hasRelic(BronzeBoon.ID)) {

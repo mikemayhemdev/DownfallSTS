@@ -34,5 +34,13 @@
       "At the start of your turn, add #b",
       " #yMinor #yBeam+s into your hand."
     ]
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimized",
+    "DESCRIPTIONS": [
+      "The next Function you #yCompile costs #b1 less.",
+      "The next #b",
+      " Functions you #yCompile cost #b1 less."
+    ]
   }
 }

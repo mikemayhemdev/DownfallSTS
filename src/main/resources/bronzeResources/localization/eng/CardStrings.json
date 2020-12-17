@@ -190,5 +190,9 @@
     "NAME": "Infinite Beams",
     "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand.",
     "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand."
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimize",
+    "DESCRIPTION": "The next !M! Functions you bronze:Compile cost 1 less."
   }
 }
