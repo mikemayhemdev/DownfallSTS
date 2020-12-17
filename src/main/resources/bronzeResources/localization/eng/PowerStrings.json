@@ -42,5 +42,22 @@
       "The next #b",
       " Functions you #yCompile cost #b1 less."
     ]
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Max Output",
+    "DESCRIPTIONS": [
+      "Draw #b1 additional card and add #b1 #yDazed into your draw pile each turn.",
+      "Draw #b",
+      " additional cards and add #b",
+      " #yDazed into your draw pile each turn."
+    ]
+  },
+  "bronze:ReturnPower": {
+    "NAME": "Returning",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, gain [E] and draw #b1 card.",
+      "At the start of your next #b",
+      " turns, gain [E] and draw #b1 card."
+    ]
   }
 }
