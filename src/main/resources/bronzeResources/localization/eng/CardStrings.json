@@ -49,5 +49,9 @@
     "NAME": "Overheat",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Burn into your draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Burn into your discard pile."
+  },
+  "bronze:CutThrough": {
+    "NAME": "Cut Through",
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw 1 card."
   }
 }
