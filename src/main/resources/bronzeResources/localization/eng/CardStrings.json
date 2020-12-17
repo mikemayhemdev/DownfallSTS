@@ -181,5 +181,9 @@
     "NAME": "It's a Feature",
     "DESCRIPTION": "Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you draw a Curse or Status card, gain 1 Temporary Strength and Dexterity."
+  },
+  "bronze:MinorBeam": {
+    "NAME": "Minor Beam",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }
