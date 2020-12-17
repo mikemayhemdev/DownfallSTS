@@ -1,1 +1,8 @@
-{}
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Add ",
+      " to your deck"
+    ]
+  }
+}
