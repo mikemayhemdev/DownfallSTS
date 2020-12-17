@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.powers.CloningPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,6 +21,7 @@ public class CloningBeam extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        applyToSelf(new CloningPower(1));
     }
 
     public void upp() {

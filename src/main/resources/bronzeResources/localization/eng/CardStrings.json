@@ -158,5 +158,10 @@
   "bronze:Backtrace": {
     "NAME": "Backtrace",
     "DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Compile - Function gains Exhaust."
+  },
+  "bronze:CloningBeam": {
+    "NAME": "Cloning Beam",
+    "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
   }
 }

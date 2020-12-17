@@ -3,6 +3,7 @@ package automaton;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
+import automaton.powers.CloningPower;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -41,6 +42,16 @@ public class FunctionHelper {
             output();
         }
         secretStorage = makeFunction(false);
+        if (AbstractDungeon.player.hasPower(CloningPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(CloningPower.POWER_ID).onSpecificTrigger();
+            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    FunctionHelper.addToSequence(c.makeStatEquivalentCopy());
+                }
+            });
+        }
     }
 
     public static AbstractCard secretStorage = null;
