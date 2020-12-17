@@ -122,5 +122,9 @@
   "bronze:Overload": {
     "NAME": "Overload",
     "DESCRIPTION": "Gain [E] [E]. NL bronze:Compile - Function is placed into your discard pile instead of your hand."
+  },
+  "bronze:ReverseEngineer": {
+    "NAME": "Reverse Engineer",
+    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity. NL Otherwise, deal !D! damage."
   }
 }
