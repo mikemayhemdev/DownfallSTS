@@ -34,6 +34,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String[] EXTENDED_DESCRIPTION;
 
     public boolean inFunc = false;
+    public int position = -1;
+    public int fullLen = -1;
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -173,7 +175,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
         CardModifierManager.addModifier(this, new EncodeMod());
     }
 
-    int getSequencePosition() {
+    public int getSequencePosition() {
         if (FunctionHelper.held.contains(this)) {
             return FunctionHelper.held.group.indexOf(this);
         }
@@ -181,10 +183,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        return getSequencePosition() == FunctionHelper.held.size();
+        return position == fullLen;
     }
 
     boolean firstCard() {
-        return getSequencePosition() == 0;
+        return position== 0;
     }
 }

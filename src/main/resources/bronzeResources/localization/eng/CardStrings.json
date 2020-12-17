@@ -109,6 +109,10 @@
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the sequence, double its Block."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the Sequence, double its Block."
+  },
+  "bronze:Separator": {
+    "NAME": "Separator",
+    "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - If this is not the first or last card in the Sequence, gain [E] [E]."
   }
 }
