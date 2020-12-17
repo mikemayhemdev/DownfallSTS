@@ -16,6 +16,7 @@ public class Shell extends AbstractBronzeCard {
     public Shell() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

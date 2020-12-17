@@ -96,5 +96,10 @@
   "bronze:Shell": {
     "NAME": "Shell",
     "DESCRIPTION": "Block is not removed at the start of your next turn. NL bronze:Compile - Gain !B! Block."
+  },
+  "bronze:BitShift": {
+    "NAME": "Bit Shift",
+    "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs 1 less this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs 1 less this turn."
   }
 }
