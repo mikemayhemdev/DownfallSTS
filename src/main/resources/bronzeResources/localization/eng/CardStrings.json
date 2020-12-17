@@ -276,5 +276,10 @@
     "NAME": "Format",
     "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X cards. NL Gain [E]. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X+1 cards. NL Gain [E]. NL Exhaust."
+  },
+  "bronze:BurnOut": {
+    "NAME": "Burn Out",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Compile - Add a Burn+ to your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Compile - Add a Burn+ to your discard pile."
   }
 }
