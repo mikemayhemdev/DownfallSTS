@@ -217,5 +217,9 @@
     "NAME": "Child Class",
     "DESCRIPTION": "bronze:Compile - Gain a second copy of the Function.",
     "UPGRADE_DESCRIPTION": "Retain. NL bronze:Compile - Gain a second copy of the Function."
+  },
+  "bronze:Repair": {
+    "NAME": "Repair",
+    "DESCRIPTION": "Heal !M! HP. NL bronze:Compile - Function gains Exhaust."
   }
 }
