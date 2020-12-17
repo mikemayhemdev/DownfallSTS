@@ -126,5 +126,9 @@
   "bronze:ReverseEngineer": {
     "NAME": "Reverse Engineer",
     "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity. NL Otherwise, deal !D! damage."
+  },
+  "bronze:GetLatest": {
+    "NAME": "Get Latest",
+    "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0 this turn. NL Exhaust."
   }
 }
