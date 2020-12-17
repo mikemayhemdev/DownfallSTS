@@ -93,6 +93,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
         CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }
 
+    public void onInput() {
+        // Called when the card is about to enter the Sequence.
+    }
+
     public abstract void upp();
 
     protected void atb(AbstractGameAction action) {

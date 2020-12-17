@@ -114,5 +114,9 @@
   "bronze:Separator": {
     "NAME": "Separator",
     "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - If this is not the first or last card in the Sequence, gain [E] [E]."
+  },
+  "bronze:Update": {
+    "NAME": "Update",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Upgrade all cards before this in the Sequence."
   }
 }

@@ -27,6 +27,7 @@ public class Frontload extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function) {
+        super.onCompile(function);
         CardModifierManager.addModifier(function, new RetainCardMod());
     }
 

@@ -1,7 +1,6 @@
 package automaton;
 
 import automaton.cardmods.CardEffectsCardMod;
-import automaton.cardmods.ExhaustCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.helpers.CardModifierManager;
@@ -11,9 +10,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import guardian.GuardianMod;
-
-import java.util.ArrayList;
 
 public class FunctionHelper {
     public static CardGroup held;
@@ -29,6 +25,11 @@ public class FunctionHelper {
 
     public static void addToSequence(AbstractCard c) {
         c.stopGlowing();
+        for (AbstractCard q : held.group) {
+            if (q instanceof AbstractBronzeCard) {
+                ((AbstractBronzeCard) q).onInput();
+            }
+        }
         held.addToTop(c);
         for (AbstractCard q : held.group) {
             if (q instanceof AbstractBronzeCard) {
