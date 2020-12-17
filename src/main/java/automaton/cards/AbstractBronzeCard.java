@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
+import automaton.FunctionHelper;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cardmods.EncodeMod;
 import basemod.abstracts.AbstractCardModifier;
@@ -170,5 +171,20 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     void thisEncodes() {
         CardModifierManager.addModifier(this, new EncodeMod());
+    }
+
+    int getSequencePosition() {
+        if (FunctionHelper.held.contains(this)) {
+            return FunctionHelper.held.group.indexOf(this);
+        }
+        return -1;
+    }
+
+    boolean lastCard() {
+        return getSequencePosition() == FunctionHelper.held.size();
+    }
+
+    boolean firstCard() {
+        return getSequencePosition() == 0;
     }
 }

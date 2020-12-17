@@ -40,5 +40,9 @@
   "bronze:Iterate": {
     "NAME": "Iterate",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "bronze:Terminator": {
+    "NAME": "Terminator",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile: If this is the last card in the Sequence, double its damage."
   }
 }
