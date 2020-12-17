@@ -230,5 +230,9 @@
     "NAME": "Safeguard",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function costs [E] [E] more.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function costs [E] more."
+  },
+  "bronze:BronzeArmor": {
+    "NAME": "Bronze Armor",
+    "DESCRIPTION": "Gain 1 Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact."
   }
 }
