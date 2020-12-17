@@ -76,5 +76,9 @@
   "bronze:Frontload": {
     "NAME": "Frontload",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function gains Retain."
+  },
+  "bronze:DelayedGuard": {
+    "NAME": "Delayed Guard",
+    "DESCRIPTION": "Next turn, gain !B! Block. NL bronze:Compile - Gain !B! Block."
   }
 }
