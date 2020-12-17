@@ -271,5 +271,10 @@
   "bronze:ForceShield": {
     "NAME": "Force Shield",
     "DESCRIPTION": "Costs 1 less [E] for each Function created this combat. NL Gain !B! Block."
+  },
+  "bronze:Format": {
+    "NAME": "Format",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X cards. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X+1 cards. NL Gain [E]. NL Exhaust."
   }
 }
