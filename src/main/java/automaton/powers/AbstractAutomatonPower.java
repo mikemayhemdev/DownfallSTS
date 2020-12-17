@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.HashMap;
 import java.util.Map;
 
+import static automaton.AutomatonMod.getModID;
 import static automaton.AutomatonMod.makeID;
 
 
@@ -100,5 +101,9 @@ public abstract class AbstractAutomatonPower extends AbstractPower {
 
     public void applyToSelf(AbstractPower po) {
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
+    }
+
+    public static String makeID(String idText) {
+        return getModID() + ":" + idText;
     }
 }
