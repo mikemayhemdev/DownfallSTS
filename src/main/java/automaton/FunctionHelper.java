@@ -137,6 +137,7 @@ public class FunctionHelper {
                 @Override
                 public void update() {
                     held.clear();
+                    secretStorage = makeFunction(false);
                     isDone = true;
                 }
             });
@@ -146,7 +147,6 @@ public class FunctionHelper {
                 ((AfterOutputFunctionPower) p).receiveAfterOutputFunction();
             }
         }
-        secretStorage = makeFunction(false);
     }
 
     public static void render(SpriteBatch sb) {
