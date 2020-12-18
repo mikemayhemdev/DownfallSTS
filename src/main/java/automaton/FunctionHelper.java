@@ -33,6 +33,28 @@ public class FunctionHelper {
         funcsThisCombat = 0;
     }
 
+    public static void setImportantInfo(AbstractCard q) {
+        AbstractCard.CardTarget highestTarget = AbstractCard.CardTarget.ALL;
+        for (AbstractCard c : held.group) {
+            if (c.target == AbstractCard.CardTarget.SELF_AND_ENEMY || c.target == AbstractCard.CardTarget.ENEMY) {
+                if (highestTarget != AbstractCard.CardTarget.SELF_AND_ENEMY) {
+                    highestTarget = AbstractCard.CardTarget.SELF_AND_ENEMY;
+                }
+            }
+        }
+        q.target = highestTarget;
+
+        AbstractCard.CardType highestType = AbstractCard.CardType.SKILL;
+        for (AbstractCard c : held.group) {
+            if (c.type == AbstractCard.CardType.ATTACK) {
+                if (highestType != AbstractCard.CardType.ATTACK) {
+                    highestType = AbstractCard.CardType.ATTACK;
+                }
+            }
+        }
+        q.type = highestType;
+    }
+
     public static void addToSequence(AbstractCard c) {
         c.stopGlowing();
         for (AbstractCard q : held.group) {
@@ -83,6 +105,7 @@ public class FunctionHelper {
             q.costForTurn -= 1;
         }
         System.out.println(q.rawDescription);
+        setImportantInfo(q);
         return q;
     }
 
