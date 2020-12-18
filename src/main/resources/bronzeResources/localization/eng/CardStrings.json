@@ -41,7 +41,7 @@
   },
   "bronze:Branch": {
     "NAME": "Branch",
-    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block.",
+    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen.",
     "EXTENDED_DESCRIPTION": [
       "damage()",
       "Deal !D! damage.",
@@ -358,5 +358,13 @@
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTION": "Remove all negative bronze:Compile effects from the next !M! Functions you bronze:Compile."
+  },
+  "bronze:BranchBlock": {
+    "NAME": "block()",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "bronze:BranchHit": {
+    "NAME": "damage()",
+    "DESCRIPTION": "Deal !D! damage."
   }
 }

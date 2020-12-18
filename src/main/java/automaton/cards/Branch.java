@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.actions.AddToFuncAction;
 import automaton.cardmods.EncodeMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -31,7 +32,6 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        CardModifierManager.addModifier(this, new EncodeMod());
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,10 +48,16 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "bronze:BranchHit":{
+                AbstractCard q = new BranchBlock();
+                if (upgraded) q.upgrade();
+                att(new AddToFuncAction(q, null));
                 att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, card.baseDamage, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 break;
             }
             case "bronze:BranchBlock":{
+                AbstractCard q = new BranchHit();
+                if (upgraded) q.upgrade();
+                att(new AddToFuncAction(q, null));
                 att(new GainBlockAction(AbstractDungeon.player, card.baseBlock));
             }
         }
