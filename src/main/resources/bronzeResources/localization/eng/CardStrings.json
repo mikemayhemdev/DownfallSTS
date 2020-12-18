@@ -345,5 +345,9 @@
     "NAME": "Spaghetti Code",
     "DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards with bronze:Encode to bronze:Encode. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards with bronze:Encode to bronze:Encode."
+  },
+  "bronze:Assembly": {
+    "NAME": "Assembly",
+    "DESCRIPTION": "Look at the top !M! cards of your draw pile. NL Choose any of them with Encode and add them to the Sequence in the order they were selected."
   }
 }
