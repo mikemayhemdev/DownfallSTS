@@ -181,14 +181,14 @@ public class FunctionCard extends AbstractBronzeCard {
                     );
                     portrait1 = new TextureAtlas.AtlasRegion(portrait1);
                     portrait1.setRegion(
-                            portrait1.getRegionX() + portrait1.getRegionWidth() / 3,
+                            portrait1.getRegionX() + (portrait1.getRegionWidth() / 3) - 2,
                             portrait1.getRegionY(),
-                            portrait1.getRegionWidth() / 3,
+                            (portrait1.getRegionWidth() / 3) + 4,
                             portrait1.getRegionHeight()
                     );
                     portrait2 = new TextureAtlas.AtlasRegion(portrait2);
                     portrait2.setRegion(
-                            portrait2.getRegionX() + ((portrait2.getRegionWidth() / 3) * 2),
+                            portrait2.getRegionX() + (2 * (portrait2.getRegionWidth() / 3)),
                             portrait2.getRegionY(),
                             portrait2.getRegionWidth() / 3,
                             portrait2.getRegionHeight()
@@ -204,12 +204,22 @@ public class FunctionCard extends AbstractBronzeCard {
                             angle
                     ); // Displays perfectly.
 
-                    drawX = current_x - portrait1.packedWidth / 2f;
+                    drawX = (((current_x) - (portrait0.packedWidth / 2f)) + ((portrait1.packedWidth / 3f) / 1.45F));
                     drawY = current_y - portrait1.packedHeight / 2f;
                     sb.draw(portrait1,
-                            drawX+ (portrait1.packedWidth / 3F), drawY + 72.0F,
+                            drawX, drawY + 72.0F,
                             portrait1.packedWidth / 2.0F, portrait1.packedHeight / 2.0F - 72.0F,
                             portrait1.packedWidth / 3.0f, portrait1.packedHeight,
+                            drawScale * Settings.scale, drawScale * Settings.scale,
+                            angle
+                    ); // Too far right
+
+                    drawX = (current_x - (portrait0.packedWidth / 2f)) + ((portrait2.packedWidth / 3f * 2F) / 1.45F);
+                    drawY = current_y - portrait2.packedHeight / 2f;
+                    sb.draw(portrait2,
+                            drawX, drawY + 72.0F,
+                            portrait2.packedWidth / 2.0F, portrait2.packedHeight / 2.0F - 72.0F,
+                            portrait2.packedWidth / 3.0f, portrait2.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     ); // Too far right
