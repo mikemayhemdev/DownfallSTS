@@ -22,9 +22,11 @@ import java.util.ArrayList;
 
 public class FunctionHelper {
     public static CardGroup held;
-    public static int max = 4;
+    public static int max = 3;
 
-    static public final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
+    public static final float FUNCCARD_SIZE = 0.5f;
+
+    public static final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
 
     public static boolean doStuff = false;
 
@@ -71,7 +73,7 @@ public class FunctionHelper {
         }
         c.stopGlowing();
         c.resetAttributes();
-        c.drawScale = 0.75F;
+        c.drawScale = FUNCCARD_SIZE;
         c.targetDrawScale = 0.75F;
         c.target_x = (400 + (200 * FunctionHelper.held.size()) * Settings.scale);
         c.target_y = 800 * Settings.scale;
