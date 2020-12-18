@@ -5,6 +5,7 @@ import automaton.relics.BronzeBoon;
 import automaton.util.CardFilter;
 import automaton.util.CardIgnore;
 import basemod.BaseMod;
+import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;

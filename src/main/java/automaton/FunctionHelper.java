@@ -19,11 +19,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import java.util.ArrayList;
+
 public class FunctionHelper {
     public static CardGroup held;
     public static int max = 4;
-
-    public static int funcsThisCombat = 0;
 
     static public final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
 
@@ -33,7 +33,6 @@ public class FunctionHelper {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         secretStorage = makeFunction(false);
         doStuff = true;
-        funcsThisCombat = 0;
     }
 
     public static void setImportantInfo(AbstractCard q) {
@@ -101,8 +100,7 @@ public class FunctionHelper {
                 } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
                     ((AbstractBronzeCard) c).onCompile(q, forGameplay);
-                }
-                else {
+                } else {
                     CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
                 }
             } else {
