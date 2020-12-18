@@ -68,6 +68,7 @@ public class FunctionHelper {
         c.stopGlowing();
         c.resetAttributes();
         c.drawScale = 0.75F;
+        c.targetDrawScale = 0.75F;
         c.target_x = (400 + (200 * FunctionHelper.held.size()) * Settings.scale);
         c.target_y = 800 * Settings.scale;
         for (AbstractCard q : held.group) {
