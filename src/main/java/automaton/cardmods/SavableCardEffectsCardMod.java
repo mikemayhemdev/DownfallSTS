@@ -2,22 +2,26 @@ package automaton.cardmods;
 
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
+import com.google.gson.annotations.Expose;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardSave;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-@AbstractCardModifier.SaveIgnore // Unfortunately, this card mod can't save since it contains AbstractCard, a field too large to save
-public class CardEffectsCardMod extends BronzeCardMod {
-    public AbstractCard stored;
+
+public class SavableCardEffectsCardMod extends BronzeCardMod {
+    public transient AbstractCard stored;
+    public CardSave save;
 
     public static String ID = "bronze:CardEffectsCardMod";
 
-    public CardEffectsCardMod(AbstractCard q) {
-        stored = q;
+    public SavableCardEffectsCardMod(CardSave q) {
+        stored = CardLibrary.getCopy(q.id, q.upgrades, q.misc);
+        save = q;
     }
 
     @Override
@@ -39,7 +43,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
     }
 
     public static String getRealDesc(AbstractCard card) {
-        return card.rawDescription.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
+        return card.rawDescription.replaceAll("!D!", String.valueOf(card.damage)).replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
     }
 
     @Override
@@ -54,13 +58,13 @@ public class CardEffectsCardMod extends BronzeCardMod {
         card.baseBlock = stored.baseBlock;
         card.baseMagicNumber = card.magicNumber = stored.baseMagicNumber;
         card.applyPowers();
-        card.calculateCardDamage(target instanceof AbstractMonster ? (AbstractMonster)target : null);
+        card.calculateCardDamage(target instanceof AbstractMonster ? (AbstractMonster) target : null);
         stored.use(AbstractDungeon.player, target instanceof AbstractMonster ? (AbstractMonster) target : null);
     }
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new CardEffectsCardMod(stored);
+        return new SavableCardEffectsCardMod(save);
     }
 
     @Override

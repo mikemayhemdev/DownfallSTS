@@ -101,7 +101,8 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public boolean onOutput() {
-        // Called when the function is about to be added to the hand.
+        // Called when the function is about to be added to the hand,
+        // before the function is created.
         // Return true to continue adding to hand. Return false to stop that.
         return true;
     }
