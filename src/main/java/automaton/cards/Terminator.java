@@ -24,6 +24,7 @@ public class Terminator extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (lastCard()) {
             baseDamage *= 2;
+            damage *= 2;
         }
         super.onCompile(function, forGameplay);
     }
