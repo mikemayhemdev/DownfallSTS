@@ -268,7 +268,7 @@ public class FunctionCard extends AbstractBronzeCard {
                     );
                     portrait2 = new TextureAtlas.AtlasRegion(portrait2);
                     portrait2.setRegion(
-                            portrait2.getRegionX() + portrait2.getRegionWidth() / 2,
+                            portrait2.getRegionX(),
                             portrait2.getRegionY() + portrait2.getRegionHeight() / 2,
                             portrait2.getRegionWidth() / 2,
                             portrait2.getRegionHeight() / 2
@@ -282,51 +282,51 @@ public class FunctionCard extends AbstractBronzeCard {
                     );
 
                     drawX = current_x - portrait0.packedWidth / 2f;
-                    drawY = current_y;
+                    drawY = current_y + 72F;
                     sb.draw(portrait0,
-                            drawX, drawY + 72.0F,
-                            portrait0.packedWidth / 2.0F, portrait0.packedHeight / 2F - 72F,
+                            drawX, drawY,
+                            portrait0.packedWidth / 2.0F, -72F,
                             portrait0.packedWidth / 2.0f, portrait0.packedHeight / 2F,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
 
                     drawX = current_x - portrait1.packedWidth / 2f;
-                    drawY = current_y;
+                    drawY = current_y + 72F;
                     sb.draw(portrait1,
-                            drawX + (portrait1.packedWidth / 2.0f), drawY + 72.0F,
-                            0, portrait0.packedHeight - 72F,
+                            drawX + (portrait1.packedWidth / 2.0f), drawY,
+                            0F, -72F,
                             portrait1.packedWidth / 2.0f, portrait1.packedHeight / 2F,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
 
-/*
+
                     drawX = current_x - portrait2.packedWidth / 2f;
-                    drawY = current_y - portrait2.packedHeight / 2F;
+                    drawY = current_y - (portrait2.packedHeight / 2F) + 72F;
                     sb.draw(portrait2,
-                            drawX, drawY + 72F,
-                            portrait2.packedWidth / 2.0F, portrait2.packedHeight / 2.0F - 36F,
+                            drawX, drawY,
+                            portrait2.packedWidth / 2.0F, portrait2.packedHeight / 2.0F - 72F,
                             portrait2.packedWidth / 2.0f, portrait2.packedHeight / 2.0F,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
 
                     drawX = current_x - portrait3.packedWidth / 2f;
-                    drawY = current_y - portrait3.packedHeight / 2F;
+                    drawY = current_y - (portrait3.packedHeight / 2F) + 72F;
                     sb.draw(portrait3,
-                            drawX + (portrait3.packedWidth / 2.0f), drawY + 72F,
-                            portrait0.packedWidth / 2.0F, portrait3.packedHeight / 2.0F - 36F,
+                            drawX + (portrait3.packedWidth / 2.0f), drawY,
+                            0F, portrait3.packedHeight / 2.0F - 72F,
                             portrait3.packedWidth / 2.0f, portrait3.packedHeight / 2.0F,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
                 }
-                */
+
                     break;
                 }
 
             }
         }
     }
-}
+
