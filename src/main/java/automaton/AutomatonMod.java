@@ -51,7 +51,8 @@ public class AutomatonMod implements
         PostInitializeSubscriber,
         SetUnlocksSubscriber,
         OnStartBattleSubscriber,
-        PostBattleSubscriber {
+        PostBattleSubscriber,
+        StartGameSubscriber {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -255,5 +256,11 @@ public class AutomatonMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         FunctionHelper.doStuff = false;
+    }
+
+    @Override
+    public void receiveStartGame() {
+        EasyInfoDisplayPanel.specialDisplays.clear();
+        EasyInfoDisplayPanel.specialDisplays.add(new TestDisplayPanel());
     }
 }
