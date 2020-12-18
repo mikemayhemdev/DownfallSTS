@@ -32,18 +32,19 @@ public class FunctionHelper {
 
     public static final float BG_X = 150f;
     public static final float BG_Y = 700f;
-    public static final float HEIGHT = 800f;
+    public static final float HEIGHT_SEQUENCE = 775f;
+    public static final float HEIGHT_FUNCTION = 825f;
 
     public static final Vector2[] cardPositions  = {
-            new Vector2(200f, HEIGHT),
-            new Vector2(300f, HEIGHT),
-            new Vector2(400f, HEIGHT),
-            new Vector2(500f, HEIGHT)
+            new Vector2(210f, HEIGHT_SEQUENCE),
+            new Vector2(260f, HEIGHT_SEQUENCE),
+            new Vector2(310f, HEIGHT_SEQUENCE),
+            new Vector2(360f, HEIGHT_SEQUENCE)
     };
 
     public static final Vector2[] funcPositions = {
-            new Vector2(500f, HEIGHT),
-            new Vector2(600f, HEIGHT)
+            new Vector2(450f, HEIGHT_FUNCTION),
+            new Vector2(550f, HEIGHT_FUNCTION)
     };
 
     public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");

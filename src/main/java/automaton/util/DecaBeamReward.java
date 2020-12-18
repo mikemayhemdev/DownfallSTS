@@ -146,7 +146,7 @@ public class DecaBeamReward extends RewardItem {
 
         Texture cardImg = ImageMaster.REWARD_CARD_NORMAL;
 
-        sb.setColor(Color.WHITE);
+        sb.setColor(Color.WHITE.cpy());
         sb.draw(cardImg, REWARD_ITEM_X - 32.0F, this.y - 32.0F - 2.0F * Settings.scale, 32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 64, 64, false, false);
 
 
