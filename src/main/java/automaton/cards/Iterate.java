@@ -19,6 +19,7 @@ public class Iterate extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
