@@ -328,5 +328,9 @@
     "NAME": "Repulsor",
     "DESCRIPTION": "Exhaust the first Status card you draw each turn.",
     "UPGRADE_DESCRIPTION": "Innate. NL Exhaust the first Status card you draw each turn."
+  },
+  "bronze:Debug": {
+    "NAME": "Debug",
+    "DESCRIPTION": "Remove all bronze:Compile effects from the cards in the Sequence."
   }
 }
