@@ -66,6 +66,10 @@ public class FunctionHelper {
 
     public static void addToSequence(AbstractCard c) {
         c.stopGlowing();
+        c.resetAttributes();
+        c.drawScale = 0.75F;
+        c.target_x = (400 + (200 * FunctionHelper.held.size()) * Settings.scale);
+        c.target_y = 800 * Settings.scale;
         for (AbstractCard q : held.group) {
             if (q instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) q).onInput();
