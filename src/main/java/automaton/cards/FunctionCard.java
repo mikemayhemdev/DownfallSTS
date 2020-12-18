@@ -61,7 +61,7 @@ public class FunctionCard extends AbstractBronzeCard {
         int x = cards().size();
         switch (x) {
             case 0: {
-                SpireSuper.call(this, sb);
+                SpireSuper.call(sb);
                 break;
             }
             case 1: {
@@ -93,7 +93,7 @@ public class FunctionCard extends AbstractBronzeCard {
                     sb.draw(portrait0,
                             drawX, drawY + 72.0F,
                             portrait0.packedWidth / 2.0F, portrait0.packedHeight / 2.0F - 72.0F,
-                            portrait0.packedWidth / 2.0f, portrait0.packedHeight,
+                            portrait0.packedWidth, portrait0.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
@@ -117,7 +117,6 @@ public class FunctionCard extends AbstractBronzeCard {
                 }
 
                 if (portrait0 != null && portrait1 != null) {
-
                     portrait0 = new TextureAtlas.AtlasRegion(portrait0);
                     portrait0.setRegion(
                             portrait0.getRegionX(),
@@ -167,31 +166,27 @@ public class FunctionCard extends AbstractBronzeCard {
 
                     portrait0 = (TextureAtlas.AtlasRegion) f.get(cards().get(0));
                     portrait1 = (TextureAtlas.AtlasRegion) f.get(cards().get(1));
+                    portrait2 = (TextureAtlas.AtlasRegion) f.get(cards().get(2));
                 } catch (IllegalAccessException | NoSuchFieldException e) {
                     e.printStackTrace();
                 }
 
-                if (portrait0 != null && portrait1 != null) {
-                    boolean sameCard = cards().get(0).cardID.equals(cards().get(1).cardID);
-
+                if (portrait0 != null && portrait1 != null && portrait2 != null) {
                     portrait0 = new TextureAtlas.AtlasRegion(portrait0);
-                    if (!sameCard) {
-                        portrait0.setRegion(
-                                portrait0.getRegionX(),
-                                portrait0.getRegionY(),
-                                portrait0.getRegionWidth() / 2,
-                                portrait0.getRegionHeight()
-                        );
-                    }
+                    portrait0.setRegion(
+                            portrait0.getRegionX(),
+                            portrait0.getRegionY(),
+                            portrait0.getRegionWidth() / 3,
+                            portrait0.getRegionHeight()
+                    );
                     portrait1 = new TextureAtlas.AtlasRegion(portrait1);
-                    if (!sameCard) {
-                        portrait1.setRegion(
-                                portrait1.getRegionX() + portrait1.getRegionWidth() / 2,
-                                portrait1.getRegionY(),
-                                portrait1.getRegionWidth() / 2,
-                                portrait1.getRegionHeight()
-                        );
-                    }
+                    portrait1.setRegion(
+                            portrait1.getRegionX() + portrait1.getRegionWidth() / 2,
+                            portrait1.getRegionY(),
+                            portrait1.getRegionWidth() / 3,
+                            portrait1.getRegionHeight()
+                    );
+
 
                     drawX = current_x - portrait0.packedWidth / 2f;
                     drawY = current_y - portrait0.packedHeight / 2f;
@@ -205,9 +200,18 @@ public class FunctionCard extends AbstractBronzeCard {
                     drawX = current_x - portrait1.packedWidth / 2f;
                     drawY = current_y - portrait1.packedHeight / 2f;
                     sb.draw(portrait1,
-                            drawX + (portrait1.packedWidth / 2.0f), drawY + 72.0F,
+                            drawX + (portrait1.packedWidth / 3.0f), drawY + 72.0F,
                             0, portrait1.packedHeight / 2.0F - 72.0F,
                             portrait1.packedWidth / 2.0f, portrait1.packedHeight,
+                            drawScale * Settings.scale, drawScale * Settings.scale,
+                            angle
+                    );
+                    drawX = current_x - portrait2.packedWidth / 2f;
+                    drawY = current_y - portrait2.packedHeight / 2f;
+                    sb.draw(portrait2,
+                            drawX + ((portrait2.packedWidth / 3.0f) * 2), drawY + 72.0F,
+                            0, portrait2.packedHeight / 2.0F - 72.0F,
+                            portrait2.packedWidth / 2.0f, portrait2.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
