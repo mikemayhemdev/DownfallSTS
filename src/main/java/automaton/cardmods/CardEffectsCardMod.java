@@ -48,7 +48,9 @@ public class CardEffectsCardMod extends BronzeCardMod {
             String compileText = splitText[1] + splitText[2];
             x = card.rawDescription.replaceAll(compileText, "");
         } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
-        return x.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
+        System.out.println(x);
+        int y = ((AbstractBronzeCard)card).auto;
+        return x.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf( ((AbstractBronzeCard)card).auto)));
     }
 
     @Override
