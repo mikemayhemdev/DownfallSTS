@@ -144,6 +144,7 @@ public class FunctionCard extends AbstractBronzeCard {
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
+
                     drawX = current_x - portrait1.packedWidth / 2f;
                     drawY = current_y - portrait1.packedHeight / 2f;
                     sb.draw(portrait1,
@@ -174,7 +175,7 @@ public class FunctionCard extends AbstractBronzeCard {
                     e.printStackTrace();
                 }
 
-                if (portrait0 != null && portrait1 != null && portrait2 != null) {
+                if (portrait0 != null && portrait1 != null) {
                     portrait0 = new TextureAtlas.AtlasRegion(portrait0);
                     portrait0.setRegion(
                             portrait0.getRegionX(),
@@ -184,14 +185,14 @@ public class FunctionCard extends AbstractBronzeCard {
                     );
                     portrait1 = new TextureAtlas.AtlasRegion(portrait1);
                     portrait1.setRegion(
-                            portrait1.getRegionX() + (portrait1.getRegionWidth() / 3),
+                            portrait1.getRegionX() + portrait1.getRegionWidth() / 3,
                             portrait1.getRegionY(),
-                            (portrait1.getRegionWidth() / 3),
+                            portrait1.getRegionWidth() / 3,
                             portrait1.getRegionHeight()
                     );
                     portrait2 = new TextureAtlas.AtlasRegion(portrait2);
                     portrait2.setRegion(
-                            portrait2.getRegionX() + (2 * (portrait2.getRegionWidth() / 3)),
+                            portrait2.getRegionX() + ((portrait2.getRegionWidth() / 3) * 2),
                             portrait2.getRegionY(),
                             portrait2.getRegionWidth() / 3,
                             portrait2.getRegionHeight()
@@ -205,33 +206,33 @@ public class FunctionCard extends AbstractBronzeCard {
                             portrait0.packedWidth / 3.0f, portrait0.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
-                    ); // Displays perfectly.
+                    );
 
-                    drawX = current_x - (portrait0.packedWidth / 2f) + (portrait1.packedWidth / 4.25F);
+                    drawX = (current_x - portrait1.packedWidth / 2f);
                     drawY = current_y - portrait1.packedHeight / 2f;
                     sb.draw(portrait1,
-                            drawX, drawY + 72.0F,
-                            portrait0.packedWidth / 2.0F, portrait1.packedHeight / 2.0F - 72.0F,
+                            drawX + (portrait1.packedWidth / 3.0f), drawY + 72.0F,
+                            portrait1.packedWidth / 6.0F, portrait1.packedHeight / 2.0F - 72.0F,
                             portrait1.packedWidth / 3.0f, portrait1.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
-                    ); // Too far right
+                    );
 
-                    drawX = current_x - (portrait0.packedWidth / 2f) + (portrait1.packedWidth / 4.25F) + (portrait2.packedWidth / 4.25F);
+                    drawX = (current_x - portrait2.packedWidth / 2f);
                     drawY = current_y - portrait2.packedHeight / 2f;
                     sb.draw(portrait2,
-                            drawX, drawY + 72.0F,
-                            portrait0.packedWidth / 2.0F, portrait2.packedHeight / 2.0F - 72.0F,
+                            drawX + ((portrait2.packedWidth / 3.0f) * 2.0f), drawY + 72.0F,
+                            -(portrait2.packedWidth / 6.0f), portrait2.packedHeight / 2.0F - 72.0F,
                             portrait2.packedWidth / 3.0f, portrait2.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
-                    ); // Too far right
+                    );
 
-                    //Once I figure out how to step from 1/3 of card 1 to 1/3 of card 2, it's pretty easy to do 2->3. But first that
                 }
-                break;
+                break;//Once I figure out how to step from 1/3 of card 1 to 1/3 of card 2, it's pretty easy to do 2->3. But first that
             }
-            case 4: {float drawX;
+            case 4: {
+                float drawX;
                 float drawY;
 
                 TextureAtlas.AtlasRegion portrait0 = null;
@@ -281,26 +282,26 @@ public class FunctionCard extends AbstractBronzeCard {
                     );
 
                     drawX = current_x - portrait0.packedWidth / 2f;
-                    drawY = current_y - portrait0.packedHeight;
+                    drawY = current_y;
                     sb.draw(portrait0,
-                            drawX, drawY + 72F,
-                            portrait0.packedWidth / 2.0F, portrait0.packedHeight / 2.0F - 36F,
-                            portrait0.packedWidth / 2.0f, portrait0.packedHeight / 2.0F,
+                            drawX, drawY + 72.0F,
+                            portrait0.packedWidth / 2.0F, portrait0.packedHeight / 2F - 72F,
+                            portrait0.packedWidth / 2.0f, portrait0.packedHeight / 2F,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
 
                     drawX = current_x - portrait1.packedWidth / 2f;
-                    drawY = current_y - portrait1.packedHeight;
+                    drawY = current_y;
                     sb.draw(portrait1,
-                            drawX + (portrait1.packedWidth / 2.0f), drawY + 72F,
-                            portrait0.packedWidth / 2.0F, portrait1.packedHeight / 2.0F - 36F,
-                            portrait1.packedWidth / 2.0f, portrait1.packedHeight / 2.0F,
+                            drawX + (portrait1.packedWidth / 2.0f), drawY + 72.0F,
+                            0, portrait0.packedHeight - 72F,
+                            portrait1.packedWidth / 2.0f, portrait1.packedHeight / 2F,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
 
-
+/*
                     drawX = current_x - portrait2.packedWidth / 2f;
                     drawY = current_y - portrait2.packedHeight / 2F;
                     sb.draw(portrait2,
@@ -321,9 +322,11 @@ public class FunctionCard extends AbstractBronzeCard {
                             angle
                     );
                 }
-                break;
-            }
+                */
+                    break;
+                }
 
+            }
         }
     }
 }
