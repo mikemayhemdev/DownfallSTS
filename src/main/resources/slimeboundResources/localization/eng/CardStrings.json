@@ -252,7 +252,7 @@
   "Slimebound:Chomp": {
     "NAME": "Chomp",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this combat."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
