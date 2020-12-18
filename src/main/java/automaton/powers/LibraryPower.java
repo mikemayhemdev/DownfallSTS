@@ -1,12 +1,9 @@
 package automaton.powers;
 
-import automaton.AutomatonMod;
+import automaton.cards.SpaghettiCode;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import java.util.ArrayList;
 
 public class LibraryPower extends AbstractAutomatonPower {
     public static final String NAME = "Library";
@@ -22,23 +19,7 @@ public class LibraryPower extends AbstractAutomatonPower {
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
-            ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
-            for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
-                if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
-                    eligibleCardsList.add(c);
-                }
-            }
-            for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
-                if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
-                    eligibleCardsList.add(c);
-                }
-            }
-            for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
-                if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
-                    eligibleCardsList.add(c);
-                }
-            }
-            AbstractCard qCardGet = eligibleCardsList.get(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size()-1));
+            AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
             qCardGet.setCostForTurn(0);
             addToBot(new MakeTempCardInHandAction(qCardGet, true));
         }

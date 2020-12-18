@@ -21,23 +21,7 @@ public class GetLatest extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
-        for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
-            }
-        }
-        AbstractCard qCardGet = eligibleCardsList.get(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size()-1));
+        AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
         qCardGet.setCostForTurn(0);
         atb(new MakeTempCardInHandAction(qCardGet, true));
     }
