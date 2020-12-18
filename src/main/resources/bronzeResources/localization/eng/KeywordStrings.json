@@ -2,14 +2,16 @@
   {
     "PROPER_NAME": "Encode",
     "NAMES": [
-      "encode"
+      "encode",
+      "encoded"
     ],
     "DESCRIPTION": "Add a card to the Sequence and remove Encode from it."
   },
   {
     "PROPER_NAME": "Compile",
     "NAMES": [
-      "compile"
+      "compile",
+      "compiled"
     ],
     "DESCRIPTION": "Card has an additional effect on the Function."
   }
