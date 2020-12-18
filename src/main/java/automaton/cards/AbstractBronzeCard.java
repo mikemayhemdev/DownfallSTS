@@ -34,6 +34,31 @@ public abstract class AbstractBronzeCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
 
+    public int auto;
+    public int baseAuto;
+    public boolean upgradedAuto;
+    public boolean isAutoModified;
+
+    public void resetAttributes() {
+        super.resetAttributes();
+        auto = baseAuto;
+        isAutoModified = false;
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedAuto) {
+            auto = baseAuto;
+            isAutoModified = true;
+        }
+    }
+
+    void upgradeAuto(int amount) {
+        baseAuto += amount;
+        auto = baseAuto;
+        upgradedAuto = true;
+    }
+
     public int position = -1;
     public int fullLen = -1;
 

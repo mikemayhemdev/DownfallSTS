@@ -16,6 +16,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
     public RecursiveStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 1;
         thisEncodes();
     }
 
@@ -28,7 +29,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
     public void atTurnStart() {
         if (FunctionHelper.held != null) {
             if (FunctionHelper.held.contains(this)) {
-                baseDamage += 1;
+                baseDamage += magicNumber;
                 superFlash();
             }
         }

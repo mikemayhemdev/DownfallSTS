@@ -67,31 +67,31 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Burn into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Burn into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Burn into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Burn into your discard pile."
   },
   "bronze:CutThrough": {
     "NAME": "Cut Through",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw 1 card."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw !bauto! card."
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage twice. NL At the start of your turn, if this is in the Sequence, increase its damage by 1."
+    "DESCRIPTION": "Deal !D! damage twice. NL At the start of your turn, if this is in the Sequence, increase its damage by !M!."
   },
   "bronze:DarkDash": {
     "NAME": "Dark Dash",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add 1 *Void into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add 1 *Void into your discard pile."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add a *Void into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add a *Void into your discard pile."
   },
   "bronze:OilSpill": {
     "NAME": "Oil Spill",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add 1 *Slimed into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add 1 *Slimed into your discard pile."
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add a *Slimed into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add a *Slimed into your discard pile."
   },
   "bronze:WildBeam": {
     "NAME": "Wild Beam",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Wound into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 1 *Wound into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Wound into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Wound into your discard pile."
   },
   "bronze:Frontload": {
     "NAME": "Frontload",
@@ -119,8 +119,8 @@
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",
-    "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs 1 less this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs 1 less this turn."
+    "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs !M! less this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs !M! less this turn."
   },
   "bronze:Batch": {
     "NAME": "Batch",
@@ -165,7 +165,7 @@
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain 2 Dexterity."
+    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Dexterity."
   },
   "bronze:BronzeOrb": {
     "NAME": "Bronze Orb",
@@ -190,8 +190,8 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "Chosen Strike",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by 1 and add 2 Dazed to your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by 1 and add 2 Dazed to your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by !M! and add !bauto! Dazed to your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by !M! and add !bauto! Dazed to your discard pile."
   },
   "bronze:ClassDefault": {
     "NAME": "Class Default",
@@ -217,7 +217,7 @@
   },
   "bronze:MaxOutput": {
     "NAME": "Max Output",
-    "DESCRIPTION": "Draw 1 additional card and add 1 *Dazed into your draw pile each turn."
+    "DESCRIPTION": "Draw 1 additional card and add a *Dazed into your draw pile each turn."
   },
   "bronze:Mutator": {
     "NAME": "Mutator",
@@ -253,7 +253,7 @@
   },
   "bronze:BronzeArmor": {
     "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain 1 Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact."
+    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact."
   },
   "bronze:ForLoop": {
     "NAME": "For Loop",
@@ -261,7 +261,7 @@
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",
-    "DESCRIPTION": "Gain 1 Strength. NL bronze:Compile - ALL enemies gain !M! Strength."
+    "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile - ALL enemies gain !M! Strength."
   },
   "bronze:Return": {
     "NAME": "Return",
@@ -288,8 +288,8 @@
   },
   "bronze:Break": {
     "NAME": "Break",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 3 random Status cards into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add 3 random Status cards into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add !M! random Status cards into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add !M! random Status cards into your discard pile."
   },
   "bronze:Infinite Loop": {
     "NAME": "Infinite Loop",
@@ -349,5 +349,10 @@
   "bronze:Assembly": {
     "NAME": "Assembly",
     "DESCRIPTION": "Look at the top !M! cards of your draw pile. NL Choose any of them with Encode and add them to the Sequence in the order they were selected."
+  },
+  "bronze:FineTuning": {
+    "NAME": "Fine Tuning",
+    "DESCRIPTION": "Increase all numbers on cards in the Sequence by !M!. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on cards in the Sequence by !M!. NL Exhaust."
   }
 }

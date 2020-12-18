@@ -17,11 +17,12 @@ public class Philosophize extends AbstractBronzeCard {
     public Philosophize() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        baseAuto = auto = 1;
         thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, 1));
+        applyToSelf(new StrengthPower(p, auto));
     }
 
     @Override

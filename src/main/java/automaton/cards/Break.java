@@ -20,6 +20,7 @@ public class Break extends AbstractBronzeCard {
     public Break() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 3;
         thisEncodes();
     }
 
@@ -31,7 +32,7 @@ public class Break extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < magicNumber; i++) {
                 AbstractCard q = getRandomStatus().makeStatEquivalentCopy();
                 if (upgraded) {
                     atb(new MakeTempCardInDiscardAction(q, 1));

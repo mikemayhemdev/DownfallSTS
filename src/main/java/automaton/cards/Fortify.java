@@ -18,6 +18,7 @@ public class Fortify extends AbstractBronzeCard {
     public Fortify() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 2;
         thisEncodes();
     }
 
@@ -30,7 +31,7 @@ public class Fortify extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            applyToSelf(new DexterityPower(AbstractDungeon.player, 2));
+            applyToSelf(new DexterityPower(AbstractDungeon.player, magicNumber));
         }
     }
 

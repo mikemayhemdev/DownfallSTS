@@ -21,6 +21,8 @@ public class ChosenStrike extends AbstractBronzeCard {
     public ChosenStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 1;
+        baseAuto = auto = 2;
         thisEncodes();
         cardsToPreview = new Dazed();
     }
@@ -33,15 +35,15 @@ public class ChosenStrike extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (function.cost > 0) {
-            function.cost -= 1;
-            function.costForTurn -= 1;
+            function.cost -= magicNumber;
+            function.costForTurn -= magicNumber;
         }
         if (forGameplay) {
             if (upgraded) {
-                atb(new MakeTempCardInDiscardAction(new Dazed(), 2));
+                atb(new MakeTempCardInDiscardAction(new Dazed(), auto));
             }
             else {
-                shuffleIn(new Dazed(), 2);
+                shuffleIn(new Dazed(), auto);
             }
         }
     }

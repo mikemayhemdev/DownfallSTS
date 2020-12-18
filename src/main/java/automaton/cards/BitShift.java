@@ -16,11 +16,12 @@ public class BitShift extends AbstractBronzeCard {
     public BitShift() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         exhaust = true;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsAction(FunctionHelper.held.group, 1, "Choose.", (cards) -> {
-            att(new ReduceCostForTurnAction(cards.get(0), 1));
+            att(new ReduceCostForTurnAction(cards.get(0), magicNumber));
             att(new AbstractGameAction() {
                 @Override
                 public void update() {

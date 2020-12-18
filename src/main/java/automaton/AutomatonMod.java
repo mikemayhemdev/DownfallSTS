@@ -2,6 +2,7 @@ package automaton;
 
 import automaton.events.*;
 import automaton.relics.BronzeBoon;
+import automaton.util.AutoVar;
 import automaton.util.CardFilter;
 import automaton.util.CardIgnore;
 import basemod.BaseMod;
@@ -181,6 +182,7 @@ public class AutomatonMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new AutoVar());
         try {
             autoAddCards();
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {

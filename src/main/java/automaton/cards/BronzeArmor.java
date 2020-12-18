@@ -17,11 +17,12 @@ public class BronzeArmor extends AbstractBronzeCard {
     public BronzeArmor() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        baseAuto = auto = 1;
         thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new ArtifactPower(p, 1));
+        applyToSelf(new ArtifactPower(p, auto));
     }
 
     @Override

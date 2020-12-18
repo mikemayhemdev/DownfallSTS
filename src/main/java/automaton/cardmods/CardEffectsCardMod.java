@@ -1,5 +1,6 @@
 package automaton.cardmods;
 
+import automaton.cards.AbstractBronzeCard;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -53,6 +54,9 @@ public class CardEffectsCardMod extends BronzeCardMod {
         ReflectionHacks.setPrivate(card, AbstractCard.class, "isMultiDamage", ReflectionHacks.getPrivate(stored, AbstractCard.class, "isMultiDamage"));
         card.baseBlock = stored.baseBlock;
         card.baseMagicNumber = card.magicNumber = stored.baseMagicNumber;
+        if (card instanceof AbstractBronzeCard && stored instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) card).baseAuto = ((AbstractBronzeCard) card).auto = ((AbstractBronzeCard) stored).baseAuto;
+        }
         card.applyPowers();
         card.calculateCardDamage(target instanceof AbstractMonster ? (AbstractMonster)target : null);
         stored.use(AbstractDungeon.player, target instanceof AbstractMonster ? (AbstractMonster) target : null);
