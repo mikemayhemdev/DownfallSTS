@@ -263,4 +263,5 @@ public class AutomatonMod implements
         EasyInfoDisplayPanel.specialDisplays.clear();
         EasyInfoDisplayPanel.specialDisplays.add(new TestDisplayPanel());
     }
+
 }

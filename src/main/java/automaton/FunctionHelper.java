@@ -7,8 +7,11 @@ import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
 import automaton.powers.*;
 import automaton.relics.BronzeBoon;
+import automaton.util.TextureLoader;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -26,9 +29,13 @@ public class FunctionHelper {
     public static final float SEQUENCED_CARD_SIZE = 0.225f;
     public static final float FUNC_CARD_SIZE = 0.45f;
 
+    public static final float BG_X = 150f;
+    public static final float BG_Y = 700f;
     public static final float START_X = 200f;
     public static final float SPACING_X = 100f;
     public static final float HEIGHT = 800f;
+
+    public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
 
     public static final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
 
@@ -188,6 +195,8 @@ public class FunctionHelper {
     }
 
     public static void render(SpriteBatch sb) {
+        sb.setColor(Color.WHITE.cpy());
+        sb.draw(bg, BG_X, BG_Y);
         for (AbstractCard c : held.group) {
             c.render(sb);
         }
