@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 @AbstractCardModifier.SaveIgnore // Unfortunately, this card mod can't save since it contains AbstractCard, a field too large to save
 public class CardEffectsCardMod extends BronzeCardMod {
-    private AbstractCard stored;
+    public AbstractCard stored;
+
+    public static String ID = "bronze:CardEffectsCardMod";
 
     public CardEffectsCardMod(AbstractCard q) {
         stored = q;
@@ -58,5 +60,10 @@ public class CardEffectsCardMod extends BronzeCardMod {
     @Override
     public AbstractCardModifier makeCopy() {
         return new CardEffectsCardMod(stored);
+    }
+
+    @Override
+    public String identifier(AbstractCard card) {
+        return ID;
     }
 }
