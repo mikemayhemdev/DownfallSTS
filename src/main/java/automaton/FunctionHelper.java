@@ -14,17 +14,21 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-
-import java.util.ArrayList;
 
 public class FunctionHelper {
     public static CardGroup held;
     public static int max = 3;
 
-    public static final float FUNCCARD_SIZE = 0.5f;
+    public static final float SEQUENCED_CARD_SIZE = 0.225f;
+    public static final float FUNC_CARD_SIZE = 0.45f;
+
+    public static final float START_X = 200f;
+    public static final float SPACING_X = 100f;
+    public static final float HEIGHT = 800f;
 
     public static final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
 
@@ -68,14 +72,15 @@ public class FunctionHelper {
     }
 
     public static void addToSequence(AbstractCard c) {
+        c.cardsToPreview = new Burn(); // DEBUG
         if (CardModifierManager.hasModifier(c, EncodeMod.ID)) {
             CardModifierManager.removeModifiersById(c, EncodeMod.ID, true);
         }
         c.stopGlowing();
         c.resetAttributes();
-        c.targetDrawScale = FUNCCARD_SIZE;
-        c.target_x = (400 + (200 * FunctionHelper.held.size()) * Settings.scale);
-        c.target_y = 800 * Settings.scale;
+        c.targetDrawScale = SEQUENCED_CARD_SIZE;
+        c.target_x = (START_X + (SPACING_X * FunctionHelper.held.size()) * Settings.scale);
+        c.target_y = HEIGHT * Settings.scale;
         for (AbstractCard q : held.group) {
             if (q instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) q).onInput();
@@ -204,10 +209,12 @@ public class FunctionHelper {
         }
         if (secretStorage != null) {
             secretStorage.update();
-            float x = (400 + (200 * (max + 1))) * Settings.scale;
-            float y = 800 * Settings.scale;
+            float x = (START_X + (SPACING_X * (max + 1))) * Settings.scale;
+            float y = HEIGHT * Settings.scale;
             secretStorage.current_x = x;
             secretStorage.current_y = y;
+            secretStorage.targetDrawScale = FUNC_CARD_SIZE;
+            secretStorage.drawScale = FUNC_CARD_SIZE;
         }
     }
 }

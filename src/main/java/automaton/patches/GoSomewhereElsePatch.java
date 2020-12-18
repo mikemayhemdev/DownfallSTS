@@ -15,6 +15,8 @@ import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
+import static automaton.FunctionHelper.*;
+
 @SpirePatch(
         clz = UseCardAction.class,
         method = "update"
@@ -39,8 +41,8 @@ public class GoSomewhereElsePatch {
             return true;
         }
         if (CardModifierManager.hasModifier(card, EncodeMod.ID) && FunctionHelper.held.size() < FunctionHelper.max) {
-            card.target_x = (400 + (200 * FunctionHelper.held.size()) * Settings.scale);
-            card.target_y = 800 * Settings.scale;
+            card.target_x = (START_X + (SPACING_X * FunctionHelper.held.size()) * Settings.scale);
+            card.target_y = HEIGHT * Settings.scale;
             CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
             if (card instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) card).position = ((AbstractBronzeCard) card).getSequencePosition();
