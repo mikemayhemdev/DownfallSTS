@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static automaton.FunctionHelper.WITH_DELIMITER;
+
 @AbstractCardModifier.SaveIgnore // Unfortunately, this card mod can't save since it contains AbstractCard, a field too large to save
 public class CardEffectsCardMod extends BronzeCardMod {
     public AbstractCard stored;
@@ -40,7 +42,13 @@ public class CardEffectsCardMod extends BronzeCardMod {
     }
 
     public static String getRealDesc(AbstractCard card) {
-        return card.rawDescription.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
+        String x = card.rawDescription;
+        if (card.rawDescription.contains(" NL bronze:Compile")) {
+            String[] splitText = card.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+            String compileText = splitText[1] + splitText[2];
+            x = card.rawDescription.replaceAll(compileText, "");
+        } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+        return x.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
     }
 
     @Override

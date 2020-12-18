@@ -104,12 +104,6 @@ public class FunctionHelper {
         }
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
-                if (c.rawDescription.contains(" NL bronze:Compile")) {
-                    String[] splitText = c.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
-                    String compileText = splitText[1] + splitText[2];
-                    c.rawDescription = c.rawDescription.replaceAll(compileText, "");
-                    c.initializeDescription();
-                } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
                     ((AbstractBronzeCard) c).onCompile(q, forGameplay);
                 } else {
