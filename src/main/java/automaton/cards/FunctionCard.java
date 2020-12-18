@@ -207,24 +207,14 @@ public class FunctionCard extends AbstractBronzeCard {
                     drawX = current_x - portrait1.packedWidth / 2f;
                     drawY = current_y - portrait1.packedHeight / 2f;
                     sb.draw(portrait1,
-                            drawX + (portrait1.packedWidth / 2.0f), drawY + 72.0F,
-                            portrait0.packedWidth / 2.0F, portrait1.packedHeight / 2.0F - 72.0F,
+                            drawX+ (portrait1.packedWidth / 3F), drawY + 72.0F,
+                            portrait1.packedWidth / 2.0F, portrait1.packedHeight / 2.0F - 72.0F,
                             portrait1.packedWidth / 3.0f, portrait1.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
-                    ); // Displays way too far right.
+                    ); // Too far right
 
-                    drawX = current_x - portrait2.packedWidth / 2f;
-                    drawY = current_y - portrait2.packedHeight / 2f;
-                    sb.draw(portrait2,
-                            drawX + (portrait2.packedWidth / 2.0f), drawY + 72.0F,
-                            0, portrait2.packedHeight / 2.0F - 72.0F,
-                            portrait2.packedWidth / 3.0f, portrait2.packedHeight,
-                            drawScale * Settings.scale, drawScale * Settings.scale,
-                            angle
-                    ); // Displays a little left.
-
-
+                    //Once I figure out how to step from 1/3 of card 1 to 1/3 of card 2, it's pretty easy to do 2->3. But first that
                 }
                 break;
             }
