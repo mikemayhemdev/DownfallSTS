@@ -2,9 +2,9 @@
   "bronze:Cloning": {
     "NAME": "Cloning Beam",
     "DESCRIPTIONS": [
-      "The next time you add a card to the Sequence, add a copy of it.",
+      "The next time you add a card to the Sequence, add an extra copy of it.",
       "The next #b",
-      " times you add a card to the Sequence, add a copy of it."
+      " times you add a card to the Sequence, add an extra copy of it."
     ]
   },
   "bronze:Default": {
@@ -81,6 +81,14 @@
     "DESCRIPTIONS": [
       "Whenever you #yCompile, gain #b",
       " #yBlock."
+    ]
+  },
+  "bronze:Hardcode": {
+    "NAME": "Hardcoding",
+    "DESCRIPTIONS": [
+      "Next time you #yCompile a Function, it goes into your deck instead of your hand.",
+      "The next #b",
+      " times you #yCompile a Function, it goes into your deck instead of your hand."
     ]
   }
 }

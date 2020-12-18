@@ -7,6 +7,7 @@ import automaton.cards.FunctionCard;
 import automaton.powers.AfterOutputFunctionPower;
 import automaton.powers.CloningPower;
 import automaton.powers.OnCompilePower;
+import automaton.powers.OnOutputFunctionPower;
 import automaton.relics.BronzeBoon;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -96,6 +97,7 @@ public class FunctionHelper {
                     String[] splitText = c.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
                     String compileText = splitText[1] + splitText[2];
                     c.rawDescription = c.rawDescription.replaceAll(compileText, "");
+                    c.initializeDescription();
                 } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
                     ((AbstractBronzeCard) c).onCompile(q, forGameplay);
@@ -141,6 +143,11 @@ public class FunctionHelper {
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 regularOutput = ((AbstractBronzeCard) c).onOutput();
+            }
+        }
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnOutputFunctionPower) {
+                regularOutput = ((OnOutputFunctionPower) p).receiveOutputFunction();
             }
         }
         if (regularOutput) {
