@@ -3,10 +3,10 @@ package automaton;
 import automaton.cards.AbstractBronzeCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-public class TestDisplayPanel extends EasyInfoDisplayPanel {
+public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 
-    public TestDisplayPanel() {
-        super(1500, 900, 200);
+    public CompileDisplayPanel() {
+        super(600, 900, 200);
     } // NOTE: X, Y, Width are all multipled by settings.scale on constructor, so use values like this.
 
     @Override

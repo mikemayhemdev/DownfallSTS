@@ -6,33 +6,24 @@ import automaton.util.AutoVar;
 import automaton.util.CardFilter;
 import automaton.util.CardIgnore;
 import basemod.BaseMod;
-import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
-import champ.ChampChar;
-import champ.events.Gym;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import guardian.events.AccursedBlacksmithGuardian;
-import guardian.events.CrystalForge;
-import guardian.patches.GuardianEnum;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.TheSnecko;
-import sneckomod.events.BackToBasicsSnecko;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -261,7 +252,7 @@ public class AutomatonMod implements
     @Override
     public void receiveStartGame() {
         EasyInfoDisplayPanel.specialDisplays.clear();
-        EasyInfoDisplayPanel.specialDisplays.add(new TestDisplayPanel());
+        EasyInfoDisplayPanel.specialDisplays.add(new CompileDisplayPanel());
     }
 
 }

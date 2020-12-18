@@ -37,9 +37,9 @@ public class FunctionHelper {
 
     public static final Vector2[] cardPositions  = {
             new Vector2(208f, HEIGHT_SEQUENCE),
-            new Vector2(258f, HEIGHT_SEQUENCE),
-            new Vector2(308f, HEIGHT_SEQUENCE),
-            new Vector2(358f, HEIGHT_SEQUENCE)
+            new Vector2(283f, HEIGHT_SEQUENCE),
+            new Vector2(358f, HEIGHT_SEQUENCE),
+            new Vector2(433f, HEIGHT_SEQUENCE)
     };
 
     public static final Vector2[] funcPositions = {
