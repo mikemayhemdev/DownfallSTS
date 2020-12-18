@@ -14,7 +14,7 @@ public class WhirlingStrike extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 3;
 
     public WhirlingStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         thisEncodes();
         isMultiDamage = true;

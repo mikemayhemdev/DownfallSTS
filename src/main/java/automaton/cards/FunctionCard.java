@@ -32,7 +32,7 @@ public class FunctionCard extends AbstractBronzeCard {
     @SpireOverride
     protected void renderBannerImage(SpriteBatch sb, float x, float y) {
         Color blah = (Color) ReflectionHacks.getPrivate(this, AbstractCard.class, "renderColor");
-        ReflectionHacks.setPrivate(this, AbstractCard.class, "renderColor", Color.GREEN.cpy());
+        ReflectionHacks.setPrivate(this, AbstractCard.class, "renderColor", Color.valueOf("#198a2a"));
         SpireSuper.call(sb, x, y);
         ReflectionHacks.setPrivate(this, AbstractCard.class, "renderColor", blah);
     }
