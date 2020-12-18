@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,6 +15,7 @@ public class ChildClass extends AbstractBronzeCard {
     public ChildClass() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
+        tags.add(AutomatonMod.MODIFIES_OUTPUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

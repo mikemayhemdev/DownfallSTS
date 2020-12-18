@@ -23,6 +23,7 @@ public class NullPointer extends AbstractBronzeCard {
         baseBlock = BLOCK;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
+        tags.add(AutomatonMod.MODIFIES_OUTPUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

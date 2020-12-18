@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -15,8 +16,9 @@ public class Overload extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, common
 
     public Overload() {
-        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
+        tags.add(AutomatonMod.MODIFIES_OUTPUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

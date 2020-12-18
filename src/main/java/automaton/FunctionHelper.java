@@ -151,7 +151,7 @@ public class FunctionHelper {
         }
         boolean regularOutput = true;
         for (AbstractCard c : held.group) {
-            if (c instanceof AbstractBronzeCard) {
+            if (c instanceof AbstractBronzeCard && c.hasTag(AutomatonMod.MODIFIES_OUTPUT)) {
                 regularOutput = ((AbstractBronzeCard) c).onOutput();
             }
         }
