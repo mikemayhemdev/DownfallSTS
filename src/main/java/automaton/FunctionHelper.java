@@ -1,6 +1,7 @@
 package automaton;
 
 import automaton.cardmods.CardEffectsCardMod;
+import automaton.cardmods.EncodeMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
@@ -65,6 +66,9 @@ public class FunctionHelper {
     }
 
     public static void addToSequence(AbstractCard c) {
+        if (CardModifierManager.hasModifier(c, EncodeMod.ID)) {
+            CardModifierManager.removeModifiersById(c, EncodeMod.ID, true);
+        }
         c.stopGlowing();
         c.resetAttributes();
         c.drawScale = 0.75F;

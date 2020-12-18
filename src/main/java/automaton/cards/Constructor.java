@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -20,11 +19,12 @@ public class Constructor extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
+    public void onInput() {
         if (firstCard()) {
             baseBlock *= 2;
+            block *= 2;
+            superFlash();
         }
-        super.onCompile(function, forGameplay);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
