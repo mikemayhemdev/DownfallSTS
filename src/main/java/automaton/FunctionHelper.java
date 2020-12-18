@@ -91,7 +91,6 @@ public class FunctionHelper {
     }
 
     public static void addToSequence(AbstractCard c) {
-        c.cardsToPreview = new Burn(); // DEBUG
         if (CardModifierManager.hasModifier(c, EncodeMod.ID)) {
             CardModifierManager.removeModifiersById(c, EncodeMod.ID, true);
         }
