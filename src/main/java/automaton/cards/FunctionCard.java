@@ -186,6 +186,13 @@ public class FunctionCard extends AbstractBronzeCard {
                             portrait1.getRegionWidth() / 3,
                             portrait1.getRegionHeight()
                     );
+                    portrait2 = new TextureAtlas.AtlasRegion(portrait2);
+                    portrait2.setRegion(
+                            portrait2.getRegionX() + portrait2.getRegionWidth() / 2,
+                            portrait2.getRegionY(),
+                            portrait2.getRegionWidth() / 3,
+                            portrait2.getRegionHeight()
+                    );
 
 
                     drawX = current_x - portrait0.packedWidth / 2f;
@@ -193,7 +200,7 @@ public class FunctionCard extends AbstractBronzeCard {
                     sb.draw(portrait0,
                             drawX, drawY + 72.0F,
                             portrait0.packedWidth / 2.0F, portrait0.packedHeight / 2.0F - 72.0F,
-                            portrait0.packedWidth / 2.0f, portrait0.packedHeight,
+                            portrait0.packedWidth / 3.0f, portrait0.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
@@ -202,7 +209,7 @@ public class FunctionCard extends AbstractBronzeCard {
                     sb.draw(portrait1,
                             drawX + (portrait1.packedWidth / 3.0f), drawY + 72.0F,
                             0, portrait1.packedHeight / 2.0F - 72.0F,
-                            portrait1.packedWidth / 2.0f, portrait1.packedHeight,
+                            portrait1.packedWidth / 3.0f, portrait1.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );
@@ -211,7 +218,7 @@ public class FunctionCard extends AbstractBronzeCard {
                     sb.draw(portrait2,
                             drawX + ((portrait2.packedWidth / 3.0f) * 2), drawY + 72.0F,
                             0, portrait2.packedHeight / 2.0F - 72.0F,
-                            portrait2.packedWidth / 2.0f, portrait2.packedHeight,
+                            portrait2.packedWidth / 3.0f, portrait2.packedHeight,
                             drawScale * Settings.scale, drawScale * Settings.scale,
                             angle
                     );

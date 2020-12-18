@@ -33,7 +33,7 @@
   },
   "bronze:Goto": {
     "NAME": "Goto",
-    "DESCRIPTION": "Draw !M! cards."
+    "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Draw !M! cards."
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
