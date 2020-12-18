@@ -34,13 +34,15 @@ public class SuperTip {
 
     public static void render(SpriteBatch sb) {
         for (EasyInfoDisplayPanel d : EasyInfoDisplayPanel.specialDisplays) {
-            renderGenericTip(d.x, d.y, d.getTitle(), d.getDescription());
-            BODY_TEXT_WIDTH = d.width;
-            if (!Settings.hidePopupDetails && HEADER != null) {
-                currentColor = Settings.TOP_PANEL_SHADOW_COLOR;
-                textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, BODY, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
-                renderTipBox(drawX, drawY, sb, HEADER, BODY);
-                HEADER = null;
+            if (!d.getDescription().equals("NORENDER")) {
+                renderGenericTip(d.x, d.y, d.getTitle(), d.getDescription());
+                BODY_TEXT_WIDTH = d.width;
+                if (!Settings.hidePopupDetails && HEADER != null) {
+                    currentColor = Settings.TOP_PANEL_SHADOW_COLOR;
+                    textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, BODY, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
+                    renderTipBox(drawX, drawY, sb, HEADER, BODY);
+                    HEADER = null;
+                }
             }
         }
     }
