@@ -323,5 +323,18 @@
     "NAME": "Seek",
     "DESCRIPTION": "Put !M! card from your draw pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Exhaust."
+  },
+  "bronze:Repulsor": {
+    "NAME": "Repulsor",
+    "DESCRIPTION": "Exhaust the first Status card you draw each turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Exhaust the first Status card you draw each turn."
+  },
+  "bronze:Debug": {
+    "NAME": "Debug",
+    "DESCRIPTION": "Remove all bronze:Compile effects from the cards in the Sequence."
+  },
+  "bronze:HyperBeam": {
+    "NAME": "HYPER BEAM",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Affected by Strength !M! additional times. NL Skip your next turn."
   }
 }

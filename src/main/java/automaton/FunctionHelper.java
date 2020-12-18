@@ -24,6 +24,8 @@ public class FunctionHelper {
 
     public static int funcsThisCombat = 0;
 
+    static public final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
+
     public static boolean doStuff = false;
 
     public static void init() {
@@ -90,7 +92,17 @@ public class FunctionHelper {
         AbstractCard q = new FunctionCard();
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) c).onCompile(q, forGameplay);
+                if (c.rawDescription.contains(" NL bronze:Compile")) {
+                    String[] splitText = c.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+                    String compileText = splitText[1] + splitText[2];
+                    c.rawDescription = c.rawDescription.replaceAll(compileText, "");
+                } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                    ((AbstractBronzeCard) c).onCompile(q, forGameplay);
+                }
+                else {
+                    CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
+                }
             } else {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }
