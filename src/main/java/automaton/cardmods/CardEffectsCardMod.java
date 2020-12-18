@@ -48,8 +48,12 @@ public class CardEffectsCardMod extends BronzeCardMod {
             String compileText = splitText[1] + splitText[2];
             x = card.rawDescription.replaceAll(compileText, "");
         } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+        if (card.rawDescription.contains(" π")) {
+            String[] splitText = card.rawDescription.split(String.format(WITH_DELIMITER, " π"));
+            String compileText = splitText[1] + splitText[2];
+            x = card.rawDescription.replaceAll(compileText, "");
+        } // This one is for cards with other text that doesn't need to be on the Function.
         System.out.println(x);
-        int y = ((AbstractBronzeCard)card).auto;
         return x.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf( ((AbstractBronzeCard)card).auto)));
     }
 

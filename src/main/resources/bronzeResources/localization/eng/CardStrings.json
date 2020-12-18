@@ -76,7 +76,7 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage twice. NL At the start of your turn, if this is in the Sequence, increase its damage by !M!."
+    "DESCRIPTION": "Deal !D! damage twice. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!."
   },
   "bronze:DarkDash": {
     "NAME": "Dark Dash",
@@ -137,7 +137,7 @@
   },
   "bronze:Update": {
     "NAME": "Update",
-    "DESCRIPTION": "Gain !B! Block. NL When bronze:Encoded, Upgrade all cards before this in the Sequence."
+    "DESCRIPTION": "Gain !B! Block. π NL When bronze:Encoded, Upgrade all cards before this in the Sequence."
   },
   "bronze:Overload": {
     "NAME": "Overload",
@@ -173,7 +173,7 @@
   },
   "bronze:SearingBeam": {
     "NAME": "Searing Beam",
-    "DESCRIPTION": "Deal !D! damage. NL Can be Upgraded any number of times."
+    "DESCRIPTION": "Deal !D! damage. π NL Can be Upgraded any number of times."
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
