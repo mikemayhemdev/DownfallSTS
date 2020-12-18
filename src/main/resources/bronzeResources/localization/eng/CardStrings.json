@@ -298,7 +298,7 @@
   },
   "bronze:Library": {
     "NAME": "Library",
-    "DESCRIPTION": "At the start of your turn, add a random card with Encode to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0 until played."
   },
   "bronze:Verify": {
     "NAME": "Verify",
@@ -348,7 +348,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
-    "DESCRIPTION": "Look at the top !M! cards of your draw pile. NL Choose any of them with Encode and add them to the Sequence in the order they were selected."
+    "DESCRIPTION": "Look at the top !M! cards of your draw pile. NL Choose any of them with bronze:Encode and add them to the Sequence in the order they were selected."
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
