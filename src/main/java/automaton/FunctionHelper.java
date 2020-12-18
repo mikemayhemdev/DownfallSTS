@@ -9,6 +9,7 @@ import automaton.powers.CloningPower;
 import automaton.powers.OnCompilePower;
 import automaton.powers.OnOutputFunctionPower;
 import automaton.relics.BronzeBoon;
+import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -55,6 +56,15 @@ public class FunctionHelper {
             }
         }
         q.type = highestType;
+
+        if (q instanceof CustomCard) {
+            if (q.type == AbstractCard.CardType.SKILL) {
+                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
+            }
+            else {
+                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
+            }
+        }
     }
 
     public static void addToSequence(AbstractCard c) {
