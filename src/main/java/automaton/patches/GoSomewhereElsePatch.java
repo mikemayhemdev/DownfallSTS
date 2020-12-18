@@ -41,8 +41,8 @@ public class GoSomewhereElsePatch {
             return true;
         }
         if (CardModifierManager.hasModifier(card, EncodeMod.ID) && FunctionHelper.held.size() < FunctionHelper.max) {
-            card.target_x = (START_X + (SPACING_X * FunctionHelper.held.size()) * Settings.scale);
-            card.target_y = HEIGHT * Settings.scale;
+            card.target_x = cardPositions[FunctionHelper.held.size()].x;
+            card.target_y = cardPositions[FunctionHelper.held.size()].y;
             CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
             if (card instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) card).position = ((AbstractBronzeCard) card).getSequencePosition();

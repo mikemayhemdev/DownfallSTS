@@ -13,6 +13,7 @@ import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,9 +32,19 @@ public class FunctionHelper {
 
     public static final float BG_X = 150f;
     public static final float BG_Y = 700f;
-    public static final float START_X = 200f;
-    public static final float SPACING_X = 100f;
     public static final float HEIGHT = 800f;
+
+    public static final Vector2[] cardPositions  = {
+            new Vector2(200f, HEIGHT),
+            new Vector2(300f, HEIGHT),
+            new Vector2(400f, HEIGHT),
+            new Vector2(500f, HEIGHT)
+    };
+
+    public static final Vector2[] funcPositions = {
+            new Vector2(500f, HEIGHT),
+            new Vector2(600f, HEIGHT)
+    };
 
     public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
 
@@ -86,8 +97,8 @@ public class FunctionHelper {
         c.stopGlowing();
         c.resetAttributes();
         c.targetDrawScale = SEQUENCED_CARD_SIZE;
-        c.target_x = (START_X + (SPACING_X * FunctionHelper.held.size()) * Settings.scale);
-        c.target_y = HEIGHT * Settings.scale;
+        c.target_x = cardPositions[held.size()].x;
+        c.target_y = cardPositions[held.size()].y;
         for (AbstractCard q : held.group) {
             if (q instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) q).onInput();
@@ -218,8 +229,8 @@ public class FunctionHelper {
         }
         if (secretStorage != null) {
             secretStorage.update();
-            float x = (START_X + (SPACING_X * (max + 1))) * Settings.scale;
-            float y = HEIGHT * Settings.scale;
+            float x = (max == 3 ? funcPositions[0].x : funcPositions[1].x);
+            float y = (max == 3 ? funcPositions[0].y : funcPositions[1].y);
             secretStorage.current_x = x;
             secretStorage.current_y = y;
             secretStorage.targetDrawScale = FUNC_CARD_SIZE;
