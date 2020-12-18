@@ -32,5 +32,5 @@ public class Debug extends AbstractBronzeCard {
 
     public void upp() {
         upgradeBaseCost(0);
-    }
+    } // TODO: Change upgrade
 }

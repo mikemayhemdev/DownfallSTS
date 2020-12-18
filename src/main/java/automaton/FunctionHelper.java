@@ -4,10 +4,7 @@ import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
-import automaton.powers.AfterOutputFunctionPower;
-import automaton.powers.CloningPower;
-import automaton.powers.OnCompilePower;
-import automaton.powers.OnOutputFunctionPower;
+import automaton.powers.*;
 import automaton.relics.BronzeBoon;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
@@ -100,6 +97,11 @@ public class FunctionHelper {
 
     public static AbstractCard makeFunction(boolean forGameplay) {
         AbstractCard q = new FunctionCard();
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof PreCardCompileEffectsPower) {
+                ((PreCardCompileEffectsPower) p).receivePreCardCompileEffects(forGameplay);
+            }
+        }
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (c.rawDescription.contains(" NL bronze:Compile")) {

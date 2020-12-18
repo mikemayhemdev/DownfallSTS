@@ -78,6 +78,8 @@ public class AutomatonMod implements
 
     @SpireEnum
     public static AbstractCard.CardTags ENCODES;
+    @SpireEnum
+    public static AbstractCard.CardTags BAD_COMPILE;
 
     public AutomatonMod() {
         BaseMod.subscribe(this);

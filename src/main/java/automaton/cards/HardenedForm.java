@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.powers.HardenedFormPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -18,7 +19,7 @@ public class HardenedForm extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        applyToSelf(new HardenedFormPower(magicNumber));
     }
 
     public void upp() {

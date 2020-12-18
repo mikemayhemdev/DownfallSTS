@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,6 +22,7 @@ public class Backtrace extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         isInnate = true;
         thisEncodes();
+        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -25,6 +26,7 @@ public class ChosenStrike extends AbstractBronzeCard {
         baseAuto = auto = 2;
         thisEncodes();
         cardsToPreview = new Dazed();
+        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

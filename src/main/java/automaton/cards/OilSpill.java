@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -28,6 +29,7 @@ public class OilSpill extends AbstractBronzeCard {
         isMultiDamage = true;
         thisEncodes();
         cardsToPreview = new Slimed();
+        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

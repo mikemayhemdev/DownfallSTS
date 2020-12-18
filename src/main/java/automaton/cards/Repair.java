@@ -20,6 +20,8 @@ public class Repair extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
+        tags.add(CardTags.HEALING);
+        //Repair does not get the Negative Compile mod because then you could full heal.
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

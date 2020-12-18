@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,6 +22,7 @@ public class NullPointer extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         thisEncodes();
+        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

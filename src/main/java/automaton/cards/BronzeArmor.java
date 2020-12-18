@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,6 +20,7 @@ public class BronzeArmor extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = MAGIC;
         baseAuto = auto = 1;
         thisEncodes();
+        tags.add(AutomatonMod.BAD_COMPILE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
