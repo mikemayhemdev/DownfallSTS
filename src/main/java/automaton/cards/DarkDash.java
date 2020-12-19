@@ -24,6 +24,7 @@ public class DarkDash extends AbstractBronzeCard {
         thisEncodes();
         cardsToPreview = new VoidCard();
         tags.add(AutomatonMod.BAD_COMPILE);
+        //TODO - Compile text shows in function
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

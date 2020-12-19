@@ -13,6 +13,6 @@
       "compile",
       "compiled"
     ],
-    "DESCRIPTION": "Card has an additional effect on the Function."
+    "DESCRIPTION": "An additional effect that triggers when this card, while in the Sequence, is combined into a Function."
   }
 ]

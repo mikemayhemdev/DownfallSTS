@@ -41,7 +41,7 @@
   },
   "bronze:Branch": {
     "NAME": "Branch",
-    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen.",
+    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "damage()",
       "Deal !D! damage.",

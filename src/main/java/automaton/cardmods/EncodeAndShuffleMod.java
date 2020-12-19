@@ -1,6 +1,7 @@
 package automaton.cardmods;
 
 import basemod.abstracts.AbstractCardModifier;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,12 +14,12 @@ public class EncodeAndShuffleMod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + " NL bronze:Encode, then add a copy of this into your draw pile.";
+        return rawDescription + " NL bronze:Encode, then add a copy of this into your discard pile."; //TODO Hardcoded string
     }
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        atb(new MakeTempCardInDrawPileAction(card.makeStatEquivalentCopy(), 1, true, true)); // does this happen before Encode is removed?
+        atb(new MakeTempCardInDiscardAction(card.makeStatEquivalentCopy(), 1)); // does this happen before Encode is removed?
     }
 
     @Override
