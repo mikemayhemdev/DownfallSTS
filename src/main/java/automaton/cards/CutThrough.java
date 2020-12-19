@@ -23,6 +23,7 @@ public class CutThrough extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        baseAuto = auto = 1;
         thisEncodes();
     }
 
@@ -35,7 +36,7 @@ public class CutThrough extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            atb(new DrawCardAction(1));
+            atb(new DrawCardAction(auto));
         }
     }
 
