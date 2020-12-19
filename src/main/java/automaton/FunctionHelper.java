@@ -18,8 +18,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.status.Burn;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -35,7 +33,7 @@ public class FunctionHelper {
     public static final float HEIGHT_SEQUENCE = 768f;
     public static final float HEIGHT_FUNCTION = 820f;
 
-    public static final Vector2[] cardPositions  = {
+    public static final Vector2[] cardPositions = {
             new Vector2(208f, HEIGHT_SEQUENCE),
             new Vector2(283f, HEIGHT_SEQUENCE),
             new Vector2(358f, HEIGHT_SEQUENCE),
@@ -83,8 +81,7 @@ public class FunctionHelper {
         if (q instanceof CustomCard) {
             if (q.type == AbstractCard.CardType.SKILL) {
                 ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
-            }
-            else {
+            } else {
                 ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
             }
         }
@@ -99,10 +96,8 @@ public class FunctionHelper {
         c.targetDrawScale = SEQUENCED_CARD_SIZE;
         c.target_x = cardPositions[held.size()].x;
         c.target_y = cardPositions[held.size()].y;
-        for (AbstractCard q : held.group) {
-            if (q instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) q).onInput();
-            }
+        if (c instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) c).onInput();
         }
         held.addToTop(c);
         for (AbstractCard q : held.group) {
