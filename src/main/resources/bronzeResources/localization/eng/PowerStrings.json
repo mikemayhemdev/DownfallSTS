@@ -90,5 +90,12 @@
       "The next #b",
       " times you #yCompile a Function, it goes into your deck instead of your hand."
     ]
+  },
+  "bronze:Verify": {
+    "NAME": "Verify",
+    "DESCRIPTIONS": [
+      "The first time you #yCompile a Function each turn, gain #b",
+      " [E] ."
+    ]
   }
 }

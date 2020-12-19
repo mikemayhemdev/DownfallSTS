@@ -29,4 +29,9 @@ public class VerifyPower extends AbstractAutomatonPower implements AfterOutputFu
             activated = true;
         }
     }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+    }
 }
