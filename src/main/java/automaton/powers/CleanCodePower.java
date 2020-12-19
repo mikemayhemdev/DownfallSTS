@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import static automaton.FunctionHelper.WITH_DELIMITER;
+
 public class CleanCodePower extends AbstractAutomatonPower implements PreCardCompileEffectsPower {
     public static final String NAME = "CleanCode";
     public static final String POWER_ID = makeID(NAME);
@@ -23,9 +25,14 @@ public class CleanCodePower extends AbstractAutomatonPower implements PreCardCom
             flash();
             addToBot(new ReducePowerAction(owner, owner, this, 1));
         }
-        for (AbstractCard c : FunctionHelper.held.group) {
-            if (c.hasTag(AutomatonMod.BAD_COMPILE) && c instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) c).doSpecialCompileStuff = false;
+        for (AbstractCard q : FunctionHelper.held.group) {
+            if (q.hasTag(AutomatonMod.BAD_COMPILE) && q instanceof AbstractBronzeCard) {
+                if (q.rawDescription.contains(" NL bronze:Compile")) {
+                    String[] splitText = q.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+                    String compileText = splitText[1] + splitText[2];
+                    q.rawDescription = q.rawDescription.replaceAll(compileText, "");
+                } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+                ((AbstractBronzeCard) q).doSpecialCompileStuff = false;
             }
         }
     }

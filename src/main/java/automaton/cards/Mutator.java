@@ -16,7 +16,7 @@ public class Mutator extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Mutator() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
