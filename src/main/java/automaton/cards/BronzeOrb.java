@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class BronzeOrb extends AbstractBronzeCard {
 
-    public final static String ID = makeID("BronzeOrb");
+    public final static String ID = makeID("BronzeOrbWhoReallyLikesDefectForSomeReason");
 
     //stupid intellij stuff attack, enemy, uncommon
 

@@ -24,17 +24,17 @@ import guardian.GuardianMod;
 import guardian.powers.*;
 import kobting.friendlyminions.monsters.AbstractFriendlyMonster;
 
-public class BronzeOrb extends AbstractFriendlyMonster {
+public class BronzeOrbWhoReallyLikesDefectForSomeReason extends AbstractFriendlyMonster {
 
     public static String NAME = "Bronze Orb";
-    public static String ID = "Guardian:BronzeOrb";
+    public static String ID = "Guardian:BronzeOrbWhoReallyLikesDefectForSomeReason";
 
     public static final int HP = 30;
     public static final int BASEDAMAGE = 12;
 
     private Float targetX;
 
-    public BronzeOrb(int offsetX, int offsetY) {
+    public BronzeOrbWhoReallyLikesDefectForSomeReason(int offsetX, int offsetY) {
         super(NAME, ID, HP, 0F, 20F, 120.0F, 120.0F, "images/monsters/theCity/automaton/orb.png", offsetX, offsetY);
 
         addMoves();

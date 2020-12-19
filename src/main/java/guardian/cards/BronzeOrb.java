@@ -19,9 +19,9 @@ import guardian.vfx.BronzeOrbEffect;
 
 
 public class BronzeOrb extends AbstractGuardianCard {
-    public static final String ID = GuardianMod.makeID("BronzeOrb");
+    public static final String ID = GuardianMod.makeID("BronzeOrbWhoReallyLikesDefectForSomeReason");
     public static final String NAME;
-    public static final String IMG_PATH = "cards/BronzeOrb.png";
+    public static final String IMG_PATH = "cards/BronzeOrbWhoReallyLikesDefectForSomeReason.png";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

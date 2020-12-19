@@ -7,8 +7,10 @@ import charbosses.bosses.Defect.NewAge.ArchetypeAct1StreamlineNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.cards.anticards.Debug;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -111,6 +113,8 @@ public class CharBossDefect extends AbstractCharBoss {
         if (chosenArchetype instanceof ArchetypeAct2ClawNewAge) {
             AbstractCreature p = AbstractCharBoss.boss;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
+            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-300, 200, 0), true));
+            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(200, 130, 1), true));
         }
     }
 }

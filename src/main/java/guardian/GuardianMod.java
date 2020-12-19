@@ -122,7 +122,7 @@ public class GuardianMod implements PostDrawSubscriber,
 
     private static String modID;
 
-    //public static BronzeOrb bronzeOrbInPlay;
+    //public static BronzeOrbWhoReallyLikesDefectForSomeReason bronzeOrbInPlay;
 
     @SpireEnum
     public static AbstractCard.CardTags GEM;
