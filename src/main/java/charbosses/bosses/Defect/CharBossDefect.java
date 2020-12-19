@@ -1,7 +1,9 @@
 package charbosses.bosses.Defect;
 
+import charbosses.BossMechanicDisplayPanel;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct1StreamlineNewAge;
 import charbosses.cards.anticards.Debug;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
@@ -47,13 +49,13 @@ public class CharBossDefect extends AbstractCharBoss {
         AbstractBossDeckArchetype archetype;
 
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1Streamline();
+            archetype = new ArchetypeAct1StreamlineNewAge();
             this.currentHealth -= 100;
             downfallMod.overrideBossDifficulty = false;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1Streamline();
+                    archetype = new ArchetypeAct1StreamlineNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2Claw();
@@ -66,7 +68,7 @@ public class CharBossDefect extends AbstractCharBoss {
                     switch (NeowBoss.Rezzes) {
 
                         case 1:
-                            archetype = new ArchetypeAct1Streamline();
+                            archetype = new ArchetypeAct1StreamlineNewAge();
                             break;
                         case 2:
                             archetype = new ArchetypeAct2Claw();
@@ -81,7 +83,7 @@ public class CharBossDefect extends AbstractCharBoss {
                     break;
                 }
                 default:
-                    archetype = new ArchetypeAct1Streamline();
+                    archetype = new ArchetypeAct1StreamlineNewAge();
                     break;
             }
 

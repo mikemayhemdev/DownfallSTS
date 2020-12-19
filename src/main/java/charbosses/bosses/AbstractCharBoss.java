@@ -1,5 +1,6 @@
 package charbosses.bosses;
 
+import charbosses.BossMechanicDisplayPanel;
 import charbosses.actions.common.EnemyDiscardAtEndOfTurnAction;
 import charbosses.actions.common.EnemyUseCardAction;
 import charbosses.actions.orb.EnemyAnimateOrbAction;
@@ -113,6 +114,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
         AbstractCharBoss.finishedSetup = false;
+        this.drawX = (float)Settings.WIDTH * 0.75F - 150F * Settings.xScale;
         this.type = EnemyType.BOSS;
         this.chosenClass = playerClass;
         this.energyPanel = new EnemyEnergyPanel(this);
@@ -188,6 +190,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public void usePreBattleAction() {
+        chosenArchetype.initializeBossPanel();
         this.energy.recharge();
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStartPreDraw();
@@ -950,6 +953,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     @Override
     public void die() {
         if (this.currentHealth <= 0) {
+            BossMechanicDisplayPanel.resetBossPanel();
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             if (!(this instanceof CharBossMerchant)) {
