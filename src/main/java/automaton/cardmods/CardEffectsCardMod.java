@@ -57,7 +57,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             String[] splitText = card.rawDescription.split(String.format(WITH_DELIMITER, "NL \u00A0 "));
             String compileText = splitText[0] + splitText[1];
             x = card.rawDescription.replaceAll(compileText, "");
-        } // And for non-Function-required text.
+        } // And for non-Function-relevant text before the main card effects.
         System.out.println(x);
         return x.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf( ((AbstractBronzeCard)card).auto)));
     }
