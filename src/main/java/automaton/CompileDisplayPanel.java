@@ -26,6 +26,7 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
                     String[] splitText = card.rawDescription.split("bronze:Compile");
                     String compileText = splitText[1];
                     s.append(compileText.replaceAll("bronze:", "#y").replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf( ((AbstractBronzeCard)card).auto))));
+                    s.append(" NL ");
                 } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
             }
         if (!flip) {

@@ -40,6 +40,14 @@ public class FunctionCard extends AbstractBronzeCard {
         //No Stack Overflow here.
     }
 
+    @Override
+    public AbstractCard makeCopy() {
+        AbstractCard q = new FunctionCard();
+        q.type = this.type;
+        q.target = this.target;
+        return q;
+    }
+
     @SpireOverride
     protected void renderBannerImage(SpriteBatch sb, float x, float y) {
         Color blah = (Color) ReflectionHacks.getPrivate(this, AbstractCard.class, "renderColor");
