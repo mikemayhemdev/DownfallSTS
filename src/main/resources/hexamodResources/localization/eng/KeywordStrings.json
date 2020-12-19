@@ -89,5 +89,12 @@
       "bolstering"
     ],
     "DESCRIPTION": "#yGhostflame. #yIgnites when a #yPower is played while #yActive. #yIgnition: When #yIgnited, gain #b4 #yBlock and #b1 #yStrength."
+  },
+  {
+    "PROPER_NAME": "Searing",
+    "NAMES": [
+      "searing"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played while #yActive. #yIgnition: When #yIgnited, apply #b4 #ySoulburn to a random enemy."
   }
 ]

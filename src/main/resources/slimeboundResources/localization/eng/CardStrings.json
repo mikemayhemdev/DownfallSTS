@@ -324,13 +324,13 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a *Divide and a *Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded *Divide and an Upgraded *Conquer to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a *Serve and a *Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded *Serve and an Upgraded *Protect to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
