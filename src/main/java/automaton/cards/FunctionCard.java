@@ -41,8 +41,8 @@ public class FunctionCard extends AbstractBronzeCard {
     }
 
     @Override
-    public AbstractCard makeCopy() {
-        AbstractCard q = new FunctionCard();
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard q = super.makeStatEquivalentCopy();
         q.type = this.type;
         q.target = this.target;
         return q;
