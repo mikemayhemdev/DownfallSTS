@@ -4,16 +4,21 @@ import charbosses.BossMechanicDisplayPanel;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct1StreamlineNewAge;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.cards.anticards.Debug;
 import charbosses.core.EnemyEnergyManager;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import guardian.cards.AncientConstruct;
+import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
 public class CharBossDefect extends AbstractCharBoss {
@@ -58,7 +63,7 @@ public class CharBossDefect extends AbstractCharBoss {
                     archetype = new ArchetypeAct1StreamlineNewAge();
                     break;
                 case 2:
-                    archetype = new ArchetypeAct2Claw();
+                    archetype = new ArchetypeAct2ClawNewAge();
                     break;
                 case 3:
                     archetype = new ArchetypeAct3Orbs();
@@ -71,7 +76,7 @@ public class CharBossDefect extends AbstractCharBoss {
                             archetype = new ArchetypeAct1StreamlineNewAge();
                             break;
                         case 2:
-                            archetype = new ArchetypeAct2Claw();
+                            archetype = new ArchetypeAct2ClawNewAge();
                             break;
                         case 3:
                             archetype = new ArchetypeAct3Orbs();
@@ -98,5 +103,14 @@ public class CharBossDefect extends AbstractCharBoss {
     public void die() {
         super.die();
         downfallMod.saveBossFight(CharBossDefect.ID);
+    }
+
+    @Override
+    public void usePreBattleAction() {
+        super.usePreBattleAction();
+        if (chosenArchetype instanceof ArchetypeAct2ClawNewAge) {
+            AbstractCreature p = AbstractCharBoss.boss;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
+        }
     }
 }

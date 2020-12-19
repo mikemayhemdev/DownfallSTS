@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class BossMechanicDisplayPanel extends EasyInfoDisplayPanel {
 
-    public static String mechanicName;
+    public static String mechanicName = "";
     public static String mechanicDesc = "NORENDER";
 
     private static int X = 1550;

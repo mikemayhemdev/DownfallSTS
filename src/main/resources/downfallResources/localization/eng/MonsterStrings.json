@@ -60,7 +60,9 @@
     "NAME": "",
     "DIALOG": [
       "Energy Thief",
-      "Whenever Defect uses Turbo, the top of your draw pile gains the Void Status instead."
+      "Whenever Defect uses Turbo, the top of your draw pile gains the Void Status instead.",
+      "Ancient Construct",
+      "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact."
     ]
   }
 }
