@@ -53,5 +53,14 @@
       "Let's teach 'em a lesson.",
       "Teach 'em all the way!"
     ]
+  },
+  "downfall:BossMechanics": {
+    "MOVES": [
+    ],
+    "NAME": "",
+    "DIALOG": [
+      "Energy Thief",
+      "Whenever Defect uses Turbo, the top of your draw pile gains the Void Status instead."
+    ]
   }
 }

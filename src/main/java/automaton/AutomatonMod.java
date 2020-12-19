@@ -10,6 +10,7 @@ import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
+import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -253,6 +254,7 @@ public class AutomatonMod implements
     public void receiveStartGame() {
         EasyInfoDisplayPanel.specialDisplays.clear();
         EasyInfoDisplayPanel.specialDisplays.add(new CompileDisplayPanel());
+        EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
     }
 
 }

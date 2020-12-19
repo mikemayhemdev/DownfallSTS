@@ -1,7 +1,10 @@
 package charbosses.bosses;
 
+import charbosses.BossMechanicDisplayPanel;
 import charbosses.relics.AbstractCharbossRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +13,12 @@ import java.util.ArrayList;
 
 public abstract class AbstractBossDeckArchetype {
     public static final Logger logger = LogManager.getLogger(downfallMod.class.getName());
+
+    public static MonsterStrings bossMechanicString = CardCrawlGame.languagePack.getMonsterStrings("downfall:BossMechanics");
+
+    public String bossMechanicName;
+    public String bossMechanicDesc;
+
     /*
 
     /// WEIGHT CONSTANTS ///
@@ -83,6 +92,11 @@ public abstract class AbstractBossDeckArchetype {
     public void addToList(ArrayList<AbstractCard> c, AbstractCard q, boolean upgraded) {
         if (upgraded) q.upgrade();
         c.add(q);
+    }
+
+    public void initializeBossPanel(){
+        BossMechanicDisplayPanel.mechanicName = bossMechanicName;
+        BossMechanicDisplayPanel.mechanicDesc = bossMechanicDesc;
     }
 
     public void addToList(ArrayList<AbstractCard> c, AbstractCard q) {
