@@ -15,7 +15,7 @@ public class Goto extends AbstractBronzeCard {
 
     public Goto() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         thisEncodes();
     }
 

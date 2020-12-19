@@ -16,6 +16,7 @@ public class Constructor extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         thisEncodes();
+        //TODO - Only show ocmpile text if its the first card in the sequence, saying "Constructor will double its block"
     }
 
     @Override
