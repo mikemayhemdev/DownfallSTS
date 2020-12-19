@@ -91,7 +91,7 @@ public class BronzeOrbWhoReallyLikesDefectForSomeReason extends AbstractMonster 
     }
 
     static {
-        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("BronzeOrbWhoReallyLikesDefectForSomeReason");
+        monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("BronzeOrb");
         MOVES = monsterStrings.MOVES;
         DIALOG = monsterStrings.DIALOG;
     }
