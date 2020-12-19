@@ -41,8 +41,8 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
 
     public ArrayList<OctoChoiceCard> choiceList() {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
-        cardList.add(new OctoChoiceCard("bronze:BranchHit", EXTENDED_DESCRIPTION[0], expansionContentMod.makeCardPath("KnowingSkullWish.png"), EXTENDED_DESCRIPTION[1], damage, -1));
-        cardList.add(new OctoChoiceCard("bronze:BranchBlock", EXTENDED_DESCRIPTION[2], expansionContentMod.makeCardPath("KnowingSkullWish.png"), EXTENDED_DESCRIPTION[3], -1, block));
+        cardList.add(new OctoChoiceCard("bronze:BranchHit", EXTENDED_DESCRIPTION[0], "bronzeResources/images/cards/BranchHit.png", EXTENDED_DESCRIPTION[1], damage, -1));
+        cardList.add(new OctoChoiceCard("bronze:BranchBlock", EXTENDED_DESCRIPTION[2], "bronzeResources/images/cards/BranchBlock.png", EXTENDED_DESCRIPTION[3], -1, block));
         return cardList;
     }
 
