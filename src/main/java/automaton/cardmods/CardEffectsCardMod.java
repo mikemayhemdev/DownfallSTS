@@ -44,19 +44,23 @@ public class CardEffectsCardMod extends BronzeCardMod {
     public static String getRealDesc(AbstractCard card) {
         String x = card.rawDescription;
         if (card.rawDescription.contains(" NL bronze:Compile")) {
+            System.out.println(x);
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+            System.out.println(splitText);
             String compileText = splitText[1] + splitText[2];
-            x = x.replaceAll(compileText, "");
+            System.out.println(compileText);
+            x = x.replace(compileText, "");
+            System.out.println(x);
         } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
         if (card.rawDescription.contains(" π")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " π"));
             String compileText = splitText[1] + splitText[2];
-            x = x.replaceAll(compileText, "");
+            x = x.replace(compileText, "");
         } // This one is for cards with other text that doesn't need to be on the Function.
         if (card.rawDescription.contains(" NL \u00A0 ")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL \u00A0 "));
             String compileText = splitText[0] + splitText[1];
-            x = x.replaceAll(compileText, "");
+            x = x.replace(compileText, "");
         } // And for non-Function-relevant text before the main card effects.
         System.out.println(x);
         return x.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf( ((AbstractBronzeCard)card).auto)));
