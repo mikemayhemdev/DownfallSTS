@@ -184,15 +184,15 @@ public class FunctionHelper {
         }
         if (regularOutput) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    held.clear();
-                    secretStorage = makeFunction(false);
-                    isDone = true;
-                }
-            });
         }
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                held.clear();
+                secretStorage = makeFunction(false);
+                isDone = true;
+            }
+        });
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof AfterOutputFunctionPower) {
                 ((AfterOutputFunctionPower) p).receiveAfterOutputFunction();
