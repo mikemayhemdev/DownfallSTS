@@ -168,7 +168,7 @@ public abstract class AbstractBossCard extends AbstractCard {
                 value += Math.max(this.damage * 2.0f, 0);
             }
             if (ownerBoss instanceof CharBossWatcher && ownerBoss.stance instanceof EnDivinityStance) {
-                value *= 2; //Heavy-handed fix for Watcher not attacking on her Divinity turn. TODO: Someone who knows more about bosses check a look?
+                value *= 2; //Heavy-handed fix for Watcher not attacking on her Divinity turn.
             }
         }
 

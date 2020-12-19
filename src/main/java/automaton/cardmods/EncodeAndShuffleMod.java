@@ -19,7 +19,7 @@ public class EncodeAndShuffleMod extends BronzeCardMod {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        atb(new MakeTempCardInDiscardAction(card.makeStatEquivalentCopy(), 1)); // does this happen before Encode is removed?
+        atb(new MakeTempCardInDiscardAction(card.makeStatEquivalentCopy(), 1));
     }
 
     @Override

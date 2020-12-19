@@ -59,6 +59,5 @@ public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonSta
                 description = DESCRIPTIONS[0];
             }
         }
-        //TODO: This is possibly bad for loc
     }
 }
