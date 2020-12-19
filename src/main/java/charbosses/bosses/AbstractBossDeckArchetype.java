@@ -95,8 +95,10 @@ public abstract class AbstractBossDeckArchetype {
     }
 
     public void initializeBossPanel(){
-        BossMechanicDisplayPanel.mechanicName = bossMechanicName;
-        BossMechanicDisplayPanel.mechanicDesc = bossMechanicDesc;
+        if (bossMechanicDesc != null) {
+            BossMechanicDisplayPanel.mechanicName = bossMechanicName;
+            BossMechanicDisplayPanel.mechanicDesc = bossMechanicDesc;
+        }
     }
 
     public void addToList(ArrayList<AbstractCard> c, AbstractCard q) {

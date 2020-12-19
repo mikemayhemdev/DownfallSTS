@@ -22,7 +22,7 @@ public class CBR_IncenseBurner extends AbstractCharbossRelic {
 
     @Override
     public void onEquip() {
-        this.counter = 0;
+        this.counter = 1;
     }
 
     @Override

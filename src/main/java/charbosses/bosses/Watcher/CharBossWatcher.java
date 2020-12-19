@@ -4,6 +4,7 @@ import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
+import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.cards.anticards.PeaceOut;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.stances.AbstractEnemyStance;
@@ -31,6 +32,7 @@ public class CharBossWatcher extends AbstractCharBoss {
     protected Skeleton eyeSkeleton;
     public AnimationState eyeState;
     protected AnimationStateData eyeStateData;
+
 
     public CharBossWatcher() {
         super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
@@ -105,7 +107,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                     archetype = new ArchetypeAct1Retain();
                     break;
                 case 2:
-                    archetype = new ArchetypeAct2Calm();
+                    archetype = new ArchetypeAct2CalmNewAge();
                     break;
                 case 3:
                     archetype = new ArchetypeAct3Divinity();
@@ -116,7 +118,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                             archetype = new ArchetypeAct1Retain();
                             break;
                         case 2:
-                            archetype = new ArchetypeAct2Calm();
+                            archetype = new ArchetypeAct2CalmNewAge();
                             break;
                         case 3:
                             archetype = new ArchetypeAct3Divinity();

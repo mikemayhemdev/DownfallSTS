@@ -12,12 +12,18 @@ import charbosses.actions.util.CharbossMakePlayAction;
 import charbosses.actions.util.CharbossTurnstartDrawAction;
 import charbosses.actions.util.DelayedActionAction;
 import charbosses.actions.utility.DestroyAntiCardsAction;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Merchant.CharBossMerchant;
+import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
+import charbosses.cards.purple.EnFlyingSleeves;
+import charbosses.cards.purple.EnWish;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
+import charbosses.powers.WatcherCripplePower;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
 import charbosses.relics.CBR_MagicFlower;
@@ -28,7 +34,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -37,6 +45,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -58,6 +67,7 @@ import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -78,6 +88,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public int gameHandSize;
 
     public int mantraGained = 0;
+
+    public boolean powerhouseTurn;
 
     public EnemyEnergyManager energy;
     public EnergyOrbInterface energyOrb;
@@ -208,6 +220,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         } else {
             playMusic();
         }
+        if (chosenArchetype instanceof ArchetypeAct2CalmNewAge) {
+            AbstractCreature p = AbstractCharBoss.boss;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
+        }
     }
 
     public void playMusic() {
@@ -325,6 +341,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                         if (q instanceof AbstractBossCard) ((AbstractBossCard) q).bossDarken();
                         q.current_y = Settings.HEIGHT / 2F;
                         q.current_x = Settings.WIDTH;
+                    }
+
+                    //Dirty dirty Wish hackery
+                    if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2CalmNewAge){
+                        if (AbstractCharBoss.boss.hand.group.get(1) instanceof EnFlyingSleeves){
+                            if (AbstractCharBoss.boss.hand.group.get(2) instanceof EnWish) {
+                                Collections.swap(AbstractCharBoss.boss.hand.group,1,2);
+                            }
+                        }
                     }
                     AbstractCharBoss.boss.hand.refreshHandLayout();
                 }
