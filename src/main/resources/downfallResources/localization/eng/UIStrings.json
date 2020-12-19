@@ -116,5 +116,11 @@
     "TEXT": [
       "Living Wall Heads"
     ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "Whale Hunter",
+      "Ended the cycle."
+    ]
   }
 }
