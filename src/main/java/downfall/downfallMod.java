@@ -9,6 +9,8 @@ Event Override patches, and other things that only appear during Evil Runs.
  */
 
 import automaton.AutomatonMod;
+import automaton.EasyInfoDisplayPanel;
+import automaton.FunctionHelper;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -38,6 +40,7 @@ import charbosses.cards.anticards.ShieldSmash;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -125,8 +128,9 @@ public class downfallMod implements
         EditCardsSubscriber,
         PostUpdateSubscriber,
         StartGameSubscriber,
-        StartActSubscriber
-        , AddAudioSubscriber {
+        StartActSubscriber,
+        AddAudioSubscriber,
+        RenderSubscriber {
     public static final String modID = "downfall";
 
 
@@ -1209,4 +1213,11 @@ public class downfallMod implements
     }
 
 
+    @Override
+    public void receiveRender(SpriteBatch sb) {
+        if (FunctionHelper.doStuff) {
+            EasyInfoDisplayPanel.render(sb);
+            //I made it good - if there are further problems, PostRenderSubscriber is your man
+        }
+    }
 }

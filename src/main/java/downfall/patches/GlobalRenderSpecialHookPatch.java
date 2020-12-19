@@ -22,7 +22,6 @@ public class GlobalRenderSpecialHookPatch {
         }
         if (FunctionHelper.doStuff) { // TODO: Make this good
             FunctionHelper.render(sb);
-            EasyInfoDisplayPanel.render(sb);
         }
         StanceHelper.render(sb);
     }
