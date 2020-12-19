@@ -157,7 +157,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "Digital Carnage",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL bronze:Compile - Function gains Ethereal."
+    "DESCRIPTION": "Ethereal. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Ethereal."
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
@@ -177,7 +177,7 @@
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
-    "DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Compile - Function gains Exhaust."
+    "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Exhaust."
   },
   "bronze:CloningBeam": {
     "NAME": "Cloning Beam",
