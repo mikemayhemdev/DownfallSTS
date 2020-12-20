@@ -40,7 +40,7 @@ public class BerserkerStance extends AbstractChampStance {
 
     @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[10] + amount() + ChampChar.characterStrings.TEXT[0] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[11];
+        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[10] + amount() + ChampChar.characterStrings.TEXT[48] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[11];
     }
 
     public static int amount() {

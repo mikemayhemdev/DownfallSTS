@@ -2,11 +2,8 @@ package champ;
 
 import basemod.BaseMod;
 import champ.patches.SymbolDescriptionPatch;
-import champ.powers.FocusedBerPower;
-import champ.powers.FocusedDefPower;
 import champ.powers.FocusedGladPower;
 import champ.stances.*;
-import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.Vector2;
@@ -66,12 +63,7 @@ public class StanceHelper {
 
     public static String getStanceTechnique() {
         if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-            if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)) {
-                return ChampChar.characterStrings.TEXT[45] + AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount + ChampChar.characterStrings.TEXT[46];
-            }
-            else {
-                return ChampChar.characterStrings.TEXT[10];
-            }
+            return ChampChar.characterStrings.TEXT[10] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[48];
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
             return ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
         } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
@@ -180,6 +172,7 @@ public class StanceHelper {
                 }
             }
     }
+
     private static void renderHelper(SpriteBatch sb, TextureAtlas.AtlasRegion img, float drawX, float drawY) {
         sb.draw(img, drawX + img.offsetX - (float) img.originalWidth / 2.0F, drawY + img.offsetY - (float) img.originalHeight / 2.0F, (float) img.originalWidth / 2.0F - img.offsetX, (float) img.originalHeight / 2.0F - img.offsetY, (float) img.packedWidth, (float) img.packedHeight, Settings.scale, Settings.scale, 0F);
     }
