@@ -26,6 +26,9 @@ public class Debug extends AbstractBronzeCard {
                     String compileText = splitText[1] + splitText[2];
                     q.rawDescription = q.rawDescription.replaceAll(compileText, "");
                 } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+                else if (q.rawDescription.contains("bronze:Compile")) {
+                    q.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
+                }
             }
         }
     }

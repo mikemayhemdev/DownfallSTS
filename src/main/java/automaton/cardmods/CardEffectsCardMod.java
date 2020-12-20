@@ -48,6 +48,9 @@ public class CardEffectsCardMod extends BronzeCardMod {
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
         } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+        else if (card.rawDescription.contains("bronze:Compile")) {
+            x = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
+        } // IT NEVER ENDS!!!!!
         if (card.rawDescription.contains(" π")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " π"));
             String compileText = splitText[1] + splitText[2];
@@ -63,7 +66,11 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + getRealDesc(stored) + " NL ";
+        String x = getRealDesc(stored);
+        if (!x.equals("")) {
+            x += " NL ";
+        }
+        return rawDescription + x;
     }
 
     @Override
