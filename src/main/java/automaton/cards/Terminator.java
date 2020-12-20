@@ -23,7 +23,7 @@ public class Terminator extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (lastCard()) {
-            baseDamage *= 2; // FOR SOME REASON THIS TURNS INTO 56 DAMAGE FROM 7. That would mean onCompile is being called 3 times, but it can't be
+            baseDamage *= 2; // FOR SOME REASON THIS TURNS INTO 56 DAMAGE FROM 7. That would mean onCompile is being called 3 times, but it can't be. Even weirder, my breakpoints won't work. I must sleep on this one
         }
         super.onCompile(function, forGameplay);
     }

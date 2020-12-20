@@ -5,6 +5,7 @@ import automaton.cardmods.EncodeMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
+import automaton.cards.Terminator;
 import automaton.powers.*;
 import automaton.relics.BronzeBoon;
 import automaton.util.TextureLoader;
