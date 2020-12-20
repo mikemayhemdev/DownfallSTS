@@ -1,7 +1,5 @@
 package twins.patches;
 
-import twins.DonuDecaMod;
-import twins.TwinsHelper;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -11,6 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
+import twins.DonuDecaMod;
+import twins.TwinsHelper;
 
 @SpirePatch(
         clz = UseCardAction.class,
@@ -42,31 +42,18 @@ public class GoSomewhereElsePatch {
                 public void update() {
                     isDone = true;
                     AbstractDungeon.player.limbo.removeCard(card);
-                    TwinsHelper.blasters.addToTop(card);
+                    TwinsHelper.donuCards.addToTop(card);
                 }
             });
             return false;
-        }
-        else if (card.hasTag(DonuDecaMod.SHIELD)) {
+        } else if (card.hasTag(DonuDecaMod.SHIELD)) {
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
                     AbstractDungeon.player.limbo.removeCard(card);
-                    TwinsHelper.shields.addToTop(card);
-                }
-            });
-            return false;
-        }
-        else if (card.hasTag(DonuDecaMod.CORE)) {
-            AbstractDungeon.player.limbo.addToTop(card);
-            AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractDungeon.player.limbo.removeCard(card);
-                    TwinsHelper.cores.addToTop(card);
+                    TwinsHelper.decaCards.addToTop(card);
                 }
             });
             return false;

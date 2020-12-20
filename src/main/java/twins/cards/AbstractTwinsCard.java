@@ -1,8 +1,5 @@
 package twins.cards;
 
-import twins.TwinsChar;
-import twins.TwinsHelper;
-import twins.actions.FireFromPileAction;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -16,6 +13,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import twins.TwinsChar;
+import twins.TwinsHelper;
+import twins.actions.FireFromPileAction;
 
 import java.util.ArrayList;
 
@@ -162,16 +162,13 @@ public abstract class AbstractTwinsCard extends CustomCard {
         return new VulnerablePower(m, i, false);
     }
 
-    void fireBlaster(int amount) {
-        atb(new FireFromPileAction(TwinsHelper.blasters, amount));
-    }
-
-    void fireShields(int amount) {
-        atb(new FireFromPileAction(TwinsHelper.shields, amount));
-    }
-
-    void fireCores(int amount) {
-        atb(new FireFromPileAction(TwinsHelper.cores, amount));
+    void fireLeader() {
+        if (TwinsHelper.donuInFront) {
+            atb(new FireFromPileAction(TwinsHelper.donuCards, 1));
+        }
+        else {
+            atb(new FireFromPileAction(TwinsHelper.decaCards, 1));
+        }
     }
 
     @java.lang.Override

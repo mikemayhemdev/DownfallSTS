@@ -1,7 +1,5 @@
 package twins;
 
-import twins.cards.*;
-import twins.relics.BronzeBoon;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -18,7 +16,6 @@ import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
-import java.lang.Override;
 import java.util.ArrayList;
 
 import static twins.DonuDecaMod.*;
@@ -27,27 +24,27 @@ public class TwinsChar extends CustomPlayer {
     public static final String ID = makeID("theAutomaton");
     public static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] orbTextures = {
-            "bronzeResources/images/char/mainChar/orb/layer1.png",
-            "bronzeResources/images/char/mainChar/orb/layer2.png",
-            "bronzeResources/images/char/mainChar/orb/layer3.png",
-            "bronzeResources/images/char/mainChar/orb/layer4.png",
-            "bronzeResources/images/char/mainChar/orb/layer5.png",
-            "bronzeResources/images/char/mainChar/orb/layer6.png",
-            "bronzeResources/images/char/mainChar/orb/layer1d.png",
-            "bronzeResources/images/char/mainChar/orb/layer2d.png",
-            "bronzeResources/images/char/mainChar/orb/layer3d.png",
-            "bronzeResources/images/char/mainChar/orb/layer4d.png",
-            "bronzeResources/images/char/mainChar/orb/layer5d.png",};
+            "twinsResources/images/char/mainChar/orb/layer1.png",
+            "twinsResources/images/char/mainChar/orb/layer2.png",
+            "twinsResources/images/char/mainChar/orb/layer3.png",
+            "twinsResources/images/char/mainChar/orb/layer4.png",
+            "twinsResources/images/char/mainChar/orb/layer5.png",
+            "twinsResources/images/char/mainChar/orb/layer6.png",
+            "twinsResources/images/char/mainChar/orb/layer1d.png",
+            "twinsResources/images/char/mainChar/orb/layer2d.png",
+            "twinsResources/images/char/mainChar/orb/layer3d.png",
+            "twinsResources/images/char/mainChar/orb/layer4d.png",
+            "twinsResources/images/char/mainChar/orb/layer5d.png",};
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
     public float renderscale = 1.0F;
 
-    private String atlasURL = "bronzeResources/images/char/mainChar/champ.atlas";
-    private String jsonURL = "bronzeResources/images/char/mainChar/champ.json";
+    private String atlasURL = "twinsResources/images/char/mainChar/champ.atlas";
+    private String jsonURL = "twinsResources/images/char/mainChar/champ.json";
 
     public TwinsChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String)null, (String)null);
+        super(name, setClass, orbTextures, "twinsResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -107,21 +104,13 @@ public class TwinsChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            retVal.add(Strike.ID);
-        }
-        for (int i = 0; i < 4; i++) {
-            retVal.add(Defend.ID);
-        }
-        retVal.add(Peashooter.ID);
-        retVal.add(DrainingPulse.ID);
-        retVal.add(OpenFire.ID);
+        //TODO: This
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(BronzeBoon.ID);
+        //TODO: This
         return retVal;
     }
 
@@ -155,7 +144,7 @@ public class TwinsChar extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return Enums.BRONZE_AUTOMATON;
+        return Enums.TWINS_BLORANGE;
     }
 
     @Override
@@ -175,7 +164,8 @@ public class TwinsChar extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new OpenFire();
+        //TODO: This
+        return null;
     }
 
     @Override
@@ -218,10 +208,10 @@ public class TwinsChar extends CustomPlayer {
 
     public static class Enums {
         @SpireEnum
-        public static PlayerClass THE_AUTOMATON;
-        @SpireEnum(name = "THE_BRONZE_AUTOMATON")
-        public static AbstractCard.CardColor BRONZE_AUTOMATON;
-        @SpireEnum(name = "THE_BRONZE_AUTOMATON")
+        public static PlayerClass THE_TWINS;
+        @SpireEnum(name = "TWINS_BLORANGE")
+        public static AbstractCard.CardColor TWINS_BLORANGE;
+        @SpireEnum(name = "TWINS_BLORANGE")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
