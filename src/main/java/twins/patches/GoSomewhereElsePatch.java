@@ -35,7 +35,7 @@ public class GoSomewhereElsePatch {
         if (card.purgeOnUse) {
             return true;
         }
-        if (card.hasTag(DonuDecaMod.BLASTER)) {
+        if (card.hasTag(DonuDecaMod.DONU_CARD)) {
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override
@@ -46,7 +46,7 @@ public class GoSomewhereElsePatch {
                 }
             });
             return false;
-        } else if (card.hasTag(DonuDecaMod.SHIELD)) {
+        } else if (card.hasTag(DonuDecaMod.DECA_CARD)) {
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override

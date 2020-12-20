@@ -51,9 +51,9 @@ public class DonuDecaMod implements
     public static Color placeholderColor = new Color(150F / 255F, 50F / 255F, 200F / 255F, 1); // TODO: CHANGE
     public static Color potionLabColor = new Color(250F / 255F, 100F / 255F, 200F / 255F, 1); // TODO: CHANGE
     @SpireEnum
-    public static AbstractCard.CardTags BLASTER;
+    public static AbstractCard.CardTags DONU_CARD;
     @SpireEnum
-    public static AbstractCard.CardTags SHIELD;
+    public static AbstractCard.CardTags DECA_CARD;
     @SpireEnum
     public static AbstractCard.CardTags BURNOUT;
     private static String modID = "twins";
