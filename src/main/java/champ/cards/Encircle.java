@@ -30,7 +30,7 @@ public class Encircle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+       // if (upgraded) techique();
 
         for (int i = 0; i < magicNumber; i++) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -56,7 +56,8 @@ public class Encircle extends AbstractChampCard {
 
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
+        upgradeDamage(2);
         initializeDescription();
     }
 }

@@ -21,7 +21,7 @@ public class BladeFlurry extends AbstractChampCard {
         baseDamage = DAMAGE;
        // exhaust = true;
         magicNumber = baseMagicNumber = 2;
-        tags.add(ChampMod.TECHNIQUE);
+      //  tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOGLADIATOR);
         tags.add(CardTags.STRIKE);
@@ -29,7 +29,7 @@ public class BladeFlurry extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
-        techique();
+      // techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         atb(new AbstractGameAction() {
             @Override

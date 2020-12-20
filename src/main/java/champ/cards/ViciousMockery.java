@@ -23,7 +23,7 @@ public class ViciousMockery extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
-        if (gcombo()) {
+        {
             if (m.getIntentBaseDmg() > -1) applyToSelf(new DexterityPower(p, magicNumber));
         }
     }

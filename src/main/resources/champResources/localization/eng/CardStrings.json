@@ -144,8 +144,8 @@
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
-    "DESCRIPTION": "*Defensive champ:Combo: Double your champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL *Defensive champ:Combo: Double your champ:Counter."
+    "DESCRIPTION": "Double your champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Double your champ:Counter."
   },
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
@@ -194,7 +194,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "*Gladiator champ:Combo: If the enemy intends to attack, gain !M! Dexterity."
+    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity."
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
