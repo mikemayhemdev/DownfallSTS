@@ -5,7 +5,6 @@ import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CalledShotPower;
-import champ.powers.FocusedBerPower;
 import champ.powers.ResolvePower;
 import champ.relics.SignatureFinisher;
 import champ.stances.*;
@@ -354,16 +353,8 @@ public abstract class AbstractChampCard extends CustomCard {
                     }
                 } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[32];
-                    prefixTech = prefixTech + 3;
-                    if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)) {
-
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[54];
-                        prefixTech = prefixTech + AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount;
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                    } else {
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                    }
-
+                    prefixTech = prefixTech + BerserkerStance.amount();
+                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
                 } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[33];
                 }
@@ -374,7 +365,9 @@ public abstract class AbstractChampCard extends CustomCard {
                 this.rawDescription = prefixTech + DESCRIPTION;
             }
         }
-        if (this.hasTag(FINISHER)) {
+        if (this.
+
+                hasTag(FINISHER)) {
             prefixFin = ChampChar.characterStrings.TEXT[34];
             if (AbstractDungeon.player != null) {
                 if (AbstractDungeon.player.stance instanceof DefensiveStance) {
@@ -394,7 +387,9 @@ public abstract class AbstractChampCard extends CustomCard {
                 this.rawDescription = prefixTech + prefixFin + DESCRIPTION;
             }
         }
-        super.initializeDescription();
+        super.
+
+                initializeDescription();
 
     }
 
