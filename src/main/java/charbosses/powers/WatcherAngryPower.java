@@ -6,6 +6,7 @@
 package charbosses.powers;
 
 import charbosses.actions.unique.EnemyChangeStanceAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.stances.EnDivinityStance;
 import charbosses.stances.EnWrathStance;
@@ -47,6 +48,15 @@ public class WatcherAngryPower extends AbstractPower {
         }
         return super.onLoseHp(damageAmount);
     }
+
+    @Override
+    public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
+        if (this.owner instanceof AbstractCharBoss) {
+            return damageType == DamageInfo.DamageType.NORMAL ? ((AbstractCharBoss) this.owner).stance.atDamageReceive(damage, damageType) : damage;
+        }
+        return super.atDamageReceive(damage, damageType);
+    }
+
     static {
         powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
         NAME = powerStrings.NAME;
