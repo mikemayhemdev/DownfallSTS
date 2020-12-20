@@ -63,6 +63,8 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int energyGeneratedIfPlayed = 0;
     public static final String[] TEXT;
 
+    public int newPrio = 0;
+
     public int manualCustomDamageModifier = 0;
     public boolean manualCustomVulnModifier = false;
 
@@ -213,7 +215,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         for (final AbstractPower p : player.powers) {
             tmp = p.atDamageReceive(tmp, this.damageTypeForTurn, this);
         }
-        tmp = player.stance.atDamageReceive(tmp, this.damageTypeForTurn);
+        tmp = this.owner.stance.atDamageReceive(tmp, this.damageTypeForTurn);
         for (final AbstractPower p : this.owner.powers) {
             tmp = p.atDamageFinalGive(tmp, this.damageTypeForTurn, this);
         }

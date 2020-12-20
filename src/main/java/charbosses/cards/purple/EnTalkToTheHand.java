@@ -43,11 +43,6 @@ public class EnTalkToTheHand extends AbstractBossCard {
 
     }
 
-    @Override
-    public int getPriority(ArrayList<AbstractCard> hand) {
-        return super.getPriority(hand) + 30;
-    }
-
     public AbstractCard makeCopy() {
         return new EnTalkToTheHand();
     }

@@ -3,6 +3,7 @@ package charbosses.bosses.Watcher.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
+import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.EnDefendBlue;
 import charbosses.cards.purple.*;
 import charbosses.powers.WatcherCripplePower;
@@ -15,6 +16,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
+
+    private AbstractBossCard theVeryImportantBlasphemy = null;
+    private AbstractBossCard theVeryImportantFlyingSleeves = null;
 
     public ArchetypeAct2CalmNewAge() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
@@ -63,12 +67,20 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
                     break;
                 case 3:
                     addToList(cardsList, new EnWallop(), true);
-                    addToList(cardsList, new EnBlasphemy(), true);  //not used
-                    addToList(cardsList, new EnFlyingSleeves(), true);  //not used
+                    theVeryImportantBlasphemy = new EnBlasphemy();
+                    theVeryImportantBlasphemy.newPrio = 1;
+                    addToList(cardsList, theVeryImportantBlasphemy, true);
+                    theVeryImportantFlyingSleeves = new EnFlyingSleeves();
+                    theVeryImportantFlyingSleeves.newPrio = 1;
+                    addToList(cardsList, theVeryImportantFlyingSleeves, true);
                     turn++;
                     break;
                 case 4:
-                    addToList(cardsList, new EnWish(), extraUpgrades);  //removed
+                    theVeryImportantBlasphemy.newPrio = -2;
+                    theVeryImportantFlyingSleeves.newPrio = 0;
+                    AbstractBossCard c = new EnWish();
+                    c.newPrio = -1;
+                    addToList(cardsList, c, extraUpgrades);  //removed
                     addToList(cardsList, new EnTranquility(), true);  //not used
                     addToList(cardsList, new EnVigilance(), extraUpgrades);
                     turn++;

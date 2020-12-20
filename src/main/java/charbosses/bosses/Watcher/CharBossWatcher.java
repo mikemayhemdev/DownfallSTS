@@ -4,6 +4,7 @@ import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
+import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.cards.anticards.PeaceOut;
 import charbosses.core.EnemyEnergyManager;
@@ -98,13 +99,13 @@ public class CharBossWatcher extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1Retain();
+            archetype = new ArchetypeAct1RetainNewAge();
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1Retain();
+                    archetype = new ArchetypeAct1RetainNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2CalmNewAge();
@@ -115,7 +116,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                 case 4: {
                     switch (NeowBoss.Rezzes) {
                         case 1:
-                            archetype = new ArchetypeAct1Retain();
+                            archetype = new ArchetypeAct1RetainNewAge();
                             break;
                         case 2:
                             archetype = new ArchetypeAct2CalmNewAge();
@@ -130,7 +131,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                     break;
                 }
                 default:
-                    archetype = new ArchetypeAct1Retain();
+                    archetype = new ArchetypeAct1RetainNewAge();
                     break;
             }
 

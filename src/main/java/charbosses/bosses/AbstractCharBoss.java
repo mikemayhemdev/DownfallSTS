@@ -15,16 +15,20 @@ import charbosses.actions.utility.DestroyAntiCardsAction;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
+import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
 import charbosses.cards.purple.EnFlyingSleeves;
+import charbosses.cards.purple.EnPerseverance;
+import charbosses.cards.purple.EnSandsOfTime;
 import charbosses.cards.purple.EnWish;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
 import charbosses.powers.ShivTimeEaterPower;
+import charbosses.powers.WatcherAngryPower;
 import charbosses.powers.WatcherCripplePower;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
@@ -74,6 +78,7 @@ import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 
 public abstract class AbstractCharBoss extends AbstractMonster {
@@ -230,6 +235,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             AbstractCreature p = AbstractCharBoss.boss;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ShivTimeEaterPower(p)));
         }
+        if (chosenArchetype instanceof ArchetypeAct1RetainNewAge) {
+            AbstractCreature p = AbstractCharBoss.boss;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherAngryPower(p)));
+        }
     }
 
     public void playMusic() {
@@ -335,6 +344,17 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         return chosenArchetype.getThisTurnCards();
     }
 
+    class sortByNewPrio implements Comparator<AbstractBossCard>
+    {
+        // Used for sorting in ascending order of
+        // roll number
+        public int compare(AbstractBossCard a, AbstractBossCard b)
+        {
+            return a.newPrio - b.newPrio;
+        }
+    }
+
+
     public void endTurnStartTurn() {
         if (!AbstractDungeon.getCurrRoom().isBattleOver) {
             //addToBot(new EnemyDrawCardAction(this, this.gameHandSize, true));
@@ -349,14 +369,20 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                         q.current_x = Settings.WIDTH;
                     }
 
-                    //Dirty dirty Wish hackery
-                    if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2CalmNewAge){
-                        if (AbstractCharBoss.boss.hand.group.get(1) instanceof EnFlyingSleeves){
-                            if (AbstractCharBoss.boss.hand.group.get(2) instanceof EnWish) {
-                                Collections.swap(AbstractCharBoss.boss.hand.group,1,2);
-                            }
-                        }
+                    ArrayList<AbstractBossCard> handAsBoss = new ArrayList<>();
+                    for (AbstractCard c : AbstractCharBoss.boss.hand.group){
+                        handAsBoss.add((AbstractBossCard)c);
                     }
+
+                    Collections.sort(handAsBoss, new sortByNewPrio());
+
+                    ArrayList<AbstractCard> newHand = new ArrayList<>();
+                    for (AbstractCard c : handAsBoss){
+                        newHand.add(c);
+                    }
+
+                    AbstractCharBoss.boss.hand.group = newHand;
+
                     AbstractCharBoss.boss.hand.refreshHandLayout();
                 }
             });

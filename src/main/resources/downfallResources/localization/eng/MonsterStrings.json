@@ -66,7 +66,9 @@
       "Blasphemer's Demise",
       "Watcher is debuffed with Fall from Grace. NL When Fall from Grace triggers, it is reset and can be triggered again.",
       "Time to Die",
-      "Every 6th card you play, Silent gains +1 damage to Shivs."
+      "Every 6th card you play, Silent gains +1 damage to Shivs.",
+      "Unbridled Rage",
+      "When Watcher is reduced to 50% HP, she enters Wrath permanently."
     ]
   }
 }

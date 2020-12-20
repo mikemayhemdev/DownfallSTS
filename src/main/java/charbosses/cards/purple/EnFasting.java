@@ -60,11 +60,6 @@ public class EnFasting extends AbstractBossCard {
 
     }
 
-    @Override
-    public int getPriority(ArrayList<AbstractCard> hand) {
-        return 50;
-    }
-
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Fasting2");
     }

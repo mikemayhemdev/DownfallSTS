@@ -71,5 +71,11 @@
       "Whenever you play #b",
       " cards, Silent gains #b",
       " #yAccuracy."]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "Boiling Wrath",
+    "DESCRIPTIONS": [
+      "When Watcher is reduced to 50% HP, she enters Wrath permanently."
+      ]
   }
 }
