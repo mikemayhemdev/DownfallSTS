@@ -70,7 +70,9 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 3:
                     theVeryImportantPerseverence.newPrio = -1;
                     theVeryImportantSandsOfTime.newPrio = -1;
-                    addToList(cardsList, new EnMiracle(), false);
+                    AbstractBossCard c = new EnMiracle();
+                    c.newPrio = -2;
+                    addToList(cardsList, c, false);
                     addToList(cardsList, new EnSashWhip(), false);
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnRegret(), false);
