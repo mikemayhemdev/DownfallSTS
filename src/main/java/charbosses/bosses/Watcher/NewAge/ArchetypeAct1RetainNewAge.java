@@ -64,15 +64,12 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                     //Turn 3
                     addToList(cardsList, new EnPanacea(), extraUpgrades);
                     addToList(cardsList, new EnFasting(), false);
-                    addToList(cardsList, new EnCollect(), true);
+                    addToList(cardsList, new EnClumsy(), true);
                     turn++;
                     break;
                 case 3:
-                    theVeryImportantPerseverence.newPrio = -1;
+                    theVeryImportantPerseverence.newPrio = -2;
                     theVeryImportantSandsOfTime.newPrio = -1;
-                    AbstractBossCard c = new EnMiracle();
-                    c.newPrio = -2;
-                    addToList(cardsList, c, false);
                     addToList(cardsList, new EnSashWhip(), false);
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnRegret(), false);
