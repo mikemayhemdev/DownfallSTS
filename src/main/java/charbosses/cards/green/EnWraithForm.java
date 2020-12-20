@@ -30,7 +30,7 @@ public class EnWraithForm extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new IntangiblePower(m, magicNumber), magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new IntangiblePlayerPower(m, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(m, m, new EnemyWraithFormPower(m, -1), -1));
     }
 

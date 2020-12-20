@@ -17,11 +17,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import static automaton.AutomatonMod.*;
 
@@ -64,8 +67,6 @@ public class AutomatonChar extends CustomPlayer {
 
         this.loadAnimation(atlasURL, this.jsonURL, renderscale);
         this.state.setAnimation(0, "idle", true);
-
-
     }
 
 

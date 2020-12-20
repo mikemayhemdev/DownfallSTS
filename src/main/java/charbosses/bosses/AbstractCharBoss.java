@@ -864,6 +864,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     @Override
     public void damage(final DamageInfo info) {
+        if (info.output > 0 && this.hasPower("IntangiblePlayer")) {
+            info.output = 1;
+        }
+
         int damageAmount = info.output;
         boolean hadBlock = true;
         if (this.currentBlock == 0) {
