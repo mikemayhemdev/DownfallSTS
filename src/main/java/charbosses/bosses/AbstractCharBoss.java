@@ -1445,10 +1445,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 r.render(sb);
             }
             if (!this.orbs.isEmpty()) {
-                Iterator var2 = this.orbs.iterator();
 
-                while (var2.hasNext()) {
-                    AbstractOrb o = (AbstractOrb) var2.next();
+                for (AbstractOrb o : this.orbs) {
                     o.render(sb);
                 }
             }
