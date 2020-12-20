@@ -221,9 +221,6 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        System.out.println(position);
-        System.out.println(FunctionHelper.held.size() - 1);
-        System.out.println(position == FunctionHelper.held.size() - 1);
         return position == FunctionHelper.held.size() - 1;
     }
 
