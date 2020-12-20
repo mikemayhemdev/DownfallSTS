@@ -5,7 +5,6 @@ import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cardmods.EncodeMod;
-import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
@@ -60,7 +59,6 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public int position = -1;
-    public int fullLen = -1;
 
     public boolean doSpecialCompileStuff = true;
 
@@ -223,10 +221,13 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        return position == fullLen;
+        System.out.println(position);
+        System.out.println(FunctionHelper.held.size() - 1);
+        System.out.println(position == FunctionHelper.held.size() - 1);
+        return position == FunctionHelper.held.size() - 1;
     }
 
     boolean firstCard() {
-        return position== 0;
+        return position == 0;
     }
 }

@@ -44,9 +44,6 @@ public class GoSomewhereElsePatch {
             card.target_x = cardPositions[FunctionHelper.held.size()].x;
             card.target_y = cardPositions[FunctionHelper.held.size()].y;
             CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
-            if (card instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) card).position = ((AbstractBronzeCard) card).getSequencePosition();
-            }
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override

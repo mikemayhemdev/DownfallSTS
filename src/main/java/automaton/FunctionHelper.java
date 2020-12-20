@@ -100,10 +100,8 @@ public class FunctionHelper {
             ((AbstractBronzeCard) c).onInput();
         }
         held.addToTop(c);
-        for (AbstractCard q : held.group) {
-            if (q instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) q).fullLen = held.size();
-            }
+        if (c instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) c).position = ((AbstractBronzeCard) c).getSequencePosition();
         }
         if (held.size() == max) {
             output();
