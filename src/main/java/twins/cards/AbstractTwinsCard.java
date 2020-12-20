@@ -34,7 +34,7 @@ public abstract class AbstractTwinsCard extends CustomCard {
 
     public AbstractTwinsCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
-                cost, "ERROR", type, TwinsChar.Enums.BRONZE_AUTOMATON, rarity, target);
+                cost, "ERROR", type, TwinsChar.Enums.TWINS_BLORANGE, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
         name = NAME = cardStrings.NAME;
         originalName = NAME;
@@ -165,8 +165,7 @@ public abstract class AbstractTwinsCard extends CustomCard {
     void fireLeader() {
         if (TwinsHelper.donuInFront) {
             atb(new FireFromPileAction(TwinsHelper.donuCards, 1));
-        }
-        else {
+        } else {
             atb(new FireFromPileAction(TwinsHelper.decaCards, 1));
         }
     }
