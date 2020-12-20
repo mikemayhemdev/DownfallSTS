@@ -2,6 +2,7 @@ package charbosses.bosses.Watcher.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
+import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.blue.EnDefendBlue;
 import charbosses.cards.purple.*;
 import charbosses.powers.WatcherCripplePower;
@@ -13,7 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ArchetypeAct2CalmNewAge extends ArchetypeBaseDefect {
+public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
     public ArchetypeAct2CalmNewAge() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");

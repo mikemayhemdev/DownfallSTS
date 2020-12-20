@@ -3,6 +3,7 @@ package charbosses.bosses.Silent;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
 import charbosses.cards.anticards.Antidote;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.math.MathUtils;
@@ -37,13 +38,13 @@ public class CharBossSilent extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1Shivs();
+            archetype = new ArchetypeAct1ShivsNewAge();
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1Shivs();
+                    archetype = new ArchetypeAct1ShivsNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2Finisher();
@@ -56,7 +57,7 @@ public class CharBossSilent extends AbstractCharBoss {
                     {
                     switch (NeowBoss.Rezzes) {
                         case 1:
-                            archetype = new ArchetypeAct1Shivs();
+                            archetype = new ArchetypeAct1ShivsNewAge();
                             break;
                         case 2:
                             archetype = new ArchetypeAct2Finisher();
@@ -71,7 +72,7 @@ public class CharBossSilent extends AbstractCharBoss {
                     break;
                 }
                 default:
-                    archetype = new ArchetypeAct1Shivs();
+                    archetype = new ArchetypeAct1ShivsNewAge();
                     break;
             }
 

@@ -64,7 +64,9 @@
       "Ancient Construct",
       "Begins the fight with 2 Bronze Orb minions. NL Gains 1 Artifact each turn if it did not already have Artifact.",
       "Blasphemer's Demise",
-      "Watcher is debuffed with Fall from Grace. NL When Fall from Grace triggers, it is reset and can be triggered again."
+      "Watcher is debuffed with Fall from Grace. NL When Fall from Grace triggers, it is reset and can be triggered again.",
+      "Time to Die",
+      "Every 6th card you play, Silent gains +1 damage to Shivs."
     ]
   }
 }

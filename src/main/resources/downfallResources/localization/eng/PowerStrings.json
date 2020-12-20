@@ -64,5 +64,12 @@
       " more unblocked Attack damage to apply -4 Strength to Watcher when she next enters Divinity or plays Ragnarok.",
       "Watcher will lose 4 Strength to Watcher when she next enters Divinity or plays Ragnarok."
     ]
+  },
+  "downfall:ShivTimeEaterPower": {
+    "NAME": "Time to Die",
+    "DESCRIPTIONS": [
+      "Whenever you play #b",
+      " cards, Silent gains #b",
+      " #yAccuracy."]
   }
 }

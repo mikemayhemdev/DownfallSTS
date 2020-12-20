@@ -14,6 +14,7 @@ import charbosses.actions.util.DelayedActionAction;
 import charbosses.actions.utility.DestroyAntiCardsAction;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Merchant.CharBossMerchant;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.EnemyCardGroup;
@@ -23,6 +24,7 @@ import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyEmptyOrbSlot;
+import charbosses.powers.ShivTimeEaterPower;
 import charbosses.powers.WatcherCripplePower;
 import charbosses.relics.AbstractCharbossRelic;
 import charbosses.relics.CBR_LizardTail;
@@ -223,6 +225,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (chosenArchetype instanceof ArchetypeAct2CalmNewAge) {
             AbstractCreature p = AbstractCharBoss.boss;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
+        }
+        if (chosenArchetype instanceof ArchetypeAct1ShivsNewAge) {
+            AbstractCreature p = AbstractCharBoss.boss;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ShivTimeEaterPower(p)));
         }
     }
 
