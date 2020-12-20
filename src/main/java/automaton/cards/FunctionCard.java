@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.cardmods.CardEffectsCardMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
+import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -45,6 +46,13 @@ public class FunctionCard extends AbstractBronzeCard {
         AbstractCard q = super.makeStatEquivalentCopy();
         q.type = this.type;
         q.target = this.target;
+        if (q instanceof CustomCard) {
+            if (q.type == AbstractCard.CardType.SKILL) {
+                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
+            } else {
+                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
+            }
+        }
         return q;
     }
 
