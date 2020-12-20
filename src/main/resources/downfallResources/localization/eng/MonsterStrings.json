@@ -68,7 +68,9 @@
       "Time to Die",
       "Every 6th card you play, Silent gains +1 damage to Shivs.",
       "Unbridled Rage",
-      "When Watcher is reduced to 50% HP, she enters Wrath permanently."
+      "When Watcher is reduced to 50% HP, she enters Wrath permanently.",
+      "Doppleganger",
+      "A mirror image of Silent is masking her real location. Attacking the mirror removes it from combat for the turn."
     ]
   }
 }

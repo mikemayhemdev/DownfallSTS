@@ -3,18 +3,26 @@ package charbosses.bosses.Silent;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct2MirrorImageNewAge;
 import charbosses.cards.anticards.Antidote;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.monsters.MirrorImageSilent;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
 public class CharBossSilent extends AbstractCharBoss {
@@ -47,7 +55,7 @@ public class CharBossSilent extends AbstractCharBoss {
                     archetype = new ArchetypeAct1ShivsNewAge();
                     break;
                 case 2:
-                    archetype = new ArchetypeAct2Finisher();
+                    archetype = new ArchetypeAct2MirrorImageNewAge();
                     break;
                 case 3:
                     archetype = new ArchetypeAct3Poison();
@@ -60,7 +68,7 @@ public class CharBossSilent extends AbstractCharBoss {
                             archetype = new ArchetypeAct1ShivsNewAge();
                             break;
                         case 2:
-                            archetype = new ArchetypeAct2Finisher();
+                            archetype = new ArchetypeAct2MirrorImageNewAge();
                             break;
                         case 3:
                             archetype = new ArchetypeAct3Poison();
@@ -119,6 +127,15 @@ public class CharBossSilent extends AbstractCharBoss {
         }
 
         downfallMod.saveBossFight(CharBossSilent.ID);
+    }
+
+    @Override
+    public void usePreBattleAction() {
+        super.usePreBattleAction();
+        if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
+            AbstractCreature p = AbstractCharBoss.boss;
+            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new MirrorImageSilent(), true));
+        }
     }
 
 }
