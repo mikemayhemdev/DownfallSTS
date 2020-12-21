@@ -38,13 +38,13 @@ public class GlobalTurnStartCheckPatch {
             if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
                 AbstractDungeon.getCurrRoom().monsters.monsters.removeIf(c -> c instanceof MirrorImageSilent);
                 AbstractCreature p = AbstractCharBoss.boss;
-                AbstractMonster m = new MirrorImageSilent();
+                AbstractMonster m = new MirrorImageSilent(CharBossSilent.posStorage ? 100 : -350, -20);
                 AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(m, false)); // Can't be a minion because the "Minion" text will popup. Should be fine because they die before they can take damage.
                 boolean swap = AbstractDungeon.cardRandomRng.randomBoolean();
                 if (swap) {
                     CharBossSilent.swapCreature(p, m);
                 }
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new FakeOrRealPower(AbstractCharBoss.boss)));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FakeOrRealPower(p)));
                 CharBossSilent.foggy = true;
             }
         }

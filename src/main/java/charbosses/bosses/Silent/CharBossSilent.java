@@ -36,6 +36,8 @@ public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];
 
+    public static boolean posStorage = false;
+
     public CharBossSilent() {
         super(NAME, ID, 80, -4.0f, -16.0f, 240.0f, 290.0f, null, 100.0f, -20.0f, PlayerClass.THE_SILENT);
         this.energyOrb = new EnergyOrbGreen();
@@ -182,12 +184,24 @@ public class CharBossSilent extends AbstractCharBoss {
         p.drawY = origdY;
         p.hb.x = orighX;
         p.hb.y = orighY;
+        posStorage = !posStorage;
     }
 
     @Override
     public void usePreBattleAction() {
         super.usePreBattleAction();
-
+        if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
+            AbstractDungeon.getCurrRoom().monsters.monsters.removeIf(c -> c instanceof MirrorImageSilent);
+            AbstractCreature p = this;
+            AbstractMonster m = new MirrorImageSilent(CharBossSilent.posStorage ? 100 : -350, -20);
+            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(m, false)); // Can't be a minion because the "Minion" text will popup. Should be fine because they die before they can take damage.
+            boolean swap = AbstractDungeon.cardRandomRng.randomBoolean();
+            if (swap) {
+                CharBossSilent.swapCreature(p, m);
+            }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FakeOrRealPower(this)));
+            CharBossSilent.foggy = true;
+        }
     }
 
 }
