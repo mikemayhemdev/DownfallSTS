@@ -51,15 +51,17 @@ public class FakeOrRealPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (q instanceof MirrorImageSilent) {
-                q.currentHealth = 0;
-                q.isDead = true;
-                AbstractDungeon.effectList.add(new SmallerSmokeBombEffect(q.hb.cX, q.hb.cY));
+        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
+            for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (q instanceof MirrorImageSilent) {
+                    q.currentHealth = 0;
+                    q.isDead = true;
+                    AbstractDungeon.effectList.add(new SmallerSmokeBombEffect(q.hb.cX, q.hb.cY));
+                }
+                addToTop(new RemoveSpecificPowerAction(q, q, this.ID));
             }
-            addToTop(new RemoveSpecificPowerAction(q, q, this.ID));
+            CharBossSilent.foggy = false;
         }
-        CharBossSilent.foggy = false;
         return damageAmount;
     }
 
