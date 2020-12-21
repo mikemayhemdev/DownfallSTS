@@ -1,10 +1,13 @@
 package champ.cards;
 
 import champ.powers.ResolvePower;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static champ.ChampMod.fatigue;
 
 public class DeathBlow extends AbstractChampCard {
 
@@ -28,6 +31,9 @@ public class DeathBlow extends AbstractChampCard {
         baseDamage = baseDamage / 2;
         calculateCardDamage(null);
         allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        atb(new SelectCardsInHandAction(1, "Choose.", c->c.cost > 0, (cards) -> {
+            cards.get(0).modifyCostForCombat(-999);
+        }));
     }
 
     @Override
