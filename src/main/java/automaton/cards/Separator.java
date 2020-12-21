@@ -18,6 +18,7 @@ public class Separator extends AbstractBronzeCard {
     public Separator() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

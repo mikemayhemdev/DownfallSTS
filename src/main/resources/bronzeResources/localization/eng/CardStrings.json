@@ -258,7 +258,7 @@
   },
   "bronze:ForLoop": {
     "NAME": "For Loop",
-    "DESCRIPTION": "bronze:Compile - The next card in the Sequence is added to the Function twice."
+    "DESCRIPTION": "bronze:Compile - The next card in the Sequence activates its effects twice."
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",

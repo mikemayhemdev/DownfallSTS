@@ -58,6 +58,10 @@ public class FunctionHelper {
         doStuff = true;
     }
 
+    public static void applyPowers() {
+        secretStorage = makeFunction(false);
+    }
+
     public static void setImportantInfo(AbstractCard q) {
         AbstractCard.CardTarget highestTarget = AbstractCard.CardTarget.ALL;
         for (AbstractCard c : held.group) {
