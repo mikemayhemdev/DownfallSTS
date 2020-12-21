@@ -51,31 +51,33 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        boolean returnCard = false;
-        if (card.hasTag(ChampMod.COMBO) && timesUsed < amount) {
-            if (card.hasTag(ChampMod.COMBOBERSERKER)) {
-                returnCard = true;
-            }
-            if (card.hasTag(ChampMod.COMBOGLADIATOR)) {
-                returnCard = true;
-            }
-            if (card.hasTag(ChampMod.COMBODEFENSIVE)) {
-                returnCard = true;
-            }
-
-        }
-        if (returnCard) {
-            flash();
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    NoDiscardField.noDiscard.set(card, true);
-                    NoDiscardField.freeCard = true;
+        if (!card.purgeOnUse && !card.exhaust) {
+            boolean returnCard = false;
+            if (card.hasTag(ChampMod.COMBO) && timesUsed < amount) {
+                if (card.hasTag(ChampMod.COMBOBERSERKER)) {
+                    returnCard = true;
                 }
-            });
-            timesUsed++;
-            updateDescription();
+                if (card.hasTag(ChampMod.COMBOGLADIATOR)) {
+                    returnCard = true;
+                }
+                if (card.hasTag(ChampMod.COMBODEFENSIVE)) {
+                    returnCard = true;
+                }
+
+            }
+            if (returnCard) {
+                flash();
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        NoDiscardField.noDiscard.set(card, true);
+                        NoDiscardField.freeCard = true;
+                    }
+                });
+                timesUsed++;
+                updateDescription();
+            }
         }
     }
 
