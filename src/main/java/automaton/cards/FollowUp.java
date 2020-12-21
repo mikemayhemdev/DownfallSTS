@@ -1,8 +1,8 @@
 package automaton.cards;
 
-import automaton.FunctionHelper;
 import automaton.actions.RepeatCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -28,8 +28,24 @@ public class FollowUp extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         blck();
-        if (AbstractDungeon.actionManager.lastCard instanceof FunctionCard) {
-            atb(new RepeatCardAction(this));
+        AbstractCard q = this;
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 2 && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2)).cardID.equals(FunctionCard.ID)) {
+                    att(new RepeatCardAction(q));
+                }
+            }
+        });
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).cardID.equals(FunctionCard.ID)) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 
