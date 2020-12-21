@@ -1,6 +1,6 @@
 package charbosses.cards.blue;
 
-import charbosses.bosses.Defect.ArchetypeAct3Orbs;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -34,7 +34,7 @@ public class EnBiasedCognition extends AbstractBossCard {
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                ArchetypeAct3Orbs.resetPretendFocus();
+                ArchetypeAct3OrbsNewAge.resetPretendFocus();
                 isDone = true;
             }
         });

@@ -81,7 +81,9 @@
       "Bastion",
       "Ironclad begins the fight with a Fortification, which will grant him Block each turn. NL When the Fortification has been destroyed, Ironclad loses Barricade and all Block.",
       "Antidote",
-      "Poison applied to you triggers at the end of your turn. NL Before triggering Poison, for each [E] available, spend it to remove 10 Poison."
+      "Poison applied to you triggers at the end of your turn. NL Before triggering Poison, for each [E] available, spend it to remove 10 Poison.",
+      "Superstorm",
+      "Whenever you play a Power, Defect gains 1 Focus."
     ]
   }
 }

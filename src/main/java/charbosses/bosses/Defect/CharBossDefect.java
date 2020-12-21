@@ -5,9 +5,12 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct1StreamlineNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.cards.anticards.Debug;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.powers.DefectCuriosityPower;
+import charbosses.powers.general.PoisonProtectionPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -68,7 +71,7 @@ public class CharBossDefect extends AbstractCharBoss {
                     archetype = new ArchetypeAct2ClawNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3Orbs();
+                    archetype = new ArchetypeAct3OrbsNewAge();
                     break;
                 case 4: {
                     SlimeboundMod.logger.info("Defect spawned at Archetype " + NeowBoss.Rezzes);
@@ -81,10 +84,10 @@ public class CharBossDefect extends AbstractCharBoss {
                             archetype = new ArchetypeAct2ClawNewAge();
                             break;
                         case 3:
-                            archetype = new ArchetypeAct3Orbs();
+                            archetype = new ArchetypeAct3OrbsNewAge();
                             break;
                         default:
-                            archetype = new ArchetypeAct3Orbs();
+                            archetype = new ArchetypeAct3OrbsNewAge();
                             break;
                     }
                     break;
@@ -115,6 +118,10 @@ public class CharBossDefect extends AbstractCharBoss {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
             AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-300, 200, 0), true));
             AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(200, 130, 1), true));
+        }
+        if (chosenArchetype instanceof ArchetypeAct3OrbsNewAge) {
+            AbstractCreature p = AbstractCharBoss.boss;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
         }
     }
 }
