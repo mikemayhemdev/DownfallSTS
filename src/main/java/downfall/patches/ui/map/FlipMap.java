@@ -159,7 +159,7 @@ public class FlipMap {
     public static class EliteRoomPatch {
         @SpirePrefixPatch
         public static SpireReturn<Boolean> Prefix(MapRoomNode n, AbstractRoom roomToBeSet) {
-            if (EvilModeCharacterSelect.evilMode && downfallMod.normalMapLayout) {
+            if (EvilModeCharacterSelect.evilMode) {
                 List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
                 List<Class<RestRoom>> applicableRooms2 = Collections.singletonList(RestRoom.class);
 
