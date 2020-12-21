@@ -4,9 +4,11 @@ import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.monsters.MirrorImageSilent;
 import charbosses.vfx.QuietSpecialSmokeBombEffect;
+import charbosses.vfx.SmallerSmokeBombEffect;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.InvisiblePower;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -18,7 +20,7 @@ import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.downfallMod;
 import theHexaghost.util.TextureLoader;
 
-public class FakeOrRealPower extends AbstractPower implements CloneablePowerInterface {
+public class FakeOrRealPower extends AbstractPower implements CloneablePowerInterface, InvisiblePower {
 
     public static final String POWER_ID = downfallMod.makeID("FakeOrRealPower");
 
@@ -53,6 +55,7 @@ public class FakeOrRealPower extends AbstractPower implements CloneablePowerInte
             if (q instanceof MirrorImageSilent) {
                 q.currentHealth = 0;
                 q.isDead = true;
+                AbstractDungeon.effectList.add(new SmallerSmokeBombEffect(q.hb.cX, q.hb.cY));
             }
             addToTop(new RemoveSpecificPowerAction(q, q, this.ID));
         }
@@ -61,8 +64,7 @@ public class FakeOrRealPower extends AbstractPower implements CloneablePowerInte
     }
 
     @Override
-    public void update(int slot) {
-        super.update(slot);
+    public void updateParticles() {
         this.particleTimer -= Gdx.graphics.getDeltaTime();
         if (particleTimer <= 0) {
             particleTimer = 0.025f;

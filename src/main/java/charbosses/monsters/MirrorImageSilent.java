@@ -4,6 +4,8 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.powers.FakeOrRealPower;
+import charbosses.vfx.QuietSpecialSmokeBombEffect;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
@@ -33,8 +35,10 @@ public class MirrorImageSilent extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        this.powers.add(new FakeOrRealPower(this));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FakeOrRealPower(this), 1));
     }
+
+    float particleTimer = 0.0125f;
 
     @Override
     public void update() {
@@ -44,7 +48,13 @@ public class MirrorImageSilent extends AbstractMonster {
             this.maxHealth = AbstractCharBoss.boss.maxHealth;
             this.currentBlock = AbstractCharBoss.boss.currentBlock;
             this.powers = AbstractCharBoss.boss.powers;
-            this.healthBarUpdatedEvent();
+        }
+        if (!isDead) {
+            this.particleTimer -= Gdx.graphics.getDeltaTime();
+            if (particleTimer <= 0) {
+                particleTimer = 0.0125f;
+                AbstractDungeon.effectsQueue.add(new QuietSpecialSmokeBombEffect(AbstractDungeon.cardRandomRng.random(this.healthHb.x, this.healthHb.x + this.hb.width), this.hb.y));
+            }
         }
     }
 

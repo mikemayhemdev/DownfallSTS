@@ -169,15 +169,25 @@ public class CharBossSilent extends AbstractCharBoss {
         downfallMod.saveBossFight(CharBossSilent.ID);
     }
 
+    public static void swapCreature(AbstractCreature p, AbstractCreature m) {
+        float origDX = m.drawX;
+        float origdY = m.drawY;
+        float orighX = m.hb.x;
+        float orighY = m.hb.y;
+        m.drawX = p.drawX;
+        m.drawY = p.drawY;
+        m.hb.x = p.hb.x;
+        m.hb.y = p.hb.y;
+        p.drawX = origDX;
+        p.drawY = origdY;
+        p.hb.x = orighX;
+        p.hb.y = orighY;
+    }
+
     @Override
     public void usePreBattleAction() {
         super.usePreBattleAction();
-        if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new MirrorImageSilent(), true));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FakeOrRealPower(this)));
-            foggy = true;
-        }
+
     }
 
 }
