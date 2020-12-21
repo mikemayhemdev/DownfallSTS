@@ -125,8 +125,8 @@ public class StanceHelper {
                             t = BaseMod.getKeywordTitle("champ:counter");
                             d = BaseMod.getKeywordDescription("champ:counter");
                         } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                            t = BaseMod.getKeywordTitle("champ:resolve");
-                            d = BaseMod.getKeywordDescription("champ:resolve");
+                            t = BaseMod.getKeywordTitle("champ:fatigue");
+                            d = BaseMod.getKeywordDescription("champ:fatigue");
                         }
                         if (!t.equals("ERROR")) {
                             if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
@@ -150,8 +150,8 @@ public class StanceHelper {
                         String t = "ERROR";
                         String d = "ERROR2";
                         if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-                            t = BaseMod.getKeywordTitle("champ:resolve");
-                            d = BaseMod.getKeywordDescription("champ:resolve");
+                            t = BaseMod.getKeywordTitle("champ:fatigue");
+                            d = BaseMod.getKeywordDescription("champ:fatigue");
                         }
                         if (!t.equals("ERROR")) {
                             if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
