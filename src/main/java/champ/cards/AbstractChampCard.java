@@ -1,22 +1,16 @@
 package champ.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
 import champ.powers.CalledShotPower;
-import champ.powers.FocusedBerPower;
-import champ.powers.FocusedDefPower;
 import champ.powers.ResolvePower;
-import champ.relics.DefensiveTrainingManual;
 import champ.relics.SignatureFinisher;
 import champ.stances.*;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
@@ -26,7 +20,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -35,7 +28,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import slimebound.SlimeboundMod;
 
-import java.security.Signature;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,11 +51,6 @@ public abstract class AbstractChampCard extends CustomCard {
 
     private boolean reInitDescription = true;
 
-    public void resetAttributes() {
-        super.resetAttributes();
-        cool = baseCool;
-        isCoolModified = false;
-    }
 
     public void displayUpgrades() {
         super.displayUpgrades();
@@ -134,33 +121,6 @@ public abstract class AbstractChampCard extends CustomCard {
 
     public static boolean dcombo() {
         return (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID) || (AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)));
-    }
-
-    public int fatigue(int begone) {
-
-        int y = AbstractDungeon.player.currentHealth;
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-                att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
-                att(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-            }
-        });
-
-        /*atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                if (y - AbstractDungeon.player.currentHealth > 0) {
-                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
-                }
-            }
-        });
-        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
-
-        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
     }
 
     @Override
@@ -384,7 +344,7 @@ public abstract class AbstractChampCard extends CustomCard {
                     prefixTech = prefixTech + DefensiveStance.amount();
                     prefixTech = prefixTech + ChampChar.characterStrings.TEXT[53];
                 } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
-                    if (GladiatorStance.amount() == 1){
+                    if (GladiatorStance.amount() == 1) {
                         prefixTech = ChampChar.characterStrings.TEXT[30];
                     } else {
                         prefixTech = ChampChar.characterStrings.TEXT[50];
@@ -393,16 +353,8 @@ public abstract class AbstractChampCard extends CustomCard {
                     }
                 } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[32];
-                    prefixTech = prefixTech + 3;
-                    if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)){
-
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[54];
-                        prefixTech = prefixTech + AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount;
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                    } else {
-                        prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
-                    }
-
+                    prefixTech = prefixTech + BerserkerStance.amount();
+                    prefixTech = prefixTech + ChampChar.characterStrings.TEXT[52];
                 } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
                     prefixTech = ChampChar.characterStrings.TEXT[33];
                 }
@@ -413,7 +365,9 @@ public abstract class AbstractChampCard extends CustomCard {
                 this.rawDescription = prefixTech + DESCRIPTION;
             }
         }
-        if (this.hasTag(FINISHER)) {
+        if (this.
+
+                hasTag(FINISHER)) {
             prefixFin = ChampChar.characterStrings.TEXT[34];
             if (AbstractDungeon.player != null) {
                 if (AbstractDungeon.player.stance instanceof DefensiveStance) {
@@ -433,7 +387,9 @@ public abstract class AbstractChampCard extends CustomCard {
                 this.rawDescription = prefixTech + prefixFin + DESCRIPTION;
             }
         }
-        super.initializeDescription();
+        super.
+
+                initializeDescription();
 
     }
 

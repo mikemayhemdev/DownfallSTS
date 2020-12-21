@@ -3,7 +3,9 @@ package champ.stances;
 import champ.ChampChar;
 import champ.actions.FatigueHpLossAction;
 import champ.powers.FocusedBerPower;
+import champ.powers.FocusedDefPower;
 import champ.powers.ResolvePower;
+import champ.relics.DefensiveTrainingManual;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
@@ -17,6 +19,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
 import guardian.characters.GuardianCharacter;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
+
+import static champ.ChampMod.fatigue;
 
 public class BerserkerStance extends AbstractChampStance {
 
@@ -36,13 +40,20 @@ public class BerserkerStance extends AbstractChampStance {
 
     @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[10] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[11];
+        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[10] + amount() + ChampChar.characterStrings.TEXT[48] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[11];
+    }
+
+    public static int amount() {
+        int x = 3;
+        if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount;
+        }
+        return x;
     }
 
     @Override
     public void technique() {
-        fatigue(3);
-        //AbstractDungeon.actionManager.addToBottom(new GainEnergAction(1));
+        fatigue(amount());
     }
 
     @Override

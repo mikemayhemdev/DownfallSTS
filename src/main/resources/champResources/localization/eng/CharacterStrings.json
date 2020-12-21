@@ -15,7 +15,7 @@
       "ULTIMATE Stance",
       "Technique Bonus",
       "Finisher Bonus",
-      "#yFatigue #b3.",
+      "#yFatigue #b",
       "Lose all #yResolve and gain that much HP, preserving #yStrength. End your turn.",
       "Gain #b",
       "Gain #b12 #yBlock. End your turn.",
@@ -59,7 +59,8 @@
       " cards. NL ",
       ". NL ",
       " champ:Counter. NL ",
-      ", Resolve "
+      ", Resolve ",
+      "."
     ]
   }
 }

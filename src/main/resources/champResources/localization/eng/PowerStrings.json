@@ -30,8 +30,8 @@
   "champ:FocusedBerPower": {
     "NAME": "Berserker Boost!",
     "DESCRIPTIONS": [
-      "Until you exit #yBerserker, #yTechniques grant #b",
-      " additional #yResolve."
+      "Until you exit #yBerserker, #yTechniques #yFatigue #b",
+      " more."
     ]
   },
   "champ:EnchantedShieldPower": {
