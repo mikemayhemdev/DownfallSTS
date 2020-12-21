@@ -44,11 +44,6 @@ public class InfiniteLoop extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        if (showCard) {
-            AbstractCard q = new InfiniteLoop(false);
-            q.upgrade();
-            cardsToPreview = q;
-        }
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
