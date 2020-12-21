@@ -67,9 +67,10 @@ public class ShopRoomReplacePatch {
     )
     public static class replaceRuleParentMatches {
         @SpireInsertPatch(rloc = 5, localvars = {"applicableRooms"})
-        public static void patch(ArrayList<MapRoomNode> parents, AbstractRoom roomToBeSet, List<Class<? extends AbstractRoom>> applicableRooms) {
+        public static void patch(ArrayList<MapRoomNode> parents, AbstractRoom roomToBeSet, @ByRef List<Class<? extends AbstractRoom>>[] applicableRooms) {
             if (EvilModeCharacterSelect.evilMode) {
-                applicableRooms.add(HeartShopRoom.class);
+                applicableRooms[0] = new ArrayList<>(applicableRooms[0]);
+                applicableRooms[0].add(HeartShopRoom.class);
             }
         }
     }
@@ -81,9 +82,10 @@ public class ShopRoomReplacePatch {
     )
     public static class replaceRuleSiblingMatches {
         @SpireInsertPatch(rloc = 6, localvars = {"applicableRooms"})
-        public static void patch(ArrayList<MapRoomNode> parents, AbstractRoom roomToBeSet, List<Class<? extends AbstractRoom>> applicableRooms) {
+        public static void patch(ArrayList<MapRoomNode> parents, AbstractRoom roomToBeSet, @ByRef List<Class<? extends AbstractRoom>>[] applicableRooms) {
             if (EvilModeCharacterSelect.evilMode) {
-                applicableRooms.add(HeartShopRoom.class);
+                applicableRooms[0] = new ArrayList<>(applicableRooms[0]);
+                applicableRooms[0].add(HeartShopRoom.class);
             }
         }
     }
