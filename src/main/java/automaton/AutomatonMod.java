@@ -255,6 +255,7 @@ public class AutomatonMod implements
         EasyInfoDisplayPanel.specialDisplays.clear();
         EasyInfoDisplayPanel.specialDisplays.add(new CompileDisplayPanel());
         EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
+        FunctionHelper.held.clear();
     }
 
 }
