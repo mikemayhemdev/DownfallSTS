@@ -20,7 +20,6 @@
   "champ:StanceDance": {
     "NAME": "Stance Dance",
     "DESCRIPTION": "Choose a Stance to Enter.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Choose a Stance to Enter.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive.",
@@ -106,7 +105,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL *Defensive champ:Combo: champ:Fatigue !M! and Exhaust."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL *Defensive champ:Combo: champ:Fatigue !M!."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -262,7 +261,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal damage equal to your champ:Resolve. NL Exhaust.",
+    "DESCRIPTION": "Deal damage equal to your champ:Fatigue. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
@@ -278,7 +277,7 @@
   },
   "champ:FightOn": {
     "NAME": "Fight On",
-    "DESCRIPTION": "Fleeting. NL Can't be Upgraded. NL Can only be played if you have at least 30 champ:Resolve. NL Gain 5 Max HP."
+    "DESCRIPTION": "Fleeting. NL Can't be Upgraded. NL Can only be played if you have at least 30 champ:Fatigue. NL Gain 5 Max HP."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -299,7 +298,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "NL Deal !D! damage to ALL enemies. NL champ:Fatigue !M!."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Fatigue !M!."
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",

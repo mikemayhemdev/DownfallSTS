@@ -37,7 +37,7 @@ public class GutPunch extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
       //  fatigue(2);
         if (dcombo()) {
-            exhaust = true;
+           // exhaust = true;
             fatigue(magicNumber);
         }
     }

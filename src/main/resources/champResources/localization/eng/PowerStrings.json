@@ -7,9 +7,9 @@
     ]
   },
   "champ:ResolvePower": {
-    "NAME": "Fatigued",
+    "NAME": "Fatigue",
     "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b5 Fatigued HP. At the end of combat, regenerate your Fatigued HP."
+      "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, restore your Fatigued HP."
     ]
   },
   "champ:FocusedGladPower": {

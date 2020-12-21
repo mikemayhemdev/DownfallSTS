@@ -26,18 +26,13 @@ public class DeathBlow extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
         tags.add(ChampMod.TECHNIQUE);
+        myHpLossCost = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        baseDamage = fatigue(magicNumber);
-        baseDamage = baseDamage / 2;
-        calculateCardDamage(null);
-        allDmg(AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        atb(new SelectCardsInHandAction(1, "Choose.", c->c.cost > 0, (cards) -> {
-            cards.get(0).modifyCostForCombat(-999);
-        }));
+        fatigue(magicNumber);
     }
 
     public void upp() {
