@@ -1,5 +1,6 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.ResolvePower;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,8 +16,8 @@ public class DeathBlow extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = -1;
-    private static final int MAGIC = 20;
+    private static final int DAMAGE = 10;
+    private static final int MAGIC = 10;
     private static final int UPG_MAGIC = 5;
 
     public DeathBlow() {
@@ -24,9 +25,12 @@ public class DeathBlow extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
+        tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
+        allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         baseDamage = fatigue(magicNumber);
         baseDamage = baseDamage / 2;
         calculateCardDamage(null);
@@ -34,29 +38,6 @@ public class DeathBlow extends AbstractChampCard {
         atb(new SelectCardsInHandAction(1, "Choose.", c->c.cost > 0, (cards) -> {
             cards.get(0).modifyCostForCombat(-999);
         }));
-    }
-
-    @Override
-    public void applyPowers() {
-        baseDamage = Math.min(magicNumber, AbstractDungeon.player.currentHealth - 1);
-        baseDamage = baseDamage / 2;
-        super.applyPowers();
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0];
-        this.initializeDescription();
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        this.rawDescription = cardStrings.DESCRIPTION;
-        this.initializeDescription();
     }
 
     public void upp() {

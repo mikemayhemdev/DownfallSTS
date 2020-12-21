@@ -153,8 +153,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Gain 2 Dexterity. NL Unless *Defensive champ:Combo: Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL Unless *Defensive champ:Combo: Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Increase it's Block by !M! for this combat. "
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -217,8 +216,7 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Increase it's damage by !M! for this combat. Exhaust."
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
@@ -301,10 +299,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "champ:Fatigue !M!. NL Deal damage to ALL enemies equal to the half the amount of HP lost.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)"
-    ]
+    "DESCRIPTION": "NL Deal !D! damage to ALL enemies. NL champ:Fatigue !M!."
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
@@ -368,8 +363,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust."
+    "DESCRIPTION": "Choose a card in hand. It costs 0 this combat. NL Exhaust."
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",
