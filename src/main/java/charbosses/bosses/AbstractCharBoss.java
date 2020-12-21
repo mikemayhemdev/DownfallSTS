@@ -379,6 +379,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     ArrayList<AbstractCard> newHand = new ArrayList<>();
                     for (AbstractCard c : handAsBoss){
                         newHand.add(c);
+                        c.applyPowers();
                     }
 
                     AbstractCharBoss.boss.hand.group = newHand;

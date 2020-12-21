@@ -11,7 +11,7 @@ public class BossMechanicDisplayPanel extends EasyInfoDisplayPanel {
     public static String mechanicDesc = "NORENDER";
 
     private static int X = 1550;
-    private static int Y = 570;
+    private static int Y = 550;
     private static int WIDTH = 275;
 
     public BossMechanicDisplayPanel() {
