@@ -1,4 +1,4 @@
-package downfall.patches;
+package downfall.patches.rooms;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.helpers.EventHelper;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.map.RoomTypeAssigner;
 import com.megacrit.cardcrawl.rooms.*;
+import downfall.patches.EvilModeCharacterSelect;
 import downfall.rooms.HeartShopRoom;
 import javassist.CtBehavior;
 
