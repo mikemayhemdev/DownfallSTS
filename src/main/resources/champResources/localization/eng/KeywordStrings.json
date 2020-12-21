@@ -34,13 +34,6 @@
     "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
   },
   {
-    "PROPER_NAME": "Resolve",
-    "NAMES": [
-      "resolve"
-    ],
-    "DESCRIPTION": "You have #b1 #yStrength for every #b5 Resolve. At the end of combat, heal HP equal to your Resolve."
-  },
-  {
     "PROPER_NAME": "Defensive",
     "NAMES": [
       "defensive",
@@ -75,8 +68,9 @@
   {
     "PROPER_NAME": "Fatigue",
     "NAMES": [
-      "fatigue"
+      "fatigue",
+      "fatigued"
     ],
-    "DESCRIPTION": "Lose HP and gain an equal amount of #yResolve."
+    "DESCRIPTION": "Lose HP and gain #b1 Strength for every #b5 HP lost. Regenerate #yFatigued health at the end of combat."
   }
 ]

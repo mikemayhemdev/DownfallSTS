@@ -73,7 +73,7 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "Enter champ:Berserker. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 champ:Resolve."
+    "DESCRIPTION": "Enter champ:Berserker. NL Until you exit champ:Berserker Stance, champ:Techniques champ:Fatigue 2 more."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
@@ -82,7 +82,7 @@
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to twice your champ:Resolve.",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to twice your champ:Fatigued HP.",
     "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
   },
   "champ:Aggression": {
@@ -312,8 +312,7 @@
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
-    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 champ:Resolve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you lose HP on your turn, gain 1 champ:Resolve."
+    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 temporary Strength."
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",

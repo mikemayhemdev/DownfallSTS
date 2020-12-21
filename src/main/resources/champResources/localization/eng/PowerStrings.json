@@ -7,9 +7,9 @@
     ]
   },
   "champ:ResolvePower": {
-    "NAME": "Resolve",
+    "NAME": "Fatigued",
     "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b5 Resolve you have. At the end of combat, heal HP equal to your Resolve."
+      "You have #b1 #yStrength for every #b5 Fatigued HP. At the end of combat, regenerate your Fatigued HP."
     ]
   },
   "champ:FocusedGladPower": {
@@ -77,7 +77,7 @@
     "NAME": "Endless Rage",
     "DESCRIPTIONS": [
       "Whenever you lose HP on your turn, gain #b",
-      " #yResolve."
+      " temporary #yStrength."
     ]
   },
   "champ:ImprovisingPower": {

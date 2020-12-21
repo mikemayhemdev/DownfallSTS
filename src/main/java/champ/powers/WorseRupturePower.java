@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -40,7 +42,8 @@ public class WorseRupturePower extends AbstractPower implements CloneablePowerIn
     public int onLoseHp(int damageAmount) {
         if (!AbstractDungeon.actionManager.turnHasEnded) {
             flash();
-            addToTop(new ApplyPowerAction(owner, owner, new ResolvePower(amount), amount));
+            addToTop(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));
+            addToTop(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
         }
         return damageAmount;
     }
