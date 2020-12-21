@@ -11,6 +11,8 @@ public class InfiniteLoop extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, rare
 
+    private boolean showCard;
+
     private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 2;
 
@@ -19,6 +21,7 @@ public class InfiniteLoop extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         thisEncodes();
         selfRetain = true;
+        this.showCard = showCard;
         if (showCard)
             cardsToPreview = new InfiniteLoop(false); //I had to.
     }
@@ -41,9 +44,11 @@ public class InfiniteLoop extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        AbstractCard q = new InfiniteLoop(false);
-        q.upgrade();
-        cardsToPreview = q;
+        if (showCard) {
+            AbstractCard q = new InfiniteLoop(false);
+            q.upgrade();
+            cardsToPreview = q;
+        }
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
