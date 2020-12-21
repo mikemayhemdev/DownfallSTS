@@ -23,7 +23,7 @@ public class EnCripplingCloud extends AbstractBossCard {
 
     public EnCripplingCloud() {
         super(ID, EnCripplingCloud.cardStrings.NAME, "green/skill/crippling_poison", 2, EnCripplingCloud.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
         exhaust = true;
     }
