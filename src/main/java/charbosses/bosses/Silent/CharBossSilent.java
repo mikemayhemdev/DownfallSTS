@@ -16,6 +16,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -196,10 +197,16 @@ public class CharBossSilent extends AbstractCharBoss {
             AbstractMonster m = new MirrorImageSilent(CharBossSilent.posStorage ? 100 : -350, -20);
             AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(m, false)); // Can't be a minion because the "Minion" text will popup. Should be fine because they die before they can take damage.
             boolean swap = AbstractDungeon.cardRandomRng.randomBoolean();
-            if (swap) {
-                CharBossSilent.swapCreature(p, m);
-            }
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FakeOrRealPower(this)));
+            if (swap) {
+                addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        CharBossSilent.swapCreature(p, m);
+                    }
+                });
+            }
             CharBossSilent.foggy = true;
         }
     }
