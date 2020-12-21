@@ -44,7 +44,8 @@ public class CardExtraUiPatch {
                     } else if ((__instance.hasTag(ChampMod.TECHNIQUE) && AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
                         FontHelper.cardEnergyFont_L.getData().setScale(__instance.drawScale);
                         renderHelper(sb, healthBlob, __instance.current_x, __instance.current_y, __instance);
-                        FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, "3", __instance.current_x, __instance.current_y, -133.0F * __instance.drawScale * Settings.scale, 133 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
+                        int x = BerserkerStance.amount();
+                        FontHelper.renderRotatedText(sb, FontHelper.cardEnergyFont_L, String.valueOf(x), __instance.current_x, __instance.current_y, -133.0F * __instance.drawScale * Settings.scale, 133 * __instance.drawScale * Settings.scale, __instance.angle, false, Color.WHITE.cpy());
                     }
                     //Opener / Technique / Finisher draws
                     if (__instance.hasTag(ChampMod.OPENER)) {
