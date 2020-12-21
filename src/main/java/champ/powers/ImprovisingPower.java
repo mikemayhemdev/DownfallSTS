@@ -46,6 +46,7 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
     @Override
     public void atStartOfTurn() {
         timesUsed = 0;
+        updateDescription();
     }
 
     @Override
