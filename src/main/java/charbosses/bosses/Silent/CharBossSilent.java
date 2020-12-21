@@ -37,7 +37,7 @@ public class CharBossSilent extends AbstractCharBoss {
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];
 
     public CharBossSilent() {
-        super(NAME, ID, 80, -4.0f, -16.0f, 240.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.THE_SILENT);
+        super(NAME, ID, 80, -4.0f, -16.0f, 240.0f, 290.0f, null, 100.0f, -20.0f, PlayerClass.THE_SILENT);
         this.energyOrb = new EnergyOrbGreen();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);

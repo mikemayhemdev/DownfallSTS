@@ -22,7 +22,7 @@ public class MirrorImageSilent extends AbstractMonster {
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Silent").NAMES[0];
 
     public MirrorImageSilent() {
-        super(NAME, ID, 1, -4.0f, -16.0f, 240.0f, 290.0f, null, 180, -25, false);
+        super(NAME, ID, 1, -4.0f, -16.0f, 240.0f, 290.0f, null, -350, -25, false);
         type = EnemyType.NORMAL;
         this.loadAnimation("images/characters/theSilent/idle/skeleton.atlas", "images/characters/theSilent/idle/skeleton.json", 1.0f);
         final AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
@@ -33,7 +33,7 @@ public class MirrorImageSilent extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FakeOrRealPower(this)));
+        this.powers.add(new FakeOrRealPower(this));
     }
 
     @Override
