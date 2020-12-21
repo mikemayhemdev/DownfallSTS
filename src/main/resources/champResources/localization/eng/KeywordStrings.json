@@ -47,7 +47,7 @@
       "berserker",
       "berserker."
     ],
-    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: #yFatigue #y3. NL #yFinisher Bonus: Lose all #yResolve and gain that much HP, preserving #yStrength. End your turn."
+    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: #yFatigue #y3. NL #yFinisher Bonus: Lose all #yFatigue and gain that much HP, preserving #yStrength. End your turn."
   },
   {
     "PROPER_NAME": "Gladiator",
