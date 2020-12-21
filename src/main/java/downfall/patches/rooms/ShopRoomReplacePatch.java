@@ -1,4 +1,4 @@
-package downfall.patches;
+package downfall.patches.rooms;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -6,7 +6,9 @@ import com.megacrit.cardcrawl.helpers.EventHelper;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.map.RoomTypeAssigner;
 import com.megacrit.cardcrawl.rooms.*;
+import downfall.patches.EvilModeCharacterSelect;
 import downfall.rooms.HeartShopRoom;
+import javassist.CtBehavior;
 
 import java.util.*;
 
@@ -50,8 +52,6 @@ public class ShopRoomReplacePatch {
             if (EvilModeCharacterSelect.evilMode) {
                 if (roomType == EventHelper.RoomResult.SHOP) {
                     return SpireReturn.Return(new HeartShopRoom());
-                } else {
-                    return SpireReturn.Continue();
                 }
             }
 
@@ -66,30 +66,12 @@ public class ShopRoomReplacePatch {
             paramtypez = {ArrayList.class, AbstractRoom.class}
     )
     public static class replaceRuleParentMatches {
-        @SpirePrefixPatch
-        public static SpireReturn<Boolean> Prefix(ArrayList<MapRoomNode> parents, AbstractRoom roomToBeSet) {
-
+        @SpireInsertPatch(rloc = 5, localvars = {"applicableRooms"})
+        public static void patch(ArrayList<MapRoomNode> parents, AbstractRoom roomToBeSet, @ByRef List<Class<? extends AbstractRoom>>[] applicableRooms) {
             if (EvilModeCharacterSelect.evilMode) {
-                List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, TreasureRoom.class, HeartShopRoom.class, MonsterRoomElite.class);
-                Iterator var3 = parents.iterator();
-
-                AbstractRoom parentRoom;
-                do {
-                    if (!var3.hasNext()) {
-                        return SpireReturn.Return(false);
-                    }
-
-                    MapRoomNode parentNode = (MapRoomNode)var3.next();
-                    parentRoom = parentNode.getRoom();
-                } while(parentRoom == null || !applicableRooms.contains(roomToBeSet.getClass()) || !roomToBeSet.getClass().equals(parentRoom.getClass()));
-
-                return SpireReturn.Continue();
-
+                applicableRooms[0] = new ArrayList<>(applicableRooms[0]);
+                applicableRooms[0].add(HeartShopRoom.class);
             }
-
-
-
-            return SpireReturn.Continue();
         }
     }
 
@@ -99,28 +81,12 @@ public class ShopRoomReplacePatch {
             paramtypez = {ArrayList.class, AbstractRoom.class}
     )
     public static class replaceRuleSiblingMatches {
-        @SpirePrefixPatch
-        public static SpireReturn<Boolean> Prefix(ArrayList<MapRoomNode> siblings, AbstractRoom roomToBeSet) {
-
+        @SpireInsertPatch(rloc = 6, localvars = {"applicableRooms"})
+        public static void patch(ArrayList<MapRoomNode> parents, AbstractRoom roomToBeSet, @ByRef List<Class<? extends AbstractRoom>>[] applicableRooms) {
             if (EvilModeCharacterSelect.evilMode) {
-                List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoom.class, EventRoom.class, MonsterRoomElite.class, HeartShopRoom.class);
-                Iterator var3 = siblings.iterator();
-
-                MapRoomNode siblingNode;
-                do {
-                    if (!var3.hasNext()) {
-                        return SpireReturn.Return(false);
-                    }
-
-                    siblingNode = (MapRoomNode)var3.next();
-                } while(siblingNode.getRoom() == null || !applicableRooms.contains(roomToBeSet.getClass()) || !roomToBeSet.getClass().equals(siblingNode.getRoom().getClass()));
-
-                return SpireReturn.Return(true);
-
+                applicableRooms[0] = new ArrayList<>(applicableRooms[0]);
+                applicableRooms[0].add(HeartShopRoom.class);
             }
-
-
-            return SpireReturn.Continue();
         }
     }
 }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.map.*;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.*;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.ui.buttons.DynamicBanner;
@@ -22,7 +23,9 @@ import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
 import javassist.expr.MethodCall;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +33,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class FlipMap {
+    public static final Logger logger = LogManager.getLogger(FlipMap.class.getName());
+
     @SpirePatch(
             clz = AbstractDungeon.class,
             method = "generateMap"
@@ -154,11 +159,11 @@ public class FlipMap {
     public static class EliteRoomPatch {
         @SpirePrefixPatch
         public static SpireReturn<Boolean> Prefix(MapRoomNode n, AbstractRoom roomToBeSet) {
-            if (EvilModeCharacterSelect.evilMode && downfallMod.normalMapLayout) {
+            if (EvilModeCharacterSelect.evilMode) {
                 List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
                 List<Class<RestRoom>> applicableRooms2 = Collections.singletonList(RestRoom.class);
 
-                if (n.y >= 11 && applicableRooms.contains(roomToBeSet.getClass())) {
+                if (n.y >= 10 && applicableRooms.contains(roomToBeSet.getClass())) {
                     return SpireReturn.Return(false);
                 }
 
@@ -170,6 +175,103 @@ public class FlipMap {
 
             return SpireReturn.Continue();
         }
+    }
+
+    @SpirePatch(clz = RoomTypeAssigner.class, method = "distributeRoomsAcrossMap")
+    public static class FixMapGenProbelms {
+        @SpirePostfixPatch
+        public static ArrayList<ArrayList<MapRoomNode>> patch(ArrayList<ArrayList<MapRoomNode>> __result, Random rng, ArrayList<ArrayList<MapRoomNode>> map, ArrayList<AbstractRoom> roomList) {
+            if (EvilModeCharacterSelect.evilMode) {
+                for (int i = 0; i < __result.size(); i++) {
+                    for(MapRoomNode mn : __result.get(i)) {
+                        if(mn.room instanceof ShopRoom) {
+                            for (MapRoomNode mn2 : mn.getParents()) {
+                                if(mn2.room instanceof ShopRoom) {
+                                    logger.info("Found consecutive shops: " + mn.toString());
+                                    //Switch with monster or event room node from somewhere on the map
+                                    if(replaceSustainableSwitchRoom(__result, mn2, mn2.y) || replaceSustainableSwitchRoom(__result, mn2, mn2.y+1) || replaceSustainableSwitchRoom(__result, mn2, mn2.y-1)) {
+                                        break;
+                                    } else {
+                                        logger.error("Tried fixing consecutive shops but no applicable rooms have been found.");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return __result;
+        }
+    }
+
+    private static boolean replaceSustainableSwitchRoom(ArrayList<ArrayList<MapRoomNode>> __result, MapRoomNode mn2, int floor) {
+        for(MapRoomNode sibling : __result.get(floor)) {
+            if(!(sibling.room instanceof ShopRoom) && sibling.room != null && notConnectedToShops(sibling)) {
+                logger.info("Switching rooms: "+mn2.toString()+"      with      "+sibling.toString());
+                AbstractRoom tmp = sibling.room;
+                sibling.room = mn2.room;
+                mn2.room = tmp;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean notConnectedToShops(MapRoomNode mn) {
+        return getConnectedNodes(mn).stream().noneMatch(m -> m.room instanceof ShopRoom) && mn.getParents().stream().noneMatch(m -> m.room instanceof ShopRoom);
+    }
+
+    @SpirePatch(clz = EmeraldElite.class, method = "alternate")
+    public static class FixNoRestEmeraldElite {
+        @SpireInsertPatch(locator = Locator.class, localvars = {"chosenNode"})
+        public static void patch(MapRoomNode chosenNode) {
+            if (AbstractDungeon.actNum == 3 && EvilModeCharacterSelect.evilMode) {
+                if(!hasRestSite(chosenNode)) {
+                    ArrayList<MapRoomNode> cN = getConnectedNodes(chosenNode);
+                    logger.info("Found and fixed emerald elite without campfire.");
+                    if(!cN.isEmpty()) {
+                        cN.get(0).room = new RestRoom();
+                    }
+                }
+            }
+        }
+
+        private static boolean hasRestSite(MapRoomNode origin) {
+            ArrayList<MapRoomNode> cN = getConnectedNodes(origin);
+            if(!cN.isEmpty()) {
+                for (MapRoomNode mn : cN) {
+                    if (mn.room instanceof RestRoom) {
+                        return true;
+                    }
+                }
+                for (MapRoomNode mn : cN) {
+                    if(hasRestSite(mn)) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private static class Locator extends SpireInsertLocator {
+            public int[] Locate(CtBehavior ctBehavior) throws Exception {
+                Matcher finalMatcher = new Matcher.MethodCallMatcher(Logger.class, "info");
+                return LineFinder.findInOrder(ctBehavior, finalMatcher);
+            }
+        }
+    }
+
+    private static ArrayList<MapRoomNode> getConnectedNodes(MapRoomNode origin) {
+        ArrayList<MapRoomNode> retVal = new ArrayList<>();
+        for(MapEdge mn : origin.getEdges()) {
+            if(AbstractDungeon.map.size() >= mn.dstY && mn.dstY >= 0 && AbstractDungeon.map.get(mn.dstY).size() >= mn.dstX) {
+                MapRoomNode cN = AbstractDungeon.map.get(mn.dstY).get(mn.dstX);
+                if (cN != null) {
+                    retVal.add(cN);
+                }
+            }
+        }
+        return retVal;
     }
 
     @SpirePatch(
