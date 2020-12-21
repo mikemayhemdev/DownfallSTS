@@ -158,7 +158,7 @@ public class FlipMap {
                 List<Class<? extends AbstractRoom>> applicableRooms = Arrays.asList(RestRoom.class, MonsterRoomElite.class);
                 List<Class<RestRoom>> applicableRooms2 = Collections.singletonList(RestRoom.class);
 
-                if (n.y >= 11 && applicableRooms.contains(roomToBeSet.getClass())) {
+                if (n.y >= 10 && applicableRooms.contains(roomToBeSet.getClass())) {
                     return SpireReturn.Return(false);
                 }
 
@@ -171,6 +171,8 @@ public class FlipMap {
             return SpireReturn.Continue();
         }
     }
+
+
 
     @SpirePatch(
             clz = MapRoomNode.class,
