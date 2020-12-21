@@ -4,13 +4,17 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
+import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct1ShivsNewAge;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct2MirrorImageNewAge;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct3PoisonNewAge;
 import charbosses.cards.anticards.Antidote;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.monsters.Fortification;
 import charbosses.monsters.MirrorImageSilent;
 import charbosses.powers.FakeOrRealPower;
+import charbosses.powers.general.PoisonProtectionPower;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -25,6 +29,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -68,7 +74,7 @@ public class CharBossSilent extends AbstractCharBoss {
                     archetype = new ArchetypeAct2MirrorImageNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3Poison();
+                    archetype = new ArchetypeAct3PoisonNewAge();
                     break;
                 case 4:
                     SlimeboundMod.logger.info("Silent spawned at Archetype " + NeowBoss.Rezzes);
@@ -81,10 +87,10 @@ public class CharBossSilent extends AbstractCharBoss {
                             archetype = new ArchetypeAct2MirrorImageNewAge();
                             break;
                         case 3:
-                            archetype = new ArchetypeAct3Poison();
+                            archetype = new ArchetypeAct3PoisonNewAge();
                             break;
                         default:
-                            archetype = new ArchetypeAct3Poison();
+                            archetype = new ArchetypeAct3PoisonNewAge();
                             break;
                     }
                     break;
@@ -208,6 +214,10 @@ public class CharBossSilent extends AbstractCharBoss {
                 });
             }
             CharBossSilent.foggy = true;
+        }
+        if (chosenArchetype instanceof ArchetypeAct3PoisonNewAge) {
+            AbstractCreature p = AbstractDungeon.player;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
         }
     }
 
