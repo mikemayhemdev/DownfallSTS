@@ -30,7 +30,7 @@ public class DevastateAction extends com.megacrit.cardcrawl.actions.AbstractGame
             AbstractDungeon.effectList.add(new com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.BLUNT_HEAVY));
 
             this.target.damage(this.info);
-            if (!(AbstractDungeon.player.stance instanceof NeutralStance)) {
+
                 for (AbstractCard c : AbstractDungeon.player.masterDeck.group)
                     if (c.uuid.equals(this.uuid)) {
                         c.misc += this.increaseAmount;
@@ -43,7 +43,7 @@ public class DevastateAction extends com.megacrit.cardcrawl.actions.AbstractGame
                     c.applyPowers();
                     c.baseDamage = c.misc;
                 }
-            }
+
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 AbstractDungeon.actionManager.clearPostCombatActions();
             }

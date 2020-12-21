@@ -379,9 +379,9 @@ public abstract class AbstractChampCard extends CustomCard {
                 }
             }
             if (upgraded && this.UPGRADE_DESCRIPTION != null) {
-                this.rawDescription = prefixTech + prefixFin + UPGRADE_DESCRIPTION;
+                this.rawDescription = prefixTech + UPGRADE_DESCRIPTION + prefixFin;
             } else {
-                this.rawDescription = prefixTech + prefixFin + DESCRIPTION;
+                this.rawDescription = prefixTech + DESCRIPTION + prefixFin;
             }
         }
         super.
