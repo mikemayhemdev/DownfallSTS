@@ -63,7 +63,7 @@ public class StanceHelper {
 
     public static String getStanceTechnique() {
         if (AbstractDungeon.player.stance instanceof BerserkerStance) {
-            return ChampChar.characterStrings.TEXT[10] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[48];
+            return ChampChar.characterStrings.TEXT[10] + BerserkerStance.amount() + ChampChar.characterStrings.TEXT[55];
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
             return ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47];
         } else if (AbstractDungeon.player.stance instanceof GladiatorStance) {
