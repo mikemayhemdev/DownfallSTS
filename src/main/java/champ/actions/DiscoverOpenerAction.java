@@ -79,9 +79,9 @@ public class DiscoverOpenerAction extends AbstractGameAction {
         ArrayList<AbstractCard> gladOpenersList = new ArrayList<>();
         ArrayList<AbstractCard> defOpenersList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
-            if (q.hasTag(ChampMod.COMBOBERSERKER)) bersOpenersList.add(q);
-            if (q.hasTag(ChampMod.COMBOGLADIATOR)) gladOpenersList.add(q);
-            if (q.hasTag(ChampMod.COMBODEFENSIVE)) defOpenersList.add(q);
+            if (q.hasTag(ChampMod.OPENERBERSERKER)) bersOpenersList.add(q);
+            if (q.hasTag(ChampMod.OPENERGLADIATOR)) gladOpenersList.add(q);
+            if (q.hasTag(ChampMod.OPENERDEFENSIVE)) defOpenersList.add(q);
         }
         choiceList.add(bersOpenersList.get(AbstractDungeon.cardRandomRng.random(bersOpenersList.size() - 1)));
         choiceList.add(gladOpenersList.get(AbstractDungeon.cardRandomRng.random(gladOpenersList.size() - 1)));
