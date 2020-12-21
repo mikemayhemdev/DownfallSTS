@@ -59,6 +59,11 @@ public class MirrorImageSilent extends AbstractMonster {
     }
 
     @Override
+    public void flashIntent() {
+
+    }
+
+    @Override
     public void render(SpriteBatch sb) {
         if (!isDead) {
             super.render(sb);
