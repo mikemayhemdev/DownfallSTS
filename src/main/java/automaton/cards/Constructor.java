@@ -22,7 +22,7 @@ public class Constructor extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (firstCard()) {
+        if (firstCard() && forGameplay) {
             this.baseBlock *= 2;
             this.block *= 2;
             superFlash();
