@@ -1,4 +1,4 @@
-package theHexaghost.patches;
+package downfall.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +13,7 @@ import static theHexaghost.HexaMod.renderFlames;
         clz = CardGroup.class,
         method = "triggerOnOtherCardPlayed"
 )
-public class TriggerFlamesPatch {
+public class GlobalOnCardUsePatch {
     public static void Prefix(CardGroup __instance, AbstractCard abstractCard) {
         if (!activeGhostFlame.charged && renderFlames && activeGhostFlame.advanceOnCardUse)
             activeGhostFlame.advanceTrigger(abstractCard);

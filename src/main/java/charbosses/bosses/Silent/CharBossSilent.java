@@ -10,9 +10,12 @@ import charbosses.cards.anticards.Antidote;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.monsters.MirrorImageSilent;
+import charbosses.powers.FakeOrRealPower;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
+import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -114,6 +117,39 @@ public class CharBossSilent extends AbstractCharBoss {
         }
     }
 
+    public static boolean foggy = false;
+
+    @Override
+    public void renderHealth(SpriteBatch sb) {
+        if (!foggy) {
+            super.renderHealth(sb);
+        }
+    }
+
+    @Override
+    public void renderPowerTips(SpriteBatch sb) {
+        if (!foggy) {
+            super.renderPowerTips(sb);
+        }
+    }
+
+
+    @Override
+    public void renderTip(SpriteBatch sb) {
+        if (!foggy) {
+            super.renderTip(sb);
+        }
+    }
+
+
+        /*
+    @SpireOverride
+    protected void renderName(SpriteBatch sb) {
+        if (!foggy) {
+            SpireSuper.call(sb);
+        }
+    }
+    */
 
     @Override
     public void die() {
@@ -139,6 +175,8 @@ public class CharBossSilent extends AbstractCharBoss {
         if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
             AbstractCreature p = AbstractCharBoss.boss;
             AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new MirrorImageSilent(), true));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FakeOrRealPower(this)));
+            foggy = true;
         }
     }
 
