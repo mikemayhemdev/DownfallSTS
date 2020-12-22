@@ -35,6 +35,8 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
        // addRelic(new CBR_ThreadAndNeedle());
         addRelic(new CBR_HornCleat());
         addRelic(new CBR_CursedKey());
+        addRelic(new CBR_Torii());
+        addRelic(new CBR_OddMushroom());
       //  addRelic(new CBR_RedMask());  // gremlin mask
        // addRelic(new CBR_HappyFlower());  // gremlin mask
 

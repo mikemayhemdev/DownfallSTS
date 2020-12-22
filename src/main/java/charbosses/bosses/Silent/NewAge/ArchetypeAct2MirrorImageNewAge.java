@@ -30,6 +30,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
         // addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_Ginger());
         addRelic(new CBR_Anchor());
+        addRelic(new CBR_PaperKrane());
         // addRelic(new CBR_DreamCatcher());
         // addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
         // addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
@@ -72,7 +73,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
                 case 3:
                     //Turn 4
                     addToList(cardsList, new EnFootwork()); //Removed
-                    addToList(cardsList, new EnLegSweep(), extraUpgrades); //Removed
+                    addToList(cardsList, new EnLegSweep()); //Removed
                     addToList(cardsList, new EnRiddleWithHoles(), extraUpgrades);  //Not played here
                     turn = 0;
                     looped = true;
@@ -101,7 +102,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnLegSweep(), extraUpgrades); //Removed
+                    addToList(cardsList, new EnLegSweep()); //Removed
                     addToList(cardsList, new EnRiddleWithHoles(), extraUpgrades);  //Not played here
                     addToList(cardsList, new EnBlur());
                     turn = 0;
@@ -114,6 +115,6 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Vajra());
+        addRelic(new CBR_PenNib());
     }
 }

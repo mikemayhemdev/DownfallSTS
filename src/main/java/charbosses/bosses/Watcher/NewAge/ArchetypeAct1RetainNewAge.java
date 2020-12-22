@@ -7,10 +7,7 @@ import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.purple.*;
-import charbosses.relics.CBR_BagOfPreparation;
-import charbosses.relics.CBR_CloakClasp;
-import charbosses.relics.CBR_NeowsBlessing;
-import charbosses.relics.CBR_TungstenRod;
+import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -32,6 +29,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_CloakClasp());
         addRelic(new CBR_BagOfPreparation());
+        addRelic(new CBR_TungstenRod());
     }
 
     @Override
@@ -105,6 +103,6 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_TungstenRod());
+        addRelic(new CBR_MercuryHourglass());
     }
 }

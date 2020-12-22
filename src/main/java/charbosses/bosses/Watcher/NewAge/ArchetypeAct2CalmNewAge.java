@@ -48,6 +48,11 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         if (!looped) {
             switch (turn) {
                 case 0:
+                    if (AbstractDungeon.ascensionLevel >= 19) {
+                        AbstractCard c = new EnLikeWater();
+                        c.freeToPlayOnce = true;
+                        addToList(cardsList, new EnLikeWater(), false);  //removed
+                    }
                     addToList(cardsList, new EnLikeWater(), false);  //removed
                     addToList(cardsList, new EnDefendPurple(), false);
                     addToList(cardsList, new EnRagnarok(), true);  //not used
@@ -136,7 +141,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_CloakClasp());
+        addRelic(new CBR_Enchiridon());
     }
 
     /*

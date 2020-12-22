@@ -52,8 +52,9 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
     public void initialize() {
 
         addRelic(new CBR_NeowsBlessing());
-        addRelic(new CBR_LetterOpener());
+        addRelic(new CBR_DataDisk());
         addRelic(new CBR_Lantern());
+        addRelic(new CBR_FossilizedHelix());
         addRelic(new CBR_PhilosopherStone());
 
     }
@@ -130,6 +131,6 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_DataDisk());
+        addRelic(new CBR_ArtOfWar());
     }
 }

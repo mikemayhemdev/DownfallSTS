@@ -31,7 +31,8 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_Kunai());
         addRelic(new CBR_RedMask());
-        addRelic(new CBR_BlueCandle());
+        addRelic(new CBR_Turnip());
+        //addRelic(new CBR_BlueCandle());
 
     }
 
@@ -144,6 +145,6 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Anchor());
+        addRelic(new CBR_Mutagenic());
     }
 }

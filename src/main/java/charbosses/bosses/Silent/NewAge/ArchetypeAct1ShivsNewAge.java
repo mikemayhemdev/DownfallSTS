@@ -27,7 +27,8 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
         addRelic(new CBR_NeowsBlessing());
         // addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_Lantern());
-        addRelic(new CBR_Anchor());
+        addRelic(new CBR_CaptainsWheel());
+        addRelic(new CBR_OrnamentalFan());
         // addRelic(new CBR_DreamCatcher());
         // addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
         // addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
@@ -109,6 +110,6 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Vajra());
+        addRelic(new CBR_Shuriken());
     }
 }

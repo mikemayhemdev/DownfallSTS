@@ -4,10 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.orbs.AbstractEnemyOrb;
-import charbosses.relics.CBR_Abacus;
-import charbosses.relics.CBR_NeowsBlessing;
-import charbosses.relics.CBR_SmoothStone;
-import charbosses.relics.CBR_SymbioticVirus;
+import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.SteamBarrier;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,7 +28,9 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
 
         //data disk
         addRelic(new CBR_SmoothStone());
-        addRelic(new CBR_Abacus());
+        addRelic(new CBR_ClockworkSouvenir());
+        addRelic(new CBR_LetterOpener());
+      //  addRelic(new CBR_Abacus());
         // addRelic(new CBR_Transmogrifier());  //Could be something else, no strong lean in any direction
     }
 
