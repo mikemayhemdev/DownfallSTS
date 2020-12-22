@@ -11,23 +11,20 @@ public class ShieldSigil extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public ShieldSigil() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         tags.add(ChampMod.TECHNIQUE);
         //tags.add(ChampMod.OPENER);
         baseMagicNumber = magicNumber = 2;
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         techique();
 //        defenseOpen();
-        if (dcombo()) {
-            this.exhaust = true;
             for (int i = 0; i < magicNumber; i++) {
                 techique();
             }
-        }
+
     }
 
     @Override

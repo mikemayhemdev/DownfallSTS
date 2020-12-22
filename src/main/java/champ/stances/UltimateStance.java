@@ -46,7 +46,7 @@ public class UltimateStance extends AbstractChampStance {
     public void technique() {
         fatigue(3);
         //AbstractDungeon.actionManager.addToBottom(new GainEnergAction(1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(6), 6));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(4), 4));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
     }
 

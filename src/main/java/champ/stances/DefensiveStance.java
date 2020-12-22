@@ -43,7 +43,7 @@ public class DefensiveStance extends AbstractChampStance {
     }
 
     public static int amount() {
-        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 9 : 6;
+        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 7 : 4;
         if (AbstractDungeon.player.hasPower(FocusedDefPower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(FocusedDefPower.POWER_ID).amount;
         }
@@ -52,7 +52,7 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void technique() {
-        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 9 : 6;
+        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 7 : 4;
         if (AbstractDungeon.player.hasPower(FocusedDefPower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(FocusedDefPower.POWER_ID).amount;
         }

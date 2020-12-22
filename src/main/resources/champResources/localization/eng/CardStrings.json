@@ -32,8 +32,8 @@
     "UPGRADE_DESCRIPTION": "Enter champ:Gladiator. NL Draw 2 cards."
   },
   "champ:SwordSigil": {
-    "NAME": "Sword Sigil",
-    "DESCRIPTION": "*Gladiator champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "Sigil of Victory",
+    "DESCRIPTION": "Repeat this effect !M! times. NL Exhaust."
   },
   "champ:FocusedGladiator": {
     "NAME": "Focus: Gladiator",
@@ -63,8 +63,8 @@
     "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter."
   },
   "champ:ShieldSigil": {
-    "NAME": "Shield Sigil",
-    "DESCRIPTION": "*Defensive champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "Chain Lash",
+    "DESCRIPTION": "Repeat this effect !M! times."
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
@@ -100,8 +100,9 @@
     "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!."
   },
   "champ:RageSigil": {
-    "NAME": "Rage Sigil",
-    "DESCRIPTION": "*Berserker champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "Battle Plan",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
