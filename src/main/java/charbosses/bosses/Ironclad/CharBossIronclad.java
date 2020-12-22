@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
+import charbosses.bosses.Ironclad.NewAge.ArchetypeAct2MushroomsNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.anticards.ShieldSmash;
@@ -58,7 +59,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                     archetype = new ArchetypeAct1PerfectedStrike();
                     break;
                 case 2:
-                    archetype = new ArchetypeAct2Strength();
+                    archetype = new ArchetypeAct2MushroomsNewAge();
                     break;
                 case 3:
                     archetype = new ArchetypeAct3BlockNewAge();
@@ -71,7 +72,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                             archetype = new ArchetypeAct1PerfectedStrike();
                             break;
                         case 2:
-                            archetype = new ArchetypeAct2Strength();
+                            archetype = new ArchetypeAct2MushroomsNewAge();
                             break;
                         case 3:
                             archetype = new ArchetypeAct3BlockNewAge();

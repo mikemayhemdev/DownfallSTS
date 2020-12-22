@@ -21,7 +21,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
     private AbstractBossCard theVeryImportantFlyingSleeves = null;
 
     public ArchetypeAct2CalmNewAge() {
-        super("DF_ARCHETYPE_STREAMLINE", "Streamline");
+        super("WA_ARCHETYPE_CALM", "Calm");
         bossMechanicName = bossMechanicString.DIALOG[4];
         bossMechanicDesc = bossMechanicString.DIALOG[5];
     }

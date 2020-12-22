@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct2MirrorImageNewAge() {
-        super("SI_SHIV_ARCHETYPE", "Shivs");
+        super("SI_MIRROR_ARCHETYPE", "Mirror");
         bossMechanicName = bossMechanicString.DIALOG[10];
         bossMechanicDesc = bossMechanicString.DIALOG[11];
     }

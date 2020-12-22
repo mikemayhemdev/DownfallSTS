@@ -15,6 +15,11 @@ public class CBR_DuvuDoll extends AbstractCharbossRelic {
         super(new DuVuDoll());
     }
 
+    public CBR_DuvuDoll(int counter){
+        this();
+        this.counter = counter;
+    }
+
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1];
@@ -40,14 +45,6 @@ public class CBR_DuvuDoll extends AbstractCharbossRelic {
 
     @Override
     public void onEquip() {
-        this.counter = 0;
-        /*
-        for (final AbstractCard c : this.owner.masterDeck.group) {
-            if (c.type == AbstractCard.CardType.CURSE) {
-                ++this.counter;
-            }
-        }
-        */
         if (this.counter == 0) {
             this.description = this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1] + this.DESCRIPTIONS[2];
         } else {

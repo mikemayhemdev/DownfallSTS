@@ -24,7 +24,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
     private CharBossDefect cB;
 
     public ArchetypeAct3OrbsNewAge() {
-        super("DF_ARCHETYPE_", "Strike");
+        super("DF_ARCHETYPE_ORBS", "Orbs");
         bossMechanicName = bossMechanicString.DIALOG[16];
         bossMechanicDesc = bossMechanicString.DIALOG[17];
     }

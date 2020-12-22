@@ -22,7 +22,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
     private AbstractBossCard theVeryImportantPerseverence = null;
 
     public ArchetypeAct1RetainNewAge() {
-        super("DF_ARCHETYPE_STREAMLINE", "Streamline");
+        super("WA_ARCHETYPE_RETAIN", "Retain");
         bossMechanicName = bossMechanicString.DIALOG[8];
         bossMechanicDesc = bossMechanicString.DIALOG[9];
     }

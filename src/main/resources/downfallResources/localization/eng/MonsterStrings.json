@@ -83,7 +83,9 @@
       "Antidote",
       "Poison applied to you triggers at the end of your turn. NL Before triggering Poison, for each [E] available, spend it to remove 10 Poison.",
       "Superstorm",
-      "Whenever you play a Power, Defect gains 1 Focus."
+      "Whenever you play a Power, Defect gains 1 Focus.",
+      "Feeding Frenzy",
+      "Ironclad's Reaper does not Exhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains 1 Strength and heals 20 HP."
     ]
   }
 }

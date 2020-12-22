@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
 
     public ArchetypeAct3PoisonNewAge() {
-        super("SI_SHIV_ARCHETYPE", "Shivs");
+        super("SI_POISON_ARCHETYPE", "Poison");
         bossMechanicName = bossMechanicString.DIALOG[14];
         bossMechanicDesc = bossMechanicString.DIALOG[15];
     }

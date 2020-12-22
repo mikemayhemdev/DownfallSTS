@@ -21,7 +21,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
     private CharBossDefect cB;
 
     public ArchetypeAct2ClawNewAge() {
-        super("DF_ARCHETYPE_", "Strike");
+        super("DF_ARCHETYPE_CLAW", "Claw");
         bossMechanicName = bossMechanicString.DIALOG[2];
         bossMechanicDesc = bossMechanicString.DIALOG[3];
     }
