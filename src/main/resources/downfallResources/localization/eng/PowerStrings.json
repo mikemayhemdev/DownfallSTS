@@ -84,5 +84,11 @@
       "Whenever you play a #yPower card, gains #b",
       " #yFocus."
     ]
+  },
+  "downfall:WatcherDivinityPower": {
+    "NAME": "Faith Eater",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, gains #b1 Mantra. Loses 6 Mantra per turn."
+    ]
   }
 }

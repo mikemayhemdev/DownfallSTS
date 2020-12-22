@@ -4,10 +4,18 @@ import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
+import charbosses.bosses.Silent.CharBossSilent;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct2MirrorImageNewAge;
+import charbosses.bosses.Silent.NewAge.ArchetypeAct3PoisonNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
 import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
+import charbosses.bosses.Watcher.NewAge.ArchetypeAct3DivinityNewAge;
 import charbosses.cards.anticards.PeaceOut;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.monsters.MirrorImageSilent;
+import charbosses.powers.FakeOrRealPower;
+import charbosses.powers.WatcherDivinityPower;
+import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.stances.AbstractEnemyStance;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -15,11 +23,16 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -111,7 +124,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                     archetype = new ArchetypeAct2CalmNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3Divinity();
+                    archetype = new ArchetypeAct3DivinityNewAge();
                     break;
                 case 4: {
                     switch (NeowBoss.Rezzes) {
@@ -122,10 +135,10 @@ public class CharBossWatcher extends AbstractCharBoss {
                             archetype = new ArchetypeAct2CalmNewAge();
                             break;
                         case 3:
-                            archetype = new ArchetypeAct3Divinity();
+                            archetype = new ArchetypeAct3DivinityNewAge();
                             break;
                         default:
-                            archetype = new ArchetypeAct3Divinity();
+                            archetype = new ArchetypeAct3DivinityNewAge();
                             break;
                     }
                     break;
@@ -181,4 +194,14 @@ public class CharBossWatcher extends AbstractCharBoss {
 
         downfallMod.saveBossFight(CharBossWatcher.ID);
     }
+
+    @Override
+    public void usePreBattleAction() {
+        super.usePreBattleAction();
+        if (chosenArchetype instanceof ArchetypeAct3DivinityNewAge) {
+            AbstractCreature p = AbstractCharBoss.boss;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherDivinityPower(p)));
+        }
+    }
+
 }
