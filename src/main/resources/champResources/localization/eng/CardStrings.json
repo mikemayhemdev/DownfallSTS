@@ -312,7 +312,14 @@
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
     "DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage. NL *Defensive: Gain !B! Block. NL *Gladiator: Draw a card and gain [E] .",
-    "UPGRADE_DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage. NL *Defensive: Gain !B! Block. NL *Gladiator: Draw 2 cards and gain [E] ."
+    "UPGRADE_DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage. NL *Defensive: Gain !B! Block. NL *Gladiator: Draw 2 cards and gain [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "Berserker: Deal !D! damage. NL ",
+      "Defensive: Gain !B! Block. NL ",
+      "Gladiator: Draw a card and gain [E] .",
+      "Gladiator: Draw 2 cards and gain [E] .",
+      "champ:Combo NL "
+    ]
   },
   "champ:Improvising": {
     "NAME": "Improvising",

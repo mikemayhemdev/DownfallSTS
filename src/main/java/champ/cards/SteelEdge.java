@@ -1,17 +1,10 @@
 package champ.cards;
 
-import champ.actions.SteelEdgeAction;
-import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import downfall.actions.PerformXAction;
-import downfall.dailymods.ChampStances;
 import sneckomod.SneckoMod;
 
 public class SteelEdge extends AbstractChampCard {
@@ -33,16 +26,37 @@ public class SteelEdge extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!(gcombo()) && !(bcombo()) && !dcombo()){
+        if (!(gcombo()) && !(bcombo()) && !dcombo()) {
             return false;
         }
         return super.canUse(p, m);
     }
 
+    @Override
+    public void applyPowers() {
+        rawDescription = EXTENDED_DESCRIPTION[4];
+        if (bcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[0];
+        if (dcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[1];
+        if (gcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += upgraded ? EXTENDED_DESCRIPTION[3] : EXTENDED_DESCRIPTION[2];
+        initializeDescription();
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        rawDescription = upgraded ? UPGRADE_DESCRIPTION : DESCRIPTION;
+        initializeDescription();
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (bcombo()) dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         if (dcombo()) blck();
-        if (gcombo()){
+        if (gcombo()) {
             atb(new DrawCardAction(magicNumber));
             atb(new GainEnergyAction(1));
         }
