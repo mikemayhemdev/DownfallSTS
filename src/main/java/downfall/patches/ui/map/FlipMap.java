@@ -187,7 +187,7 @@ public class FlipMap {
                         if(mn.room instanceof ShopRoom) {
                             for (MapRoomNode mn2 : mn.getParents()) {
                                 if(mn2.room instanceof ShopRoom) {
-                                    logger.info("Found consecutive shops: " + mn.toString());
+                                    logger.info("Found consecutive shops: " + mn2.toString());
                                     //Switch with monster or event room node from somewhere on the map
                                     if(replaceSustainableSwitchRoom(__result, mn2, mn2.y) || replaceSustainableSwitchRoom(__result, mn2, mn2.y+1) || replaceSustainableSwitchRoom(__result, mn2, mn2.y-1)) {
                                         break;
@@ -230,7 +230,13 @@ public class FlipMap {
                     ArrayList<MapRoomNode> cN = getConnectedNodes(chosenNode);
                     logger.info("Found and fixed emerald elite without campfire.");
                     if(!cN.isEmpty()) {
-                        cN.get(0).room = new RestRoom();
+                        for(MapRoomNode n : cN) {
+                            if(!(n.room instanceof TreasureRoom)) {
+                                n.room = new RestRoom();
+                                return;
+                            }
+                        }
+                        getConnectedNodes(cN.get(0)).stream().findAny().ifPresent( m -> m.room = new RestRoom());
                     }
                 }
             }
@@ -238,19 +244,7 @@ public class FlipMap {
 
         private static boolean hasRestSite(MapRoomNode origin) {
             ArrayList<MapRoomNode> cN = getConnectedNodes(origin);
-            if(!cN.isEmpty()) {
-                for (MapRoomNode mn : cN) {
-                    if (mn.room instanceof RestRoom) {
-                        return true;
-                    }
-                }
-                for (MapRoomNode mn : cN) {
-                    if(hasRestSite(mn)) {
-                        return true;
-                    }
-                }
-            }
-            return false;
+            return cN.stream().anyMatch(mn -> mn.room instanceof RestRoom || hasRestSite(mn));
         }
 
         private static class Locator extends SpireInsertLocator {
