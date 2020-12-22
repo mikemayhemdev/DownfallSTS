@@ -1,6 +1,7 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.actions.FatigueHpLossAction;
 import champ.powers.FocusedBerPower;
 import champ.powers.FocusedDefPower;
@@ -41,6 +42,12 @@ public class BerserkerStance extends AbstractChampStance {
     @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[10] + amount() + ChampChar.characterStrings.TEXT[48] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[11];
+    }
+
+    @Override
+    public void onEnterStance() {
+        super.onEnterStance();
+        ChampMod.enteredBerserkerThisTurn = true;
     }
 
     public static int amount() {

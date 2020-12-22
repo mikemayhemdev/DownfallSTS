@@ -1,6 +1,7 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.powers.CounterPower;
 import champ.powers.FocusedDefPower;
 import champ.relics.DefensiveTrainingManual;
@@ -28,6 +29,12 @@ public class DefensiveStance extends AbstractChampStance {
     @Override
     public String getKeywordString() {
         return "champ:defensive";
+    }
+
+    @Override
+    public void onEnterStance() {
+        super.onEnterStance();
+        ChampMod.enteredDefensiveThisTurn = true;
     }
 
     @Override

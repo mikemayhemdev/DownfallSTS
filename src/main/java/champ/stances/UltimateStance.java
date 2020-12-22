@@ -1,6 +1,7 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -26,6 +27,14 @@ public class UltimateStance extends AbstractChampStance {
     @Override
     public String getKeywordString() {
         return "champ:ultimate";
+    }
+
+    @Override
+    public void onEnterStance() {
+        super.onEnterStance();
+        ChampMod.enteredGladiatorThisTurn = true;
+        ChampMod.enteredBerserkerThisTurn = true;
+        ChampMod.enteredDefensiveThisTurn = true;
     }
 
     @Override

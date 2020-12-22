@@ -14,7 +14,7 @@
     "NAMES": [
       "combo"
     ],
-    "DESCRIPTION": "Extra effect when played in the listed #yStance."
+    "DESCRIPTION": "Extra effect when played in the listed #yStance, or if you entered that #yStance this turn."
   },
   {
     "PROPER_NAME": "Finisher",

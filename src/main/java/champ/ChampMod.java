@@ -123,6 +123,10 @@ public class ChampMod implements
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
 
+    public static boolean enteredDefensiveThisTurn;
+    public static boolean enteredBerserkerThisTurn;
+    public static boolean enteredGladiatorThisTurn;
+
     public static final TextureAtlas UIAtlas = new TextureAtlas();
     public static Texture heartOrb;
     public static Texture crown;
@@ -436,6 +440,9 @@ public class ChampMod implements
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         finishersThisTurn = 0;
         techniquesThisTurn = 0;
+        enteredBerserkerThisTurn = false;
+        enteredDefensiveThisTurn = false;
+        enteredGladiatorThisTurn = false;
         return true;
     }
 
