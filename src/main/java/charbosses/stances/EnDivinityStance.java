@@ -47,8 +47,9 @@ public class EnDivinityStance extends AbstractEnemyStance {
 
     }
 
+
     public void onEndOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new EnemyChangeStanceAction("Neutral"));
+      //  AbstractDungeon.actionManager.addToBottom(new EnemyChangeStanceAction("Neutral"));
     }
 
     public float atDamageGive(float damage, DamageType type) {
