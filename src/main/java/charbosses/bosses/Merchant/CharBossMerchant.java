@@ -189,6 +189,10 @@ public class CharBossMerchant extends AbstractCharBoss {
         super.update();
         if (this.rezTimer <= 0F){
             this.rezVFX.end();
+
+            chosenArchetype.bossMechanicName = AbstractBossDeckArchetype.bossMechanicString.DIALOG[20];
+            chosenArchetype.bossMechanicDesc = AbstractBossDeckArchetype.bossMechanicString.DIALOG[21];
+            chosenArchetype.initializeBossPanel();
         } else {
             this.rezTimer -= Gdx.graphics.getDeltaTime();
             if (!this.startVFX && rezTimer <= 2F){
