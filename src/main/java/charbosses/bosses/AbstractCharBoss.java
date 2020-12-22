@@ -126,10 +126,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     public String energyString = "[E]";
 
-    public AbstractCard anticard() {
-        return new Shiv();
-    }
-
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
         AbstractCharBoss.finishedSetup = false;
@@ -1030,24 +1026,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         if (NeowBoss.neowboss != null) {
             NeowBoss.neowboss.switchIntentToSelfRez();
-            AbstractCard anti = anticard();
-            for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-                if (c.cardID == anti.cardID) {
-                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.drawPile));
-                }
-            }
-            for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-                if (c.cardID == anti.cardID) {
-                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile));
-                }
-            }
-            for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                if (c.cardID == anti.cardID) {
-                    addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
-                }
-            }
-            addToBot(new DestroyAntiCardsAction(anti.cardID));
         }
+
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
         hand.clear();

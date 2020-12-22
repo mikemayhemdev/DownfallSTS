@@ -107,10 +107,6 @@ public class CharBossSilent extends AbstractCharBoss {
 //        }
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new Antidote();
-    }
 
     @Override
     public void onPlayAttackCardSound() {

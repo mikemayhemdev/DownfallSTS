@@ -114,9 +114,7 @@ public class NeowRezAction extends AbstractGameAction {
         if (this.duration <= 0F) {
             cB.init();
             NeowBoss.Rezzes++;
-            if (NeowBoss.Rezzes == 4 && (AbstractDungeon.player.hasRelic(HeartBlessingBlue.ID) || AbstractDungeon.player.hasRelic(HeartBlessingGreen.ID) || AbstractDungeon.player.hasRelic(HeartBlessingRed.ID))) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-            }
+
             cB.showHealthBar();
 
             rezVFX.end();

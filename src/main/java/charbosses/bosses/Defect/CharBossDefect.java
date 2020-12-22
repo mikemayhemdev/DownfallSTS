@@ -48,11 +48,6 @@ public class CharBossDefect extends AbstractCharBoss {
         type = EnemyType.BOSS;
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new Debug();
-    }
-
 
     @Override
     public void generateDeck() {

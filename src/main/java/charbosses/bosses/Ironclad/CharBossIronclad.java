@@ -103,11 +103,6 @@ public class CharBossIronclad extends AbstractCharBoss {
         //this.chosenArchetype.simulateBuild(AbstractCharBoss.boss);
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new ShieldSmash();
-    }
-
 
     @Override
     public void loseBlock(int amount) {

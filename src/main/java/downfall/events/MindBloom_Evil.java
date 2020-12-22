@@ -144,6 +144,8 @@ public class MindBloom_Evil extends AbstractImageEvent {
                         AbstractDungeon.player.loseRelic(HeartBlessingBlue.ID);
                         AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
 
+                        AbstractDungeon.player.decreaseMaxHealth(10);
+
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         break;
                     case 2:

@@ -208,7 +208,13 @@ public class CharBossMerchant extends AbstractCharBoss {
         }
         if (!this.neowSpoke){
             this.neowSpoke = true;
-            AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH, Settings.HEIGHT / 2F, 4.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowEnding")).OPTIONS[0], false));
+            String line;
+            if (FleeingMerchant.DEAD) {
+                line = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowEnding")).OPTIONS[0];
+            } else {
+                line = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowEnding")).OPTIONS[1];
+            }
+            AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH, Settings.HEIGHT / 2F, 4.0F, line, false));
             CardCrawlGame.sound.play("VO_NEOW_2B");
         }
     }

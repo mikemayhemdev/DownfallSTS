@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.events.beyond.SpireHeart;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import downfall.monsters.FleeingMerchant;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.vfx.SoulStealEffect;
@@ -49,8 +48,7 @@ public class BetterEndingPatches {
                 if (AbstractDungeon.actNum == 3 &&
                         AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
                         AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
-                        AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) &&
-                        FleeingMerchant.DEAD
+                        AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)
                 ) {
                 /*
                 __instance.roomEventText.clear();

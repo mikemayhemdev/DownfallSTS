@@ -156,10 +156,6 @@ public class CharBossWatcher extends AbstractCharBoss {
 
     }
 
-    @Override
-    public AbstractCard anticard() {
-        return new PeaceOut();
-    }
 
     @Override
     public void onPlayAttackCardSound() {
