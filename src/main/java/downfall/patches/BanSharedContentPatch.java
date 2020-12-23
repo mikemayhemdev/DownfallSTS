@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.relics.Ectoplasm;
 import downfall.downfallMod;
+import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.relics.StudyCardRelic;
@@ -123,7 +124,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
             }
             else {
-                //ban Alt Version here
+                AbstractDungeon.relicsToRemoveOnStart.add(Hecktoplasm.ID);
             }
         }
     }
