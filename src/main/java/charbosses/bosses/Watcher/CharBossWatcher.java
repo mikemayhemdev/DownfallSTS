@@ -3,7 +3,6 @@ package charbosses.bosses.Watcher;
 import charbosses.actions.unique.EnemyChangeStanceAction;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct2MirrorImageNewAge;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct3PoisonNewAge;

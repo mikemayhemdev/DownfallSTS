@@ -2,7 +2,6 @@ package charbosses.bosses.Ironclad;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct1StatusesNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct2MushroomsNewAge;
@@ -59,7 +58,7 @@ public class CharBossIronclad extends AbstractCharBoss {
         //ArrayList<AbstractBossDeckArchetype> archetypes = new ArrayList<AbstractBossDeckArchetype>();
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1PerfectedStrike();
+            archetype = new ArchetypeAct1StatusesNewAge();
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
@@ -93,7 +92,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                     break;
                 }
                 default:
-                    archetype = new ArchetypeAct1PerfectedStrike();
+                    archetype = new ArchetypeAct1StatusesNewAge();
                     break;
             }
 
