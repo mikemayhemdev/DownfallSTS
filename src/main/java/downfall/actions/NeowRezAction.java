@@ -118,6 +118,7 @@ public class NeowRezAction extends AbstractGameAction {
             cB.showHealthBar();
 
             rezVFX.end();
+            cB.usePreBattleAction();
             this.isDone = true;
         }
     }
