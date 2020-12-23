@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.stances.BerserkerStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -25,6 +26,18 @@ public class SwordSigil extends AbstractChampCard {
             techique();
         }
     }
+
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if (bcombo()){
+            this.myHpLossCost = BerserkerStance.amount() * magicNumber;
+        } else {
+            this.myHpLossCost = 0;
+        }
+    }
+
 
     @Override
     public void triggerOnGlowCheck() {
