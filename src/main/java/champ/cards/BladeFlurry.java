@@ -50,7 +50,7 @@ public class BladeFlurry extends AbstractChampCard {
         super.applyPowers();
 
         if (AbstractDungeon.player != null) {
-            this.rawDescription = upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
+            this.rawDescription = cardStrings.DESCRIPTION;
             int x = 0;
             for (AbstractCard q : AbstractDungeon.player.hand.group) if (q.hasTag(ChampMod.TECHNIQUE)) x++;
             if (gcombo()) {
@@ -64,7 +64,7 @@ public class BladeFlurry extends AbstractChampCard {
     }
 
     public void onMoveToDiscard() {
-        this.rawDescription = upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION;
+        this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
     }
 
