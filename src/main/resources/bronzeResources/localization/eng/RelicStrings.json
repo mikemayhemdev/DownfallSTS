@@ -6,6 +6,20 @@
       "Functions cost #b1 less."
     ]
   },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "Protective Goggles",
+    "FLAVOR": "Look closely.",
+    "DESCRIPTIONS": [
+      "If you end your turn with no cards in the #ySequence, gain #b8 #yBlock."
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "Deca's Washers",
+    "FLAVOR": "From its collection of round things with holes.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile."
+    ]
+  },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Flavor.",

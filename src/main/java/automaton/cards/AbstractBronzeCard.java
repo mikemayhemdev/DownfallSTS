@@ -210,7 +210,6 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     void thisEncodes() {
         CardModifierManager.addModifier(this, new EncodeMod());
-        tags.add(AutomatonMod.ENCODES);
     }
 
     public int getSequencePosition() {
