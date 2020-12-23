@@ -24,6 +24,7 @@ public class EnRiddleWithHoles extends AbstractBossCard {
         super(ID, cardStrings.NAME, "green/attack/riddle_with_holes", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 3;
         intentMultiAmt = 5;
+        baseMagicNumber = magicNumber = 5;
         isMultiDamage = true;
     }
 

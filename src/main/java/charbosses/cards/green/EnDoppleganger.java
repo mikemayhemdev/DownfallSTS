@@ -29,8 +29,8 @@ public class EnDoppleganger extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
 
-        this.addToBot(new ApplyPowerAction(p, p, new EnemyEnergizedPower(p, 2), 2));
-        this.addToBot(new ApplyPowerAction(p, p, new EnemyDrawCardNextTurnPower(p, 2), 2));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyEnergizedPower(m, 2), 2));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyDrawCardNextTurnPower(m, 2), 2));
 
     }
 
