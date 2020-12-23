@@ -12,12 +12,15 @@ import charbosses.cards.status.EnWound;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.ArrayList;
 
 public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
 
     boolean secondLoop = false;
+
+    private AbstractCharbossRelic theArtOfWar;
 
     public ArchetypeAct1StatusesNewAge() {
         super("IC_STATUS_ARCHETYPE", "Status");
@@ -31,7 +34,8 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
 
         addRelic(new CBR_NeowsBlessing());
 
-        addRelic(new CBR_ArtOfWar());
+        theArtOfWar = new CBR_ArtOfWar();
+        addRelic(theArtOfWar);
         //addRelic(new CBR_FossilizedHelix());
         addRelic(new CBR_Orichalcum());
         addRelic(new CBR_ChampionsBelt());
@@ -64,6 +68,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnPowerThrough(true));
                     addToList(cardsList, new EnSecondWind());
                     addToList(cardsList, new EnDefendRed());
+                    theArtOfWar.beginPulse();
                     turn++;
                     break;
                 case 3:
@@ -76,6 +81,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnTrueGrit(), true);
                     addToList(cardsList, new EnTrueGrit(), true);
                     addToList(cardsList, new EnWound());
+                    theArtOfWar.beginPulse();
                     turn++;
                     break;
                 case 5:
@@ -98,6 +104,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     else
                         addToList(cardsList, new EnWound());
                     turn++;
+                    theArtOfWar.beginPulse();
                     break;
                 case 1:
                     addToList(cardsList, new EnWildStrike());
@@ -109,6 +116,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnSecondWind());
                     addToList(cardsList, new EnBurn());
                     addToList(cardsList, new EnWound());
+                    theArtOfWar.beginPulse();
                     turn++;
                     break;
                 case 3:
@@ -121,6 +129,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     addToList(cardsList, new EnTrueGrit(), true);
                     addToList(cardsList, new EnDefendRed());
                     addToList(cardsList, new EnWound());
+                    theArtOfWar.beginPulse();
                     turn=0;
                     secondLoop = true;
                     break;
