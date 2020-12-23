@@ -25,16 +25,11 @@ public class EnMulticast extends AbstractBossCard {
         this.showEvokeValue = true;
     }
 
-    @Override
-    public int getPriority(ArrayList<AbstractCard> hand) {
-        return 6;
-    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 1; i < this.cost-1; i++) {
-            this.addToBot(new EnemyAnimateOrbAction(1));
-            this.addToBot(new EnemyEvokeWithoutRemovingOrbAction(1));
-        }
+
+        this.addToBot(new EnemyAnimateOrbAction(1));
+        this.addToBot(new EnemyEvokeWithoutRemovingOrbAction(1));
         this.addToBot(new EnemyAnimateOrbAction(1));
         this.addToBot(new EnemyEvokeOrbAction(1));
     }

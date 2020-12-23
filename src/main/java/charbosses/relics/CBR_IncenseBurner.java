@@ -36,7 +36,7 @@ public class CBR_IncenseBurner extends AbstractCharbossRelic {
             this.counter = 0;
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
-            this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, null, new IntangiblePlayerPower(AbstractCharBoss.boss, 1), 1));
+            this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, null, new IntangiblePower(AbstractCharBoss.boss, 1), 1));
         }
     }
 

@@ -21,7 +21,7 @@ public class Fortification extends AbstractMonster {
     public static final String NAME = CardCrawlGame.languagePack.getMonsterStrings(ID).NAME;
 
     public Fortification() {
-        super(NAME, "SpireShield", 100, 0.0F, -20.0F, 250.0F, 290.0F, (String)null, -450.0F, -15F);
+        super(NAME, "SpireShield", 150, 0.0F, -20.0F, 250.0F, 290.0F, (String)null, -450.0F, -15F);
         this.type = EnemyType.NORMAL;
         this.loadAnimation("images/monsters/theEnding/shield/skeleton.atlas", "images/monsters/theEnding/shield/skeleton.json", 1.0F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);

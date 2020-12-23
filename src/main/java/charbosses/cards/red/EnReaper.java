@@ -24,7 +24,7 @@ public class EnReaper extends AbstractBossCard {
     }
 
     public EnReaper() {
-        super(ID, cardStrings.NAME, "red/attack/reaper", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, cardStrings.NAME, "red/attack/reaper", 2, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.RARE, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         this.baseDamage = 4;
         this.isMultiDamage = true;
         // this.exhaust = true;

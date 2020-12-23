@@ -32,7 +32,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
         addRelic(new CBR_NeowsBlessing());
 
         addRelic(new CBR_ArtOfWar());
-        addRelic(new CBR_SelfFormingClay());
+        //addRelic(new CBR_FossilizedHelix());
         addRelic(new CBR_Orichalcum());
         addRelic(new CBR_ChampionsBelt());
 

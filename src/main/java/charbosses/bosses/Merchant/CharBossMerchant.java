@@ -218,6 +218,12 @@ public class CharBossMerchant extends AbstractCharBoss {
             CardCrawlGame.sound.play("VO_NEOW_2B");
         }
     }
+
+    @Override
+    public void die() {
+        super.die();
+        FleeingMerchant.DEAD = true;
+    }
 }
 
 

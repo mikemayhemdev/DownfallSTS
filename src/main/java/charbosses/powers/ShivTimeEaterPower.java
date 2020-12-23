@@ -43,13 +43,13 @@ public class ShivTimeEaterPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESC[0] + 6 + DESC[1] + 1 + DESC[2];
+        this.description = DESC[0] + 8 + DESC[1] + 1 + DESC[2];
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (!(card instanceof AbstractBossCard)) {
             ++this.amount;
-            if (this.amount == 6) {
+            if (this.amount == 8) {
                 this.amount = 0;
                 this.flashWithoutSound();
                 this.playApplyPowerSfx();

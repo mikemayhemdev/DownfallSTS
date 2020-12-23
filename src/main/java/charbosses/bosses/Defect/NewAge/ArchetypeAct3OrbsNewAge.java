@@ -78,8 +78,8 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     //Turn 2
-                    addToList(cardsList, new EnZap(), extraUpgrades);
-                    addToList(cardsList, new EnDualcast(), true);
+                    addToList(cardsList, new EnZap(), true);
+                    addToList(cardsList, new EnDualcast(), false);
                     addToList(cardsList, new EnMulticast(), false);
                     turn++;
                     break;
@@ -110,7 +110,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     addToList(cardsList, new EnBlind(), true);
-                    addToList(cardsList, new EnDualcast(), true);
+                    addToList(cardsList, new EnDualcast(), false);
                     addToList(cardsList, new EnMulticast(), false);
                     turn++;
                     break;
@@ -118,7 +118,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Turn
                     addToList(cardsList, new EnAutoShields(), extraUpgrades);
                     addToList(cardsList, new EnColdSnap(), false);
-                    addToList(cardsList, new EnZap(), extraUpgrades);
+                    addToList(cardsList, new EnZap(), true);
                     turn = 0;
                     looped = true;
                     break;
