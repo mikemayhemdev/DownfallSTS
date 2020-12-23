@@ -68,7 +68,7 @@ public class FunctionCard extends AbstractBronzeCard {
         ArrayList<AbstractCard> mCardList = new ArrayList<>();
         for (AbstractCardModifier m : CardModifierManager.getModifiers(this, CardEffectsCardMod.ID)) {
             if (m instanceof CardEffectsCardMod) {
-                mCardList.add(((CardEffectsCardMod) m).stored);
+                mCardList.add(((CardEffectsCardMod) m).stored());
             }
         }
         return mCardList;

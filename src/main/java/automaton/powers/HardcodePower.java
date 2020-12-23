@@ -1,18 +1,10 @@
 package automaton.powers;
 
 import automaton.FunctionHelper;
-import automaton.actions.AddToFuncAction;
-import automaton.cardmods.CardEffectsCardMod;
-import automaton.cardmods.SavableCardEffectsCardMod;
-import basemod.abstracts.AbstractCardModifier;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardSave;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import java.util.ArrayList;
 
 public class HardcodePower extends AbstractAutomatonPower implements OnOutputFunctionPower {
     public static final String NAME = "Hardcode";

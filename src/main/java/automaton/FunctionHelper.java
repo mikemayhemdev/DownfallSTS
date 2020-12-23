@@ -22,9 +22,13 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import java.util.HashMap;
+
 public class FunctionHelper {
     public static CardGroup held;
     public static int max = 3;
+
+    public static HashMap<CardEffectsCardMod, AbstractCard> cardModsInfo = new HashMap<>();
 
     public static final float SEQUENCED_CARD_SIZE = 0.225f;
     public static final float FUNC_CARD_SIZE = 0.45f;

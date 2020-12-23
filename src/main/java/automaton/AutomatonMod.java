@@ -1,5 +1,6 @@
 package automaton;
 
+import automaton.cards.FunctionCard;
 import automaton.events.*;
 import automaton.relics.BronzeBoon;
 import automaton.util.AutoVar;
@@ -260,5 +261,4 @@ public class AutomatonMod implements
             FunctionHelper.held.clear();
         }
     }
-
 }
