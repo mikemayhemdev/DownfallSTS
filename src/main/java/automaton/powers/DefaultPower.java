@@ -18,6 +18,7 @@ public class DefaultPower extends AbstractAutomatonPower implements NonStackable
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
         canGoNegative = false;
         stored = mine;
+        updateDescription();
     }
 
     @Override
@@ -29,6 +30,12 @@ public class DefaultPower extends AbstractAutomatonPower implements NonStackable
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + stored.name + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2] + amount + DESCRIPTIONS[3]);
+        if (stored != null) {
+            description = DESCRIPTIONS[0] + stored.name + (amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2] + amount + DESCRIPTIONS[3]);
+        }
+        else {
+            description = "";
+        }
+
     }
 }
