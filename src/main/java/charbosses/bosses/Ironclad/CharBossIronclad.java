@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
+import charbosses.bosses.Ironclad.NewAge.ArchetypeAct1StatusesNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct2MushroomsNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
 import charbosses.cards.AbstractBossCard;
@@ -56,7 +57,7 @@ public class CharBossIronclad extends AbstractCharBoss {
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1PerfectedStrike();
+                    archetype = new ArchetypeAct1StatusesNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2MushroomsNewAge();
@@ -69,7 +70,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                     SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
                         case 1:
-                            archetype = new ArchetypeAct1PerfectedStrike();
+                            archetype = new ArchetypeAct1StatusesNewAge();
                             break;
                         case 2:
                             archetype = new ArchetypeAct2MushroomsNewAge();
