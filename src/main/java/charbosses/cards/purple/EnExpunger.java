@@ -26,7 +26,7 @@ public class EnExpunger extends AbstractBossCard {
         super(ID, cardStrings.NAME, "colorless/attack/expunger", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 9;
         this.intentMultiAmt = 3;
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = magicNumber = 3;
         this.isMultiDamage = true;
     }
 
