@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeAct1Streamline;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
+import charbosses.bosses.Ironclad.NewAge.ArchetypeAct1StatusesNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct2MushroomsNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
 import charbosses.cards.AbstractBossCard;
@@ -12,6 +13,8 @@ import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.monsters.Fortification;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -20,7 +23,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
@@ -31,6 +36,10 @@ import slimebound.SlimeboundMod;
 public class CharBossIronclad extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Ironclad");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Ironclad").NAMES[0];
+
+
+    private Texture fgImg = ImageMaster.loadImage("images/events/fgShrooms.png");
+    private Texture bgImg = ImageMaster.loadImage("images/events/bgShrooms.png");
 
     public CharBossIronclad() {
         super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
@@ -56,7 +65,7 @@ public class CharBossIronclad extends AbstractCharBoss {
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1PerfectedStrike();
+                    archetype = new ArchetypeAct1StatusesNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2MushroomsNewAge();
@@ -69,7 +78,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                     SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
                         case 1:
-                            archetype = new ArchetypeAct1PerfectedStrike();
+                            archetype = new ArchetypeAct1StatusesNewAge();
                             break;
                         case 2:
                             archetype = new ArchetypeAct2MushroomsNewAge();
@@ -163,6 +172,15 @@ public class CharBossIronclad extends AbstractCharBoss {
         }
     }
 
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+        if (chosenArchetype instanceof ArchetypeAct2MushroomsNewAge) {
+            sb.draw(this.bgImg, 0.0F, -10.0F, (float) Settings.WIDTH, 1080.0F * Settings.scale);
+            sb.draw(this.fgImg, 0.0F, -20.0F * Settings.scale, (float) Settings.WIDTH, 1080.0F * Settings.scale);
+        }
+
+    }
 }
 
 

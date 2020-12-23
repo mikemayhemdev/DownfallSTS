@@ -1,8 +1,7 @@
 package charbosses.cards.red;
 
-import charbosses.actions.common.EnemyMakeTempCardInDrawPileAction;
 import charbosses.cards.AbstractBossCard;
-import charbosses.cards.status.EnWound;
+import charbosses.cards.status.EnDazed;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
@@ -17,39 +16,39 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 
-public class EnWildStrike extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:Wild Strike";
+public class EnRecklessCharge extends AbstractBossCard {
+    public static final String ID = "downfall_Charboss:Reckless Charge";
     private static final CardStrings cardStrings;
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Wild Strike");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Reckless Charge");
     }
 
-    public EnWildStrike() {
-        super(ID, EnWildStrike.cardStrings.NAME, "red/attack/wild_strike", 1, EnWildStrike.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
-        this.baseDamage = 12;
-        this.tags.add(CardTags.STRIKE);
-        this.cardsToPreview = new Wound();
+    public EnRecklessCharge() {
+        super(ID, cardStrings.NAME, "red/attack/reckless_charge", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        this.baseDamage = 7;
+        this.cardsToPreview = new Dazed();
         this.tags.add(downfallMod.CHARBOSS_ATTACK);
+
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        this.addToBot(new MakeTempCardInDiscardAction(new EnWound(), 1));
-        //don't need to create in enemy deck, will be added manually
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        this.addToBot(new MakeTempCardInDiscardAction(new EnDazed(), 1));
+        //don't need to create status in boss deck, will be added manually
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(5);
+            this.upgradeDamage(3);
         }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new EnWildStrike();
+        return new EnRecklessCharge();
     }
 }

@@ -26,7 +26,7 @@ public class EnemyBlockPerNonAttackAction extends AbstractGameAction {
     }
 
     public void update() {
-        ArrayList<AbstractCard> cardsToExhaust = new ArrayList();
+        ArrayList<AbstractCard> cardsToExhaust = new ArrayList<>();
         Iterator var2 = AbstractCharBoss.boss.hand.group.iterator();
 
         AbstractCard c;

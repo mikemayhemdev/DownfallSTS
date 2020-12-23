@@ -15,7 +15,7 @@ import downfall.downfallMod;
 
 import java.util.ArrayList;
 
-public class EnBash extends AbstractBossCard {
+public class EnThunderclap extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Bash";
     private static final CardStrings cardStrings;
 
@@ -23,17 +23,17 @@ public class EnBash extends AbstractBossCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Bash");
     }
 
-    public EnBash() {
-        super(ID, EnBash.cardStrings.NAME, "red/attack/bash", 2, EnBash.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.BASIC, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
-        this.baseDamage = 8;
-        this.baseMagicNumber = 2;
+    public EnThunderclap() {
+        super(ID, EnThunderclap.cardStrings.NAME, "red/attack/bash", 1, EnThunderclap.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
+        this.baseDamage = 4;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(downfallMod.CHARBOSS_SETUP);
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
         this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, this.magicNumber, false), this.magicNumber));
     }
 
@@ -41,8 +41,7 @@ public class EnBash extends AbstractBossCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
-            this.upgradeMagicNumber(1);
+            this.upgradeDamage(3);
         }
     }
 
@@ -51,8 +50,8 @@ public class EnBash extends AbstractBossCard {
         return new EnThunderclap();
     }
 
-//    @Override
-//    public int getPriority(ArrayList<AbstractCard> hand) {
-//        return autoPriority() + 10;
-//    }
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() + 10;
+    }
 }

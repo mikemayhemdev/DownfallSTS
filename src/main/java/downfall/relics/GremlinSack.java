@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -18,49 +19,61 @@ public class GremlinSack extends CustomRelic {
     private static final Texture IMG = new Texture(downfallMod.assetPath("images/relics/GremlinSack.png"));
     private static final Texture OUTLINE = new Texture(downfallMod.assetPath("images/relics/Outline/GremlinSack.png"));
 
+    public ArrayList<AbstractCard> sackCards;
+
     public GremlinSack() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
+
+    }
+
+    @Override
+    public void onTrigger() {
+        sackCards = new ArrayList<>();
+        if (AbstractDungeon.player != null) {
+            if (AbstractDungeon.player.getStartCardForEvent() != null) {
+                sackCards.add(AbstractDungeon.player.getStartCardForEvent().makeStatEquivalentCopy());
+            }
+            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
+            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
+            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
+            sackCards.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
+            sackCards.add(AbstractDungeon.returnRandomCurse());
+
+            this.description = getUpdatedDescription(); this.tips.clear();
+            this.tips.add(new PowerTip(this.name, this.description));
+
+        }
     }
 
     @Override
     public String getUpdatedDescription() {
-        String starterCardName = "";
         if (AbstractDungeon.player != null) {
-            if (AbstractDungeon.player.getStartCardForEvent() != null) {
-                starterCardName = AbstractDungeon.player.getStartCardForEvent().name;
-            }
-
-        }
-        if (AbstractDungeon.ascensionLevel >= 15) {
-            if (!starterCardName.equals("")) {
-                return DESCRIPTIONS[0] + starterCardName + DESCRIPTIONS[3];
+           // SlimeboundMod.logger.info("passed player check");
+            if (sackCards != null) {
+              //  SlimeboundMod.logger.info("passed null check - " + sackCards.size());
+                if (sackCards.size() >=5) {
+                 //   SlimeboundMod.logger.info("passed count check - " + sackCards.size());
+                    String fullDesc = DESCRIPTIONS[0];
+                    fullDesc = fullDesc + DESCRIPTIONS[2] + sackCards.get(0).name + " NL ";
+                    fullDesc = fullDesc + DESCRIPTIONS[3] + sackCards.get(1).name + " NL ";
+                    fullDesc = fullDesc + DESCRIPTIONS[4] + sackCards.get(2).name + " NL ";
+                    fullDesc = fullDesc + DESCRIPTIONS[5] + sackCards.get(3).name + " NL ";
+                    fullDesc = fullDesc + DESCRIPTIONS[6] + sackCards.get(4).name + " NL ";
+                    fullDesc = fullDesc + DESCRIPTIONS[7] + sackCards.get(5).name;
+                    return fullDesc;
+                }
             } else {
-                return DESCRIPTIONS[0] + DESCRIPTIONS[1] + DESCRIPTIONS[3];
+                return DESCRIPTIONS[1];
             }
-        } else if (!starterCardName.equals("")) {
-            return DESCRIPTIONS[0] + starterCardName + DESCRIPTIONS[2];
         } else {
-            return DESCRIPTIONS[0] + DESCRIPTIONS[1] + DESCRIPTIONS[2];
+            return DESCRIPTIONS[1];
         }
-
-
+        return DESCRIPTIONS[1];
     }
 
     public void onEquip() {
 
-        ArrayList<AbstractCard> retVal = new ArrayList<>();
-
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        retVal.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
-        retVal.add(AbstractDungeon.returnRandomCurse());
-        retVal.add(AbstractDungeon.player.getStartCardForEvent());
-        if (AbstractDungeon.ascensionLevel >= 15) {
-            retVal.add(AbstractDungeon.returnRandomCurse());
-        } else {
-            retVal.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
-        }
-        for (AbstractCard c : retVal) {
+        for (AbstractCard c : sackCards) {
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (MathUtils.random((float) Settings.WIDTH * 0.1F, (float) Settings.WIDTH * 0.9F)), (MathUtils.random((float) Settings.HEIGHT * 0.2F, (float) Settings.HEIGHT * 0.8F))));
         }
     }

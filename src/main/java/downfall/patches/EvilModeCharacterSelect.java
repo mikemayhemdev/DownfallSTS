@@ -1,5 +1,6 @@
 package downfall.patches;
 
+import automaton.AutomatonChar;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
 import basemod.patches.whatmod.WhatMod;
@@ -52,7 +53,7 @@ public class EvilModeCharacterSelect {
             Iterator<CharacterOption> options = __instance.options.iterator();
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
-            CharacterOption[] villainOptions = new CharacterOption[5];
+            CharacterOption[] villainOptions = new CharacterOption[6];
 
             while (options.hasNext())
             {
@@ -97,13 +98,22 @@ public class EvilModeCharacterSelect {
                             }
                             villainOptions[3] = o;
                         }
+                        else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)
+                        {
+                           // if (UnlockTracker.isCharacterLocked("Automaton")){
+
+                                o.locked = true;
+                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                            //}
+                            villainOptions[4] = o;
+                        }
                         else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO)
                         {
                             if (UnlockTracker.isCharacterLocked("Snecko")){
                                 o.locked = true;
                                 ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                             }
-                            villainOptions[4] = o;
+                            villainOptions[5] = o;
                         }
 
                         else

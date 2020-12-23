@@ -341,7 +341,8 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             this.screen = CUR_SCREEN.RULE_EXPLANATION;
                             this.imageEventText.updateBodyText(MSG_4);
                             SlimeboundMod.logger.info("threatened");
-                            this.imageEventText.updateDialogOption(1, OPTIONS[5]);
+                            imageEventText.removeDialogOption(1);
+                            this.imageEventText.setDialogOption(OPTIONS[5],  new GremlinSack());
                             this.threatened = true;
                             return;
                         } else {
@@ -351,7 +352,9 @@ public class GremlinMatchGame_Evil extends AbstractImageEvent {
                             monsters.add(new GremlinNob(0F, 0F));
                             AbstractDungeon.getCurrRoom().monsters = monsters;
                             AbstractDungeon.getCurrRoom().rewards.clear();
-                            AbstractDungeon.getCurrRoom().addRelicToRewards(new GremlinSack());
+                            GremlinSack r = new GremlinSack();
+                            r.onTrigger();
+                            AbstractDungeon.getCurrRoom().addRelicToRewards(r);
                             AbstractDungeon.getCurrRoom().addGoldToRewards(100);
 
                             AbstractDungeon.getCurrRoom().eliteTrigger = true;
