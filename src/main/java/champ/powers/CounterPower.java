@@ -58,8 +58,8 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     @Override
     public void stackPower(int stackAmount) {
         if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
-            if (amount + stackAmount > 15)
-                stackAmount = (15 - amount);
+            if (amount + stackAmount > 20)
+                stackAmount = (20 - amount);
         super.stackPower(stackAmount);
     }
 
