@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 
 public class EnHaunted extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:Injury";
+    public static final String ID = "downfall_Charboss:Haunted";
     private static final CardStrings cardStrings;
     public static final String IMG_PATH = "haunted.png";
 

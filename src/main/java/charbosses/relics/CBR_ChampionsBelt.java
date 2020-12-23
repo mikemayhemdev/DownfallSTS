@@ -21,11 +21,6 @@ public class CBR_ChampionsBelt extends AbstractCharbossRelic {
         return this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1];
     }
 
-    public void onTrigger(AbstractCreature target) {
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, 1, false), 1));
-    }
-
     @Override
     public AbstractRelic makeCopy() {
         return new CBR_ChampionsBelt();
