@@ -294,8 +294,8 @@
   },
   "bronze:Infinite Loop": {
     "NAME": "Infinite Loop",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand."
   },
   "bronze:Library": {
     "NAME": "Library",
