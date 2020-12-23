@@ -12,13 +12,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
 
-public class ElectromagneticCoil extends CustomRelic {
+public class ProtectiveGoggles extends CustomRelic {
 
-    public static final String ID = AutomatonMod.makeID("ElectromagneticCoil");
+    public static final String ID = AutomatonMod.makeID("ProtectiveGoggles");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Barbell.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Barbell.png"));
 
-    public ElectromagneticCoil() {
+    public ProtectiveGoggles() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
