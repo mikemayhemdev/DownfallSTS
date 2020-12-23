@@ -6,6 +6,13 @@
       "Functions cost #b1 less."
     ]
   },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "Electromagnetic Coil",
+    "FLAVOR": "Spring to action.",
+    "DESCRIPTIONS": [
+      "If you end your turn with no cards in the #ySequence, gain #b8 #yBlock."
+    ]
+  },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Flavor.",
