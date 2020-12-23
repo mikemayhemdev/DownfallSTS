@@ -1,9 +1,8 @@
 package automaton;
 
-import automaton.cards.FunctionCard;
 import automaton.events.*;
 import automaton.relics.BottledCode;
-import automaton.relics.BronzeBoon;
+import automaton.relics.BronzeCore;
 import automaton.util.AutoVar;
 import automaton.util.CardFilter;
 import automaton.util.CardIgnore;
@@ -25,7 +24,6 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import guardian.cards.AbstractGuardianCard;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -178,7 +176,7 @@ public class AutomatonMod implements
     @Override
     public void receiveEditRelics() {
         //TODO: This
-        BaseMod.addRelicToCustomPool(new BronzeBoon(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new BronzeCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
     }
 

@@ -16,8 +16,8 @@ import static champ.ChampMod.makeRelicPath;
 public class DecasWashers extends CustomRelic {
 
     public static final String ID = AutomatonMod.makeID("DecasWashers");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Barbell.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Barbell.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DecasWashers.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DecasWashers.png"));
 
     public DecasWashers() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);

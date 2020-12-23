@@ -4,7 +4,7 @@ import automaton.cards.Goto;
 import automaton.cards.Replicate;
 import automaton.cards.Defend;
 import automaton.cards.Strike;
-import automaton.relics.BronzeBoon;
+import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -16,15 +16,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 import static automaton.AutomatonMod.*;
 
@@ -119,7 +115,7 @@ public class AutomatonChar extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(BronzeBoon.ID);
+        retVal.add(BronzeCore.ID);
         return retVal;
     }
 

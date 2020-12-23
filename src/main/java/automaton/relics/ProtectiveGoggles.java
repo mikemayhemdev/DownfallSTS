@@ -15,8 +15,8 @@ import static champ.ChampMod.makeRelicPath;
 public class ProtectiveGoggles extends CustomRelic {
 
     public static final String ID = AutomatonMod.makeID("ProtectiveGoggles");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Barbell.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Barbell.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ProtectiveGoggles.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ProtectiveGoggles.png"));
 
     public ProtectiveGoggles() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);

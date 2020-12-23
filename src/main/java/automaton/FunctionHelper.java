@@ -5,9 +5,8 @@ import automaton.cardmods.EncodeMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
-import automaton.cards.Terminator;
 import automaton.powers.*;
-import automaton.relics.BronzeBoon;
+import automaton.relics.BronzeCore;
 import automaton.util.TextureLoader;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
@@ -154,7 +153,7 @@ public class FunctionHelper {
                 ((OnCompilePower) p).receiveCompile(q, forGameplay);
             }
         }
-        if (q.cost > 0 && AbstractDungeon.player.hasRelic(BronzeBoon.ID)) {
+        if (q.cost > 0 && AbstractDungeon.player.hasRelic(BronzeCore.ID)) {
             q.cost -= 1;
             q.costForTurn -= 1;
         }
