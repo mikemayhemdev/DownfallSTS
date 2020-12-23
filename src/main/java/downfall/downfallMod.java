@@ -602,7 +602,7 @@ public class downfallMod implements
                 //Event ID to Override//
                 .overrideEvent(WeMeetAgain.ID)
                 //Event Type//
-                .bonusCondition(() -> (AbstractDungeon.player.relics.size() > 2))
+                .bonusCondition(() -> enoughRelicsForRanwid())
 
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -920,6 +920,21 @@ public class downfallMod implements
         BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
 
     }
+
+    public boolean enoughRelicsForRanwid(){
+        int count = 0;
+
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r.tier == AbstractRelic.RelicTier.COMMON) {
+                count++;
+            }
+            if (r.tier == AbstractRelic.RelicTier.UNCOMMON) {
+                count++;
+            }
+        }
+        return (count >= 2);
+    }
+
 
     @Override
     public void receiveEditRelics() {
