@@ -28,10 +28,10 @@
     ]
   },
   "champ:ChampionCrownUpgraded": {
-    "NAME": "Ultimate Champion's Crown",
+    "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Start each combat in Ultimate Stance, which lasts for 2 turns."
+      "Replaces #rChampion's #rCrown. NL Start each combat in Ultimate Stance, which lasts for 2 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {

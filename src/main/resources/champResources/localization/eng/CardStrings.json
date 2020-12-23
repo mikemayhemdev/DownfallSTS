@@ -240,7 +240,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Stun the enemy. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is a Boss, stun it. If not, deal !D! damage two times. NL Exhaust."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",

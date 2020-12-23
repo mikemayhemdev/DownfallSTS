@@ -73,7 +73,8 @@ public class ChampMod implements
         OnCardUseSubscriber,
         PreMonsterTurnSubscriber,
         OnPlayerLoseBlockSubscriber,
-        PostUpdateSubscriber {
+        PostUpdateSubscriber
+{
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -291,6 +292,9 @@ public class ChampMod implements
         finishersThisCombat = 0;
         techniquesThisTurn = 0;
         StanceHelper.init();
+        enteredBerserkerThisTurn = false;
+        enteredDefensiveThisTurn = false;
+        enteredGladiatorThisTurn = false;
     }
 
     @Override

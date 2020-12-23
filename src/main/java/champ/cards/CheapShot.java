@@ -27,7 +27,12 @@ public class CheapShot extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        atb(new StunMonsterAction(m, p));
+        if (m.type != AbstractMonster.EnemyType.BOSS) {
+            atb(new StunMonsterAction(m, p));
+        } else {
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        }
         finisher();
     }
 
