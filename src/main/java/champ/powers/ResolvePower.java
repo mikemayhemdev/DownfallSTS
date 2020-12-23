@@ -67,8 +67,8 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
     @Override
     public void stackPower(int stackAmount) {
         if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
-            if (amount + stackAmount > 15)
-                stackAmount = (15 - amount);
+            if (amount + stackAmount > PowerArmor.CAP_RESOLVE_ETC)
+                stackAmount = (PowerArmor.CAP_RESOLVE_ETC - amount);
         super.stackPower(stackAmount);
         equivStrCheck();
     }
