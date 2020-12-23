@@ -1,6 +1,10 @@
 package automaton;
 
 import automaton.events.*;
+import automaton.potions.BuildAFunctionPotion;
+import automaton.potions.BurnAndBuffPotion;
+import automaton.potions.CleanCodePotion;
+import automaton.potions.FreeFunctionsPotion;
 import automaton.relics.BottledCode;
 import automaton.relics.BronzeCore;
 import automaton.util.AutoVar;
@@ -11,6 +15,11 @@ import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.potions.CounterstrikePotion;
+import champ.potions.OpenerPotion;
+import champ.potions.TechPotion;
+import champ.potions.UltimateStancePotion;
 import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -192,7 +201,11 @@ public class AutomatonMod implements
     }
 
     public void addPotions() {
-        //TODO: This
+
+        BaseMod.addPotion(BuildAFunctionPotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, BuildAFunctionPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
+        BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
     }
 
     @Override

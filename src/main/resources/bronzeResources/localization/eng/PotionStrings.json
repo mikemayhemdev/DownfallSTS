@@ -1,1 +1,31 @@
-{}
+{
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "Machine Oil",
+    "DESCRIPTIONS": [
+      "Reduce the cost of Functions in your hand by ",
+      " this combat."
+    ]
+  },
+  "bronze:CleanCodePotion": {
+    "NAME": "Alchyrical Elixir",
+    "DESCRIPTIONS": [
+      "Remove all negative Compile effects from the next Function you Compile.  Reduce its cost to 0 until played.",
+      "Remove all negative Compile effects from the next 2 Functions you Compile.  Reduce their cost to 0 until played."
+    ]
+  },
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "Vexing Draught",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " Strength and ",
+      " Dexterity. NL Add two Burn+ Status cards to your draw pile."
+    ]
+  },
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Kio's Clever Concoction",
+    "DESCRIPTIONS": [
+      "Choose 1 of 3 cards with Encode, three times. Compile a Function using those cards and add it to your hand.",
+      "Choose 1 of 3 cards with Encode, three times. Compile a Function using those cards and add two copies of it to your hand."
+    ]
+  }
+}
