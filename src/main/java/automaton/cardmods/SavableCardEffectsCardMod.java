@@ -1,5 +1,6 @@
 package automaton.cardmods;
 
+import automaton.cards.AbstractBronzeCard;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
 import com.google.gson.annotations.Expose;
@@ -11,6 +12,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static automaton.FunctionHelper.WITH_DELIMITER;
 
 
 public class SavableCardEffectsCardMod extends BronzeCardMod {
@@ -43,7 +46,26 @@ public class SavableCardEffectsCardMod extends BronzeCardMod {
     }
 
     public static String getRealDesc(AbstractCard card) {
-        return card.rawDescription.replaceAll("!D!", String.valueOf(card.damage)).replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
+        String x = card.rawDescription;
+        if (card.rawDescription.contains(" NL bronze:Compile")) {
+            String[] splitText = x.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+            String compileText = splitText[1] + splitText[2];
+            x = x.replace(compileText, "");
+        } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+        else if (card.rawDescription.contains("bronze:Compile")) {
+            x = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
+        } // IT NEVER ENDS!!!!!
+        if (card.rawDescription.contains(" π")) {
+            String[] splitText = x.split(String.format(WITH_DELIMITER, " π"));
+            String compileText = splitText[1] + splitText[2];
+            x = x.replace(compileText, "");
+        } // This one is for cards with other text that doesn't need to be on the Function.
+        if (card.rawDescription.contains(" NL \u00A0 ")) {
+            String[] splitText = x.split(String.format(WITH_DELIMITER, " NL \u00A0 "));
+            String compileText = splitText[0] + splitText[1];
+            x = x.replace(compileText, "");
+        } // And for non-Function-relevant text before the main card effects.
+        return x.replaceAll("!D!", String.valueOf(card.damage)) .replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf( ((AbstractBronzeCard)card).auto)));
     }
 
     @Override
