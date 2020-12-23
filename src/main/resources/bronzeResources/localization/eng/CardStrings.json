@@ -134,7 +134,7 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - If this is not the first or last card in the Sequence, gain [E] [E]."
+    "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - If this is not the first or last card in the Sequence, gain [E] [E] ."
   },
   "bronze:Update": {
     "NAME": "Update",
@@ -142,7 +142,7 @@
   },
   "bronze:Overload": {
     "NAME": "Overload",
-    "DESCRIPTION": "Gain [E] [E]. NL bronze:Compile - Function is placed into your discard pile instead of your hand."
+    "DESCRIPTION": "Gain [E] [E] . NL bronze:Compile - Function is placed into your discard pile instead of your hand."
   },
   "bronze:ReverseEngineer": {
     "NAME": "Reverse Engineer",
@@ -227,7 +227,7 @@
   },
   "bronze:Allocate": {
     "NAME": "Allocate",
-    "DESCRIPTION": "Gain [E]."
+    "DESCRIPTION": "Gain [E] ."
   },
   "bronze:Decompile": {
     "NAME": "Decompile",
@@ -266,8 +266,8 @@
   },
   "bronze:Return": {
     "NAME": "Return",
-    "DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E].",
-    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X+1 turns. NL Gain [E]."
+    "DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X+1 turns. NL Gain [E] ."
   },
   "bronze:ForceShield": {
     "NAME": "Force Shield",
@@ -275,8 +275,8 @@
   },
   "bronze:Format": {
     "NAME": "Format",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X cards. NL Gain [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X+1 cards. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X cards. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X+1 cards. NL Gain [E] . NL Exhaust."
   },
   "bronze:BurnOut": {
     "NAME": "Burn Out",
@@ -303,8 +303,8 @@
   },
   "bronze:Verify": {
     "NAME": "Verify",
-    "DESCRIPTION": "The first time you bronze:Compile a Function each turn, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you bronze:Compile a Function each turn, gain [E]."
+    "DESCRIPTION": "The first time you bronze:Compile a Function each turn, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time you bronze:Compile a Function each turn, gain [E] ."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
