@@ -38,16 +38,6 @@ public class EnSeeingRed extends AbstractBossCard {
     }
 
     @Override
-    public int getPriority(ArrayList<AbstractCard> hand) {
-        int priority = 100;
-        //Make this very low priority if its cost has been modified beyond 1
-        if (this.cost > 1){
-            priority -= 1000;
-        }
-        return priority;
-    }
-
-    @Override
     public AbstractCard makeCopy() {
         return new EnSeeingRed();
     }

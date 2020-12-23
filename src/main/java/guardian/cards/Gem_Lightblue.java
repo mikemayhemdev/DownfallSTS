@@ -55,6 +55,7 @@ public class Gem_Lightblue extends AbstractGuardianCard {
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = LIGHTBLUE;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(CardTags.HEALING);
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

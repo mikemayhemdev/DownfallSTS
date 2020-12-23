@@ -49,6 +49,7 @@ public class Gem_Fragmented extends AbstractGuardianCard {
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = FRAGMENTED;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        this.tags.add(CardTags.HEALING);
         this.cardsToPreview = new CrystalShiv();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Fragmented_Gem.png"));
     }

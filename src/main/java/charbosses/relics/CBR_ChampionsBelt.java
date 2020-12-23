@@ -1,5 +1,6 @@
 package charbosses.relics;
 
+import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -21,9 +22,9 @@ public class CBR_ChampionsBelt extends AbstractCharbossRelic {
         return this.DESCRIPTIONS[0] + 1 + this.DESCRIPTIONS[1];
     }
 
-    public void onTrigger(AbstractCreature target) {
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, 1, false), 1));
+    public void onTrigger() {
+        this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractCharBoss.boss, new WeakPower(AbstractDungeon.player, 1, true), 1));
     }
 
     @Override
