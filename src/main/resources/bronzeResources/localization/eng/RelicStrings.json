@@ -43,9 +43,16 @@
   },
   "bronze:MakeshiftBattery": {
     "NAME": "Makeshift Battery",
-    "FLAVOR": "It's a 8.99 volt.",
+    "FLAVOR": "It's an 8.99 volt.",
     "DESCRIPTIONS": [
       "Gain [E] and add a random #yStatus card into your draw pile at the start of your turn."
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "Cable Spool",
+    "FLAVOR": "Tangled...",
+    "DESCRIPTIONS": [
+      "The first Function you #yCompile each combat costs #b1 less."
     ]
   },
   "bronze:BottledCode": {
