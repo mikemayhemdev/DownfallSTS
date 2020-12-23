@@ -2,7 +2,6 @@ package automaton.cardmods;
 
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
-import com.google.gson.annotations.Expose;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardSave;
@@ -43,7 +42,7 @@ public class SavableCardEffectsCardMod extends BronzeCardMod {
     }
 
     public static String getRealDesc(AbstractCard card) {
-        return card.rawDescription.replaceAll("!D!", String.valueOf(card.damage)).replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber));
+        return CardEffectsCardMod.getRealDesc(card);
     }
 
     @Override

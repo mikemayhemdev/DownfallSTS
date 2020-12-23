@@ -20,7 +20,6 @@ public class InfiniteLoop extends AbstractBronzeCard {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         thisEncodes();
-        selfRetain = true;
         this.showCard = showCard;
         if (showCard)
             cardsToPreview = new InfiniteLoop(false); //I had to.
@@ -38,12 +37,12 @@ public class InfiniteLoop extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            makeInHand(this.makeStatEquivalentCopy());
+            makeInHand(new InfiniteLoop());
         }
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        selfRetain = true;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

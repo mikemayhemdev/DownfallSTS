@@ -26,17 +26,17 @@ public class SpaghettiCode extends AbstractBronzeCard {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
             if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
+                eligibleCardsList.add(c.makeCopy());
             }
         }
         for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
             if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
+                eligibleCardsList.add(c.makeCopy());
             }
         }
         for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
             if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
+                eligibleCardsList.add(c.makeCopy());
             }
         }
         AbstractCard qCardGet = eligibleCardsList.get(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size()-1));
@@ -47,17 +47,17 @@ public class SpaghettiCode extends AbstractBronzeCard {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
             if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
+                eligibleCardsList.add(c.makeCopy());
             }
         }
         for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
             if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
+                eligibleCardsList.add(c.makeCopy());
             }
         }
         for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
             if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c);
+                eligibleCardsList.add(c.makeCopy());
             }
         }
         AbstractCard qCardGet = eligibleCardsList.remove(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size()-1));

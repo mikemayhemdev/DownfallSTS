@@ -16,6 +16,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
@@ -241,8 +242,8 @@ public class AutomatonMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        //if (AbstractDungeon.player instanceof AutomatonChar)
-        FunctionHelper.init();
+        if (AbstractDungeon.player instanceof AutomatonChar)
+            FunctionHelper.init();
     }
 
     @Override

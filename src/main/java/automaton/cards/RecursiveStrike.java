@@ -31,6 +31,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
             if (FunctionHelper.held.contains(this)) {
                 baseDamage += magicNumber;
                 superFlash();
+                FunctionHelper.applyPowers();
             }
         }
     }
