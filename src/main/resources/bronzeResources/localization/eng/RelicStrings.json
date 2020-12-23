@@ -15,7 +15,7 @@
   },
   "bronze:DecasWashers": {
     "NAME": "Deca's Washers",
-    "FLAVOR": "From its collection of round things with holes.",
+    "FLAVOR": "It is unknown why Deca collects these.",
     "DESCRIPTIONS": [
       "At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile."
     ]
@@ -70,6 +70,13 @@
       "Choose a card for ",
       "Start each combat with ",
       " in the #ySequence."
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "Donu's Washers",
+    "FLAVOR": "It is rather clear why Donu collects these.",
+    "DESCRIPTIONS": [
+      "At the start of combat, gain [E] [E] and add #b1 #yVoid into your draw pile."
     ]
   }
 }

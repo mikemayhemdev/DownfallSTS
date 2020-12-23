@@ -16,7 +16,7 @@ public class ElectromagneticCoil extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ElectromagneticCoil.png"));
 
     public ElectromagneticCoil() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
     @Override
