@@ -57,7 +57,7 @@ public class BladeFlurry extends AbstractChampCard {
                 x += magicNumber;
             }
             this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + x;
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2];
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
 
             this.initializeDescription();
         }
