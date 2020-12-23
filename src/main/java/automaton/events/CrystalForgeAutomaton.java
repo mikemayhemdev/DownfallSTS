@@ -5,6 +5,9 @@
 
 package automaton.events;
 
+import automaton.AutomatonMod;
+import automaton.cards.SpaghettiCode;
+import automaton.relics.BottledCode;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -46,26 +49,33 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
     }
 
     private int screenNum = 0;
-    private boolean pickCardForGemRemoval = false;
-    private boolean pickCardForSalvageGems = false;
+    private boolean pickCardForHP = false;
     private boolean pickCardForTransmute = false;
-    private AbstractGuardianCard cardChosen = null;
-    private AbstractGuardianCard gemChosen = null;
+
+    private ArrayList<AbstractCard> validCards;
+    private ArrayList<AbstractCard> rareCards;
 
     public CrystalForgeAutomaton() {
         super(NAME, INTRO, GuardianMod.getResourcePath("/events/grimForge.jpg"));
 
-        //TODO - Has two cards with Encode
-        if (true) {
+        validCards = new ArrayList<>();
+        rareCards = new ArrayList<>();
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.hasTag(AutomatonMod.ENCODES)) {
+                validCards.add(c);
+            }
+            if (c.rarity == AbstractCard.CardRarity.RARE) rareCards.add(c);
+        }
+        if (validCards.size() == 0) {
             this.imageEventText.setDialogOption(OPTIONS[5], true);
 
         } else {
-            this.imageEventText.setDialogOption(OPTIONS[0]);
+            this.imageEventText.setDialogOption(OPTIONS[0], new BottledCode());
 
         }
 
-        //TODO - Has a Rare Card
-        if (true) {
+        if (rareCards.size() == 0) {
             this.imageEventText.setDialogOption(OPTIONS[6], true);
 
         } else {
@@ -86,153 +96,65 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
 
     public void update() {
         super.update();
-        if (this.pickCardForGemRemoval && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            ((AbstractGuardianCard) c).sockets.clear();
-            ((AbstractGuardianCard) c).updateDescription();
-            AbstractDungeon.effectsQueue.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy()));
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.pickCardForGemRemoval = false;
-            updateEnhance();
-        } else if (this.pickCardForSalvageGems && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            AbstractGuardianCard cg = (AbstractGuardianCard) c;
-            ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
+        if (pickCardForTransmute && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 
-            for (int i = 0; i < cg.sockets.size(); i++) {
-                switch (cg.sockets.get(i).toString()) {
-                    case "RED":
-                        rewardGemCards.add(new Gem_Red());
-                        break;
-                    case "GREEN":
-                        rewardGemCards.add(new Gem_Green());
-                        break;
-                    case "ORANGE":
-                        rewardGemCards.add(new Gem_Orange());
-                        break;
-                    case "CYAN":
-                        rewardGemCards.add(new Gem_Cyan());
-                        break;
-                    case "WHITE":
-                        rewardGemCards.add(new Gem_White());
-                        break;
-                    case "BLUE":
-                        rewardGemCards.add(new Gem_Blue());
-                        break;
-                    case "CRIMSON":
-                        rewardGemCards.add(new Gem_Crimson());
-                        break;
-                    case "FRAGMENTED":
-                        rewardGemCards.add(new Gem_Fragmented());
-                        break;
-                    case "PURPLE":
-                        rewardGemCards.add(new Gem_Purple());
-                        break;
-                    case "SYNTHETIC":
-                        rewardGemCards.add(new Gem_Synthetic());
-                        break;
-                    case "YELLOW":
-                        rewardGemCards.add(new Gem_Yellow());
-                        break;
-                }
-            }
-
-            ((AbstractGuardianCard) c).sockets.clear();
-            ((AbstractGuardianCard) c).updateDescription();
-
-            for (int i = 0; i < rewardGemCards.size(); i++) {
-                AbstractCard c2 = rewardGemCards.get(i);
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c2, (float) (Settings.WIDTH * (0.2 * (i + 1))), (float) (Settings.HEIGHT / 2)));
-
-            }
-
-
-            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(c, (float) (Settings.WIDTH * 0.2), (float) (Settings.HEIGHT / 2)));
-            AbstractDungeon.player.masterDeck.removeCard(c);
-
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.pickCardForSalvageGems = false;
-            updateEnhance();
-        } else if (this.pickCardForTransmute && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
-
-            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(gems.get(0), (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(SpaghettiCode.getRandomEncode().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .3), (float) (Settings.HEIGHT / 2)));
 
             AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
             AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            this.pickCardForTransmute = false;
-            updateEnhance(1);
-        } else if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && GuardianMod.gridScreenForGems) {
 
-            this.gemChosen = (AbstractGuardianCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            GuardianMod.gridScreenForGems = false;
-            GuardianMod.gridScreenForSockets = true;
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            AbstractDungeon.gridSelectScreen.open(GuardianMod.getSocketableCards(), 1, DESCRIPTIONS[9], false, false, true, false);
+        } else if (pickCardForHP && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
 
-
-        } else if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && GuardianMod.gridScreenForSockets) {
-
-            this.cardChosen = (AbstractGuardianCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            cardChosen.addGemToSocket(gemChosen);
-            AbstractDungeon.effectList.add(new UpgradeShineEffect((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-            AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(cardChosen.makeStatEquivalentCopy()));
+            AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(AbstractDungeon.gridSelectScreen.selectedCards.get(0), (float) (Settings.WIDTH * .7), (float) (Settings.HEIGHT / 2)));
+            AbstractDungeon.player.masterDeck.removeCard(AbstractDungeon.gridSelectScreen.selectedCards.get(0));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            GuardianMod.gridScreenForSockets = false;
-            updateEnhance();
+            AbstractDungeon.player.increaseMaxHp(10, true);
+            AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+
         }
 
 
     }
 
-    private void updateEnhance() {
-        this.updateEnhance(0);
-    }
-
-    private void updateEnhance(int inflateGemCount) {
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            c.update();
-        }
-
-        if (GuardianMod.getSocketableCards().size() == 0 || GuardianMod.getGemCards().size() + inflateGemCount == 0) {
-            this.imageEventText.updateDialogOption(3, OPTIONS[7], true);
-
-        } else {
-            this.imageEventText.updateDialogOption(3, OPTIONS[6], false);
-
-        }
-    }
 
     protected void buttonEffect(int buttonPressed) {
         switch (this.screenNum) {
             case 0:
                 switch (buttonPressed) {
                     case 0:
+                        this.screenNum = 2;
                         //this.pickCardForSalvageGems = true;
                         this.imageEventText.updateBodyText(COMBINE);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3], true);
-                        //AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, false, DESCRIPTIONS[5]);
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new BottledCode());
 
+                        AbstractDungeon.player.decreaseMaxHealth(10);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
                         break;
                     case 1:
-                     //   this.pickCardForGemRemoval = true;
-                      //  AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, DESCRIPTIONS[6], false, false, false, false);
+                        this.screenNum = 2;
+                        this.pickCardForHP = true;
+                        AbstractDungeon.gridSelectScreen.open(AutomatonMod.getRareCards(), 1, DESCRIPTIONS[6], false, false, false, false);
                         this.imageEventText.updateBodyText(REFORGE);
-                        this.imageEventText.updateDialogOption(1, OPTIONS[3], true);
+
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
 
                         break;
                     case 2:
-                       // this.pickCardForTransmute = true;
+                        this.screenNum = 2;
+                        this.pickCardForTransmute = true;
                         this.imageEventText.updateBodyText(TRANSMUTE);
-                       // AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[7], false, false, false, true);
+                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[7], false, false, false, true);
 
-                        this.imageEventText.updateDialogOption(2, OPTIONS[3], true);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
 
                         break;
-                    case 4:
+                    case 3:
                         this.screenNum = 2;
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.updateBodyText(LEAVE);

@@ -5,6 +5,9 @@
 
 package automaton.events;
 
+import automaton.AutomatonMod;
+import basemod.helpers.BaseModCardTags;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -19,6 +22,9 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.GuardianMod;
 import guardian.cards.AbstractGuardianCard;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
     public static final String ID = "bronze:AccursedBlacksmith";
@@ -54,11 +60,18 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
     private boolean pickCard = false;
     private boolean pickCardForSocket = false;
 
+    private ArrayList<AbstractCard> validCards;
+
     public AccursedBlacksmithAutomaton() {
         super(NAME, DIALOG_1, "images/events/blacksmith.jpg");
 
-        //TODO - check that you have three unupgraded cards with Encode in the deck
-        if (true) {
+        validCards = new ArrayList<>();
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.upgraded) {
+                validCards.add(c);
+            }
+        }
+        if (validCards.size() == 0) {
             this.imageEventText.setDialogOption(OPTIONSAUTOMATON[1], true);
 
         } else {
@@ -95,7 +108,14 @@ public class AccursedBlacksmithAutomaton extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONSAUTOMATON[0]);
                         this.screenNum = 2;
                         this.imageEventText.updateDialogOption(0, OPTIONS[2]);
-                        //TODO - Upgrade three unupgraded Encode cards
+                        Collections.shuffle(validCards);
+                        for (int i = 0; i < 3; i++) {
+                            if (validCards.size() - 1 >= i){
+                                validCards.get(i).upgrade();
+                                AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(validCards.get(i).makeStatEquivalentCopy(), MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH, MathUtils.random(0.2F, 0.8F) * (float) Settings.HEIGHT));
+
+                            }
+                        }
 
                         break;
                     case 1:

@@ -1,6 +1,9 @@
 package automaton.events;
 
+import automaton.AutomatonMod;
+import automaton.cardmods.EncodeMod;
 import basemod.helpers.BaseModCardTags;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -70,10 +73,10 @@ public class BackToBasicsAutomaton extends AbstractImageEvent {
         cardsToRemove = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(BaseModCardTags.BASIC_STRIKE)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                 cardsToRemove.add(c);
             }
-            if (c.hasTag(BaseModCardTags.BASIC_DEFEND)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
                 cardsToRemove.add(c);
             }
         }
@@ -118,7 +121,7 @@ public class BackToBasicsAutomaton extends AbstractImageEvent {
                 if (buttonPressed == 0) {
 
                     for (AbstractCard c : cardsToRemove){
-                        //TODO - Strikes & Defends gain Encode
+                        CardModifierManager.addModifier(c, new EncodeMod());
                    }
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);

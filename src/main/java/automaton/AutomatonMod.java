@@ -2,6 +2,7 @@ package automaton;
 
 import automaton.cards.FunctionCard;
 import automaton.events.*;
+import automaton.relics.BottledCode;
 import automaton.relics.BronzeBoon;
 import automaton.util.AutoVar;
 import automaton.util.CardFilter;
@@ -17,12 +18,14 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import guardian.cards.AbstractGuardianCard;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -176,6 +179,7 @@ public class AutomatonMod implements
     public void receiveEditRelics() {
         //TODO: This
         BaseMod.addRelicToCustomPool(new BronzeBoon(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
     }
 
 
@@ -260,5 +264,19 @@ public class AutomatonMod implements
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
         }
+    }
+
+    public static CardGroup getRareCards() {
+        CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.rarity == AbstractCard.CardRarity.RARE) {
+                        retVal.group.add(c);
+
+
+            }
+        }
+
+        return retVal;
     }
 }

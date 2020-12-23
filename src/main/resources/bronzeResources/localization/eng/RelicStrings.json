@@ -5,5 +5,15 @@
     "DESCRIPTIONS": [
       "Functions cost #b1 less."
     ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "Bottled Code",
+    "FLAVOR": "Flavor.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a card with #yEncode. Start each combat with this card in the #ySequence.",
+      "Choose a card for ",
+      "Start each combat with ",
+      " in the #ySequence."
+    ]
   }
 }

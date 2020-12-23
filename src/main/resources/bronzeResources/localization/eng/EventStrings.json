@@ -9,7 +9,11 @@
       "[Fight Spiker] #gGain #gSpike.",
       "[Fight Repulsor] #gGain #gDazing #gPulse.",
       "[Fight Exploder] #gGain #gExplode.",
-      "[Leave]"
+      "[Leave]",
+      "[Begin Combat]",
+      "[Also Fight Spiker] #gGain #gSpike.",
+      "[Also Fight Repulsor] #gGain #gDazing #gPulse.",
+      "[Also Fight Exploder] #gGain #gExplode."
     ]
   },
   "bronze:AncientFactory": {
@@ -42,7 +46,7 @@
     ],
     "OPTIONS": [
       "[Tinker] #gUpgrade #g3 #gRandom #gCards #gwith #gEncode.",
-      "[Locked] Requires 3 unupgraded cards with Encode."
+      "[Locked] Requires an unupgraded card with Encode."
     ]
   },
   "bronze:CrystalForge": {
@@ -52,15 +56,16 @@
       "Using the enchanted anvil, <made a function>.",
       "With the magic tongs, <traded rare for max HP",
       "The Forge's ability to transmute matter is put to use immediately as you toss in an unneeded piece of equipment. Some moments later, the material dissolves and compresses into a new enhancement for your armor.",
-      "You escape through the same secret passage you came in, leaving the Grim Forge behind you. Your journey continues towards the Dawn awaiting at the top of the Spire."
+      "You escape through the same secret passage you came in, leaving the Grim Forge behind you. Your journey continues towards the Dawn awaiting at the top of the Spire.",
+      "Choose a card to Remove."
     ],
     "OPTIONS": [
-      "[Craft] Create a permanent #gFunction out two cards with #gEncode.",
+      "[Craft] #gGain #gBottled #gCode. #rLose #r10 #rMax #rHP.",
       "[Transmute] #rRemove a Card. Gain a random #gCard #gwith #gEncode.",
-      "[Reforge] #rRemove a #yRare Card. #gGain #g10 #gMax #gHP.",
+      "[Reforge] #rRemove a #yRare Card. #gGain #g10 #gMax #gHP #gand #gHeal #gto #gfull.",
       "[Locked] Already used.",
       "[Leave]",
-      "[Locked] Requires two cards with Encode.",
+      "[Locked] Requires a card with Encode.",
       "[Locked] Requires a Rare card."
     ]
   }

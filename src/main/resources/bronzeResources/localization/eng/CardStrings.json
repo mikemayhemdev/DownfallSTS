@@ -1,23 +1,23 @@
 {
   "bronze:DazingPulse": {
     "NAME": "Dazing Pulse",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !B! Block and add 2 *Dazed into your draw pile."
   },
   "bronze:Spike": {
     "NAME": "Spike",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Thorns."
   },
   "bronze:Explode": {
     "NAME": "Explode",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Add a *Burn into your draw pile. NL bronze:Compile - Deal !D! damage to ALL enemies."
   },
   "bronze:DonuBeam": {
     "NAME": "Donu Beam",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Strength and lose 1 Dexterity."
   },
   "bronze:DecaBeam": {
-    "NAME": "Deca Beam",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "Deca Shield",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and add 2 *Dazed into your draw pile."
   },
   "bronze:Strike": {
     "NAME": "Strike",

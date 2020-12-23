@@ -30,6 +30,10 @@ public class ShapeFactory extends AbstractImageEvent {
     public static final String[] OPTIONS;
     private static final EventStrings eventStrings;
 
+    private boolean fightSpiker = false;
+    private boolean fightRepulsor = false;
+    private boolean fightExploder = false;
+
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString(ID);
         NAME = eventStrings.NAME;
@@ -55,31 +59,32 @@ public class ShapeFactory extends AbstractImageEvent {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
-                        this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Spiker(0.0F, 0.0F));
+                        this.screen = CurScreen.CHOOSETWO;
+                        fightSpiker = true;
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().rewards.add(new SpikeReward());
                         this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
+                        this.imageEventText.setDialogOption(OPTIONS[6], new DazingPulse());
+                        this.imageEventText.setDialogOption(OPTIONS[7], new Explode());
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
                         return;
                     case 1:
-                        this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        this.screen = CurScreen.CHOOSETWO;
+                        fightRepulsor = true;
                         AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Repulsor(0.0F, 0.0F));
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().rewards.add(new DazingPulseReward());
                         this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
+                        this.imageEventText.setDialogOption(OPTIONS[5], new Spike());
+                        this.imageEventText.setDialogOption(OPTIONS[7], new Explode());
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
                         return;
                     case 2:
-                        this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        this.screen = CurScreen.CHOOSETWO;
+                        fightExploder = true;
                         AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Exploder(0.0F, 0.0F));
                         AbstractDungeon.getCurrRoom().rewards.clear();
-                        AbstractDungeon.getCurrRoom().rewards.add(new ExplodeReward());
-                        this.imageEventText.clearAllDialogs();
-                        this.enterCombatFromImage();
+                        this.imageEventText.setDialogOption(OPTIONS[5], new Spike());
+                        this.imageEventText.setDialogOption(OPTIONS[6], new DazingPulse());
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
                         return;
                     case 3:
                         this.screen = CurScreen.RESULT;
@@ -90,16 +95,109 @@ public class ShapeFactory extends AbstractImageEvent {
                     default:
                         return;
                 }
+            case CHOOSETWO:
+                switch (buttonPressed) {
+                    case 0:
+                        this.screen = CurScreen.CHOOSETHREE;
+                        if (fightSpiker) {
+                            fightRepulsor = true;
+                        }
+                        else fightSpiker = true;
+                        AbstractDungeon.getCurrRoom().rewards.clear();
+                        this.imageEventText.clearAllDialogs();
+                        if (!fightSpiker) this.imageEventText.setDialogOption(OPTIONS[5], new Spike());
+                        else if (!fightRepulsor) this.imageEventText.setDialogOption(OPTIONS[6], new DazingPulse());
+                        else if (!fightExploder) this.imageEventText.setDialogOption(OPTIONS[7], new Explode());
 
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
+                        return;
+                    case 1:
+                        this.screen = CurScreen.CHOOSETHREE;
+                        if (fightExploder) {
+                            fightRepulsor = true;
+                        }
+                        else fightExploder = true;
+                        AbstractDungeon.getCurrRoom().rewards.clear();
+                        this.imageEventText.clearAllDialogs();
+                        if (!fightSpiker) this.imageEventText.setDialogOption(OPTIONS[5], new Spike());
+                        else if (!fightRepulsor) this.imageEventText.setDialogOption(OPTIONS[6], new DazingPulse());
+                        else if (!fightExploder) this.imageEventText.setDialogOption(OPTIONS[7], new Explode());
+
+                        this.imageEventText.setDialogOption(OPTIONS[4]);
+                        return;
+                    case 2:
+                        beginFight();
+                        return;
+                    default:
+                        return;
+                }
+            case CHOOSETHREE:
+                switch (buttonPressed) {
+                    case 0:
+                        fightRepulsor = true;
+                        fightExploder = true;
+                        fightSpiker = true;
+                        beginFight();
+                        return;
+                    case 1:
+                        beginFight();
+                        return;
+                    default:
+                        return;
+                }
             default:
                 this.openMap();
         }
 
     }
 
+    private void beginFight(){
+        this.screen = CurScreen.FIGHT;
+        SlimeboundMod.logger.info("fight");
+        float spawnX = 0F;
+
+        AbstractDungeon.getCurrRoom().rewards.clear();
+        if (fightSpiker){
+            AbstractDungeon.getCurrRoom().rewards.add(new SpikeReward());
+        }
+        if (fightRepulsor){
+            AbstractDungeon.getCurrRoom().rewards.add(new DazingPulseReward());
+        }
+        if (fightExploder){
+            AbstractDungeon.getCurrRoom().rewards.add(new ExplodeReward());
+        }
+
+        if (fightSpiker){
+            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Spiker(spawnX, 0.0F));
+            spawnX -= 225F;
+            if (fightRepulsor){
+                AbstractDungeon.getCurrRoom().monsters.add(new Repulsor(spawnX, 0.0F));
+                spawnX -= 225F;
+            }
+            if (fightExploder){
+                AbstractDungeon.getCurrRoom().monsters.add(new Exploder(spawnX, 0.0F));
+            }
+        }
+        else if (fightRepulsor){
+            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Repulsor(spawnX, 0.0F));
+            spawnX -= 225F;
+            if (fightExploder){
+                AbstractDungeon.getCurrRoom().monsters.add(new Exploder(spawnX, 0.0F));
+            }
+        }
+        else if (fightExploder){
+            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Exploder(spawnX, 0.0F));
+        }
+
+        this.imageEventText.clearAllDialogs();
+        this.enterCombatFromImage();
+    }
+
     private enum CurScreen {
         PRE,
         INTRO,
+        CHOOSETWO,
+        CHOOSETHREE,
         FIGHT,
         RESULT;
 

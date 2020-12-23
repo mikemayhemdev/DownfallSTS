@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.JAX;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,16 +21,16 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.RewardGlowEffect;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class SpikeReward extends RewardItem {
-    public static final String ID = AutomatonMod.makeID("SpecificCardReward");
-    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString(ID).TEXT;
-
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
+    public static final String ID = AutomatonMod.makeID("SpikeReward");
+    public static final String[] TEXT = CardCrawlGame.languagePack.getUIString("bronze:SpecificCardReward").TEXT;
 
     public SpikeReward() {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
@@ -39,29 +40,25 @@ public class SpikeReward extends RewardItem {
         this.redText = false;
         this.type = RewardType.CARD;
 
-        this.cards.add(new Spike());
+        cards.clear();
+        cards.add(new Spike());
 
+        Iterator var2 = this.cards.iterator();
 
-        this.text = TEXT[0] + this.cards.get(0).name + TEXT[1];
-
-        for (AbstractCard c : this.cards) {
-            if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
-                c.upgrade();
-            } else if (c.type == AbstractCard.CardType.SKILL && AbstractDungeon.player.hasRelic("Toxic Egg 2")) {
-                c.upgrade();
-            } else if (c.type == AbstractCard.CardType.POWER && AbstractDungeon.player.hasRelic("Frozen Egg 2")) {
-                c.upgrade();
+        while (true) {
+            while (var2.hasNext()) {
+                AbstractCard c = (AbstractCard) var2.next();
+                if (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasRelic("Molten Egg 2")) {
+                    c.upgrade();
+                } else if (c.type == AbstractCard.CardType.SKILL && AbstractDungeon.player.hasRelic("Toxic Egg 2")) {
+                    c.upgrade();
+                } else if (c.type == AbstractCard.CardType.POWER && AbstractDungeon.player.hasRelic("Frozen Egg 2")) {
+                    c.upgrade();
+                }
             }
+            this.text = TEXT[0] + cards.get(0).name + TEXT[1];
+            return;
         }
-    }
-
-    public boolean cardListDuplicate(AbstractCard card) {
-        for (AbstractCard alreadyHave : this.cards) {
-            if (alreadyHave.cardID.equals(card.cardID)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public void update() {
@@ -146,7 +143,7 @@ public class SpikeReward extends RewardItem {
 
         Texture cardImg = ImageMaster.REWARD_CARD_NORMAL;
 
-        sb.setColor(Color.WHITE.cpy());
+        sb.setColor(Color.WHITE);
         sb.draw(cardImg, REWARD_ITEM_X - 32.0F, this.y - 32.0F - 2.0F * Settings.scale, 32.0F, 32.0F, 64.0F, 64.0F, Settings.scale, Settings.scale, 0.0F, 0, 0, 64, 64, false, false);
 
 
@@ -161,7 +158,7 @@ public class SpikeReward extends RewardItem {
             color = Settings.RED_TEXT_COLOR;
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, TEXT[0], REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
+        FontHelper.renderSmartText(sb, FontHelper.cardDescFont_N, text, REWARD_TEXT_X, this.y + 5.0F * Settings.scale, 1000.0F * Settings.scale, 0.0F, color);
         if (!this.hb.hovered) {
 
             for (AbstractGameEffect e : effects) {
