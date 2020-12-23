@@ -100,11 +100,11 @@ public class EvilModeCharacterSelect {
                         }
                         else if (o.c.chosenClass == AutomatonChar.Enums.THE_AUTOMATON)
                         {
-                           // if (UnlockTracker.isCharacterLocked("Automaton")){
+                            if (UnlockTracker.isCharacterLocked("Automaton")){
 
                                 o.locked = true;
                                 ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
-                            //}
+                            }
                             villainOptions[4] = o;
                         }
                         else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO)
