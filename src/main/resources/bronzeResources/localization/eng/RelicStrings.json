@@ -62,6 +62,14 @@
       "Functions are now made up of #4 cards."
     ]
   },
+  "bronze:PlatinumCore": {
+    "NAME": "Platinum Core",
+    "FLAVOR": "Changelog: Improved user experience.",
+    "DESCRIPTIONS": [
+      "Replaces",
+      ".[] NL The first #b5 Functions you #yCompile each combat cost #b2 less."
+    ]
+  },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Flavor.",

@@ -160,10 +160,6 @@ public class FunctionHelper {
                 ((OnCompileRelic) r).receiveCompile(q, forGameplay);
             }
         }
-        if (q.cost > 0 && AbstractDungeon.player.hasRelic(BronzeCore.ID)) {
-            q.cost -= 1;
-            q.costForTurn -= 1;
-        }
         System.out.println(q.rawDescription);
         setImportantInfo(q);
         return q;
