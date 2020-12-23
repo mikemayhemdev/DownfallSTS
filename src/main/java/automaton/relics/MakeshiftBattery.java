@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sneckomod.SneckoMod;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static automaton.AutomatonMod.makeRelicOutlinePath;
+import static automaton.AutomatonMod.makeRelicPath;
 
 public class MakeshiftBattery extends CustomRelic {
 

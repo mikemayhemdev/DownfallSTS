@@ -1,7 +1,6 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import automaton.powers.OnCompilePower;
 import automaton.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardModifierManager;
@@ -9,8 +8,8 @@ import champ.util.RetainCardMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static automaton.AutomatonMod.makeRelicOutlinePath;
+import static automaton.AutomatonMod.makeRelicPath;
 
 public class Timepiece extends CustomRelic implements OnCompileRelic {
 

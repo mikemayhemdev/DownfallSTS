@@ -6,11 +6,9 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theHexaghost.HexaMod;
-import theHexaghost.relics.SpiritBrand;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static automaton.AutomatonMod.makeRelicOutlinePath;
+import static automaton.AutomatonMod.makeRelicPath;
 
 public class PlatinumCore extends CustomRelic implements OnCompileRelic {
 

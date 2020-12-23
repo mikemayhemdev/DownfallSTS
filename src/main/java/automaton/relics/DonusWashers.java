@@ -10,20 +10,19 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static automaton.AutomatonMod.makeRelicOutlinePath;
+import static automaton.AutomatonMod.makeRelicPath;
 
 public class DonusWashers extends CustomRelic {
 
     public static final String ID = AutomatonMod.makeID("DonusWashers");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DonusWashers.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("DonusWashers.png"));
+    public boolean firstTurn = false;
 
     public DonusWashers() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
-
-    public boolean firstTurn = false;
 
     @Override
     public void atPreBattle() {

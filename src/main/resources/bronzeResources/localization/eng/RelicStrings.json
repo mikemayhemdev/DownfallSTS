@@ -1,6 +1,6 @@
 {
-  "bronze:BronzeBoon": {
-    "NAME": "Bronze Generator",
+  "bronze:BronzeCore": {
+    "NAME": "Bronze Core",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
       "All Functions you #yCompile cost #b1 less."

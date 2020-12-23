@@ -5,22 +5,20 @@ import automaton.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static automaton.AutomatonMod.makeRelicOutlinePath;
+import static automaton.AutomatonMod.makeRelicPath;
 
 public class CableSpool extends CustomRelic implements OnCompileRelic {
 
     public static final String ID = AutomatonMod.makeID("CableSpool");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BronzeCore.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BronzeCore.png"));
+    boolean activated = false;
 
     public CableSpool() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
-
-    boolean activated = false;
 
     @Override
     public void atBattleStart() {
