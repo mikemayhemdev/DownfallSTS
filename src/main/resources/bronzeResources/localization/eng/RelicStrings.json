@@ -34,6 +34,13 @@
       "Every time you play #b3 Functions in a single turn, gain #b1 #yStrength and #b1 #yDexterity."
     ]
   },
+  "bronze:SilverBullet": {
+    "NAME": "Silver Bullet",
+    "FLAVOR": "Spirewolves are long gone.",
+    "DESCRIPTIONS": [
+      "Start each combat with a #yReplicate in the #ySequence."
+    ]
+  },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Flavor.",
