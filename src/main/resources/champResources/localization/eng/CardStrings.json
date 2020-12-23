@@ -220,7 +220,11 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: Deal !D! damage !M! more times."
+    "DESCRIPTION": "Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: !M! more times.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals ",
+      " damage.)"
+    ]
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
