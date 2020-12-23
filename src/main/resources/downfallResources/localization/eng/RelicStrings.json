@@ -379,10 +379,14 @@
     "NAME": "Gremlin Sack",
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
-      "Upon pickup, add the following cards to your deck: ",
-      "a Starter card",
-      ", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
-      ", a random Common, a random Uncommon, a random Rare, two random Curses."
+      "Upon pickup, add the following cards to your deck: NL ",
+      "Upon pickup, add 6 cards to your deck from the Match Game.",
+      "#g(Starter) ",
+      "#g(Common) ",
+      "#b(Uncommon) ",
+      "#y(Rare) ",
+      "#b(Colorless) ",
+      "#r(Curse) "
     ]
   },
   "downfall:GremlinWheel": {
