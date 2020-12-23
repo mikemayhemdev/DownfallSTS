@@ -24,6 +24,8 @@ public class EnDaggerSpray extends AbstractBossCard {
         super(ID, EnDaggerSpray.cardStrings.NAME, "green/attack/dagger_spray", 1, EnDaggerSpray.cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.GREEN, CardRarity.COMMON, CardTarget.ALL_ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 4;
         this.intentMultiAmt = 2;
+        baseMagicNumber = magicNumber = 2;
+        isMultiDamage = true;
     }
 
     @Override
