@@ -27,6 +27,13 @@
       "All Functions you #yCompile gain #yRetain."
     ]
   },
+  "bronze:Mallet": {
+    "NAME": "Mallet",
+    "FLAVOR": "That's it! I'm gettin me mallet!",
+    "DESCRIPTIONS": [
+      "Every time you play #b3 Functions in a single turn, gain #b1 #yStrength and #b1 #yDexterity."
+    ]
+  },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Flavor.",

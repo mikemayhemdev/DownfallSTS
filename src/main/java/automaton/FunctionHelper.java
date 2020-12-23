@@ -7,6 +7,7 @@ import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
 import automaton.powers.*;
 import automaton.relics.BronzeCore;
+import automaton.relics.OnCompileRelic;
 import automaton.util.TextureLoader;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
@@ -21,6 +22,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.HashMap;
 
@@ -151,6 +153,11 @@ public class FunctionHelper {
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnCompilePower) {
                 ((OnCompilePower) p).receiveCompile(q, forGameplay);
+            }
+        }
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnCompileRelic) {
+                ((OnCompileRelic) r).receiveCompile(q, forGameplay);
             }
         }
         if (q.cost > 0 && AbstractDungeon.player.hasRelic(BronzeCore.ID)) {
