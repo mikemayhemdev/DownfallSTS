@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.relics.Ectoplasm;
 import downfall.downfallMod;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
@@ -117,6 +118,12 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(BolsterEngine.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(CandleOfCauterizing.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Sixitude.ID);
+            }
+            if (EvilModeCharacterSelect.evilMode) {
+                AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
+            }
+            else {
+                //ban Alt Version here
             }
         }
     }
