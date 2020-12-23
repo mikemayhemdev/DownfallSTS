@@ -28,17 +28,6 @@ public class HardcodePower extends AbstractAutomatonPower implements OnOutputFun
     public boolean receiveOutputFunction() {
         flash();
         AbstractCard function2 = FunctionHelper.makeFunction(true);
-        ArrayList<AbstractCardModifier> badThingsList = new ArrayList<>();
-        for (AbstractCardModifier c : CardModifierManager.getModifiers(function2, CardEffectsCardMod.ID)) {
-            if (c instanceof CardEffectsCardMod) {
-                badThingsList.add(c);
-                CardModifierManager.addModifier(function2, new SavableCardEffectsCardMod(new CardSave(((CardEffectsCardMod) c).stored.cardID, ((CardEffectsCardMod) c).stored.timesUpgraded, ((CardEffectsCardMod) c).stored.misc)));
-            }
-        }
-        for (AbstractCardModifier c : badThingsList) {
-            CardModifierManager.removeSpecificModifier(function2, c, true);
-        }
-        function2.applyPowers();
         addToBot(new AddCardToDeckAction(function2));
         addToBot(new ReducePowerAction(owner, owner, this, 1));
         return false;
