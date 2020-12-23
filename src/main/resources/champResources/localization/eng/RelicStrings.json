@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E] . NL Your maximum Resolve and Counter is 15, and your maximum Hand Size is 8."
+      "At the start of your turn, gain [E] . NL Your maximum Fatigue and Counter is 30, and your maximum Hand Size is 8."
     ]
   },
   "champ:SignatureFinisher": {
