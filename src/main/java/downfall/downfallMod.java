@@ -28,6 +28,7 @@ import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
@@ -1215,7 +1216,7 @@ public class downfallMod implements
 
     @Override
     public void receiveRender(SpriteBatch sb) {
-        if (FunctionHelper.doStuff) {
+        if (FunctionHelper.doStuff || AbstractCharBoss.boss != null) {
             EasyInfoDisplayPanel.render(sb);
             //I made it good - if there are further problems, PostRenderSubscriber is your man
         }

@@ -1497,4 +1497,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
     }
 
+    @Override
+    public void dispose() {
+        super.dispose();
+        BossMechanicDisplayPanel.resetBossPanel();
+    }
 }
