@@ -28,7 +28,7 @@ public class EnBurn extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            this.addToTop(new DamageAction(AbstractCharBoss.boss, new DamageInfo(AbstractCharBoss.boss, 2, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            this.addToTop(new DamageAction(p, new DamageInfo(p, 2, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
     }
 
