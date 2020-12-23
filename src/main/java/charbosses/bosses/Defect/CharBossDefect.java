@@ -111,8 +111,8 @@ public class CharBossDefect extends AbstractCharBoss {
         if (chosenArchetype instanceof ArchetypeAct2ClawNewAge) {
             AbstractCreature p = AbstractCharBoss.boss;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-300, 200, 0), true));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(200, 130, 1), true));
+            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-450, 200, 0), true));
+            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(200, 250, 1), true));
         }
         if (chosenArchetype instanceof ArchetypeAct3OrbsNewAge) {
             AbstractCreature p = AbstractCharBoss.boss;

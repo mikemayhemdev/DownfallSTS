@@ -75,9 +75,6 @@ public class MirrorImageSilent extends AbstractMonster {
     @Override
     public void render(SpriteBatch sb) {
         if (!isDead) {
-            if (AbstractCharBoss.boss != null) {
-                this.tint.color = AbstractCharBoss.boss.tint.color;
-            }
             super.render(sb);
         }
     }

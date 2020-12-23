@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -33,8 +34,8 @@ public class FunctionHelper {
     public static final float SEQUENCED_CARD_SIZE = 0.225f;
     public static final float FUNC_CARD_SIZE = 0.45f;
 
-    public static final float BG_X = 150f;
-    public static final float BG_Y = 700f;
+    public static final float BG_X = 150f * Settings.scale;
+    public static final float BG_Y = 700f * Settings.scale;
     public static final float HEIGHT_SEQUENCE = 768f;
     public static final float HEIGHT_FUNCTION = 820f;
 
