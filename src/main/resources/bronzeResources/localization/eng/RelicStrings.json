@@ -3,7 +3,7 @@
     "NAME": "Bronze Generator",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "Functions cost #b1 less."
+      "All Functions you #yCompile cost #b1 less."
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -18,6 +18,13 @@
     "FLAVOR": "From its collection of round things with holes.",
     "DESCRIPTIONS": [
       "At the start of each combat, draw #b3 additional cards and add a #yDazed into your draw pile."
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "Timepiece",
+    "FLAVOR": "From his collection of identical clocks.",
+    "DESCRIPTIONS": [
+      "All Functions you #yCompile gain #yRetain."
     ]
   },
   "bronze:BottledCode": {
