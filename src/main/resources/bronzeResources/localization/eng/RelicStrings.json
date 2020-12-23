@@ -41,6 +41,13 @@
       "Start each combat with a #yReplicate in the #ySequence."
     ]
   },
+  "bronze:MakeshiftBattery": {
+    "NAME": "Makeshift Battery",
+    "FLAVOR": "It's a 8.99 volt.",
+    "DESCRIPTIONS": [
+      "Gain [E] and add a random #yStatus card into your draw pile at the start of your turn."
+    ]
+  },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Flavor.",
