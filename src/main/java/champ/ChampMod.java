@@ -34,6 +34,7 @@ import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -46,6 +47,8 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.TheSnecko;
+import sneckomod.events.BackToBasicsSnecko;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -434,6 +437,17 @@ public class ChampMod implements
                 .eventType(EventUtils.EventType.NORMAL)
                 .create());
                 */
+
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsChamp.ID, BackToBasicsChamp.class) //Event ID//
+                //Event Character//
+                .playerClass(ChampChar.Enums.THE_CHAMP)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
 
     }
 

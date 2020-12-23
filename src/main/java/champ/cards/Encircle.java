@@ -22,7 +22,7 @@ public class Encircle extends AbstractChampCard {
     private static final int MAGIC = 2;
 
     public Encircle() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         myHpLossCost = 2;

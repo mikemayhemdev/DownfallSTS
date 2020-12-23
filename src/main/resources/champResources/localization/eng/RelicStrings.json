@@ -17,7 +17,7 @@
     "NAME": "Barbell",
     "FLAVOR": "1000 reps? Psh. I can do 1001.",
     "DESCRIPTIONS": [
-      "Whenever you enter a Rest Site, if you have at least 3 non-Upgraded cards in your deck, #yUpgrade one at random."
+      "Whenever you enter a Rest Site, if you have at least 10 non-Upgraded cards in your deck, #yUpgrade one at random."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
@@ -73,7 +73,7 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E] . NL Your maximum Fatigue and Counter is 15, and your maximum Hand Size is 8."
+      "At the start of your turn, gain [E] . NL Your maximum Fatigue and Counter is 30, and your maximum Hand Size is 8."
     ]
   },
   "champ:SignatureFinisher": {

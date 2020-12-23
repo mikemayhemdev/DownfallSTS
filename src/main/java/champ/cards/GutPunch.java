@@ -21,7 +21,7 @@ public class GutPunch extends AbstractChampCard {
     private static final int UPG_MAGIC = 5;
 
     public GutPunch() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);

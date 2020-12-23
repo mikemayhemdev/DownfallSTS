@@ -1,6 +1,9 @@
-package sneckomod.events;
+package champ.events;
 
 import basemod.helpers.BaseModCardTags;
+import basemod.helpers.CardModifierManager;
+import champ.ChampMod;
+import champ.util.TechniqueMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -19,10 +22,6 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import guardian.cards.DefendTwo;
-import guardian.cards.Defend_Guardian;
-import guardian.cards.StrikeTwo;
-import guardian.cards.Strike_Guardian;
 import sneckomod.cards.Defend;
 import sneckomod.cards.Strike;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
@@ -32,10 +31,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
-
-public class BackToBasicsSnecko extends AbstractImageEvent {
-    public static final String ID = "sneckomod:BackToBasics";
+public class BackToBasicsChamp extends AbstractImageEvent {
+    public static final String ID = "champ:BackToBasics";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
@@ -55,18 +52,18 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
         DIALOG_1 = DESCRIPTIONS[0];
         DIALOG_2 = DESCRIPTIONS[1];
         DIALOG_3 = DESCRIPTIONS[2];
-        eventStringsGuardian = CardCrawlGame.languagePack.getEventString("sneckomod:BackToBasics");
+        eventStringsGuardian = CardCrawlGame.languagePack.getEventString("champ:BackToBasics");
         DESCRIPTIONSGUARDIAN = eventStringsGuardian.DESCRIPTIONS;
         OPTIONSGUARDIAN = eventStringsGuardian.OPTIONS;
     }
 
-    private BackToBasicsSnecko.CUR_SCREEN screen;
+    private BackToBasicsChamp.CUR_SCREEN screen;
     private List<String> cardsUpgraded;
     private ArrayList<AbstractCard> cardsToRemove;
 
-    public BackToBasicsSnecko() {
+    public BackToBasicsChamp() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");
-        this.screen = BackToBasicsSnecko.CUR_SCREEN.INTRO;
+        this.screen = BackToBasicsChamp.CUR_SCREEN.INTRO;
         this.cardsUpgraded = new ArrayList();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
@@ -76,10 +73,10 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
         cardsToRemove = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+            if (c.hasTag(BaseModCardTags.BASIC_STRIKE)) {
                 cardsToRemove.add(c);
             }
-            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
+            if (c.hasTag(BaseModCardTags.BASIC_DEFEND)) {
                 cardsToRemove.add(c);
             }
         }
@@ -122,23 +119,9 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
         switch (this.screen) {
             case INTRO:
                 if (buttonPressed == 0) {
-                    ArrayList<AbstractCard> list = new ArrayList<>();
-                    for (AbstractCard c : CardLibrary.getAllCards()) {
-                        if (c instanceof AbstractUnknownCard)
-                            list.add(c);
-                    }
-
-                    for (AbstractCard c : cardsToRemove){
-                        Collections.shuffle(list);
-                        AbstractCard cU = list.get(0);
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(cU.makeStatEquivalentCopy(), (Settings.WIDTH / 2F), (float) (Settings.HEIGHT / 2)));
-                    }
-
-                    for (AbstractCard c : cardsToRemove){
-                        AbstractDungeon.player.masterDeck.removeCard(c);
-                    }
 
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
+                    this.techStrikeAndDefends();
                     this.imageEventText.updateDialogOption(0, OPTIONS[3]);
                     this.imageEventText.clearRemainingOptions();
                 } else if (buttonPressed == 1) {
@@ -156,12 +139,33 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                     this.imageEventText.clearRemainingOptions();
                 }
 
-                this.screen = BackToBasicsSnecko.CUR_SCREEN.COMPLETE;
+                this.screen = BackToBasicsChamp.CUR_SCREEN.COMPLETE;
                 break;
             case COMPLETE:
                 this.openMap();
         }
 
+    }
+
+
+    private void techStrikeAndDefends() {
+        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while (true) {
+            AbstractCard c;
+            do {
+                if (!var1.hasNext()) {
+                    return;
+                }
+
+                c = (AbstractCard) var1.next();
+            } while (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
+
+            if (!c.hasTag(ChampMod.TECHNIQUE)) {
+                CardModifierManager.addModifier(c, new TechniqueMod());
+            c.initializeDescription();
+            }
+        }
     }
 
     private void upgradeStrikeAndDefends() {
