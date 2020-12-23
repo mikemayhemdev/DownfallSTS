@@ -36,7 +36,7 @@ public class EnWildStrike extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        this.addToBot(new MakeTempCardInDiscardAction(new EnWound(), 1));
+        this.addToBot(new MakeTempCardInDiscardAction(new Wound(), 1));
         //don't need to create in enemy deck, will be added manually
     }
 

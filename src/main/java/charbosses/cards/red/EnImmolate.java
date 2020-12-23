@@ -34,7 +34,7 @@ public class EnImmolate extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new MakeTempCardInDiscardAction(new EnBurn(), 1));
         //don't need to create status in boss deck, will be added manually
     }
