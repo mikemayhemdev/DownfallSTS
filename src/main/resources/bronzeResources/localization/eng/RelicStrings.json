@@ -55,6 +55,13 @@
       "The first Function you #yCompile each combat costs #b1 less."
     ]
   },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "Electromagnetic Coil",
+    "FLAVOR": "An inefficient but entertaining power source.",
+    "DESCRIPTIONS": [
+      "Functions are now made up of #4 cards."
+    ]
+  },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
     "FLAVOR": "Flavor.",
