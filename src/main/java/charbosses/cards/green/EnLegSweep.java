@@ -28,7 +28,7 @@ public class EnLegSweep extends AbstractBossCard {
     public EnLegSweep() {
         super(ID, EnLegSweep.cardStrings.NAME, "green/skill/leg_sweep", 2, EnLegSweep.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.DEFEND_DEBUFF);
         this.baseBlock = 11;
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = magicNumber = 2;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package charbosses.monsters;
 
+import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Silent.CharBossSilent;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.downfallMod;
 
 import static charbosses.bosses.Silent.CharBossSilent.foggy;
@@ -47,7 +49,14 @@ public class MirrorImageSilent extends AbstractMonster {
             this.currentHealth = AbstractCharBoss.boss.currentHealth;
             this.maxHealth = AbstractCharBoss.boss.maxHealth;
             this.currentBlock = AbstractCharBoss.boss.currentBlock;
-            this.powers = AbstractCharBoss.boss.powers;
+            this.powers.clear();
+            for (AbstractPower p : AbstractCharBoss.boss.powers) {
+                if (p instanceof CloneablePowerInterface) {
+                    AbstractPower q = ((CloneablePowerInterface) p).makeCopy();
+                    q.owner = this;
+                    powers.add(q);
+                }
+            }
         }
         if (!isDead) {
             this.particleTimer -= Gdx.graphics.getDeltaTime();
@@ -66,6 +75,9 @@ public class MirrorImageSilent extends AbstractMonster {
     @Override
     public void render(SpriteBatch sb) {
         if (!isDead) {
+            if (AbstractCharBoss.boss != null) {
+                this.tint.color = AbstractCharBoss.boss.tint.color;
+            }
             super.render(sb);
         }
     }
