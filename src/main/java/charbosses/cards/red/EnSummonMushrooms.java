@@ -55,15 +55,15 @@ public class EnSummonMushrooms extends AbstractBossCard {
         }
 
         ArrayList<AbstractMonster> mushroomList = new ArrayList<>();
-        mushroomList.add(new MushroomPurple(-500F, 0F));
-        mushroomList.add(new MushroomRed(-500F, 0F));
-        mushroomList.add(new MushroomWhite(-500F, 0F));
+        mushroomList.add(new MushroomPurple(-400F, 0F));
+        mushroomList.add(new MushroomRed(-400F, 0F));
+        mushroomList.add(new MushroomWhite(-400F, 0F));
         Collections.shuffle(mushroomList);
 
         ArrayList<AbstractMonster> mushroomList2 = new ArrayList<>();
-        mushroomList2.add(new MushroomPurple(-700F, 0F));
-        mushroomList2.add(new MushroomRed(-700F, 0F));
-        mushroomList2.add(new MushroomWhite(-700F, 0F));
+        mushroomList2.add(new MushroomPurple(-600F, 0F));
+        mushroomList2.add(new MushroomRed(-600F, 0F));
+        mushroomList2.add(new MushroomWhite(-600F, 0F));
         Collections.shuffle(mushroomList2);
 
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(mushroomList.get(0), true));
