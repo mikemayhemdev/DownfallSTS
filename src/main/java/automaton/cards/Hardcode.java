@@ -26,5 +26,6 @@ public class Hardcode extends AbstractBronzeCard {
     }
 
     public void upp() {
+        upgradeBaseCost(0);
     }
 }
