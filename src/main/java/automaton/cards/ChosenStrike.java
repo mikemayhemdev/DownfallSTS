@@ -16,11 +16,11 @@ public class ChosenStrike extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 3;
 
     public ChosenStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 1;
         baseAuto = auto = 2;
