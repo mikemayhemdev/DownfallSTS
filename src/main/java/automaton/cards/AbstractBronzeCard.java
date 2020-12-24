@@ -1,7 +1,6 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
-import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cardmods.EncodeMod;
@@ -29,38 +28,15 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     protected final CardStrings cardStrings;
     protected final String NAME;
-    protected String DESCRIPTION;
-    protected String UPGRADE_DESCRIPTION;
-    protected String[] EXTENDED_DESCRIPTION;
-
     public int auto;
     public int baseAuto;
     public boolean upgradedAuto;
     public boolean isAutoModified;
-
-    public void resetAttributes() {
-        super.resetAttributes();
-        auto = baseAuto;
-        isAutoModified = false;
-    }
-
-    public void displayUpgrades() {
-        super.displayUpgrades();
-        if (upgradedAuto) {
-            auto = baseAuto;
-            isAutoModified = true;
-        }
-    }
-
-    void upgradeAuto(int amount) {
-        baseAuto += amount;
-        auto = baseAuto;
-        upgradedAuto = true;
-    }
-
     public int position = -1;
-
     public boolean doSpecialCompileStuff = true;
+    protected String DESCRIPTION;
+    protected String UPGRADE_DESCRIPTION;
+    protected String[] EXTENDED_DESCRIPTION;
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -104,6 +80,26 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public static String makeID(String blah) {
         return getModID() + ":" + blah;
+    }
+
+    public void resetAttributes() {
+        super.resetAttributes();
+        auto = baseAuto;
+        isAutoModified = false;
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedAuto) {
+            auto = baseAuto;
+            isAutoModified = true;
+        }
+    }
+
+    void upgradeAuto(int amount) {
+        baseAuto += amount;
+        auto = baseAuto;
+        upgradedAuto = true;
     }
 
     @Override

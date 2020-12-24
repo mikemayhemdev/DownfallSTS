@@ -120,15 +120,10 @@ public class FunctionHelper {
             output();
         }
         secretStorage = makeFunction(false);
-        if (AbstractDungeon.player.hasPower(CloningPower.POWER_ID)) {
-            AbstractDungeon.player.getPower(CloningPower.POWER_ID).onSpecificTrigger();
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    FunctionHelper.addToSequence(c.makeStatEquivalentCopy());
-                }
-            });
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof PostAddToFuncPower) {
+                ((PostAddToFuncPower) p).receivePostAddToFunc(c);
+            }
         }
     }
 

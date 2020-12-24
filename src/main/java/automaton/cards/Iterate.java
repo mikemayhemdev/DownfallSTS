@@ -1,7 +1,6 @@
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,7 +22,7 @@ public class Iterate extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < magicNumber; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         }
     }

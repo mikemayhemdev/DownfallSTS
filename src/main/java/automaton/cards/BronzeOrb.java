@@ -48,7 +48,7 @@ public class BronzeOrb extends AbstractBronzeCard {
                     }
                 }
                 if (!myCardsList.isEmpty()) {
-                    AbstractCard q = myCardsList.get(AbstractDungeon.cardRandomRng.random(0, myCardsList.size()-1));
+                    AbstractCard q = myCardsList.get(AbstractDungeon.cardRandomRng.random(0, myCardsList.size() - 1));
                     att(new AddToFuncAction(q, AbstractDungeon.player.drawPile));
                 }
             }

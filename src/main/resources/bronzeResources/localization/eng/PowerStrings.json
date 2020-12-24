@@ -3,8 +3,8 @@
     "NAME": "Cloning Beam",
     "DESCRIPTIONS": [
       "The next time you add a card to the Sequence, add an extra copy of it.",
-      "The next #b",
-      " times you add a card to the Sequence, add an extra copy of it."
+      "The next time you add a card to the Sequence, add #b",
+      " extra copies of it."
     ]
   },
   "bronze:Default": {

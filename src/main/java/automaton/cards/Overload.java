@@ -2,7 +2,6 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import automaton.FunctionHelper;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

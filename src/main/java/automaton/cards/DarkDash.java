@@ -37,8 +37,7 @@ public class DarkDash extends AbstractBronzeCard {
         if (forGameplay) {
             if (upgraded) {
                 atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
-            }
-            else {
+            } else {
                 shuffleIn(new VoidCard());
             }
         }

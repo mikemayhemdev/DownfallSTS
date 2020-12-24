@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
-import downfall.util.CardIgnore;
 import guardian.vfx.SmallLaserEffectColored;
 
 public class DazingPulse extends AbstractBronzeCard {
@@ -40,7 +38,7 @@ public class DazingPulse extends AbstractBronzeCard {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
             blck();
-            shuffleIn(new Dazed(),2);
+            shuffleIn(new Dazed(), 2);
         }
     }
 

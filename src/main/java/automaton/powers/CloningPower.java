@@ -1,9 +1,11 @@
 package automaton.powers;
 
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import automaton.actions.AddToFuncAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class CloningPower extends AbstractAutomatonPower {
+public class CloningPower extends AbstractAutomatonPower implements PostAddToFuncPower {
     public static final String NAME = "Cloning";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
@@ -14,8 +16,10 @@ public class CloningPower extends AbstractAutomatonPower {
     }
 
     @Override
-    public void onSpecificTrigger() {
+    public void receivePostAddToFunc(AbstractCard addition) {
         flash();
-        addToBot(new ReducePowerAction(owner, owner, this, 1));
+        for (int i = 0; i < amount; i++)
+            addToTop(new AddToFuncAction(addition.makeStatEquivalentCopy(), null));
+        addToTop(new RemoveSpecificPowerAction(owner, owner, this.ID));
     }
 }

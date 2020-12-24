@@ -10,11 +10,9 @@ public class InfiniteLoop extends AbstractBronzeCard {
     public final static String ID = makeID("InfiniteLoop");
 
     //stupid intellij stuff attack, enemy, rare
-
-    private boolean showCard;
-
     private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 2;
+    private boolean showCard;
 
     public InfiniteLoop(boolean showCard) {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);

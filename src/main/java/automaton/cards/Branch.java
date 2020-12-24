@@ -1,21 +1,17 @@
 package automaton.cards;
 
 import automaton.actions.AddToFuncAction;
-import automaton.cardmods.EncodeMod;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PotionHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
-import expansioncontent.expansionContentMod;
-import sneckomod.actions.ChangeGoldAction;
 
 import java.util.ArrayList;
 
@@ -48,14 +44,14 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
 
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
-            case "bronze:BranchHit":{
+            case "bronze:BranchHit": {
                 AbstractCard q = new BranchBlock();
                 if (upgraded) q.upgrade();
                 att(new AddToFuncAction(q, null));
                 att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, card.baseDamage, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
                 break;
             }
-            case "bronze:BranchBlock":{
+            case "bronze:BranchBlock": {
                 AbstractCard q = new BranchHit();
                 if (upgraded) q.upgrade();
                 att(new AddToFuncAction(q, null));
