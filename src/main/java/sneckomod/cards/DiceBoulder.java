@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class DiceBoulder extends AbstractSneckoCard {
@@ -20,6 +21,10 @@ public class DiceBoulder extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         timesUpgraded = eugene;
+    }
+
+    public DiceBoulder() {
+        this(0);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
