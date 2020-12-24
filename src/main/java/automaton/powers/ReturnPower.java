@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ReturnPower extends AbstractAutomatonPower {
-    public static final String NAME = "ReturnPower";
+    public static final String NAME = "Return";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;

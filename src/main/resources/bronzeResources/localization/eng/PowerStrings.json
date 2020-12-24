@@ -52,7 +52,7 @@
       " #yDazed into your draw pile each turn."
     ]
   },
-  "bronze:ReturnPower": {
+  "bronze:Return": {
     "NAME": "Returning",
     "DESCRIPTIONS": [
       "At the start of your next turn, gain [E] and draw #b1 card.",
