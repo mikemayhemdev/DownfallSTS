@@ -16,7 +16,7 @@ public class Explode extends AbstractBronzeCard {
     public final static String ID = makeID("Explode");
 
     public Explode() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseDamage = 20;
         thisEncodes();
     }

@@ -13,10 +13,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
+import downfall.util.CardIgnore;
 import slimebound.cards.AbstractSlimeboundCard;
 import theHexaghost.powers.BurnPower;
 
-
+@CardIgnore
 public class Ignite extends AbstractCard {
     public static final String ID = "bronze:Ignite";
     public static final String NAME;

@@ -10,9 +10,7 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.ghostflames.AbstractGhostflame;
-import theHexaghost.util.CardIgnore;
 
-@CardIgnore
 public class GhostlyFlex extends AbstractHexaCard {
 
     public final static String ID = makeID("GhostlyFlex");

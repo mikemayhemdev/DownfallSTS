@@ -10,10 +10,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 import slimebound.SlimeboundMod;
 import slimebound.cards.AbstractSlimeboundCard;
 
-
+@CardIgnore
 public class UsefulSlime extends AbstractCard {
     public static final String ID = "bronze:Lubricant";
     public static final String NAME;

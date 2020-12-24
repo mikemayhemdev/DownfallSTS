@@ -13,13 +13,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
+import downfall.util.CardIgnore;
 import guardian.vfx.SmallLaserEffectColored;
 
 public class DazingPulse extends AbstractBronzeCard {
     public final static String ID = makeID("DazingPulse");
 
     public DazingPulse() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseBlock = 10;
         baseDamage = 10;
         thisEncodes();

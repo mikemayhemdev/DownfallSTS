@@ -11,9 +11,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.util.CardIgnore;
 import slimebound.cards.AbstractSlimeboundCard;
 
-
+@CardIgnore
 public class Daze extends AbstractCard {
     public static final String ID = "bronze:Daze";
     public static final String NAME;

@@ -13,7 +13,7 @@ public class Spike extends AbstractBronzeCard {
     public final static String ID = makeID("Spike");
 
     public Spike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = 5;
         magicNumber = baseMagicNumber = 3;
         thisEncodes();

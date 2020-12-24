@@ -13,9 +13,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.util.CardIgnore;
 import slimebound.cards.AbstractSlimeboundCard;
 
-
+@CardIgnore
 public class IntoTheVoid extends AbstractCard {
     public static final String ID = "bronze:IntoTheVoid";
     public static final String NAME;

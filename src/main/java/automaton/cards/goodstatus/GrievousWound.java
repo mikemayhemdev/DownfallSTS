@@ -12,9 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import downfall.util.CardIgnore;
 import slimebound.cards.AbstractSlimeboundCard;
 
-
+@CardIgnore
 public class GrievousWound extends AbstractCard {
     public static final String ID = "bronze:GrievousWound";
     public static final String NAME;

@@ -14,7 +14,6 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.EditCardsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.PostUpdateSubscriber;
-import basemod.interfaces.StartGameSubscriber;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -23,19 +22,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.ui.campfire.WheelSpinButton;
-import expansioncontent.actions.RandomCardWithTagAction;
-import expansioncontent.cards.*;
+import downfall.util.CardIgnore;
 import expansioncontent.relics.StudyCardRelic;
 import expansioncontent.util.CardFilter;
-import guardian.characters.GuardianCharacter;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.characters.SlimeboundCharacter;
-import theHexaghost.TheHexaghost;
-import theHexaghost.util.CardIgnore;
-import theHexaghost.util.CardNoSeen;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -153,11 +146,7 @@ public class expansionContentMod implements
             System.out.println(classInfo.getClassName());
             AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
             BaseMod.addCard(card);
-            if (cls.hasAnnotation(CardNoSeen.class)) {
-                UnlockTracker.hardUnlockOverride(card.cardID);
-            } else {
-                UnlockTracker.unlockCard(card.cardID);
-            }
+            UnlockTracker.unlockCard(card.cardID);
         }
     }
 

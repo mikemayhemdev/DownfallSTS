@@ -9,7 +9,7 @@ import automaton.potions.FreeFunctionsPotion;
 import automaton.relics.*;
 import automaton.util.AutoVar;
 import automaton.util.CardFilter;
-import automaton.util.CardIgnore;
+import downfall.util.CardIgnore;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
@@ -17,11 +17,6 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampChar;
-import champ.potions.CounterstrikePotion;
-import champ.potions.OpenerPotion;
-import champ.potions.TechPotion;
-import champ.potions.UltimateStancePotion;
 import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -41,7 +36,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.cards.unknowns.Unknown;
 import sneckomod.util.ExhaustMod;
 
 import java.io.File;
@@ -49,7 +43,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer

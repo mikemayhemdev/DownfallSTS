@@ -14,10 +14,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+@CardIgnore
 public class FunctionCard extends AbstractBronzeCard {
     public final static String ID = makeID("FunctionCard");
 

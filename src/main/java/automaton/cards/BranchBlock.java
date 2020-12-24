@@ -1,8 +1,10 @@
 package automaton.cards;
 
+import downfall.util.CardIgnore;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+@CardIgnore
 public class BranchBlock extends AbstractBronzeCard {
 
     public final static String ID = makeID("BranchBlock");
