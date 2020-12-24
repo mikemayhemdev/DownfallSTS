@@ -35,6 +35,6 @@ public class Shell extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBlock(UPG_BLOCK);
+        upgradeBaseCost(0);
     }
 }

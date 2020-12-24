@@ -19,7 +19,7 @@ public class BurnOut extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 4;
 
     public BurnOut() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         isMultiDamage = true;
         thisEncodes();

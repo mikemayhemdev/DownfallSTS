@@ -15,7 +15,7 @@ public class Break extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 32;
+    private static final int DAMAGE = 36;
     private static final int UPG_DAMAGE = 8;
 
     public Break() {

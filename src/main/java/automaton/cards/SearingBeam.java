@@ -11,7 +11,7 @@ public class SearingBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 10;
 
     public SearingBeam(int upgrades) {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -31,7 +31,7 @@ public class SearingBeam extends AbstractBronzeCard {
 
     @Override
     public void upgrade() {
-        upgradeDamage(4 + timesUpgraded);
+        upgradeDamage(3 + timesUpgraded);
         ++timesUpgraded;
         upgraded = true;
         name = NAME + "+" + timesUpgraded;

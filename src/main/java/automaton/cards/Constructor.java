@@ -10,7 +10,7 @@ public class Constructor extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 1;
+    private static final int BLOCK = 6;
     private static final int UPG_BLOCK = 2;
 
     public Constructor() {

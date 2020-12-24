@@ -11,7 +11,7 @@ public class Library extends AbstractBronzeCard {
     //stupid intellij stuff power, self, rare
 
     public Library() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -19,6 +19,6 @@ public class Library extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(2);
     }
 }
