@@ -27,8 +27,8 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
 
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
+        boolean activated = false;
         if (counter > 0) {
-            boolean activated = false;
             for (int i = 0; i < 2; i++) {
                 if (function.cost > 0) {
                     function.cost -= 1;
@@ -36,10 +36,10 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
                     activated = true;
                 }
             }
-            if (activated && forGameplay) {
-                flash();
-                counter -= 1;
-            }
+        }
+        if (forGameplay) {
+            if (activated) flash();
+            counter -= 1;
         }
     }
 

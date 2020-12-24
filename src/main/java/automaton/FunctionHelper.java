@@ -30,6 +30,8 @@ public class FunctionHelper {
     public static CardGroup held;
     public static int max = 3;
 
+    public static boolean doExtraNonSpecificCopy = false;
+
     public static HashMap<CardEffectsCardMod, AbstractCard> cardModsInfo = new HashMap<>();
 
     public static final float SEQUENCED_CARD_SIZE = 0.225f;
@@ -191,6 +193,10 @@ public class FunctionHelper {
             if (p instanceof OnOutputFunctionPower) {
                 regularOutput = ((OnOutputFunctionPower) p).receiveOutputFunction();
             }
+        }
+        if (doExtraNonSpecificCopy) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
+            doExtraNonSpecificCopy = false;
         }
         if (regularOutput) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
