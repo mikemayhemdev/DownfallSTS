@@ -15,6 +15,7 @@ public class Spike extends AbstractBronzeCard {
     public Spike() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 5;
+        magicNumber = baseMagicNumber = 3;
         thisEncodes();
     }
 
