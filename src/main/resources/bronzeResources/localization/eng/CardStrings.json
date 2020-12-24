@@ -327,7 +327,7 @@
   "bronze:Seek": {
     "NAME": "Seek",
     "DESCRIPTION": "Put !M! card from your draw pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your draw pile into your hand. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL Put !M! card from your draw pile into your hand. NL Exhaust."
   },
   "bronze:Repulsor": {
     "NAME": "Repulsor",

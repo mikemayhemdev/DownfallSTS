@@ -11,7 +11,6 @@ public class Seek extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, rare
 
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
 
     public Seek() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
@@ -24,6 +23,8 @@ public class Seek extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        selfRetain = true;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
