@@ -71,16 +71,16 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnAutoShields(), extraUpgrades);
                     addToList(cardsList, new EnRainbow());
+                    addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
                     addToList(cardsList, new EnChargeBattery());
                     turn++;
                     break;
                 case 1:
                     //Turn 2
                     addToList(cardsList, new EnZap(), true);
-                    addToList(cardsList, new EnDualcast(), false);
-                    addToList(cardsList, new EnMulticast(), false);
+                    addToList(cardsList, new EnDualcast());
+                    addToList(cardsList, new EnMulticast(2));
                     turn++;
                     break;
                 case 2:
@@ -91,8 +91,8 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     break;
                 case 3:
                     //Turn 4
-                    addToList(cardsList, new EnStorm(), extraUpgrades);
-                    addToList(cardsList, new EnDefragment(), false);
+                    addToList(cardsList, new EnStorm(), false);
+                    addToList(cardsList, new EnDefragment(), true);
                     increasePretendFocus(2);
                     addToList(cardsList, new EnBlind(), extraUpgrades);
                     turn = 0;
@@ -101,29 +101,26 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
             }
         } else {
             switch (turn) {
-
                 case 0:
-                    addToList(cardsList, new EnLeap(), extraUpgrades);
-                    addToList(cardsList, new EnChargeBattery(), true);
+                    addToList(cardsList, new EnLeap());
+                    addToList(cardsList, new EnChargeBattery());
                     addToList(cardsList, new EnBullseye(), false);
                     turn++;
                     break;
                 case 1:
                     addToList(cardsList, new EnBlind(), true);
-                    addToList(cardsList, new EnDualcast(), false);
-                    addToList(cardsList, new EnMulticast(), false);
+                    addToList(cardsList, new EnDualcast());
+                    addToList(cardsList, new EnMulticast(3));
                     turn++;
                     break;
                 case 2:
-                    //Turn
-                    addToList(cardsList, new EnAutoShields(), extraUpgrades);
                     addToList(cardsList, new EnColdSnap(), false);
                     addToList(cardsList, new EnZap(), true);
+                    addToList(cardsList, new EnReinforcedBody(), extraUpgrades);
                     turn = 0;
                     looped = true;
                     break;
             }
-
         }
 
         return cardsList;
