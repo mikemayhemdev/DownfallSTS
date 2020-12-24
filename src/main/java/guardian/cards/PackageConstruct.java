@@ -227,7 +227,6 @@ public class PackageConstruct extends AbstractGuardianCard {
                     }
                 }
             }
-
         }
     }
 }

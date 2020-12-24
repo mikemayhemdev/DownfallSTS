@@ -15,7 +15,8 @@ public class Debug extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Debug() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

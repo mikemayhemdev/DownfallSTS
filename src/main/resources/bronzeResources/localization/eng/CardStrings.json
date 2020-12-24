@@ -336,7 +336,7 @@
   },
   "bronze:Debug": {
     "NAME": "Debug",
-    "DESCRIPTION": "Remove all bronze:Compile effects from the cards in the Sequence."
+    "DESCRIPTION": "Remove all negative bronze:Compile effects from the cards in the Sequence. NL Exhaust."
   },
   "bronze:HyperBeam": {
     "NAME": "HYPER BEAM",
@@ -400,5 +400,10 @@
   "bronze:UnknownStatus": {
     "NAME": "Perplex",
     "DESCRIPTION": "Deal !B! Block."
+  },
+  "bronze:TinkerersToolbox": {
+    "NAME": "Tinkerer's Toolbox",
+    "DESCRIPTION": "Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust."
   }
 }
