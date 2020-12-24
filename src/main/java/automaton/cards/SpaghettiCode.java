@@ -39,11 +39,11 @@ public class SpaghettiCode extends AbstractBronzeCard {
                 eligibleCardsList.add(c.makeCopy());
             }
         }
-        AbstractCard qCardGet = eligibleCardsList.get(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size()-1));
+        AbstractCard qCardGet = eligibleCardsList.get(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size() - 1));
         return qCardGet.makeCopy();
     }
 
-    private static ArrayList<AbstractCard> getRandomEncodeChoices() {
+    public static ArrayList<AbstractCard> getRandomEncodeChoices(int amount) {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
         for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
             if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
@@ -60,17 +60,16 @@ public class SpaghettiCode extends AbstractBronzeCard {
                 eligibleCardsList.add(c.makeCopy());
             }
         }
-        AbstractCard qCardGet = eligibleCardsList.remove(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size()-1));
-        AbstractCard qCardGet2 = eligibleCardsList.remove(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size()-1));
-        eligibleCardsList.clear();
-        eligibleCardsList.add(qCardGet);
-        eligibleCardsList.add(qCardGet2);
-        return eligibleCardsList;
+        ArrayList<AbstractCard> selectedCards = new ArrayList<>();
+        for (int i = 0; i < amount; i++) {
+            selectedCards.add(eligibleCardsList.remove(AbstractDungeon.cardRandomRng.random(0, eligibleCardsList.size() - 1)));
+        }
+        return selectedCards;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
-            ArrayList<AbstractCard> cardsList = getRandomEncodeChoices();
+            ArrayList<AbstractCard> cardsList = getRandomEncodeChoices(2);
             addToBot(new SelectCardsAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> {
                 addToTop(new AddToFuncAction(cards.get(0), null));
             }));
