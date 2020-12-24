@@ -3,10 +3,12 @@ package sneckomod.cards.unknowns;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import downfall.util.CardIgnore;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
+@CardIgnore
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
     private static String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
