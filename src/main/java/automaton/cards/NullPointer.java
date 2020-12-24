@@ -1,7 +1,10 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import automaton.cardmods.UnplayableMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,7 +26,6 @@ public class NullPointer extends AbstractBronzeCard {
         baseBlock = BLOCK;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
-        tags.add(AutomatonMod.MODIFIES_OUTPUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,9 +34,9 @@ public class NullPointer extends AbstractBronzeCard {
     }
 
     @Override
-    public boolean onOutput() {
-        //POOF!
-        return false;
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        super.onCompile(function, forGameplay);
+        CardModifierManager.addModifier(function, new UnplayableMod());
     }
 
     public void upp() {

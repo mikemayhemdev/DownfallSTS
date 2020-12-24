@@ -162,7 +162,7 @@
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function is not created."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function gains Unplayable."
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
