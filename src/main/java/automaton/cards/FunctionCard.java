@@ -348,6 +348,7 @@ public class FunctionCard extends AbstractBronzeCard {
             }
 
         }
+    }
 
 
     @Override
@@ -374,7 +375,6 @@ public class FunctionCard extends AbstractBronzeCard {
 
             }
         }
-    }
     }
 }
 

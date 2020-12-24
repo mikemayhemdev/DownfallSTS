@@ -123,13 +123,14 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public void onInput() {
-        // Called when the card is about to enter the Sequence.
+        // Called when the card is about to enter the Sequence. This could be deleted if it stays unused.
     }
 
     public boolean onOutput() {
         // Called when the function is about to be added to the hand,
         // before the function is created.
         // Return true to continue adding to hand. Return false to stop that.
+        // Not the best hook. Should maybe find a way to not use this.
         return true;
     }
 
