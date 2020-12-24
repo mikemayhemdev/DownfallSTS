@@ -228,8 +228,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public int getSequencePosition() {
-        if (FunctionHelper.held.contains(this)) {
-            return FunctionHelper.held.group.indexOf(this);
+        if (FunctionHelper.held != null) {
+            if (FunctionHelper.held.contains(this)) {
+                return FunctionHelper.held.group.indexOf(this);
+            }
         }
         return -1;
     }
