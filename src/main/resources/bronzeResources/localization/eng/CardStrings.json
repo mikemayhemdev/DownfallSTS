@@ -86,8 +86,8 @@
   },
   "bronze:OilSpill": {
     "NAME": "Oil Spill",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add a *Slimed into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison to ALL enemies. NL bronze:Compile - Add a *Slimed into your discard pile."
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - Add a *Slimed into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - Add a *Slimed into your discard pile."
   },
   "bronze:WildBeam": {
     "NAME": "Wild Beam",

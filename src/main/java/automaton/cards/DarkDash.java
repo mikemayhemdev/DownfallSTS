@@ -45,6 +45,8 @@ public class DarkDash extends AbstractBronzeCard {
     }
 
     public void upp() {
+        upgradeDamage(2);
+        upgradeBlock(2);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
