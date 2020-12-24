@@ -86,5 +86,12 @@
     "DESCRIPTIONS": [
       "At the start of combat, gain [E] [E] and add #b1 #yVoid into your draw pile."
     ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "Bronze Idol",
+    "FLAVOR": "Flavor",
+    "DESCRIPTIONS": [
+      "Status cards may now be played for useful effects."
+    ]
   }
 }

@@ -372,5 +372,29 @@
     "NAME": "Infinite Loop",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Encode - Add a *Infinite *Loop into your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Encode - Add a *Infinite *Loop+ into your hand."
+  },
+  "bronze:Ignite": {
+    "NAME": "Ignite",
+    "DESCRIPTION": "Apply !M! hexamod:Soulburn."
+  },
+  "bronze:IntoTheVoid": {
+    "NAME": "Into the Void",
+    "DESCRIPTION": "Ethereal. NL Enemy loses !M! Strength this turn. NL Exhaust."
+  },
+  "bronze:Lubricant": {
+    "NAME": "Lubricant",
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust."
+  },
+  "bronze:GrievousWound": {
+    "NAME": "Grievous Wound",
+    "DESCRIPTION": "Apply !M! Vulnerable."
+  },
+  "bronze:Daze": {
+    "NAME": "Daze",
+    "DESCRIPTION": "Ethereal. NL Apply !M! Weak. NL Exhaust."
+  },
+  "bronze:UnknownStatus": {
+    "NAME": "Perplex",
+    "DESCRIPTION": "Deal !B! Block."
   }
 }

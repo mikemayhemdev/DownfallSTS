@@ -1,12 +1,12 @@
 package automaton;
 
+import automaton.cards.goodstatus.*;
 import automaton.events.*;
 import automaton.potions.BuildAFunctionPotion;
 import automaton.potions.BurnAndBuffPotion;
 import automaton.potions.CleanCodePotion;
 import automaton.potions.FreeFunctionsPotion;
-import automaton.relics.BottledCode;
-import automaton.relics.BronzeCore;
+import automaton.relics.*;
 import automaton.util.AutoVar;
 import automaton.util.CardFilter;
 import automaton.util.CardIgnore;
@@ -14,6 +14,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.potions.CounterstrikePotion;
@@ -27,6 +28,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.status.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -37,12 +39,14 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.cards.unknowns.Unknown;
 
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -56,7 +60,9 @@ public class AutomatonMod implements
         SetUnlocksSubscriber,
         OnStartBattleSubscriber,
         PostBattleSubscriber,
-        StartGameSubscriber {
+        StartGameSubscriber,
+        PostDrawSubscriber
+        {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -87,6 +93,8 @@ public class AutomatonMod implements
     public static AbstractCard.CardTags BAD_COMPILE;
     @SpireEnum
     public static AbstractCard.CardTags MODIFIES_OUTPUT;
+    @SpireEnum
+    public static AbstractCard.CardTags GOOD_STATUS;
 
     public AutomatonMod() {
         BaseMod.subscribe(this);
@@ -186,6 +194,16 @@ public class AutomatonMod implements
     public void receiveEditRelics() {
         //TODO: This
         BaseMod.addRelicToCustomPool(new BronzeCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new CableSpool(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelic(new DecasWashers(), RelicType.SHARED);
+        BaseMod.addRelic(new DonusWashers(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new ElectromagneticCoil(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new MakeshiftBattery(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new Mallet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new PlatinumCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelic(new ProtectiveGoggles(), RelicType.SHARED);
+        BaseMod.addRelic(new BronzeIdol(), RelicType.SHARED);
+        BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
     }
 
@@ -198,6 +216,13 @@ public class AutomatonMod implements
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+
+        BaseMod.addCard(new Daze());
+        BaseMod.addCard(new Ignite());
+        BaseMod.addCard(new GrievousWound());
+        BaseMod.addCard(new IntoTheVoid());
+        BaseMod.addCard(new UsefulSlime());
+        BaseMod.addCard(new UnknownStatus());
     }
 
     public void addPotions() {
@@ -289,5 +314,46 @@ public class AutomatonMod implements
         }
 
         return retVal;
+    }
+
+    @Override
+    public void receivePostDraw(AbstractCard abstractCard) {
+        if (abstractCard.type == AbstractCard.CardType.STATUS){
+            if (AbstractDungeon.player.hasRelic(BronzeIdol.ID)){
+                if (!abstractCard.hasTag(GOOD_STATUS)){
+
+                    AbstractCard newStatus = getGoodStatus(abstractCard);
+
+                    int index = AbstractDungeon.player.hand.group.indexOf(abstractCard);
+                    AbstractDungeon.player.hand.group.set(index, newStatus);
+
+                    AbstractDungeon.player.hand.refreshHandLayout();
+                }
+            }
+        }
+    }
+
+    public AbstractCard getGoodStatus(AbstractCard ogStatus){
+        AbstractCard newStatus = null;
+        if (ogStatus instanceof Dazed){
+            newStatus = new Daze();
+        }
+        else if (ogStatus instanceof Burn){
+            newStatus = new Ignite();
+        }
+        else if (ogStatus instanceof VoidCard){
+            newStatus = new IntoTheVoid();
+        }
+        else if (ogStatus instanceof Slimed){
+            newStatus = new UsefulSlime();
+        }
+        else if (ogStatus instanceof Wound){
+            newStatus = new GrievousWound();
+        }
+        else {
+            newStatus = new UnknownStatus();
+        }
+        if (ogStatus.upgraded) newStatus.upgrade();
+        return newStatus;
     }
 }

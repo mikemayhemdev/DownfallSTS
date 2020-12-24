@@ -450,7 +450,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new slimebound.cards.Grow());
         BaseMod.addCard(new slimebound.cards.Prepare());
         BaseMod.addCard(new slimebound.cards.Gluttony());
-        //BaseMod.addCard(new slimebound.cards.UsefulSlime());
+        //BaseMod.addCard(new automaton.cards.goodstatus.UsefulSlime());
         BaseMod.addCard(new RainOfGoop());
         BaseMod.addCard(new slimebound.cards.GoopSpray());
         BaseMod.addCard(new slimebound.cards.MassFeed());
