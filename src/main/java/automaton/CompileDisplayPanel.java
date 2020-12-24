@@ -11,14 +11,14 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 
     @Override
     public String getTitle() {
-        return "Compile Data";
+        return "When Compiled:";
     }
 
     @Override
     public String getDescription() {
         String q = "NORENDER";
         boolean flip = false;
-        StringBuilder s = new StringBuilder("When #yCompiled: NL ");
+        StringBuilder s = new StringBuilder("");
         if (FunctionHelper.held != null)
             for (AbstractCard card : FunctionHelper.held.group) {
                 if (card.rawDescription.contains("bronze:Compile")) {

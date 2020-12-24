@@ -137,7 +137,7 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
                     case 1:
                         this.screenNum = 2;
                         this.pickCardForHP = true;
-                        AbstractDungeon.gridSelectScreen.open(AutomatonMod.getRareCards(), 1, DESCRIPTIONS[6], false, false, false, false);
+                        AbstractDungeon.gridSelectScreen.open(AutomatonMod.getRareCards(), 1, DESCRIPTIONS[7], false, false, false, false);
                         this.imageEventText.updateBodyText(REFORGE);
 
                         this.imageEventText.clearAllDialogs();

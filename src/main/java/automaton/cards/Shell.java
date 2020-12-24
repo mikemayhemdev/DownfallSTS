@@ -18,10 +18,11 @@ public class Shell extends AbstractBronzeCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         thisEncodes();
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new BlurPower(p, 1));
+        applyToSelf(new BlurPower(p, magicNumber));
     }
 
     @Override
