@@ -5,6 +5,7 @@ import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cardmods.EncodeMod;
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
@@ -21,6 +22,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import slimebound.SlimeboundMod;
+import sun.reflect.Reflection;
 
 import java.util.ArrayList;
 
@@ -39,6 +42,14 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public int baseAuto;
     public boolean upgradedAuto;
     public boolean isAutoModified;
+
+    private AbstractCard functionPreviewCard;
+    private static float functionPreviewCardScale = .9f;
+    private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
+    private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
+
+    public boolean isUncompiledFunctionCard = false;
+    public boolean isHoveredInSequence = false;
 
     public void resetAttributes() {
         super.resetAttributes();
@@ -224,40 +235,60 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     @Override
-    public void render(SpriteBatch sb) {
-        super.render(sb);
-        if (hb.hovered) {
-            if (getSequencePosition() >= 0) {
+    public void hover() {
+        if ((getSequencePosition() >= 0 || isUncompiledFunctionCard) && !isHoveredInSequence) {
+            isHoveredInSequence = true;
+            SlimeboundMod.logger.info("hover() hit");
+            ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", true);
 
-            }
+        } else {
+            super.hover();
+        }
+
+    }
+
+    @Override
+    public void unhover() {
+        if ((getSequencePosition() >= 0 || isUncompiledFunctionCard) && isHoveredInSequence) {
+            isHoveredInSequence = false;
+            SlimeboundMod.logger.info("unhover() hit");
+            ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", false);
+
+        } else {
+            super.unhover();
         }
     }
 
-
     @Override
-    public void renderCardTip(SpriteBatch sb) {
-        super.renderCardTip(sb);
+    public void render(SpriteBatch sb) {
+        super.render(sb);
 
+        // SlimeboundMod.logger.info("rendering cardTip");
 
-        if (hb.hovered) {
+        if (isHoveredInSequence) {
+             SlimeboundMod.logger.info("isHoveredInSequence");
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
+
+                SlimeboundMod.logger.info("bounced");
                 return;
             }
-            if (getSequencePosition() >= 0) {
 
-                float drawScale = 1f;
-                float yPosition1 = Settings.HEIGHT * 0.5F;
-                float xPosition1 = Settings.WIDTH * 0.05F;
 
-                AbstractCard card = makeStatEquivalentCopy();
-                if (card != null) {
-                    card.drawScale = drawScale;
-                    card.current_x = xPosition1;
-                    card.current_y = yPosition1;
-                    card.render(sb);
-                }
-
+            SlimeboundMod.logger.info("Is in Sequence");
+            if (functionPreviewCard == null) {
+                functionPreviewCard = makeStatEquivalentCopy();
             }
+            SlimeboundMod.logger.info("rendering previewcard");
+            functionPreviewCard.drawScale = functionPreviewCardScale;
+            functionPreviewCard.current_x = functionPreviewCardX;
+            functionPreviewCard.current_y = functionPreviewCardY;
+           // functionPreviewCard.update();
+            functionPreviewCard.render(sb);
+
+
+        }
+        if (!hb.hovered && functionPreviewCard != null) {
+            functionPreviewCard = null;
         }
     }
 

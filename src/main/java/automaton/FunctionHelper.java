@@ -241,6 +241,7 @@ public class FunctionHelper {
         }
         if (secretStorage != null) {
             secretStorage.update();
+            secretStorage.updateHoverLogic();
             float x = (max == 3 ? funcPositions[0].x : funcPositions[1].x);
             float y = (max == 3 ? funcPositions[0].y : funcPositions[1].y);
             secretStorage.current_x = x;
