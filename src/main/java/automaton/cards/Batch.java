@@ -13,7 +13,7 @@ public class Batch extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, common
 
     public Batch() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
     }
 

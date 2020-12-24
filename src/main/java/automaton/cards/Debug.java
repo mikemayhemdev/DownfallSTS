@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,7 +20,7 @@ public class Debug extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractCard q : FunctionHelper.held.group) {
-            if (q instanceof AbstractBronzeCard) {
+            if (q.hasTag(AutomatonMod.BAD_COMPILE) && q instanceof AbstractBronzeCard) {
                 ((AbstractBronzeCard) q).doSpecialCompileStuff = false;
                 if (q.rawDescription.contains(" NL bronze:Compile")) {
                     String[] splitText = q.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
@@ -35,5 +36,5 @@ public class Debug extends AbstractBronzeCard {
 
     public void upp() {
         upgradeBaseCost(0);
-    } // TODO: Change upgrade
+    }
 }

@@ -1,10 +1,13 @@
 package automaton.cards;
 
+import automaton.FunctionHelper;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -15,16 +18,22 @@ public class Decompile extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Decompile() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction(1, "Choose a Function.", c -> c instanceof FunctionCard, (cards) -> {
-            att(new GainEnergyAction(cards.get(0).cost));
-            att(new DrawCardAction(cards.get(0).cost));
-            att(new ExhaustSpecificCardAction(cards.get(0), p.hand));
-        }));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractCard q : FunctionHelper.held.group) {
+                    addToTop(new DrawCardAction(1));
+                    addToTop(new GainEnergyAction(1));
+                    addToTop(new ExhaustSpecificCardAction(q, FunctionHelper.held));
+                }
+            }
+        });
     }
 
     public void upp() {

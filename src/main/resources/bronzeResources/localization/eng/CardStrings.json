@@ -235,8 +235,8 @@
   },
   "bronze:Decompile": {
     "NAME": "Decompile",
-    "DESCRIPTION": "Choose a Function. NL Exhaust it to draw cards and gain [E] equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a Function. NL Exhaust it to draw cards and gain [E] equal to its cost. NL Exhaust."
+    "DESCRIPTION": "Purge all cards in the Sequence. Gain [E] and draw a card for each card Purged. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Purge all cards in the Sequence. Gain [E] and draw a card for each card Purged. NL Exhaust."
   },
   "bronze:ChildClass": {
     "NAME": "Child Class",
