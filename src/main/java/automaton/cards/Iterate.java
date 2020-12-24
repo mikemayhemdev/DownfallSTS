@@ -24,7 +24,7 @@ public class Iterate extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < magicNumber; i++) {
-            atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         }
     }
 

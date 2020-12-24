@@ -2,6 +2,7 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 
@@ -15,7 +16,7 @@ public class Shell extends AbstractBronzeCard {
     private static final int UPG_BLOCK = 5;
 
     public Shell() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         thisEncodes();
         baseMagicNumber = magicNumber = 1;
@@ -29,7 +30,7 @@ public class Shell extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            blck();
+            applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
         }
     }
 

@@ -20,6 +20,8 @@ public class Allocate extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        selfRetain = true;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

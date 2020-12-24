@@ -12,7 +12,7 @@ public class BranchBlock extends AbstractBronzeCard {
     private static final int BLOCK = 9;
 
     public BranchBlock() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseBlock = BLOCK;
     }
 

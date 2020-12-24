@@ -33,6 +33,8 @@ public class ClassDefault extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        selfRetain = true;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

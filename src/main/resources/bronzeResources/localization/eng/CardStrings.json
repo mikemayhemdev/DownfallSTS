@@ -60,7 +60,7 @@
   },
   "bronze:Iterate": {
     "NAME": "Iterate",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
@@ -68,8 +68,8 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Burn into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Burn into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn into your discard pile."
   },
   "bronze:CutThrough": {
     "NAME": "Cut Through",
@@ -116,7 +116,7 @@
   },
   "bronze:Shell": {
     "NAME": "Shell",
-    "DESCRIPTION": "Gain 1 bronze:Blur. NL bronze:Compile - Gain !B! Block."
+    "DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur."
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",
@@ -196,7 +196,9 @@
   },
   "bronze:ClassDefault": {
     "NAME": "Class Default",
-    "DESCRIPTION": "Add a copy of the first card in the current Sequence to the next !M! Sequences automatically."
+    "DESCRIPTION": "Add a copy of the first card in the current Sequence to the next !M! Sequences automatically.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Add a copy of the first card in the current Sequence to the next !M! Sequences automatically."
+
   },
   "bronze:ItsAFeature": {
     "NAME": "It's a Feature",
@@ -227,7 +229,9 @@
   },
   "bronze:Allocate": {
     "NAME": "Allocate",
-    "DESCRIPTION": "Gain [E] ."
+    "DESCRIPTION": "Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] ."
+
   },
   "bronze:Decompile": {
     "NAME": "Decompile",

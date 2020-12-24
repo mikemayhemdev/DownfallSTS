@@ -4,10 +4,12 @@ import automaton.actions.AddToFuncAction;
 import automaton.cardmods.EncodeMod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import guardian.vfx.BronzeOrbEffect;
 
 import java.util.ArrayList;
 
@@ -17,14 +19,14 @@ public class BronzeOrb extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 6;
     private static final int UPG_BLOCK = 2;
 
     public BronzeOrb() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         exhaust = true;
@@ -32,8 +34,8 @@ public class BronzeOrb extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //TODO: Assumably needs the Bronze Orb VFX
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        atb(new VFXAction(new BronzeOrbEffect(p, m), 0.5F));
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
         blck();
         atb(new AbstractGameAction() {
             @Override

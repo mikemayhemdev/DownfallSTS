@@ -2,6 +2,7 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
@@ -14,8 +15,8 @@ public class Overheat extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 15;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 14;
+    private static final int UPG_DAMAGE = 2;
 
     public Overheat() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -27,6 +28,7 @@ public class Overheat extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        atb(new GainEnergyAction(1));
     }
 
     @Override

@@ -13,7 +13,7 @@ public class ChildClass extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ChildClass() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
         tags.add(AutomatonMod.MODIFIES_OUTPUT);
     }
