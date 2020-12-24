@@ -30,8 +30,8 @@ public class ShipIt extends AbstractBronzeCard {
         Iterator var1 = AbstractDungeon.player.hand.group.iterator();
 
         AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c.type == CardType.STATUS) {
                 ++count;
             }
@@ -39,8 +39,8 @@ public class ShipIt extends AbstractBronzeCard {
 
         var1 = AbstractDungeon.player.drawPile.group.iterator();
 
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c.type == CardType.STATUS) {
                 ++count;
             }
@@ -48,8 +48,8 @@ public class ShipIt extends AbstractBronzeCard {
 
         var1 = AbstractDungeon.player.discardPile.group.iterator();
 
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c.type == CardType.STATUS) {
                 ++count;
             }

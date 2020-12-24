@@ -3,8 +3,8 @@
     "NAME": "Cloning Beam",
     "DESCRIPTIONS": [
       "The next time you add a card to the Sequence, add an extra copy of it.",
-      "The next #b",
-      " times you add a card to the Sequence, add an extra copy of it."
+      "The next time you add a card to the Sequence, add #b",
+      " extra copies of it."
     ]
   },
   "bronze:Default": {
@@ -104,6 +104,14 @@
       "The next Function you #yCompile costs #b0.",
       "The next #b",
       " Functions you #yCompile cost #b0."
+    ]
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copy Paste",
+    "DESCRIPTIONS": [
+      "Your next Function is played twice this turn.",
+      "Your next #b",
+      " Functions are played twice this turn."
     ]
   }
 }

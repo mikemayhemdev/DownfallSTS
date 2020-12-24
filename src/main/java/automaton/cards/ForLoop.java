@@ -1,9 +1,7 @@
 package automaton.cards;
 
-import automaton.FunctionHelper;
-import automaton.cardmods.CardEffectsCardMod;
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import automaton.actions.EasyXCostAction;
+import automaton.powers.CloningPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,23 +12,19 @@ public class ForLoop extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ForLoop() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        thisEncodes();
+        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
-        if (!lastCard()) {
-            AbstractCard q = FunctionHelper.held.group.get(this.position + 1);
-            CardModifierManager.addModifier(function, new CardEffectsCardMod(q)); //TODO: This may have odd effects
-        }
+        atb(new EasyXCostAction(this, (effect, params) -> {
+            applyToSelfTop(new CloningPower(effect));
+            return true;
+        }));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        selfRetain = true;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

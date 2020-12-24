@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-import static org.apache.commons.lang3.math.NumberUtils.min;
-
 public class Assembly extends AbstractBronzeCard {
 
     public final static String ID = makeID("Assembly");
@@ -30,8 +28,8 @@ public class Assembly extends AbstractBronzeCard {
         for (int x = 0; x < Math.min(magicNumber, p.drawPile.size()); x++) {
             toppers.add(p.drawPile.group.get(x));
         }
-        atb(new SelectCardsAction(toppers, toppers.size(), "Choose any cards with Encode to Encode.", true, c->c.hasTag(AutomatonMod.ENCODES), (cards) -> { //TODO: Localize
-            cards.forEach(c->addToTop(new AddToFuncAction(c, p.drawPile)));
+        atb(new SelectCardsAction(toppers, toppers.size(), "Choose any cards with Encode to Encode.", true, c -> c.hasTag(AutomatonMod.ENCODES), (cards) -> { //TODO: Localize
+            cards.forEach(c -> addToTop(new AddToFuncAction(c, p.drawPile)));
         }));
     }
 
