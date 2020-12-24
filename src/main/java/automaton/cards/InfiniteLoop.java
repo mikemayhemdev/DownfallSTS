@@ -19,6 +19,7 @@ public class InfiniteLoop extends AbstractBronzeCard {
     public InfiniteLoop(boolean showCard) {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 1;
         thisEncodes();
         this.showCard = showCard;
         if (showCard)
@@ -37,13 +38,14 @@ public class InfiniteLoop extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            makeInHand(new InfiniteLoop());
+            AbstractCard c = new InfiniteLoop();
+            c.baseDamage += this.magicNumber;
+            if (upgraded) c.upgrade();
+            makeInHand(c);
         }
     }
 
     public void upp() {
-        selfRetain = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(1);
     }
 }

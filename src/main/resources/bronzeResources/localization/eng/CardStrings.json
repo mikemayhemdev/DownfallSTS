@@ -68,8 +68,8 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your discard pile."
   },
   "bronze:CutThrough": {
     "NAME": "Cut Through",
@@ -279,13 +279,20 @@
   },
   "bronze:Format": {
     "NAME": "Format",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X cards. NL Gain [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Draw X+1 cards. NL Gain [E] . NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add X copies of *Fragment to the Sequence.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add X+1 copies of *Fragment to the Sequence."
+  },
+  "bronze:FormatEncoded": {
+    "NAME": "Fragment",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
   },
   "bronze:BurnOut": {
     "NAME": "Burn Out",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Compile - Add a Burn+ to your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL bronze:Compile - Add a Burn+ to your discard pile."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for ALL of your Status cards, then Exhaust them. NL Add 3 *Burns to your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
   },
   "bronze:ShipIt": {
     "NAME": "Ship It",
@@ -374,8 +381,8 @@
   },
   "bronze:InfiniteLoop": {
     "NAME": "Infinite Loop",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand and increase its damage by !M!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand and increase its damage by !M!."
   },
   "bronze:Ignite": {
     "NAME": "Ignite",
@@ -399,6 +406,24 @@
   },
   "bronze:UnknownStatus": {
     "NAME": "Perplex",
-    "DESCRIPTION": "Deal !B! Block."
-  }
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "bronze:Refactor": {
+    "NAME": "Refactor",
+    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded."
+  },
+  "bronze:Turbo": {
+    "NAME": "Turbo",
+    "DESCRIPTION": "Gain [E] [E] . NL Add a *Void into your discard pile.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL Add a *Void into your discard pile."
+  },
+  "bronze:BugBarrage": {
+  "NAME": "Bug Barrage",
+  "DESCRIPTION": "Add 1 *Wound to your hand. NL Deal !D! damage for each Status card in hand.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Wounds to your hand. NL Deal !D! damage for each Status card in hand.",
+  "EXTENDED_DESCRIPTION": [
+    " NL (Hits ",
+    " times.)"
+  ]
+}
 }

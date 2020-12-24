@@ -22,7 +22,9 @@ public class Overheat extends AbstractBronzeCard {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         thisEncodes();
-        cardsToPreview = new Burn();
+        AbstractCard q = new Burn();
+        q.upgrade();
+        cardsToPreview = q;
         tags.add(AutomatonMod.BAD_COMPILE);
     }
 
@@ -35,10 +37,12 @@ public class Overheat extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
+            AbstractCard c = new Burn();
+            c.upgrade();
             if (upgraded) {
-                addToBot(new MakeTempCardInDiscardAction(new Burn(), 1));
+                addToBot(new MakeTempCardInDiscardAction(c, 1));
             } else {
-                shuffleIn(new Burn());
+                shuffleIn(c);
             }
         }
     }
