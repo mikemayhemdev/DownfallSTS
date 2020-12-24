@@ -22,7 +22,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
 
     @Override
     public void atBattleStart() {
-        counter = 5;
+        counter = 3;
     }
 
     @Override

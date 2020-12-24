@@ -26,6 +26,7 @@ public class DecaBeam extends AbstractBronzeCard {
         super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         baseBlock = block = 16;
         thisEncodes();
+        magicNumber = baseMagicNumber = 4;
     }
 
     @Override
@@ -47,6 +48,6 @@ public class DecaBeam extends AbstractBronzeCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeMagicNumber(2);
     }
 }

@@ -12,8 +12,8 @@ import static automaton.AutomatonMod.makeRelicPath;
 public class CableSpool extends CustomRelic implements OnCompileRelic {
 
     public static final String ID = AutomatonMod.makeID("CableSpool");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BronzeCore.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BronzeCore.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("CableSpool.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CableSpool.png"));
     boolean activated = false;
 
     public CableSpool() {

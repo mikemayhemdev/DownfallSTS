@@ -34,7 +34,7 @@ public class DonusWashers extends CustomRelic {
         if (firstTurn) {
             flash();
             addToTop(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, true));
-            addToTop(new GainEnergyAction(1));
+            addToTop(new GainEnergyAction(2));
             addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.firstTurn = false;
         }

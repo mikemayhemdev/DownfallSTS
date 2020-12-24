@@ -192,7 +192,7 @@ public class AutomatonMod implements
 
     @Override
     public void receiveEditRelics() {
-        //TODO: This
+
         BaseMod.addRelicToCustomPool(new BronzeCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new CableSpool(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelic(new DecasWashers(), RelicType.SHARED);
@@ -205,6 +205,7 @@ public class AutomatonMod implements
         BaseMod.addRelic(new BronzeIdol(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new Timepiece(), AutomatonChar.Enums.BRONZE_AUTOMATON);
     }
 
 

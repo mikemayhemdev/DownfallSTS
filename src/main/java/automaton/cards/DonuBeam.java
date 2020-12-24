@@ -19,7 +19,7 @@ public class DonuBeam extends AbstractBronzeCard {
     public final static String ID = makeID("DonuBeam");
 
     public DonuBeam() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
