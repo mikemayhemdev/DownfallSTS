@@ -340,7 +340,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Affected by Strength !M! additional times. NL Skip your next turn."
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies. NL Skip your next turn. NL When Retained, lower its cost by 1 this combat."
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",

@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -13,31 +14,17 @@ public class HyperBeam extends AbstractBronzeCard {
     //stupid intellij stuff attack, all_enemy, rare
 
     private static final int DAMAGE = 45;
-    private static final int UPG_DAMAGE = 5;
+    private static final int UPG_DAMAGE = 9;
 
     public HyperBeam() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 6, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 2;
         isMultiDamage = true;
+        selfRetain = true;
     }
 
-    @Override
-    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
-        int bonus = 0;
-        if (player.hasPower(StrengthPower.POWER_ID) && this.magicNumber > 1) {
-            bonus = player.getPower(StrengthPower.POWER_ID).amount * (this.magicNumber - 1);
-        }
-        return tmp + bonus;
-    }
-
-    @Override
-    public float calculateModifiedCardDamage(AbstractPlayer player, float tmp) {
-        int bonus = 0;
-        if (player.hasPower(StrengthPower.POWER_ID)) {
-            bonus = player.getPower(StrengthPower.POWER_ID).amount * (this.magicNumber + 1);
-        }
-        return tmp + bonus;
+    public void onRetained() {
+        this.addToBot(new ReduceCostAction(this));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -47,6 +34,5 @@ public class HyperBeam extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(1);
     }
 }
