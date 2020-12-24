@@ -97,5 +97,13 @@
       "The first time you #yCompile a Function each turn, gain #b",
       " [E] ."
     ]
+  },
+  "bronze:FreeFunction": {
+    "NAME": "Free Function",
+    "DESCRIPTIONS": [
+      "The next Function you #yCompile costs #b0.",
+      "The next #b",
+      " Functions you #yCompile cost #b0."
+    ]
   }
 }

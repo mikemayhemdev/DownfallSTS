@@ -2,6 +2,7 @@ package automaton.potions;
 
 
 import automaton.powers.CleanCodePower;
+import automaton.powers.FreeFunctionPower;
 import basemod.abstracts.CustomPotion;
 import champ.actions.DiscoverOpenerAction;
 import champ.potions.OpenerPotion;
@@ -39,7 +40,7 @@ public class CleanCodePotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CleanCodePower(potency), potency));
-        //TODO - Free Function power
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FreeFunctionPower(potency), potency));
     }
 
     public CustomPotion makeCopy() {
