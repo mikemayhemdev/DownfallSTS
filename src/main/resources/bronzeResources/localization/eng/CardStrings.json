@@ -116,7 +116,7 @@
   },
   "bronze:Shell": {
     "NAME": "Shell",
-    "DESCRIPTION": "Block is not removed at the start of your next turn. NL bronze:Compile - Gain !B! Block."
+    "DESCRIPTION": "Gain 1 bronze:Blur. NL bronze:Compile - Gain !B! Block."
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",

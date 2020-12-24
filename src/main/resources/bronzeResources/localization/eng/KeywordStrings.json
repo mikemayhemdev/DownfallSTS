@@ -14,5 +14,12 @@
       "compiled"
     ],
     "DESCRIPTION": "An additional effect that triggers when this card, while in the Sequence, is combined into a Function."
+  },
+  {
+    "PROPER_NAME": "Blur",
+    "NAMES": [
+      "blur"
+    ],
+    "DESCRIPTION": "Do not lose Block at the end of the turn."
   }
 ]

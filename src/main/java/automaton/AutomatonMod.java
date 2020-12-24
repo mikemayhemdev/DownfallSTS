@@ -337,7 +337,7 @@ public class AutomatonMod implements
         }
     }
 
-    public AbstractCard getGoodStatus(AbstractCard ogStatus){
+    public static AbstractCard getGoodStatus(AbstractCard ogStatus){
         AbstractCard newStatus = null;
         if (ogStatus instanceof Dazed){
             newStatus = new Daze();
