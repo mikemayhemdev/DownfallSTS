@@ -14,6 +14,7 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
+import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.ChampChar;
@@ -35,11 +36,13 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.util.EtherealMod;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.cards.unknowns.Unknown;
+import sneckomod.util.ExhaustMod;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -353,6 +356,8 @@ public class AutomatonMod implements
         }
         else {
             newStatus = new UnknownStatus();
+            if (ogStatus.isEthereal) CardModifierManager.addModifier(newStatus, new EtherealMod());
+            if (ogStatus.exhaust) CardModifierManager.addModifier(newStatus, new ExhaustMod());
         }
         if (ogStatus.upgraded) newStatus.upgrade();
         return newStatus;
