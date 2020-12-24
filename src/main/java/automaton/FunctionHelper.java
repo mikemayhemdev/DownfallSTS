@@ -54,6 +54,7 @@ public class FunctionHelper {
     };
 
     public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
+    public static final Texture bg_4card = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe4cards.png");
 
     public static final String WITH_DELIMITER = "((?<=%1$s)|(?=%1$s))"; //Magic code from madness land of RegEx.
 
@@ -217,7 +218,12 @@ public class FunctionHelper {
 
     public static void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
-        sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, Settings.scale, Settings.scale, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
+        if (max == 4) {
+            sb.draw(bg_4card, BG_X, BG_Y, 0, 0, bg_4card.getWidth() * Settings.scale, bg_4card.getHeight() * Settings.scale, Settings.scale, Settings.scale, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
+        }
+        else {
+            sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, Settings.scale, Settings.scale, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
+        }
         for (AbstractCard c : held.group) {
             c.render(sb);
         }
