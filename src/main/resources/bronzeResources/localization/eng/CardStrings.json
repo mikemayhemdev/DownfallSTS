@@ -270,8 +270,8 @@
   },
   "bronze:Return": {
     "NAME": "Return",
-    "DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] .",
-    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X+1 turns. NL Gain [E] ."
+    "DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 additional card at the start of your next X turns. NL Gain [E] ."
   },
   "bronze:ForceShield": {
     "NAME": "Force Shield",

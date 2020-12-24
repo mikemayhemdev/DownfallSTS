@@ -12,24 +12,21 @@ public class Return extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 0;
-    private static final int UPG_MAGIC = 1;
-
     public Return() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            applyToSelfTop(new ReturnPower(effect + params[0]));
+            applyToSelfTop(new ReturnPower(effect));
             return true;
-        }, magicNumber));
+        }));
         atb(new GainEnergyAction(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
