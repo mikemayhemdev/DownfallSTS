@@ -1,22 +1,9 @@
 package automaton.cards;
 
-import automaton.cardmods.EncodeMod;
-import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.actions.OctoChoiceAction;
-import downfall.cards.OctoChoiceCard;
-import downfall.util.OctopusCard;
-import expansioncontent.expansionContentMod;
 
-import java.util.ArrayList;
-
-public class BranchBlock extends AbstractBronzeCard{
+public class BranchBlock extends AbstractBronzeCard {
 
     public final static String ID = makeID("BranchBlock");
 
