@@ -1,7 +1,6 @@
 package automaton.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import automaton.powers.CopyPastePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -17,9 +16,7 @@ public class CopyPaste extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction(1, "Choose a Function.", c->c instanceof FunctionCard, (cards) -> {
-            att(new MakeTempCardInHandAction(cards.get(0).makeStatEquivalentCopy(), true));
-        }));
+        applyToSelf(new CopyPastePower(1));
     }
 
     public void upp() {

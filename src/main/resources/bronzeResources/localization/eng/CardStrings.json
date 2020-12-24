@@ -328,8 +328,8 @@
   },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",
-    "DESCRIPTION": "Choose a Function in your hand. NL Add a copy of it to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose a Function in your hand. NL Add a copy of it to your hand. NL Exhaust."
+    "DESCRIPTION": "This turn, your next Function is played twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL This turn, your next Function is played twice. NL Exhaust."
   },
   "bronze:Seek": {
     "NAME": "Seek",

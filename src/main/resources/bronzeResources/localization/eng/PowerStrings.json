@@ -105,5 +105,13 @@
       "The next #b",
       " Functions you #yCompile cost #b0."
     ]
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Copy Paste",
+    "DESCRIPTIONS": [
+      "Your next Function is played twice this turn.",
+      "Your next #b",
+      " Functions are played twice this turn."
+    ]
   }
 }
