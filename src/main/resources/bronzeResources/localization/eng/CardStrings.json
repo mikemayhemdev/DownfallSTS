@@ -225,7 +225,7 @@
   "bronze:Mutator": {
     "NAME": "Mutator",
     "DESCRIPTION": "Gain 1 Strength. NL Transform a Status in your hand into a copy of this.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Dexterity. NL Transform a Status in your hand into a copy of this."
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Strength. NL Transform a Status in your hand into a copy of this."
   },
   "bronze:Allocate": {
     "NAME": "Allocate",

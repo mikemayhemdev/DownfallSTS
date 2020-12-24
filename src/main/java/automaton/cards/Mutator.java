@@ -21,9 +21,6 @@ public class Mutator extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, 1));
-        if (upgraded) {
-            applyToSelf(new DexterityPower(p, 1));
-        }
         AbstractCard q = this;
         atb(new SelectCardsInHandAction(1, "Choose a Status.", c->c.type == CardType.STATUS, (cards) -> { // TODO: Localize
             att(new MakeTempCardInHandAction(q.makeStatEquivalentCopy(), true));
@@ -32,6 +29,7 @@ public class Mutator extends AbstractBronzeCard {
     }
 
     public void upp() {
+        selfRetain = true;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
