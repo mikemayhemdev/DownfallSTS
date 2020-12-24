@@ -14,9 +14,9 @@ public class RecursiveStrike extends AbstractBronzeCard {
     private static final int DAMAGE = 7;
 
     public RecursiveStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 3;
         thisEncodes();
     }
 
@@ -37,6 +37,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }
