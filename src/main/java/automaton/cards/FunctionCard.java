@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 
@@ -24,6 +25,8 @@ public class FunctionCard extends AbstractBronzeCard {
     public final static String ID = makeID("FunctionCard");
 
     public final static String RIBBON_COLOR = "#198a2a";
+
+    private boolean compiled = false;
 
     public FunctionCard() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF_AND_ENEMY);
@@ -40,7 +43,7 @@ public class FunctionCard extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
-        //No Stack Overflow here.
+        compiled = true;
     }
 
     @Override
@@ -346,5 +349,32 @@ public class FunctionCard extends AbstractBronzeCard {
 
             }
         }
+
+
+    @Override
+    public void renderCardTip(SpriteBatch sb) {
+        super.renderCardTip(sb);
+
+        if (hb.hovered) {
+            if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
+                return;
+            }
+            if (!compiled) {
+
+                float drawScale = 1f;
+                float yPosition1 = Settings.HEIGHT * 0.5F;
+                float xPosition1 = Settings.WIDTH * 0.05F;
+
+                AbstractCard card = makeStatEquivalentCopy();
+                if (card != null) {
+                    card.drawScale = drawScale;
+                    card.current_x = xPosition1;
+                    card.current_y = yPosition1;
+                    card.render(sb);
+                }
+
+            }
+        }
+    }
     }
 

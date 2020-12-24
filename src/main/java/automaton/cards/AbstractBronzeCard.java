@@ -8,11 +8,13 @@ import automaton.cardmods.EncodeMod;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -50,6 +52,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
             auto = baseAuto;
             isAutoModified = true;
         }
+
     }
 
     void upgradeAuto(int amount) {
@@ -217,6 +220,44 @@ public abstract class AbstractBronzeCard extends CustomCard {
             return FunctionHelper.held.group.indexOf(this);
         }
         return -1;
+    }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        super.render(sb);
+        if (hb.hovered) {
+            if (getSequencePosition() >= 0) {
+
+            }
+        }
+    }
+
+
+    @Override
+    public void renderCardTip(SpriteBatch sb) {
+        super.renderCardTip(sb);
+
+
+        if (hb.hovered) {
+            if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
+                return;
+            }
+            if (getSequencePosition() >= 0) {
+
+                float drawScale = 1f;
+                float yPosition1 = Settings.HEIGHT * 0.5F;
+                float xPosition1 = Settings.WIDTH * 0.05F;
+
+                AbstractCard card = makeStatEquivalentCopy();
+                if (card != null) {
+                    card.drawScale = drawScale;
+                    card.current_x = xPosition1;
+                    card.current_y = yPosition1;
+                    card.render(sb);
+                }
+
+            }
+        }
     }
 
     boolean lastCard() {

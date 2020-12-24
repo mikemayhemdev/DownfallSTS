@@ -230,6 +230,7 @@ public class FunctionHelper {
     public static void update() {
         for (AbstractCard c : held.group) {
             c.update();
+            c.updateHoverLogic();
             /*
             if (c.hb.hovered) { // Guardian orbs check against hovering the orb. Hovering the card might be weird, so we'd need static hitboxes, which I'm lazy to set up now
                 c.targetDrawScale = 1F;
