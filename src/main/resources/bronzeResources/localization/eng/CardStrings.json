@@ -374,8 +374,8 @@
   },
   "bronze:InfiniteLoop": {
     "NAME": "Infinite Loop",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Encode - Add a *Infinite *Loop into your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Encode - Add a *Infinite *Loop+ into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand."
   },
   "bronze:Ignite": {
     "NAME": "Ignite",
