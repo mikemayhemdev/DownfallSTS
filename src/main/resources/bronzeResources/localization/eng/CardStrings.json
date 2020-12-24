@@ -423,11 +423,12 @@
     "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL Add a *Void into your discard pile."
   },
   "bronze:BugBarrage": {
-  "NAME": "Bug Barrage",
-  "DESCRIPTION": "Add 1 *Wound to your hand. NL Deal !D! damage for each Status card in hand.",
+    "NAME": "Bug Barrage",
+    "DESCRIPTION": "Add 1 *Wound to your hand. NL Deal !D! damage for each Status card in hand.",
     "UPGRADE_DESCRIPTION": "Add !M! *Wounds to your hand. NL Deal !D! damage for each Status card in hand.",
-  "EXTENDED_DESCRIPTION": [
-    " NL (Hits ",
-    " times.)"
-  ]
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
+  }
 }
