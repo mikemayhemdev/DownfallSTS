@@ -28,14 +28,14 @@ public class StatusReplacePatch {
 
     @SpirePrefixPatch
     public static SpireReturn<AbstractCard> Prefix(AbstractCard abstractCard) {
-        SlimeboundMod.logger.info("making stat equivalent copy");
+       // SlimeboundMod.logger.info("making stat equivalent copy");
         if (abstractCard.type == AbstractCard.CardType.STATUS) {
-            SlimeboundMod.logger.info("IS STATUS!");
+            //SlimeboundMod.logger.info("IS STATUS!");
             if (AbstractDungeon.player.hasRelic(BronzeIdol.ID)) {
                 if (!abstractCard.hasTag(AutomatonMod.GOOD_STATUS)) {
 
                     AbstractCard newStatus = AutomatonMod.getGoodStatus(abstractCard);
-                    SlimeboundMod.logger.info("replacing with " + newStatus.name);
+                  //  SlimeboundMod.logger.info("replacing with " + newStatus.name);
                     return SpireReturn.Return(newStatus);
                 }
             }

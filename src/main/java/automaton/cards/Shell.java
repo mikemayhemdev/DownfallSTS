@@ -15,7 +15,7 @@ public class Shell extends AbstractBronzeCard {
     private static final int UPG_BLOCK = 5;
 
     public Shell() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         thisEncodes();
         baseMagicNumber = magicNumber = 1;

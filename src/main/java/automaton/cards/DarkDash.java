@@ -18,7 +18,7 @@ public class DarkDash extends AbstractBronzeCard {
     private static final int BLOCK = 10;
 
     public DarkDash() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         thisEncodes();
