@@ -5,7 +5,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Add a card to the Sequence and remove Encode from it."
+    "DESCRIPTION": "Add a card to the Sequence and remove Encode from it. NL When 3 cards are in the Sequence, their effects are Compiled into a Function which costs 1."
   },
   {
     "PROPER_NAME": "Compile",
