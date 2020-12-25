@@ -20,7 +20,6 @@ import downfall.util.CardIgnore;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-@CardIgnore
 public class FunctionCard extends AbstractBronzeCard {
     public final static String ID = makeID("FunctionCard");
 
