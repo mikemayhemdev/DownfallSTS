@@ -240,7 +240,8 @@
   },
   "bronze:Overload": {
     "NAME": "Overload",
-    "DESCRIPTION": "Gain [E] [E] . NL bronze:Compile - Function is placed into your discard pile instead of your hand.",
+    "DESCRIPTION": "Activate the effects of each card in the Sequence, targets chosen randomly. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Activate the effects of each card in the Sequence, targets chosen randomly.",
     "EXTENDED_DESCRIPTION": [
       "overloading",
       "Energy"
@@ -524,7 +525,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently instead of your hand."
+    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently as well as your hand."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",

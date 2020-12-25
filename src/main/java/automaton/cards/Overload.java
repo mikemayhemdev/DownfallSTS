@@ -1,11 +1,10 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
 import automaton.FunctionHelper;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import automaton.actions.RepeatCardAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Overload extends AbstractBronzeCard {
@@ -15,22 +14,25 @@ public class Overload extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, common
 
     public Overload() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        thisEncodes();
-        tags.add(AutomatonMod.MODIFIES_OUTPUT);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new GainEnergyAction(2));
-    }
-
-    @Override
-    public boolean onOutput() {
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(FunctionHelper.makeFunction(true), 1));
-        return false;
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                for (AbstractCard q : FunctionHelper.held.group) {
+                    addToTop(new RepeatCardAction(q));
+                }
+            }
+        });
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        exhaust = false;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

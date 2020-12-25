@@ -149,14 +149,6 @@ public abstract class AbstractBronzeCard extends CustomCard {
         return EXTENDED_DESCRIPTION[0];
     }
 
-    public boolean onOutput() {
-        // Called when the function is about to be added to the hand,
-        // before the function is created.
-        // Return true to continue adding to hand. Return false to stop that.
-        // Not the best hook. Should maybe find a way to not use this.
-        return true;
-    }
-
     public abstract void upp();
 
     protected void atb(AbstractGameAction action) {

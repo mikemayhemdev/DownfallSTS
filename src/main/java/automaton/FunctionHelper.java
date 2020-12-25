@@ -205,24 +205,16 @@ public class FunctionHelper {
                 q.updateCost(-1);
             }
         }
-        boolean regularOutput = true;
-        for (AbstractCard c : held.group) {
-            if (c instanceof AbstractBronzeCard && c.hasTag(AutomatonMod.MODIFIES_OUTPUT)) {
-                regularOutput = ((AbstractBronzeCard) c).onOutput();
-            }
-        }
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnOutputFunctionPower) {
-                regularOutput = ((OnOutputFunctionPower) p).receiveOutputFunction();
+                ((OnOutputFunctionPower) p).receiveOutputFunction();
             }
         }
         if (doExtraNonSpecificCopy) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
             doExtraNonSpecificCopy = false;
         }
-        if (regularOutput) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
-        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() {
