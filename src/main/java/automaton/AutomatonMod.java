@@ -91,8 +91,6 @@ public class AutomatonMod implements
     public static AbstractCard.CardTags MODIFIES_OUTPUT;
     @SpireEnum
     public static AbstractCard.CardTags GOOD_STATUS;
-    @SpireEnum
-    public static AbstractCard.CardTags NO_TEXT;
 
     public AutomatonMod() {
         BaseMod.subscribe(this);
@@ -196,10 +194,10 @@ public class AutomatonMod implements
         BaseMod.addRelic(new DecasWashers(), RelicType.SHARED);
         BaseMod.addRelic(new DonusWashers(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new ElectromagneticCoil(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelicToCustomPool(new MakeshiftBattery(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelicToCustomPool(new ProtectiveGoggles(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new Mallet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new PlatinumCore(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-        BaseMod.addRelicToCustomPool(new ProtectiveGoggles(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.addRelic(new MakeshiftBattery(), RelicType.SHARED);
         BaseMod.addRelic(new BronzeIdol(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
