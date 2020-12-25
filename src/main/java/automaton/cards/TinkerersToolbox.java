@@ -70,13 +70,13 @@ public class TinkerersToolbox extends AbstractBronzeCard {
         float drawScale = 0.7f;
         float yPosition1 = this.current_y + this.hb.height * 1.2f;
         float yPosition2 = this.current_y + this.hb.height * .6F;
-        float yPosition3 = this.current_y + this.hb.height;
+        float yPosition3 = this.current_y;
 
         //changes the Arcana preview to render below the Arcana in the shop so it doesn't clip out of the screen
         if (AbstractDungeon.screen == AbstractDungeon.CurrentScreen.SHOP) {
             yPosition1 = this.current_y - this.hb.height * 1.2f;
             yPosition2 = this.current_y - this.hb.height * .6F;
-            yPosition3 = this.current_y - this.hb.height;
+            yPosition3 = this.current_y;
         }
 
         float xPosition1;

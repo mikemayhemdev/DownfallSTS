@@ -41,18 +41,12 @@ public class OilSpill extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            if (upgraded) {
-                atb(new MakeTempCardInDiscardAction(new Slimed(), 1));
-            } else {
-                shuffleIn(new Slimed());
-            }
+            shuffleIn(new Slimed());
         }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

@@ -35,18 +35,12 @@ public class DarkDash extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            if (upgraded) {
-                atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
-            } else {
-                shuffleIn(new VoidCard());
-            }
+            shuffleIn(new VoidCard());
         }
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(3);
+        upgradeBlock(3);
     }
 }

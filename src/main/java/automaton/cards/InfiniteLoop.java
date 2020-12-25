@@ -20,8 +20,8 @@ public class InfiniteLoop extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = 1;
         thisEncodes();
         this.showCard = showCard;
-        if (showCard)
-            cardsToPreview = new InfiniteLoop(false); //I had to.
+        //if (showCard)
+        //    cardsToPreview = new InfiniteLoop(false); //I had to.
     }
 
     public InfiniteLoop() {

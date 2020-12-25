@@ -36,18 +36,12 @@ public class Break extends AbstractBronzeCard {
         if (forGameplay) {
             for (int i = 0; i < magicNumber; i++) {
                 AbstractCard q = getRandomStatus().makeStatEquivalentCopy();
-                if (upgraded) {
-                    atb(new MakeTempCardInDiscardAction(q, 1));
-                } else {
-                    shuffleIn(q, 1);
-                }
+                shuffleIn(q, 1);
             }
         }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

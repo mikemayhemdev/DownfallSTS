@@ -229,8 +229,11 @@
   },
   "bronze:Allocate": {
     "NAME": "Allocate",
-    "DESCRIPTION": "Gain [E] .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] ."
+    "DESCRIPTION": "Gain [E] for each Status in your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "NL (Gain ",
+      " [E] .)"
+    ]
 
   },
   "bronze:Decompile": {

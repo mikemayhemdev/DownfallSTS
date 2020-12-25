@@ -1,6 +1,8 @@
 package automaton.potions;
 
 
+import automaton.FunctionHelper;
+import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -36,11 +38,20 @@ public class FreeFunctionsPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        for (AbstractCard c:AbstractDungeon.player.hand.group){
-            if (c instanceof FunctionCard){
-                c.modifyCostForCombat(-potency);
-                c.flash();
+        for (AbstractCard q : FunctionHelper.held.group) {
+            q.baseDamage += potency;
+            q.damage += potency;
+            q.baseBlock += potency;
+            q.block += potency;
+            q.baseMagicNumber += potency;
+            q.magicNumber += potency;
+            if (q instanceof AbstractBronzeCard) {
+                ((AbstractBronzeCard) q).baseAuto += potency;
+                ((AbstractBronzeCard) q).auto += potency;
             }
+            q.applyPowers();
+            q.superFlash();
+            FunctionHelper.applyPowers();
         }
     }
 
