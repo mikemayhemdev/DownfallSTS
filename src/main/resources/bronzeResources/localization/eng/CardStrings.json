@@ -484,8 +484,8 @@
   },
   "bronze:Verify": {
     "NAME": "Verify",
-    "DESCRIPTION": "The first time you bronze:Compile a Function each turn, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you bronze:Compile a Function each turn, gain [E] ."
+    "DESCRIPTION": "After you play a Function, increase all numbers on it by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL After you play a Function, increase all numbers on it by 1."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
