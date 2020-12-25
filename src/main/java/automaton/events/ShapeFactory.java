@@ -82,6 +82,7 @@ public class ShapeFactory extends AbstractImageEvent {
                         fightExploder = true;
                         AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new Exploder(0.0F, 0.0F));
                         AbstractDungeon.getCurrRoom().rewards.clear();
+                        this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[5], new Spike());
                         this.imageEventText.setDialogOption(OPTIONS[6], new DazingPulse());
                         this.imageEventText.setDialogOption(OPTIONS[4]);
