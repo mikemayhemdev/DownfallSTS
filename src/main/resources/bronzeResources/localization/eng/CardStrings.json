@@ -442,8 +442,8 @@
   },
   "bronze:Format": {
     "NAME": "Format",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add X copies of *Fragment to the Sequence.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Add X+1 copies of *Fragment to the Sequence."
+    "DESCRIPTION": "Add X copies of *Fragment to the Sequence. NL Gain [E] .",
+    "UPGRADE_DESCRIPTION": "Add X+1 copies of *Fragment to the Sequence. NL Gain [E] ."
   },
   "bronze:FormatEncoded": {
     "NAME": "Fragment",
