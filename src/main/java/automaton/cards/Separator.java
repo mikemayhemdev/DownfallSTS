@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,23 +11,20 @@ public class Separator extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
 
     public Separator() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DrawCardAction(magicNumber));
     }
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay, int count) {
         super.onCompile(function, forGameplay, count);
         if (forGameplay) {
+            atb(new GainEnergyAction(1));
             if (!firstCard() && !lastCard()) {
                 atb(new GainEnergyAction(2));
             }
@@ -36,6 +32,6 @@ public class Separator extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeBaseCost(0);
     }
 }

@@ -228,7 +228,7 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - If this is not the first or last card in the Sequence, gain NL [E] [E] .",
+    "DESCRIPTION": "bronze:Compile - Gain [E] . NL If this is not the first or last card in the Sequence, gain NL [E] [E] .",
     "EXTENDED_DESCRIPTION": [
       "unfortunate",
       "Draw"
