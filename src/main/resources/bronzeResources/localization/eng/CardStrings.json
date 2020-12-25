@@ -104,7 +104,7 @@
     "NAME": "Terminator",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - If this is the last card in the Sequence, double its damage.",
     "EXTENDED_DESCRIPTION": [
-      "terminating",
+      "sad",
       "End"
     ]
   },
@@ -113,7 +113,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your draw pile.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your discard pile.",
     "EXTENDED_DESCRIPTION": [
-      "overheating",
+      "heated",
       "Burn"
     ]
   },
