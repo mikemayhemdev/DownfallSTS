@@ -78,7 +78,13 @@
   },
   "bronze:Branch": {
     "NAME": "Branch",
-    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust."
+    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Branch: Attack",
+      "Deal !D! damage.",
+      "Branch: Block",
+      "Gain !B! Block."
+    ]
   },
   "bronze:DelayedSlice": {
     "NAME": "Delayed Slice",
