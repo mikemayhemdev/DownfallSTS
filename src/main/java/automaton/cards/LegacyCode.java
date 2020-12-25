@@ -15,6 +15,7 @@ public class LegacyCode extends AbstractBronzeCard {
     public LegacyCode() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        selfRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
