@@ -152,6 +152,13 @@ public class FunctionHelper {
                 CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
             }
         }
+        for (AbstractCard c : held.group) {
+            if (c instanceof AbstractBronzeCard) {
+                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                    ((AbstractBronzeCard) c).onCompileToChangeCost(q, forGameplay);
+                }
+            }
+        }
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnCompilePower) {
                 ((OnCompilePower) p).receiveCompile(q, forGameplay);

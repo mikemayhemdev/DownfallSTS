@@ -26,8 +26,7 @@ public class Safeguard extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
+    public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
         function.cost += magicNumber;
         function.costForTurn += magicNumber;
     }

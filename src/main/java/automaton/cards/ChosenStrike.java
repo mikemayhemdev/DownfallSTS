@@ -32,8 +32,7 @@ public class ChosenStrike extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
+    public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
         if (function.cost > 0) {
             function.cost -= magicNumber;
             function.costForTurn -= magicNumber;
