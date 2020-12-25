@@ -255,8 +255,6 @@ public class SneckoMod implements
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        BaseMod.addCard(new DiceBoulder(0));
-        UnlockTracker.markCardAsSeen(DiceBoulder.ID);
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
                 AbstractCard q = new UnknownClass(p);
