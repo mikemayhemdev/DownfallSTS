@@ -31,8 +31,8 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
         if (counter > 0) {
             for (int i = 0; i < 2; i++) {
                 if (function.cost > 0) {
-                    function.cost -= 2;
-                    function.costForTurn -= 2;
+                    function.cost -= 1;
+                    function.costForTurn -= 1;
                     activated = true;
                 }
             }
