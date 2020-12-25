@@ -16,11 +16,6 @@ public class Hardcode extends AbstractBronzeCard {
         FleetingField.fleeting.set(this, true);
     }
 
-    @Override
-    public boolean canUpgrade() {
-        return false;
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new HardcodePower(1));
     }
