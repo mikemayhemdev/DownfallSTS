@@ -16,6 +16,7 @@ public class BranchHit extends AbstractBronzeCard {
     public BranchHit() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

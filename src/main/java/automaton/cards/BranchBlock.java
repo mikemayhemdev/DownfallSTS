@@ -15,6 +15,7 @@ public class BranchBlock extends AbstractBronzeCard {
     public BranchBlock() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = BLOCK;
+        thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
