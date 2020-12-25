@@ -166,8 +166,6 @@ public class FunctionHelper {
                 }
             }
         }
-        q.name += "()";
-        q.doNothingSpecificInParticular();
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {

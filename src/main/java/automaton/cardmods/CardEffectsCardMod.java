@@ -38,7 +38,8 @@ public class CardEffectsCardMod extends BronzeCardMod {
         store = new CardSave(q.cardID, q.timesUpgraded, q.misc);
     }
 
-    public CardEffectsCardMod(CardSave c) {
+    public CardEffectsCardMod(CardSave c, int addName) {
+        this.addName = addName;
         store = c;
         stored();
     }
@@ -47,11 +48,11 @@ public class CardEffectsCardMod extends BronzeCardMod {
     public void onInitialApplication(AbstractCard card) {
         switch (addName) {
             case 0:
-                card.name += stored().getAdjective();
+                card.name = stored().getAdjective() + card.name;
                 stored().doNothingSpecificInParticular();
                 break;
             case 1:
-                card.name += stored().getNoun();
+                card.name = stored().getNoun() + card.name;
                 stored().doNothingSpecificInParticular();
                 break;
             default:
@@ -190,7 +191,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             q.resetAttributes();
             return new CardEffectsCardMod(q, addName);
         }
-        return new CardEffectsCardMod(store);
+        return new CardEffectsCardMod(store, addName);
     }
 
     @Override
