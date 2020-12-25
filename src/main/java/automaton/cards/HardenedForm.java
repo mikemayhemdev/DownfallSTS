@@ -10,7 +10,7 @@ public class HardenedForm extends AbstractBronzeCard {
 
     //stupid intellij stuff power, self, rare
 
-    private static final int MAGIC = 8;
+    private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 3;
 
     public HardenedForm() {

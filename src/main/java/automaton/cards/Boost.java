@@ -12,8 +12,8 @@ public class Boost extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int BLOCK = 9;
-    private static final int MAGIC = 2;
+    private static final int BLOCK = 6;
+    private static final int MAGIC = 3;
 
     public Boost() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
@@ -35,6 +35,6 @@ public class Boost extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBlock(2);
     }
 }

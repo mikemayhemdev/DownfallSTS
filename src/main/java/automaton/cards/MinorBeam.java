@@ -10,8 +10,8 @@ public class MinorBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, special
 
-    private static final int DAMAGE = 3;
-    private static final int UPG_DAMAGE = 1;
+    private static final int DAMAGE = 4;
+    private static final int UPG_DAMAGE = 2;
 
     public MinorBeam() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);

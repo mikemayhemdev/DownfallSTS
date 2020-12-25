@@ -16,7 +16,7 @@ public class FollowUp extends AbstractBronzeCard {
     private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int BLOCK = 3;
+    private static final int BLOCK = 4;
     private static final int UPG_BLOCK = 2;
 
     public FollowUp() {

@@ -15,13 +15,13 @@ public class ChosenStrike extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, uncommon
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 1;
 
     public ChosenStrike() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 1;
-        baseAuto = auto = 2;
+        baseAuto = auto = 3;
         thisEncodes();
         cardsToPreview = new Dazed();
         tags.add(AutomatonMod.BAD_COMPILE);
@@ -45,5 +45,6 @@ public class ChosenStrike extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+        upgradeAuto(-1);
     }
 }

@@ -11,12 +11,12 @@ public class RecursiveStrike extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 4;
 
     public RecursiveStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         thisEncodes();
     }
 
@@ -38,7 +38,7 @@ public class RecursiveStrike extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

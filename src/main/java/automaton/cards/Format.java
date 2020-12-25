@@ -14,9 +14,9 @@ public class Format extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all, rare
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 6;
 
-    private static final int BLOCK = 4;
+    private static final int BLOCK = 6;
 
 
     public Format() {

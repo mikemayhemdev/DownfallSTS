@@ -3,6 +3,7 @@ package automaton.relics;
 import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
 import automaton.cards.Replicate;
+import automaton.cards.WhirlingStrike;
 import automaton.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -26,7 +27,7 @@ public class SilverBullet extends CustomRelic {
     public void atBattleStart() {
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        addToBot(new AddToFuncAction(new Replicate(), null));
+        addToBot(new AddToFuncAction(new WhirlingStrike(), null));
     }
 
     @Override

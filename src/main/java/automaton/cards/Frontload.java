@@ -12,7 +12,7 @@ public class Frontload extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 10;
     private static final int UPG_BLOCK = 4;
 
     public Frontload() {

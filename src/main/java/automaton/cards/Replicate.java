@@ -12,7 +12,7 @@ public class Replicate extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, basic
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 2;
 
     public Replicate() {

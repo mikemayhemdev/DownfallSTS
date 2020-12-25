@@ -9,8 +9,8 @@ public class Shield extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 9;
-    private static final int UPG_BLOCK = 3;
+    private static final int BLOCK = 7;
+    private static final int UPG_BLOCK = 2;
 
     public Shield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

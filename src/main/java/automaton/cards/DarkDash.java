@@ -14,8 +14,8 @@ public class DarkDash extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 10;
-    private static final int BLOCK = 10;
+    private static final int DAMAGE = 7;
+    private static final int BLOCK = 7;
 
     public DarkDash() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -40,7 +40,7 @@ public class DarkDash extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
-        upgradeBlock(3);
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }

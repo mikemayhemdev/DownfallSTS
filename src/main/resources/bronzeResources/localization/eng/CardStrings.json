@@ -85,11 +85,11 @@
     "DESCRIPTION": "bronze:Compile - Deal !D! damage to ALL enemies."
   },
   "bronze:WhirlingStrike": {
-    "NAME": "Whirling Strike",
+    "NAME": "Piercing Shot",
     "DESCRIPTION": "Deal !D! damage to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
-      "whirling",
-      "Whirl"
+      "piercing",
+      "Shot"
     ]
   },
   "bronze:Iterate": {

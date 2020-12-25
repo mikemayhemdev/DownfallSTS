@@ -10,7 +10,7 @@ public class Iterate extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 2;
     private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
