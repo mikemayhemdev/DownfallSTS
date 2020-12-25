@@ -48,7 +48,6 @@ public abstract class AbstractBronzeCard extends CustomCard {
     private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
     private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
 
-    public boolean isUncompiledFunctionCard = false;
     public boolean isHoveredInSequence = false;
 
     public void resetAttributes() {
@@ -238,7 +237,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     @Override
     public void hover() {
-        if ((getSequencePosition() >= 0 || isUncompiledFunctionCard) && !isHoveredInSequence) {
+        if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && !isHoveredInSequence) {
             isHoveredInSequence = true;
             SlimeboundMod.logger.info("hover() hit");
             ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", true);
@@ -251,7 +250,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     @Override
     public void unhover() {
-        if ((getSequencePosition() >= 0 || isUncompiledFunctionCard) && isHoveredInSequence) {
+        if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && isHoveredInSequence) {
             isHoveredInSequence = false;
             SlimeboundMod.logger.info("unhover() hit");
             ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", false);
