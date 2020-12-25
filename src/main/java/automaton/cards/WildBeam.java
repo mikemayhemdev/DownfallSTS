@@ -14,8 +14,8 @@ public class WildBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 5;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 3;
 
     public WildBeam() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

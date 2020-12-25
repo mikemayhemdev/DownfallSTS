@@ -10,8 +10,8 @@ public class WhirlingStrike extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, common
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 2;
 
     public WhirlingStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);

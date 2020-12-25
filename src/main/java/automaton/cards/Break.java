@@ -15,13 +15,13 @@ public class Break extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 36;
-    private static final int UPG_DAMAGE = 8;
+    private static final int DAMAGE = 15;
+    private static final int UPG_DAMAGE = 3;
 
     public Break() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
     }
@@ -43,5 +43,6 @@ public class Break extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(-1);
     }
 }

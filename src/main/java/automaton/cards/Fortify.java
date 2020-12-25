@@ -13,7 +13,7 @@ public class Fortify extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
 
     public Fortify() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -36,6 +36,6 @@ public class Fortify extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeDamage(2);
     }
 }

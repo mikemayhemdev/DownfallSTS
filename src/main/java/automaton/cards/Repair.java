@@ -14,8 +14,8 @@ public class Repair extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 6;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 3;
 
     public Repair() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
