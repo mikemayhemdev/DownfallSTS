@@ -93,7 +93,7 @@ public class AncientFactory extends AbstractImageEvent {
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
                         m.powers.add(new StrengthPower(m,-3));
-                        AbstractMonster m2 = new Donu();
+                        AbstractMonster m2 = new Deca ();
                         m2.maxHealth = m2.maxHealth / 2;
                         m2.currentHealth = m2.maxHealth;
                         m2.powers.add(new StrengthPower(m2,-3));
