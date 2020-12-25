@@ -509,7 +509,7 @@
   "bronze:LegacyCode": {
     "NAME": "Legacy Code",
     "DESCRIPTION": "Put !M! card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your draw pile into your hand."
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand."
   },
   "bronze:Repulsor": {
     "NAME": "Repulsor",
@@ -621,5 +621,10 @@
     "NAME": "Find and Replace",
     "DESCRIPTION": "Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile.",
     "UPGRADE_DESCRIPTION": "Retain. NL Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile."
+  },
+  "bronze:InfiniteLoop": {
+    "NAME": "Infinite Loop",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand."
   }
 }
