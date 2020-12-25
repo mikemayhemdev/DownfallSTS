@@ -25,6 +25,7 @@ import java.util.ArrayList;
 
 import static automaton.AutomatonMod.getModID;
 import static automaton.AutomatonMod.makeCardPath;
+import static automaton.FunctionHelper.WITH_DELIMITER;
 
 public abstract class AbstractBronzeCard extends CustomCard {
 
@@ -292,10 +293,28 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        return position == FunctionHelper.held.size() - 1; //NOTE!!! TODO: This, and the whole concept of storing position as a field, works, but if lastCard wants to be used as the solution for the major CardEffectsCardMod text issue, it needs to not reference the FunctionHelper. If we keep it this way, Terminator and Constructor need to use Misc. A change would prevent needing to do that
+        return position == FunctionHelper.held.size() - 1;
     }
 
     boolean firstCard() {
         return position == 0;
+    }
+
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard r = super.makeStatEquivalentCopy();
+        if (!this.doSpecialCompileStuff && r instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) r).doSpecialCompileStuff = false;
+            if (r.rawDescription.contains(" NL bronze:Compile")) {
+                String[] splitText = r.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
+                String compileText = splitText[1] + splitText[2];
+                r.rawDescription = r.rawDescription.replaceAll(compileText, "");
+            } //I will make this good soon
+            else if (r.rawDescription.contains("bronze:Compile")) {
+                r.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
+            }
+            r.initializeDescription();
+        }
+        return r;
     }
 }
