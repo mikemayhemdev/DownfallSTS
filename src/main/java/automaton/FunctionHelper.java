@@ -101,13 +101,13 @@ public class FunctionHelper {
         AbstractBronzeCard function = new FunctionCard();
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof PreCardCompileEffectsPower) {
-                ((PreCardCompileEffectsPower) p).receivePreCardCompileEffects(forGameplay);
+                ((PreCardCompileEffectsPower) p).receivePreCardCompileEffects(forGameplay); // Clean Code
             }
         }
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompilePreCardEffectEmbed(forGameplay);
+                    ((AbstractBronzeCard) c).onCompilePreCardEffectEmbed(forGameplay); // Terminator, Constructor, Chosen Strike
                 }
             }
         }
@@ -120,7 +120,7 @@ public class FunctionHelper {
                 foundExactlyOne = true;
             }
         }
-        for (AbstractCard c : held.group) {
+        for (AbstractCard c : held.group) { // Apply the card effect mods
             if (c.hasTag(AutomatonMod.NO_TEXT)) {
                 CardModifierManager.addModifier(function, new CardEffectsCardMod(c, -99));
             } else {
@@ -135,60 +135,48 @@ public class FunctionHelper {
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompile(function, forGameplay);
+                    ((AbstractBronzeCard) c).onCompile(function, forGameplay); // Compile effects
                 }
             }
         }
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompileLast(function, forGameplay);
+                    ((AbstractBronzeCard) c).onCompileLast(function, forGameplay); // Cost modifying compile effects
                 }
             }
         }
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnCompilePower) {
-                ((OnCompilePower) p).receiveCompile(function, forGameplay);
+                ((OnCompilePower) p).receiveCompile(function, forGameplay); // Free Function Potion & Hardened Form
             }
         }
         for (AbstractRelic r : AbstractDungeon.player.relics) {
             if (r instanceof OnCompileRelic) {
-                ((OnCompileRelic) r).receiveCompile(function, forGameplay);
+                ((OnCompileRelic) r).receiveCompile(function, forGameplay); // Bronze Core, etc
             }
         }
         System.out.println(function.rawDescription);
         return function;
     }
 
+
+
     public static void output() {
-        for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
-            if (q instanceof ForceShield) {
-                q.updateCost(-1);
-            }
-        }
-        for (AbstractCard q : AbstractDungeon.player.hand.group) {
-            if (q instanceof ForceShield) {
-                q.updateCost(-1);
-            }
-        }
-        for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
-            if (q instanceof ForceShield) {
-                q.updateCost(-1);
-            }
-        }
+        ForceShield.decrementShields(); // Decrease cost of Force Shields
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnOutputFunctionPower) {
-                ((OnOutputFunctionPower) p).receiveOutputFunction();
+                ((OnOutputFunctionPower) p).receiveOutputFunction(); // Hardcode
             }
         }
         if (doExtraNonSpecificCopy) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Duplicate Function potion
             doExtraNonSpecificCopy = false;
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true)));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Regular output to hand
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
-            public void update() {
+            public void update() { // Clears and resets Function Helper
                 held.clear();
                 secretStorage = makeFunction(false);
                 isDone = true;
@@ -196,7 +184,7 @@ public class FunctionHelper {
         });
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof AfterOutputFunctionPower) {
-                ((AfterOutputFunctionPower) p).receiveAfterOutputFunction();
+                ((AfterOutputFunctionPower) p).receiveAfterOutputFunction(); // Class Default
             }
         }
     }
