@@ -38,9 +38,9 @@
   "bronze:Optimize": {
     "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "The next Function you #yCompile costs #b1 less.",
-      "The next #b",
-      " Functions you #yCompile cost #b1 less."
+      "#yUpgrade the next card you #yEncode that can be #yUpgraded.",
+      "#yUpgrade the next #b",
+      " cards you #yEncode that can be #yUpgraded."
     ]
   },
   "bronze:MaxOutput": {

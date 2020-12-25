@@ -100,14 +100,16 @@ public class FunctionHelper {
     }
 
     public static void addToSequence(AbstractCard c) {
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof OnAddToFuncPower) {
+                ((OnAddToFuncPower) p).receiveAddToFunc(c);
+            }
+        }
         c.stopGlowing();
         c.resetAttributes();
         c.targetDrawScale = SEQUENCED_CARD_SIZE;
         c.target_x = cardPositions[held.size()].x;
         c.target_y = cardPositions[held.size()].y;
-        if (c instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) c).onInput();
-        }
         held.addToTop(c);
         if (c instanceof AbstractBronzeCard) {
             ((AbstractBronzeCard) c).position = ((AbstractBronzeCard) c).getSequencePosition();
@@ -155,8 +157,7 @@ public class FunctionHelper {
                     } else {
                         CardModifierManager.addModifier(q, new CardEffectsCardMod(c, 1));
                     }
-                }
-                else {
+                } else {
                     if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
                         ((AbstractBronzeCard) c).onCompile(q, forGameplay, counter);
                     } else {

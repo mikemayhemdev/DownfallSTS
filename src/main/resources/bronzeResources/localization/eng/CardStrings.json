@@ -350,7 +350,7 @@
   },
   "bronze:Optimize": {
     "NAME": "Optimize",
-    "DESCRIPTION": "The next !M! Functions you bronze:Compile cost 1 less."
+    "DESCRIPTION": "Upgrade the next !M! cards you bronze:Encode that can be upgraded."
   },
   "bronze:MaxOutput": {
     "NAME": "Max Output",

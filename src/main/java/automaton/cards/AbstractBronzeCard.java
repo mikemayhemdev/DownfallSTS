@@ -137,10 +137,6 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     }
 
-    public void onInput() {
-        // Called when the card is about to enter the Sequence. This could be deleted if it stays unused.
-    }
-
     public void doNothingSpecificInParticular() {
         initializeTitle();
     }
