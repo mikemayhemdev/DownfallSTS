@@ -243,8 +243,8 @@
   },
   "bronze:ChildClass": {
     "NAME": "Child Class",
-    "DESCRIPTION": "The next Function you bronze:Compile costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "Retain. NL The next Function you bronze:Compile costs 0 until played."
+    "DESCRIPTION": "bronze:Compile - Function gains 'Play this again'.",
+    "UPGRADE_DESCRIPTION": "Retain. NL \u00a0 bronze:Compile - Function gains 'Play this again'."
   },
   "bronze:Repair": {
     "NAME": "Repair",
