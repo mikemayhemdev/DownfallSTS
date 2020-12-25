@@ -155,7 +155,6 @@ public class FunctionHelper {
                 ((OnCompileRelic) r).receiveCompile(function, forGameplay); // Bronze Core, etc
             }
         }
-        System.out.println(function.rawDescription);
         return function;
     }
 
