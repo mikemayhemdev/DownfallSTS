@@ -39,6 +39,12 @@ public class NullPointer extends AbstractBronzeCard {
         CardModifierManager.addModifier(function, new UnplayableMod());
     }
 
+    @Override
+    public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
+        function.cost = -2;
+        function.costForTurn = -2;
+    }
+
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeBlock(UPG_BLOCK);
