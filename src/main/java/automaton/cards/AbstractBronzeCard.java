@@ -17,12 +17,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import com.sun.xml.internal.bind.v2.model.core.ID;
 
 import java.util.ArrayList;
 
@@ -148,11 +146,11 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     public String getNoun() {
-        return EXTENDED_DESCRIPTION[0];
+        return EXTENDED_DESCRIPTION[1];
     }
 
     public String getAdjective() {
-        return EXTENDED_DESCRIPTION[1];
+        return EXTENDED_DESCRIPTION[0];
     }
 
     public boolean onOutput() {

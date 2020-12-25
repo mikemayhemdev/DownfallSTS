@@ -27,8 +27,8 @@ public class Boost extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
+    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
+        super.onCompile(function, forGameplay, count);
         if (forGameplay) {
             applyToSelf(new StrengthPower(AbstractDungeon.player, magicNumber));
         }

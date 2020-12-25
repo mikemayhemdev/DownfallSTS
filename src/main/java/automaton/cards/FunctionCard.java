@@ -40,7 +40,7 @@ public class FunctionCard extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
+    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
 
     }
 

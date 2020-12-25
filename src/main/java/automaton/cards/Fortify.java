@@ -28,8 +28,8 @@ public class Fortify extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
+    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
+        super.onCompile(function, forGameplay, count);
         if (forGameplay) {
             applyToSelf(new DexterityPower(AbstractDungeon.player, magicNumber));
         }

@@ -126,29 +126,48 @@ public class FunctionHelper {
     public static AbstractCard secretStorage = null;
 
     public static AbstractCard makeFunction(boolean forGameplay) {
-        AbstractCard q = new FunctionCard();
+        AbstractBronzeCard q = new FunctionCard();
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof PreCardCompileEffectsPower) {
                 ((PreCardCompileEffectsPower) p).receivePreCardCompileEffects(forGameplay);
             }
         }
         int counter = 0;
+        boolean justDoNoun = false;
+        boolean foundExactlyOne = false;
+        for (AbstractCard u : held.group) {
+            if (!u.hasTag(AutomatonMod.NO_TEXT)) {
+                justDoNoun = !foundExactlyOne;
+                foundExactlyOne = true;
+            }
+        }
         for (AbstractCard c : held.group) {
-            if (c.hasTag(AutomatonMod.BAD_COMPILE)) {
+            if (c.hasTag(AutomatonMod.NO_TEXT)) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
                     ((AbstractBronzeCard) c).onCompile(q, forGameplay, -99);
                 } else {
                     CardModifierManager.addModifier(q, new CardEffectsCardMod(c, -99));
                 }
             } else {
-                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompile(q, forGameplay, counter);
-                } else {
-                    CardModifierManager.addModifier(q, new CardEffectsCardMod(c, counter));
+                if (justDoNoun) {
+                    if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                        ((AbstractBronzeCard) c).onCompile(q, forGameplay, 1);
+                    } else {
+                        CardModifierManager.addModifier(q, new CardEffectsCardMod(c, 1));
+                    }
                 }
-                counter += 1;
+                else {
+                    if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                        ((AbstractBronzeCard) c).onCompile(q, forGameplay, counter);
+                    } else {
+                        CardModifierManager.addModifier(q, new CardEffectsCardMod(c, counter));
+                    }
+                    counter += 1;
+                }
             }
         }
+        q.name += "()";
+        q.doNothingSpecificInParticular();
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
