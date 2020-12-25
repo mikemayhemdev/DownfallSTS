@@ -34,20 +34,26 @@
   "bronze:Goto": {
     "NAME": "Goto",
     "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Draw !M! cards."
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Running",
+      "Run"
+    ]
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Copying",
+      "Copy"
+    ]
   },
   "bronze:Branch": {
     "NAME": "Branch",
     "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "damage()",
-      "Deal !D! damage.",
-      "block()",
-      "Gain !B! Block."
+      "Branching",
+      "Branch"
     ]
   },
   "bronze:DelayedSlice": {
@@ -354,12 +360,12 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck instead of your hand."
+    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently instead of your hand."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
-    "DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards with bronze:Encode to bronze:Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards with bronze:Encode to bronze:Encode."
+    "DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode."
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
