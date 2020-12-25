@@ -1,6 +1,8 @@
 package automaton.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ForceShield extends AbstractBronzeCard {
@@ -15,6 +17,24 @@ public class ForceShield extends AbstractBronzeCard {
     public ForceShield() {
         super(ID, 4, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+    }
+
+    public static void decrementShields() {
+        for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
+            if (q instanceof ForceShield) {
+                q.updateCost(-1);
+            }
+        }
+        for (AbstractCard q : AbstractDungeon.player.hand.group) {
+            if (q instanceof ForceShield) {
+                q.updateCost(-1);
+            }
+        }
+        for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
+            if (q instanceof ForceShield) {
+                q.updateCost(-1);
+            }
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
