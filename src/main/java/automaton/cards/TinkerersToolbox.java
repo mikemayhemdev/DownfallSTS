@@ -1,13 +1,13 @@
 package automaton.cards;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.SelectCardsCenteredAction;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class TinkerersToolbox extends AbstractBronzeCard {
         myCardsList.add(new Debug());
         myCardsList.add(new Batch());
         myCardsList.add(new Decompile());
-        addToBot(new SelectCardsAction(myCardsList, 1, "Choose.", (cards) -> addToTop(new MakeTempCardInHandAction(cards.get(0).makeCopy(), true))));
+        addToBot(new SelectCardsCenteredAction(myCardsList, 1, "Choose.", (cards) -> addToTop(new MakeTempCardInHandAction(cards.get(0).makeCopy(), true)))); //TODO: Localize
     }
 
     public void upp() {
