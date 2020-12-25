@@ -148,7 +148,7 @@ public class FunctionHelper {
         }
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnCompilePower) {
-                ((OnCompilePower) p).receiveCompile(function, forGameplay); // Free Function Potion & Hardened Form
+                ((OnCompilePower) p).receiveCompile(function, forGameplay); // Free Function Potion, Infinite Beams & Hardened Form
             }
         }
         for (AbstractRelic r : AbstractDungeon.player.relics) {

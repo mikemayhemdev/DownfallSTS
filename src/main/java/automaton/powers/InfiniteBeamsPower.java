@@ -1,6 +1,8 @@
 package automaton.powers;
 
+import automaton.FunctionHelper;
 import automaton.cards.MinorBeam;
+import automaton.relics.OnCompileRelic;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -10,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonStackablePower {
+public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonStackablePower, OnCompilePower {
     public static final String NAME = "InfiniteBeams";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
@@ -38,6 +40,20 @@ public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonSta
             AbstractCard q = new MinorBeam();
             if (upgraded) q.upgrade();
             addToBot(new MakeTempCardInHandAction(q, this.amount, false));
+        }
+    }
+
+    @Override
+    public void receiveCompile(AbstractCard function, boolean forGameplay) {
+        boolean doTheGood = true;
+        for (AbstractCard c : FunctionHelper.held.group) {
+            if (c.cost != 0) {
+                doTheGood = false;
+            }
+        }
+        if (doTheGood) {
+            function.cost = 0;
+            function.costForTurn = 0;
         }
     }
 
