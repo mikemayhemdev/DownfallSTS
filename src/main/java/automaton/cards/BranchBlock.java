@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 
-@CardIgnore
 public class BranchBlock extends AbstractBronzeCard {
 
     public final static String ID = makeID("BranchBlock");
@@ -14,7 +13,7 @@ public class BranchBlock extends AbstractBronzeCard {
     private static final int BLOCK = 9;
 
     public BranchBlock() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = BLOCK;
     }
 

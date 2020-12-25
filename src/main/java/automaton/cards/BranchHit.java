@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 
-@CardIgnore
 public class BranchHit extends AbstractBronzeCard {
 
     public final static String ID = makeID("BranchHit");
@@ -15,7 +14,7 @@ public class BranchHit extends AbstractBronzeCard {
     private static final int DAMAGE = 9;
 
     public BranchHit() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
     }
 
