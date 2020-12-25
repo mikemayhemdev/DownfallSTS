@@ -88,6 +88,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
     @Override
     public float modifyDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
         stored().calculateCardDamage(target);
+        card.initializeDescription();
         return damage;
     }
 
@@ -98,10 +99,8 @@ public class CardEffectsCardMod extends BronzeCardMod {
                     if (card.block >= card.baseBlock) {
                         return "[#7fff00]" + card.block + "[]";
                     }
-
                     return "[#ff6563]" + card.block + "[]";
                 }
-
                 return Integer.toString(card.baseBlock);
             case 'D':
                 if (card.isDamageModified) {

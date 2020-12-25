@@ -351,8 +351,8 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
-    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand."
+    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand. NL If the Sequence contains only cost 0 cards, the Function costs 0.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand. NL If the Sequence contains only cost 0 cards, the Function costs 0."
   },
   "bronze:Optimize": {
     "NAME": "Optimize",
