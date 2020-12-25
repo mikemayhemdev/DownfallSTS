@@ -3,7 +3,7 @@
     "NAME": "Bronze Core",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "The first 3 #yFunctions you #yCompile cost #b1 less."
+      "The first Function you #yCompile each combat costs #b1 less this turn."
     ]
   },
   "bronze:ProtectiveGoggles": {

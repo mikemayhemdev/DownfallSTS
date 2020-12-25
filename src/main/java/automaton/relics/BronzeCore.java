@@ -19,30 +19,26 @@ public class BronzeCore extends CustomRelic implements OnCompileRelic {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
+    boolean activated = false;
+
     @Override
     public void atBattleStart() {
-        counter = 3;
+        activated = false;
+        grayscale = false;
     }
 
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
-        boolean activated = false;
-        if (counter > 0) {
+        if (!activated) {
             if (function.cost > 0) {
-                function.cost -= 1;
-                function.costForTurn -= 1;
+                function.setCostForTurn(function.costForTurn - 1);
+            }
+            if (forGameplay) {
                 activated = true;
+                flash();
+                grayscale = true;
             }
         }
-        if (forGameplay) {
-            if (activated) flash();
-            counter -= 1;
-        }
-    }
-
-    @Override
-    public void onVictory() {
-        counter = -1;
     }
 
     @Override
