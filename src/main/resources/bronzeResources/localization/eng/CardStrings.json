@@ -458,11 +458,7 @@
   },
   "bronze:ShipIt": {
     "NAME": "Ship It",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! for ALL of your status cards.",
-    "EXTENDED_DESCRIPTION": [
-      "buggy",
-      "Mess"
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL of your Status cards."
   },
   "bronze:Break": {
     "NAME": "Break",

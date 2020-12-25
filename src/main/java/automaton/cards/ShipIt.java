@@ -22,7 +22,6 @@ public class ShipIt extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        thisEncodes();
     }
 
     public static int countCards() {
@@ -58,15 +57,25 @@ public class ShipIt extends AbstractBronzeCard {
         return count;
     }
 
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * countCards();
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * countCards();
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        baseDamage += countCards() * magicNumber; // TODO: This might be weird. Do we need to modify BaseDamage then reset?
-        super.onCompile(function, forGameplay, count);
     }
 
     public void upp() {
