@@ -5,6 +5,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnMiracle;
 import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.curses.EnClumsy;
+import charbosses.cards.curses.EnParasite;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.purple.*;
 import charbosses.relics.*;
@@ -68,9 +69,9 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 3:
                     theVeryImportantPerseverence.newPrio = -2;
                     theVeryImportantSandsOfTime.newPrio = -1;
-                    addToList(cardsList, new EnSashWhip(), false);
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnRegret(), false);
+                    addToList(cardsList, new EnParasite(), false);
                     turn = 0;
                     looped = true;
                     break;
@@ -91,8 +92,8 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                     break;
                 case 2:
                     addToList(cardsList, new EnSandsOfTime(3), false);
-                    addToList(cardsList, new EnSashWhip(), false);
                     addToList(cardsList, new EnHalt(), false);
+                    addToList(cardsList, new EnParasite(), false);
                     turn = 0;
                     break;
             }
