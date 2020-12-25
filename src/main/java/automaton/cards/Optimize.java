@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.powers.OptimizePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class Optimize extends AbstractBronzeCard {
 
@@ -16,6 +17,7 @@ public class Optimize extends AbstractBronzeCard {
     public Optimize() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

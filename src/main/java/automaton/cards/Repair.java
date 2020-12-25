@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class Repair extends AbstractBronzeCard {
 
@@ -20,6 +21,7 @@ public class Repair extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
         tags.add(CardTags.HEALING);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

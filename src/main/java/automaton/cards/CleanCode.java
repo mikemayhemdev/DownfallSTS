@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.powers.CleanCodePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class CleanCode extends AbstractBronzeCard {
 
@@ -16,6 +17,7 @@ public class CleanCode extends AbstractBronzeCard {
     public CleanCode() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

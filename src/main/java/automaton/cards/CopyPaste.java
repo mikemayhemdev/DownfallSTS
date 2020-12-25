@@ -3,6 +3,7 @@ package automaton.cards;
 import automaton.powers.CopyPastePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class CopyPaste extends AbstractBronzeCard {
 
@@ -13,6 +14,7 @@ public class CopyPaste extends AbstractBronzeCard {
     public CopyPaste() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

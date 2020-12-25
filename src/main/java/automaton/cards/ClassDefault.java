@@ -4,6 +4,7 @@ import automaton.FunctionHelper;
 import automaton.powers.DefaultPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class ClassDefault extends AbstractBronzeCard {
 
@@ -17,6 +18,7 @@ public class ClassDefault extends AbstractBronzeCard {
     public ClassDefault() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

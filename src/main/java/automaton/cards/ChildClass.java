@@ -4,6 +4,7 @@ import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class ChildClass extends AbstractBronzeCard {
 
@@ -14,6 +15,7 @@ public class ChildClass extends AbstractBronzeCard {
     public ChildClass() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(AutomatonMod.MODIFIES_OUTPUT);
     }
 
