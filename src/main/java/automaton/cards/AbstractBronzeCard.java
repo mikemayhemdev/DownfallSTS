@@ -292,7 +292,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     }
 
     boolean lastCard() {
-        return position == FunctionHelper.held.size() - 1;
+        return position == FunctionHelper.held.size() - 1; //NOTE!!! TODO: This, and the whole concept of storing position as a field, works, but if lastCard wants to be used as the solution for the major CardEffectsCardMod text issue, it needs to not reference the FunctionHelper. If we keep it this way, Terminator and Constructor need to use Misc. A change would prevent needing to do that
     }
 
     boolean firstCard() {

@@ -181,7 +181,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
     public String modifyDescription(String rawDescription, AbstractCard card) {
         String x = getRealDesc(stored());
         if (!x.equals("")) {
-            x += " NL ";
+            x += " NL "; // NOTE!!! TODO: VERY IMPORTANT. This adds a trailing NL on EVERY function card. This means their text has a lot of issues currently. We need to find a way to prevent doing the extra NL for the last card. This is also why Child Class and Backtrace have issues. My attempts haven't fully worked, but I'll figure it out
         }
         return rawDescription + x;
     }
