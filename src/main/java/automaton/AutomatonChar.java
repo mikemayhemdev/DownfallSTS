@@ -42,7 +42,7 @@ public class AutomatonChar extends CustomPlayer {
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    public float renderscale = 1.0F;
+    public float renderscale = 1.2F;
 
     private String atlasURL = "bronzeResources/images/char/mainChar/bronze.atlas";
     private String jsonURL = "bronzeResources/images/char/mainChar/bronze.json";

@@ -51,7 +51,7 @@ public class ChampChar extends CustomPlayer {
 
     private static String currentIdle = "Idle";
 
-    public float renderscale = 1.0F;
+    public float renderscale = 1.2F;
 
     public float stanceSwitchAnimTimer = 0.0F;
     private ArrayList<String> stanceSwitchQueue = new ArrayList<>();
