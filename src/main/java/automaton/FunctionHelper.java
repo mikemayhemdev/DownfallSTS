@@ -72,7 +72,7 @@ public class FunctionHelper {
     public static void addToSequence(AbstractCard c) {
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAddToFuncPower) {
-                ((OnAddToFuncPower) p).receiveAddToFunc(c);
+                ((OnAddToFuncPower) p).receiveAddToFunc(c); // Optimize
             }
         }
         c.stopGlowing();
@@ -90,7 +90,7 @@ public class FunctionHelper {
         secretStorage = makeFunction(false);
         for (AbstractPower q : AbstractDungeon.player.powers) {
             if (q instanceof PostAddToFuncPower) {
-                ((PostAddToFuncPower) q).receivePostAddToFunc(c);
+                ((PostAddToFuncPower) q).receivePostAddToFunc(c); // Cloning Beam
             }
         }
     }
