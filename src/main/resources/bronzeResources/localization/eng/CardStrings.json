@@ -110,8 +110,8 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. NL Take 4 damage. NL bronze:Compile - Add a *Burn+ into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take 4 damage. NL bronze:Compile - Add a *Burn+ into your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "heated",
       "Burn"
