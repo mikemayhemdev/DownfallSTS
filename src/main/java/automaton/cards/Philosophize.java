@@ -28,8 +28,8 @@ public class Philosophize extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
+    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
+        super.onCompile(function, forGameplay, count);
         if (forGameplay) {
             for (AbstractMonster q : monsterList()) {
                 applyToEnemy(q, new StrengthPower(q, magicNumber));

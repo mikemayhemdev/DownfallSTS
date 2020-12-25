@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,14 +23,15 @@ public class Repair extends AbstractBronzeCard {
         thisEncodes();
         tags.add(CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        tags.add(AutomatonMod.NO_TEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
+    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
+        super.onCompile(function, forGameplay, count);
         if (forGameplay) {
             atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
         }

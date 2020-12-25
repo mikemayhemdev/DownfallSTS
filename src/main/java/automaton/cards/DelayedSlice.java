@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,14 +20,15 @@ public class DelayedSlice extends AbstractBronzeCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         thisEncodes();
+        tags.add(AutomatonMod.NO_TEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        super.onCompile(function, forGameplay);
+    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
+        super.onCompile(function, forGameplay, count);
         if (forGameplay) {
             allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }

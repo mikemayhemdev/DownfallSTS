@@ -64,9 +64,9 @@ public class ShipIt extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
+    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
         baseDamage += countCards() * magicNumber; // TODO: This might be weird. Do we need to modify BaseDamage then reset?
-        super.onCompile(function, forGameplay);
+        super.onCompile(function, forGameplay, count);
     }
 
     public void upp() {
