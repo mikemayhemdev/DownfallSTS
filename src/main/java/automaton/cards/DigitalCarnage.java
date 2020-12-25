@@ -33,13 +33,13 @@ public class DigitalCarnage extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int i;
         if (Settings.FAST_MODE) {
-            this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED)));
+            this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED.cpy())));
 
             for (i = 0; i < 5; ++i) {
                 this.addToBot(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
             }
         } else {
-            this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED), 0.4F));
+            this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED.cpy()), 0.4F));
 
             for (i = 0; i < 5; ++i) {
                 this.addToBot(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
@@ -53,7 +53,6 @@ public class DigitalCarnage extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay, int count) {
         super.onCompile(function, forGameplay, count);
-        CardModifierManager.addModifier(function, new EtherealMod());
     }
 
     @Override
