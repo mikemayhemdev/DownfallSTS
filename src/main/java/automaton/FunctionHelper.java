@@ -7,7 +7,6 @@ import automaton.cards.FunctionCard;
 import automaton.powers.*;
 import automaton.relics.OnCompileRelic;
 import automaton.util.TextureLoader;
-import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -32,24 +31,24 @@ public class FunctionHelper {
 
     public static HashMap<CardEffectsCardMod, AbstractCard> cardModsInfo = new HashMap<>();
 
-    public static final float SEQUENCED_CARD_SIZE = 0.225f * Settings.scale;
-    public static final float FUNC_CARD_SIZE = 0.45f * Settings.scale;
+    public static final float SEQUENCED_CARD_SIZE = 0.225f;
+    public static final float FUNC_CARD_SIZE = 0.45f;
 
-    public static final float BG_X = 150f * Settings.scale;
-    public static final float BG_Y = 700f * Settings.scale;
-    public static final float HEIGHT_SEQUENCE = 768f * Settings.scale;
-    public static final float HEIGHT_FUNCTION = 820f * Settings.scale;
+    public static final float BG_X = 150f;
+    public static final float BG_Y = 700f;
+    public static final float HEIGHT_SEQUENCE = 768f;
+    public static final float HEIGHT_FUNCTION = 820f;
 
     public static final Vector2[] cardPositions = {
-            new Vector2(208f * Settings.scale, HEIGHT_SEQUENCE),
-            new Vector2(283f * Settings.scale, HEIGHT_SEQUENCE),
-            new Vector2(358f * Settings.scale, HEIGHT_SEQUENCE),
-            new Vector2(433f * Settings.scale, HEIGHT_SEQUENCE)
+            new Vector2(208f, HEIGHT_SEQUENCE),
+            new Vector2(283f, HEIGHT_SEQUENCE),
+            new Vector2(358f, HEIGHT_SEQUENCE),
+            new Vector2(433f, HEIGHT_SEQUENCE)
     };
 
     public static final Vector2[] funcPositions = {
-            new Vector2(480f * Settings.scale, HEIGHT_FUNCTION),
-            new Vector2(580f * Settings.scale, HEIGHT_FUNCTION)
+            new Vector2(480f, HEIGHT_FUNCTION),
+            new Vector2(580f, HEIGHT_FUNCTION)
     };
 
     public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
@@ -161,7 +160,6 @@ public class FunctionHelper {
     }
 
 
-
     public static void output() {
         ForceShield.decrementShields(); // Decrease cost of Force Shields
         for (AbstractPower p : AbstractDungeon.player.powers) {
@@ -192,9 +190,9 @@ public class FunctionHelper {
     public static void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
         if (max == 4) {
-            sb.draw(bg_4card, BG_X, BG_Y, 0, 0, bg_4card.getWidth() * Settings.scale, bg_4card.getHeight() * Settings.scale, Settings.scale, Settings.scale, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
+            sb.draw(bg_4card, BG_X, BG_Y);
         } else {
-            sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, Settings.scale, Settings.scale, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
+            sb.draw(bg, BG_X, BG_Y);
         }
         for (AbstractCard c : held.group) {
             c.render(sb);
