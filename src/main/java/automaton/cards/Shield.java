@@ -4,16 +4,16 @@ import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class StickyShield extends AbstractBronzeCard {
+public class Shield extends AbstractBronzeCard {
 
-    public final static String ID = makeID("StickyShield");
+    public final static String ID = makeID("Shield");
 
     //stupid intellij stuff skill, self, common
 
     private static final int BLOCK = 11;
     private static final int UPG_BLOCK = 3;
 
-    public StickyShield() {
+    public Shield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         cardsToPreview = new Slimed();

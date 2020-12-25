@@ -78,7 +78,13 @@
   },
   "bronze:Branch": {
     "NAME": "Branch",
-    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust."
+    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Branch: Attack",
+      "Deal !D! damage.",
+      "Branch: Block",
+      "Gain !B! Block."
+    ]
   },
   "bronze:DelayedSlice": {
     "NAME": "Delayed Slice",
@@ -317,11 +323,10 @@
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL If the last played card was a Function, play this again."
   },
   "bronze:ChosenStrike": {
-    "NAME": "Chosen Strike",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by !M! and add !bauto! Dazed to your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by !M! and add !bauto! Dazed to your discard pile.",
+    "NAME": "Cultist Strike",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! permanently.",
     "EXTENDED_DESCRIPTION": [
-      "chosen",
+      "cultist",
       "Caw"
     ]
   },
@@ -504,7 +509,7 @@
   "bronze:LegacyCode": {
     "NAME": "Legacy Code",
     "DESCRIPTION": "Put !M! card from your discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Put !M! cards from your draw pile into your hand."
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your discard pile into your hand."
   },
   "bronze:Repulsor": {
     "NAME": "Repulsor",
@@ -611,5 +616,15 @@
       "buggy",
       "Mess"
     ]
+  },
+  "bronze:FindAndReplace": {
+    "NAME": "Find and Replace",
+    "DESCRIPTION": "Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile."
+  },
+  "bronze:InfiniteLoop": {
+    "NAME": "Infinite Loop",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand."
   }
 }

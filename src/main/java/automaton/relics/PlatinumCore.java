@@ -4,6 +4,7 @@ import automaton.AutomatonMod;
 import automaton.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -18,34 +19,28 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
 
     public PlatinumCore() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        counter = 0;
     }
+
 
     @Override
     public void atBattleStart() {
         counter = 3;
+        grayscale = false;
     }
 
     @Override
     public void receiveCompile(AbstractCard function, boolean forGameplay) {
-        boolean activated = false;
-        if (counter > 0) {
-            for (int i = 0; i < 2; i++) {
-                if (function.cost > 0) {
-                    function.cost -= 1;
-                    function.costForTurn -= 1;
-                    activated = true;
-                }
+        if (counter != 0) {
+            if (function.cost > 0) {
+                function.setCostForTurn(function.cost - 1);
+            }
+            if (forGameplay) {
+                counter -= 1;
+                flash();
+                if (counter == 0) grayscale = true;
             }
         }
-        if (forGameplay) {
-            if (activated) flash();
-            counter -= 1;
-        }
-    }
-
-    @Override
-    public void onVictory() {
-        counter = -1;
     }
 
     @Override
