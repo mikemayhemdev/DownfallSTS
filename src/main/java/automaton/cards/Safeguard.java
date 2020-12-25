@@ -33,7 +33,5 @@ public class Safeguard extends AbstractBronzeCard {
 
     public void upp() {
         upgradeBlock(5);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }
