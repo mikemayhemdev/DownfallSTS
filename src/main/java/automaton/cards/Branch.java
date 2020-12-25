@@ -22,7 +22,7 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
     //stupid intellij stuff attack, self_and_enemy, common
 
     private static final int DAMAGE = 8;
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 7;
 
     public Branch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.SELF_AND_ENEMY);

@@ -2,6 +2,7 @@ package automaton.patches;
 
 import automaton.AutomatonMod;
 import automaton.relics.BronzeIdol;
+import charbosses.cards.AbstractBossCard;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -19,7 +20,7 @@ public class StatusReplacePatch {
     @SpirePrefixPatch
     public static SpireReturn<AbstractCard> Prefix(AbstractCard abstractCard) {
         // SlimeboundMod.logger.info("making stat equivalent copy");
-        if (abstractCard.type == AbstractCard.CardType.STATUS) {
+        if (abstractCard.type == AbstractCard.CardType.STATUS && !(abstractCard instanceof AbstractBossCard)) {
             if (AbstractDungeon.player != null && CardCrawlGame.isInARun()) {
                 if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
                     //SlimeboundMod.logger.info("IS STATUS!");
