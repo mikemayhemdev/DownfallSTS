@@ -25,7 +25,7 @@ public class FunctionCard extends AbstractBronzeCard {
 
     public FunctionCard() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF_AND_ENEMY);
-        setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
+        this.setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
         this.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
     }
 
@@ -39,7 +39,7 @@ public class FunctionCard extends AbstractBronzeCard {
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
-        isUncompiledFunctionCard = true;
+
     }
 
     @Override
