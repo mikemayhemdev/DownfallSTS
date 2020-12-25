@@ -603,5 +603,13 @@
       " NL (Hits ",
       " times.)"
     ]
+  },
+  "bronze:BuggyMess": {
+    "NAME": "Buggy Mess",
+    "DESCRIPTION": "Add a random Status into your draw pile. NL bronze:Compile - Function costs 1 less.",
+    "EXTENDED_DESCRIPTION": [
+      "buggy",
+      "Mess"
+    ]
   }
 }
