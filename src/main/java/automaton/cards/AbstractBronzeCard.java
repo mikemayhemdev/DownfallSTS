@@ -2,7 +2,6 @@ package automaton.cards;
 
 import automaton.AutomatonChar;
 import automaton.FunctionHelper;
-import automaton.cardmods.CardEffectsCardMod;
 import automaton.cardmods.EncodeMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
@@ -29,48 +28,22 @@ import static automaton.AutomatonMod.makeCardPath;
 
 public abstract class AbstractBronzeCard extends CustomCard {
 
+    private static float functionPreviewCardScale = .9f;
+    private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
+    private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
     protected final CardStrings cardStrings;
     protected final String NAME;
-    protected String DESCRIPTION;
-    protected String UPGRADE_DESCRIPTION;
-    protected String[] EXTENDED_DESCRIPTION;
-
     public int auto;
     public int baseAuto;
     public boolean upgradedAuto;
     public boolean isAutoModified;
-
-    private AbstractCard functionPreviewCard;
-    private static float functionPreviewCardScale = .9f;
-    private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
-    private static float functionPreviewCardX = Settings.WIDTH * 0.1F;
-
     public boolean isHoveredInSequence = false;
-
-    public void resetAttributes() {
-        super.resetAttributes();
-        auto = baseAuto;
-        isAutoModified = false;
-    }
-
-    public void displayUpgrades() {
-        super.displayUpgrades();
-        if (upgradedAuto) {
-            auto = baseAuto;
-            isAutoModified = true;
-        }
-
-    }
-
-    void upgradeAuto(int amount) {
-        baseAuto += amount;
-        auto = baseAuto;
-        upgradedAuto = true;
-    }
-
     public int position = -1;
-
     public boolean doSpecialCompileStuff = true;
+    protected String DESCRIPTION;
+    protected String UPGRADE_DESCRIPTION;
+    protected String[] EXTENDED_DESCRIPTION;
+    private AbstractCard functionPreviewCard;
 
     public AbstractBronzeCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -116,6 +89,27 @@ public abstract class AbstractBronzeCard extends CustomCard {
         return getModID() + ":" + blah;
     }
 
+    public void resetAttributes() {
+        super.resetAttributes();
+        auto = baseAuto;
+        isAutoModified = false;
+    }
+
+    public void displayUpgrades() {
+        super.displayUpgrades();
+        if (upgradedAuto) {
+            auto = baseAuto;
+            isAutoModified = true;
+        }
+
+    }
+
+    void upgradeAuto(int amount) {
+        baseAuto += amount;
+        auto = baseAuto;
+        upgradedAuto = true;
+    }
+
     @Override
     public void upgrade() {
         if (!upgraded) {
@@ -124,17 +118,16 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
-    public void onCompile(AbstractCard function, boolean forGameplay, int textLevel) {
-        // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
-        if (forGameplay) {
-            CardModifierManager.removeModifiersById(this, EncodeMod.ID, true);
-        }
-        CardModifierManager.addModifier(function, new CardEffectsCardMod(this, textLevel));
+    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
+        // Called before the effects of cards are added to the Function. Use this if a card modifies its statistics as a Compile effect. Don't put these on action queue.
     }
 
-    public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
-        // Called after all cards have done onCompile, before relics and powers have.
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
+    }
 
+    public void onCompileLast(AbstractCard function, boolean forGameplay) {
+        // Called after all cards have done onCompile, before relics and powers have.
     }
 
     public void doNothingSpecificInParticular() {

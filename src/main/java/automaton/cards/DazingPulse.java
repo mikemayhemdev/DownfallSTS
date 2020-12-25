@@ -34,8 +34,7 @@ public class DazingPulse extends AbstractBronzeCard {
 
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             blck();
             shuffleIn(new Dazed(), 2);

@@ -21,12 +21,11 @@ public class Terminator extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
+    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
         if (lastCard() && forGameplay) {
             baseDamage *= 2;
             damage *= 2;
         }
-        super.onCompile(function, forGameplay, count);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -24,8 +24,7 @@ public class DecaBeam extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             applyToSelf(new PlatedArmorPower(AbstractDungeon.player, magicNumber));
             shuffleIn(new Dazed(), auto);

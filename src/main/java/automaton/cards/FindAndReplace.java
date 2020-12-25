@@ -1,15 +1,10 @@
 package automaton.cards;
 
-import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.utility.DrawPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import guardian.actions.CardToTopOfDrawPileAction;
-
-import java.util.Collections;
 
 public class FindAndReplace extends AbstractBronzeCard {
 
@@ -26,12 +21,12 @@ public class FindAndReplace extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard gotFunc = null;
-        for (AbstractCard c:p.drawPile.group){
-            if (c instanceof FunctionCard){
+        for (AbstractCard c : p.drawPile.group) {
+            if (c instanceof FunctionCard) {
                 gotFunc = c;
             }
         }
-        if (gotFunc != null){
+        if (gotFunc != null) {
             p.drawPile.moveToDeck(gotFunc, false);
             atb(new DrawCardAction(1));
         }
@@ -41,8 +36,8 @@ public class FindAndReplace extends AbstractBronzeCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean hasFunc = false;
-        for (AbstractCard c:p.drawPile.group){
-            if (c instanceof FunctionCard){
+        for (AbstractCard c : p.drawPile.group) {
+            if (c instanceof FunctionCard) {
                 hasFunc = true;
             }
         }

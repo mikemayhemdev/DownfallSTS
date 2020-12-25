@@ -27,8 +27,7 @@ public class Shell extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             applyToSelf(new BlurPower(AbstractDungeon.player, magicNumber));
         }

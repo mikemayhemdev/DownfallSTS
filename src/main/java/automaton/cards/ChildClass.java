@@ -23,8 +23,7 @@ public class ChildClass extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         CardModifierManager.addModifier(function, new PlayMeTwiceCardmod());
     }
 

@@ -25,8 +25,7 @@ public class Explode extends AbstractBronzeCard {
 
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             addToBot(new VFXAction(new ExplosionSmallEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
             allDmg(AbstractGameAction.AttackEffect.NONE);

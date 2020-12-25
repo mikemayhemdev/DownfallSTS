@@ -34,8 +34,7 @@ public class Overheat extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             AbstractCard c = new Burn();
             c.upgrade();

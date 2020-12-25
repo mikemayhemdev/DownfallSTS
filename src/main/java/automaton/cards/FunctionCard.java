@@ -43,16 +43,10 @@ public class FunctionCard extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-
-    }
-
-    @Override
     public void doNothingSpecificInParticular() {
         if (textPrefix.equals("")) {
             this.name = "function()";
-        }
-        else {
+        } else {
             this.name = textPrefix + "()";
         }
         super.doNothingSpecificInParticular();

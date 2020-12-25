@@ -23,27 +23,8 @@ public class ChosenAction extends AbstractGameAction {
     }
 
     public void update() {
-        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
 
-        AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (c.uuid.equals(this.uuid)) {
-                c.misc += this.miscIncrease;
-                c.applyPowers();
-                // c.baseDamage = c.misc;
-            }
-        }
 
-        for(var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = c.misc) {
-            c = (AbstractCard)var1.next();
-            c.misc += this.miscIncrease;
-            c.applyPowers();
-        }
-        for (AbstractCard c2: FunctionHelper.held.group){
-            c2.misc += this.miscIncrease;
-            c2.applyPowers();
-        }
 
         this.isDone = true;
     }

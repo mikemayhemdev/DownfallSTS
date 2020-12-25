@@ -27,8 +27,7 @@ public class DelayedSlice extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }

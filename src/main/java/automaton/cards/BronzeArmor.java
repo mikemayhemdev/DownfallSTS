@@ -28,8 +28,7 @@ public class BronzeArmor extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             for (AbstractMonster q : monsterList()) {
                 applyToEnemy(q, new ArtifactPower(q, magicNumber));

@@ -1,15 +1,12 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
 import automaton.actions.ChosenAction;
-import champ.actions.IncreaseMiscDamageAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import org.omg.CORBA.DATA_CONVERSION;
 
 public class ChosenStrike extends AbstractBronzeCard {
 
@@ -38,13 +35,21 @@ public class ChosenStrike extends AbstractBronzeCard {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
     }
 
-
-
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int textLevel) {
-        if (forGameplay){
-            atb(new ChosenAction(this.uuid, magicNumber));
-            //TODO - This doesn't happen fast enough to affect the Function, but does work on master deck's copy
+    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
+        if (forGameplay) {
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (c.uuid.equals(this.uuid)) {
+                    c.misc += magicNumber;
+                    c.applyPowers();
+                    // c.baseDamage = c.misc;
+                }
+            }
+
+            for (AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
+                c.misc += magicNumber;
+                c.applyPowers();
+            }
         }
     }
 

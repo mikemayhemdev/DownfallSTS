@@ -128,10 +128,17 @@ public class FunctionHelper {
     public static AbstractCard secretStorage = null;
 
     public static AbstractCard makeFunction(boolean forGameplay) {
-        AbstractBronzeCard q = new FunctionCard();
+        AbstractBronzeCard function = new FunctionCard();
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof PreCardCompileEffectsPower) {
                 ((PreCardCompileEffectsPower) p).receivePreCardCompileEffects(forGameplay);
+            }
+        }
+        for (AbstractCard c : held.group) {
+            if (c instanceof AbstractBronzeCard) {
+                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                    ((AbstractBronzeCard) c).onCompilePreCardEffectEmbed(forGameplay);
+                }
             }
         }
         int counter = 0;
@@ -145,24 +152,12 @@ public class FunctionHelper {
         }
         for (AbstractCard c : held.group) {
             if (c.hasTag(AutomatonMod.NO_TEXT)) {
-                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompile(q, forGameplay, -99);
-                } else {
-                    CardModifierManager.addModifier(q, new CardEffectsCardMod(c, -99));
-                }
+                CardModifierManager.addModifier(function, new CardEffectsCardMod(c, -99));
             } else {
                 if (justDoNoun) {
-                    if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                        ((AbstractBronzeCard) c).onCompile(q, forGameplay, 1);
-                    } else {
-                        CardModifierManager.addModifier(q, new CardEffectsCardMod(c, 1));
-                    }
+                    CardModifierManager.addModifier(function, new CardEffectsCardMod(c, 1));
                 } else {
-                    if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                        ((AbstractBronzeCard) c).onCompile(q, forGameplay, counter);
-                    } else {
-                        CardModifierManager.addModifier(q, new CardEffectsCardMod(c, counter));
-                    }
+                    CardModifierManager.addModifier(function, new CardEffectsCardMod(c, counter));
                     counter += 1;
                 }
             }
@@ -170,23 +165,29 @@ public class FunctionHelper {
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompileToChangeCost(q, forGameplay);
+                    ((AbstractBronzeCard) c).onCompile(function, forGameplay);
+                }
+            }
+        }
+        for (AbstractCard c : held.group) {
+            if (c instanceof AbstractBronzeCard) {
+                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                    ((AbstractBronzeCard) c).onCompileLast(function, forGameplay);
                 }
             }
         }
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnCompilePower) {
-                ((OnCompilePower) p).receiveCompile(q, forGameplay);
+                ((OnCompilePower) p).receiveCompile(function, forGameplay);
             }
         }
         for (AbstractRelic r : AbstractDungeon.player.relics) {
             if (r instanceof OnCompileRelic) {
-                ((OnCompileRelic) r).receiveCompile(q, forGameplay);
+                ((OnCompileRelic) r).receiveCompile(function, forGameplay);
             }
         }
-        System.out.println(q.rawDescription);
-        setImportantInfo(q);
-        return q;
+        System.out.println(function.rawDescription);
+        return function;
     }
 
     public static void output() {

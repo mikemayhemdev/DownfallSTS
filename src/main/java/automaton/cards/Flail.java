@@ -33,8 +33,7 @@ public class Flail extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             applyToSelf(new ArtifactPower(AbstractDungeon.player, magicNumber));
         }

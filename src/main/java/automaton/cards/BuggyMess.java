@@ -21,8 +21,8 @@ public class BuggyMess extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
-        if (function.cost > 1) {
+    public void onCompileLast(AbstractCard function, boolean forGameplay) {
+        if (function.cost >= 1) {
             function.cost -= 1;
             function.costForTurn -= 1; //TODO: Reducing cost needs to be routed through a function eventually and centralized for all Function cost changing effects, to prevent weird stuff like X-funcs.
         }

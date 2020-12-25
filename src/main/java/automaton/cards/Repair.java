@@ -30,8 +30,7 @@ public class Repair extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
-        super.onCompile(function, forGameplay, count);
+    public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
         }

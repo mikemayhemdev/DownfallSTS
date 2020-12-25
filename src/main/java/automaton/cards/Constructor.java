@@ -21,13 +21,12 @@ public class Constructor extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay, int count) {
+    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
         if (firstCard() && forGameplay) {
             this.baseBlock *= 2;
             this.block *= 2;
             superFlash();
         }
-        super.onCompile(function, forGameplay, count);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
