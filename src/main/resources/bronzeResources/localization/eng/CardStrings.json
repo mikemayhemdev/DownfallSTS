@@ -354,12 +354,12 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck instead of your hand."
+    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently instead of your hand."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
-    "DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards with bronze:Encode to bronze:Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards with bronze:Encode to bronze:Encode."
+    "DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Until the Sequence is full, choose 1 of 2 random cards to bronze:Encode."
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
