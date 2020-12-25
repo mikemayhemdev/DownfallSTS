@@ -6,6 +6,7 @@ import automaton.cards.FunctionCard;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.abstracts.CustomCard;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardSave;
@@ -177,10 +178,19 @@ public class CardEffectsCardMod extends BronzeCardMod {
         return x;
     }
 
+    public boolean isFinalCardEffectsFunction(AbstractCard card) {
+        boolean yesIAmTheFinalCardWoo = false;
+        for (AbstractCardModifier c : CardModifierManager.getModifiers(card, CardEffectsCardMod.ID)) {
+            // Does JAVA let me do this? I sure hope so
+            yesIAmTheFinalCardWoo = c == this;
+        }
+        return yesIAmTheFinalCardWoo;
+    }
+
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         String x = getRealDesc(stored());
-        if (!x.equals("")) {
+        if (!x.equals("") && !isFinalCardEffectsFunction(card)) {
             x += " NL "; // NOTE!!! TODO: VERY IMPORTANT. This adds a trailing NL on EVERY function card. This means their text has a lot of issues currently. We need to find a way to prevent doing the extra NL for the last card. This is also why Child Class and Backtrace have issues. My attempts haven't fully worked, but I'll figure it out
         }
         return rawDescription + x;
