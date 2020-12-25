@@ -1,31 +1,59 @@
 {
   "bronze:DazingPulse": {
     "NAME": "Dazing Pulse",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !B! Block and add 2 *Dazed into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !B! Block and add 2 *Dazed into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "dazing",
+      "Pulse"
+    ]
   },
   "bronze:Spike": {
     "NAME": "Spike",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Thorns."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !M! Thorns.",
+    "EXTENDED_DESCRIPTION": [
+      "spiky",
+      "Spike"
+    ]
   },
   "bronze:Explode": {
     "NAME": "Explode",
-    "DESCRIPTION": "Add a *Burn into your draw pile. NL bronze:Compile - Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Add a *Burn into your draw pile. NL bronze:Compile - Deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "unstable",
+      "Bomb"
+    ]
   },
   "bronze:DonuBeam": {
     "NAME": "Donu Beam",
-    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Strength and lose 1 Dexterity."
+    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Strength and lose 1 Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "smooth",
+      "Blast"
+    ]
   },
   "bronze:DecaBeam": {
     "NAME": "Deca Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and add 2 *Dazed into your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and add 2 *Dazed into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "jagged",
+      "Barrier"
+    ]
   },
   "bronze:Strike": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "simple",
+      "Strike"
+    ]
   },
   "bronze:Defend": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "basic",
+      "Defend"
+    ]
   },
   "bronze:FunctionCard": {
     "NAME": "FUNCTION",
@@ -36,25 +64,21 @@
     "DESCRIPTION": "Draw !M! card. NL bronze:Compile - Draw !M! card.",
     "UPGRADE_DESCRIPTION": "Draw !M! cards. NL bronze:Compile - Draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
-      "Running",
-      "Run"
+      "running",
+      "Sprint"
     ]
   },
   "bronze:Replicate": {
     "NAME": "Replicate",
     "DESCRIPTION": "Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
-      "Copying",
+      "copying",
       "Copy"
     ]
   },
   "bronze:Branch": {
     "NAME": "Branch",
-    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Branching",
-      "Branch"
-    ]
+    "DESCRIPTION": "Choose - Deal !D! damage or gain !B! Block. NL bronze:Encode the option not chosen. NL Exhaust."
   },
   "bronze:DelayedSlice": {
     "NAME": "Delayed Slice",
@@ -62,67 +86,127 @@
   },
   "bronze:WhirlingStrike": {
     "NAME": "Whirling Strike",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "whirling",
+      "Whirl"
+    ]
   },
   "bronze:Iterate": {
     "NAME": "Iterate",
-    "DESCRIPTION": "Deal !D! damage !M! times."
+    "DESCRIPTION": "Deal !D! damage !M! times.",
+    "EXTENDED_DESCRIPTION": [
+      "iterating",
+      "Iterate"
+    ]
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - If this is the last card in the Sequence, double its damage."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - If this is the last card in the Sequence, double its damage.",
+    "EXTENDED_DESCRIPTION": [
+      "terminating",
+      "End"
+    ]
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
     "DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your discard pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] . NL bronze:Compile - Add a *Burn+ into your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "overheating",
+      "Burn"
+    ]
   },
   "bronze:CutThrough": {
     "NAME": "Cut Through",
-    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw !bauto! card."
+    "DESCRIPTION": "Deal !D! damage. NL Scry !M!. NL bronze:Compile - Draw !bauto! card.",
+    "EXTENDED_DESCRIPTION": [
+      "cutting",
+      "Cut"
+    ]
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage twice. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!."
+    "DESCRIPTION": "Deal !D! damage twice. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "recursive",
+      "Recur"
+    ]
   },
   "bronze:DarkDash": {
     "NAME": "Dark Dash",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add a *Void into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add a *Void into your discard pile."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add a *Void into your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "dark",
+      "Dash"
+    ]
   },
   "bronze:OilSpill": {
     "NAME": "Oil Spill",
     "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - Add a *Slimed into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - Add a *Slimed into your discard pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - Add a *Slimed into your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "oily",
+      "Spill"
+    ]
   },
   "bronze:WildBeam": {
     "NAME": "Wild Beam",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Wound into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Wound into your discard pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Wound into your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "wild",
+      "Beam"
+    ]
   },
   "bronze:Frontload": {
     "NAME": "Frontload",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function gains Retain."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function gains Retain.",
+    "EXTENDED_DESCRIPTION": [
+      "frontloaded",
+      "Wall"
+    ]
   },
   "bronze:DelayedGuard": {
     "NAME": "Delayed Guard",
-    "DESCRIPTION": "Next turn, gain !B! Block. NL bronze:Compile - Gain !B! Block."
+    "DESCRIPTION": "Next turn, gain !B! Block. NL bronze:Compile - Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "delayed",
+      "Guard"
+    ]
   },
   "bronze:Shield": {
     "NAME": "Shield",
-    "DESCRIPTION": "Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "shielding",
+      "Shield"
+    ]
   },
   "bronze:Deprecate": {
     "NAME": "Deprecate",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "deprecating",
+      "Insult"
+    ]
   },
   "bronze:Invalidate": {
     "NAME": "Invalidate",
-    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "invalid",
+      "Error"
+    ]
   },
   "bronze:Shell": {
     "NAME": "Shell",
-    "DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur."
+    "DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur.",
+    "EXTENDED_DESCRIPTION": [
+      "curling",
+      "Shell"
+    ]
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",
@@ -136,11 +220,19 @@
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the Sequence, double its Block."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the Sequence, double its Block.",
+    "EXTENDED_DESCRIPTION": [
+      "constructing",
+      "Builder"
+    ]
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - If this is not the first or last card in the Sequence, gain NL [E] [E] ."
+    "DESCRIPTION": "Draw !M! cards. NL bronze:Compile - If this is not the first or last card in the Sequence, gain NL [E] [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "seperating",
+      "Draw"
+    ]
   },
   "bronze:Update": {
     "NAME": "Update",
@@ -148,7 +240,11 @@
   },
   "bronze:Overload": {
     "NAME": "Overload",
-    "DESCRIPTION": "Gain [E] [E] . NL bronze:Compile - Function is placed into your discard pile instead of your hand."
+    "DESCRIPTION": "Gain [E] [E] . NL bronze:Compile - Function is placed into your discard pile instead of your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "overloading",
+      "Energy"
+    ]
   },
   "bronze:ReverseEngineer": {
     "NAME": "Reverse Engineer",
@@ -160,19 +256,35 @@
   },
   "bronze:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL bronze:Compile - Gain !M! Artifact."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL bronze:Compile - Gain !M! Artifact.",
+    "EXTENDED_DESCRIPTION": [
+      "flaliing",
+      "Flail"
+    ]
   },
   "bronze:DigitalCarnage": {
     "NAME": "Digital Carnage",
-    "DESCRIPTION": "Ethereal. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Ethereal."
+    "DESCRIPTION": "Ethereal. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Ethereal.",
+    "EXTENDED_DESCRIPTION": [
+      "digital",
+      "Carnage"
+    ]
   },
   "bronze:NullPointer": {
     "NAME": "Null Pointer",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function gains Unplayable."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL bronze:Compile - Function gains Unplayable.",
+    "EXTENDED_DESCRIPTION": [
+      "null",
+      "Pointer"
+    ]
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Dexterity."
+    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "fortified",
+      "Fortress"
+    ]
   },
   "bronze:BronzeOrb": {
     "NAME": "Bronze Orb",
@@ -180,11 +292,19 @@
   },
   "bronze:SearingBeam": {
     "NAME": "Searing Beam",
-    "DESCRIPTION": "Deal !D! damage. π NL Can be Upgraded any number of times."
+    "DESCRIPTION": "Deal !D! damage. π NL Can be Upgraded any number of times.",
+    "EXTENDED_DESCRIPTION": [
+      "searing",
+      "Sear"
+    ]
   },
   "bronze:Backtrace": {
     "NAME": "Backtrace",
-    "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Exhaust."
+    "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "sneaky",
+      "Trace"
+    ]
   },
   "bronze:CloningBeam": {
     "NAME": "Merge Conflict",
@@ -198,7 +318,11 @@
   "bronze:ChosenStrike": {
     "NAME": "Chosen Strike",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by !M! and add !bauto! Dazed to your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by !M! and add !bauto! Dazed to your discard pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Reduce the Function's cost by !M! and add !bauto! Dazed to your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "chosen",
+      "Caw"
+    ]
   },
   "bronze:ClassDefault": {
     "NAME": "Class Default",
@@ -213,7 +337,11 @@
   },
   "bronze:MinorBeam": {
     "NAME": "Minor Beam",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "minor",
+      "Scratch"
+    ]
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
@@ -250,7 +378,11 @@
   "bronze:ChildClass": {
     "NAME": "Child Class",
     "DESCRIPTION": "bronze:Compile - Function gains 'Play this again'.",
-    "UPGRADE_DESCRIPTION": "Retain. NL \u00a0 bronze:Compile - Function gains 'Play this again'."
+    "UPGRADE_DESCRIPTION": "Retain. NL \u00a0 bronze:Compile - Function gains 'Play this again'.",
+    "EXTENDED_DESCRIPTION": [
+      "child",
+      "Clone"
+    ]
   },
   "bronze:Repair": {
     "NAME": "Repair",
@@ -258,15 +390,27 @@
   },
   "bronze:Boost": {
     "NAME": "Boost",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "boosting",
+      "Boost"
+    ]
   },
   "bronze:Safeguard": {
     "NAME": "Safeguard",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function costs [E] more."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function costs [E] more.",
+    "EXTENDED_DESCRIPTION": [
+      "safe",
+      "Guard"
+    ]
   },
   "bronze:BronzeArmor": {
     "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact."
+    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact.",
+    "EXTENDED_DESCRIPTION": [
+      "bronze",
+      "Armor"
+    ]
   },
   "bronze:ForLoop": {
     "NAME": "For Loop",
@@ -275,7 +419,11 @@
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",
-    "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile - ALL enemies gain !M! Strength."
+    "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile - ALL enemies gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "thinking",
+      "Idea"
+    ]
   },
   "bronze:Return": {
     "NAME": "Return",
@@ -293,7 +441,11 @@
   },
   "bronze:FormatEncoded": {
     "NAME": "Fragment",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "formatted",
+      "Fragment"
+    ]
   },
   "bronze:BurnOut": {
     "NAME": "Burn Out",
@@ -305,17 +457,29 @@
   },
   "bronze:ShipIt": {
     "NAME": "Ship It",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! for ALL of your status cards."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Increase this card's damage by !M! for ALL of your status cards.",
+    "EXTENDED_DESCRIPTION": [
+      "buggy",
+      "Mess"
+    ]
   },
   "bronze:Break": {
     "NAME": "Break",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add !M! random Status cards into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add !M! random Status cards into your discard pile."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add !M! random Status cards into your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "broken",
+      "Smash"
+    ]
   },
   "bronze:Infinite Loop": {
     "NAME": "Infinite Loop",
     "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand."
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "infinite",
+      "Loop"
+    ]
   },
   "bronze:Library": {
     "NAME": "Library",
@@ -382,16 +546,19 @@
   },
   "bronze:BranchBlock": {
     "NAME": "Blck()",
-    "DESCRIPTION": "Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block.",
+    "EXTENDED_DESCRIPTION": [
+      "branching",
+      "Branch"
+    ]
   },
   "bronze:BranchHit": {
     "NAME": "Atk()",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "bronze:InfiniteLoop": {
-    "NAME": "Infinite Loop",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand and increase its damage by !M!.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand and increase its damage by !M!."
+    "DESCRIPTION": "Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "branching",
+      "Branch"
+    ]
   },
   "bronze:Ignite": {
     "NAME": "Ignite",
