@@ -15,7 +15,7 @@ public class ChosenStrike extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, uncommon
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 2;
 
     public ChosenStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -38,17 +38,12 @@ public class ChosenStrike extends AbstractBronzeCard {
             function.costForTurn -= magicNumber;
         }
         if (forGameplay) {
-            if (upgraded) {
-                atb(new MakeTempCardInDiscardAction(new Dazed(), auto));
-            } else {
-                shuffleIn(new Dazed(), auto);
-            }
+
+            shuffleIn(new Dazed(), auto);
         }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

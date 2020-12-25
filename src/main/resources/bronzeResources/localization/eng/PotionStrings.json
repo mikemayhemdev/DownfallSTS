@@ -2,8 +2,8 @@
   "bronze:FreeFunctionsPotion": {
     "NAME": "Machine Oil",
     "DESCRIPTIONS": [
-      "Reduce the cost of Functions in your hand by ",
-      " this combat."
+      "Increase all numbers on cards in the Sequence by ",
+      "."
     ]
   },
   "bronze:CleanCodePotion": {

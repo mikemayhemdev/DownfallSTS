@@ -229,8 +229,11 @@
   },
   "bronze:Allocate": {
     "NAME": "Allocate",
-    "DESCRIPTION": "Gain [E] .",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] ."
+    "DESCRIPTION": "Gain [E] for each Status in your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "NL (Gain ",
+      " [E] .)"
+    ]
 
   },
   "bronze:Decompile": {
@@ -372,11 +375,11 @@
     "DESCRIPTION": "Remove all negative bronze:Compile effects from the next !M! Functions you bronze:Compile."
   },
   "bronze:BranchBlock": {
-    "NAME": "block()",
+    "NAME": "Blck()",
     "DESCRIPTION": "Gain !B! Block."
   },
   "bronze:BranchHit": {
-    "NAME": "damage()",
+    "NAME": "Atk()",
     "DESCRIPTION": "Deal !D! damage."
   },
   "bronze:InfiniteLoop": {

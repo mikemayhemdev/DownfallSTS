@@ -33,17 +33,11 @@ public class WildBeam extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         super.onCompile(function, forGameplay);
         if (forGameplay) {
-            if (upgraded) {
-                atb(new MakeTempCardInDiscardAction(new Wound(), 1));
-            } else {
-                shuffleIn(new Wound());
-            }
+            shuffleIn(new Wound());
         }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

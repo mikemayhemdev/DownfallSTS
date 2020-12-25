@@ -16,7 +16,7 @@ public class Overheat extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, common
 
     private static final int DAMAGE = 14;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 4;
 
     public Overheat() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
@@ -39,17 +39,11 @@ public class Overheat extends AbstractBronzeCard {
         if (forGameplay) {
             AbstractCard c = new Burn();
             c.upgrade();
-            if (upgraded) {
-                addToBot(new MakeTempCardInDiscardAction(c, 1));
-            } else {
-                shuffleIn(c);
-            }
+            shuffleIn(c);
         }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }
