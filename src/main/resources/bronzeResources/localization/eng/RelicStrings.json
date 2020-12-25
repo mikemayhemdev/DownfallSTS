@@ -38,14 +38,14 @@
     "NAME": "Silver Bullet",
     "FLAVOR": "Spirewolves are long gone.",
     "DESCRIPTIONS": [
-      "Start each combat with a #yReplicate in the #ySequence."
+      "Start each combat with a #yPiercing Shot in the #ySequence."
     ]
   },
   "bronze:MakeshiftBattery": {
     "NAME": "Makeshift Battery",
     "FLAVOR": "It's an 8.99 volt.",
     "DESCRIPTIONS": [
-      "Gain [E] and add a random #yStatus card into your draw pile at the start of your turn."
+      "Gain [E] and add a random #yStatus card into your discard pile at the start of your turn."
     ]
   },
   "bronze:CableSpool": {
