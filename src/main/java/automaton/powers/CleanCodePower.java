@@ -35,6 +35,7 @@ public class CleanCodePower extends AbstractAutomatonPower implements PreCardCom
                 else if (q.rawDescription.contains("bronze:Compile")) { // This specifically triggers for cards that only have Compile effects.
                     q.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
                 }
+                q.initializeDescription();
                 ((AbstractBronzeCard) q).doSpecialCompileStuff = false;
             }
         }

@@ -5,7 +5,6 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
@@ -31,13 +30,24 @@ public class BitShift extends AbstractBronzeCard {
             c.add(r.makeStatEquivalentCopy());
         }
         atb(new SelectCardsAction(c, 1, "Choose.", (cards) -> { //TODO: Localize
+            att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    FunctionHelper.applyPowers();
+                }
+            });
             att(new ReduceCostForTurnAction(cards.get(0), magicNumber));
             AbstractCard q = cards.get(0);
             att(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
-                    FunctionHelper.held.removeCard(q);
+                    FunctionHelper.held.removeCard(q.cardID);
+                    for (int i = 0; i < FunctionHelper.held.size(); i++) {
+                        FunctionHelper.held.group.get(i).target_x = FunctionHelper.cardPositions[i].x;
+                        FunctionHelper.held.group.get(i).target_y = FunctionHelper.cardPositions[i].y;
+                    }
                     p.hand.addToTop(q);
                 }
             });

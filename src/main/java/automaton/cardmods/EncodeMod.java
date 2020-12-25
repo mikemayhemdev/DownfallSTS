@@ -11,7 +11,7 @@ public class EncodeMod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return rawDescription + " NL bronze:Encode.";
+        return rawDescription + " NL bronze:Encode."; //TODO: Localize
     }
 
     @Override

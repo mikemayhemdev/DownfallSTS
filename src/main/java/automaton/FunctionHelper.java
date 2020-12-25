@@ -101,9 +101,6 @@ public class FunctionHelper {
     }
 
     public static void addToSequence(AbstractCard c) {
-        if (CardModifierManager.hasModifier(c, EncodeMod.ID)) {
-            CardModifierManager.removeModifiersById(c, EncodeMod.ID, true);
-        }
         c.stopGlowing();
         c.resetAttributes();
         c.targetDrawScale = SEQUENCED_CARD_SIZE;
@@ -120,15 +117,10 @@ public class FunctionHelper {
             output();
         }
         secretStorage = makeFunction(false);
-        if (AbstractDungeon.player.hasPower(CloningPower.POWER_ID)) {
-            AbstractDungeon.player.getPower(CloningPower.POWER_ID).onSpecificTrigger();
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    FunctionHelper.addToSequence(c.makeStatEquivalentCopy());
-                }
-            });
+        for (AbstractPower q : AbstractDungeon.player.powers) {
+            if (q instanceof PostAddToFuncPower) {
+                ((PostAddToFuncPower) q).receivePostAddToFunc(c);
+            }
         }
     }
 

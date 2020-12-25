@@ -128,6 +128,9 @@ public class CardEffectsCardMod extends BronzeCardMod {
             String compileText = splitText[0] + splitText[1];
             x = x.replace(compileText, "");
         } // And for non-Function-relevant text before the main card effects.
+        if (card.rawDescription.contains(" NL bronze:Encode.")) {
+            x = x.replace(" NL bronze:Encode.", "");
+        }
         if (x.contains("!D!")) {
             x = x.replaceAll("!D!", getDynamicValue(card, 'D'));
         }

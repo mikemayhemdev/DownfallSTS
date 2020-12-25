@@ -43,7 +43,6 @@ public class GoSomewhereElsePatch {
         if (CardModifierManager.hasModifier(card, EncodeMod.ID) && FunctionHelper.held.size() < FunctionHelper.max) {
             card.target_x = cardPositions[FunctionHelper.held.size()].x;
             card.target_y = cardPositions[FunctionHelper.held.size()].y;
-            CardModifierManager.removeModifiersById(card, EncodeMod.ID, true);
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override

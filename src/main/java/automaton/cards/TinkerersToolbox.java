@@ -42,6 +42,8 @@ public class TinkerersToolbox extends AbstractBronzeCard {
 
     public void upp() {
         selfRetain = true;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 
     @Override

@@ -34,7 +34,7 @@ public class FollowUp extends AbstractBronzeCard {
             public void update() {
                 isDone = true;
                 if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).cardID.equals(FunctionCard.ID)) {
-                    att(new RepeatCardAction(q));
+                    att(new RepeatCardAction(m, q));
                 }
             }
         });

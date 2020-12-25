@@ -24,7 +24,7 @@ public class DefaultPower extends AbstractAutomatonPower implements NonStackable
     @Override
     public void receiveAfterOutputFunction() {
         flash();
-        addToBot(new AddToFuncAction(stored, null));
+        addToBot(new AddToFuncAction(stored.makeStatEquivalentCopy(), null));
         addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 

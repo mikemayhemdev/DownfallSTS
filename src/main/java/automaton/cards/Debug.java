@@ -31,8 +31,10 @@ public class Debug extends AbstractBronzeCard {
                 else if (q.rawDescription.contains("bronze:Compile")) {
                     q.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
                 }
+                q.initializeDescription();
             }
         }
+        FunctionHelper.applyPowers();
     }
 
     public void upp() {

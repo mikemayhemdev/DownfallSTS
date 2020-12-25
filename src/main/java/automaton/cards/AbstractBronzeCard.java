@@ -1,7 +1,6 @@
 package automaton.cards;
 
 import automaton.AutomatonChar;
-import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cardmods.EncodeMod;
@@ -22,8 +21,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import slimebound.SlimeboundMod;
-import sun.reflect.Reflection;
 
 import java.util.ArrayList;
 
@@ -129,6 +126,9 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public void onCompile(AbstractCard function, boolean forGameplay) {
         // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
+        if (forGameplay) {
+            CardModifierManager.removeModifiersById(this, EncodeMod.ID, true);
+        }
         CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }
 
@@ -275,12 +275,12 @@ public abstract class AbstractBronzeCard extends CustomCard {
             // SlimeboundMod.logger.info("isHoveredInSequence");
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
 
-               // SlimeboundMod.logger.info("bounced");
+                // SlimeboundMod.logger.info("bounced");
                 return;
             }
 
 
-           // SlimeboundMod.logger.info("Is in Sequence");
+            // SlimeboundMod.logger.info("Is in Sequence");
             if (functionPreviewCard == null) {
                 functionPreviewCard = makeStatEquivalentCopy();
             }
@@ -288,7 +288,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
             functionPreviewCard.drawScale = functionPreviewCardScale;
             functionPreviewCard.current_x = functionPreviewCardX;
             functionPreviewCard.current_y = functionPreviewCardY;
-           // functionPreviewCard.update();
+            // functionPreviewCard.update();
             functionPreviewCard.render(sb);
 
 
