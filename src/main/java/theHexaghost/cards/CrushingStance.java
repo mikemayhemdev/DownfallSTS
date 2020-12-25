@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -23,6 +24,8 @@ public class CrushingStance extends AbstractHexaCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,7 +36,7 @@ public class CrushingStance extends AbstractHexaCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                HexaMod.renderFlames = true;
+             //   HexaMod.renderFlames = true;
                 isDone = true;
                 AbstractGhostflame gf = new CrushingGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                 GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);

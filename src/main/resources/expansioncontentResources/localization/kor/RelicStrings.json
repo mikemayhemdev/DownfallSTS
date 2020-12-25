@@ -1,0 +1,9 @@
+{
+  "expansioncontent:StudyCardRelic": {
+    "NAME": "작은 중절모",
+    "FLAVOR": "모자를 지배하는 자, 첨탑을 지배한다.",
+    "DESCRIPTIONS": [
+      "전투 시작시, 무작위 첨탑 보스 카드를 손에 넣습니다. 비용은 0 입니다."
+    ]
+  }
+}

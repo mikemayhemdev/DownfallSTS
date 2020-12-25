@@ -23,14 +23,17 @@ public class GhostflameHelper {
     public static Color partialTransparent = new Color(1F, 1F, 1F, 0.75F);
     public static boolean showAll = false;
 
+    public static float globalX = -25F * Settings.scale;
+    public static float globalY = 0F;
+
     public static void init() {
         hexaGhostFlames.clear();
-        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX - (120.0F * Settings.scale), AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
-        hexaGhostFlames.add(new CrushingGhostflame(AbstractDungeon.player.drawX + (60.0F * Settings.scale), AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
-        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX + (130.0F * Settings.scale), AbstractDungeon.player.drawY + (240.0F * Settings.scale)));
-        hexaGhostFlames.add(new BolsteringGhostflame(AbstractDungeon.player.drawX + (60.0F * Settings.scale), AbstractDungeon.player.drawY + (110.0F * Settings.scale)));
-        hexaGhostFlames.add(new SearingGhostflame(AbstractDungeon.player.drawX - (120.0F * Settings.scale), AbstractDungeon.player.drawY + (110.0F * Settings.scale)));
-        hexaGhostFlames.add(new InfernoGhostflame(AbstractDungeon.player.drawX - (190.0F * Settings.scale), AbstractDungeon.player.drawY + (240.0F * Settings.scale)));
+        hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+        hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+        hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX + (140.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (230.0F * Settings.scale)));
+        hexaGhostFlames.add(new BolsteringGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
+        hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
+        hexaGhostFlames.add(new InfernoGhostflame(globalX + AbstractDungeon.player.drawX - (200.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (230.0F * Settings.scale)));
         hexaGhostFlames.get(0).activate();
     }
 
@@ -98,7 +101,7 @@ public class GhostflameHelper {
             showAll = false;
             for (AbstractGhostflame gf : hexaGhostFlames) {
                 if (gf.hitbox.hovered || (gf.hitbox2.hovered && gf == activeGhostFlame)) {
-                    showAll = true;
+                   // showAll = true;
                     if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
                         TipHelper.renderGenericTip(
                                 (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,

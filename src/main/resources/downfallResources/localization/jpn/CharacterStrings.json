@@ -1,0 +1,216 @@
+{
+  "downfall:Heart Event": {
+    "NAMES": [
+      "The Heart"
+    ],
+    "TEXT": [
+      "~Serve...~ NL ~me..~ ~now...~",
+      "~Rise...~ NL ~Servant..~",
+      "~Arise...~",
+      "~Slay~ NL ~intruders...~",
+      "~Reach~ ~the~ ~intruder...~ NL ~to~ ~receive~ ~more..~ ~blessings...~",
+      "~At~ ~least...~ ~confront~ NL ~the~ ~first~ ~intruder...~",
+      "~I~ ~brought~ ~you~ ~back...~",
+      "~Choose...~",
+      "~Granted...~",
+      "~Sacrifice...~ NL ~...for~ ~power....~",
+      "~PROVE~ ~your~ NL ~worth...~",
+      "Rewards",
+      "~Continue~ ~for~ ~me...~",
+      "~Descend...~ ~..into madness...~",
+      "~Impressive...~ ~more...~",
+      "Cursed!",
+      "Scatterbrain!",
+      "Transformation!"
+    ],
+    "OPTIONS": [
+      "[Continue]",
+      "[Talk]",
+      "[Skip]",
+      "[Leave]",
+      "Choose 10 cards to add to your deck.",
+      "[ #gEnemies #gin #gyour #gnext #gtwo #gcombats #gflee #gin #gterror ]"
+    ]
+  },
+  "downfall:Unlock": {
+    "TEXT": [
+      "This character is unlocked by completing a run with the Slime Boss.",
+      "This character is unlocked by completing a run with the 2nd Villain character.",
+      "This character is unlocked by completing a run with the Guardian.",
+      "This character is unlocked by completing a run with the 3rd Villain character.",
+      "This character is unlocked by completing a run with the Hexaghost.",
+      "This character is unlocked by completing a run with the 4th Villain character.",
+      "This character is unlocked by completing a run with the Champ."
+
+    ]
+  },
+  "downfall:HeartMerchant": {
+  "NAMES": [
+    "Proceed",
+    "~Sacrifice...~"
+  ],
+  "TEXT": [
+    "~You~ ~grow...~ ~stronger...~",
+    "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
+    "~Slay...~ ~and~ ~be~ ~rewarded...~",
+    "~More...~ ~souls...~",
+    "~Feed~ ~us......~ NL ~FEED~ ~US......~",
+    "~Fuel...~ ~the~ ~corruption...~",
+    "~Blessings...~ ~are~ ~earned...~",
+    "~No...~ ~mercy...~",
+    "~Ever...~ ~stronger...~",
+    "~Our~ ~power...~ ~is~ ~yours...~",
+    "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
+    "~Fight...~ ~fell...~ ~and~ ~feed...~",
+    "~We~ ~are...~ ~legion...~",
+    "~Go~ ~forth...~ ~and~ ~harvest...~",
+    "~Delicious...~ ~souls...~",
+    "~Reap...~ ~the~ ~fallen...~"
+  ],
+  "OPTIONS": [
+    "~Neow...~ ~cannot~ ~win...~",
+    "~Fear...~ ~nothing...~",
+    "..... NL .... NL .........",
+    "~Finish...~ ~them...~",
+    "~Good...~ ~luck...~",
+    "~Don't...~ ~die...~",
+    "~We will...~ ~be~ ~waiting...~",
+    "~Destroy...~ ~them~ ~all...~"
+  ]
+},
+  "downfall:HeartProceed": {
+    "TEXT": [
+      "~Intruders...~ NL ~...in~ ",
+      "~You~ ~are~ ~needed...~ NL ~...in~ ",
+      "~They~ ~have~ ~reached...~ NL ",
+      "~Return...~ NL ~Protect~ ",
+      "~Slay~ ~them~ ~all...~ NL ~...in~ "
+    ],
+    "OPTIONS": [
+      "~the~ ~City...~",
+      "~the~ ~Beyond...~"
+    ]
+  },
+  "downfall:NeowEnding": {
+    "TEXT": [
+      "You... have... slain... everyone...",
+      "...the cycle... has died.....",
+      "..and so...... shall... NL ....I......"
+    ],
+    "OPTIONS": [
+      "~I~ ~brought...~ NL ~HIM...~ ~back...~"
+    ]
+  },
+  "downfall:HeartMerchantScreen": {
+    "NAMES": [
+      "~Greetings~ NL ~minion...~",
+      "~Bring~ ~more~ ~souls...~",
+      "~I~ ~need~ @more...@",
+      "~You~ ~are~ ~not~ NL @worthy...@",
+      "~No.~",
+      "~Harvest~ ~more~ NL ~for~ ~that...~",
+      "~Insufficient~ ~sacrifice...~",
+      "~Yes...~",
+      "~More...~ @More...!@",
+      "~Grow~ ~strong...~",
+      "~I~ ~am~ ~renewed...~",
+      "~Go~ ~forth...~",
+      "Leave",
+      "Select a card to remove from your deck."
+    ],
+    "TEXT": [
+      "~You~ ~grow...~ ~stronger...~",
+      "~We~ ~grow...~ ~as~ ~you~ ~grow...~",
+      "~Slay...~ ~and~ ~be~ ~rewarded...~",
+      "~More...~ ~souls...~",
+      "~Feed~ ~us......~ NL ~FEED~ ~US......~",
+      "~Fuel...~ ~the~ ~corruption...~",
+      "~Blessings...~ ~are~ ~earned...~",
+      "~No...~ ~mercy...~",
+      "~Ever...~ ~stronger...~",
+      "~Our~ ~power...~ ~is~ ~yours...~",
+      "~Kill~ ~all...~ ~in~ ~your~ ~way...~",
+      "~Fight...~ ~fell...~ ~and~ ~feed...~",
+      "~We~ ~are...~ ~legion...~",
+      "~Go~ ~forth...~ ~and~ ~harvest...~",
+      "~Delicious...~ ~souls...~",
+      "~Reap...~ ~the~ ~fallen...~"
+    ]
+  },
+  "downfall:OctoChoiceCards": {
+    "NAMES": [
+      "Souls",
+      "Success",
+      "A Pick Me Up",
+      "Guardian",
+      "Hexaghost",
+      "Slime Boss",
+      "Automaton",
+      "Champ",
+      "Collector",
+      "Time Eater",
+      "Awakened One",
+      "Ancients",
+      "Split: Bronze",
+      "Split: Ghostflame",
+      "Split: Torchhead",
+      "Split: Cultist",
+      "Split: Protector",
+      "Split: Insulting",
+      "Split: Ancient",
+      "Split: Time"
+    ],
+    "TEXT": [
+      "Lose 3 HP. NL Gain 40 Souls.",
+      "Lose 1 HP. NL Add a random Colorless card to your hand.",
+      "Lose 5 HP. NL Gain a random Potion.",
+      "Obtain Guardian expansioncontent:Boss cards.",
+      "Obtain Hexaghost expansioncontent:Boss cards.",
+      "Obtain Slime Boss expansioncontent:Boss cards.",
+      "Obtain Automaton expansioncontent:Boss cards.",
+      "Obtain Champ expansioncontent:Boss cards.",
+      "Obtain Collector expansioncontent:Boss cards.",
+      "Obtain Time Eater expansioncontent:Boss cards.",
+      "Obtain Awakened One expansioncontent:Boss cards.",
+      "Obtain Ancients expansioncontent:Boss cards.",
+      "Split into a slimeboundmod:Bronze_Slime.",
+      "Split into a slimeboundmod:Ghostflame_Slime.",
+      "Split into a slimeboundmod:Torchhead_Slime.",
+      "Split into a slimeboundmod:Cultist_Slime.",
+      "Split into a slimeboundmod:Protector_Slime.",
+      "Split into an slimeboundmod:Insulting_Slime.",
+      "Split into an slimeboundmod:Ancient_Slime.",
+      "Split into a slimeboundmod:Time_Slime.",
+      "Split into a slimeboundmod:Bruiser_Slime.",
+      "Split into a slimeboundmod:Guerilla_Slime.",
+      "Split into a slimeboundmod:Mire_Slime.",
+      "Split into a slimeboundmod:Leeching_Slime."
+    ]
+  },
+  "downfall:lazyStorage": {
+    "NAMES": [
+
+    ],
+    "TEXT": [
+      "Choose a Boss to Study.",
+      "Choose Advance,Retract or Do Nothing"
+    ]
+  },
+  "downfall:Merchant": {
+    "NAMES": [
+      "Merchant"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:NeowBoss": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
+      "~Arise...~",
+      "~Fight~ ~once~ ~more...~",
+      "~The~ ~cycle~ ~must~ ~end...~"
+    ]
+  }
+}

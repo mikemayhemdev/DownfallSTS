@@ -115,17 +115,17 @@
   "Guardian:AutomayhemPower": {
     "NAME": "时间沙漏",
     "DESCRIPTIONS": [
-      "At the end of your turn, #yAccelerate.",
-      "At the end of your turn, #yAccelerate ",
-      " times."
+      "在你的回合结束时， #y加速 。",
+      "在你的回合结束时， #y加速 #b",
+      " 次。"
     ]
   },
   "Guardian:ConstructPower": {
     "NAME": "先古建造",
     "DESCRIPTIONS": [
-      "如果回合开始时你没有 人工制品 获得 ",
-      " 层 人工制品 并失去 ",
-      " [E] 。"
+      "如果回合开始时你没有 #y人工制品 获得 ",
+      " 层 #y人工制品 ",
+      " 。"
     ]
   },
   "Guardian:ModeShiftPower": {

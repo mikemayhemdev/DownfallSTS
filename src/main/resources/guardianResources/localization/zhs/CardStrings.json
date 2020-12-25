@@ -25,6 +25,11 @@
     "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 敏捷 。",
     "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 敏捷 。"
   },
+  "Guardian:Gem_Lightblue": {
+    "NAME": "碧玺",
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 点 guardianmod:临时 荆棘 。",
+    "UPGRADE_DESCRIPTION": "获得 1 点 guardianmod:临时 荆棘 。"
+  },
   "Guardian:Gem_White": {
     "NAME": "石英",
     "DESCRIPTION": " guardianmod:宝石 。 NL 抽 1 张牌。",
@@ -119,7 +124,8 @@
   },
   "Guardian:Harden": {
     "NAME": "硬化",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL 进入 guardianmod:防御模式 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 和1层 荆棘 。 NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:SentryBeam": {
     "NAME": "哨卫射线",
@@ -185,11 +191,13 @@
   },
   "Guardian:Emergency": {
     "NAME": "应激",
-    "DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滞 的牌返回手牌。 NL 消耗 。"
+    "DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滞 的牌返回手牌。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": " guardianmod:加速 直到有 guardianmod:凝滞 的牌返回手牌。"
   },
   "Guardian:Clone": {
     "NAME": "克隆",
-    "DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL 消耗 。"
+    "DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择一张牌。 guardianmod:凝滞 这张牌的复制。 NL guardianmod:加速 。 NL 消耗 。"
   },
   "Guardian:Preprogram": {
     "NAME": "预编程",
@@ -235,11 +243,12 @@
   },
   "Guardian:RollAttack": {
     "NAME": "蜷身攻击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果处于 guardianmod:防御模式 ，再造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果处于 guardianmod:防御模式 ，变为全体攻击。"
   },
   "Guardian:GemFire": {
     "NAME": "宝石加农炮",
-    "DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。"
+    "DESCRIPTION": "消耗手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。 NL 消耗 。",
+	"UPGRADE_DESCRIPTION": "保留 。 NL 消耗 手牌中有 guardianmod:宝石 的牌。 每颗宝石对随机敌人造成 !D! 点伤害。 NL 消耗 。"
   },
   "Guardian:ChargeCore": {
     "NAME": "充能核心",
@@ -259,19 +268,21 @@
   },
   "Guardian:PrismaticBeam": {
     "NAME": "棱镜射线",
-    "DESCRIPTION": "每有一颗 guardianmod:宝石 造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 每有一颗 guardianmod:宝石 造成 !D! 点伤害。"
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "棱镜屏障",
-    "DESCRIPTION": "每有一颗 guardianmod:宝石 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 每有一颗 guardianmod:宝石 获得 !B! 点 格挡 。"
   },
   "Guardian:TemporalStrike": {
     "NAME": "质朴打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 NL 再造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 如果有牌被 guardianmod:凝滞 NL 获得 [E] 。"
   },
   "Guardian:TemporalShield": {
     "NAME": "质朴屏障",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 再获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 抽 !M! 张牌。",
+	"UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果有牌被 guardianmod:凝滞 NL 抽 !M! 张牌。"
   },
   "Guardian:ExploitGems": {
     "NAME": "宝石利用",
@@ -280,7 +291,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "折射射线",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 能被多次 升级 。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 本场战斗这张牌攻击次数减少2。 NL 能被多次 升级 。"
   },
   "Guardian:MultiBeam": {
     "NAME": "多重射线",
@@ -298,17 +309,17 @@
   "Guardian:EvasiveProtocol": {
     "NAME": "闪避协议",
     "DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 2 点 敏捷 。 NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:SpikerProtocol": {
     "NAME": "荆棘协议",
     "DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 3 层 荆棘 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
+	"UPGRADE_DESCRIPTION": "处于 guardianmod:防御模式 时获得 4 层 荆棘 。 NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "装甲协议",
     "DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 。",
-	"UPGRADE_DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 。 NL guardianmod:防御模式 额外持续一回合。"
+	"UPGRADE_DESCRIPTION": "每回合在 guardianmod:防御模式 时获得 4 点 格挡 。 NL 进入 guardianmod:防御模式 并持续一回合。"
   },
   "Guardian:TimeSifter": {
     "NAME": "时间沙漏",
@@ -317,7 +328,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "先古建造",
-    "DESCRIPTION": "在你的回合开始时， 如果你没有 人工制品 ，获得 !M! 层 人工制品 并失去 [E] 。"
+    "DESCRIPTION": "在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 。",
+	"UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 在你的回合开始时，如果你没有 人工制品 ，获得 !M! 层 人工制品 。"
   },
   "Guardian:CrystalBeam": {
     "NAME": "水晶射线",
@@ -325,8 +337,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "玛瑙",
-    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 层 人工制品 。 NL 失去 2 点生命。",
-    "UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。 NL 失去 2 点生命。"
+    "DESCRIPTION": " guardianmod:宝石 。 NL 获得 1 层 人工制品 。",
+    "UPGRADE_DESCRIPTION": "获得 1 层 人工制品 。"
   },
   "Guardian:Gem_Yellow": {
     "NAME": "琥珀",
@@ -364,7 +376,7 @@
   "Guardian:Repulse": {
     "NAME": "反冲协议",
     "DESCRIPTION": "消耗每回合抽到的前 1 张状态或诅咒牌。",
-    "UPGRADE_DESCRIPTION": "消耗每回合抽到的前 2 张状态或诅咒牌。"
+    "UPGRADE_DESCRIPTION": "固有 NL 消耗每回合抽到的前 1 张状态或诅咒牌。"
   },
   "Guardian:BronzeOrb": {
     "NAME": "铜制圆球",
@@ -375,8 +387,8 @@
     "DESCRIPTION": "退出 guardianmod:防御模式 时，获得 !M! 点 guardianmod:临时 力量 。 NL 进入 guardianmod:防御模式 。"
   },
   "Guardian:GatlingBeam": {
-    "NAME": "加特林射线",
-    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL  guardianmod:滴答 -对随机敌人造成 !D! 点伤害。 NL 每次 滴答次数加 1 。 NL guardianmod:挥发 。"
+    "NAME": "炮塔射线",
+    "DESCRIPTION": "将这张牌 guardianmod:凝滞 。 NL  guardianmod:滴答 -对随机敌人造成 !D! 点伤害。 NL guardianmod:挥发 。"
   },
   "Guardian:ShieldCharger": {
     "NAME": "护盾充能",
@@ -425,7 +437,7 @@
   },
     "Guardian:Aged": {
     "NAME": "岁月",
-    "DESCRIPTION": "不能被打出 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
+    "DESCRIPTION": "不能被打出 。 虚无 。 NL 你的回合结束时，将一张 *虚空 加入你的抽牌堆顶部。"
   },
   "Guardian:GemstoneGunCard": {
     "NAME": "宝石枪",

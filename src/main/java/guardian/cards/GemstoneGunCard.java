@@ -40,7 +40,7 @@ public class GemstoneGunCard extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-        this.retain = true;
+        this.selfRetain = true;
         this.exhaust = true;
     }
 

@@ -17,7 +17,6 @@ public class CBR_Akabeko extends AbstractCharbossRelic {
 
     public CBR_Akabeko() {
         super(new Akabeko());
-        this.tier = RelicTier.UNCOMMON;
     }
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0] + 8 + this.DESCRIPTIONS[1];

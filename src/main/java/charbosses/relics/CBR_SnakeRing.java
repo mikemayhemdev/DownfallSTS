@@ -1,6 +1,5 @@
 package charbosses.relics;
 
-import charbosses.actions.common.EnemyDrawCardAction;
 import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -21,7 +20,7 @@ public class CBR_SnakeRing extends AbstractCharbossRelic {
     @Override
     public void atBattleStart() {
         this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
-        this.addToBot(new EnemyDrawCardAction(AbstractCharBoss.boss, 2));
+        //this.addToBot(new EnemyDrawCardAction(AbstractCharBoss.boss, 2));
     }
 
     @Override

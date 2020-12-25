@@ -37,7 +37,8 @@
  },
  "Slimebound:Overexert": {
   "NAME": "超负荷",
-  "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 回合后， slimeboundmod:吸收 所有史莱姆。"
+  "DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL !M! 回合后， slimeboundmod:吸收 所有史莱姆。",
+  "UPGRADE_DESCRIPTION": "获得 4 点 slimeboundmod:潜力 。 NL slimeboundmod:命令 两次。 NL !M! 回合后， slimeboundmod:吸收 所有史莱姆。"
  },
  "Slimebound:Split": {
   "NAME": "分裂",
@@ -311,7 +312,7 @@
  },
  "Slimebound:Icky": {
   "NAME": "黏液缠身",
-  "DESCRIPTION": "向手牌和抽牌堆各加入1张 *粘液 。 NL 消耗 。"
+  "DESCRIPTION": "将1张 *黏液 加入手牌。 NL 消耗 。"
  },
  "Slimebound:DivideAndConquerConquer": {
   "NAME": "统治",
@@ -366,8 +367,8 @@
  },
  "Slimebound:MinionMaster": {
   "NAME": "从者大师",
-  "DESCRIPTION": "每当你 slimeboundmod:命令 时，变为 slimeboundmod:命令 两次。",
-  "UPGRADE_DESCRIPTION": "固有 。每当你 slimeboundmod:命令 时，变为 slimeboundmod:命令 两次。"
+  "DESCRIPTION": "每当你打出 slimeboundmod:命令 牌时，再 slimeboundmod:命令 一次。",
+  "UPGRADE_DESCRIPTION": "固有 。每当你打出 slimeboundmod:命令 牌时，再 slimeboundmod:命令 一次。"
  },
   "Slimebound:BestDefense": {
    "NAME": "鲁莽",
@@ -375,7 +376,7 @@
   },
    "Slimebound:Darklings": {
    "NAME": "黑色三人组",
-   "DESCRIPTION": " slimeboundmod:分裂 slimeboundmod:小黑史莱姆 三次。 NL 消耗 。"
+   "DESCRIPTION": " slimeboundmod:分裂 slimeboundmod:小黑史莱姆 !M! 次。 NL 消耗 。"
   },
    "Slimebound:SlimeSlap": {
     "NAME": "黏液斩击",
@@ -387,7 +388,8 @@
   },
    "Slimebound:ForwardTackle": {
    "NAME": "进军冲撞",
-   "DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 两次。"
+   "DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 两次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。并对自身造成 !SlimeboundSelfharm! 点伤害。 NL slimeboundmod:命令 三次。"
   },
     "Slimebound:TagTeam": {
     "NAME": "搭档",

@@ -51,6 +51,7 @@ public class SplitLeeching extends AbstractSlimeboundCard {
             addToBot(new CommandAction());
         }
 
+        checkMinionMaster();
 
     }
 

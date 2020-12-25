@@ -3,7 +3,7 @@
     "NAME": "精神烙印",
     "FLAVOR": "对约束的一道保护。",
     "DESCRIPTIONS": [
-      "每当你 #yhexamod:点燃 鬼火时，获得 #b2 点 #y格挡 。"
+      "每回合第一次 #y点燃 时，获得 #b6 点 #y格挡 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
@@ -18,7 +18,7 @@
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 #r",
-      " 。[]  NL 每回合第一次 #y点燃 时，获得 [E] 和 #b6 点 #y格挡 。"
+      " 。[]  NL 每回合第一次 #y点燃 时，获得 [E] 和 #b3 点 #y格挡 。"
     ]
   },
   "hexamod:IceCube": {
@@ -32,7 +32,7 @@
     "NAME": "保暖石",
     "FLAVOR": "一点火苗就能激活这东西了！",
     "DESCRIPTIONS": [
-      "每当你杀死带有 #yhexamod:灼魂 的敌人，回复 #b2 点生命。"
+      "如果本场战斗引爆过 #yhexamod:灼魂 ，战斗结束时回复 #b2 点生命。"
     ]
   },
   "hexamod:RecyclingMachine": {

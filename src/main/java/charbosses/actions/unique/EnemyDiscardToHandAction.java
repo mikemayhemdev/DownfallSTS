@@ -20,7 +20,7 @@ public class EnemyDiscardToHandAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {// 19
-            if (p.discardPile.contains(this.card) && p.hand.size() < 10) {// 20 21
+            if (p.hand.size() < 10) {// 20 21
                 p.hand.addToHand(this.card);// 22
                 this.card.unhover();// 23
                 this.card.setAngle(0.0F, true);// 24
@@ -28,7 +28,7 @@ public class EnemyDiscardToHandAction extends AbstractGameAction {
                 this.card.drawScale = 0.12F;// 26
                 this.card.targetDrawScale = 0.75F;// 27
                 this.card.applyPowers();// 28
-                p.discardPile.removeCard(this.card);// 29
+                //p.discardPile.removeCard(this.card);// 29
             }
 
             p.hand.refreshHandLayout();// 32

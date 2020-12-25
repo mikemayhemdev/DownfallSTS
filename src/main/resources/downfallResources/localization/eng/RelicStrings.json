@@ -3,8 +3,15 @@
     "NAME": "Neow's Blessing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b60 at the start of each Act. NL Draw #b2 less cards and lose ",
+      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose all your Potion slots,draw #b2 less cards and lose ",
       " at the start of your turn."
+    ]
+  },
+  "downfall:NeowBlessing_Player": {
+    "NAME": "Neow's Blessing",
+    "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
+    "DESCRIPTIONS": [
+      "Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose all your Potion slots and cant obtain,draw #b1 less cards and lose [E] at the start of your turn."
     ]
   },
   "downfall:CoffeeDripper": {
@@ -135,8 +142,7 @@
     "NAME": "Event: Designer-In-Spire",
     "FLAVOR": "This will not do, no no. What is this style? Disgusting! Are you bleeeeding? Groooss.",
     "DESCRIPTIONS": [
-      "A card was removed from the deck, and another",
-      " was upgraded."
+      "A card was removed from the deck, and another was upgraded."
     ]
   },
   "downfall:DivineFountain": {
@@ -438,21 +444,21 @@
     "NAME": "Ruby Heart Blessing",
     "FLAVOR": "The heart is strong. The heart is pleased.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yStrength. NL At the start of combat with the Beyond's boss, gain a special card."
+      "Start each combat with #b1 #yStrength. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card."
+      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "Emerald Heart Blessing",
     "FLAVOR": "The heart is everything.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yDexterity. NL At the start of combat with the Beyond's boss, gain a special card."
+      "Start each combat with #b1 #yDexterity. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
     ]
   },
   "downfall:TeleportStone": {
@@ -468,8 +474,15 @@
     "NAME": "The Heart's Malice",
     "FLAVOR": "The malice of corruption bestowed by the Heart.",
     "DESCRIPTIONS": [
-      "Enemies in your first #b2 combats will flee in terror.",
+      "Enemies in your first #b3 combats will flee in terror.",
       "This relic has been used up."
+    ]
+  },
+  "downfall:Hecktoplasm": {
+    "NAME": "Hecktoplasm",
+    "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
+    "DESCRIPTIONS": [
+      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
     ]
   },
   "downfall:replacements": {

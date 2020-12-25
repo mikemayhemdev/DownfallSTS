@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 
@@ -20,6 +21,7 @@ public class ApocalypseNow extends AbstractHexaCard {
         isEthereal = true;
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

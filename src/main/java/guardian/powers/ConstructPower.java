@@ -42,7 +42,7 @@ public class ConstructPower extends AbstractGuardianPower {
         super.atStartOfTurn();
         if (!this.owner.hasPower(ArtifactPower.POWER_ID)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, this.amount), this.amount));
-            AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.amount));
+         //   AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(this.amount));
         }
     }
 }

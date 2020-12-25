@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -23,6 +24,8 @@ public class EmpoweringStance extends AbstractHexaCard {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -31,7 +34,7 @@ public class EmpoweringStance extends AbstractHexaCard {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
-                HexaMod.renderFlames = true;
+              //  HexaMod.renderFlames = true;
                 isDone = true;
                 AbstractGhostflame gf = new BolsteringGhostflame(GhostflameHelper.activeGhostFlame.lx, GhostflameHelper.activeGhostFlame.ly);
                 GhostflameHelper.hexaGhostFlames.set(GhostflameHelper.hexaGhostFlames.indexOf(GhostflameHelper.activeGhostFlame), gf);

@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.ghostflames.SearingGhostflame;
@@ -20,24 +21,22 @@ public class StepThrough extends AbstractHexaCard {
     public StepThrough() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        tags.add(HexaMod.GHOSTWHEELCARD);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.POISON);
-        if (GhostflameHelper.activeGhostFlame.charged) {
-            atb(new AdvanceAction(false));
-        } else {
-            if (GhostflameHelper.activeGhostFlame instanceof SearingGhostflame){
-                SearingGhostflame gf = (SearingGhostflame) GhostflameHelper.activeGhostFlame;
-                if (gf.attacksPlayedThisTurn == 1){
-                    atb(new AdvanceAction(false));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (GhostflameHelper.activeGhostFlame.charged) {
+                    att(new AdvanceAction(false));
                 } else {
-                    atb(new ChargeCurrentFlameAction());
+                    att(new ChargeCurrentFlameAction());
                 }
-            } else {
-                atb(new ChargeCurrentFlameAction());
             }
-        }
+        });
     }
 
     public void upgrade() {

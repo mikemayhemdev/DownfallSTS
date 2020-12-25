@@ -76,10 +76,10 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
         cardsToRemove = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(BaseModCardTags.BASIC_STRIKE)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
                 cardsToRemove.add(c);
             }
-            if (c.hasTag(BaseModCardTags.BASIC_DEFEND)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                 cardsToRemove.add(c);
             }
         }
@@ -175,7 +175,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                 }
 
                 c = (AbstractCard) var1.next();
-            } while (!(c instanceof Strike_Red) && !(c instanceof Defend_Red) && !(c instanceof Strike_Green) && !(c instanceof Defend_Green) && !(c instanceof Strike_Blue) && !(c instanceof Defend_Blue) && !(c instanceof Strike) && !(c instanceof Defend));
+            } while (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
 
             if (c.canUpgrade()) {
                 c.upgrade();

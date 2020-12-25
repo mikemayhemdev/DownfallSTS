@@ -1,0 +1,202 @@
+[
+  {
+    "NAMES": [
+      "absorb",
+      "absorbing",
+      "absorbed"
+    ],
+    "PROPER_NAME": "Absorb",
+    "DESCRIPTION": "Manually recombine with your leading #ySlime, returning the Max HP it took upon #ySplitting and gaining 1 #yStrength."
+  },
+  {
+    "NAMES": [
+      "split",
+      "splitting"
+    ],
+    "PROPER_NAME": "Split",
+    "DESCRIPTION": "Lose #b4 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b4. NL NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
+  },
+  {
+    "NAMES": [
+      "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "Goop",
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+  },
+  {
+    "NAMES": [
+      "potency"
+    ],
+    "PROPER_NAME": "Potency",
+    "DESCRIPTION": "Increases the damage of ALL of your Spawned Slimes."
+  },
+  {
+    "NAMES": [
+      "command",
+      "commands"
+    ],
+    "PROPER_NAME": "Command",
+    "DESCRIPTION": "Your leading Slime attacks."
+  },
+  {
+    "NAMES": [
+      "torchhead slime",
+      "torchhead_slime"
+    ],
+    "PROPER_NAME": "Torch Head Slime",
+    "DESCRIPTION": "Attacks for #b6 each turn. Gains twice the normal benefit from #yPotency."
+  },
+  {
+    "NAMES": [
+      "bruiser slime",
+      "bruiser_slime",
+      "bruiser slimes",
+      "bruiser_slimes",
+      "bruiser"
+    ],
+    "PROPER_NAME": "Bruiser Slime",
+    "DESCRIPTION": "Attacks for #b5 each turn."
+  },
+  {
+    "NAMES": [
+      "cultist slime",
+      "cultist_slime"
+    ],
+    "PROPER_NAME": "Cultist Slime",
+    "DESCRIPTION": "Attacks for #b6 each turn, then increases its damage by #b1."
+  },
+  {
+    "NAMES": [
+      "leeching slime",
+      "leeching_slime",
+      "leeching slimes",
+      "leeching_slimes",
+      "leeching"
+    ],
+    "PROPER_NAME": "Leeching Slime",
+    "DESCRIPTION": "Attacks for #b2 and grants you #b2 #yBlock each turn."
+  },
+  {
+    "NAMES": [
+      "guerilla slime",
+      "guerilla_slime",
+      "guerilla slimes",
+      "guerilla_slimes",
+      "guerilla"
+    ],
+    "PROPER_NAME": "Guerilla Slime",
+    "DESCRIPTION": "Attacks for #b3 to ALL enemies each turn."
+  },
+  {
+    "NAMES": [
+      "mire slime",
+      "mire_slime",
+      "mire slimes",
+      "mire_slimes",
+      "mire"
+    ],
+    "PROPER_NAME": "Mire Slime",
+    "DESCRIPTION": "Attacks for #b2 and applies #b2 #yGoop each turn."
+  },
+  {
+    "NAMES": [
+      "bronze slime",
+      "bronze_slime"
+    ],
+    "PROPER_NAME": "Bronze Slime",
+    "DESCRIPTION": "Attacks for #b4 and grants you #b4 #yBlock each turn."
+  },
+  {
+    "NAMES": [
+      "lick"
+    ],
+    "PROPER_NAME": "Lick",
+    "DESCRIPTION": "0-cost cards that apply #yGoop with a variety of secondary effects."
+  },
+  {
+    "NAMES": [
+      "ghostflame slime",
+      "ghostflame_slime"
+    ],
+    "PROPER_NAME": "Ghostflame Slime",
+    "DESCRIPTION": "Attacks for #b3 and applies #b3 #yBurn each turn."
+  },
+  {
+    "NAMES": [
+      "morph"
+    ],
+    "PROPER_NAME": "Morph",
+    "DESCRIPTION": "Replace with a random new card of your class, regardless of type. It costs #b1 less."
+  },
+  {
+    "NAMES": [
+      "slow"
+    ],
+    "PROPER_NAME": "Slow",
+    "DESCRIPTION": "Receives #b10% more damage per card played in a turn."
+  },
+  {
+    "NAMES": [
+      "tackle",
+      "tackles"
+    ],
+    "PROPER_NAME": "Tackle",
+    "DESCRIPTION": "High-damage #yAttacks that also deal a small amount of damage to you."
+  },
+  {
+    "NAMES": [
+      "spire boss",
+      "spire_boss"
+    ],
+    "PROPER_NAME": "Spire Boss",
+    "DESCRIPTION": "Powerful 0-cost cards, inspired by the bosses of the Spire."
+  },
+  {
+    "NAMES": [
+      "protector slime",
+      "protector_slime"
+    ],
+    "PROPER_NAME": "Protector Slime",
+    "DESCRIPTION": "Attacks for #b2 and grants you #b6 #yBlock each turn."
+  },
+  {
+    "NAMES": [
+      "insulting slime",
+      "insulting_slime"
+    ],
+    "PROPER_NAME": "Insulting Slime",
+    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yVulnerable each turn."
+  },
+  {
+    "NAMES": [
+      "darkling slime",
+      "darkling_slime"
+    ],
+    "PROPER_NAME": "Darkling Slime",
+    "DESCRIPTION": "Attacks for #b3 each turn. When Commanded, other Darkling Slimes also attack."
+  },
+  {
+    "NAMES": [
+      "ancient slime",
+      "ancient_slime"
+    ],
+    "PROPER_NAME": "Ancient Slime",
+    "DESCRIPTION": "Attacks for #b3 and causes you to draw #b1 card each turn."
+  },
+  {
+    "NAMES": [
+      "time slime",
+      "time_slime"
+    ],
+    "PROPER_NAME": "Time Slime",
+    "DESCRIPTION": "Attacks for #b4 and applies #b1 #yWeak each turn."
+  },
+  {
+    "NAMES": [
+      "consume"
+    ],
+    "PROPER_NAME": "Consume",
+    "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop."
+  }
+]

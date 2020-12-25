@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.GemFireAction;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 
 public class GemFire extends AbstractGuardianCard {
@@ -22,7 +23,7 @@ public class GemFire extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 0;
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_BONUS = 5;
@@ -44,12 +45,14 @@ public class GemFire extends AbstractGuardianCard {
     public GemFire() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
 
+        this.exhaust = true;
         this.baseDamage = DAMAGE;
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
-
+        this.selfRetain = true;
         //this.sockets.add(GuardianMod.socketTypes.RED);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -65,7 +68,11 @@ public class GemFire extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+          //  upgradeDamage(UPGRADE_BONUS);
+            selfRetain = true;
+          //  exhaust = false;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
 
 

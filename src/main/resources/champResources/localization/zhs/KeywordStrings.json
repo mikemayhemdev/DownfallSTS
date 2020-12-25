@@ -1,0 +1,86 @@
+[
+  {
+    "PROPER_NAME": "战术",
+    "NAMES": [
+      "战术",
+	  "champ:[crown_icon]",
+      "[crown_icon]"
+    ],
+    "DESCRIPTION": "如果你处于某个 #y姿态 ，触发该 #y姿态 的 #y战术奖励 。"
+  },
+    {
+    "PROPER_NAME": "起手式",
+    "NAMES": [
+      "起手式",
+	  "起手"
+    ],
+    "DESCRIPTION": "切换 #y姿态 。"
+  },
+  {
+    "PROPER_NAME": "连段",
+    "NAMES": [
+      "连段",
+      "combo"
+    ],
+    "DESCRIPTION": "处于特定 #y姿态 时打出后获得额外效果。"
+  },
+  {
+    "PROPER_NAME": "终结技",
+    "NAMES": [
+      "终结技",
+	  "[fist_icon]",
+      "champ:[fist_icon]"
+    ],
+    "DESCRIPTION": "打出终结技后如果处于 #y姿态 ，退出姿态并触发 #y终结技奖励 。 #r结束你的回合 。"
+  },
+  {
+    "PROPER_NAME": "反击",
+    "NAMES": [
+      "反击"
+    ],
+    "DESCRIPTION": "下次你受到 #y攻击 伤害时，对攻击者造成层数的伤害并移除。"
+  },
+  {
+    "PROPER_NAME": "决心",
+    "NAMES": [
+      "决心",
+      "fatigue"
+    ],
+    "DESCRIPTION": "每有 #b5 层 #y决心 拥有 #b1 点 #y力量 。战斗结束时，回复 #y决心 层数等量的生命。"
+  },
+  {
+    "PROPER_NAME": "防守",
+    "NAMES": [
+      "防守"
+    ],
+    "DESCRIPTION": "#y姿态 ： NL #y战术 -获得 #b6 层 #y反击 。 NL #y终结技 -获得 #b12 点 #y格挡 。"
+  },
+  {
+    "PROPER_NAME": "狂战",
+    "NAMES": [
+      "狂战"
+    ],
+    "DESCRIPTION": "#y姿态 ： NL #y战术 - #y疲劳 #b3 。 NL #y终结技 -失去所有 #y决心 并回复等量生命（保留 #y力量 ）。"
+  },
+  {
+    "PROPER_NAME": "角斗",
+    "NAMES": [
+      "角斗"
+    ],
+    "DESCRIPTION": "#y姿态 ： #y战术 -抽 #b1 张牌。 NL #y终结技 -下回合抽 #b1 张牌并获得 [E] 。"
+  },
+  {
+    "PROPER_NAME": "终极姿态",
+    "NAMES": [
+      "终极"
+    ],
+    "DESCRIPTION": "#y姿态 。视为同时拥有 #r狂战 、 #b防守 和 #y角斗 。不能切换 #y姿态 。 #y终结技 将不会结束回合并退出姿态。"
+  },
+  {
+    "PROPER_NAME": "疲劳",
+    "NAMES": [
+      "疲劳"
+    ],
+    "DESCRIPTION": "失去生命并获得等量的 #y决心 。"
+  }
+]

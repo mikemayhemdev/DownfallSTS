@@ -64,9 +64,6 @@ public class HeartShopRoom extends ShopRoom {
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMBAT;
         AbstractDungeon.lastCombatMetricKey = FleeingMerchant.ID;
         AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new FleeingMerchant());
-
-        AbstractDungeon.getCurrRoom().rewards.clear();
-
         AbstractDungeon.getCurrRoom().monsters.init();
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             m.usePreBattleAction();

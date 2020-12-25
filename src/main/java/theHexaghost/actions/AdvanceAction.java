@@ -13,8 +13,8 @@ public class AdvanceAction extends AbstractGameAction {
 
     public void update() {
         isDone = true;
-        if (!HexaMod.renderFlames)
-            HexaMod.renderFlames = true;
+        //if (!HexaMod.renderFlames)
+       //     HexaMod.renderFlames = true;
         GhostflameHelper.advance(b);
     }
 }

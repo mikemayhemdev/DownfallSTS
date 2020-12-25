@@ -13,9 +13,11 @@ import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 import java.util.Iterator;
 
+import static guardian.GuardianMod.makeBetaCardPath;
 import static guardian.GuardianMod.socketTypes.PURPLE;
 
 
@@ -52,6 +54,8 @@ public class Gem_Purple extends AbstractGuardianCard {
 
         this.tags.add(GuardianMod.GEM);
         this.thisGemsType = PURPLE;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Amethyst.png"));
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {

@@ -2,7 +2,9 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
 import theHexaghost.actions.ExtinguishAction;
 
@@ -14,6 +16,8 @@ public class CatchUp extends AbstractHexaCard {
 
     public CatchUp() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -61,7 +61,7 @@ public class Suspension extends AbstractGuardianCard {
             upgradeName();
             this.rawDescription = UPGRADED_DESCRIPTION;
 
-            this.initializeDescription();
+            this.updateDescription();
         }
     }
 

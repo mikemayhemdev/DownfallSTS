@@ -10,6 +10,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,11 +18,15 @@ import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.screens.runHistory.RunHistoryPath;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.relics.HeartBlessingBlue;
+import downfall.relics.HeartBlessingGreen;
+import downfall.relics.HeartBlessingRed;
 import downfall.vfx.NeowBossRezEffect;
 import slimebound.SlimeboundMod;
 
@@ -66,17 +71,16 @@ public class NeowRezAction extends AbstractGameAction {
                     break;
                 }
             }
-            owner.Rezzes++;
         }
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration <= 1.5F && !rezInit) {
             this.rezInit = true;
             String name;
             if (owner.bossesToRez.size() == 0) {
-                name = "downfall:CharBossIronclad";
+                name = "downfall:Ironclad";
                 SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
             } else {
-                Collections.shuffle(owner.bossesToRez);
+                //Collections.shuffle(owner.bossesToRez);
                 name = owner.bossesToRez.get(0);
                 owner.bossesToRez.remove(0);
             }
@@ -105,8 +109,14 @@ public class NeowRezAction extends AbstractGameAction {
 
             this.addToTop(new ApplyPowerAction(cB, cB, new MinionPower(cB)));
         }
+
+
         if (this.duration <= 0F) {
             cB.init();
+            NeowBoss.Rezzes++;
+            if (NeowBoss.Rezzes == 4 && (AbstractDungeon.player.hasRelic(HeartBlessingBlue.ID) || AbstractDungeon.player.hasRelic(HeartBlessingGreen.ID) || AbstractDungeon.player.hasRelic(HeartBlessingRed.ID))) {
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
+            }
             cB.showHealthBar();
 
             rezVFX.end();
@@ -115,28 +125,16 @@ public class NeowRezAction extends AbstractGameAction {
     }
 
     public void rezBoss(String name) {
-        //Separated here for patching in case of modded characters being made into bosses
-        switch (name) {
-            case "downfall:CharBossIronclad": {
-                cB = new CharBossIronclad();
-                break;
-            }
-            case "downfall:CharBossSilent": {
-                cB = new CharBossSilent();
-                break;
-            }
-            case "downfall:CharBossDefect": {
-                cB = new CharBossDefect();
-                break;
-            }
-            case "downfall:CharBossWatcher": {
-                cB = new CharBossWatcher();
-                break;
-            }
-            default: {
-                cB = new CharBossIronclad();
-                break;
-            }
+        if (name.equals(CharBossIronclad.ID)) {
+            cB = new CharBossIronclad();
+        } else if (name.equals(CharBossSilent.ID)) {
+            cB = new CharBossSilent();
+        } else if (name.equals(CharBossDefect.ID)) {
+            cB = new CharBossDefect();
+        } else if (name.equals(CharBossWatcher.ID)) {
+            cB = new CharBossWatcher();
+        } else {
+            cB = new CharBossIronclad();
         }
     }
 }

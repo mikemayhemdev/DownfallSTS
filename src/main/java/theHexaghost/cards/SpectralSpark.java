@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.actions.ExtinguishCurrentFlameAction;
-import theHexaghost.patches.NoDiscardField;
+import downfall.patches.NoDiscardField;
 
 public class SpectralSpark extends AbstractHexaCard {
 
@@ -24,16 +24,22 @@ public class SpectralSpark extends AbstractHexaCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         burn(m, burn);
         AbstractCard c = this;
-        if (GhostflameHelper.activeGhostFlame.charged) {
-            addToTop(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    NoDiscardField.noDiscard.set(c, true);
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (GhostflameHelper.activeGhostFlame.charged) {
+                    addToTop(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            NoDiscardField.noDiscard.set(c, true);
+                        }
+                    });
+                    addToTop(new ExtinguishCurrentFlameAction());
                 }
-            });
-            addToTop(new ExtinguishCurrentFlameAction());
-        }
+            }
+        });
     }
 
     public void triggerOnGlowCheck() {

@@ -16,7 +16,7 @@ public class Flail extends AbstractExpansionCard {
     public final static String ID = makeID("Flail");
 
     private static final int DAMAGE = 6;
-    private static final int UPGRADE_DAMAGE = 2;
+    private static final int UPGRADE_DAMAGE = 1;
 
 
     public Flail() {
@@ -28,6 +28,7 @@ public class Flail extends AbstractExpansionCard {
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;
+        this.baseMagicNumber = this.magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -43,7 +44,7 @@ public class Flail extends AbstractExpansionCard {
 
 
         }
-        atb(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
+        atb(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
 
 
     }
@@ -52,6 +53,7 @@ public class Flail extends AbstractExpansionCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE);
+            upgradeMagicNumber(1);
         }
     }
 

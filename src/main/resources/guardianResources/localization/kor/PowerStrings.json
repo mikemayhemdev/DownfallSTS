@@ -1,0 +1,210 @@
+{
+  "Guardian:NextTurnGainStrengthPower": {
+    "NAME": "충전 중",
+    "DESCRIPTIONS": [
+      "다음 턴 시작시 #y힘 #b ",
+      " 얻습니다."
+    ]
+  },
+  "Guardian:StunnedPower": {
+    "NAME": "기절",
+    "DESCRIPTIONS": [
+      "다음 턴을 넘깁니다.",
+      "다음 #b",
+      " 턴을 넘깁니다."
+    ]
+  },
+  "Guardian:FloatingOrbsPower": {
+    "NAME": "떠다니는 구체들",
+    "DESCRIPTIONS": [
+      "턴 시작시 #y구체 #y내려찍기 1 장을 손으로 가져옵니다.",
+      "턴 시작시 #y구체 #y내려찍기 #b",
+      " 장을 손으로 가져옵니다."
+    ]
+  },
+  "Guardian:OrbwalkPower": {
+    "NAME": "방랑 구체",
+    "DESCRIPTIONS": [
+      "매턴 시작시 힘을 #b",
+      " 얻습니다."
+    ]
+  },
+  "Guardian:ClonePower": {
+    "NAME": "재배열",
+    "DESCRIPTIONS": [
+      "소멸하지 않는 다음 공격 및 스킬 카드 1 장 사용시 정지장에 넣습니다.",
+      "소멸하지 않는 다음 공격 및 스킬 카드 #b",
+      " 장 사용시 정지장에 넣습니다."
+    ]
+  },
+  "Guardian:GemFinderPower": {
+    "NAME": "보석 재취",
+    "DESCRIPTIONS": [
+      "전투 종료시 덱에 넣을 일반 #y보석 카드를 1 장 선택합니다.",
+      "전투 종료시 덱에 넣을 일반 #y보석 카드를 #b",
+      " 장 선택합니다."
+    ]
+  },
+  "Guardian:FuturePlansPower": {
+    "NAME": "미래 계획",
+    "DESCRIPTIONS": [
+      "턴 종료시 카드 #b",
+      " 장을 정지장에 넣습니다.",
+      " 장을 정지장에 넣습니다."
+    ]
+  },
+  "Guardian:DefenseModePower": {
+    "NAME": "수비모드",
+    "DESCRIPTIONS": [
+      "수비모드의 지속시간은 #b",
+      " 턴 남았습니다. NL 방어 모드가 활성화 되면 가시를 #b",
+      " 얻고 주는 피해량이 25% 감소합니다. 카드를 낼 때마다 방어도 #b2 얻습니다."
+    ]
+  },
+  "Guardian:ConstructModePower": {
+    "NAME": "재구성 모드",
+    "DESCRIPTIONS": [
+      "이번 턴 동안 체력을 잃거나 #y공격카드 를 낼 수 없습니다.",
+      "다음 #b",
+      " 턴 동안 체력을 잃거나 #y공격카드 를 낼 수 없습니다."
+    ]
+  },
+  "Guardian:MultiBoostPower": {
+    "NAME": "다중가속",
+    "DESCRIPTIONS": [
+      "여러번 공격하는 카드를 사용했을 때 추가로 1 번 더 공격합니다.",
+      "여러번 공격하는 카드를 사용했을 때 추가로 #b",
+      " 번 더 공격합니다."
+    ]
+  },
+  "Guardian:TargetedPower": {
+    "NAME": "목표설정",
+    "DESCRIPTIONS": [
+      "이 적이 피해를 입을 때마다 이번 턴에만 #y힘 #b",
+      " 얻습니다."
+    ]
+  },
+  "Guardian:LoseThornsPower": {
+    "NAME": "가시 제거",
+    "DESCRIPTIONS": [
+      "다음 턴 시작시 가시를 #b",
+      " 잃습니다."
+    ]
+  },
+  "Guardian:BeamBuffPower": {
+    "NAME": "조준됨",
+    "DESCRIPTIONS": [
+      "광선 카드의 피해량이 #b",
+      " 증가합니다."
+    ]
+  },
+  "Guardian:DefensiveModeBuffsPower": {
+    "NAME": "수비모드+",
+    "DESCRIPTIONS": [
+      "일반 수비모드에 추가로 다음 효과를 얻습니다: NL #b",
+      " #y가시.",
+      " #y민첩.",
+      " #y금속화.",
+      "매 턴 가장 먼저 뽑은 #y상태이상 혹은 저#y주 카드 1 장 소멸",
+      "매 턴 가장 먼저 뽑은 #y상태이상 혹은 #y저주 카드 #b",
+      " 장 소멸 ",
+      "#y방어도 를 모두 잃으면 턴 시작시 임시 힘 #b",
+      " 증가."
+    ]
+  },
+  "Guardian:AutomayhemPower": {
+    "NAME": "시간 분리기",
+    "DESCRIPTIONS": [
+      "턴이 끝날 때마다, #y가속 합니다.",
+      "턴이 끝날 때마다, ",
+      " 번 #y가속 합니다."
+    ]
+  },
+  "Guardian:ConstructPower": {
+    "NAME": "고대의 구조물",
+    "DESCRIPTIONS": [
+      "턴 시작시 인공물이 없다면 인공물을 #b",
+      " 얻고 [E] 를 #b",
+      " 잃습니다."
+    ]
+  },
+  "Guardian:ModeShiftPower": {
+    "NAME": "모드 전환",
+    "DESCRIPTIONS": [
+      "체력을 #b",
+      " 잃을 때마다 #y방어도 #b10 얻고 수비모드 를 1턴간 얻습니다. NL 모드 전환이 사용될 때 마다 #y모드 #y전환 에 필요한 요구 체력량이 증가합니다.",
+      "이번 턴에 모드 전환을 이미 사용했습니다."
+    ]
+  },
+  "Guardian:ExhaustStatusesPower": {
+    "NAME": "국지 방어",
+    "DESCRIPTIONS": [
+      "매턴 먼저 뽑은 상태이상 혹은 저주 카드를 1장 까지 소멸 시킵니다.",
+      "매턴 먼저 뽑은 상태이상 혹은 저주 카드를 #b",
+      " 장까지 소멸시킵니다."
+    ]
+  },
+  "Guardian:RevengePower": {
+    "NAME": "복수",
+    "DESCRIPTIONS": [
+      "#y수비모드 가 사라지면, 수비모드가 활성화 되었던 턴만큼 #y힘 ",
+      " 얻습니다. NL 현재 #y힘 ",
+      " 얻을 수 있습니다."
+    ]
+  },
+  "Guardian:StasisEnginePower": {
+    "NAME": "정지장 엔진",
+    "DESCRIPTIONS": [
+      "한 턴에 비용이 0인 카드를 3장 사용할 때 마다 [E]를 #b",
+      " 얻고 카드 #b",
+      " 장을 뽑습니다. ",
+      " 장을 뽑습니다. ",
+      " "
+    ]
+  },
+  "Guardian:EnergizedGuardianPower": {
+    "NAME": "충전",
+    "DESCRIPTIONS": [
+      "다음 턴 시작시 추가 [E] 를 #b",
+      " 얻습니다.",
+      " 얻습니다.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "Guardian:BlockOnCardUsePower": {
+    "NAME": "병기공의 기름",
+    "DESCRIPTIONS": [
+      "이번 턴에 카드를 사용할 떄마다 #y방어도 #b",
+      "  얻습니다."
+    ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "회피 프로토콜",
+    "DESCRIPTIONS": [
+      "#y민첩 #b",
+      " 엉습니다."
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "고슴도치 프로토콜",
+    "DESCRIPTIONS": [
+      "#y수비모드 동안 #y가시 #b",
+      " 얻습니다."
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "Armored Protocol",
+    "DESCRIPTIONS": [
+      "#y수비모드 동안 턴이 끝날 때마다 #y방어도 #b",
+      " 얻습니다."
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "견고함",
+    "DESCRIPTIONS": [
+      "다음 턴 시작시, #y수비 #y모드를 해제할 수 없습니다.",
+      "다음 #b",
+      " 턴 동안, #y수비 #y모드를 해제할 수 없습니다."
+    ]
+  }
+}

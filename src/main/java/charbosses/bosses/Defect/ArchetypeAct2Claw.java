@@ -1,13 +1,27 @@
 package charbosses.bosses.Defect;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
+import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
+import charbosses.cards.colorless.EnSwiftStrike;
+import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnPain;
+import charbosses.cards.curses.EnShame;
 import charbosses.relics.*;
 import charbosses.relics.EventRelics.CBR_Bandits;
 import charbosses.relics.EventRelics.CBR_OminousForge;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.curses.Clumsy;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
 
 public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
+
+    private EnClaw c;
+    private CharBossDefect cB;
 
     public ArchetypeAct2Claw() {
         super("DF_ARCHETYPE_", "Strike");
@@ -39,55 +53,133 @@ public class ArchetypeAct2Claw extends ArchetypeBaseDefect {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_Kunai());
-        addRelic(new CBR_WarPaint());
-        addRelic(new CBR_OminousForge());
-        addRelic(new CBR_WarpedTongs());
-        addRelic(new CBR_Bandits());
         addRelic(new CBR_RedMask());
-        addRelic(new CBR_DollysMirror("Claw+"));
-
-
-
-        /////   CARDS   /////
-
-        //Turn 1
-        addToDeck(new EnBootSequence(), false);
-        addToDeck(new EnClaw(), true);
-        addToDeck(new EnStrikeBlue(), false);
-
-        //Turn 2
-        addToDeck(new EnLeap(), false);
-        addToDeck(new EnPain(), false);
-        addToDeck(new EnZap(), true);
-
-        //Turn 3
-        addToDeck(new EnRebound(), false);
-        addToDeck(new EnClaw(), false);
-        addToDeck(new EnDefendBlue(), false);
-
-        //Turn 4
-        //Top Deck Claw
-        addToDeck(new EnStrikeBlue(), true);
-        addToDeck(new EnDualcast(), false);
-
-        //Turn 5
-        addToDeck(new EnAutoShields(), true);
-        addToDeck(new EnClaw(), true);
-        addToDeck(new EnChargeBattery(), false);
-
-        //Turn 6
-        addToDeck(new EnEchoForm(), false);
-        addToDeck(new EnDefendBlue(), true);
-        addToDeck(new EnMachineLearning(), false);
-
-
-
 
 
     }
 
+
+    @Override
+    public ArrayList<AbstractCard> getThisTurnCards() {
+        if (cB == null){
+            cB = (CharBossDefect) AbstractCharBoss.boss;
+        }
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+        if (looped) {
+            switch (turn) {
+
+                case 0:
+                    c = new EnClaw();
+                    c.baseDamage += cB.clawsPlayed * 2;
+                    addToList(cardsList, c, true);
+                    c = new EnClaw();
+                    c.baseDamage += (cB.clawsPlayed + 1) * 2;
+                    addToList(cardsList, c, true);
+                    addToList(cardsList, new EnLeap(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    //Kunai Proc
+                    break;
+                case 1:
+                    addToList(cardsList, new EnChargeBattery(), false);
+                    AbstractCard r = new EnChargeBattery();
+                    r.freeToPlayOnce = true;
+                    addToList(cardsList, r, false);
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    addToList(cardsList, new EnStrikeBlue(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    //Kunai Proc
+                    break;
+                case 2:
+                    //Turn 3
+                    addToList(cardsList, new EnReprogram(), false);
+                    AbstractBossCard c2 = new EnRebound();
+                    c2.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c2, false);
+                    AbstractBossCard c3 = new EnSwiftStrike();
+                    c3.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c3, false);
+                    AbstractBossCard c4 = new EnStrikeBlue();
+                    c4.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c4, false);
+                    break;
+                case 3:
+                    //Turn 4
+                    c = new EnClaw();
+                    c.baseDamage += cB.clawsPlayed * 2;
+                    addToList(cardsList, c, extraUpgrades);
+                    c = new EnClaw();
+                    c.baseDamage += (cB.clawsPlayed + 1) * 2;
+                    addToList(cardsList, c, extraUpgrades);
+                    addToList(cardsList, new EnSwiftStrike(), false);
+                    addToList(cardsList, new EnDefendBlue(), true);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    //Kunai Proc
+                    break;
+            }
+        } else {
+            switch (turn) {
+                case 0:
+                    addToList(cardsList, new EnBootSequence(), false);  // removed
+                    c = new EnClaw();
+                    c.baseDamage += cB.clawsPlayed * 2;
+                    addToList(cardsList, c, extraUpgrades);
+                    addToList(cardsList, new EnMachineLearning(), extraUpgrades);  // removed
+                    break;
+                case 1:
+                    //Turn 2
+                    addToList(cardsList, new EnLeap(), extraUpgrades);
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    addToList(cardsList, new EnStrikeBlue(), true);
+                    addToList(cardsList, new EnClumsy(), false);  //removed
+                    break;
+                case 2:
+                    //Turn 3
+                    addToList(cardsList, new EnReprogram(), false);
+                    AbstractBossCard c5 = new EnSwiftStrike();
+                    c5.manualCustomDamageModifier = 1;
+                    addToList(cardsList, c5, false);
+                    AbstractBossCard c6 = new EnRebound();
+                    c6.manualCustomDamageModifier = 1;
+                    addToList(cardsList, c6, false);
+                    c = new EnClaw();
+                    c.baseDamage += cB.clawsPlayed * 2;
+                    c.manualCustomDamageModifier = 1;
+                    addToList(cardsList, c, extraUpgrades);
+                    //Kunai Proc
+                    break;
+                case 3:
+                    //Turn 4
+                    c = new EnClaw();
+                    c.baseDamage += cB.clawsPlayed * 2;
+                    addToList(cardsList, c, extraUpgrades);
+                    addToList(cardsList, new EnChargeBattery(), false);
+                    addToList(cardsList, new EnGeneticAlgorithm(), true);  //removed
+                    addToList(cardsList, new EnShame(), false);  //removed
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    break;
+                case 4:
+                    //Turn 5
+                    addToList(cardsList, new EnEchoForm(), true);  // removed
+                    addToList(cardsList, new EnStrikeBlue(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    addToList(cardsList, new EnDefendBlue(), false);
+                    break;
+            }
+        }
+        turn++;
+        if (turn > 4 && !looped) {
+            looped = true;
+            turn = 0;
+        } else if (turn > 3 && looped) {
+            turn = 0;
+        }
+        return cardsList;
+    }
+
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_IceCream());
+        addRelic(new CBR_Anchor());
     }
 }

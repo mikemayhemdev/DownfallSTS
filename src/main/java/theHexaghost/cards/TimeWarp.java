@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 
 public class TimeWarp extends AbstractHexaCard implements OnAdvanceOrRetractSubscriber {
@@ -18,6 +19,7 @@ public class TimeWarp extends AbstractHexaCard implements OnAdvanceOrRetractSubs
     public TimeWarp() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

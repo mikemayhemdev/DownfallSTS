@@ -2,6 +2,8 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.ApocalypticArmorPower;
 
 public class ApocalypticArmor extends AbstractHexaCard {
@@ -16,6 +18,8 @@ public class ApocalypticArmor extends AbstractHexaCard {
     public ApocalypticArmor() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

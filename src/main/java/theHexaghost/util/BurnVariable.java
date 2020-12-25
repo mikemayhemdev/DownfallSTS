@@ -9,7 +9,7 @@ public class BurnVariable extends DynamicVariable {
     @Override
     public String key() {
         return "burny";
-    } //TODO: Change this so your mod doesn't conflict!
+    }
 
     @Override
     public boolean isModified(AbstractCard card) {

@@ -17,13 +17,13 @@ public class EnemyGainEnergyAction extends AbstractGameAction {
         this.setValues(target, target, 0);
         this.duration = Settings.ACTION_DUR_FAST;
         this.energyGain = amount;
-        this.boss = boss;
+        this.boss = target;
     }
 
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (this.boss != null){
+            if (AbstractCharBoss.boss != null){
                 this.boss = AbstractCharBoss.boss;
 
             this.boss.gainEnergy(this.energyGain);

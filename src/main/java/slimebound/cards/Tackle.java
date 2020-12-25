@@ -38,7 +38,7 @@ public class Tackle extends AbstractSlimeboundCard {
 
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
-        this.baseDamage = 10;
+        this.baseDamage = 11;
         baseSelfDamage = this.selfDamage = 3;
     }
 

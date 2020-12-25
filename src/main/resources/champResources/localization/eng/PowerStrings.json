@@ -1,0 +1,193 @@
+{
+  "champ:CounterPower": {
+    "NAME": "Counter",
+    "DESCRIPTIONS": [
+      "The next time you receive #yAttack damage, deal #b",
+      " damage back."
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "Fatigue",
+    "DESCRIPTIONS": [
+      "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, restore your Fatigued HP."
+    ]
+  },
+  "champ:FocusedGladPower": {
+    "NAME": "Gladiator Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yGladiator, #yTechniques draw #b",
+      " additional card.",
+      " additional cards."
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "Defensive Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yDefensive, #yTechniques grant #b",
+      " additional #yCounter."
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "Berserker Boost!",
+    "DESCRIPTIONS": [
+      "Until you exit #yBerserker, #yTechniques #yFatigue #b",
+      " more."
+    ]
+  },
+  "champ:EnchantedShieldPower": {
+    "NAME": "Enchanted Shield",
+    "DESCRIPTIONS": [
+      "Prevent the next time you would lose HP this turn.",
+      "Prevent the next #b",
+      " times you would lose HP this turn."
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "Shield Wall",
+    "DESCRIPTIONS": [
+      "At the end of your turn, gain #b",
+      " #yCounter for each card in hand."
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "Sword Thrown",
+    "DESCRIPTIONS": [
+      "You can't play #yAttacks next turn.",
+      "You can't play #yAttacks for the next #b",
+      " turns."
+    ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "Crown Thrown",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less card next turn.",
+      " less cards next turn."
+    ]
+  },
+  "champ:PushThroughPower": {
+    "NAME": "Ignoring Pain",
+    "DESCRIPTIONS": [
+      "You cannot lose HP this turn.",
+      "You cannot lose HP this and the next #b",
+      " turns."
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "Endless Rage",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP on your turn, gain #b",
+      " temporary #yStrength."
+    ]
+  },
+  "champ:ImprovisingPower": {
+    "NAME": "Improvising",
+    "DESCRIPTIONS": [
+      "The first time each turn you use a #yCombo, return it to your hand and it costs #b0 until played. #b",
+      " uses left.",
+      "The first #b",
+      " times each turn you use a #yCombo, return it to your hand and it costs #b0 until played. #b"
+    ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "Called Shot",
+    "DESCRIPTIONS": [
+      "The next time you play a #yFinisher, do not leave your #yStance or end your turn.",
+      "The next #b",
+      " times you play a #yFinisher, do not leave your #yStance or end your turn."
+    ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "Dancing Master",
+    "DESCRIPTIONS": [
+      "The third time you enter a #yStance each turn, gain #b",
+      " [E] and draw #b2 cards. ",
+      " remaining.",
+      "Used this turn."
+    ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "Strike of Genius",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random card that Enters a Stance to your hand. It costs #b0 until played and Exhausts.",
+      "At the start of your turn, add #b",
+      " random cards that Enter a Stance to your hand. They cost #b0 until played and Exhausts."
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "Strike of Genius+",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random #yupgraded card that Enters a Stance to your hand. It costs #b0 until played.",
+      "At the start of your turn, add #b",
+      " random #yupgraded cards that Enter a Stance to your hand. They cost #b0 until played."
+    ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "Defensive Style",
+    "DESCRIPTIONS": [
+      "If you start your turn in #yDefensive, gain #b",
+      " #yBlock and #b",
+      " #yCounter."
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "Gladiator Style",
+    "DESCRIPTIONS": [
+      "If you start your turn in #yGladiator, gain #b",
+      " temporary #yStrength and #yDexterity."
+    ]
+  },
+  "champ:BerserkerStylePower": {
+    "NAME": "Berserker Style",
+    "DESCRIPTIONS": [
+      "If you start your turn in #yBerserker, #yFatigue #b",
+      " and gain [E] ."
+    ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "False Counter",
+    "DESCRIPTIONS": [
+      "Next time #yCounter activates, only lose half your #yCounter.",
+      "The next #b",
+      " times #yCounter activates, only lose half your #yCounter."
+    ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "Enchanted Crown",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your next turn.",
+      "Gain [E] at the start of your next #b",
+      " turns."
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "Iron Fortress",
+    "DESCRIPTIONS": [
+      "Whenever you enter a Stance, gain #b",
+      " Block and #yCounter."
+    ]
+  },
+  "champ:LastStandMod": {
+    "NAME": "Last Stand",
+    "DESCRIPTIONS": [
+      "At the start of turn, if HP is at or below 50%, cleanse all debuffs and gain ",
+      " Strength."
+    ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "Shield Thrown",
+    "DESCRIPTIONS": [
+      "You can't gain Block next turn.",
+      "You can't gain Block for the next #b",
+      " turns."
+    ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "Ultimate Drain",
+    "DESCRIPTIONS": [
+      "Ultimate Stance will expire this turn.",
+      "Ultimate Stance will last #b",
+      " more turns."
+    ]
+  }
+}

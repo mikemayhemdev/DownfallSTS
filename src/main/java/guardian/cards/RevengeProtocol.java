@@ -26,7 +26,7 @@ public class RevengeProtocol extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int STRENGTHFORTURN = 3;
+    private static final int STRENGTHFORTURN = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;

@@ -25,8 +25,8 @@
   "hexamod:BurnPerTurnPower": {
     "NAME": "Melting Metal",
     "DESCRIPTIONS": [
-      "Gains #b",
-      " #ySoulburn at the start of its turn. This effect is removed when #ySoulburn is detonated."
+      "Applies #b",
+      " #ySoulburn after the next time #ySoulburn is detonated on this enemy."
     ]
   },
   "hexamod:BurnPower": {
@@ -46,11 +46,11 @@
     ]
   },
   "hexamod:CommonPostCombatPower": {
-    "NAME": "Post-Combat Common",
+    "NAME": "Sealed Reward: Card",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
-      " additional #yCommon cards.",
-      " additional #yCommon card."
+      " additional cards.",
+      " additional card."
     ]
   },
   "hexamod:CrispyPower": {
@@ -82,7 +82,7 @@
     ]
   },
   "hexamod:FutureUpgradePower": {
-    "NAME": "Post-Combat Experience",
+    "NAME": "Sealed Reward: Upgrade",
     "DESCRIPTIONS": [
       "At the end of combat, #yUpgrade #b",
       " random card in your deck.",
@@ -92,8 +92,8 @@
   "hexamod:GainStrengthThatGoesAwayPower": {
     "NAME": "Here and Now",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yStrength. Lose this #yStrength when you #yAdvance or #yRetract."
+      "If you start and end your turn with the same Ghostflame active, gain ",
+      " #yStrength."
     ]
   },
   "hexamod:GhostFlameBarrierPower": {
@@ -106,21 +106,24 @@
   "hexamod:GiftsFromTheDeadPower": {
     "NAME": "Ghostly Gifts",
     "DESCRIPTIONS": [
-      "Whenever an #yEthereal card is #yExhausted, gain ",
-      " next turn."
-    ]
-  },
-  "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Ghostly Gifts+",
-    "DESCRIPTIONS": [
       "Whenever an #yEthereal card is #yExhausted, draw ",
       " cards",
       " card",
       " next turn."
     ]
   },
+  "hexamod:GiftsFromTheDeadPowerPlus": {
+    "NAME": "Ghostly Gifts+",
+    "DESCRIPTIONS": [
+      "Whenever an #yEthereal card is #yExhausted, gain ",
+      " and draw ",
+      " cards",
+      " card",
+      " next turn."
+    ]
+  },
   "hexamod:GoldPostCombatPower": {
-    "NAME": "Post-Combat Gold",
+    "NAME": "Sealed Reward: Gold",
     "DESCRIPTIONS": [
       "Gold reward from this combat is increased by #b",
       " ."
@@ -159,7 +162,7 @@
     ]
   },
   "hexamod:PotionPostCombatPower": {
-    "NAME": "Post-Combat Potion",
+    "NAME": "Sealed Reward: Potion",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
       " additional Potions.",
@@ -174,7 +177,7 @@
     ]
   },
   "hexamod:SealPostCombatPower": {
-    "NAME": "Post-Combat Seal",
+    "NAME": "Sealed Reward: Seal",
     "DESCRIPTIONS": [
       "At the end of combat, obtain #b",
       " additional #ySeal cards.",

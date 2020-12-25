@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
+import java.util.ArrayList;
+
 public class EnClothesline extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Clothesline";
     private static final CardStrings cardStrings;
@@ -41,6 +43,11 @@ public class EnClothesline extends AbstractBossCard {
 
     public AbstractCard makeCopy() {
         return new EnClothesline();
+    }
+
+    @Override
+    public int getPriority(ArrayList<AbstractCard> hand) {
+        return autoPriority() * 5;
     }
 
     static {

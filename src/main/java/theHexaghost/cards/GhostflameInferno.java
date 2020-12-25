@@ -3,7 +3,9 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeCurrentFlameAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
@@ -18,6 +20,8 @@ public class GhostflameInferno extends AbstractHexaCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         selfRetain = true;
         exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,7 +32,7 @@ public class GhostflameInferno extends AbstractHexaCard {
                 isDone = true;
                 for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                     if (gf instanceof InfernoGhostflame) {
-                        GhostflameHelper.hexaGhostFlames.get(GhostflameHelper.hexaGhostFlames.indexOf(gf)).charge();
+                        gf.charge();
                     }
                 }
             }

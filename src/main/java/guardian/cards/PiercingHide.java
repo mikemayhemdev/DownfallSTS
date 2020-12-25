@@ -28,11 +28,11 @@ public class PiercingHide extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 6;
-    private static final int UPGRADE_BLOCK = 2;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_BLOCK = 3;
     private static final int THORNS = 2;
     private static final int UPGRADE_THORNS = 1;
-    private static final int SOCKETS = 0;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -76,12 +76,6 @@ public class PiercingHide extends AbstractGuardianCard {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
             upgradeMagicNumber(UPGRADE_THORNS);
-
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
-            this.updateDescription();
         }
     }
 

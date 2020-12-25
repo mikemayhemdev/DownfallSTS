@@ -26,8 +26,6 @@ public class PocketSentry extends CustomRelic {
     public static final String LARGE_IMG_PATH = "relics/pocketSentryLarge.png";
     private static final int DAMAGE = 7;
 
-    private boolean beaming = true;
-
     public PocketSentry() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.COMMON, LandingSound.FLAT);
@@ -43,17 +41,18 @@ public class PocketSentry extends CustomRelic {
     public void atTurnStartPostDraw() {
         super.atTurnStartPostDraw();
         this.flash();
-        if (beaming) {
-            beaming = false;
-            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(true);
+        if (counter == 0) {
+            counter = 1;
+            AbstractMonster m = AbstractDungeon.getMonsters().getRandomMonster(null,true,AbstractDungeon.relicRng);
+            if(m != null){
+                AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(this.hb.cX - (5F * Settings.scale), this.hb.cY + (10F * Settings.scale), m.hb.cX, m.hb.cY), 0.3F));
 
-            AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(this.hb.cX - (5F * Settings.scale), this.hb.cY + (10F * Settings.scale), m.hb.cX, m.hb.cY), 0.3F));
-
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            }
 
         } else {
-            beaming = true;
+            counter = 0;
 
             AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(this.hb.cX, this.hb.cY, Color.ROYAL, ShockWaveEffect.ShockWaveType.ADDITIVE), 0.1F));
             AbstractDungeon.actionManager.addToBottom(new SFXAction("THUNDERCLAP"));

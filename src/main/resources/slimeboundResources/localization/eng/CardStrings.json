@@ -37,7 +37,8 @@
   },
   "Slimebound:Overexert": {
     "NAME": "Overexert",
-    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
+    "DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL !M! turns from now, slimeboundmod:Absorb all Slimes.",
+    "UPGRADE_DESCRIPTION": "Gain 4 slimeboundmod:Potency. NL slimeboundmod:Command twice. NL !M! turns from now, slimeboundmod:Absorb all Slimes."
   },
   "Slimebound:Split": {
     "NAME": "Split",
@@ -92,7 +93,7 @@
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Slime Spikes",
-    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns."
+    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Leeching Strike",
@@ -125,7 +126,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Growth Punch",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL slimeboundmod:Consume - Increase this card's damage and Block by !M! for this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL slimeboundmod:Consume - Increase this card's effects by !M! this combat."
   },
   "Slimebound:CheckThePlaybook": {
     "NAME": "Consult Playbook",
@@ -142,7 +143,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackle cards you play."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! slimeboundmod:Tackle cards."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
@@ -251,7 +252,7 @@
   "Slimebound:Chomp": {
     "NAME": "Chomp",
     "DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce the cost of a random slimeboundmod:Tackle card in your hand to 0 this combat."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Douse in Slime",
@@ -311,7 +312,7 @@
   },
   "Slimebound:Icky": {
     "NAME": "Icky",
-    "DESCRIPTION": "Add a Slimed Status to your hand and draw pile. NL Exhaust."
+    "DESCRIPTION": "Add a Slimed Status to your hand. NL Exhaust."
   },
   "Slimebound:DivideAndConquerConquer": {
     "NAME": "Conquer",
@@ -319,21 +320,21 @@
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "Retain. NL Gain !M! guardianmod:Momentary Strength for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a Divide and a Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Divide and an Upgraded Conquer to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a *Divide and a *Conquer to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded *Divide and an Upgraded *Conquer to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a Serve and a Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Serve and an Upgraded Protect to your hand. NL Exhaust."
+    "DESCRIPTION": "Add a *Serve and a *Protect to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded *Serve and an Upgraded *Protect to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
-    "DESCRIPTION": "Retain. NL Gain !M! guardianmod:Momentary Dexterity for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
@@ -366,8 +367,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you slimeboundmod:Command, slimeboundmod:Command 2 times instead."
+    "DESCRIPTION": "Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
@@ -375,7 +376,7 @@
   },
   "Slimebound:Darklings": {
     "NAME": "Darkling Trio",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Darkling_Slime three times. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Darkling_Slime !M! times. NL Exhaust."
   },
   "Slimebound:SlimeSlap": {
     "NAME": "Slime Slap",
@@ -387,7 +388,8 @@
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",
-    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command twice."
+    "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command twice.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL slimeboundmod:Command three times."
   },
   "Slimebound:TagTeam": {
     "NAME": "Tag Team",
@@ -395,8 +397,7 @@
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Whenever you play a card this turn, slimeboundmod:Command."
+    "DESCRIPTION": "Deal !D! damage. NL The next !M! cards played this turn trigger a slimeboundmod:Command."
   },
   "Slimebound:Nibble": {
     "NAME": "Nibble",

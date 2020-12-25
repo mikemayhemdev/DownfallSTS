@@ -84,6 +84,8 @@ public class PolyBeamAgainPower extends AbstractPower {
 
         tmp.purgeOnUse = true;
         PolyBeam tmpPB = (PolyBeam) tmp;
+        tmpPB.tags.remove(expansionContentMod.STUDY_SHAPES);
+        tmpPB.tags.remove(expansionContentMod.STUDY);
         tmpPB.isACopy = true;
         tmpPB.rawDescription = tmpPB.UPGRADE_DESCRIPTION;
         tmpPB.initializeDescription();

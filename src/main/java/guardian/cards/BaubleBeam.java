@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import guardian.GuardianMod;
 import guardian.patches.AbstractCardEnum;
+import sneckomod.SneckoMod;
 
 
 public class BaubleBeam extends AbstractGuardianCard {
@@ -22,7 +23,7 @@ public class BaubleBeam extends AbstractGuardianCard {
     public static final String NAME;
     public static final String IMG_PATH = "cards/baubleBeam.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
@@ -59,6 +60,7 @@ public class BaubleBeam extends AbstractGuardianCard {
         this.socketCount = SOCKETS;
         updateDescription();
         loadGemMisc();
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

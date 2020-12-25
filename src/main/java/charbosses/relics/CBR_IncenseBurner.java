@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
+import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.IncenseBurner;
 
@@ -35,7 +36,7 @@ public class CBR_IncenseBurner extends AbstractCharbossRelic {
             this.counter = 0;
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractCharBoss.boss, this));
-            this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, null, new IntangiblePlayerPower(AbstractCharBoss.boss, 1), 1));
+            this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, null, new IntangiblePower(AbstractCharBoss.boss, 1), 1));
         }
     }
 

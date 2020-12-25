@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.FirmFortitudePower;
+import sneckomod.SneckoMod;
 
 
 public class FeelOurPain extends AbstractSlimeboundCard {
@@ -40,6 +41,7 @@ public class FeelOurPain extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
         //this.exhaust = true;
 
     }

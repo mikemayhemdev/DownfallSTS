@@ -69,6 +69,7 @@ public class EvasiveProtocol extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }

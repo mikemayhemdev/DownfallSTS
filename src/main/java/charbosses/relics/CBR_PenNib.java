@@ -19,7 +19,6 @@ public class CBR_PenNib extends AbstractCharbossRelic {
     public CBR_PenNib() {
         super(new PenNib());
         this.counter = 0;
-        this.tier = RelicTier.RARE;
     }
 
     public String getUpdatedDescription() {

@@ -100,7 +100,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                         nukeStrikes();
                         for (int i = 0; i < 3; i++) {
                             AbstractCard n = new CouncilsJustice();
-                            AbstractDungeon.player.masterDeck.addToTop(n);
+//                            AbstractDungeon.player.masterDeck.addToTop(n);
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new CouncilsJustice(), Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
                         }
                         return;
@@ -111,7 +111,7 @@ public class CouncilOfGhosts_Hexa extends AbstractImageEvent {
                         nukeDefends();
                         for (int i = 0; i < 3; i++) {
                             AbstractCard n = new Apparition();
-                            AbstractDungeon.player.masterDeck.addToTop(n);
+//                            AbstractDungeon.player.masterDeck.addToTop(n);
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(new Apparition(), Settings.WIDTH * (AbstractDungeon.cardRng.random(0.25F,0.75F)), Settings.HEIGHT * (AbstractDungeon.cardRng.random(0.25F,0.75F))));
                         }
                         return;

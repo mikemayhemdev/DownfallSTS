@@ -23,20 +23,22 @@ public class EnemyChannelAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (this.autoEvoke) {
-                AbstractCharBoss.boss.channelOrb(this.orbType);
-            } else {
-                for (final AbstractOrb o : AbstractCharBoss.boss.orbs) {
-                    if (o instanceof EmptyOrbSlot) {
-                        AbstractCharBoss.boss.channelOrb(this.orbType);
-                        break;
+        if (AbstractCharBoss.boss != null) {
+            if (this.duration == Settings.ACTION_DUR_FAST) {
+                if (this.autoEvoke) {
+                    AbstractCharBoss.boss.channelOrb(this.orbType);
+                } else {
+                    for (final AbstractOrb o : AbstractCharBoss.boss.orbs) {
+                        if (o instanceof EmptyOrbSlot) {
+                            AbstractCharBoss.boss.channelOrb(this.orbType);
+                            break;
+                        }
                     }
                 }
-            }
-            if (Settings.FAST_MODE) {
-                this.isDone = true;
-                return;
+                if (Settings.FAST_MODE) {
+                    this.isDone = true;
+                    return;
+                }
             }
         }
         this.tickDuration();

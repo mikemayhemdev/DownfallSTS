@@ -89,9 +89,9 @@
   "Slimebound:ComboAttackPower": {
     "NAME": "Lead By Example",
     "DESCRIPTIONS": [
-      "The first #yAttack you play each turn causes your leading Slime to also attack.",
+      "The first targeted card you play each turn causes your leading Slime to also attack.",
       "The first #b",
-      " #yAttacks you play each turn causes your leading Slime to also attack.",
+      " targeted cards you play each turn causes your leading Slime to also attack.",
       " NL This effect can be triggered #b",
       " more times this turn.",
       " more time this turn.",
@@ -481,9 +481,9 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Minion Master",
     "DESCRIPTIONS": [
-      "Whenever you Command, Command 2 times instead.",
-      "Whenever you Command, Command #b",
-      " times instead."
+      "Whenever you play a card with Command, Command again.",
+      "Whenever you play a card with Command, Command #b",
+      " additional times."
     ]
   },
   "Slimebound:TackleSelfDamagePreventPower": {
@@ -503,9 +503,9 @@
   "Slimebound:CommandOnPlayPower": {
     "NAME": "Goop Armor",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, #yCommand.",
-      "Whenever you play a card this turn, #yCommand ",
-      " times."
+      "The next time you play a card this turn, #yCommand.",
+      "The next ",
+      " times you play a card this turn, #yCommand."
     ]
   },
   "Slimebound:GoopPerTurnPower": {

@@ -2,6 +2,8 @@ package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
+import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
 
 public class EmpoweredFlame extends AbstractHexaCard {
@@ -16,6 +18,8 @@ public class EmpoweredFlame extends AbstractHexaCard {
     public EmpoweredFlame() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

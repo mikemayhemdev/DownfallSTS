@@ -45,8 +45,8 @@ public class EnemyAccuracyPower extends AbstractPower {
     }
 
     private void updateExistingShivs() {
-        for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
-            if (c instanceof EnShiv || c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+            if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
                 } else {
@@ -54,39 +54,50 @@ public class EnemyAccuracyPower extends AbstractPower {
                 }
             }
         }
-        for (final AbstractCard c : AbstractCharBoss.boss.drawPile.group) {
-            if (c instanceof EnShiv || c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+        /*
+        for (AbstractCard c : AbstractCharBoss.boss.drawPile.group) {
+            if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
                 } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
+            if (c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+                c.baseDamage = 4 + this.amount;
+            }
         }
-        for (final AbstractCard c : AbstractCharBoss.boss.discardPile.group) {
-            if (c instanceof EnShiv || c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+        for (AbstractCard c : AbstractCharBoss.boss.discardPile.group) {
+            if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
                 } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
+            if (c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+                c.baseDamage = 4 + this.amount;
+            }
         }
-        for (final AbstractCard c : AbstractCharBoss.boss.exhaustPile.group) {
-            if (c instanceof EnShiv || c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+        for (AbstractCard c : AbstractCharBoss.boss.exhaustPile.group) {
+            if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
                 } else {
                     c.baseDamage = 6 + this.amount;
                 }
             }
+            if (c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+                c.baseDamage = 4 + this.amount;
+            }
         }
+        */
     }
 
     @Override
     public void onDrawOrDiscard() {
-        for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
-            if (c instanceof EnShiv || c instanceof EnCloakAndDagger || c instanceof EnBladeDance) {
+        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+            if (c instanceof EnShiv) {
                 if (!c.upgraded) {
                     c.baseDamage = 4 + this.amount;
                 } else {

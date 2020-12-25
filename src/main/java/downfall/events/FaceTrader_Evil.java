@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
+import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
@@ -77,7 +78,7 @@ public class FaceTrader_Evil extends AbstractImageEvent {
 
                         this.screen = CurScreen.FIGHT;
                         SlimeboundMod.logger.info("fight");
-                        AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new FaceTrader());
+                        AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:FaceTrader");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakOfManyFaces());
                         AbstractDungeon.getCurrRoom().addGoldToRewards(100);
@@ -85,6 +86,7 @@ public class FaceTrader_Evil extends AbstractImageEvent {
                         AbstractDungeon.getCurrRoom().eliteTrigger = true;
                         this.imageEventText.clearRemainingOptions();
                         this.enterCombatFromImage();
+                        AbstractDungeon.lastCombatMetricKey = "downfall:FaceTrader";
                         break;
                     case 1:
                         AbstractRelic r = this.getRandomFace();

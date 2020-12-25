@@ -17,13 +17,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "Ruby",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Strength.",
-    "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Strength."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Strength.",
+    "UPGRADE_DESCRIPTION": "Gain 1 temporary Strength."
   },
   "Guardian:Gem_Green": {
     "NAME": "Emerald",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 guardianmod:Momentary Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain 1 guardianmod:Momentary Dexterity."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain 1 temporary Dexterity."
+  },
+  "Guardian:Gem_Lightblue": {
+    "NAME": "Tourmaline",
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 temporary Thorns.",
+    "UPGRADE_DESCRIPTION": "Gain 1 temporary Thorns."
   },
   "Guardian:Gem_White": {
     "NAME": "Quartz",
@@ -46,13 +51,11 @@
   },
   "Guardian:DonusPower": {
     "NAME": "Ancient Attack",
-    "DESCRIPTION": "Gain 1 Strength. NL Add a random Attack card to your hand. It costs 1 less. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 1 less. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 1 less this combat. NL Exhaust."
   },
   "Guardian:DecasProtection": {
     "NAME": "Ancient Power",
-    "DESCRIPTION": "Gain 1 Dexterity. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust."
   },
   "Guardian:FierceBash": {
     "NAME": "Fierce Bash",
@@ -119,7 +122,8 @@
   },
   "Guardian:Harden": {
     "NAME": "Harden",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block and 1 Thorns. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block and 1 Thorns. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:SentryBeam": {
     "NAME": "Sentry Beam",
@@ -185,11 +189,13 @@
   },
   "Guardian:Emergency": {
     "NAME": "Emergency",
-    "DESCRIPTION": "guardianmod:Accelerate until a card in guardianmod:Stasis returns to your hand. NL Exhaust."
+    "DESCRIPTION": "guardianmod:Accelerate until a card in guardianmod:Stasis returns to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "guardianmod:Accelerate until a card in guardianmod:Stasis returns to your hand."
   },
   "Guardian:Clone": {
     "NAME": "Clone",
-    "DESCRIPTION": "Choose a card. Place a copy of that card into guardianmod:Stasis. NL Exhaust."
+    "DESCRIPTION": "Choose a card. Place a copy of that card into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card. Place a copy of that card into guardianmod:Stasis. NL guardianmod:Accelerate. NL Exhaust."
   },
   "Guardian:Preprogram": {
     "NAME": "Preprogram",
@@ -231,15 +237,16 @@
   },
   "Guardian:WeakpointTargeting": {
     "NAME": "Spot Weakpoint",
-    "DESCRIPTION": "Whenever targeted enemy takes damage, gain 1 guardianmod:Momentary Strength. NL Exhaust."
+    "DESCRIPTION": "Whenever targeted enemy takes damage, gain 1 temporary Strength. NL Exhaust."
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",
-    "DESCRIPTION": "Deal !D! damage. NL  If in guardianmod:Defensive_Mode, deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL If in guardianmod:Defensive_Mode, affects ALL enemies."
   },
   "Guardian:GemFire": {
     "NAME": "Gem Cannon",
-    "DESCRIPTION": "Exhaust all guardianmod:Gems and cards with guardianmod:Gems in them in your hand. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards."
+    "DESCRIPTION": "Exhaust all guardianmod:Gems and all Socketed cards. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all guardianmod:Gems and all Socketed cards. Deal !D! damage to a random enemy for each guardianmod:Gem in those cards. NL Exhaust."
   },
   "Guardian:ChargeCore": {
     "NAME": "Charge Core",
@@ -251,27 +258,29 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Piercing Hide",
-    "DESCRIPTION": "Gain !B! Block and !M! guardianmod:Momentary Thorns. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Shield Spikes",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! guardianmod:Momentary Thorns if you are in guardianmod:Defensive_Mode."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if you are in guardianmod:Defensive_Mode."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Beam",
-    "DESCRIPTION": "Deal !D! damage for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Deal !D! damage, plus an additional !D! damage for each guardianmod:Gem in this card."
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
-    "DESCRIPTION": "Gain !B! Block for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Gain !B! Block, plus an additional !B! Block for each guardianmod:Gem in this card."
   },
   "Guardian:TemporalStrike": {
     "NAME": "Temporal Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage if you have a card in guardianmod:Stasis."
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] if you have a card in guardianmod:Stasis.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E] if you have a card in guardianmod:Stasis."
   },
   "Guardian:TemporalShield": {
     "NAME": "Temporal Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block if you have a card in guardianmod:Stasis."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card if you have a card in guardianmod:Stasis.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards if you have a card in guardianmod:Stasis."
   },
   "Guardian:ExploitGems": {
     "NAME": "Exploit Gems",
@@ -280,7 +289,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Refracted Beam",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Can be upgraded any number of times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Decrease the number of times this card hits by 2 this combat. NL Can be upgraded any number of times."
   },
   "Guardian:MultiBeam": {
     "NAME": "Multi-Beam",
@@ -298,17 +307,17 @@
   "Guardian:EvasiveProtocol": {
     "NAME": "Evasive Protocol",
     "DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode. NL guardianmod:Defensive_Mode persists for 1 turn."
+    "UPGRADE_DESCRIPTION": "Gain 3 Dexterity while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Spiker Protocol",
     "DESCRIPTION": "Gain 3 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain 3 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode. NL guardianmod:Defensive_Mode persists for 1 turn."
+    "UPGRADE_DESCRIPTION": "Gain 4 Thorns while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Armored Protocol",
-    "DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode. NL guardianmod:Defensive_Mode persists for 1 turn."
+    "DESCRIPTION": "Gain 3 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "Gain 4 Block at the end of each turn while in guardianmod:Defensive_Mode. NL Enter guardianmod:Defensive_Mode, which persists for 1 turn."
   },
   "Guardian:TimeSifter": {
     "NAME": "Time Sifter",
@@ -317,7 +326,8 @@
   },
   "Guardian:AncientConstruct": {
     "NAME": "Ancient Construct",
-    "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact and lose [E]."
+    "DESCRIPTION": "At the start of your turn, if you have no Artifact, gain !M! Artifact.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Artifact. NL At the start of your turn, if you have no Artifact, gain !M! Artifact."
   },
   "Guardian:CrystalBeam": {
     "NAME": "Crystal Beam",
@@ -325,8 +335,8 @@
   },
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
-    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 Artifact. Lose 2 HP.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Artifact Lose 2 HP."
+    "DESCRIPTION": "guardianmod:Gem. NL Gain 1 Artifact.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Artifact."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "Amber",
@@ -364,7 +374,7 @@
   "Guardian:Repulse": {
     "NAME": "Repulsor",
     "DESCRIPTION": "Exhaust the first Status or Curse drawn each turn.",
-    "UPGRADE_DESCRIPTION": "Exhaust the first 2 Status or Curse cards drawn each turn."
+    "UPGRADE_DESCRIPTION": "Innate. NL Exhaust the first Status or Curse drawn each turn."
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb Beam",
@@ -372,11 +382,11 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Revenge Protocol",
-    "DESCRIPTION": "When you leave guardianmod:Defensive_Mode, gain !M! guardianmod:Momentary Strength. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "When you leave guardianmod:Defensive_Mode, gain !M! temporary Strength. NL Enter guardianmod:Defensive_Mode."
   },
   "Guardian:GatlingBeam": {
-    "NAME": "Gatling Beam",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. Repeat for each time this guardianmod:Tick effect has triggered. NL guardianmod:Volatile."
+    "NAME": "Turret Beam",
+    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - Deal !D! damage to a random enemy. NL guardianmod:Volatile."
   },
   "Guardian:ShieldCharger": {
     "NAME": "Shield Charger",
@@ -412,7 +422,7 @@
   },
   "Guardian:MassOfThorns": {
     "NAME": "Mass Of Spikes",
-    "DESCRIPTION": "Gain !M! guardianmod:Momentary Thorns. NL Exhaust if you have Artifact."
+    "DESCRIPTION": "Gain !M! temporary Thorns. NL Exhaust if you have Artifact."
   },
   "Guardian:MassTimeBomb": {
     "NAME": "Mass Of Bombs",
@@ -425,7 +435,7 @@
   },
   "Guardian:Aged": {
     "NAME": "Aged",
-    "DESCRIPTION": "Unplayable. NL At the end of your turn, add a Void Status to the top of your draw pile."
+    "DESCRIPTION": "Unplayable. Ethereal. NL At the end of your turn, add a Void Status to the top of your draw pile."
   },
   "Guardian:GemstoneGunCard": {
     "NAME": "Gemstone Gun",

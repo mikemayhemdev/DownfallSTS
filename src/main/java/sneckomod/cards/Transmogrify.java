@@ -29,7 +29,7 @@ public class Transmogrify extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractRelic> eligibleRelicsList = new ArrayList<>(AbstractDungeon.player.relics);
-        eligibleRelicsList.removeIf(c -> c.tier == AbstractRelic.RelicTier.SPECIAL);
+        eligibleRelicsList.removeIf(c -> c.tier == AbstractRelic.RelicTier.STARTER || c.tier == AbstractRelic.RelicTier.SPECIAL);
         if (!eligibleRelicsList.isEmpty()) {
             AbstractRelic q = eligibleRelicsList.get(AbstractDungeon.cardRandomRng.random(eligibleRelicsList.size() - 1));
             q.flash();

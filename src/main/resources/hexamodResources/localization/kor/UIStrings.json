@@ -1,0 +1,12 @@
+{
+  "hexamod:SealCommonReward": {
+    "TEXT": [
+      "덱에 일반 카드 한 장 추가"
+    ]
+  },
+  "hexamod:SealSealReward": {
+    "TEXT": [
+      "덱에 봉인 하나를 추가"
+    ]
+  }
+}

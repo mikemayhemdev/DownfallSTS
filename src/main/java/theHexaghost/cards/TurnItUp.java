@@ -3,7 +3,9 @@ package theHexaghost.cards;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import theHexaghost.actions.PerformXAction;
+import sneckomod.SneckoMod;
+import theHexaghost.HexaMod;
+import downfall.actions.PerformXAction;
 import theHexaghost.actions.TurnItUpAction;
 
 public class TurnItUp extends AbstractHexaCard {
@@ -16,6 +18,8 @@ public class TurnItUp extends AbstractHexaCard {
         super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         this.exhaust = true;
+        tags.add(HexaMod.GHOSTWHEELCARD);
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,0 +1,76 @@
+[
+  {
+    "PROPER_NAME": "Technique",
+    "NAMES": [
+      "technique",
+      "techniques",
+      "champ:[crown_icon]",
+      "[crown_icon]"
+    ],
+    "DESCRIPTION": "If you are in a #yStance, trigger its Technique bonus."
+  },
+  {
+    "PROPER_NAME": "Combo",
+    "NAMES": [
+      "combo"
+    ],
+    "DESCRIPTION": "Extra effect when played in the listed #yStance, or if you entered that #yStance this turn."
+  },
+  {
+    "PROPER_NAME": "Finisher",
+    "NAMES": [
+      "finisher",
+      "finishers",
+      "[fist_icon]",
+      "champ:[fist_icon]"
+    ],
+    "DESCRIPTION": "After playing a Finisher, if you are in a #yStance, exit it, trigger its Finisher bonus, and end your turn."
+  },
+  {
+    "PROPER_NAME": "Counter",
+    "NAMES": [
+      "counter"
+    ],
+    "DESCRIPTION": "The next time you take #yAttack damage, deal damage back."
+  },
+  {
+    "PROPER_NAME": "Defensive",
+    "NAMES": [
+      "defensive",
+      "defensive."
+    ],
+    "DESCRIPTION": "#yStance. NL #yTechnique Bonus: Gain #b4 #yCounter. NL #yFinisher Bonus: Gain #b12 #yBlock. End your turn."
+  },
+  {
+    "PROPER_NAME": "Berserker",
+    "NAMES": [
+      "berserker",
+      "berserker."
+    ],
+    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: #yFatigue #y3. NL #yFinisher Bonus: Lose all #yFatigue and gain that much HP, preserving #yStrength. End your turn."
+  },
+  {
+    "PROPER_NAME": "Gladiator",
+    "NAMES": [
+      "gladiator",
+      "gladiator."
+    ],
+    "DESCRIPTION": "#yStance.  NL #yTechnique Bonus: Draw a card. NL #yFinisher Bonus: Next turn, draw #b1 card and gain [E] . End your turn."
+  },
+  {
+    "PROPER_NAME": "Ultimate Stance",
+    "NAMES": [
+      "ultimate",
+      "ultimate."
+    ],
+    "DESCRIPTION": "#yStance. Counts as all #b3 #yStances. NL Finishers do not end your turn or exit the Stance. NL You can't change to any other #yStance."
+  },
+  {
+    "PROPER_NAME": "Fatigue",
+    "NAMES": [
+      "fatigue",
+      "fatigued"
+    ],
+    "DESCRIPTION": "Lose HP and gain #b1 Strength for every #b5 HP lost. Regenerate #yFatigued health at the end of combat."
+  }
+]

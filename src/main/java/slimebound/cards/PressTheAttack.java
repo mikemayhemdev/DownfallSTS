@@ -57,6 +57,9 @@ public class PressTheAttack extends AbstractSlimeboundCard {
         if (m.hasPower(SlimedPower.POWER_ID)) {
             addToBot(new CommandAction());
         }
+
+
+        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {

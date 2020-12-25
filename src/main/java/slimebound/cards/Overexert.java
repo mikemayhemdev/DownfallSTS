@@ -16,6 +16,7 @@ import slimebound.actions.CommandAction;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.LoseSlimesPower;
 import slimebound.powers.PotencyPower;
+import sneckomod.SneckoMod;
 
 
 public class Overexert extends AbstractSlimeboundCard {
@@ -44,6 +45,8 @@ public class Overexert extends AbstractSlimeboundCard {
 
         this.magicNumber = this.baseMagicNumber = 2;
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -54,9 +57,9 @@ public class Overexert extends AbstractSlimeboundCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PotencyPower(p, p, 4), 4));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseSlimesPower(p, p, this.magicNumber), this.magicNumber));
 
-        //addToBot(new CommandAction());
-        //addToBot(new CommandAction());
-
+        if (upgraded) addToBot(new CommandAction());
+        if (upgraded) addToBot(new CommandAction());
+        checkMinionMaster();
     }
 
     public AbstractCard makeCopy() {
@@ -66,8 +69,8 @@ public class Overexert extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
 
         }
     }

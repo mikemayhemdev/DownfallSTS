@@ -1,5 +1,6 @@
 package downfall.patches;
 
+import champ.ChampChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.screens.DeathScreen;
 import com.megacrit.cardcrawl.ui.buttons.ReturnToMenuButton;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.unlocks.ChampUnlock;
 import downfall.unlocks.GuardianUnlock;
 import downfall.unlocks.HexaghostUnlock;
 import downfall.unlocks.SneckoUnlock;
@@ -54,7 +56,12 @@ public class DeathScreenUnlockPatch {
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                        // SlimeboundMod.logger.info("Triggered Hexaghost Unlock screen!");
                         return SpireReturn.Return(null);
-                    } else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT))  {
+                    } else if ((UnlockTracker.isCharacterLocked("Champ")) && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT))  {
+                        AbstractDungeon.unlocks.add(new ChampUnlock());
+                        AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
+                        //SlimeboundMod.logger.info("Triggered Champ Unlock screen!");
+                        return SpireReturn.Return(null);
+                    }else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP))  {
                         AbstractDungeon.unlocks.add(new SneckoUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         //SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");

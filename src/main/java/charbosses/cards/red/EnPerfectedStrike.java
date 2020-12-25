@@ -30,7 +30,8 @@ public class EnPerfectedStrike extends AbstractBossCard {
     }
 
     public static int countCards() {
-        int count = 0;
+        int count = 6;
+        /*
         for (final AbstractCard c : AbstractCharBoss.boss.hand.group) {
             if (isStrike(c)) {
                 ++count;
@@ -46,6 +47,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
                 ++count;
             }
         }
+        */
         return count;
     }
 
@@ -67,6 +69,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
         this.isDamageModified = (this.damage != this.baseDamage);
     }
 
+    /*
     @Override
     public void applyPowers() {
         final int realBaseDamage = this.baseDamage;
@@ -75,6 +78,7 @@ public class EnPerfectedStrike extends AbstractBossCard {
         this.baseDamage = realBaseDamage;
         this.isDamageModified = (this.damage != this.baseDamage);
     }
+    */
 
     @Override
     public AbstractCard makeCopy() {
