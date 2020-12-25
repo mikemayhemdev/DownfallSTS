@@ -4,10 +4,7 @@ package automaton.potions;
 import automaton.FunctionHelper;
 import automaton.actions.AddToFuncAction;
 import automaton.cards.SpaghettiCode;
-import automaton.powers.CleanCodePower;
 import basemod.abstracts.CustomPotion;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.relics.SacredBark;
+import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
 
@@ -45,7 +43,7 @@ public class BuildAFunctionPotion extends CustomPotion {
     public void use(AbstractCreature target) {
         for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
             ArrayList<AbstractCard> cardsList = SpaghettiCode.getRandomEncodeChoices(3);
-            addToBot(new SelectCardsAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> {
+            addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> {
                 addToTop(new AddToFuncAction(cards.get(0), null));
             }));
         }
