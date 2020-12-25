@@ -240,8 +240,8 @@
   },
   "bronze:ChildClass": {
     "NAME": "Child Class",
-    "DESCRIPTION": "bronze:Compile - Gain a second copy of the Function.",
-    "UPGRADE_DESCRIPTION": "Retain. NL bronze:Compile - Gain a second copy of the Function."
+    "DESCRIPTION": "The next Function you bronze:Compile costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Retain. NL The next Function you bronze:Compile costs 0 until played."
   },
   "bronze:Repair": {
     "NAME": "Repair",

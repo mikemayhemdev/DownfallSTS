@@ -15,11 +15,17 @@ public class CloningPower extends AbstractAutomatonPower implements PostAddToFun
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
     }
 
+    private boolean active = true;
+
     @Override
     public void receivePostAddToFunc(AbstractCard addition) {
-        flash();
-        for (int i = 0; i < amount; i++)
-            addToTop(new AddToFuncAction(addition.makeStatEquivalentCopy(), null));
-        addToTop(new RemoveSpecificPowerAction(owner, owner, this.ID));
+        if (active) {
+            flash();
+            active = false;
+            for (int i = 0; i < amount; i++) {
+                addToTop(new AddToFuncAction(addition.makeStatEquivalentCopy(), null));
+            }
+            addToTop(new RemoveSpecificPowerAction(owner, owner, this.ID));
+        }
     }
 }
