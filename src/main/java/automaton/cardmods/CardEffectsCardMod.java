@@ -58,8 +58,6 @@ public class CardEffectsCardMod extends BronzeCardMod {
             default:
                 break;
         }
-        card.cost += stored().cost;
-        card.costForTurn += stored().cost;
     }
 
     @Override
@@ -79,30 +77,30 @@ public class CardEffectsCardMod extends BronzeCardMod {
             case 'B':
                 if (card.isBlockModified) {
                     if (card.block >= card.baseBlock) {
-                        return "[#7fff00]" + Integer.toString(card.block) + "[]";
+                        return "[#7fff00]" + card.block + "[]";
                     }
 
-                    return "[#ff6563]" + Integer.toString(card.block) + "[]";
+                    return "[#ff6563]" + card.block + "[]";
                 }
 
                 return Integer.toString(card.baseBlock);
             case 'D':
                 if (card.isDamageModified) {
                     if (card.damage >= card.baseDamage) {
-                        return "[#7fff00]" + Integer.toString(card.damage) + "[]";
+                        return "[#7fff00]" + card.damage + "[]";
                     }
 
-                    return "[#ff6563]" + Integer.toString(card.damage) + "[]";
+                    return "[#ff6563]" + card.damage + "[]";
                 }
 
                 return Integer.toString(card.baseDamage);
             case 'M':
                 if (card.isMagicNumberModified) {
                     if (card.magicNumber >= card.baseMagicNumber) {
-                        return "[#7fff00]" + Integer.toString(card.magicNumber) + "[]";
+                        return "[#7fff00]" + card.magicNumber + "[]";
                     }
 
-                    return "[#ff6563]" + Integer.toString(card.magicNumber) + "[]";
+                    return "[#ff6563]" + card.magicNumber + "[]";
                 }
 
                 return Integer.toString(card.baseMagicNumber);
@@ -110,10 +108,10 @@ public class CardEffectsCardMod extends BronzeCardMod {
                 if (card instanceof AbstractBronzeCard) {
                     if (((AbstractBronzeCard) card).isAutoModified) {
                         if (((AbstractBronzeCard) card).auto >= ((AbstractBronzeCard) card).baseAuto) {
-                            return "[#7fff00]" + Integer.toString(((AbstractBronzeCard) card).auto) + "[]";
+                            return "[#7fff00]" + ((AbstractBronzeCard) card).auto + "[]";
                         }
 
-                        return "[#ff6563]" + Integer.toString(((AbstractBronzeCard) card).auto) + "[]";
+                        return "[#ff6563]" + ((AbstractBronzeCard) card).auto + "[]";
                     }
 
                     return Integer.toString(((AbstractBronzeCard) card).baseAuto);
@@ -158,7 +156,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
         if (x.contains("!bauto!")) {
             x = x.replaceAll("!bauto!", getDynamicValue(card, 'A'));
         }
-        return x.replaceAll("!D!", String.valueOf(card.damage)).replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf(((AbstractBronzeCard) card).auto)));
+        return x;
     }
 
     @Override

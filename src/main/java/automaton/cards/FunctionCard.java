@@ -25,7 +25,7 @@ public class FunctionCard extends AbstractBronzeCard {
     public final static String RIBBON_COLOR = "#198a2a";
 
     public FunctionCard() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF_AND_ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF_AND_ENEMY);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
         this.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
