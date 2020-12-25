@@ -154,7 +154,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             x = x.replaceAll("!B!", getDynamicValue(card, 'B'));
         }
         if (x.contains("!M!")) {
-            x = x.replaceAll("!B!", getDynamicValue(card, 'M'));
+            x = x.replaceAll("!M!", getDynamicValue(card, 'M'));
         }
         if (x.contains("!bauto!")) {
             x = x.replaceAll("!bauto!", getDynamicValue(card, 'A'));

@@ -31,6 +31,7 @@ public class FunctionCard extends AbstractBronzeCard {
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
         this.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
+        doNothingSpecificInParticular();
     }
 
     @Override
