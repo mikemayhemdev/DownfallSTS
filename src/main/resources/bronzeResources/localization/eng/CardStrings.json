@@ -545,7 +545,7 @@
     "DESCRIPTION": "Remove all negative bronze:Compile effects from the next !M! Functions you bronze:Compile."
   },
   "bronze:BranchBlock": {
-    "NAME": "Blck()",
+    "NAME": "Branch: Block",
     "DESCRIPTION": "Gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "branching",
@@ -553,7 +553,7 @@
     ]
   },
   "bronze:BranchHit": {
-    "NAME": "Atk()",
+    "NAME": "Branch: Attack",
     "DESCRIPTION": "Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "branching",
