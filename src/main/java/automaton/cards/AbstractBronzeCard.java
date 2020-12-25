@@ -126,12 +126,12 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
-    public void onCompile(AbstractCard function, boolean forGameplay) {
+    public void onCompile(AbstractCard function, boolean forGameplay, int textLevel) {
         // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
         if (forGameplay) {
             CardModifierManager.removeModifiersById(this, EncodeMod.ID, true);
         }
-        CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
+        CardModifierManager.addModifier(function, new CardEffectsCardMod(this, textLevel));
     }
 
     public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
@@ -141,6 +141,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
 
     public void onInput() {
         // Called when the card is about to enter the Sequence. This could be deleted if it stays unused.
+    }
+
+    public void doNothingSpecificInParticular() {
+        initializeTitle();
     }
 
     public String getNoun() {

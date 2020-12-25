@@ -28,7 +28,7 @@
     "DESCRIPTION": "Gain !B! Block."
   },
   "bronze:FunctionCard": {
-    "NAME": "FUNCTION",
+    "NAME": "",
     "DESCRIPTION": ""
   },
   "bronze:Goto": {

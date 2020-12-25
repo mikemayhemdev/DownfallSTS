@@ -18,20 +18,22 @@ import static automaton.FunctionHelper.WITH_DELIMITER;
 public class CardEffectsCardMod extends BronzeCardMod {
 
     public CardSave store;
+    public int addName;
 
-    public AbstractCard stored() {
+    public AbstractBronzeCard stored() {
         if (FunctionHelper.cardModsInfo.containsKey(this)) {
-            return FunctionHelper.cardModsInfo.get(this);
+            return (AbstractBronzeCard) FunctionHelper.cardModsInfo.get(this);
         }
         AbstractCard q = CardLibrary.getCopy(store.id, store.upgrades, store.misc);
         q.resetAttributes();
         FunctionHelper.cardModsInfo.put(this, q);
-        return q;
+        return (AbstractBronzeCard) q;
     }
 
     public static String ID = "bronze:CardEffectsCardMod";
 
-    public CardEffectsCardMod(AbstractCard q) {
+    public CardEffectsCardMod(AbstractCard q, int addName) {
+        this.addName = addName;
         FunctionHelper.cardModsInfo.put(this, q);
         store = new CardSave(q.cardID, q.timesUpgraded, q.misc);
     }
@@ -43,6 +45,18 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
+        switch (addName) {
+            case 0:
+                card.name += stored().getAdjective();
+                stored().doNothingSpecificInParticular();
+                break;
+            case 1:
+                card.name += stored().getNoun();
+                stored().doNothingSpecificInParticular();
+                break;
+            default:
+                break;
+        }
         card.cost += stored().cost;
         card.costForTurn += stored().cost;
     }
@@ -161,8 +175,8 @@ public class CardEffectsCardMod extends BronzeCardMod {
         ReflectionHacks.setPrivate(card, AbstractCard.class, "isMultiDamage", ReflectionHacks.getPrivate(stored(), AbstractCard.class, "isMultiDamage"));
         card.baseBlock = stored().baseBlock;
         card.baseMagicNumber = card.magicNumber = stored().baseMagicNumber;
-        if (card instanceof AbstractBronzeCard && stored() instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) card).baseAuto = ((AbstractBronzeCard) card).auto = ((AbstractBronzeCard) stored()).baseAuto;
+        if (card instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) card).baseAuto = ((AbstractBronzeCard) card).auto = stored().baseAuto;
         }
         card.applyPowers();
         card.calculateCardDamage(target instanceof AbstractMonster ? (AbstractMonster) target : null);
@@ -174,7 +188,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
         if (FunctionHelper.cardModsInfo.containsKey(this)) {
             AbstractCard q = FunctionHelper.cardModsInfo.get(this).makeStatEquivalentCopy();
             q.resetAttributes();
-            return new CardEffectsCardMod(q);
+            return new CardEffectsCardMod(q, addName);
         }
         return new CardEffectsCardMod(store);
     }

@@ -1,7 +1,6 @@
 package automaton;
 
 import automaton.cardmods.CardEffectsCardMod;
-import automaton.cardmods.EncodeMod;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.ForceShield;
 import automaton.cards.FunctionCard;
@@ -133,15 +132,21 @@ public class FunctionHelper {
                 ((PreCardCompileEffectsPower) p).receivePreCardCompileEffects(forGameplay);
             }
         }
+        int counter = 0;
         for (AbstractCard c : held.group) {
-            if (c instanceof AbstractBronzeCard) {
+            if (c.hasTag(AutomatonMod.BAD_COMPILE)) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
-                    ((AbstractBronzeCard) c).onCompile(q, forGameplay);
+                    ((AbstractBronzeCard) c).onCompile(q, forGameplay, -99);
                 } else {
-                    CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
+                    CardModifierManager.addModifier(q, new CardEffectsCardMod(c, -99));
                 }
             } else {
-                CardModifierManager.addModifier(q, new CardEffectsCardMod(c));
+                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                    ((AbstractBronzeCard) c).onCompile(q, forGameplay, counter);
+                } else {
+                    CardModifierManager.addModifier(q, new CardEffectsCardMod(c, counter));
+                }
+                counter += 1;
             }
         }
         for (AbstractCard c : held.group) {
