@@ -181,7 +181,7 @@
     "DESCRIPTION": "Innate. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Exhaust."
   },
   "bronze:CloningBeam": {
-    "NAME": "Cloning Beam",
+    "NAME": "Merge Conflict",
     "DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you bronze:Encode a card, bronze:Encode a copy of it."
   },
