@@ -2,6 +2,7 @@ package automaton.cardmods;
 
 import automaton.FunctionHelper;
 import automaton.cards.AbstractBronzeCard;
+import automaton.cards.FunctionCard;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -46,17 +47,19 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        switch (addName) {
-            case 0:
-                card.name = stored().getAdjective() + card.name;
-                stored().doNothingSpecificInParticular();
-                break;
-            case 1:
-                card.name = stored().getNoun() + card.name;
-                stored().doNothingSpecificInParticular();
-                break;
-            default:
-                break;
+        if (card instanceof FunctionCard) {
+            switch (addName) {
+                case 0:
+                    ((FunctionCard) card).textPrefix += stored().getAdjective();
+                    ((FunctionCard) card).doNothingSpecificInParticular();
+                    break;
+                case 1:
+                    ((FunctionCard) card).textPrefix += stored().getNoun();
+                    ((FunctionCard) card).doNothingSpecificInParticular();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

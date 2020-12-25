@@ -24,6 +24,8 @@ public class FunctionCard extends AbstractBronzeCard {
 
     public final static String RIBBON_COLOR = "#198a2a";
 
+    public String textPrefix = "";
+
     public FunctionCard() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF_AND_ENEMY);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -42,6 +44,17 @@ public class FunctionCard extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay, int count) {
 
+    }
+
+    @Override
+    public void doNothingSpecificInParticular() {
+        if (textPrefix.equals("")) {
+            this.name = "function()";
+        }
+        else {
+            this.name = textPrefix + "()";
+        }
+        super.doNothingSpecificInParticular();
     }
 
     @Override
