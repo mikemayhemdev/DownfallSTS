@@ -15,6 +15,7 @@ public class Separator extends AbstractBronzeCard {
     public Separator() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
+        baseMagicNumber = magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,7 +26,7 @@ public class Separator extends AbstractBronzeCard {
         if (forGameplay) {
             atb(new GainEnergyAction(1));
             if (!firstCard() && !lastCard()) {
-                atb(new GainEnergyAction(2));
+                atb(new GainEnergyAction(magicNumber));
             }
         }
     }

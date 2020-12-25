@@ -21,10 +21,11 @@ public class Format extends AbstractBronzeCard {
 
 
     public Format() {
-        super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, -1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         cardsToPreview = new FormatEncoded();
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
