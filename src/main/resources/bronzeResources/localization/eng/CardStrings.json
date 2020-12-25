@@ -246,8 +246,8 @@
   },
   "bronze:Overload": {
     "NAME": "Overload",
-    "DESCRIPTION": "Activate the effects of each card in the Sequence, targets chosen randomly. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Activate the effects of each card in the Sequence, targets chosen randomly.",
+    "DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode.",
     "EXTENDED_DESCRIPTION": [
       "overloading",
       "Energy"
