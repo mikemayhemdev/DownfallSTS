@@ -1,12 +1,13 @@
 package automaton.cards;
 
 import automaton.FunctionHelper;
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.RetainCardMod;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
@@ -37,8 +38,15 @@ public class BitShift extends AbstractBronzeCard {
                     FunctionHelper.applyPowers();
                 }
             });
-            att(new ReduceCostForTurnAction(cards.get(0), magicNumber));
             AbstractCard q = cards.get(0);
+            att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    q.superFlash();
+                    CardModifierManager.addModifier(q, new RetainCardMod());
+                }
+            });
             att(new AbstractGameAction() {
                 @Override
                 public void update() {

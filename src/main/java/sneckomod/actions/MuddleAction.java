@@ -25,7 +25,7 @@ public class MuddleAction extends AbstractGameAction {
     }
 
     public MuddleAction(AbstractCard bruhCard) {
-        this(bruhCard,false);
+        this(bruhCard, false);
     }
 
     public void update() {
@@ -44,7 +44,7 @@ public class MuddleAction extends AbstractGameAction {
             if (card.cost != 1) numList.add(1);
             if (card.cost != 2) numList.add(2);
             if (!AbstractDungeon.player.hasRelic(CleanMud.ID)) {
-                if (!this.no3){
+                if (!this.no3) {
                     if (card.cost != 3) numList.add(3);
                 }
             }

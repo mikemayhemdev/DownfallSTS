@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.CardIgnore;
 import sneckomod.actions.NoApplyRandomDamageAction;
 
 public class DiceBoulder extends AbstractSneckoCard {
@@ -59,7 +58,7 @@ public class DiceBoulder extends AbstractSneckoCard {
     public void upgrade() {
         this.upgradeDamage(4);// 49
         upgradeMagicNumber(8);
-        if (baseMagicNumber > baseDamage){
+        if (baseMagicNumber > baseDamage) {
             baseMagicNumber = baseDamage;
             magicNumber = baseMagicNumber;
         }

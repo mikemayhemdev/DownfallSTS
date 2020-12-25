@@ -1,15 +1,10 @@
 package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import sneckomod.SneckoMod;
-import sneckomod.powers.MudshieldPower;
 
 public class MuddleHandAction extends AbstractGameAction {
     private AbstractPlayer p;

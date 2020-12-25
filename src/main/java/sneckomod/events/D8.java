@@ -11,19 +11,13 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import guardian.GuardianMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class D8 extends AbstractImageEvent {
     public static final String ID = "sneckomod:D8";
@@ -60,7 +54,7 @@ public class D8 extends AbstractImageEvent {
         }
 
         this.imageEventText.setDialogOption(OPTIONS[0] + this.finalDmg + OPTIONS[1]);
-        if (tmp.size() > 0){
+        if (tmp.size() > 0) {
             this.imageEventText.setDialogOption(OPTIONS[2], new Pain(), new sneckomod.relics.D8());
         } else {
             this.imageEventText.setDialogOption(OPTIONS[4], true);

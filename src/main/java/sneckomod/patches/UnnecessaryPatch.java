@@ -18,8 +18,8 @@ public class UnnecessaryPatch {
     public static class InDraw {
         public static void Prefix(AbstractGameEffect __instance) {
             if (__instance.duration == (float) ReflectionHacks.getPrivateStatic(__instance.getClass(), "EFFECT_DUR")) {
-                ImprovisedAttack.storage = ((AbstractCard) ReflectionHacks.getPrivate(__instance, __instance.getClass(), "card"));
-                ImprovisedGuard.storage = ((AbstractCard) ReflectionHacks.getPrivate(__instance, __instance.getClass(), "card"));
+                ImprovisedAttack.storage = ReflectionHacks.getPrivate(__instance, __instance.getClass(), "card");
+                ImprovisedGuard.storage = ReflectionHacks.getPrivate(__instance, __instance.getClass(), "card");
             }
         }
     }

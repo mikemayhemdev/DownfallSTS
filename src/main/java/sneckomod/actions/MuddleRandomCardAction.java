@@ -1,14 +1,8 @@
 package sneckomod.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import guardian.cards.PackageShapes;
-import sneckomod.SneckoMod;
-import sneckomod.powers.MudshieldPower;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,8 +23,7 @@ public class MuddleRandomCardAction extends AbstractGameAction {
     }
 
 
-
-        public void update() {
+    public void update() {
         isDone = true;
         ArrayList<AbstractCard> myCardList = new ArrayList<>(AbstractDungeon.player.hand.group);
 

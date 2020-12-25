@@ -4,19 +4,16 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import guardian.patches.BottledStasisPatch;
 import sneckomod.SneckoMod;
 import sneckomod.patches.BottledD8Patch;
 import theHexaghost.util.TextureLoader;
 
-import java.util.ArrayList;
 import java.util.function.Predicate;
 
 public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
@@ -24,9 +21,8 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
     public static final String ID = SneckoMod.makeID("D8");
     private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("D8.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("D8.png"));
-
-    private boolean cardSelected = true;
     public AbstractCard card = null;
+    private boolean cardSelected = true;
 
     public D8() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);

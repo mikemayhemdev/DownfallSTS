@@ -20,7 +20,7 @@ public class DrawThenMuddleAction extends AbstractGameAction {
     public void update() {
         isDone = true;
         if (AbstractDungeon.player.drawPile.size() + AbstractDungeon.player.discardPile.size() < bruh) {
-        } else if (p.drawPile.isEmpty() || p.drawPile.size()-1 <= bruh) {
+        } else if (p.drawPile.isEmpty() || p.drawPile.size() - 1 <= bruh) {
             for (int i = 0; i < bruh; i++) {
                 int r = i;
                 addToTop(new AbstractGameAction() {

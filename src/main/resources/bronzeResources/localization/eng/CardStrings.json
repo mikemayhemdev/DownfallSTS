@@ -210,8 +210,8 @@
   },
   "bronze:BitShift": {
     "NAME": "Bit Shift",
-    "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs !M! less this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It costs !M! less this turn."
+    "DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in the Sequence to return to your hand. NL It gains Retain."
   },
   "bronze:Batch": {
     "NAME": "Batch",

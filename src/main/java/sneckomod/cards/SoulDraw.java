@@ -4,8 +4,6 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
-import sneckomod.actions.DrawThenMuddleAction;
-import sneckomod.actions.MuddleHandAction;
 
 public class SoulDraw extends AbstractSneckoCard {
 

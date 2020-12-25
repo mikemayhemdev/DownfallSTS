@@ -15,13 +15,12 @@ public class ImprovisedGuard extends AbstractSneckoCard {
 
     private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 3;
+    public static AbstractCard storage;
 
     public ImprovisedGuard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = BLOCK;
     }
-
-    public static AbstractCard storage;
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();

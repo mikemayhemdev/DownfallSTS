@@ -5,9 +5,9 @@ import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import downfall.util.RetainCardMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.Cheat;
-import sneckomod.util.FreeRetainMod;
 import theHexaghost.util.TextureLoader;
 
 public class SleevedAce extends CustomRelic {
@@ -23,7 +23,7 @@ public class SleevedAce extends CustomRelic {
     @Override
     public void atBattleStart() {
         AbstractCard q = new Cheat();
-        CardModifierManager.addModifier(q, new FreeRetainMod());
+        CardModifierManager.addModifier(q, new RetainCardMod());
         addToBot(new MakeTempCardInHandAction(q));
     }
 

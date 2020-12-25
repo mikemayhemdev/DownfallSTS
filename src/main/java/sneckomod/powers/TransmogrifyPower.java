@@ -1,6 +1,5 @@
 package sneckomod.powers;
 
-import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import sneckomod.SneckoMod;
 import sneckomod.util.TransmogrifyLinkedReward;
-import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.util.TextureLoader;
 
 public class TransmogrifyPower extends AbstractPower implements NonStackablePower {

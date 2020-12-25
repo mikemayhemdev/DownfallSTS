@@ -16,8 +16,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import sneckomod.SneckoMod;
 
 public class SoulExchangeAction extends AbstractGameAction {
-    private AbstractPlayer p;
     private static final String[] EXTENDED_DESCRIPTION = CardCrawlGame.languagePack.getCardStrings(SneckoMod.makeID("SoulExchange")).EXTENDED_DESCRIPTION;
+    private AbstractPlayer p;
 
     public SoulExchangeAction() {
         this.actionType = ActionType.CARD_MANIPULATION;// 22

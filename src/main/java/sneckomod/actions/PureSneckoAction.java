@@ -34,7 +34,7 @@ public class PureSneckoAction extends AbstractGameAction {
         }
 
         for (int i = 0; i < handSize; i++) {
-            if (this.up){
+            if (this.up) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandActionReduceCost(SneckoMod.getOffClassCard()));
             } else {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(SneckoMod.getOffClassCard()));

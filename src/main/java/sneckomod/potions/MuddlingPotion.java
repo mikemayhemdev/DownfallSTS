@@ -3,20 +3,14 @@ package sneckomod.potions;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.relics.SneckoEye;
 import sneckomod.SneckoMod;
-import sneckomod.actions.MuddleAction;
 import sneckomod.actions.MuddleRandomCardAction;
-import theHexaghost.HexaMod;
-
-import java.util.ArrayList;
 
 
 public class MuddlingPotion extends CustomPotion {
