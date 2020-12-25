@@ -5,6 +5,7 @@ import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
+import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardSave;
@@ -59,6 +60,21 @@ public class CardEffectsCardMod extends BronzeCardMod {
                     break;
                 default:
                     break;
+            }
+
+            CustomCard q = stored();
+            if (q.target == AbstractCard.CardTarget.SELF_AND_ENEMY || q.target == AbstractCard.CardTarget.ENEMY && card.target != AbstractCard.CardTarget.SELF_AND_ENEMY && card.target != AbstractCard.CardTarget.ENEMY) {
+                card.target = AbstractCard.CardTarget.SELF_AND_ENEMY;
+            }
+
+            if (q.type == AbstractCard.CardType.ATTACK && card.type != AbstractCard.CardType.ATTACK) {
+                card.type = AbstractCard.CardType.ATTACK;
+            }
+
+            if (q.type == AbstractCard.CardType.SKILL) {
+                q.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
+            } else {
+                q.setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
             }
         }
     }

@@ -69,36 +69,6 @@ public class FunctionHelper {
         secretStorage = makeFunction(false);
     }
 
-    public static void setImportantInfo(AbstractCard q) {
-        AbstractCard.CardTarget highestTarget = AbstractCard.CardTarget.ALL;
-        for (AbstractCard c : held.group) {
-            if (c.target == AbstractCard.CardTarget.SELF_AND_ENEMY || c.target == AbstractCard.CardTarget.ENEMY) {
-                if (highestTarget != AbstractCard.CardTarget.SELF_AND_ENEMY) {
-                    highestTarget = AbstractCard.CardTarget.SELF_AND_ENEMY;
-                }
-            }
-        }
-        q.target = highestTarget;
-
-        AbstractCard.CardType highestType = AbstractCard.CardType.SKILL;
-        for (AbstractCard c : held.group) {
-            if (c.type == AbstractCard.CardType.ATTACK) {
-                if (highestType != AbstractCard.CardType.ATTACK) {
-                    highestType = AbstractCard.CardType.ATTACK;
-                }
-            }
-        }
-        q.type = highestType;
-
-        if (q instanceof CustomCard) {
-            if (q.type == AbstractCard.CardType.SKILL) {
-                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
-            } else {
-                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
-            }
-        }
-    }
-
     public static void addToSequence(AbstractCard c) {
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAddToFuncPower) {

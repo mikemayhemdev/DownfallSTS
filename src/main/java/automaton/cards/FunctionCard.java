@@ -52,21 +52,6 @@ public class FunctionCard extends AbstractBronzeCard {
         super.doNothingSpecificInParticular();
     }
 
-    @Override
-    public AbstractCard makeStatEquivalentCopy() {
-        AbstractCard q = super.makeStatEquivalentCopy();
-        q.type = this.type;
-        q.target = this.target;
-        if (q instanceof CustomCard) {
-            if (q.type == AbstractCard.CardType.SKILL) {
-                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
-            } else {
-                ((CustomCard) q).setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
-            }
-        }
-        return q;
-    }
-
     @SpireOverride
     protected void renderBannerImage(SpriteBatch sb, float x, float y) {
         Color blah = ReflectionHacks.getPrivate(this, AbstractCard.class, "renderColor");
