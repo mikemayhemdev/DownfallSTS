@@ -249,7 +249,9 @@ public class FunctionHelper {
             float x = (max == 3 ? funcPositions[0].x : funcPositions[1].x);
             float y = (max == 3 ? funcPositions[0].y : funcPositions[1].y);
             secretStorage.target_x = x;
+            secretStorage.current_x = x;
             secretStorage.target_y = y;
+            secretStorage.current_y = y;
             secretStorage.targetDrawScale = FUNC_CARD_SIZE;
             secretStorage.drawScale = FUNC_CARD_SIZE;
         }
