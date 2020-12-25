@@ -474,10 +474,10 @@
       "Smash"
     ]
   },
-  "bronze:Infinite Loop": {
+  "bronze:InfiniteLoop": {
     "NAME": "Infinite Loop",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL bronze:Compile - Add a copy of this into your hand and increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
       "infinite",
       "Loop"
@@ -621,10 +621,5 @@
     "NAME": "Find and Replace",
     "DESCRIPTION": "Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile.",
     "UPGRADE_DESCRIPTION": "Retain. NL Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile."
-  },
-  "bronze:InfiniteLoop": {
-    "NAME": "Infinite Loop",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop into your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Infinite *Loop+ into your hand."
   }
 }
