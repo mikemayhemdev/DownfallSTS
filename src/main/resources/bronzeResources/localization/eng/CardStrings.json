@@ -262,7 +262,8 @@
   },
   "bronze:ForLoop": {
     "NAME": "For Loop",
-    "DESCRIPTION": "bronze:Compile - The next card in the Sequence activates its effects twice."
+    "DESCRIPTION": "The next card you bronze:Encode is bronze:Encoded X additional times.",
+    "UPGRADE_DESCRIPTION": "Retain. NL The next card you bronze:Encode is bronze:Encoded X additional times."
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",
