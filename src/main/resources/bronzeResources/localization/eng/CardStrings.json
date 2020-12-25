@@ -177,10 +177,10 @@
     ]
   },
   "bronze:Shield": {
-    "NAME": "Shield",
-    "DESCRIPTION": "Gain !B! Block.",
+    "NAME": "Sticky Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Slimed to your draw pile.",
     "EXTENDED_DESCRIPTION": [
-      "shielding",
+      "sticky",
       "Shield"
     ]
   },
