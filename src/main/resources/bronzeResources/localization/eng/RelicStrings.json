@@ -3,7 +3,7 @@
     "NAME": "Bronze Core",
     "FLAVOR": "Replace once every 50,000 years.",
     "DESCRIPTIONS": [
-      "All Functions you #yCompile cost #b1 less."
+      "The first 3 #yFunctions you #yCompile cost #b1 less."
     ]
   },
   "bronze:ProtectiveGoggles": {
