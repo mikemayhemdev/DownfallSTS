@@ -56,7 +56,7 @@
     ]
   },
   "bronze:FunctionCard": {
-    "NAME": "",
+    "NAME": "()",
     "DESCRIPTION": ""
   },
   "bronze:Goto": {

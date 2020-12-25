@@ -38,7 +38,8 @@ public class CardEffectsCardMod extends BronzeCardMod {
         store = new CardSave(q.cardID, q.timesUpgraded, q.misc);
     }
 
-    public CardEffectsCardMod(CardSave c) {
+    public CardEffectsCardMod(CardSave c, int addName) {
+        this.addName = addName;
         store = c;
         stored();
     }
@@ -190,7 +191,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             q.resetAttributes();
             return new CardEffectsCardMod(q, addName);
         }
-        return new CardEffectsCardMod(store);
+        return new CardEffectsCardMod(store, addName);
     }
 
     @Override
