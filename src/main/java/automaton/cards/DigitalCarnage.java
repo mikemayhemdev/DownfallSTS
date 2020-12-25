@@ -35,13 +35,13 @@ public class DigitalCarnage extends AbstractBronzeCard {
         if (Settings.FAST_MODE) {
             this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED)));
 
-            for(i = 0; i < 5; ++i) {
+            for (i = 0; i < 5; ++i) {
                 this.addToBot(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
             }
         } else {
             this.addToBot(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED), 0.4F));
 
-            for(i = 0; i < 5; ++i) {
+            for (i = 0; i < 5; ++i) {
                 this.addToBot(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
             }
         }
@@ -54,6 +54,12 @@ public class DigitalCarnage extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay, int count) {
         super.onCompile(function, forGameplay, count);
         CardModifierManager.addModifier(function, new EtherealMod());
+    }
+
+    @Override
+    public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
+        function.cost += 1;
+        function.costForTurn += 1;
     }
 
     public void upp() {

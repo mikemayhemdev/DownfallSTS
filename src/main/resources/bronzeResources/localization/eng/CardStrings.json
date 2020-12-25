@@ -264,7 +264,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "Digital Carnage",
-    "DESCRIPTION": "Ethereal. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function gains Ethereal.",
+    "DESCRIPTION": "Ethereal. NL \u00A0 Deal !D! damage. NL bronze:Compile - Function costs [E] more and gains Ethereal.",
     "EXTENDED_DESCRIPTION": [
       "digital",
       "Carnage"
