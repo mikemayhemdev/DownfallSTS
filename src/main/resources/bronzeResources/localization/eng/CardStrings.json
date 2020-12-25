@@ -240,8 +240,8 @@
   },
   "bronze:ChildClass": {
     "NAME": "Child Class",
-    "DESCRIPTION": "bronze:Compile - Gain a second copy of the Function.",
-    "UPGRADE_DESCRIPTION": "Retain. NL bronze:Compile - Gain a second copy of the Function."
+    "DESCRIPTION": "The next Function you bronze:Compile costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "Retain. NL The next Function you bronze:Compile costs 0 until played."
   },
   "bronze:Repair": {
     "NAME": "Repair",
@@ -261,7 +261,8 @@
   },
   "bronze:ForLoop": {
     "NAME": "For Loop",
-    "DESCRIPTION": "bronze:Compile - The next card in the Sequence activates its effects twice."
+    "DESCRIPTION": "The next card you bronze:Encode is bronze:Encoded X additional times.",
+    "UPGRADE_DESCRIPTION": "Retain. NL The next card you bronze:Encode is bronze:Encoded X additional times."
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",

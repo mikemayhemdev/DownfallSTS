@@ -132,6 +132,11 @@ public abstract class AbstractBronzeCard extends CustomCard {
         CardModifierManager.addModifier(function, new CardEffectsCardMod(this));
     }
 
+    public void onCompileToChangeCost(AbstractCard function, boolean forGameplay) {
+        // Called after all cards have done onCompile, before relics and powers have.
+
+    }
+
     public void onInput() {
         // Called when the card is about to enter the Sequence. This could be deleted if it stays unused.
     }

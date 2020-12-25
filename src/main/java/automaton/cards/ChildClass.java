@@ -1,7 +1,6 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
-import automaton.FunctionHelper;
+import automaton.powers.FreeFunctionPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
@@ -13,20 +12,12 @@ public class ChildClass extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ChildClass() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        thisEncodes();
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        tags.add(AutomatonMod.MODIFIES_OUTPUT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-    }
-
-    @Override
-    public boolean onOutput() {
-        makeInHand(FunctionHelper.makeFunction(true));
-        return true;
+        applyToSelf(new FreeFunctionPower(1));
     }
 
     public void upp() {

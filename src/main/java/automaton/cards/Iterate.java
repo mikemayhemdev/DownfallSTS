@@ -15,7 +15,7 @@ public class Iterate extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public Iterate() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
