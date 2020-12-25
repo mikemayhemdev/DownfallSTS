@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
 
@@ -70,7 +71,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
             ArrayList<AbstractCard> cardsList = getRandomEncodeChoices(2);
-            addToBot(new SelectCardsAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> {
+            addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> { //TODO: Needs localization
                 addToTop(new AddToFuncAction(cards.get(0), null));
             }));
         }
