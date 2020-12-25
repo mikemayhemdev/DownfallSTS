@@ -1,5 +1,6 @@
 package sneckomod;
 
+import automaton.AutomatonMod;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
@@ -358,7 +359,7 @@ public class SneckoMod implements
 
         ArrayList<AbstractCard> tmp = CardLibrary.getAllCards();
         for (AbstractCard c : tmp) {
-            if (c.type == AbstractCard.CardType.STATUS) {
+            if (c.type == AbstractCard.CardType.STATUS && !(c.hasTag(AutomatonMod.GOOD_STATUS))) {
                 statuses.add(c);
             }
         }
