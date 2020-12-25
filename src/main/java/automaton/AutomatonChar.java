@@ -75,7 +75,7 @@ public class AutomatonChar extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                70, 70, 0, 101, 5, this, getStartingRelics(),
+                70, 70, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
