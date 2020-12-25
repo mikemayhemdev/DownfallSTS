@@ -505,10 +505,10 @@
     "DESCRIPTION": "This turn, your next Function is played twice. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL This turn, your next Function is played twice. NL Exhaust."
   },
-  "bronze:Seek": {
-    "NAME": "Seek",
-    "DESCRIPTION": "Put !M! card from your draw pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Put !M! card from your draw pile into your hand. NL Exhaust."
+  "bronze:LegacyCode": {
+    "NAME": "Legacy Code",
+    "DESCRIPTION": "Put !M! card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Put !M! cards from your draw pile into your hand."
   },
   "bronze:Repulsor": {
     "NAME": "Repulsor",
