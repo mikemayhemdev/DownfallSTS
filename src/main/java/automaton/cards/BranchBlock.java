@@ -4,17 +4,16 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.CardIgnore;
 
-@CardIgnore
 public class BranchBlock extends AbstractBronzeCard {
 
     public final static String ID = makeID("BranchBlock");
 
     //stupid intellij stuff attack, self_and_enemy, common
 
-    private static final int BLOCK = 9;
+    private static final int BLOCK = 8;
 
     public BranchBlock() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         baseBlock = BLOCK;
     }
 

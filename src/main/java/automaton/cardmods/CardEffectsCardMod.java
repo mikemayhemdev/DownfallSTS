@@ -107,6 +107,11 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public AbstractCardModifier makeCopy() {
+        if (FunctionHelper.cardModsInfo.containsKey(this)) {
+            AbstractCard q = FunctionHelper.cardModsInfo.get(this).makeStatEquivalentCopy();
+            q.resetAttributes();
+            return new CardEffectsCardMod(q);
+        }
         return new CardEffectsCardMod(store);
     }
 
