@@ -53,8 +53,8 @@ public class BugBarrage extends AbstractBronzeCard {
             int clamp = BaseMod.MAX_HAND_SIZE - (AbstractDungeon.player.hand.group.size() - 1);
             x += Math.min(magicNumber, clamp);
 
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + x;
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2] + x;
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[3];
 
             this.initializeDescription();
         }

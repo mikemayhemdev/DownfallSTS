@@ -87,8 +87,8 @@ public class BurnOut extends AbstractBronzeCard {
                 }
             }
 
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + statusCount;
-            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[2] + statusCount;
+            this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[3];
 
             this.initializeDescription();
         }
