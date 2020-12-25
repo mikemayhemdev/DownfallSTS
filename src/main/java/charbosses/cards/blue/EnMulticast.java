@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class EnMulticast extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Multi-Cast";
     private static final CardStrings cardStrings;
+    private int cost;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Multi-Cast");
@@ -22,14 +23,22 @@ public class EnMulticast extends AbstractBossCard {
 
     public EnMulticast() {
         super(ID, cardStrings.NAME, "blue/skill/multicast", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
+        cost = 2;
+        this.showEvokeValue = true;
+    }
+
+    public EnMulticast(int inCost) {
+        super(ID, cardStrings.NAME, "blue/skill/multicast", inCost, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
+        cost = inCost;
         this.showEvokeValue = true;
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        this.addToBot(new EnemyAnimateOrbAction(1));
-        this.addToBot(new EnemyEvokeWithoutRemovingOrbAction(1));
+        for (int i = 0; i < cost - 1; i++) {
+            this.addToBot(new EnemyAnimateOrbAction(1));
+            this.addToBot(new EnemyEvokeWithoutRemovingOrbAction(1));
+        }
         this.addToBot(new EnemyAnimateOrbAction(1));
         this.addToBot(new EnemyEvokeOrbAction(1));
     }

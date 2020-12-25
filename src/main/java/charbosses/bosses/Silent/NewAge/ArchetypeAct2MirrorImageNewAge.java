@@ -54,17 +54,17 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
                 case 1:
                     //Turn 2
                     addToList(cardsList, new EnNightmare(), false);
-                    addToList(cardsList, new EnDeflect());
-                    addToList(cardsList, new EnJAX());
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
+                    addToList(cardsList, new EnJAX(), true);
                     addToList(cardsList, new EnDaggerSpray());
                     addToList(cardsList, new EnDecay());  //Not played here
                     turn++;
                     break;
                 case 2:
                     //Turn 3
-                    addToList(cardsList, new EnDeflect());
-                    addToList(cardsList, new EnDeflect());
-                    addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
                     addToList(cardsList, new EnOutmaneuver());
                     addToList(cardsList, new EnFlyingKnee());
                     addToList(cardsList, new EnBlur());
@@ -84,21 +84,21 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnJAX());
+                    addToList(cardsList, new EnJAX(), true);
                     addToList(cardsList, new EnDeflect());
                     addToList(cardsList, new EnDecay());  //Not played here
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnDeflect());
-                    addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
                     addToList(cardsList, new EnDaggerSpray());
                     turn++;
                     break;
                 case 2:
                     addToList(cardsList, new EnOutmaneuver());
                     addToList(cardsList, new EnFlyingKnee());
-                    addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDeflect(), extraUpgrades);
                     turn++;
                     break;
                 case 3:

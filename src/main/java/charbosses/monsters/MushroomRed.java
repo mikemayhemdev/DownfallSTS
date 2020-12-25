@@ -13,7 +13,7 @@ public class MushroomRed extends AbstractMonster {
     public static final String ID = downfallMod.makeID("MushroomRed");
     private static final MonsterStrings monsterStrings = CardCrawlGame.languagePack.getMonsterStrings(ID);
     public static final String NAME = monsterStrings.NAME;
-    private static final int MAX_HP = 20;
+    private static final int MAX_HP = 25;
     private int protectionAmt;
 
     public MushroomRed(float x, float y) {
@@ -22,7 +22,7 @@ public class MushroomRed extends AbstractMonster {
         state.setAnimation(0, "Idle", true);
         stateData.setMix("Idle", "Rawr", 0.2F);
 
-        this.damage.add(new DamageInfo(this, 5));
+        this.damage.add(new DamageInfo(this, 10));
     }
 
 
