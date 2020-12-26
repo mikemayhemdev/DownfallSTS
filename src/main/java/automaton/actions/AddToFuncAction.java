@@ -17,8 +17,12 @@ public class AddToFuncAction extends AbstractGameAction {
     @Override
     public void update() {
         isDone = true;
-        if (container != null)
-            container.removeCard(myCard);
-        FunctionHelper.addToSequence(myCard);
+        if (FunctionHelper.held.size() < FunctionHelper.max) {
+            if (container != null)
+                container.removeCard(myCard);
+            FunctionHelper.addToSequence(myCard);
+        } else {
+            addToBot(new AddToFuncAction(myCard, container)); // Shoddy but hopefully workable fix.
+        }
     }
 }
