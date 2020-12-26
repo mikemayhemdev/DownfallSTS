@@ -2,9 +2,7 @@ package automaton.cardmods;
 
 import automaton.AutomatonMod;
 import basemod.abstracts.AbstractCardModifier;
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -21,7 +19,9 @@ public class EncodeAndShuffleMod extends BronzeCardMod {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        atb(new MakeTempCardInDiscardAction(card.makeStatEquivalentCopy(), 1));
+        if (!card.purgeOnUse) {
+            atb(new MakeTempCardInDiscardAction(card.makeStatEquivalentCopy(), 1));
+        }
     }
 
     @Override
