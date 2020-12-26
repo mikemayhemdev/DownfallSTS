@@ -416,8 +416,8 @@
   },
   "bronze:ForLoop": {
     "NAME": "For Loop",
-    "DESCRIPTION": "The next card you bronze:Encode is bronze:Encoded X additional times.",
-    "UPGRADE_DESCRIPTION": "Retain. NL The next card you bronze:Encode is bronze:Encoded X additional times."
+    "DESCRIPTION": "The next card you bronze:Encode causes X additional copies to also be bronze:Encoded. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL The next card you bronze:Encode causes X additional copies to also be bronze:Encoded. NL Exhaust."
   },
   "bronze:Philosophize": {
     "NAME": "Philosophize",

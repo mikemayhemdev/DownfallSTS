@@ -10,7 +10,7 @@
     "NAME": "Protective Goggles",
     "FLAVOR": "Look closely.",
     "DESCRIPTIONS": [
-      "If you end your turn with no cards in the #ySequence, gain #b8 #yBlock."
+      "If you end your turn with no cards in the #ySequence, gain #b4 #yBlock."
     ]
   },
   "bronze:DecasWashers": {

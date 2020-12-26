@@ -54,6 +54,6 @@ public class ChosenStrike extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(1);
     }
 }
