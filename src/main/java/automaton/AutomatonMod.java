@@ -291,10 +291,13 @@ public class AutomatonMod implements
         FunctionHelper.doStuff = false;
     }
 
+    public static CompileDisplayPanel compileDisplayPanel;
+
     @Override
     public void receiveStartGame() {
         EasyInfoDisplayPanel.specialDisplays.clear();
-        EasyInfoDisplayPanel.specialDisplays.add(new CompileDisplayPanel());
+        compileDisplayPanel = new CompileDisplayPanel();
+        EasyInfoDisplayPanel.specialDisplays.add(compileDisplayPanel);
         EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
