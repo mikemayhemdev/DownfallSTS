@@ -87,7 +87,7 @@ public class FunctionCard extends AbstractBronzeCard {
         int x = cards().size();
         switch (x) {
             case 0: {
-                //SpireSuper.call(sb);  //TODO - Alternate art for the blank Function in the FunctionHelper - for now, it'll render behind itself.
+                //SpireSuper.call(sb);
                 break;
             }
             case 1: {

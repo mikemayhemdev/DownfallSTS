@@ -76,7 +76,7 @@ public class AutomatonMod implements
     public static Color placeholderColor = new Color(214F / 255F, 202F / 255F, 158F / 255F, 1);
     public static Color potionLabColor = new Color(214F / 255F, 202F / 255F, 158F / 255F, 1);
     private static String modID = "bronze";
-    private CustomUnlockBundle unlocks0; // TODO: Figure this out
+    private CustomUnlockBundle unlocks0; // TODO: Set this up
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
@@ -233,13 +233,12 @@ public class AutomatonMod implements
 
     @Override
     public void receiveSetUnlocks() {
-        //TODO: This
+        //TODO: Set this up
 
     }
 
     public void receivePostInitialize() {
         addPotions();
-        //TODO: This
 
         BaseMod.addEvent(new AddEventParams.Builder(ShapeFactory.ID, ShapeFactory.class) //Event ID//
                 //Event Character//

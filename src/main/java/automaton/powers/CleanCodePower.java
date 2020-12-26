@@ -31,7 +31,7 @@ public class CleanCodePower extends AbstractAutomatonPower implements PreCardCom
                     String[] splitText = q.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
                     String compileText = splitText[1] + splitText[2];
                     q.rawDescription = q.rawDescription.replaceAll(compileText, "");
-                } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+                }
                 else if (q.rawDescription.contains("bronze:Compile")) { // This specifically triggers for cards that only have Compile effects.
                     q.rawDescription = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
                 }
