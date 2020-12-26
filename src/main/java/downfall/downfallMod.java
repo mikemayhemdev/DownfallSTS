@@ -10,8 +10,9 @@ Event Override patches, and other things that only appear during Evil Runs.
 
 import automaton.AutomatonMod;
 import automaton.EasyInfoDisplayPanel;
-import automaton.FunctionHelper;
 import automaton.SuperTip;
+import automaton.cardmods.EncodeMod;
+import automaton.cards.SpaghettiCode;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -24,12 +25,10 @@ import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
-import champ.monsters.BlackKnight;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
 import charbosses.actions.util.CharBossMonsterGroup;
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
@@ -69,7 +68,6 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.GoldenIdol;
 import com.megacrit.cardcrawl.relics.NeowsLament;
@@ -1051,6 +1049,7 @@ public class downfallMod implements
         l.add(new CustomMod(EvilRun.ID, "b", false));
         l.add(new CustomMod(ExchangeController.ID, "r", true));
         l.add(new CustomMod(Lament.ID, "g", true));
+        l.add(new CustomMod(Analytical.ID, "g", false));
     }
 
     @Override
@@ -1094,6 +1093,15 @@ public class downfallMod implements
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Lament.ID)) || ModHelper.isModEnabled(Lament.ID)) {
             RelicLibrary.getRelic(NeowsLament.ID).makeCopy().instantObtain();
 
+        }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Analytical.ID)) || ModHelper.isModEnabled(Analytical.ID)) {
+            for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+                if (q.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || q.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                    q.tags.add(AutomatonMod.ENCODES);
+                    CardModifierManager.addModifier(q, new EncodeMod());
+                }
+            }
         }
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Improvised.ID) || ModHelper.isModEnabled(Improvised.ID)) {
@@ -1211,6 +1219,13 @@ public class downfallMod implements
             for (AbstractMonster m : abstractRoom.monsters.monsters)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new LastStandModPower(m, AbstractDungeon.actNum * 2), AbstractDungeon.actNum * 2));
         }
+
+        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Analytical.ID)) || ModHelper.isModEnabled(Analytical.ID)) {
+            AbstractCard r = new SpaghettiCode();
+            r.setCostForTurn(0);
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(r));
+        }
+
 
     }
 

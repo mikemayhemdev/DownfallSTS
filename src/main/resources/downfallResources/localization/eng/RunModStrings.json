@@ -34,5 +34,9 @@
   "downfall:Enraging": {
     "NAME": "Last Stand",
     "DESCRIPTION": "All enemies gain Strength and cleanse debuffs on their next turn when reduced to 50% HP."
+  },
+  "downfall:Analytical": {
+    "NAME": "Analytical",
+    "DESCRIPTION": "Start each combat with a Spaghetti Code that costs 0. Basic Strikes and Defends Encode."
   }
 }

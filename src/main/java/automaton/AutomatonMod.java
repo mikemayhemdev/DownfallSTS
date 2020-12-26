@@ -204,8 +204,6 @@ public class AutomatonMod implements
         BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new Timepiece(), AutomatonChar.Enums.BRONZE_AUTOMATON);
-
-        BaseMod.addRelicToCustomPool(new VexRelic(), AutomatonChar.Enums.BRONZE_AUTOMATON);
     }
 
 
