@@ -2,7 +2,7 @@ package champ.cards;
 
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
-import downfall.util.RetainCardMod;
+import downfall.cardmods.RetainCardMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
