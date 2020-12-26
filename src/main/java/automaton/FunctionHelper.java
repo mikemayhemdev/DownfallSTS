@@ -34,8 +34,8 @@ public class FunctionHelper {
     public static final float SEQUENCED_CARD_SIZE = 0.225f; // Card sizes DON'T need to be scaled, because renderCard in AbstractCard already multiplies.
     public static final float FUNC_CARD_SIZE = 0.45f;
 
-    public static final float BG_X = 150f; // Yes, these DO need to be scaled, because it's a direct position that isn't interpreted or multipled later on. But how!?
-    public static final float BG_Y = 700f; // I tried both multiplying both by settings.scale, and using xScale and yScale. No dice
+    public static final float BG_X = 150f * Settings.scale; // Yes, these DO need to be scaled, because it's a direct position that isn't interpreted or multipled later on. But how!?
+    public static final float BG_Y = 700f * Settings.scale; // I tried both multiplying both by settings.scale, and using xScale and yScale. No dice
     public static final float HEIGHT_SEQUENCE = 768f * Settings.yScale; // As these are just height, should I multiply by Settings.scale or Settings.yScale?
     public static final float HEIGHT_FUNCTION = 820f * Settings.yScale; // It looks like basegame typically uses Settings.HEIGHT to calculate these. I'll try yScale. That was correct
 
@@ -194,7 +194,7 @@ public class FunctionHelper {
         if (max == 4) {
             sb.draw(bg_4card, BG_X, BG_Y, bg_4card.getWidth() / 2F, bg_4card.getHeight() / 2F, bg_4card.getWidth(), bg_4card.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
         } else {
-            sb.draw(bg, BG_X, BG_Y, bg.getWidth() / 2F, bg.getHeight() / 2F, bg.getWidth(), bg.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
+            sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
         }
         for (AbstractCard c : held.group) {
             c.render(sb);
