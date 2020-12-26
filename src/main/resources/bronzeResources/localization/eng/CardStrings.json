@@ -102,7 +102,7 @@
     "NAME": "Iterate",
     "DESCRIPTION": "Deal !D! damage !M! times.",
     "EXTENDED_DESCRIPTION": [
-      "iterating",
+      "parsed",
       "Iterate"
     ]
   },
@@ -170,7 +170,7 @@
     "NAME": "Frontload",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function gains Retain.",
     "EXTENDED_DESCRIPTION": [
-      "frontloaded",
+      "sturdy",
       "Wall"
     ]
   },
@@ -228,7 +228,7 @@
     "NAME": "Constructor",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the Sequence, double its Block.",
     "EXTENDED_DESCRIPTION": [
-      "constructing",
+      "build",
       "Sadness"
     ]
   },
@@ -236,8 +236,8 @@
     "NAME": "Separator",
     "DESCRIPTION": "bronze:Compile - Gain [E] . NL If this is not the first or last card in the Sequence, gain NL !M! [E] .",
     "EXTENDED_DESCRIPTION": [
-      "unfortunate",
-      "Separation"
+      "mild",
+      "Energy"
     ]
   },
   "bronze:Update": {
@@ -247,11 +247,7 @@
   "bronze:Overload": {
     "NAME": "Overload",
     "DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode.",
-    "EXTENDED_DESCRIPTION": [
-      "overloading",
-      "Energy"
-    ]
+    "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode."
   },
   "bronze:ReverseEngineer": {
     "NAME": "Reverse Engineer",
@@ -289,7 +285,7 @@
     "NAME": "Fortify",
     "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Dexterity.",
     "EXTENDED_DESCRIPTION": [
-      "fortified",
+      "solid",
       "Fortress"
     ]
   },
@@ -398,7 +394,7 @@
     "NAME": "Boost",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
-      "boosting",
+      "boosted",
       "Boost"
     ]
   },
@@ -427,7 +423,7 @@
     "NAME": "Philosophize",
     "DESCRIPTION": "Gain !bauto! Strength. NL bronze:Compile - ALL enemies gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
-      "thinking",
+      "smart",
       "Idea"
     ]
   },
@@ -550,7 +546,7 @@
     "NAME": "Branch: Block",
     "DESCRIPTION": "Gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
-      "branching",
+      "forked",
       "Branch"
     ]
   },
@@ -558,7 +554,7 @@
     "NAME": "Branch: Attack",
     "DESCRIPTION": "Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
-      "branching",
+      "forked",
       "Branch"
     ]
   },
