@@ -21,10 +21,7 @@ public class GlobalRenderSpecialHookPatch {
         if (HexaMod.renderFlames) {
             HexaMod.renderGhostflames(sb);
         }
-        if (FunctionHelper.doStuff) {
-            FunctionHelper.render(sb);
-        }
-        SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_ENERGYPANEL);
+        SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_PLAYER_RENDER);
         StanceHelper.render(sb);
     }
 }

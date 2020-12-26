@@ -7,7 +7,8 @@ import java.util.ArrayList;
 public abstract class EasyInfoDisplayPanel {
     public enum RENDER_TIMING {
         TIMING_RENDERSUBSCRIBER,
-        TIMING_ENERGYPANEL
+        TIMING_PLAYER_RENDER,
+        TIMING_ENERGYPANEL_RENDER
     }
 
     public float x;

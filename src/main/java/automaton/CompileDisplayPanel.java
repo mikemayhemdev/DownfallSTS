@@ -38,6 +38,6 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 
     @Override
     public RENDER_TIMING getTiming() {
-        return RENDER_TIMING.TIMING_ENERGYPANEL;
+        return RENDER_TIMING.TIMING_ENERGYPANEL_RENDER;
     }
 }
