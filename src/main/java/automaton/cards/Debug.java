@@ -34,7 +34,7 @@ public class Debug extends AbstractBronzeCard {
                 q.initializeDescription();
             }
         }
-        FunctionHelper.applyPowers();
+        FunctionHelper.genPreview();
     }
 
     public void upp() {

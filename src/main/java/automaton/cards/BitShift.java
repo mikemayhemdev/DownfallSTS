@@ -35,7 +35,7 @@ public class BitShift extends AbstractBronzeCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    FunctionHelper.applyPowers();
+                    FunctionHelper.genPreview();
                 }
             });
             AbstractCard q = cards.get(0);

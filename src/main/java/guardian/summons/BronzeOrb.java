@@ -64,7 +64,7 @@ public class BronzeOrbWhoReallyLikesDefectForSomeReason extends AbstractFriendly
         if (this.hasPower(BronzeOrbDamagePower.POWER_ID)) {
             DamageInfo damageInfo = this.damage.get(0);
             damageInfo.base = this.getPower(BronzeOrbDamagePower.POWER_ID).amount;
-            damageInfo.applyPowers(this, abstractMonster);
+            damageInfo.genPreview(this, abstractMonster);
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.SKY)));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(this.hb.cX, this.hb.cY + 30F * Settings.scale, abstractMonster.hb.cX, abstractMonster.hb.cY), 0.3F));

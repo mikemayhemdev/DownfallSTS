@@ -2,7 +2,6 @@ package automaton.powers;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.CardEffectsCardMod;
-import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
@@ -33,7 +32,7 @@ public class VerifyPower extends AbstractAutomatonPower {
                     ((CardEffectsCardMod) m).stored().baseAuto += amount;
                     ((CardEffectsCardMod) m).stored().auto += amount;
                     ((CardEffectsCardMod) m).stored().applyPowers();
-                    FunctionHelper.applyPowers();
+                    FunctionHelper.genPreview();
                 }
             }
             function.superFlash();

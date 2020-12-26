@@ -301,6 +301,7 @@ public class AutomatonMod implements
         EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
+            FunctionHelper.genPreview();
         }
         if (CardCrawlGame.loadingSave) {
             if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {

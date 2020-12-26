@@ -37,13 +37,13 @@ public class EnHeavyBlade extends AbstractBossCard {
     }
 
     /*
-    public void applyPowers() {
+    public void genPreview() {
         AbstractPower strength = this.owner.getPower("Strength");
         if (strength != null) {
             strength.amount *= this.magicNumber;
         }
 
-        super.applyPowers();
+        super.genPreview();
         if (strength != null) {
             strength.amount /= this.magicNumber;
         }

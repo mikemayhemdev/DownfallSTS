@@ -150,7 +150,7 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
     /*
     AbstractBossCard c = new EnRitualDagger();  //removed
                     c.misc += 5;
-                    c.applyPowers();
+                    c.genPreview();
                     c.baseDamage = c.misc;
                     c.isDamageModified = false;
                     addToDeck(c, true);

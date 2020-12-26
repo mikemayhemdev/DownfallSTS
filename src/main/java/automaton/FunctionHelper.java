@@ -64,7 +64,7 @@ public class FunctionHelper {
         doStuff = true;
     }
 
-    public static void applyPowers() {
+    public static void genPreview() {
         secretStorage = makeFunction(false);
     }
 

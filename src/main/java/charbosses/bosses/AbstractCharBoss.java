@@ -442,8 +442,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         super.applyPowers();
         this.hand.applyPowers();
         /*
-        this.drawPile.applyPowers();
-        this.discardPile.applyPowers();
+        this.drawPile.genPreview();
+        this.discardPile.genPreview();
         */
     }
 
@@ -1474,7 +1474,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     if (aliveMonsters == 1 && this.hoveredMonster == null) {
                         this.hoveredCard.calculateCardDamage(theMonster);
                         this.hoveredCard.render(sb);
-                        this.hoveredCard.applyPowers();
+                        this.hoveredCard.genPreview();
                     }
                     else {
                         this.hoveredCard.render(sb);
@@ -1487,7 +1487,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             if (this.hoveredMonster != null) {
                 this.hoveredCard.calculateCardDamage(this.hoveredMonster);
                 this.hoveredCard.render(sb);
-                this.hoveredCard.applyPowers();
+                this.hoveredCard.genPreview();
             }
             else if (aliveMonsters != 1) {
                 this.hoveredCard.render(sb);

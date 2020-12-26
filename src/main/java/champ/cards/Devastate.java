@@ -48,7 +48,7 @@ public class Devastate extends AbstractChampCard {
     public void applyPowers() {
         baseDamage = misc;
         super.applyPowers();
-        //applyPowers();
+        //genPreview();
         initializeDescription();
     }
 

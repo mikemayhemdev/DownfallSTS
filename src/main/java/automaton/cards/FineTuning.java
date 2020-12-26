@@ -35,7 +35,7 @@ public class FineTuning extends AbstractBronzeCard {
             }
             q.applyPowers();
             q.superFlash();
-            FunctionHelper.applyPowers();
+            FunctionHelper.genPreview();
         }
     }
 
