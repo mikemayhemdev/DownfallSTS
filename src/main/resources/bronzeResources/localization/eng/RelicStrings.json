@@ -72,7 +72,7 @@
   },
   "bronze:BottledCode": {
     "NAME": "Bottled Code",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "Actually, I have code for that exact thing...",
     "DESCRIPTIONS": [
       "Upon pickup, choose a card with #yEncode. Start each combat with this card in the #ySequence.",
       "Choose a card for ",
