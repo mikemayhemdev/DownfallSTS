@@ -18,6 +18,9 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
         bossMechanicName = bossMechanicString.DIALOG[0];
         bossMechanicDesc = bossMechanicString.DIALOG[1];
+
+        maxHPModifier += 100;
+        actNum = 1;
     }
 
     private int steamBarrierCasts;

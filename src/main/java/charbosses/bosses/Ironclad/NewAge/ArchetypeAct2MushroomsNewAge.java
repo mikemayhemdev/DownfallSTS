@@ -21,6 +21,9 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
         super("IC_MUSHROOM_ARCHETYPE", "Mushroom");
         bossMechanicName = bossMechanicString.DIALOG[18];
         bossMechanicDesc = bossMechanicString.DIALOG[19];
+
+        maxHPModifier += 200;
+        actNum = 2;
     }
 
     public void initialize() {

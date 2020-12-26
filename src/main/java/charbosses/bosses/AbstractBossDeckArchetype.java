@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
+import downfall.monsters.NeowBoss;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,6 +19,9 @@ public abstract class AbstractBossDeckArchetype {
 
     public String bossMechanicName;
     public String bossMechanicDesc;
+
+    public int maxHPModifier;
+    public int actNum;
 
     /*
 
@@ -106,6 +110,7 @@ public abstract class AbstractBossDeckArchetype {
     }
 
     public AbstractBossDeckArchetype(String id, String loggerClassName, String loggerArchetypeName) {
+
         /*
         this.ID = id;
         this.allCards = new ArrayList<AbstractBossCard>();

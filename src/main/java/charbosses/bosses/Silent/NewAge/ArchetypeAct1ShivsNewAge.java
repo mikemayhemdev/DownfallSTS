@@ -18,6 +18,9 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
         super("SI_SHIV_ARCHETYPE", "Shivs");
         bossMechanicName = bossMechanicString.DIALOG[6];
         bossMechanicDesc = bossMechanicString.DIALOG[7];
+
+        maxHPModifier += 100;
+        actNum = 1;
     }
 
     public void initialize() {

@@ -14,7 +14,7 @@ public class Repair extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 7;
     private static final int UPG_MAGIC = 3;
 
     public Repair() {

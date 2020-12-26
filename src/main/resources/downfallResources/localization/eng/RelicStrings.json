@@ -3,8 +3,8 @@
     "NAME": "Neow's Blessing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose all your Potion slots,draw #b2 less cards and lose ",
-      " at the start of your turn."
+      "Boss has increased max HP, no starter relic, draws #b2 less cards, and has 1 less ",
+      " ."
     ]
   },
   "downfall:NeowBlessing_Player": {

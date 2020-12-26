@@ -24,6 +24,9 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         super("DF_ARCHETYPE_CLAW", "Claw");
         bossMechanicName = bossMechanicString.DIALOG[2];
         bossMechanicDesc = bossMechanicString.DIALOG[3];
+
+        maxHPModifier += 200;
+        actNum = 2;
     }
 
     public void initialize() {

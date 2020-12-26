@@ -27,6 +27,9 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         super("DF_ARCHETYPE_ORBS", "Orbs");
         bossMechanicName = bossMechanicString.DIALOG[16];
         bossMechanicDesc = bossMechanicString.DIALOG[17];
+
+        maxHPModifier += 350;
+        actNum = 3;
     }
 
     private void increasePretendFocus(int amount) {

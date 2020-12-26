@@ -20,6 +20,9 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
         super("SI_MIRROR_ARCHETYPE", "Mirror");
         bossMechanicName = bossMechanicString.DIALOG[10];
         bossMechanicDesc = bossMechanicString.DIALOG[11];
+
+        maxHPModifier += 150;
+        actNum = 2;
     }
 
     public void initialize() {

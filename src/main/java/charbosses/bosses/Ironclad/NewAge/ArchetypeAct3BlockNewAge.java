@@ -23,6 +23,9 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
         super("IC_BLOCK_ARCHETYPE", "Block");
         bossMechanicName = bossMechanicString.DIALOG[12];
         bossMechanicDesc = bossMechanicString.DIALOG[13];
+
+        maxHPModifier += 300;
+        actNum = 3;
     }
 
     public void initialize() {

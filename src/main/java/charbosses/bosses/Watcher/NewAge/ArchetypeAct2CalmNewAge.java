@@ -24,6 +24,9 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         super("WA_ARCHETYPE_CALM", "Calm");
         bossMechanicName = bossMechanicString.DIALOG[4];
         bossMechanicDesc = bossMechanicString.DIALOG[5];
+
+        maxHPModifier += 200;
+        actNum = 2;
     }
 
     public void initialize() {

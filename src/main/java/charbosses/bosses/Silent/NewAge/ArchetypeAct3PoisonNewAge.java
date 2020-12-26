@@ -19,6 +19,9 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
         super("SI_POISON_ARCHETYPE", "Poison");
         bossMechanicName = bossMechanicString.DIALOG[14];
         bossMechanicDesc = bossMechanicString.DIALOG[15];
+
+        maxHPModifier += 350;
+        actNum = 3;
     }
 
     public void initialize() {

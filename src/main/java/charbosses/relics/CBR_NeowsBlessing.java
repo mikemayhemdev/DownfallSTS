@@ -21,24 +21,6 @@ public class CBR_NeowsBlessing extends AbstractCharbossRelic {
         this.largeImg = null;
     }
 
-    public void onEquip() {
-        if (AbstractDungeon.actNum <= 3) {
-            this.HP = MathUtils.floor(100 + ((AbstractDungeon.actNum - 1) * 100));
-            if (AbstractDungeon.ascensionLevel >= 9) {
-                this.HP += 20;
-            }
-            owner.increaseMaxHp(MathUtils.floor(this.HP), false);
-        } else {
-            this.HP = MathUtils.floor(100 + ((1) * 100));
-            if (AbstractDungeon.ascensionLevel >= 9) {
-                this.HP += 20;
-            }
-            owner.increaseMaxHp(MathUtils.floor(this.HP), false);
-        }
-        updateDescription(null);
-    }
-
-
     @Override
     public void updateDescription(final AbstractPlayer.PlayerClass c) {
         this.description = getUpdatedDescription();

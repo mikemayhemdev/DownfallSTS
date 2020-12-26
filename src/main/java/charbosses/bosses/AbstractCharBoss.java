@@ -202,6 +202,28 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             new CBR_LizardTail().instantObtain(this);
             new CBR_MagicFlower().instantObtain(this);
         }
+        if (NeowBoss.neowboss != null){
+            switch (chosenArchetype.actNum){
+                case 1:{
+                    chosenArchetype.maxHPModifier = 250;
+                    break;
+
+                }
+                case 2:{
+                    chosenArchetype.maxHPModifier = 150;
+                    break;
+
+                }
+                case 3:{
+                    chosenArchetype.maxHPModifier = 0;
+                    break;
+                }
+
+            }
+        }
+        maxHealth += chosenArchetype.maxHPModifier;
+        currentHealth = maxHealth;
+        updateHealthBar();
     }
 
     public void usePreBattleAction() {

@@ -19,8 +19,9 @@ public class DazingPulse extends AbstractBronzeCard {
 
     public DazingPulse() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseBlock = 10;
-        baseDamage = 10;
+        baseBlock = 8;
+        baseDamage = 8;
+        baseMagicNumber = magicNumber = 2;
         thisEncodes();
     }
 
@@ -37,13 +38,13 @@ public class DazingPulse extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             blck();
-            shuffleIn(new Dazed(), 2);
+            shuffleIn(new Dazed(), magicNumber);
         }
     }
 
     @Override
     public void upp() {
-        upgradeDamage(3);
-        upgradeBlock(3);
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }

@@ -25,6 +25,9 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
         super("WA_ARCHETYPE_DIVINITY", "Divinity");
         bossMechanicName = bossMechanicString.DIALOG[22];
         bossMechanicDesc = bossMechanicString.DIALOG[23];
+
+        maxHPModifier += 400;
+        actNum = 3;
     }
 
     public void initialize() {
