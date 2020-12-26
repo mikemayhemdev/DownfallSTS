@@ -23,13 +23,13 @@ public class ElectromagneticCoil extends CustomRelic {
     @Override
     public void onEquip() {
         ++FunctionHelper.max;
-        AutomatonMod.compileDisplayPanel.x += (100 * Settings.scale); //
+        AutomatonMod.compileDisplayPanel.x += (80 * Settings.scale); //
     }
 
     @Override
     public void onUnequip() {
         --FunctionHelper.max;
-        AutomatonMod.compileDisplayPanel.x -= (100 * Settings.scale); //
+        AutomatonMod.compileDisplayPanel.x -= (80 * Settings.scale); //
     }
 
     @Override

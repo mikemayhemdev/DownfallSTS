@@ -48,7 +48,7 @@ public class FunctionHelper {
 
     public static final Vector2[] funcPositions = {
             new Vector2(480f, HEIGHT_FUNCTION),
-            new Vector2(580f, HEIGHT_FUNCTION)
+            new Vector2(560f, HEIGHT_FUNCTION)
     };
 
     public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
