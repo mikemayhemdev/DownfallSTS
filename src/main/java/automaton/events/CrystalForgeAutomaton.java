@@ -137,7 +137,7 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
                     case 1:
                         this.screenNum = 2;
                         this.pickCardForHP = true;
-                        AbstractDungeon.gridSelectScreen.open(AutomatonMod.getRareCards(), 1, DESCRIPTIONS[7], false, false, false, false);
+                        AbstractDungeon.gridSelectScreen.open(AutomatonMod.getRareCards(), 1, DESCRIPTIONS[5], false, false, false, false);
                         this.imageEventText.updateBodyText(REFORGE);
 
                         this.imageEventText.clearAllDialogs();
@@ -148,7 +148,7 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
                         this.screenNum = 2;
                         this.pickCardForTransmute = true;
                         this.imageEventText.updateBodyText(TRANSMUTE);
-                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[7], false, false, false, true);
+                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[5], false, true, false, false);
 
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[4]);
