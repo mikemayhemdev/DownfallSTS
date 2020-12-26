@@ -35,7 +35,7 @@ public class FunctionHelper {
     public static final float FUNC_CARD_SIZE = 0.45f;
 
     public static final float BG_X = 150f; // Yes, these DO need to be scaled, because it's a direct position that isn't interpreted or multipled later on. But how!?
-    public static final float BG_Y = 700f;
+    public static final float BG_Y = 700f; // I tried both multiplying both by settings.scale, and using xScale and yScale. No dice
     public static final float HEIGHT_SEQUENCE = 768f * Settings.yScale; // As these are just height, should I multiply by Settings.scale or Settings.yScale?
     public static final float HEIGHT_FUNCTION = 820f * Settings.yScale; // It looks like basegame typically uses Settings.HEIGHT to calculate these. I'll try yScale. That was correct
 
