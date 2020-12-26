@@ -192,7 +192,7 @@ public class FunctionHelper {
     public static void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
         if (max == 4) {
-            sb.draw(bg_4card, BG_X, BG_Y, bg_4card.getWidth() / 2F, bg_4card.getHeight() / 2F, bg_4card.getWidth(), bg_4card.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
+            sb.draw(bg_4card, BG_X, BG_Y, 0, 0, bg_4card.getWidth() * Settings.scale, bg_4card.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
         } else {
             sb.draw(bg, BG_X, BG_Y, 0, 0, bg.getWidth() * Settings.scale, bg.getHeight() * Settings.scale, 1, 1, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
         }

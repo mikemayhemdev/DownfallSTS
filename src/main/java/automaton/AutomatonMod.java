@@ -24,6 +24,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.status.*;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -300,6 +301,11 @@ public class AutomatonMod implements
         EasyInfoDisplayPanel.specialDisplays.add(new BossMechanicDisplayPanel());
         if (FunctionHelper.held != null) {
             FunctionHelper.held.clear();
+        }
+        if (CardCrawlGame.loadingSave) {
+            if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
+                FunctionHelper.max += 1;
+            }
         }
     }
 

@@ -38,7 +38,7 @@
     "NAME": "Silver Bullet",
     "FLAVOR": "Spirewolves are long gone.",
     "DESCRIPTIONS": [
-      "Start each combat with a #yPiercing Shot in the #ySequence."
+      "Start each combat with a #yPiercing #yShot in the #ySequence."
     ]
   },
   "bronze:MakeshiftBattery": {
@@ -59,7 +59,7 @@
     "NAME": "Electromagnetic Coil",
     "FLAVOR": "An inefficient but entertaining power source.",
     "DESCRIPTIONS": [
-      "Functions are now made up of #y4 cards."
+      "Functions are now made up of #b4 cards."
     ]
   },
   "bronze:PlatinumCore": {
@@ -67,7 +67,7 @@
     "FLAVOR": "Changelog: Improved user experience.",
     "DESCRIPTIONS": [
       "Replaces",
-      ".[] NL The first 3 #yFunctions you #yCompile each combat cost #b1 less the turn they are #yCompiled."
+      ".[] NL The first #b3 #yFunctions you #yCompile each combat cost #b1 less the turn they are #yCompiled."
     ]
   },
   "bronze:BottledCode": {
@@ -91,7 +91,7 @@
     "NAME": "Bronze Idol",
     "FLAVOR": "Flavor",
     "DESCRIPTIONS": [
-      "Status cards may now be played for useful effects."
+      "#yStatus cards may now be played for useful effects."
     ]
   }
 }
