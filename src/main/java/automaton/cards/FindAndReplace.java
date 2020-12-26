@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -28,6 +29,7 @@ public class FindAndReplace extends AbstractBronzeCard {
         }
         if (gotFunc != null) {
             p.drawPile.moveToDeck(gotFunc, false);
+            atb(new ReduceCostForTurnAction(gotFunc, 1));
             atb(new DrawCardAction(1));
         }
         shuffleIn(new Dazed());
