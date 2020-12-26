@@ -33,10 +33,10 @@ public class VerifyPower extends AbstractAutomatonPower {
                     ((CardEffectsCardMod) m).stored().baseAuto += amount;
                     ((CardEffectsCardMod) m).stored().auto += amount;
                     ((CardEffectsCardMod) m).stored().applyPowers();
-                    ((CardEffectsCardMod) m).stored().superFlash();
                     FunctionHelper.applyPowers();
                 }
             }
+            function.superFlash();
         }
     }
 
