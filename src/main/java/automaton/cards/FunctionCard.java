@@ -3,7 +3,6 @@ package automaton.cards;
 import automaton.cardmods.CardEffectsCardMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
-import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -68,6 +67,18 @@ public class FunctionCard extends AbstractBronzeCard {
             }
         }
         return mCardList;
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        if (CardModifierManager.hasModifier(this, CardEffectsCardMod.ID)) {
+            for (AbstractCardModifier m : CardModifierManager.getModifiers(this, CardEffectsCardMod.ID)) {
+                if (m instanceof CardEffectsCardMod) {
+                    ((CardEffectsCardMod) m).stored().resetAttributes();
+                }
+            }
+            this.initializeDescription();
+        }
     }
 
     //Welcome to the tough part
