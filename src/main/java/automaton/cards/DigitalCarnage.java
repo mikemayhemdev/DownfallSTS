@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
+import downfall.util.EtherealMod;
 
 public class DigitalCarnage extends AbstractBronzeCard {
 
@@ -46,6 +48,11 @@ public class DigitalCarnage extends AbstractBronzeCard {
 
 
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        CardModifierManager.addModifier(function, new EtherealMod());
     }
 
     @Override
