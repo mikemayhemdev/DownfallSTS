@@ -9,7 +9,6 @@ import automaton.potions.FreeFunctionsPotion;
 import automaton.relics.*;
 import automaton.util.AutoVar;
 import automaton.util.CardFilter;
-import downfall.util.CardIgnore;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
@@ -31,6 +30,7 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.util.CardIgnore;
 import downfall.util.EtherealMod;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -57,8 +57,7 @@ public class AutomatonMod implements
         OnStartBattleSubscriber,
         PostBattleSubscriber,
         StartGameSubscriber,
-        PostDrawSubscriber
-        {
+        PostDrawSubscriber {
     public static final String SHOULDER1 = "bronzeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "bronzeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "bronzeResources/images/char/mainChar/corpse.png";
@@ -289,6 +288,7 @@ public class AutomatonMod implements
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
         FunctionHelper.doStuff = false;
+        FunctionHelper.held.clear();
     }
 
     public static CompileDisplayPanel compileDisplayPanel;
@@ -309,7 +309,7 @@ public class AutomatonMod implements
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.rarity == AbstractCard.CardRarity.RARE) {
-                        retVal.group.add(c);
+                retVal.group.add(c);
 
 
             }
@@ -320,9 +320,9 @@ public class AutomatonMod implements
 
     @Override
     public void receivePostDraw(AbstractCard abstractCard) {
-        if (abstractCard.type == AbstractCard.CardType.STATUS){
-            if (AbstractDungeon.player.hasRelic(BronzeIdol.ID)){
-                if (!abstractCard.hasTag(GOOD_STATUS)){
+        if (abstractCard.type == AbstractCard.CardType.STATUS) {
+            if (AbstractDungeon.player.hasRelic(BronzeIdol.ID)) {
+                if (!abstractCard.hasTag(GOOD_STATUS)) {
 
                     AbstractCard newStatus = getGoodStatus(abstractCard);
 
@@ -335,24 +335,19 @@ public class AutomatonMod implements
         }
     }
 
-    public static AbstractCard getGoodStatus(AbstractCard ogStatus){
+    public static AbstractCard getGoodStatus(AbstractCard ogStatus) {
         AbstractCard newStatus = null;
-        if (ogStatus instanceof Dazed){
+        if (ogStatus instanceof Dazed) {
             newStatus = new Daze();
-        }
-        else if (ogStatus instanceof Burn){
+        } else if (ogStatus instanceof Burn) {
             newStatus = new Ignite();
-        }
-        else if (ogStatus instanceof VoidCard){
+        } else if (ogStatus instanceof VoidCard) {
             newStatus = new IntoTheVoid();
-        }
-        else if (ogStatus instanceof Slimed){
+        } else if (ogStatus instanceof Slimed) {
             newStatus = new UsefulSlime();
-        }
-        else if (ogStatus instanceof Wound){
+        } else if (ogStatus instanceof Wound) {
             newStatus = new GrievousWound();
-        }
-        else {
+        } else {
             newStatus = new UnknownStatus();
             if (ogStatus.isEthereal) CardModifierManager.addModifier(newStatus, new EtherealMod());
             if (ogStatus.exhaust) CardModifierManager.addModifier(newStatus, new ExhaustMod());

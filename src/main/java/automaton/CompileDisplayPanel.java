@@ -18,7 +18,7 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
     public String getDescription() {
         String q = "NORENDER";
         boolean flip = false;
-        StringBuilder s = new StringBuilder("");
+        StringBuilder s = new StringBuilder();
         if (FunctionHelper.held != null && FunctionHelper.doStuff)
             for (AbstractCard card : FunctionHelper.held.group) {
                 if (card.rawDescription.contains("bronze:Compile")) {
