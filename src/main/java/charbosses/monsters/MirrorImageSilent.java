@@ -100,14 +100,12 @@ public class MirrorImageSilent extends AbstractMonster {
         }
     }
 
-    /*
     @SpireOverride
     protected void renderName(SpriteBatch sb) {
         if (!foggy) {
             SpireSuper.call(sb);
         }
     }
-    */
 
     @Override
     public void takeTurn() {

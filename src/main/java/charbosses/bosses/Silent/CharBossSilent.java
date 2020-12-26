@@ -147,14 +147,12 @@ public class CharBossSilent extends AbstractCharBoss {
     }
 
 
-        /*
     @SpireOverride
     protected void renderName(SpriteBatch sb) {
         if (!foggy) {
             SpireSuper.call(sb);
         }
     }
-    */
 
     @Override
     public void die() {
