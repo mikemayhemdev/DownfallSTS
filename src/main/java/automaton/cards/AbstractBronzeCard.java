@@ -143,6 +143,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
         return EXTENDED_DESCRIPTION[0];
     }
 
+    public String getBonusChar() {
+        return String.valueOf(NAME.charAt(0));
+    }
+
     public abstract void upp();
 
     protected void atb(AbstractGameAction action) {

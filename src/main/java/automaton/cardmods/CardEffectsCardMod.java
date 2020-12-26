@@ -59,6 +59,11 @@ public class CardEffectsCardMod extends BronzeCardMod {
                     ((FunctionCard) card).textPrefix += stored().getNoun();
                     ((FunctionCard) card).doNothingSpecificInParticular();
                     break;
+                case 2:
+                case 3:
+                    ((FunctionCard) card).textPrefix += stored().getBonusChar();
+                    ((FunctionCard) card).doNothingSpecificInParticular();
+                    break;
                 default:
                     break;
             }
@@ -191,7 +196,8 @@ public class CardEffectsCardMod extends BronzeCardMod {
     public String modifyDescription(String rawDescription, AbstractCard card) {
         String x = getRealDesc(stored());
         if (!x.equals("") && !isFinalCardEffectsFunction(card)) {
-            x += " NL ";         }
+            x += " NL ";
+        }
         return rawDescription + x;
     }
 
