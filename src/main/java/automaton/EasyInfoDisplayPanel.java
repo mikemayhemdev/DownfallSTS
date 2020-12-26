@@ -1,21 +1,21 @@
 package automaton;
 
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
 
 import java.util.ArrayList;
 
 public abstract class EasyInfoDisplayPanel {
+    public enum RENDER_TIMING {
+        TIMING_RENDERSUBSCRIBER,
+        TIMING_ENERGYPANEL
+    }
+
     public float x;
     public float y;
 
     public float width;
 
     public static ArrayList<EasyInfoDisplayPanel> specialDisplays = new ArrayList<>();
-
-    public static void render(SpriteBatch sb) {
-        SuperTip.render(sb);
-    }
 
     public EasyInfoDisplayPanel(float x, float y, float width) {
         this.x = x * Settings.scale;
@@ -26,4 +26,6 @@ public abstract class EasyInfoDisplayPanel {
     public abstract String getTitle();
 
     public abstract String getDescription();
+
+    public abstract RENDER_TIMING getTiming();
 }

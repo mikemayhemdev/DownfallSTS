@@ -1,9 +1,6 @@
 package charbosses;
 
 import automaton.EasyInfoDisplayPanel;
-import automaton.FunctionHelper;
-import automaton.cards.AbstractBronzeCard;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class BossMechanicDisplayPanel extends EasyInfoDisplayPanel {
 
@@ -28,7 +25,12 @@ public class BossMechanicDisplayPanel extends EasyInfoDisplayPanel {
         return mechanicDesc;
     }
 
-    public static void resetBossPanel(){
+    public static void resetBossPanel() {
         mechanicDesc = "NORENDER";
+    }
+
+    @Override
+    public RENDER_TIMING getTiming() {
+        return RENDER_TIMING.TIMING_RENDERSUBSCRIBER;
     }
 }

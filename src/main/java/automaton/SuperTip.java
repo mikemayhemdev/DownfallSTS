@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package automaton;
 
 import com.badlogic.gdx.graphics.Color;
@@ -12,7 +7,6 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 
 public class SuperTip {
-
     private static float drawX;
     private static float drawY;
     private static String HEADER = null;
@@ -32,9 +26,9 @@ public class SuperTip {
 
     private static Color currentColor;
 
-    public static void render(SpriteBatch sb) {
+    public static void render(SpriteBatch sb, EasyInfoDisplayPanel.RENDER_TIMING t) {
         for (EasyInfoDisplayPanel d : EasyInfoDisplayPanel.specialDisplays) {
-            if (!d.getDescription().equals("NORENDER")) {
+            if (!d.getDescription().equals("NORENDER") && d.getTiming() == t) {
                 renderGenericTip(d.x, d.y, d.getTitle(), d.getDescription());
                 BODY_TEXT_WIDTH = d.width;
                 if (!Settings.hidePopupDetails && HEADER != null) {

@@ -11,6 +11,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 import automaton.AutomatonMod;
 import automaton.EasyInfoDisplayPanel;
 import automaton.FunctionHelper;
+import automaton.SuperTip;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -1216,9 +1217,6 @@ public class downfallMod implements
 
     @Override
     public void receiveRender(SpriteBatch sb) {
-        if (FunctionHelper.doStuff || AbstractCharBoss.boss != null) {
-            EasyInfoDisplayPanel.render(sb);
-            //I made it good - if there are further problems, PostRenderSubscriber is your man
-        }
+        SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_RENDERSUBSCRIBER);
     }
 }
