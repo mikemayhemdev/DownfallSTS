@@ -93,5 +93,12 @@
     "DESCRIPTIONS": [
       "#yStatus cards may now be played for useful effects."
     ]
+  },
+  "bronze:VexRelic": {
+    "NAME": "Paradox Artifact",
+    "FLAVOR": "You've never seen a stress test like this before.",
+    "DESCRIPTIONS": [
+      "At the start of combat, #yCompile a random Function. Give it #yRetain."
+    ]
   }
 }
