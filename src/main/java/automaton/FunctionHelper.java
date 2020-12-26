@@ -173,7 +173,7 @@ public class FunctionHelper {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Regular output to hand
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
-            public void update() { // Clears and resets Function Helper
+            public void update() { // Clears and resets Function Helper -- this part being bound to Action Queue makes some weird stuff.
                 held.clear();
                 secretStorage = makeFunction(false);
                 isDone = true;

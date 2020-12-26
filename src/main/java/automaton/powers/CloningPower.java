@@ -19,7 +19,7 @@ public class CloningPower extends AbstractAutomatonPower implements PostAddToFun
     public void receivePostAddToFunc(AbstractCard addition) {
         flash();
         for (int i = 0; i < amount; i++) {
-            addToTop(new AddToFuncAction(addition.makeStatEquivalentCopy(), null));
+            addToBot(new AddToFuncAction(addition.makeStatEquivalentCopy(), null));
         }
         addToTop(new RemoveSpecificPowerAction(owner, owner, this.ID));
     }

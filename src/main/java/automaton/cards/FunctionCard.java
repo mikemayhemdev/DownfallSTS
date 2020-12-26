@@ -241,7 +241,7 @@ public class FunctionCard extends AbstractBronzeCard {
                     );
 
                 }
-                break;//Once I figure out how to step from 1/3 of card 1 to 1/3 of card 2, it's pretty easy to do 2->3. But first that
+                break;
             }
             case 4: {
                 float drawX;
