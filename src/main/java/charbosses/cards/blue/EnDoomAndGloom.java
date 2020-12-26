@@ -30,6 +30,7 @@ public class EnDoomAndGloom extends AbstractBossCard {
         this.showEvokeValue = true;
         this.showEvokeOrbCount = 1;
         this.baseDamage = 10;
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
