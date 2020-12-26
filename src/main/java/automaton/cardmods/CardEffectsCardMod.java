@@ -147,6 +147,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     public static String getRealDesc(AbstractCard card) {
         String x = card.rawDescription;
+        boolean continueParsing = true;
         if (card.rawDescription.contains(" NL bronze:Compile")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
             String compileText = splitText[1] + splitText[2];
@@ -154,13 +155,14 @@ public class CardEffectsCardMod extends BronzeCardMod {
         } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
         else if (card.rawDescription.contains("bronze:Compile")) {
             x = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
+            continueParsing = false; //WE'RE DONE HERE, CHILD CLASS!!!
         } // IT NEVER ENDS!!!!!
-        if (card.rawDescription.contains(" π")) {
+        if (card.rawDescription.contains(" π") && continueParsing) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " π"));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
         } // This one is for cards with other text that doesn't need to be on the Function.
-        if (card.rawDescription.contains(" NL \u00A0 ")) {
+        if (card.rawDescription.contains(" NL \u00A0 ") && continueParsing) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL \u00A0 "));
             String compileText = splitText[0] + splitText[1];
             x = x.replace(compileText, "");
