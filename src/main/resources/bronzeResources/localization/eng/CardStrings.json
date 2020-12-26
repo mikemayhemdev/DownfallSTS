@@ -237,7 +237,7 @@
     "DESCRIPTION": "bronze:Compile - Gain [E] . NL If this is not the first or last card in the Sequence, gain NL !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "unfortunate",
-      "Draw"
+      "Separation"
     ]
   },
   "bronze:Update": {
