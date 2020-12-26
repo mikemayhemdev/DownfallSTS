@@ -81,6 +81,11 @@ public class FunctionCard extends AbstractBronzeCard {
         }
     }
 
+    @Override
+    public boolean canUpgrade() {
+        return false;
+    }
+
     //Welcome to the tough part
     @SpireOverride
     protected void renderPortrait(SpriteBatch sb) {

@@ -17,10 +17,11 @@ public class HardcodePower extends AbstractAutomatonPower implements OnOutputFun
     }
 
     @Override
-    public void receiveOutputFunction() {
+    public boolean receiveOutputFunction() {
         flash();
         AbstractCard function2 = FunctionHelper.makeFunction(true);
         addToBot(new AddCardToDeckAction(function2));
         addToBot(new ReducePowerAction(owner, owner, this, 1));
+        return false;
     }
 }

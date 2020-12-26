@@ -522,7 +522,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcode",
-    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently as well as your hand."
+    "DESCRIPTION": "Fleeting. NL The next Function you bronze:Compile goes into your deck permanently instead of your hand."
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetti Code",
