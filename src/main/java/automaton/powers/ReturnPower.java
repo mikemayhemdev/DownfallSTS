@@ -17,8 +17,8 @@ public class ReturnPower extends AbstractAutomatonPower {
 
     @Override
     public void atStartOfTurn() {
-        addToBot(new DrawCardAction(amount));
-        addToBot(new GainEnergyAction(amount));
+        addToBot(new DrawCardAction(1));
+        addToBot(new GainEnergyAction(1));
         addToBot(new ReducePowerAction(owner, owner, this, 1));
     }
 }
