@@ -106,6 +106,14 @@
       " Functions you #yCompile cost #b0."
     ]
   },
+  "bronze:CleanCode": {
+    "NAME": "Clean Code",
+    "DESCRIPTIONS": [
+      "Remove all negative #yCompile effects from the next Function you #yCompile.",
+      "Remove all negative #yCompile effects from the next #b",
+      " Functions you #yCompile."
+    ]
+  },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",
     "DESCRIPTIONS": [
