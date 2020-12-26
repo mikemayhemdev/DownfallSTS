@@ -10,14 +10,14 @@ public class InfiniteLoop extends AbstractBronzeCard {
     public final static String ID = makeID("InfiniteLoop");
 
     //stupid intellij stuff attack, enemy, rare
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 2;
     private boolean showCard;
 
     public InfiniteLoop(boolean showCard) {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         thisEncodes();
         this.showCard = showCard;
         //if (showCard)
@@ -43,7 +43,6 @@ public class InfiniteLoop extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }
