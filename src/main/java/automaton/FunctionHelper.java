@@ -16,7 +16,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -161,16 +160,19 @@ public class FunctionHelper {
 
     public static void output() {
         ForceShield.decrementShields(); // Decrease cost of Force Shields
+        boolean regularOutput = true;
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnOutputFunctionPower) {
-                ((OnOutputFunctionPower) p).receiveOutputFunction(); // Hardcode
+                regularOutput = ((OnOutputFunctionPower) p).receiveOutputFunction(); // Hardcode
             }
         }
         if (doExtraNonSpecificCopy) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Duplicate Function potion
             doExtraNonSpecificCopy = false;
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Regular output to hand
+        if (regularOutput) {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Regular output to hand, assuming no Hardcode
+        }
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
             public void update() { // Clears and resets Function Helper -- this part being bound to Action Queue makes some weird stuff.
