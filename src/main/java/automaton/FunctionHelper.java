@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -30,24 +31,24 @@ public class FunctionHelper {
 
     public static HashMap<CardEffectsCardMod, AbstractCard> cardModsInfo = new HashMap<>();
 
-    public static final float SEQUENCED_CARD_SIZE = 0.225f;
+    public static final float SEQUENCED_CARD_SIZE = 0.225f; // Card sizes DON'T need to be scaled, because renderCard in AbstractCard already multiplies.
     public static final float FUNC_CARD_SIZE = 0.45f;
 
-    public static final float BG_X = 150f;
+    public static final float BG_X = 150f; // Yes, these DO need to be scaled, because it's a direct position that isn't interpreted or multipled later on. But hpw!?
     public static final float BG_Y = 700f;
-    public static final float HEIGHT_SEQUENCE = 768f;
-    public static final float HEIGHT_FUNCTION = 820f;
+    public static final float HEIGHT_SEQUENCE = 768f * Settings.yScale; // As these are just height, should I multiply by Settings.scale or Settings.yScale?
+    public static final float HEIGHT_FUNCTION = 820f * Settings.yScale; // It looks like basegame typically uses Settings.HEIGHT to calculate these. I'll try yScale. That was correct
 
     public static final Vector2[] cardPositions = {
-            new Vector2(210f, HEIGHT_SEQUENCE),
-            new Vector2(285f, HEIGHT_SEQUENCE),
-            new Vector2(360f, HEIGHT_SEQUENCE),
-            new Vector2(435f, HEIGHT_SEQUENCE)
+            new Vector2(210f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(285f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(360f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(435f * Settings.xScale, HEIGHT_SEQUENCE)
     };
 
     public static final Vector2[] funcPositions = {
-            new Vector2(480f, HEIGHT_FUNCTION),
-            new Vector2(560f, HEIGHT_FUNCTION)
+            new Vector2(480f * Settings.xScale, HEIGHT_FUNCTION),
+            new Vector2(560f * Settings.xScale, HEIGHT_FUNCTION)
     };
 
     public static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");
@@ -191,9 +192,9 @@ public class FunctionHelper {
     public static void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
         if (max == 4) {
-            sb.draw(bg_4card, BG_X, BG_Y);
+            sb.draw(bg_4card, BG_X, BG_Y, bg_4card.getWidth() / 2F, bg_4card.getHeight() / 2F, bg_4card.getWidth(), bg_4card.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, bg_4card.getWidth(), bg_4card.getHeight(), false, false);
         } else {
-            sb.draw(bg, BG_X, BG_Y);
+            sb.draw(bg, BG_X, BG_Y, bg.getWidth() / 2F, bg.getHeight() / 2F, bg.getWidth(), bg.getHeight(), Settings.scale, Settings.scale, 0, 0, 0, bg.getWidth(), bg.getHeight(), false, false);
         }
         for (AbstractCard c : held.group) {
             c.render(sb);
