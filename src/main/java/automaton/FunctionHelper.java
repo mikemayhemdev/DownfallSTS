@@ -40,10 +40,10 @@ public class FunctionHelper {
     public static final float HEIGHT_FUNCTION = 820f;
 
     public static final Vector2[] cardPositions = {
-            new Vector2(208f, HEIGHT_SEQUENCE),
-            new Vector2(283f, HEIGHT_SEQUENCE),
-            new Vector2(358f, HEIGHT_SEQUENCE),
-            new Vector2(433f, HEIGHT_SEQUENCE)
+            new Vector2(210f, HEIGHT_SEQUENCE),
+            new Vector2(285f, HEIGHT_SEQUENCE),
+            new Vector2(360f, HEIGHT_SEQUENCE),
+            new Vector2(435f, HEIGHT_SEQUENCE)
     };
 
     public static final Vector2[] funcPositions = {

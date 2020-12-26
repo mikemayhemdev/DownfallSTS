@@ -64,7 +64,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             }
 
             CustomCard q = stored();
-            if (q.target == AbstractCard.CardTarget.SELF_AND_ENEMY || q.target == AbstractCard.CardTarget.ENEMY && card.target != AbstractCard.CardTarget.SELF_AND_ENEMY && card.target != AbstractCard.CardTarget.ENEMY) {
+            if ((q.target == AbstractCard.CardTarget.SELF_AND_ENEMY || q.target == AbstractCard.CardTarget.ENEMY) && (card.target != AbstractCard.CardTarget.SELF_AND_ENEMY && card.target != AbstractCard.CardTarget.ENEMY)) {
                 card.target = AbstractCard.CardTarget.SELF_AND_ENEMY;
             }
 
@@ -73,9 +73,9 @@ public class CardEffectsCardMod extends BronzeCardMod {
             }
 
             if (q.type == AbstractCard.CardType.SKILL) {
-                q.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
+                ((FunctionCard) card).setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
             } else {
-                q.setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
+                ((FunctionCard) card).setBackgroundTexture("bronzeResources/images/512/bg_attack_function.png", "bronzeResources/images/1024/bg_attack_function.png");
             }
         }
     }
