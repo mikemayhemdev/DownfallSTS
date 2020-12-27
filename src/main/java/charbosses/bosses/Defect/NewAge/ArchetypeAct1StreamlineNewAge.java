@@ -30,7 +30,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_NeowsBlessing());
 
         //data disk
-        addRelic(new CBR_SmoothStone());
+        addRelic(new CBR_HandDrill());
         addRelic(new CBR_ClockworkSouvenir());
         //addRelic(new CBR_LetterOpener());
       //  addRelic(new CBR_Abacus());
@@ -61,7 +61,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
                     //Turn 3
                     addToList(cardsList, new EnTurbo(), true);
                     addToList(cardsList, new EnSunder(), false);
-                    addToList(cardsList, new EnAutoShields(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
                     turn++;
                     break;
                 case 3:
@@ -92,7 +92,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
                 case 2:
                     addToList(cardsList, new EnTurbo(), true);
                     addToList(cardsList, new EnSunder(), false);
-                    addToList(cardsList, new EnAutoShields(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
                     turn = 0;
                     break;
 

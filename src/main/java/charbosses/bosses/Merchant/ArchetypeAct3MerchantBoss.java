@@ -29,10 +29,10 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         addRelic(new CBR_NeowsBlessing());
       //  addRelic(new CBR_MercuryHourglass());
-        addRelic(new CBR_Torii());
+       // addRelic(new CBR_Torii());
         //addRelic(new CBR_SelfFormingClay());
-        addRelic(new CBR_IncenseBurner());
-        addRelic(new CBR_Calipers());
+        //addRelic(new CBR_IncenseBurner());
+        //addRelic(new CBR_Calipers());
        // addRelic(new CBR_Girya(3));
        // addRelic(new CBR_Vajra());
         addRelic(new CBR_SmoothStone());

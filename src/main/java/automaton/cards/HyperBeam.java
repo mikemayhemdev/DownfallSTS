@@ -39,6 +39,6 @@ public class HyperBeam extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        upgradeBaseCost(5);
     }
 }

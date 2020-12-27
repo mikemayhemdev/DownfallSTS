@@ -24,7 +24,7 @@ public class DigitalCarnage extends AbstractBronzeCard {
 
     public DigitalCarnage() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        isEthereal = true;
+       // isEthereal = true;
         baseDamage = DAMAGE;
         thisEncodes();
         tags.add(AutomatonMod.BAD_COMPILE);
