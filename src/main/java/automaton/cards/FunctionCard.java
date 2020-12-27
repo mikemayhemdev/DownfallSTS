@@ -26,7 +26,7 @@ public class FunctionCard extends AbstractBronzeCard {
     public String textPrefix = "";
 
     public FunctionCard() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF_AND_ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.setPortraitTextures("bronzeResources/images/512/frame_function.png", "bronzeResources/images/1024/frame_function.png");
         this.setBackgroundTexture("bronzeResources/images/512/bg_skill_function.png", "bronzeResources/images/1024/bg_skill_function.png");
