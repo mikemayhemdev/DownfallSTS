@@ -43,19 +43,19 @@ public class ShivTimeEaterPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESC[0] + 8 + DESC[1] + 1 + DESC[2];
+        this.description = DESC[0] + 10 + DESC[1] + 1 + DESC[2];
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (!(card instanceof AbstractBossCard)) {
             ++this.amount;
-            if (this.amount == 8) {
+            if (this.amount == 10) {
                 this.amount = 0;
                 this.flashWithoutSound();
                 this.playApplyPowerSfx();
                 CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
                 AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 2), 2));
 
             }
 
