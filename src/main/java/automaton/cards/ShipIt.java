@@ -15,7 +15,7 @@ public class ShipIt extends AbstractBronzeCard {
     //stupid intellij stuff attack, enemy, rare
 
     private static final int DAMAGE = 5;
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
     public ShipIt() {

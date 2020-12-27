@@ -339,8 +339,8 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
-    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand. NL If the Sequence contains only cost 0 cards, the Function costs 0.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand. NL If the Sequence contains only cost 0 cards, the Function costs 0."
+    "DESCRIPTION": "At the start of each turn, add a *Minor *Beam to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, add a *Minor *Beam+ to your hand."
   },
   "bronze:Optimize": {
     "NAME": "Optimize",
@@ -395,7 +395,7 @@
   },
   "bronze:Safeguard": {
     "NAME": "Safeguard",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Function costs [E] more.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Frail.",
     "EXTENDED_DESCRIPTION": [
       "safe",
       "Guard"

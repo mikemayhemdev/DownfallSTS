@@ -15,7 +15,7 @@ public class ChildClass extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ChildClass() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(AutomatonMod.ADDS_NO_CARDTEXT);

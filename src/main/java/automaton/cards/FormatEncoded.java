@@ -15,7 +15,7 @@ public class FormatEncoded extends AbstractBronzeCard {
     private static final int BLOCK = 6;
 
     public FormatEncoded() {
-        super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         thisEncodes();
@@ -27,5 +27,7 @@ public class FormatEncoded extends AbstractBronzeCard {
     }
 
     public void upp() {
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }

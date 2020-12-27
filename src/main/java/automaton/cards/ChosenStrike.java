@@ -14,7 +14,7 @@ public class ChosenStrike extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
 
     public ChosenStrike() {

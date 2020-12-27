@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonStackablePower, OnCompilePower {
+public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonStackablePower {
     public static final String NAME = "InfiniteBeams";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
@@ -43,19 +43,6 @@ public class InfiniteBeamsPower extends AbstractAutomatonPower implements NonSta
         }
     }
 
-    @Override
-    public void receiveCompile(AbstractCard function, boolean forGameplay) {
-        boolean doTheGood = true;
-        for (AbstractCard c : FunctionHelper.held.group) {
-            if (c.cost != 0) {
-                doTheGood = false;
-            }
-        }
-        if (doTheGood) {
-            function.cost = 0;
-            function.costForTurn = 0;
-        }
-    }
 
     @Override
     public void updateDescription() {

@@ -15,7 +15,7 @@ public class Overheat extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 18;
     private static final int UPG_DAMAGE = 4;
 
     public Overheat() {

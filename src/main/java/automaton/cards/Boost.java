@@ -12,7 +12,7 @@ public class Boost extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 8;
     private static final int MAGIC = 2;
 
     public Boost() {
