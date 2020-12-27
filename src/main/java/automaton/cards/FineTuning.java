@@ -15,7 +15,7 @@ public class FineTuning extends AbstractBronzeCard {
     private static final int MAGIC = 1;
 
     public FineTuning() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

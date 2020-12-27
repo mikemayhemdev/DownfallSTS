@@ -8,7 +8,7 @@ public class Refactor extends AbstractBronzeCard {
     public final static String ID = makeID("Refactor");
 
     public Refactor() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 5;
         baseBlock = 5;
     }
