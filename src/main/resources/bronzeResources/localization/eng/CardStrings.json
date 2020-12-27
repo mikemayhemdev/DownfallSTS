@@ -1,7 +1,7 @@
 {
   "bronze:DazingPulse": {
     "NAME": "Dazing Pulse",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !B! Block and bronze:Insert !M! *Dazed.",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block NL bronze:Compile - bronze:Insert !M! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "dazing",
       "Pulse"
@@ -88,7 +88,7 @@
   },
   "bronze:DelayedSlice": {
     "NAME": "Delayed Slice",
-    "DESCRIPTION": "bronze:Compile - ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - ALL enemies lose !M! HP."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Piercing Shot",
@@ -230,10 +230,10 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "bronze:Compile - Gain [E] . NL If this is not the first or last card in the Sequence, gain NL !M! [E] .",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is not the first or last card in the Sequence, gain NL !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "mild",
-      "Energy"
+      "Split"
     ]
   },
   "bronze:Overload": {
@@ -374,7 +374,7 @@
   },
   "bronze:Repair": {
     "NAME": "Repair",
-    "DESCRIPTION": "bronze:Compile - Heal !M! HP."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Heal !M! HP."
   },
   "bronze:Boost": {
     "NAME": "Boost",
@@ -469,7 +469,7 @@
     "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0 until played."
   },
   "bronze:Verify": {
-    "NAME": "Verify",
+    "NAME": "Sentient Form",
     "DESCRIPTION": "After you play a Function, increase all numbers on it by 1.",
     "UPGRADE_DESCRIPTION": "Innate. NL After you play a Function, increase all numbers on it by 1."
   },
@@ -479,7 +479,7 @@
     "UPGRADE_DESCRIPTION": "Whenever you play a Function, draw 2 cards."
   },
   "bronze:HardenedForm": {
-    "NAME": "Hardened Form",
+    "NAME": "Verify",
     "DESCRIPTION": "Whenever you bronze:Compile, gain !M! Block."
   },
   "bronze:CopyPaste": {

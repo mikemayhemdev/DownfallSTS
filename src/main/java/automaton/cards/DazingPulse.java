@@ -19,8 +19,8 @@ public class DazingPulse extends AbstractBronzeCard {
 
     public DazingPulse() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY, CardColor.COLORLESS);
-        baseBlock = 8;
-        baseDamage = 8;
+        baseBlock = 5;
+        baseDamage = 5;
         baseMagicNumber = magicNumber = 2;
         thisEncodes();
     }
@@ -30,14 +30,13 @@ public class DazingPulse extends AbstractBronzeCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffectColored(m.hb.cX, m.hb.cY, p.hb.cX, p.hb.cY, new Color(MathUtils.random(0, 255), MathUtils.random(0, 255), MathUtils.random(0, 255), 1F)), 0.1F));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-
+        blck();
     }
 
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            blck();
             shuffleIn(new Dazed(), magicNumber);
         }
     }

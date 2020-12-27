@@ -12,7 +12,7 @@ public class Verify extends AbstractBronzeCard {
     //stupid intellij stuff power, self, rare
 
     public Verify() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
