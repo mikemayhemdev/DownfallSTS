@@ -24,6 +24,7 @@ public class Repair extends AbstractBronzeCard {
         tags.add(CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(AutomatonMod.NO_TEXT);
+        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
