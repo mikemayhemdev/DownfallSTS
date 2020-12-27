@@ -30,8 +30,8 @@ public class Overheat extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         atb(new DamageAction(p, new DamageInfo(p, magicNumber, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     @Override

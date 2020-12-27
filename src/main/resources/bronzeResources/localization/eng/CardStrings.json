@@ -120,7 +120,7 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage. NL Take 4 damage. NL bronze:Compile - bronze:Insert a *Burn+.",
+    "DESCRIPTION": "Take !M! damage. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Burn+.",
     "EXTENDED_DESCRIPTION": [
       "heated",
       "Burn"
