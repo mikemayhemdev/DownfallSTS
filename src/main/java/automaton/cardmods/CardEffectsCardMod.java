@@ -188,7 +188,14 @@ public class CardEffectsCardMod extends BronzeCardMod {
         boolean yesIAmTheFinalCardWoo = false;
         for (AbstractCardModifier c : CardModifierManager.getModifiers(card, CardEffectsCardMod.ID)) {
             if (c instanceof CardEffectsCardMod) {
-                yesIAmTheFinalCardWoo = c == this || ((CardEffectsCardMod) c).stored().hasTag(AutomatonMod.ADDS_NO_CARDTEXT);
+                if (c == this) {
+                    yesIAmTheFinalCardWoo = true;
+                }
+                else if (((CardEffectsCardMod) c).stored().hasTag(AutomatonMod.ADDS_NO_CARDTEXT) && yesIAmTheFinalCardWoo) {
+                }
+                else {
+                    yesIAmTheFinalCardWoo = false;
+                }
             }
         }
         return yesIAmTheFinalCardWoo;

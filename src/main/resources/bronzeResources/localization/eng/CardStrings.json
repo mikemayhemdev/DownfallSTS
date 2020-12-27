@@ -354,7 +354,7 @@
     "NAME": "Allocate",
     "DESCRIPTION": "Gain [E] for each Status in your draw pile.",
     "EXTENDED_DESCRIPTION": [
-      "NL (Gain ",
+      " NL (Gain ",
       " [E] .)"
     ]
   },
@@ -484,8 +484,8 @@
   },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",
-    "DESCRIPTION": "This turn, your next Function is played twice. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL This turn, your next Function is played twice. NL Exhaust."
+    "DESCRIPTION": "This turn, your next Function is played twice.",
+    "UPGRADE_DESCRIPTION": "Retain. NL This turn, your next Function is played twice."
   },
   "bronze:LegacyCode": {
     "NAME": "Legacy Code",
@@ -592,7 +592,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Buggy Mess",
-    "DESCRIPTION": "bronze:Insert random Status. NL Gain [E] .",
+    "DESCRIPTION": "bronze:Insert random Status. NL Gain !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "buggy",
       "Mess"

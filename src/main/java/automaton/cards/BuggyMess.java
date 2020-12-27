@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,14 +20,7 @@ public class BuggyMess extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         shuffleIn(SneckoMod.getRandomStatus());
-    }
-
-    @Override
-    public void onCompileLast(AbstractCard function, boolean forGameplay) {
-        if (function.cost >= magicNumber) {
-            function.cost -= magicNumber;
-            function.costForTurn -= magicNumber; //TODO: Reducing cost needs to be routed through a function eventually and centralized for all Function cost changing effects, to prevent weird stuff like X-funcs.
-        }
+        atb(new GainEnergyAction(magicNumber));
     }
 
     public void upp() {
