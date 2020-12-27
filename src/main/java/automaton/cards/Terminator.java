@@ -34,7 +34,7 @@ public class Terminator extends AbstractBronzeCard {
     @Override
     public String getSpecialCompileText() {
         if (lastCard()) {
-            return " - #yTerminator doubles its damage.";
+            return " - #yTerminator doubles its damage."; //TODO: Localize
         }
         return "";
     }

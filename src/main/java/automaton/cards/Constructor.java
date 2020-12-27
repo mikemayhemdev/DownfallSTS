@@ -32,7 +32,7 @@ public class Constructor extends AbstractBronzeCard {
     @Override
     public String getSpecialCompileText() {
         if (firstCard()) {
-            return " - #yConstructor doubles its #yBlock.";
+            return " - #yConstructor doubles its #yBlock."; //TODO: Localize
         }
         return "";
     }

@@ -39,7 +39,7 @@ public class Separator extends AbstractBronzeCard {
     @Override
     public String getSpecialCompileText() {
         if (!firstCard() && !lastCard()) {
-            return " - Gain #b" + magicNumber + " [E] .";
+            return " - Gain #b" + magicNumber + " [E] ."; //TODO: Localize
         }
         return "";
     }
