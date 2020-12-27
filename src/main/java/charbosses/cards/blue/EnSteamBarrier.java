@@ -30,7 +30,7 @@ public class EnSteamBarrier extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainBlockAction(p, p, this.block));
+        this.addToBot(new GainBlockAction(m, m, this.block));
         this.addToBot(new ModifyBlockAction(this.uuid, -1));
     }
 
