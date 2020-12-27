@@ -5,6 +5,8 @@
 
 package downfall.vfx;
 
+import charbosses.bosses.AbstractCharBoss;
+import charbosses.relics.AbstractCharbossRelic;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
@@ -213,7 +215,9 @@ public class BanditIOUEffect extends AbstractGameEffect {
             action.currentDamage = bearDamage;
             action.shouldPlayEffect = true;
             action.currentEffect = new FlashAtkImgEffect(action.m.drawX, action.m.drawY, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-            action.currentPower = new DexterityPower(action.m, this.bearDexDown);
+            if (action.m instanceof AbstractCharBoss) {
+                action.currentPower = new DexterityPower(action.m, this.bearDexDown);
+            }
             action.screenshake = true;
             masterTimer = .6F;
             currentBeat = StoryBeats.BEARHIT;
