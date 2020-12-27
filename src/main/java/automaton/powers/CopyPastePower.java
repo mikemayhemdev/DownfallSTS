@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class CopyPastePower extends AbstractAutomatonPower {
-    public static final String NAME = "Copy Paste";
+    public static final String NAME = "CopyPaste";
     public static final String POWER_ID = makeID(NAME);
     public static final PowerType TYPE = PowerType.BUFF;
     public static final boolean TURN_BASED = false;
