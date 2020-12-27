@@ -31,13 +31,13 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.cardmods.EtherealMod;
+import downfall.cardmods.ExhaustMod;
 import downfall.util.CardIgnore;
-import downfall.util.EtherealMod;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.util.ExhaustMod;
 
 import java.io.File;
 import java.net.URISyntaxException;

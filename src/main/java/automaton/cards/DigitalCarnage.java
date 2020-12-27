@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
-import downfall.util.EtherealMod;
+import downfall.cardmods.EtherealMod;
 
 public class DigitalCarnage extends AbstractBronzeCard {
 

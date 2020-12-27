@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.util.ExhaustMod;
+import downfall.cardmods.ExhaustMod;
 
 public class Backtrace extends AbstractBronzeCard {
 

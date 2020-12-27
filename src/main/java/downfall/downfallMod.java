@@ -90,7 +90,7 @@ import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
-import downfall.util.EtherealMod;
+import downfall.cardmods.EtherealMod;
 import downfall.util.LocalizeHelper;
 import downfall.util.ReplaceData;
 import expansioncontent.expansionContentMod;

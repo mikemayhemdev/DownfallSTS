@@ -5,7 +5,7 @@ import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import downfall.util.RetainCardMod;
+import downfall.cardmods.RetainCardMod;
 import sneckomod.SneckoMod;
 import sneckomod.cards.Cheat;
 import theHexaghost.util.TextureLoader;

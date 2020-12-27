@@ -1,21 +1,14 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.GladiatorStance;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
-import downfall.util.EtherealMod;
 import downfall.util.OctopusCard;
-import sneckomod.util.ExhaustMod;
 
 import java.util.ArrayList;
 import java.util.Collections;

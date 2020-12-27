@@ -2,6 +2,7 @@ package automaton.cardmods;
 
 import automaton.AutomatonMod;
 import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
@@ -16,6 +17,10 @@ public class UnplayableMod extends BronzeCardMod {
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         return CardCrawlGame.languagePack.getUIString(AutomatonMod.makeID("UnplayableMod")).TEXT[0] + rawDescription;
+    }
+
+    public boolean shouldApply(AbstractCard card) {
+        return !CardModifierManager.hasModifier(card, ID);
     }
 
     @Override
@@ -33,5 +38,10 @@ public class UnplayableMod extends BronzeCardMod {
     @Override
     public AbstractCardModifier makeCopy() {
         return new UnplayableMod();
+    }
+
+    @Override
+    public String identifier(AbstractCard card) {
+        return ID;
     }
 }
