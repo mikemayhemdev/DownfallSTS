@@ -530,7 +530,7 @@
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
     "DESCRIPTION": "Increase all numbers on cards in the Sequence by !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Increase all numbers on cards in the Sequence by !M!."
+    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on cards in the Sequence by !M!. NL Exhaust."
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
