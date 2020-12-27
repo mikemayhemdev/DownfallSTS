@@ -248,7 +248,7 @@
   },
   "bronze:GetLatest": {
     "NAME": "Get Latest",
-    "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Add a random card with bronze:Encode to your hand. NL It costs 0. NL Exhaust."
   },
   "bronze:Flail": {
     "NAME": "Flail",
@@ -365,8 +365,8 @@
   },
   "bronze:Decompile": {
     "NAME": "Decompile",
-    "DESCRIPTION": "Purge all cards in the Sequence. Gain [E] and draw a card for each card Purged. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Purge all cards in the Sequence. Gain [E] and draw a card for each card Purged. NL Exhaust."
+    "DESCRIPTION": "Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust."
   },
   "bronze:ChildClass": {
     "NAME": "Child Class",
@@ -530,7 +530,7 @@
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
     "DESCRIPTION": "Increase all numbers on cards in the Sequence by !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Increase all numbers on cards in the Sequence by !M!. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Increase all numbers on cards in the Sequence by !M!."
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",

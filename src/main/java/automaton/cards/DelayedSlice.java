@@ -14,7 +14,7 @@ public class DelayedSlice extends AbstractBronzeCard {
     //stupid intellij stuff attack, all_enemy, common
 
     public DelayedSlice() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         thisEncodes();
         baseMagicNumber = magicNumber = 10;
         //tags.add(AutomatonMod.NO_TEXT);
