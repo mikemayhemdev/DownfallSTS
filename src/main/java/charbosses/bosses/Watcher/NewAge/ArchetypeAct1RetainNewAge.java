@@ -24,7 +24,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
         bossMechanicName = bossMechanicString.DIALOG[8];
         bossMechanicDesc = bossMechanicString.DIALOG[9];
 
-        maxHPModifier += 100;
+        maxHPModifier += 88;
         actNum = 1;
     }
 

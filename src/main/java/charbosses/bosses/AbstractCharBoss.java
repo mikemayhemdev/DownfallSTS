@@ -58,6 +58,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
@@ -891,7 +892,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (damageAmount < 0) {
             damageAmount = 0;
         }
-        if (damageAmount > 1 && this.hasPower("IntangiblePlayer")) {
+        if (damageAmount > 1 && this.hasPower(IntangiblePower.POWER_ID)) {
             damageAmount = 1;
         }
         final boolean weakenedToZero = damageAmount == 0;

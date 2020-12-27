@@ -27,6 +27,8 @@ public class WatcherAngryPower extends AbstractPower {
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
 
+    private boolean active = false;
+
     public WatcherAngryPower(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
@@ -41,20 +43,26 @@ public class WatcherAngryPower extends AbstractPower {
 
     @Override
     public int onLoseHp(int damageAmount) {
-        if (this.owner.currentHealth <= this.owner.maxHealth / 2){
+        if (this.owner.currentHealth <= this.owner.maxHealth / 2 && !active) {
             flash();
+            active = true;
             this.addToBot(new EnemyChangeStanceAction(EnWrathStance.STANCE_ID));
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+           // this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         return super.onLoseHp(damageAmount);
     }
 
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType damageType) {
-        if (this.owner instanceof AbstractCharBoss) {
-            return damageType == DamageInfo.DamageType.NORMAL ? ((AbstractCharBoss) this.owner).stance.atDamageReceive(damage, damageType) : damage;
+
+        if (damage > 1.0F) {
+            if (this.owner instanceof AbstractCharBoss) {
+                if (AbstractCharBoss.boss.stance instanceof EnWrathStance) {
+                   return damage * 2F;
+                }
+            }
         }
-        return super.atDamageReceive(damage, damageType);
+       return damage;
     }
 
     static {
