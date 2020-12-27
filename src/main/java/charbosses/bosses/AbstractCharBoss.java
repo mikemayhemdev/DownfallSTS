@@ -350,6 +350,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         //SlimeboundMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
+        for (AbstractCard c:hand.group){
+            ((AbstractBossCard)c).lockIntentValues = true;
+        }
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
