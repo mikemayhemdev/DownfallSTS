@@ -96,7 +96,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;
-        // TODO Auto-generated constructor stub
+
     }
 
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
@@ -105,7 +105,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;
         this.intent = intent;
-        // TODO Auto-generated constructor stub
+
     }
 
     public AbstractBossCard(AbstractCard baseCard) {

@@ -33,7 +33,7 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
                     String[] splitText = card.rawDescription.split("bronze:Compile");
                     String compileText = splitText[1];
                     s.append(compileText.replaceAll("bronze:", "#y").replaceAll("!D!", String.valueOf(card.damage)).replaceAll("!B!", String.valueOf(card.block)).replaceAll("!M!", String.valueOf(card.magicNumber)).replaceAll("!bauto!", (String.valueOf(((AbstractBronzeCard) card).auto))).replace("*", "#y"));
-                    //TODO: Get this to recognize regular keywords and #y them? Not too necessary.
+                    //TODO: Make it so all cards implement a getCompileText method that returns things appropriately looking. Eventually
                     s.append(" NL ");
                 }
             }

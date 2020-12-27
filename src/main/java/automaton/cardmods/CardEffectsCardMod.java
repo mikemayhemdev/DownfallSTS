@@ -157,7 +157,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
-        } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
+        }
         else if (card.rawDescription.contains("bronze:Compile")) {
             return ""; // It's over!! If you only have Compile effects, you're gone!!!!!
         } // IT NEVER ENDS!!!!!

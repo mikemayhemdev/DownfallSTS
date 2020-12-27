@@ -20,7 +20,6 @@ public class CBR_Boot extends AbstractCharbossRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        // TODO Auto-generated method stub
         return new CBR_Boot();
     }
 

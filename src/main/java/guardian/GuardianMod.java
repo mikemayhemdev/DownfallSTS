@@ -143,7 +143,7 @@ public class GuardianMod implements PostDrawSubscriber,
     @SpireEnum
     public static AbstractCard.CardTags VOLATILE;
 
-    //TODO - Unlock bundles
+
     private ModPanel settingsPanel;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -592,7 +592,7 @@ public static void saveData() {
 
     public void receiveEditRelics() {
 
-        //TODO - Relics here
+
         BaseMod.addRelicToCustomPool(new ModeShifter(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new ModeShifterPlus(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new BottledStasis(), AbstractCardEnum.GUARDIAN);
@@ -615,12 +615,12 @@ public static void saveData() {
 
     public void receiveEditCards() {
 
-        //TODO - Dynamic Variables here
+
         BaseMod.addDynamicVariable(new MultihitVariable());
         BaseMod.addDynamicVariable(new SecondaryMagicVariable());
 
 
-        //TODO - Cards here
+
         BaseMod.addCard(new Strike_Guardian());
         BaseMod.addCard(new Defend_Guardian());
         BaseMod.addCard(new ChargeUp());

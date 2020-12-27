@@ -227,8 +227,7 @@ public class GuardianCharacter extends CustomPlayer {
     }
 
     public ArrayList<String> getStartingDeck() {
-        ArrayList<String> retVal = new ArrayList();
-        //TODO - Starting deck goes here
+        ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(Strike_Guardian.ID);
         retVal.add(Strike_Guardian.ID);

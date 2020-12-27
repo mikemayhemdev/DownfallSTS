@@ -13,7 +13,6 @@ public class EnemyEnergyManager extends EnergyManager {
 
     public EnemyEnergyManager(int e) {
         super(e);
-        // TODO Auto-generated constructor stub
     }
 
     public void prep() {

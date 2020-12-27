@@ -466,7 +466,7 @@ public abstract class AbstractBossDeckArchetype {
         } else if (rarityRoll >= rarityRange[4] && rarityRoll <= rarityRange[5] && validRarities[2]) {
             rarity = CardRarity.RARE;
         } else {
-            //If no rarities were valid, mark it as Special, which will return a single Shiv (TODO replace this with Madness)
+            //If no rarities were valid, mark it as Special, which will return a single Shiv /Madness/ThisIsNoLongerUsedAtAll
             rarity = CardRarity.SPECIAL;
         }
 

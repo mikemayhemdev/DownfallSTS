@@ -23,8 +23,6 @@ public class CombatDrawPositionPatch {
 
             // SlimeboundMod.logger.info("Cultist cluster Patch hit.");
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
-                //TODO - rewrite this all to check if an enemy is too far left like the awakened one fight and not exactly that fight.
-                //TODO - rewrite the next one to check for enemies left of the character position and not the exact Spire duo fight.
                 // SlimeboundMod.logger.info("Cultist cluster Patch hit player is Slimebound.");
                 if (monsters.length == 3) {
                     if (monsters[2].id == AwakenedOne.ID && monsters[1].id == Cultist.ID && monsters[0].id == Cultist.ID) {
