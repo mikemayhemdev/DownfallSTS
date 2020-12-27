@@ -19,7 +19,7 @@ public class SpaghettiCode extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, rare
 
     public SpaghettiCode() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
     }
 

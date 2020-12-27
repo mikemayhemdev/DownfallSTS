@@ -13,7 +13,7 @@ public class Fortify extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 4;
 
     public Fortify() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);

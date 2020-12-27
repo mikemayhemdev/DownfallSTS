@@ -31,7 +31,7 @@ public class SearingBeam extends AbstractBronzeCard {
 
     @Override
     public void upgrade() {
-        upgradeDamage(2);
+        upgradeDamage(2 + timesUpgraded);
         ++timesUpgraded;
         upgraded = true;
         name = NAME + "+" + timesUpgraded;

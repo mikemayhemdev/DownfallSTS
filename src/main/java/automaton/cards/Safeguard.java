@@ -2,7 +2,11 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.FrailPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import guardian.powers.ExhaustStatusesPower;
 
 public class Safeguard extends AbstractBronzeCard {
 
@@ -26,9 +30,8 @@ public class Safeguard extends AbstractBronzeCard {
     }
 
     @Override
-    public void onCompileLast(AbstractCard function, boolean forGameplay) {
-        function.cost += magicNumber;
-        function.costForTurn += magicNumber;
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        applyToSelf(new FrailPower(AbstractDungeon.player, 2, false));
     }
 
     public void upp() {

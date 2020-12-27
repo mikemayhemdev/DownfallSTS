@@ -27,11 +27,11 @@
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
     "DESCRIPTIONS": [
-      "If the Sequence contains only cost 0 cards, the Function costs 0. At the start of your turn, add #b1 #yMinor #yBeam into your hand.",
-      "If the Sequence contains only cost 0 cards, the Function costs 0. At the start of your turn, add #b1 #yMinor #yBeam+ into your hand.",
-      "If the Sequence contains only cost 0 cards, the Function costs 0. At the start of your turn, add #b",
+      "At the start of your turn, add #b1 #yMinor #yBeam into your hand.",
+      "At the start of your turn, add #b1 #yMinor #yBeam+ into your hand.",
+      "At the start of your turn, add #b",
       " #yMinor #yBeams into your hand.",
-      "If the Sequence contains only cost 0 cards, the Function costs 0. At the start of your turn, add #b",
+      "At the start of your turn, add #b",
       " #yMinor #yBeam+s into your hand."
     ]
   },

@@ -55,11 +55,13 @@ public class DigitalCarnage extends AbstractBronzeCard {
         CardModifierManager.addModifier(function, new EtherealMod());
     }
 
+    /*
     @Override
     public void onCompileLast(AbstractCard function, boolean forGameplay) {
         function.cost += 1;
         function.costForTurn += 1;
     }
+    */
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
