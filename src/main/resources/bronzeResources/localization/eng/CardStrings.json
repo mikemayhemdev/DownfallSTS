@@ -592,7 +592,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Buggy Mess",
-    "DESCRIPTION": "bronze:Insert random Status. NL Gain [E] .",
+    "DESCRIPTION": "bronze:Insert random Status. NL Gain !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "buggy",
       "Mess"
