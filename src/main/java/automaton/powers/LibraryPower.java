@@ -19,9 +19,11 @@ public class LibraryPower extends AbstractAutomatonPower {
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             flash();
-            AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
-            qCardGet.setCostForTurn(0);
-            addToBot(new MakeTempCardInHandAction(qCardGet, true));
+            for (int i = 0; i < amount; i++) {
+                AbstractCard qCardGet = SpaghettiCode.getRandomEncode();
+                qCardGet.setCostForTurn(0);
+                addToBot(new MakeTempCardInHandAction(qCardGet, true));
+            }
         }
     }
 }
