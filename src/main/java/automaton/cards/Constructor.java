@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -16,7 +17,7 @@ public class Constructor extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         thisEncodes();
-        //TODO - Only show ocmpile text if its the first card in the sequence, saying "Constructor will double its block"
+        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
     }
 
     @Override
@@ -26,6 +27,14 @@ public class Constructor extends AbstractBronzeCard {
             this.block *= 2;
             superFlash();
         }
+    }
+
+    @Override
+    public String getSpecialCompileText() {
+        if (firstCard()) {
+            return " - #yConstructor doubles its #yBlock.";
+        }
+        return "";
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

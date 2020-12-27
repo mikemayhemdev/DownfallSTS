@@ -147,6 +147,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
         return String.valueOf(NAME.charAt(0));
     }
 
+    public String getSpecialCompileText() {
+        return "You're calling this on the wrong card, buddy!";
+    }
+
     public abstract void upp();
 
     protected void atb(AbstractGameAction action) {

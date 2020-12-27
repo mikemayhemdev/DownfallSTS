@@ -95,6 +95,8 @@ public class AutomatonMod implements
     public static AbstractCard.CardTags NO_TEXT;
     @SpireEnum
     public static AbstractCard.CardTags ADDS_NO_CARDTEXT;
+    @SpireEnum
+    public static AbstractCard.CardTags SPECIAL_COMPILE_TEXT;
 
     public AutomatonMod() {
         BaseMod.subscribe(this);

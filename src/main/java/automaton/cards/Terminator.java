@@ -1,5 +1,7 @@
 package automaton.cards;
 
+import automaton.AutomatonChar;
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,6 +20,7 @@ public class Terminator extends AbstractBronzeCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         thisEncodes();
+        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
     }
 
     @Override
@@ -26,6 +29,14 @@ public class Terminator extends AbstractBronzeCard {
             baseDamage *= 2;
             damage *= 2;
         }
+    }
+
+    @Override
+    public String getSpecialCompileText() {
+        if (lastCard()) {
+            return " - #yTerminator doubles its damage.";
+        }
+        return "";
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

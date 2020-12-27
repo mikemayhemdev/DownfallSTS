@@ -19,6 +19,7 @@ public class Separator extends AbstractBronzeCard {
         baseMagicNumber = magicNumber = 2;
         //tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
         baseBlock = 5;
+        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,6 +34,14 @@ public class Separator extends AbstractBronzeCard {
                 atb(new GainEnergyAction(magicNumber));
             }
         }
+    }
+
+    @Override
+    public String getSpecialCompileText() {
+        if (!firstCard() && !lastCard()) {
+            return " - Gain #b" + magicNumber + " [E] .";
+        }
+        return "";
     }
 
     public void upp() {

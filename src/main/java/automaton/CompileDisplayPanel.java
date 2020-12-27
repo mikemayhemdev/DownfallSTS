@@ -16,12 +16,19 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
 
     @Override
     public String getDescription() {
-        String q = "NORENDER";
         boolean flip = false;
         StringBuilder s = new StringBuilder();
         if (FunctionHelper.held != null && FunctionHelper.doStuff)
             for (AbstractCard card : FunctionHelper.held.group) {
-                if (card.rawDescription.contains("bronze:Compile")) {
+                if (card.hasTag(AutomatonMod.SPECIAL_COMPILE_TEXT) && card instanceof AbstractBronzeCard) {
+                    String x = ((AbstractBronzeCard) card).getSpecialCompileText();
+                    if (!x.equals("")) {
+                        flip = true;
+                        s.append(((AbstractBronzeCard) card).getSpecialCompileText());
+                        s.append(" NL ");
+                    }
+                }
+                else if (card.rawDescription.contains("bronze:Compile")) {
                     flip = true;
                     String[] splitText = card.rawDescription.split("bronze:Compile");
                     String compileText = splitText[1];
@@ -31,7 +38,7 @@ public class CompileDisplayPanel extends EasyInfoDisplayPanel {
                 }
             }
         if (!flip) {
-            return q;
+            return "NORENDER";
         }
         return s.toString();
     }
