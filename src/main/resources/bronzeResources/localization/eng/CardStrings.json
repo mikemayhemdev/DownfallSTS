@@ -354,7 +354,7 @@
     "NAME": "Allocate",
     "DESCRIPTION": "Gain [E] for each Status in your draw pile.",
     "EXTENDED_DESCRIPTION": [
-      "NL (Gain ",
+      " NL (Gain ",
       " [E] .)"
     ]
   },
