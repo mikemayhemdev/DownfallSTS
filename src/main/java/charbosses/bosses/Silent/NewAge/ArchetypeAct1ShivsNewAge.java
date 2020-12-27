@@ -30,7 +30,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
         addRelic(new CBR_NeowsBlessing());
         // addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_Lantern());
-        addRelic(new CBR_CaptainsWheel());
+        //addRelic(new CBR_CaptainsWheel());
         addRelic(new CBR_OrnamentalFan());
         // addRelic(new CBR_DreamCatcher());
         // addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
@@ -55,7 +55,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                 case 1:
                     //Turn 2
                     addToList(cardsList, new EnCloakAndDagger(), false);
-                    addToList(cardsList, new EnDodgeAndRoll(), extraUpgrades);
+                    addToList(cardsList, new EnDefendGreen(), extraUpgrades);
                     addToList(cardsList, new EnDefendGreen());  //Not played here
                     turn++;
                     break;
@@ -101,7 +101,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                 case 2:
                     addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnBladeDance(), extraUpgrades);
-                    addToList(cardsList, new EnDodgeAndRoll(), extraUpgrades);
+                    addToList(cardsList, new EnDefendGreen(), extraUpgrades);
                     addToList(cardsList, new EnDefendGreen());  //Not played here
                     turn = 0;
                     break;

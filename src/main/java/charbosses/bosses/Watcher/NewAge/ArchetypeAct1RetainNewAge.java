@@ -33,7 +33,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_CloakClasp());
         addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_TungstenRod());
+        //addRelic(new CBR_TungstenRod());
     }
 
     @Override
