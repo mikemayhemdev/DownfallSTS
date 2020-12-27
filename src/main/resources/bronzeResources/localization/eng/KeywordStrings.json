@@ -21,5 +21,12 @@
       "blur"
     ],
     "DESCRIPTION": "Do not lose Block at the end of the turn."
+  },
+  {
+    "PROPER_NAME": "Insert",
+    "NAMES": [
+      "insert"
+    ],
+    "DESCRIPTION": "Add a card to your draw pile."
   }
 ]

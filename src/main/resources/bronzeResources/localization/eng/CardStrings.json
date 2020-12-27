@@ -1,7 +1,7 @@
 {
   "bronze:DazingPulse": {
     "NAME": "Dazing Pulse",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !B! Block and add 2 *Dazed into your draw pile.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Gain !B! Block and bronze:Insert !M! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "dazing",
       "Pulse"
@@ -17,7 +17,7 @@
   },
   "bronze:Explode": {
     "NAME": "Explode",
-    "DESCRIPTION": "Add a *Burn into your draw pile. NL bronze:Compile - Deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "bronze:Insert a *Burn. NL bronze:Compile - Deal !D! damage to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "unstable",
       "Bomb"
@@ -33,7 +33,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "Deca Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and add 2 *Dazed into your draw pile.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! Plated Armor and bronze:Insert !bauto! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "jagged",
       "Barrier"
@@ -116,8 +116,7 @@
   },
   "bronze:Overheat": {
     "NAME": "Overheat",
-    "DESCRIPTION": "Deal !D! damage. NL Take 4 damage. NL bronze:Compile - Add a *Burn+ into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take 4 damage. NL bronze:Compile - Add a *Burn+ into your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. NL Take 4 damage. NL bronze:Compile - bronze:Insert a *Burn+.",
     "EXTENDED_DESCRIPTION": [
       "heated",
       "Burn"
@@ -141,8 +140,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "Dark Dash",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add a *Void into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - Add a *Void into your discard pile.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL bronze:Compile - bronze:Insert a *Void.",
     "EXTENDED_DESCRIPTION": [
       "dark",
       "Dash"
@@ -150,8 +148,7 @@
   },
   "bronze:OilSpill": {
     "NAME": "Oil Spill",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - Add a *Slimed into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - Add a *Slimed into your discard pile.",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Poison. NL bronze:Compile - bronze:Insert a *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "oily",
       "Spill"
@@ -159,8 +156,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "Wild Beam",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Wound into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add a *Wound into your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert a *Wound.",
     "EXTENDED_DESCRIPTION": [
       "wild",
       "Beam"
@@ -184,7 +180,7 @@
   },
   "bronze:Shield": {
     "NAME": "Sticky Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Add 1 *Slimed to your draw pile.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert a *Slimed.",
     "EXTENDED_DESCRIPTION": [
       "sticky",
       "Shield"
@@ -240,18 +236,10 @@
       "Energy"
     ]
   },
-  "bronze:Update": {
-    "NAME": "Update",
-    "DESCRIPTION": "Gain !B! Block. π NL When bronze:Encoded, Upgrade all cards before this in the Sequence."
-  },
   "bronze:Overload": {
     "NAME": "Overload",
     "DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Play a copy of each card in the Sequence. They do not Encode."
-  },
-  "bronze:ReverseEngineer": {
-    "NAME": "Reverse Engineer",
-    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity. NL Otherwise, deal !D! damage."
   },
   "bronze:GetLatest": {
     "NAME": "Get Latest",
@@ -330,7 +318,6 @@
     "NAME": "Class Default",
     "DESCRIPTION": "Add a copy of the first card in the current Sequence to the next !M! Sequences automatically.",
     "UPGRADE_DESCRIPTION": "Retain. NL Add a copy of the first card in the current Sequence to the next !M! Sequences automatically."
-
   },
   "bronze:ItsAFeature": {
     "NAME": "It's a Feature",
@@ -356,7 +343,7 @@
   },
   "bronze:MaxOutput": {
     "NAME": "Max Output",
-    "DESCRIPTION": "Draw 1 additional card and add a *Dazed into your draw pile each turn."
+    "DESCRIPTION": "At the start of your turn, draw 1 additional card and bronze:Insert 1 *Dazed."
   },
   "bronze:Mutator": {
     "NAME": "Mutator",
@@ -370,7 +357,6 @@
       "NL (Gain ",
       " [E] .)"
     ]
-
   },
   "bronze:Decompile": {
     "NAME": "Decompile",
@@ -451,7 +437,7 @@
   },
   "bronze:BurnOut": {
     "NAME": "Burn Out",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for ALL of your Status cards, then Exhaust them. NL Add 3 *Burns to your draw pile.",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for ALL of your Status cards, then Exhaust them. NL bronze:Insert 3 *Burns.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
@@ -463,8 +449,7 @@
   },
   "bronze:Break": {
     "NAME": "Break",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add !M! random Status cards into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL bronze:Compile - Add !M! random Status cards into your discard pile.",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - bronze:Insert !M! random Status cards.",
     "EXTENDED_DESCRIPTION": [
       "broken",
       "Smash"
@@ -607,7 +592,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Buggy Mess",
-    "DESCRIPTION": "Add a random Status into your draw pile. NL bronze:Compile - Function costs 1 less.",
+    "DESCRIPTION": "bronze:Insert random Status. NL Gain [E] .",
     "EXTENDED_DESCRIPTION": [
       "buggy",
       "Mess"

@@ -15,6 +15,7 @@ public class DecaBeam extends AbstractBronzeCard {
         baseBlock = block = 16;
         thisEncodes();
         magicNumber = baseMagicNumber = 4;
+        baseAuto = auto = 2;
     }
 
     @Override
