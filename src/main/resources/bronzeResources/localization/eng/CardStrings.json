@@ -88,7 +88,11 @@
   },
   "bronze:DelayedSlice": {
     "NAME": "Delayed Slice",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - ALL enemies lose !M! HP.",
+    "EXTENDED_DESCRIPTION": [
+      "delayed",
+      "Slice"
+    ]
   },
   "bronze:WhirlingStrike": {
     "NAME": "Piercing Shot",
@@ -374,7 +378,11 @@
   },
   "bronze:Repair": {
     "NAME": "Repair",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Heal !M! HP."
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Heal !M! HP.",
+    "EXTENDED_DESCRIPTION": [
+      "tinkers",
+      "Wrench"
+    ]
   },
   "bronze:Boost": {
     "NAME": "Boost",
