@@ -225,7 +225,8 @@
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the Sequence, double its Block.",
     "EXTENDED_DESCRIPTION": [
       "build",
-      "Sadness"
+      "Sadness",
+      "Greatness"
     ]
   },
   "bronze:Separator": {

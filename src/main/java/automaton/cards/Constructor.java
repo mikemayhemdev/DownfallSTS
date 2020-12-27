@@ -1,6 +1,5 @@
 package automaton.cards;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -27,6 +26,11 @@ public class Constructor extends AbstractBronzeCard {
             this.block *= 2;
             superFlash();
         }
+    }
+
+    @Override
+    public String getNoun() {
+        return position == 0 ? EXTENDED_DESCRIPTION[1] : EXTENDED_DESCRIPTION[2];
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
