@@ -28,11 +28,6 @@ public class Constructor extends AbstractBronzeCard {
         }
     }
 
-    @Override
-    public String getNoun() {
-        return position == 0 ? EXTENDED_DESCRIPTION[1] : EXTENDED_DESCRIPTION[2];
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
     }

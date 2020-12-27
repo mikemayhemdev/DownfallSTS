@@ -40,7 +40,7 @@ public class FineTuning extends AbstractBronzeCard {
     }
 
     public void upp() {
-        selfRetain = true;
+        exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
