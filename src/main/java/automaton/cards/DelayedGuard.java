@@ -11,7 +11,7 @@ public class DelayedGuard extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, common
 
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 7;
     private static final int UPG_BLOCK = 2;
 
     public DelayedGuard() {
@@ -22,13 +22,6 @@ public class DelayedGuard extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new NextTurnBlockPower(p, block));
-    }
-
-    @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            blck();
-        }
     }
 
     public void upp() {

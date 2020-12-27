@@ -17,7 +17,7 @@
   },
   "bronze:Explode": {
     "NAME": "Explode",
-    "DESCRIPTION": "bronze:Insert a *Burn. NL bronze:Compile - Deal !D! damage to ALL enemies.",
+    "DESCRIPTION": "bronze:Insert a *Burn. NL bronze:Compile - ALL enemies lose !M! HP.",
     "EXTENDED_DESCRIPTION": [
       "unstable",
       "Bomb"
@@ -88,7 +88,7 @@
   },
   "bronze:DelayedSlice": {
     "NAME": "Delayed Slice",
-    "DESCRIPTION": "bronze:Compile - Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "bronze:Compile - ALL enemies lose !M! HP."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Piercing Shot",
@@ -172,7 +172,7 @@
   },
   "bronze:DelayedGuard": {
     "NAME": "Delayed Guard",
-    "DESCRIPTION": "Next turn, gain !B! Block. NL bronze:Compile - Gain !B! Block.",
+    "DESCRIPTION": "Next turn, gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "delayed",
       "Guard"

@@ -2,6 +2,7 @@ package automaton.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +15,7 @@ public class Explode extends AbstractBronzeCard {
 
     public Explode() {
         super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseDamage = 20;
+        baseMagicNumber = magicNumber = 20;
         thisEncodes();
     }
 
@@ -28,12 +29,14 @@ public class Explode extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             addToBot(new VFXAction(new ExplosionSmallEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
-            allDmg(AbstractGameAction.AttackEffect.NONE);
+            for (AbstractMonster q : monsterList()) {
+                addToBot(new LoseHPAction(q, q, magicNumber, AbstractGameAction.AttackEffect.FIRE));
+            }
         }
     }
 
     @Override
     public void upp() {
-        upgradeDamage(5);
+        upgradeMagicNumber(5);
     }
 }
