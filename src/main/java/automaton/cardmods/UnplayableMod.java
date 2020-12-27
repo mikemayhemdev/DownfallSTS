@@ -24,12 +24,6 @@ public class UnplayableMod extends BronzeCardMod {
     }
 
     @Override
-    public void onInitialApplication(AbstractCard card) {
-        card.cost = -2;
-        card.costForTurn = -2;
-    }
-
-    @Override
     public boolean canPlayCard(AbstractCard card) {
         card.cantUseMessage = "ERR_NULL_PTR"; //TODO: Localize
         return false;

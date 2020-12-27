@@ -5,7 +5,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Add a card to the Sequence. NL When 3 cards are in the Sequence, their effects (other than Encode) are Compiled into a Function which costs 1."
+    "DESCRIPTION": "Add a card to the Sequence. NL When 3 cards are in the Sequence, their effects (other than Encode) are Compiled into a Function which costs the highest of its constituents."
   },
   {
     "PROPER_NAME": "Compile",
