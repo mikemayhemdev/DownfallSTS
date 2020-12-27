@@ -1,6 +1,7 @@
 package charbosses.relics;
 
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.powers.general.EnemyPoisonPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,7 +22,7 @@ public class CBR_TwistedFunnel extends AbstractCharbossRelic {
     @Override
     public void atBattleStart() {
             this.flash();
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractCharBoss.boss, new PoisonPower(AbstractDungeon.player, AbstractCharBoss.boss, 4), 4));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractCharBoss.boss, new EnemyPoisonPower(AbstractDungeon.player, AbstractCharBoss.boss, 4), 4));
 
     }
 

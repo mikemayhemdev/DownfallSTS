@@ -23,8 +23,9 @@ public class Fortify extends AbstractBronzeCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        for (int i = 0; i < magicNumber; i++) {
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        }
     }
 
     @Override

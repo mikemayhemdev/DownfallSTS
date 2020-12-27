@@ -27,7 +27,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
         bossMechanicName = bossMechanicString.DIALOG[24];
         bossMechanicDesc = bossMechanicString.DIALOG[25];
 
-        maxHPModifier += 100;
+        maxHPModifier += 70;
         actNum = 1;
     }
 

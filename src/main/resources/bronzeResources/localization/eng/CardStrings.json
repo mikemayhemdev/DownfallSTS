@@ -133,7 +133,7 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "Recursive Strike",
-    "DESCRIPTION": "Deal !D! damage twice. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!.",
+    "DESCRIPTION": "Deal !D! damage !bauto! times. π NL At the start of your turn, if this is in the Sequence, increase its damage by !M!.",
     "EXTENDED_DESCRIPTION": [
       "recursive",
       "Recur"
@@ -283,7 +283,7 @@
   },
   "bronze:Fortify": {
     "NAME": "Fortify",
-    "DESCRIPTION": "Deal !D! damage twice. NL bronze:Compile - Gain !M! Dexterity.",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL bronze:Compile - Gain !M! Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "solid",
       "Fortress"

@@ -14,6 +14,7 @@ public class BuggyMess extends AbstractBronzeCard {
     public BuggyMess() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
+        baseMagicNumber = magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,13 +23,13 @@ public class BuggyMess extends AbstractBronzeCard {
 
     @Override
     public void onCompileLast(AbstractCard function, boolean forGameplay) {
-        if (function.cost >= 1) {
-            function.cost -= 1;
-            function.costForTurn -= 1; //TODO: Reducing cost needs to be routed through a function eventually and centralized for all Function cost changing effects, to prevent weird stuff like X-funcs.
+        if (function.cost >= magicNumber) {
+            function.cost -= magicNumber;
+            function.costForTurn -= magicNumber; //TODO: Reducing cost needs to be routed through a function eventually and centralized for all Function cost changing effects, to prevent weird stuff like X-funcs.
         }
     }
 
     public void upp() {
-        // TODO: What was this upgrade?
+        upgradeBaseCost(0);
     }
 }

@@ -1,9 +1,12 @@
 package automaton.cards;
 
 import automaton.FunctionHelper;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 
 public class RecursiveStrike extends AbstractBronzeCard {
 
@@ -17,12 +20,15 @@ public class RecursiveStrike extends AbstractBronzeCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = 4;
+        baseAuto = auto = 2;
         thisEncodes();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        for (int i = 0; i < auto; i++) {
+            this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.ORANGE, Color.WHITE), 0.1F));
+            dmg(m, AbstractGameAction.AttackEffect.NONE);
+        }
     }
 
     @Override
