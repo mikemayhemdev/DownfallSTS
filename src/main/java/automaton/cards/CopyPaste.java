@@ -12,8 +12,7 @@ public class CopyPaste extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, rare
 
     public CopyPaste() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        exhaust = true;
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
