@@ -1,5 +1,6 @@
 package automaton.cardmods;
 
+import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import automaton.cards.AbstractBronzeCard;
 import automaton.cards.FunctionCard;
@@ -147,22 +148,20 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     public static String getRealDesc(AbstractCard card) {
         String x = card.rawDescription;
-        boolean continueParsing = true;
         if (card.rawDescription.contains(" NL bronze:Compile")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
         } //TODO: This entire thing is terrible and placeholder. Make it good eventually!
         else if (card.rawDescription.contains("bronze:Compile")) {
-            x = ""; // It's over!! If you only have Compile effects, you're gone!!!!!
-            continueParsing = false; //WE'RE DONE HERE, CHILD CLASS!!!
+            return ""; // It's over!! If you only have Compile effects, you're gone!!!!!
         } // IT NEVER ENDS!!!!!
-        if (card.rawDescription.contains(" π") && continueParsing) {
+        if (card.rawDescription.contains(" π")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " π"));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
         } // This one is for cards with other text that doesn't need to be on the Function.
-        if (card.rawDescription.contains(" NL \u00A0 ") && continueParsing) {
+        if (card.rawDescription.contains(" NL \u00A0 ")) {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL \u00A0 "));
             String compileText = splitText[0] + splitText[1];
             x = x.replace(compileText, "");
@@ -188,8 +187,9 @@ public class CardEffectsCardMod extends BronzeCardMod {
     public boolean isFinalCardEffectsFunction(AbstractCard card) {
         boolean yesIAmTheFinalCardWoo = false;
         for (AbstractCardModifier c : CardModifierManager.getModifiers(card, CardEffectsCardMod.ID)) {
-            // Does JAVA let me do this? I sure hope so
-            yesIAmTheFinalCardWoo = c == this;
+            if (c instanceof CardEffectsCardMod) {
+                yesIAmTheFinalCardWoo = c == this || ((CardEffectsCardMod) c).stored().hasTag(AutomatonMod.ADDS_NO_CARDTEXT);
+            }
         }
         return yesIAmTheFinalCardWoo;
     }

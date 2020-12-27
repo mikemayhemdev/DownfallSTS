@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import automaton.cardmods.PlayMeTwiceCardmod;
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,6 +18,7 @@ public class ChildClass extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,5 +1,6 @@
 package automaton.cards;
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,6 +17,7 @@ public class Separator extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
         baseMagicNumber = magicNumber = 2;
+        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
