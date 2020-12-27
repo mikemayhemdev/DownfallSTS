@@ -252,7 +252,7 @@
   },
   "bronze:Flail": {
     "NAME": "Flail",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies twice. NL bronze:Compile - Gain !M! Artifact.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies !bauto! times. NL bronze:Compile - Gain !M! Artifact.",
     "EXTENDED_DESCRIPTION": [
       "flailing",
       "Flail"
@@ -403,7 +403,7 @@
   },
   "bronze:BronzeArmor": {
     "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain !auto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact.",
+    "DESCRIPTION": "Gain !bauto! Artifact. NL bronze:Compile - ALL enemies gain !M! Artifact.",
     "EXTENDED_DESCRIPTION": [
       "bronze",
       "Armor"

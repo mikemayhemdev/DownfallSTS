@@ -35,6 +35,7 @@ public class DelayedSlice extends AbstractBronzeCard {
     }
 
     public void upp() {
+        upgradeDamage(1);
         upgradeMagicNumber(5);
     }
 }

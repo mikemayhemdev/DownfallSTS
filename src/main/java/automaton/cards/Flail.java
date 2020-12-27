@@ -25,11 +25,13 @@ public class Flail extends AbstractBronzeCard {
         isMultiDamage = true;
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
+        baseAuto = auto = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        for (int i = 0; i < auto; i++) {
+            allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        }
     }
 
     @Override
