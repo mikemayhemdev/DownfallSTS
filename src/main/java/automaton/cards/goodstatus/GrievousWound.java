@@ -37,7 +37,7 @@ public class GrievousWound extends AbstractCard {
     public GrievousWound() {
 
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.magicNumber = this.baseMagicNumber = 1;
 
         tags.add(AutomatonMod.GOOD_STATUS);
 
