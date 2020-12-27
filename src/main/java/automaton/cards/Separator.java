@@ -17,16 +17,18 @@ public class Separator extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
         baseMagicNumber = magicNumber = 2;
-        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
+        //tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
+        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
     }
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            atb(new GainEnergyAction(1));
+            //atb(new GainEnergyAction(1));
             if (!firstCard() && !lastCard()) {
                 atb(new GainEnergyAction(magicNumber));
             }

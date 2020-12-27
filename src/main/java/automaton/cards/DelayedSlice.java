@@ -17,10 +17,12 @@ public class DelayedSlice extends AbstractBronzeCard {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         thisEncodes();
         baseMagicNumber = magicNumber = 10;
-        tags.add(AutomatonMod.NO_TEXT);
+        //tags.add(AutomatonMod.NO_TEXT);
+        baseDamage = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
     }
 
     @Override
