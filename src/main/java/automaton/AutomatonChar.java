@@ -108,8 +108,8 @@ public class AutomatonChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(Goto.ID);
         retVal.add(Replicate.ID);
+        retVal.add(Goto.ID);
         return retVal;
     }
 
