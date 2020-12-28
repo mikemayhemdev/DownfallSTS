@@ -3,6 +3,8 @@ package charbosses.bosses.Defect.NewAge;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
+import charbosses.cards.curses.EnAged;
+import charbosses.cards.purple.EnStrikePurple;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -53,7 +55,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
                     //Turn 2
                     addToList(cardsList, new EnSteamBarrier(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnGeneticAlgorithm(9), false);
+                    addToList(cardsList, new EnAged(), false);
                     turn++;
                     steamBarrierCasts++;
                     break;
@@ -66,7 +68,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
                     break;
                 case 3:
                     //Turn 4
-                    addToList(cardsList, new EnDefendBlue(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnCoreSurge(), false);
                     addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
                     turn = 0;
@@ -84,7 +86,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnDefendBlue(), false);
+                    addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnSteamBarrier(steamBarrierCasts), false);
                     steamBarrierCasts++;
                     turn++;
