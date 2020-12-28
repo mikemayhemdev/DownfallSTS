@@ -16,25 +16,26 @@ public class Constructor extends AbstractBronzeCard {
     public Constructor() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = BLOCK;
         thisEncodes();
         tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
     }
 
     @Override
-    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
-        if (firstCard() && forGameplay) {
-            this.baseBlock *= 2;
-            this.block *= 2;
+    public void onInput() {
+        if (firstCard()) {
+            this.baseBlock += magicNumber;
+            this.block += magicNumber;
             superFlash();
         }
     }
 
     @Override
-    public String getSpecialCompileText() {
+    public String getNoun() {
         if (firstCard()) {
-            return " - #yConstructor doubles its #yBlock."; //TODO: Localize
+            return EXTENDED_DESCRIPTION[2];
         }
-        return "";
+        return super.getNoun();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -43,5 +44,6 @@ public class Constructor extends AbstractBronzeCard {
 
     public void upp() {
         upgradeBlock(UPG_BLOCK);
+        upgradeMagicNumber(UPG_BLOCK);
     }
 }

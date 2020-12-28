@@ -1,9 +1,7 @@
 package automaton.cards;
 
-import automaton.AutomatonChar;
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -19,28 +17,28 @@ public class Terminator extends AbstractBronzeCard {
     public Terminator() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        baseMagicNumber = magicNumber = 1;
         thisEncodes();
         tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
     }
 
     @Override
-    public void onCompilePreCardEffectEmbed(boolean forGameplay) {
-        if (lastCard() && forGameplay) {
-            baseDamage *= 2;
-            damage *= 2;
-        }
-    }
-
-    @Override
-    public String getSpecialCompileText() {
+    public void onInput() {
         if (lastCard()) {
-            return " - #yTerminator doubles its damage."; //TODO: Localize
+            int x = magicNumber;
+            baseMagicNumber += 1;
+            magicNumber += 1;
+            if (x == 1) {
+                rawDescription = EXTENDED_DESCRIPTION[2];
+                initializeDescription();
+            }
+            superFlash();
         }
-        return "";
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
+        for (int i = 0; i < magicNumber; i++)
+            dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
     }
 
     public void upp() {

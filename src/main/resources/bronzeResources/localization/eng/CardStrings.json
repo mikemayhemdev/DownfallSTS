@@ -112,10 +112,11 @@
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "Deal !D! damage. NL bronze:Compile - If this is the last card in the Sequence, double its damage.",
+    "DESCRIPTION": "Deal !D! damage. NL When bronze:Encoded, if this is in the last slot, it deals damage 1 additional time.",
     "EXTENDED_DESCRIPTION": [
       "sad",
-      "End"
+      "End",
+      "Deal !D! damage !M! times. NL When bronze:Encoded, if this is in the last slot, it deals damage 1 additional time."
     ]
   },
   "bronze:Overheat": {
@@ -227,7 +228,7 @@
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is the first card in the Sequence, double its Block.",
+    "DESCRIPTION": "Gain !B! Block. NL When bronze:Encoded, if this is the first card, increase its Block by !M!.",
     "EXTENDED_DESCRIPTION": [
       "build",
       "Sadness",
