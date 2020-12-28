@@ -16,7 +16,7 @@ public class FindAndReplace extends AbstractBronzeCard {
     private static final int MAGIC = 1;
 
     public FindAndReplace() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 

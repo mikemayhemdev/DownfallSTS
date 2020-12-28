@@ -7,7 +7,9 @@ import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.monsters.MushroomPurple;
 import charbosses.monsters.MushroomRed;
 import charbosses.monsters.MushroomWhite;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
@@ -17,9 +19,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import downfall.monsters.NeowBoss;
 import expansioncontent.expansionContentMod;
 
@@ -45,9 +49,9 @@ public class EnSummonMushrooms extends AbstractBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
             if (!(m2 instanceof AbstractCharBoss) && !(m2 instanceof NeowBoss)) {
-                this.addToBot(new DamageAction(m2, new DamageInfo(m, 999, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                addToBot(new WaitAction(0.1F));
-                addToBot(new WaitAction(0.1F));
+                this.addToBot(new VFXAction(new BiteEffect(m2.hb.cX, m2.hb.cY - 20.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
+
+                this.addToBot(new DamageAction(m2, new DamageInfo(m, 999, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
                 addToBot(new WaitAction(0.1F));
                 addToBot(new WaitAction(0.1F));
                 addToBot(new WaitAction(0.1F));

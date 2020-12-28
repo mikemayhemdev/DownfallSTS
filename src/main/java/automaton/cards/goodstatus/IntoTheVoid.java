@@ -3,6 +3,7 @@ package automaton.cards.goodstatus;
 
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -45,6 +46,11 @@ public class IntoTheVoid extends AbstractCard {
 
         tags.add(AutomatonMod.GOOD_STATUS);
     }
+
+    public void triggerWhenDrawn() {
+        this.addToBot(new LoseEnergyAction(1));
+    }
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
