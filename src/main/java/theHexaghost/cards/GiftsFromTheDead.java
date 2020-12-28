@@ -25,16 +25,16 @@ public class GiftsFromTheDead extends AbstractHexaCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        cantUseMessage = "It's too hot to touch!";
+        cantUseMessage = "It's too hot to touch!";  //TODO - Hardcoded string!
         return false;
     }
 
     @Override
     public void triggerOnExhaust() {
 
-        if (!upgraded)
-            applyToSelf(new GiftsFromTheDeadPower(1));
-        else applyToSelf(new GiftsFromTheDeadPowerPlus(1));
+        applyToSelf(new GiftsFromTheDeadPowerPlus(1));
+
+        if (!upgraded) applyToSelf(new GiftsFromTheDeadPower(1));
 
     }
 

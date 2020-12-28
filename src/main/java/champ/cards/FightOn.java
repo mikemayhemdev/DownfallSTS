@@ -37,7 +37,7 @@ public class FightOn extends AbstractChampCard {
                 return super.canUse(p, m);
             }
         }
-        cantUseMessage = "I don't have enough Resolve yet.";
+        cantUseMessage = "I don't have enough Resolve yet.";  //TODO - Hardcoded string!
         return false;
     }
 
