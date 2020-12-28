@@ -476,7 +476,7 @@
   },
   "bronze:Library": {
     "NAME": "Library",
-    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0."
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
