@@ -44,7 +44,7 @@ public class BuildAFunctionPotion extends CustomPotion {
         for (int i = 0; i < (FunctionHelper.max - FunctionHelper.held.size()); i++) {
             ArrayList<AbstractCard> cardsList = SpaghettiCode.getRandomEncodeChoices(3);
             addToBot(new SelectCardsCenteredAction(cardsList, 1, "Choose a Card to Encode.", (cards) -> {
-                addToTop(new AddToFuncAction(cards.get(0), null));
+                AbstractDungeon.actionManager.addToTop(new AddToFuncAction(cards.get(0), null));
             }));
         }
         if (AbstractDungeon.player.hasRelic(SacredBark.ID)) {
