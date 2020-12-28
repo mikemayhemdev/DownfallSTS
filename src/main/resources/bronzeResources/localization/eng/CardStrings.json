@@ -580,8 +580,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Tinkerer's Toolbox",
-    "DESCRIPTION": "Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile."
   },
   "bronze:Refactor": {
     "NAME": "Refactor",

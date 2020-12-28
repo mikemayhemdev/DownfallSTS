@@ -27,8 +27,9 @@ public class TinkerersToolbox extends AbstractBronzeCard {
     public AbstractCard prev3 = null;
 
     public TinkerersToolbox() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
+        selfRetain = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
@@ -41,7 +42,7 @@ public class TinkerersToolbox extends AbstractBronzeCard {
     }
 
     public void upp() {
-        selfRetain = true;
+        exhaust = false;
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
