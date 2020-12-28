@@ -66,7 +66,10 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                     //Turn 3
                     addToList(cardsList, new EnFootwork(), extraUpgrades);
                     addToList(cardsList, new EnBurst());
-                    addToList(cardsList, new EnDodgeAndRoll());
+                    AbstractBossCard c = new EnDodgeAndRoll();
+                    c.freeToPlayOnce = true;
+                    c.costForTurn = 0;
+                    addToList(cardsList, c);
                     turn++;
                     break;
                 case 3:
@@ -106,6 +109,11 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                 case 2:
                     addToList(cardsList, new EnBurst());
                     addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
+                    AbstractBossCard c = new EnBouncingFlask();
+                    c.freeToPlayOnce = true;
+                    c.costForTurn = 0;
+                    if (extraUpgrades) c.upgrade();
+                    addToList(cardsList, c);
                     addToList(cardsList, new EnRegret());
                     turn = 0;
                     break;

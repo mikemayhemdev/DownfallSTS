@@ -104,7 +104,7 @@
     ]
   },
   "hexamod:GiftsFromTheDeadPower": {
-    "NAME": "Ghostly Gifts",
+    "NAME": "Gifted Cards",
     "DESCRIPTIONS": [
       "Whenever an #yEthereal card is #yExhausted, draw ",
       " cards",
@@ -113,12 +113,9 @@
     ]
   },
   "hexamod:GiftsFromTheDeadPowerPlus": {
-    "NAME": "Ghostly Gifts+",
+    "NAME": "Gifted Energy",
     "DESCRIPTIONS": [
       "Whenever an #yEthereal card is #yExhausted, gain ",
-      " and draw ",
-      " cards",
-      " card",
       " next turn."
     ]
   },

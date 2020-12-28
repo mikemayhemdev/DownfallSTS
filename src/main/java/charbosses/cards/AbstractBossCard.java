@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EvolvePower;
+import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -242,9 +243,11 @@ public abstract class AbstractBossCard extends AbstractCard {
             }
             //destroyIntent();
         }
-        if (AbstractCharBoss.boss.hasPower(StunMonsterPower.POWER_ID)){
-            bossDarken();
-            destroyIntent();
+        if (AbstractCharBoss.boss != null) {
+            if (AbstractCharBoss.boss.hasPower(StunMonsterPower.POWER_ID)) {
+                bossDarken();
+                destroyIntent();
+            }
         }
     }
 
@@ -694,7 +697,10 @@ public abstract class AbstractBossCard extends AbstractCard {
         refreshIntentHbLocation();
         if (!intentActive) this.intentParticleTimer = 0.5F;
         if (!lockIntentValues) calculateCardDamage(null);
-        if (!lockIntentValues) this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
+        if (AbstractCharBoss.boss.hasPower(IntangiblePower.POWER_ID)){
+            this.intentBaseDmg = 1;
+        }
+        else if (!lockIntentValues) this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
 
        // SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
 

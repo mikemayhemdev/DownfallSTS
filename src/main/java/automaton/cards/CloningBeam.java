@@ -11,7 +11,7 @@ public class CloningBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 10;
 
     public CloningBeam() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
