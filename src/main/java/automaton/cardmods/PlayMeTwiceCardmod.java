@@ -13,6 +13,9 @@ public class PlayMeTwiceCardmod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
+        if (card.rawDescription.equals("")) {
+            return "Play this again.";
+        }
         return rawDescription + " NL Play this again."; //TODO: Localize
     }
 
