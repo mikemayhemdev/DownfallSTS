@@ -16,7 +16,7 @@ public class BronzeArmor extends AbstractBronzeCard {
     private static final int UPG_MAGIC = -1;
 
     public BronzeArmor() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         baseAuto = auto = 1;
         thisEncodes();

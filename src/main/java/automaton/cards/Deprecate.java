@@ -1,7 +1,11 @@
 package automaton.cards;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 public class Deprecate extends AbstractBronzeCard {
 
@@ -13,14 +17,22 @@ public class Deprecate extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public Deprecate() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
+        baseAuto = auto = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : monsterList()) {
             applyToEnemy(q, autoWeak(q, magicNumber));
+        }
+    }
+
+    @Override
+    public void onCompile(AbstractCard function, boolean forGameplay) {
+        if (forGameplay){
+            applyToSelf(new WeakPower(AbstractDungeon.player,auto, false));
         }
     }
 

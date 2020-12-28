@@ -192,7 +192,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Deprecate",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies.",
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies. NL bronze:Compile - Gain !bauto! Weak",
     "EXTENDED_DESCRIPTION": [
       "old",
       "Insult"
@@ -200,7 +200,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidate",
-    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies.",
+    "DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL bronze:Compile - Gain !bauto! Vulnerable",
     "EXTENDED_DESCRIPTION": [
       "invalid",
       "Error"
