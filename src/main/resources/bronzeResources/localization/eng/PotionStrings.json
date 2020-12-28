@@ -24,8 +24,8 @@
   "bronze:BuildAFunctionPotion": {
     "NAME": "Kio's Clever Concoction",
     "DESCRIPTIONS": [
-      "Choose 1 of 3 cards with Encode, three times. Compile a Function using those cards and add it to your hand.",
-      "Choose 1 of 3 cards with Encode, three times. Compile a Function using those cards and add two copies of it to your hand."
+      "Until the Sequence is full, choose 1 of 3 random cards to Encode.",
+      "Until the Sequence is full, choose 1 of 3 random cards to Encode. Add a copy of the compiled Function to your hand."
     ]
   }
 }
