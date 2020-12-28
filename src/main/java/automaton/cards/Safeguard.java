@@ -32,7 +32,7 @@ public class Safeguard extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            applyToSelf(new FrailPower(AbstractDungeon.player, 2, false));
+            applyToSelf(new FrailPower(AbstractDungeon.player, magicNumber, false));
         }
     }
 
