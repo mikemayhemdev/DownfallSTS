@@ -58,7 +58,7 @@ public class WatcherAngryPower extends AbstractPower {
         if (damage > 1.0F) {
             if (this.owner instanceof AbstractCharBoss) {
                 if (AbstractCharBoss.boss.stance instanceof EnWrathStance) {
-                   return damage * 2F;
+                   return damage * 1.5F;
                 }
             }
         }

@@ -24,7 +24,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
         bossMechanicName = bossMechanicString.DIALOG[8];
         bossMechanicDesc = bossMechanicString.DIALOG[9];
 
-        maxHPModifier += 88;
+        maxHPModifier += 108;
         actNum = 1;
     }
 
@@ -57,6 +57,8 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     //Turn 2
+                    theVeryImportantSandsOfTime.lockIntentValues = false;
+                    theVeryImportantPerseverence.lockIntentValues = false;
                     addToList(cardsList, new EnTalkToTheHand(), false);
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnCrushJoints(), false);
@@ -64,6 +66,8 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                     break;
                 case 2:
                     //Turn 3
+                    theVeryImportantSandsOfTime.lockIntentValues = false;
+                    theVeryImportantPerseverence.lockIntentValues = false;
                     addToList(cardsList, new EnPanacea(), extraUpgrades);
                     addToList(cardsList, new EnFasting(), false);
                     addToList(cardsList, new EnClumsy(), true);
@@ -72,6 +76,8 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                 case 3:
                     theVeryImportantPerseverence.newPrio = -2;
                     theVeryImportantSandsOfTime.newPrio = -1;
+                    theVeryImportantSandsOfTime.lockIntentValues = false;
+                    theVeryImportantPerseverence.lockIntentValues = false;
                     addToList(cardsList, new EnHalt(), false);
                     addToList(cardsList, new EnRegret(), false);
                     addToList(cardsList, new EnParasite(), false);
@@ -89,8 +95,8 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     addToList(cardsList, new EnWallop(), extraUpgrades);
-                    addToList(cardsList, new EnRegret(), false);
                     addToList(cardsList, new EnHalt(), false);
+                    addToList(cardsList, new EnRegret(), false);
                     turn++;
                     break;
                 case 2:

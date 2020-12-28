@@ -15,7 +15,7 @@ public class ChangeGoldAction extends AbstractGameAction {
     @Override
     public void update() {
         if (amount > 0) {
-            AbstractDungeon.effectList.add(new RainingGoldEffect(amount));
+            AbstractDungeon.effectList.add(new RainingGoldEffect(Math.max(amount,100)));
             AbstractDungeon.effectList.add(new GainGoldTextEffect(amount));
             AbstractDungeon.player.gainGold(amount);
         } else if (amount < 0) {
