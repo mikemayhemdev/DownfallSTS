@@ -1,6 +1,7 @@
 package automaton.cards;
 
 import automaton.cardmods.CardEffectsCardMod;
+import automaton.relics.ElectromagneticCoil;
 import basemod.ReflectionHacks;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
@@ -12,6 +13,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 
@@ -41,14 +43,36 @@ public class FunctionCard extends AbstractBronzeCard {
     public void upp() {
     }
 
+    public boolean isPerfect() {
+        int x = 0;
+        for (AbstractCard q : cards()) {
+            if (x == 0 && q instanceof Constructor) {
+                x++;
+            } else if (x == 1 && q instanceof Separator) {
+                x++;
+            } else if (x == 2 && (q instanceof Terminator)) {
+                return true;
+            } else if (x == 2 && q instanceof Separator && AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
+                x++;
+            }
+            else if (x == 3 && q instanceof Terminator) {
+                return true;
+            }
+        }
+        return false; // Madness code!
+    }
+
     @Override
     public void doNothingSpecificInParticular() {
         if (textPrefix.equals("")) {
-            this.name = "function()";
+            this.name = "function()"; //TODO: localize?
+        } else if (isPerfect()) {
+            this.name = "Perfection()"; //TODO: localize
         } else {
             this.name = textPrefix + "()";
         }
         super.doNothingSpecificInParticular();
+
     }
 
     @SpireOverride
