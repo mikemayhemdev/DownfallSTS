@@ -28,8 +28,8 @@ public class EnAged extends AbstractBossCard {
     public EnAged() {
         super(ID, cardStrings.NAME, GuardianMod.getResourcePath(IMG_PATH), -2, cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
         this.isEthereal = true;
-        portrait = TextureLoader.getTextureAsAtlasRegion(SlimeboundMod.getResourcePath(IMG_PATH));
-        portraitImg = TextureLoader.getTexture(SlimeboundMod.getResourcePath(IMG_PATH));
+        portrait = TextureLoader.getTextureAsAtlasRegion(GuardianMod.getResourcePath(IMG_PATH));
+        portraitImg = TextureLoader.getTexture(GuardianMod.getResourcePath(IMG_PATH));
 
     }
 
