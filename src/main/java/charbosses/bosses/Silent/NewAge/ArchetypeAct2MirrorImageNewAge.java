@@ -21,7 +21,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
         bossMechanicName = bossMechanicString.DIALOG[10];
         bossMechanicDesc = bossMechanicString.DIALOG[11];
 
-        maxHPModifier += 150;
+        maxHPModifier += 220;
         actNum = 2;
     }
 

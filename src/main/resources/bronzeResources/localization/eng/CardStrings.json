@@ -228,7 +228,7 @@
   },
   "bronze:Constructor": {
     "NAME": "Constructor",
-    "DESCRIPTION": "Gain !B! Block. NL When bronze:Encoded, if this is the first card, increase its Block by !M!.",
+    "DESCRIPTION": "Gain !B! Block. NL When bronze:Encoded, if this is in the first slot, increase its Block by !M!.",
     "EXTENDED_DESCRIPTION": [
       "build",
       "Sadness",
@@ -239,8 +239,8 @@
     "NAME": "Separator",
     "DESCRIPTION": "bronze:Compile - If this is not the first or last card in the Sequence, Function gains 'Play this again'.",
     "EXTENDED_DESCRIPTION": [
-      "mild",
-      "Split"
+      "split",
+      "Child"
     ]
   },
   "bronze:Overload": {
@@ -371,11 +371,11 @@
     "UPGRADE_DESCRIPTION": "Retain. NL Exhaust all cards in the Sequence. Gain [E] and draw a card for each card Exhausted. NL Exhaust."
   },
   "bronze:ChildClass": {
-    "NAME": "Child Class",
+    "NAME": "Invoke",
     "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain [E] equal to the total cost of cards in the Sequence.",
     "EXTENDED_DESCRIPTION": [
-      "child",
-      "Clone"
+      "invoked",
+      "Energy"
     ]
   },
   "bronze:Repair": {

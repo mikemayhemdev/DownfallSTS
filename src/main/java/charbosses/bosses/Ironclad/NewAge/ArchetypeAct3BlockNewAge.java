@@ -98,9 +98,9 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
                     c = new EnBodySlam();
                     if (AbstractCharBoss.boss.hasPower(BarricadePower.POWER_ID)) ((EnBodySlam) c).manualCustomDamageModifier += 10;
                     if (extraUpgrades) {
-                        ((EnBodySlam) c).manualCustomDamageModifier += 10;
-                    } else {
                         ((EnBodySlam) c).manualCustomDamageModifier += 13;
+                    } else {
+                        ((EnBodySlam) c).manualCustomDamageModifier += 10;
                     }
                     addToList(cardsList, c);
                     turn = 0;

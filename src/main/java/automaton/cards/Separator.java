@@ -41,6 +41,6 @@ public class Separator extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+       upgradeBaseCost(0);
     }
 }
