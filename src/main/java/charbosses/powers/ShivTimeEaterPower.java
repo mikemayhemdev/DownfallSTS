@@ -38,24 +38,24 @@ public class ShivTimeEaterPower extends AbstractPower {
         this.type = PowerType.BUFF;
     }
 
-    public void playApplyPowerSfx() {
-        CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
-    }
+  //  public void playApplyPowerSfx() {
+  //      CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
+  //  }
 
     public void updateDescription() {
-        this.description = DESC[0] + 10 + DESC[1] + 1 + DESC[2];
+        this.description = DESC[0] + 1 + DESC[1];
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (!(card instanceof AbstractBossCard)) {
             ++this.amount;
-            if (this.amount == 10) {
+            if (this.amount == 1) {
                 this.amount = 0;
                 this.flashWithoutSound();
                 this.playApplyPowerSfx();
-                CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
-                AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 2), 2));
+               // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
+               // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));
 
             }
 

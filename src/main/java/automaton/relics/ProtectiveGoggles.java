@@ -25,7 +25,7 @@ public class ProtectiveGoggles extends CustomRelic {
     @Override
     public void onPlayerEndTurn() {
         if (FunctionHelper.doStuff) {
-            if (FunctionHelper.held.isEmpty()) {
+            if (FunctionHelper.isSequenceEmpty()) {
                 flash();
                 addToTop(new GainBlockAction(AbstractDungeon.player, 4));
                 addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));

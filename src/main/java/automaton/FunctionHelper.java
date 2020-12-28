@@ -64,6 +64,15 @@ public class FunctionHelper {
         doStuff = true;
     }
 
+    public static boolean isSequenceEmpty(){
+        if (held != null){
+            if (held.isEmpty()){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void genPreview() {
         secretStorage = makeFunction(false);
     }

@@ -15,7 +15,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
 
     public static final String ID = AutomatonMod.makeID("PlatinumCore");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PlatinumCore.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("PlatinumCore.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BronzeCore.png"));
 
     public PlatinumCore() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
