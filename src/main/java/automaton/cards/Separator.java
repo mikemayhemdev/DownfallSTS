@@ -1,10 +1,12 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import automaton.cardmods.PlayMeTwiceCardmod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class Separator extends AbstractBronzeCard {
 
@@ -14,30 +16,26 @@ public class Separator extends AbstractBronzeCard {
 
 
     public Separator() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         thisEncodes();
-        baseMagicNumber = magicNumber = 2;
-        baseBlock = 5;
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
     }
 
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
-        if (forGameplay) {
-            //atb(new GainEnergyAction(1));
-            if (!firstCard() && !lastCard()) {
-                atb(new GainEnergyAction(magicNumber));
-            }
+        if (!firstCard() && !lastCard()) {
+            CardModifierManager.addModifier(function, new PlayMeTwiceCardmod());
         }
     }
 
     @Override
     public String getSpecialCompileText() {
         if (!firstCard() && !lastCard()) {
-            return " - Gain #b" + magicNumber + " [E] ."; //TODO: Localize
+            return " - Function gains 'Play this again'.";
         }
         return "";
     }

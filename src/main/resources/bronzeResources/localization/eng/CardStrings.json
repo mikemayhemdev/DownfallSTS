@@ -237,7 +237,7 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - If this is not the first or last card in the Sequence, gain NL !M! [E] .",
+    "DESCRIPTION": "bronze:Compile - If this is not the first or last card in the Sequence, Function gains 'Play this again'.",
     "EXTENDED_DESCRIPTION": [
       "mild",
       "Split"
@@ -372,8 +372,7 @@
   },
   "bronze:ChildClass": {
     "NAME": "Child Class",
-    "DESCRIPTION": "bronze:Compile - Function gains 'Play this again'.",
-    "UPGRADE_DESCRIPTION": "Retain. NL \u00a0 bronze:Compile - Function gains 'Play this again'.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain [E] equal to the total cost of cards in the Sequence.",
     "EXTENDED_DESCRIPTION": [
       "child",
       "Clone"

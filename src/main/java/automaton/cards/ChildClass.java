@@ -1,8 +1,6 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
-import automaton.cardmods.PlayMeTwiceCardmod;
-import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,23 +13,30 @@ public class ChildClass extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     public ChildClass() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
+        baseBlock = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
     }
 
     @Override
-    public void onCompile(AbstractCard function, boolean forGameplay) {
-        CardModifierManager.addModifier(function, new PlayMeTwiceCardmod());
+    public void onCompileLast(AbstractCard function, boolean forGameplay) {
+        if (function instanceof FunctionCard) {
+            int x = 0;
+            for (AbstractCard c : ((FunctionCard) function).cards()) {
+                x += c.cost;
+            }
+            atb(new GainEnergyAction(x));
+        }
     }
 
+    //TODO: Figure out some way to check if the card will generate energy, and only provide compile text if so.
+
     public void upp() {
-        selfRetain = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBlock(2);
     }
 }
