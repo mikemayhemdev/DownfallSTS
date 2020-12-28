@@ -12,6 +12,7 @@ import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.monsters.Fortification;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -36,9 +37,8 @@ public class CharBossIronclad extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Ironclad");
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString("Ironclad").NAMES[0];
 
-
-    private Texture fgImg = ImageMaster.loadImage("images/events/fgShrooms.png");
-    private Texture bgImg = ImageMaster.loadImage("images/events/bgShrooms.png");
+    private Texture fgImg = ImageMaster.loadImage("downfallResources/images/fgShrooms.png");
+    private Texture bgImg = ImageMaster.loadImage("downfallResources/images/bgShrooms.png");
 
     public CharBossIronclad() {
         super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
@@ -173,11 +173,12 @@ public class CharBossIronclad extends AbstractCharBoss {
 
     @Override
     public void render(SpriteBatch sb) {
-        super.render(sb);
         if (chosenArchetype instanceof ArchetypeAct2MushroomsNewAge) {
+            sb.setColor(Color.WHITE.cpy());
             sb.draw(this.bgImg, 0.0F, -10.0F, (float) Settings.WIDTH, 1080.0F * Settings.scale);
             sb.draw(this.fgImg, 0.0F, -20.0F * Settings.scale, (float) Settings.WIDTH, 1080.0F * Settings.scale);
         }
+        super.render(sb);
 
     }
 }

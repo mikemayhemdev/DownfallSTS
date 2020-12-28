@@ -63,9 +63,9 @@
   "bronze:Library": {
     "NAME": "Library",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card with #yEncode to your hand. NL It costs #b0 until played.",
+      "At the start of your turn, add a random card with #yEncode to your hand. NL It costs #b0.",
       "At the start of your turn, add #b",
-      " random cards with #yEncode to your hand. NL They cost #b0 until played."
+      " random cards with #yEncode to your hand. NL They cost #b0."
     ]
   },
   "bronze:BronzeHeatsink": {

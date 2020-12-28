@@ -2,9 +2,13 @@ package automaton.cards.goodstatus;
 
 
 import automaton.AutomatonMod;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -50,12 +54,24 @@ public class Ignite extends AbstractCard {
 
     }
 
+    public void triggerOnEndOfTurnForPlayingCard() {
+        this.dontTriggerOnUseCard = true;
+        int damage = 2;
+        if (upgraded){
+            damage += 2;
+        }
+        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+
+    }
+
     public AbstractCard makeCopy() {
         return new Ignite();
     }
 
     public void upgrade() {
         upgradeMagicNumber(5);
+        rawDescription = UPGRADED_DESCRIPTION;
+        initializeDescription();
     }
 
 }

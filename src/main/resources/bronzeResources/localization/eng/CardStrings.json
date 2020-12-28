@@ -476,7 +476,7 @@
   },
   "bronze:Library": {
     "NAME": "Library",
-    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "At the start of your turn, add a random card with bronze:Encode to your hand. NL It costs 0."
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
@@ -555,11 +555,12 @@
   },
   "bronze:Ignite": {
     "NAME": "Ignite",
-    "DESCRIPTION": "Apply !M! hexamod:Soulburn."
+    "DESCRIPTION": "Apply !M! hexamod:Soulburn. NL At the end of your turn, take 2 damage.",
+    "UPGRADE_DESCRIPTION": "Apply !M! hexamod:Soulburn. NL At the end of your turn, take 4 damage."
   },
   "bronze:IntoTheVoid": {
     "NAME": "Into the Void",
-    "DESCRIPTION": "Ethereal. NL Enemy loses !M! Strength this turn. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Enemy loses !M! Strength this turn. NL Whenever this card is drawn, lose 1 Energy. NL Exhaust."
   },
   "bronze:Lubricant": {
     "NAME": "Lubricant",

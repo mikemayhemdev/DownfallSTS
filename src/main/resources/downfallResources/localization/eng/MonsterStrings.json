@@ -93,5 +93,26 @@
       "Synchronize",
       "Whenever Ironclad generates a status card, a duplicate is added into your discard pile."
     ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "Porcini",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "Actarius",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "Puffball",
+    "DIALOG": [
+    ]
   }
 }

@@ -115,7 +115,7 @@
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
-    "DESCRIPTION": "For !M! turns, Block is not removed at the start of your turn. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Blur. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode. NL Exhaust."
   },
   "Guardian:Harden": {
     "NAME": "Harden",

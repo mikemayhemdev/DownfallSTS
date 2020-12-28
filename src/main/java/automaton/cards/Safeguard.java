@@ -15,7 +15,7 @@ public class Safeguard extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, uncommon
 
     private static final int BLOCK = 13;
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = -1;
 
     public Safeguard() {
@@ -32,7 +32,7 @@ public class Safeguard extends AbstractBronzeCard {
     @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
-            applyToSelf(new FrailPower(AbstractDungeon.player, 2, false));
+            applyToSelf(new FrailPower(AbstractDungeon.player, magicNumber, false));
         }
     }
 

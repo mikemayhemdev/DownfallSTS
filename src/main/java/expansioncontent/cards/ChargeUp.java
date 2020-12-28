@@ -17,7 +17,7 @@ public class ChargeUp extends AbstractExpansionCard {
     private static final int MAGIC = 2;
 
     public ChargeUp() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
 
         tags.add(expansionContentMod.STUDY_GUARDIAN);
         tags.add(expansionContentMod.STUDY);
