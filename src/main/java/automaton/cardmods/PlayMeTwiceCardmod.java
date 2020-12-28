@@ -1,7 +1,9 @@
 package automaton.cardmods;
 
 import automaton.actions.RepeatCardAction;
+import automaton.cards.Separator;
 import basemod.abstracts.AbstractCardModifier;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -13,9 +15,6 @@ public class PlayMeTwiceCardmod extends BronzeCardMod {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        if (card.rawDescription.equals("")) {
-            return "Play this again.";
-        }
         return rawDescription + " NL Play this again."; //TODO: Localize
     }
 
