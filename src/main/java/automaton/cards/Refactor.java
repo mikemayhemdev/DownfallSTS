@@ -21,6 +21,6 @@ public class Refactor extends AbstractBronzeCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeBlock(2);
     }
 }

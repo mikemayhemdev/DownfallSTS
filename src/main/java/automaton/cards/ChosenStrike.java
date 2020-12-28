@@ -31,6 +31,11 @@ public class ChosenStrike extends AbstractBronzeCard {
         if (upgraded) baseDamage += UPG_DAMAGE;
     }
 
+    @Override
+    public String getSpecialCompileText() {
+        return "Increase #yChosen #yStrike's damage by #b" + magicNumber + " permanently.";
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
     }
