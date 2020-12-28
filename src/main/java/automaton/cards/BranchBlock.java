@@ -9,7 +9,7 @@ public class BranchBlock extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, self_and_enemy, common
 
-    private static final int BLOCK =5;
+    private static final int BLOCK =8;
 
     public BranchBlock() {
         super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
