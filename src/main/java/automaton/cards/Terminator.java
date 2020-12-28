@@ -17,7 +17,7 @@ public class Terminator extends AbstractBronzeCard {
     public Terminator() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = DAMAGE;
         thisEncodes();
         tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
     }
@@ -25,23 +25,18 @@ public class Terminator extends AbstractBronzeCard {
     @Override
     public void onInput() {
         if (lastCard()) {
-            int x = magicNumber;
-            baseMagicNumber += 1;
-            magicNumber += 1;
-            if (x == 1) {
-                rawDescription = EXTENDED_DESCRIPTION[2];
-                initializeDescription();
-            }
+            baseDamage += magicNumber;
+            damage += magicNumber;
             superFlash();
         }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; i++)
-            dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
+        dmg(m, AbstractGameAction.AttackEffect.LIGHTNING);
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
+        upgradeMagicNumber(UPG_DAMAGE);
     }
 }
