@@ -993,15 +993,19 @@ public class downfallMod implements
         }
     }
 
+    private void resetBossList(){
+        possEncounterList.clear();
+        possEncounterList.add(CharBossIronclad.ID);
+        possEncounterList.add(CharBossSilent.ID);
+        possEncounterList.add(CharBossDefect.ID);
+        possEncounterList.add(CharBossWatcher.ID);
+    }
+
     @Override
     public void receiveStartGame() {
         GoldToSoulPatches.changeGoldToSouls(!evilMode);
         if (!CardCrawlGame.loadingSave) {
-            possEncounterList.clear();
-            possEncounterList.add(CharBossIronclad.ID);
-            possEncounterList.add(CharBossSilent.ID);
-            possEncounterList.add(CharBossDefect.ID);
-            possEncounterList.add(CharBossWatcher.ID);
+            resetBossList();
             FleeingMerchant.DEAD = false;
             FleeingMerchant.CURRENT_HP = 400;
             FleeingMerchant.CURRENT_STRENGTH = 0;
@@ -1017,6 +1021,10 @@ public class downfallMod implements
     @Override
     public void receiveStartAct() {
         if (evilMode) {
+            if (possEncounterList.size() == 0){
+                resetBossList();
+                SlimeboundMod.logger.info("ERROR! Had to reset the bosses mid-run!");
+            }
             if (AbstractDungeon.actNum <= 3) {
                 Method setBoss = null;
                 try {
