@@ -526,7 +526,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
-    "DESCRIPTION": "Look at the top !M! cards of your draw pile. NL Choose any of them with bronze:Encode and add them to the Sequence in the order they were selected."
+    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded."
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",

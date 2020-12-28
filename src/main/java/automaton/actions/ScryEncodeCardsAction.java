@@ -1,7 +1,8 @@
 package automaton.actions;
 
+import automaton.AutomatonMod;
+import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
@@ -11,20 +12,18 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class ScryBlockStatusAction extends AbstractGameAction {
+public class ScryEncodeCardsAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
     private float startingDuration;
-    private int blockPerCard;
 
-    public ScryBlockStatusAction(int numCards, int blockPer) {
+    public ScryEncodeCardsAction(int numCards) {
         this.amount = numCards;
         if (AbstractDungeon.player.hasRelic("GoldenEye")) {
             AbstractDungeon.player.getRelic("GoldenEye").flash();
             this.amount += 2;
         }
 
-        blockPerCard = blockPer;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.startingDuration = Settings.ACTION_DUR_FAST;
         this.duration = this.startingDuration;
@@ -58,9 +57,11 @@ public class ScryBlockStatusAction extends AbstractGameAction {
                 AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, true, TEXT[0]);
             } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    AbstractDungeon.player.drawPile.moveToDiscardPile(c);
-                    if (c.type == AbstractCard.CardType.STATUS) {
-                        addToBot(new GainBlockAction(AbstractDungeon.player, blockPerCard));
+                    if (c.hasTag(AutomatonMod.ENCODES)) {
+                        AbstractDungeon.player.drawPile.removeCard(c);
+                        FunctionHelper.addToSequence(c);
+                    } else {
+                        AbstractDungeon.player.drawPile.moveToDiscardPile(c);
                     }
                 }
 
