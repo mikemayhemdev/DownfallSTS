@@ -25,7 +25,7 @@ public class ChildClass extends AbstractBronzeCard {
 
     @Override
     public void onCompileLast(AbstractCard function, boolean forGameplay) {
-        if (function instanceof FunctionCard) {
+        if (function instanceof FunctionCard && forGameplay) {
             int x = 0;
             for (AbstractCard c : ((FunctionCard) function).cards()) {
                 x += c.cost;
