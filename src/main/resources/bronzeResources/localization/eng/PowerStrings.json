@@ -109,9 +109,9 @@
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "Remove all negative #yCompile effects from the next Function you #yCompile.",
-      "Remove all negative #yCompile effects from the next #b",
-      " Functions you #yCompile."
+      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b1 more Function.",
+      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b",
+      " Functions."
     ]
   },
   "bronze:CopyPaste": {
