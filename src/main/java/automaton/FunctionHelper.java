@@ -64,9 +64,9 @@ public class FunctionHelper {
         doStuff = true;
     }
 
-    public static boolean isSequenceEmpty(){
-        if (held != null){
-            if (held.isEmpty()){
+    public static boolean isSequenceEmpty() {
+        if (held != null) {
+            if (held.isEmpty()) {
                 return true;
             }
         }
@@ -88,9 +88,13 @@ public class FunctionHelper {
         c.targetDrawScale = SEQUENCED_CARD_SIZE;
         c.target_x = cardPositions[held.size()].x;
         c.target_y = cardPositions[held.size()].y;
+        int r = held.size();
         held.addToTop(c);
         if (c instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) c).position = ((AbstractBronzeCard) c).getSequencePosition();
+            ((AbstractBronzeCard) c).position = r;
+        }
+        if (c instanceof AbstractBronzeCard) {
+            ((AbstractBronzeCard) c).onInput();
         }
         if (held.size() == max) {
             output();

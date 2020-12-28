@@ -119,6 +119,13 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
+    public void onInput() {
+        // Called right after a card enters The Function, before outputs would occur.
+        // Pro tip: Don't delete things just because they're unused..
+
+
+    }
+
     public void onCompilePreCardEffectEmbed(boolean forGameplay) {
         // Called before the effects of cards are added to the Function. Use this if a card modifies its statistics as a Compile effect. Don't put these on action queue.
     }
