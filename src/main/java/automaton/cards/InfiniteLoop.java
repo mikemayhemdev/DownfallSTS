@@ -33,6 +33,11 @@ public class InfiniteLoop extends AbstractBronzeCard {
     }
 
     @Override
+    public String getSpecialCompileText() {
+        return "Add a copy of #yInfinite #yLoop to your hand with #b" + magicNumber + " more damage.";
+    }
+
+    @Override
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             AbstractCard c = new InfiniteLoop();
