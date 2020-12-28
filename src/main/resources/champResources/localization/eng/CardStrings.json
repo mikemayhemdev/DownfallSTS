@@ -180,8 +180,7 @@
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
-    "DESCRIPTION": "Gain !B! Block. NL Block is not removed for !M! turn.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed for !M! turns."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! bronze:Blur."
   },
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
