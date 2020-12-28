@@ -89,7 +89,7 @@ public class ChampChar extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), -15.0F, -30.0F, 250.0F, 350.0F, new EnergyManager(3));
+                getLoadout(), -15.0F, -30.0F, 450.0F, 450.0F, new EnergyManager(3));
 
         this.reloadAnimation();
 
