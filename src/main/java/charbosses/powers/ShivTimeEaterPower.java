@@ -47,7 +47,7 @@ public class ShivTimeEaterPower extends AbstractPower {
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        if (!(card instanceof AbstractBossCard)) {
+        if (!(card instanceof AbstractBossCard) && (card.freeToPlayOnce || card.costForTurn <= 0)) {
             ++this.amount;
             if (this.amount == 1) {
                 this.amount = 0;
