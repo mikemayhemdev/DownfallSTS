@@ -68,7 +68,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
                     break;
                 case 3:
                     //Turn 4
-                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnStrikeBlue(), false);
                     addToList(cardsList, new EnCoreSurge(), false);
                     addToList(cardsList, new EnEquilibrium(), extraUpgrades);
                     turn = 0;
@@ -86,7 +86,7 @@ public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
                     break;
                 case 1:
                     addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnStrikePurple(), false);
+                    addToList(cardsList, new EnStrikeBlue(), false);
                     addToList(cardsList, new EnSteamBarrier(steamBarrierCasts), false);
                     steamBarrierCasts++;
                     turn++;
