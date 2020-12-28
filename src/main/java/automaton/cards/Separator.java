@@ -17,9 +17,7 @@ public class Separator extends AbstractBronzeCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         thisEncodes();
         baseMagicNumber = magicNumber = 2;
-        //tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
         baseBlock = 5;
-        tags.add(AutomatonMod.SPECIAL_COMPILE_TEXT);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

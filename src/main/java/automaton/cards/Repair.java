@@ -23,8 +23,6 @@ public class Repair extends AbstractBronzeCard {
         thisEncodes();
         tags.add(CardTags.HEALING);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        //tags.add(AutomatonMod.NO_TEXT);
-        tags.add(AutomatonMod.ADDS_NO_CARDTEXT);
         baseBlock = 4;
     }
 
