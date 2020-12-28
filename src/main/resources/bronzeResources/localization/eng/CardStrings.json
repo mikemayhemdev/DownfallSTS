@@ -208,7 +208,8 @@
   },
   "bronze:Shell": {
     "NAME": "Shell",
-    "DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur.",
+    "DESCRIPTION": "Gain !M! bronze:Blur.",
+    "UPGRADE_DESCRIPTION": "Gain !M! bronze:Blur. NL bronze:Compile - Gain !M! bronze:Blur.",
     "EXTENDED_DESCRIPTION": [
       "curling",
       "Shell"
