@@ -502,5 +502,12 @@
       "Corrupted Courier",
       "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%."
     ]
+  },
+  "downfall:LizardTail": {
+    "NAME": "Super Lizard Tail",
+    "FLAVOR": "A fake tail to trick enemies during combat.",
+    "DESCRIPTIONS": [
+      "When you would die, heal to #b100% of your Max HP instead (works once)."
+    ]
   }
 }
