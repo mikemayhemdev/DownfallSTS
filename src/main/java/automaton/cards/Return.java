@@ -19,7 +19,8 @@ public class Return extends AbstractBronzeCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new EasyXCostAction(this, (effect, params) -> {
-            applyToSelfTop(new ReturnPower(effect));
+            if (effect > 0)
+                applyToSelfTop(new ReturnPower(effect));
             return true;
         }));
         atb(new GainEnergyAction(1));
