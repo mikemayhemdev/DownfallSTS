@@ -21,10 +21,6 @@ public class DiceBoulder extends AbstractSneckoCard {
         baseMagicNumber = magicNumber = MAGIC;
     }
 
-    public DiceBoulder() {
-        this(0);
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new NoApplyRandomDamageAction(m, magicNumber, damage, 1, AbstractGameAction.AttackEffect.BLUNT_HEAVY, this));
     }
