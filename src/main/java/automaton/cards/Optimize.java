@@ -12,7 +12,7 @@ public class Optimize extends AbstractBronzeCard {
     //stupid intellij stuff power, self, uncommon
 
     private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 1;
+    private static final int UPG_MAGIC = 2;
 
     public Optimize() {
         super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
