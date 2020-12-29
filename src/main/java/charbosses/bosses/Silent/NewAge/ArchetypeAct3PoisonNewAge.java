@@ -66,6 +66,7 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
                     //Turn 3
                     addToList(cardsList, new EnFootwork(), extraUpgrades);
                     addToList(cardsList, new EnBurst());
+                    addToList(cardsList, new EnDodgeAndRoll());
                     AbstractBossCard c = new EnDodgeAndRoll();
                     c.freeToPlayOnce = true;
                     c.costForTurn = 0;
