@@ -384,7 +384,9 @@
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, place this in your hand (wherever it is)."
+    "DESCRIPTION": "Deal !D! damage. NL When you slimeboundmod:Split, place this in your hand (wherever it is).",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command. NL When you slimeboundmod:Split, place this in your hand (wherever it is)."
+
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Forward Tackle",

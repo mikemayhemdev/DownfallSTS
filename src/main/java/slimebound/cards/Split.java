@@ -97,26 +97,40 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
         switch (card.cardID) {
             case "Slimebound:SplotBruiser": {
                 addToBot(new SlimeSpawnAction(new AttackSlime(), false, true));
+                updateMagic(1);
                 break;
             }
             case "Slimebound:SplotGuerilla": {
                 addToBot(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                updateMagic(2);
                 break;
             }
             case "Slimebound:SplotLeeching": {
                 addToBot(new SlimeSpawnAction(new ShieldSlime(), false, true));
+                updateMagic(4);
                 break;
             }
             case "Slimebound:SplotMire": {
                 addToBot(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                updateMagic(3);
                 break;
             }
 
         }
-
-
-
     }
+
+    private void updateMagic(int index) {
+        if (upgraded) {
+            if (this.baseMagicNumber == 0) {
+                this.baseMagicNumber = index;
+            } else {
+                this.baseMagicNumber = 0;
+            }
+        } else {
+            this.baseMagicNumber = 0;
+        }
+    }
+
 
     public void upgrade() {
         if (!this.upgraded) {
