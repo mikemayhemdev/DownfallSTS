@@ -28,13 +28,13 @@ public class ProtectorSlime
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount + this.debuffBonusAmount) + this.descriptions[2];
+        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount) + this.descriptions[2];
     }
 
 
     public void activateEffectUnique() {
 
-        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, 0, false, this.debuffAmount + this.debuffBonusAmount, false));
+        AbstractDungeon.actionManager.addToBottom(new SlimeAutoAttack(AbstractDungeon.player, this.passiveAmount, AbstractGameAction.AttackEffect.SLASH_VERTICAL, this, false, false, false, 0, false, this.debuffAmount, false));
 
     }
 

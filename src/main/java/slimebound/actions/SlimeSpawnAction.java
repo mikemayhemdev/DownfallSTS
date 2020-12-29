@@ -127,9 +127,6 @@ public class SlimeSpawnAction extends AbstractGameAction {
                 if (this.bonusUniqueFocus > 0) {
                     ((SpawnedSlime) this.orbType).applyUniqueFocus(bonusUniqueFocus);
                 }
-                if (this.bonusSecondary > 0) {
-                    ((SpawnedSlime) this.orbType).applySecondaryBonus(bonusSecondary);
-                }
 
                 AbstractDungeon.player.channelOrb(this.orbType);
                 for (AbstractCard q : AbstractDungeon.player.exhaustPile.group) {

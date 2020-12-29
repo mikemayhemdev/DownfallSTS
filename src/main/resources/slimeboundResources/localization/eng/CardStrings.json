@@ -368,8 +368,8 @@
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again."
+    "DESCRIPTION": "Whenever you play a card that triggers slimeboundmod:Command, slimeboundmod:Command again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card that triggers slimeboundmod:Command, slimeboundmod:Command again."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
