@@ -16,7 +16,7 @@ public class Invalidate extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public Invalidate() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.ALL);
         baseMagicNumber = magicNumber = MAGIC;
         thisEncodes();
         baseAuto = auto = 1;

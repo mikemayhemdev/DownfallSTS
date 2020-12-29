@@ -66,9 +66,7 @@ public class FunctionHelper {
 
     public static boolean isSequenceEmpty() {
         if (held != null) {
-            if (held.isEmpty()) {
-                return true;
-            }
+            return held.isEmpty();
         }
         return false;
     }
