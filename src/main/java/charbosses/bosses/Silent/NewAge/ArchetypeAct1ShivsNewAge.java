@@ -20,7 +20,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
         bossMechanicName = bossMechanicString.DIALOG[6];
         bossMechanicDesc = bossMechanicString.DIALOG[7];
 
-        maxHPModifier += 100;
+        maxHPModifier += 80;
         actNum = 1;
     }
 
