@@ -223,6 +223,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         maxHealth += chosenArchetype.maxHPModifier;
+        if (AbstractDungeon.ascensionLevel >= 9){
+            maxHealth = Math.round(maxHealth * 1.2F);
+        }
         currentHealth = maxHealth;
         updateHealthBar();
     }
