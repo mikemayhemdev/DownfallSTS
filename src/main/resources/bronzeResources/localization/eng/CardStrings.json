@@ -479,8 +479,8 @@
   },
   "bronze:Verify": {
     "NAME": "Sentient Form",
-    "DESCRIPTION": "After you play a Function, increase all numbers on it by 1.",
-    "UPGRADE_DESCRIPTION": "Innate. NL After you play a Function, increase all numbers on it by 1."
+    "DESCRIPTION": "After you play or bronze:Compile a Function, increase all numbers on it by 1.",
+    "UPGRADE_DESCRIPTION": "Innate. NL After you play or bronze:Compile a Function, increase all numbers on it by 1."
   },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
