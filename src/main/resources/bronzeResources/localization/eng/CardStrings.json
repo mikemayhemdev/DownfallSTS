@@ -610,8 +610,8 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Find and Replace",
-    "DESCRIPTION": "Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile."
+    "DESCRIPTION": "Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Put a card from your draw or discard pile into your hand. NL Add a Dazed where it was."
   },
   "bronze:ThunderWave": {
     "NAME": "Thunder Wave",
