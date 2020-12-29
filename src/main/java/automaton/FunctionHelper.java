@@ -27,6 +27,8 @@ public class FunctionHelper {
     public static CardGroup held;
     public static int max = 3;
 
+    public static int functionsCompiledThisCombat = 0;
+
     public static boolean doExtraNonSpecificCopy = false;
 
     public static HashMap<CardEffectsCardMod, AbstractCard> cardModsInfo = new HashMap<>();
@@ -62,6 +64,7 @@ public class FunctionHelper {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         secretStorage = makeFunction(false);
         doStuff = true;
+        functionsCompiledThisCombat = 0;
     }
 
     public static boolean isSequenceEmpty() {
@@ -198,6 +201,7 @@ public class FunctionHelper {
                 ((AfterOutputFunctionPower) p).receiveAfterOutputFunction(); // Class Default
             }
         }
+        functionsCompiledThisCombat ++;
     }
 
     public static void render(SpriteBatch sb) {

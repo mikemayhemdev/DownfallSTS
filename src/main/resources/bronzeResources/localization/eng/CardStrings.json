@@ -612,5 +612,9 @@
     "NAME": "Find and Replace",
     "DESCRIPTION": "Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile.",
     "UPGRADE_DESCRIPTION": "Retain. NL Draw a Function. It costs 1 less this turn. NL Add a *Dazed into your draw pile."
+  },
+  "bronze:ThunderWave": {
+    "NAME": "Thunder Wave",
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function bronze:Compiled this combat."
   }
 }
