@@ -48,10 +48,6 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         choice(m);
 
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
-        addToBot(new CommandAction());
 
         //Forever shall this code remain commented here.  A legacy to the origins of how bad Mayhem was at coding when this all began.
         /*        for (int i = 0; i < magicNumber; i++) {
@@ -97,45 +93,29 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
 
     }
 
-    private void updateMagic(int index) {
-        if (upgraded) {
-            if (this.baseMagicNumber == 0) {
-                this.baseMagicNumber = index;
-            } else {
-                this.baseMagicNumber = 0;
-            }
-        } else {
-            this.baseMagicNumber = 0;
-        }
-    }
-
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "Slimebound:SplotBruiser": {
                 addToBot(new SlimeSpawnAction(new AttackSlime(), false, true));
-                updateMagic(1);
                 break;
             }
             case "Slimebound:SplotGuerilla": {
                 addToBot(new SlimeSpawnAction(new PoisonSlime(), false, true));
-
-                updateMagic(2);
                 break;
             }
             case "Slimebound:SplotLeeching": {
                 addToBot(new SlimeSpawnAction(new ShieldSlime(), false, true));
-
-                updateMagic(4);
                 break;
             }
             case "Slimebound:SplotMire": {
                 addToBot(new SlimeSpawnAction(new SlimingSlime(), false, true));
-
-                updateMagic(3);
                 break;
             }
 
         }
+
+
+
     }
 
     public void upgrade() {

@@ -77,7 +77,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         basemod.interfaces.EditCharactersSubscriber,
         basemod.interfaces.EditRelicsSubscriber,
         basemod.interfaces.EditCardsSubscriber,
-        //basemod.interfaces.EditKeywordsSubscriber,
+        OnPowersModifiedSubscriber,
         //EditStringsSubscriber,
         //basemod.interfaces.PostDrawSubscriber,
         basemod.interfaces.OnStartBattleSubscriber {
@@ -812,4 +812,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         }
     }
 
+    @Override
+    public void receivePowersModified() {
+        for (AbstractOrb o:AbstractDungeon.player.orbs){
+            if (o instanceof SpawnedSlime){
+                o.applyFocus();
+            }
+        }
+    }
 }

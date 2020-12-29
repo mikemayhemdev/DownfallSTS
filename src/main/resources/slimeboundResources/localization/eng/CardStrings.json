@@ -42,8 +42,8 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "Choose 1 of 4 Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 2 of 4 Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 4 Slimes to slimeboundmod:Split into. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 2 of 4 Slimes to slimeboundmod:Split into. NL Exhaust."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",

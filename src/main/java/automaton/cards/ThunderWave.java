@@ -21,7 +21,7 @@ public class ThunderWave extends AbstractBronzeCard {
     private static final int UPG_DAMAGE = 2;
 
     public ThunderWave() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
     }
 
