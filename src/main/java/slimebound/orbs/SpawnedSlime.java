@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,6 +31,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
+import slimebound.cards.SplitGreed;
+import slimebound.cards.SplitScrap;
 import slimebound.powers.*;
 import slimebound.vfx.*;
 import reskinContent.reskinContent;
@@ -315,10 +318,11 @@ public abstract class SpawnedSlime
     public void onEvoke() {
         if (!noEvokeBonus) {
             if (this instanceof ScrapOozeSlime) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
-
+              //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ScrapRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SplitScrap()));
             } else if (this instanceof GreedOozeSlime) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GreedRespawnPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new SplitGreed()));
 
             } else {
                 if (AbstractDungeon.player.hasPower(DuplicatedFormNoHealPower.POWER_ID))

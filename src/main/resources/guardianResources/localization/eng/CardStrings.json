@@ -225,7 +225,8 @@
   },
   "Guardian:FastForward": {
     "NAME": "Speed Boost",
-    "DESCRIPTION": "guardianmod:Accelerate !M! times."
+    "DESCRIPTION": "guardianmod:Accelerate !M! times.",
+    "UPGRADE_DESCRIPTION": "Retain. NL guardianmod:Accelerate !M! times."
   },
   "Guardian:TimeCapacitor": {
     "NAME": "Time Capacitor",
