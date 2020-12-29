@@ -25,7 +25,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
         bossMechanicName = bossMechanicString.DIALOG[2];
         bossMechanicDesc = bossMechanicString.DIALOG[3];
 
-        maxHPModifier += 180;
+        maxHPModifier += 140;
         actNum = 2;
     }
 

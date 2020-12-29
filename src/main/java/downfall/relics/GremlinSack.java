@@ -33,9 +33,10 @@ public class GremlinSack extends CustomRelic {
             if (AbstractDungeon.player.getStartCardForEvent() != null) {
                 sackCards.add(AbstractDungeon.player.getStartCardForEvent().makeStatEquivalentCopy());
             }
-            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
-            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
+            //TODO - Does this need to be seeded?
             sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.COMMON).makeCopy());
+            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
+            sackCards.add(AbstractDungeon.getCard(AbstractCard.CardRarity.RARE).makeCopy());
             sackCards.add(AbstractDungeon.returnColorlessCard(AbstractCard.CardRarity.UNCOMMON).makeCopy());
             sackCards.add(AbstractDungeon.returnRandomCurse());
 
@@ -43,6 +44,12 @@ public class GremlinSack extends CustomRelic {
             this.tips.add(new PowerTip(this.name, this.description));
 
         }
+    }
+
+    @Override
+    public void update() {
+        super.update();
+        if (sackCards == null) onTrigger();
     }
 
     @Override
@@ -73,6 +80,7 @@ public class GremlinSack extends CustomRelic {
 
     public void onEquip() {
 
+        if (sackCards == null) onTrigger();
         for (AbstractCard c : sackCards) {
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (MathUtils.random((float) Settings.WIDTH * 0.1F, (float) Settings.WIDTH * 0.9F)), (MathUtils.random((float) Settings.HEIGHT * 0.2F, (float) Settings.HEIGHT * 0.8F))));
         }
