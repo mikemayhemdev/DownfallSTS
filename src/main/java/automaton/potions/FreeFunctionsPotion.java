@@ -32,19 +32,9 @@ public class FreeFunctionsPotion extends CustomPotion {
 
     public void use(AbstractCreature target) {
         for (AbstractCard q : FunctionHelper.held.group) {
-            q.baseDamage += potency;
-            q.damage += potency;
-            q.baseBlock += potency;
-            q.block += potency;
-            q.baseMagicNumber += potency;
-            q.magicNumber += potency;
             if (q instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) q).baseAuto += potency;
-                ((AbstractBronzeCard) q).auto += potency;
+                ((AbstractBronzeCard) q).fineTune();
             }
-            q.applyPowers();
-            q.superFlash();
-            FunctionHelper.genPreview();
         }
     }
 

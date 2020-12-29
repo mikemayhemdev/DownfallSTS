@@ -119,11 +119,22 @@ public abstract class AbstractBronzeCard extends CustomCard {
         }
     }
 
+    public void fineTune() {
+        this.baseDamage += 1;
+        this.damage += 1;
+        this.baseBlock += 1;
+        this.block += 1;
+        this.baseMagicNumber += 1;
+        this.magicNumber += 1;
+        this.baseAuto += 1;
+        this.auto += 1;
+        this.superFlash();
+        FunctionHelper.genPreview();
+    }
+
     public void onInput() {
         // Called right after a card enters The Function, before outputs would occur.
         // Pro tip: Don't delete things just because they're unused..
-
-
     }
 
     public void onCompilePreCardEffectEmbed(boolean forGameplay) {
