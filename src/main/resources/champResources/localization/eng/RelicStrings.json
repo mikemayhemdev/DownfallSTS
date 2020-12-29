@@ -21,7 +21,7 @@
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
-    "NAME": "Berserker's Guide to Slaughter",
+    "NAME": "Berserker's Guide",
     "FLAVOR": "The text is illegible.",
     "DESCRIPTIONS": [
       "Prevent the first #b10 HP you lose on your turn each combat."
@@ -35,7 +35,7 @@
     ]
   },
   "champ:DefensiveTrainingManual": {
-    "NAME": "Defensive Training Manual",
+    "NAME": "Defensive Thesis",
     "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
       "#yTechniques used in Defensive #yStance generate #b3 more #yCounter."
@@ -63,7 +63,7 @@
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
-    "NAME": "Gladiators Book of Martial Prowess",
+    "NAME": "Gladiators Manual",
     "FLAVOR": "Try everything - something will stick.",
     "DESCRIPTIONS": [
       "Whenever you play a #yTechnique, a #yCombo, a #yFinisher, and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity."
