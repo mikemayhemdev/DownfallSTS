@@ -1,5 +1,6 @@
 package charbosses.bosses.Silent;
 
+import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
@@ -20,17 +21,22 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
 import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
+import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import guardian.powers.ConstructPower;
@@ -44,6 +50,11 @@ public class CharBossSilent extends AbstractCharBoss {
 
     public static boolean posStorage = false;
 
+    public float origDX;
+    public float origdY;
+    public float orighX;
+    public float orighY;
+
     public CharBossSilent() {
         super(NAME, ID, 70, -4.0f, -16.0f, 240.0f, 290.0f, null, 100.0f, -20.0f, PlayerClass.THE_SILENT);
         this.energyOrb = new EnergyOrbGreen();
@@ -55,6 +66,11 @@ public class CharBossSilent extends AbstractCharBoss {
         e.setTimeScale(0.9f);
         this.energyString = "[G]";
         type = EnemyType.BOSS;
+
+        origDX = drawX;
+        origdY = drawY;
+        orighX = hb.x;
+        orighY = hb.y;
     }
 
     @Override
@@ -122,7 +138,7 @@ public class CharBossSilent extends AbstractCharBoss {
         }
     }
 
-    public static boolean foggy = false;
+    public boolean foggy = false;
 
     @Override
     public void renderHealth(SpriteBatch sb) {
@@ -173,46 +189,86 @@ public class CharBossSilent extends AbstractCharBoss {
     }
 
     public static void swapCreature(AbstractCreature p, AbstractCreature m) {
-        float origDX = m.drawX;
-        float origdY = m.drawY;
-        float orighX = m.hb.x;
-        float orighY = m.hb.y;
+        float tempDX = m.drawX;
+        float tempdY = m.drawY;
+        float temphX = m.hb.x;
+        float temphY = m.hb.y;
         m.drawX = p.drawX;
         m.drawY = p.drawY;
         m.hb.x = p.hb.x;
         m.hb.y = p.hb.y;
-        p.drawX = origDX;
-        p.drawY = origdY;
-        p.hb.x = orighX;
-        p.hb.y = orighY;
+        p.drawX = tempDX;
+        p.drawY = tempdY;
+        p.hb.x = temphX;
+        p.hb.y = temphY;
         posStorage = !posStorage;
+    }
+
+    public void spawnImage(boolean noSmoke) {
+
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        if (!noSmoke) {
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmokeBombEffect(orighX - 50F, orighY + 100F)));
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmokeBombEffect(orighX - 450F, orighY + 100F)));
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                foggy = true;
+                AbstractDungeon.getCurrRoom().monsters.monsters.removeIf(c -> c instanceof MirrorImageSilent);
+                CharBossSilent.boss.drawX = origDX;
+                CharBossSilent.boss.drawY = origdY;
+                CharBossSilent.boss.hb.x = orighX;
+                CharBossSilent.boss.hb.y = orighY;
+                //CharBossSilent.boss.state.setTimeScale(0F);
+                AbstractMonster m = new MirrorImageSilent(-400, -20);
+                CharBossSilent.boss.powers.add(new FakeOrRealPower(CharBossSilent.boss));
+                m.currentHealth = AbstractCharBoss.boss.currentHealth;
+                m.maxHealth = AbstractCharBoss.boss.maxHealth;
+                m.currentBlock = AbstractCharBoss.boss.currentBlock;
+                m.powers.clear();
+                for (AbstractPower p : AbstractCharBoss.boss.powers) {
+                    if (p instanceof CloneablePowerInterface) {
+                        AbstractPower q = ((CloneablePowerInterface) p).makeCopy();
+                        q.owner = m;
+                        m.powers.add(q);
+                    }
+                }
+                //m.state.setTimeScale(0F);
+
+                AbstractDungeon.getCurrRoom().monsters.addMonster(1, m);
+
+                m.init();
+                m.applyPowers();
+            }
+        });
+
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+
     }
 
     @Override
     public void usePreBattleAction() {
-        super.usePreBattleAction();
         if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
-            AbstractDungeon.getCurrRoom().monsters.monsters.removeIf(c -> c instanceof MirrorImageSilent);
-            AbstractCreature p = this;
-            AbstractMonster m = new MirrorImageSilent(CharBossSilent.posStorage ? 100 : -350, -20);
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(m, false)); // Can't be a minion because the "Minion" text will popup. Should be fine because they die before they can take damage.
-            boolean swap = AbstractDungeon.cardRandomRng.randomBoolean();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FakeOrRealPower(this)));
-            if (swap) {
-                addToBot(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        isDone = true;
-                        CharBossSilent.swapCreature(p, m);
-                    }
-                });
-            }
-            CharBossSilent.foggy = true;
+            spawnImage(false);
         }
         if (chosenArchetype instanceof ArchetypeAct3PoisonNewAge) {
             AbstractCreature p = AbstractDungeon.player;
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
         }
+        super.usePreBattleAction();
     }
 
 }

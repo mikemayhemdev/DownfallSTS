@@ -69,6 +69,7 @@ public class Ignite extends AbstractCard {
     }
 
     public void upgrade() {
+        upgradeName();
         upgradeMagicNumber(5);
         rawDescription = UPGRADED_DESCRIPTION;
         initializeDescription();
