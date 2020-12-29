@@ -14,7 +14,7 @@ public class Overload extends AbstractBronzeCard {
     //stupid intellij stuff skill, self, common
 
     public Overload() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
     }
 

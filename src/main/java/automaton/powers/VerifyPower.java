@@ -1,6 +1,5 @@
 package automaton.powers;
 
-import automaton.FunctionHelper;
 import automaton.cardmods.CardEffectsCardMod;
 import automaton.cards.FunctionCard;
 import basemod.abstracts.AbstractCardModifier;
@@ -23,16 +22,7 @@ public class VerifyPower extends AbstractAutomatonPower {
         if (function instanceof FunctionCard) {
             for (AbstractCardModifier m : CardModifierManager.getModifiers(function, CardEffectsCardMod.ID)) {
                 if (m instanceof CardEffectsCardMod) { // always true
-                    ((CardEffectsCardMod) m).stored().baseDamage += amount;
-                    ((CardEffectsCardMod) m).stored().damage += amount;
-                    ((CardEffectsCardMod) m).stored().baseBlock += amount;
-                    ((CardEffectsCardMod) m).stored().block += amount;
-                    ((CardEffectsCardMod) m).stored().baseMagicNumber += amount;
-                    ((CardEffectsCardMod) m).stored().magicNumber += amount;
-                    ((CardEffectsCardMod) m).stored().baseAuto += amount;
-                    ((CardEffectsCardMod) m).stored().auto += amount;
-                    ((CardEffectsCardMod) m).stored().applyPowers();
-                    FunctionHelper.genPreview();
+                    ((CardEffectsCardMod) m).stored().fineTune();
                 }
             }
             function.superFlash();
