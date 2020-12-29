@@ -1,8 +1,11 @@
 package automaton.powers;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class HardenedFormPower extends AbstractAutomatonPower implements OnCompilePower {
@@ -20,6 +23,7 @@ public class HardenedFormPower extends AbstractAutomatonPower implements OnCompi
         if (forGameplay) {
             flash();
             addToBot(new GainBlockAction(owner, amount));
+            addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.LIGHTNING)); // TODO: real orb VFX
         }
     }
 

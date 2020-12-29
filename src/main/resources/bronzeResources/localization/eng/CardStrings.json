@@ -488,8 +488,8 @@
     "UPGRADE_DESCRIPTION": "Whenever you play a Function, draw 2 cards."
   },
   "bronze:HardenedForm": {
-    "NAME": "Verify",
-    "DESCRIPTION": "Whenever you bronze:Compile, gain !M! Block."
+    "NAME": "Summon Orb",
+    "DESCRIPTION": "Whenever you bronze:Compile, gain !M! Block and deal !M! damage to a random enemy."
   },
   "bronze:CopyPaste": {
     "NAME": "Copy Paste",
