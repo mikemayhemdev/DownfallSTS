@@ -171,11 +171,12 @@ public abstract class AbstractHexaCard extends CustomCard {
     protected void burnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();// 39
 
-        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {// 41
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();// 42
-                break;// 43
+        if (AbstractDungeon.getCurrRoom().monsters != null)
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (!m.isDeadOrEscaped() && m.hasPower(BurnPower.POWER_ID)) {// 41
+                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();// 42
+                    break;// 43
+                }
             }
-        }
     }
 }
