@@ -5,7 +5,10 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.vfx.EnemyReaperEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,6 +16,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
 
 public class EnReaper extends AbstractBossCard {
@@ -39,6 +43,12 @@ public class EnReaper extends AbstractBossCard {
             AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.monsters.get(x);
             if (!q.isDead && !q.isDying && !q.id.equals(m.id)) {
                 addToBot(new VampireDamageAction(q, new DamageInfo(m, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+                //TODO - Technically this won't work if a modded effect has given the mushrooms Block or Buffer or something.  If that ends up being a problem, we'll need a custom action here.
+                if (q.currentHealth <= damage){
+                    addToBot(new HealAction(m, m, 20));
+                    addToBot(new WaitAction(0.1F));
+                    addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, 1),1));
+                }
             }
         }
         addToBot(new VampireDamageAction(p, new DamageInfo(m, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));

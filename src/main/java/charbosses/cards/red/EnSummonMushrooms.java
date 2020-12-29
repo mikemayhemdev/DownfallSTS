@@ -10,10 +10,7 @@ import charbosses.monsters.MushroomWhite;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.InstantKillAction;
-import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -23,6 +20,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import downfall.monsters.NeowBoss;
 import expansioncontent.expansionContentMod;
@@ -53,7 +51,9 @@ public class EnSummonMushrooms extends AbstractBossCard {
 
                 this.addToBot(new DamageAction(m2, new DamageInfo(m, 999, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
                 addToBot(new WaitAction(0.1F));
+                addToBot(new HealAction(m, m, 20));
                 addToBot(new WaitAction(0.1F));
+                addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, 1),1));
                 addToBot(new WaitAction(0.1F));
             }
         }
