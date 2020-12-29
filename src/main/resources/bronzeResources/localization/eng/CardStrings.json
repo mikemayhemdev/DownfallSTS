@@ -615,6 +615,10 @@
   },
   "bronze:ThunderWave": {
     "NAME": "Thunder Wave",
-    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function bronze:Compiled this combat."
+    "DESCRIPTION": "Deal !D! damage to a random enemy for each Function bronze:Compiled this combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
   }
 }
