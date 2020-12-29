@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -47,6 +48,9 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         choice(m);
 
+        addToBot(new WaitAction(0.1F));
+        addToBot(new WaitAction(0.1F));
+        addToBot(new WaitAction(0.1F));
         addToBot(new CommandAction());
 
         //Forever shall this code remain commented here.  A legacy to the origins of how bad Mayhem was at coding when this all began.

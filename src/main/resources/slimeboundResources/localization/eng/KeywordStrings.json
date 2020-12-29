@@ -198,5 +198,13 @@
     ],
     "PROPER_NAME": "Consume",
     "DESCRIPTION": "Bonus effect which activates when an #yAttack is used on an enemy who has #yGoop."
+  },
+  {
+    "NAMES": [
+      "specialist",
+      "specialist"
+    ],
+    "PROPER_NAME": "Specialist",
+    "DESCRIPTION": "A unique slime with a more powerful effect than normal slimes."
   }
 ]
