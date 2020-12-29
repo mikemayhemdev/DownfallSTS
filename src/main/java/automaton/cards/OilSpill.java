@@ -21,7 +21,7 @@ public class OilSpill extends AbstractBronzeCard {
     private static final int UPG_MAGIC = 1;
 
     public OilSpill() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
@@ -33,7 +33,6 @@ public class OilSpill extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.POISON);
         applyToEnemy(m, new PoisonPower(m, p, magicNumber));
-
     }
 
     @Override
