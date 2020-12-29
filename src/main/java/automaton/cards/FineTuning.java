@@ -33,7 +33,7 @@ public class FineTuning extends AbstractBronzeCard {
                 ((AbstractBronzeCard) q).baseAuto += 1;
                 ((AbstractBronzeCard) q).auto += 1;
             }
-            q.applyPowers();
+            q.resetAttributes();
             q.superFlash();
             FunctionHelper.genPreview();
         }
