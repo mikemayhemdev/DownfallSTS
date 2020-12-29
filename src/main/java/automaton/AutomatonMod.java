@@ -34,10 +34,12 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
 import downfall.util.CardIgnore;
+import guardian.patches.BottledStasisPatch;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.patches.BottledD8Patch;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -207,6 +209,7 @@ public class AutomatonMod implements
         BaseMod.addRelic(new BronzeIdol(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new SilverBullet(), AutomatonChar.Enums.BRONZE_AUTOMATON);
         BaseMod.addRelicToCustomPool(new BottledCode(), AutomatonChar.Enums.BRONZE_AUTOMATON);
+        BaseMod.registerBottleRelic(BottledStasisPatch.inBottledCode, new BottledCode());
         BaseMod.addRelicToCustomPool(new Timepiece(), AutomatonChar.Enums.BRONZE_AUTOMATON);
     }
 

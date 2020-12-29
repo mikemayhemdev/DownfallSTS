@@ -60,8 +60,12 @@ public class ShivTimeEaterPower extends AbstractPower {
                // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
                 //this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));
 
-                if (AbstractCharBoss.boss.hand.size() <= 6) {
-                    this.addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+                if (AbstractCharBoss.boss != null) {
+                    if (AbstractCharBoss.boss.hand != null) {
+                        if (AbstractCharBoss.boss.hand.size() <= 6) {
+                            this.addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+                        }
+                    }
                 }
             }
 

@@ -27,7 +27,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
     public static final String IMG_PATH = "cards/tendrilstrike.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     private static final CardStrings cardStrings;
@@ -50,7 +50,7 @@ public class ViciousTackle extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
         tags.add(SlimeboundMod.TACKLE);
 
-        this.baseDamage = 15;
+        this.baseDamage = 16;
         this.baseSelfDamage = this.selfDamage = 3;
 
     }

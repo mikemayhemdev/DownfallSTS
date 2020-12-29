@@ -1,5 +1,6 @@
 package champ.cards;
 
+import basemod.helpers.BaseModCardTags;
 import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -18,6 +19,7 @@ public class PerfectForm extends AbstractChampCard {
     public PerfectForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

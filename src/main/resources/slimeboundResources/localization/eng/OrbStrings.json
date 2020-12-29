@@ -32,7 +32,7 @@
     "NAME": "Torch Head Slime",
     "DESCRIPTION": [
       "Deals #b",
-      " damage at the start of your turn. Gains twice the normal benefit from #yPotency."
+      " damage at the start of your turn. Gains damage from your #yStrength."
     ]
   },
   "Slimebound:CultistSlime": {
@@ -70,7 +70,7 @@
     "DESCRIPTION": [
       "Deals #b",
       " damage and applies #b",
-      " #yBurn at the start of your turn."
+      " #ySoulburn at the start of your turn."
     ]
   },
   "Slimebound:ChampSlime": {

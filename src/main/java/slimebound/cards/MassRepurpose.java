@@ -15,7 +15,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.MassRepurposeAction;
+import slimebound.actions.TriggerSlimeAttacksAction;
 import slimebound.orbs.SpawnedSlime;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.powers.PotencyPower;
@@ -59,18 +61,17 @@ public class MassRepurpose extends AbstractSlimeboundCard {
         for (AbstractOrb o : p.orbs){
             if (o instanceof SpawnedSlime) {
                 AbstractDungeon.actionManager.addToBottom(new EvokeSpecificOrbAction(o));
-                addToBot(new ApplyPowerAction(p, p, new PotencyPower(p, p, 1), 1));
-                addToBot(new HealAction(p, p, magicNumber));
-                addToBot(new GainBlockAction(p, block));
+                SlimeboundMod.spawnSpecialistSlime();
             }
         }
+        if (upgraded) AbstractDungeon.actionManager.addToBottom(new TriggerSlimeAttacksAction(p));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
-            upgradeBlock(2);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

@@ -1,8 +1,11 @@
 package theHexaghost.cards;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.powers.ApplyBurnAtTurnStartOncePower;
+import theHexaghost.powers.BurnPower;
 
 public class FlamesFromBeyond extends AbstractHexaCard {
 
@@ -30,7 +33,9 @@ public class FlamesFromBeyond extends AbstractHexaCard {
 
     @Override
     public void triggerOnExhaust() {
-        applyToSelf(new ApplyBurnAtTurnStartOncePower(burn));
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            burn(m, burn);
+        }
     }
 
     public void upgrade() {

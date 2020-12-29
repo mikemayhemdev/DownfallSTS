@@ -139,7 +139,8 @@
   },
   "Slimebound:Repurpose": {
     "NAME": "Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb - Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist Slime. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb - Split into a random slimeboundmod:Specialist Slime. NL Command. NL Exhaust."
   },
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
@@ -147,7 +148,8 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Mass Repurpose",
-    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Gain 1 slimeboundmod:Potency, !B! Block, and heal !M! HP for each slimeboundmod:Absorbed. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Split into a random slimeboundmod:Specialist Slime for each slimeboundmod:Absorbed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorb ALL Slimes. NL Split into a random slimeboundmod:Specialist Slime for each slimeboundmod:Absorbed, then slimeboundmod:Command them all. NL Exhaust."
   },
   "Slimebound:Lick": {
     "NAME": "Lick",
@@ -190,8 +192,7 @@
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
-    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Effects that apply slimeboundmod:Goop apply !M! more."
+    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more."
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",
@@ -316,29 +317,29 @@
   },
   "Slimebound:DivideAndConquerConquer": {
     "NAME": "Conquer",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength, plus 1 for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a *Divide and a *Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded *Divide and an Upgraded *Conquer to your hand. NL Exhaust."
+    "DESCRIPTION": "Choose *Divide or *Conquer to add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose *Divide+ or *Conquer+ to add to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a *Serve and a *Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded *Serve and an Upgraded *Protect to your hand. NL Exhaust."
+    "DESCRIPTION": "Choose *Serve or *Protect to add your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose *Serve+ or *Protect+ to add your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity, plus 1 for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
-    "DESCRIPTION": "Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
@@ -362,13 +363,13 @@
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Split: Specialist",
-    "DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 unique Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 slimeboundmod:Specialist Slimes to slimeboundmod:Split into. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 slimeboundmod:Specialist Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
-    "DESCRIPTION": "Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card with slimeboundmod:Command, slimeboundmod:Command again."
+    "DESCRIPTION": "Whenever you play a card that triggers slimeboundmod:Command, slimeboundmod:Command again.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card that triggers slimeboundmod:Command, slimeboundmod:Command again."
   },
   "Slimebound:BestDefense": {
     "NAME": "Recklessness",
@@ -406,7 +407,7 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "Schlurp",
-    "DESCRIPTION": "Add !M! *Licks to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Licks to your hand."
   },
   "Slimebound:BronzeBeam": {
     "NAME": "Bronze Beam",
