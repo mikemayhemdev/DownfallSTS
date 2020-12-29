@@ -135,7 +135,7 @@
     "UPGRADE_DESCRIPTION": "Exhaust 1 card. Replace it with a random Upgraded Colorless expansioncontent:Boss card that costs 1 less. NL Exhaust."
   },
   "expansioncontent:KnowingSkullWish": {
-    "NAME": "Wish",
+    "NAME": "KnowingSkull",
     "DESCRIPTION": "Ethereal. NL Spend HP to Wish for Souls, Success, or a Pick Me Up. NL Exhaust."
   },
   "expansioncontent:ShieldSmash": {

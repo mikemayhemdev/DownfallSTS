@@ -17,7 +17,7 @@
     "NAME": "哑铃",
     "FLAVOR": "Flavor.",
     "DESCRIPTIONS": [
-      "每当你进入 #y休息处 ，如果你至少有 #b3 张未 #y升级 的牌，随机 #y升级 牌组中的一张牌。"
+      "每当你进入 #y休息处 ，如果你至少有 #b10 张未 #y升级 的牌，随机 #y升级 牌组中的一张牌。"
     ]
   },
   "champ:BerserkersGuideToSlaughter": {

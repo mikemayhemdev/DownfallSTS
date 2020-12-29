@@ -491,5 +491,12 @@
       "腐化送货员",
       "心脏的卡牌、遗物和药水不再会卖光，并且所有商品打折 #b20% 。"
     ]
+  },
+  "downfall:Hecktoplasm": {
+    "NAME": "Hecktoplasm",
+    "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
+    "DESCRIPTIONS": [
+      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
+    ]
   }
 }

@@ -3,20 +3,17 @@ package champ.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
-import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.AbstractStance;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
-public class FocusedBerPower extends AbstractPower implements CloneablePowerInterface, OnTechniqueSubscriber {
+public class FocusedBerPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = ChampMod.makeID("FocusedBerPower");
 
@@ -44,12 +41,6 @@ public class FocusedBerPower extends AbstractPower implements CloneablePowerInte
     public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
         if (!newStance.ID.equals(BerserkerStance.STANCE_ID))
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-    }
-
-    @Override
-    public void onTechnique() {
-        flash();
-        addToBot(new ApplyPowerAction(owner, owner, new ResolvePower(amount), amount));
     }
 
     @Override

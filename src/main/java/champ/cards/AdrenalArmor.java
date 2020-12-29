@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.fatigue;
+
 public class AdrenalArmor extends AbstractChampCard {
 
     public final static String ID = makeID("AdrenalArmor");
@@ -26,7 +28,7 @@ public class AdrenalArmor extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+      //  if (upgraded) techique();
         blck();
         fatigue(magicNumber);
         if (bcombo() && !this.purgeOnUse) {
@@ -47,7 +49,7 @@ public class AdrenalArmor extends AbstractChampCard {
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
+        upgradeBlock(2);
         initializeDescription();
     }
 }

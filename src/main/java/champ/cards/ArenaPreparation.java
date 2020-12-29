@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
 
+import static champ.ChampMod.fatigue;
+
 public class ArenaPreparation extends AbstractChampCard {
 
     public final static String ID = makeID("ArenaPreparation");

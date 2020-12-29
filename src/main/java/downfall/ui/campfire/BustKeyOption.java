@@ -19,6 +19,7 @@ import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.HeartBlessingBlue;
 import downfall.relics.HeartBlessingGreen;
 import downfall.relics.HeartBlessingRed;
+import downfall.relics.Hecktoplasm;
 import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
 import guardian.ui.EnhanceBonfireOption;
@@ -41,6 +42,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public BustKeyOption(Keys key) {
         this.key = key;
+        if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) soulToCost = 0;
         if (AbstractDungeon.player.gold < soulToCost) {
             this.usable = false;
             updateImage(key);
@@ -52,7 +54,11 @@ public class BustKeyOption extends AbstractCampfireOption {
 
 
     public void updateImage(Keys key) {
-        this.description = TEXT[3];
+        if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)){
+            this.description = TEXT[10];
+        } else {
+            this.description = TEXT[3];
+        }
         switch (key) {
             case SAPPHIRE:
                 this.label = TEXT[1];

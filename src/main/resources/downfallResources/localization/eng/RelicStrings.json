@@ -482,6 +482,13 @@
       "This relic has been used up."
     ]
   },
+  "downfall:Hecktoplasm": {
+    "NAME": "Hecktoplasm",
+    "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
+    "DESCRIPTIONS": [
+      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
+    ]
+  },
   "downfall:replacements": {
     "NAME": "",
     "FLAVOR": "",

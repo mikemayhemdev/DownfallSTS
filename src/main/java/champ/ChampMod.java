@@ -6,6 +6,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.actions.FatigueHpLossAction;
 import champ.cards.*;
 import champ.events.*;
 import champ.monsters.BlackKnight;
@@ -14,9 +15,11 @@ import champ.potions.OpenerPotion;
 import champ.potions.TechPotion;
 import champ.potions.UltimateStancePotion;
 import champ.powers.CounterPower;
+import champ.powers.ResolvePower;
 import champ.relics.*;
 import champ.stances.AbstractChampStance;
 import champ.util.CardFilter;
+import champ.util.CardIgnore;
 import champ.util.CoolVariable;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Color;
@@ -31,6 +34,7 @@ import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.TheLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -39,11 +43,12 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import sneckomod.TheSnecko;
+import sneckomod.events.BackToBasicsSnecko;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -68,7 +73,8 @@ public class ChampMod implements
         OnCardUseSubscriber,
         PreMonsterTurnSubscriber,
         OnPlayerLoseBlockSubscriber,
-        PostUpdateSubscriber {
+        PostUpdateSubscriber
+{
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -117,6 +123,10 @@ public class ChampMod implements
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
+
+    public static boolean enteredDefensiveThisTurn;
+    public static boolean enteredBerserkerThisTurn;
+    public static boolean enteredGladiatorThisTurn;
 
     public static final TextureAtlas UIAtlas = new TextureAtlas();
     public static Texture heartOrb;
@@ -282,6 +292,9 @@ public class ChampMod implements
         finishersThisCombat = 0;
         techniquesThisTurn = 0;
         StanceHelper.init();
+        enteredBerserkerThisTurn = false;
+        enteredDefensiveThisTurn = false;
+        enteredGladiatorThisTurn = false;
     }
 
     @Override
@@ -425,12 +438,26 @@ public class ChampMod implements
                 .create());
                 */
 
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsChamp.ID, BackToBasicsChamp.class) //Event ID//
+                //Event Character//
+                .playerClass(ChampChar.Enums.THE_CHAMP)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+
     }
 
     @Override
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
         finishersThisTurn = 0;
         techniquesThisTurn = 0;
+        enteredBerserkerThisTurn = false;
+        enteredDefensiveThisTurn = false;
+        enteredGladiatorThisTurn = false;
         return true;
     }
 
@@ -491,5 +518,37 @@ public class ChampMod implements
         for (AbstractCard c: AbstractDungeon.player.limbo.group){
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
+    }
+
+    public static int fatigue(int begone) {
+
+        int y = AbstractDungeon.player.currentHealth;
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
+                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(ResolvePower.POWER_ID)) {
+                    if (x + AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
+                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(ResolvePower.POWER_ID).amount;
+                    }
+                }
+                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
+                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
+            }
+        });
+
+        /*atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (y - AbstractDungeon.player.currentHealth > 0) {
+                    att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(y - AbstractDungeon.player.currentHealth), y - AbstractDungeon.player.currentHealth));
+                }
+            }
+        });
+        */ //This unused method makes it so the player only gains Resolve equal to lost HP. Fixes some breakable things, but also unfun.
+
+        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
     }
 }

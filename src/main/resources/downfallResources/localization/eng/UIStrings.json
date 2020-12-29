@@ -24,7 +24,8 @@
       "gain 1 Dexterity.",
       "Key shattered!",
       "Requires ",
-      " Souls."
+      " Souls.",
+      "(Free Action) Destroy key to "
     ]
   },
   "downfall:WheelSpinButton": {
@@ -115,6 +116,12 @@
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
       "Living Wall Heads"
+    ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "Whale Hunter",
+      "Ended the cycle."
     ]
   }
 }

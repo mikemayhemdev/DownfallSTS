@@ -82,11 +82,11 @@
   },
   "hexamod:CrushingStance": {
     "NAME": "Crush",
-    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a Crushing Ghostflame. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing Ghostflame. NL Exhaust."
   },
   "hexamod:EmpoweringStance": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame."
+    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a hexamod:Bolstering Ghostflame."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",

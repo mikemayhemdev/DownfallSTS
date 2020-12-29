@@ -21,14 +21,14 @@ public class EnGarde extends AbstractChampCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBODEFENSIVE);
+      //  tags.add(ChampMod.COMBO);
+      //  tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         if (upgraded) applyToSelf(new CounterPower(magicNumber));
-        if (dcombo()) atb(new AbstractGameAction() {
+        atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;

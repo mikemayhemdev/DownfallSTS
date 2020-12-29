@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.seals.AbstractSealCard;
+import theHexaghost.cards.seals.FifthSeal;
 import theHexaghost.cards.seals.SixthSeal;
 
 import java.util.ArrayList;
@@ -69,7 +70,7 @@ public class SealSealReward extends RewardItem {
     public static AbstractCard getRandomSeal() {
         ArrayList<AbstractCard> list = new ArrayList<>();// 1201
         for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (c instanceof AbstractSealCard && !c.cardID.equals(SixthSeal.ID))
+            if (c instanceof AbstractSealCard && !c.cardID.equals(FifthSeal.ID))
                 list.add(c);
         }
         return list.get(cardRandomRng.random(list.size() - 1));// 1217
