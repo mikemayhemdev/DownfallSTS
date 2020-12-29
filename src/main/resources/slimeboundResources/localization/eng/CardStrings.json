@@ -415,11 +415,11 @@
     "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bronze_Slime"
   },
   "Slimebound:SplitGreed": {
-    "NAME": "Revive Scrap",
+    "NAME": "Revive Greed",
     "DESCRIPTION": "Retain. NL Revive the Greed Ooze. NL Exhaust."
   },
   "Slimebound:SplitScrap": {
-    "NAME": "Revive Greed",
+    "NAME": "Revive Scrap",
     "DESCRIPTION": "Retain. NL Revive the Scrap Ooze. NL Exhaust."
   }
 }
