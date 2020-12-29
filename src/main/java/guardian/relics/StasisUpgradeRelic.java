@@ -22,11 +22,9 @@ public class StasisUpgradeRelic extends CustomRelic {
 
     public void onEquip() {
         ++AbstractDungeon.player.masterMaxOrbs;
-        ++AbstractDungeon.player.masterMaxOrbs;
     }
 
     public void onUnequip() {
-        --AbstractDungeon.player.masterMaxOrbs;
         --AbstractDungeon.player.masterMaxOrbs;
     }
 

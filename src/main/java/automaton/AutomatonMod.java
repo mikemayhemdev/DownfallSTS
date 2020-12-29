@@ -223,12 +223,14 @@ public class AutomatonMod implements
             throw new RuntimeException(e);
         }
 
+        /*
         BaseMod.addCard(new Daze());
         BaseMod.addCard(new Ignite());
         BaseMod.addCard(new GrievousWound());
         BaseMod.addCard(new IntoTheVoid());
         BaseMod.addCard(new UsefulSlime());
         BaseMod.addCard(new UnknownStatus());
+        */
     }
 
     public void addPotions() {
