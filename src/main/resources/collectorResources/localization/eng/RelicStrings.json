@@ -1,0 +1,9 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "Emerald Torch",
+    "FLAVOR": "Sustained by the Fires of envy",
+    "DESCRIPTIONS": [
+      "At the start of each combat, your #yTorch #yHead gains 8 Block."
+    ]
+  }
+}

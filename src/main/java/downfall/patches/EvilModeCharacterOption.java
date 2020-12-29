@@ -2,7 +2,7 @@ package downfall.patches;
 
 import automaton.AutomatonChar;
 import champ.ChampChar;
-import champ.ChampMod;
+import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -51,7 +51,15 @@ public class EvilModeCharacterOption {
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[6] + TEXT[9]);
                 }
-            } else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+            }
+            else if (__instance.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
+                if (UnlockTracker.isCharacterLocked("Champ")) {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[5] + TEXT[9]);
+                } else {
+                    TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[6] + TEXT[9]);
+                }
+            }
+            else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
                 if (UnlockTracker.isCharacterLocked("Champ")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[7] + TEXT[9]);
                 } else {

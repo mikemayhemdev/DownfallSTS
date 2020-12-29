@@ -3,31 +3,30 @@ package downfall.patches;
 import automaton.AutomatonChar;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
-import basemod.patches.whatmod.WhatMod;
 import champ.ChampChar;
+import collector.CollectorChar;
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterOption;
 import com.megacrit.cardcrawl.screens.charSelect.CharacterSelectScreen;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import downfall.downfallMod;
 import downfall.patches.ui.topPanel.GoldToSoulPatches;
-import guardian.characters.GuardianCharacter;
 import guardian.patches.GuardianEnum;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.expr.ExprEditor;
 import javassist.expr.FieldAccess;
-import slimebound.characters.SlimeboundCharacter;
 import slimebound.patches.SlimeboundEnum;
 import sneckomod.TheSnecko;
 import theHexaghost.TheHexaghost;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class EvilModeCharacterSelect {
     public static boolean villainsInNormalAndNormalInVillains = false;
@@ -53,7 +52,7 @@ public class EvilModeCharacterSelect {
             Iterator<CharacterOption> options = __instance.options.iterator();
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
-            CharacterOption[] villainOptions = new CharacterOption[6];
+            CharacterOption[] villainOptions = new CharacterOption[7];
 
             while (options.hasNext())
             {
@@ -107,13 +106,22 @@ public class EvilModeCharacterSelect {
                             }
                             villainOptions[4] = o;
                         }
+                        else if (o.c.chosenClass == CollectorChar.Enums.THE_COLLECTOR)
+                        {
+                            if (UnlockTracker.isCharacterLocked("Collector")){
+
+                                o.locked = true;
+                                ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                            }
+                            villainOptions[5] = o;
+                        }
                         else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO)
                         {
                             if (UnlockTracker.isCharacterLocked("Snecko")){
                                 o.locked = true;
                                 ReflectionHacks.setPrivate(o,CharacterOption.class,"buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                             }
-                            villainOptions[5] = o;
+                            villainOptions[6] = o;
                         }
 
                         else

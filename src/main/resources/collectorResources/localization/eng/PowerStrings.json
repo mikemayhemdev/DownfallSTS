@@ -1,0 +1,9 @@
+{
+  "champ:CounterPower": {
+    "NAME": "Counter",
+    "DESCRIPTIONS": [
+      "The next time you receive #yAttack damage, deal #b",
+      " damage back."
+    ]
+  }
+}

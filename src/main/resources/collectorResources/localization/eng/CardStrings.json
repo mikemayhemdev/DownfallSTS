@@ -1,0 +1,25 @@
+{
+  "collector:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "collector:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "collector:SoulStitch": {
+    "NAME": "Soul Stitch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! collector:Soul_Snare."
+  },
+  "collector:SoulHarvest": {
+    "NAME": "Soul Harvest",
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL Enemies. NL if Fatal, Collect them. NL Exhaust."
+  },
+  "collector:Contemplate": {
+    "NAME": "Contemplate",
+    "DESCRIPTION": "Choose 1 of 3 cards from your Collection. Put it in your hand.",
+    "UPGRADE_DESCRIPTION": [
+      "Choose 1 of 3 cards from your Collection. Put it in your hand and Upgrade it."
+    ]
+  }
+}

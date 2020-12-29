@@ -1,0 +1,27 @@
+[
+  {
+    "PROPER_NAME": "Affliction",
+    "NAMES": [
+      "affliction",
+      "afflictions",
+      "afflicted"
+    ],
+    "DESCRIPTION": "Creatures are Afflicted when they have 1 or more of the following effects, #yWeak, #yVulnerable, #yPoison, #yGoop, #ySoulfire, and #ySoul #ySnare"
+  },
+  {
+    "PROPER_NAME": "Soul Snare",
+    "NAMES": [
+      "Soul Snare",
+      "soul_snare"
+    ],
+    "DESCRIPTION": "When Applied, enemy loses HP equal to their current #ySoul #ySnare. Increase this by 1 whenever another #yAffliction is applied, does not trigger itself."
+  },
+  {
+    "PROPER_NAME": "Boon",
+    "NAMES": [
+      "boon",
+      "boons"
+    ],
+    "DESCRIPTION": "Boons are the following effects, #yStrength, #yDexterity, #yArtifact, #yPlated #yArmor, #yVigor, #yBlock."
+  }
+]
