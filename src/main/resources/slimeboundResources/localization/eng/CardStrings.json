@@ -42,8 +42,8 @@
   },
   "Slimebound:Split": {
     "NAME": "Split",
-    "DESCRIPTION": "Choose 1 of 4 Slimes to slimeboundmod:Split into. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 2 of 4 Slimes to slimeboundmod:Split into. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 4 Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 2 of 4 Slimes to slimeboundmod:Split into. NL slimeboundmod:Command. NL Exhaust."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
@@ -190,8 +190,7 @@
   },
   "Slimebound:AcidTongue": {
     "NAME": "Spreading Slime",
-    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Effects that apply slimeboundmod:Goop apply !M! more."
+    "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more."
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Feel Our Pain",
@@ -316,29 +315,29 @@
   },
   "Slimebound:DivideAndConquerConquer": {
     "NAME": "Conquer",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquerDivide": {
     "NAME": "Divide",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength, plus 1 for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Add a *Divide and a *Conquer to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded *Divide and an Upgraded *Conquer to your hand. NL Exhaust."
+    "DESCRIPTION": "Choose *Divide or *Conquer to add to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose *Divide+ or *Conquer+ to add to your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Add a *Serve and a *Protect to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded *Serve and an Upgraded *Protect to your hand. NL Exhaust."
+    "DESCRIPTION": "Choose *Serve or *Protect to add your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose *Serve+ or *Protect+ to add your hand. NL Exhaust."
   },
   "Slimebound:ServeAndProtectServe": {
     "NAME": "Serve",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity for each Spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity, plus 1 for each Spawned Slime. NL Exhaust."
   },
   "Slimebound:ServeAndProtectProtect": {
     "NAME": "Protect",
-    "DESCRIPTION": "Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
@@ -406,7 +405,7 @@
   },
   "Slimebound:Schlurp": {
     "NAME": "Schlurp",
-    "DESCRIPTION": "Add !M! *Licks to your hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Licks to your hand."
   },
   "Slimebound:BronzeBeam": {
     "NAME": "Bronze Beam",

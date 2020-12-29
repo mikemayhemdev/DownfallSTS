@@ -31,7 +31,7 @@ public class ServeAndProtectServe extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -47,7 +47,7 @@ public class ServeAndProtectServe extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
         this.exhaust = true;
-        this.baseMagicNumber = this.magicNumber = 2;
+        this.baseMagicNumber = this.magicNumber = 1;
         this.selfRetain = true;
     }
 
@@ -68,7 +68,7 @@ public class ServeAndProtectServe extends AbstractSlimeboundCard {
         }
         */
 
-        int slimecount = 0;
+        int slimecount = magicNumber;
 
         for (AbstractOrb o : p.orbs) {
 
@@ -78,7 +78,7 @@ public class ServeAndProtectServe extends AbstractSlimeboundCard {
 
         }
 
-        slimecount *= this.magicNumber;
+        //slimecount *= this.magicNumber;
 
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, slimecount), slimecount));
@@ -94,7 +94,7 @@ public class ServeAndProtectServe extends AbstractSlimeboundCard {
         if (!this.upgraded) {
             upgradeName();
             //upgradeBlock(1);
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
         }
     }
 }

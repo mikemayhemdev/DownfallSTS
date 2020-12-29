@@ -5,7 +5,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import slimebound.actions.SlimeSpawnAction;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.orbs.ShieldSlime;
 
 public class TarBlob extends CustomRelic {
     public static final String ID = "Slimebound:TarBlob";
@@ -20,13 +22,11 @@ public class TarBlob extends CustomRelic {
         this.largeImg = ImageMaster.loadImage(slimebound.SlimeboundMod.getResourcePath(IMG_PATH_LARGE));
     }
 
-    public void onEquip() {
-        ++AbstractDungeon.player.energy.energyMaster;
+    public void atBattleStartPreDraw() {
+        this.flash();
+        com.megacrit.cardcrawl.dungeons.AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.defect.DecreaseMaxOrbAction(1));
     }
 
-    public void onUnequip() {
-        --AbstractDungeon.player.energy.energyMaster;
-    }
 
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];

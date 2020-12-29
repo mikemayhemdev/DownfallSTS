@@ -29,7 +29,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
     public SlimeSpawnAction(AbstractOrb newOrbType, boolean upgraded, boolean SelfDamage, int bonusUniqueFocus, int bonusSecondary) {
 
-        this(newOrbType, upgraded, SelfDamage);
+        this(newOrbType, upgraded, false);
 
         this.bonusUniqueFocus = bonusUniqueFocus;
         this.bonusSecondary = bonusSecondary;
@@ -49,7 +49,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
         }
 
         this.upgraded = upgraded;
-        this.SelfDamage = SelfDamage;
+        this.SelfDamage = false;
         this.currentAmount = 4;
         if (AbstractDungeon.player.hasRelic(TarBlob.ID)) {
             currentAmount++;
@@ -66,9 +66,6 @@ public class SlimeSpawnAction extends AbstractGameAction {
 
             int currentHealth = AbstractDungeon.player.currentHealth;
 
-            if (TempHPField.tempHp.get(AbstractDungeon.player) != null)
-                currentHealth += TempHPField.tempHp.get(AbstractDungeon.player);
-
             /*
             int maxFortitudes = 0;
             if (AbstractDungeon.player.hasPower("FirmFortitudePower"))
@@ -80,7 +77,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
             int usedFortitudes = 0;
             */
 
-
+/*
             if (SelfDamage) {
 
                 if (currentAmount >= currentHealth) {
@@ -117,6 +114,7 @@ public class SlimeSpawnAction extends AbstractGameAction {
                 }
 
             }
+            */
             // AbstractDungeon.effectsQueue.add(new SlimeDripsEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, 0));
 
             //SlimeboundMod.logger.info("Channeling slime orb");

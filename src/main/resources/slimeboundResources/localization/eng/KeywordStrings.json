@@ -14,7 +14,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Split",
-    "DESCRIPTION": "Lose #b4 HP and spawn a #ySlime minion, who attacks at the start of each turn. While the #ySlime is alive, your Max HP is reduced by #b4. NL NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
+    "DESCRIPTION": "Spawn a #ySlime minion, who attacks at the start of each turn. NL NL If you have no empty slots, your oldest Slime is automatically #yAbsorbed to make room, granting you 1 #yStrength."
   },
   {
     "NAMES": [
@@ -75,7 +75,7 @@
       "leeching"
     ],
     "PROPER_NAME": "Leeching Slime",
-    "DESCRIPTION": "Attacks for #b2 and grants you #b2 #yBlock each turn."
+    "DESCRIPTION": "Attacks for #b1 and grants you #b3 #yBlock each turn."
   },
   {
     "NAMES": [

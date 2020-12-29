@@ -40,7 +40,7 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
     public void onCharge(AbstractGhostflame g) {
         if (!activated) {
             flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 6));
+            addToBot(new GainBlockAction(AbstractDungeon.player, 5));
            // addToBot(new GainEnergyAction(1));
             activated = true;
             stopPulse();

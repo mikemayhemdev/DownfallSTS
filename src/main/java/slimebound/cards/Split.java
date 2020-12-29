@@ -9,6 +9,7 @@ import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
@@ -25,7 +26,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
+    private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
     public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
     public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
@@ -46,6 +47,9 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         choice(m);
 
+        addToBot(new CommandAction());
+
+        //Forever shall this code remain commented here.  A legacy to the origins of how bad Mayhem was at coding when this all began.
         /*        for (int i = 0; i < magicNumber; i++) {
             ArrayList<Integer> orbs = new ArrayList<>();
             orbs.add(1);

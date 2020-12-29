@@ -29,7 +29,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
     public static final String DESCRIPTION;
     public static final String IMG_PATH = "cards/corrosivetackle.png";
     private static final CardType TYPE = CardType.ATTACK;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
@@ -49,7 +49,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
 
 
-        this.baseDamage = 13;
+        this.baseDamage = 12;
         baseSelfDamage = this.selfDamage = 3;
 
 
@@ -95,7 +95,7 @@ public class GoopTackle extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
+            upgradeDamage(3);
 
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();

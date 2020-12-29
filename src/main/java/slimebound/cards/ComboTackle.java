@@ -56,7 +56,7 @@ public class ComboTackle extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(2);
+            upgradeDamage(3);
             upgradeMagicNumber(1);
             this.rawDescription = UPGRADED_DESCRIPTION;
             this.initializeDescription();
