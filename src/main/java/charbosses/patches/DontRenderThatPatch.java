@@ -17,8 +17,12 @@ public class DontRenderThatPatch {
     public static class Noooooo {
         @SpirePrefixPatch
         public static SpireReturn Prefix() {
-            if (!((CharBossSilent)AbstractCharBoss.boss).foggy) {
-                return SpireReturn.Return(null);
+            if (AbstractCharBoss.boss != null){
+                if (AbstractCharBoss.boss instanceof CharBossSilent){
+                    if (!((CharBossSilent)AbstractCharBoss.boss).foggy) {
+                        return SpireReturn.Return(null);
+                    }
+                }
             }
             return SpireReturn.Continue();
         }
