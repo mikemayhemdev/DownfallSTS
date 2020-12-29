@@ -18,8 +18,7 @@
   "collector:Contemplate": {
     "NAME": "Contemplate",
     "DESCRIPTION": "Choose 1 of 3 cards from your Collection. Put it in your hand.",
-    "UPGRADE_DESCRIPTION": [
-      "Choose 1 of 3 cards from your Collection. Put it in your hand and Upgrade it."
-    ]
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your Collection. Put it in your hand and Upgrade it."
+
   }
 }

@@ -38,6 +38,7 @@ import charbosses.cards.anticards.Antidote;
 import charbosses.cards.anticards.Debug;
 import charbosses.cards.anticards.PeaceOut;
 import charbosses.cards.anticards.ShieldSmash;
+import collector.CollectorMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -235,6 +236,8 @@ public class downfallMod implements
                 return "champResources/" + path;
             case PACKAGE_AUTOMATON:
                 return "bronzeResources/" + path;
+            case PACKAGE_COLLECTOR:
+                return "collectorResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -314,6 +317,9 @@ public class downfallMod implements
 
         SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
+
+        SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_COLLECTOR" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -385,6 +391,7 @@ public class downfallMod implements
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
+        loadModKeywords(CollectorMod.getModID(), otherPackagePaths.PACKAGE_COLLECTOR);
 
     }
 
@@ -1193,7 +1200,8 @@ public class downfallMod implements
         PACKAGE_SNECKO,
         PACKAGE_EXPANSION,
         PACKAGE_CHAMP,
-        PACKAGE_AUTOMATON;
+        PACKAGE_AUTOMATON,
+        PACKAGE_COLLECTOR;
 
         otherPackagePaths() {
         }
