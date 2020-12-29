@@ -24,9 +24,7 @@ public class AwakenDeath extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         atb(new ApplyPowerAction(p, p, new AwakenDeathPower(p, p, this.magicNumber), this.magicNumber));
-
     }
 
     public void upgrade() {
