@@ -42,6 +42,7 @@ public class InfiniteLoop extends AbstractBronzeCard {
         if (forGameplay) {
             AbstractCard c = new InfiniteLoop();
             c.baseDamage += this.magicNumber;
+            c.damage += this.magicNumber;
             if (upgraded) c.upgrade();
             makeInHand(c);
         }
