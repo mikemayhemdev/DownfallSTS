@@ -1,11 +1,14 @@
 package automaton.cards;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
 
 public class FindAndReplace extends AbstractBronzeCard {
 
@@ -16,38 +19,23 @@ public class FindAndReplace extends AbstractBronzeCard {
     private static final int MAGIC = 1;
 
     public FindAndReplace() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard gotFunc = null;
-        for (AbstractCard c : p.drawPile.group) {
-            if (c instanceof FunctionCard) {
-                gotFunc = c;
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        cardsList.addAll(p.drawPile.group);
+        cardsList.addAll(p.discardPile.group);
+        atb(new SelectCardsAction(cardsList, 1, "Choose.", (cards) -> {
+            if (p.drawPile.contains(cards.get(0))) {
+                p.drawPile.moveToHand(cards.get(0));
+                addToTop(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));
+            } else if (p.discardPile.contains(cards.get(0))) {
+                p.discardPile.moveToHand(cards.get(0));
+                addToTop(new MakeTempCardInDiscardAction(new Dazed(), 1));
             }
-        }
-        if (gotFunc != null) {
-            p.drawPile.moveToDeck(gotFunc, false);
-            atb(new ReduceCostForTurnAction(gotFunc, 1));
-            atb(new DrawCardAction(1));
-        }
-        shuffleIn(new Dazed());
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean hasFunc = false;
-        for (AbstractCard c : p.drawPile.group) {
-            if (c instanceof FunctionCard) {
-                hasFunc = true;
-            }
-        }
-        if (!hasFunc) {
-            cantUseMessage = "ERR: NO_FUNCTION"; //TODO: Localize
-            return false;
-        }
-        return super.canUse(p, m);
+        }));
     }
 
     public void upp() {
