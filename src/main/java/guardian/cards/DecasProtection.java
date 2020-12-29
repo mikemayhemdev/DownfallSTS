@@ -23,7 +23,7 @@ public class DecasProtection extends AbstractGuardianCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
     public static String UPGRADED_DESCRIPTION;
@@ -45,7 +45,7 @@ public class DecasProtection extends AbstractGuardianCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
+     //   AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, 1), 1));
 
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
@@ -63,7 +63,7 @@ public class DecasProtection extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
         }
     }
 
