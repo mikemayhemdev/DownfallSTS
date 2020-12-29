@@ -195,9 +195,8 @@
     "DESCRIPTION": "Effects that apply slimeboundmod:Goop apply !M! more."
   },
   "Slimebound:FirmFortitude": {
-    "NAME": "Feel Our Pain",
-    "DESCRIPTION": "The first time you would take damage or lose HP on each of YOUR turns, an enemy takes that much damage instead.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you would lose HP on each of YOUR turns, an enemy takes that much damage instead."
+    "NAME": "Liquidate",
+    "DESCRIPTION": "Cannot be used if you have negative Strength. NL Lose 2 Strength. NL Gain !M! slimeboundmod:Potency."
   },
   "Slimebound:WasteNot": {
     "NAME": "Waste Not",
