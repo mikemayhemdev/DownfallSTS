@@ -314,6 +314,9 @@ public class AutomatonMod implements
                 FunctionHelper.max += 1;
             }
         }
+        else {
+            FunctionHelper.max = 3;
+        }
     }
 
     public static CardGroup getRareCards() {
