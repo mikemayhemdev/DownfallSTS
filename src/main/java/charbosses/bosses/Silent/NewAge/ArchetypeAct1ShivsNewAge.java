@@ -5,6 +5,7 @@ import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
+import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,7 +32,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
         // addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_Lantern());
         //addRelic(new CBR_CaptainsWheel());
-        addRelic(new CBR_OrnamentalFan());
+        addRelic(new CBR_Shuriken());
         // addRelic(new CBR_DreamCatcher());
         // addRelic(new CBR_Cleric()); // Cleric to remove +1 Strike
         // addRelic(new CBR_UpgradeShrine()); // To upgrade Infinite Blades
@@ -63,7 +64,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                     //Turn 3
                     addToList(cardsList, new EnBladeDance(), extraUpgrades);
                     addToList(cardsList, new EnDefendGreen());
-                    addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDecay());
                     turn++;
                     break;
                 case 3:
@@ -94,7 +95,7 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
                 case 1:
                     addToList(cardsList, new EnShiv());
                     addToList(cardsList, new EnLegSweep());
-                    addToList(cardsList, new EnDeflect());
+                    addToList(cardsList, new EnDecay());
                     addToList(cardsList, new EnStrikeGreen());  //Not played here
                     turn++;
                     break;
@@ -113,6 +114,6 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Shuriken());
+        addRelic(new CBR_OrnamentalFan());
     }
 }

@@ -5,7 +5,10 @@
 
 package charbosses.powers;
 
+import charbosses.actions.common.EnemyMakeTempCardInHandAction;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.cards.colorless.EnShiv;
 import charbosses.powers.cardpowers.EnemyAccuracyPower;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -43,7 +46,7 @@ public class ShivTimeEaterPower extends AbstractPower {
   //  }
 
     public void updateDescription() {
-        this.description = DESC[0] + 1 + DESC[1];
+        this.description = DESC[0];
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
@@ -55,11 +58,14 @@ public class ShivTimeEaterPower extends AbstractPower {
                 this.playApplyPowerSfx();
                // CardCrawlGame.sound.playA("POWER_TIME_WARP", 0.25F);
                // AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));
+                //this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyAccuracyPower(this.owner, 1), 1));
 
+                if (AbstractCharBoss.boss.hand.size() <= 6) {
+                    this.addToBot(new EnemyMakeTempCardInHandAction(new EnShiv(), 1));
+                }
             }
 
-            this.updateDescription();
+            //this.updateDescription();
         }
     }
 

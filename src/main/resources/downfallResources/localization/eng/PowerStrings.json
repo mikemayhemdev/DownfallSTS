@@ -68,9 +68,8 @@
   "downfall:ShivTimeEaterPower": {
     "NAME": "Time to Die",
     "DESCRIPTIONS": [
-      "Whenever you play #b",
-      " cards, Silent gains #b",
-      " #yAccuracy."]
+      "Whenever you play a 0-cost card, if Silent has less than 7 cards in hand, she gains a Shiv."
+      ]
   },
   "downfall:WatcherAngryPower": {
     "NAME": "Boiling Wrath",
