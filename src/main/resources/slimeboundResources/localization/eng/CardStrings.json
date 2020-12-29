@@ -394,7 +394,8 @@
   },
   "Slimebound:TagTeam": {
     "NAME": "Tag Team",
-    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Command !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random Slime. NL slimeboundmod:Command !M! times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL slimeboundmod:Split into a random slimeboundmod:Specialist Slime. NL slimeboundmod:Command !M! times."
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Rally the Troops",

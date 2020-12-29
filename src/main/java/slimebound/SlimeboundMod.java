@@ -773,6 +773,25 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         attacksPlayedThisTurn = 0;
     }
 
+    public static void spawnNormalSlime() {
+        Integer o = AbstractDungeon.cardRng.random(0, 3);
+
+        switch (o) {
+            case 0:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+                break;
+            case 1:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
+                break;
+            case 2:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                break;
+            case 3:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                break;
+        }
+    }
+
     public static void spawnSpecialistSlime() {
         Collections.shuffle(specialistSlimes, AbstractDungeon.cardRng.random);
 
