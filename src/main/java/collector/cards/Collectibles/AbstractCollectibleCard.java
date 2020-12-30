@@ -1,4 +1,4 @@
-package collector.cards;
+package collector.cards.Collectibles;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import static automaton.AutomatonMod.makeCardPath;
 import static automaton.FunctionHelper.WITH_DELIMITER;
 
-public abstract class AbstractCollectorCard extends CustomCard {
+public abstract class AbstractCollectibleCard extends CustomCard {
 
     private static float functionPreviewCardScale = .9f;
     private static float functionPreviewCardY = Settings.HEIGHT * 0.45F;
@@ -44,11 +44,8 @@ public abstract class AbstractCollectorCard extends CustomCard {
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
     private AbstractCard functionPreviewCard;
-    public boolean isCollectorSecondDamageModified;
-    public int CollectorSecondDamage;
-    public int BaseCollectorSecondDamage;
-    public boolean upgradedCollectorSecondDamage;
-    public AbstractCollectorCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
+
+    public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, CollectorChar.Enums.COLLECTOR, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
@@ -61,7 +58,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
         initializeDescription();
     }
 
-    public AbstractCollectorCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
+    public AbstractCollectibleCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
                 cost, "ERROR", type, color, rarity, target);
         cardStrings = CardCrawlGame.languagePack.getCardStrings(id);
@@ -120,46 +117,7 @@ public abstract class AbstractCollectorCard extends CustomCard {
             upp();
         }
     }
-    @Override
-    public void applyPowers()
-    {
-        CollectorSecondDamage = BaseCollectorSecondDamage;
 
-        int tmp = baseDamage;
-        baseDamage = BaseCollectorSecondDamage;
-
-        super.applyPowers();
-
-        CollectorSecondDamage = damage;
-        baseDamage = tmp;
-
-        super.applyPowers();
-
-        isCollectorSecondDamageModified = (CollectorSecondDamage != BaseCollectorSecondDamage);
-    }
-
-    @Override
-    public void calculateCardDamage(AbstractMonster mo)
-    {
-        CollectorSecondDamage = BaseCollectorSecondDamage;
-
-        int tmp = baseDamage;
-        baseDamage = BaseCollectorSecondDamage;
-
-        super.calculateCardDamage(mo);
-
-        CollectorSecondDamage = damage;
-        baseDamage = tmp;
-
-        super.calculateCardDamage(mo);
-
-        isCollectorSecondDamageModified = (CollectorSecondDamage != BaseCollectorSecondDamage);
-    }
-    public void upgradeCollectorSecondDamage(int amount) {
-        BaseCollectorSecondDamage += amount;
-        CollectorSecondDamage = BaseCollectorSecondDamage;
-        isCollectorSecondDamageModified = true;
-    }
     public void fineTune() {
         this.baseDamage += 1;
         this.damage += 1;
@@ -372,8 +330,8 @@ public abstract class AbstractCollectorCard extends CustomCard {
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard r = super.makeStatEquivalentCopy();
-        if (!this.doSpecialCompileStuff && r instanceof AbstractCollectorCard) {
-            ((AbstractCollectorCard) r).doSpecialCompileStuff = false;
+        if (!this.doSpecialCompileStuff && r instanceof AbstractCollectibleCard) {
+            ((AbstractCollectibleCard) r).doSpecialCompileStuff = false;
             if (r.rawDescription.contains(" NL bronze:Compile")) {
                 String[] splitText = r.rawDescription.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
                 String compileText = splitText[1] + splitText[2];

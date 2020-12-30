@@ -13,12 +13,135 @@
   },
   "collector:SoulHarvest": {
     "NAME": "Soul Harvest",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL Enemies. NL if Fatal, Collect them. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL Enemies. NL if Fatal, collector:Collect them. NL Exhaust."
   },
   "collector:Contemplate": {
     "NAME": "Contemplate",
-    "DESCRIPTION": "Choose 1 of 3 cards from your Collection. Put it in your hand.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your Collection. Put it in your hand and Upgrade it."
-
+    "DESCRIPTION": "Choose 1 of 3 cards from your collector:Collection. Put it in your hand.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 cards from your collector:Collection. Put it in your hand and Upgrade it."
+  },
+  "collector:Miser": {
+    "NAME": "Miser",
+    "DESCRIPTION": "Retain cards that cost less then !M!."
+  },
+  "collector:Bargain": {
+    "NAME": "Bargain",
+    "DESCRIPTION": "Switch the Cost of 2 cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Switch the Cost of 2 cards in your hand."
+  },
+  "collector:Consign": {
+    "NAME": "Consign",
+    "DESCRIPTION": "Deal !D! damage. NL Apply collector:Soul_Snare equal to unblocked damage dealt."
+  },
+  "collector:CullingBlow": {
+    "NAME": "Culling Blow",
+    "DESCRIPTION": "Apply !M! Poison. NL Apply 1 Vulnerable."
+  },
+  "collector:Fever": {
+    "NAME": "Fever",
+    "DESCRIPTION": "Apply !M! hexamod:Soulburn. NL Apply 1 Weak."
+  },
+  "collector:Fireball": {
+    "NAME": "Fireball",
+    "DESCRIPTION": "Deal !collector:AltD! damage if Fatal, deal !D! damage to ALL enemies."
+  },
+  "collector:Wrack": {
+    "NAME": "Wrack",
+    "DESCRIPTION": "Double an enemies collector:Afflictions."
+  },
+  "collector:Hellfire": {
+    "NAME": "Hellfire",
+    "DESCRIPTION": "Deal !D! damage and Apply a random collector:Affliction X Times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and Apply a random *πUpgraded collector:Affliction X Times."
+  },
+  "collector:DarkSuffusion": {
+    "NAME": "Dark Suffusion",
+    "DESCRIPTION": "Deal !D! damage. NL if this brings an enemy under !M! HP, collector:Collect them."
+  },
+  "collector:Omen": {
+    "NAME": "Omen",
+    "DESCRIPTION": "Dealing Attack Damage to an enemy with 6 collector:Afflictions reduces them by 1 and they lose !M! HP."
+  },
+  "collector:LuckyWick": {
+    "NAME": "Lucky Wick",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Draw !M! card. NL Exhaust."
+  },
+  "collector:CrookedStaff": {
+    "NAME": "Crooked Staff",
+    "DESCRIPTION": "At the end of !M! turns, gain 12 Vigor."
+  },
+  "collector:CrudeShield": {
+    "NAME": "Crude Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !B! Block. NL Exhaust."
+  },
+  "collector:CultistFeather": {
+    "NAME": "Cultist Feather",
+    "DESCRIPTION": "Gain !M! Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength and Dexterity. NL Exhaust."
+  },
+  "collector:CurledHorns": {
+    "NAME": "Curled Horns",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+  },
+  "collector:DefectCore": {
+    "NAME": "Defect Core",
+    "DESCRIPTION": "Channel 1 Plasma. NL At the start of each turn Channel !M! Random orb",
+    "UPGRADE_DESCRIPTION": "Channel 1 Plasma. NL At the start of each turn Channel !M! Random orbs"
+  },
+  "collector:GremlinPoker": {
+    "NAME": "Gremlin Poker",
+    "DESCRIPTION": "Deal !D! damage. NL collector:Perpetual."
+  },
+  "collector:IroncladMask": {
+    "NAME": "IroncladMask",
+    "DESCRIPTION": "Double your Strength. NL Deal !D! damage. NL Exhaust."
+  },
+  "collector:LouseSegment": {
+  "NAME": "Louse Segment",
+  "DESCRIPTION": "The next time you take attack damage, Gain !B! Block. NL Exhaust."
+  },
+  "collector:LagavullinShell": {
+    "NAME": "Lagavullin Shell",
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust."
+  },
+  "collector:JarWormTooth": {
+    "NAME": "Jar Worm Tooth",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !B! Block. NL Exhaust."
+  },
+  "collector:NobsBoneClub": {
+    "NAME": "Nob's Bone Club",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "collector:SentryCore": {
+    "NAME": "Sentry Core",
+    "DESCRIPTION": "Place !M! card in your hand into collector:Stasis. NL Exhaust."
+  },
+  "collector:SilentTrophy": {
+    "NAME": "Silent Trophy",
+    "DESCRIPTION": "Gain 1 Intangible. NL Add 2 *Shivs to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Add 2 Upgraded *Shivs to your hand. NL Block is not removed at the start of your next turn. NL Exhaust."
+  },
+  "collector:SlimeSample": {
+    "NAME": "Slime Sample",
+    "DESCRIPTION": "Draw !M! Card. NL Add 1 *Slimed to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! Cards. NL Add 1 *Slimed to your hand. NL Exhaust."
+  },
+  "collector:StrangeFungus": {
+    "NAME": "Strange Fungus",
+    "DESCRIPTION": "Apply 1 Vulnerable. NL Gain !M! Temporary Strength. NL Exhaust."
+  },
+  "collector:VialofOoze": {
+    "NAME": "Vial of Ooze",
+    "DESCRIPTION": "Apply !M! collector:Goop. NL Gain !B! Block. NL Exhaust."
+  },
+  "collector:ViciousClaws": {
+    "NAME": "Vicious Claws",
+    "DESCRIPTION": "Deal !D! damage twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times. NL Exhaust."
+  },
+  "collector:WatchersStaff": {
+    "NAME": "Watchers Staff",
+    "DESCRIPTION": "Retain. NL Enter Wrath or Calm. NL Gain !M! Energy. NL Exit your Stance Next Turn."
   }
 }

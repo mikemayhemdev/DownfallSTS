@@ -17,6 +17,51 @@
     "DESCRIPTION": "When Applied, enemy loses HP equal to their current #ySoul #ySnare. Increase this by 1 whenever another #yAffliction is applied, does not trigger itself."
   },
   {
+    "PROPER_NAME": "Collect",
+    "NAMES": [
+      "collect",
+      "Collected",
+      "collected"
+    ],
+    "DESCRIPTION": "When a #yCollected Monster dies, after combat it's #yCollectible will appear in a separate card reward, no more then 3 #yCollectibles can appear."
+  },
+  {
+    "PROPER_NAME": "Collection",
+    "NAMES": [
+      "collection"
+    ],
+    "DESCRIPTION": "#yCollectibles are placed here in combat. Contains 4 #yLucky #yWick at the start of a run."
+  },
+  {
+    "PROPER_NAME": "Collectible",
+    "NAMES": [
+      "collectible"
+    ],
+    "DESCRIPTION": "This card starts in the #yCollection in combat"
+  },
+  {
+    "PROPER_NAME": "Perpetual",
+    "NAMES": [
+      "perpetual"
+    ],
+    "DESCRIPTION": "This card returns to the #yCollection in when played."
+  },
+  {
+    "NAMES": [
+      "stasis"
+    ],
+    "PROPER_NAME": "Stasis",
+    "DESCRIPTION": "A card in #yStasis gains a turn counter equal to its cost plus #b1. NL Turn counter is reduced by #b1 at the start of your turn. NL When the counter reaches #b0, it is returned to your hand and costs #b0 until played."
+  },
+  {
+    "NAMES": [
+      "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "Goop",
+    "DESCRIPTION": "The next attack deals #b1 more damage per #yGoop, removing all #yGoop and triggering any #yConsume effects."
+  },
+  {
     "PROPER_NAME": "Boon",
     "NAMES": [
       "boon",

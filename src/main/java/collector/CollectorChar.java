@@ -1,8 +1,7 @@
 package collector;
 
 import basemod.abstracts.CustomPlayer;
-import collector.cards.Defend;
-import collector.cards.Strike;
+import collector.cards.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -48,7 +47,7 @@ public class CollectorChar extends CustomPlayer {
     private String jsonURL = "collectorResources/images/char/mainChar/bronze.json";
 
     public CollectorChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "bronzeResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "collectorResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
         initializeClass(null,
                 SHOULDER1,
                 SHOULDER2,
@@ -82,12 +81,15 @@ public class CollectorChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             retVal.add(Strike.ID);
         }
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
+        retVal.add(Contemplate.ID);
+        retVal.add(SoulStitch.ID);
+        retVal.add(SoulHarvest.ID);
         return retVal;
     }
 

@@ -1,9 +1,42 @@
 {
-  "champ:CounterPower": {
-    "NAME": "Counter",
+  "collector:SoulSnare": {
+    "NAME": "Soul Snare",
     "DESCRIPTIONS": [
-      "The next time you receive #yAttack damage, deal #b",
-      " damage back."
+      "When Soul Snare is applied to this loses #b",
+      " HP. Whenever you apply an #yAffliction to this increase this by 1."
+    ]
+  },
+  "collector:ChaoticFlux": {
+    "NAME": "Chaotic Flux",
+    "DESCRIPTIONS": [
+      "At the start of your turn #yChannel #b",
+      " random Orbs."
+    ]
+  },
+  "collector:FalteringFocus": {
+    "NAME": "Faltering Focus",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, Exit your #yStance"
+    ]
+  },
+  "collector:CurlUp": {
+    "NAME": "Curl Up",
+    "DESCRIPTIONS": [
+      "The next time you take attack damage gain #b",
+      " #yBlock."
+    ]
+  },
+  "collector:Omen": {
+    "NAME": "Omen",
+    "DESCRIPTIONS": [
+      "Dealing Attack damage to an enemy with 6 #Afflictions they lose #b",
+      " HP."
+    ]
+  },
+  "collector:Miser": {
+    "NAME": "Miser",
+    "DESCRIPTIONS": [
+      "#Retain cards that cost less then #b"
     ]
   }
 }
