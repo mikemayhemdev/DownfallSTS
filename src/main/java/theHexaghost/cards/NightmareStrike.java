@@ -13,7 +13,7 @@ public class NightmareStrike extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 18;
+    private static final int DAMAGE = 16;
     private static final int UPG_DAMAGE = 4;
 
     public NightmareStrike() {

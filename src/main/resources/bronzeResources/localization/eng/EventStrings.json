@@ -10,10 +10,10 @@
       "[Fight Repulsor] #gGain #gDazing #gPulse.",
       "[Fight Exploder] #gGain #gExplode.",
       "[Leave]",
-      "[Begin Combat]",
-      "[Also Fight Spiker] #gGain #gSpike.",
-      "[Also Fight Repulsor] #gGain #gDazing #gPulse.",
-      "[Also Fight Exploder] #gGain #gExplode."
+      "#g[Begin #gCombat]",
+      "#r[Also Fight Spiker] #gGain #gSpike.",
+      "#r[Also Fight Repulsor] #gGain #gDazing #gPulse.",
+      "#r[Also Fight Exploder] #gGain #gExplode."
     ]
   },
   "bronze:AncientFactory": {
