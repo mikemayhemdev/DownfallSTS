@@ -66,7 +66,6 @@ public class Haunted extends CustomCard {
                 }
             }
         });
-
     }
 
     @Override
