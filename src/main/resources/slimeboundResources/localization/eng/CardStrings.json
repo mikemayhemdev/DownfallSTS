@@ -167,7 +167,7 @@
     "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
   },
   "Slimebound:RejuvenatingLick": {
-    "NAME": "Twin Lick",
+    "NAME": "Double Lick",
     "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Add a *Lick to your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Add a *Lick to your hand. NL Draw a card. NL Exhaust."
   },
