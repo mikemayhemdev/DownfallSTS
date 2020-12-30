@@ -29,14 +29,16 @@ public class BurnOut extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int statusCount = 0;
 
-        for (int i = 0; i < p.drawPile.size();) {
+        for (int i = 0; i < p.drawPile.size(); ) {
             AbstractCard c = p.drawPile.group.get(i);
             if (c.type == CardType.STATUS) {
                 statusCount++;
                 p.drawPile.removeCard(c);
                 p.limbo.addToTop(c);
-                c.target_x = AbstractDungeon.cardRandomRng.random(0, Settings.WIDTH);
-                c.target_y = AbstractDungeon.cardRandomRng.random(0, Settings.HEIGHT);
+                c.targetDrawScale = 0.5F;
+                c.setAngle(0, true);
+                c.target_x = AbstractDungeon.cardRandomRng.random(AbstractCard.IMG_WIDTH, Settings.WIDTH - AbstractCard.IMG_WIDTH);
+                c.target_y = AbstractDungeon.cardRandomRng.random(AbstractCard.IMG_HEIGHT, Settings.HEIGHT - AbstractCard.IMG_HEIGHT);
                 atb(new ExhaustSpecificCardAction(c, p.limbo));
                 atb(new WaitAction(0.1F));
             } else {
@@ -44,14 +46,16 @@ public class BurnOut extends AbstractBronzeCard {
             }
         }
 
-        for (int i = 0; i < p.discardPile.size();) {
+        for (int i = 0; i < p.discardPile.size(); ) {
             AbstractCard c = p.discardPile.group.get(i);
             if (c.type == CardType.STATUS) {
                 statusCount++;
                 p.discardPile.removeCard(c);
                 p.limbo.addToTop(c);
-                c.target_x = AbstractDungeon.cardRandomRng.random(0, Settings.WIDTH);
-                c.target_y = AbstractDungeon.cardRandomRng.random(0, Settings.HEIGHT);
+                c.targetDrawScale = 0.5F;
+                c.setAngle(0, true);
+                c.target_x = AbstractDungeon.cardRandomRng.random(AbstractCard.IMG_WIDTH, Settings.WIDTH - AbstractCard.IMG_WIDTH);
+                c.target_y = AbstractDungeon.cardRandomRng.random(AbstractCard.IMG_HEIGHT, Settings.HEIGHT - AbstractCard.IMG_HEIGHT);
                 atb(new ExhaustSpecificCardAction(c, p.limbo));
                 atb(new WaitAction(0.1F));
             } else {
@@ -59,14 +63,16 @@ public class BurnOut extends AbstractBronzeCard {
             }
         }
 
-        for (int i = 0; i < p.hand.size();) {
+        for (int i = 0; i < p.hand.size(); ) {
             AbstractCard c = p.hand.group.get(i);
             if (c.type == CardType.STATUS) {
                 statusCount++;
                 p.hand.removeCard(c);
                 p.limbo.addToTop(c);
-                c.target_x = AbstractDungeon.cardRandomRng.random(0, Settings.WIDTH);
-                c.target_y = AbstractDungeon.cardRandomRng.random(0, Settings.HEIGHT);
+                c.targetDrawScale = 0.5F;
+                c.setAngle(0, true);
+                c.target_x = AbstractDungeon.cardRandomRng.random(AbstractCard.IMG_WIDTH, Settings.WIDTH - AbstractCard.IMG_WIDTH);
+                c.target_y = AbstractDungeon.cardRandomRng.random(AbstractCard.IMG_HEIGHT, Settings.HEIGHT - AbstractCard.IMG_HEIGHT);
                 atb(new ExhaustSpecificCardAction(c, p.limbo));
                 atb(new WaitAction(0.1F));
             } else {
