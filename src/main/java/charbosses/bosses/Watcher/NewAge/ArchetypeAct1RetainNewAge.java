@@ -1,5 +1,6 @@
 package charbosses.bosses.Watcher.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnMiracle;
@@ -8,8 +9,11 @@ import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnParasite;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.purple.*;
+import charbosses.powers.WatcherAngryPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -26,6 +30,12 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
 
         maxHPModifier += 108;
         actNum = 1;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherAngryPower(p)));
     }
 
     public void initialize() {

@@ -7,8 +7,11 @@ import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.green.*;
+import charbosses.powers.general.PoisonProtectionPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -22,6 +25,13 @@ public class ArchetypeAct3PoisonNewAge extends ArchetypeBaseSilent {
 
         maxHPModifier += 350;
         actNum = 3;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        AbstractCreature p = AbstractDungeon.player;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
+
     }
 
     public void initialize() {

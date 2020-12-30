@@ -95,6 +95,7 @@ public class CharBossDefect extends AbstractCharBoss {
             }
 
         archetype.initialize();
+        archetype.addedPreBattle();
         chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            archetype.initializeBonusRelic();
@@ -115,18 +116,4 @@ public class CharBossDefect extends AbstractCharBoss {
         }
     }
 
-    @Override
-    public void usePreBattleAction() {
-        super.usePreBattleAction();
-        if (chosenArchetype instanceof ArchetypeAct2ClawNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-450, 250, 0), true));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-600, 0, 1), true));
-        }
-        if (chosenArchetype instanceof ArchetypeAct3OrbsNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
-        }
-    }
 }

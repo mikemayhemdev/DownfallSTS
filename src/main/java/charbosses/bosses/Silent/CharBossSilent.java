@@ -117,6 +117,7 @@ public class CharBossSilent extends AbstractCharBoss {
             }
 
         archetype.initialize();
+        archetype.addedPreBattle();
         currentHealth = maxHealth;
         chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {
@@ -266,18 +267,6 @@ public class CharBossSilent extends AbstractCharBoss {
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 
-    }
-
-    @Override
-    public void usePreBattleAction() {
-        if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
-            spawnImage(false);
-        }
-        if (chosenArchetype instanceof ArchetypeAct3PoisonNewAge) {
-            AbstractCreature p = AbstractDungeon.player;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
-        }
-        super.usePreBattleAction();
     }
 
 }

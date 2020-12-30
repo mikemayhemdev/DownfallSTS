@@ -98,6 +98,7 @@ public class CharBossIronclad extends AbstractCharBoss {
             }
 
         archetype.initialize();
+        archetype.addedPreBattle();
         chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            archetype.initializeBonusRelic();
@@ -166,17 +167,6 @@ public class CharBossIronclad extends AbstractCharBoss {
                     AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
                 }
             }
-        }
-    }
-
-
-    @Override
-    public void usePreBattleAction() {
-        super.usePreBattleAction();
-        if (chosenArchetype instanceof ArchetypeAct3BlockNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new Fortification(), true));
         }
     }
 

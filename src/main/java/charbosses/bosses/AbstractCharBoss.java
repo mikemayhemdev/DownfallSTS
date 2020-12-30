@@ -249,18 +249,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         } else {
             playMusic();
         }
-        if (chosenArchetype instanceof ArchetypeAct2CalmNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
-        }
-        if (chosenArchetype instanceof ArchetypeAct1ShivsNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ShivTimeEaterPower(p)));
-        }
-        if (chosenArchetype instanceof ArchetypeAct1RetainNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherAngryPower(p)));
-        }
     }
 
     public void playMusic() {

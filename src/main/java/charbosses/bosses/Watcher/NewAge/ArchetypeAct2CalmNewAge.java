@@ -8,8 +8,10 @@ import charbosses.cards.blue.EnDefendBlue;
 import charbosses.cards.purple.*;
 import charbosses.powers.WatcherCripplePower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.Watcher;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -27,6 +29,13 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
 
         maxHPModifier += 200;
         actNum = 2;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
+
     }
 
     public void initialize() {

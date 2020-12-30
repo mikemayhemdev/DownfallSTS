@@ -1,5 +1,6 @@
 package charbosses.bosses.Silent.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
@@ -7,8 +8,11 @@ import charbosses.cards.colorless.EnShiv;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.green.*;
+import charbosses.powers.ShivTimeEaterPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -22,6 +26,12 @@ public class ArchetypeAct1ShivsNewAge extends ArchetypeBaseSilent {
 
         maxHPModifier += 80;
         actNum = 1;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ShivTimeEaterPower(p)));
     }
 
     public void initialize() {

@@ -148,6 +148,7 @@ public class CharBossWatcher extends AbstractCharBoss {
             }
 
         archetype.initialize();
+        archetype.addedPreBattle();
         chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            archetype.initializeBonusRelic();
@@ -190,13 +191,5 @@ public class CharBossWatcher extends AbstractCharBoss {
         downfallMod.saveBossFight(CharBossWatcher.ID);
     }
 
-    @Override
-    public void usePreBattleAction() {
-        super.usePreBattleAction();
-        if (chosenArchetype instanceof ArchetypeAct3DivinityNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherDivinityPower(p)));
-        }
-    }
 
 }

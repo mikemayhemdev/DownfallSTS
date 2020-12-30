@@ -11,8 +11,11 @@ import charbosses.cards.colorless.EnSwiftStrike;
 import charbosses.cards.curses.EnClumsy;
 import charbosses.cards.curses.EnShame;
 import charbosses.orbs.AbstractEnemyOrb;
+import charbosses.powers.DefectCuriosityPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 
@@ -30,6 +33,13 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
         maxHPModifier += 350;
         actNum = 3;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
+
     }
 
     private void increasePretendFocus(int amount) {
