@@ -127,10 +127,10 @@
     ]
   },
   "hexamod:HexalevelPower": {
-    "NAME": "Hexalevel",
+    "NAME": "Infernal Form",
     "DESCRIPTIONS": [
       "At the start of your turn, gain #b",
-      " #yEnhance."
+      " #yIntensity."
     ]
   },
   "hexamod:LoseEnhanceInTurnsPower": {

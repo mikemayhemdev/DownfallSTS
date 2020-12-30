@@ -283,10 +283,6 @@
     "NAME": "Wide Sting",
     "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
   },
-  "sneckomod:Bewildered": {
-    "NAME": "Bewildered",
-    "DESCRIPTION": "When you play another card, sneckomod:Muddle your hand, then discard this. NL Exhaust."
-  },
   "sneckomod:UnendingSupply": {
     "NAME": "Unending Supply",
     "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand and sneckomod:Muddle it."

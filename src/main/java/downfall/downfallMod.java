@@ -34,10 +34,6 @@ import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import charbosses.cards.anticards.Antidote;
-import charbosses.cards.anticards.Debug;
-import charbosses.cards.anticards.PeaceOut;
-import charbosses.cards.anticards.ShieldSmash;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -52,6 +48,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.curses.Pride;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -80,8 +77,13 @@ import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.cards.KnowingSkullWish;
+import downfall.cards.curses.*;
 import downfall.dailymods.*;
 import downfall.events.*;
+import downfall.events.shrines_evil.DuplicatorEvil;
+import downfall.events.shrines_evil.PurificationShrineEvil;
+import downfall.events.shrines_evil.TransmogrifierEvil;
+import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.EvilModeCharacterSelect;
@@ -97,6 +99,7 @@ import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
+import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
@@ -109,6 +112,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
@@ -176,6 +180,8 @@ public class downfallMod implements
     public static AbstractCard.CardTags CHARBOSS_ATTACK;
     @SpireEnum
     public static AbstractCard.CardTags CHARBOSS_SETUP;
+    @SpireEnum
+    public static AbstractCard.CardTags DOWNFALL_CURSE;
 
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -187,6 +193,9 @@ public class downfallMod implements
     };
     public static ReplaceData[] wordReplacements;
     public static SpireConfig bruhData = null;
+
+
+    private static ArrayList<AbstractCard> downfallCurses = new ArrayList<>();
 
     public downfallMod() {
         BaseMod.subscribe(this);
@@ -335,10 +344,16 @@ public class downfallMod implements
     @Override
     public void receiveEditCards() {
         BaseMod.addCard(new KnowingSkullWish());
-        BaseMod.addCard(new Antidote());
-        BaseMod.addCard(new ShieldSmash());
-        BaseMod.addCard(new Debug());
-        BaseMod.addCard(new PeaceOut());
+       // BaseMod.addCard(new Antidote());
+       // BaseMod.addCard(new ShieldSmash());
+       // BaseMod.addCard(new Debug());
+        //BaseMod.addCard(new PeaceOut());
+        BaseMod.addCard(new Malfunctioning());
+        BaseMod.addCard(new Bewildered());
+        BaseMod.addCard(new Haunted());
+        BaseMod.addCard(new Icky());
+        BaseMod.addCard(new Aged());
+        BaseMod.addCard(new Pride());
     }
 
     @Override
@@ -388,6 +403,13 @@ public class downfallMod implements
 
     }
 
+
+
+    public static AbstractCard getRandomDownfallCurse() {
+        Collections.shuffle(downfallCurses, AbstractDungeon.cardRandomRng.random);
+        return downfallCurses.get(0);
+    }
+
     public void receivePostInitialize() {
 
         loadOtherData();
@@ -396,6 +418,14 @@ public class downfallMod implements
         this.addPotions();
         this.initializeEvents();
         this.initializeConfig();
+
+
+        ArrayList<AbstractCard> tmp = CardLibrary.getAllCards();
+        for (AbstractCard c : tmp) {
+            if (c.hasTag(DOWNFALL_CURSE)) {
+                downfallCurses.add(c);
+            }
+        }
 
     }
 
@@ -866,6 +896,42 @@ public class downfallMod implements
         BaseMod.addEvent(new AddEventParams.Builder(BossTester.ID, BossTester.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> false)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(DuplicatorEvil.ID, DuplicatorEvil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> evilMode)
+                //Event ID to Override//
+                .overrideEvent(Duplicator.ID)
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+               // .bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(PurificationShrineEvil.ID, PurificationShrineEvil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> evilMode)
+                //Event ID to Override//
+                .overrideEvent(PurificationShrine.ID)
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(TransmogrifierEvil.ID, TransmogrifierEvil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> evilMode)
+                //Event ID to Override//
+                .overrideEvent(Transmogrifier.ID)
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(UpgradeShrineEvil.ID, UpgradeShrineEvil.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> evilMode)
+                //Event ID to Override//
+                .overrideEvent(UpgradeShrine.ID)
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                //.bonusCondition(() -> !(AbstractDungeon.player instanceof GuardianCharacter))
                 .create());
     }
 

@@ -11,10 +11,12 @@ import charbosses.powers.DefectCuriosityPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
+import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -98,20 +100,14 @@ public class CharBossDefect extends AbstractCharBoss {
     public void die() {
         super.die();
         downfallMod.saveBossFight(CharBossDefect.ID);
+
+        if (NeowBoss.neowboss != null) {
+            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (m instanceof BronzeOrbWhoReallyLikesDefectForSomeReason) {
+                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                }
+            }
+        }
     }
 
-    @Override
-    public void usePreBattleAction() {
-        super.usePreBattleAction();
-        if (chosenArchetype instanceof ArchetypeAct2ClawNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-450, 250, 0), true));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-600, 0, 1), true));
-        }
-        if (chosenArchetype instanceof ArchetypeAct3OrbsNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
-        }
-    }
 }

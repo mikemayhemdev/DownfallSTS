@@ -32,16 +32,12 @@ public class Devastate extends AbstractChampCard {
         this.magicNumber = this.baseMagicNumber;
         this.baseDamage = this.misc;
         tags.add(ChampMod.FINISHER);
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBODEFENSIVE);
-        tags.add(ChampMod.COMBOGLADIATOR);
-        tags.add(ChampMod.COMBODEFENSIVE);
+        exhaust = true;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       addToBot(new DevastateAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber, this.uuid));
-
+        addToBot(new DevastateAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber, this.uuid));
         finisher();
     }
 

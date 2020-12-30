@@ -1,4 +1,4 @@
-package theHexaghost.cards;
+package downfall.cards.curses;
 
 
 import basemod.abstracts.CustomCard;
@@ -12,14 +12,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cardmods.EtherealMod;
+import downfall.downfallMod;
 import theHexaghost.HexaMod;
 
 
 public class Haunted extends CustomCard {
-    public static final String ID = HexaMod.makeID("Haunted");
+    public static final String ID = downfallMod.makeID("Haunted");
     public static final String NAME;
     public static final String DESCRIPTION;
-    public static final String IMG_PATH = "haunted.png";
+    public static final String IMG_PATH = downfallMod.assetPath("images/cards/haunted.png");
     private static final CardType TYPE = CardType.CURSE;
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
@@ -37,11 +38,12 @@ public class Haunted extends CustomCard {
     }
 
     public Haunted() {
-        super(ID, NAME, HexaMod.makeCardPath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 1;
 
         this.isEthereal = true;
+        tags.add(downfallMod.DOWNFALL_CURSE);
 
     }
 

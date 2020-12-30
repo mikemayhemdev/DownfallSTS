@@ -17,13 +17,13 @@ public class ViciousMockery extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         baseMagicNumber = magicNumber = 1;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
-        tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+       // tags.add(ChampMod.COMBO);
+       // tags.add(ChampMod.COMBOGLADIATOR);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
-        if (gcombo()) {
+        {
             if (m.getIntentBaseDmg() > -1) applyToSelf(new DexterityPower(p, magicNumber));
         }
     }

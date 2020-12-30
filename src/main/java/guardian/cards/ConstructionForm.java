@@ -27,7 +27,7 @@ public class ConstructionForm extends AbstractGuardianCard {
     private static final int COST = 3;
 
     //TUNING CONSTANTS
-    private static final int TURNS = 3;
+    private static final int TURNS = 2;
     private static final int UPGRADE_TURNS = 1;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
@@ -57,7 +57,7 @@ public class ConstructionForm extends AbstractGuardianCard {
         super.use(p, m);
         AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BufferPower(p, this.magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructModePower(p, 2), 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructModePower(p, 1), 1));
 
     }
 

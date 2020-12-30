@@ -45,7 +45,7 @@ public class FlameTackle extends AbstractSlimeboundCard {
         tags.add(SlimeboundMod.TACKLE);
         this.baseDamage = 16;
         baseSelfDamage = this.selfDamage = 3;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

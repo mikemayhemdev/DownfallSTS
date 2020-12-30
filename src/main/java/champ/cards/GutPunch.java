@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.fatigue;
+
 public class GutPunch extends AbstractChampCard {
 
     public final static String ID = makeID("GutPunch");
@@ -19,12 +21,12 @@ public class GutPunch extends AbstractChampCard {
     private static final int UPG_MAGIC = 5;
 
     public GutPunch() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
-        myHpLossCost = 2;
-        this.tags.add(ChampMod.OPENERBERSERKER);
+        myHpLossCost = 0;
+        tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
     }
@@ -35,8 +37,8 @@ public class GutPunch extends AbstractChampCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
       //  fatigue(2);
         if (dcombo()) {
-            exhaust = true;
-            applyToSelf(new ResolvePower(magicNumber));
+           // exhaust = true;
+            fatigue(magicNumber);
         }
     }
 
@@ -46,6 +48,15 @@ public class GutPunch extends AbstractChampCard {
        // myHpLossCost++;
     }
 
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if (dcombo()){
+            myHpLossCost = magicNumber;
+        } else {
+            myHpLossCost = 0;
+        }
+    }
 
     @Override
     public void triggerOnGlowCheck() {

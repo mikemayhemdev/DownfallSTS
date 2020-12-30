@@ -12,14 +12,13 @@ public class ParanormalForm extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, RARE
 
-    private static final int MAGIC = 6;
-    private static final int UPG_MAGIC = 3;
+    private static final int MAGIC = 4;
+    private static final int UPG_MAGIC = 2;
 
     public ParanormalForm() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
-        tags.add(BaseModCardTags.FORM);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

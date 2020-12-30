@@ -37,21 +37,15 @@ public class TornadoPunch extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+        //if (upgraded) techique();
         atb(new SFXAction("ATTACK_WHIRLWIND"));
         atb(new VFXAction(new WhirlwindEffect(), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (dcombo()) atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                for (AbstractMonster q : monsterList()) {
-                    att(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
-                    att(new GainBlockAction(p, block));
-
-                }
+        if (dcombo())
+            for (AbstractMonster q : monsterList()) {
+                att(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+                att(new GainBlockAction(p, block));
             }
-        });
     }
 
     @Override
@@ -60,12 +54,9 @@ public class TornadoPunch extends AbstractChampCard {
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
-        upgradeDamage(2);
+        //  tags.add(ChampMod.TECHNIQUE);
+        upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);
-        upgradeMagicNumber(UPG_DAMAGE);
         upgradeBlock(UPG_BLOCK);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

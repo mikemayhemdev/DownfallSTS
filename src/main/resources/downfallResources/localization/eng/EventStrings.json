@@ -367,11 +367,14 @@
   "downfall:Vagrant": {
     "NAME": "Pleading Vagrant",
     "DESCRIPTIONS": [
-      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
+      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites.",
+      "You snatch the precious #yrelic from his clutches and walk away. NL From behind you hear, NL \"Have you no shame? ~HAVE~ ~YOU~ ~NO~ ~SHAAAAAME?!\"~ NL You have #pabsolutely #pno #pshame. It is an honor to be robbed by an Overlord of the Spire!"
+
     ],
     "OPTIONS": [
       "[Punch] #gGain #g85 #gSouls. #rLose #r",
-      " #rHP."
+      " #rHP.",
+      "[Rob] #gObtain #ga #gRelic. #rBecome #rCursed #r- #rShame."
     ]
   },
   "downfall:Beggar": {
@@ -592,6 +595,17 @@
       "[Give] #b???",
       "[Sleep]",
       "[Approach Door]"
+    ]
+  },
+  "downfall:EvilShrines": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
+    "OPTIONS": [
+      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gRemove #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gTransform #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rRandom."
     ]
   }
 }

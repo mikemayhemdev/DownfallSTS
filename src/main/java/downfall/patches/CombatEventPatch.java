@@ -20,6 +20,7 @@ public class CombatEventPatch {
                     if (i.getType().getName().equals(Mushrooms.class.getName())) {
                         i.replace("$_ = $proceed($$) || " +
                                 "currentRoom.event instanceof downfall.events.WomanInBlue_Evil || " +
+                             //   "currentRoom.event instanceof guardian.events.GemMine || " +
                                 "currentRoom.event instanceof downfall.events.GremlinMatchGame_Evil || " +
                                 "currentRoom.event instanceof downfall.events.GremlinWheelGame_Evil || " +
                                 "currentRoom.event instanceof downfall.events.LivingWall_Evil || " +

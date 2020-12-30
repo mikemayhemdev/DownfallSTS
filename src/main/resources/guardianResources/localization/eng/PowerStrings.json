@@ -64,9 +64,8 @@
   "Guardian:ConstructModePower": {
     "NAME": "Construction Mode",
     "DESCRIPTIONS": [
-      "You will not be able to play #yAttacks next turn.",
-      "You will not be able to play #yAttacks next  #b",
-      " turns."
+      "At the start of each turn, if you have Buffer, gain #b",
+      " Strength."
     ]
   },
   "Guardian:MultiBoostPower": {

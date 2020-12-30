@@ -84,6 +84,10 @@ public abstract class AbstractBossDeckArchetype {
     public boolean upgradeAllAttacks = false;
     */
 
+    public void addedPreBattle(){
+        initializeBossPanel();
+    }
+
     public abstract void initializeBonusRelic();
 
     public boolean looped = false;

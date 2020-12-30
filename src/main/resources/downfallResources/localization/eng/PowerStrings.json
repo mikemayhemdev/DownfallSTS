@@ -87,7 +87,7 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Faith Eater",
     "DESCRIPTIONS": [
-      "Whenever you play a card, gains #b1 Mantra. Loses 6 Mantra per turn. NL Watcher's Divinity Stance is permanent."
+      "Whenever you play a card, gains #b1 Mantra. Loses 5 Mantra per turn. NL Watcher's Divinity Stance is permanent."
     ]
   }
 }

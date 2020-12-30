@@ -1,5 +1,6 @@
 package charbosses.bosses.Watcher.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
@@ -10,8 +11,11 @@ import charbosses.cards.curses.EnNormality;
 import charbosses.cards.curses.EnRegret;
 import charbosses.cards.curses.EnShame;
 import charbosses.cards.purple.*;
+import charbosses.powers.WatcherDivinityPower;
 import charbosses.relics.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -26,8 +30,16 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
         bossMechanicName = bossMechanicString.DIALOG[22];
         bossMechanicDesc = bossMechanicString.DIALOG[23];
 
-        maxHPModifier += 400;
+        maxHPModifier += 398;
         actNum = 3;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherDivinityPower(p)));
+
     }
 
     public void initialize() {

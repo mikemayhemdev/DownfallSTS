@@ -7,9 +7,9 @@
     ]
   },
   "champ:ResolvePower": {
-    "NAME": "Resolve",
+    "NAME": "Fatigue",
     "DESCRIPTIONS": [
-      "You have #b1 #yStrength for every #b5 Resolve you have. At the end of combat, heal HP equal to your Resolve."
+      "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, restore your Fatigued HP."
     ]
   },
   "champ:FocusedGladPower": {
@@ -30,8 +30,8 @@
   "champ:FocusedBerPower": {
     "NAME": "Berserker Boost!",
     "DESCRIPTIONS": [
-      "Until you exit #yBerserker, #yTechniques grant #b",
-      " additional #yResolve."
+      "Until you exit #yBerserker, #yTechniques #yFatigue #b",
+      " more."
     ]
   },
   "champ:EnchantedShieldPower": {
@@ -77,7 +77,7 @@
     "NAME": "Endless Rage",
     "DESCRIPTIONS": [
       "Whenever you lose HP on your turn, gain #b",
-      " #yResolve."
+      " temporary #yStrength."
     ]
   },
   "champ:ImprovisingPower": {
@@ -109,9 +109,9 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Strike of Genius",
     "DESCRIPTIONS": [
-      "At the start of your turn, add a random card that Enters a Stance to your hand. It costs #b0 until played.",
+      "At the start of your turn, add a random card that Enters a Stance to your hand. It costs #b0 until played and Exhausts.",
       "At the start of your turn, add #b",
-      " random cards that Enter a Stance to your hand. They cost #b0 until played."
+      " random cards that Enter a Stance to your hand. They cost #b0 until played and Exhausts."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {

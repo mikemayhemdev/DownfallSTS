@@ -51,7 +51,7 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && !card.exhaust) {
+        if (!card.exhaust && !card.purgeOnUse) {
             boolean returnCard = false;
             if (card.hasTag(ChampMod.COMBO) && timesUsed < amount) {
                 if (card.hasTag(ChampMod.COMBOBERSERKER)) {

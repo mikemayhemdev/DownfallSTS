@@ -14,8 +14,8 @@ public class Explode extends AbstractBronzeCard {
     public final static String ID = makeID("Explode");
 
     public Explode() {
-        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
-        baseMagicNumber = magicNumber = 20;
+        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
+        baseMagicNumber = magicNumber = 15;
         thisEncodes();
     }
 
@@ -37,6 +37,6 @@ public class Explode extends AbstractBronzeCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(10);
+        upgradeMagicNumber(5);
     }
 }

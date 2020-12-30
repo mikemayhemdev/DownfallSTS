@@ -12,7 +12,7 @@ public class EndlessRage extends AbstractChampCard {
     //stupid intellij stuff power, self, uncommon
 
     public EndlessRage() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
 
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
@@ -22,8 +22,6 @@ public class EndlessRage extends AbstractChampCard {
     }
 
     public void upp() {
-        isInnate = true;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeBaseCost(1);
     }
 }

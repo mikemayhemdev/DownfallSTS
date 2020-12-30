@@ -31,7 +31,7 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -55,7 +55,7 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, CardColor.COLORLESS, RARITY, TARGET);
 
         this.exhaust = true;
-        this.baseMagicNumber = this.magicNumber = 2;
+        this.baseMagicNumber = this.magicNumber = 1;
         this.selfRetain = true;
 
     }
@@ -79,7 +79,7 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
         this.addToBot(new CommandAction());
         */
 
-        int slimecount = 0;
+        int slimecount = magicNumber;
 
         for (AbstractOrb o : p.orbs) {
 
@@ -89,7 +89,7 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
 
         }
 
-        slimecount *= this.magicNumber;
+        //slimecount *= this.magicNumber;
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, slimecount), slimecount));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, slimecount), slimecount));
@@ -109,7 +109,7 @@ public class DivideAndConquerDivide extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
 
         }
 

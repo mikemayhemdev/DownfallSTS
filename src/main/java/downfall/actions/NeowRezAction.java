@@ -92,7 +92,7 @@ public class NeowRezAction extends AbstractGameAction {
             cB.tint.changeColor(Color.WHITE.cpy(), 2F);
             AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.CYAN, true));
             AbstractDungeon.effectsQueue.add(new IntenseZoomEffect(cB.hb.cX, cB.hb.cY, false));
-            rezVFX = new NeowBossRezEffect(cB.hb.cX, cB.hb.cY);
+            rezVFX = new NeowBossRezEffect(cB.hb.cX - 100F, cB.hb.cY);
             AbstractDungeon.effectsQueue.add(rezVFX);
 
             AbstractDungeon.getCurrRoom().monsters.add(cB);
@@ -118,7 +118,8 @@ public class NeowRezAction extends AbstractGameAction {
             cB.showHealthBar();
 
             rezVFX.end();
-            cB.usePreBattleAction();
+            cB.chosenArchetype.addedPreBattle();
+           // cB.usePreBattleAction();
             this.isDone = true;
         }
     }

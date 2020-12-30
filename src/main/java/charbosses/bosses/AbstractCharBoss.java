@@ -201,34 +201,36 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
             new CBR_LizardTail().instantObtain(this);
-            new CBR_MagicFlower().instantObtain(this);
+           // new CBR_MagicFlower().instantObtain(this);
         }
         if (NeowBoss.neowboss != null){
             switch (chosenArchetype.actNum){
                 case 1:{
-                    chosenArchetype.maxHPModifier = 250;
+                    chosenArchetype.maxHPModifier += 300;
                     break;
 
                 }
                 case 2:{
-                    chosenArchetype.maxHPModifier = 150;
+                    chosenArchetype.maxHPModifier += 150;
                     break;
 
                 }
                 case 3:{
-                    chosenArchetype.maxHPModifier = 0;
+                    chosenArchetype.maxHPModifier += 0;
                     break;
                 }
 
             }
         }
         maxHealth += chosenArchetype.maxHPModifier;
+        if (AbstractDungeon.ascensionLevel >= 9){
+            maxHealth = Math.round(maxHealth * 1.2F);
+        }
         currentHealth = maxHealth;
         updateHealthBar();
     }
 
     public void usePreBattleAction() {
-        chosenArchetype.initializeBossPanel();
         this.energy.recharge();
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStartPreDraw();
@@ -246,18 +248,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         } else {
             playMusic();
         }
-        if (chosenArchetype instanceof ArchetypeAct2CalmNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
-        }
-        if (chosenArchetype instanceof ArchetypeAct1ShivsNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ShivTimeEaterPower(p)));
-        }
-        if (chosenArchetype instanceof ArchetypeAct1RetainNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherAngryPower(p)));
-        }
+
+        chosenArchetype.addedPreBattle();
     }
 
     public void playMusic() {

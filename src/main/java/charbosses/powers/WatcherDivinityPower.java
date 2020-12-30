@@ -41,7 +41,7 @@ public class WatcherDivinityPower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 6));
+        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 5));
     }
 
     public void updateDescription() {

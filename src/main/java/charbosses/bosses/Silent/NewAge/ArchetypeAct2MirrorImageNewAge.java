@@ -1,6 +1,8 @@
 package charbosses.bosses.Silent.NewAge;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
+import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnJAX;
 import charbosses.cards.colorless.EnShiv;
@@ -10,6 +12,7 @@ import charbosses.cards.green.*;
 import charbosses.cards.purple.EnFlyingSleeves;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
@@ -23,6 +26,13 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
         maxHPModifier += 220;
         actNum = 2;
+    }
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+        CharBossSilent p = (CharBossSilent) AbstractCharBoss.boss;
+        p.spawnImage(false);
     }
 
     public void initialize() {

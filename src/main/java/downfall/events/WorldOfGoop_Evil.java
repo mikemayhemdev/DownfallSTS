@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import slimebound.cards.Icky;
+import downfall.cards.curses.Icky;
 
 public class WorldOfGoop_Evil extends AbstractImageEvent {
     public static final String ID = downfallMod.makeID("WorldOfGoop");

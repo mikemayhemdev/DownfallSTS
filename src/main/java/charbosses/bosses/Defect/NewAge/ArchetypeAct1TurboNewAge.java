@@ -27,7 +27,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_NeowsBlessing());
 
         //data disk
-        addRelic(new CBR_HandDrill());
+        addRelic(new CBR_FossilizedHelix());
         addRelic(new CBR_ClockworkSouvenir());
         //addRelic(new CBR_LetterOpener());
       //  addRelic(new CBR_Abacus());

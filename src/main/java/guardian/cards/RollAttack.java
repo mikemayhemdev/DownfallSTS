@@ -27,7 +27,7 @@ public class RollAttack extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 16;
 
     //TUNING CONSTANTS
     private static final int UPGRADE_DAMAGE = 4;

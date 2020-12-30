@@ -73,7 +73,7 @@ public class HungryTackle extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(3);
+            upgradeDamage(4);
 
             // this.rawDescription = UPGRADED_DESCRIPTION;
             //this.initializeDescription();

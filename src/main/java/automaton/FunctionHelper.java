@@ -201,7 +201,7 @@ public class FunctionHelper {
                 ((AfterOutputFunctionPower) p).receiveAfterOutputFunction(); // Class Default
             }
         }
-        functionsCompiledThisCombat ++;
+        functionsCompiledThisCombat++;
     }
 
     public static void render(SpriteBatch sb) {

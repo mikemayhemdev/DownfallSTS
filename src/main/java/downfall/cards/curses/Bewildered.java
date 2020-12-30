@@ -1,4 +1,4 @@
-package sneckomod.cards;
+package downfall.cards.curses;
 
 
 import basemod.abstracts.CustomCard;
@@ -9,14 +9,17 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleHandAction;
+import sneckomod.cards.AbstractSneckoCard;
 
 
 public class Bewildered extends CustomCard {
-    public static final String ID = AbstractSneckoCard.makeID("Bewildered");
+    public static final String ID = downfallMod.makeID("Bewildered");
     public static final String NAME;
     public static final String DESCRIPTION;
+    public static final String IMG_PATH = downfallMod.assetPath("images/cards/bewildered.png");
     private static final CardType TYPE = CardType.CURSE;
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
@@ -34,10 +37,11 @@ public class Bewildered extends CustomCard {
     private boolean activateThisTurn = false;
 
     public Bewildered() {
-        super(ID, NAME, SneckoMod.makeCardPath("bewildered.png"), COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
+        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
         this.magicNumber = this.baseMagicNumber = 1;
         this.exhaust = true;
+        tags.add(downfallMod.DOWNFALL_CURSE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

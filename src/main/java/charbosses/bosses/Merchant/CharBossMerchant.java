@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,6 +19,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
@@ -92,6 +95,11 @@ public class CharBossMerchant extends AbstractCharBoss {
         }
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.CYAN, true), 2F));
+
+        if (FleeingMerchant.CURRENT_STRENGTH > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
+        }
 
         super.usePreBattleAction();
         this.tint.color = new Color(.5F, .5F, 1F, 0F);

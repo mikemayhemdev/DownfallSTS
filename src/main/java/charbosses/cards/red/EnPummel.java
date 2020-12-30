@@ -33,8 +33,10 @@ public class EnPummel extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 1; i < this.magicNumber; ++i) {
-            this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));        }
+        for (int i = 0; i < this.magicNumber; ++i) {
+            this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        }
+    
 
 
     }

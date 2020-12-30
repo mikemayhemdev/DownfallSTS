@@ -11,7 +11,6 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -34,6 +33,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import downfall.cards.curses.Aged;
 import downfall.downfallMod;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
@@ -706,7 +706,6 @@ public static void saveData() {
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
 
-        BaseMod.addCard(new Aged());
 
         //CONSTRUCT cross-mod
         /*

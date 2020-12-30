@@ -92,9 +92,9 @@
     ]
   },
   "bronze:Verify": {
-    "NAME": "Verify",
+    "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "After you play a Function, increase all numbers on it by #b",
+      "After you play or #yCompile a Function, increase all numbers on it by #b",
       "."
     ]
   },
@@ -109,9 +109,9 @@
   "bronze:CleanCode": {
     "NAME": "Clean Code",
     "DESCRIPTIONS": [
-      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b1 more Function.",
+      "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b1 more Compiles.",
       "Remove all negative #yCompile effects from cards in the Sequence. Lasts #b",
-      " Functions."
+      " Compiles."
     ]
   },
   "bronze:CopyPaste": {

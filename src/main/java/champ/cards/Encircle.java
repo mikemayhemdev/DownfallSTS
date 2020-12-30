@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.fatigue;
+
 public class Encircle extends AbstractChampCard {
 
     public final static String ID = makeID("Encircle");
@@ -20,7 +22,7 @@ public class Encircle extends AbstractChampCard {
     private static final int MAGIC = 2;
 
     public Encircle() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         myHpLossCost = 2;
@@ -30,7 +32,7 @@ public class Encircle extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+       // if (upgraded) techique();
 
         for (int i = 0; i < magicNumber; i++) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -56,7 +58,8 @@ public class Encircle extends AbstractChampCard {
 
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
+        upgradeDamage(2);
         initializeDescription();
     }
 }

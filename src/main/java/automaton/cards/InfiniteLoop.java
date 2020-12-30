@@ -34,7 +34,7 @@ public class InfiniteLoop extends AbstractBronzeCard {
 
     @Override
     public String getSpecialCompileText() {
-        return "Add a copy of #yInfinite #yLoop to your hand with #b" + magicNumber + " more damage.";  //TODO - Hardcoded string!
+        return " - Add a copy of #yInfinite #yLoop to your hand with #b" + magicNumber + " more damage.";  //TODO - Hardcoded string!
     }
 
     @Override

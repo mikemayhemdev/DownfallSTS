@@ -15,7 +15,11 @@ public class ArchetypeBaseIronclad extends AbstractBossDeckArchetype {
     public void initialize() {
 
     }
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
 
+    }
     @Override
     public void initializeBonusRelic() {
 

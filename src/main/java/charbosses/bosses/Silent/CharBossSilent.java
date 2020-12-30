@@ -23,6 +23,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -186,6 +187,14 @@ public class CharBossSilent extends AbstractCharBoss {
         }
 
         downfallMod.saveBossFight(CharBossSilent.ID);
+
+        if (NeowBoss.neowboss != null){
+            for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
+                if (m instanceof MirrorImageSilent){
+                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                }
+            }
+        }
     }
 
     public static void swapCreature(AbstractCreature p, AbstractCreature m) {
@@ -257,18 +266,6 @@ public class CharBossSilent extends AbstractCharBoss {
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
 
-    }
-
-    @Override
-    public void usePreBattleAction() {
-        if (chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge) {
-            spawnImage(false);
-        }
-        if (chosenArchetype instanceof ArchetypeAct3PoisonNewAge) {
-            AbstractCreature p = AbstractDungeon.player;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PoisonProtectionPower(p)));
-        }
-        super.usePreBattleAction();
     }
 
 }

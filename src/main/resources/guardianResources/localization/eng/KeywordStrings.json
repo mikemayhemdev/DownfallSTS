@@ -29,7 +29,7 @@
       "defensive mode",
       "defensive_mode"
     ],
-    "DESCRIPTION": "While in #yDefensive #yMode, you have #b3 #yThorns and gain #b2 #yBlock when you play a card. Exit this #yStance at the start of your next turn."
+    "DESCRIPTION": "While in #yDefensive #yMode, you have #b3 #yThorns and gain #b1 #yBlock when you play a card. Exit this #yStance at the start of your next turn."
   },
   {
     "NAMES": [
@@ -59,5 +59,12 @@
     ],
     "PROPER_NAME": "Tick",
     "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yStasis."
+  },
+  {
+    "NAMES": [
+      "buffer"
+    ],
+    "PROPER_NAME": "Buffer",
+    "DESCRIPTION": "Prevent the next time you would lose HP."
   }
 ]

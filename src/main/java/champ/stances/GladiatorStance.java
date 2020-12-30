@@ -1,6 +1,7 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.powers.FocusedGladPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -28,6 +29,12 @@ public class GladiatorStance extends AbstractChampStance {
     @Override
     public String getKeywordString() {
         return "champ:gladiator";
+    }
+
+    @Override
+    public void onEnterStance() {
+        super.onEnterStance();
+        ChampMod.enteredGladiatorThisTurn = true;
     }
 
     @Override

@@ -20,7 +20,6 @@
   "champ:StanceDance": {
     "NAME": "Stance Dance",
     "DESCRIPTION": "Choose a Stance to Enter.",
-    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Choose a Stance to Enter.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive.",
@@ -33,8 +32,8 @@
     "UPGRADE_DESCRIPTION": "Enter champ:Gladiator. NL Draw 2 cards."
   },
   "champ:SwordSigil": {
-    "NAME": "Sword Sigil",
-    "DESCRIPTION": "*Gladiator champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "Sigil of Victory",
+    "DESCRIPTION": "Repeat this effect !M! times. NL Exhaust."
   },
   "champ:FocusedGladiator": {
     "NAME": "Focus: Gladiator",
@@ -64,8 +63,8 @@
     "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter."
   },
   "champ:ShieldSigil": {
-    "NAME": "Shield Sigil",
-    "DESCRIPTION": "*Defensive champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "Chain Lash",
+    "DESCRIPTION": "Repeat this effect !M! times."
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
@@ -73,16 +72,16 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "Enter champ:Berserker. NL Until you exit champ:Berserker Stance, champ:Techniques grant 2 champ:Resolve."
+    "DESCRIPTION": "Enter champ:Berserker. NL Until you exit champ:Berserker Stance, champ:Techniques champ:Fatigue 2 more."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Enter champ:Defensive. NL *Gladiator champ:Combo: Discard all Attacks in hand and gain !M! champ:Counter for each.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL *Gladiator champ:Combo: NL Discard all Attacks in hand and gain !M! champ:Counter for each."
+    "DESCRIPTION": "Enter champ:Defensive. NL *Gladiator champ:Combo: Gain !M! champ:Counter for each Attack in your hand.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL *Gladiator champ:Combo: Gain !M! champ:Counter for each Attack in your hand."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to twice your champ:Resolve.",
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block. NL *Berserker champ:Combo: Gain Block equal to twice your champ:Fatigue.",
     "EXTENDED_DESCRIPTION": [" NL (Grants !B! Block.)"]
   },
   "champ:Aggression": {
@@ -101,12 +100,13 @@
     "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!."
   },
   "champ:RageSigil": {
-    "NAME": "Rage Sigil",
-    "DESCRIPTION": "*Berserker champ:Combo: Repeat !M! times, then Exhaust."
+    "NAME": "Battle Plan",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL *Defensive champ:Combo: Gain !M! champ:Resolve and Exhaust."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL *Defensive champ:Combo: champ:Fatigue !M!."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
@@ -115,7 +115,7 @@
   },
   "champ:Devastate": {
     "NAME": "Devastate",
-    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo: Increase the damage this card deals by !M! permanently, then Exhaust it."
+    "DESCRIPTION": "Deal !D! damage. NL Increase the damage this card deals by !M! permanently. NL Exhaust."
   },
   "champ:Control": {
     "NAME": "Control",
@@ -144,8 +144,8 @@
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
-    "DESCRIPTION": "*Defensive champ:Combo: Double your champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL *Defensive champ:Combo: Double your champ:Counter."
+    "DESCRIPTION": "Double your champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Double your champ:Counter."
   },
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
@@ -153,8 +153,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Gain 2 Dexterity. NL Unless *Defensive champ:Combo: Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Dexterity. NL Unless *Defensive champ:Combo: Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. "
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
@@ -193,7 +192,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "*Gladiator champ:Combo: If the enemy intends to attack, gain !M! Dexterity."
+    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity."
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
@@ -216,12 +215,15 @@
   },
   "champ:EnchantSword": {
     "NAME": "Enchant Sword",
-    "DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength. NL Unless champ:Berserker champ:Combo: Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Increase its damage by !M! for this combat. Exhaust."
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: Deal !D! damage !M! more times."
+    "DESCRIPTION": "Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: Hits !M! more times.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Hits ",
+      " times.)"
+    ]
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
@@ -237,7 +239,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Cheap Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Any Stance champ:Combo: Stun the enemy, then Exhaust this."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy is not a Boss, stun it. If not, deal damage two more times. NL Exhaust."
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
@@ -263,7 +265,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal damage equal to your champ:Resolve. NL Exhaust.",
+    "DESCRIPTION": "Deal damage equal to your champ:Fatigue. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]
@@ -279,7 +281,7 @@
   },
   "champ:FightOn": {
     "NAME": "Fight On",
-    "DESCRIPTION": "Fleeting. NL Can't be Upgraded. NL Can only be played if you have at least 30 champ:Resolve. NL Gain 5 Max HP."
+    "DESCRIPTION": "Fleeting. NL Can only be played if you have at least 30 champ:Fatigue. NL Gain 5 Max HP."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -300,10 +302,7 @@
   },
   "champ:DeathBlow": {
     "NAME": "Death Blow",
-    "DESCRIPTION": "champ:Fatigue !M!. NL Deal damage to ALL enemies equal to the half the amount of HP lost.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)"
-    ]
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL champ:Fatigue !M!."
   },
   "champ:ArenaPreparation": {
     "NAME": "Arena Preparation",
@@ -311,13 +310,19 @@
   },
   "champ:EndlessRage": {
     "NAME": "Endless Rage",
-    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 champ:Resolve.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you lose HP on your turn, gain 1 champ:Resolve."
+    "DESCRIPTION": "Whenever you lose HP on your turn, gain 1 temporary Strength."
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times. NL *Gladiator champ:Combo: Draw X cards and gain X [E] .",
-    "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times. NL *Gladiator champ:Combo: Draw X+1 cards and gain X [E] ."
+    "DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage. NL *Defensive: Gain !B! Block. NL *Gladiator: Draw a card and gain [E] .",
+    "UPGRADE_DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage. NL *Defensive: Gain !B! Block. NL *Gladiator: Draw 2 cards and gain [E] .",
+    "EXTENDED_DESCRIPTION": [
+      "Berserker: Deal !D! damage. NL ",
+      "Defensive: Gain !B! Block. NL ",
+      "Gladiator: Draw a card and gain [E] .",
+      "Gladiator: Draw 2 cards and gain [E] .",
+      "champ:Combo NL "
+    ]
   },
   "champ:Improvising": {
     "NAME": "Improvising",
@@ -348,8 +353,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, add a random card that Enters a Stance to your hand. NL It costs 0 until played.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded card that Enters a Stance to your hand. NL It costs 0 until played."
+    "DESCRIPTION": "At the start of your turn, add a random card that Enters a Stance to your hand. NL It costs 0 until played and gains Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded card that Enters a Stance to your hand. NL It costs 0 until played and gains Exhaust."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
@@ -368,8 +373,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",
-    "DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] at the start of your next 3 turns. NL Unless champ:Gladiator champ:Combo: Exhaust."
+    "DESCRIPTION": "Choose a card in hand. It costs 0 this combat. NL Exhaust."
   },
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",

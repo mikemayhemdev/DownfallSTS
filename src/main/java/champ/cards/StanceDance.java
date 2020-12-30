@@ -23,7 +23,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) atb(new DrawCardAction(1));
+        if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
     }
 
@@ -50,7 +50,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     }
 
     public void upp() {
-        rawDescription = UPGRADE_DESCRIPTION;
+        tags.add(ChampMod.TECHNIQUE);
         initializeDescription();
     }
 }

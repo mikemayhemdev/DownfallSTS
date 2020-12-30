@@ -2,19 +2,19 @@
   "Guardian:GemMine": {
     "NAME": "Gem Mine",
     "DESCRIPTIONS": [
-      "You step inside an old mine shaft.  In the rocky crevices, you can see a number of shiny gemstones.  #gEmeralds, #rrubies, #ytopazes, and several others.  Looking around, you can’t seem to locate any mining picks, but the gems are so close to the surface that, with some determination, you might be able to pry them from the stone.",
+      "You step inside an old mine shaft.  In the rocky crevices, you can see a number of shiny gemstones.  #gEmeralds, #rrubies, #ytopazes, and several others.  A pack of Gremlin diggers nearby have mining tools that may be of use, but the gems are so close to the surface that, with some determination, you might be able to pry them by hand.",
       "Digging into the rocky wall, you manage to pluck a gem from it’s resting spot.  It hurt a little, but there is no glory without sacrifice",
       "Though the prospect of treasure is appealing, you opt to save your armor for more important ventures.",
       "Having successfully won over the old mine, you leave with a sense of accomplishment.  And some sore bronze appendages.",
-      "You snatch up the mining pick, which seems to be in poor condition. You could use it here to gain some gems, or stash it away to use later in your climb.",
+      "You snatch up the mining pick from the Gremlin camp, which seems to be in poor condition. You could use it here to gain some gems, or stash it away to use later in your climb.",
       "Using the mining pick, you hammer away at the wall and carve out a gem. The pick takes some wear and tear in the process, but better to damage it than your claws."
     ],
     "OPTIONS": [
-      "[Mine] #gGain #grandom #gGem. #rLose #r",
+      "[Dig with Claws] #gGain #grandom #gGem. #rLose #r",
       " #rHP.",
       "[Leave]",
-      "[Loot] #gGain #gRhapsody #gCo. #gMining #gPick.",
-      "[Mine] #gGain #grandom #gGem. #rLose #rPick #rcharge.",
+      "[Rob] #rFight #rGremlins. #gGain #gPick #gof #gRhapsody.",
+      "[Mine with Pick] #gGain #grandom #gGem. #rLose #rPick #rcharge.",
       "[Locked] Pick #rBroken."
     ]
   },

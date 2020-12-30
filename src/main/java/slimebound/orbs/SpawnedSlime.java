@@ -282,10 +282,8 @@ public abstract class SpawnedSlime
         super.applyFocus();
         AbstractPower power = AbstractDungeon.player.getPower(PotencyPower.POWER_ID);
         int bonus = 0;
-        if ((this instanceof ShieldSlime || this instanceof ProtectorSlime || this instanceof BronzeSlime || this instanceof SlimingSlime) && AbstractDungeon.player.hasPower(BuffSecondarySlimeEffectsPower.POWER_ID))
-            this.debuffBonusAmount += AbstractDungeon.player.getPower(BuffSecondarySlimeEffectsPower.POWER_ID).amount;
-        if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(PotencyPower.POWER_ID))
-            bonus = AbstractDungeon.player.getPower(PotencyPower.POWER_ID).amount;
+        if (this instanceof TorchHeadSlime && AbstractDungeon.player.hasPower(StrengthPower.POWER_ID))
+            bonus = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
 
 
         if (power != null) {
@@ -307,12 +305,6 @@ public abstract class SpawnedSlime
         //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
     }
 
-    public void applySecondaryBonus(int StrAmount) {
-
-        this.debuffBonusAmount += StrAmount;
-        updateDescription();
-        //AbstractDungeon.effectsQueue.add(new FireBurstParticleEffect(this.cX, this.cY));
-    }
 
 
     public void onEvoke() {

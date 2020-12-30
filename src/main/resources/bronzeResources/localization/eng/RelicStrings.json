@@ -31,7 +31,7 @@
     "NAME": "Mallet",
     "FLAVOR": "That's it! I'm gettin me mallet!",
     "DESCRIPTIONS": [
-      "Every time you play #b3 Functions in a single turn, gain #b1 #yStrength and #b1 #yDexterity."
+      "At the start of combat, add 2 copies of Fine Tuning+ to your hand."
     ]
   },
   "bronze:SilverBullet": {

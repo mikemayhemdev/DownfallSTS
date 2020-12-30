@@ -45,7 +45,7 @@ public class TechPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 3;
+        return 5;
     }
 }
 

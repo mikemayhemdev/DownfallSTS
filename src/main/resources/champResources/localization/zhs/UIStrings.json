@@ -25,5 +25,12 @@
     "TEXT": [
       "保留 。 NL "
     ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "Choose a card to cost 0.",
+      "Choose a card to increase damage.",
+      "Choose a card to increase Block."
+    ]
   }
 }

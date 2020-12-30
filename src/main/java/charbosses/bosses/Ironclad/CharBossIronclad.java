@@ -10,14 +10,14 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.anticards.ShieldSmash;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
-import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
-import charbosses.monsters.Fortification;
+import charbosses.monsters.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
@@ -160,22 +161,19 @@ public class CharBossIronclad extends AbstractCharBoss {
         }
 
         downfallMod.saveBossFight(CharBossIronclad.ID);
-    }
 
-
-    @Override
-    public void usePreBattleAction() {
-        super.usePreBattleAction();
-        if (chosenArchetype instanceof ArchetypeAct3BlockNewAge) {
-            AbstractCreature p = AbstractCharBoss.boss;
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
-            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new Fortification(), true));
+        if (NeowBoss.neowboss != null){
+            for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
+                if (m instanceof Fortification || m instanceof MushroomPurple || m instanceof MushroomRed || m instanceof MushroomWhite){
+                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                }
+            }
         }
     }
 
     @Override
     public void render(SpriteBatch sb) {
-        if (chosenArchetype instanceof ArchetypeAct2MushroomsNewAge) {
+        if (chosenArchetype instanceof ArchetypeAct2MushroomsNewAge && NeowBoss.neowboss == null) {
             sb.setColor(Color.WHITE.cpy());
             sb.draw(this.bgImg, 0.0F, -10.0F, (float) Settings.WIDTH, 1080.0F * Settings.scale);
             sb.draw(this.fgImg, 0.0F, -20.0F * Settings.scale, (float) Settings.WIDTH, 1080.0F * Settings.scale);
