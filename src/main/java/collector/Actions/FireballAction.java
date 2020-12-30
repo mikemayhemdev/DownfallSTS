@@ -13,9 +13,10 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 public class FireballAction extends AbstractGameAction {
     private int increaseAmount;
     private DamageInfo info;
-
-    public FireballAction(AbstractCreature target, DamageInfo info) {
+    int aoedmg;
+    public FireballAction(AbstractCreature target, DamageInfo info, int damage2) {
         this.info = info;
+        aoedmg = damage2;
         this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;
         this.duration = 0.1F;
@@ -23,13 +24,13 @@ public class FireballAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == 0.1F && this.target != null) {
-            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.SLASH_HORIZONTAL));
+            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.BLUNT_HEAVY));
             this.target.damage(this.info);
             if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion")) {
                 addToBot(new VFXAction(new FireBurstParticleEffect(target.drawX,target.drawY)));
                 for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters){
                     if (!m.isDying){
-                        addToBot(new DamageAction(m,info,AttackEffect.FIRE));
+                        addToBot(new DamageAction(m,new DamageInfo(AbstractDungeon.player,aoedmg),AttackEffect.FIRE));
                     }
                 }
             }

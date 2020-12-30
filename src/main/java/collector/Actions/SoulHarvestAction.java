@@ -18,7 +18,6 @@ public class SoulHarvestAction extends AbstractGameAction {
     public int threshold;
     public SoulHarvestAction(AbstractCreature target, int[] amount, int threshold) {
         this.damage = amount;
-        this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;
         this.threshold = threshold;
         this.duration = 0.1F;

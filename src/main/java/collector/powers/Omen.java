@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 
 public class Omen extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = CollectorMod.makeID("collector:Omen");
+    public static final String POWER_ID = CollectorMod.makeID("Omen");
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;

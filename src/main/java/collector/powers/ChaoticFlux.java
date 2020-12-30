@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class ChaoticFlux extends AbstractPower {
-    public static final String POWER_ID = CollectorMod.makeID("collector:ChaoticFlux");
+    public static final String POWER_ID = CollectorMod.makeID("ChaoticFlux");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

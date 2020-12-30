@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class SoulSnare extends AbstractPower implements CloneablePowerInterface, BetterOnApplyPowerPower {
 
-    public static final String POWER_ID = CollectorMod.makeID("collector:SoulSnare");
+    public static final String POWER_ID = CollectorMod.makeID("SoulSnare");
 
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;

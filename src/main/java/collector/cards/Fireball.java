@@ -21,7 +21,7 @@ public class Fireball extends AbstractCollectorCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new VFXAction(new FireballEffect(p.drawX,p.drawY,m.drawX,m.drawY)));
-        atb(new FireballAction(m,new DamageInfo(p,damage, DamageInfo.DamageType.NORMAL)));
+        atb(new FireballAction(m,new DamageInfo(p,CollectorSecondDamage, DamageInfo.DamageType.NORMAL),damage));
     }
 
     @Override

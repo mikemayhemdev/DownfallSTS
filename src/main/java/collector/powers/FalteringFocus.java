@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class FalteringFocus extends AbstractPower {
-    public static final String POWER_ID = CollectorMod.makeID("collector:FalteringFocus");
+    public static final String POWER_ID = CollectorMod.makeID("FalteringFocus");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
