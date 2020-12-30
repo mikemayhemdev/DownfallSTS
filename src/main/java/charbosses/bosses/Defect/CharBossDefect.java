@@ -95,7 +95,6 @@ public class CharBossDefect extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        archetype.addedPreBattle();
         chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            archetype.initializeBonusRelic();

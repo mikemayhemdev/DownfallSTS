@@ -117,7 +117,6 @@ public class CharBossSilent extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        archetype.addedPreBattle();
         currentHealth = maxHealth;
         chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {

@@ -15,6 +15,7 @@ public class ArchetypeBaseDefect extends AbstractBossDeckArchetype {
     }
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
 
     }
     public void initializeBonusRelic() {

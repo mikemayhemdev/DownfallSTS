@@ -34,6 +34,7 @@ public class ArchetypeAct3BlockNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new Fortification(), true));

@@ -15,6 +15,7 @@ public class ArchetypeBaseMerchant extends AbstractBossDeckArchetype {
     }
     @Override
     public void addedPreBattle() {
+        //Intentionally overwritten, Merchant initializes later due to rez anim
 
     }
     @Override

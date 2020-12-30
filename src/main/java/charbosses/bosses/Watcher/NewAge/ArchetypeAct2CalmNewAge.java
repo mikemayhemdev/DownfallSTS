@@ -27,12 +27,13 @@ public class ArchetypeAct2CalmNewAge extends ArchetypeBaseWatcher {
         bossMechanicName = bossMechanicString.DIALOG[4];
         bossMechanicDesc = bossMechanicString.DIALOG[5];
 
-        maxHPModifier += 200;
+        maxHPModifier += 198;
         actNum = 2;
     }
 
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherCripplePower(p, 100), 100));
 

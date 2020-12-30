@@ -37,6 +37,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
 

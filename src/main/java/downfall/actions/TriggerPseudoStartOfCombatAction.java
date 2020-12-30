@@ -21,6 +21,7 @@ public class TriggerPseudoStartOfCombatAction extends AbstractGameAction {
         for (AbstractCharbossRelic r : cB.relics) {
             r.atBattleStart();
         }
+        cB.chosenArchetype.addedPreBattle();
 
         isDone = true;
     }
