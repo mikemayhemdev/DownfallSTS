@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -28,27 +29,48 @@ public class BurnOut extends AbstractBronzeCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int statusCount = 0;
 
-        for (AbstractCard c : p.drawPile.group) {
+        for (int i = 0; i < p.drawPile.size();) {
+            AbstractCard c = p.drawPile.group.get(i);
             if (c.type == CardType.STATUS) {
                 statusCount++;
-                atb(new ExhaustSpecificCardAction(c, p.drawPile));
+                p.drawPile.removeCard(c);
+                p.limbo.addToTop(c);
+                c.target_x = AbstractDungeon.cardRandomRng.random(0, Settings.WIDTH);
+                c.target_y = AbstractDungeon.cardRandomRng.random(0, Settings.HEIGHT);
+                atb(new ExhaustSpecificCardAction(c, p.limbo));
                 atb(new WaitAction(0.1F));
+            } else {
+                i++;
             }
         }
 
-        for (AbstractCard c : p.discardPile.group) {
+        for (int i = 0; i < p.discardPile.size();) {
+            AbstractCard c = p.discardPile.group.get(i);
             if (c.type == CardType.STATUS) {
                 statusCount++;
-                atb(new ExhaustSpecificCardAction(c, p.discardPile));
+                p.discardPile.removeCard(c);
+                p.limbo.addToTop(c);
+                c.target_x = AbstractDungeon.cardRandomRng.random(0, Settings.WIDTH);
+                c.target_y = AbstractDungeon.cardRandomRng.random(0, Settings.HEIGHT);
+                atb(new ExhaustSpecificCardAction(c, p.limbo));
                 atb(new WaitAction(0.1F));
+            } else {
+                i++;
             }
         }
 
-        for (AbstractCard c : p.hand.group) {
+        for (int i = 0; i < p.hand.size();) {
+            AbstractCard c = p.hand.group.get(i);
             if (c.type == CardType.STATUS) {
                 statusCount++;
-                atb(new ExhaustSpecificCardAction(c, p.hand));
+                p.hand.removeCard(c);
+                p.limbo.addToTop(c);
+                c.target_x = AbstractDungeon.cardRandomRng.random(0, Settings.WIDTH);
+                c.target_y = AbstractDungeon.cardRandomRng.random(0, Settings.HEIGHT);
+                atb(new ExhaustSpecificCardAction(c, p.limbo));
                 atb(new WaitAction(0.1F));
+            } else {
+                i++;
             }
         }
 
