@@ -18,6 +18,7 @@ public class OptimizePower extends AbstractAutomatonPower implements OnAddToFunc
     public void receiveAddToFunc(AbstractCard addition) {
         if (addition.canUpgrade()) {
             addition.upgrade();
+            addition.superFlash();
             addToTop(new ReducePowerAction(owner, owner, this.ID, 1));
         }
     }
