@@ -119,8 +119,8 @@ public class BossSetPatch {
                 DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/watcher_wrath_outline.png");
             }
         } else if (key.equals(NeowBoss.ID)) {
-            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/neow.png");
-            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/neowoutline.png");
+            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/icon/neow.png");
+            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/outline/neow_outline.png");
         }
     }
 }
