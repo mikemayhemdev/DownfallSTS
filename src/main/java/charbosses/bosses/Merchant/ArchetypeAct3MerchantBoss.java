@@ -40,7 +40,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
         //addRelic(new CBR_BagOfPreparation());
         addRelic(new CBR_ClockworkSouvenir());
         addRelic(new CBR_TungstenRod());
-      //  addRelic(new CBR_IceCream());
+        addRelic(new CBR_IceCream());
         //addRelic(new CBR_FusionHammer());
 
 
@@ -66,7 +66,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnHandOfGreed(), true);
+                    addToList(cardsList, new EnPanacea(), true);  //removed
                     addToList(cardsList, new EnPanicButton(), true);  //removed
                     addToList(cardsList, new EnBlind(), true);
                     turn++;
@@ -74,7 +74,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                 case 3:
                     addToList(cardsList, new EnTrip(), true);
                     addToList(cardsList, new EnTheBomb(), true);
-                    addToList(cardsList, new EnPanacea(), true);  //removed
+                    addToList(cardsList, new EnHandOfGreed(), true);
                     turn++;
                     break;
                 case 4:
