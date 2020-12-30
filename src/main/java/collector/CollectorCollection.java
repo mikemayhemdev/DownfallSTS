@@ -8,6 +8,7 @@ import collector.cards.Collectibles.*;
 import collector.util.CollectionReward;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.exordium.*;
 
@@ -56,10 +57,14 @@ public class CollectorCollection {
         for (AbstractCard q : collection.group) {
             combatCollection.addToTop(q.makeSameInstanceOf());
         }
+        CollectionReward.collectPool.clear();
     }
 
     public static void atBattleEnd() {
         combatCollection.clear();
+        if (!CollectionReward.collectPool.isEmpty()) {
+            AbstractDungeon.getCurrRoom().rewards.add(new CollectionReward());
+        }
     }
 
     public static void GetCollectible(AbstractMonster collectedMonster) {
