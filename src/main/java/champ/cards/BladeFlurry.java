@@ -14,7 +14,7 @@ public class BladeFlurry extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
 
     public BladeFlurry() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

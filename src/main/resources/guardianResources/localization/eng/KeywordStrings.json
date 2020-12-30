@@ -59,5 +59,12 @@
     ],
     "PROPER_NAME": "Tick",
     "DESCRIPTION": "This effect is triggered whenever this card's turn counter is reduced while in #yStasis."
+  },
+  {
+    "NAMES": [
+      "buffer"
+    ],
+    "PROPER_NAME": "Buffer",
+    "DESCRIPTION": "Prevent the next time you would lose HP."
   }
 ]

@@ -11,7 +11,7 @@ public class Haymaker extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 14;
     private static final int UPG_DAMAGE = 4;
 
     public Haymaker() {
