@@ -167,9 +167,9 @@
     "UPGRADE_DESCRIPTION": "Apply !M! Weak and !SlimeboundSlimed! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
   },
   "Slimebound:RejuvenatingLick": {
-    "NAME": "Rejuvenating Lick",
-    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Heal !M! HP. NL Draw a card. NL Exhaust."
+    "NAME": "Twin Lick",
+    "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Add a *Lick to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Add a *Lick to your hand. NL Draw a card. NL Exhaust."
   },
   "Slimebound:Gluttony": {
     "NAME": "Gluttony",
