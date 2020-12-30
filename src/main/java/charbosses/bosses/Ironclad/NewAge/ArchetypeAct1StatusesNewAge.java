@@ -75,7 +75,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnSeeingRed(), true);
+                    addToList(cardsList, new EnSeeingRed());
                     addToList(cardsList, new EnImmolate());
                     addToList(cardsList, new EnIcky());
                     turn++;

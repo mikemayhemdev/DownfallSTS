@@ -29,7 +29,6 @@ public class EnIcky extends AbstractBossCard {
         this.exhaust = true;
         portrait = TextureLoader.getTextureAsAtlasRegion(SlimeboundMod.getResourcePath(IMG_PATH));
         portraitImg = TextureLoader.getTexture(SlimeboundMod.getResourcePath(IMG_PATH));
-
     }
 
     @Override

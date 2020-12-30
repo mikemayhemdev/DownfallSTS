@@ -1232,6 +1232,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (final AbstractCard c : this.hand.group) {
             if (c != null) {
                 c.atTurnStart();
+                c.triggerWhenDrawn();
             }
         }
         /*
