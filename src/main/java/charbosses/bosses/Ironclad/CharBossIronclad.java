@@ -10,14 +10,14 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.anticards.ShieldSmash;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
-import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
-import charbosses.monsters.Fortification;
+import charbosses.monsters.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -26,6 +26,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
@@ -158,6 +159,14 @@ public class CharBossIronclad extends AbstractCharBoss {
         }
 
         downfallMod.saveBossFight(CharBossIronclad.ID);
+
+        if (NeowBoss.neowboss != null){
+            for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
+                if (m instanceof Fortification || m instanceof MushroomPurple || m instanceof MushroomRed || m instanceof MushroomWhite){
+                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                }
+            }
+        }
     }
 
 

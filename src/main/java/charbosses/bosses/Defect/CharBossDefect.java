@@ -13,12 +13,14 @@ import charbosses.powers.DefectCuriosityPower;
 import charbosses.powers.general.PoisonProtectionPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
@@ -103,6 +105,14 @@ public class CharBossDefect extends AbstractCharBoss {
     public void die() {
         super.die();
         downfallMod.saveBossFight(CharBossDefect.ID);
+
+        if (NeowBoss.neowboss != null){
+            for (AbstractMonster m:AbstractDungeon.getCurrRoom().monsters.monsters){
+                if (m instanceof BronzeOrbWhoReallyLikesDefectForSomeReason){
+                    AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
+                }
+            }
+        }
     }
 
     @Override

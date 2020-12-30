@@ -8,6 +8,8 @@ import charbosses.bosses.Watcher.CharBossWatcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.map.DungeonMap;
@@ -73,20 +75,44 @@ public class BossSetPatch {
 
 
         if (key.equals(CharBossIronclad.ID)) {
-            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");// 432
-            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");// 433
+            if (__instance instanceof TheBeyond) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            } else if (__instance instanceof TheCity) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            } else {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            }
         } else if (key.equals(CharBossSilent.ID)) {
-            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/silent.png");// 432
-            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/silentoutline.png");// 433
+            if (__instance instanceof TheBeyond) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            } else if (__instance instanceof TheCity) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            } else {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            }
         } else if (key.equals(CharBossDefect.ID)) {
-            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/defect.png");// 432
-            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/defectoutline.png");// 433
+            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/defect.png");
+            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/defectoutline.png");
         } else if (key.equals(CharBossWatcher.ID)) {
-            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/watcher.png");// 432
-            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/watcheroutline.png");// 433
+            if (__instance instanceof TheBeyond) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            } else if (__instance instanceof TheCity) {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            } else {
+                DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/ironclad.png");
+                DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/ironcladoutline.png");
+            }
         } else if (key.equals(NeowBoss.ID)) {
-            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/neow.png");// 432
-            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/neowoutline.png");// 433
+            DungeonMap.boss = ImageMaster.loadImage("downfallResources/images/ui/map/neow.png");
+            DungeonMap.bossOutline = ImageMaster.loadImage("downfallResources/images/ui/map/neowoutline.png");
         }
     }
 }
