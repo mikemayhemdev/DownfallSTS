@@ -98,7 +98,6 @@ public class CharBossIronclad extends AbstractCharBoss {
             }
 
         archetype.initialize();
-        archetype.addedPreBattle();
         chosenArchetype = archetype;
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            archetype.initializeBonusRelic();
@@ -172,7 +171,7 @@ public class CharBossIronclad extends AbstractCharBoss {
 
     @Override
     public void render(SpriteBatch sb) {
-        if (chosenArchetype instanceof ArchetypeAct2MushroomsNewAge) {
+        if (chosenArchetype instanceof ArchetypeAct2MushroomsNewAge && NeowBoss.neowboss == null) {
             sb.setColor(Color.WHITE.cpy());
             sb.draw(this.bgImg, 0.0F, -10.0F, (float) Settings.WIDTH, 1080.0F * Settings.scale);
             sb.draw(this.fgImg, 0.0F, -20.0F * Settings.scale, (float) Settings.WIDTH, 1080.0F * Settings.scale);

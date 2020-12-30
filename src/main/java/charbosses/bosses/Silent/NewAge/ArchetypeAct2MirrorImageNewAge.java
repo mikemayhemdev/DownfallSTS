@@ -30,6 +30,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
         CharBossSilent p = (CharBossSilent) AbstractCharBoss.boss;
         p.spawnImage(false);
     }

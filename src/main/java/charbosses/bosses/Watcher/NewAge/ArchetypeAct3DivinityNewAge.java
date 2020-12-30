@@ -30,12 +30,13 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
         bossMechanicName = bossMechanicString.DIALOG[22];
         bossMechanicDesc = bossMechanicString.DIALOG[23];
 
-        maxHPModifier += 400;
+        maxHPModifier += 398;
         actNum = 3;
     }
 
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherDivinityPower(p)));
 

@@ -34,6 +34,7 @@ public class ArchetypeAct1RetainNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new WatcherAngryPower(p)));
     }

@@ -231,7 +231,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public void usePreBattleAction() {
-        chosenArchetype.initializeBossPanel();
         this.energy.recharge();
         for (AbstractCharbossRelic r : this.relics) {
             r.atBattleStartPreDraw();
@@ -249,6 +248,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         } else {
             playMusic();
         }
+
+        chosenArchetype.addedPreBattle();
     }
 
     public void playMusic() {

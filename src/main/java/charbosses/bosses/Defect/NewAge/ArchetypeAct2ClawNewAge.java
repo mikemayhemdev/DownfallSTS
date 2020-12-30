@@ -36,6 +36,7 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void addedPreBattle() {
+        super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ConstructPower(p, p, 1), 1));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new BronzeOrbWhoReallyLikesDefectForSomeReason(-450, 250, 0), true));
