@@ -113,7 +113,7 @@ public class DefensiveMode extends AbstractStance {
 
     @Override
     public void onPlayCard(AbstractCard card) {
-        int block = 2;
+        int block = 1;
         if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)) block++;
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
     }
