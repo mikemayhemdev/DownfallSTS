@@ -16,7 +16,7 @@ public class DelayedSlice extends AbstractBronzeCard {
     public DelayedSlice() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         thisEncodes();
-        baseMagicNumber = magicNumber = 10;
+        baseMagicNumber = magicNumber = 6;
         //tags.add(AutomatonMod.NO_TEXT);
         baseDamage = 3;
     }
@@ -36,6 +36,6 @@ public class DelayedSlice extends AbstractBronzeCard {
 
     public void upp() {
         upgradeDamage(1);
-        upgradeMagicNumber(5);
+        upgradeMagicNumber(4);
     }
 }
