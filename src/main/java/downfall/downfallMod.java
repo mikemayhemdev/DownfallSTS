@@ -228,7 +228,7 @@ public class downfallMod implements
             case PACKAGE_CHAMP:
                 return "champResources/" + path;
             case PACKAGE_AUTOMATON:
-                return "bronzeResources/" + path;
+                return "twinsResources/" + path;
         }
         return "downfallResources/" + path;
     }

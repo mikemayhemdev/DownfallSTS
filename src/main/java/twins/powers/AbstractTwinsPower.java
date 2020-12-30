@@ -45,8 +45,8 @@ public abstract class AbstractTwinsPower extends AbstractPower {
         this.amount = amount;
         this.type = powerType;
 
-        Texture normalTexture = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "32.png");
-        Texture hiDefImage = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "84.png");
+        Texture normalTexture = TextureLoader.getTexture("twinsResources/images/powers/" + NAME + "32.png");
+        Texture hiDefImage = TextureLoader.getTexture("twinsResources/images/powers/" + NAME + "84.png");
         if (hiDefImage != null) {
             region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
             if (normalTexture != null)
@@ -75,8 +75,8 @@ public abstract class AbstractTwinsPower extends AbstractPower {
         this.type = powerType;
 
         if (loadImage) {
-            Texture normalTexture = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "32.png");
-            Texture hiDefImage = TextureLoader.getTexture("bronzeResources/images/powers/" + NAME + "84.png");
+            Texture normalTexture = TextureLoader.getTexture("twinsResources/images/powers/" + NAME + "32.png");
+            Texture hiDefImage = TextureLoader.getTexture("twinsResources/images/powers/" + NAME + "84.png");
             if (hiDefImage != null) {
                 region128 = new TextureAtlas.AtlasRegion(hiDefImage, 0, 0, hiDefImage.getWidth(), hiDefImage.getHeight());
                 if (normalTexture != null)

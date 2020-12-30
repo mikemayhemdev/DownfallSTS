@@ -15,13 +15,18 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import twins.cards.DecaCard;
+import twins.cards.Defend;
+import twins.cards.DonuCard;
+import twins.cards.Strike;
+import twins.relics.Rings;
 
 import java.util.ArrayList;
 
 import static twins.DonuDecaMod.*;
 
 public class TwinsChar extends CustomPlayer {
-    public static final String ID = makeID("theAutomaton");
+    public static final String ID = makeID("theTwins");
     public static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] orbTextures = {
             "twinsResources/images/char/mainChar/orb/layer1.png",
@@ -104,13 +109,20 @@ public class TwinsChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        //TODO: This
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Strike.ID);
+        }
+        for (int i = 0; i < 4; i++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(DonuCard.ID);
+        retVal.add(DecaCard.ID);
         return retVal;
     }
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        //TODO: This
+        retVal.add(Rings.ID);
         return retVal;
     }
 

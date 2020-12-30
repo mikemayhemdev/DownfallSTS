@@ -11,6 +11,8 @@ import theHexaghost.HexaMod;
 import theHexaghost.actions.AdvanceAction;
 import theHexaghost.ghostflames.MayhemGhostflame;
 import theHexaghost.powers.AgainPower;
+import twins.TwinsChar;
+import twins.TwinsHelper;
 
 @SpirePatch(
         clz = GameActionManager.class,
@@ -27,6 +29,9 @@ public class EndTurnAdvance {
                 AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p.owner, p.owner, p, 1));
             } else if (GhostflameHelper.activeGhostFlame.charged)
                 AbstractDungeon.actionManager.addToBottom(new AdvanceAction(true));
+        }
+        if (AbstractDungeon.player instanceof TwinsChar) {
+            TwinsHelper.swap();
         }
         downfallMod.playedBossCardThisTurn = false;
     }

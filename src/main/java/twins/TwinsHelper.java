@@ -35,21 +35,29 @@ public class TwinsHelper {
     }
 
     public static void update() {
-        donuCards.getTopCard().update();
-        donuCards.getTopCard().updateHoverLogic();
-        decaCards.getTopCard().update();
-        decaCards.getTopCard().updateHoverLogic();
+        if (!donuCards.isEmpty()) {
+            donuCards.getTopCard().update();
+            donuCards.getTopCard().updateHoverLogic();
+        }
+        if (!decaCards.isEmpty()) {
+            decaCards.getTopCard().update();
+            decaCards.getTopCard().updateHoverLogic();
+        }
     }
 
     public static void swap() {
-        getFrontCardGroup().getTopCard().target_x = BACK_CARDS_LOCATION;
-        getBackCardGroup().getTopCard().target_x = FRONT_CARDS_LOCATION;
+        if (!getFrontCardGroup().isEmpty())
+            getFrontCardGroup().getTopCard().target_x = BACK_CARDS_LOCATION;
+        if (!getBackCardGroup().isEmpty())
+            getBackCardGroup().getTopCard().target_x = FRONT_CARDS_LOCATION;
         donuInFront = !donuInFront;
     }
 
     public void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE);
-        donuCards.getTopCard().render(sb);
-        decaCards.getTopCard().render(sb);
+        if (!donuCards.isEmpty())
+            donuCards.getTopCard().render(sb);
+        if (!decaCards.isEmpty())
+            decaCards.getTopCard().render(sb);
     }
 }
