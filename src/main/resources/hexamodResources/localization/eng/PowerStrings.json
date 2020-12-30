@@ -152,10 +152,12 @@
   "hexamod:PastPower": {
     "NAME": "Devil's Dance",
     "DESCRIPTIONS": [
-      "The first time you #yRetract each turn, gain ",
-      " and draw #b",
-      " card.",
-      " cards."
+      "The first #b",
+      " time ",
+      " times ",
+      "you #yRetract each turn, gain [E] and draw 1 card. NL Retracted #b",
+      " time this turn.",
+      " times this turn."
     ]
   },
   "hexamod:PotionPostCombatPower": {
