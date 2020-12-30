@@ -8,8 +8,8 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
-import collector.cards.Collectibles.*;
 import collector.cards.*;
+import collector.cards.Collectibles.*;
 import collector.powers.SoulSnare;
 import collector.util.CollectionReward;
 import com.badlogic.gdx.graphics.Color;
@@ -242,6 +242,16 @@ public class CollectorMod implements
         BaseMod.addCard(new Contemplate());
         BaseMod.addCard(new SoulStitch());
         BaseMod.addCard(new SoulHarvest());
+        BaseMod.addCard(new Bargain());
+        BaseMod.addCard(new Consign());
+        BaseMod.addCard(new CullingBlow());
+        BaseMod.addCard(new DarkSuffusion());
+        BaseMod.addCard(new Fever());
+        BaseMod.addCard(new Fireball());
+        BaseMod.addCard(new Hellfire());
+        BaseMod.addCard(new Miser());
+        BaseMod.addCard(new Omen());
+        BaseMod.addCard(new Wrack());
 
         BaseMod.addCard(new LuckyWick());
         BaseMod.addCard(new CrookedStaff());
@@ -267,6 +277,17 @@ public class CollectorMod implements
         UnlockTracker.unlockCard(Contemplate.ID);
         UnlockTracker.unlockCard(SoulStitch.ID);
         UnlockTracker.unlockCard(SoulHarvest.ID);
+        UnlockTracker.unlockCard(Bargain.ID);
+        UnlockTracker.unlockCard(Consign.ID);
+        UnlockTracker.unlockCard(CullingBlow.ID);
+        UnlockTracker.unlockCard(DarkSuffusion.ID);
+        UnlockTracker.unlockCard(Fever.ID);
+        UnlockTracker.unlockCard(Fireball.ID);
+        UnlockTracker.unlockCard(Hellfire.ID);
+        UnlockTracker.unlockCard(Miser.ID);
+        UnlockTracker.unlockCard(Omen.ID);
+        UnlockTracker.unlockCard(Wrack.ID);
+
 
         UnlockTracker.unlockCard(LuckyWick.ID);
         UnlockTracker.unlockCard(CrookedStaff.ID);
