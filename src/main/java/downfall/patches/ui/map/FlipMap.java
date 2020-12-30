@@ -35,6 +35,7 @@ public class FlipMap {
     static {
         invalidActs = new HashSet<>();
         invalidActs.add("paleoftheancients:PaleOfTheAncients");
+        invalidActs.add("infinite-spire:TheVoid");
     }
 
     @SpirePatch(
