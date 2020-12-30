@@ -183,7 +183,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "Tongue Lash",
-    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for ALL of your cards containing \"Lick\" (including Exhausted cards)."
+    "DESCRIPTION": "Deal !D! damage. Deals !M! additional damage for each Exhausted card containing \"Lick\"."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
