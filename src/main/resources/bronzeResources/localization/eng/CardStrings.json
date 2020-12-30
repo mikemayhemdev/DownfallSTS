@@ -534,7 +534,7 @@
   },
   "bronze:CleanCode": {
     "NAME": "Clean Code",
-    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! Functions."
+    "DESCRIPTION": "Remove all negative bronze:Compile effects from cards in the Sequence. NL Lasts for the next !M! *Compiles."
   },
   "bronze:BranchBlock": {
     "NAME": "Branch: Block",
