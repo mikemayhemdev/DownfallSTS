@@ -281,7 +281,7 @@
   },
   "champ:FightOn": {
     "NAME": "Fight On",
-    "DESCRIPTION": "Fleeting. NL Can't be Upgraded. NL Can only be played if you have at least 30 champ:Fatigue. NL Gain 5 Max HP."
+    "DESCRIPTION": "Fleeting. NL Can only be played if you have at least 30 champ:Fatigue. NL Gain 5 Max HP."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
