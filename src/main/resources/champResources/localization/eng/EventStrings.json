@@ -1,4 +1,14 @@
 {
+  "champ:ChampTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "YOU WANT THIS BELT BACK?",
+      "COME AND GET IT!"
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
   "champ:Colosseum": {
     "NAME": "The Colosseum",
     "DESCRIPTIONS": [

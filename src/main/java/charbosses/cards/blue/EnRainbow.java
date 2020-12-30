@@ -6,6 +6,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.orbs.EnemyDark;
 import charbosses.orbs.EnemyFrost;
 import charbosses.orbs.EnemyLightning;
+import charbosses.vfx.EnemyRainbowCardEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,12 +33,10 @@ public class EnRainbow extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new VFXAction(new RainbowCardEffect()));
+        this.addToBot(new VFXAction(new EnemyRainbowCardEffect()));
         this.addToBot(new EnemyChannelAction(new EnemyLightning()));
         this.addToBot(new EnemyChannelAction(new EnemyFrost()));
         this.addToBot(new EnemyChannelAction(new EnemyDark()));
-
-
     }
 
     public void upgrade() {

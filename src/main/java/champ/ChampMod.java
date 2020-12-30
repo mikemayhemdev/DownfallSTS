@@ -112,6 +112,8 @@ public class ChampMod implements
     public static int finishersThisTurn = 0;
     public static int finishersThisCombat = 0;
     public static int techniquesThisTurn = 0;
+    public static boolean talked1 = false;
+    public static boolean talked2 = false;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
