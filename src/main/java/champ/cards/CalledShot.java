@@ -1,8 +1,10 @@
 package champ.cards;
 
+import champ.ChampMod;
 import champ.powers.CalledShotPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import sneckomod.SneckoMod;
 
 public class CalledShot extends AbstractChampCard {
 
@@ -24,6 +26,7 @@ public class CalledShot extends AbstractChampCard {
         rawDescription = UPGRADE_DESCRIPTION;
         upgradeMagicNumber(1);
         initializeDescription();
+        tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 }
