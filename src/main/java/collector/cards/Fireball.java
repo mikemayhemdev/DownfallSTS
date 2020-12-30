@@ -1,6 +1,6 @@
 package collector.cards;
 
-import collector.Actions.FireballAction;
+import collector.actions.FireballAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

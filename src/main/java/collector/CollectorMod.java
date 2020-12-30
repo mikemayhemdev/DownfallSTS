@@ -4,14 +4,9 @@ import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.interfaces.*;
-import charbosses.bosses.Defect.CharBossDefect;
-import charbosses.bosses.Ironclad.CharBossIronclad;
-import charbosses.bosses.Silent.CharBossSilent;
-import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.cards.*;
 import collector.cards.Collectibles.*;
 import collector.powers.SoulSnare;
-import collector.util.CollectionReward;
 import collector.util.CollectorSecondDamage;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -21,8 +16,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.exordium.*;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -40,7 +33,6 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -81,7 +73,6 @@ public class CollectorMod implements
     private CustomUnlockBundle unlocks4;
     public static ArrayList<String> Afflictions = new ArrayList<>();
     public static ArrayList<String> Boons = new ArrayList<>();
-    public static HashMap<String, AbstractCard> cardsList;
 
     public CollectorMod() {
         BaseMod.subscribe(this);
@@ -214,17 +205,12 @@ public class CollectorMod implements
         }
     }
 
-    public static void GetCollectible(AbstractMonster collectedMonster) {
-        if (cardsList.containsKey(collectedMonster.id)) {
-            AbstractCard NewCollectible = cardsList.get(collectedMonster.id).makeStatEquivalentCopy();
-            CollectionReward.CollectPool.add(NewCollectible);
-        } else CollectionReward.CollectPool.add(new LuckyWick());
-    }
     public static void PerpetualEffect(AbstractCard card) {
-        CollectorCollection.BattleCollection.addToBottom(card);
+        CollectorCollection.combatCollection.addToBottom(card);
         AbstractDungeon.player.discardPile.removeCard(card);
     }
-    public static boolean AfflicitonMatch(String stringtocompare) {
+
+    public static boolean AfflictionMatch(String stringtocompare) {
         if (stringtocompare.equals(Afflictions.get(0)) || stringtocompare.equals(Afflictions.get(1)) ||
                 stringtocompare.equals(Afflictions.get(2)) || stringtocompare.equals(Afflictions.get(3)) ||
                 stringtocompare.equals(Afflictions.get(4)) || stringtocompare.equals(Afflictions.get(5))) {
@@ -335,19 +321,16 @@ public class CollectorMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        CollectorCollection.atBattleStart();
     }
 
     @Override
     public void receivePostBattle(AbstractRoom abstractRoom) {
+        CollectorCollection.atBattleEnd();
     }
 
     @Override
     public void receiveStartGame() {
-        CollectorCollection.Collection = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        CollectorCollection.Collection.addToBottom(new LuckyWick());
-        CollectorCollection.Collection.addToBottom(new LuckyWick());
-        CollectorCollection.Collection.addToBottom(new LuckyWick());
-        CollectorCollection.Collection.addToBottom(new LuckyWick());
         Afflictions.add(WeakPower.POWER_ID);
         Afflictions.add(VulnerablePower.POWER_ID);
         Afflictions.add(PoisonPower.POWER_ID);
@@ -361,6 +344,8 @@ public class CollectorMod implements
         Boons.add(PlatedArmorPower.POWER_ID);
         Boons.add(VigorPower.POWER_ID);
         Boons.add("Block");
+
+        CollectorCollection.init();
     }
 
     public static CardGroup getRareCards() {
@@ -379,30 +364,4 @@ public class CollectorMod implements
     public void receivePostDraw(AbstractCard abstractCard) {
 
     }
-
-    void init() {
-        cardsList.put(GremlinWizard.ID, new CrookedStaff());
-        cardsList.put(GremlinWarrior.ID, new CrudeShield());
-        cardsList.put(Cultist.ID, new CultistFeather());
-        cardsList.put(GremlinFat.ID, new CurledHorns());
-        cardsList.put(CharBossDefect.ID, new DefectCore());
-        cardsList.put(GremlinThief.ID, new GremlinPoker());
-        cardsList.put(CharBossIronclad.ID, new IroncladMask());
-        cardsList.put(JawWorm.ID, new JarWormTooth());
-        cardsList.put(Lagavulin.ID, new LagavullinShell());
-        cardsList.put(LouseNormal.ID, new LouseSegment());
-        cardsList.put(LouseDefensive.ID, new LouseSegment());
-        cardsList.put(GremlinNob.ID, new NobsBoneClub());
-        cardsList.put(Sentry.ID, new SentryCore());
-        cardsList.put(CharBossSilent.ID, new SilentTrophy());
-        cardsList.put(AcidSlime_L.ID, new SlimeSample());
-        cardsList.put(AcidSlime_M.ID, new SlimeSample());
-        cardsList.put(AcidSlime_S.ID, new SlimeSample());
-        cardsList.put(SpikeSlime_L.ID, new VialofOoze());
-        cardsList.put(SpikeSlime_M.ID, new VialofOoze());
-        cardsList.put(SpikeSlime_S.ID, new VialofOoze());
-        cardsList.put(GremlinTsundere.ID, new ViciousClaws());
-        cardsList.put(CharBossWatcher.ID, new WatchersStaff());
-    }
-
 }

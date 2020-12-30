@@ -18,7 +18,7 @@ public class  CollectibleFastMovePatch {
         AbstractCard q = (AbstractCard) ReflectionHacks.getPrivate(__instance, FastCardObtainEffect.class, "card");
         if (q instanceof AbstractCollectibleCard && __instance.duration < 0.0F) {
             AbstractDungeon.player.masterDeck.removeCard(q);
-            CollectorCollection.Collection.addToBottom(q);
+            CollectorCollection.collection.addToBottom(q);
             if (q instanceof SentryCore && AbstractDungeon.player.maxOrbs < 3){
                 AbstractDungeon.player.maxOrbs += 3;
             }

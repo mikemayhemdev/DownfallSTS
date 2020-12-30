@@ -22,7 +22,7 @@ public class CollectionReward extends RewardItem {
 
     private float REWARD_TEXT_X = 833.0F * Settings.scale;
     private ArrayList<AbstractGameEffect> effects = new ArrayList<>();
-    public static ArrayList<AbstractCard> CollectPool = new ArrayList<>();
+    public static ArrayList<AbstractCard> collectPool = new ArrayList<>();
 
     public CollectionReward(AbstractCard.CardColor colorType) {
         this.hb = new Hitbox(460.0F * Settings.scale, 90.0F * Settings.scale);
@@ -31,7 +31,7 @@ public class CollectionReward extends RewardItem {
         this.ignoreReward = false;
         this.redText = false;
         this.type = RewardType.CARD;
-        ArrayList<AbstractCard> cardsToJankReplace = this.CollectPool;
+        ArrayList<AbstractCard> cardsToJankReplace = collectPool;
         this.cards.clear();
         this.cards = cardsToJankReplace;
 

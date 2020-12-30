@@ -1,5 +1,6 @@
-package collector.Actions;
+package collector.actions;
 
+import collector.CollectorCollection;
 import collector.CollectorMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -59,7 +60,7 @@ public class CullingBlowAction extends AbstractGameAction {
                 if (!target.isDying && target.currentHealth > threshold && !target.isEscaping) {
                     target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
                     if ((this.target.isDying || this.target.currentHealth <= threshold) && !this.target.halfDead) {
-                        CollectorMod.GetCollectible(target);
+                        CollectorCollection.GetCollectible(target);
                         addToBot(new VFXAction(new BiteEffect(target.drawX,target.drawY, Color.DARK_GRAY.cpy())));
                         addToBot(new LoseHPAction(target,target,target.currentHealth));
                     }

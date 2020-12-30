@@ -2,7 +2,7 @@
   "collector:SoulSnare": {
     "NAME": "Soul Snare",
     "DESCRIPTIONS": [
-      "When Soul Snare is applied to this loses #b",
+      "When Soul Snare is applied to this, it loses #b",
       " HP. Whenever you apply an #yAffliction to this increase this by 1."
     ]
   },
