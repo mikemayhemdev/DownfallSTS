@@ -12,7 +12,7 @@ public class Consign extends AbstractCollectorCard {
 
     public Consign() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 16;
         isMultiDamage = true;
     }
 
@@ -24,7 +24,7 @@ public class Consign extends AbstractCollectorCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(4);
         upgradeMagicNumber(1);
     }
 }

@@ -35,7 +35,7 @@
   },
   "collector:CullingBlow": {
     "NAME": "Culling Blow",
-    "DESCRIPTION": "Apply !M! Poison. NL Apply 1 Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL if this brings an enemy under !M! HP, collector:Collect them."
   },
   "collector:Fever": {
     "NAME": "Fever",
@@ -56,7 +56,7 @@
   },
   "collector:DarkSuffusion": {
     "NAME": "Dark Suffusion",
-    "DESCRIPTION": "Deal !D! damage. NL if this brings an enemy under !M! HP, collector:Collect them."
+    "DESCRIPTION": "Apply !M! Poison. NL Apply 1 Vulnerable."
   },
   "collector:Omen": {
     "NAME": "Omen",

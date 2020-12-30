@@ -12,6 +12,7 @@ import collector.cards.*;
 import collector.cards.Collectibles.*;
 import collector.powers.SoulSnare;
 import collector.util.CollectionReward;
+import collector.util.CollectorSecondDamage;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -237,6 +238,8 @@ public class CollectorMod implements
 
     @Override
     public void receiveEditCards() {
+        BaseMod.addDynamicVariable(new CollectorSecondDamage());
+
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
         BaseMod.addCard(new Contemplate());
@@ -401,4 +404,5 @@ public class CollectorMod implements
         cardsList.put(GremlinTsundere.ID, new ViciousClaws());
         cardsList.put(CharBossWatcher.ID, new WatchersStaff());
     }
+
 }
