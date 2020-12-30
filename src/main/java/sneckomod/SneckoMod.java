@@ -206,7 +206,7 @@ public class SneckoMod implements
     }
 
     public static AbstractCard getRandomStatus() {
-        Collections.shuffle(statuses);
+        Collections.shuffle(statuses, AbstractDungeon.cardRandomRng.random);
         return statuses.get(0);
     }
 
