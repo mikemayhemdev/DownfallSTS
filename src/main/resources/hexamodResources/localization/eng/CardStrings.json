@@ -357,10 +357,6 @@
     "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies."
   },
-  "hexamod:Haunted": {
-    "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
-  },
   "hexamod:CouncilsJustice": {
     "NAME": "Council's Justice",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Damage is increased by !M! for each *Apparition in your exhaust pile. NL Exhaust."

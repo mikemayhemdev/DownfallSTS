@@ -12,6 +12,7 @@ import guardian.patches.GuardianEnum;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.patches.SlimeboundEnum;
+import sneckomod.TheSnecko;
 import theHexaghost.TheHexaghost;
 
 import java.lang.reflect.InvocationTargetException;
@@ -28,7 +29,7 @@ public class MetricsPatches {
     public static class SendPostPatch {
 
         public static void Prefix(Metrics metrics, @ByRef String[] url, String fileName) {
-            if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND || AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
+            if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND || AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO) {
                 url[0] = "http://downfallstats.atwebpages.com/";
             }
         }
@@ -39,7 +40,7 @@ public class MetricsPatches {
     public static class ShouldUploadMetricData {
 
         public static boolean Postfix(boolean returnValue) {
-            if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND || AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
+            if (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || AbstractDungeon.player.chosenClass == SlimeboundEnum.SLIMEBOUND || AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN || AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT || AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO) {
                 returnValue = Settings.UPLOAD_DATA;
             }
             return returnValue;

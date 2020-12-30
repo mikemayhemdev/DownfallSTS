@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
 import com.megacrit.cardcrawl.relics.DuVuDoll;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theHexaghost.HexaMod;
-import theHexaghost.cards.Haunted;
+import downfall.cards.curses.Haunted;
 
 import java.util.ArrayList;
 

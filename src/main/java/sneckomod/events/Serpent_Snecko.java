@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import sneckomod.cards.Bewildered;
+import downfall.cards.curses.Bewildered;
 
 public class Serpent_Snecko extends AbstractImageEvent {
     public static final String ID = "sneckomod:Serpent";

@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import sneckomod.cards.Bewildered;
+import downfall.cards.curses.Bewildered;
 import sneckomod.relics.BabySnecko;
 
 public class SuspiciousHouse extends AbstractImageEvent {

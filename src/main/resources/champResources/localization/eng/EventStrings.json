@@ -43,7 +43,8 @@
       " #rHP.",
       "[Leave]",
       "[Locked] Requires a non-Technique Card.",
-      "Choose a card to gain Technique."
+      "Choose a card to gain Technique.",
+      "[Read] Choose a card to gain #gTechnique. #rBecome #rCursed #r- #rPride."
     ]
   },
   "champ:Gym": {

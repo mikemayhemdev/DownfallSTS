@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.cards.curses.PrideStandard;
 
 public class Vagrant_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:Vagrant";
@@ -42,7 +43,7 @@ public class Vagrant_Evil extends AbstractImageEvent {
             takeCost *= 2;
         }
         this.imageEventText.setDialogOption(OPTIONSALT[0] + takeCost + OPTIONSALT[1]);
-        this.imageEventText.setDialogOption(OPTIONS[4], CardLibrary.getCopy("Shame"));// 38
+        this.imageEventText.setDialogOption(OPTIONSALT[2], new PrideStandard());// 38
         this.imageEventText.setDialogOption(OPTIONS[5]);
     }
 
@@ -59,8 +60,8 @@ public class Vagrant_Evil extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         return;
                     case 1:
-                        this.imageEventText.updateBodyText(DESCRIPTIONS[2]);// 60
-                        AbstractCard card = new Shame();// 62
+                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);// 60
+                        AbstractCard card = new PrideStandard();// 62
                         AbstractRelic relic = AbstractDungeon.returnRandomScreenlessRelic(AbstractDungeon.returnRandomRelicTier());// 63 64
                         AbstractEvent.logMetricObtainCardAndRelic("Addict", "Stole Relic", card, relic);// 65
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));// 66

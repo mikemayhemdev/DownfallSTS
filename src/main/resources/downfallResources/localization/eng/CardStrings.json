@@ -2,5 +2,25 @@
   "downfall:SummonMushrooms": {
     "NAME": "Fungus Among Us",
     "DESCRIPTION": "Kill all Mushrooms. NL Summon two Mushrooms."
+  },
+  "downfall:Aged": {
+    "NAME": "Aged",
+    "DESCRIPTION": "Unplayable. Ethereal. NL At the end of your turn, add a Void Status to the top of your draw pile."
+  },
+  "downfall:Bewildered": {
+    "NAME": "Bewildered",
+    "DESCRIPTION": "When you play another card, sneckomod:Muddle your hand, then discard this. NL Exhaust."
+  },
+  "downfall:Icky": {
+    "NAME": "Icky",
+    "DESCRIPTION": "Add a Slimed Status to your hand. NL Exhaust."
+  },
+  "downfall:Haunted": {
+    "NAME": "Haunted",
+    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "Malfunctioning",
+    "DESCRIPTION": "Ethereal. NL At the end of your turn, transform all cards in hand into random Status cards. NL Exhaust."
   }
 }
