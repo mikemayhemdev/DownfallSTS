@@ -1,26 +1,26 @@
 {
   "bronze:ShapeFactory": {
-    "NAME": "Shape Factory",
+    "NAME": "Drone Factory",
     "DESCRIPTIONS": [
-      "Encounter event description.",
-      "Leave without combat."
+      "You stumble upon one of the Exordium's run-down drone factory - surprisingly, the controls are still working. If you power up and dismantle some of these shape-like machines, you could inherit some of their weapons.",
+      "None of these drones have what you require."
     ],
     "OPTIONS": [
       "[Fight Spiker] #gGain #gSpike.",
       "[Fight Repulsor] #gGain #gDazing #gPulse.",
       "[Fight Exploder] #gGain #gExplode.",
       "[Leave]",
-      "#g[Begin #gCombat]",
-      "#r[Also Fight Spiker] #gGain #gSpike.",
-      "#r[Also Fight Repulsor] #gGain #gDazing #gPulse.",
-      "#r[Also Fight Exploder] #gGain #gExplode."
+      "[Begin Combat]",
+      "[Also Fight Spiker] #gGain #gSpike.",
+      "[Also Fight Repulsor] #gGain #gDazing #gPulse.",
+      "[Also Fight Exploder] #gGain #gExplode."
     ]
   },
   "bronze:AncientFactory": {
     "NAME": "Ancient Factory",
     "DESCRIPTIONS": [
-      "Encounter event description.",
-      "Leave without combat."
+      "As you continue your tireless ascent, you have come across the ~original~ factory. You remember being here for your own assembly, when you met the ~Maker~ for the first time. NL Each one of the ancient constructs they created is as #yperfect as yourself. There are parts from the old prototypes that could be of use to you, but it will require activating them.",
+      "Even for unfinished prototypes, they are still formidable - no need for unnecessary risks."
     ],
     "OPTIONS": [
       "[Fight Donu Prototype] #gGain #gDonu #gBeam.",

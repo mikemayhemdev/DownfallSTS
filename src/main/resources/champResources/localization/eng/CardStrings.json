@@ -270,11 +270,6 @@
       " NL (Deals !D! damage.)"
     ]
   },
-  "champ:FinalRevenge": {
-    "NAME": "Final Revenge",
-    "DESCRIPTION": "Deal damage equal to your missing HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to your missing HP. NL Exhaust unless in champ:Berserker."
-  },
   "champ:CrownThrow": {
     "NAME": "Crown Throw",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL  Unless *Gladiator champ:Combo: Draw 3 fewer cards next turn."
