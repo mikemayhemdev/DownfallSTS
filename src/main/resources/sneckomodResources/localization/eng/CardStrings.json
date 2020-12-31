@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 0 - !M! Weak. NL Apply 0 - !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak. NL Apply !M! - 2 Vulnerable."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",

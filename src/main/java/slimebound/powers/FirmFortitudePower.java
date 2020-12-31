@@ -71,9 +71,9 @@ public class FirmFortitudePower extends TwoAmountPower {
     }
 
     public int onAttackedPreBlock(DamageInfo info, int damageAmount) {
-        SlimeboundMod.logger.info("onAttacked triggered " + damageAmount + " " + this.isActive + " " + this.amount2);
+        //SlimeboundMod.logger.info("onAttacked triggered " + damageAmount + " " + this.isActive + " " + this.amount2);
         if (damageAmount > 0 && this.isActive && this.amount2 > 0) {
-            SlimeboundMod.logger.info("Firmfortitude triggered " + damageAmount);
+            //SlimeboundMod.logger.info("Firmfortitude triggered " + damageAmount);
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(this.owner, damageAmount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 

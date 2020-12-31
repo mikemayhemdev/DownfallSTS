@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
@@ -61,12 +62,11 @@ public class DefensiveMode extends AbstractStance {
     }
 
 
-
     @Override
     public void onEnterStance() {
-             if (sfxId != -1L) {
-                  stopIdleSfx();
-             }
+        if (sfxId != -1L) {
+            stopIdleSfx();
+        }
 
         CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
 
@@ -75,7 +75,7 @@ public class DefensiveMode extends AbstractStance {
             sfxId = CardCrawlGame.sound.playAndLoop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"));
         }
 
-        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY, false), 0.05F, true));
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLDENROD, true));
 
         if (AbstractDungeon.player instanceof GuardianCharacter) {
@@ -88,6 +88,7 @@ public class DefensiveMode extends AbstractStance {
             }
         }
     }
+
 
     @Override
     public void onExitStance() {
@@ -104,27 +105,23 @@ public class DefensiveMode extends AbstractStance {
         }
     }
 
-       public void stopIdleSfx() {
-             if (sfxId != -1L) {
-                   CardCrawlGame.sound.stop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"), sfxId);
-                   sfxId = -1L;
-             }
-           }
-
-    @Override
-    public void onPlayCard(AbstractCard card) {
-        int block = 1;
-        if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)) block++;
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+    public void stopIdleSfx() {
+        if (sfxId != -1L) {
+            CardCrawlGame.sound.stop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"), sfxId);
+            sfxId = -1L;
+        }
     }
 
     public void atStartOfTurn() {
-        if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 10));
+
+        if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
             AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
-        } else
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));// 49
-    }// 50
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID));
+        }  }
 
     @Override
     public void updateDescription() {

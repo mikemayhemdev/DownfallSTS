@@ -301,7 +301,7 @@ public class CustomAnimatedNPC {
             if (this.skeleton.getRootBone() != null) {
                 this.skeleton.getRootBone().setRotation(customRot);
                 if (this.skeleton.findBone("shadow") != null) {
-                    // SlimeboundMod.logger.info(this.skeleton.findBone("shadow"));
+                    // //SlimeboundMod.logger.info(this.skeleton.findBone("shadow"));
                     this.skeleton.findBone("shadow").setRotation(-1 * customRot);
                     this.skeleton.findBone("shadow").setScale(customShadowScale);
                 }

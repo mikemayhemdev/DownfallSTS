@@ -37,6 +37,10 @@
   },
   "downfall:Analytical": {
     "NAME": "Analytical",
-    "DESCRIPTION": "Start each combat with a Spaghetti Code that costs 0. Basic Strikes and Defends Encode."
+    "DESCRIPTION": "At the start of each turn, add a random card with Encode to your hand and give it Ethereal. Basic Strikes and Defends Encode."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "Inflicted",
+    "DESCRIPTION": "Start with a Makeshift Battery, Donu's Washers, Deca's Washers, a Medical Kit, and a Bronze Idol. All other Relics are replaced with Circlets."
   }
 }

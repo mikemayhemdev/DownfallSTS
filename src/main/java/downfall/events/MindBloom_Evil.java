@@ -82,7 +82,6 @@ public class MindBloom_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         this.screen = CurScreen.FIGHT;
-                        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
                         if (AbstractDungeon.player instanceof SlimeboundCharacter){
                             AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Slime Boss");
                         } else
@@ -132,7 +131,9 @@ public class MindBloom_Evil extends AbstractImageEvent {
 
                         AbstractDungeon.getCurrRoom().addRelicToRewards(RelicTier.RARE);
                         this.enterCombatFromImage();
-                        AbstractDungeon.lastCombatMetricKey = "Mind Bloom Boss Battle";
+                        CardCrawlGame.music.fadeOutBGM();
+                        CardCrawlGame.music.fadeOutTempBGM();
+                        CardCrawlGame.music.playTempBgmInstantly("MINDBLOOM", true);
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);

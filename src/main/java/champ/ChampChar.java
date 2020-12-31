@@ -89,7 +89,7 @@ public class ChampChar extends CustomPlayer {
                 SHOULDER1,
                 SHOULDER2,
                 CORPSE,
-                getLoadout(), -15.0F, -30.0F, 450.0F, 450.0F, new EnergyManager(3));
+                getLoadout(), -15.0F, -30.0F, 250.0F, 300.0F, new EnergyManager(3));
 
         this.reloadAnimation();
 
@@ -140,7 +140,7 @@ public class ChampChar extends CustomPlayer {
 
     private void tickStanceVisualTimer(){
         if (stanceSwitchQueue.size() > 0) {
-           // SlimeboundMod.logger.info("stance queue is ticking");
+           // //SlimeboundMod.logger.info("stance queue is ticking");
             stanceSwitchAnimTimer = stanceSwitchAnimTimer - Gdx.graphics.getDeltaTime();
             if (stanceSwitchAnimTimer <= 0F) {
                 switchStanceVisualGo(stanceSwitchQueue.get(0));
@@ -153,7 +153,7 @@ public class ChampChar extends CustomPlayer {
     }
 
     public void switchStanceVisualGo(String ID) {
-     //   SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
+     //   //SlimeboundMod.logger.info("stance queue has ordered a visual for " + ID);
 
         switch (ID) {
             case DefensiveStance
@@ -166,7 +166,7 @@ public class ChampChar extends CustomPlayer {
             }
             case GladiatorStance
                     .STANCE_ID: {
-                SlimeboundMod.logger.info("Found Gladiator Stance");
+                //SlimeboundMod.logger.info("Found Gladiator Stance");
                 this.stateData.setMix(currentIdle, "IdleGladiator", 0.5F);
                 this.stateData.setMix("HitGladiator", "IdleGladiator", 0.5F);
                 this.state.setAnimation(0, "IdleGladiator", true);

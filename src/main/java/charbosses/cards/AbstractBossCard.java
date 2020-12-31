@@ -415,14 +415,14 @@ public abstract class AbstractBossCard extends AbstractCard {
     public void bossDarken() {
         if (!this.bossDarkened) {
             this.bossDarkened = true;
-            SlimeboundMod.logger.info(this.name + " darkened.");
+            //SlimeboundMod.logger.info(this.name + " darkened.");
         }
     }
 
     public void bossLighten() {
         if (this.bossDarkened) {
             this.bossDarkened = false;
-            SlimeboundMod.logger.info(this.name + " lightened.");
+            //SlimeboundMod.logger.info(this.name + " lightened.");
         }
     }
 
@@ -697,15 +697,17 @@ public abstract class AbstractBossCard extends AbstractCard {
         refreshIntentHbLocation();
         if (!intentActive) this.intentParticleTimer = 0.5F;
         if (!lockIntentValues) calculateCardDamage(null);
-        if (AbstractCharBoss.boss.hasPower(IntangiblePower.POWER_ID)){
-            this.intentBaseDmg = 1;
+        if (AbstractCharBoss.boss != null) {
+            if (AbstractCharBoss.boss.hasPower(IntangiblePower.POWER_ID)) {
+                this.intentBaseDmg = 1;
+            }
+            else if (!lockIntentValues) this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
         }
-        else if (!lockIntentValues) this.intentBaseDmg = this.intentDmg = Math.round(((this.damage + customIntentModifiedDamage() + manualCustomDamageModifier) * manualCustomDamageModifierMult));
 
-       // SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
+       // //SlimeboundMod.logger.info(this.name + " intent being created: damage = " + this.intentDmg);
 
-       // SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
-       // SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier * manualCustomDamageModifierMult);
+       // //SlimeboundMod.logger.info(this.name + " intent being created: custom damage = " + customIntentModifiedDamage());
+       // //SlimeboundMod.logger.info(this.name + " intent being created: custom manual damage = " + manualCustomDamageModifier * manualCustomDamageModifierMult);
 
         if ((!lockIntentValues) && this.damage > -1) {
             this.calculateCardDamage(null);
@@ -724,7 +726,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.updateIntentTip();
         this.showIntent = true;
         intentActive = true;
-        //SlimeboundMod.logger.info(this.name + " intent made.");
+        ////SlimeboundMod.logger.info(this.name + " intent made.");
     }
 
     public int customIntentModifiedDamage(){
@@ -741,7 +743,7 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.intentParticleTimer = 0F;
             this.intentBaseDmg = 0;
             this.tipIntent = null;
-            SlimeboundMod.logger.info(this.name + " intent destroyed.");
+            //SlimeboundMod.logger.info(this.name + " intent destroyed.");
         }
     }
 

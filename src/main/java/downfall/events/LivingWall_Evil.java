@@ -126,7 +126,7 @@ public class LivingWall_Evil extends AbstractImageEvent {
                         break;
                     case 3:
                         this.choice = Choice.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
 //                        MonsterGroup monsters =
                                 AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("downfall:Heads");
 //                        AbstractDungeon.getCurrRoom().monsters = monsters;

@@ -138,7 +138,7 @@ public class TechniqueTome extends AbstractImageEvent {
                 retVal.group.add(c);
             }
         }
-        SlimeboundMod.logger.info("Non Technique card count: " + retVal.group.size());
+        //SlimeboundMod.logger.info("Non Technique card count: " + retVal.group.size());
         return retVal;
     }
 }

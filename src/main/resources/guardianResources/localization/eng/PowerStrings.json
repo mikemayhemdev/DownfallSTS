@@ -131,8 +131,7 @@
     "NAME": "Mode Shift",
     "DESCRIPTIONS": [
       "When you lose #b",
-      " HP, gain #b10 #yBlock, then enter #yDefensive #yMode.",
-      "#yMode #yShift already activated this turn."
+      " HP, gain #b10 #yBlock, enter #yDefensive #yMode for 2 turns, and increase the amount required to trigger this effect again by 10."
     ]
   },
   "Guardian:ExhaustStatusesPower": {
@@ -198,11 +197,11 @@
     ]
   },
   "Guardian:DontLeaveDefensiveModePower": {
-    "NAME": "Entrenched",
+    "NAME": "Defensive Mode",
     "DESCRIPTIONS": [
-      "At the start of your next turn, don't leave #yDefensive #yMode.",
-      "At the start of your next #b",
-      " turns, don't leave #yDefensive #yMode."
+      "You will exit #yDefensive #yMode at the start of your next turn.",
+      "#yDefensive #yMode will be active for #b",
+      " more turns."
     ]
   }
 }

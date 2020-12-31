@@ -46,7 +46,7 @@ public class EnSummonMushrooms extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
-            if (!(m2 instanceof AbstractCharBoss) && !(m2 instanceof NeowBoss)) {
+            if (!m2.isDead && !m2.isDying && !(m2 instanceof AbstractCharBoss) && !(m2 instanceof NeowBoss)) {
                 this.addToBot(new VFXAction(new BiteEffect(m2.hb.cX, m2.hb.cY - 20.0F * Settings.scale, Color.SCARLET.cpy()), 0.3F));
 
                 this.addToBot(new DamageAction(m2, new DamageInfo(m, 999, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));

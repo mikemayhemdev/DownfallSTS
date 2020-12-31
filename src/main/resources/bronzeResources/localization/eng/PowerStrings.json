@@ -68,6 +68,12 @@
       " random cards with #yEncode to your hand. NL They cost #b0."
     ]
   },
+  "bronze:LibraryMod": {
+    "NAME": "External Library",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add a random card with #yEncode to your hand and give it Ethereal."
+    ]
+  },
   "bronze:BronzeHeatsink": {
     "NAME": "Bronze Heatsink",
     "DESCRIPTIONS": [

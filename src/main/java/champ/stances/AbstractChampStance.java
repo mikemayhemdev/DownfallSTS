@@ -75,7 +75,7 @@ public abstract class AbstractChampStance extends AbstractStance {
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.DARK_GRAY, true));
 
         if (AbstractDungeon.player instanceof ChampChar) {
-            SlimeboundMod.logger.info("Switchin stances to: " + this.ID);
+            //SlimeboundMod.logger.info("Switchin stances to: " + this.ID);
             //((ChampChar) AbstractDungeon.player).switchStanceVisual(this.ID);
         }
 

@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.DemonFormPower;
 import downfall.downfallMod;
 
 public class Fortification extends AbstractMonster {
@@ -47,6 +48,8 @@ public class Fortification extends AbstractMonster {
         if (AbstractCharBoss.boss != null) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, BarricadePower.POWER_ID));
             AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(AbstractCharBoss.boss, AbstractCharBoss.boss));
+            this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new DemonFormPower(AbstractCharBoss.boss, 5), 5));
+
         }
     }
 }

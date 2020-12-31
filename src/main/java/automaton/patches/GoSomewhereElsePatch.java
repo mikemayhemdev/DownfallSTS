@@ -2,20 +2,19 @@ package automaton.patches;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
-import automaton.cards.AbstractBronzeCard;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import javassist.CannotCompileException;
 import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
-import static automaton.FunctionHelper.*;
+import static automaton.FunctionHelper.cardPositions;
+import static automaton.FunctionHelper.doStuff;
 
 @SpirePatch(
         clz = UseCardAction.class,

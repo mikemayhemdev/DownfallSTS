@@ -1,6 +1,9 @@
 package guardian.characters;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
+import guardian.powers.ModeShiftPower;
 import reskinContent.reskinContent;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
@@ -161,6 +164,13 @@ public class GuardianCharacter extends CustomPlayer {
         return ImageMaster.loadImage(GuardianMod.getResourcePath("images/charSelect/leaderboard.png"));
     }
     */
+
+    @Override
+    public void preBattlePrep() {
+        super.preBattlePrep();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 20), 20));
+
+    }
 
     public void switchToOffensiveMode() {
         if (!inShattered) {

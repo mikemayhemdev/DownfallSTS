@@ -96,7 +96,7 @@ public class Augmenter_Evil extends AbstractImageEvent {
                         this.imageEventText.clearRemainingOptions();
                         break;
                     case 3:
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
 
                         AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:Augmenter");
                         AbstractDungeon.getCurrRoom().rewards.clear();

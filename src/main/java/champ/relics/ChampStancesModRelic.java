@@ -36,15 +36,15 @@ public class ChampStancesModRelic extends CustomRelic {
             int x = AbstractDungeon.cardRandomRng.random(2);
             switch (x) {
                 case 0:
-                    SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");
+                    //SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");
                         addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
                     break;
                 case 1:
-                    SlimeboundMod.logger.info("Switching to Gladiator (Mod Relic)");
+                    //SlimeboundMod.logger.info("Switching to Gladiator (Mod Relic)");
                         addToBot(new ChangeStanceAction(GladiatorStance.STANCE_ID));
                     break;
                 case 2:
-                    SlimeboundMod.logger.info("Switching to Defensive (Mod Relic)");
+                    //SlimeboundMod.logger.info("Switching to Defensive (Mod Relic)");
                         addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
                     break;
             }

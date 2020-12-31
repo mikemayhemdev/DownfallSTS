@@ -93,7 +93,7 @@ public class CharBossSilent extends AbstractCharBoss {
                     archetype = new ArchetypeAct3PoisonNewAge();
                     break;
                 case 4:
-                    SlimeboundMod.logger.info("Silent spawned at Archetype " + NeowBoss.Rezzes);
+                    //SlimeboundMod.logger.info("Silent spawned at Archetype " + NeowBoss.Rezzes);
                     {
                     switch (NeowBoss.Rezzes) {
                         case 1:
