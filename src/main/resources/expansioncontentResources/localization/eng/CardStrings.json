@@ -9,7 +9,8 @@
   },
   "expansioncontent:DefensiveMode": {
     "NAME": "Defensive Mode",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Enter guardianmod:Defensive_Mode.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode."
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Ghost Inferno",
