@@ -2,6 +2,7 @@ package sneckomod;
 
 import automaton.AutomatonMod;
 import basemod.BaseMod;
+import basemod.abstracts.CustomCard;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
@@ -13,6 +14,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.characters.CharacterManager;
 import com.megacrit.cardcrawl.characters.Ironclad;
@@ -391,7 +393,7 @@ public class SneckoMod implements
     public static String getClassFromColor(AbstractCard.CardColor c) {
         for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
             if (p.getCardColor() == c) {
-                return p.name;
+                return p.getLocalizedCharacterName();
             }
         }
         return "NOT_FOUND";
@@ -405,13 +407,25 @@ public class SneckoMod implements
         AbstractDungeon.gridSelectScreen.open(charChoices, 1, false, "Choose.");
     }
 
+    public static AbstractCard playerStartCardForEventFromColor(AbstractCard.CardColor c) {
+        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
+            if (p.getCardColor() == c) {
+                return p.getStartCardForEvent();
+            }
+        }
+        return new Madness();
+    }
+
     public static void findAWayToTriggerThisAtGameStart() {
         if (AbstractDungeon.player instanceof TheSnecko && !pureSneckoMode) {
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
                 String s = getClassFromColor(r);
-                colorChoices.addToTop(new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become" + s + " cards this run.", r));
+                CustomCard c = new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become" + s + " cards this run.", r);
+                AbstractCard q = playerStartCardForEventFromColor(r);
+                c.portrait = q.portrait;
+                colorChoices.addToTop(c);
             }
             dualClassChoice();
         }
