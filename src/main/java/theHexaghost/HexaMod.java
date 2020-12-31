@@ -19,12 +19,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.beyond.Falling;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Ghosts;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BlueCandle;
-import com.megacrit.cardcrawl.relics.DarkstonePeriapt;
-import com.megacrit.cardcrawl.relics.DuVuDoll;
+import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.scenes.TheBottomScene;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
@@ -32,16 +30,15 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.scene.InteractableTorchEffect;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
+import guardian.events.BackToBasicsGuardian;
+import guardian.patches.GuardianEnum;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import sneckomod.relics.UnknownEgg;
 import theHexaghost.cards.*;
-import theHexaghost.events.CouncilOfGhosts_Hexa;
-import theHexaghost.events.HexaFalling;
-import theHexaghost.events.SealChamber;
-import theHexaghost.events.WanderingSpecter;
+import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.BolsteringGhostflame;
 import theHexaghost.potions.BurningPotion;
@@ -444,6 +441,15 @@ public class HexaMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsHexaghost.ID, BackToBasicsHexaghost.class) //Event ID//
+                //Event Character//
+                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
     }
 
     public static boolean canGetCurseRelic() {
@@ -451,11 +457,14 @@ public class HexaMod implements
         possRelicsList.add(BlueCandle.ID);
         possRelicsList.add(DarkstonePeriapt.ID);
         possRelicsList.add(DuVuDoll.ID);
+        possRelicsList.add(CursedKey.ID);
+        possRelicsList.add(CallingBell.ID);
+        possRelicsList.add(Omamori.ID);
 
         for (AbstractRelic q : AbstractDungeon.player.relics) {
             possRelicsList.removeIf(q.relicId::equals);
         }
 
-        return possRelicsList.isEmpty();
+        return !possRelicsList.isEmpty();
     }
 }

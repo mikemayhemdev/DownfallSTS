@@ -103,7 +103,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
                         AbstractDungeon.gridSelectScreen.open(
                                 com.megacrit.cardcrawl.cards.CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck
-                                        .getPurgeableCards()), 2, OPTIONS[2], false, false, false, false);
+                                        .getPurgeableCards()), 3, OPTIONS[2], false, false, false, false);
 
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);

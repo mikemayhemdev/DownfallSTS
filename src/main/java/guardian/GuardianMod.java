@@ -8,6 +8,8 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.events.BackToBasicsChamp;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -20,6 +22,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
 import com.megacrit.cardcrawl.events.shrines.PurificationShrine;
 import com.megacrit.cardcrawl.events.shrines.Transmogrifier;
@@ -977,6 +980,18 @@ public static void saveData() {
                 .playerClass(GuardianEnum.GUARDIAN)
                 //Existing Event to Override//
                 .overrideEvent(UpgradeShrine.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+
+
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGuardian.ID, BackToBasicsGuardian.class) //Event ID//
+                //Event Character//
+                .playerClass(GuardianEnum.GUARDIAN)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
