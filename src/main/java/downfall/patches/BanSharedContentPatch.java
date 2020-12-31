@@ -95,12 +95,12 @@ public class BanSharedContentPatch {
                     AbstractDungeon.colorlessCardPool.removeCard(GuardianWhirl.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(DefensiveMode.ID);
                 }
-                if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.guardianLocked()) {
+                if (AbstractDungeon.player instanceof ChampChar || RandomCardWithTagAction.champLocked()) {
                     AbstractDungeon.colorlessCardPool.removeCard(FaceSlap.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(DefensiveStance.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(LastStand.ID);
                 }
-                if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.guardianLocked()) {
+                if (AbstractDungeon.player instanceof AutomatonChar || RandomCardWithTagAction.autoLocked()) {
                     AbstractDungeon.colorlessCardPool.removeCard(Flail.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(BronzeBeam.ID);
                     AbstractDungeon.colorlessCardPool.removeCard(HyperBeam.ID);
