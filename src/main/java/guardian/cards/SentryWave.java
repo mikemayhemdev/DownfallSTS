@@ -73,7 +73,7 @@ public class SentryWave extends AbstractGuardianCard {
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
 
-        if (upgraded) brace(3);
+        if (upgraded) brace(2);
 
         if (AbstractDungeon.player.hasEmptyOrb()) {
 

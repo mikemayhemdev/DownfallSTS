@@ -48,7 +48,7 @@ public class StasisField extends AbstractGuardianCard {
         this.baseBlock = BLOCK;
 
         this.socketCount = SOCKETS;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 1;
         this.tags.add(GuardianMod.SELFSTASIS);
         updateDescription();
         loadGemMisc();

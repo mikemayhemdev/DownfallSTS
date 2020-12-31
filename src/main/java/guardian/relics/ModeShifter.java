@@ -28,7 +28,7 @@ public class ModeShifter extends CustomRelic {
     public void atTurnStart() {
         super.atTurnStart();
         if (AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)){
-            ((ModeShiftPower)AbstractDungeon.player.getPower(ModeShiftPower.POWER_ID)).onSpecificTrigger(4);
+            ((ModeShiftPower)AbstractDungeon.player.getPower(ModeShiftPower.POWER_ID)).onSpecificTrigger(2);
 
         }
     }

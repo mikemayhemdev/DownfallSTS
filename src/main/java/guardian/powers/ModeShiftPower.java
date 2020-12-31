@@ -16,7 +16,7 @@ import guardian.stances.DefensiveMode;
 public class ModeShiftPower extends AbstractGuardianPower {
     public static final String POWER_ID = "Guardian:ModeShiftPower";
     private static final int STARTINGAMOUNT = 20;
-    private static final int AMOUNTGAINPERACTIVATION = 5;
+    private static final int AMOUNTGAINPERACTIVATION = 10;
     private static final int BLOCKONTRIGGER = 8;
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;

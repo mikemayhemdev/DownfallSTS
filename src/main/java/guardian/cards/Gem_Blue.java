@@ -56,7 +56,7 @@ public class Gem_Blue extends AbstractGuardianCard {
     }
 
     public static void gemEffect(AbstractPlayer p, AbstractMonster m) {
-        brace(5);
+        brace(2);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

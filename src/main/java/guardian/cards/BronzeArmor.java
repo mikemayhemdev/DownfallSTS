@@ -55,7 +55,7 @@ public class BronzeArmor extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
-        brace(15);
+        brace(10);
     }
 
     public AbstractCard makeCopy() {

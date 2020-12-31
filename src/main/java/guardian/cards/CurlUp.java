@@ -48,7 +48,7 @@ public class CurlUp extends AbstractGuardianCard {
         this.baseBlock = BLOCK;
         this.multihit = MULTICOUNT;
         this.socketCount = SOCKETS;
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 5;
         updateDescription();
         loadGemMisc();
     }
@@ -72,7 +72,7 @@ public class CurlUp extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(3);
+            upgradeMagicNumber(2);
             upgradeBlock(3);
 
             this.updateDescription();

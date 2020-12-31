@@ -92,7 +92,7 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "Bronze Armor",
-    "DESCRIPTION": "Gain !M! Artifact. NL guardianmod:Brace 15. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Artifact. NL guardianmod:Brace 10. NL Exhaust."
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Floating Orbs",
@@ -132,7 +132,7 @@
   "Guardian:SentryWave": {
     "NAME": "Sentry Wave",
     "DESCRIPTION": "Apply !M! Weak. NL Place a Sentry Beam into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL guardianmod:Brace 3. NL Place a Sentry Beam+ into guardianmod:Stasis. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak. NL guardianmod:Brace 2. NL Place a Sentry Beam+ into guardianmod:Stasis. NL Exhaust."
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
@@ -258,11 +258,11 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Piercing Hide",
-    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns. NL guardianmod:Brace 5."
+    "DESCRIPTION": "Gain !B! Block and !M! temporary Thorns. NL guardianmod:Brace 3."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Shield Spikes",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if in guardianmod:Defensive_Mode. Otherwise, guardianmod:Brace 7."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! temporary Thorns if in guardianmod:Defensive_Mode. Otherwise, guardianmod:Brace 5."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Spray",
@@ -351,8 +351,8 @@
   },
   "Guardian:Gem_Blue": {
     "NAME": "Sapphire",
-    "DESCRIPTION": "guardianmod:Gem. NL guardianmod:Brace 5.",
-    "UPGRADE_DESCRIPTION": "guardianmod:Brace 5."
+    "DESCRIPTION": "guardianmod:Gem. NL guardianmod:Brace 2.",
+    "UPGRADE_DESCRIPTION": "guardianmod:Brace 2."
   },
   "Guardian:Gem_Fragmented": {
     "NAME": "Fragmented Gem",
@@ -386,7 +386,7 @@
   },
   "Guardian:ShieldCharger": {
     "NAME": "Shield Charger",
-    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - guardianmod:Brace 3, then Gain !B! Block and [E]. NL guardianmod:Volatile."
+    "DESCRIPTION": "Place this card into guardianmod:Stasis. NL guardianmod:Tick - guardianmod:Brace 2, then Gain !B! Block and [E]. NL guardianmod:Volatile."
   },
   "Guardian:StasisEngine": {
     "NAME": "Stasis Engine",

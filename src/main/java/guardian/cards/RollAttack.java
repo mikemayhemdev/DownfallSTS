@@ -67,7 +67,7 @@ public class RollAttack extends AbstractGuardianCard {
         } else {
             //this.isMultiDamage = false;
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-            brace(7);
+            brace(5);
         }
         this.useGems(p, m);
     }

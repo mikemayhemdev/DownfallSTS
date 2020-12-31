@@ -3,7 +3,7 @@
     "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yBrace 4."
+      "At the start of your turn, #yBrace 2."
     ]
   },
   "Guardian:ModeShifterPlus": {

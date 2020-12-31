@@ -118,7 +118,7 @@ public class DefensiveMode extends AbstractStance {
 
         if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {
             AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 2));
         } else
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));// 49
     }// 50
