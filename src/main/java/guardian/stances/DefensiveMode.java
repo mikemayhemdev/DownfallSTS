@@ -118,14 +118,19 @@ public class DefensiveMode extends AbstractStance {
 
     }
 
+    //TODO - Bounce DontLeaveDefensiveMode if you manually exit it
+    //TODO - Brace should automatically apply ModeShiftPower (for Prismatic purposes)
+
     @Override
     public void onEndOfTurn() {
-        if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
-            AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID));
+        if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {
+            if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
+                AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID));
+            }
         }
     }
 

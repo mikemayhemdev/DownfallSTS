@@ -82,7 +82,7 @@ public class PurificationShrineEvil extends com.megacrit.cardcrawl.events.Abstra
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         AbstractDungeon.gridSelectScreen.open(
                                 com.megacrit.cardcrawl.cards.CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck
-                                        .getPurgeableCards()), 2, OPTIONS[2], false, false, false, true);
+                                        .getPurgeableCards()), 3, OPTIONS[2], false, false, false, true);
 
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);

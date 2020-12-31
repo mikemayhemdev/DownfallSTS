@@ -89,5 +89,15 @@
       "[Fight]",
       "[Leave]"
     ]
+  },
+  "Slimebound:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "When one sheep leads the way, all the rest follow."
+    ],
+    "OPTIONS": [
+      "[Inspiration] #gAdd #gCommand to all #gStrikes and #gDefends.",
+      "[Locked] Requires a Strike or Defend."
+    ]
   }
 }

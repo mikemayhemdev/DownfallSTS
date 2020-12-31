@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,6 +31,8 @@ import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import downfall.cards.curses.Icky;
 import downfall.downfallMod;
 import expansioncontent.relics.StudyCardRelic;
+import guardian.events.BackToBasicsGuardian;
+import guardian.patches.GuardianEnum;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.actions.SlimeSpawnAction;
@@ -676,6 +679,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 //Only in Evil if content sharing is disabled
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
+
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class) //Event ID//
                 //Event Character//
                 .playerClass(SlimeboundEnum.SLIMEBOUND)
@@ -703,6 +707,17 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 .dungeonIDs(TheBeyond.ID)
                 //Additional Condition//
                 .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter))
+                .create());
+
+
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSlime.ID, BackToBasicsSlime.class) //Event ID//
+                //Event Character//
+                .playerClass(SlimeboundEnum.SLIMEBOUND)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
         /*
