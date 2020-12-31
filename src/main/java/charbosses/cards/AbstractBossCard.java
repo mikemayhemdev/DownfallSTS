@@ -163,7 +163,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         int value = 0;
         if (this.type == CardType.STATUS) {
             value += -10;
-        } else if (this.type == CardType.CURSE) {
+        } else if (this.type == CardType.CURSE && this.costForTurn < -1) {
             value += -100;
         }
 
@@ -364,7 +364,7 @@ public abstract class AbstractBossCard extends AbstractCard {
                 return true;
             }
 
-            if (this.type == CardType.CURSE) return false;
+            if (this.type == CardType.CURSE && this.costForTurn < -1) return false;
             if (this.type == CardType.STATUS) return false;
 
             if ((cardPlayable(m)) && (hasEnoughEnergy())) {

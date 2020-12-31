@@ -12,24 +12,24 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 
 public class EnIcky extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Icky";
     private static final CardStrings cardStrings;
-    public static final String IMG_PATH = "cards/icky.png";
+    public static final String IMG_PATH = downfallMod.assetPath("images/cards/icky.png");
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Slimebound:Icky");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("downfall:Icky");
     }
 
     public EnIcky() {
-        super(ID, cardStrings.NAME, SlimeboundMod.getResourcePath(IMG_PATH), 1, cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
         this.exhaust = true;
-        portrait = TextureLoader.getTextureAsAtlasRegion(SlimeboundMod.getResourcePath(IMG_PATH));
-        portraitImg = TextureLoader.getTexture(SlimeboundMod.getResourcePath(IMG_PATH));
-
+        portrait = TextureLoader.getTextureAsAtlasRegion(IMG_PATH);
+        portraitImg = TextureLoader.getTexture(IMG_PATH);
     }
 
     @Override

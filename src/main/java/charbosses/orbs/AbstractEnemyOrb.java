@@ -87,7 +87,6 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
 
     public void applyFocus() {
         if (AbstractCharBoss.boss.hasPower(FocusPower.POWER_ID)){
-
             AbstractPower power = AbstractCharBoss.boss.getPower(FocusPower.POWER_ID);
             this.passiveAmount = Math.max(0, this.basePassiveAmount + power.amount + pretendFocus);
             this.evokeAmount = Math.max(0, this.baseEvokeAmount + power.amount + pretendFocus);
@@ -95,6 +94,19 @@ public abstract class AbstractEnemyOrb extends AbstractOrb {
         else {
             this.passiveAmount = this.basePassiveAmount + pretendFocus;
             this.evokeAmount = this.baseEvokeAmount + pretendFocus;
+        }
+    }
+
+    //TODO: Make work
+    public void applyLockOn() {
+        if (AbstractDungeon.player.hasPower("Lockon")) {
+            if (this.ID.equals("Lightning")) {
+                this.passiveAmount = Math.max(0, (int) Math.floor(this.passiveAmount * 1.5));
+                this.evokeAmount = Math.max(0, (int) Math.floor(this.evokeAmount * 1.5));
+            }
+            if (this.ID.equals("Dark")) {
+                this.evokeAmount = Math.max(0, (int) Math.floor(this.evokeAmount * 1.5));
+            }
         }
     }
 

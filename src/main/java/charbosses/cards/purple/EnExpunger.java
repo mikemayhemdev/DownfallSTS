@@ -1,5 +1,6 @@
 package charbosses.cards.purple;
 
+import charbosses.actions.unique.EnemyExpungeVFXAction;
 import charbosses.cards.AbstractBossCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -32,11 +33,11 @@ public class EnExpunger extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        this.addToBot(new ExpungeVFXAction(m));
+        this.addToBot(new EnemyExpungeVFXAction(p));
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        this.addToBot(new ExpungeVFXAction(m));
+        this.addToBot(new EnemyExpungeVFXAction(p));
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
-        this.addToBot(new ExpungeVFXAction(m));
+        this.addToBot(new EnemyExpungeVFXAction(p));
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
     }
 

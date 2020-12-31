@@ -1,13 +1,16 @@
 package charbosses.bosses.Defect;
 
-import charbosses.BossMechanicDisplayPanel;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Defect.NewAge.ArchetypeAct1StreamlineNewAge;
+import charbosses.bosses.Defect.NewAge.ArchetypeAct1TurboNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.powers.DefectCuriosityPower;
+import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -17,6 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import guardian.powers.ConstructPower;
 import slimebound.SlimeboundMod;
 
 public class CharBossDefect extends AbstractCharBoss {
@@ -47,13 +51,13 @@ public class CharBossDefect extends AbstractCharBoss {
         AbstractBossDeckArchetype archetype;
 
         if (downfallMod.overrideBossDifficulty) {
-            archetype = new ArchetypeAct1StreamlineNewAge();
+            archetype = new ArchetypeAct1TurboNewAge();
             this.currentHealth -= 100;
             downfallMod.overrideBossDifficulty = false;
         } else
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1StreamlineNewAge();
+                    archetype = new ArchetypeAct1TurboNewAge();
                     break;
                 case 2:
                     archetype = new ArchetypeAct2ClawNewAge();
@@ -66,7 +70,7 @@ public class CharBossDefect extends AbstractCharBoss {
                     switch (NeowBoss.Rezzes) {
 
                         case 1:
-                            archetype = new ArchetypeAct1StreamlineNewAge();
+                            archetype = new ArchetypeAct1TurboNewAge();
                             break;
                         case 2:
                             archetype = new ArchetypeAct2ClawNewAge();
@@ -81,7 +85,7 @@ public class CharBossDefect extends AbstractCharBoss {
                     break;
                 }
                 default:
-                    archetype = new ArchetypeAct1StreamlineNewAge();
+                    archetype = new ArchetypeAct1TurboNewAge();
                     break;
             }
 
