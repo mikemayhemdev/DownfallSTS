@@ -51,11 +51,13 @@
   },
   "Guardian:DonusPower": {
     "NAME": "Ancient Attack",
-    "DESCRIPTION": "Gain 1 Artifact. NL Add a random Attack card to your hand. It costs 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Strength and 1 Artifact. NL Add a random Attack card to your hand. It costs 1 less this combat. NL Exhaust."
   },
   "Guardian:DecasProtection": {
     "NAME": "Ancient Power",
-    "DESCRIPTION": "Gain 1 Artifact. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust."
+    "DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Dexterity and 1 Artifact. NL Add a random Power card to your hand. It costs 1 less this combat. NL Exhaust."
   },
   "Guardian:FierceBash": {
     "NAME": "Fierce Bash",
