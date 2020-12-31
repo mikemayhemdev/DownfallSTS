@@ -66,8 +66,7 @@ public class SneckoMod implements
         //EditKeywordsSubscriber,
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber,
-        StartGameSubscriber {
+        PostInitializeSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -375,8 +374,7 @@ public class SneckoMod implements
 
     public static CardGroup colorChoices;
 
-    @Override
-    public void receiveStartGame() {
+    public void findAWayToTriggerThisAtGameStart() {
         if (AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO) {
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
@@ -387,5 +385,4 @@ public class SneckoMod implements
             AbstractDungeon.gridSelectScreen.open(colorChoices, 1, false, "Choose."); //TODO: Localize all of this
         }
     }
-
 }
