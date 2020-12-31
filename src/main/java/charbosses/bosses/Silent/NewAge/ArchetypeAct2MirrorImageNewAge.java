@@ -41,7 +41,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
         addRelic(new CBR_NeowsBlessing());
         // addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_Ginger());
+        addRelic(new CBR_BagOfMarbles());
         addRelic(new CBR_Anchor());
         addRelic(new CBR_PaperKrane());
         // addRelic(new CBR_DreamCatcher());
