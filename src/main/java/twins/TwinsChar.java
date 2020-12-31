@@ -15,9 +15,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import twins.cards.DecaCard;
+import twins.cards.Swapper;
+import twins.cards.SharpStrike;
 import twins.cards.Defend;
-import twins.cards.DonuCard;
 import twins.cards.Strike;
 import twins.relics.Rings;
 
@@ -115,8 +115,8 @@ public class TwinsChar extends CustomPlayer {
         for (int i = 0; i < 4; i++) {
             retVal.add(Defend.ID);
         }
-        retVal.add(DonuCard.ID);
-        retVal.add(DecaCard.ID);
+        retVal.add(Swapper.ID);
+        retVal.add(SharpStrike.ID);
         return retVal;
     }
 

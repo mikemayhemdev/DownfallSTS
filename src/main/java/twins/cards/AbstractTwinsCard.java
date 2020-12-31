@@ -15,7 +15,6 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import twins.TwinsChar;
 import twins.TwinsHelper;
-import twins.actions.FireFromPileAction;
 
 import java.util.ArrayList;
 
@@ -29,8 +28,6 @@ public abstract class AbstractTwinsCard extends CustomCard {
     protected String DESCRIPTION;
     protected String UPGRADE_DESCRIPTION;
     protected String[] EXTENDED_DESCRIPTION;
-
-    public boolean inFire = false;
 
     public AbstractTwinsCard(final String id, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         super(id, "ERROR", getCorrectPlaceholderImage(type, id),
@@ -160,22 +157,5 @@ public abstract class AbstractTwinsCard extends CustomCard {
 
     VulnerablePower autoVuln(AbstractMonster m, int i) {
         return new VulnerablePower(m, i, false);
-    }
-
-    void fireLeader() {
-        if (TwinsHelper.donuInFront) {
-            atb(new FireFromPileAction(TwinsHelper.donuCards, 1));
-        } else {
-            atb(new FireFromPileAction(TwinsHelper.decaCards, 1));
-        }
-    }
-
-    @java.lang.Override
-    public AbstractCard makeStatEquivalentCopy() {
-        AbstractCard q = super.makeStatEquivalentCopy();
-        if (q instanceof AbstractTwinsCard) {
-            ((AbstractTwinsCard) q).inFire = this.inFire;
-        }
-        return q;
     }
 }

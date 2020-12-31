@@ -1,10 +1,16 @@
 [
   {
-    "PROPER_NAME": "Blaster",
+    "PROPER_NAME": "Call",
     "NAMES": [
-      "blaster",
-      "blasters"
+      "call"
     ],
-    "DESCRIPTION": "After play, moves to the Blasters pile."
+    "DESCRIPTION": "Return the top card from a specified pile into your hand."
+  },
+  {
+    "PROPER_NAME": "Store",
+    "NAMES": [
+      "store"
+    ],
+    "DESCRIPTION": "Move into a specific Shape's pile."
   }
 ]

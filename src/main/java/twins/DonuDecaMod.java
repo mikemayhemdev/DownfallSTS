@@ -14,6 +14,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import twins.relics.Rings;
 import twins.util.CardFilter;
 
 import java.io.File;
@@ -159,8 +160,7 @@ public class DonuDecaMod implements
 
     @Override
     public void receiveEditRelics() {
-        //TODO: This
-
+        BaseMod.addRelicToCustomPool(new Rings(), TwinsChar.Enums.TWINS_BLORANGE);
     }
 
 

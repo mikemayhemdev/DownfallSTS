@@ -1,9 +1,9 @@
 {
-  "bronze:BronzeBoon": {
-    "NAME": "Bronze Generator",
-    "FLAVOR": "Replace once every 50,000 years.",
+  "twins:Rings": {
+    "NAME": "Rings",
+    "FLAVOR": "What in the world could these do?",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of turn #b2."
+      "No apparent effect. #pPurple #pText."
     ]
   }
 }

@@ -21,8 +21,5 @@ public class TriggerFlamesPatch {
         if (abstractCard.hasTag(expansionContentMod.STUDY)) {
             downfallMod.playedBossCardThisTurn = true;
         }
-        if (abstractCard instanceof AbstractTwinsCard) {
-            ((AbstractTwinsCard) abstractCard).inFire = false;
-        }
     }
 }
