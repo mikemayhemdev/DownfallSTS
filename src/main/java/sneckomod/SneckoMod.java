@@ -3,6 +3,7 @@ package sneckomod;
 import automaton.AutomatonMod;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
+import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
@@ -16,8 +17,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.characters.CharacterManager;
-import com.megacrit.cardcrawl.characters.Ironclad;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -26,7 +25,6 @@ import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.sun.javafx.webkit.ThemeClientImpl;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
@@ -74,7 +72,8 @@ public class SneckoMod implements
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        StartGameSubscriber {
+        StartGameSubscriber,
+        CustomSavable<ArrayList<AbstractCard.CardColor>> {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -429,5 +428,15 @@ public class SneckoMod implements
             }
             dualClassChoice();
         }
+    }
+
+    @Override
+    public ArrayList<AbstractCard.CardColor> onSave() {
+        return validColors;
+    }
+
+    @Override
+    public void onLoad(ArrayList<AbstractCard.CardColor> cardColors) {
+        validColors.addAll(cardColors);
     }
 }
