@@ -1,36 +1,7 @@
 {
-  "champ:SealCommonReward": {
+  "collector:CollectionReward": {
     "TEXT": [
-      "Add a Common card to your deck"
-    ]
-  },
-  "champ:SealSealReward": {
-    "TEXT": [
-      "Add a Seal to your deck"
-    ]
-  },
-  "champ:TechniqueMod": {
-    "TEXT": [
-      "champ:Technique. NL "
-    ]
-  },
-  "champ:OpenerMod": {
-    "TEXT": [
-      "Enter champ:Berserker NL ",
-      "Enter champ:Defensive NL ",
-      "Enter champ:Gladiator NL "
-    ]
-  },
-  "champ:RetainCardMod": {
-    "TEXT": [
-      "Retain. NL "
-    ]
-  },
-  "champ:EnchantUI": {
-    "TEXT": [
-      "Choose a card to cost 0.",
-      "Choose a card to increase damage.",
-      "Choose a card to increase Block."
+      "Choose a card to Collect."
     ]
   }
 }

@@ -1,4 +1,4 @@
-package collector.Actions;
+package collector.actions;
 
 import collector.CollectorMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

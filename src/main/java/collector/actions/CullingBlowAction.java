@@ -1,7 +1,10 @@
-package collector.Actions;
+package collector.actions;
 
-import collector.CollectorMod;
+import collector.CollectorCollection;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -9,15 +12,17 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class SoulHarvestAction extends AbstractGameAction {
+public class CullingBlowAction extends AbstractGameAction {
     private int increaseAmount;
     private DamageInfo info;
     public int[] damage;
     public int threshold;
-    public SoulHarvestAction(AbstractCreature target, int[] amount, int threshold) {
+    public CullingBlowAction(AbstractCreature target, int[] amount, int threshold) {
         this.damage = amount;
+        this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;
         this.threshold = threshold;
         this.duration = 0.1F;
@@ -51,10 +56,12 @@ public class SoulHarvestAction extends AbstractGameAction {
 
             for(i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); ++i) {
                 AbstractMonster target = (AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
-                if (!target.isDying && target.currentHealth > 0 && !target.isEscaping) {
+                if (!target.isDying && target.currentHealth > threshold && !target.isEscaping) {
                     target.damage(new DamageInfo(this.source, this.damage[i], this.damageType));
-                    if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead) {
-                        CollectorMod.GetCollectible(target);
+                    if ((this.target.isDying || this.target.currentHealth <= threshold) && !this.target.halfDead) {
+                        CollectorCollection.GetCollectible(target);
+                        addToBot(new VFXAction(new BiteEffect(target.drawX,target.drawY, Color.DARK_GRAY.cpy())));
+                        addToBot(new LoseHPAction(target,target,target.currentHealth));
                     }
                 }
             }

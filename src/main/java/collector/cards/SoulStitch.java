@@ -11,7 +11,7 @@ public class SoulStitch extends AbstractCollectorCard {
     public SoulStitch() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 6;
-        baseMagicNumber = 2;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override

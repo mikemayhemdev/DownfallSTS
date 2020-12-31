@@ -1,6 +1,6 @@
 package collector.cards;
 
-import collector.Actions.HellfireAction;
+import collector.actions.HellfireAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

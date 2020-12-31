@@ -1,6 +1,6 @@
 package collector.cards;
 
-import collector.Actions.CullingBlowAction;
+import collector.actions.CullingBlowAction;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

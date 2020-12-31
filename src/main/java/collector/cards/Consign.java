@@ -1,6 +1,6 @@
 package collector.cards;
 
-import collector.Actions.ConsignAction;
+import collector.actions.ConsignAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

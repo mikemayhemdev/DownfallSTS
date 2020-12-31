@@ -1,12 +1,12 @@
 package collector.cards;
 
-import collector.CollectorChar;
 import collector.CollectorCollection;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.ArrayList;
 
 public class Contemplate extends AbstractCollectorCard {
     public final static String ID = makeID("Contemplate");
@@ -17,13 +17,14 @@ public class Contemplate extends AbstractCollectorCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsAction(CollectorCollection.Collection.group, 3,CollectorChar.characterStrings.TEXT[3],false,null,
-                c -> {
-                    for (AbstractCard card : c) {
-                        AbstractDungeon.player.hand.addToBottom(card);
-                        CollectorCollection.Collection.removeCard(card);
-                    }
-                }));
+        ArrayList<AbstractCard> possCardsList = new ArrayList<>();
+        CollectorCollection.combatCollection.shuffle();
+        for (int i = 0; i < 3; i++) {
+            possCardsList.add(CollectorCollection.combatCollection.group.get(i));
+        }
+        atb(new SelectCardsAction(possCardsList, 1, "Choose.", (cards) -> {
+            CollectorCollection.combatCollection.moveToHand(cards.get(0));
+        }));
     }
 
     @Override

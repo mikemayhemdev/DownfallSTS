@@ -44,7 +44,7 @@ public class SoulSnare extends AbstractPower implements CloneablePowerInterface,
     @Override
     public boolean betterOnApplyPower(AbstractPower abstractPower, AbstractCreature abstractCreature, AbstractCreature abstractCreature1) {
 
-        if (CollectorMod.AfflicitonMatch(abstractPower.ID)){
+        if (CollectorMod.AfflictionMatch(abstractPower.ID)){
             this.amount += 1;
             if (abstractPower.ID.equals(this.ID)){
                 addToBot(new LoseHPAction(owner,owner,this.amount));
