@@ -93,6 +93,7 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
 
     public static ArrayList<AbstractCard.CardColor> validColors;
+    public static boolean pureSneckoMode = false;
 
     private static String modID;
     private static ArrayList<AbstractCard> statuses = new ArrayList<>();
