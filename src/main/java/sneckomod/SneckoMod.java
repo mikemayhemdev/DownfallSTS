@@ -13,6 +13,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.characters.CharacterManager;
+import com.megacrit.cardcrawl.characters.Ironclad;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
@@ -20,6 +24,7 @@ import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.sun.javafx.webkit.ThemeClientImpl;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
@@ -383,15 +388,32 @@ public class SneckoMod implements
 
     public static CardGroup colorChoices;
 
+    public static String getClassFromColor(AbstractCard.CardColor c) {
+        for (AbstractPlayer p : CardCrawlGame.characterManager.getAllCharacters()) {
+            if (p.getCardColor() == c) {
+                return p.name;
+            }
+        }
+        return "NOT_FOUND";
+    }
+
+    public static void dualClassChoice() {
+        colorChoices.shuffle();
+        CardGroup charChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        charChoices.addToTop(colorChoices.getTopCard());
+        charChoices.addToTop(colorChoices.getNCardFromTop(1));
+        AbstractDungeon.gridSelectScreen.open(charChoices, 1, false, "Choose.");
+    }
+
     public static void findAWayToTriggerThisAtGameStart() {
         if (AbstractDungeon.player instanceof TheSnecko && !pureSneckoMode) {
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
-                colorChoices.addToTop(new OctoChoiceCard("UNVERIFIED", r.name().toLowerCase() + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become" + r.name().toLowerCase() + " cards this run.", r));
+                String s = getClassFromColor(r);
+                colorChoices.addToTop(new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become" + s + " cards this run.", r));
             }
-            colorChoices.shuffle();
-            AbstractDungeon.gridSelectScreen.open(colorChoices, 1, false, "Choose."); //TODO: Localize all of this
+            dualClassChoice();
         }
     }
 }

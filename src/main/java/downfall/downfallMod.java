@@ -1077,9 +1077,8 @@ public class downfallMod implements
             if (SneckoMod.choosingCharacters == 2) {
                 AbstractDungeon.srcCommonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
             } else {
-                SneckoMod.colorChoices.shuffle();
                 SneckoMod.choosingCharacters += 1;
-                AbstractDungeon.gridSelectScreen.open(SneckoMod.colorChoices, 1, false, "Choose."); //TODO: Localize
+                SneckoMod.dualClassChoice();
             }
         }
     }
