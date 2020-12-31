@@ -33,6 +33,7 @@ import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -153,10 +154,7 @@ public class HeartEvent extends AbstractEvent {
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
 
-        Iterator var4 = this.rewards.iterator();
-
-        while (var4.hasNext()) {
-            HeartReward r = (HeartReward) var4.next();
+        for (HeartReward r : this.rewards) {
             r.update();
         }
 
