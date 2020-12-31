@@ -1,5 +1,6 @@
 package automaton;
 
+import automaton.cards.Terminator;
 import automaton.cards.*;
 import automaton.cards.goodstatus.*;
 import automaton.events.*;
@@ -17,9 +18,6 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampChar;
-import champ.cards.*;
-import champ.relics.*;
 import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -45,7 +43,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.patches.BottledD8Patch;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -342,8 +339,7 @@ public class AutomatonMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        if (AbstractDungeon.player instanceof AutomatonChar)
-            FunctionHelper.init();
+        FunctionHelper.init();
     }
 
     @Override
@@ -370,8 +366,7 @@ public class AutomatonMod implements
             if (AbstractDungeon.player.hasRelic(ElectromagneticCoil.ID)) {
                 FunctionHelper.max += 1;
             }
-        }
-        else {
+        } else {
             FunctionHelper.max = 3;
         }
     }
