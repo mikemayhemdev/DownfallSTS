@@ -388,7 +388,7 @@ public class SneckoMod implements
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
-                colorChoices.addToTop(new OctoChoiceCard("UNVERIFIED", r.name() + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Add " + r.name() + " cards to this Snecko draft.", r));
+                colorChoices.addToTop(new OctoChoiceCard("UNVERIFIED", r.name().toLowerCase() + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become" + r.name().toLowerCase() + " cards this run.", r));
             }
             colorChoices.shuffle();
             AbstractDungeon.gridSelectScreen.open(colorChoices, 1, false, "Choose."); //TODO: Localize all of this
