@@ -1031,8 +1031,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             if (!(this instanceof CharBossMerchant)) {
                 if (NeowBoss.neowboss != null) {
                     if (NeowBoss.neowboss.minion == null) {
-                        SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
-                        onBossVictoryLogic();
+                        if (Settings.FAST_MODE) {
+                            this.deathTimer += 0.7F;
+                        } else {
+                            ++this.deathTimer;
+                        }
                     }
                 } else {
                     SlimeboundMod.logger.info("Char boss On Boss Victory now playing");
