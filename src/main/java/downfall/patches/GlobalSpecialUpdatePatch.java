@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
+import twins.TwinsHelper;
 
 @SpirePatch(
         clz = EnergyPanel.class,
@@ -17,5 +18,7 @@ public class GlobalSpecialUpdatePatch {
         }
         if (StanceHelper.hitboxStance == null) StanceHelper.init();
         StanceHelper.update();
+        if (TwinsHelper.nullCheck())
+            TwinsHelper.update();
     }
 }

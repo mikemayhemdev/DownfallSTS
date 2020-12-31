@@ -10,6 +10,9 @@ public class TwinsHelper {
     public static float BACK_CARDS_LOCATION = Settings.WIDTH / 2F;
     public static float FRONT_CARDS_LOCATION = Settings.WIDTH / 4F;
 
+    public static float BACK_CARDS_OPACITY = 1F;
+    public static float FRONT_CARDS_OPACITY = 0.3F;
+
     public static boolean donuInFront = false; // This is how to see if Donu or Deca is in front.
 
     public static CardGroup donuCards;
@@ -34,6 +37,10 @@ public class TwinsHelper {
         decaCards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
     }
 
+    public static boolean nullCheck() {
+        return donuCards != null && decaCards != null;
+    }
+
     public static void update() {
         if (!donuCards.isEmpty()) {
             donuCards.getTopCard().update();
@@ -46,14 +53,18 @@ public class TwinsHelper {
     }
 
     public static void swap() {
-        if (!getFrontCardGroup().isEmpty())
+        if (!getFrontCardGroup().isEmpty()) {
             getFrontCardGroup().getTopCard().target_x = BACK_CARDS_LOCATION;
-        if (!getBackCardGroup().isEmpty())
+            getFrontCardGroup().getTopCard().targetTransparency = BACK_CARDS_OPACITY;
+        }
+        if (!getBackCardGroup().isEmpty()) {
             getBackCardGroup().getTopCard().target_x = FRONT_CARDS_LOCATION;
+            getBackCardGroup().getTopCard().targetTransparency = FRONT_CARDS_OPACITY;
+        }
         donuInFront = !donuInFront;
     }
 
-    public void render(SpriteBatch sb) {
+    public static void render(SpriteBatch sb) {
         sb.setColor(Color.WHITE);
         if (!donuCards.isEmpty())
             donuCards.getTopCard().render(sb);

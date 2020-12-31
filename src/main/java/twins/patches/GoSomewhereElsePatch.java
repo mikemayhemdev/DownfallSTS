@@ -36,6 +36,13 @@ public class GoSomewhereElsePatch {
             return true;
         }
         if (card.hasTag(DonuDecaMod.DONU_CARD)) {
+            if (TwinsHelper.donuInFront) {
+                card.target_x = TwinsHelper.FRONT_CARDS_LOCATION;
+                card.targetTransparency = TwinsHelper.FRONT_CARDS_OPACITY;
+            } else {
+                card.target_x = TwinsHelper.BACK_CARDS_LOCATION;
+                card.targetTransparency = TwinsHelper.BACK_CARDS_OPACITY;
+            }
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override
@@ -47,6 +54,13 @@ public class GoSomewhereElsePatch {
             });
             return false;
         } else if (card.hasTag(DonuDecaMod.DECA_CARD)) {
+            if (!TwinsHelper.donuInFront) {
+                card.target_x = TwinsHelper.FRONT_CARDS_LOCATION;
+                card.targetTransparency = TwinsHelper.FRONT_CARDS_OPACITY;
+            } else {
+                card.target_x = TwinsHelper.BACK_CARDS_LOCATION;
+                card.targetTransparency = TwinsHelper.BACK_CARDS_OPACITY;
+            }
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override

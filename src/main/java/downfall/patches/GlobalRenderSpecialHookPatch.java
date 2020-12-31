@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import theHexaghost.HexaMod;
+import twins.TwinsHelper;
 
 @SpirePatch(
         clz = AbstractPlayer.class,
@@ -19,5 +20,7 @@ public class GlobalRenderSpecialHookPatch {
             HexaMod.renderGhostflames(sb);
         }
         StanceHelper.render(sb);
+        if (TwinsHelper.nullCheck())
+            TwinsHelper.render(sb);
     }
 }
