@@ -84,7 +84,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 if (!c.canUpgrade()) validCard = false;
                 if (validCard) q.upgrade();
             }
-            if (funkyPredicate.test(q)) {
+            if (funkyPredicate.test(q) && SneckoMod.validColors.contains(q.color)) {
                 if (validCard) tmp.add(c.cardID);
             }
         }

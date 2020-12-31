@@ -15,7 +15,7 @@ public class UnknownClass extends AbstractUnknownCard {
     private CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
-        super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.UNCOMMON);
+        super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.COMMON);
         myColor = cardColor;
         name = unknownClass[0];
         originalName = unknownClass[0];

@@ -72,6 +72,7 @@ import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.monsters.city.Snecko;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
@@ -1059,6 +1060,21 @@ public class downfallMod implements
             CenterGridCardSelectScreen.centerGridSelect = false;
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+        }
+
+        //Snecko mod run start choosing stuff
+        if (SneckoMod.choosingCharacters > -1) {
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            SneckoMod.colorChoices.removeCard(c);
+            SneckoMod.validColors.add(c.color);
+            if (SneckoMod.choosingCharacters == 2) {
+                AbstractDungeon.srcCommonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
+            }
+            else {
+                SneckoMod.colorChoices.shuffle();
+                SneckoMod.choosingCharacters += 1;
+                AbstractDungeon.gridSelectScreen.open(SneckoMod.colorChoices, 1, false, "Choose."); //TODO: Localize
+            }
         }
     }
 

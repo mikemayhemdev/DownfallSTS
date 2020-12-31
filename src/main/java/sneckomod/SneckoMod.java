@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
@@ -19,6 +20,7 @@ import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
 import downfall.util.CardIgnore;
@@ -64,7 +66,8 @@ public class SneckoMod implements
         //EditKeywordsSubscriber,
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        StartGameSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -88,6 +91,8 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags RNG;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
+
+    public static ArrayList<AbstractCard.CardColor> validColors;
 
     private static String modID;
     private static ArrayList<AbstractCard> statuses = new ArrayList<>();
@@ -364,4 +369,22 @@ public class SneckoMod implements
             }
         }
     }
+
+    public static int choosingCharacters = -1;
+
+    public static CardGroup colorChoices;
+
+    @Override
+    public void receiveStartGame() {
+        if (AbstractDungeon.player.chosenClass == TheSnecko.Enums.THE_SNECKO) {
+            choosingCharacters = 0;
+            colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
+                colorChoices.addToTop(new OctoChoiceCard("UNVERIFIED", r.name() + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Add " + r.name() + " cards to this Snecko draft.", r));
+            }
+            colorChoices.shuffle();
+            AbstractDungeon.gridSelectScreen.open(colorChoices, 1, false, "Choose."); //TODO: Localize all of this
+        }
+    }
+
 }
