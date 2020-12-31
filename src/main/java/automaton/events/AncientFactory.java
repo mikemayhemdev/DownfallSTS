@@ -56,7 +56,7 @@ public class AncientFactory extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         m = new Donu();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
@@ -73,7 +73,7 @@ public class AncientFactory extends AbstractImageEvent {
                     case 1:
 
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         m = new Donu();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;
@@ -88,7 +88,7 @@ public class AncientFactory extends AbstractImageEvent {
                         return;
                     case 2:
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         m = new Donu();
                         m.maxHealth = m.maxHealth / 2;
                         m.currentHealth = m.maxHealth;

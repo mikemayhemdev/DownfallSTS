@@ -348,7 +348,7 @@ public abstract class AbstractBossDeckArchetype {
         Collections.shuffle(this.curseCards);
 
         if (boss.hasRelic("Omamori")) {
-            SlimeboundMod.logger.info("detected boss has Omamori");
+            //SlimeboundMod.logger.info("detected boss has Omamori");
             CBR_Omamori oma = (CBR_Omamori) boss.getRelic("Omamori");
             if (oma.counter > 0) {
                 logger.info(loggerSource + " tried to add a " + this.curseCards.get(0).name + ", but Omamori blocked it.");

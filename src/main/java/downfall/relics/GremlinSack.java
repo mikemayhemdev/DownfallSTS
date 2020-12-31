@@ -55,11 +55,11 @@ public class GremlinSack extends CustomRelic {
     @Override
     public String getUpdatedDescription() {
         if (AbstractDungeon.player != null) {
-           // SlimeboundMod.logger.info("passed player check");
+           // //SlimeboundMod.logger.info("passed player check");
             if (sackCards != null) {
-              //  SlimeboundMod.logger.info("passed null check - " + sackCards.size());
+              //  //SlimeboundMod.logger.info("passed null check - " + sackCards.size());
                 if (sackCards.size() >=5) {
-                 //   SlimeboundMod.logger.info("passed count check - " + sackCards.size());
+                 //   //SlimeboundMod.logger.info("passed count check - " + sackCards.size());
                     String fullDesc = DESCRIPTIONS[0];
                     fullDesc = fullDesc + DESCRIPTIONS[2] + sackCards.get(0).name + " NL ";
                     fullDesc = fullDesc + DESCRIPTIONS[3] + sackCards.get(1).name + " NL ";

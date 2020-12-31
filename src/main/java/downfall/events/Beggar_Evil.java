@@ -84,7 +84,7 @@ public class Beggar_Evil extends AbstractImageEvent {
         switch (this.screen) {
             case INTRO:
                 this.imageEventText.clearAllDialogs();
-                SlimeboundMod.logger.info("Cleric Encountered: " + Cleric_Evil.encountered + ". Cleric Killed: " + Cleric_Evil.heDead + ".");
+                //SlimeboundMod.logger.info("Cleric Encountered: " + Cleric_Evil.encountered + ". Cleric Killed: " + Cleric_Evil.heDead + ".");
                 if (!Cleric_Evil.encountered) {
                     this.imageEventText.loadImage("images/events/cleric.jpg");
                     this.screen = CurScreen.CLERICFRESHINTRO;

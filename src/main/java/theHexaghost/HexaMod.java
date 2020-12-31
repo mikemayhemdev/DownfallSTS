@@ -361,7 +361,7 @@ public class HexaMod implements
                     */
 
                     float flashP = (gf.flashTimer - 1F) / .5F;
-                    //SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
+                    ////SlimeboundMod.logger.info(gf.flashTimer + "," + flashP);
                     float fontScale = Settings.scale * 0.8F;
                     if (flashP > 0F) {
                         if (flashP > .5F) {

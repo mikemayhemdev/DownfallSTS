@@ -16,7 +16,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-                //  SlimeboundMod.logger.info("playing overwritten souls audio");
+                //  //SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.playV(s, volumemod);
                 return SpireReturn.Return(bruh());
             }
@@ -30,7 +30,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-                //    SlimeboundMod.logger.info("playing overwritten souls audio");
+                //    //SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.playA(s, pitchAdjust);
                 return SpireReturn.Return(bruh());
             }
@@ -44,7 +44,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-                //    SlimeboundMod.logger.info("playing overwritten souls audio");
+                //    //SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.play(s);
                 return SpireReturn.Return(bruh());
             }
@@ -59,7 +59,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-                //  SlimeboundMod.logger.info("playing overwritten souls audio");
+                //  //SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.play(s, useBgmVolume);
                 return SpireReturn.Return(bruh());
             }
@@ -74,7 +74,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-                //  SlimeboundMod.logger.info("playing overwritten souls audio");
+                //  //SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.play(s, pitchVariation);
                 return SpireReturn.Return(bruh());
             }
@@ -89,7 +89,7 @@ public class GoldSoundPatch {
             if (s == "nope") {
                 return SpireReturn.Continue();
             } else {
-                // SlimeboundMod.logger.info("playing overwritten souls audio");
+                // //SlimeboundMod.logger.info("playing overwritten souls audio");
                 __instance.playAV(s, pitchAdjust, volumeMod);
                 return SpireReturn.Return(bruh());
             }

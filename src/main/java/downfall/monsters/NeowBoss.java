@@ -115,19 +115,19 @@ public class NeowBoss extends AbstractMonster {
             bossesToRez.add(downfallMod.Act1BossFaced);
         } else {
             bossesToRez.add(CharBossIronclad.ID);
-            SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 1.  Will rez Ironclad instead.");
+            //SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 1.  Will rez Ironclad instead.");
         }
         if (downfallMod.Act2BossFaced != "") {
             bossesToRez.add(downfallMod.Act2BossFaced);
         } else {
             bossesToRez.add(CharBossIronclad.ID);
-            SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 2.  Will rez Ironclad instead.");
+            //SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 2.  Will rez Ironclad instead.");
         }
         if (downfallMod.Act3BossFaced != "") {
             bossesToRez.add(downfallMod.Act3BossFaced);
         } else {
             bossesToRez.add(CharBossIronclad.ID);
-            SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 3.  Will rez Ironclad instead.");
+            //SlimeboundMod.logger.info("WARNING: Neow could not find killed boss for Act 3.  Will rez Ironclad instead.");
         }
 
     }

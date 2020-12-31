@@ -78,15 +78,15 @@ public class NeowRezAction extends AbstractGameAction {
             String name;
             if (owner.bossesToRez.size() == 0) {
                 name = "downfall:Ironclad";
-                SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
+                //SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
             } else {
                 //Collections.shuffle(owner.bossesToRez);
                 name = owner.bossesToRez.get(0);
                 owner.bossesToRez.remove(0);
             }
-            SlimeboundMod.logger.info("Neow rezzing: " + name);
+            //SlimeboundMod.logger.info("Neow rezzing: " + name);
             rezBoss(name);
-            SlimeboundMod.logger.info("Neow rezzed: " + cB.name);
+            //SlimeboundMod.logger.info("Neow rezzed: " + cB.name);
             owner.minion = cB;
             cB.tint.color = new Color(.5F, .5F, 1F, 0F);
             cB.tint.changeColor(Color.WHITE.cpy(), 2F);

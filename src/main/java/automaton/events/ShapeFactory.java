@@ -154,7 +154,7 @@ public class ShapeFactory extends AbstractImageEvent {
 
     private void beginFight(){
         this.screen = CurScreen.FIGHT;
-        SlimeboundMod.logger.info("fight");
+        //SlimeboundMod.logger.info("fight");
         float spawnX = 0F;
 
         AbstractDungeon.getCurrRoom().rewards.clear();

@@ -160,7 +160,7 @@ public class Gym extends AbstractImageEvent {
                 retVal.group.add(c);
             }
         }
-      //  SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
+      //  //SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
         return retVal;
     }
 

@@ -7,6 +7,7 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 
@@ -25,18 +26,8 @@ public class SpaghettiCode extends AbstractBronzeCard {
 
     public static AbstractCard getRandomEncode() {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
-        for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c.makeCopy());
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c.makeCopy());
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }
@@ -46,18 +37,8 @@ public class SpaghettiCode extends AbstractBronzeCard {
 
     public static ArrayList<AbstractCard> getRandomEncodeChoices(int amount) {
         ArrayList<AbstractCard> eligibleCardsList = new ArrayList<>();
-        for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c.makeCopy());
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
-                eligibleCardsList.add(c.makeCopy());
-            }
-        }
-        for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
-            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING)) {
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (c.hasTag(AutomatonMod.ENCODES) && !c.hasTag(CardTags.HEALING) && c.rarity != CardRarity.SPECIAL) {
                 eligibleCardsList.add(c.makeCopy());
             }
         }

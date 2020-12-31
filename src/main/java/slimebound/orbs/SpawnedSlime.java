@@ -332,7 +332,7 @@ public abstract class SpawnedSlime
         if (!this.deathVFXplayed) {
             if (!this.noEvokeSound) {
                 CardCrawlGame.sound.playA("SLIME_SPLIT", 0.2f);
-                SlimeboundMod.logger.info("playing death sound");
+                //SlimeboundMod.logger.info("playing death sound");
             }
 
             AbstractDungeon.effectsQueue.add(new SlimeSpawnProjectileDeath(this.hb.cX, this.hb.cY, null, AbstractDungeon.player, 1.4F, this.projectileColor, !this.noEvokeSound));

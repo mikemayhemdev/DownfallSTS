@@ -32,7 +32,7 @@ public class OpenerModGladiator extends AbstractCardModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        SlimeboundMod.logger.info("Switching to Gladiator (CardMod)");
+        //SlimeboundMod.logger.info("Switching to Gladiator (CardMod)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(GladiatorStance.STANCE_ID));
         for (AbstractRelic r : AbstractDungeon.player.relics) {

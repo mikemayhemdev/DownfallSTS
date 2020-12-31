@@ -49,7 +49,7 @@ public class BabySnecko extends CustomRelic {
         if (this.baby != null) {
             this.baby.dispose();
             this.baby = null;
-            SlimeboundMod.logger.info("Disposing baby snecko ");
+            //SlimeboundMod.logger.info("Disposing baby snecko ");
         }
     }
 
@@ -62,10 +62,10 @@ public class BabySnecko extends CustomRelic {
     }
 
     public void renderBaby(SpriteBatch sb) {
-        //SlimeboundMod.logger.info("Rendering");
+        ////SlimeboundMod.logger.info("Rendering");
         if (this.baby != null) {
             this.baby.render(sb);
-            // SlimeboundMod.logger.info("Rendering baby snecko " + this.baby.skeleton.getX() + " " + this.baby.skeleton.getY());
+            // //SlimeboundMod.logger.info("Rendering baby snecko " + this.baby.skeleton.getX() + " " + this.baby.skeleton.getY());
         }
     }
 

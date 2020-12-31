@@ -266,7 +266,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public void hover() {
         if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && !isHoveredInSequence) {
             isHoveredInSequence = true;
-            //SlimeboundMod.logger.info("hover() hit");
+            ////SlimeboundMod.logger.info("hover() hit");
             ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", true);
 
         } else {
@@ -279,7 +279,7 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public void unhover() {
         if ((getSequencePosition() >= 0 || FunctionHelper.secretStorage == this) && isHoveredInSequence) {
             isHoveredInSequence = false;
-            //SlimeboundMod.logger.info("unhover() hit");
+            ////SlimeboundMod.logger.info("unhover() hit");
             ReflectionHacks.setPrivate(this, AbstractCard.class, "hovered", false);
 
         } else {
@@ -291,22 +291,22 @@ public abstract class AbstractBronzeCard extends CustomCard {
     public void render(SpriteBatch sb) {
         super.render(sb);
 
-        // SlimeboundMod.logger.info("rendering cardTip");
+        // //SlimeboundMod.logger.info("rendering cardTip");
 
         if (isHoveredInSequence) {
-            // SlimeboundMod.logger.info("isHoveredInSequence");
+            // //SlimeboundMod.logger.info("isHoveredInSequence");
             if (isLocked || (AbstractDungeon.player != null && (AbstractDungeon.player.isDraggingCard || AbstractDungeon.player.inSingleTargetMode))) {
 
-                // SlimeboundMod.logger.info("bounced");
+                // //SlimeboundMod.logger.info("bounced");
                 return;
             }
 
 
-            // SlimeboundMod.logger.info("Is in Sequence");
+            // //SlimeboundMod.logger.info("Is in Sequence");
             if (functionPreviewCard == null) {
                 functionPreviewCard = makeStatEquivalentCopy();
             }
-            //SlimeboundMod.logger.info("rendering previewcard");
+            ////SlimeboundMod.logger.info("rendering previewcard");
             functionPreviewCard.drawScale = functionPreviewCardScale;
             functionPreviewCard.current_x = functionPreviewCardX;
             functionPreviewCard.current_y = functionPreviewCardY;

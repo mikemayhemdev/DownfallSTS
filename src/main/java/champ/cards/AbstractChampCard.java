@@ -249,30 +249,30 @@ public abstract class AbstractChampCard extends CustomCard {
     }
 
     protected void berserkerStance() {
-        SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Berserker (Abstract)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             atb(new ChangeStanceAction(BerserkerStance.STANCE_ID));
     }
 
     protected void gladiatorStance() {
-        SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Gladiator (Abstract)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             atb(new ChangeStanceAction(GladiatorStance.STANCE_ID));
     }
 
     protected void defensiveStance() {
-        SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Defensive (Abstract)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             atb(new ChangeStanceAction(DefensiveStance.STANCE_ID));
     }
 
     protected void ultimateStance() {
-        SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
+        //SlimeboundMod.logger.info("Switching to THE ULTIMATE STANCE!!! (Abstract)");
         atb(new ChangeStanceAction(UltimateStance.STANCE_ID));
     }
 
     public void exitStance() {
-        SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
+        //SlimeboundMod.logger.info("Switching to Neutral (Abstract)");
         atb(new ChangeStanceAction(NeutralStance.STANCE_ID));
     }
 

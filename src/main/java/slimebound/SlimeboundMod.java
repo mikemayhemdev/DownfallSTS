@@ -267,7 +267,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         if (AbstractDungeon.player != null) {
 
             SlimeboundMod.foughtSlimeBoss = false;
-            //SlimeboundMod.logger.info("Reset Hunted event bool.");
+            ////SlimeboundMod.logger.info("Reset Hunted event bool.");
 
         }
 

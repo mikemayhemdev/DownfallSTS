@@ -45,8 +45,8 @@ public class Transmogrify extends AbstractSneckoCard {
         } else if (tier == AbstractRelic.RelicTier.STARTER) {
             eligibleRelicsList.addAll(RelicLibrary.starterList);
         }
-        SlimeboundMod.logger.info(tier);
-        SlimeboundMod.logger.info(eligibleRelicsList);
+        //SlimeboundMod.logger.info(tier);
+        //SlimeboundMod.logger.info(eligibleRelicsList);
 
         myGoodStuffList.removeIf(r -> AbstractDungeon.player.hasRelic(r.relicId));
 

@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.localization.RunModStrings;
 import downfall.downfallMod;
 
 
-public class Analytical extends AbstractDailyMod {
-    public static final String ID = downfallMod.makeID("Analytical");
+public class StatusAbuse extends AbstractDailyMod {
+    public static final String ID = downfallMod.makeID("StatusAbuse");
     public static final String NAME;
     public static final String DESC;
     private static final RunModStrings modStrings;
@@ -19,8 +19,8 @@ public class Analytical extends AbstractDailyMod {
         DESC = modStrings.DESCRIPTION;
     }
 
-    public Analytical() {
+    public StatusAbuse() {
         super(ID, NAME, DESC, null, false);
-        this.img = ImageMaster.loadImage("downfallResources/images/dailies/analytical.png");
+        this.img = ImageMaster.loadImage("downfallResources/images/dailies/statusabuse.png");
     }
 }

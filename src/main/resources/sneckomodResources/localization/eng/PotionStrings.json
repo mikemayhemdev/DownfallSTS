@@ -18,7 +18,7 @@
     "NAME": "Spiked Energy Drink",
     "DESCRIPTIONS": [
       "#yMuddle the #b",
-      " highest-cost cards in your hand."
+      " highest-cost cards in your hand. Cards #yMuddled this way cannot cost 3."
     ]
   },
   "sneckomod:OffclassReductionPotion": {

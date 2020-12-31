@@ -93,7 +93,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
+        //SlimeboundMod.logger.info("Stacking Split: " + stackAmount);
         if (stackAmount > 0){
             AbstractDungeon.player.damage(new DamageInfo(AbstractDungeon.player, stackAmount, DamageInfo.DamageType.HP_LOSS));
         }
@@ -102,7 +102,7 @@ public class DuplicatedFormNoHealPower extends AbstractPower {
 
     public void reducePower(int stackAmount) {
         super.reducePower(stackAmount);
-        SlimeboundMod.logger.info("Reducing Split: " + stackAmount);
+        //SlimeboundMod.logger.info("Reducing Split: " + stackAmount);
         if (stackAmount > 0) {
             logger.info("Split is returning HP (normal): " + stackAmount);
             this.owner.heal(stackAmount);

@@ -12,6 +12,7 @@ public class MuddleRandomCardAction extends AbstractGameAction {
 
     private boolean onlyHighest = false;
 
+    private boolean modifiedCost = false;
 
     public MuddleRandomCardAction(int i) {
         this(i, false);
@@ -20,6 +21,12 @@ public class MuddleRandomCardAction extends AbstractGameAction {
     public MuddleRandomCardAction(int i, boolean highest) {
         amount = i;
         onlyHighest = highest;
+    }
+
+    public MuddleRandomCardAction(int i, boolean highest, boolean no3s) {
+        amount = i;
+        onlyHighest = highest;
+        no3s = modifiedCost;
     }
 
 
@@ -41,7 +48,7 @@ public class MuddleRandomCardAction extends AbstractGameAction {
 
                 }
 
-                addToTop(new MuddleAction(card));
+                addToTop(new MuddleAction(card, modifiedCost));
             }
         }
     }

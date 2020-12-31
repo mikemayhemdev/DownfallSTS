@@ -120,12 +120,12 @@ public abstract class AbstractSneckoCard extends CustomCard {
             return max;
         }
         if (AbstractDungeon.player.hasRelic(D8.ID)) {
-            SlimeboundMod.logger.info("min/max check passed D8 relic check");
+            //SlimeboundMod.logger.info("min/max check passed D8 relic check");
             if (source != null) {
-                SlimeboundMod.logger.info("min/max check passed card source check");
+                //SlimeboundMod.logger.info("min/max check passed card source check");
                 D8 d8relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
                 if (d8relic.card == source)
-                    SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
+                    //SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
                 return max;
             }
         }

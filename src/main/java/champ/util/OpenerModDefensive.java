@@ -32,7 +32,7 @@ public class OpenerModDefensive extends AbstractCardModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        SlimeboundMod.logger.info("Switching to Defensive (CardMod)");
+        //SlimeboundMod.logger.info("Switching to Defensive (CardMod)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
         for (AbstractRelic r : AbstractDungeon.player.relics) {

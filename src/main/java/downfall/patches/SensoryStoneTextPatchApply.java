@@ -23,7 +23,7 @@ public class SensoryStoneTextPatchApply {
             AbstractEvent e = AbstractDungeon.getCurrRoom().event;
             if (e != null) {
                 if (AbstractDungeon.combatRewardScreen.hasTakenAll = true){
-                    SlimeboundMod.logger.info("has taken all is true");
+                    //SlimeboundMod.logger.info("has taken all is true");
                     if (e instanceof SensoryStone_Evil) {
                         SensoryStone_Evil ee = (SensoryStone_Evil) e;
                         ee.getMemoryText();

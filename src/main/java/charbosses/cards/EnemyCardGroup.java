@@ -95,7 +95,7 @@ public class EnemyCardGroup extends CardGroup {
         if (randomSpot)
             this.owner.drawPile.addToRandomSpot(c);
         else {
-            SlimeboundMod.logger.info("adding card to top");
+            //SlimeboundMod.logger.info("adding card to top");
             this.owner.drawPile.addToTop(c);
         }
         */

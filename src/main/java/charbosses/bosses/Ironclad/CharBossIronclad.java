@@ -75,7 +75,7 @@ public class CharBossIronclad extends AbstractCharBoss {
                     break;
                 case 4: {
 
-                    SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
+                    //SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
                     switch (NeowBoss.Rezzes) {
                         case 1:
                             archetype = new ArchetypeAct1StatusesNewAge();
