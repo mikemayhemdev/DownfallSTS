@@ -26,8 +26,8 @@ public class StasisStrike extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_BONUS = 3;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_BONUS = 2;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -57,7 +57,10 @@ public class StasisStrike extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        if (upgraded){
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
+        }
         this.useGems(p, m);
     }
 
@@ -68,7 +71,8 @@ public class StasisStrike extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_BONUS);
+            this.rawDescription = UPGRADED_DESCRIPTION;
+            updateDescription();
         }
     }
 

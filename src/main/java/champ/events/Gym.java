@@ -156,11 +156,11 @@ public class Gym extends AbstractImageEvent {
 
         while (var2.hasNext()) {
             AbstractCard c = (AbstractCard) var2.next();
-            if (!c.hasTag(ChampMod.OPENER)) {
+            if (!c.hasTag(ChampMod.OPENER) && !c.hasTag(ChampMod.FINISHER)) {
                 retVal.group.add(c);
             }
         }
-        SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
+      //  //SlimeboundMod.logger.info("Non Opener card count: " + retVal.group.size());
         return retVal;
     }
 

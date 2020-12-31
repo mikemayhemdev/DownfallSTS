@@ -1,43 +1,31 @@
 package sneckomod;
 
+import automaton.AutomatonMod;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.CharacterStrings;
-import com.megacrit.cardcrawl.localization.PotionStrings;
-import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
-import guardian.events.GemMine;
-import guardian.patches.AbstractCardEnum;
-import guardian.patches.BottledStasisPatch;
-import guardian.patches.GuardianEnum;
-import guardian.relics.BottledStasis;
+import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.patches.SlimeboundEnum;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.cards.unknowns.UnknownColorless;
@@ -54,14 +42,10 @@ import sneckomod.potions.MuddlingPotion;
 import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.relics.*;
 import sneckomod.util.SneckoSilly;
-import theHexaghost.TheHexaghost;
-import theHexaghost.cards.*;
-import theHexaghost.relics.*;
 
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -106,14 +90,12 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
 
     private static String modID;
-
+    private static ArrayList<AbstractCard> statuses = new ArrayList<>();
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
     private CustomUnlockBundle unlocks2;
     private CustomUnlockBundle unlocks3;
     private CustomUnlockBundle unlocks4;
-
-    private static ArrayList<AbstractCard> statuses = new ArrayList<>();
 
     public SneckoMod() {
         BaseMod.subscribe(this);
@@ -199,9 +181,9 @@ public class SneckoMod implements
             System.out.println(classInfo.getClassName());
             AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
             BaseMod.addCard(card);
-          //  if (cls.hasAnnotation(CardNoSeen.class)) {
-          //      UnlockTracker.hardUnlockOverride(card.cardID);
-          //  }
+            //  if (cls.hasAnnotation(CardNoSeen.class)) {
+            //      UnlockTracker.hardUnlockOverride(card.cardID);
+            //  }
         }
     }
 
@@ -221,6 +203,11 @@ public class SneckoMod implements
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
         possList.removeIf(c -> c.color != color || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS || c.rarity == AbstractCard.CardRarity.SPECIAL || c.hasTag(AbstractCard.CardTags.HEALING) || c.hasTag(BANNEDFORSNECKO));
         return possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
+    }
+
+    public static AbstractCard getRandomStatus() {
+        Collections.shuffle(statuses, AbstractDungeon.cardRandomRng.random);
+        return statuses.get(0);
     }
 
     @Override
@@ -255,8 +242,6 @@ public class SneckoMod implements
         } catch (URISyntaxException | IllegalAccessException | InstantiationException | NotFoundException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        BaseMod.addCard(new DiceBoulder(0));
-        UnlockTracker.markCardAsSeen(DiceBoulder.ID);
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
                 AbstractCard q = new UnknownClass(p);
@@ -324,8 +309,6 @@ public class SneckoMod implements
 
     }
 
-
-
     public void receivePostInitialize() {
         addPotions();
 
@@ -348,7 +331,7 @@ public class SneckoMod implements
                 //Event Character//
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
                 //Event Spawn Condition//
-                .spawnCondition(()->!evilMode)
+                .spawnCondition(() -> !evilMode)
                 //Event ID to Override//
                 .overrideEvent(Sssserpent.ID)
                 //Event Type//
@@ -359,7 +342,7 @@ public class SneckoMod implements
                 //Event Character//
                 .playerClass(TheSnecko.Enums.THE_SNECKO)
                 //Event Spawn Condition//
-                .spawnCondition(()->evilMode)
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(Serpent_Evil.ID)
                 //Event Type//
@@ -375,15 +358,10 @@ public class SneckoMod implements
                 .create());
 
         ArrayList<AbstractCard> tmp = CardLibrary.getAllCards();
-        for (AbstractCard c:tmp){
-            if (c.type == AbstractCard.CardType.STATUS){
+        for (AbstractCard c : tmp) {
+            if (c.type == AbstractCard.CardType.STATUS && !(c.hasTag(AutomatonMod.GOOD_STATUS))) {
                 statuses.add(c);
             }
         }
-    }
-
-    public static AbstractCard getRandomStatus(){
-        Collections.shuffle(statuses);
-        return statuses.get(0);
     }
 }

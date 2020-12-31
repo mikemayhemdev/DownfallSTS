@@ -146,9 +146,6 @@ public class FleeingMerchant extends AbstractMonster {
     public void takeTurn() {
         if (nextMove == ESCAPE) {
             CURRENT_HP = this.currentHealth;
-            if (hasPower(StrengthPower.POWER_ID)) {
-                CURRENT_STRENGTH = getPower(StrengthPower.POWER_ID).amount;
-            }
             AbstractDungeon.getCurrRoom().mugged = true;
             this.addToBot(new CanLoseAction());
             this.addToBot(new VFXAction(new SmokeBombEffect(hb.cX, hb.cY)));
@@ -195,6 +192,7 @@ public class FleeingMerchant extends AbstractMonster {
             this.addToBot((new VFXAction(new SoulStealEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX, this.hb.cY), 0.5F)));
 
             this.addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
+            CURRENT_STRENGTH += 1;
             if (AbstractDungeon.player.gold >= 15) {
                 this.addToBot(new ApplyPowerAction(this, this, new SoulStealPower(this, 15), 15));
                 CURRENT_SOULS += 15;

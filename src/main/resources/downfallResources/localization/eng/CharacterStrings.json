@@ -40,7 +40,10 @@
       "This character is unlocked by completing a run with the 3rd Villain character.",
       "This character is unlocked by completing a run with the Hexaghost.",
       "This character is unlocked by completing a run with the 4th Villain character.",
-      "This character is unlocked by completing a run with the Champ."
+      "This character is unlocked by completing a run with the Champ.",
+      "This character is unlocked by completing a run with the 5th Villain character.",
+      "This character is unlocked by completing a run with the Automaton.",
+      " (Act 4 Wins do not count)"
 
     ]
   },
@@ -98,7 +101,8 @@
       "..and so...... shall... NL ....I......"
     ],
     "OPTIONS": [
-      "~I~ ~brought...~ NL ~HIM...~ ~back...~"
+      "~I~ ~brought...~ NL ~HIM...~ ~back...~",
+      "~Protect~ ~me...~ NL ~And~ ~be...~ ~rewarded...~"
     ]
   },
   "downfall:HeartMerchantScreen": {

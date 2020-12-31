@@ -1,16 +1,17 @@
 package champ.stances;
 
 import champ.ChampChar;
-import champ.actions.FatigueHpLossAction;
+import champ.ChampMod;
 import champ.powers.CounterPower;
 import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
+
+import static champ.ChampMod.fatigue;
 
 public class UltimateStance extends AbstractChampStance {
 
@@ -29,15 +30,23 @@ public class UltimateStance extends AbstractChampStance {
     }
 
     @Override
+    public void onEnterStance() {
+        super.onEnterStance();
+        ChampMod.enteredGladiatorThisTurn = true;
+        ChampMod.enteredBerserkerThisTurn = true;
+        ChampMod.enteredDefensiveThisTurn = true;
+    }
+
+    @Override
     public void updateDescription() {
         this.description = ChampChar.characterStrings.TEXT[21];
     }
 
     @Override
     public void technique() {
-       fatigue(3);
+        fatigue(3);
         //AbstractDungeon.actionManager.addToBottom(new GainEnergAction(1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(6), 6));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(4), 4));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
     }
 

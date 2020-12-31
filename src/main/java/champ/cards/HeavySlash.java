@@ -14,7 +14,7 @@ public class HeavySlash extends AbstractChampCard {
     //stupid intellij stuff attack, enemy, rare
 
     private static final int DAMAGE = 18;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public HeavySlash() {
@@ -32,7 +32,13 @@ public class HeavySlash extends AbstractChampCard {
 
     public int upgradeAmount() {
         int x = 0;
-        for (AbstractCard q : AbstractDungeon.player.masterDeck.group) {
+        for (AbstractCard q : AbstractDungeon.player.drawPile.group) {
+            if (q.upgraded) x++;
+        }
+        for (AbstractCard q : AbstractDungeon.player.discardPile.group) {
+            if (q.upgraded) x++;
+        }
+        for (AbstractCard q : AbstractDungeon.player.hand.group) {
             if (q.upgraded) x++;
         }
         return x;

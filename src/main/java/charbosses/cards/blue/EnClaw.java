@@ -33,6 +33,12 @@ public class EnClaw extends AbstractBossCard {
         this.baseDamage = 3;
     }
 
+    public EnClaw(int clawsPlayed){
+        this();
+        this.baseDamage += (clawsPlayed * 2);
+        this.damage = this.baseDamage;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {// 40
             this.addToBot(new VFXAction(new ClawEffect(p.hb.cX, p.hb.cY, Color.CYAN, Color.WHITE), 0.1F));// 41

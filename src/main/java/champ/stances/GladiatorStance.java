@@ -1,6 +1,7 @@
 package champ.stances;
 
 import champ.ChampChar;
+import champ.ChampMod;
 import champ.powers.FocusedGladPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -31,8 +32,14 @@ public class GladiatorStance extends AbstractChampStance {
     }
 
     @Override
+    public void onEnterStance() {
+        super.onEnterStance();
+        ChampMod.enteredGladiatorThisTurn = true;
+    }
+
+    @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[14] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[15];
+        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[14] + GladiatorStance.amount() + ChampChar.characterStrings.TEXT[48] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[15];
     }
 
     public static int amount() {

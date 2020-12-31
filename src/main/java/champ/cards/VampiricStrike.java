@@ -17,7 +17,7 @@ public class VampiricStrike extends AbstractChampCard {
     private static final int DAMAGE = 5;
 
     public VampiricStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
         tags.add(CardTags.STRIKE);
@@ -42,6 +42,6 @@ public class VampiricStrike extends AbstractChampCard {
 
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(2);
     }
 }

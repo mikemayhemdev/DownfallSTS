@@ -40,7 +40,8 @@ public class EnemyCardGroup extends CardGroup {
 
     public void moveToDiscardPile(final AbstractCard c) {
         this.resetCardBeforeMoving(c);
-        c.darken(false);
+        //c.darken(false);
+        System.out.printf(c.name + " DARKEN-CANCELED");
         //this.owner.discardPile.addToTop(c);
         this.owner.onCardDrawOrDiscard();
     }
@@ -94,7 +95,7 @@ public class EnemyCardGroup extends CardGroup {
         if (randomSpot)
             this.owner.drawPile.addToRandomSpot(c);
         else {
-            SlimeboundMod.logger.info("adding card to top");
+            //SlimeboundMod.logger.info("adding card to top");
             this.owner.drawPile.addToTop(c);
         }
         */

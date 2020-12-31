@@ -94,7 +94,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
     }
 
     public static int getRandomNum(int min, int max) {
-        int a,b,sum;
+        int a, b, sum;
         if (min > max) {
             a = max;
             b = min;
@@ -119,20 +119,20 @@ public abstract class AbstractSneckoCard extends CustomCard {
             q.flash();
             return max;
         }
-        if (AbstractDungeon.player.hasRelic(D8.ID)){
-            SlimeboundMod.logger.info("min/max check passed D8 relic check");
+        if (AbstractDungeon.player.hasRelic(D8.ID)) {
+            //SlimeboundMod.logger.info("min/max check passed D8 relic check");
             if (source != null) {
-                SlimeboundMod.logger.info("min/max check passed card source check");
+                //SlimeboundMod.logger.info("min/max check passed card source check");
                 D8 d8relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
                 if (d8relic.card == source)
-                    SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
+                    //SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
                 return max;
             }
         }
         if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
             bruh++;
 
-        int a,b,sum;
+        int a, b, sum;
         if (bruh > max) {
             a = max;
             b = bruh;

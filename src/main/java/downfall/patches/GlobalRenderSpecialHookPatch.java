@@ -1,5 +1,8 @@
 package downfall.patches;
 
+import automaton.EasyInfoDisplayPanel;
+import automaton.FunctionHelper;
+import automaton.SuperTip;
 import champ.StanceHelper;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -18,6 +21,7 @@ public class GlobalRenderSpecialHookPatch {
         if (HexaMod.renderFlames) {
             HexaMod.renderGhostflames(sb);
         }
+        SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_PLAYER_RENDER);
         StanceHelper.render(sb);
     }
 }

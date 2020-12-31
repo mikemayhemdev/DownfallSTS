@@ -42,7 +42,7 @@
   "downfall:PoisonResist": {
     "NAME": "Poison Resistance",
     "DESCRIPTIONS": [
-      "Poison does not bypass your Block, triggers at the end of your turn, and loses half its stack."
+      "Poison triggers at the end of your turn. Before triggering Poison, for each [E] available, spend it to remove 10 Poison."
     ]
   },
   "downfall:InverseBias": {
@@ -55,6 +55,39 @@
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
       "Gains Strength and Dexterity at the end of the round."
+    ]
+  },
+  "downfall:WatcherCripplePower": {
+    "NAME": "Fall from Grace",
+    "DESCRIPTIONS": [
+      "Deal ",
+      " more unblocked Attack damage to apply -4 Strength to Watcher when she next enters Divinity or plays Ragnarok.",
+      "Watcher will lose 4 Strength to Watcher when she next enters Divinity or plays Ragnarok."
+    ]
+  },
+  "downfall:ShivTimeEaterPower": {
+    "NAME": "Time to Die",
+    "DESCRIPTIONS": [
+      "Whenever you play a 0-cost card, if Silent has less than 7 cards in hand, she gains a Shiv."
+      ]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "Boiling Wrath",
+    "DESCRIPTIONS": [
+      "When Watcher is reduced to 50% HP, she enters Wrath permanently."
+      ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "Neural Network",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card, gains #b",
+      " #yFocus."
+    ]
+  },
+  "downfall:WatcherDivinityPower": {
+    "NAME": "Faith Eater",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, gains #b1 Mantra. Loses 5 Mantra per turn. NL Watcher's Divinity Stance is permanent."
     ]
   }
 }

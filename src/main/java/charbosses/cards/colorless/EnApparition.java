@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 
@@ -29,7 +30,7 @@ public class EnApparition extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new IntangiblePower(m, 1), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new IntangiblePlayerPower(m, 1), 1));
     }
 
     @Override

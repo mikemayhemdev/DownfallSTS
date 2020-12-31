@@ -1,10 +1,12 @@
 package guardian.cards;
 
+import automaton.FunctionHelper;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -13,7 +15,10 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import guardian.GuardianMod;
+import guardian.actions.BraceAction;
 import guardian.powers.BeamBuffPower;
+import guardian.powers.ModeShiftPower;
+import guardian.relics.DefensiveModeMoreBlock;
 
 import java.util.ArrayList;
 
@@ -195,6 +200,14 @@ public abstract class AbstractGuardianCard extends CustomCard {
         if (this.hasTag(GuardianMod.STASISGLOW)) this.tags.remove(GuardianMod.STASISGLOW);
 
         GuardianMod.logger.info("New card played: " + this.name + " misc = " + this.misc);
+    }
+
+    public static void brace(int modeShiftValue) {
+        if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)){
+            modeShiftValue += 1;
+        }
+        AbstractDungeon.actionManager.addToBottom(new BraceAction(modeShiftValue));
+
     }
 
     public void saveGemMisc() {

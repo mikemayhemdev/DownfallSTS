@@ -3,7 +3,7 @@ package sneckomod.cards.unknowns;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import sneckomod.CardIgnore;
+import downfall.util.CardIgnore;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;

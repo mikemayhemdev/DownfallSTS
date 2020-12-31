@@ -28,15 +28,4 @@ public class HeartBlessingBlue extends CustomRelic {
         AbstractDungeon.player.increaseMaxHp(10, true);
     }
 
-    @Override
-    public void atBattleStartPreDraw() {
-        if (AbstractDungeon.actNum == 3 && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
-            flash();
-            addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            if(AbstractCharBoss.boss != null) {
-                if (!AbstractDungeon.player.hasRelic(HeartBlessingGreen.ID) && !AbstractDungeon.player.hasRelic(HeartBlessingRed.ID))
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(AbstractCharBoss.boss.anticard().makeCopy()));
-            }
-        }
-    }
 }

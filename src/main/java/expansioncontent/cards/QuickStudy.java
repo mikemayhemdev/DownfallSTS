@@ -30,7 +30,7 @@ public class QuickStudy extends AbstractExpansionCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new OctoChoiceAction(this));
+        atb(new OctoChoiceAction(m, this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -54,7 +54,7 @@ public class QuickStudy extends AbstractExpansionCard implements OctopusCard {
         return realList;
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         AbstractCard q;
         AbstractCard r;
         AbstractCard z;

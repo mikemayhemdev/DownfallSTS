@@ -39,7 +39,7 @@ public class LickEffect extends AbstractGameEffect {
         if (img == null) {
             img = ImageMaster.loadImage("slimeboundResources/SlimeboundImages/vfx/tongue.png");
         }
-        //SlimeboundMod.logger.info("Slime lick effect firing");
+        ////SlimeboundMod.logger.info("Slime lick effect firing");
 
         this.tX = tX - 115 * Settings.scale;
         this.tY = tY - 50 * Settings.scale;
@@ -71,14 +71,14 @@ public class LickEffect extends AbstractGameEffect {
         if (this.duration < (this.startingDuration * 0.3F)) {
             this.alpha = Interpolation.linear.apply(0F, 0.75F, (this.duration) / (this.startingDuration * 0.3F));
         }
-        //SlimeboundMod.logger.info("alpha " + this.alpha);
+        ////SlimeboundMod.logger.info("alpha " + this.alpha);
 
         this.cY = Interpolation.pow2Out.apply(this.dY, this.tY, this.duration / this.startingDuration);
-        //SlimeboundMod.logger.info("X " + this.cX + " Y " + this.cY);
+        ////SlimeboundMod.logger.info("X " + this.cX + " Y " + this.cY);
 
 
         this.rotation = Interpolation.pow4Out.apply(100F, 0F, this.duration / this.startingDuration);
-        // SlimeboundMod.logger.info("rotation " + this.rotation);
+        // //SlimeboundMod.logger.info("rotation " + this.rotation);
 
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration < 0.0F) {

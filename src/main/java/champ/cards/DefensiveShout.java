@@ -12,8 +12,8 @@ public class DefensiveShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 6;
-    private static final int UPG_MAGIC = 6;
+    private static final int MAGIC = 4;
+    private static final int UPG_MAGIC = 4;
 
     public DefensiveShout() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);

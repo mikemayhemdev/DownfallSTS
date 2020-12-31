@@ -11,7 +11,6 @@ import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -34,6 +33,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
+import downfall.cards.curses.Aged;
 import downfall.downfallMod;
 import guardian.cards.*;
 import guardian.characters.GuardianCharacter;
@@ -55,6 +55,7 @@ import guardian.powers.zzz.MultiBoostPower;
 import guardian.relics.*;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
+import guardian.stances.DefensiveMode;
 import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
@@ -76,7 +77,8 @@ public class GuardianMod implements PostDrawSubscriber,
         EditRelicsSubscriber,
         EditCardsSubscriber,
         PostBattleSubscriber,
-        AddAudioSubscriber
+        AddAudioSubscriber,
+    OnPlayerLoseBlockSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -122,7 +124,7 @@ public class GuardianMod implements PostDrawSubscriber,
 
     private static String modID;
 
-    //public static BronzeOrb bronzeOrbInPlay;
+    //public static BronzeOrbWhoReallyLikesDefectForSomeReason bronzeOrbInPlay;
 
     @SpireEnum
     public static AbstractCard.CardTags GEM;
@@ -143,7 +145,7 @@ public class GuardianMod implements PostDrawSubscriber,
     @SpireEnum
     public static AbstractCard.CardTags VOLATILE;
 
-    //TODO - Unlock bundles
+
     private ModPanel settingsPanel;
     private CustomUnlockBundle unlocks0;
     private CustomUnlockBundle unlocks1;
@@ -276,7 +278,6 @@ public class GuardianMod implements PostDrawSubscriber,
 
         return retVal;
     }
-
 
     public static CardGroup getGemCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.MASTER_DECK);
@@ -441,6 +442,16 @@ public class GuardianMod implements PostDrawSubscriber,
 
     }
 
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.player.stance instanceof DefensiveMode) {
+            return 0;
+        }
+        else {
+            return i;
+        }
+    }
+
     public void receiveEditCharacters() {
 
         guardianCharacter = new GuardianCharacter("TheGuardian", GuardianEnum.GUARDIAN);
@@ -592,7 +603,7 @@ public static void saveData() {
 
     public void receiveEditRelics() {
 
-        //TODO - Relics here
+
         BaseMod.addRelicToCustomPool(new ModeShifter(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new ModeShifterPlus(), AbstractCardEnum.GUARDIAN);
         BaseMod.addRelicToCustomPool(new BottledStasis(), AbstractCardEnum.GUARDIAN);
@@ -615,12 +626,12 @@ public static void saveData() {
 
     public void receiveEditCards() {
 
-        //TODO - Dynamic Variables here
+
         BaseMod.addDynamicVariable(new MultihitVariable());
         BaseMod.addDynamicVariable(new SecondaryMagicVariable());
 
 
-        //TODO - Cards here
+
         BaseMod.addCard(new Strike_Guardian());
         BaseMod.addCard(new Defend_Guardian());
         BaseMod.addCard(new ChargeUp());
@@ -706,7 +717,6 @@ public static void saveData() {
         BaseMod.addCard(new StasisEngine());
         BaseMod.addCard(new Gem_Purple());
 
-        BaseMod.addCard(new Aged());
 
         //CONSTRUCT cross-mod
         /*

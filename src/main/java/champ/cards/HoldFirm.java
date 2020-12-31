@@ -37,7 +37,5 @@ public class HoldFirm extends AbstractChampCard {
     public void upp() {
         upgradeMagicNumber(1);
         upgradeBlock(UPG_BLOCK);
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
     }
 }

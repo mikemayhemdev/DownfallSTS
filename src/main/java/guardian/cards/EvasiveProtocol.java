@@ -28,7 +28,7 @@ public class EvasiveProtocol extends AbstractGuardianCard {
     private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int DEX = 2;
+    private static final int DEX = 3;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
@@ -55,11 +55,8 @@ public class EvasiveProtocol extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EvasiveProtocolPower(p, magicNumber)));
         if (p.stance instanceof DefensiveMode) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber), magicNumber));
-        } else
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DontLeaveDefensiveModePower(p, 1), 1));
         }
+        brace(10);
     }
 
     public AbstractCard makeCopy() {
@@ -69,9 +66,7 @@ public class EvasiveProtocol extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            rawDescription = UPGRADED_DESCRIPTION;
-            initializeDescription();
+            upgradeMagicNumber(2);
         }
     }
 

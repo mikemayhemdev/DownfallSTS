@@ -40,7 +40,7 @@ public class Riposte extends AbstractChampCard {
                     for (AbstractCard q : p.hand.group) {
                         if (q.type == CardType.ATTACK) {
                             addToTop(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
-                            addToTop(new DiscardSpecificCardAction(q, p.hand));
+                            //addToTop(new DiscardSpecificCardAction(q, p.hand));
                         }
                     }
                 }

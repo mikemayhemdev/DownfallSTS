@@ -22,7 +22,7 @@ public class EnAccuracy extends AbstractBossCard {
 
     public EnAccuracy() {
         super(ID, EnAccuracy.cardStrings.NAME, "green/power/accuracy", 1, EnAccuracy.cardStrings.DESCRIPTION, CardType.POWER, CardColor.GREEN, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.BUFF);
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Shiv();
         this.magicValue = 5;

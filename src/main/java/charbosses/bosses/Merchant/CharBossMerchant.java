@@ -11,6 +11,7 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.*;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,6 +19,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
@@ -54,7 +57,7 @@ public class CharBossMerchant extends AbstractCharBoss {
     public static final String NAME = CardCrawlGame.languagePack.getCharacterString(ID).NAMES[0];
 
     public CharBossMerchant() {
-        super(NAME, ID, 200, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
+        super(NAME, ID, 400, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
 
         if (downfallMod.tempAscensionHack){
             downfallMod.tempAscensionHack = false;
@@ -93,10 +96,15 @@ public class CharBossMerchant extends AbstractCharBoss {
 
         AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.CYAN, true), 2F));
 
+        if (FleeingMerchant.CURRENT_STRENGTH > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
+        }
+
         super.usePreBattleAction();
         this.tint.color = new Color(.5F, .5F, 1F, 0F);
         this.rezTimer = 5F;
-        AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.SHOP)));
+      //  AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(AbstractDungeon.returnRandomRelic(AbstractRelic.RelicTier.SHOP)));
 
     }
 
@@ -189,6 +197,10 @@ public class CharBossMerchant extends AbstractCharBoss {
         super.update();
         if (this.rezTimer <= 0F){
             this.rezVFX.end();
+
+            chosenArchetype.bossMechanicName = AbstractBossDeckArchetype.bossMechanicString.DIALOG[20];
+            chosenArchetype.bossMechanicDesc = AbstractBossDeckArchetype.bossMechanicString.DIALOG[21];
+            chosenArchetype.initializeBossPanel();
         } else {
             this.rezTimer -= Gdx.graphics.getDeltaTime();
             if (!this.startVFX && rezTimer <= 2F){
@@ -204,9 +216,21 @@ public class CharBossMerchant extends AbstractCharBoss {
         }
         if (!this.neowSpoke){
             this.neowSpoke = true;
-            AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH, Settings.HEIGHT / 2F, 4.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowEnding")).OPTIONS[0], false));
+            String line;
+            if (FleeingMerchant.DEAD) {
+                line = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowEnding")).OPTIONS[0];
+            } else {
+                line = CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowEnding")).OPTIONS[1];
+            }
+            AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH, Settings.HEIGHT / 2F, 4.0F, line, false));
             CardCrawlGame.sound.play("VO_NEOW_2B");
         }
+    }
+
+    @Override
+    public void die() {
+        super.die();
+        FleeingMerchant.DEAD = true;
     }
 }
 

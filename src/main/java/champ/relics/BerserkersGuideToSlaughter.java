@@ -19,21 +19,21 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
-    private boolean isActive;
+    private boolean isActive = false;
 
     @Override
     public void atBattleStart() {
         counter = 10;
     }
 
-    //TODO: Doesn't work... seems to be the same setup as Tungesten Rod
-
     @Override
     public int onLoseHpLast(int damageAmount) {
+        System.out.println("Yes, this is active. Status: " + isActive);
         if (!isActive){
             return damageAmount;
         }
-        if (counter > 0){
+        else if (counter > 0){
+            this.flash();
             if (counter > damageAmount){
                 counter = counter - damageAmount;
                 return 0;
@@ -46,17 +46,20 @@ public class BerserkersGuideToSlaughter extends CustomRelic {
         return damageAmount;
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
+    @Override
+    public void onPlayerEndTurn() {
+        System.out.println("Zerker status set to FALSE");
         this.isActive = false;
     }
 
-    public void atStartOfTurn() {
+    public void atTurnStart() {
+        System.out.println("Zerker status set to TRUE");
         this.isActive = true;
     }
 
     @Override
     public void onVictory() {
-        counter = 0;
+        counter = -1;
     }
 
     @Override

@@ -1,0 +1,73 @@
+{
+  "bronze:ShapeFactory": {
+    "NAME": "Shape Factory",
+    "DESCRIPTIONS": [
+      "Encounter event description.",
+      "Leave without combat."
+    ],
+    "OPTIONS": [
+      "[Fight Spiker] #gGain #gSpike.",
+      "[Fight Repulsor] #gGain #gDazing #gPulse.",
+      "[Fight Exploder] #gGain #gExplode.",
+      "[Leave]",
+      "#g[Begin #gCombat]",
+      "#r[Also Fight Spiker] #gGain #gSpike.",
+      "#r[Also Fight Repulsor] #gGain #gDazing #gPulse.",
+      "#r[Also Fight Exploder] #gGain #gExplode."
+    ]
+  },
+  "bronze:AncientFactory": {
+    "NAME": "Ancient Factory",
+    "DESCRIPTIONS": [
+      "Encounter event description.",
+      "Leave without combat."
+    ],
+    "OPTIONS": [
+      "[Fight Donu Prototype] #gGain #gDonu #gBeam.",
+      "[Fight Deca Prototype] #gGain #gDeca #gBeam.",
+      "[Fight Both] #gGain #gBoth #gCards.",
+      "[Leave]"
+    ]
+  },
+  "bronze:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "The many is always superior to the few."
+    ],
+    "OPTIONS": [
+      "[Unity] All #gStrikes and #gDefends gain #gEncode.",
+      "[Locked] Requires a Strike or Defend."
+    ]
+  },
+  "bronze:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "You decide to put the forge to use and... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...power up your arsenal with new upgrades and servos."
+    ],
+    "OPTIONS": [
+      "[Tinker] #gUpgrade #g3 #gRandom #gCards #gwith #gEncode.",
+      "[Locked] Requires an unupgraded card with Encode."
+    ]
+  },
+  "bronze:CrystalForge": {
+    "NAME": "Grim Forge",
+    "DESCRIPTIONS": [
+      "Through secret passages known only to the Constructs of the Spire, you enter a chamber designed for maintenance and repairs on Automaton models. The tools available here will be of certain use to you.",
+      "Using the enchanted anvil, <made a function>.",
+      "With the magic tongs, <traded rare for max HP",
+      "The Forge's ability to transmute matter is put to use immediately as you toss in an unneeded piece of equipment. Some moments later, the material dissolves and compresses into a new enhancement for your armor.",
+      "You escape through the same secret passage you came in, leaving the Grim Forge behind you. Your journey continues towards the Dawn awaiting at the top of the Spire.",
+      "Choose a card to Remove."
+    ],
+    "OPTIONS": [
+      "[Craft] #gGain #gBottled #gCode. #rLose #r10 #rMax #rHP.",
+      "[Transmute] #rRemove a Card. Gain a random #gCard #gwith #gEncode.",
+      "[Reforge] #rRemove a #yRare Card. #gGain #g10 #gMax #gHP #gand #gHeal #gto #gfull.",
+      "[Locked] Already used.",
+      "[Leave]",
+      "[Locked] Requires a card with Encode.",
+      "[Locked] Requires a Rare card.",
+      "Choose a card to remove."
+    ]
+  }
+}

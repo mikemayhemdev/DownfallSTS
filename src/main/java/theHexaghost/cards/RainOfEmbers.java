@@ -15,13 +15,13 @@ public class RainOfEmbers extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, ENEMY, COMMON
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 7;
     private static final int MAGIC = 0;
 
     public RainOfEmbers() {
-        super(ID, -1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
-        baseBurn = burn = 5;
+        baseBurn = burn = 7;
         baseMagicNumber = magicNumber = MAGIC;
     }
 

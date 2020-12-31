@@ -3,14 +3,14 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "I feel so funky.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
+      "Whenever you #yslimeboundmod:Consume, heal 1 HP."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
     "NAME": "Black Heart of Goo",
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume, heal 4 HP."
+      "Whenever you #yslimeboundmod:Consume, heal 2 HP."
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -91,7 +91,7 @@
     "NAME": "Tarr Blob",
     "FLAVOR": "The bad kind of Slime.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. #yslimeboundmod:Splitting costs #b2 more HP and Max HP."
+      "Gain [E] at the start of your turn. At the start of combat, lose #b1 Slime slot."
     ]
   },
   "Slimebound:StickyStick": {

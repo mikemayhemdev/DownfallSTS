@@ -1,9 +1,8 @@
 package champ.cards;
 
-import basemod.devcommands.unlock.Unlock;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
-import champ.util.RetainCardMod;
+import downfall.cardmods.RetainCardMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,6 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.util.ArrayList;
+
+import static champ.ChampMod.fatigue;
 
 public class ArenaPreparation extends AbstractChampCard {
 

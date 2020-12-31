@@ -14,7 +14,7 @@
   },
   "sneckomod:TailWhip": {
     "NAME": "Tail Whip",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 0 - !M! Weak. NL Apply 0 - !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! - 2 Weak. NL Apply !M! - 2 Vulnerable."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "???",
@@ -199,7 +199,7 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glittering Gambit",
-    "DESCRIPTION": "sneckomod:Snekproof. NL Set your *Gold to !M! % - 120 % of its current amount. NL Exhaust."
+    "DESCRIPTION": "sneckomod:Snekproof. NL Gain !M! - 30 *Gold. NL Exhaust."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrify",
@@ -283,8 +283,8 @@
     "NAME": "Wide Sting",
     "DESCRIPTION": "Deal !M! - !D! damage to ALL enemies. NL Upgrade all sneckomod:Offclass cards in your hand."
   },
-  "sneckomod:Bewildered": {
-    "NAME": "Bewildered",
-    "DESCRIPTION": "When you play another card, sneckomod:Muddle your hand, then discard this. NL Exhaust."
+  "sneckomod:UnendingSupply": {
+    "NAME": "Unending Supply",
+    "DESCRIPTION": "At the start of each turn, add a random sneckomod:Offclass card to your hand and sneckomod:Muddle it."
   }
 }

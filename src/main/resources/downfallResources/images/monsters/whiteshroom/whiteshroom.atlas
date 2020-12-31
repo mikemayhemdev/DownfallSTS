@@ -1,0 +1,76 @@
+
+whiteshroom.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+genki/Ground
+  rotate: false
+  xy: 1, 212
+  size: 119, 29
+  orig: 119, 29
+  offset: 0, 0
+  index: -1
+genki/Undercap
+  rotate: false
+  xy: 1, 1
+  size: 123, 133
+  orig: 123, 133
+  offset: 0, 0
+  index: -1
+genki/Stem
+  rotate: false
+  xy: 126, 1
+  size: 44, 51
+  orig: 44, 51
+  offset: 0, 0
+  index: -1
+genki/Cap
+  rotate: false
+  xy: 1, 136
+  size: 125, 74
+  orig: 125, 74
+  offset: 0, 0
+  index: -1
+genki/WhiteR
+  rotate: false
+  xy: 126, 54
+  size: 20, 25
+  orig: 20, 25
+  offset: 0, 0
+  index: -1
+genki/WhiteL
+  rotate: false
+  xy: 231, 212
+  size: 22, 25
+  orig: 22, 25
+  offset: 0, 0
+  index: -1
+genki/PupilR
+  rotate: false
+  xy: 126, 81
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+genki/PupilL
+  rotate: false
+  xy: 126, 101
+  size: 18, 18
+  orig: 18, 18
+  offset: 0, 0
+  index: -1
+genki/BlushL
+  rotate: false
+  xy: 122, 212
+  size: 52, 39
+  orig: 52, 39
+  offset: 0, 0
+  index: -1
+genki/BlushR
+  rotate: false
+  xy: 176, 212
+  size: 53, 37
+  orig: 53, 37
+  offset: 0, 0
+  index: -1

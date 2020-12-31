@@ -367,11 +367,14 @@
   "downfall:Vagrant": {
     "NAME": "Pleading Vagrant",
     "DESCRIPTIONS": [
-      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites."
+      "You kill the man and harvest his soul. ~Gasps~ come from the crowd behind you. NL \"He just killed Burgundy!\" a figure says, as more addicts just like the one you encountered begin to approach you. NL NL You escape, but not without some #rclaws and #rbites.",
+      "You snatch the precious #yrelic from his clutches and walk away. NL From behind you hear, NL \"Have you no shame? ~HAVE~ ~YOU~ ~NO~ ~SHAAAAAME?!\"~ NL You have #pabsolutely #pno #pshame. It is an honor to be robbed by an Overlord of the Spire!"
+
     ],
     "OPTIONS": [
       "[Punch] #gGain #g85 #gSouls. #rLose #r",
-      " #rHP."
+      " #rHP.",
+      "[Rob] #gObtain #ga #gRelic. #rBecome #rCursed #r- #rShame."
     ]
   },
   "downfall:Beggar": {
@@ -456,7 +459,7 @@
     "OPTIONS": [
       "[I am an Echo] #rFight #ryourself. #gObtain #ga #gRare #gRelic.",
       "[I am Gorged] #gGain #g999 #gSouls. #rCursed #r- #r2 #rNormality.",
-      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rall #r3 #rHeart #rBlessings.",
+      "[I am Complete] #gUpgrade #gall #gCards. #rLose #rHeart #rBlessings and #r10 #rMax #rHP.",
       "[Locked] Requires all 3 Heart Blessings.",
       "[Leave]"
     ]
@@ -572,7 +575,7 @@
       "@tu-thump@ ... @tu-thump@ ... @tu-thump@ ... NL A comforting heartbeat can be felt throughout the room... NL Are you at the ~end~ ? Is your purpose fulfilled?",
       "You give #b",
       " Souls back to the heart! NL The heart #b@squirms@ in elation, pounding forever more.",
-      "For all your efforts, the door to the Heart's chamber remains vulnerable, and that pesky, laughing, rug-toting citizen got away from you. So, you ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~  NL You feel that you have given a total of #b",
+      "Despite your best efforts, the door to the Heart's chamber remains vulnerable. So, you ask yourself, ~\"Have~ ~you~ ~truly~ ~done~ ~enough?\"~  NL You feel that you have given a total of #b",
       " Souls to the heart.",
       " NL A total of #b",
       " Souls have been given by all who have been summoned by it.",
@@ -592,6 +595,17 @@
       "[Give] #b???",
       "[Sleep]",
       "[Approach Door]"
+    ]
+  },
+  "downfall:EvilShrines": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Only you should hold this power. You shatter the shrine into pieces. NL A dark wail echoes all around you, and you can feel the Shrine's #p~cursed~ #p~magic~ seep into your bones."    ],
+    "OPTIONS": [
+      "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gRemove #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gTransform #g2 #gcards. #rCursed #r- #rRandom.",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rRandom."
     ]
   }
 }

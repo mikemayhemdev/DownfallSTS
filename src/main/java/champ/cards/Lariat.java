@@ -17,7 +17,7 @@ public class Lariat extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 5;
     private static final int UPG_BLOCK = 1;
 
     private static final int MAGIC = 4;
@@ -31,6 +31,7 @@ public class Lariat extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        techique();
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
@@ -45,20 +46,5 @@ public class Lariat extends AbstractChampCard {
     public void upp() {
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
-    }
-
-    @Override
-    public void initializeDescription() {
-        if (EXTENDED_DESCRIPTION != null) {
-            String newDesc = "";
-            if (upgraded) {
-                newDesc = EXTENDED_DESCRIPTION[1];
-            } else {
-                newDesc = EXTENDED_DESCRIPTION[0];
-            }
-            initializeDescription(newDesc, "");
-        } else {
-            super.initializeDescription();
-        }
     }
 }

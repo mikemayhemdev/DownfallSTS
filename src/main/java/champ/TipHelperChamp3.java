@@ -101,7 +101,6 @@ public class TipHelperChamp3 {
                             !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)
                     ) {
                         currentColor = new Color(0.5F, TipHelperChamp2.greenValue, 0.5F, 1F);
-                        //TODO: End Turn Button flashing
                     }
                 }
             }

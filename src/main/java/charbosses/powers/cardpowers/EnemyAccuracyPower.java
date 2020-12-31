@@ -2,11 +2,7 @@ package charbosses.powers.cardpowers;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.colorless.EnShiv;
-import charbosses.cards.green.EnBladeDance;
-import charbosses.cards.green.EnCloakAndDagger;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.green.BladeDance;
-import com.megacrit.cardcrawl.cards.green.CloakAndDagger;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -45,12 +41,16 @@ public class EnemyAccuracyPower extends AbstractPower {
     }
 
     private void updateExistingShivs() {
-        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-            if (c instanceof EnShiv) {
-                if (!c.upgraded) {
-                    c.baseDamage = 4 + this.amount;
-                } else {
-                    c.baseDamage = 6 + this.amount;
+        if (AbstractCharBoss.boss != null) {
+            if (AbstractCharBoss.boss.hand != null) {
+                for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                    if (c instanceof EnShiv) {
+                        if (!c.upgraded) {
+                            c.baseDamage = 4 + this.amount;
+                        } else {
+                            c.baseDamage = 6 + this.amount;
+                        }
+                    }
                 }
             }
         }
@@ -96,12 +96,16 @@ public class EnemyAccuracyPower extends AbstractPower {
 
     @Override
     public void onDrawOrDiscard() {
-        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-            if (c instanceof EnShiv) {
-                if (!c.upgraded) {
-                    c.baseDamage = 4 + this.amount;
-                } else {
-                    c.baseDamage = 6 + this.amount;
+        if (AbstractCharBoss.boss != null) {
+            if (AbstractCharBoss.boss.hand != null) {
+                for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                    if (c instanceof EnShiv) {
+                        if (!c.upgraded) {
+                            c.baseDamage = 4 + this.amount;
+                        } else {
+                            c.baseDamage = 6 + this.amount;
+                        }
+                    }
                 }
             }
         }

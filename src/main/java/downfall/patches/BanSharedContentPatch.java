@@ -4,28 +4,30 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.relics.Ectoplasm;
 import downfall.downfallMod;
+import downfall.relics.Hecktoplasm;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
 import expansioncontent.relics.StudyCardRelic;
-import guardian.cards.Aged;
+import downfall.cards.curses.Aged;
 import guardian.characters.GuardianCharacter;
 import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
-import slimebound.cards.Icky;
+import downfall.cards.curses.Icky;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
-import sneckomod.cards.Bewildered;
+import downfall.cards.curses.Bewildered;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
 import theHexaghost.TheHexaghost;
-import theHexaghost.cards.Haunted;
+import downfall.cards.curses.Haunted;
 import theHexaghost.potions.BurningPotion;
 import theHexaghost.relics.BolsterEngine;
 import theHexaghost.relics.CandleOfCauterizing;
@@ -117,6 +119,12 @@ public class BanSharedContentPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(BolsterEngine.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(CandleOfCauterizing.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Sixitude.ID);
+            }
+            if (EvilModeCharacterSelect.evilMode) {
+                AbstractDungeon.relicsToRemoveOnStart.add(Ectoplasm.ID);
+            }
+            else {
+                AbstractDungeon.relicsToRemoveOnStart.add(Hecktoplasm.ID);
             }
         }
     }

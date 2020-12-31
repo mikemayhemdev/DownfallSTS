@@ -24,6 +24,9 @@ import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.relics.HeartBlessingBlue;
+import downfall.relics.HeartBlessingGreen;
+import downfall.relics.HeartBlessingRed;
 import downfall.vfx.NeowBossRezEffect;
 import slimebound.SlimeboundMod;
 
@@ -75,21 +78,21 @@ public class NeowRezAction extends AbstractGameAction {
             String name;
             if (owner.bossesToRez.size() == 0) {
                 name = "downfall:Ironclad";
-                SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
+                //SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
             } else {
                 //Collections.shuffle(owner.bossesToRez);
                 name = owner.bossesToRez.get(0);
                 owner.bossesToRez.remove(0);
             }
-            SlimeboundMod.logger.info("Neow rezzing: " + name);
+            //SlimeboundMod.logger.info("Neow rezzing: " + name);
             rezBoss(name);
-            SlimeboundMod.logger.info("Neow rezzed: " + cB.name);
+            //SlimeboundMod.logger.info("Neow rezzed: " + cB.name);
             owner.minion = cB;
             cB.tint.color = new Color(.5F, .5F, 1F, 0F);
             cB.tint.changeColor(Color.WHITE.cpy(), 2F);
             AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.CYAN, true));
             AbstractDungeon.effectsQueue.add(new IntenseZoomEffect(cB.hb.cX, cB.hb.cY, false));
-            rezVFX = new NeowBossRezEffect(cB.hb.cX, cB.hb.cY);
+            rezVFX = new NeowBossRezEffect(cB.hb.cX - 100F, cB.hb.cY);
             AbstractDungeon.effectsQueue.add(rezVFX);
 
             AbstractDungeon.getCurrRoom().monsters.add(cB);
@@ -110,15 +113,13 @@ public class NeowRezAction extends AbstractGameAction {
 
         if (this.duration <= 0F) {
             cB.init();
-            owner.Rezzes++;
-            if (owner.Rezzes == 4) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-                //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(cB.anticard().makeCopy()));
-            }
+            NeowBoss.Rezzes++;
+
             cB.showHealthBar();
 
             rezVFX.end();
+            cB.chosenArchetype.addedPreBattle();
+           // cB.usePreBattleAction();
             this.isDone = true;
         }
     }

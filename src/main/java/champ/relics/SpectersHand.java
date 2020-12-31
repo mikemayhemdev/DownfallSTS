@@ -7,14 +7,12 @@ import champ.cards.Defend;
 import champ.cards.Strike;
 import champ.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import sneckomod.util.ExhaustMod;
+import downfall.cardmods.ExhaustMod;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;

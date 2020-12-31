@@ -10,8 +10,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.SelectCardsCenteredAction;
 import slimebound.SlimeboundMod;
 import slimebound.patches.AbstractCardEnum;
+
+import java.util.ArrayList;
 
 
 public class ServeAndProtect extends AbstractSlimeboundCard {
@@ -24,7 +27,7 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -125,17 +128,17 @@ public class ServeAndProtect extends AbstractSlimeboundCard {
 
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        ArrayList<AbstractCard> myCardsList = new ArrayList<>();
         AbstractCard c = new ServeAndProtectServe();
         if (upgraded) c.upgrade();
-
         AbstractCard c2 = new ServeAndProtectProtect();
         if (upgraded) c2.upgrade();
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c2));
-
+        myCardsList.add(c);
+        myCardsList.add(c2);
+        addToBot(new SelectCardsCenteredAction(myCardsList, 1, "Choose.", (cards) -> addToTop(new MakeTempCardInHandAction(cards.get(0).makeCopy(), true)))); //TODO: Localize
     }
 
     public AbstractCard makeCopy() {

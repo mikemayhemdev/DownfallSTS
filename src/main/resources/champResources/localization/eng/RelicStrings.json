@@ -15,86 +15,86 @@
   },
   "champ:Barbells": {
     "NAME": "Barbell",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "1000 reps? Psh. I can do 1001.",
     "DESCRIPTIONS": [
-      "Whenever you enter a Rest Site, if you have at least 3 non-Upgraded cards in your deck, #yUpgrade one at random."
+      "Whenever you enter a Rest Site, if you have at least #b10 non-Upgraded cards in your deck, #yUpgrade one at random."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
-    "NAME": "Berserker's Guide to Slaughter",
-    "FLAVOR": "Flavor.",
+    "NAME": "Berserker's Guide",
+    "FLAVOR": "The text is illegible.",
     "DESCRIPTIONS": [
-      "Prevent the first 10 HP you lose on your turn each combat."
+      "Prevent the first #b10 HP you lose on your turn each combat."
     ]
   },
   "champ:ChampionCrownUpgraded": {
-    "NAME": "Ultimate Champion's Crown",
-    "FLAVOR": "Flavor.",
+    "NAME": "Victorious Crown",
+    "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Start each combat in Ultimate Stance, which lasts for 2 turns."
+      "Replaces #rChampion's #rCrown. NL Start each combat in Ultimate #yStance, which lasts for #b2 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {
-    "NAME": "Defensive Training Manual",
-    "FLAVOR": "Flavor.",
+    "NAME": "Defensive Thesis",
+    "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
-      "#yTechniques used in Defensive Mode generate 3 more #yCounter."
+      "#yTechniques used in Defensive #yStance generate #b3 more #yCounter."
     ]
   },
   "champ:DeflectingBracers": {
     "NAME": "Deflecting Bracers",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "If you thought blocking was good then...",
     "DESCRIPTIONS": [
       "At the end of the enemy round, gain #yCounter equal to your remaining Block."
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "Dueling Glove",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "Count from ten...",
     "DESCRIPTIONS": [
-      "After using a single-target Attack, if the target has no #yVulnerable, apply 1 #yVulnerable."
+      "After using a single-target Attack, if the target has no #yVulnerable, apply #b1 #yVulnerable."
     ]
   },
   "champ:FightingForDummies": {
     "NAME": "Fighting for Dummies",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "Step 1. Defeat the enemy",
     "DESCRIPTIONS": [
-      "If you end your turn while in no Stance, gain 6 Block."
+      "If you end your turn while in no #yStance, gain #b6 #yBlock."
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
-    "NAME": "Gladiators Book of Martial Prowess",
-    "FLAVOR": "Flavor.",
+    "NAME": "Gladiators Manual",
+    "FLAVOR": "Try everything - something will stick.",
     "DESCRIPTIONS": [
-      "Whenever you play a Technique, a Combo, a Finisher, and enter a Stance in the same turn, gain 1 Strength or Dexterity (chosen at random)."
+      "Whenever you play a #yTechnique, a #yCombo, a #yFinisher, and enter a #yStance in the same turn, gain #b1 #yStrength and #yDexterity."
     ]
   },
   "champ:PowerArmor": {
     "NAME": "Power Armor",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain [E] . NL Your maximum Resolve and Counter is 15, and your maximum Hand Size is 8."
+      "At the start of your turn, gain [E] . NL Your maximum #yFatigue and #yCounter is #b30. NL Reduce your maximum hand size by #b2."
     ]
   },
   "champ:SignatureFinisher": {
     "NAME": "Signature Finisher",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "And now, it's time for my ULTIMATE MOVE!",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a Finisher. This Finisher never causes your turn to end or your stance to be exited.",
+      "Upon pickup, choose a #yFinisher. This #yFinisher never causes your turn to end or your #yStance to be exited.",
       "Choose a card for ",
-      " never causes your turn to end or your stance to be exited."
+      " never causes your turn to end or your #yStance to be exited."
     ]
   },
   "champ:SpectersHand": {
     "NAME": "Spectre's Hand",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "Some victories stay with you.",
     "DESCRIPTIONS": [
-      "Whenever you play a Technique while not in a Stance, add a Strike or Defend to your hand. It costs 0 and has Exhaust."
+      "Whenever you play a #yTechnique while not in a #yStance, add a #yStrike or #yDefend to your hand. It costs #b0 and has #yExhaust."
     ]
   },
   "champ:LiftRelic": {
     "NAME": "Inner Strength",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "It's about the gigantic sword in your heart.",
     "DESCRIPTIONS": [
       "Start each combat with #b",
       " #yStrength."
@@ -102,9 +102,9 @@
   },
   "champ:ChampStancesModRelic": {
     "NAME": "New Challenger",
-    "FLAVOR": "Flavor.",
+    "FLAVOR": "Can you take the crown?",
     "DESCRIPTIONS": [
-      "Start each combat in a random Champ stance."
+      "Start each combat in a random Champ #yStance."
     ]
   }
 }

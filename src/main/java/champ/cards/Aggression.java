@@ -26,7 +26,7 @@ public class Aggression extends AbstractChampCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new OctoChoiceAction(this));
+        atb(new OctoChoiceAction(m, this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -36,7 +36,7 @@ public class Aggression extends AbstractChampCard implements OctopusCard {
         return cardList;
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
                 berserkOpen();

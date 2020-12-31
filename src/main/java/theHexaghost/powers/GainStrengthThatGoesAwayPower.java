@@ -81,7 +81,11 @@ public class GainStrengthThatGoesAwayPower extends AbstractPower implements Clon
         description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
-
+    @Override
+    public void playApplyPowerSfx() {
+        //to prevent the 'last turn' warning from pinging audio all the time
+    }
+    
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer)

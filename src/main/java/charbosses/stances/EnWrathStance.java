@@ -26,11 +26,7 @@ public class EnWrathStance extends AbstractEnemyStance {
     }
 
     public float atDamageGive(float damage, DamageType type) {
-        return type == DamageType.NORMAL ? damage * 2.0F : damage;
-    }
-
-    public float atDamageReceive(float damage, DamageType type) {
-        return type == DamageType.NORMAL ? damage * 2.0F : damage;
+        return type == DamageType.NORMAL ? damage * 1.5F : damage;
     }
 
     public void updateAnimation() {

@@ -17,7 +17,7 @@ public class CharBossMonsterGroup extends MonsterGroup {
 
     @Override
     public void applyPreTurnLogic() {
-        SlimeboundMod.logger.info("New Monstergroup preTurnLogic triggered");
+        //SlimeboundMod.logger.info("New Monstergroup preTurnLogic triggered");
 
         for (AbstractMonster m : this.monsters) {
             if (m instanceof AbstractCharBoss) {
@@ -25,28 +25,28 @@ public class CharBossMonsterGroup extends MonsterGroup {
                 if (!m.isDying && !m.isEscaping) {
                     if (!m.hasPower("Barricade") && !m.hasPower(BlurPower.POWER_ID)) {
                         if (cB.hasRelic(CBR_Calipers.ID)) {
-                            SlimeboundMod.logger.info("Calipers block triggered.");
+                            //SlimeboundMod.logger.info("Calipers block triggered.");
                             m.loseBlock(15);
                         } else {
-                            SlimeboundMod.logger.info("Normal block loss triggered.");
+                            //SlimeboundMod.logger.info("Normal block loss triggered.");
                             m.loseBlock();
                         }
                     }
 
                     if (NeowBoss.neowboss != null) {
                         if (NeowBoss.neowboss.offscreen) {
-                            SlimeboundMod.logger.info("Start of turn power: Neow is not null and is offscreen.");
+                            //SlimeboundMod.logger.info("Start of turn power: Neow is not null and is offscreen.");
                             m.applyStartOfTurnPowers();
                         } else {
-                            SlimeboundMod.logger.info("Start of turn power: Neow is not null is offscreen.");
+                            //SlimeboundMod.logger.info("Start of turn power: Neow is not null is offscreen.");
                         }
                     } else {
-                        SlimeboundMod.logger.info("Start of turn power: Neow is null.");
+                        //SlimeboundMod.logger.info("Start of turn power: Neow is null.");
                         m.applyStartOfTurnPowers();
                     }
                 }
             } else {
-                SlimeboundMod.logger.info("Start of turn power: This is not a charboss.");
+                //SlimeboundMod.logger.info("Start of turn power: This is not a charboss.");
                 m.applyStartOfTurnPowers();
             }
         }

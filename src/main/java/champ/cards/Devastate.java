@@ -1,6 +1,8 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.actions.DevastateAction;
+import champ.actions.IncreaseMiscDamageAction;
 import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.defect.IncreaseMiscAction;
@@ -30,22 +32,19 @@ public class Devastate extends AbstractChampCard {
         this.magicNumber = this.baseMagicNumber;
         this.baseDamage = this.misc;
         tags.add(ChampMod.FINISHER);
+        exhaust = true;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (!(p.stance instanceof NeutralStance)) {
-            atb(new IncreaseMiscAction(this.uuid, this.misc, this.magicNumber));
-            exhaust = true;
-        }
+        addToBot(new DevastateAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber, this.uuid));
         finisher();
     }
 
     public void applyPowers() {
         baseDamage = misc;
         super.applyPowers();
-        //applyPowers();
+        //genPreview();
         initializeDescription();
     }
 

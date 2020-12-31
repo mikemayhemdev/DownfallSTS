@@ -3,8 +3,8 @@
     "NAME": "Neow's Blessing",
     "FLAVOR": "Ease your rage. Be as tough and unyielding as the Spire itself.",
     "DESCRIPTIONS": [
-      "Replaces starter relic. Upon pickup, increase your Maximum HP by #b100. NL Increase your Maximum HP by #b100 at the start of each Act. NL Lose all your Potion slots,draw #b2 less cards and lose ",
-      " at the start of your turn."
+      "Boss has increased max HP, no starter relic, draws #b2 less cards, and has 1 less ",
+      " ."
     ]
   },
   "downfall:NeowBlessing_Player": {
@@ -379,10 +379,14 @@
     "NAME": "Gremlin Sack",
     "FLAVOR": "You were no match for the Gremlin and his bodyguard.",
     "DESCRIPTIONS": [
-      "Upon pickup, add the following cards to your deck: ",
-      "a Starter card",
-      ", a random Common, a random Uncommon, a random Rare, a random Uncommon Colorless, and a random Curse.",
-      ", a random Common, a random Uncommon, a random Rare, two random Curses."
+      "Upon pickup, add the following cards to your deck: NL ",
+      "Upon pickup, add 6 cards to your deck from the Match Game.",
+      "#g(Starter) ",
+      "#g(Common) ",
+      "#b(Uncommon) ",
+      "#y(Rare) ",
+      "#b(Colorless) ",
+      "#r(Curse) "
     ]
   },
   "downfall:GremlinWheel": {
@@ -444,21 +448,21 @@
     "NAME": "Ruby Heart Blessing",
     "FLAVOR": "The heart is strong. The heart is pleased.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yStrength. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
+      "Start each combat with #b1 #yStrength."
     ]
   },
   "downfall:HeartBlessingBlue": {
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
+      "Upon pickup, raise your Max HP by #b10."
     ]
   },
   "downfall:HeartBlessingGreen": {
     "NAME": "Emerald Heart Blessing",
     "FLAVOR": "The heart is everything.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yDexterity. NL At the start of combat with the Beyond's boss, gain a special card (does not stack with other Heart Blessings)."
+      "Start each combat with #b1 #yDexterity."
     ]
   },
   "downfall:TeleportStone": {
@@ -478,6 +482,13 @@
       "This relic has been used up."
     ]
   },
+  "downfall:Hecktoplasm": {
+    "NAME": "Hecktoplasm",
+    "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
+    "DESCRIPTIONS": [
+      "You can no longer gain #ySouls. Breaking Keys costs no #ySouls. Gain [E] at the start of your turn."
+    ]
+  },
   "downfall:replacements": {
     "NAME": "",
     "FLAVOR": "",
@@ -490,6 +501,13 @@
       "The Heart's corruption knows no limits - not even precious pets.",
       "Corrupted Courier",
       "The Heart restocks cards, relics, and potions. All prices are reduced by #b20%."
+    ]
+  },
+  "downfall:LizardTail": {
+    "NAME": "Super Lizard Tail",
+    "FLAVOR": "A fake tail to trick enemies during combat.",
+    "DESCRIPTIONS": [
+      "When you would die, heal to #b100% of your Max HP instead (works once)."
     ]
   }
 }

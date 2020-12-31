@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import slimebound.relics.AbsorbEndCombat;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
@@ -33,6 +34,23 @@ public class ChampionCrownUpgraded extends CustomRelic {
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(2), 2));
     }
 
+    @Override
+    public void obtain() {
+        if (AbstractDungeon.player.hasRelic(ChampionCrown.ID)) {
+            for (int i = 0; i < AbstractDungeon.player.relics.size(); ++i) {
+                if (AbstractDungeon.player.relics.get(i).relicId.equals(ChampionCrown.ID)) {
+                    instantObtain(AbstractDungeon.player, i, true);
+                    break;
+                }
+            }
+        } else {
+            super.obtain();
+        }
+    }
+
+    public boolean canSpawn() {
+        return AbstractDungeon.player.hasRelic(ChampionCrown.ID);
+    }
 
     @Override
     public String getUpdatedDescription() {

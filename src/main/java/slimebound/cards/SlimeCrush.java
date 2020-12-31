@@ -60,7 +60,7 @@ public class SlimeCrush extends AbstractSlimeboundCard {
 
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
 
-        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunnedPower(p, p, this.magicNumber), this.magicNumber));
+        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StunMonsterPower(p, p, this.magicNumber), this.magicNumber));
 
 
     }

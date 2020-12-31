@@ -43,14 +43,14 @@ public class BanditIOUAction extends AbstractGameAction {
         this.p = p;
         this.m = m;
 
-        if (m == null) SlimeboundMod.logger.info("Bandit Cutscene has a null monster!!");
+        if (m == null) //SlimeboundMod.logger.info("Bandit Cutscene has a null monster!!");
         this.duration = 13F;
     }
 
     public void dealDamage(int damage){
-        SlimeboundMod.logger.info("Deal damage hit");
+        //SlimeboundMod.logger.info("Deal damage hit");
         if (!m.isDeadOrEscaped()) {
-            //SlimeboundMod.logger.info("Deal damage hitting:" + m.name);
+            ////SlimeboundMod.logger.info("Deal damage hitting:" + m.name);
             DamageInfo info = new DamageInfo(p, damage, DamageInfo.DamageType.THORNS);
 
             m.tint.color.set(Color.GRAY.cpy());
@@ -70,7 +70,7 @@ public class BanditIOUAction extends AbstractGameAction {
     }
 
     public void playEffect(AbstractGameEffect effect){
-        SlimeboundMod.logger.info("effect:" + effect);
+        //SlimeboundMod.logger.info("effect:" + effect);
         AbstractDungeon.effectsQueue.add(effect);
         if (shouldPlayTextEffect && textEffect != null){
             AbstractDungeon.effectsQueue.add(textEffect);
@@ -129,12 +129,12 @@ public class BanditIOUAction extends AbstractGameAction {
             if (shouldDamage) {
                 dealDamage(currentDamage);
                 shouldDamage = false;
-                SlimeboundMod.logger.info("damage action received");
+                //SlimeboundMod.logger.info("damage action received");
             }
             if (shouldPlayEffect) {
                 if (currentEffect != null) playEffect(currentEffect);
                 shouldPlayEffect = false;
-                SlimeboundMod.logger.info("effect action received");
+                //SlimeboundMod.logger.info("effect action received");
             }
             if (shouldFinish) {
                 effect.doneBlasting = true;

@@ -1,55 +1,44 @@
 package slimebound;
 
 import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.RelicLibrary;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.screens.custom.CustomMod;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
+import downfall.cards.curses.Icky;
 import downfall.downfallMod;
 import expansioncontent.relics.StudyCardRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import slimebound.actions.SlimeSpawnAction;
 import slimebound.cards.*;
 import slimebound.characters.SlimeboundCharacter;
-import slimebound.dailymods.AllSplit;
 import slimebound.events.*;
 import slimebound.helpers.SelfDamageVariable;
 import slimebound.helpers.SlimedVariable;
-import slimebound.orbs.CultistSlime;
-import slimebound.orbs.SpawnedSlime;
+import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
 import slimebound.patches.SlimeboundEnum;
 import slimebound.potions.SlimedPotion;
@@ -61,7 +50,7 @@ import slimebound.powers.DuplicatedFormNoHealPower;
 import slimebound.relics.*;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 import java.util.Properties;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
@@ -75,7 +64,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         basemod.interfaces.EditCharactersSubscriber,
         basemod.interfaces.EditRelicsSubscriber,
         basemod.interfaces.EditCardsSubscriber,
-        //basemod.interfaces.EditKeywordsSubscriber,
+        OnPowersModifiedSubscriber,
         //EditStringsSubscriber,
         //basemod.interfaces.PostDrawSubscriber,
         basemod.interfaces.OnStartBattleSubscriber {
@@ -131,6 +120,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static boolean goopGlow = false;
 
+    private static ArrayList<String> specialistSlimes = new ArrayList<>();
+
     static {
         hasHubris = Loader.isModLoaded("Hubris");
         if (hasHubris) {
@@ -166,6 +157,16 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         slimeboundDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
 
         loadConfigData();
+
+
+        specialistSlimes.add("Bronze");
+        specialistSlimes.add("Ghostflame");
+        specialistSlimes.add("Torchhead");
+        specialistSlimes.add("Cultist");
+        specialistSlimes.add("Protector");
+        specialistSlimes.add("Insulting");
+        specialistSlimes.add("Ancient");
+        specialistSlimes.add("Slowing");
     }
 
     public static String getResourcePath(String resource) {
@@ -265,8 +266,8 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         slimeTalkedCollector = false;
         if (AbstractDungeon.player != null) {
 
-                SlimeboundMod.foughtSlimeBoss = false;
-                //SlimeboundMod.logger.info("Reset Hunted event bool.");
+            SlimeboundMod.foughtSlimeBoss = false;
+            ////SlimeboundMod.logger.info("Reset Hunted event bool.");
 
         }
 
@@ -277,7 +278,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         if (AbstractDungeon.player.maxOrbs > 0) {
             for (AbstractOrb o : AbstractDungeon.player.orbs) {
-                if (o instanceof SpawnedSlime){
+                if (o instanceof SpawnedSlime) {
                     oldestOrb = o;
                 }
             }
@@ -391,7 +392,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
         BaseMod.addCard(new slimebound.cards.Strike_Slimebound());
-     //   BaseMod.addCard(new BronzeBeam());
+        //   BaseMod.addCard(new BronzeBeam());
         BaseMod.addCard(new LevelUp());
         BaseMod.addCard(new SplitBruiser());
         BaseMod.addCard(new SplitAcid());
@@ -450,7 +451,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new slimebound.cards.Grow());
         BaseMod.addCard(new slimebound.cards.Prepare());
         BaseMod.addCard(new slimebound.cards.Gluttony());
-        //BaseMod.addCard(new slimebound.cards.UsefulSlime());
+        //BaseMod.addCard(new automaton.cards.goodstatus.UsefulSlime());
         BaseMod.addCard(new RainOfGoop());
         BaseMod.addCard(new slimebound.cards.GoopSpray());
         BaseMod.addCard(new slimebound.cards.MassFeed());
@@ -474,7 +475,6 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new GrowthPunch());
         BaseMod.addCard(new slimebound.cards.Recycling());
         BaseMod.addCard(new slimebound.cards.Recollect());
-        BaseMod.addCard(new slimebound.cards.Icky());
 
         BaseMod.addCard(new SplitSpecialist());
         BaseMod.addCard(new Darklings());
@@ -759,4 +759,70 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         attacksPlayedThisTurn = 0;
     }
 
+    public static void spawnNormalSlime() {
+        Integer o = AbstractDungeon.cardRng.random(0, 3);
+
+        switch (o) {
+            case 0:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new AttackSlime(), false, true));
+                break;
+            case 1:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ShieldSlime(), false, true));
+                break;
+            case 2:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                break;
+            case 3:
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                break;
+        }
+    }
+
+    public static void spawnSpecialistSlime() {
+        Collections.shuffle(specialistSlimes, AbstractDungeon.cardRng.random);
+
+        switch (specialistSlimes.get(0)) {
+            case "Bronze": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new BronzeSlime(), false, true));
+                break;
+            }
+            case "Ghostflame": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new HexSlime(), false, true));
+                break;
+            }
+            case "Torchhead": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new TorchHeadSlime(), false, true));
+                break;
+            }
+            case "Cultist": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new CultistSlime(), false, true));
+                break;
+            }
+            case "Protector": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ProtectorSlime(), false, true));
+                break;
+            }
+            case "Insulting": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new ChampSlime(), false, true));
+                break;
+            }
+            case "Ancient": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new DrawingSlime(), false, true));
+                break;
+            }
+            case "Slowing": {
+                AbstractDungeon.actionManager.addToBottom(new SlimeSpawnAction(new SlowingSlime(), false, true));
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void receivePowersModified() {
+        for (AbstractOrb o:AbstractDungeon.player.orbs){
+            if (o instanceof SpawnedSlime){
+                o.applyFocus();
+            }
+        }
+    }
 }

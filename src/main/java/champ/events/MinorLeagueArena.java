@@ -48,7 +48,7 @@ public class MinorLeagueArena extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Centurion and Healer");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new CloakClasp());
@@ -61,7 +61,7 @@ public class MinorLeagueArena extends AbstractImageEvent {
                     case 1:
 
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Gremlin Nob");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new ChampionsBelt());
@@ -72,7 +72,7 @@ public class MinorLeagueArena extends AbstractImageEvent {
                         return;
                     case 2:
                         this.screen = CurScreen.FIGHT;
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters = MonsterHelper.getEncounter("Colosseum Slavers");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new WristBlade());

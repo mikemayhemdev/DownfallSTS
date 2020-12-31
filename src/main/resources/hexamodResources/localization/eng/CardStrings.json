@@ -53,7 +53,7 @@
     "DESCRIPTION": "Gain !M! hexamod:Intensity."
   },
   "hexamod:HexaLevel": {
-    "NAME": "Hexa-Level",
+    "NAME": "Infernal Form",
     "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, gain !M! hexamod:Intensity."
   },
@@ -82,11 +82,11 @@
   },
   "hexamod:CrushingStance": {
     "NAME": "Crush",
-    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a Crushing Ghostflame. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage twice. NL Replace the hexamod:Active Ghostflame with a hexamod:Crushing Ghostflame. NL Exhaust."
   },
   "hexamod:EmpoweringStance": {
     "NAME": "Empower",
-    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a Bolstering Ghostflame."
+    "DESCRIPTION": "Gain !B! Block and !M! Strength. NL Replace the hexamod:Active Ghostflame with a hexamod:Bolstering Ghostflame."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
@@ -156,7 +156,7 @@
   },
   "hexamod:GiftsFromTheDead": {
     "NAME": "Gifts From Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, draw 1 card next turn.",
+    "DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] next turn.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Ethereal. hexamod:Afterlife. NL Whenever an Ethereal card is Exhausted, gain [E] and draw 1 card next turn."
   },
   "hexamod:Ghostwalk": {
@@ -172,7 +172,7 @@
     "DESCRIPTION": "Ethereal. NL Gain !M! Dexterity and lose 1 Strength."
   },
   "hexamod:ParanormalForm": {
-    "NAME": "Paranormal Form",
+    "NAME": "Poltergeist",
     "DESCRIPTION": "Ethereal. NL Whenever you play an Ethereal card, deal !M! damage to a random enemy."
   },
   "hexamod:UnleashSpirits": {
@@ -277,7 +277,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Flames from Beyond",
-    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies at the start of your next turn.",
+    "DESCRIPTION": "Unplayable. NL Ethereal, hexamod:Afterlife. NL Apply !burny! hexamod:Soulburn to ALL enemies.",
     "EXTENDED_DESCRIPTION": ["It's too hot to touch!"]
   },
   "hexamod:PhantomFireball": {
@@ -346,7 +346,7 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "Sixth Seal",
-    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional Seal card reward."
+    "DESCRIPTION": "Ethereal hexamod:Seal. NL At the end of combat, gain an additional non-Sixth Seal card reward."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fifth Seal",
@@ -356,10 +356,6 @@
     "NAME": "Living Bomb",
     "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL The next time the target's hexamod:Soulburn detonates, it affects ALL enemies."
-  },
-  "hexamod:Haunted": {
-    "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL When drawn, add Ethereal to all cards in your hand."
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Council's Justice",

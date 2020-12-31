@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -9,6 +10,7 @@ import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import slimebound.SlimeboundMod;
+import slimebound.actions.CommandAction;
 import slimebound.actions.SlimeSpawnAction;
 import slimebound.orbs.*;
 import slimebound.patches.AbstractCardEnum;
@@ -25,7 +27,7 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = 0;
+    private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
     public String[] NAMES = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").NAMES;
     public String[] TEXT = CardCrawlGame.languagePack.getCharacterString("downfall:OctoChoiceCards").TEXT;
@@ -44,8 +46,10 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        choice();
+        choice(m);
 
+
+        //Forever shall this code remain commented here.  A legacy to the origins of how bad Mayhem was at coding when this all began.
         /*        for (int i = 0; i < magicNumber; i++) {
             ArrayList<Integer> orbs = new ArrayList<>();
             orbs.add(1);
@@ -70,9 +74,9 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
          */
     }
 
-    public void choice() {
-        addToBot(new OctoChoiceAction(this));
-        if (upgraded) addToBot(new OctoChoiceAction(this));
+    public void choice(AbstractMonster m) {
+        addToBot(new OctoChoiceAction(m,this));
+        if (upgraded) addToBot(new OctoChoiceAction(m,this));
     }
 
     public ArrayList<OctoChoiceCard> choiceList() {
@@ -89,6 +93,32 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
 
     }
 
+    public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
+        switch (card.cardID) {
+            case "Slimebound:SplotBruiser": {
+                addToBot(new SlimeSpawnAction(new AttackSlime(), false, true));
+                updateMagic(1);
+                break;
+            }
+            case "Slimebound:SplotGuerilla": {
+                addToBot(new SlimeSpawnAction(new PoisonSlime(), false, true));
+                updateMagic(2);
+                break;
+            }
+            case "Slimebound:SplotLeeching": {
+                addToBot(new SlimeSpawnAction(new ShieldSlime(), false, true));
+                updateMagic(4);
+                break;
+            }
+            case "Slimebound:SplotMire": {
+                addToBot(new SlimeSpawnAction(new SlimingSlime(), false, true));
+                updateMagic(3);
+                break;
+            }
+
+        }
+    }
+
     private void updateMagic(int index) {
         if (upgraded) {
             if (this.baseMagicNumber == 0) {
@@ -101,34 +131,6 @@ public class Split extends AbstractSlimeboundCard implements OctopusCard {
         }
     }
 
-    public void doChoiceStuff(OctoChoiceCard card) {
-        switch (card.cardID) {
-            case "Slimebound:SplotBruiser": {
-                addToBot(new SlimeSpawnAction(new AttackSlime(), false, true));
-                updateMagic(1);
-                break;
-            }
-            case "Slimebound:SplotGuerilla": {
-                addToBot(new SlimeSpawnAction(new PoisonSlime(), false, true));
-
-                updateMagic(2);
-                break;
-            }
-            case "Slimebound:SplotLeeching": {
-                addToBot(new SlimeSpawnAction(new ShieldSlime(), false, true));
-
-                updateMagic(4);
-                break;
-            }
-            case "Slimebound:SplotMire": {
-                addToBot(new SlimeSpawnAction(new SlimingSlime(), false, true));
-
-                updateMagic(3);
-                break;
-            }
-
-        }
-    }
 
     public void upgrade() {
         if (!this.upgraded) {

@@ -1,5 +1,6 @@
 package champ.powers;
 
+import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.cardmods.ExhaustMod;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -48,6 +50,7 @@ public class StrikeOfGeniusPower extends AbstractPower implements CloneablePower
                 if (!UnlockTracker.isCardLocked(r.cardID) && r.hasTag(ChampMod.OPENER)) qCardList.add(r);
             AbstractCard l = qCardList.get(AbstractDungeon.cardRandomRng.random(qCardList.size() - 1));
             l.freeToPlayOnce = true;
+            if (!l.exhaust) CardModifierManager.addModifier(l, new ExhaustMod());
             this.addToBot(new MakeTempCardInHandAction(l));
         }
     }

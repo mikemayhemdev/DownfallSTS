@@ -95,16 +95,13 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         if (looped) {
-
             switch (turn) {
                 case 0:
-
                     addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnDevotion(), false);
+                    addToList(cardsList, new EnCrushJoints(), false);
                     addToList(cardsList, new EnWrithe(), false);
                     break;
                 case 1:
-
                     addToList(cardsList, new EnSashWhip(), extraUpgrades);
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnDefendPurple(), true);
@@ -112,7 +109,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                 case 2:
 
                     addToList(cardsList, new EnDefendPurple(), false);
-                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnProtect(), false);
                     addToList(cardsList, new EnWallop(), extraUpgrades);
                     break;
                 case 3:
@@ -123,7 +120,7 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                     break;
                 case 4:
 
-                    addToList(cardsList, new EnFasting(), extraUpgrades);
+                    addToList(cardsList, new EnWallop(), extraUpgrades);
                     addToList(cardsList, new EnCrushJoints(), false);
                     addToList(cardsList, new EnBrilliance(), false);
                     break;
@@ -131,9 +128,8 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
-
                     addToList(cardsList, new EnStrikePurple(), false);
-                    addToList(cardsList, new EnDevotion(), false);
+                    addToList(cardsList, new EnDevotion(), false); // removed
                     addToList(cardsList, new EnWrithe(), false);
                     break;
                 case 1:
@@ -145,20 +141,19 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                 case 2:
 
                     addToList(cardsList, new EnDefendPurple(), false);
-                    addToList(cardsList, new EnWaveOfTheHand(), false);
+                    addToList(cardsList, new EnWaveOfTheHand(), false); // removed
                     addToList(cardsList, new EnWallop(), extraUpgrades);
                     break;
                 case 3:
-
                     addToList(cardsList, new EnProtect(), true);
                     addToList(cardsList, new EnStrikePurple(), false);
                     addToList(cardsList, new EnStrikePurple(), false);
                     break;
                 case 4:
-
-                    addToList(cardsList, new EnFasting(), extraUpgrades);
+                    addToList(cardsList, new EnFasting(), extraUpgrades); // removed
                     addToList(cardsList, new EnCrushJoints(), false);
                     addToList(cardsList, new EnBrilliance(), false);
+                    break;
                 case 5:
 
                     addToList(cardsList, new EnProtect(), true);
@@ -166,9 +161,9 @@ public class ArchetypeAct3Divinity extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnDefendPurple(), false);
                     break;
                 case 6:
-                    addToList(cardsList, new EnBattleHymn(), false);
-                    addToList(cardsList, new EnFasting(), true);
-                    addToList(cardsList, new EnDevotion(), false);
+                    addToList(cardsList, new EnBattleHymn(), false); // removed
+                    addToList(cardsList, new EnFasting(), true); // removed
+                    addToList(cardsList, new EnDevotion(), false); // removed
                     break;
             }
         }

@@ -2,6 +2,10 @@ package champ.events;
 
 
 import champ.relics.BlackKnightsHelmet;
+import charbosses.bosses.Defect.CharBossDefect;
+import charbosses.bosses.Ironclad.CharBossIronclad;
+import charbosses.bosses.Silent.CharBossSilent;
+import charbosses.bosses.Watcher.CharBossWatcher;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
@@ -49,7 +53,7 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
                     case 0:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[3]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("champ:BlackKnight");
                         AbstractDungeon.getCurrRoom().rewards.clear();
                         AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackKnightsHelmet());
@@ -63,32 +67,32 @@ public class Colosseum_Evil_Champ extends AbstractImageEvent {
                     case 1:
                         this.screen = CurScreen.FIGHT;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2] + DESCRIPTIONS[4]);
-                        SlimeboundMod.logger.info("fight");
+                        //SlimeboundMod.logger.info("fight");
                         downfallMod.overrideBossDifficulty = true;
                         String s = downfallMod.possEncounterList.get(AbstractDungeon.cardRandomRng.random(downfallMod.possEncounterList.size()-1));
                         switch (s) {
                             case "downfall:CharBossIronclad":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossIronclad");
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
                                 break;
                             case "downfall:CharBossSilent":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossSilent");
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossSilent.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossSilent";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossSilent()});
                                 break;
                             case "downfall:CharBossDefect":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossDefect");
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossDefect.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossDefect";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossDefect()});
                                 break;
                             case "downfall:CharBossWatcher":
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossWatcher");
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossWatcher.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossWatcher";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossWatcher()});
                                 break;
                             default:
-                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter("downfall:CharBossIronclad");
+                                AbstractDungeon.getCurrRoom().monsters =  MonsterHelper.getEncounter(CharBossIronclad.ID);
                                 AbstractDungeon.lastCombatMetricKey = "downfall:CharBossIronclad";
 //                                AbstractDungeon.getCurrRoom().monsters = new CharBossMonsterGroup(new AbstractMonster[]{new CharBossIronclad()});
                                 break;

@@ -19,10 +19,6 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import guardian.cards.DefendTwo;
-import guardian.cards.Defend_Guardian;
-import guardian.cards.StrikeTwo;
-import guardian.cards.Strike_Guardian;
 import sneckomod.cards.Defend;
 import sneckomod.cards.Strike;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
@@ -31,8 +27,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-
-import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class BackToBasicsSnecko extends AbstractImageEvent {
     public static final String ID = "sneckomod:BackToBasics";
@@ -76,10 +70,10 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
         cardsToRemove = new ArrayList<>();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(BaseModCardTags.BASIC_STRIKE)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
                 cardsToRemove.add(c);
             }
-            if (c.hasTag(BaseModCardTags.BASIC_DEFEND)) {
+            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {
                 cardsToRemove.add(c);
             }
         }
@@ -128,13 +122,13 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                             list.add(c);
                     }
 
-                    for (AbstractCard c : cardsToRemove){
+                    for (AbstractCard c : cardsToRemove) {
                         Collections.shuffle(list);
                         AbstractCard cU = list.get(0);
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(cU.makeStatEquivalentCopy(), (Settings.WIDTH / 2F), (float) (Settings.HEIGHT / 2)));
                     }
 
-                    for (AbstractCard c : cardsToRemove){
+                    for (AbstractCard c : cardsToRemove) {
                         AbstractDungeon.player.masterDeck.removeCard(c);
                     }
 
@@ -175,7 +169,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                 }
 
                 c = (AbstractCard) var1.next();
-            } while (!(c instanceof Strike_Red) && !(c instanceof Defend_Red) && !(c instanceof Strike_Green) && !(c instanceof Defend_Green) && !(c instanceof Strike_Blue) && !(c instanceof Defend_Blue) && !(c instanceof Strike) && !(c instanceof Defend));
+            } while (!c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND));
 
             if (c.canUpgrade()) {
                 c.upgrade();

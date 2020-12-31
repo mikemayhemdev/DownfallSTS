@@ -29,7 +29,7 @@ public class PiercingHide extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int BLOCK = 5;
-    private static final int UPGRADE_BLOCK = 3;
+    private static final int UPGRADE_BLOCK = 2;
     private static final int THORNS = 2;
     private static final int UPGRADE_THORNS = 1;
     private static final int SOCKETS = 1;
@@ -62,8 +62,7 @@ public class PiercingHide extends AbstractGuardianCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseThornsPower(p, this.magicNumber), this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
-
+        brace(3);
         super.useGems(p, m);
     }
 

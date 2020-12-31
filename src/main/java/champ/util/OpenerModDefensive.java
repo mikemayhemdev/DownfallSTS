@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import slimebound.SlimeboundMod;
 
 public class OpenerModDefensive extends AbstractCardModifier {
@@ -30,9 +32,12 @@ public class OpenerModDefensive extends AbstractCardModifier {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        SlimeboundMod.logger.info("Switching to Defensive (CardMod)");
+        //SlimeboundMod.logger.info("Switching to Defensive (CardMod)");
         if (!(AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID)))
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnOpenerSubscriber) ((OnOpenerSubscriber) r).onOpener(AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID));
+        }
         super.onUse(card, target, action);
     }
 

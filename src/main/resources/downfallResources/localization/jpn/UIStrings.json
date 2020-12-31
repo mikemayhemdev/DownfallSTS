@@ -18,7 +18,7 @@
       "Break Ruby",
       "Break Sapphire",
       "Break Emerald",
-      "(Free Action) Spend 75 Souls: Destroy key to ",
+      "(Free Action) Spend 100 Souls: Destroy key to ",
       "gain 1 Strength.",
       "raise Max HP by 10.",
       "gain 1 Dexterity.",
@@ -37,7 +37,7 @@
   "downfall:AscensionText": {
     "TEXT": [
       "19. Bosses have an extra Relic.",
-      "20. Act 3 Boss has Lizard Tail and Magic Flower.",
+      "20. Act 3 Boss has Lizard Tail which heals all HP.",
       "Obtain the Ruby Key. Break it later."
     ]
   },

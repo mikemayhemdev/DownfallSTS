@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static champ.ChampMod.fatigue;
+
 public class EnragedBash extends AbstractChampCard {
 
     public final static String ID = makeID("EnragedBash");

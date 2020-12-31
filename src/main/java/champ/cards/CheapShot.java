@@ -22,13 +22,16 @@ public class CheapShot extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(ChampMod.FINISHER);
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (!(AbstractDungeon.player.stance instanceof NeutralStance)) {
-            exhaust = true;
+        if (m.type != AbstractMonster.EnemyType.BOSS) {
             atb(new StunMonsterAction(m, p));
+        } else {
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         }
         finisher();
     }

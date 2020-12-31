@@ -80,6 +80,18 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().addGoldToRewards(100);
                         } else {
                             Collections.shuffle(possRelics);
+                            AbstractRelic r = possRelics.get(0);
+                            switch (r.relicId) {
+                                case WhiteBeast.ID:
+                                    AbstractDungeon.uncommonRelicPool.remove(WhiteBeast.ID);
+                                    break;
+                                case PotionBelt.ID:
+                                    AbstractDungeon.commonRelicPool.remove(PotionBelt.ID);
+                                    break;
+                                case ToyOrnithopter.ID:
+                                    AbstractDungeon.shopRelicPool.remove(ToyOrnithopter.ID);
+                                    break;
+                            }
                             AbstractDungeon.getCurrRoom().addRelicToRewards(possRelics.get(0));
                         }
 

@@ -1,10 +1,12 @@
 package downfall.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
 import expansioncontent.expansionContentMod;
@@ -16,14 +18,19 @@ public class OctoChoiceAction extends AbstractGameAction {
     private OctopusCard funCard;
     public String[] TEXT = CardCrawlGame.languagePack.getUIString("downfall:OctoChoiceAction").TEXT;
 
-    public OctoChoiceAction(OctopusCard card) {
+    public OctoChoiceAction(AbstractMonster m, OctopusCard card) {
         duration = Settings.ACTION_DUR_XFAST;
         actionType = ActionType.WAIT;
         funCard = card;
+        target = m;
     }
 
     @Override
     public void update() {
+        if (funCard instanceof AbstractCard) {
+            ((AbstractCard) funCard).applyPowers();
+            ((AbstractCard) funCard).calculateCardDamage((AbstractMonster)target);
+        }
         for (OctoChoiceCard q : funCard.choiceList()) {
             group.addToTop(q);
         }
@@ -39,7 +46,7 @@ public class OctoChoiceAction extends AbstractGameAction {
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 CenterGridCardSelectScreen.centerGridSelect = false;
             }
-            funCard.doChoiceStuff(cardChoice);
+            funCard.doChoiceStuff((AbstractMonster)target, cardChoice);
 
             isDone = true;
         } else if (group.isEmpty()) {

@@ -17,7 +17,7 @@ public class BringItOn extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
         baseBlock = 10;
-        exhaust = true;
+        //exhaust = true;
         tags.add(ChampMod.FINISHER);
     }
 
