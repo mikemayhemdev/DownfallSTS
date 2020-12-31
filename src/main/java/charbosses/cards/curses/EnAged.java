@@ -13,24 +13,24 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import guardian.GuardianMod;
 import slimebound.SlimeboundMod;
 
 public class EnAged extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Aged";
     private static final CardStrings cardStrings;
-    public static final String IMG_PATH = "cards/aged.png";
+    public static final String IMG_PATH = downfallMod.assetPath("images/cards/aged.png");
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Guardian:Aged");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("downfall:Aged");
     }
 
     public EnAged() {
-        super(ID, cardStrings.NAME, GuardianMod.getResourcePath(IMG_PATH), -2, cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
+        super(ID, cardStrings.NAME, IMG_PATH, -2, cardStrings.DESCRIPTION, CardType.CURSE, CardColor.CURSE, CardRarity.CURSE, CardTarget.NONE, AbstractMonster.Intent.MAGIC);
         this.isEthereal = true;
-        portrait = TextureLoader.getTextureAsAtlasRegion(GuardianMod.getResourcePath(IMG_PATH));
-        portraitImg = TextureLoader.getTexture(GuardianMod.getResourcePath(IMG_PATH));
-
+        portrait = TextureLoader.getTextureAsAtlasRegion(IMG_PATH);
+        portraitImg = TextureLoader.getTexture(IMG_PATH);
     }
 
     @Override
@@ -40,7 +40,6 @@ public class EnAged extends AbstractBossCard {
     @Override
     public void triggerWhenDrawn() {
         addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
-
     }
 
     @Override

@@ -1,22 +1,17 @@
 package charbosses.bosses.Defect.NewAge;
 
-import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnAged;
-import charbosses.cards.purple.EnStrikePurple;
-import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.SteamBarrier;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct1StreamlineNewAge extends ArchetypeBaseDefect {
+public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
 
-    public ArchetypeAct1StreamlineNewAge() {
+    public ArchetypeAct1TurboNewAge() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
         bossMechanicName = bossMechanicString.DIALOG[0];
         bossMechanicDesc = bossMechanicString.DIALOG[1];

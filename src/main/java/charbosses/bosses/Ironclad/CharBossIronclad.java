@@ -123,8 +123,10 @@ public class CharBossIronclad extends AbstractCharBoss {
         }
     }
 
-
-
+    @Override
+    public void takeTurn() {
+        super.takeTurn();
+    }
 
     @Override
     public void onPlayAttackCardSound() {

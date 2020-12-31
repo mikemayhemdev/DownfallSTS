@@ -49,6 +49,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                 ((AbstractEnemyOrb) o).pretendFocus += amount;
                 AbstractEnemyOrb.masterPretendFocus += amount;
                 o.applyFocus();
+                //((AbstractEnemyOrb) o).applyLockOn();
             }
         }
     }
@@ -59,6 +60,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                 ((AbstractEnemyOrb) o).pretendFocus = 0;
                 AbstractEnemyOrb.masterPretendFocus = 0;
                 o.applyFocus();
+                //((AbstractEnemyOrb) o).applyLockOn();
             }
         }
     }
