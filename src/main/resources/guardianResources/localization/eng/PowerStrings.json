@@ -199,7 +199,7 @@
   "Guardian:DontLeaveDefensiveModePower": {
     "NAME": "Defensive Mode",
     "DESCRIPTIONS": [
-      "You will exit #yDefensive #yMode at the start of your next turn.",
+      "You will exit #yDefensive #yMode at the end of this turn.",
       "#yDefensive #yMode will be active for #b",
       " more turns."
     ]

@@ -31,7 +31,7 @@
     "NAME": "Mallet",
     "FLAVOR": "That's it! I'm gettin me mallet!",
     "DESCRIPTIONS": [
-      "At the start of combat, add 2 copies of Fine Tuning+ to your hand."
+      "Every time you play #b3 Functions in a single turn, gain #b1 #yStrength and #b1 #yDexterity."
     ]
   },
   "bronze:SilverBullet": {
@@ -89,7 +89,7 @@
   },
   "bronze:BronzeIdol": {
     "NAME": "Bronze Idol",
-    "FLAVOR": "Flavor",
+    "FLAVOR": "An ancient, weaponised antivirus - who knows who made it, and why?",
     "DESCRIPTIONS": [
       "#yStatus cards may now be played for useful effects."
     ]
