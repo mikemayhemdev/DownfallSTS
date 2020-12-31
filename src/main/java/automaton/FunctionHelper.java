@@ -63,8 +63,10 @@ public class FunctionHelper {
     public static void init() {
         held = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         secretStorage = makeFunction(false);
-        doStuff = true;
         functionsCompiledThisCombat = 0;
+        if (AbstractDungeon.player instanceof AutomatonChar) {
+            doStuff = true;
+        }
     }
 
     public static boolean isSequenceEmpty() {
@@ -79,6 +81,9 @@ public class FunctionHelper {
     }
 
     public static void addToSequence(AbstractCard c) {
+        if (!doStuff) {
+            doStuff = true;
+        }
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnAddToFuncPower) {
                 ((OnAddToFuncPower) p).receiveAddToFunc(c); // Optimize

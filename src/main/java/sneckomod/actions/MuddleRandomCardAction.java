@@ -32,15 +32,7 @@ public class MuddleRandomCardAction extends AbstractGameAction {
             if (!myCardList.isEmpty()) {
                 AbstractCard card = null;
                 if (onlyHighest) {
-
-                    Collections.shuffle(myCardList, AbstractDungeon.cardRandomRng.random);
-                    myCardList.sort((AbstractCard z1, AbstractCard z2) -> {
-                        if (z1.cost < z2.cost)
-                            return 1;
-                        if (z1.cost > z2.cost)
-                            return -1;
-                        return 0;
-                    });
+                    myCardList.sort((AbstractCard z1, AbstractCard z2) -> Integer.compare(z2.costForTurn, z1.costForTurn));
 
                     card = myCardList.remove(0);
 
