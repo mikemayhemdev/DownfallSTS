@@ -24,9 +24,13 @@ public class ModeShifter extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void atBattleStartPreDraw() {
-        this.flash();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        if (AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)){
+            ((ModeShiftPower)AbstractDungeon.player.getPower(ModeShiftPower.POWER_ID)).onSpecificTrigger(4);
+
+        }
     }
 
     @Override

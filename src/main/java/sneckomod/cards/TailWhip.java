@@ -11,7 +11,7 @@ public class TailWhip extends AbstractSneckoCard {
     //stupid intellij stuff ATTACK, ENEMY, BASIC
 
     private static final int DAMAGE = 10;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 0;
     private static final int UPG_MAGIC = 1;
 
     public TailWhip() {
@@ -22,10 +22,10 @@ public class TailWhip extends AbstractSneckoCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-        int x = getRandomNum(0, magicNumber, this);
+        int x = getRandomNum(magicNumber, 2, this);
         if (x > 0)
             applyToEnemy(m, autoWeak(m, x));
-        int y = getRandomNum(0, magicNumber, this);
+        int y = getRandomNum(magicNumber, 2, this);
         if (y > 0)
             applyToEnemy(m, autoVuln(m, y));
         // atb(new MuddleHandAction());
@@ -34,6 +34,7 @@ public class TailWhip extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeDamage(3);
             upgradeMagicNumber(UPG_MAGIC);
         }
     }

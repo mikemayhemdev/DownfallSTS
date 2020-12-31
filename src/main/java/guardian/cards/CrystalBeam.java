@@ -30,7 +30,7 @@ public class CrystalBeam extends AbstractGuardianCard {
     private static final int DAMAGE = 10;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_BONUS = 6;
+    private static final int UPGRADE_BONUS = 4;
     private static final int DAMAGEPERGEM = 2;
     private static final int SOCKETS = 0;
     private static final boolean SOCKETSAREAFTER = true;

@@ -22,13 +22,13 @@ public class CurlUp extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int BLOCK = 0;
+    private static final int BLOCK = 9;
     private static final int UPGRADE_BONUS = 3;
     private static final int MULTICOUNT = 0;
-    private static final int SOCKETS = 0;
+    private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
     public static String UPGRADED_DESCRIPTION;
 
@@ -48,6 +48,7 @@ public class CurlUp extends AbstractGuardianCard {
         this.baseBlock = BLOCK;
         this.multihit = MULTICOUNT;
         this.socketCount = SOCKETS;
+        baseMagicNumber = magicNumber = 8;
         updateDescription();
         loadGemMisc();
     }
@@ -55,7 +56,12 @@ public class CurlUp extends AbstractGuardianCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
         //if (upgraded) AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(DefensiveMode.STANCE_ID));
+
+        if (p.stance instanceof DefensiveMode) {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        } else {
+            brace(magicNumber);
+        }
         super.useGems(p, m);
     }
 
@@ -66,12 +72,9 @@ public class CurlUp extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BONUS);
+            upgradeMagicNumber(3);
+            upgradeBlock(3);
 
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
             this.updateDescription();
         }
     }

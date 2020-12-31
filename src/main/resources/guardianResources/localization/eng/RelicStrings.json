@@ -1,23 +1,23 @@
 {
   "Guardian:ModeShifter": {
-    "NAME": "Mode Shifter",
+    "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "When you lose #b10 HP, enter #yguardianmod:Defensive_Mode and gain #b10 #yBlock, which will not be removed at the start of your next turn."
+      "At the start of your turn, #yBrace 4."
     ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Guardian Gear",
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
-      "Replaces #rMode #rShifter. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b5 turns."
+      "Replaces #rMode #rShifter. NL Begin each combat in #yguardianmod:Defensive_Mode, which persists for #b3 turns."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "Baalor's Lordly Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "When you use a card while in #yguardianmod:Defensive_Mode, gain #b1 more Block."
+      "Whenever you #yguardianmod:Brace, reduce Mode Shift's counter by 1."
     ]
   },
   "Guardian:guardianmod:GemCopier": {

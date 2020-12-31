@@ -32,7 +32,7 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
     private static final int DAMAGE = 5;
 
     //TUNING CONSTANTS
-    private static final int UPGRADE_DAMAGE = 3;
+    private static final int UPGRADE_DAMAGE = 2;
     private static final int BEAMBUFF = 1;
     private static final int UPGRADE_BEAMBUFF = 1;
     private static final int SOCKETS = 0;
@@ -130,11 +130,11 @@ public class MultiBeam extends AbstractGuardianCard implements InStasisCard {
         this.initializeDescription();
     }
 
+
     @Override
     public void onStartOfTurn(StasisOrb orb) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new BeamBuffPower(AbstractDungeon.player, AbstractDungeon.player, this.magicNumber), this.magicNumber));
+        this.upgradeDamage(this.magicNumber);
     }
-
     @Override
     public void onEvoke(StasisOrb orb) {
 

@@ -89,6 +89,8 @@ public class DefensiveMode extends AbstractStance {
         }
     }
 
+
+
     @Override
     public void onExitStance() {
         stopIdleSfx();
@@ -111,14 +113,9 @@ public class DefensiveMode extends AbstractStance {
              }
            }
 
-    @Override
-    public void onPlayCard(AbstractCard card) {
-        int block = 1;
-        if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)) block++;
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
-    }
-
     public void atStartOfTurn() {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 10));
+
         if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {
             AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));

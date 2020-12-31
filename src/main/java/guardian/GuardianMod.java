@@ -55,6 +55,7 @@ import guardian.powers.zzz.MultiBoostPower;
 import guardian.relics.*;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
+import guardian.stances.DefensiveMode;
 import guardian.ui.EnhanceBonfireOption;
 import guardian.vfx.SocketGemEffect;
 import org.apache.logging.log4j.LogManager;
@@ -76,7 +77,8 @@ public class GuardianMod implements PostDrawSubscriber,
         EditRelicsSubscriber,
         EditCardsSubscriber,
         PostBattleSubscriber,
-        AddAudioSubscriber
+        AddAudioSubscriber,
+    OnPlayerLoseBlockSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -277,7 +279,6 @@ public class GuardianMod implements PostDrawSubscriber,
         return retVal;
     }
 
-
     public static CardGroup getGemCards() {
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.MASTER_DECK);
 
@@ -439,6 +440,16 @@ public class GuardianMod implements PostDrawSubscriber,
         }
         return false;
 
+    }
+
+    @Override
+    public int receiveOnPlayerLoseBlock(int i) {
+        if (AbstractDungeon.player.stance instanceof DefensiveMode) {
+            return 0;
+        }
+        else {
+            return i;
+        }
     }
 
     public void receiveEditCharacters() {
