@@ -58,10 +58,6 @@
     "DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand.",
     "UPGRADE_DESCRIPTION": "sneckomod:Snekproof. NL sneckomod:Muddle your hand. NL Draw 1 card."
   },
-  "sneckomod:PerplexingStare": {
-    "NAME": "Perplexing Stare",
-    "DESCRIPTION": "ALL enemies gain between -3 and !M! Strength."
-  },
   "sneckomod:SnekBeam": {
     "NAME": "Snek Beam",
     "DESCRIPTION": "Deal damage to ALL enemies equal to the number of Unknown cards in your deck. NL Exhaust.",

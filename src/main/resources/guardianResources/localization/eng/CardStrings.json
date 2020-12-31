@@ -3,17 +3,9 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
-  "Guardian:StrikeTwo": {
-    "NAME": "Double Strike",
-    "DESCRIPTION": "Deal !D! damage twice."
-  },
   "Guardian:Defend_Guardian": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
-  },
-  "Guardian:DefendTwo": {
-    "NAME": "Double Defend",
-    "DESCRIPTION": "Gain !B! Block twice."
   },
   "Guardian:Gem_Red": {
     "NAME": "Ruby",
@@ -236,10 +228,6 @@
   "Guardian:ConstructionForm": {
     "NAME": "Construction Form",
     "DESCRIPTION": "Gain !M! guardianmod:Buffer. NL At the start of each turn, if you have guardianmod:Buffer, gain 1 Strength."
-  },
-  "Guardian:WeakpointTargeting": {
-    "NAME": "Spot Weakpoint",
-    "DESCRIPTION": "Whenever targeted enemy takes damage, gain 1 temporary Strength. NL Exhaust."
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",

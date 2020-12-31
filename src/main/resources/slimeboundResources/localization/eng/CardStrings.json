@@ -7,11 +7,6 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "Slimebound:GangUp": {
-    "NAME": "Gang Up",
-    "DESCRIPTION": "Gain X Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 Slime slots. NL slimeboundmod:Split into a slimeboundmod:Bruiser_Slime X+1 times. NL Exhaust."
-  },
   "Slimebound:LevelUp": {
     "NAME": "Level Up",
     "DESCRIPTION": "Gain !M! slimeboundmod:Potency.",
@@ -26,10 +21,6 @@
     "NAME": "Sampling Lick",
     "DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Apply !SlimeboundSlimed! slimeboundmod:Goop NL Gain !B! Block. NL Draw a card. NL Exhaust."
-  },
-  "Slimebound:DuplicateSlimes": {
-    "NAME": "Replication",
-    "DESCRIPTION": "Duplicate all of your spawned Slimes. NL Exhaust."
   },
   "Slimebound:Replication": {
     "NAME": "Replication",
@@ -67,11 +58,6 @@
     "NAME": "Pile On!",
     "DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Command ALL slimes twice."
-  },
-  "Slimebound:MaxSlimes": {
-    "NAME": "Make Some Room",
-    "DESCRIPTION": "Gain !M! Slime slot.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Slime slots."
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "Slime Brawl",
@@ -227,10 +213,6 @@
     "NAME": "Living Wall",
     "DESCRIPTION": "Gain !B! Block. NL Apply !SlimeboundSlimed! slimeboundmod:Goop to attackers this turn."
   },
-  "Slimebound:Slimepotheosis": {
-    "NAME": "Slimepotheosis",
-    "DESCRIPTION": "Upgrade all cards in your hand. Lose !M! HP for each card Upgraded. NL Exhaust."
-  },
   "Slimebound:ComboTackle": {
     "NAME": "Combo Tackle",
     "DESCRIPTION": "Deal !D! damage and !SlimeboundSelfharm! damage to yourself. NL Draw a card.",
@@ -296,10 +278,6 @@
   "Slimebound:DisruptingSlam": {
     "NAME": "Disrupting Slam",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Apply !M! Weak to each enemy that intends to attack."
-  },
-  "Slimebound:DefensiveMode": {
-    "NAME": "Defensive Mode",
-    "DESCRIPTION": "Gain !M! Thorns. NL Gain !B! Block, and another !B! Block next turn."
   },
   "Slimebound:PrepareCrush": {
     "NAME": "Prepare: Crush",
@@ -406,11 +384,6 @@
   "Slimebound:Schlurp": {
     "NAME": "Schlurp",
     "DESCRIPTION": "Gain !B! Block. NL Add !M! *Licks to your hand."
-  },
-  "Slimebound:BronzeBeam": {
-    "NAME": "Bronze Beam",
-    "DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bronze_Slime",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Split into a slimeboundmod:Bronze_Slime"
   },
   "Slimebound:SplitGreed": {
     "NAME": "Revive Greed",
