@@ -80,6 +80,7 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.cardmods.EtherealMod;
 import downfall.cards.KnowingSkullWish;
 import downfall.cards.curses.*;
 import downfall.dailymods.*;
@@ -96,14 +97,12 @@ import downfall.patches.ui.topPanel.GoldToSoulPatches;
 import downfall.potions.CursedFountainPotion;
 import downfall.relics.KnowingSkull;
 import downfall.relics.*;
-import downfall.cardmods.EtherealMod;
 import downfall.util.LocalizeHelper;
 import downfall.util.ReplaceData;
 import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
-import guardian.characters.GuardianCharacter;
 import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
 import sneckomod.SneckoMod;
@@ -1019,6 +1018,8 @@ public class downfallMod implements
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
     }
 
+    public static boolean readyToDoThing = false;
+
     @Override
     public void receivePostUpdate() {
         if (choosingBossRelic && AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
@@ -1059,6 +1060,27 @@ public class downfallMod implements
             CenterGridCardSelectScreen.centerGridSelect = false;
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+        }
+
+        //Snecko mod run start choosing stuff
+        if (!SneckoMod.openedStarterScreen) {
+            if (CardCrawlGame.isInARun() && downfallMod.readyToDoThing) {
+                SneckoMod.findAWayToTriggerThisAtGameStart();
+                SneckoMod.openedStarterScreen = true;
+            }
+        }
+        if (SneckoMod.choosingCharacters > -1 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+            SneckoMod.colorChoices.removeCard(c);
+            SneckoMod.validColors.add(c.color);
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            if (SneckoMod.choosingCharacters == 2) {
+                AbstractDungeon.srcCommonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
+            } else {
+                SneckoMod.colorChoices.shuffle();
+                SneckoMod.choosingCharacters += 1;
+                AbstractDungeon.gridSelectScreen.open(SneckoMod.colorChoices, 1, false, "Choose."); //TODO: Localize
+            }
         }
     }
 
