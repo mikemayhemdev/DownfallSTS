@@ -384,7 +384,7 @@ public class SneckoMod implements
     public static CardGroup colorChoices;
 
     public static void findAWayToTriggerThisAtGameStart() {
-        if (AbstractDungeon.player instanceof TheSnecko) {
+        if (AbstractDungeon.player instanceof TheSnecko && !pureSneckoMode) {
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
