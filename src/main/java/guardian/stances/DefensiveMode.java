@@ -61,12 +61,11 @@ public class DefensiveMode extends AbstractStance {
     }
 
 
-
     @Override
     public void onEnterStance() {
-             if (sfxId != -1L) {
-                  stopIdleSfx();
-             }
+        if (sfxId != -1L) {
+            stopIdleSfx();
+        }
 
         CardCrawlGame.sound.play("GUARDIAN_ROLL_UP");
 
@@ -75,7 +74,7 @@ public class DefensiveMode extends AbstractStance {
             sfxId = CardCrawlGame.sound.playAndLoop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"));
         }
 
-        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX,AbstractDungeon.player.hb.cY, false), 0.05F, true));
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, false), 0.05F, true));
         AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLDENROD, true));
 
         if (AbstractDungeon.player instanceof GuardianCharacter) {
@@ -88,7 +87,6 @@ public class DefensiveMode extends AbstractStance {
             }
         }
     }
-
 
 
     @Override
@@ -106,22 +104,24 @@ public class DefensiveMode extends AbstractStance {
         }
     }
 
-       public void stopIdleSfx() {
-             if (sfxId != -1L) {
-                   CardCrawlGame.sound.stop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"), sfxId);
-                   sfxId = -1L;
-             }
-           }
+    public void stopIdleSfx() {
+        if (sfxId != -1L) {
+            CardCrawlGame.sound.stop(GuardianMod.makeID("STANCE_LOOP_Defensive_Mode"), sfxId);
+            sfxId = -1L;
+        }
+    }
 
     public void atStartOfTurn() {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 8));
 
         if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {
-            AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 2));
+            if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
+                AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
+                AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID, 1));
+            }
         } else
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));// 49
-    }// 50
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
+    }
 
     @Override
     public void updateDescription() {

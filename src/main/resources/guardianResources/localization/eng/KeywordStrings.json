@@ -72,6 +72,6 @@
       "brace"
     ],
     "PROPER_NAME": "Brace",
-    "DESCRIPTION": "Reduce Mode Shift's counter by X."
+    "DESCRIPTION": "Reduce the HP loss required to trigger Mode Shift by X, triggering Mode Shift if the HP loss required is now 0."
   }
 ]
