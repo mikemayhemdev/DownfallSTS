@@ -113,7 +113,7 @@ public class DefensiveMode extends AbstractStance {
     }
 
     public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 8));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 10));
 
         if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
             AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();

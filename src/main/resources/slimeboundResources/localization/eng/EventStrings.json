@@ -20,8 +20,9 @@
     ],
     "OPTIONS": [
       "[Gather Gold] #gGain #g75 #gGold.",
-      "[Recruit] #gGain #yGreed #yOoze.",
-      "[Leave]"
+      "[Recruit] #rLose #r75 #rGold. #gGain #yGreed #yOoze.",
+      "[Leave]",
+      "[Locked] Requires 75 Souls."
     ]
   },
   "Slimebound:SlimeTalk": {
