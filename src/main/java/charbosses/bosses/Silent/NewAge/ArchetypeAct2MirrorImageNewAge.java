@@ -41,7 +41,7 @@ public class ArchetypeAct2MirrorImageNewAge extends ArchetypeBaseSilent {
 
         addRelic(new CBR_NeowsBlessing());
         // addRelic(new CBR_BagOfPreparation());
-        addRelic(new CBR_BagOfMarbles());
+        addRelic(new CBR_BagOfMarbles());  //Swapped in from Ginger because the mirror image can't be affected by Ginger.  Gives away the trick due to the debuff animation.
         addRelic(new CBR_Anchor());
         addRelic(new CBR_PaperKrane());
         // addRelic(new CBR_DreamCatcher());
