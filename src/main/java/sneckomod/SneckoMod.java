@@ -66,7 +66,8 @@ public class SneckoMod implements
         //EditKeywordsSubscriber,
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        StartGameSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -93,6 +94,8 @@ public class SneckoMod implements
 
     public static ArrayList<AbstractCard.CardColor> validColors;
     public static boolean pureSneckoMode = false;
+
+    public static boolean openedStarterScreen = false;
 
     private static String modID;
     private static ArrayList<AbstractCard> statuses = new ArrayList<>();
@@ -368,6 +371,12 @@ public class SneckoMod implements
                 statuses.add(c);
             }
         }
+    }
+
+    @Override
+    public void receiveStartGame() {
+        openedStarterScreen = false;
+        validColors = new ArrayList<>();
     }
 
     public static int choosingCharacters = -1;

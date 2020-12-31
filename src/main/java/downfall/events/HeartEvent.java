@@ -160,6 +160,7 @@ public class HeartEvent extends AbstractEvent {
 
         if (!this.setPhaseToEvent) {
             AbstractDungeon.getCurrRoom().phase = RoomPhase.EVENT;
+            downfallMod.readyToDoThing = true;
             this.setPhaseToEvent = true;
         }
 
@@ -376,10 +377,7 @@ public class HeartEvent extends AbstractEvent {
                 }
             }
 
-            Iterator var11 = sealedGroup.group.iterator();
-
-            while (var11.hasNext()) {
-                AbstractCard c = (AbstractCard) var11.next();
+            for (AbstractCard c : sealedGroup.group) {
                 UnlockTracker.markCardAsSeen(c.cardID);
             }
 
@@ -422,10 +420,8 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private void dismissBubble() {
-        Iterator var1 = AbstractDungeon.effectList.iterator();
 
-        while (var1.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect) var1.next();
+        for (AbstractGameEffect e : AbstractDungeon.effectList) {
             if (e instanceof InfiniteSpeechBubble) {
                 ((InfiniteSpeechBubble) e).dismiss();
             }
