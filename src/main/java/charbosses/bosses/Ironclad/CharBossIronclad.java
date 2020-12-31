@@ -1,5 +1,7 @@
 package charbosses.bosses.Ironclad;
 
+import champ.ChampChar;
+import champ.ChampMod;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
@@ -16,6 +18,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.animations.ShoutAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -126,6 +129,15 @@ public class CharBossIronclad extends AbstractCharBoss {
     @Override
     public void takeTurn() {
         super.takeTurn();
+        if (AbstractDungeon.player instanceof ChampChar && AbstractDungeon.actNum == 1) {
+            if (!ChampMod.talked1 && !ChampMod.talked2) {
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[0], 1.0F, 2.0F));
+                ChampMod.talked1 = true;
+            } else if (!ChampMod.talked2) {
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, CardCrawlGame.languagePack.getEventString("champ:ChampTalk").DESCRIPTIONS[1], 1.0F, 2.0F));
+                ChampMod.talked2 = true;
+            }
+        }
     }
 
     @Override
