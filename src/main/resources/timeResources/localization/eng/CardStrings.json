@@ -30,5 +30,9 @@
   "time:LunchBreak": {
     "NAME": "Lunch Break",
     "DESCRIPTION": "At 6:00, gain !M! Block."
+  },
+  "time:SandsOfTime": {
+    "NAME": "Sands of Time",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, lower its cost by 1 this combat."
   }
 }
