@@ -578,7 +578,7 @@
     "DESCRIPTION": "Deal !B! Block."
   },
   "bronze:TinkerersToolbox": {
-    "NAME": "Tinkerer's Toolbox",
+    "NAME": "Dev Tools",
     "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile."
   },
@@ -619,6 +619,31 @@
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
+    ]
+  },
+  "bronze:AlphaBuild": {
+    "NAME": "Rough Prototype",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "EXTENDED_DESCRIPTION": [
+      "rough",
+      "Alpha"
+    ]
+  },
+  "bronze:BetaBuild": {
+    "NAME": "Beta Build",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Full Release.",
+    "EXTENDED_DESCRIPTION": [
+      "early",
+      "Beta"
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
+    "DESCRIPTION": "bronze:Compile - Function becomes a Power which actives its effects at the start of each turn.",
+    "EXTENDED_DESCRIPTION": [
+      "full",
+      "Release"
     ]
   }
 }
