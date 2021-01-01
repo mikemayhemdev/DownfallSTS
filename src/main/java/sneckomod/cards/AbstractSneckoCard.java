@@ -253,7 +253,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
     @Override
     public List<TooltipInfo> getCustomTooltips() {
         List<TooltipInfo> tips = new ArrayList<>();
-        if (this.rawDescription.contains("sneckomod:Unknown")) {
+        if (this.rawDescription.contains("Unknown")) {
             if (SneckoMod.validColors.isEmpty()) {
                 tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2]));
             } else {

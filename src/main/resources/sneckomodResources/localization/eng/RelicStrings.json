@@ -3,7 +3,7 @@
     "NAME": "Snecko Soul",
     "FLAVOR": "0...3...2...2...1",
     "DESCRIPTIONS": [
-      "Whenever you add a #ysneckomod:Unknown card into your deck, increase your Max HP by #b1."
+      "Whenever you add a #yUnknown card into your deck, increase your Max HP by #b1."
     ]
   },
   "sneckomod:SuperSneckoSoul": {
@@ -11,12 +11,12 @@
     "FLAVOR": "3120231321230320",
     "DESCRIPTIONS": [
       "Replaces ",
-      ".[] NL Upon pickup, increase your Max HP by #b2 for each #ysneckomod:Unknown card in your deck."
+      ".[] NL Upon pickup, increase your Max HP by #b2 for each #yUnknown card in your deck."
     ]
   },
   "sneckomod:CleanMud": {
     "NAME": "Snake-Charmer's Flute",
-    "FLAVOR": "You're an oxy-moron!",
+    "FLAVOR": "Sssssss...",
     "DESCRIPTIONS": [
       "#ysneckomod:Muddled cards can't cost #b3."
     ]
@@ -46,7 +46,7 @@
     "NAME": "Rare Booster Box",
     "FLAVOR": "Mint condition.",
     "DESCRIPTIONS": [
-      "Upon pickup, obtain a #ysneckomod:Unknown #yRare card of each card type."
+      "Upon pickup, obtain a #yUnknown #yRare card of each card type."
     ]
   },
   "sneckomod:SleevedAce": {
@@ -60,7 +60,7 @@
     "NAME": "Unknown Egg",
     "FLAVOR": "What will hatch? Pay $1000 to see.",
     "DESCRIPTIONS": [
-      "#ysneckomod:Unknown cards in card rewards are #yUpgraded."
+      "#yUnknown cards in card rewards are #yUpgraded."
     ]
   },
   "sneckomod:SuperSneckoEye": {
