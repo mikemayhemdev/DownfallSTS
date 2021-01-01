@@ -40,4 +40,13 @@ public class ClockHelper {
             atb(new ResetClockAction());
         }
     }
+
+    public static void update() {
+        //TODO: On hover, do a hover thing
+    }
+
+    public static void render() {
+        //TODO: Actually draw the Clock.
+        //Also probably a panel that shows ongoing Clock effects. if you're on 7, and you have a Lucky Sevens power, display "7 Effects: draw an additional card at the start of your turn", or w/eg
+    }
 }
