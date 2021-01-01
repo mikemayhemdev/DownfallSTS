@@ -25,6 +25,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import timeEater.relics.OldWatch;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -162,7 +163,7 @@ public class TimeEaterMod implements
 
     @Override
     public void receiveEditRelics() {
-        //TODO: This
+        BaseMod.addRelicToCustomPool(new OldWatch(), TimeEaterChar.Enums.TIME_EATER_PURPLE);
     }
 
 

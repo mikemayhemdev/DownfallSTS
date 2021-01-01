@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import timeEater.relics.OldWatch;
 
 import java.util.ArrayList;
 
@@ -104,7 +105,7 @@ public class TimeEaterChar extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        //TODO: This
+        retVal.add(OldWatch.ID);
         return retVal;
     }
 

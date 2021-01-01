@@ -1,1 +1,9 @@
-{}
+{
+  "time:OldWatch": {
+    "NAME": "Old Watch",
+    "FLAVOR": "Tick. Tock.",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, #yTick."
+    ]
+  }
+}
