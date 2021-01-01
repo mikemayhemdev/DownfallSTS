@@ -165,6 +165,14 @@ public abstract class AbstractBronzeCard extends CustomCard {
         return String.valueOf(NAME.charAt(0));
     }
 
+    public boolean hasTriplicate() {
+        return false;
+    }
+
+    public String getTriplicate() {
+        return EXTENDED_DESCRIPTION[2];
+    }
+
     public String getSpecialCompileText() {
         String[] splitText = this.rawDescription.split("bronze:Compile");
         String compileText = splitText[1];

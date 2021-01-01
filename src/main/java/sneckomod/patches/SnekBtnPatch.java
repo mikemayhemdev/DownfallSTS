@@ -32,7 +32,7 @@ public class SnekBtnPatch {
                 if (SneckoMod.pureSneckoMode) {
                     sb.draw(ImageMaster.TICK, challengeDownHitbox.cX - 32.0f, challengeDownHitbox.cY - 32.0f, 32.0f, 32.0f, 64.0f, 64.0f, Settings.scale * (0.01f + (1.0f - 0.019f)), Settings.scale * (0.01f + (1.0f - 0.019f)), 0.0f, 0, 0, 64, 64, false, false);
                 }
-                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, "AAAAAA", challengeDownHitbox.cX + 25f * Settings.scale, challengeDownHitbox.cY, Settings.BLUE_TEXT_COLOR);
+                FontHelper.renderSmartText(sb, FontHelper.tipHeaderFont, "Challenge Mode", challengeDownHitbox.cX + 25f * Settings.scale, challengeDownHitbox.cY, Settings.BLUE_TEXT_COLOR);
             }
         }
     }
@@ -44,7 +44,7 @@ public class SnekBtnPatch {
                 challengeDownHitbox.update();
                 if (challengeDownHitbox.hovered) {
                     if (challengeTips.isEmpty()) {
-                        challengeTips.add(new PowerTip("AAAAAAA", "HELP I'VE BEEN SUCKED INTO THE GAME AND MADE INTO A TOOLTIP BOX")); //TODO: actual text for this
+                        challengeTips.add(new PowerTip("Challenge Mode", "Fully Random Snecko.")); //TODO: actual text for this
                     }
                     if (InputHelper.mX < 1400.0f * Settings.scale) {
                         TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, challengeTips);
