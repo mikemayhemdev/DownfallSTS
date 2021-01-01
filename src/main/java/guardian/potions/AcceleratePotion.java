@@ -23,7 +23,7 @@ public class AcceleratePotion extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public AcceleratePotion() {
-        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.M, PotionColor.STEROID);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.M, PotionColor.STEROID);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = GuardianCharacter.cardRenderColor;
