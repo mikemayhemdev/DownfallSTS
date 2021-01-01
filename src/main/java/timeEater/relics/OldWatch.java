@@ -1,11 +1,11 @@
 package timeEater.relics;
 
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import timeEater.ClockHelper;
 import timeEater.TimeEaterMod;
-import timeEater.actions.TickAction;
 
-public class OldWatch extends AbstractTimeRelic {
+public class OldWatch extends AbstractTimeRelic implements OnTickRelic {
     public static final String ID = TimeEaterMod.makeID("OldWatch");
 
     public OldWatch() {
@@ -13,8 +13,10 @@ public class OldWatch extends AbstractTimeRelic {
     }
 
     @Override
-    public void onPlayCard(AbstractCard c, AbstractMonster m) {
-        flash();
-        addToBot(new TickAction());
+    public void onTick() {
+        if (ClockHelper.clock == 12) {
+            flash();
+            applyToSelf(new StrengthPower(AbstractDungeon.player, 1));
+        }
     }
 }

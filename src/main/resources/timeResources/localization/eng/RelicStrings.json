@@ -3,7 +3,7 @@
     "NAME": "Old Watch",
     "FLAVOR": "Tick. Tock.",
     "DESCRIPTIONS": [
-      "Whenever you play a card, #yTick."
+      "At 12:00, gain #b1 #yStrength."
     ]
   }
 }

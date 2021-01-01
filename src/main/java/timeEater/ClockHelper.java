@@ -7,10 +7,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
 import timeEater.actions.ResetClockAction;
 import timeEater.powers.OnTickPower;
+import timeEater.relics.OnTickRelic;
 
 public class ClockHelper {
 
@@ -22,6 +24,8 @@ public class ClockHelper {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
+    public static boolean active = false;
+
     public static int clock = 1;
 
     public static void advance() {
@@ -29,6 +33,11 @@ public class ClockHelper {
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnTickPower) {
                 ((OnTickPower) p).onTick();
+            }
+        }
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof OnTickRelic) {
+                ((OnTickRelic) r).onTick();
             }
         }
         if (clock == 12) {

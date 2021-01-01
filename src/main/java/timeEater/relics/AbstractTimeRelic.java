@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import timeEater.TimeEaterMod;
 import timeEater.util.TextureLoader;
 
-public class AbstractTimeRelic extends CustomRelic {
+public abstract class AbstractTimeRelic extends CustomRelic {
     public AbstractTimeRelic(String ID, RelicTier tier, LandingSound sound) {
         super(ID, TextureLoader.getTexture(TimeEaterMod.makeRelicPath(ID.replace(TimeEaterMod.getModID() + ":", "") + ".png")), TextureLoader.getTexture(TimeEaterMod.makeRelicOutlinePath(ID.replace(TimeEaterMod.getModID() + ":", "") + ".png")), tier, sound);
     }
