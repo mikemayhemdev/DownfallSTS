@@ -17,8 +17,6 @@ import java.util.function.Predicate;
 
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard {
-    private String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
-
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity) {
         super(id, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);

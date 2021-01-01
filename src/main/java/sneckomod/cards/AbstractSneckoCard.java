@@ -1,6 +1,7 @@
 package sneckomod.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,19 +13,22 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import slimebound.SlimeboundMod;
+import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
 import sneckomod.powers.CheatPower;
 import sneckomod.relics.D8;
 import sneckomod.relics.LoadedDie;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static sneckomod.SneckoMod.getModID;
 import static sneckomod.SneckoMod.makeCardPath;
 
 
 public abstract class AbstractSneckoCard extends CustomCard {
+
+    protected String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
 
     protected final CardStrings cardStrings;
     protected final String NAME;
@@ -126,7 +130,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
                 D8 d8relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
                 if (d8relic.card == source)
                     //SlimeboundMod.logger.info("min/max check passed card source = bottled card check");
-                return max;
+                    return max;
             }
         }
         if (AbstractDungeon.player.hasRelic(LoadedDie.ID))
@@ -236,5 +240,26 @@ public abstract class AbstractSneckoCard extends CustomCard {
         baseSilly += amount;
         silly = baseSilly;
         upgradedSilly = true;
+    }
+
+    public static String getCharList() {
+        StringBuilder s = new StringBuilder();
+        for (CardColor c : SneckoMod.validColors) {
+            s.append(SneckoMod.getClassFromColor(c)).append(" NL ");
+        }
+        return s.toString();
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        List<TooltipInfo> tips = new ArrayList<>();
+        if (this.rawDescription.contains("sneckomod:Unknown")) {
+            if (SneckoMod.validColors.isEmpty()) {
+                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2]));
+            } else {
+                tips.add(new TooltipInfo(unknownUpgrade[0], unknownUpgrade[2] + unknownUpgrade[3] + getCharList()));
+            }
+        }
+        return tips;
     }
 }

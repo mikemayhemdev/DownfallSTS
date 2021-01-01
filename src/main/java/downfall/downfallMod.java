@@ -1075,6 +1075,7 @@ public class downfallMod implements
             SneckoMod.validColors.add(c.color);
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             if (SneckoMod.choosingCharacters == 2) {
+                CenterGridCardSelectScreen.centerGridSelect = false;
                 AbstractDungeon.commonCardPool.group.removeIf(ii -> ii instanceof UnknownClass && !SneckoMod.validColors.contains(ii.color));
             } else {
                 SneckoMod.choosingCharacters += 1;

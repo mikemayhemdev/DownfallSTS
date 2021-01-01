@@ -2,7 +2,9 @@
   "sneckomod:Unknown": {
     "TEXT": [
       "Unknown",
-      " Upgraded "
+      " Upgraded ",
+      "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints.",
+      " NL Chosen classes: NL "
     ]
   },
   "sneckomod:UnknownClass": {

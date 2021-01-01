@@ -29,6 +29,7 @@ import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
 import downfall.util.CardIgnore;
+import expansioncontent.patches.CenterGridCardSelectScreen;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -98,7 +99,7 @@ public class SneckoMod implements
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags BANNEDFORSNECKO;
 
-    public static ArrayList<AbstractCard.CardColor> validColors;
+    public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
     public static boolean pureSneckoMode = false;
 
     public static boolean openedStarterScreen = false;
@@ -395,7 +396,7 @@ public class SneckoMod implements
                 return p.getLocalizedCharacterName();
             }
         }
-        return "NOT_FOUND";
+        return c.name().toLowerCase();
     }
 
     public static void dualClassChoice() {
@@ -420,12 +421,15 @@ public class SneckoMod implements
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
-                String s = getClassFromColor(r);
-                CustomCard c = new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become" + s + " cards this run.", r);
-                AbstractCard q = playerStartCardForEventFromColor(r);
-                c.portrait = q.portrait;
-                colorChoices.addToTop(c);
+                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor()) {
+                    String s = getClassFromColor(r);
+                    CustomCard c = new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become " + s + " cards this run.", r);
+                    AbstractCard q = playerStartCardForEventFromColor(r);
+                    c.portrait = q.portrait;
+                    colorChoices.addToTop(c);
+                }
             }
+            CenterGridCardSelectScreen.centerGridSelect = true;
             dualClassChoice();
         }
     }
