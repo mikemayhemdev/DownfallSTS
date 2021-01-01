@@ -24,7 +24,7 @@ public class GlobalOnCardUsePatch {
             downfallMod.playedBossCardThisTurn = true;
         }
         if (ClockHelper.active) {
-            AbstractDungeon.actionManager.addToBottom(new TickAction());
+            AbstractDungeon.actionManager.addToBottom(new TickAction()); // This will addtobot a TickAction, then that TickAction will addToBot the relic and power effects. Timing is weird.
         }
     }
 }
