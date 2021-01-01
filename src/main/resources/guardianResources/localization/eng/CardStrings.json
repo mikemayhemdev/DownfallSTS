@@ -255,11 +255,11 @@
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Spray",
-    "DESCRIPTION": "Deal !D! damage, plus an additional !D! damage for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Deal !D! damage for each guardianmod:Gem in this card."
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
-    "DESCRIPTION": "Gain !B! Block, plus an additional !B! Block for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Gain !B! Block for each guardianmod:Gem in this card."
   },
   "Guardian:TemporalStrike": {
     "NAME": "Temporal Strike",

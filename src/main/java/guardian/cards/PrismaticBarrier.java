@@ -24,7 +24,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
 
     //TUNING CONSTANTS
     private static final int BLOCK = 2;
-    private static final int UPGRADE_BONUS = 1;
+    private static final int UPGRADE_BONUS = 2;
     private static final int MULTICOUNT = 1;
     private static final int SOCKETS = 3;
     private static final boolean SOCKETSAREAFTER = true;
@@ -54,7 +54,7 @@ public class PrismaticBarrier extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+      //  AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         for (int i = 0; i < this.multihit; i++) {
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         }
