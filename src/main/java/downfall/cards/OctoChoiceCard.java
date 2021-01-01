@@ -38,6 +38,11 @@ public class OctoChoiceCard extends CustomCard {
         this.IMG = IMG;
     }
 
+    public OctoChoiceCard(String id, String name, String IMG, String description, CardColor color, CardType type) {
+        super(id, name, IMG, COST, description, type, color, CardRarity.SPECIAL, CardTarget.NONE);
+        this.IMG = IMG;
+    }
+
     // Future Vex will benefit greatly by making it so there's not 100,000 constructors here...
 
     public OctoChoiceCard(String id, String name, String IMG, String description, AbstractCard prev1, AbstractCard prev2, AbstractCard prev3) {
