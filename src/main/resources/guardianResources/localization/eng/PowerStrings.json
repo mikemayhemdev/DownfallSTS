@@ -199,9 +199,9 @@
   "Guardian:DontLeaveDefensiveModePower": {
     "NAME": "Defensive Mode",
     "DESCRIPTIONS": [
-      "You will exit #yDefensive #yMode at the end of this turn.",
+      "You will exit #yDefensive #yMode at the end of this combat round. (Block will not be preserved)",
       "#yDefensive #yMode will be active for #b",
-      " more turns."
+      " more rounds."
     ]
   }
 }
