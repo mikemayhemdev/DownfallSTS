@@ -19,7 +19,7 @@ public class StoredCardPotion extends CustomPotion {
     private AbstractCard storedCard;
 
     public StoredCardPotion(AbstractCard stored) {
-        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.BOTTLE, PotionColor.ANCIENT);
+        super(NAME, POTION_ID, PotionRarity.PLACEHOLDER, PotionSize.BOTTLE, PotionColor.ANCIENT);
         this.isThrown = false;
         this.targetRequired = false;
         this.storedCard = stored;
