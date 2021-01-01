@@ -3,8 +3,9 @@
     "TEXT": [
       "Unknown",
       " Upgraded ",
-      "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints.",
-      " NL Chosen classes:"
+      "At the start of combat, Unknown cards transform into other random cards from selected other classes that satisfy certain constraints.",
+      " NL Chosen classes:",
+      "At the start of combat, Unknown cards transform into other random cards from ANY other classes that satisfy certain constraints."
     ]
   },
   "sneckomod:UnknownClass": {

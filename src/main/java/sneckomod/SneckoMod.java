@@ -421,7 +421,7 @@ public class SneckoMod implements
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
-                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor()) {
+                if (r != AbstractCard.CardColor.CURSE && r != AbstractDungeon.player.getCardColor() && r != AbstractCard.CardColor.COLORLESS) {
                     String s = getClassFromColor(r);
                     CustomCard c = new OctoChoiceCard("UNVERIFIED", s + " Cards", "bronzeResources/images/cards/BuggyMess.png", "Unknown cards can become " + s + " cards this run.", r);
                     AbstractCard q = playerStartCardForEventFromColor(r);
