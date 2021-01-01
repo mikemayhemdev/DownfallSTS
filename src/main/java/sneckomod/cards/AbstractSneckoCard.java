@@ -245,7 +245,7 @@ public abstract class AbstractSneckoCard extends CustomCard {
     public static String getCharList() {
         StringBuilder s = new StringBuilder();
         for (CardColor c : SneckoMod.validColors) {
-            s.append(SneckoMod.getClassFromColor(c)).append(" NL ");
+            s.append(" NL ").append(SneckoMod.getClassFromColor(c));
         }
         return s.toString();
     }
