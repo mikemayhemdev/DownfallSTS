@@ -1,0 +1,20 @@
+{
+  "time:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "time:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "time:TickTock": {
+    "NAME": "Tick Tock",
+    "DESCRIPTION": "Tick.",
+    "UPGRADE_DESCRIPTION": "Tick."
+  },
+  "time:ReapTime": {
+    "NAME": "Reap Time",
+    "DESCRIPTION": "Deal !D! damage, increased by the Clock.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage, increased by the Clock."
+  }
+}
