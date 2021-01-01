@@ -13,12 +13,6 @@ import timeEater.actions.ResetClockAction;
 import timeEater.powers.OnTickPower;
 
 public class ClockHelper {
-    public static int clock = 1;
-
-    public static void advance() {
-        clock += 1;
-        activateClockEffects();
-    }
 
     private static void atb(AbstractGameAction action) {
         AbstractDungeon.actionManager.addToBottom(action);
@@ -28,7 +22,10 @@ public class ClockHelper {
         atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
     }
 
-    public static void activateClockEffects() {
+    public static int clock = 1;
+
+    public static void advance() {
+        clock += 1;
         for (AbstractPower p : AbstractDungeon.player.powers) {
             if (p instanceof OnTickPower) {
                 ((OnTickPower) p).onTick();
