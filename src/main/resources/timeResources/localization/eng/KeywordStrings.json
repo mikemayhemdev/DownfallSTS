@@ -4,6 +4,6 @@
     "NAMES": [
       "tick"
     ],
-    "DESCRIPTION": "Increase the Clock's stage by #b1. Trigger any effects on that stage."
+    "DESCRIPTION": "Increase the Clock's stage by #b1. If the Stage is #b12, end your turn and gain #b2 #yStrength."
   }
 ]
