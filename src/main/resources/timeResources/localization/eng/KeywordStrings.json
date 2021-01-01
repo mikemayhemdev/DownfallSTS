@@ -1,32 +1,9 @@
 [
   {
-    "PROPER_NAME": "Encode",
+    "PROPER_NAME": "Tick",
     "NAMES": [
-      "encode",
-      "encoded"
+      "tick"
     ],
-    "DESCRIPTION": "Add a card to the Sequence. NL When 3 cards are in the Sequence, their effects (other than Encode) are Compiled into a Function with cost equal to the highest cost card in the Sequence."
-  },
-  {
-    "PROPER_NAME": "Compile",
-    "NAMES": [
-      "compile",
-      "compiled"
-    ],
-    "DESCRIPTION": "An additional effect that triggers when this card, while in the Sequence, is combined into a Function."
-  },
-  {
-    "PROPER_NAME": "Blur",
-    "NAMES": [
-      "blur"
-    ],
-    "DESCRIPTION": "Do not lose Block at the end of the turn."
-  },
-  {
-    "PROPER_NAME": "Insert",
-    "NAMES": [
-      "insert"
-    ],
-    "DESCRIPTION": "Add a card to your draw pile."
+    "DESCRIPTION": "Increase the Clock's stage by #b1. Trigger any effects on that stage."
   }
 ]
