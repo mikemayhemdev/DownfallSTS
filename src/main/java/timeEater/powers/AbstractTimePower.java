@@ -3,6 +3,7 @@ package timeEater.powers;
 import automaton.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -96,6 +97,10 @@ public abstract class AbstractTimePower extends AbstractPower {
         } else {
             this.description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         }
+    }
+
+    public void atb(AbstractGameAction a) {
+        addToBot(a);
     }
 
     public void applyToSelf(AbstractPower po) {

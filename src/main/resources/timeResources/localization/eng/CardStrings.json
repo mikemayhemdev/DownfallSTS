@@ -26,5 +26,9 @@
     "EXTENDED_DESCRIPTION": [
       " NL (Gain !B! Block.)"
     ]
+  },
+  "time:LunchBreak": {
+    "NAME": "Lunch Break",
+    "DESCRIPTION": "At 6:00, gain !M! Block."
   }
 }

@@ -1,1 +1,9 @@
-{}
+{
+  "time:LunchBreak": {
+    "NAME": "Lunch Break",
+    "DESCRIPTIONS": [
+      "At 6:00, gain #b",
+      " #yBlock."
+    ]
+  }
+}
