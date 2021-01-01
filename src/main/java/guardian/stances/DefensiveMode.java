@@ -120,10 +120,7 @@ public class DefensiveMode extends AbstractStance {
 
     }
 
-
-
-    @Override
-    public void onEndOfTurn() {
+    public void onEndOfRound() {
         if (AbstractDungeon.player.hasPower(DontLeaveDefensiveModePower.POWER_ID)) {
             if (AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).amount > 1) {
                 AbstractDungeon.player.getPower(DontLeaveDefensiveModePower.POWER_ID).flash();
