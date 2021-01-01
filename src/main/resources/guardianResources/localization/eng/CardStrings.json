@@ -199,12 +199,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "Gain !B! Block. NL guardianmod:Brace !M!. NL Place this card into guardianmod:Stasis."
+    "DESCRIPTION": "Gain !B! Block. NL Place this card into guardianmod:Stasis. NL When this leaves Stasis, increase its Block by !M! and set its cost back to 1."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Place this card into guardianmod:Stasis."
+    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis. NL When this leaves Stasis, increase its damage by !M! and set its cost back to 1."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",

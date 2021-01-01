@@ -149,7 +149,13 @@ public class StasisOrb extends AbstractOrb {
         } else {
             if (this.passiveAmount <= 0) {
                 if (stasisCard.cost > 0) {
-                    stasisCard.freeToPlayOnce = true;
+                    if (stasisCard instanceof StasisStrike){
+                        stasisCard.baseDamage += stasisCard.magicNumber;
+                    } else if (stasisCard instanceof StasisField){
+                        stasisCard.baseBlock += stasisCard.magicNumber;
+                    } else {
+                        stasisCard.freeToPlayOnce = true;
+                    }
                 } else {
                     stasisCard.tags.remove(GuardianMod.STASISGLOW);
                 }
