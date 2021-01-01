@@ -38,5 +38,10 @@
   "time:GoodEvening": {
     "NAME": "Good Evening",
     "DESCRIPTION": "Cards deal double damage and grant double Block at 11:00."
+  },
+  "time:LimitMake": {
+    "NAME": "Limit Make",
+    "DESCRIPTION": "Double your Strength this turn.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Double your Strength this turn."
   }
 }
