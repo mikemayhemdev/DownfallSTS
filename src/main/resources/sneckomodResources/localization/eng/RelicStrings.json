@@ -98,7 +98,16 @@
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals 5 damage to a random enemy at the start of your turn."
+      "Deals #b5 damage to a random enemy at the start of your turn."
+    ]
+  },
+  "sneckomod:SneckoCommon": {
+    "NAME": "Snecko Common Relic",
+    "FLAVOR": "Beep. Boop. Placeholder text.",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b1 of #b3 #yUnknown Character cards to add to your deck. All future Unknown Character cards found will be of this character.",
+      "All Unknown Character cards found will be ",
+      " cards."
     ]
   }
 }
