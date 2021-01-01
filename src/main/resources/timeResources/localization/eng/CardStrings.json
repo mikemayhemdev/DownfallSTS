@@ -11,5 +11,12 @@
     "NAME": "Reap Time",
     "DESCRIPTION": "Deal !D! damage, increased by the Clock.",
     "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage, increased by the Clock."
+  },
+  "time:MidnightStrike": {
+    "NAME": "Midnight Strike",
+    "DESCRIPTION": "Can only be played at 11:00. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "It is not time."
+    ]
   }
 }
