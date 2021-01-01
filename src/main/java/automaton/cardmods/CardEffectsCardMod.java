@@ -23,6 +23,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     public CardSave store;
     public int addName;
+    public boolean doUseEffects = true;
 
     public AbstractBronzeCard stored() {
         if (FunctionHelper.cardModsInfo.containsKey(this)) {
@@ -93,14 +94,18 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public void onApplyPowers(AbstractCard card) {
-        stored().applyPowers();
-        card.initializeDescription();
+        if (doUseEffects) {
+            stored().applyPowers();
+            card.initializeDescription();
+        }
     }
 
     @Override
     public float modifyDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
-        stored().calculateCardDamage(target);
-        card.initializeDescription();
+        if (doUseEffects) {
+            stored().calculateCardDamage(target);
+            card.initializeDescription();
+        }
         return damage;
     }
 
@@ -157,8 +162,7 @@ public class CardEffectsCardMod extends BronzeCardMod {
             String[] splitText = x.split(String.format(WITH_DELIMITER, " NL bronze:Compile"));
             String compileText = splitText[1] + splitText[2];
             x = x.replace(compileText, "");
-        }
-        else if (card.rawDescription.contains("bronze:Compile")) {
+        } else if (card.rawDescription.contains("bronze:Compile")) {
             return ""; // It's over!! If you only have Compile effects, you're gone!!!!!
         } // IT NEVER ENDS!!!!!
         if (card.rawDescription.contains(" π")) {
@@ -215,16 +219,18 @@ public class CardEffectsCardMod extends BronzeCardMod {
 
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
-        card.baseDamage = stored().baseDamage;
-        ReflectionHacks.setPrivate(card, AbstractCard.class, "isMultiDamage", ReflectionHacks.getPrivate(stored(), AbstractCard.class, "isMultiDamage"));
-        card.baseBlock = stored().baseBlock;
-        card.baseMagicNumber = card.magicNumber = stored().baseMagicNumber;
-        if (card instanceof AbstractBronzeCard) {
-            ((AbstractBronzeCard) card).baseAuto = ((AbstractBronzeCard) card).auto = stored().baseAuto;
+        if (doUseEffects) {
+            card.baseDamage = stored().baseDamage;
+            ReflectionHacks.setPrivate(card, AbstractCard.class, "isMultiDamage", ReflectionHacks.getPrivate(stored(), AbstractCard.class, "isMultiDamage"));
+            card.baseBlock = stored().baseBlock;
+            card.baseMagicNumber = card.magicNumber = stored().baseMagicNumber;
+            if (card instanceof AbstractBronzeCard) {
+                ((AbstractBronzeCard) card).baseAuto = ((AbstractBronzeCard) card).auto = stored().baseAuto;
+            }
+            card.applyPowers();
+            card.calculateCardDamage(target instanceof AbstractMonster ? (AbstractMonster) target : null);
+            stored().use(AbstractDungeon.player, target instanceof AbstractMonster ? (AbstractMonster) target : null);
         }
-        card.applyPowers();
-        card.calculateCardDamage(target instanceof AbstractMonster ? (AbstractMonster) target : null);
-        stored().use(AbstractDungeon.player, target instanceof AbstractMonster ? (AbstractMonster) target : null);
     }
 
     @Override

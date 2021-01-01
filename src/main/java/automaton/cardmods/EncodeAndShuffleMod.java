@@ -26,7 +26,6 @@ public class EncodeAndShuffleMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
         card.tags.add(AutomatonMod.ENCODES);
     }
 

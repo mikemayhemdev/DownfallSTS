@@ -141,6 +141,10 @@ public abstract class AbstractBronzeCard extends CustomCard {
         // Called before the effects of cards are added to the Function. Use this if a card modifies its statistics as a Compile effect. Don't put these on action queue.
     }
 
+    public void onCompileFirst(AbstractCard function, boolean forGameplay) {
+        // Called after all CardEffectsCardMods are played, but before onCompile effects. This should not be used often.
+    }
+
     public void onCompile(AbstractCard function, boolean forGameplay) {
         // Called when the function is about to be created. Watch out, onCompile() is called in order of insertion.
     }

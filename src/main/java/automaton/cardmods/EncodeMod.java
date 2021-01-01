@@ -25,7 +25,6 @@ public class EncodeMod extends BronzeCardMod {
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        super.onInitialApplication(card);
         if (!card.hasTag(AutomatonMod.ENCODES)) {
             card.tags.add(AutomatonMod.ENCODES);
         }

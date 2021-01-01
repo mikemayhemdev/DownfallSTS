@@ -127,5 +127,11 @@
       "Your next #b",
       " Functions are played twice this turn."
     ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
+    "DESCRIPTIONS": [
+      "At the start of your turn, NL "
+    ]
   }
 }
