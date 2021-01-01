@@ -1,1 +1,10 @@
-{}
+{
+  "time:StoredCardPotion": {
+    "NAME": "ERROR",
+    "DESCRIPTIONS": [
+      " in a Bottle",
+      "Play a copy of ",
+      "."
+    ]
+  }
+}

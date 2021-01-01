@@ -43,5 +43,9 @@
     "NAME": "Limit Make",
     "DESCRIPTION": "Double your Strength this turn.",
     "UPGRADE_DESCRIPTION": "Retain. NL Double your Strength this turn."
+  },
+  "time:Defer": {
+    "NAME": "Defer",
+    "DESCRIPTION": "Ethereal. NL Exhaust a card in your hand. NL Obtain a Potion that plays that card. NL Exhaust."
   }
 }
