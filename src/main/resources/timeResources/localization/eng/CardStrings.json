@@ -18,5 +18,13 @@
     "EXTENDED_DESCRIPTION": [
       "It is not time."
     ]
+  },
+  "time:TimedGuard": {
+    "NAME": "Timed Guard",
+    "DESCRIPTION": "Draw !M! card. NL Gain Block equal to the Clock.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain Block equal to the Clock.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain !B! Block.)"
+    ]
   }
 }
