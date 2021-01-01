@@ -34,5 +34,9 @@
   "time:SandsOfTime": {
     "NAME": "Sands of Time",
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, lower its cost by 1 this combat."
+  },
+  "time:GoodEvening": {
+    "NAME": "Good Evening",
+    "DESCRIPTION": "Cards deal double damage and grant double Block at 11:00."
   }
 }

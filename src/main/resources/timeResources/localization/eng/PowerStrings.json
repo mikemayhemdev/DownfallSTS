@@ -5,5 +5,13 @@
       "At 6:00, gain #b",
       " #yBlock."
     ]
+  },
+  "time:GoodEvening": {
+    "NAME": "Good Evening",
+    "DESCRIPTIONS": [
+      "Cards deal double damage and grant double #yBlock at 11:00.",
+      "Card damage and block multiplied by #b",
+      " at 11:00."
+    ]
   }
 }
