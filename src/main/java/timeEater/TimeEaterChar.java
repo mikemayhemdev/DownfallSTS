@@ -10,12 +10,16 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import timeEater.cards.Defend;
+import timeEater.cards.ReapTime;
+import timeEater.cards.Strike;
 import timeEater.relics.OldWatch;
 
 import java.util.ArrayList;
@@ -99,7 +103,10 @@ public class TimeEaterChar extends CustomPlayer {
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        //TODO: This
+        for (int i = 0; i < 4; i++) retVal.add(Strike.ID);
+        for (int i = 0; i < 4; i++) retVal.add(Defend.ID);
+        retVal.add(Madness.ID); // TODO: Special card 1
+        retVal.add(ReapTime.ID);
         return retVal;
     }
 

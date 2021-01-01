@@ -7,11 +7,6 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "time:TickTock": {
-    "NAME": "Tick Tock",
-    "DESCRIPTION": "Tick.",
-    "UPGRADE_DESCRIPTION": "Tick."
-  },
   "time:ReapTime": {
     "NAME": "Reap Time",
     "DESCRIPTION": "Deal !D! damage, increased by the Clock.",
