@@ -4,7 +4,8 @@
       "Unknown",
       " Upgraded ",
       "At the start of combat, Unknown cards transform into other random cards from ANY other class that satisfy certain constraints.",
-      " NL Chosen classes:"
+      " NL Chosen classes:",
+      "At the start of combat, Unknown cards transform into other random cards from the chosen classes that satisfy certain constraints."
     ]
   },
   "sneckomod:UnknownClass": {
@@ -30,6 +31,12 @@
   "sneckomod:ExhaustMod": {
     "TEXT": [
       " NL Exhaust."
+    ]
+  },
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "Challenge Mode - Pure Snecko",
+      "Unknown cards can be from any class. Recommended for experienced Snecko players."
     ]
   }
 }
