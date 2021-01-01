@@ -103,6 +103,8 @@ public class DefensiveMode extends AbstractStance {
                 ((DefensiveModeBooster) p).onLeave();
             }
         }
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DontLeaveDefensiveModePower.POWER_ID));
+
     }
 
     public void stopIdleSfx() {
@@ -118,8 +120,7 @@ public class DefensiveMode extends AbstractStance {
 
     }
 
-    //TODO - Bounce DontLeaveDefensiveMode if you manually exit it
-    //TODO - Brace should automatically apply ModeShiftPower (for Prismatic purposes)
+
 
     @Override
     public void onEndOfTurn() {

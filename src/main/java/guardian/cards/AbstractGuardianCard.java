@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -203,6 +204,9 @@ public abstract class AbstractGuardianCard extends CustomCard {
     }
 
     public static void brace(int modeShiftValue) {
+        if (!AbstractDungeon.player.hasPower(ModeShiftPower.POWER_ID)){
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ModeShiftPower(AbstractDungeon.player, AbstractDungeon.player, 20), 20));
+        }
         if (AbstractDungeon.player.hasRelic(DefensiveModeMoreBlock.ID)){
             modeShiftValue += 1;
         }
