@@ -44,7 +44,7 @@ public class SnekBtnPatch {
                 challengeDownHitbox.update();
                 if (challengeDownHitbox.hovered) {
                     if (challengeTips.isEmpty()) {
-                        challengeTips.add(new PowerTip("AAAAAAA", "HELP I'VE BEEN SUCKED INTO THE GAME AND MADE INTO A TOOLTIP BOX"));
+                        challengeTips.add(new PowerTip("AAAAAAA", "HELP I'VE BEEN SUCKED INTO THE GAME AND MADE INTO A TOOLTIP BOX")); //TODO: actual text for this
                     }
                     if (InputHelper.mX < 1400.0f * Settings.scale) {
                         TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, challengeTips);
