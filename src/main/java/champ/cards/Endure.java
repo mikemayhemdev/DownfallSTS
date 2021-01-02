@@ -24,12 +24,12 @@ public class Endure extends AbstractChampCard {
     }
 
     @Override
-    protected void applyPowersToBlock() {
+    public void applyPowers() {
         int realBaseBlock = this.baseBlock;
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             baseBlock += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
-        super.applyPowersToBlock();
+        super.applyPowers();
         baseBlock = realBaseBlock;
         isBlockModified = block != baseBlock;
     }
