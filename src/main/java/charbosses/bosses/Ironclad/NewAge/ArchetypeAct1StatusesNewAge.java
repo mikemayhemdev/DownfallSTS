@@ -56,8 +56,8 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnBash());
                     addToList(cardsList, new EnDramaticEntrance());
+                    addToList(cardsList, new EnBash());
                     addToList(cardsList, new EnDoubt());
                     turn++;
                     break;
