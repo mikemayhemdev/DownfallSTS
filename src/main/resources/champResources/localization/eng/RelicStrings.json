@@ -31,7 +31,7 @@
     "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Replaces #rChampion's #rCrown. NL Start each combat in Ultimate #yStance, which lasts for #b2 turns."
+      "Replaces #rChampion's #rCrown. NL Start each combat in #yUltimate #yStance, which lasts for #b2 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {
