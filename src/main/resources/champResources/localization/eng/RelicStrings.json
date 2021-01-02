@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "When you enter a Stance while not in one, reduce the cost of a random card in your hand by #b1 this turn."
+      "When you enter a #yStance while not in one, reduce the cost of a random card in your hand by #b1 this turn."
     ]
   },
   "champ:BlackKnightHelmet": {
