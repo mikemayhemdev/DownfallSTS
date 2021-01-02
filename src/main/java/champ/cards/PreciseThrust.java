@@ -14,27 +14,39 @@ public class PreciseThrust extends AbstractChampCard {
 
     //stupid intellij stuff attack, self_and_enemy, uncommon
 
-    private static final int DAMAGE = 8;
-    private static final int BLOCK = 4;
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 2;
+    private static final int DAMAGE = 7;
+    private static final int BLOCK = 7;
 
     public PreciseThrust() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
-        baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         if (dcombo()) {
-            atb(new PreciseThrustAction(m, makeInfo()));
-        } else {
+            blck();
+        }
+        if (bcombo()){
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         }
 
+    }
+
+    @Override
+    public void applyPowers() {
+        rawDescription = UPGRADE_DESCRIPTION;
+        if (bcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[0];
+        if (dcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[1];
+        initializeDescription();
     }
 
     @Override
@@ -43,6 +55,7 @@ public class PreciseThrust extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        upgradeDamage(2);
+        upgradeBlock(2);
     }
 }

@@ -20,7 +20,7 @@ public class CrookedStrike extends AbstractChampCard {
     private static final int UPG_DAMAGE = 3;
 
     public CrookedStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);

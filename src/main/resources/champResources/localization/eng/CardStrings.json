@@ -102,7 +102,7 @@
   "champ:RageSigil": {
     "NAME": "Battle Plan",
     "DESCRIPTION": "Draw a card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block."
+    "UPGRADE_DESCRIPTION": "Draw a card. NL Gain !B! Block."
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
@@ -186,20 +186,32 @@
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
-    "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Apply 2 Weak. NL *Berserker champ:Combo: Apply 2 Vulnerable.",
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Vulnerable. NL *Defensive champ:Combo: Apply 2 Weak.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Defensive champ:Combo: Apply 2 Weak. NL ",
-      "Berserker champ:Combo: Apply 2 Vulnerable."
+      "Berserker champ:Combo: Apply 2 Vulnerable. NL ",
+      "Defensive champ:Combo: Apply 2 Weak."
     ]
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity."
+    "DESCRIPTION": "If the enemy is debuffed: NL *Berserker champ:Combo: Gain !M! Strength. NL *Defensive champ:Combo: Gain !M! Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "If the enemy is debuffed: NL *Berserker champ:Combo: Gain !M! Strength. NL *Defensive champ:Combo: Gain !M! Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "If the enemy is debuffed: NL ",
+      "Berserker champ:Combo: Gain !M! Strength. NL ",
+      "Defensive champ:Combo: Gain !M! Dexterity. NL Exhaust.",
+      "Defensive champ:Combo: Gain !M! Dexterity."
+    ]
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Gain Block equal to unblocked damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Deal !D! damage. NL *Defensive champ:Combo: Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Berserker champ:Combo: Deal !D! damage NL ",
+      "Defensive champ:Combo: Gain !B! Block."
+    ]
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
@@ -235,7 +247,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, reduce this card's cost by 1 and raise its damage by !M!. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When you use a champ:Technique, this card costs 1 less and deals !M! more damage. NL Exhaust."
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
@@ -341,7 +353,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "Gladiator Form",
-    "DESCRIPTION": "Whenever you champ:Technique, draw 1 card. NL Whenever you champ:Finisher, gain [E] next turn."
+    "DESCRIPTION": "Whenever you use a champ:Technique *Bonus, draw a card. NL Whenever you use a champ:Finisher *Bonus, gain [E] next turn."
   },
   "champ:Duel": {
     "NAME": "Duel",
