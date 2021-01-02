@@ -22,7 +22,7 @@ public class CrownThrow extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         // TODO: Do a throw vfx. First you throw a crown...
-        if (this.costForTurn != 0) {
+        if (this.costForTurn != 0 && !freeToPlayOnce) {
             applyToSelf(new BoomerangPower(this));
         }
     }

@@ -1,7 +1,5 @@
 package champ.cards;
 
-import champ.powers.CounterPower;
-import champ.powers.ParryPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,12 +12,11 @@ public class Endure extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 7;
-    private static final int UPG_MAGIC = 4;
+    private static final int MAGIC = 6;
 
     public Endure() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBlock = block = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,15 +25,13 @@ public class Endure extends AbstractChampCard {
 
     @Override
     public void applyPowers() {
+        int realBaseBlock = this.baseBlock;
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+            baseBlock += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        }
         super.applyPowers();
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)){
-            block += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-        }
-        if (!upgraded){
-            if (AbstractDungeon.player.hasPower(DexterityPower.POWER_ID)){
-                block -= AbstractDungeon.player.getPower(DexterityPower.POWER_ID).amount;
-            }
-        }
+        baseBlock = realBaseBlock;
+        isBlockModified = block != baseBlock;
     }
 
     public void upp() {
