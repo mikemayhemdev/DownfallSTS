@@ -169,9 +169,9 @@
     "NAME": "Gladiator Form",
     "DESCRIPTIONS": [
       "Whenever you #yTechnique, draw #b",
-      " card and gain [E].",
-      " cards and gain #b",
-      " [E]."
+      " card. Whenever you #yFinisher, gain [E] next turn.",
+      " cards. Whenever you #yFinisher, gain #b",
+      " [E] next turn."
     ]
   },
   "champ:NoBlockNextTurnPower": {
