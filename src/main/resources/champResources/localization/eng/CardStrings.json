@@ -67,7 +67,7 @@
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
-    "DESCRIPTION": "Enter champ:Defensive. NL Until you exit champ:Defensive Stance, champ:Techniques grant 3 extra champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL If you end this turn with at least 20 champ:Counter, gain !M! Block."
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",

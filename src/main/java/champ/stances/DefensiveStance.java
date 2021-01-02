@@ -3,7 +3,7 @@ package champ.stances;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.powers.CounterPower;
-import champ.powers.FocusedDefPower;
+import champ.powers.DefensiveStylePower;
 import champ.relics.DefensiveTrainingManual;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import guardian.stances.DefensiveMode;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveStance extends AbstractChampStance {
@@ -45,8 +44,8 @@ public class DefensiveStance extends AbstractChampStance {
 
     public static int amount() {
         int x = 4;
-        if (AbstractDungeon.player.hasPower(FocusedDefPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(FocusedDefPower.POWER_ID).amount;
+        if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
         }
         return x;
     }
@@ -61,9 +60,9 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void technique() {
-        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 7 : 4;
-        if (AbstractDungeon.player.hasPower(FocusedDefPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(FocusedDefPower.POWER_ID).amount;
+        int x = 4;
+        if (AbstractDungeon.player.hasPower(DefensiveStylePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(DefensiveStylePower.POWER_ID).amount;
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(x), x));
     }

@@ -17,11 +17,12 @@ public class FocusedDefense extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
+        baseMagicNumber = magicNumber = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
-        applyToSelf(new FocusedDefPower(3));
+        applyToSelf(new FocusedDefPower(magicNumber));
     }
 
     public void upp() {
