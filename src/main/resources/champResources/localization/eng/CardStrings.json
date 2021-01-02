@@ -67,11 +67,11 @@
   },
   "champ:FocusedDefense": {
     "NAME": "Focus: Defensive",
-    "DESCRIPTION": "Enter champ:Defensive. NL If you end this turn with at least 20 champ:Counter, gain !M! Block."
+    "DESCRIPTION": "Enter champ:Defensive. NL If you end this turn with at least 20 champ:Counter, gain !B! Block."
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "Enter champ:Berserker. NL If you end this turn with at least 15 champ:Fatigue, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Enter champ:Berserker. NL If you end this turn with at least 15 champ:Fatigue, deal !D! damage to ALL enemies."
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
