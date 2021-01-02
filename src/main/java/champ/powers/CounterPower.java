@@ -2,7 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.cards.Riposte;
+import champ.cards.SetATrap;
 import champ.relics.PowerArmor;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
 public class CounterPower extends AbstractPower implements CloneablePowerInterface {
@@ -49,7 +48,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
                 addToTop(new ReducePowerAction(owner, owner, this, amount / 2));
                 if (AbstractDungeon.player.hasPower(ParryPower.POWER_ID)){
                     for (int i = 0; i < AbstractDungeon.player.getPower(ParryPower.POWER_ID).amount; i++) {
-                        AbstractCard c = new Riposte();
+                        AbstractCard c = new SetATrap();
                         c.baseDamage = amount / 2;
                         addToBot(new MakeTempCardInHandAction(c));
                     }
@@ -59,7 +58,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
                 addToTop(new RemoveSpecificPowerAction(owner, owner, this));
             if (AbstractDungeon.player.hasPower(ParryPower.POWER_ID)){
                 for (int i = 0; i < AbstractDungeon.player.getPower(ParryPower.POWER_ID).amount; i++) {
-                    AbstractCard c = new Riposte();
+                    AbstractCard c = new SetATrap();
                     c.baseDamage = amount / 2;
                     addToBot(new MakeTempCardInHandAction(c));
                 }

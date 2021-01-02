@@ -22,7 +22,7 @@ public class EnGarde extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         //  tags.add(ChampMod.COMBO);
-        //  tags.add(ChampMod.COMBODEFENSIVE);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
