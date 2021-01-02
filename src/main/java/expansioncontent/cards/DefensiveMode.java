@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import expansioncontent.expansionContentMod;
+import guardian.powers.DontLeaveDefensiveModePower;
 
 
 public class DefensiveMode extends AbstractExpansionCard {
@@ -34,6 +35,8 @@ public class DefensiveMode extends AbstractExpansionCard {
 
        if (upgraded) atb(new GainBlockAction(p, p, this.block));
         atb(new ChangeStanceAction(guardian.stances.DefensiveMode.STANCE_ID));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, 1), 1));
+
 //        atb(new ApplyPowerAction(p, p, new ThornsPower(p, this.magicNumber), this.magicNumber));
 //        atb(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
 
