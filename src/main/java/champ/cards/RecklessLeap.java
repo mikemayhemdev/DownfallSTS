@@ -1,8 +1,10 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.stances.BerserkerStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.fatigue;
@@ -23,9 +25,17 @@ public class RecklessLeap extends AbstractChampCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        exhaust = true;
         myHpLossCost = MAGIC;
         tags.add(ChampMod.TECHNIQUE);
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (!AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+            cantUseMessage = EXTENDED_DESCRIPTION[0];
+            return false;
+        }
+        return super.canUse(p, m);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,8 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
-import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

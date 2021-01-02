@@ -2,10 +2,6 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
-import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -15,10 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.stances.*;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
-
-import java.util.ArrayList;
 
 public class DancingMasterPower extends AbstractPower implements CloneablePowerInterface {
 

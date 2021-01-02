@@ -98,8 +98,6 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags OPENERDEFENSIVE;
     @SpireEnum
-    public static AbstractCard.CardTags OPENERGLADIATOR;
-    @SpireEnum
     public static AbstractCard.CardTags OPENERBERSERKER;
     @SpireEnum
     public static AbstractCard.CardTags FINISHER;
@@ -109,8 +107,6 @@ public class ChampMod implements
     public static AbstractCard.CardTags COMBO;
     @SpireEnum
     public static AbstractCard.CardTags COMBODEFENSIVE;
-    @SpireEnum
-    public static AbstractCard.CardTags COMBOGLADIATOR;
     @SpireEnum
     public static AbstractCard.CardTags COMBOBERSERKER;
 
@@ -302,12 +298,14 @@ public class ChampMod implements
     @Override
     public void receiveSetUnlocks() {
 
+        /*
         unlocks0 = new CustomUnlockBundle(
                 Aggression.ID, Balance.ID, Control.ID
         );
         UnlockTracker.addCard(Aggression.ID);
         UnlockTracker.addCard(Balance.ID);
         UnlockTracker.addCard(Control.ID);
+        */ //TODO: New unlock 0
 
         unlocks1 = new CustomUnlockBundle(
                 RageSigil.ID, ShieldSigil.ID, SwordSigil.ID

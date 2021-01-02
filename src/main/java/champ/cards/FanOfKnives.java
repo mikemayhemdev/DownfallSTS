@@ -3,9 +3,6 @@ package champ.cards;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -29,7 +26,7 @@ public class FanOfKnives extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,7 +34,7 @@ public class FanOfKnives extends AbstractChampCard {
         atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
-        if (gcombo()) {
+        if (bcombo()) {
             atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
             allDmg(AbstractGameAction.AttackEffect.NONE);
             if (upgraded) {
@@ -51,7 +48,7 @@ public class FanOfKnives extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

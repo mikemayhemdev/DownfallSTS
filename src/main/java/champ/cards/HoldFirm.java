@@ -1,8 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;

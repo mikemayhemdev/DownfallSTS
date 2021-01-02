@@ -6,13 +6,8 @@ import champ.ChampMod;
 import champ.relics.LiftRelic;
 import champ.util.OpenerModBerserker;
 import champ.util.OpenerModDefensive;
-import champ.util.OpenerModGladiator;
-import champ.util.TechniqueMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,10 +15,6 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-import downfall.relics.BrokenWingStatue;
-import downfall.relics.ShatteredFragment;
-import slimebound.SlimeboundMod;
 
 import java.util.Iterator;
 

@@ -2,7 +2,6 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 

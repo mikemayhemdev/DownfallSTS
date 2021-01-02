@@ -1,8 +1,6 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
-import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
@@ -26,13 +24,13 @@ public class Encircle extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         myHpLossCost = 2;
-      //  tags.add(ChampMod.TECHNIQUE);
+        //  tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // if (upgraded) techique();
+        // if (upgraded) techique();
 
         for (int i = 0; i < magicNumber; i++) {
             atb(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
@@ -53,12 +51,12 @@ public class Encircle extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor =  bcombo()? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
 
     public void upp() {
-       // tags.add(ChampMod.TECHNIQUE);
+        // tags.add(ChampMod.TECHNIQUE);
         upgradeDamage(2);
         initializeDescription();
     }

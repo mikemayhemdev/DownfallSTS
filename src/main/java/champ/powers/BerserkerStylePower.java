@@ -17,6 +17,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
+import static champ.ChampMod.fatigue;
+
 public class BerserkerStylePower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = ChampMod.makeID("BerserkerStylePower");
@@ -49,23 +51,6 @@ public class BerserkerStylePower extends AbstractPower implements CloneablePower
             addToBot(new GainEnergyAction(1));
         }
     }
-
-    public int fatigue(int begone) {
-
-        int y = AbstractDungeon.player.currentHealth;
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ResolvePower(x), x));
-                AbstractDungeon.actionManager.addToTop(new FatigueHpLossAction(AbstractDungeon.player, AbstractDungeon.player, x));
-            }
-        });
-
-        return Math.min(begone, AbstractDungeon.player.currentHealth - 1);
-    }
-
 
     @Override
     public void updateDescription() {

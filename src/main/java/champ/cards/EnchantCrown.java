@@ -1,7 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
-import champ.powers.EnergizedDurationPower;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +14,7 @@ public class EnchantCrown extends AbstractChampCard {
 
     public EnchantCrown() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-    //    tags.add(ChampMod.FINISHER);
+        //    tags.add(ChampMod.FINISHER);
         exhaust = true;
     }
 
@@ -29,8 +27,8 @@ public class EnchantCrown extends AbstractChampCard {
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = false;
-        for (AbstractCard c:p.hand.group){
-            if (c.cost > 0){
+        for (AbstractCard c : p.hand.group) {
+            if (c.cost > 0) {
                 canUse = true;
                 break;
             }
@@ -45,7 +43,7 @@ public class EnchantCrown extends AbstractChampCard {
     }
 
     public void upp() {
-      //  tags.add(ChampMod.TECHNIQUE);
+        //  tags.add(ChampMod.TECHNIQUE);
         upgradeBaseCost(0);
     }
 }

@@ -14,7 +14,7 @@ public class SwordSigil extends AbstractChampCard {
     public SwordSigil() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         tags.add(ChampMod.TECHNIQUE);
-      //  tags.add(ChampMod.OPENER);
+        //  tags.add(ChampMod.OPENER);
         baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
     }
@@ -31,7 +31,7 @@ public class SwordSigil extends AbstractChampCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if (bcombo()){
+        if (bcombo()) {
             this.myHpLossCost = BerserkerStance.amount() * magicNumber;
         } else {
             this.myHpLossCost = 0;
@@ -45,8 +45,8 @@ public class SwordSigil extends AbstractChampCard {
     }
 
     public void upp() {
-       // rawDescription = UPGRADE_DESCRIPTION;
-       // initializeDescription();
+        // rawDescription = UPGRADE_DESCRIPTION;
+        // initializeDescription();
         upgradeMagicNumber(2);
     }
 }

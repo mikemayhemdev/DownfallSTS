@@ -17,26 +17,25 @@ public class Haymaker extends AbstractChampCard {
     public Haymaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-       // tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBODEFENSIVE);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //if (upgraded) techique();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        applyToEnemy(m, autoWeak(m, 2));
-        if (gcombo()) {
+        if (dcombo())
+            applyToEnemy(m, autoWeak(m, 2));
+        if (bcombo())
             applyToEnemy(m, autoVuln(m, 2));
-        }
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() || bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(UPG_DAMAGE);
     }
 }

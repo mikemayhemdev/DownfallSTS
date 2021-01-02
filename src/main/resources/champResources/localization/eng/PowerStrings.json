@@ -12,14 +12,6 @@
       "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, restore your Fatigued HP."
     ]
   },
-  "champ:FocusedGladPower": {
-    "NAME": "Gladiator Boost!",
-    "DESCRIPTIONS": [
-      "Until you exit #yGladiator, #yTechniques draw #b",
-      " additional card.",
-      " additional cards."
-    ]
-  },
   "champ:FocusedDefPower": {
     "NAME": "Defensive Boost!",
     "DESCRIPTIONS": [
@@ -46,7 +38,7 @@
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b",
-      " #yCounter for each card in hand."
+      " #yCounter."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -133,7 +125,7 @@
   "champ:GladiatorStylePower": {
     "NAME": "Gladiator Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yGladiator, gain #b",
+      "If you start your turn in no #yStance, gain #b",
       " temporary #yStrength and #yDexterity."
     ]
   },
@@ -172,6 +164,15 @@
     "DESCRIPTIONS": [
       "At the start of turn, if HP is at or below 50%, cleanse all debuffs and gain ",
       " Strength."
+    ]
+  },
+  "champ:GladiatorFormPower": {
+    "NAME": "Gladiator Form",
+    "DESCRIPTIONS": [
+      "Whenever you #yTechnique, draw #b",
+      " card and gain [E].",
+      " cards and gain #b",
+      " [E]."
     ]
   },
   "champ:NoBlockNextTurnPower": {

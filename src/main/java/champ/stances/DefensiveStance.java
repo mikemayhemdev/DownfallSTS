@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
+import guardian.stances.DefensiveMode;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveStance extends AbstractChampStance {
@@ -39,13 +40,21 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void updateDescription() {
-        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[13];
+        this.description = ChampChar.characterStrings.TEXT[8] + ": " + ChampChar.characterStrings.TEXT[12] + DefensiveStance.amount() + ChampChar.characterStrings.TEXT[47] + " NL " + ChampChar.characterStrings.TEXT[9] + ": " + ChampChar.characterStrings.TEXT[13] + finisherAmount() + ChampChar.characterStrings.TEXT[56];
     }
 
     public static int amount() {
-        int x = AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID) ? 7 : 4;
+        int x = 4;
         if (AbstractDungeon.player.hasPower(FocusedDefPower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(FocusedDefPower.POWER_ID).amount;
+        }
+        return x;
+    }
+
+    public static int finisherAmount() {
+        int x = 12;
+        if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID)) {
+            x += 8;
         }
         return x;
     }
@@ -61,7 +70,7 @@ public class DefensiveStance extends AbstractChampStance {
 
     @Override
     public void finisher() {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 12));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, finisherAmount()));
     }
 
 
