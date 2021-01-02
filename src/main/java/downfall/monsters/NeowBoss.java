@@ -4,6 +4,7 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -64,8 +65,6 @@ public class NeowBoss extends AbstractMonster {
 
     private float baseDrawX;
 
-    public boolean alwaysHalfDead = true;
-
     private int turnNum = 0;
 
     private int strAmt;
@@ -100,8 +99,6 @@ public class NeowBoss extends AbstractMonster {
 
         type = EnemyType.BOSS;
         this.baseDrawX = drawX;
-
-        alwaysHalfDead = true;
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -171,6 +168,13 @@ public class NeowBoss extends AbstractMonster {
     }
 
     @Override
+    public void renderHealth(SpriteBatch sb) {
+        if (!this.halfDead) {
+            super.renderHealth(sb);
+        }
+    }
+
+    @Override
     public void usePreBattleAction() {
         neowboss = this;
         super.usePreBattleAction();
@@ -206,6 +210,14 @@ public class NeowBoss extends AbstractMonster {
             public void update() { // Clears and resets Function Helper -- this part being bound to Action Queue makes some weird stuff.
                 minion.endTurnStartTurn();
                 isDone = true;
+            }
+        });
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                currentHealth = 0;
+                halfDead = true;
             }
         });
     }
