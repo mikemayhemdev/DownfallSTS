@@ -43,13 +43,13 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
     @Override
     public void atStartOfTurnPostDraw() {
         flash();
+        stored.freeToPlayOnce = true;
         // Then it flies back!
         if (AbstractDungeon.player.drawPile.contains(stored)) {
             addToBot(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
-                    stored.freeToPlayOnce = true;
                     AbstractDungeon.player.drawPile.moveToHand(stored);
                 }
             });
@@ -59,7 +59,6 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
                 @Override
                 public void update() {
                     isDone = true;
-                    stored.freeToPlayOnce = true;
                     AbstractDungeon.player.discardPile.moveToHand(stored);
                 }
             });
@@ -69,7 +68,6 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
                 @Override
                 public void update() {
                     isDone = true;
-                    stored.freeToPlayOnce = true;
                     AbstractDungeon.player.exhaustPile.moveToHand(stored);
                 }
             });
