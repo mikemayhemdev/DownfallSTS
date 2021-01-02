@@ -73,8 +73,8 @@
     "NAME": "Focus: Berserker",
     "DESCRIPTION": "Enter champ:Berserker. NL Until you exit champ:Berserker Stance, champ:Techniques champ:Fatigue 2 more."
   },
-  "champ:Riposte": {
-    "NAME": "Riposte",
+  "champ:SetATrap": {
+    "NAME": "Set A Trap",
     "DESCRIPTION": "Enter champ:Defensive. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand.",
     "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand."
   },
@@ -366,6 +366,27 @@
     "NAME": "Berserker Style",
     "DESCRIPTION": "Enter champ:Berserker. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
+  },
+  "champ:Riposte": {
+    "NAME": "Riposte",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "champ:Endure": {
+    "NAME": "Endure",
+    "DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength instead of Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength"
+  },
+  "champ:PreemptiveStrike": {
+    "NAME": "Preemptive Strike",
+    "DESCRIPTION": "Requires *Defensive *Stance. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose all champ:Counter.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deals !D! damage)"
+    ]
+  },
+  "champ:Parry": {
+    "NAME": "Parry",
+    "DESCRIPTION": "Gain !M! Counter. NL If your Counter is used this turn, add *Riposte to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the amount of Counter used. NL Exhaust."
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",

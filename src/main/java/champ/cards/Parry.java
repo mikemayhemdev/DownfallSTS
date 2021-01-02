@@ -1,7 +1,6 @@
 package champ.cards;
 
 import champ.powers.CounterPower;
-import champ.powers.FalseCounterPower;
 import champ.powers.ParryPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -19,7 +18,7 @@ public class Parry extends AbstractChampCard {
     public Parry() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
-        AbstractCard c = new Riposte();
+        AbstractCard c = new SetATrap();
         c.rawDescription = UPGRADE_DESCRIPTION;
         c.initializeDescription();
         cardsToPreview = c;
