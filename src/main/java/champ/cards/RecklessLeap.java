@@ -26,7 +26,7 @@ public class RecklessLeap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         myHpLossCost = MAGIC;
-        tags.add(ChampMod.TECHNIQUE);
+     //   tags.add(ChampMod.TECHNIQUE);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class RecklessLeap extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         fatigue(magicNumber);
     }

@@ -18,11 +18,11 @@ public class HoldFirm extends AbstractChampCard {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = 1;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         blck();
         applyToSelf(new BlurPower(p, magicNumber));
     }

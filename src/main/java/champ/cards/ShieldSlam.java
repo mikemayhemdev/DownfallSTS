@@ -18,11 +18,11 @@ public class ShieldSlam extends AbstractChampCard {
     public ShieldSlam() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.TECHNIQUE);
+      //  tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+     //   techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }
 

@@ -41,6 +41,7 @@ public class Circumvent extends AbstractChampCard {
     }
 
     public void upp() {
+        tags.add(ChampMod.TECHNIQUE);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

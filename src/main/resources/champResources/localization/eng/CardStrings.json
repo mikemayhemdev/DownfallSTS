@@ -222,8 +222,8 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
-    "DESCRIPTION": "Deal !D! damage for each Strike in hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each Strike in hand.",
+    "DESCRIPTION": "Deal !D! damage for each card containing \"Strike\" in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each card containing \"Strike\" in your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
@@ -235,7 +235,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, if this does not cost 0, reduce this card's cost by 1 and raise its damage by !M!. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Whenever you use a champ:Technique, reduce this card's cost by 1 and raise its damage by !M!. NL Exhaust."
   },
   "champ:HeavySlash": {
     "NAME": "Masterful Slash",
@@ -275,7 +275,7 @@
     ]
   },
   "champ:CrownThrow": {
-    "NAME": "Boomerang Crown",
+    "NAME": "Crownarang",
     "DESCRIPTION": "Deal !D! damage. NL If this doesn't cost 0, return it to your hand next turn. NL It costs 0 until played."
   },
   "champ:FightOn": {
@@ -354,8 +354,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Strike of Genius",
-    "DESCRIPTION": "At the start of your turn, add a random card that Enters a Stance to your hand. NL It costs 0 until played and gains Exhaust.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded card that Enters a Stance to your hand. NL It costs 0 until played and gains Exhaust."
+    "DESCRIPTION": "At the start of your turn, add a random card containing \"Strike\" into your hand. NL It costs 0 until played and gains Exhaust.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a random Upgraded card containing \"Strike\" to your hand. NL It costs 0 until played and gains Exhaust."
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
@@ -403,15 +403,15 @@
   },
   "champ:UltimateStance": {
     "NAME": "ULTIMATE Stance",
-    "DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate this turn.",
-    "UPGRADE_DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate for !M! turns.",
+    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for 1 turn.",
+    "UPGRADE_DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate Stance for !M! turns.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Can only be played in a Stance. NL Enter the Stance you aren't in. NL Draw !M! cards.",
+    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]

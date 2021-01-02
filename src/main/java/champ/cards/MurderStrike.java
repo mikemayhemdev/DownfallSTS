@@ -28,12 +28,13 @@ public class MurderStrike extends AbstractChampCard {
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         super.onPlayCard(c, m);
         if (c.hasTag(ChampMod.TECHNIQUE)) {
-            if (cost > 0) {
+           // if (cost > 0) {
                 updateCost(-1);
                 baseDamage += magicNumber;
                 applyPowers();
                 superFlash(Color.RED.cpy());
-            }
+           //
+            // }
         }
     }
 

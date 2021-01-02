@@ -15,7 +15,7 @@ public class CrownThrow extends AbstractChampCard {
     private static final int UPG_DAMAGE = 3;
 
     public CrownThrow() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
     }
 

@@ -16,7 +16,7 @@ public class EnGarde extends AbstractChampCard {
     //stupid intellij stuff skill, self, common
 
     public EnGarde() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
     }
 

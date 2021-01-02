@@ -14,11 +14,11 @@ public class IgnorePain extends AbstractChampCard {
     public IgnorePain() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         applyToSelf(new PushThroughPower(1));
     }
 

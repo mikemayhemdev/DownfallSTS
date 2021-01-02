@@ -12,7 +12,7 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 3;
 
     public BerserkersShout() {
