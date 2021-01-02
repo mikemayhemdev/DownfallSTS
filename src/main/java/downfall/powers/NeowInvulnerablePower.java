@@ -3,12 +3,17 @@ package downfall.powers;
 import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import slimebound.SlimeboundMod;
 import theHexaghost.util.TextureLoader;
 
 public class NeowInvulnerablePower extends AbstractPower {
@@ -19,11 +24,11 @@ public class NeowInvulnerablePower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowRez84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowRez32.png"));
 
+    private boolean firstTurn;
 
-    public NeowInvulnerablePower(final AbstractCreature owner, final int amount) {
+    public NeowInvulnerablePower(final AbstractCreature owner) {
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
         this.type = PowerType.BUFF;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -33,9 +38,22 @@ public class NeowInvulnerablePower extends AbstractPower {
 
         this.updateDescription();
 
+        firstTurn = true;
         this.canGoNegative = false;
     }
 
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        super.onPlayCard(card, m);
+        this.owner.heal(2, true);
+    }
+
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+
+
+    }
 
     @Override
     public void updateDescription() {

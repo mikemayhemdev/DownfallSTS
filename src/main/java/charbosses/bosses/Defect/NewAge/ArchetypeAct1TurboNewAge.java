@@ -6,6 +6,7 @@ import charbosses.cards.curses.EnAged;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
 
         maxHPModifier += 100;
         actNum = 1;
+        SlimeboundMod.logger.info("Archetype act num: " + actNum);
     }
 
     private int steamBarrierCasts;

@@ -18,6 +18,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -1075,6 +1076,7 @@ public static void saveData() {
                 ExhaustStatusesPower e = (ExhaustStatusesPower) AbstractDungeon.player.getPower(ExhaustStatusesPower.POWER_ID);
                 if (e.usedThisTurn < e.amount) {
                     AbstractDungeon.actionManager.addToBottom(new ExhaustSpecificCardAction(abstractCard, AbstractDungeon.player.hand));
+                    AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
                     e.usedThisTurn++;
                     e.flash();
                 }

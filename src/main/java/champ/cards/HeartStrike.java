@@ -19,7 +19,6 @@ public class HeartStrike extends AbstractChampCard {
     public HeartStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        exhaust = true;
         tags.add(ChampMod.FINISHER);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

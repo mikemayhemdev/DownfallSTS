@@ -51,20 +51,19 @@ public class NeowRezAction extends AbstractGameAction {
             owner.moveForRez();
             this.instructedMove = true;
             switch (owner.Rezzes) {
-                case 1: {
+                case 0: {
                     AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[0], false));
-
                     CardCrawlGame.sound.play("VO_NEOW_2A");
                     break;
                 }
 
-                case 2: {
+                case 1: {
                     AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[1], false));
 
                     CardCrawlGame.sound.play("VO_NEOW_3B");
                     break;
                 }
-                case 3: {
+                case 2: {
                     AbstractDungeon.effectList.add(new SpeechBubble(Settings.WIDTH * 0.85F, Settings.HEIGHT / 2F, 2.0F, CardCrawlGame.languagePack.getCharacterString(downfallMod.makeID("NeowBoss")).TEXT[2], false));
 
                     CardCrawlGame.sound.play("VO_NEOW_1A");
@@ -78,10 +77,11 @@ public class NeowRezAction extends AbstractGameAction {
             String name;
             if (owner.bossesToRez.size() == 0) {
                 name = "downfall:Ironclad";
-                //SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
+                SlimeboundMod.logger.info("WARNING: Neow had no bosses to rez.  Spawning an Ironclad by default.");
             } else {
                 //Collections.shuffle(owner.bossesToRez);
                 name = owner.bossesToRez.get(0);
+                owner.bossesRezzed.add(name);
                 owner.bossesToRez.remove(0);
             }
             //SlimeboundMod.logger.info("Neow rezzing: " + name);

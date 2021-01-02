@@ -153,6 +153,13 @@ public class FunctionHelper {
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                    ((AbstractBronzeCard) c).onCompileFirst(function, forGameplay);
+                }
+            }
+        }
+        for (AbstractCard c : held.group) {
+            if (c instanceof AbstractBronzeCard) {
+                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
                     ((AbstractBronzeCard) c).onCompile(function, forGameplay); // Compile effects
                 }
             }

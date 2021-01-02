@@ -16,7 +16,7 @@
   "downfall:NeowInvulnerable": {
     "NAME": "God of Life",
     "DESCRIPTIONS": [
-      "Cannot be killed.  Ends your turn and retreats to recover when reduced to 0 HP."
+      "Heals 2 HP whenever you play a card."
     ]
   },
   "downfall:TransformDrawnCardsPower": {
@@ -54,15 +54,15 @@
   "downfall:NeowBuff": {
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
-      "Gains Strength and Dexterity at the end of the round."
+      "Gains 1 Strength and Dexterity at the end of the round."
     ]
   },
   "downfall:WatcherCripplePower": {
     "NAME": "Fall from Grace",
     "DESCRIPTIONS": [
-      "Deal ",
-      " more unblocked Attack damage to apply -4 Strength to Watcher when she next enters Divinity or plays Ragnarok.",
-      "Watcher will lose 4 Strength to Watcher when she next enters Divinity or plays Ragnarok."
+      "When Watcher loses ",
+      " more HP, apply -4 Strength to her when she next enters Divinity or plays Ragnarok.",
+      "Watcher will lose 4 Strength when she next enters Divinity or plays Ragnarok."
     ]
   },
   "downfall:ShivTimeEaterPower": {
@@ -88,6 +88,86 @@
     "NAME": "Faith Eater",
     "DESCRIPTIONS": [
       "Whenever you play a card, gains #b1 Mantra. Loses 5 Mantra per turn. NL Watcher's Divinity Stance is permanent."
+    ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTIONS": [
+      "Whenever you play a 0-cost card, Neow gain 1 Strength."
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Neow has Barricade and gains 10 Block at the start of each turn."
+    ]
+  },
+  "downfall:NeowBlasphemersDemise": {
+    "NAME": "Blasphemers Demise",
+    "DESCRIPTIONS": [
+      "When Neow loses ",
+      " more HP, she will be stopped from gaining 10 Strength the next turn she uses a Buff.",
+      "Neow is crippled and will not gain additional Strength during her next Buff turn."
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "When Neow adds curses to your draw pile, she also adds 2 #yVoid Status cards."
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTIONS": [
+      "Neow heals HP whenever she dealt any unblocked damage."
+    ]
+  },
+  "downfall:NeowFleetingFaith": {
+    "NAME": "Fleeting Faith",
+    "DESCRIPTIONS": [
+      "Whenever you play a card, Neow gains #b1 Mantra. Loses 5 Mantra per turn."
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "When Neow has 10 Mantra, she converts 10 Mantra into 10 Strength."
+    ]
+  },
+  "downfall:NeowHighlyToxic": {
+    "NAME": "Warning: Highly Toxic",
+    "DESCRIPTIONS": [
+      "Neow applies 10 Poison to your per turn. You have Poison Protection."
+    ]
+  },
+  "downfall:NeowSeeingDouble": {
+    "NAME": "Seeing Double",
+    "DESCRIPTIONS": [
+      "The first Attack used each turn against Neow has a 50% chance of failing."
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "Synchronize",
+    "DESCRIPTIONS": [
+      "Neow adds a random #yStatus card to your discard pile every turn."
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "Unbiased Cognition",
+    "DESCRIPTIONS": [
+      "Neow has 1 additional Strength for every Power card you play or have played this combat."
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "Unbridled Rage",
+    "DESCRIPTIONS": [
+      "While Neow is below 50% Max HP, she gains 6 Strength."
+    ]
+  },
+  "downfall:NeowAncientConstruct": {
+    "NAME": "Ancient Construct",
+    "DESCRIPTIONS": [
+      "Neow gains 3 #yArtifact at the start of your turn if she has no #yArtifact."
     ]
   }
 }

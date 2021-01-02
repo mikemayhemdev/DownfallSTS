@@ -25,9 +25,9 @@ public class Chronoboost extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         if (upgraded) {
-            atb(new ApplyPowerAction(p, p, new ChronoBoostPlusPower(p, p, 2), 2));
+            atb(new ApplyPowerAction(p, p, new ChronoBoostPlusPower(p, p, 1), 1));
         } else {
-            atb(new ApplyPowerAction(p, p, new ChronoBoostPower(p, p, 2), 2));
+            atb(new ApplyPowerAction(p, p, new ChronoBoostPower(p, p, 1), 1));
         }
 
     }

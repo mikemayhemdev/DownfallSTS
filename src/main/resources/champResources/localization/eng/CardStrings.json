@@ -282,7 +282,7 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal damage equal to your champ:Fatigue. NL Exhaust.",
+    "DESCRIPTION": "Deal damage equal to your champ:Fatigue.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage.)"
     ]

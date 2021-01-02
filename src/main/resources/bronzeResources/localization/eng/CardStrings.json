@@ -503,8 +503,8 @@
   },
   "bronze:Repulsor": {
     "NAME": "Repulsor",
-    "DESCRIPTION": "Exhaust the first Status or Curse card you draw each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Exhaust the first Status or Curse card you draw each turn."
+    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "bronze:Debug": {
     "NAME": "Debug",
@@ -525,7 +525,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
-    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded."
+    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded. NL Exhaust."
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
