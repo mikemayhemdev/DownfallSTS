@@ -40,7 +40,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL If the enemy has Vulnerable, deal !D! damage again. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
