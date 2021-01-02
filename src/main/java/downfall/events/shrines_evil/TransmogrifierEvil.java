@@ -33,6 +33,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
     private boolean bonusShrine;
     private boolean bonusShrine2;
+    private boolean bonusShrine3;
 
 
     public TransmogrifierEvil() {
@@ -58,19 +59,16 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         super.update();
 
         if ((!AbstractDungeon.isScreenUp) && (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
-
             AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-
             AbstractDungeon.player.masterDeck.removeCard(c);
-
             AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
-
             AbstractCard transCard = AbstractDungeon.getTransformedCard();
-
-
             AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            if (bonusShrine3){
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(CardLibrary.getCurse().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
+            }
             if (bonusShrine && !bonusShrine2){
                 bonusShrine = false;
                 bonusShrine2 = true;
@@ -81,6 +79,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
             } else if (bonusShrine2){
                 bonusShrine = false;
                 bonusShrine2 = false;
+                bonusShrine3 = true;
                 AbstractDungeon.gridSelectScreen.open(
                         com.megacrit.cardcrawl.cards.CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck
                                 .getPurgeableCards()), 1, OPTIONS[2], false, true, false, false);

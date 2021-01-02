@@ -32,6 +32,7 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
     private static final String IGNORE = DESCRIPTIONS[2];
 
     private boolean bonusShrine;
+    private boolean bonusShrine2;
 
     private CUR_SCREEN screen = CUR_SCREEN.INTRO;
 
@@ -75,10 +76,15 @@ public class UpgradeShrineEvil extends AbstractImageEvent {
             AbstractDungeon.topLevelEffects.add(new com.megacrit.cardcrawl.vfx.UpgradeShineEffect(com.megacrit.cardcrawl.core.Settings.WIDTH * .25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            if (bonusShrine2){
+                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(CardLibrary.getCurse().makeStatEquivalentCopy(), (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
+            }
             if (bonusShrine){
                 bonusShrine = false;
+                bonusShrine2 = true;
                 AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck
                         .getUpgradableCards(), 1, OPTIONS[2], true, false, false, false);
+
 
             }
 
