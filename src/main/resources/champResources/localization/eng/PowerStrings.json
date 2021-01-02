@@ -202,5 +202,12 @@
     "DESCRIPTIONS": [
       "If your Counter is used this turn, add Riposte to your hand."
     ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "Boomerang",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, return ",
+      " to your hand. It costs #b0 until played."
+    ]
   }
 }

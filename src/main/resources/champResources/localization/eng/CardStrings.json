@@ -270,8 +270,8 @@
     ]
   },
   "champ:CrownThrow": {
-    "NAME": "Crown Throw",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL  Unless *Gladiator champ:Combo: Draw 3 fewer cards next turn."
+    "NAME": "Boomerang Crown",
+    "DESCRIPTION": "Deal !D! damage. NL If this doesn't cost 0, return it to your hand next turn. NL It costs 0 until played."
   },
   "champ:FightOn": {
     "NAME": "Fight On",
