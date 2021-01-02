@@ -38,7 +38,7 @@
     "NAME": "Defensive Thesis",
     "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
-      "#yFinishers used in Defensive #yStance grant #b8 more #yBlock."
+      "Defensive Stance's #yFinisher #yBonus grants #b8 more #yBlock."
     ]
   },
   "champ:DeflectingBracers": {

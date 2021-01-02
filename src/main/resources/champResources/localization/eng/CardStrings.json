@@ -181,7 +181,7 @@
   },
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
-    "DESCRIPTION": "At the end of your turn, gain !M! champ:Counter for each card in hand."
+    "DESCRIPTION": "At the end of your turn, gain !M! champ:Counter."
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
@@ -290,7 +290,7 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Leap",
-    "DESCRIPTION": "Can only be played in champ:Berserker. NL Deal !D! damage. NL champ:Fatigue !M!. NL Exhaust.",
+    "DESCRIPTION": "Requires champ:Berserker. NL Deal !D! damage. NL champ:Fatigue !M!.",
     "EXTENDED_DESCRIPTION": [
       "I don't have enough bloodlust."
     ]
@@ -381,7 +381,7 @@
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
-    "DESCRIPTION": "Requires *Defensive *Stance. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose all champ:Counter.",
+    "DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose all champ:Counter.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage)"
     ]
