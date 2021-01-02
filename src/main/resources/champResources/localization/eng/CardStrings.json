@@ -71,7 +71,7 @@
   },
   "champ:FocusedBerserking": {
     "NAME": "Focus: Berserker",
-    "DESCRIPTION": "Enter champ:Berserker. NL Until you exit champ:Berserker Stance, champ:Techniques champ:Fatigue 2 more."
+    "DESCRIPTION": "Enter champ:Berserker. NL If you end this turn with at least 15 champ:Fatigue, deal !M! damage to ALL enemies."
   },
   "champ:Riposte": {
     "NAME": "Riposte",
@@ -364,8 +364,8 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
-    "DESCRIPTION": "Enter champ:Berserker. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] .",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL If you start your turn in champ:Berserker, champ:Fatigue 2 and gain [E] ."
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more champ:Fatigue.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Berserker. NL champ:Berserker champ:Techniques grant !M! more champ:Fatigue."
   },
   "champ:EnchantCrown": {
     "NAME": "Enchant Crown",

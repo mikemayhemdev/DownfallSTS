@@ -1,6 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.powers.BerserkerStylePower;
 import champ.powers.FocusedBerPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -21,7 +22,7 @@ public class FocusedBerserking extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         berserkOpen();
-        applyToSelf(new FocusedBerPower(2));
+        applyToSelf(new FocusedBerPower(10));
     }
 
     public void upp() {

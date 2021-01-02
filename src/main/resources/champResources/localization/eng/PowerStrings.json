@@ -132,8 +132,8 @@
   "champ:BerserkerStylePower": {
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yBerserker, #yFatigue #b",
-      " and gain [E] ."
+      "#yBerserker #yTechniques grant #b",
+      " more #yFatigue."
     ]
   },
   "champ:FalseCounterPower": {

@@ -2,23 +2,18 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
-import champ.powers.FocusedBerPower;
-import champ.powers.FocusedDefPower;
+import champ.powers.BerserkerStylePower;
 import champ.powers.ResolvePower;
-import champ.relics.DefensiveTrainingManual;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import guardian.characters.GuardianCharacter;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 import static champ.ChampMod.fatigue;
@@ -52,8 +47,8 @@ public class BerserkerStance extends AbstractChampStance {
 
     public static int amount() {
         int x = 3;
-        if (AbstractDungeon.player.hasPower(FocusedBerPower.POWER_ID)) {
-            x += AbstractDungeon.player.getPower(FocusedBerPower.POWER_ID).amount;
+        if (AbstractDungeon.player.hasPower(BerserkerStylePower.POWER_ID)) {
+            x += AbstractDungeon.player.getPower(BerserkerStylePower.POWER_ID).amount;
         }
         return x;
     }
