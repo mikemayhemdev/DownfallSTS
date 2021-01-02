@@ -27,7 +27,7 @@ public class EnragedBash extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
        // baseCool = cool = 2;
-       // myHpLossCost = magicNumber;
+        myHpLossCost = 4;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
     }
@@ -54,6 +54,8 @@ public class EnragedBash extends AbstractChampCard {
         }
         if (bcombo())
             atb(new ModifyDamageAndMagicAction(uuid, 1));
+
+        fatigue(4);
     }
 
     @Override

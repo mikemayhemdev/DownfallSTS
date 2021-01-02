@@ -16,7 +16,7 @@ public class Encircle extends AbstractChampCard {
 
     //stupid intellij stuff attack, all_enemy, uncommon
 
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
     private static final int MAGIC = 2;
 
     public Encircle() {
