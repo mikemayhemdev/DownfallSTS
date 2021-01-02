@@ -19,7 +19,8 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, add a random champ:Combo into your hand of that Stance.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, add a champ:Combo into your hand of that Stance.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Add a champ:Combo into your hand of that Stance.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
@@ -100,7 +101,7 @@
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
-    "DESCRIPTION": "",
+    "DESCRIPTION": "Draw a card.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block."
   },
   "champ:GutPunch": {
@@ -185,7 +186,8 @@
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
-    "DESCRIPTION": "Deal !D! damage. NL ",
+    "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Apply 2 Weak. NL *Berserker champ:Combo: Apply 2 Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
     "EXTENDED_DESCRIPTION": [
       "Defensive champ:Combo: Apply 2 Weak. NL ",
       "Berserker champ:Combo: Apply 2 Vulnerable."

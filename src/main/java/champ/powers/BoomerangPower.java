@@ -46,33 +46,39 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
         flash();
         stored.freeToPlayOnce = true;
         // Then it flies back!
-        if (AbstractDungeon.player.drawPile.contains(stored)) {
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractDungeon.player.drawPile.moveToHand(stored);
+        addToBot(new AbstractGameAction() {
+            public void update() {
+                if (AbstractDungeon.player.drawPile.contains(stored)) {
+                    addToBot(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractDungeon.player.drawPile.moveToHand(stored);
+                        }
+                    });
+                } else if (AbstractDungeon.player.discardPile.contains(stored)) {
+                    addToBot(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractDungeon.player.discardPile.moveToHand(stored);
+                        }
+                    });
+                } else if (AbstractDungeon.player.exhaustPile.contains(stored)) {
+                    addToBot(new AbstractGameAction() {
+                        @Override
+                        public void update() {
+                            isDone = true;
+                            AbstractDungeon.player.exhaustPile.moveToHand(stored);
+                        }
+                    });
                 }
-            });
-        }
-        if (AbstractDungeon.player.discardPile.contains(stored)) {
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractDungeon.player.discardPile.moveToHand(stored);
-                }
-            });
-        }
-        if (AbstractDungeon.player.exhaustPile.contains(stored)) {
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractDungeon.player.exhaustPile.moveToHand(stored);
-                }
-            });
-        }
+
+                isDone = true;
+            }
+        });
+
+
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

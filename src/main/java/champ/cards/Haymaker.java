@@ -32,7 +32,7 @@ public class Haymaker extends AbstractChampCard {
 
     @Override
     public void applyPowers() {
-        rawDescription = DESCRIPTION;
+        rawDescription = UPGRADE_DESCRIPTION;
         if (bcombo()) rawDescription += "[#5ebf2a]";
         else rawDescription += "*";
         rawDescription += EXTENDED_DESCRIPTION[0];

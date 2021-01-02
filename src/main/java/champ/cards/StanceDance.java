@@ -27,7 +27,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) techique();
+        //if (upgraded) techique();
         atb(new OctoChoiceAction(m, this));
     }
 
@@ -41,7 +41,7 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
-                if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+                if (upgraded || AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
                         if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOBERSERKER))
@@ -50,12 +50,11 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                     UnlockTracker.markCardAsSeen(r.cardID);
                     makeInHand(r);
-                } else {
-                    berserkOpen();
                 }
+                berserkOpen();
                 break;
             case "octo:OctoDefense":
-                if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
+                if (upgraded || AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
                     ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
                     for (AbstractCard t : CardLibrary.getAllCards()) {
                         if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE))
@@ -64,15 +63,14 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
                     AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
                     UnlockTracker.markCardAsSeen(r.cardID);
                     makeInHand(r);
-                } else {
-                    defenseOpen();
                 }
+                defenseOpen();
                 break;
         }
     }
 
     public void upp() {
-        tags.add(ChampMod.TECHNIQUE);
+        rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
 }
