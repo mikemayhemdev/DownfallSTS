@@ -38,8 +38,13 @@ public class BladeFlurry extends AbstractChampCard {
     public void applyPowers() {
         super.applyPowers();
         if (AbstractDungeon.player != null) {
-            this.rawDescription = cardStrings.DESCRIPTION;
             int x = 0;
+            if (upgraded){
+                this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+                x++;
+            } else {
+                this.rawDescription = cardStrings.DESCRIPTION;
+            }
             for (AbstractCard q : AbstractDungeon.player.hand.group) if (q.hasTag(CardTags.STRIKE)) x++;
             this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[0] + x;
             this.rawDescription = this.rawDescription + cardStrings.EXTENDED_DESCRIPTION[1];
@@ -53,6 +58,7 @@ public class BladeFlurry extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

@@ -31,6 +31,18 @@ public class Haymaker extends AbstractChampCard {
     }
 
     @Override
+    public void applyPowers() {
+        rawDescription = DESCRIPTION;
+        if (bcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[0];
+        if (dcombo()) rawDescription += "[#5ebf2a]";
+        else rawDescription += "*";
+        rawDescription += EXTENDED_DESCRIPTION[1];
+        initializeDescription();
+    }
+
+    @Override
     public void triggerOnGlowCheck() {
         glowColor = dcombo() || bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }

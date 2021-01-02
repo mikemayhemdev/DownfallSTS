@@ -17,7 +17,7 @@ public class FaceSlap extends AbstractChampCard {
     private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = 1;
 
     public FaceSlap() {
@@ -25,6 +25,7 @@ public class FaceSlap extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.OPENER);
+        tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
     }
@@ -41,6 +42,7 @@ public class FaceSlap extends AbstractChampCard {
             }
         });
         if (bcombo()) applyToEnemy(m, autoVuln(m, magicNumber));
+        berserkOpen();
     }
 
     @Override

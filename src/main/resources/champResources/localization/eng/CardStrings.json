@@ -40,11 +40,11 @@
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL If the enemy has Vulnerable, deal !D! damage again. NL *Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage, twice if the enemy has Vulnerable. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
-    "DESCRIPTION": "Enter champ:Defensive. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block ."
+    "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block. NL Enter champ:Defensive."
   },
   "champ:Balance": {
     "NAME": "Balance",
@@ -75,8 +75,8 @@
   },
   "champ:SetATrap": {
     "NAME": "Set A Trap",
-    "DESCRIPTION": "Enter champ:Defensive. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand."
+    "DESCRIPTION": "*Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand. NL Enter champ:Defensive.",
+    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand. NL Enter champ:Defensive."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
@@ -109,8 +109,8 @@
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage twice.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage three times."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage twice. NL Enter champ:Berserker.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage three times. NL Enter champ:Berserker."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
@@ -185,8 +185,11 @@
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
-    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Defensive champ:Combo: Apply 2 Weak. NL ",
+      "Berserker champ:Combo: Apply 2 Vulnerable."
+    ]
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
@@ -198,8 +201,8 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue you have. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue you have."
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
@@ -218,6 +221,7 @@
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
     "DESCRIPTION": "Deal !D! damage for each Strike in hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Deal !D! damage for each Strike in hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
@@ -310,10 +314,10 @@
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage X times. NL *Defensive: Gain !B! Block X times.",
+    "DESCRIPTION": "*Berserker champ:Combo: Deal !D! damage X times. NL *Defensive champ:Combo: Gain !B! Block X times.",
     "EXTENDED_DESCRIPTION": [
-      "Berserker: Deal !D! damage. NL ",
-      "Defensive: Gain !B! Block. NL ",
+      "Berserker champ:Combo: Deal !D! damage X times. NL ",
+      "Defensive champ:Combo: Gain !B! Block X times.",
       "Gladiator: Draw a card and gain [E] .",
       "Gladiator: Draw 2 cards and gain [E] .",
       "champ:Combo NL "
@@ -357,9 +361,9 @@
     "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
   },
   "champ:GladiatorStyle": {
-    "NAME": "Come Out Swinging",
-    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in no Stance, gain !M! temporary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in no Stance, gain !M! temporary Strength and Dexterity."
+    "NAME": "Good Clean Fight",
+    "DESCRIPTION": "If you start your turn in no Stance, gain !M! temporary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "If you start your turn in no Stance, gain !M! temporary Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",

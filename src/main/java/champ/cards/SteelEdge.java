@@ -14,8 +14,8 @@ public class SteelEdge extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, uncommon
 
-    private static final int DAMAGE = 6;
-    private static final int BLOCK = 5;
+    private static final int DAMAGE = 8;
+    private static final int BLOCK = 8;
 
     public SteelEdge() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
@@ -34,7 +34,7 @@ public class SteelEdge extends AbstractChampCard {
 
     @Override
     public void applyPowers() {
-        rawDescription = EXTENDED_DESCRIPTION[4];
+        rawDescription = "";
         if (bcombo()) rawDescription += "[#5ebf2a]";
         else rawDescription += "*";
         rawDescription += EXTENDED_DESCRIPTION[0];
@@ -46,7 +46,7 @@ public class SteelEdge extends AbstractChampCard {
 
     @Override
     public void onMoveToDiscard() {
-        rawDescription = upgraded ? UPGRADE_DESCRIPTION : DESCRIPTION;
+        rawDescription = DESCRIPTION;
         initializeDescription();
     }
 

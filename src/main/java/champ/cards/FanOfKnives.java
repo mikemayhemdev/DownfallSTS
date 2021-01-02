@@ -24,13 +24,12 @@ public class FanOfKnives extends AbstractChampCard {
         baseDamage = DAMAGE;
         isMultiDamage = true;
         tags.add(ChampMod.OPENER);
-        this.tags.add(ChampMod.OPENERBERSERKER);
+        tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        berserkOpen();
         atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
@@ -43,6 +42,7 @@ public class FanOfKnives extends AbstractChampCard {
                 allDmg(AbstractGameAction.AttackEffect.NONE);
             }
         }
+        berserkOpen();
 
     }
 
