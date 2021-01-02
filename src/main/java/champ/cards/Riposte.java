@@ -25,13 +25,13 @@ public class Riposte extends AbstractChampCard {
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         defenseOpen();
         if (upgraded) atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
-        if (gcombo()) {
+        if (dcombo()) {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
@@ -50,7 +50,7 @@ public class Riposte extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

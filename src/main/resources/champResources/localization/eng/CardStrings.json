@@ -76,8 +76,8 @@
   },
   "champ:Riposte": {
     "NAME": "Riposte",
-    "DESCRIPTION": "Enter champ:Defensive. NL *Gladiator champ:Combo: Gain !M! champ:Counter for each Attack in your hand.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL *Gladiator champ:Combo: Gain !M! champ:Counter for each Attack in your hand."
+    "DESCRIPTION": "Enter champ:Defensive. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL *Defensive champ:Combo: Gain !M! champ:Counter for each Attack in your hand."
   },
   "champ:Backstep": {
     "NAME": "Backstep",
