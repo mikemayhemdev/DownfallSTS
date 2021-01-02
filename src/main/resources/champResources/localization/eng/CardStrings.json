@@ -143,8 +143,7 @@
   },
   "champ:EnGarde": {
     "NAME": "En Garde",
-    "DESCRIPTION": "Double your champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Gain !M! champ:Counter. NL Double your champ:Counter."
+    "DESCRIPTION": "Gain !B! Block. NL If your Block is broken this turn, gain !B! Block next turn."
   },
   "champ:ShieldSlam": {
     "NAME": "Shield Slam",
