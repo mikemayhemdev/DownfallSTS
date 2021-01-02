@@ -34,6 +34,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.relics.StickyStick;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.cards.unknowns.UnknownColorless;
@@ -269,50 +270,29 @@ public class SneckoMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                Cheat.ID, PureSnecko.ID, Rotation.ID
+        downfallMod.registerUnlockSuite(
+                Cheat.ID,
+                PureSnecko.ID,
+                Rotation.ID,
+
+                UnknownColorless.ID,
+                UnknownStrength.ID,
+                UnknownDexterity.ID,
+
+                MixItUp.ID,
+                Transmogrify.ID,
+                GlitteringGambit.ID,
+
+                RareBoosterPack.ID,
+                SleevedAce.ID,
+                CleanMud.ID,
+
+                SuperSneckoEye.ID,
+                SneckoTalon.ID,
+                BlankCard.ID,
+
+                TheSnecko.Enums.THE_SNECKO
         );
-        UnlockTracker.addCard(Cheat.ID);
-        UnlockTracker.addCard(PureSnecko.ID);
-        UnlockTracker.addCard(Rotation.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                UnknownColorless.ID, UnknownStrength.ID, UnknownDexterity.ID
-        );
-        UnlockTracker.addCard(UnknownColorless.ID);
-        UnlockTracker.addCard(UnknownStrength.ID);
-        UnlockTracker.addCard(UnknownDexterity.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                MixItUp.ID, Transmogrify.ID, GlitteringGambit.ID
-        );
-        UnlockTracker.addCard(MixItUp.ID);
-        UnlockTracker.addCard(Transmogrify.ID);
-        UnlockTracker.addCard(GlitteringGambit.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                RareBoosterPack.ID, SleevedAce.ID, CleanMud.ID
-        );
-        UnlockTracker.addRelic(RareBoosterPack.ID);
-        UnlockTracker.addRelic(SleevedAce.ID);
-        UnlockTracker.addRelic(CleanMud.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                SuperSneckoEye.ID, SneckoTalon.ID, BlankCard.ID
-        );
-        UnlockTracker.addRelic(SuperSneckoEye.ID);
-        UnlockTracker.addRelic(SneckoTalon.ID);
-        UnlockTracker.addRelic(BlankCard.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, TheSnecko.Enums.THE_SNECKO, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, TheSnecko.Enums.THE_SNECKO, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, TheSnecko.Enums.THE_SNECKO, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, TheSnecko.Enums.THE_SNECKO, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, TheSnecko.Enums.THE_SNECKO, 4);
 
     }
 

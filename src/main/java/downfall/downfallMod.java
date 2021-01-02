@@ -8,6 +8,7 @@ Event Override patches, and other things that only appear during Evil Runs.
 
  */
 
+import automaton.AutomatonChar;
 import automaton.AutomatonMod;
 import automaton.EasyInfoDisplayPanel;
 import automaton.SuperTip;
@@ -24,6 +25,7 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.Pair;
+import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
@@ -31,7 +33,10 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.ChampMod;
+import champ.cards.BerserkerStyle;
+import champ.cards.DefensiveStyle;
 import champ.cards.ModFinisher;
+import champ.cards.ViciousMockery;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
@@ -45,6 +50,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.brashmonkey.spriter.Player;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -57,6 +63,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Pride;
 import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -75,6 +82,7 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.custom.CustomMod;
+import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
@@ -103,9 +111,13 @@ import expansioncontent.expansionContentMod;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
+import guardian.patches.GuardianEnum;
 import guardian.relics.PickAxe;
 import slimebound.SlimeboundMod;
+import slimebound.characters.SlimeboundCharacter;
+import slimebound.patches.SlimeboundEnum;
 import sneckomod.SneckoMod;
+import sneckomod.TheSnecko;
 import sneckomod.cards.unknowns.*;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
@@ -114,10 +126,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
@@ -1369,6 +1378,69 @@ public class downfallMod implements
         }
     }
 
+
+    private static void registerUnlockCardBundle(AbstractPlayer.PlayerClass player, int index, String card1, String card2, String card3) {
+        CustomUnlockBundle currentBundle;
+
+        currentBundle = new CustomUnlockBundle(
+                card1, card2, card3
+        );
+
+        UnlockTracker.addCard(card1);
+        UnlockTracker.addCard(card2);
+        UnlockTracker.addCard(card3);
+
+        BaseMod.addUnlockBundle(currentBundle, player, index);
+
+
+        if (UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+
+            UnlockTracker.unlockCard(card1);
+            UnlockTracker.unlockCard(card2);
+            UnlockTracker.unlockCard(card3);
+        }
+    }
+
+
+    private static void registerUnlockRelicBundle(AbstractPlayer.PlayerClass player, int index, String relic1, String relic2, String relic3) {
+        CustomUnlockBundle currentBundle;
+
+        currentBundle = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
+                relic1, relic2, relic3
+        );
+
+        UnlockTracker.addRelic(relic1);
+        UnlockTracker.addRelic(relic2);
+        UnlockTracker.addRelic(relic3);
+
+        BaseMod.addUnlockBundle(currentBundle, player, index);
+
+
+        if (UnlockTracker.unlockProgress.getInteger(player.toString() + "UnlockLevel") > index + 1) {
+
+            UnlockTracker.lockedRelics.remove(relic1);
+            UnlockTracker.lockedRelics.remove(relic2);
+            UnlockTracker.lockedRelics.remove(relic3);
+        }
+    }
+
+
+    public static void registerUnlockSuite(
+            String bundle1card1, String bundle1card2, String bundle1card3,
+            String bundle2card1, String bundle2card2, String bundle2card3,
+            String bundle3card1, String bundle3card2, String bundle3card3,
+            String bundle4relic1, String bundle4relic2, String bundle4relic3,
+            String bundle5relic1, String bundle5relic2, String bundle5relic3,
+            AbstractPlayer.PlayerClass player) {
+
+        registerUnlockCardBundle(player, 0, bundle1card1, bundle1card2, bundle1card3);
+        registerUnlockCardBundle(player, 1, bundle2card1, bundle2card2, bundle2card3);
+        registerUnlockCardBundle(player, 2, bundle3card1, bundle3card2, bundle3card3);
+        registerUnlockRelicBundle(player, 3, bundle4relic1, bundle4relic2, bundle4relic3);
+        registerUnlockRelicBundle(player, 4, bundle5relic1, bundle5relic2, bundle5relic3);
+
+
+    }
 
     @Override
     public void receiveRender(SpriteBatch sb) {
