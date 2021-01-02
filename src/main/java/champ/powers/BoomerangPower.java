@@ -17,8 +17,8 @@ public class BoomerangPower extends AbstractPower implements CloneablePowerInter
 
     public static final String POWER_ID = ChampMod.makeID("BoomerangPower");
 
-    private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/UltimateStance84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/UltimateStance32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/ReturningCrown84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(ChampMod.getModID() + "Resources/images/powers/ReturningCrown32.png");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
