@@ -37,11 +37,6 @@ public class EnchantCrown extends AbstractChampCard {
         return super.canUse(p, m);
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = (gcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
     public void upp() {
         //  tags.add(ChampMod.TECHNIQUE);
         upgradeBaseCost(0);

@@ -39,11 +39,6 @@ public class SwordSigil extends AbstractChampCard {
     }
 
 
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
     public void upp() {
         // rawDescription = UPGRADE_DESCRIPTION;
         // initializeDescription();
