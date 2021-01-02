@@ -287,7 +287,10 @@
   },
   "champ:RecklessLeap": {
     "NAME": "Reckless Leap",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL Exhaust."
+    "DESCRIPTION": "Can only be played in champ:Berserker. NL Deal !D! damage. NL champ:Fatigue !M!. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "I don't have enough bloodlust."
+    ]
   },
   "champ:IgnorePain": {
     "NAME": "Ignore Pain",
