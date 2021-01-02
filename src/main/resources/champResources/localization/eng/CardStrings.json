@@ -19,11 +19,10 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, add a random champ:Combo into your hand of that Stance.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
-      "Enter champ:Defensive.",
-      "Enter champ:Gladiator."
+      "Enter champ:Defensive."
     ]
   },
   "champ:GladiatorsShout": {
@@ -309,7 +308,7 @@
   },
   "champ:SteelEdge": {
     "NAME": "Steel Edge",
-    "DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage X times. NL *Defensive: Gain !B! Block X times."
+    "DESCRIPTION": "champ:Combo NL *Berserker: Deal !D! damage X times. NL *Defensive: Gain !B! Block X times.",
     "EXTENDED_DESCRIPTION": [
       "Berserker: Deal !D! damage. NL ",
       "Defensive: Gain !B! Block. NL ",

@@ -1,8 +1,14 @@
 package champ.cards;
 
 import champ.ChampMod;
+import champ.stances.BerserkerStance;
+import champ.stances.DefensiveStance;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
@@ -29,20 +35,38 @@ public class StanceDance extends AbstractChampCard implements OctopusCard {
         ArrayList<OctoChoiceCard> cardList = new ArrayList<>();
         cardList.add(new OctoChoiceCard("octo:OctoBerserk", this.name, ChampMod.makeCardPath("OctoStanceBerserker.png"), this.EXTENDED_DESCRIPTION[0]));
         cardList.add(new OctoChoiceCard("octo:OctoDefense", this.name, ChampMod.makeCardPath("OctoStanceDefensive.png"), this.EXTENDED_DESCRIPTION[1]));
-        cardList.add(new OctoChoiceCard("octo:OctoGladiat", this.name, ChampMod.makeCardPath("OctoStanceGladiator.png"), this.EXTENDED_DESCRIPTION[2]));
         return cardList;
     }
 
     public void doChoiceStuff(AbstractMonster m, OctoChoiceCard card) {
         switch (card.cardID) {
             case "octo:OctoBerserk":
-                berserkOpen();
+                if (AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+                    ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
+                    for (AbstractCard t : CardLibrary.getAllCards()) {
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBOBERSERKER))
+                            rCardList.add(t);
+                    }
+                    AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
+                    UnlockTracker.markCardAsSeen(r.cardID);
+                    makeInHand(r);
+                } else {
+                    berserkOpen();
+                }
                 break;
             case "octo:OctoDefense":
-                defenseOpen();
-                break;
-            case "octo:OctoGladiat":
-                gladOpen();
+                if (AbstractDungeon.player.stance.ID.equals(DefensiveStance.STANCE_ID)) {
+                    ArrayList<AbstractCard> rCardList = new ArrayList<AbstractCard>();
+                    for (AbstractCard t : CardLibrary.getAllCards()) {
+                        if (!UnlockTracker.isCardLocked(t.cardID) && t.hasTag(ChampMod.COMBODEFENSIVE))
+                            rCardList.add(t);
+                    }
+                    AbstractCard r = rCardList.get(AbstractDungeon.cardRandomRng.random(rCardList.size() - 1));
+                    UnlockTracker.markCardAsSeen(r.cardID);
+                    makeInHand(r);
+                } else {
+                    defenseOpen();
+                }
                 break;
         }
     }
