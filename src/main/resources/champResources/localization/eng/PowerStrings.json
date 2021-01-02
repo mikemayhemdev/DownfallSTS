@@ -190,5 +190,18 @@
       "Ultimate Stance will last #b",
       " more turns."
     ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "En Garde",
+    "DESCRIPTIONS": [
+      "If your Block is broken this turn, gain #b",
+      " Block next turn."
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "Parrying",
+    "DESCRIPTIONS": [
+      "If your Counter is used this turn, add Riposte to your hand."
+    ]
   }
 }
