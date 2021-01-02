@@ -60,9 +60,9 @@
   "downfall:WatcherCripplePower": {
     "NAME": "Fall from Grace",
     "DESCRIPTIONS": [
-      "Deal ",
-      " more unblocked Attack damage to apply -4 Strength to Watcher when she next enters Divinity or plays Ragnarok.",
-      "Watcher will lose 4 Strength to Watcher when she next enters Divinity or plays Ragnarok."
+      "When Watcher loses ",
+      " more HP, apply -4 Strength to her when she next enters Divinity or plays Ragnarok.",
+      "Watcher will lose 4 Strength when she next enters Divinity or plays Ragnarok."
     ]
   },
   "downfall:ShivTimeEaterPower": {
@@ -105,8 +105,8 @@
   "downfall:NeowBlasphemersDemise": {
     "NAME": "Blasphemers Demise",
     "DESCRIPTIONS": [
-      "Deal ",
-      " more unblocked Attack damage to prevent Neow from gaining 10 Strength the next turn she uses a Buff.",
+      "When Neow loses ",
+      " more HP, she will be stopped from gaining 10 Strength the next turn she uses a Buff.",
       "Neow is crippled and will not gain additional Strength during her next Buff turn."
     ]
   },

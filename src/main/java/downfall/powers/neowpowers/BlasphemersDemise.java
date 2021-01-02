@@ -51,14 +51,13 @@ public class BlasphemersDemise extends AbstractPower {
         }
     }
 
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL && info.type != DamageInfo.DamageType.HP_LOSS) {
-            this.flash();
-            stackPower( damageAmount * -1);
-            this.updateDescription();
-        }
 
-        return damageAmount;
+    @Override
+    public int onLoseHp(int damageAmount) {
+        this.flash();
+        stackPower( damageAmount * -1);
+        this.updateDescription();
+        return super.onLoseHp(damageAmount);
     }
 
     @Override
