@@ -373,7 +373,7 @@
   "champ:Endure": {
     "NAME": "Endure",
     "DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength instead of Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength"
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This card's Block is increased by Strength."
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
