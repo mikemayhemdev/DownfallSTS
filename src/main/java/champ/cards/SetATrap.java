@@ -29,7 +29,6 @@ public class SetATrap extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        defenseOpen();
         if (upgraded) atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
         if (dcombo()) {
             atb(new AbstractGameAction() {
@@ -45,6 +44,7 @@ public class SetATrap extends AbstractChampCard {
                 }
             });
         }
+        defenseOpen();
     }
 
 

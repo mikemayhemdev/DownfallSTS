@@ -122,7 +122,7 @@
     ]
   },
   "champ:GladiatorStylePower": {
-    "NAME": "Gladiator Style",
+    "NAME": "Good Clean Fight",
     "DESCRIPTIONS": [
       "If you start your turn in no #yStance, gain #b",
       " temporary #yStrength and #yDexterity."
