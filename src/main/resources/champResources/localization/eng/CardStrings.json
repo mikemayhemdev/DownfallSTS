@@ -354,13 +354,13 @@
   },
   "champ:DefensiveStyle": {
     "NAME": "Defensive Style",
-    "DESCRIPTION": "Enter champ:Defensive. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL If you start your turn in champ:Defensive, gain 5 Block and 5 champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Defensive. NL champ:Defensive *Techniques grant !M! more champ:Counter."
   },
   "champ:GladiatorStyle": {
-    "NAME": "Gladiator Style",
-    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 temporary Strength and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Enter champ:Gladiator. NL If you start your turn in champ:Gladiator, gain 3 temporary Strength and Dexterity."
+    "NAME": "Come Out Swinging",
+    "DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in no Stance, gain !M! temporary Strength and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Gladiator. NL If you start your turn in no Stance, gain !M! temporary Strength and Dexterity."
   },
   "champ:BerserkerStyle": {
     "NAME": "Berserker Style",
