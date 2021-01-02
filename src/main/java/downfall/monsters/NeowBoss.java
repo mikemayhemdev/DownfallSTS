@@ -8,6 +8,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
+import com.evacipated.cardcrawl.modthespire.lib.SpireOverride;
+import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -32,6 +34,7 @@ import downfall.powers.NeowInvulnerablePower;
 import downfall.powers.neowpowers.BlasphemersDemise;
 import downfall.powers.neowpowers.EnergyThief;
 import downfall.powers.neowpowers.FeedingFrenzy;
+import downfall.powers.neowpowers.SeeingDouble;
 import guardian.vfx.SmallLaserEffectColored;
 import slimebound.SlimeboundMod;
 
@@ -164,13 +167,6 @@ public class NeowBoss extends AbstractMonster {
                 AbstractCharBoss.boss = null;
                 //getMove(0);
             }
-        }
-    }
-
-    @Override
-    public void renderHealth(SpriteBatch sb) {
-        if (!this.halfDead) {
-            super.renderHealth(sb);
         }
     }
 
@@ -437,6 +433,40 @@ public class NeowBoss extends AbstractMonster {
     public void dispose() {
         super.dispose();
         neowboss = null;
+    }
+
+    public boolean foggy() {
+        return this.hasPower(SeeingDouble.POWER_ID);
+    }
+
+    @Override
+    public void renderHealth(SpriteBatch sb) {
+        if (!foggy() && !halfDead) {
+            super.renderHealth(sb);
+        }
+    }
+
+    @Override
+    public void renderPowerTips(SpriteBatch sb) {
+        if (!foggy()) {
+            super.renderPowerTips(sb);
+        }
+    }
+
+
+    @Override
+    public void renderTip(SpriteBatch sb) {
+        if (!foggy()) {
+            super.renderTip(sb);
+        }
+    }
+
+
+    @SpireOverride
+    protected void renderName(SpriteBatch sb) {
+        if (!foggy()) {
+            SpireSuper.call(sb);
+        }
     }
 }
 
