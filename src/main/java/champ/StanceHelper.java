@@ -75,7 +75,7 @@ public class StanceHelper {
         if (AbstractDungeon.player.stance instanceof BerserkerStance) {
             return ChampChar.characterStrings.TEXT[11];
         } else if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-            return ChampChar.characterStrings.TEXT[13] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[56];
+            return ChampChar.characterStrings.TEXT[12] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[56];
         } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
             return ChampChar.characterStrings.TEXT[20];
         } else if (AbstractDungeon.player instanceof ChampChar) {
