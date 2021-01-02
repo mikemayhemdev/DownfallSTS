@@ -37,7 +37,7 @@ public class NeowReturnAction extends AbstractGameAction {
     @Override
     public void update() {
 
-        NeowBoss.neowboss.alwaysHalfDead = false;
+        owner.currentHealth = owner.maxHealth;
         owner.halfDead = false;
        // AbstractDungeon.getCurrRoom().cannotLose = false;
         this.isDone = true;
