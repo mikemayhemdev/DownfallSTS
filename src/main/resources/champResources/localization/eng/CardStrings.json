@@ -378,6 +378,16 @@
   "champ:UltimateStance": {
     "NAME": "ULTIMATE Stance",
     "DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate this turn.",
-    "UPGRADE_DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate for !M! turns."
+    "UPGRADE_DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate for !M! turns.",
+    "EXTENDED_DESCRIPTION": [
+      "I am not in a Stance."
+    ]
+  },
+  "champ:FancyFootwork": {
+    "NAME": "Fancy Footwork",
+    "DESCRIPTION": "Can only be played in a Stance. NL Enter the Stance you aren't in. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "I am not in a Stance."
+    ]
   }
 }
