@@ -38,7 +38,7 @@
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b",
-      " #yCounter for each card in hand."
+      " #yCounter."
     ]
   },
   "champ:EntangleNextTurnPower": {
