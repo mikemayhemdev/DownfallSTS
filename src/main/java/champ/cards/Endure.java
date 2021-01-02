@@ -15,11 +15,10 @@ public class Endure extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     private static final int MAGIC = 7;
-    private static final int UPG_MAGIC = 4;
 
     public Endure() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = MAGIC;
+        baseBlock = block = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
