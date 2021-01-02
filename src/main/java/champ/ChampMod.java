@@ -298,14 +298,14 @@ public class ChampMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        /*
+
         unlocks0 = new CustomUnlockBundle(
-                Aggression.ID, Balance.ID, Control.ID
+                BerserkerStyle.ID, ViciousMockery.ID, DefensiveStyle.ID
         );
-        UnlockTracker.addCard(Aggression.ID);
-        UnlockTracker.addCard(Balance.ID);
-        UnlockTracker.addCard(Control.ID);
-        */ //TODO: New unlock 0
+        UnlockTracker.addCard(BerserkerStyle.ID);
+        UnlockTracker.addCard(ViciousMockery.ID);
+        UnlockTracker.addCard(DefensiveStyle.ID);
+
 
         unlocks1 = new CustomUnlockBundle(
                 RageSigil.ID, ShieldSigil.ID, SwordSigil.ID

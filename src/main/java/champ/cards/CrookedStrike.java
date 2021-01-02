@@ -24,7 +24,6 @@ public class CrookedStrike extends AbstractChampCard {
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
         tags.add(ChampMod.FINISHER);
-        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -44,8 +43,6 @@ public class CrookedStrike extends AbstractChampCard {
     }
 
     public void upp() {
-        this.exhaust = false;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeDamage(4);
     }
 }
