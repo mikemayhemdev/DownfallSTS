@@ -333,9 +333,9 @@
     "NAME": "Perfected Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
   },
-  "champ:PerfectForm": {
-    "NAME": "Perfect Form",
-    "DESCRIPTION": "For !M! turns, enter champ:Ultimate Stance."
+  "champ:GladiatorForm": {
+    "NAME": "Gladiator Form",
+    "DESCRIPTION": "Whenever you champ:Technique, draw 1 additional card next turn. NL Whenever you champ:Finisher, gain [E] next turn."
   },
   "champ:Duel": {
     "NAME": "Duel",

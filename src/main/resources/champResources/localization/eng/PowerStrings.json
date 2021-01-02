@@ -166,6 +166,15 @@
       " Strength."
     ]
   },
+  "champ:GladiatorFormPower": {
+    "NAME": "Gladiator Form",
+    "DESCRIPTIONS": [
+      "Whenever you #yTechnique, draw #b",
+      " card and gain [E].",
+      " cards and gain #b",
+      " [E]."
+    ]
+  },
   "champ:NoBlockNextTurnPower": {
     "NAME": "Shield Thrown",
     "DESCRIPTIONS": [

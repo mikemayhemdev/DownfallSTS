@@ -10,6 +10,7 @@ import champ.stances.AbstractChampStance;
 import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
+import champ.util.OnFinisherSubscriber;
 import champ.util.OnOpenerSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -287,6 +288,11 @@ public abstract class AbstractChampCard extends CustomCard {
             }
             boolean endTurn = true;
             ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
+            for (AbstractPower p : AbstractDungeon.player.powers) {
+                if (p instanceof OnFinisherSubscriber) {
+                    ((OnFinisherSubscriber) p).onFinisher();
+                }
+            }
             if (AbstractDungeon.player.stance instanceof UltimateStance) {
                 endTurn = false;
             }
