@@ -2,22 +2,13 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
-import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
-
-import static champ.ChampMod.fatigue;
 
 public class BerserkerStylePower extends AbstractPower implements CloneablePowerInterface {
 
@@ -44,12 +35,15 @@ public class BerserkerStylePower extends AbstractPower implements CloneablePower
     }
 
     @Override
-    public void atStartOfTurn() {
-        if (AbstractChampCard.bcombo()) {
-            flash();
-            fatigue(amount);
-            addToBot(new GainEnergyAction(1));
-        }
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        ChampMod.updateTechniquesInCombat();
+    }
+
+    @Override
+    public void onInitialApplication() {
+        super.onInitialApplication();
+        ChampMod.updateTechniquesInCombat();
     }
 
     @Override

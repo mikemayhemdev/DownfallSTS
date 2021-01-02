@@ -41,7 +41,7 @@ public class GladiatorStylePower extends AbstractPower implements CloneablePower
 
     @Override
     public void atStartOfTurn() {
-        if (AbstractDungeon.player.stance.ID == NeutralStance.STANCE_ID) {
+        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
             flash();
             addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
             addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));

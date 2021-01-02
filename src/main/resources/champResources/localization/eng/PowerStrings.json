@@ -22,8 +22,8 @@
   "champ:FocusedBerPower": {
     "NAME": "Berserker Boost!",
     "DESCRIPTIONS": [
-      "Until you exit #yBerserker, #yTechniques #yFatigue #b",
-      " more."
+      "At the end of your turn, if you have at least #b15 #yFatigue, deal #b",
+      " damage to ALL enemies."
     ]
   },
   "champ:EnchantedShieldPower": {
@@ -132,8 +132,8 @@
   "champ:BerserkerStylePower": {
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yBerserker, #yFatigue #b",
-      " and gain [E] ."
+      "#yBerserker #yTechniques grant #b",
+      " more #yFatigue."
     ]
   },
   "champ:FalseCounterPower": {
