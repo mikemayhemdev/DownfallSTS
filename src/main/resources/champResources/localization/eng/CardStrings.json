@@ -374,5 +374,10 @@
   "champ:ModFinisherStrike": {
     "NAME": "Finishing Strike",
     "DESCRIPTION": "Retain. NL Deal !D! damage."
+  },
+  "champ:UltimateStance": {
+    "NAME": "ULTIMATE Stance",
+    "DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate this turn.",
+    "UPGRADE_DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate for !M! turns."
   }
 }
