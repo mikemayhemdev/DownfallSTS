@@ -1,34 +1,32 @@
-package downfall.powers;
+package downfall.powers.neowpowers;
 
-import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import downfall.actions.NeowRezAction;
+import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 import downfall.downfallMod;
-import downfall.monsters.NeowBoss;
-import slimebound.SlimeboundMod;
 import theHexaghost.util.TextureLoader;
 
-public class NeowInvulnerablePower extends AbstractPower {
-    public static final String POWER_ID = downfallMod.makeID("NeowInvulnerable");
+public class Bastion extends AbstractPower {
+    public static final String POWER_ID = downfallMod.makeID("NeowBastion");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String DESCRIPTIONS[] = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowRez84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowRez32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowIronclad384.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowIronclad332.png"));
 
     private boolean firstTurn;
 
-    public NeowInvulnerablePower(final AbstractCreature owner) {
+    public Bastion(final AbstractCreature owner, final int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
+        this.amount = amount;
         this.type = PowerType.BUFF;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -40,19 +38,13 @@ public class NeowInvulnerablePower extends AbstractPower {
 
         firstTurn = true;
         this.canGoNegative = false;
+        addToBot(new ApplyPowerAction(this.owner, this.owner, new BarricadePower(this.owner)));
     }
 
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
-        this.owner.heal(2, true);
-    }
 
-    @Override
-    public void atStartOfTurn() {
-        super.atStartOfTurn();
-
-
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+        flash();
+        addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(this.owner, this.owner, this.amount));
     }
 
     @Override

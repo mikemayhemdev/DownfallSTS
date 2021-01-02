@@ -32,12 +32,12 @@ public class NeowReturnAction extends AbstractGameAction {
 
     public NeowReturnAction(NeowBoss owner) {
         this.owner = owner;
-        this.duration = 0.5F;
     }
 
     @Override
     public void update() {
 
+        NeowBoss.neowboss.alwaysHalfDead = false;
         owner.halfDead = false;
        // AbstractDungeon.getCurrRoom().cannotLose = false;
         this.isDone = true;

@@ -19,7 +19,7 @@
   "bronze:AncientFactory": {
     "NAME": "Ancient Factory",
     "DESCRIPTIONS": [
-      "As you continue your tireless ascent, you have come across the ~original~ factory. You remember being here for your own assembly, when you met the ~Maker~ for the first time. NL Each one of the ancient constructs they created is as #yperfect as yourself. There are parts from the old prototypes that could be of use to you, but it will require activating them.",
+      "As you continue your tireless descent, you have come across the ~original~ factory. You remember being here for your own assembly, when you met the ~Maker~ for the first time. NL Each one of the ancient constructs they created is as #yperfect as yourself. There are parts from the old prototypes that could be of use to you, but it will require activating them.",
       "Even for unfinished prototypes, they are still formidable - no need for unnecessary risks."
     ],
     "OPTIONS": [
