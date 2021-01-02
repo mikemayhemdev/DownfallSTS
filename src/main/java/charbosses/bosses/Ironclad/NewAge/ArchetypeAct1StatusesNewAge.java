@@ -98,7 +98,7 @@ public class ArchetypeAct1StatusesNewAge extends ArchetypeBaseIronclad {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnPowerThrough());
+                    addToList(cardsList, new EnPowerThrough(true));
                     addToList(cardsList, new EnTrueGrit(), true);
                     //IC will exhaust the Doubt the first time through the loop instead of a wound
                     //So the wound will appear the second time through the loop onward
