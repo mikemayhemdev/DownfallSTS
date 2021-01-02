@@ -41,7 +41,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage, twice if the enemy has Vulnerable. NL *Berserker champ:Combo: Apply !M! Vulnerable."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage, twice if enemy is Vulnerable. NL *Berserker champ:Combo: Apply !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
