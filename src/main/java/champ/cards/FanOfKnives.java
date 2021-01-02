@@ -26,7 +26,7 @@ public class FanOfKnives extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,7 +34,7 @@ public class FanOfKnives extends AbstractChampCard {
         atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
-        if (gcombo()) {
+        if (bcombo()) {
             atb(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
             allDmg(AbstractGameAction.AttackEffect.NONE);
             if (upgraded) {

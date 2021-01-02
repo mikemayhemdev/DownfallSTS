@@ -110,8 +110,8 @@
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage twice.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Gladiator champ:Combo: Deals damage three times."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage twice.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage to ALL enemies. NL *Berserker champ:Combo: Deals damage three times."
   },
   "champ:Devastate": {
     "NAME": "Devastate",
