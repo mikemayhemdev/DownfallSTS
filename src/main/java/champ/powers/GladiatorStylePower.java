@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
+import com.megacrit.cardcrawl.stances.NeutralStance;
 import theHexaghost.HexaMod;
 import theHexaghost.util.TextureLoader;
 
@@ -40,7 +41,7 @@ public class GladiatorStylePower extends AbstractPower implements CloneablePower
 
     @Override
     public void atStartOfTurn() {
-        if (AbstractChampCard.gcombo()) {
+        if (AbstractDungeon.player.stance.ID == NeutralStance.STANCE_ID) {
             flash();
             addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
             addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, amount), amount));

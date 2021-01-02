@@ -200,8 +200,8 @@
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for each card in hand."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Enemy loses 1 Strength this turn for every 5 champ:Fatigue."
   },
   "champ:RapidStrikes": {
     "NAME": "Rapid Strikes",
@@ -219,7 +219,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Flurry of Strikes",
-    "DESCRIPTION": "Deal !D! damage for each champ:Technique in hand. NL *Gladiator champ:Combo: Hits !M! more times.",
+    "DESCRIPTION": "Deal !D! damage for each Strike in hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"

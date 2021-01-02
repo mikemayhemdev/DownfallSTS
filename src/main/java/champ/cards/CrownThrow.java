@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import champ.powers.DrawLessNextTurnPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -31,7 +30,7 @@ public class CrownThrow extends AbstractChampCard {
         atb(new DrawCardAction(magicNumber));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (!gcombo()) applyToSelf(new DrawLessNextTurnPower(3));
-       // finisher();
+        // finisher();
     }
 
     @Override

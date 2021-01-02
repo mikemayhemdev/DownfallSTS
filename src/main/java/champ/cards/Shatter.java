@@ -17,13 +17,13 @@ public class Shatter extends AbstractChampCard {
     public Shatter() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
-      //  tags.add(ChampMod.TECHNIQUE);
+        //  tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // techique();
+        // techique();
         if (bcombo()) {
             atb(new RemoveAllBlockAction(m, p));
             if (upgraded) atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));

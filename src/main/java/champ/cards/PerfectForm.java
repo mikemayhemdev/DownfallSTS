@@ -2,12 +2,9 @@ package champ.cards;
 
 import basemod.helpers.BaseModCardTags;
 import champ.powers.UltimateFormPower;
-import champ.stances.UltimateStance;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 
 public class PerfectForm extends AbstractChampCard {

@@ -4,7 +4,6 @@ import champ.ChampMod;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,7 +16,7 @@ public class Riposte extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     private static final int MAGIC = 6;
-   // private static final int UPG_MAGIC = 3;
+    // private static final int UPG_MAGIC = 3;
 
     public Riposte() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);

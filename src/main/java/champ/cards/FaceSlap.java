@@ -28,7 +28,6 @@ public class FaceSlap extends AbstractChampCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        gladOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         if (bcombo()) applyToEnemy(m, autoVuln(m, magicNumber));
     }
