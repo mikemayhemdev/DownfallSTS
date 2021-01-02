@@ -54,7 +54,7 @@
   "downfall:NeowBuff": {
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
-      "Gains Strength and Dexterity at the end of the round."
+      "Gains 1 Strength and Dexterity at the end of the round."
     ]
   },
   "downfall:WatcherCripplePower": {
