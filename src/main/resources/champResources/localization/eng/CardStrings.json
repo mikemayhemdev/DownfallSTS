@@ -187,8 +187,8 @@
   },
   "champ:Haymaker": {
     "NAME": "Haymaker",
-    "DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: Apply 2 Weak. NL *Gladiator champ:Combo: Apply 2 Vulnerable."
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
