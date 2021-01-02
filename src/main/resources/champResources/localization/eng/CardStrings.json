@@ -45,7 +45,7 @@
   },
   "champ:FlashCut": {
     "NAME": "Flash Strike",
-    "DESCRIPTION": "Enter champ:Gladiator. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block ."
+    "DESCRIPTION": "Enter champ:Defensive. NL Deal !D! damage. NL *Defensive champ:Combo: Gain !M! champ:Counter and !B! Block ."
   },
   "champ:Balance": {
     "NAME": "Balance",
