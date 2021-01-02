@@ -33,7 +33,7 @@
       "[crown_icon] : All Bonuses. NL ",
       " NL [fist_icon]   champ:Finisher",
       " NL [fist_icon] : [E] & [card_icon] next turn.",
-      " NL [fist_icon] : Gain 12 Block.",
+      " NL [fist_icon] : Gain ",
       " NL [fist_icon] : Clear champ:Fatigue.",
       " NL [fist_icon] : All Bonuses.",
       "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, heal HP equal to your Fatigue.",
@@ -53,4 +53,5 @@
       " champ:Counter. NL ",
       ", Fatigue ",
       ".",
-      " #yBlock. End your turn."
+      " #yBlock. End your turn.",
+      " Block."
