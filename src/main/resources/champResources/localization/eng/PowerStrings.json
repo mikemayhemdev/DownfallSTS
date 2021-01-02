@@ -13,14 +13,14 @@
     ]
   },
   "champ:FocusedDefPower": {
-    "NAME": "Defensive Boost!",
+    "NAME": "Focused: Defensive",
     "DESCRIPTIONS": [
-      "Until you exit #yDefensive, #yTechniques grant #b",
-      " additional #yCounter."
+      "At the end of your turn, if you have at least #b20 #yCounter, gain #b",
+      " #yBlock."
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "Berserker Boost!",
+    "NAME": "Focused: Berserker",
     "DESCRIPTIONS": [
       "At the end of your turn, if you have at least #b15 #yFatigue, deal #b",
       " damage to ALL enemies."
@@ -117,9 +117,8 @@
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yDefensive, gain #b",
-      " #yBlock and #b",
-      " #yCounter."
+      "#yDefensive #yTechniques grant #b",
+      " additional #yCounter."
     ]
   },
   "champ:GladiatorStylePower": {
