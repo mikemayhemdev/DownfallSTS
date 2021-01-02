@@ -195,7 +195,7 @@
   },
   "champ:PreciseThrust": {
     "NAME": "Precise Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL *Gladiator champ:Combo: Increase this card's damage and Block by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL *Defensive champ:Combo: Gain Block equal to unblocked damage dealt."
   },
   "champ:CrookedStrike": {
     "NAME": "Crooked Strike",

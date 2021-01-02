@@ -2,7 +2,9 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.actions.ModifyDamageAndBlockAction;
+import champ.actions.PreciseThrustAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,19 +25,21 @@ public class PreciseThrust extends AbstractChampCard {
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(ChampMod.COMBO);
-        tags.add(ChampMod.COMBOGLADIATOR);
+        tags.add(ChampMod.COMBODEFENSIVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        blck();
-        if (gcombo())
-            atb(new ModifyDamageAndBlockAction(uuid, magicNumber));
+        if (dcombo()) {
+            atb(new PreciseThrustAction(m, makeInfo()));
+        } else {
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        }
+
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
