@@ -338,7 +338,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "Gladiator Form",
-    "DESCRIPTION": "Whenever you champ:Technique, draw 1 additional card next turn. NL Whenever you champ:Finisher, gain [E] next turn."
+    "DESCRIPTION": "Whenever you champ:Technique, draw 1 card. NL Whenever you champ:Finisher, gain [E] next turn."
   },
   "champ:Duel": {
     "NAME": "Duel",
