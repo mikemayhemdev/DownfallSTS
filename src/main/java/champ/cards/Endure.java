@@ -23,15 +23,26 @@ public class Endure extends AbstractChampCard {
         blck();
     }
 
-    @Override
-    public void applyPowers() {
+    public void applyPowersToBlock()
+    {
         int realBaseBlock = this.baseBlock;
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             baseBlock += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
-        super.applyPowers();
+        super.applyPowersToBlock();
         baseBlock = realBaseBlock;
         isBlockModified = block != baseBlock;
+    }
+
+    public void calculateCardDamage(AbstractMonster mo)
+    {
+        int olddamage = this.baseDamage;
+        if (AbstractDungeon.player.hasPower("Dexterity")) {
+            this.baseDamage += AbstractDungeon.player.getPower("Dexterity").amount * this.magicNumber;
+        }
+        super.calculateCardDamage(mo);
+        this.baseDamage = olddamage;
+        this.isDamageModified = (this.baseDamage != this.damage);
     }
 
     public void upp() {
