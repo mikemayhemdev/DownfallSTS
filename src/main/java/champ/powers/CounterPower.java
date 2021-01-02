@@ -2,6 +2,7 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
+import champ.cards.Riposte;
 import champ.cards.SetATrap;
 import champ.relics.PowerArmor;
 import com.badlogic.gdx.graphics.Texture;
@@ -48,21 +49,22 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
                 addToTop(new ReducePowerAction(owner, owner, this, amount / 2));
                 if (AbstractDungeon.player.hasPower(ParryPower.POWER_ID)){
                     for (int i = 0; i < AbstractDungeon.player.getPower(ParryPower.POWER_ID).amount; i++) {
-                        AbstractCard c = new SetATrap();
+                        AbstractCard c = new Riposte();
                         c.baseDamage = amount / 2;
                         addToBot(new MakeTempCardInHandAction(c));
                     }
                     AbstractDungeon.player.getPower(ParryPower.POWER_ID).onSpecificTrigger();
                 }
-            } else
+            } else {
                 addToTop(new RemoveSpecificPowerAction(owner, owner, this));
-            if (AbstractDungeon.player.hasPower(ParryPower.POWER_ID)){
-                for (int i = 0; i < AbstractDungeon.player.getPower(ParryPower.POWER_ID).amount; i++) {
-                    AbstractCard c = new SetATrap();
-                    c.baseDamage = amount / 2;
-                    addToBot(new MakeTempCardInHandAction(c));
+                if (AbstractDungeon.player.hasPower(ParryPower.POWER_ID)) {
+                    for (int i = 0; i < AbstractDungeon.player.getPower(ParryPower.POWER_ID).amount; i++) {
+                        AbstractCard c = new Riposte();
+                        c.baseDamage = amount;
+                        addToBot(new MakeTempCardInHandAction(c));
+                    }
+                    AbstractDungeon.player.getPower(ParryPower.POWER_ID).onSpecificTrigger();
                 }
-                AbstractDungeon.player.getPower(ParryPower.POWER_ID).onSpecificTrigger();
             }
             this.addToTop(new DamageAction(info.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
