@@ -19,8 +19,8 @@
   },
   "champ:StanceDance": {
     "NAME": "Stance Dance",
-    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, add a champ:Combo into your hand of that Stance.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Add a champ:Combo into your hand of that Stance.",
+    "DESCRIPTION": "Choose a Stance to Enter. NL If you were already in that Stance, add a champ:Combo of that Stance into your hand.",
+    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Add a champ:Combo of that Stance into your hand.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Berserker.",
       "Enter champ:Defensive."
@@ -49,8 +49,8 @@
   },
   "champ:Balance": {
     "NAME": "Balance",
-    "DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random champ:Combo card to your hand of the chosen Stance.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random Upgraded champ:Combo card to your hand of the chosen Stance.",
+    "DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random champ:Combo of that Stance into your hand.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive or champ:Gladiator. NL Add a random Upgraded random champ:Combo of that Stance into your hand.",
     "EXTENDED_DESCRIPTION": [
       "Enter champ:Defensive. NL Add a random *Defensive champ:Combo to your hand.",
       "Enter champ:Gladiator. NL Add a random *Gladiator champ:Combo to your hand.",
