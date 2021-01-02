@@ -20,11 +20,12 @@ public class PreemptiveStrike extends AbstractChampCard {
     public PreemptiveStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 0;
+        isMultiDamage = true;
         tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        allDmg(AbstractGameAction.AttackEffect.SLASH_VERTICAL);
         finisher();
     }
 
