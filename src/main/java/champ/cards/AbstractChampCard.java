@@ -342,16 +342,13 @@ public abstract class AbstractChampCard extends CustomCard {
                 this.rawDescription = prefixTech + DESCRIPTION;
             }
         }
-        if (this.
-
-                hasTag(FINISHER)) {
+        if (this.hasTag(FINISHER)) {
             prefixFin = ChampChar.characterStrings.TEXT[34];
             if (AbstractDungeon.player != null) {
                 if (AbstractDungeon.player.stance instanceof DefensiveStance) {
-                    prefixFin = ChampChar.characterStrings.TEXT[36];
+                    prefixFin = ChampChar.characterStrings.TEXT[36] + DefensiveStance.finisherAmount() + ChampChar.characterStrings.TEXT[57];
                 } else if (AbstractDungeon.player.stance instanceof BerserkerStance) {
                     prefixFin = ChampChar.characterStrings.TEXT[37];
-
                 } else if (AbstractDungeon.player.stance instanceof UltimateStance) {
                     prefixFin = ChampChar.characterStrings.TEXT[38];
                 }
