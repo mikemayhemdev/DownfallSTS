@@ -256,10 +256,11 @@
   },
   "champ:EnragedBash": {
     "NAME": "Enraged Bash",
-    "DESCRIPTION": "Deal !D! damage. NL champ:Fatigue !M!. NL *Berserker champ:Combo: Increase this card's damage and champ:Fatigue by !cool! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL *Berserker champ:Combo: This card hits an additional time this combat.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times. NL *Berserker champ:Combo: This card hits an additional time this combat."
   },
   "champ:VampiricStrike": {
-    "NAME": "Vampiric Strike",
+    "NAME": "Vampiric Lash",
     "DESCRIPTION": "Deal !D! damage !M! times. Heal HP equal to unblocked damage. NL Exhaust."
   },
   "champ:AdrenalArmor": {
@@ -280,7 +281,7 @@
   },
   "champ:FightOn": {
     "NAME": "Fight On",
-    "DESCRIPTION": "Fleeting. NL Can only be played if you have at least 30 champ:Fatigue. NL Gain 5 Max HP."
+    "DESCRIPTION": "Fleeting. NL Can only be played if you have at least !M! champ:Fatigue. NL Gain 5 Max HP."
   },
   "champ:Encircle": {
     "NAME": "Encircle",
@@ -331,8 +332,8 @@
   },
   "champ:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "The next champ:Finisher you play does not exit Stance or cause your turn to end.",
-    "UPGRADE_DESCRIPTION": "The next !M! champ:Finishers you play do not exit Stance or cause your turn to end."
+    "DESCRIPTION": "Draw 2 cards. NL The next *Finisher you play do not exit Stance or end your turn.",
+    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL The next !M! *Finishers you play do not exit Stance or end your turn."
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
@@ -402,7 +403,7 @@
     "DESCRIPTION": "Retain. NL Deal !D! damage."
   },
   "champ:UltimateStance": {
-    "NAME": "ULTIMATE Stance",
+    "NAME": "Ultimate Stance",
     "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for 1 turn.",
     "UPGRADE_DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate Stance for !M! turns.",
     "EXTENDED_DESCRIPTION": [

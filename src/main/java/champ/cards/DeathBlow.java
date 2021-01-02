@@ -22,12 +22,12 @@ public class DeathBlow extends AbstractChampCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         isMultiDamage = true;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
         myHpLossCost = MAGIC;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         fatigue(magicNumber);
     }

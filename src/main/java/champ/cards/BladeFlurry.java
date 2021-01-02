@@ -13,22 +13,21 @@ public class BladeFlurry extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, common
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 4;
 
     public BladeFlurry() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(CardTags.STRIKE);
     }
-
-    //TODO: Timing. This will mess up on itself. Count or don't? Hmmmm
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new AbstractGameAction() {
             @Override
             public void update() {
                 isDone = true;
-                int x = 0;
+                int x = 1;
+                if (upgraded) x++;
                 for (AbstractCard q : p.hand.group) if (q.hasTag(CardTags.STRIKE)) x++;
                 for (int i = 0; i < x; i++) att(new DamageAction(m, makeInfo(), AttackEffect.SLASH_DIAGONAL));
             }
@@ -53,7 +52,11 @@ public class BladeFlurry extends AbstractChampCard {
     }
 
     public void onMoveToDiscard() {
-        this.rawDescription = cardStrings.DESCRIPTION;
+        if (upgraded){
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+        } else {
+            this.rawDescription = cardStrings.DESCRIPTION;
+        }
         this.initializeDescription();
     }
 
