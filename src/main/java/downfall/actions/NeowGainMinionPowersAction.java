@@ -5,7 +5,9 @@ import charbosses.powers.general.PoisonProtectionPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.monsters.NeowBoss;
 import downfall.powers.neowpowers.*;
 
@@ -89,7 +91,15 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                             }
                             case "downfall:Defect": {
                                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new UnbiasedCognition(owner)));
-                                //TODO - Add a Strength on application for every Power card used during the combat
+                                int num = 0;
+                                for (AbstractCard c:AbstractDungeon.actionManager.cardsPlayedThisCombat){
+                                    if (c.type == AbstractCard.CardType.POWER){
+                                        num++;
+                                    }
+                                }
+                                if (num > 0){
+                                    addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, num), num));
+                                }
                                 break;
                             }
                             case "downfall:Watcher": {
