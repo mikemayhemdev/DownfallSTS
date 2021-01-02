@@ -60,7 +60,8 @@
       ". NL ",
       " champ:Counter. NL ",
       ", Fatigue ",
-      "."
+      ".",
+      " #yBlock. End your turn."
     ]
   }
 }
