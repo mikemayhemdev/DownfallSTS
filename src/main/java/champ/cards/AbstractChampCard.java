@@ -286,34 +286,12 @@ public abstract class AbstractChampCard extends CustomCard {
             if (leaveStance) {
                 exitStance();
             }
-            boolean endTurn = true;
             ((AbstractChampStance) AbstractDungeon.player.stance).fisher();
             for (AbstractPower p : AbstractDungeon.player.powers) {
                 if (p instanceof OnFinisherSubscriber) {
                     ((OnFinisherSubscriber) p).onFinisher();
                 }
             }
-            if (AbstractDungeon.player.stance instanceof UltimateStance) {
-                endTurn = false;
-            }
-            if (endTurn) {
-                if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
-                    SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                    if (s.card.uuid == this.uuid) {
-                        s.flash();
-                        endTurn = false;
-                    }
-                }
-            }
-            if (endTurn) {
-                if (AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                    AbstractDungeon.player.getPower(CalledShotPower.POWER_ID).onSpecificTrigger();
-                    endTurn = false;
-                }
-            }
-            if (endTurn) addToBot(new PressEndTurnButtonAction());
-
-
         }
     }
 
@@ -359,10 +337,7 @@ public abstract class AbstractChampCard extends CustomCard {
                 this.rawDescription = prefixTech + DESCRIPTION + prefixFin;
             }
         }
-        super.
-
-                initializeDescription();
-
+        super.initializeDescription();
     }
 
     @Override
