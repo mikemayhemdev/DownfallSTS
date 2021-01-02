@@ -9,12 +9,9 @@ public class Defend extends AbstractTimeCard {
 
     // intellij stuff skill, self, basic
 
-    private static final int DAMAGE = 5;
-    private static final int UPG_DAMAGE = 3;
-
     public Defend() {
         super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseDamage = DAMAGE;
+        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,6 +19,6 @@ public class Defend extends AbstractTimeCard {
     }
 
     public void upp() {
-        upgradeDamage(UPG_DAMAGE);
+        upgradeBlock(3);
     }
 }

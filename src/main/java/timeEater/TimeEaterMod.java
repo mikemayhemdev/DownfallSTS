@@ -6,7 +6,6 @@ import automaton.potions.BuildAFunctionPotion;
 import automaton.potions.BurnAndBuffPotion;
 import automaton.potions.CleanCodePotion;
 import automaton.potions.FreeFunctionsPotion;
-import automaton.util.CardFilter;
 import basemod.BaseMod;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
@@ -26,6 +25,7 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 import timeEater.relics.OldWatch;
+import timeEater.util.CardFilter;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -158,7 +158,7 @@ public class TimeEaterMod implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new AutomatonChar("The Automaton", AutomatonChar.Enums.THE_AUTOMATON), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addCharacter(new TimeEaterChar("The TimeEater", TimeEaterChar.Enums.THE_TIME_EATER), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TimeEaterChar.Enums.THE_TIME_EATER);
     }
 
     @Override

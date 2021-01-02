@@ -5,12 +5,8 @@
 
 package automaton.actions;
 
-import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
-import java.util.Iterator;
+
 import java.util.UUID;
 
 public class ChosenAction extends AbstractGameAction {
@@ -23,7 +19,6 @@ public class ChosenAction extends AbstractGameAction {
     }
 
     public void update() {
-
 
 
         this.isDone = true;

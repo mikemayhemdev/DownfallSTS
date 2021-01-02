@@ -24,7 +24,7 @@ import timeEater.relics.OldWatch;
 
 import java.util.ArrayList;
 
-import static automaton.AutomatonMod.*;
+import static timeEater.TimeEaterMod.*;
 
 public class TimeEaterChar extends CustomPlayer {
     public static final String ID = makeID("theTimeEater");
@@ -46,8 +46,8 @@ public class TimeEaterChar extends CustomPlayer {
 
     public float renderscale = 1.2F;
 
-    private String atlasURL = "timeResources/images/char/mainChar/time.atlas";
-    private String jsonURL = "timeResources/images/char/mainChar/time.json";
+    private String atlasURL = "timeResources/images/char/mainChar/bronze.atlas";
+    private String jsonURL = "timeResources/images/char/mainChar/bronze.json";
 
     public TimeEaterChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "timeResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);

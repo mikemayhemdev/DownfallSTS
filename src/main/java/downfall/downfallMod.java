@@ -109,6 +109,8 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.*;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import timeEater.TimeEaterChar;
+import timeEater.TimeEaterMod;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -247,6 +249,8 @@ public class downfallMod implements
                 return "champResources/" + path;
             case PACKAGE_AUTOMATON:
                 return "bronzeResources/" + path;
+            case PACKAGE_TIME_EATER:
+                return "timeResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -326,6 +330,9 @@ public class downfallMod implements
 
         //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_AUTOMATON" + stringType);
         BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AUTOMATON));
+
+        //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_TIME_EATER" + stringType);
+        BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_TIME_EATER));
     }
 
     private void loadLocalization(Settings.GameLanguage language) {
@@ -403,6 +410,7 @@ public class downfallMod implements
         loadModKeywords(GuardianMod.getModID(), otherPackagePaths.PACKAGE_GUARDIAN);
         loadModKeywords(ChampMod.getModID(), otherPackagePaths.PACKAGE_CHAMP);
         loadModKeywords(AutomatonMod.getModID(), otherPackagePaths.PACKAGE_AUTOMATON);
+        loadModKeywords(TimeEaterMod.getModID(), otherPackagePaths.PACKAGE_TIME_EATER);
 
     }
 
@@ -1324,7 +1332,8 @@ public class downfallMod implements
         PACKAGE_SNECKO,
         PACKAGE_EXPANSION,
         PACKAGE_CHAMP,
-        PACKAGE_AUTOMATON;
+        PACKAGE_AUTOMATON,
+        PACKAGE_TIME_EATER;
 
         otherPackagePaths() {
         }

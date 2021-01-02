@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import timeEater.ClockHelper;
 import timeEater.TimeEaterMod;
 
-public class OldWatch extends AbstractTimeRelic implements OnTickRelic {
+public class OldWatch extends AbstractTimeRelic implements OnTickRelic{
     public static final String ID = TimeEaterMod.makeID("OldWatch");
 
     public OldWatch() {
