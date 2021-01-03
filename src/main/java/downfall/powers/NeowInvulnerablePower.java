@@ -45,9 +45,20 @@ public class NeowInvulnerablePower extends AbstractPower {
     }
 
     @Override
+    public int onLoseHp(int damageAmount) {
+        if (NeowBoss.neowboss.offscreen){
+            return 0;
+        }
+
+        return super.onLoseHp(damageAmount);
+    }
+
+    @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         super.onAfterUseCard(card, action);
-        this.owner.heal(amount, true);
+        if (!NeowBoss.neowboss.offscreen) {
+            this.owner.heal(amount, true);
+        }
     }
 
 

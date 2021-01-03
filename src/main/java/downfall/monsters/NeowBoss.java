@@ -191,6 +191,15 @@ public class NeowBoss extends AbstractMonster {
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
+
+        int beatAmount = 2;
+        if (AbstractDungeon.ascensionLevel >= 19) {
+            beatAmount++;
+        }
+
+
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
+
         playSfx();
         for (int i = 0; i < 5; i++) {
             AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
@@ -336,18 +345,9 @@ public class NeowBoss extends AbstractMonster {
                     invincibleAmt -= 100;
                 }
 
-                int beatAmount = 2;
-                if (AbstractDungeon.ascensionLevel >= 19) {
-                    beatAmount++;
-                }
-
                 AbstractDungeon.actionManager.addToBottom(new NeowReturnAction(this));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new InvinciblePower(this, invincibleAmt), invincibleAmt));
 
-                for (int i = 0; i < 3; i++) {
-                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-                }
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
                 for (int i = 0; i < 5; i++) {
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                 }
