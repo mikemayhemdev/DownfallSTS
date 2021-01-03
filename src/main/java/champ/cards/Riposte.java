@@ -3,15 +3,12 @@ package champ.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.util.CardIgnore;
 
+@CardIgnore
 public class Riposte extends AbstractChampCard {
 
     public final static String ID = makeID("Riposte");
-
-    //stupid intellij stuff ATTACK, ENEMY, STARTER
-
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
 
     public Riposte() {
         super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ENEMY);
