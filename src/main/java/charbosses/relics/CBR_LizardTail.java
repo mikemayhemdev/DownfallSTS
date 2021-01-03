@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.relics.LizardTail;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 
 public class CBR_LizardTail extends AbstractCharbossRelic {
-    public static final String ID = "downfall:LizardTail";
+    public static final String ID = "LizardTail";
 
     private RelicStrings thisRelicStrings;
 
     public CBR_LizardTail() {
         super(new LizardTail());
-        thisRelicStrings = CardCrawlGame.languagePack.getRelicStrings(this.relicId);
+        thisRelicStrings = CardCrawlGame.languagePack.getRelicStrings("downfall:LizardTail");
 
     }
 

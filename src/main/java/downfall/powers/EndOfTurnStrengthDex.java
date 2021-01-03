@@ -41,7 +41,6 @@ public class EndOfTurnStrengthDex extends AbstractPower {
     @Override
     public void atEndOfRound() {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new DexterityPower(owner,amount), amount));
         super.atEndOfRound();
     }
 

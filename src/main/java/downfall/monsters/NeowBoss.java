@@ -244,7 +244,7 @@ public class NeowBoss extends AbstractMonster {
                 //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
 
                 if (!minion.hasPower(EndOfTurnStrengthDex.POWER_ID)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, minion, new EndOfTurnStrengthDex(minion, 1), 1));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, minion, new EndOfTurnStrengthDex(minion, 2), 2));
                 }
                 AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 20));
                 break;
