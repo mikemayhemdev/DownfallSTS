@@ -369,10 +369,10 @@
   },
   "Slimebound:SplitGreed": {
     "NAME": "Revive Greed",
-    "DESCRIPTION": "Retain. NL Revive the Greed Ooze. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Summon Greed Ooze. NL Exhaust."
   },
   "Slimebound:SplitScrap": {
     "NAME": "Revive Scrap",
-    "DESCRIPTION": "Retain. NL Revive the Scrap Ooze. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Summon Scrap Ooze. NL Exhaust."
   }
 }
