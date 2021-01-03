@@ -3,6 +3,7 @@ package downfall.powers;
 import charbosses.bosses.AbstractCharBoss;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -43,17 +44,11 @@ public class NeowInvulnerablePower extends AbstractPower {
     }
 
     @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        super.onPlayCard(card, m);
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        super.onAfterUseCard(card, action);
         this.owner.heal(2, true);
     }
 
-    @Override
-    public void atStartOfTurn() {
-        super.atStartOfTurn();
-
-
-    }
 
     @Override
     public void updateDescription() {
