@@ -87,31 +87,41 @@ public class MirrorImageSilent extends AbstractMonster {
 
     @Override
     public void renderHealth(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            super.renderHealth(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                super.renderHealth(sb);
+            }
         }
     }
 
     @Override
     public void renderPowerTips(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            super.renderPowerTips(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                super.renderPowerTips(sb);
+            }
         }
     }
 
     @Override
     public void renderTip(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            super.renderTip(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                super.renderTip(sb);
+            }
         }
     }
 
     @SpireOverride
     protected void renderName(SpriteBatch sb) {
-        if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
-            SpireSuper.call(sb);
+        if (AbstractCharBoss.boss != null) {
+            if (!((CharBossSilent) AbstractCharBoss.boss).foggy) {
+                SpireSuper.call(sb);
+            }
         }
     }
+
+
 
     @Override
     public void takeTurn() {

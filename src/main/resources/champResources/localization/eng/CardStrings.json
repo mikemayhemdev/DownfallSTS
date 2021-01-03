@@ -154,11 +154,11 @@
   },
   "champ:EnchantShield": {
     "NAME": "Enchant Shield",
-    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. "
+    "DESCRIPTION": "Choose a card in hand. Increase its Block by !M! for this combat. NL Exhaust."
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Requires a Stance. NL Gain !B! Block. NL Gain !M! champ:Counter.",
+    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Gain !B! Block. NL Gain !M! champ:Counter.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
@@ -433,7 +433,7 @@
   "champ:UltimateStance": {
     "NAME": "Ultimate Stance",
     "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for 1 turn.",
-    "UPGRADE_DESCRIPTION": "Can only be played in a Stance. NL Enter champ:Ultimate Stance for !M! turns.",
+    "UPGRADE_DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter champ:Ultimate Stance for !M! turns.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]
