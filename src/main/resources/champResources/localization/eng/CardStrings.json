@@ -410,8 +410,7 @@
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
-    "DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose all champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
+    "DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage)",
       "A poor time for that move."
