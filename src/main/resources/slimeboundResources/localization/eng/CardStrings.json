@@ -288,31 +288,13 @@
     "NAME": "SLIME CRUSH!!!",
     "DESCRIPTION": "Ethereal. NL Deal !D! damage. NL Exhaust."
   },
-  "Slimebound:DivideAndConquerConquer": {
-    "NAME": "Conquer",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. Deals !M! additional damage for each spawned Slime. NL Exhaust."
-  },
-  "Slimebound:DivideAndConquerDivide": {
-    "NAME": "Divide",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength, plus 1 for each Spawned Slime. NL Exhaust."
-  },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "Choose *Divide or *Conquer to add to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose *Divide+ or *Conquer+ to add to your hand. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Deal !D! damage to ALL enemies for each Slime *Absorbed. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "Choose *Serve or *Protect to add your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose *Serve+ or *Protect+ to add your hand. NL Exhaust."
-  },
-  "Slimebound:ServeAndProtectServe": {
-    "NAME": "Serve",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Dexterity, plus 1 for each Spawned Slime. NL Exhaust."
-  },
-  "Slimebound:ServeAndProtectProtect": {
-    "NAME": "Protect",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. Gains !M! additional Block for each spawned Slime. NL Exhaust."
+    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain !B! Block and 1 bronze:Blur each Slime *Absorbed. NL Exhaust."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",

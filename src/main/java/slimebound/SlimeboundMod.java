@@ -355,12 +355,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addDynamicVariable(new SelfDamageVariable());
         BaseMod.addDynamicVariable(new SlimedVariable());
 
-        BaseMod.addCard(new DivideAndConquerDivide());
-        BaseMod.addCard(new DivideAndConquerConquer());
+       // BaseMod.addCard(new DivideAndConquerDivide());
+       // BaseMod.addCard(new DivideAndConquerConquer());
         BaseMod.addCard(new DivideAndConquer());
 
-        BaseMod.addCard(new ServeAndProtectProtect());
-        BaseMod.addCard(new ServeAndProtectServe());
+      //  BaseMod.addCard(new ServeAndProtectProtect());
+     //   BaseMod.addCard(new ServeAndProtectServe());
         BaseMod.addCard(new ServeAndProtect());
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());

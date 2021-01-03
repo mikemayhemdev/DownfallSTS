@@ -4,6 +4,7 @@ import champ.powers.CounterPower;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,7 +27,8 @@ public class PreemptiveStrike extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         allDmg(AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        finisher();
+        addToTop(new RemoveSpecificPowerAction(p, p, CounterPower.POWER_ID));
+
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
