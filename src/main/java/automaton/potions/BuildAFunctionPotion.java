@@ -51,9 +51,7 @@ public class BuildAFunctionPotion extends CustomPotion {
             }));
         }
         if (potency > 1) {
-            for (int i = 0; i < potency - 1; i++) {
-                FunctionHelper.doExtraNonSpecificCopy = true;
-            }
+            FunctionHelper.doExtraNonSpecificCopy = potency - 1;
         }
     }
 
