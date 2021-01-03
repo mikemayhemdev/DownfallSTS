@@ -8,6 +8,7 @@ import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnPanicButton;
 import charbosses.cards.colorless.EnSwiftStrike;
 import charbosses.cards.curses.EnClumsy;
+import charbosses.cards.curses.EnMalfunctioning;
 import charbosses.cards.curses.EnShame;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import charbosses.relics.*;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.NoBlockPower;
 import guardian.powers.ConstructPower;
 
 import java.util.ArrayList;
@@ -104,9 +106,9 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     break;
                 case 4:
                     //Turn 5
-                    addToList(cardsList, new EnEchoForm(), true);  // removed
+                    addToList(cardsList, new EnHyperbeam(), true);  // removed
+                    addToList(cardsList, new EnMalfunctioning(), false);
                     addToList(cardsList, new EnPanicButton(), extraUpgrades);  // removed
-                    addToList(cardsList, new EnDefendBlue(), false);
                     addToList(cardsList, new EnDefendBlue(), false);
                     turn = 0;
                     looped = true;
@@ -117,40 +119,40 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
 
                 case 0:
                     addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), extraUpgrades);
-
-                    AbstractBossCard c7= new EnClaw(cB.clawsPlayed * 2);
-                    c7.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c7, extraUpgrades);
-                    addToList(cardsList, new EnLeap(), extraUpgrades);
-                    addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnStrikeBlue(), true);
+                    //Play Leap if Block can be gained, otherwise play Stirike
+                    if (AbstractCharBoss.boss.hasPower(NoBlockPower.POWER_ID)){
+                        addToList(cardsList, new EnColdSnap(), true);
+                        addToList(cardsList, new EnStrikeBlue(), true);
+                        addToList(cardsList, new EnLeap(), extraUpgrades);
+                    } else {
+                        addToList(cardsList, new EnColdSnap(), true);
+                        addToList(cardsList, new EnLeap(), extraUpgrades);
+                        addToList(cardsList, new EnStrikeBlue(), true);
+                    }
                     //Kunai Proc
                     turn++;
                     break;
                 case 1:
                     //Turn 3
-                    addToList(cardsList, new EnColdSnap(), true);
-                    AbstractBossCard c2 = new EnColdSnap();
-                    c2.freeToPlayOnce = true;
-                    c2.energyGeneratedIfPlayed = 1;
-                    addToList(cardsList, c2, true);
-                    addToList(cardsList, new EnReprogram(), false);
-                    AbstractBossCard c4 = new EnSwiftStrike();
-                    c4.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c4, false);
+                    addToList(cardsList, new EnHyperbeam(), false);
+                    addToList(cardsList, new EnChargeBattery(), false);
                     AbstractBossCard c3 = new EnRebound();
+                    addToList(cardsList, new EnShame(), false);
                     c3.manualCustomDamageModifier = 4;
                     addToList(cardsList, c3, false);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), true);
-                    AbstractBossCard c= new EnClaw(cB.clawsPlayed * 2);
-                    c.manualCustomDamageModifier = 2;
-                    addToList(cardsList, c, true);
-                    addToList(cardsList, new EnChargeBattery(), false);
-                    addToList(cardsList, new EnDefendBlue(), false);
-                    addToList(cardsList, new EnShame(), false);
+                    addToList(cardsList, new EnReprogram(), false);
+                    AbstractBossCard c4 = new EnClaw(cB.clawsPlayed * 2);
+                    c4.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c4, true);
+                    c4 = new EnDefendBlue();
+                    c4.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c4, false);
+                    c4 = new EnSwiftStrike();
+                    c4.manualCustomDamageModifier = 2;
+                    addToList(cardsList, c4, false);
                     //Kunai Proc
                     turn = 0;
                     break;
