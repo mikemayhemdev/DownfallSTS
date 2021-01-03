@@ -52,7 +52,7 @@ public class EvilModeCharacterOption {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[6] + TEXT[9]);
                 }
             } else if (__instance.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
-                if (UnlockTracker.isCharacterLocked("Champ")) {
+                if (UnlockTracker.isCharacterLocked("Automaton")) {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[7] + TEXT[9]);
                 } else {
                     TipHelper.renderGenericTip(InputHelper.mX + 70.0F * Settings.scale, InputHelper.mY - 10.0F * Settings.scale, __instance.TEXT[0], TEXT[8] + TEXT[9]);
