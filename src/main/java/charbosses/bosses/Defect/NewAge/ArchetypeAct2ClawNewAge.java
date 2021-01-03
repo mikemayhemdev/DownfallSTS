@@ -77,8 +77,8 @@ public class ArchetypeAct2ClawNewAge extends ArchetypeBaseDefect {
                     //Turn 2
                     addToList(cardsList, new EnLeap(), extraUpgrades);
                     addToList(cardsList, new EnColdSnap(), true);
-                    addToList(cardsList, new EnStrikeBlue(), false);
                     addToList(cardsList, new EnPanicButton(), extraUpgrades);  // removed
+                    addToList(cardsList, new EnStrikeBlue(), false);
                     turn++;
                     break;
                 case 2:
