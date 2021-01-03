@@ -45,7 +45,7 @@ public class EnGardePower extends AbstractPower implements CloneablePowerInterfa
             addToBot(new ApplyPowerAction(owner, owner, new NextTurnBlockPower(owner, amount), amount));
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
-        return 0;
+        return i;
     }
 
     @Override
