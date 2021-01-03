@@ -60,6 +60,7 @@ public class NeowGainMinionPowersAction extends AbstractGameAction {
                         }
                         case "downfall:Silent": {
                             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new SeeingDouble(owner)));
+                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new SeeingDoubleProduct(owner)));
 
                             break;
                         }

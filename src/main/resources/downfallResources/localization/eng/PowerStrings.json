@@ -54,7 +54,7 @@
   "downfall:NeowBuff": {
     "NAME": "Neow's Vigor",
     "DESCRIPTIONS": [
-      "Gains #b1 #yStrength and #yDexterity at the end of the round."
+      "Gains #b2 #yStrength at the end of the round."
     ]
   },
   "downfall:WatcherCripplePower": {
