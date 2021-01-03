@@ -149,12 +149,14 @@ public class BanSharedContentPatch {
     public static class PotionPatch {
 
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
-            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_colorlessCards) {
+
+            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
                 PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
                 PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
                 PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
                 PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
             }
+
         }
     }
 }

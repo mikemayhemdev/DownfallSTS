@@ -22,7 +22,7 @@ public class SoulburnPotion extends CustomPotion {
 
 
     public SoulburnPotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.JAR, PotionColor.FAIRY);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.FAIRY);
         this.isThrown = true;
         this.targetRequired = true;
         this.labOutlineColor = HexaMod.placeholderColor;
@@ -34,7 +34,7 @@ public class SoulburnPotion extends CustomPotion {
         this.description = (DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("burn"))), BaseMod.getKeywordDescription(HexaMod.makeID("burn"))));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("soulburn"))), BaseMod.getKeywordDescription(HexaMod.makeID("soulburn"))));
     }
 
 
