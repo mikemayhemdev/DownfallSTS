@@ -15,8 +15,8 @@ import theHexaghost.util.TextureLoader;
 public class SneckoCommon extends CustomRelic {
 
     public static final String ID = SneckoMod.makeID("SneckoCommon");
-    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SneckoCommon.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SneckoCommon.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SealOfApproval.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SealOfApproval.png"));
 
     public SneckoCommon() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
