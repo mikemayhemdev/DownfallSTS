@@ -15,10 +15,13 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.shrines.AccursedBlacksmith;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -42,7 +45,9 @@ public class TimeEaterMod implements
         //EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        SetUnlocksSubscriber {
+        SetUnlocksSubscriber,
+        OnStartBattleSubscriber,
+        PostBattleSubscriber {
     public static final String SHOULDER1 = "timeResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "timeResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "timeResources/images/char/mainChar/corpse.png";
@@ -231,4 +236,16 @@ public class TimeEaterMod implements
         //TODO: This
     }
 
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        if (AbstractDungeon.player instanceof TimeEaterChar) {
+            ClockHelper.active = true;
+        }
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        ClockHelper.active = false;
+    }
 }

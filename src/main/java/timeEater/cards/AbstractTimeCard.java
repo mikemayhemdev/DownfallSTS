@@ -17,8 +17,8 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
 
-import static automaton.AutomatonMod.getModID;
-import static automaton.AutomatonMod.makeCardPath;
+import static timeEater.TimeEaterMod.getModID;
+import static timeEater.TimeEaterMod.makeCardPath;
 
 public abstract class AbstractTimeCard extends CustomCard {
 

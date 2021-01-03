@@ -6,6 +6,7 @@ import automaton.SuperTip;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import timeEater.ClockHelper;
 
 @SpirePatch(
         clz = EnergyPanel.class,
@@ -21,5 +22,6 @@ public class EnergyPanelRenderPatch {
             FunctionHelper.render(sb);
         }
         SuperTip.render(sb, EasyInfoDisplayPanel.RENDER_TIMING.TIMING_ENERGYPANEL_RENDER);
+        ClockHelper.render(sb);
     }
 }
