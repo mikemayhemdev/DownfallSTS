@@ -3,7 +3,6 @@ package theHexaghost.potions;
 
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,6 +12,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 
@@ -47,18 +47,12 @@ public class InfernoChargePotion extends CustomPotion {
     public void use(AbstractCreature target) {
 
         for (int i = 0; i < this.potency; i++) {
-
-            AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
-                        if (gf instanceof InfernoGhostflame) {
-                            addToBot(new ChargeAction(gf));
-                        }
-                    }
+            for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
+                if (gf instanceof InfernoGhostflame) {
+                    addToBot(new ExtinguishAction(gf));
+                    addToBot(new ChargeAction(gf));
                 }
-            });
+            }
         }
     }
 
