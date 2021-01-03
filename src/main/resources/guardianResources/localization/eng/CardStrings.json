@@ -3,17 +3,9 @@
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
   },
-  "Guardian:StrikeTwo": {
-    "NAME": "Double Strike",
-    "DESCRIPTION": "Deal !D! damage twice."
-  },
   "Guardian:Defend_Guardian": {
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
-  },
-  "Guardian:DefendTwo": {
-    "NAME": "Double Defend",
-    "DESCRIPTION": "Gain !B! Block twice."
   },
   "Guardian:Gem_Red": {
     "NAME": "Ruby",
@@ -207,12 +199,11 @@
   },
   "Guardian:StasisField": {
     "NAME": "Stasis Field",
-    "DESCRIPTION": "Gain !B! Block. NL guardianmod:Brace !M!. NL Place this card into guardianmod:Stasis."
+    "DESCRIPTION": "Gain !B! Block. NL Place this card into guardianmod:Stasis. NL When this leaves Stasis, increase its Block by !M! and set its cost back to 1."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasis Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Place this card into guardianmod:Stasis."
+    "DESCRIPTION": "Deal !D! damage. NL Place this card into guardianmod:Stasis. NL When this leaves Stasis, increase its damage by !M! and set its cost back to 1."
   },
   "Guardian:FuturePlans": {
     "NAME": "Future Plans",
@@ -236,10 +227,6 @@
   "Guardian:ConstructionForm": {
     "NAME": "Construction Form",
     "DESCRIPTION": "Gain !M! guardianmod:Buffer. NL At the start of each turn, if you have guardianmod:Buffer, gain 1 Strength."
-  },
-  "Guardian:WeakpointTargeting": {
-    "NAME": "Spot Weakpoint",
-    "DESCRIPTION": "Whenever targeted enemy takes damage, gain 1 temporary Strength. NL Exhaust."
   },
   "Guardian:RollAttack": {
     "NAME": "Roll Attack",
@@ -268,11 +255,11 @@
   },
   "Guardian:PrismaticBeam": {
     "NAME": "Prismatic Spray",
-    "DESCRIPTION": "Deal !D! damage, plus an additional !D! damage for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Deal !D! damage for each guardianmod:Gem in this card."
   },
   "Guardian:PrismaticBarrier": {
     "NAME": "Prismatic Barrier",
-    "DESCRIPTION": "Gain !B! Block, plus an additional !B! Block for each guardianmod:Gem in this card."
+    "DESCRIPTION": "Gain !B! Block for each guardianmod:Gem in this card."
   },
   "Guardian:TemporalStrike": {
     "NAME": "Temporal Strike",
@@ -371,8 +358,8 @@
   },
   "Guardian:Repulse": {
     "NAME": "Repulsor",
-    "DESCRIPTION": "Exhaust the first Status or Curse drawn each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Exhaust the first Status or Curse drawn each turn."
+    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb Support",

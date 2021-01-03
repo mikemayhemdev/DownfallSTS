@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import slimebound.SlimeboundMod;
 
 public class WatcherAngryPower extends AbstractPower {
     public static final String POWER_ID = "downfall:WatcherAngryPower";
@@ -43,7 +44,10 @@ public class WatcherAngryPower extends AbstractPower {
 
     @Override
     public int onLoseHp(int damageAmount) {
-        if (this.owner.currentHealth <= this.owner.maxHealth / 2 && !active) {
+        SlimeboundMod.logger.info("Watcher Angry lost " + damageAmount + " HP");
+        SlimeboundMod.logger.info("Watcher Angry current HP " + this.owner.currentHealth);
+        SlimeboundMod.logger.info("Watcher Angry Max HP " + this.owner.maxHealth / 2);
+        if ((this.owner.currentHealth - damageAmount) <= (this.owner.maxHealth / 2) && !active) {
             flash();
             active = true;
             this.addToBot(new EnemyChangeStanceAction(EnWrathStance.STANCE_ID));

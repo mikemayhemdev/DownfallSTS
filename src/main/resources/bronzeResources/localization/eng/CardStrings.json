@@ -503,8 +503,8 @@
   },
   "bronze:Repulsor": {
     "NAME": "Repulsor",
-    "DESCRIPTION": "Exhaust the first Status or Curse card you draw each turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Exhaust the first Status or Curse card you draw each turn."
+    "DESCRIPTION": "When you draw the first Status or Curse card each turn, Exhaust it and draw a card.",
+    "UPGRADE_DESCRIPTION": "Innate. When you draw the first Status or Curse card each turn, Exhaust it and draw a card."
   },
   "bronze:Debug": {
     "NAME": "Debug",
@@ -525,7 +525,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Assembly",
-    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded."
+    "DESCRIPTION": "Scry !M!. NL bronze:Encode all cards with bronze:Encode discarded. NL Exhaust."
   },
   "bronze:FineTuning": {
     "NAME": "Fine Tuning",
@@ -578,13 +578,13 @@
     "DESCRIPTION": "Deal !B! Block."
   },
   "bronze:TinkerersToolbox": {
-    "NAME": "Tinkerer's Toolbox",
+    "NAME": "Dev Tools",
     "DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Choose between *Debug, *Batch and *Decompile."
   },
   "bronze:Refactor": {
     "NAME": "Refactor",
-    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded."
+    "DESCRIPTION": "Scry !M!. NL Gain !B! Block for each Status card discarded. NL Exhaust any others discarded."
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
@@ -619,6 +619,31 @@
     "EXTENDED_DESCRIPTION": [
       " NL (Hits ",
       " times.)"
+    ]
+  },
+  "bronze:AlphaBuild": {
+    "NAME": "Rough Prototype",
+    "DESCRIPTION": "Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Deal !D! damage. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Beta Build.",
+    "EXTENDED_DESCRIPTION": [
+      "rough",
+      "Alpha"
+    ]
+  },
+  "bronze:BetaBuild": {
+    "NAME": "Beta Build",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Insert random Status. NL bronze:Compile - bronze:Insert Full Release.",
+    "EXTENDED_DESCRIPTION": [
+      "early",
+      "Beta"
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Full Release",
+    "DESCRIPTION": "bronze:Compile - Function becomes a Power which actives its effects at the start of each turn.",
+    "EXTENDED_DESCRIPTION": [
+      "full",
+      "Release"
     ]
   }
 }

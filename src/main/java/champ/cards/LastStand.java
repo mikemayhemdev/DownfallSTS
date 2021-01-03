@@ -26,7 +26,7 @@ public class LastStand extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (p.currentHealth < p.maxHealth /2) {
+        if (p.currentHealth < p.maxHealth / 2) {
             return super.canUse(p, m);
         }
         cantUseMessage = ChampChar.characterStrings.TEXT[28];

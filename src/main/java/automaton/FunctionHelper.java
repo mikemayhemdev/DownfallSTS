@@ -29,7 +29,7 @@ public class FunctionHelper {
 
     public static int functionsCompiledThisCombat = 0;
 
-    public static boolean doExtraNonSpecificCopy = false;
+    public static int doExtraNonSpecificCopy = 0;
 
     public static HashMap<CardEffectsCardMod, AbstractCard> cardModsInfo = new HashMap<>();
 
@@ -153,6 +153,13 @@ public class FunctionHelper {
         for (AbstractCard c : held.group) {
             if (c instanceof AbstractBronzeCard) {
                 if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
+                    ((AbstractBronzeCard) c).onCompileFirst(function, forGameplay);
+                }
+            }
+        }
+        for (AbstractCard c : held.group) {
+            if (c instanceof AbstractBronzeCard) {
+                if (((AbstractBronzeCard) c).doSpecialCompileStuff) {
                     ((AbstractBronzeCard) c).onCompile(function, forGameplay); // Compile effects
                 }
             }
@@ -186,9 +193,10 @@ public class FunctionHelper {
                 regularOutput = ((OnOutputFunctionPower) p).receiveOutputFunction(); // Hardcode
             }
         }
-        if (doExtraNonSpecificCopy) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Duplicate Function potion
-            doExtraNonSpecificCopy = false;
+        if (doExtraNonSpecificCopy > 0) {
+            for (int i = 0; i < doExtraNonSpecificCopy; i++)
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Duplicate Function potion
+            doExtraNonSpecificCopy = 0;
         }
         if (regularOutput) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeFunction(true))); // Regular output to hand, assuming no Hardcode

@@ -2,6 +2,7 @@ package champ.actions;
 
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,13 +15,11 @@ import java.util.ArrayList;
 
 public class DiscoverOpenerAction extends AbstractGameAction {
     private boolean retrieveCard = false;
-    private boolean upgraded = false;
 
-    public DiscoverOpenerAction(boolean upgraded) {
+    public DiscoverOpenerAction(int copies) {
         this.actionType = ActionType.CARD_MANIPULATION;// 20
         this.duration = Settings.ACTION_DUR_FAST;// 21
-        this.amount = 1;// 22
-        this.upgraded = upgraded;
+        this.amount = copies;// 22
     }// 23
 
     public void update() {
@@ -35,7 +34,7 @@ public class DiscoverOpenerAction extends AbstractGameAction {
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {// 58
                     AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 59
                     AbstractCard disCard2 = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 60
-                    if (AbstractDungeon.player.hasPower("MasterRealityPower") || upgraded) {// 62
+                    if (AbstractDungeon.player.hasPower("MasterRealityPower")) {// 62
                         disCard.upgrade();// 63
                         disCard2.upgrade();// 64
                     }
@@ -50,8 +49,6 @@ public class DiscoverOpenerAction extends AbstractGameAction {
                         } else {
                             AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 78
                         }
-
-                        disCard2 = null;// 81
                     } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {// 83
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 84
                         AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 89
@@ -62,6 +59,7 @@ public class DiscoverOpenerAction extends AbstractGameAction {
                         AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 107
                         AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 112
                     }
+
 
                     AbstractDungeon.cardRewardScreen.discoveryCard = null;
                 }
@@ -76,15 +74,12 @@ public class DiscoverOpenerAction extends AbstractGameAction {
     private ArrayList<AbstractCard> generateColorlessCardChoices() {
         ArrayList<AbstractCard> choiceList = new ArrayList<>();
         ArrayList<AbstractCard> bersOpenersList = new ArrayList<>();
-        ArrayList<AbstractCard> gladOpenersList = new ArrayList<>();
         ArrayList<AbstractCard> defOpenersList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q.hasTag(ChampMod.OPENERBERSERKER)) bersOpenersList.add(q);
-            if (q.hasTag(ChampMod.OPENERGLADIATOR)) gladOpenersList.add(q);
             if (q.hasTag(ChampMod.OPENERDEFENSIVE)) defOpenersList.add(q);
         }
         choiceList.add(bersOpenersList.get(AbstractDungeon.cardRandomRng.random(bersOpenersList.size() - 1)));
-        choiceList.add(gladOpenersList.get(AbstractDungeon.cardRandomRng.random(gladOpenersList.size() - 1)));
         choiceList.add(defOpenersList.get(AbstractDungeon.cardRandomRng.random(defOpenersList.size() - 1)));
         return choiceList;
     }

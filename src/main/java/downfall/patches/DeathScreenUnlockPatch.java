@@ -31,15 +31,15 @@ public class DeathScreenUnlockPatch {
         ////SlimeboundMod.logger.info("patch spam");
 
         if ((AbstractDungeon.unlocks.isEmpty()) || (Settings.isDemo)) {
-           // //SlimeboundMod.logger.info("first if");
+            // //SlimeboundMod.logger.info("first if");
             if ((Settings.isDemo) || (Settings.isDailyRun)) {
-              //  //SlimeboundMod.logger.info("second if");
+                //  //SlimeboundMod.logger.info("second if");
                 CardCrawlGame.startOver();
             } else {
 
-               // //SlimeboundMod.logger.info("Guardian is locked: " + UnlockTracker.isCharacterLocked("Guardian"));
-               // //SlimeboundMod.logger.info("Hexaghost is locked: " + UnlockTracker.isCharacterLocked("Hexaghost"));
-               // //SlimeboundMod.logger.info("Snecko is locked: " + UnlockTracker.isCharacterLocked("Snecko"));
+                // //SlimeboundMod.logger.info("Guardian is locked: " + UnlockTracker.isCharacterLocked("Guardian"));
+                // //SlimeboundMod.logger.info("Hexaghost is locked: " + UnlockTracker.isCharacterLocked("Hexaghost"));
+                // //SlimeboundMod.logger.info("Snecko is locked: " + UnlockTracker.isCharacterLocked("Snecko"));
                 if ((AbstractDungeon.unlocks.isEmpty()) || (Settings.isDemo)) {
                     if ((Settings.isDemo) || (Settings.isDailyRun)) {
                         CardCrawlGame.startOver();
@@ -51,20 +51,19 @@ public class DeathScreenUnlockPatch {
                     } else if ((UnlockTracker.isCharacterLocked("Hexaghost")) && (AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN)) {
                         AbstractDungeon.unlocks.add(new HexaghostUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
-                       // //SlimeboundMod.logger.info("Triggered Hexaghost Unlock screen!");
+                        // //SlimeboundMod.logger.info("Triggered Hexaghost Unlock screen!");
                         return SpireReturn.Return(null);
-                    } else if ((UnlockTracker.isCharacterLocked("Champ")) && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT))  {
+                    } else if ((UnlockTracker.isCharacterLocked("Champ")) && (AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT)) {
                         AbstractDungeon.unlocks.add(new ChampUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Champ Unlock screen!");
                         return SpireReturn.Return(null);
-                    }// else if ((UnlockTracker.isCharacterLocked("Automaton")) && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP))  {
-                     //   AbstractDungeon.unlocks.add(new AutomatonUnlock());
-                      //  AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
+                    } else if ((UnlockTracker.isCharacterLocked("Automaton")) && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP)) {
+                        AbstractDungeon.unlocks.add(new AutomatonUnlock());
+                        AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Automaton Unlock screen!");
-                     //   return SpireReturn.Return(null);
-                   // }
-                    else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP))  {
+                        return SpireReturn.Return(null);
+                    } else if ((UnlockTracker.isCharacterLocked("Snecko")) && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP)) {
                         AbstractDungeon.unlocks.add(new SneckoUnlock());
                         AbstractDungeon.unlockScreen.open((AbstractUnlock) AbstractDungeon.unlocks.remove(0));
                         ////SlimeboundMod.logger.info("Triggered Snecko Unlock screen!");

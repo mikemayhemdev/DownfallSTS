@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
+import guardian.stances.DefensiveMode;
 
 
 public class ArmoredProtocolPower extends AbstractGuardianPower {
@@ -32,7 +33,9 @@ public class ArmoredProtocolPower extends AbstractGuardianPower {
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         flash();
-        addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(this.owner, this.owner, this.amount));
+        if (AbstractDungeon.player.stance instanceof DefensiveMode) {
+            addToBot(new com.megacrit.cardcrawl.actions.common.GainBlockAction(this.owner, this.owner, this.amount));
+        }
     }
 
     public void updateDescription() {

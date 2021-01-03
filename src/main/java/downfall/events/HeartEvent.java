@@ -33,6 +33,7 @@ import downfall.vfx.CustomAnimatedNPC;
 import downfall.vfx.TopLevelInfiniteSpeechBubble;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -153,15 +154,13 @@ public class HeartEvent extends AbstractEvent {
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
 
-        Iterator var4 = this.rewards.iterator();
-
-        while (var4.hasNext()) {
-            HeartReward r = (HeartReward) var4.next();
+        for (HeartReward r : this.rewards) {
             r.update();
         }
 
         if (!this.setPhaseToEvent) {
             AbstractDungeon.getCurrRoom().phase = RoomPhase.EVENT;
+            downfallMod.readyToDoThing = true;
             this.setPhaseToEvent = true;
         }
 
@@ -378,10 +377,7 @@ public class HeartEvent extends AbstractEvent {
                 }
             }
 
-            Iterator var11 = sealedGroup.group.iterator();
-
-            while (var11.hasNext()) {
-                AbstractCard c = (AbstractCard) var11.next();
+            for (AbstractCard c : sealedGroup.group) {
                 UnlockTracker.markCardAsSeen(c.cardID);
             }
 
@@ -424,10 +420,8 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private void dismissBubble() {
-        Iterator var1 = AbstractDungeon.effectList.iterator();
 
-        while (var1.hasNext()) {
-            AbstractGameEffect e = (AbstractGameEffect) var1.next();
+        for (AbstractGameEffect e : AbstractDungeon.effectList) {
             if (e instanceof InfiniteSpeechBubble) {
                 ((InfiniteSpeechBubble) e).dismiss();
             }

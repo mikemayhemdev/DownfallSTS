@@ -13,7 +13,7 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 3;
 
     public BerserkersShout() {
@@ -22,15 +22,18 @@ public class BerserkersShout extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
+        myHpLossCost = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         techique();
         berserkOpen();
         fatigue(magicNumber);
+        if (upgraded) atb(new DrawCardAction(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

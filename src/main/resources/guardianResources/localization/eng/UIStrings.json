@@ -25,5 +25,10 @@
       "Gain 2 random Gems.",
       "Pick broken."
     ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:Brace 2."
+    ]
   }
 }

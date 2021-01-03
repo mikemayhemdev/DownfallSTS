@@ -1,6 +1,7 @@
 package expansioncontent.actions;
 
 
+import automaton.AutomatonChar;
 import champ.ChampChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -57,6 +58,10 @@ public class RandomCardWithTagAction extends AbstractGameAction {
 
     public static boolean champLocked() {
         return UnlockTracker.isCharacterLocked(ChampChar.ID);
+    }
+
+    public static boolean autoLocked() {
+        return UnlockTracker.isCharacterLocked(AutomatonChar.ID);
     }
 
     public void update() {

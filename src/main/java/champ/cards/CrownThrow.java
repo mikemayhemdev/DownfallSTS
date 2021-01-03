@@ -1,9 +1,7 @@
 package champ.cards;
 
-import champ.ChampMod;
-import champ.powers.DrawLessNextTurnPower;
+import champ.powers.BoomerangPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -13,34 +11,23 @@ public class CrownThrow extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 2;
-
-    private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 1;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 3;
 
     public CrownThrow() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
-        //tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //finisher();
-        atb(new DrawCardAction(magicNumber));
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (!gcombo()) applyToSelf(new DrawLessNextTurnPower(3));
-       // finisher();
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        glowColor = gcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        // TODO: Do a throw vfx. First you throw a crown...
+        if (this.costForTurn != 0 && !freeToPlayOnce) {
+            applyToSelf(new BoomerangPower(this));
+        }
     }
 
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
-        upgradeMagicNumber(UPG_MAGIC);
     }
 }

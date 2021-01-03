@@ -59,6 +59,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
@@ -130,7 +131,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public AbstractCharBoss(String name, String id, int maxHealth, float hb_x, float hb_y, float hb_w, float hb_h, String imgUrl, float offsetX, float offsetY, PlayerClass playerClass) {
         super(name, id, maxHealth, hb_x, hb_y, hb_w, hb_h, imgUrl, offsetX, offsetY);
         AbstractCharBoss.finishedSetup = false;
-        this.drawX = (float)Settings.WIDTH * 0.75F - 150F * Settings.xScale;
+        this.drawX = (float) Settings.WIDTH * 0.75F - 150F * Settings.xScale;
         this.type = EnemyType.BOSS;
         this.chosenClass = playerClass;
         this.energyPanel = new EnemyEnergyPanel(this);
@@ -201,21 +202,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
         if (AbstractDungeon.ascensionLevel >= 20 && CardCrawlGame.dungeon instanceof com.megacrit.cardcrawl.dungeons.TheBeyond) {
             new CBR_LizardTail().instantObtain(this);
-           // new CBR_MagicFlower().instantObtain(this);
+            // new CBR_MagicFlower().instantObtain(this);
         }
-        if (NeowBoss.neowboss != null){
-            switch (chosenArchetype.actNum){
-                case 1:{
-                    chosenArchetype.maxHPModifier += 300;
+        if (NeowBoss.neowboss != null) {
+            switch (chosenArchetype.actNum) {
+                case 1: {
+                    chosenArchetype.maxHPModifier += 200;
                     break;
 
                 }
-                case 2:{
-                    chosenArchetype.maxHPModifier += 150;
+                case 2: {
+                    chosenArchetype.maxHPModifier += 100;
                     break;
 
                 }
-                case 3:{
+                case 3: {
                     chosenArchetype.maxHPModifier += 0;
                     break;
                 }
@@ -223,7 +224,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
         }
         maxHealth += chosenArchetype.maxHPModifier;
-        if (AbstractDungeon.ascensionLevel >= 9){
+        if (AbstractDungeon.ascensionLevel >= 9) {
             maxHealth = Math.round(maxHealth * 1.2F);
         }
         currentHealth = maxHealth;
@@ -338,12 +339,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
     }
 
+
     public void startTurn() {
         ////SlimeboundMod.logger.info("Start Turn Triggered");
         this.cardsPlayedThisTurn = 0;
         this.attacksPlayedThisTurn = 0;
-        for (AbstractCard c:hand.group){
-            ((AbstractBossCard)c).lockIntentValues = true;
+        for (AbstractCard c : hand.group) {
+            ((AbstractBossCard) c).lockIntentValues = true;
         }
         this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
@@ -358,12 +360,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         return chosenArchetype.getThisTurnCards();
     }
 
-    class sortByNewPrio implements Comparator<AbstractBossCard>
-    {
+    class sortByNewPrio implements Comparator<AbstractBossCard> {
         // Used for sorting in ascending order of
         // roll number
-        public int compare(AbstractBossCard a, AbstractBossCard b)
-        {
+        public int compare(AbstractBossCard a, AbstractBossCard b) {
             return a.newPrio - b.newPrio;
         }
     }
@@ -384,14 +384,14 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     }
 
                     ArrayList<AbstractBossCard> handAsBoss = new ArrayList<>();
-                    for (AbstractCard c : AbstractCharBoss.boss.hand.group){
-                        handAsBoss.add((AbstractBossCard)c);
+                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                        handAsBoss.add((AbstractBossCard) c);
                     }
 
                     Collections.sort(handAsBoss, new sortByNewPrio());
 
                     ArrayList<AbstractCard> newHand = new ArrayList<>();
-                    for (AbstractCard c : handAsBoss){
+                    for (AbstractCard c : handAsBoss) {
                         newHand.add(c);
                         c.applyPowers();
                     }
@@ -600,21 +600,21 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             //Skip the top card.
             if (drawPile.get(0) != c) {
                 if (attack && c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                   //if (debugLog) //SlimeboundMod.logger.info("Attack replacement was requested. Returning: " + c.name);
+                    //if (debugLog) //SlimeboundMod.logger.info("Attack replacement was requested. Returning: " + c.name);
                     return c;
                 }
                 if (setup && c.hasTag(downfallMod.CHARBOSS_SETUP)) {
-                   //if (debugLog) //SlimeboundMod.logger.info("Setup replacement was requested. Returning: " + c.name);
+                    //if (debugLog) //SlimeboundMod.logger.info("Setup replacement was requested. Returning: " + c.name);
                     return c;
                 }
                 if (!setup && !attack && !c.hasTag(downfallMod.CHARBOSS_SETUP) && !c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                   //if (debugLog)
-                        //SlimeboundMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
+                    //if (debugLog)
+                    //SlimeboundMod.logger.info("Either-phase replacement was requested. Returning: " + c.name);
                     return c;
                 }
             }
         }
-       //if (debugLog) //SlimeboundMod.logger.info("Replacement was requested, but no card was valid. Returning null");
+        //if (debugLog) //SlimeboundMod.logger.info("Replacement was requested, but no card was valid. Returning null");
 
         return null;
     }
@@ -687,75 +687,75 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
             //Force Draw is for mechanics like Headbutt, where a card should be drawn regardless of phase
             if (c.forceDraw) {
-               //if (debugLog) //SlimeboundMod.logger.info("Force Drawing " + c.name);
+                //if (debugLog) //SlimeboundMod.logger.info("Force Drawing " + c.name);
                 return c;
             }
 
             if (this.onSetupTurn) {
                 if (setupsDrawnForSetupPhase < 1) {
-                   //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Setup card");
+                    //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Setup card");
                     if (c.hasTag(downfallMod.CHARBOSS_SETUP)) {
-                       //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Setup Card " + c.name);
                         setupsDrawnForSetupPhase++;
                         return c;
                     } else {
-                       //if (debugLog)
-                            //SlimeboundMod.logger.info("Top card is not a Setup. Finding Setup->Either->Attack replacement.");
+                        //if (debugLog)
+                        //SlimeboundMod.logger.info("Top card is not a Setup. Finding Setup->Either->Attack replacement.");
                         replacementCard = performCardSearch(drawPile, DrawTypes.Setup, DrawTypes.EitherPhase, DrawTypes.Attack);
                         if (replacementCard != null) {
-                           //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                             return replacementCard;
                         } else {
-                           //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                            //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                         }
                     }
                 } else {
-                   //if (debugLog)
-                        //SlimeboundMod.logger.info("Setup card already drawn. Finding Either->Setup->Attack replacement.");
+                    //if (debugLog)
+                    //SlimeboundMod.logger.info("Setup card already drawn. Finding Either->Setup->Attack replacement.");
                     replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Setup, DrawTypes.Attack);
                     if (replacementCard != null) {
-                       //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                         return replacementCard;
                     } else {
-                       //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                     }
                 }
             }
 
             if (!this.onSetupTurn) {
                 if (attacksDrawnForAttackPhase < 1) {
-                   //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Attack card");
+                    //if (debugLog) //SlimeboundMod.logger.info("Attempting to draw a Attack card");
                     if (c.hasTag(downfallMod.CHARBOSS_ATTACK)) {
-                       //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Top card is good. Drawing Attack Card " + c.name);
                         attacksDrawnForAttackPhase++;
                         return c;
                     } else {
-                       //if (debugLog)
-                            //SlimeboundMod.logger.info("Top card is not a Attack. Finding Attack->Either->Setup replacement.");
+                        //if (debugLog)
+                        //SlimeboundMod.logger.info("Top card is not a Attack. Finding Attack->Either->Setup replacement.");
                         replacementCard = performCardSearch(drawPile, DrawTypes.Attack, DrawTypes.EitherPhase, DrawTypes.Setup);
                         if (replacementCard != null) {
-                           //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                            //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                             return replacementCard;
                         } else {
-                           //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                            //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                         }
                     }
                 } else {
-                   //if (debugLog)
-                        //SlimeboundMod.logger.info("2 Attack cards already drawn. Finding Either->Attack->Setup replacement.");
+                    //if (debugLog)
+                    //SlimeboundMod.logger.info("2 Attack cards already drawn. Finding Either->Attack->Setup replacement.");
                     replacementCard = performCardSearch(drawPile, DrawTypes.EitherPhase, DrawTypes.Attack, DrawTypes.Setup);
                     if (replacementCard != null) {
-                       //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
+                        //if (debugLog) //SlimeboundMod.logger.info("Drawing replacement: " + replacementCard.name);
                         return replacementCard;
                     } else {
-                       //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
+                        //if (debugLog) //SlimeboundMod.logger.info("Null was returned by replacement search.");
                     }
                 }
             }
 
 
-           //if (debugLog)
-                //SlimeboundMod.logger.info("WARNING: All draw logic has failed.  Drawing top card as a default: " + c.name);
+            //if (debugLog)
+            //SlimeboundMod.logger.info("WARNING: All draw logic has failed.  Drawing top card as a default: " + c.name);
             return c;
         } else {
             //SlimeboundMod.logger.info("Drawing the last card in the deck, no logic used: " + c.name);
@@ -1008,6 +1008,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     this.loseBlock();
                     AbstractDungeon.effectList.add(new HbBlockBrokenEffect(this.hb.cX - this.hb.width / 2.0f + AbstractMonster.BLOCK_ICON_X, this.hb.cY - this.hb.height / 2.0f + AbstractMonster.BLOCK_ICON_Y));
                 }
+
+                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    if ((!m.isDead) && (!m.isDying) && m.hasPower(MinionPower.POWER_ID)) {
+                        AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.utility.HideHealthBarAction(m));
+                        AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.SuicideAction(m));
+                    }
+                }
             }
         } else if (!probablyInstantKill) {
             if (weakenedToZero && this.currentBlock == 0) {
@@ -1046,7 +1053,16 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
 
         if (NeowBoss.neowboss != null) {
-            NeowBoss.neowboss.switchIntentToSelfRez();
+
+            SlimeboundMod.logger.info("Archetype act num: " + chosenArchetype.actNum);
+            NeowBoss.neowboss.minion = null;
+            if (chosenArchetype.actNum == 3){
+                SlimeboundMod.logger.info("Boss instructing Neow to Self Rez");
+                NeowBoss.neowboss.switchIntentToSelfRez();
+            } else {
+                SlimeboundMod.logger.info("Boss instructing Neow to Rez");
+                NeowBoss.neowboss.switchToRez();
+            }
         }
 
         AbstractCharBoss.boss = null;

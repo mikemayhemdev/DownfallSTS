@@ -42,6 +42,12 @@ public class BronzeCore extends CustomRelic implements OnCompileRelic {
     }
 
     @Override
+    public void onVictory() {
+        activated = false;
+        grayscale = false;
+    }
+
+    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

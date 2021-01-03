@@ -17,8 +17,6 @@ import java.util.function.Predicate;
 
 
 public abstract class AbstractUnknownCard extends AbstractSneckoCard implements StartupCard {
-    private String[] unknownUpgrade = CardCrawlGame.languagePack.getUIString(makeID("Unknown")).TEXT;
-
     public AbstractUnknownCard(final String id, final CardType type, final CardRarity rarity) {
         super(id, -2, type, rarity, CardTarget.NONE);
         tags.add(CardTags.HEALING);
@@ -84,7 +82,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 if (!c.canUpgrade()) validCard = false;
                 if (validCard) q.upgrade();
             }
-            if (funkyPredicate.test(q)) {
+            if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
                 if (validCard) tmp.add(c.cardID);
             }
         }
@@ -120,7 +118,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 if (!c.canUpgrade()) validCard = false;
                 if (validCard) q.upgrade();
             }
-            if (funkyPredicate.test(q)) {
+            if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
                 if (validCard) tmp.add(c.cardID);
             }
         }

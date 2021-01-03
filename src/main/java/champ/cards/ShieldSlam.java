@@ -4,7 +4,6 @@ import champ.ChampChar;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class ShieldSlam extends AbstractChampCard {
@@ -19,11 +18,11 @@ public class ShieldSlam extends AbstractChampCard {
     public ShieldSlam() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
-        tags.add(ChampMod.TECHNIQUE);
+      //  tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+     //   techique();
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
     }
 

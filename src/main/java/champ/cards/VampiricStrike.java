@@ -1,8 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
-import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.unique.VampireDamageAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,14 +18,14 @@ public class VampiricStrike extends AbstractChampCard {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         exhaust = true;
-        tags.add(CardTags.STRIKE);
-        tags.add(ChampMod.TECHNIQUE);
+      //  tags.add(CardTags.STRIKE);
+      //  tags.add(ChampMod.TECHNIQUE);
         magicNumber = baseMagicNumber = 2;
         tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+      //  techique();
 
         atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         atb(new VampireDamageAction(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_VERTICAL));

@@ -18,10 +18,8 @@ public class ModifyDamageAndMagicAction extends AbstractGameAction {
 
     public void update() {
         for (AbstractCard c : GetAllInBattleInstances.get(this.uuid)) {
-            c.baseMagicNumber += this.amount;
-            if (c instanceof AbstractChampCard) ((AbstractChampCard) c).myHpLossCost += amount;
-            c.baseDamage += this.amount;
             c.superFlash();
+            ((AbstractChampCard)c).upp();
         }
         this.isDone = true;
     }

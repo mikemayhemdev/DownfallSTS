@@ -32,7 +32,7 @@ public class UltimateStance extends AbstractChampStance {
     @Override
     public void onEnterStance() {
         super.onEnterStance();
-        ChampMod.enteredGladiatorThisTurn = true;
+      //  ChampMod.enteredGladiatorThisTurn = true;
         ChampMod.enteredBerserkerThisTurn = true;
         ChampMod.enteredDefensiveThisTurn = true;
     }
@@ -47,7 +47,7 @@ public class UltimateStance extends AbstractChampStance {
         fatigue(3);
         //AbstractDungeon.actionManager.addToBottom(new GainEnergAction(1));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CounterPower(4), 4));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
+       // AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
     }
 
     @Override
@@ -70,7 +70,7 @@ public class UltimateStance extends AbstractChampStance {
             }
         });
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, 12));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player, 1), 1));
+      //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 1), 1));
+     //   AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedPower(AbstractDungeon.player, 1), 1));
     }
 }

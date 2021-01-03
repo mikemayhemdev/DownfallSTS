@@ -12,7 +12,7 @@ public class DefensiveShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 8;
     private static final int UPG_MAGIC = 4;
 
     public DefensiveShout() {
@@ -27,10 +27,10 @@ public class DefensiveShout extends AbstractChampCard {
         techique();
         defenseOpen();
         applyToSelf(new CounterPower(magicNumber));
+        if (upgraded) atb(new DrawCardAction(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }

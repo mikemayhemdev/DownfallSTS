@@ -11,12 +11,13 @@ public class Assembly extends AbstractBronzeCard {
 
     //stupid intellij stuff skill, self, rare
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 3;
 
     public Assembly() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
+        exhaust = true;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 

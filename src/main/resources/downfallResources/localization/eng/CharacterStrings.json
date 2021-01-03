@@ -216,5 +216,12 @@
       "~Fight~ ~once~ ~more...~",
       "~The~ ~cycle~ ~must~ ~end...~"
     ]
+  },
+  "downfall:NeowBossFinal": {
+    "NAMES": [
+      "Neow"
+    ],
+    "TEXT": [
+    ]
   }
 }

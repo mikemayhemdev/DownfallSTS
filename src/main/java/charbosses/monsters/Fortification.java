@@ -33,10 +33,14 @@ public class Fortification extends AbstractMonster {
 
     @Override
     public void takeTurn() {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractCharBoss.boss, this, 15));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-        AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        if (AbstractCharBoss.boss != null) {
+            if (!AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying)
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractCharBoss.boss, this, 15));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+            AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+        }
     }
+
 
     protected void getMove(int num) {
         this.setMove((byte)0, Intent.DEFEND);  // This is irrelevant!

@@ -7,6 +7,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -18,6 +19,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.GoopPuddle;
 import com.megacrit.cardcrawl.events.exordium.ScrapOoze;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,6 +32,14 @@ import com.megacrit.cardcrawl.vfx.SmokePuffEffect;
 import downfall.cards.curses.Icky;
 import downfall.downfallMod;
 import expansioncontent.relics.StudyCardRelic;
+import guardian.cards.*;
+import guardian.events.BackToBasicsGuardian;
+import guardian.patches.GuardianEnum;
+import guardian.potions.AcceleratePotion;
+import guardian.potions.BlockOnCardUsePotion;
+import guardian.potions.DefensiveModePotion;
+import guardian.potions.StasisDiscoveryPotion;
+import guardian.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.actions.SlimeSpawnAction;
@@ -289,61 +299,29 @@ public class SlimeboundMod implements OnCardUseSubscriber,
     @Override
     public void receiveSetUnlocks() {
 
-        if (!unlockEverything) {
-            unlocks0 = new CustomUnlockBundle(
-                    DivideAndConquer.ID, ServeAndProtect.ID, CheckThePlaybook.ID
-            );
+        downfallMod.registerUnlockSuite(
+                DivideAndConquer.ID,
+                ServeAndProtect.ID,
+                CheckThePlaybook.ID,
 
-            UnlockTracker.addCard(DivideAndConquer.ID);
-            UnlockTracker.addCard(ServeAndProtect.ID);
-            UnlockTracker.addCard(CheckThePlaybook.ID);
+                SplitSpecialist.ID,
+                TagTeam.ID,
+                Darklings.ID,
 
-            unlocks1 = new CustomUnlockBundle(
-                    SplitSpecialist.ID, TagTeam.ID, Darklings.ID
-            );
+                HungryTackle.ID,
+                Recollect.ID,
+                Recycling.ID,
 
-            UnlockTracker.addCard(SplitSpecialist.ID);
-            UnlockTracker.addCard(TagTeam.ID);
-            UnlockTracker.addCard(Darklings.ID);
+                SlimedTailRelic.ID,
+                PotencyRelic.ID,
+                SlimedSkullRelic.ID,
 
-            unlocks2 = new CustomUnlockBundle(
-                    HungryTackle.ID, Recollect.ID, Recycling.ID
-            );
+                PreparedRelic.ID,
+                StudyCardRelic.ID,
+                StickyStick.ID,
 
-            UnlockTracker.addCard(HungryTackle.ID);
-            UnlockTracker.addCard(Recollect.ID);
-            UnlockTracker.addCard(Recycling.ID);
-
-
-            unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                    SlimedTailRelic.ID, PotencyRelic.ID, SlimedSkullRelic.ID
-            );
-
-            UnlockTracker.addRelic(SlimedTailRelic.ID);
-            UnlockTracker.addRelic(PotencyRelic.ID);
-            UnlockTracker.addRelic(SlimedSkullRelic.ID);
-
-            unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                    PreparedRelic.ID, StudyCardRelic.ID, StickyStick.ID
-            );
-
-            UnlockTracker.addRelic(PreparedRelic.ID);
-            UnlockTracker.addRelic(StudyCardRelic.ID);
-            UnlockTracker.addRelic(StickyStick.ID);
-
-
-            BaseMod.addUnlockBundle(unlocks0, SlimeboundEnum.SLIMEBOUND, 0);
-
-            BaseMod.addUnlockBundle(unlocks1, SlimeboundEnum.SLIMEBOUND, 1);
-
-            BaseMod.addUnlockBundle(unlocks2, SlimeboundEnum.SLIMEBOUND, 2);
-
-            BaseMod.addUnlockBundle(unlocks3, SlimeboundEnum.SLIMEBOUND, 3);
-
-            BaseMod.addUnlockBundle(unlocks4, SlimeboundEnum.SLIMEBOUND, 4);
-
-        }
-
+                SlimeboundEnum.SLIMEBOUND
+        );
 
     }
 
@@ -382,12 +360,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addDynamicVariable(new SelfDamageVariable());
         BaseMod.addDynamicVariable(new SlimedVariable());
 
-        BaseMod.addCard(new DivideAndConquerDivide());
-        BaseMod.addCard(new DivideAndConquerConquer());
+       // BaseMod.addCard(new DivideAndConquerDivide());
+       // BaseMod.addCard(new DivideAndConquerConquer());
         BaseMod.addCard(new DivideAndConquer());
 
-        BaseMod.addCard(new ServeAndProtectProtect());
-        BaseMod.addCard(new ServeAndProtectServe());
+      //  BaseMod.addCard(new ServeAndProtectProtect());
+     //   BaseMod.addCard(new ServeAndProtectServe());
         BaseMod.addCard(new ServeAndProtect());
 
         BaseMod.addCard(new slimebound.cards.Defend_Slimebound());
@@ -676,6 +654,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 //Only in Evil if content sharing is disabled
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
+
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class) //Event ID//
                 //Event Character//
                 .playerClass(SlimeboundEnum.SLIMEBOUND)
@@ -703,6 +682,17 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 .dungeonIDs(TheBeyond.ID)
                 //Additional Condition//
                 .bonusCondition(() -> (AbstractDungeon.player instanceof SlimeboundCharacter))
+                .create());
+
+
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsSlime.ID, BackToBasicsSlime.class) //Event ID//
+                //Event Character//
+                .playerClass(SlimeboundEnum.SLIMEBOUND)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
         /*
@@ -735,6 +725,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
         BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(ThreeZeroPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SlimedPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SpawnSlimePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SlimyTonguePotion.POTION_ID);
+        }
     }
 
 

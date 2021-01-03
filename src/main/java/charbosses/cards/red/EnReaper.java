@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
+import downfall.monsters.NeowBoss;
 
 public class EnReaper extends AbstractBossCard {
     public static final String ID = "downfall_Charboss:Reaper";
@@ -41,7 +42,7 @@ public class EnReaper extends AbstractBossCard {
         this.addToBot(new VFXAction(new EnemyReaperEffect()));
         for (int x = AbstractDungeon.getCurrRoom().monsters.monsters.size() -1; x >= 0; x--) {
             AbstractMonster q = AbstractDungeon.getCurrRoom().monsters.monsters.get(x);
-            if (!q.isDead && !q.isDying && !q.id.equals(m.id)) {
+            if (!q.isDead && !q.isDying && !q.id.equals(m.id) && !q.id.equals(NeowBoss.ID)) {
                 addToBot(new VampireDamageAction(q, new DamageInfo(m, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
                 //TODO - Technically this won't work if a modded effect has given the mushrooms Block or Buffer or something.  If that ends up being a problem, we'll need a custom action here.
                 if (q.currentHealth <= damage){

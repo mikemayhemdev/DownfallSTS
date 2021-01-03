@@ -12,7 +12,7 @@ public class Repulsor extends AbstractBronzeCard {
     //stupid intellij stuff power, self, uncommon
 
     public Repulsor() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 

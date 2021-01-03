@@ -43,8 +43,8 @@ public class TornadoPunch extends AbstractChampCard {
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
         if (dcombo())
             for (AbstractMonster q : monsterList()) {
-                att(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
-                att(new GainBlockAction(p, block));
+                atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
+                atb(new GainBlockAction(p, block));
             }
     }
 

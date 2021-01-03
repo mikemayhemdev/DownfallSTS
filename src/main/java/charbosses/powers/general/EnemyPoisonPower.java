@@ -50,9 +50,7 @@ public class EnemyPoisonPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
     }
 
     @Override

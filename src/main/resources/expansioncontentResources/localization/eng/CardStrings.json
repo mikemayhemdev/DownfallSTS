@@ -9,8 +9,7 @@
   },
   "expansioncontent:DefensiveMode": {
     "NAME": "Defensive Mode",
-    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Enter guardianmod:Defensive_Mode.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Guardian. NL Gain !B! Block. NL Enter guardianmod:Defensive_Mode."
+    "DESCRIPTION": "expansioncontent:Boss - Guardian. NL Enter guardianmod:Defensive_Mode, which lasts for !M! rounds."
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Ghost Inferno",
@@ -80,8 +79,8 @@
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Chrono-Boost",
-    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 2 Strength for every 12th card you play.",
-    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 2 Strength for every 9th card you play."
+    "DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 12th card you play.",
+    "UPGRADE_DESCRIPTION": "expansioncontent:Boss - Time Eater. NL Gain 1 Strength for every 9th card you play."
   },
   "expansioncontent:ManipulateTime": {
     "NAME": "Manipulate Time",

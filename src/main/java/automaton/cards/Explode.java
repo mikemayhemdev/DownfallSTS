@@ -30,6 +30,7 @@ public class Explode extends AbstractBronzeCard {
         if (forGameplay) {
             addToBot(new VFXAction(new ExplosionSmallEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY)));
             for (AbstractMonster q : monsterList()) {
+                if (!q.isDeadOrEscaped())
                 addToBot(new LoseHPAction(q, q, magicNumber, AbstractGameAction.AttackEffect.FIRE));
             }
         }

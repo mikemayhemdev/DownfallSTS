@@ -20,6 +20,7 @@ public class LockVillainsPatch {
         UnlockTracker.addCharacter("Guardian");
         UnlockTracker.addCharacter("Hexaghost");
         UnlockTracker.addCharacter("Champ");
+        UnlockTracker.addCharacter("Automaton");
         UnlockTracker.addCharacter("Snecko");
     }
 }

@@ -2,16 +2,22 @@
   "hexamod:WanderingSpecter": {
     "NAME": "Wandering Specter",
     "DESCRIPTIONS": [
-      "This area of the Spire appears to be a #pgraveyard. You carefully continue through when a strange, faint ~apparition~ stops you. It reaches out with one hand, apparently offering some sort of #rdeal.",
-      "The #bghostly #bbeing touches your shoulder and you @collapse.@ NL NL You awaken later in an empty area of the Spire with a #gtrinket at your feet. As you continue, you feel ~oddly~ ~watched...~",
-      "You shake your head and the #bghost gives you one last, laborious look before continuing on in its ~endless~ ~walk.~ You continue onwards, as well. "
+      "This area of the Spire appears to be a #pgraveyard. You carefully continue through when a strange, faint ~apparition~ stops you. It reaches out with one hand, apparently offering some sort of #rdeal. NL NL You can tell the apparition is holding some sort of precious #bRelic, but you can't make out what it is - or just what #rprice is being asked in exchange.",
+      "You shake your head and the #bghost gives you one last, laborious look before continuing on in its ~endless~ ~walk.~ You continue onwards, as well. ",
+      "As you take the iridescent white box, it @shatters@ in your grip! As you collect the souls it breaks into, a #pblack #pshard emerges and ~embeds~ itself in your body.",
+      "You take the strange #ygolden box, and feel a #pdarkness flow through you as you open it. Inside, you find a useful weapon!",
+      "You take the pulsating, steadily @BEATING@ box, and feel it @FLOW@ into your arm. A foul #pnausea pulses through you, but you feel stronger for it...",
+      "As soon as you clasp the artifact from the figure, #pdarkness envelops the room. The specter speaks to once more, his words appearing in your head without you ever hearing them. NL NL #p'A #pwise #pchoice. #pWhat #pdo #pyou #psay #pto #panother #pdeal, #pfriend? #pTake #pas #pmany #pas #pyou #plike...'"
     ],
     "OPTIONS": [
-      "[Accept] Obtain ",
-      ". #rBecome #rCursed #r- #rHaunted.",
+      "[Accept] #gObtain #ga #gCurse #gRelic. #rGain #r1-4 #rCursed #r- #rRandom.",
+      "[Trade for Power] #gGain a #grandom #yRare #gcard. #rBecome #rCursed #r- #rRandom.",
       "[Decline]",
       "[Leave]",
-      "[Locked]"
+      "[Locked]",
+      "[Trade for Life] #gGain #g5 #gMax #gHP. #rBecome #rCursed #r- #rRandom.",
+      "[Trade for Souls] #gGain #g100 #gSouls. #rBecome #rCursed #r- #rRandom.",
+      "[Locked] Trade Complete."
     ]
   },
   "hexamod:SealChamber": {
@@ -47,7 +53,7 @@
   "hexamod:CouncilOfGhosts": {
     "NAME": "Council of Ghosts",
     "DESCRIPTIONS": [
-      "As you continue your ascent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"This~ ~one~ ~is~ #r~doomed...\"~ NL \"We understand your plight, #pcursed one... Would you like to learn our #y~secrets?\"~ ",
+      "As you continue your descent, #p~thick~ #p~black~ #p~smoke~ begins to billow out of the ground and walls around you, coalescing into three masked forms that start to speak. NL NL ~\"This~ ~one~ ~is~ #r~doomed...\"~ NL \"We understand your plight, #pcursed one... Would you like to learn our #y~secrets?\"~ ",
       "#y\"Excellent!\" NL As the ghostly shape speaks, you notice its large mouth opening wider and wider. #p~Thick~ #p~black~ #p~smoke~ spews forth and envelops the room. You cannot see or breathe...",
       "Still shrouded in #p~black~ #p~smoke~, your body withers, but your spirit #pburns #pbrighter than ever before. NL You understand how the corporeal and incorporeal are connected, in ways you never thought possible.",
       "Within the darkness, you see with eyes unclouded. The spirits have shown you have to master your form, to transition between this worth and another with ease.",
@@ -62,6 +68,16 @@
       "[Complete]",
       "[Leave]",
       "[Locked] Cannot leave yet."
+    ]
+  },
+  "hexamod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Spirit is the sword - and experience, the sharpening stone."
+    ],
+    "OPTIONS": [
+      "[Wistfulness] #gAdd #gEthereal to all #gStrikes and #gDefends.",
+      "[Locked] Requires a Strike or Defend."
     ]
   }
 }
