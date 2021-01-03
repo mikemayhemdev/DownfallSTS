@@ -204,7 +204,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "If the enemy is debuffed: NL *Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity."
+    "DESCRIPTION": "If the enemy is debuffed: NL *Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity.",
     "EXTENDED_DESCRIPTION": [
       "If the enemy is debuffed: NL ",
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
