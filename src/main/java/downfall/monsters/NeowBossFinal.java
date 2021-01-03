@@ -126,6 +126,7 @@ public class NeowBossFinal extends AbstractMonster {
     @Override
     public void usePreBattleAction() {
 
+        NeowBoss.neowboss = null;
         neowboss = this;
         super.usePreBattleAction();
         //  AbstractDungeon.getCurrRoom().cannotLose = true;

@@ -204,13 +204,12 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "If the enemy is debuffed: NL *Berserker champ:Combo: Gain !M! Strength. NL *Defensive champ:Combo: Gain !M! Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "If the enemy is debuffed: NL *Berserker champ:Combo: Gain !M! Strength. NL *Defensive champ:Combo: Gain !M! Dexterity.",
+    "DESCRIPTION": "If the enemy is debuffed: NL *Berserker champ:Combo: Gain !M! temporary Strength. NL *Defensive champ:Combo: Gain !M! temporary  Dexterity."
     "EXTENDED_DESCRIPTION": [
       "If the enemy is debuffed: NL ",
-      "Berserker champ:Combo: Gain !M! Strength. NL ",
-      "Defensive champ:Combo: Gain !M! Dexterity. NL Exhaust.",
-      "Defensive champ:Combo: Gain !M! Dexterity."
+      "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
+      "Defensive champ:Combo: Gain !M! temporary Dexterity. NL Exhaust.",
+      "Defensive champ:Combo: Gain !M! temporary Dexterity."
     ]
   },
   "champ:PreciseThrust": {
@@ -410,8 +409,7 @@
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
-    "DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose all champ:Counter.",
-    "UPGRADE_DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
+    "DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
     "EXTENDED_DESCRIPTION": [
       " NL (Deals !D! damage)",
       "A poor time for that move."

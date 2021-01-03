@@ -20,7 +20,7 @@ public class OpenerModDefensive extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        return CardCrawlGame.languagePack.getUIString(ChampMod.makeID("OpenerMod")).TEXT[1] + rawDescription;
+        return rawDescription + CardCrawlGame.languagePack.getUIString(ChampMod.makeID("OpenerMod")).TEXT[1];
     }
 
     @Override

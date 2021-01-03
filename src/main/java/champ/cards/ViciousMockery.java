@@ -1,10 +1,17 @@
 package champ.cards;
 
 import champ.ChampMod;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.powers.*;
 import sneckomod.SneckoMod;
+
+import java.util.ArrayList;
 
 public class ViciousMockery extends AbstractChampCard {
 
@@ -13,19 +20,17 @@ public class ViciousMockery extends AbstractChampCard {
     //stupid intellij stuff skill, enemy, uncommon
 
     public ViciousMockery() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-       // tags.add(ChampMod.TECHNIQUE);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 4;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
         tags.add(ChampMod.COMBODEFENSIVE);
-        exhaust = true;
     }
 
     @Override
     public void applyPowers() {
-        rawDescription = EXTENDED_DESCRIPTION[0];;
+        rawDescription = EXTENDED_DESCRIPTION[0];
         if (bcombo()) rawDescription += "[#5ebf2a]";
         else rawDescription += "*";
         rawDescription += EXTENDED_DESCRIPTION[1];
@@ -33,42 +38,61 @@ public class ViciousMockery extends AbstractChampCard {
         else rawDescription += "*";
         if (upgraded) {
             rawDescription += EXTENDED_DESCRIPTION[3];
-        }else {
+        } else {
             rawDescription += EXTENDED_DESCRIPTION[2];
         }
         initializeDescription();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //techique();
-        {
-            for (AbstractPower p2:m.powers){
-                if (p2.type == AbstractPower.PowerType.DEBUFF){
-                    if (dcombo()) {
-                        applyToSelf(new DexterityPower(p, magicNumber));
-                    }
-                    if (bcombo()) {
-                        applyToSelf(new StrengthPower(p, magicNumber));
-                    }
-                    break;
+        boolean doEffect = false;
+        for (AbstractMonster q : monsterList()) {
+            for (AbstractPower p2 : q.powers) {
+                if (p2.type == AbstractPower.PowerType.DEBUFF) {
+                    doEffect = true;
                 }
             }
-
         }
-        exhaust = true;
+        if (doEffect) {
+            atb(new SFXAction("VO_CHAMP_2A"));
+            atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
+            if (dcombo()) {
+                applyToSelf(new DexterityPower(p, magicNumber));
+                applyToSelf(new LoseDexterityPower(p, magicNumber));
+            }
+            if (bcombo()) {
+                applyToSelf(new StrengthPower(p, magicNumber));
+                applyToSelf(new LoseStrengthPower(p, magicNumber));
+            }
+        }
     }
 
+    private String getTaunt() {
+        ArrayList<String> derp = new ArrayList<>();
+        derp.add(Champ.DIALOG[0]);
+        derp.add(Champ.DIALOG[1]);
+        derp.add(Champ.DIALOG[2]);
+        derp.add(Champ.DIALOG[3]);
+        return derp.get(MathUtils.random(derp.size() - 1));
+    }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = (bcombo() || dcombo()) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        boolean yes = false;
+        outer:
+        for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            for (AbstractPower p : q.powers) {
+                if (p.type == AbstractPower.PowerType.DEBUFF) {
+                    yes = true;
+                    break outer;
+                }
+            }
+        }
+        glowColor = ((bcombo() || dcombo()) && yes) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
 
-
     public void upp() {
-        exhaust = false;
-        rawDescription = UPGRADE_DESCRIPTION;
-        initializeDescription();
+        upgradeMagicNumber(2);
     }
 }

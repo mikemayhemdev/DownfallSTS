@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
+import sneckomod.util.ColorfulCardReward;
 import theHexaghost.util.TextureLoader;
 
 public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
@@ -52,7 +52,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
             CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard q : AbstractDungeon.commonCardPool.group) {
                 if (q instanceof UnknownClass) {
-                    c.addToTop(q);
+                    c.addToTop(q.makeCopy());
                 }
             }
             AbstractDungeon.gridSelectScreen.open(c, 1, false, "Choose."); //TODO: Localize
@@ -97,6 +97,6 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
 
     @Override
     public void onVictory() {
-        AbstractDungeon.getCurrRoom().addCardReward(new RewardItem(myColor));
+        AbstractDungeon.getCurrRoom().rewards.add(new ColorfulCardReward(myColor));
     }
 }
