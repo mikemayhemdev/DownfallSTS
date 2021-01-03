@@ -14,14 +14,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.powers.SlowPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.SpeechBubble;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
+import downfall.monsters.NeowBossFinal;
 import downfall.vfx.NeowBossRezEffect;
 import slimebound.SlimeboundMod;
 
@@ -36,10 +40,15 @@ public class NeowReturnAction extends AbstractGameAction {
 
     @Override
     public void update() {
-
-        owner.currentHealth = owner.maxHealth;
-        owner.halfDead = false;
-       // AbstractDungeon.getCurrRoom().cannotLose = false;
+        AbstractDungeon.bossKey = NeowBossFinal.ID;
+        CardCrawlGame.music.fadeOutBGM();
+        CardCrawlGame.music.fadeOutTempBGM();
+        MapRoomNode node = new MapRoomNode(-1, 5);
+        node.room = new MonsterRoomBoss();
+        AbstractDungeon.nextRoom = node;
+        AbstractDungeon.closeCurrentScreen();
+        AbstractDungeon.nextRoomTransitionStart();
+        AbstractDungeon.getCurrRoom().cannotLose = false;
         this.isDone = true;
     }
 }
