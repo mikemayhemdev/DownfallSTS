@@ -158,7 +158,10 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Requires a Stance. NL Gain !B! Block. NL Gain !M! champ:Counter."
+    "DESCRIPTION": "Requires a Stance. NL Gain !B! Block. NL Gain !M! champ:Counter.",
+    "EXTENDED_DESCRIPTION": [
+      "I am not in a Stance."
+    ]
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
@@ -167,7 +170,11 @@
   },
   "champ:FalseCounter": {
     "NAME": "False Counter",
-    "DESCRIPTION": "Gain !M! champ:Counter. NL The next time champ:Counter activates, lose half your champ:Counter instead of removing it."
+    "DESCRIPTION": "Requires champ:Defensive. NL The next time champ:Counter activates, lose only half.",
+    "UPGRADE_DESCRIPTION": "Requires champ:Defensive. NL Gain !M! champ:Counter. NL The next time champ:Counter activates, lose only half.",
+    "EXTENDED_DESCRIPTION": [
+      "A poor time for that move."
+    ]
   },
   "champ:IronFortress": {
     "NAME": "Iron Fortress",
@@ -283,9 +290,10 @@
   },
   "champ:HeartStrike": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal damage equal to your champ:Fatigue.",
+    "DESCRIPTION": "Requires champ:Berserker. NL Deal damage equal to your champ:Fatigue.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage.)"
+      " NL (Deals !D! damage.)",
+      "A poor time for that move."
     ]
   },
   "champ:CrownThrow": {
@@ -308,7 +316,7 @@
     "NAME": "Reckless Leap",
     "DESCRIPTION": "Requires champ:Berserker. NL Deal !D! damage. NL champ:Fatigue !M!.",
     "EXTENDED_DESCRIPTION": [
-      "I don't have enough bloodlust."
+      "A poor time for that move."
     ]
   },
   "champ:IgnorePain": {
@@ -344,10 +352,15 @@
     "DESCRIPTION": "The first time you use a champ:Combo each turn, return it to your hand. NL It costs 0 until played."
   },
   "champ:CalledShot": {
-    "NAME": "Called Shot",
-    "DESCRIPTION": "Draw 2 cards. NL The next *Finisher you play does not exit Stance.",
-    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL The next !M! *Finishers you play do not exit Stance."
-  },
+    "NAME": "Refreshment",
+    "DESCRIPTION": "*Berserker champ:Combo: Gain [E] [E] , then Exhaust this. NL *Defensive champ:Combo: Draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "*Berserker champ:Combo: Gain [E] [E] [E] , then Exhaust this. NL *Defensive champ:Combo: Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "Berserker champ:Combo: Gain [E] [E] , then Exhaust this. NL ",
+      "Berserker champ:Combo: Gain [E] [E] [E] , then Exhaust this. NL ",
+      "Defensive champ:Combo: Draw !M! cards.",
+      "A poor time for that move."
+    ]},
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Strike\"."
@@ -398,8 +411,10 @@
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
     "DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose all champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Requires *Defensive. NL Deal damage equal to your champ:Counter to ALL enemies. NL Lose half of your champ:Counter.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Deals !D! damage)"
+      " NL (Deals !D! damage)",
+      "A poor time for that move."
     ]
   },
   "champ:Parry": {

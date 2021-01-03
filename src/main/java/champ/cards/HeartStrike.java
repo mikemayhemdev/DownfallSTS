@@ -2,6 +2,8 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.ResolvePower;
+import champ.stances.BerserkerStance;
+import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -20,7 +22,15 @@ public class HeartStrike extends AbstractChampCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         tags.add(ChampMod.FINISHER);
-        this.tags.add(SneckoMod.BANNEDFORSNECKO);
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (!(AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID))) {
+            cantUseMessage = EXTENDED_DESCRIPTION[1];
+            return false;
+        }
+        return super.canUse(p, m);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,7 +42,6 @@ public class HeartStrike extends AbstractChampCard {
         }
         finisher();
     }
-
 
     @Override
     public void applyPowers() {
