@@ -110,6 +110,7 @@ public class NeowBoss extends AbstractMonster {
             setHp(750);
         }
 
+
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
@@ -330,10 +331,26 @@ public class NeowBoss extends AbstractMonster {
                 playSfx();
             {
 
+                int invincibleAmt = 300;
+                if (AbstractDungeon.ascensionLevel >= 19) {
+                    invincibleAmt -= 100;
+                }
+
+                int beatAmount = 2;
+                if (AbstractDungeon.ascensionLevel >= 19) {
+                    beatAmount++;
+                }
+
                 AbstractDungeon.actionManager.addToBottom(new NeowReturnAction(this));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new InvinciblePower(this, invincibleAmt), invincibleAmt));
 
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this)));
-
+                for (int i = 0; i < 3; i++) {
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+                }
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, beatAmount)));
+                for (int i = 0; i < 5; i++) {
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+                }
                 for (int i = 0; i < 5; i++) {
                     AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
                 }
