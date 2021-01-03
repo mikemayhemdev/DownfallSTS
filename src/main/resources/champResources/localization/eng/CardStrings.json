@@ -343,8 +343,8 @@
   },
   "champ:CalledShot": {
     "NAME": "Called Shot",
-    "DESCRIPTION": "Draw 2 cards. NL The next *Finisher you play do not exit Stance or end your turn.",
-    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL The next !M! *Finishers you play do not exit Stance or end your turn."
+    "DESCRIPTION": "Draw 2 cards. NL The next *Finisher you play does not exit Stance.",
+    "UPGRADE_DESCRIPTION": "Draw 2 cards. NL The next !M! *Finishers you play do not exit Stance."
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfected Strike",
@@ -423,7 +423,8 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Fancy Footwork",
-    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! cards.",
+    "DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Requires *Defensive or *Berserker. NL Enter the Stance you aren't in. NL Draw !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "I am not in a Stance."
     ]

@@ -13,7 +13,7 @@ public class FancyFootwork extends AbstractChampCard {
 
     // intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public FancyFootwork() {
@@ -42,5 +42,7 @@ public class FancyFootwork extends AbstractChampCard {
 
     public void upp() {
         upgradeMagicNumber(UPG_MAGIC);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }
