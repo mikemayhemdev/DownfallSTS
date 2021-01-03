@@ -17,7 +17,7 @@ public class UnbridledRage extends AbstractPower {
 
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowWatcher184.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/NeowWatcher132.png"));
-    private boolean firstTurn;
+    private boolean active;
 
     public UnbridledRage(final AbstractCreature owner) {
         this.ID = POWER_ID;
@@ -31,22 +31,28 @@ public class UnbridledRage extends AbstractPower {
 
         this.updateDescription();
 
-        firstTurn = true;
+        active = false;
         this.canGoNegative = false;
     }
 
     @Override
     public int onLoseHp(int damageAmount) {
-        if (owner.currentHealth <= owner.maxHealth / 2){
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 6), 6));
+        if (!active) {
+            if (owner.currentHealth <= owner.maxHealth / 2) {
+                active = true;
+                addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, 6), 6));
+            }
         }
         return super.onLoseHp(damageAmount);
     }
 
     @Override
     public int onHeal(int healAmount) {
-        if (owner.currentHealth > owner.maxHealth / 2){
-            addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -6), -6));
+        if (active) {
+            if (owner.currentHealth > owner.maxHealth / 2) {
+                active = false;
+                addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -6), -6));
+            }
         }
         return super.onHeal(healAmount);
     }
