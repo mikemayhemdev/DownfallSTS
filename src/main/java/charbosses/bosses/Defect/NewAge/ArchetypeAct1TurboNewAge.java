@@ -3,6 +3,7 @@ package charbosses.bosses.Defect.NewAge;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
 import charbosses.cards.curses.EnAged;
+import charbosses.cards.curses.EnShame;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +18,7 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         bossMechanicName = bossMechanicString.DIALOG[0];
         bossMechanicDesc = bossMechanicString.DIALOG[1];
 
-        maxHPModifier += 100;
+        maxHPModifier += 150;
         actNum = 1;
         SlimeboundMod.logger.info("Archetype act num: " + actNum);
     }
@@ -43,9 +44,9 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnTurbo(), false);
-                    addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
                     addToList(cardsList, new EnBuffer(), false);
+                    addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
+                    addToList(cardsList, new EnShame(), false);
                     turn++;
                     break;
                 case 1:
@@ -76,22 +77,22 @@ public class ArchetypeAct1TurboNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnTurbo(), true);
                     addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
-                    addToList(cardsList, new EnEquilibrium(), extraUpgrades);
+                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
+                    addToList(cardsList, new EnShame(), false);
                     turn++;
                     break;
                 case 1:
+                    addToList(cardsList, new EnTurbo(), true);
+                    addToList(cardsList, new EnSunder(), false);
+                    addToList(cardsList, new EnEquilibrium(), extraUpgrades);
+                    turn++;
+                    break;
+                case 2:
                     addToList(cardsList, new EnDefendBlue(), false);
                     addToList(cardsList, new EnStrikeBlue(), false);
                     addToList(cardsList, new EnSteamBarrier(steamBarrierCasts), false);
                     steamBarrierCasts++;
-                    turn++;
-                    break;
-                case 2:
-                    addToList(cardsList, new EnTurbo(), true);
-                    addToList(cardsList, new EnSunder(), false);
-                    addToList(cardsList, new EnDefendBlue(), extraUpgrades);
                     turn = 0;
                     break;
 

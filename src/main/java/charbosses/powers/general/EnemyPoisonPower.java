@@ -61,7 +61,7 @@ public class EnemyPoisonPower extends AbstractPower {
                 int remainingPoison = amount;
                 while (remainingPoison > 0 && EnergyPanel.totalCount > 0){
                        remainingPoison -= 10;
-                       AbstractDungeon.player.loseEnergy(1);
+                       AbstractDungeon.player.energy.use(1);
                        stackPower(-10);
                     AbstractDungeon.player.getPower(PoisonProtectionPower.POWER_ID).flashWithoutSound();
                 }

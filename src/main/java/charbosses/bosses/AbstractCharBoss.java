@@ -204,6 +204,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             new CBR_LizardTail().instantObtain(this);
             // new CBR_MagicFlower().instantObtain(this);
         }
+        /*
         if (NeowBoss.neowboss != null) {
             switch (chosenArchetype.actNum) {
                 case 1: {
@@ -223,6 +224,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
             }
         }
+        */
         maxHealth += chosenArchetype.maxHPModifier;
         if (AbstractDungeon.ascensionLevel >= 9) {
             maxHealth = Math.round(maxHealth * 1.2F);
