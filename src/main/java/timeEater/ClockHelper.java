@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -50,11 +51,18 @@ public class ClockHelper {
             }
         }
         if (clock == 12) {
-            AbstractDungeon.actionManager.callEndTurnEarlySequence();
-            CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
-            AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLD, true));
-            AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
             atb(new ResetClockAction());
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
+                    AbstractDungeon.actionManager.callEndTurnEarlySequence();
+                    CardCrawlGame.sound.play("POWER_TIME_WARP", 0.05F);
+                    AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.GOLD, true));
+                    AbstractDungeon.topLevelEffectsQueue.add(new TimeWarpTurnEndEffect());
+                }
+            });
         }
     }
 
