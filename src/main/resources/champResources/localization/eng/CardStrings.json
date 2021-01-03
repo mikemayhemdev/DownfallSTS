@@ -60,7 +60,8 @@
   },
   "champ:DefensiveShout": {
     "NAME": "Defensive Shout",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter."
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !M! champ:Counter. NL Draw a card."
   },
   "champ:ShieldSigil": {
     "NAME": "Chain Lash",
@@ -97,7 +98,8 @@
   },
   "champ:BerserkersShout": {
     "NAME": "Berserker's Shout",
-    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!."
+    "DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Berserker. NL champ:Fatigue !M!. NL Draw a card."
   },
   "champ:RageSigil": {
     "NAME": "Battle Plan",
@@ -156,7 +158,7 @@
   },
   "champ:BringItOn": {
     "NAME": "Bring It On",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter."
+    "DESCRIPTION": "Requires a Stance. NL Gain !B! Block. NL Gain !M! champ:Counter."
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",

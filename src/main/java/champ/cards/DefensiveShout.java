@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -26,10 +27,10 @@ public class DefensiveShout extends AbstractChampCard {
         techique();
         defenseOpen();
         applyToSelf(new CounterPower(magicNumber));
+        if (upgraded) atb(new DrawCardAction(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(UPG_MAGIC);
         rawDescription = UPGRADE_DESCRIPTION;
         initializeDescription();
     }
