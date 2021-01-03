@@ -7,6 +7,6 @@ public class ResetClockAction extends AbstractGameAction {
     @Override
     public void update() {
         isDone = true;
-        ClockHelper.clock = 1;
+        ClockHelper.clock = 0;
     }
 }

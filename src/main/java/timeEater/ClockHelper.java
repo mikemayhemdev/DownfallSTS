@@ -36,7 +36,7 @@ public class ClockHelper {
 
     public static boolean active = false;
 
-    public static int clock = 1;
+    public static int clock = 0;
 
     public static void tick() {
         clock += 1;
