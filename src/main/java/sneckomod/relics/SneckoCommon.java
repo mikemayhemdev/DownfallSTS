@@ -22,7 +22,6 @@ public class SneckoCommon extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
-    private String chosenChar = "UNCHOSEN";
     private boolean chosenInGeneral = true;
 
     @Override
@@ -50,7 +49,8 @@ public class SneckoCommon extends CustomRelic {
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !chosenInGeneral) {
             chosenInGeneral = true;
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            chosenChar = SneckoMod.getClassFromColor(c.color);
+            SneckoBoss.chosenChar = SneckoMod.getClassFromColor(((UnknownClass)c).myColor);
+            SneckoBoss.myColor = ((UnknownClass)c).myColor;
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c.makeCopy(), Settings.WIDTH / 2F, Settings.HEIGHT / 2F));
             AbstractDungeon.commonCardPool.group.removeIf(q -> q instanceof UnknownClass && !q.cardID.equals(c.cardID));
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
@@ -59,9 +59,14 @@ public class SneckoCommon extends CustomRelic {
     }
 
     public String getUpdatedDescription() {
-        if (!chosenChar.equals("UNCHOSEN")) { //I sure hope no one makes a character called The UNCHOSEN.
-            return DESCRIPTIONS[1] + chosenChar + DESCRIPTIONS[2];
+        if (!SneckoBoss.chosenChar.equals("UNCHOSEN")) { //I sure hope no one makes a character called UNCHOSEN.
+            return DESCRIPTIONS[1] + SneckoBoss.chosenChar + DESCRIPTIONS[2];
         }
         return DESCRIPTIONS[0];
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return !AbstractDungeon.player.hasRelic(SneckoBoss.ID);
     }
 }

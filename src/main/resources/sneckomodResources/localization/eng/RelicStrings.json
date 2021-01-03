@@ -109,5 +109,15 @@
       "All Unknown Character cards found will be ",
       " cards."
     ]
+  },
+  "sneckomod:SneckoBoss": {
+    "NAME": "Flawless Costume",
+    "FLAVOR": "\"Beep boop. Defect here.\" \"That's a cardboard mask...\"",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose #b1 of #b3 #yUnknown Character cards. Add #b5 copies of it to your deck. All combats drop an additional card reward of the chosen character's cards.",
+      "Upon pickup, obtain #b5 #yUnknown ",
+      " cards. All combats drop an additional ",
+      " card reward."
+    ]
   }
 }

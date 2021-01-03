@@ -12,7 +12,7 @@ import java.util.function.Predicate;
 public class UnknownClass extends AbstractUnknownCard {
     public final static String ID = makeID("UnknownClass");
     private static String[] unknownClass = CardCrawlGame.languagePack.getUIString(ID).TEXT;
-    private CardColor myColor;
+    public CardColor myColor;
 
     public UnknownClass(CardColor cardColor) {
         super(ID + cardColor.name(), determineCardImg(cardColor), CardType.SKILL, CardRarity.COMMON);
