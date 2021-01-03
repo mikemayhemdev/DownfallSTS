@@ -14,13 +14,8 @@ public class PreemptiveStrike extends AbstractChampCard {
 
     public final static String ID = makeID("PreemptiveStrike");
 
-    //stupid intellij stuff ATTACK, ENEMY, STARTER
-
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
-
     public PreemptiveStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 0;
         isMultiDamage = true;
         tags.add(CardTags.STRIKE);
