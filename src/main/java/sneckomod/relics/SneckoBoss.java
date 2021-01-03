@@ -17,8 +17,8 @@ import theHexaghost.util.TextureLoader;
 public class SneckoBoss extends CustomRelic implements CustomSavable<String> {
 
     public static final String ID = SneckoMod.makeID("SneckoBoss");
-    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("SealOfApproval.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("SealOfApproval.png"));
+    private static final Texture IMG = TextureLoader.getTexture(SneckoMod.makeRelicPath("LuckyHorseshoe.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(SneckoMod.makeRelicOutlinePath("LuckyHorseshoe.png"));
 
     public SneckoBoss() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
