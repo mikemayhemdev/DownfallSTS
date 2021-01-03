@@ -25,7 +25,7 @@
       "Defensive Technique",
       "Gladiator Technique",
       "#yFatigue #b3, gain #b4 #yCounter.",
-      "Lose all #yFatigue and gain that much HP, preserving #yStrength. Gain 12 Block.",
+      "Lose all #yFatigue and gain that much HP, preserving #yStrength. Gain 12 Block. Do not leave Ultimate Stance.",
       "Counts as #rBerserker and #bDefensive for all purposes. You cannot switch Stances.",
       " turns.",
       "Current Stance",

@@ -29,6 +29,7 @@ public class DelayedSlice extends AbstractBronzeCard {
     public void onCompile(AbstractCard function, boolean forGameplay) {
         if (forGameplay) {
             for (AbstractMonster q : monsterList()) {
+                if (!q.isDeadOrEscaped())
                 addToBot(new LoseHPAction(q, q, magicNumber, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
         }
