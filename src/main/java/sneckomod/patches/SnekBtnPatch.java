@@ -24,7 +24,7 @@ public class SnekBtnPatch {
     public static class RenderBtn {
         public static void Postfix(CharacterOption obj, SpriteBatch sb) {
             if (obj.name.toLowerCase().contains("snecko") && obj.selected) {
-                challengeDownHitbox.move(190.0f * Settings.scale, Settings.HEIGHT / 2.0f - 240.0f * Settings.scale);
+                challengeDownHitbox.move(190.0f * Settings.scale, Settings.HEIGHT / 2.0f - 190.0f * Settings.scale);
                 challengeDownHitbox.render(sb);
 
                 sb.setColor(Color.WHITE);
