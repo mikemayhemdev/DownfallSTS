@@ -290,11 +290,11 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Divide & Conquer",
-    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Deal !D! damage to ALL enemies for each Slime *Absorbed. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies for each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Serve & Protect",
-    "DESCRIPTION": "slimeboundmod:Absorb all Slimes. NL Gain !B! Block and 1 bronze:Blur each Slime *Absorbed. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block and 1 bronze:Blur each Slime. NL slimeboundmod:Absorb all Slimes. NL Exhaust."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Split: Bruiser",
