@@ -13,21 +13,21 @@ public class HeavySlash extends AbstractChampCard {
 
     //stupid intellij stuff attack, enemy, rare
 
-    private static final int DAMAGE = 18;
+    private static final int DAMAGE = 10;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public HeavySlash() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
-        tags.add(ChampMod.FINISHER);
+        //tags.add(ChampMod.FINISHER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         //finisher();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        finisher();
+        //finisher();
     }
 
     public int upgradeAmount() {

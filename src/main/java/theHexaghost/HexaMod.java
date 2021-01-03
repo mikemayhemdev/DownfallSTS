@@ -36,7 +36,12 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.relics.UnknownEgg;
+import sneckomod.TheSnecko;
+import sneckomod.cards.*;
+import sneckomod.cards.unknowns.UnknownColorless;
+import sneckomod.cards.unknowns.UnknownDexterity;
+import sneckomod.cards.unknowns.UnknownStrength;
+import sneckomod.relics.*;
 import theHexaghost.cards.*;
 import theHexaghost.events.*;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -258,51 +263,29 @@ public class HexaMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                GiftsFromTheDead.ID, PowerFromBeyond.ID, FlamesFromBeyond.ID
+        downfallMod.registerUnlockSuite(
+                GiftsFromTheDead.ID,
+                PowerFromBeyond.ID,
+                FlamesFromBeyond.ID,
+
+                Toasty.ID,
+                SpectralSpark.ID,
+                SuperheatedStrike.ID,
+
+                ApocalypticArmor.ID,
+                ApocalypseNow.ID,
+                UnlimitedPower.ID,
+
+                RecyclingMachine.ID,
+                SoulOfChaos.ID,
+                JarOfFuel.ID,
+
+                BolsterEngine.ID,
+                CandleOfCauterizing.ID,
+                Sixitude.ID,
+
+                TheHexaghost.Enums.THE_SPIRIT
         );
-        UnlockTracker.addCard(GiftsFromTheDead.ID);
-        UnlockTracker.addCard(PowerFromBeyond.ID);
-        UnlockTracker.addCard(FlamesFromBeyond.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                Toasty.ID, SpectralSpark.ID, SuperheatedStrike.ID
-        );
-        UnlockTracker.addCard(Toasty.ID);
-        UnlockTracker.addCard(SpectralSpark.ID);
-        UnlockTracker.addCard(SuperheatedStrike.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                ApocalypticArmor.ID, ApocalypseNow.ID, UnlimitedPower.ID
-        );
-        UnlockTracker.addCard(ApocalypticArmor.ID);
-        UnlockTracker.addCard(ApocalypseNow.ID);
-        UnlockTracker.addCard(UnlimitedPower.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                RecyclingMachine.ID, SoulOfChaos.ID, JarOfFuel.ID
-        );
-        UnlockTracker.addRelic(RecyclingMachine.ID);
-        UnlockTracker.addRelic(SoulOfChaos.ID);
-        UnlockTracker.addRelic(JarOfFuel.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                BolsterEngine.ID, CandleOfCauterizing.ID, Sixitude.ID
-        );
-        UnlockTracker.addRelic(BolsterEngine.ID);
-        UnlockTracker.addRelic(CandleOfCauterizing.ID);
-        UnlockTracker.addRelic(Sixitude.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, TheHexaghost.Enums.THE_SPIRIT, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, TheHexaghost.Enums.THE_SPIRIT, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, TheHexaghost.Enums.THE_SPIRIT, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, TheHexaghost.Enums.THE_SPIRIT, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, TheHexaghost.Enums.THE_SPIRIT, 4);
-
     }
 
 

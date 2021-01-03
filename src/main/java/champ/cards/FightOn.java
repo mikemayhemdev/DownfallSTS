@@ -1,3 +1,4 @@
+/*
 package champ.cards;
 
 import champ.powers.ResolvePower;
@@ -51,3 +52,5 @@ public class FightOn extends AbstractChampCard {
     public void upp() {
     }
 }
+
+ */

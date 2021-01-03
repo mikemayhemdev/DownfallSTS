@@ -15,15 +15,15 @@ public class Shatter extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     public Shatter() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-      //  tags.add(ChampMod.TECHNIQUE);
+        //  tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBOBERSERKER);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-       // techique();
+        // techique();
         if (bcombo()) {
             atb(new RemoveAllBlockAction(m, p));
             if (upgraded) atb(new RemoveSpecificPowerAction(m, p, ArtifactPower.POWER_ID));

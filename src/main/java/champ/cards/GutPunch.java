@@ -1,7 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -35,9 +34,9 @@ public class GutPunch extends AbstractChampCard {
         berserkOpen();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-      //  fatigue(2);
+        //  fatigue(2);
         if (dcombo()) {
-           // exhaust = true;
+            // exhaust = true;
             fatigue(magicNumber);
         }
     }
@@ -45,13 +44,13 @@ public class GutPunch extends AbstractChampCard {
     public void upp() {
         upgradeDamage(UPG_DAMAGE);
         upgradeMagicNumber(UPG_MAGIC);
-       // myHpLossCost++;
+        // myHpLossCost++;
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if (dcombo()){
+        if (dcombo()) {
             myHpLossCost = magicNumber;
         } else {
             myHpLossCost = 0;

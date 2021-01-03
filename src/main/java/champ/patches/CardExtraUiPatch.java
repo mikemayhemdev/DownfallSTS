@@ -49,23 +49,11 @@ public class CardExtraUiPatch {
                     }
                     //Opener / Technique / Finisher draws
                     if (__instance.hasTag(ChampMod.OPENER)) {
-                        if (__instance instanceof Aggression){
-                            renderHelper(sb, openerYR, __instance.current_x, __instance.current_y, __instance);
-                        }
-                        else if (__instance instanceof Balance){
-                            renderHelper(sb, openerYB, __instance.current_x, __instance.current_y, __instance);
-                        }
-                        else if (__instance instanceof Control){
-                            renderHelper(sb, openerRB, __instance.current_x, __instance.current_y, __instance);
-                        }
-                        else if (__instance instanceof StanceDance || __instance instanceof Taunt){
+                        if (__instance instanceof StanceDance || __instance instanceof Taunt){
                             renderHelper(sb, openerall, __instance.current_x, __instance.current_y, __instance);
                         }
                         else if (__instance.hasTag(ChampMod.OPENERBERSERKER)){
                             renderHelper(sb, openerR, __instance.current_x, __instance.current_y, __instance);
-                        }
-                        else if (__instance.hasTag(ChampMod.OPENERGLADIATOR)){
-                            renderHelper(sb, openerY, __instance.current_x, __instance.current_y, __instance);
                         }
                         else {
                             renderHelper(sb, openerB, __instance.current_x, __instance.current_y, __instance);

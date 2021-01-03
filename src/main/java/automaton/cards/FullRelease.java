@@ -14,7 +14,7 @@ public class FullRelease extends AbstractBronzeCard {
 
 
     public FullRelease() {
-        super(ID, 1, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF);
         thisEncodes();
     }
 

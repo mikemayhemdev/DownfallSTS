@@ -10,7 +10,7 @@
     "NAME": "Black Knight's Helm",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "The first time you enter each Stance each combat: NL #bDefensive: Gain 2 Dexterity and lose 1 Strength. NL #yGladiator: Gain 1 Dexterity and 1 Strength. NL #rBerserker: Gain 2 Strength and lose 1 Dexterity."
+      "The first time you enter each Stance each combat: NL #bDefensive: Gain 1 Dexterity. NL #rBerserker: Gain 1 Strength."
     ]
   },
   "champ:Barbells": {
@@ -31,14 +31,14 @@
     "NAME": "Victorious Crown",
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
-      "Replaces #rChampion's #rCrown. NL Start each combat in Ultimate #yStance, which lasts for #b2 turns."
+      "Replaces #rChampion's #rCrown. NL Start each combat in #yUltimate #yStance, which lasts for #b2 turns."
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "Defensive Thesis",
     "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
-      "#yTechniques used in Defensive #yStance generate #b3 more #yCounter."
+      "Defensive Stance's #yFinisher #yBonus grants #b8 more #yBlock."
     ]
   },
   "champ:DeflectingBracers": {

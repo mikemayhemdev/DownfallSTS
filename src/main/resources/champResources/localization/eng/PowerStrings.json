@@ -12,26 +12,18 @@
       "You have #b1 #yStrength for every #b5 Fatigue. At the end of combat, restore your Fatigued HP."
     ]
   },
-  "champ:FocusedGladPower": {
-    "NAME": "Gladiator Boost!",
-    "DESCRIPTIONS": [
-      "Until you exit #yGladiator, #yTechniques draw #b",
-      " additional card.",
-      " additional cards."
-    ]
-  },
   "champ:FocusedDefPower": {
-    "NAME": "Defensive Boost!",
+    "NAME": "Focused: Defensive",
     "DESCRIPTIONS": [
-      "Until you exit #yDefensive, #yTechniques grant #b",
-      " additional #yCounter."
+      "At the end of your turn, if you have at least #b20 #yCounter, gain #b",
+      " #yBlock."
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "Berserker Boost!",
+    "NAME": "Focused: Berserker",
     "DESCRIPTIONS": [
-      "Until you exit #yBerserker, #yTechniques #yFatigue #b",
-      " more."
+      "At the end of your turn, if you have at least #b15 #yFatigue, deal #b",
+      " damage to ALL enemies."
     ]
   },
   "champ:EnchantedShieldPower": {
@@ -46,7 +38,7 @@
     "NAME": "Shield Wall",
     "DESCRIPTIONS": [
       "At the end of your turn, gain #b",
-      " #yCounter for each card in hand."
+      " #yCounter."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -125,23 +117,22 @@
   "champ:DefensiveStylePower": {
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yDefensive, gain #b",
-      " #yBlock and #b",
-      " #yCounter."
+      "#yDefensive #yTechniques grant #b",
+      " additional #yCounter."
     ]
   },
   "champ:GladiatorStylePower": {
-    "NAME": "Gladiator Style",
+    "NAME": "Good Clean Fight",
     "DESCRIPTIONS": [
-      "If you start your turn in #yGladiator, gain #b",
+      "If you start your turn in no #yStance, gain #b",
       " temporary #yStrength and #yDexterity."
     ]
   },
   "champ:BerserkerStylePower": {
     "NAME": "Berserker Style",
     "DESCRIPTIONS": [
-      "If you start your turn in #yBerserker, #yFatigue #b",
-      " and gain [E] ."
+      "#yBerserker #yTechniques grant #b",
+      " more #yFatigue."
     ]
   },
   "champ:FalseCounterPower": {
@@ -174,6 +165,15 @@
       " Strength."
     ]
   },
+  "champ:GladiatorFormPower": {
+    "NAME": "Gladiator Form",
+    "DESCRIPTIONS": [
+      "Whenever you use a #yTechnique #yBonus, draw #b",
+      " card. Whenever you use a #yFinisher #yBonus, gain [E] next turn.",
+      " cards. Whenever you use a #yFinisher #yBonus, gain #b",
+      " [E] next turn."
+    ]
+  },
   "champ:NoBlockNextTurnPower": {
     "NAME": "Shield Thrown",
     "DESCRIPTIONS": [
@@ -188,6 +188,26 @@
       "Ultimate Stance will expire this turn.",
       "Ultimate Stance will last #b",
       " more turns."
+    ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "En Garde",
+    "DESCRIPTIONS": [
+      "If your Block is broken this turn, gain #b",
+      " Block next turn."
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "Parrying",
+    "DESCRIPTIONS": [
+      "If your Counter is used this turn, add Riposte to your hand."
+    ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "Boomerang",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, return ",
+      " to your hand. It costs #b0 until played."
     ]
   }
 }

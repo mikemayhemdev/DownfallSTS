@@ -10,8 +10,8 @@ public class ShieldWall extends AbstractChampCard {
 
     //stupid intellij stuff power, self, uncommon
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 6;
+    private static final int UPG_MAGIC = 3;
 
     public ShieldWall() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);

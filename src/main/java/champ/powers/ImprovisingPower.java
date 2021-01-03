@@ -57,9 +57,6 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
                 if (card.hasTag(ChampMod.COMBOBERSERKER)) {
                     returnCard = true;
                 }
-                if (card.hasTag(ChampMod.COMBOGLADIATOR)) {
-                    returnCard = true;
-                }
                 if (card.hasTag(ChampMod.COMBODEFENSIVE)) {
                     returnCard = true;
                 }

@@ -42,11 +42,13 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.SlimeboundMod;
 import sneckomod.TheSnecko;
 import sneckomod.events.BackToBasicsSnecko;
 
@@ -73,8 +75,7 @@ public class ChampMod implements
         OnCardUseSubscriber,
         PreMonsterTurnSubscriber,
         OnPlayerLoseBlockSubscriber,
-        PostUpdateSubscriber
-{
+        PostUpdateSubscriber {
     public static final String SHOULDER1 = "champResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "champResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "champResources/images/char/mainChar/corpse.png";
@@ -98,8 +99,6 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags OPENERDEFENSIVE;
     @SpireEnum
-    public static AbstractCard.CardTags OPENERGLADIATOR;
-    @SpireEnum
     public static AbstractCard.CardTags OPENERBERSERKER;
     @SpireEnum
     public static AbstractCard.CardTags FINISHER;
@@ -110,8 +109,6 @@ public class ChampMod implements
     @SpireEnum
     public static AbstractCard.CardTags COMBODEFENSIVE;
     @SpireEnum
-    public static AbstractCard.CardTags COMBOGLADIATOR;
-    @SpireEnum
     public static AbstractCard.CardTags COMBOBERSERKER;
 
     private static String modID = "champ";
@@ -120,11 +117,6 @@ public class ChampMod implements
     public static int techniquesThisTurn = 0;
     public static boolean talked1 = false;
     public static boolean talked2 = false;
-    private CustomUnlockBundle unlocks0;
-    private CustomUnlockBundle unlocks1;
-    private CustomUnlockBundle unlocks2;
-    private CustomUnlockBundle unlocks3;
-    private CustomUnlockBundle unlocks4;
 
     public static boolean enteredDefensiveThisTurn;
     public static boolean enteredBerserkerThisTurn;
@@ -302,50 +294,29 @@ public class ChampMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                Aggression.ID, Balance.ID, Control.ID
+        downfallMod.registerUnlockSuite(
+                BerserkerStyle.ID,
+                ViciousMockery.ID,
+                DefensiveStyle.ID,
+
+                RageSigil.ID,
+                ShieldSigil.ID,
+                SwordSigil.ID,
+
+                EnchantShield.ID,
+                EnchantSword.ID,
+                EnchantCrown.ID,
+
+                SignatureFinisher.ID,
+                PowerArmor.ID,
+                SpectersHand.ID,
+
+                DuelingGlove.ID,
+                Barbells.ID,
+                DeflectingBracers.ID,
+
+                ChampChar.Enums.THE_CHAMP
         );
-        UnlockTracker.addCard(Aggression.ID);
-        UnlockTracker.addCard(Balance.ID);
-        UnlockTracker.addCard(Control.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                RageSigil.ID, ShieldSigil.ID, SwordSigil.ID
-        );
-        UnlockTracker.addCard(RageSigil.ID);
-        UnlockTracker.addCard(ShieldSigil.ID);
-        UnlockTracker.addCard(SwordSigil.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                EnchantShield.ID, EnchantSword.ID, EnchantCrown.ID
-        );
-        UnlockTracker.addCard(EnchantShield.ID);
-        UnlockTracker.addCard(EnchantSword.ID);
-        UnlockTracker.addCard(EnchantCrown.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                SignatureFinisher.ID, PowerArmor.ID, SpectersHand.ID
-        );
-        UnlockTracker.addRelic(SignatureFinisher.ID);
-        UnlockTracker.addRelic(PowerArmor.ID);
-        UnlockTracker.addRelic(SpectersHand.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                DuelingGlove.ID, Barbells.ID, DeflectingBracers.ID
-        );
-        UnlockTracker.addRelic(DuelingGlove.ID);
-        UnlockTracker.addRelic(Barbells.ID);
-        UnlockTracker.addRelic(DeflectingBracers.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, ChampChar.Enums.THE_CHAMP, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, ChampChar.Enums.THE_CHAMP, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, ChampChar.Enums.THE_CHAMP, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, ChampChar.Enums.THE_CHAMP, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, ChampChar.Enums.THE_CHAMP, 4);
 
     }
 
@@ -504,20 +475,20 @@ public class ChampMod implements
         }
     }
 
-    public static void updateTechniquesInCombat(){
-        for (AbstractCard c: AbstractDungeon.player.drawPile.group){
+    public static void updateTechniquesInCombat() {
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.discardPile.group){
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.hand.group){
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.exhaustPile.group){
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
-        for (AbstractCard c: AbstractDungeon.player.limbo.group){
+        for (AbstractCard c : AbstractDungeon.player.limbo.group) {
             if (c.hasTag(TECHNIQUE)) c.initializeDescription();
         }
     }

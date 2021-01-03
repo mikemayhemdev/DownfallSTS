@@ -18,6 +18,9 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampChar;
+import champ.cards.*;
+import champ.relics.*;
 import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.Loader;
@@ -37,6 +40,7 @@ import com.megacrit.cardcrawl.unlock.AbstractUnlock;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.cardmods.EtherealMod;
 import downfall.cardmods.ExhaustMod;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
 import guardian.patches.BottledStasisPatch;
 import javassist.CtClass;
@@ -289,51 +293,29 @@ public class AutomatonMod implements
     @Override
     public void receiveSetUnlocks() {
 
-        unlocks0 = new CustomUnlockBundle(
-                Constructor.ID, Separator.ID, Terminator.ID
+        downfallMod.registerUnlockSuite(
+                Constructor.ID,
+                Separator.ID,
+                Terminator.ID,
+
+                Refactor.ID,
+                InfiniteBeams.ID,
+                InfiniteLoop.ID,
+
+                Hardcode.ID,
+                Library.ID,
+                TinkerersToolbox.ID,
+
+                ElectromagneticCoil.ID,
+                Timepiece.ID,
+                Mallet.ID,
+
+                BronzeIdol.ID,
+                DecasWashers.ID,
+                DonusWashers.ID,
+
+                AutomatonChar.Enums.THE_AUTOMATON
         );
-        UnlockTracker.addCard(Constructor.ID);
-        UnlockTracker.addCard(Separator.ID);
-        UnlockTracker.addCard(Terminator.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                Refactor.ID, InfiniteBeams.ID, InfiniteLoop.ID
-        );
-        UnlockTracker.addCard(Refactor.ID);
-        UnlockTracker.addCard(InfiniteBeams.ID);
-        UnlockTracker.addCard(InfiniteLoop.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                Hardcode.ID, Library.ID, TinkerersToolbox.ID
-        );
-        UnlockTracker.addCard(Hardcode.ID);
-        UnlockTracker.addCard(Library.ID);
-        UnlockTracker.addCard(TinkerersToolbox.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                ElectromagneticCoil.ID, Timepiece.ID, Mallet.ID
-        );
-        UnlockTracker.addRelic(ElectromagneticCoil.ID);
-        UnlockTracker.addRelic(Timepiece.ID);
-        UnlockTracker.addRelic(Mallet.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                BronzeIdol.ID, DecasWashers.ID, DonusWashers.ID
-        );
-        UnlockTracker.addRelic(BronzeIdol.ID);
-        UnlockTracker.addRelic(DecasWashers.ID);
-        UnlockTracker.addRelic(DonusWashers.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, AutomatonChar.Enums.THE_AUTOMATON, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, AutomatonChar.Enums.THE_AUTOMATON, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, AutomatonChar.Enums.THE_AUTOMATON, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, AutomatonChar.Enums.THE_AUTOMATON, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, AutomatonChar.Enums.THE_AUTOMATON, 4);
-
     }
 
 

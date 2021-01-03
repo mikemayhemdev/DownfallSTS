@@ -1,5 +1,8 @@
 package guardian;
 
+import automaton.AutomatonChar;
+import automaton.cards.*;
+import automaton.relics.*;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.ReflectionHacks;
@@ -40,6 +43,8 @@ import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import downfall.cards.curses.Aged;
 import downfall.downfallMod;
 import guardian.cards.*;
+import guardian.cards.BronzeArmor;
+import guardian.cards.BronzeOrb;
 import guardian.characters.GuardianCharacter;
 import guardian.events.StasisEgg;
 import guardian.events.*;
@@ -82,7 +87,7 @@ public class GuardianMod implements PostDrawSubscriber,
         EditCardsSubscriber,
         PostBattleSubscriber,
         AddAudioSubscriber,
-    OnPlayerLoseBlockSubscriber
+        OnPlayerLoseBlockSubscriber
         //basemod.interfaces.EditKeywordsSubscriber
         //EditStringsSubscriber
 {
@@ -411,7 +416,8 @@ public class GuardianMod implements PostDrawSubscriber,
     }
 
     public static boolean canSpawnStasisOrb() {
-        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0)) return true;
+        if (AbstractDungeon.player.hasEmptyOrb() || (AbstractDungeon.player.masterMaxOrbs == 0 && AbstractDungeon.player.maxOrbs == 0))
+            return true;
 
         for (AbstractOrb o : AbstractDungeon.player.orbs) {
             if (!(o instanceof StasisOrb)) {
@@ -450,8 +456,7 @@ public class GuardianMod implements PostDrawSubscriber,
     public int receiveOnPlayerLoseBlock(int i) {
         if (AbstractDungeon.player.stance instanceof DefensiveMode) {
             return 0;
-        }
-        else {
+        } else {
             return i;
         }
     }
@@ -537,54 +542,31 @@ public static void saveData() {
     @Override
     public void receiveSetUnlocks() {
 
+        downfallMod.registerUnlockSuite(
+                GatlingBeam.ID,
+                Orbwalk.ID,
+                FierceBash.ID,
 
-        unlocks0 = new CustomUnlockBundle(
-                GatlingBeam.ID, Orbwalk.ID, FierceBash.ID
+                Gem_Yellow.ID,
+                GemFire.ID,
+                GemFinder.ID,
+
+                StasisEngine.ID,
+                FuturePlans.ID,
+                CompilePackage.ID,
+
+                StasisUpgradeRelic.ID,
+                DefensiveModeMoreBlock.ID,
+                StasisCodex.ID,
+
+                GemstoneGun.ID,
+                PocketSentry.ID,
+                BottledAnomaly.ID,
+
+                GuardianEnum.GUARDIAN
         );
-        UnlockTracker.addCard(GatlingBeam.ID);
-        UnlockTracker.addCard(Orbwalk.ID);
-        UnlockTracker.addCard(FierceBash.ID);
-
-        unlocks1 = new CustomUnlockBundle(
-                Gem_Yellow.ID, GemFire.ID, GemFinder.ID
-        );
-        UnlockTracker.addCard(Gem_Yellow.ID);
-        UnlockTracker.addCard(GemFire.ID);
-        UnlockTracker.addCard(GemFinder.ID);
-
-        unlocks2 = new CustomUnlockBundle(
-                FuturePlans.ID, StasisEngine.ID, CompilePackage.ID
-        );
-        UnlockTracker.addCard(StasisEngine.ID);
-        UnlockTracker.addCard(FuturePlans.ID);
-        UnlockTracker.addCard(CompilePackage.ID);
-
-        unlocks3 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                StasisUpgradeRelic.ID, DefensiveModeMoreBlock.ID, StasisCodex.ID
-        );
-        UnlockTracker.addRelic(StasisUpgradeRelic.ID);
-        UnlockTracker.addRelic(DefensiveModeMoreBlock.ID);
-        UnlockTracker.addRelic(StasisCodex.ID);
-
-        unlocks4 = new CustomUnlockBundle(AbstractUnlock.UnlockType.RELIC,
-                GemstoneGun.ID, PocketSentry.ID, BottledAnomaly.ID
-        );
-
-        UnlockTracker.addRelic(GemstoneGun.ID);
-        UnlockTracker.addRelic(PocketSentry.ID);
-        UnlockTracker.addRelic(BottledAnomaly.ID);
-
-        BaseMod.addUnlockBundle(unlocks0, GuardianEnum.GUARDIAN, 0);
-
-        BaseMod.addUnlockBundle(unlocks1, GuardianEnum.GUARDIAN, 1);
-
-        BaseMod.addUnlockBundle(unlocks2, GuardianEnum.GUARDIAN, 2);
-
-        BaseMod.addUnlockBundle(unlocks3, GuardianEnum.GUARDIAN, 3);
-
-        BaseMod.addUnlockBundle(unlocks4, GuardianEnum.GUARDIAN, 4);
-
     }
+
 
     public void clearUnlockBundles() {
 
@@ -633,7 +615,6 @@ public static void saveData() {
 
         BaseMod.addDynamicVariable(new MultihitVariable());
         BaseMod.addDynamicVariable(new SecondaryMagicVariable());
-
 
 
         BaseMod.addCard(new Strike_Guardian());
@@ -687,7 +668,7 @@ public static void saveData() {
         BaseMod.addCard(new StasisField());
         BaseMod.addCard(new StasisStrike());
         BaseMod.addCard(new ConstructionForm());
-       // BaseMod.addCard(new WeakpointTargeting());
+        // BaseMod.addCard(new WeakpointTargeting());
         BaseMod.addCard(new GemFire());
         BaseMod.addCard(new RollAttack());
         BaseMod.addCard(new Reroute());
@@ -984,8 +965,6 @@ public static void saveData() {
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
-
-
 
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGuardian.ID, BackToBasicsGuardian.class) //Event ID//

@@ -22,16 +22,16 @@ public class ShieldSigil extends AbstractChampCard {
 
         techique();
 //        defenseOpen();
-            for (int i = 0; i < magicNumber; i++) {
-                techique();
-            }
+        for (int i = 0; i < magicNumber; i++) {
+            techique();
+        }
 
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if (bcombo()){
+        if (bcombo()) {
             this.myHpLossCost = BerserkerStance.amount() * magicNumber;
         } else {
             this.myHpLossCost = 0;
@@ -44,8 +44,8 @@ public class ShieldSigil extends AbstractChampCard {
     }
 
     public void upp() {
-       // rawDescription = UPGRADE_DESCRIPTION;
-      //  initializeDescription();
+        // rawDescription = UPGRADE_DESCRIPTION;
+        //  initializeDescription();
         upgradeMagicNumber(1);
     }
 }

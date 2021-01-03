@@ -1,8 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import champ.stances.DefensiveStance;
-import champ.stances.GladiatorStance;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
@@ -20,11 +18,11 @@ public class HoldFirm extends AbstractChampCard {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = 1;
-        tags.add(ChampMod.TECHNIQUE);
+       // tags.add(ChampMod.TECHNIQUE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        techique();
+       // techique();
         blck();
         applyToSelf(new BlurPower(p, magicNumber));
     }

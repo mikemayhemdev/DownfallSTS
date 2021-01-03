@@ -1,7 +1,6 @@
 package champ.cards;
 
 import champ.ChampMod;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -13,7 +12,7 @@ public class BerserkersShout extends AbstractChampCard {
 
     //stupid intellij stuff skill, self, uncommon
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 6;
     private static final int UPG_MAGIC = 3;
 
     public BerserkersShout() {
@@ -22,6 +21,7 @@ public class BerserkersShout extends AbstractChampCard {
         tags.add(ChampMod.TECHNIQUE);
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERBERSERKER);
+        myHpLossCost = magicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
