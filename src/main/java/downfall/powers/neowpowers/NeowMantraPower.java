@@ -34,7 +34,7 @@ public class NeowMantraPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = powerStrings.DESCRIPTIONS[0] + 10 + powerStrings.DESCRIPTIONS[1];
+        this.description = powerStrings.DESCRIPTIONS[0];
     }
 
     public void stackPower(int stackAmount) {
