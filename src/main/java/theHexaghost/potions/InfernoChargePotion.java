@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.ChargeAction;
+import theHexaghost.actions.ExtinguishAction;
 import theHexaghost.ghostflames.AbstractGhostflame;
 import theHexaghost.ghostflames.InfernoGhostflame;
 
@@ -48,6 +49,7 @@ public class InfernoChargePotion extends CustomPotion {
         for (int i = 0; i < this.potency; i++) {
             for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                 if (gf instanceof InfernoGhostflame) {
+                    addToBot(new ExtinguishAction(gf));
                     addToBot(new ChargeAction(gf));
                 }
             }
