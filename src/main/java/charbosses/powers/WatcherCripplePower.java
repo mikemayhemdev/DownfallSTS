@@ -63,7 +63,7 @@ public class WatcherCripplePower extends AbstractPower {
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if (amount == 0) {
+        if (amount <= 0) {
             CharBossWatcher cb = (CharBossWatcher) this.owner;
             if (cb != null) {
                 if (cb.powerhouseTurn) {
