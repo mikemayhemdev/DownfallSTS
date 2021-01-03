@@ -991,9 +991,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             }
             if (this.currentHealth < 1) {
                 if (!this.hasRelic("Mark of the Bloom")) {
-                    if (this.hasRelic("Lizard Tail") && ((CBR_LizardTail) this.getRelic("Lizard Tail")).counter == -1) {
+                    if (this.hasRelic(CBR_LizardTail.ID) && ((CBR_LizardTail) this.getRelic(CBR_LizardTail.ID)).counter == -1) {
                         this.currentHealth = 0;
-                        this.getRelic("Lizard Tail").onTrigger();
+                        this.getRelic(CBR_LizardTail.ID).onTrigger();
                         return;
                     }
                 }

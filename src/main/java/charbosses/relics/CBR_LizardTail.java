@@ -1,6 +1,8 @@
 package charbosses.relics;
 
+import champ.util.TextureLoader;
 import charbosses.bosses.AbstractCharBoss;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,21 +10,24 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.LizardTail;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
+import downfall.downfallMod;
 
 public class CBR_LizardTail extends AbstractCharbossRelic {
-    public static final String ID = "LizardTail";
 
-    private RelicStrings thisRelicStrings;
+    public static String ID = downfallMod.makeID("LizardTail");
+    private static RelicTier tier = RelicTier.BOSS;
+    private static LandingSound sound = LandingSound.MAGICAL;
+
 
     public CBR_LizardTail() {
-        super(new LizardTail());
-        thisRelicStrings = CardCrawlGame.languagePack.getRelicStrings("downfall:LizardTail");
+        super(ID,"lizardTail.png", tier, sound);
+        this.largeImg = null;
 
     }
 
     @Override
     public String getUpdatedDescription() {
-        return thisRelicStrings.DESCRIPTIONS[0];
+        return DESCRIPTIONS[0];
     }
 
     @Override
@@ -42,6 +47,7 @@ public class CBR_LizardTail extends AbstractCharbossRelic {
         if (healAmt < 1) {
             healAmt = 1;
         }
+        usedUp();
         AbstractCharBoss.boss.heal(healAmt, true);
         AbstractDungeon.effectsQueue.add(new HealEffect(this.hb.cX, this.hb.cY, healAmt));
 
