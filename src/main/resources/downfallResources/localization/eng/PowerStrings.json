@@ -169,5 +169,11 @@
     "DESCRIPTIONS": [
       "Neow gains #b3 #yArtifact at the start of your turn if she has no #yArtifact."
     ]
+  },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "Your next #yAttack used against Neow deals #b0 damage this turn."
+    ]
   }
 }
