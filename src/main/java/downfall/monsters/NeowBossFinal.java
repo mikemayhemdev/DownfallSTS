@@ -31,10 +31,7 @@ import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
 import downfall.powers.EndOfTurnStrengthDex;
 import downfall.powers.NeowInvulnerablePower;
-import downfall.powers.neowpowers.BlasphemersDemise;
-import downfall.powers.neowpowers.EnergyThief;
-import downfall.powers.neowpowers.FeedingFrenzy;
-import downfall.powers.neowpowers.SeeingDouble;
+import downfall.powers.neowpowers.*;
 import guardian.vfx.SmallLaserEffectColored;
 import slimebound.SlimeboundMod;
 
@@ -313,7 +310,7 @@ public class NeowBossFinal extends AbstractMonster {
     }
 
     public boolean foggy() {
-        return this.hasPower(SeeingDouble.POWER_ID);
+        return this.hasPower(SeeingDoubleProduct.POWER_ID);
     }
 
     @Override
