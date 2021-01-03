@@ -20,9 +20,14 @@ import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import champ.ChampChar;
 import champ.cards.*;
+import champ.potions.CounterstrikePotion;
+import champ.potions.OpenerPotion;
+import champ.potions.TechPotion;
+import champ.potions.UltimateStancePotion;
 import champ.relics.*;
 import charbosses.BossMechanicDisplayPanel;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -246,6 +251,13 @@ public class AutomatonMod implements
         BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
         BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
         BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BuildAFunctionPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(BurnAndBuffPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(CleanCodePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(FreeFunctionsPotion.POTION_ID);
+        }
     }
 
     public void receivePostInitialize() {

@@ -85,9 +85,11 @@
       "After a short conversation, these fellow slimes are on your side as well - guarding for intruders. They can leave their post for a little while to assist you."
     ],
     "OPTIONS": [
-      "[Recruit] #gObtain #gDarklings.",
+      "[Recruit] #gObtain #gDarklings. #rLose ",
       "[Fight]",
-      "[Leave]"
+      "[Leave]",
+      ".",
+      "[Locked] Requires a Rare card."
     ]
   },
   "Slimebound:BackToBasics": {

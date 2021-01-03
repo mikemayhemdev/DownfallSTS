@@ -7,6 +7,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -34,6 +35,10 @@ import expansioncontent.relics.StudyCardRelic;
 import guardian.cards.*;
 import guardian.events.BackToBasicsGuardian;
 import guardian.patches.GuardianEnum;
+import guardian.potions.AcceleratePotion;
+import guardian.potions.BlockOnCardUsePotion;
+import guardian.potions.DefensiveModePotion;
+import guardian.potions.StasisDiscoveryPotion;
 import guardian.relics.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -720,6 +725,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
         BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(ThreeZeroPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SlimedPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SpawnSlimePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SlimyTonguePotion.POTION_ID);
+        }
     }
 
 

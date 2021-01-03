@@ -33,7 +33,9 @@ public class FreeFunctionsPotion extends CustomPotion {
     public void use(AbstractCreature target) {
         for (AbstractCard q : FunctionHelper.held.group) {
             if (q instanceof AbstractBronzeCard) {
-                ((AbstractBronzeCard) q).fineTune();
+                for (int i = 0; i < potency; i++) {
+                    ((AbstractBronzeCard) q).fineTune();
+                }
             }
         }
     }

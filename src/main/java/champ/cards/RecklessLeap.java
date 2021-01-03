@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.stances.BerserkerStance;
+import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,7 +32,7 @@ public class RecklessLeap extends AbstractChampCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (!AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID)) {
+        if (!(AbstractDungeon.player.stance.ID.equals(BerserkerStance.STANCE_ID) ||AbstractDungeon.player.stance.ID.equals(UltimateStance.STANCE_ID))) {
             cantUseMessage = EXTENDED_DESCRIPTION[0];
             return false;
         }

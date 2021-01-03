@@ -27,7 +27,7 @@ import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
 import theHexaghost.TheHexaghost;
-import theHexaghost.potions.BurningPotion;
+import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.relics.BolsterEngine;
 import theHexaghost.relics.CandleOfCauterizing;
 import theHexaghost.relics.Sixitude;
@@ -150,7 +150,7 @@ public class BanSharedContentPatch {
 
         public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_colorlessCards) {
-                PotionHelper.potions.remove(BurningPotion.POTION_ID);
+                PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
                 PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
                 PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
                 PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);

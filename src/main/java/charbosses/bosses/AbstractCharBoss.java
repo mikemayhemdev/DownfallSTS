@@ -207,12 +207,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         if (NeowBoss.neowboss != null) {
             switch (chosenArchetype.actNum) {
                 case 1: {
-                    chosenArchetype.maxHPModifier += 300;
+                    chosenArchetype.maxHPModifier += 200;
                     break;
 
                 }
                 case 2: {
-                    chosenArchetype.maxHPModifier += 150;
+                    chosenArchetype.maxHPModifier += 100;
                     break;
 
                 }

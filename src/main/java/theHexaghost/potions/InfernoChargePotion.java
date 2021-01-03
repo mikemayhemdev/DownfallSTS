@@ -34,8 +34,8 @@ public class InfernoChargePotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SacredBark")) {
-            this.description = potionStrings.DESCRIPTIONS[1];
+        if (AbstractDungeon.player != null && potency > 1) {
+            this.description = potionStrings.DESCRIPTIONS[1] + this.potency + DESCRIPTIONS[2];
         } else {
             this.description = potionStrings.DESCRIPTIONS[0];
         }
@@ -54,7 +54,7 @@ public class InfernoChargePotion extends CustomPotion {
                     isDone = true;
                     for (AbstractGhostflame gf : GhostflameHelper.hexaGhostFlames) {
                         if (gf instanceof InfernoGhostflame) {
-                            addToTop(new ChargeAction(gf));
+                            addToBot(new ChargeAction(gf));
                         }
                     }
                 }

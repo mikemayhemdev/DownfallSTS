@@ -27,8 +27,12 @@ public class OpenerPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic("SacredBark")) {
-            this.description = potionStrings.DESCRIPTIONS[1];
+        if (AbstractDungeon.player != null && potency > 1) {
+            if (potency > 2){
+                this.description = potionStrings.DESCRIPTIONS[0] + potionStrings.DESCRIPTIONS[1] + potency + potionStrings.DESCRIPTIONS[3];
+            } else {
+                this.description = potionStrings.DESCRIPTIONS[0] + potionStrings.DESCRIPTIONS[1] + potency + potionStrings.DESCRIPTIONS[2];
+            }
         } else {
             this.description = potionStrings.DESCRIPTIONS[0];
         }
@@ -37,7 +41,7 @@ public class OpenerPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        addToBot(new DiscoverOpenerAction(AbstractDungeon.player.hasRelic("SacredBark")));
+        addToBot(new DiscoverOpenerAction(potency));
     }
 
     public CustomPotion makeCopy() {

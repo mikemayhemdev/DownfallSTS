@@ -10,6 +10,7 @@ import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -34,6 +35,10 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.potions.SlimedPotion;
+import slimebound.potions.SlimyTonguePotion;
+import slimebound.potions.SpawnSlimePotion;
+import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.StickyStick;
 import sneckomod.cards.*;
 import sneckomod.cards.unknowns.UnknownClass;
@@ -303,6 +308,12 @@ public class SneckoMod implements
         BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(CheatPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DiceRollPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(OffclassReductionPotion.POTION_ID);
+        }
     }
 
     public void receivePostInitialize() {

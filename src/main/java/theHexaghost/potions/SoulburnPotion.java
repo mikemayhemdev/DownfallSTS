@@ -14,14 +14,14 @@ import theHexaghost.HexaMod;
 import theHexaghost.powers.BurnPower;
 
 
-public class BurningPotion extends CustomPotion {
-    public static final String POTION_ID = "hexamod:BurningPotion";
+public class SoulburnPotion extends CustomPotion {
+    public static final String POTION_ID = "hexamod:SoulburnPotion";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
 
-    public BurningPotion() {
+    public SoulburnPotion() {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.JAR, PotionColor.FAIRY);
         this.isThrown = true;
         this.targetRequired = true;
@@ -44,7 +44,7 @@ public class BurningPotion extends CustomPotion {
 
 
     public CustomPotion makeCopy() {
-        return new BurningPotion();
+        return new SoulburnPotion();
     }
 
     public int getPotency(int ascensionLevel) {

@@ -16,6 +16,8 @@ import champ.events.BackToBasicsChamp;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
+import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -42,6 +44,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import downfall.cards.curses.Aged;
 import downfall.downfallMod;
+import downfall.potions.CursedFountainPotion;
 import guardian.cards.*;
 import guardian.cards.BronzeArmor;
 import guardian.cards.BronzeOrb;
@@ -1054,6 +1057,12 @@ public static void saveData() {
         BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
         BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
 
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BlockOnCardUsePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(AcceleratePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DefensiveModePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(StasisDiscoveryPotion.POTION_ID);
+        }
     }
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {
