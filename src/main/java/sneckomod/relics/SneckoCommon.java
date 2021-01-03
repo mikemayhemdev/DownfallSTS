@@ -37,7 +37,7 @@ public class SneckoCommon extends CustomRelic {
         CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard q : AbstractDungeon.commonCardPool.group) {
             if (q instanceof UnknownClass) {
-                c.addToTop(q);
+                c.addToTop(q.makeCopy());
             }
         }
         AbstractDungeon.gridSelectScreen.open(c, 1, false, "Choose."); //TODO: Localize
