@@ -41,10 +41,7 @@ import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.StickyStick;
 import sneckomod.cards.*;
-import sneckomod.cards.unknowns.UnknownClass;
-import sneckomod.cards.unknowns.UnknownColorless;
-import sneckomod.cards.unknowns.UnknownDexterity;
-import sneckomod.cards.unknowns.UnknownStrength;
+import sneckomod.cards.unknowns.*;
 import sneckomod.events.BackToBasicsSnecko;
 import sneckomod.events.D8;
 import sneckomod.events.Serpent_Snecko;
@@ -268,7 +265,9 @@ public class SneckoMod implements
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
                 AbstractCard q = new UnknownClass(p);
+                ((AbstractUnknownCard)q).updateReplacements(((AbstractUnknownCard)q).myNeeds());
                 BaseMod.addCard(q);
+
             }
         }
     }
@@ -371,6 +370,7 @@ public class SneckoMod implements
                 statuses.add(c);
             }
         }
+
     }
 
     @Override
@@ -438,5 +438,32 @@ public class SneckoMod implements
     @Override
     public void onLoad(ArrayList<AbstractCard.CardColor> cardColors) {
         validColors.addAll(cardColors);
+        SneckoMod.updateAllUnknownReplacements();
+    }
+
+    public static void updateAllUnknownReplacements(){
+        Unknown.updateReplacements(new Unknown().myNeeds());
+        Unknown0Cost.updateReplacements(new Unknown0Cost().myNeeds());
+        Unknown1Cost.updateReplacements(new Unknown1Cost().myNeeds());
+        Unknown2Cost.updateReplacements(new Unknown2Cost().myNeeds());
+        Unknown3Cost.updateReplacements(new Unknown3Cost().myNeeds());
+        UnknownBlock.updateReplacements(new UnknownBlock().myNeeds());
+        UnknownColorless.updateReplacements(new UnknownColorless().myNeeds());
+        UnknownCommonAttack.updateReplacements(new UnknownCommonAttack().myNeeds());
+        UnknownCommonSkill.updateReplacements(new UnknownCommonSkill().myNeeds());
+        UnknownDexterity.updateReplacements(new UnknownDexterity().myNeeds());
+        UnknownEthereal.updateReplacements(new UnknownEthereal().myNeeds());
+        UnknownExhaust.updateReplacements(new UnknownExhaust().myNeeds());
+        UnknownRareAttack.updateReplacements(new UnknownRareAttack().myNeeds());
+        UnknownRarePower.updateReplacements(new UnknownRarePower().myNeeds());
+        UnknownRareSkill.updateReplacements(new UnknownRareSkill().myNeeds());
+        UnknownStrength.updateReplacements(new UnknownStrength().myNeeds());
+        UnknownStrike.updateReplacements(new UnknownStrike().myNeeds());
+        UnknownUncommonAttack.updateReplacements(new UnknownUncommonAttack().myNeeds());
+        UnknownUncommonSkill.updateReplacements(new UnknownUncommonSkill().myNeeds());
+        UnknownUncommonPower.updateReplacements(new UnknownUncommonPower().myNeeds());
+        UnknownVulnerable.updateReplacements(new UnknownVulnerable().myNeeds());
+        UnknownWeak.updateReplacements(new UnknownWeak().myNeeds());
+        UnknownX.updateReplacements(new UnknownX().myNeeds());
     }
 }

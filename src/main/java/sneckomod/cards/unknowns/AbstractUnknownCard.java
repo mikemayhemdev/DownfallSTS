@@ -1,5 +1,6 @@
 package sneckomod.cards.unknowns;
 
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,6 +14,7 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.AbstractSneckoCard;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.function.Predicate;
 
 
@@ -35,6 +37,28 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         purgeOnUse = true;
     }
 
+    private float rotationTimer;
+    private static ArrayList<String> validReplacements = new ArrayList<>();
+
+    private static int previewIndex;
+
+    @Override
+    public void update() {
+        super.update();
+        if (hb.hovered){
+            if (rotationTimer <= 0F){
+                rotationTimer = 0.25F;
+                cardsToPreview = CardLibrary.cards.get(validReplacements.get(previewIndex));
+                if (previewIndex == validReplacements.size() - 1){
+                    previewIndex = 0;
+                } else {
+                    previewIndex++;
+                }
+            } else {
+                rotationTimer -= Gdx.graphics.getDeltaTime();
+            }
+        }
+    }
 
     public void upgrade() {
         upgradeName();
@@ -54,6 +78,37 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         });
     }
 
+    public abstract Predicate<AbstractCard> myNeeds();
+
+    public static void updateReplacements(Predicate<AbstractCard> funkyPredicate){
+        previewIndex = 0;
+        AbstractPlayer p = AbstractDungeon.player;
+        boolean validCard;
+
+        ArrayList<String> tmp = new ArrayList<>();
+        for (AbstractCard c : CardLibrary.getAllCards()) {
+            if (!c.isSeen)
+                UnlockTracker.markCardAsSeen(c.cardID);
+            AbstractCard q = c.makeCopy();
+            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor() && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
+
+            if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
+                if (validCard) tmp.add(c.cardID);
+            }
+        }
+
+        AbstractCard cUnknown;
+        if (tmp.size() > 0) {
+            cUnknown = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeStatEquivalentCopy();
+        } else {
+            cUnknown = new com.megacrit.cardcrawl.cards.colorless.Madness();
+        }
+
+        validReplacements.clear();
+        validReplacements.addAll(tmp);
+        Collections.shuffle(validReplacements);
+    }
+
     @Override
     public boolean atBattleStartPreDraw() {
         addToBot(new AbstractGameAction() {
@@ -66,33 +121,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         return false;
     }
 
-    public abstract Predicate<AbstractCard> myNeeds();
 
     public void replaceUnknown(Predicate<AbstractCard> funkyPredicate) {
         AbstractPlayer p = AbstractDungeon.player;
-        boolean validCard;
-
-        ArrayList<String> tmp = new ArrayList<>();
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (!c.isSeen)
-                UnlockTracker.markCardAsSeen(c.cardID);
-            AbstractCard q = c.makeCopy();
-            validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor() && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
-            if (this.upgraded) {
-                if (!c.canUpgrade()) validCard = false;
-                if (validCard) q.upgrade();
-            }
-            if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
-                if (validCard) tmp.add(c.cardID);
-            }
-        }
 
         AbstractCard cUnknown;
-        if (tmp.size() > 0) {
-            cUnknown = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeStatEquivalentCopy();
-        } else {
-            cUnknown = new com.megacrit.cardcrawl.cards.colorless.Madness();
-        }
+        cUnknown = CardLibrary.cards.get(validReplacements.get(AbstractDungeon.cardRng.random(0, validReplacements.size() - 1))).makeStatEquivalentCopy();
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {
@@ -106,29 +140,9 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public void replaceUnknownFromHand(Predicate<AbstractCard> funkyPredicate) {
         AbstractPlayer p = AbstractDungeon.player;
-        boolean validCard;
-
-        ArrayList<String> tmp = new ArrayList<>();
-        for (AbstractCard c : CardLibrary.getAllCards()) {
-            if (!c.isSeen)
-                UnlockTracker.markCardAsSeen(c.cardID);
-            AbstractCard q = c.makeCopy();
-            validCard = !c.hasTag(SneckoMod.BANNEDFORSNECKO) && !c.hasTag(CardTags.HEALING) && !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor();
-            if (this.upgraded) {
-                if (!c.canUpgrade()) validCard = false;
-                if (validCard) q.upgrade();
-            }
-            if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
-                if (validCard) tmp.add(c.cardID);
-            }
-        }
 
         AbstractCard cUnknown;
-        if (tmp.size() > 0) {
-            cUnknown = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeStatEquivalentCopy();
-        } else {
-            cUnknown = new com.megacrit.cardcrawl.cards.colorless.Madness();
-        }
+        cUnknown = CardLibrary.cards.get(validReplacements.get(AbstractDungeon.cardRng.random(0, validReplacements.size() - 1))).makeStatEquivalentCopy();
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {
