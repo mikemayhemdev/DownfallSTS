@@ -4,7 +4,6 @@ import automaton.AutomatonMod;
 import automaton.util.TextureLoader;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
-import basemod.abstracts.CustomSavable;
 import basemod.abstracts.CustomUnlockBundle;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
@@ -71,8 +70,7 @@ public class SneckoMod implements
         SetUnlocksSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        StartGameSubscriber,
-        CustomSavable<ArrayList<AbstractCard.CardColor>> {
+        StartGameSubscriber {
     public static final String SHOULDER1 = "sneckomodResources/images/char/shoulder.png";
     public static final String SHOULDER2 = "sneckomodResources/images/char/shoulderR.png";
     public static final String CORPSE = "sneckomodResources/images/char/corpse.png";
@@ -504,6 +502,7 @@ public class SneckoMod implements
 
     public static void findAWayToTriggerThisAtGameStart() {
         if (AbstractDungeon.player instanceof TheSnecko && !pureSneckoMode) {
+            validColors.clear();
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard.CardColor r : AbstractCard.CardColor.values()) {
@@ -521,19 +520,10 @@ public class SneckoMod implements
         }
     }
 
-    @Override
-    public ArrayList<AbstractCard.CardColor> onSave() {
-        return validColors;
-    }
-
-    @Override
-    public void onLoad(ArrayList<AbstractCard.CardColor> cardColors) {
-        validColors.addAll(cardColors);
-        SneckoMod.updateAllUnknownReplacements();
-    }
-
     public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList) {
         predList.add(c.myNeeds());
+        if (c.myList() != null)
+            c.myList().clear();
         listList.add(c.myList());
     }
 
