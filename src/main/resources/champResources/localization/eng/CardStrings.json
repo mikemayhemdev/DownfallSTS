@@ -108,7 +108,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Gut Punch",
-    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage twice. NL *Defensive champ:Combo: champ:Fatigue !M!."
+    "DESCRIPTION": "Enter champ:Berserker. NL Deal !D! damage. NL Gain !B! Block. NL *Defensive champ:Combo: Gain [E] ."
   },
   "champ:FanOfKnives": {
     "NAME": "Fan of Knives",
