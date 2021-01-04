@@ -1,6 +1,7 @@
 package downfall.events;
 
 
+import basemod.devcommands.unlock.Unlock;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.blights.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardGroup.CardGroupType;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -128,11 +130,15 @@ public class HeartEvent extends AbstractEvent {
     }
 
     private boolean shouldSkipNeowDialog() {
-        if (Settings.seedSet && !Settings.isTrial && !Settings.isDailyRun) {
+        if (Settings.seedSet && !Settings.isTrial && !Settings.isDailyRun && hasPlayedRun(AbstractDungeon.player.chosenClass)) {
             return false;
         } else {
             return !Settings.isStandardRun();
         }
+    }
+
+    public boolean hasPlayedRun(AbstractPlayer.PlayerClass p) {
+        return UnlockTracker.getCurrentProgress(p) > 0 || UnlockTracker.getUnlockLevel(p) > 0;
     }
 
     public void update() {
