@@ -87,12 +87,6 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
     }
 
-    @Override
-    public void unhover() {
-        super.unhover();
-        previewIndex = 0;
-    }
-
     public void upgrade() {
         upgradeName();
         String[] funky = rawDescription.split(unknownUpgrade[0]);
