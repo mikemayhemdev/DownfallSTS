@@ -12,7 +12,7 @@ public class GhostOfSpirePresent extends AbstractHexaCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
 
     public GhostOfSpirePresent() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
