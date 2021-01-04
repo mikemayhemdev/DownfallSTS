@@ -8,6 +8,7 @@ import javassist.*;
 import javassist.expr.ExprEditor;
 import javassist.expr.NewExpr;
 
+import java.util.ArrayList;
 import java.util.function.Predicate;
 
 public class UnknownStrength extends AbstractUnknownCard {
@@ -61,5 +62,10 @@ public class UnknownStrength extends AbstractUnknownCard {
     @Override
     public Predicate<AbstractCard> myNeeds() {
         return this::useCheck;
+    }
+
+    @Override
+    public ArrayList<String> myList() {
+        return AbstractUnknownCard.unknownStrengthReplacements;
     }
 }

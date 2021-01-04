@@ -38,9 +38,34 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     }
 
     private float rotationTimer;
-    private static ArrayList<String> validReplacements = new ArrayList<>();
 
-    private static int previewIndex;
+    private int previewIndex;
+
+
+    public static ArrayList<String> unknownReplacements = new ArrayList<>();
+    public static ArrayList<String> unknown0CostReplacements = new ArrayList<>();
+    public static ArrayList<String> unknown1CostReplacements = new ArrayList<>();
+    public static ArrayList<String> unknown2CostReplacements = new ArrayList<>();
+    public static ArrayList<String> unknown3CostReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownBlockReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownClassReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownColorlessReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownCommonAttackReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownCommonSkillReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownDexterityReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownEtherealReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownExhaustReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownRareAttackReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownRarePowerReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownRareSkillReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownStrengthReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownStrikeReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownUncommonAttackReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownUncommonPowerReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownUncommonSkillReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownVulnerableReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownWeakReplacements = new ArrayList<>();
+    public static ArrayList<String> unknownXCostReplacements = new ArrayList<>();
 
     @Override
     public void update() {
@@ -48,8 +73,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         if (hb.hovered){
             if (rotationTimer <= 0F){
                 rotationTimer = 0.25F;
-                cardsToPreview = CardLibrary.cards.get(validReplacements.get(previewIndex));
-                if (previewIndex == validReplacements.size() - 1){
+                if (myList().size() == 0) {
+                    cardsToPreview = CardLibrary.cards.get("Madness");
+                } else {
+                    cardsToPreview = CardLibrary.cards.get(myList().get(previewIndex));
+                }
+                if (previewIndex == myList().size() - 1){
                     previewIndex = 0;
                 } else {
                     previewIndex++;
@@ -58,6 +87,12 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
                 rotationTimer -= Gdx.graphics.getDeltaTime();
             }
         }
+    }
+
+    @Override
+    public void unhover() {
+        super.unhover();
+        previewIndex = 0;
     }
 
     public void upgrade() {
@@ -72,7 +107,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                replaceUnknownFromHand(myNeeds());
+                replaceUnknownFromHand();
                 isDone = true;
             }
         });
@@ -80,33 +115,24 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
     public abstract Predicate<AbstractCard> myNeeds();
 
-    public static void updateReplacements(Predicate<AbstractCard> funkyPredicate){
-        previewIndex = 0;
-        AbstractPlayer p = AbstractDungeon.player;
+    public abstract ArrayList<String> myList();
+
+    public static void updateReplacements(ArrayList<Predicate<AbstractCard>> funkyPredicates, ArrayList<ArrayList<String>> funkyLists){
         boolean validCard;
 
-        ArrayList<String> tmp = new ArrayList<>();
         for (AbstractCard c : CardLibrary.getAllCards()) {
             if (!c.isSeen)
                 UnlockTracker.markCardAsSeen(c.cardID);
             AbstractCard q = c.makeCopy();
             validCard = !c.hasTag(CardTags.STARTER_STRIKE) && !c.hasTag(CardTags.STARTER_DEFEND) && c.type != CardType.STATUS && c.color != CardColor.CURSE && c.type != CardType.CURSE && c.rarity != CardRarity.SPECIAL && c.color != AbstractDungeon.player.getCardColor() && !c.hasTag(SneckoMod.BANNEDFORSNECKO);
 
-            if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
-                if (validCard) tmp.add(c.cardID);
+            for (Predicate<AbstractCard> funkyPredicate : funkyPredicates) {
+                if (funkyPredicate.test(q) && (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(q.color))) {
+                    if (validCard) funkyLists.get(funkyPredicates.indexOf(funkyPredicate)).add(c.cardID);
+                }
             }
         }
 
-        AbstractCard cUnknown;
-        if (tmp.size() > 0) {
-            cUnknown = CardLibrary.cards.get(tmp.get(AbstractDungeon.cardRng.random(0, tmp.size() - 1))).makeStatEquivalentCopy();
-        } else {
-            cUnknown = new com.megacrit.cardcrawl.cards.colorless.Madness();
-        }
-
-        validReplacements.clear();
-        validReplacements.addAll(tmp);
-        Collections.shuffle(validReplacements);
     }
 
     @Override
@@ -114,7 +140,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                replaceUnknown(myNeeds());
+                replaceUnknown();
                 isDone = true;
             }
         });
@@ -122,11 +148,11 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
     }
 
 
-    public void replaceUnknown(Predicate<AbstractCard> funkyPredicate) {
+    public void replaceUnknown() {
         AbstractPlayer p = AbstractDungeon.player;
 
         AbstractCard cUnknown;
-        cUnknown = CardLibrary.cards.get(validReplacements.get(AbstractDungeon.cardRng.random(0, validReplacements.size() - 1))).makeStatEquivalentCopy();
+        cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {
@@ -138,11 +164,11 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
         }
     }
 
-    public void replaceUnknownFromHand(Predicate<AbstractCard> funkyPredicate) {
+    public void replaceUnknownFromHand() {
         AbstractPlayer p = AbstractDungeon.player;
 
         AbstractCard cUnknown;
-        cUnknown = CardLibrary.cards.get(validReplacements.get(AbstractDungeon.cardRng.random(0, validReplacements.size() - 1))).makeStatEquivalentCopy();
+        cUnknown = CardLibrary.cards.get(myList().get(AbstractDungeon.cardRng.random(0, myList().size() - 1))).makeStatEquivalentCopy();
 
         if (this.upgraded) cUnknown.upgrade();
         if (cUnknown != null) {

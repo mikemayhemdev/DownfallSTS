@@ -2,6 +2,7 @@ package sneckomod.cards.unknowns;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
+import java.util.ArrayList;
 import java.util.function.Predicate;
 
 public class UnknownStrike extends AbstractUnknownCard {
@@ -15,5 +16,10 @@ public class UnknownStrike extends AbstractUnknownCard {
     @Override
     public Predicate<AbstractCard> myNeeds() {
         return c -> c.hasTag(CardTags.STRIKE);
+    }
+
+    @Override
+    public ArrayList<String> myList() {
+        return AbstractUnknownCard.unknownStrikeReplacements;
     }
 }

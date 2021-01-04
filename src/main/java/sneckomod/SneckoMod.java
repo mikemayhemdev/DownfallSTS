@@ -264,8 +264,8 @@ public class SneckoMod implements
         }
         for (AbstractCard.CardColor p : AbstractCard.CardColor.values()) {
             if (p != AbstractCard.CardColor.COLORLESS && p != AbstractCard.CardColor.CURSE && p != TheSnecko.Enums.SNECKO_CYAN) {
-                AbstractCard q = new UnknownClass(p);
-                ((AbstractUnknownCard)q).updateReplacements(((AbstractUnknownCard)q).myNeeds());
+                AbstractUnknownCard q = new UnknownClass(p);
+                //TODO figure this part out.
                 BaseMod.addCard(q);
 
             }
@@ -441,29 +441,42 @@ public class SneckoMod implements
         SneckoMod.updateAllUnknownReplacements();
     }
 
+    public static void addToLists(AbstractUnknownCard c, ArrayList<Predicate<AbstractCard>> predList, ArrayList<ArrayList<String>> listList){
+        predList.add(c.myNeeds());
+        listList.add(c.myList());
+    }
+
     public static void updateAllUnknownReplacements(){
-        Unknown.updateReplacements(new Unknown().myNeeds());
-        Unknown0Cost.updateReplacements(new Unknown0Cost().myNeeds());
-        Unknown1Cost.updateReplacements(new Unknown1Cost().myNeeds());
-        Unknown2Cost.updateReplacements(new Unknown2Cost().myNeeds());
-        Unknown3Cost.updateReplacements(new Unknown3Cost().myNeeds());
-        UnknownBlock.updateReplacements(new UnknownBlock().myNeeds());
-        UnknownColorless.updateReplacements(new UnknownColorless().myNeeds());
-        UnknownCommonAttack.updateReplacements(new UnknownCommonAttack().myNeeds());
-        UnknownCommonSkill.updateReplacements(new UnknownCommonSkill().myNeeds());
-        UnknownDexterity.updateReplacements(new UnknownDexterity().myNeeds());
-        UnknownEthereal.updateReplacements(new UnknownEthereal().myNeeds());
-        UnknownExhaust.updateReplacements(new UnknownExhaust().myNeeds());
-        UnknownRareAttack.updateReplacements(new UnknownRareAttack().myNeeds());
-        UnknownRarePower.updateReplacements(new UnknownRarePower().myNeeds());
-        UnknownRareSkill.updateReplacements(new UnknownRareSkill().myNeeds());
-        UnknownStrength.updateReplacements(new UnknownStrength().myNeeds());
-        UnknownStrike.updateReplacements(new UnknownStrike().myNeeds());
-        UnknownUncommonAttack.updateReplacements(new UnknownUncommonAttack().myNeeds());
-        UnknownUncommonSkill.updateReplacements(new UnknownUncommonSkill().myNeeds());
-        UnknownUncommonPower.updateReplacements(new UnknownUncommonPower().myNeeds());
-        UnknownVulnerable.updateReplacements(new UnknownVulnerable().myNeeds());
-        UnknownWeak.updateReplacements(new UnknownWeak().myNeeds());
-        UnknownX.updateReplacements(new UnknownX().myNeeds());
+
+        ArrayList<Predicate<AbstractCard>> predList = new ArrayList<>();
+        ArrayList<ArrayList<String>> listList = new ArrayList<>();
+
+        AbstractUnknownCard c;
+
+        addToLists(new Unknown(), predList, listList);
+        addToLists(new Unknown0Cost(), predList, listList);
+        addToLists(new Unknown1Cost(), predList, listList);
+        addToLists(new Unknown2Cost(), predList, listList);
+        addToLists(new Unknown3Cost(), predList, listList);
+        addToLists(new UnknownBlock(), predList, listList);
+        addToLists(new UnknownColorless(), predList, listList);
+        addToLists(new UnknownCommonAttack(), predList, listList);
+        addToLists(new UnknownCommonSkill(), predList, listList);
+        addToLists(new UnknownDexterity(), predList, listList);
+        addToLists(new UnknownEthereal(), predList, listList);
+        addToLists(new UnknownExhaust(), predList, listList);
+        addToLists(new UnknownRareAttack(), predList, listList);
+        addToLists(new UnknownRarePower(), predList, listList);
+        addToLists(new UnknownRareSkill(), predList, listList);
+        addToLists(new UnknownStrength(), predList, listList);
+        addToLists(new UnknownStrike(), predList, listList);
+        addToLists(new UnknownUncommonAttack(), predList, listList);
+        addToLists(new UnknownUncommonSkill(), predList, listList);
+        addToLists(new UnknownUncommonPower(), predList, listList);
+        addToLists(new UnknownVulnerable(), predList, listList);
+        addToLists(new UnknownWeak(), predList, listList);
+        addToLists(new UnknownX(), predList, listList);
+
+        AbstractUnknownCard.updateReplacements(predList,listList);
     }
 }

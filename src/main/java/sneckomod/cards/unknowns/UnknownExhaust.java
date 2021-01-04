@@ -2,6 +2,7 @@ package sneckomod.cards.unknowns;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
+import java.util.ArrayList;
 import java.util.function.Predicate;
 
 public class UnknownExhaust extends AbstractUnknownCard {
@@ -14,5 +15,10 @@ public class UnknownExhaust extends AbstractUnknownCard {
     @Override
     public Predicate<AbstractCard> myNeeds() {
         return c -> c.exhaust;
+    }
+
+    @Override
+    public ArrayList<String> myList() {
+        return AbstractUnknownCard.unknownExhaustReplacements;
     }
 }

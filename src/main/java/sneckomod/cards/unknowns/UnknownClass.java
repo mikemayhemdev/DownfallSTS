@@ -71,5 +71,11 @@ public class UnknownClass extends AbstractUnknownCard {
     public Predicate<AbstractCard> myNeeds() {
         return c -> c.color == myColor;
     }
+
+    @Override
+    public ArrayList<String> myList() {
+        return AbstractUnknownCard.unknownClassReplacements;
+        //TODO - Just return the cards of this class.
+    }
 }
 

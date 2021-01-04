@@ -2,6 +2,7 @@ package sneckomod.cards.unknowns;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
+import java.util.ArrayList;
 import java.util.function.Predicate;
 
 public class UnknownUncommonSkill extends AbstractUnknownCard {
@@ -14,5 +15,10 @@ public class UnknownUncommonSkill extends AbstractUnknownCard {
     @Override
     public Predicate<AbstractCard> myNeeds() {
         return c -> c.rarity == this.rarity && c.type == this.type;
+    }
+
+    @Override
+    public ArrayList<String> myList() {
+        return AbstractUnknownCard.unknownUncommonSkillReplacements;
     }
 }
