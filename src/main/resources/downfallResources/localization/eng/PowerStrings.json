@@ -137,7 +137,7 @@
   "downfall:NeowHighlyToxic": {
     "NAME": "Warning: Highly Toxic",
     "DESCRIPTIONS": [
-      "Neow applies #b10 #yPoison to your per turn. You have #yPoison #yProtection."
+      "Neow applies #b10 #yPoison to you per turn. You have #yPoison #yProtection."
     ]
   },
   "downfall:NeowSeeingDouble": {

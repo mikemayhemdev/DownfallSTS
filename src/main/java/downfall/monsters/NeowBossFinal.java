@@ -176,6 +176,10 @@ public class NeowBossFinal extends AbstractMonster {
             case 0:
                 playSfx();
                 curses();
+
+                if (hasPower(EnergyThief.POWER_ID)) {
+                    getPower(EnergyThief.POWER_ID).onSpecificTrigger();
+                }
                 break;
             case 1:
                 playSfx();
