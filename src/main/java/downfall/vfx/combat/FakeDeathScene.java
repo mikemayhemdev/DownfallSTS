@@ -40,7 +40,9 @@ public class FakeDeathScene
     public void update()
     {
         if (this.particles.size() < 60) {
-            this.particles.add(new DeathScreenFloatyEffect());
+            DeathScreenFloatyEffect dfe2 = new DeathScreenFloatyEffect();
+            dfe2.renderBehind = true;
+            this.particles.add(dfe2);
         }
         for (int i = this.particles.size() - 1; i >= 0; i--)
         {
@@ -79,19 +81,13 @@ public class FakeDeathScene
        // sb.draw(this.filledPixel, 0.0F, 0.0F, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F, Settings.WIDTH, Settings.HEIGHT, 1.0F, 1.0F, 0.0F, 0, 0, 1, 1, false, false);
         sb.setColor(Color.WHITE);
         for (AbstractGameEffect age : this.particles) {
-            if (age.renderBehind) {
-                age.render(sb);
-            }
+            age.render(sb);
         }
     }
 
     public void renderCombatRoomFg(SpriteBatch sb)
     {
-        for (AbstractGameEffect age : this.particles) {
-            if (!age.renderBehind) {
-                age.render(sb);
-            }
-        }
+
     }
 
     public void renderCampfireRoom(SpriteBatch sb)
