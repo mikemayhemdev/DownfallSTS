@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import sneckomod.SneckoMod;
@@ -35,9 +37,11 @@ public class SneckoCommon extends CustomRelic {
 
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
         CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (AbstractCard q : AbstractDungeon.commonCardPool.group) {
+        for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q instanceof UnknownClass) {
-                c.addToTop(q.makeCopy());
+                if (SneckoMod.validColors.contains(((UnknownClass) q).myColor)) {
+                    c.addToTop(q);
+                }
             }
         }
         AbstractDungeon.gridSelectScreen.open(c, 1, false, "Choose."); //TODO: Localize
@@ -55,6 +59,8 @@ public class SneckoCommon extends CustomRelic {
             AbstractDungeon.commonCardPool.group.removeIf(q -> q instanceof UnknownClass && !q.cardID.equals(c.cardID));
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            this.description = getUpdatedDescription(); this.tips.clear();
+            this.tips.add(new PowerTip(this.name, this.description));
         }
     }
 
