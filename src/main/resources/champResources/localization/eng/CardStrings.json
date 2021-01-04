@@ -187,7 +187,7 @@
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! bronze:Blur."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! champ:Counter. NL Gain 1 bronze:Blur."
   },
   "champ:ShieldWall": {
     "NAME": "Shield Wall",
